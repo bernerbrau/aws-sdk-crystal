@@ -466,8 +466,8 @@ module Aws::SageMakerRuntime
     #
     # @overload invoke_endpoint(**params)
     # @param [Hash] params ({})
-    def invoke_endpoint(params = {}, **options)
-      req = build_request(:invoke_endpoint, params)
+    def invoke_endpoint(, **options)
+      req = build_request(:invoke_endpoint, )
       req.send_request(options)
     end
 

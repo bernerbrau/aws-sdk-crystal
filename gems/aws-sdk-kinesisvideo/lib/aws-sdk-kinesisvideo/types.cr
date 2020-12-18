@@ -1389,5 +1389,367 @@ module Aws::KinesisVideo
       include Aws::Structure
     end
 
+    alias APIName = String
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AccountChannelLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AccountStreamLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ChannelInfo = NamedTuple(
+      "ChannelName" : (ChannelName)?,
+      "ChannelARN" : (ResourceARN)?,
+      "ChannelType" : (ChannelType)?,
+      "ChannelStatus" : (Status)?,
+      "CreationTime" : (Timestamp)?,
+      "SingleMasterConfiguration" : (SingleMasterConfiguration)?,
+      "Version" : (Version)?
+    )
+
+    alias ChannelInfoList = Array(ChannelInfo)
+
+    alias ChannelName = String
+
+    alias ChannelNameCondition = NamedTuple(
+      "ComparisonOperator" : (ComparisonOperator)?,
+      "ComparisonValue" : (ChannelName)?
+    )
+
+    alias ChannelProtocol = String
+
+    alias ChannelRole = String
+
+    alias ChannelType = String
+
+    alias ClientLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ComparisonOperator = String
+
+    alias CreateSignalingChannelInput = NamedTuple(
+      "ChannelName" : ChannelName,
+      "ChannelType" : (ChannelType)?,
+      "SingleMasterConfiguration" : (SingleMasterConfiguration)?,
+      "Tags" : (TagOnCreateList)?
+    )
+
+    alias CreateSignalingChannelOutput = NamedTuple(
+      "ChannelARN" : (ResourceARN)?
+    )
+
+    alias CreateStreamInput = NamedTuple(
+      "DeviceName" : (DeviceName)?,
+      "StreamName" : StreamName,
+      "MediaType" : (MediaType)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "DataRetentionInHours" : (DataRetentionInHours)?,
+      "Tags" : (ResourceTags)?
+    )
+
+    alias CreateStreamOutput = NamedTuple(
+      "StreamARN" : (ResourceARN)?
+    )
+
+    alias DataEndpoint = String
+
+    alias DataRetentionChangeInHours = Int32
+
+    alias DataRetentionInHours = Int32
+
+    alias DeleteSignalingChannelInput = NamedTuple(
+      "ChannelARN" : ResourceARN,
+      "CurrentVersion" : (Version)?
+    )
+
+    alias DeleteSignalingChannelOutput = NamedTuple(
+      
+    )
+
+    alias DeleteStreamInput = NamedTuple(
+      "StreamARN" : ResourceARN,
+      "CurrentVersion" : (Version)?
+    )
+
+    alias DeleteStreamOutput = NamedTuple(
+      
+    )
+
+    alias DescribeSignalingChannelInput = NamedTuple(
+      "ChannelName" : (ChannelName)?,
+      "ChannelARN" : (ResourceARN)?
+    )
+
+    alias DescribeSignalingChannelOutput = NamedTuple(
+      "ChannelInfo" : (ChannelInfo)?
+    )
+
+    alias DescribeStreamInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?
+    )
+
+    alias DescribeStreamOutput = NamedTuple(
+      "StreamInfo" : (StreamInfo)?
+    )
+
+    alias DeviceName = String
+
+    alias DeviceStreamLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias GetDataEndpointInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "APIName" : APIName
+    )
+
+    alias GetDataEndpointOutput = NamedTuple(
+      "DataEndpoint" : (DataEndpoint)?
+    )
+
+    alias GetSignalingChannelEndpointInput = NamedTuple(
+      "ChannelARN" : ResourceARN,
+      "SingleMasterChannelEndpointConfiguration" : (SingleMasterChannelEndpointConfiguration)?
+    )
+
+    alias GetSignalingChannelEndpointOutput = NamedTuple(
+      "ResourceEndpointList" : (ResourceEndpointList)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidDeviceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidResourceFormatException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias KmsKeyId = String
+
+    alias ListOfProtocols = Array(ChannelProtocol)
+
+    alias ListSignalingChannelsInput = NamedTuple(
+      "MaxResults" : (ListStreamsInputLimit)?,
+      "NextToken" : (NextToken)?,
+      "ChannelNameCondition" : (ChannelNameCondition)?
+    )
+
+    alias ListSignalingChannelsOutput = NamedTuple(
+      "ChannelInfoList" : (ChannelInfoList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStreamsInput = NamedTuple(
+      "MaxResults" : (ListStreamsInputLimit)?,
+      "NextToken" : (NextToken)?,
+      "StreamNameCondition" : (StreamNameCondition)?
+    )
+
+    alias ListStreamsInputLimit = Int32
+
+    alias ListStreamsOutput = NamedTuple(
+      "StreamInfoList" : (StreamInfoList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "ResourceARN" : ResourceARN
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "Tags" : (ResourceTags)?
+    )
+
+    alias ListTagsForStreamInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "StreamARN" : (ResourceARN)?,
+      "StreamName" : (StreamName)?
+    )
+
+    alias ListTagsForStreamOutput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "Tags" : (ResourceTags)?
+    )
+
+    alias MediaType = String
+
+    alias MessageTtlSeconds = Int32
+
+    alias NextToken = String
+
+    alias NotAuthorizedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceARN = String
+
+    alias ResourceEndpoint = String
+
+    alias ResourceEndpointList = Array(ResourceEndpointListItem)
+
+    alias ResourceEndpointListItem = NamedTuple(
+      "Protocol" : (ChannelProtocol)?,
+      "ResourceEndpoint" : (ResourceEndpoint)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceTags = Hash(TagKey,TagValue)
+
+    alias SingleMasterChannelEndpointConfiguration = NamedTuple(
+      "Protocols" : (ListOfProtocols)?,
+      "Role" : (ChannelRole)?
+    )
+
+    alias SingleMasterConfiguration = NamedTuple(
+      "MessageTtlSeconds" : (MessageTtlSeconds)?
+    )
+
+    alias Status = String
+
+    alias StreamInfo = NamedTuple(
+      "DeviceName" : (DeviceName)?,
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "MediaType" : (MediaType)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "Version" : (Version)?,
+      "Status" : (Status)?,
+      "CreationTime" : (Timestamp)?,
+      "DataRetentionInHours" : (DataRetentionInHours)?
+    )
+
+    alias StreamInfoList = Array(StreamInfo)
+
+    alias StreamName = String
+
+    alias StreamNameCondition = NamedTuple(
+      "ComparisonOperator" : (ComparisonOperator)?,
+      "ComparisonValue" : (StreamName)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagOnCreateList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "Tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagStreamInput = NamedTuple(
+      "StreamARN" : (ResourceARN)?,
+      "StreamName" : (StreamName)?,
+      "Tags" : ResourceTags
+    )
+
+    alias TagStreamOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagsPerResourceExceededLimitException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "TagKeyList" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UntagStreamInput = NamedTuple(
+      "StreamARN" : (ResourceARN)?,
+      "StreamName" : (StreamName)?,
+      "TagKeyList" : TagKeyList
+    )
+
+    alias UntagStreamOutput = NamedTuple(
+      
+    )
+
+    alias UpdateDataRetentionInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "CurrentVersion" : Version,
+      "Operation" : UpdateDataRetentionOperation,
+      "DataRetentionChangeInHours" : DataRetentionChangeInHours
+    )
+
+    alias UpdateDataRetentionOperation = String
+
+    alias UpdateDataRetentionOutput = NamedTuple(
+      
+    )
+
+    alias UpdateSignalingChannelInput = NamedTuple(
+      "ChannelARN" : ResourceARN,
+      "CurrentVersion" : Version,
+      "SingleMasterConfiguration" : (SingleMasterConfiguration)?
+    )
+
+    alias UpdateSignalingChannelOutput = NamedTuple(
+      
+    )
+
+    alias UpdateStreamInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "CurrentVersion" : Version,
+      "DeviceName" : (DeviceName)?,
+      "MediaType" : (MediaType)?
+    )
+
+    alias UpdateStreamOutput = NamedTuple(
+      
+    )
+
+    alias Version = String
+
+    alias VersionMismatchException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

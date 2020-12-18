@@ -1869,5 +1869,495 @@ module Aws::Signer
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias AccountId = String
+
+    alias AddProfilePermissionRequest = NamedTuple(
+      "profileName" : ProfileName,
+      "profileVersion" : (ProfileVersion)?,
+      "action" : String,
+      "principal" : String,
+      "revisionId" : (String)?,
+      "statementId" : String
+    )
+
+    alias AddProfilePermissionResponse = NamedTuple(
+      "revisionId" : (String)?
+    )
+
+    alias Arn = String
+
+    alias BadRequestException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias BucketName = String
+
+    alias CancelSigningProfileRequest = NamedTuple(
+      "profileName" : ProfileName
+    )
+
+    alias Category = String
+
+    alias CertificateArn = String
+
+    alias ClientRequestToken = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias DescribeSigningJobRequest = NamedTuple(
+      "jobId" : JobId
+    )
+
+    alias DescribeSigningJobResponse = NamedTuple(
+      "jobId" : (JobId)?,
+      "source" : (Source)?,
+      "signingMaterial" : (SigningMaterial)?,
+      "platformId" : (PlatformId)?,
+      "platformDisplayName" : (DisplayName)?,
+      "profileName" : (ProfileName)?,
+      "profileVersion" : (ProfileVersion)?,
+      "overrides" : (SigningPlatformOverrides)?,
+      "signingParameters" : (SigningParameters)?,
+      "createdAt" : (Timestamp)?,
+      "completedAt" : (Timestamp)?,
+      "signatureExpiresAt" : (Timestamp)?,
+      "requestedBy" : (RequestedBy)?,
+      "status" : (SigningStatus)?,
+      "statusReason" : (StatusReason)?,
+      "revocationRecord" : (SigningJobRevocationRecord)?,
+      "signedObject" : (SignedObject)?,
+      "jobOwner" : (AccountId)?,
+      "jobInvoker" : (AccountId)?
+    )
+
+    alias Destination = NamedTuple(
+      "s3" : (S3Destination)?
+    )
+
+    alias DisplayName = String
+
+    alias EncryptionAlgorithm = String
+
+    alias EncryptionAlgorithmOptions = NamedTuple(
+      "allowedValues" : EncryptionAlgorithms,
+      "defaultValue" : EncryptionAlgorithm
+    )
+
+    alias EncryptionAlgorithms = Array(EncryptionAlgorithm)
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias GetSigningPlatformRequest = NamedTuple(
+      "platformId" : PlatformId
+    )
+
+    alias GetSigningPlatformResponse = NamedTuple(
+      "platformId" : (PlatformId)?,
+      "displayName" : (DisplayName)?,
+      "partner" : (String)?,
+      "target" : (String)?,
+      "category" : (Category)?,
+      "signingConfiguration" : (SigningConfiguration)?,
+      "signingImageFormat" : (SigningImageFormat)?,
+      "maxSizeInMB" : (MaxSizeInMB)?,
+      "revocationSupported" : (bool)?
+    )
+
+    alias GetSigningProfileRequest = NamedTuple(
+      "profileName" : ProfileName,
+      "profileOwner" : (AccountId)?
+    )
+
+    alias GetSigningProfileResponse = NamedTuple(
+      "profileName" : (ProfileName)?,
+      "profileVersion" : (ProfileVersion)?,
+      "profileVersionArn" : (Arn)?,
+      "revocationRecord" : (SigningProfileRevocationRecord)?,
+      "signingMaterial" : (SigningMaterial)?,
+      "platformId" : (PlatformId)?,
+      "platformDisplayName" : (DisplayName)?,
+      "signatureValidityPeriod" : (SignatureValidityPeriod)?,
+      "overrides" : (SigningPlatformOverrides)?,
+      "signingParameters" : (SigningParameters)?,
+      "status" : (SigningProfileStatus)?,
+      "statusReason" : (String)?,
+      "arn" : (string)?,
+      "tags" : (TagMap)?
+    )
+
+    alias HashAlgorithm = String
+
+    alias HashAlgorithmOptions = NamedTuple(
+      "allowedValues" : HashAlgorithms,
+      "defaultValue" : HashAlgorithm
+    )
+
+    alias HashAlgorithms = Array(HashAlgorithm)
+
+    alias ImageFormat = String
+
+    alias ImageFormats = Array(ImageFormat)
+
+    alias Integer = Int32
+
+    alias InternalServiceErrorException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias JobId = String
+
+    alias Key = String
+
+    alias ListProfilePermissionsRequest = NamedTuple(
+      "profileName" : ProfileName,
+      "nextToken" : (String)?
+    )
+
+    alias ListProfilePermissionsResponse = NamedTuple(
+      "revisionId" : (String)?,
+      "policySizeBytes" : (PolicySizeBytes)?,
+      "permissions" : (Permissions)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListSigningJobsRequest = NamedTuple(
+      "status" : (SigningStatus)?,
+      "platformId" : (PlatformId)?,
+      "requestedBy" : (RequestedBy)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "isRevoked" : (bool)?,
+      "signatureExpiresBefore" : (Timestamp)?,
+      "signatureExpiresAfter" : (Timestamp)?,
+      "jobInvoker" : (AccountId)?
+    )
+
+    alias ListSigningJobsResponse = NamedTuple(
+      "jobs" : (SigningJobs)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListSigningPlatformsRequest = NamedTuple(
+      "category" : (String)?,
+      "partner" : (String)?,
+      "target" : (String)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListSigningPlatformsResponse = NamedTuple(
+      "platforms" : (SigningPlatforms)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListSigningProfilesRequest = NamedTuple(
+      "includeCanceled" : (bool)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "platformId" : (PlatformId)?,
+      "statuses" : (Statuses)?
+    )
+
+    alias ListSigningProfilesResponse = NamedTuple(
+      "profiles" : (SigningProfiles)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MaxSizeInMB = Int32
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias Permission = NamedTuple(
+      "action" : (String)?,
+      "principal" : (String)?,
+      "statementId" : (String)?,
+      "profileVersion" : (ProfileVersion)?
+    )
+
+    alias Permissions = Array(Permission)
+
+    alias PlatformId = String
+
+    alias PolicySizeBytes = Int32
+
+    alias Prefix = String
+
+    alias ProfileName = String
+
+    alias ProfileVersion = String
+
+    alias PutSigningProfileRequest = NamedTuple(
+      "profileName" : ProfileName,
+      "signingMaterial" : (SigningMaterial)?,
+      "signatureValidityPeriod" : (SignatureValidityPeriod)?,
+      "platformId" : PlatformId,
+      "overrides" : (SigningPlatformOverrides)?,
+      "signingParameters" : (SigningParameters)?,
+      "tags" : (TagMap)?
+    )
+
+    alias PutSigningProfileResponse = NamedTuple(
+      "arn" : (string)?,
+      "profileVersion" : (ProfileVersion)?,
+      "profileVersionArn" : (Arn)?
+    )
+
+    alias RemoveProfilePermissionRequest = NamedTuple(
+      "profileName" : ProfileName,
+      "revisionId" : String,
+      "statementId" : String
+    )
+
+    alias RemoveProfilePermissionResponse = NamedTuple(
+      "revisionId" : (String)?
+    )
+
+    alias RequestedBy = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias RevocationReasonString = String
+
+    alias RevokeSignatureRequest = NamedTuple(
+      "jobId" : JobId,
+      "jobOwner" : (AccountId)?,
+      "reason" : RevocationReasonString
+    )
+
+    alias RevokeSigningProfileRequest = NamedTuple(
+      "profileName" : ProfileName,
+      "profileVersion" : ProfileVersion,
+      "reason" : RevocationReasonString,
+      "effectiveTime" : Timestamp
+    )
+
+    alias S3Destination = NamedTuple(
+      "bucketName" : (BucketName)?,
+      "prefix" : (Prefix)?
+    )
+
+    alias S3SignedObject = NamedTuple(
+      "bucketName" : (BucketName)?,
+      "key" : (Key)?
+    )
+
+    alias S3Source = NamedTuple(
+      "bucketName" : BucketName,
+      "key" : Key,
+      "version" : Version
+    )
+
+    alias ServiceLimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias SignatureValidityPeriod = NamedTuple(
+      "value" : (Integer)?,
+      "type" : (ValidityType)?
+    )
+
+    alias SignedObject = NamedTuple(
+      "s3" : (S3SignedObject)?
+    )
+
+    alias SigningConfiguration = NamedTuple(
+      "encryptionAlgorithmOptions" : EncryptionAlgorithmOptions,
+      "hashAlgorithmOptions" : HashAlgorithmOptions
+    )
+
+    alias SigningConfigurationOverrides = NamedTuple(
+      "encryptionAlgorithm" : (EncryptionAlgorithm)?,
+      "hashAlgorithm" : (HashAlgorithm)?
+    )
+
+    alias SigningImageFormat = NamedTuple(
+      "supportedFormats" : ImageFormats,
+      "defaultFormat" : ImageFormat
+    )
+
+    alias SigningJob = NamedTuple(
+      "jobId" : (JobId)?,
+      "source" : (Source)?,
+      "signedObject" : (SignedObject)?,
+      "signingMaterial" : (SigningMaterial)?,
+      "createdAt" : (Timestamp)?,
+      "status" : (SigningStatus)?,
+      "isRevoked" : (bool)?,
+      "profileName" : (ProfileName)?,
+      "profileVersion" : (ProfileVersion)?,
+      "platformId" : (PlatformId)?,
+      "platformDisplayName" : (DisplayName)?,
+      "signatureExpiresAt" : (Timestamp)?,
+      "jobOwner" : (AccountId)?,
+      "jobInvoker" : (AccountId)?
+    )
+
+    alias SigningJobRevocationRecord = NamedTuple(
+      "reason" : (String)?,
+      "revokedAt" : (Timestamp)?,
+      "revokedBy" : (String)?
+    )
+
+    alias SigningJobs = Array(SigningJob)
+
+    alias SigningMaterial = NamedTuple(
+      "certificateArn" : CertificateArn
+    )
+
+    alias SigningParameterKey = String
+
+    alias SigningParameterValue = String
+
+    alias SigningParameters = Hash(SigningParameterKey,SigningParameterValue)
+
+    alias SigningPlatform = NamedTuple(
+      "platformId" : (String)?,
+      "displayName" : (String)?,
+      "partner" : (String)?,
+      "target" : (String)?,
+      "category" : (Category)?,
+      "signingConfiguration" : (SigningConfiguration)?,
+      "signingImageFormat" : (SigningImageFormat)?,
+      "maxSizeInMB" : (MaxSizeInMB)?,
+      "revocationSupported" : (bool)?
+    )
+
+    alias SigningPlatformOverrides = NamedTuple(
+      "signingConfiguration" : (SigningConfigurationOverrides)?,
+      "signingImageFormat" : (ImageFormat)?
+    )
+
+    alias SigningPlatforms = Array(SigningPlatform)
+
+    alias SigningProfile = NamedTuple(
+      "profileName" : (ProfileName)?,
+      "profileVersion" : (ProfileVersion)?,
+      "profileVersionArn" : (Arn)?,
+      "signingMaterial" : (SigningMaterial)?,
+      "signatureValidityPeriod" : (SignatureValidityPeriod)?,
+      "platformId" : (PlatformId)?,
+      "platformDisplayName" : (DisplayName)?,
+      "signingParameters" : (SigningParameters)?,
+      "status" : (SigningProfileStatus)?,
+      "arn" : (string)?,
+      "tags" : (TagMap)?
+    )
+
+    alias SigningProfileRevocationRecord = NamedTuple(
+      "revocationEffectiveFrom" : (Timestamp)?,
+      "revokedAt" : (Timestamp)?,
+      "revokedBy" : (String)?
+    )
+
+    alias SigningProfileStatus = String
+
+    alias SigningProfiles = Array(SigningProfile)
+
+    alias SigningStatus = String
+
+    alias Source = NamedTuple(
+      "s3" : (S3Source)?
+    )
+
+    alias StartSigningJobRequest = NamedTuple(
+      "source" : Source,
+      "destination" : Destination,
+      "profileName" : ProfileName,
+      "clientRequestToken" : ClientRequestToken,
+      "profileOwner" : (AccountId)?
+    )
+
+    alias StartSigningJobResponse = NamedTuple(
+      "jobId" : (JobId)?,
+      "jobOwner" : (AccountId)?
+    )
+
+    alias StatusReason = String
+
+    alias Statuses = Array(SigningProfileStatus)
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "code" : (ErrorCode)?
+    )
+
+    alias ValidityType = String
+
+    alias Version = String
+
+    alias bool = Bool
+
+    alias string = String
   end
 end

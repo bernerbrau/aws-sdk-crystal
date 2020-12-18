@@ -2582,5 +2582,687 @@ module Aws::DevOpsGuru
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : ErrorMessageString
+    )
+
+    alias AddNotificationChannelRequest = NamedTuple(
+      "Config" : NotificationChannelConfig
+    )
+
+    alias AddNotificationChannelResponse = NamedTuple(
+      "Id" : NotificationChannelId
+    )
+
+    alias AnomalyId = String
+
+    alias AnomalyLimit = Float64
+
+    alias AnomalySeverity = String
+
+    alias AnomalySourceDetails = NamedTuple(
+      "CloudWatchMetrics" : (CloudWatchMetricsDetails)?
+    )
+
+    alias AnomalyStatus = String
+
+    alias AnomalyTimeRange = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : (Timestamp)?
+    )
+
+    alias Channels = Array(NotificationChannel)
+
+    alias CloudFormationCollection = NamedTuple(
+      "StackNames" : (StackNames)?
+    )
+
+    alias CloudFormationCollectionFilter = NamedTuple(
+      "StackNames" : (StackNames)?
+    )
+
+    alias CloudFormationHealth = NamedTuple(
+      "StackName" : (StackName)?,
+      "Insight" : (InsightHealth)?
+    )
+
+    alias CloudFormationHealths = Array(CloudFormationHealth)
+
+    alias CloudWatchMetricsDetail = NamedTuple(
+      "MetricName" : (CloudWatchMetricsMetricName)?,
+      "Namespace" : (CloudWatchMetricsNamespace)?,
+      "Dimensions" : (CloudWatchMetricsDimensions)?,
+      "Stat" : (CloudWatchMetricsStat)?,
+      "Unit" : (CloudWatchMetricsUnit)?,
+      "Period" : (CloudWatchMetricsPeriod)?
+    )
+
+    alias CloudWatchMetricsDetails = Array(CloudWatchMetricsDetail)
+
+    alias CloudWatchMetricsDimension = NamedTuple(
+      "Name" : (CloudWatchMetricsDimensionName)?,
+      "Value" : (CloudWatchMetricsDimensionValue)?
+    )
+
+    alias CloudWatchMetricsDimensionName = String
+
+    alias CloudWatchMetricsDimensionValue = String
+
+    alias CloudWatchMetricsDimensions = Array(CloudWatchMetricsDimension)
+
+    alias CloudWatchMetricsMetricName = String
+
+    alias CloudWatchMetricsNamespace = String
+
+    alias CloudWatchMetricsPeriod = Int32
+
+    alias CloudWatchMetricsStat = String
+
+    alias CloudWatchMetricsUnit = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : ErrorMessageString,
+      "ResourceId" : ResourceIdString,
+      "ResourceType" : ResourceIdType
+    )
+
+    alias DescribeAccountHealthRequest = NamedTuple(
+      
+    )
+
+    alias DescribeAccountHealthResponse = NamedTuple(
+      "OpenReactiveInsights" : NumOpenReactiveInsights,
+      "OpenProactiveInsights" : NumOpenProactiveInsights,
+      "MetricsAnalyzed" : NumMetricsAnalyzed
+    )
+
+    alias DescribeAccountOverviewRequest = NamedTuple(
+      "FromTime" : Timestamp,
+      "ToTime" : (Timestamp)?
+    )
+
+    alias DescribeAccountOverviewResponse = NamedTuple(
+      "ReactiveInsights" : NumReactiveInsights,
+      "ProactiveInsights" : NumProactiveInsights,
+      "MeanTimeToRecoverInMilliseconds" : MeanTimeToRecoverInMilliseconds
+    )
+
+    alias DescribeAnomalyRequest = NamedTuple(
+      "Id" : AnomalyId
+    )
+
+    alias DescribeAnomalyResponse = NamedTuple(
+      "ProactiveAnomaly" : (ProactiveAnomaly)?,
+      "ReactiveAnomaly" : (ReactiveAnomaly)?
+    )
+
+    alias DescribeInsightRequest = NamedTuple(
+      "Id" : InsightId
+    )
+
+    alias DescribeInsightResponse = NamedTuple(
+      "ProactiveInsight" : (ProactiveInsight)?,
+      "ReactiveInsight" : (ReactiveInsight)?
+    )
+
+    alias DescribeResourceCollectionHealthRequest = NamedTuple(
+      "ResourceCollectionType" : ResourceCollectionType,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias DescribeResourceCollectionHealthResponse = NamedTuple(
+      "CloudFormation" : CloudFormationHealths,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias DescribeServiceIntegrationRequest = NamedTuple(
+      
+    )
+
+    alias DescribeServiceIntegrationResponse = NamedTuple(
+      "ServiceIntegration" : (ServiceIntegrationConfig)?
+    )
+
+    alias EndTimeRange = NamedTuple(
+      "FromTime" : (Timestamp)?,
+      "ToTime" : (Timestamp)?
+    )
+
+    alias ErrorMessageString = String
+
+    alias ErrorNameString = String
+
+    alias ErrorQuotaCodeString = String
+
+    alias ErrorServiceCodeString = String
+
+    alias Event = NamedTuple(
+      "ResourceCollection" : (ResourceCollection)?,
+      "Id" : (EventId)?,
+      "Time" : (Timestamp)?,
+      "EventSource" : (EventSource)?,
+      "Name" : (EventName)?,
+      "DataSource" : (EventDataSource)?,
+      "EventClass" : (EventClass)?,
+      "Resources" : (EventResources)?
+    )
+
+    alias EventClass = String
+
+    alias EventDataSource = String
+
+    alias EventId = String
+
+    alias EventName = String
+
+    alias EventResource = NamedTuple(
+      "Type" : (EventResourceType)?,
+      "Name" : (EventResourceName)?,
+      "Arn" : (EventResourceArn)?
+    )
+
+    alias EventResourceArn = String
+
+    alias EventResourceName = String
+
+    alias EventResourceType = String
+
+    alias EventResources = Array(EventResource)
+
+    alias EventSource = String
+
+    alias EventTimeRange = NamedTuple(
+      "FromTime" : Timestamp,
+      "ToTime" : Timestamp
+    )
+
+    alias Events = Array(Event)
+
+    alias GetResourceCollectionRequest = NamedTuple(
+      "ResourceCollectionType" : ResourceCollectionType,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias GetResourceCollectionResponse = NamedTuple(
+      "ResourceCollection" : (ResourceCollectionFilter)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias InsightFeedback = NamedTuple(
+      "Id" : (InsightId)?,
+      "Feedback" : (InsightFeedbackOption)?
+    )
+
+    alias InsightFeedbackOption = String
+
+    alias InsightHealth = NamedTuple(
+      "OpenProactiveInsights" : (NumOpenProactiveInsights)?,
+      "OpenReactiveInsights" : (NumOpenReactiveInsights)?,
+      "MeanTimeToRecoverInMilliseconds" : (MeanTimeToRecoverInMilliseconds)?
+    )
+
+    alias InsightId = String
+
+    alias InsightName = String
+
+    alias InsightSeverities = Array(InsightSeverity)
+
+    alias InsightSeverity = String
+
+    alias InsightStatus = String
+
+    alias InsightStatuses = Array(InsightStatus)
+
+    alias InsightTimeRange = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : (Timestamp)?
+    )
+
+    alias InsightType = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : ErrorMessageString,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias ListAnomaliesForInsightMaxResults = Int32
+
+    alias ListAnomaliesForInsightRequest = NamedTuple(
+      "InsightId" : InsightId,
+      "StartTimeRange" : (StartTimeRange)?,
+      "MaxResults" : (ListAnomaliesForInsightMaxResults)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListAnomaliesForInsightResponse = NamedTuple(
+      "ProactiveAnomalies" : (ProactiveAnomalies)?,
+      "ReactiveAnomalies" : (ReactiveAnomalies)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListEventsFilters = NamedTuple(
+      "InsightId" : (InsightId)?,
+      "EventTimeRange" : (EventTimeRange)?,
+      "EventClass" : (EventClass)?,
+      "EventSource" : (EventSource)?,
+      "DataSource" : (EventDataSource)?,
+      "ResourceCollection" : (ResourceCollection)?
+    )
+
+    alias ListEventsMaxResults = Int32
+
+    alias ListEventsRequest = NamedTuple(
+      "Filters" : ListEventsFilters,
+      "MaxResults" : (ListEventsMaxResults)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListEventsResponse = NamedTuple(
+      "Events" : Events,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListInsightsAnyStatusFilter = NamedTuple(
+      "Type" : InsightType,
+      "StartTimeRange" : StartTimeRange
+    )
+
+    alias ListInsightsClosedStatusFilter = NamedTuple(
+      "Type" : InsightType,
+      "EndTimeRange" : EndTimeRange
+    )
+
+    alias ListInsightsMaxResults = Int32
+
+    alias ListInsightsOngoingStatusFilter = NamedTuple(
+      "Type" : InsightType
+    )
+
+    alias ListInsightsRequest = NamedTuple(
+      "StatusFilter" : ListInsightsStatusFilter,
+      "MaxResults" : (ListInsightsMaxResults)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListInsightsResponse = NamedTuple(
+      "ProactiveInsights" : (ProactiveInsights)?,
+      "ReactiveInsights" : (ReactiveInsights)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListInsightsStatusFilter = NamedTuple(
+      "Ongoing" : (ListInsightsOngoingStatusFilter)?,
+      "Closed" : (ListInsightsClosedStatusFilter)?,
+      "Any" : (ListInsightsAnyStatusFilter)?
+    )
+
+    alias ListNotificationChannelsRequest = NamedTuple(
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListNotificationChannelsResponse = NamedTuple(
+      "Channels" : (Channels)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListRecommendationsRequest = NamedTuple(
+      "InsightId" : InsightId,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ListRecommendationsResponse = NamedTuple(
+      "Recommendations" : (Recommendations)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias MeanTimeToRecoverInMilliseconds = Int64
+
+    alias NotificationChannel = NamedTuple(
+      "Id" : (NotificationChannelId)?,
+      "Config" : (NotificationChannelConfig)?
+    )
+
+    alias NotificationChannelConfig = NamedTuple(
+      "Sns" : SnsChannelConfig
+    )
+
+    alias NotificationChannelId = String
+
+    alias NumMetricsAnalyzed = Int32
+
+    alias NumOpenProactiveInsights = Int32
+
+    alias NumOpenReactiveInsights = Int32
+
+    alias NumProactiveInsights = Int32
+
+    alias NumReactiveInsights = Int32
+
+    alias OpsCenterIntegration = NamedTuple(
+      "OptInStatus" : (OptInStatus)?
+    )
+
+    alias OpsCenterIntegrationConfig = NamedTuple(
+      "OptInStatus" : (OptInStatus)?
+    )
+
+    alias OptInStatus = String
+
+    alias PredictionTimeRange = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : (Timestamp)?
+    )
+
+    alias ProactiveAnomalies = Array(ProactiveAnomalySummary)
+
+    alias ProactiveAnomaly = NamedTuple(
+      "Id" : (AnomalyId)?,
+      "Severity" : (AnomalySeverity)?,
+      "Status" : (AnomalyStatus)?,
+      "UpdateTime" : (Timestamp)?,
+      "AnomalyTimeRange" : (AnomalyTimeRange)?,
+      "PredictionTimeRange" : (PredictionTimeRange)?,
+      "SourceDetails" : (AnomalySourceDetails)?,
+      "AssociatedInsightId" : (InsightId)?,
+      "ResourceCollection" : (ResourceCollection)?,
+      "Limit" : (AnomalyLimit)?
+    )
+
+    alias ProactiveAnomalySummary = NamedTuple(
+      "Id" : (AnomalyId)?,
+      "Severity" : (AnomalySeverity)?,
+      "Status" : (AnomalyStatus)?,
+      "UpdateTime" : (Timestamp)?,
+      "AnomalyTimeRange" : (AnomalyTimeRange)?,
+      "PredictionTimeRange" : (PredictionTimeRange)?,
+      "SourceDetails" : (AnomalySourceDetails)?,
+      "AssociatedInsightId" : (InsightId)?,
+      "ResourceCollection" : (ResourceCollection)?,
+      "Limit" : (AnomalyLimit)?
+    )
+
+    alias ProactiveInsight = NamedTuple(
+      "Id" : (InsightId)?,
+      "Name" : (InsightName)?,
+      "Severity" : (InsightSeverity)?,
+      "Status" : (InsightStatus)?,
+      "InsightTimeRange" : (InsightTimeRange)?,
+      "PredictionTimeRange" : (PredictionTimeRange)?,
+      "ResourceCollection" : (ResourceCollection)?,
+      "SsmOpsItemId" : (SsmOpsItemId)?
+    )
+
+    alias ProactiveInsightSummary = NamedTuple(
+      "Id" : (InsightId)?,
+      "Name" : (InsightName)?,
+      "Severity" : (InsightSeverity)?,
+      "Status" : (InsightStatus)?,
+      "InsightTimeRange" : (InsightTimeRange)?,
+      "PredictionTimeRange" : (PredictionTimeRange)?,
+      "ResourceCollection" : (ResourceCollection)?
+    )
+
+    alias ProactiveInsights = Array(ProactiveInsightSummary)
+
+    alias PutFeedbackRequest = NamedTuple(
+      "InsightFeedback" : (InsightFeedback)?
+    )
+
+    alias PutFeedbackResponse = NamedTuple(
+      
+    )
+
+    alias ReactiveAnomalies = Array(ReactiveAnomalySummary)
+
+    alias ReactiveAnomaly = NamedTuple(
+      "Id" : (AnomalyId)?,
+      "Severity" : (AnomalySeverity)?,
+      "Status" : (AnomalyStatus)?,
+      "AnomalyTimeRange" : (AnomalyTimeRange)?,
+      "SourceDetails" : (AnomalySourceDetails)?,
+      "AssociatedInsightId" : (InsightId)?,
+      "ResourceCollection" : (ResourceCollection)?
+    )
+
+    alias ReactiveAnomalySummary = NamedTuple(
+      "Id" : (AnomalyId)?,
+      "Severity" : (AnomalySeverity)?,
+      "Status" : (AnomalyStatus)?,
+      "AnomalyTimeRange" : (AnomalyTimeRange)?,
+      "SourceDetails" : (AnomalySourceDetails)?,
+      "AssociatedInsightId" : (InsightId)?,
+      "ResourceCollection" : (ResourceCollection)?
+    )
+
+    alias ReactiveInsight = NamedTuple(
+      "Id" : (InsightId)?,
+      "Name" : (InsightName)?,
+      "Severity" : (InsightSeverity)?,
+      "Status" : (InsightStatus)?,
+      "InsightTimeRange" : (InsightTimeRange)?,
+      "ResourceCollection" : (ResourceCollection)?,
+      "SsmOpsItemId" : (SsmOpsItemId)?
+    )
+
+    alias ReactiveInsightSummary = NamedTuple(
+      "Id" : (InsightId)?,
+      "Name" : (InsightName)?,
+      "Severity" : (InsightSeverity)?,
+      "Status" : (InsightStatus)?,
+      "InsightTimeRange" : (InsightTimeRange)?,
+      "ResourceCollection" : (ResourceCollection)?
+    )
+
+    alias ReactiveInsights = Array(ReactiveInsightSummary)
+
+    alias Recommendation = NamedTuple(
+      "Description" : (RecommendationDescription)?,
+      "Link" : (RecommendationLink)?,
+      "Name" : (RecommendationName)?,
+      "Reason" : (RecommendationReason)?,
+      "RelatedEvents" : (RecommendationRelatedEvents)?,
+      "RelatedAnomalies" : (RecommendationRelatedAnomalies)?
+    )
+
+    alias RecommendationDescription = String
+
+    alias RecommendationLink = String
+
+    alias RecommendationName = String
+
+    alias RecommendationReason = String
+
+    alias RecommendationRelatedAnomalies = Array(RecommendationRelatedAnomaly)
+
+    alias RecommendationRelatedAnomaly = NamedTuple(
+      "Resources" : (RecommendationRelatedAnomalyResources)?,
+      "SourceDetails" : (RelatedAnomalySourceDetails)?
+    )
+
+    alias RecommendationRelatedAnomalyResource = NamedTuple(
+      "Name" : (RecommendationRelatedAnomalyResourceName)?,
+      "Type" : (RecommendationRelatedAnomalyResourceType)?
+    )
+
+    alias RecommendationRelatedAnomalyResourceName = String
+
+    alias RecommendationRelatedAnomalyResourceType = String
+
+    alias RecommendationRelatedAnomalyResources = Array(RecommendationRelatedAnomalyResource)
+
+    alias RecommendationRelatedAnomalySourceDetail = NamedTuple(
+      "CloudWatchMetrics" : (RecommendationRelatedCloudWatchMetricsSourceDetails)?
+    )
+
+    alias RecommendationRelatedCloudWatchMetricsSourceDetail = NamedTuple(
+      "MetricName" : (RecommendationRelatedCloudWatchMetricsSourceMetricName)?,
+      "Namespace" : (RecommendationRelatedCloudWatchMetricsSourceNamespace)?
+    )
+
+    alias RecommendationRelatedCloudWatchMetricsSourceDetails = Array(RecommendationRelatedCloudWatchMetricsSourceDetail)
+
+    alias RecommendationRelatedCloudWatchMetricsSourceMetricName = String
+
+    alias RecommendationRelatedCloudWatchMetricsSourceNamespace = String
+
+    alias RecommendationRelatedEvent = NamedTuple(
+      "Name" : (RecommendationRelatedEventName)?,
+      "Resources" : (RecommendationRelatedEventResources)?
+    )
+
+    alias RecommendationRelatedEventName = String
+
+    alias RecommendationRelatedEventResource = NamedTuple(
+      "Name" : (RecommendationRelatedEventResourceName)?,
+      "Type" : (RecommendationRelatedEventResourceType)?
+    )
+
+    alias RecommendationRelatedEventResourceName = String
+
+    alias RecommendationRelatedEventResourceType = String
+
+    alias RecommendationRelatedEventResources = Array(RecommendationRelatedEventResource)
+
+    alias RecommendationRelatedEvents = Array(RecommendationRelatedEvent)
+
+    alias Recommendations = Array(Recommendation)
+
+    alias RelatedAnomalySourceDetails = Array(RecommendationRelatedAnomalySourceDetail)
+
+    alias RemoveNotificationChannelRequest = NamedTuple(
+      "Id" : NotificationChannelId
+    )
+
+    alias RemoveNotificationChannelResponse = NamedTuple(
+      
+    )
+
+    alias ResourceCollection = NamedTuple(
+      "CloudFormation" : (CloudFormationCollection)?
+    )
+
+    alias ResourceCollectionFilter = NamedTuple(
+      "CloudFormation" : (CloudFormationCollectionFilter)?
+    )
+
+    alias ResourceCollectionType = String
+
+    alias ResourceIdString = String
+
+    alias ResourceIdType = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : ErrorMessageString,
+      "ResourceId" : ResourceIdString,
+      "ResourceType" : ResourceIdType
+    )
+
+    alias RetryAfterSeconds = Int32
+
+    alias SearchInsightsFilters = NamedTuple(
+      "Severities" : (InsightSeverities)?,
+      "Statuses" : (InsightStatuses)?,
+      "ResourceCollection" : (ResourceCollection)?
+    )
+
+    alias SearchInsightsMaxResults = Int32
+
+    alias SearchInsightsRequest = NamedTuple(
+      "StartTimeRange" : StartTimeRange,
+      "Filters" : (SearchInsightsFilters)?,
+      "MaxResults" : (SearchInsightsMaxResults)?,
+      "NextToken" : (UuidNextToken)?,
+      "Type" : InsightType
+    )
+
+    alias SearchInsightsResponse = NamedTuple(
+      "ProactiveInsights" : (ProactiveInsights)?,
+      "ReactiveInsights" : (ReactiveInsights)?,
+      "NextToken" : (UuidNextToken)?
+    )
+
+    alias ServiceIntegrationConfig = NamedTuple(
+      "OpsCenter" : (OpsCenterIntegration)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (ErrorMessageString)?
+    )
+
+    alias SnsChannelConfig = NamedTuple(
+      "TopicArn" : (TopicArn)?
+    )
+
+    alias SsmOpsItemId = String
+
+    alias StackName = String
+
+    alias StackNames = Array(StackName)
+
+    alias StartTimeRange = NamedTuple(
+      "FromTime" : (Timestamp)?,
+      "ToTime" : (Timestamp)?
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : ErrorMessageString,
+      "QuotaCode" : (ErrorQuotaCodeString)?,
+      "ServiceCode" : (ErrorServiceCodeString)?,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TopicArn = String
+
+    alias UpdateCloudFormationCollectionFilter = NamedTuple(
+      "StackNames" : (UpdateStackNames)?
+    )
+
+    alias UpdateResourceCollectionAction = String
+
+    alias UpdateResourceCollectionFilter = NamedTuple(
+      "CloudFormation" : (UpdateCloudFormationCollectionFilter)?
+    )
+
+    alias UpdateResourceCollectionRequest = NamedTuple(
+      "Action" : UpdateResourceCollectionAction,
+      "ResourceCollection" : UpdateResourceCollectionFilter
+    )
+
+    alias UpdateResourceCollectionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateServiceIntegrationConfig = NamedTuple(
+      "OpsCenter" : (OpsCenterIntegrationConfig)?
+    )
+
+    alias UpdateServiceIntegrationRequest = NamedTuple(
+      "ServiceIntegration" : UpdateServiceIntegrationConfig
+    )
+
+    alias UpdateServiceIntegrationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateStackNames = Array(StackName)
+
+    alias UuidNextToken = String
+
+    alias ValidationException = NamedTuple(
+      "Message" : ErrorMessageString,
+      "Reason" : (ValidationExceptionReason)?,
+      "Fields" : (ValidationExceptionFields)?
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "Name" : ErrorNameString,
+      "Message" : ErrorMessageString
+    )
+
+    alias ValidationExceptionFields = Array(ValidationExceptionField)
+
+    alias ValidationExceptionReason = String
   end
 end

@@ -391,8 +391,8 @@ module Aws::CloudHSM
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -439,8 +439,8 @@ module Aws::CloudHSM
     #
     # @overload create_hapg(**params)
     # @param [Hash] params ({})
-    def create_hapg(params = {}, **options)
-      req = build_request(:create_hapg, params)
+    def create_hapg(, **options)
+      req = build_request(:create_hapg, )
       req.send_request(options)
     end
 
@@ -534,8 +534,8 @@ module Aws::CloudHSM
     #
     # @overload create_hsm(**params)
     # @param [Hash] params ({})
-    def create_hsm(params = {}, **options)
-      req = build_request(:create_hsm, params)
+    def create_hsm(, **options)
+      req = build_request(:create_hsm, )
       req.send_request(options)
     end
 
@@ -585,8 +585,8 @@ module Aws::CloudHSM
     #
     # @overload create_luna_client(**params)
     # @param [Hash] params ({})
-    def create_luna_client(params = {}, **options)
-      req = build_request(:create_luna_client, params)
+    def create_luna_client(, **options)
+      req = build_request(:create_luna_client, )
       req.send_request(options)
     end
 
@@ -631,8 +631,8 @@ module Aws::CloudHSM
     #
     # @overload delete_hapg(**params)
     # @param [Hash] params ({})
-    def delete_hapg(params = {}, **options)
-      req = build_request(:delete_hapg, params)
+    def delete_hapg(, **options)
+      req = build_request(:delete_hapg, )
       req.send_request(options)
     end
 
@@ -678,8 +678,8 @@ module Aws::CloudHSM
     #
     # @overload delete_hsm(**params)
     # @param [Hash] params ({})
-    def delete_hsm(params = {}, **options)
-      req = build_request(:delete_hsm, params)
+    def delete_hsm(, **options)
+      req = build_request(:delete_hsm, )
       req.send_request(options)
     end
 
@@ -724,8 +724,8 @@ module Aws::CloudHSM
     #
     # @overload delete_luna_client(**params)
     # @param [Hash] params ({})
-    def delete_luna_client(params = {}, **options)
-      req = build_request(:delete_luna_client, params)
+    def delete_luna_client(, **options)
+      req = build_request(:delete_luna_client, )
       req.send_request(options)
     end
 
@@ -790,8 +790,8 @@ module Aws::CloudHSM
     #
     # @overload describe_hapg(**params)
     # @param [Hash] params ({})
-    def describe_hapg(params = {}, **options)
-      req = build_request(:describe_hapg, params)
+    def describe_hapg(, **options)
+      req = build_request(:describe_hapg, )
       req.send_request(options)
     end
 
@@ -884,8 +884,8 @@ module Aws::CloudHSM
     #
     # @overload describe_hsm(**params)
     # @param [Hash] params ({})
-    def describe_hsm(params = {}, **options)
-      req = build_request(:describe_hsm, params)
+    def describe_hsm(, **options)
+      req = build_request(:describe_hsm, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::CloudHSM
     #
     # @overload describe_luna_client(**params)
     # @param [Hash] params ({})
-    def describe_luna_client(params = {}, **options)
-      req = build_request(:describe_luna_client, params)
+    def describe_luna_client(, **options)
+      req = build_request(:describe_luna_client, )
       req.send_request(options)
     end
 
@@ -1002,8 +1002,8 @@ module Aws::CloudHSM
     #
     # @overload get_config(**params)
     # @param [Hash] params ({})
-    def get_config(params = {}, **options)
-      req = build_request(:get_config, params)
+    def get_config(, **options)
+      req = build_request(:get_config, )
       req.send_request(options)
     end
 
@@ -1041,8 +1041,8 @@ module Aws::CloudHSM
     #
     # @overload list_available_zones(**params)
     # @param [Hash] params ({})
-    def list_available_zones(params = {}, **options)
-      req = build_request(:list_available_zones, params)
+    def list_available_zones(, **options)
+      req = build_request(:list_available_zones, )
       req.send_request(options)
     end
 
@@ -1096,8 +1096,8 @@ module Aws::CloudHSM
     #
     # @overload list_hapgs(**params)
     # @param [Hash] params ({})
-    def list_hapgs(params = {}, **options)
-      req = build_request(:list_hapgs, params)
+    def list_hapgs(, **options)
+      req = build_request(:list_hapgs, )
       req.send_request(options)
     end
 
@@ -1152,8 +1152,8 @@ module Aws::CloudHSM
     #
     # @overload list_hsms(**params)
     # @param [Hash] params ({})
-    def list_hsms(params = {}, **options)
-      req = build_request(:list_hsms, params)
+    def list_hsms(, **options)
+      req = build_request(:list_hsms, )
       req.send_request(options)
     end
 
@@ -1207,8 +1207,8 @@ module Aws::CloudHSM
     #
     # @overload list_luna_clients(**params)
     # @param [Hash] params ({})
-    def list_luna_clients(params = {}, **options)
-      req = build_request(:list_luna_clients, params)
+    def list_luna_clients(, **options)
+      req = build_request(:list_luna_clients, )
       req.send_request(options)
     end
 
@@ -1255,8 +1255,8 @@ module Aws::CloudHSM
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1310,8 +1310,8 @@ module Aws::CloudHSM
     #
     # @overload modify_hapg(**params)
     # @param [Hash] params ({})
-    def modify_hapg(params = {}, **options)
-      req = build_request(:modify_hapg, params)
+    def modify_hapg(, **options)
+      req = build_request(:modify_hapg, )
       req.send_request(options)
     end
 
@@ -1389,8 +1389,8 @@ module Aws::CloudHSM
     #
     # @overload modify_hsm(**params)
     # @param [Hash] params ({})
-    def modify_hsm(params = {}, **options)
-      req = build_request(:modify_hsm, params)
+    def modify_hsm(, **options)
+      req = build_request(:modify_hsm, )
       req.send_request(options)
     end
 
@@ -1442,8 +1442,8 @@ module Aws::CloudHSM
     #
     # @overload modify_luna_client(**params)
     # @param [Hash] params ({})
-    def modify_luna_client(params = {}, **options)
-      req = build_request(:modify_luna_client, params)
+    def modify_luna_client(, **options)
+      req = build_request(:modify_luna_client, )
       req.send_request(options)
     end
 
@@ -1498,8 +1498,8 @@ module Aws::CloudHSM
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 

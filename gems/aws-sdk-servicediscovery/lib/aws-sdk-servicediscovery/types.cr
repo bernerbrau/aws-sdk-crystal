@@ -3325,5 +3325,551 @@ module Aws::ServiceDiscovery
       include Aws::Structure
     end
 
+    alias AmazonResourceName = String
+
+    alias Arn = String
+
+    alias AttrKey = String
+
+    alias AttrValue = String
+
+    alias Attributes = Hash(AttrKey,AttrValue)
+
+    alias Code = String
+
+    alias CreateHttpNamespaceRequest = NamedTuple(
+      "Name" : NamespaceName,
+      "CreatorRequestId" : (ResourceId)?,
+      "Description" : (ResourceDescription)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateHttpNamespaceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias CreatePrivateDnsNamespaceRequest = NamedTuple(
+      "Name" : NamespaceName,
+      "CreatorRequestId" : (ResourceId)?,
+      "Description" : (ResourceDescription)?,
+      "Vpc" : ResourceId,
+      "Tags" : (TagList)?
+    )
+
+    alias CreatePrivateDnsNamespaceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias CreatePublicDnsNamespaceRequest = NamedTuple(
+      "Name" : NamespaceName,
+      "CreatorRequestId" : (ResourceId)?,
+      "Description" : (ResourceDescription)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreatePublicDnsNamespaceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias CreateServiceRequest = NamedTuple(
+      "Name" : ServiceName,
+      "NamespaceId" : (ResourceId)?,
+      "CreatorRequestId" : (ResourceId)?,
+      "Description" : (ResourceDescription)?,
+      "DnsConfig" : (DnsConfig)?,
+      "HealthCheckConfig" : (HealthCheckConfig)?,
+      "HealthCheckCustomConfig" : (HealthCheckCustomConfig)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateServiceResponse = NamedTuple(
+      "Service" : (Service)?
+    )
+
+    alias CustomHealthNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CustomHealthStatus = String
+
+    alias DeleteNamespaceRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias DeleteNamespaceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias DeleteServiceRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias DeleteServiceResponse = NamedTuple(
+      
+    )
+
+    alias DeregisterInstanceRequest = NamedTuple(
+      "ServiceId" : ResourceId,
+      "InstanceId" : ResourceId
+    )
+
+    alias DeregisterInstanceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias DiscoverInstancesRequest = NamedTuple(
+      "NamespaceName" : NamespaceName,
+      "ServiceName" : ServiceName,
+      "MaxResults" : (DiscoverMaxResults)?,
+      "QueryParameters" : (Attributes)?,
+      "OptionalParameters" : (Attributes)?,
+      "HealthStatus" : (HealthStatusFilter)?
+    )
+
+    alias DiscoverInstancesResponse = NamedTuple(
+      "Instances" : (HttpInstanceSummaryList)?
+    )
+
+    alias DiscoverMaxResults = Int32
+
+    alias DnsConfig = NamedTuple(
+      "NamespaceId" : (ResourceId)?,
+      "RoutingPolicy" : (RoutingPolicy)?,
+      "DnsRecords" : DnsRecordList
+    )
+
+    alias DnsConfigChange = NamedTuple(
+      "DnsRecords" : DnsRecordList
+    )
+
+    alias DnsProperties = NamedTuple(
+      "HostedZoneId" : (ResourceId)?
+    )
+
+    alias DnsRecord = NamedTuple(
+      "Type" : RecordType,
+      "TTL" : RecordTTL
+    )
+
+    alias DnsRecordList = Array(DnsRecord)
+
+    alias DuplicateRequest = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "DuplicateOperationId" : (ResourceId)?
+    )
+
+    alias ErrorMessage = String
+
+    alias FailureThreshold = Int32
+
+    alias FilterCondition = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias GetInstanceRequest = NamedTuple(
+      "ServiceId" : ResourceId,
+      "InstanceId" : ResourceId
+    )
+
+    alias GetInstanceResponse = NamedTuple(
+      "Instance" : (Instance)?
+    )
+
+    alias GetInstancesHealthStatusRequest = NamedTuple(
+      "ServiceId" : ResourceId,
+      "Instances" : (InstanceIdList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetInstancesHealthStatusResponse = NamedTuple(
+      "Status" : (InstanceHealthStatusMap)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetNamespaceRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias GetNamespaceResponse = NamedTuple(
+      "Namespace" : (Namespace)?
+    )
+
+    alias GetOperationRequest = NamedTuple(
+      "OperationId" : ResourceId
+    )
+
+    alias GetOperationResponse = NamedTuple(
+      "Operation" : (Operation)?
+    )
+
+    alias GetServiceRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias GetServiceResponse = NamedTuple(
+      "Service" : (Service)?
+    )
+
+    alias HealthCheckConfig = NamedTuple(
+      "Type" : HealthCheckType,
+      "ResourcePath" : (ResourcePath)?,
+      "FailureThreshold" : (FailureThreshold)?
+    )
+
+    alias HealthCheckCustomConfig = NamedTuple(
+      "FailureThreshold" : (FailureThreshold)?
+    )
+
+    alias HealthCheckType = String
+
+    alias HealthStatus = String
+
+    alias HealthStatusFilter = String
+
+    alias HttpInstanceSummary = NamedTuple(
+      "InstanceId" : (ResourceId)?,
+      "NamespaceName" : (NamespaceName)?,
+      "ServiceName" : (ServiceName)?,
+      "HealthStatus" : (HealthStatus)?,
+      "Attributes" : (Attributes)?
+    )
+
+    alias HttpInstanceSummaryList = Array(HttpInstanceSummary)
+
+    alias HttpProperties = NamedTuple(
+      "HttpName" : (NamespaceName)?
+    )
+
+    alias Instance = NamedTuple(
+      "Id" : ResourceId,
+      "CreatorRequestId" : (ResourceId)?,
+      "Attributes" : (Attributes)?
+    )
+
+    alias InstanceHealthStatusMap = Hash(ResourceId,HealthStatus)
+
+    alias InstanceIdList = Array(ResourceId)
+
+    alias InstanceNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InstanceSummary = NamedTuple(
+      "Id" : (ResourceId)?,
+      "Attributes" : (Attributes)?
+    )
+
+    alias InstanceSummaryList = Array(InstanceSummary)
+
+    alias InvalidInput = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListInstancesRequest = NamedTuple(
+      "ServiceId" : ResourceId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListInstancesResponse = NamedTuple(
+      "Instances" : (InstanceSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListNamespacesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (NamespaceFilters)?
+    )
+
+    alias ListNamespacesResponse = NamedTuple(
+      "Namespaces" : (NamespaceSummariesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOperationsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (OperationFilters)?
+    )
+
+    alias ListOperationsResponse = NamedTuple(
+      "Operations" : (OperationSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListServicesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (ServiceFilters)?
+    )
+
+    alias ListServicesResponse = NamedTuple(
+      "Services" : (ServiceSummariesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias Namespace = NamedTuple(
+      "Id" : (ResourceId)?,
+      "Arn" : (Arn)?,
+      "Name" : (NamespaceName)?,
+      "Type" : (NamespaceType)?,
+      "Description" : (ResourceDescription)?,
+      "ServiceCount" : (ResourceCount)?,
+      "Properties" : (NamespaceProperties)?,
+      "CreateDate" : (Timestamp)?,
+      "CreatorRequestId" : (ResourceId)?
+    )
+
+    alias NamespaceAlreadyExists = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "CreatorRequestId" : (ResourceId)?,
+      "NamespaceId" : (ResourceId)?
+    )
+
+    alias NamespaceFilter = NamedTuple(
+      "Name" : NamespaceFilterName,
+      "Values" : FilterValues,
+      "Condition" : (FilterCondition)?
+    )
+
+    alias NamespaceFilterName = String
+
+    alias NamespaceFilters = Array(NamespaceFilter)
+
+    alias NamespaceName = String
+
+    alias NamespaceNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NamespaceProperties = NamedTuple(
+      "DnsProperties" : (DnsProperties)?,
+      "HttpProperties" : (HttpProperties)?
+    )
+
+    alias NamespaceSummariesList = Array(NamespaceSummary)
+
+    alias NamespaceSummary = NamedTuple(
+      "Id" : (ResourceId)?,
+      "Arn" : (Arn)?,
+      "Name" : (NamespaceName)?,
+      "Type" : (NamespaceType)?,
+      "Description" : (ResourceDescription)?,
+      "ServiceCount" : (ResourceCount)?,
+      "Properties" : (NamespaceProperties)?,
+      "CreateDate" : (Timestamp)?
+    )
+
+    alias NamespaceType = String
+
+    alias NextToken = String
+
+    alias Operation = NamedTuple(
+      "Id" : (OperationId)?,
+      "Type" : (OperationType)?,
+      "Status" : (OperationStatus)?,
+      "ErrorMessage" : (Message)?,
+      "ErrorCode" : (Code)?,
+      "CreateDate" : (Timestamp)?,
+      "UpdateDate" : (Timestamp)?,
+      "Targets" : (OperationTargetsMap)?
+    )
+
+    alias OperationFilter = NamedTuple(
+      "Name" : OperationFilterName,
+      "Values" : FilterValues,
+      "Condition" : (FilterCondition)?
+    )
+
+    alias OperationFilterName = String
+
+    alias OperationFilters = Array(OperationFilter)
+
+    alias OperationId = String
+
+    alias OperationNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias OperationStatus = String
+
+    alias OperationSummary = NamedTuple(
+      "Id" : (OperationId)?,
+      "Status" : (OperationStatus)?
+    )
+
+    alias OperationSummaryList = Array(OperationSummary)
+
+    alias OperationTargetType = String
+
+    alias OperationTargetsMap = Hash(OperationTargetType,ResourceId)
+
+    alias OperationType = String
+
+    alias RecordTTL = Int64
+
+    alias RecordType = String
+
+    alias RegisterInstanceRequest = NamedTuple(
+      "ServiceId" : ResourceId,
+      "InstanceId" : ResourceId,
+      "CreatorRequestId" : (ResourceId)?,
+      "Attributes" : Attributes
+    )
+
+    alias RegisterInstanceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias RequestLimitExceeded = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceCount = Int32
+
+    alias ResourceDescription = String
+
+    alias ResourceId = String
+
+    alias ResourceInUse = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceLimitExceeded = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourcePath = String
+
+    alias RoutingPolicy = String
+
+    alias Service = NamedTuple(
+      "Id" : (ResourceId)?,
+      "Arn" : (Arn)?,
+      "Name" : (ServiceName)?,
+      "NamespaceId" : (ResourceId)?,
+      "Description" : (ResourceDescription)?,
+      "InstanceCount" : (ResourceCount)?,
+      "DnsConfig" : (DnsConfig)?,
+      "HealthCheckConfig" : (HealthCheckConfig)?,
+      "HealthCheckCustomConfig" : (HealthCheckCustomConfig)?,
+      "CreateDate" : (Timestamp)?,
+      "CreatorRequestId" : (ResourceId)?
+    )
+
+    alias ServiceAlreadyExists = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "CreatorRequestId" : (ResourceId)?,
+      "ServiceId" : (ResourceId)?
+    )
+
+    alias ServiceChange = NamedTuple(
+      "Description" : (ResourceDescription)?,
+      "DnsConfig" : (DnsConfigChange)?,
+      "HealthCheckConfig" : (HealthCheckConfig)?
+    )
+
+    alias ServiceFilter = NamedTuple(
+      "Name" : ServiceFilterName,
+      "Values" : FilterValues,
+      "Condition" : (FilterCondition)?
+    )
+
+    alias ServiceFilterName = String
+
+    alias ServiceFilters = Array(ServiceFilter)
+
+    alias ServiceName = String
+
+    alias ServiceNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ServiceSummariesList = Array(ServiceSummary)
+
+    alias ServiceSummary = NamedTuple(
+      "Id" : (ResourceId)?,
+      "Arn" : (Arn)?,
+      "Name" : (ServiceName)?,
+      "Description" : (ResourceDescription)?,
+      "InstanceCount" : (ResourceCount)?,
+      "DnsConfig" : (DnsConfig)?,
+      "HealthCheckConfig" : (HealthCheckConfig)?,
+      "HealthCheckCustomConfig" : (HealthCheckCustomConfig)?,
+      "CreateDate" : (Timestamp)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyTagsException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceName" : (AmazonResourceName)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateInstanceCustomHealthStatusRequest = NamedTuple(
+      "ServiceId" : ResourceId,
+      "InstanceId" : ResourceId,
+      "Status" : CustomHealthStatus
+    )
+
+    alias UpdateServiceRequest = NamedTuple(
+      "Id" : ResourceId,
+      "Service" : ServiceChange
+    )
+
+    alias UpdateServiceResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
   end
 end

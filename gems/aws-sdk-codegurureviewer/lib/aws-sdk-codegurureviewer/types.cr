@@ -1875,5 +1875,396 @@ module Aws::CodeGuruReviewer
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Arn = String
+
+    alias AssociateRepositoryRequest = NamedTuple(
+      "Repository" : Repository,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias AssociateRepositoryResponse = NamedTuple(
+      "RepositoryAssociation" : (RepositoryAssociation)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias AssociationArn = String
+
+    alias AssociationId = String
+
+    alias BranchName = String
+
+    alias ClientRequestToken = String
+
+    alias CodeCommitRepository = NamedTuple(
+      "Name" : Name
+    )
+
+    alias CodeReview = NamedTuple(
+      "Name" : (Name)?,
+      "CodeReviewArn" : (Arn)?,
+      "RepositoryName" : (Name)?,
+      "Owner" : (Owner)?,
+      "ProviderType" : (ProviderType)?,
+      "State" : (JobState)?,
+      "StateReason" : (StateReason)?,
+      "CreatedTimeStamp" : (TimeStamp)?,
+      "LastUpdatedTimeStamp" : (TimeStamp)?,
+      "Type" : (Type)?,
+      "PullRequestId" : (PullRequestId)?,
+      "SourceCodeType" : (SourceCodeType)?,
+      "AssociationArn" : (AssociationArn)?,
+      "Metrics" : (Metrics)?
+    )
+
+    alias CodeReviewName = String
+
+    alias CodeReviewSummaries = Array(CodeReviewSummary)
+
+    alias CodeReviewSummary = NamedTuple(
+      "Name" : (Name)?,
+      "CodeReviewArn" : (Arn)?,
+      "RepositoryName" : (Name)?,
+      "Owner" : (Owner)?,
+      "ProviderType" : (ProviderType)?,
+      "State" : (JobState)?,
+      "CreatedTimeStamp" : (TimeStamp)?,
+      "LastUpdatedTimeStamp" : (TimeStamp)?,
+      "Type" : (Type)?,
+      "PullRequestId" : (PullRequestId)?,
+      "MetricsSummary" : (MetricsSummary)?
+    )
+
+    alias CodeReviewType = NamedTuple(
+      "RepositoryAnalysis" : RepositoryAnalysis
+    )
+
+    alias CommitDiffSourceCodeType = NamedTuple(
+      "SourceCommit" : (CommitId)?,
+      "DestinationCommit" : (CommitId)?
+    )
+
+    alias CommitId = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConnectionArn = String
+
+    alias CreateCodeReviewRequest = NamedTuple(
+      "Name" : CodeReviewName,
+      "RepositoryAssociationArn" : AssociationArn,
+      "Type" : CodeReviewType,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreateCodeReviewResponse = NamedTuple(
+      "CodeReview" : (CodeReview)?
+    )
+
+    alias DescribeCodeReviewRequest = NamedTuple(
+      "CodeReviewArn" : Arn
+    )
+
+    alias DescribeCodeReviewResponse = NamedTuple(
+      "CodeReview" : (CodeReview)?
+    )
+
+    alias DescribeRecommendationFeedbackRequest = NamedTuple(
+      "CodeReviewArn" : Arn,
+      "RecommendationId" : RecommendationId,
+      "UserId" : (UserId)?
+    )
+
+    alias DescribeRecommendationFeedbackResponse = NamedTuple(
+      "RecommendationFeedback" : (RecommendationFeedback)?
+    )
+
+    alias DescribeRepositoryAssociationRequest = NamedTuple(
+      "AssociationArn" : AssociationArn
+    )
+
+    alias DescribeRepositoryAssociationResponse = NamedTuple(
+      "RepositoryAssociation" : (RepositoryAssociation)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias DisassociateRepositoryRequest = NamedTuple(
+      "AssociationArn" : AssociationArn
+    )
+
+    alias DisassociateRepositoryResponse = NamedTuple(
+      "RepositoryAssociation" : (RepositoryAssociation)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias ErrorMessage = String
+
+    alias FilePath = String
+
+    alias FindingsCount = Int64
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias JobState = String
+
+    alias JobStates = Array(JobState)
+
+    alias LineNumber = Int32
+
+    alias ListCodeReviewsMaxResults = Int32
+
+    alias ListCodeReviewsRequest = NamedTuple(
+      "ProviderTypes" : (ProviderTypes)?,
+      "States" : (JobStates)?,
+      "RepositoryNames" : (RepositoryNames)?,
+      "Type" : Type,
+      "MaxResults" : (ListCodeReviewsMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCodeReviewsResponse = NamedTuple(
+      "CodeReviewSummaries" : (CodeReviewSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRecommendationFeedbackRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "CodeReviewArn" : Arn,
+      "UserIds" : (UserIds)?,
+      "RecommendationIds" : (RecommendationIds)?
+    )
+
+    alias ListRecommendationFeedbackResponse = NamedTuple(
+      "RecommendationFeedbackSummaries" : (RecommendationFeedbackSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRecommendationsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "CodeReviewArn" : Arn
+    )
+
+    alias ListRecommendationsResponse = NamedTuple(
+      "RecommendationSummaries" : (RecommendationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRepositoryAssociationsRequest = NamedTuple(
+      "ProviderTypes" : (ProviderTypes)?,
+      "States" : (RepositoryAssociationStates)?,
+      "Names" : (Names)?,
+      "Owners" : (Owners)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRepositoryAssociationsResponse = NamedTuple(
+      "RepositoryAssociationSummaries" : (RepositoryAssociationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AssociationArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MeteredLinesOfCodeCount = Int64
+
+    alias Metrics = NamedTuple(
+      "MeteredLinesOfCodeCount" : (MeteredLinesOfCodeCount)?,
+      "FindingsCount" : (FindingsCount)?
+    )
+
+    alias MetricsSummary = NamedTuple(
+      "MeteredLinesOfCodeCount" : (MeteredLinesOfCodeCount)?,
+      "FindingsCount" : (FindingsCount)?
+    )
+
+    alias Name = String
+
+    alias Names = Array(Name)
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Owner = String
+
+    alias Owners = Array(Owner)
+
+    alias ProviderType = String
+
+    alias ProviderTypes = Array(ProviderType)
+
+    alias PullRequestId = String
+
+    alias PutRecommendationFeedbackRequest = NamedTuple(
+      "CodeReviewArn" : Arn,
+      "RecommendationId" : RecommendationId,
+      "Reactions" : Reactions
+    )
+
+    alias PutRecommendationFeedbackResponse = NamedTuple(
+      
+    )
+
+    alias Reaction = String
+
+    alias Reactions = Array(Reaction)
+
+    alias RecommendationFeedback = NamedTuple(
+      "CodeReviewArn" : (Arn)?,
+      "RecommendationId" : (RecommendationId)?,
+      "Reactions" : (Reactions)?,
+      "UserId" : (UserId)?,
+      "CreatedTimeStamp" : (TimeStamp)?,
+      "LastUpdatedTimeStamp" : (TimeStamp)?
+    )
+
+    alias RecommendationFeedbackSummaries = Array(RecommendationFeedbackSummary)
+
+    alias RecommendationFeedbackSummary = NamedTuple(
+      "RecommendationId" : (RecommendationId)?,
+      "Reactions" : (Reactions)?,
+      "UserId" : (UserId)?
+    )
+
+    alias RecommendationId = String
+
+    alias RecommendationIds = Array(RecommendationId)
+
+    alias RecommendationSummaries = Array(RecommendationSummary)
+
+    alias RecommendationSummary = NamedTuple(
+      "FilePath" : (FilePath)?,
+      "RecommendationId" : (RecommendationId)?,
+      "StartLine" : (LineNumber)?,
+      "EndLine" : (LineNumber)?,
+      "Description" : (Text)?
+    )
+
+    alias Repository = NamedTuple(
+      "CodeCommit" : (CodeCommitRepository)?,
+      "Bitbucket" : (ThirdPartySourceRepository)?,
+      "GitHubEnterpriseServer" : (ThirdPartySourceRepository)?
+    )
+
+    alias RepositoryAnalysis = NamedTuple(
+      "RepositoryHead" : RepositoryHeadSourceCodeType
+    )
+
+    alias RepositoryAssociation = NamedTuple(
+      "AssociationId" : (AssociationId)?,
+      "AssociationArn" : (Arn)?,
+      "ConnectionArn" : (ConnectionArn)?,
+      "Name" : (Name)?,
+      "Owner" : (Owner)?,
+      "ProviderType" : (ProviderType)?,
+      "State" : (RepositoryAssociationState)?,
+      "StateReason" : (StateReason)?,
+      "LastUpdatedTimeStamp" : (TimeStamp)?,
+      "CreatedTimeStamp" : (TimeStamp)?
+    )
+
+    alias RepositoryAssociationState = String
+
+    alias RepositoryAssociationStates = Array(RepositoryAssociationState)
+
+    alias RepositoryAssociationSummaries = Array(RepositoryAssociationSummary)
+
+    alias RepositoryAssociationSummary = NamedTuple(
+      "AssociationArn" : (Arn)?,
+      "ConnectionArn" : (ConnectionArn)?,
+      "LastUpdatedTimeStamp" : (TimeStamp)?,
+      "AssociationId" : (AssociationId)?,
+      "Name" : (Name)?,
+      "Owner" : (Owner)?,
+      "ProviderType" : (ProviderType)?,
+      "State" : (RepositoryAssociationState)?
+    )
+
+    alias RepositoryHeadSourceCodeType = NamedTuple(
+      "BranchName" : BranchName
+    )
+
+    alias RepositoryNames = Array(Name)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SourceCodeType = NamedTuple(
+      "CommitDiff" : (CommitDiffSourceCodeType)?,
+      "RepositoryHead" : (RepositoryHeadSourceCodeType)?
+    )
+
+    alias StateReason = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AssociationArn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Text = String
+
+    alias ThirdPartySourceRepository = NamedTuple(
+      "Name" : Name,
+      "ConnectionArn" : ConnectionArn,
+      "Owner" : Owner
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias Type = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AssociationArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UserId = String
+
+    alias UserIds = Array(UserId)
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

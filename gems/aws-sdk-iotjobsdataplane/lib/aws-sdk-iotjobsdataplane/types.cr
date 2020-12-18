@@ -477,5 +477,151 @@ module Aws::IoTJobsDataPlane
       include Aws::Structure
     end
 
+    alias ApproximateSecondsBeforeTimedOut = Int64
+
+    alias BinaryBlob = String | Array(UInt8) | IO
+
+    alias CertificateValidationException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias DescribeJobExecutionJobId = String
+
+    alias DescribeJobExecutionRequest = NamedTuple(
+      "jobId" : DescribeJobExecutionJobId,
+      "thingName" : ThingName,
+      "includeJobDocument" : (IncludeJobDocument)?,
+      "executionNumber" : (ExecutionNumber)?
+    )
+
+    alias DescribeJobExecutionResponse = NamedTuple(
+      "execution" : (JobExecution)?
+    )
+
+    alias DetailsKey = String
+
+    alias DetailsMap = Hash(DetailsKey,DetailsValue)
+
+    alias DetailsValue = String
+
+    alias ExecutionNumber = Int64
+
+    alias ExpectedVersion = Int64
+
+    alias GetPendingJobExecutionsRequest = NamedTuple(
+      "thingName" : ThingName
+    )
+
+    alias GetPendingJobExecutionsResponse = NamedTuple(
+      "inProgressJobs" : (JobExecutionSummaryList)?,
+      "queuedJobs" : (JobExecutionSummaryList)?
+    )
+
+    alias IncludeExecutionState = Bool
+
+    alias IncludeJobDocument = Bool
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidStateTransitionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias JobDocument = String
+
+    alias JobExecution = NamedTuple(
+      "jobId" : (JobId)?,
+      "thingName" : (ThingName)?,
+      "status" : (JobExecutionStatus)?,
+      "statusDetails" : (DetailsMap)?,
+      "queuedAt" : (QueuedAt)?,
+      "startedAt" : (StartedAt)?,
+      "lastUpdatedAt" : (LastUpdatedAt)?,
+      "approximateSecondsBeforeTimedOut" : (ApproximateSecondsBeforeTimedOut)?,
+      "versionNumber" : (VersionNumber)?,
+      "executionNumber" : (ExecutionNumber)?,
+      "jobDocument" : (JobDocument)?
+    )
+
+    alias JobExecutionState = NamedTuple(
+      "status" : (JobExecutionStatus)?,
+      "statusDetails" : (DetailsMap)?,
+      "versionNumber" : (VersionNumber)?
+    )
+
+    alias JobExecutionStatus = String
+
+    alias JobExecutionSummary = NamedTuple(
+      "jobId" : (JobId)?,
+      "queuedAt" : (QueuedAt)?,
+      "startedAt" : (StartedAt)?,
+      "lastUpdatedAt" : (LastUpdatedAt)?,
+      "versionNumber" : (VersionNumber)?,
+      "executionNumber" : (ExecutionNumber)?
+    )
+
+    alias JobExecutionSummaryList = Array(JobExecutionSummary)
+
+    alias JobId = String
+
+    alias LastUpdatedAt = Int64
+
+    alias QueuedAt = Int64
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias StartNextPendingJobExecutionRequest = NamedTuple(
+      "thingName" : ThingName,
+      "statusDetails" : (DetailsMap)?,
+      "stepTimeoutInMinutes" : (StepTimeoutInMinutes)?
+    )
+
+    alias StartNextPendingJobExecutionResponse = NamedTuple(
+      "execution" : (JobExecution)?
+    )
+
+    alias StartedAt = Int64
+
+    alias StepTimeoutInMinutes = Int64
+
+    alias TerminalStateException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ThingName = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?,
+      "payload" : (BinaryBlob)?
+    )
+
+    alias UpdateJobExecutionRequest = NamedTuple(
+      "jobId" : JobId,
+      "thingName" : ThingName,
+      "status" : JobExecutionStatus,
+      "statusDetails" : (DetailsMap)?,
+      "stepTimeoutInMinutes" : (StepTimeoutInMinutes)?,
+      "expectedVersion" : (ExpectedVersion)?,
+      "includeJobExecutionState" : (IncludeExecutionState)?,
+      "includeJobDocument" : (IncludeJobDocument)?,
+      "executionNumber" : (ExecutionNumber)?
+    )
+
+    alias UpdateJobExecutionResponse = NamedTuple(
+      "executionState" : (JobExecutionState)?,
+      "jobDocument" : (JobDocument)?
+    )
+
+    alias VersionNumber = Int64
+
+    alias errorMessage = String
   end
 end

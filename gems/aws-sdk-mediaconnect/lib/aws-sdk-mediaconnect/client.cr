@@ -409,8 +409,8 @@ module Aws::MediaConnect
     #
     # @overload add_flow_outputs(**params)
     # @param [Hash] params ({})
-    def add_flow_outputs(params = {}, **options)
-      req = build_request(:add_flow_outputs, params)
+    def add_flow_outputs(, **options)
+      req = build_request(:add_flow_outputs, )
       req.send_request(options)
     end
 
@@ -492,8 +492,8 @@ module Aws::MediaConnect
     #
     # @overload add_flow_sources(**params)
     # @param [Hash] params ({})
-    def add_flow_sources(params = {}, **options)
-      req = build_request(:add_flow_sources, params)
+    def add_flow_sources(, **options)
+      req = build_request(:add_flow_sources, )
       req.send_request(options)
     end
 
@@ -539,8 +539,8 @@ module Aws::MediaConnect
     #
     # @overload add_flow_vpc_interfaces(**params)
     # @param [Hash] params ({})
-    def add_flow_vpc_interfaces(params = {}, **options)
-      req = build_request(:add_flow_vpc_interfaces, params)
+    def add_flow_vpc_interfaces(, **options)
+      req = build_request(:add_flow_vpc_interfaces, )
       req.send_request(options)
     end
 
@@ -811,8 +811,8 @@ module Aws::MediaConnect
     #
     # @overload create_flow(**params)
     # @param [Hash] params ({})
-    def create_flow(params = {}, **options)
-      req = build_request(:create_flow, params)
+    def create_flow(, **options)
+      req = build_request(:create_flow, )
       req.send_request(options)
     end
 
@@ -840,8 +840,8 @@ module Aws::MediaConnect
     #
     # @overload delete_flow(**params)
     # @param [Hash] params ({})
-    def delete_flow(params = {}, **options)
-      req = build_request(:delete_flow, params)
+    def delete_flow(, **options)
+      req = build_request(:delete_flow, )
       req.send_request(options)
     end
 
@@ -984,8 +984,8 @@ module Aws::MediaConnect
     #
     # @overload describe_flow(**params)
     # @param [Hash] params ({})
-    def describe_flow(params = {}, **options)
-      req = build_request(:describe_flow, params)
+    def describe_flow(, **options)
+      req = build_request(:describe_flow, )
       req.send_request(options)
     end
 
@@ -1021,8 +1021,8 @@ module Aws::MediaConnect
     #
     # @overload describe_offering(**params)
     # @param [Hash] params ({})
-    def describe_offering(params = {}, **options)
-      req = build_request(:describe_offering, params)
+    def describe_offering(, **options)
+      req = build_request(:describe_offering, )
       req.send_request(options)
     end
 
@@ -1064,8 +1064,8 @@ module Aws::MediaConnect
     #
     # @overload describe_reservation(**params)
     # @param [Hash] params ({})
-    def describe_reservation(params = {}, **options)
-      req = build_request(:describe_reservation, params)
+    def describe_reservation(, **options)
+      req = build_request(:describe_reservation, )
       req.send_request(options)
     end
 
@@ -1132,8 +1132,8 @@ module Aws::MediaConnect
     #
     # @overload grant_flow_entitlements(**params)
     # @param [Hash] params ({})
-    def grant_flow_entitlements(params = {}, **options)
-      req = build_request(:grant_flow_entitlements, params)
+    def grant_flow_entitlements(, **options)
+      req = build_request(:grant_flow_entitlements, )
       req.send_request(options)
     end
 
@@ -1170,8 +1170,8 @@ module Aws::MediaConnect
     #
     # @overload list_entitlements(**params)
     # @param [Hash] params ({})
-    def list_entitlements(params = {}, **options)
-      req = build_request(:list_entitlements, params)
+    def list_entitlements(, **options)
+      req = build_request(:list_entitlements, )
       req.send_request(options)
     end
 
@@ -1211,8 +1211,8 @@ module Aws::MediaConnect
     #
     # @overload list_flows(**params)
     # @param [Hash] params ({})
-    def list_flows(params = {}, **options)
-      req = build_request(:list_flows, params)
+    def list_flows(, **options)
+      req = build_request(:list_flows, )
       req.send_request(options)
     end
 
@@ -1257,8 +1257,8 @@ module Aws::MediaConnect
     #
     # @overload list_offerings(**params)
     # @param [Hash] params ({})
-    def list_offerings(params = {}, **options)
-      req = build_request(:list_offerings, params)
+    def list_offerings(, **options)
+      req = build_request(:list_offerings, )
       req.send_request(options)
     end
 
@@ -1307,8 +1307,8 @@ module Aws::MediaConnect
     #
     # @overload list_reservations(**params)
     # @param [Hash] params ({})
-    def list_reservations(params = {}, **options)
-      req = build_request(:list_reservations, params)
+    def list_reservations(, **options)
+      req = build_request(:list_reservations, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::MediaConnect
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1390,8 +1390,8 @@ module Aws::MediaConnect
     #
     # @overload purchase_offering(**params)
     # @param [Hash] params ({})
-    def purchase_offering(params = {}, **options)
-      req = build_request(:purchase_offering, params)
+    def purchase_offering(, **options)
+      req = build_request(:purchase_offering, )
       req.send_request(options)
     end
 
@@ -1426,8 +1426,8 @@ module Aws::MediaConnect
     #
     # @overload remove_flow_output(**params)
     # @param [Hash] params ({})
-    def remove_flow_output(params = {}, **options)
-      req = build_request(:remove_flow_output, params)
+    def remove_flow_output(, **options)
+      req = build_request(:remove_flow_output, )
       req.send_request(options)
     end
 
@@ -1459,8 +1459,8 @@ module Aws::MediaConnect
     #
     # @overload remove_flow_source(**params)
     # @param [Hash] params ({})
-    def remove_flow_source(params = {}, **options)
-      req = build_request(:remove_flow_source, params)
+    def remove_flow_source(, **options)
+      req = build_request(:remove_flow_source, )
       req.send_request(options)
     end
 
@@ -1498,8 +1498,8 @@ module Aws::MediaConnect
     #
     # @overload remove_flow_vpc_interface(**params)
     # @param [Hash] params ({})
-    def remove_flow_vpc_interface(params = {}, **options)
-      req = build_request(:remove_flow_vpc_interface, params)
+    def remove_flow_vpc_interface(, **options)
+      req = build_request(:remove_flow_vpc_interface, )
       req.send_request(options)
     end
 
@@ -1532,8 +1532,8 @@ module Aws::MediaConnect
     #
     # @overload revoke_flow_entitlement(**params)
     # @param [Hash] params ({})
-    def revoke_flow_entitlement(params = {}, **options)
-      req = build_request(:revoke_flow_entitlement, params)
+    def revoke_flow_entitlement(, **options)
+      req = build_request(:revoke_flow_entitlement, )
       req.send_request(options)
     end
 
@@ -1561,8 +1561,8 @@ module Aws::MediaConnect
     #
     # @overload start_flow(**params)
     # @param [Hash] params ({})
-    def start_flow(params = {}, **options)
-      req = build_request(:start_flow, params)
+    def start_flow(, **options)
+      req = build_request(:start_flow, )
       req.send_request(options)
     end
 
@@ -1590,8 +1590,8 @@ module Aws::MediaConnect
     #
     # @overload stop_flow(**params)
     # @param [Hash] params ({})
-    def stop_flow(params = {}, **options)
-      req = build_request(:stop_flow, params)
+    def stop_flow(, **options)
+      req = build_request(:stop_flow, )
       req.send_request(options)
     end
 
@@ -1622,8 +1622,8 @@ module Aws::MediaConnect
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1646,8 +1646,8 @@ module Aws::MediaConnect
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1792,8 +1792,8 @@ module Aws::MediaConnect
     #
     # @overload update_flow(**params)
     # @param [Hash] params ({})
-    def update_flow(params = {}, **options)
-      req = build_request(:update_flow, params)
+    def update_flow(, **options)
+      req = build_request(:update_flow, )
       req.send_request(options)
     end
 
@@ -1875,8 +1875,8 @@ module Aws::MediaConnect
     #
     # @overload update_flow_entitlement(**params)
     # @param [Hash] params ({})
-    def update_flow_entitlement(params = {}, **options)
-      req = build_request(:update_flow_entitlement, params)
+    def update_flow_entitlement(, **options)
+      req = build_request(:update_flow_entitlement, )
       req.send_request(options)
     end
 
@@ -1994,8 +1994,8 @@ module Aws::MediaConnect
     #
     # @overload update_flow_output(**params)
     # @param [Hash] params ({})
-    def update_flow_output(params = {}, **options)
-      req = build_request(:update_flow_output, params)
+    def update_flow_output(, **options)
+      req = build_request(:update_flow_output, )
       req.send_request(options)
     end
 
@@ -2108,8 +2108,8 @@ module Aws::MediaConnect
     #
     # @overload update_flow_source(**params)
     # @param [Hash] params ({})
-    def update_flow_source(params = {}, **options)
-      req = build_request(:update_flow_source, params)
+    def update_flow_source(, **options)
+      req = build_request(:update_flow_source, )
       req.send_request(options)
     end
 

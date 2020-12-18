@@ -346,8 +346,8 @@ module Aws::MediaConvert
     #
     # @overload associate_certificate(**params)
     # @param [Hash] params ({})
-    def associate_certificate(params = {}, **options)
-      req = build_request(:associate_certificate, params)
+    def associate_certificate(, **options)
+      req = build_request(:associate_certificate, )
       req.send_request(options)
     end
 
@@ -369,8 +369,8 @@ module Aws::MediaConvert
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -2363,8 +2363,8 @@ module Aws::MediaConvert
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -4284,8 +4284,8 @@ module Aws::MediaConvert
     #
     # @overload create_job_template(**params)
     # @param [Hash] params ({})
-    def create_job_template(params = {}, **options)
-      req = build_request(:create_job_template, params)
+    def create_job_template(, **options)
+      req = build_request(:create_job_template, )
       req.send_request(options)
     end
 
@@ -5447,8 +5447,8 @@ module Aws::MediaConvert
     #
     # @overload create_preset(**params)
     # @param [Hash] params ({})
-    def create_preset(params = {}, **options)
-      req = build_request(:create_preset, params)
+    def create_preset(, **options)
+      req = build_request(:create_preset, )
       req.send_request(options)
     end
 
@@ -5526,8 +5526,8 @@ module Aws::MediaConvert
     #
     # @overload create_queue(**params)
     # @param [Hash] params ({})
-    def create_queue(params = {}, **options)
-      req = build_request(:create_queue, params)
+    def create_queue(, **options)
+      req = build_request(:create_queue, )
       req.send_request(options)
     end
 
@@ -5548,8 +5548,8 @@ module Aws::MediaConvert
     #
     # @overload delete_job_template(**params)
     # @param [Hash] params ({})
-    def delete_job_template(params = {}, **options)
-      req = build_request(:delete_job_template, params)
+    def delete_job_template(, **options)
+      req = build_request(:delete_job_template, )
       req.send_request(options)
     end
 
@@ -5570,8 +5570,8 @@ module Aws::MediaConvert
     #
     # @overload delete_preset(**params)
     # @param [Hash] params ({})
-    def delete_preset(params = {}, **options)
-      req = build_request(:delete_preset, params)
+    def delete_preset(, **options)
+      req = build_request(:delete_preset, )
       req.send_request(options)
     end
 
@@ -5592,8 +5592,8 @@ module Aws::MediaConvert
     #
     # @overload delete_queue(**params)
     # @param [Hash] params ({})
-    def delete_queue(params = {}, **options)
-      req = build_request(:delete_queue, params)
+    def delete_queue(, **options)
+      req = build_request(:delete_queue, )
       req.send_request(options)
     end
 
@@ -5640,8 +5640,8 @@ module Aws::MediaConvert
     #
     # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, **options)
-      req = build_request(:describe_endpoints, params)
+    def describe_endpoints(, **options)
+      req = build_request(:describe_endpoints, )
       req.send_request(options)
     end
 
@@ -5665,8 +5665,8 @@ module Aws::MediaConvert
     #
     # @overload disassociate_certificate(**params)
     # @param [Hash] params ({})
-    def disassociate_certificate(params = {}, **options)
-      req = build_request(:disassociate_certificate, params)
+    def disassociate_certificate(, **options)
+      req = build_request(:disassociate_certificate, )
       req.send_request(options)
     end
 
@@ -6493,8 +6493,8 @@ module Aws::MediaConvert
     #
     # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, **options)
-      req = build_request(:get_job, params)
+    def get_job(, **options)
+      req = build_request(:get_job, )
       req.send_request(options)
     end
 
@@ -7289,8 +7289,8 @@ module Aws::MediaConvert
     #
     # @overload get_job_template(**params)
     # @param [Hash] params ({})
-    def get_job_template(params = {}, **options)
-      req = build_request(:get_job_template, params)
+    def get_job_template(, **options)
+      req = build_request(:get_job_template, )
       req.send_request(options)
     end
 
@@ -7806,8 +7806,8 @@ module Aws::MediaConvert
     #
     # @overload get_preset(**params)
     # @param [Hash] params ({})
-    def get_preset(params = {}, **options)
-      req = build_request(:get_preset, params)
+    def get_preset(, **options)
+      req = build_request(:get_preset, )
       req.send_request(options)
     end
 
@@ -7849,8 +7849,8 @@ module Aws::MediaConvert
     #
     # @overload get_queue(**params)
     # @param [Hash] params ({})
-    def get_queue(params = {}, **options)
-      req = build_request(:get_queue, params)
+    def get_queue(, **options)
+      req = build_request(:get_queue, )
       req.send_request(options)
     end
 
@@ -8676,8 +8676,8 @@ module Aws::MediaConvert
     #
     # @overload list_job_templates(**params)
     # @param [Hash] params ({})
-    def list_job_templates(params = {}, **options)
-      req = build_request(:list_job_templates, params)
+    def list_job_templates(, **options)
+      req = build_request(:list_job_templates, )
       req.send_request(options)
     end
 
@@ -9534,8 +9534,8 @@ module Aws::MediaConvert
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -10082,8 +10082,8 @@ module Aws::MediaConvert
     #
     # @overload list_presets(**params)
     # @param [Hash] params ({})
-    def list_presets(params = {}, **options)
-      req = build_request(:list_presets, params)
+    def list_presets(, **options)
+      req = build_request(:list_presets, )
       req.send_request(options)
     end
 
@@ -10150,8 +10150,8 @@ module Aws::MediaConvert
     #
     # @overload list_queues(**params)
     # @param [Hash] params ({})
-    def list_queues(params = {}, **options)
-      req = build_request(:list_queues, params)
+    def list_queues(, **options)
+      req = build_request(:list_queues, )
       req.send_request(options)
     end
 
@@ -10181,8 +10181,8 @@ module Aws::MediaConvert
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -10213,8 +10213,8 @@ module Aws::MediaConvert
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -10242,8 +10242,8 @@ module Aws::MediaConvert
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -12149,8 +12149,8 @@ module Aws::MediaConvert
     #
     # @overload update_job_template(**params)
     # @param [Hash] params ({})
-    def update_job_template(params = {}, **options)
-      req = build_request(:update_job_template, params)
+    def update_job_template(, **options)
+      req = build_request(:update_job_template, )
       req.send_request(options)
     end
 
@@ -13303,8 +13303,8 @@ module Aws::MediaConvert
     #
     # @overload update_preset(**params)
     # @param [Hash] params ({})
-    def update_preset(params = {}, **options)
-      req = build_request(:update_preset, params)
+    def update_preset(, **options)
+      req = build_request(:update_preset, )
       req.send_request(options)
     end
 
@@ -13370,8 +13370,8 @@ module Aws::MediaConvert
     #
     # @overload update_queue(**params)
     # @param [Hash] params ({})
-    def update_queue(params = {}, **options)
-      req = build_request(:update_queue, params)
+    def update_queue(, **options)
+      req = build_request(:update_queue, )
       req.send_request(options)
     end
 

@@ -7442,5 +7442,1209 @@ module Aws::SWF
       include Aws::Structure
     end
 
+    alias ActivityId = String
+
+    alias ActivityTask = NamedTuple(
+      "taskToken" : TaskToken,
+      "activityId" : ActivityId,
+      "startedEventId" : EventId,
+      "workflowExecution" : WorkflowExecution,
+      "activityType" : ActivityType,
+      "input" : (Data)?
+    )
+
+    alias ActivityTaskCancelRequestedEventAttributes = NamedTuple(
+      "decisionTaskCompletedEventId" : EventId,
+      "activityId" : ActivityId
+    )
+
+    alias ActivityTaskCanceledEventAttributes = NamedTuple(
+      "details" : (Data)?,
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId,
+      "latestCancelRequestedEventId" : (EventId)?
+    )
+
+    alias ActivityTaskCompletedEventAttributes = NamedTuple(
+      "result" : (Data)?,
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias ActivityTaskFailedEventAttributes = NamedTuple(
+      "reason" : (FailureReason)?,
+      "details" : (Data)?,
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias ActivityTaskScheduledEventAttributes = NamedTuple(
+      "activityType" : ActivityType,
+      "activityId" : ActivityId,
+      "input" : (Data)?,
+      "control" : (Data)?,
+      "scheduleToStartTimeout" : (DurationInSecondsOptional)?,
+      "scheduleToCloseTimeout" : (DurationInSecondsOptional)?,
+      "startToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskList" : TaskList,
+      "taskPriority" : (TaskPriority)?,
+      "decisionTaskCompletedEventId" : EventId,
+      "heartbeatTimeout" : (DurationInSecondsOptional)?
+    )
+
+    alias ActivityTaskStartedEventAttributes = NamedTuple(
+      "identity" : (Identity)?,
+      "scheduledEventId" : EventId
+    )
+
+    alias ActivityTaskStatus = NamedTuple(
+      "cancelRequested" : Canceled
+    )
+
+    alias ActivityTaskTimedOutEventAttributes = NamedTuple(
+      "timeoutType" : ActivityTaskTimeoutType,
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId,
+      "details" : (LimitedData)?
+    )
+
+    alias ActivityTaskTimeoutType = String
+
+    alias ActivityType = NamedTuple(
+      "name" : Name,
+      "version" : Version
+    )
+
+    alias ActivityTypeConfiguration = NamedTuple(
+      "defaultTaskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskHeartbeatTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskList" : (TaskList)?,
+      "defaultTaskPriority" : (TaskPriority)?,
+      "defaultTaskScheduleToStartTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskScheduleToCloseTimeout" : (DurationInSecondsOptional)?
+    )
+
+    alias ActivityTypeDetail = NamedTuple(
+      "typeInfo" : ActivityTypeInfo,
+      "configuration" : ActivityTypeConfiguration
+    )
+
+    alias ActivityTypeInfo = NamedTuple(
+      "activityType" : ActivityType,
+      "status" : RegistrationStatus,
+      "description" : (Description)?,
+      "creationDate" : Timestamp,
+      "deprecationDate" : (Timestamp)?
+    )
+
+    alias ActivityTypeInfoList = Array(ActivityTypeInfo)
+
+    alias ActivityTypeInfos = NamedTuple(
+      "typeInfos" : ActivityTypeInfoList,
+      "nextPageToken" : (PageToken)?
+    )
+
+    alias Arn = String
+
+    alias CancelTimerDecisionAttributes = NamedTuple(
+      "timerId" : TimerId
+    )
+
+    alias CancelTimerFailedCause = String
+
+    alias CancelTimerFailedEventAttributes = NamedTuple(
+      "timerId" : TimerId,
+      "cause" : CancelTimerFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias CancelWorkflowExecutionDecisionAttributes = NamedTuple(
+      "details" : (Data)?
+    )
+
+    alias CancelWorkflowExecutionFailedCause = String
+
+    alias CancelWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "cause" : CancelWorkflowExecutionFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias Canceled = Bool
+
+    alias CauseMessage = String
+
+    alias ChildPolicy = String
+
+    alias ChildWorkflowExecutionCanceledEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "details" : (Data)?,
+      "initiatedEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias ChildWorkflowExecutionCompletedEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "result" : (Data)?,
+      "initiatedEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias ChildWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "reason" : (FailureReason)?,
+      "details" : (Data)?,
+      "initiatedEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias ChildWorkflowExecutionStartedEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "initiatedEventId" : EventId
+    )
+
+    alias ChildWorkflowExecutionTerminatedEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "initiatedEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias ChildWorkflowExecutionTimedOutEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "timeoutType" : WorkflowExecutionTimeoutType,
+      "initiatedEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias CloseStatus = String
+
+    alias CloseStatusFilter = NamedTuple(
+      "status" : CloseStatus
+    )
+
+    alias CompleteWorkflowExecutionDecisionAttributes = NamedTuple(
+      "result" : (Data)?
+    )
+
+    alias CompleteWorkflowExecutionFailedCause = String
+
+    alias CompleteWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "cause" : CompleteWorkflowExecutionFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias ContinueAsNewWorkflowExecutionDecisionAttributes = NamedTuple(
+      "input" : (Data)?,
+      "executionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskList" : (TaskList)?,
+      "taskPriority" : (TaskPriority)?,
+      "taskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "childPolicy" : (ChildPolicy)?,
+      "tagList" : (TagList)?,
+      "workflowTypeVersion" : (Version)?,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias ContinueAsNewWorkflowExecutionFailedCause = String
+
+    alias ContinueAsNewWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "cause" : ContinueAsNewWorkflowExecutionFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias Count = Int32
+
+    alias CountClosedWorkflowExecutionsInput = NamedTuple(
+      "domain" : DomainName,
+      "startTimeFilter" : (ExecutionTimeFilter)?,
+      "closeTimeFilter" : (ExecutionTimeFilter)?,
+      "executionFilter" : (WorkflowExecutionFilter)?,
+      "typeFilter" : (WorkflowTypeFilter)?,
+      "tagFilter" : (TagFilter)?,
+      "closeStatusFilter" : (CloseStatusFilter)?
+    )
+
+    alias CountOpenWorkflowExecutionsInput = NamedTuple(
+      "domain" : DomainName,
+      "startTimeFilter" : ExecutionTimeFilter,
+      "typeFilter" : (WorkflowTypeFilter)?,
+      "tagFilter" : (TagFilter)?,
+      "executionFilter" : (WorkflowExecutionFilter)?
+    )
+
+    alias CountPendingActivityTasksInput = NamedTuple(
+      "domain" : DomainName,
+      "taskList" : TaskList
+    )
+
+    alias CountPendingDecisionTasksInput = NamedTuple(
+      "domain" : DomainName,
+      "taskList" : TaskList
+    )
+
+    alias Data = String
+
+    alias Decision = NamedTuple(
+      "decisionType" : DecisionType,
+      "scheduleActivityTaskDecisionAttributes" : (ScheduleActivityTaskDecisionAttributes)?,
+      "requestCancelActivityTaskDecisionAttributes" : (RequestCancelActivityTaskDecisionAttributes)?,
+      "completeWorkflowExecutionDecisionAttributes" : (CompleteWorkflowExecutionDecisionAttributes)?,
+      "failWorkflowExecutionDecisionAttributes" : (FailWorkflowExecutionDecisionAttributes)?,
+      "cancelWorkflowExecutionDecisionAttributes" : (CancelWorkflowExecutionDecisionAttributes)?,
+      "continueAsNewWorkflowExecutionDecisionAttributes" : (ContinueAsNewWorkflowExecutionDecisionAttributes)?,
+      "recordMarkerDecisionAttributes" : (RecordMarkerDecisionAttributes)?,
+      "startTimerDecisionAttributes" : (StartTimerDecisionAttributes)?,
+      "cancelTimerDecisionAttributes" : (CancelTimerDecisionAttributes)?,
+      "signalExternalWorkflowExecutionDecisionAttributes" : (SignalExternalWorkflowExecutionDecisionAttributes)?,
+      "requestCancelExternalWorkflowExecutionDecisionAttributes" : (RequestCancelExternalWorkflowExecutionDecisionAttributes)?,
+      "startChildWorkflowExecutionDecisionAttributes" : (StartChildWorkflowExecutionDecisionAttributes)?,
+      "scheduleLambdaFunctionDecisionAttributes" : (ScheduleLambdaFunctionDecisionAttributes)?
+    )
+
+    alias DecisionList = Array(Decision)
+
+    alias DecisionTask = NamedTuple(
+      "taskToken" : TaskToken,
+      "startedEventId" : EventId,
+      "workflowExecution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "events" : HistoryEventList,
+      "nextPageToken" : (PageToken)?,
+      "previousStartedEventId" : (EventId)?
+    )
+
+    alias DecisionTaskCompletedEventAttributes = NamedTuple(
+      "executionContext" : (Data)?,
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias DecisionTaskScheduledEventAttributes = NamedTuple(
+      "taskList" : TaskList,
+      "taskPriority" : (TaskPriority)?,
+      "startToCloseTimeout" : (DurationInSecondsOptional)?
+    )
+
+    alias DecisionTaskStartedEventAttributes = NamedTuple(
+      "identity" : (Identity)?,
+      "scheduledEventId" : EventId
+    )
+
+    alias DecisionTaskTimedOutEventAttributes = NamedTuple(
+      "timeoutType" : DecisionTaskTimeoutType,
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId
+    )
+
+    alias DecisionTaskTimeoutType = String
+
+    alias DecisionType = String
+
+    alias DefaultUndefinedFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DeprecateActivityTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "activityType" : ActivityType
+    )
+
+    alias DeprecateDomainInput = NamedTuple(
+      "name" : DomainName
+    )
+
+    alias DeprecateWorkflowTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowType" : WorkflowType
+    )
+
+    alias DescribeActivityTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "activityType" : ActivityType
+    )
+
+    alias DescribeDomainInput = NamedTuple(
+      "name" : DomainName
+    )
+
+    alias DescribeWorkflowExecutionInput = NamedTuple(
+      "domain" : DomainName,
+      "execution" : WorkflowExecution
+    )
+
+    alias DescribeWorkflowTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowType" : WorkflowType
+    )
+
+    alias Description = String
+
+    alias DomainAlreadyExistsFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DomainConfiguration = NamedTuple(
+      "workflowExecutionRetentionPeriodInDays" : DurationInDays
+    )
+
+    alias DomainDeprecatedFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DomainDetail = NamedTuple(
+      "domainInfo" : DomainInfo,
+      "configuration" : DomainConfiguration
+    )
+
+    alias DomainInfo = NamedTuple(
+      "name" : DomainName,
+      "status" : RegistrationStatus,
+      "description" : (Description)?,
+      "arn" : (Arn)?
+    )
+
+    alias DomainInfoList = Array(DomainInfo)
+
+    alias DomainInfos = NamedTuple(
+      "domainInfos" : DomainInfoList,
+      "nextPageToken" : (PageToken)?
+    )
+
+    alias DomainName = String
+
+    alias DurationInDays = String
+
+    alias DurationInSeconds = String
+
+    alias DurationInSecondsOptional = String
+
+    alias ErrorMessage = String
+
+    alias EventId = Int64
+
+    alias EventType = String
+
+    alias ExecutionStatus = String
+
+    alias ExecutionTimeFilter = NamedTuple(
+      "oldestDate" : Timestamp,
+      "latestDate" : (Timestamp)?
+    )
+
+    alias ExternalWorkflowExecutionCancelRequestedEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "initiatedEventId" : EventId
+    )
+
+    alias ExternalWorkflowExecutionSignaledEventAttributes = NamedTuple(
+      "workflowExecution" : WorkflowExecution,
+      "initiatedEventId" : EventId
+    )
+
+    alias FailWorkflowExecutionDecisionAttributes = NamedTuple(
+      "reason" : (FailureReason)?,
+      "details" : (Data)?
+    )
+
+    alias FailWorkflowExecutionFailedCause = String
+
+    alias FailWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "cause" : FailWorkflowExecutionFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias FailureReason = String
+
+    alias FunctionId = String
+
+    alias FunctionInput = String
+
+    alias FunctionName = String
+
+    alias GetWorkflowExecutionHistoryInput = NamedTuple(
+      "domain" : DomainName,
+      "execution" : WorkflowExecution,
+      "nextPageToken" : (PageToken)?,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?
+    )
+
+    alias History = NamedTuple(
+      "events" : HistoryEventList,
+      "nextPageToken" : (PageToken)?
+    )
+
+    alias HistoryEvent = NamedTuple(
+      "eventTimestamp" : Timestamp,
+      "eventType" : EventType,
+      "eventId" : EventId,
+      "workflowExecutionStartedEventAttributes" : (WorkflowExecutionStartedEventAttributes)?,
+      "workflowExecutionCompletedEventAttributes" : (WorkflowExecutionCompletedEventAttributes)?,
+      "completeWorkflowExecutionFailedEventAttributes" : (CompleteWorkflowExecutionFailedEventAttributes)?,
+      "workflowExecutionFailedEventAttributes" : (WorkflowExecutionFailedEventAttributes)?,
+      "failWorkflowExecutionFailedEventAttributes" : (FailWorkflowExecutionFailedEventAttributes)?,
+      "workflowExecutionTimedOutEventAttributes" : (WorkflowExecutionTimedOutEventAttributes)?,
+      "workflowExecutionCanceledEventAttributes" : (WorkflowExecutionCanceledEventAttributes)?,
+      "cancelWorkflowExecutionFailedEventAttributes" : (CancelWorkflowExecutionFailedEventAttributes)?,
+      "workflowExecutionContinuedAsNewEventAttributes" : (WorkflowExecutionContinuedAsNewEventAttributes)?,
+      "continueAsNewWorkflowExecutionFailedEventAttributes" : (ContinueAsNewWorkflowExecutionFailedEventAttributes)?,
+      "workflowExecutionTerminatedEventAttributes" : (WorkflowExecutionTerminatedEventAttributes)?,
+      "workflowExecutionCancelRequestedEventAttributes" : (WorkflowExecutionCancelRequestedEventAttributes)?,
+      "decisionTaskScheduledEventAttributes" : (DecisionTaskScheduledEventAttributes)?,
+      "decisionTaskStartedEventAttributes" : (DecisionTaskStartedEventAttributes)?,
+      "decisionTaskCompletedEventAttributes" : (DecisionTaskCompletedEventAttributes)?,
+      "decisionTaskTimedOutEventAttributes" : (DecisionTaskTimedOutEventAttributes)?,
+      "activityTaskScheduledEventAttributes" : (ActivityTaskScheduledEventAttributes)?,
+      "activityTaskStartedEventAttributes" : (ActivityTaskStartedEventAttributes)?,
+      "activityTaskCompletedEventAttributes" : (ActivityTaskCompletedEventAttributes)?,
+      "activityTaskFailedEventAttributes" : (ActivityTaskFailedEventAttributes)?,
+      "activityTaskTimedOutEventAttributes" : (ActivityTaskTimedOutEventAttributes)?,
+      "activityTaskCanceledEventAttributes" : (ActivityTaskCanceledEventAttributes)?,
+      "activityTaskCancelRequestedEventAttributes" : (ActivityTaskCancelRequestedEventAttributes)?,
+      "workflowExecutionSignaledEventAttributes" : (WorkflowExecutionSignaledEventAttributes)?,
+      "markerRecordedEventAttributes" : (MarkerRecordedEventAttributes)?,
+      "recordMarkerFailedEventAttributes" : (RecordMarkerFailedEventAttributes)?,
+      "timerStartedEventAttributes" : (TimerStartedEventAttributes)?,
+      "timerFiredEventAttributes" : (TimerFiredEventAttributes)?,
+      "timerCanceledEventAttributes" : (TimerCanceledEventAttributes)?,
+      "startChildWorkflowExecutionInitiatedEventAttributes" : (StartChildWorkflowExecutionInitiatedEventAttributes)?,
+      "childWorkflowExecutionStartedEventAttributes" : (ChildWorkflowExecutionStartedEventAttributes)?,
+      "childWorkflowExecutionCompletedEventAttributes" : (ChildWorkflowExecutionCompletedEventAttributes)?,
+      "childWorkflowExecutionFailedEventAttributes" : (ChildWorkflowExecutionFailedEventAttributes)?,
+      "childWorkflowExecutionTimedOutEventAttributes" : (ChildWorkflowExecutionTimedOutEventAttributes)?,
+      "childWorkflowExecutionCanceledEventAttributes" : (ChildWorkflowExecutionCanceledEventAttributes)?,
+      "childWorkflowExecutionTerminatedEventAttributes" : (ChildWorkflowExecutionTerminatedEventAttributes)?,
+      "signalExternalWorkflowExecutionInitiatedEventAttributes" : (SignalExternalWorkflowExecutionInitiatedEventAttributes)?,
+      "externalWorkflowExecutionSignaledEventAttributes" : (ExternalWorkflowExecutionSignaledEventAttributes)?,
+      "signalExternalWorkflowExecutionFailedEventAttributes" : (SignalExternalWorkflowExecutionFailedEventAttributes)?,
+      "externalWorkflowExecutionCancelRequestedEventAttributes" : (ExternalWorkflowExecutionCancelRequestedEventAttributes)?,
+      "requestCancelExternalWorkflowExecutionInitiatedEventAttributes" : (RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)?,
+      "requestCancelExternalWorkflowExecutionFailedEventAttributes" : (RequestCancelExternalWorkflowExecutionFailedEventAttributes)?,
+      "scheduleActivityTaskFailedEventAttributes" : (ScheduleActivityTaskFailedEventAttributes)?,
+      "requestCancelActivityTaskFailedEventAttributes" : (RequestCancelActivityTaskFailedEventAttributes)?,
+      "startTimerFailedEventAttributes" : (StartTimerFailedEventAttributes)?,
+      "cancelTimerFailedEventAttributes" : (CancelTimerFailedEventAttributes)?,
+      "startChildWorkflowExecutionFailedEventAttributes" : (StartChildWorkflowExecutionFailedEventAttributes)?,
+      "lambdaFunctionScheduledEventAttributes" : (LambdaFunctionScheduledEventAttributes)?,
+      "lambdaFunctionStartedEventAttributes" : (LambdaFunctionStartedEventAttributes)?,
+      "lambdaFunctionCompletedEventAttributes" : (LambdaFunctionCompletedEventAttributes)?,
+      "lambdaFunctionFailedEventAttributes" : (LambdaFunctionFailedEventAttributes)?,
+      "lambdaFunctionTimedOutEventAttributes" : (LambdaFunctionTimedOutEventAttributes)?,
+      "scheduleLambdaFunctionFailedEventAttributes" : (ScheduleLambdaFunctionFailedEventAttributes)?,
+      "startLambdaFunctionFailedEventAttributes" : (StartLambdaFunctionFailedEventAttributes)?
+    )
+
+    alias HistoryEventList = Array(HistoryEvent)
+
+    alias Identity = String
+
+    alias LambdaFunctionCompletedEventAttributes = NamedTuple(
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId,
+      "result" : (Data)?
+    )
+
+    alias LambdaFunctionFailedEventAttributes = NamedTuple(
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId,
+      "reason" : (FailureReason)?,
+      "details" : (Data)?
+    )
+
+    alias LambdaFunctionScheduledEventAttributes = NamedTuple(
+      "id" : FunctionId,
+      "name" : FunctionName,
+      "control" : (Data)?,
+      "input" : (FunctionInput)?,
+      "startToCloseTimeout" : (DurationInSecondsOptional)?,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias LambdaFunctionStartedEventAttributes = NamedTuple(
+      "scheduledEventId" : EventId
+    )
+
+    alias LambdaFunctionTimedOutEventAttributes = NamedTuple(
+      "scheduledEventId" : EventId,
+      "startedEventId" : EventId,
+      "timeoutType" : (LambdaFunctionTimeoutType)?
+    )
+
+    alias LambdaFunctionTimeoutType = String
+
+    alias LimitExceededFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LimitedData = String
+
+    alias ListActivityTypesInput = NamedTuple(
+      "domain" : DomainName,
+      "name" : (Name)?,
+      "registrationStatus" : RegistrationStatus,
+      "nextPageToken" : (PageToken)?,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?
+    )
+
+    alias ListClosedWorkflowExecutionsInput = NamedTuple(
+      "domain" : DomainName,
+      "startTimeFilter" : (ExecutionTimeFilter)?,
+      "closeTimeFilter" : (ExecutionTimeFilter)?,
+      "executionFilter" : (WorkflowExecutionFilter)?,
+      "closeStatusFilter" : (CloseStatusFilter)?,
+      "typeFilter" : (WorkflowTypeFilter)?,
+      "tagFilter" : (TagFilter)?,
+      "nextPageToken" : (PageToken)?,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?
+    )
+
+    alias ListDomainsInput = NamedTuple(
+      "nextPageToken" : (PageToken)?,
+      "registrationStatus" : RegistrationStatus,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?
+    )
+
+    alias ListOpenWorkflowExecutionsInput = NamedTuple(
+      "domain" : DomainName,
+      "startTimeFilter" : ExecutionTimeFilter,
+      "typeFilter" : (WorkflowTypeFilter)?,
+      "tagFilter" : (TagFilter)?,
+      "nextPageToken" : (PageToken)?,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?,
+      "executionFilter" : (WorkflowExecutionFilter)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "tags" : (ResourceTagList)?
+    )
+
+    alias ListWorkflowTypesInput = NamedTuple(
+      "domain" : DomainName,
+      "name" : (Name)?,
+      "registrationStatus" : RegistrationStatus,
+      "nextPageToken" : (PageToken)?,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?
+    )
+
+    alias MarkerName = String
+
+    alias MarkerRecordedEventAttributes = NamedTuple(
+      "markerName" : MarkerName,
+      "details" : (Data)?,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias Name = String
+
+    alias OpenDecisionTasksCount = Int32
+
+    alias OperationNotPermittedFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias PageSize = Int32
+
+    alias PageToken = String
+
+    alias PendingTaskCount = NamedTuple(
+      "count" : Count,
+      "truncated" : (Truncated)?
+    )
+
+    alias PollForActivityTaskInput = NamedTuple(
+      "domain" : DomainName,
+      "taskList" : TaskList,
+      "identity" : (Identity)?
+    )
+
+    alias PollForDecisionTaskInput = NamedTuple(
+      "domain" : DomainName,
+      "taskList" : TaskList,
+      "identity" : (Identity)?,
+      "nextPageToken" : (PageToken)?,
+      "maximumPageSize" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?
+    )
+
+    alias RecordActivityTaskHeartbeatInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "details" : (LimitedData)?
+    )
+
+    alias RecordMarkerDecisionAttributes = NamedTuple(
+      "markerName" : MarkerName,
+      "details" : (Data)?
+    )
+
+    alias RecordMarkerFailedCause = String
+
+    alias RecordMarkerFailedEventAttributes = NamedTuple(
+      "markerName" : MarkerName,
+      "cause" : RecordMarkerFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias RegisterActivityTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "name" : Name,
+      "version" : Version,
+      "description" : (Description)?,
+      "defaultTaskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskHeartbeatTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskList" : (TaskList)?,
+      "defaultTaskPriority" : (TaskPriority)?,
+      "defaultTaskScheduleToStartTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskScheduleToCloseTimeout" : (DurationInSecondsOptional)?
+    )
+
+    alias RegisterDomainInput = NamedTuple(
+      "name" : DomainName,
+      "description" : (Description)?,
+      "workflowExecutionRetentionPeriodInDays" : DurationInDays,
+      "tags" : (ResourceTagList)?
+    )
+
+    alias RegisterWorkflowTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "name" : Name,
+      "version" : Version,
+      "description" : (Description)?,
+      "defaultTaskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "defaultExecutionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskList" : (TaskList)?,
+      "defaultTaskPriority" : (TaskPriority)?,
+      "defaultChildPolicy" : (ChildPolicy)?,
+      "defaultLambdaRole" : (Arn)?
+    )
+
+    alias RegistrationStatus = String
+
+    alias RequestCancelActivityTaskDecisionAttributes = NamedTuple(
+      "activityId" : ActivityId
+    )
+
+    alias RequestCancelActivityTaskFailedCause = String
+
+    alias RequestCancelActivityTaskFailedEventAttributes = NamedTuple(
+      "activityId" : ActivityId,
+      "cause" : RequestCancelActivityTaskFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias RequestCancelExternalWorkflowExecutionDecisionAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "control" : (Data)?
+    )
+
+    alias RequestCancelExternalWorkflowExecutionFailedCause = String
+
+    alias RequestCancelExternalWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "cause" : RequestCancelExternalWorkflowExecutionFailedCause,
+      "initiatedEventId" : EventId,
+      "decisionTaskCompletedEventId" : EventId,
+      "control" : (Data)?
+    )
+
+    alias RequestCancelExternalWorkflowExecutionInitiatedEventAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "decisionTaskCompletedEventId" : EventId,
+      "control" : (Data)?
+    )
+
+    alias RequestCancelWorkflowExecutionInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?
+    )
+
+    alias ResourceTag = NamedTuple(
+      "key" : ResourceTagKey,
+      "value" : (ResourceTagValue)?
+    )
+
+    alias ResourceTagKey = String
+
+    alias ResourceTagKeyList = Array(ResourceTagKey)
+
+    alias ResourceTagList = Array(ResourceTag)
+
+    alias ResourceTagValue = String
+
+    alias RespondActivityTaskCanceledInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "details" : (Data)?
+    )
+
+    alias RespondActivityTaskCompletedInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "result" : (Data)?
+    )
+
+    alias RespondActivityTaskFailedInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "reason" : (FailureReason)?,
+      "details" : (Data)?
+    )
+
+    alias RespondDecisionTaskCompletedInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "decisions" : (DecisionList)?,
+      "executionContext" : (Data)?
+    )
+
+    alias ReverseOrder = Bool
+
+    alias Run = NamedTuple(
+      "runId" : (WorkflowRunId)?
+    )
+
+    alias ScheduleActivityTaskDecisionAttributes = NamedTuple(
+      "activityType" : ActivityType,
+      "activityId" : ActivityId,
+      "control" : (Data)?,
+      "input" : (Data)?,
+      "scheduleToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskList" : (TaskList)?,
+      "taskPriority" : (TaskPriority)?,
+      "scheduleToStartTimeout" : (DurationInSecondsOptional)?,
+      "startToCloseTimeout" : (DurationInSecondsOptional)?,
+      "heartbeatTimeout" : (DurationInSecondsOptional)?
+    )
+
+    alias ScheduleActivityTaskFailedCause = String
+
+    alias ScheduleActivityTaskFailedEventAttributes = NamedTuple(
+      "activityType" : ActivityType,
+      "activityId" : ActivityId,
+      "cause" : ScheduleActivityTaskFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias ScheduleLambdaFunctionDecisionAttributes = NamedTuple(
+      "id" : FunctionId,
+      "name" : FunctionName,
+      "control" : (Data)?,
+      "input" : (FunctionInput)?,
+      "startToCloseTimeout" : (DurationInSecondsOptional)?
+    )
+
+    alias ScheduleLambdaFunctionFailedCause = String
+
+    alias ScheduleLambdaFunctionFailedEventAttributes = NamedTuple(
+      "id" : FunctionId,
+      "name" : FunctionName,
+      "cause" : ScheduleLambdaFunctionFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias SignalExternalWorkflowExecutionDecisionAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "signalName" : SignalName,
+      "input" : (Data)?,
+      "control" : (Data)?
+    )
+
+    alias SignalExternalWorkflowExecutionFailedCause = String
+
+    alias SignalExternalWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "cause" : SignalExternalWorkflowExecutionFailedCause,
+      "initiatedEventId" : EventId,
+      "decisionTaskCompletedEventId" : EventId,
+      "control" : (Data)?
+    )
+
+    alias SignalExternalWorkflowExecutionInitiatedEventAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "signalName" : SignalName,
+      "input" : (Data)?,
+      "decisionTaskCompletedEventId" : EventId,
+      "control" : (Data)?
+    )
+
+    alias SignalName = String
+
+    alias SignalWorkflowExecutionInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "signalName" : SignalName,
+      "input" : (Data)?
+    )
+
+    alias StartChildWorkflowExecutionDecisionAttributes = NamedTuple(
+      "workflowType" : WorkflowType,
+      "workflowId" : WorkflowId,
+      "control" : (Data)?,
+      "input" : (Data)?,
+      "executionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskList" : (TaskList)?,
+      "taskPriority" : (TaskPriority)?,
+      "taskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "childPolicy" : (ChildPolicy)?,
+      "tagList" : (TagList)?,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias StartChildWorkflowExecutionFailedCause = String
+
+    alias StartChildWorkflowExecutionFailedEventAttributes = NamedTuple(
+      "workflowType" : WorkflowType,
+      "cause" : StartChildWorkflowExecutionFailedCause,
+      "workflowId" : WorkflowId,
+      "initiatedEventId" : EventId,
+      "decisionTaskCompletedEventId" : EventId,
+      "control" : (Data)?
+    )
+
+    alias StartChildWorkflowExecutionInitiatedEventAttributes = NamedTuple(
+      "workflowId" : WorkflowId,
+      "workflowType" : WorkflowType,
+      "control" : (Data)?,
+      "input" : (Data)?,
+      "executionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskList" : TaskList,
+      "taskPriority" : (TaskPriority)?,
+      "decisionTaskCompletedEventId" : EventId,
+      "childPolicy" : ChildPolicy,
+      "taskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "tagList" : (TagList)?,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias StartLambdaFunctionFailedCause = String
+
+    alias StartLambdaFunctionFailedEventAttributes = NamedTuple(
+      "scheduledEventId" : (EventId)?,
+      "cause" : (StartLambdaFunctionFailedCause)?,
+      "message" : (CauseMessage)?
+    )
+
+    alias StartTimerDecisionAttributes = NamedTuple(
+      "timerId" : TimerId,
+      "control" : (Data)?,
+      "startToFireTimeout" : DurationInSeconds
+    )
+
+    alias StartTimerFailedCause = String
+
+    alias StartTimerFailedEventAttributes = NamedTuple(
+      "timerId" : TimerId,
+      "cause" : StartTimerFailedCause,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias StartWorkflowExecutionInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowId" : WorkflowId,
+      "workflowType" : WorkflowType,
+      "taskList" : (TaskList)?,
+      "taskPriority" : (TaskPriority)?,
+      "input" : (Data)?,
+      "executionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "tagList" : (TagList)?,
+      "taskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "childPolicy" : (ChildPolicy)?,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias Tag = String
+
+    alias TagFilter = NamedTuple(
+      "tag" : Tag
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : ResourceTagList
+    )
+
+    alias TaskList = NamedTuple(
+      "name" : Name
+    )
+
+    alias TaskPriority = String
+
+    alias TaskToken = String
+
+    alias TerminateReason = String
+
+    alias TerminateWorkflowExecutionInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowId" : WorkflowId,
+      "runId" : (WorkflowRunIdOptional)?,
+      "reason" : (TerminateReason)?,
+      "details" : (Data)?,
+      "childPolicy" : (ChildPolicy)?
+    )
+
+    alias TimerCanceledEventAttributes = NamedTuple(
+      "timerId" : TimerId,
+      "startedEventId" : EventId,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias TimerFiredEventAttributes = NamedTuple(
+      "timerId" : TimerId,
+      "startedEventId" : EventId
+    )
+
+    alias TimerId = String
+
+    alias TimerStartedEventAttributes = NamedTuple(
+      "timerId" : TimerId,
+      "control" : (Data)?,
+      "startToFireTimeout" : DurationInSeconds,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyTagsFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Truncated = Bool
+
+    alias TypeAlreadyExistsFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TypeDeprecatedFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UndeprecateActivityTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "activityType" : ActivityType
+    )
+
+    alias UndeprecateDomainInput = NamedTuple(
+      "name" : DomainName
+    )
+
+    alias UndeprecateWorkflowTypeInput = NamedTuple(
+      "domain" : DomainName,
+      "workflowType" : WorkflowType
+    )
+
+    alias UnknownResourceFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceInput = NamedTuple(
+      "resourceArn" : Arn,
+      "tagKeys" : ResourceTagKeyList
+    )
+
+    alias Version = String
+
+    alias VersionOptional = String
+
+    alias WorkflowExecution = NamedTuple(
+      "workflowId" : WorkflowId,
+      "runId" : WorkflowRunId
+    )
+
+    alias WorkflowExecutionAlreadyStartedFault = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias WorkflowExecutionCancelRequestedCause = String
+
+    alias WorkflowExecutionCancelRequestedEventAttributes = NamedTuple(
+      "externalWorkflowExecution" : (WorkflowExecution)?,
+      "externalInitiatedEventId" : (EventId)?,
+      "cause" : (WorkflowExecutionCancelRequestedCause)?
+    )
+
+    alias WorkflowExecutionCanceledEventAttributes = NamedTuple(
+      "details" : (Data)?,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias WorkflowExecutionCompletedEventAttributes = NamedTuple(
+      "result" : (Data)?,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias WorkflowExecutionConfiguration = NamedTuple(
+      "taskStartToCloseTimeout" : DurationInSeconds,
+      "executionStartToCloseTimeout" : DurationInSeconds,
+      "taskList" : TaskList,
+      "taskPriority" : (TaskPriority)?,
+      "childPolicy" : ChildPolicy,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias WorkflowExecutionContinuedAsNewEventAttributes = NamedTuple(
+      "input" : (Data)?,
+      "decisionTaskCompletedEventId" : EventId,
+      "newExecutionRunId" : WorkflowRunId,
+      "executionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskList" : TaskList,
+      "taskPriority" : (TaskPriority)?,
+      "taskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "childPolicy" : ChildPolicy,
+      "tagList" : (TagList)?,
+      "workflowType" : WorkflowType,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias WorkflowExecutionCount = NamedTuple(
+      "count" : Count,
+      "truncated" : (Truncated)?
+    )
+
+    alias WorkflowExecutionDetail = NamedTuple(
+      "executionInfo" : WorkflowExecutionInfo,
+      "executionConfiguration" : WorkflowExecutionConfiguration,
+      "openCounts" : WorkflowExecutionOpenCounts,
+      "latestActivityTaskTimestamp" : (Timestamp)?,
+      "latestExecutionContext" : (Data)?
+    )
+
+    alias WorkflowExecutionFailedEventAttributes = NamedTuple(
+      "reason" : (FailureReason)?,
+      "details" : (Data)?,
+      "decisionTaskCompletedEventId" : EventId
+    )
+
+    alias WorkflowExecutionFilter = NamedTuple(
+      "workflowId" : WorkflowId
+    )
+
+    alias WorkflowExecutionInfo = NamedTuple(
+      "execution" : WorkflowExecution,
+      "workflowType" : WorkflowType,
+      "startTimestamp" : Timestamp,
+      "closeTimestamp" : (Timestamp)?,
+      "executionStatus" : ExecutionStatus,
+      "closeStatus" : (CloseStatus)?,
+      "parent" : (WorkflowExecution)?,
+      "tagList" : (TagList)?,
+      "cancelRequested" : (Canceled)?
+    )
+
+    alias WorkflowExecutionInfoList = Array(WorkflowExecutionInfo)
+
+    alias WorkflowExecutionInfos = NamedTuple(
+      "executionInfos" : WorkflowExecutionInfoList,
+      "nextPageToken" : (PageToken)?
+    )
+
+    alias WorkflowExecutionOpenCounts = NamedTuple(
+      "openActivityTasks" : Count,
+      "openDecisionTasks" : OpenDecisionTasksCount,
+      "openTimers" : Count,
+      "openChildWorkflowExecutions" : Count,
+      "openLambdaFunctions" : (Count)?
+    )
+
+    alias WorkflowExecutionSignaledEventAttributes = NamedTuple(
+      "signalName" : SignalName,
+      "input" : (Data)?,
+      "externalWorkflowExecution" : (WorkflowExecution)?,
+      "externalInitiatedEventId" : (EventId)?
+    )
+
+    alias WorkflowExecutionStartedEventAttributes = NamedTuple(
+      "input" : (Data)?,
+      "executionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "taskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "childPolicy" : ChildPolicy,
+      "taskList" : TaskList,
+      "taskPriority" : (TaskPriority)?,
+      "workflowType" : WorkflowType,
+      "tagList" : (TagList)?,
+      "continuedExecutionRunId" : (WorkflowRunIdOptional)?,
+      "parentWorkflowExecution" : (WorkflowExecution)?,
+      "parentInitiatedEventId" : (EventId)?,
+      "lambdaRole" : (Arn)?
+    )
+
+    alias WorkflowExecutionTerminatedCause = String
+
+    alias WorkflowExecutionTerminatedEventAttributes = NamedTuple(
+      "reason" : (TerminateReason)?,
+      "details" : (Data)?,
+      "childPolicy" : ChildPolicy,
+      "cause" : (WorkflowExecutionTerminatedCause)?
+    )
+
+    alias WorkflowExecutionTimedOutEventAttributes = NamedTuple(
+      "timeoutType" : WorkflowExecutionTimeoutType,
+      "childPolicy" : ChildPolicy
+    )
+
+    alias WorkflowExecutionTimeoutType = String
+
+    alias WorkflowId = String
+
+    alias WorkflowRunId = String
+
+    alias WorkflowRunIdOptional = String
+
+    alias WorkflowType = NamedTuple(
+      "name" : Name,
+      "version" : Version
+    )
+
+    alias WorkflowTypeConfiguration = NamedTuple(
+      "defaultTaskStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "defaultExecutionStartToCloseTimeout" : (DurationInSecondsOptional)?,
+      "defaultTaskList" : (TaskList)?,
+      "defaultTaskPriority" : (TaskPriority)?,
+      "defaultChildPolicy" : (ChildPolicy)?,
+      "defaultLambdaRole" : (Arn)?
+    )
+
+    alias WorkflowTypeDetail = NamedTuple(
+      "typeInfo" : WorkflowTypeInfo,
+      "configuration" : WorkflowTypeConfiguration
+    )
+
+    alias WorkflowTypeFilter = NamedTuple(
+      "name" : Name,
+      "version" : (VersionOptional)?
+    )
+
+    alias WorkflowTypeInfo = NamedTuple(
+      "workflowType" : WorkflowType,
+      "status" : RegistrationStatus,
+      "description" : (Description)?,
+      "creationDate" : Timestamp,
+      "deprecationDate" : (Timestamp)?
+    )
+
+    alias WorkflowTypeInfoList = Array(WorkflowTypeInfo)
+
+    alias WorkflowTypeInfos = NamedTuple(
+      "typeInfos" : WorkflowTypeInfoList,
+      "nextPageToken" : (PageToken)?
+    )
   end
 end

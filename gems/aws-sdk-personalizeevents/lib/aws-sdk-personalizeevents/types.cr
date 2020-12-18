@@ -312,5 +312,80 @@ module Aws::PersonalizeEvents
       include Aws::Structure
     end
 
+    alias Arn = String
+
+    alias Date = String | UInt64 | Time
+
+    alias ErrorMessage = String
+
+    alias Event = NamedTuple(
+      "eventId" : (StringType)?,
+      "eventType" : StringType,
+      "eventValue" : (FloatType)?,
+      "itemId" : (ItemId)?,
+      "properties" : (EventPropertiesJSON)?,
+      "sentAt" : Date,
+      "recommendationId" : (RecommendationId)?,
+      "impression" : (Impression)?
+    )
+
+    alias EventList = Array(Event)
+
+    alias EventPropertiesJSON = String
+
+    alias FloatType = Float32
+
+    alias Impression = Array(ItemId)
+
+    alias InvalidInputException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Item = NamedTuple(
+      "itemId" : StringType,
+      "properties" : (ItemProperties)?
+    )
+
+    alias ItemId = String
+
+    alias ItemList = Array(Item)
+
+    alias ItemProperties = String
+
+    alias PutEventsRequest = NamedTuple(
+      "trackingId" : StringType,
+      "userId" : (UserId)?,
+      "sessionId" : StringType,
+      "eventList" : EventList
+    )
+
+    alias PutItemsRequest = NamedTuple(
+      "datasetArn" : Arn,
+      "items" : ItemList
+    )
+
+    alias PutUsersRequest = NamedTuple(
+      "datasetArn" : Arn,
+      "users" : UserList
+    )
+
+    alias RecommendationId = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StringType = String
+
+    alias User = NamedTuple(
+      "userId" : StringType,
+      "properties" : (UserProperties)?
+    )
+
+    alias UserId = String
+
+    alias UserList = Array(User)
+
+    alias UserProperties = String
   end
 end

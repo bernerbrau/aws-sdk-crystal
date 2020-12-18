@@ -7463,5 +7463,1479 @@ module Aws::DeviceFarm
       include Aws::Structure
     end
 
+    alias AWSAccountNumber = String
+
+    alias AccountSettings = NamedTuple(
+      "awsAccountNumber" : (AWSAccountNumber)?,
+      "unmeteredDevices" : (PurchasedDevicesMap)?,
+      "unmeteredRemoteAccessDevices" : (PurchasedDevicesMap)?,
+      "maxJobTimeoutMinutes" : (JobTimeoutMinutes)?,
+      "trialMinutes" : (TrialMinutes)?,
+      "maxSlots" : (MaxSlotMap)?,
+      "defaultJobTimeoutMinutes" : (JobTimeoutMinutes)?,
+      "skipAppResign" : (SkipAppResign)?
+    )
+
+    alias AccountsCleanup = Bool
+
+    alias AmazonResourceName = String
+
+    alias AmazonResourceNames = Array(AmazonResourceName)
+
+    alias AndroidPaths = Array(String)
+
+    alias AppPackagesCleanup = Bool
+
+    alias ArgumentException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias Artifact = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "type" : (ArtifactType)?,
+      "extension" : (String)?,
+      "url" : (URL)?
+    )
+
+    alias ArtifactCategory = String
+
+    alias ArtifactType = String
+
+    alias Artifacts = Array(Artifact)
+
+    alias BillingMethod = String
+
+    alias Boolean = Bool
+
+    alias CPU = NamedTuple(
+      "frequency" : (String)?,
+      "architecture" : (String)?,
+      "clock" : (Double)?
+    )
+
+    alias CannotDeleteException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ClientId = String
+
+    alias ContentType = String
+
+    alias Counters = NamedTuple(
+      "total" : (Integer)?,
+      "passed" : (Integer)?,
+      "failed" : (Integer)?,
+      "warned" : (Integer)?,
+      "errored" : (Integer)?,
+      "stopped" : (Integer)?,
+      "skipped" : (Integer)?
+    )
+
+    alias CreateDevicePoolRequest = NamedTuple(
+      "projectArn" : AmazonResourceName,
+      "name" : Name,
+      "description" : (Message)?,
+      "rules" : Rules,
+      "maxDevices" : (Integer)?
+    )
+
+    alias CreateDevicePoolResult = NamedTuple(
+      "devicePool" : (DevicePool)?
+    )
+
+    alias CreateInstanceProfileRequest = NamedTuple(
+      "name" : Name,
+      "description" : (Message)?,
+      "packageCleanup" : (Boolean)?,
+      "excludeAppPackagesFromCleanup" : (PackageIds)?,
+      "rebootAfterUse" : (Boolean)?
+    )
+
+    alias CreateInstanceProfileResult = NamedTuple(
+      "instanceProfile" : (InstanceProfile)?
+    )
+
+    alias CreateNetworkProfileRequest = NamedTuple(
+      "projectArn" : AmazonResourceName,
+      "name" : Name,
+      "description" : (Message)?,
+      "type" : (NetworkProfileType)?,
+      "uplinkBandwidthBits" : (Long)?,
+      "downlinkBandwidthBits" : (Long)?,
+      "uplinkDelayMs" : (Long)?,
+      "downlinkDelayMs" : (Long)?,
+      "uplinkJitterMs" : (Long)?,
+      "downlinkJitterMs" : (Long)?,
+      "uplinkLossPercent" : (PercentInteger)?,
+      "downlinkLossPercent" : (PercentInteger)?
+    )
+
+    alias CreateNetworkProfileResult = NamedTuple(
+      "networkProfile" : (NetworkProfile)?
+    )
+
+    alias CreateProjectRequest = NamedTuple(
+      "name" : Name,
+      "defaultJobTimeoutMinutes" : (JobTimeoutMinutes)?
+    )
+
+    alias CreateProjectResult = NamedTuple(
+      "project" : (Project)?
+    )
+
+    alias CreateRemoteAccessSessionConfiguration = NamedTuple(
+      "billingMethod" : (BillingMethod)?,
+      "vpceConfigurationArns" : (AmazonResourceNames)?
+    )
+
+    alias CreateRemoteAccessSessionRequest = NamedTuple(
+      "projectArn" : AmazonResourceName,
+      "deviceArn" : AmazonResourceName,
+      "instanceArn" : (AmazonResourceName)?,
+      "sshPublicKey" : (SshPublicKey)?,
+      "remoteDebugEnabled" : (Boolean)?,
+      "remoteRecordEnabled" : (Boolean)?,
+      "remoteRecordAppArn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "clientId" : (ClientId)?,
+      "configuration" : (CreateRemoteAccessSessionConfiguration)?,
+      "interactionMode" : (InteractionMode)?,
+      "skipAppResign" : (Boolean)?
+    )
+
+    alias CreateRemoteAccessSessionResult = NamedTuple(
+      "remoteAccessSession" : (RemoteAccessSession)?
+    )
+
+    alias CreateTestGridProjectRequest = NamedTuple(
+      "name" : ResourceName,
+      "description" : (ResourceDescription)?
+    )
+
+    alias CreateTestGridProjectResult = NamedTuple(
+      "testGridProject" : (TestGridProject)?
+    )
+
+    alias CreateTestGridUrlRequest = NamedTuple(
+      "projectArn" : DeviceFarmArn,
+      "expiresInSeconds" : TestGridUrlExpiresInSecondsInput
+    )
+
+    alias CreateTestGridUrlResult = NamedTuple(
+      "url" : (String)?,
+      "expires" : (DateTime)?
+    )
+
+    alias CreateUploadRequest = NamedTuple(
+      "projectArn" : AmazonResourceName,
+      "name" : Name,
+      "type" : UploadType,
+      "contentType" : (ContentType)?
+    )
+
+    alias CreateUploadResult = NamedTuple(
+      "upload" : (Upload)?
+    )
+
+    alias CreateVPCEConfigurationRequest = NamedTuple(
+      "vpceConfigurationName" : VPCEConfigurationName,
+      "vpceServiceName" : VPCEServiceName,
+      "serviceDnsName" : ServiceDnsName,
+      "vpceConfigurationDescription" : (VPCEConfigurationDescription)?
+    )
+
+    alias CreateVPCEConfigurationResult = NamedTuple(
+      "vpceConfiguration" : (VPCEConfiguration)?
+    )
+
+    alias CurrencyCode = String
+
+    alias CustomerArtifactPaths = NamedTuple(
+      "iosPaths" : (IosPaths)?,
+      "androidPaths" : (AndroidPaths)?,
+      "deviceHostPaths" : (DeviceHostPaths)?
+    )
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteDevicePoolRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteDevicePoolResult = NamedTuple(
+      
+    )
+
+    alias DeleteInstanceProfileRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteInstanceProfileResult = NamedTuple(
+      
+    )
+
+    alias DeleteNetworkProfileRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteNetworkProfileResult = NamedTuple(
+      
+    )
+
+    alias DeleteProjectRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteProjectResult = NamedTuple(
+      
+    )
+
+    alias DeleteRemoteAccessSessionRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteRemoteAccessSessionResult = NamedTuple(
+      
+    )
+
+    alias DeleteRunRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteRunResult = NamedTuple(
+      
+    )
+
+    alias DeleteTestGridProjectRequest = NamedTuple(
+      "projectArn" : DeviceFarmArn
+    )
+
+    alias DeleteTestGridProjectResult = NamedTuple(
+      
+    )
+
+    alias DeleteUploadRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteUploadResult = NamedTuple(
+      
+    )
+
+    alias DeleteVPCEConfigurationRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias DeleteVPCEConfigurationResult = NamedTuple(
+      
+    )
+
+    alias Device = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "manufacturer" : (String)?,
+      "model" : (String)?,
+      "modelId" : (String)?,
+      "formFactor" : (DeviceFormFactor)?,
+      "platform" : (DevicePlatform)?,
+      "os" : (String)?,
+      "cpu" : (CPU)?,
+      "resolution" : (Resolution)?,
+      "heapSize" : (Long)?,
+      "memory" : (Long)?,
+      "image" : (String)?,
+      "carrier" : (String)?,
+      "radio" : (String)?,
+      "remoteAccessEnabled" : (Boolean)?,
+      "remoteDebugEnabled" : (Boolean)?,
+      "fleetType" : (String)?,
+      "fleetName" : (String)?,
+      "instances" : (DeviceInstances)?,
+      "availability" : (DeviceAvailability)?
+    )
+
+    alias DeviceAttribute = String
+
+    alias DeviceAvailability = String
+
+    alias DeviceFarmArn = String
+
+    alias DeviceFilter = NamedTuple(
+      "attribute" : (DeviceFilterAttribute)?,
+      "operator" : (RuleOperator)?,
+      "values" : (DeviceFilterValues)?
+    )
+
+    alias DeviceFilterAttribute = String
+
+    alias DeviceFilterValues = Array(String)
+
+    alias DeviceFilters = Array(DeviceFilter)
+
+    alias DeviceFormFactor = String
+
+    alias DeviceHostPaths = Array(String)
+
+    alias DeviceInstance = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "deviceArn" : (AmazonResourceName)?,
+      "labels" : (InstanceLabels)?,
+      "status" : (InstanceStatus)?,
+      "udid" : (String)?,
+      "instanceProfile" : (InstanceProfile)?
+    )
+
+    alias DeviceInstances = Array(DeviceInstance)
+
+    alias DeviceMinutes = NamedTuple(
+      "total" : (Double)?,
+      "metered" : (Double)?,
+      "unmetered" : (Double)?
+    )
+
+    alias DevicePlatform = String
+
+    alias DevicePool = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "description" : (Message)?,
+      "type" : (DevicePoolType)?,
+      "rules" : (Rules)?,
+      "maxDevices" : (Integer)?
+    )
+
+    alias DevicePoolCompatibilityResult = NamedTuple(
+      "device" : (Device)?,
+      "compatible" : (Boolean)?,
+      "incompatibilityMessages" : (IncompatibilityMessages)?
+    )
+
+    alias DevicePoolCompatibilityResults = Array(DevicePoolCompatibilityResult)
+
+    alias DevicePoolType = String
+
+    alias DevicePools = Array(DevicePool)
+
+    alias DeviceSelectionConfiguration = NamedTuple(
+      "filters" : DeviceFilters,
+      "maxDevices" : Integer
+    )
+
+    alias DeviceSelectionResult = NamedTuple(
+      "filters" : (DeviceFilters)?,
+      "matchedDevicesCount" : (Integer)?,
+      "maxDevices" : (Integer)?
+    )
+
+    alias Devices = Array(Device)
+
+    alias Double = Float64
+
+    alias ExceptionMessage = String
+
+    alias ExecutionConfiguration = NamedTuple(
+      "jobTimeoutMinutes" : (JobTimeoutMinutes)?,
+      "accountsCleanup" : (AccountsCleanup)?,
+      "appPackagesCleanup" : (AppPackagesCleanup)?,
+      "videoCapture" : (VideoCapture)?,
+      "skipAppResign" : (SkipAppResign)?
+    )
+
+    alias ExecutionResult = String
+
+    alias ExecutionResultCode = String
+
+    alias ExecutionStatus = String
+
+    alias Filter = String
+
+    alias GetAccountSettingsRequest = NamedTuple(
+      
+    )
+
+    alias GetAccountSettingsResult = NamedTuple(
+      "accountSettings" : (AccountSettings)?
+    )
+
+    alias GetDeviceInstanceRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetDeviceInstanceResult = NamedTuple(
+      "deviceInstance" : (DeviceInstance)?
+    )
+
+    alias GetDevicePoolCompatibilityRequest = NamedTuple(
+      "devicePoolArn" : AmazonResourceName,
+      "appArn" : (AmazonResourceName)?,
+      "testType" : (TestType)?,
+      "test" : (ScheduleRunTest)?,
+      "configuration" : (ScheduleRunConfiguration)?
+    )
+
+    alias GetDevicePoolCompatibilityResult = NamedTuple(
+      "compatibleDevices" : (DevicePoolCompatibilityResults)?,
+      "incompatibleDevices" : (DevicePoolCompatibilityResults)?
+    )
+
+    alias GetDevicePoolRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetDevicePoolResult = NamedTuple(
+      "devicePool" : (DevicePool)?
+    )
+
+    alias GetDeviceRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetDeviceResult = NamedTuple(
+      "device" : (Device)?
+    )
+
+    alias GetInstanceProfileRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetInstanceProfileResult = NamedTuple(
+      "instanceProfile" : (InstanceProfile)?
+    )
+
+    alias GetJobRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetJobResult = NamedTuple(
+      "job" : (Job)?
+    )
+
+    alias GetNetworkProfileRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetNetworkProfileResult = NamedTuple(
+      "networkProfile" : (NetworkProfile)?
+    )
+
+    alias GetOfferingStatusRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias GetOfferingStatusResult = NamedTuple(
+      "current" : (OfferingStatusMap)?,
+      "nextPeriod" : (OfferingStatusMap)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias GetProjectRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetProjectResult = NamedTuple(
+      "project" : (Project)?
+    )
+
+    alias GetRemoteAccessSessionRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetRemoteAccessSessionResult = NamedTuple(
+      "remoteAccessSession" : (RemoteAccessSession)?
+    )
+
+    alias GetRunRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetRunResult = NamedTuple(
+      "run" : (Run)?
+    )
+
+    alias GetSuiteRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetSuiteResult = NamedTuple(
+      "suite" : (Suite)?
+    )
+
+    alias GetTestGridProjectRequest = NamedTuple(
+      "projectArn" : DeviceFarmArn
+    )
+
+    alias GetTestGridProjectResult = NamedTuple(
+      "testGridProject" : (TestGridProject)?
+    )
+
+    alias GetTestGridSessionRequest = NamedTuple(
+      "projectArn" : (DeviceFarmArn)?,
+      "sessionId" : (ResourceId)?,
+      "sessionArn" : (DeviceFarmArn)?
+    )
+
+    alias GetTestGridSessionResult = NamedTuple(
+      "testGridSession" : (TestGridSession)?
+    )
+
+    alias GetTestRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetTestResult = NamedTuple(
+      "test" : (Test)?
+    )
+
+    alias GetUploadRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetUploadResult = NamedTuple(
+      "upload" : (Upload)?
+    )
+
+    alias GetVPCEConfigurationRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias GetVPCEConfigurationResult = NamedTuple(
+      "vpceConfiguration" : (VPCEConfiguration)?
+    )
+
+    alias HostAddress = String
+
+    alias IdempotencyException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias IncompatibilityMessage = NamedTuple(
+      "message" : (Message)?,
+      "type" : (DeviceAttribute)?
+    )
+
+    alias IncompatibilityMessages = Array(IncompatibilityMessage)
+
+    alias InstallToRemoteAccessSessionRequest = NamedTuple(
+      "remoteAccessSessionArn" : AmazonResourceName,
+      "appArn" : AmazonResourceName
+    )
+
+    alias InstallToRemoteAccessSessionResult = NamedTuple(
+      "appUpload" : (Upload)?
+    )
+
+    alias InstanceLabels = Array(String)
+
+    alias InstanceProfile = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "packageCleanup" : (Boolean)?,
+      "excludeAppPackagesFromCleanup" : (PackageIds)?,
+      "rebootAfterUse" : (Boolean)?,
+      "name" : (Name)?,
+      "description" : (Message)?
+    )
+
+    alias InstanceProfiles = Array(InstanceProfile)
+
+    alias InstanceStatus = String
+
+    alias Integer = Int32
+
+    alias InteractionMode = String
+
+    alias InternalServiceException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias IosPaths = Array(String)
+
+    alias Job = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "type" : (TestType)?,
+      "created" : (DateTime)?,
+      "status" : (ExecutionStatus)?,
+      "result" : (ExecutionResult)?,
+      "started" : (DateTime)?,
+      "stopped" : (DateTime)?,
+      "counters" : (Counters)?,
+      "message" : (Message)?,
+      "device" : (Device)?,
+      "instanceArn" : (AmazonResourceName)?,
+      "deviceMinutes" : (DeviceMinutes)?,
+      "videoEndpoint" : (String)?,
+      "videoCapture" : (VideoCapture)?
+    )
+
+    alias JobTimeoutMinutes = Int32
+
+    alias Jobs = Array(Job)
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ListArtifactsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "type" : ArtifactCategory,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListArtifactsResult = NamedTuple(
+      "artifacts" : (Artifacts)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDeviceInstancesRequest = NamedTuple(
+      "maxResults" : (Integer)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDeviceInstancesResult = NamedTuple(
+      "deviceInstances" : (DeviceInstances)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDevicePoolsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "type" : (DevicePoolType)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDevicePoolsResult = NamedTuple(
+      "devicePools" : (DevicePools)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDevicesRequest = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "nextToken" : (PaginationToken)?,
+      "filters" : (DeviceFilters)?
+    )
+
+    alias ListDevicesResult = NamedTuple(
+      "devices" : (Devices)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListInstanceProfilesRequest = NamedTuple(
+      "maxResults" : (Integer)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListInstanceProfilesResult = NamedTuple(
+      "instanceProfiles" : (InstanceProfiles)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListJobsResult = NamedTuple(
+      "jobs" : (Jobs)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListNetworkProfilesRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "type" : (NetworkProfileType)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListNetworkProfilesResult = NamedTuple(
+      "networkProfiles" : (NetworkProfiles)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfferingPromotionsRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfferingPromotionsResult = NamedTuple(
+      "offeringPromotions" : (OfferingPromotions)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfferingTransactionsRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfferingTransactionsResult = NamedTuple(
+      "offeringTransactions" : (OfferingTransactions)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfferingsRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfferingsResult = NamedTuple(
+      "offerings" : (Offerings)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListProjectsResult = NamedTuple(
+      "projects" : (Projects)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRemoteAccessSessionsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRemoteAccessSessionsResult = NamedTuple(
+      "remoteAccessSessions" : (RemoteAccessSessions)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRunsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRunsResult = NamedTuple(
+      "runs" : (Runs)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListSamplesRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListSamplesResult = NamedTuple(
+      "samples" : (Samples)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListSuitesRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListSuitesResult = NamedTuple(
+      "suites" : (Suites)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : DeviceFarmArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListTestGridProjectsRequest = NamedTuple(
+      "maxResult" : (MaxPageSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridProjectsResult = NamedTuple(
+      "testGridProjects" : (TestGridProjects)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridSessionActionsRequest = NamedTuple(
+      "sessionArn" : DeviceFarmArn,
+      "maxResult" : (MaxPageSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridSessionActionsResult = NamedTuple(
+      "actions" : (TestGridSessionActions)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridSessionArtifactsRequest = NamedTuple(
+      "sessionArn" : DeviceFarmArn,
+      "type" : (TestGridSessionArtifactCategory)?,
+      "maxResult" : (MaxPageSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridSessionArtifactsResult = NamedTuple(
+      "artifacts" : (TestGridSessionArtifacts)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridSessionsRequest = NamedTuple(
+      "projectArn" : DeviceFarmArn,
+      "status" : (TestGridSessionStatus)?,
+      "creationTimeAfter" : (DateTime)?,
+      "creationTimeBefore" : (DateTime)?,
+      "endTimeAfter" : (DateTime)?,
+      "endTimeBefore" : (DateTime)?,
+      "maxResult" : (MaxPageSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestGridSessionsResult = NamedTuple(
+      "testGridSessions" : (TestGridSessions)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTestsResult = NamedTuple(
+      "tests" : (Tests)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListUniqueProblemsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListUniqueProblemsResult = NamedTuple(
+      "uniqueProblems" : (UniqueProblemsByExecutionResultMap)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListUploadsRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "type" : (UploadType)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListUploadsResult = NamedTuple(
+      "uploads" : (Uploads)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListVPCEConfigurationsRequest = NamedTuple(
+      "maxResults" : (Integer)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListVPCEConfigurationsResult = NamedTuple(
+      "vpceConfigurations" : (VPCEConfigurations)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias Location = NamedTuple(
+      "latitude" : Double,
+      "longitude" : Double
+    )
+
+    alias Long = Int64
+
+    alias MaxPageSize = Int32
+
+    alias MaxSlotMap = Hash(String,Integer)
+
+    alias Message = String
+
+    alias Metadata = String
+
+    alias MonetaryAmount = NamedTuple(
+      "amount" : (Double)?,
+      "currencyCode" : (CurrencyCode)?
+    )
+
+    alias Name = String
+
+    alias NetworkProfile = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "description" : (Message)?,
+      "type" : (NetworkProfileType)?,
+      "uplinkBandwidthBits" : (Long)?,
+      "downlinkBandwidthBits" : (Long)?,
+      "uplinkDelayMs" : (Long)?,
+      "downlinkDelayMs" : (Long)?,
+      "uplinkJitterMs" : (Long)?,
+      "downlinkJitterMs" : (Long)?,
+      "uplinkLossPercent" : (PercentInteger)?,
+      "downlinkLossPercent" : (PercentInteger)?
+    )
+
+    alias NetworkProfileType = String
+
+    alias NetworkProfiles = Array(NetworkProfile)
+
+    alias NotEligibleException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias Offering = NamedTuple(
+      "id" : (OfferingIdentifier)?,
+      "description" : (Message)?,
+      "type" : (OfferingType)?,
+      "platform" : (DevicePlatform)?,
+      "recurringCharges" : (RecurringCharges)?
+    )
+
+    alias OfferingIdentifier = String
+
+    alias OfferingPromotion = NamedTuple(
+      "id" : (OfferingPromotionIdentifier)?,
+      "description" : (Message)?
+    )
+
+    alias OfferingPromotionIdentifier = String
+
+    alias OfferingPromotions = Array(OfferingPromotion)
+
+    alias OfferingStatus = NamedTuple(
+      "type" : (OfferingTransactionType)?,
+      "offering" : (Offering)?,
+      "quantity" : (Integer)?,
+      "effectiveOn" : (DateTime)?
+    )
+
+    alias OfferingStatusMap = Hash(OfferingIdentifier,OfferingStatus)
+
+    alias OfferingTransaction = NamedTuple(
+      "offeringStatus" : (OfferingStatus)?,
+      "transactionId" : (TransactionIdentifier)?,
+      "offeringPromotionId" : (OfferingPromotionIdentifier)?,
+      "createdOn" : (DateTime)?,
+      "cost" : (MonetaryAmount)?
+    )
+
+    alias OfferingTransactionType = String
+
+    alias OfferingTransactions = Array(OfferingTransaction)
+
+    alias OfferingType = String
+
+    alias Offerings = Array(Offering)
+
+    alias PackageIds = Array(String)
+
+    alias PaginationToken = String
+
+    alias PercentInteger = Int32
+
+    alias Problem = NamedTuple(
+      "run" : (ProblemDetail)?,
+      "job" : (ProblemDetail)?,
+      "suite" : (ProblemDetail)?,
+      "test" : (ProblemDetail)?,
+      "device" : (Device)?,
+      "result" : (ExecutionResult)?,
+      "message" : (Message)?
+    )
+
+    alias ProblemDetail = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?
+    )
+
+    alias Problems = Array(Problem)
+
+    alias Project = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "defaultJobTimeoutMinutes" : (JobTimeoutMinutes)?,
+      "created" : (DateTime)?
+    )
+
+    alias Projects = Array(Project)
+
+    alias PurchaseOfferingRequest = NamedTuple(
+      "offeringId" : (OfferingIdentifier)?,
+      "quantity" : (Integer)?,
+      "offeringPromotionId" : (OfferingPromotionIdentifier)?
+    )
+
+    alias PurchaseOfferingResult = NamedTuple(
+      "offeringTransaction" : (OfferingTransaction)?
+    )
+
+    alias PurchasedDevicesMap = Hash(DevicePlatform,Integer)
+
+    alias Radios = NamedTuple(
+      "wifi" : (Boolean)?,
+      "bluetooth" : (Boolean)?,
+      "nfc" : (Boolean)?,
+      "gps" : (Boolean)?
+    )
+
+    alias RecurringCharge = NamedTuple(
+      "cost" : (MonetaryAmount)?,
+      "frequency" : (RecurringChargeFrequency)?
+    )
+
+    alias RecurringChargeFrequency = String
+
+    alias RecurringCharges = Array(RecurringCharge)
+
+    alias RemoteAccessSession = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "created" : (DateTime)?,
+      "status" : (ExecutionStatus)?,
+      "result" : (ExecutionResult)?,
+      "message" : (Message)?,
+      "started" : (DateTime)?,
+      "stopped" : (DateTime)?,
+      "device" : (Device)?,
+      "instanceArn" : (AmazonResourceName)?,
+      "remoteDebugEnabled" : (Boolean)?,
+      "remoteRecordEnabled" : (Boolean)?,
+      "remoteRecordAppArn" : (AmazonResourceName)?,
+      "hostAddress" : (HostAddress)?,
+      "clientId" : (ClientId)?,
+      "billingMethod" : (BillingMethod)?,
+      "deviceMinutes" : (DeviceMinutes)?,
+      "endpoint" : (String)?,
+      "deviceUdid" : (String)?,
+      "interactionMode" : (InteractionMode)?,
+      "skipAppResign" : (SkipAppResign)?
+    )
+
+    alias RemoteAccessSessions = Array(RemoteAccessSession)
+
+    alias RenewOfferingRequest = NamedTuple(
+      "offeringId" : (OfferingIdentifier)?,
+      "quantity" : (Integer)?
+    )
+
+    alias RenewOfferingResult = NamedTuple(
+      "offeringTransaction" : (OfferingTransaction)?
+    )
+
+    alias Resolution = NamedTuple(
+      "width" : (Integer)?,
+      "height" : (Integer)?
+    )
+
+    alias ResourceDescription = String
+
+    alias ResourceId = String
+
+    alias ResourceName = String
+
+    alias Rule = NamedTuple(
+      "attribute" : (DeviceAttribute)?,
+      "operator" : (RuleOperator)?,
+      "value" : (String)?
+    )
+
+    alias RuleOperator = String
+
+    alias Rules = Array(Rule)
+
+    alias Run = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "type" : (TestType)?,
+      "platform" : (DevicePlatform)?,
+      "created" : (DateTime)?,
+      "status" : (ExecutionStatus)?,
+      "result" : (ExecutionResult)?,
+      "started" : (DateTime)?,
+      "stopped" : (DateTime)?,
+      "counters" : (Counters)?,
+      "message" : (Message)?,
+      "totalJobs" : (Integer)?,
+      "completedJobs" : (Integer)?,
+      "billingMethod" : (BillingMethod)?,
+      "deviceMinutes" : (DeviceMinutes)?,
+      "networkProfile" : (NetworkProfile)?,
+      "parsingResultUrl" : (String)?,
+      "resultCode" : (ExecutionResultCode)?,
+      "seed" : (Integer)?,
+      "appUpload" : (AmazonResourceName)?,
+      "eventCount" : (Integer)?,
+      "jobTimeoutMinutes" : (JobTimeoutMinutes)?,
+      "devicePoolArn" : (AmazonResourceName)?,
+      "locale" : (String)?,
+      "radios" : (Radios)?,
+      "location" : (Location)?,
+      "customerArtifactPaths" : (CustomerArtifactPaths)?,
+      "webUrl" : (String)?,
+      "skipAppResign" : (SkipAppResign)?,
+      "testSpecArn" : (AmazonResourceName)?,
+      "deviceSelectionResult" : (DeviceSelectionResult)?
+    )
+
+    alias Runs = Array(Run)
+
+    alias Sample = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "type" : (SampleType)?,
+      "url" : (URL)?
+    )
+
+    alias SampleType = String
+
+    alias Samples = Array(Sample)
+
+    alias ScheduleRunConfiguration = NamedTuple(
+      "extraDataPackageArn" : (AmazonResourceName)?,
+      "networkProfileArn" : (AmazonResourceName)?,
+      "locale" : (String)?,
+      "location" : (Location)?,
+      "vpceConfigurationArns" : (AmazonResourceNames)?,
+      "customerArtifactPaths" : (CustomerArtifactPaths)?,
+      "radios" : (Radios)?,
+      "auxiliaryApps" : (AmazonResourceNames)?,
+      "billingMethod" : (BillingMethod)?
+    )
+
+    alias ScheduleRunRequest = NamedTuple(
+      "projectArn" : AmazonResourceName,
+      "appArn" : (AmazonResourceName)?,
+      "devicePoolArn" : (AmazonResourceName)?,
+      "deviceSelectionConfiguration" : (DeviceSelectionConfiguration)?,
+      "name" : (Name)?,
+      "test" : ScheduleRunTest,
+      "configuration" : (ScheduleRunConfiguration)?,
+      "executionConfiguration" : (ExecutionConfiguration)?
+    )
+
+    alias ScheduleRunResult = NamedTuple(
+      "run" : (Run)?
+    )
+
+    alias ScheduleRunTest = NamedTuple(
+      "type" : TestType,
+      "testPackageArn" : (AmazonResourceName)?,
+      "testSpecArn" : (AmazonResourceName)?,
+      "filter" : (Filter)?,
+      "parameters" : (TestParameters)?
+    )
+
+    alias ServiceAccountException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ServiceDnsName = String
+
+    alias SkipAppResign = Bool
+
+    alias SshPublicKey = String
+
+    alias StopJobRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias StopJobResult = NamedTuple(
+      "job" : (Job)?
+    )
+
+    alias StopRemoteAccessSessionRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias StopRemoteAccessSessionResult = NamedTuple(
+      "remoteAccessSession" : (RemoteAccessSession)?
+    )
+
+    alias StopRunRequest = NamedTuple(
+      "arn" : AmazonResourceName
+    )
+
+    alias StopRunResult = NamedTuple(
+      "run" : (Run)?
+    )
+
+    alias String = String
+
+    alias Suite = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "type" : (TestType)?,
+      "created" : (DateTime)?,
+      "status" : (ExecutionStatus)?,
+      "result" : (ExecutionResult)?,
+      "started" : (DateTime)?,
+      "stopped" : (DateTime)?,
+      "counters" : (Counters)?,
+      "message" : (Message)?,
+      "deviceMinutes" : (DeviceMinutes)?
+    )
+
+    alias Suites = Array(Suite)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagOperationException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "resourceName" : (AmazonResourceName)?
+    )
+
+    alias TagPolicyException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "resourceName" : (AmazonResourceName)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : DeviceFarmArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Test = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "type" : (TestType)?,
+      "created" : (DateTime)?,
+      "status" : (ExecutionStatus)?,
+      "result" : (ExecutionResult)?,
+      "started" : (DateTime)?,
+      "stopped" : (DateTime)?,
+      "counters" : (Counters)?,
+      "message" : (Message)?,
+      "deviceMinutes" : (DeviceMinutes)?
+    )
+
+    alias TestGridProject = NamedTuple(
+      "arn" : (DeviceFarmArn)?,
+      "name" : (String)?,
+      "description" : (String)?,
+      "created" : (DateTime)?
+    )
+
+    alias TestGridProjects = Array(TestGridProject)
+
+    alias TestGridSession = NamedTuple(
+      "arn" : (DeviceFarmArn)?,
+      "status" : (TestGridSessionStatus)?,
+      "created" : (DateTime)?,
+      "ended" : (DateTime)?,
+      "billingMinutes" : (Double)?,
+      "seleniumProperties" : (String)?
+    )
+
+    alias TestGridSessionAction = NamedTuple(
+      "action" : (String)?,
+      "started" : (DateTime)?,
+      "duration" : (Long)?,
+      "statusCode" : (String)?,
+      "requestMethod" : (String)?
+    )
+
+    alias TestGridSessionActions = Array(TestGridSessionAction)
+
+    alias TestGridSessionArtifact = NamedTuple(
+      "filename" : (String)?,
+      "type" : (TestGridSessionArtifactType)?,
+      "url" : (String)?
+    )
+
+    alias TestGridSessionArtifactCategory = String
+
+    alias TestGridSessionArtifactType = String
+
+    alias TestGridSessionArtifacts = Array(TestGridSessionArtifact)
+
+    alias TestGridSessionStatus = String
+
+    alias TestGridSessions = Array(TestGridSession)
+
+    alias TestGridUrlExpiresInSecondsInput = Int32
+
+    alias TestParameters = Hash(String,String)
+
+    alias TestType = String
+
+    alias Tests = Array(Test)
+
+    alias TooManyTagsException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "resourceName" : (AmazonResourceName)?
+    )
+
+    alias TransactionIdentifier = String
+
+    alias TrialMinutes = NamedTuple(
+      "total" : (Double)?,
+      "remaining" : (Double)?
+    )
+
+    alias URL = String
+
+    alias UniqueProblem = NamedTuple(
+      "message" : (Message)?,
+      "problems" : (Problems)?
+    )
+
+    alias UniqueProblems = Array(UniqueProblem)
+
+    alias UniqueProblemsByExecutionResultMap = Hash(ExecutionResult,UniqueProblems)
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : DeviceFarmArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDeviceInstanceRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "profileArn" : (AmazonResourceName)?,
+      "labels" : (InstanceLabels)?
+    )
+
+    alias UpdateDeviceInstanceResult = NamedTuple(
+      "deviceInstance" : (DeviceInstance)?
+    )
+
+    alias UpdateDevicePoolRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "name" : (Name)?,
+      "description" : (Message)?,
+      "rules" : (Rules)?,
+      "maxDevices" : (Integer)?,
+      "clearMaxDevices" : (Boolean)?
+    )
+
+    alias UpdateDevicePoolResult = NamedTuple(
+      "devicePool" : (DevicePool)?
+    )
+
+    alias UpdateInstanceProfileRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "name" : (Name)?,
+      "description" : (Message)?,
+      "packageCleanup" : (Boolean)?,
+      "excludeAppPackagesFromCleanup" : (PackageIds)?,
+      "rebootAfterUse" : (Boolean)?
+    )
+
+    alias UpdateInstanceProfileResult = NamedTuple(
+      "instanceProfile" : (InstanceProfile)?
+    )
+
+    alias UpdateNetworkProfileRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "name" : (Name)?,
+      "description" : (Message)?,
+      "type" : (NetworkProfileType)?,
+      "uplinkBandwidthBits" : (Long)?,
+      "downlinkBandwidthBits" : (Long)?,
+      "uplinkDelayMs" : (Long)?,
+      "downlinkDelayMs" : (Long)?,
+      "uplinkJitterMs" : (Long)?,
+      "downlinkJitterMs" : (Long)?,
+      "uplinkLossPercent" : (PercentInteger)?,
+      "downlinkLossPercent" : (PercentInteger)?
+    )
+
+    alias UpdateNetworkProfileResult = NamedTuple(
+      "networkProfile" : (NetworkProfile)?
+    )
+
+    alias UpdateProjectRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "name" : (Name)?,
+      "defaultJobTimeoutMinutes" : (JobTimeoutMinutes)?
+    )
+
+    alias UpdateProjectResult = NamedTuple(
+      "project" : (Project)?
+    )
+
+    alias UpdateTestGridProjectRequest = NamedTuple(
+      "projectArn" : DeviceFarmArn,
+      "name" : (ResourceName)?,
+      "description" : (ResourceDescription)?
+    )
+
+    alias UpdateTestGridProjectResult = NamedTuple(
+      "testGridProject" : (TestGridProject)?
+    )
+
+    alias UpdateUploadRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "name" : (Name)?,
+      "contentType" : (ContentType)?,
+      "editContent" : (Boolean)?
+    )
+
+    alias UpdateUploadResult = NamedTuple(
+      "upload" : (Upload)?
+    )
+
+    alias UpdateVPCEConfigurationRequest = NamedTuple(
+      "arn" : AmazonResourceName,
+      "vpceConfigurationName" : (VPCEConfigurationName)?,
+      "vpceServiceName" : (VPCEServiceName)?,
+      "serviceDnsName" : (ServiceDnsName)?,
+      "vpceConfigurationDescription" : (VPCEConfigurationDescription)?
+    )
+
+    alias UpdateVPCEConfigurationResult = NamedTuple(
+      "vpceConfiguration" : (VPCEConfiguration)?
+    )
+
+    alias Upload = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "name" : (Name)?,
+      "created" : (DateTime)?,
+      "type" : (UploadType)?,
+      "status" : (UploadStatus)?,
+      "url" : (URL)?,
+      "metadata" : (Metadata)?,
+      "contentType" : (ContentType)?,
+      "message" : (Message)?,
+      "category" : (UploadCategory)?
+    )
+
+    alias UploadCategory = String
+
+    alias UploadStatus = String
+
+    alias UploadType = String
+
+    alias Uploads = Array(Upload)
+
+    alias VPCEConfiguration = NamedTuple(
+      "arn" : (AmazonResourceName)?,
+      "vpceConfigurationName" : (VPCEConfigurationName)?,
+      "vpceServiceName" : (VPCEServiceName)?,
+      "serviceDnsName" : (ServiceDnsName)?,
+      "vpceConfigurationDescription" : (VPCEConfigurationDescription)?
+    )
+
+    alias VPCEConfigurationDescription = String
+
+    alias VPCEConfigurationName = String
+
+    alias VPCEConfigurations = Array(VPCEConfiguration)
+
+    alias VPCEServiceName = String
+
+    alias VideoCapture = Bool
   end
 end

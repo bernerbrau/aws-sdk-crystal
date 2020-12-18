@@ -350,8 +350,8 @@ module Aws::ServiceQuotas
     #
     # @overload associate_service_quota_template(**params)
     # @param [Hash] params ({})
-    def associate_service_quota_template(params = {}, **options)
-      req = build_request(:associate_service_quota_template, params)
+    def associate_service_quota_template(, **options)
+      req = build_request(:associate_service_quota_template, )
       req.send_request(options)
     end
 
@@ -381,8 +381,8 @@ module Aws::ServiceQuotas
     #
     # @overload delete_service_quota_increase_request_from_template(**params)
     # @param [Hash] params ({})
-    def delete_service_quota_increase_request_from_template(params = {}, **options)
-      req = build_request(:delete_service_quota_increase_request_from_template, params)
+    def delete_service_quota_increase_request_from_template(, **options)
+      req = build_request(:delete_service_quota_increase_request_from_template, )
       req.send_request(options)
     end
 
@@ -404,8 +404,8 @@ module Aws::ServiceQuotas
     #
     # @overload disassociate_service_quota_template(**params)
     # @param [Hash] params ({})
-    def disassociate_service_quota_template(params = {}, **options)
-      req = build_request(:disassociate_service_quota_template, params)
+    def disassociate_service_quota_template(, **options)
+      req = build_request(:disassociate_service_quota_template, )
       req.send_request(options)
     end
 
@@ -455,8 +455,8 @@ module Aws::ServiceQuotas
     #
     # @overload get_aws_default_service_quota(**params)
     # @param [Hash] params ({})
-    def get_aws_default_service_quota(params = {}, **options)
-      req = build_request(:get_aws_default_service_quota, params)
+    def get_aws_default_service_quota(, **options)
+      req = build_request(:get_aws_default_service_quota, )
       req.send_request(options)
     end
 
@@ -476,8 +476,8 @@ module Aws::ServiceQuotas
     #
     # @overload get_association_for_service_quota_template(**params)
     # @param [Hash] params ({})
-    def get_association_for_service_quota_template(params = {}, **options)
-      req = build_request(:get_association_for_service_quota_template, params)
+    def get_association_for_service_quota_template(, **options)
+      req = build_request(:get_association_for_service_quota_template, )
       req.send_request(options)
     end
 
@@ -517,8 +517,8 @@ module Aws::ServiceQuotas
     #
     # @overload get_requested_service_quota_change(**params)
     # @param [Hash] params ({})
-    def get_requested_service_quota_change(params = {}, **options)
-      req = build_request(:get_requested_service_quota_change, params)
+    def get_requested_service_quota_change(, **options)
+      req = build_request(:get_requested_service_quota_change, )
       req.send_request(options)
     end
 
@@ -570,8 +570,8 @@ module Aws::ServiceQuotas
     #
     # @overload get_service_quota(**params)
     # @param [Hash] params ({})
-    def get_service_quota(params = {}, **options)
-      req = build_request(:get_service_quota, params)
+    def get_service_quota(, **options)
+      req = build_request(:get_service_quota, )
       req.send_request(options)
     end
 
@@ -614,8 +614,8 @@ module Aws::ServiceQuotas
     #
     # @overload get_service_quota_increase_request_from_template(**params)
     # @param [Hash] params ({})
-    def get_service_quota_increase_request_from_template(params = {}, **options)
-      req = build_request(:get_service_quota_increase_request_from_template, params)
+    def get_service_quota_increase_request_from_template(, **options)
+      req = build_request(:get_service_quota_increase_request_from_template, )
       req.send_request(options)
     end
 
@@ -702,8 +702,8 @@ module Aws::ServiceQuotas
     #
     # @overload list_aws_default_service_quotas(**params)
     # @param [Hash] params ({})
-    def list_aws_default_service_quotas(params = {}, **options)
-      req = build_request(:list_aws_default_service_quotas, params)
+    def list_aws_default_service_quotas(, **options)
+      req = build_request(:list_aws_default_service_quotas, )
       req.send_request(options)
     end
 
@@ -771,8 +771,8 @@ module Aws::ServiceQuotas
     #
     # @overload list_requested_service_quota_change_history(**params)
     # @param [Hash] params ({})
-    def list_requested_service_quota_change_history(params = {}, **options)
-      req = build_request(:list_requested_service_quota_change_history, params)
+    def list_requested_service_quota_change_history(, **options)
+      req = build_request(:list_requested_service_quota_change_history, )
       req.send_request(options)
     end
 
@@ -848,8 +848,8 @@ module Aws::ServiceQuotas
     #
     # @overload list_requested_service_quota_change_history_by_quota(**params)
     # @param [Hash] params ({})
-    def list_requested_service_quota_change_history_by_quota(params = {}, **options)
-      req = build_request(:list_requested_service_quota_change_history_by_quota, params)
+    def list_requested_service_quota_change_history_by_quota(, **options)
+      req = build_request(:list_requested_service_quota_change_history_by_quota, )
       req.send_request(options)
     end
 
@@ -912,8 +912,8 @@ module Aws::ServiceQuotas
     #
     # @overload list_service_quota_increase_requests_in_template(**params)
     # @param [Hash] params ({})
-    def list_service_quota_increase_requests_in_template(params = {}, **options)
-      req = build_request(:list_service_quota_increase_requests_in_template, params)
+    def list_service_quota_increase_requests_in_template(, **options)
+      req = build_request(:list_service_quota_increase_requests_in_template, )
       req.send_request(options)
     end
 
@@ -993,8 +993,8 @@ module Aws::ServiceQuotas
     #
     # @overload list_service_quotas(**params)
     # @param [Hash] params ({})
-    def list_service_quotas(params = {}, **options)
-      req = build_request(:list_service_quotas, params)
+    def list_service_quotas(, **options)
+      req = build_request(:list_service_quotas, )
       req.send_request(options)
     end
 
@@ -1044,8 +1044,8 @@ module Aws::ServiceQuotas
     #
     # @overload list_services(**params)
     # @param [Hash] params ({})
-    def list_services(params = {}, **options)
-      req = build_request(:list_services, params)
+    def list_services(, **options)
+      req = build_request(:list_services, )
       req.send_request(options)
     end
 
@@ -1095,8 +1095,8 @@ module Aws::ServiceQuotas
     #
     # @overload put_service_quota_increase_request_into_template(**params)
     # @param [Hash] params ({})
-    def put_service_quota_increase_request_into_template(params = {}, **options)
-      req = build_request(:put_service_quota_increase_request_into_template, params)
+    def put_service_quota_increase_request_into_template(, **options)
+      req = build_request(:put_service_quota_increase_request_into_template, )
       req.send_request(options)
     end
 
@@ -1146,8 +1146,8 @@ module Aws::ServiceQuotas
     #
     # @overload request_service_quota_increase(**params)
     # @param [Hash] params ({})
-    def request_service_quota_increase(params = {}, **options)
-      req = build_request(:request_service_quota_increase, params)
+    def request_service_quota_increase(, **options)
+      req = build_request(:request_service_quota_increase, )
       req.send_request(options)
     end
 

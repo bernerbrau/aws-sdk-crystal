@@ -10049,5 +10049,2510 @@ module Aws::Chime
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias Account = NamedTuple(
+      "AwsAccountId" : String,
+      "AccountId" : String,
+      "Name" : String,
+      "AccountType" : (AccountType)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "DefaultLicense" : (License)?,
+      "SupportedLicenses" : (LicenseList)?,
+      "SigninDelegateGroups" : (SigninDelegateGroupList)?
+    )
+
+    alias AccountList = Array(Account)
+
+    alias AccountName = String
+
+    alias AccountSettings = NamedTuple(
+      "DisableRemoteControl" : (Boolean)?,
+      "EnableDialOut" : (Boolean)?
+    )
+
+    alias AccountType = String
+
+    alias AlexaForBusinessMetadata = NamedTuple(
+      "IsAlexaForBusinessEnabled" : (Boolean)?,
+      "AlexaForBusinessRoomArn" : (SensitiveString)?
+    )
+
+    alias Alpha2CountryCode = String
+
+    alias AppInstance = NamedTuple(
+      "AppInstanceArn" : (ChimeArn)?,
+      "Name" : (NonEmptyResourceName)?,
+      "Metadata" : (Metadata)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias AppInstanceAdmin = NamedTuple(
+      "Admin" : (Identity)?,
+      "AppInstanceArn" : (ChimeArn)?,
+      "CreatedTimestamp" : (Timestamp)?
+    )
+
+    alias AppInstanceAdminList = Array(AppInstanceAdminSummary)
+
+    alias AppInstanceAdminSummary = NamedTuple(
+      "Admin" : (Identity)?
+    )
+
+    alias AppInstanceDataType = String
+
+    alias AppInstanceList = Array(AppInstanceSummary)
+
+    alias AppInstanceRetentionSettings = NamedTuple(
+      "ChannelRetentionSettings" : (ChannelRetentionSettings)?
+    )
+
+    alias AppInstanceStreamingConfiguration = NamedTuple(
+      "AppInstanceDataType" : AppInstanceDataType,
+      "ResourceArn" : Arn
+    )
+
+    alias AppInstanceStreamingConfigurationList = Array(AppInstanceStreamingConfiguration)
+
+    alias AppInstanceSummary = NamedTuple(
+      "AppInstanceArn" : (ChimeArn)?,
+      "Name" : (NonEmptyResourceName)?,
+      "Metadata" : (Metadata)?
+    )
+
+    alias AppInstanceUser = NamedTuple(
+      "AppInstanceUserArn" : (ChimeArn)?,
+      "Name" : (UserName)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "Metadata" : (Metadata)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias AppInstanceUserList = Array(AppInstanceUserSummary)
+
+    alias AppInstanceUserMembershipSummary = NamedTuple(
+      "Type" : (ChannelMembershipType)?,
+      "ReadMarkerTimestamp" : (Timestamp)?
+    )
+
+    alias AppInstanceUserSummary = NamedTuple(
+      "AppInstanceUserArn" : (ChimeArn)?,
+      "Name" : (UserName)?,
+      "Metadata" : (Metadata)?
+    )
+
+    alias AreaCode = String
+
+    alias Arn = String
+
+    alias AssociatePhoneNumberWithUserRequest = NamedTuple(
+      "AccountId" : String,
+      "UserId" : String,
+      "E164PhoneNumber" : E164PhoneNumber
+    )
+
+    alias AssociatePhoneNumberWithUserResponse = NamedTuple(
+      
+    )
+
+    alias AssociatePhoneNumbersWithVoiceConnectorGroupRequest = NamedTuple(
+      "VoiceConnectorGroupId" : NonEmptyString,
+      "E164PhoneNumbers" : E164PhoneNumberList,
+      "ForceAssociate" : (NullableBoolean)?
+    )
+
+    alias AssociatePhoneNumbersWithVoiceConnectorGroupResponse = NamedTuple(
+      "PhoneNumberErrors" : (PhoneNumberErrorList)?
+    )
+
+    alias AssociatePhoneNumbersWithVoiceConnectorRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "E164PhoneNumbers" : E164PhoneNumberList,
+      "ForceAssociate" : (NullableBoolean)?
+    )
+
+    alias AssociatePhoneNumbersWithVoiceConnectorResponse = NamedTuple(
+      "PhoneNumberErrors" : (PhoneNumberErrorList)?
+    )
+
+    alias AssociateSigninDelegateGroupsWithAccountRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "SigninDelegateGroups" : SigninDelegateGroupList
+    )
+
+    alias AssociateSigninDelegateGroupsWithAccountResponse = NamedTuple(
+      
+    )
+
+    alias Attendee = NamedTuple(
+      "ExternalUserId" : (ExternalUserIdType)?,
+      "AttendeeId" : (GuidString)?,
+      "JoinToken" : (JoinTokenString)?
+    )
+
+    alias AttendeeList = Array(Attendee)
+
+    alias AttendeeTagKeyList = Array(TagKey)
+
+    alias AttendeeTagList = Array(Tag)
+
+    alias BadRequestException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias BatchCreateAttendeeErrorList = Array(CreateAttendeeError)
+
+    alias BatchCreateAttendeeRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "Attendees" : CreateAttendeeRequestItemList
+    )
+
+    alias BatchCreateAttendeeResponse = NamedTuple(
+      "Attendees" : (AttendeeList)?,
+      "Errors" : (BatchCreateAttendeeErrorList)?
+    )
+
+    alias BatchCreateRoomMembershipRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "MembershipItemList" : MembershipItemList
+    )
+
+    alias BatchCreateRoomMembershipResponse = NamedTuple(
+      "Errors" : (MemberErrorList)?
+    )
+
+    alias BatchDeletePhoneNumberRequest = NamedTuple(
+      "PhoneNumberIds" : NonEmptyStringList
+    )
+
+    alias BatchDeletePhoneNumberResponse = NamedTuple(
+      "PhoneNumberErrors" : (PhoneNumberErrorList)?
+    )
+
+    alias BatchSuspendUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserIdList" : UserIdList
+    )
+
+    alias BatchSuspendUserResponse = NamedTuple(
+      "UserErrors" : (UserErrorList)?
+    )
+
+    alias BatchUnsuspendUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserIdList" : UserIdList
+    )
+
+    alias BatchUnsuspendUserResponse = NamedTuple(
+      "UserErrors" : (UserErrorList)?
+    )
+
+    alias BatchUpdatePhoneNumberRequest = NamedTuple(
+      "UpdatePhoneNumberRequestItems" : UpdatePhoneNumberRequestItemList
+    )
+
+    alias BatchUpdatePhoneNumberResponse = NamedTuple(
+      "PhoneNumberErrors" : (PhoneNumberErrorList)?
+    )
+
+    alias BatchUpdateUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UpdateUserRequestItems" : UpdateUserRequestItemList
+    )
+
+    alias BatchUpdateUserResponse = NamedTuple(
+      "UserErrors" : (UserErrorList)?
+    )
+
+    alias Boolean = Bool
+
+    alias Bot = NamedTuple(
+      "BotId" : (String)?,
+      "UserId" : (String)?,
+      "DisplayName" : (SensitiveString)?,
+      "BotType" : (BotType)?,
+      "Disabled" : (NullableBoolean)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?,
+      "BotEmail" : (SensitiveString)?,
+      "SecurityToken" : (SensitiveString)?
+    )
+
+    alias BotList = Array(Bot)
+
+    alias BotType = String
+
+    alias BusinessCallingSettings = NamedTuple(
+      "CdrBucket" : (String)?
+    )
+
+    alias CallingName = String
+
+    alias CallingNameStatus = String
+
+    alias CallingRegion = String
+
+    alias CallingRegionList = Array(CallingRegion)
+
+    alias Capability = String
+
+    alias CapabilityList = Array(Capability)
+
+    alias Channel = NamedTuple(
+      "Name" : (NonEmptyResourceName)?,
+      "ChannelArn" : (ChimeArn)?,
+      "Mode" : (ChannelMode)?,
+      "Privacy" : (ChannelPrivacy)?,
+      "Metadata" : (Metadata)?,
+      "CreatedBy" : (Identity)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastMessageTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias ChannelBan = NamedTuple(
+      "Member" : (Identity)?,
+      "ChannelArn" : (ChimeArn)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "CreatedBy" : (Identity)?
+    )
+
+    alias ChannelBanSummary = NamedTuple(
+      "Member" : (Identity)?
+    )
+
+    alias ChannelBanSummaryList = Array(ChannelBanSummary)
+
+    alias ChannelMembership = NamedTuple(
+      "InvitedBy" : (Identity)?,
+      "Type" : (ChannelMembershipType)?,
+      "Member" : (Identity)?,
+      "ChannelArn" : (ChimeArn)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias ChannelMembershipForAppInstanceUserSummary = NamedTuple(
+      "ChannelSummary" : (ChannelSummary)?,
+      "AppInstanceUserMembershipSummary" : (AppInstanceUserMembershipSummary)?
+    )
+
+    alias ChannelMembershipForAppInstanceUserSummaryList = Array(ChannelMembershipForAppInstanceUserSummary)
+
+    alias ChannelMembershipSummary = NamedTuple(
+      "Member" : (Identity)?
+    )
+
+    alias ChannelMembershipSummaryList = Array(ChannelMembershipSummary)
+
+    alias ChannelMembershipType = String
+
+    alias ChannelMessage = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "MessageId" : (MessageId)?,
+      "Content" : (Content)?,
+      "Metadata" : (Metadata)?,
+      "Type" : (ChannelMessageType)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastEditedTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?,
+      "Sender" : (Identity)?,
+      "Redacted" : (NonNullableBoolean)?,
+      "Persistence" : (ChannelMessagePersistenceType)?
+    )
+
+    alias ChannelMessagePersistenceType = String
+
+    alias ChannelMessageSummary = NamedTuple(
+      "MessageId" : (MessageId)?,
+      "Content" : (Content)?,
+      "Metadata" : (Metadata)?,
+      "Type" : (ChannelMessageType)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?,
+      "LastEditedTimestamp" : (Timestamp)?,
+      "Sender" : (Identity)?,
+      "Redacted" : (NonNullableBoolean)?
+    )
+
+    alias ChannelMessageSummaryList = Array(ChannelMessageSummary)
+
+    alias ChannelMessageType = String
+
+    alias ChannelMode = String
+
+    alias ChannelModeratedByAppInstanceUserSummary = NamedTuple(
+      "ChannelSummary" : (ChannelSummary)?
+    )
+
+    alias ChannelModeratedByAppInstanceUserSummaryList = Array(ChannelModeratedByAppInstanceUserSummary)
+
+    alias ChannelModerator = NamedTuple(
+      "Moderator" : (Identity)?,
+      "ChannelArn" : (ChimeArn)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "CreatedBy" : (Identity)?
+    )
+
+    alias ChannelModeratorSummary = NamedTuple(
+      "Moderator" : (Identity)?
+    )
+
+    alias ChannelModeratorSummaryList = Array(ChannelModeratorSummary)
+
+    alias ChannelPrivacy = String
+
+    alias ChannelRetentionSettings = NamedTuple(
+      "RetentionDays" : (RetentionDays)?
+    )
+
+    alias ChannelSummary = NamedTuple(
+      "Name" : (NonEmptyResourceName)?,
+      "ChannelArn" : (ChimeArn)?,
+      "Mode" : (ChannelMode)?,
+      "Privacy" : (ChannelPrivacy)?,
+      "Metadata" : (Metadata)?,
+      "LastMessageTimestamp" : (Timestamp)?
+    )
+
+    alias ChannelSummaryList = Array(ChannelSummary)
+
+    alias ChimeArn = String
+
+    alias ClientRequestToken = String
+
+    alias ConflictException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias Content = String
+
+    alias ConversationRetentionSettings = NamedTuple(
+      "RetentionDays" : (RetentionDays)?
+    )
+
+    alias Country = String
+
+    alias CountryList = Array(Country)
+
+    alias CpsLimit = Int32
+
+    alias CreateAccountRequest = NamedTuple(
+      "Name" : AccountName
+    )
+
+    alias CreateAccountResponse = NamedTuple(
+      "Account" : (Account)?
+    )
+
+    alias CreateAppInstanceAdminRequest = NamedTuple(
+      "AppInstanceAdminArn" : ChimeArn,
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias CreateAppInstanceAdminResponse = NamedTuple(
+      "AppInstanceAdmin" : (Identity)?,
+      "AppInstanceArn" : (ChimeArn)?
+    )
+
+    alias CreateAppInstanceRequest = NamedTuple(
+      "Name" : NonEmptyResourceName,
+      "Metadata" : (Metadata)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateAppInstanceResponse = NamedTuple(
+      "AppInstanceArn" : (ChimeArn)?
+    )
+
+    alias CreateAppInstanceUserRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "AppInstanceUserId" : UserId,
+      "Name" : UserName,
+      "Metadata" : (Metadata)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateAppInstanceUserResponse = NamedTuple(
+      "AppInstanceUserArn" : (ChimeArn)?
+    )
+
+    alias CreateAttendeeError = NamedTuple(
+      "ExternalUserId" : (ExternalUserIdType)?,
+      "ErrorCode" : (String)?,
+      "ErrorMessage" : (String)?
+    )
+
+    alias CreateAttendeeRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "ExternalUserId" : ExternalUserIdType,
+      "Tags" : (AttendeeTagList)?
+    )
+
+    alias CreateAttendeeRequestItem = NamedTuple(
+      "ExternalUserId" : ExternalUserIdType,
+      "Tags" : (AttendeeTagList)?
+    )
+
+    alias CreateAttendeeRequestItemList = Array(CreateAttendeeRequestItem)
+
+    alias CreateAttendeeResponse = NamedTuple(
+      "Attendee" : (Attendee)?
+    )
+
+    alias CreateBotRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "DisplayName" : SensitiveString,
+      "Domain" : (NonEmptyString)?
+    )
+
+    alias CreateBotResponse = NamedTuple(
+      "Bot" : (Bot)?
+    )
+
+    alias CreateChannelBanRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MemberArn" : ChimeArn
+    )
+
+    alias CreateChannelBanResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "Member" : (Identity)?
+    )
+
+    alias CreateChannelMembershipRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MemberArn" : ChimeArn,
+      "Type" : ChannelMembershipType
+    )
+
+    alias CreateChannelMembershipResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "Member" : (Identity)?
+    )
+
+    alias CreateChannelModeratorRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "ChannelModeratorArn" : ChimeArn
+    )
+
+    alias CreateChannelModeratorResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "ChannelModerator" : (Identity)?
+    )
+
+    alias CreateChannelRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "Name" : NonEmptyResourceName,
+      "Mode" : (ChannelMode)?,
+      "Privacy" : (ChannelPrivacy)?,
+      "Metadata" : (Metadata)?,
+      "ClientRequestToken" : ClientRequestToken,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateChannelResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?
+    )
+
+    alias CreateMeetingDialOutRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "FromPhoneNumber" : E164PhoneNumber,
+      "ToPhoneNumber" : E164PhoneNumber,
+      "JoinToken" : JoinTokenString
+    )
+
+    alias CreateMeetingDialOutResponse = NamedTuple(
+      "TransactionId" : (GuidString)?
+    )
+
+    alias CreateMeetingRequest = NamedTuple(
+      "ClientRequestToken" : ClientRequestToken,
+      "ExternalMeetingId" : (ExternalMeetingIdType)?,
+      "MeetingHostId" : (ExternalUserIdType)?,
+      "MediaRegion" : (String)?,
+      "Tags" : (MeetingTagList)?,
+      "NotificationsConfiguration" : (MeetingNotificationConfiguration)?
+    )
+
+    alias CreateMeetingResponse = NamedTuple(
+      "Meeting" : (Meeting)?
+    )
+
+    alias CreateMeetingWithAttendeesRequest = NamedTuple(
+      "ClientRequestToken" : ClientRequestToken,
+      "ExternalMeetingId" : (ExternalMeetingIdType)?,
+      "MeetingHostId" : (ExternalUserIdType)?,
+      "MediaRegion" : (String)?,
+      "Tags" : (MeetingTagList)?,
+      "NotificationsConfiguration" : (MeetingNotificationConfiguration)?,
+      "Attendees" : (CreateMeetingWithAttendeesRequestItemList)?
+    )
+
+    alias CreateMeetingWithAttendeesRequestItemList = Array(CreateAttendeeRequestItem)
+
+    alias CreateMeetingWithAttendeesResponse = NamedTuple(
+      "Meeting" : (Meeting)?,
+      "Attendees" : (AttendeeList)?,
+      "Errors" : (BatchCreateAttendeeErrorList)?
+    )
+
+    alias CreatePhoneNumberOrderRequest = NamedTuple(
+      "ProductType" : PhoneNumberProductType,
+      "E164PhoneNumbers" : E164PhoneNumberList
+    )
+
+    alias CreatePhoneNumberOrderResponse = NamedTuple(
+      "PhoneNumberOrder" : (PhoneNumberOrder)?
+    )
+
+    alias CreateProxySessionRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128,
+      "ParticipantPhoneNumbers" : ParticipantPhoneNumberList,
+      "Name" : (ProxySessionNameString)?,
+      "ExpiryMinutes" : (PositiveInteger)?,
+      "Capabilities" : CapabilityList,
+      "NumberSelectionBehavior" : (NumberSelectionBehavior)?,
+      "GeoMatchLevel" : (GeoMatchLevel)?,
+      "GeoMatchParams" : (GeoMatchParams)?
+    )
+
+    alias CreateProxySessionResponse = NamedTuple(
+      "ProxySession" : (ProxySession)?
+    )
+
+    alias CreateRoomMembershipRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "MemberId" : NonEmptyString,
+      "Role" : (RoomMembershipRole)?
+    )
+
+    alias CreateRoomMembershipResponse = NamedTuple(
+      "RoomMembership" : (RoomMembership)?
+    )
+
+    alias CreateRoomRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "Name" : SensitiveString,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreateRoomResponse = NamedTuple(
+      "Room" : (Room)?
+    )
+
+    alias CreateSipMediaApplicationCallRequest = NamedTuple(
+      "FromPhoneNumber" : (E164PhoneNumber)?,
+      "ToPhoneNumber" : (E164PhoneNumber)?,
+      "SipMediaApplicationId" : NonEmptyString
+    )
+
+    alias CreateSipMediaApplicationCallResponse = NamedTuple(
+      "SipMediaApplicationCall" : (SipMediaApplicationCall)?
+    )
+
+    alias CreateSipMediaApplicationRequest = NamedTuple(
+      "AwsRegion" : String,
+      "Name" : (SipMediaApplicationName)?,
+      "Endpoints" : SipMediaApplicationEndpointList
+    )
+
+    alias CreateSipMediaApplicationResponse = NamedTuple(
+      "SipMediaApplication" : (SipMediaApplication)?
+    )
+
+    alias CreateSipRuleRequest = NamedTuple(
+      "Name" : SipRuleName,
+      "TriggerType" : SipRuleTriggerType,
+      "TriggerValue" : NonEmptyString,
+      "Disabled" : (NullableBoolean)?,
+      "TargetApplications" : SipRuleTargetApplicationList
+    )
+
+    alias CreateSipRuleResponse = NamedTuple(
+      "SipRule" : (SipRule)?
+    )
+
+    alias CreateUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "Username" : (String)?,
+      "Email" : (EmailAddress)?,
+      "UserType" : (UserType)?
+    )
+
+    alias CreateUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias CreateVoiceConnectorGroupRequest = NamedTuple(
+      "Name" : VoiceConnectorGroupName,
+      "VoiceConnectorItems" : (VoiceConnectorItemList)?
+    )
+
+    alias CreateVoiceConnectorGroupResponse = NamedTuple(
+      "VoiceConnectorGroup" : (VoiceConnectorGroup)?
+    )
+
+    alias CreateVoiceConnectorRequest = NamedTuple(
+      "Name" : VoiceConnectorName,
+      "AwsRegion" : (VoiceConnectorAwsRegion)?,
+      "RequireEncryption" : Boolean
+    )
+
+    alias CreateVoiceConnectorResponse = NamedTuple(
+      "VoiceConnector" : (VoiceConnector)?
+    )
+
+    alias Credential = NamedTuple(
+      "Username" : (SensitiveString)?,
+      "Password" : (SensitiveString)?
+    )
+
+    alias CredentialList = Array(Credential)
+
+    alias DNISEmergencyCallingConfiguration = NamedTuple(
+      "EmergencyPhoneNumber" : E164PhoneNumber,
+      "TestPhoneNumber" : (E164PhoneNumber)?,
+      "CallingCountry" : Alpha2CountryCode
+    )
+
+    alias DNISEmergencyCallingConfigurationList = Array(DNISEmergencyCallingConfiguration)
+
+    alias DataRetentionInHours = Int32
+
+    alias DeleteAccountRequest = NamedTuple(
+      "AccountId" : NonEmptyString
+    )
+
+    alias DeleteAccountResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAppInstanceAdminRequest = NamedTuple(
+      "AppInstanceAdminArn" : ChimeArn,
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias DeleteAppInstanceRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias DeleteAppInstanceStreamingConfigurationsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias DeleteAppInstanceUserRequest = NamedTuple(
+      "AppInstanceUserArn" : ChimeArn
+    )
+
+    alias DeleteAttendeeRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "AttendeeId" : GuidString
+    )
+
+    alias DeleteChannelBanRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MemberArn" : ChimeArn
+    )
+
+    alias DeleteChannelMembershipRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MemberArn" : ChimeArn
+    )
+
+    alias DeleteChannelMessageRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MessageId" : MessageId
+    )
+
+    alias DeleteChannelModeratorRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "ChannelModeratorArn" : ChimeArn
+    )
+
+    alias DeleteChannelRequest = NamedTuple(
+      "ChannelArn" : ChimeArn
+    )
+
+    alias DeleteEventsConfigurationRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "BotId" : NonEmptyString
+    )
+
+    alias DeleteMeetingRequest = NamedTuple(
+      "MeetingId" : GuidString
+    )
+
+    alias DeletePhoneNumberRequest = NamedTuple(
+      "PhoneNumberId" : String
+    )
+
+    alias DeleteProxySessionRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128,
+      "ProxySessionId" : NonEmptyString128
+    )
+
+    alias DeleteRoomMembershipRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "MemberId" : NonEmptyString
+    )
+
+    alias DeleteRoomRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString
+    )
+
+    alias DeleteSipMediaApplicationRequest = NamedTuple(
+      "SipMediaApplicationId" : NonEmptyString
+    )
+
+    alias DeleteSipRuleRequest = NamedTuple(
+      "SipRuleId" : NonEmptyString
+    )
+
+    alias DeleteVoiceConnectorEmergencyCallingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias DeleteVoiceConnectorGroupRequest = NamedTuple(
+      "VoiceConnectorGroupId" : NonEmptyString
+    )
+
+    alias DeleteVoiceConnectorOriginationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias DeleteVoiceConnectorProxyRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128
+    )
+
+    alias DeleteVoiceConnectorRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias DeleteVoiceConnectorStreamingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias DeleteVoiceConnectorTerminationCredentialsRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "Usernames" : SensitiveStringList
+    )
+
+    alias DeleteVoiceConnectorTerminationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias DescribeAppInstanceAdminRequest = NamedTuple(
+      "AppInstanceAdminArn" : ChimeArn,
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias DescribeAppInstanceAdminResponse = NamedTuple(
+      "AppInstanceAdmin" : (AppInstanceAdmin)?
+    )
+
+    alias DescribeAppInstanceRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias DescribeAppInstanceResponse = NamedTuple(
+      "AppInstance" : (AppInstance)?
+    )
+
+    alias DescribeAppInstanceUserRequest = NamedTuple(
+      "AppInstanceUserArn" : ChimeArn
+    )
+
+    alias DescribeAppInstanceUserResponse = NamedTuple(
+      "AppInstanceUser" : (AppInstanceUser)?
+    )
+
+    alias DescribeChannelBanRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MemberArn" : ChimeArn
+    )
+
+    alias DescribeChannelBanResponse = NamedTuple(
+      "ChannelBan" : (ChannelBan)?
+    )
+
+    alias DescribeChannelMembershipForAppInstanceUserRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "AppInstanceUserArn" : ChimeArn
+    )
+
+    alias DescribeChannelMembershipForAppInstanceUserResponse = NamedTuple(
+      "ChannelMembership" : (ChannelMembershipForAppInstanceUserSummary)?
+    )
+
+    alias DescribeChannelMembershipRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MemberArn" : ChimeArn
+    )
+
+    alias DescribeChannelMembershipResponse = NamedTuple(
+      "ChannelMembership" : (ChannelMembership)?
+    )
+
+    alias DescribeChannelModeratedByAppInstanceUserRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "AppInstanceUserArn" : ChimeArn
+    )
+
+    alias DescribeChannelModeratedByAppInstanceUserResponse = NamedTuple(
+      "Channel" : (ChannelModeratedByAppInstanceUserSummary)?
+    )
+
+    alias DescribeChannelModeratorRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "ChannelModeratorArn" : ChimeArn
+    )
+
+    alias DescribeChannelModeratorResponse = NamedTuple(
+      "ChannelModerator" : (ChannelModerator)?
+    )
+
+    alias DescribeChannelRequest = NamedTuple(
+      "ChannelArn" : ChimeArn
+    )
+
+    alias DescribeChannelResponse = NamedTuple(
+      "Channel" : (Channel)?
+    )
+
+    alias DisassociatePhoneNumberFromUserRequest = NamedTuple(
+      "AccountId" : String,
+      "UserId" : String
+    )
+
+    alias DisassociatePhoneNumberFromUserResponse = NamedTuple(
+      
+    )
+
+    alias DisassociatePhoneNumbersFromVoiceConnectorGroupRequest = NamedTuple(
+      "VoiceConnectorGroupId" : NonEmptyString,
+      "E164PhoneNumbers" : E164PhoneNumberList
+    )
+
+    alias DisassociatePhoneNumbersFromVoiceConnectorGroupResponse = NamedTuple(
+      "PhoneNumberErrors" : (PhoneNumberErrorList)?
+    )
+
+    alias DisassociatePhoneNumbersFromVoiceConnectorRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "E164PhoneNumbers" : E164PhoneNumberList
+    )
+
+    alias DisassociatePhoneNumbersFromVoiceConnectorResponse = NamedTuple(
+      "PhoneNumberErrors" : (PhoneNumberErrorList)?
+    )
+
+    alias DisassociateSigninDelegateGroupsFromAccountRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "GroupNames" : NonEmptyStringList
+    )
+
+    alias DisassociateSigninDelegateGroupsFromAccountResponse = NamedTuple(
+      
+    )
+
+    alias E164PhoneNumber = String
+
+    alias E164PhoneNumberList = Array(E164PhoneNumber)
+
+    alias EmailAddress = String
+
+    alias EmailStatus = String
+
+    alias EmergencyCallingConfiguration = NamedTuple(
+      "DNIS" : (DNISEmergencyCallingConfigurationList)?
+    )
+
+    alias ErrorCode = String
+
+    alias EventsConfiguration = NamedTuple(
+      "BotId" : (String)?,
+      "OutboundEventsHTTPSEndpoint" : (SensitiveString)?,
+      "LambdaFunctionArn" : (SensitiveString)?
+    )
+
+    alias ExternalMeetingIdType = String
+
+    alias ExternalUserIdType = String
+
+    alias ForbiddenException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias FunctionArn = String
+
+    alias GeoMatchLevel = String
+
+    alias GeoMatchParams = NamedTuple(
+      "Country" : Country,
+      "AreaCode" : AreaCode
+    )
+
+    alias GetAccountRequest = NamedTuple(
+      "AccountId" : NonEmptyString
+    )
+
+    alias GetAccountResponse = NamedTuple(
+      "Account" : (Account)?
+    )
+
+    alias GetAccountSettingsRequest = NamedTuple(
+      "AccountId" : NonEmptyString
+    )
+
+    alias GetAccountSettingsResponse = NamedTuple(
+      "AccountSettings" : (AccountSettings)?
+    )
+
+    alias GetAppInstanceRetentionSettingsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias GetAppInstanceRetentionSettingsResponse = NamedTuple(
+      "AppInstanceRetentionSettings" : (AppInstanceRetentionSettings)?,
+      "InitiateDeletionTimestamp" : (Timestamp)?
+    )
+
+    alias GetAppInstanceStreamingConfigurationsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn
+    )
+
+    alias GetAppInstanceStreamingConfigurationsResponse = NamedTuple(
+      "AppInstanceStreamingConfigurations" : (AppInstanceStreamingConfigurationList)?
+    )
+
+    alias GetAttendeeRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "AttendeeId" : GuidString
+    )
+
+    alias GetAttendeeResponse = NamedTuple(
+      "Attendee" : (Attendee)?
+    )
+
+    alias GetBotRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "BotId" : NonEmptyString
+    )
+
+    alias GetBotResponse = NamedTuple(
+      "Bot" : (Bot)?
+    )
+
+    alias GetChannelMessageRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MessageId" : MessageId
+    )
+
+    alias GetChannelMessageResponse = NamedTuple(
+      "ChannelMessage" : (ChannelMessage)?
+    )
+
+    alias GetEventsConfigurationRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "BotId" : NonEmptyString
+    )
+
+    alias GetEventsConfigurationResponse = NamedTuple(
+      "EventsConfiguration" : (EventsConfiguration)?
+    )
+
+    alias GetGlobalSettingsResponse = NamedTuple(
+      "BusinessCalling" : (BusinessCallingSettings)?,
+      "VoiceConnector" : (VoiceConnectorSettings)?
+    )
+
+    alias GetMeetingRequest = NamedTuple(
+      "MeetingId" : GuidString
+    )
+
+    alias GetMeetingResponse = NamedTuple(
+      "Meeting" : (Meeting)?
+    )
+
+    alias GetMessagingSessionEndpointRequest = NamedTuple(
+      
+    )
+
+    alias GetMessagingSessionEndpointResponse = NamedTuple(
+      "Endpoint" : (MessagingSessionEndpoint)?
+    )
+
+    alias GetPhoneNumberOrderRequest = NamedTuple(
+      "PhoneNumberOrderId" : GuidString
+    )
+
+    alias GetPhoneNumberOrderResponse = NamedTuple(
+      "PhoneNumberOrder" : (PhoneNumberOrder)?
+    )
+
+    alias GetPhoneNumberRequest = NamedTuple(
+      "PhoneNumberId" : String
+    )
+
+    alias GetPhoneNumberResponse = NamedTuple(
+      "PhoneNumber" : (PhoneNumber)?
+    )
+
+    alias GetPhoneNumberSettingsResponse = NamedTuple(
+      "CallingName" : (CallingName)?,
+      "CallingNameUpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias GetProxySessionRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128,
+      "ProxySessionId" : NonEmptyString128
+    )
+
+    alias GetProxySessionResponse = NamedTuple(
+      "ProxySession" : (ProxySession)?
+    )
+
+    alias GetRetentionSettingsRequest = NamedTuple(
+      "AccountId" : NonEmptyString
+    )
+
+    alias GetRetentionSettingsResponse = NamedTuple(
+      "RetentionSettings" : (RetentionSettings)?,
+      "InitiateDeletionTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias GetRoomRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString
+    )
+
+    alias GetRoomResponse = NamedTuple(
+      "Room" : (Room)?
+    )
+
+    alias GetSipMediaApplicationLoggingConfigurationRequest = NamedTuple(
+      "SipMediaApplicationId" : NonEmptyString
+    )
+
+    alias GetSipMediaApplicationLoggingConfigurationResponse = NamedTuple(
+      "SipMediaApplicationLoggingConfiguration" : (SipMediaApplicationLoggingConfiguration)?
+    )
+
+    alias GetSipMediaApplicationRequest = NamedTuple(
+      "SipMediaApplicationId" : NonEmptyString
+    )
+
+    alias GetSipMediaApplicationResponse = NamedTuple(
+      "SipMediaApplication" : (SipMediaApplication)?
+    )
+
+    alias GetSipRuleRequest = NamedTuple(
+      "SipRuleId" : NonEmptyString
+    )
+
+    alias GetSipRuleResponse = NamedTuple(
+      "SipRule" : (SipRule)?
+    )
+
+    alias GetUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserId" : NonEmptyString
+    )
+
+    alias GetUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias GetUserSettingsRequest = NamedTuple(
+      "AccountId" : String,
+      "UserId" : String
+    )
+
+    alias GetUserSettingsResponse = NamedTuple(
+      "UserSettings" : (UserSettings)?
+    )
+
+    alias GetVoiceConnectorEmergencyCallingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorEmergencyCallingConfigurationResponse = NamedTuple(
+      "EmergencyCallingConfiguration" : (EmergencyCallingConfiguration)?
+    )
+
+    alias GetVoiceConnectorGroupRequest = NamedTuple(
+      "VoiceConnectorGroupId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorGroupResponse = NamedTuple(
+      "VoiceConnectorGroup" : (VoiceConnectorGroup)?
+    )
+
+    alias GetVoiceConnectorLoggingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorLoggingConfigurationResponse = NamedTuple(
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias GetVoiceConnectorOriginationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorOriginationResponse = NamedTuple(
+      "Origination" : (Origination)?
+    )
+
+    alias GetVoiceConnectorProxyRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128
+    )
+
+    alias GetVoiceConnectorProxyResponse = NamedTuple(
+      "Proxy" : (Proxy)?
+    )
+
+    alias GetVoiceConnectorRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorResponse = NamedTuple(
+      "VoiceConnector" : (VoiceConnector)?
+    )
+
+    alias GetVoiceConnectorStreamingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorStreamingConfigurationResponse = NamedTuple(
+      "StreamingConfiguration" : (StreamingConfiguration)?
+    )
+
+    alias GetVoiceConnectorTerminationHealthRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorTerminationHealthResponse = NamedTuple(
+      "TerminationHealth" : (TerminationHealth)?
+    )
+
+    alias GetVoiceConnectorTerminationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias GetVoiceConnectorTerminationResponse = NamedTuple(
+      "Termination" : (Termination)?
+    )
+
+    alias GuidString = String
+
+    alias Identity = NamedTuple(
+      "Arn" : (ChimeArn)?,
+      "Name" : (ResourceName)?
+    )
+
+    alias Integer = Int32
+
+    alias Invite = NamedTuple(
+      "InviteId" : (String)?,
+      "Status" : (InviteStatus)?,
+      "EmailAddress" : (EmailAddress)?,
+      "EmailStatus" : (EmailStatus)?
+    )
+
+    alias InviteList = Array(Invite)
+
+    alias InviteStatus = String
+
+    alias InviteUsersRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserEmailList" : UserEmailList,
+      "UserType" : (UserType)?
+    )
+
+    alias InviteUsersResponse = NamedTuple(
+      "Invites" : (InviteList)?
+    )
+
+    alias Iso8601Timestamp = String | UInt64 | Time
+
+    alias JoinTokenString = String
+
+    alias License = String
+
+    alias LicenseList = Array(License)
+
+    alias ListAccountsRequest = NamedTuple(
+      "Name" : (AccountName)?,
+      "UserEmail" : (EmailAddress)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (ProfileServiceMaxResults)?
+    )
+
+    alias ListAccountsResponse = NamedTuple(
+      "Accounts" : (AccountList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListAppInstanceAdminsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAppInstanceAdminsResponse = NamedTuple(
+      "AppInstanceArn" : (ChimeArn)?,
+      "AppInstanceAdmins" : (AppInstanceAdminList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAppInstanceUsersRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAppInstanceUsersResponse = NamedTuple(
+      "AppInstanceArn" : (ChimeArn)?,
+      "AppInstanceUsers" : (AppInstanceUserList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAppInstancesRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAppInstancesResponse = NamedTuple(
+      "AppInstances" : (AppInstanceList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAttendeeTagsRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "AttendeeId" : GuidString
+    )
+
+    alias ListAttendeeTagsResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListAttendeesRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "NextToken" : (String)?,
+      "MaxResults" : (ResultMax)?
+    )
+
+    alias ListAttendeesResponse = NamedTuple(
+      "Attendees" : (AttendeeList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListBotsRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "MaxResults" : (ResultMax)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListBotsResponse = NamedTuple(
+      "Bots" : (BotList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListChannelBansRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelBansResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "NextToken" : (NextToken)?,
+      "ChannelBans" : (ChannelBanSummaryList)?
+    )
+
+    alias ListChannelMembershipsForAppInstanceUserRequest = NamedTuple(
+      "AppInstanceUserArn" : (ChimeArn)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelMembershipsForAppInstanceUserResponse = NamedTuple(
+      "ChannelMemberships" : (ChannelMembershipForAppInstanceUserSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelMembershipsRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "Type" : (ChannelMembershipType)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelMembershipsResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "ChannelMemberships" : (ChannelMembershipSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelMessagesRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "SortOrder" : (SortOrder)?,
+      "NotBefore" : (Timestamp)?,
+      "NotAfter" : (Timestamp)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelMessagesResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "NextToken" : (NextToken)?,
+      "ChannelMessages" : (ChannelMessageSummaryList)?
+    )
+
+    alias ListChannelModeratorsRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelModeratorsResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "NextToken" : (NextToken)?,
+      "ChannelModerators" : (ChannelModeratorSummaryList)?
+    )
+
+    alias ListChannelsModeratedByAppInstanceUserRequest = NamedTuple(
+      "AppInstanceUserArn" : (ChimeArn)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelsModeratedByAppInstanceUserResponse = NamedTuple(
+      "Channels" : (ChannelModeratedByAppInstanceUserSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "Privacy" : (ChannelPrivacy)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChannelsResponse = NamedTuple(
+      "Channels" : (ChannelSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListMeetingTagsRequest = NamedTuple(
+      "MeetingId" : GuidString
+    )
+
+    alias ListMeetingTagsResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListMeetingsRequest = NamedTuple(
+      "NextToken" : (String)?,
+      "MaxResults" : (ResultMax)?
+    )
+
+    alias ListMeetingsResponse = NamedTuple(
+      "Meetings" : (MeetingList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListPhoneNumberOrdersRequest = NamedTuple(
+      "NextToken" : (String)?,
+      "MaxResults" : (ResultMax)?
+    )
+
+    alias ListPhoneNumberOrdersResponse = NamedTuple(
+      "PhoneNumberOrders" : (PhoneNumberOrderList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListPhoneNumbersRequest = NamedTuple(
+      "Status" : (PhoneNumberStatus)?,
+      "ProductType" : (PhoneNumberProductType)?,
+      "FilterName" : (PhoneNumberAssociationName)?,
+      "FilterValue" : (String)?,
+      "MaxResults" : (ResultMax)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListPhoneNumbersResponse = NamedTuple(
+      "PhoneNumbers" : (PhoneNumberList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListProxySessionsRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128,
+      "Status" : (ProxySessionStatus)?,
+      "NextToken" : (NextTokenString)?,
+      "MaxResults" : (ResultMax)?
+    )
+
+    alias ListProxySessionsResponse = NamedTuple(
+      "ProxySessions" : (ProxySessions)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListRoomMembershipsRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "MaxResults" : (ResultMax)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListRoomMembershipsResponse = NamedTuple(
+      "RoomMemberships" : (RoomMembershipList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListRoomsRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "MemberId" : (String)?,
+      "MaxResults" : (ResultMax)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListRoomsResponse = NamedTuple(
+      "Rooms" : (RoomList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListSipMediaApplicationsRequest = NamedTuple(
+      "MaxResults" : (ResultMax)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListSipMediaApplicationsResponse = NamedTuple(
+      "SipMediaApplications" : (SipMediaApplicationList)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListSipRulesRequest = NamedTuple(
+      "SipMediaApplicationId" : (NonEmptyString)?,
+      "MaxResults" : (ResultMax)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListSipRulesResponse = NamedTuple(
+      "SipRules" : (SipRuleList)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserEmail" : (EmailAddress)?,
+      "UserType" : (UserType)?,
+      "MaxResults" : (ProfileServiceMaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "Users" : (UserList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListVoiceConnectorGroupsRequest = NamedTuple(
+      "NextToken" : (String)?,
+      "MaxResults" : (ResultMax)?
+    )
+
+    alias ListVoiceConnectorGroupsResponse = NamedTuple(
+      "VoiceConnectorGroups" : (VoiceConnectorGroupList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListVoiceConnectorTerminationCredentialsRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString
+    )
+
+    alias ListVoiceConnectorTerminationCredentialsResponse = NamedTuple(
+      "Usernames" : (SensitiveStringList)?
+    )
+
+    alias ListVoiceConnectorsRequest = NamedTuple(
+      "NextToken" : (String)?,
+      "MaxResults" : (ResultMax)?
+    )
+
+    alias ListVoiceConnectorsResponse = NamedTuple(
+      "VoiceConnectors" : (VoiceConnectorList)?,
+      "NextToken" : (String)?
+    )
+
+    alias LoggingConfiguration = NamedTuple(
+      "EnableSIPLogs" : (Boolean)?
+    )
+
+    alias LogoutUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserId" : NonEmptyString
+    )
+
+    alias LogoutUserResponse = NamedTuple(
+      
+    )
+
+    alias MaxResults = Int32
+
+    alias MediaPlacement = NamedTuple(
+      "AudioHostUrl" : (UriType)?,
+      "AudioFallbackUrl" : (UriType)?,
+      "ScreenDataUrl" : (UriType)?,
+      "ScreenSharingUrl" : (UriType)?,
+      "ScreenViewingUrl" : (UriType)?,
+      "SignalingUrl" : (UriType)?,
+      "TurnControlUrl" : (UriType)?
+    )
+
+    alias Meeting = NamedTuple(
+      "MeetingId" : (GuidString)?,
+      "ExternalMeetingId" : (ExternalMeetingIdType)?,
+      "MediaPlacement" : (MediaPlacement)?,
+      "MediaRegion" : (String)?
+    )
+
+    alias MeetingList = Array(Meeting)
+
+    alias MeetingNotificationConfiguration = NamedTuple(
+      "SnsTopicArn" : (Arn)?,
+      "SqsQueueArn" : (Arn)?
+    )
+
+    alias MeetingTagKeyList = Array(TagKey)
+
+    alias MeetingTagList = Array(Tag)
+
+    alias Member = NamedTuple(
+      "MemberId" : (NonEmptyString)?,
+      "MemberType" : (MemberType)?,
+      "Email" : (SensitiveString)?,
+      "FullName" : (SensitiveString)?,
+      "AccountId" : (NonEmptyString)?
+    )
+
+    alias MemberError = NamedTuple(
+      "MemberId" : (NonEmptyString)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (String)?
+    )
+
+    alias MemberErrorList = Array(MemberError)
+
+    alias MemberType = String
+
+    alias MembershipItem = NamedTuple(
+      "MemberId" : (NonEmptyString)?,
+      "Role" : (RoomMembershipRole)?
+    )
+
+    alias MembershipItemList = Array(MembershipItem)
+
+    alias MessageId = String
+
+    alias MessagingSessionEndpoint = NamedTuple(
+      "Url" : (UrlType)?
+    )
+
+    alias Metadata = String
+
+    alias NextToken = String
+
+    alias NextTokenString = String
+
+    alias NonEmptyContent = String
+
+    alias NonEmptyResourceName = String
+
+    alias NonEmptyString = String
+
+    alias NonEmptyString128 = String
+
+    alias NonEmptyStringList = Array(String)
+
+    alias NonNullableBoolean = Bool
+
+    alias NotFoundException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias NotificationTarget = String
+
+    alias NullableBoolean = Bool
+
+    alias NumberSelectionBehavior = String
+
+    alias OrderedPhoneNumber = NamedTuple(
+      "E164PhoneNumber" : (E164PhoneNumber)?,
+      "Status" : (OrderedPhoneNumberStatus)?
+    )
+
+    alias OrderedPhoneNumberList = Array(OrderedPhoneNumber)
+
+    alias OrderedPhoneNumberStatus = String
+
+    alias Origination = NamedTuple(
+      "Routes" : (OriginationRouteList)?,
+      "Disabled" : (Boolean)?
+    )
+
+    alias OriginationRoute = NamedTuple(
+      "Host" : (String)?,
+      "Port" : (Port)?,
+      "Protocol" : (OriginationRouteProtocol)?,
+      "Priority" : (OriginationRoutePriority)?,
+      "Weight" : (OriginationRouteWeight)?
+    )
+
+    alias OriginationRouteList = Array(OriginationRoute)
+
+    alias OriginationRoutePriority = Int32
+
+    alias OriginationRouteProtocol = String
+
+    alias OriginationRouteWeight = Int32
+
+    alias Participant = NamedTuple(
+      "PhoneNumber" : (E164PhoneNumber)?,
+      "ProxyPhoneNumber" : (E164PhoneNumber)?
+    )
+
+    alias ParticipantPhoneNumberList = Array(E164PhoneNumber)
+
+    alias Participants = Array(Participant)
+
+    alias PhoneNumber = NamedTuple(
+      "PhoneNumberId" : (String)?,
+      "E164PhoneNumber" : (E164PhoneNumber)?,
+      "Type" : (PhoneNumberType)?,
+      "ProductType" : (PhoneNumberProductType)?,
+      "Status" : (PhoneNumberStatus)?,
+      "Capabilities" : (PhoneNumberCapabilities)?,
+      "Associations" : (PhoneNumberAssociationList)?,
+      "CallingName" : (CallingName)?,
+      "CallingNameStatus" : (CallingNameStatus)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?,
+      "DeletionTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias PhoneNumberAssociation = NamedTuple(
+      "Value" : (String)?,
+      "Name" : (PhoneNumberAssociationName)?,
+      "AssociatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias PhoneNumberAssociationList = Array(PhoneNumberAssociation)
+
+    alias PhoneNumberAssociationName = String
+
+    alias PhoneNumberCapabilities = NamedTuple(
+      "InboundCall" : (NullableBoolean)?,
+      "OutboundCall" : (NullableBoolean)?,
+      "InboundSMS" : (NullableBoolean)?,
+      "OutboundSMS" : (NullableBoolean)?,
+      "InboundMMS" : (NullableBoolean)?,
+      "OutboundMMS" : (NullableBoolean)?
+    )
+
+    alias PhoneNumberError = NamedTuple(
+      "PhoneNumberId" : (NonEmptyString)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (String)?
+    )
+
+    alias PhoneNumberErrorList = Array(PhoneNumberError)
+
+    alias PhoneNumberList = Array(PhoneNumber)
+
+    alias PhoneNumberMaxResults = Int32
+
+    alias PhoneNumberOrder = NamedTuple(
+      "PhoneNumberOrderId" : (GuidString)?,
+      "ProductType" : (PhoneNumberProductType)?,
+      "Status" : (PhoneNumberOrderStatus)?,
+      "OrderedPhoneNumbers" : (OrderedPhoneNumberList)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias PhoneNumberOrderList = Array(PhoneNumberOrder)
+
+    alias PhoneNumberOrderStatus = String
+
+    alias PhoneNumberProductType = String
+
+    alias PhoneNumberStatus = String
+
+    alias PhoneNumberType = String
+
+    alias Port = Int32
+
+    alias PositiveInteger = Int32
+
+    alias ProfileServiceMaxResults = Int32
+
+    alias Proxy = NamedTuple(
+      "DefaultSessionExpiryMinutes" : (Integer)?,
+      "Disabled" : (Boolean)?,
+      "FallBackPhoneNumber" : (E164PhoneNumber)?,
+      "PhoneNumberCountries" : (StringList)?
+    )
+
+    alias ProxySession = NamedTuple(
+      "VoiceConnectorId" : (NonEmptyString128)?,
+      "ProxySessionId" : (NonEmptyString128)?,
+      "Name" : (String128)?,
+      "Status" : (ProxySessionStatus)?,
+      "ExpiryMinutes" : (PositiveInteger)?,
+      "Capabilities" : (CapabilityList)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?,
+      "EndedTimestamp" : (Iso8601Timestamp)?,
+      "Participants" : (Participants)?,
+      "NumberSelectionBehavior" : (NumberSelectionBehavior)?,
+      "GeoMatchLevel" : (GeoMatchLevel)?,
+      "GeoMatchParams" : (GeoMatchParams)?
+    )
+
+    alias ProxySessionNameString = String
+
+    alias ProxySessionStatus = String
+
+    alias ProxySessions = Array(ProxySession)
+
+    alias PutAppInstanceRetentionSettingsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "AppInstanceRetentionSettings" : AppInstanceRetentionSettings
+    )
+
+    alias PutAppInstanceRetentionSettingsResponse = NamedTuple(
+      "AppInstanceRetentionSettings" : (AppInstanceRetentionSettings)?,
+      "InitiateDeletionTimestamp" : (Timestamp)?
+    )
+
+    alias PutAppInstanceStreamingConfigurationsRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "AppInstanceStreamingConfigurations" : AppInstanceStreamingConfigurationList
+    )
+
+    alias PutAppInstanceStreamingConfigurationsResponse = NamedTuple(
+      "AppInstanceStreamingConfigurations" : (AppInstanceStreamingConfigurationList)?
+    )
+
+    alias PutEventsConfigurationRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "BotId" : NonEmptyString,
+      "OutboundEventsHTTPSEndpoint" : (SensitiveString)?,
+      "LambdaFunctionArn" : (SensitiveString)?
+    )
+
+    alias PutEventsConfigurationResponse = NamedTuple(
+      "EventsConfiguration" : (EventsConfiguration)?
+    )
+
+    alias PutRetentionSettingsRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RetentionSettings" : RetentionSettings
+    )
+
+    alias PutRetentionSettingsResponse = NamedTuple(
+      "RetentionSettings" : (RetentionSettings)?,
+      "InitiateDeletionTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias PutSipMediaApplicationLoggingConfigurationRequest = NamedTuple(
+      "SipMediaApplicationId" : NonEmptyString,
+      "SipMediaApplicationLoggingConfiguration" : (SipMediaApplicationLoggingConfiguration)?
+    )
+
+    alias PutSipMediaApplicationLoggingConfigurationResponse = NamedTuple(
+      "SipMediaApplicationLoggingConfiguration" : (SipMediaApplicationLoggingConfiguration)?
+    )
+
+    alias PutVoiceConnectorEmergencyCallingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "EmergencyCallingConfiguration" : EmergencyCallingConfiguration
+    )
+
+    alias PutVoiceConnectorEmergencyCallingConfigurationResponse = NamedTuple(
+      "EmergencyCallingConfiguration" : (EmergencyCallingConfiguration)?
+    )
+
+    alias PutVoiceConnectorLoggingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "LoggingConfiguration" : LoggingConfiguration
+    )
+
+    alias PutVoiceConnectorLoggingConfigurationResponse = NamedTuple(
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias PutVoiceConnectorOriginationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "Origination" : Origination
+    )
+
+    alias PutVoiceConnectorOriginationResponse = NamedTuple(
+      "Origination" : (Origination)?
+    )
+
+    alias PutVoiceConnectorProxyRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128,
+      "DefaultSessionExpiryMinutes" : Integer,
+      "PhoneNumberPoolCountries" : CountryList,
+      "FallBackPhoneNumber" : (E164PhoneNumber)?,
+      "Disabled" : (Boolean)?
+    )
+
+    alias PutVoiceConnectorProxyResponse = NamedTuple(
+      "Proxy" : (Proxy)?
+    )
+
+    alias PutVoiceConnectorStreamingConfigurationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "StreamingConfiguration" : StreamingConfiguration
+    )
+
+    alias PutVoiceConnectorStreamingConfigurationResponse = NamedTuple(
+      "StreamingConfiguration" : (StreamingConfiguration)?
+    )
+
+    alias PutVoiceConnectorTerminationCredentialsRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "Credentials" : (CredentialList)?
+    )
+
+    alias PutVoiceConnectorTerminationRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "Termination" : Termination
+    )
+
+    alias PutVoiceConnectorTerminationResponse = NamedTuple(
+      "Termination" : (Termination)?
+    )
+
+    alias RedactChannelMessageRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MessageId" : MessageId
+    )
+
+    alias RedactChannelMessageResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "MessageId" : (MessageId)?
+    )
+
+    alias RedactConversationMessageRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "ConversationId" : NonEmptyString,
+      "MessageId" : NonEmptyString
+    )
+
+    alias RedactConversationMessageResponse = NamedTuple(
+      
+    )
+
+    alias RedactRoomMessageRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "MessageId" : NonEmptyString
+    )
+
+    alias RedactRoomMessageResponse = NamedTuple(
+      
+    )
+
+    alias RegenerateSecurityTokenRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "BotId" : NonEmptyString
+    )
+
+    alias RegenerateSecurityTokenResponse = NamedTuple(
+      "Bot" : (Bot)?
+    )
+
+    alias RegistrationStatus = String
+
+    alias ResetPersonalPINRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserId" : NonEmptyString
+    )
+
+    alias ResetPersonalPINResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias ResourceLimitExceededException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias ResourceName = String
+
+    alias RestorePhoneNumberRequest = NamedTuple(
+      "PhoneNumberId" : NonEmptyString
+    )
+
+    alias RestorePhoneNumberResponse = NamedTuple(
+      "PhoneNumber" : (PhoneNumber)?
+    )
+
+    alias ResultMax = Int32
+
+    alias RetentionDays = Int32
+
+    alias RetentionSettings = NamedTuple(
+      "RoomRetentionSettings" : (RoomRetentionSettings)?,
+      "ConversationRetentionSettings" : (ConversationRetentionSettings)?
+    )
+
+    alias Room = NamedTuple(
+      "RoomId" : (NonEmptyString)?,
+      "Name" : (SensitiveString)?,
+      "AccountId" : (NonEmptyString)?,
+      "CreatedBy" : (NonEmptyString)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias RoomList = Array(Room)
+
+    alias RoomMembership = NamedTuple(
+      "RoomId" : (NonEmptyString)?,
+      "Member" : (Member)?,
+      "Role" : (RoomMembershipRole)?,
+      "InvitedBy" : (NonEmptyString)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias RoomMembershipList = Array(RoomMembership)
+
+    alias RoomMembershipRole = String
+
+    alias RoomRetentionSettings = NamedTuple(
+      "RetentionDays" : (RetentionDays)?
+    )
+
+    alias SearchAvailablePhoneNumbersRequest = NamedTuple(
+      "AreaCode" : (String)?,
+      "City" : (String)?,
+      "Country" : (String)?,
+      "State" : (String)?,
+      "TollFreePrefix" : (TollFreePrefix)?,
+      "MaxResults" : (PhoneNumberMaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias SearchAvailablePhoneNumbersResponse = NamedTuple(
+      "E164PhoneNumbers" : (E164PhoneNumberList)?
+    )
+
+    alias SendChannelMessageRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "Content" : NonEmptyContent,
+      "Type" : ChannelMessageType,
+      "Persistence" : ChannelMessagePersistenceType,
+      "Metadata" : (Metadata)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias SendChannelMessageResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "MessageId" : (MessageId)?
+    )
+
+    alias SensitiveString = String
+
+    alias SensitiveStringList = Array(SensitiveString)
+
+    alias ServiceFailureException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias SigninDelegateGroup = NamedTuple(
+      "GroupName" : (NonEmptyString)?
+    )
+
+    alias SigninDelegateGroupList = Array(SigninDelegateGroup)
+
+    alias SipApplicationPriority = Int32
+
+    alias SipMediaApplication = NamedTuple(
+      "SipMediaApplicationId" : (NonEmptyString)?,
+      "AwsRegion" : (String)?,
+      "Name" : (SipMediaApplicationName)?,
+      "Endpoints" : (SipMediaApplicationEndpointList)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias SipMediaApplicationCall = NamedTuple(
+      "TransactionId" : (GuidString)?
+    )
+
+    alias SipMediaApplicationEndpoint = NamedTuple(
+      "LambdaArn" : (FunctionArn)?
+    )
+
+    alias SipMediaApplicationEndpointList = Array(SipMediaApplicationEndpoint)
+
+    alias SipMediaApplicationList = Array(SipMediaApplication)
+
+    alias SipMediaApplicationLoggingConfiguration = NamedTuple(
+      "EnableSipMediaApplicationMessageLogs" : (Boolean)?
+    )
+
+    alias SipMediaApplicationName = String
+
+    alias SipRule = NamedTuple(
+      "SipRuleId" : (NonEmptyString)?,
+      "Name" : (SipRuleName)?,
+      "Disabled" : (Boolean)?,
+      "TriggerType" : (SipRuleTriggerType)?,
+      "TriggerValue" : (NonEmptyString)?,
+      "TargetApplications" : (SipRuleTargetApplicationList)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias SipRuleList = Array(SipRule)
+
+    alias SipRuleName = String
+
+    alias SipRuleTargetApplication = NamedTuple(
+      "SipMediaApplicationId" : (NonEmptyString)?,
+      "Priority" : (SipApplicationPriority)?,
+      "AwsRegion" : (String)?
+    )
+
+    alias SipRuleTargetApplicationList = Array(SipRuleTargetApplication)
+
+    alias SipRuleTriggerType = String
+
+    alias SortOrder = String
+
+    alias StreamingConfiguration = NamedTuple(
+      "DataRetentionInHours" : DataRetentionInHours,
+      "Disabled" : (Boolean)?,
+      "StreamingNotificationTargets" : (StreamingNotificationTargetList)?
+    )
+
+    alias StreamingNotificationTarget = NamedTuple(
+      "NotificationTarget" : NotificationTarget
+    )
+
+    alias StreamingNotificationTargetList = Array(StreamingNotificationTarget)
+
+    alias String = String
+
+    alias String128 = String
+
+    alias StringList = Array(String)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagAttendeeRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "AttendeeId" : GuidString,
+      "Tags" : AttendeeTagList
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagMeetingRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "Tags" : MeetingTagList
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : Arn,
+      "Tags" : TagList
+    )
+
+    alias TagValue = String
+
+    alias TelephonySettings = NamedTuple(
+      "InboundCalling" : Boolean,
+      "OutboundCalling" : Boolean,
+      "SMS" : Boolean
+    )
+
+    alias Termination = NamedTuple(
+      "CpsLimit" : (CpsLimit)?,
+      "DefaultPhoneNumber" : (E164PhoneNumber)?,
+      "CallingRegions" : (CallingRegionList)?,
+      "CidrAllowedList" : (StringList)?,
+      "Disabled" : (Boolean)?
+    )
+
+    alias TerminationHealth = NamedTuple(
+      "Timestamp" : (Iso8601Timestamp)?,
+      "Source" : (String)?
+    )
+
+    alias ThrottledClientException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TollFreePrefix = String
+
+    alias UnauthorizedClientException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias UnprocessableEntityException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias UntagAttendeeRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "AttendeeId" : GuidString,
+      "TagKeys" : AttendeeTagKeyList
+    )
+
+    alias UntagMeetingRequest = NamedTuple(
+      "MeetingId" : GuidString,
+      "TagKeys" : MeetingTagKeyList
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UpdateAccountRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "Name" : (AccountName)?
+    )
+
+    alias UpdateAccountResponse = NamedTuple(
+      "Account" : (Account)?
+    )
+
+    alias UpdateAccountSettingsRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "AccountSettings" : AccountSettings
+    )
+
+    alias UpdateAccountSettingsResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAppInstanceRequest = NamedTuple(
+      "AppInstanceArn" : ChimeArn,
+      "Name" : NonEmptyResourceName,
+      "Metadata" : (Metadata)?
+    )
+
+    alias UpdateAppInstanceResponse = NamedTuple(
+      "AppInstanceArn" : (ChimeArn)?
+    )
+
+    alias UpdateAppInstanceUserRequest = NamedTuple(
+      "AppInstanceUserArn" : ChimeArn,
+      "Name" : UserName,
+      "Metadata" : (Metadata)?
+    )
+
+    alias UpdateAppInstanceUserResponse = NamedTuple(
+      "AppInstanceUserArn" : (ChimeArn)?
+    )
+
+    alias UpdateBotRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "BotId" : NonEmptyString,
+      "Disabled" : (NullableBoolean)?
+    )
+
+    alias UpdateBotResponse = NamedTuple(
+      "Bot" : (Bot)?
+    )
+
+    alias UpdateChannelMessageRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "MessageId" : MessageId,
+      "Content" : (Content)?,
+      "Metadata" : (Metadata)?
+    )
+
+    alias UpdateChannelMessageResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?,
+      "MessageId" : (MessageId)?
+    )
+
+    alias UpdateChannelReadMarkerRequest = NamedTuple(
+      "ChannelArn" : ChimeArn
+    )
+
+    alias UpdateChannelReadMarkerResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?
+    )
+
+    alias UpdateChannelRequest = NamedTuple(
+      "ChannelArn" : ChimeArn,
+      "Name" : NonEmptyResourceName,
+      "Mode" : ChannelMode,
+      "Metadata" : (Metadata)?
+    )
+
+    alias UpdateChannelResponse = NamedTuple(
+      "ChannelArn" : (ChimeArn)?
+    )
+
+    alias UpdateGlobalSettingsRequest = NamedTuple(
+      "BusinessCalling" : BusinessCallingSettings,
+      "VoiceConnector" : VoiceConnectorSettings
+    )
+
+    alias UpdatePhoneNumberRequest = NamedTuple(
+      "PhoneNumberId" : String,
+      "ProductType" : (PhoneNumberProductType)?,
+      "CallingName" : (CallingName)?
+    )
+
+    alias UpdatePhoneNumberRequestItem = NamedTuple(
+      "PhoneNumberId" : NonEmptyString,
+      "ProductType" : (PhoneNumberProductType)?,
+      "CallingName" : (CallingName)?
+    )
+
+    alias UpdatePhoneNumberRequestItemList = Array(UpdatePhoneNumberRequestItem)
+
+    alias UpdatePhoneNumberResponse = NamedTuple(
+      "PhoneNumber" : (PhoneNumber)?
+    )
+
+    alias UpdatePhoneNumberSettingsRequest = NamedTuple(
+      "CallingName" : CallingName
+    )
+
+    alias UpdateProxySessionRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString128,
+      "ProxySessionId" : NonEmptyString128,
+      "Capabilities" : CapabilityList,
+      "ExpiryMinutes" : (PositiveInteger)?
+    )
+
+    alias UpdateProxySessionResponse = NamedTuple(
+      "ProxySession" : (ProxySession)?
+    )
+
+    alias UpdateRoomMembershipRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "MemberId" : NonEmptyString,
+      "Role" : (RoomMembershipRole)?
+    )
+
+    alias UpdateRoomMembershipResponse = NamedTuple(
+      "RoomMembership" : (RoomMembership)?
+    )
+
+    alias UpdateRoomRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "RoomId" : NonEmptyString,
+      "Name" : (SensitiveString)?
+    )
+
+    alias UpdateRoomResponse = NamedTuple(
+      "Room" : (Room)?
+    )
+
+    alias UpdateSipMediaApplicationRequest = NamedTuple(
+      "SipMediaApplicationId" : NonEmptyString,
+      "Name" : (SipMediaApplicationName)?,
+      "Endpoints" : (SipMediaApplicationEndpointList)?
+    )
+
+    alias UpdateSipMediaApplicationResponse = NamedTuple(
+      "SipMediaApplication" : (SipMediaApplication)?
+    )
+
+    alias UpdateSipRuleRequest = NamedTuple(
+      "SipRuleId" : NonEmptyString,
+      "Name" : SipRuleName,
+      "Disabled" : (NullableBoolean)?,
+      "TargetApplications" : (SipRuleTargetApplicationList)?
+    )
+
+    alias UpdateSipRuleResponse = NamedTuple(
+      "SipRule" : (SipRule)?
+    )
+
+    alias UpdateUserRequest = NamedTuple(
+      "AccountId" : NonEmptyString,
+      "UserId" : NonEmptyString,
+      "LicenseType" : (License)?,
+      "UserType" : (UserType)?,
+      "AlexaForBusinessMetadata" : (AlexaForBusinessMetadata)?
+    )
+
+    alias UpdateUserRequestItem = NamedTuple(
+      "UserId" : NonEmptyString,
+      "LicenseType" : (License)?,
+      "UserType" : (UserType)?,
+      "AlexaForBusinessMetadata" : (AlexaForBusinessMetadata)?
+    )
+
+    alias UpdateUserRequestItemList = Array(UpdateUserRequestItem)
+
+    alias UpdateUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias UpdateUserSettingsRequest = NamedTuple(
+      "AccountId" : String,
+      "UserId" : String,
+      "UserSettings" : UserSettings
+    )
+
+    alias UpdateVoiceConnectorGroupRequest = NamedTuple(
+      "VoiceConnectorGroupId" : NonEmptyString,
+      "Name" : VoiceConnectorGroupName,
+      "VoiceConnectorItems" : VoiceConnectorItemList
+    )
+
+    alias UpdateVoiceConnectorGroupResponse = NamedTuple(
+      "VoiceConnectorGroup" : (VoiceConnectorGroup)?
+    )
+
+    alias UpdateVoiceConnectorRequest = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "Name" : VoiceConnectorName,
+      "RequireEncryption" : Boolean
+    )
+
+    alias UpdateVoiceConnectorResponse = NamedTuple(
+      "VoiceConnector" : (VoiceConnector)?
+    )
+
+    alias UriType = String
+
+    alias UrlType = String
+
+    alias User = NamedTuple(
+      "UserId" : String,
+      "AccountId" : (String)?,
+      "PrimaryEmail" : (EmailAddress)?,
+      "PrimaryProvisionedNumber" : (SensitiveString)?,
+      "DisplayName" : (SensitiveString)?,
+      "LicenseType" : (License)?,
+      "UserType" : (UserType)?,
+      "UserRegistrationStatus" : (RegistrationStatus)?,
+      "UserInvitationStatus" : (InviteStatus)?,
+      "RegisteredOn" : (Iso8601Timestamp)?,
+      "InvitedOn" : (Iso8601Timestamp)?,
+      "AlexaForBusinessMetadata" : (AlexaForBusinessMetadata)?,
+      "PersonalPIN" : (String)?
+    )
+
+    alias UserEmailList = Array(EmailAddress)
+
+    alias UserError = NamedTuple(
+      "UserId" : (NonEmptyString)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (String)?
+    )
+
+    alias UserErrorList = Array(UserError)
+
+    alias UserId = String
+
+    alias UserIdList = Array(NonEmptyString)
+
+    alias UserList = Array(User)
+
+    alias UserName = String
+
+    alias UserSettings = NamedTuple(
+      "Telephony" : TelephonySettings
+    )
+
+    alias UserType = String
+
+    alias VoiceConnector = NamedTuple(
+      "VoiceConnectorId" : (NonEmptyString)?,
+      "AwsRegion" : (VoiceConnectorAwsRegion)?,
+      "Name" : (VoiceConnectorName)?,
+      "OutboundHostName" : (String)?,
+      "RequireEncryption" : (Boolean)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias VoiceConnectorAwsRegion = String
+
+    alias VoiceConnectorGroup = NamedTuple(
+      "VoiceConnectorGroupId" : (NonEmptyString)?,
+      "Name" : (VoiceConnectorGroupName)?,
+      "VoiceConnectorItems" : (VoiceConnectorItemList)?,
+      "CreatedTimestamp" : (Iso8601Timestamp)?,
+      "UpdatedTimestamp" : (Iso8601Timestamp)?
+    )
+
+    alias VoiceConnectorGroupList = Array(VoiceConnectorGroup)
+
+    alias VoiceConnectorGroupName = String
+
+    alias VoiceConnectorItem = NamedTuple(
+      "VoiceConnectorId" : NonEmptyString,
+      "Priority" : VoiceConnectorItemPriority
+    )
+
+    alias VoiceConnectorItemList = Array(VoiceConnectorItem)
+
+    alias VoiceConnectorItemPriority = Int32
+
+    alias VoiceConnectorList = Array(VoiceConnector)
+
+    alias VoiceConnectorName = String
+
+    alias VoiceConnectorSettings = NamedTuple(
+      "CdrBucket" : (String)?
+    )
   end
 end

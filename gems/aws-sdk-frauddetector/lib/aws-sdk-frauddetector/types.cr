@@ -3840,5 +3840,1008 @@ module Aws::FraudDetector
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : string
+    )
+
+    alias BatchCreateVariableError = NamedTuple(
+      "name" : (string)?,
+      "code" : (integer)?,
+      "message" : (string)?
+    )
+
+    alias BatchCreateVariableErrorList = Array(BatchCreateVariableError)
+
+    alias BatchCreateVariableRequest = NamedTuple(
+      "variableEntries" : VariableEntryList,
+      "tags" : (tagList)?
+    )
+
+    alias BatchCreateVariableResult = NamedTuple(
+      "errors" : (BatchCreateVariableErrorList)?
+    )
+
+    alias BatchGetVariableError = NamedTuple(
+      "name" : (string)?,
+      "code" : (integer)?,
+      "message" : (string)?
+    )
+
+    alias BatchGetVariableErrorList = Array(BatchGetVariableError)
+
+    alias BatchGetVariableRequest = NamedTuple(
+      "names" : NameList
+    )
+
+    alias BatchGetVariableResult = NamedTuple(
+      "variables" : (VariableList)?,
+      "errors" : (BatchGetVariableErrorList)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "message" : string
+    )
+
+    alias CreateDetectorVersionRequest = NamedTuple(
+      "detectorId" : identifier,
+      "description" : (description)?,
+      "externalModelEndpoints" : (ListOfStrings)?,
+      "rules" : RuleList,
+      "modelVersions" : (ListOfModelVersions)?,
+      "ruleExecutionMode" : (RuleExecutionMode)?,
+      "tags" : (tagList)?
+    )
+
+    alias CreateDetectorVersionResult = NamedTuple(
+      "detectorId" : (identifier)?,
+      "detectorVersionId" : (nonEmptyString)?,
+      "status" : (DetectorVersionStatus)?
+    )
+
+    alias CreateModelRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "description" : (description)?,
+      "eventTypeName" : string,
+      "tags" : (tagList)?
+    )
+
+    alias CreateModelResult = NamedTuple(
+      
+    )
+
+    alias CreateModelVersionRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "trainingDataSource" : TrainingDataSourceEnum,
+      "trainingDataSchema" : TrainingDataSchema,
+      "externalEventsDetail" : (ExternalEventsDetail)?,
+      "tags" : (tagList)?
+    )
+
+    alias CreateModelVersionResult = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelType" : (ModelTypeEnum)?,
+      "modelVersionNumber" : (nonEmptyString)?,
+      "status" : (string)?
+    )
+
+    alias CreateRuleRequest = NamedTuple(
+      "ruleId" : identifier,
+      "detectorId" : identifier,
+      "description" : (description)?,
+      "expression" : ruleExpression,
+      "language" : Language,
+      "outcomes" : NonEmptyListOfStrings,
+      "tags" : (tagList)?
+    )
+
+    alias CreateRuleResult = NamedTuple(
+      "rule" : (Rule)?
+    )
+
+    alias CreateVariableRequest = NamedTuple(
+      "name" : string,
+      "dataType" : DataType,
+      "dataSource" : DataSource,
+      "defaultValue" : string,
+      "description" : (string)?,
+      "variableType" : (string)?,
+      "tags" : (tagList)?
+    )
+
+    alias CreateVariableResult = NamedTuple(
+      
+    )
+
+    alias CsvIndexToVariableMap = Hash(string,string)
+
+    alias DataSource = String
+
+    alias DataType = String
+
+    alias DataValidationMetrics = NamedTuple(
+      "fileLevelMessages" : (fileValidationMessageList)?,
+      "fieldLevelMessages" : (fieldValidationMessageList)?
+    )
+
+    alias DeleteDetectorRequest = NamedTuple(
+      "detectorId" : identifier
+    )
+
+    alias DeleteDetectorResult = NamedTuple(
+      
+    )
+
+    alias DeleteDetectorVersionRequest = NamedTuple(
+      "detectorId" : identifier,
+      "detectorVersionId" : wholeNumberVersionString
+    )
+
+    alias DeleteDetectorVersionResult = NamedTuple(
+      
+    )
+
+    alias DeleteEntityTypeRequest = NamedTuple(
+      "name" : identifier
+    )
+
+    alias DeleteEntityTypeResult = NamedTuple(
+      
+    )
+
+    alias DeleteEventRequest = NamedTuple(
+      "eventId" : identifier,
+      "eventTypeName" : identifier
+    )
+
+    alias DeleteEventResult = NamedTuple(
+      
+    )
+
+    alias DeleteEventTypeRequest = NamedTuple(
+      "name" : identifier
+    )
+
+    alias DeleteEventTypeResult = NamedTuple(
+      
+    )
+
+    alias DeleteExternalModelRequest = NamedTuple(
+      "modelEndpoint" : sageMakerEndpointIdentifier
+    )
+
+    alias DeleteExternalModelResult = NamedTuple(
+      
+    )
+
+    alias DeleteLabelRequest = NamedTuple(
+      "name" : identifier
+    )
+
+    alias DeleteLabelResult = NamedTuple(
+      
+    )
+
+    alias DeleteModelRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum
+    )
+
+    alias DeleteModelResult = NamedTuple(
+      
+    )
+
+    alias DeleteModelVersionRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "modelVersionNumber" : floatVersionString
+    )
+
+    alias DeleteModelVersionResult = NamedTuple(
+      
+    )
+
+    alias DeleteOutcomeRequest = NamedTuple(
+      "name" : identifier
+    )
+
+    alias DeleteOutcomeResult = NamedTuple(
+      
+    )
+
+    alias DeleteRuleRequest = NamedTuple(
+      "rule" : Rule
+    )
+
+    alias DeleteRuleResult = NamedTuple(
+      
+    )
+
+    alias DeleteVariableRequest = NamedTuple(
+      "name" : string
+    )
+
+    alias DeleteVariableResult = NamedTuple(
+      
+    )
+
+    alias DescribeDetectorRequest = NamedTuple(
+      "detectorId" : identifier,
+      "nextToken" : (string)?,
+      "maxResults" : (DetectorVersionMaxResults)?
+    )
+
+    alias DescribeDetectorResult = NamedTuple(
+      "detectorId" : (identifier)?,
+      "detectorVersionSummaries" : (DetectorVersionSummaryList)?,
+      "nextToken" : (string)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias DescribeModelVersionsRequest = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelVersionNumber" : (floatVersionString)?,
+      "modelType" : (ModelTypeEnum)?,
+      "nextToken" : (string)?,
+      "maxResults" : (modelsMaxPageSize)?
+    )
+
+    alias DescribeModelVersionsResult = NamedTuple(
+      "modelVersionDetails" : (modelVersionDetailList)?,
+      "nextToken" : (string)?
+    )
+
+    alias Detector = NamedTuple(
+      "detectorId" : (identifier)?,
+      "description" : (description)?,
+      "eventTypeName" : (identifier)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias DetectorList = Array(Detector)
+
+    alias DetectorVersionMaxResults = Int32
+
+    alias DetectorVersionStatus = String
+
+    alias DetectorVersionSummary = NamedTuple(
+      "detectorVersionId" : (nonEmptyString)?,
+      "status" : (DetectorVersionStatus)?,
+      "description" : (description)?,
+      "lastUpdatedTime" : (time)?
+    )
+
+    alias DetectorVersionSummaryList = Array(DetectorVersionSummary)
+
+    alias DetectorsMaxResults = Int32
+
+    alias Entity = NamedTuple(
+      "entityType" : string,
+      "entityId" : identifier
+    )
+
+    alias EntityType = NamedTuple(
+      "name" : (string)?,
+      "description" : (description)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias EventType = NamedTuple(
+      "name" : (string)?,
+      "description" : (description)?,
+      "eventVariables" : (ListOfStrings)?,
+      "labels" : (ListOfStrings)?,
+      "entityTypes" : (NonEmptyListOfStrings)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias EventVariableMap = Hash(variableName,variableValue)
+
+    alias ExternalEventsDetail = NamedTuple(
+      "dataLocation" : s3BucketLocation,
+      "dataAccessRoleArn" : iamRoleArn
+    )
+
+    alias ExternalModel = NamedTuple(
+      "modelEndpoint" : (string)?,
+      "modelSource" : (ModelSource)?,
+      "invokeModelEndpointRoleArn" : (string)?,
+      "inputConfiguration" : (ModelInputConfiguration)?,
+      "outputConfiguration" : (ModelOutputConfiguration)?,
+      "modelEndpointStatus" : (ModelEndpointStatus)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias ExternalModelEndpointDataBlobMap = Hash(string,ModelEndpointDataBlob)
+
+    alias ExternalModelList = Array(ExternalModel)
+
+    alias ExternalModelsMaxResults = Int32
+
+    alias FieldValidationMessage = NamedTuple(
+      "fieldName" : (string)?,
+      "identifier" : (string)?,
+      "title" : (string)?,
+      "content" : (string)?,
+      "type" : (string)?
+    )
+
+    alias FileValidationMessage = NamedTuple(
+      "title" : (string)?,
+      "content" : (string)?,
+      "type" : (string)?
+    )
+
+    alias GetDetectorVersionRequest = NamedTuple(
+      "detectorId" : identifier,
+      "detectorVersionId" : wholeNumberVersionString
+    )
+
+    alias GetDetectorVersionResult = NamedTuple(
+      "detectorId" : (identifier)?,
+      "detectorVersionId" : (wholeNumberVersionString)?,
+      "description" : (description)?,
+      "externalModelEndpoints" : (ListOfStrings)?,
+      "modelVersions" : (ListOfModelVersions)?,
+      "rules" : (RuleList)?,
+      "status" : (DetectorVersionStatus)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "ruleExecutionMode" : (RuleExecutionMode)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias GetDetectorsRequest = NamedTuple(
+      "detectorId" : (identifier)?,
+      "nextToken" : (string)?,
+      "maxResults" : (DetectorsMaxResults)?
+    )
+
+    alias GetDetectorsResult = NamedTuple(
+      "detectors" : (DetectorList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetEntityTypesRequest = NamedTuple(
+      "name" : (identifier)?,
+      "nextToken" : (string)?,
+      "maxResults" : (entityTypesMaxResults)?
+    )
+
+    alias GetEntityTypesResult = NamedTuple(
+      "entityTypes" : (entityTypeList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetEventPredictionRequest = NamedTuple(
+      "detectorId" : string,
+      "detectorVersionId" : (wholeNumberVersionString)?,
+      "eventId" : string,
+      "eventTypeName" : string,
+      "entities" : listOfEntities,
+      "eventTimestamp" : string,
+      "eventVariables" : EventVariableMap,
+      "externalModelEndpointDataBlobs" : (ExternalModelEndpointDataBlobMap)?
+    )
+
+    alias GetEventPredictionResult = NamedTuple(
+      "modelScores" : (ListOfModelScores)?,
+      "ruleResults" : (ListOfRuleResults)?
+    )
+
+    alias GetEventTypesRequest = NamedTuple(
+      "name" : (identifier)?,
+      "nextToken" : (string)?,
+      "maxResults" : (eventTypesMaxResults)?
+    )
+
+    alias GetEventTypesResult = NamedTuple(
+      "eventTypes" : (eventTypeList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetExternalModelsRequest = NamedTuple(
+      "modelEndpoint" : (string)?,
+      "nextToken" : (string)?,
+      "maxResults" : (ExternalModelsMaxResults)?
+    )
+
+    alias GetExternalModelsResult = NamedTuple(
+      "externalModels" : (ExternalModelList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetKMSEncryptionKeyResult = NamedTuple(
+      "kmsKey" : (KMSKey)?
+    )
+
+    alias GetLabelsRequest = NamedTuple(
+      "name" : (identifier)?,
+      "nextToken" : (string)?,
+      "maxResults" : (labelsMaxResults)?
+    )
+
+    alias GetLabelsResult = NamedTuple(
+      "labels" : (labelList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetModelVersionRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "modelVersionNumber" : floatVersionString
+    )
+
+    alias GetModelVersionResult = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelType" : (ModelTypeEnum)?,
+      "modelVersionNumber" : (floatVersionString)?,
+      "trainingDataSource" : (TrainingDataSourceEnum)?,
+      "trainingDataSchema" : (TrainingDataSchema)?,
+      "externalEventsDetail" : (ExternalEventsDetail)?,
+      "status" : (string)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias GetModelsRequest = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelType" : (ModelTypeEnum)?,
+      "nextToken" : (string)?,
+      "maxResults" : (modelsMaxPageSize)?
+    )
+
+    alias GetModelsResult = NamedTuple(
+      "nextToken" : (string)?,
+      "models" : (modelList)?
+    )
+
+    alias GetOutcomesRequest = NamedTuple(
+      "name" : (identifier)?,
+      "nextToken" : (string)?,
+      "maxResults" : (OutcomesMaxResults)?
+    )
+
+    alias GetOutcomesResult = NamedTuple(
+      "outcomes" : (OutcomeList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetRulesRequest = NamedTuple(
+      "ruleId" : (identifier)?,
+      "detectorId" : identifier,
+      "ruleVersion" : (wholeNumberVersionString)?,
+      "nextToken" : (string)?,
+      "maxResults" : (RulesMaxResults)?
+    )
+
+    alias GetRulesResult = NamedTuple(
+      "ruleDetails" : (RuleDetailList)?,
+      "nextToken" : (string)?
+    )
+
+    alias GetVariablesRequest = NamedTuple(
+      "name" : (string)?,
+      "nextToken" : (string)?,
+      "maxResults" : (VariablesMaxResults)?
+    )
+
+    alias GetVariablesResult = NamedTuple(
+      "variables" : (VariableList)?,
+      "nextToken" : (string)?
+    )
+
+    alias InternalServerException = NamedTuple(
+      "message" : string
+    )
+
+    alias JsonKeyToVariableMap = Hash(string,string)
+
+    alias KMSKey = NamedTuple(
+      "kmsEncryptionKeyArn" : (KmsEncryptionKeyArn)?
+    )
+
+    alias KmsEncryptionKeyArn = String
+
+    alias Label = NamedTuple(
+      "name" : (string)?,
+      "description" : (description)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias LabelSchema = NamedTuple(
+      "labelMapper" : labelMapper
+    )
+
+    alias Language = String
+
+    alias ListOfModelScores = Array(ModelScores)
+
+    alias ListOfModelVersions = Array(ModelVersion)
+
+    alias ListOfRuleResults = Array(RuleResult)
+
+    alias ListOfStrings = Array(string)
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceARN" : fraudDetectorArn,
+      "nextToken" : (string)?,
+      "maxResults" : (TagsMaxResults)?
+    )
+
+    alias ListTagsForResourceResult = NamedTuple(
+      "tags" : (tagList)?,
+      "nextToken" : (string)?
+    )
+
+    alias MetricDataPoint = NamedTuple(
+      "fpr" : (float)?,
+      "precision" : (float)?,
+      "tpr" : (float)?,
+      "threshold" : (float)?
+    )
+
+    alias Model = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelType" : (ModelTypeEnum)?,
+      "description" : (description)?,
+      "eventTypeName" : (string)?,
+      "createdTime" : (time)?,
+      "lastUpdatedTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias ModelEndpointDataBlob = NamedTuple(
+      "byteBuffer" : (blob)?,
+      "contentType" : (contentType)?
+    )
+
+    alias ModelEndpointStatus = String
+
+    alias ModelInputConfiguration = NamedTuple(
+      "eventTypeName" : (identifier)?,
+      "format" : (ModelInputDataFormat)?,
+      "useEventVariables" : UseEventVariables,
+      "jsonInputTemplate" : (string)?,
+      "csvInputTemplate" : (string)?
+    )
+
+    alias ModelInputDataFormat = String
+
+    alias ModelOutputConfiguration = NamedTuple(
+      "format" : ModelOutputDataFormat,
+      "jsonKeyToVariableMap" : (JsonKeyToVariableMap)?,
+      "csvIndexToVariableMap" : (CsvIndexToVariableMap)?
+    )
+
+    alias ModelOutputDataFormat = String
+
+    alias ModelPredictionMap = Hash(string,float)
+
+    alias ModelScores = NamedTuple(
+      "modelVersion" : (ModelVersion)?,
+      "scores" : (ModelPredictionMap)?
+    )
+
+    alias ModelSource = String
+
+    alias ModelTypeEnum = String
+
+    alias ModelVersion = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "modelVersionNumber" : nonEmptyString,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias ModelVersionDetail = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelType" : (ModelTypeEnum)?,
+      "modelVersionNumber" : (floatVersionString)?,
+      "status" : (string)?,
+      "trainingDataSource" : (TrainingDataSourceEnum)?,
+      "trainingDataSchema" : (TrainingDataSchema)?,
+      "externalEventsDetail" : (ExternalEventsDetail)?,
+      "trainingResult" : (TrainingResult)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias ModelVersionStatus = String
+
+    alias NameList = Array(string)
+
+    alias NonEmptyListOfStrings = Array(string)
+
+    alias Outcome = NamedTuple(
+      "name" : (identifier)?,
+      "description" : (description)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias OutcomeList = Array(Outcome)
+
+    alias OutcomesMaxResults = Int32
+
+    alias PutDetectorRequest = NamedTuple(
+      "detectorId" : identifier,
+      "description" : (description)?,
+      "eventTypeName" : identifier,
+      "tags" : (tagList)?
+    )
+
+    alias PutDetectorResult = NamedTuple(
+      
+    )
+
+    alias PutEntityTypeRequest = NamedTuple(
+      "name" : identifier,
+      "description" : (description)?,
+      "tags" : (tagList)?
+    )
+
+    alias PutEntityTypeResult = NamedTuple(
+      
+    )
+
+    alias PutEventTypeRequest = NamedTuple(
+      "name" : identifier,
+      "description" : (description)?,
+      "eventVariables" : NonEmptyListOfStrings,
+      "labels" : (ListOfStrings)?,
+      "entityTypes" : NonEmptyListOfStrings,
+      "tags" : (tagList)?
+    )
+
+    alias PutEventTypeResult = NamedTuple(
+      
+    )
+
+    alias PutExternalModelRequest = NamedTuple(
+      "modelEndpoint" : sageMakerEndpointIdentifier,
+      "modelSource" : ModelSource,
+      "invokeModelEndpointRoleArn" : string,
+      "inputConfiguration" : ModelInputConfiguration,
+      "outputConfiguration" : ModelOutputConfiguration,
+      "modelEndpointStatus" : ModelEndpointStatus,
+      "tags" : (tagList)?
+    )
+
+    alias PutExternalModelResult = NamedTuple(
+      
+    )
+
+    alias PutKMSEncryptionKeyRequest = NamedTuple(
+      "kmsEncryptionKeyArn" : KmsEncryptionKeyArn
+    )
+
+    alias PutKMSEncryptionKeyResult = NamedTuple(
+      
+    )
+
+    alias PutLabelRequest = NamedTuple(
+      "name" : identifier,
+      "description" : (description)?,
+      "tags" : (tagList)?
+    )
+
+    alias PutLabelResult = NamedTuple(
+      
+    )
+
+    alias PutOutcomeRequest = NamedTuple(
+      "name" : identifier,
+      "description" : (description)?,
+      "tags" : (tagList)?
+    )
+
+    alias PutOutcomeResult = NamedTuple(
+      
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : string
+    )
+
+    alias Rule = NamedTuple(
+      "detectorId" : identifier,
+      "ruleId" : identifier,
+      "ruleVersion" : wholeNumberVersionString
+    )
+
+    alias RuleDetail = NamedTuple(
+      "ruleId" : (identifier)?,
+      "description" : (description)?,
+      "detectorId" : (identifier)?,
+      "ruleVersion" : (wholeNumberVersionString)?,
+      "expression" : (ruleExpression)?,
+      "language" : (Language)?,
+      "outcomes" : (NonEmptyListOfStrings)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias RuleDetailList = Array(RuleDetail)
+
+    alias RuleExecutionMode = String
+
+    alias RuleList = Array(Rule)
+
+    alias RuleResult = NamedTuple(
+      "ruleId" : (string)?,
+      "outcomes" : (ListOfStrings)?
+    )
+
+    alias RulesMaxResults = Int32
+
+    alias Tag = NamedTuple(
+      "key" : tagKey,
+      "value" : tagValue
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceARN" : fraudDetectorArn,
+      "tags" : tagList
+    )
+
+    alias TagResourceResult = NamedTuple(
+      
+    )
+
+    alias TagsMaxResults = Int32
+
+    alias ThrottlingException = NamedTuple(
+      "message" : string
+    )
+
+    alias TrainingDataSchema = NamedTuple(
+      "modelVariables" : ListOfStrings,
+      "labelSchema" : LabelSchema
+    )
+
+    alias TrainingDataSourceEnum = String
+
+    alias TrainingMetrics = NamedTuple(
+      "auc" : (float)?,
+      "metricDataPoints" : (metricDataPointsList)?
+    )
+
+    alias TrainingResult = NamedTuple(
+      "dataValidationMetrics" : (DataValidationMetrics)?,
+      "trainingMetrics" : (TrainingMetrics)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceARN" : fraudDetectorArn,
+      "tagKeys" : tagKeyList
+    )
+
+    alias UntagResourceResult = NamedTuple(
+      
+    )
+
+    alias UpdateDetectorVersionMetadataRequest = NamedTuple(
+      "detectorId" : identifier,
+      "detectorVersionId" : wholeNumberVersionString,
+      "description" : description
+    )
+
+    alias UpdateDetectorVersionMetadataResult = NamedTuple(
+      
+    )
+
+    alias UpdateDetectorVersionRequest = NamedTuple(
+      "detectorId" : identifier,
+      "detectorVersionId" : wholeNumberVersionString,
+      "externalModelEndpoints" : ListOfStrings,
+      "rules" : RuleList,
+      "description" : (description)?,
+      "modelVersions" : (ListOfModelVersions)?,
+      "ruleExecutionMode" : (RuleExecutionMode)?
+    )
+
+    alias UpdateDetectorVersionResult = NamedTuple(
+      
+    )
+
+    alias UpdateDetectorVersionStatusRequest = NamedTuple(
+      "detectorId" : identifier,
+      "detectorVersionId" : wholeNumberVersionString,
+      "status" : DetectorVersionStatus
+    )
+
+    alias UpdateDetectorVersionStatusResult = NamedTuple(
+      
+    )
+
+    alias UpdateModelRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "description" : (description)?
+    )
+
+    alias UpdateModelResult = NamedTuple(
+      
+    )
+
+    alias UpdateModelVersionRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "majorVersionNumber" : wholeNumberVersionString,
+      "externalEventsDetail" : (ExternalEventsDetail)?,
+      "tags" : (tagList)?
+    )
+
+    alias UpdateModelVersionResult = NamedTuple(
+      "modelId" : (modelIdentifier)?,
+      "modelType" : (ModelTypeEnum)?,
+      "modelVersionNumber" : (floatVersionString)?,
+      "status" : (string)?
+    )
+
+    alias UpdateModelVersionStatusRequest = NamedTuple(
+      "modelId" : modelIdentifier,
+      "modelType" : ModelTypeEnum,
+      "modelVersionNumber" : floatVersionString,
+      "status" : ModelVersionStatus
+    )
+
+    alias UpdateModelVersionStatusResult = NamedTuple(
+      
+    )
+
+    alias UpdateRuleMetadataRequest = NamedTuple(
+      "rule" : Rule,
+      "description" : description
+    )
+
+    alias UpdateRuleMetadataResult = NamedTuple(
+      
+    )
+
+    alias UpdateRuleVersionRequest = NamedTuple(
+      "rule" : Rule,
+      "description" : (description)?,
+      "expression" : ruleExpression,
+      "language" : Language,
+      "outcomes" : NonEmptyListOfStrings,
+      "tags" : (tagList)?
+    )
+
+    alias UpdateRuleVersionResult = NamedTuple(
+      "rule" : (Rule)?
+    )
+
+    alias UpdateVariableRequest = NamedTuple(
+      "name" : string,
+      "defaultValue" : (string)?,
+      "description" : (string)?,
+      "variableType" : (string)?
+    )
+
+    alias UpdateVariableResult = NamedTuple(
+      
+    )
+
+    alias UseEventVariables = Bool
+
+    alias ValidationException = NamedTuple(
+      "message" : string
+    )
+
+    alias Variable = NamedTuple(
+      "name" : (string)?,
+      "dataType" : (DataType)?,
+      "dataSource" : (DataSource)?,
+      "defaultValue" : (string)?,
+      "description" : (string)?,
+      "variableType" : (string)?,
+      "lastUpdatedTime" : (time)?,
+      "createdTime" : (time)?,
+      "arn" : (fraudDetectorArn)?
+    )
+
+    alias VariableEntry = NamedTuple(
+      "name" : (string)?,
+      "dataType" : (string)?,
+      "dataSource" : (string)?,
+      "defaultValue" : (string)?,
+      "description" : (string)?,
+      "variableType" : (string)?
+    )
+
+    alias VariableEntryList = Array(VariableEntry)
+
+    alias VariableList = Array(Variable)
+
+    alias VariablesMaxResults = Int32
+
+    alias blob = String | Array(UInt8) | IO
+
+    alias contentType = String
+
+    alias description = String
+
+    alias entityTypeList = Array(EntityType)
+
+    alias entityTypesMaxResults = Int32
+
+    alias eventTypeList = Array(EventType)
+
+    alias eventTypesMaxResults = Int32
+
+    alias fieldValidationMessageList = Array(FieldValidationMessage)
+
+    alias fileValidationMessageList = Array(FileValidationMessage)
+
+    alias float = Float32
+
+    alias floatVersionString = String
+
+    alias fraudDetectorArn = String
+
+    alias iamRoleArn = String
+
+    alias identifier = String
+
+    alias integer = Int32
+
+    alias labelList = Array(Label)
+
+    alias labelMapper = Hash(string,ListOfStrings)
+
+    alias labelsMaxResults = Int32
+
+    alias listOfEntities = Array(Entity)
+
+    alias metricDataPointsList = Array(MetricDataPoint)
+
+    alias modelIdentifier = String
+
+    alias modelList = Array(Model)
+
+    alias modelVersionDetailList = Array(ModelVersionDetail)
+
+    alias modelsMaxPageSize = Int32
+
+    alias nonEmptyString = String
+
+    alias ruleExpression = String
+
+    alias s3BucketLocation = String
+
+    alias sageMakerEndpointIdentifier = String
+
+    alias string = String
+
+    alias tagKey = String
+
+    alias tagKeyList = Array(tagKey)
+
+    alias tagList = Array(Tag)
+
+    alias tagValue = String
+
+    alias time = String
+
+    alias variableName = String
+
+    alias variableValue = String
+
+    alias wholeNumberVersionString = String
   end
 end

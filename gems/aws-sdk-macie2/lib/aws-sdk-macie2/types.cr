@@ -5469,5 +5469,1360 @@ module Aws::Macie2
       include Aws::Structure
     end
 
+    alias AcceptInvitationRequest = NamedTuple(
+      "invitationId" : __string,
+      "masterAccount" : __string
+    )
+
+    alias AcceptInvitationResponse = NamedTuple(
+      
+    )
+
+    alias AccessControlList = NamedTuple(
+      "allowsPublicReadAccess" : (__boolean)?,
+      "allowsPublicWriteAccess" : (__boolean)?
+    )
+
+    alias AccessDeniedException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias AccountDetail = NamedTuple(
+      "accountId" : __string,
+      "email" : __string
+    )
+
+    alias AccountLevelPermissions = NamedTuple(
+      "blockPublicAccess" : (BlockPublicAccess)?
+    )
+
+    alias AdminAccount = NamedTuple(
+      "accountId" : (__string)?,
+      "status" : (AdminStatus)?
+    )
+
+    alias AdminStatus = String
+
+    alias ApiCallDetails = NamedTuple(
+      "api" : (__string)?,
+      "apiServiceName" : (__string)?,
+      "firstSeen" : (__timestampIso8601)?,
+      "lastSeen" : (__timestampIso8601)?
+    )
+
+    alias AssumedRole = NamedTuple(
+      "accessKeyId" : (__string)?,
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "principalId" : (__string)?,
+      "sessionContext" : (SessionContext)?
+    )
+
+    alias AwsAccount = NamedTuple(
+      "accountId" : (__string)?,
+      "principalId" : (__string)?
+    )
+
+    alias AwsService = NamedTuple(
+      "invokedBy" : (__string)?
+    )
+
+    alias BatchGetCustomDataIdentifierSummary = NamedTuple(
+      "arn" : (__string)?,
+      "createdAt" : (__timestampIso8601)?,
+      "deleted" : (__boolean)?,
+      "description" : (__string)?,
+      "id" : (__string)?,
+      "name" : (__string)?
+    )
+
+    alias BatchGetCustomDataIdentifiersRequest = NamedTuple(
+      "ids" : (__listOf__string)?
+    )
+
+    alias BatchGetCustomDataIdentifiersResponse = NamedTuple(
+      "customDataIdentifiers" : (__listOfBatchGetCustomDataIdentifierSummary)?,
+      "notFoundIdentifierIds" : (__listOf__string)?
+    )
+
+    alias BlockPublicAccess = NamedTuple(
+      "blockPublicAcls" : (__boolean)?,
+      "blockPublicPolicy" : (__boolean)?,
+      "ignorePublicAcls" : (__boolean)?,
+      "restrictPublicBuckets" : (__boolean)?
+    )
+
+    alias BucketCountByEffectivePermission = NamedTuple(
+      "publiclyAccessible" : (__long)?,
+      "publiclyReadable" : (__long)?,
+      "publiclyWritable" : (__long)?,
+      "unknown" : (__long)?
+    )
+
+    alias BucketCountByEncryptionType = NamedTuple(
+      "kmsManaged" : (__long)?,
+      "s3Managed" : (__long)?,
+      "unencrypted" : (__long)?
+    )
+
+    alias BucketCountBySharedAccessType = NamedTuple(
+      "external" : (__long)?,
+      "internal" : (__long)?,
+      "notShared" : (__long)?,
+      "unknown" : (__long)?
+    )
+
+    alias BucketCriteria = Hash(__string,BucketCriteriaAdditionalProperties)
+
+    alias BucketCriteriaAdditionalProperties = NamedTuple(
+      "eq" : (__listOf__string)?,
+      "gt" : (__long)?,
+      "gte" : (__long)?,
+      "lt" : (__long)?,
+      "lte" : (__long)?,
+      "neq" : (__listOf__string)?,
+      "prefix" : (__string)?
+    )
+
+    alias BucketLevelPermissions = NamedTuple(
+      "accessControlList" : (AccessControlList)?,
+      "blockPublicAccess" : (BlockPublicAccess)?,
+      "bucketPolicy" : (BucketPolicy)?
+    )
+
+    alias BucketMetadata = NamedTuple(
+      "accountId" : (__string)?,
+      "bucketArn" : (__string)?,
+      "bucketCreatedAt" : (__timestampIso8601)?,
+      "bucketName" : (__string)?,
+      "classifiableObjectCount" : (__long)?,
+      "classifiableSizeInBytes" : (__long)?,
+      "jobDetails" : (JobDetails)?,
+      "lastUpdated" : (__timestampIso8601)?,
+      "objectCount" : (__long)?,
+      "objectCountByEncryptionType" : (ObjectCountByEncryptionType)?,
+      "publicAccess" : (BucketPublicAccess)?,
+      "region" : (__string)?,
+      "replicationDetails" : (ReplicationDetails)?,
+      "sharedAccess" : (SharedAccess)?,
+      "sizeInBytes" : (__long)?,
+      "sizeInBytesCompressed" : (__long)?,
+      "tags" : (__listOfKeyValuePair)?,
+      "unclassifiableObjectCount" : (ObjectLevelStatistics)?,
+      "unclassifiableObjectSizeInBytes" : (ObjectLevelStatistics)?,
+      "versioning" : (__boolean)?
+    )
+
+    alias BucketPermissionConfiguration = NamedTuple(
+      "accountLevelPermissions" : (AccountLevelPermissions)?,
+      "bucketLevelPermissions" : (BucketLevelPermissions)?
+    )
+
+    alias BucketPolicy = NamedTuple(
+      "allowsPublicReadAccess" : (__boolean)?,
+      "allowsPublicWriteAccess" : (__boolean)?
+    )
+
+    alias BucketPublicAccess = NamedTuple(
+      "effectivePermission" : (EffectivePermission)?,
+      "permissionConfiguration" : (BucketPermissionConfiguration)?
+    )
+
+    alias BucketSortCriteria = NamedTuple(
+      "attributeName" : (__string)?,
+      "orderBy" : (OrderBy)?
+    )
+
+    alias Cell = NamedTuple(
+      "cellReference" : (__string)?,
+      "column" : (__long)?,
+      "columnName" : (__string)?,
+      "row" : (__long)?
+    )
+
+    alias Cells = Array(Cell)
+
+    alias ClassificationDetails = NamedTuple(
+      "detailedResultsLocation" : (__string)?,
+      "jobArn" : (__string)?,
+      "jobId" : (__string)?,
+      "result" : (ClassificationResult)?
+    )
+
+    alias ClassificationExportConfiguration = NamedTuple(
+      "s3Destination" : (S3Destination)?
+    )
+
+    alias ClassificationResult = NamedTuple(
+      "additionalOccurrences" : (__boolean)?,
+      "customDataIdentifiers" : (CustomDataIdentifiers)?,
+      "mimeType" : (__string)?,
+      "sensitiveData" : (SensitiveData)?,
+      "sizeClassified" : (__long)?,
+      "status" : (ClassificationResultStatus)?
+    )
+
+    alias ClassificationResultStatus = NamedTuple(
+      "code" : (__string)?,
+      "reason" : (__string)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias CreateClassificationJobRequest = NamedTuple(
+      "clientToken" : __string,
+      "customDataIdentifierIds" : (__listOf__string)?,
+      "description" : (__string)?,
+      "initialRun" : (__boolean)?,
+      "jobType" : JobType,
+      "name" : __string,
+      "s3JobDefinition" : S3JobDefinition,
+      "samplingPercentage" : (__integer)?,
+      "scheduleFrequency" : (JobScheduleFrequency)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateClassificationJobResponse = NamedTuple(
+      "jobArn" : (__string)?,
+      "jobId" : (__string)?
+    )
+
+    alias CreateCustomDataIdentifierRequest = NamedTuple(
+      "clientToken" : (__string)?,
+      "description" : (__string)?,
+      "ignoreWords" : (__listOf__string)?,
+      "keywords" : (__listOf__string)?,
+      "maximumMatchDistance" : (__integer)?,
+      "name" : (__string)?,
+      "regex" : (__string)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateCustomDataIdentifierResponse = NamedTuple(
+      "customDataIdentifierId" : (__string)?
+    )
+
+    alias CreateFindingsFilterRequest = NamedTuple(
+      "action" : FindingsFilterAction,
+      "clientToken" : (__string)?,
+      "description" : (__string)?,
+      "findingCriteria" : FindingCriteria,
+      "name" : __string,
+      "position" : (__integer)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateFindingsFilterResponse = NamedTuple(
+      "arn" : (__string)?,
+      "id" : (__string)?
+    )
+
+    alias CreateInvitationsRequest = NamedTuple(
+      "accountIds" : __listOf__string,
+      "disableEmailNotification" : (__boolean)?,
+      "message" : (__string)?
+    )
+
+    alias CreateInvitationsResponse = NamedTuple(
+      "unprocessedAccounts" : (__listOfUnprocessedAccount)?
+    )
+
+    alias CreateMemberRequest = NamedTuple(
+      "account" : AccountDetail,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateMemberResponse = NamedTuple(
+      "arn" : (__string)?
+    )
+
+    alias CreateSampleFindingsRequest = NamedTuple(
+      "findingTypes" : (__listOfFindingType)?
+    )
+
+    alias CreateSampleFindingsResponse = NamedTuple(
+      
+    )
+
+    alias Criterion = Hash(__string,CriterionAdditionalProperties)
+
+    alias CriterionAdditionalProperties = NamedTuple(
+      "eq" : (__listOf__string)?,
+      "eqExactMatch" : (__listOf__string)?,
+      "gt" : (__long)?,
+      "gte" : (__long)?,
+      "lt" : (__long)?,
+      "lte" : (__long)?,
+      "neq" : (__listOf__string)?
+    )
+
+    alias Currency = String
+
+    alias CustomDataIdentifierSummary = NamedTuple(
+      "arn" : (__string)?,
+      "createdAt" : (__timestampIso8601)?,
+      "description" : (__string)?,
+      "id" : (__string)?,
+      "name" : (__string)?
+    )
+
+    alias CustomDataIdentifiers = NamedTuple(
+      "detections" : (CustomDetections)?,
+      "totalCount" : (__long)?
+    )
+
+    alias CustomDetection = NamedTuple(
+      "arn" : (__string)?,
+      "count" : (__long)?,
+      "name" : (__string)?,
+      "occurrences" : (Occurrences)?
+    )
+
+    alias CustomDetections = Array(CustomDetection)
+
+    alias DailySchedule = NamedTuple(
+      
+    )
+
+    alias DayOfWeek = String
+
+    alias DeclineInvitationsRequest = NamedTuple(
+      "accountIds" : __listOf__string
+    )
+
+    alias DeclineInvitationsResponse = NamedTuple(
+      "unprocessedAccounts" : (__listOfUnprocessedAccount)?
+    )
+
+    alias DefaultDetection = NamedTuple(
+      "count" : (__long)?,
+      "occurrences" : (Occurrences)?,
+      "type" : (__string)?
+    )
+
+    alias DefaultDetections = Array(DefaultDetection)
+
+    alias DeleteCustomDataIdentifierRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias DeleteCustomDataIdentifierResponse = NamedTuple(
+      
+    )
+
+    alias DeleteFindingsFilterRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias DeleteFindingsFilterResponse = NamedTuple(
+      
+    )
+
+    alias DeleteInvitationsRequest = NamedTuple(
+      "accountIds" : __listOf__string
+    )
+
+    alias DeleteInvitationsResponse = NamedTuple(
+      "unprocessedAccounts" : (__listOfUnprocessedAccount)?
+    )
+
+    alias DeleteMemberRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias DeleteMemberResponse = NamedTuple(
+      
+    )
+
+    alias DescribeBucketsRequest = NamedTuple(
+      "criteria" : (BucketCriteria)?,
+      "maxResults" : (__integer)?,
+      "nextToken" : (__string)?,
+      "sortCriteria" : (BucketSortCriteria)?
+    )
+
+    alias DescribeBucketsResponse = NamedTuple(
+      "buckets" : (__listOfBucketMetadata)?,
+      "nextToken" : (__string)?
+    )
+
+    alias DescribeClassificationJobRequest = NamedTuple(
+      "jobId" : __string
+    )
+
+    alias DescribeClassificationJobResponse = NamedTuple(
+      "clientToken" : (__string)?,
+      "createdAt" : (__timestampIso8601)?,
+      "customDataIdentifierIds" : (__listOf__string)?,
+      "description" : (__string)?,
+      "initialRun" : (__boolean)?,
+      "jobArn" : (__string)?,
+      "jobId" : (__string)?,
+      "jobStatus" : (JobStatus)?,
+      "jobType" : (JobType)?,
+      "lastRunErrorStatus" : (LastRunErrorStatus)?,
+      "lastRunTime" : (__timestampIso8601)?,
+      "name" : (__string)?,
+      "s3JobDefinition" : (S3JobDefinition)?,
+      "samplingPercentage" : (__integer)?,
+      "scheduleFrequency" : (JobScheduleFrequency)?,
+      "statistics" : (Statistics)?,
+      "tags" : (TagMap)?,
+      "userPausedDetails" : (UserPausedDetails)?
+    )
+
+    alias DescribeOrganizationConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias DescribeOrganizationConfigurationResponse = NamedTuple(
+      "autoEnable" : (__boolean)?,
+      "maxAccountLimitReached" : (__boolean)?
+    )
+
+    alias DisableMacieRequest = NamedTuple(
+      
+    )
+
+    alias DisableMacieResponse = NamedTuple(
+      
+    )
+
+    alias DisableOrganizationAdminAccountRequest = NamedTuple(
+      "adminAccountId" : __string
+    )
+
+    alias DisableOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateFromMasterAccountRequest = NamedTuple(
+      
+    )
+
+    alias DisassociateFromMasterAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateMemberRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias DisassociateMemberResponse = NamedTuple(
+      
+    )
+
+    alias DomainDetails = NamedTuple(
+      "domainName" : (__string)?
+    )
+
+    alias EffectivePermission = String
+
+    alias Empty = NamedTuple(
+      
+    )
+
+    alias EnableMacieRequest = NamedTuple(
+      "clientToken" : (__string)?,
+      "findingPublishingFrequency" : (FindingPublishingFrequency)?,
+      "status" : (MacieStatus)?
+    )
+
+    alias EnableMacieResponse = NamedTuple(
+      
+    )
+
+    alias EnableOrganizationAdminAccountRequest = NamedTuple(
+      "adminAccountId" : __string,
+      "clientToken" : (__string)?
+    )
+
+    alias EnableOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias EncryptionType = String
+
+    alias ErrorCode = String
+
+    alias FederatedUser = NamedTuple(
+      "accessKeyId" : (__string)?,
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "principalId" : (__string)?,
+      "sessionContext" : (SessionContext)?
+    )
+
+    alias Finding = NamedTuple(
+      "accountId" : (__string)?,
+      "archived" : (__boolean)?,
+      "category" : (FindingCategory)?,
+      "classificationDetails" : (ClassificationDetails)?,
+      "count" : (__long)?,
+      "createdAt" : (__timestampIso8601)?,
+      "description" : (__string)?,
+      "id" : (__string)?,
+      "partition" : (__string)?,
+      "policyDetails" : (PolicyDetails)?,
+      "region" : (__string)?,
+      "resourcesAffected" : (ResourcesAffected)?,
+      "sample" : (__boolean)?,
+      "schemaVersion" : (__string)?,
+      "severity" : (Severity)?,
+      "title" : (__string)?,
+      "type" : (FindingType)?,
+      "updatedAt" : (__timestampIso8601)?
+    )
+
+    alias FindingAction = NamedTuple(
+      "actionType" : (FindingActionType)?,
+      "apiCallDetails" : (ApiCallDetails)?
+    )
+
+    alias FindingActionType = String
+
+    alias FindingActor = NamedTuple(
+      "domainDetails" : (DomainDetails)?,
+      "ipAddressDetails" : (IpAddressDetails)?,
+      "userIdentity" : (UserIdentity)?
+    )
+
+    alias FindingCategory = String
+
+    alias FindingCriteria = NamedTuple(
+      "criterion" : (Criterion)?
+    )
+
+    alias FindingPublishingFrequency = String
+
+    alias FindingStatisticsSortAttributeName = String
+
+    alias FindingStatisticsSortCriteria = NamedTuple(
+      "attributeName" : (FindingStatisticsSortAttributeName)?,
+      "orderBy" : (OrderBy)?
+    )
+
+    alias FindingType = String
+
+    alias FindingsFilterAction = String
+
+    alias FindingsFilterListItem = NamedTuple(
+      "action" : (FindingsFilterAction)?,
+      "arn" : (__string)?,
+      "id" : (__string)?,
+      "name" : (__string)?,
+      "tags" : (TagMap)?
+    )
+
+    alias GetBucketStatisticsRequest = NamedTuple(
+      "accountId" : (__string)?
+    )
+
+    alias GetBucketStatisticsResponse = NamedTuple(
+      "bucketCount" : (__long)?,
+      "bucketCountByEffectivePermission" : (BucketCountByEffectivePermission)?,
+      "bucketCountByEncryptionType" : (BucketCountByEncryptionType)?,
+      "bucketCountBySharedAccessType" : (BucketCountBySharedAccessType)?,
+      "classifiableObjectCount" : (__long)?,
+      "classifiableSizeInBytes" : (__long)?,
+      "lastUpdated" : (__timestampIso8601)?,
+      "objectCount" : (__long)?,
+      "sizeInBytes" : (__long)?,
+      "sizeInBytesCompressed" : (__long)?,
+      "unclassifiableObjectCount" : (ObjectLevelStatistics)?,
+      "unclassifiableObjectSizeInBytes" : (ObjectLevelStatistics)?
+    )
+
+    alias GetClassificationExportConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias GetClassificationExportConfigurationResponse = NamedTuple(
+      "configuration" : (ClassificationExportConfiguration)?
+    )
+
+    alias GetCustomDataIdentifierRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias GetCustomDataIdentifierResponse = NamedTuple(
+      "arn" : (__string)?,
+      "createdAt" : (__timestampIso8601)?,
+      "deleted" : (__boolean)?,
+      "description" : (__string)?,
+      "id" : (__string)?,
+      "ignoreWords" : (__listOf__string)?,
+      "keywords" : (__listOf__string)?,
+      "maximumMatchDistance" : (__integer)?,
+      "name" : (__string)?,
+      "regex" : (__string)?,
+      "tags" : (TagMap)?
+    )
+
+    alias GetFindingStatisticsRequest = NamedTuple(
+      "findingCriteria" : (FindingCriteria)?,
+      "groupBy" : GroupBy,
+      "size" : (__integer)?,
+      "sortCriteria" : (FindingStatisticsSortCriteria)?
+    )
+
+    alias GetFindingStatisticsResponse = NamedTuple(
+      "countsByGroup" : (__listOfGroupCount)?
+    )
+
+    alias GetFindingsFilterRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias GetFindingsFilterResponse = NamedTuple(
+      "action" : (FindingsFilterAction)?,
+      "arn" : (__string)?,
+      "description" : (__string)?,
+      "findingCriteria" : (FindingCriteria)?,
+      "id" : (__string)?,
+      "name" : (__string)?,
+      "position" : (__integer)?,
+      "tags" : (TagMap)?
+    )
+
+    alias GetFindingsRequest = NamedTuple(
+      "findingIds" : __listOf__string,
+      "sortCriteria" : (SortCriteria)?
+    )
+
+    alias GetFindingsResponse = NamedTuple(
+      "findings" : (__listOfFinding)?
+    )
+
+    alias GetInvitationsCountRequest = NamedTuple(
+      
+    )
+
+    alias GetInvitationsCountResponse = NamedTuple(
+      "invitationsCount" : (__long)?
+    )
+
+    alias GetMacieSessionRequest = NamedTuple(
+      
+    )
+
+    alias GetMacieSessionResponse = NamedTuple(
+      "createdAt" : (__timestampIso8601)?,
+      "findingPublishingFrequency" : (FindingPublishingFrequency)?,
+      "serviceRole" : (__string)?,
+      "status" : (MacieStatus)?,
+      "updatedAt" : (__timestampIso8601)?
+    )
+
+    alias GetMasterAccountRequest = NamedTuple(
+      
+    )
+
+    alias GetMasterAccountResponse = NamedTuple(
+      "master" : (Invitation)?
+    )
+
+    alias GetMemberRequest = NamedTuple(
+      "id" : __string
+    )
+
+    alias GetMemberResponse = NamedTuple(
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "email" : (__string)?,
+      "invitedAt" : (__timestampIso8601)?,
+      "masterAccountId" : (__string)?,
+      "relationshipStatus" : (RelationshipStatus)?,
+      "tags" : (TagMap)?,
+      "updatedAt" : (__timestampIso8601)?
+    )
+
+    alias GetUsageStatisticsRequest = NamedTuple(
+      "filterBy" : (__listOfUsageStatisticsFilter)?,
+      "maxResults" : (__integer)?,
+      "nextToken" : (__string)?,
+      "sortBy" : (UsageStatisticsSortBy)?
+    )
+
+    alias GetUsageStatisticsResponse = NamedTuple(
+      "nextToken" : (__string)?,
+      "records" : (__listOfUsageRecord)?
+    )
+
+    alias GetUsageTotalsRequest = NamedTuple(
+      
+    )
+
+    alias GetUsageTotalsResponse = NamedTuple(
+      "usageTotals" : (__listOfUsageTotal)?
+    )
+
+    alias GroupBy = String
+
+    alias GroupCount = NamedTuple(
+      "count" : (__long)?,
+      "groupKey" : (__string)?
+    )
+
+    alias IamUser = NamedTuple(
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "principalId" : (__string)?,
+      "userName" : (__string)?
+    )
+
+    alias InternalServerException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias Invitation = NamedTuple(
+      "accountId" : (__string)?,
+      "invitationId" : (__string)?,
+      "invitedAt" : (__timestampIso8601)?,
+      "relationshipStatus" : (RelationshipStatus)?
+    )
+
+    alias IpAddressDetails = NamedTuple(
+      "ipAddressV4" : (__string)?,
+      "ipCity" : (IpCity)?,
+      "ipCountry" : (IpCountry)?,
+      "ipGeoLocation" : (IpGeoLocation)?,
+      "ipOwner" : (IpOwner)?
+    )
+
+    alias IpCity = NamedTuple(
+      "name" : (__string)?
+    )
+
+    alias IpCountry = NamedTuple(
+      "code" : (__string)?,
+      "name" : (__string)?
+    )
+
+    alias IpGeoLocation = NamedTuple(
+      "lat" : (__double)?,
+      "lon" : (__double)?
+    )
+
+    alias IpOwner = NamedTuple(
+      "asn" : (__string)?,
+      "asnOrg" : (__string)?,
+      "isp" : (__string)?,
+      "org" : (__string)?
+    )
+
+    alias IsDefinedInJob = String
+
+    alias IsMonitoredByJob = String
+
+    alias JobComparator = String
+
+    alias JobDetails = NamedTuple(
+      "isDefinedInJob" : (IsDefinedInJob)?,
+      "isMonitoredByJob" : (IsMonitoredByJob)?,
+      "lastJobId" : (__string)?,
+      "lastJobRunTime" : (__timestampIso8601)?
+    )
+
+    alias JobScheduleFrequency = NamedTuple(
+      "dailySchedule" : (DailySchedule)?,
+      "monthlySchedule" : (MonthlySchedule)?,
+      "weeklySchedule" : (WeeklySchedule)?
+    )
+
+    alias JobScopeTerm = NamedTuple(
+      "simpleScopeTerm" : (SimpleScopeTerm)?,
+      "tagScopeTerm" : (TagScopeTerm)?
+    )
+
+    alias JobScopingBlock = NamedTuple(
+      "and" : (__listOfJobScopeTerm)?
+    )
+
+    alias JobStatus = String
+
+    alias JobSummary = NamedTuple(
+      "bucketDefinitions" : (__listOfS3BucketDefinitionForJob)?,
+      "createdAt" : (__timestampIso8601)?,
+      "jobId" : (__string)?,
+      "jobStatus" : (JobStatus)?,
+      "jobType" : (JobType)?,
+      "lastRunErrorStatus" : (LastRunErrorStatus)?,
+      "name" : (__string)?,
+      "userPausedDetails" : (UserPausedDetails)?
+    )
+
+    alias JobType = String
+
+    alias KeyValuePair = NamedTuple(
+      "key" : (__string)?,
+      "value" : (__string)?
+    )
+
+    alias KeyValuePairList = Array(KeyValuePair)
+
+    alias LastRunErrorStatus = NamedTuple(
+      "code" : (LastRunErrorStatusCode)?
+    )
+
+    alias LastRunErrorStatusCode = String
+
+    alias ListClassificationJobsRequest = NamedTuple(
+      "filterCriteria" : (ListJobsFilterCriteria)?,
+      "maxResults" : (__integer)?,
+      "nextToken" : (__string)?,
+      "sortCriteria" : (ListJobsSortCriteria)?
+    )
+
+    alias ListClassificationJobsResponse = NamedTuple(
+      "items" : (__listOfJobSummary)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListCustomDataIdentifiersRequest = NamedTuple(
+      "maxResults" : (__integer)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListCustomDataIdentifiersResponse = NamedTuple(
+      "items" : (__listOfCustomDataIdentifierSummary)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListFindingsFiltersRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListFindingsFiltersResponse = NamedTuple(
+      "findingsFilterListItems" : (__listOfFindingsFilterListItem)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListFindingsRequest = NamedTuple(
+      "findingCriteria" : (FindingCriteria)?,
+      "maxResults" : (__integer)?,
+      "nextToken" : (__string)?,
+      "sortCriteria" : (SortCriteria)?
+    )
+
+    alias ListFindingsResponse = NamedTuple(
+      "findingIds" : (__listOf__string)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListInvitationsRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListInvitationsResponse = NamedTuple(
+      "invitations" : (__listOfInvitation)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListJobsFilterCriteria = NamedTuple(
+      "excludes" : (__listOfListJobsFilterTerm)?,
+      "includes" : (__listOfListJobsFilterTerm)?
+    )
+
+    alias ListJobsFilterKey = String
+
+    alias ListJobsFilterTerm = NamedTuple(
+      "comparator" : (JobComparator)?,
+      "key" : (ListJobsFilterKey)?,
+      "values" : (__listOf__string)?
+    )
+
+    alias ListJobsSortAttributeName = String
+
+    alias ListJobsSortCriteria = NamedTuple(
+      "attributeName" : (ListJobsSortAttributeName)?,
+      "orderBy" : (OrderBy)?
+    )
+
+    alias ListMembersRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (__string)?,
+      "onlyAssociated" : (__string)?
+    )
+
+    alias ListMembersResponse = NamedTuple(
+      "members" : (__listOfMember)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListOrganizationAdminAccountsRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListOrganizationAdminAccountsResponse = NamedTuple(
+      "adminAccounts" : (__listOfAdminAccount)?,
+      "nextToken" : (__string)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias MacieStatus = String
+
+    alias MaxResults = Int32
+
+    alias Member = NamedTuple(
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "email" : (__string)?,
+      "invitedAt" : (__timestampIso8601)?,
+      "masterAccountId" : (__string)?,
+      "relationshipStatus" : (RelationshipStatus)?,
+      "tags" : (TagMap)?,
+      "updatedAt" : (__timestampIso8601)?
+    )
+
+    alias MonthlySchedule = NamedTuple(
+      "dayOfMonth" : (__integer)?
+    )
+
+    alias ObjectCountByEncryptionType = NamedTuple(
+      "customerManaged" : (__long)?,
+      "kmsManaged" : (__long)?,
+      "s3Managed" : (__long)?,
+      "unencrypted" : (__long)?
+    )
+
+    alias ObjectLevelStatistics = NamedTuple(
+      "fileType" : (__long)?,
+      "storageClass" : (__long)?,
+      "total" : (__long)?
+    )
+
+    alias Occurrences = NamedTuple(
+      "cells" : (Cells)?,
+      "lineRanges" : (Ranges)?,
+      "offsetRanges" : (Ranges)?,
+      "pages" : (Pages)?,
+      "records" : (Records)?
+    )
+
+    alias OrderBy = String
+
+    alias Page = NamedTuple(
+      "lineRange" : (Range)?,
+      "offsetRange" : (Range)?,
+      "pageNumber" : (__long)?
+    )
+
+    alias Pages = Array(Page)
+
+    alias PolicyDetails = NamedTuple(
+      "action" : (FindingAction)?,
+      "actor" : (FindingActor)?
+    )
+
+    alias PutClassificationExportConfigurationRequest = NamedTuple(
+      "configuration" : ClassificationExportConfiguration
+    )
+
+    alias PutClassificationExportConfigurationResponse = NamedTuple(
+      "configuration" : (ClassificationExportConfiguration)?
+    )
+
+    alias Range = NamedTuple(
+      "end" : (__long)?,
+      "start" : (__long)?,
+      "startColumn" : (__long)?
+    )
+
+    alias Ranges = Array(Range)
+
+    alias Record = NamedTuple(
+      "jsonPath" : (__string)?,
+      "recordIndex" : (__long)?
+    )
+
+    alias Records = Array(Record)
+
+    alias RelationshipStatus = String
+
+    alias ReplicationDetails = NamedTuple(
+      "replicated" : (__boolean)?,
+      "replicatedExternally" : (__boolean)?,
+      "replicationAccounts" : (__listOf__string)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias ResourcesAffected = NamedTuple(
+      "s3Bucket" : (S3Bucket)?,
+      "s3Object" : (S3Object)?
+    )
+
+    alias S3Bucket = NamedTuple(
+      "arn" : (__string)?,
+      "createdAt" : (__timestampIso8601)?,
+      "defaultServerSideEncryption" : (ServerSideEncryption)?,
+      "name" : (__string)?,
+      "owner" : (S3BucketOwner)?,
+      "publicAccess" : (BucketPublicAccess)?,
+      "tags" : (KeyValuePairList)?
+    )
+
+    alias S3BucketDefinitionForJob = NamedTuple(
+      "accountId" : (__string)?,
+      "buckets" : (__listOf__string)?
+    )
+
+    alias S3BucketOwner = NamedTuple(
+      "displayName" : (__string)?,
+      "id" : (__string)?
+    )
+
+    alias S3Destination = NamedTuple(
+      "bucketName" : __string,
+      "keyPrefix" : (__string)?,
+      "kmsKeyArn" : __string
+    )
+
+    alias S3JobDefinition = NamedTuple(
+      "bucketDefinitions" : (__listOfS3BucketDefinitionForJob)?,
+      "scoping" : (Scoping)?
+    )
+
+    alias S3Object = NamedTuple(
+      "bucketArn" : (__string)?,
+      "eTag" : (__string)?,
+      "extension" : (__string)?,
+      "key" : (__string)?,
+      "lastModified" : (__timestampIso8601)?,
+      "path" : (__string)?,
+      "publicAccess" : (__boolean)?,
+      "serverSideEncryption" : (ServerSideEncryption)?,
+      "size" : (__long)?,
+      "storageClass" : (StorageClass)?,
+      "tags" : (KeyValuePairList)?,
+      "versionId" : (__string)?
+    )
+
+    alias ScopeFilterKey = String
+
+    alias Scoping = NamedTuple(
+      "excludes" : (JobScopingBlock)?,
+      "includes" : (JobScopingBlock)?
+    )
+
+    alias SensitiveData = Array(SensitiveDataItem)
+
+    alias SensitiveDataItem = NamedTuple(
+      "category" : (SensitiveDataItemCategory)?,
+      "detections" : (DefaultDetections)?,
+      "totalCount" : (__long)?
+    )
+
+    alias SensitiveDataItemCategory = String
+
+    alias ServerSideEncryption = NamedTuple(
+      "encryptionType" : (EncryptionType)?,
+      "kmsMasterKeyId" : (__string)?
+    )
+
+    alias ServiceLimit = NamedTuple(
+      "isServiceLimited" : (__boolean)?,
+      "unit" : (Unit)?,
+      "value" : (__long)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias SessionContext = NamedTuple(
+      "attributes" : (SessionContextAttributes)?,
+      "sessionIssuer" : (SessionIssuer)?
+    )
+
+    alias SessionContextAttributes = NamedTuple(
+      "creationDate" : (__timestampIso8601)?,
+      "mfaAuthenticated" : (__boolean)?
+    )
+
+    alias SessionIssuer = NamedTuple(
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "principalId" : (__string)?,
+      "type" : (__string)?,
+      "userName" : (__string)?
+    )
+
+    alias Severity = NamedTuple(
+      "description" : (SeverityDescription)?,
+      "score" : (__long)?
+    )
+
+    alias SeverityDescription = String
+
+    alias SharedAccess = String
+
+    alias SimpleScopeTerm = NamedTuple(
+      "comparator" : (JobComparator)?,
+      "key" : (ScopeFilterKey)?,
+      "values" : (__listOf__string)?
+    )
+
+    alias SortCriteria = NamedTuple(
+      "attributeName" : (__string)?,
+      "orderBy" : (OrderBy)?
+    )
+
+    alias Statistics = NamedTuple(
+      "approximateNumberOfObjectsToProcess" : (__double)?,
+      "numberOfRuns" : (__double)?
+    )
+
+    alias StorageClass = String
+
+    alias TagMap = Hash(__string,__string)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : __string,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagScopeTerm = NamedTuple(
+      "comparator" : (JobComparator)?,
+      "key" : (__string)?,
+      "tagValues" : (__listOfTagValuePair)?,
+      "target" : (TagTarget)?
+    )
+
+    alias TagTarget = String
+
+    alias TagValuePair = NamedTuple(
+      "key" : (__string)?,
+      "value" : (__string)?
+    )
+
+    alias TestCustomDataIdentifierRequest = NamedTuple(
+      "ignoreWords" : (__listOf__string)?,
+      "keywords" : (__listOf__string)?,
+      "maximumMatchDistance" : (__integer)?,
+      "regex" : __string,
+      "sampleText" : __string
+    )
+
+    alias TestCustomDataIdentifierResponse = NamedTuple(
+      "matchCount" : (__integer)?
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias Unit = String
+
+    alias UnprocessedAccount = NamedTuple(
+      "accountId" : (__string)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (__string)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : __string,
+      "tagKeys" : __listOf__string
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateClassificationJobRequest = NamedTuple(
+      "jobId" : __string,
+      "jobStatus" : JobStatus
+    )
+
+    alias UpdateClassificationJobResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFindingsFilterRequest = NamedTuple(
+      "action" : (FindingsFilterAction)?,
+      "description" : (__string)?,
+      "findingCriteria" : (FindingCriteria)?,
+      "id" : __string,
+      "name" : (__string)?,
+      "position" : (__integer)?
+    )
+
+    alias UpdateFindingsFilterResponse = NamedTuple(
+      "arn" : (__string)?,
+      "id" : (__string)?
+    )
+
+    alias UpdateMacieSessionRequest = NamedTuple(
+      "findingPublishingFrequency" : (FindingPublishingFrequency)?,
+      "status" : (MacieStatus)?
+    )
+
+    alias UpdateMacieSessionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateMemberSessionRequest = NamedTuple(
+      "id" : __string,
+      "status" : MacieStatus
+    )
+
+    alias UpdateMemberSessionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateOrganizationConfigurationRequest = NamedTuple(
+      "autoEnable" : __boolean
+    )
+
+    alias UpdateOrganizationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UsageByAccount = NamedTuple(
+      "currency" : (Currency)?,
+      "estimatedCost" : (__string)?,
+      "serviceLimit" : (ServiceLimit)?,
+      "type" : (UsageType)?
+    )
+
+    alias UsageRecord = NamedTuple(
+      "accountId" : (__string)?,
+      "freeTrialStartDate" : (__timestampIso8601)?,
+      "usage" : (__listOfUsageByAccount)?
+    )
+
+    alias UsageStatisticsFilter = NamedTuple(
+      "comparator" : (UsageStatisticsFilterComparator)?,
+      "key" : (UsageStatisticsFilterKey)?,
+      "values" : (__listOf__string)?
+    )
+
+    alias UsageStatisticsFilterComparator = String
+
+    alias UsageStatisticsFilterKey = String
+
+    alias UsageStatisticsSortBy = NamedTuple(
+      "key" : (UsageStatisticsSortKey)?,
+      "orderBy" : (OrderBy)?
+    )
+
+    alias UsageStatisticsSortKey = String
+
+    alias UsageTotal = NamedTuple(
+      "currency" : (Currency)?,
+      "estimatedCost" : (__string)?,
+      "type" : (UsageType)?
+    )
+
+    alias UsageType = String
+
+    alias UserIdentity = NamedTuple(
+      "assumedRole" : (AssumedRole)?,
+      "awsAccount" : (AwsAccount)?,
+      "awsService" : (AwsService)?,
+      "federatedUser" : (FederatedUser)?,
+      "iamUser" : (IamUser)?,
+      "root" : (UserIdentityRoot)?,
+      "type" : (UserIdentityType)?
+    )
+
+    alias UserIdentityRoot = NamedTuple(
+      "accountId" : (__string)?,
+      "arn" : (__string)?,
+      "principalId" : (__string)?
+    )
+
+    alias UserIdentityType = String
+
+    alias UserPausedDetails = NamedTuple(
+      "jobExpiresAt" : (__timestampIso8601)?,
+      "jobImminentExpirationHealthEventArn" : (__string)?,
+      "jobPausedAt" : (__timestampIso8601)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : (__string)?
+    )
+
+    alias WeeklySchedule = NamedTuple(
+      "dayOfWeek" : (DayOfWeek)?
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __listOfAdminAccount = Array(AdminAccount)
+
+    alias __listOfBatchGetCustomDataIdentifierSummary = Array(BatchGetCustomDataIdentifierSummary)
+
+    alias __listOfBucketMetadata = Array(BucketMetadata)
+
+    alias __listOfCustomDataIdentifierSummary = Array(CustomDataIdentifierSummary)
+
+    alias __listOfFinding = Array(Finding)
+
+    alias __listOfFindingType = Array(FindingType)
+
+    alias __listOfFindingsFilterListItem = Array(FindingsFilterListItem)
+
+    alias __listOfGroupCount = Array(GroupCount)
+
+    alias __listOfInvitation = Array(Invitation)
+
+    alias __listOfJobScopeTerm = Array(JobScopeTerm)
+
+    alias __listOfJobSummary = Array(JobSummary)
+
+    alias __listOfKeyValuePair = Array(KeyValuePair)
+
+    alias __listOfListJobsFilterTerm = Array(ListJobsFilterTerm)
+
+    alias __listOfMember = Array(Member)
+
+    alias __listOfS3BucketDefinitionForJob = Array(S3BucketDefinitionForJob)
+
+    alias __listOfTagValuePair = Array(TagValuePair)
+
+    alias __listOfUnprocessedAccount = Array(UnprocessedAccount)
+
+    alias __listOfUsageByAccount = Array(UsageByAccount)
+
+    alias __listOfUsageRecord = Array(UsageRecord)
+
+    alias __listOfUsageStatisticsFilter = Array(UsageStatisticsFilter)
+
+    alias __listOfUsageTotal = Array(UsageTotal)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

@@ -404,8 +404,8 @@ module Aws::ComputeOptimizer
     #
     # @overload describe_recommendation_export_jobs(**params)
     # @param [Hash] params ({})
-    def describe_recommendation_export_jobs(params = {}, **options)
-      req = build_request(:describe_recommendation_export_jobs, params)
+    def describe_recommendation_export_jobs(, **options)
+      req = build_request(:describe_recommendation_export_jobs, )
       req.send_request(options)
     end
 
@@ -527,8 +527,8 @@ module Aws::ComputeOptimizer
     #
     # @overload export_auto_scaling_group_recommendations(**params)
     # @param [Hash] params ({})
-    def export_auto_scaling_group_recommendations(params = {}, **options)
-      req = build_request(:export_auto_scaling_group_recommendations, params)
+    def export_auto_scaling_group_recommendations(, **options)
+      req = build_request(:export_auto_scaling_group_recommendations, )
       req.send_request(options)
     end
 
@@ -647,8 +647,8 @@ module Aws::ComputeOptimizer
     #
     # @overload export_ec2_instance_recommendations(**params)
     # @param [Hash] params ({})
-    def export_ec2_instance_recommendations(params = {}, **options)
-      req = build_request(:export_ec2_instance_recommendations, params)
+    def export_ec2_instance_recommendations(, **options)
+      req = build_request(:export_ec2_instance_recommendations, )
       req.send_request(options)
     end
 
@@ -751,8 +751,8 @@ module Aws::ComputeOptimizer
     #
     # @overload get_auto_scaling_group_recommendations(**params)
     # @param [Hash] params ({})
-    def get_auto_scaling_group_recommendations(params = {}, **options)
-      req = build_request(:get_auto_scaling_group_recommendations, params)
+    def get_auto_scaling_group_recommendations(, **options)
+      req = build_request(:get_auto_scaling_group_recommendations, )
       req.send_request(options)
     end
 
@@ -854,8 +854,8 @@ module Aws::ComputeOptimizer
     #
     # @overload get_ebs_volume_recommendations(**params)
     # @param [Hash] params ({})
-    def get_ebs_volume_recommendations(params = {}, **options)
-      req = build_request(:get_ebs_volume_recommendations, params)
+    def get_ebs_volume_recommendations(, **options)
+      req = build_request(:get_ebs_volume_recommendations, )
       req.send_request(options)
     end
 
@@ -954,8 +954,8 @@ module Aws::ComputeOptimizer
     #
     # @overload get_ec2_instance_recommendations(**params)
     # @param [Hash] params ({})
-    def get_ec2_instance_recommendations(params = {}, **options)
-      req = build_request(:get_ec2_instance_recommendations, params)
+    def get_ec2_instance_recommendations(, **options)
+      req = build_request(:get_ec2_instance_recommendations, )
       req.send_request(options)
     end
 
@@ -1020,8 +1020,8 @@ module Aws::ComputeOptimizer
     #
     # @overload get_ec2_recommendation_projected_metrics(**params)
     # @param [Hash] params ({})
-    def get_ec2_recommendation_projected_metrics(params = {}, **options)
-      req = build_request(:get_ec2_recommendation_projected_metrics, params)
+    def get_ec2_recommendation_projected_metrics(, **options)
+      req = build_request(:get_ec2_recommendation_projected_metrics, )
       req.send_request(options)
     end
 
@@ -1048,8 +1048,8 @@ module Aws::ComputeOptimizer
     #
     # @overload get_enrollment_status(**params)
     # @param [Hash] params ({})
-    def get_enrollment_status(params = {}, **options)
-      req = build_request(:get_enrollment_status, params)
+    def get_enrollment_status(, **options)
+      req = build_request(:get_enrollment_status, )
       req.send_request(options)
     end
 
@@ -1107,8 +1107,8 @@ module Aws::ComputeOptimizer
     #
     # @overload get_recommendation_summaries(**params)
     # @param [Hash] params ({})
-    def get_recommendation_summaries(params = {}, **options)
-      req = build_request(:get_recommendation_summaries, params)
+    def get_recommendation_summaries(, **options)
+      req = build_request(:get_recommendation_summaries, )
       req.send_request(options)
     end
 
@@ -1149,8 +1149,8 @@ module Aws::ComputeOptimizer
     #
     # @overload update_enrollment_status(**params)
     # @param [Hash] params ({})
-    def update_enrollment_status(params = {}, **options)
-      req = build_request(:update_enrollment_status, params)
+    def update_enrollment_status(, **options)
+      req = build_request(:update_enrollment_status, )
       req.send_request(options)
     end
 

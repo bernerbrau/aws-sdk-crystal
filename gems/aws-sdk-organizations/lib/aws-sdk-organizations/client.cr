@@ -469,8 +469,8 @@ module Aws::Organizations
     #
     # @overload accept_handshake(**params)
     # @param [Hash] params ({})
-    def accept_handshake(params = {}, **options)
-      req = build_request(:accept_handshake, params)
+    def accept_handshake(, **options)
+      req = build_request(:accept_handshake, )
       req.send_request(options)
     end
 
@@ -564,8 +564,8 @@ module Aws::Organizations
     #
     # @overload attach_policy(**params)
     # @param [Hash] params ({})
-    def attach_policy(params = {}, **options)
-      req = build_request(:attach_policy, params)
+    def attach_policy(, **options)
+      req = build_request(:attach_policy, )
       req.send_request(options)
     end
 
@@ -681,8 +681,8 @@ module Aws::Organizations
     #
     # @overload cancel_handshake(**params)
     # @param [Hash] params ({})
-    def cancel_handshake(params = {}, **options)
-      req = build_request(:cancel_handshake, params)
+    def cancel_handshake(, **options)
+      req = build_request(:cancel_handshake, )
       req.send_request(options)
     end
 
@@ -901,8 +901,8 @@ module Aws::Organizations
     #
     # @overload create_account(**params)
     # @param [Hash] params ({})
-    def create_account(params = {}, **options)
-      req = build_request(:create_account, params)
+    def create_account(, **options)
+      req = build_request(:create_account, )
       req.send_request(options)
     end
 
@@ -1152,8 +1152,8 @@ module Aws::Organizations
     #
     # @overload create_gov_cloud_account(**params)
     # @param [Hash] params ({})
-    def create_gov_cloud_account(params = {}, **options)
-      req = build_request(:create_gov_cloud_account, params)
+    def create_gov_cloud_account(, **options)
+      req = build_request(:create_gov_cloud_account, )
       req.send_request(options)
     end
 
@@ -1277,8 +1277,8 @@ module Aws::Organizations
     #
     # @overload create_organization(**params)
     # @param [Hash] params ({})
-    def create_organization(params = {}, **options)
-      req = build_request(:create_organization, params)
+    def create_organization(, **options)
+      req = build_request(:create_organization, )
       req.send_request(options)
     end
 
@@ -1387,8 +1387,8 @@ module Aws::Organizations
     #
     # @overload create_organizational_unit(**params)
     # @param [Hash] params ({})
-    def create_organizational_unit(params = {}, **options)
-      req = build_request(:create_organizational_unit, params)
+    def create_organizational_unit(, **options)
+      req = build_request(:create_organizational_unit, )
       req.send_request(options)
     end
 
@@ -1523,8 +1523,8 @@ module Aws::Organizations
     #
     # @overload create_policy(**params)
     # @param [Hash] params ({})
-    def create_policy(params = {}, **options)
-      req = build_request(:create_policy, params)
+    def create_policy(, **options)
+      req = build_request(:create_policy, )
       req.send_request(options)
     end
 
@@ -1636,8 +1636,8 @@ module Aws::Organizations
     #
     # @overload decline_handshake(**params)
     # @param [Hash] params ({})
-    def decline_handshake(params = {}, **options)
-      req = build_request(:decline_handshake, params)
+    def decline_handshake(, **options)
+      req = build_request(:decline_handshake, )
       req.send_request(options)
     end
 
@@ -1651,8 +1651,8 @@ module Aws::Organizations
     #
     # @overload delete_organization(**params)
     # @param [Hash] params ({})
-    def delete_organization(params = {}, **options)
-      req = build_request(:delete_organization, params)
+    def delete_organization(, **options)
+      req = build_request(:delete_organization, )
       req.send_request(options)
     end
 
@@ -1699,8 +1699,8 @@ module Aws::Organizations
     #
     # @overload delete_organizational_unit(**params)
     # @param [Hash] params ({})
-    def delete_organizational_unit(params = {}, **options)
-      req = build_request(:delete_organizational_unit, params)
+    def delete_organizational_unit(, **options)
+      req = build_request(:delete_organizational_unit, )
       req.send_request(options)
     end
 
@@ -1746,8 +1746,8 @@ module Aws::Organizations
     #
     # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, **options)
-      req = build_request(:delete_policy, params)
+    def delete_policy(, **options)
+      req = build_request(:delete_policy, )
       req.send_request(options)
     end
 
@@ -1799,8 +1799,8 @@ module Aws::Organizations
     #
     # @overload deregister_delegated_administrator(**params)
     # @param [Hash] params ({})
-    def deregister_delegated_administrator(params = {}, **options)
-      req = build_request(:deregister_delegated_administrator, params)
+    def deregister_delegated_administrator(, **options)
+      req = build_request(:deregister_delegated_administrator, )
       req.send_request(options)
     end
 
@@ -1866,8 +1866,8 @@ module Aws::Organizations
     #
     # @overload describe_account(**params)
     # @param [Hash] params ({})
-    def describe_account(params = {}, **options)
-      req = build_request(:describe_account, params)
+    def describe_account(, **options)
+      req = build_request(:describe_account, )
       req.send_request(options)
     end
 
@@ -1936,8 +1936,8 @@ module Aws::Organizations
     #
     # @overload describe_create_account_status(**params)
     # @param [Hash] params ({})
-    def describe_create_account_status(params = {}, **options)
-      req = build_request(:describe_create_account_status, params)
+    def describe_create_account_status(, **options)
+      req = build_request(:describe_create_account_status, )
       req.send_request(options)
     end
 
@@ -2003,8 +2003,8 @@ module Aws::Organizations
     #
     # @overload describe_effective_policy(**params)
     # @param [Hash] params ({})
-    def describe_effective_policy(params = {}, **options)
-      req = build_request(:describe_effective_policy, params)
+    def describe_effective_policy(, **options)
+      req = build_request(:describe_effective_policy, )
       req.send_request(options)
     end
 
@@ -2114,8 +2114,8 @@ module Aws::Organizations
     #
     # @overload describe_handshake(**params)
     # @param [Hash] params ({})
-    def describe_handshake(params = {}, **options)
-      req = build_request(:describe_handshake, params)
+    def describe_handshake(, **options)
+      req = build_request(:describe_handshake, )
       req.send_request(options)
     end
 
@@ -2175,8 +2175,8 @@ module Aws::Organizations
     #
     # @overload describe_organization(**params)
     # @param [Hash] params ({})
-    def describe_organization(params = {}, **options)
-      req = build_request(:describe_organization, params)
+    def describe_organization(, **options)
+      req = build_request(:describe_organization, )
       req.send_request(options)
     end
 
@@ -2238,8 +2238,8 @@ module Aws::Organizations
     #
     # @overload describe_organizational_unit(**params)
     # @param [Hash] params ({})
-    def describe_organizational_unit(params = {}, **options)
-      req = build_request(:describe_organizational_unit, params)
+    def describe_organizational_unit(, **options)
+      req = build_request(:describe_organizational_unit, )
       req.send_request(options)
     end
 
@@ -2310,8 +2310,8 @@ module Aws::Organizations
     #
     # @overload describe_policy(**params)
     # @param [Hash] params ({})
-    def describe_policy(params = {}, **options)
-      req = build_request(:describe_policy, params)
+    def describe_policy(, **options)
+      req = build_request(:describe_policy, )
       req.send_request(options)
     end
 
@@ -2398,8 +2398,8 @@ module Aws::Organizations
     #
     # @overload detach_policy(**params)
     # @param [Hash] params ({})
-    def detach_policy(params = {}, **options)
-      req = build_request(:detach_policy, params)
+    def detach_policy(, **options)
+      req = build_request(:detach_policy, )
       req.send_request(options)
     end
 
@@ -2457,8 +2457,8 @@ module Aws::Organizations
     #
     # @overload disable_aws_service_access(**params)
     # @param [Hash] params ({})
-    def disable_aws_service_access(params = {}, **options)
-      req = build_request(:disable_aws_service_access, params)
+    def disable_aws_service_access(, **options)
+      req = build_request(:disable_aws_service_access, )
       req.send_request(options)
     end
 
@@ -2562,8 +2562,8 @@ module Aws::Organizations
     #
     # @overload disable_policy_type(**params)
     # @param [Hash] params ({})
-    def disable_policy_type(params = {}, **options)
-      req = build_request(:disable_policy_type, params)
+    def disable_policy_type(, **options)
+      req = build_request(:disable_policy_type, )
       req.send_request(options)
     end
 
@@ -2612,8 +2612,8 @@ module Aws::Organizations
     #
     # @overload enable_aws_service_access(**params)
     # @param [Hash] params ({})
-    def enable_aws_service_access(params = {}, **options)
-      req = build_request(:enable_aws_service_access, params)
+    def enable_aws_service_access(, **options)
+      req = build_request(:enable_aws_service_access, )
       req.send_request(options)
     end
 
@@ -2715,8 +2715,8 @@ module Aws::Organizations
     #
     # @overload enable_all_features(**params)
     # @param [Hash] params ({})
-    def enable_all_features(params = {}, **options)
-      req = build_request(:enable_all_features, params)
+    def enable_all_features(, **options)
+      req = build_request(:enable_all_features, )
       req.send_request(options)
     end
 
@@ -2816,8 +2816,8 @@ module Aws::Organizations
     #
     # @overload enable_policy_type(**params)
     # @param [Hash] params ({})
-    def enable_policy_type(params = {}, **options)
-      req = build_request(:enable_policy_type, params)
+    def enable_policy_type(, **options)
+      req = build_request(:enable_policy_type, )
       req.send_request(options)
     end
 
@@ -3001,8 +3001,8 @@ module Aws::Organizations
     #
     # @overload invite_account_to_organization(**params)
     # @param [Hash] params ({})
-    def invite_account_to_organization(params = {}, **options)
-      req = build_request(:invite_account_to_organization, params)
+    def invite_account_to_organization(, **options)
+      req = build_request(:invite_account_to_organization, )
       req.send_request(options)
     end
 
@@ -3069,8 +3069,8 @@ module Aws::Organizations
     #
     # @overload leave_organization(**params)
     # @param [Hash] params ({})
-    def leave_organization(params = {}, **options)
-      req = build_request(:leave_organization, params)
+    def leave_organization(, **options)
+      req = build_request(:leave_organization, )
       req.send_request(options)
     end
 
@@ -3136,8 +3136,8 @@ module Aws::Organizations
     #
     # @overload list_aws_service_access_for_organization(**params)
     # @param [Hash] params ({})
-    def list_aws_service_access_for_organization(params = {}, **options)
-      req = build_request(:list_aws_service_access_for_organization, params)
+    def list_aws_service_access_for_organization(, **options)
+      req = build_request(:list_aws_service_access_for_organization, )
       req.send_request(options)
     end
 
@@ -3256,8 +3256,8 @@ module Aws::Organizations
     #
     # @overload list_accounts(**params)
     # @param [Hash] params ({})
-    def list_accounts(params = {}, **options)
-      req = build_request(:list_accounts, params)
+    def list_accounts(, **options)
+      req = build_request(:list_accounts, )
       req.send_request(options)
     end
 
@@ -3367,8 +3367,8 @@ module Aws::Organizations
     #
     # @overload list_accounts_for_parent(**params)
     # @param [Hash] params ({})
-    def list_accounts_for_parent(params = {}, **options)
-      req = build_request(:list_accounts_for_parent, params)
+    def list_accounts_for_parent(, **options)
+      req = build_request(:list_accounts_for_parent, )
       req.send_request(options)
     end
 
@@ -3481,8 +3481,8 @@ module Aws::Organizations
     #
     # @overload list_children(**params)
     # @param [Hash] params ({})
-    def list_children(params = {}, **options)
-      req = build_request(:list_children, params)
+    def list_children(, **options)
+      req = build_request(:list_children, )
       req.send_request(options)
     end
 
@@ -3606,8 +3606,8 @@ module Aws::Organizations
     #
     # @overload list_create_account_status(**params)
     # @param [Hash] params ({})
-    def list_create_account_status(params = {}, **options)
-      req = build_request(:list_create_account_status, params)
+    def list_create_account_status(, **options)
+      req = build_request(:list_create_account_status, )
       req.send_request(options)
     end
 
@@ -3676,8 +3676,8 @@ module Aws::Organizations
     #
     # @overload list_delegated_administrators(**params)
     # @param [Hash] params ({})
-    def list_delegated_administrators(params = {}, **options)
-      req = build_request(:list_delegated_administrators, params)
+    def list_delegated_administrators(, **options)
+      req = build_request(:list_delegated_administrators, )
       req.send_request(options)
     end
 
@@ -3737,8 +3737,8 @@ module Aws::Organizations
     #
     # @overload list_delegated_services_for_account(**params)
     # @param [Hash] params ({})
-    def list_delegated_services_for_account(params = {}, **options)
-      req = build_request(:list_delegated_services_for_account, params)
+    def list_delegated_services_for_account(, **options)
+      req = build_request(:list_delegated_services_for_account, )
       req.send_request(options)
     end
 
@@ -3884,8 +3884,8 @@ module Aws::Organizations
     #
     # @overload list_handshakes_for_account(**params)
     # @param [Hash] params ({})
-    def list_handshakes_for_account(params = {}, **options)
-      req = build_request(:list_handshakes_for_account, params)
+    def list_handshakes_for_account(, **options)
+      req = build_request(:list_handshakes_for_account, )
       req.send_request(options)
     end
 
@@ -4076,8 +4076,8 @@ module Aws::Organizations
     #
     # @overload list_handshakes_for_organization(**params)
     # @param [Hash] params ({})
-    def list_handshakes_for_organization(params = {}, **options)
-      req = build_request(:list_handshakes_for_organization, params)
+    def list_handshakes_for_organization(, **options)
+      req = build_request(:list_handshakes_for_organization, )
       req.send_request(options)
     end
 
@@ -4186,8 +4186,8 @@ module Aws::Organizations
     #
     # @overload list_organizational_units_for_parent(**params)
     # @param [Hash] params ({})
-    def list_organizational_units_for_parent(params = {}, **options)
-      req = build_request(:list_organizational_units_for_parent, params)
+    def list_organizational_units_for_parent(, **options)
+      req = build_request(:list_organizational_units_for_parent, )
       req.send_request(options)
     end
 
@@ -4294,8 +4294,8 @@ module Aws::Organizations
     #
     # @overload list_parents(**params)
     # @param [Hash] params ({})
-    def list_parents(params = {}, **options)
-      req = build_request(:list_parents, params)
+    def list_parents(, **options)
+      req = build_request(:list_parents, )
       req.send_request(options)
     end
 
@@ -4421,8 +4421,8 @@ module Aws::Organizations
     #
     # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, **options)
-      req = build_request(:list_policies, params)
+    def list_policies(, **options)
+      req = build_request(:list_policies, )
       req.send_request(options)
     end
 
@@ -4558,8 +4558,8 @@ module Aws::Organizations
     #
     # @overload list_policies_for_target(**params)
     # @param [Hash] params ({})
-    def list_policies_for_target(params = {}, **options)
-      req = build_request(:list_policies_for_target, params)
+    def list_policies_for_target(, **options)
+      req = build_request(:list_policies_for_target, )
       req.send_request(options)
     end
 
@@ -4659,8 +4659,8 @@ module Aws::Organizations
     #
     # @overload list_roots(**params)
     # @param [Hash] params ({})
-    def list_roots(params = {}, **options)
-      req = build_request(:list_roots, params)
+    def list_roots(, **options)
+      req = build_request(:list_roots, )
       req.send_request(options)
     end
 
@@ -4728,8 +4728,8 @@ module Aws::Organizations
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4841,8 +4841,8 @@ module Aws::Organizations
     #
     # @overload list_targets_for_policy(**params)
     # @param [Hash] params ({})
-    def list_targets_for_policy(params = {}, **options)
-      req = build_request(:list_targets_for_policy, params)
+    def list_targets_for_policy(, **options)
+      req = build_request(:list_targets_for_policy, )
       req.send_request(options)
     end
 
@@ -4925,8 +4925,8 @@ module Aws::Organizations
     #
     # @overload move_account(**params)
     # @param [Hash] params ({})
-    def move_account(params = {}, **options)
-      req = build_request(:move_account, params)
+    def move_account(, **options)
+      req = build_request(:move_account, )
       req.send_request(options)
     end
 
@@ -4969,8 +4969,8 @@ module Aws::Organizations
     #
     # @overload register_delegated_administrator(**params)
     # @param [Hash] params ({})
-    def register_delegated_administrator(params = {}, **options)
-      req = build_request(:register_delegated_administrator, params)
+    def register_delegated_administrator(, **options)
+      req = build_request(:register_delegated_administrator, )
       req.send_request(options)
     end
 
@@ -5042,8 +5042,8 @@ module Aws::Organizations
     #
     # @overload remove_account_from_organization(**params)
     # @param [Hash] params ({})
-    def remove_account_from_organization(params = {}, **options)
-      req = build_request(:remove_account_from_organization, params)
+    def remove_account_from_organization(, **options)
+      req = build_request(:remove_account_from_organization, )
       req.send_request(options)
     end
 
@@ -5110,8 +5110,8 @@ module Aws::Organizations
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5162,8 +5162,8 @@ module Aws::Organizations
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5237,8 +5237,8 @@ module Aws::Organizations
     #
     # @overload update_organizational_unit(**params)
     # @param [Hash] params ({})
-    def update_organizational_unit(params = {}, **options)
-      req = build_request(:update_organizational_unit, params)
+    def update_organizational_unit(, **options)
+      req = build_request(:update_organizational_unit, )
       req.send_request(options)
     end
 
@@ -5362,8 +5362,8 @@ module Aws::Organizations
     #
     # @overload update_policy(**params)
     # @param [Hash] params ({})
-    def update_policy(params = {}, **options)
-      req = build_request(:update_policy, params)
+    def update_policy(, **options)
+      req = build_request(:update_policy, )
       req.send_request(options)
     end
 

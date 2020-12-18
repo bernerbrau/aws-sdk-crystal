@@ -7,7 +7,7 @@ module {{module_name}}
 
       def after_initialize(client)
         if client.config.endpoint.nil?
-          client.config.endpoint = '{{default_endpoint}}'
+          client.config.endpoint = "{{default_endpoint}}"
         end
       end
 

@@ -3509,5 +3509,929 @@ module Aws::XRay
       include Aws::Structure
     end
 
+    alias Alias = NamedTuple(
+      "Name" : (String)?,
+      "Names" : (AliasNames)?,
+      "Type" : (String)?
+    )
+
+    alias AliasList = Array(Alias)
+
+    alias AliasNames = Array(String)
+
+    alias AmazonResourceName = String
+
+    alias AnnotationKey = String
+
+    alias AnnotationValue = NamedTuple(
+      "NumberValue" : (NullableDouble)?,
+      "BooleanValue" : (NullableBoolean)?,
+      "StringValue" : (String)?
+    )
+
+    alias Annotations = Hash(AnnotationKey,ValuesWithServiceIds)
+
+    alias AnomalousService = NamedTuple(
+      "ServiceId" : (ServiceId)?
+    )
+
+    alias AnomalousServiceList = Array(AnomalousService)
+
+    alias AttributeKey = String
+
+    alias AttributeMap = Hash(AttributeKey,AttributeValue)
+
+    alias AttributeValue = String
+
+    alias AvailabilityZoneDetail = NamedTuple(
+      "Name" : (String)?
+    )
+
+    alias BackendConnectionErrors = NamedTuple(
+      "TimeoutCount" : (NullableInteger)?,
+      "ConnectionRefusedCount" : (NullableInteger)?,
+      "HTTPCode4XXCount" : (NullableInteger)?,
+      "HTTPCode5XXCount" : (NullableInteger)?,
+      "UnknownHostCount" : (NullableInteger)?,
+      "OtherCount" : (NullableInteger)?
+    )
+
+    alias BatchGetTracesRequest = NamedTuple(
+      "TraceIds" : TraceIdList,
+      "NextToken" : (String)?
+    )
+
+    alias BatchGetTracesResult = NamedTuple(
+      "Traces" : (TraceList)?,
+      "UnprocessedTraceIds" : (UnprocessedTraceIdList)?,
+      "NextToken" : (String)?
+    )
+
+    alias Boolean = Bool
+
+    alias BorrowCount = Int32
+
+    alias ClientID = String
+
+    alias CreateGroupRequest = NamedTuple(
+      "GroupName" : GroupName,
+      "FilterExpression" : (FilterExpression)?,
+      "InsightsConfiguration" : (InsightsConfiguration)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateGroupResult = NamedTuple(
+      "Group" : (Group)?
+    )
+
+    alias CreateSamplingRuleRequest = NamedTuple(
+      "SamplingRule" : SamplingRule,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateSamplingRuleResult = NamedTuple(
+      "SamplingRuleRecord" : (SamplingRuleRecord)?
+    )
+
+    alias DeleteGroupRequest = NamedTuple(
+      "GroupName" : (GroupName)?,
+      "GroupARN" : (GroupARN)?
+    )
+
+    alias DeleteGroupResult = NamedTuple(
+      
+    )
+
+    alias DeleteSamplingRuleRequest = NamedTuple(
+      "RuleName" : (String)?,
+      "RuleARN" : (String)?
+    )
+
+    alias DeleteSamplingRuleResult = NamedTuple(
+      "SamplingRuleRecord" : (SamplingRuleRecord)?
+    )
+
+    alias Double = Float64
+
+    alias EC2InstanceId = String
+
+    alias Edge = NamedTuple(
+      "ReferenceId" : (NullableInteger)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "SummaryStatistics" : (EdgeStatistics)?,
+      "ResponseTimeHistogram" : (Histogram)?,
+      "Aliases" : (AliasList)?
+    )
+
+    alias EdgeList = Array(Edge)
+
+    alias EdgeStatistics = NamedTuple(
+      "OkCount" : (NullableLong)?,
+      "ErrorStatistics" : (ErrorStatistics)?,
+      "FaultStatistics" : (FaultStatistics)?,
+      "TotalCount" : (NullableLong)?,
+      "TotalResponseTime" : (NullableDouble)?
+    )
+
+    alias EncryptionConfig = NamedTuple(
+      "KeyId" : (String)?,
+      "Status" : (EncryptionStatus)?,
+      "Type" : (EncryptionType)?
+    )
+
+    alias EncryptionKeyId = String
+
+    alias EncryptionStatus = String
+
+    alias EncryptionType = String
+
+    alias EntitySelectorExpression = String
+
+    alias ErrorMessage = String
+
+    alias ErrorRootCause = NamedTuple(
+      "Services" : (ErrorRootCauseServices)?,
+      "ClientImpacting" : (NullableBoolean)?
+    )
+
+    alias ErrorRootCauseEntity = NamedTuple(
+      "Name" : (String)?,
+      "Exceptions" : (RootCauseExceptions)?,
+      "Remote" : (NullableBoolean)?
+    )
+
+    alias ErrorRootCauseEntityPath = Array(ErrorRootCauseEntity)
+
+    alias ErrorRootCauseService = NamedTuple(
+      "Name" : (String)?,
+      "Names" : (ServiceNames)?,
+      "Type" : (String)?,
+      "AccountId" : (String)?,
+      "EntityPath" : (ErrorRootCauseEntityPath)?,
+      "Inferred" : (NullableBoolean)?
+    )
+
+    alias ErrorRootCauseServices = Array(ErrorRootCauseService)
+
+    alias ErrorRootCauses = Array(ErrorRootCause)
+
+    alias ErrorStatistics = NamedTuple(
+      "ThrottleCount" : (NullableLong)?,
+      "OtherCount" : (NullableLong)?,
+      "TotalCount" : (NullableLong)?
+    )
+
+    alias EventSummaryText = String
+
+    alias FaultRootCause = NamedTuple(
+      "Services" : (FaultRootCauseServices)?,
+      "ClientImpacting" : (NullableBoolean)?
+    )
+
+    alias FaultRootCauseEntity = NamedTuple(
+      "Name" : (String)?,
+      "Exceptions" : (RootCauseExceptions)?,
+      "Remote" : (NullableBoolean)?
+    )
+
+    alias FaultRootCauseEntityPath = Array(FaultRootCauseEntity)
+
+    alias FaultRootCauseService = NamedTuple(
+      "Name" : (String)?,
+      "Names" : (ServiceNames)?,
+      "Type" : (String)?,
+      "AccountId" : (String)?,
+      "EntityPath" : (FaultRootCauseEntityPath)?,
+      "Inferred" : (NullableBoolean)?
+    )
+
+    alias FaultRootCauseServices = Array(FaultRootCauseService)
+
+    alias FaultRootCauses = Array(FaultRootCause)
+
+    alias FaultStatistics = NamedTuple(
+      "OtherCount" : (NullableLong)?,
+      "TotalCount" : (NullableLong)?
+    )
+
+    alias FilterExpression = String
+
+    alias FixedRate = Float64
+
+    alias ForecastStatistics = NamedTuple(
+      "FaultCountHigh" : (NullableLong)?,
+      "FaultCountLow" : (NullableLong)?
+    )
+
+    alias GetEncryptionConfigRequest = NamedTuple(
+      
+    )
+
+    alias GetEncryptionConfigResult = NamedTuple(
+      "EncryptionConfig" : (EncryptionConfig)?
+    )
+
+    alias GetGroupRequest = NamedTuple(
+      "GroupName" : (GroupName)?,
+      "GroupARN" : (GroupARN)?
+    )
+
+    alias GetGroupResult = NamedTuple(
+      "Group" : (Group)?
+    )
+
+    alias GetGroupsNextToken = String
+
+    alias GetGroupsRequest = NamedTuple(
+      "NextToken" : (GetGroupsNextToken)?
+    )
+
+    alias GetGroupsResult = NamedTuple(
+      "Groups" : (GroupSummaryList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetInsightEventsMaxResults = Int32
+
+    alias GetInsightEventsRequest = NamedTuple(
+      "InsightId" : InsightId,
+      "MaxResults" : (GetInsightEventsMaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetInsightEventsResult = NamedTuple(
+      "InsightEvents" : (InsightEventList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetInsightImpactGraphRequest = NamedTuple(
+      "InsightId" : InsightId,
+      "StartTime" : Timestamp,
+      "EndTime" : Timestamp,
+      "NextToken" : (Token)?
+    )
+
+    alias GetInsightImpactGraphResult = NamedTuple(
+      "InsightId" : (InsightId)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "ServiceGraphStartTime" : (Timestamp)?,
+      "ServiceGraphEndTime" : (Timestamp)?,
+      "Services" : (InsightImpactGraphServiceList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetInsightRequest = NamedTuple(
+      "InsightId" : InsightId
+    )
+
+    alias GetInsightResult = NamedTuple(
+      "Insight" : (Insight)?
+    )
+
+    alias GetInsightSummariesMaxResults = Int32
+
+    alias GetInsightSummariesRequest = NamedTuple(
+      "States" : (InsightStateList)?,
+      "GroupARN" : (GroupARN)?,
+      "GroupName" : (GroupName)?,
+      "StartTime" : Timestamp,
+      "EndTime" : Timestamp,
+      "MaxResults" : (GetInsightSummariesMaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetInsightSummariesResult = NamedTuple(
+      "InsightSummaries" : (InsightSummaryList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetSamplingRulesRequest = NamedTuple(
+      "NextToken" : (String)?
+    )
+
+    alias GetSamplingRulesResult = NamedTuple(
+      "SamplingRuleRecords" : (SamplingRuleRecordList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetSamplingStatisticSummariesRequest = NamedTuple(
+      "NextToken" : (String)?
+    )
+
+    alias GetSamplingStatisticSummariesResult = NamedTuple(
+      "SamplingStatisticSummaries" : (SamplingStatisticSummaryList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetSamplingTargetsRequest = NamedTuple(
+      "SamplingStatisticsDocuments" : SamplingStatisticsDocumentList
+    )
+
+    alias GetSamplingTargetsResult = NamedTuple(
+      "SamplingTargetDocuments" : (SamplingTargetDocumentList)?,
+      "LastRuleModification" : (Timestamp)?,
+      "UnprocessedStatistics" : (UnprocessedStatisticsList)?
+    )
+
+    alias GetServiceGraphRequest = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : Timestamp,
+      "GroupName" : (GroupName)?,
+      "GroupARN" : (GroupARN)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetServiceGraphResult = NamedTuple(
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Services" : (ServiceList)?,
+      "ContainsOldGroupVersions" : (Boolean)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTimeSeriesServiceStatisticsRequest = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : Timestamp,
+      "GroupName" : (GroupName)?,
+      "GroupARN" : (GroupARN)?,
+      "EntitySelectorExpression" : (EntitySelectorExpression)?,
+      "Period" : (NullableInteger)?,
+      "ForecastStatistics" : (NullableBoolean)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTimeSeriesServiceStatisticsResult = NamedTuple(
+      "TimeSeriesServiceStatistics" : (TimeSeriesServiceStatisticsList)?,
+      "ContainsOldGroupVersions" : (Boolean)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTraceGraphRequest = NamedTuple(
+      "TraceIds" : TraceIdList,
+      "NextToken" : (String)?
+    )
+
+    alias GetTraceGraphResult = NamedTuple(
+      "Services" : (ServiceList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTraceSummariesRequest = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : Timestamp,
+      "TimeRangeType" : (TimeRangeType)?,
+      "Sampling" : (NullableBoolean)?,
+      "SamplingStrategy" : (SamplingStrategy)?,
+      "FilterExpression" : (FilterExpression)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTraceSummariesResult = NamedTuple(
+      "TraceSummaries" : (TraceSummaryList)?,
+      "ApproximateTime" : (Timestamp)?,
+      "TracesProcessedCount" : (NullableLong)?,
+      "NextToken" : (String)?
+    )
+
+    alias Group = NamedTuple(
+      "GroupName" : (String)?,
+      "GroupARN" : (String)?,
+      "FilterExpression" : (String)?,
+      "InsightsConfiguration" : (InsightsConfiguration)?
+    )
+
+    alias GroupARN = String
+
+    alias GroupName = String
+
+    alias GroupSummary = NamedTuple(
+      "GroupName" : (String)?,
+      "GroupARN" : (String)?,
+      "FilterExpression" : (String)?,
+      "InsightsConfiguration" : (InsightsConfiguration)?
+    )
+
+    alias GroupSummaryList = Array(GroupSummary)
+
+    alias HTTPMethod = String
+
+    alias Histogram = Array(HistogramEntry)
+
+    alias HistogramEntry = NamedTuple(
+      "Value" : (Double)?,
+      "Count" : (Integer)?
+    )
+
+    alias Host = String
+
+    alias Hostname = String
+
+    alias Http = NamedTuple(
+      "HttpURL" : (String)?,
+      "HttpStatus" : (NullableInteger)?,
+      "HttpMethod" : (String)?,
+      "UserAgent" : (String)?,
+      "ClientIp" : (String)?
+    )
+
+    alias Insight = NamedTuple(
+      "InsightId" : (InsightId)?,
+      "GroupARN" : (GroupARN)?,
+      "GroupName" : (GroupName)?,
+      "RootCauseServiceId" : (ServiceId)?,
+      "Categories" : (InsightCategoryList)?,
+      "State" : (InsightState)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Summary" : (InsightSummaryText)?,
+      "ClientRequestImpactStatistics" : (RequestImpactStatistics)?,
+      "RootCauseServiceRequestImpactStatistics" : (RequestImpactStatistics)?,
+      "TopAnomalousServices" : (AnomalousServiceList)?
+    )
+
+    alias InsightCategory = String
+
+    alias InsightCategoryList = Array(InsightCategory)
+
+    alias InsightEvent = NamedTuple(
+      "Summary" : (EventSummaryText)?,
+      "EventTime" : (Timestamp)?,
+      "ClientRequestImpactStatistics" : (RequestImpactStatistics)?,
+      "RootCauseServiceRequestImpactStatistics" : (RequestImpactStatistics)?,
+      "TopAnomalousServices" : (AnomalousServiceList)?
+    )
+
+    alias InsightEventList = Array(InsightEvent)
+
+    alias InsightId = String
+
+    alias InsightImpactGraphEdge = NamedTuple(
+      "ReferenceId" : (NullableInteger)?
+    )
+
+    alias InsightImpactGraphEdgeList = Array(InsightImpactGraphEdge)
+
+    alias InsightImpactGraphService = NamedTuple(
+      "ReferenceId" : (NullableInteger)?,
+      "Type" : (String)?,
+      "Name" : (String)?,
+      "Names" : (ServiceNames)?,
+      "AccountId" : (String)?,
+      "Edges" : (InsightImpactGraphEdgeList)?
+    )
+
+    alias InsightImpactGraphServiceList = Array(InsightImpactGraphService)
+
+    alias InsightState = String
+
+    alias InsightStateList = Array(InsightState)
+
+    alias InsightSummary = NamedTuple(
+      "InsightId" : (InsightId)?,
+      "GroupARN" : (GroupARN)?,
+      "GroupName" : (GroupName)?,
+      "RootCauseServiceId" : (ServiceId)?,
+      "Categories" : (InsightCategoryList)?,
+      "State" : (InsightState)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Summary" : (InsightSummaryText)?,
+      "ClientRequestImpactStatistics" : (RequestImpactStatistics)?,
+      "RootCauseServiceRequestImpactStatistics" : (RequestImpactStatistics)?,
+      "TopAnomalousServices" : (AnomalousServiceList)?,
+      "LastUpdateTime" : (Timestamp)?
+    )
+
+    alias InsightSummaryList = Array(InsightSummary)
+
+    alias InsightSummaryText = String
+
+    alias InsightsConfiguration = NamedTuple(
+      "InsightsEnabled" : (NullableBoolean)?,
+      "NotificationsEnabled" : (NullableBoolean)?
+    )
+
+    alias InstanceIdDetail = NamedTuple(
+      "Id" : (String)?
+    )
+
+    alias Integer = Int32
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (String)?
+    )
+
+    alias NullableBoolean = Bool
+
+    alias NullableDouble = Float64
+
+    alias NullableInteger = Int32
+
+    alias NullableLong = Int64
+
+    alias Priority = Int32
+
+    alias PutEncryptionConfigRequest = NamedTuple(
+      "KeyId" : (EncryptionKeyId)?,
+      "Type" : EncryptionType
+    )
+
+    alias PutEncryptionConfigResult = NamedTuple(
+      "EncryptionConfig" : (EncryptionConfig)?
+    )
+
+    alias PutTelemetryRecordsRequest = NamedTuple(
+      "TelemetryRecords" : TelemetryRecordList,
+      "EC2InstanceId" : (EC2InstanceId)?,
+      "Hostname" : (Hostname)?,
+      "ResourceARN" : (ResourceARN)?
+    )
+
+    alias PutTelemetryRecordsResult = NamedTuple(
+      
+    )
+
+    alias PutTraceSegmentsRequest = NamedTuple(
+      "TraceSegmentDocuments" : TraceSegmentDocumentList
+    )
+
+    alias PutTraceSegmentsResult = NamedTuple(
+      "UnprocessedTraceSegments" : (UnprocessedTraceSegmentList)?
+    )
+
+    alias RequestCount = Int32
+
+    alias RequestImpactStatistics = NamedTuple(
+      "FaultCount" : (NullableLong)?,
+      "OkCount" : (NullableLong)?,
+      "TotalCount" : (NullableLong)?
+    )
+
+    alias ReservoirSize = Int32
+
+    alias ResourceARN = String
+
+    alias ResourceARNDetail = NamedTuple(
+      "ARN" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceName" : (AmazonResourceName)?
+    )
+
+    alias ResponseTimeRootCause = NamedTuple(
+      "Services" : (ResponseTimeRootCauseServices)?,
+      "ClientImpacting" : (NullableBoolean)?
+    )
+
+    alias ResponseTimeRootCauseEntity = NamedTuple(
+      "Name" : (String)?,
+      "Coverage" : (NullableDouble)?,
+      "Remote" : (NullableBoolean)?
+    )
+
+    alias ResponseTimeRootCauseEntityPath = Array(ResponseTimeRootCauseEntity)
+
+    alias ResponseTimeRootCauseService = NamedTuple(
+      "Name" : (String)?,
+      "Names" : (ServiceNames)?,
+      "Type" : (String)?,
+      "AccountId" : (String)?,
+      "EntityPath" : (ResponseTimeRootCauseEntityPath)?,
+      "Inferred" : (NullableBoolean)?
+    )
+
+    alias ResponseTimeRootCauseServices = Array(ResponseTimeRootCauseService)
+
+    alias ResponseTimeRootCauses = Array(ResponseTimeRootCause)
+
+    alias RootCauseException = NamedTuple(
+      "Name" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias RootCauseExceptions = Array(RootCauseException)
+
+    alias RuleLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias RuleName = String
+
+    alias SampledCount = Int32
+
+    alias SamplingRule = NamedTuple(
+      "RuleName" : (RuleName)?,
+      "RuleARN" : (String)?,
+      "ResourceARN" : ResourceARN,
+      "Priority" : Priority,
+      "FixedRate" : FixedRate,
+      "ReservoirSize" : ReservoirSize,
+      "ServiceName" : ServiceName,
+      "ServiceType" : ServiceType,
+      "Host" : Host,
+      "HTTPMethod" : HTTPMethod,
+      "URLPath" : URLPath,
+      "Version" : Version,
+      "Attributes" : (AttributeMap)?
+    )
+
+    alias SamplingRuleRecord = NamedTuple(
+      "SamplingRule" : (SamplingRule)?,
+      "CreatedAt" : (Timestamp)?,
+      "ModifiedAt" : (Timestamp)?
+    )
+
+    alias SamplingRuleRecordList = Array(SamplingRuleRecord)
+
+    alias SamplingRuleUpdate = NamedTuple(
+      "RuleName" : (RuleName)?,
+      "RuleARN" : (String)?,
+      "ResourceARN" : (ResourceARN)?,
+      "Priority" : (NullableInteger)?,
+      "FixedRate" : (NullableDouble)?,
+      "ReservoirSize" : (NullableInteger)?,
+      "Host" : (Host)?,
+      "ServiceName" : (ServiceName)?,
+      "ServiceType" : (ServiceType)?,
+      "HTTPMethod" : (HTTPMethod)?,
+      "URLPath" : (URLPath)?,
+      "Attributes" : (AttributeMap)?
+    )
+
+    alias SamplingStatisticSummary = NamedTuple(
+      "RuleName" : (String)?,
+      "Timestamp" : (Timestamp)?,
+      "RequestCount" : (Integer)?,
+      "BorrowCount" : (Integer)?,
+      "SampledCount" : (Integer)?
+    )
+
+    alias SamplingStatisticSummaryList = Array(SamplingStatisticSummary)
+
+    alias SamplingStatisticsDocument = NamedTuple(
+      "RuleName" : RuleName,
+      "ClientID" : ClientID,
+      "Timestamp" : Timestamp,
+      "RequestCount" : RequestCount,
+      "SampledCount" : SampledCount,
+      "BorrowCount" : (BorrowCount)?
+    )
+
+    alias SamplingStatisticsDocumentList = Array(SamplingStatisticsDocument)
+
+    alias SamplingStrategy = NamedTuple(
+      "Name" : (SamplingStrategyName)?,
+      "Value" : (NullableDouble)?
+    )
+
+    alias SamplingStrategyName = String
+
+    alias SamplingTargetDocument = NamedTuple(
+      "RuleName" : (String)?,
+      "FixedRate" : (Double)?,
+      "ReservoirQuota" : (NullableInteger)?,
+      "ReservoirQuotaTTL" : (Timestamp)?,
+      "Interval" : (NullableInteger)?
+    )
+
+    alias SamplingTargetDocumentList = Array(SamplingTargetDocument)
+
+    alias Segment = NamedTuple(
+      "Id" : (SegmentId)?,
+      "Document" : (SegmentDocument)?
+    )
+
+    alias SegmentDocument = String
+
+    alias SegmentId = String
+
+    alias SegmentList = Array(Segment)
+
+    alias Service = NamedTuple(
+      "ReferenceId" : (NullableInteger)?,
+      "Name" : (String)?,
+      "Names" : (ServiceNames)?,
+      "Root" : (NullableBoolean)?,
+      "AccountId" : (String)?,
+      "Type" : (String)?,
+      "State" : (String)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Edges" : (EdgeList)?,
+      "SummaryStatistics" : (ServiceStatistics)?,
+      "DurationHistogram" : (Histogram)?,
+      "ResponseTimeHistogram" : (Histogram)?
+    )
+
+    alias ServiceId = NamedTuple(
+      "Name" : (String)?,
+      "Names" : (ServiceNames)?,
+      "AccountId" : (String)?,
+      "Type" : (String)?
+    )
+
+    alias ServiceIds = Array(ServiceId)
+
+    alias ServiceList = Array(Service)
+
+    alias ServiceName = String
+
+    alias ServiceNames = Array(String)
+
+    alias ServiceStatistics = NamedTuple(
+      "OkCount" : (NullableLong)?,
+      "ErrorStatistics" : (ErrorStatistics)?,
+      "FaultStatistics" : (FaultStatistics)?,
+      "TotalCount" : (NullableLong)?,
+      "TotalResponseTime" : (NullableDouble)?
+    )
+
+    alias ServiceType = String
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TelemetryRecord = NamedTuple(
+      "Timestamp" : Timestamp,
+      "SegmentsReceivedCount" : (NullableInteger)?,
+      "SegmentsSentCount" : (NullableInteger)?,
+      "SegmentsSpilloverCount" : (NullableInteger)?,
+      "SegmentsRejectedCount" : (NullableInteger)?,
+      "BackendConnectionErrors" : (BackendConnectionErrors)?
+    )
+
+    alias TelemetryRecordList = Array(TelemetryRecord)
+
+    alias ThrottledException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias TimeRangeType = String
+
+    alias TimeSeriesServiceStatistics = NamedTuple(
+      "Timestamp" : (Timestamp)?,
+      "EdgeSummaryStatistics" : (EdgeStatistics)?,
+      "ServiceSummaryStatistics" : (ServiceStatistics)?,
+      "ServiceForecastStatistics" : (ForecastStatistics)?,
+      "ResponseTimeHistogram" : (Histogram)?
+    )
+
+    alias TimeSeriesServiceStatisticsList = Array(TimeSeriesServiceStatistics)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias TooManyTagsException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceName" : (AmazonResourceName)?
+    )
+
+    alias Trace = NamedTuple(
+      "Id" : (TraceId)?,
+      "Duration" : (NullableDouble)?,
+      "LimitExceeded" : (NullableBoolean)?,
+      "Segments" : (SegmentList)?
+    )
+
+    alias TraceAvailabilityZones = Array(AvailabilityZoneDetail)
+
+    alias TraceId = String
+
+    alias TraceIdList = Array(TraceId)
+
+    alias TraceInstanceIds = Array(InstanceIdDetail)
+
+    alias TraceList = Array(Trace)
+
+    alias TraceResourceARNs = Array(ResourceARNDetail)
+
+    alias TraceSegmentDocument = String
+
+    alias TraceSegmentDocumentList = Array(TraceSegmentDocument)
+
+    alias TraceSummary = NamedTuple(
+      "Id" : (TraceId)?,
+      "Duration" : (NullableDouble)?,
+      "ResponseTime" : (NullableDouble)?,
+      "HasFault" : (NullableBoolean)?,
+      "HasError" : (NullableBoolean)?,
+      "HasThrottle" : (NullableBoolean)?,
+      "IsPartial" : (NullableBoolean)?,
+      "Http" : (Http)?,
+      "Annotations" : (Annotations)?,
+      "Users" : (TraceUsers)?,
+      "ServiceIds" : (ServiceIds)?,
+      "ResourceARNs" : (TraceResourceARNs)?,
+      "InstanceIds" : (TraceInstanceIds)?,
+      "AvailabilityZones" : (TraceAvailabilityZones)?,
+      "EntryPoint" : (ServiceId)?,
+      "FaultRootCauses" : (FaultRootCauses)?,
+      "ErrorRootCauses" : (ErrorRootCauses)?,
+      "ResponseTimeRootCauses" : (ResponseTimeRootCauses)?,
+      "Revision" : (Integer)?,
+      "MatchedEventTime" : (Timestamp)?
+    )
+
+    alias TraceSummaryList = Array(TraceSummary)
+
+    alias TraceUser = NamedTuple(
+      "UserName" : (String)?,
+      "ServiceIds" : (ServiceIds)?
+    )
+
+    alias TraceUsers = Array(TraceUser)
+
+    alias URLPath = String
+
+    alias UnprocessedStatistics = NamedTuple(
+      "RuleName" : (String)?,
+      "ErrorCode" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias UnprocessedStatisticsList = Array(UnprocessedStatistics)
+
+    alias UnprocessedTraceIdList = Array(TraceId)
+
+    alias UnprocessedTraceSegment = NamedTuple(
+      "Id" : (String)?,
+      "ErrorCode" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias UnprocessedTraceSegmentList = Array(UnprocessedTraceSegment)
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateGroupRequest = NamedTuple(
+      "GroupName" : (GroupName)?,
+      "GroupARN" : (GroupARN)?,
+      "FilterExpression" : (FilterExpression)?,
+      "InsightsConfiguration" : (InsightsConfiguration)?
+    )
+
+    alias UpdateGroupResult = NamedTuple(
+      "Group" : (Group)?
+    )
+
+    alias UpdateSamplingRuleRequest = NamedTuple(
+      "SamplingRuleUpdate" : SamplingRuleUpdate
+    )
+
+    alias UpdateSamplingRuleResult = NamedTuple(
+      "SamplingRuleRecord" : (SamplingRuleRecord)?
+    )
+
+    alias ValueWithServiceIds = NamedTuple(
+      "AnnotationValue" : (AnnotationValue)?,
+      "ServiceIds" : (ServiceIds)?
+    )
+
+    alias ValuesWithServiceIds = Array(ValueWithServiceIds)
+
+    alias Version = Int32
   end
 end

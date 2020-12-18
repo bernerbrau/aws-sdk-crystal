@@ -455,8 +455,8 @@ module Aws::ACMPCA
     #
     # @overload create_certificate_authority(**params)
     # @param [Hash] params ({})
-    def create_certificate_authority(params = {}, **options)
-      req = build_request(:create_certificate_authority, params)
+    def create_certificate_authority(, **options)
+      req = build_request(:create_certificate_authority, )
       req.send_request(options)
     end
 
@@ -519,8 +519,8 @@ module Aws::ACMPCA
     #
     # @overload create_certificate_authority_audit_report(**params)
     # @param [Hash] params ({})
-    def create_certificate_authority_audit_report(params = {}, **options)
-      req = build_request(:create_certificate_authority_audit_report, params)
+    def create_certificate_authority_audit_report(, **options)
+      req = build_request(:create_certificate_authority_audit_report, )
       req.send_request(options)
     end
 
@@ -592,8 +592,8 @@ module Aws::ACMPCA
     #
     # @overload create_permission(**params)
     # @param [Hash] params ({})
-    def create_permission(params = {}, **options)
-      req = build_request(:create_permission, params)
+    def create_permission(, **options)
+      req = build_request(:create_permission, )
       req.send_request(options)
     end
 
@@ -664,8 +664,8 @@ module Aws::ACMPCA
     #
     # @overload delete_certificate_authority(**params)
     # @param [Hash] params ({})
-    def delete_certificate_authority(params = {}, **options)
-      req = build_request(:delete_certificate_authority, params)
+    def delete_certificate_authority(, **options)
+      req = build_request(:delete_certificate_authority, )
       req.send_request(options)
     end
 
@@ -736,8 +736,8 @@ module Aws::ACMPCA
     #
     # @overload delete_permission(**params)
     # @param [Hash] params ({})
-    def delete_permission(params = {}, **options)
-      req = build_request(:delete_permission, params)
+    def delete_permission(, **options)
+      req = build_request(:delete_permission, )
       req.send_request(options)
     end
 
@@ -806,8 +806,8 @@ module Aws::ACMPCA
     #
     # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, **options)
-      req = build_request(:delete_policy, params)
+    def delete_policy(, **options)
+      req = build_request(:delete_policy, )
       req.send_request(options)
     end
 
@@ -897,8 +897,8 @@ module Aws::ACMPCA
     #
     # @overload describe_certificate_authority(**params)
     # @param [Hash] params ({})
-    def describe_certificate_authority(params = {}, **options)
-      req = build_request(:describe_certificate_authority, params)
+    def describe_certificate_authority(, **options)
+      req = build_request(:describe_certificate_authority, )
       req.send_request(options)
     end
 
@@ -959,8 +959,8 @@ module Aws::ACMPCA
     #
     # @overload describe_certificate_authority_audit_report(**params)
     # @param [Hash] params ({})
-    def describe_certificate_authority_audit_report(params = {}, **options)
-      req = build_request(:describe_certificate_authority_audit_report, params)
+    def describe_certificate_authority_audit_report(, **options)
+      req = build_request(:describe_certificate_authority_audit_report, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::ACMPCA
     #
     # @overload get_certificate(**params)
     # @param [Hash] params ({})
-    def get_certificate(params = {}, **options)
-      req = build_request(:get_certificate, params)
+    def get_certificate(, **options)
+      req = build_request(:get_certificate, )
       req.send_request(options)
     end
 
@@ -1061,8 +1061,8 @@ module Aws::ACMPCA
     #
     # @overload get_certificate_authority_certificate(**params)
     # @param [Hash] params ({})
-    def get_certificate_authority_certificate(params = {}, **options)
-      req = build_request(:get_certificate_authority_certificate, params)
+    def get_certificate_authority_certificate(, **options)
+      req = build_request(:get_certificate_authority_certificate, )
       req.send_request(options)
     end
 
@@ -1113,8 +1113,8 @@ module Aws::ACMPCA
     #
     # @overload get_certificate_authority_csr(**params)
     # @param [Hash] params ({})
-    def get_certificate_authority_csr(params = {}, **options)
-      req = build_request(:get_certificate_authority_csr, params)
+    def get_certificate_authority_csr(, **options)
+      req = build_request(:get_certificate_authority_csr, )
       req.send_request(options)
     end
 
@@ -1176,8 +1176,8 @@ module Aws::ACMPCA
     #
     # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, **options)
-      req = build_request(:get_policy, params)
+    def get_policy(, **options)
+      req = build_request(:get_policy, )
       req.send_request(options)
     end
 
@@ -1310,8 +1310,8 @@ module Aws::ACMPCA
     #
     # @overload import_certificate_authority_certificate(**params)
     # @param [Hash] params ({})
-    def import_certificate_authority_certificate(params = {}, **options)
-      req = build_request(:import_certificate_authority_certificate, params)
+    def import_certificate_authority_certificate(, **options)
+      req = build_request(:import_certificate_authority_certificate, )
       req.send_request(options)
     end
 
@@ -1465,8 +1465,8 @@ module Aws::ACMPCA
     #
     # @overload issue_certificate(**params)
     # @param [Hash] params ({})
-    def issue_certificate(params = {}, **options)
-      req = build_request(:issue_certificate, params)
+    def issue_certificate(, **options)
+      req = build_request(:issue_certificate, )
       req.send_request(options)
     end
 
@@ -1549,8 +1549,8 @@ module Aws::ACMPCA
     #
     # @overload list_certificate_authorities(**params)
     # @param [Hash] params ({})
-    def list_certificate_authorities(params = {}, **options)
-      req = build_request(:list_certificate_authorities, params)
+    def list_certificate_authorities(, **options)
+      req = build_request(:list_certificate_authorities, )
       req.send_request(options)
     end
 
@@ -1640,8 +1640,8 @@ module Aws::ACMPCA
     #
     # @overload list_permissions(**params)
     # @param [Hash] params ({})
-    def list_permissions(params = {}, **options)
-      req = build_request(:list_permissions, params)
+    def list_permissions(, **options)
+      req = build_request(:list_permissions, )
       req.send_request(options)
     end
 
@@ -1706,8 +1706,8 @@ module Aws::ACMPCA
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -1784,8 +1784,8 @@ module Aws::ACMPCA
     #
     # @overload put_policy(**params)
     # @param [Hash] params ({})
-    def put_policy(params = {}, **options)
-      req = build_request(:put_policy, params)
+    def put_policy(, **options)
+      req = build_request(:put_policy, )
       req.send_request(options)
     end
 
@@ -1838,8 +1838,8 @@ module Aws::ACMPCA
     #
     # @overload restore_certificate_authority(**params)
     # @param [Hash] params ({})
-    def restore_certificate_authority(params = {}, **options)
-      req = build_request(:restore_certificate_authority, params)
+    def restore_certificate_authority(, **options)
+      req = build_request(:restore_certificate_authority, )
       req.send_request(options)
     end
 
@@ -1918,8 +1918,8 @@ module Aws::ACMPCA
     #
     # @overload revoke_certificate(**params)
     # @param [Hash] params ({})
-    def revoke_certificate(params = {}, **options)
-      req = build_request(:revoke_certificate, params)
+    def revoke_certificate(, **options)
+      req = build_request(:revoke_certificate, )
       req.send_request(options)
     end
 
@@ -1971,8 +1971,8 @@ module Aws::ACMPCA
     #
     # @overload tag_certificate_authority(**params)
     # @param [Hash] params ({})
-    def tag_certificate_authority(params = {}, **options)
-      req = build_request(:tag_certificate_authority, params)
+    def tag_certificate_authority(, **options)
+      req = build_request(:tag_certificate_authority, )
       req.send_request(options)
     end
 
@@ -2021,8 +2021,8 @@ module Aws::ACMPCA
     #
     # @overload untag_certificate_authority(**params)
     # @param [Hash] params ({})
-    def untag_certificate_authority(params = {}, **options)
-      req = build_request(:untag_certificate_authority, params)
+    def untag_certificate_authority(, **options)
+      req = build_request(:untag_certificate_authority, )
       req.send_request(options)
     end
 
@@ -2077,8 +2077,8 @@ module Aws::ACMPCA
     #
     # @overload update_certificate_authority(**params)
     # @param [Hash] params ({})
-    def update_certificate_authority(params = {}, **options)
-      req = build_request(:update_certificate_authority, params)
+    def update_certificate_authority(, **options)
+      req = build_request(:update_certificate_authority, )
       req.send_request(options)
     end
 

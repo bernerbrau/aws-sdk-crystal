@@ -377,8 +377,8 @@ module Aws::MigrationHubConfig
     #
     # @overload create_home_region_control(**params)
     # @param [Hash] params ({})
-    def create_home_region_control(params = {}, **options)
-      req = build_request(:create_home_region_control, params)
+    def create_home_region_control(, **options)
+      req = build_request(:create_home_region_control, )
       req.send_request(options)
     end
 
@@ -438,8 +438,8 @@ module Aws::MigrationHubConfig
     #
     # @overload describe_home_region_controls(**params)
     # @param [Hash] params ({})
-    def describe_home_region_controls(params = {}, **options)
-      req = build_request(:describe_home_region_controls, params)
+    def describe_home_region_controls(, **options)
+      req = build_request(:describe_home_region_controls, )
       req.send_request(options)
     end
 
@@ -462,8 +462,8 @@ module Aws::MigrationHubConfig
     #
     # @overload get_home_region(**params)
     # @param [Hash] params ({})
-    def get_home_region(params = {}, **options)
-      req = build_request(:get_home_region, params)
+    def get_home_region(, **options)
+      req = build_request(:get_home_region, )
       req.send_request(options)
     end
 

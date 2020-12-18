@@ -433,8 +433,8 @@ module Aws::AutoScalingPlans
     #
     # @overload create_scaling_plan(**params)
     # @param [Hash] params ({})
-    def create_scaling_plan(params = {}, **options)
-      req = build_request(:create_scaling_plan, params)
+    def create_scaling_plan(, **options)
+      req = build_request(:create_scaling_plan, )
       req.send_request(options)
     end
 
@@ -465,8 +465,8 @@ module Aws::AutoScalingPlans
     #
     # @overload delete_scaling_plan(**params)
     # @param [Hash] params ({})
-    def delete_scaling_plan(params = {}, **options)
-      req = build_request(:delete_scaling_plan, params)
+    def delete_scaling_plan(, **options)
+      req = build_request(:delete_scaling_plan, )
       req.send_request(options)
     end
 
@@ -532,8 +532,8 @@ module Aws::AutoScalingPlans
     #
     # @overload describe_scaling_plan_resources(**params)
     # @param [Hash] params ({})
-    def describe_scaling_plan_resources(params = {}, **options)
-      req = build_request(:describe_scaling_plan_resources, params)
+    def describe_scaling_plan_resources(, **options)
+      req = build_request(:describe_scaling_plan_resources, )
       req.send_request(options)
     end
 
@@ -639,8 +639,8 @@ module Aws::AutoScalingPlans
     #
     # @overload describe_scaling_plans(**params)
     # @param [Hash] params ({})
-    def describe_scaling_plans(params = {}, **options)
-      req = build_request(:describe_scaling_plans, params)
+    def describe_scaling_plans(, **options)
+      req = build_request(:describe_scaling_plans, )
       req.send_request(options)
     end
 
@@ -748,8 +748,8 @@ module Aws::AutoScalingPlans
     #
     # @overload get_scaling_plan_resource_forecast_data(**params)
     # @param [Hash] params ({})
-    def get_scaling_plan_resource_forecast_data(params = {}, **options)
-      req = build_request(:get_scaling_plan_resource_forecast_data, params)
+    def get_scaling_plan_resource_forecast_data(, **options)
+      req = build_request(:get_scaling_plan_resource_forecast_data, )
       req.send_request(options)
     end
 
@@ -848,8 +848,8 @@ module Aws::AutoScalingPlans
     #
     # @overload update_scaling_plan(**params)
     # @param [Hash] params ({})
-    def update_scaling_plan(params = {}, **options)
-      req = build_request(:update_scaling_plan, params)
+    def update_scaling_plan(, **options)
+      req = build_request(:update_scaling_plan, )
       req.send_request(options)
     end
 

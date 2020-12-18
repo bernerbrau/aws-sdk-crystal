@@ -416,8 +416,8 @@ module Aws::DeviceFarm
     #
     # @overload create_device_pool(**params)
     # @param [Hash] params ({})
-    def create_device_pool(params = {}, **options)
-      req = build_request(:create_device_pool, params)
+    def create_device_pool(, **options)
+      req = build_request(:create_device_pool, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::DeviceFarm
     #
     # @overload create_instance_profile(**params)
     # @param [Hash] params ({})
-    def create_instance_profile(params = {}, **options)
-      req = build_request(:create_instance_profile, params)
+    def create_instance_profile(, **options)
+      req = build_request(:create_instance_profile, )
       req.send_request(options)
     end
 
@@ -565,8 +565,8 @@ module Aws::DeviceFarm
     #
     # @overload create_network_profile(**params)
     # @param [Hash] params ({})
-    def create_network_profile(params = {}, **options)
-      req = build_request(:create_network_profile, params)
+    def create_network_profile(, **options)
+      req = build_request(:create_network_profile, )
       req.send_request(options)
     end
 
@@ -620,8 +620,8 @@ module Aws::DeviceFarm
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -823,8 +823,8 @@ module Aws::DeviceFarm
     #
     # @overload create_remote_access_session(**params)
     # @param [Hash] params ({})
-    def create_remote_access_session(params = {}, **options)
-      req = build_request(:create_remote_access_session, params)
+    def create_remote_access_session(, **options)
+      req = build_request(:create_remote_access_session, )
       req.send_request(options)
     end
 
@@ -859,8 +859,8 @@ module Aws::DeviceFarm
     #
     # @overload create_test_grid_project(**params)
     # @param [Hash] params ({})
-    def create_test_grid_project(params = {}, **options)
-      req = build_request(:create_test_grid_project, params)
+    def create_test_grid_project(, **options)
+      req = build_request(:create_test_grid_project, )
       req.send_request(options)
     end
 
@@ -895,8 +895,8 @@ module Aws::DeviceFarm
     #
     # @overload create_test_grid_url(**params)
     # @param [Hash] params ({})
-    def create_test_grid_url(params = {}, **options)
-      req = build_request(:create_test_grid_url, params)
+    def create_test_grid_url(, **options)
+      req = build_request(:create_test_grid_url, )
       req.send_request(options)
     end
 
@@ -1040,8 +1040,8 @@ module Aws::DeviceFarm
     #
     # @overload create_upload(**params)
     # @param [Hash] params ({})
-    def create_upload(params = {}, **options)
-      req = build_request(:create_upload, params)
+    def create_upload(, **options)
+      req = build_request(:create_upload, )
       req.send_request(options)
     end
 
@@ -1089,8 +1089,8 @@ module Aws::DeviceFarm
     #
     # @overload create_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def create_vpce_configuration(params = {}, **options)
-      req = build_request(:create_vpce_configuration, params)
+    def create_vpce_configuration(, **options)
+      req = build_request(:create_vpce_configuration, )
       req.send_request(options)
     end
 
@@ -1126,8 +1126,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_device_pool(**params)
     # @param [Hash] params ({})
-    def delete_device_pool(params = {}, **options)
-      req = build_request(:delete_device_pool, params)
+    def delete_device_pool(, **options)
+      req = build_request(:delete_device_pool, )
       req.send_request(options)
     end
 
@@ -1150,8 +1150,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_instance_profile(**params)
     # @param [Hash] params ({})
-    def delete_instance_profile(params = {}, **options)
-      req = build_request(:delete_instance_profile, params)
+    def delete_instance_profile(, **options)
+      req = build_request(:delete_instance_profile, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_network_profile(**params)
     # @param [Hash] params ({})
-    def delete_network_profile(params = {}, **options)
-      req = build_request(:delete_network_profile, params)
+    def delete_network_profile(, **options)
+      req = build_request(:delete_network_profile, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -1246,8 +1246,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_remote_access_session(**params)
     # @param [Hash] params ({})
-    def delete_remote_access_session(params = {}, **options)
-      req = build_request(:delete_remote_access_session, params)
+    def delete_remote_access_session(, **options)
+      req = build_request(:delete_remote_access_session, )
       req.send_request(options)
     end
 
@@ -1283,8 +1283,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_run(**params)
     # @param [Hash] params ({})
-    def delete_run(params = {}, **options)
-      req = build_request(:delete_run, params)
+    def delete_run(, **options)
+      req = build_request(:delete_run, )
       req.send_request(options)
     end
 
@@ -1312,8 +1312,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_test_grid_project(**params)
     # @param [Hash] params ({})
-    def delete_test_grid_project(params = {}, **options)
-      req = build_request(:delete_test_grid_project, params)
+    def delete_test_grid_project(, **options)
+      req = build_request(:delete_test_grid_project, )
       req.send_request(options)
     end
 
@@ -1348,8 +1348,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_upload(**params)
     # @param [Hash] params ({})
-    def delete_upload(params = {}, **options)
-      req = build_request(:delete_upload, params)
+    def delete_upload(, **options)
+      req = build_request(:delete_upload, )
       req.send_request(options)
     end
 
@@ -1372,8 +1372,8 @@ module Aws::DeviceFarm
     #
     # @overload delete_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def delete_vpce_configuration(params = {}, **options)
-      req = build_request(:delete_vpce_configuration, params)
+    def delete_vpce_configuration(, **options)
+      req = build_request(:delete_vpce_configuration, )
       req.send_request(options)
     end
 
@@ -1422,8 +1422,8 @@ module Aws::DeviceFarm
     #
     # @overload get_account_settings(**params)
     # @param [Hash] params ({})
-    def get_account_settings(params = {}, **options)
-      req = build_request(:get_account_settings, params)
+    def get_account_settings(, **options)
+      req = build_request(:get_account_settings, )
       req.send_request(options)
     end
 
@@ -1520,8 +1520,8 @@ module Aws::DeviceFarm
     #
     # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, **options)
-      req = build_request(:get_device, params)
+    def get_device(, **options)
+      req = build_request(:get_device, )
       req.send_request(options)
     end
 
@@ -1562,8 +1562,8 @@ module Aws::DeviceFarm
     #
     # @overload get_device_instance(**params)
     # @param [Hash] params ({})
-    def get_device_instance(params = {}, **options)
-      req = build_request(:get_device_instance, params)
+    def get_device_instance(, **options)
+      req = build_request(:get_device_instance, )
       req.send_request(options)
     end
 
@@ -1613,8 +1613,8 @@ module Aws::DeviceFarm
     #
     # @overload get_device_pool(**params)
     # @param [Hash] params ({})
-    def get_device_pool(params = {}, **options)
-      req = build_request(:get_device_pool, params)
+    def get_device_pool(, **options)
+      req = build_request(:get_device_pool, )
       req.send_request(options)
     end
 
@@ -1830,8 +1830,8 @@ module Aws::DeviceFarm
     #
     # @overload get_device_pool_compatibility(**params)
     # @param [Hash] params ({})
-    def get_device_pool_compatibility(params = {}, **options)
-      req = build_request(:get_device_pool_compatibility, params)
+    def get_device_pool_compatibility(, **options)
+      req = build_request(:get_device_pool_compatibility, )
       req.send_request(options)
     end
 
@@ -1864,8 +1864,8 @@ module Aws::DeviceFarm
     #
     # @overload get_instance_profile(**params)
     # @param [Hash] params ({})
-    def get_instance_profile(params = {}, **options)
-      req = build_request(:get_instance_profile, params)
+    def get_instance_profile(, **options)
+      req = build_request(:get_instance_profile, )
       req.send_request(options)
     end
 
@@ -1965,8 +1965,8 @@ module Aws::DeviceFarm
     #
     # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, **options)
-      req = build_request(:get_job, params)
+    def get_job(, **options)
+      req = build_request(:get_job, )
       req.send_request(options)
     end
 
@@ -2004,8 +2004,8 @@ module Aws::DeviceFarm
     #
     # @overload get_network_profile(**params)
     # @param [Hash] params ({})
-    def get_network_profile(params = {}, **options)
-      req = build_request(:get_network_profile, params)
+    def get_network_profile(, **options)
+      req = build_request(:get_network_profile, )
       req.send_request(options)
     end
 
@@ -2104,8 +2104,8 @@ module Aws::DeviceFarm
     #
     # @overload get_offering_status(**params)
     # @param [Hash] params ({})
-    def get_offering_status(params = {}, **options)
-      req = build_request(:get_offering_status, params)
+    def get_offering_status(, **options)
+      req = build_request(:get_offering_status, )
       req.send_request(options)
     end
 
@@ -2153,8 +2153,8 @@ module Aws::DeviceFarm
     #
     # @overload get_project(**params)
     # @param [Hash] params ({})
-    def get_project(params = {}, **options)
-      req = build_request(:get_project, params)
+    def get_project(, **options)
+      req = build_request(:get_project, )
       req.send_request(options)
     end
 
@@ -2255,8 +2255,8 @@ module Aws::DeviceFarm
     #
     # @overload get_remote_access_session(**params)
     # @param [Hash] params ({})
-    def get_remote_access_session(params = {}, **options)
-      req = build_request(:get_remote_access_session, params)
+    def get_remote_access_session(, **options)
+      req = build_request(:get_remote_access_session, )
       req.send_request(options)
     end
 
@@ -2386,8 +2386,8 @@ module Aws::DeviceFarm
     #
     # @overload get_run(**params)
     # @param [Hash] params ({})
-    def get_run(params = {}, **options)
-      req = build_request(:get_run, params)
+    def get_run(, **options)
+      req = build_request(:get_run, )
       req.send_request(options)
     end
 
@@ -2447,8 +2447,8 @@ module Aws::DeviceFarm
     #
     # @overload get_suite(**params)
     # @param [Hash] params ({})
-    def get_suite(params = {}, **options)
-      req = build_request(:get_suite, params)
+    def get_suite(, **options)
+      req = build_request(:get_suite, )
       req.send_request(options)
     end
 
@@ -2508,8 +2508,8 @@ module Aws::DeviceFarm
     #
     # @overload get_test(**params)
     # @param [Hash] params ({})
-    def get_test(params = {}, **options)
-      req = build_request(:get_test, params)
+    def get_test(, **options)
+      req = build_request(:get_test, )
       req.send_request(options)
     end
 
@@ -2540,8 +2540,8 @@ module Aws::DeviceFarm
     #
     # @overload get_test_grid_project(**params)
     # @param [Hash] params ({})
-    def get_test_grid_project(params = {}, **options)
-      req = build_request(:get_test_grid_project, params)
+    def get_test_grid_project(, **options)
+      req = build_request(:get_test_grid_project, )
       req.send_request(options)
     end
 
@@ -2590,8 +2590,8 @@ module Aws::DeviceFarm
     #
     # @overload get_test_grid_session(**params)
     # @param [Hash] params ({})
-    def get_test_grid_session(params = {}, **options)
-      req = build_request(:get_test_grid_session, params)
+    def get_test_grid_session(, **options)
+      req = build_request(:get_test_grid_session, )
       req.send_request(options)
     end
 
@@ -2642,8 +2642,8 @@ module Aws::DeviceFarm
     #
     # @overload get_upload(**params)
     # @param [Hash] params ({})
-    def get_upload(params = {}, **options)
-      req = build_request(:get_upload, params)
+    def get_upload(, **options)
+      req = build_request(:get_upload, )
       req.send_request(options)
     end
 
@@ -2676,8 +2676,8 @@ module Aws::DeviceFarm
     #
     # @overload get_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def get_vpce_configuration(params = {}, **options)
-      req = build_request(:get_vpce_configuration, params)
+    def get_vpce_configuration(, **options)
+      req = build_request(:get_vpce_configuration, )
       req.send_request(options)
     end
 
@@ -2736,8 +2736,8 @@ module Aws::DeviceFarm
     #
     # @overload install_to_remote_access_session(**params)
     # @param [Hash] params ({})
-    def install_to_remote_access_session(params = {}, **options)
-      req = build_request(:install_to_remote_access_session, params)
+    def install_to_remote_access_session(, **options)
+      req = build_request(:install_to_remote_access_session, )
       req.send_request(options)
     end
 
@@ -2801,8 +2801,8 @@ module Aws::DeviceFarm
     #
     # @overload list_artifacts(**params)
     # @param [Hash] params ({})
-    def list_artifacts(params = {}, **options)
-      req = build_request(:list_artifacts, params)
+    def list_artifacts(, **options)
+      req = build_request(:list_artifacts, )
       req.send_request(options)
     end
 
@@ -2852,8 +2852,8 @@ module Aws::DeviceFarm
     #
     # @overload list_device_instances(**params)
     # @param [Hash] params ({})
-    def list_device_instances(params = {}, **options)
-      req = build_request(:list_device_instances, params)
+    def list_device_instances(, **options)
+      req = build_request(:list_device_instances, )
       req.send_request(options)
     end
 
@@ -2951,8 +2951,8 @@ module Aws::DeviceFarm
     #
     # @overload list_device_pools(**params)
     # @param [Hash] params ({})
-    def list_device_pools(params = {}, **options)
-      req = build_request(:list_device_pools, params)
+    def list_device_pools(, **options)
+      req = build_request(:list_device_pools, )
       req.send_request(options)
     end
 
@@ -3117,8 +3117,8 @@ module Aws::DeviceFarm
     #
     # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, **options)
-      req = build_request(:list_devices, params)
+    def list_devices(, **options)
+      req = build_request(:list_devices, )
       req.send_request(options)
     end
 
@@ -3161,8 +3161,8 @@ module Aws::DeviceFarm
     #
     # @overload list_instance_profiles(**params)
     # @param [Hash] params ({})
-    def list_instance_profiles(params = {}, **options)
-      req = build_request(:list_instance_profiles, params)
+    def list_instance_profiles(, **options)
+      req = build_request(:list_instance_profiles, )
       req.send_request(options)
     end
 
@@ -3267,8 +3267,8 @@ module Aws::DeviceFarm
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -3321,8 +3321,8 @@ module Aws::DeviceFarm
     #
     # @overload list_network_profiles(**params)
     # @param [Hash] params ({})
-    def list_network_profiles(params = {}, **options)
-      req = build_request(:list_network_profiles, params)
+    def list_network_profiles(, **options)
+      req = build_request(:list_network_profiles, )
       req.send_request(options)
     end
 
@@ -3360,8 +3360,8 @@ module Aws::DeviceFarm
     #
     # @overload list_offering_promotions(**params)
     # @param [Hash] params ({})
-    def list_offering_promotions(params = {}, **options)
-      req = build_request(:list_offering_promotions, params)
+    def list_offering_promotions(, **options)
+      req = build_request(:list_offering_promotions, )
       req.send_request(options)
     end
 
@@ -3507,8 +3507,8 @@ module Aws::DeviceFarm
     #
     # @overload list_offering_transactions(**params)
     # @param [Hash] params ({})
-    def list_offering_transactions(params = {}, **options)
-      req = build_request(:list_offering_transactions, params)
+    def list_offering_transactions(, **options)
+      req = build_request(:list_offering_transactions, )
       req.send_request(options)
     end
 
@@ -3629,8 +3629,8 @@ module Aws::DeviceFarm
     #
     # @overload list_offerings(**params)
     # @param [Hash] params ({})
-    def list_offerings(params = {}, **options)
-      req = build_request(:list_offerings, params)
+    def list_offerings(, **options)
+      req = build_request(:list_offerings, )
       req.send_request(options)
     end
 
@@ -3699,8 +3699,8 @@ module Aws::DeviceFarm
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -3811,8 +3811,8 @@ module Aws::DeviceFarm
     #
     # @overload list_remote_access_sessions(**params)
     # @param [Hash] params ({})
-    def list_remote_access_sessions(params = {}, **options)
-      req = build_request(:list_remote_access_sessions, params)
+    def list_remote_access_sessions(, **options)
+      req = build_request(:list_remote_access_sessions, )
       req.send_request(options)
     end
 
@@ -3957,8 +3957,8 @@ module Aws::DeviceFarm
     #
     # @overload list_runs(**params)
     # @param [Hash] params ({})
-    def list_runs(params = {}, **options)
-      req = build_request(:list_runs, params)
+    def list_runs(, **options)
+      req = build_request(:list_runs, )
       req.send_request(options)
     end
 
@@ -4014,8 +4014,8 @@ module Aws::DeviceFarm
     #
     # @overload list_samples(**params)
     # @param [Hash] params ({})
-    def list_samples(params = {}, **options)
-      req = build_request(:list_samples, params)
+    def list_samples(, **options)
+      req = build_request(:list_samples, )
       req.send_request(options)
     end
 
@@ -4087,8 +4087,8 @@ module Aws::DeviceFarm
     #
     # @overload list_suites(**params)
     # @param [Hash] params ({})
-    def list_suites(params = {}, **options)
-      req = build_request(:list_suites, params)
+    def list_suites(, **options)
+      req = build_request(:list_suites, )
       req.send_request(options)
     end
 
@@ -4121,8 +4121,8 @@ module Aws::DeviceFarm
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4161,8 +4161,8 @@ module Aws::DeviceFarm
     #
     # @overload list_test_grid_projects(**params)
     # @param [Hash] params ({})
-    def list_test_grid_projects(params = {}, **options)
-      req = build_request(:list_test_grid_projects, params)
+    def list_test_grid_projects(, **options)
+      req = build_request(:list_test_grid_projects, )
       req.send_request(options)
     end
 
@@ -4206,8 +4206,8 @@ module Aws::DeviceFarm
     #
     # @overload list_test_grid_session_actions(**params)
     # @param [Hash] params ({})
-    def list_test_grid_session_actions(params = {}, **options)
-      req = build_request(:list_test_grid_session_actions, params)
+    def list_test_grid_session_actions(, **options)
+      req = build_request(:list_test_grid_session_actions, )
       req.send_request(options)
     end
 
@@ -4253,8 +4253,8 @@ module Aws::DeviceFarm
     #
     # @overload list_test_grid_session_artifacts(**params)
     # @param [Hash] params ({})
-    def list_test_grid_session_artifacts(params = {}, **options)
-      req = build_request(:list_test_grid_session_artifacts, params)
+    def list_test_grid_session_artifacts(, **options)
+      req = build_request(:list_test_grid_session_artifacts, )
       req.send_request(options)
     end
 
@@ -4319,8 +4319,8 @@ module Aws::DeviceFarm
     #
     # @overload list_test_grid_sessions(**params)
     # @param [Hash] params ({})
-    def list_test_grid_sessions(params = {}, **options)
-      req = build_request(:list_test_grid_sessions, params)
+    def list_test_grid_sessions(, **options)
+      req = build_request(:list_test_grid_sessions, )
       req.send_request(options)
     end
 
@@ -4392,8 +4392,8 @@ module Aws::DeviceFarm
     #
     # @overload list_tests(**params)
     # @param [Hash] params ({})
-    def list_tests(params = {}, **options)
-      req = build_request(:list_tests, params)
+    def list_tests(, **options)
+      req = build_request(:list_tests, )
       req.send_request(options)
     end
 
@@ -4502,8 +4502,8 @@ module Aws::DeviceFarm
     #
     # @overload list_unique_problems(**params)
     # @param [Hash] params ({})
-    def list_unique_problems(params = {}, **options)
-      req = build_request(:list_unique_problems, params)
+    def list_unique_problems(, **options)
+      req = build_request(:list_unique_problems, )
       req.send_request(options)
     end
 
@@ -4637,8 +4637,8 @@ module Aws::DeviceFarm
     #
     # @overload list_uploads(**params)
     # @param [Hash] params ({})
-    def list_uploads(params = {}, **options)
-      req = build_request(:list_uploads, params)
+    def list_uploads(, **options)
+      req = build_request(:list_uploads, )
       req.send_request(options)
     end
 
@@ -4680,8 +4680,8 @@ module Aws::DeviceFarm
     #
     # @overload list_vpce_configurations(**params)
     # @param [Hash] params ({})
-    def list_vpce_configurations(params = {}, **options)
-      req = build_request(:list_vpce_configurations, params)
+    def list_vpce_configurations(, **options)
+      req = build_request(:list_vpce_configurations, )
       req.send_request(options)
     end
 
@@ -4769,8 +4769,8 @@ module Aws::DeviceFarm
     #
     # @overload purchase_offering(**params)
     # @param [Hash] params ({})
-    def purchase_offering(params = {}, **options)
-      req = build_request(:purchase_offering, params)
+    def purchase_offering(, **options)
+      req = build_request(:purchase_offering, )
       req.send_request(options)
     end
 
@@ -4853,8 +4853,8 @@ module Aws::DeviceFarm
     #
     # @overload renew_offering(**params)
     # @param [Hash] params ({})
-    def renew_offering(params = {}, **options)
-      req = build_request(:renew_offering, params)
+    def renew_offering(, **options)
+      req = build_request(:renew_offering, )
       req.send_request(options)
     end
 
@@ -5046,8 +5046,8 @@ module Aws::DeviceFarm
     #
     # @overload schedule_run(**params)
     # @param [Hash] params ({})
-    def schedule_run(params = {}, **options)
-      req = build_request(:schedule_run, params)
+    def schedule_run(, **options)
+      req = build_request(:schedule_run, )
       req.send_request(options)
     end
 
@@ -5138,8 +5138,8 @@ module Aws::DeviceFarm
     #
     # @overload stop_job(**params)
     # @param [Hash] params ({})
-    def stop_job(params = {}, **options)
-      req = build_request(:stop_job, params)
+    def stop_job(, **options)
+      req = build_request(:stop_job, )
       req.send_request(options)
     end
 
@@ -5224,8 +5224,8 @@ module Aws::DeviceFarm
     #
     # @overload stop_remote_access_session(**params)
     # @param [Hash] params ({})
-    def stop_remote_access_session(params = {}, **options)
-      req = build_request(:stop_remote_access_session, params)
+    def stop_remote_access_session(, **options)
+      req = build_request(:stop_remote_access_session, )
       req.send_request(options)
     end
 
@@ -5337,8 +5337,8 @@ module Aws::DeviceFarm
     #
     # @overload stop_run(**params)
     # @param [Hash] params ({})
-    def stop_run(params = {}, **options)
-      req = build_request(:stop_run, params)
+    def stop_run(, **options)
+      req = build_request(:stop_run, )
       req.send_request(options)
     end
 
@@ -5377,8 +5377,8 @@ module Aws::DeviceFarm
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5407,8 +5407,8 @@ module Aws::DeviceFarm
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5457,8 +5457,8 @@ module Aws::DeviceFarm
     #
     # @overload update_device_instance(**params)
     # @param [Hash] params ({})
-    def update_device_instance(params = {}, **options)
-      req = build_request(:update_device_instance, params)
+    def update_device_instance(, **options)
+      req = build_request(:update_device_instance, )
       req.send_request(options)
     end
 
@@ -5567,8 +5567,8 @@ module Aws::DeviceFarm
     #
     # @overload update_device_pool(**params)
     # @param [Hash] params ({})
-    def update_device_pool(params = {}, **options)
-      req = build_request(:update_device_pool, params)
+    def update_device_pool(, **options)
+      req = build_request(:update_device_pool, )
       req.send_request(options)
     end
 
@@ -5627,8 +5627,8 @@ module Aws::DeviceFarm
     #
     # @overload update_instance_profile(**params)
     # @param [Hash] params ({})
-    def update_instance_profile(params = {}, **options)
-      req = build_request(:update_instance_profile, params)
+    def update_instance_profile(, **options)
+      req = build_request(:update_instance_profile, )
       req.send_request(options)
     end
 
@@ -5722,8 +5722,8 @@ module Aws::DeviceFarm
     #
     # @overload update_network_profile(**params)
     # @param [Hash] params ({})
-    def update_network_profile(params = {}, **options)
-      req = build_request(:update_network_profile, params)
+    def update_network_profile(, **options)
+      req = build_request(:update_network_profile, )
       req.send_request(options)
     end
 
@@ -5783,8 +5783,8 @@ module Aws::DeviceFarm
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 
@@ -5822,8 +5822,8 @@ module Aws::DeviceFarm
     #
     # @overload update_test_grid_project(**params)
     # @param [Hash] params ({})
-    def update_test_grid_project(params = {}, **options)
-      req = build_request(:update_test_grid_project, params)
+    def update_test_grid_project(, **options)
+      req = build_request(:update_test_grid_project, )
       req.send_request(options)
     end
 
@@ -5874,8 +5874,8 @@ module Aws::DeviceFarm
     #
     # @overload update_upload(**params)
     # @param [Hash] params ({})
-    def update_upload(params = {}, **options)
-      req = build_request(:update_upload, params)
+    def update_upload(, **options)
+      req = build_request(:update_upload, )
       req.send_request(options)
     end
 
@@ -5928,8 +5928,8 @@ module Aws::DeviceFarm
     #
     # @overload update_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def update_vpce_configuration(params = {}, **options)
-      req = build_request(:update_vpce_configuration, params)
+    def update_vpce_configuration(, **options)
+      req = build_request(:update_vpce_configuration, )
       req.send_request(options)
     end
 

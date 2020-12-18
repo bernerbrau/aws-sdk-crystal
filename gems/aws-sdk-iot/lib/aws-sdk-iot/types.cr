@@ -19016,5 +19016,4819 @@ module Aws::IoT
       include Aws::Structure
     end
 
+    alias AbortAction = String
+
+    alias AbortConfig = NamedTuple(
+      "criteriaList" : AbortCriteriaList
+    )
+
+    alias AbortCriteria = NamedTuple(
+      "failureType" : JobExecutionFailureType,
+      "action" : AbortAction,
+      "thresholdPercentage" : AbortThresholdPercentage,
+      "minNumberOfExecutedThings" : MinimumNumberOfExecutedThings
+    )
+
+    alias AbortCriteriaList = Array(AbortCriteria)
+
+    alias AbortThresholdPercentage = Float64
+
+    alias AcceptCertificateTransferRequest = NamedTuple(
+      "certificateId" : CertificateId,
+      "setAsActive" : (SetAsActive)?
+    )
+
+    alias AcmCertificateArn = String
+
+    alias Action = NamedTuple(
+      "dynamoDB" : (DynamoDBAction)?,
+      "dynamoDBv2" : (DynamoDBv2Action)?,
+      "lambda" : (LambdaAction)?,
+      "sns" : (SnsAction)?,
+      "sqs" : (SqsAction)?,
+      "kinesis" : (KinesisAction)?,
+      "republish" : (RepublishAction)?,
+      "s3" : (S3Action)?,
+      "firehose" : (FirehoseAction)?,
+      "cloudwatchMetric" : (CloudwatchMetricAction)?,
+      "cloudwatchAlarm" : (CloudwatchAlarmAction)?,
+      "cloudwatchLogs" : (CloudwatchLogsAction)?,
+      "elasticsearch" : (ElasticsearchAction)?,
+      "salesforce" : (SalesforceAction)?,
+      "iotAnalytics" : (IotAnalyticsAction)?,
+      "iotEvents" : (IotEventsAction)?,
+      "iotSiteWise" : (IotSiteWiseAction)?,
+      "stepFunctions" : (StepFunctionsAction)?,
+      "timestream" : (TimestreamAction)?,
+      "http" : (HttpAction)?,
+      "kafka" : (KafkaAction)?
+    )
+
+    alias ActionList = Array(Action)
+
+    alias ActionType = String
+
+    alias ActiveViolation = NamedTuple(
+      "violationId" : (ViolationId)?,
+      "thingName" : (DeviceDefenderThingName)?,
+      "securityProfileName" : (SecurityProfileName)?,
+      "behavior" : (Behavior)?,
+      "lastViolationValue" : (MetricValue)?,
+      "violationEventAdditionalInfo" : (ViolationEventAdditionalInfo)?,
+      "lastViolationTime" : (Timestamp)?,
+      "violationStartTime" : (Timestamp)?
+    )
+
+    alias ActiveViolations = Array(ActiveViolation)
+
+    alias AddThingToBillingGroupRequest = NamedTuple(
+      "billingGroupName" : (BillingGroupName)?,
+      "billingGroupArn" : (BillingGroupArn)?,
+      "thingName" : (ThingName)?,
+      "thingArn" : (ThingArn)?
+    )
+
+    alias AddThingToBillingGroupResponse = NamedTuple(
+      
+    )
+
+    alias AddThingToThingGroupRequest = NamedTuple(
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupArn" : (ThingGroupArn)?,
+      "thingName" : (ThingName)?,
+      "thingArn" : (ThingArn)?,
+      "overrideDynamicGroups" : (OverrideDynamicGroups)?
+    )
+
+    alias AddThingToThingGroupResponse = NamedTuple(
+      
+    )
+
+    alias AddThingsToThingGroupParams = NamedTuple(
+      "thingGroupNames" : ThingGroupNames,
+      "overrideDynamicGroups" : (OverrideDynamicGroups)?
+    )
+
+    alias AdditionalMetricsToRetainList = Array(BehaviorMetric)
+
+    alias AdditionalMetricsToRetainV2List = Array(MetricToRetain)
+
+    alias AdditionalParameterMap = Hash(AttributeKey,Value)
+
+    alias AggregationField = String
+
+    alias AlarmName = String
+
+    alias AlertTarget = NamedTuple(
+      "alertTargetArn" : AlertTargetArn,
+      "roleArn" : RoleArn
+    )
+
+    alias AlertTargetArn = String
+
+    alias AlertTargetType = String
+
+    alias AlertTargets = Hash(AlertTargetType,AlertTarget)
+
+    alias AllowAuthorizerOverride = Bool
+
+    alias AllowAutoRegistration = Bool
+
+    alias Allowed = NamedTuple(
+      "policies" : (Policies)?
+    )
+
+    alias ApproximateSecondsBeforeTimedOut = Int64
+
+    alias AscendingOrder = Bool
+
+    alias AssetId = String
+
+    alias AssetPropertyAlias = String
+
+    alias AssetPropertyBooleanValue = String
+
+    alias AssetPropertyDoubleValue = String
+
+    alias AssetPropertyEntryId = String
+
+    alias AssetPropertyId = String
+
+    alias AssetPropertyIntegerValue = String
+
+    alias AssetPropertyOffsetInNanos = String
+
+    alias AssetPropertyQuality = String
+
+    alias AssetPropertyStringValue = String
+
+    alias AssetPropertyTimeInSeconds = String
+
+    alias AssetPropertyTimestamp = NamedTuple(
+      "timeInSeconds" : AssetPropertyTimeInSeconds,
+      "offsetInNanos" : (AssetPropertyOffsetInNanos)?
+    )
+
+    alias AssetPropertyValue = NamedTuple(
+      "value" : AssetPropertyVariant,
+      "timestamp" : AssetPropertyTimestamp,
+      "quality" : (AssetPropertyQuality)?
+    )
+
+    alias AssetPropertyValueList = Array(AssetPropertyValue)
+
+    alias AssetPropertyVariant = NamedTuple(
+      "stringValue" : (AssetPropertyStringValue)?,
+      "integerValue" : (AssetPropertyIntegerValue)?,
+      "doubleValue" : (AssetPropertyDoubleValue)?,
+      "booleanValue" : (AssetPropertyBooleanValue)?
+    )
+
+    alias AssociateTargetsWithJobRequest = NamedTuple(
+      "targets" : JobTargets,
+      "jobId" : JobId,
+      "comment" : (Comment)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias AssociateTargetsWithJobResponse = NamedTuple(
+      "jobArn" : (JobArn)?,
+      "jobId" : (JobId)?,
+      "description" : (JobDescription)?
+    )
+
+    alias AttachPolicyRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "target" : PolicyTarget
+    )
+
+    alias AttachPrincipalPolicyRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "principal" : Principal
+    )
+
+    alias AttachSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName,
+      "securityProfileTargetArn" : SecurityProfileTargetArn
+    )
+
+    alias AttachSecurityProfileResponse = NamedTuple(
+      
+    )
+
+    alias AttachThingPrincipalRequest = NamedTuple(
+      "thingName" : ThingName,
+      "principal" : Principal
+    )
+
+    alias AttachThingPrincipalResponse = NamedTuple(
+      
+    )
+
+    alias AttributeKey = String
+
+    alias AttributeName = String
+
+    alias AttributePayload = NamedTuple(
+      "attributes" : (Attributes)?,
+      "merge" : (Flag)?
+    )
+
+    alias AttributeValue = String
+
+    alias Attributes = Hash(AttributeName,AttributeValue)
+
+    alias AttributesMap = Hash(AttributeKey,Value)
+
+    alias AuditCheckConfiguration = NamedTuple(
+      "enabled" : (Enabled)?
+    )
+
+    alias AuditCheckConfigurations = Hash(AuditCheckName,AuditCheckConfiguration)
+
+    alias AuditCheckDetails = NamedTuple(
+      "checkRunStatus" : (AuditCheckRunStatus)?,
+      "checkCompliant" : (CheckCompliant)?,
+      "totalResourcesCount" : (TotalResourcesCount)?,
+      "nonCompliantResourcesCount" : (NonCompliantResourcesCount)?,
+      "suppressedNonCompliantResourcesCount" : (SuppressedNonCompliantResourcesCount)?,
+      "errorCode" : (ErrorCode)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias AuditCheckName = String
+
+    alias AuditCheckRunStatus = String
+
+    alias AuditCheckToActionsMapping = Hash(AuditCheckName,MitigationActionNameList)
+
+    alias AuditCheckToReasonCodeFilter = Hash(AuditCheckName,ReasonForNonComplianceCodes)
+
+    alias AuditDescription = String
+
+    alias AuditDetails = Hash(AuditCheckName,AuditCheckDetails)
+
+    alias AuditFinding = NamedTuple(
+      "findingId" : (FindingId)?,
+      "taskId" : (AuditTaskId)?,
+      "checkName" : (AuditCheckName)?,
+      "taskStartTime" : (Timestamp)?,
+      "findingTime" : (Timestamp)?,
+      "severity" : (AuditFindingSeverity)?,
+      "nonCompliantResource" : (NonCompliantResource)?,
+      "relatedResources" : (RelatedResources)?,
+      "reasonForNonCompliance" : (ReasonForNonCompliance)?,
+      "reasonForNonComplianceCode" : (ReasonForNonComplianceCode)?,
+      "isSuppressed" : (IsSuppressed)?
+    )
+
+    alias AuditFindingSeverity = String
+
+    alias AuditFindings = Array(AuditFinding)
+
+    alias AuditFrequency = String
+
+    alias AuditMitigationActionExecutionMetadata = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?,
+      "findingId" : (FindingId)?,
+      "actionName" : (MitigationActionName)?,
+      "actionId" : (MitigationActionId)?,
+      "status" : (AuditMitigationActionsExecutionStatus)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "errorCode" : (ErrorCode)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias AuditMitigationActionExecutionMetadataList = Array(AuditMitigationActionExecutionMetadata)
+
+    alias AuditMitigationActionsExecutionStatus = String
+
+    alias AuditMitigationActionsTaskMetadata = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?,
+      "startTime" : (Timestamp)?,
+      "taskStatus" : (AuditMitigationActionsTaskStatus)?
+    )
+
+    alias AuditMitigationActionsTaskMetadataList = Array(AuditMitigationActionsTaskMetadata)
+
+    alias AuditMitigationActionsTaskStatistics = Hash(AuditCheckName,TaskStatisticsForAuditCheck)
+
+    alias AuditMitigationActionsTaskStatus = String
+
+    alias AuditMitigationActionsTaskTarget = NamedTuple(
+      "auditTaskId" : (AuditTaskId)?,
+      "findingIds" : (FindingIds)?,
+      "auditCheckToReasonCodeFilter" : (AuditCheckToReasonCodeFilter)?
+    )
+
+    alias AuditNotificationTarget = NamedTuple(
+      "targetArn" : (TargetArn)?,
+      "roleArn" : (RoleArn)?,
+      "enabled" : (Enabled)?
+    )
+
+    alias AuditNotificationTargetConfigurations = Hash(AuditNotificationType,AuditNotificationTarget)
+
+    alias AuditNotificationType = String
+
+    alias AuditSuppression = NamedTuple(
+      "checkName" : AuditCheckName,
+      "resourceIdentifier" : ResourceIdentifier,
+      "expirationDate" : (Timestamp)?,
+      "suppressIndefinitely" : (SuppressIndefinitely)?,
+      "description" : (AuditDescription)?
+    )
+
+    alias AuditSuppressionList = Array(AuditSuppression)
+
+    alias AuditTaskId = String
+
+    alias AuditTaskMetadata = NamedTuple(
+      "taskId" : (AuditTaskId)?,
+      "taskStatus" : (AuditTaskStatus)?,
+      "taskType" : (AuditTaskType)?
+    )
+
+    alias AuditTaskMetadataList = Array(AuditTaskMetadata)
+
+    alias AuditTaskStatus = String
+
+    alias AuditTaskType = String
+
+    alias AuthDecision = String
+
+    alias AuthInfo = NamedTuple(
+      "actionType" : (ActionType)?,
+      "resources" : Resources
+    )
+
+    alias AuthInfos = Array(AuthInfo)
+
+    alias AuthResult = NamedTuple(
+      "authInfo" : (AuthInfo)?,
+      "allowed" : (Allowed)?,
+      "denied" : (Denied)?,
+      "authDecision" : (AuthDecision)?,
+      "missingContextValues" : (MissingContextValues)?
+    )
+
+    alias AuthResults = Array(AuthResult)
+
+    alias AuthorizerArn = String
+
+    alias AuthorizerConfig = NamedTuple(
+      "defaultAuthorizerName" : (AuthorizerName)?,
+      "allowAuthorizerOverride" : (AllowAuthorizerOverride)?
+    )
+
+    alias AuthorizerDescription = NamedTuple(
+      "authorizerName" : (AuthorizerName)?,
+      "authorizerArn" : (AuthorizerArn)?,
+      "authorizerFunctionArn" : (AuthorizerFunctionArn)?,
+      "tokenKeyName" : (TokenKeyName)?,
+      "tokenSigningPublicKeys" : (PublicKeyMap)?,
+      "status" : (AuthorizerStatus)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "signingDisabled" : (BooleanKey)?
+    )
+
+    alias AuthorizerFunctionArn = String
+
+    alias AuthorizerName = String
+
+    alias AuthorizerStatus = String
+
+    alias AuthorizerSummary = NamedTuple(
+      "authorizerName" : (AuthorizerName)?,
+      "authorizerArn" : (AuthorizerArn)?
+    )
+
+    alias Authorizers = Array(AuthorizerSummary)
+
+    alias AutoRegistrationStatus = String
+
+    alias Average = Float64
+
+    alias AwsAccountId = String
+
+    alias AwsArn = String
+
+    alias AwsIotJobArn = String
+
+    alias AwsIotJobId = String
+
+    alias AwsIotSqlVersion = String
+
+    alias AwsJobAbortConfig = NamedTuple(
+      "abortCriteriaList" : AwsJobAbortCriteriaList
+    )
+
+    alias AwsJobAbortCriteria = NamedTuple(
+      "failureType" : AwsJobAbortCriteriaFailureType,
+      "action" : AwsJobAbortCriteriaAbortAction,
+      "thresholdPercentage" : AwsJobAbortCriteriaAbortThresholdPercentage,
+      "minNumberOfExecutedThings" : AwsJobAbortCriteriaMinimumNumberOfExecutedThings
+    )
+
+    alias AwsJobAbortCriteriaAbortAction = String
+
+    alias AwsJobAbortCriteriaAbortThresholdPercentage = Float64
+
+    alias AwsJobAbortCriteriaFailureType = String
+
+    alias AwsJobAbortCriteriaList = Array(AwsJobAbortCriteria)
+
+    alias AwsJobAbortCriteriaMinimumNumberOfExecutedThings = Int32
+
+    alias AwsJobExecutionsRolloutConfig = NamedTuple(
+      "maximumPerMinute" : (MaximumPerMinute)?,
+      "exponentialRate" : (AwsJobExponentialRolloutRate)?
+    )
+
+    alias AwsJobExponentialRolloutRate = NamedTuple(
+      "baseRatePerMinute" : AwsJobRolloutRatePerMinute,
+      "incrementFactor" : AwsJobRolloutIncrementFactor,
+      "rateIncreaseCriteria" : AwsJobRateIncreaseCriteria
+    )
+
+    alias AwsJobPresignedUrlConfig = NamedTuple(
+      "expiresInSec" : (ExpiresInSeconds)?
+    )
+
+    alias AwsJobRateIncreaseCriteria = NamedTuple(
+      "numberOfNotifiedThings" : (AwsJobRateIncreaseCriteriaNumberOfThings)?,
+      "numberOfSucceededThings" : (AwsJobRateIncreaseCriteriaNumberOfThings)?
+    )
+
+    alias AwsJobRateIncreaseCriteriaNumberOfThings = Int32
+
+    alias AwsJobRolloutIncrementFactor = Float64
+
+    alias AwsJobRolloutRatePerMinute = Int32
+
+    alias AwsJobTimeoutConfig = NamedTuple(
+      "inProgressTimeoutInMinutes" : (AwsJobTimeoutInProgressTimeoutInMinutes)?
+    )
+
+    alias AwsJobTimeoutInProgressTimeoutInMinutes = Int64
+
+    alias BatchMode = Bool
+
+    alias Behavior = NamedTuple(
+      "name" : BehaviorName,
+      "metric" : (BehaviorMetric)?,
+      "metricDimension" : (MetricDimension)?,
+      "criteria" : (BehaviorCriteria)?,
+      "suppressAlerts" : (SuppressAlerts)?
+    )
+
+    alias BehaviorCriteria = NamedTuple(
+      "comparisonOperator" : (ComparisonOperator)?,
+      "value" : (MetricValue)?,
+      "durationSeconds" : (DurationSeconds)?,
+      "consecutiveDatapointsToAlarm" : (ConsecutiveDatapointsToAlarm)?,
+      "consecutiveDatapointsToClear" : (ConsecutiveDatapointsToClear)?,
+      "statisticalThreshold" : (StatisticalThreshold)?,
+      "mlDetectionConfig" : (MachineLearningDetectionConfig)?
+    )
+
+    alias BehaviorCriteriaType = String
+
+    alias BehaviorMetric = String
+
+    alias BehaviorModelTrainingSummaries = Array(BehaviorModelTrainingSummary)
+
+    alias BehaviorModelTrainingSummary = NamedTuple(
+      "securityProfileName" : (SecurityProfileName)?,
+      "behaviorName" : (BehaviorName)?,
+      "trainingDataCollectionStartDate" : (Timestamp)?,
+      "modelStatus" : (ModelStatus)?,
+      "datapointsCollectionPercentage" : (DataCollectionPercentage)?,
+      "lastModelRefreshDate" : (Timestamp)?
+    )
+
+    alias BehaviorName = String
+
+    alias Behaviors = Array(Behavior)
+
+    alias BillingGroupArn = String
+
+    alias BillingGroupDescription = String
+
+    alias BillingGroupId = String
+
+    alias BillingGroupMetadata = NamedTuple(
+      "creationDate" : (CreationDate)?
+    )
+
+    alias BillingGroupName = String
+
+    alias BillingGroupNameAndArnList = Array(GroupNameAndArn)
+
+    alias BillingGroupProperties = NamedTuple(
+      "billingGroupDescription" : (BillingGroupDescription)?
+    )
+
+    alias Boolean = Bool
+
+    alias BooleanKey = Bool
+
+    alias BucketName = String
+
+    alias CACertificate = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "status" : (CACertificateStatus)?,
+      "creationDate" : (DateType)?
+    )
+
+    alias CACertificateDescription = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "status" : (CACertificateStatus)?,
+      "certificatePem" : (CertificatePem)?,
+      "ownedBy" : (AwsAccountId)?,
+      "creationDate" : (DateType)?,
+      "autoRegistrationStatus" : (AutoRegistrationStatus)?,
+      "lastModifiedDate" : (DateType)?,
+      "customerVersion" : (CustomerVersion)?,
+      "generationId" : (GenerationId)?,
+      "validity" : (CertificateValidity)?
+    )
+
+    alias CACertificateStatus = String
+
+    alias CACertificateUpdateAction = String
+
+    alias CACertificates = Array(CACertificate)
+
+    alias CancelAuditMitigationActionsTaskRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId
+    )
+
+    alias CancelAuditMitigationActionsTaskResponse = NamedTuple(
+      
+    )
+
+    alias CancelAuditTaskRequest = NamedTuple(
+      "taskId" : AuditTaskId
+    )
+
+    alias CancelAuditTaskResponse = NamedTuple(
+      
+    )
+
+    alias CancelCertificateTransferRequest = NamedTuple(
+      "certificateId" : CertificateId
+    )
+
+    alias CancelDetectMitigationActionsTaskRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId
+    )
+
+    alias CancelDetectMitigationActionsTaskResponse = NamedTuple(
+      
+    )
+
+    alias CancelJobExecutionRequest = NamedTuple(
+      "jobId" : JobId,
+      "thingName" : ThingName,
+      "force" : (ForceFlag)?,
+      "expectedVersion" : (ExpectedVersion)?,
+      "statusDetails" : (DetailsMap)?
+    )
+
+    alias CancelJobRequest = NamedTuple(
+      "jobId" : JobId,
+      "reasonCode" : (ReasonCode)?,
+      "comment" : (Comment)?,
+      "force" : (ForceFlag)?
+    )
+
+    alias CancelJobResponse = NamedTuple(
+      "jobArn" : (JobArn)?,
+      "jobId" : (JobId)?,
+      "description" : (JobDescription)?
+    )
+
+    alias CanceledChecksCount = Int32
+
+    alias CanceledFindingsCount = Int64
+
+    alias CanceledThings = Int32
+
+    alias CannedAccessControlList = String
+
+    alias Certificate = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "status" : (CertificateStatus)?,
+      "certificateMode" : (CertificateMode)?,
+      "creationDate" : (DateType)?
+    )
+
+    alias CertificateArn = String
+
+    alias CertificateConflictException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias CertificateDescription = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "caCertificateId" : (CertificateId)?,
+      "status" : (CertificateStatus)?,
+      "certificatePem" : (CertificatePem)?,
+      "ownedBy" : (AwsAccountId)?,
+      "previousOwnedBy" : (AwsAccountId)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "customerVersion" : (CustomerVersion)?,
+      "transferData" : (TransferData)?,
+      "generationId" : (GenerationId)?,
+      "validity" : (CertificateValidity)?,
+      "certificateMode" : (CertificateMode)?
+    )
+
+    alias CertificateId = String
+
+    alias CertificateMode = String
+
+    alias CertificateName = String
+
+    alias CertificatePathOnDevice = String
+
+    alias CertificatePem = String
+
+    alias CertificateSigningRequest = String
+
+    alias CertificateStateException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias CertificateStatus = String
+
+    alias CertificateValidationException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias CertificateValidity = NamedTuple(
+      "notBefore" : (DateType)?,
+      "notAfter" : (DateType)?
+    )
+
+    alias Certificates = Array(Certificate)
+
+    alias ChannelName = String
+
+    alias CheckCompliant = Bool
+
+    alias Cidr = String
+
+    alias Cidrs = Array(Cidr)
+
+    alias ClearDefaultAuthorizerRequest = NamedTuple(
+      
+    )
+
+    alias ClearDefaultAuthorizerResponse = NamedTuple(
+      
+    )
+
+    alias ClientId = String
+
+    alias ClientProperties = Hash(String,String)
+
+    alias ClientRequestToken = String
+
+    alias CloudwatchAlarmAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "alarmName" : AlarmName,
+      "stateReason" : StateReason,
+      "stateValue" : StateValue
+    )
+
+    alias CloudwatchLogsAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "logGroupName" : LogGroupName
+    )
+
+    alias CloudwatchMetricAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "metricNamespace" : String,
+      "metricName" : String,
+      "metricValue" : String,
+      "metricUnit" : String,
+      "metricTimestamp" : (String)?
+    )
+
+    alias Code = String
+
+    alias CodeSigning = NamedTuple(
+      "awsSignerJobId" : (SigningJobId)?,
+      "startSigningJobParameter" : (StartSigningJobParameter)?,
+      "customCodeSigning" : (CustomCodeSigning)?
+    )
+
+    alias CodeSigningCertificateChain = NamedTuple(
+      "certificateName" : (CertificateName)?,
+      "inlineDocument" : (InlineDocument)?
+    )
+
+    alias CodeSigningSignature = NamedTuple(
+      "inlineDocument" : (Signature)?
+    )
+
+    alias CognitoIdentityPoolId = String
+
+    alias Comment = String
+
+    alias ComparisonOperator = String
+
+    alias CompliantChecksCount = Int32
+
+    alias ConfidenceLevel = String
+
+    alias Configuration = NamedTuple(
+      "Enabled" : (Enabled)?
+    )
+
+    alias ConfirmTopicRuleDestinationRequest = NamedTuple(
+      "confirmationToken" : ConfirmationToken
+    )
+
+    alias ConfirmTopicRuleDestinationResponse = NamedTuple(
+      
+    )
+
+    alias ConfirmationToken = String
+
+    alias ConflictingResourceUpdateException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ConnectivityTimestamp = Int64
+
+    alias ConsecutiveDatapointsToAlarm = Int32
+
+    alias ConsecutiveDatapointsToClear = Int32
+
+    alias Count = Int32
+
+    alias CreateAuditSuppressionRequest = NamedTuple(
+      "checkName" : AuditCheckName,
+      "resourceIdentifier" : ResourceIdentifier,
+      "expirationDate" : (Timestamp)?,
+      "suppressIndefinitely" : (SuppressIndefinitely)?,
+      "description" : (AuditDescription)?,
+      "clientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateAuditSuppressionResponse = NamedTuple(
+      
+    )
+
+    alias CreateAuthorizerRequest = NamedTuple(
+      "authorizerName" : AuthorizerName,
+      "authorizerFunctionArn" : AuthorizerFunctionArn,
+      "tokenKeyName" : (TokenKeyName)?,
+      "tokenSigningPublicKeys" : (PublicKeyMap)?,
+      "status" : (AuthorizerStatus)?,
+      "tags" : (TagList)?,
+      "signingDisabled" : (BooleanKey)?
+    )
+
+    alias CreateAuthorizerResponse = NamedTuple(
+      "authorizerName" : (AuthorizerName)?,
+      "authorizerArn" : (AuthorizerArn)?
+    )
+
+    alias CreateBillingGroupRequest = NamedTuple(
+      "billingGroupName" : BillingGroupName,
+      "billingGroupProperties" : (BillingGroupProperties)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateBillingGroupResponse = NamedTuple(
+      "billingGroupName" : (BillingGroupName)?,
+      "billingGroupArn" : (BillingGroupArn)?,
+      "billingGroupId" : (BillingGroupId)?
+    )
+
+    alias CreateCertificateFromCsrRequest = NamedTuple(
+      "certificateSigningRequest" : CertificateSigningRequest,
+      "setAsActive" : (SetAsActive)?
+    )
+
+    alias CreateCertificateFromCsrResponse = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "certificatePem" : (CertificatePem)?
+    )
+
+    alias CreateCustomMetricRequest = NamedTuple(
+      "metricName" : MetricName,
+      "displayName" : (CustomMetricDisplayName)?,
+      "metricType" : CustomMetricType,
+      "tags" : (TagList)?,
+      "clientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateCustomMetricResponse = NamedTuple(
+      "metricName" : (MetricName)?,
+      "metricArn" : (CustomMetricArn)?
+    )
+
+    alias CreateDimensionRequest = NamedTuple(
+      "name" : DimensionName,
+      "type" : DimensionType,
+      "stringValues" : DimensionStringValues,
+      "tags" : (TagList)?,
+      "clientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateDimensionResponse = NamedTuple(
+      "name" : (DimensionName)?,
+      "arn" : (DimensionArn)?
+    )
+
+    alias CreateDomainConfigurationRequest = NamedTuple(
+      "domainConfigurationName" : DomainConfigurationName,
+      "domainName" : (DomainName)?,
+      "serverCertificateArns" : (ServerCertificateArns)?,
+      "validationCertificateArn" : (AcmCertificateArn)?,
+      "authorizerConfig" : (AuthorizerConfig)?,
+      "serviceType" : (ServiceType)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDomainConfigurationResponse = NamedTuple(
+      "domainConfigurationName" : (DomainConfigurationName)?,
+      "domainConfigurationArn" : (DomainConfigurationArn)?
+    )
+
+    alias CreateDynamicThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "thingGroupProperties" : (ThingGroupProperties)?,
+      "indexName" : (IndexName)?,
+      "queryString" : QueryString,
+      "queryVersion" : (QueryVersion)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDynamicThingGroupResponse = NamedTuple(
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupArn" : (ThingGroupArn)?,
+      "thingGroupId" : (ThingGroupId)?,
+      "indexName" : (IndexName)?,
+      "queryString" : (QueryString)?,
+      "queryVersion" : (QueryVersion)?
+    )
+
+    alias CreateJobRequest = NamedTuple(
+      "jobId" : JobId,
+      "targets" : JobTargets,
+      "documentSource" : (JobDocumentSource)?,
+      "document" : (JobDocument)?,
+      "description" : (JobDescription)?,
+      "presignedUrlConfig" : (PresignedUrlConfig)?,
+      "targetSelection" : (TargetSelection)?,
+      "jobExecutionsRolloutConfig" : (JobExecutionsRolloutConfig)?,
+      "abortConfig" : (AbortConfig)?,
+      "timeoutConfig" : (TimeoutConfig)?,
+      "tags" : (TagList)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias CreateJobResponse = NamedTuple(
+      "jobArn" : (JobArn)?,
+      "jobId" : (JobId)?,
+      "description" : (JobDescription)?
+    )
+
+    alias CreateKeysAndCertificateRequest = NamedTuple(
+      "setAsActive" : (SetAsActive)?
+    )
+
+    alias CreateKeysAndCertificateResponse = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "certificatePem" : (CertificatePem)?,
+      "keyPair" : (KeyPair)?
+    )
+
+    alias CreateMitigationActionRequest = NamedTuple(
+      "actionName" : MitigationActionName,
+      "roleArn" : RoleArn,
+      "actionParams" : MitigationActionParams,
+      "tags" : (TagList)?
+    )
+
+    alias CreateMitigationActionResponse = NamedTuple(
+      "actionArn" : (MitigationActionArn)?,
+      "actionId" : (MitigationActionId)?
+    )
+
+    alias CreateOTAUpdateRequest = NamedTuple(
+      "otaUpdateId" : OTAUpdateId,
+      "description" : (OTAUpdateDescription)?,
+      "targets" : Targets,
+      "protocols" : (Protocols)?,
+      "targetSelection" : (TargetSelection)?,
+      "awsJobExecutionsRolloutConfig" : (AwsJobExecutionsRolloutConfig)?,
+      "awsJobPresignedUrlConfig" : (AwsJobPresignedUrlConfig)?,
+      "awsJobAbortConfig" : (AwsJobAbortConfig)?,
+      "awsJobTimeoutConfig" : (AwsJobTimeoutConfig)?,
+      "files" : OTAUpdateFiles,
+      "roleArn" : RoleArn,
+      "additionalParameters" : (AdditionalParameterMap)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateOTAUpdateResponse = NamedTuple(
+      "otaUpdateId" : (OTAUpdateId)?,
+      "awsIotJobId" : (AwsIotJobId)?,
+      "otaUpdateArn" : (OTAUpdateArn)?,
+      "awsIotJobArn" : (AwsIotJobArn)?,
+      "otaUpdateStatus" : (OTAUpdateStatus)?
+    )
+
+    alias CreatePolicyRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "policyDocument" : PolicyDocument,
+      "tags" : (TagList)?
+    )
+
+    alias CreatePolicyResponse = NamedTuple(
+      "policyName" : (PolicyName)?,
+      "policyArn" : (PolicyArn)?,
+      "policyDocument" : (PolicyDocument)?,
+      "policyVersionId" : (PolicyVersionId)?
+    )
+
+    alias CreatePolicyVersionRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "policyDocument" : PolicyDocument,
+      "setAsDefault" : (SetAsDefault)?
+    )
+
+    alias CreatePolicyVersionResponse = NamedTuple(
+      "policyArn" : (PolicyArn)?,
+      "policyDocument" : (PolicyDocument)?,
+      "policyVersionId" : (PolicyVersionId)?,
+      "isDefaultVersion" : (IsDefaultVersion)?
+    )
+
+    alias CreateProvisioningClaimRequest = NamedTuple(
+      "templateName" : TemplateName
+    )
+
+    alias CreateProvisioningClaimResponse = NamedTuple(
+      "certificateId" : (CertificateId)?,
+      "certificatePem" : (CertificatePem)?,
+      "keyPair" : (KeyPair)?,
+      "expiration" : (DateType)?
+    )
+
+    alias CreateProvisioningTemplateRequest = NamedTuple(
+      "templateName" : TemplateName,
+      "description" : (TemplateDescription)?,
+      "templateBody" : TemplateBody,
+      "enabled" : (Enabled)?,
+      "provisioningRoleArn" : RoleArn,
+      "preProvisioningHook" : (ProvisioningHook)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateProvisioningTemplateResponse = NamedTuple(
+      "templateArn" : (TemplateArn)?,
+      "templateName" : (TemplateName)?,
+      "defaultVersionId" : (TemplateVersionId)?
+    )
+
+    alias CreateProvisioningTemplateVersionRequest = NamedTuple(
+      "templateName" : TemplateName,
+      "templateBody" : TemplateBody,
+      "setAsDefault" : (SetAsDefault)?
+    )
+
+    alias CreateProvisioningTemplateVersionResponse = NamedTuple(
+      "templateArn" : (TemplateArn)?,
+      "templateName" : (TemplateName)?,
+      "versionId" : (TemplateVersionId)?,
+      "isDefaultVersion" : (IsDefaultVersion)?
+    )
+
+    alias CreateRoleAliasRequest = NamedTuple(
+      "roleAlias" : RoleAlias,
+      "roleArn" : RoleArn,
+      "credentialDurationSeconds" : (CredentialDurationSeconds)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateRoleAliasResponse = NamedTuple(
+      "roleAlias" : (RoleAlias)?,
+      "roleAliasArn" : (RoleAliasArn)?
+    )
+
+    alias CreateScheduledAuditRequest = NamedTuple(
+      "frequency" : AuditFrequency,
+      "dayOfMonth" : (DayOfMonth)?,
+      "dayOfWeek" : (DayOfWeek)?,
+      "targetCheckNames" : TargetAuditCheckNames,
+      "scheduledAuditName" : ScheduledAuditName,
+      "tags" : (TagList)?
+    )
+
+    alias CreateScheduledAuditResponse = NamedTuple(
+      "scheduledAuditArn" : (ScheduledAuditArn)?
+    )
+
+    alias CreateSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName,
+      "securityProfileDescription" : (SecurityProfileDescription)?,
+      "behaviors" : (Behaviors)?,
+      "alertTargets" : (AlertTargets)?,
+      "additionalMetricsToRetain" : (AdditionalMetricsToRetainList)?,
+      "additionalMetricsToRetainV2" : (AdditionalMetricsToRetainV2List)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateSecurityProfileResponse = NamedTuple(
+      "securityProfileName" : (SecurityProfileName)?,
+      "securityProfileArn" : (SecurityProfileArn)?
+    )
+
+    alias CreateStreamRequest = NamedTuple(
+      "streamId" : StreamId,
+      "description" : (StreamDescription)?,
+      "files" : StreamFiles,
+      "roleArn" : RoleArn,
+      "tags" : (TagList)?
+    )
+
+    alias CreateStreamResponse = NamedTuple(
+      "streamId" : (StreamId)?,
+      "streamArn" : (StreamArn)?,
+      "description" : (StreamDescription)?,
+      "streamVersion" : (StreamVersion)?
+    )
+
+    alias CreateThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "parentGroupName" : (ThingGroupName)?,
+      "thingGroupProperties" : (ThingGroupProperties)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateThingGroupResponse = NamedTuple(
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupArn" : (ThingGroupArn)?,
+      "thingGroupId" : (ThingGroupId)?
+    )
+
+    alias CreateThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "thingTypeName" : (ThingTypeName)?,
+      "attributePayload" : (AttributePayload)?,
+      "billingGroupName" : (BillingGroupName)?
+    )
+
+    alias CreateThingResponse = NamedTuple(
+      "thingName" : (ThingName)?,
+      "thingArn" : (ThingArn)?,
+      "thingId" : (ThingId)?
+    )
+
+    alias CreateThingTypeRequest = NamedTuple(
+      "thingTypeName" : ThingTypeName,
+      "thingTypeProperties" : (ThingTypeProperties)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateThingTypeResponse = NamedTuple(
+      "thingTypeName" : (ThingTypeName)?,
+      "thingTypeArn" : (ThingTypeArn)?,
+      "thingTypeId" : (ThingTypeId)?
+    )
+
+    alias CreateTopicRuleDestinationRequest = NamedTuple(
+      "destinationConfiguration" : TopicRuleDestinationConfiguration
+    )
+
+    alias CreateTopicRuleDestinationResponse = NamedTuple(
+      "topicRuleDestination" : (TopicRuleDestination)?
+    )
+
+    alias CreateTopicRuleRequest = NamedTuple(
+      "ruleName" : RuleName,
+      "topicRulePayload" : TopicRulePayload,
+      "tags" : (String)?
+    )
+
+    alias CreatedAtDate = String | UInt64 | Time
+
+    alias CreationDate = String | UInt64 | Time
+
+    alias CredentialDurationSeconds = Int32
+
+    alias CustomCodeSigning = NamedTuple(
+      "signature" : (CodeSigningSignature)?,
+      "certificateChain" : (CodeSigningCertificateChain)?,
+      "hashAlgorithm" : (HashAlgorithm)?,
+      "signatureAlgorithm" : (SignatureAlgorithm)?
+    )
+
+    alias CustomMetricArn = String
+
+    alias CustomMetricDisplayName = String
+
+    alias CustomMetricType = String
+
+    alias CustomerVersion = Int32
+
+    alias DataCollectionPercentage = Float64
+
+    alias DateType = String | UInt64 | Time
+
+    alias DayOfMonth = String
+
+    alias DayOfWeek = String
+
+    alias DeleteAccountAuditConfigurationRequest = NamedTuple(
+      "deleteScheduledAudits" : (DeleteScheduledAudits)?
+    )
+
+    alias DeleteAccountAuditConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAdditionalMetricsToRetain = Bool
+
+    alias DeleteAlertTargets = Bool
+
+    alias DeleteAuditSuppressionRequest = NamedTuple(
+      "checkName" : AuditCheckName,
+      "resourceIdentifier" : ResourceIdentifier
+    )
+
+    alias DeleteAuditSuppressionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAuthorizerRequest = NamedTuple(
+      "authorizerName" : AuthorizerName
+    )
+
+    alias DeleteAuthorizerResponse = NamedTuple(
+      
+    )
+
+    alias DeleteBehaviors = Bool
+
+    alias DeleteBillingGroupRequest = NamedTuple(
+      "billingGroupName" : BillingGroupName,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias DeleteBillingGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteCACertificateRequest = NamedTuple(
+      "certificateId" : CertificateId
+    )
+
+    alias DeleteCACertificateResponse = NamedTuple(
+      
+    )
+
+    alias DeleteCertificateRequest = NamedTuple(
+      "certificateId" : CertificateId,
+      "forceDelete" : (ForceDelete)?
+    )
+
+    alias DeleteConflictException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias DeleteCustomMetricRequest = NamedTuple(
+      "metricName" : MetricName
+    )
+
+    alias DeleteCustomMetricResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDimensionRequest = NamedTuple(
+      "name" : DimensionName
+    )
+
+    alias DeleteDimensionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDomainConfigurationRequest = NamedTuple(
+      "domainConfigurationName" : DomainConfigurationName
+    )
+
+    alias DeleteDomainConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDynamicThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias DeleteDynamicThingGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteJobExecutionRequest = NamedTuple(
+      "jobId" : JobId,
+      "thingName" : ThingName,
+      "executionNumber" : ExecutionNumber,
+      "force" : (ForceFlag)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias DeleteJobRequest = NamedTuple(
+      "jobId" : JobId,
+      "force" : (ForceFlag)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias DeleteMitigationActionRequest = NamedTuple(
+      "actionName" : MitigationActionName
+    )
+
+    alias DeleteMitigationActionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteOTAUpdateRequest = NamedTuple(
+      "otaUpdateId" : OTAUpdateId,
+      "deleteStream" : (DeleteStream)?,
+      "forceDeleteAWSJob" : (ForceDeleteAWSJob)?
+    )
+
+    alias DeleteOTAUpdateResponse = NamedTuple(
+      
+    )
+
+    alias DeletePolicyRequest = NamedTuple(
+      "policyName" : PolicyName
+    )
+
+    alias DeletePolicyVersionRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "policyVersionId" : PolicyVersionId
+    )
+
+    alias DeleteProvisioningTemplateRequest = NamedTuple(
+      "templateName" : TemplateName
+    )
+
+    alias DeleteProvisioningTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DeleteProvisioningTemplateVersionRequest = NamedTuple(
+      "templateName" : TemplateName,
+      "versionId" : TemplateVersionId
+    )
+
+    alias DeleteProvisioningTemplateVersionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRegistrationCodeRequest = NamedTuple(
+      
+    )
+
+    alias DeleteRegistrationCodeResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRoleAliasRequest = NamedTuple(
+      "roleAlias" : RoleAlias
+    )
+
+    alias DeleteRoleAliasResponse = NamedTuple(
+      
+    )
+
+    alias DeleteScheduledAuditRequest = NamedTuple(
+      "scheduledAuditName" : ScheduledAuditName
+    )
+
+    alias DeleteScheduledAuditResponse = NamedTuple(
+      
+    )
+
+    alias DeleteScheduledAudits = Bool
+
+    alias DeleteSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias DeleteSecurityProfileResponse = NamedTuple(
+      
+    )
+
+    alias DeleteStream = Bool
+
+    alias DeleteStreamRequest = NamedTuple(
+      "streamId" : StreamId
+    )
+
+    alias DeleteStreamResponse = NamedTuple(
+      
+    )
+
+    alias DeleteThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias DeleteThingGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias DeleteThingResponse = NamedTuple(
+      
+    )
+
+    alias DeleteThingTypeRequest = NamedTuple(
+      "thingTypeName" : ThingTypeName
+    )
+
+    alias DeleteThingTypeResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTopicRuleDestinationRequest = NamedTuple(
+      "arn" : AwsArn
+    )
+
+    alias DeleteTopicRuleDestinationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTopicRuleRequest = NamedTuple(
+      "ruleName" : RuleName
+    )
+
+    alias DeleteV2LoggingLevelRequest = NamedTuple(
+      "targetType" : LogTargetType,
+      "targetName" : LogTargetName
+    )
+
+    alias DeliveryStreamName = String
+
+    alias Denied = NamedTuple(
+      "implicitDeny" : (ImplicitDeny)?,
+      "explicitDeny" : (ExplicitDeny)?
+    )
+
+    alias DeprecateThingTypeRequest = NamedTuple(
+      "thingTypeName" : ThingTypeName,
+      "undoDeprecate" : (UndoDeprecate)?
+    )
+
+    alias DeprecateThingTypeResponse = NamedTuple(
+      
+    )
+
+    alias DeprecationDate = String | UInt64 | Time
+
+    alias DescribeAccountAuditConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias DescribeAccountAuditConfigurationResponse = NamedTuple(
+      "roleArn" : (RoleArn)?,
+      "auditNotificationTargetConfigurations" : (AuditNotificationTargetConfigurations)?,
+      "auditCheckConfigurations" : (AuditCheckConfigurations)?
+    )
+
+    alias DescribeAuditFindingRequest = NamedTuple(
+      "findingId" : FindingId
+    )
+
+    alias DescribeAuditFindingResponse = NamedTuple(
+      "finding" : (AuditFinding)?
+    )
+
+    alias DescribeAuditMitigationActionsTaskRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId
+    )
+
+    alias DescribeAuditMitigationActionsTaskResponse = NamedTuple(
+      "taskStatus" : (AuditMitigationActionsTaskStatus)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "taskStatistics" : (AuditMitigationActionsTaskStatistics)?,
+      "target" : (AuditMitigationActionsTaskTarget)?,
+      "auditCheckToActionsMapping" : (AuditCheckToActionsMapping)?,
+      "actionsDefinition" : (MitigationActionList)?
+    )
+
+    alias DescribeAuditSuppressionRequest = NamedTuple(
+      "checkName" : AuditCheckName,
+      "resourceIdentifier" : ResourceIdentifier
+    )
+
+    alias DescribeAuditSuppressionResponse = NamedTuple(
+      "checkName" : (AuditCheckName)?,
+      "resourceIdentifier" : (ResourceIdentifier)?,
+      "expirationDate" : (Timestamp)?,
+      "suppressIndefinitely" : (SuppressIndefinitely)?,
+      "description" : (AuditDescription)?
+    )
+
+    alias DescribeAuditTaskRequest = NamedTuple(
+      "taskId" : AuditTaskId
+    )
+
+    alias DescribeAuditTaskResponse = NamedTuple(
+      "taskStatus" : (AuditTaskStatus)?,
+      "taskType" : (AuditTaskType)?,
+      "taskStartTime" : (Timestamp)?,
+      "taskStatistics" : (TaskStatistics)?,
+      "scheduledAuditName" : (ScheduledAuditName)?,
+      "auditDetails" : (AuditDetails)?
+    )
+
+    alias DescribeAuthorizerRequest = NamedTuple(
+      "authorizerName" : AuthorizerName
+    )
+
+    alias DescribeAuthorizerResponse = NamedTuple(
+      "authorizerDescription" : (AuthorizerDescription)?
+    )
+
+    alias DescribeBillingGroupRequest = NamedTuple(
+      "billingGroupName" : BillingGroupName
+    )
+
+    alias DescribeBillingGroupResponse = NamedTuple(
+      "billingGroupName" : (BillingGroupName)?,
+      "billingGroupId" : (BillingGroupId)?,
+      "billingGroupArn" : (BillingGroupArn)?,
+      "version" : (Version)?,
+      "billingGroupProperties" : (BillingGroupProperties)?,
+      "billingGroupMetadata" : (BillingGroupMetadata)?
+    )
+
+    alias DescribeCACertificateRequest = NamedTuple(
+      "certificateId" : CertificateId
+    )
+
+    alias DescribeCACertificateResponse = NamedTuple(
+      "certificateDescription" : (CACertificateDescription)?,
+      "registrationConfig" : (RegistrationConfig)?
+    )
+
+    alias DescribeCertificateRequest = NamedTuple(
+      "certificateId" : CertificateId
+    )
+
+    alias DescribeCertificateResponse = NamedTuple(
+      "certificateDescription" : (CertificateDescription)?
+    )
+
+    alias DescribeCustomMetricRequest = NamedTuple(
+      "metricName" : MetricName
+    )
+
+    alias DescribeCustomMetricResponse = NamedTuple(
+      "metricName" : (MetricName)?,
+      "metricArn" : (CustomMetricArn)?,
+      "metricType" : (CustomMetricType)?,
+      "displayName" : (CustomMetricDisplayName)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias DescribeDefaultAuthorizerRequest = NamedTuple(
+      
+    )
+
+    alias DescribeDefaultAuthorizerResponse = NamedTuple(
+      "authorizerDescription" : (AuthorizerDescription)?
+    )
+
+    alias DescribeDetectMitigationActionsTaskRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId
+    )
+
+    alias DescribeDetectMitigationActionsTaskResponse = NamedTuple(
+      "taskSummary" : (DetectMitigationActionsTaskSummary)?
+    )
+
+    alias DescribeDimensionRequest = NamedTuple(
+      "name" : DimensionName
+    )
+
+    alias DescribeDimensionResponse = NamedTuple(
+      "name" : (DimensionName)?,
+      "arn" : (DimensionArn)?,
+      "type" : (DimensionType)?,
+      "stringValues" : (DimensionStringValues)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias DescribeDomainConfigurationRequest = NamedTuple(
+      "domainConfigurationName" : ReservedDomainConfigurationName
+    )
+
+    alias DescribeDomainConfigurationResponse = NamedTuple(
+      "domainConfigurationName" : (ReservedDomainConfigurationName)?,
+      "domainConfigurationArn" : (DomainConfigurationArn)?,
+      "domainName" : (DomainName)?,
+      "serverCertificates" : (ServerCertificates)?,
+      "authorizerConfig" : (AuthorizerConfig)?,
+      "domainConfigurationStatus" : (DomainConfigurationStatus)?,
+      "serviceType" : (ServiceType)?,
+      "domainType" : (DomainType)?,
+      "lastStatusChangeDate" : (DateType)?
+    )
+
+    alias DescribeEndpointRequest = NamedTuple(
+      "endpointType" : (EndpointType)?
+    )
+
+    alias DescribeEndpointResponse = NamedTuple(
+      "endpointAddress" : (EndpointAddress)?
+    )
+
+    alias DescribeEventConfigurationsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeEventConfigurationsResponse = NamedTuple(
+      "eventConfigurations" : (EventConfigurations)?,
+      "creationDate" : (CreationDate)?,
+      "lastModifiedDate" : (LastModifiedDate)?
+    )
+
+    alias DescribeIndexRequest = NamedTuple(
+      "indexName" : IndexName
+    )
+
+    alias DescribeIndexResponse = NamedTuple(
+      "indexName" : (IndexName)?,
+      "indexStatus" : (IndexStatus)?,
+      "schema" : (IndexSchema)?
+    )
+
+    alias DescribeJobExecutionRequest = NamedTuple(
+      "jobId" : JobId,
+      "thingName" : ThingName,
+      "executionNumber" : (ExecutionNumber)?
+    )
+
+    alias DescribeJobExecutionResponse = NamedTuple(
+      "execution" : (JobExecution)?
+    )
+
+    alias DescribeJobRequest = NamedTuple(
+      "jobId" : JobId
+    )
+
+    alias DescribeJobResponse = NamedTuple(
+      "documentSource" : (JobDocumentSource)?,
+      "job" : (Job)?
+    )
+
+    alias DescribeMitigationActionRequest = NamedTuple(
+      "actionName" : MitigationActionName
+    )
+
+    alias DescribeMitigationActionResponse = NamedTuple(
+      "actionName" : (MitigationActionName)?,
+      "actionType" : (MitigationActionType)?,
+      "actionArn" : (MitigationActionArn)?,
+      "actionId" : (MitigationActionId)?,
+      "roleArn" : (RoleArn)?,
+      "actionParams" : (MitigationActionParams)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias DescribeProvisioningTemplateRequest = NamedTuple(
+      "templateName" : TemplateName
+    )
+
+    alias DescribeProvisioningTemplateResponse = NamedTuple(
+      "templateArn" : (TemplateArn)?,
+      "templateName" : (TemplateName)?,
+      "description" : (TemplateDescription)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "defaultVersionId" : (TemplateVersionId)?,
+      "templateBody" : (TemplateBody)?,
+      "enabled" : (Enabled)?,
+      "provisioningRoleArn" : (RoleArn)?,
+      "preProvisioningHook" : (ProvisioningHook)?
+    )
+
+    alias DescribeProvisioningTemplateVersionRequest = NamedTuple(
+      "templateName" : TemplateName,
+      "versionId" : TemplateVersionId
+    )
+
+    alias DescribeProvisioningTemplateVersionResponse = NamedTuple(
+      "versionId" : (TemplateVersionId)?,
+      "creationDate" : (DateType)?,
+      "templateBody" : (TemplateBody)?,
+      "isDefaultVersion" : (IsDefaultVersion)?
+    )
+
+    alias DescribeRoleAliasRequest = NamedTuple(
+      "roleAlias" : RoleAlias
+    )
+
+    alias DescribeRoleAliasResponse = NamedTuple(
+      "roleAliasDescription" : (RoleAliasDescription)?
+    )
+
+    alias DescribeScheduledAuditRequest = NamedTuple(
+      "scheduledAuditName" : ScheduledAuditName
+    )
+
+    alias DescribeScheduledAuditResponse = NamedTuple(
+      "frequency" : (AuditFrequency)?,
+      "dayOfMonth" : (DayOfMonth)?,
+      "dayOfWeek" : (DayOfWeek)?,
+      "targetCheckNames" : (TargetAuditCheckNames)?,
+      "scheduledAuditName" : (ScheduledAuditName)?,
+      "scheduledAuditArn" : (ScheduledAuditArn)?
+    )
+
+    alias DescribeSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName
+    )
+
+    alias DescribeSecurityProfileResponse = NamedTuple(
+      "securityProfileName" : (SecurityProfileName)?,
+      "securityProfileArn" : (SecurityProfileArn)?,
+      "securityProfileDescription" : (SecurityProfileDescription)?,
+      "behaviors" : (Behaviors)?,
+      "alertTargets" : (AlertTargets)?,
+      "additionalMetricsToRetain" : (AdditionalMetricsToRetainList)?,
+      "additionalMetricsToRetainV2" : (AdditionalMetricsToRetainV2List)?,
+      "version" : (Version)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias DescribeStreamRequest = NamedTuple(
+      "streamId" : StreamId
+    )
+
+    alias DescribeStreamResponse = NamedTuple(
+      "streamInfo" : (StreamInfo)?
+    )
+
+    alias DescribeThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName
+    )
+
+    alias DescribeThingGroupResponse = NamedTuple(
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupId" : (ThingGroupId)?,
+      "thingGroupArn" : (ThingGroupArn)?,
+      "version" : (Version)?,
+      "thingGroupProperties" : (ThingGroupProperties)?,
+      "thingGroupMetadata" : (ThingGroupMetadata)?,
+      "indexName" : (IndexName)?,
+      "queryString" : (QueryString)?,
+      "queryVersion" : (QueryVersion)?,
+      "status" : (DynamicGroupStatus)?
+    )
+
+    alias DescribeThingRegistrationTaskRequest = NamedTuple(
+      "taskId" : TaskId
+    )
+
+    alias DescribeThingRegistrationTaskResponse = NamedTuple(
+      "taskId" : (TaskId)?,
+      "creationDate" : (CreationDate)?,
+      "lastModifiedDate" : (LastModifiedDate)?,
+      "templateBody" : (TemplateBody)?,
+      "inputFileBucket" : (RegistryS3BucketName)?,
+      "inputFileKey" : (RegistryS3KeyName)?,
+      "roleArn" : (RoleArn)?,
+      "status" : (Status)?,
+      "message" : (ErrorMessage)?,
+      "successCount" : (Count)?,
+      "failureCount" : (Count)?,
+      "percentageProgress" : (Percentage)?
+    )
+
+    alias DescribeThingRequest = NamedTuple(
+      "thingName" : ThingName
+    )
+
+    alias DescribeThingResponse = NamedTuple(
+      "defaultClientId" : (ClientId)?,
+      "thingName" : (ThingName)?,
+      "thingId" : (ThingId)?,
+      "thingArn" : (ThingArn)?,
+      "thingTypeName" : (ThingTypeName)?,
+      "attributes" : (Attributes)?,
+      "version" : (Version)?,
+      "billingGroupName" : (BillingGroupName)?
+    )
+
+    alias DescribeThingTypeRequest = NamedTuple(
+      "thingTypeName" : ThingTypeName
+    )
+
+    alias DescribeThingTypeResponse = NamedTuple(
+      "thingTypeName" : (ThingTypeName)?,
+      "thingTypeId" : (ThingTypeId)?,
+      "thingTypeArn" : (ThingTypeArn)?,
+      "thingTypeProperties" : (ThingTypeProperties)?,
+      "thingTypeMetadata" : (ThingTypeMetadata)?
+    )
+
+    alias Description = String
+
+    alias Destination = NamedTuple(
+      "s3Destination" : (S3Destination)?
+    )
+
+    alias DetachPolicyRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "target" : PolicyTarget
+    )
+
+    alias DetachPrincipalPolicyRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "principal" : Principal
+    )
+
+    alias DetachSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName,
+      "securityProfileTargetArn" : SecurityProfileTargetArn
+    )
+
+    alias DetachSecurityProfileResponse = NamedTuple(
+      
+    )
+
+    alias DetachThingPrincipalRequest = NamedTuple(
+      "thingName" : ThingName,
+      "principal" : Principal
+    )
+
+    alias DetachThingPrincipalResponse = NamedTuple(
+      
+    )
+
+    alias DetailsKey = String
+
+    alias DetailsMap = Hash(DetailsKey,DetailsValue)
+
+    alias DetailsValue = String
+
+    alias DetectMitigationActionExecution = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?,
+      "violationId" : (ViolationId)?,
+      "actionName" : (MitigationActionName)?,
+      "thingName" : (DeviceDefenderThingName)?,
+      "executionStartDate" : (Timestamp)?,
+      "executionEndDate" : (Timestamp)?,
+      "status" : (DetectMitigationActionExecutionStatus)?,
+      "errorCode" : (DetectMitigationActionExecutionErrorCode)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias DetectMitigationActionExecutionErrorCode = String
+
+    alias DetectMitigationActionExecutionList = Array(DetectMitigationActionExecution)
+
+    alias DetectMitigationActionExecutionStatus = String
+
+    alias DetectMitigationActionsTaskStatistics = NamedTuple(
+      "actionsExecuted" : (GenericLongValue)?,
+      "actionsSkipped" : (GenericLongValue)?,
+      "actionsFailed" : (GenericLongValue)?
+    )
+
+    alias DetectMitigationActionsTaskStatus = String
+
+    alias DetectMitigationActionsTaskSummary = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?,
+      "taskStatus" : (DetectMitigationActionsTaskStatus)?,
+      "taskStartTime" : (Timestamp)?,
+      "taskEndTime" : (Timestamp)?,
+      "target" : (DetectMitigationActionsTaskTarget)?,
+      "violationEventOccurrenceRange" : (ViolationEventOccurrenceRange)?,
+      "onlyActiveViolationsIncluded" : (PrimitiveBoolean)?,
+      "suppressedAlertsIncluded" : (PrimitiveBoolean)?,
+      "actionsDefinition" : (MitigationActionList)?,
+      "taskStatistics" : (DetectMitigationActionsTaskStatistics)?
+    )
+
+    alias DetectMitigationActionsTaskSummaryList = Array(DetectMitigationActionsTaskSummary)
+
+    alias DetectMitigationActionsTaskTarget = NamedTuple(
+      "violationIds" : (TargetViolationIdsForDetectMitigationActions)?,
+      "securityProfileName" : (SecurityProfileName)?,
+      "behaviorName" : (BehaviorName)?
+    )
+
+    alias DetectMitigationActionsToExecuteList = Array(MitigationActionName)
+
+    alias DeviceCertificateUpdateAction = String
+
+    alias DeviceDefenderThingName = String
+
+    alias DimensionArn = String
+
+    alias DimensionName = String
+
+    alias DimensionNames = Array(DimensionName)
+
+    alias DimensionStringValue = String
+
+    alias DimensionStringValues = Array(DimensionStringValue)
+
+    alias DimensionType = String
+
+    alias DimensionValueOperator = String
+
+    alias DisableAllLogs = Bool
+
+    alias DisableTopicRuleRequest = NamedTuple(
+      "ruleName" : RuleName
+    )
+
+    alias DomainConfigurationArn = String
+
+    alias DomainConfigurationName = String
+
+    alias DomainConfigurationStatus = String
+
+    alias DomainConfigurationSummary = NamedTuple(
+      "domainConfigurationName" : (ReservedDomainConfigurationName)?,
+      "domainConfigurationArn" : (DomainConfigurationArn)?,
+      "serviceType" : (ServiceType)?
+    )
+
+    alias DomainConfigurations = Array(DomainConfigurationSummary)
+
+    alias DomainName = String
+
+    alias DomainType = String
+
+    alias DurationSeconds = Int32
+
+    alias DynamicGroupStatus = String
+
+    alias DynamoDBAction = NamedTuple(
+      "tableName" : TableName,
+      "roleArn" : AwsArn,
+      "operation" : (DynamoOperation)?,
+      "hashKeyField" : HashKeyField,
+      "hashKeyValue" : HashKeyValue,
+      "hashKeyType" : (DynamoKeyType)?,
+      "rangeKeyField" : (RangeKeyField)?,
+      "rangeKeyValue" : (RangeKeyValue)?,
+      "rangeKeyType" : (DynamoKeyType)?,
+      "payloadField" : (PayloadField)?
+    )
+
+    alias DynamoDBv2Action = NamedTuple(
+      "roleArn" : AwsArn,
+      "putItem" : PutItemInput
+    )
+
+    alias DynamoKeyType = String
+
+    alias DynamoOperation = String
+
+    alias EffectivePolicies = Array(EffectivePolicy)
+
+    alias EffectivePolicy = NamedTuple(
+      "policyName" : (PolicyName)?,
+      "policyArn" : (PolicyArn)?,
+      "policyDocument" : (PolicyDocument)?
+    )
+
+    alias ElasticsearchAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "endpoint" : ElasticsearchEndpoint,
+      "index" : ElasticsearchIndex,
+      "type" : ElasticsearchType,
+      "id" : ElasticsearchId
+    )
+
+    alias ElasticsearchEndpoint = String
+
+    alias ElasticsearchId = String
+
+    alias ElasticsearchIndex = String
+
+    alias ElasticsearchType = String
+
+    alias EnableIoTLoggingParams = NamedTuple(
+      "roleArnForLogging" : RoleArn,
+      "logLevel" : LogLevel
+    )
+
+    alias EnableTopicRuleRequest = NamedTuple(
+      "ruleName" : RuleName
+    )
+
+    alias Enabled = Bool
+
+    alias EndpointAddress = String
+
+    alias EndpointType = String
+
+    alias ErrorCode = String
+
+    alias ErrorInfo = NamedTuple(
+      "code" : (Code)?,
+      "message" : (OTAUpdateErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias EvaluationStatistic = String
+
+    alias EventConfigurations = Hash(EventType,Configuration)
+
+    alias EventType = String
+
+    alias ExecutionNamePrefix = String
+
+    alias ExecutionNumber = Int64
+
+    alias ExpectedVersion = Int64
+
+    alias ExpiresInSec = Int64
+
+    alias ExpiresInSeconds = Int64
+
+    alias ExplicitDeny = NamedTuple(
+      "policies" : (Policies)?
+    )
+
+    alias ExponentialRolloutRate = NamedTuple(
+      "baseRatePerMinute" : RolloutRatePerMinute,
+      "incrementFactor" : IncrementFactor,
+      "rateIncreaseCriteria" : RateIncreaseCriteria
+    )
+
+    alias FailedChecksCount = Int32
+
+    alias FailedFindingsCount = Int64
+
+    alias FailedThings = Int32
+
+    alias Field = NamedTuple(
+      "name" : (FieldName)?,
+      "type" : (FieldType)?
+    )
+
+    alias FieldName = String
+
+    alias FieldType = String
+
+    alias Fields = Array(Field)
+
+    alias FileId = Int32
+
+    alias FileLocation = NamedTuple(
+      "stream" : (Stream)?,
+      "s3Location" : (S3Location)?
+    )
+
+    alias FileName = String
+
+    alias FileType = Int32
+
+    alias FindingId = String
+
+    alias FindingIds = Array(FindingId)
+
+    alias FirehoseAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "deliveryStreamName" : DeliveryStreamName,
+      "separator" : (FirehoseSeparator)?,
+      "batchMode" : (BatchMode)?
+    )
+
+    alias FirehoseSeparator = String
+
+    alias Flag = Bool
+
+    alias ForceDelete = Bool
+
+    alias ForceDeleteAWSJob = Bool
+
+    alias ForceFlag = Bool
+
+    alias Forced = Bool
+
+    alias FunctionArn = String
+
+    alias GenerationId = String
+
+    alias GenericLongValue = Int64
+
+    alias GetBehaviorModelTrainingSummariesRequest = NamedTuple(
+      "securityProfileName" : (SecurityProfileName)?,
+      "maxResults" : (TinyMaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetBehaviorModelTrainingSummariesResponse = NamedTuple(
+      "summaries" : (BehaviorModelTrainingSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetCardinalityRequest = NamedTuple(
+      "indexName" : (IndexName)?,
+      "queryString" : QueryString,
+      "aggregationField" : (AggregationField)?,
+      "queryVersion" : (QueryVersion)?
+    )
+
+    alias GetCardinalityResponse = NamedTuple(
+      "cardinality" : (Count)?
+    )
+
+    alias GetEffectivePoliciesRequest = NamedTuple(
+      "principal" : (Principal)?,
+      "cognitoIdentityPoolId" : (CognitoIdentityPoolId)?,
+      "thingName" : (ThingName)?
+    )
+
+    alias GetEffectivePoliciesResponse = NamedTuple(
+      "effectivePolicies" : (EffectivePolicies)?
+    )
+
+    alias GetIndexingConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias GetIndexingConfigurationResponse = NamedTuple(
+      "thingIndexingConfiguration" : (ThingIndexingConfiguration)?,
+      "thingGroupIndexingConfiguration" : (ThingGroupIndexingConfiguration)?
+    )
+
+    alias GetJobDocumentRequest = NamedTuple(
+      "jobId" : JobId
+    )
+
+    alias GetJobDocumentResponse = NamedTuple(
+      "document" : (JobDocument)?
+    )
+
+    alias GetLoggingOptionsRequest = NamedTuple(
+      
+    )
+
+    alias GetLoggingOptionsResponse = NamedTuple(
+      "roleArn" : (AwsArn)?,
+      "logLevel" : (LogLevel)?
+    )
+
+    alias GetOTAUpdateRequest = NamedTuple(
+      "otaUpdateId" : OTAUpdateId
+    )
+
+    alias GetOTAUpdateResponse = NamedTuple(
+      "otaUpdateInfo" : (OTAUpdateInfo)?
+    )
+
+    alias GetPercentilesRequest = NamedTuple(
+      "indexName" : (IndexName)?,
+      "queryString" : QueryString,
+      "aggregationField" : (AggregationField)?,
+      "queryVersion" : (QueryVersion)?,
+      "percents" : (PercentList)?
+    )
+
+    alias GetPercentilesResponse = NamedTuple(
+      "percentiles" : (Percentiles)?
+    )
+
+    alias GetPolicyRequest = NamedTuple(
+      "policyName" : PolicyName
+    )
+
+    alias GetPolicyResponse = NamedTuple(
+      "policyName" : (PolicyName)?,
+      "policyArn" : (PolicyArn)?,
+      "policyDocument" : (PolicyDocument)?,
+      "defaultVersionId" : (PolicyVersionId)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "generationId" : (GenerationId)?
+    )
+
+    alias GetPolicyVersionRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "policyVersionId" : PolicyVersionId
+    )
+
+    alias GetPolicyVersionResponse = NamedTuple(
+      "policyArn" : (PolicyArn)?,
+      "policyName" : (PolicyName)?,
+      "policyDocument" : (PolicyDocument)?,
+      "policyVersionId" : (PolicyVersionId)?,
+      "isDefaultVersion" : (IsDefaultVersion)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "generationId" : (GenerationId)?
+    )
+
+    alias GetRegistrationCodeRequest = NamedTuple(
+      
+    )
+
+    alias GetRegistrationCodeResponse = NamedTuple(
+      "registrationCode" : (RegistrationCode)?
+    )
+
+    alias GetStatisticsRequest = NamedTuple(
+      "indexName" : (IndexName)?,
+      "queryString" : QueryString,
+      "aggregationField" : (AggregationField)?,
+      "queryVersion" : (QueryVersion)?
+    )
+
+    alias GetStatisticsResponse = NamedTuple(
+      "statistics" : (Statistics)?
+    )
+
+    alias GetTopicRuleDestinationRequest = NamedTuple(
+      "arn" : AwsArn
+    )
+
+    alias GetTopicRuleDestinationResponse = NamedTuple(
+      "topicRuleDestination" : (TopicRuleDestination)?
+    )
+
+    alias GetTopicRuleRequest = NamedTuple(
+      "ruleName" : RuleName
+    )
+
+    alias GetTopicRuleResponse = NamedTuple(
+      "ruleArn" : (RuleArn)?,
+      "rule" : (TopicRule)?
+    )
+
+    alias GetV2LoggingOptionsRequest = NamedTuple(
+      
+    )
+
+    alias GetV2LoggingOptionsResponse = NamedTuple(
+      "roleArn" : (AwsArn)?,
+      "defaultLogLevel" : (LogLevel)?,
+      "disableAllLogs" : (DisableAllLogs)?
+    )
+
+    alias GroupNameAndArn = NamedTuple(
+      "groupName" : (ThingGroupName)?,
+      "groupArn" : (ThingGroupArn)?
+    )
+
+    alias HashAlgorithm = String
+
+    alias HashKeyField = String
+
+    alias HashKeyValue = String
+
+    alias HeaderKey = String
+
+    alias HeaderList = Array(HttpActionHeader)
+
+    alias HeaderValue = String
+
+    alias HttpAction = NamedTuple(
+      "url" : Url,
+      "confirmationUrl" : (Url)?,
+      "headers" : (HeaderList)?,
+      "auth" : (HttpAuthorization)?
+    )
+
+    alias HttpActionHeader = NamedTuple(
+      "key" : HeaderKey,
+      "value" : HeaderValue
+    )
+
+    alias HttpAuthorization = NamedTuple(
+      "sigv4" : (SigV4Authorization)?
+    )
+
+    alias HttpContext = NamedTuple(
+      "headers" : (HttpHeaders)?,
+      "queryString" : (HttpQueryString)?
+    )
+
+    alias HttpHeaderName = String
+
+    alias HttpHeaderValue = String
+
+    alias HttpHeaders = Hash(HttpHeaderName,HttpHeaderValue)
+
+    alias HttpQueryString = String
+
+    alias HttpUrlDestinationConfiguration = NamedTuple(
+      "confirmationUrl" : Url
+    )
+
+    alias HttpUrlDestinationProperties = NamedTuple(
+      "confirmationUrl" : (Url)?
+    )
+
+    alias HttpUrlDestinationSummary = NamedTuple(
+      "confirmationUrl" : (Url)?
+    )
+
+    alias ImplicitDeny = NamedTuple(
+      "policies" : (Policies)?
+    )
+
+    alias InProgressChecksCount = Int32
+
+    alias InProgressThings = Int32
+
+    alias InProgressTimeoutInMinutes = Int64
+
+    alias IncrementFactor = Float64
+
+    alias IndexName = String
+
+    alias IndexNamesList = Array(IndexName)
+
+    alias IndexNotReadyException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias IndexSchema = String
+
+    alias IndexStatus = String
+
+    alias InlineDocument = String
+
+    alias InputName = String
+
+    alias InternalException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidAggregationException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidQueryException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidResponseException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidStateTransitionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias IotAnalyticsAction = NamedTuple(
+      "channelArn" : (AwsArn)?,
+      "channelName" : (ChannelName)?,
+      "batchMode" : (BatchMode)?,
+      "roleArn" : (AwsArn)?
+    )
+
+    alias IotEventsAction = NamedTuple(
+      "inputName" : InputName,
+      "messageId" : (MessageId)?,
+      "batchMode" : (BatchMode)?,
+      "roleArn" : AwsArn
+    )
+
+    alias IotSiteWiseAction = NamedTuple(
+      "putAssetPropertyValueEntries" : PutAssetPropertyValueEntryList,
+      "roleArn" : AwsArn
+    )
+
+    alias IsAuthenticated = Bool
+
+    alias IsDefaultVersion = Bool
+
+    alias IsDisabled = Bool
+
+    alias IsSuppressed = Bool
+
+    alias Job = NamedTuple(
+      "jobArn" : (JobArn)?,
+      "jobId" : (JobId)?,
+      "targetSelection" : (TargetSelection)?,
+      "status" : (JobStatus)?,
+      "forceCanceled" : (Forced)?,
+      "reasonCode" : (ReasonCode)?,
+      "comment" : (Comment)?,
+      "targets" : (JobTargets)?,
+      "description" : (JobDescription)?,
+      "presignedUrlConfig" : (PresignedUrlConfig)?,
+      "jobExecutionsRolloutConfig" : (JobExecutionsRolloutConfig)?,
+      "abortConfig" : (AbortConfig)?,
+      "createdAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?,
+      "completedAt" : (DateType)?,
+      "jobProcessDetails" : (JobProcessDetails)?,
+      "timeoutConfig" : (TimeoutConfig)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias JobArn = String
+
+    alias JobDescription = String
+
+    alias JobDocument = String
+
+    alias JobDocumentSource = String
+
+    alias JobExecution = NamedTuple(
+      "jobId" : (JobId)?,
+      "status" : (JobExecutionStatus)?,
+      "forceCanceled" : (Forced)?,
+      "statusDetails" : (JobExecutionStatusDetails)?,
+      "thingArn" : (ThingArn)?,
+      "queuedAt" : (DateType)?,
+      "startedAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?,
+      "executionNumber" : (ExecutionNumber)?,
+      "versionNumber" : (VersionNumber)?,
+      "approximateSecondsBeforeTimedOut" : (ApproximateSecondsBeforeTimedOut)?
+    )
+
+    alias JobExecutionFailureType = String
+
+    alias JobExecutionStatus = String
+
+    alias JobExecutionStatusDetails = NamedTuple(
+      "detailsMap" : (DetailsMap)?
+    )
+
+    alias JobExecutionSummary = NamedTuple(
+      "status" : (JobExecutionStatus)?,
+      "queuedAt" : (DateType)?,
+      "startedAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?,
+      "executionNumber" : (ExecutionNumber)?
+    )
+
+    alias JobExecutionSummaryForJob = NamedTuple(
+      "thingArn" : (ThingArn)?,
+      "jobExecutionSummary" : (JobExecutionSummary)?
+    )
+
+    alias JobExecutionSummaryForJobList = Array(JobExecutionSummaryForJob)
+
+    alias JobExecutionSummaryForThing = NamedTuple(
+      "jobId" : (JobId)?,
+      "jobExecutionSummary" : (JobExecutionSummary)?
+    )
+
+    alias JobExecutionSummaryForThingList = Array(JobExecutionSummaryForThing)
+
+    alias JobExecutionsRolloutConfig = NamedTuple(
+      "maximumPerMinute" : (MaxJobExecutionsPerMin)?,
+      "exponentialRate" : (ExponentialRolloutRate)?
+    )
+
+    alias JobId = String
+
+    alias JobProcessDetails = NamedTuple(
+      "processingTargets" : (ProcessingTargetNameList)?,
+      "numberOfCanceledThings" : (CanceledThings)?,
+      "numberOfSucceededThings" : (SucceededThings)?,
+      "numberOfFailedThings" : (FailedThings)?,
+      "numberOfRejectedThings" : (RejectedThings)?,
+      "numberOfQueuedThings" : (QueuedThings)?,
+      "numberOfInProgressThings" : (InProgressThings)?,
+      "numberOfRemovedThings" : (RemovedThings)?,
+      "numberOfTimedOutThings" : (TimedOutThings)?
+    )
+
+    alias JobStatus = String
+
+    alias JobSummary = NamedTuple(
+      "jobArn" : (JobArn)?,
+      "jobId" : (JobId)?,
+      "thingGroupId" : (ThingGroupId)?,
+      "targetSelection" : (TargetSelection)?,
+      "status" : (JobStatus)?,
+      "createdAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?,
+      "completedAt" : (DateType)?
+    )
+
+    alias JobSummaryList = Array(JobSummary)
+
+    alias JobTargets = Array(TargetArn)
+
+    alias JsonDocument = String
+
+    alias KafkaAction = NamedTuple(
+      "destinationArn" : AwsArn,
+      "topic" : String,
+      "key" : (String)?,
+      "partition" : (String)?,
+      "clientProperties" : ClientProperties
+    )
+
+    alias Key = String
+
+    alias KeyName = String
+
+    alias KeyPair = NamedTuple(
+      "PublicKey" : (PublicKey)?,
+      "PrivateKey" : (PrivateKey)?
+    )
+
+    alias KeyValue = String
+
+    alias KinesisAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "streamName" : StreamName,
+      "partitionKey" : (PartitionKey)?
+    )
+
+    alias LambdaAction = NamedTuple(
+      "functionArn" : FunctionArn
+    )
+
+    alias LaserMaxResults = Int32
+
+    alias LastModifiedDate = String | UInt64 | Time
+
+    alias LastUpdatedAtDate = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ListActiveViolationsRequest = NamedTuple(
+      "thingName" : (DeviceDefenderThingName)?,
+      "securityProfileName" : (SecurityProfileName)?,
+      "behaviorCriteriaType" : (BehaviorCriteriaType)?,
+      "listSuppressedAlerts" : (ListSuppressedAlerts)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListActiveViolationsResponse = NamedTuple(
+      "activeViolations" : (ActiveViolations)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAttachedPoliciesRequest = NamedTuple(
+      "target" : PolicyTarget,
+      "recursive" : (Recursive)?,
+      "marker" : (Marker)?,
+      "pageSize" : (PageSize)?
+    )
+
+    alias ListAttachedPoliciesResponse = NamedTuple(
+      "policies" : (Policies)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListAuditFindingsRequest = NamedTuple(
+      "taskId" : (AuditTaskId)?,
+      "checkName" : (AuditCheckName)?,
+      "resourceIdentifier" : (ResourceIdentifier)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "listSuppressedFindings" : (ListSuppressedFindings)?
+    )
+
+    alias ListAuditFindingsResponse = NamedTuple(
+      "findings" : (AuditFindings)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAuditMitigationActionsExecutionsRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId,
+      "actionStatus" : (AuditMitigationActionsExecutionStatus)?,
+      "findingId" : FindingId,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAuditMitigationActionsExecutionsResponse = NamedTuple(
+      "actionsExecutions" : (AuditMitigationActionExecutionMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAuditMitigationActionsTasksRequest = NamedTuple(
+      "auditTaskId" : (AuditTaskId)?,
+      "findingId" : (FindingId)?,
+      "taskStatus" : (AuditMitigationActionsTaskStatus)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "startTime" : Timestamp,
+      "endTime" : Timestamp
+    )
+
+    alias ListAuditMitigationActionsTasksResponse = NamedTuple(
+      "tasks" : (AuditMitigationActionsTaskMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAuditSuppressionsRequest = NamedTuple(
+      "checkName" : (AuditCheckName)?,
+      "resourceIdentifier" : (ResourceIdentifier)?,
+      "ascendingOrder" : (AscendingOrder)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAuditSuppressionsResponse = NamedTuple(
+      "suppressions" : (AuditSuppressionList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAuditTasksRequest = NamedTuple(
+      "startTime" : Timestamp,
+      "endTime" : Timestamp,
+      "taskType" : (AuditTaskType)?,
+      "taskStatus" : (AuditTaskStatus)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAuditTasksResponse = NamedTuple(
+      "tasks" : (AuditTaskMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAuthorizersRequest = NamedTuple(
+      "pageSize" : (PageSize)?,
+      "marker" : (Marker)?,
+      "ascendingOrder" : (AscendingOrder)?,
+      "status" : (AuthorizerStatus)?
+    )
+
+    alias ListAuthorizersResponse = NamedTuple(
+      "authorizers" : (Authorizers)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListBillingGroupsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "namePrefixFilter" : (BillingGroupName)?
+    )
+
+    alias ListBillingGroupsResponse = NamedTuple(
+      "billingGroups" : (BillingGroupNameAndArnList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListCACertificatesRequest = NamedTuple(
+      "pageSize" : (PageSize)?,
+      "marker" : (Marker)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListCACertificatesResponse = NamedTuple(
+      "certificates" : (CACertificates)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListCertificatesByCARequest = NamedTuple(
+      "caCertificateId" : CertificateId,
+      "pageSize" : (PageSize)?,
+      "marker" : (Marker)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListCertificatesByCAResponse = NamedTuple(
+      "certificates" : (Certificates)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListCertificatesRequest = NamedTuple(
+      "pageSize" : (PageSize)?,
+      "marker" : (Marker)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListCertificatesResponse = NamedTuple(
+      "certificates" : (Certificates)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListCustomMetricsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListCustomMetricsResponse = NamedTuple(
+      "metricNames" : (MetricNames)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDetectMitigationActionsExecutionsRequest = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?,
+      "violationId" : (ViolationId)?,
+      "thingName" : (DeviceDefenderThingName)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDetectMitigationActionsExecutionsResponse = NamedTuple(
+      "actionsExecutions" : (DetectMitigationActionExecutionList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDetectMitigationActionsTasksRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "startTime" : Timestamp,
+      "endTime" : Timestamp
+    )
+
+    alias ListDetectMitigationActionsTasksResponse = NamedTuple(
+      "tasks" : (DetectMitigationActionsTaskSummaryList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDimensionsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDimensionsResponse = NamedTuple(
+      "dimensionNames" : (DimensionNames)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDomainConfigurationsRequest = NamedTuple(
+      "marker" : (Marker)?,
+      "pageSize" : (PageSize)?,
+      "serviceType" : (ServiceType)?
+    )
+
+    alias ListDomainConfigurationsResponse = NamedTuple(
+      "domainConfigurations" : (DomainConfigurations)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListIndicesRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (QueryMaxResults)?
+    )
+
+    alias ListIndicesResponse = NamedTuple(
+      "indexNames" : (IndexNamesList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListJobExecutionsForJobRequest = NamedTuple(
+      "jobId" : JobId,
+      "status" : (JobExecutionStatus)?,
+      "maxResults" : (LaserMaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListJobExecutionsForJobResponse = NamedTuple(
+      "executionSummaries" : (JobExecutionSummaryForJobList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListJobExecutionsForThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "status" : (JobExecutionStatus)?,
+      "namespaceId" : (NamespaceId)?,
+      "maxResults" : (LaserMaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListJobExecutionsForThingResponse = NamedTuple(
+      "executionSummaries" : (JobExecutionSummaryForThingList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "status" : (JobStatus)?,
+      "targetSelection" : (TargetSelection)?,
+      "maxResults" : (LaserMaxResults)?,
+      "nextToken" : (NextToken)?,
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupId" : (ThingGroupId)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias ListJobsResponse = NamedTuple(
+      "jobs" : (JobSummaryList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListMitigationActionsRequest = NamedTuple(
+      "actionType" : (MitigationActionType)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListMitigationActionsResponse = NamedTuple(
+      "actionIdentifiers" : (MitigationActionIdentifierList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListOTAUpdatesRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "otaUpdateStatus" : (OTAUpdateStatus)?
+    )
+
+    alias ListOTAUpdatesResponse = NamedTuple(
+      "otaUpdates" : (OTAUpdatesSummary)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListOutgoingCertificatesRequest = NamedTuple(
+      "pageSize" : (PageSize)?,
+      "marker" : (Marker)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListOutgoingCertificatesResponse = NamedTuple(
+      "outgoingCertificates" : (OutgoingCertificates)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListPoliciesRequest = NamedTuple(
+      "marker" : (Marker)?,
+      "pageSize" : (PageSize)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListPoliciesResponse = NamedTuple(
+      "policies" : (Policies)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListPolicyPrincipalsRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "marker" : (Marker)?,
+      "pageSize" : (PageSize)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListPolicyPrincipalsResponse = NamedTuple(
+      "principals" : (Principals)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListPolicyVersionsRequest = NamedTuple(
+      "policyName" : PolicyName
+    )
+
+    alias ListPolicyVersionsResponse = NamedTuple(
+      "policyVersions" : (PolicyVersions)?
+    )
+
+    alias ListPrincipalPoliciesRequest = NamedTuple(
+      "principal" : Principal,
+      "marker" : (Marker)?,
+      "pageSize" : (PageSize)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListPrincipalPoliciesResponse = NamedTuple(
+      "policies" : (Policies)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListPrincipalThingsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "principal" : Principal
+    )
+
+    alias ListPrincipalThingsResponse = NamedTuple(
+      "things" : (ThingNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProvisioningTemplateVersionsRequest = NamedTuple(
+      "templateName" : TemplateName,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProvisioningTemplateVersionsResponse = NamedTuple(
+      "versions" : (ProvisioningTemplateVersionListing)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProvisioningTemplatesRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProvisioningTemplatesResponse = NamedTuple(
+      "templates" : (ProvisioningTemplateListing)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListRoleAliasesRequest = NamedTuple(
+      "pageSize" : (PageSize)?,
+      "marker" : (Marker)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListRoleAliasesResponse = NamedTuple(
+      "roleAliases" : (RoleAliases)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListScheduledAuditsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListScheduledAuditsResponse = NamedTuple(
+      "scheduledAudits" : (ScheduledAuditMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListSecurityProfilesForTargetRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "recursive" : (Recursive)?,
+      "securityProfileTargetArn" : SecurityProfileTargetArn
+    )
+
+    alias ListSecurityProfilesForTargetResponse = NamedTuple(
+      "securityProfileTargetMappings" : (SecurityProfileTargetMappings)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListSecurityProfilesRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "dimensionName" : (DimensionName)?,
+      "metricName" : (MetricName)?
+    )
+
+    alias ListSecurityProfilesResponse = NamedTuple(
+      "securityProfileIdentifiers" : (SecurityProfileIdentifiers)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListStreamsRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?,
+      "ascendingOrder" : (AscendingOrder)?
+    )
+
+    alias ListStreamsResponse = NamedTuple(
+      "streams" : (StreamsSummary)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListSuppressedAlerts = Bool
+
+    alias ListSuppressedFindings = Bool
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTargetsForPolicyRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "marker" : (Marker)?,
+      "pageSize" : (PageSize)?
+    )
+
+    alias ListTargetsForPolicyResponse = NamedTuple(
+      "targets" : (PolicyTargets)?,
+      "nextMarker" : (Marker)?
+    )
+
+    alias ListTargetsForSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListTargetsForSecurityProfileResponse = NamedTuple(
+      "securityProfileTargets" : (SecurityProfileTargets)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingGroupsForThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?
+    )
+
+    alias ListThingGroupsForThingResponse = NamedTuple(
+      "thingGroups" : (ThingGroupNameAndArnList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingGroupsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "parentGroup" : (ThingGroupName)?,
+      "namePrefixFilter" : (ThingGroupName)?,
+      "recursive" : (RecursiveWithoutDefault)?
+    )
+
+    alias ListThingGroupsResponse = NamedTuple(
+      "thingGroups" : (ThingGroupNameAndArnList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingPrincipalsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "thingName" : ThingName
+    )
+
+    alias ListThingPrincipalsResponse = NamedTuple(
+      "principals" : (Principals)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingRegistrationTaskReportsRequest = NamedTuple(
+      "taskId" : TaskId,
+      "reportType" : ReportType,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?
+    )
+
+    alias ListThingRegistrationTaskReportsResponse = NamedTuple(
+      "resourceLinks" : (S3FileUrlList)?,
+      "reportType" : (ReportType)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingRegistrationTasksRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "status" : (Status)?
+    )
+
+    alias ListThingRegistrationTasksResponse = NamedTuple(
+      "taskIds" : (TaskIdList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingTypesRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "thingTypeName" : (ThingTypeName)?
+    )
+
+    alias ListThingTypesResponse = NamedTuple(
+      "thingTypes" : (ThingTypeList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingsInBillingGroupRequest = NamedTuple(
+      "billingGroupName" : BillingGroupName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?
+    )
+
+    alias ListThingsInBillingGroupResponse = NamedTuple(
+      "things" : (ThingNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingsInThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "recursive" : (Recursive)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?
+    )
+
+    alias ListThingsInThingGroupResponse = NamedTuple(
+      "things" : (ThingNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListThingsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (RegistryMaxResults)?,
+      "attributeName" : (AttributeName)?,
+      "attributeValue" : (AttributeValue)?,
+      "thingTypeName" : (ThingTypeName)?
+    )
+
+    alias ListThingsResponse = NamedTuple(
+      "things" : (ThingAttributeList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTopicRuleDestinationsRequest = NamedTuple(
+      "maxResults" : (TopicRuleDestinationMaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTopicRuleDestinationsResponse = NamedTuple(
+      "destinationSummaries" : (TopicRuleDestinationSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTopicRulesRequest = NamedTuple(
+      "topic" : (Topic)?,
+      "maxResults" : (TopicRuleMaxResults)?,
+      "nextToken" : (NextToken)?,
+      "ruleDisabled" : (IsDisabled)?
+    )
+
+    alias ListTopicRulesResponse = NamedTuple(
+      "rules" : (TopicRuleList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListV2LoggingLevelsRequest = NamedTuple(
+      "targetType" : (LogTargetType)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (SkyfallMaxResults)?
+    )
+
+    alias ListV2LoggingLevelsResponse = NamedTuple(
+      "logTargetConfigurations" : (LogTargetConfigurations)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListViolationEventsRequest = NamedTuple(
+      "startTime" : Timestamp,
+      "endTime" : Timestamp,
+      "thingName" : (DeviceDefenderThingName)?,
+      "securityProfileName" : (SecurityProfileName)?,
+      "behaviorCriteriaType" : (BehaviorCriteriaType)?,
+      "listSuppressedAlerts" : (ListSuppressedAlerts)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListViolationEventsResponse = NamedTuple(
+      "violationEvents" : (ViolationEvents)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias LogGroupName = String
+
+    alias LogLevel = String
+
+    alias LogTarget = NamedTuple(
+      "targetType" : LogTargetType,
+      "targetName" : (LogTargetName)?
+    )
+
+    alias LogTargetConfiguration = NamedTuple(
+      "logTarget" : (LogTarget)?,
+      "logLevel" : (LogLevel)?
+    )
+
+    alias LogTargetConfigurations = Array(LogTargetConfiguration)
+
+    alias LogTargetName = String
+
+    alias LogTargetType = String
+
+    alias LoggingOptionsPayload = NamedTuple(
+      "roleArn" : AwsArn,
+      "logLevel" : (LogLevel)?
+    )
+
+    alias MachineLearningDetectionConfig = NamedTuple(
+      "confidenceLevel" : ConfidenceLevel
+    )
+
+    alias MalformedPolicyException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Marker = String
+
+    alias MaxJobExecutionsPerMin = Int32
+
+    alias MaxResults = Int32
+
+    alias Maximum = Float64
+
+    alias MaximumPerMinute = Int32
+
+    alias Message = String
+
+    alias MessageFormat = String
+
+    alias MessageId = String
+
+    alias MetricDimension = NamedTuple(
+      "dimensionName" : DimensionName,
+      "operator" : (DimensionValueOperator)?
+    )
+
+    alias MetricName = String
+
+    alias MetricNames = Array(MetricName)
+
+    alias MetricToRetain = NamedTuple(
+      "metric" : BehaviorMetric,
+      "metricDimension" : (MetricDimension)?
+    )
+
+    alias MetricValue = NamedTuple(
+      "count" : (UnsignedLong)?,
+      "cidrs" : (Cidrs)?,
+      "ports" : (Ports)?,
+      "number" : (Number)?,
+      "numbers" : (NumberList)?,
+      "strings" : (StringList)?
+    )
+
+    alias Minimum = Float64
+
+    alias MinimumNumberOfExecutedThings = Int32
+
+    alias MissingContextValue = String
+
+    alias MissingContextValues = Array(MissingContextValue)
+
+    alias MitigationAction = NamedTuple(
+      "name" : (MitigationActionName)?,
+      "id" : (MitigationActionId)?,
+      "roleArn" : (RoleArn)?,
+      "actionParams" : (MitigationActionParams)?
+    )
+
+    alias MitigationActionArn = String
+
+    alias MitigationActionId = String
+
+    alias MitigationActionIdentifier = NamedTuple(
+      "actionName" : (MitigationActionName)?,
+      "actionArn" : (MitigationActionArn)?,
+      "creationDate" : (Timestamp)?
+    )
+
+    alias MitigationActionIdentifierList = Array(MitigationActionIdentifier)
+
+    alias MitigationActionList = Array(MitigationAction)
+
+    alias MitigationActionName = String
+
+    alias MitigationActionNameList = Array(MitigationActionName)
+
+    alias MitigationActionParams = NamedTuple(
+      "updateDeviceCertificateParams" : (UpdateDeviceCertificateParams)?,
+      "updateCACertificateParams" : (UpdateCACertificateParams)?,
+      "addThingsToThingGroupParams" : (AddThingsToThingGroupParams)?,
+      "replaceDefaultPolicyVersionParams" : (ReplaceDefaultPolicyVersionParams)?,
+      "enableIoTLoggingParams" : (EnableIoTLoggingParams)?,
+      "publishFindingToSnsParams" : (PublishFindingToSnsParams)?
+    )
+
+    alias MitigationActionType = String
+
+    alias MitigationActionsTaskId = String
+
+    alias ModelStatus = String
+
+    alias MqttClientId = String
+
+    alias MqttContext = NamedTuple(
+      "username" : (MqttUsername)?,
+      "password" : (MqttPassword)?,
+      "clientId" : (MqttClientId)?
+    )
+
+    alias MqttPassword = String | Array(UInt8) | IO
+
+    alias MqttUsername = String
+
+    alias NamespaceId = String
+
+    alias NextToken = String
+
+    alias NonCompliantChecksCount = Int32
+
+    alias NonCompliantResource = NamedTuple(
+      "resourceType" : (ResourceType)?,
+      "resourceIdentifier" : (ResourceIdentifier)?,
+      "additionalInfo" : (StringMap)?
+    )
+
+    alias NonCompliantResourcesCount = Int64
+
+    alias NotConfiguredException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias NullableBoolean = Bool
+
+    alias Number = Float64
+
+    alias NumberList = Array(Number)
+
+    alias NumberOfThings = Int32
+
+    alias OTAUpdateArn = String
+
+    alias OTAUpdateDescription = String
+
+    alias OTAUpdateErrorMessage = String
+
+    alias OTAUpdateFile = NamedTuple(
+      "fileName" : (FileName)?,
+      "fileType" : (FileType)?,
+      "fileVersion" : (OTAUpdateFileVersion)?,
+      "fileLocation" : (FileLocation)?,
+      "codeSigning" : (CodeSigning)?,
+      "attributes" : (AttributesMap)?
+    )
+
+    alias OTAUpdateFileVersion = String
+
+    alias OTAUpdateFiles = Array(OTAUpdateFile)
+
+    alias OTAUpdateId = String
+
+    alias OTAUpdateInfo = NamedTuple(
+      "otaUpdateId" : (OTAUpdateId)?,
+      "otaUpdateArn" : (OTAUpdateArn)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "description" : (OTAUpdateDescription)?,
+      "targets" : (Targets)?,
+      "protocols" : (Protocols)?,
+      "awsJobExecutionsRolloutConfig" : (AwsJobExecutionsRolloutConfig)?,
+      "awsJobPresignedUrlConfig" : (AwsJobPresignedUrlConfig)?,
+      "targetSelection" : (TargetSelection)?,
+      "otaUpdateFiles" : (OTAUpdateFiles)?,
+      "otaUpdateStatus" : (OTAUpdateStatus)?,
+      "awsIotJobId" : (AwsIotJobId)?,
+      "awsIotJobArn" : (AwsIotJobArn)?,
+      "errorInfo" : (ErrorInfo)?,
+      "additionalParameters" : (AdditionalParameterMap)?
+    )
+
+    alias OTAUpdateStatus = String
+
+    alias OTAUpdateSummary = NamedTuple(
+      "otaUpdateId" : (OTAUpdateId)?,
+      "otaUpdateArn" : (OTAUpdateArn)?,
+      "creationDate" : (DateType)?
+    )
+
+    alias OTAUpdatesSummary = Array(OTAUpdateSummary)
+
+    alias OptionalVersion = Int64
+
+    alias OutgoingCertificate = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?,
+      "transferredTo" : (AwsAccountId)?,
+      "transferDate" : (DateType)?,
+      "transferMessage" : (Message)?,
+      "creationDate" : (DateType)?
+    )
+
+    alias OutgoingCertificates = Array(OutgoingCertificate)
+
+    alias OverrideDynamicGroups = Bool
+
+    alias PageSize = Int32
+
+    alias Parameter = String
+
+    alias Parameters = Hash(Parameter,Value)
+
+    alias PartitionKey = String
+
+    alias PayloadField = String
+
+    alias PayloadVersion = String
+
+    alias Percent = Float64
+
+    alias PercentList = Array(Percent)
+
+    alias PercentPair = NamedTuple(
+      "percent" : (Percent)?,
+      "value" : (PercentValue)?
+    )
+
+    alias PercentValue = Float64
+
+    alias Percentage = Int32
+
+    alias Percentiles = Array(PercentPair)
+
+    alias Platform = String
+
+    alias Policies = Array(Policy)
+
+    alias Policy = NamedTuple(
+      "policyName" : (PolicyName)?,
+      "policyArn" : (PolicyArn)?
+    )
+
+    alias PolicyArn = String
+
+    alias PolicyDocument = String
+
+    alias PolicyDocuments = Array(PolicyDocument)
+
+    alias PolicyName = String
+
+    alias PolicyNames = Array(PolicyName)
+
+    alias PolicyTarget = String
+
+    alias PolicyTargets = Array(PolicyTarget)
+
+    alias PolicyTemplateName = String
+
+    alias PolicyVersion = NamedTuple(
+      "versionId" : (PolicyVersionId)?,
+      "isDefaultVersion" : (IsDefaultVersion)?,
+      "createDate" : (DateType)?
+    )
+
+    alias PolicyVersionId = String
+
+    alias PolicyVersionIdentifier = NamedTuple(
+      "policyName" : (PolicyName)?,
+      "policyVersionId" : (PolicyVersionId)?
+    )
+
+    alias PolicyVersions = Array(PolicyVersion)
+
+    alias Port = Int32
+
+    alias Ports = Array(Port)
+
+    alias Prefix = String
+
+    alias PresignedUrlConfig = NamedTuple(
+      "roleArn" : (RoleArn)?,
+      "expiresInSec" : (ExpiresInSec)?
+    )
+
+    alias PrimitiveBoolean = Bool
+
+    alias Principal = String
+
+    alias PrincipalArn = String
+
+    alias PrincipalId = String
+
+    alias Principals = Array(PrincipalArn)
+
+    alias PrivateKey = String
+
+    alias ProcessingTargetName = String
+
+    alias ProcessingTargetNameList = Array(ProcessingTargetName)
+
+    alias Protocol = String
+
+    alias Protocols = Array(Protocol)
+
+    alias ProvisioningHook = NamedTuple(
+      "payloadVersion" : (PayloadVersion)?,
+      "targetArn" : TargetArn
+    )
+
+    alias ProvisioningTemplateListing = Array(ProvisioningTemplateSummary)
+
+    alias ProvisioningTemplateSummary = NamedTuple(
+      "templateArn" : (TemplateArn)?,
+      "templateName" : (TemplateName)?,
+      "description" : (TemplateDescription)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?,
+      "enabled" : (Enabled)?
+    )
+
+    alias ProvisioningTemplateVersionListing = Array(ProvisioningTemplateVersionSummary)
+
+    alias ProvisioningTemplateVersionSummary = NamedTuple(
+      "versionId" : (TemplateVersionId)?,
+      "creationDate" : (DateType)?,
+      "isDefaultVersion" : (IsDefaultVersion)?
+    )
+
+    alias PublicKey = String
+
+    alias PublicKeyMap = Hash(KeyName,KeyValue)
+
+    alias PublishFindingToSnsParams = NamedTuple(
+      "topicArn" : SnsTopicArn
+    )
+
+    alias PutAssetPropertyValueEntry = NamedTuple(
+      "entryId" : (AssetPropertyEntryId)?,
+      "assetId" : (AssetId)?,
+      "propertyId" : (AssetPropertyId)?,
+      "propertyAlias" : (AssetPropertyAlias)?,
+      "propertyValues" : AssetPropertyValueList
+    )
+
+    alias PutAssetPropertyValueEntryList = Array(PutAssetPropertyValueEntry)
+
+    alias PutItemInput = NamedTuple(
+      "tableName" : TableName
+    )
+
+    alias Qos = Int32
+
+    alias QueryMaxResults = Int32
+
+    alias QueryString = String
+
+    alias QueryVersion = String
+
+    alias QueueUrl = String
+
+    alias QueuedThings = Int32
+
+    alias RangeKeyField = String
+
+    alias RangeKeyValue = String
+
+    alias RateIncreaseCriteria = NamedTuple(
+      "numberOfNotifiedThings" : (NumberOfThings)?,
+      "numberOfSucceededThings" : (NumberOfThings)?
+    )
+
+    alias ReasonCode = String
+
+    alias ReasonForNonCompliance = String
+
+    alias ReasonForNonComplianceCode = String
+
+    alias ReasonForNonComplianceCodes = Array(ReasonForNonComplianceCode)
+
+    alias Recursive = Bool
+
+    alias RecursiveWithoutDefault = Bool
+
+    alias RegisterCACertificateRequest = NamedTuple(
+      "caCertificate" : CertificatePem,
+      "verificationCertificate" : CertificatePem,
+      "setAsActive" : (SetAsActive)?,
+      "allowAutoRegistration" : (AllowAutoRegistration)?,
+      "registrationConfig" : (RegistrationConfig)?,
+      "tags" : (TagList)?
+    )
+
+    alias RegisterCACertificateResponse = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?
+    )
+
+    alias RegisterCertificateRequest = NamedTuple(
+      "certificatePem" : CertificatePem,
+      "caCertificatePem" : (CertificatePem)?,
+      "setAsActive" : (SetAsActiveFlag)?,
+      "status" : (CertificateStatus)?
+    )
+
+    alias RegisterCertificateResponse = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?
+    )
+
+    alias RegisterCertificateWithoutCARequest = NamedTuple(
+      "certificatePem" : CertificatePem,
+      "status" : (CertificateStatus)?
+    )
+
+    alias RegisterCertificateWithoutCAResponse = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "certificateId" : (CertificateId)?
+    )
+
+    alias RegisterThingRequest = NamedTuple(
+      "templateBody" : TemplateBody,
+      "parameters" : (Parameters)?
+    )
+
+    alias RegisterThingResponse = NamedTuple(
+      "certificatePem" : (CertificatePem)?,
+      "resourceArns" : (ResourceArns)?
+    )
+
+    alias RegistrationCode = String
+
+    alias RegistrationCodeValidationException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias RegistrationConfig = NamedTuple(
+      "templateBody" : (TemplateBody)?,
+      "roleArn" : (RoleArn)?
+    )
+
+    alias RegistryMaxResults = Int32
+
+    alias RegistryS3BucketName = String
+
+    alias RegistryS3KeyName = String
+
+    alias RejectCertificateTransferRequest = NamedTuple(
+      "certificateId" : CertificateId,
+      "rejectReason" : (Message)?
+    )
+
+    alias RejectedThings = Int32
+
+    alias RelatedResource = NamedTuple(
+      "resourceType" : (ResourceType)?,
+      "resourceIdentifier" : (ResourceIdentifier)?,
+      "additionalInfo" : (StringMap)?
+    )
+
+    alias RelatedResources = Array(RelatedResource)
+
+    alias RemoveAuthorizerConfig = Bool
+
+    alias RemoveAutoRegistration = Bool
+
+    alias RemoveHook = Bool
+
+    alias RemoveThingFromBillingGroupRequest = NamedTuple(
+      "billingGroupName" : (BillingGroupName)?,
+      "billingGroupArn" : (BillingGroupArn)?,
+      "thingName" : (ThingName)?,
+      "thingArn" : (ThingArn)?
+    )
+
+    alias RemoveThingFromBillingGroupResponse = NamedTuple(
+      
+    )
+
+    alias RemoveThingFromThingGroupRequest = NamedTuple(
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupArn" : (ThingGroupArn)?,
+      "thingName" : (ThingName)?,
+      "thingArn" : (ThingArn)?
+    )
+
+    alias RemoveThingFromThingGroupResponse = NamedTuple(
+      
+    )
+
+    alias RemoveThingType = Bool
+
+    alias RemovedThings = Int32
+
+    alias ReplaceDefaultPolicyVersionParams = NamedTuple(
+      "templateName" : PolicyTemplateName
+    )
+
+    alias ReplaceTopicRuleRequest = NamedTuple(
+      "ruleName" : RuleName,
+      "topicRulePayload" : TopicRulePayload
+    )
+
+    alias ReportType = String
+
+    alias RepublishAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "topic" : TopicPattern,
+      "qos" : (Qos)?
+    )
+
+    alias ReservedDomainConfigurationName = String
+
+    alias Resource = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (errorMessage)?,
+      "resourceId" : (resourceId)?,
+      "resourceArn" : (resourceArn)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceArns = Hash(ResourceLogicalId,ResourceArn)
+
+    alias ResourceIdentifier = NamedTuple(
+      "deviceCertificateId" : (CertificateId)?,
+      "caCertificateId" : (CertificateId)?,
+      "cognitoIdentityPoolId" : (CognitoIdentityPoolId)?,
+      "clientId" : (ClientId)?,
+      "policyVersionIdentifier" : (PolicyVersionIdentifier)?,
+      "account" : (AwsAccountId)?,
+      "iamRoleArn" : (RoleArn)?,
+      "roleAliasArn" : (RoleAliasArn)?
+    )
+
+    alias ResourceLogicalId = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ResourceRegistrationFailureException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ResourceType = String
+
+    alias Resources = Array(Resource)
+
+    alias RoleAlias = String
+
+    alias RoleAliasArn = String
+
+    alias RoleAliasDescription = NamedTuple(
+      "roleAlias" : (RoleAlias)?,
+      "roleAliasArn" : (RoleAliasArn)?,
+      "roleArn" : (RoleArn)?,
+      "owner" : (AwsAccountId)?,
+      "credentialDurationSeconds" : (CredentialDurationSeconds)?,
+      "creationDate" : (DateType)?,
+      "lastModifiedDate" : (DateType)?
+    )
+
+    alias RoleAliases = Array(RoleAlias)
+
+    alias RoleArn = String
+
+    alias RolloutRatePerMinute = Int32
+
+    alias RuleArn = String
+
+    alias RuleName = String
+
+    alias S3Action = NamedTuple(
+      "roleArn" : AwsArn,
+      "bucketName" : BucketName,
+      "key" : Key,
+      "cannedAcl" : (CannedAccessControlList)?
+    )
+
+    alias S3Bucket = String
+
+    alias S3Destination = NamedTuple(
+      "bucket" : (S3Bucket)?,
+      "prefix" : (Prefix)?
+    )
+
+    alias S3FileUrl = String
+
+    alias S3FileUrlList = Array(S3FileUrl)
+
+    alias S3Key = String
+
+    alias S3Location = NamedTuple(
+      "bucket" : (S3Bucket)?,
+      "key" : (S3Key)?,
+      "version" : (S3Version)?
+    )
+
+    alias S3Version = String
+
+    alias SQL = String
+
+    alias SalesforceAction = NamedTuple(
+      "token" : SalesforceToken,
+      "url" : SalesforceEndpoint
+    )
+
+    alias SalesforceEndpoint = String
+
+    alias SalesforceToken = String
+
+    alias ScheduledAuditArn = String
+
+    alias ScheduledAuditMetadata = NamedTuple(
+      "scheduledAuditName" : (ScheduledAuditName)?,
+      "scheduledAuditArn" : (ScheduledAuditArn)?,
+      "frequency" : (AuditFrequency)?,
+      "dayOfMonth" : (DayOfMonth)?,
+      "dayOfWeek" : (DayOfWeek)?
+    )
+
+    alias ScheduledAuditMetadataList = Array(ScheduledAuditMetadata)
+
+    alias ScheduledAuditName = String
+
+    alias SearchIndexRequest = NamedTuple(
+      "indexName" : (IndexName)?,
+      "queryString" : QueryString,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (QueryMaxResults)?,
+      "queryVersion" : (QueryVersion)?
+    )
+
+    alias SearchIndexResponse = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "things" : (ThingDocumentList)?,
+      "thingGroups" : (ThingGroupDocumentList)?
+    )
+
+    alias SearchableAttributes = Array(AttributeName)
+
+    alias Seconds = Int32
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupList = Array(SecurityGroupId)
+
+    alias SecurityProfileArn = String
+
+    alias SecurityProfileDescription = String
+
+    alias SecurityProfileIdentifier = NamedTuple(
+      "name" : SecurityProfileName,
+      "arn" : SecurityProfileArn
+    )
+
+    alias SecurityProfileIdentifiers = Array(SecurityProfileIdentifier)
+
+    alias SecurityProfileName = String
+
+    alias SecurityProfileTarget = NamedTuple(
+      "arn" : SecurityProfileTargetArn
+    )
+
+    alias SecurityProfileTargetArn = String
+
+    alias SecurityProfileTargetMapping = NamedTuple(
+      "securityProfileIdentifier" : (SecurityProfileIdentifier)?,
+      "target" : (SecurityProfileTarget)?
+    )
+
+    alias SecurityProfileTargetMappings = Array(SecurityProfileTargetMapping)
+
+    alias SecurityProfileTargets = Array(SecurityProfileTarget)
+
+    alias ServerCertificateArns = Array(AcmCertificateArn)
+
+    alias ServerCertificateStatus = String
+
+    alias ServerCertificateStatusDetail = String
+
+    alias ServerCertificateSummary = NamedTuple(
+      "serverCertificateArn" : (AcmCertificateArn)?,
+      "serverCertificateStatus" : (ServerCertificateStatus)?,
+      "serverCertificateStatusDetail" : (ServerCertificateStatusDetail)?
+    )
+
+    alias ServerCertificates = Array(ServerCertificateSummary)
+
+    alias ServerName = String
+
+    alias ServiceName = String
+
+    alias ServiceType = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias SetAsActive = Bool
+
+    alias SetAsActiveFlag = Bool
+
+    alias SetAsDefault = Bool
+
+    alias SetDefaultAuthorizerRequest = NamedTuple(
+      "authorizerName" : AuthorizerName
+    )
+
+    alias SetDefaultAuthorizerResponse = NamedTuple(
+      "authorizerName" : (AuthorizerName)?,
+      "authorizerArn" : (AuthorizerArn)?
+    )
+
+    alias SetDefaultPolicyVersionRequest = NamedTuple(
+      "policyName" : PolicyName,
+      "policyVersionId" : PolicyVersionId
+    )
+
+    alias SetLoggingOptionsRequest = NamedTuple(
+      "loggingOptionsPayload" : LoggingOptionsPayload
+    )
+
+    alias SetV2LoggingLevelRequest = NamedTuple(
+      "logTarget" : LogTarget,
+      "logLevel" : LogLevel
+    )
+
+    alias SetV2LoggingOptionsRequest = NamedTuple(
+      "roleArn" : (AwsArn)?,
+      "defaultLogLevel" : (LogLevel)?,
+      "disableAllLogs" : (DisableAllLogs)?
+    )
+
+    alias SigV4Authorization = NamedTuple(
+      "signingRegion" : SigningRegion,
+      "serviceName" : ServiceName,
+      "roleArn" : AwsArn
+    )
+
+    alias Signature = String | Array(UInt8) | IO
+
+    alias SignatureAlgorithm = String
+
+    alias SigningJobId = String
+
+    alias SigningProfileName = String
+
+    alias SigningProfileParameter = NamedTuple(
+      "certificateArn" : (CertificateArn)?,
+      "platform" : (Platform)?,
+      "certificatePathOnDevice" : (CertificatePathOnDevice)?
+    )
+
+    alias SigningRegion = String
+
+    alias SkippedFindingsCount = Int64
+
+    alias SkyfallMaxResults = Int32
+
+    alias SnsAction = NamedTuple(
+      "targetArn" : AwsArn,
+      "roleArn" : AwsArn,
+      "messageFormat" : (MessageFormat)?
+    )
+
+    alias SnsTopicArn = String
+
+    alias SqlParseException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias SqsAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "queueUrl" : QueueUrl,
+      "useBase64" : (UseBase64)?
+    )
+
+    alias StartAuditMitigationActionsTaskRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId,
+      "target" : AuditMitigationActionsTaskTarget,
+      "auditCheckToActionsMapping" : AuditCheckToActionsMapping,
+      "clientRequestToken" : ClientRequestToken
+    )
+
+    alias StartAuditMitigationActionsTaskResponse = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?
+    )
+
+    alias StartDetectMitigationActionsTaskRequest = NamedTuple(
+      "taskId" : MitigationActionsTaskId,
+      "target" : DetectMitigationActionsTaskTarget,
+      "actions" : DetectMitigationActionsToExecuteList,
+      "violationEventOccurrenceRange" : (ViolationEventOccurrenceRange)?,
+      "includeOnlyActiveViolations" : (NullableBoolean)?,
+      "includeSuppressedAlerts" : (NullableBoolean)?,
+      "clientRequestToken" : ClientRequestToken
+    )
+
+    alias StartDetectMitigationActionsTaskResponse = NamedTuple(
+      "taskId" : (MitigationActionsTaskId)?
+    )
+
+    alias StartOnDemandAuditTaskRequest = NamedTuple(
+      "targetCheckNames" : TargetAuditCheckNames
+    )
+
+    alias StartOnDemandAuditTaskResponse = NamedTuple(
+      "taskId" : (AuditTaskId)?
+    )
+
+    alias StartSigningJobParameter = NamedTuple(
+      "signingProfileParameter" : (SigningProfileParameter)?,
+      "signingProfileName" : (SigningProfileName)?,
+      "destination" : (Destination)?
+    )
+
+    alias StartThingRegistrationTaskRequest = NamedTuple(
+      "templateBody" : TemplateBody,
+      "inputFileBucket" : RegistryS3BucketName,
+      "inputFileKey" : RegistryS3KeyName,
+      "roleArn" : RoleArn
+    )
+
+    alias StartThingRegistrationTaskResponse = NamedTuple(
+      "taskId" : (TaskId)?
+    )
+
+    alias StateMachineName = String
+
+    alias StateReason = String
+
+    alias StateValue = String
+
+    alias StatisticalThreshold = NamedTuple(
+      "statistic" : (EvaluationStatistic)?
+    )
+
+    alias Statistics = NamedTuple(
+      "count" : (Count)?,
+      "average" : (Average)?,
+      "sum" : (Sum)?,
+      "minimum" : (Minimum)?,
+      "maximum" : (Maximum)?,
+      "sumOfSquares" : (SumOfSquares)?,
+      "variance" : (Variance)?,
+      "stdDeviation" : (StdDeviation)?
+    )
+
+    alias Status = String
+
+    alias StdDeviation = Float64
+
+    alias StepFunctionsAction = NamedTuple(
+      "executionNamePrefix" : (ExecutionNamePrefix)?,
+      "stateMachineName" : StateMachineName,
+      "roleArn" : AwsArn
+    )
+
+    alias StopThingRegistrationTaskRequest = NamedTuple(
+      "taskId" : TaskId
+    )
+
+    alias StopThingRegistrationTaskResponse = NamedTuple(
+      
+    )
+
+    alias Stream = NamedTuple(
+      "streamId" : (StreamId)?,
+      "fileId" : (FileId)?
+    )
+
+    alias StreamArn = String
+
+    alias StreamDescription = String
+
+    alias StreamFile = NamedTuple(
+      "fileId" : (FileId)?,
+      "s3Location" : (S3Location)?
+    )
+
+    alias StreamFiles = Array(StreamFile)
+
+    alias StreamId = String
+
+    alias StreamInfo = NamedTuple(
+      "streamId" : (StreamId)?,
+      "streamArn" : (StreamArn)?,
+      "streamVersion" : (StreamVersion)?,
+      "description" : (StreamDescription)?,
+      "files" : (StreamFiles)?,
+      "createdAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?,
+      "roleArn" : (RoleArn)?
+    )
+
+    alias StreamName = String
+
+    alias StreamSummary = NamedTuple(
+      "streamId" : (StreamId)?,
+      "streamArn" : (StreamArn)?,
+      "streamVersion" : (StreamVersion)?,
+      "description" : (StreamDescription)?
+    )
+
+    alias StreamVersion = Int32
+
+    alias StreamsSummary = Array(StreamSummary)
+
+    alias String = String
+
+    alias StringList = Array(stringValue)
+
+    alias StringMap = Hash(String,String)
+
+    alias SubnetId = String
+
+    alias SubnetIdList = Array(SubnetId)
+
+    alias SucceededFindingsCount = Int64
+
+    alias SucceededThings = Int32
+
+    alias Sum = Float64
+
+    alias SumOfSquares = Float64
+
+    alias SuppressAlerts = Bool
+
+    alias SuppressIndefinitely = Bool
+
+    alias SuppressedNonCompliantResourcesCount = Int64
+
+    alias TableName = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Target = String
+
+    alias TargetArn = String
+
+    alias TargetAuditCheckNames = Array(AuditCheckName)
+
+    alias TargetSelection = String
+
+    alias TargetViolationIdsForDetectMitigationActions = Array(ViolationId)
+
+    alias Targets = Array(Target)
+
+    alias TaskAlreadyExistsException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias TaskId = String
+
+    alias TaskIdList = Array(TaskId)
+
+    alias TaskStatistics = NamedTuple(
+      "totalChecks" : (TotalChecksCount)?,
+      "inProgressChecks" : (InProgressChecksCount)?,
+      "waitingForDataCollectionChecks" : (WaitingForDataCollectionChecksCount)?,
+      "compliantChecks" : (CompliantChecksCount)?,
+      "nonCompliantChecks" : (NonCompliantChecksCount)?,
+      "failedChecks" : (FailedChecksCount)?,
+      "canceledChecks" : (CanceledChecksCount)?
+    )
+
+    alias TaskStatisticsForAuditCheck = NamedTuple(
+      "totalFindingsCount" : (TotalFindingsCount)?,
+      "failedFindingsCount" : (FailedFindingsCount)?,
+      "succeededFindingsCount" : (SucceededFindingsCount)?,
+      "skippedFindingsCount" : (SkippedFindingsCount)?,
+      "canceledFindingsCount" : (CanceledFindingsCount)?
+    )
+
+    alias TemplateArn = String
+
+    alias TemplateBody = String
+
+    alias TemplateDescription = String
+
+    alias TemplateName = String
+
+    alias TemplateVersionId = Int32
+
+    alias TestAuthorizationRequest = NamedTuple(
+      "principal" : (Principal)?,
+      "cognitoIdentityPoolId" : (CognitoIdentityPoolId)?,
+      "authInfos" : AuthInfos,
+      "clientId" : (ClientId)?,
+      "policyNamesToAdd" : (PolicyNames)?,
+      "policyNamesToSkip" : (PolicyNames)?
+    )
+
+    alias TestAuthorizationResponse = NamedTuple(
+      "authResults" : (AuthResults)?
+    )
+
+    alias TestInvokeAuthorizerRequest = NamedTuple(
+      "authorizerName" : AuthorizerName,
+      "token" : (Token)?,
+      "tokenSignature" : (TokenSignature)?,
+      "httpContext" : (HttpContext)?,
+      "mqttContext" : (MqttContext)?,
+      "tlsContext" : (TlsContext)?
+    )
+
+    alias TestInvokeAuthorizerResponse = NamedTuple(
+      "isAuthenticated" : (IsAuthenticated)?,
+      "principalId" : (PrincipalId)?,
+      "policyDocuments" : (PolicyDocuments)?,
+      "refreshAfterInSeconds" : (Seconds)?,
+      "disconnectAfterInSeconds" : (Seconds)?
+    )
+
+    alias ThingArn = String
+
+    alias ThingAttribute = NamedTuple(
+      "thingName" : (ThingName)?,
+      "thingTypeName" : (ThingTypeName)?,
+      "thingArn" : (ThingArn)?,
+      "attributes" : (Attributes)?,
+      "version" : (Version)?
+    )
+
+    alias ThingAttributeList = Array(ThingAttribute)
+
+    alias ThingConnectivity = NamedTuple(
+      "connected" : (Boolean)?,
+      "timestamp" : (ConnectivityTimestamp)?
+    )
+
+    alias ThingConnectivityIndexingMode = String
+
+    alias ThingDocument = NamedTuple(
+      "thingName" : (ThingName)?,
+      "thingId" : (ThingId)?,
+      "thingTypeName" : (ThingTypeName)?,
+      "thingGroupNames" : (ThingGroupNameList)?,
+      "attributes" : (Attributes)?,
+      "shadow" : (JsonDocument)?,
+      "connectivity" : (ThingConnectivity)?
+    )
+
+    alias ThingDocumentList = Array(ThingDocument)
+
+    alias ThingGroupArn = String
+
+    alias ThingGroupDescription = String
+
+    alias ThingGroupDocument = NamedTuple(
+      "thingGroupName" : (ThingGroupName)?,
+      "thingGroupId" : (ThingGroupId)?,
+      "thingGroupDescription" : (ThingGroupDescription)?,
+      "attributes" : (Attributes)?,
+      "parentGroupNames" : (ThingGroupNameList)?
+    )
+
+    alias ThingGroupDocumentList = Array(ThingGroupDocument)
+
+    alias ThingGroupId = String
+
+    alias ThingGroupIndexingConfiguration = NamedTuple(
+      "thingGroupIndexingMode" : ThingGroupIndexingMode,
+      "managedFields" : (Fields)?,
+      "customFields" : (Fields)?
+    )
+
+    alias ThingGroupIndexingMode = String
+
+    alias ThingGroupList = Array(ThingGroupName)
+
+    alias ThingGroupMetadata = NamedTuple(
+      "parentGroupName" : (ThingGroupName)?,
+      "rootToParentThingGroups" : (ThingGroupNameAndArnList)?,
+      "creationDate" : (CreationDate)?
+    )
+
+    alias ThingGroupName = String
+
+    alias ThingGroupNameAndArnList = Array(GroupNameAndArn)
+
+    alias ThingGroupNameList = Array(ThingGroupName)
+
+    alias ThingGroupNames = Array(ThingGroupName)
+
+    alias ThingGroupProperties = NamedTuple(
+      "thingGroupDescription" : (ThingGroupDescription)?,
+      "attributePayload" : (AttributePayload)?
+    )
+
+    alias ThingId = String
+
+    alias ThingIndexingConfiguration = NamedTuple(
+      "thingIndexingMode" : ThingIndexingMode,
+      "thingConnectivityIndexingMode" : (ThingConnectivityIndexingMode)?,
+      "managedFields" : (Fields)?,
+      "customFields" : (Fields)?
+    )
+
+    alias ThingIndexingMode = String
+
+    alias ThingName = String
+
+    alias ThingNameList = Array(ThingName)
+
+    alias ThingTypeArn = String
+
+    alias ThingTypeDefinition = NamedTuple(
+      "thingTypeName" : (ThingTypeName)?,
+      "thingTypeArn" : (ThingTypeArn)?,
+      "thingTypeProperties" : (ThingTypeProperties)?,
+      "thingTypeMetadata" : (ThingTypeMetadata)?
+    )
+
+    alias ThingTypeDescription = String
+
+    alias ThingTypeId = String
+
+    alias ThingTypeList = Array(ThingTypeDefinition)
+
+    alias ThingTypeMetadata = NamedTuple(
+      "deprecated" : (Boolean)?,
+      "deprecationDate" : (DeprecationDate)?,
+      "creationDate" : (CreationDate)?
+    )
+
+    alias ThingTypeName = String
+
+    alias ThingTypeProperties = NamedTuple(
+      "thingTypeDescription" : (ThingTypeDescription)?,
+      "searchableAttributes" : (SearchableAttributes)?
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias TimedOutThings = Int32
+
+    alias TimeoutConfig = NamedTuple(
+      "inProgressTimeoutInMinutes" : (InProgressTimeoutInMinutes)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestreamAction = NamedTuple(
+      "roleArn" : AwsArn,
+      "databaseName" : TimestreamDatabaseName,
+      "tableName" : TimestreamTableName,
+      "dimensions" : TimestreamDimensionList,
+      "timestamp" : (TimestreamTimestamp)?
+    )
+
+    alias TimestreamDatabaseName = String
+
+    alias TimestreamDimension = NamedTuple(
+      "name" : TimestreamDimensionName,
+      "value" : TimestreamDimensionValue
+    )
+
+    alias TimestreamDimensionList = Array(TimestreamDimension)
+
+    alias TimestreamDimensionName = String
+
+    alias TimestreamDimensionValue = String
+
+    alias TimestreamTableName = String
+
+    alias TimestreamTimestamp = NamedTuple(
+      "value" : TimestreamTimestampValue,
+      "unit" : TimestreamTimestampUnit
+    )
+
+    alias TimestreamTimestampUnit = String
+
+    alias TimestreamTimestampValue = String
+
+    alias TinyMaxResults = Int32
+
+    alias TlsContext = NamedTuple(
+      "serverName" : (ServerName)?
+    )
+
+    alias Token = String
+
+    alias TokenKeyName = String
+
+    alias TokenSignature = String
+
+    alias Topic = String
+
+    alias TopicPattern = String
+
+    alias TopicRule = NamedTuple(
+      "ruleName" : (RuleName)?,
+      "sql" : (SQL)?,
+      "description" : (Description)?,
+      "createdAt" : (CreatedAtDate)?,
+      "actions" : (ActionList)?,
+      "ruleDisabled" : (IsDisabled)?,
+      "awsIotSqlVersion" : (AwsIotSqlVersion)?,
+      "errorAction" : (Action)?
+    )
+
+    alias TopicRuleDestination = NamedTuple(
+      "arn" : (AwsArn)?,
+      "status" : (TopicRuleDestinationStatus)?,
+      "createdAt" : (CreatedAtDate)?,
+      "lastUpdatedAt" : (LastUpdatedAtDate)?,
+      "statusReason" : (String)?,
+      "httpUrlProperties" : (HttpUrlDestinationProperties)?,
+      "vpcProperties" : (VpcDestinationProperties)?
+    )
+
+    alias TopicRuleDestinationConfiguration = NamedTuple(
+      "httpUrlConfiguration" : (HttpUrlDestinationConfiguration)?,
+      "vpcConfiguration" : (VpcDestinationConfiguration)?
+    )
+
+    alias TopicRuleDestinationMaxResults = Int32
+
+    alias TopicRuleDestinationStatus = String
+
+    alias TopicRuleDestinationSummaries = Array(TopicRuleDestinationSummary)
+
+    alias TopicRuleDestinationSummary = NamedTuple(
+      "arn" : (AwsArn)?,
+      "status" : (TopicRuleDestinationStatus)?,
+      "createdAt" : (CreatedAtDate)?,
+      "lastUpdatedAt" : (LastUpdatedAtDate)?,
+      "statusReason" : (String)?,
+      "httpUrlSummary" : (HttpUrlDestinationSummary)?,
+      "vpcDestinationSummary" : (VpcDestinationSummary)?
+    )
+
+    alias TopicRuleList = Array(TopicRuleListItem)
+
+    alias TopicRuleListItem = NamedTuple(
+      "ruleArn" : (RuleArn)?,
+      "ruleName" : (RuleName)?,
+      "topicPattern" : (TopicPattern)?,
+      "createdAt" : (CreatedAtDate)?,
+      "ruleDisabled" : (IsDisabled)?
+    )
+
+    alias TopicRuleMaxResults = Int32
+
+    alias TopicRulePayload = NamedTuple(
+      "sql" : SQL,
+      "description" : (Description)?,
+      "actions" : ActionList,
+      "ruleDisabled" : (IsDisabled)?,
+      "awsIotSqlVersion" : (AwsIotSqlVersion)?,
+      "errorAction" : (Action)?
+    )
+
+    alias TotalChecksCount = Int32
+
+    alias TotalFindingsCount = Int64
+
+    alias TotalResourcesCount = Int64
+
+    alias TransferAlreadyCompletedException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias TransferCertificateRequest = NamedTuple(
+      "certificateId" : CertificateId,
+      "targetAwsAccount" : AwsAccountId,
+      "transferMessage" : (Message)?
+    )
+
+    alias TransferCertificateResponse = NamedTuple(
+      "transferredCertificateArn" : (CertificateArn)?
+    )
+
+    alias TransferConflictException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias TransferData = NamedTuple(
+      "transferMessage" : (Message)?,
+      "rejectReason" : (Message)?,
+      "transferDate" : (DateType)?,
+      "acceptDate" : (DateType)?,
+      "rejectDate" : (DateType)?
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias UndoDeprecate = Bool
+
+    alias UnsignedLong = Int64
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAccountAuditConfigurationRequest = NamedTuple(
+      "roleArn" : (RoleArn)?,
+      "auditNotificationTargetConfigurations" : (AuditNotificationTargetConfigurations)?,
+      "auditCheckConfigurations" : (AuditCheckConfigurations)?
+    )
+
+    alias UpdateAccountAuditConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAuditSuppressionRequest = NamedTuple(
+      "checkName" : AuditCheckName,
+      "resourceIdentifier" : ResourceIdentifier,
+      "expirationDate" : (Timestamp)?,
+      "suppressIndefinitely" : (SuppressIndefinitely)?,
+      "description" : (AuditDescription)?
+    )
+
+    alias UpdateAuditSuppressionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAuthorizerRequest = NamedTuple(
+      "authorizerName" : AuthorizerName,
+      "authorizerFunctionArn" : (AuthorizerFunctionArn)?,
+      "tokenKeyName" : (TokenKeyName)?,
+      "tokenSigningPublicKeys" : (PublicKeyMap)?,
+      "status" : (AuthorizerStatus)?
+    )
+
+    alias UpdateAuthorizerResponse = NamedTuple(
+      "authorizerName" : (AuthorizerName)?,
+      "authorizerArn" : (AuthorizerArn)?
+    )
+
+    alias UpdateBillingGroupRequest = NamedTuple(
+      "billingGroupName" : BillingGroupName,
+      "billingGroupProperties" : BillingGroupProperties,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias UpdateBillingGroupResponse = NamedTuple(
+      "version" : (Version)?
+    )
+
+    alias UpdateCACertificateParams = NamedTuple(
+      "action" : CACertificateUpdateAction
+    )
+
+    alias UpdateCACertificateRequest = NamedTuple(
+      "certificateId" : CertificateId,
+      "newStatus" : (CACertificateStatus)?,
+      "newAutoRegistrationStatus" : (AutoRegistrationStatus)?,
+      "registrationConfig" : (RegistrationConfig)?,
+      "removeAutoRegistration" : (RemoveAutoRegistration)?
+    )
+
+    alias UpdateCertificateRequest = NamedTuple(
+      "certificateId" : CertificateId,
+      "newStatus" : CertificateStatus
+    )
+
+    alias UpdateCustomMetricRequest = NamedTuple(
+      "metricName" : MetricName,
+      "displayName" : CustomMetricDisplayName
+    )
+
+    alias UpdateCustomMetricResponse = NamedTuple(
+      "metricName" : (MetricName)?,
+      "metricArn" : (CustomMetricArn)?,
+      "metricType" : (CustomMetricType)?,
+      "displayName" : (CustomMetricDisplayName)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias UpdateDeviceCertificateParams = NamedTuple(
+      "action" : DeviceCertificateUpdateAction
+    )
+
+    alias UpdateDimensionRequest = NamedTuple(
+      "name" : DimensionName,
+      "stringValues" : DimensionStringValues
+    )
+
+    alias UpdateDimensionResponse = NamedTuple(
+      "name" : (DimensionName)?,
+      "arn" : (DimensionArn)?,
+      "type" : (DimensionType)?,
+      "stringValues" : (DimensionStringValues)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias UpdateDomainConfigurationRequest = NamedTuple(
+      "domainConfigurationName" : ReservedDomainConfigurationName,
+      "authorizerConfig" : (AuthorizerConfig)?,
+      "domainConfigurationStatus" : (DomainConfigurationStatus)?,
+      "removeAuthorizerConfig" : (RemoveAuthorizerConfig)?
+    )
+
+    alias UpdateDomainConfigurationResponse = NamedTuple(
+      "domainConfigurationName" : (ReservedDomainConfigurationName)?,
+      "domainConfigurationArn" : (DomainConfigurationArn)?
+    )
+
+    alias UpdateDynamicThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "thingGroupProperties" : ThingGroupProperties,
+      "expectedVersion" : (OptionalVersion)?,
+      "indexName" : (IndexName)?,
+      "queryString" : (QueryString)?,
+      "queryVersion" : (QueryVersion)?
+    )
+
+    alias UpdateDynamicThingGroupResponse = NamedTuple(
+      "version" : (Version)?
+    )
+
+    alias UpdateEventConfigurationsRequest = NamedTuple(
+      "eventConfigurations" : (EventConfigurations)?
+    )
+
+    alias UpdateEventConfigurationsResponse = NamedTuple(
+      
+    )
+
+    alias UpdateIndexingConfigurationRequest = NamedTuple(
+      "thingIndexingConfiguration" : (ThingIndexingConfiguration)?,
+      "thingGroupIndexingConfiguration" : (ThingGroupIndexingConfiguration)?
+    )
+
+    alias UpdateIndexingConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateJobRequest = NamedTuple(
+      "jobId" : JobId,
+      "description" : (JobDescription)?,
+      "presignedUrlConfig" : (PresignedUrlConfig)?,
+      "jobExecutionsRolloutConfig" : (JobExecutionsRolloutConfig)?,
+      "abortConfig" : (AbortConfig)?,
+      "timeoutConfig" : (TimeoutConfig)?,
+      "namespaceId" : (NamespaceId)?
+    )
+
+    alias UpdateMitigationActionRequest = NamedTuple(
+      "actionName" : MitigationActionName,
+      "roleArn" : (RoleArn)?,
+      "actionParams" : (MitigationActionParams)?
+    )
+
+    alias UpdateMitigationActionResponse = NamedTuple(
+      "actionArn" : (MitigationActionArn)?,
+      "actionId" : (MitigationActionId)?
+    )
+
+    alias UpdateProvisioningTemplateRequest = NamedTuple(
+      "templateName" : TemplateName,
+      "description" : (TemplateDescription)?,
+      "enabled" : (Enabled)?,
+      "defaultVersionId" : (TemplateVersionId)?,
+      "provisioningRoleArn" : (RoleArn)?,
+      "preProvisioningHook" : (ProvisioningHook)?,
+      "removePreProvisioningHook" : (RemoveHook)?
+    )
+
+    alias UpdateProvisioningTemplateResponse = NamedTuple(
+      
+    )
+
+    alias UpdateRoleAliasRequest = NamedTuple(
+      "roleAlias" : RoleAlias,
+      "roleArn" : (RoleArn)?,
+      "credentialDurationSeconds" : (CredentialDurationSeconds)?
+    )
+
+    alias UpdateRoleAliasResponse = NamedTuple(
+      "roleAlias" : (RoleAlias)?,
+      "roleAliasArn" : (RoleAliasArn)?
+    )
+
+    alias UpdateScheduledAuditRequest = NamedTuple(
+      "frequency" : (AuditFrequency)?,
+      "dayOfMonth" : (DayOfMonth)?,
+      "dayOfWeek" : (DayOfWeek)?,
+      "targetCheckNames" : (TargetAuditCheckNames)?,
+      "scheduledAuditName" : ScheduledAuditName
+    )
+
+    alias UpdateScheduledAuditResponse = NamedTuple(
+      "scheduledAuditArn" : (ScheduledAuditArn)?
+    )
+
+    alias UpdateSecurityProfileRequest = NamedTuple(
+      "securityProfileName" : SecurityProfileName,
+      "securityProfileDescription" : (SecurityProfileDescription)?,
+      "behaviors" : (Behaviors)?,
+      "alertTargets" : (AlertTargets)?,
+      "additionalMetricsToRetain" : (AdditionalMetricsToRetainList)?,
+      "additionalMetricsToRetainV2" : (AdditionalMetricsToRetainV2List)?,
+      "deleteBehaviors" : (DeleteBehaviors)?,
+      "deleteAlertTargets" : (DeleteAlertTargets)?,
+      "deleteAdditionalMetricsToRetain" : (DeleteAdditionalMetricsToRetain)?,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias UpdateSecurityProfileResponse = NamedTuple(
+      "securityProfileName" : (SecurityProfileName)?,
+      "securityProfileArn" : (SecurityProfileArn)?,
+      "securityProfileDescription" : (SecurityProfileDescription)?,
+      "behaviors" : (Behaviors)?,
+      "alertTargets" : (AlertTargets)?,
+      "additionalMetricsToRetain" : (AdditionalMetricsToRetainList)?,
+      "additionalMetricsToRetainV2" : (AdditionalMetricsToRetainV2List)?,
+      "version" : (Version)?,
+      "creationDate" : (Timestamp)?,
+      "lastModifiedDate" : (Timestamp)?
+    )
+
+    alias UpdateStreamRequest = NamedTuple(
+      "streamId" : StreamId,
+      "description" : (StreamDescription)?,
+      "files" : (StreamFiles)?,
+      "roleArn" : (RoleArn)?
+    )
+
+    alias UpdateStreamResponse = NamedTuple(
+      "streamId" : (StreamId)?,
+      "streamArn" : (StreamArn)?,
+      "description" : (StreamDescription)?,
+      "streamVersion" : (StreamVersion)?
+    )
+
+    alias UpdateThingGroupRequest = NamedTuple(
+      "thingGroupName" : ThingGroupName,
+      "thingGroupProperties" : ThingGroupProperties,
+      "expectedVersion" : (OptionalVersion)?
+    )
+
+    alias UpdateThingGroupResponse = NamedTuple(
+      "version" : (Version)?
+    )
+
+    alias UpdateThingGroupsForThingRequest = NamedTuple(
+      "thingName" : (ThingName)?,
+      "thingGroupsToAdd" : (ThingGroupList)?,
+      "thingGroupsToRemove" : (ThingGroupList)?,
+      "overrideDynamicGroups" : (OverrideDynamicGroups)?
+    )
+
+    alias UpdateThingGroupsForThingResponse = NamedTuple(
+      
+    )
+
+    alias UpdateThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "thingTypeName" : (ThingTypeName)?,
+      "attributePayload" : (AttributePayload)?,
+      "expectedVersion" : (OptionalVersion)?,
+      "removeThingType" : (RemoveThingType)?
+    )
+
+    alias UpdateThingResponse = NamedTuple(
+      
+    )
+
+    alias UpdateTopicRuleDestinationRequest = NamedTuple(
+      "arn" : AwsArn,
+      "status" : TopicRuleDestinationStatus
+    )
+
+    alias UpdateTopicRuleDestinationResponse = NamedTuple(
+      
+    )
+
+    alias Url = String
+
+    alias UseBase64 = Bool
+
+    alias Valid = Bool
+
+    alias ValidateSecurityProfileBehaviorsRequest = NamedTuple(
+      "behaviors" : Behaviors
+    )
+
+    alias ValidateSecurityProfileBehaviorsResponse = NamedTuple(
+      "valid" : (Valid)?,
+      "validationErrors" : (ValidationErrors)?
+    )
+
+    alias ValidationError = NamedTuple(
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias ValidationErrors = Array(ValidationError)
+
+    alias Value = String
+
+    alias Variance = Float64
+
+    alias Version = Int64
+
+    alias VersionConflictException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias VersionNumber = Int64
+
+    alias VersionsLimitExceededException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ViolationEvent = NamedTuple(
+      "violationId" : (ViolationId)?,
+      "thingName" : (DeviceDefenderThingName)?,
+      "securityProfileName" : (SecurityProfileName)?,
+      "behavior" : (Behavior)?,
+      "metricValue" : (MetricValue)?,
+      "violationEventAdditionalInfo" : (ViolationEventAdditionalInfo)?,
+      "violationEventType" : (ViolationEventType)?,
+      "violationEventTime" : (Timestamp)?
+    )
+
+    alias ViolationEventAdditionalInfo = NamedTuple(
+      "confidenceLevel" : (ConfidenceLevel)?
+    )
+
+    alias ViolationEventOccurrenceRange = NamedTuple(
+      "startTime" : Timestamp,
+      "endTime" : Timestamp
+    )
+
+    alias ViolationEventType = String
+
+    alias ViolationEvents = Array(ViolationEvent)
+
+    alias ViolationId = String
+
+    alias VpcDestinationConfiguration = NamedTuple(
+      "subnetIds" : SubnetIdList,
+      "securityGroups" : (SecurityGroupList)?,
+      "vpcId" : VpcId,
+      "roleArn" : AwsArn
+    )
+
+    alias VpcDestinationProperties = NamedTuple(
+      "subnetIds" : (SubnetIdList)?,
+      "securityGroups" : (SecurityGroupList)?,
+      "vpcId" : (VpcId)?,
+      "roleArn" : (AwsArn)?
+    )
+
+    alias VpcDestinationSummary = NamedTuple(
+      "subnetIds" : (SubnetIdList)?,
+      "securityGroups" : (SecurityGroupList)?,
+      "vpcId" : (VpcId)?,
+      "roleArn" : (AwsArn)?
+    )
+
+    alias VpcId = String
+
+    alias WaitingForDataCollectionChecksCount = Int32
+
+    alias errorMessage = String
+
+    alias resourceArn = String
+
+    alias resourceId = String
+
+    alias stringValue = String
   end
 end

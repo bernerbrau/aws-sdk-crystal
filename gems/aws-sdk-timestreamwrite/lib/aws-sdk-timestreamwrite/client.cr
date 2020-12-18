@@ -393,8 +393,8 @@ module Aws::TimestreamWrite
     #
     # @overload create_database(**params)
     # @param [Hash] params ({})
-    def create_database(params = {}, **options)
-      req = build_request(:create_database, params)
+    def create_database(, **options)
+      req = build_request(:create_database, )
       req.send_request(options)
     end
 
@@ -460,8 +460,8 @@ module Aws::TimestreamWrite
     #
     # @overload create_table(**params)
     # @param [Hash] params ({})
-    def create_table(params = {}, **options)
-      req = build_request(:create_table, params)
+    def create_table(, **options)
+      req = build_request(:create_table, )
       req.send_request(options)
     end
 
@@ -491,8 +491,8 @@ module Aws::TimestreamWrite
     #
     # @overload delete_database(**params)
     # @param [Hash] params ({})
-    def delete_database(params = {}, **options)
-      req = build_request(:delete_database, params)
+    def delete_database(, **options)
+      req = build_request(:delete_database, )
       req.send_request(options)
     end
 
@@ -524,8 +524,8 @@ module Aws::TimestreamWrite
     #
     # @overload delete_table(**params)
     # @param [Hash] params ({})
-    def delete_table(params = {}, **options)
-      req = build_request(:delete_table, params)
+    def delete_table(, **options)
+      req = build_request(:delete_table, )
       req.send_request(options)
     end
 
@@ -564,8 +564,8 @@ module Aws::TimestreamWrite
     #
     # @overload describe_database(**params)
     # @param [Hash] params ({})
-    def describe_database(params = {}, **options)
-      req = build_request(:describe_database, params)
+    def describe_database(, **options)
+      req = build_request(:describe_database, )
       req.send_request(options)
     end
 
@@ -604,8 +604,8 @@ module Aws::TimestreamWrite
     #
     # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, **options)
-      req = build_request(:describe_endpoints, params)
+    def describe_endpoints(, **options)
+      req = build_request(:describe_endpoints, )
       req.send_request(options)
     end
 
@@ -650,8 +650,8 @@ module Aws::TimestreamWrite
     #
     # @overload describe_table(**params)
     # @param [Hash] params ({})
-    def describe_table(params = {}, **options)
-      req = build_request(:describe_table, params)
+    def describe_table(, **options)
+      req = build_request(:describe_table, )
       req.send_request(options)
     end
 
@@ -702,8 +702,8 @@ module Aws::TimestreamWrite
     #
     # @overload list_databases(**params)
     # @param [Hash] params ({})
-    def list_databases(params = {}, **options)
-      req = build_request(:list_databases, params)
+    def list_databases(, **options)
+      req = build_request(:list_databases, )
       req.send_request(options)
     end
 
@@ -755,8 +755,8 @@ module Aws::TimestreamWrite
     #
     # @overload list_tables(**params)
     # @param [Hash] params ({})
-    def list_tables(params = {}, **options)
-      req = build_request(:list_tables, params)
+    def list_tables(, **options)
+      req = build_request(:list_tables, )
       req.send_request(options)
     end
 
@@ -786,8 +786,8 @@ module Aws::TimestreamWrite
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -820,8 +820,8 @@ module Aws::TimestreamWrite
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -848,8 +848,8 @@ module Aws::TimestreamWrite
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -902,8 +902,8 @@ module Aws::TimestreamWrite
     #
     # @overload update_database(**params)
     # @param [Hash] params ({})
-    def update_database(params = {}, **options)
-      req = build_request(:update_database, params)
+    def update_database(, **options)
+      req = build_request(:update_database, )
       req.send_request(options)
     end
 
@@ -962,8 +962,8 @@ module Aws::TimestreamWrite
     #
     # @overload update_table(**params)
     # @param [Hash] params ({})
-    def update_table(params = {}, **options)
-      req = build_request(:update_table, params)
+    def update_table(, **options)
+      req = build_request(:update_table, )
       req.send_request(options)
     end
 
@@ -1048,8 +1048,8 @@ module Aws::TimestreamWrite
     #
     # @overload write_records(**params)
     # @param [Hash] params ({})
-    def write_records(params = {}, **options)
-      req = build_request(:write_records, params)
+    def write_records(, **options)
+      req = build_request(:write_records, )
       req.send_request(options)
     end
 

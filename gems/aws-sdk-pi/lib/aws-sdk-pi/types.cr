@@ -715,5 +715,126 @@ module Aws::PI
       include Aws::Structure
     end
 
+    alias DataPoint = NamedTuple(
+      "Timestamp" : ISOTimestamp,
+      "Value" : Double
+    )
+
+    alias DataPointsList = Array(DataPoint)
+
+    alias DescribeDimensionKeysRequest = NamedTuple(
+      "ServiceType" : ServiceType,
+      "Identifier" : String,
+      "StartTime" : ISOTimestamp,
+      "EndTime" : ISOTimestamp,
+      "Metric" : String,
+      "PeriodInSeconds" : (Integer)?,
+      "GroupBy" : DimensionGroup,
+      "PartitionBy" : (DimensionGroup)?,
+      "Filter" : (MetricQueryFilterMap)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeDimensionKeysResponse = NamedTuple(
+      "AlignedStartTime" : (ISOTimestamp)?,
+      "AlignedEndTime" : (ISOTimestamp)?,
+      "PartitionKeys" : (ResponsePartitionKeyList)?,
+      "Keys" : (DimensionKeyDescriptionList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DimensionGroup = NamedTuple(
+      "Group" : String,
+      "Dimensions" : (StringList)?,
+      "Limit" : (Limit)?
+    )
+
+    alias DimensionKeyDescription = NamedTuple(
+      "Dimensions" : (DimensionMap)?,
+      "Total" : (Double)?,
+      "Partitions" : (MetricValuesList)?
+    )
+
+    alias DimensionKeyDescriptionList = Array(DimensionKeyDescription)
+
+    alias DimensionMap = Hash(String,String)
+
+    alias Double = Float64
+
+    alias GetResourceMetricsRequest = NamedTuple(
+      "ServiceType" : ServiceType,
+      "Identifier" : String,
+      "MetricQueries" : MetricQueryList,
+      "StartTime" : ISOTimestamp,
+      "EndTime" : ISOTimestamp,
+      "PeriodInSeconds" : (Integer)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetResourceMetricsResponse = NamedTuple(
+      "AlignedStartTime" : (ISOTimestamp)?,
+      "AlignedEndTime" : (ISOTimestamp)?,
+      "Identifier" : (String)?,
+      "MetricList" : (MetricKeyDataPointsList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ISOTimestamp = String | UInt64 | Time
+
+    alias Integer = Int32
+
+    alias InternalServiceError = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Limit = Int32
+
+    alias MaxResults = Int32
+
+    alias MetricKeyDataPoints = NamedTuple(
+      "Key" : (ResponseResourceMetricKey)?,
+      "DataPoints" : (DataPointsList)?
+    )
+
+    alias MetricKeyDataPointsList = Array(MetricKeyDataPoints)
+
+    alias MetricQuery = NamedTuple(
+      "Metric" : String,
+      "GroupBy" : (DimensionGroup)?,
+      "Filter" : (MetricQueryFilterMap)?
+    )
+
+    alias MetricQueryFilterMap = Hash(String,String)
+
+    alias MetricQueryList = Array(MetricQuery)
+
+    alias MetricValuesList = Array(Double)
+
+    alias NotAuthorizedException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResponsePartitionKey = NamedTuple(
+      "Dimensions" : DimensionMap
+    )
+
+    alias ResponsePartitionKeyList = Array(ResponsePartitionKey)
+
+    alias ResponseResourceMetricKey = NamedTuple(
+      "Metric" : String,
+      "Dimensions" : (DimensionMap)?
+    )
+
+    alias ServiceType = String
+
+    alias String = String
+
+    alias StringList = Array(String)
   end
 end

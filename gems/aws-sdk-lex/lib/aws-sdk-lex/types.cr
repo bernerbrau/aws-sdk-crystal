@@ -1712,5 +1712,301 @@ module Aws::Lex
       include Aws::Structure
     end
 
+    alias Accept = String
+
+    alias ActiveContext = NamedTuple(
+      "name" : ActiveContextName,
+      "timeToLive" : ActiveContextTimeToLive,
+      "parameters" : ActiveContextParametersMap
+    )
+
+    alias ActiveContextName = String
+
+    alias ActiveContextParametersMap = Hash(ParameterName,Text)
+
+    alias ActiveContextTimeToLive = NamedTuple(
+      "timeToLiveInSeconds" : (ActiveContextTimeToLiveInSeconds)?,
+      "turnsToLive" : (ActiveContextTurnsToLive)?
+    )
+
+    alias ActiveContextTimeToLiveInSeconds = Int32
+
+    alias ActiveContextTurnsToLive = Int32
+
+    alias ActiveContextsList = Array(ActiveContext)
+
+    alias ActiveContextsString = String
+
+    alias AttributesString = String
+
+    alias BadGatewayException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias BlobStream = String | Array(UInt8) | IO
+
+    alias BotAlias = String
+
+    alias BotName = String
+
+    alias BotVersion = String
+
+    alias Button = NamedTuple(
+      "text" : ButtonTextStringWithLength,
+      "value" : ButtonValueStringWithLength
+    )
+
+    alias ButtonTextStringWithLength = String
+
+    alias ButtonValueStringWithLength = String
+
+    alias ConfirmationStatus = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ContentType = String
+
+    alias DeleteSessionRequest = NamedTuple(
+      "botName" : BotName,
+      "botAlias" : BotAlias,
+      "userId" : UserId
+    )
+
+    alias DeleteSessionResponse = NamedTuple(
+      "botName" : (BotName)?,
+      "botAlias" : (BotAlias)?,
+      "userId" : (UserId)?,
+      "sessionId" : (String)?
+    )
+
+    alias DependencyFailedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DialogAction = NamedTuple(
+      "type" : DialogActionType,
+      "intentName" : (IntentName)?,
+      "slots" : (StringMap)?,
+      "slotToElicit" : (String)?,
+      "fulfillmentState" : (FulfillmentState)?,
+      "message" : (Text)?,
+      "messageFormat" : (MessageFormatType)?
+    )
+
+    alias DialogActionType = String
+
+    alias DialogState = String
+
+    alias Double = Float64
+
+    alias ErrorMessage = String
+
+    alias FulfillmentState = String
+
+    alias GenericAttachment = NamedTuple(
+      "title" : (StringWithLength)?,
+      "subTitle" : (StringWithLength)?,
+      "attachmentLinkUrl" : (StringUrlWithLength)?,
+      "imageUrl" : (StringUrlWithLength)?,
+      "buttons" : (listOfButtons)?
+    )
+
+    alias GetSessionRequest = NamedTuple(
+      "botName" : BotName,
+      "botAlias" : BotAlias,
+      "userId" : UserId,
+      "checkpointLabelFilter" : (IntentSummaryCheckpointLabel)?
+    )
+
+    alias GetSessionResponse = NamedTuple(
+      "recentIntentSummaryView" : (IntentSummaryList)?,
+      "sessionAttributes" : (StringMap)?,
+      "sessionId" : (String)?,
+      "dialogAction" : (DialogAction)?,
+      "activeContexts" : (ActiveContextsList)?
+    )
+
+    alias HttpContentType = String
+
+    alias IntentConfidence = NamedTuple(
+      "score" : (Double)?
+    )
+
+    alias IntentList = Array(PredictedIntent)
+
+    alias IntentName = String
+
+    alias IntentSummary = NamedTuple(
+      "intentName" : (IntentName)?,
+      "checkpointLabel" : (IntentSummaryCheckpointLabel)?,
+      "slots" : (StringMap)?,
+      "confirmationStatus" : (ConfirmationStatus)?,
+      "dialogActionType" : DialogActionType,
+      "fulfillmentState" : (FulfillmentState)?,
+      "slotToElicit" : (String)?
+    )
+
+    alias IntentSummaryCheckpointLabel = String
+
+    alias IntentSummaryList = Array(IntentSummary)
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "retryAfterSeconds" : (String)?,
+      "message" : (String)?
+    )
+
+    alias LoopDetectedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias MessageFormatType = String
+
+    alias NotAcceptableException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterName = String
+
+    alias PostContentRequest = NamedTuple(
+      "botName" : BotName,
+      "botAlias" : BotAlias,
+      "userId" : UserId,
+      "sessionAttributes" : (AttributesString)?,
+      "requestAttributes" : (AttributesString)?,
+      "contentType" : HttpContentType,
+      "accept" : (Accept)?,
+      "inputStream" : BlobStream,
+      "activeContexts" : (ActiveContextsString)?
+    )
+
+    alias PostContentResponse = NamedTuple(
+      "contentType" : (HttpContentType)?,
+      "intentName" : (IntentName)?,
+      "nluIntentConfidence" : (String)?,
+      "alternativeIntents" : (String)?,
+      "slots" : (String)?,
+      "sessionAttributes" : (String)?,
+      "sentimentResponse" : (String)?,
+      "message" : (Text)?,
+      "messageFormat" : (MessageFormatType)?,
+      "dialogState" : (DialogState)?,
+      "slotToElicit" : (String)?,
+      "inputTranscript" : (String)?,
+      "audioStream" : (BlobStream)?,
+      "botVersion" : (BotVersion)?,
+      "sessionId" : (String)?,
+      "activeContexts" : (ActiveContextsString)?
+    )
+
+    alias PostTextRequest = NamedTuple(
+      "botName" : BotName,
+      "botAlias" : BotAlias,
+      "userId" : UserId,
+      "sessionAttributes" : (StringMap)?,
+      "requestAttributes" : (StringMap)?,
+      "inputText" : Text,
+      "activeContexts" : (ActiveContextsList)?
+    )
+
+    alias PostTextResponse = NamedTuple(
+      "intentName" : (IntentName)?,
+      "nluIntentConfidence" : (IntentConfidence)?,
+      "alternativeIntents" : (IntentList)?,
+      "slots" : (StringMap)?,
+      "sessionAttributes" : (StringMap)?,
+      "message" : (Text)?,
+      "sentimentResponse" : (SentimentResponse)?,
+      "messageFormat" : (MessageFormatType)?,
+      "dialogState" : (DialogState)?,
+      "slotToElicit" : (String)?,
+      "responseCard" : (ResponseCard)?,
+      "sessionId" : (String)?,
+      "botVersion" : (BotVersion)?,
+      "activeContexts" : (ActiveContextsList)?
+    )
+
+    alias PredictedIntent = NamedTuple(
+      "intentName" : (IntentName)?,
+      "nluIntentConfidence" : (IntentConfidence)?,
+      "slots" : (StringMap)?
+    )
+
+    alias PutSessionRequest = NamedTuple(
+      "botName" : BotName,
+      "botAlias" : BotAlias,
+      "userId" : UserId,
+      "sessionAttributes" : (StringMap)?,
+      "dialogAction" : (DialogAction)?,
+      "recentIntentSummaryView" : (IntentSummaryList)?,
+      "accept" : (Accept)?,
+      "activeContexts" : (ActiveContextsList)?
+    )
+
+    alias PutSessionResponse = NamedTuple(
+      "contentType" : (HttpContentType)?,
+      "intentName" : (IntentName)?,
+      "slots" : (String)?,
+      "sessionAttributes" : (String)?,
+      "message" : (Text)?,
+      "messageFormat" : (MessageFormatType)?,
+      "dialogState" : (DialogState)?,
+      "slotToElicit" : (String)?,
+      "audioStream" : (BlobStream)?,
+      "sessionId" : (String)?,
+      "activeContexts" : (ActiveContextsString)?
+    )
+
+    alias RequestTimeoutException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResponseCard = NamedTuple(
+      "version" : (String)?,
+      "contentType" : (ContentType)?,
+      "genericAttachments" : (genericAttachmentList)?
+    )
+
+    alias SentimentLabel = String
+
+    alias SentimentResponse = NamedTuple(
+      "sentimentLabel" : (SentimentLabel)?,
+      "sentimentScore" : (SentimentScore)?
+    )
+
+    alias SentimentScore = String
+
+    alias String = String
+
+    alias StringMap = Hash(String,String)
+
+    alias StringUrlWithLength = String
+
+    alias StringWithLength = String
+
+    alias Text = String
+
+    alias UnsupportedMediaTypeException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UserId = String
+
+    alias genericAttachmentList = Array(GenericAttachment)
+
+    alias listOfButtons = Array(Button)
   end
 end

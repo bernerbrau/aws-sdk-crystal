@@ -9287,5 +9287,981 @@ module Aws::WAFV2
       include Aws::Structure
     end
 
+    alias Action = String
+
+    alias AllQueryArguments = NamedTuple(
+      
+    )
+
+    alias AllowAction = NamedTuple(
+      
+    )
+
+    alias AndStatement = NamedTuple(
+      "Statements" : Statements
+    )
+
+    alias AssociateWebACLRequest = NamedTuple(
+      "WebACLArn" : ResourceArn,
+      "ResourceArn" : ResourceArn
+    )
+
+    alias AssociateWebACLResponse = NamedTuple(
+      
+    )
+
+    alias BlockAction = NamedTuple(
+      
+    )
+
+    alias Body = NamedTuple(
+      
+    )
+
+    alias Boolean = Bool
+
+    alias ByteMatchStatement = NamedTuple(
+      "SearchString" : SearchString,
+      "FieldToMatch" : FieldToMatch,
+      "TextTransformations" : TextTransformations,
+      "PositionalConstraint" : PositionalConstraint
+    )
+
+    alias CapacityUnit = Int64
+
+    alias CheckCapacityRequest = NamedTuple(
+      "Scope" : Scope,
+      "Rules" : Rules
+    )
+
+    alias CheckCapacityResponse = NamedTuple(
+      "Capacity" : (ConsumedCapacity)?
+    )
+
+    alias ComparisonOperator = String
+
+    alias ConsumedCapacity = Int64
+
+    alias CountAction = NamedTuple(
+      
+    )
+
+    alias Country = String
+
+    alias CountryCode = String
+
+    alias CountryCodes = Array(CountryCode)
+
+    alias CreateIPSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Description" : (EntityDescription)?,
+      "IPAddressVersion" : IPAddressVersion,
+      "Addresses" : IPAddresses,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateIPSetResponse = NamedTuple(
+      "Summary" : (IPSetSummary)?
+    )
+
+    alias CreateRegexPatternSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Description" : (EntityDescription)?,
+      "RegularExpressionList" : RegularExpressionList,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateRegexPatternSetResponse = NamedTuple(
+      "Summary" : (RegexPatternSetSummary)?
+    )
+
+    alias CreateRuleGroupRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Capacity" : CapacityUnit,
+      "Description" : (EntityDescription)?,
+      "Rules" : (Rules)?,
+      "VisibilityConfig" : VisibilityConfig,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateRuleGroupResponse = NamedTuple(
+      "Summary" : (RuleGroupSummary)?
+    )
+
+    alias CreateWebACLRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "DefaultAction" : DefaultAction,
+      "Description" : (EntityDescription)?,
+      "Rules" : (Rules)?,
+      "VisibilityConfig" : VisibilityConfig,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateWebACLResponse = NamedTuple(
+      "Summary" : (WebACLSummary)?
+    )
+
+    alias DefaultAction = NamedTuple(
+      "Block" : (BlockAction)?,
+      "Allow" : (AllowAction)?
+    )
+
+    alias DeleteFirewallManagerRuleGroupsRequest = NamedTuple(
+      "WebACLArn" : ResourceArn,
+      "WebACLLockToken" : LockToken
+    )
+
+    alias DeleteFirewallManagerRuleGroupsResponse = NamedTuple(
+      "NextWebACLLockToken" : (LockToken)?
+    )
+
+    alias DeleteIPSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "LockToken" : LockToken
+    )
+
+    alias DeleteIPSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteLoggingConfigurationRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias DeleteLoggingConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeletePermissionPolicyRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias DeletePermissionPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRegexPatternSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "LockToken" : LockToken
+    )
+
+    alias DeleteRegexPatternSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRuleGroupRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "LockToken" : LockToken
+    )
+
+    alias DeleteRuleGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteWebACLRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "LockToken" : LockToken
+    )
+
+    alias DeleteWebACLResponse = NamedTuple(
+      
+    )
+
+    alias DescribeManagedRuleGroupRequest = NamedTuple(
+      "VendorName" : VendorName,
+      "Name" : EntityName,
+      "Scope" : Scope
+    )
+
+    alias DescribeManagedRuleGroupResponse = NamedTuple(
+      "Capacity" : (CapacityUnit)?,
+      "Rules" : (RuleSummaries)?
+    )
+
+    alias DisassociateWebACLRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias DisassociateWebACLResponse = NamedTuple(
+      
+    )
+
+    alias EntityDescription = String
+
+    alias EntityId = String
+
+    alias EntityName = String
+
+    alias ErrorMessage = String
+
+    alias ErrorReason = String
+
+    alias ExcludedRule = NamedTuple(
+      "Name" : EntityName
+    )
+
+    alias ExcludedRules = Array(ExcludedRule)
+
+    alias FallbackBehavior = String
+
+    alias FieldToMatch = NamedTuple(
+      "SingleHeader" : (SingleHeader)?,
+      "SingleQueryArgument" : (SingleQueryArgument)?,
+      "AllQueryArguments" : (AllQueryArguments)?,
+      "UriPath" : (UriPath)?,
+      "QueryString" : (QueryString)?,
+      "Body" : (Body)?,
+      "Method" : (Method)?
+    )
+
+    alias FieldToMatchData = String
+
+    alias FirewallManagerRuleGroup = NamedTuple(
+      "Name" : EntityName,
+      "Priority" : RulePriority,
+      "FirewallManagerStatement" : FirewallManagerStatement,
+      "OverrideAction" : OverrideAction,
+      "VisibilityConfig" : VisibilityConfig
+    )
+
+    alias FirewallManagerRuleGroups = Array(FirewallManagerRuleGroup)
+
+    alias FirewallManagerStatement = NamedTuple(
+      "ManagedRuleGroupStatement" : (ManagedRuleGroupStatement)?,
+      "RuleGroupReferenceStatement" : (RuleGroupReferenceStatement)?
+    )
+
+    alias ForwardedIPConfig = NamedTuple(
+      "HeaderName" : ForwardedIPHeaderName,
+      "FallbackBehavior" : FallbackBehavior
+    )
+
+    alias ForwardedIPHeaderName = String
+
+    alias ForwardedIPPosition = String
+
+    alias GeoMatchStatement = NamedTuple(
+      "CountryCodes" : (CountryCodes)?,
+      "ForwardedIPConfig" : (ForwardedIPConfig)?
+    )
+
+    alias GetIPSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId
+    )
+
+    alias GetIPSetResponse = NamedTuple(
+      "IPSet" : (IPSet)?,
+      "LockToken" : (LockToken)?
+    )
+
+    alias GetLoggingConfigurationRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias GetLoggingConfigurationResponse = NamedTuple(
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias GetPermissionPolicyRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias GetPermissionPolicyResponse = NamedTuple(
+      "Policy" : (PolicyString)?
+    )
+
+    alias GetRateBasedStatementManagedKeysRequest = NamedTuple(
+      "Scope" : Scope,
+      "WebACLName" : EntityName,
+      "WebACLId" : EntityId,
+      "RuleName" : EntityName
+    )
+
+    alias GetRateBasedStatementManagedKeysResponse = NamedTuple(
+      "ManagedKeysIPV4" : (RateBasedStatementManagedKeysIPSet)?,
+      "ManagedKeysIPV6" : (RateBasedStatementManagedKeysIPSet)?
+    )
+
+    alias GetRegexPatternSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId
+    )
+
+    alias GetRegexPatternSetResponse = NamedTuple(
+      "RegexPatternSet" : (RegexPatternSet)?,
+      "LockToken" : (LockToken)?
+    )
+
+    alias GetRuleGroupRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId
+    )
+
+    alias GetRuleGroupResponse = NamedTuple(
+      "RuleGroup" : (RuleGroup)?,
+      "LockToken" : (LockToken)?
+    )
+
+    alias GetSampledRequestsRequest = NamedTuple(
+      "WebAclArn" : ResourceArn,
+      "RuleMetricName" : MetricName,
+      "Scope" : Scope,
+      "TimeWindow" : TimeWindow,
+      "MaxItems" : ListMaxItems
+    )
+
+    alias GetSampledRequestsResponse = NamedTuple(
+      "SampledRequests" : (SampledHTTPRequests)?,
+      "PopulationSize" : (PopulationSize)?,
+      "TimeWindow" : (TimeWindow)?
+    )
+
+    alias GetWebACLForResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias GetWebACLForResourceResponse = NamedTuple(
+      "WebACL" : (WebACL)?
+    )
+
+    alias GetWebACLRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId
+    )
+
+    alias GetWebACLResponse = NamedTuple(
+      "WebACL" : (WebACL)?,
+      "LockToken" : (LockToken)?
+    )
+
+    alias HTTPHeader = NamedTuple(
+      "Name" : (HeaderName)?,
+      "Value" : (HeaderValue)?
+    )
+
+    alias HTTPHeaders = Array(HTTPHeader)
+
+    alias HTTPMethod = String
+
+    alias HTTPRequest = NamedTuple(
+      "ClientIP" : (IPString)?,
+      "Country" : (Country)?,
+      "URI" : (URIString)?,
+      "Method" : (HTTPMethod)?,
+      "HTTPVersion" : (HTTPVersion)?,
+      "Headers" : (HTTPHeaders)?
+    )
+
+    alias HTTPVersion = String
+
+    alias HeaderName = String
+
+    alias HeaderValue = String
+
+    alias IPAddress = String
+
+    alias IPAddressVersion = String
+
+    alias IPAddresses = Array(IPAddress)
+
+    alias IPSet = NamedTuple(
+      "Name" : EntityName,
+      "Id" : EntityId,
+      "ARN" : ResourceArn,
+      "Description" : (EntityDescription)?,
+      "IPAddressVersion" : IPAddressVersion,
+      "Addresses" : IPAddresses
+    )
+
+    alias IPSetForwardedIPConfig = NamedTuple(
+      "HeaderName" : ForwardedIPHeaderName,
+      "FallbackBehavior" : FallbackBehavior,
+      "Position" : ForwardedIPPosition
+    )
+
+    alias IPSetReferenceStatement = NamedTuple(
+      "ARN" : ResourceArn,
+      "IPSetForwardedIPConfig" : (IPSetForwardedIPConfig)?
+    )
+
+    alias IPSetSummaries = Array(IPSetSummary)
+
+    alias IPSetSummary = NamedTuple(
+      "Name" : (EntityName)?,
+      "Id" : (EntityId)?,
+      "Description" : (EntityDescription)?,
+      "LockToken" : (LockToken)?,
+      "ARN" : (ResourceArn)?
+    )
+
+    alias IPString = String
+
+    alias ListAvailableManagedRuleGroupsRequest = NamedTuple(
+      "Scope" : Scope,
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?
+    )
+
+    alias ListAvailableManagedRuleGroupsResponse = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "ManagedRuleGroups" : (ManagedRuleGroupSummaries)?
+    )
+
+    alias ListIPSetsRequest = NamedTuple(
+      "Scope" : Scope,
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?
+    )
+
+    alias ListIPSetsResponse = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "IPSets" : (IPSetSummaries)?
+    )
+
+    alias ListLoggingConfigurationsRequest = NamedTuple(
+      "Scope" : (Scope)?,
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?
+    )
+
+    alias ListLoggingConfigurationsResponse = NamedTuple(
+      "LoggingConfigurations" : (LoggingConfigurations)?,
+      "NextMarker" : (NextMarker)?
+    )
+
+    alias ListMaxItems = Int64
+
+    alias ListRegexPatternSetsRequest = NamedTuple(
+      "Scope" : Scope,
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?
+    )
+
+    alias ListRegexPatternSetsResponse = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "RegexPatternSets" : (RegexPatternSetSummaries)?
+    )
+
+    alias ListResourcesForWebACLRequest = NamedTuple(
+      "WebACLArn" : ResourceArn,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ListResourcesForWebACLResponse = NamedTuple(
+      "ResourceArns" : (ResourceArns)?
+    )
+
+    alias ListRuleGroupsRequest = NamedTuple(
+      "Scope" : Scope,
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?
+    )
+
+    alias ListRuleGroupsResponse = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "RuleGroups" : (RuleGroupSummaries)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?,
+      "ResourceARN" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "TagInfoForResource" : (TagInfoForResource)?
+    )
+
+    alias ListWebACLsRequest = NamedTuple(
+      "Scope" : Scope,
+      "NextMarker" : (NextMarker)?,
+      "Limit" : (PaginationLimit)?
+    )
+
+    alias ListWebACLsResponse = NamedTuple(
+      "NextMarker" : (NextMarker)?,
+      "WebACLs" : (WebACLSummaries)?
+    )
+
+    alias LockToken = String
+
+    alias LogDestinationConfigs = Array(ResourceArn)
+
+    alias LoggingConfiguration = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "LogDestinationConfigs" : LogDestinationConfigs,
+      "RedactedFields" : (RedactedFields)?,
+      "ManagedByFirewallManager" : (Boolean)?
+    )
+
+    alias LoggingConfigurations = Array(LoggingConfiguration)
+
+    alias ManagedRuleGroupStatement = NamedTuple(
+      "VendorName" : VendorName,
+      "Name" : EntityName,
+      "ExcludedRules" : (ExcludedRules)?
+    )
+
+    alias ManagedRuleGroupSummaries = Array(ManagedRuleGroupSummary)
+
+    alias ManagedRuleGroupSummary = NamedTuple(
+      "VendorName" : (VendorName)?,
+      "Name" : (EntityName)?,
+      "Description" : (EntityDescription)?
+    )
+
+    alias Method = NamedTuple(
+      
+    )
+
+    alias MetricName = String
+
+    alias NextMarker = String
+
+    alias NoneAction = NamedTuple(
+      
+    )
+
+    alias NotStatement = NamedTuple(
+      "Statement" : Statement
+    )
+
+    alias OrStatement = NamedTuple(
+      "Statements" : Statements
+    )
+
+    alias OverrideAction = NamedTuple(
+      "Count" : (CountAction)?,
+      "None" : (NoneAction)?
+    )
+
+    alias PaginationLimit = Int32
+
+    alias ParameterExceptionField = String
+
+    alias ParameterExceptionParameter = String
+
+    alias PolicyString = String
+
+    alias PopulationSize = Int64
+
+    alias PositionalConstraint = String
+
+    alias PutLoggingConfigurationRequest = NamedTuple(
+      "LoggingConfiguration" : LoggingConfiguration
+    )
+
+    alias PutLoggingConfigurationResponse = NamedTuple(
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias PutPermissionPolicyRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Policy" : PolicyString
+    )
+
+    alias PutPermissionPolicyResponse = NamedTuple(
+      
+    )
+
+    alias QueryString = NamedTuple(
+      
+    )
+
+    alias RateBasedStatement = NamedTuple(
+      "Limit" : RateLimit,
+      "AggregateKeyType" : RateBasedStatementAggregateKeyType,
+      "ScopeDownStatement" : (Statement)?,
+      "ForwardedIPConfig" : (ForwardedIPConfig)?
+    )
+
+    alias RateBasedStatementAggregateKeyType = String
+
+    alias RateBasedStatementManagedKeysIPSet = NamedTuple(
+      "IPAddressVersion" : (IPAddressVersion)?,
+      "Addresses" : (IPAddresses)?
+    )
+
+    alias RateLimit = Int64
+
+    alias RedactedFields = Array(FieldToMatch)
+
+    alias Regex = NamedTuple(
+      "RegexString" : (RegexPatternString)?
+    )
+
+    alias RegexPatternSet = NamedTuple(
+      "Name" : (EntityName)?,
+      "Id" : (EntityId)?,
+      "ARN" : (ResourceArn)?,
+      "Description" : (EntityDescription)?,
+      "RegularExpressionList" : (RegularExpressionList)?
+    )
+
+    alias RegexPatternSetReferenceStatement = NamedTuple(
+      "ARN" : ResourceArn,
+      "FieldToMatch" : FieldToMatch,
+      "TextTransformations" : TextTransformations
+    )
+
+    alias RegexPatternSetSummaries = Array(RegexPatternSetSummary)
+
+    alias RegexPatternSetSummary = NamedTuple(
+      "Name" : (EntityName)?,
+      "Id" : (EntityId)?,
+      "Description" : (EntityDescription)?,
+      "LockToken" : (LockToken)?,
+      "ARN" : (ResourceArn)?
+    )
+
+    alias RegexPatternString = String
+
+    alias RegularExpressionList = Array(Regex)
+
+    alias ResourceArn = String
+
+    alias ResourceArns = Array(ResourceArn)
+
+    alias ResourceType = String
+
+    alias Rule = NamedTuple(
+      "Name" : EntityName,
+      "Priority" : RulePriority,
+      "Statement" : Statement,
+      "Action" : (RuleAction)?,
+      "OverrideAction" : (OverrideAction)?,
+      "VisibilityConfig" : VisibilityConfig
+    )
+
+    alias RuleAction = NamedTuple(
+      "Block" : (BlockAction)?,
+      "Allow" : (AllowAction)?,
+      "Count" : (CountAction)?
+    )
+
+    alias RuleGroup = NamedTuple(
+      "Name" : EntityName,
+      "Id" : EntityId,
+      "Capacity" : CapacityUnit,
+      "ARN" : ResourceArn,
+      "Description" : (EntityDescription)?,
+      "Rules" : (Rules)?,
+      "VisibilityConfig" : VisibilityConfig
+    )
+
+    alias RuleGroupReferenceStatement = NamedTuple(
+      "ARN" : ResourceArn,
+      "ExcludedRules" : (ExcludedRules)?
+    )
+
+    alias RuleGroupSummaries = Array(RuleGroupSummary)
+
+    alias RuleGroupSummary = NamedTuple(
+      "Name" : (EntityName)?,
+      "Id" : (EntityId)?,
+      "Description" : (EntityDescription)?,
+      "LockToken" : (LockToken)?,
+      "ARN" : (ResourceArn)?
+    )
+
+    alias RulePriority = Int32
+
+    alias RuleSummaries = Array(RuleSummary)
+
+    alias RuleSummary = NamedTuple(
+      "Name" : (EntityName)?,
+      "Action" : (RuleAction)?
+    )
+
+    alias Rules = Array(Rule)
+
+    alias SampleWeight = Int64
+
+    alias SampledHTTPRequest = NamedTuple(
+      "Request" : HTTPRequest,
+      "Weight" : SampleWeight,
+      "Timestamp" : (Timestamp)?,
+      "Action" : (Action)?,
+      "RuleNameWithinRuleGroup" : (EntityName)?
+    )
+
+    alias SampledHTTPRequests = Array(SampledHTTPRequest)
+
+    alias Scope = String
+
+    alias SearchString = String | Array(UInt8) | IO
+
+    alias SingleHeader = NamedTuple(
+      "Name" : FieldToMatchData
+    )
+
+    alias SingleQueryArgument = NamedTuple(
+      "Name" : FieldToMatchData
+    )
+
+    alias Size = Int64
+
+    alias SizeConstraintStatement = NamedTuple(
+      "FieldToMatch" : FieldToMatch,
+      "ComparisonOperator" : ComparisonOperator,
+      "Size" : Size,
+      "TextTransformations" : TextTransformations
+    )
+
+    alias SqliMatchStatement = NamedTuple(
+      "FieldToMatch" : FieldToMatch,
+      "TextTransformations" : TextTransformations
+    )
+
+    alias Statement = NamedTuple(
+      "ByteMatchStatement" : (ByteMatchStatement)?,
+      "SqliMatchStatement" : (SqliMatchStatement)?,
+      "XssMatchStatement" : (XssMatchStatement)?,
+      "SizeConstraintStatement" : (SizeConstraintStatement)?,
+      "GeoMatchStatement" : (GeoMatchStatement)?,
+      "RuleGroupReferenceStatement" : (RuleGroupReferenceStatement)?,
+      "IPSetReferenceStatement" : (IPSetReferenceStatement)?,
+      "RegexPatternSetReferenceStatement" : (RegexPatternSetReferenceStatement)?,
+      "RateBasedStatement" : (RateBasedStatement)?,
+      "AndStatement" : (AndStatement)?,
+      "OrStatement" : (OrStatement)?,
+      "NotStatement" : (NotStatement)?,
+      "ManagedRuleGroupStatement" : (ManagedRuleGroupStatement)?
+    )
+
+    alias Statements = Array(Statement)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagInfoForResource = NamedTuple(
+      "ResourceARN" : (ResourceArn)?,
+      "TagList" : (TagList)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : ResourceArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TextTransformation = NamedTuple(
+      "Priority" : TextTransformationPriority,
+      "Type" : TextTransformationType
+    )
+
+    alias TextTransformationPriority = Int32
+
+    alias TextTransformationType = String
+
+    alias TextTransformations = Array(TextTransformation)
+
+    alias TimeWindow = NamedTuple(
+      "StartTime" : Timestamp,
+      "EndTime" : Timestamp
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias URIString = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : ResourceArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateIPSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "Description" : (EntityDescription)?,
+      "Addresses" : IPAddresses,
+      "LockToken" : LockToken
+    )
+
+    alias UpdateIPSetResponse = NamedTuple(
+      "NextLockToken" : (LockToken)?
+    )
+
+    alias UpdateRegexPatternSetRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "Description" : (EntityDescription)?,
+      "RegularExpressionList" : RegularExpressionList,
+      "LockToken" : LockToken
+    )
+
+    alias UpdateRegexPatternSetResponse = NamedTuple(
+      "NextLockToken" : (LockToken)?
+    )
+
+    alias UpdateRuleGroupRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "Description" : (EntityDescription)?,
+      "Rules" : (Rules)?,
+      "VisibilityConfig" : VisibilityConfig,
+      "LockToken" : LockToken
+    )
+
+    alias UpdateRuleGroupResponse = NamedTuple(
+      "NextLockToken" : (LockToken)?
+    )
+
+    alias UpdateWebACLRequest = NamedTuple(
+      "Name" : EntityName,
+      "Scope" : Scope,
+      "Id" : EntityId,
+      "DefaultAction" : DefaultAction,
+      "Description" : (EntityDescription)?,
+      "Rules" : (Rules)?,
+      "VisibilityConfig" : VisibilityConfig,
+      "LockToken" : LockToken
+    )
+
+    alias UpdateWebACLResponse = NamedTuple(
+      "NextLockToken" : (LockToken)?
+    )
+
+    alias UriPath = NamedTuple(
+      
+    )
+
+    alias VendorName = String
+
+    alias VisibilityConfig = NamedTuple(
+      "SampledRequestsEnabled" : Boolean,
+      "CloudWatchMetricsEnabled" : Boolean,
+      "MetricName" : MetricName
+    )
+
+    alias WAFAssociatedItemException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFDuplicateItemException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFInternalErrorException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFInvalidOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFInvalidParameterException = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "Field" : (ParameterExceptionField)?,
+      "Parameter" : (ParameterExceptionParameter)?,
+      "Reason" : (ErrorReason)?
+    )
+
+    alias WAFInvalidPermissionPolicyException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFInvalidResourceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFLimitsExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFNonexistentItemException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFOptimisticLockException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFServiceLinkedRoleErrorException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias WAFSubscriptionNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFTagOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFTagOperationInternalErrorException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WAFUnavailableEntityException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias WebACL = NamedTuple(
+      "Name" : EntityName,
+      "Id" : EntityId,
+      "ARN" : ResourceArn,
+      "DefaultAction" : DefaultAction,
+      "Description" : (EntityDescription)?,
+      "Rules" : (Rules)?,
+      "VisibilityConfig" : VisibilityConfig,
+      "Capacity" : (ConsumedCapacity)?,
+      "PreProcessFirewallManagerRuleGroups" : (FirewallManagerRuleGroups)?,
+      "PostProcessFirewallManagerRuleGroups" : (FirewallManagerRuleGroups)?,
+      "ManagedByFirewallManager" : (Boolean)?
+    )
+
+    alias WebACLSummaries = Array(WebACLSummary)
+
+    alias WebACLSummary = NamedTuple(
+      "Name" : (EntityName)?,
+      "Id" : (EntityId)?,
+      "Description" : (EntityDescription)?,
+      "LockToken" : (LockToken)?,
+      "ARN" : (ResourceArn)?
+    )
+
+    alias XssMatchStatement = NamedTuple(
+      "FieldToMatch" : FieldToMatch,
+      "TextTransformations" : TextTransformations
+    )
   end
 end

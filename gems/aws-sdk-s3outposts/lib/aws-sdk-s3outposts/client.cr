@@ -377,8 +377,8 @@ module Aws::S3Outposts
     #
     # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, **options)
-      req = build_request(:create_endpoint, params)
+    def create_endpoint(, **options)
+      req = build_request(:create_endpoint, )
       req.send_request(options)
     end
 
@@ -421,8 +421,8 @@ module Aws::S3Outposts
     #
     # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, **options)
-      req = build_request(:delete_endpoint, params)
+    def delete_endpoint(, **options)
+      req = build_request(:delete_endpoint, )
       req.send_request(options)
     end
 
@@ -482,8 +482,8 @@ module Aws::S3Outposts
     #
     # @overload list_endpoints(**params)
     # @param [Hash] params ({})
-    def list_endpoints(params = {}, **options)
-      req = build_request(:list_endpoints, params)
+    def list_endpoints(, **options)
+      req = build_request(:list_endpoints, )
       req.send_request(options)
     end
 

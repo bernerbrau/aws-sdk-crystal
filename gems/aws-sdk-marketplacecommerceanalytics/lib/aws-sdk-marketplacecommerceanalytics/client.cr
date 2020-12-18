@@ -504,8 +504,8 @@ module Aws::MarketplaceCommerceAnalytics
     #
     # @overload generate_data_set(**params)
     # @param [Hash] params ({})
-    def generate_data_set(params = {}, **options)
-      req = build_request(:generate_data_set, params)
+    def generate_data_set(, **options)
+      req = build_request(:generate_data_set, )
       req.send_request(options)
     end
 
@@ -595,8 +595,8 @@ module Aws::MarketplaceCommerceAnalytics
     #
     # @overload start_support_data_export(**params)
     # @param [Hash] params ({})
-    def start_support_data_export(params = {}, **options)
-      req = build_request(:start_support_data_export, params)
+    def start_support_data_export(, **options)
+      req = build_request(:start_support_data_export, )
       req.send_request(options)
     end
 

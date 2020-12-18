@@ -384,8 +384,8 @@ module Aws::ConnectContactLens
     #
     # @overload list_realtime_contact_analysis_segments(**params)
     # @param [Hash] params ({})
-    def list_realtime_contact_analysis_segments(params = {}, **options)
-      req = build_request(:list_realtime_contact_analysis_segments, params)
+    def list_realtime_contact_analysis_segments(, **options)
+      req = build_request(:list_realtime_contact_analysis_segments, )
       req.send_request(options)
     end
 

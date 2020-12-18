@@ -396,8 +396,8 @@ module Aws::SESV2
     #
     # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, **options)
-      req = build_request(:create_configuration_set, params)
+    def create_configuration_set(, **options)
+      req = build_request(:create_configuration_set, )
       req.send_request(options)
     end
 
@@ -459,8 +459,8 @@ module Aws::SESV2
     #
     # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:create_configuration_set_event_destination, params)
+    def create_configuration_set_event_destination(, **options)
+      req = build_request(:create_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::SESV2
     #
     # @overload create_contact(**params)
     # @param [Hash] params ({})
-    def create_contact(params = {}, **options)
-      req = build_request(:create_contact, params)
+    def create_contact(, **options)
+      req = build_request(:create_contact, )
       req.send_request(options)
     end
 
@@ -552,8 +552,8 @@ module Aws::SESV2
     #
     # @overload create_contact_list(**params)
     # @param [Hash] params ({})
-    def create_contact_list(params = {}, **options)
-      req = build_request(:create_contact_list, params)
+    def create_contact_list(, **options)
+      req = build_request(:create_contact_list, )
       req.send_request(options)
     end
 
@@ -613,8 +613,8 @@ module Aws::SESV2
     #
     # @overload create_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def create_custom_verification_email_template(params = {}, **options)
-      req = build_request(:create_custom_verification_email_template, params)
+    def create_custom_verification_email_template(, **options)
+      req = build_request(:create_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -649,8 +649,8 @@ module Aws::SESV2
     #
     # @overload create_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def create_dedicated_ip_pool(params = {}, **options)
-      req = build_request(:create_dedicated_ip_pool, params)
+    def create_dedicated_ip_pool(, **options)
+      req = build_request(:create_dedicated_ip_pool, )
       req.send_request(options)
     end
 
@@ -733,8 +733,8 @@ module Aws::SESV2
     #
     # @overload create_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def create_deliverability_test_report(params = {}, **options)
-      req = build_request(:create_deliverability_test_report, params)
+    def create_deliverability_test_report(, **options)
+      req = build_request(:create_deliverability_test_report, )
       req.send_request(options)
     end
 
@@ -825,8 +825,8 @@ module Aws::SESV2
     #
     # @overload create_email_identity(**params)
     # @param [Hash] params ({})
-    def create_email_identity(params = {}, **options)
-      req = build_request(:create_email_identity, params)
+    def create_email_identity(, **options)
+      req = build_request(:create_email_identity, )
       req.send_request(options)
     end
 
@@ -881,8 +881,8 @@ module Aws::SESV2
     #
     # @overload create_email_identity_policy(**params)
     # @param [Hash] params ({})
-    def create_email_identity_policy(params = {}, **options)
-      req = build_request(:create_email_identity_policy, params)
+    def create_email_identity_policy(, **options)
+      req = build_request(:create_email_identity_policy, )
       req.send_request(options)
     end
 
@@ -921,8 +921,8 @@ module Aws::SESV2
     #
     # @overload create_email_template(**params)
     # @param [Hash] params ({})
-    def create_email_template(params = {}, **options)
-      req = build_request(:create_email_template, params)
+    def create_email_template(, **options)
+      req = build_request(:create_email_template, )
       req.send_request(options)
     end
 
@@ -964,8 +964,8 @@ module Aws::SESV2
     #
     # @overload create_import_job(**params)
     # @param [Hash] params ({})
-    def create_import_job(params = {}, **options)
-      req = build_request(:create_import_job, params)
+    def create_import_job(, **options)
+      req = build_request(:create_import_job, )
       req.send_request(options)
     end
 
@@ -992,8 +992,8 @@ module Aws::SESV2
     #
     # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, **options)
-      req = build_request(:delete_configuration_set, params)
+    def delete_configuration_set(, **options)
+      req = build_request(:delete_configuration_set, )
       req.send_request(options)
     end
 
@@ -1026,8 +1026,8 @@ module Aws::SESV2
     #
     # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:delete_configuration_set_event_destination, params)
+    def delete_configuration_set_event_destination(, **options)
+      req = build_request(:delete_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -1052,8 +1052,8 @@ module Aws::SESV2
     #
     # @overload delete_contact(**params)
     # @param [Hash] params ({})
-    def delete_contact(params = {}, **options)
-      req = build_request(:delete_contact, params)
+    def delete_contact(, **options)
+      req = build_request(:delete_contact, )
       req.send_request(options)
     end
 
@@ -1074,8 +1074,8 @@ module Aws::SESV2
     #
     # @overload delete_contact_list(**params)
     # @param [Hash] params ({})
-    def delete_contact_list(params = {}, **options)
-      req = build_request(:delete_contact_list, params)
+    def delete_contact_list(, **options)
+      req = build_request(:delete_contact_list, )
       req.send_request(options)
     end
 
@@ -1107,8 +1107,8 @@ module Aws::SESV2
     #
     # @overload delete_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def delete_custom_verification_email_template(params = {}, **options)
-      req = build_request(:delete_custom_verification_email_template, params)
+    def delete_custom_verification_email_template(, **options)
+      req = build_request(:delete_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -1129,8 +1129,8 @@ module Aws::SESV2
     #
     # @overload delete_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def delete_dedicated_ip_pool(params = {}, **options)
-      req = build_request(:delete_dedicated_ip_pool, params)
+    def delete_dedicated_ip_pool(, **options)
+      req = build_request(:delete_dedicated_ip_pool, )
       req.send_request(options)
     end
 
@@ -1153,8 +1153,8 @@ module Aws::SESV2
     #
     # @overload delete_email_identity(**params)
     # @param [Hash] params ({})
-    def delete_email_identity(params = {}, **options)
-      req = build_request(:delete_email_identity, params)
+    def delete_email_identity(, **options)
+      req = build_request(:delete_email_identity, )
       req.send_request(options)
     end
 
@@ -1199,8 +1199,8 @@ module Aws::SESV2
     #
     # @overload delete_email_identity_policy(**params)
     # @param [Hash] params ({})
-    def delete_email_identity_policy(params = {}, **options)
-      req = build_request(:delete_email_identity_policy, params)
+    def delete_email_identity_policy(, **options)
+      req = build_request(:delete_email_identity_policy, )
       req.send_request(options)
     end
 
@@ -1223,8 +1223,8 @@ module Aws::SESV2
     #
     # @overload delete_email_template(**params)
     # @param [Hash] params ({})
-    def delete_email_template(params = {}, **options)
-      req = build_request(:delete_email_template, params)
+    def delete_email_template(, **options)
+      req = build_request(:delete_email_template, )
       req.send_request(options)
     end
 
@@ -1246,8 +1246,8 @@ module Aws::SESV2
     #
     # @overload delete_suppressed_destination(**params)
     # @param [Hash] params ({})
-    def delete_suppressed_destination(params = {}, **options)
-      req = build_request(:delete_suppressed_destination, params)
+    def delete_suppressed_destination(, **options)
+      req = build_request(:delete_suppressed_destination, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::SESV2
     #
     # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, **options)
-      req = build_request(:get_account, params)
+    def get_account(, **options)
+      req = build_request(:get_account, )
       req.send_request(options)
     end
 
@@ -1323,8 +1323,8 @@ module Aws::SESV2
     #
     # @overload get_blacklist_reports(**params)
     # @param [Hash] params ({})
-    def get_blacklist_reports(params = {}, **options)
-      req = build_request(:get_blacklist_reports, params)
+    def get_blacklist_reports(, **options)
+      req = build_request(:get_blacklist_reports, )
       req.send_request(options)
     end
 
@@ -1377,8 +1377,8 @@ module Aws::SESV2
     #
     # @overload get_configuration_set(**params)
     # @param [Hash] params ({})
-    def get_configuration_set(params = {}, **options)
-      req = build_request(:get_configuration_set, params)
+    def get_configuration_set(, **options)
+      req = build_request(:get_configuration_set, )
       req.send_request(options)
     end
 
@@ -1425,8 +1425,8 @@ module Aws::SESV2
     #
     # @overload get_configuration_set_event_destinations(**params)
     # @param [Hash] params ({})
-    def get_configuration_set_event_destinations(params = {}, **options)
-      req = build_request(:get_configuration_set_event_destinations, params)
+    def get_configuration_set_event_destinations(, **options)
+      req = build_request(:get_configuration_set_event_destinations, )
       req.send_request(options)
     end
 
@@ -1475,8 +1475,8 @@ module Aws::SESV2
     #
     # @overload get_contact(**params)
     # @param [Hash] params ({})
-    def get_contact(params = {}, **options)
-      req = build_request(:get_contact, params)
+    def get_contact(, **options)
+      req = build_request(:get_contact, )
       req.send_request(options)
     end
 
@@ -1520,8 +1520,8 @@ module Aws::SESV2
     #
     # @overload get_contact_list(**params)
     # @param [Hash] params ({})
-    def get_contact_list(params = {}, **options)
-      req = build_request(:get_contact_list, params)
+    def get_contact_list(, **options)
+      req = build_request(:get_contact_list, )
       req.send_request(options)
     end
 
@@ -1570,8 +1570,8 @@ module Aws::SESV2
     #
     # @overload get_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def get_custom_verification_email_template(params = {}, **options)
-      req = build_request(:get_custom_verification_email_template, params)
+    def get_custom_verification_email_template(, **options)
+      req = build_request(:get_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -1605,8 +1605,8 @@ module Aws::SESV2
     #
     # @overload get_dedicated_ip(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ip(params = {}, **options)
-      req = build_request(:get_dedicated_ip, params)
+    def get_dedicated_ip(, **options)
+      req = build_request(:get_dedicated_ip, )
       req.send_request(options)
     end
 
@@ -1655,8 +1655,8 @@ module Aws::SESV2
     #
     # @overload get_dedicated_ips(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ips(params = {}, **options)
-      req = build_request(:get_dedicated_ips, params)
+    def get_dedicated_ips(, **options)
+      req = build_request(:get_dedicated_ips, )
       req.send_request(options)
     end
 
@@ -1706,8 +1706,8 @@ module Aws::SESV2
     #
     # @overload get_deliverability_dashboard_options(**params)
     # @param [Hash] params ({})
-    def get_deliverability_dashboard_options(params = {}, **options)
-      req = build_request(:get_deliverability_dashboard_options, params)
+    def get_deliverability_dashboard_options(, **options)
+      req = build_request(:get_deliverability_dashboard_options, )
       req.send_request(options)
     end
 
@@ -1759,8 +1759,8 @@ module Aws::SESV2
     #
     # @overload get_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def get_deliverability_test_report(params = {}, **options)
-      req = build_request(:get_deliverability_test_report, params)
+    def get_deliverability_test_report(, **options)
+      req = build_request(:get_deliverability_test_report, )
       req.send_request(options)
     end
 
@@ -1805,8 +1805,8 @@ module Aws::SESV2
     #
     # @overload get_domain_deliverability_campaign(**params)
     # @param [Hash] params ({})
-    def get_domain_deliverability_campaign(params = {}, **options)
-      req = build_request(:get_domain_deliverability_campaign, params)
+    def get_domain_deliverability_campaign(, **options)
+      req = build_request(:get_domain_deliverability_campaign, )
       req.send_request(options)
     end
 
@@ -1868,8 +1868,8 @@ module Aws::SESV2
     #
     # @overload get_domain_statistics_report(**params)
     # @param [Hash] params ({})
-    def get_domain_statistics_report(params = {}, **options)
-      req = build_request(:get_domain_statistics_report, params)
+    def get_domain_statistics_report(, **options)
+      req = build_request(:get_domain_statistics_report, )
       req.send_request(options)
     end
 
@@ -1919,8 +1919,8 @@ module Aws::SESV2
     #
     # @overload get_email_identity(**params)
     # @param [Hash] params ({})
-    def get_email_identity(params = {}, **options)
-      req = build_request(:get_email_identity, params)
+    def get_email_identity(, **options)
+      req = build_request(:get_email_identity, )
       req.send_request(options)
     end
 
@@ -1966,8 +1966,8 @@ module Aws::SESV2
     #
     # @overload get_email_identity_policies(**params)
     # @param [Hash] params ({})
-    def get_email_identity_policies(params = {}, **options)
-      req = build_request(:get_email_identity_policies, params)
+    def get_email_identity_policies(, **options)
+      req = build_request(:get_email_identity_policies, )
       req.send_request(options)
     end
 
@@ -2001,8 +2001,8 @@ module Aws::SESV2
     #
     # @overload get_email_template(**params)
     # @param [Hash] params ({})
-    def get_email_template(params = {}, **options)
-      req = build_request(:get_email_template, params)
+    def get_email_template(, **options)
+      req = build_request(:get_email_template, )
       req.send_request(options)
     end
 
@@ -2049,8 +2049,8 @@ module Aws::SESV2
     #
     # @overload get_import_job(**params)
     # @param [Hash] params ({})
-    def get_import_job(params = {}, **options)
-      req = build_request(:get_import_job, params)
+    def get_import_job(, **options)
+      req = build_request(:get_import_job, )
       req.send_request(options)
     end
 
@@ -2082,8 +2082,8 @@ module Aws::SESV2
     #
     # @overload get_suppressed_destination(**params)
     # @param [Hash] params ({})
-    def get_suppressed_destination(params = {}, **options)
-      req = build_request(:get_suppressed_destination, params)
+    def get_suppressed_destination(, **options)
+      req = build_request(:get_suppressed_destination, )
       req.send_request(options)
     end
 
@@ -2130,8 +2130,8 @@ module Aws::SESV2
     #
     # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, **options)
-      req = build_request(:list_configuration_sets, params)
+    def list_configuration_sets(, **options)
+      req = build_request(:list_configuration_sets, )
       req.send_request(options)
     end
 
@@ -2175,8 +2175,8 @@ module Aws::SESV2
     #
     # @overload list_contact_lists(**params)
     # @param [Hash] params ({})
-    def list_contact_lists(params = {}, **options)
-      req = build_request(:list_contact_lists, params)
+    def list_contact_lists(, **options)
+      req = build_request(:list_contact_lists, )
       req.send_request(options)
     end
 
@@ -2242,8 +2242,8 @@ module Aws::SESV2
     #
     # @overload list_contacts(**params)
     # @param [Hash] params ({})
-    def list_contacts(params = {}, **options)
-      req = build_request(:list_contacts, params)
+    def list_contacts(, **options)
+      req = build_request(:list_contacts, )
       req.send_request(options)
     end
 
@@ -2303,8 +2303,8 @@ module Aws::SESV2
     #
     # @overload list_custom_verification_email_templates(**params)
     # @param [Hash] params ({})
-    def list_custom_verification_email_templates(params = {}, **options)
-      req = build_request(:list_custom_verification_email_templates, params)
+    def list_custom_verification_email_templates(, **options)
+      req = build_request(:list_custom_verification_email_templates, )
       req.send_request(options)
     end
 
@@ -2345,8 +2345,8 @@ module Aws::SESV2
     #
     # @overload list_dedicated_ip_pools(**params)
     # @param [Hash] params ({})
-    def list_dedicated_ip_pools(params = {}, **options)
-      req = build_request(:list_dedicated_ip_pools, params)
+    def list_dedicated_ip_pools(, **options)
+      req = build_request(:list_dedicated_ip_pools, )
       req.send_request(options)
     end
 
@@ -2399,8 +2399,8 @@ module Aws::SESV2
     #
     # @overload list_deliverability_test_reports(**params)
     # @param [Hash] params ({})
-    def list_deliverability_test_reports(params = {}, **options)
-      req = build_request(:list_deliverability_test_reports, params)
+    def list_deliverability_test_reports(, **options)
+      req = build_request(:list_deliverability_test_reports, )
       req.send_request(options)
     end
 
@@ -2475,8 +2475,8 @@ module Aws::SESV2
     #
     # @overload list_domain_deliverability_campaigns(**params)
     # @param [Hash] params ({})
-    def list_domain_deliverability_campaigns(params = {}, **options)
-      req = build_request(:list_domain_deliverability_campaigns, params)
+    def list_domain_deliverability_campaigns(, **options)
+      req = build_request(:list_domain_deliverability_campaigns, )
       req.send_request(options)
     end
 
@@ -2525,8 +2525,8 @@ module Aws::SESV2
     #
     # @overload list_email_identities(**params)
     # @param [Hash] params ({})
-    def list_email_identities(params = {}, **options)
-      req = build_request(:list_email_identities, params)
+    def list_email_identities(, **options)
+      req = build_request(:list_email_identities, )
       req.send_request(options)
     end
 
@@ -2573,8 +2573,8 @@ module Aws::SESV2
     #
     # @overload list_email_templates(**params)
     # @param [Hash] params ({})
-    def list_email_templates(params = {}, **options)
-      req = build_request(:list_email_templates, params)
+    def list_email_templates(, **options)
+      req = build_request(:list_email_templates, )
       req.send_request(options)
     end
 
@@ -2627,8 +2627,8 @@ module Aws::SESV2
     #
     # @overload list_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_import_jobs(params = {}, **options)
-      req = build_request(:list_import_jobs, params)
+    def list_import_jobs(, **options)
+      req = build_request(:list_import_jobs, )
       req.send_request(options)
     end
 
@@ -2687,8 +2687,8 @@ module Aws::SESV2
     #
     # @overload list_suppressed_destinations(**params)
     # @param [Hash] params ({})
-    def list_suppressed_destinations(params = {}, **options)
-      req = build_request(:list_suppressed_destinations, params)
+    def list_suppressed_destinations(, **options)
+      req = build_request(:list_suppressed_destinations, )
       req.send_request(options)
     end
 
@@ -2723,8 +2723,8 @@ module Aws::SESV2
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2749,8 +2749,8 @@ module Aws::SESV2
     #
     # @overload put_account_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_dedicated_ip_warmup_attributes(params = {}, **options)
-      req = build_request(:put_account_dedicated_ip_warmup_attributes, params)
+    def put_account_dedicated_ip_warmup_attributes(, **options)
+      req = build_request(:put_account_dedicated_ip_warmup_attributes, )
       req.send_request(options)
     end
 
@@ -2805,8 +2805,8 @@ module Aws::SESV2
     #
     # @overload put_account_details(**params)
     # @param [Hash] params ({})
-    def put_account_details(params = {}, **options)
-      req = build_request(:put_account_details, params)
+    def put_account_details(, **options)
+      req = build_request(:put_account_details, )
       req.send_request(options)
     end
 
@@ -2834,8 +2834,8 @@ module Aws::SESV2
     #
     # @overload put_account_sending_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_sending_attributes(params = {}, **options)
-      req = build_request(:put_account_sending_attributes, params)
+    def put_account_sending_attributes(, **options)
+      req = build_request(:put_account_sending_attributes, )
       req.send_request(options)
     end
 
@@ -2866,8 +2866,8 @@ module Aws::SESV2
     #
     # @overload put_account_suppression_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_suppression_attributes(params = {}, **options)
-      req = build_request(:put_account_suppression_attributes, params)
+    def put_account_suppression_attributes(, **options)
+      req = build_request(:put_account_suppression_attributes, )
       req.send_request(options)
     end
 
@@ -2904,8 +2904,8 @@ module Aws::SESV2
     #
     # @overload put_configuration_set_delivery_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_delivery_options(params = {}, **options)
-      req = build_request(:put_configuration_set_delivery_options, params)
+    def put_configuration_set_delivery_options(, **options)
+      req = build_request(:put_configuration_set_delivery_options, )
       req.send_request(options)
     end
 
@@ -2934,8 +2934,8 @@ module Aws::SESV2
     #
     # @overload put_configuration_set_reputation_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_reputation_options(params = {}, **options)
-      req = build_request(:put_configuration_set_reputation_options, params)
+    def put_configuration_set_reputation_options(, **options)
+      req = build_request(:put_configuration_set_reputation_options, )
       req.send_request(options)
     end
 
@@ -2963,8 +2963,8 @@ module Aws::SESV2
     #
     # @overload put_configuration_set_sending_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_sending_options(params = {}, **options)
-      req = build_request(:put_configuration_set_sending_options, params)
+    def put_configuration_set_sending_options(, **options)
+      req = build_request(:put_configuration_set_sending_options, )
       req.send_request(options)
     end
 
@@ -3001,8 +3001,8 @@ module Aws::SESV2
     #
     # @overload put_configuration_set_suppression_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_suppression_options(params = {}, **options)
-      req = build_request(:put_configuration_set_suppression_options, params)
+    def put_configuration_set_suppression_options(, **options)
+      req = build_request(:put_configuration_set_suppression_options, )
       req.send_request(options)
     end
 
@@ -3029,8 +3029,8 @@ module Aws::SESV2
     #
     # @overload put_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_tracking_options(params = {}, **options)
-      req = build_request(:put_configuration_set_tracking_options, params)
+    def put_configuration_set_tracking_options(, **options)
+      req = build_request(:put_configuration_set_tracking_options, )
       req.send_request(options)
     end
 
@@ -3066,8 +3066,8 @@ module Aws::SESV2
     #
     # @overload put_dedicated_ip_in_pool(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_in_pool(params = {}, **options)
-      req = build_request(:put_dedicated_ip_in_pool, params)
+    def put_dedicated_ip_in_pool(, **options)
+      req = build_request(:put_dedicated_ip_in_pool, )
       req.send_request(options)
     end
 
@@ -3092,8 +3092,8 @@ module Aws::SESV2
     #
     # @overload put_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_warmup_attributes(params = {}, **options)
-      req = build_request(:put_dedicated_ip_warmup_attributes, params)
+    def put_dedicated_ip_warmup_attributes(, **options)
+      req = build_request(:put_dedicated_ip_warmup_attributes, )
       req.send_request(options)
     end
 
@@ -3143,8 +3143,8 @@ module Aws::SESV2
     #
     # @overload put_deliverability_dashboard_option(**params)
     # @param [Hash] params ({})
-    def put_deliverability_dashboard_option(params = {}, **options)
-      req = build_request(:put_deliverability_dashboard_option, params)
+    def put_deliverability_dashboard_option(, **options)
+      req = build_request(:put_deliverability_dashboard_option, )
       req.send_request(options)
     end
 
@@ -3173,8 +3173,8 @@ module Aws::SESV2
     #
     # @overload put_email_identity_dkim_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_dkim_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_dkim_attributes, params)
+    def put_email_identity_dkim_attributes(, **options)
+      req = build_request(:put_email_identity_dkim_attributes, )
       req.send_request(options)
     end
 
@@ -3241,8 +3241,8 @@ module Aws::SESV2
     #
     # @overload put_email_identity_dkim_signing_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_dkim_signing_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_dkim_signing_attributes, params)
+    def put_email_identity_dkim_signing_attributes(, **options)
+      req = build_request(:put_email_identity_dkim_signing_attributes, )
       req.send_request(options)
     end
 
@@ -3290,8 +3290,8 @@ module Aws::SESV2
     #
     # @overload put_email_identity_feedback_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_feedback_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_feedback_attributes, params)
+    def put_email_identity_feedback_attributes(, **options)
+      req = build_request(:put_email_identity_feedback_attributes, )
       req.send_request(options)
     end
 
@@ -3339,8 +3339,8 @@ module Aws::SESV2
     #
     # @overload put_email_identity_mail_from_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_mail_from_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_mail_from_attributes, params)
+    def put_email_identity_mail_from_attributes(, **options)
+      req = build_request(:put_email_identity_mail_from_attributes, )
       req.send_request(options)
     end
 
@@ -3367,8 +3367,8 @@ module Aws::SESV2
     #
     # @overload put_suppressed_destination(**params)
     # @param [Hash] params ({})
-    def put_suppressed_destination(params = {}, **options)
-      req = build_request(:put_suppressed_destination, params)
+    def put_suppressed_destination(, **options)
+      req = build_request(:put_suppressed_destination, )
       req.send_request(options)
     end
 
@@ -3502,8 +3502,8 @@ module Aws::SESV2
     #
     # @overload send_bulk_email(**params)
     # @param [Hash] params ({})
-    def send_bulk_email(params = {}, **options)
-      req = build_request(:send_bulk_email, params)
+    def send_bulk_email(, **options)
+      req = build_request(:send_bulk_email, )
       req.send_request(options)
     end
 
@@ -3554,8 +3554,8 @@ module Aws::SESV2
     #
     # @overload send_custom_verification_email(**params)
     # @param [Hash] params ({})
-    def send_custom_verification_email(params = {}, **options)
-      req = build_request(:send_custom_verification_email, params)
+    def send_custom_verification_email(, **options)
+      req = build_request(:send_custom_verification_email, )
       req.send_request(options)
     end
 
@@ -3717,8 +3717,8 @@ module Aws::SESV2
     #
     # @overload send_email(**params)
     # @param [Hash] params ({})
-    def send_email(params = {}, **options)
-      req = build_request(:send_email, params)
+    def send_email(, **options)
+      req = build_request(:send_email, )
       req.send_request(options)
     end
 
@@ -3761,8 +3761,8 @@ module Aws::SESV2
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3798,8 +3798,8 @@ module Aws::SESV2
     #
     # @overload test_render_email_template(**params)
     # @param [Hash] params ({})
-    def test_render_email_template(params = {}, **options)
-      req = build_request(:test_render_email_template, params)
+    def test_render_email_template(, **options)
+      req = build_request(:test_render_email_template, )
       req.send_request(options)
     end
 
@@ -3832,8 +3832,8 @@ module Aws::SESV2
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3893,8 +3893,8 @@ module Aws::SESV2
     #
     # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:update_configuration_set_event_destination, params)
+    def update_configuration_set_event_destination(, **options)
+      req = build_request(:update_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -3940,8 +3940,8 @@ module Aws::SESV2
     #
     # @overload update_contact(**params)
     # @param [Hash] params ({})
-    def update_contact(params = {}, **options)
-      req = build_request(:update_contact, params)
+    def update_contact(, **options)
+      req = build_request(:update_contact, )
       req.send_request(options)
     end
 
@@ -3979,8 +3979,8 @@ module Aws::SESV2
     #
     # @overload update_contact_list(**params)
     # @param [Hash] params ({})
-    def update_contact_list(params = {}, **options)
-      req = build_request(:update_contact_list, params)
+    def update_contact_list(, **options)
+      req = build_request(:update_contact_list, )
       req.send_request(options)
     end
 
@@ -4041,8 +4041,8 @@ module Aws::SESV2
     #
     # @overload update_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def update_custom_verification_email_template(params = {}, **options)
-      req = build_request(:update_custom_verification_email_template, params)
+    def update_custom_verification_email_template(, **options)
+      req = build_request(:update_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -4098,8 +4098,8 @@ module Aws::SESV2
     #
     # @overload update_email_identity_policy(**params)
     # @param [Hash] params ({})
-    def update_email_identity_policy(params = {}, **options)
-      req = build_request(:update_email_identity_policy, params)
+    def update_email_identity_policy(, **options)
+      req = build_request(:update_email_identity_policy, )
       req.send_request(options)
     end
 
@@ -4138,8 +4138,8 @@ module Aws::SESV2
     #
     # @overload update_email_template(**params)
     # @param [Hash] params ({})
-    def update_email_template(params = {}, **options)
-      req = build_request(:update_email_template, params)
+    def update_email_template(, **options)
+      req = build_request(:update_email_template, )
       req.send_request(options)
     end
 

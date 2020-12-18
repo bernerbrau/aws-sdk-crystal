@@ -1019,5 +1019,293 @@ module Aws::CodeStarNotifications
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ClientRequestToken = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ConfigurationException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias CreateNotificationRuleRequest = NamedTuple(
+      "Name" : NotificationRuleName,
+      "EventTypeIds" : EventTypeIds,
+      "Resource" : NotificationRuleResource,
+      "Targets" : Targets,
+      "DetailType" : DetailType,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (Tags)?,
+      "Status" : (NotificationRuleStatus)?
+    )
+
+    alias CreateNotificationRuleResult = NamedTuple(
+      "Arn" : (NotificationRuleArn)?
+    )
+
+    alias CreatedTimestamp = String | UInt64 | Time
+
+    alias DeleteNotificationRuleRequest = NamedTuple(
+      "Arn" : NotificationRuleArn
+    )
+
+    alias DeleteNotificationRuleResult = NamedTuple(
+      "Arn" : (NotificationRuleArn)?
+    )
+
+    alias DeleteTargetRequest = NamedTuple(
+      "TargetAddress" : TargetAddress,
+      "ForceUnsubscribeAll" : (ForceUnsubscribeAll)?
+    )
+
+    alias DeleteTargetResult = NamedTuple(
+      
+    )
+
+    alias DescribeNotificationRuleRequest = NamedTuple(
+      "Arn" : NotificationRuleArn
+    )
+
+    alias DescribeNotificationRuleResult = NamedTuple(
+      "Arn" : NotificationRuleArn,
+      "Name" : (NotificationRuleName)?,
+      "EventTypes" : (EventTypeBatch)?,
+      "Resource" : (NotificationRuleResource)?,
+      "Targets" : (TargetsBatch)?,
+      "DetailType" : (DetailType)?,
+      "CreatedBy" : (NotificationRuleCreatedBy)?,
+      "Status" : (NotificationRuleStatus)?,
+      "CreatedTimestamp" : (CreatedTimestamp)?,
+      "LastModifiedTimestamp" : (LastModifiedTimestamp)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DetailType = String
+
+    alias EventTypeBatch = Array(EventTypeSummary)
+
+    alias EventTypeId = String
+
+    alias EventTypeIds = Array(EventTypeId)
+
+    alias EventTypeName = String
+
+    alias EventTypeSummary = NamedTuple(
+      "EventTypeId" : (EventTypeId)?,
+      "ServiceName" : (ServiceName)?,
+      "EventTypeName" : (EventTypeName)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ForceUnsubscribeAll = Bool
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias LastModifiedTimestamp = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ListEventTypesFilter = NamedTuple(
+      "Name" : ListEventTypesFilterName,
+      "Value" : ListEventTypesFilterValue
+    )
+
+    alias ListEventTypesFilterName = String
+
+    alias ListEventTypesFilterValue = String
+
+    alias ListEventTypesFilters = Array(ListEventTypesFilter)
+
+    alias ListEventTypesRequest = NamedTuple(
+      "Filters" : (ListEventTypesFilters)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListEventTypesResult = NamedTuple(
+      "EventTypes" : (EventTypeBatch)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListNotificationRulesFilter = NamedTuple(
+      "Name" : ListNotificationRulesFilterName,
+      "Value" : ListNotificationRulesFilterValue
+    )
+
+    alias ListNotificationRulesFilterName = String
+
+    alias ListNotificationRulesFilterValue = String
+
+    alias ListNotificationRulesFilters = Array(ListNotificationRulesFilter)
+
+    alias ListNotificationRulesRequest = NamedTuple(
+      "Filters" : (ListNotificationRulesFilters)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListNotificationRulesResult = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "NotificationRules" : (NotificationRuleBatch)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "Arn" : NotificationRuleArn
+    )
+
+    alias ListTagsForResourceResult = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias ListTargetsFilter = NamedTuple(
+      "Name" : ListTargetsFilterName,
+      "Value" : ListTargetsFilterValue
+    )
+
+    alias ListTargetsFilterName = String
+
+    alias ListTargetsFilterValue = String
+
+    alias ListTargetsFilters = Array(ListTargetsFilter)
+
+    alias ListTargetsRequest = NamedTuple(
+      "Filters" : (ListTargetsFilters)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTargetsResult = NamedTuple(
+      "Targets" : (TargetsBatch)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias NextToken = String
+
+    alias NotificationRuleArn = String
+
+    alias NotificationRuleBatch = Array(NotificationRuleSummary)
+
+    alias NotificationRuleCreatedBy = String
+
+    alias NotificationRuleId = String
+
+    alias NotificationRuleName = String
+
+    alias NotificationRuleResource = String
+
+    alias NotificationRuleStatus = String
+
+    alias NotificationRuleSummary = NamedTuple(
+      "Id" : (NotificationRuleId)?,
+      "Arn" : (NotificationRuleArn)?
+    )
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ResourceType = String
+
+    alias ServiceName = String
+
+    alias SubscribeRequest = NamedTuple(
+      "Arn" : NotificationRuleArn,
+      "Target" : Target,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias SubscribeResult = NamedTuple(
+      "Arn" : (NotificationRuleArn)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "Arn" : NotificationRuleArn,
+      "Tags" : Tags
+    )
+
+    alias TagResourceResult = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias Target = NamedTuple(
+      "TargetType" : (TargetType)?,
+      "TargetAddress" : (TargetAddress)?
+    )
+
+    alias TargetAddress = String
+
+    alias TargetStatus = String
+
+    alias TargetSummary = NamedTuple(
+      "TargetAddress" : (TargetAddress)?,
+      "TargetType" : (TargetType)?,
+      "TargetStatus" : (TargetStatus)?
+    )
+
+    alias TargetType = String
+
+    alias Targets = Array(Target)
+
+    alias TargetsBatch = Array(TargetSummary)
+
+    alias UnsubscribeRequest = NamedTuple(
+      "Arn" : NotificationRuleArn,
+      "TargetAddress" : TargetAddress
+    )
+
+    alias UnsubscribeResult = NamedTuple(
+      "Arn" : NotificationRuleArn
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "Arn" : NotificationRuleArn,
+      "TagKeys" : TagKeys
+    )
+
+    alias UntagResourceResult = NamedTuple(
+      
+    )
+
+    alias UpdateNotificationRuleRequest = NamedTuple(
+      "Arn" : NotificationRuleArn,
+      "Name" : (NotificationRuleName)?,
+      "Status" : (NotificationRuleStatus)?,
+      "EventTypeIds" : (EventTypeIds)?,
+      "Targets" : (Targets)?,
+      "DetailType" : (DetailType)?
+    )
+
+    alias UpdateNotificationRuleResult = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (Message)?
+    )
   end
 end

@@ -373,8 +373,8 @@ module Aws::RAM
     #
     # @overload accept_resource_share_invitation(**params)
     # @param [Hash] params ({})
-    def accept_resource_share_invitation(params = {}, **options)
-      req = build_request(:accept_resource_share_invitation, params)
+    def accept_resource_share_invitation(, **options)
+      req = build_request(:accept_resource_share_invitation, )
       req.send_request(options)
     end
 
@@ -426,8 +426,8 @@ module Aws::RAM
     #
     # @overload associate_resource_share(**params)
     # @param [Hash] params ({})
-    def associate_resource_share(params = {}, **options)
-      req = build_request(:associate_resource_share, params)
+    def associate_resource_share(, **options)
+      req = build_request(:associate_resource_share, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::RAM
     #
     # @overload associate_resource_share_permission(**params)
     # @param [Hash] params ({})
-    def associate_resource_share_permission(params = {}, **options)
-      req = build_request(:associate_resource_share_permission, params)
+    def associate_resource_share_permission(, **options)
+      req = build_request(:associate_resource_share_permission, )
       req.send_request(options)
     end
 
@@ -550,8 +550,8 @@ module Aws::RAM
     #
     # @overload create_resource_share(**params)
     # @param [Hash] params ({})
-    def create_resource_share(params = {}, **options)
-      req = build_request(:create_resource_share, params)
+    def create_resource_share(, **options)
+      req = build_request(:create_resource_share, )
       req.send_request(options)
     end
 
@@ -585,8 +585,8 @@ module Aws::RAM
     #
     # @overload delete_resource_share(**params)
     # @param [Hash] params ({})
-    def delete_resource_share(params = {}, **options)
-      req = build_request(:delete_resource_share, params)
+    def delete_resource_share(, **options)
+      req = build_request(:delete_resource_share, )
       req.send_request(options)
     end
 
@@ -638,8 +638,8 @@ module Aws::RAM
     #
     # @overload disassociate_resource_share(**params)
     # @param [Hash] params ({})
-    def disassociate_resource_share(params = {}, **options)
-      req = build_request(:disassociate_resource_share, params)
+    def disassociate_resource_share(, **options)
+      req = build_request(:disassociate_resource_share, )
       req.send_request(options)
     end
 
@@ -677,8 +677,8 @@ module Aws::RAM
     #
     # @overload disassociate_resource_share_permission(**params)
     # @param [Hash] params ({})
-    def disassociate_resource_share_permission(params = {}, **options)
-      req = build_request(:disassociate_resource_share_permission, params)
+    def disassociate_resource_share_permission(, **options)
+      req = build_request(:disassociate_resource_share_permission, )
       req.send_request(options)
     end
 
@@ -698,8 +698,8 @@ module Aws::RAM
     #
     # @overload enable_sharing_with_aws_organization(**params)
     # @param [Hash] params ({})
-    def enable_sharing_with_aws_organization(params = {}, **options)
-      req = build_request(:enable_sharing_with_aws_organization, params)
+    def enable_sharing_with_aws_organization(, **options)
+      req = build_request(:enable_sharing_with_aws_organization, )
       req.send_request(options)
     end
 
@@ -737,8 +737,8 @@ module Aws::RAM
     #
     # @overload get_permission(**params)
     # @param [Hash] params ({})
-    def get_permission(params = {}, **options)
-      req = build_request(:get_permission, params)
+    def get_permission(, **options)
+      req = build_request(:get_permission, )
       req.send_request(options)
     end
 
@@ -785,8 +785,8 @@ module Aws::RAM
     #
     # @overload get_resource_policies(**params)
     # @param [Hash] params ({})
-    def get_resource_policies(params = {}, **options)
-      req = build_request(:get_resource_policies, params)
+    def get_resource_policies(, **options)
+      req = build_request(:get_resource_policies, )
       req.send_request(options)
     end
 
@@ -857,8 +857,8 @@ module Aws::RAM
     #
     # @overload get_resource_share_associations(**params)
     # @param [Hash] params ({})
-    def get_resource_share_associations(params = {}, **options)
-      req = build_request(:get_resource_share_associations, params)
+    def get_resource_share_associations(, **options)
+      req = build_request(:get_resource_share_associations, )
       req.send_request(options)
     end
 
@@ -920,8 +920,8 @@ module Aws::RAM
     #
     # @overload get_resource_share_invitations(**params)
     # @param [Hash] params ({})
-    def get_resource_share_invitations(params = {}, **options)
-      req = build_request(:get_resource_share_invitations, params)
+    def get_resource_share_invitations(, **options)
+      req = build_request(:get_resource_share_invitations, )
       req.send_request(options)
     end
 
@@ -996,8 +996,8 @@ module Aws::RAM
     #
     # @overload get_resource_shares(**params)
     # @param [Hash] params ({})
-    def get_resource_shares(params = {}, **options)
-      req = build_request(:get_resource_shares, params)
+    def get_resource_shares(, **options)
+      req = build_request(:get_resource_shares, )
       req.send_request(options)
     end
 
@@ -1047,8 +1047,8 @@ module Aws::RAM
     #
     # @overload list_pending_invitation_resources(**params)
     # @param [Hash] params ({})
-    def list_pending_invitation_resources(params = {}, **options)
-      req = build_request(:list_pending_invitation_resources, params)
+    def list_pending_invitation_resources(, **options)
+      req = build_request(:list_pending_invitation_resources, )
       req.send_request(options)
     end
 
@@ -1097,8 +1097,8 @@ module Aws::RAM
     #
     # @overload list_permissions(**params)
     # @param [Hash] params ({})
-    def list_permissions(params = {}, **options)
-      req = build_request(:list_permissions, params)
+    def list_permissions(, **options)
+      req = build_request(:list_permissions, )
       req.send_request(options)
     end
 
@@ -1169,8 +1169,8 @@ module Aws::RAM
     #
     # @overload list_principals(**params)
     # @param [Hash] params ({})
-    def list_principals(params = {}, **options)
-      req = build_request(:list_principals, params)
+    def list_principals(, **options)
+      req = build_request(:list_principals, )
       req.send_request(options)
     end
 
@@ -1218,8 +1218,8 @@ module Aws::RAM
     #
     # @overload list_resource_share_permissions(**params)
     # @param [Hash] params ({})
-    def list_resource_share_permissions(params = {}, **options)
-      req = build_request(:list_resource_share_permissions, params)
+    def list_resource_share_permissions(, **options)
+      req = build_request(:list_resource_share_permissions, )
       req.send_request(options)
     end
 
@@ -1256,8 +1256,8 @@ module Aws::RAM
     #
     # @overload list_resource_types(**params)
     # @param [Hash] params ({})
-    def list_resource_types(params = {}, **options)
-      req = build_request(:list_resource_types, params)
+    def list_resource_types(, **options)
+      req = build_request(:list_resource_types, )
       req.send_request(options)
     end
 
@@ -1331,8 +1331,8 @@ module Aws::RAM
     #
     # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, **options)
-      req = build_request(:list_resources, params)
+    def list_resources(, **options)
+      req = build_request(:list_resources, )
       req.send_request(options)
     end
 
@@ -1368,8 +1368,8 @@ module Aws::RAM
     #
     # @overload promote_resource_share_created_from_policy(**params)
     # @param [Hash] params ({})
-    def promote_resource_share_created_from_policy(params = {}, **options)
-      req = build_request(:promote_resource_share_created_from_policy, params)
+    def promote_resource_share_created_from_policy(, **options)
+      req = build_request(:promote_resource_share_created_from_policy, )
       req.send_request(options)
     end
 
@@ -1419,8 +1419,8 @@ module Aws::RAM
     #
     # @overload reject_resource_share_invitation(**params)
     # @param [Hash] params ({})
-    def reject_resource_share_invitation(params = {}, **options)
-      req = build_request(:reject_resource_share_invitation, params)
+    def reject_resource_share_invitation(, **options)
+      req = build_request(:reject_resource_share_invitation, )
       req.send_request(options)
     end
 
@@ -1450,8 +1450,8 @@ module Aws::RAM
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1477,8 +1477,8 @@ module Aws::RAM
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1532,8 +1532,8 @@ module Aws::RAM
     #
     # @overload update_resource_share(**params)
     # @param [Hash] params ({})
-    def update_resource_share(params = {}, **options)
-      req = build_request(:update_resource_share, params)
+    def update_resource_share(, **options)
+      req = build_request(:update_resource_share, )
       req.send_request(options)
     end
 

@@ -736,5 +736,227 @@ module Aws::Braket
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias CancelQuantumTaskRequest = NamedTuple(
+      "clientToken" : String64,
+      "quantumTaskArn" : QuantumTaskArn
+    )
+
+    alias CancelQuantumTaskResponse = NamedTuple(
+      "cancellationStatus" : CancellationStatus,
+      "quantumTaskArn" : QuantumTaskArn
+    )
+
+    alias CancellationStatus = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias CreateQuantumTaskRequest = NamedTuple(
+      "action" : JsonValue,
+      "clientToken" : String64,
+      "deviceArn" : DeviceArn,
+      "deviceParameters" : (CreateQuantumTaskRequestDeviceParametersString)?,
+      "outputS3Bucket" : CreateQuantumTaskRequestOutputS3BucketString,
+      "outputS3KeyPrefix" : CreateQuantumTaskRequestOutputS3KeyPrefixString,
+      "shots" : CreateQuantumTaskRequestShotsLong,
+      "tags" : (TagsMap)?
+    )
+
+    alias CreateQuantumTaskRequestDeviceParametersString = String
+
+    alias CreateQuantumTaskRequestOutputS3BucketString = String
+
+    alias CreateQuantumTaskRequestOutputS3KeyPrefixString = String
+
+    alias CreateQuantumTaskRequestShotsLong = Int64
+
+    alias CreateQuantumTaskResponse = NamedTuple(
+      "quantumTaskArn" : QuantumTaskArn
+    )
+
+    alias DeviceArn = String
+
+    alias DeviceOfflineException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias DeviceStatus = String
+
+    alias DeviceSummary = NamedTuple(
+      "deviceArn" : DeviceArn,
+      "deviceName" : String,
+      "deviceStatus" : DeviceStatus,
+      "deviceType" : DeviceType,
+      "providerName" : String
+    )
+
+    alias DeviceSummaryList = Array(DeviceSummary)
+
+    alias DeviceType = String
+
+    alias GetDeviceRequest = NamedTuple(
+      "deviceArn" : DeviceArn
+    )
+
+    alias GetDeviceResponse = NamedTuple(
+      "deviceArn" : DeviceArn,
+      "deviceCapabilities" : JsonValue,
+      "deviceName" : String,
+      "deviceStatus" : DeviceStatus,
+      "deviceType" : DeviceType,
+      "providerName" : String
+    )
+
+    alias GetQuantumTaskRequest = NamedTuple(
+      "quantumTaskArn" : QuantumTaskArn
+    )
+
+    alias GetQuantumTaskResponse = NamedTuple(
+      "createdAt" : SyntheticTimestamp_date_time,
+      "deviceArn" : DeviceArn,
+      "deviceParameters" : JsonValue,
+      "endedAt" : (SyntheticTimestamp_date_time)?,
+      "failureReason" : (String)?,
+      "outputS3Bucket" : String,
+      "outputS3Directory" : String,
+      "quantumTaskArn" : QuantumTaskArn,
+      "shots" : Long,
+      "status" : QuantumTaskStatus,
+      "tags" : (TagsMap)?
+    )
+
+    alias InternalServiceException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias JsonValue = String
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagsMap)?
+    )
+
+    alias Long = Int64
+
+    alias QuantumTaskArn = String
+
+    alias QuantumTaskStatus = String
+
+    alias QuantumTaskSummary = NamedTuple(
+      "createdAt" : SyntheticTimestamp_date_time,
+      "deviceArn" : DeviceArn,
+      "endedAt" : (SyntheticTimestamp_date_time)?,
+      "outputS3Bucket" : String,
+      "outputS3Directory" : String,
+      "quantumTaskArn" : QuantumTaskArn,
+      "shots" : Long,
+      "status" : QuantumTaskStatus,
+      "tags" : (TagsMap)?
+    )
+
+    alias QuantumTaskSummaryList = Array(QuantumTaskSummary)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias SearchDevicesFilter = NamedTuple(
+      "name" : SearchDevicesFilterNameString,
+      "values" : SearchDevicesFilterValuesList
+    )
+
+    alias SearchDevicesFilterNameString = String
+
+    alias SearchDevicesFilterValuesList = Array(String256)
+
+    alias SearchDevicesRequest = NamedTuple(
+      "filters" : SearchDevicesRequestFiltersList,
+      "maxResults" : (SearchDevicesRequestMaxResultsInteger)?,
+      "nextToken" : (String)?
+    )
+
+    alias SearchDevicesRequestFiltersList = Array(SearchDevicesFilter)
+
+    alias SearchDevicesRequestMaxResultsInteger = Int32
+
+    alias SearchDevicesResponse = NamedTuple(
+      "devices" : DeviceSummaryList,
+      "nextToken" : (String)?
+    )
+
+    alias SearchQuantumTasksFilter = NamedTuple(
+      "name" : String64,
+      "operator" : SearchQuantumTasksFilterOperator,
+      "values" : SearchQuantumTasksFilterValuesList
+    )
+
+    alias SearchQuantumTasksFilterOperator = String
+
+    alias SearchQuantumTasksFilterValuesList = Array(String256)
+
+    alias SearchQuantumTasksRequest = NamedTuple(
+      "filters" : SearchQuantumTasksRequestFiltersList,
+      "maxResults" : (SearchQuantumTasksRequestMaxResultsInteger)?,
+      "nextToken" : (String)?
+    )
+
+    alias SearchQuantumTasksRequestFiltersList = Array(SearchQuantumTasksFilter)
+
+    alias SearchQuantumTasksRequestMaxResultsInteger = Int32
+
+    alias SearchQuantumTasksResponse = NamedTuple(
+      "nextToken" : (String)?,
+      "quantumTasks" : QuantumTaskSummaryList
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias String = String
+
+    alias String256 = String
+
+    alias String64 = String
+
+    alias SyntheticTimestamp_date_time = String | UInt64 | Time
+
+    alias TagKeys = Array(String)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tags" : TagsMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagsMap = Hash(String,String)
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : (String)?
+    )
   end
 end

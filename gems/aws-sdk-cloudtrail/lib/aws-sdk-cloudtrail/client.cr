@@ -373,8 +373,8 @@ module Aws::CloudTrail
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -539,8 +539,8 @@ module Aws::CloudTrail
     #
     # @overload create_trail(**params)
     # @param [Hash] params ({})
-    def create_trail(params = {}, **options)
-      req = build_request(:create_trail, params)
+    def create_trail(, **options)
+      req = build_request(:create_trail, )
       req.send_request(options)
     end
 
@@ -566,8 +566,8 @@ module Aws::CloudTrail
     #
     # @overload delete_trail(**params)
     # @param [Hash] params ({})
-    def delete_trail(params = {}, **options)
-      req = build_request(:delete_trail, params)
+    def delete_trail(, **options)
+      req = build_request(:delete_trail, )
       req.send_request(options)
     end
 
@@ -640,8 +640,8 @@ module Aws::CloudTrail
     #
     # @overload describe_trails(**params)
     # @param [Hash] params ({})
-    def describe_trails(params = {}, **options)
-      req = build_request(:describe_trails, params)
+    def describe_trails(, **options)
+      req = build_request(:describe_trails, )
       req.send_request(options)
     end
 
@@ -730,8 +730,8 @@ module Aws::CloudTrail
     #
     # @overload get_event_selectors(**params)
     # @param [Hash] params ({})
-    def get_event_selectors(params = {}, **options)
-      req = build_request(:get_event_selectors, params)
+    def get_event_selectors(, **options)
+      req = build_request(:get_event_selectors, )
       req.send_request(options)
     end
 
@@ -790,8 +790,8 @@ module Aws::CloudTrail
     #
     # @overload get_insight_selectors(**params)
     # @param [Hash] params ({})
-    def get_insight_selectors(params = {}, **options)
-      req = build_request(:get_insight_selectors, params)
+    def get_insight_selectors(, **options)
+      req = build_request(:get_insight_selectors, )
       req.send_request(options)
     end
 
@@ -834,8 +834,8 @@ module Aws::CloudTrail
     #
     # @overload get_trail(**params)
     # @param [Hash] params ({})
-    def get_trail(params = {}, **options)
-      req = build_request(:get_trail, params)
+    def get_trail(, **options)
+      req = build_request(:get_trail, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::CloudTrail
     #
     # @overload get_trail_status(**params)
     # @param [Hash] params ({})
-    def get_trail_status(params = {}, **options)
-      req = build_request(:get_trail_status, params)
+    def get_trail_status(, **options)
+      req = build_request(:get_trail_status, )
       req.send_request(options)
     end
 
@@ -962,8 +962,8 @@ module Aws::CloudTrail
     #
     # @overload list_public_keys(**params)
     # @param [Hash] params ({})
-    def list_public_keys(params = {}, **options)
-      req = build_request(:list_public_keys, params)
+    def list_public_keys(, **options)
+      req = build_request(:list_public_keys, )
       req.send_request(options)
     end
 
@@ -1005,8 +1005,8 @@ module Aws::CloudTrail
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -1044,8 +1044,8 @@ module Aws::CloudTrail
     #
     # @overload list_trails(**params)
     # @param [Hash] params ({})
-    def list_trails(params = {}, **options)
-      req = build_request(:list_trails, params)
+    def list_trails(, **options)
+      req = build_request(:list_trails, )
       req.send_request(options)
     end
 
@@ -1164,8 +1164,8 @@ module Aws::CloudTrail
     #
     # @overload lookup_events(**params)
     # @param [Hash] params ({})
-    def lookup_events(params = {}, **options)
-      req = build_request(:lookup_events, params)
+    def lookup_events(, **options)
+      req = build_request(:lookup_events, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::CloudTrail
     #
     # @overload put_event_selectors(**params)
     # @param [Hash] params ({})
-    def put_event_selectors(params = {}, **options)
-      req = build_request(:put_event_selectors, params)
+    def put_event_selectors(, **options)
+      req = build_request(:put_event_selectors, )
       req.send_request(options)
     end
 
@@ -1381,8 +1381,8 @@ module Aws::CloudTrail
     #
     # @overload put_insight_selectors(**params)
     # @param [Hash] params ({})
-    def put_insight_selectors(params = {}, **options)
-      req = build_request(:put_insight_selectors, params)
+    def put_insight_selectors(, **options)
+      req = build_request(:put_insight_selectors, )
       req.send_request(options)
     end
 
@@ -1415,8 +1415,8 @@ module Aws::CloudTrail
     #
     # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, **options)
-      req = build_request(:remove_tags, params)
+    def remove_tags(, **options)
+      req = build_request(:remove_tags, )
       req.send_request(options)
     end
 
@@ -1444,8 +1444,8 @@ module Aws::CloudTrail
     #
     # @overload start_logging(**params)
     # @param [Hash] params ({})
-    def start_logging(params = {}, **options)
-      req = build_request(:start_logging, params)
+    def start_logging(, **options)
+      req = build_request(:start_logging, )
       req.send_request(options)
     end
 
@@ -1477,8 +1477,8 @@ module Aws::CloudTrail
     #
     # @overload stop_logging(**params)
     # @param [Hash] params ({})
-    def stop_logging(params = {}, **options)
-      req = build_request(:stop_logging, params)
+    def stop_logging(, **options)
+      req = build_request(:stop_logging, )
       req.send_request(options)
     end
 
@@ -1652,8 +1652,8 @@ module Aws::CloudTrail
     #
     # @overload update_trail(**params)
     # @param [Hash] params ({})
-    def update_trail(params = {}, **options)
-      req = build_request(:update_trail, params)
+    def update_trail(, **options)
+      req = build_request(:update_trail, )
       req.send_request(options)
     end
 

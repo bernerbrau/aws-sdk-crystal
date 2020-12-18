@@ -388,8 +388,8 @@ module Aws::ManagedBlockchain
     #
     # @overload create_member(**params)
     # @param [Hash] params ({})
-    def create_member(params = {}, **options)
-      req = build_request(:create_member, params)
+    def create_member(, **options)
+      req = build_request(:create_member, )
       req.send_request(options)
     end
 
@@ -483,8 +483,8 @@ module Aws::ManagedBlockchain
     #
     # @overload create_network(**params)
     # @param [Hash] params ({})
-    def create_network(params = {}, **options)
-      req = build_request(:create_network, params)
+    def create_network(, **options)
+      req = build_request(:create_network, )
       req.send_request(options)
     end
 
@@ -548,8 +548,8 @@ module Aws::ManagedBlockchain
     #
     # @overload create_node(**params)
     # @param [Hash] params ({})
-    def create_node(params = {}, **options)
-      req = build_request(:create_node, params)
+    def create_node(, **options)
+      req = build_request(:create_node, )
       req.send_request(options)
     end
 
@@ -618,8 +618,8 @@ module Aws::ManagedBlockchain
     #
     # @overload create_proposal(**params)
     # @param [Hash] params ({})
-    def create_proposal(params = {}, **options)
-      req = build_request(:create_proposal, params)
+    def create_proposal(, **options)
+      req = build_request(:create_proposal, )
       req.send_request(options)
     end
 
@@ -651,8 +651,8 @@ module Aws::ManagedBlockchain
     #
     # @overload delete_member(**params)
     # @param [Hash] params ({})
-    def delete_member(params = {}, **options)
-      req = build_request(:delete_member, params)
+    def delete_member(, **options)
+      req = build_request(:delete_member, )
       req.send_request(options)
     end
 
@@ -682,8 +682,8 @@ module Aws::ManagedBlockchain
     #
     # @overload delete_node(**params)
     # @param [Hash] params ({})
-    def delete_node(params = {}, **options)
-      req = build_request(:delete_node, params)
+    def delete_node(, **options)
+      req = build_request(:delete_node, )
       req.send_request(options)
     end
 
@@ -722,8 +722,8 @@ module Aws::ManagedBlockchain
     #
     # @overload get_member(**params)
     # @param [Hash] params ({})
-    def get_member(params = {}, **options)
-      req = build_request(:get_member, params)
+    def get_member(, **options)
+      req = build_request(:get_member, )
       req.send_request(options)
     end
 
@@ -762,8 +762,8 @@ module Aws::ManagedBlockchain
     #
     # @overload get_network(**params)
     # @param [Hash] params ({})
-    def get_network(params = {}, **options)
-      req = build_request(:get_network, params)
+    def get_network(, **options)
+      req = build_request(:get_network, )
       req.send_request(options)
     end
 
@@ -809,8 +809,8 @@ module Aws::ManagedBlockchain
     #
     # @overload get_node(**params)
     # @param [Hash] params ({})
-    def get_node(params = {}, **options)
-      req = build_request(:get_node, params)
+    def get_node(, **options)
+      req = build_request(:get_node, )
       req.send_request(options)
     end
 
@@ -855,8 +855,8 @@ module Aws::ManagedBlockchain
     #
     # @overload get_proposal(**params)
     # @param [Hash] params ({})
-    def get_proposal(params = {}, **options)
-      req = build_request(:get_proposal, params)
+    def get_proposal(, **options)
+      req = build_request(:get_proposal, )
       req.send_request(options)
     end
 
@@ -903,8 +903,8 @@ module Aws::ManagedBlockchain
     #
     # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, **options)
-      req = build_request(:list_invitations, params)
+    def list_invitations(, **options)
+      req = build_request(:list_invitations, )
       req.send_request(options)
     end
 
@@ -966,8 +966,8 @@ module Aws::ManagedBlockchain
     #
     # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, **options)
-      req = build_request(:list_members, params)
+    def list_members(, **options)
+      req = build_request(:list_members, )
       req.send_request(options)
     end
 
@@ -1025,8 +1025,8 @@ module Aws::ManagedBlockchain
     #
     # @overload list_networks(**params)
     # @param [Hash] params ({})
-    def list_networks(params = {}, **options)
-      req = build_request(:list_networks, params)
+    def list_networks(, **options)
+      req = build_request(:list_networks, )
       req.send_request(options)
     end
 
@@ -1080,8 +1080,8 @@ module Aws::ManagedBlockchain
     #
     # @overload list_nodes(**params)
     # @param [Hash] params ({})
-    def list_nodes(params = {}, **options)
-      req = build_request(:list_nodes, params)
+    def list_nodes(, **options)
+      req = build_request(:list_nodes, )
       req.send_request(options)
     end
 
@@ -1130,8 +1130,8 @@ module Aws::ManagedBlockchain
     #
     # @overload list_proposal_votes(**params)
     # @param [Hash] params ({})
-    def list_proposal_votes(params = {}, **options)
-      req = build_request(:list_proposal_votes, params)
+    def list_proposal_votes(, **options)
+      req = build_request(:list_proposal_votes, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::ManagedBlockchain
     #
     # @overload list_proposals(**params)
     # @param [Hash] params ({})
-    def list_proposals(params = {}, **options)
-      req = build_request(:list_proposals, params)
+    def list_proposals(, **options)
+      req = build_request(:list_proposals, )
       req.send_request(options)
     end
 
@@ -1202,8 +1202,8 @@ module Aws::ManagedBlockchain
     #
     # @overload reject_invitation(**params)
     # @param [Hash] params ({})
-    def reject_invitation(params = {}, **options)
-      req = build_request(:reject_invitation, params)
+    def reject_invitation(, **options)
+      req = build_request(:reject_invitation, )
       req.send_request(options)
     end
 
@@ -1241,8 +1241,8 @@ module Aws::ManagedBlockchain
     #
     # @overload update_member(**params)
     # @param [Hash] params ({})
-    def update_member(params = {}, **options)
-      req = build_request(:update_member, params)
+    def update_member(, **options)
+      req = build_request(:update_member, )
       req.send_request(options)
     end
 
@@ -1289,8 +1289,8 @@ module Aws::ManagedBlockchain
     #
     # @overload update_node(**params)
     # @param [Hash] params ({})
-    def update_node(params = {}, **options)
-      req = build_request(:update_node, params)
+    def update_node(, **options)
+      req = build_request(:update_node, )
       req.send_request(options)
     end
 
@@ -1325,8 +1325,8 @@ module Aws::ManagedBlockchain
     #
     # @overload vote_on_proposal(**params)
     # @param [Hash] params ({})
-    def vote_on_proposal(params = {}, **options)
-      req = build_request(:vote_on_proposal, params)
+    def vote_on_proposal(, **options)
+      req = build_request(:vote_on_proposal, )
       req.send_request(options)
     end
 

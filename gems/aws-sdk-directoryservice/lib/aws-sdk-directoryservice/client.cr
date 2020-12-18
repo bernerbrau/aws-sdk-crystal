@@ -370,8 +370,8 @@ module Aws::DirectoryService
     #
     # @overload accept_shared_directory(**params)
     # @param [Hash] params ({})
-    def accept_shared_directory(params = {}, **options)
-      req = build_request(:accept_shared_directory, params)
+    def accept_shared_directory(, **options)
+      req = build_request(:accept_shared_directory, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::DirectoryService
     #
     # @overload add_ip_routes(**params)
     # @param [Hash] params ({})
-    def add_ip_routes(params = {}, **options)
-      req = build_request(:add_ip_routes, params)
+    def add_ip_routes(, **options)
+      req = build_request(:add_ip_routes, )
       req.send_request(options)
     end
 
@@ -510,8 +510,8 @@ module Aws::DirectoryService
     #
     # @overload add_region(**params)
     # @param [Hash] params ({})
-    def add_region(params = {}, **options)
-      req = build_request(:add_region, params)
+    def add_region(, **options)
+      req = build_request(:add_region, )
       req.send_request(options)
     end
 
@@ -543,8 +543,8 @@ module Aws::DirectoryService
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -574,8 +574,8 @@ module Aws::DirectoryService
     #
     # @overload cancel_schema_extension(**params)
     # @param [Hash] params ({})
-    def cancel_schema_extension(params = {}, **options)
-      req = build_request(:cancel_schema_extension, params)
+    def cancel_schema_extension(, **options)
+      req = build_request(:cancel_schema_extension, )
       req.send_request(options)
     end
 
@@ -648,8 +648,8 @@ module Aws::DirectoryService
     #
     # @overload connect_directory(**params)
     # @param [Hash] params ({})
-    def connect_directory(params = {}, **options)
-      req = build_request(:connect_directory, params)
+    def connect_directory(, **options)
+      req = build_request(:connect_directory, )
       req.send_request(options)
     end
 
@@ -691,8 +691,8 @@ module Aws::DirectoryService
     #
     # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, **options)
-      req = build_request(:create_alias, params)
+    def create_alias(, **options)
+      req = build_request(:create_alias, )
       req.send_request(options)
     end
 
@@ -750,8 +750,8 @@ module Aws::DirectoryService
     #
     # @overload create_computer(**params)
     # @param [Hash] params ({})
-    def create_computer(params = {}, **options)
-      req = build_request(:create_computer, params)
+    def create_computer(, **options)
+      req = build_request(:create_computer, )
       req.send_request(options)
     end
 
@@ -786,8 +786,8 @@ module Aws::DirectoryService
     #
     # @overload create_conditional_forwarder(**params)
     # @param [Hash] params ({})
-    def create_conditional_forwarder(params = {}, **options)
-      req = build_request(:create_conditional_forwarder, params)
+    def create_conditional_forwarder(, **options)
+      req = build_request(:create_conditional_forwarder, )
       req.send_request(options)
     end
 
@@ -895,8 +895,8 @@ module Aws::DirectoryService
     #
     # @overload create_directory(**params)
     # @param [Hash] params ({})
-    def create_directory(params = {}, **options)
-      req = build_request(:create_directory, params)
+    def create_directory(, **options)
+      req = build_request(:create_directory, )
       req.send_request(options)
     end
 
@@ -925,8 +925,8 @@ module Aws::DirectoryService
     #
     # @overload create_log_subscription(**params)
     # @param [Hash] params ({})
-    def create_log_subscription(params = {}, **options)
-      req = build_request(:create_log_subscription, params)
+    def create_log_subscription(, **options)
+      req = build_request(:create_log_subscription, )
       req.send_request(options)
     end
 
@@ -1009,8 +1009,8 @@ module Aws::DirectoryService
     #
     # @overload create_microsoft_ad(**params)
     # @param [Hash] params ({})
-    def create_microsoft_ad(params = {}, **options)
-      req = build_request(:create_microsoft_ad, params)
+    def create_microsoft_ad(, **options)
+      req = build_request(:create_microsoft_ad, )
       req.send_request(options)
     end
 
@@ -1046,8 +1046,8 @@ module Aws::DirectoryService
     #
     # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, **options)
-      req = build_request(:create_snapshot, params)
+    def create_snapshot(, **options)
+      req = build_request(:create_snapshot, )
       req.send_request(options)
     end
 
@@ -1112,8 +1112,8 @@ module Aws::DirectoryService
     #
     # @overload create_trust(**params)
     # @param [Hash] params ({})
-    def create_trust(params = {}, **options)
-      req = build_request(:create_trust, params)
+    def create_trust(, **options)
+      req = build_request(:create_trust, )
       req.send_request(options)
     end
 
@@ -1140,8 +1140,8 @@ module Aws::DirectoryService
     #
     # @overload delete_conditional_forwarder(**params)
     # @param [Hash] params ({})
-    def delete_conditional_forwarder(params = {}, **options)
-      req = build_request(:delete_conditional_forwarder, params)
+    def delete_conditional_forwarder(, **options)
+      req = build_request(:delete_conditional_forwarder, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::DirectoryService
     #
     # @overload delete_directory(**params)
     # @param [Hash] params ({})
-    def delete_directory(params = {}, **options)
-      req = build_request(:delete_directory, params)
+    def delete_directory(, **options)
+      req = build_request(:delete_directory, )
       req.send_request(options)
     end
 
@@ -1200,8 +1200,8 @@ module Aws::DirectoryService
     #
     # @overload delete_log_subscription(**params)
     # @param [Hash] params ({})
-    def delete_log_subscription(params = {}, **options)
-      req = build_request(:delete_log_subscription, params)
+    def delete_log_subscription(, **options)
+      req = build_request(:delete_log_subscription, )
       req.send_request(options)
     end
 
@@ -1228,8 +1228,8 @@ module Aws::DirectoryService
     #
     # @overload delete_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_snapshot(params = {}, **options)
-      req = build_request(:delete_snapshot, params)
+    def delete_snapshot(, **options)
+      req = build_request(:delete_snapshot, )
       req.send_request(options)
     end
 
@@ -1261,8 +1261,8 @@ module Aws::DirectoryService
     #
     # @overload delete_trust(**params)
     # @param [Hash] params ({})
-    def delete_trust(params = {}, **options)
-      req = build_request(:delete_trust, params)
+    def delete_trust(, **options)
+      req = build_request(:delete_trust, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::DirectoryService
     #
     # @overload deregister_certificate(**params)
     # @param [Hash] params ({})
-    def deregister_certificate(params = {}, **options)
-      req = build_request(:deregister_certificate, params)
+    def deregister_certificate(, **options)
+      req = build_request(:deregister_certificate, )
       req.send_request(options)
     end
 
@@ -1317,8 +1317,8 @@ module Aws::DirectoryService
     #
     # @overload deregister_event_topic(**params)
     # @param [Hash] params ({})
-    def deregister_event_topic(params = {}, **options)
-      req = build_request(:deregister_event_topic, params)
+    def deregister_event_topic(, **options)
+      req = build_request(:deregister_event_topic, )
       req.send_request(options)
     end
 
@@ -1357,8 +1357,8 @@ module Aws::DirectoryService
     #
     # @overload describe_certificate(**params)
     # @param [Hash] params ({})
-    def describe_certificate(params = {}, **options)
-      req = build_request(:describe_certificate, params)
+    def describe_certificate(, **options)
+      req = build_request(:describe_certificate, )
       req.send_request(options)
     end
 
@@ -1400,8 +1400,8 @@ module Aws::DirectoryService
     #
     # @overload describe_conditional_forwarders(**params)
     # @param [Hash] params ({})
-    def describe_conditional_forwarders(params = {}, **options)
-      req = build_request(:describe_conditional_forwarders, params)
+    def describe_conditional_forwarders(, **options)
+      req = build_request(:describe_conditional_forwarders, )
       req.send_request(options)
     end
 
@@ -1526,8 +1526,8 @@ module Aws::DirectoryService
     #
     # @overload describe_directories(**params)
     # @param [Hash] params ({})
-    def describe_directories(params = {}, **options)
-      req = build_request(:describe_directories, params)
+    def describe_directories(, **options)
+      req = build_request(:describe_directories, )
       req.send_request(options)
     end
 
@@ -1583,8 +1583,8 @@ module Aws::DirectoryService
     #
     # @overload describe_domain_controllers(**params)
     # @param [Hash] params ({})
-    def describe_domain_controllers(params = {}, **options)
-      req = build_request(:describe_domain_controllers, params)
+    def describe_domain_controllers(, **options)
+      req = build_request(:describe_domain_controllers, )
       req.send_request(options)
     end
 
@@ -1630,8 +1630,8 @@ module Aws::DirectoryService
     #
     # @overload describe_event_topics(**params)
     # @param [Hash] params ({})
-    def describe_event_topics(params = {}, **options)
-      req = build_request(:describe_event_topics, params)
+    def describe_event_topics(, **options)
+      req = build_request(:describe_event_topics, )
       req.send_request(options)
     end
 
@@ -1676,8 +1676,8 @@ module Aws::DirectoryService
     #
     # @overload describe_ldaps_settings(**params)
     # @param [Hash] params ({})
-    def describe_ldaps_settings(params = {}, **options)
-      req = build_request(:describe_ldaps_settings, params)
+    def describe_ldaps_settings(, **options)
+      req = build_request(:describe_ldaps_settings, )
       req.send_request(options)
     end
 
@@ -1727,8 +1727,8 @@ module Aws::DirectoryService
     #
     # @overload describe_regions(**params)
     # @param [Hash] params ({})
-    def describe_regions(params = {}, **options)
-      req = build_request(:describe_regions, params)
+    def describe_regions(, **options)
+      req = build_request(:describe_regions, )
       req.send_request(options)
     end
 
@@ -1781,8 +1781,8 @@ module Aws::DirectoryService
     #
     # @overload describe_shared_directories(**params)
     # @param [Hash] params ({})
-    def describe_shared_directories(params = {}, **options)
-      req = build_request(:describe_shared_directories, params)
+    def describe_shared_directories(, **options)
+      req = build_request(:describe_shared_directories, )
       req.send_request(options)
     end
 
@@ -1842,8 +1842,8 @@ module Aws::DirectoryService
     #
     # @overload describe_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_snapshots(params = {}, **options)
-      req = build_request(:describe_snapshots, params)
+    def describe_snapshots(, **options)
+      req = build_request(:describe_snapshots, )
       req.send_request(options)
     end
 
@@ -1905,8 +1905,8 @@ module Aws::DirectoryService
     #
     # @overload describe_trusts(**params)
     # @param [Hash] params ({})
-    def describe_trusts(params = {}, **options)
-      req = build_request(:describe_trusts, params)
+    def describe_trusts(, **options)
+      req = build_request(:describe_trusts, )
       req.send_request(options)
     end
 
@@ -1933,8 +1933,8 @@ module Aws::DirectoryService
     #
     # @overload disable_client_authentication(**params)
     # @param [Hash] params ({})
-    def disable_client_authentication(params = {}, **options)
-      req = build_request(:disable_client_authentication, params)
+    def disable_client_authentication(, **options)
+      req = build_request(:disable_client_authentication, )
       req.send_request(options)
     end
 
@@ -1960,8 +1960,8 @@ module Aws::DirectoryService
     #
     # @overload disable_ldaps(**params)
     # @param [Hash] params ({})
-    def disable_ldaps(params = {}, **options)
-      req = build_request(:disable_ldaps, params)
+    def disable_ldaps(, **options)
+      req = build_request(:disable_ldaps, )
       req.send_request(options)
     end
 
@@ -1984,8 +1984,8 @@ module Aws::DirectoryService
     #
     # @overload disable_radius(**params)
     # @param [Hash] params ({})
-    def disable_radius(params = {}, **options)
-      req = build_request(:disable_radius, params)
+    def disable_radius(, **options)
+      req = build_request(:disable_radius, )
       req.send_request(options)
     end
 
@@ -2024,8 +2024,8 @@ module Aws::DirectoryService
     #
     # @overload disable_sso(**params)
     # @param [Hash] params ({})
-    def disable_sso(params = {}, **options)
-      req = build_request(:disable_sso, params)
+    def disable_sso(, **options)
+      req = build_request(:disable_sso, )
       req.send_request(options)
     end
 
@@ -2054,8 +2054,8 @@ module Aws::DirectoryService
     #
     # @overload enable_client_authentication(**params)
     # @param [Hash] params ({})
-    def enable_client_authentication(params = {}, **options)
-      req = build_request(:enable_client_authentication, params)
+    def enable_client_authentication(, **options)
+      req = build_request(:enable_client_authentication, )
       req.send_request(options)
     end
 
@@ -2082,8 +2082,8 @@ module Aws::DirectoryService
     #
     # @overload enable_ldaps(**params)
     # @param [Hash] params ({})
-    def enable_ldaps(params = {}, **options)
-      req = build_request(:enable_ldaps, params)
+    def enable_ldaps(, **options)
+      req = build_request(:enable_ldaps, )
       req.send_request(options)
     end
 
@@ -2120,8 +2120,8 @@ module Aws::DirectoryService
     #
     # @overload enable_radius(**params)
     # @param [Hash] params ({})
-    def enable_radius(params = {}, **options)
-      req = build_request(:enable_radius, params)
+    def enable_radius(, **options)
+      req = build_request(:enable_radius, )
       req.send_request(options)
     end
 
@@ -2162,8 +2162,8 @@ module Aws::DirectoryService
     #
     # @overload enable_sso(**params)
     # @param [Hash] params ({})
-    def enable_sso(params = {}, **options)
-      req = build_request(:enable_sso, params)
+    def enable_sso(, **options)
+      req = build_request(:enable_sso, )
       req.send_request(options)
     end
 
@@ -2189,8 +2189,8 @@ module Aws::DirectoryService
     #
     # @overload get_directory_limits(**params)
     # @param [Hash] params ({})
-    def get_directory_limits(params = {}, **options)
-      req = build_request(:get_directory_limits, params)
+    def get_directory_limits(, **options)
+      req = build_request(:get_directory_limits, )
       req.send_request(options)
     end
 
@@ -2219,8 +2219,8 @@ module Aws::DirectoryService
     #
     # @overload get_snapshot_limits(**params)
     # @param [Hash] params ({})
-    def get_snapshot_limits(params = {}, **options)
-      req = build_request(:get_snapshot_limits, params)
+    def get_snapshot_limits(, **options)
+      req = build_request(:get_snapshot_limits, )
       req.send_request(options)
     end
 
@@ -2266,8 +2266,8 @@ module Aws::DirectoryService
     #
     # @overload list_certificates(**params)
     # @param [Hash] params ({})
-    def list_certificates(params = {}, **options)
-      req = build_request(:list_certificates, params)
+    def list_certificates(, **options)
+      req = build_request(:list_certificates, )
       req.send_request(options)
     end
 
@@ -2313,8 +2313,8 @@ module Aws::DirectoryService
     #
     # @overload list_ip_routes(**params)
     # @param [Hash] params ({})
-    def list_ip_routes(params = {}, **options)
-      req = build_request(:list_ip_routes, params)
+    def list_ip_routes(, **options)
+      req = build_request(:list_ip_routes, )
       req.send_request(options)
     end
 
@@ -2358,8 +2358,8 @@ module Aws::DirectoryService
     #
     # @overload list_log_subscriptions(**params)
     # @param [Hash] params ({})
-    def list_log_subscriptions(params = {}, **options)
-      req = build_request(:list_log_subscriptions, params)
+    def list_log_subscriptions(, **options)
+      req = build_request(:list_log_subscriptions, )
       req.send_request(options)
     end
 
@@ -2405,8 +2405,8 @@ module Aws::DirectoryService
     #
     # @overload list_schema_extensions(**params)
     # @param [Hash] params ({})
-    def list_schema_extensions(params = {}, **options)
-      req = build_request(:list_schema_extensions, params)
+    def list_schema_extensions(, **options)
+      req = build_request(:list_schema_extensions, )
       req.send_request(options)
     end
 
@@ -2445,8 +2445,8 @@ module Aws::DirectoryService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2491,8 +2491,8 @@ module Aws::DirectoryService
     #
     # @overload register_certificate(**params)
     # @param [Hash] params ({})
-    def register_certificate(params = {}, **options)
-      req = build_request(:register_certificate, params)
+    def register_certificate(, **options)
+      req = build_request(:register_certificate, )
       req.send_request(options)
     end
 
@@ -2524,8 +2524,8 @@ module Aws::DirectoryService
     #
     # @overload register_event_topic(**params)
     # @param [Hash] params ({})
-    def register_event_topic(params = {}, **options)
-      req = build_request(:register_event_topic, params)
+    def register_event_topic(, **options)
+      req = build_request(:register_event_topic, )
       req.send_request(options)
     end
 
@@ -2554,8 +2554,8 @@ module Aws::DirectoryService
     #
     # @overload reject_shared_directory(**params)
     # @param [Hash] params ({})
-    def reject_shared_directory(params = {}, **options)
-      req = build_request(:reject_shared_directory, params)
+    def reject_shared_directory(, **options)
+      req = build_request(:reject_shared_directory, )
       req.send_request(options)
     end
 
@@ -2581,8 +2581,8 @@ module Aws::DirectoryService
     #
     # @overload remove_ip_routes(**params)
     # @param [Hash] params ({})
-    def remove_ip_routes(params = {}, **options)
-      req = build_request(:remove_ip_routes, params)
+    def remove_ip_routes(, **options)
+      req = build_request(:remove_ip_routes, )
       req.send_request(options)
     end
 
@@ -2606,8 +2606,8 @@ module Aws::DirectoryService
     #
     # @overload remove_region(**params)
     # @param [Hash] params ({})
-    def remove_region(params = {}, **options)
-      req = build_request(:remove_region, params)
+    def remove_region(, **options)
+      req = build_request(:remove_region, )
       req.send_request(options)
     end
 
@@ -2632,8 +2632,8 @@ module Aws::DirectoryService
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 
@@ -2683,8 +2683,8 @@ module Aws::DirectoryService
     #
     # @overload reset_user_password(**params)
     # @param [Hash] params ({})
-    def reset_user_password(params = {}, **options)
-      req = build_request(:reset_user_password, params)
+    def reset_user_password(, **options)
+      req = build_request(:reset_user_password, )
       req.send_request(options)
     end
 
@@ -2714,8 +2714,8 @@ module Aws::DirectoryService
     #
     # @overload restore_from_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_from_snapshot(params = {}, **options)
-      req = build_request(:restore_from_snapshot, params)
+    def restore_from_snapshot(, **options)
+      req = build_request(:restore_from_snapshot, )
       req.send_request(options)
     end
 
@@ -2783,8 +2783,8 @@ module Aws::DirectoryService
     #
     # @overload share_directory(**params)
     # @param [Hash] params ({})
-    def share_directory(params = {}, **options)
-      req = build_request(:share_directory, params)
+    def share_directory(, **options)
+      req = build_request(:share_directory, )
       req.send_request(options)
     end
 
@@ -2828,8 +2828,8 @@ module Aws::DirectoryService
     #
     # @overload start_schema_extension(**params)
     # @param [Hash] params ({})
-    def start_schema_extension(params = {}, **options)
-      req = build_request(:start_schema_extension, params)
+    def start_schema_extension(, **options)
+      req = build_request(:start_schema_extension, )
       req.send_request(options)
     end
 
@@ -2866,8 +2866,8 @@ module Aws::DirectoryService
     #
     # @overload unshare_directory(**params)
     # @param [Hash] params ({})
-    def unshare_directory(params = {}, **options)
-      req = build_request(:unshare_directory, params)
+    def unshare_directory(, **options)
+      req = build_request(:unshare_directory, )
       req.send_request(options)
     end
 
@@ -2900,8 +2900,8 @@ module Aws::DirectoryService
     #
     # @overload update_conditional_forwarder(**params)
     # @param [Hash] params ({})
-    def update_conditional_forwarder(params = {}, **options)
-      req = build_request(:update_conditional_forwarder, params)
+    def update_conditional_forwarder(, **options)
+      req = build_request(:update_conditional_forwarder, )
       req.send_request(options)
     end
 
@@ -2932,8 +2932,8 @@ module Aws::DirectoryService
     #
     # @overload update_number_of_domain_controllers(**params)
     # @param [Hash] params ({})
-    def update_number_of_domain_controllers(params = {}, **options)
-      req = build_request(:update_number_of_domain_controllers, params)
+    def update_number_of_domain_controllers(, **options)
+      req = build_request(:update_number_of_domain_controllers, )
       req.send_request(options)
     end
 
@@ -2970,8 +2970,8 @@ module Aws::DirectoryService
     #
     # @overload update_radius(**params)
     # @param [Hash] params ({})
-    def update_radius(params = {}, **options)
-      req = build_request(:update_radius, params)
+    def update_radius(, **options)
+      req = build_request(:update_radius, )
       req.send_request(options)
     end
 
@@ -3005,8 +3005,8 @@ module Aws::DirectoryService
     #
     # @overload update_trust(**params)
     # @param [Hash] params ({})
-    def update_trust(params = {}, **options)
-      req = build_request(:update_trust, params)
+    def update_trust(, **options)
+      req = build_request(:update_trust, )
       req.send_request(options)
     end
 
@@ -3037,8 +3037,8 @@ module Aws::DirectoryService
     #
     # @overload verify_trust(**params)
     # @param [Hash] params ({})
-    def verify_trust(params = {}, **options)
-      req = build_request(:verify_trust, params)
+    def verify_trust(, **options)
+      req = build_request(:verify_trust, )
       req.send_request(options)
     end
 

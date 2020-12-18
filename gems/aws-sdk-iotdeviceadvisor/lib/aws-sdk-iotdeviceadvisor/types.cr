@@ -1041,5 +1041,324 @@ module Aws::IoTDeviceAdvisor
       include Aws::Structure
     end
 
+    alias AmazonResourceName = String
+
+    alias CategoryName = String
+
+    alias ConfigString = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias CreateSuiteDefinitionRequest = NamedTuple(
+      "suiteDefinitionConfiguration" : (SuiteDefinitionConfiguration)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateSuiteDefinitionResponse = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionArn" : (AmazonResourceName)?,
+      "suiteDefinitionName" : (SuiteDefinitionName)?,
+      "createdAt" : (Timestamp)?
+    )
+
+    alias DeleteSuiteDefinitionRequest = NamedTuple(
+      "suiteDefinitionId" : UUID
+    )
+
+    alias DeleteSuiteDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeviceUnderTest = NamedTuple(
+      "thingArn" : (AmazonResourceName)?,
+      "certificateArn" : (AmazonResourceName)?
+    )
+
+    alias DeviceUnderTestList = Array(DeviceUnderTest)
+
+    alias ErrorReason = String
+
+    alias Failure = String
+
+    alias GetSuiteDefinitionRequest = NamedTuple(
+      "suiteDefinitionId" : UUID,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?
+    )
+
+    alias GetSuiteDefinitionResponse = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionArn" : (AmazonResourceName)?,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
+      "latestVersion" : (SuiteDefinitionVersion)?,
+      "suiteDefinitionConfiguration" : (SuiteDefinitionConfiguration)?,
+      "createdAt" : (Timestamp)?,
+      "lastModifiedAt" : (Timestamp)?,
+      "tags" : (TagMap)?
+    )
+
+    alias GetSuiteRunReportRequest = NamedTuple(
+      "suiteDefinitionId" : UUID,
+      "suiteRunId" : UUID
+    )
+
+    alias GetSuiteRunReportResponse = NamedTuple(
+      "qualificationReportDownloadUrl" : (QualificationReportDownloadUrl)?
+    )
+
+    alias GetSuiteRunRequest = NamedTuple(
+      "suiteDefinitionId" : UUID,
+      "suiteRunId" : UUID
+    )
+
+    alias GetSuiteRunResponse = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
+      "suiteRunId" : (UUID)?,
+      "suiteRunArn" : (AmazonResourceName)?,
+      "suiteRunConfiguration" : (SuiteRunConfiguration)?,
+      "testResult" : (TestResult)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "status" : (SuiteRunStatus)?,
+      "errorReason" : (ErrorReason)?,
+      "tags" : (TagMap)?
+    )
+
+    alias GroupName = String
+
+    alias GroupResult = NamedTuple(
+      "groupId" : (UUID)?,
+      "groupName" : (GroupName)?,
+      "tests" : (TestCaseRuns)?
+    )
+
+    alias GroupResultList = Array(GroupResult)
+
+    alias IntendedForQualificationBoolean = Bool
+
+    alias InternalServerException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ListSuiteDefinitionsRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListSuiteDefinitionsResponse = NamedTuple(
+      "suiteDefinitionInformationList" : (SuiteDefinitionInformationList)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListSuiteRunsRequest = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListSuiteRunsResponse = NamedTuple(
+      "suiteRunsList" : (SuiteRunsList)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias ListTestCasesRequest = NamedTuple(
+      "intendedForQualification" : (IntendedForQualificationBoolean)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListTestCasesResponse = NamedTuple(
+      "categories" : (TestCategory)?,
+      "rootGroupConfiguration" : (TestConfiguration)?,
+      "groupConfiguration" : (TestConfiguration)?,
+      "nextToken" : (Token)?
+    )
+
+    alias LogUrl = String
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias QualificationReportDownloadUrl = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias RootGroup = String
+
+    alias SelectedTestList = Array(UUID)
+
+    alias StartSuiteRunRequest = NamedTuple(
+      "suiteDefinitionId" : UUID,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
+      "suiteRunConfiguration" : (SuiteRunConfiguration)?,
+      "tags" : (TagMap)?
+    )
+
+    alias StartSuiteRunResponse = NamedTuple(
+      "suiteRunId" : (UUID)?,
+      "suiteRunArn" : (AmazonResourceName)?,
+      "createdAt" : (Timestamp)?
+    )
+
+    alias Status = String
+
+    alias String128 = String
+
+    alias String256 = String
+
+    alias SuiteDefinitionConfiguration = NamedTuple(
+      "suiteDefinitionName" : (SuiteDefinitionName)?,
+      "devices" : (DeviceUnderTestList)?,
+      "intendedForQualification" : (IntendedForQualificationBoolean)?,
+      "rootGroup" : (RootGroup)?,
+      "devicePermissionRoleArn" : (AmazonResourceName)?
+    )
+
+    alias SuiteDefinitionInformation = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionName" : (SuiteDefinitionName)?,
+      "defaultDevices" : (DeviceUnderTestList)?,
+      "intendedForQualification" : (IntendedForQualificationBoolean)?,
+      "createdAt" : (Timestamp)?
+    )
+
+    alias SuiteDefinitionInformationList = Array(SuiteDefinitionInformation)
+
+    alias SuiteDefinitionName = String
+
+    alias SuiteDefinitionVersion = String
+
+    alias SuiteRunConfiguration = NamedTuple(
+      "primaryDevice" : (DeviceUnderTest)?,
+      "secondaryDevice" : (DeviceUnderTest)?,
+      "selectedTestList" : (SelectedTestList)?
+    )
+
+    alias SuiteRunInformation = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
+      "suiteDefinitionName" : (SuiteDefinitionName)?,
+      "suiteRunId" : (UUID)?,
+      "createdAt" : (Timestamp)?,
+      "startedAt" : (Timestamp)?,
+      "endAt" : (Timestamp)?,
+      "status" : (SuiteRunStatus)?,
+      "passed" : (SuiteRunResultCount)?,
+      "failed" : (SuiteRunResultCount)?
+    )
+
+    alias SuiteRunResultCount = Int32
+
+    alias SuiteRunStatus = String
+
+    alias SuiteRunsList = Array(SuiteRunInformation)
+
+    alias TagKeyList = Array(String128)
+
+    alias TagMap = Hash(String128,String256)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TestCase = NamedTuple(
+      "name" : (TestCaseName)?,
+      "configuration" : (TestConfiguration)?,
+      "test" : (TestCaseDefinition)?
+    )
+
+    alias TestCaseCategory = NamedTuple(
+      "name" : (CategoryName)?,
+      "tests" : (TestCaseList)?
+    )
+
+    alias TestCaseDefinition = NamedTuple(
+      "id" : (TestCaseName)?,
+      "testCaseVersion" : (TestCaseVersion)?
+    )
+
+    alias TestCaseDefinitionName = String
+
+    alias TestCaseList = Array(TestCase)
+
+    alias TestCaseName = String
+
+    alias TestCaseRun = NamedTuple(
+      "testCaseRunId" : (UUID)?,
+      "testCaseDefinitionId" : (UUID)?,
+      "testCaseDefinitionName" : (TestCaseDefinitionName)?,
+      "status" : (Status)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "logUrl" : (LogUrl)?,
+      "warnings" : (Warnings)?,
+      "failure" : (Failure)?
+    )
+
+    alias TestCaseRuns = Array(TestCaseRun)
+
+    alias TestCaseVersion = String
+
+    alias TestCategory = Array(TestCaseCategory)
+
+    alias TestConfiguration = Hash(ConfigString,ConfigString)
+
+    alias TestResult = NamedTuple(
+      "groups" : (GroupResultList)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias UUID = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateSuiteDefinitionRequest = NamedTuple(
+      "suiteDefinitionId" : UUID,
+      "suiteDefinitionConfiguration" : (SuiteDefinitionConfiguration)?
+    )
+
+    alias UpdateSuiteDefinitionResponse = NamedTuple(
+      "suiteDefinitionId" : (UUID)?,
+      "suiteDefinitionArn" : (AmazonResourceName)?,
+      "suiteDefinitionName" : (SuiteDefinitionName)?,
+      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
+      "createdAt" : (Timestamp)?,
+      "lastUpdatedAt" : (Timestamp)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias Warnings = String
   end
 end

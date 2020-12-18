@@ -365,8 +365,8 @@ module Aws::CodeBuild
     #
     # @overload batch_delete_builds(**params)
     # @param [Hash] params ({})
-    def batch_delete_builds(params = {}, **options)
-      req = build_request(:batch_delete_builds, params)
+    def batch_delete_builds(, **options)
+      req = build_request(:batch_delete_builds, )
       req.send_request(options)
     end
 
@@ -527,8 +527,8 @@ module Aws::CodeBuild
     #
     # @overload batch_get_build_batches(**params)
     # @param [Hash] params ({})
-    def batch_get_build_batches(params = {}, **options)
-      req = build_request(:batch_get_build_batches, params)
+    def batch_get_build_batches(, **options)
+      req = build_request(:batch_get_build_batches, )
       req.send_request(options)
     end
 
@@ -926,8 +926,8 @@ module Aws::CodeBuild
     #
     # @overload batch_get_builds(**params)
     # @param [Hash] params ({})
-    def batch_get_builds(params = {}, **options)
-      req = build_request(:batch_get_builds, params)
+    def batch_get_builds(, **options)
+      req = build_request(:batch_get_builds, )
       req.send_request(options)
     end
 
@@ -1071,8 +1071,8 @@ module Aws::CodeBuild
     #
     # @overload batch_get_projects(**params)
     # @param [Hash] params ({})
-    def batch_get_projects(params = {}, **options)
-      req = build_request(:batch_get_projects, params)
+    def batch_get_projects(, **options)
+      req = build_request(:batch_get_projects, )
       req.send_request(options)
     end
 
@@ -1118,8 +1118,8 @@ module Aws::CodeBuild
     #
     # @overload batch_get_report_groups(**params)
     # @param [Hash] params ({})
-    def batch_get_report_groups(params = {}, **options)
-      req = build_request(:batch_get_report_groups, params)
+    def batch_get_report_groups(, **options)
+      req = build_request(:batch_get_report_groups, )
       req.send_request(options)
     end
 
@@ -1174,8 +1174,8 @@ module Aws::CodeBuild
     #
     # @overload batch_get_reports(**params)
     # @param [Hash] params ({})
-    def batch_get_reports(params = {}, **options)
-      req = build_request(:batch_get_reports, params)
+    def batch_get_reports(, **options)
+      req = build_request(:batch_get_reports, )
       req.send_request(options)
     end
 
@@ -1572,8 +1572,8 @@ module Aws::CodeBuild
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -1645,8 +1645,8 @@ module Aws::CodeBuild
     #
     # @overload create_report_group(**params)
     # @param [Hash] params ({})
-    def create_report_group(params = {}, **options)
-      req = build_request(:create_report_group, params)
+    def create_report_group(, **options)
+      req = build_request(:create_report_group, )
       req.send_request(options)
     end
 
@@ -1733,8 +1733,8 @@ module Aws::CodeBuild
     #
     # @overload create_webhook(**params)
     # @param [Hash] params ({})
-    def create_webhook(params = {}, **options)
-      req = build_request(:create_webhook, params)
+    def create_webhook(, **options)
+      req = build_request(:create_webhook, )
       req.send_request(options)
     end
 
@@ -1768,8 +1768,8 @@ module Aws::CodeBuild
     #
     # @overload delete_build_batch(**params)
     # @param [Hash] params ({})
-    def delete_build_batch(params = {}, **options)
-      req = build_request(:delete_build_batch, params)
+    def delete_build_batch(, **options)
+      req = build_request(:delete_build_batch, )
       req.send_request(options)
     end
 
@@ -1791,8 +1791,8 @@ module Aws::CodeBuild
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -1813,8 +1813,8 @@ module Aws::CodeBuild
     #
     # @overload delete_report(**params)
     # @param [Hash] params ({})
-    def delete_report(params = {}, **options)
-      req = build_request(:delete_report, params)
+    def delete_report(, **options)
+      req = build_request(:delete_report, )
       req.send_request(options)
     end
 
@@ -1852,8 +1852,8 @@ module Aws::CodeBuild
     #
     # @overload delete_report_group(**params)
     # @param [Hash] params ({})
-    def delete_report_group(params = {}, **options)
-      req = build_request(:delete_report_group, params)
+    def delete_report_group(, **options)
+      req = build_request(:delete_report_group, )
       req.send_request(options)
     end
 
@@ -1874,8 +1874,8 @@ module Aws::CodeBuild
     #
     # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, **options)
-      req = build_request(:delete_resource_policy, params)
+    def delete_resource_policy(, **options)
+      req = build_request(:delete_resource_policy, )
       req.send_request(options)
     end
 
@@ -1903,8 +1903,8 @@ module Aws::CodeBuild
     #
     # @overload delete_source_credentials(**params)
     # @param [Hash] params ({})
-    def delete_source_credentials(params = {}, **options)
-      req = build_request(:delete_source_credentials, params)
+    def delete_source_credentials(, **options)
+      req = build_request(:delete_source_credentials, )
       req.send_request(options)
     end
 
@@ -1928,8 +1928,8 @@ module Aws::CodeBuild
     #
     # @overload delete_webhook(**params)
     # @param [Hash] params ({})
-    def delete_webhook(params = {}, **options)
-      req = build_request(:delete_webhook, params)
+    def delete_webhook(, **options)
+      req = build_request(:delete_webhook, )
       req.send_request(options)
     end
 
@@ -2004,8 +2004,8 @@ module Aws::CodeBuild
     #
     # @overload describe_code_coverages(**params)
     # @param [Hash] params ({})
-    def describe_code_coverages(params = {}, **options)
-      req = build_request(:describe_code_coverages, params)
+    def describe_code_coverages(, **options)
+      req = build_request(:describe_code_coverages, )
       req.send_request(options)
     end
 
@@ -2067,8 +2067,8 @@ module Aws::CodeBuild
     #
     # @overload describe_test_cases(**params)
     # @param [Hash] params ({})
-    def describe_test_cases(params = {}, **options)
-      req = build_request(:describe_test_cases, params)
+    def describe_test_cases(, **options)
+      req = build_request(:describe_test_cases, )
       req.send_request(options)
     end
 
@@ -2104,8 +2104,8 @@ module Aws::CodeBuild
     #
     # @overload get_report_group_trend(**params)
     # @param [Hash] params ({})
-    def get_report_group_trend(params = {}, **options)
-      req = build_request(:get_report_group_trend, params)
+    def get_report_group_trend(, **options)
+      req = build_request(:get_report_group_trend, )
       req.send_request(options)
     end
 
@@ -2132,8 +2132,8 @@ module Aws::CodeBuild
     #
     # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, **options)
-      req = build_request(:get_resource_policy, params)
+    def get_resource_policy(, **options)
+      req = build_request(:get_resource_policy, )
       req.send_request(options)
     end
 
@@ -2186,8 +2186,8 @@ module Aws::CodeBuild
     #
     # @overload import_source_credentials(**params)
     # @param [Hash] params ({})
-    def import_source_credentials(params = {}, **options)
-      req = build_request(:import_source_credentials, params)
+    def import_source_credentials(, **options)
+      req = build_request(:import_source_credentials, )
       req.send_request(options)
     end
 
@@ -2209,8 +2209,8 @@ module Aws::CodeBuild
     #
     # @overload invalidate_project_cache(**params)
     # @param [Hash] params ({})
-    def invalidate_project_cache(params = {}, **options)
-      req = build_request(:invalidate_project_cache, params)
+    def invalidate_project_cache(, **options)
+      req = build_request(:invalidate_project_cache, )
       req.send_request(options)
     end
 
@@ -2264,8 +2264,8 @@ module Aws::CodeBuild
     #
     # @overload list_build_batches(**params)
     # @param [Hash] params ({})
-    def list_build_batches(params = {}, **options)
-      req = build_request(:list_build_batches, params)
+    def list_build_batches(, **options)
+      req = build_request(:list_build_batches, )
       req.send_request(options)
     end
 
@@ -2323,8 +2323,8 @@ module Aws::CodeBuild
     #
     # @overload list_build_batches_for_project(**params)
     # @param [Hash] params ({})
-    def list_build_batches_for_project(params = {}, **options)
-      req = build_request(:list_build_batches_for_project, params)
+    def list_build_batches_for_project(, **options)
+      req = build_request(:list_build_batches_for_project, )
       req.send_request(options)
     end
 
@@ -2371,8 +2371,8 @@ module Aws::CodeBuild
     #
     # @overload list_builds(**params)
     # @param [Hash] params ({})
-    def list_builds(params = {}, **options)
-      req = build_request(:list_builds, params)
+    def list_builds(, **options)
+      req = build_request(:list_builds, )
       req.send_request(options)
     end
 
@@ -2423,8 +2423,8 @@ module Aws::CodeBuild
     #
     # @overload list_builds_for_project(**params)
     # @param [Hash] params ({})
-    def list_builds_for_project(params = {}, **options)
-      req = build_request(:list_builds_for_project, params)
+    def list_builds_for_project(, **options)
+      req = build_request(:list_builds_for_project, )
       req.send_request(options)
     end
 
@@ -2451,8 +2451,8 @@ module Aws::CodeBuild
     #
     # @overload list_curated_environment_images(**params)
     # @param [Hash] params ({})
-    def list_curated_environment_images(params = {}, **options)
-      req = build_request(:list_curated_environment_images, params)
+    def list_curated_environment_images(, **options)
+      req = build_request(:list_curated_environment_images, )
       req.send_request(options)
     end
 
@@ -2517,8 +2517,8 @@ module Aws::CodeBuild
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -2579,8 +2579,8 @@ module Aws::CodeBuild
     #
     # @overload list_report_groups(**params)
     # @param [Hash] params ({})
-    def list_report_groups(params = {}, **options)
-      req = build_request(:list_report_groups, params)
+    def list_report_groups(, **options)
+      req = build_request(:list_report_groups, )
       req.send_request(options)
     end
 
@@ -2641,8 +2641,8 @@ module Aws::CodeBuild
     #
     # @overload list_reports(**params)
     # @param [Hash] params ({})
-    def list_reports(params = {}, **options)
-      req = build_request(:list_reports, params)
+    def list_reports(, **options)
+      req = build_request(:list_reports, )
       req.send_request(options)
     end
 
@@ -2701,8 +2701,8 @@ module Aws::CodeBuild
     #
     # @overload list_reports_for_report_group(**params)
     # @param [Hash] params ({})
-    def list_reports_for_report_group(params = {}, **options)
-      req = build_request(:list_reports_for_report_group, params)
+    def list_reports_for_report_group(, **options)
+      req = build_request(:list_reports_for_report_group, )
       req.send_request(options)
     end
 
@@ -2766,8 +2766,8 @@ module Aws::CodeBuild
     #
     # @overload list_shared_projects(**params)
     # @param [Hash] params ({})
-    def list_shared_projects(params = {}, **options)
-      req = build_request(:list_shared_projects, params)
+    def list_shared_projects(, **options)
+      req = build_request(:list_shared_projects, )
       req.send_request(options)
     end
 
@@ -2830,8 +2830,8 @@ module Aws::CodeBuild
     #
     # @overload list_shared_report_groups(**params)
     # @param [Hash] params ({})
-    def list_shared_report_groups(params = {}, **options)
-      req = build_request(:list_shared_report_groups, params)
+    def list_shared_report_groups(, **options)
+      req = build_request(:list_shared_report_groups, )
       req.send_request(options)
     end
 
@@ -2852,8 +2852,8 @@ module Aws::CodeBuild
     #
     # @overload list_source_credentials(**params)
     # @param [Hash] params ({})
-    def list_source_credentials(params = {}, **options)
-      req = build_request(:list_source_credentials, params)
+    def list_source_credentials(, **options)
+      req = build_request(:list_source_credentials, )
       req.send_request(options)
     end
 
@@ -2893,8 +2893,8 @@ module Aws::CodeBuild
     #
     # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, **options)
-      req = build_request(:put_resource_policy, params)
+    def put_resource_policy(, **options)
+      req = build_request(:put_resource_policy, )
       req.send_request(options)
     end
 
@@ -3043,8 +3043,8 @@ module Aws::CodeBuild
     #
     # @overload retry_build(**params)
     # @param [Hash] params ({})
-    def retry_build(params = {}, **options)
-      req = build_request(:retry_build, params)
+    def retry_build(, **options)
+      req = build_request(:retry_build, )
       req.send_request(options)
     end
 
@@ -3214,8 +3214,8 @@ module Aws::CodeBuild
     #
     # @overload retry_build_batch(**params)
     # @param [Hash] params ({})
-    def retry_build_batch(params = {}, **options)
-      req = build_request(:retry_build_batch, params)
+    def retry_build_batch(, **options)
+      req = build_request(:retry_build_batch, )
       req.send_request(options)
     end
 
@@ -3679,8 +3679,8 @@ module Aws::CodeBuild
     #
     # @overload start_build(**params)
     # @param [Hash] params ({})
-    def start_build(params = {}, **options)
-      req = build_request(:start_build, params)
+    def start_build(, **options)
+      req = build_request(:start_build, )
       req.send_request(options)
     end
 
@@ -4155,8 +4155,8 @@ module Aws::CodeBuild
     #
     # @overload start_build_batch(**params)
     # @param [Hash] params ({})
-    def start_build_batch(params = {}, **options)
-      req = build_request(:start_build_batch, params)
+    def start_build_batch(, **options)
+      req = build_request(:start_build_batch, )
       req.send_request(options)
     end
 
@@ -4297,8 +4297,8 @@ module Aws::CodeBuild
     #
     # @overload stop_build(**params)
     # @param [Hash] params ({})
-    def stop_build(params = {}, **options)
-      req = build_request(:stop_build, params)
+    def stop_build(, **options)
+      req = build_request(:stop_build, )
       req.send_request(options)
     end
 
@@ -4455,8 +4455,8 @@ module Aws::CodeBuild
     #
     # @overload stop_build_batch(**params)
     # @param [Hash] params ({})
-    def stop_build_batch(params = {}, **options)
-      req = build_request(:stop_build_batch, params)
+    def stop_build_batch(, **options)
+      req = build_request(:stop_build_batch, )
       req.send_request(options)
     end
 
@@ -4858,8 +4858,8 @@ module Aws::CodeBuild
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 
@@ -4930,8 +4930,8 @@ module Aws::CodeBuild
     #
     # @overload update_report_group(**params)
     # @param [Hash] params ({})
-    def update_report_group(params = {}, **options)
-      req = build_request(:update_report_group, params)
+    def update_report_group(, **options)
+      req = build_request(:update_report_group, )
       req.send_request(options)
     end
 
@@ -5008,8 +5008,8 @@ module Aws::CodeBuild
     #
     # @overload update_webhook(**params)
     # @param [Hash] params ({})
-    def update_webhook(params = {}, **options)
-      req = build_request(:update_webhook, params)
+    def update_webhook(, **options)
+      req = build_request(:update_webhook, )
       req.send_request(options)
     end
 

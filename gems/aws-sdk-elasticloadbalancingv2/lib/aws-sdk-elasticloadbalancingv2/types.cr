@@ -4370,5 +4370,1049 @@ module Aws::ElasticLoadBalancingV2
     #
     class UnsupportedProtocolException < Aws::EmptyStructure; end
 
+    alias ALPNPolicyNotSupportedException = NamedTuple(
+      
+    )
+
+    alias Action = NamedTuple(
+      "Type" : ActionTypeEnum,
+      "TargetGroupArn" : (TargetGroupArn)?,
+      "AuthenticateOidcConfig" : (AuthenticateOidcActionConfig)?,
+      "AuthenticateCognitoConfig" : (AuthenticateCognitoActionConfig)?,
+      "Order" : (ActionOrder)?,
+      "RedirectConfig" : (RedirectActionConfig)?,
+      "FixedResponseConfig" : (FixedResponseActionConfig)?,
+      "ForwardConfig" : (ForwardActionConfig)?
+    )
+
+    alias ActionOrder = Int32
+
+    alias ActionTypeEnum = String
+
+    alias Actions = Array(Action)
+
+    alias AddListenerCertificatesInput = NamedTuple(
+      "ListenerArn" : ListenerArn,
+      "Certificates" : CertificateList
+    )
+
+    alias AddListenerCertificatesOutput = NamedTuple(
+      "Certificates" : (CertificateList)?
+    )
+
+    alias AddTagsInput = NamedTuple(
+      "ResourceArns" : ResourceArns,
+      "Tags" : TagList
+    )
+
+    alias AddTagsOutput = NamedTuple(
+      
+    )
+
+    alias AllocationId = String
+
+    alias AllocationIdNotFoundException = NamedTuple(
+      
+    )
+
+    alias AlpnPolicyName = Array(AlpnPolicyValue)
+
+    alias AlpnPolicyValue = String
+
+    alias AuthenticateCognitoActionAuthenticationRequestExtraParams = Hash(AuthenticateCognitoActionAuthenticationRequestParamName,AuthenticateCognitoActionAuthenticationRequestParamValue)
+
+    alias AuthenticateCognitoActionAuthenticationRequestParamName = String
+
+    alias AuthenticateCognitoActionAuthenticationRequestParamValue = String
+
+    alias AuthenticateCognitoActionConditionalBehaviorEnum = String
+
+    alias AuthenticateCognitoActionConfig = NamedTuple(
+      "UserPoolArn" : AuthenticateCognitoActionUserPoolArn,
+      "UserPoolClientId" : AuthenticateCognitoActionUserPoolClientId,
+      "UserPoolDomain" : AuthenticateCognitoActionUserPoolDomain,
+      "SessionCookieName" : (AuthenticateCognitoActionSessionCookieName)?,
+      "Scope" : (AuthenticateCognitoActionScope)?,
+      "SessionTimeout" : (AuthenticateCognitoActionSessionTimeout)?,
+      "AuthenticationRequestExtraParams" : (AuthenticateCognitoActionAuthenticationRequestExtraParams)?,
+      "OnUnauthenticatedRequest" : (AuthenticateCognitoActionConditionalBehaviorEnum)?
+    )
+
+    alias AuthenticateCognitoActionScope = String
+
+    alias AuthenticateCognitoActionSessionCookieName = String
+
+    alias AuthenticateCognitoActionSessionTimeout = Int64
+
+    alias AuthenticateCognitoActionUserPoolArn = String
+
+    alias AuthenticateCognitoActionUserPoolClientId = String
+
+    alias AuthenticateCognitoActionUserPoolDomain = String
+
+    alias AuthenticateOidcActionAuthenticationRequestExtraParams = Hash(AuthenticateOidcActionAuthenticationRequestParamName,AuthenticateOidcActionAuthenticationRequestParamValue)
+
+    alias AuthenticateOidcActionAuthenticationRequestParamName = String
+
+    alias AuthenticateOidcActionAuthenticationRequestParamValue = String
+
+    alias AuthenticateOidcActionAuthorizationEndpoint = String
+
+    alias AuthenticateOidcActionClientId = String
+
+    alias AuthenticateOidcActionClientSecret = String
+
+    alias AuthenticateOidcActionConditionalBehaviorEnum = String
+
+    alias AuthenticateOidcActionConfig = NamedTuple(
+      "Issuer" : AuthenticateOidcActionIssuer,
+      "AuthorizationEndpoint" : AuthenticateOidcActionAuthorizationEndpoint,
+      "TokenEndpoint" : AuthenticateOidcActionTokenEndpoint,
+      "UserInfoEndpoint" : AuthenticateOidcActionUserInfoEndpoint,
+      "ClientId" : AuthenticateOidcActionClientId,
+      "ClientSecret" : (AuthenticateOidcActionClientSecret)?,
+      "SessionCookieName" : (AuthenticateOidcActionSessionCookieName)?,
+      "Scope" : (AuthenticateOidcActionScope)?,
+      "SessionTimeout" : (AuthenticateOidcActionSessionTimeout)?,
+      "AuthenticationRequestExtraParams" : (AuthenticateOidcActionAuthenticationRequestExtraParams)?,
+      "OnUnauthenticatedRequest" : (AuthenticateOidcActionConditionalBehaviorEnum)?,
+      "UseExistingClientSecret" : (AuthenticateOidcActionUseExistingClientSecret)?
+    )
+
+    alias AuthenticateOidcActionIssuer = String
+
+    alias AuthenticateOidcActionScope = String
+
+    alias AuthenticateOidcActionSessionCookieName = String
+
+    alias AuthenticateOidcActionSessionTimeout = Int64
+
+    alias AuthenticateOidcActionTokenEndpoint = String
+
+    alias AuthenticateOidcActionUseExistingClientSecret = Bool
+
+    alias AuthenticateOidcActionUserInfoEndpoint = String
+
+    alias AvailabilityZone = NamedTuple(
+      "ZoneName" : (ZoneName)?,
+      "SubnetId" : (SubnetId)?,
+      "OutpostId" : (OutpostId)?,
+      "LoadBalancerAddresses" : (LoadBalancerAddresses)?
+    )
+
+    alias AvailabilityZoneNotSupportedException = NamedTuple(
+      
+    )
+
+    alias AvailabilityZones = Array(AvailabilityZone)
+
+    alias CanonicalHostedZoneId = String
+
+    alias Certificate = NamedTuple(
+      "CertificateArn" : (CertificateArn)?,
+      "IsDefault" : (Default)?
+    )
+
+    alias CertificateArn = String
+
+    alias CertificateList = Array(Certificate)
+
+    alias CertificateNotFoundException = NamedTuple(
+      
+    )
+
+    alias Cipher = NamedTuple(
+      "Name" : (CipherName)?,
+      "Priority" : (CipherPriority)?
+    )
+
+    alias CipherName = String
+
+    alias CipherPriority = Int32
+
+    alias Ciphers = Array(Cipher)
+
+    alias ConditionFieldName = String
+
+    alias CreateListenerInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn,
+      "Protocol" : (ProtocolEnum)?,
+      "Port" : (Port)?,
+      "SslPolicy" : (SslPolicyName)?,
+      "Certificates" : (CertificateList)?,
+      "DefaultActions" : Actions,
+      "AlpnPolicy" : (AlpnPolicyName)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateListenerOutput = NamedTuple(
+      "Listeners" : (Listeners)?
+    )
+
+    alias CreateLoadBalancerInput = NamedTuple(
+      "Name" : LoadBalancerName,
+      "Subnets" : (Subnets)?,
+      "SubnetMappings" : (SubnetMappings)?,
+      "SecurityGroups" : (SecurityGroups)?,
+      "Scheme" : (LoadBalancerSchemeEnum)?,
+      "Tags" : (TagList)?,
+      "Type" : (LoadBalancerTypeEnum)?,
+      "IpAddressType" : (IpAddressType)?,
+      "CustomerOwnedIpv4Pool" : (CustomerOwnedIpv4Pool)?
+    )
+
+    alias CreateLoadBalancerOutput = NamedTuple(
+      "LoadBalancers" : (LoadBalancers)?
+    )
+
+    alias CreateRuleInput = NamedTuple(
+      "ListenerArn" : ListenerArn,
+      "Conditions" : RuleConditionList,
+      "Priority" : RulePriority,
+      "Actions" : Actions,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateRuleOutput = NamedTuple(
+      "Rules" : (Rules)?
+    )
+
+    alias CreateTargetGroupInput = NamedTuple(
+      "Name" : TargetGroupName,
+      "Protocol" : (ProtocolEnum)?,
+      "ProtocolVersion" : (ProtocolVersion)?,
+      "Port" : (Port)?,
+      "VpcId" : (VpcId)?,
+      "HealthCheckProtocol" : (ProtocolEnum)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "HealthCheckEnabled" : (HealthCheckEnabled)?,
+      "HealthCheckPath" : (Path)?,
+      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
+      "HealthCheckTimeoutSeconds" : (HealthCheckTimeoutSeconds)?,
+      "HealthyThresholdCount" : (HealthCheckThresholdCount)?,
+      "UnhealthyThresholdCount" : (HealthCheckThresholdCount)?,
+      "Matcher" : (Matcher)?,
+      "TargetType" : (TargetTypeEnum)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateTargetGroupOutput = NamedTuple(
+      "TargetGroups" : (TargetGroups)?
+    )
+
+    alias CreatedTime = String | UInt64 | Time
+
+    alias CustomerOwnedIpv4Pool = String
+
+    alias DNSName = String
+
+    alias Default = Bool
+
+    alias DeleteListenerInput = NamedTuple(
+      "ListenerArn" : ListenerArn
+    )
+
+    alias DeleteListenerOutput = NamedTuple(
+      
+    )
+
+    alias DeleteLoadBalancerInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn
+    )
+
+    alias DeleteLoadBalancerOutput = NamedTuple(
+      
+    )
+
+    alias DeleteRuleInput = NamedTuple(
+      "RuleArn" : RuleArn
+    )
+
+    alias DeleteRuleOutput = NamedTuple(
+      
+    )
+
+    alias DeleteTargetGroupInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn
+    )
+
+    alias DeleteTargetGroupOutput = NamedTuple(
+      
+    )
+
+    alias DeregisterTargetsInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn,
+      "Targets" : TargetDescriptions
+    )
+
+    alias DeregisterTargetsOutput = NamedTuple(
+      
+    )
+
+    alias DescribeAccountLimitsInput = NamedTuple(
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeAccountLimitsOutput = NamedTuple(
+      "Limits" : (Limits)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeListenerCertificatesInput = NamedTuple(
+      "ListenerArn" : ListenerArn,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeListenerCertificatesOutput = NamedTuple(
+      "Certificates" : (CertificateList)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeListenersInput = NamedTuple(
+      "LoadBalancerArn" : (LoadBalancerArn)?,
+      "ListenerArns" : (ListenerArns)?,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeListenersOutput = NamedTuple(
+      "Listeners" : (Listeners)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeLoadBalancerAttributesInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn
+    )
+
+    alias DescribeLoadBalancerAttributesOutput = NamedTuple(
+      "Attributes" : (LoadBalancerAttributes)?
+    )
+
+    alias DescribeLoadBalancersInput = NamedTuple(
+      "LoadBalancerArns" : (LoadBalancerArns)?,
+      "Names" : (LoadBalancerNames)?,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeLoadBalancersOutput = NamedTuple(
+      "LoadBalancers" : (LoadBalancers)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeRulesInput = NamedTuple(
+      "ListenerArn" : (ListenerArn)?,
+      "RuleArns" : (RuleArns)?,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeRulesOutput = NamedTuple(
+      "Rules" : (Rules)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeSSLPoliciesInput = NamedTuple(
+      "Names" : (SslPolicyNames)?,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeSSLPoliciesOutput = NamedTuple(
+      "SslPolicies" : (SslPolicies)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeTagsInput = NamedTuple(
+      "ResourceArns" : ResourceArns
+    )
+
+    alias DescribeTagsOutput = NamedTuple(
+      "TagDescriptions" : (TagDescriptions)?
+    )
+
+    alias DescribeTargetGroupAttributesInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn
+    )
+
+    alias DescribeTargetGroupAttributesOutput = NamedTuple(
+      "Attributes" : (TargetGroupAttributes)?
+    )
+
+    alias DescribeTargetGroupsInput = NamedTuple(
+      "LoadBalancerArn" : (LoadBalancerArn)?,
+      "TargetGroupArns" : (TargetGroupArns)?,
+      "Names" : (TargetGroupNames)?,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeTargetGroupsOutput = NamedTuple(
+      "TargetGroups" : (TargetGroups)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeTargetHealthInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn,
+      "Targets" : (TargetDescriptions)?
+    )
+
+    alias DescribeTargetHealthOutput = NamedTuple(
+      "TargetHealthDescriptions" : (TargetHealthDescriptions)?
+    )
+
+    alias Description = String
+
+    alias DuplicateListenerException = NamedTuple(
+      
+    )
+
+    alias DuplicateLoadBalancerNameException = NamedTuple(
+      
+    )
+
+    alias DuplicateTagKeysException = NamedTuple(
+      
+    )
+
+    alias DuplicateTargetGroupNameException = NamedTuple(
+      
+    )
+
+    alias FixedResponseActionConfig = NamedTuple(
+      "MessageBody" : (FixedResponseActionMessage)?,
+      "StatusCode" : FixedResponseActionStatusCode,
+      "ContentType" : (FixedResponseActionContentType)?
+    )
+
+    alias FixedResponseActionContentType = String
+
+    alias FixedResponseActionMessage = String
+
+    alias FixedResponseActionStatusCode = String
+
+    alias ForwardActionConfig = NamedTuple(
+      "TargetGroups" : (TargetGroupList)?,
+      "TargetGroupStickinessConfig" : (TargetGroupStickinessConfig)?
+    )
+
+    alias GrpcCode = String
+
+    alias HealthCheckEnabled = Bool
+
+    alias HealthCheckIntervalSeconds = Int32
+
+    alias HealthCheckPort = String
+
+    alias HealthCheckThresholdCount = Int32
+
+    alias HealthCheckTimeoutSeconds = Int32
+
+    alias HealthUnavailableException = NamedTuple(
+      
+    )
+
+    alias HostHeaderConditionConfig = NamedTuple(
+      "Values" : (ListOfString)?
+    )
+
+    alias HttpCode = String
+
+    alias HttpHeaderConditionConfig = NamedTuple(
+      "HttpHeaderName" : (HttpHeaderConditionName)?,
+      "Values" : (ListOfString)?
+    )
+
+    alias HttpHeaderConditionName = String
+
+    alias HttpRequestMethodConditionConfig = NamedTuple(
+      "Values" : (ListOfString)?
+    )
+
+    alias IPv6Address = String
+
+    alias IncompatibleProtocolsException = NamedTuple(
+      
+    )
+
+    alias InvalidConfigurationRequestException = NamedTuple(
+      
+    )
+
+    alias InvalidLoadBalancerActionException = NamedTuple(
+      
+    )
+
+    alias InvalidSchemeException = NamedTuple(
+      
+    )
+
+    alias InvalidSecurityGroupException = NamedTuple(
+      
+    )
+
+    alias InvalidSubnetException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetException = NamedTuple(
+      
+    )
+
+    alias IpAddress = String
+
+    alias IpAddressType = String
+
+    alias IsDefault = Bool
+
+    alias Limit = NamedTuple(
+      "Name" : (Name)?,
+      "Max" : (Max)?
+    )
+
+    alias Limits = Array(Limit)
+
+    alias ListOfString = Array(StringValue)
+
+    alias Listener = NamedTuple(
+      "ListenerArn" : (ListenerArn)?,
+      "LoadBalancerArn" : (LoadBalancerArn)?,
+      "Port" : (Port)?,
+      "Protocol" : (ProtocolEnum)?,
+      "Certificates" : (CertificateList)?,
+      "SslPolicy" : (SslPolicyName)?,
+      "DefaultActions" : (Actions)?,
+      "AlpnPolicy" : (AlpnPolicyName)?
+    )
+
+    alias ListenerArn = String
+
+    alias ListenerArns = Array(ListenerArn)
+
+    alias ListenerNotFoundException = NamedTuple(
+      
+    )
+
+    alias Listeners = Array(Listener)
+
+    alias LoadBalancer = NamedTuple(
+      "LoadBalancerArn" : (LoadBalancerArn)?,
+      "DNSName" : (DNSName)?,
+      "CanonicalHostedZoneId" : (CanonicalHostedZoneId)?,
+      "CreatedTime" : (CreatedTime)?,
+      "LoadBalancerName" : (LoadBalancerName)?,
+      "Scheme" : (LoadBalancerSchemeEnum)?,
+      "VpcId" : (VpcId)?,
+      "State" : (LoadBalancerState)?,
+      "Type" : (LoadBalancerTypeEnum)?,
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "SecurityGroups" : (SecurityGroups)?,
+      "IpAddressType" : (IpAddressType)?,
+      "CustomerOwnedIpv4Pool" : (CustomerOwnedIpv4Pool)?
+    )
+
+    alias LoadBalancerAddress = NamedTuple(
+      "IpAddress" : (IpAddress)?,
+      "AllocationId" : (AllocationId)?,
+      "PrivateIPv4Address" : (PrivateIPv4Address)?,
+      "IPv6Address" : (IPv6Address)?
+    )
+
+    alias LoadBalancerAddresses = Array(LoadBalancerAddress)
+
+    alias LoadBalancerArn = String
+
+    alias LoadBalancerArns = Array(LoadBalancerArn)
+
+    alias LoadBalancerAttribute = NamedTuple(
+      "Key" : (LoadBalancerAttributeKey)?,
+      "Value" : (LoadBalancerAttributeValue)?
+    )
+
+    alias LoadBalancerAttributeKey = String
+
+    alias LoadBalancerAttributeValue = String
+
+    alias LoadBalancerAttributes = Array(LoadBalancerAttribute)
+
+    alias LoadBalancerName = String
+
+    alias LoadBalancerNames = Array(LoadBalancerName)
+
+    alias LoadBalancerNotFoundException = NamedTuple(
+      
+    )
+
+    alias LoadBalancerSchemeEnum = String
+
+    alias LoadBalancerState = NamedTuple(
+      "Code" : (LoadBalancerStateEnum)?,
+      "Reason" : (StateReason)?
+    )
+
+    alias LoadBalancerStateEnum = String
+
+    alias LoadBalancerTypeEnum = String
+
+    alias LoadBalancers = Array(LoadBalancer)
+
+    alias Marker = String
+
+    alias Matcher = NamedTuple(
+      "HttpCode" : (HttpCode)?,
+      "GrpcCode" : (GrpcCode)?
+    )
+
+    alias Max = String
+
+    alias ModifyListenerInput = NamedTuple(
+      "ListenerArn" : ListenerArn,
+      "Port" : (Port)?,
+      "Protocol" : (ProtocolEnum)?,
+      "SslPolicy" : (SslPolicyName)?,
+      "Certificates" : (CertificateList)?,
+      "DefaultActions" : (Actions)?,
+      "AlpnPolicy" : (AlpnPolicyName)?
+    )
+
+    alias ModifyListenerOutput = NamedTuple(
+      "Listeners" : (Listeners)?
+    )
+
+    alias ModifyLoadBalancerAttributesInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn,
+      "Attributes" : LoadBalancerAttributes
+    )
+
+    alias ModifyLoadBalancerAttributesOutput = NamedTuple(
+      "Attributes" : (LoadBalancerAttributes)?
+    )
+
+    alias ModifyRuleInput = NamedTuple(
+      "RuleArn" : RuleArn,
+      "Conditions" : (RuleConditionList)?,
+      "Actions" : (Actions)?
+    )
+
+    alias ModifyRuleOutput = NamedTuple(
+      "Rules" : (Rules)?
+    )
+
+    alias ModifyTargetGroupAttributesInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn,
+      "Attributes" : TargetGroupAttributes
+    )
+
+    alias ModifyTargetGroupAttributesOutput = NamedTuple(
+      "Attributes" : (TargetGroupAttributes)?
+    )
+
+    alias ModifyTargetGroupInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn,
+      "HealthCheckProtocol" : (ProtocolEnum)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "HealthCheckPath" : (Path)?,
+      "HealthCheckEnabled" : (HealthCheckEnabled)?,
+      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
+      "HealthCheckTimeoutSeconds" : (HealthCheckTimeoutSeconds)?,
+      "HealthyThresholdCount" : (HealthCheckThresholdCount)?,
+      "UnhealthyThresholdCount" : (HealthCheckThresholdCount)?,
+      "Matcher" : (Matcher)?
+    )
+
+    alias ModifyTargetGroupOutput = NamedTuple(
+      "TargetGroups" : (TargetGroups)?
+    )
+
+    alias Name = String
+
+    alias OperationNotPermittedException = NamedTuple(
+      
+    )
+
+    alias OutpostId = String
+
+    alias PageSize = Int32
+
+    alias Path = String
+
+    alias PathPatternConditionConfig = NamedTuple(
+      "Values" : (ListOfString)?
+    )
+
+    alias Port = Int32
+
+    alias PriorityInUseException = NamedTuple(
+      
+    )
+
+    alias PrivateIPv4Address = String
+
+    alias ProtocolEnum = String
+
+    alias ProtocolVersion = String
+
+    alias QueryStringConditionConfig = NamedTuple(
+      "Values" : (QueryStringKeyValuePairList)?
+    )
+
+    alias QueryStringKeyValuePair = NamedTuple(
+      "Key" : (StringValue)?,
+      "Value" : (StringValue)?
+    )
+
+    alias QueryStringKeyValuePairList = Array(QueryStringKeyValuePair)
+
+    alias RedirectActionConfig = NamedTuple(
+      "Protocol" : (RedirectActionProtocol)?,
+      "Port" : (RedirectActionPort)?,
+      "Host" : (RedirectActionHost)?,
+      "Path" : (RedirectActionPath)?,
+      "Query" : (RedirectActionQuery)?,
+      "StatusCode" : RedirectActionStatusCodeEnum
+    )
+
+    alias RedirectActionHost = String
+
+    alias RedirectActionPath = String
+
+    alias RedirectActionPort = String
+
+    alias RedirectActionProtocol = String
+
+    alias RedirectActionQuery = String
+
+    alias RedirectActionStatusCodeEnum = String
+
+    alias RegisterTargetsInput = NamedTuple(
+      "TargetGroupArn" : TargetGroupArn,
+      "Targets" : TargetDescriptions
+    )
+
+    alias RegisterTargetsOutput = NamedTuple(
+      
+    )
+
+    alias RemoveListenerCertificatesInput = NamedTuple(
+      "ListenerArn" : ListenerArn,
+      "Certificates" : CertificateList
+    )
+
+    alias RemoveListenerCertificatesOutput = NamedTuple(
+      
+    )
+
+    alias RemoveTagsInput = NamedTuple(
+      "ResourceArns" : ResourceArns,
+      "TagKeys" : TagKeys
+    )
+
+    alias RemoveTagsOutput = NamedTuple(
+      
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceArns = Array(ResourceArn)
+
+    alias ResourceInUseException = NamedTuple(
+      
+    )
+
+    alias Rule = NamedTuple(
+      "RuleArn" : (RuleArn)?,
+      "Priority" : (String)?,
+      "Conditions" : (RuleConditionList)?,
+      "Actions" : (Actions)?,
+      "IsDefault" : (IsDefault)?
+    )
+
+    alias RuleArn = String
+
+    alias RuleArns = Array(RuleArn)
+
+    alias RuleCondition = NamedTuple(
+      "Field" : (ConditionFieldName)?,
+      "Values" : (ListOfString)?,
+      "HostHeaderConfig" : (HostHeaderConditionConfig)?,
+      "PathPatternConfig" : (PathPatternConditionConfig)?,
+      "HttpHeaderConfig" : (HttpHeaderConditionConfig)?,
+      "QueryStringConfig" : (QueryStringConditionConfig)?,
+      "HttpRequestMethodConfig" : (HttpRequestMethodConditionConfig)?,
+      "SourceIpConfig" : (SourceIpConditionConfig)?
+    )
+
+    alias RuleConditionList = Array(RuleCondition)
+
+    alias RuleNotFoundException = NamedTuple(
+      
+    )
+
+    alias RulePriority = Int32
+
+    alias RulePriorityList = Array(RulePriorityPair)
+
+    alias RulePriorityPair = NamedTuple(
+      "RuleArn" : (RuleArn)?,
+      "Priority" : (RulePriority)?
+    )
+
+    alias Rules = Array(Rule)
+
+    alias SSLPolicyNotFoundException = NamedTuple(
+      
+    )
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroups = Array(SecurityGroupId)
+
+    alias SetIpAddressTypeInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn,
+      "IpAddressType" : IpAddressType
+    )
+
+    alias SetIpAddressTypeOutput = NamedTuple(
+      "IpAddressType" : (IpAddressType)?
+    )
+
+    alias SetRulePrioritiesInput = NamedTuple(
+      "RulePriorities" : RulePriorityList
+    )
+
+    alias SetRulePrioritiesOutput = NamedTuple(
+      "Rules" : (Rules)?
+    )
+
+    alias SetSecurityGroupsInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn,
+      "SecurityGroups" : SecurityGroups
+    )
+
+    alias SetSecurityGroupsOutput = NamedTuple(
+      "SecurityGroupIds" : (SecurityGroups)?
+    )
+
+    alias SetSubnetsInput = NamedTuple(
+      "LoadBalancerArn" : LoadBalancerArn,
+      "Subnets" : (Subnets)?,
+      "SubnetMappings" : (SubnetMappings)?,
+      "IpAddressType" : (IpAddressType)?
+    )
+
+    alias SetSubnetsOutput = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "IpAddressType" : (IpAddressType)?
+    )
+
+    alias SourceIpConditionConfig = NamedTuple(
+      "Values" : (ListOfString)?
+    )
+
+    alias SslPolicies = Array(SslPolicy)
+
+    alias SslPolicy = NamedTuple(
+      "SslProtocols" : (SslProtocols)?,
+      "Ciphers" : (Ciphers)?,
+      "Name" : (SslPolicyName)?
+    )
+
+    alias SslPolicyName = String
+
+    alias SslPolicyNames = Array(SslPolicyName)
+
+    alias SslProtocol = String
+
+    alias SslProtocols = Array(SslProtocol)
+
+    alias StateReason = String
+
+    alias String = String
+
+    alias StringValue = String
+
+    alias SubnetId = String
+
+    alias SubnetMapping = NamedTuple(
+      "SubnetId" : (SubnetId)?,
+      "AllocationId" : (AllocationId)?,
+      "PrivateIPv4Address" : (PrivateIPv4Address)?,
+      "IPv6Address" : (IPv6Address)?
+    )
+
+    alias SubnetMappings = Array(SubnetMapping)
+
+    alias SubnetNotFoundException = NamedTuple(
+      
+    )
+
+    alias Subnets = Array(SubnetId)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagDescription = NamedTuple(
+      "ResourceArn" : (ResourceArn)?,
+      "Tags" : (TagList)?
+    )
+
+    alias TagDescriptions = Array(TagDescription)
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias TargetDescription = NamedTuple(
+      "Id" : TargetId,
+      "Port" : (Port)?,
+      "AvailabilityZone" : (ZoneName)?
+    )
+
+    alias TargetDescriptions = Array(TargetDescription)
+
+    alias TargetGroup = NamedTuple(
+      "TargetGroupArn" : (TargetGroupArn)?,
+      "TargetGroupName" : (TargetGroupName)?,
+      "Protocol" : (ProtocolEnum)?,
+      "Port" : (Port)?,
+      "VpcId" : (VpcId)?,
+      "HealthCheckProtocol" : (ProtocolEnum)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "HealthCheckEnabled" : (HealthCheckEnabled)?,
+      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
+      "HealthCheckTimeoutSeconds" : (HealthCheckTimeoutSeconds)?,
+      "HealthyThresholdCount" : (HealthCheckThresholdCount)?,
+      "UnhealthyThresholdCount" : (HealthCheckThresholdCount)?,
+      "HealthCheckPath" : (Path)?,
+      "Matcher" : (Matcher)?,
+      "LoadBalancerArns" : (LoadBalancerArns)?,
+      "TargetType" : (TargetTypeEnum)?,
+      "ProtocolVersion" : (ProtocolVersion)?
+    )
+
+    alias TargetGroupArn = String
+
+    alias TargetGroupArns = Array(TargetGroupArn)
+
+    alias TargetGroupAssociationLimitException = NamedTuple(
+      
+    )
+
+    alias TargetGroupAttribute = NamedTuple(
+      "Key" : (TargetGroupAttributeKey)?,
+      "Value" : (TargetGroupAttributeValue)?
+    )
+
+    alias TargetGroupAttributeKey = String
+
+    alias TargetGroupAttributeValue = String
+
+    alias TargetGroupAttributes = Array(TargetGroupAttribute)
+
+    alias TargetGroupList = Array(TargetGroupTuple)
+
+    alias TargetGroupName = String
+
+    alias TargetGroupNames = Array(TargetGroupName)
+
+    alias TargetGroupNotFoundException = NamedTuple(
+      
+    )
+
+    alias TargetGroupStickinessConfig = NamedTuple(
+      "Enabled" : (TargetGroupStickinessEnabled)?,
+      "DurationSeconds" : (TargetGroupStickinessDurationSeconds)?
+    )
+
+    alias TargetGroupStickinessDurationSeconds = Int32
+
+    alias TargetGroupStickinessEnabled = Bool
+
+    alias TargetGroupTuple = NamedTuple(
+      "TargetGroupArn" : (TargetGroupArn)?,
+      "Weight" : (TargetGroupWeight)?
+    )
+
+    alias TargetGroupWeight = Int32
+
+    alias TargetGroups = Array(TargetGroup)
+
+    alias TargetHealth = NamedTuple(
+      "State" : (TargetHealthStateEnum)?,
+      "Reason" : (TargetHealthReasonEnum)?,
+      "Description" : (Description)?
+    )
+
+    alias TargetHealthDescription = NamedTuple(
+      "Target" : (TargetDescription)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "TargetHealth" : (TargetHealth)?
+    )
+
+    alias TargetHealthDescriptions = Array(TargetHealthDescription)
+
+    alias TargetHealthReasonEnum = String
+
+    alias TargetHealthStateEnum = String
+
+    alias TargetId = String
+
+    alias TargetTypeEnum = String
+
+    alias TooManyActionsException = NamedTuple(
+      
+    )
+
+    alias TooManyCertificatesException = NamedTuple(
+      
+    )
+
+    alias TooManyListenersException = NamedTuple(
+      
+    )
+
+    alias TooManyLoadBalancersException = NamedTuple(
+      
+    )
+
+    alias TooManyRegistrationsForTargetIdException = NamedTuple(
+      
+    )
+
+    alias TooManyRulesException = NamedTuple(
+      
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      
+    )
+
+    alias TooManyTargetGroupsException = NamedTuple(
+      
+    )
+
+    alias TooManyTargetsException = NamedTuple(
+      
+    )
+
+    alias TooManyUniqueTargetGroupsPerLoadBalancerException = NamedTuple(
+      
+    )
+
+    alias UnsupportedProtocolException = NamedTuple(
+      
+    )
+
+    alias VpcId = String
+
+    alias ZoneName = String
   end
 end

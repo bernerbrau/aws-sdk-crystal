@@ -473,8 +473,8 @@ module Aws::StorageGateway
     #
     # @overload activate_gateway(**params)
     # @param [Hash] params ({})
-    def activate_gateway(params = {}, **options)
-      req = build_request(:activate_gateway, params)
+    def activate_gateway(, **options)
+      req = build_request(:activate_gateway, )
       req.send_request(options)
     end
 
@@ -537,8 +537,8 @@ module Aws::StorageGateway
     #
     # @overload add_cache(**params)
     # @param [Hash] params ({})
-    def add_cache(params = {}, **options)
-      req = build_request(:add_cache, params)
+    def add_cache(, **options)
+      req = build_request(:add_cache, )
       req.send_request(options)
     end
 
@@ -620,8 +620,8 @@ module Aws::StorageGateway
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -680,8 +680,8 @@ module Aws::StorageGateway
     #
     # @overload add_upload_buffer(**params)
     # @param [Hash] params ({})
-    def add_upload_buffer(params = {}, **options)
-      req = build_request(:add_upload_buffer, params)
+    def add_upload_buffer(, **options)
+      req = build_request(:add_upload_buffer, )
       req.send_request(options)
     end
 
@@ -748,8 +748,8 @@ module Aws::StorageGateway
     #
     # @overload add_working_storage(**params)
     # @param [Hash] params ({})
-    def add_working_storage(params = {}, **options)
-      req = build_request(:add_working_storage, params)
+    def add_working_storage(, **options)
+      req = build_request(:add_working_storage, )
       req.send_request(options)
     end
 
@@ -804,8 +804,8 @@ module Aws::StorageGateway
     #
     # @overload assign_tape_pool(**params)
     # @param [Hash] params ({})
-    def assign_tape_pool(params = {}, **options)
-      req = build_request(:assign_tape_pool, params)
+    def assign_tape_pool(, **options)
+      req = build_request(:assign_tape_pool, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::StorageGateway
     #
     # @overload attach_volume(**params)
     # @param [Hash] params ({})
-    def attach_volume(params = {}, **options)
-      req = build_request(:attach_volume, params)
+    def attach_volume(, **options)
+      req = build_request(:attach_volume, )
       req.send_request(options)
     end
 
@@ -922,8 +922,8 @@ module Aws::StorageGateway
     #
     # @overload cancel_archival(**params)
     # @param [Hash] params ({})
-    def cancel_archival(params = {}, **options)
-      req = build_request(:cancel_archival, params)
+    def cancel_archival(, **options)
+      req = build_request(:cancel_archival, )
       req.send_request(options)
     end
 
@@ -976,8 +976,8 @@ module Aws::StorageGateway
     #
     # @overload cancel_retrieval(**params)
     # @param [Hash] params ({})
-    def cancel_retrieval(params = {}, **options)
-      req = build_request(:cancel_retrieval, params)
+    def cancel_retrieval(, **options)
+      req = build_request(:cancel_retrieval, )
       req.send_request(options)
     end
 
@@ -1129,8 +1129,8 @@ module Aws::StorageGateway
     #
     # @overload create_cached_iscsi_volume(**params)
     # @param [Hash] params ({})
-    def create_cached_iscsi_volume(params = {}, **options)
-      req = build_request(:create_cached_iscsi_volume, params)
+    def create_cached_iscsi_volume(, **options)
+      req = build_request(:create_cached_iscsi_volume, )
       req.send_request(options)
     end
 
@@ -1314,8 +1314,8 @@ module Aws::StorageGateway
     #
     # @overload create_nfs_file_share(**params)
     # @param [Hash] params ({})
-    def create_nfs_file_share(params = {}, **options)
-      req = build_request(:create_nfs_file_share, params)
+    def create_nfs_file_share(, **options)
+      req = build_request(:create_nfs_file_share, )
       req.send_request(options)
     end
 
@@ -1538,8 +1538,8 @@ module Aws::StorageGateway
     #
     # @overload create_smb_file_share(**params)
     # @param [Hash] params ({})
-    def create_smb_file_share(params = {}, **options)
-      req = build_request(:create_smb_file_share, params)
+    def create_smb_file_share(, **options)
+      req = build_request(:create_smb_file_share, )
       req.send_request(options)
     end
 
@@ -1643,8 +1643,8 @@ module Aws::StorageGateway
     #
     # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, **options)
-      req = build_request(:create_snapshot, params)
+    def create_snapshot(, **options)
+      req = build_request(:create_snapshot, )
       req.send_request(options)
     end
 
@@ -1744,8 +1744,8 @@ module Aws::StorageGateway
     #
     # @overload create_snapshot_from_volume_recovery_point(**params)
     # @param [Hash] params ({})
-    def create_snapshot_from_volume_recovery_point(params = {}, **options)
-      req = build_request(:create_snapshot_from_volume_recovery_point, params)
+    def create_snapshot_from_volume_recovery_point(, **options)
+      req = build_request(:create_snapshot_from_volume_recovery_point, )
       req.send_request(options)
     end
 
@@ -1892,8 +1892,8 @@ module Aws::StorageGateway
     #
     # @overload create_stored_iscsi_volume(**params)
     # @param [Hash] params ({})
-    def create_stored_iscsi_volume(params = {}, **options)
-      req = build_request(:create_stored_iscsi_volume, params)
+    def create_stored_iscsi_volume(, **options)
+      req = build_request(:create_stored_iscsi_volume, )
       req.send_request(options)
     end
 
@@ -1958,8 +1958,8 @@ module Aws::StorageGateway
     #
     # @overload create_tape_pool(**params)
     # @param [Hash] params ({})
-    def create_tape_pool(params = {}, **options)
-      req = build_request(:create_tape_pool, params)
+    def create_tape_pool(, **options)
+      req = build_request(:create_tape_pool, )
       req.send_request(options)
     end
 
@@ -2077,8 +2077,8 @@ module Aws::StorageGateway
     #
     # @overload create_tape_with_barcode(**params)
     # @param [Hash] params ({})
-    def create_tape_with_barcode(params = {}, **options)
-      req = build_request(:create_tape_with_barcode, params)
+    def create_tape_with_barcode(, **options)
+      req = build_request(:create_tape_with_barcode, )
       req.send_request(options)
     end
 
@@ -2217,8 +2217,8 @@ module Aws::StorageGateway
     #
     # @overload create_tapes(**params)
     # @param [Hash] params ({})
-    def create_tapes(params = {}, **options)
-      req = build_request(:create_tapes, params)
+    def create_tapes(, **options)
+      req = build_request(:create_tapes, )
       req.send_request(options)
     end
 
@@ -2250,8 +2250,8 @@ module Aws::StorageGateway
     #
     # @overload delete_automatic_tape_creation_policy(**params)
     # @param [Hash] params ({})
-    def delete_automatic_tape_creation_policy(params = {}, **options)
-      req = build_request(:delete_automatic_tape_creation_policy, params)
+    def delete_automatic_tape_creation_policy(, **options)
+      req = build_request(:delete_automatic_tape_creation_policy, )
       req.send_request(options)
     end
 
@@ -2307,8 +2307,8 @@ module Aws::StorageGateway
     #
     # @overload delete_bandwidth_rate_limit(**params)
     # @param [Hash] params ({})
-    def delete_bandwidth_rate_limit(params = {}, **options)
-      req = build_request(:delete_bandwidth_rate_limit, params)
+    def delete_bandwidth_rate_limit(, **options)
+      req = build_request(:delete_bandwidth_rate_limit, )
       req.send_request(options)
     end
 
@@ -2361,8 +2361,8 @@ module Aws::StorageGateway
     #
     # @overload delete_chap_credentials(**params)
     # @param [Hash] params ({})
-    def delete_chap_credentials(params = {}, **options)
-      req = build_request(:delete_chap_credentials, params)
+    def delete_chap_credentials(, **options)
+      req = build_request(:delete_chap_credentials, )
       req.send_request(options)
     end
 
@@ -2400,8 +2400,8 @@ module Aws::StorageGateway
     #
     # @overload delete_file_share(**params)
     # @param [Hash] params ({})
-    def delete_file_share(params = {}, **options)
-      req = build_request(:delete_file_share, params)
+    def delete_file_share(, **options)
+      req = build_request(:delete_file_share, )
       req.send_request(options)
     end
 
@@ -2466,8 +2466,8 @@ module Aws::StorageGateway
     #
     # @overload delete_gateway(**params)
     # @param [Hash] params ({})
-    def delete_gateway(params = {}, **options)
-      req = build_request(:delete_gateway, params)
+    def delete_gateway(, **options)
+      req = build_request(:delete_gateway, )
       req.send_request(options)
     end
 
@@ -2526,8 +2526,8 @@ module Aws::StorageGateway
     #
     # @overload delete_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def delete_snapshot_schedule(params = {}, **options)
-      req = build_request(:delete_snapshot_schedule, params)
+    def delete_snapshot_schedule(, **options)
+      req = build_request(:delete_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -2583,8 +2583,8 @@ module Aws::StorageGateway
     #
     # @overload delete_tape(**params)
     # @param [Hash] params ({})
-    def delete_tape(params = {}, **options)
-      req = build_request(:delete_tape, params)
+    def delete_tape(, **options)
+      req = build_request(:delete_tape, )
       req.send_request(options)
     end
 
@@ -2634,8 +2634,8 @@ module Aws::StorageGateway
     #
     # @overload delete_tape_archive(**params)
     # @param [Hash] params ({})
-    def delete_tape_archive(params = {}, **options)
-      req = build_request(:delete_tape_archive, params)
+    def delete_tape_archive(, **options)
+      req = build_request(:delete_tape_archive, )
       req.send_request(options)
     end
 
@@ -2664,8 +2664,8 @@ module Aws::StorageGateway
     #
     # @overload delete_tape_pool(**params)
     # @param [Hash] params ({})
-    def delete_tape_pool(params = {}, **options)
-      req = build_request(:delete_tape_pool, params)
+    def delete_tape_pool(, **options)
+      req = build_request(:delete_tape_pool, )
       req.send_request(options)
     end
 
@@ -2728,8 +2728,8 @@ module Aws::StorageGateway
     #
     # @overload delete_volume(**params)
     # @param [Hash] params ({})
-    def delete_volume(params = {}, **options)
-      req = build_request(:delete_volume, params)
+    def delete_volume(, **options)
+      req = build_request(:delete_volume, )
       req.send_request(options)
     end
 
@@ -2764,8 +2764,8 @@ module Aws::StorageGateway
     #
     # @overload describe_availability_monitor_test(**params)
     # @param [Hash] params ({})
-    def describe_availability_monitor_test(params = {}, **options)
-      req = build_request(:describe_availability_monitor_test, params)
+    def describe_availability_monitor_test(, **options)
+      req = build_request(:describe_availability_monitor_test, )
       req.send_request(options)
     end
 
@@ -2823,8 +2823,8 @@ module Aws::StorageGateway
     #
     # @overload describe_bandwidth_rate_limit(**params)
     # @param [Hash] params ({})
-    def describe_bandwidth_rate_limit(params = {}, **options)
-      req = build_request(:describe_bandwidth_rate_limit, params)
+    def describe_bandwidth_rate_limit(, **options)
+      req = build_request(:describe_bandwidth_rate_limit, )
       req.send_request(options)
     end
 
@@ -2882,8 +2882,8 @@ module Aws::StorageGateway
     #
     # @overload describe_bandwidth_rate_limit_schedule(**params)
     # @param [Hash] params ({})
-    def describe_bandwidth_rate_limit_schedule(params = {}, **options)
-      req = build_request(:describe_bandwidth_rate_limit_schedule, params)
+    def describe_bandwidth_rate_limit_schedule(, **options)
+      req = build_request(:describe_bandwidth_rate_limit_schedule, )
       req.send_request(options)
     end
 
@@ -2952,8 +2952,8 @@ module Aws::StorageGateway
     #
     # @overload describe_cache(**params)
     # @param [Hash] params ({})
-    def describe_cache(params = {}, **options)
-      req = build_request(:describe_cache, params)
+    def describe_cache(, **options)
+      req = build_request(:describe_cache, )
       req.send_request(options)
     end
 
@@ -3036,8 +3036,8 @@ module Aws::StorageGateway
     #
     # @overload describe_cached_iscsi_volumes(**params)
     # @param [Hash] params ({})
-    def describe_cached_iscsi_volumes(params = {}, **options)
-      req = build_request(:describe_cached_iscsi_volumes, params)
+    def describe_cached_iscsi_volumes(, **options)
+      req = build_request(:describe_cached_iscsi_volumes, )
       req.send_request(options)
     end
 
@@ -3095,8 +3095,8 @@ module Aws::StorageGateway
     #
     # @overload describe_chap_credentials(**params)
     # @param [Hash] params ({})
-    def describe_chap_credentials(params = {}, **options)
-      req = build_request(:describe_chap_credentials, params)
+    def describe_chap_credentials(, **options)
+      req = build_request(:describe_chap_credentials, )
       req.send_request(options)
     end
 
@@ -3194,8 +3194,8 @@ module Aws::StorageGateway
     #
     # @overload describe_gateway_information(**params)
     # @param [Hash] params ({})
-    def describe_gateway_information(params = {}, **options)
-      req = build_request(:describe_gateway_information, params)
+    def describe_gateway_information(, **options)
+      req = build_request(:describe_gateway_information, )
       req.send_request(options)
     end
 
@@ -3254,8 +3254,8 @@ module Aws::StorageGateway
     #
     # @overload describe_maintenance_start_time(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_start_time(params = {}, **options)
-      req = build_request(:describe_maintenance_start_time, params)
+    def describe_maintenance_start_time(, **options)
+      req = build_request(:describe_maintenance_start_time, )
       req.send_request(options)
     end
 
@@ -3312,8 +3312,8 @@ module Aws::StorageGateway
     #
     # @overload describe_nfs_file_shares(**params)
     # @param [Hash] params ({})
-    def describe_nfs_file_shares(params = {}, **options)
-      req = build_request(:describe_nfs_file_shares, params)
+    def describe_nfs_file_shares(, **options)
+      req = build_request(:describe_nfs_file_shares, )
       req.send_request(options)
     end
 
@@ -3374,8 +3374,8 @@ module Aws::StorageGateway
     #
     # @overload describe_smb_file_shares(**params)
     # @param [Hash] params ({})
-    def describe_smb_file_shares(params = {}, **options)
-      req = build_request(:describe_smb_file_shares, params)
+    def describe_smb_file_shares(, **options)
+      req = build_request(:describe_smb_file_shares, )
       req.send_request(options)
     end
 
@@ -3416,8 +3416,8 @@ module Aws::StorageGateway
     #
     # @overload describe_smb_settings(**params)
     # @param [Hash] params ({})
-    def describe_smb_settings(params = {}, **options)
-      req = build_request(:describe_smb_settings, params)
+    def describe_smb_settings(, **options)
+      req = build_request(:describe_smb_settings, )
       req.send_request(options)
     end
 
@@ -3479,8 +3479,8 @@ module Aws::StorageGateway
     #
     # @overload describe_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_schedule(params = {}, **options)
-      req = build_request(:describe_snapshot_schedule, params)
+    def describe_snapshot_schedule(, **options)
+      req = build_request(:describe_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -3565,8 +3565,8 @@ module Aws::StorageGateway
     #
     # @overload describe_stored_iscsi_volumes(**params)
     # @param [Hash] params ({})
-    def describe_stored_iscsi_volumes(params = {}, **options)
-      req = build_request(:describe_stored_iscsi_volumes, params)
+    def describe_stored_iscsi_volumes(, **options)
+      req = build_request(:describe_stored_iscsi_volumes, )
       req.send_request(options)
     end
 
@@ -3662,8 +3662,8 @@ module Aws::StorageGateway
     #
     # @overload describe_tape_archives(**params)
     # @param [Hash] params ({})
-    def describe_tape_archives(params = {}, **options)
-      req = build_request(:describe_tape_archives, params)
+    def describe_tape_archives(, **options)
+      req = build_request(:describe_tape_archives, )
       req.send_request(options)
     end
 
@@ -3744,8 +3744,8 @@ module Aws::StorageGateway
     #
     # @overload describe_tape_recovery_points(**params)
     # @param [Hash] params ({})
-    def describe_tape_recovery_points(params = {}, **options)
-      req = build_request(:describe_tape_recovery_points, params)
+    def describe_tape_recovery_points(, **options)
+      req = build_request(:describe_tape_recovery_points, )
       req.send_request(options)
     end
 
@@ -3853,8 +3853,8 @@ module Aws::StorageGateway
     #
     # @overload describe_tapes(**params)
     # @param [Hash] params ({})
-    def describe_tapes(params = {}, **options)
-      req = build_request(:describe_tapes, params)
+    def describe_tapes(, **options)
+      req = build_request(:describe_tapes, )
       req.send_request(options)
     end
 
@@ -3937,8 +3937,8 @@ module Aws::StorageGateway
     #
     # @overload describe_upload_buffer(**params)
     # @param [Hash] params ({})
-    def describe_upload_buffer(params = {}, **options)
-      req = build_request(:describe_upload_buffer, params)
+    def describe_upload_buffer(, **options)
+      req = build_request(:describe_upload_buffer, )
       req.send_request(options)
     end
 
@@ -4063,8 +4063,8 @@ module Aws::StorageGateway
     #
     # @overload describe_vtl_devices(**params)
     # @param [Hash] params ({})
-    def describe_vtl_devices(params = {}, **options)
-      req = build_request(:describe_vtl_devices, params)
+    def describe_vtl_devices(, **options)
+      req = build_request(:describe_vtl_devices, )
       req.send_request(options)
     end
 
@@ -4133,8 +4133,8 @@ module Aws::StorageGateway
     #
     # @overload describe_working_storage(**params)
     # @param [Hash] params ({})
-    def describe_working_storage(params = {}, **options)
-      req = build_request(:describe_working_storage, params)
+    def describe_working_storage(, **options)
+      req = build_request(:describe_working_storage, )
       req.send_request(options)
     end
 
@@ -4177,8 +4177,8 @@ module Aws::StorageGateway
     #
     # @overload detach_volume(**params)
     # @param [Hash] params ({})
-    def detach_volume(params = {}, **options)
-      req = build_request(:detach_volume, params)
+    def detach_volume(, **options)
+      req = build_request(:detach_volume, )
       req.send_request(options)
     end
 
@@ -4230,8 +4230,8 @@ module Aws::StorageGateway
     #
     # @overload disable_gateway(**params)
     # @param [Hash] params ({})
-    def disable_gateway(params = {}, **options)
-      req = build_request(:disable_gateway, params)
+    def disable_gateway(, **options)
+      req = build_request(:disable_gateway, )
       req.send_request(options)
     end
 
@@ -4298,8 +4298,8 @@ module Aws::StorageGateway
     #
     # @overload join_domain(**params)
     # @param [Hash] params ({})
-    def join_domain(params = {}, **options)
-      req = build_request(:join_domain, params)
+    def join_domain(, **options)
+      req = build_request(:join_domain, )
       req.send_request(options)
     end
 
@@ -4339,8 +4339,8 @@ module Aws::StorageGateway
     #
     # @overload list_automatic_tape_creation_policies(**params)
     # @param [Hash] params ({})
-    def list_automatic_tape_creation_policies(params = {}, **options)
-      req = build_request(:list_automatic_tape_creation_policies, params)
+    def list_automatic_tape_creation_policies(, **options)
+      req = build_request(:list_automatic_tape_creation_policies, )
       req.send_request(options)
     end
 
@@ -4393,8 +4393,8 @@ module Aws::StorageGateway
     #
     # @overload list_file_shares(**params)
     # @param [Hash] params ({})
-    def list_file_shares(params = {}, **options)
-      req = build_request(:list_file_shares, params)
+    def list_file_shares(, **options)
+      req = build_request(:list_file_shares, )
       req.send_request(options)
     end
 
@@ -4473,8 +4473,8 @@ module Aws::StorageGateway
     #
     # @overload list_gateways(**params)
     # @param [Hash] params ({})
-    def list_gateways(params = {}, **options)
-      req = build_request(:list_gateways, params)
+    def list_gateways(, **options)
+      req = build_request(:list_gateways, )
       req.send_request(options)
     end
 
@@ -4558,8 +4558,8 @@ module Aws::StorageGateway
     #
     # @overload list_local_disks(**params)
     # @param [Hash] params ({})
-    def list_local_disks(params = {}, **options)
-      req = build_request(:list_local_disks, params)
+    def list_local_disks(, **options)
+      req = build_request(:list_local_disks, )
       req.send_request(options)
     end
 
@@ -4629,8 +4629,8 @@ module Aws::StorageGateway
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4688,8 +4688,8 @@ module Aws::StorageGateway
     #
     # @overload list_tape_pools(**params)
     # @param [Hash] params ({})
-    def list_tape_pools(params = {}, **options)
-      req = build_request(:list_tape_pools, params)
+    def list_tape_pools(, **options)
+      req = build_request(:list_tape_pools, )
       req.send_request(options)
     end
 
@@ -4752,8 +4752,8 @@ module Aws::StorageGateway
     #
     # @overload list_tapes(**params)
     # @param [Hash] params ({})
-    def list_tapes(params = {}, **options)
-      req = build_request(:list_tapes, params)
+    def list_tapes(, **options)
+      req = build_request(:list_tapes, )
       req.send_request(options)
     end
 
@@ -4785,8 +4785,8 @@ module Aws::StorageGateway
     #
     # @overload list_volume_initiators(**params)
     # @param [Hash] params ({})
-    def list_volume_initiators(params = {}, **options)
-      req = build_request(:list_volume_initiators, params)
+    def list_volume_initiators(, **options)
+      req = build_request(:list_volume_initiators, )
       req.send_request(options)
     end
 
@@ -4850,8 +4850,8 @@ module Aws::StorageGateway
     #
     # @overload list_volume_recovery_points(**params)
     # @param [Hash] params ({})
-    def list_volume_recovery_points(params = {}, **options)
-      req = build_request(:list_volume_recovery_points, params)
+    def list_volume_recovery_points(, **options)
+      req = build_request(:list_volume_recovery_points, )
       req.send_request(options)
     end
 
@@ -4951,8 +4951,8 @@ module Aws::StorageGateway
     #
     # @overload list_volumes(**params)
     # @param [Hash] params ({})
-    def list_volumes(params = {}, **options)
-      req = build_request(:list_volumes, params)
+    def list_volumes(, **options)
+      req = build_request(:list_volumes, )
       req.send_request(options)
     end
 
@@ -4999,8 +4999,8 @@ module Aws::StorageGateway
     #
     # @overload notify_when_uploaded(**params)
     # @param [Hash] params ({})
-    def notify_when_uploaded(params = {}, **options)
-      req = build_request(:notify_when_uploaded, params)
+    def notify_when_uploaded(, **options)
+      req = build_request(:notify_when_uploaded, )
       req.send_request(options)
     end
 
@@ -5082,8 +5082,8 @@ module Aws::StorageGateway
     #
     # @overload refresh_cache(**params)
     # @param [Hash] params ({})
-    def refresh_cache(params = {}, **options)
-      req = build_request(:refresh_cache, params)
+    def refresh_cache(, **options)
+      req = build_request(:refresh_cache, )
       req.send_request(options)
     end
 
@@ -5135,8 +5135,8 @@ module Aws::StorageGateway
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 
@@ -5192,8 +5192,8 @@ module Aws::StorageGateway
     #
     # @overload reset_cache(**params)
     # @param [Hash] params ({})
-    def reset_cache(params = {}, **options)
-      req = build_request(:reset_cache, params)
+    def reset_cache(, **options)
+      req = build_request(:reset_cache, )
       req.send_request(options)
     end
 
@@ -5256,8 +5256,8 @@ module Aws::StorageGateway
     #
     # @overload retrieve_tape_archive(**params)
     # @param [Hash] params ({})
-    def retrieve_tape_archive(params = {}, **options)
-      req = build_request(:retrieve_tape_archive, params)
+    def retrieve_tape_archive(, **options)
+      req = build_request(:retrieve_tape_archive, )
       req.send_request(options)
     end
 
@@ -5318,8 +5318,8 @@ module Aws::StorageGateway
     #
     # @overload retrieve_tape_recovery_point(**params)
     # @param [Hash] params ({})
-    def retrieve_tape_recovery_point(params = {}, **options)
-      req = build_request(:retrieve_tape_recovery_point, params)
+    def retrieve_tape_recovery_point(, **options)
+      req = build_request(:retrieve_tape_recovery_point, )
       req.send_request(options)
     end
 
@@ -5370,8 +5370,8 @@ module Aws::StorageGateway
     #
     # @overload set_local_console_password(**params)
     # @param [Hash] params ({})
-    def set_local_console_password(params = {}, **options)
-      req = build_request(:set_local_console_password, params)
+    def set_local_console_password(, **options)
+      req = build_request(:set_local_console_password, )
       req.send_request(options)
     end
 
@@ -5405,8 +5405,8 @@ module Aws::StorageGateway
     #
     # @overload set_smb_guest_password(**params)
     # @param [Hash] params ({})
-    def set_smb_guest_password(params = {}, **options)
-      req = build_request(:set_smb_guest_password, params)
+    def set_smb_guest_password(, **options)
+      req = build_request(:set_smb_guest_password, )
       req.send_request(options)
     end
 
@@ -5477,8 +5477,8 @@ module Aws::StorageGateway
     #
     # @overload shutdown_gateway(**params)
     # @param [Hash] params ({})
-    def shutdown_gateway(params = {}, **options)
-      req = build_request(:shutdown_gateway, params)
+    def shutdown_gateway(, **options)
+      req = build_request(:shutdown_gateway, )
       req.send_request(options)
     end
 
@@ -5517,8 +5517,8 @@ module Aws::StorageGateway
     #
     # @overload start_availability_monitor_test(**params)
     # @param [Hash] params ({})
-    def start_availability_monitor_test(params = {}, **options)
-      req = build_request(:start_availability_monitor_test, params)
+    def start_availability_monitor_test(, **options)
+      req = build_request(:start_availability_monitor_test, )
       req.send_request(options)
     end
 
@@ -5575,8 +5575,8 @@ module Aws::StorageGateway
     #
     # @overload start_gateway(**params)
     # @param [Hash] params ({})
-    def start_gateway(params = {}, **options)
-      req = build_request(:start_gateway, params)
+    def start_gateway(, **options)
+      req = build_request(:start_gateway, )
       req.send_request(options)
     end
 
@@ -5627,8 +5627,8 @@ module Aws::StorageGateway
     #
     # @overload update_automatic_tape_creation_policy(**params)
     # @param [Hash] params ({})
-    def update_automatic_tape_creation_policy(params = {}, **options)
-      req = build_request(:update_automatic_tape_creation_policy, params)
+    def update_automatic_tape_creation_policy(, **options)
+      req = build_request(:update_automatic_tape_creation_policy, )
       req.send_request(options)
     end
 
@@ -5694,8 +5694,8 @@ module Aws::StorageGateway
     #
     # @overload update_bandwidth_rate_limit(**params)
     # @param [Hash] params ({})
-    def update_bandwidth_rate_limit(params = {}, **options)
-      req = build_request(:update_bandwidth_rate_limit, params)
+    def update_bandwidth_rate_limit(, **options)
+      req = build_request(:update_bandwidth_rate_limit, )
       req.send_request(options)
     end
 
@@ -5744,8 +5744,8 @@ module Aws::StorageGateway
     #
     # @overload update_bandwidth_rate_limit_schedule(**params)
     # @param [Hash] params ({})
-    def update_bandwidth_rate_limit_schedule(params = {}, **options)
-      req = build_request(:update_bandwidth_rate_limit_schedule, params)
+    def update_bandwidth_rate_limit_schedule(, **options)
+      req = build_request(:update_bandwidth_rate_limit_schedule, )
       req.send_request(options)
     end
 
@@ -5825,8 +5825,8 @@ module Aws::StorageGateway
     #
     # @overload update_chap_credentials(**params)
     # @param [Hash] params ({})
-    def update_chap_credentials(params = {}, **options)
-      req = build_request(:update_chap_credentials, params)
+    def update_chap_credentials(, **options)
+      req = build_request(:update_chap_credentials, )
       req.send_request(options)
     end
 
@@ -5901,8 +5901,8 @@ module Aws::StorageGateway
     #
     # @overload update_gateway_information(**params)
     # @param [Hash] params ({})
-    def update_gateway_information(params = {}, **options)
-      req = build_request(:update_gateway_information, params)
+    def update_gateway_information(, **options)
+      req = build_request(:update_gateway_information, )
       req.send_request(options)
     end
 
@@ -5965,8 +5965,8 @@ module Aws::StorageGateway
     #
     # @overload update_gateway_software_now(**params)
     # @param [Hash] params ({})
-    def update_gateway_software_now(params = {}, **options)
-      req = build_request(:update_gateway_software_now, params)
+    def update_gateway_software_now(, **options)
+      req = build_request(:update_gateway_software_now, )
       req.send_request(options)
     end
 
@@ -6039,8 +6039,8 @@ module Aws::StorageGateway
     #
     # @overload update_maintenance_start_time(**params)
     # @param [Hash] params ({})
-    def update_maintenance_start_time(params = {}, **options)
-      req = build_request(:update_maintenance_start_time, params)
+    def update_maintenance_start_time(, **options)
+      req = build_request(:update_maintenance_start_time, )
       req.send_request(options)
     end
 
@@ -6190,8 +6190,8 @@ module Aws::StorageGateway
     #
     # @overload update_nfs_file_share(**params)
     # @param [Hash] params ({})
-    def update_nfs_file_share(params = {}, **options)
-      req = build_request(:update_nfs_file_share, params)
+    def update_nfs_file_share(, **options)
+      req = build_request(:update_nfs_file_share, )
       req.send_request(options)
     end
 
@@ -6376,8 +6376,8 @@ module Aws::StorageGateway
     #
     # @overload update_smb_file_share(**params)
     # @param [Hash] params ({})
-    def update_smb_file_share(params = {}, **options)
-      req = build_request(:update_smb_file_share, params)
+    def update_smb_file_share(, **options)
+      req = build_request(:update_smb_file_share, )
       req.send_request(options)
     end
 
@@ -6411,8 +6411,8 @@ module Aws::StorageGateway
     #
     # @overload update_smb_file_share_visibility(**params)
     # @param [Hash] params ({})
-    def update_smb_file_share_visibility(params = {}, **options)
-      req = build_request(:update_smb_file_share_visibility, params)
+    def update_smb_file_share_visibility(, **options)
+      req = build_request(:update_smb_file_share_visibility, )
       req.send_request(options)
     end
 
@@ -6468,8 +6468,8 @@ module Aws::StorageGateway
     #
     # @overload update_smb_security_strategy(**params)
     # @param [Hash] params ({})
-    def update_smb_security_strategy(params = {}, **options)
-      req = build_request(:update_smb_security_strategy, params)
+    def update_smb_security_strategy(, **options)
+      req = build_request(:update_smb_security_strategy, )
       req.send_request(options)
     end
 
@@ -6557,8 +6557,8 @@ module Aws::StorageGateway
     #
     # @overload update_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def update_snapshot_schedule(params = {}, **options)
-      req = build_request(:update_snapshot_schedule, params)
+    def update_snapshot_schedule(, **options)
+      req = build_request(:update_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -6611,8 +6611,8 @@ module Aws::StorageGateway
     #
     # @overload update_vtl_device_type(**params)
     # @param [Hash] params ({})
-    def update_vtl_device_type(params = {}, **options)
-      req = build_request(:update_vtl_device_type, params)
+    def update_vtl_device_type(, **options)
+      req = build_request(:update_vtl_device_type, )
       req.send_request(options)
     end
 

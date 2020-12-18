@@ -2971,5 +2971,670 @@ module Aws::LocationService
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : String
+    )
+
+    alias Arn = String
+
+    alias ArnList = Array(Arn)
+
+    alias AssociateTrackerConsumerRequest = NamedTuple(
+      "ConsumerArn" : Arn,
+      "TrackerName" : ResourceName
+    )
+
+    alias AssociateTrackerConsumerResponse = NamedTuple(
+      
+    )
+
+    alias BatchDeleteGeofenceError = NamedTuple(
+      "Error" : BatchItemError,
+      "GeofenceId" : Id
+    )
+
+    alias BatchDeleteGeofenceErrorList = Array(BatchDeleteGeofenceError)
+
+    alias BatchDeleteGeofenceRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "GeofenceIds" : BatchDeleteGeofenceRequestGeofenceIdsList
+    )
+
+    alias BatchDeleteGeofenceRequestGeofenceIdsList = Array(Id)
+
+    alias BatchDeleteGeofenceResponse = NamedTuple(
+      "Errors" : BatchDeleteGeofenceErrorList
+    )
+
+    alias BatchEvaluateGeofencesError = NamedTuple(
+      "DeviceId" : Id,
+      "Error" : BatchItemError,
+      "SampleTime" : Timestamp
+    )
+
+    alias BatchEvaluateGeofencesErrorList = Array(BatchEvaluateGeofencesError)
+
+    alias BatchEvaluateGeofencesRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "DevicePositionUpdates" : BatchEvaluateGeofencesRequestDevicePositionUpdatesList
+    )
+
+    alias BatchEvaluateGeofencesRequestDevicePositionUpdatesList = Array(DevicePositionUpdate)
+
+    alias BatchEvaluateGeofencesResponse = NamedTuple(
+      "Errors" : BatchEvaluateGeofencesErrorList
+    )
+
+    alias BatchGetDevicePositionError = NamedTuple(
+      "DeviceId" : Id,
+      "Error" : BatchItemError
+    )
+
+    alias BatchGetDevicePositionErrorList = Array(BatchGetDevicePositionError)
+
+    alias BatchGetDevicePositionRequest = NamedTuple(
+      "DeviceIds" : BatchGetDevicePositionRequestDeviceIdsList,
+      "TrackerName" : BatchGetDevicePositionRequestTrackerNameString
+    )
+
+    alias BatchGetDevicePositionRequestDeviceIdsList = Array(Id)
+
+    alias BatchGetDevicePositionRequestTrackerNameString = String
+
+    alias BatchGetDevicePositionResponse = NamedTuple(
+      "DevicePositions" : DevicePositionList,
+      "Errors" : BatchGetDevicePositionErrorList
+    )
+
+    alias BatchItemError = NamedTuple(
+      "Code" : (BatchItemErrorCode)?,
+      "Message" : (String)?
+    )
+
+    alias BatchItemErrorCode = String
+
+    alias BatchPutGeofenceError = NamedTuple(
+      "Error" : BatchItemError,
+      "GeofenceId" : Id
+    )
+
+    alias BatchPutGeofenceErrorList = Array(BatchPutGeofenceError)
+
+    alias BatchPutGeofenceRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "Entries" : BatchPutGeofenceRequestEntriesList
+    )
+
+    alias BatchPutGeofenceRequestEntriesList = Array(BatchPutGeofenceRequestEntry)
+
+    alias BatchPutGeofenceRequestEntry = NamedTuple(
+      "GeofenceId" : Id,
+      "Geometry" : GeofenceGeometry
+    )
+
+    alias BatchPutGeofenceResponse = NamedTuple(
+      "Errors" : BatchPutGeofenceErrorList,
+      "Successes" : BatchPutGeofenceSuccessList
+    )
+
+    alias BatchPutGeofenceSuccess = NamedTuple(
+      "CreateTime" : Timestamp,
+      "GeofenceId" : Id,
+      "UpdateTime" : Timestamp
+    )
+
+    alias BatchPutGeofenceSuccessList = Array(BatchPutGeofenceSuccess)
+
+    alias BatchUpdateDevicePositionError = NamedTuple(
+      "DeviceId" : Id,
+      "Error" : BatchItemError,
+      "SampleTime" : Timestamp
+    )
+
+    alias BatchUpdateDevicePositionErrorList = Array(BatchUpdateDevicePositionError)
+
+    alias BatchUpdateDevicePositionRequest = NamedTuple(
+      "TrackerName" : ResourceName,
+      "Updates" : BatchUpdateDevicePositionRequestUpdatesList
+    )
+
+    alias BatchUpdateDevicePositionRequestUpdatesList = Array(DevicePositionUpdate)
+
+    alias BatchUpdateDevicePositionResponse = NamedTuple(
+      "Errors" : BatchUpdateDevicePositionErrorList
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias BoundingBox = Array(Double)
+
+    alias ConflictException = NamedTuple(
+      "Message" : String
+    )
+
+    alias CountryCode = String
+
+    alias CountryCodeList = Array(CountryCode)
+
+    alias CreateGeofenceCollectionRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "Description" : (ResourceDescription)?,
+      "PricingPlan" : PricingPlan
+    )
+
+    alias CreateGeofenceCollectionResponse = NamedTuple(
+      "CollectionArn" : Arn,
+      "CollectionName" : ResourceName,
+      "CreateTime" : Timestamp
+    )
+
+    alias CreateMapRequest = NamedTuple(
+      "Configuration" : MapConfiguration,
+      "Description" : (ResourceDescription)?,
+      "MapName" : ResourceName,
+      "PricingPlan" : PricingPlan
+    )
+
+    alias CreateMapResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "MapArn" : Arn,
+      "MapName" : ResourceName
+    )
+
+    alias CreatePlaceIndexRequest = NamedTuple(
+      "DataSource" : String,
+      "DataSourceConfiguration" : (DataSourceConfiguration)?,
+      "Description" : (ResourceDescription)?,
+      "IndexName" : ResourceName,
+      "PricingPlan" : PricingPlan
+    )
+
+    alias CreatePlaceIndexResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "IndexArn" : Arn,
+      "IndexName" : ResourceName
+    )
+
+    alias CreateTrackerRequest = NamedTuple(
+      "Description" : (ResourceDescription)?,
+      "PricingPlan" : PricingPlan,
+      "TrackerName" : ResourceName
+    )
+
+    alias CreateTrackerResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "TrackerArn" : Arn,
+      "TrackerName" : ResourceName
+    )
+
+    alias DataSourceConfiguration = NamedTuple(
+      "IntendedUse" : (IntendedUse)?
+    )
+
+    alias DeleteGeofenceCollectionRequest = NamedTuple(
+      "CollectionName" : ResourceName
+    )
+
+    alias DeleteGeofenceCollectionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteMapRequest = NamedTuple(
+      "MapName" : ResourceName
+    )
+
+    alias DeleteMapResponse = NamedTuple(
+      
+    )
+
+    alias DeletePlaceIndexRequest = NamedTuple(
+      "IndexName" : ResourceName
+    )
+
+    alias DeletePlaceIndexResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTrackerRequest = NamedTuple(
+      "TrackerName" : ResourceName
+    )
+
+    alias DeleteTrackerResponse = NamedTuple(
+      
+    )
+
+    alias DescribeGeofenceCollectionRequest = NamedTuple(
+      "CollectionName" : ResourceName
+    )
+
+    alias DescribeGeofenceCollectionResponse = NamedTuple(
+      "CollectionArn" : Arn,
+      "CollectionName" : ResourceName,
+      "CreateTime" : Timestamp,
+      "Description" : ResourceDescription,
+      "UpdateTime" : Timestamp
+    )
+
+    alias DescribeMapRequest = NamedTuple(
+      "MapName" : ResourceName
+    )
+
+    alias DescribeMapResponse = NamedTuple(
+      "Configuration" : MapConfiguration,
+      "CreateTime" : Timestamp,
+      "DataSource" : String,
+      "Description" : ResourceDescription,
+      "MapArn" : Arn,
+      "MapName" : ResourceName,
+      "UpdateTime" : Timestamp
+    )
+
+    alias DescribePlaceIndexRequest = NamedTuple(
+      "IndexName" : ResourceName
+    )
+
+    alias DescribePlaceIndexResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "DataSource" : String,
+      "DataSourceConfiguration" : DataSourceConfiguration,
+      "Description" : ResourceDescription,
+      "IndexArn" : Arn,
+      "IndexName" : ResourceName,
+      "UpdateTime" : Timestamp
+    )
+
+    alias DescribeTrackerRequest = NamedTuple(
+      "TrackerName" : ResourceName
+    )
+
+    alias DescribeTrackerResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "Description" : ResourceDescription,
+      "TrackerArn" : Arn,
+      "TrackerName" : ResourceName,
+      "UpdateTime" : Timestamp
+    )
+
+    alias DevicePosition = NamedTuple(
+      "DeviceId" : (Id)?,
+      "Position" : Position,
+      "ReceivedTime" : Timestamp,
+      "SampleTime" : Timestamp
+    )
+
+    alias DevicePositionList = Array(DevicePosition)
+
+    alias DevicePositionUpdate = NamedTuple(
+      "DeviceId" : Id,
+      "Position" : Position,
+      "SampleTime" : Timestamp
+    )
+
+    alias DisassociateTrackerConsumerRequest = NamedTuple(
+      "ConsumerArn" : Arn,
+      "TrackerName" : ResourceName
+    )
+
+    alias DisassociateTrackerConsumerResponse = NamedTuple(
+      
+    )
+
+    alias Double = Float64
+
+    alias GeofenceGeometry = NamedTuple(
+      "Polygon" : (LinearRings)?
+    )
+
+    alias GetDevicePositionHistoryRequest = NamedTuple(
+      "DeviceId" : Id,
+      "EndTimeExclusive" : (Timestamp)?,
+      "NextToken" : (Token)?,
+      "StartTimeInclusive" : (Timestamp)?,
+      "TrackerName" : ResourceName
+    )
+
+    alias GetDevicePositionHistoryResponse = NamedTuple(
+      "DevicePositions" : DevicePositionList,
+      "NextToken" : (Token)?
+    )
+
+    alias GetDevicePositionRequest = NamedTuple(
+      "DeviceId" : Id,
+      "TrackerName" : ResourceName
+    )
+
+    alias GetDevicePositionResponse = NamedTuple(
+      "DeviceId" : (Id)?,
+      "Position" : Position,
+      "ReceivedTime" : Timestamp,
+      "SampleTime" : Timestamp
+    )
+
+    alias GetGeofenceRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "GeofenceId" : Id
+    )
+
+    alias GetGeofenceResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "GeofenceId" : Id,
+      "Geometry" : GeofenceGeometry,
+      "Status" : String,
+      "UpdateTime" : Timestamp
+    )
+
+    alias GetMapGlyphsRequest = NamedTuple(
+      "FontStack" : String,
+      "FontUnicodeRange" : GetMapGlyphsRequestFontUnicodeRangeString,
+      "MapName" : ResourceName
+    )
+
+    alias GetMapGlyphsRequestFontUnicodeRangeString = String
+
+    alias GetMapGlyphsResponse = NamedTuple(
+      "Blob" : (Blob)?,
+      "ContentType" : (String)?
+    )
+
+    alias GetMapSpritesRequest = NamedTuple(
+      "FileName" : GetMapSpritesRequestFileNameString,
+      "MapName" : ResourceName
+    )
+
+    alias GetMapSpritesRequestFileNameString = String
+
+    alias GetMapSpritesResponse = NamedTuple(
+      "Blob" : (Blob)?,
+      "ContentType" : (String)?
+    )
+
+    alias GetMapStyleDescriptorRequest = NamedTuple(
+      "MapName" : ResourceName
+    )
+
+    alias GetMapStyleDescriptorResponse = NamedTuple(
+      "Blob" : (Blob)?,
+      "ContentType" : (String)?
+    )
+
+    alias GetMapTileRequest = NamedTuple(
+      "MapName" : ResourceName,
+      "X" : GetMapTileRequestXString,
+      "Y" : GetMapTileRequestYString,
+      "Z" : GetMapTileRequestZString
+    )
+
+    alias GetMapTileRequestXString = String
+
+    alias GetMapTileRequestYString = String
+
+    alias GetMapTileRequestZString = String
+
+    alias GetMapTileResponse = NamedTuple(
+      "Blob" : (Blob)?,
+      "ContentType" : (String)?
+    )
+
+    alias Id = String
+
+    alias IntendedUse = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : String
+    )
+
+    alias LinearRing = Array(Position)
+
+    alias LinearRings = Array(LinearRing)
+
+    alias ListGeofenceCollectionsRequest = NamedTuple(
+      "MaxResults" : (ListGeofenceCollectionsRequestMaxResultsInteger)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListGeofenceCollectionsRequestMaxResultsInteger = Int32
+
+    alias ListGeofenceCollectionsResponse = NamedTuple(
+      "Entries" : ListGeofenceCollectionsResponseEntryList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListGeofenceCollectionsResponseEntry = NamedTuple(
+      "CollectionName" : ResourceName,
+      "CreateTime" : Timestamp,
+      "Description" : ResourceDescription,
+      "UpdateTime" : Timestamp
+    )
+
+    alias ListGeofenceCollectionsResponseEntryList = Array(ListGeofenceCollectionsResponseEntry)
+
+    alias ListGeofenceResponseEntry = NamedTuple(
+      "CreateTime" : Timestamp,
+      "GeofenceId" : Id,
+      "Geometry" : GeofenceGeometry,
+      "Status" : String,
+      "UpdateTime" : Timestamp
+    )
+
+    alias ListGeofenceResponseEntryList = Array(ListGeofenceResponseEntry)
+
+    alias ListGeofencesRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "NextToken" : (Token)?
+    )
+
+    alias ListGeofencesResponse = NamedTuple(
+      "Entries" : ListGeofenceResponseEntryList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListMapsRequest = NamedTuple(
+      "MaxResults" : (ListMapsRequestMaxResultsInteger)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListMapsRequestMaxResultsInteger = Int32
+
+    alias ListMapsResponse = NamedTuple(
+      "Entries" : ListMapsResponseEntryList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListMapsResponseEntry = NamedTuple(
+      "CreateTime" : Timestamp,
+      "DataSource" : String,
+      "Description" : ResourceDescription,
+      "MapName" : ResourceName,
+      "UpdateTime" : Timestamp
+    )
+
+    alias ListMapsResponseEntryList = Array(ListMapsResponseEntry)
+
+    alias ListPlaceIndexesRequest = NamedTuple(
+      "MaxResults" : (ListPlaceIndexesRequestMaxResultsInteger)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPlaceIndexesRequestMaxResultsInteger = Int32
+
+    alias ListPlaceIndexesResponse = NamedTuple(
+      "Entries" : ListPlaceIndexesResponseEntryList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPlaceIndexesResponseEntry = NamedTuple(
+      "CreateTime" : Timestamp,
+      "DataSource" : String,
+      "Description" : ResourceDescription,
+      "IndexName" : ResourceName,
+      "UpdateTime" : Timestamp
+    )
+
+    alias ListPlaceIndexesResponseEntryList = Array(ListPlaceIndexesResponseEntry)
+
+    alias ListTrackerConsumersRequest = NamedTuple(
+      "MaxResults" : (ListTrackerConsumersRequestMaxResultsInteger)?,
+      "NextToken" : (Token)?,
+      "TrackerName" : ResourceName
+    )
+
+    alias ListTrackerConsumersRequestMaxResultsInteger = Int32
+
+    alias ListTrackerConsumersResponse = NamedTuple(
+      "ConsumerArns" : ArnList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTrackersRequest = NamedTuple(
+      "MaxResults" : (ListTrackersRequestMaxResultsInteger)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTrackersRequestMaxResultsInteger = Int32
+
+    alias ListTrackersResponse = NamedTuple(
+      "Entries" : ListTrackersResponseEntryList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTrackersResponseEntry = NamedTuple(
+      "CreateTime" : Timestamp,
+      "Description" : ResourceDescription,
+      "TrackerName" : ResourceName,
+      "UpdateTime" : Timestamp
+    )
+
+    alias ListTrackersResponseEntryList = Array(ListTrackersResponseEntry)
+
+    alias MapConfiguration = NamedTuple(
+      "Style" : MapStyle
+    )
+
+    alias MapStyle = String
+
+    alias Place = NamedTuple(
+      "AddressNumber" : (String)?,
+      "Country" : (String)?,
+      "Geometry" : PlaceGeometry,
+      "Label" : (String)?,
+      "Municipality" : (String)?,
+      "Neighborhood" : (String)?,
+      "PostalCode" : (String)?,
+      "Region" : (String)?,
+      "Street" : (String)?,
+      "SubRegion" : (String)?
+    )
+
+    alias PlaceGeometry = NamedTuple(
+      "Point" : (Position)?
+    )
+
+    alias PlaceIndexSearchResultLimit = Int32
+
+    alias Position = Array(Double)
+
+    alias PricingPlan = String
+
+    alias PutGeofenceRequest = NamedTuple(
+      "CollectionName" : ResourceName,
+      "GeofenceId" : Id,
+      "Geometry" : GeofenceGeometry
+    )
+
+    alias PutGeofenceResponse = NamedTuple(
+      "CreateTime" : Timestamp,
+      "GeofenceId" : Id,
+      "UpdateTime" : Timestamp
+    )
+
+    alias ResourceDescription = String
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : String
+    )
+
+    alias SearchForPositionResult = NamedTuple(
+      "Place" : Place
+    )
+
+    alias SearchForPositionResultList = Array(SearchForPositionResult)
+
+    alias SearchForTextResult = NamedTuple(
+      "Place" : Place
+    )
+
+    alias SearchForTextResultList = Array(SearchForTextResult)
+
+    alias SearchPlaceIndexForPositionRequest = NamedTuple(
+      "IndexName" : ResourceName,
+      "MaxResults" : (PlaceIndexSearchResultLimit)?,
+      "Position" : Position
+    )
+
+    alias SearchPlaceIndexForPositionResponse = NamedTuple(
+      "Results" : SearchForPositionResultList,
+      "Summary" : SearchPlaceIndexForPositionSummary
+    )
+
+    alias SearchPlaceIndexForPositionSummary = NamedTuple(
+      "DataSource" : String,
+      "MaxResults" : (PlaceIndexSearchResultLimit)?,
+      "Position" : Position
+    )
+
+    alias SearchPlaceIndexForTextRequest = NamedTuple(
+      "BiasPosition" : (Position)?,
+      "FilterBBox" : (BoundingBox)?,
+      "FilterCountries" : (CountryCodeList)?,
+      "IndexName" : ResourceName,
+      "MaxResults" : (PlaceIndexSearchResultLimit)?,
+      "Text" : SyntheticSearchPlaceIndexForTextRequestString
+    )
+
+    alias SearchPlaceIndexForTextResponse = NamedTuple(
+      "Results" : SearchForTextResultList,
+      "Summary" : SearchPlaceIndexForTextSummary
+    )
+
+    alias SearchPlaceIndexForTextSummary = NamedTuple(
+      "BiasPosition" : (Position)?,
+      "DataSource" : String,
+      "FilterBBox" : (BoundingBox)?,
+      "FilterCountries" : (CountryCodeList)?,
+      "MaxResults" : (PlaceIndexSearchResultLimit)?,
+      "ResultBBox" : (BoundingBox)?,
+      "Text" : SyntheticSearchPlaceIndexForTextSummaryString
+    )
+
+    alias String = String
+
+    alias SyntheticSearchPlaceIndexForTextRequestString = String
+
+    alias SyntheticSearchPlaceIndexForTextSummaryString = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : String
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias ValidationException = NamedTuple(
+      "FieldList" : ValidationExceptionFieldList,
+      "Message" : String,
+      "Reason" : ValidationExceptionReason
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "Message" : String,
+      "Name" : String
+    )
+
+    alias ValidationExceptionFieldList = Array(ValidationExceptionField)
+
+    alias ValidationExceptionReason = String
   end
 end

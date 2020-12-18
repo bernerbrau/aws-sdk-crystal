@@ -370,8 +370,8 @@ module Aws::AppConfig
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -472,8 +472,8 @@ module Aws::AppConfig
     #
     # @overload create_configuration_profile(**params)
     # @param [Hash] params ({})
-    def create_configuration_profile(params = {}, **options)
-      req = build_request(:create_configuration_profile, params)
+    def create_configuration_profile(, **options)
+      req = build_request(:create_configuration_profile, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::AppConfig
     #
     # @overload create_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def create_deployment_strategy(params = {}, **options)
-      req = build_request(:create_deployment_strategy, params)
+    def create_deployment_strategy(, **options)
+      req = build_request(:create_deployment_strategy, )
       req.send_request(options)
     end
 
@@ -651,8 +651,8 @@ module Aws::AppConfig
     #
     # @overload create_environment(**params)
     # @param [Hash] params ({})
-    def create_environment(params = {}, **options)
-      req = build_request(:create_environment, params)
+    def create_environment(, **options)
+      req = build_request(:create_environment, )
       req.send_request(options)
     end
 
@@ -718,8 +718,8 @@ module Aws::AppConfig
     #
     # @overload create_hosted_configuration_version(**params)
     # @param [Hash] params ({})
-    def create_hosted_configuration_version(params = {}, **options)
-      req = build_request(:create_hosted_configuration_version, params)
+    def create_hosted_configuration_version(, **options)
+      req = build_request(:create_hosted_configuration_version, )
       req.send_request(options)
     end
 
@@ -741,8 +741,8 @@ module Aws::AppConfig
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -769,8 +769,8 @@ module Aws::AppConfig
     #
     # @overload delete_configuration_profile(**params)
     # @param [Hash] params ({})
-    def delete_configuration_profile(params = {}, **options)
-      req = build_request(:delete_configuration_profile, params)
+    def delete_configuration_profile(, **options)
+      req = build_request(:delete_configuration_profile, )
       req.send_request(options)
     end
 
@@ -792,8 +792,8 @@ module Aws::AppConfig
     #
     # @overload delete_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def delete_deployment_strategy(params = {}, **options)
-      req = build_request(:delete_deployment_strategy, params)
+    def delete_deployment_strategy(, **options)
+      req = build_request(:delete_deployment_strategy, )
       req.send_request(options)
     end
 
@@ -819,8 +819,8 @@ module Aws::AppConfig
     #
     # @overload delete_environment(**params)
     # @param [Hash] params ({})
-    def delete_environment(params = {}, **options)
-      req = build_request(:delete_environment, params)
+    def delete_environment(, **options)
+      req = build_request(:delete_environment, )
       req.send_request(options)
     end
 
@@ -850,8 +850,8 @@ module Aws::AppConfig
     #
     # @overload delete_hosted_configuration_version(**params)
     # @param [Hash] params ({})
-    def delete_hosted_configuration_version(params = {}, **options)
-      req = build_request(:delete_hosted_configuration_version, params)
+    def delete_hosted_configuration_version(, **options)
+      req = build_request(:delete_hosted_configuration_version, )
       req.send_request(options)
     end
 
@@ -882,8 +882,8 @@ module Aws::AppConfig
     #
     # @overload get_application(**params)
     # @param [Hash] params ({})
-    def get_application(params = {}, **options)
-      req = build_request(:get_application, params)
+    def get_application(, **options)
+      req = build_request(:get_application, )
       req.send_request(options)
     end
 
@@ -967,8 +967,8 @@ module Aws::AppConfig
     #
     # @overload get_configuration(**params)
     # @param [Hash] params ({})
-    def get_configuration(params = {}, **options)
-      req = build_request(:get_configuration, params)
+    def get_configuration(, **options)
+      req = build_request(:get_configuration, )
       req.send_request(options)
     end
 
@@ -1014,8 +1014,8 @@ module Aws::AppConfig
     #
     # @overload get_configuration_profile(**params)
     # @param [Hash] params ({})
-    def get_configuration_profile(params = {}, **options)
-      req = build_request(:get_configuration_profile, params)
+    def get_configuration_profile(, **options)
+      req = build_request(:get_configuration_profile, )
       req.send_request(options)
     end
 
@@ -1090,8 +1090,8 @@ module Aws::AppConfig
     #
     # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, **options)
-      req = build_request(:get_deployment, params)
+    def get_deployment(, **options)
+      req = build_request(:get_deployment, )
       req.send_request(options)
     end
 
@@ -1137,8 +1137,8 @@ module Aws::AppConfig
     #
     # @overload get_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def get_deployment_strategy(params = {}, **options)
-      req = build_request(:get_deployment_strategy, params)
+    def get_deployment_strategy(, **options)
+      req = build_request(:get_deployment_strategy, )
       req.send_request(options)
     end
 
@@ -1187,8 +1187,8 @@ module Aws::AppConfig
     #
     # @overload get_environment(**params)
     # @param [Hash] params ({})
-    def get_environment(params = {}, **options)
-      req = build_request(:get_environment, params)
+    def get_environment(, **options)
+      req = build_request(:get_environment, )
       req.send_request(options)
     end
 
@@ -1233,8 +1233,8 @@ module Aws::AppConfig
     #
     # @overload get_hosted_configuration_version(**params)
     # @param [Hash] params ({})
-    def get_hosted_configuration_version(params = {}, **options)
-      req = build_request(:get_hosted_configuration_version, params)
+    def get_hosted_configuration_version(, **options)
+      req = build_request(:get_hosted_configuration_version, )
       req.send_request(options)
     end
 
@@ -1275,8 +1275,8 @@ module Aws::AppConfig
     #
     # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, **options)
-      req = build_request(:list_applications, params)
+    def list_applications(, **options)
+      req = build_request(:list_applications, )
       req.send_request(options)
     end
 
@@ -1324,8 +1324,8 @@ module Aws::AppConfig
     #
     # @overload list_configuration_profiles(**params)
     # @param [Hash] params ({})
-    def list_configuration_profiles(params = {}, **options)
-      req = build_request(:list_configuration_profiles, params)
+    def list_configuration_profiles(, **options)
+      req = build_request(:list_configuration_profiles, )
       req.send_request(options)
     end
 
@@ -1371,8 +1371,8 @@ module Aws::AppConfig
     #
     # @overload list_deployment_strategies(**params)
     # @param [Hash] params ({})
-    def list_deployment_strategies(params = {}, **options)
-      req = build_request(:list_deployment_strategies, params)
+    def list_deployment_strategies(, **options)
+      req = build_request(:list_deployment_strategies, )
       req.send_request(options)
     end
 
@@ -1429,8 +1429,8 @@ module Aws::AppConfig
     #
     # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, **options)
-      req = build_request(:list_deployments, params)
+    def list_deployments(, **options)
+      req = build_request(:list_deployments, )
       req.send_request(options)
     end
 
@@ -1480,8 +1480,8 @@ module Aws::AppConfig
     #
     # @overload list_environments(**params)
     # @param [Hash] params ({})
-    def list_environments(params = {}, **options)
-      req = build_request(:list_environments, params)
+    def list_environments(, **options)
+      req = build_request(:list_environments, )
       req.send_request(options)
     end
 
@@ -1533,8 +1533,8 @@ module Aws::AppConfig
     #
     # @overload list_hosted_configuration_versions(**params)
     # @param [Hash] params ({})
-    def list_hosted_configuration_versions(params = {}, **options)
-      req = build_request(:list_hosted_configuration_versions, params)
+    def list_hosted_configuration_versions(, **options)
+      req = build_request(:list_hosted_configuration_versions, )
       req.send_request(options)
     end
 
@@ -1562,8 +1562,8 @@ module Aws::AppConfig
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1656,8 +1656,8 @@ module Aws::AppConfig
     #
     # @overload start_deployment(**params)
     # @param [Hash] params ({})
-    def start_deployment(params = {}, **options)
-      req = build_request(:start_deployment, params)
+    def start_deployment(, **options)
+      req = build_request(:start_deployment, )
       req.send_request(options)
     end
 
@@ -1732,8 +1732,8 @@ module Aws::AppConfig
     #
     # @overload stop_deployment(**params)
     # @param [Hash] params ({})
-    def stop_deployment(params = {}, **options)
-      req = build_request(:stop_deployment, params)
+    def stop_deployment(, **options)
+      req = build_request(:stop_deployment, )
       req.send_request(options)
     end
 
@@ -1765,8 +1765,8 @@ module Aws::AppConfig
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1791,8 +1791,8 @@ module Aws::AppConfig
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1831,8 +1831,8 @@ module Aws::AppConfig
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 
@@ -1899,8 +1899,8 @@ module Aws::AppConfig
     #
     # @overload update_configuration_profile(**params)
     # @param [Hash] params ({})
-    def update_configuration_profile(params = {}, **options)
-      req = build_request(:update_configuration_profile, params)
+    def update_configuration_profile(, **options)
+      req = build_request(:update_configuration_profile, )
       req.send_request(options)
     end
 
@@ -1990,8 +1990,8 @@ module Aws::AppConfig
     #
     # @overload update_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def update_deployment_strategy(params = {}, **options)
-      req = build_request(:update_deployment_strategy, params)
+    def update_deployment_strategy(, **options)
+      req = build_request(:update_deployment_strategy, )
       req.send_request(options)
     end
 
@@ -2051,8 +2051,8 @@ module Aws::AppConfig
     #
     # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, **options)
-      req = build_request(:update_environment, params)
+    def update_environment(, **options)
+      req = build_request(:update_environment, )
       req.send_request(options)
     end
 
@@ -2082,8 +2082,8 @@ module Aws::AppConfig
     #
     # @overload validate_configuration(**params)
     # @param [Hash] params ({})
-    def validate_configuration(params = {}, **options)
-      req = build_request(:validate_configuration, params)
+    def validate_configuration(, **options)
+      req = build_request(:validate_configuration, )
       req.send_request(options)
     end
 

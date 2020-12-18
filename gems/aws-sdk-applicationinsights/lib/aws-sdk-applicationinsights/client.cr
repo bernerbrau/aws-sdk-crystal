@@ -393,8 +393,8 @@ module Aws::ApplicationInsights
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -424,8 +424,8 @@ module Aws::ApplicationInsights
     #
     # @overload create_component(**params)
     # @param [Hash] params ({})
-    def create_component(params = {}, **options)
-      req = build_request(:create_component, params)
+    def create_component(, **options)
+      req = build_request(:create_component, )
       req.send_request(options)
     end
 
@@ -484,8 +484,8 @@ module Aws::ApplicationInsights
     #
     # @overload create_log_pattern(**params)
     # @param [Hash] params ({})
-    def create_log_pattern(params = {}, **options)
-      req = build_request(:create_log_pattern, params)
+    def create_log_pattern(, **options)
+      req = build_request(:create_log_pattern, )
       req.send_request(options)
     end
 
@@ -507,8 +507,8 @@ module Aws::ApplicationInsights
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -535,8 +535,8 @@ module Aws::ApplicationInsights
     #
     # @overload delete_component(**params)
     # @param [Hash] params ({})
-    def delete_component(params = {}, **options)
-      req = build_request(:delete_component, params)
+    def delete_component(, **options)
+      req = build_request(:delete_component, )
       req.send_request(options)
     end
 
@@ -565,8 +565,8 @@ module Aws::ApplicationInsights
     #
     # @overload delete_log_pattern(**params)
     # @param [Hash] params ({})
-    def delete_log_pattern(params = {}, **options)
-      req = build_request(:delete_log_pattern, params)
+    def delete_log_pattern(, **options)
+      req = build_request(:delete_log_pattern, )
       req.send_request(options)
     end
 
@@ -598,8 +598,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_application(**params)
     # @param [Hash] params ({})
-    def describe_application(params = {}, **options)
-      req = build_request(:describe_application, params)
+    def describe_application(, **options)
+      req = build_request(:describe_application, )
       req.send_request(options)
     end
 
@@ -642,8 +642,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_component(**params)
     # @param [Hash] params ({})
-    def describe_component(params = {}, **options)
-      req = build_request(:describe_component, params)
+    def describe_component(, **options)
+      req = build_request(:describe_component, )
       req.send_request(options)
     end
 
@@ -678,8 +678,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_component_configuration(**params)
     # @param [Hash] params ({})
-    def describe_component_configuration(params = {}, **options)
-      req = build_request(:describe_component_configuration, params)
+    def describe_component_configuration(, **options)
+      req = build_request(:describe_component_configuration, )
       req.send_request(options)
     end
 
@@ -716,8 +716,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_component_configuration_recommendation(**params)
     # @param [Hash] params ({})
-    def describe_component_configuration_recommendation(params = {}, **options)
-      req = build_request(:describe_component_configuration_recommendation, params)
+    def describe_component_configuration_recommendation(, **options)
+      req = build_request(:describe_component_configuration_recommendation, )
       req.send_request(options)
     end
 
@@ -757,8 +757,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_log_pattern(**params)
     # @param [Hash] params ({})
-    def describe_log_pattern(params = {}, **options)
-      req = build_request(:describe_log_pattern, params)
+    def describe_log_pattern(, **options)
+      req = build_request(:describe_log_pattern, )
       req.send_request(options)
     end
 
@@ -829,8 +829,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_observation(**params)
     # @param [Hash] params ({})
-    def describe_observation(params = {}, **options)
-      req = build_request(:describe_observation, params)
+    def describe_observation(, **options)
+      req = build_request(:describe_observation, )
       req.send_request(options)
     end
 
@@ -867,8 +867,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_problem(**params)
     # @param [Hash] params ({})
-    def describe_problem(params = {}, **options)
-      req = build_request(:describe_problem, params)
+    def describe_problem(, **options)
+      req = build_request(:describe_problem, )
       req.send_request(options)
     end
 
@@ -940,8 +940,8 @@ module Aws::ApplicationInsights
     #
     # @overload describe_problem_observations(**params)
     # @param [Hash] params ({})
-    def describe_problem_observations(params = {}, **options)
-      req = build_request(:describe_problem_observations, params)
+    def describe_problem_observations(, **options)
+      req = build_request(:describe_problem_observations, )
       req.send_request(options)
     end
 
@@ -984,8 +984,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, **options)
-      req = build_request(:list_applications, params)
+    def list_applications(, **options)
+      req = build_request(:list_applications, )
       req.send_request(options)
     end
 
@@ -1036,8 +1036,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_components(**params)
     # @param [Hash] params ({})
-    def list_components(params = {}, **options)
-      req = build_request(:list_components, params)
+    def list_components(, **options)
+      req = build_request(:list_components, )
       req.send_request(options)
     end
 
@@ -1116,8 +1116,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_configuration_history(**params)
     # @param [Hash] params ({})
-    def list_configuration_history(params = {}, **options)
-      req = build_request(:list_configuration_history, params)
+    def list_configuration_history(, **options)
+      req = build_request(:list_configuration_history, )
       req.send_request(options)
     end
 
@@ -1161,8 +1161,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_log_pattern_sets(**params)
     # @param [Hash] params ({})
-    def list_log_pattern_sets(params = {}, **options)
-      req = build_request(:list_log_pattern_sets, params)
+    def list_log_pattern_sets(, **options)
+      req = build_request(:list_log_pattern_sets, )
       req.send_request(options)
     end
 
@@ -1213,8 +1213,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_log_patterns(**params)
     # @param [Hash] params ({})
-    def list_log_patterns(params = {}, **options)
-      req = build_request(:list_log_patterns, params)
+    def list_log_patterns(, **options)
+      req = build_request(:list_log_patterns, )
       req.send_request(options)
     end
 
@@ -1277,8 +1277,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_problems(**params)
     # @param [Hash] params ({})
-    def list_problems(params = {}, **options)
-      req = build_request(:list_problems, params)
+    def list_problems(, **options)
+      req = build_request(:list_problems, )
       req.send_request(options)
     end
 
@@ -1313,8 +1313,8 @@ module Aws::ApplicationInsights
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1357,8 +1357,8 @@ module Aws::ApplicationInsights
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1391,8 +1391,8 @@ module Aws::ApplicationInsights
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1446,8 +1446,8 @@ module Aws::ApplicationInsights
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 
@@ -1481,8 +1481,8 @@ module Aws::ApplicationInsights
     #
     # @overload update_component(**params)
     # @param [Hash] params ({})
-    def update_component(params = {}, **options)
-      req = build_request(:update_component, params)
+    def update_component(, **options)
+      req = build_request(:update_component, )
       req.send_request(options)
     end
 
@@ -1534,8 +1534,8 @@ module Aws::ApplicationInsights
     #
     # @overload update_component_configuration(**params)
     # @param [Hash] params ({})
-    def update_component_configuration(params = {}, **options)
-      req = build_request(:update_component_configuration, params)
+    def update_component_configuration(, **options)
+      req = build_request(:update_component_configuration, )
       req.send_request(options)
     end
 
@@ -1594,8 +1594,8 @@ module Aws::ApplicationInsights
     #
     # @overload update_log_pattern(**params)
     # @param [Hash] params ({})
-    def update_log_pattern(params = {}, **options)
-      req = build_request(:update_log_pattern, params)
+    def update_log_pattern(, **options)
+      req = build_request(:update_log_pattern, )
       req.send_request(options)
     end
 

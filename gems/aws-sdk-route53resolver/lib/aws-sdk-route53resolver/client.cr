@@ -392,8 +392,8 @@ module Aws::Route53Resolver
     #
     # @overload associate_resolver_endpoint_ip_address(**params)
     # @param [Hash] params ({})
-    def associate_resolver_endpoint_ip_address(params = {}, **options)
-      req = build_request(:associate_resolver_endpoint_ip_address, params)
+    def associate_resolver_endpoint_ip_address(, **options)
+      req = build_request(:associate_resolver_endpoint_ip_address, )
       req.send_request(options)
     end
 
@@ -453,8 +453,8 @@ module Aws::Route53Resolver
     #
     # @overload associate_resolver_query_log_config(**params)
     # @param [Hash] params ({})
-    def associate_resolver_query_log_config(params = {}, **options)
-      req = build_request(:associate_resolver_query_log_config, params)
+    def associate_resolver_query_log_config(, **options)
+      req = build_request(:associate_resolver_query_log_config, )
       req.send_request(options)
     end
 
@@ -509,8 +509,8 @@ module Aws::Route53Resolver
     #
     # @overload associate_resolver_rule(**params)
     # @param [Hash] params ({})
-    def associate_resolver_rule(params = {}, **options)
-      req = build_request(:associate_resolver_rule, params)
+    def associate_resolver_rule(, **options)
+      req = build_request(:associate_resolver_rule, )
       req.send_request(options)
     end
 
@@ -605,8 +605,8 @@ module Aws::Route53Resolver
     #
     # @overload create_resolver_endpoint(**params)
     # @param [Hash] params ({})
-    def create_resolver_endpoint(params = {}, **options)
-      req = build_request(:create_resolver_endpoint, params)
+    def create_resolver_endpoint(, **options)
+      req = build_request(:create_resolver_endpoint, )
       req.send_request(options)
     end
 
@@ -702,8 +702,8 @@ module Aws::Route53Resolver
     #
     # @overload create_resolver_query_log_config(**params)
     # @param [Hash] params ({})
-    def create_resolver_query_log_config(params = {}, **options)
-      req = build_request(:create_resolver_query_log_config, params)
+    def create_resolver_query_log_config(, **options)
+      req = build_request(:create_resolver_query_log_config, )
       req.send_request(options)
     end
 
@@ -809,8 +809,8 @@ module Aws::Route53Resolver
     #
     # @overload create_resolver_rule(**params)
     # @param [Hash] params ({})
-    def create_resolver_rule(params = {}, **options)
-      req = build_request(:create_resolver_rule, params)
+    def create_resolver_rule(, **options)
+      req = build_request(:create_resolver_rule, )
       req.send_request(options)
     end
 
@@ -857,8 +857,8 @@ module Aws::Route53Resolver
     #
     # @overload delete_resolver_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_resolver_endpoint(params = {}, **options)
-      req = build_request(:delete_resolver_endpoint, params)
+    def delete_resolver_endpoint(, **options)
+      req = build_request(:delete_resolver_endpoint, )
       req.send_request(options)
     end
 
@@ -915,8 +915,8 @@ module Aws::Route53Resolver
     #
     # @overload delete_resolver_query_log_config(**params)
     # @param [Hash] params ({})
-    def delete_resolver_query_log_config(params = {}, **options)
-      req = build_request(:delete_resolver_query_log_config, params)
+    def delete_resolver_query_log_config(, **options)
+      req = build_request(:delete_resolver_query_log_config, )
       req.send_request(options)
     end
 
@@ -965,8 +965,8 @@ module Aws::Route53Resolver
     #
     # @overload delete_resolver_rule(**params)
     # @param [Hash] params ({})
-    def delete_resolver_rule(params = {}, **options)
-      req = build_request(:delete_resolver_rule, params)
+    def delete_resolver_rule(, **options)
+      req = build_request(:delete_resolver_rule, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::Route53Resolver
     #
     # @overload disassociate_resolver_endpoint_ip_address(**params)
     # @param [Hash] params ({})
-    def disassociate_resolver_endpoint_ip_address(params = {}, **options)
-      req = build_request(:disassociate_resolver_endpoint_ip_address, params)
+    def disassociate_resolver_endpoint_ip_address(, **options)
+      req = build_request(:disassociate_resolver_endpoint_ip_address, )
       req.send_request(options)
     end
 
@@ -1076,8 +1076,8 @@ module Aws::Route53Resolver
     #
     # @overload disassociate_resolver_query_log_config(**params)
     # @param [Hash] params ({})
-    def disassociate_resolver_query_log_config(params = {}, **options)
-      req = build_request(:disassociate_resolver_query_log_config, params)
+    def disassociate_resolver_query_log_config(, **options)
+      req = build_request(:disassociate_resolver_query_log_config, )
       req.send_request(options)
     end
 
@@ -1120,8 +1120,8 @@ module Aws::Route53Resolver
     #
     # @overload disassociate_resolver_rule(**params)
     # @param [Hash] params ({})
-    def disassociate_resolver_rule(params = {}, **options)
-      req = build_request(:disassociate_resolver_rule, params)
+    def disassociate_resolver_rule(, **options)
+      req = build_request(:disassociate_resolver_rule, )
       req.send_request(options)
     end
 
@@ -1163,8 +1163,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_endpoint(**params)
     # @param [Hash] params ({})
-    def get_resolver_endpoint(params = {}, **options)
-      req = build_request(:get_resolver_endpoint, params)
+    def get_resolver_endpoint(, **options)
+      req = build_request(:get_resolver_endpoint, )
       req.send_request(options)
     end
 
@@ -1203,8 +1203,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_query_log_config(**params)
     # @param [Hash] params ({})
-    def get_resolver_query_log_config(params = {}, **options)
-      req = build_request(:get_resolver_query_log_config, params)
+    def get_resolver_query_log_config(, **options)
+      req = build_request(:get_resolver_query_log_config, )
       req.send_request(options)
     end
 
@@ -1241,8 +1241,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_query_log_config_association(**params)
     # @param [Hash] params ({})
-    def get_resolver_query_log_config_association(params = {}, **options)
-      req = build_request(:get_resolver_query_log_config_association, params)
+    def get_resolver_query_log_config_association(, **options)
+      req = build_request(:get_resolver_query_log_config_association, )
       req.send_request(options)
     end
 
@@ -1272,8 +1272,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_query_log_config_policy(**params)
     # @param [Hash] params ({})
-    def get_resolver_query_log_config_policy(params = {}, **options)
-      req = build_request(:get_resolver_query_log_config_policy, params)
+    def get_resolver_query_log_config_policy(, **options)
+      req = build_request(:get_resolver_query_log_config_policy, )
       req.send_request(options)
     end
 
@@ -1317,8 +1317,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_rule(**params)
     # @param [Hash] params ({})
-    def get_resolver_rule(params = {}, **options)
-      req = build_request(:get_resolver_rule, params)
+    def get_resolver_rule(, **options)
+      req = build_request(:get_resolver_rule, )
       req.send_request(options)
     end
 
@@ -1357,8 +1357,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_rule_association(**params)
     # @param [Hash] params ({})
-    def get_resolver_rule_association(params = {}, **options)
-      req = build_request(:get_resolver_rule_association, params)
+    def get_resolver_rule_association(, **options)
+      req = build_request(:get_resolver_rule_association, )
       req.send_request(options)
     end
 
@@ -1388,8 +1388,8 @@ module Aws::Route53Resolver
     #
     # @overload get_resolver_rule_policy(**params)
     # @param [Hash] params ({})
-    def get_resolver_rule_policy(params = {}, **options)
-      req = build_request(:get_resolver_rule_policy, params)
+    def get_resolver_rule_policy(, **options)
+      req = build_request(:get_resolver_rule_policy, )
       req.send_request(options)
     end
 
@@ -1446,8 +1446,8 @@ module Aws::Route53Resolver
     #
     # @overload list_resolver_endpoint_ip_addresses(**params)
     # @param [Hash] params ({})
-    def list_resolver_endpoint_ip_addresses(params = {}, **options)
-      req = build_request(:list_resolver_endpoint_ip_addresses, params)
+    def list_resolver_endpoint_ip_addresses(, **options)
+      req = build_request(:list_resolver_endpoint_ip_addresses, )
       req.send_request(options)
     end
 
@@ -1522,8 +1522,8 @@ module Aws::Route53Resolver
     #
     # @overload list_resolver_endpoints(**params)
     # @param [Hash] params ({})
-    def list_resolver_endpoints(params = {}, **options)
-      req = build_request(:list_resolver_endpoints, params)
+    def list_resolver_endpoints(, **options)
+      req = build_request(:list_resolver_endpoints, )
       req.send_request(options)
     end
 
@@ -1664,8 +1664,8 @@ module Aws::Route53Resolver
     #
     # @overload list_resolver_query_log_config_associations(**params)
     # @param [Hash] params ({})
-    def list_resolver_query_log_config_associations(params = {}, **options)
-      req = build_request(:list_resolver_query_log_config_associations, params)
+    def list_resolver_query_log_config_associations(, **options)
+      req = build_request(:list_resolver_query_log_config_associations, )
       req.send_request(options)
     end
 
@@ -1809,8 +1809,8 @@ module Aws::Route53Resolver
     #
     # @overload list_resolver_query_log_configs(**params)
     # @param [Hash] params ({})
-    def list_resolver_query_log_configs(params = {}, **options)
-      req = build_request(:list_resolver_query_log_configs, params)
+    def list_resolver_query_log_configs(, **options)
+      req = build_request(:list_resolver_query_log_configs, )
       req.send_request(options)
     end
 
@@ -1878,8 +1878,8 @@ module Aws::Route53Resolver
     #
     # @overload list_resolver_rule_associations(**params)
     # @param [Hash] params ({})
-    def list_resolver_rule_associations(params = {}, **options)
-      req = build_request(:list_resolver_rule_associations, params)
+    def list_resolver_rule_associations(, **options)
+      req = build_request(:list_resolver_rule_associations, )
       req.send_request(options)
     end
 
@@ -1957,8 +1957,8 @@ module Aws::Route53Resolver
     #
     # @overload list_resolver_rules(**params)
     # @param [Hash] params ({})
-    def list_resolver_rules(params = {}, **options)
-      req = build_request(:list_resolver_rules, params)
+    def list_resolver_rules(, **options)
+      req = build_request(:list_resolver_rules, )
       req.send_request(options)
     end
 
@@ -2007,8 +2007,8 @@ module Aws::Route53Resolver
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2059,8 +2059,8 @@ module Aws::Route53Resolver
     #
     # @overload put_resolver_query_log_config_policy(**params)
     # @param [Hash] params ({})
-    def put_resolver_query_log_config_policy(params = {}, **options)
-      req = build_request(:put_resolver_query_log_config_policy, params)
+    def put_resolver_query_log_config_policy(, **options)
+      req = build_request(:put_resolver_query_log_config_policy, )
       req.send_request(options)
     end
 
@@ -2112,8 +2112,8 @@ module Aws::Route53Resolver
     #
     # @overload put_resolver_rule_policy(**params)
     # @param [Hash] params ({})
-    def put_resolver_rule_policy(params = {}, **options)
-      req = build_request(:put_resolver_rule_policy, params)
+    def put_resolver_rule_policy(, **options)
+      req = build_request(:put_resolver_rule_policy, )
       req.send_request(options)
     end
 
@@ -2166,8 +2166,8 @@ module Aws::Route53Resolver
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2215,8 +2215,8 @@ module Aws::Route53Resolver
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2259,8 +2259,8 @@ module Aws::Route53Resolver
     #
     # @overload update_resolver_endpoint(**params)
     # @param [Hash] params ({})
-    def update_resolver_endpoint(params = {}, **options)
-      req = build_request(:update_resolver_endpoint, params)
+    def update_resolver_endpoint(, **options)
+      req = build_request(:update_resolver_endpoint, )
       req.send_request(options)
     end
 
@@ -2317,8 +2317,8 @@ module Aws::Route53Resolver
     #
     # @overload update_resolver_rule(**params)
     # @param [Hash] params ({})
-    def update_resolver_rule(params = {}, **options)
-      req = build_request(:update_resolver_rule, params)
+    def update_resolver_rule(, **options)
+      req = build_request(:update_resolver_rule, )
       req.send_request(options)
     end
 

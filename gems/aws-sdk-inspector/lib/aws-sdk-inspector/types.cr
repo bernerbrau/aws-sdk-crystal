@@ -3280,5 +3280,866 @@ module Aws::Inspector
       include Aws::Structure
     end
 
+    alias AccessDeniedErrorCode = String
+
+    alias AccessDeniedException = NamedTuple(
+      "message" : ErrorMessage,
+      "errorCode" : AccessDeniedErrorCode,
+      "canRetry" : Bool
+    )
+
+    alias AddAttributesToFindingsRequest = NamedTuple(
+      "findingArns" : AddRemoveAttributesFindingArnList,
+      "attributes" : UserAttributeList
+    )
+
+    alias AddAttributesToFindingsResponse = NamedTuple(
+      "failedItems" : FailedItems
+    )
+
+    alias AddRemoveAttributesFindingArnList = Array(Arn)
+
+    alias AgentAlreadyRunningAssessment = NamedTuple(
+      "agentId" : AgentId,
+      "assessmentRunArn" : Arn
+    )
+
+    alias AgentAlreadyRunningAssessmentList = Array(AgentAlreadyRunningAssessment)
+
+    alias AgentFilter = NamedTuple(
+      "agentHealths" : AgentHealthList,
+      "agentHealthCodes" : AgentHealthCodeList
+    )
+
+    alias AgentHealth = String
+
+    alias AgentHealthCode = String
+
+    alias AgentHealthCodeList = Array(AgentHealthCode)
+
+    alias AgentHealthList = Array(AgentHealth)
+
+    alias AgentId = String
+
+    alias AgentIdList = Array(AgentId)
+
+    alias AgentPreview = NamedTuple(
+      "hostname" : (Hostname)?,
+      "agentId" : AgentId,
+      "autoScalingGroup" : (AutoScalingGroup)?,
+      "agentHealth" : (AgentHealth)?,
+      "agentVersion" : (AgentVersion)?,
+      "operatingSystem" : (OperatingSystem)?,
+      "kernelVersion" : (KernelVersion)?,
+      "ipv4Address" : (Ipv4Address)?
+    )
+
+    alias AgentPreviewList = Array(AgentPreview)
+
+    alias AgentVersion = String
+
+    alias AgentsAlreadyRunningAssessmentException = NamedTuple(
+      "message" : ErrorMessage,
+      "agents" : AgentAlreadyRunningAssessmentList,
+      "agentsTruncated" : Bool,
+      "canRetry" : Bool
+    )
+
+    alias AmiId = String
+
+    alias Arn = String
+
+    alias ArnCount = Int32
+
+    alias AssessmentRulesPackageArnList = Array(Arn)
+
+    alias AssessmentRun = NamedTuple(
+      "arn" : Arn,
+      "name" : AssessmentRunName,
+      "assessmentTemplateArn" : Arn,
+      "state" : AssessmentRunState,
+      "durationInSeconds" : AssessmentRunDuration,
+      "rulesPackageArns" : AssessmentRulesPackageArnList,
+      "userAttributesForFindings" : UserAttributeList,
+      "createdAt" : Timestamp,
+      "startedAt" : (Timestamp)?,
+      "completedAt" : (Timestamp)?,
+      "stateChangedAt" : Timestamp,
+      "dataCollected" : Bool,
+      "stateChanges" : AssessmentRunStateChangeList,
+      "notifications" : AssessmentRunNotificationList,
+      "findingCounts" : AssessmentRunFindingCounts
+    )
+
+    alias AssessmentRunAgent = NamedTuple(
+      "agentId" : AgentId,
+      "assessmentRunArn" : Arn,
+      "agentHealth" : AgentHealth,
+      "agentHealthCode" : AgentHealthCode,
+      "agentHealthDetails" : (Message)?,
+      "autoScalingGroup" : (AutoScalingGroup)?,
+      "telemetryMetadata" : TelemetryMetadataList
+    )
+
+    alias AssessmentRunAgentList = Array(AssessmentRunAgent)
+
+    alias AssessmentRunDuration = Int32
+
+    alias AssessmentRunFilter = NamedTuple(
+      "namePattern" : (NamePattern)?,
+      "states" : (AssessmentRunStateList)?,
+      "durationRange" : (DurationRange)?,
+      "rulesPackageArns" : (FilterRulesPackageArnList)?,
+      "startTimeRange" : (TimestampRange)?,
+      "completionTimeRange" : (TimestampRange)?,
+      "stateChangeTimeRange" : (TimestampRange)?
+    )
+
+    alias AssessmentRunFindingCounts = Hash(Severity,FindingCount)
+
+    alias AssessmentRunInProgressArnList = Array(Arn)
+
+    alias AssessmentRunInProgressException = NamedTuple(
+      "message" : ErrorMessage,
+      "assessmentRunArns" : AssessmentRunInProgressArnList,
+      "assessmentRunArnsTruncated" : Bool,
+      "canRetry" : Bool
+    )
+
+    alias AssessmentRunList = Array(AssessmentRun)
+
+    alias AssessmentRunName = String
+
+    alias AssessmentRunNotification = NamedTuple(
+      "date" : Timestamp,
+      "event" : InspectorEvent,
+      "message" : (Message)?,
+      "error" : Bool,
+      "snsTopicArn" : (Arn)?,
+      "snsPublishStatusCode" : (AssessmentRunNotificationSnsStatusCode)?
+    )
+
+    alias AssessmentRunNotificationList = Array(AssessmentRunNotification)
+
+    alias AssessmentRunNotificationSnsStatusCode = String
+
+    alias AssessmentRunState = String
+
+    alias AssessmentRunStateChange = NamedTuple(
+      "stateChangedAt" : Timestamp,
+      "state" : AssessmentRunState
+    )
+
+    alias AssessmentRunStateChangeList = Array(AssessmentRunStateChange)
+
+    alias AssessmentRunStateList = Array(AssessmentRunState)
+
+    alias AssessmentTarget = NamedTuple(
+      "arn" : Arn,
+      "name" : AssessmentTargetName,
+      "resourceGroupArn" : (Arn)?,
+      "createdAt" : Timestamp,
+      "updatedAt" : Timestamp
+    )
+
+    alias AssessmentTargetFilter = NamedTuple(
+      "assessmentTargetNamePattern" : (NamePattern)?
+    )
+
+    alias AssessmentTargetList = Array(AssessmentTarget)
+
+    alias AssessmentTargetName = String
+
+    alias AssessmentTemplate = NamedTuple(
+      "arn" : Arn,
+      "name" : AssessmentTemplateName,
+      "assessmentTargetArn" : Arn,
+      "durationInSeconds" : AssessmentRunDuration,
+      "rulesPackageArns" : AssessmentTemplateRulesPackageArnList,
+      "userAttributesForFindings" : UserAttributeList,
+      "lastAssessmentRunArn" : (Arn)?,
+      "assessmentRunCount" : ArnCount,
+      "createdAt" : Timestamp
+    )
+
+    alias AssessmentTemplateFilter = NamedTuple(
+      "namePattern" : (NamePattern)?,
+      "durationRange" : (DurationRange)?,
+      "rulesPackageArns" : (FilterRulesPackageArnList)?
+    )
+
+    alias AssessmentTemplateList = Array(AssessmentTemplate)
+
+    alias AssessmentTemplateName = String
+
+    alias AssessmentTemplateRulesPackageArnList = Array(Arn)
+
+    alias AssetAttributes = NamedTuple(
+      "schemaVersion" : NumericVersion,
+      "agentId" : (AgentId)?,
+      "autoScalingGroup" : (AutoScalingGroup)?,
+      "amiId" : (AmiId)?,
+      "hostname" : (Hostname)?,
+      "ipv4Addresses" : (Ipv4AddressList)?,
+      "tags" : (Tags)?,
+      "networkInterfaces" : (NetworkInterfaces)?
+    )
+
+    alias AssetType = String
+
+    alias Attribute = NamedTuple(
+      "key" : AttributeKey,
+      "value" : (AttributeValue)?
+    )
+
+    alias AttributeKey = String
+
+    alias AttributeList = Array(Attribute)
+
+    alias AttributeValue = String
+
+    alias AutoScalingGroup = String
+
+    alias AutoScalingGroupList = Array(AutoScalingGroup)
+
+    alias BatchDescribeArnList = Array(Arn)
+
+    alias BatchDescribeExclusionsArnList = Array(Arn)
+
+    alias Bool = Bool
+
+    alias CreateAssessmentTargetRequest = NamedTuple(
+      "assessmentTargetName" : AssessmentTargetName,
+      "resourceGroupArn" : (Arn)?
+    )
+
+    alias CreateAssessmentTargetResponse = NamedTuple(
+      "assessmentTargetArn" : Arn
+    )
+
+    alias CreateAssessmentTemplateRequest = NamedTuple(
+      "assessmentTargetArn" : Arn,
+      "assessmentTemplateName" : AssessmentTemplateName,
+      "durationInSeconds" : AssessmentRunDuration,
+      "rulesPackageArns" : AssessmentTemplateRulesPackageArnList,
+      "userAttributesForFindings" : (UserAttributeList)?
+    )
+
+    alias CreateAssessmentTemplateResponse = NamedTuple(
+      "assessmentTemplateArn" : Arn
+    )
+
+    alias CreateExclusionsPreviewRequest = NamedTuple(
+      "assessmentTemplateArn" : Arn
+    )
+
+    alias CreateExclusionsPreviewResponse = NamedTuple(
+      "previewToken" : UUID
+    )
+
+    alias CreateResourceGroupRequest = NamedTuple(
+      "resourceGroupTags" : ResourceGroupTags
+    )
+
+    alias CreateResourceGroupResponse = NamedTuple(
+      "resourceGroupArn" : Arn
+    )
+
+    alias DeleteAssessmentRunRequest = NamedTuple(
+      "assessmentRunArn" : Arn
+    )
+
+    alias DeleteAssessmentTargetRequest = NamedTuple(
+      "assessmentTargetArn" : Arn
+    )
+
+    alias DeleteAssessmentTemplateRequest = NamedTuple(
+      "assessmentTemplateArn" : Arn
+    )
+
+    alias DescribeAssessmentRunsRequest = NamedTuple(
+      "assessmentRunArns" : BatchDescribeArnList
+    )
+
+    alias DescribeAssessmentRunsResponse = NamedTuple(
+      "assessmentRuns" : AssessmentRunList,
+      "failedItems" : FailedItems
+    )
+
+    alias DescribeAssessmentTargetsRequest = NamedTuple(
+      "assessmentTargetArns" : BatchDescribeArnList
+    )
+
+    alias DescribeAssessmentTargetsResponse = NamedTuple(
+      "assessmentTargets" : AssessmentTargetList,
+      "failedItems" : FailedItems
+    )
+
+    alias DescribeAssessmentTemplatesRequest = NamedTuple(
+      "assessmentTemplateArns" : BatchDescribeArnList
+    )
+
+    alias DescribeAssessmentTemplatesResponse = NamedTuple(
+      "assessmentTemplates" : AssessmentTemplateList,
+      "failedItems" : FailedItems
+    )
+
+    alias DescribeCrossAccountAccessRoleResponse = NamedTuple(
+      "roleArn" : Arn,
+      "valid" : Bool,
+      "registeredAt" : Timestamp
+    )
+
+    alias DescribeExclusionsRequest = NamedTuple(
+      "exclusionArns" : BatchDescribeExclusionsArnList,
+      "locale" : (Locale)?
+    )
+
+    alias DescribeExclusionsResponse = NamedTuple(
+      "exclusions" : ExclusionMap,
+      "failedItems" : FailedItems
+    )
+
+    alias DescribeFindingsRequest = NamedTuple(
+      "findingArns" : BatchDescribeArnList,
+      "locale" : (Locale)?
+    )
+
+    alias DescribeFindingsResponse = NamedTuple(
+      "findings" : FindingList,
+      "failedItems" : FailedItems
+    )
+
+    alias DescribeResourceGroupsRequest = NamedTuple(
+      "resourceGroupArns" : BatchDescribeArnList
+    )
+
+    alias DescribeResourceGroupsResponse = NamedTuple(
+      "resourceGroups" : ResourceGroupList,
+      "failedItems" : FailedItems
+    )
+
+    alias DescribeRulesPackagesRequest = NamedTuple(
+      "rulesPackageArns" : BatchDescribeArnList,
+      "locale" : (Locale)?
+    )
+
+    alias DescribeRulesPackagesResponse = NamedTuple(
+      "rulesPackages" : RulesPackageList,
+      "failedItems" : FailedItems
+    )
+
+    alias DurationRange = NamedTuple(
+      "minSeconds" : (AssessmentRunDuration)?,
+      "maxSeconds" : (AssessmentRunDuration)?
+    )
+
+    alias ErrorMessage = String
+
+    alias EventSubscription = NamedTuple(
+      "event" : InspectorEvent,
+      "subscribedAt" : Timestamp
+    )
+
+    alias EventSubscriptionList = Array(EventSubscription)
+
+    alias Exclusion = NamedTuple(
+      "arn" : Arn,
+      "title" : Text,
+      "description" : Text,
+      "recommendation" : Text,
+      "scopes" : ScopeList,
+      "attributes" : (AttributeList)?
+    )
+
+    alias ExclusionMap = Hash(Arn,Exclusion)
+
+    alias ExclusionPreview = NamedTuple(
+      "title" : Text,
+      "description" : Text,
+      "recommendation" : Text,
+      "scopes" : ScopeList,
+      "attributes" : (AttributeList)?
+    )
+
+    alias ExclusionPreviewList = Array(ExclusionPreview)
+
+    alias FailedItemDetails = NamedTuple(
+      "failureCode" : FailedItemErrorCode,
+      "retryable" : Bool
+    )
+
+    alias FailedItemErrorCode = String
+
+    alias FailedItems = Hash(Arn,FailedItemDetails)
+
+    alias FilterRulesPackageArnList = Array(Arn)
+
+    alias Finding = NamedTuple(
+      "arn" : Arn,
+      "schemaVersion" : (NumericVersion)?,
+      "service" : (ServiceName)?,
+      "serviceAttributes" : (InspectorServiceAttributes)?,
+      "assetType" : (AssetType)?,
+      "assetAttributes" : (AssetAttributes)?,
+      "id" : (FindingId)?,
+      "title" : (Text)?,
+      "description" : (Text)?,
+      "recommendation" : (Text)?,
+      "severity" : (Severity)?,
+      "numericSeverity" : (NumericSeverity)?,
+      "confidence" : (IocConfidence)?,
+      "indicatorOfCompromise" : (Bool)?,
+      "attributes" : AttributeList,
+      "userAttributes" : UserAttributeList,
+      "createdAt" : Timestamp,
+      "updatedAt" : Timestamp
+    )
+
+    alias FindingCount = Int32
+
+    alias FindingFilter = NamedTuple(
+      "agentIds" : (AgentIdList)?,
+      "autoScalingGroups" : (AutoScalingGroupList)?,
+      "ruleNames" : (RuleNameList)?,
+      "severities" : (SeverityList)?,
+      "rulesPackageArns" : (FilterRulesPackageArnList)?,
+      "attributes" : (AttributeList)?,
+      "userAttributes" : (AttributeList)?,
+      "creationTimeRange" : (TimestampRange)?
+    )
+
+    alias FindingId = String
+
+    alias FindingList = Array(Finding)
+
+    alias GetAssessmentReportRequest = NamedTuple(
+      "assessmentRunArn" : Arn,
+      "reportFileFormat" : ReportFileFormat,
+      "reportType" : ReportType
+    )
+
+    alias GetAssessmentReportResponse = NamedTuple(
+      "status" : ReportStatus,
+      "url" : (Url)?
+    )
+
+    alias GetExclusionsPreviewRequest = NamedTuple(
+      "assessmentTemplateArn" : Arn,
+      "previewToken" : UUID,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?,
+      "locale" : (Locale)?
+    )
+
+    alias GetExclusionsPreviewResponse = NamedTuple(
+      "previewStatus" : PreviewStatus,
+      "exclusionPreviews" : (ExclusionPreviewList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias GetTelemetryMetadataRequest = NamedTuple(
+      "assessmentRunArn" : Arn
+    )
+
+    alias GetTelemetryMetadataResponse = NamedTuple(
+      "telemetryMetadata" : TelemetryMetadataList
+    )
+
+    alias Hostname = String
+
+    alias InspectorEvent = String
+
+    alias InspectorServiceAttributes = NamedTuple(
+      "schemaVersion" : NumericVersion,
+      "assessmentRunArn" : (Arn)?,
+      "rulesPackageArn" : (Arn)?
+    )
+
+    alias InternalException = NamedTuple(
+      "message" : ErrorMessage,
+      "canRetry" : Bool
+    )
+
+    alias InvalidCrossAccountRoleErrorCode = String
+
+    alias InvalidCrossAccountRoleException = NamedTuple(
+      "message" : ErrorMessage,
+      "errorCode" : InvalidCrossAccountRoleErrorCode,
+      "canRetry" : Bool
+    )
+
+    alias InvalidInputErrorCode = String
+
+    alias InvalidInputException = NamedTuple(
+      "message" : ErrorMessage,
+      "errorCode" : InvalidInputErrorCode,
+      "canRetry" : Bool
+    )
+
+    alias IocConfidence = Int32
+
+    alias Ipv4Address = String
+
+    alias Ipv4AddressList = Array(Ipv4Address)
+
+    alias Ipv6Addresses = Array(Text)
+
+    alias KernelVersion = String
+
+    alias LimitExceededErrorCode = String
+
+    alias LimitExceededException = NamedTuple(
+      "message" : ErrorMessage,
+      "errorCode" : LimitExceededErrorCode,
+      "canRetry" : Bool
+    )
+
+    alias ListAssessmentRunAgentsRequest = NamedTuple(
+      "assessmentRunArn" : Arn,
+      "filter" : (AgentFilter)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListAssessmentRunAgentsResponse = NamedTuple(
+      "assessmentRunAgents" : AssessmentRunAgentList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListAssessmentRunsRequest = NamedTuple(
+      "assessmentTemplateArns" : (ListParentArnList)?,
+      "filter" : (AssessmentRunFilter)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListAssessmentRunsResponse = NamedTuple(
+      "assessmentRunArns" : ListReturnedArnList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListAssessmentTargetsRequest = NamedTuple(
+      "filter" : (AssessmentTargetFilter)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListAssessmentTargetsResponse = NamedTuple(
+      "assessmentTargetArns" : ListReturnedArnList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListAssessmentTemplatesRequest = NamedTuple(
+      "assessmentTargetArns" : (ListParentArnList)?,
+      "filter" : (AssessmentTemplateFilter)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListAssessmentTemplatesResponse = NamedTuple(
+      "assessmentTemplateArns" : ListReturnedArnList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListEventSubscriptionsMaxResults = Int32
+
+    alias ListEventSubscriptionsRequest = NamedTuple(
+      "resourceArn" : (Arn)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListEventSubscriptionsMaxResults)?
+    )
+
+    alias ListEventSubscriptionsResponse = NamedTuple(
+      "subscriptions" : SubscriptionList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListExclusionsRequest = NamedTuple(
+      "assessmentRunArn" : Arn,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListExclusionsResponse = NamedTuple(
+      "exclusionArns" : ListReturnedArnList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListFindingsRequest = NamedTuple(
+      "assessmentRunArns" : (ListParentArnList)?,
+      "filter" : (FindingFilter)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListFindingsResponse = NamedTuple(
+      "findingArns" : ListReturnedArnList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListMaxResults = Int32
+
+    alias ListParentArnList = Array(Arn)
+
+    alias ListReturnedArnList = Array(Arn)
+
+    alias ListRulesPackagesRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (ListMaxResults)?
+    )
+
+    alias ListRulesPackagesResponse = NamedTuple(
+      "rulesPackageArns" : ListReturnedArnList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : TagList
+    )
+
+    alias Locale = String
+
+    alias Long = Int64
+
+    alias Message = String
+
+    alias MessageType = String
+
+    alias NamePattern = String
+
+    alias NetworkInterface = NamedTuple(
+      "networkInterfaceId" : (Text)?,
+      "subnetId" : (Text)?,
+      "vpcId" : (Text)?,
+      "privateDnsName" : (Text)?,
+      "privateIpAddress" : (Text)?,
+      "privateIpAddresses" : (PrivateIpAddresses)?,
+      "publicDnsName" : (Text)?,
+      "publicIp" : (Text)?,
+      "ipv6Addresses" : (Ipv6Addresses)?,
+      "securityGroups" : (SecurityGroups)?
+    )
+
+    alias NetworkInterfaces = Array(NetworkInterface)
+
+    alias NoSuchEntityErrorCode = String
+
+    alias NoSuchEntityException = NamedTuple(
+      "message" : ErrorMessage,
+      "errorCode" : NoSuchEntityErrorCode,
+      "canRetry" : Bool
+    )
+
+    alias NumericSeverity = Float64
+
+    alias NumericVersion = Int32
+
+    alias OperatingSystem = String
+
+    alias PaginationToken = String
+
+    alias PreviewAgentsMaxResults = Int32
+
+    alias PreviewAgentsRequest = NamedTuple(
+      "previewAgentsArn" : Arn,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (PreviewAgentsMaxResults)?
+    )
+
+    alias PreviewAgentsResponse = NamedTuple(
+      "agentPreviews" : AgentPreviewList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias PreviewGenerationInProgressException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias PreviewStatus = String
+
+    alias PrivateIp = NamedTuple(
+      "privateDnsName" : (Text)?,
+      "privateIpAddress" : (Text)?
+    )
+
+    alias PrivateIpAddresses = Array(PrivateIp)
+
+    alias ProviderName = String
+
+    alias RegisterCrossAccountAccessRoleRequest = NamedTuple(
+      "roleArn" : Arn
+    )
+
+    alias RemoveAttributesFromFindingsRequest = NamedTuple(
+      "findingArns" : AddRemoveAttributesFindingArnList,
+      "attributeKeys" : UserAttributeKeyList
+    )
+
+    alias RemoveAttributesFromFindingsResponse = NamedTuple(
+      "failedItems" : FailedItems
+    )
+
+    alias ReportFileFormat = String
+
+    alias ReportStatus = String
+
+    alias ReportType = String
+
+    alias ResourceGroup = NamedTuple(
+      "arn" : Arn,
+      "tags" : ResourceGroupTags,
+      "createdAt" : Timestamp
+    )
+
+    alias ResourceGroupList = Array(ResourceGroup)
+
+    alias ResourceGroupTag = NamedTuple(
+      "key" : TagKey,
+      "value" : (TagValue)?
+    )
+
+    alias ResourceGroupTags = Array(ResourceGroupTag)
+
+    alias RuleName = String
+
+    alias RuleNameList = Array(RuleName)
+
+    alias RulesPackage = NamedTuple(
+      "arn" : Arn,
+      "name" : RulesPackageName,
+      "version" : Version,
+      "provider" : ProviderName,
+      "description" : (Text)?
+    )
+
+    alias RulesPackageList = Array(RulesPackage)
+
+    alias RulesPackageName = String
+
+    alias Scope = NamedTuple(
+      "key" : (ScopeType)?,
+      "value" : (ScopeValue)?
+    )
+
+    alias ScopeList = Array(Scope)
+
+    alias ScopeType = String
+
+    alias ScopeValue = String
+
+    alias SecurityGroup = NamedTuple(
+      "groupName" : (Text)?,
+      "groupId" : (Text)?
+    )
+
+    alias SecurityGroups = Array(SecurityGroup)
+
+    alias ServiceName = String
+
+    alias ServiceTemporarilyUnavailableException = NamedTuple(
+      "message" : ErrorMessage,
+      "canRetry" : Bool
+    )
+
+    alias SetTagsForResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : (TagList)?
+    )
+
+    alias Severity = String
+
+    alias SeverityList = Array(Severity)
+
+    alias StartAssessmentRunRequest = NamedTuple(
+      "assessmentTemplateArn" : Arn,
+      "assessmentRunName" : (AssessmentRunName)?
+    )
+
+    alias StartAssessmentRunResponse = NamedTuple(
+      "assessmentRunArn" : Arn
+    )
+
+    alias StopAction = String
+
+    alias StopAssessmentRunRequest = NamedTuple(
+      "assessmentRunArn" : Arn,
+      "stopAction" : (StopAction)?
+    )
+
+    alias SubscribeToEventRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "event" : InspectorEvent,
+      "topicArn" : Arn
+    )
+
+    alias Subscription = NamedTuple(
+      "resourceArn" : Arn,
+      "topicArn" : Arn,
+      "eventSubscriptions" : EventSubscriptionList
+    )
+
+    alias SubscriptionList = Array(Subscription)
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TelemetryMetadata = NamedTuple(
+      "messageType" : MessageType,
+      "count" : Long,
+      "dataSize" : (Long)?
+    )
+
+    alias TelemetryMetadataList = Array(TelemetryMetadata)
+
+    alias Text = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampRange = NamedTuple(
+      "beginDate" : (Timestamp)?,
+      "endDate" : (Timestamp)?
+    )
+
+    alias UUID = String
+
+    alias UnsubscribeFromEventRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "event" : InspectorEvent,
+      "topicArn" : Arn
+    )
+
+    alias UnsupportedFeatureException = NamedTuple(
+      "message" : ErrorMessage,
+      "canRetry" : Bool
+    )
+
+    alias UpdateAssessmentTargetRequest = NamedTuple(
+      "assessmentTargetArn" : Arn,
+      "assessmentTargetName" : AssessmentTargetName,
+      "resourceGroupArn" : (Arn)?
+    )
+
+    alias Url = String
+
+    alias UserAttributeKeyList = Array(AttributeKey)
+
+    alias UserAttributeList = Array(Attribute)
+
+    alias Version = String
   end
 end

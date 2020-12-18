@@ -1564,5 +1564,481 @@ module Aws::WorkLink
       include Aws::Structure
     end
 
+    alias AcmCertificateArn = String
+
+    alias AssociateDomainRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DomainName" : DomainName,
+      "DisplayName" : (DisplayName)?,
+      "AcmCertificateArn" : AcmCertificateArn
+    )
+
+    alias AssociateDomainResponse = NamedTuple(
+      
+    )
+
+    alias AssociateWebsiteAuthorizationProviderRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "AuthorizationProviderType" : AuthorizationProviderType,
+      "DomainName" : (DomainName)?
+    )
+
+    alias AssociateWebsiteAuthorizationProviderResponse = NamedTuple(
+      "AuthorizationProviderId" : (Id)?
+    )
+
+    alias AssociateWebsiteCertificateAuthorityRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "Certificate" : Certificate,
+      "DisplayName" : (DisplayName)?
+    )
+
+    alias AssociateWebsiteCertificateAuthorityResponse = NamedTuple(
+      "WebsiteCaId" : (Id)?
+    )
+
+    alias AuditStreamArn = String
+
+    alias AuthorizationProviderType = String
+
+    alias Boolean = Bool
+
+    alias Certificate = String
+
+    alias CertificateChain = String
+
+    alias CompanyCode = String
+
+    alias CreateFleetRequest = NamedTuple(
+      "FleetName" : FleetName,
+      "DisplayName" : (DisplayName)?,
+      "OptimizeForEndUserLocation" : (Boolean)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateFleetResponse = NamedTuple(
+      "FleetArn" : (FleetArn)?
+    )
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteFleetRequest = NamedTuple(
+      "FleetArn" : FleetArn
+    )
+
+    alias DeleteFleetResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAuditStreamConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn
+    )
+
+    alias DescribeAuditStreamConfigurationResponse = NamedTuple(
+      "AuditStreamArn" : (AuditStreamArn)?
+    )
+
+    alias DescribeCompanyNetworkConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn
+    )
+
+    alias DescribeCompanyNetworkConfigurationResponse = NamedTuple(
+      "VpcId" : (VpcId)?,
+      "SubnetIds" : (SubnetIds)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?
+    )
+
+    alias DescribeDevicePolicyConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn
+    )
+
+    alias DescribeDevicePolicyConfigurationResponse = NamedTuple(
+      "DeviceCaCertificate" : (Certificate)?
+    )
+
+    alias DescribeDeviceRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DeviceId" : Id
+    )
+
+    alias DescribeDeviceResponse = NamedTuple(
+      "Status" : (DeviceStatus)?,
+      "Model" : (DeviceModel)?,
+      "Manufacturer" : (DeviceManufacturer)?,
+      "OperatingSystem" : (DeviceOperatingSystemName)?,
+      "OperatingSystemVersion" : (DeviceOperatingSystemVersion)?,
+      "PatchLevel" : (DevicePatchLevel)?,
+      "FirstAccessedTime" : (DateTime)?,
+      "LastAccessedTime" : (DateTime)?,
+      "Username" : (Username)?
+    )
+
+    alias DescribeDomainRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DomainName" : DomainName
+    )
+
+    alias DescribeDomainResponse = NamedTuple(
+      "DomainName" : (DomainName)?,
+      "DisplayName" : (DisplayName)?,
+      "CreatedTime" : (DateTime)?,
+      "DomainStatus" : (DomainStatus)?,
+      "AcmCertificateArn" : (AcmCertificateArn)?
+    )
+
+    alias DescribeFleetMetadataRequest = NamedTuple(
+      "FleetArn" : FleetArn
+    )
+
+    alias DescribeFleetMetadataResponse = NamedTuple(
+      "CreatedTime" : (DateTime)?,
+      "LastUpdatedTime" : (DateTime)?,
+      "FleetName" : (FleetName)?,
+      "DisplayName" : (DisplayName)?,
+      "OptimizeForEndUserLocation" : (Boolean)?,
+      "CompanyCode" : (CompanyCode)?,
+      "FleetStatus" : (FleetStatus)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias DescribeIdentityProviderConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn
+    )
+
+    alias DescribeIdentityProviderConfigurationResponse = NamedTuple(
+      "IdentityProviderType" : (IdentityProviderType)?,
+      "ServiceProviderSamlMetadata" : (SamlMetadata)?,
+      "IdentityProviderSamlMetadata" : (SamlMetadata)?
+    )
+
+    alias DescribeWebsiteCertificateAuthorityRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "WebsiteCaId" : Id
+    )
+
+    alias DescribeWebsiteCertificateAuthorityResponse = NamedTuple(
+      "Certificate" : (Certificate)?,
+      "CreatedTime" : (DateTime)?,
+      "DisplayName" : (DisplayName)?
+    )
+
+    alias DeviceManufacturer = String
+
+    alias DeviceModel = String
+
+    alias DeviceOperatingSystemName = String
+
+    alias DeviceOperatingSystemVersion = String
+
+    alias DevicePatchLevel = String
+
+    alias DeviceStatus = String
+
+    alias DeviceSummary = NamedTuple(
+      "DeviceId" : (Id)?,
+      "DeviceStatus" : (DeviceStatus)?
+    )
+
+    alias DeviceSummaryList = Array(DeviceSummary)
+
+    alias DisassociateDomainRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DomainName" : DomainName
+    )
+
+    alias DisassociateDomainResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateWebsiteAuthorizationProviderRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "AuthorizationProviderId" : Id
+    )
+
+    alias DisassociateWebsiteAuthorizationProviderResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateWebsiteCertificateAuthorityRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "WebsiteCaId" : Id
+    )
+
+    alias DisassociateWebsiteCertificateAuthorityResponse = NamedTuple(
+      
+    )
+
+    alias DisplayName = String
+
+    alias DomainName = String
+
+    alias DomainStatus = String
+
+    alias DomainSummary = NamedTuple(
+      "DomainName" : DomainName,
+      "DisplayName" : (DisplayName)?,
+      "CreatedTime" : DateTime,
+      "DomainStatus" : DomainStatus
+    )
+
+    alias DomainSummaryList = Array(DomainSummary)
+
+    alias ExceptionMessage = String
+
+    alias FleetArn = String
+
+    alias FleetName = String
+
+    alias FleetStatus = String
+
+    alias FleetSummary = NamedTuple(
+      "FleetArn" : (FleetArn)?,
+      "CreatedTime" : (DateTime)?,
+      "LastUpdatedTime" : (DateTime)?,
+      "FleetName" : (FleetName)?,
+      "DisplayName" : (DisplayName)?,
+      "CompanyCode" : (CompanyCode)?,
+      "FleetStatus" : (FleetStatus)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias FleetSummaryList = Array(FleetSummary)
+
+    alias Id = String
+
+    alias IdentityProviderType = String
+
+    alias InternalServerErrorException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ListDevicesRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDevicesResponse = NamedTuple(
+      "Devices" : (DeviceSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDomainsRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDomainsResponse = NamedTuple(
+      "Domains" : (DomainSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListFleetsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListFleetsResponse = NamedTuple(
+      "FleetSummaryList" : (FleetSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : FleetArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias ListWebsiteAuthorizationProvidersRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListWebsiteAuthorizationProvidersResponse = NamedTuple(
+      "WebsiteAuthorizationProviders" : (WebsiteAuthorizationProvidersSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWebsiteCertificateAuthoritiesRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWebsiteCertificateAuthoritiesResponse = NamedTuple(
+      "WebsiteCertificateAuthorities" : (WebsiteCaSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias RestoreDomainAccessRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DomainName" : DomainName
+    )
+
+    alias RestoreDomainAccessResponse = NamedTuple(
+      
+    )
+
+    alias RevokeDomainAccessRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DomainName" : DomainName
+    )
+
+    alias RevokeDomainAccessResponse = NamedTuple(
+      
+    )
+
+    alias SamlMetadata = String
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias SignOutUserRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "Username" : Username
+    )
+
+    alias SignOutUserResponse = NamedTuple(
+      
+    )
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : FleetArn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : FleetArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAuditStreamConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "AuditStreamArn" : (AuditStreamArn)?
+    )
+
+    alias UpdateAuditStreamConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCompanyNetworkConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "VpcId" : VpcId,
+      "SubnetIds" : SubnetIds,
+      "SecurityGroupIds" : SecurityGroupIds
+    )
+
+    alias UpdateCompanyNetworkConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDevicePolicyConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DeviceCaCertificate" : (CertificateChain)?
+    )
+
+    alias UpdateDevicePolicyConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDomainMetadataRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DomainName" : DomainName,
+      "DisplayName" : (DisplayName)?
+    )
+
+    alias UpdateDomainMetadataResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFleetMetadataRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "DisplayName" : (DisplayName)?,
+      "OptimizeForEndUserLocation" : (Boolean)?
+    )
+
+    alias UpdateFleetMetadataResponse = NamedTuple(
+      
+    )
+
+    alias UpdateIdentityProviderConfigurationRequest = NamedTuple(
+      "FleetArn" : FleetArn,
+      "IdentityProviderType" : IdentityProviderType,
+      "IdentityProviderSamlMetadata" : (SamlMetadata)?
+    )
+
+    alias UpdateIdentityProviderConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias Username = String
+
+    alias VpcId = String
+
+    alias WebsiteAuthorizationProviderSummary = NamedTuple(
+      "AuthorizationProviderId" : (Id)?,
+      "AuthorizationProviderType" : AuthorizationProviderType,
+      "DomainName" : (DomainName)?,
+      "CreatedTime" : (DateTime)?
+    )
+
+    alias WebsiteAuthorizationProvidersSummaryList = Array(WebsiteAuthorizationProviderSummary)
+
+    alias WebsiteCaSummary = NamedTuple(
+      "WebsiteCaId" : (Id)?,
+      "CreatedTime" : (DateTime)?,
+      "DisplayName" : (DisplayName)?
+    )
+
+    alias WebsiteCaSummaryList = Array(WebsiteCaSummary)
   end
 end

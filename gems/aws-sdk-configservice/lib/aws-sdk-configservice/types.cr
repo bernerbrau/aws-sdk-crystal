@@ -7881,5 +7881,1892 @@ module Aws::ConfigService
     #
     class ValidationException < Aws::EmptyStructure; end
 
+    alias ARN = String
+
+    alias AccountAggregationSource = NamedTuple(
+      "AccountIds" : AccountAggregationSourceAccountList,
+      "AllAwsRegions" : (Boolean)?,
+      "AwsRegions" : (AggregatorRegionList)?
+    )
+
+    alias AccountAggregationSourceAccountList = Array(AccountId)
+
+    alias AccountAggregationSourceList = Array(AccountAggregationSource)
+
+    alias AccountId = String
+
+    alias AggregateComplianceByConfigRule = NamedTuple(
+      "ConfigRuleName" : (ConfigRuleName)?,
+      "Compliance" : (Compliance)?,
+      "AccountId" : (AccountId)?,
+      "AwsRegion" : (AwsRegion)?
+    )
+
+    alias AggregateComplianceByConfigRuleList = Array(AggregateComplianceByConfigRule)
+
+    alias AggregateComplianceCount = NamedTuple(
+      "GroupName" : (StringWithCharLimit256)?,
+      "ComplianceSummary" : (ComplianceSummary)?
+    )
+
+    alias AggregateComplianceCountList = Array(AggregateComplianceCount)
+
+    alias AggregateEvaluationResult = NamedTuple(
+      "EvaluationResultIdentifier" : (EvaluationResultIdentifier)?,
+      "ComplianceType" : (ComplianceType)?,
+      "ResultRecordedTime" : (Date)?,
+      "ConfigRuleInvokedTime" : (Date)?,
+      "Annotation" : (StringWithCharLimit256)?,
+      "AccountId" : (AccountId)?,
+      "AwsRegion" : (AwsRegion)?
+    )
+
+    alias AggregateEvaluationResultList = Array(AggregateEvaluationResult)
+
+    alias AggregateResourceIdentifier = NamedTuple(
+      "SourceAccountId" : AccountId,
+      "SourceRegion" : AwsRegion,
+      "ResourceId" : ResourceId,
+      "ResourceType" : ResourceType,
+      "ResourceName" : (ResourceName)?
+    )
+
+    alias AggregatedSourceStatus = NamedTuple(
+      "SourceId" : (String)?,
+      "SourceType" : (AggregatedSourceType)?,
+      "AwsRegion" : (AwsRegion)?,
+      "LastUpdateStatus" : (AggregatedSourceStatusType)?,
+      "LastUpdateTime" : (Date)?,
+      "LastErrorCode" : (String)?,
+      "LastErrorMessage" : (String)?
+    )
+
+    alias AggregatedSourceStatusList = Array(AggregatedSourceStatus)
+
+    alias AggregatedSourceStatusType = String
+
+    alias AggregatedSourceStatusTypeList = Array(AggregatedSourceStatusType)
+
+    alias AggregatedSourceType = String
+
+    alias AggregationAuthorization = NamedTuple(
+      "AggregationAuthorizationArn" : (String)?,
+      "AuthorizedAccountId" : (AccountId)?,
+      "AuthorizedAwsRegion" : (AwsRegion)?,
+      "CreationTime" : (Date)?
+    )
+
+    alias AggregationAuthorizationList = Array(AggregationAuthorization)
+
+    alias AggregatorRegionList = Array(String)
+
+    alias AllSupported = Bool
+
+    alias AmazonResourceName = String
+
+    alias Annotation = String
+
+    alias AutoRemediationAttemptSeconds = Int64
+
+    alias AutoRemediationAttempts = Int32
+
+    alias AvailabilityZone = String
+
+    alias AwsRegion = String
+
+    alias BaseConfigurationItem = NamedTuple(
+      "version" : (Version)?,
+      "accountId" : (AccountId)?,
+      "configurationItemCaptureTime" : (ConfigurationItemCaptureTime)?,
+      "configurationItemStatus" : (ConfigurationItemStatus)?,
+      "configurationStateId" : (ConfigurationStateId)?,
+      "arn" : (ARN)?,
+      "resourceType" : (ResourceType)?,
+      "resourceId" : (ResourceId)?,
+      "resourceName" : (ResourceName)?,
+      "awsRegion" : (AwsRegion)?,
+      "availabilityZone" : (AvailabilityZone)?,
+      "resourceCreationTime" : (ResourceCreationTime)?,
+      "configuration" : (Configuration)?,
+      "supplementaryConfiguration" : (SupplementaryConfiguration)?
+    )
+
+    alias BaseConfigurationItems = Array(BaseConfigurationItem)
+
+    alias BaseResourceId = String
+
+    alias BatchGetAggregateResourceConfigRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "ResourceIdentifiers" : ResourceIdentifiersList
+    )
+
+    alias BatchGetAggregateResourceConfigResponse = NamedTuple(
+      "BaseConfigurationItems" : (BaseConfigurationItems)?,
+      "UnprocessedResourceIdentifiers" : (UnprocessedResourceIdentifierList)?
+    )
+
+    alias BatchGetResourceConfigRequest = NamedTuple(
+      "resourceKeys" : ResourceKeys
+    )
+
+    alias BatchGetResourceConfigResponse = NamedTuple(
+      "baseConfigurationItems" : (BaseConfigurationItems)?,
+      "unprocessedResourceKeys" : (ResourceKeys)?
+    )
+
+    alias Boolean = Bool
+
+    alias ChannelName = String
+
+    alias ChronologicalOrder = String
+
+    alias Compliance = NamedTuple(
+      "ComplianceType" : (ComplianceType)?,
+      "ComplianceContributorCount" : (ComplianceContributorCount)?
+    )
+
+    alias ComplianceByConfigRule = NamedTuple(
+      "ConfigRuleName" : (StringWithCharLimit64)?,
+      "Compliance" : (Compliance)?
+    )
+
+    alias ComplianceByConfigRules = Array(ComplianceByConfigRule)
+
+    alias ComplianceByResource = NamedTuple(
+      "ResourceType" : (StringWithCharLimit256)?,
+      "ResourceId" : (BaseResourceId)?,
+      "Compliance" : (Compliance)?
+    )
+
+    alias ComplianceByResources = Array(ComplianceByResource)
+
+    alias ComplianceContributorCount = NamedTuple(
+      "CappedCount" : (Integer)?,
+      "CapExceeded" : (Boolean)?
+    )
+
+    alias ComplianceResourceTypes = Array(StringWithCharLimit256)
+
+    alias ComplianceSummariesByResourceType = Array(ComplianceSummaryByResourceType)
+
+    alias ComplianceSummary = NamedTuple(
+      "CompliantResourceCount" : (ComplianceContributorCount)?,
+      "NonCompliantResourceCount" : (ComplianceContributorCount)?,
+      "ComplianceSummaryTimestamp" : (Date)?
+    )
+
+    alias ComplianceSummaryByResourceType = NamedTuple(
+      "ResourceType" : (StringWithCharLimit256)?,
+      "ComplianceSummary" : (ComplianceSummary)?
+    )
+
+    alias ComplianceType = String
+
+    alias ComplianceTypes = Array(ComplianceType)
+
+    alias ConfigExportDeliveryInfo = NamedTuple(
+      "lastStatus" : (DeliveryStatus)?,
+      "lastErrorCode" : (String)?,
+      "lastErrorMessage" : (String)?,
+      "lastAttemptTime" : (Date)?,
+      "lastSuccessfulTime" : (Date)?,
+      "nextDeliveryTime" : (Date)?
+    )
+
+    alias ConfigRule = NamedTuple(
+      "ConfigRuleName" : (ConfigRuleName)?,
+      "ConfigRuleArn" : (StringWithCharLimit256)?,
+      "ConfigRuleId" : (StringWithCharLimit64)?,
+      "Description" : (EmptiableStringWithCharLimit256)?,
+      "Scope" : (Scope)?,
+      "Source" : Source,
+      "InputParameters" : (StringWithCharLimit1024)?,
+      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?,
+      "ConfigRuleState" : (ConfigRuleState)?,
+      "CreatedBy" : (StringWithCharLimit256)?
+    )
+
+    alias ConfigRuleComplianceFilters = NamedTuple(
+      "ConfigRuleName" : (ConfigRuleName)?,
+      "ComplianceType" : (ComplianceType)?,
+      "AccountId" : (AccountId)?,
+      "AwsRegion" : (AwsRegion)?
+    )
+
+    alias ConfigRuleComplianceSummaryFilters = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "AwsRegion" : (AwsRegion)?
+    )
+
+    alias ConfigRuleComplianceSummaryGroupKey = String
+
+    alias ConfigRuleEvaluationStatus = NamedTuple(
+      "ConfigRuleName" : (ConfigRuleName)?,
+      "ConfigRuleArn" : (String)?,
+      "ConfigRuleId" : (String)?,
+      "LastSuccessfulInvocationTime" : (Date)?,
+      "LastFailedInvocationTime" : (Date)?,
+      "LastSuccessfulEvaluationTime" : (Date)?,
+      "LastFailedEvaluationTime" : (Date)?,
+      "FirstActivatedTime" : (Date)?,
+      "LastDeactivatedTime" : (Date)?,
+      "LastErrorCode" : (String)?,
+      "LastErrorMessage" : (String)?,
+      "FirstEvaluationStarted" : (Boolean)?
+    )
+
+    alias ConfigRuleEvaluationStatusList = Array(ConfigRuleEvaluationStatus)
+
+    alias ConfigRuleName = String
+
+    alias ConfigRuleNames = Array(ConfigRuleName)
+
+    alias ConfigRuleState = String
+
+    alias ConfigRules = Array(ConfigRule)
+
+    alias ConfigSnapshotDeliveryProperties = NamedTuple(
+      "deliveryFrequency" : (MaximumExecutionFrequency)?
+    )
+
+    alias ConfigStreamDeliveryInfo = NamedTuple(
+      "lastStatus" : (DeliveryStatus)?,
+      "lastErrorCode" : (String)?,
+      "lastErrorMessage" : (String)?,
+      "lastStatusChangeTime" : (Date)?
+    )
+
+    alias Configuration = String
+
+    alias ConfigurationAggregator = NamedTuple(
+      "ConfigurationAggregatorName" : (ConfigurationAggregatorName)?,
+      "ConfigurationAggregatorArn" : (ConfigurationAggregatorArn)?,
+      "AccountAggregationSources" : (AccountAggregationSourceList)?,
+      "OrganizationAggregationSource" : (OrganizationAggregationSource)?,
+      "CreationTime" : (Date)?,
+      "LastUpdatedTime" : (Date)?,
+      "CreatedBy" : (StringWithCharLimit256)?
+    )
+
+    alias ConfigurationAggregatorArn = String
+
+    alias ConfigurationAggregatorList = Array(ConfigurationAggregator)
+
+    alias ConfigurationAggregatorName = String
+
+    alias ConfigurationAggregatorNameList = Array(ConfigurationAggregatorName)
+
+    alias ConfigurationItem = NamedTuple(
+      "version" : (Version)?,
+      "accountId" : (AccountId)?,
+      "configurationItemCaptureTime" : (ConfigurationItemCaptureTime)?,
+      "configurationItemStatus" : (ConfigurationItemStatus)?,
+      "configurationStateId" : (ConfigurationStateId)?,
+      "configurationItemMD5Hash" : (ConfigurationItemMD5Hash)?,
+      "arn" : (ARN)?,
+      "resourceType" : (ResourceType)?,
+      "resourceId" : (ResourceId)?,
+      "resourceName" : (ResourceName)?,
+      "awsRegion" : (AwsRegion)?,
+      "availabilityZone" : (AvailabilityZone)?,
+      "resourceCreationTime" : (ResourceCreationTime)?,
+      "tags" : (Tags)?,
+      "relatedEvents" : (RelatedEventList)?,
+      "relationships" : (RelationshipList)?,
+      "configuration" : (Configuration)?,
+      "supplementaryConfiguration" : (SupplementaryConfiguration)?
+    )
+
+    alias ConfigurationItemCaptureTime = String | UInt64 | Time
+
+    alias ConfigurationItemList = Array(ConfigurationItem)
+
+    alias ConfigurationItemMD5Hash = String
+
+    alias ConfigurationItemStatus = String
+
+    alias ConfigurationRecorder = NamedTuple(
+      "name" : (RecorderName)?,
+      "roleARN" : (String)?,
+      "recordingGroup" : (RecordingGroup)?
+    )
+
+    alias ConfigurationRecorderList = Array(ConfigurationRecorder)
+
+    alias ConfigurationRecorderNameList = Array(RecorderName)
+
+    alias ConfigurationRecorderStatus = NamedTuple(
+      "name" : (String)?,
+      "lastStartTime" : (Date)?,
+      "lastStopTime" : (Date)?,
+      "recording" : (Boolean)?,
+      "lastStatus" : (RecorderStatus)?,
+      "lastErrorCode" : (String)?,
+      "lastErrorMessage" : (String)?,
+      "lastStatusChangeTime" : (Date)?
+    )
+
+    alias ConfigurationRecorderStatusList = Array(ConfigurationRecorderStatus)
+
+    alias ConfigurationStateId = String
+
+    alias ConformancePackArn = String
+
+    alias ConformancePackComplianceFilters = NamedTuple(
+      "ConfigRuleNames" : (ConformancePackConfigRuleNames)?,
+      "ComplianceType" : (ConformancePackComplianceType)?
+    )
+
+    alias ConformancePackComplianceResourceIds = Array(StringWithCharLimit256)
+
+    alias ConformancePackComplianceSummary = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "ConformancePackComplianceStatus" : ConformancePackComplianceType
+    )
+
+    alias ConformancePackComplianceSummaryList = Array(ConformancePackComplianceSummary)
+
+    alias ConformancePackComplianceType = String
+
+    alias ConformancePackConfigRuleNames = Array(StringWithCharLimit64)
+
+    alias ConformancePackDetail = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "ConformancePackArn" : ConformancePackArn,
+      "ConformancePackId" : ConformancePackId,
+      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
+      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
+      "ConformancePackInputParameters" : (ConformancePackInputParameters)?,
+      "LastUpdateRequestedTime" : (Date)?,
+      "CreatedBy" : (StringWithCharLimit256)?
+    )
+
+    alias ConformancePackDetailList = Array(ConformancePackDetail)
+
+    alias ConformancePackEvaluationFilters = NamedTuple(
+      "ConfigRuleNames" : (ConformancePackConfigRuleNames)?,
+      "ComplianceType" : (ConformancePackComplianceType)?,
+      "ResourceType" : (StringWithCharLimit256)?,
+      "ResourceIds" : (ConformancePackComplianceResourceIds)?
+    )
+
+    alias ConformancePackEvaluationResult = NamedTuple(
+      "ComplianceType" : ConformancePackComplianceType,
+      "EvaluationResultIdentifier" : EvaluationResultIdentifier,
+      "ConfigRuleInvokedTime" : Date,
+      "ResultRecordedTime" : Date,
+      "Annotation" : (Annotation)?
+    )
+
+    alias ConformancePackId = String
+
+    alias ConformancePackInputParameter = NamedTuple(
+      "ParameterName" : ParameterName,
+      "ParameterValue" : ParameterValue
+    )
+
+    alias ConformancePackInputParameters = Array(ConformancePackInputParameter)
+
+    alias ConformancePackName = String
+
+    alias ConformancePackNamesList = Array(ConformancePackName)
+
+    alias ConformancePackNamesToSummarizeList = Array(ConformancePackName)
+
+    alias ConformancePackRuleCompliance = NamedTuple(
+      "ConfigRuleName" : (ConfigRuleName)?,
+      "ComplianceType" : (ConformancePackComplianceType)?
+    )
+
+    alias ConformancePackRuleComplianceList = Array(ConformancePackRuleCompliance)
+
+    alias ConformancePackRuleEvaluationResultsList = Array(ConformancePackEvaluationResult)
+
+    alias ConformancePackState = String
+
+    alias ConformancePackStatusDetail = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "ConformancePackId" : ConformancePackId,
+      "ConformancePackArn" : ConformancePackArn,
+      "ConformancePackState" : ConformancePackState,
+      "StackArn" : StackArn,
+      "ConformancePackStatusReason" : (ConformancePackStatusReason)?,
+      "LastUpdateRequestedTime" : Date,
+      "LastUpdateCompletedTime" : (Date)?
+    )
+
+    alias ConformancePackStatusDetailsList = Array(ConformancePackStatusDetail)
+
+    alias ConformancePackStatusReason = String
+
+    alias ConformancePackTemplateValidationException = NamedTuple(
+      
+    )
+
+    alias CosmosPageLimit = Int32
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteAggregationAuthorizationRequest = NamedTuple(
+      "AuthorizedAccountId" : AccountId,
+      "AuthorizedAwsRegion" : AwsRegion
+    )
+
+    alias DeleteConfigRuleRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName
+    )
+
+    alias DeleteConfigurationAggregatorRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName
+    )
+
+    alias DeleteConfigurationRecorderRequest = NamedTuple(
+      "ConfigurationRecorderName" : RecorderName
+    )
+
+    alias DeleteConformancePackRequest = NamedTuple(
+      "ConformancePackName" : ConformancePackName
+    )
+
+    alias DeleteDeliveryChannelRequest = NamedTuple(
+      "DeliveryChannelName" : ChannelName
+    )
+
+    alias DeleteEvaluationResultsRequest = NamedTuple(
+      "ConfigRuleName" : StringWithCharLimit64
+    )
+
+    alias DeleteEvaluationResultsResponse = NamedTuple(
+      
+    )
+
+    alias DeleteOrganizationConfigRuleRequest = NamedTuple(
+      "OrganizationConfigRuleName" : OrganizationConfigRuleName
+    )
+
+    alias DeleteOrganizationConformancePackRequest = NamedTuple(
+      "OrganizationConformancePackName" : OrganizationConformancePackName
+    )
+
+    alias DeletePendingAggregationRequestRequest = NamedTuple(
+      "RequesterAccountId" : AccountId,
+      "RequesterAwsRegion" : AwsRegion
+    )
+
+    alias DeleteRemediationConfigurationRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceType" : (String)?
+    )
+
+    alias DeleteRemediationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRemediationExceptionsRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceKeys" : RemediationExceptionResourceKeys
+    )
+
+    alias DeleteRemediationExceptionsResponse = NamedTuple(
+      "FailedBatches" : (FailedDeleteRemediationExceptionsBatches)?
+    )
+
+    alias DeleteResourceConfigRequest = NamedTuple(
+      "ResourceType" : ResourceTypeString,
+      "ResourceId" : ResourceId
+    )
+
+    alias DeleteRetentionConfigurationRequest = NamedTuple(
+      "RetentionConfigurationName" : RetentionConfigurationName
+    )
+
+    alias DeliverConfigSnapshotRequest = NamedTuple(
+      "deliveryChannelName" : ChannelName
+    )
+
+    alias DeliverConfigSnapshotResponse = NamedTuple(
+      "configSnapshotId" : (String)?
+    )
+
+    alias DeliveryChannel = NamedTuple(
+      "name" : (ChannelName)?,
+      "s3BucketName" : (String)?,
+      "s3KeyPrefix" : (String)?,
+      "snsTopicARN" : (String)?,
+      "configSnapshotDeliveryProperties" : (ConfigSnapshotDeliveryProperties)?
+    )
+
+    alias DeliveryChannelList = Array(DeliveryChannel)
+
+    alias DeliveryChannelNameList = Array(ChannelName)
+
+    alias DeliveryChannelStatus = NamedTuple(
+      "name" : (String)?,
+      "configSnapshotDeliveryInfo" : (ConfigExportDeliveryInfo)?,
+      "configHistoryDeliveryInfo" : (ConfigExportDeliveryInfo)?,
+      "configStreamDeliveryInfo" : (ConfigStreamDeliveryInfo)?
+    )
+
+    alias DeliveryChannelStatusList = Array(DeliveryChannelStatus)
+
+    alias DeliveryS3Bucket = String
+
+    alias DeliveryS3KeyPrefix = String
+
+    alias DeliveryStatus = String
+
+    alias DescribeAggregateComplianceByConfigRulesRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "Filters" : (ConfigRuleComplianceFilters)?,
+      "Limit" : (GroupByAPILimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAggregateComplianceByConfigRulesResponse = NamedTuple(
+      "AggregateComplianceByConfigRules" : (AggregateComplianceByConfigRuleList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAggregationAuthorizationsRequest = NamedTuple(
+      "Limit" : (Limit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeAggregationAuthorizationsResponse = NamedTuple(
+      "AggregationAuthorizations" : (AggregationAuthorizationList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeComplianceByConfigRuleRequest = NamedTuple(
+      "ConfigRuleNames" : (ConfigRuleNames)?,
+      "ComplianceTypes" : (ComplianceTypes)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeComplianceByConfigRuleResponse = NamedTuple(
+      "ComplianceByConfigRules" : (ComplianceByConfigRules)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeComplianceByResourceRequest = NamedTuple(
+      "ResourceType" : (StringWithCharLimit256)?,
+      "ResourceId" : (BaseResourceId)?,
+      "ComplianceTypes" : (ComplianceTypes)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeComplianceByResourceResponse = NamedTuple(
+      "ComplianceByResources" : (ComplianceByResources)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeConfigRuleEvaluationStatusRequest = NamedTuple(
+      "ConfigRuleNames" : (ConfigRuleNames)?,
+      "NextToken" : (String)?,
+      "Limit" : (RuleLimit)?
+    )
+
+    alias DescribeConfigRuleEvaluationStatusResponse = NamedTuple(
+      "ConfigRulesEvaluationStatus" : (ConfigRuleEvaluationStatusList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeConfigRulesRequest = NamedTuple(
+      "ConfigRuleNames" : (ConfigRuleNames)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeConfigRulesResponse = NamedTuple(
+      "ConfigRules" : (ConfigRules)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeConfigurationAggregatorSourcesStatusRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "UpdateStatus" : (AggregatedSourceStatusTypeList)?,
+      "NextToken" : (String)?,
+      "Limit" : (Limit)?
+    )
+
+    alias DescribeConfigurationAggregatorSourcesStatusResponse = NamedTuple(
+      "AggregatedSourceStatusList" : (AggregatedSourceStatusList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeConfigurationAggregatorsRequest = NamedTuple(
+      "ConfigurationAggregatorNames" : (ConfigurationAggregatorNameList)?,
+      "NextToken" : (String)?,
+      "Limit" : (Limit)?
+    )
+
+    alias DescribeConfigurationAggregatorsResponse = NamedTuple(
+      "ConfigurationAggregators" : (ConfigurationAggregatorList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeConfigurationRecorderStatusRequest = NamedTuple(
+      "ConfigurationRecorderNames" : (ConfigurationRecorderNameList)?
+    )
+
+    alias DescribeConfigurationRecorderStatusResponse = NamedTuple(
+      "ConfigurationRecordersStatus" : (ConfigurationRecorderStatusList)?
+    )
+
+    alias DescribeConfigurationRecordersRequest = NamedTuple(
+      "ConfigurationRecorderNames" : (ConfigurationRecorderNameList)?
+    )
+
+    alias DescribeConfigurationRecordersResponse = NamedTuple(
+      "ConfigurationRecorders" : (ConfigurationRecorderList)?
+    )
+
+    alias DescribeConformancePackComplianceLimit = Int32
+
+    alias DescribeConformancePackComplianceRequest = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "Filters" : (ConformancePackComplianceFilters)?,
+      "Limit" : (DescribeConformancePackComplianceLimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeConformancePackComplianceResponse = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "ConformancePackRuleComplianceList" : ConformancePackRuleComplianceList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeConformancePackStatusRequest = NamedTuple(
+      "ConformancePackNames" : (ConformancePackNamesList)?,
+      "Limit" : (PageSizeLimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeConformancePackStatusResponse = NamedTuple(
+      "ConformancePackStatusDetails" : (ConformancePackStatusDetailsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeConformancePacksRequest = NamedTuple(
+      "ConformancePackNames" : (ConformancePackNamesList)?,
+      "Limit" : (PageSizeLimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeConformancePacksResponse = NamedTuple(
+      "ConformancePackDetails" : (ConformancePackDetailList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeDeliveryChannelStatusRequest = NamedTuple(
+      "DeliveryChannelNames" : (DeliveryChannelNameList)?
+    )
+
+    alias DescribeDeliveryChannelStatusResponse = NamedTuple(
+      "DeliveryChannelsStatus" : (DeliveryChannelStatusList)?
+    )
+
+    alias DescribeDeliveryChannelsRequest = NamedTuple(
+      "DeliveryChannelNames" : (DeliveryChannelNameList)?
+    )
+
+    alias DescribeDeliveryChannelsResponse = NamedTuple(
+      "DeliveryChannels" : (DeliveryChannelList)?
+    )
+
+    alias DescribeOrganizationConfigRuleStatusesRequest = NamedTuple(
+      "OrganizationConfigRuleNames" : (OrganizationConfigRuleNames)?,
+      "Limit" : (CosmosPageLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConfigRuleStatusesResponse = NamedTuple(
+      "OrganizationConfigRuleStatuses" : (OrganizationConfigRuleStatuses)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConfigRulesRequest = NamedTuple(
+      "OrganizationConfigRuleNames" : (OrganizationConfigRuleNames)?,
+      "Limit" : (CosmosPageLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConfigRulesResponse = NamedTuple(
+      "OrganizationConfigRules" : (OrganizationConfigRules)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConformancePackStatusesRequest = NamedTuple(
+      "OrganizationConformancePackNames" : (OrganizationConformancePackNames)?,
+      "Limit" : (CosmosPageLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConformancePackStatusesResponse = NamedTuple(
+      "OrganizationConformancePackStatuses" : (OrganizationConformancePackStatuses)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConformancePacksRequest = NamedTuple(
+      "OrganizationConformancePackNames" : (OrganizationConformancePackNames)?,
+      "Limit" : (CosmosPageLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOrganizationConformancePacksResponse = NamedTuple(
+      "OrganizationConformancePacks" : (OrganizationConformancePacks)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribePendingAggregationRequestsLimit = Int32
+
+    alias DescribePendingAggregationRequestsRequest = NamedTuple(
+      "Limit" : (DescribePendingAggregationRequestsLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribePendingAggregationRequestsResponse = NamedTuple(
+      "PendingAggregationRequests" : (PendingAggregationRequestList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeRemediationConfigurationsRequest = NamedTuple(
+      "ConfigRuleNames" : ConfigRuleNames
+    )
+
+    alias DescribeRemediationConfigurationsResponse = NamedTuple(
+      "RemediationConfigurations" : (RemediationConfigurations)?
+    )
+
+    alias DescribeRemediationExceptionsRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceKeys" : (RemediationExceptionResourceKeys)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeRemediationExceptionsResponse = NamedTuple(
+      "RemediationExceptions" : (RemediationExceptions)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeRemediationExecutionStatusRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceKeys" : (ResourceKeys)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeRemediationExecutionStatusResponse = NamedTuple(
+      "RemediationExecutionStatuses" : (RemediationExecutionStatuses)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeRetentionConfigurationsRequest = NamedTuple(
+      "RetentionConfigurationNames" : (RetentionConfigurationNameList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeRetentionConfigurationsResponse = NamedTuple(
+      "RetentionConfigurations" : (RetentionConfigurationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DiscoveredResourceIdentifierList = Array(AggregateResourceIdentifier)
+
+    alias EarlierTime = String | UInt64 | Time
+
+    alias EmptiableStringWithCharLimit256 = String
+
+    alias Evaluation = NamedTuple(
+      "ComplianceResourceType" : StringWithCharLimit256,
+      "ComplianceResourceId" : BaseResourceId,
+      "ComplianceType" : ComplianceType,
+      "Annotation" : (StringWithCharLimit256)?,
+      "OrderingTimestamp" : OrderingTimestamp
+    )
+
+    alias EvaluationResult = NamedTuple(
+      "EvaluationResultIdentifier" : (EvaluationResultIdentifier)?,
+      "ComplianceType" : (ComplianceType)?,
+      "ResultRecordedTime" : (Date)?,
+      "ConfigRuleInvokedTime" : (Date)?,
+      "Annotation" : (StringWithCharLimit256)?,
+      "ResultToken" : (String)?
+    )
+
+    alias EvaluationResultIdentifier = NamedTuple(
+      "EvaluationResultQualifier" : (EvaluationResultQualifier)?,
+      "OrderingTimestamp" : (Date)?
+    )
+
+    alias EvaluationResultQualifier = NamedTuple(
+      "ConfigRuleName" : (ConfigRuleName)?,
+      "ResourceType" : (StringWithCharLimit256)?,
+      "ResourceId" : (BaseResourceId)?
+    )
+
+    alias EvaluationResults = Array(EvaluationResult)
+
+    alias Evaluations = Array(Evaluation)
+
+    alias EventSource = String
+
+    alias ExcludedAccounts = Array(AccountId)
+
+    alias ExecutionControls = NamedTuple(
+      "SsmControls" : (SsmControls)?
+    )
+
+    alias Expression = String
+
+    alias FailedDeleteRemediationExceptionsBatch = NamedTuple(
+      "FailureMessage" : (String)?,
+      "FailedItems" : (RemediationExceptionResourceKeys)?
+    )
+
+    alias FailedDeleteRemediationExceptionsBatches = Array(FailedDeleteRemediationExceptionsBatch)
+
+    alias FailedRemediationBatch = NamedTuple(
+      "FailureMessage" : (String)?,
+      "FailedItems" : (RemediationConfigurations)?
+    )
+
+    alias FailedRemediationBatches = Array(FailedRemediationBatch)
+
+    alias FailedRemediationExceptionBatch = NamedTuple(
+      "FailureMessage" : (String)?,
+      "FailedItems" : (RemediationExceptions)?
+    )
+
+    alias FailedRemediationExceptionBatches = Array(FailedRemediationExceptionBatch)
+
+    alias FieldInfo = NamedTuple(
+      "Name" : (FieldName)?
+    )
+
+    alias FieldInfoList = Array(FieldInfo)
+
+    alias FieldName = String
+
+    alias GetAggregateComplianceDetailsByConfigRuleRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "ConfigRuleName" : ConfigRuleName,
+      "AccountId" : AccountId,
+      "AwsRegion" : AwsRegion,
+      "ComplianceType" : (ComplianceType)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAggregateComplianceDetailsByConfigRuleResponse = NamedTuple(
+      "AggregateEvaluationResults" : (AggregateEvaluationResultList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAggregateConfigRuleComplianceSummaryRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "Filters" : (ConfigRuleComplianceSummaryFilters)?,
+      "GroupByKey" : (ConfigRuleComplianceSummaryGroupKey)?,
+      "Limit" : (GroupByAPILimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAggregateConfigRuleComplianceSummaryResponse = NamedTuple(
+      "GroupByKey" : (StringWithCharLimit256)?,
+      "AggregateComplianceCounts" : (AggregateComplianceCountList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAggregateDiscoveredResourceCountsRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "Filters" : (ResourceCountFilters)?,
+      "GroupByKey" : (ResourceCountGroupKey)?,
+      "Limit" : (GroupByAPILimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAggregateDiscoveredResourceCountsResponse = NamedTuple(
+      "TotalDiscoveredResources" : Long,
+      "GroupByKey" : (StringWithCharLimit256)?,
+      "GroupedResourceCounts" : (GroupedResourceCountList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAggregateResourceConfigRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "ResourceIdentifier" : AggregateResourceIdentifier
+    )
+
+    alias GetAggregateResourceConfigResponse = NamedTuple(
+      "ConfigurationItem" : (ConfigurationItem)?
+    )
+
+    alias GetComplianceDetailsByConfigRuleRequest = NamedTuple(
+      "ConfigRuleName" : StringWithCharLimit64,
+      "ComplianceTypes" : (ComplianceTypes)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetComplianceDetailsByConfigRuleResponse = NamedTuple(
+      "EvaluationResults" : (EvaluationResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetComplianceDetailsByResourceRequest = NamedTuple(
+      "ResourceType" : StringWithCharLimit256,
+      "ResourceId" : BaseResourceId,
+      "ComplianceTypes" : (ComplianceTypes)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetComplianceDetailsByResourceResponse = NamedTuple(
+      "EvaluationResults" : (EvaluationResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetComplianceSummaryByConfigRuleResponse = NamedTuple(
+      "ComplianceSummary" : (ComplianceSummary)?
+    )
+
+    alias GetComplianceSummaryByResourceTypeRequest = NamedTuple(
+      "ResourceTypes" : (ResourceTypes)?
+    )
+
+    alias GetComplianceSummaryByResourceTypeResponse = NamedTuple(
+      "ComplianceSummariesByResourceType" : (ComplianceSummariesByResourceType)?
+    )
+
+    alias GetConformancePackComplianceDetailsLimit = Int32
+
+    alias GetConformancePackComplianceDetailsRequest = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "Filters" : (ConformancePackEvaluationFilters)?,
+      "Limit" : (GetConformancePackComplianceDetailsLimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetConformancePackComplianceDetailsResponse = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "ConformancePackRuleEvaluationResults" : (ConformancePackRuleEvaluationResultsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetConformancePackComplianceSummaryRequest = NamedTuple(
+      "ConformancePackNames" : ConformancePackNamesToSummarizeList,
+      "Limit" : (PageSizeLimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetConformancePackComplianceSummaryResponse = NamedTuple(
+      "ConformancePackComplianceSummaryList" : (ConformancePackComplianceSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetDiscoveredResourceCountsRequest = NamedTuple(
+      "resourceTypes" : (ResourceTypes)?,
+      "limit" : (Limit)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetDiscoveredResourceCountsResponse = NamedTuple(
+      "totalDiscoveredResources" : (Long)?,
+      "resourceCounts" : (ResourceCounts)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetOrganizationConfigRuleDetailedStatusRequest = NamedTuple(
+      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
+      "Filters" : (StatusDetailFilters)?,
+      "Limit" : (CosmosPageLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetOrganizationConfigRuleDetailedStatusResponse = NamedTuple(
+      "OrganizationConfigRuleDetailedStatus" : (OrganizationConfigRuleDetailedStatus)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetOrganizationConformancePackDetailedStatusRequest = NamedTuple(
+      "OrganizationConformancePackName" : OrganizationConformancePackName,
+      "Filters" : (OrganizationResourceDetailedStatusFilters)?,
+      "Limit" : (CosmosPageLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetOrganizationConformancePackDetailedStatusResponse = NamedTuple(
+      "OrganizationConformancePackDetailedStatuses" : (OrganizationConformancePackDetailedStatuses)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetResourceConfigHistoryRequest = NamedTuple(
+      "resourceType" : ResourceType,
+      "resourceId" : ResourceId,
+      "laterTime" : (LaterTime)?,
+      "earlierTime" : (EarlierTime)?,
+      "chronologicalOrder" : (ChronologicalOrder)?,
+      "limit" : (Limit)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetResourceConfigHistoryResponse = NamedTuple(
+      "configurationItems" : (ConfigurationItemList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GroupByAPILimit = Int32
+
+    alias GroupedResourceCount = NamedTuple(
+      "GroupName" : StringWithCharLimit256,
+      "ResourceCount" : Long
+    )
+
+    alias GroupedResourceCountList = Array(GroupedResourceCount)
+
+    alias IncludeGlobalResourceTypes = Bool
+
+    alias InsufficientDeliveryPolicyException = NamedTuple(
+      
+    )
+
+    alias InsufficientPermissionsException = NamedTuple(
+      
+    )
+
+    alias Integer = Int32
+
+    alias InvalidConfigurationRecorderNameException = NamedTuple(
+      
+    )
+
+    alias InvalidDeliveryChannelNameException = NamedTuple(
+      
+    )
+
+    alias InvalidExpressionException = NamedTuple(
+      
+    )
+
+    alias InvalidLimitException = NamedTuple(
+      
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      
+    )
+
+    alias InvalidRecordingGroupException = NamedTuple(
+      
+    )
+
+    alias InvalidResultTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidRoleException = NamedTuple(
+      
+    )
+
+    alias InvalidS3KeyPrefixException = NamedTuple(
+      
+    )
+
+    alias InvalidSNSTopicARNException = NamedTuple(
+      
+    )
+
+    alias InvalidTimeRangeException = NamedTuple(
+      
+    )
+
+    alias LastDeliveryChannelDeleteFailedException = NamedTuple(
+      
+    )
+
+    alias LaterTime = String | UInt64 | Time
+
+    alias Limit = Int32
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListAggregateDiscoveredResourcesRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "ResourceType" : ResourceType,
+      "Filters" : (ResourceFilters)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAggregateDiscoveredResourcesResponse = NamedTuple(
+      "ResourceIdentifiers" : (DiscoveredResourceIdentifierList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDiscoveredResourcesRequest = NamedTuple(
+      "resourceType" : ResourceType,
+      "resourceIds" : (ResourceIdList)?,
+      "resourceName" : (ResourceName)?,
+      "limit" : (Limit)?,
+      "includeDeletedResources" : (Boolean)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDiscoveredResourcesResponse = NamedTuple(
+      "resourceIdentifiers" : (ResourceIdentifierList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "Limit" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Long = Int64
+
+    alias MaxActiveResourcesExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfConfigRulesExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfConfigurationRecordersExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfConformancePacksExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfDeliveryChannelsExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfOrganizationConfigRulesExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfOrganizationConformancePacksExceededException = NamedTuple(
+      
+    )
+
+    alias MaxNumberOfRetentionConfigurationsExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumExecutionFrequency = String
+
+    alias MemberAccountRuleStatus = String
+
+    alias MemberAccountStatus = NamedTuple(
+      "AccountId" : AccountId,
+      "ConfigRuleName" : StringWithCharLimit64,
+      "MemberAccountRuleStatus" : MemberAccountRuleStatus,
+      "ErrorCode" : (String)?,
+      "ErrorMessage" : (String)?,
+      "LastUpdateTime" : (Date)?
+    )
+
+    alias MessageType = String
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias NoAvailableConfigurationRecorderException = NamedTuple(
+      
+    )
+
+    alias NoAvailableDeliveryChannelException = NamedTuple(
+      
+    )
+
+    alias NoAvailableOrganizationException = NamedTuple(
+      
+    )
+
+    alias NoRunningConfigurationRecorderException = NamedTuple(
+      
+    )
+
+    alias NoSuchBucketException = NamedTuple(
+      
+    )
+
+    alias NoSuchConfigRuleException = NamedTuple(
+      
+    )
+
+    alias NoSuchConfigRuleInConformancePackException = NamedTuple(
+      
+    )
+
+    alias NoSuchConfigurationAggregatorException = NamedTuple(
+      
+    )
+
+    alias NoSuchConfigurationRecorderException = NamedTuple(
+      
+    )
+
+    alias NoSuchConformancePackException = NamedTuple(
+      
+    )
+
+    alias NoSuchDeliveryChannelException = NamedTuple(
+      
+    )
+
+    alias NoSuchOrganizationConfigRuleException = NamedTuple(
+      
+    )
+
+    alias NoSuchOrganizationConformancePackException = NamedTuple(
+      
+    )
+
+    alias NoSuchRemediationConfigurationException = NamedTuple(
+      
+    )
+
+    alias NoSuchRemediationExceptionException = NamedTuple(
+      
+    )
+
+    alias NoSuchRetentionConfigurationException = NamedTuple(
+      
+    )
+
+    alias OrderingTimestamp = String | UInt64 | Time
+
+    alias OrganizationAccessDeniedException = NamedTuple(
+      
+    )
+
+    alias OrganizationAggregationSource = NamedTuple(
+      "RoleArn" : String,
+      "AwsRegions" : (AggregatorRegionList)?,
+      "AllAwsRegions" : (Boolean)?
+    )
+
+    alias OrganizationAllFeaturesNotEnabledException = NamedTuple(
+      
+    )
+
+    alias OrganizationConfigRule = NamedTuple(
+      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
+      "OrganizationConfigRuleArn" : StringWithCharLimit256,
+      "OrganizationManagedRuleMetadata" : (OrganizationManagedRuleMetadata)?,
+      "OrganizationCustomRuleMetadata" : (OrganizationCustomRuleMetadata)?,
+      "ExcludedAccounts" : (ExcludedAccounts)?,
+      "LastUpdateTime" : (Date)?
+    )
+
+    alias OrganizationConfigRuleDetailedStatus = Array(MemberAccountStatus)
+
+    alias OrganizationConfigRuleName = String
+
+    alias OrganizationConfigRuleNames = Array(StringWithCharLimit64)
+
+    alias OrganizationConfigRuleStatus = NamedTuple(
+      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
+      "OrganizationRuleStatus" : OrganizationRuleStatus,
+      "ErrorCode" : (String)?,
+      "ErrorMessage" : (String)?,
+      "LastUpdateTime" : (Date)?
+    )
+
+    alias OrganizationConfigRuleStatuses = Array(OrganizationConfigRuleStatus)
+
+    alias OrganizationConfigRuleTriggerType = String
+
+    alias OrganizationConfigRuleTriggerTypes = Array(OrganizationConfigRuleTriggerType)
+
+    alias OrganizationConfigRules = Array(OrganizationConfigRule)
+
+    alias OrganizationConformancePack = NamedTuple(
+      "OrganizationConformancePackName" : OrganizationConformancePackName,
+      "OrganizationConformancePackArn" : StringWithCharLimit256,
+      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
+      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
+      "ConformancePackInputParameters" : (ConformancePackInputParameters)?,
+      "ExcludedAccounts" : (ExcludedAccounts)?,
+      "LastUpdateTime" : Date
+    )
+
+    alias OrganizationConformancePackDetailedStatus = NamedTuple(
+      "AccountId" : AccountId,
+      "ConformancePackName" : StringWithCharLimit256,
+      "Status" : OrganizationResourceDetailedStatus,
+      "ErrorCode" : (String)?,
+      "ErrorMessage" : (String)?,
+      "LastUpdateTime" : (Date)?
+    )
+
+    alias OrganizationConformancePackDetailedStatuses = Array(OrganizationConformancePackDetailedStatus)
+
+    alias OrganizationConformancePackName = String
+
+    alias OrganizationConformancePackNames = Array(OrganizationConformancePackName)
+
+    alias OrganizationConformancePackStatus = NamedTuple(
+      "OrganizationConformancePackName" : OrganizationConformancePackName,
+      "Status" : OrganizationResourceStatus,
+      "ErrorCode" : (String)?,
+      "ErrorMessage" : (String)?,
+      "LastUpdateTime" : (Date)?
+    )
+
+    alias OrganizationConformancePackStatuses = Array(OrganizationConformancePackStatus)
+
+    alias OrganizationConformancePackTemplateValidationException = NamedTuple(
+      
+    )
+
+    alias OrganizationConformancePacks = Array(OrganizationConformancePack)
+
+    alias OrganizationCustomRuleMetadata = NamedTuple(
+      "Description" : (StringWithCharLimit256Min0)?,
+      "LambdaFunctionArn" : StringWithCharLimit256,
+      "OrganizationConfigRuleTriggerTypes" : OrganizationConfigRuleTriggerTypes,
+      "InputParameters" : (StringWithCharLimit2048)?,
+      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?,
+      "ResourceTypesScope" : (ResourceTypesScope)?,
+      "ResourceIdScope" : (StringWithCharLimit768)?,
+      "TagKeyScope" : (StringWithCharLimit128)?,
+      "TagValueScope" : (StringWithCharLimit256)?
+    )
+
+    alias OrganizationManagedRuleMetadata = NamedTuple(
+      "Description" : (StringWithCharLimit256Min0)?,
+      "RuleIdentifier" : StringWithCharLimit256,
+      "InputParameters" : (StringWithCharLimit2048)?,
+      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?,
+      "ResourceTypesScope" : (ResourceTypesScope)?,
+      "ResourceIdScope" : (StringWithCharLimit768)?,
+      "TagKeyScope" : (StringWithCharLimit128)?,
+      "TagValueScope" : (StringWithCharLimit256)?
+    )
+
+    alias OrganizationResourceDetailedStatus = String
+
+    alias OrganizationResourceDetailedStatusFilters = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "Status" : (OrganizationResourceDetailedStatus)?
+    )
+
+    alias OrganizationResourceStatus = String
+
+    alias OrganizationRuleStatus = String
+
+    alias OversizedConfigurationItemException = NamedTuple(
+      
+    )
+
+    alias Owner = String
+
+    alias PageSizeLimit = Int32
+
+    alias ParameterName = String
+
+    alias ParameterValue = String
+
+    alias PendingAggregationRequest = NamedTuple(
+      "RequesterAccountId" : (AccountId)?,
+      "RequesterAwsRegion" : (AwsRegion)?
+    )
+
+    alias PendingAggregationRequestList = Array(PendingAggregationRequest)
+
+    alias Percentage = Int32
+
+    alias PutAggregationAuthorizationRequest = NamedTuple(
+      "AuthorizedAccountId" : AccountId,
+      "AuthorizedAwsRegion" : AwsRegion,
+      "Tags" : (TagsList)?
+    )
+
+    alias PutAggregationAuthorizationResponse = NamedTuple(
+      "AggregationAuthorization" : (AggregationAuthorization)?
+    )
+
+    alias PutConfigRuleRequest = NamedTuple(
+      "ConfigRule" : ConfigRule,
+      "Tags" : (TagsList)?
+    )
+
+    alias PutConfigurationAggregatorRequest = NamedTuple(
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "AccountAggregationSources" : (AccountAggregationSourceList)?,
+      "OrganizationAggregationSource" : (OrganizationAggregationSource)?,
+      "Tags" : (TagsList)?
+    )
+
+    alias PutConfigurationAggregatorResponse = NamedTuple(
+      "ConfigurationAggregator" : (ConfigurationAggregator)?
+    )
+
+    alias PutConfigurationRecorderRequest = NamedTuple(
+      "ConfigurationRecorder" : ConfigurationRecorder
+    )
+
+    alias PutConformancePackRequest = NamedTuple(
+      "ConformancePackName" : ConformancePackName,
+      "TemplateS3Uri" : (TemplateS3Uri)?,
+      "TemplateBody" : (TemplateBody)?,
+      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
+      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
+      "ConformancePackInputParameters" : (ConformancePackInputParameters)?
+    )
+
+    alias PutConformancePackResponse = NamedTuple(
+      "ConformancePackArn" : (ConformancePackArn)?
+    )
+
+    alias PutDeliveryChannelRequest = NamedTuple(
+      "DeliveryChannel" : DeliveryChannel
+    )
+
+    alias PutEvaluationsRequest = NamedTuple(
+      "Evaluations" : (Evaluations)?,
+      "ResultToken" : String,
+      "TestMode" : (Boolean)?
+    )
+
+    alias PutEvaluationsResponse = NamedTuple(
+      "FailedEvaluations" : (Evaluations)?
+    )
+
+    alias PutOrganizationConfigRuleRequest = NamedTuple(
+      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
+      "OrganizationManagedRuleMetadata" : (OrganizationManagedRuleMetadata)?,
+      "OrganizationCustomRuleMetadata" : (OrganizationCustomRuleMetadata)?,
+      "ExcludedAccounts" : (ExcludedAccounts)?
+    )
+
+    alias PutOrganizationConfigRuleResponse = NamedTuple(
+      "OrganizationConfigRuleArn" : (StringWithCharLimit256)?
+    )
+
+    alias PutOrganizationConformancePackRequest = NamedTuple(
+      "OrganizationConformancePackName" : OrganizationConformancePackName,
+      "TemplateS3Uri" : (TemplateS3Uri)?,
+      "TemplateBody" : (TemplateBody)?,
+      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
+      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
+      "ConformancePackInputParameters" : (ConformancePackInputParameters)?,
+      "ExcludedAccounts" : (ExcludedAccounts)?
+    )
+
+    alias PutOrganizationConformancePackResponse = NamedTuple(
+      "OrganizationConformancePackArn" : (StringWithCharLimit256)?
+    )
+
+    alias PutRemediationConfigurationsRequest = NamedTuple(
+      "RemediationConfigurations" : RemediationConfigurations
+    )
+
+    alias PutRemediationConfigurationsResponse = NamedTuple(
+      "FailedBatches" : (FailedRemediationBatches)?
+    )
+
+    alias PutRemediationExceptionsRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceKeys" : RemediationExceptionResourceKeys,
+      "Message" : (StringWithCharLimit1024)?,
+      "ExpirationTime" : (Date)?
+    )
+
+    alias PutRemediationExceptionsResponse = NamedTuple(
+      "FailedBatches" : (FailedRemediationExceptionBatches)?
+    )
+
+    alias PutResourceConfigRequest = NamedTuple(
+      "ResourceType" : ResourceTypeString,
+      "SchemaVersionId" : SchemaVersionId,
+      "ResourceId" : ResourceId,
+      "ResourceName" : (ResourceName)?,
+      "Configuration" : Configuration,
+      "Tags" : (Tags)?
+    )
+
+    alias PutRetentionConfigurationRequest = NamedTuple(
+      "RetentionPeriodInDays" : RetentionPeriodInDays
+    )
+
+    alias PutRetentionConfigurationResponse = NamedTuple(
+      "RetentionConfiguration" : (RetentionConfiguration)?
+    )
+
+    alias QueryInfo = NamedTuple(
+      "SelectFields" : (FieldInfoList)?
+    )
+
+    alias RecorderName = String
+
+    alias RecorderStatus = String
+
+    alias RecordingGroup = NamedTuple(
+      "allSupported" : (AllSupported)?,
+      "includeGlobalResourceTypes" : (IncludeGlobalResourceTypes)?,
+      "resourceTypes" : (ResourceTypeList)?
+    )
+
+    alias ReevaluateConfigRuleNames = Array(ConfigRuleName)
+
+    alias RelatedEvent = String
+
+    alias RelatedEventList = Array(RelatedEvent)
+
+    alias Relationship = NamedTuple(
+      "resourceType" : (ResourceType)?,
+      "resourceId" : (ResourceId)?,
+      "resourceName" : (ResourceName)?,
+      "relationshipName" : (RelationshipName)?
+    )
+
+    alias RelationshipList = Array(Relationship)
+
+    alias RelationshipName = String
+
+    alias RemediationConfiguration = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "TargetType" : RemediationTargetType,
+      "TargetId" : StringWithCharLimit256,
+      "TargetVersion" : (String)?,
+      "Parameters" : (RemediationParameters)?,
+      "ResourceType" : (String)?,
+      "Automatic" : (Boolean)?,
+      "ExecutionControls" : (ExecutionControls)?,
+      "MaximumAutomaticAttempts" : (AutoRemediationAttempts)?,
+      "RetryAttemptSeconds" : (AutoRemediationAttemptSeconds)?,
+      "Arn" : (StringWithCharLimit1024)?,
+      "CreatedByService" : (StringWithCharLimit1024)?
+    )
+
+    alias RemediationConfigurations = Array(RemediationConfiguration)
+
+    alias RemediationException = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceType" : StringWithCharLimit256,
+      "ResourceId" : StringWithCharLimit1024,
+      "Message" : (StringWithCharLimit1024)?,
+      "ExpirationTime" : (Date)?
+    )
+
+    alias RemediationExceptionResourceKey = NamedTuple(
+      "ResourceType" : (StringWithCharLimit256)?,
+      "ResourceId" : (StringWithCharLimit1024)?
+    )
+
+    alias RemediationExceptionResourceKeys = Array(RemediationExceptionResourceKey)
+
+    alias RemediationExceptions = Array(RemediationException)
+
+    alias RemediationExecutionState = String
+
+    alias RemediationExecutionStatus = NamedTuple(
+      "ResourceKey" : (ResourceKey)?,
+      "State" : (RemediationExecutionState)?,
+      "StepDetails" : (RemediationExecutionSteps)?,
+      "InvocationTime" : (Date)?,
+      "LastUpdatedTime" : (Date)?
+    )
+
+    alias RemediationExecutionStatuses = Array(RemediationExecutionStatus)
+
+    alias RemediationExecutionStep = NamedTuple(
+      "Name" : (String)?,
+      "State" : (RemediationExecutionStepState)?,
+      "ErrorMessage" : (String)?,
+      "StartTime" : (Date)?,
+      "StopTime" : (Date)?
+    )
+
+    alias RemediationExecutionStepState = String
+
+    alias RemediationExecutionSteps = Array(RemediationExecutionStep)
+
+    alias RemediationInProgressException = NamedTuple(
+      
+    )
+
+    alias RemediationParameterValue = NamedTuple(
+      "ResourceValue" : (ResourceValue)?,
+      "StaticValue" : (StaticValue)?
+    )
+
+    alias RemediationParameters = Hash(StringWithCharLimit256,RemediationParameterValue)
+
+    alias RemediationTargetType = String
+
+    alias ResourceCount = NamedTuple(
+      "resourceType" : (ResourceType)?,
+      "count" : (Long)?
+    )
+
+    alias ResourceCountFilters = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "AccountId" : (AccountId)?,
+      "Region" : (AwsRegion)?
+    )
+
+    alias ResourceCountGroupKey = String
+
+    alias ResourceCounts = Array(ResourceCount)
+
+    alias ResourceCreationTime = String | UInt64 | Time
+
+    alias ResourceDeletionTime = String | UInt64 | Time
+
+    alias ResourceFilters = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "ResourceId" : (ResourceId)?,
+      "ResourceName" : (ResourceName)?,
+      "Region" : (AwsRegion)?
+    )
+
+    alias ResourceId = String
+
+    alias ResourceIdList = Array(ResourceId)
+
+    alias ResourceIdentifier = NamedTuple(
+      "resourceType" : (ResourceType)?,
+      "resourceId" : (ResourceId)?,
+      "resourceName" : (ResourceName)?,
+      "resourceDeletionTime" : (ResourceDeletionTime)?
+    )
+
+    alias ResourceIdentifierList = Array(ResourceIdentifier)
+
+    alias ResourceIdentifiersList = Array(AggregateResourceIdentifier)
+
+    alias ResourceInUseException = NamedTuple(
+      
+    )
+
+    alias ResourceKey = NamedTuple(
+      "resourceType" : ResourceType,
+      "resourceId" : ResourceId
+    )
+
+    alias ResourceKeys = Array(ResourceKey)
+
+    alias ResourceName = String
+
+    alias ResourceNotDiscoveredException = NamedTuple(
+      
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias ResourceType = String
+
+    alias ResourceTypeList = Array(ResourceType)
+
+    alias ResourceTypeString = String
+
+    alias ResourceTypes = Array(StringWithCharLimit256)
+
+    alias ResourceTypesScope = Array(StringWithCharLimit256)
+
+    alias ResourceValue = NamedTuple(
+      "Value" : ResourceValueType
+    )
+
+    alias ResourceValueType = String
+
+    alias Results = Array(String)
+
+    alias RetentionConfiguration = NamedTuple(
+      "Name" : RetentionConfigurationName,
+      "RetentionPeriodInDays" : RetentionPeriodInDays
+    )
+
+    alias RetentionConfigurationList = Array(RetentionConfiguration)
+
+    alias RetentionConfigurationName = String
+
+    alias RetentionConfigurationNameList = Array(RetentionConfigurationName)
+
+    alias RetentionPeriodInDays = Int32
+
+    alias RuleLimit = Int32
+
+    alias SchemaVersionId = String
+
+    alias Scope = NamedTuple(
+      "ComplianceResourceTypes" : (ComplianceResourceTypes)?,
+      "TagKey" : (StringWithCharLimit128)?,
+      "TagValue" : (StringWithCharLimit256)?,
+      "ComplianceResourceId" : (BaseResourceId)?
+    )
+
+    alias SelectAggregateResourceConfigRequest = NamedTuple(
+      "Expression" : Expression,
+      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "Limit" : (Limit)?,
+      "MaxResults" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias SelectAggregateResourceConfigResponse = NamedTuple(
+      "Results" : (Results)?,
+      "QueryInfo" : (QueryInfo)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias SelectResourceConfigRequest = NamedTuple(
+      "Expression" : Expression,
+      "Limit" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias SelectResourceConfigResponse = NamedTuple(
+      "Results" : (Results)?,
+      "QueryInfo" : (QueryInfo)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Source = NamedTuple(
+      "Owner" : Owner,
+      "SourceIdentifier" : StringWithCharLimit256,
+      "SourceDetails" : (SourceDetails)?
+    )
+
+    alias SourceDetail = NamedTuple(
+      "EventSource" : (EventSource)?,
+      "MessageType" : (MessageType)?,
+      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?
+    )
+
+    alias SourceDetails = Array(SourceDetail)
+
+    alias SsmControls = NamedTuple(
+      "ConcurrentExecutionRatePercentage" : (Percentage)?,
+      "ErrorPercentage" : (Percentage)?
+    )
+
+    alias StackArn = String
+
+    alias StartConfigRulesEvaluationRequest = NamedTuple(
+      "ConfigRuleNames" : (ReevaluateConfigRuleNames)?
+    )
+
+    alias StartConfigRulesEvaluationResponse = NamedTuple(
+      
+    )
+
+    alias StartConfigurationRecorderRequest = NamedTuple(
+      "ConfigurationRecorderName" : RecorderName
+    )
+
+    alias StartRemediationExecutionRequest = NamedTuple(
+      "ConfigRuleName" : ConfigRuleName,
+      "ResourceKeys" : ResourceKeys
+    )
+
+    alias StartRemediationExecutionResponse = NamedTuple(
+      "FailureMessage" : (String)?,
+      "FailedItems" : (ResourceKeys)?
+    )
+
+    alias StaticParameterValues = Array(StringWithCharLimit256)
+
+    alias StaticValue = NamedTuple(
+      "Values" : StaticParameterValues
+    )
+
+    alias StatusDetailFilters = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "MemberAccountRuleStatus" : (MemberAccountRuleStatus)?
+    )
+
+    alias StopConfigurationRecorderRequest = NamedTuple(
+      "ConfigurationRecorderName" : RecorderName
+    )
+
+    alias String = String
+
+    alias StringWithCharLimit1024 = String
+
+    alias StringWithCharLimit128 = String
+
+    alias StringWithCharLimit2048 = String
+
+    alias StringWithCharLimit256 = String
+
+    alias StringWithCharLimit256Min0 = String
+
+    alias StringWithCharLimit64 = String
+
+    alias StringWithCharLimit768 = String
+
+    alias SupplementaryConfiguration = Hash(SupplementaryConfigurationName,SupplementaryConfigurationValue)
+
+    alias SupplementaryConfigurationName = String
+
+    alias SupplementaryConfigurationValue = String
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(Name,Value)
+
+    alias TagsList = Array(Tag)
+
+    alias TemplateBody = String
+
+    alias TemplateS3Uri = String
+
+    alias TooManyTagsException = NamedTuple(
+      
+    )
+
+    alias UnprocessedResourceIdentifierList = Array(AggregateResourceIdentifier)
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias ValidationException = NamedTuple(
+      
+    )
+
+    alias Value = String
+
+    alias Version = String
   end
 end

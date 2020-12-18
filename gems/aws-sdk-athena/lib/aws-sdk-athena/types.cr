@@ -2483,5 +2483,604 @@ module Aws::Athena
       include Aws::Structure
     end
 
+    alias AmazonResourceName = String
+
+    alias BatchGetNamedQueryInput = NamedTuple(
+      "NamedQueryIds" : NamedQueryIdList
+    )
+
+    alias BatchGetNamedQueryOutput = NamedTuple(
+      "NamedQueries" : (NamedQueryList)?,
+      "UnprocessedNamedQueryIds" : (UnprocessedNamedQueryIdList)?
+    )
+
+    alias BatchGetQueryExecutionInput = NamedTuple(
+      "QueryExecutionIds" : QueryExecutionIdList
+    )
+
+    alias BatchGetQueryExecutionOutput = NamedTuple(
+      "QueryExecutions" : (QueryExecutionList)?,
+      "UnprocessedQueryExecutionIds" : (UnprocessedQueryExecutionIdList)?
+    )
+
+    alias Boolean = Bool
+
+    alias BoxedBoolean = Bool
+
+    alias BytesScannedCutoffValue = Int64
+
+    alias CatalogNameString = String
+
+    alias Column = NamedTuple(
+      "Name" : NameString,
+      "Type" : (TypeString)?,
+      "Comment" : (CommentString)?
+    )
+
+    alias ColumnInfo = NamedTuple(
+      "CatalogName" : (String)?,
+      "SchemaName" : (String)?,
+      "TableName" : (String)?,
+      "Name" : String,
+      "Label" : (String)?,
+      "Type" : String,
+      "Precision" : (Integer)?,
+      "Scale" : (Integer)?,
+      "Nullable" : (ColumnNullable)?,
+      "CaseSensitive" : (Boolean)?
+    )
+
+    alias ColumnInfoList = Array(ColumnInfo)
+
+    alias ColumnList = Array(Column)
+
+    alias ColumnNullable = String
+
+    alias CommentString = String
+
+    alias CreateDataCatalogInput = NamedTuple(
+      "Name" : CatalogNameString,
+      "Type" : DataCatalogType,
+      "Description" : (DescriptionString)?,
+      "Parameters" : (ParametersMap)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDataCatalogOutput = NamedTuple(
+      
+    )
+
+    alias CreateNamedQueryInput = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "Database" : DatabaseString,
+      "QueryString" : QueryString,
+      "ClientRequestToken" : (IdempotencyToken)?,
+      "WorkGroup" : (WorkGroupName)?
+    )
+
+    alias CreateNamedQueryOutput = NamedTuple(
+      "NamedQueryId" : (NamedQueryId)?
+    )
+
+    alias CreateWorkGroupInput = NamedTuple(
+      "Name" : WorkGroupName,
+      "Configuration" : (WorkGroupConfiguration)?,
+      "Description" : (WorkGroupDescriptionString)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateWorkGroupOutput = NamedTuple(
+      
+    )
+
+    alias DataCatalog = NamedTuple(
+      "Name" : CatalogNameString,
+      "Description" : (DescriptionString)?,
+      "Type" : DataCatalogType,
+      "Parameters" : (ParametersMap)?
+    )
+
+    alias DataCatalogSummary = NamedTuple(
+      "CatalogName" : (CatalogNameString)?,
+      "Type" : (DataCatalogType)?
+    )
+
+    alias DataCatalogSummaryList = Array(DataCatalogSummary)
+
+    alias DataCatalogType = String
+
+    alias Database = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "Parameters" : (ParametersMap)?
+    )
+
+    alias DatabaseList = Array(Database)
+
+    alias DatabaseString = String
+
+    alias Date = String | UInt64 | Time
+
+    alias Datum = NamedTuple(
+      "VarCharValue" : (datumString)?
+    )
+
+    alias DeleteDataCatalogInput = NamedTuple(
+      "Name" : CatalogNameString
+    )
+
+    alias DeleteDataCatalogOutput = NamedTuple(
+      
+    )
+
+    alias DeleteNamedQueryInput = NamedTuple(
+      "NamedQueryId" : NamedQueryId
+    )
+
+    alias DeleteNamedQueryOutput = NamedTuple(
+      
+    )
+
+    alias DeleteWorkGroupInput = NamedTuple(
+      "WorkGroup" : WorkGroupName,
+      "RecursiveDeleteOption" : (BoxedBoolean)?
+    )
+
+    alias DeleteWorkGroupOutput = NamedTuple(
+      
+    )
+
+    alias DescriptionString = String
+
+    alias EncryptionConfiguration = NamedTuple(
+      "EncryptionOption" : EncryptionOption,
+      "KmsKey" : (String)?
+    )
+
+    alias EncryptionOption = String
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ExpressionString = String
+
+    alias GetDataCatalogInput = NamedTuple(
+      "Name" : CatalogNameString
+    )
+
+    alias GetDataCatalogOutput = NamedTuple(
+      "DataCatalog" : (DataCatalog)?
+    )
+
+    alias GetDatabaseInput = NamedTuple(
+      "CatalogName" : CatalogNameString,
+      "DatabaseName" : NameString
+    )
+
+    alias GetDatabaseOutput = NamedTuple(
+      "Database" : (Database)?
+    )
+
+    alias GetNamedQueryInput = NamedTuple(
+      "NamedQueryId" : NamedQueryId
+    )
+
+    alias GetNamedQueryOutput = NamedTuple(
+      "NamedQuery" : (NamedQuery)?
+    )
+
+    alias GetQueryExecutionInput = NamedTuple(
+      "QueryExecutionId" : QueryExecutionId
+    )
+
+    alias GetQueryExecutionOutput = NamedTuple(
+      "QueryExecution" : (QueryExecution)?
+    )
+
+    alias GetQueryResultsInput = NamedTuple(
+      "QueryExecutionId" : QueryExecutionId,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxQueryResults)?
+    )
+
+    alias GetQueryResultsOutput = NamedTuple(
+      "UpdateCount" : (Long)?,
+      "ResultSet" : (ResultSet)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetTableMetadataInput = NamedTuple(
+      "CatalogName" : CatalogNameString,
+      "DatabaseName" : NameString,
+      "TableName" : NameString
+    )
+
+    alias GetTableMetadataOutput = NamedTuple(
+      "TableMetadata" : (TableMetadata)?
+    )
+
+    alias GetWorkGroupInput = NamedTuple(
+      "WorkGroup" : WorkGroupName
+    )
+
+    alias GetWorkGroupOutput = NamedTuple(
+      "WorkGroup" : (WorkGroup)?
+    )
+
+    alias IdempotencyToken = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "AthenaErrorCode" : (ErrorCode)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias KeyString = String
+
+    alias ListDataCatalogsInput = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxDataCatalogsCount)?
+    )
+
+    alias ListDataCatalogsOutput = NamedTuple(
+      "DataCatalogsSummary" : (DataCatalogSummaryList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListDatabasesInput = NamedTuple(
+      "CatalogName" : CatalogNameString,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxDatabasesCount)?
+    )
+
+    alias ListDatabasesOutput = NamedTuple(
+      "DatabaseList" : (DatabaseList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListNamedQueriesInput = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxNamedQueriesCount)?,
+      "WorkGroup" : (WorkGroupName)?
+    )
+
+    alias ListNamedQueriesOutput = NamedTuple(
+      "NamedQueryIds" : (NamedQueryIdList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListQueryExecutionsInput = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxQueryExecutionsCount)?,
+      "WorkGroup" : (WorkGroupName)?
+    )
+
+    alias ListQueryExecutionsOutput = NamedTuple(
+      "QueryExecutionIds" : (QueryExecutionIdList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTableMetadataInput = NamedTuple(
+      "CatalogName" : CatalogNameString,
+      "DatabaseName" : NameString,
+      "Expression" : (ExpressionString)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxTableMetadataCount)?
+    )
+
+    alias ListTableMetadataOutput = NamedTuple(
+      "TableMetadataList" : (TableMetadataList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxTagsCount)?
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListWorkGroupsInput = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxWorkGroupsCount)?
+    )
+
+    alias ListWorkGroupsOutput = NamedTuple(
+      "WorkGroups" : (WorkGroupsList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias Long = Int64
+
+    alias MaxDataCatalogsCount = Int32
+
+    alias MaxDatabasesCount = Int32
+
+    alias MaxNamedQueriesCount = Int32
+
+    alias MaxQueryExecutionsCount = Int32
+
+    alias MaxQueryResults = Int32
+
+    alias MaxTableMetadataCount = Int32
+
+    alias MaxTagsCount = Int32
+
+    alias MaxWorkGroupsCount = Int32
+
+    alias MetadataException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NameString = String
+
+    alias NamedQuery = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "Database" : DatabaseString,
+      "QueryString" : QueryString,
+      "NamedQueryId" : (NamedQueryId)?,
+      "WorkGroup" : (WorkGroupName)?
+    )
+
+    alias NamedQueryId = String
+
+    alias NamedQueryIdList = Array(NamedQueryId)
+
+    alias NamedQueryList = Array(NamedQuery)
+
+    alias ParametersMap = Hash(KeyString,ParametersMapValue)
+
+    alias ParametersMapValue = String
+
+    alias QueryExecution = NamedTuple(
+      "QueryExecutionId" : (QueryExecutionId)?,
+      "Query" : (QueryString)?,
+      "StatementType" : (StatementType)?,
+      "ResultConfiguration" : (ResultConfiguration)?,
+      "QueryExecutionContext" : (QueryExecutionContext)?,
+      "Status" : (QueryExecutionStatus)?,
+      "Statistics" : (QueryExecutionStatistics)?,
+      "WorkGroup" : (WorkGroupName)?
+    )
+
+    alias QueryExecutionContext = NamedTuple(
+      "Database" : (DatabaseString)?,
+      "Catalog" : (CatalogNameString)?
+    )
+
+    alias QueryExecutionId = String
+
+    alias QueryExecutionIdList = Array(QueryExecutionId)
+
+    alias QueryExecutionList = Array(QueryExecution)
+
+    alias QueryExecutionState = String
+
+    alias QueryExecutionStatistics = NamedTuple(
+      "EngineExecutionTimeInMillis" : (Long)?,
+      "DataScannedInBytes" : (Long)?,
+      "DataManifestLocation" : (String)?,
+      "TotalExecutionTimeInMillis" : (Long)?,
+      "QueryQueueTimeInMillis" : (Long)?,
+      "QueryPlanningTimeInMillis" : (Long)?,
+      "ServiceProcessingTimeInMillis" : (Long)?
+    )
+
+    alias QueryExecutionStatus = NamedTuple(
+      "State" : (QueryExecutionState)?,
+      "StateChangeReason" : (String)?,
+      "SubmissionDateTime" : (Date)?,
+      "CompletionDateTime" : (Date)?
+    )
+
+    alias QueryString = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceName" : (AmazonResourceName)?
+    )
+
+    alias ResultConfiguration = NamedTuple(
+      "OutputLocation" : (String)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?
+    )
+
+    alias ResultConfigurationUpdates = NamedTuple(
+      "OutputLocation" : (String)?,
+      "RemoveOutputLocation" : (BoxedBoolean)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?,
+      "RemoveEncryptionConfiguration" : (BoxedBoolean)?
+    )
+
+    alias ResultSet = NamedTuple(
+      "Rows" : (RowList)?,
+      "ResultSetMetadata" : (ResultSetMetadata)?
+    )
+
+    alias ResultSetMetadata = NamedTuple(
+      "ColumnInfo" : (ColumnInfoList)?
+    )
+
+    alias Row = NamedTuple(
+      "Data" : (datumList)?
+    )
+
+    alias RowList = Array(Row)
+
+    alias StartQueryExecutionInput = NamedTuple(
+      "QueryString" : QueryString,
+      "ClientRequestToken" : (IdempotencyToken)?,
+      "QueryExecutionContext" : (QueryExecutionContext)?,
+      "ResultConfiguration" : (ResultConfiguration)?,
+      "WorkGroup" : (WorkGroupName)?
+    )
+
+    alias StartQueryExecutionOutput = NamedTuple(
+      "QueryExecutionId" : (QueryExecutionId)?
+    )
+
+    alias StatementType = String
+
+    alias StopQueryExecutionInput = NamedTuple(
+      "QueryExecutionId" : QueryExecutionId
+    )
+
+    alias StopQueryExecutionOutput = NamedTuple(
+      
+    )
+
+    alias String = String
+
+    alias TableMetadata = NamedTuple(
+      "Name" : NameString,
+      "CreateTime" : (Timestamp)?,
+      "LastAccessTime" : (Timestamp)?,
+      "TableType" : (TableTypeString)?,
+      "Columns" : (ColumnList)?,
+      "PartitionKeys" : (ColumnList)?,
+      "Parameters" : (ParametersMap)?
+    )
+
+    alias TableMetadataList = Array(TableMetadata)
+
+    alias TableTypeString = String
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottleReason = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Reason" : (ThrottleReason)?
+    )
+
+    alias TypeString = String
+
+    alias UnprocessedNamedQueryId = NamedTuple(
+      "NamedQueryId" : (NamedQueryId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias UnprocessedNamedQueryIdList = Array(UnprocessedNamedQueryId)
+
+    alias UnprocessedQueryExecutionId = NamedTuple(
+      "QueryExecutionId" : (QueryExecutionId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias UnprocessedQueryExecutionIdList = Array(UnprocessedQueryExecutionId)
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UpdateDataCatalogInput = NamedTuple(
+      "Name" : CatalogNameString,
+      "Type" : DataCatalogType,
+      "Description" : (DescriptionString)?,
+      "Parameters" : (ParametersMap)?
+    )
+
+    alias UpdateDataCatalogOutput = NamedTuple(
+      
+    )
+
+    alias UpdateWorkGroupInput = NamedTuple(
+      "WorkGroup" : WorkGroupName,
+      "Description" : (WorkGroupDescriptionString)?,
+      "ConfigurationUpdates" : (WorkGroupConfigurationUpdates)?,
+      "State" : (WorkGroupState)?
+    )
+
+    alias UpdateWorkGroupOutput = NamedTuple(
+      
+    )
+
+    alias WorkGroup = NamedTuple(
+      "Name" : WorkGroupName,
+      "State" : (WorkGroupState)?,
+      "Configuration" : (WorkGroupConfiguration)?,
+      "Description" : (WorkGroupDescriptionString)?,
+      "CreationTime" : (Date)?
+    )
+
+    alias WorkGroupConfiguration = NamedTuple(
+      "ResultConfiguration" : (ResultConfiguration)?,
+      "EnforceWorkGroupConfiguration" : (BoxedBoolean)?,
+      "PublishCloudWatchMetricsEnabled" : (BoxedBoolean)?,
+      "BytesScannedCutoffPerQuery" : (BytesScannedCutoffValue)?,
+      "RequesterPaysEnabled" : (BoxedBoolean)?
+    )
+
+    alias WorkGroupConfigurationUpdates = NamedTuple(
+      "EnforceWorkGroupConfiguration" : (BoxedBoolean)?,
+      "ResultConfigurationUpdates" : (ResultConfigurationUpdates)?,
+      "PublishCloudWatchMetricsEnabled" : (BoxedBoolean)?,
+      "BytesScannedCutoffPerQuery" : (BytesScannedCutoffValue)?,
+      "RemoveBytesScannedCutoffPerQuery" : (BoxedBoolean)?,
+      "RequesterPaysEnabled" : (BoxedBoolean)?
+    )
+
+    alias WorkGroupDescriptionString = String
+
+    alias WorkGroupName = String
+
+    alias WorkGroupState = String
+
+    alias WorkGroupSummary = NamedTuple(
+      "Name" : (WorkGroupName)?,
+      "State" : (WorkGroupState)?,
+      "Description" : (WorkGroupDescriptionString)?,
+      "CreationTime" : (Date)?
+    )
+
+    alias WorkGroupsList = Array(WorkGroupSummary)
+
+    alias datumList = Array(Datum)
+
+    alias datumString = String
   end
 end

@@ -23510,5 +23510,2643 @@ module Aws::SecurityHub
       include Aws::Structure
     end
 
+    alias AcceptInvitationRequest = NamedTuple(
+      "MasterId" : NonEmptyString,
+      "InvitationId" : NonEmptyString
+    )
+
+    alias AcceptInvitationResponse = NamedTuple(
+      
+    )
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias AccountDetails = NamedTuple(
+      "AccountId" : AccountId,
+      "Email" : (NonEmptyString)?
+    )
+
+    alias AccountDetailsList = Array(AccountDetails)
+
+    alias AccountId = String
+
+    alias AccountIdList = Array(NonEmptyString)
+
+    alias ActionTarget = NamedTuple(
+      "ActionTargetArn" : NonEmptyString,
+      "Name" : NonEmptyString,
+      "Description" : NonEmptyString
+    )
+
+    alias ActionTargetList = Array(ActionTarget)
+
+    alias AdminAccount = NamedTuple(
+      "AccountId" : (NonEmptyString)?,
+      "Status" : (AdminStatus)?
+    )
+
+    alias AdminAccounts = Array(AdminAccount)
+
+    alias AdminStatus = String
+
+    alias AdminsMaxResults = Int32
+
+    alias ArnList = Array(NonEmptyString)
+
+    alias AvailabilityZone = NamedTuple(
+      "ZoneName" : (NonEmptyString)?,
+      "SubnetId" : (NonEmptyString)?
+    )
+
+    alias AvailabilityZones = Array(AvailabilityZone)
+
+    alias AwsApiGatewayAccessLogSettings = NamedTuple(
+      "Format" : (NonEmptyString)?,
+      "DestinationArn" : (NonEmptyString)?
+    )
+
+    alias AwsApiGatewayCanarySettings = NamedTuple(
+      "PercentTraffic" : (Double)?,
+      "DeploymentId" : (NonEmptyString)?,
+      "StageVariableOverrides" : (FieldMap)?,
+      "UseStageCache" : (Boolean)?
+    )
+
+    alias AwsApiGatewayEndpointConfiguration = NamedTuple(
+      "Types" : (NonEmptyStringList)?
+    )
+
+    alias AwsApiGatewayMethodSettings = NamedTuple(
+      "MetricsEnabled" : (Boolean)?,
+      "LoggingLevel" : (NonEmptyString)?,
+      "DataTraceEnabled" : (Boolean)?,
+      "ThrottlingBurstLimit" : (Integer)?,
+      "ThrottlingRateLimit" : (Double)?,
+      "CachingEnabled" : (Boolean)?,
+      "CacheTtlInSeconds" : (Integer)?,
+      "CacheDataEncrypted" : (Boolean)?,
+      "RequireAuthorizationForCacheControl" : (Boolean)?,
+      "UnauthorizedCacheControlHeaderStrategy" : (NonEmptyString)?,
+      "HttpMethod" : (NonEmptyString)?,
+      "ResourcePath" : (NonEmptyString)?
+    )
+
+    alias AwsApiGatewayMethodSettingsList = Array(AwsApiGatewayMethodSettings)
+
+    alias AwsApiGatewayRestApiDetails = NamedTuple(
+      "Id" : (NonEmptyString)?,
+      "Name" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "CreatedDate" : (NonEmptyString)?,
+      "Version" : (NonEmptyString)?,
+      "BinaryMediaTypes" : (NonEmptyStringList)?,
+      "MinimumCompressionSize" : (Integer)?,
+      "ApiKeySource" : (NonEmptyString)?,
+      "EndpointConfiguration" : (AwsApiGatewayEndpointConfiguration)?
+    )
+
+    alias AwsApiGatewayStageDetails = NamedTuple(
+      "DeploymentId" : (NonEmptyString)?,
+      "ClientCertificateId" : (NonEmptyString)?,
+      "StageName" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "CacheClusterEnabled" : (Boolean)?,
+      "CacheClusterSize" : (NonEmptyString)?,
+      "CacheClusterStatus" : (NonEmptyString)?,
+      "MethodSettings" : (AwsApiGatewayMethodSettingsList)?,
+      "Variables" : (FieldMap)?,
+      "DocumentationVersion" : (NonEmptyString)?,
+      "AccessLogSettings" : (AwsApiGatewayAccessLogSettings)?,
+      "CanarySettings" : (AwsApiGatewayCanarySettings)?,
+      "TracingEnabled" : (Boolean)?,
+      "CreatedDate" : (NonEmptyString)?,
+      "LastUpdatedDate" : (NonEmptyString)?,
+      "WebAclArn" : (NonEmptyString)?
+    )
+
+    alias AwsApiGatewayV2ApiDetails = NamedTuple(
+      "ApiEndpoint" : (NonEmptyString)?,
+      "ApiId" : (NonEmptyString)?,
+      "ApiKeySelectionExpression" : (NonEmptyString)?,
+      "CreatedDate" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "Version" : (NonEmptyString)?,
+      "Name" : (NonEmptyString)?,
+      "ProtocolType" : (NonEmptyString)?,
+      "RouteSelectionExpression" : (NonEmptyString)?,
+      "CorsConfiguration" : (AwsCorsConfiguration)?
+    )
+
+    alias AwsApiGatewayV2RouteSettings = NamedTuple(
+      "DetailedMetricsEnabled" : (Boolean)?,
+      "LoggingLevel" : (NonEmptyString)?,
+      "DataTraceEnabled" : (Boolean)?,
+      "ThrottlingBurstLimit" : (Integer)?,
+      "ThrottlingRateLimit" : (Double)?
+    )
+
+    alias AwsApiGatewayV2StageDetails = NamedTuple(
+      "CreatedDate" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "DefaultRouteSettings" : (AwsApiGatewayV2RouteSettings)?,
+      "DeploymentId" : (NonEmptyString)?,
+      "LastUpdatedDate" : (NonEmptyString)?,
+      "RouteSettings" : (AwsApiGatewayV2RouteSettings)?,
+      "StageName" : (NonEmptyString)?,
+      "StageVariables" : (FieldMap)?,
+      "AccessLogSettings" : (AwsApiGatewayAccessLogSettings)?,
+      "AutoDeploy" : (Boolean)?,
+      "LastDeploymentStatusMessage" : (NonEmptyString)?,
+      "ApiGatewayManaged" : (Boolean)?
+    )
+
+    alias AwsAutoScalingAutoScalingGroupDetails = NamedTuple(
+      "LaunchConfigurationName" : (NonEmptyString)?,
+      "LoadBalancerNames" : (StringList)?,
+      "HealthCheckType" : (NonEmptyString)?,
+      "HealthCheckGracePeriod" : (Integer)?,
+      "CreatedTime" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateDetails = NamedTuple(
+      "CertificateAuthorityArn" : (NonEmptyString)?,
+      "CreatedAt" : (NonEmptyString)?,
+      "DomainName" : (NonEmptyString)?,
+      "DomainValidationOptions" : (AwsCertificateManagerCertificateDomainValidationOptions)?,
+      "ExtendedKeyUsages" : (AwsCertificateManagerCertificateExtendedKeyUsages)?,
+      "FailureReason" : (NonEmptyString)?,
+      "ImportedAt" : (NonEmptyString)?,
+      "InUseBy" : (StringList)?,
+      "IssuedAt" : (NonEmptyString)?,
+      "Issuer" : (NonEmptyString)?,
+      "KeyAlgorithm" : (NonEmptyString)?,
+      "KeyUsages" : (AwsCertificateManagerCertificateKeyUsages)?,
+      "NotAfter" : (NonEmptyString)?,
+      "NotBefore" : (NonEmptyString)?,
+      "Options" : (AwsCertificateManagerCertificateOptions)?,
+      "RenewalEligibility" : (NonEmptyString)?,
+      "RenewalSummary" : (AwsCertificateManagerCertificateRenewalSummary)?,
+      "Serial" : (NonEmptyString)?,
+      "SignatureAlgorithm" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?,
+      "Subject" : (NonEmptyString)?,
+      "SubjectAlternativeNames" : (StringList)?,
+      "Type" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateDomainValidationOption = NamedTuple(
+      "DomainName" : (NonEmptyString)?,
+      "ResourceRecord" : (AwsCertificateManagerCertificateResourceRecord)?,
+      "ValidationDomain" : (NonEmptyString)?,
+      "ValidationEmails" : (StringList)?,
+      "ValidationMethod" : (NonEmptyString)?,
+      "ValidationStatus" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateDomainValidationOptions = Array(AwsCertificateManagerCertificateDomainValidationOption)
+
+    alias AwsCertificateManagerCertificateExtendedKeyUsage = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "OId" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateExtendedKeyUsages = Array(AwsCertificateManagerCertificateExtendedKeyUsage)
+
+    alias AwsCertificateManagerCertificateKeyUsage = NamedTuple(
+      "Name" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateKeyUsages = Array(AwsCertificateManagerCertificateKeyUsage)
+
+    alias AwsCertificateManagerCertificateOptions = NamedTuple(
+      "CertificateTransparencyLoggingPreference" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateRenewalSummary = NamedTuple(
+      "DomainValidationOptions" : (AwsCertificateManagerCertificateDomainValidationOptions)?,
+      "RenewalStatus" : (NonEmptyString)?,
+      "RenewalStatusReason" : (NonEmptyString)?,
+      "UpdatedAt" : (NonEmptyString)?
+    )
+
+    alias AwsCertificateManagerCertificateResourceRecord = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "Type" : (NonEmptyString)?,
+      "Value" : (NonEmptyString)?
+    )
+
+    alias AwsCloudFrontDistributionCacheBehavior = NamedTuple(
+      "ViewerProtocolPolicy" : (NonEmptyString)?
+    )
+
+    alias AwsCloudFrontDistributionCacheBehaviors = NamedTuple(
+      "Items" : (AwsCloudFrontDistributionCacheBehaviorsItemList)?
+    )
+
+    alias AwsCloudFrontDistributionCacheBehaviorsItemList = Array(AwsCloudFrontDistributionCacheBehavior)
+
+    alias AwsCloudFrontDistributionDefaultCacheBehavior = NamedTuple(
+      "ViewerProtocolPolicy" : (NonEmptyString)?
+    )
+
+    alias AwsCloudFrontDistributionDetails = NamedTuple(
+      "CacheBehaviors" : (AwsCloudFrontDistributionCacheBehaviors)?,
+      "DefaultCacheBehavior" : (AwsCloudFrontDistributionDefaultCacheBehavior)?,
+      "DefaultRootObject" : (NonEmptyString)?,
+      "DomainName" : (NonEmptyString)?,
+      "ETag" : (NonEmptyString)?,
+      "LastModifiedTime" : (NonEmptyString)?,
+      "Logging" : (AwsCloudFrontDistributionLogging)?,
+      "Origins" : (AwsCloudFrontDistributionOrigins)?,
+      "OriginGroups" : (AwsCloudFrontDistributionOriginGroups)?,
+      "Status" : (NonEmptyString)?,
+      "WebAclId" : (NonEmptyString)?
+    )
+
+    alias AwsCloudFrontDistributionLogging = NamedTuple(
+      "Bucket" : (NonEmptyString)?,
+      "Enabled" : (Boolean)?,
+      "IncludeCookies" : (Boolean)?,
+      "Prefix" : (NonEmptyString)?
+    )
+
+    alias AwsCloudFrontDistributionOriginGroup = NamedTuple(
+      "FailoverCriteria" : (AwsCloudFrontDistributionOriginGroupFailover)?
+    )
+
+    alias AwsCloudFrontDistributionOriginGroupFailover = NamedTuple(
+      "StatusCodes" : (AwsCloudFrontDistributionOriginGroupFailoverStatusCodes)?
+    )
+
+    alias AwsCloudFrontDistributionOriginGroupFailoverStatusCodes = NamedTuple(
+      "Items" : (AwsCloudFrontDistributionOriginGroupFailoverStatusCodesItemList)?,
+      "Quantity" : (Integer)?
+    )
+
+    alias AwsCloudFrontDistributionOriginGroupFailoverStatusCodesItemList = Array(Integer)
+
+    alias AwsCloudFrontDistributionOriginGroups = NamedTuple(
+      "Items" : (AwsCloudFrontDistributionOriginGroupsItemList)?
+    )
+
+    alias AwsCloudFrontDistributionOriginGroupsItemList = Array(AwsCloudFrontDistributionOriginGroup)
+
+    alias AwsCloudFrontDistributionOriginItem = NamedTuple(
+      "DomainName" : (NonEmptyString)?,
+      "Id" : (NonEmptyString)?,
+      "OriginPath" : (NonEmptyString)?,
+      "S3OriginConfig" : (AwsCloudFrontDistributionOriginS3OriginConfig)?
+    )
+
+    alias AwsCloudFrontDistributionOriginItemList = Array(AwsCloudFrontDistributionOriginItem)
+
+    alias AwsCloudFrontDistributionOriginS3OriginConfig = NamedTuple(
+      "OriginAccessIdentity" : (NonEmptyString)?
+    )
+
+    alias AwsCloudFrontDistributionOrigins = NamedTuple(
+      "Items" : (AwsCloudFrontDistributionOriginItemList)?
+    )
+
+    alias AwsCloudTrailTrailDetails = NamedTuple(
+      "CloudWatchLogsLogGroupArn" : (NonEmptyString)?,
+      "CloudWatchLogsRoleArn" : (NonEmptyString)?,
+      "HasCustomEventSelectors" : (Boolean)?,
+      "HomeRegion" : (NonEmptyString)?,
+      "IncludeGlobalServiceEvents" : (Boolean)?,
+      "IsMultiRegionTrail" : (Boolean)?,
+      "IsOrganizationTrail" : (Boolean)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "LogFileValidationEnabled" : (Boolean)?,
+      "Name" : (NonEmptyString)?,
+      "S3BucketName" : (NonEmptyString)?,
+      "S3KeyPrefix" : (NonEmptyString)?,
+      "SnsTopicArn" : (NonEmptyString)?,
+      "SnsTopicName" : (NonEmptyString)?,
+      "TrailArn" : (NonEmptyString)?
+    )
+
+    alias AwsCodeBuildProjectDetails = NamedTuple(
+      "EncryptionKey" : (NonEmptyString)?,
+      "Environment" : (AwsCodeBuildProjectEnvironment)?,
+      "Name" : (NonEmptyString)?,
+      "Source" : (AwsCodeBuildProjectSource)?,
+      "ServiceRole" : (NonEmptyString)?,
+      "VpcConfig" : (AwsCodeBuildProjectVpcConfig)?
+    )
+
+    alias AwsCodeBuildProjectEnvironment = NamedTuple(
+      "Certificate" : (NonEmptyString)?,
+      "ImagePullCredentialsType" : (NonEmptyString)?,
+      "RegistryCredential" : (AwsCodeBuildProjectEnvironmentRegistryCredential)?,
+      "Type" : (NonEmptyString)?
+    )
+
+    alias AwsCodeBuildProjectEnvironmentRegistryCredential = NamedTuple(
+      "Credential" : (NonEmptyString)?,
+      "CredentialProvider" : (NonEmptyString)?
+    )
+
+    alias AwsCodeBuildProjectSource = NamedTuple(
+      "Type" : (NonEmptyString)?,
+      "Location" : (NonEmptyString)?,
+      "GitCloneDepth" : (Integer)?,
+      "InsecureSsl" : (Boolean)?
+    )
+
+    alias AwsCodeBuildProjectVpcConfig = NamedTuple(
+      "VpcId" : (NonEmptyString)?,
+      "Subnets" : (NonEmptyStringList)?,
+      "SecurityGroupIds" : (NonEmptyStringList)?
+    )
+
+    alias AwsCorsConfiguration = NamedTuple(
+      "AllowOrigins" : (NonEmptyStringList)?,
+      "AllowCredentials" : (Boolean)?,
+      "ExposeHeaders" : (NonEmptyStringList)?,
+      "MaxAge" : (Integer)?,
+      "AllowMethods" : (NonEmptyStringList)?,
+      "AllowHeaders" : (NonEmptyStringList)?
+    )
+
+    alias AwsDynamoDbTableAttributeDefinition = NamedTuple(
+      "AttributeName" : (NonEmptyString)?,
+      "AttributeType" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableAttributeDefinitionList = Array(AwsDynamoDbTableAttributeDefinition)
+
+    alias AwsDynamoDbTableBillingModeSummary = NamedTuple(
+      "BillingMode" : (NonEmptyString)?,
+      "LastUpdateToPayPerRequestDateTime" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableDetails = NamedTuple(
+      "AttributeDefinitions" : (AwsDynamoDbTableAttributeDefinitionList)?,
+      "BillingModeSummary" : (AwsDynamoDbTableBillingModeSummary)?,
+      "CreationDateTime" : (NonEmptyString)?,
+      "GlobalSecondaryIndexes" : (AwsDynamoDbTableGlobalSecondaryIndexList)?,
+      "GlobalTableVersion" : (NonEmptyString)?,
+      "ItemCount" : (Integer)?,
+      "KeySchema" : (AwsDynamoDbTableKeySchemaList)?,
+      "LatestStreamArn" : (NonEmptyString)?,
+      "LatestStreamLabel" : (NonEmptyString)?,
+      "LocalSecondaryIndexes" : (AwsDynamoDbTableLocalSecondaryIndexList)?,
+      "ProvisionedThroughput" : (AwsDynamoDbTableProvisionedThroughput)?,
+      "Replicas" : (AwsDynamoDbTableReplicaList)?,
+      "RestoreSummary" : (AwsDynamoDbTableRestoreSummary)?,
+      "SseDescription" : (AwsDynamoDbTableSseDescription)?,
+      "StreamSpecification" : (AwsDynamoDbTableStreamSpecification)?,
+      "TableId" : (NonEmptyString)?,
+      "TableName" : (NonEmptyString)?,
+      "TableSizeBytes" : (SizeBytes)?,
+      "TableStatus" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableGlobalSecondaryIndex = NamedTuple(
+      "Backfilling" : (Boolean)?,
+      "IndexArn" : (NonEmptyString)?,
+      "IndexName" : (NonEmptyString)?,
+      "IndexSizeBytes" : (SizeBytes)?,
+      "IndexStatus" : (NonEmptyString)?,
+      "ItemCount" : (Integer)?,
+      "KeySchema" : (AwsDynamoDbTableKeySchemaList)?,
+      "Projection" : (AwsDynamoDbTableProjection)?,
+      "ProvisionedThroughput" : (AwsDynamoDbTableProvisionedThroughput)?
+    )
+
+    alias AwsDynamoDbTableGlobalSecondaryIndexList = Array(AwsDynamoDbTableGlobalSecondaryIndex)
+
+    alias AwsDynamoDbTableKeySchema = NamedTuple(
+      "AttributeName" : (NonEmptyString)?,
+      "KeyType" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableKeySchemaList = Array(AwsDynamoDbTableKeySchema)
+
+    alias AwsDynamoDbTableLocalSecondaryIndex = NamedTuple(
+      "IndexArn" : (NonEmptyString)?,
+      "IndexName" : (NonEmptyString)?,
+      "KeySchema" : (AwsDynamoDbTableKeySchemaList)?,
+      "Projection" : (AwsDynamoDbTableProjection)?
+    )
+
+    alias AwsDynamoDbTableLocalSecondaryIndexList = Array(AwsDynamoDbTableLocalSecondaryIndex)
+
+    alias AwsDynamoDbTableProjection = NamedTuple(
+      "NonKeyAttributes" : (StringList)?,
+      "ProjectionType" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableProvisionedThroughput = NamedTuple(
+      "LastDecreaseDateTime" : (NonEmptyString)?,
+      "LastIncreaseDateTime" : (NonEmptyString)?,
+      "NumberOfDecreasesToday" : (Integer)?,
+      "ReadCapacityUnits" : (Integer)?,
+      "WriteCapacityUnits" : (Integer)?
+    )
+
+    alias AwsDynamoDbTableProvisionedThroughputOverride = NamedTuple(
+      "ReadCapacityUnits" : (Integer)?
+    )
+
+    alias AwsDynamoDbTableReplica = NamedTuple(
+      "GlobalSecondaryIndexes" : (AwsDynamoDbTableReplicaGlobalSecondaryIndexList)?,
+      "KmsMasterKeyId" : (NonEmptyString)?,
+      "ProvisionedThroughputOverride" : (AwsDynamoDbTableProvisionedThroughputOverride)?,
+      "RegionName" : (NonEmptyString)?,
+      "ReplicaStatus" : (NonEmptyString)?,
+      "ReplicaStatusDescription" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableReplicaGlobalSecondaryIndex = NamedTuple(
+      "IndexName" : (NonEmptyString)?,
+      "ProvisionedThroughputOverride" : (AwsDynamoDbTableProvisionedThroughputOverride)?
+    )
+
+    alias AwsDynamoDbTableReplicaGlobalSecondaryIndexList = Array(AwsDynamoDbTableReplicaGlobalSecondaryIndex)
+
+    alias AwsDynamoDbTableReplicaList = Array(AwsDynamoDbTableReplica)
+
+    alias AwsDynamoDbTableRestoreSummary = NamedTuple(
+      "SourceBackupArn" : (NonEmptyString)?,
+      "SourceTableArn" : (NonEmptyString)?,
+      "RestoreDateTime" : (NonEmptyString)?,
+      "RestoreInProgress" : (Boolean)?
+    )
+
+    alias AwsDynamoDbTableSseDescription = NamedTuple(
+      "InaccessibleEncryptionDateTime" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?,
+      "SseType" : (NonEmptyString)?,
+      "KmsMasterKeyArn" : (NonEmptyString)?
+    )
+
+    alias AwsDynamoDbTableStreamSpecification = NamedTuple(
+      "StreamEnabled" : (Boolean)?,
+      "StreamViewType" : (NonEmptyString)?
+    )
+
+    alias AwsEc2EipDetails = NamedTuple(
+      "InstanceId" : (NonEmptyString)?,
+      "PublicIp" : (NonEmptyString)?,
+      "AllocationId" : (NonEmptyString)?,
+      "AssociationId" : (NonEmptyString)?,
+      "Domain" : (NonEmptyString)?,
+      "PublicIpv4Pool" : (NonEmptyString)?,
+      "NetworkBorderGroup" : (NonEmptyString)?,
+      "NetworkInterfaceId" : (NonEmptyString)?,
+      "NetworkInterfaceOwnerId" : (NonEmptyString)?,
+      "PrivateIpAddress" : (NonEmptyString)?
+    )
+
+    alias AwsEc2InstanceDetails = NamedTuple(
+      "Type" : (NonEmptyString)?,
+      "ImageId" : (NonEmptyString)?,
+      "IpV4Addresses" : (StringList)?,
+      "IpV6Addresses" : (StringList)?,
+      "KeyName" : (NonEmptyString)?,
+      "IamInstanceProfileArn" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?,
+      "SubnetId" : (NonEmptyString)?,
+      "LaunchedAt" : (NonEmptyString)?
+    )
+
+    alias AwsEc2NetworkInterfaceAttachment = NamedTuple(
+      "AttachTime" : (NonEmptyString)?,
+      "AttachmentId" : (NonEmptyString)?,
+      "DeleteOnTermination" : (Boolean)?,
+      "DeviceIndex" : (Integer)?,
+      "InstanceId" : (NonEmptyString)?,
+      "InstanceOwnerId" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsEc2NetworkInterfaceDetails = NamedTuple(
+      "Attachment" : (AwsEc2NetworkInterfaceAttachment)?,
+      "NetworkInterfaceId" : (NonEmptyString)?,
+      "SecurityGroups" : (AwsEc2NetworkInterfaceSecurityGroupList)?,
+      "SourceDestCheck" : (Boolean)?
+    )
+
+    alias AwsEc2NetworkInterfaceSecurityGroup = NamedTuple(
+      "GroupName" : (NonEmptyString)?,
+      "GroupId" : (NonEmptyString)?
+    )
+
+    alias AwsEc2NetworkInterfaceSecurityGroupList = Array(AwsEc2NetworkInterfaceSecurityGroup)
+
+    alias AwsEc2SecurityGroupDetails = NamedTuple(
+      "GroupName" : (NonEmptyString)?,
+      "GroupId" : (NonEmptyString)?,
+      "OwnerId" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?,
+      "IpPermissions" : (AwsEc2SecurityGroupIpPermissionList)?,
+      "IpPermissionsEgress" : (AwsEc2SecurityGroupIpPermissionList)?
+    )
+
+    alias AwsEc2SecurityGroupIpPermission = NamedTuple(
+      "IpProtocol" : (NonEmptyString)?,
+      "FromPort" : (Integer)?,
+      "ToPort" : (Integer)?,
+      "UserIdGroupPairs" : (AwsEc2SecurityGroupUserIdGroupPairList)?,
+      "IpRanges" : (AwsEc2SecurityGroupIpRangeList)?,
+      "Ipv6Ranges" : (AwsEc2SecurityGroupIpv6RangeList)?,
+      "PrefixListIds" : (AwsEc2SecurityGroupPrefixListIdList)?
+    )
+
+    alias AwsEc2SecurityGroupIpPermissionList = Array(AwsEc2SecurityGroupIpPermission)
+
+    alias AwsEc2SecurityGroupIpRange = NamedTuple(
+      "CidrIp" : (NonEmptyString)?
+    )
+
+    alias AwsEc2SecurityGroupIpRangeList = Array(AwsEc2SecurityGroupIpRange)
+
+    alias AwsEc2SecurityGroupIpv6Range = NamedTuple(
+      "CidrIpv6" : (NonEmptyString)?
+    )
+
+    alias AwsEc2SecurityGroupIpv6RangeList = Array(AwsEc2SecurityGroupIpv6Range)
+
+    alias AwsEc2SecurityGroupPrefixListId = NamedTuple(
+      "PrefixListId" : (NonEmptyString)?
+    )
+
+    alias AwsEc2SecurityGroupPrefixListIdList = Array(AwsEc2SecurityGroupPrefixListId)
+
+    alias AwsEc2SecurityGroupUserIdGroupPair = NamedTuple(
+      "GroupId" : (NonEmptyString)?,
+      "GroupName" : (NonEmptyString)?,
+      "PeeringStatus" : (NonEmptyString)?,
+      "UserId" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?,
+      "VpcPeeringConnectionId" : (NonEmptyString)?
+    )
+
+    alias AwsEc2SecurityGroupUserIdGroupPairList = Array(AwsEc2SecurityGroupUserIdGroupPair)
+
+    alias AwsEc2VolumeAttachment = NamedTuple(
+      "AttachTime" : (NonEmptyString)?,
+      "DeleteOnTermination" : (Boolean)?,
+      "InstanceId" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsEc2VolumeAttachmentList = Array(AwsEc2VolumeAttachment)
+
+    alias AwsEc2VolumeDetails = NamedTuple(
+      "CreateTime" : (NonEmptyString)?,
+      "Encrypted" : (Boolean)?,
+      "Size" : (Integer)?,
+      "SnapshotId" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "Attachments" : (AwsEc2VolumeAttachmentList)?
+    )
+
+    alias AwsEc2VpcDetails = NamedTuple(
+      "CidrBlockAssociationSet" : (CidrBlockAssociationList)?,
+      "Ipv6CidrBlockAssociationSet" : (Ipv6CidrBlockAssociationList)?,
+      "DhcpOptionsId" : (NonEmptyString)?,
+      "State" : (NonEmptyString)?
+    )
+
+    alias AwsElasticsearchDomainDetails = NamedTuple(
+      "AccessPolicies" : (NonEmptyString)?,
+      "DomainEndpointOptions" : (AwsElasticsearchDomainDomainEndpointOptions)?,
+      "DomainId" : (NonEmptyString)?,
+      "DomainName" : (NonEmptyString)?,
+      "Endpoint" : (NonEmptyString)?,
+      "Endpoints" : (FieldMap)?,
+      "ElasticsearchVersion" : (NonEmptyString)?,
+      "EncryptionAtRestOptions" : (AwsElasticsearchDomainEncryptionAtRestOptions)?,
+      "NodeToNodeEncryptionOptions" : (AwsElasticsearchDomainNodeToNodeEncryptionOptions)?,
+      "VPCOptions" : (AwsElasticsearchDomainVPCOptions)?
+    )
+
+    alias AwsElasticsearchDomainDomainEndpointOptions = NamedTuple(
+      "EnforceHTTPS" : (Boolean)?,
+      "TLSSecurityPolicy" : (NonEmptyString)?
+    )
+
+    alias AwsElasticsearchDomainEncryptionAtRestOptions = NamedTuple(
+      "Enabled" : (Boolean)?,
+      "KmsKeyId" : (NonEmptyString)?
+    )
+
+    alias AwsElasticsearchDomainNodeToNodeEncryptionOptions = NamedTuple(
+      "Enabled" : (Boolean)?
+    )
+
+    alias AwsElasticsearchDomainVPCOptions = NamedTuple(
+      "AvailabilityZones" : (NonEmptyStringList)?,
+      "SecurityGroupIds" : (NonEmptyStringList)?,
+      "SubnetIds" : (NonEmptyStringList)?,
+      "VPCId" : (NonEmptyString)?
+    )
+
+    alias AwsElbAppCookieStickinessPolicies = Array(AwsElbAppCookieStickinessPolicy)
+
+    alias AwsElbAppCookieStickinessPolicy = NamedTuple(
+      "CookieName" : (NonEmptyString)?,
+      "PolicyName" : (NonEmptyString)?
+    )
+
+    alias AwsElbLbCookieStickinessPolicies = Array(AwsElbLbCookieStickinessPolicy)
+
+    alias AwsElbLbCookieStickinessPolicy = NamedTuple(
+      "CookieExpirationPeriod" : (Long)?,
+      "PolicyName" : (NonEmptyString)?
+    )
+
+    alias AwsElbLoadBalancerAccessLog = NamedTuple(
+      "EmitInterval" : (Integer)?,
+      "Enabled" : (Boolean)?,
+      "S3BucketName" : (NonEmptyString)?,
+      "S3BucketPrefix" : (NonEmptyString)?
+    )
+
+    alias AwsElbLoadBalancerAttributes = NamedTuple(
+      "AccessLog" : (AwsElbLoadBalancerAccessLog)?,
+      "ConnectionDraining" : (AwsElbLoadBalancerConnectionDraining)?,
+      "ConnectionSettings" : (AwsElbLoadBalancerConnectionSettings)?,
+      "CrossZoneLoadBalancing" : (AwsElbLoadBalancerCrossZoneLoadBalancing)?
+    )
+
+    alias AwsElbLoadBalancerBackendServerDescription = NamedTuple(
+      "InstancePort" : (Integer)?,
+      "PolicyNames" : (StringList)?
+    )
+
+    alias AwsElbLoadBalancerBackendServerDescriptions = Array(AwsElbLoadBalancerBackendServerDescription)
+
+    alias AwsElbLoadBalancerConnectionDraining = NamedTuple(
+      "Enabled" : (Boolean)?,
+      "Timeout" : (Integer)?
+    )
+
+    alias AwsElbLoadBalancerConnectionSettings = NamedTuple(
+      "IdleTimeout" : (Integer)?
+    )
+
+    alias AwsElbLoadBalancerCrossZoneLoadBalancing = NamedTuple(
+      "Enabled" : (Boolean)?
+    )
+
+    alias AwsElbLoadBalancerDetails = NamedTuple(
+      "AvailabilityZones" : (StringList)?,
+      "BackendServerDescriptions" : (AwsElbLoadBalancerBackendServerDescriptions)?,
+      "CanonicalHostedZoneName" : (NonEmptyString)?,
+      "CanonicalHostedZoneNameID" : (NonEmptyString)?,
+      "CreatedTime" : (NonEmptyString)?,
+      "DnsName" : (NonEmptyString)?,
+      "HealthCheck" : (AwsElbLoadBalancerHealthCheck)?,
+      "Instances" : (AwsElbLoadBalancerInstances)?,
+      "ListenerDescriptions" : (AwsElbLoadBalancerListenerDescriptions)?,
+      "LoadBalancerAttributes" : (AwsElbLoadBalancerAttributes)?,
+      "LoadBalancerName" : (NonEmptyString)?,
+      "Policies" : (AwsElbLoadBalancerPolicies)?,
+      "Scheme" : (NonEmptyString)?,
+      "SecurityGroups" : (StringList)?,
+      "SourceSecurityGroup" : (AwsElbLoadBalancerSourceSecurityGroup)?,
+      "Subnets" : (StringList)?,
+      "VpcId" : (NonEmptyString)?
+    )
+
+    alias AwsElbLoadBalancerHealthCheck = NamedTuple(
+      "HealthyThreshold" : (Integer)?,
+      "Interval" : (Integer)?,
+      "Target" : (NonEmptyString)?,
+      "Timeout" : (Integer)?,
+      "UnhealthyThreshold" : (Integer)?
+    )
+
+    alias AwsElbLoadBalancerInstance = NamedTuple(
+      "InstanceId" : (NonEmptyString)?
+    )
+
+    alias AwsElbLoadBalancerInstances = Array(AwsElbLoadBalancerInstance)
+
+    alias AwsElbLoadBalancerListener = NamedTuple(
+      "InstancePort" : (Integer)?,
+      "InstanceProtocol" : (NonEmptyString)?,
+      "LoadBalancerPort" : (Integer)?,
+      "Protocol" : (NonEmptyString)?,
+      "SslCertificateId" : (NonEmptyString)?
+    )
+
+    alias AwsElbLoadBalancerListenerDescription = NamedTuple(
+      "Listener" : (AwsElbLoadBalancerListener)?,
+      "PolicyNames" : (StringList)?
+    )
+
+    alias AwsElbLoadBalancerListenerDescriptions = Array(AwsElbLoadBalancerListenerDescription)
+
+    alias AwsElbLoadBalancerPolicies = NamedTuple(
+      "AppCookieStickinessPolicies" : (AwsElbAppCookieStickinessPolicies)?,
+      "LbCookieStickinessPolicies" : (AwsElbLbCookieStickinessPolicies)?,
+      "OtherPolicies" : (StringList)?
+    )
+
+    alias AwsElbLoadBalancerSourceSecurityGroup = NamedTuple(
+      "GroupName" : (NonEmptyString)?,
+      "OwnerAlias" : (NonEmptyString)?
+    )
+
+    alias AwsElbv2LoadBalancerDetails = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "CanonicalHostedZoneId" : (NonEmptyString)?,
+      "CreatedTime" : (NonEmptyString)?,
+      "DNSName" : (NonEmptyString)?,
+      "IpAddressType" : (NonEmptyString)?,
+      "Scheme" : (NonEmptyString)?,
+      "SecurityGroups" : (SecurityGroups)?,
+      "State" : (LoadBalancerState)?,
+      "Type" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?
+    )
+
+    alias AwsIamAccessKeyDetails = NamedTuple(
+      "UserName" : (NonEmptyString)?,
+      "Status" : (AwsIamAccessKeyStatus)?,
+      "CreatedAt" : (NonEmptyString)?,
+      "PrincipalId" : (NonEmptyString)?,
+      "PrincipalType" : (NonEmptyString)?,
+      "PrincipalName" : (NonEmptyString)?,
+      "AccountId" : (NonEmptyString)?,
+      "AccessKeyId" : (NonEmptyString)?,
+      "SessionContext" : (AwsIamAccessKeySessionContext)?
+    )
+
+    alias AwsIamAccessKeySessionContext = NamedTuple(
+      "Attributes" : (AwsIamAccessKeySessionContextAttributes)?,
+      "SessionIssuer" : (AwsIamAccessKeySessionContextSessionIssuer)?
+    )
+
+    alias AwsIamAccessKeySessionContextAttributes = NamedTuple(
+      "MfaAuthenticated" : (Boolean)?,
+      "CreationDate" : (NonEmptyString)?
+    )
+
+    alias AwsIamAccessKeySessionContextSessionIssuer = NamedTuple(
+      "Type" : (NonEmptyString)?,
+      "PrincipalId" : (NonEmptyString)?,
+      "Arn" : (NonEmptyString)?,
+      "AccountId" : (NonEmptyString)?,
+      "UserName" : (NonEmptyString)?
+    )
+
+    alias AwsIamAccessKeyStatus = String
+
+    alias AwsIamAttachedManagedPolicy = NamedTuple(
+      "PolicyName" : (NonEmptyString)?,
+      "PolicyArn" : (NonEmptyString)?
+    )
+
+    alias AwsIamAttachedManagedPolicyList = Array(AwsIamAttachedManagedPolicy)
+
+    alias AwsIamGroupDetails = NamedTuple(
+      "AttachedManagedPolicies" : (AwsIamAttachedManagedPolicyList)?,
+      "CreateDate" : (NonEmptyString)?,
+      "GroupId" : (NonEmptyString)?,
+      "GroupName" : (NonEmptyString)?,
+      "GroupPolicyList" : (AwsIamGroupPolicyList)?,
+      "Path" : (NonEmptyString)?
+    )
+
+    alias AwsIamGroupPolicy = NamedTuple(
+      "PolicyName" : (NonEmptyString)?
+    )
+
+    alias AwsIamGroupPolicyList = Array(AwsIamGroupPolicy)
+
+    alias AwsIamInstanceProfile = NamedTuple(
+      "Arn" : (NonEmptyString)?,
+      "CreateDate" : (NonEmptyString)?,
+      "InstanceProfileId" : (NonEmptyString)?,
+      "InstanceProfileName" : (NonEmptyString)?,
+      "Path" : (NonEmptyString)?,
+      "Roles" : (AwsIamInstanceProfileRoles)?
+    )
+
+    alias AwsIamInstanceProfileList = Array(AwsIamInstanceProfile)
+
+    alias AwsIamInstanceProfileRole = NamedTuple(
+      "Arn" : (NonEmptyString)?,
+      "AssumeRolePolicyDocument" : (AwsIamRoleAssumeRolePolicyDocument)?,
+      "CreateDate" : (NonEmptyString)?,
+      "Path" : (NonEmptyString)?,
+      "RoleId" : (NonEmptyString)?,
+      "RoleName" : (NonEmptyString)?
+    )
+
+    alias AwsIamInstanceProfileRoles = Array(AwsIamInstanceProfileRole)
+
+    alias AwsIamPermissionsBoundary = NamedTuple(
+      "PermissionsBoundaryArn" : (NonEmptyString)?,
+      "PermissionsBoundaryType" : (NonEmptyString)?
+    )
+
+    alias AwsIamPolicyDetails = NamedTuple(
+      "AttachmentCount" : (Integer)?,
+      "CreateDate" : (NonEmptyString)?,
+      "DefaultVersionId" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "IsAttachable" : (Boolean)?,
+      "Path" : (NonEmptyString)?,
+      "PermissionsBoundaryUsageCount" : (Integer)?,
+      "PolicyId" : (NonEmptyString)?,
+      "PolicyName" : (NonEmptyString)?,
+      "PolicyVersionList" : (AwsIamPolicyVersionList)?,
+      "UpdateDate" : (NonEmptyString)?
+    )
+
+    alias AwsIamPolicyVersion = NamedTuple(
+      "VersionId" : (NonEmptyString)?,
+      "IsDefaultVersion" : (Boolean)?,
+      "CreateDate" : (NonEmptyString)?
+    )
+
+    alias AwsIamPolicyVersionList = Array(AwsIamPolicyVersion)
+
+    alias AwsIamRoleAssumeRolePolicyDocument = String
+
+    alias AwsIamRoleDetails = NamedTuple(
+      "AssumeRolePolicyDocument" : (AwsIamRoleAssumeRolePolicyDocument)?,
+      "AttachedManagedPolicies" : (AwsIamAttachedManagedPolicyList)?,
+      "CreateDate" : (NonEmptyString)?,
+      "InstanceProfileList" : (AwsIamInstanceProfileList)?,
+      "PermissionsBoundary" : (AwsIamPermissionsBoundary)?,
+      "RoleId" : (NonEmptyString)?,
+      "RoleName" : (NonEmptyString)?,
+      "RolePolicyList" : (AwsIamRolePolicyList)?,
+      "MaxSessionDuration" : (Integer)?,
+      "Path" : (NonEmptyString)?
+    )
+
+    alias AwsIamRolePolicy = NamedTuple(
+      "PolicyName" : (NonEmptyString)?
+    )
+
+    alias AwsIamRolePolicyList = Array(AwsIamRolePolicy)
+
+    alias AwsIamUserDetails = NamedTuple(
+      "AttachedManagedPolicies" : (AwsIamAttachedManagedPolicyList)?,
+      "CreateDate" : (NonEmptyString)?,
+      "GroupList" : (StringList)?,
+      "Path" : (NonEmptyString)?,
+      "PermissionsBoundary" : (AwsIamPermissionsBoundary)?,
+      "UserId" : (NonEmptyString)?,
+      "UserName" : (NonEmptyString)?,
+      "UserPolicyList" : (AwsIamUserPolicyList)?
+    )
+
+    alias AwsIamUserPolicy = NamedTuple(
+      "PolicyName" : (NonEmptyString)?
+    )
+
+    alias AwsIamUserPolicyList = Array(AwsIamUserPolicy)
+
+    alias AwsKmsKeyDetails = NamedTuple(
+      "AWSAccountId" : (NonEmptyString)?,
+      "CreationDate" : (Double)?,
+      "KeyId" : (NonEmptyString)?,
+      "KeyManager" : (NonEmptyString)?,
+      "KeyState" : (NonEmptyString)?,
+      "Origin" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaFunctionCode = NamedTuple(
+      "S3Bucket" : (NonEmptyString)?,
+      "S3Key" : (NonEmptyString)?,
+      "S3ObjectVersion" : (NonEmptyString)?,
+      "ZipFile" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaFunctionDeadLetterConfig = NamedTuple(
+      "TargetArn" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaFunctionDetails = NamedTuple(
+      "Code" : (AwsLambdaFunctionCode)?,
+      "CodeSha256" : (NonEmptyString)?,
+      "DeadLetterConfig" : (AwsLambdaFunctionDeadLetterConfig)?,
+      "Environment" : (AwsLambdaFunctionEnvironment)?,
+      "FunctionName" : (NonEmptyString)?,
+      "Handler" : (NonEmptyString)?,
+      "KmsKeyArn" : (NonEmptyString)?,
+      "LastModified" : (NonEmptyString)?,
+      "Layers" : (AwsLambdaFunctionLayerList)?,
+      "MasterArn" : (NonEmptyString)?,
+      "MemorySize" : (Integer)?,
+      "RevisionId" : (NonEmptyString)?,
+      "Role" : (NonEmptyString)?,
+      "Runtime" : (NonEmptyString)?,
+      "Timeout" : (Integer)?,
+      "TracingConfig" : (AwsLambdaFunctionTracingConfig)?,
+      "VpcConfig" : (AwsLambdaFunctionVpcConfig)?,
+      "Version" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaFunctionEnvironment = NamedTuple(
+      "Variables" : (FieldMap)?,
+      "Error" : (AwsLambdaFunctionEnvironmentError)?
+    )
+
+    alias AwsLambdaFunctionEnvironmentError = NamedTuple(
+      "ErrorCode" : (NonEmptyString)?,
+      "Message" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaFunctionLayer = NamedTuple(
+      "Arn" : (NonEmptyString)?,
+      "CodeSize" : (Integer)?
+    )
+
+    alias AwsLambdaFunctionLayerList = Array(AwsLambdaFunctionLayer)
+
+    alias AwsLambdaFunctionTracingConfig = NamedTuple(
+      "Mode" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaFunctionVpcConfig = NamedTuple(
+      "SecurityGroupIds" : (NonEmptyStringList)?,
+      "SubnetIds" : (NonEmptyStringList)?,
+      "VpcId" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaLayerVersionDetails = NamedTuple(
+      "Version" : (AwsLambdaLayerVersionNumber)?,
+      "CompatibleRuntimes" : (NonEmptyStringList)?,
+      "CreatedDate" : (NonEmptyString)?
+    )
+
+    alias AwsLambdaLayerVersionNumber = Int64
+
+    alias AwsRdsDbClusterAssociatedRole = NamedTuple(
+      "RoleArn" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbClusterAssociatedRoles = Array(AwsRdsDbClusterAssociatedRole)
+
+    alias AwsRdsDbClusterDetails = NamedTuple(
+      "AllocatedStorage" : (Integer)?,
+      "AvailabilityZones" : (StringList)?,
+      "BackupRetentionPeriod" : (Integer)?,
+      "DatabaseName" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?,
+      "Endpoint" : (NonEmptyString)?,
+      "ReaderEndpoint" : (NonEmptyString)?,
+      "CustomEndpoints" : (StringList)?,
+      "MultiAz" : (Boolean)?,
+      "Engine" : (NonEmptyString)?,
+      "EngineVersion" : (NonEmptyString)?,
+      "Port" : (Integer)?,
+      "MasterUsername" : (NonEmptyString)?,
+      "PreferredBackupWindow" : (NonEmptyString)?,
+      "PreferredMaintenanceWindow" : (NonEmptyString)?,
+      "ReadReplicaIdentifiers" : (StringList)?,
+      "VpcSecurityGroups" : (AwsRdsDbInstanceVpcSecurityGroups)?,
+      "HostedZoneId" : (NonEmptyString)?,
+      "StorageEncrypted" : (Boolean)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "DbClusterResourceId" : (NonEmptyString)?,
+      "AssociatedRoles" : (AwsRdsDbClusterAssociatedRoles)?,
+      "ClusterCreateTime" : (NonEmptyString)?,
+      "EnabledCloudWatchLogsExports" : (StringList)?,
+      "EngineMode" : (NonEmptyString)?,
+      "DeletionProtection" : (Boolean)?,
+      "HttpEndpointEnabled" : (Boolean)?,
+      "ActivityStreamStatus" : (NonEmptyString)?,
+      "CopyTagsToSnapshot" : (Boolean)?,
+      "CrossAccountClone" : (Boolean)?,
+      "DomainMemberships" : (AwsRdsDbDomainMemberships)?,
+      "DbClusterParameterGroup" : (NonEmptyString)?,
+      "DbSubnetGroup" : (NonEmptyString)?,
+      "DbClusterOptionGroupMemberships" : (AwsRdsDbClusterOptionGroupMemberships)?,
+      "DbClusterIdentifier" : (NonEmptyString)?,
+      "DbClusterMembers" : (AwsRdsDbClusterMembers)?,
+      "IamDatabaseAuthenticationEnabled" : (Boolean)?
+    )
+
+    alias AwsRdsDbClusterMember = NamedTuple(
+      "IsClusterWriter" : (Boolean)?,
+      "PromotionTier" : (Integer)?,
+      "DbInstanceIdentifier" : (NonEmptyString)?,
+      "DbClusterParameterGroupStatus" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbClusterMembers = Array(AwsRdsDbClusterMember)
+
+    alias AwsRdsDbClusterOptionGroupMembership = NamedTuple(
+      "DbClusterOptionGroupName" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbClusterOptionGroupMemberships = Array(AwsRdsDbClusterOptionGroupMembership)
+
+    alias AwsRdsDbClusterSnapshotDetails = NamedTuple(
+      "AvailabilityZones" : (StringList)?,
+      "SnapshotCreateTime" : (NonEmptyString)?,
+      "Engine" : (NonEmptyString)?,
+      "AllocatedStorage" : (Integer)?,
+      "Status" : (NonEmptyString)?,
+      "Port" : (Integer)?,
+      "VpcId" : (NonEmptyString)?,
+      "ClusterCreateTime" : (NonEmptyString)?,
+      "MasterUsername" : (NonEmptyString)?,
+      "EngineVersion" : (NonEmptyString)?,
+      "LicenseModel" : (NonEmptyString)?,
+      "SnapshotType" : (NonEmptyString)?,
+      "PercentProgress" : (Integer)?,
+      "StorageEncrypted" : (Boolean)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "DbClusterIdentifier" : (NonEmptyString)?,
+      "DbClusterSnapshotIdentifier" : (NonEmptyString)?,
+      "IamDatabaseAuthenticationEnabled" : (Boolean)?
+    )
+
+    alias AwsRdsDbDomainMembership = NamedTuple(
+      "Domain" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?,
+      "Fqdn" : (NonEmptyString)?,
+      "IamRoleName" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbDomainMemberships = Array(AwsRdsDbDomainMembership)
+
+    alias AwsRdsDbInstanceAssociatedRole = NamedTuple(
+      "RoleArn" : (NonEmptyString)?,
+      "FeatureName" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbInstanceAssociatedRoles = Array(AwsRdsDbInstanceAssociatedRole)
+
+    alias AwsRdsDbInstanceDetails = NamedTuple(
+      "AssociatedRoles" : (AwsRdsDbInstanceAssociatedRoles)?,
+      "CACertificateIdentifier" : (NonEmptyString)?,
+      "DBClusterIdentifier" : (NonEmptyString)?,
+      "DBInstanceIdentifier" : (NonEmptyString)?,
+      "DBInstanceClass" : (NonEmptyString)?,
+      "DbInstancePort" : (Integer)?,
+      "DbiResourceId" : (NonEmptyString)?,
+      "DBName" : (NonEmptyString)?,
+      "DeletionProtection" : (Boolean)?,
+      "Endpoint" : (AwsRdsDbInstanceEndpoint)?,
+      "Engine" : (NonEmptyString)?,
+      "EngineVersion" : (NonEmptyString)?,
+      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
+      "InstanceCreateTime" : (NonEmptyString)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "PubliclyAccessible" : (Boolean)?,
+      "StorageEncrypted" : (Boolean)?,
+      "TdeCredentialArn" : (NonEmptyString)?,
+      "VpcSecurityGroups" : (AwsRdsDbInstanceVpcSecurityGroups)?,
+      "MultiAz" : (Boolean)?,
+      "EnhancedMonitoringResourceArn" : (NonEmptyString)?,
+      "DbInstanceStatus" : (NonEmptyString)?,
+      "MasterUsername" : (NonEmptyString)?,
+      "AllocatedStorage" : (Integer)?,
+      "PreferredBackupWindow" : (NonEmptyString)?,
+      "BackupRetentionPeriod" : (Integer)?,
+      "DbSecurityGroups" : (StringList)?,
+      "DbParameterGroups" : (AwsRdsDbParameterGroups)?,
+      "AvailabilityZone" : (NonEmptyString)?,
+      "DbSubnetGroup" : (AwsRdsDbSubnetGroup)?,
+      "PreferredMaintenanceWindow" : (NonEmptyString)?,
+      "PendingModifiedValues" : (AwsRdsDbPendingModifiedValues)?,
+      "LatestRestorableTime" : (NonEmptyString)?,
+      "AutoMinorVersionUpgrade" : (Boolean)?,
+      "ReadReplicaSourceDBInstanceIdentifier" : (NonEmptyString)?,
+      "ReadReplicaDBInstanceIdentifiers" : (StringList)?,
+      "ReadReplicaDBClusterIdentifiers" : (StringList)?,
+      "LicenseModel" : (NonEmptyString)?,
+      "Iops" : (Integer)?,
+      "OptionGroupMemberships" : (AwsRdsDbOptionGroupMemberships)?,
+      "CharacterSetName" : (NonEmptyString)?,
+      "SecondaryAvailabilityZone" : (NonEmptyString)?,
+      "StatusInfos" : (AwsRdsDbStatusInfos)?,
+      "StorageType" : (NonEmptyString)?,
+      "DomainMemberships" : (AwsRdsDbDomainMemberships)?,
+      "CopyTagsToSnapshot" : (Boolean)?,
+      "MonitoringInterval" : (Integer)?,
+      "MonitoringRoleArn" : (NonEmptyString)?,
+      "PromotionTier" : (Integer)?,
+      "Timezone" : (NonEmptyString)?,
+      "PerformanceInsightsEnabled" : (Boolean)?,
+      "PerformanceInsightsKmsKeyId" : (NonEmptyString)?,
+      "PerformanceInsightsRetentionPeriod" : (Integer)?,
+      "EnabledCloudWatchLogsExports" : (StringList)?,
+      "ProcessorFeatures" : (AwsRdsDbProcessorFeatures)?,
+      "ListenerEndpoint" : (AwsRdsDbInstanceEndpoint)?,
+      "MaxAllocatedStorage" : (Integer)?
+    )
+
+    alias AwsRdsDbInstanceEndpoint = NamedTuple(
+      "Address" : (NonEmptyString)?,
+      "Port" : (Integer)?,
+      "HostedZoneId" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbInstanceVpcSecurityGroup = NamedTuple(
+      "VpcSecurityGroupId" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbInstanceVpcSecurityGroups = Array(AwsRdsDbInstanceVpcSecurityGroup)
+
+    alias AwsRdsDbOptionGroupMembership = NamedTuple(
+      "OptionGroupName" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbOptionGroupMemberships = Array(AwsRdsDbOptionGroupMembership)
+
+    alias AwsRdsDbParameterGroup = NamedTuple(
+      "DbParameterGroupName" : (NonEmptyString)?,
+      "ParameterApplyStatus" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbParameterGroups = Array(AwsRdsDbParameterGroup)
+
+    alias AwsRdsDbPendingModifiedValues = NamedTuple(
+      "DbInstanceClass" : (NonEmptyString)?,
+      "AllocatedStorage" : (Integer)?,
+      "MasterUserPassword" : (NonEmptyString)?,
+      "Port" : (Integer)?,
+      "BackupRetentionPeriod" : (Integer)?,
+      "MultiAZ" : (Boolean)?,
+      "EngineVersion" : (NonEmptyString)?,
+      "LicenseModel" : (NonEmptyString)?,
+      "Iops" : (Integer)?,
+      "DbInstanceIdentifier" : (NonEmptyString)?,
+      "StorageType" : (NonEmptyString)?,
+      "CaCertificateIdentifier" : (NonEmptyString)?,
+      "DbSubnetGroupName" : (NonEmptyString)?,
+      "PendingCloudWatchLogsExports" : (AwsRdsPendingCloudWatchLogsExports)?,
+      "ProcessorFeatures" : (AwsRdsDbProcessorFeatures)?
+    )
+
+    alias AwsRdsDbProcessorFeature = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "Value" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbProcessorFeatures = Array(AwsRdsDbProcessorFeature)
+
+    alias AwsRdsDbSnapshotDetails = NamedTuple(
+      "DbSnapshotIdentifier" : (NonEmptyString)?,
+      "DbInstanceIdentifier" : (NonEmptyString)?,
+      "SnapshotCreateTime" : (NonEmptyString)?,
+      "Engine" : (NonEmptyString)?,
+      "AllocatedStorage" : (Integer)?,
+      "Status" : (NonEmptyString)?,
+      "Port" : (Integer)?,
+      "AvailabilityZone" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?,
+      "InstanceCreateTime" : (NonEmptyString)?,
+      "MasterUsername" : (NonEmptyString)?,
+      "EngineVersion" : (NonEmptyString)?,
+      "LicenseModel" : (NonEmptyString)?,
+      "SnapshotType" : (NonEmptyString)?,
+      "Iops" : (Integer)?,
+      "OptionGroupName" : (NonEmptyString)?,
+      "PercentProgress" : (Integer)?,
+      "SourceRegion" : (NonEmptyString)?,
+      "SourceDbSnapshotIdentifier" : (NonEmptyString)?,
+      "StorageType" : (NonEmptyString)?,
+      "TdeCredentialArn" : (NonEmptyString)?,
+      "Encrypted" : (Boolean)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "Timezone" : (NonEmptyString)?,
+      "IamDatabaseAuthenticationEnabled" : (Boolean)?,
+      "ProcessorFeatures" : (AwsRdsDbProcessorFeatures)?,
+      "DbiResourceId" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbStatusInfo = NamedTuple(
+      "StatusType" : (NonEmptyString)?,
+      "Normal" : (Boolean)?,
+      "Status" : (NonEmptyString)?,
+      "Message" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbStatusInfos = Array(AwsRdsDbStatusInfo)
+
+    alias AwsRdsDbSubnetGroup = NamedTuple(
+      "DbSubnetGroupName" : (NonEmptyString)?,
+      "DbSubnetGroupDescription" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?,
+      "SubnetGroupStatus" : (NonEmptyString)?,
+      "Subnets" : (AwsRdsDbSubnetGroupSubnets)?,
+      "DbSubnetGroupArn" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbSubnetGroupSubnet = NamedTuple(
+      "SubnetIdentifier" : (NonEmptyString)?,
+      "SubnetAvailabilityZone" : (AwsRdsDbSubnetGroupSubnetAvailabilityZone)?,
+      "SubnetStatus" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbSubnetGroupSubnetAvailabilityZone = NamedTuple(
+      "Name" : (NonEmptyString)?
+    )
+
+    alias AwsRdsDbSubnetGroupSubnets = Array(AwsRdsDbSubnetGroupSubnet)
+
+    alias AwsRdsPendingCloudWatchLogsExports = NamedTuple(
+      "LogTypesToEnable" : (StringList)?,
+      "LogTypesToDisable" : (StringList)?
+    )
+
+    alias AwsRedshiftClusterClusterNode = NamedTuple(
+      "NodeRole" : (NonEmptyString)?,
+      "PrivateIpAddress" : (NonEmptyString)?,
+      "PublicIpAddress" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterClusterNodes = Array(AwsRedshiftClusterClusterNode)
+
+    alias AwsRedshiftClusterClusterParameterGroup = NamedTuple(
+      "ClusterParameterStatusList" : (AwsRedshiftClusterClusterParameterStatusList)?,
+      "ParameterApplyStatus" : (NonEmptyString)?,
+      "ParameterGroupName" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterClusterParameterGroups = Array(AwsRedshiftClusterClusterParameterGroup)
+
+    alias AwsRedshiftClusterClusterParameterStatus = NamedTuple(
+      "ParameterName" : (NonEmptyString)?,
+      "ParameterApplyStatus" : (NonEmptyString)?,
+      "ParameterApplyErrorDescription" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterClusterParameterStatusList = Array(AwsRedshiftClusterClusterParameterStatus)
+
+    alias AwsRedshiftClusterClusterSecurityGroup = NamedTuple(
+      "ClusterSecurityGroupName" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterClusterSecurityGroups = Array(AwsRedshiftClusterClusterSecurityGroup)
+
+    alias AwsRedshiftClusterClusterSnapshotCopyStatus = NamedTuple(
+      "DestinationRegion" : (NonEmptyString)?,
+      "ManualSnapshotRetentionPeriod" : (Integer)?,
+      "RetentionPeriod" : (Integer)?,
+      "SnapshotCopyGrantName" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterDeferredMaintenanceWindow = NamedTuple(
+      "DeferMaintenanceEndTime" : (NonEmptyString)?,
+      "DeferMaintenanceIdentifier" : (NonEmptyString)?,
+      "DeferMaintenanceStartTime" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterDeferredMaintenanceWindows = Array(AwsRedshiftClusterDeferredMaintenanceWindow)
+
+    alias AwsRedshiftClusterDetails = NamedTuple(
+      "AllowVersionUpgrade" : (Boolean)?,
+      "AutomatedSnapshotRetentionPeriod" : (Integer)?,
+      "AvailabilityZone" : (NonEmptyString)?,
+      "ClusterAvailabilityStatus" : (NonEmptyString)?,
+      "ClusterCreateTime" : (NonEmptyString)?,
+      "ClusterIdentifier" : (NonEmptyString)?,
+      "ClusterNodes" : (AwsRedshiftClusterClusterNodes)?,
+      "ClusterParameterGroups" : (AwsRedshiftClusterClusterParameterGroups)?,
+      "ClusterPublicKey" : (NonEmptyString)?,
+      "ClusterRevisionNumber" : (NonEmptyString)?,
+      "ClusterSecurityGroups" : (AwsRedshiftClusterClusterSecurityGroups)?,
+      "ClusterSnapshotCopyStatus" : (AwsRedshiftClusterClusterSnapshotCopyStatus)?,
+      "ClusterStatus" : (NonEmptyString)?,
+      "ClusterSubnetGroupName" : (NonEmptyString)?,
+      "ClusterVersion" : (NonEmptyString)?,
+      "DBName" : (NonEmptyString)?,
+      "DeferredMaintenanceWindows" : (AwsRedshiftClusterDeferredMaintenanceWindows)?,
+      "ElasticIpStatus" : (AwsRedshiftClusterElasticIpStatus)?,
+      "ElasticResizeNumberOfNodeOptions" : (NonEmptyString)?,
+      "Encrypted" : (Boolean)?,
+      "Endpoint" : (AwsRedshiftClusterEndpoint)?,
+      "EnhancedVpcRouting" : (Boolean)?,
+      "ExpectedNextSnapshotScheduleTime" : (NonEmptyString)?,
+      "ExpectedNextSnapshotScheduleTimeStatus" : (NonEmptyString)?,
+      "HsmStatus" : (AwsRedshiftClusterHsmStatus)?,
+      "IamRoles" : (AwsRedshiftClusterIamRoles)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "MaintenanceTrackName" : (NonEmptyString)?,
+      "ManualSnapshotRetentionPeriod" : (Integer)?,
+      "MasterUsername" : (NonEmptyString)?,
+      "NextMaintenanceWindowStartTime" : (NonEmptyString)?,
+      "NodeType" : (NonEmptyString)?,
+      "NumberOfNodes" : (Integer)?,
+      "PendingActions" : (StringList)?,
+      "PendingModifiedValues" : (AwsRedshiftClusterPendingModifiedValues)?,
+      "PreferredMaintenanceWindow" : (NonEmptyString)?,
+      "PubliclyAccessible" : (Boolean)?,
+      "ResizeInfo" : (AwsRedshiftClusterResizeInfo)?,
+      "RestoreStatus" : (AwsRedshiftClusterRestoreStatus)?,
+      "SnapshotScheduleIdentifier" : (NonEmptyString)?,
+      "SnapshotScheduleState" : (NonEmptyString)?,
+      "VpcId" : (NonEmptyString)?,
+      "VpcSecurityGroups" : (AwsRedshiftClusterVpcSecurityGroups)?
+    )
+
+    alias AwsRedshiftClusterElasticIpStatus = NamedTuple(
+      "ElasticIp" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterEndpoint = NamedTuple(
+      "Address" : (NonEmptyString)?,
+      "Port" : (Integer)?
+    )
+
+    alias AwsRedshiftClusterHsmStatus = NamedTuple(
+      "HsmClientCertificateIdentifier" : (NonEmptyString)?,
+      "HsmConfigurationIdentifier" : (NonEmptyString)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterIamRole = NamedTuple(
+      "ApplyStatus" : (NonEmptyString)?,
+      "IamRoleArn" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterIamRoles = Array(AwsRedshiftClusterIamRole)
+
+    alias AwsRedshiftClusterPendingModifiedValues = NamedTuple(
+      "AutomatedSnapshotRetentionPeriod" : (Integer)?,
+      "ClusterIdentifier" : (NonEmptyString)?,
+      "ClusterType" : (NonEmptyString)?,
+      "ClusterVersion" : (NonEmptyString)?,
+      "EncryptionType" : (NonEmptyString)?,
+      "EnhancedVpcRouting" : (Boolean)?,
+      "MaintenanceTrackName" : (NonEmptyString)?,
+      "MasterUserPassword" : (NonEmptyString)?,
+      "NodeType" : (NonEmptyString)?,
+      "NumberOfNodes" : (Integer)?,
+      "PubliclyAccessible" : (Boolean)?
+    )
+
+    alias AwsRedshiftClusterResizeInfo = NamedTuple(
+      "AllowCancelResize" : (Boolean)?,
+      "ResizeType" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterRestoreStatus = NamedTuple(
+      "CurrentRestoreRateInMegaBytesPerSecond" : (Double)?,
+      "ElapsedTimeInSeconds" : (Long)?,
+      "EstimatedTimeToCompletionInSeconds" : (Long)?,
+      "ProgressInMegaBytes" : (Long)?,
+      "SnapshotSizeInMegaBytes" : (Long)?,
+      "Status" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterVpcSecurityGroup = NamedTuple(
+      "Status" : (NonEmptyString)?,
+      "VpcSecurityGroupId" : (NonEmptyString)?
+    )
+
+    alias AwsRedshiftClusterVpcSecurityGroups = Array(AwsRedshiftClusterVpcSecurityGroup)
+
+    alias AwsS3BucketDetails = NamedTuple(
+      "OwnerId" : (NonEmptyString)?,
+      "OwnerName" : (NonEmptyString)?,
+      "CreatedAt" : (NonEmptyString)?,
+      "ServerSideEncryptionConfiguration" : (AwsS3BucketServerSideEncryptionConfiguration)?
+    )
+
+    alias AwsS3BucketServerSideEncryptionByDefault = NamedTuple(
+      "SSEAlgorithm" : (NonEmptyString)?,
+      "KMSMasterKeyID" : (NonEmptyString)?
+    )
+
+    alias AwsS3BucketServerSideEncryptionConfiguration = NamedTuple(
+      "Rules" : (AwsS3BucketServerSideEncryptionRules)?
+    )
+
+    alias AwsS3BucketServerSideEncryptionRule = NamedTuple(
+      "ApplyServerSideEncryptionByDefault" : (AwsS3BucketServerSideEncryptionByDefault)?
+    )
+
+    alias AwsS3BucketServerSideEncryptionRules = Array(AwsS3BucketServerSideEncryptionRule)
+
+    alias AwsS3ObjectDetails = NamedTuple(
+      "LastModified" : (NonEmptyString)?,
+      "ETag" : (NonEmptyString)?,
+      "VersionId" : (NonEmptyString)?,
+      "ContentType" : (NonEmptyString)?,
+      "ServerSideEncryption" : (NonEmptyString)?,
+      "SSEKMSKeyId" : (NonEmptyString)?
+    )
+
+    alias AwsSecretsManagerSecretDetails = NamedTuple(
+      "RotationRules" : (AwsSecretsManagerSecretRotationRules)?,
+      "RotationOccurredWithinFrequency" : (Boolean)?,
+      "KmsKeyId" : (NonEmptyString)?,
+      "RotationEnabled" : (Boolean)?,
+      "RotationLambdaArn" : (NonEmptyString)?,
+      "Deleted" : (Boolean)?,
+      "Name" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?
+    )
+
+    alias AwsSecretsManagerSecretRotationRules = NamedTuple(
+      "AutomaticallyAfterDays" : (Integer)?
+    )
+
+    alias AwsSecurityFinding = NamedTuple(
+      "SchemaVersion" : NonEmptyString,
+      "Id" : NonEmptyString,
+      "ProductArn" : NonEmptyString,
+      "GeneratorId" : NonEmptyString,
+      "AwsAccountId" : NonEmptyString,
+      "Types" : TypeList,
+      "FirstObservedAt" : (NonEmptyString)?,
+      "LastObservedAt" : (NonEmptyString)?,
+      "CreatedAt" : NonEmptyString,
+      "UpdatedAt" : NonEmptyString,
+      "Severity" : Severity,
+      "Confidence" : (Integer)?,
+      "Criticality" : (Integer)?,
+      "Title" : NonEmptyString,
+      "Description" : NonEmptyString,
+      "Remediation" : (Remediation)?,
+      "SourceUrl" : (NonEmptyString)?,
+      "ProductFields" : (FieldMap)?,
+      "UserDefinedFields" : (FieldMap)?,
+      "Malware" : (MalwareList)?,
+      "Network" : (Network)?,
+      "NetworkPath" : (NetworkPathList)?,
+      "Process" : (ProcessDetails)?,
+      "ThreatIntelIndicators" : (ThreatIntelIndicatorList)?,
+      "Resources" : ResourceList,
+      "Compliance" : (Compliance)?,
+      "VerificationState" : (VerificationState)?,
+      "WorkflowState" : (WorkflowState)?,
+      "Workflow" : (Workflow)?,
+      "RecordState" : (RecordState)?,
+      "RelatedFindings" : (RelatedFindingList)?,
+      "Note" : (Note)?,
+      "Vulnerabilities" : (VulnerabilityList)?,
+      "PatchSummary" : (PatchSummary)?
+    )
+
+    alias AwsSecurityFindingFilters = NamedTuple(
+      "ProductArn" : (StringFilterList)?,
+      "AwsAccountId" : (StringFilterList)?,
+      "Id" : (StringFilterList)?,
+      "GeneratorId" : (StringFilterList)?,
+      "Type" : (StringFilterList)?,
+      "FirstObservedAt" : (DateFilterList)?,
+      "LastObservedAt" : (DateFilterList)?,
+      "CreatedAt" : (DateFilterList)?,
+      "UpdatedAt" : (DateFilterList)?,
+      "SeverityProduct" : (NumberFilterList)?,
+      "SeverityNormalized" : (NumberFilterList)?,
+      "SeverityLabel" : (StringFilterList)?,
+      "Confidence" : (NumberFilterList)?,
+      "Criticality" : (NumberFilterList)?,
+      "Title" : (StringFilterList)?,
+      "Description" : (StringFilterList)?,
+      "RecommendationText" : (StringFilterList)?,
+      "SourceUrl" : (StringFilterList)?,
+      "ProductFields" : (MapFilterList)?,
+      "ProductName" : (StringFilterList)?,
+      "CompanyName" : (StringFilterList)?,
+      "UserDefinedFields" : (MapFilterList)?,
+      "MalwareName" : (StringFilterList)?,
+      "MalwareType" : (StringFilterList)?,
+      "MalwarePath" : (StringFilterList)?,
+      "MalwareState" : (StringFilterList)?,
+      "NetworkDirection" : (StringFilterList)?,
+      "NetworkProtocol" : (StringFilterList)?,
+      "NetworkSourceIpV4" : (IpFilterList)?,
+      "NetworkSourceIpV6" : (IpFilterList)?,
+      "NetworkSourcePort" : (NumberFilterList)?,
+      "NetworkSourceDomain" : (StringFilterList)?,
+      "NetworkSourceMac" : (StringFilterList)?,
+      "NetworkDestinationIpV4" : (IpFilterList)?,
+      "NetworkDestinationIpV6" : (IpFilterList)?,
+      "NetworkDestinationPort" : (NumberFilterList)?,
+      "NetworkDestinationDomain" : (StringFilterList)?,
+      "ProcessName" : (StringFilterList)?,
+      "ProcessPath" : (StringFilterList)?,
+      "ProcessPid" : (NumberFilterList)?,
+      "ProcessParentPid" : (NumberFilterList)?,
+      "ProcessLaunchedAt" : (DateFilterList)?,
+      "ProcessTerminatedAt" : (DateFilterList)?,
+      "ThreatIntelIndicatorType" : (StringFilterList)?,
+      "ThreatIntelIndicatorValue" : (StringFilterList)?,
+      "ThreatIntelIndicatorCategory" : (StringFilterList)?,
+      "ThreatIntelIndicatorLastObservedAt" : (DateFilterList)?,
+      "ThreatIntelIndicatorSource" : (StringFilterList)?,
+      "ThreatIntelIndicatorSourceUrl" : (StringFilterList)?,
+      "ResourceType" : (StringFilterList)?,
+      "ResourceId" : (StringFilterList)?,
+      "ResourcePartition" : (StringFilterList)?,
+      "ResourceRegion" : (StringFilterList)?,
+      "ResourceTags" : (MapFilterList)?,
+      "ResourceAwsEc2InstanceType" : (StringFilterList)?,
+      "ResourceAwsEc2InstanceImageId" : (StringFilterList)?,
+      "ResourceAwsEc2InstanceIpV4Addresses" : (IpFilterList)?,
+      "ResourceAwsEc2InstanceIpV6Addresses" : (IpFilterList)?,
+      "ResourceAwsEc2InstanceKeyName" : (StringFilterList)?,
+      "ResourceAwsEc2InstanceIamInstanceProfileArn" : (StringFilterList)?,
+      "ResourceAwsEc2InstanceVpcId" : (StringFilterList)?,
+      "ResourceAwsEc2InstanceSubnetId" : (StringFilterList)?,
+      "ResourceAwsEc2InstanceLaunchedAt" : (DateFilterList)?,
+      "ResourceAwsS3BucketOwnerId" : (StringFilterList)?,
+      "ResourceAwsS3BucketOwnerName" : (StringFilterList)?,
+      "ResourceAwsIamAccessKeyUserName" : (StringFilterList)?,
+      "ResourceAwsIamAccessKeyStatus" : (StringFilterList)?,
+      "ResourceAwsIamAccessKeyCreatedAt" : (DateFilterList)?,
+      "ResourceContainerName" : (StringFilterList)?,
+      "ResourceContainerImageId" : (StringFilterList)?,
+      "ResourceContainerImageName" : (StringFilterList)?,
+      "ResourceContainerLaunchedAt" : (DateFilterList)?,
+      "ResourceDetailsOther" : (MapFilterList)?,
+      "ComplianceStatus" : (StringFilterList)?,
+      "VerificationState" : (StringFilterList)?,
+      "WorkflowState" : (StringFilterList)?,
+      "WorkflowStatus" : (StringFilterList)?,
+      "RecordState" : (StringFilterList)?,
+      "RelatedFindingsProductArn" : (StringFilterList)?,
+      "RelatedFindingsId" : (StringFilterList)?,
+      "NoteText" : (StringFilterList)?,
+      "NoteUpdatedAt" : (DateFilterList)?,
+      "NoteUpdatedBy" : (StringFilterList)?,
+      "Keyword" : (KeywordFilterList)?
+    )
+
+    alias AwsSecurityFindingIdentifier = NamedTuple(
+      "Id" : NonEmptyString,
+      "ProductArn" : NonEmptyString
+    )
+
+    alias AwsSecurityFindingIdentifierList = Array(AwsSecurityFindingIdentifier)
+
+    alias AwsSecurityFindingList = Array(AwsSecurityFinding)
+
+    alias AwsSnsTopicDetails = NamedTuple(
+      "KmsMasterKeyId" : (NonEmptyString)?,
+      "Subscription" : (AwsSnsTopicSubscriptionList)?,
+      "TopicName" : (NonEmptyString)?,
+      "Owner" : (NonEmptyString)?
+    )
+
+    alias AwsSnsTopicSubscription = NamedTuple(
+      "Endpoint" : (NonEmptyString)?,
+      "Protocol" : (NonEmptyString)?
+    )
+
+    alias AwsSnsTopicSubscriptionList = Array(AwsSnsTopicSubscription)
+
+    alias AwsSqsQueueDetails = NamedTuple(
+      "KmsDataKeyReusePeriodSeconds" : (Integer)?,
+      "KmsMasterKeyId" : (NonEmptyString)?,
+      "QueueName" : (NonEmptyString)?,
+      "DeadLetterTargetArn" : (NonEmptyString)?
+    )
+
+    alias AwsWafWebAclDetails = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "DefaultAction" : (NonEmptyString)?,
+      "Rules" : (AwsWafWebAclRuleList)?,
+      "WebAclId" : (NonEmptyString)?
+    )
+
+    alias AwsWafWebAclRule = NamedTuple(
+      "Action" : (WafAction)?,
+      "ExcludedRules" : (WafExcludedRuleList)?,
+      "OverrideAction" : (WafOverrideAction)?,
+      "Priority" : (Integer)?,
+      "RuleId" : (NonEmptyString)?,
+      "Type" : (NonEmptyString)?
+    )
+
+    alias AwsWafWebAclRuleList = Array(AwsWafWebAclRule)
+
+    alias BatchDisableStandardsRequest = NamedTuple(
+      "StandardsSubscriptionArns" : StandardsSubscriptionArns
+    )
+
+    alias BatchDisableStandardsResponse = NamedTuple(
+      "StandardsSubscriptions" : (StandardsSubscriptions)?
+    )
+
+    alias BatchEnableStandardsRequest = NamedTuple(
+      "StandardsSubscriptionRequests" : StandardsSubscriptionRequests
+    )
+
+    alias BatchEnableStandardsResponse = NamedTuple(
+      "StandardsSubscriptions" : (StandardsSubscriptions)?
+    )
+
+    alias BatchImportFindingsRequest = NamedTuple(
+      "Findings" : AwsSecurityFindingList
+    )
+
+    alias BatchImportFindingsResponse = NamedTuple(
+      "FailedCount" : Integer,
+      "SuccessCount" : Integer,
+      "FailedFindings" : (ImportFindingsErrorList)?
+    )
+
+    alias BatchUpdateFindingsRequest = NamedTuple(
+      "FindingIdentifiers" : AwsSecurityFindingIdentifierList,
+      "Note" : (NoteUpdate)?,
+      "Severity" : (SeverityUpdate)?,
+      "VerificationState" : (VerificationState)?,
+      "Confidence" : (RatioScale)?,
+      "Criticality" : (RatioScale)?,
+      "Types" : (TypeList)?,
+      "UserDefinedFields" : (FieldMap)?,
+      "Workflow" : (WorkflowUpdate)?,
+      "RelatedFindings" : (RelatedFindingList)?
+    )
+
+    alias BatchUpdateFindingsResponse = NamedTuple(
+      "ProcessedFindings" : AwsSecurityFindingIdentifierList,
+      "UnprocessedFindings" : BatchUpdateFindingsUnprocessedFindingsList
+    )
+
+    alias BatchUpdateFindingsUnprocessedFinding = NamedTuple(
+      "FindingIdentifier" : AwsSecurityFindingIdentifier,
+      "ErrorCode" : NonEmptyString,
+      "ErrorMessage" : NonEmptyString
+    )
+
+    alias BatchUpdateFindingsUnprocessedFindingsList = Array(BatchUpdateFindingsUnprocessedFinding)
+
+    alias Boolean = Bool
+
+    alias CategoryList = Array(NonEmptyString)
+
+    alias CidrBlockAssociation = NamedTuple(
+      "AssociationId" : (NonEmptyString)?,
+      "CidrBlock" : (NonEmptyString)?,
+      "CidrBlockState" : (NonEmptyString)?
+    )
+
+    alias CidrBlockAssociationList = Array(CidrBlockAssociation)
+
+    alias Compliance = NamedTuple(
+      "Status" : (ComplianceStatus)?,
+      "RelatedRequirements" : (RelatedRequirementsList)?,
+      "StatusReasons" : (StatusReasonsList)?
+    )
+
+    alias ComplianceStatus = String
+
+    alias ContainerDetails = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "ImageId" : (NonEmptyString)?,
+      "ImageName" : (NonEmptyString)?,
+      "LaunchedAt" : (NonEmptyString)?
+    )
+
+    alias ControlStatus = String
+
+    alias CreateActionTargetRequest = NamedTuple(
+      "Name" : NonEmptyString,
+      "Description" : NonEmptyString,
+      "Id" : NonEmptyString
+    )
+
+    alias CreateActionTargetResponse = NamedTuple(
+      "ActionTargetArn" : NonEmptyString
+    )
+
+    alias CreateInsightRequest = NamedTuple(
+      "Name" : NonEmptyString,
+      "Filters" : AwsSecurityFindingFilters,
+      "GroupByAttribute" : NonEmptyString
+    )
+
+    alias CreateInsightResponse = NamedTuple(
+      "InsightArn" : NonEmptyString
+    )
+
+    alias CreateMembersRequest = NamedTuple(
+      "AccountDetails" : AccountDetailsList
+    )
+
+    alias CreateMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : (ResultList)?
+    )
+
+    alias CrossAccountMaxResults = Int32
+
+    alias Cvss = NamedTuple(
+      "Version" : (NonEmptyString)?,
+      "BaseScore" : (Double)?,
+      "BaseVector" : (NonEmptyString)?
+    )
+
+    alias CvssList = Array(Cvss)
+
+    alias DateFilter = NamedTuple(
+      "Start" : (NonEmptyString)?,
+      "End" : (NonEmptyString)?,
+      "DateRange" : (DateRange)?
+    )
+
+    alias DateFilterList = Array(DateFilter)
+
+    alias DateRange = NamedTuple(
+      "Value" : (Integer)?,
+      "Unit" : (DateRangeUnit)?
+    )
+
+    alias DateRangeUnit = String
+
+    alias DeclineInvitationsRequest = NamedTuple(
+      "AccountIds" : AccountIdList
+    )
+
+    alias DeclineInvitationsResponse = NamedTuple(
+      "UnprocessedAccounts" : (ResultList)?
+    )
+
+    alias DeleteActionTargetRequest = NamedTuple(
+      "ActionTargetArn" : NonEmptyString
+    )
+
+    alias DeleteActionTargetResponse = NamedTuple(
+      "ActionTargetArn" : NonEmptyString
+    )
+
+    alias DeleteInsightRequest = NamedTuple(
+      "InsightArn" : NonEmptyString
+    )
+
+    alias DeleteInsightResponse = NamedTuple(
+      "InsightArn" : NonEmptyString
+    )
+
+    alias DeleteInvitationsRequest = NamedTuple(
+      "AccountIds" : AccountIdList
+    )
+
+    alias DeleteInvitationsResponse = NamedTuple(
+      "UnprocessedAccounts" : (ResultList)?
+    )
+
+    alias DeleteMembersRequest = NamedTuple(
+      "AccountIds" : AccountIdList
+    )
+
+    alias DeleteMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : (ResultList)?
+    )
+
+    alias DescribeActionTargetsRequest = NamedTuple(
+      "ActionTargetArns" : (ArnList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeActionTargetsResponse = NamedTuple(
+      "ActionTargets" : ActionTargetList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeHubRequest = NamedTuple(
+      "HubArn" : (NonEmptyString)?
+    )
+
+    alias DescribeHubResponse = NamedTuple(
+      "HubArn" : (NonEmptyString)?,
+      "SubscribedAt" : (NonEmptyString)?,
+      "AutoEnableControls" : (Boolean)?
+    )
+
+    alias DescribeOrganizationConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias DescribeOrganizationConfigurationResponse = NamedTuple(
+      "AutoEnable" : (Boolean)?,
+      "MemberAccountLimitReached" : (Boolean)?
+    )
+
+    alias DescribeProductsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeProductsResponse = NamedTuple(
+      "Products" : ProductsList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeStandardsControlsRequest = NamedTuple(
+      "StandardsSubscriptionArn" : NonEmptyString,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeStandardsControlsResponse = NamedTuple(
+      "Controls" : (StandardsControls)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeStandardsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeStandardsResponse = NamedTuple(
+      "Standards" : (Standards)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DisableImportFindingsForProductRequest = NamedTuple(
+      "ProductSubscriptionArn" : NonEmptyString
+    )
+
+    alias DisableImportFindingsForProductResponse = NamedTuple(
+      
+    )
+
+    alias DisableOrganizationAdminAccountRequest = NamedTuple(
+      "AdminAccountId" : NonEmptyString
+    )
+
+    alias DisableOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisableSecurityHubRequest = NamedTuple(
+      
+    )
+
+    alias DisableSecurityHubResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateFromMasterAccountRequest = NamedTuple(
+      
+    )
+
+    alias DisassociateFromMasterAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateMembersRequest = NamedTuple(
+      "AccountIds" : AccountIdList
+    )
+
+    alias DisassociateMembersResponse = NamedTuple(
+      
+    )
+
+    alias Double = Float64
+
+    alias EnableImportFindingsForProductRequest = NamedTuple(
+      "ProductArn" : NonEmptyString
+    )
+
+    alias EnableImportFindingsForProductResponse = NamedTuple(
+      "ProductSubscriptionArn" : (NonEmptyString)?
+    )
+
+    alias EnableOrganizationAdminAccountRequest = NamedTuple(
+      "AdminAccountId" : NonEmptyString
+    )
+
+    alias EnableOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias EnableSecurityHubRequest = NamedTuple(
+      "Tags" : (TagMap)?,
+      "EnableDefaultStandards" : (Boolean)?
+    )
+
+    alias EnableSecurityHubResponse = NamedTuple(
+      
+    )
+
+    alias FieldMap = Hash(NonEmptyString,NonEmptyString)
+
+    alias GetEnabledStandardsRequest = NamedTuple(
+      "StandardsSubscriptionArns" : (StandardsSubscriptionArns)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias GetEnabledStandardsResponse = NamedTuple(
+      "StandardsSubscriptions" : (StandardsSubscriptions)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetFindingsRequest = NamedTuple(
+      "Filters" : (AwsSecurityFindingFilters)?,
+      "SortCriteria" : (SortCriteria)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias GetFindingsResponse = NamedTuple(
+      "Findings" : AwsSecurityFindingList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetInsightResultsRequest = NamedTuple(
+      "InsightArn" : NonEmptyString
+    )
+
+    alias GetInsightResultsResponse = NamedTuple(
+      "InsightResults" : InsightResults
+    )
+
+    alias GetInsightsRequest = NamedTuple(
+      "InsightArns" : (ArnList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias GetInsightsResponse = NamedTuple(
+      "Insights" : InsightList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetInvitationsCountRequest = NamedTuple(
+      
+    )
+
+    alias GetInvitationsCountResponse = NamedTuple(
+      "InvitationsCount" : (Integer)?
+    )
+
+    alias GetMasterAccountRequest = NamedTuple(
+      
+    )
+
+    alias GetMasterAccountResponse = NamedTuple(
+      "Master" : (Invitation)?
+    )
+
+    alias GetMembersRequest = NamedTuple(
+      "AccountIds" : AccountIdList
+    )
+
+    alias GetMembersResponse = NamedTuple(
+      "Members" : (MemberList)?,
+      "UnprocessedAccounts" : (ResultList)?
+    )
+
+    alias ImportFindingsError = NamedTuple(
+      "Id" : NonEmptyString,
+      "ErrorCode" : NonEmptyString,
+      "ErrorMessage" : NonEmptyString
+    )
+
+    alias ImportFindingsErrorList = Array(ImportFindingsError)
+
+    alias Insight = NamedTuple(
+      "InsightArn" : NonEmptyString,
+      "Name" : NonEmptyString,
+      "Filters" : AwsSecurityFindingFilters,
+      "GroupByAttribute" : NonEmptyString
+    )
+
+    alias InsightList = Array(Insight)
+
+    alias InsightResultValue = NamedTuple(
+      "GroupByAttributeValue" : NonEmptyString,
+      "Count" : Integer
+    )
+
+    alias InsightResultValueList = Array(InsightResultValue)
+
+    alias InsightResults = NamedTuple(
+      "InsightArn" : NonEmptyString,
+      "GroupByAttribute" : NonEmptyString,
+      "ResultValues" : InsightResultValueList
+    )
+
+    alias Integer = Int32
+
+    alias IntegrationType = String
+
+    alias IntegrationTypeList = Array(IntegrationType)
+
+    alias InternalException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias InvalidAccessException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias Invitation = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "InvitationId" : (NonEmptyString)?,
+      "InvitedAt" : (Timestamp)?,
+      "MemberStatus" : (NonEmptyString)?
+    )
+
+    alias InvitationList = Array(Invitation)
+
+    alias InviteMembersRequest = NamedTuple(
+      "AccountIds" : AccountIdList
+    )
+
+    alias InviteMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : (ResultList)?
+    )
+
+    alias IpFilter = NamedTuple(
+      "Cidr" : (NonEmptyString)?
+    )
+
+    alias IpFilterList = Array(IpFilter)
+
+    alias Ipv6CidrBlockAssociation = NamedTuple(
+      "AssociationId" : (NonEmptyString)?,
+      "Ipv6CidrBlock" : (NonEmptyString)?,
+      "CidrBlockState" : (NonEmptyString)?
+    )
+
+    alias Ipv6CidrBlockAssociationList = Array(Ipv6CidrBlockAssociation)
+
+    alias KeywordFilter = NamedTuple(
+      "Value" : (NonEmptyString)?
+    )
+
+    alias KeywordFilterList = Array(KeywordFilter)
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias ListEnabledProductsForImportRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListEnabledProductsForImportResponse = NamedTuple(
+      "ProductSubscriptions" : (ProductSubscriptionArnList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListInvitationsRequest = NamedTuple(
+      "MaxResults" : (CrossAccountMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListInvitationsResponse = NamedTuple(
+      "Invitations" : (InvitationList)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListMembersRequest = NamedTuple(
+      "OnlyAssociated" : (Boolean)?,
+      "MaxResults" : (CrossAccountMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListMembersResponse = NamedTuple(
+      "Members" : (MemberList)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListOrganizationAdminAccountsRequest = NamedTuple(
+      "MaxResults" : (AdminsMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOrganizationAdminAccountsResponse = NamedTuple(
+      "AdminAccounts" : (AdminAccounts)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias LoadBalancerState = NamedTuple(
+      "Code" : (NonEmptyString)?,
+      "Reason" : (NonEmptyString)?
+    )
+
+    alias Long = Int64
+
+    alias Malware = NamedTuple(
+      "Name" : NonEmptyString,
+      "Type" : (MalwareType)?,
+      "Path" : (NonEmptyString)?,
+      "State" : (MalwareState)?
+    )
+
+    alias MalwareList = Array(Malware)
+
+    alias MalwareState = String
+
+    alias MalwareType = String
+
+    alias MapFilter = NamedTuple(
+      "Key" : (NonEmptyString)?,
+      "Value" : (NonEmptyString)?,
+      "Comparison" : (MapFilterComparison)?
+    )
+
+    alias MapFilterComparison = String
+
+    alias MapFilterList = Array(MapFilter)
+
+    alias MaxResults = Int32
+
+    alias Member = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "Email" : (NonEmptyString)?,
+      "MasterId" : (NonEmptyString)?,
+      "MemberStatus" : (NonEmptyString)?,
+      "InvitedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias MemberList = Array(Member)
+
+    alias Network = NamedTuple(
+      "Direction" : (NetworkDirection)?,
+      "Protocol" : (NonEmptyString)?,
+      "OpenPortRange" : (PortRange)?,
+      "SourceIpV4" : (NonEmptyString)?,
+      "SourceIpV6" : (NonEmptyString)?,
+      "SourcePort" : (Integer)?,
+      "SourceDomain" : (NonEmptyString)?,
+      "SourceMac" : (NonEmptyString)?,
+      "DestinationIpV4" : (NonEmptyString)?,
+      "DestinationIpV6" : (NonEmptyString)?,
+      "DestinationPort" : (Integer)?,
+      "DestinationDomain" : (NonEmptyString)?
+    )
+
+    alias NetworkDirection = String
+
+    alias NetworkHeader = NamedTuple(
+      "Protocol" : (NonEmptyString)?,
+      "Destination" : (NetworkPathComponentDetails)?,
+      "Source" : (NetworkPathComponentDetails)?
+    )
+
+    alias NetworkPathComponent = NamedTuple(
+      "ComponentId" : (NonEmptyString)?,
+      "ComponentType" : (NonEmptyString)?,
+      "Egress" : (NetworkHeader)?,
+      "Ingress" : (NetworkHeader)?
+    )
+
+    alias NetworkPathComponentDetails = NamedTuple(
+      "Address" : (StringList)?,
+      "PortRanges" : (PortRangeList)?
+    )
+
+    alias NetworkPathList = Array(NetworkPathComponent)
+
+    alias NextToken = String
+
+    alias NonEmptyString = String
+
+    alias NonEmptyStringList = Array(NonEmptyString)
+
+    alias Note = NamedTuple(
+      "Text" : NonEmptyString,
+      "UpdatedBy" : NonEmptyString,
+      "UpdatedAt" : NonEmptyString
+    )
+
+    alias NoteUpdate = NamedTuple(
+      "Text" : NonEmptyString,
+      "UpdatedBy" : NonEmptyString
+    )
+
+    alias NumberFilter = NamedTuple(
+      "Gte" : (Double)?,
+      "Lte" : (Double)?,
+      "Eq" : (Double)?
+    )
+
+    alias NumberFilterList = Array(NumberFilter)
+
+    alias Partition = String
+
+    alias PatchSummary = NamedTuple(
+      "Id" : NonEmptyString,
+      "InstalledCount" : (Integer)?,
+      "MissingCount" : (Integer)?,
+      "FailedCount" : (Integer)?,
+      "InstalledOtherCount" : (Integer)?,
+      "InstalledRejectedCount" : (Integer)?,
+      "InstalledPendingReboot" : (Integer)?,
+      "OperationStartTime" : (NonEmptyString)?,
+      "OperationEndTime" : (NonEmptyString)?,
+      "RebootOption" : (NonEmptyString)?,
+      "Operation" : (NonEmptyString)?
+    )
+
+    alias PortRange = NamedTuple(
+      "Begin" : (Integer)?,
+      "End" : (Integer)?
+    )
+
+    alias PortRangeList = Array(PortRange)
+
+    alias ProcessDetails = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "Path" : (NonEmptyString)?,
+      "Pid" : (Integer)?,
+      "ParentPid" : (Integer)?,
+      "LaunchedAt" : (NonEmptyString)?,
+      "TerminatedAt" : (NonEmptyString)?
+    )
+
+    alias Product = NamedTuple(
+      "ProductArn" : NonEmptyString,
+      "ProductName" : (NonEmptyString)?,
+      "CompanyName" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "Categories" : (CategoryList)?,
+      "IntegrationTypes" : (IntegrationTypeList)?,
+      "MarketplaceUrl" : (NonEmptyString)?,
+      "ActivationUrl" : (NonEmptyString)?,
+      "ProductSubscriptionResourcePolicy" : (NonEmptyString)?
+    )
+
+    alias ProductSubscriptionArnList = Array(NonEmptyString)
+
+    alias ProductsList = Array(Product)
+
+    alias RatioScale = Int32
+
+    alias Recommendation = NamedTuple(
+      "Text" : (NonEmptyString)?,
+      "Url" : (NonEmptyString)?
+    )
+
+    alias RecordState = String
+
+    alias RelatedFinding = NamedTuple(
+      "ProductArn" : NonEmptyString,
+      "Id" : NonEmptyString
+    )
+
+    alias RelatedFindingList = Array(RelatedFinding)
+
+    alias RelatedRequirementsList = Array(NonEmptyString)
+
+    alias Remediation = NamedTuple(
+      "Recommendation" : (Recommendation)?
+    )
+
+    alias Resource = NamedTuple(
+      "Type" : NonEmptyString,
+      "Id" : NonEmptyString,
+      "Partition" : (Partition)?,
+      "Region" : (NonEmptyString)?,
+      "ResourceRole" : (NonEmptyString)?,
+      "Tags" : (FieldMap)?,
+      "Details" : (ResourceDetails)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceConflictException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias ResourceDetails = NamedTuple(
+      "AwsAutoScalingAutoScalingGroup" : (AwsAutoScalingAutoScalingGroupDetails)?,
+      "AwsCodeBuildProject" : (AwsCodeBuildProjectDetails)?,
+      "AwsCloudFrontDistribution" : (AwsCloudFrontDistributionDetails)?,
+      "AwsEc2Instance" : (AwsEc2InstanceDetails)?,
+      "AwsEc2NetworkInterface" : (AwsEc2NetworkInterfaceDetails)?,
+      "AwsEc2SecurityGroup" : (AwsEc2SecurityGroupDetails)?,
+      "AwsEc2Volume" : (AwsEc2VolumeDetails)?,
+      "AwsEc2Vpc" : (AwsEc2VpcDetails)?,
+      "AwsEc2Eip" : (AwsEc2EipDetails)?,
+      "AwsElbv2LoadBalancer" : (AwsElbv2LoadBalancerDetails)?,
+      "AwsElasticsearchDomain" : (AwsElasticsearchDomainDetails)?,
+      "AwsS3Bucket" : (AwsS3BucketDetails)?,
+      "AwsS3Object" : (AwsS3ObjectDetails)?,
+      "AwsSecretsManagerSecret" : (AwsSecretsManagerSecretDetails)?,
+      "AwsIamAccessKey" : (AwsIamAccessKeyDetails)?,
+      "AwsIamUser" : (AwsIamUserDetails)?,
+      "AwsIamPolicy" : (AwsIamPolicyDetails)?,
+      "AwsApiGatewayV2Stage" : (AwsApiGatewayV2StageDetails)?,
+      "AwsApiGatewayV2Api" : (AwsApiGatewayV2ApiDetails)?,
+      "AwsDynamoDbTable" : (AwsDynamoDbTableDetails)?,
+      "AwsApiGatewayStage" : (AwsApiGatewayStageDetails)?,
+      "AwsApiGatewayRestApi" : (AwsApiGatewayRestApiDetails)?,
+      "AwsCloudTrailTrail" : (AwsCloudTrailTrailDetails)?,
+      "AwsCertificateManagerCertificate" : (AwsCertificateManagerCertificateDetails)?,
+      "AwsRedshiftCluster" : (AwsRedshiftClusterDetails)?,
+      "AwsElbLoadBalancer" : (AwsElbLoadBalancerDetails)?,
+      "AwsIamGroup" : (AwsIamGroupDetails)?,
+      "AwsIamRole" : (AwsIamRoleDetails)?,
+      "AwsKmsKey" : (AwsKmsKeyDetails)?,
+      "AwsLambdaFunction" : (AwsLambdaFunctionDetails)?,
+      "AwsLambdaLayerVersion" : (AwsLambdaLayerVersionDetails)?,
+      "AwsRdsDbInstance" : (AwsRdsDbInstanceDetails)?,
+      "AwsSnsTopic" : (AwsSnsTopicDetails)?,
+      "AwsSqsQueue" : (AwsSqsQueueDetails)?,
+      "AwsWafWebAcl" : (AwsWafWebAclDetails)?,
+      "AwsRdsDbSnapshot" : (AwsRdsDbSnapshotDetails)?,
+      "AwsRdsDbClusterSnapshot" : (AwsRdsDbClusterSnapshotDetails)?,
+      "AwsRdsDbCluster" : (AwsRdsDbClusterDetails)?,
+      "Container" : (ContainerDetails)?,
+      "Other" : (FieldMap)?
+    )
+
+    alias ResourceList = Array(Resource)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (NonEmptyString)?,
+      "Code" : (NonEmptyString)?
+    )
+
+    alias Result = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "ProcessingResult" : (NonEmptyString)?
+    )
+
+    alias ResultList = Array(Result)
+
+    alias SecurityGroups = Array(NonEmptyString)
+
+    alias Severity = NamedTuple(
+      "Product" : (Double)?,
+      "Label" : (SeverityLabel)?,
+      "Normalized" : (Integer)?,
+      "Original" : (NonEmptyString)?
+    )
+
+    alias SeverityLabel = String
+
+    alias SeverityRating = String
+
+    alias SeverityUpdate = NamedTuple(
+      "Normalized" : (RatioScale)?,
+      "Product" : (Double)?,
+      "Label" : (SeverityLabel)?
+    )
+
+    alias SizeBytes = Int64
+
+    alias SoftwarePackage = NamedTuple(
+      "Name" : (NonEmptyString)?,
+      "Version" : (NonEmptyString)?,
+      "Epoch" : (NonEmptyString)?,
+      "Release" : (NonEmptyString)?,
+      "Architecture" : (NonEmptyString)?
+    )
+
+    alias SoftwarePackageList = Array(SoftwarePackage)
+
+    alias SortCriteria = Array(SortCriterion)
+
+    alias SortCriterion = NamedTuple(
+      "Field" : (NonEmptyString)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias SortOrder = String
+
+    alias Standard = NamedTuple(
+      "StandardsArn" : (NonEmptyString)?,
+      "Name" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "EnabledByDefault" : (Boolean)?
+    )
+
+    alias Standards = Array(Standard)
+
+    alias StandardsControl = NamedTuple(
+      "StandardsControlArn" : (NonEmptyString)?,
+      "ControlStatus" : (ControlStatus)?,
+      "DisabledReason" : (NonEmptyString)?,
+      "ControlStatusUpdatedAt" : (Timestamp)?,
+      "ControlId" : (NonEmptyString)?,
+      "Title" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?,
+      "RemediationUrl" : (NonEmptyString)?,
+      "SeverityRating" : (SeverityRating)?,
+      "RelatedRequirements" : (RelatedRequirementsList)?
+    )
+
+    alias StandardsControls = Array(StandardsControl)
+
+    alias StandardsInputParameterMap = Hash(NonEmptyString,NonEmptyString)
+
+    alias StandardsStatus = String
+
+    alias StandardsSubscription = NamedTuple(
+      "StandardsSubscriptionArn" : NonEmptyString,
+      "StandardsArn" : NonEmptyString,
+      "StandardsInput" : StandardsInputParameterMap,
+      "StandardsStatus" : StandardsStatus
+    )
+
+    alias StandardsSubscriptionArns = Array(NonEmptyString)
+
+    alias StandardsSubscriptionRequest = NamedTuple(
+      "StandardsArn" : NonEmptyString,
+      "StandardsInput" : (StandardsInputParameterMap)?
+    )
+
+    alias StandardsSubscriptionRequests = Array(StandardsSubscriptionRequest)
+
+    alias StandardsSubscriptions = Array(StandardsSubscription)
+
+    alias StatusReason = NamedTuple(
+      "ReasonCode" : NonEmptyString,
+      "Description" : (NonEmptyString)?
+    )
+
+    alias StatusReasonsList = Array(StatusReason)
+
+    alias StringFilter = NamedTuple(
+      "Value" : (NonEmptyString)?,
+      "Comparison" : (StringFilterComparison)?
+    )
+
+    alias StringFilterComparison = String
+
+    alias StringFilterList = Array(StringFilter)
+
+    alias StringList = Array(NonEmptyString)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThreatIntelIndicator = NamedTuple(
+      "Type" : (ThreatIntelIndicatorType)?,
+      "Value" : (NonEmptyString)?,
+      "Category" : (ThreatIntelIndicatorCategory)?,
+      "LastObservedAt" : (NonEmptyString)?,
+      "Source" : (NonEmptyString)?,
+      "SourceUrl" : (NonEmptyString)?
+    )
+
+    alias ThreatIntelIndicatorCategory = String
+
+    alias ThreatIntelIndicatorList = Array(ThreatIntelIndicator)
+
+    alias ThreatIntelIndicatorType = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TypeList = Array(NonEmptyString)
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateActionTargetRequest = NamedTuple(
+      "ActionTargetArn" : NonEmptyString,
+      "Name" : (NonEmptyString)?,
+      "Description" : (NonEmptyString)?
+    )
+
+    alias UpdateActionTargetResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFindingsRequest = NamedTuple(
+      "Filters" : AwsSecurityFindingFilters,
+      "Note" : (NoteUpdate)?,
+      "RecordState" : (RecordState)?
+    )
+
+    alias UpdateFindingsResponse = NamedTuple(
+      
+    )
+
+    alias UpdateInsightRequest = NamedTuple(
+      "InsightArn" : NonEmptyString,
+      "Name" : (NonEmptyString)?,
+      "Filters" : (AwsSecurityFindingFilters)?,
+      "GroupByAttribute" : (NonEmptyString)?
+    )
+
+    alias UpdateInsightResponse = NamedTuple(
+      
+    )
+
+    alias UpdateOrganizationConfigurationRequest = NamedTuple(
+      "AutoEnable" : Boolean
+    )
+
+    alias UpdateOrganizationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateSecurityHubConfigurationRequest = NamedTuple(
+      "AutoEnableControls" : (Boolean)?
+    )
+
+    alias UpdateSecurityHubConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateStandardsControlRequest = NamedTuple(
+      "StandardsControlArn" : NonEmptyString,
+      "ControlStatus" : (ControlStatus)?,
+      "DisabledReason" : (NonEmptyString)?
+    )
+
+    alias UpdateStandardsControlResponse = NamedTuple(
+      
+    )
+
+    alias VerificationState = String
+
+    alias Vulnerability = NamedTuple(
+      "Id" : NonEmptyString,
+      "VulnerablePackages" : (SoftwarePackageList)?,
+      "Cvss" : (CvssList)?,
+      "RelatedVulnerabilities" : (StringList)?,
+      "Vendor" : (VulnerabilityVendor)?,
+      "ReferenceUrls" : (StringList)?
+    )
+
+    alias VulnerabilityList = Array(Vulnerability)
+
+    alias VulnerabilityVendor = NamedTuple(
+      "Name" : NonEmptyString,
+      "Url" : (NonEmptyString)?,
+      "VendorSeverity" : (NonEmptyString)?,
+      "VendorCreatedAt" : (NonEmptyString)?,
+      "VendorUpdatedAt" : (NonEmptyString)?
+    )
+
+    alias WafAction = NamedTuple(
+      "Type" : (NonEmptyString)?
+    )
+
+    alias WafExcludedRule = NamedTuple(
+      "RuleId" : (NonEmptyString)?
+    )
+
+    alias WafExcludedRuleList = Array(WafExcludedRule)
+
+    alias WafOverrideAction = NamedTuple(
+      "Type" : (NonEmptyString)?
+    )
+
+    alias Workflow = NamedTuple(
+      "Status" : (WorkflowStatus)?
+    )
+
+    alias WorkflowState = String
+
+    alias WorkflowStatus = String
+
+    alias WorkflowUpdate = NamedTuple(
+      "Status" : (WorkflowStatus)?
+    )
   end
 end

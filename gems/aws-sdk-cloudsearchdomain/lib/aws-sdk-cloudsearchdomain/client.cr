@@ -738,8 +738,8 @@ module Aws::CloudSearchDomain
     #
     # @overload search(**params)
     # @param [Hash] params ({})
-    def search(params = {}, **options)
-      req = build_request(:search, params)
+    def search(, **options)
+      req = build_request(:search, )
       req.send_request(options)
     end
 
@@ -801,8 +801,8 @@ module Aws::CloudSearchDomain
     #
     # @overload suggest(**params)
     # @param [Hash] params ({})
-    def suggest(params = {}, **options)
-      req = build_request(:suggest, params)
+    def suggest(, **options)
+      req = build_request(:suggest, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::CloudSearchDomain
     #
     # @overload upload_documents(**params)
     # @param [Hash] params ({})
-    def upload_documents(params = {}, **options)
-      req = build_request(:upload_documents, params)
+    def upload_documents(, **options)
+      req = build_request(:upload_documents, )
       req.send_request(options)
     end
 

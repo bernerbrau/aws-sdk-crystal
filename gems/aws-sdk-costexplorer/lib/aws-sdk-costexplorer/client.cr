@@ -400,8 +400,8 @@ module Aws::CostExplorer
     #
     # @overload create_anomaly_monitor(**params)
     # @param [Hash] params ({})
-    def create_anomaly_monitor(params = {}, **options)
-      req = build_request(:create_anomaly_monitor, params)
+    def create_anomaly_monitor(, **options)
+      req = build_request(:create_anomaly_monitor, )
       req.send_request(options)
     end
 
@@ -445,8 +445,8 @@ module Aws::CostExplorer
     #
     # @overload create_anomaly_subscription(**params)
     # @param [Hash] params ({})
-    def create_anomaly_subscription(params = {}, **options)
-      req = build_request(:create_anomaly_subscription, params)
+    def create_anomaly_subscription(, **options)
+      req = build_request(:create_anomaly_subscription, )
       req.send_request(options)
     end
 
@@ -522,8 +522,8 @@ module Aws::CostExplorer
     #
     # @overload create_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def create_cost_category_definition(params = {}, **options)
-      req = build_request(:create_cost_category_definition, params)
+    def create_cost_category_definition(, **options)
+      req = build_request(:create_cost_category_definition, )
       req.send_request(options)
     end
 
@@ -545,8 +545,8 @@ module Aws::CostExplorer
     #
     # @overload delete_anomaly_monitor(**params)
     # @param [Hash] params ({})
-    def delete_anomaly_monitor(params = {}, **options)
-      req = build_request(:delete_anomaly_monitor, params)
+    def delete_anomaly_monitor(, **options)
+      req = build_request(:delete_anomaly_monitor, )
       req.send_request(options)
     end
 
@@ -568,8 +568,8 @@ module Aws::CostExplorer
     #
     # @overload delete_anomaly_subscription(**params)
     # @param [Hash] params ({})
-    def delete_anomaly_subscription(params = {}, **options)
-      req = build_request(:delete_anomaly_subscription, params)
+    def delete_anomaly_subscription(, **options)
+      req = build_request(:delete_anomaly_subscription, )
       req.send_request(options)
     end
 
@@ -599,8 +599,8 @@ module Aws::CostExplorer
     #
     # @overload delete_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def delete_cost_category_definition(params = {}, **options)
-      req = build_request(:delete_cost_category_definition, params)
+    def delete_cost_category_definition(, **options)
+      req = build_request(:delete_cost_category_definition, )
       req.send_request(options)
     end
 
@@ -667,8 +667,8 @@ module Aws::CostExplorer
     #
     # @overload describe_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def describe_cost_category_definition(params = {}, **options)
-      req = build_request(:describe_cost_category_definition, params)
+    def describe_cost_category_definition(, **options)
+      req = build_request(:describe_cost_category_definition, )
       req.send_request(options)
     end
 
@@ -747,8 +747,8 @@ module Aws::CostExplorer
     #
     # @overload get_anomalies(**params)
     # @param [Hash] params ({})
-    def get_anomalies(params = {}, **options)
-      req = build_request(:get_anomalies, params)
+    def get_anomalies(, **options)
+      req = build_request(:get_anomalies, )
       req.send_request(options)
     end
 
@@ -817,8 +817,8 @@ module Aws::CostExplorer
     #
     # @overload get_anomaly_monitors(**params)
     # @param [Hash] params ({})
-    def get_anomaly_monitors(params = {}, **options)
-      req = build_request(:get_anomaly_monitors, params)
+    def get_anomaly_monitors(, **options)
+      req = build_request(:get_anomaly_monitors, )
       req.send_request(options)
     end
 
@@ -874,8 +874,8 @@ module Aws::CostExplorer
     #
     # @overload get_anomaly_subscriptions(**params)
     # @param [Hash] params ({})
-    def get_anomaly_subscriptions(params = {}, **options)
-      req = build_request(:get_anomaly_subscriptions, params)
+    def get_anomaly_subscriptions(, **options)
+      req = build_request(:get_anomaly_subscriptions, )
       req.send_request(options)
     end
 
@@ -1038,8 +1038,8 @@ module Aws::CostExplorer
     #
     # @overload get_cost_and_usage(**params)
     # @param [Hash] params ({})
-    def get_cost_and_usage(params = {}, **options)
-      req = build_request(:get_cost_and_usage, params)
+    def get_cost_and_usage(, **options)
+      req = build_request(:get_cost_and_usage, )
       req.send_request(options)
     end
 
@@ -1206,8 +1206,8 @@ module Aws::CostExplorer
     #
     # @overload get_cost_and_usage_with_resources(**params)
     # @param [Hash] params ({})
-    def get_cost_and_usage_with_resources(params = {}, **options)
-      req = build_request(:get_cost_and_usage_with_resources, params)
+    def get_cost_and_usage_with_resources(, **options)
+      req = build_request(:get_cost_and_usage_with_resources, )
       req.send_request(options)
     end
 
@@ -1322,8 +1322,8 @@ module Aws::CostExplorer
     #
     # @overload get_cost_forecast(**params)
     # @param [Hash] params ({})
-    def get_cost_forecast(params = {}, **options)
-      req = build_request(:get_cost_forecast, params)
+    def get_cost_forecast(, **options)
+      req = build_request(:get_cost_forecast, )
       req.send_request(options)
     end
 
@@ -1494,8 +1494,8 @@ module Aws::CostExplorer
     #
     # @overload get_dimension_values(**params)
     # @param [Hash] params ({})
-    def get_dimension_values(params = {}, **options)
-      req = build_request(:get_dimension_values, params)
+    def get_dimension_values(, **options)
+      req = build_request(:get_dimension_values, )
       req.send_request(options)
     end
 
@@ -1726,8 +1726,8 @@ module Aws::CostExplorer
     #
     # @overload get_reservation_coverage(**params)
     # @param [Hash] params ({})
-    def get_reservation_coverage(params = {}, **options)
-      req = build_request(:get_reservation_coverage, params)
+    def get_reservation_coverage(, **options)
+      req = build_request(:get_reservation_coverage, )
       req.send_request(options)
     end
 
@@ -1883,8 +1883,8 @@ module Aws::CostExplorer
     #
     # @overload get_reservation_purchase_recommendation(**params)
     # @param [Hash] params ({})
-    def get_reservation_purchase_recommendation(params = {}, **options)
-      req = build_request(:get_reservation_purchase_recommendation, params)
+    def get_reservation_purchase_recommendation(, **options)
+      req = build_request(:get_reservation_purchase_recommendation, )
       req.send_request(options)
     end
 
@@ -2064,8 +2064,8 @@ module Aws::CostExplorer
     #
     # @overload get_reservation_utilization(**params)
     # @param [Hash] params ({})
-    def get_reservation_utilization(params = {}, **options)
-      req = build_request(:get_reservation_utilization, params)
+    def get_reservation_utilization(, **options)
+      req = build_request(:get_reservation_utilization, )
       req.send_request(options)
     end
 
@@ -2273,8 +2273,8 @@ module Aws::CostExplorer
     #
     # @overload get_rightsizing_recommendation(**params)
     # @param [Hash] params ({})
-    def get_rightsizing_recommendation(params = {}, **options)
-      req = build_request(:get_rightsizing_recommendation, params)
+    def get_rightsizing_recommendation(, **options)
+      req = build_request(:get_rightsizing_recommendation, )
       req.send_request(options)
     end
 
@@ -2421,8 +2421,8 @@ module Aws::CostExplorer
     #
     # @overload get_savings_plans_coverage(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_coverage(params = {}, **options)
-      req = build_request(:get_savings_plans_coverage, params)
+    def get_savings_plans_coverage(, **options)
+      req = build_request(:get_savings_plans_coverage, )
       req.send_request(options)
     end
 
@@ -2566,8 +2566,8 @@ module Aws::CostExplorer
     #
     # @overload get_savings_plans_purchase_recommendation(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_purchase_recommendation(params = {}, **options)
-      req = build_request(:get_savings_plans_purchase_recommendation, params)
+    def get_savings_plans_purchase_recommendation(, **options)
+      req = build_request(:get_savings_plans_purchase_recommendation, )
       req.send_request(options)
     end
 
@@ -2692,8 +2692,8 @@ module Aws::CostExplorer
     #
     # @overload get_savings_plans_utilization(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_utilization(params = {}, **options)
-      req = build_request(:get_savings_plans_utilization, params)
+    def get_savings_plans_utilization(, **options)
+      req = build_request(:get_savings_plans_utilization, )
       req.send_request(options)
     end
 
@@ -2830,8 +2830,8 @@ module Aws::CostExplorer
     #
     # @overload get_savings_plans_utilization_details(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_utilization_details(params = {}, **options)
-      req = build_request(:get_savings_plans_utilization_details, params)
+    def get_savings_plans_utilization_details(, **options)
+      req = build_request(:get_savings_plans_utilization_details, )
       req.send_request(options)
     end
 
@@ -2887,8 +2887,8 @@ module Aws::CostExplorer
     #
     # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, **options)
-      req = build_request(:get_tags, params)
+    def get_tags(, **options)
+      req = build_request(:get_tags, )
       req.send_request(options)
     end
 
@@ -2995,8 +2995,8 @@ module Aws::CostExplorer
     #
     # @overload get_usage_forecast(**params)
     # @param [Hash] params ({})
-    def get_usage_forecast(params = {}, **options)
-      req = build_request(:get_usage_forecast, params)
+    def get_usage_forecast(, **options)
+      req = build_request(:get_usage_forecast, )
       req.send_request(options)
     end
 
@@ -3054,8 +3054,8 @@ module Aws::CostExplorer
     #
     # @overload list_cost_category_definitions(**params)
     # @param [Hash] params ({})
-    def list_cost_category_definitions(params = {}, **options)
-      req = build_request(:list_cost_category_definitions, params)
+    def list_cost_category_definitions(, **options)
+      req = build_request(:list_cost_category_definitions, )
       req.send_request(options)
     end
 
@@ -3087,8 +3087,8 @@ module Aws::CostExplorer
     #
     # @overload provide_anomaly_feedback(**params)
     # @param [Hash] params ({})
-    def provide_anomaly_feedback(params = {}, **options)
-      req = build_request(:provide_anomaly_feedback, params)
+    def provide_anomaly_feedback(, **options)
+      req = build_request(:provide_anomaly_feedback, )
       req.send_request(options)
     end
 
@@ -3120,8 +3120,8 @@ module Aws::CostExplorer
     #
     # @overload update_anomaly_monitor(**params)
     # @param [Hash] params ({})
-    def update_anomaly_monitor(params = {}, **options)
-      req = build_request(:update_anomaly_monitor, params)
+    def update_anomaly_monitor(, **options)
+      req = build_request(:update_anomaly_monitor, )
       req.send_request(options)
     end
 
@@ -3175,8 +3175,8 @@ module Aws::CostExplorer
     #
     # @overload update_anomaly_subscription(**params)
     # @param [Hash] params ({})
-    def update_anomaly_subscription(params = {}, **options)
-      req = build_request(:update_anomaly_subscription, params)
+    def update_anomaly_subscription(, **options)
+      req = build_request(:update_anomaly_subscription, )
       req.send_request(options)
     end
 
@@ -3255,8 +3255,8 @@ module Aws::CostExplorer
     #
     # @overload update_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def update_cost_category_definition(params = {}, **options)
-      req = build_request(:update_cost_category_definition, params)
+    def update_cost_category_definition(, **options)
+      req = build_request(:update_cost_category_definition, )
       req.send_request(options)
     end
 

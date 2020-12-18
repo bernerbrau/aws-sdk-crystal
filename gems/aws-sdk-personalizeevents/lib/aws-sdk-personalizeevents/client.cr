@@ -377,8 +377,8 @@ module Aws::PersonalizeEvents
     #
     # @overload put_events(**params)
     # @param [Hash] params ({})
-    def put_events(params = {}, **options)
-      req = build_request(:put_events, params)
+    def put_events(, **options)
+      req = build_request(:put_events, )
       req.send_request(options)
     end
 
@@ -410,8 +410,8 @@ module Aws::PersonalizeEvents
     #
     # @overload put_items(**params)
     # @param [Hash] params ({})
-    def put_items(params = {}, **options)
-      req = build_request(:put_items, params)
+    def put_items(, **options)
+      req = build_request(:put_items, )
       req.send_request(options)
     end
 
@@ -443,8 +443,8 @@ module Aws::PersonalizeEvents
     #
     # @overload put_users(**params)
     # @param [Hash] params ({})
-    def put_users(params = {}, **options)
-      req = build_request(:put_users, params)
+    def put_users(, **options)
+      req = build_request(:put_users, )
       req.send_request(options)
     end
 

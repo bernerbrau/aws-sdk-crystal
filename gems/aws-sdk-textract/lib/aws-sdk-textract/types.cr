@@ -1274,5 +1274,317 @@ module Aws::Textract
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      
+    )
+
+    alias AnalyzeDocumentRequest = NamedTuple(
+      "Document" : Document,
+      "FeatureTypes" : FeatureTypes,
+      "HumanLoopConfig" : (HumanLoopConfig)?
+    )
+
+    alias AnalyzeDocumentResponse = NamedTuple(
+      "DocumentMetadata" : (DocumentMetadata)?,
+      "Blocks" : (BlockList)?,
+      "HumanLoopActivationOutput" : (HumanLoopActivationOutput)?,
+      "AnalyzeDocumentModelVersion" : (String)?
+    )
+
+    alias BadDocumentException = NamedTuple(
+      
+    )
+
+    alias Block = NamedTuple(
+      "BlockType" : (BlockType)?,
+      "Confidence" : (Percent)?,
+      "Text" : (String)?,
+      "TextType" : (TextType)?,
+      "RowIndex" : (UInteger)?,
+      "ColumnIndex" : (UInteger)?,
+      "RowSpan" : (UInteger)?,
+      "ColumnSpan" : (UInteger)?,
+      "Geometry" : (Geometry)?,
+      "Id" : (NonEmptyString)?,
+      "Relationships" : (RelationshipList)?,
+      "EntityTypes" : (EntityTypes)?,
+      "SelectionStatus" : (SelectionStatus)?,
+      "Page" : (UInteger)?
+    )
+
+    alias BlockList = Array(Block)
+
+    alias BlockType = String
+
+    alias BoundingBox = NamedTuple(
+      "Width" : (Float)?,
+      "Height" : (Float)?,
+      "Left" : (Float)?,
+      "Top" : (Float)?
+    )
+
+    alias ClientRequestToken = String
+
+    alias ContentClassifier = String
+
+    alias ContentClassifiers = Array(ContentClassifier)
+
+    alias DetectDocumentTextRequest = NamedTuple(
+      "Document" : Document
+    )
+
+    alias DetectDocumentTextResponse = NamedTuple(
+      "DocumentMetadata" : (DocumentMetadata)?,
+      "Blocks" : (BlockList)?,
+      "DetectDocumentTextModelVersion" : (String)?
+    )
+
+    alias Document = NamedTuple(
+      "Bytes" : (ImageBlob)?,
+      "S3Object" : (S3Object)?
+    )
+
+    alias DocumentLocation = NamedTuple(
+      "S3Object" : (S3Object)?
+    )
+
+    alias DocumentMetadata = NamedTuple(
+      "Pages" : (UInteger)?
+    )
+
+    alias DocumentTooLargeException = NamedTuple(
+      
+    )
+
+    alias EntityType = String
+
+    alias EntityTypes = Array(EntityType)
+
+    alias ErrorCode = String
+
+    alias FeatureType = String
+
+    alias FeatureTypes = Array(FeatureType)
+
+    alias Float = Float32
+
+    alias FlowDefinitionArn = String
+
+    alias Geometry = NamedTuple(
+      "BoundingBox" : (BoundingBox)?,
+      "Polygon" : (Polygon)?
+    )
+
+    alias GetDocumentAnalysisRequest = NamedTuple(
+      "JobId" : JobId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias GetDocumentAnalysisResponse = NamedTuple(
+      "DocumentMetadata" : (DocumentMetadata)?,
+      "JobStatus" : (JobStatus)?,
+      "NextToken" : (PaginationToken)?,
+      "Blocks" : (BlockList)?,
+      "Warnings" : (Warnings)?,
+      "StatusMessage" : (StatusMessage)?,
+      "AnalyzeDocumentModelVersion" : (String)?
+    )
+
+    alias GetDocumentTextDetectionRequest = NamedTuple(
+      "JobId" : JobId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias GetDocumentTextDetectionResponse = NamedTuple(
+      "DocumentMetadata" : (DocumentMetadata)?,
+      "JobStatus" : (JobStatus)?,
+      "NextToken" : (PaginationToken)?,
+      "Blocks" : (BlockList)?,
+      "Warnings" : (Warnings)?,
+      "StatusMessage" : (StatusMessage)?,
+      "DetectDocumentTextModelVersion" : (String)?
+    )
+
+    alias HumanLoopActivationConditionsEvaluationResults = String
+
+    alias HumanLoopActivationOutput = NamedTuple(
+      "HumanLoopArn" : (HumanLoopArn)?,
+      "HumanLoopActivationReasons" : (HumanLoopActivationReasons)?,
+      "HumanLoopActivationConditionsEvaluationResults" : (HumanLoopActivationConditionsEvaluationResults)?
+    )
+
+    alias HumanLoopActivationReason = String
+
+    alias HumanLoopActivationReasons = Array(HumanLoopActivationReason)
+
+    alias HumanLoopArn = String
+
+    alias HumanLoopConfig = NamedTuple(
+      "HumanLoopName" : HumanLoopName,
+      "FlowDefinitionArn" : FlowDefinitionArn,
+      "DataAttributes" : (HumanLoopDataAttributes)?
+    )
+
+    alias HumanLoopDataAttributes = NamedTuple(
+      "ContentClassifiers" : (ContentClassifiers)?
+    )
+
+    alias HumanLoopName = String
+
+    alias HumanLoopQuotaExceededException = NamedTuple(
+      "ResourceType" : (String)?,
+      "QuotaCode" : (String)?,
+      "ServiceCode" : (String)?
+    )
+
+    alias IdList = Array(NonEmptyString)
+
+    alias IdempotentParameterMismatchException = NamedTuple(
+      
+    )
+
+    alias ImageBlob = String | Array(UInt8) | IO
+
+    alias InternalServerError = NamedTuple(
+      
+    )
+
+    alias InvalidJobIdException = NamedTuple(
+      
+    )
+
+    alias InvalidKMSKeyException = NamedTuple(
+      
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      
+    )
+
+    alias InvalidS3ObjectException = NamedTuple(
+      
+    )
+
+    alias JobId = String
+
+    alias JobStatus = String
+
+    alias JobTag = String
+
+    alias KMSKeyId = String
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias MaxResults = Int32
+
+    alias NonEmptyString = String
+
+    alias NotificationChannel = NamedTuple(
+      "SNSTopicArn" : SNSTopicArn,
+      "RoleArn" : RoleArn
+    )
+
+    alias OutputConfig = NamedTuple(
+      "S3Bucket" : S3Bucket,
+      "S3Prefix" : (S3ObjectName)?
+    )
+
+    alias Pages = Array(UInteger)
+
+    alias PaginationToken = String
+
+    alias Percent = Float32
+
+    alias Point = NamedTuple(
+      "X" : (Float)?,
+      "Y" : (Float)?
+    )
+
+    alias Polygon = Array(Point)
+
+    alias ProvisionedThroughputExceededException = NamedTuple(
+      
+    )
+
+    alias Relationship = NamedTuple(
+      "Type" : (RelationshipType)?,
+      "Ids" : (IdList)?
+    )
+
+    alias RelationshipList = Array(Relationship)
+
+    alias RelationshipType = String
+
+    alias RoleArn = String
+
+    alias S3Bucket = String
+
+    alias S3Object = NamedTuple(
+      "Bucket" : (S3Bucket)?,
+      "Name" : (S3ObjectName)?,
+      "Version" : (S3ObjectVersion)?
+    )
+
+    alias S3ObjectName = String
+
+    alias S3ObjectVersion = String
+
+    alias SNSTopicArn = String
+
+    alias SelectionStatus = String
+
+    alias StartDocumentAnalysisRequest = NamedTuple(
+      "DocumentLocation" : DocumentLocation,
+      "FeatureTypes" : FeatureTypes,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "JobTag" : (JobTag)?,
+      "NotificationChannel" : (NotificationChannel)?,
+      "OutputConfig" : (OutputConfig)?,
+      "KMSKeyId" : (KMSKeyId)?
+    )
+
+    alias StartDocumentAnalysisResponse = NamedTuple(
+      "JobId" : (JobId)?
+    )
+
+    alias StartDocumentTextDetectionRequest = NamedTuple(
+      "DocumentLocation" : DocumentLocation,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "JobTag" : (JobTag)?,
+      "NotificationChannel" : (NotificationChannel)?,
+      "OutputConfig" : (OutputConfig)?,
+      "KMSKeyId" : (KMSKeyId)?
+    )
+
+    alias StartDocumentTextDetectionResponse = NamedTuple(
+      "JobId" : (JobId)?
+    )
+
+    alias StatusMessage = String
+
+    alias String = String
+
+    alias TextType = String
+
+    alias ThrottlingException = NamedTuple(
+      
+    )
+
+    alias UInteger = Int32
+
+    alias UnsupportedDocumentException = NamedTuple(
+      
+    )
+
+    alias Warning = NamedTuple(
+      "ErrorCode" : (ErrorCode)?,
+      "Pages" : (Pages)?
+    )
+
+    alias Warnings = Array(Warning)
   end
 end

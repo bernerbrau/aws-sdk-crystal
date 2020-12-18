@@ -2480,5 +2480,504 @@ module Aws::Snowball
       include Aws::Structure
     end
 
+    alias Address = NamedTuple(
+      "AddressId" : (AddressId)?,
+      "Name" : (String)?,
+      "Company" : (String)?,
+      "Street1" : (String)?,
+      "Street2" : (String)?,
+      "Street3" : (String)?,
+      "City" : (String)?,
+      "StateOrProvince" : (String)?,
+      "PrefectureOrDistrict" : (String)?,
+      "Landmark" : (String)?,
+      "Country" : (String)?,
+      "PostalCode" : (String)?,
+      "PhoneNumber" : (String)?,
+      "IsRestricted" : (Boolean)?
+    )
+
+    alias AddressId = String
+
+    alias AddressList = Array(Address)
+
+    alias AmiId = String
+
+    alias Boolean = Bool
+
+    alias CancelClusterRequest = NamedTuple(
+      "ClusterId" : ClusterId
+    )
+
+    alias CancelClusterResult = NamedTuple(
+      
+    )
+
+    alias CancelJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias CancelJobResult = NamedTuple(
+      
+    )
+
+    alias ClusterId = String
+
+    alias ClusterLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ClusterListEntry = NamedTuple(
+      "ClusterId" : (String)?,
+      "ClusterState" : (ClusterState)?,
+      "CreationDate" : (Timestamp)?,
+      "Description" : (String)?
+    )
+
+    alias ClusterListEntryList = Array(ClusterListEntry)
+
+    alias ClusterMetadata = NamedTuple(
+      "ClusterId" : (String)?,
+      "Description" : (String)?,
+      "KmsKeyARN" : (KmsKeyARN)?,
+      "RoleARN" : (RoleARN)?,
+      "ClusterState" : (ClusterState)?,
+      "JobType" : (JobType)?,
+      "SnowballType" : (SnowballType)?,
+      "CreationDate" : (Timestamp)?,
+      "Resources" : (JobResource)?,
+      "AddressId" : (AddressId)?,
+      "ShippingOption" : (ShippingOption)?,
+      "Notification" : (Notification)?,
+      "ForwardingAddressId" : (AddressId)?,
+      "TaxDocuments" : (TaxDocuments)?
+    )
+
+    alias ClusterState = String
+
+    alias CompatibleImage = NamedTuple(
+      "AmiId" : (String)?,
+      "Name" : (String)?
+    )
+
+    alias CompatibleImageList = Array(CompatibleImage)
+
+    alias ConflictException = NamedTuple(
+      "ConflictResource" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias CreateAddressRequest = NamedTuple(
+      "Address" : Address
+    )
+
+    alias CreateAddressResult = NamedTuple(
+      "AddressId" : (String)?
+    )
+
+    alias CreateClusterRequest = NamedTuple(
+      "JobType" : JobType,
+      "Resources" : JobResource,
+      "Description" : (String)?,
+      "AddressId" : AddressId,
+      "KmsKeyARN" : (KmsKeyARN)?,
+      "RoleARN" : RoleARN,
+      "SnowballType" : (SnowballType)?,
+      "ShippingOption" : ShippingOption,
+      "Notification" : (Notification)?,
+      "ForwardingAddressId" : (AddressId)?,
+      "TaxDocuments" : (TaxDocuments)?
+    )
+
+    alias CreateClusterResult = NamedTuple(
+      "ClusterId" : (ClusterId)?
+    )
+
+    alias CreateJobRequest = NamedTuple(
+      "JobType" : (JobType)?,
+      "Resources" : (JobResource)?,
+      "Description" : (String)?,
+      "AddressId" : (AddressId)?,
+      "KmsKeyARN" : (KmsKeyARN)?,
+      "RoleARN" : (RoleARN)?,
+      "SnowballCapacityPreference" : (SnowballCapacity)?,
+      "ShippingOption" : (ShippingOption)?,
+      "Notification" : (Notification)?,
+      "ClusterId" : (ClusterId)?,
+      "SnowballType" : (SnowballType)?,
+      "ForwardingAddressId" : (AddressId)?,
+      "TaxDocuments" : (TaxDocuments)?,
+      "DeviceConfiguration" : (DeviceConfiguration)?
+    )
+
+    alias CreateJobResult = NamedTuple(
+      "JobId" : (JobId)?
+    )
+
+    alias CreateReturnShippingLabelRequest = NamedTuple(
+      "JobId" : JobId,
+      "ShippingOption" : (ShippingOption)?
+    )
+
+    alias CreateReturnShippingLabelResult = NamedTuple(
+      "Status" : (ShippingLabelStatus)?
+    )
+
+    alias DataTransfer = NamedTuple(
+      "BytesTransferred" : (Long)?,
+      "ObjectsTransferred" : (Long)?,
+      "TotalBytes" : (Long)?,
+      "TotalObjects" : (Long)?
+    )
+
+    alias DescribeAddressRequest = NamedTuple(
+      "AddressId" : AddressId
+    )
+
+    alias DescribeAddressResult = NamedTuple(
+      "Address" : (Address)?
+    )
+
+    alias DescribeAddressesRequest = NamedTuple(
+      "MaxResults" : (ListLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeAddressesResult = NamedTuple(
+      "Addresses" : (AddressList)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeClusterRequest = NamedTuple(
+      "ClusterId" : ClusterId
+    )
+
+    alias DescribeClusterResult = NamedTuple(
+      "ClusterMetadata" : (ClusterMetadata)?
+    )
+
+    alias DescribeJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeJobResult = NamedTuple(
+      "JobMetadata" : (JobMetadata)?,
+      "SubJobMetadata" : (JobMetadataList)?
+    )
+
+    alias DescribeReturnShippingLabelRequest = NamedTuple(
+      "JobId" : (JobId)?
+    )
+
+    alias DescribeReturnShippingLabelResult = NamedTuple(
+      "Status" : (ShippingLabelStatus)?,
+      "ExpirationDate" : (Timestamp)?
+    )
+
+    alias DeviceConfiguration = NamedTuple(
+      "SnowconeDeviceConfiguration" : (SnowconeDeviceConfiguration)?
+    )
+
+    alias Ec2AmiResource = NamedTuple(
+      "AmiId" : AmiId,
+      "SnowballAmiId" : (String)?
+    )
+
+    alias Ec2AmiResourceList = Array(Ec2AmiResource)
+
+    alias Ec2RequestFailedException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias EventTriggerDefinition = NamedTuple(
+      "EventResourceARN" : (ResourceARN)?
+    )
+
+    alias EventTriggerDefinitionList = Array(EventTriggerDefinition)
+
+    alias GSTIN = String
+
+    alias GetJobManifestRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias GetJobManifestResult = NamedTuple(
+      "ManifestURI" : (String)?
+    )
+
+    alias GetJobUnlockCodeRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias GetJobUnlockCodeResult = NamedTuple(
+      "UnlockCode" : (String)?
+    )
+
+    alias GetSnowballUsageRequest = NamedTuple(
+      
+    )
+
+    alias GetSnowballUsageResult = NamedTuple(
+      "SnowballLimit" : (Integer)?,
+      "SnowballsInUse" : (Integer)?
+    )
+
+    alias GetSoftwareUpdatesRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias GetSoftwareUpdatesResult = NamedTuple(
+      "UpdatesURI" : (String)?
+    )
+
+    alias INDTaxDocuments = NamedTuple(
+      "GSTIN" : (GSTIN)?
+    )
+
+    alias Integer = Int32
+
+    alias InvalidAddressException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidInputCombinationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidJobStateException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidResourceException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias JobId = String
+
+    alias JobListEntry = NamedTuple(
+      "JobId" : (String)?,
+      "JobState" : (JobState)?,
+      "IsMaster" : (Boolean)?,
+      "JobType" : (JobType)?,
+      "SnowballType" : (SnowballType)?,
+      "CreationDate" : (Timestamp)?,
+      "Description" : (String)?
+    )
+
+    alias JobListEntryList = Array(JobListEntry)
+
+    alias JobLogs = NamedTuple(
+      "JobCompletionReportURI" : (String)?,
+      "JobSuccessLogURI" : (String)?,
+      "JobFailureLogURI" : (String)?
+    )
+
+    alias JobMetadata = NamedTuple(
+      "JobId" : (String)?,
+      "JobState" : (JobState)?,
+      "JobType" : (JobType)?,
+      "SnowballType" : (SnowballType)?,
+      "CreationDate" : (Timestamp)?,
+      "Resources" : (JobResource)?,
+      "Description" : (String)?,
+      "KmsKeyARN" : (KmsKeyARN)?,
+      "RoleARN" : (RoleARN)?,
+      "AddressId" : (AddressId)?,
+      "ShippingDetails" : (ShippingDetails)?,
+      "SnowballCapacityPreference" : (SnowballCapacity)?,
+      "Notification" : (Notification)?,
+      "DataTransferProgress" : (DataTransfer)?,
+      "JobLogInfo" : (JobLogs)?,
+      "ClusterId" : (String)?,
+      "ForwardingAddressId" : (AddressId)?,
+      "TaxDocuments" : (TaxDocuments)?,
+      "DeviceConfiguration" : (DeviceConfiguration)?
+    )
+
+    alias JobMetadataList = Array(JobMetadata)
+
+    alias JobResource = NamedTuple(
+      "S3Resources" : (S3ResourceList)?,
+      "LambdaResources" : (LambdaResourceList)?,
+      "Ec2AmiResources" : (Ec2AmiResourceList)?
+    )
+
+    alias JobState = String
+
+    alias JobStateList = Array(JobState)
+
+    alias JobType = String
+
+    alias KMSRequestFailedException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias KeyRange = NamedTuple(
+      "BeginMarker" : (String)?,
+      "EndMarker" : (String)?
+    )
+
+    alias KmsKeyARN = String
+
+    alias LambdaResource = NamedTuple(
+      "LambdaArn" : (ResourceARN)?,
+      "EventTriggers" : (EventTriggerDefinitionList)?
+    )
+
+    alias LambdaResourceList = Array(LambdaResource)
+
+    alias ListClusterJobsRequest = NamedTuple(
+      "ClusterId" : ClusterId,
+      "MaxResults" : (ListLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListClusterJobsResult = NamedTuple(
+      "JobListEntries" : (JobListEntryList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListClustersRequest = NamedTuple(
+      "MaxResults" : (ListLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListClustersResult = NamedTuple(
+      "ClusterListEntries" : (ClusterListEntryList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListCompatibleImagesRequest = NamedTuple(
+      "MaxResults" : (ListLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListCompatibleImagesResult = NamedTuple(
+      "CompatibleImages" : (CompatibleImageList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "MaxResults" : (ListLimit)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListJobsResult = NamedTuple(
+      "JobListEntries" : (JobListEntryList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListLimit = Int32
+
+    alias Long = Int64
+
+    alias Notification = NamedTuple(
+      "SnsTopicARN" : (SnsTopicARN)?,
+      "JobStatesToNotify" : (JobStateList)?,
+      "NotifyAll" : (Boolean)?
+    )
+
+    alias ResourceARN = String
+
+    alias ReturnShippingLabelAlreadyExistsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias RoleARN = String
+
+    alias S3Resource = NamedTuple(
+      "BucketArn" : (ResourceARN)?,
+      "KeyRange" : (KeyRange)?
+    )
+
+    alias S3ResourceList = Array(S3Resource)
+
+    alias Shipment = NamedTuple(
+      "Status" : (String)?,
+      "TrackingNumber" : (String)?
+    )
+
+    alias ShipmentState = String
+
+    alias ShippingDetails = NamedTuple(
+      "ShippingOption" : (ShippingOption)?,
+      "InboundShipment" : (Shipment)?,
+      "OutboundShipment" : (Shipment)?
+    )
+
+    alias ShippingLabelStatus = String
+
+    alias ShippingOption = String
+
+    alias SnowballCapacity = String
+
+    alias SnowballType = String
+
+    alias SnowconeDeviceConfiguration = NamedTuple(
+      "WirelessConnection" : (WirelessConnection)?
+    )
+
+    alias SnsTopicARN = String
+
+    alias String = String
+
+    alias TaxDocuments = NamedTuple(
+      "IND" : (INDTaxDocuments)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UnsupportedAddressException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UpdateClusterRequest = NamedTuple(
+      "ClusterId" : ClusterId,
+      "RoleARN" : (RoleARN)?,
+      "Description" : (String)?,
+      "Resources" : (JobResource)?,
+      "AddressId" : (AddressId)?,
+      "ShippingOption" : (ShippingOption)?,
+      "Notification" : (Notification)?,
+      "ForwardingAddressId" : (AddressId)?
+    )
+
+    alias UpdateClusterResult = NamedTuple(
+      
+    )
+
+    alias UpdateJobRequest = NamedTuple(
+      "JobId" : JobId,
+      "RoleARN" : (RoleARN)?,
+      "Notification" : (Notification)?,
+      "Resources" : (JobResource)?,
+      "AddressId" : (AddressId)?,
+      "ShippingOption" : (ShippingOption)?,
+      "Description" : (String)?,
+      "SnowballCapacityPreference" : (SnowballCapacity)?,
+      "ForwardingAddressId" : (AddressId)?
+    )
+
+    alias UpdateJobResult = NamedTuple(
+      
+    )
+
+    alias UpdateJobShipmentStateRequest = NamedTuple(
+      "JobId" : JobId,
+      "ShipmentState" : ShipmentState
+    )
+
+    alias UpdateJobShipmentStateResult = NamedTuple(
+      
+    )
+
+    alias WirelessConnection = NamedTuple(
+      "IsWifiEnabled" : (Boolean)?
+    )
   end
 end

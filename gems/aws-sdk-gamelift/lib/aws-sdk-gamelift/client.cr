@@ -411,8 +411,8 @@ module Aws::GameLift
     #
     # @overload accept_match(**params)
     # @param [Hash] params ({})
-    def accept_match(params = {}, **options)
-      req = build_request(:accept_match, params)
+    def accept_match(, **options)
+      req = build_request(:accept_match, )
       req.send_request(options)
     end
 
@@ -526,8 +526,8 @@ module Aws::GameLift
     #
     # @overload claim_game_server(**params)
     # @param [Hash] params ({})
-    def claim_game_server(params = {}, **options)
-      req = build_request(:claim_game_server, params)
+    def claim_game_server(, **options)
+      req = build_request(:claim_game_server, )
       req.send_request(options)
     end
 
@@ -624,8 +624,8 @@ module Aws::GameLift
     #
     # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, **options)
-      req = build_request(:create_alias, params)
+    def create_alias(, **options)
+      req = build_request(:create_alias, )
       req.send_request(options)
     end
 
@@ -781,8 +781,8 @@ module Aws::GameLift
     #
     # @overload create_build(**params)
     # @param [Hash] params ({})
-    def create_build(params = {}, **options)
-      req = build_request(:create_build, params)
+    def create_build(, **options)
+      req = build_request(:create_build, )
       req.send_request(options)
     end
 
@@ -1121,8 +1121,8 @@ module Aws::GameLift
     #
     # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, **options)
-      req = build_request(:create_fleet, params)
+    def create_fleet(, **options)
+      req = build_request(:create_fleet, )
       req.send_request(options)
     end
 
@@ -1377,8 +1377,8 @@ module Aws::GameLift
     #
     # @overload create_game_server_group(**params)
     # @param [Hash] params ({})
-    def create_game_server_group(params = {}, **options)
-      req = build_request(:create_game_server_group, params)
+    def create_game_server_group(, **options)
+      req = build_request(:create_game_server_group, )
       req.send_request(options)
     end
 
@@ -1549,8 +1549,8 @@ module Aws::GameLift
     #
     # @overload create_game_session(**params)
     # @param [Hash] params ({})
-    def create_game_session(params = {}, **options)
-      req = build_request(:create_game_session, params)
+    def create_game_session(, **options)
+      req = build_request(:create_game_session, )
       req.send_request(options)
     end
 
@@ -1695,8 +1695,8 @@ module Aws::GameLift
     #
     # @overload create_game_session_queue(**params)
     # @param [Hash] params ({})
-    def create_game_session_queue(params = {}, **options)
-      req = build_request(:create_game_session_queue, params)
+    def create_game_session_queue(, **options)
+      req = build_request(:create_game_session_queue, )
       req.send_request(options)
     end
 
@@ -1944,8 +1944,8 @@ module Aws::GameLift
     #
     # @overload create_matchmaking_configuration(**params)
     # @param [Hash] params ({})
-    def create_matchmaking_configuration(params = {}, **options)
-      req = build_request(:create_matchmaking_configuration, params)
+    def create_matchmaking_configuration(, **options)
+      req = build_request(:create_matchmaking_configuration, )
       req.send_request(options)
     end
 
@@ -2048,8 +2048,8 @@ module Aws::GameLift
     #
     # @overload create_matchmaking_rule_set(**params)
     # @param [Hash] params ({})
-    def create_matchmaking_rule_set(params = {}, **options)
-      req = build_request(:create_matchmaking_rule_set, params)
+    def create_matchmaking_rule_set(, **options)
+      req = build_request(:create_matchmaking_rule_set, )
       req.send_request(options)
     end
 
@@ -2124,8 +2124,8 @@ module Aws::GameLift
     #
     # @overload create_player_session(**params)
     # @param [Hash] params ({})
-    def create_player_session(params = {}, **options)
-      req = build_request(:create_player_session, params)
+    def create_player_session(, **options)
+      req = build_request(:create_player_session, )
       req.send_request(options)
     end
 
@@ -2205,8 +2205,8 @@ module Aws::GameLift
     #
     # @overload create_player_sessions(**params)
     # @param [Hash] params ({})
-    def create_player_sessions(params = {}, **options)
-      req = build_request(:create_player_sessions, params)
+    def create_player_sessions(, **options)
+      req = build_request(:create_player_sessions, )
       req.send_request(options)
     end
 
@@ -2350,8 +2350,8 @@ module Aws::GameLift
     #
     # @overload create_script(**params)
     # @param [Hash] params ({})
-    def create_script(params = {}, **options)
-      req = build_request(:create_script, params)
+    def create_script(, **options)
+      req = build_request(:create_script, )
       req.send_request(options)
     end
 
@@ -2443,8 +2443,8 @@ module Aws::GameLift
     #
     # @overload create_vpc_peering_authorization(**params)
     # @param [Hash] params ({})
-    def create_vpc_peering_authorization(params = {}, **options)
-      req = build_request(:create_vpc_peering_authorization, params)
+    def create_vpc_peering_authorization(, **options)
+      req = build_request(:create_vpc_peering_authorization, )
       req.send_request(options)
     end
 
@@ -2526,8 +2526,8 @@ module Aws::GameLift
     #
     # @overload create_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def create_vpc_peering_connection(params = {}, **options)
-      req = build_request(:create_vpc_peering_connection, params)
+    def create_vpc_peering_connection(, **options)
+      req = build_request(:create_vpc_peering_connection, )
       req.send_request(options)
     end
 
@@ -2564,8 +2564,8 @@ module Aws::GameLift
     #
     # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, **options)
-      req = build_request(:delete_alias, params)
+    def delete_alias(, **options)
+      req = build_request(:delete_alias, )
       req.send_request(options)
     end
 
@@ -2612,8 +2612,8 @@ module Aws::GameLift
     #
     # @overload delete_build(**params)
     # @param [Hash] params ({})
-    def delete_build(params = {}, **options)
-      req = build_request(:delete_build, params)
+    def delete_build(, **options)
+      req = build_request(:delete_build, )
       req.send_request(options)
     end
 
@@ -2668,8 +2668,8 @@ module Aws::GameLift
     #
     # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, **options)
-      req = build_request(:delete_fleet, params)
+    def delete_fleet(, **options)
+      req = build_request(:delete_fleet, )
       req.send_request(options)
     end
 
@@ -2780,8 +2780,8 @@ module Aws::GameLift
     #
     # @overload delete_game_server_group(**params)
     # @param [Hash] params ({})
-    def delete_game_server_group(params = {}, **options)
-      req = build_request(:delete_game_server_group, params)
+    def delete_game_server_group(, **options)
+      req = build_request(:delete_game_server_group, )
       req.send_request(options)
     end
 
@@ -2824,8 +2824,8 @@ module Aws::GameLift
     #
     # @overload delete_game_session_queue(**params)
     # @param [Hash] params ({})
-    def delete_game_session_queue(params = {}, **options)
-      req = build_request(:delete_game_session_queue, params)
+    def delete_game_session_queue(, **options)
+      req = build_request(:delete_game_session_queue, )
       req.send_request(options)
     end
 
@@ -2867,8 +2867,8 @@ module Aws::GameLift
     #
     # @overload delete_matchmaking_configuration(**params)
     # @param [Hash] params ({})
-    def delete_matchmaking_configuration(params = {}, **options)
-      req = build_request(:delete_matchmaking_configuration, params)
+    def delete_matchmaking_configuration(, **options)
+      req = build_request(:delete_matchmaking_configuration, )
       req.send_request(options)
     end
 
@@ -2921,8 +2921,8 @@ module Aws::GameLift
     #
     # @overload delete_matchmaking_rule_set(**params)
     # @param [Hash] params ({})
-    def delete_matchmaking_rule_set(params = {}, **options)
-      req = build_request(:delete_matchmaking_rule_set, params)
+    def delete_matchmaking_rule_set(, **options)
+      req = build_request(:delete_matchmaking_rule_set, )
       req.send_request(options)
     end
 
@@ -2975,8 +2975,8 @@ module Aws::GameLift
     #
     # @overload delete_scaling_policy(**params)
     # @param [Hash] params ({})
-    def delete_scaling_policy(params = {}, **options)
-      req = build_request(:delete_scaling_policy, params)
+    def delete_scaling_policy(, **options)
+      req = build_request(:delete_scaling_policy, )
       req.send_request(options)
     end
 
@@ -3026,8 +3026,8 @@ module Aws::GameLift
     #
     # @overload delete_script(**params)
     # @param [Hash] params ({})
-    def delete_script(params = {}, **options)
-      req = build_request(:delete_script, params)
+    def delete_script(, **options)
+      req = build_request(:delete_script, )
       req.send_request(options)
     end
 
@@ -3077,8 +3077,8 @@ module Aws::GameLift
     #
     # @overload delete_vpc_peering_authorization(**params)
     # @param [Hash] params ({})
-    def delete_vpc_peering_authorization(params = {}, **options)
-      req = build_request(:delete_vpc_peering_authorization, params)
+    def delete_vpc_peering_authorization(, **options)
+      req = build_request(:delete_vpc_peering_authorization, )
       req.send_request(options)
     end
 
@@ -3128,8 +3128,8 @@ module Aws::GameLift
     #
     # @overload delete_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def delete_vpc_peering_connection(params = {}, **options)
-      req = build_request(:delete_vpc_peering_connection, params)
+    def delete_vpc_peering_connection(, **options)
+      req = build_request(:delete_vpc_peering_connection, )
       req.send_request(options)
     end
 
@@ -3187,8 +3187,8 @@ module Aws::GameLift
     #
     # @overload deregister_game_server(**params)
     # @param [Hash] params ({})
-    def deregister_game_server(params = {}, **options)
-      req = build_request(:deregister_game_server, params)
+    def deregister_game_server(, **options)
+      req = build_request(:deregister_game_server, )
       req.send_request(options)
     end
 
@@ -3241,8 +3241,8 @@ module Aws::GameLift
     #
     # @overload describe_alias(**params)
     # @param [Hash] params ({})
-    def describe_alias(params = {}, **options)
-      req = build_request(:describe_alias, params)
+    def describe_alias(, **options)
+      req = build_request(:describe_alias, )
       req.send_request(options)
     end
 
@@ -3299,8 +3299,8 @@ module Aws::GameLift
     #
     # @overload describe_build(**params)
     # @param [Hash] params ({})
-    def describe_build(params = {}, **options)
-      req = build_request(:describe_build, params)
+    def describe_build(, **options)
+      req = build_request(:describe_build, )
       req.send_request(options)
     end
 
@@ -3371,8 +3371,8 @@ module Aws::GameLift
     #
     # @overload describe_ec2_instance_limits(**params)
     # @param [Hash] params ({})
-    def describe_ec2_instance_limits(params = {}, **options)
-      req = build_request(:describe_ec2_instance_limits, params)
+    def describe_ec2_instance_limits(, **options)
+      req = build_request(:describe_ec2_instance_limits, )
       req.send_request(options)
     end
 
@@ -3499,8 +3499,8 @@ module Aws::GameLift
     #
     # @overload describe_fleet_attributes(**params)
     # @param [Hash] params ({})
-    def describe_fleet_attributes(params = {}, **options)
-      req = build_request(:describe_fleet_attributes, params)
+    def describe_fleet_attributes(, **options)
+      req = build_request(:describe_fleet_attributes, )
       req.send_request(options)
     end
 
@@ -3612,8 +3612,8 @@ module Aws::GameLift
     #
     # @overload describe_fleet_capacity(**params)
     # @param [Hash] params ({})
-    def describe_fleet_capacity(params = {}, **options)
-      req = build_request(:describe_fleet_capacity, params)
+    def describe_fleet_capacity(, **options)
+      req = build_request(:describe_fleet_capacity, )
       req.send_request(options)
     end
 
@@ -3716,8 +3716,8 @@ module Aws::GameLift
     #
     # @overload describe_fleet_events(**params)
     # @param [Hash] params ({})
-    def describe_fleet_events(params = {}, **options)
-      req = build_request(:describe_fleet_events, params)
+    def describe_fleet_events(, **options)
+      req = build_request(:describe_fleet_events, )
       req.send_request(options)
     end
 
@@ -3794,8 +3794,8 @@ module Aws::GameLift
     #
     # @overload describe_fleet_port_settings(**params)
     # @param [Hash] params ({})
-    def describe_fleet_port_settings(params = {}, **options)
-      req = build_request(:describe_fleet_port_settings, params)
+    def describe_fleet_port_settings(, **options)
+      req = build_request(:describe_fleet_port_settings, )
       req.send_request(options)
     end
 
@@ -3904,8 +3904,8 @@ module Aws::GameLift
     #
     # @overload describe_fleet_utilization(**params)
     # @param [Hash] params ({})
-    def describe_fleet_utilization(params = {}, **options)
-      req = build_request(:describe_fleet_utilization, params)
+    def describe_fleet_utilization(, **options)
+      req = build_request(:describe_fleet_utilization, )
       req.send_request(options)
     end
 
@@ -3978,8 +3978,8 @@ module Aws::GameLift
     #
     # @overload describe_game_server(**params)
     # @param [Hash] params ({})
-    def describe_game_server(params = {}, **options)
-      req = build_request(:describe_game_server, params)
+    def describe_game_server(, **options)
+      req = build_request(:describe_game_server, )
       req.send_request(options)
     end
 
@@ -4057,8 +4057,8 @@ module Aws::GameLift
     #
     # @overload describe_game_server_group(**params)
     # @param [Hash] params ({})
-    def describe_game_server_group(params = {}, **options)
-      req = build_request(:describe_game_server_group, params)
+    def describe_game_server_group(, **options)
+      req = build_request(:describe_game_server_group, )
       req.send_request(options)
     end
 
@@ -4158,8 +4158,8 @@ module Aws::GameLift
     #
     # @overload describe_game_server_instances(**params)
     # @param [Hash] params ({})
-    def describe_game_server_instances(params = {}, **options)
-      req = build_request(:describe_game_server_instances, params)
+    def describe_game_server_instances(, **options)
+      req = build_request(:describe_game_server_instances, )
       req.send_request(options)
     end
 
@@ -4269,8 +4269,8 @@ module Aws::GameLift
     #
     # @overload describe_game_session_details(**params)
     # @param [Hash] params ({})
-    def describe_game_session_details(params = {}, **options)
-      req = build_request(:describe_game_session_details, params)
+    def describe_game_session_details(, **options)
+      req = build_request(:describe_game_session_details, )
       req.send_request(options)
     end
 
@@ -4343,8 +4343,8 @@ module Aws::GameLift
     #
     # @overload describe_game_session_placement(**params)
     # @param [Hash] params ({})
-    def describe_game_session_placement(params = {}, **options)
-      req = build_request(:describe_game_session_placement, params)
+    def describe_game_session_placement(, **options)
+      req = build_request(:describe_game_session_placement, )
       req.send_request(options)
     end
 
@@ -4421,8 +4421,8 @@ module Aws::GameLift
     #
     # @overload describe_game_session_queues(**params)
     # @param [Hash] params ({})
-    def describe_game_session_queues(params = {}, **options)
-      req = build_request(:describe_game_session_queues, params)
+    def describe_game_session_queues(, **options)
+      req = build_request(:describe_game_session_queues, )
       req.send_request(options)
     end
 
@@ -4532,8 +4532,8 @@ module Aws::GameLift
     #
     # @overload describe_game_sessions(**params)
     # @param [Hash] params ({})
-    def describe_game_sessions(params = {}, **options)
-      req = build_request(:describe_game_sessions, params)
+    def describe_game_sessions(, **options)
+      req = build_request(:describe_game_sessions, )
       req.send_request(options)
     end
 
@@ -4613,8 +4613,8 @@ module Aws::GameLift
     #
     # @overload describe_instances(**params)
     # @param [Hash] params ({})
-    def describe_instances(params = {}, **options)
-      req = build_request(:describe_instances, params)
+    def describe_instances(, **options)
+      req = build_request(:describe_instances, )
       req.send_request(options)
     end
 
@@ -4705,8 +4705,8 @@ module Aws::GameLift
     #
     # @overload describe_matchmaking(**params)
     # @param [Hash] params ({})
-    def describe_matchmaking(params = {}, **options)
-      req = build_request(:describe_matchmaking, params)
+    def describe_matchmaking(, **options)
+      req = build_request(:describe_matchmaking, )
       req.send_request(options)
     end
 
@@ -4815,8 +4815,8 @@ module Aws::GameLift
     #
     # @overload describe_matchmaking_configurations(**params)
     # @param [Hash] params ({})
-    def describe_matchmaking_configurations(params = {}, **options)
-      req = build_request(:describe_matchmaking_configurations, params)
+    def describe_matchmaking_configurations(, **options)
+      req = build_request(:describe_matchmaking_configurations, )
       req.send_request(options)
     end
 
@@ -4898,8 +4898,8 @@ module Aws::GameLift
     #
     # @overload describe_matchmaking_rule_sets(**params)
     # @param [Hash] params ({})
-    def describe_matchmaking_rule_sets(params = {}, **options)
-      req = build_request(:describe_matchmaking_rule_sets, params)
+    def describe_matchmaking_rule_sets(, **options)
+      req = build_request(:describe_matchmaking_rule_sets, )
       req.send_request(options)
     end
 
@@ -5011,8 +5011,8 @@ module Aws::GameLift
     #
     # @overload describe_player_sessions(**params)
     # @param [Hash] params ({})
-    def describe_player_sessions(params = {}, **options)
-      req = build_request(:describe_player_sessions, params)
+    def describe_player_sessions(, **options)
+      req = build_request(:describe_player_sessions, )
       req.send_request(options)
     end
 
@@ -5091,8 +5091,8 @@ module Aws::GameLift
     #
     # @overload describe_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def describe_runtime_configuration(params = {}, **options)
-      req = build_request(:describe_runtime_configuration, params)
+    def describe_runtime_configuration(, **options)
+      req = build_request(:describe_runtime_configuration, )
       req.send_request(options)
     end
 
@@ -5200,8 +5200,8 @@ module Aws::GameLift
     #
     # @overload describe_scaling_policies(**params)
     # @param [Hash] params ({})
-    def describe_scaling_policies(params = {}, **options)
-      req = build_request(:describe_scaling_policies, params)
+    def describe_scaling_policies(, **options)
+      req = build_request(:describe_scaling_policies, )
       req.send_request(options)
     end
 
@@ -5261,8 +5261,8 @@ module Aws::GameLift
     #
     # @overload describe_script(**params)
     # @param [Hash] params ({})
-    def describe_script(params = {}, **options)
-      req = build_request(:describe_script, params)
+    def describe_script(, **options)
+      req = build_request(:describe_script, )
       req.send_request(options)
     end
 
@@ -5300,8 +5300,8 @@ module Aws::GameLift
     #
     # @overload describe_vpc_peering_authorizations(**params)
     # @param [Hash] params ({})
-    def describe_vpc_peering_authorizations(params = {}, **options)
-      req = build_request(:describe_vpc_peering_authorizations, params)
+    def describe_vpc_peering_authorizations(, **options)
+      req = build_request(:describe_vpc_peering_authorizations, )
       req.send_request(options)
     end
 
@@ -5358,8 +5358,8 @@ module Aws::GameLift
     #
     # @overload describe_vpc_peering_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpc_peering_connections(params = {}, **options)
-      req = build_request(:describe_vpc_peering_connections, params)
+    def describe_vpc_peering_connections(, **options)
+      req = build_request(:describe_vpc_peering_connections, )
       req.send_request(options)
     end
 
@@ -5418,8 +5418,8 @@ module Aws::GameLift
     #
     # @overload get_game_session_log_url(**params)
     # @param [Hash] params ({})
-    def get_game_session_log_url(params = {}, **options)
-      req = build_request(:get_game_session_log_url, params)
+    def get_game_session_log_url(, **options)
+      req = build_request(:get_game_session_log_url, )
       req.send_request(options)
     end
 
@@ -5495,8 +5495,8 @@ module Aws::GameLift
     #
     # @overload get_instance_access(**params)
     # @param [Hash] params ({})
-    def get_instance_access(params = {}, **options)
-      req = build_request(:get_instance_access, params)
+    def get_instance_access(, **options)
+      req = build_request(:get_instance_access, )
       req.send_request(options)
     end
 
@@ -5583,8 +5583,8 @@ module Aws::GameLift
     #
     # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, **options)
-      req = build_request(:list_aliases, params)
+    def list_aliases(, **options)
+      req = build_request(:list_aliases, )
       req.send_request(options)
     end
 
@@ -5675,8 +5675,8 @@ module Aws::GameLift
     #
     # @overload list_builds(**params)
     # @param [Hash] params ({})
-    def list_builds(params = {}, **options)
-      req = build_request(:list_builds, params)
+    def list_builds(, **options)
+      req = build_request(:list_builds, )
       req.send_request(options)
     end
 
@@ -5758,8 +5758,8 @@ module Aws::GameLift
     #
     # @overload list_fleets(**params)
     # @param [Hash] params ({})
-    def list_fleets(params = {}, **options)
-      req = build_request(:list_fleets, params)
+    def list_fleets(, **options)
+      req = build_request(:list_fleets, )
       req.send_request(options)
     end
 
@@ -5844,8 +5844,8 @@ module Aws::GameLift
     #
     # @overload list_game_server_groups(**params)
     # @param [Hash] params ({})
-    def list_game_server_groups(params = {}, **options)
-      req = build_request(:list_game_server_groups, params)
+    def list_game_server_groups(, **options)
+      req = build_request(:list_game_server_groups, )
       req.send_request(options)
     end
 
@@ -5936,8 +5936,8 @@ module Aws::GameLift
     #
     # @overload list_game_servers(**params)
     # @param [Hash] params ({})
-    def list_game_servers(params = {}, **options)
-      req = build_request(:list_game_servers, params)
+    def list_game_servers(, **options)
+      req = build_request(:list_game_servers, )
       req.send_request(options)
     end
 
@@ -6007,8 +6007,8 @@ module Aws::GameLift
     #
     # @overload list_scripts(**params)
     # @param [Hash] params ({})
-    def list_scripts(params = {}, **options)
-      req = build_request(:list_scripts, params)
+    def list_scripts(, **options)
+      req = build_request(:list_scripts, )
       req.send_request(options)
     end
 
@@ -6084,8 +6084,8 @@ module Aws::GameLift
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -6321,8 +6321,8 @@ module Aws::GameLift
     #
     # @overload put_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_scaling_policy(params = {}, **options)
-      req = build_request(:put_scaling_policy, params)
+    def put_scaling_policy(, **options)
+      req = build_request(:put_scaling_policy, )
       req.send_request(options)
     end
 
@@ -6426,8 +6426,8 @@ module Aws::GameLift
     #
     # @overload register_game_server(**params)
     # @param [Hash] params ({})
-    def register_game_server(params = {}, **options)
-      req = build_request(:register_game_server, params)
+    def register_game_server(, **options)
+      req = build_request(:register_game_server, )
       req.send_request(options)
     end
 
@@ -6489,8 +6489,8 @@ module Aws::GameLift
     #
     # @overload request_upload_credentials(**params)
     # @param [Hash] params ({})
-    def request_upload_credentials(params = {}, **options)
-      req = build_request(:request_upload_credentials, params)
+    def request_upload_credentials(, **options)
+      req = build_request(:request_upload_credentials, )
       req.send_request(options)
     end
 
@@ -6532,8 +6532,8 @@ module Aws::GameLift
     #
     # @overload resolve_alias(**params)
     # @param [Hash] params ({})
-    def resolve_alias(params = {}, **options)
-      req = build_request(:resolve_alias, params)
+    def resolve_alias(, **options)
+      req = build_request(:resolve_alias, )
       req.send_request(options)
     end
 
@@ -6619,8 +6619,8 @@ module Aws::GameLift
     #
     # @overload resume_game_server_group(**params)
     # @param [Hash] params ({})
-    def resume_game_server_group(params = {}, **options)
-      req = build_request(:resume_game_server_group, params)
+    def resume_game_server_group(, **options)
+      req = build_request(:resume_game_server_group, )
       req.send_request(options)
     end
 
@@ -6834,8 +6834,8 @@ module Aws::GameLift
     #
     # @overload search_game_sessions(**params)
     # @param [Hash] params ({})
-    def search_game_sessions(params = {}, **options)
-      req = build_request(:search_game_sessions, params)
+    def search_game_sessions(, **options)
+      req = build_request(:search_game_sessions, )
       req.send_request(options)
     end
 
@@ -6892,8 +6892,8 @@ module Aws::GameLift
     #
     # @overload start_fleet_actions(**params)
     # @param [Hash] params ({})
-    def start_fleet_actions(params = {}, **options)
-      req = build_request(:start_fleet_actions, params)
+    def start_fleet_actions(, **options)
+      req = build_request(:start_fleet_actions, )
       req.send_request(options)
     end
 
@@ -7075,8 +7075,8 @@ module Aws::GameLift
     #
     # @overload start_game_session_placement(**params)
     # @param [Hash] params ({})
-    def start_game_session_placement(params = {}, **options)
-      req = build_request(:start_game_session_placement, params)
+    def start_game_session_placement(, **options)
+      req = build_request(:start_game_session_placement, )
       req.send_request(options)
     end
 
@@ -7222,8 +7222,8 @@ module Aws::GameLift
     #
     # @overload start_match_backfill(**params)
     # @param [Hash] params ({})
-    def start_match_backfill(params = {}, **options)
-      req = build_request(:start_match_backfill, params)
+    def start_match_backfill(, **options)
+      req = build_request(:start_match_backfill, )
       req.send_request(options)
     end
 
@@ -7350,8 +7350,8 @@ module Aws::GameLift
     #
     # @overload start_matchmaking(**params)
     # @param [Hash] params ({})
-    def start_matchmaking(params = {}, **options)
-      req = build_request(:start_matchmaking, params)
+    def start_matchmaking(, **options)
+      req = build_request(:start_matchmaking, )
       req.send_request(options)
     end
 
@@ -7408,8 +7408,8 @@ module Aws::GameLift
     #
     # @overload stop_fleet_actions(**params)
     # @param [Hash] params ({})
-    def stop_fleet_actions(params = {}, **options)
-      req = build_request(:stop_fleet_actions, params)
+    def stop_fleet_actions(, **options)
+      req = build_request(:stop_fleet_actions, )
       req.send_request(options)
     end
 
@@ -7482,8 +7482,8 @@ module Aws::GameLift
     #
     # @overload stop_game_session_placement(**params)
     # @param [Hash] params ({})
-    def stop_game_session_placement(params = {}, **options)
-      req = build_request(:stop_game_session_placement, params)
+    def stop_game_session_placement(, **options)
+      req = build_request(:stop_game_session_placement, )
       req.send_request(options)
     end
 
@@ -7538,8 +7538,8 @@ module Aws::GameLift
     #
     # @overload stop_matchmaking(**params)
     # @param [Hash] params ({})
-    def stop_matchmaking(params = {}, **options)
-      req = build_request(:stop_matchmaking, params)
+    def stop_matchmaking(, **options)
+      req = build_request(:stop_matchmaking, )
       req.send_request(options)
     end
 
@@ -7632,8 +7632,8 @@ module Aws::GameLift
     #
     # @overload suspend_game_server_group(**params)
     # @param [Hash] params ({})
-    def suspend_game_server_group(params = {}, **options)
-      req = build_request(:suspend_game_server_group, params)
+    def suspend_game_server_group(, **options)
+      req = build_request(:suspend_game_server_group, )
       req.send_request(options)
     end
 
@@ -7721,8 +7721,8 @@ module Aws::GameLift
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -7798,8 +7798,8 @@ module Aws::GameLift
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -7868,8 +7868,8 @@ module Aws::GameLift
     #
     # @overload update_alias(**params)
     # @param [Hash] params ({})
-    def update_alias(params = {}, **options)
-      req = build_request(:update_alias, params)
+    def update_alias(, **options)
+      req = build_request(:update_alias, )
       req.send_request(options)
     end
 
@@ -7937,8 +7937,8 @@ module Aws::GameLift
     #
     # @overload update_build(**params)
     # @param [Hash] params ({})
-    def update_build(params = {}, **options)
-      req = build_request(:update_build, params)
+    def update_build(, **options)
+      req = build_request(:update_build, )
       req.send_request(options)
     end
 
@@ -8036,8 +8036,8 @@ module Aws::GameLift
     #
     # @overload update_fleet_attributes(**params)
     # @param [Hash] params ({})
-    def update_fleet_attributes(params = {}, **options)
-      req = build_request(:update_fleet_attributes, params)
+    def update_fleet_attributes(, **options)
+      req = build_request(:update_fleet_attributes, )
       req.send_request(options)
     end
 
@@ -8127,8 +8127,8 @@ module Aws::GameLift
     #
     # @overload update_fleet_capacity(**params)
     # @param [Hash] params ({})
-    def update_fleet_capacity(params = {}, **options)
-      req = build_request(:update_fleet_capacity, params)
+    def update_fleet_capacity(, **options)
+      req = build_request(:update_fleet_capacity, )
       req.send_request(options)
     end
 
@@ -8214,8 +8214,8 @@ module Aws::GameLift
     #
     # @overload update_fleet_port_settings(**params)
     # @param [Hash] params ({})
-    def update_fleet_port_settings(params = {}, **options)
-      req = build_request(:update_fleet_port_settings, params)
+    def update_fleet_port_settings(, **options)
+      req = build_request(:update_fleet_port_settings, )
       req.send_request(options)
     end
 
@@ -8325,8 +8325,8 @@ module Aws::GameLift
     #
     # @overload update_game_server(**params)
     # @param [Hash] params ({})
-    def update_game_server(params = {}, **options)
-      req = build_request(:update_game_server, params)
+    def update_game_server(, **options)
+      req = build_request(:update_game_server, )
       req.send_request(options)
     end
 
@@ -8475,8 +8475,8 @@ module Aws::GameLift
     #
     # @overload update_game_server_group(**params)
     # @param [Hash] params ({})
-    def update_game_server_group(params = {}, **options)
-      req = build_request(:update_game_server_group, params)
+    def update_game_server_group(, **options)
+      req = build_request(:update_game_server_group, )
       req.send_request(options)
     end
 
@@ -8573,8 +8573,8 @@ module Aws::GameLift
     #
     # @overload update_game_session(**params)
     # @param [Hash] params ({})
-    def update_game_session(params = {}, **options)
-      req = build_request(:update_game_session, params)
+    def update_game_session(, **options)
+      req = build_request(:update_game_session, )
       req.send_request(options)
     end
 
@@ -8667,8 +8667,8 @@ module Aws::GameLift
     #
     # @overload update_game_session_queue(**params)
     # @param [Hash] params ({})
-    def update_game_session_queue(params = {}, **options)
-      req = build_request(:update_game_session_queue, params)
+    def update_game_session_queue(, **options)
+      req = build_request(:update_game_session_queue, )
       req.send_request(options)
     end
 
@@ -8875,8 +8875,8 @@ module Aws::GameLift
     #
     # @overload update_matchmaking_configuration(**params)
     # @param [Hash] params ({})
-    def update_matchmaking_configuration(params = {}, **options)
-      req = build_request(:update_matchmaking_configuration, params)
+    def update_matchmaking_configuration(, **options)
+      req = build_request(:update_matchmaking_configuration, )
       req.send_request(options)
     end
 
@@ -8976,8 +8976,8 @@ module Aws::GameLift
     #
     # @overload update_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def update_runtime_configuration(params = {}, **options)
-      req = build_request(:update_runtime_configuration, params)
+    def update_runtime_configuration(, **options)
+      req = build_request(:update_runtime_configuration, )
       req.send_request(options)
     end
 
@@ -9090,8 +9090,8 @@ module Aws::GameLift
     #
     # @overload update_script(**params)
     # @param [Hash] params ({})
-    def update_script(params = {}, **options)
-      req = build_request(:update_script, params)
+    def update_script(, **options)
+      req = build_request(:update_script, )
       req.send_request(options)
     end
 
@@ -9150,8 +9150,8 @@ module Aws::GameLift
     #
     # @overload validate_matchmaking_rule_set(**params)
     # @param [Hash] params ({})
-    def validate_matchmaking_rule_set(params = {}, **options)
-      req = build_request(:validate_matchmaking_rule_set, params)
+    def validate_matchmaking_rule_set(, **options)
+      req = build_request(:validate_matchmaking_rule_set, )
       req.send_request(options)
     end
 

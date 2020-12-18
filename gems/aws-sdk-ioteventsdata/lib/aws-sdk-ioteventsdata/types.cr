@@ -623,5 +623,192 @@ module Aws::IoTEventsData
       include Aws::Structure
     end
 
+    alias BatchPutMessageErrorEntries = Array(BatchPutMessageErrorEntry)
+
+    alias BatchPutMessageErrorEntry = NamedTuple(
+      "messageId" : (MessageId)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchPutMessageRequest = NamedTuple(
+      "messages" : Messages
+    )
+
+    alias BatchPutMessageResponse = NamedTuple(
+      "BatchPutMessageErrorEntries" : (BatchPutMessageErrorEntries)?
+    )
+
+    alias BatchUpdateDetectorErrorEntries = Array(BatchUpdateDetectorErrorEntry)
+
+    alias BatchUpdateDetectorErrorEntry = NamedTuple(
+      "messageId" : (MessageId)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchUpdateDetectorRequest = NamedTuple(
+      "detectors" : UpdateDetectorRequests
+    )
+
+    alias BatchUpdateDetectorResponse = NamedTuple(
+      "batchUpdateDetectorErrorEntries" : (BatchUpdateDetectorErrorEntries)?
+    )
+
+    alias DescribeDetectorRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "keyValue" : (KeyValue)?
+    )
+
+    alias DescribeDetectorResponse = NamedTuple(
+      "detector" : (Detector)?
+    )
+
+    alias Detector = NamedTuple(
+      "detectorModelName" : (DetectorModelName)?,
+      "keyValue" : (KeyValue)?,
+      "detectorModelVersion" : (DetectorModelVersion)?,
+      "state" : (DetectorState)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?
+    )
+
+    alias DetectorModelName = String
+
+    alias DetectorModelVersion = String
+
+    alias DetectorState = NamedTuple(
+      "stateName" : StateName,
+      "variables" : Variables,
+      "timers" : Timers
+    )
+
+    alias DetectorStateDefinition = NamedTuple(
+      "stateName" : StateName,
+      "variables" : VariableDefinitions,
+      "timers" : TimerDefinitions
+    )
+
+    alias DetectorStateSummary = NamedTuple(
+      "stateName" : (StateName)?
+    )
+
+    alias DetectorSummaries = Array(DetectorSummary)
+
+    alias DetectorSummary = NamedTuple(
+      "detectorModelName" : (DetectorModelName)?,
+      "keyValue" : (KeyValue)?,
+      "detectorModelVersion" : (DetectorModelVersion)?,
+      "state" : (DetectorStateSummary)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias InputName = String
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias KeyValue = String
+
+    alias ListDetectorsRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "stateName" : (StateName)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDetectorsResponse = NamedTuple(
+      "detectorSummaries" : (DetectorSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = NamedTuple(
+      "messageId" : MessageId,
+      "inputName" : InputName,
+      "payload" : Payload
+    )
+
+    alias MessageId = String
+
+    alias Messages = Array(Message)
+
+    alias NextToken = String
+
+    alias Payload = String | Array(UInt8) | IO
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Seconds = Int32
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias StateName = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Timer = NamedTuple(
+      "name" : TimerName,
+      "timestamp" : Timestamp
+    )
+
+    alias TimerDefinition = NamedTuple(
+      "name" : TimerName,
+      "seconds" : Seconds
+    )
+
+    alias TimerDefinitions = Array(TimerDefinition)
+
+    alias TimerName = String
+
+    alias Timers = Array(Timer)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UpdateDetectorRequest = NamedTuple(
+      "messageId" : MessageId,
+      "detectorModelName" : DetectorModelName,
+      "keyValue" : (KeyValue)?,
+      "state" : DetectorStateDefinition
+    )
+
+    alias UpdateDetectorRequests = Array(UpdateDetectorRequest)
+
+    alias Variable = NamedTuple(
+      "name" : VariableName,
+      "value" : VariableValue
+    )
+
+    alias VariableDefinition = NamedTuple(
+      "name" : VariableName,
+      "value" : VariableValue
+    )
+
+    alias VariableDefinitions = Array(VariableDefinition)
+
+    alias VariableName = String
+
+    alias VariableValue = String
+
+    alias Variables = Array(Variable)
+
+    alias errorMessage = String
   end
 end

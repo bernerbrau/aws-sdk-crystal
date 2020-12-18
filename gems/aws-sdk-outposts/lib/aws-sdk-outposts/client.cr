@@ -386,8 +386,8 @@ module Aws::Outposts
     #
     # @overload create_outpost(**params)
     # @param [Hash] params ({})
-    def create_outpost(params = {}, **options)
-      req = build_request(:create_outpost, params)
+    def create_outpost(, **options)
+      req = build_request(:create_outpost, )
       req.send_request(options)
     end
 
@@ -408,8 +408,8 @@ module Aws::Outposts
     #
     # @overload delete_outpost(**params)
     # @param [Hash] params ({})
-    def delete_outpost(params = {}, **options)
-      req = build_request(:delete_outpost, params)
+    def delete_outpost(, **options)
+      req = build_request(:delete_outpost, )
       req.send_request(options)
     end
 
@@ -430,8 +430,8 @@ module Aws::Outposts
     #
     # @overload delete_site(**params)
     # @param [Hash] params ({})
-    def delete_site(params = {}, **options)
-      req = build_request(:delete_site, params)
+    def delete_site(, **options)
+      req = build_request(:delete_site, )
       req.send_request(options)
     end
 
@@ -468,8 +468,8 @@ module Aws::Outposts
     #
     # @overload get_outpost(**params)
     # @param [Hash] params ({})
-    def get_outpost(params = {}, **options)
-      req = build_request(:get_outpost, params)
+    def get_outpost(, **options)
+      req = build_request(:get_outpost, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::Outposts
     #
     # @overload get_outpost_instance_types(**params)
     # @param [Hash] params ({})
-    def get_outpost_instance_types(params = {}, **options)
-      req = build_request(:get_outpost_instance_types, params)
+    def get_outpost_instance_types(, **options)
+      req = build_request(:get_outpost_instance_types, )
       req.send_request(options)
     end
 
@@ -558,8 +558,8 @@ module Aws::Outposts
     #
     # @overload list_outposts(**params)
     # @param [Hash] params ({})
-    def list_outposts(params = {}, **options)
-      req = build_request(:list_outposts, params)
+    def list_outposts(, **options)
+      req = build_request(:list_outposts, )
       req.send_request(options)
     end
 
@@ -600,8 +600,8 @@ module Aws::Outposts
     #
     # @overload list_sites(**params)
     # @param [Hash] params ({})
-    def list_sites(params = {}, **options)
-      req = build_request(:list_sites, params)
+    def list_sites(, **options)
+      req = build_request(:list_sites, )
       req.send_request(options)
     end
 

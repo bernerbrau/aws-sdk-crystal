@@ -390,8 +390,8 @@ module Aws::KinesisVideoSignalingChannels
     #
     # @overload get_ice_server_config(**params)
     # @param [Hash] params ({})
-    def get_ice_server_config(params = {}, **options)
-      req = build_request(:get_ice_server_config, params)
+    def get_ice_server_config(, **options)
+      req = build_request(:get_ice_server_config, )
       req.send_request(options)
     end
 
@@ -433,8 +433,8 @@ module Aws::KinesisVideoSignalingChannels
     #
     # @overload send_alexa_offer_to_master(**params)
     # @param [Hash] params ({})
-    def send_alexa_offer_to_master(params = {}, **options)
-      req = build_request(:send_alexa_offer_to_master, params)
+    def send_alexa_offer_to_master(, **options)
+      req = build_request(:send_alexa_offer_to_master, )
       req.send_request(options)
     end
 

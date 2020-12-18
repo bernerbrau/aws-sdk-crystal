@@ -420,8 +420,8 @@ module Aws::Pricing
     #
     # @overload describe_services(**params)
     # @param [Hash] params ({})
-    def describe_services(params = {}, **options)
-      req = build_request(:describe_services, params)
+    def describe_services(, **options)
+      req = build_request(:describe_services, )
       req.send_request(options)
     end
 
@@ -501,8 +501,8 @@ module Aws::Pricing
     #
     # @overload get_attribute_values(**params)
     # @param [Hash] params ({})
-    def get_attribute_values(params = {}, **options)
-      req = build_request(:get_attribute_values, params)
+    def get_attribute_values(, **options)
+      req = build_request(:get_attribute_values, )
       req.send_request(options)
     end
 
@@ -593,8 +593,8 @@ module Aws::Pricing
     #
     # @overload get_products(**params)
     # @param [Hash] params ({})
-    def get_products(params = {}, **options)
-      req = build_request(:get_products, params)
+    def get_products(, **options)
+      req = build_request(:get_products, )
       req.send_request(options)
     end
 

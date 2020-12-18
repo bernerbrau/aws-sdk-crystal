@@ -389,8 +389,8 @@ module Aws::CloudWatchLogs
     #
     # @overload associate_kms_key(**params)
     # @param [Hash] params ({})
-    def associate_kms_key(params = {}, **options)
-      req = build_request(:associate_kms_key, params)
+    def associate_kms_key(, **options)
+      req = build_request(:associate_kms_key, )
       req.send_request(options)
     end
 
@@ -413,8 +413,8 @@ module Aws::CloudWatchLogs
     #
     # @overload cancel_export_task(**params)
     # @param [Hash] params ({})
-    def cancel_export_task(params = {}, **options)
-      req = build_request(:cancel_export_task, params)
+    def cancel_export_task(, **options)
+      req = build_request(:cancel_export_task, )
       req.send_request(options)
     end
 
@@ -496,8 +496,8 @@ module Aws::CloudWatchLogs
     #
     # @overload create_export_task(**params)
     # @param [Hash] params ({})
-    def create_export_task(params = {}, **options)
-      req = build_request(:create_export_task, params)
+    def create_export_task(, **options)
+      req = build_request(:create_export_task, )
       req.send_request(options)
     end
 
@@ -568,8 +568,8 @@ module Aws::CloudWatchLogs
     #
     # @overload create_log_group(**params)
     # @param [Hash] params ({})
-    def create_log_group(params = {}, **options)
-      req = build_request(:create_log_group, params)
+    def create_log_group(, **options)
+      req = build_request(:create_log_group, )
       req.send_request(options)
     end
 
@@ -608,8 +608,8 @@ module Aws::CloudWatchLogs
     #
     # @overload create_log_stream(**params)
     # @param [Hash] params ({})
-    def create_log_stream(params = {}, **options)
-      req = build_request(:create_log_stream, params)
+    def create_log_stream(, **options)
+      req = build_request(:create_log_stream, )
       req.send_request(options)
     end
 
@@ -632,8 +632,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_destination(**params)
     # @param [Hash] params ({})
-    def delete_destination(params = {}, **options)
-      req = build_request(:delete_destination, params)
+    def delete_destination(, **options)
+      req = build_request(:delete_destination, )
       req.send_request(options)
     end
 
@@ -655,8 +655,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_log_group(**params)
     # @param [Hash] params ({})
-    def delete_log_group(params = {}, **options)
-      req = build_request(:delete_log_group, params)
+    def delete_log_group(, **options)
+      req = build_request(:delete_log_group, )
       req.send_request(options)
     end
 
@@ -682,8 +682,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_log_stream(**params)
     # @param [Hash] params ({})
-    def delete_log_stream(params = {}, **options)
-      req = build_request(:delete_log_stream, params)
+    def delete_log_stream(, **options)
+      req = build_request(:delete_log_stream, )
       req.send_request(options)
     end
 
@@ -708,8 +708,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_metric_filter(**params)
     # @param [Hash] params ({})
-    def delete_metric_filter(params = {}, **options)
-      req = build_request(:delete_metric_filter, params)
+    def delete_metric_filter(, **options)
+      req = build_request(:delete_metric_filter, )
       req.send_request(options)
     end
 
@@ -750,8 +750,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_query_definition(**params)
     # @param [Hash] params ({})
-    def delete_query_definition(params = {}, **options)
-      req = build_request(:delete_query_definition, params)
+    def delete_query_definition(, **options)
+      req = build_request(:delete_query_definition, )
       req.send_request(options)
     end
 
@@ -773,8 +773,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, **options)
-      req = build_request(:delete_resource_policy, params)
+    def delete_resource_policy(, **options)
+      req = build_request(:delete_resource_policy, )
       req.send_request(options)
     end
 
@@ -798,8 +798,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_retention_policy(**params)
     # @param [Hash] params ({})
-    def delete_retention_policy(params = {}, **options)
-      req = build_request(:delete_retention_policy, params)
+    def delete_retention_policy(, **options)
+      req = build_request(:delete_retention_policy, )
       req.send_request(options)
     end
 
@@ -824,8 +824,8 @@ module Aws::CloudWatchLogs
     #
     # @overload delete_subscription_filter(**params)
     # @param [Hash] params ({})
-    def delete_subscription_filter(params = {}, **options)
-      req = build_request(:delete_subscription_filter, params)
+    def delete_subscription_filter(, **options)
+      req = build_request(:delete_subscription_filter, )
       req.send_request(options)
     end
 
@@ -874,8 +874,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_destinations(**params)
     # @param [Hash] params ({})
-    def describe_destinations(params = {}, **options)
-      req = build_request(:describe_destinations, params)
+    def describe_destinations(, **options)
+      req = build_request(:describe_destinations, )
       req.send_request(options)
     end
 
@@ -932,8 +932,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, **options)
-      req = build_request(:describe_export_tasks, params)
+    def describe_export_tasks(, **options)
+      req = build_request(:describe_export_tasks, )
       req.send_request(options)
     end
 
@@ -983,8 +983,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_log_groups(**params)
     # @param [Hash] params ({})
-    def describe_log_groups(params = {}, **options)
-      req = build_request(:describe_log_groups, params)
+    def describe_log_groups(, **options)
+      req = build_request(:describe_log_groups, )
       req.send_request(options)
     end
 
@@ -1066,8 +1066,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_log_streams(**params)
     # @param [Hash] params ({})
-    def describe_log_streams(params = {}, **options)
-      req = build_request(:describe_log_streams, params)
+    def describe_log_streams(, **options)
+      req = build_request(:describe_log_streams, )
       req.send_request(options)
     end
 
@@ -1136,8 +1136,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_metric_filters(**params)
     # @param [Hash] params ({})
-    def describe_metric_filters(params = {}, **options)
-      req = build_request(:describe_metric_filters, params)
+    def describe_metric_filters(, **options)
+      req = build_request(:describe_metric_filters, )
       req.send_request(options)
     end
 
@@ -1189,8 +1189,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_queries(**params)
     # @param [Hash] params ({})
-    def describe_queries(params = {}, **options)
-      req = build_request(:describe_queries, params)
+    def describe_queries(, **options)
+      req = build_request(:describe_queries, )
       req.send_request(options)
     end
 
@@ -1241,8 +1241,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_query_definitions(**params)
     # @param [Hash] params ({})
-    def describe_query_definitions(params = {}, **options)
-      req = build_request(:describe_query_definitions, params)
+    def describe_query_definitions(, **options)
+      req = build_request(:describe_query_definitions, )
       req.send_request(options)
     end
 
@@ -1280,8 +1280,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_resource_policies(**params)
     # @param [Hash] params ({})
-    def describe_resource_policies(params = {}, **options)
-      req = build_request(:describe_resource_policies, params)
+    def describe_resource_policies(, **options)
+      req = build_request(:describe_resource_policies, )
       req.send_request(options)
     end
 
@@ -1336,8 +1336,8 @@ module Aws::CloudWatchLogs
     #
     # @overload describe_subscription_filters(**params)
     # @param [Hash] params ({})
-    def describe_subscription_filters(params = {}, **options)
-      req = build_request(:describe_subscription_filters, params)
+    def describe_subscription_filters(, **options)
+      req = build_request(:describe_subscription_filters, )
       req.send_request(options)
     end
 
@@ -1368,8 +1368,8 @@ module Aws::CloudWatchLogs
     #
     # @overload disassociate_kms_key(**params)
     # @param [Hash] params ({})
-    def disassociate_kms_key(params = {}, **options)
-      req = build_request(:disassociate_kms_key, params)
+    def disassociate_kms_key(, **options)
+      req = build_request(:disassociate_kms_key, )
       req.send_request(options)
     end
 
@@ -1489,8 +1489,8 @@ module Aws::CloudWatchLogs
     #
     # @overload filter_log_events(**params)
     # @param [Hash] params ({})
-    def filter_log_events(params = {}, **options)
-      req = build_request(:filter_log_events, params)
+    def filter_log_events(, **options)
+      req = build_request(:filter_log_events, )
       req.send_request(options)
     end
 
@@ -1573,8 +1573,8 @@ module Aws::CloudWatchLogs
     #
     # @overload get_log_events(**params)
     # @param [Hash] params ({})
-    def get_log_events(params = {}, **options)
-      req = build_request(:get_log_events, params)
+    def get_log_events(, **options)
+      req = build_request(:get_log_events, )
       req.send_request(options)
     end
 
@@ -1627,8 +1627,8 @@ module Aws::CloudWatchLogs
     #
     # @overload get_log_group_fields(**params)
     # @param [Hash] params ({})
-    def get_log_group_fields(params = {}, **options)
-      req = build_request(:get_log_group_fields, params)
+    def get_log_group_fields(, **options)
+      req = build_request(:get_log_group_fields, )
       req.send_request(options)
     end
 
@@ -1665,8 +1665,8 @@ module Aws::CloudWatchLogs
     #
     # @overload get_log_record(**params)
     # @param [Hash] params ({})
-    def get_log_record(params = {}, **options)
-      req = build_request(:get_log_record, params)
+    def get_log_record(, **options)
+      req = build_request(:get_log_record, )
       req.send_request(options)
     end
 
@@ -1720,8 +1720,8 @@ module Aws::CloudWatchLogs
     #
     # @overload get_query_results(**params)
     # @param [Hash] params ({})
-    def get_query_results(params = {}, **options)
-      req = build_request(:get_query_results, params)
+    def get_query_results(, **options)
+      req = build_request(:get_query_results, )
       req.send_request(options)
     end
 
@@ -1749,8 +1749,8 @@ module Aws::CloudWatchLogs
     #
     # @overload list_tags_log_group(**params)
     # @param [Hash] params ({})
-    def list_tags_log_group(params = {}, **options)
-      req = build_request(:list_tags_log_group, params)
+    def list_tags_log_group(, **options)
+      req = build_request(:list_tags_log_group, )
       req.send_request(options)
     end
 
@@ -1813,8 +1813,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_destination(**params)
     # @param [Hash] params ({})
-    def put_destination(params = {}, **options)
-      req = build_request(:put_destination, params)
+    def put_destination(, **options)
+      req = build_request(:put_destination, )
       req.send_request(options)
     end
 
@@ -1848,8 +1848,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_destination_policy(**params)
     # @param [Hash] params ({})
-    def put_destination_policy(params = {}, **options)
-      req = build_request(:put_destination_policy, params)
+    def put_destination_policy(, **options)
+      req = build_request(:put_destination_policy, )
       req.send_request(options)
     end
 
@@ -1944,8 +1944,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_log_events(**params)
     # @param [Hash] params ({})
-    def put_log_events(params = {}, **options)
-      req = build_request(:put_log_events, params)
+    def put_log_events(, **options)
+      req = build_request(:put_log_events, )
       req.send_request(options)
     end
 
@@ -1996,8 +1996,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_metric_filter(**params)
     # @param [Hash] params ({})
-    def put_metric_filter(params = {}, **options)
-      req = build_request(:put_metric_filter, params)
+    def put_metric_filter(, **options)
+      req = build_request(:put_metric_filter, )
       req.send_request(options)
     end
 
@@ -2082,8 +2082,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_query_definition(**params)
     # @param [Hash] params ({})
-    def put_query_definition(params = {}, **options)
-      req = build_request(:put_query_definition, params)
+    def put_query_definition(, **options)
+      req = build_request(:put_query_definition, )
       req.send_request(options)
     end
 
@@ -2130,8 +2130,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, **options)
-      req = build_request(:put_resource_policy, params)
+    def put_resource_policy(, **options)
+      req = build_request(:put_resource_policy, )
       req.send_request(options)
     end
 
@@ -2163,8 +2163,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_retention_policy(**params)
     # @param [Hash] params ({})
-    def put_retention_policy(params = {}, **options)
-      req = build_request(:put_retention_policy, params)
+    def put_retention_policy(, **options)
+      req = build_request(:put_retention_policy, )
       req.send_request(options)
     end
 
@@ -2263,8 +2263,8 @@ module Aws::CloudWatchLogs
     #
     # @overload put_subscription_filter(**params)
     # @param [Hash] params ({})
-    def put_subscription_filter(params = {}, **options)
-      req = build_request(:put_subscription_filter, params)
+    def put_subscription_filter(, **options)
+      req = build_request(:put_subscription_filter, )
       req.send_request(options)
     end
 
@@ -2341,8 +2341,8 @@ module Aws::CloudWatchLogs
     #
     # @overload start_query(**params)
     # @param [Hash] params ({})
-    def start_query(params = {}, **options)
-      req = build_request(:start_query, params)
+    def start_query(, **options)
+      req = build_request(:start_query, )
       req.send_request(options)
     end
 
@@ -2372,8 +2372,8 @@ module Aws::CloudWatchLogs
     #
     # @overload stop_query(**params)
     # @param [Hash] params ({})
-    def stop_query(params = {}, **options)
-      req = build_request(:stop_query, params)
+    def stop_query(, **options)
+      req = build_request(:stop_query, )
       req.send_request(options)
     end
 
@@ -2412,8 +2412,8 @@ module Aws::CloudWatchLogs
     #
     # @overload tag_log_group(**params)
     # @param [Hash] params ({})
-    def tag_log_group(params = {}, **options)
-      req = build_request(:tag_log_group, params)
+    def tag_log_group(, **options)
+      req = build_request(:tag_log_group, )
       req.send_request(options)
     end
 
@@ -2453,8 +2453,8 @@ module Aws::CloudWatchLogs
     #
     # @overload test_metric_filter(**params)
     # @param [Hash] params ({})
-    def test_metric_filter(params = {}, **options)
-      req = build_request(:test_metric_filter, params)
+    def test_metric_filter(, **options)
+      req = build_request(:test_metric_filter, )
       req.send_request(options)
     end
 
@@ -2487,8 +2487,8 @@ module Aws::CloudWatchLogs
     #
     # @overload untag_log_group(**params)
     # @param [Hash] params ({})
-    def untag_log_group(params = {}, **options)
-      req = build_request(:untag_log_group, params)
+    def untag_log_group(, **options)
+      req = build_request(:untag_log_group, )
       req.send_request(options)
     end
 

@@ -6526,5 +6526,1802 @@ module Aws::AlexaForBusiness
       include Aws::Structure
     end
 
+    alias Address = String
+
+    alias AddressBook = NamedTuple(
+      "AddressBookArn" : (Arn)?,
+      "Name" : (AddressBookName)?,
+      "Description" : (AddressBookDescription)?
+    )
+
+    alias AddressBookData = NamedTuple(
+      "AddressBookArn" : (Arn)?,
+      "Name" : (AddressBookName)?,
+      "Description" : (AddressBookDescription)?
+    )
+
+    alias AddressBookDataList = Array(AddressBookData)
+
+    alias AddressBookDescription = String
+
+    alias AddressBookName = String
+
+    alias AlreadyExistsException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AmazonId = String
+
+    alias ApplianceDescription = String
+
+    alias ApplianceFriendlyName = String
+
+    alias ApplianceManufacturerName = String
+
+    alias ApproveSkillRequest = NamedTuple(
+      "SkillId" : SkillId
+    )
+
+    alias ApproveSkillResponse = NamedTuple(
+      
+    )
+
+    alias Arn = String
+
+    alias AssociateContactWithAddressBookRequest = NamedTuple(
+      "ContactArn" : Arn,
+      "AddressBookArn" : Arn
+    )
+
+    alias AssociateContactWithAddressBookResponse = NamedTuple(
+      
+    )
+
+    alias AssociateDeviceWithNetworkProfileRequest = NamedTuple(
+      "DeviceArn" : Arn,
+      "NetworkProfileArn" : Arn
+    )
+
+    alias AssociateDeviceWithNetworkProfileResponse = NamedTuple(
+      
+    )
+
+    alias AssociateDeviceWithRoomRequest = NamedTuple(
+      "DeviceArn" : (Arn)?,
+      "RoomArn" : (Arn)?
+    )
+
+    alias AssociateDeviceWithRoomResponse = NamedTuple(
+      
+    )
+
+    alias AssociateSkillGroupWithRoomRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "RoomArn" : (Arn)?
+    )
+
+    alias AssociateSkillGroupWithRoomResponse = NamedTuple(
+      
+    )
+
+    alias AssociateSkillWithSkillGroupRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "SkillId" : SkillId
+    )
+
+    alias AssociateSkillWithSkillGroupResponse = NamedTuple(
+      
+    )
+
+    alias AssociateSkillWithUsersRequest = NamedTuple(
+      "SkillId" : SkillId
+    )
+
+    alias AssociateSkillWithUsersResponse = NamedTuple(
+      
+    )
+
+    alias Audio = NamedTuple(
+      "Locale" : Locale,
+      "Location" : AudioLocation
+    )
+
+    alias AudioList = Array(Audio)
+
+    alias AudioLocation = String
+
+    alias AuthorizationResult = Hash(Key,Value)
+
+    alias Boolean = Bool
+
+    alias BulletPoint = String
+
+    alias BulletPoints = Array(BulletPoint)
+
+    alias BusinessReport = NamedTuple(
+      "Status" : (BusinessReportStatus)?,
+      "FailureCode" : (BusinessReportFailureCode)?,
+      "S3Location" : (BusinessReportS3Location)?,
+      "DeliveryTime" : (BusinessReportDeliveryTime)?,
+      "DownloadUrl" : (BusinessReportDownloadUrl)?
+    )
+
+    alias BusinessReportContentRange = NamedTuple(
+      "Interval" : BusinessReportInterval
+    )
+
+    alias BusinessReportDeliveryTime = String | UInt64 | Time
+
+    alias BusinessReportDownloadUrl = String
+
+    alias BusinessReportFailureCode = String
+
+    alias BusinessReportFormat = String
+
+    alias BusinessReportInterval = String
+
+    alias BusinessReportRecurrence = NamedTuple(
+      "StartDate" : (Date)?
+    )
+
+    alias BusinessReportS3Location = NamedTuple(
+      "Path" : (BusinessReportS3Path)?,
+      "BucketName" : (CustomerS3BucketName)?
+    )
+
+    alias BusinessReportS3Path = String
+
+    alias BusinessReportSchedule = NamedTuple(
+      "ScheduleArn" : (Arn)?,
+      "ScheduleName" : (BusinessReportScheduleName)?,
+      "S3BucketName" : (CustomerS3BucketName)?,
+      "S3KeyPrefix" : (S3KeyPrefix)?,
+      "Format" : (BusinessReportFormat)?,
+      "ContentRange" : (BusinessReportContentRange)?,
+      "Recurrence" : (BusinessReportRecurrence)?,
+      "LastBusinessReport" : (BusinessReport)?
+    )
+
+    alias BusinessReportScheduleList = Array(BusinessReportSchedule)
+
+    alias BusinessReportScheduleName = String
+
+    alias BusinessReportStatus = String
+
+    alias Category = NamedTuple(
+      "CategoryId" : (CategoryId)?,
+      "CategoryName" : (CategoryName)?
+    )
+
+    alias CategoryId = Int64
+
+    alias CategoryList = Array(Category)
+
+    alias CategoryName = String
+
+    alias CertificateTime = String | UInt64 | Time
+
+    alias ClientId = String
+
+    alias ClientRequestToken = String
+
+    alias CommsProtocol = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConferencePreference = NamedTuple(
+      "DefaultConferenceProviderArn" : (Arn)?
+    )
+
+    alias ConferenceProvider = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (ConferenceProviderName)?,
+      "Type" : (ConferenceProviderType)?,
+      "IPDialIn" : (IPDialIn)?,
+      "PSTNDialIn" : (PSTNDialIn)?,
+      "MeetingSetting" : (MeetingSetting)?
+    )
+
+    alias ConferenceProviderName = String
+
+    alias ConferenceProviderType = String
+
+    alias ConferenceProvidersList = Array(ConferenceProvider)
+
+    alias ConnectionStatus = String
+
+    alias ConnectionStatusUpdatedTime = String | UInt64 | Time
+
+    alias Contact = NamedTuple(
+      "ContactArn" : (Arn)?,
+      "DisplayName" : (ContactName)?,
+      "FirstName" : (ContactName)?,
+      "LastName" : (ContactName)?,
+      "PhoneNumber" : (RawPhoneNumber)?,
+      "PhoneNumbers" : (PhoneNumberList)?,
+      "SipAddresses" : (SipAddressList)?
+    )
+
+    alias ContactData = NamedTuple(
+      "ContactArn" : (Arn)?,
+      "DisplayName" : (ContactName)?,
+      "FirstName" : (ContactName)?,
+      "LastName" : (ContactName)?,
+      "PhoneNumber" : (RawPhoneNumber)?,
+      "PhoneNumbers" : (PhoneNumberList)?,
+      "SipAddresses" : (SipAddressList)?
+    )
+
+    alias ContactDataList = Array(ContactData)
+
+    alias ContactName = String
+
+    alias Content = NamedTuple(
+      "TextList" : (TextList)?,
+      "SsmlList" : (SsmlList)?,
+      "AudioList" : (AudioList)?
+    )
+
+    alias CountryCode = String
+
+    alias CreateAddressBookRequest = NamedTuple(
+      "Name" : AddressBookName,
+      "Description" : (AddressBookDescription)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreateAddressBookResponse = NamedTuple(
+      "AddressBookArn" : (Arn)?
+    )
+
+    alias CreateBusinessReportScheduleRequest = NamedTuple(
+      "ScheduleName" : (BusinessReportScheduleName)?,
+      "S3BucketName" : (CustomerS3BucketName)?,
+      "S3KeyPrefix" : (S3KeyPrefix)?,
+      "Format" : BusinessReportFormat,
+      "ContentRange" : BusinessReportContentRange,
+      "Recurrence" : (BusinessReportRecurrence)?,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateBusinessReportScheduleResponse = NamedTuple(
+      "ScheduleArn" : (Arn)?
+    )
+
+    alias CreateConferenceProviderRequest = NamedTuple(
+      "ConferenceProviderName" : ConferenceProviderName,
+      "ConferenceProviderType" : ConferenceProviderType,
+      "IPDialIn" : (IPDialIn)?,
+      "PSTNDialIn" : (PSTNDialIn)?,
+      "MeetingSetting" : MeetingSetting,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreateConferenceProviderResponse = NamedTuple(
+      "ConferenceProviderArn" : (Arn)?
+    )
+
+    alias CreateContactRequest = NamedTuple(
+      "DisplayName" : (ContactName)?,
+      "FirstName" : ContactName,
+      "LastName" : (ContactName)?,
+      "PhoneNumber" : (RawPhoneNumber)?,
+      "PhoneNumbers" : (PhoneNumberList)?,
+      "SipAddresses" : (SipAddressList)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreateContactResponse = NamedTuple(
+      "ContactArn" : (Arn)?
+    )
+
+    alias CreateEndOfMeetingReminder = NamedTuple(
+      "ReminderAtMinutes" : EndOfMeetingReminderMinutesList,
+      "ReminderType" : EndOfMeetingReminderType,
+      "Enabled" : Boolean
+    )
+
+    alias CreateGatewayGroupRequest = NamedTuple(
+      "Name" : GatewayGroupName,
+      "Description" : (GatewayGroupDescription)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateGatewayGroupResponse = NamedTuple(
+      "GatewayGroupArn" : (Arn)?
+    )
+
+    alias CreateInstantBooking = NamedTuple(
+      "DurationInMinutes" : Minutes,
+      "Enabled" : Boolean
+    )
+
+    alias CreateMeetingRoomConfiguration = NamedTuple(
+      "RoomUtilizationMetricsEnabled" : (Boolean)?,
+      "EndOfMeetingReminder" : (CreateEndOfMeetingReminder)?,
+      "InstantBooking" : (CreateInstantBooking)?,
+      "RequireCheckIn" : (CreateRequireCheckIn)?
+    )
+
+    alias CreateNetworkProfileRequest = NamedTuple(
+      "NetworkProfileName" : NetworkProfileName,
+      "Description" : (NetworkProfileDescription)?,
+      "Ssid" : NetworkSsid,
+      "SecurityType" : NetworkSecurityType,
+      "EapMethod" : (NetworkEapMethod)?,
+      "CurrentPassword" : (CurrentWiFiPassword)?,
+      "NextPassword" : (NextWiFiPassword)?,
+      "CertificateAuthorityArn" : (Arn)?,
+      "TrustAnchors" : (TrustAnchorList)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateNetworkProfileResponse = NamedTuple(
+      "NetworkProfileArn" : (Arn)?
+    )
+
+    alias CreateProfileRequest = NamedTuple(
+      "ProfileName" : ProfileName,
+      "Timezone" : Timezone,
+      "Address" : Address,
+      "DistanceUnit" : DistanceUnit,
+      "TemperatureUnit" : TemperatureUnit,
+      "WakeWord" : WakeWord,
+      "Locale" : (DeviceLocale)?,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "SetupModeDisabled" : (Boolean)?,
+      "MaxVolumeLimit" : (MaxVolumeLimit)?,
+      "PSTNEnabled" : (Boolean)?,
+      "MeetingRoomConfiguration" : (CreateMeetingRoomConfiguration)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateProfileResponse = NamedTuple(
+      "ProfileArn" : (Arn)?
+    )
+
+    alias CreateRequireCheckIn = NamedTuple(
+      "ReleaseAfterMinutes" : Minutes,
+      "Enabled" : Boolean
+    )
+
+    alias CreateRoomRequest = NamedTuple(
+      "RoomName" : RoomName,
+      "Description" : (RoomDescription)?,
+      "ProfileArn" : (Arn)?,
+      "ProviderCalendarId" : (ProviderCalendarId)?,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateRoomResponse = NamedTuple(
+      "RoomArn" : (Arn)?
+    )
+
+    alias CreateSkillGroupRequest = NamedTuple(
+      "SkillGroupName" : SkillGroupName,
+      "Description" : (SkillGroupDescription)?,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateSkillGroupResponse = NamedTuple(
+      "SkillGroupArn" : (Arn)?
+    )
+
+    alias CreateUserRequest = NamedTuple(
+      "UserId" : user_UserId,
+      "FirstName" : (user_FirstName)?,
+      "LastName" : (user_LastName)?,
+      "Email" : (Email)?,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateUserResponse = NamedTuple(
+      "UserArn" : (Arn)?
+    )
+
+    alias CurrentWiFiPassword = String
+
+    alias CustomerS3BucketName = String
+
+    alias Date = String
+
+    alias DeleteAddressBookRequest = NamedTuple(
+      "AddressBookArn" : Arn
+    )
+
+    alias DeleteAddressBookResponse = NamedTuple(
+      
+    )
+
+    alias DeleteBusinessReportScheduleRequest = NamedTuple(
+      "ScheduleArn" : Arn
+    )
+
+    alias DeleteBusinessReportScheduleResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConferenceProviderRequest = NamedTuple(
+      "ConferenceProviderArn" : Arn
+    )
+
+    alias DeleteConferenceProviderResponse = NamedTuple(
+      
+    )
+
+    alias DeleteContactRequest = NamedTuple(
+      "ContactArn" : Arn
+    )
+
+    alias DeleteContactResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDeviceRequest = NamedTuple(
+      "DeviceArn" : Arn
+    )
+
+    alias DeleteDeviceResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDeviceUsageDataRequest = NamedTuple(
+      "DeviceArn" : Arn,
+      "DeviceUsageType" : DeviceUsageType
+    )
+
+    alias DeleteDeviceUsageDataResponse = NamedTuple(
+      
+    )
+
+    alias DeleteGatewayGroupRequest = NamedTuple(
+      "GatewayGroupArn" : Arn
+    )
+
+    alias DeleteGatewayGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteNetworkProfileRequest = NamedTuple(
+      "NetworkProfileArn" : Arn
+    )
+
+    alias DeleteNetworkProfileResponse = NamedTuple(
+      
+    )
+
+    alias DeleteProfileRequest = NamedTuple(
+      "ProfileArn" : (Arn)?
+    )
+
+    alias DeleteProfileResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRoomRequest = NamedTuple(
+      "RoomArn" : (Arn)?
+    )
+
+    alias DeleteRoomResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRoomSkillParameterRequest = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "SkillId" : SkillId,
+      "ParameterKey" : RoomSkillParameterKey
+    )
+
+    alias DeleteRoomSkillParameterResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSkillAuthorizationRequest = NamedTuple(
+      "SkillId" : SkillId,
+      "RoomArn" : (Arn)?
+    )
+
+    alias DeleteSkillAuthorizationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSkillGroupRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?
+    )
+
+    alias DeleteSkillGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "UserArn" : (Arn)?,
+      "EnrollmentId" : EnrollmentId
+    )
+
+    alias DeleteUserResponse = NamedTuple(
+      
+    )
+
+    alias DeveloperInfo = NamedTuple(
+      "DeveloperName" : (DeveloperName)?,
+      "PrivacyPolicy" : (PrivacyPolicy)?,
+      "Email" : (Email)?,
+      "Url" : (Url)?
+    )
+
+    alias DeveloperName = String
+
+    alias Device = NamedTuple(
+      "DeviceArn" : (Arn)?,
+      "DeviceSerialNumber" : (DeviceSerialNumber)?,
+      "DeviceType" : (DeviceType)?,
+      "DeviceName" : (DeviceName)?,
+      "SoftwareVersion" : (SoftwareVersion)?,
+      "MacAddress" : (MacAddress)?,
+      "RoomArn" : (Arn)?,
+      "DeviceStatus" : (DeviceStatus)?,
+      "DeviceStatusInfo" : (DeviceStatusInfo)?,
+      "NetworkProfileInfo" : (DeviceNetworkProfileInfo)?
+    )
+
+    alias DeviceData = NamedTuple(
+      "DeviceArn" : (Arn)?,
+      "DeviceSerialNumber" : (DeviceSerialNumber)?,
+      "DeviceType" : (DeviceType)?,
+      "DeviceName" : (DeviceName)?,
+      "SoftwareVersion" : (SoftwareVersion)?,
+      "MacAddress" : (MacAddress)?,
+      "DeviceStatus" : (DeviceStatus)?,
+      "NetworkProfileArn" : (Arn)?,
+      "NetworkProfileName" : (NetworkProfileName)?,
+      "RoomArn" : (Arn)?,
+      "RoomName" : (DeviceRoomName)?,
+      "DeviceStatusInfo" : (DeviceStatusInfo)?,
+      "CreatedTime" : (DeviceDataCreatedTime)?
+    )
+
+    alias DeviceDataCreatedTime = String | UInt64 | Time
+
+    alias DeviceDataList = Array(DeviceData)
+
+    alias DeviceEvent = NamedTuple(
+      "Type" : (DeviceEventType)?,
+      "Value" : (DeviceEventValue)?,
+      "Timestamp" : (DeviceEventTime)?
+    )
+
+    alias DeviceEventList = Array(DeviceEvent)
+
+    alias DeviceEventTime = String | UInt64 | Time
+
+    alias DeviceEventType = String
+
+    alias DeviceEventValue = String
+
+    alias DeviceLocale = String
+
+    alias DeviceName = String
+
+    alias DeviceNetworkProfileInfo = NamedTuple(
+      "NetworkProfileArn" : (Arn)?,
+      "CertificateArn" : (Arn)?,
+      "CertificateExpirationTime" : (CertificateTime)?
+    )
+
+    alias DeviceNotRegisteredException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DeviceRoomName = String
+
+    alias DeviceSerialNumber = String
+
+    alias DeviceSerialNumberForAVS = String
+
+    alias DeviceStatus = String
+
+    alias DeviceStatusDetail = NamedTuple(
+      "Feature" : (Feature)?,
+      "Code" : (DeviceStatusDetailCode)?
+    )
+
+    alias DeviceStatusDetailCode = String
+
+    alias DeviceStatusDetails = Array(DeviceStatusDetail)
+
+    alias DeviceStatusInfo = NamedTuple(
+      "DeviceStatusDetails" : (DeviceStatusDetails)?,
+      "ConnectionStatus" : (ConnectionStatus)?,
+      "ConnectionStatusUpdatedTime" : (ConnectionStatusUpdatedTime)?
+    )
+
+    alias DeviceType = String
+
+    alias DeviceUsageType = String
+
+    alias DisassociateContactFromAddressBookRequest = NamedTuple(
+      "ContactArn" : Arn,
+      "AddressBookArn" : Arn
+    )
+
+    alias DisassociateContactFromAddressBookResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateDeviceFromRoomRequest = NamedTuple(
+      "DeviceArn" : (Arn)?
+    )
+
+    alias DisassociateDeviceFromRoomResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateSkillFromSkillGroupRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "SkillId" : SkillId
+    )
+
+    alias DisassociateSkillFromSkillGroupResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateSkillFromUsersRequest = NamedTuple(
+      "SkillId" : SkillId
+    )
+
+    alias DisassociateSkillFromUsersResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateSkillGroupFromRoomRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "RoomArn" : (Arn)?
+    )
+
+    alias DisassociateSkillGroupFromRoomResponse = NamedTuple(
+      
+    )
+
+    alias DistanceUnit = String
+
+    alias Email = String
+
+    alias EnablementType = String
+
+    alias EnablementTypeFilter = String
+
+    alias EndOfMeetingReminder = NamedTuple(
+      "ReminderAtMinutes" : (EndOfMeetingReminderMinutesList)?,
+      "ReminderType" : (EndOfMeetingReminderType)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias EndOfMeetingReminderMinutesList = Array(Minutes)
+
+    alias EndOfMeetingReminderType = String
+
+    alias EndUserLicenseAgreement = String
+
+    alias Endpoint = String
+
+    alias EnrollmentId = String
+
+    alias EnrollmentStatus = String
+
+    alias ErrorMessage = String
+
+    alias Feature = String
+
+    alias Features = Array(Feature)
+
+    alias Filter = NamedTuple(
+      "Key" : FilterKey,
+      "Values" : FilterValueList
+    )
+
+    alias FilterKey = String
+
+    alias FilterList = Array(Filter)
+
+    alias FilterValue = String
+
+    alias FilterValueList = Array(FilterValue)
+
+    alias ForgetSmartHomeAppliancesRequest = NamedTuple(
+      "RoomArn" : Arn
+    )
+
+    alias ForgetSmartHomeAppliancesResponse = NamedTuple(
+      
+    )
+
+    alias Gateway = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (GatewayName)?,
+      "Description" : (GatewayDescription)?,
+      "GatewayGroupArn" : (Arn)?,
+      "SoftwareVersion" : (GatewayVersion)?
+    )
+
+    alias GatewayDescription = String
+
+    alias GatewayGroup = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (GatewayGroupName)?,
+      "Description" : (GatewayGroupDescription)?
+    )
+
+    alias GatewayGroupDescription = String
+
+    alias GatewayGroupName = String
+
+    alias GatewayGroupSummaries = Array(GatewayGroupSummary)
+
+    alias GatewayGroupSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (GatewayGroupName)?,
+      "Description" : (GatewayGroupDescription)?
+    )
+
+    alias GatewayName = String
+
+    alias GatewaySummaries = Array(GatewaySummary)
+
+    alias GatewaySummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (GatewayName)?,
+      "Description" : (GatewayDescription)?,
+      "GatewayGroupArn" : (Arn)?,
+      "SoftwareVersion" : (GatewayVersion)?
+    )
+
+    alias GatewayVersion = String
+
+    alias GenericKeyword = String
+
+    alias GenericKeywords = Array(GenericKeyword)
+
+    alias GetAddressBookRequest = NamedTuple(
+      "AddressBookArn" : Arn
+    )
+
+    alias GetAddressBookResponse = NamedTuple(
+      "AddressBook" : (AddressBook)?
+    )
+
+    alias GetConferencePreferenceRequest = NamedTuple(
+      
+    )
+
+    alias GetConferencePreferenceResponse = NamedTuple(
+      "Preference" : (ConferencePreference)?
+    )
+
+    alias GetConferenceProviderRequest = NamedTuple(
+      "ConferenceProviderArn" : Arn
+    )
+
+    alias GetConferenceProviderResponse = NamedTuple(
+      "ConferenceProvider" : (ConferenceProvider)?
+    )
+
+    alias GetContactRequest = NamedTuple(
+      "ContactArn" : Arn
+    )
+
+    alias GetContactResponse = NamedTuple(
+      "Contact" : (Contact)?
+    )
+
+    alias GetDeviceRequest = NamedTuple(
+      "DeviceArn" : (Arn)?
+    )
+
+    alias GetDeviceResponse = NamedTuple(
+      "Device" : (Device)?
+    )
+
+    alias GetGatewayGroupRequest = NamedTuple(
+      "GatewayGroupArn" : Arn
+    )
+
+    alias GetGatewayGroupResponse = NamedTuple(
+      "GatewayGroup" : (GatewayGroup)?
+    )
+
+    alias GetGatewayRequest = NamedTuple(
+      "GatewayArn" : Arn
+    )
+
+    alias GetGatewayResponse = NamedTuple(
+      "Gateway" : (Gateway)?
+    )
+
+    alias GetInvitationConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias GetInvitationConfigurationResponse = NamedTuple(
+      "OrganizationName" : (OrganizationName)?,
+      "ContactEmail" : (Email)?,
+      "PrivateSkillIds" : (ShortSkillIdList)?
+    )
+
+    alias GetNetworkProfileRequest = NamedTuple(
+      "NetworkProfileArn" : Arn
+    )
+
+    alias GetNetworkProfileResponse = NamedTuple(
+      "NetworkProfile" : (NetworkProfile)?
+    )
+
+    alias GetProfileRequest = NamedTuple(
+      "ProfileArn" : (Arn)?
+    )
+
+    alias GetProfileResponse = NamedTuple(
+      "Profile" : (Profile)?
+    )
+
+    alias GetRoomRequest = NamedTuple(
+      "RoomArn" : (Arn)?
+    )
+
+    alias GetRoomResponse = NamedTuple(
+      "Room" : (Room)?
+    )
+
+    alias GetRoomSkillParameterRequest = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "SkillId" : SkillId,
+      "ParameterKey" : RoomSkillParameterKey
+    )
+
+    alias GetRoomSkillParameterResponse = NamedTuple(
+      "RoomSkillParameter" : (RoomSkillParameter)?
+    )
+
+    alias GetSkillGroupRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?
+    )
+
+    alias GetSkillGroupResponse = NamedTuple(
+      "SkillGroup" : (SkillGroup)?
+    )
+
+    alias IPDialIn = NamedTuple(
+      "Endpoint" : Endpoint,
+      "CommsProtocol" : CommsProtocol
+    )
+
+    alias IconUrl = String
+
+    alias InstantBooking = NamedTuple(
+      "DurationInMinutes" : (Minutes)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias InvalidCertificateAuthorityException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidDeviceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidSecretsManagerResourceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidServiceLinkedRoleStateException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidUserStatusException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvocationPhrase = String
+
+    alias Key = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListBusinessReportSchedulesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListBusinessReportSchedulesResponse = NamedTuple(
+      "BusinessReportSchedules" : (BusinessReportScheduleList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListConferenceProvidersRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListConferenceProvidersResponse = NamedTuple(
+      "ConferenceProviders" : (ConferenceProvidersList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDeviceEventsRequest = NamedTuple(
+      "DeviceArn" : Arn,
+      "EventType" : (DeviceEventType)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDeviceEventsResponse = NamedTuple(
+      "DeviceEvents" : (DeviceEventList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListGatewayGroupsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListGatewayGroupsResponse = NamedTuple(
+      "GatewayGroups" : (GatewayGroupSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListGatewaysRequest = NamedTuple(
+      "GatewayGroupArn" : (Arn)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListGatewaysResponse = NamedTuple(
+      "Gateways" : (GatewaySummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSkillsRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "EnablementType" : (EnablementTypeFilter)?,
+      "SkillType" : (SkillTypeFilter)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (SkillListMaxResults)?
+    )
+
+    alias ListSkillsResponse = NamedTuple(
+      "SkillSummaries" : (SkillSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSkillsStoreCategoriesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListSkillsStoreCategoriesResponse = NamedTuple(
+      "CategoryList" : (CategoryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSkillsStoreSkillsByCategoryRequest = NamedTuple(
+      "CategoryId" : CategoryId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (SkillListMaxResults)?
+    )
+
+    alias ListSkillsStoreSkillsByCategoryResponse = NamedTuple(
+      "SkillsStoreSkills" : (SkillsStoreSkillList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSmartHomeAppliancesRequest = NamedTuple(
+      "RoomArn" : Arn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSmartHomeAppliancesResponse = NamedTuple(
+      "SmartHomeAppliances" : (SmartHomeApplianceList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsRequest = NamedTuple(
+      "Arn" : Arn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTagsResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Locale = String
+
+    alias MacAddress = String
+
+    alias MaxResults = Int32
+
+    alias MaxVolumeLimit = Int32
+
+    alias MeetingRoomConfiguration = NamedTuple(
+      "RoomUtilizationMetricsEnabled" : (Boolean)?,
+      "EndOfMeetingReminder" : (EndOfMeetingReminder)?,
+      "InstantBooking" : (InstantBooking)?,
+      "RequireCheckIn" : (RequireCheckIn)?
+    )
+
+    alias MeetingSetting = NamedTuple(
+      "RequirePin" : RequirePin
+    )
+
+    alias Minutes = Int32
+
+    alias NameInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NetworkEapMethod = String
+
+    alias NetworkProfile = NamedTuple(
+      "NetworkProfileArn" : (Arn)?,
+      "NetworkProfileName" : (NetworkProfileName)?,
+      "Description" : (NetworkProfileDescription)?,
+      "Ssid" : (NetworkSsid)?,
+      "SecurityType" : (NetworkSecurityType)?,
+      "EapMethod" : (NetworkEapMethod)?,
+      "CurrentPassword" : (CurrentWiFiPassword)?,
+      "NextPassword" : (NextWiFiPassword)?,
+      "CertificateAuthorityArn" : (Arn)?,
+      "TrustAnchors" : (TrustAnchorList)?
+    )
+
+    alias NetworkProfileData = NamedTuple(
+      "NetworkProfileArn" : (Arn)?,
+      "NetworkProfileName" : (NetworkProfileName)?,
+      "Description" : (NetworkProfileDescription)?,
+      "Ssid" : (NetworkSsid)?,
+      "SecurityType" : (NetworkSecurityType)?,
+      "EapMethod" : (NetworkEapMethod)?,
+      "CertificateAuthorityArn" : (Arn)?
+    )
+
+    alias NetworkProfileDataList = Array(NetworkProfileData)
+
+    alias NetworkProfileDescription = String
+
+    alias NetworkProfileName = String
+
+    alias NetworkSecurityType = String
+
+    alias NetworkSsid = String
+
+    alias NewInThisVersionBulletPoints = Array(BulletPoint)
+
+    alias NextToken = String
+
+    alias NextWiFiPassword = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias OneClickIdDelay = String
+
+    alias OneClickPinDelay = String
+
+    alias OrganizationName = String
+
+    alias OutboundPhoneNumber = String
+
+    alias PSTNDialIn = NamedTuple(
+      "CountryCode" : CountryCode,
+      "PhoneNumber" : OutboundPhoneNumber,
+      "OneClickIdDelay" : OneClickIdDelay,
+      "OneClickPinDelay" : OneClickPinDelay
+    )
+
+    alias PhoneNumber = NamedTuple(
+      "Number" : RawPhoneNumber,
+      "Type" : PhoneNumberType
+    )
+
+    alias PhoneNumberList = Array(PhoneNumber)
+
+    alias PhoneNumberType = String
+
+    alias PrivacyPolicy = String
+
+    alias ProductDescription = String
+
+    alias ProductId = String
+
+    alias Profile = NamedTuple(
+      "ProfileArn" : (Arn)?,
+      "ProfileName" : (ProfileName)?,
+      "IsDefault" : (Boolean)?,
+      "Address" : (Address)?,
+      "Timezone" : (Timezone)?,
+      "DistanceUnit" : (DistanceUnit)?,
+      "TemperatureUnit" : (TemperatureUnit)?,
+      "WakeWord" : (WakeWord)?,
+      "Locale" : (DeviceLocale)?,
+      "SetupModeDisabled" : (Boolean)?,
+      "MaxVolumeLimit" : (MaxVolumeLimit)?,
+      "PSTNEnabled" : (Boolean)?,
+      "AddressBookArn" : (Arn)?,
+      "MeetingRoomConfiguration" : (MeetingRoomConfiguration)?
+    )
+
+    alias ProfileData = NamedTuple(
+      "ProfileArn" : (Arn)?,
+      "ProfileName" : (ProfileName)?,
+      "IsDefault" : (Boolean)?,
+      "Address" : (Address)?,
+      "Timezone" : (Timezone)?,
+      "DistanceUnit" : (DistanceUnit)?,
+      "TemperatureUnit" : (TemperatureUnit)?,
+      "WakeWord" : (WakeWord)?,
+      "Locale" : (DeviceLocale)?
+    )
+
+    alias ProfileDataList = Array(ProfileData)
+
+    alias ProfileName = String
+
+    alias ProviderCalendarId = String
+
+    alias PutConferencePreferenceRequest = NamedTuple(
+      "ConferencePreference" : ConferencePreference
+    )
+
+    alias PutConferencePreferenceResponse = NamedTuple(
+      
+    )
+
+    alias PutInvitationConfigurationRequest = NamedTuple(
+      "OrganizationName" : OrganizationName,
+      "ContactEmail" : (Email)?,
+      "PrivateSkillIds" : (ShortSkillIdList)?
+    )
+
+    alias PutInvitationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias PutRoomSkillParameterRequest = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "SkillId" : SkillId,
+      "RoomSkillParameter" : RoomSkillParameter
+    )
+
+    alias PutRoomSkillParameterResponse = NamedTuple(
+      
+    )
+
+    alias PutSkillAuthorizationRequest = NamedTuple(
+      "AuthorizationResult" : AuthorizationResult,
+      "SkillId" : SkillId,
+      "RoomArn" : (Arn)?
+    )
+
+    alias PutSkillAuthorizationResponse = NamedTuple(
+      
+    )
+
+    alias RawPhoneNumber = String
+
+    alias RegisterAVSDeviceRequest = NamedTuple(
+      "ClientId" : ClientId,
+      "UserCode" : UserCode,
+      "ProductId" : ProductId,
+      "DeviceSerialNumber" : (DeviceSerialNumberForAVS)?,
+      "AmazonId" : AmazonId,
+      "RoomArn" : (Arn)?
+    )
+
+    alias RegisterAVSDeviceResponse = NamedTuple(
+      "DeviceArn" : (Arn)?
+    )
+
+    alias RejectSkillRequest = NamedTuple(
+      "SkillId" : SkillId
+    )
+
+    alias RejectSkillResponse = NamedTuple(
+      
+    )
+
+    alias ReleaseDate = String
+
+    alias RequireCheckIn = NamedTuple(
+      "ReleaseAfterMinutes" : (Minutes)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias RequirePin = String
+
+    alias ResolveRoomRequest = NamedTuple(
+      "UserId" : UserId,
+      "SkillId" : SkillId
+    )
+
+    alias ResolveRoomResponse = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "RoomName" : (RoomName)?,
+      "RoomSkillParameters" : (RoomSkillParameters)?
+    )
+
+    alias ResourceAssociatedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias ReviewKey = String
+
+    alias ReviewValue = String
+
+    alias Reviews = Hash(ReviewKey,ReviewValue)
+
+    alias RevokeInvitationRequest = NamedTuple(
+      "UserArn" : (Arn)?,
+      "EnrollmentId" : (EnrollmentId)?
+    )
+
+    alias RevokeInvitationResponse = NamedTuple(
+      
+    )
+
+    alias Room = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "RoomName" : (RoomName)?,
+      "Description" : (RoomDescription)?,
+      "ProviderCalendarId" : (ProviderCalendarId)?,
+      "ProfileArn" : (Arn)?
+    )
+
+    alias RoomData = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "RoomName" : (RoomName)?,
+      "Description" : (RoomDescription)?,
+      "ProviderCalendarId" : (ProviderCalendarId)?,
+      "ProfileArn" : (Arn)?,
+      "ProfileName" : (ProfileName)?
+    )
+
+    alias RoomDataList = Array(RoomData)
+
+    alias RoomDescription = String
+
+    alias RoomName = String
+
+    alias RoomSkillParameter = NamedTuple(
+      "ParameterKey" : RoomSkillParameterKey,
+      "ParameterValue" : RoomSkillParameterValue
+    )
+
+    alias RoomSkillParameterKey = String
+
+    alias RoomSkillParameterValue = String
+
+    alias RoomSkillParameters = Array(RoomSkillParameter)
+
+    alias S3KeyPrefix = String
+
+    alias SampleUtterances = Array(Utterance)
+
+    alias SearchAddressBooksRequest = NamedTuple(
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias SearchAddressBooksResponse = NamedTuple(
+      "AddressBooks" : (AddressBookDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchContactsRequest = NamedTuple(
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias SearchContactsResponse = NamedTuple(
+      "Contacts" : (ContactDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchDevicesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?
+    )
+
+    alias SearchDevicesResponse = NamedTuple(
+      "Devices" : (DeviceDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchNetworkProfilesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?
+    )
+
+    alias SearchNetworkProfilesResponse = NamedTuple(
+      "NetworkProfiles" : (NetworkProfileDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchProfilesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?
+    )
+
+    alias SearchProfilesResponse = NamedTuple(
+      "Profiles" : (ProfileDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchRoomsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?
+    )
+
+    alias SearchRoomsResponse = NamedTuple(
+      "Rooms" : (RoomDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchSkillGroupsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?
+    )
+
+    alias SearchSkillGroupsResponse = NamedTuple(
+      "SkillGroups" : (SkillGroupDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SearchUsersRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (FilterList)?,
+      "SortCriteria" : (SortList)?
+    )
+
+    alias SearchUsersResponse = NamedTuple(
+      "Users" : (UserDataList)?,
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (TotalCount)?
+    )
+
+    alias SendAnnouncementRequest = NamedTuple(
+      "RoomFilters" : FilterList,
+      "Content" : Content,
+      "TimeToLiveInSeconds" : (TimeToLiveInSeconds)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias SendAnnouncementResponse = NamedTuple(
+      "AnnouncementArn" : (Arn)?
+    )
+
+    alias SendInvitationRequest = NamedTuple(
+      "UserArn" : (Arn)?
+    )
+
+    alias SendInvitationResponse = NamedTuple(
+      
+    )
+
+    alias ShortDescription = String
+
+    alias ShortSkillIdList = Array(SkillId)
+
+    alias SipAddress = NamedTuple(
+      "Uri" : SipUri,
+      "Type" : SipType
+    )
+
+    alias SipAddressList = Array(SipAddress)
+
+    alias SipType = String
+
+    alias SipUri = String
+
+    alias SkillDetails = NamedTuple(
+      "ProductDescription" : (ProductDescription)?,
+      "InvocationPhrase" : (InvocationPhrase)?,
+      "ReleaseDate" : (ReleaseDate)?,
+      "EndUserLicenseAgreement" : (EndUserLicenseAgreement)?,
+      "GenericKeywords" : (GenericKeywords)?,
+      "BulletPoints" : (BulletPoints)?,
+      "NewInThisVersionBulletPoints" : (NewInThisVersionBulletPoints)?,
+      "SkillTypes" : (SkillTypes)?,
+      "Reviews" : (Reviews)?,
+      "DeveloperInfo" : (DeveloperInfo)?
+    )
+
+    alias SkillGroup = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "SkillGroupName" : (SkillGroupName)?,
+      "Description" : (SkillGroupDescription)?
+    )
+
+    alias SkillGroupData = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "SkillGroupName" : (SkillGroupName)?,
+      "Description" : (SkillGroupDescription)?
+    )
+
+    alias SkillGroupDataList = Array(SkillGroupData)
+
+    alias SkillGroupDescription = String
+
+    alias SkillGroupName = String
+
+    alias SkillId = String
+
+    alias SkillListMaxResults = Int32
+
+    alias SkillName = String
+
+    alias SkillNotLinkedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SkillStoreType = String
+
+    alias SkillSummary = NamedTuple(
+      "SkillId" : (SkillId)?,
+      "SkillName" : (SkillName)?,
+      "SupportsLinking" : (boolean)?,
+      "EnablementType" : (EnablementType)?,
+      "SkillType" : (SkillType)?
+    )
+
+    alias SkillSummaryList = Array(SkillSummary)
+
+    alias SkillType = String
+
+    alias SkillTypeFilter = String
+
+    alias SkillTypes = Array(SkillStoreType)
+
+    alias SkillsStoreSkill = NamedTuple(
+      "SkillId" : (SkillId)?,
+      "SkillName" : (SkillName)?,
+      "ShortDescription" : (ShortDescription)?,
+      "IconUrl" : (IconUrl)?,
+      "SampleUtterances" : (SampleUtterances)?,
+      "SkillDetails" : (SkillDetails)?,
+      "SupportsLinking" : (boolean)?
+    )
+
+    alias SkillsStoreSkillList = Array(SkillsStoreSkill)
+
+    alias SmartHomeAppliance = NamedTuple(
+      "FriendlyName" : (ApplianceFriendlyName)?,
+      "Description" : (ApplianceDescription)?,
+      "ManufacturerName" : (ApplianceManufacturerName)?
+    )
+
+    alias SmartHomeApplianceList = Array(SmartHomeAppliance)
+
+    alias SoftwareVersion = String
+
+    alias Sort = NamedTuple(
+      "Key" : SortKey,
+      "Value" : SortValue
+    )
+
+    alias SortKey = String
+
+    alias SortList = Array(Sort)
+
+    alias SortValue = String
+
+    alias Ssml = NamedTuple(
+      "Locale" : Locale,
+      "Value" : SsmlValue
+    )
+
+    alias SsmlList = Array(Ssml)
+
+    alias SsmlValue = String
+
+    alias StartDeviceSyncRequest = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "DeviceArn" : (Arn)?,
+      "Features" : Features
+    )
+
+    alias StartDeviceSyncResponse = NamedTuple(
+      
+    )
+
+    alias StartSmartHomeApplianceDiscoveryRequest = NamedTuple(
+      "RoomArn" : Arn
+    )
+
+    alias StartSmartHomeApplianceDiscoveryResponse = NamedTuple(
+      
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "Arn" : Arn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TemperatureUnit = String
+
+    alias Text = NamedTuple(
+      "Locale" : Locale,
+      "Value" : TextValue
+    )
+
+    alias TextList = Array(Text)
+
+    alias TextValue = String
+
+    alias TimeToLiveInSeconds = Int32
+
+    alias Timezone = String
+
+    alias TotalCount = Int32
+
+    alias TrustAnchor = String
+
+    alias TrustAnchorList = Array(TrustAnchor)
+
+    alias UnauthorizedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "Arn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAddressBookRequest = NamedTuple(
+      "AddressBookArn" : Arn,
+      "Name" : (AddressBookName)?,
+      "Description" : (AddressBookDescription)?
+    )
+
+    alias UpdateAddressBookResponse = NamedTuple(
+      
+    )
+
+    alias UpdateBusinessReportScheduleRequest = NamedTuple(
+      "ScheduleArn" : Arn,
+      "S3BucketName" : (CustomerS3BucketName)?,
+      "S3KeyPrefix" : (S3KeyPrefix)?,
+      "Format" : (BusinessReportFormat)?,
+      "ScheduleName" : (BusinessReportScheduleName)?,
+      "Recurrence" : (BusinessReportRecurrence)?
+    )
+
+    alias UpdateBusinessReportScheduleResponse = NamedTuple(
+      
+    )
+
+    alias UpdateConferenceProviderRequest = NamedTuple(
+      "ConferenceProviderArn" : Arn,
+      "ConferenceProviderType" : ConferenceProviderType,
+      "IPDialIn" : (IPDialIn)?,
+      "PSTNDialIn" : (PSTNDialIn)?,
+      "MeetingSetting" : MeetingSetting
+    )
+
+    alias UpdateConferenceProviderResponse = NamedTuple(
+      
+    )
+
+    alias UpdateContactRequest = NamedTuple(
+      "ContactArn" : Arn,
+      "DisplayName" : (ContactName)?,
+      "FirstName" : (ContactName)?,
+      "LastName" : (ContactName)?,
+      "PhoneNumber" : (RawPhoneNumber)?,
+      "PhoneNumbers" : (PhoneNumberList)?,
+      "SipAddresses" : (SipAddressList)?
+    )
+
+    alias UpdateContactResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDeviceRequest = NamedTuple(
+      "DeviceArn" : (Arn)?,
+      "DeviceName" : (DeviceName)?
+    )
+
+    alias UpdateDeviceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateEndOfMeetingReminder = NamedTuple(
+      "ReminderAtMinutes" : (EndOfMeetingReminderMinutesList)?,
+      "ReminderType" : (EndOfMeetingReminderType)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias UpdateGatewayGroupRequest = NamedTuple(
+      "GatewayGroupArn" : Arn,
+      "Name" : (GatewayGroupName)?,
+      "Description" : (GatewayGroupDescription)?
+    )
+
+    alias UpdateGatewayGroupResponse = NamedTuple(
+      
+    )
+
+    alias UpdateGatewayRequest = NamedTuple(
+      "GatewayArn" : Arn,
+      "Name" : (GatewayName)?,
+      "Description" : (GatewayDescription)?,
+      "SoftwareVersion" : (GatewayVersion)?
+    )
+
+    alias UpdateGatewayResponse = NamedTuple(
+      
+    )
+
+    alias UpdateInstantBooking = NamedTuple(
+      "DurationInMinutes" : (Minutes)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias UpdateMeetingRoomConfiguration = NamedTuple(
+      "RoomUtilizationMetricsEnabled" : (Boolean)?,
+      "EndOfMeetingReminder" : (UpdateEndOfMeetingReminder)?,
+      "InstantBooking" : (UpdateInstantBooking)?,
+      "RequireCheckIn" : (UpdateRequireCheckIn)?
+    )
+
+    alias UpdateNetworkProfileRequest = NamedTuple(
+      "NetworkProfileArn" : Arn,
+      "NetworkProfileName" : (NetworkProfileName)?,
+      "Description" : (NetworkProfileDescription)?,
+      "CurrentPassword" : (CurrentWiFiPassword)?,
+      "NextPassword" : (NextWiFiPassword)?,
+      "CertificateAuthorityArn" : (Arn)?,
+      "TrustAnchors" : (TrustAnchorList)?
+    )
+
+    alias UpdateNetworkProfileResponse = NamedTuple(
+      
+    )
+
+    alias UpdateProfileRequest = NamedTuple(
+      "ProfileArn" : (Arn)?,
+      "ProfileName" : (ProfileName)?,
+      "IsDefault" : (Boolean)?,
+      "Timezone" : (Timezone)?,
+      "Address" : (Address)?,
+      "DistanceUnit" : (DistanceUnit)?,
+      "TemperatureUnit" : (TemperatureUnit)?,
+      "WakeWord" : (WakeWord)?,
+      "Locale" : (DeviceLocale)?,
+      "SetupModeDisabled" : (Boolean)?,
+      "MaxVolumeLimit" : (MaxVolumeLimit)?,
+      "PSTNEnabled" : (Boolean)?,
+      "MeetingRoomConfiguration" : (UpdateMeetingRoomConfiguration)?
+    )
+
+    alias UpdateProfileResponse = NamedTuple(
+      
+    )
+
+    alias UpdateRequireCheckIn = NamedTuple(
+      "ReleaseAfterMinutes" : (Minutes)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias UpdateRoomRequest = NamedTuple(
+      "RoomArn" : (Arn)?,
+      "RoomName" : (RoomName)?,
+      "Description" : (RoomDescription)?,
+      "ProviderCalendarId" : (ProviderCalendarId)?,
+      "ProfileArn" : (Arn)?
+    )
+
+    alias UpdateRoomResponse = NamedTuple(
+      
+    )
+
+    alias UpdateSkillGroupRequest = NamedTuple(
+      "SkillGroupArn" : (Arn)?,
+      "SkillGroupName" : (SkillGroupName)?,
+      "Description" : (SkillGroupDescription)?
+    )
+
+    alias UpdateSkillGroupResponse = NamedTuple(
+      
+    )
+
+    alias Url = String
+
+    alias UserCode = String
+
+    alias UserData = NamedTuple(
+      "UserArn" : (Arn)?,
+      "FirstName" : (user_FirstName)?,
+      "LastName" : (user_LastName)?,
+      "Email" : (Email)?,
+      "EnrollmentStatus" : (EnrollmentStatus)?,
+      "EnrollmentId" : (EnrollmentId)?
+    )
+
+    alias UserDataList = Array(UserData)
+
+    alias UserId = String
+
+    alias Utterance = String
+
+    alias Value = String
+
+    alias WakeWord = String
+
+    alias boolean = Bool
+
+    alias user_FirstName = String
+
+    alias user_LastName = String
+
+    alias user_UserId = String
   end
 end

@@ -3737,5 +3737,717 @@ module Aws::FSx
       include Aws::Structure
     end
 
+    alias AWSAccountId = String
+
+    alias ActiveDirectoryBackupAttributes = NamedTuple(
+      "DomainName" : (ActiveDirectoryFullyQualifiedName)?,
+      "ActiveDirectoryId" : (DirectoryId)?
+    )
+
+    alias ActiveDirectoryError = NamedTuple(
+      "ActiveDirectoryId" : DirectoryId,
+      "Type" : (ActiveDirectoryErrorType)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ActiveDirectoryErrorType = String
+
+    alias ActiveDirectoryFullyQualifiedName = String
+
+    alias AdministrativeAction = NamedTuple(
+      "AdministrativeActionType" : (AdministrativeActionType)?,
+      "ProgressPercent" : (ProgressPercent)?,
+      "RequestTime" : (RequestTime)?,
+      "Status" : (Status)?,
+      "TargetFileSystemValues" : (FileSystem)?,
+      "FailureDetails" : (AdministrativeActionFailureDetails)?
+    )
+
+    alias AdministrativeActionFailureDetails = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AdministrativeActionType = String
+
+    alias AdministrativeActions = Array(AdministrativeAction)
+
+    alias Alias = NamedTuple(
+      "Name" : (AlternateDNSName)?,
+      "Lifecycle" : (AliasLifecycle)?
+    )
+
+    alias AliasLifecycle = String
+
+    alias Aliases = Array(Alias)
+
+    alias AlternateDNSName = String
+
+    alias AlternateDNSNames = Array(AlternateDNSName)
+
+    alias ArchivePath = String
+
+    alias AssociateFileSystemAliasesRequest = NamedTuple(
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "FileSystemId" : FileSystemId,
+      "Aliases" : AlternateDNSNames
+    )
+
+    alias AssociateFileSystemAliasesResponse = NamedTuple(
+      "Aliases" : (Aliases)?
+    )
+
+    alias AutoImportPolicyType = String
+
+    alias AutomaticBackupRetentionDays = Int32
+
+    alias Backup = NamedTuple(
+      "BackupId" : BackupId,
+      "Lifecycle" : BackupLifecycle,
+      "FailureDetails" : (BackupFailureDetails)?,
+      "Type" : BackupType,
+      "ProgressPercent" : (ProgressPercent)?,
+      "CreationTime" : CreationTime,
+      "KmsKeyId" : (KmsKeyId)?,
+      "ResourceARN" : (ResourceARN)?,
+      "Tags" : (Tags)?,
+      "FileSystem" : FileSystem,
+      "DirectoryInformation" : (ActiveDirectoryBackupAttributes)?
+    )
+
+    alias BackupFailureDetails = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias BackupId = String
+
+    alias BackupIds = Array(BackupId)
+
+    alias BackupInProgress = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias BackupLifecycle = String
+
+    alias BackupNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias BackupRestoring = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "FileSystemId" : (FileSystemId)?
+    )
+
+    alias BackupType = String
+
+    alias Backups = Array(Backup)
+
+    alias BadRequest = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CancelDataRepositoryTaskRequest = NamedTuple(
+      "TaskId" : TaskId
+    )
+
+    alias CancelDataRepositoryTaskResponse = NamedTuple(
+      "Lifecycle" : (DataRepositoryTaskLifecycle)?,
+      "TaskId" : (TaskId)?
+    )
+
+    alias ClientRequestToken = String
+
+    alias CompletionReport = NamedTuple(
+      "Enabled" : Flag,
+      "Path" : (ArchivePath)?,
+      "Format" : (ReportFormat)?,
+      "Scope" : (ReportScope)?
+    )
+
+    alias CreateBackupRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateBackupResponse = NamedTuple(
+      "Backup" : (Backup)?
+    )
+
+    alias CreateDataRepositoryTaskRequest = NamedTuple(
+      "Type" : DataRepositoryTaskType,
+      "Paths" : (DataRepositoryTaskPaths)?,
+      "FileSystemId" : FileSystemId,
+      "Report" : CompletionReport,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateDataRepositoryTaskResponse = NamedTuple(
+      "DataRepositoryTask" : (DataRepositoryTask)?
+    )
+
+    alias CreateFileSystemFromBackupRequest = NamedTuple(
+      "BackupId" : BackupId,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "SubnetIds" : SubnetIds,
+      "SecurityGroupIds" : (SecurityGroupIds)?,
+      "Tags" : (Tags)?,
+      "WindowsConfiguration" : (CreateFileSystemWindowsConfiguration)?,
+      "LustreConfiguration" : (CreateFileSystemLustreConfiguration)?,
+      "StorageType" : (StorageType)?
+    )
+
+    alias CreateFileSystemFromBackupResponse = NamedTuple(
+      "FileSystem" : (FileSystem)?
+    )
+
+    alias CreateFileSystemLustreConfiguration = NamedTuple(
+      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
+      "ImportPath" : (ArchivePath)?,
+      "ExportPath" : (ArchivePath)?,
+      "ImportedFileChunkSize" : (Megabytes)?,
+      "DeploymentType" : (LustreDeploymentType)?,
+      "AutoImportPolicy" : (AutoImportPolicyType)?,
+      "PerUnitStorageThroughput" : (PerUnitStorageThroughput)?,
+      "DailyAutomaticBackupStartTime" : (DailyTime)?,
+      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
+      "CopyTagsToBackups" : (Flag)?,
+      "DriveCacheType" : (DriveCacheType)?
+    )
+
+    alias CreateFileSystemRequest = NamedTuple(
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "FileSystemType" : FileSystemType,
+      "StorageCapacity" : StorageCapacity,
+      "StorageType" : (StorageType)?,
+      "SubnetIds" : SubnetIds,
+      "SecurityGroupIds" : (SecurityGroupIds)?,
+      "Tags" : (Tags)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "WindowsConfiguration" : (CreateFileSystemWindowsConfiguration)?,
+      "LustreConfiguration" : (CreateFileSystemLustreConfiguration)?
+    )
+
+    alias CreateFileSystemResponse = NamedTuple(
+      "FileSystem" : (FileSystem)?
+    )
+
+    alias CreateFileSystemWindowsConfiguration = NamedTuple(
+      "ActiveDirectoryId" : (DirectoryId)?,
+      "SelfManagedActiveDirectoryConfiguration" : (SelfManagedActiveDirectoryConfiguration)?,
+      "DeploymentType" : (WindowsDeploymentType)?,
+      "PreferredSubnetId" : (SubnetId)?,
+      "ThroughputCapacity" : MegabytesPerSecond,
+      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
+      "DailyAutomaticBackupStartTime" : (DailyTime)?,
+      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
+      "CopyTagsToBackups" : (Flag)?,
+      "Aliases" : (AlternateDNSNames)?
+    )
+
+    alias CreationTime = String | UInt64 | Time
+
+    alias DNSName = String
+
+    alias DailyTime = String
+
+    alias DataRepositoryConfiguration = NamedTuple(
+      "Lifecycle" : (DataRepositoryLifecycle)?,
+      "ImportPath" : (ArchivePath)?,
+      "ExportPath" : (ArchivePath)?,
+      "ImportedFileChunkSize" : (Megabytes)?,
+      "AutoImportPolicy" : (AutoImportPolicyType)?,
+      "FailureDetails" : (DataRepositoryFailureDetails)?
+    )
+
+    alias DataRepositoryFailureDetails = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DataRepositoryLifecycle = String
+
+    alias DataRepositoryTask = NamedTuple(
+      "TaskId" : TaskId,
+      "Lifecycle" : DataRepositoryTaskLifecycle,
+      "Type" : DataRepositoryTaskType,
+      "CreationTime" : CreationTime,
+      "StartTime" : (StartTime)?,
+      "EndTime" : (EndTime)?,
+      "ResourceARN" : (ResourceARN)?,
+      "Tags" : (Tags)?,
+      "FileSystemId" : FileSystemId,
+      "Paths" : (DataRepositoryTaskPaths)?,
+      "FailureDetails" : (DataRepositoryTaskFailureDetails)?,
+      "Status" : (DataRepositoryTaskStatus)?,
+      "Report" : (CompletionReport)?
+    )
+
+    alias DataRepositoryTaskEnded = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DataRepositoryTaskExecuting = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DataRepositoryTaskFailureDetails = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DataRepositoryTaskFilter = NamedTuple(
+      "Name" : (DataRepositoryTaskFilterName)?,
+      "Values" : (DataRepositoryTaskFilterValues)?
+    )
+
+    alias DataRepositoryTaskFilterName = String
+
+    alias DataRepositoryTaskFilterValue = String
+
+    alias DataRepositoryTaskFilterValues = Array(DataRepositoryTaskFilterValue)
+
+    alias DataRepositoryTaskFilters = Array(DataRepositoryTaskFilter)
+
+    alias DataRepositoryTaskLifecycle = String
+
+    alias DataRepositoryTaskNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DataRepositoryTaskPath = String
+
+    alias DataRepositoryTaskPaths = Array(DataRepositoryTaskPath)
+
+    alias DataRepositoryTaskStatus = NamedTuple(
+      "TotalCount" : (TotalCount)?,
+      "SucceededCount" : (SucceededCount)?,
+      "FailedCount" : (FailedCount)?,
+      "LastUpdatedTime" : (LastUpdatedTime)?
+    )
+
+    alias DataRepositoryTaskType = String
+
+    alias DataRepositoryTasks = Array(DataRepositoryTask)
+
+    alias DeleteBackupRequest = NamedTuple(
+      "BackupId" : BackupId,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias DeleteBackupResponse = NamedTuple(
+      "BackupId" : (BackupId)?,
+      "Lifecycle" : (BackupLifecycle)?
+    )
+
+    alias DeleteFileSystemLustreConfiguration = NamedTuple(
+      "SkipFinalBackup" : (Flag)?,
+      "FinalBackupTags" : (Tags)?
+    )
+
+    alias DeleteFileSystemLustreResponse = NamedTuple(
+      "FinalBackupId" : (BackupId)?,
+      "FinalBackupTags" : (Tags)?
+    )
+
+    alias DeleteFileSystemRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "WindowsConfiguration" : (DeleteFileSystemWindowsConfiguration)?,
+      "LustreConfiguration" : (DeleteFileSystemLustreConfiguration)?
+    )
+
+    alias DeleteFileSystemResponse = NamedTuple(
+      "FileSystemId" : (FileSystemId)?,
+      "Lifecycle" : (FileSystemLifecycle)?,
+      "WindowsResponse" : (DeleteFileSystemWindowsResponse)?,
+      "LustreResponse" : (DeleteFileSystemLustreResponse)?
+    )
+
+    alias DeleteFileSystemWindowsConfiguration = NamedTuple(
+      "SkipFinalBackup" : (Flag)?,
+      "FinalBackupTags" : (Tags)?
+    )
+
+    alias DeleteFileSystemWindowsResponse = NamedTuple(
+      "FinalBackupId" : (BackupId)?,
+      "FinalBackupTags" : (Tags)?
+    )
+
+    alias DescribeBackupsRequest = NamedTuple(
+      "BackupIds" : (BackupIds)?,
+      "Filters" : (Filters)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeBackupsResponse = NamedTuple(
+      "Backups" : (Backups)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeDataRepositoryTasksRequest = NamedTuple(
+      "TaskIds" : (TaskIds)?,
+      "Filters" : (DataRepositoryTaskFilters)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeDataRepositoryTasksResponse = NamedTuple(
+      "DataRepositoryTasks" : (DataRepositoryTasks)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeFileSystemAliasesRequest = NamedTuple(
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "FileSystemId" : FileSystemId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeFileSystemAliasesResponse = NamedTuple(
+      "Aliases" : (Aliases)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeFileSystemsRequest = NamedTuple(
+      "FileSystemIds" : (FileSystemIds)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeFileSystemsResponse = NamedTuple(
+      "FileSystems" : (FileSystems)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DirectoryId = String
+
+    alias DirectoryPassword = String
+
+    alias DirectoryUserName = String
+
+    alias DisassociateFileSystemAliasesRequest = NamedTuple(
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "FileSystemId" : FileSystemId,
+      "Aliases" : AlternateDNSNames
+    )
+
+    alias DisassociateFileSystemAliasesResponse = NamedTuple(
+      "Aliases" : (Aliases)?
+    )
+
+    alias DnsIps = Array(IpAddress)
+
+    alias DriveCacheType = String
+
+    alias EndTime = String | UInt64 | Time
+
+    alias ErrorMessage = String
+
+    alias FailedCount = Int64
+
+    alias FileSystem = NamedTuple(
+      "OwnerId" : (AWSAccountId)?,
+      "CreationTime" : (CreationTime)?,
+      "FileSystemId" : (FileSystemId)?,
+      "FileSystemType" : (FileSystemType)?,
+      "Lifecycle" : (FileSystemLifecycle)?,
+      "FailureDetails" : (FileSystemFailureDetails)?,
+      "StorageCapacity" : (StorageCapacity)?,
+      "StorageType" : (StorageType)?,
+      "VpcId" : (VpcId)?,
+      "SubnetIds" : (SubnetIds)?,
+      "NetworkInterfaceIds" : (NetworkInterfaceIds)?,
+      "DNSName" : (DNSName)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "ResourceARN" : (ResourceARN)?,
+      "Tags" : (Tags)?,
+      "WindowsConfiguration" : (WindowsFileSystemConfiguration)?,
+      "LustreConfiguration" : (LustreFileSystemConfiguration)?,
+      "AdministrativeActions" : (AdministrativeActions)?
+    )
+
+    alias FileSystemAdministratorsGroupName = String
+
+    alias FileSystemFailureDetails = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias FileSystemId = String
+
+    alias FileSystemIds = Array(FileSystemId)
+
+    alias FileSystemLifecycle = String
+
+    alias FileSystemMaintenanceOperation = String
+
+    alias FileSystemMaintenanceOperations = Array(FileSystemMaintenanceOperation)
+
+    alias FileSystemNotFound = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias FileSystemType = String
+
+    alias FileSystems = Array(FileSystem)
+
+    alias Filter = NamedTuple(
+      "Name" : (FilterName)?,
+      "Values" : (FilterValues)?
+    )
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias Filters = Array(Filter)
+
+    alias Flag = Bool
+
+    alias IncompatibleParameterError = NamedTuple(
+      "Parameter" : Parameter,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidExportPath = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidImportPath = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidNetworkSettings = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "InvalidSubnetId" : (SubnetId)?,
+      "InvalidSecurityGroupId" : (SecurityGroupId)?
+    )
+
+    alias InvalidPerUnitStorageThroughput = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias IpAddress = String
+
+    alias KmsKeyId = String
+
+    alias LastUpdatedTime = String | UInt64 | Time
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias LustreDeploymentType = String
+
+    alias LustreFileSystemConfiguration = NamedTuple(
+      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
+      "DataRepositoryConfiguration" : (DataRepositoryConfiguration)?,
+      "DeploymentType" : (LustreDeploymentType)?,
+      "PerUnitStorageThroughput" : (PerUnitStorageThroughput)?,
+      "MountName" : (LustreFileSystemMountName)?,
+      "DailyAutomaticBackupStartTime" : (DailyTime)?,
+      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
+      "CopyTagsToBackups" : (Flag)?,
+      "DriveCacheType" : (DriveCacheType)?
+    )
+
+    alias LustreFileSystemMountName = String
+
+    alias MaxResults = Int32
+
+    alias Megabytes = Int32
+
+    alias MegabytesPerSecond = Int32
+
+    alias MissingFileSystemConfiguration = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NetworkInterfaceId = String
+
+    alias NetworkInterfaceIds = Array(NetworkInterfaceId)
+
+    alias NextToken = String
+
+    alias NotServiceResourceError = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias OrganizationalUnitDistinguishedName = String
+
+    alias Parameter = String
+
+    alias PerUnitStorageThroughput = Int32
+
+    alias ProgressPercent = Int32
+
+    alias ReportFormat = String
+
+    alias ReportScope = String
+
+    alias RequestTime = String | UInt64 | Time
+
+    alias ResourceARN = String
+
+    alias ResourceDoesNotSupportTagging = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFound = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias SelfManagedActiveDirectoryAttributes = NamedTuple(
+      "DomainName" : (ActiveDirectoryFullyQualifiedName)?,
+      "OrganizationalUnitDistinguishedName" : (OrganizationalUnitDistinguishedName)?,
+      "FileSystemAdministratorsGroup" : (FileSystemAdministratorsGroupName)?,
+      "UserName" : (DirectoryUserName)?,
+      "DnsIps" : (DnsIps)?
+    )
+
+    alias SelfManagedActiveDirectoryConfiguration = NamedTuple(
+      "DomainName" : ActiveDirectoryFullyQualifiedName,
+      "OrganizationalUnitDistinguishedName" : (OrganizationalUnitDistinguishedName)?,
+      "FileSystemAdministratorsGroup" : (FileSystemAdministratorsGroupName)?,
+      "UserName" : DirectoryUserName,
+      "Password" : DirectoryPassword,
+      "DnsIps" : DnsIps
+    )
+
+    alias SelfManagedActiveDirectoryConfigurationUpdates = NamedTuple(
+      "UserName" : (DirectoryUserName)?,
+      "Password" : (DirectoryPassword)?,
+      "DnsIps" : (DnsIps)?
+    )
+
+    alias ServiceLimit = String
+
+    alias ServiceLimitExceeded = NamedTuple(
+      "Limit" : ServiceLimit,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias StartTime = String | UInt64 | Time
+
+    alias Status = String
+
+    alias StorageCapacity = Int32
+
+    alias StorageType = String
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias SucceededCount = Int64
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "Tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TaskId = String
+
+    alias TaskIds = Array(TaskId)
+
+    alias TotalCount = Int64
+
+    alias UnsupportedOperation = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "TagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFileSystemLustreConfiguration = NamedTuple(
+      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
+      "DailyAutomaticBackupStartTime" : (DailyTime)?,
+      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
+      "AutoImportPolicy" : (AutoImportPolicyType)?
+    )
+
+    alias UpdateFileSystemRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "StorageCapacity" : (StorageCapacity)?,
+      "WindowsConfiguration" : (UpdateFileSystemWindowsConfiguration)?,
+      "LustreConfiguration" : (UpdateFileSystemLustreConfiguration)?
+    )
+
+    alias UpdateFileSystemResponse = NamedTuple(
+      "FileSystem" : (FileSystem)?
+    )
+
+    alias UpdateFileSystemWindowsConfiguration = NamedTuple(
+      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
+      "DailyAutomaticBackupStartTime" : (DailyTime)?,
+      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
+      "ThroughputCapacity" : (MegabytesPerSecond)?,
+      "SelfManagedActiveDirectoryConfiguration" : (SelfManagedActiveDirectoryConfigurationUpdates)?
+    )
+
+    alias VpcId = String
+
+    alias WeeklyTime = String
+
+    alias WindowsDeploymentType = String
+
+    alias WindowsFileSystemConfiguration = NamedTuple(
+      "ActiveDirectoryId" : (DirectoryId)?,
+      "SelfManagedActiveDirectoryConfiguration" : (SelfManagedActiveDirectoryAttributes)?,
+      "DeploymentType" : (WindowsDeploymentType)?,
+      "RemoteAdministrationEndpoint" : (DNSName)?,
+      "PreferredSubnetId" : (SubnetId)?,
+      "PreferredFileServerIp" : (IpAddress)?,
+      "ThroughputCapacity" : (MegabytesPerSecond)?,
+      "MaintenanceOperationsInProgress" : (FileSystemMaintenanceOperations)?,
+      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
+      "DailyAutomaticBackupStartTime" : (DailyTime)?,
+      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
+      "CopyTagsToBackups" : (Flag)?,
+      "Aliases" : (Aliases)?
+    )
   end
 end

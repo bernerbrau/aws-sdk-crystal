@@ -375,8 +375,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload add_listener_certificates(**params)
     # @param [Hash] params ({})
-    def add_listener_certificates(params = {}, **options)
-      req = build_request(:add_listener_certificates, params)
+    def add_listener_certificates(, **options)
+      req = build_request(:add_listener_certificates, )
       req.send_request(options)
     end
 
@@ -433,8 +433,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -749,8 +749,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload create_listener(**params)
     # @param [Hash] params ({})
-    def create_listener(params = {}, **options)
-      req = build_request(:create_listener, params)
+    def create_listener(, **options)
+      req = build_request(:create_listener, )
       req.send_request(options)
     end
 
@@ -1018,8 +1018,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload create_load_balancer(**params)
     # @param [Hash] params ({})
-    def create_load_balancer(params = {}, **options)
-      req = build_request(:create_load_balancer, params)
+    def create_load_balancer(, **options)
+      req = build_request(:create_load_balancer, )
       req.send_request(options)
     end
 
@@ -1279,8 +1279,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload create_rule(**params)
     # @param [Hash] params ({})
-    def create_rule(params = {}, **options)
-      req = build_request(:create_rule, params)
+    def create_rule(, **options)
+      req = build_request(:create_rule, )
       req.send_request(options)
     end
 
@@ -1518,8 +1518,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload create_target_group(**params)
     # @param [Hash] params ({})
-    def create_target_group(params = {}, **options)
-      req = build_request(:create_target_group, params)
+    def create_target_group(, **options)
+      req = build_request(:create_target_group, )
       req.send_request(options)
     end
 
@@ -1552,8 +1552,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload delete_listener(**params)
     # @param [Hash] params ({})
-    def delete_listener(params = {}, **options)
-      req = build_request(:delete_listener, params)
+    def delete_listener(, **options)
+      req = build_request(:delete_listener, )
       req.send_request(options)
     end
 
@@ -1594,8 +1594,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload delete_load_balancer(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer(params = {}, **options)
-      req = build_request(:delete_load_balancer, params)
+    def delete_load_balancer(, **options)
+      req = build_request(:delete_load_balancer, )
       req.send_request(options)
     end
 
@@ -1627,8 +1627,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, **options)
-      req = build_request(:delete_rule, params)
+    def delete_rule(, **options)
+      req = build_request(:delete_rule, )
       req.send_request(options)
     end
 
@@ -1664,8 +1664,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload delete_target_group(**params)
     # @param [Hash] params ({})
-    def delete_target_group(params = {}, **options)
-      req = build_request(:delete_target_group, params)
+    def delete_target_group(, **options)
+      req = build_request(:delete_target_group, )
       req.send_request(options)
     end
 
@@ -1714,8 +1714,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload deregister_targets(**params)
     # @param [Hash] params ({})
-    def deregister_targets(params = {}, **options)
-      req = build_request(:deregister_targets, params)
+    def deregister_targets(, **options)
+      req = build_request(:deregister_targets, )
       req.send_request(options)
     end
 
@@ -1766,8 +1766,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, **options)
-      req = build_request(:describe_account_limits, params)
+    def describe_account_limits(, **options)
+      req = build_request(:describe_account_limits, )
       req.send_request(options)
     end
 
@@ -1821,8 +1821,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_listener_certificates(**params)
     # @param [Hash] params ({})
-    def describe_listener_certificates(params = {}, **options)
-      req = build_request(:describe_listener_certificates, params)
+    def describe_listener_certificates(, **options)
+      req = build_request(:describe_listener_certificates, )
       req.send_request(options)
     end
 
@@ -1948,8 +1948,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_listeners(**params)
     # @param [Hash] params ({})
-    def describe_listeners(params = {}, **options)
-      req = build_request(:describe_listeners, params)
+    def describe_listeners(, **options)
+      req = build_request(:describe_listeners, )
       req.send_request(options)
     end
 
@@ -2029,8 +2029,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_load_balancer_attributes(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_attributes(params = {}, **options)
-      req = build_request(:describe_load_balancer_attributes, params)
+    def describe_load_balancer_attributes(, **options)
+      req = build_request(:describe_load_balancer_attributes, )
       req.send_request(options)
     end
 
@@ -2148,8 +2148,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_load_balancers(params = {}, **options)
-      req = build_request(:describe_load_balancers, params)
+    def describe_load_balancers(, **options)
+      req = build_request(:describe_load_balancers, )
       req.send_request(options)
     end
 
@@ -2289,8 +2289,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_rules(**params)
     # @param [Hash] params ({})
-    def describe_rules(params = {}, **options)
-      req = build_request(:describe_rules, params)
+    def describe_rules(, **options)
+      req = build_request(:describe_rules, )
       req.send_request(options)
     end
 
@@ -2447,8 +2447,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_ssl_policies(**params)
     # @param [Hash] params ({})
-    def describe_ssl_policies(params = {}, **options)
-      req = build_request(:describe_ssl_policies, params)
+    def describe_ssl_policies(, **options)
+      req = build_request(:describe_ssl_policies, )
       req.send_request(options)
     end
 
@@ -2513,8 +2513,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -2589,8 +2589,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_target_group_attributes(**params)
     # @param [Hash] params ({})
-    def describe_target_group_attributes(params = {}, **options)
-      req = build_request(:describe_target_group_attributes, params)
+    def describe_target_group_attributes(, **options)
+      req = build_request(:describe_target_group_attributes, )
       req.send_request(options)
     end
 
@@ -2698,8 +2698,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_target_groups(**params)
     # @param [Hash] params ({})
-    def describe_target_groups(params = {}, **options)
-      req = build_request(:describe_target_groups, params)
+    def describe_target_groups(, **options)
+      req = build_request(:describe_target_groups, )
       req.send_request(options)
     end
 
@@ -2816,8 +2816,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload describe_target_health(**params)
     # @param [Hash] params ({})
-    def describe_target_health(params = {}, **options)
-      req = build_request(:describe_target_health, params)
+    def describe_target_health(, **options)
+      req = build_request(:describe_target_health, )
       req.send_request(options)
     end
 
@@ -3100,8 +3100,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload modify_listener(**params)
     # @param [Hash] params ({})
-    def modify_listener(params = {}, **options)
-      req = build_request(:modify_listener, params)
+    def modify_listener(, **options)
+      req = build_request(:modify_listener, )
       req.send_request(options)
     end
 
@@ -3274,8 +3274,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload modify_load_balancer_attributes(**params)
     # @param [Hash] params ({})
-    def modify_load_balancer_attributes(params = {}, **options)
-      req = build_request(:modify_load_balancer_attributes, params)
+    def modify_load_balancer_attributes(, **options)
+      req = build_request(:modify_load_balancer_attributes, )
       req.send_request(options)
     end
 
@@ -3507,8 +3507,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload modify_rule(**params)
     # @param [Hash] params ({})
-    def modify_rule(params = {}, **options)
-      req = build_request(:modify_rule, params)
+    def modify_rule(, **options)
+      req = build_request(:modify_rule, )
       req.send_request(options)
     end
 
@@ -3659,8 +3659,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload modify_target_group(**params)
     # @param [Hash] params ({})
-    def modify_target_group(params = {}, **options)
-      req = build_request(:modify_target_group, params)
+    def modify_target_group(, **options)
+      req = build_request(:modify_target_group, )
       req.send_request(options)
     end
 
@@ -3735,8 +3735,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload modify_target_group_attributes(**params)
     # @param [Hash] params ({})
-    def modify_target_group_attributes(params = {}, **options)
-      req = build_request(:modify_target_group_attributes, params)
+    def modify_target_group_attributes(, **options)
+      req = build_request(:modify_target_group_attributes, )
       req.send_request(options)
     end
 
@@ -3817,8 +3817,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload register_targets(**params)
     # @param [Hash] params ({})
-    def register_targets(params = {}, **options)
-      req = build_request(:register_targets, params)
+    def register_targets(, **options)
+      req = build_request(:register_targets, )
       req.send_request(options)
     end
 
@@ -3851,8 +3851,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload remove_listener_certificates(**params)
     # @param [Hash] params ({})
-    def remove_listener_certificates(params = {}, **options)
-      req = build_request(:remove_listener_certificates, params)
+    def remove_listener_certificates(, **options)
+      req = build_request(:remove_listener_certificates, )
       req.send_request(options)
     end
 
@@ -3895,8 +3895,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, **options)
-      req = build_request(:remove_tags, params)
+    def remove_tags(, **options)
+      req = build_request(:remove_tags, )
       req.send_request(options)
     end
 
@@ -3931,8 +3931,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload set_ip_address_type(**params)
     # @param [Hash] params ({})
-    def set_ip_address_type(params = {}, **options)
-      req = build_request(:set_ip_address_type, params)
+    def set_ip_address_type(, **options)
+      req = build_request(:set_ip_address_type, )
       req.send_request(options)
     end
 
@@ -4068,8 +4068,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload set_rule_priorities(**params)
     # @param [Hash] params ({})
-    def set_rule_priorities(params = {}, **options)
-      req = build_request(:set_rule_priorities, params)
+    def set_rule_priorities(, **options)
+      req = build_request(:set_rule_priorities, )
       req.send_request(options)
     end
 
@@ -4125,8 +4125,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload set_security_groups(**params)
     # @param [Hash] params ({})
-    def set_security_groups(params = {}, **options)
-      req = build_request(:set_security_groups, params)
+    def set_security_groups(, **options)
+      req = build_request(:set_security_groups, )
       req.send_request(options)
     end
 
@@ -4251,8 +4251,8 @@ module Aws::ElasticLoadBalancingV2
     #
     # @overload set_subnets(**params)
     # @param [Hash] params ({})
-    def set_subnets(params = {}, **options)
-      req = build_request(:set_subnets, params)
+    def set_subnets(, **options)
+      req = build_request(:set_subnets, )
       req.send_request(options)
     end
 

@@ -1569,5 +1569,424 @@ module Aws::CodeStar
     #
     class ValidationException < Aws::EmptyStructure; end
 
+    alias AssociateTeamMemberRequest = NamedTuple(
+      "projectId" : ProjectId,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "userArn" : UserArn,
+      "projectRole" : Role,
+      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+    )
+
+    alias AssociateTeamMemberResult = NamedTuple(
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias BucketKey = String
+
+    alias BucketName = String
+
+    alias ClientRequestToken = String
+
+    alias Code = NamedTuple(
+      "source" : CodeSource,
+      "destination" : CodeDestination
+    )
+
+    alias CodeCommitCodeDestination = NamedTuple(
+      "name" : RepositoryName
+    )
+
+    alias CodeDestination = NamedTuple(
+      "codeCommit" : (CodeCommitCodeDestination)?,
+      "gitHub" : (GitHubCodeDestination)?
+    )
+
+    alias CodeSource = NamedTuple(
+      "s3" : S3Location
+    )
+
+    alias ConcurrentModificationException = NamedTuple(
+      
+    )
+
+    alias CreateProjectRequest = NamedTuple(
+      "name" : ProjectName,
+      "id" : ProjectId,
+      "description" : (ProjectDescription)?,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "sourceCode" : (SourceCode)?,
+      "toolchain" : (Toolchain)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateProjectResult = NamedTuple(
+      "id" : ProjectId,
+      "arn" : ProjectArn,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "projectTemplateId" : (ProjectTemplateId)?
+    )
+
+    alias CreateUserProfileRequest = NamedTuple(
+      "userArn" : UserArn,
+      "displayName" : UserProfileDisplayName,
+      "emailAddress" : Email,
+      "sshPublicKey" : (SshPublicKey)?
+    )
+
+    alias CreateUserProfileResult = NamedTuple(
+      "userArn" : UserArn,
+      "displayName" : (UserProfileDisplayName)?,
+      "emailAddress" : (Email)?,
+      "sshPublicKey" : (SshPublicKey)?,
+      "createdTimestamp" : (CreatedTimestamp)?,
+      "lastModifiedTimestamp" : (LastModifiedTimestamp)?
+    )
+
+    alias CreatedTimestamp = String | UInt64 | Time
+
+    alias DeleteProjectRequest = NamedTuple(
+      "id" : ProjectId,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "deleteStack" : (DeleteStack)?
+    )
+
+    alias DeleteProjectResult = NamedTuple(
+      "stackId" : (StackId)?,
+      "projectArn" : (ProjectArn)?
+    )
+
+    alias DeleteStack = Bool
+
+    alias DeleteUserProfileRequest = NamedTuple(
+      "userArn" : UserArn
+    )
+
+    alias DeleteUserProfileResult = NamedTuple(
+      "userArn" : UserArn
+    )
+
+    alias DescribeProjectRequest = NamedTuple(
+      "id" : ProjectId
+    )
+
+    alias DescribeProjectResult = NamedTuple(
+      "name" : (ProjectName)?,
+      "id" : (ProjectId)?,
+      "arn" : (ProjectArn)?,
+      "description" : (ProjectDescription)?,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "createdTimeStamp" : (CreatedTimestamp)?,
+      "stackId" : (StackId)?,
+      "projectTemplateId" : (ProjectTemplateId)?,
+      "status" : (ProjectStatus)?
+    )
+
+    alias DescribeUserProfileRequest = NamedTuple(
+      "userArn" : UserArn
+    )
+
+    alias DescribeUserProfileResult = NamedTuple(
+      "userArn" : UserArn,
+      "displayName" : (UserProfileDisplayName)?,
+      "emailAddress" : (Email)?,
+      "sshPublicKey" : (SshPublicKey)?,
+      "createdTimestamp" : CreatedTimestamp,
+      "lastModifiedTimestamp" : LastModifiedTimestamp
+    )
+
+    alias DisassociateTeamMemberRequest = NamedTuple(
+      "projectId" : ProjectId,
+      "userArn" : UserArn
+    )
+
+    alias DisassociateTeamMemberResult = NamedTuple(
+      
+    )
+
+    alias Email = String
+
+    alias GitHubCodeDestination = NamedTuple(
+      "name" : RepositoryName,
+      "description" : (RepositoryDescription)?,
+      "type" : RepositoryType,
+      "owner" : RepositoryOwner,
+      "privateRepository" : RepositoryIsPrivate,
+      "issuesEnabled" : RepositoryEnableIssues,
+      "token" : GitHubPersonalToken
+    )
+
+    alias GitHubPersonalToken = String
+
+    alias InvalidNextTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidServiceRoleException = NamedTuple(
+      
+    )
+
+    alias LastModifiedTimestamp = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListProjectsResult = NamedTuple(
+      "projects" : ProjectsList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListResourcesRequest = NamedTuple(
+      "projectId" : ProjectId,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListResourcesResult = NamedTuple(
+      "resources" : (ResourcesResult)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForProjectRequest = NamedTuple(
+      "id" : ProjectId,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListTagsForProjectResult = NamedTuple(
+      "tags" : (Tags)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTeamMembersRequest = NamedTuple(
+      "projectId" : ProjectId,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListTeamMembersResult = NamedTuple(
+      "teamMembers" : TeamMemberResult,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListUserProfilesRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListUserProfilesResult = NamedTuple(
+      "userProfiles" : UserProfilesList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias PaginationToken = String
+
+    alias ProjectAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias ProjectArn = String
+
+    alias ProjectConfigurationException = NamedTuple(
+      
+    )
+
+    alias ProjectCreationFailedException = NamedTuple(
+      
+    )
+
+    alias ProjectDescription = String
+
+    alias ProjectId = String
+
+    alias ProjectName = String
+
+    alias ProjectNotFoundException = NamedTuple(
+      
+    )
+
+    alias ProjectStatus = NamedTuple(
+      "state" : State,
+      "reason" : (Reason)?
+    )
+
+    alias ProjectSummary = NamedTuple(
+      "projectId" : (ProjectId)?,
+      "projectArn" : (ProjectArn)?
+    )
+
+    alias ProjectTemplateId = String
+
+    alias ProjectsList = Array(ProjectSummary)
+
+    alias Reason = String
+
+    alias RemoteAccessAllowed = Bool
+
+    alias RepositoryDescription = String
+
+    alias RepositoryEnableIssues = Bool
+
+    alias RepositoryIsPrivate = Bool
+
+    alias RepositoryName = String
+
+    alias RepositoryOwner = String
+
+    alias RepositoryType = String
+
+    alias Resource = NamedTuple(
+      "id" : ResourceId
+    )
+
+    alias ResourceId = String
+
+    alias ResourcesResult = Array(Resource)
+
+    alias Role = String
+
+    alias RoleArn = String
+
+    alias S3Location = NamedTuple(
+      "bucketName" : (BucketName)?,
+      "bucketKey" : (BucketKey)?
+    )
+
+    alias SourceCode = Array(Code)
+
+    alias SshPublicKey = String
+
+    alias StackId = String
+
+    alias State = String
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagProjectRequest = NamedTuple(
+      "id" : ProjectId,
+      "tags" : Tags
+    )
+
+    alias TagProjectResult = NamedTuple(
+      "tags" : (Tags)?
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias TeamMember = NamedTuple(
+      "userArn" : UserArn,
+      "projectRole" : Role,
+      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+    )
+
+    alias TeamMemberAlreadyAssociatedException = NamedTuple(
+      
+    )
+
+    alias TeamMemberNotFoundException = NamedTuple(
+      
+    )
+
+    alias TeamMemberResult = Array(TeamMember)
+
+    alias TemplateParameterKey = String
+
+    alias TemplateParameterMap = Hash(TemplateParameterKey,TemplateParameterValue)
+
+    alias TemplateParameterValue = String
+
+    alias Toolchain = NamedTuple(
+      "source" : ToolchainSource,
+      "roleArn" : (RoleArn)?,
+      "stackParameters" : (TemplateParameterMap)?
+    )
+
+    alias ToolchainSource = NamedTuple(
+      "s3" : S3Location
+    )
+
+    alias UntagProjectRequest = NamedTuple(
+      "id" : ProjectId,
+      "tags" : TagKeys
+    )
+
+    alias UntagProjectResult = NamedTuple(
+      
+    )
+
+    alias UpdateProjectRequest = NamedTuple(
+      "id" : ProjectId,
+      "name" : (ProjectName)?,
+      "description" : (ProjectDescription)?
+    )
+
+    alias UpdateProjectResult = NamedTuple(
+      
+    )
+
+    alias UpdateTeamMemberRequest = NamedTuple(
+      "projectId" : ProjectId,
+      "userArn" : UserArn,
+      "projectRole" : (Role)?,
+      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+    )
+
+    alias UpdateTeamMemberResult = NamedTuple(
+      "userArn" : (UserArn)?,
+      "projectRole" : (Role)?,
+      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+    )
+
+    alias UpdateUserProfileRequest = NamedTuple(
+      "userArn" : UserArn,
+      "displayName" : (UserProfileDisplayName)?,
+      "emailAddress" : (Email)?,
+      "sshPublicKey" : (SshPublicKey)?
+    )
+
+    alias UpdateUserProfileResult = NamedTuple(
+      "userArn" : UserArn,
+      "displayName" : (UserProfileDisplayName)?,
+      "emailAddress" : (Email)?,
+      "sshPublicKey" : (SshPublicKey)?,
+      "createdTimestamp" : (CreatedTimestamp)?,
+      "lastModifiedTimestamp" : (LastModifiedTimestamp)?
+    )
+
+    alias UserArn = String
+
+    alias UserProfileAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias UserProfileDisplayName = String
+
+    alias UserProfileNotFoundException = NamedTuple(
+      
+    )
+
+    alias UserProfileSummary = NamedTuple(
+      "userArn" : (UserArn)?,
+      "displayName" : (UserProfileDisplayName)?,
+      "emailAddress" : (Email)?,
+      "sshPublicKey" : (SshPublicKey)?
+    )
+
+    alias UserProfilesList = Array(UserProfileSummary)
+
+    alias ValidationException = NamedTuple(
+      
+    )
   end
 end

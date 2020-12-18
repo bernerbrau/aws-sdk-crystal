@@ -516,8 +516,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload delete_scaling_policy(**params)
     # @param [Hash] params ({})
-    def delete_scaling_policy(params = {}, **options)
-      req = build_request(:delete_scaling_policy, params)
+    def delete_scaling_policy(, **options)
+      req = build_request(:delete_scaling_policy, )
       req.send_request(options)
     end
 
@@ -677,8 +677,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_action(params = {}, **options)
-      req = build_request(:delete_scheduled_action, params)
+    def delete_scheduled_action(, **options)
+      req = build_request(:delete_scheduled_action, )
       req.send_request(options)
     end
 
@@ -854,8 +854,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload deregister_scalable_target(**params)
     # @param [Hash] params ({})
-    def deregister_scalable_target(params = {}, **options)
-      req = build_request(:deregister_scalable_target, params)
+    def deregister_scalable_target(, **options)
+      req = build_request(:deregister_scalable_target, )
       req.send_request(options)
     end
 
@@ -1074,8 +1074,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload describe_scalable_targets(**params)
     # @param [Hash] params ({})
-    def describe_scalable_targets(params = {}, **options)
-      req = build_request(:describe_scalable_targets, params)
+    def describe_scalable_targets(, **options)
+      req = build_request(:describe_scalable_targets, )
       req.send_request(options)
     end
 
@@ -1294,8 +1294,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload describe_scaling_activities(**params)
     # @param [Hash] params ({})
-    def describe_scaling_activities(params = {}, **options)
-      req = build_request(:describe_scaling_activities, params)
+    def describe_scaling_activities(, **options)
+      req = build_request(:describe_scaling_activities, )
       req.send_request(options)
     end
 
@@ -1559,8 +1559,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload describe_scaling_policies(**params)
     # @param [Hash] params ({})
-    def describe_scaling_policies(params = {}, **options)
-      req = build_request(:describe_scaling_policies, params)
+    def describe_scaling_policies(, **options)
+      req = build_request(:describe_scaling_policies, )
       req.send_request(options)
     end
 
@@ -1761,8 +1761,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload describe_scheduled_actions(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_actions(params = {}, **options)
-      req = build_request(:describe_scheduled_actions, params)
+    def describe_scheduled_actions(, **options)
+      req = build_request(:describe_scheduled_actions, )
       req.send_request(options)
     end
 
@@ -2073,8 +2073,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload put_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_scaling_policy(params = {}, **options)
-      req = build_request(:put_scaling_policy, params)
+    def put_scaling_policy(, **options)
+      req = build_request(:put_scaling_policy, )
       req.send_request(options)
     end
 
@@ -2301,8 +2301,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload put_scheduled_action(**params)
     # @param [Hash] params ({})
-    def put_scheduled_action(params = {}, **options)
-      req = build_request(:put_scheduled_action, params)
+    def put_scheduled_action(, **options)
+      req = build_request(:put_scheduled_action, )
       req.send_request(options)
     end
 
@@ -2573,8 +2573,8 @@ module Aws::ApplicationAutoScaling
     #
     # @overload register_scalable_target(**params)
     # @param [Hash] params ({})
-    def register_scalable_target(params = {}, **options)
-      req = build_request(:register_scalable_target, params)
+    def register_scalable_target(, **options)
+      req = build_request(:register_scalable_target, )
       req.send_request(options)
     end
 

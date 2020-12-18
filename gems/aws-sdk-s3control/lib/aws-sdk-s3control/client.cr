@@ -466,8 +466,8 @@ module Aws::S3Control
     #
     # @overload create_access_point(**params)
     # @param [Hash] params ({})
-    def create_access_point(params = {}, **options)
-      req = build_request(:create_access_point, params)
+    def create_access_point(, **options)
+      req = build_request(:create_access_point, )
       req.send_request(options)
     end
 
@@ -625,8 +625,8 @@ module Aws::S3Control
     #
     # @overload create_bucket(**params)
     # @param [Hash] params ({})
-    def create_bucket(params = {}, **options)
-      req = build_request(:create_bucket, params)
+    def create_bucket(, **options)
+      req = build_request(:create_bucket, )
       req.send_request(options)
     end
 
@@ -850,8 +850,8 @@ module Aws::S3Control
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -911,8 +911,8 @@ module Aws::S3Control
     #
     # @overload delete_access_point(**params)
     # @param [Hash] params ({})
-    def delete_access_point(params = {}, **options)
-      req = build_request(:delete_access_point, params)
+    def delete_access_point(, **options)
+      req = build_request(:delete_access_point, )
       req.send_request(options)
     end
 
@@ -971,8 +971,8 @@ module Aws::S3Control
     #
     # @overload delete_access_point_policy(**params)
     # @param [Hash] params ({})
-    def delete_access_point_policy(params = {}, **options)
-      req = build_request(:delete_access_point_policy, params)
+    def delete_access_point_policy(, **options)
+      req = build_request(:delete_access_point_policy, )
       req.send_request(options)
     end
 
@@ -1044,8 +1044,8 @@ module Aws::S3Control
     #
     # @overload delete_bucket(**params)
     # @param [Hash] params ({})
-    def delete_bucket(params = {}, **options)
-      req = build_request(:delete_bucket, params)
+    def delete_bucket(, **options)
+      req = build_request(:delete_bucket, )
       req.send_request(options)
     end
 
@@ -1126,8 +1126,8 @@ module Aws::S3Control
     #
     # @overload delete_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_lifecycle_configuration(params = {}, **options)
-      req = build_request(:delete_bucket_lifecycle_configuration, params)
+    def delete_bucket_lifecycle_configuration(, **options)
+      req = build_request(:delete_bucket_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -1212,8 +1212,8 @@ module Aws::S3Control
     #
     # @overload delete_bucket_policy(**params)
     # @param [Hash] params ({})
-    def delete_bucket_policy(params = {}, **options)
-      req = build_request(:delete_bucket_policy, params)
+    def delete_bucket_policy(, **options)
+      req = build_request(:delete_bucket_policy, )
       req.send_request(options)
     end
 
@@ -1284,8 +1284,8 @@ module Aws::S3Control
     #
     # @overload delete_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def delete_bucket_tagging(params = {}, **options)
-      req = build_request(:delete_bucket_tagging, params)
+    def delete_bucket_tagging(, **options)
+      req = build_request(:delete_bucket_tagging, )
       req.send_request(options)
     end
 
@@ -1331,8 +1331,8 @@ module Aws::S3Control
     #
     # @overload delete_job_tagging(**params)
     # @param [Hash] params ({})
-    def delete_job_tagging(params = {}, **options)
-      req = build_request(:delete_job_tagging, params)
+    def delete_job_tagging(, **options)
+      req = build_request(:delete_job_tagging, )
       req.send_request(options)
     end
 
@@ -1367,8 +1367,8 @@ module Aws::S3Control
     #
     # @overload delete_public_access_block(**params)
     # @param [Hash] params ({})
-    def delete_public_access_block(params = {}, **options)
-      req = build_request(:delete_public_access_block, params)
+    def delete_public_access_block(, **options)
+      req = build_request(:delete_public_access_block, )
       req.send_request(options)
     end
 
@@ -1407,8 +1407,8 @@ module Aws::S3Control
     #
     # @overload delete_storage_lens_configuration(**params)
     # @param [Hash] params ({})
-    def delete_storage_lens_configuration(params = {}, **options)
-      req = build_request(:delete_storage_lens_configuration, params)
+    def delete_storage_lens_configuration(, **options)
+      req = build_request(:delete_storage_lens_configuration, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::S3Control
     #
     # @overload delete_storage_lens_configuration_tagging(**params)
     # @param [Hash] params ({})
-    def delete_storage_lens_configuration_tagging(params = {}, **options)
-      req = build_request(:delete_storage_lens_configuration_tagging, params)
+    def delete_storage_lens_configuration_tagging(, **options)
+      req = build_request(:delete_storage_lens_configuration_tagging, )
       req.send_request(options)
     end
 
@@ -1579,8 +1579,8 @@ module Aws::S3Control
     #
     # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, **options)
-      req = build_request(:describe_job, params)
+    def describe_job(, **options)
+      req = build_request(:describe_job, )
       req.send_request(options)
     end
 
@@ -1662,8 +1662,8 @@ module Aws::S3Control
     #
     # @overload get_access_point(**params)
     # @param [Hash] params ({})
-    def get_access_point(params = {}, **options)
-      req = build_request(:get_access_point, params)
+    def get_access_point(, **options)
+      req = build_request(:get_access_point, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::S3Control
     #
     # @overload get_access_point_policy(**params)
     # @param [Hash] params ({})
-    def get_access_point_policy(params = {}, **options)
-      req = build_request(:get_access_point_policy, params)
+    def get_access_point_policy(, **options)
+      req = build_request(:get_access_point_policy, )
       req.send_request(options)
     end
 
@@ -1757,8 +1757,8 @@ module Aws::S3Control
     #
     # @overload get_access_point_policy_status(**params)
     # @param [Hash] params ({})
-    def get_access_point_policy_status(params = {}, **options)
-      req = build_request(:get_access_point_policy_status, params)
+    def get_access_point_policy_status(, **options)
+      req = build_request(:get_access_point_policy_status, )
       req.send_request(options)
     end
 
@@ -1843,8 +1843,8 @@ module Aws::S3Control
     #
     # @overload get_bucket(**params)
     # @param [Hash] params ({})
-    def get_bucket(params = {}, **options)
-      req = build_request(:get_bucket, params)
+    def get_bucket(, **options)
+      req = build_request(:get_bucket, )
       req.send_request(options)
     end
 
@@ -1961,8 +1961,8 @@ module Aws::S3Control
     #
     # @overload get_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_lifecycle_configuration(params = {}, **options)
-      req = build_request(:get_bucket_lifecycle_configuration, params)
+    def get_bucket_lifecycle_configuration(, **options)
+      req = build_request(:get_bucket_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -2057,8 +2057,8 @@ module Aws::S3Control
     #
     # @overload get_bucket_policy(**params)
     # @param [Hash] params ({})
-    def get_bucket_policy(params = {}, **options)
-      req = build_request(:get_bucket_policy, params)
+    def get_bucket_policy(, **options)
+      req = build_request(:get_bucket_policy, )
       req.send_request(options)
     end
 
@@ -2145,8 +2145,8 @@ module Aws::S3Control
     #
     # @overload get_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def get_bucket_tagging(params = {}, **options)
-      req = build_request(:get_bucket_tagging, params)
+    def get_bucket_tagging(, **options)
+      req = build_request(:get_bucket_tagging, )
       req.send_request(options)
     end
 
@@ -2200,8 +2200,8 @@ module Aws::S3Control
     #
     # @overload get_job_tagging(**params)
     # @param [Hash] params ({})
-    def get_job_tagging(params = {}, **options)
-      req = build_request(:get_job_tagging, params)
+    def get_job_tagging(, **options)
+      req = build_request(:get_job_tagging, )
       req.send_request(options)
     end
 
@@ -2245,8 +2245,8 @@ module Aws::S3Control
     #
     # @overload get_public_access_block(**params)
     # @param [Hash] params ({})
-    def get_public_access_block(params = {}, **options)
-      req = build_request(:get_public_access_block, params)
+    def get_public_access_block(, **options)
+      req = build_request(:get_public_access_block, )
       req.send_request(options)
     end
 
@@ -2314,8 +2314,8 @@ module Aws::S3Control
     #
     # @overload get_storage_lens_configuration(**params)
     # @param [Hash] params ({})
-    def get_storage_lens_configuration(params = {}, **options)
-      req = build_request(:get_storage_lens_configuration, params)
+    def get_storage_lens_configuration(, **options)
+      req = build_request(:get_storage_lens_configuration, )
       req.send_request(options)
     end
 
@@ -2362,8 +2362,8 @@ module Aws::S3Control
     #
     # @overload get_storage_lens_configuration_tagging(**params)
     # @param [Hash] params ({})
-    def get_storage_lens_configuration_tagging(params = {}, **options)
-      req = build_request(:get_storage_lens_configuration_tagging, params)
+    def get_storage_lens_configuration_tagging(, **options)
+      req = build_request(:get_storage_lens_configuration_tagging, )
       req.send_request(options)
     end
 
@@ -2461,8 +2461,8 @@ module Aws::S3Control
     #
     # @overload list_access_points(**params)
     # @param [Hash] params ({})
-    def list_access_points(params = {}, **options)
-      req = build_request(:list_access_points, params)
+    def list_access_points(, **options)
+      req = build_request(:list_access_points, )
       req.send_request(options)
     end
 
@@ -2543,8 +2543,8 @@ module Aws::S3Control
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -2606,8 +2606,8 @@ module Aws::S3Control
     #
     # @overload list_regional_buckets(**params)
     # @param [Hash] params ({})
-    def list_regional_buckets(params = {}, **options)
-      req = build_request(:list_regional_buckets, params)
+    def list_regional_buckets(, **options)
+      req = build_request(:list_regional_buckets, )
       req.send_request(options)
     end
 
@@ -2658,8 +2658,8 @@ module Aws::S3Control
     #
     # @overload list_storage_lens_configurations(**params)
     # @param [Hash] params ({})
-    def list_storage_lens_configurations(params = {}, **options)
-      req = build_request(:list_storage_lens_configurations, params)
+    def list_storage_lens_configurations(, **options)
+      req = build_request(:list_storage_lens_configurations, )
       req.send_request(options)
     end
 
@@ -2734,8 +2734,8 @@ module Aws::S3Control
     #
     # @overload put_access_point_policy(**params)
     # @param [Hash] params ({})
-    def put_access_point_policy(params = {}, **options)
-      req = build_request(:put_access_point_policy, params)
+    def put_access_point_policy(, **options)
+      req = build_request(:put_access_point_policy, )
       req.send_request(options)
     end
 
@@ -2848,8 +2848,8 @@ module Aws::S3Control
     #
     # @overload put_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_lifecycle_configuration(params = {}, **options)
-      req = build_request(:put_bucket_lifecycle_configuration, params)
+    def put_bucket_lifecycle_configuration(, **options)
+      req = build_request(:put_bucket_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -2947,8 +2947,8 @@ module Aws::S3Control
     #
     # @overload put_bucket_policy(**params)
     # @param [Hash] params ({})
-    def put_bucket_policy(params = {}, **options)
-      req = build_request(:put_bucket_policy, params)
+    def put_bucket_policy(, **options)
+      req = build_request(:put_bucket_policy, )
       req.send_request(options)
     end
 
@@ -3084,8 +3084,8 @@ module Aws::S3Control
     #
     # @overload put_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def put_bucket_tagging(params = {}, **options)
-      req = build_request(:put_bucket_tagging, params)
+    def put_bucket_tagging(, **options)
+      req = build_request(:put_bucket_tagging, )
       req.send_request(options)
     end
 
@@ -3180,8 +3180,8 @@ module Aws::S3Control
     #
     # @overload put_job_tagging(**params)
     # @param [Hash] params ({})
-    def put_job_tagging(params = {}, **options)
-      req = build_request(:put_job_tagging, params)
+    def put_job_tagging(, **options)
+      req = build_request(:put_job_tagging, )
       req.send_request(options)
     end
 
@@ -3227,8 +3227,8 @@ module Aws::S3Control
     #
     # @overload put_public_access_block(**params)
     # @param [Hash] params ({})
-    def put_public_access_block(params = {}, **options)
-      req = build_request(:put_public_access_block, params)
+    def put_public_access_block(, **options)
+      req = build_request(:put_public_access_block, )
       req.send_request(options)
     end
 
@@ -3335,8 +3335,8 @@ module Aws::S3Control
     #
     # @overload put_storage_lens_configuration(**params)
     # @param [Hash] params ({})
-    def put_storage_lens_configuration(params = {}, **options)
-      req = build_request(:put_storage_lens_configuration, params)
+    def put_storage_lens_configuration(, **options)
+      req = build_request(:put_storage_lens_configuration, )
       req.send_request(options)
     end
 
@@ -3389,8 +3389,8 @@ module Aws::S3Control
     #
     # @overload put_storage_lens_configuration_tagging(**params)
     # @param [Hash] params ({})
-    def put_storage_lens_configuration_tagging(params = {}, **options)
-      req = build_request(:put_storage_lens_configuration_tagging, params)
+    def put_storage_lens_configuration_tagging(, **options)
+      req = build_request(:put_storage_lens_configuration_tagging, )
       req.send_request(options)
     end
 
@@ -3448,8 +3448,8 @@ module Aws::S3Control
     #
     # @overload update_job_priority(**params)
     # @param [Hash] params ({})
-    def update_job_priority(params = {}, **options)
-      req = build_request(:update_job_priority, params)
+    def update_job_priority(, **options)
+      req = build_request(:update_job_priority, )
       req.send_request(options)
     end
 
@@ -3515,8 +3515,8 @@ module Aws::S3Control
     #
     # @overload update_job_status(**params)
     # @param [Hash] params ({})
-    def update_job_status(params = {}, **options)
-      req = build_request(:update_job_status, params)
+    def update_job_status(, **options)
+      req = build_request(:update_job_status, )
       req.send_request(options)
     end
 

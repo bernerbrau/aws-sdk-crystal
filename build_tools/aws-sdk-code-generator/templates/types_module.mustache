@@ -41,6 +41,9 @@ module {{module_name}}
 
     end
     {{/eventstreams}}
+    {{#aliases}}
 
+    alias {{shape_alias}} = {{{shape_type}}}
+    {{/aliases}}
   end
 end

@@ -518,8 +518,8 @@ module Aws::Synthetics
     #
     # @overload create_canary(**params)
     # @param [Hash] params ({})
-    def create_canary(params = {}, **options)
-      req = build_request(:create_canary, params)
+    def create_canary(, **options)
+      req = build_request(:create_canary, )
       req.send_request(options)
     end
 
@@ -570,8 +570,8 @@ module Aws::Synthetics
     #
     # @overload delete_canary(**params)
     # @param [Hash] params ({})
-    def delete_canary(params = {}, **options)
-      req = build_request(:delete_canary, params)
+    def delete_canary(, **options)
+      req = build_request(:delete_canary, )
       req.send_request(options)
     end
 
@@ -645,8 +645,8 @@ module Aws::Synthetics
     #
     # @overload describe_canaries(**params)
     # @param [Hash] params ({})
-    def describe_canaries(params = {}, **options)
-      req = build_request(:describe_canaries, params)
+    def describe_canaries(, **options)
+      req = build_request(:describe_canaries, )
       req.send_request(options)
     end
 
@@ -695,8 +695,8 @@ module Aws::Synthetics
     #
     # @overload describe_canaries_last_run(**params)
     # @param [Hash] params ({})
-    def describe_canaries_last_run(params = {}, **options)
-      req = build_request(:describe_canaries_last_run, params)
+    def describe_canaries_last_run(, **options)
+      req = build_request(:describe_canaries_last_run, )
       req.send_request(options)
     end
 
@@ -744,8 +744,8 @@ module Aws::Synthetics
     #
     # @overload describe_runtime_versions(**params)
     # @param [Hash] params ({})
-    def describe_runtime_versions(params = {}, **options)
-      req = build_request(:describe_runtime_versions, params)
+    def describe_runtime_versions(, **options)
+      req = build_request(:describe_runtime_versions, )
       req.send_request(options)
     end
 
@@ -806,8 +806,8 @@ module Aws::Synthetics
     #
     # @overload get_canary(**params)
     # @param [Hash] params ({})
-    def get_canary(params = {}, **options)
-      req = build_request(:get_canary, params)
+    def get_canary(, **options)
+      req = build_request(:get_canary, )
       req.send_request(options)
     end
 
@@ -858,8 +858,8 @@ module Aws::Synthetics
     #
     # @overload get_canary_runs(**params)
     # @param [Hash] params ({})
-    def get_canary_runs(params = {}, **options)
-      req = build_request(:get_canary_runs, params)
+    def get_canary_runs(, **options)
+      req = build_request(:get_canary_runs, )
       req.send_request(options)
     end
 
@@ -890,8 +890,8 @@ module Aws::Synthetics
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -923,8 +923,8 @@ module Aws::Synthetics
     #
     # @overload start_canary(**params)
     # @param [Hash] params ({})
-    def start_canary(params = {}, **options)
-      req = build_request(:start_canary, params)
+    def start_canary(, **options)
+      req = build_request(:start_canary, )
       req.send_request(options)
     end
 
@@ -957,8 +957,8 @@ module Aws::Synthetics
     #
     # @overload stop_canary(**params)
     # @param [Hash] params ({})
-    def stop_canary(params = {}, **options)
-      req = build_request(:stop_canary, params)
+    def stop_canary(, **options)
+      req = build_request(:stop_canary, )
       req.send_request(options)
     end
 
@@ -1003,8 +1003,8 @@ module Aws::Synthetics
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1032,8 +1032,8 @@ module Aws::Synthetics
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1155,8 +1155,8 @@ module Aws::Synthetics
     #
     # @overload update_canary(**params)
     # @param [Hash] params ({})
-    def update_canary(params = {}, **options)
-      req = build_request(:update_canary, params)
+    def update_canary(, **options)
+      req = build_request(:update_canary, )
       req.send_request(options)
     end
 

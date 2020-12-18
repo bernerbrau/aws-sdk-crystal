@@ -2425,5 +2425,475 @@ module Aws::SNS
     #
     class UntagResourceResponse < Aws::EmptyStructure; end
 
+    alias ActionsList = Array(action)
+
+    alias AddPermissionInput = NamedTuple(
+      "TopicArn" : topicARN,
+      "Label" : label,
+      "AWSAccountId" : DelegatesList,
+      "ActionName" : ActionsList
+    )
+
+    alias AmazonResourceName = String
+
+    alias AuthorizationErrorException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias Binary = String | Array(UInt8) | IO
+
+    alias CheckIfPhoneNumberIsOptedOutInput = NamedTuple(
+      "phoneNumber" : PhoneNumber
+    )
+
+    alias CheckIfPhoneNumberIsOptedOutResponse = NamedTuple(
+      "isOptedOut" : (boolean)?
+    )
+
+    alias ConcurrentAccessException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias ConfirmSubscriptionInput = NamedTuple(
+      "TopicArn" : topicARN,
+      "Token" : token,
+      "AuthenticateOnUnsubscribe" : (authenticateOnUnsubscribe)?
+    )
+
+    alias ConfirmSubscriptionResponse = NamedTuple(
+      "SubscriptionArn" : (subscriptionARN)?
+    )
+
+    alias CreateEndpointResponse = NamedTuple(
+      "EndpointArn" : (String)?
+    )
+
+    alias CreatePlatformApplicationInput = NamedTuple(
+      "Name" : String,
+      "Platform" : String,
+      "Attributes" : MapStringToString
+    )
+
+    alias CreatePlatformApplicationResponse = NamedTuple(
+      "PlatformApplicationArn" : (String)?
+    )
+
+    alias CreatePlatformEndpointInput = NamedTuple(
+      "PlatformApplicationArn" : String,
+      "Token" : String,
+      "CustomUserData" : (String)?,
+      "Attributes" : (MapStringToString)?
+    )
+
+    alias CreateTopicInput = NamedTuple(
+      "Name" : topicName,
+      "Attributes" : (TopicAttributesMap)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateTopicResponse = NamedTuple(
+      "TopicArn" : (topicARN)?
+    )
+
+    alias DelegatesList = Array(delegate)
+
+    alias DeleteEndpointInput = NamedTuple(
+      "EndpointArn" : String
+    )
+
+    alias DeletePlatformApplicationInput = NamedTuple(
+      "PlatformApplicationArn" : String
+    )
+
+    alias DeleteTopicInput = NamedTuple(
+      "TopicArn" : topicARN
+    )
+
+    alias Endpoint = NamedTuple(
+      "EndpointArn" : (String)?,
+      "Attributes" : (MapStringToString)?
+    )
+
+    alias EndpointDisabledException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias FilterPolicyLimitExceededException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias GetEndpointAttributesInput = NamedTuple(
+      "EndpointArn" : String
+    )
+
+    alias GetEndpointAttributesResponse = NamedTuple(
+      "Attributes" : (MapStringToString)?
+    )
+
+    alias GetPlatformApplicationAttributesInput = NamedTuple(
+      "PlatformApplicationArn" : String
+    )
+
+    alias GetPlatformApplicationAttributesResponse = NamedTuple(
+      "Attributes" : (MapStringToString)?
+    )
+
+    alias GetSMSAttributesInput = NamedTuple(
+      "attributes" : (ListString)?
+    )
+
+    alias GetSMSAttributesResponse = NamedTuple(
+      "attributes" : (MapStringToString)?
+    )
+
+    alias GetSubscriptionAttributesInput = NamedTuple(
+      "SubscriptionArn" : subscriptionARN
+    )
+
+    alias GetSubscriptionAttributesResponse = NamedTuple(
+      "Attributes" : (SubscriptionAttributesMap)?
+    )
+
+    alias GetTopicAttributesInput = NamedTuple(
+      "TopicArn" : topicARN
+    )
+
+    alias GetTopicAttributesResponse = NamedTuple(
+      "Attributes" : (TopicAttributesMap)?
+    )
+
+    alias InternalErrorException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias InvalidSecurityException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias KMSAccessDeniedException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias KMSDisabledException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias KMSInvalidStateException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias KMSNotFoundException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias KMSOptInRequired = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias KMSThrottlingException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias ListEndpointsByPlatformApplicationInput = NamedTuple(
+      "PlatformApplicationArn" : String,
+      "NextToken" : (String)?
+    )
+
+    alias ListEndpointsByPlatformApplicationResponse = NamedTuple(
+      "Endpoints" : (ListOfEndpoints)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListOfEndpoints = Array(Endpoint)
+
+    alias ListOfPlatformApplications = Array(PlatformApplication)
+
+    alias ListPhoneNumbersOptedOutInput = NamedTuple(
+      "nextToken" : (string)?
+    )
+
+    alias ListPhoneNumbersOptedOutResponse = NamedTuple(
+      "phoneNumbers" : (PhoneNumberList)?,
+      "nextToken" : (string)?
+    )
+
+    alias ListPlatformApplicationsInput = NamedTuple(
+      "NextToken" : (String)?
+    )
+
+    alias ListPlatformApplicationsResponse = NamedTuple(
+      "PlatformApplications" : (ListOfPlatformApplications)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListString = Array(String)
+
+    alias ListSubscriptionsByTopicInput = NamedTuple(
+      "TopicArn" : topicARN,
+      "NextToken" : (nextToken)?
+    )
+
+    alias ListSubscriptionsByTopicResponse = NamedTuple(
+      "Subscriptions" : (SubscriptionsList)?,
+      "NextToken" : (nextToken)?
+    )
+
+    alias ListSubscriptionsInput = NamedTuple(
+      "NextToken" : (nextToken)?
+    )
+
+    alias ListSubscriptionsResponse = NamedTuple(
+      "Subscriptions" : (SubscriptionsList)?,
+      "NextToken" : (nextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListTopicsInput = NamedTuple(
+      "NextToken" : (nextToken)?
+    )
+
+    alias ListTopicsResponse = NamedTuple(
+      "Topics" : (TopicsList)?,
+      "NextToken" : (nextToken)?
+    )
+
+    alias MapStringToString = Hash(String,String)
+
+    alias MessageAttributeMap = Hash(String,MessageAttributeValue)
+
+    alias MessageAttributeValue = NamedTuple(
+      "DataType" : String,
+      "StringValue" : (String)?,
+      "BinaryValue" : (Binary)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias OptInPhoneNumberInput = NamedTuple(
+      "phoneNumber" : PhoneNumber
+    )
+
+    alias OptInPhoneNumberResponse = NamedTuple(
+      
+    )
+
+    alias PhoneNumber = String
+
+    alias PhoneNumberList = Array(PhoneNumber)
+
+    alias PlatformApplication = NamedTuple(
+      "PlatformApplicationArn" : (String)?,
+      "Attributes" : (MapStringToString)?
+    )
+
+    alias PlatformApplicationDisabledException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias PublishInput = NamedTuple(
+      "TopicArn" : (topicARN)?,
+      "TargetArn" : (String)?,
+      "PhoneNumber" : (String)?,
+      "Message" : message,
+      "Subject" : (subject)?,
+      "MessageStructure" : (messageStructure)?,
+      "MessageAttributes" : (MessageAttributeMap)?,
+      "MessageDeduplicationId" : (String)?,
+      "MessageGroupId" : (String)?
+    )
+
+    alias PublishResponse = NamedTuple(
+      "MessageId" : (messageId)?,
+      "SequenceNumber" : (String)?
+    )
+
+    alias RemovePermissionInput = NamedTuple(
+      "TopicArn" : topicARN,
+      "Label" : label
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias SetEndpointAttributesInput = NamedTuple(
+      "EndpointArn" : String,
+      "Attributes" : MapStringToString
+    )
+
+    alias SetPlatformApplicationAttributesInput = NamedTuple(
+      "PlatformApplicationArn" : String,
+      "Attributes" : MapStringToString
+    )
+
+    alias SetSMSAttributesInput = NamedTuple(
+      "attributes" : MapStringToString
+    )
+
+    alias SetSMSAttributesResponse = NamedTuple(
+      
+    )
+
+    alias SetSubscriptionAttributesInput = NamedTuple(
+      "SubscriptionArn" : subscriptionARN,
+      "AttributeName" : attributeName,
+      "AttributeValue" : (attributeValue)?
+    )
+
+    alias SetTopicAttributesInput = NamedTuple(
+      "TopicArn" : topicARN,
+      "AttributeName" : attributeName,
+      "AttributeValue" : (attributeValue)?
+    )
+
+    alias StaleTagException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias String = String
+
+    alias SubscribeInput = NamedTuple(
+      "TopicArn" : topicARN,
+      "Protocol" : protocol,
+      "Endpoint" : (endpoint)?,
+      "Attributes" : (SubscriptionAttributesMap)?,
+      "ReturnSubscriptionArn" : (boolean)?
+    )
+
+    alias SubscribeResponse = NamedTuple(
+      "SubscriptionArn" : (subscriptionARN)?
+    )
+
+    alias Subscription = NamedTuple(
+      "SubscriptionArn" : (subscriptionARN)?,
+      "Owner" : (account)?,
+      "Protocol" : (protocol)?,
+      "Endpoint" : (endpoint)?,
+      "TopicArn" : (topicARN)?
+    )
+
+    alias SubscriptionAttributesMap = Hash(attributeName,attributeValue)
+
+    alias SubscriptionLimitExceededException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias SubscriptionsList = Array(Subscription)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagLimitExceededException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagPolicyException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottledException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias Topic = NamedTuple(
+      "TopicArn" : (topicARN)?
+    )
+
+    alias TopicAttributesMap = Hash(attributeName,attributeValue)
+
+    alias TopicLimitExceededException = NamedTuple(
+      "message" : (string)?
+    )
+
+    alias TopicsList = Array(Topic)
+
+    alias UnsubscribeInput = NamedTuple(
+      "SubscriptionArn" : subscriptionARN
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias account = String
+
+    alias action = String
+
+    alias attributeName = String
+
+    alias attributeValue = String
+
+    alias authenticateOnUnsubscribe = String
+
+    alias boolean = Bool
+
+    alias delegate = String
+
+    alias endpoint = String
+
+    alias label = String
+
+    alias message = String
+
+    alias messageId = String
+
+    alias messageStructure = String
+
+    alias nextToken = String
+
+    alias protocol = String
+
+    alias string = String
+
+    alias subject = String
+
+    alias subscriptionARN = String
+
+    alias token = String
+
+    alias topicARN = String
+
+    alias topicName = String
   end
 end

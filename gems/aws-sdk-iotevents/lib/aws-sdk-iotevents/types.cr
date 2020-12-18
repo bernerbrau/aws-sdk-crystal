@@ -4761,5 +4761,556 @@ module Aws::IoTEvents
       include Aws::Structure
     end
 
+    alias Action = NamedTuple(
+      "setVariable" : (SetVariableAction)?,
+      "sns" : (SNSTopicPublishAction)?,
+      "iotTopicPublish" : (IotTopicPublishAction)?,
+      "setTimer" : (SetTimerAction)?,
+      "clearTimer" : (ClearTimerAction)?,
+      "resetTimer" : (ResetTimerAction)?,
+      "lambda" : (LambdaAction)?,
+      "iotEvents" : (IotEventsAction)?,
+      "sqs" : (SqsAction)?,
+      "firehose" : (FirehoseAction)?,
+      "dynamoDB" : (DynamoDBAction)?,
+      "dynamoDBv2" : (DynamoDBv2Action)?,
+      "iotSiteWise" : (IotSiteWiseAction)?
+    )
+
+    alias Actions = Array(Action)
+
+    alias AmazonResourceName = String
+
+    alias AssetId = String
+
+    alias AssetPropertyAlias = String
+
+    alias AssetPropertyBooleanValue = String
+
+    alias AssetPropertyDoubleValue = String
+
+    alias AssetPropertyEntryId = String
+
+    alias AssetPropertyId = String
+
+    alias AssetPropertyIntegerValue = String
+
+    alias AssetPropertyOffsetInNanos = String
+
+    alias AssetPropertyQuality = String
+
+    alias AssetPropertyStringValue = String
+
+    alias AssetPropertyTimeInSeconds = String
+
+    alias AssetPropertyTimestamp = NamedTuple(
+      "timeInSeconds" : AssetPropertyTimeInSeconds,
+      "offsetInNanos" : (AssetPropertyOffsetInNanos)?
+    )
+
+    alias AssetPropertyValue = NamedTuple(
+      "value" : AssetPropertyVariant,
+      "timestamp" : (AssetPropertyTimestamp)?,
+      "quality" : (AssetPropertyQuality)?
+    )
+
+    alias AssetPropertyVariant = NamedTuple(
+      "stringValue" : (AssetPropertyStringValue)?,
+      "integerValue" : (AssetPropertyIntegerValue)?,
+      "doubleValue" : (AssetPropertyDoubleValue)?,
+      "booleanValue" : (AssetPropertyBooleanValue)?
+    )
+
+    alias Attribute = NamedTuple(
+      "jsonPath" : AttributeJsonPath
+    )
+
+    alias AttributeJsonPath = String
+
+    alias Attributes = Array(Attribute)
+
+    alias ClearTimerAction = NamedTuple(
+      "timerName" : TimerName
+    )
+
+    alias Condition = String
+
+    alias ContentExpression = String
+
+    alias CreateDetectorModelRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "detectorModelDefinition" : DetectorModelDefinition,
+      "detectorModelDescription" : (DetectorModelDescription)?,
+      "key" : (AttributeJsonPath)?,
+      "roleArn" : AmazonResourceName,
+      "tags" : (Tags)?,
+      "evaluationMethod" : (EvaluationMethod)?
+    )
+
+    alias CreateDetectorModelResponse = NamedTuple(
+      "detectorModelConfiguration" : (DetectorModelConfiguration)?
+    )
+
+    alias CreateInputRequest = NamedTuple(
+      "inputName" : InputName,
+      "inputDescription" : (InputDescription)?,
+      "inputDefinition" : InputDefinition,
+      "tags" : (Tags)?
+    )
+
+    alias CreateInputResponse = NamedTuple(
+      "inputConfiguration" : (InputConfiguration)?
+    )
+
+    alias DeleteDetectorModelRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName
+    )
+
+    alias DeleteDetectorModelResponse = NamedTuple(
+      
+    )
+
+    alias DeleteInputRequest = NamedTuple(
+      "inputName" : InputName
+    )
+
+    alias DeleteInputResponse = NamedTuple(
+      
+    )
+
+    alias DeliveryStreamName = String
+
+    alias DescribeDetectorModelRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "detectorModelVersion" : (DetectorModelVersion)?
+    )
+
+    alias DescribeDetectorModelResponse = NamedTuple(
+      "detectorModel" : (DetectorModel)?
+    )
+
+    alias DescribeInputRequest = NamedTuple(
+      "inputName" : InputName
+    )
+
+    alias DescribeInputResponse = NamedTuple(
+      "input" : (Input)?
+    )
+
+    alias DescribeLoggingOptionsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeLoggingOptionsResponse = NamedTuple(
+      "loggingOptions" : (LoggingOptions)?
+    )
+
+    alias DetectorDebugOption = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "keyValue" : (KeyValue)?
+    )
+
+    alias DetectorDebugOptions = Array(DetectorDebugOption)
+
+    alias DetectorModel = NamedTuple(
+      "detectorModelDefinition" : (DetectorModelDefinition)?,
+      "detectorModelConfiguration" : (DetectorModelConfiguration)?
+    )
+
+    alias DetectorModelArn = String
+
+    alias DetectorModelConfiguration = NamedTuple(
+      "detectorModelName" : (DetectorModelName)?,
+      "detectorModelVersion" : (DetectorModelVersion)?,
+      "detectorModelDescription" : (DetectorModelDescription)?,
+      "detectorModelArn" : (DetectorModelArn)?,
+      "roleArn" : (AmazonResourceName)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "status" : (DetectorModelVersionStatus)?,
+      "key" : (AttributeJsonPath)?,
+      "evaluationMethod" : (EvaluationMethod)?
+    )
+
+    alias DetectorModelDefinition = NamedTuple(
+      "states" : States,
+      "initialStateName" : StateName
+    )
+
+    alias DetectorModelDescription = String
+
+    alias DetectorModelName = String
+
+    alias DetectorModelSummaries = Array(DetectorModelSummary)
+
+    alias DetectorModelSummary = NamedTuple(
+      "detectorModelName" : (DetectorModelName)?,
+      "detectorModelDescription" : (DetectorModelDescription)?,
+      "creationTime" : (Timestamp)?
+    )
+
+    alias DetectorModelVersion = String
+
+    alias DetectorModelVersionStatus = String
+
+    alias DetectorModelVersionSummaries = Array(DetectorModelVersionSummary)
+
+    alias DetectorModelVersionSummary = NamedTuple(
+      "detectorModelName" : (DetectorModelName)?,
+      "detectorModelVersion" : (DetectorModelVersion)?,
+      "detectorModelArn" : (DetectorModelArn)?,
+      "roleArn" : (AmazonResourceName)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "status" : (DetectorModelVersionStatus)?,
+      "evaluationMethod" : (EvaluationMethod)?
+    )
+
+    alias DynamoDBAction = NamedTuple(
+      "hashKeyType" : (DynamoKeyType)?,
+      "hashKeyField" : DynamoKeyField,
+      "hashKeyValue" : DynamoKeyValue,
+      "rangeKeyType" : (DynamoKeyType)?,
+      "rangeKeyField" : (DynamoKeyField)?,
+      "rangeKeyValue" : (DynamoKeyValue)?,
+      "operation" : (DynamoOperation)?,
+      "payloadField" : (DynamoKeyField)?,
+      "tableName" : DynamoTableName,
+      "payload" : (Payload)?
+    )
+
+    alias DynamoDBv2Action = NamedTuple(
+      "tableName" : DynamoTableName,
+      "payload" : (Payload)?
+    )
+
+    alias DynamoKeyField = String
+
+    alias DynamoKeyType = String
+
+    alias DynamoKeyValue = String
+
+    alias DynamoOperation = String
+
+    alias DynamoTableName = String
+
+    alias EvaluationMethod = String
+
+    alias Event = NamedTuple(
+      "eventName" : EventName,
+      "condition" : (Condition)?,
+      "actions" : (Actions)?
+    )
+
+    alias EventName = String
+
+    alias Events = Array(Event)
+
+    alias FirehoseAction = NamedTuple(
+      "deliveryStreamName" : DeliveryStreamName,
+      "separator" : (FirehoseSeparator)?,
+      "payload" : (Payload)?
+    )
+
+    alias FirehoseSeparator = String
+
+    alias Input = NamedTuple(
+      "inputConfiguration" : (InputConfiguration)?,
+      "inputDefinition" : (InputDefinition)?
+    )
+
+    alias InputArn = String
+
+    alias InputConfiguration = NamedTuple(
+      "inputName" : InputName,
+      "inputDescription" : (InputDescription)?,
+      "inputArn" : InputArn,
+      "creationTime" : Timestamp,
+      "lastUpdateTime" : Timestamp,
+      "status" : InputStatus
+    )
+
+    alias InputDefinition = NamedTuple(
+      "attributes" : Attributes
+    )
+
+    alias InputDescription = String
+
+    alias InputName = String
+
+    alias InputStatus = String
+
+    alias InputSummaries = Array(InputSummary)
+
+    alias InputSummary = NamedTuple(
+      "inputName" : (InputName)?,
+      "inputDescription" : (InputDescription)?,
+      "inputArn" : (InputArn)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "status" : (InputStatus)?
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias IotEventsAction = NamedTuple(
+      "inputName" : InputName,
+      "payload" : (Payload)?
+    )
+
+    alias IotSiteWiseAction = NamedTuple(
+      "entryId" : (AssetPropertyEntryId)?,
+      "assetId" : (AssetId)?,
+      "propertyId" : (AssetPropertyId)?,
+      "propertyAlias" : (AssetPropertyAlias)?,
+      "propertyValue" : AssetPropertyValue
+    )
+
+    alias IotTopicPublishAction = NamedTuple(
+      "mqttTopic" : MQTTTopic,
+      "payload" : (Payload)?
+    )
+
+    alias KeyValue = String
+
+    alias LambdaAction = NamedTuple(
+      "functionArn" : AmazonResourceName,
+      "payload" : (Payload)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ListDetectorModelVersionsRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDetectorModelVersionsResponse = NamedTuple(
+      "detectorModelVersionSummaries" : (DetectorModelVersionSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDetectorModelsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDetectorModelsResponse = NamedTuple(
+      "detectorModelSummaries" : (DetectorModelSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListInputsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListInputsResponse = NamedTuple(
+      "inputSummaries" : (InputSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (Tags)?
+    )
+
+    alias LoggingEnabled = Bool
+
+    alias LoggingLevel = String
+
+    alias LoggingOptions = NamedTuple(
+      "roleArn" : AmazonResourceName,
+      "level" : LoggingLevel,
+      "enabled" : LoggingEnabled,
+      "detectorDebugOptions" : (DetectorDebugOptions)?
+    )
+
+    alias MQTTTopic = String
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias OnEnterLifecycle = NamedTuple(
+      "events" : (Events)?
+    )
+
+    alias OnExitLifecycle = NamedTuple(
+      "events" : (Events)?
+    )
+
+    alias OnInputLifecycle = NamedTuple(
+      "events" : (Events)?,
+      "transitionEvents" : (TransitionEvents)?
+    )
+
+    alias Payload = NamedTuple(
+      "contentExpression" : ContentExpression,
+      "type" : PayloadType
+    )
+
+    alias PayloadType = String
+
+    alias PutLoggingOptionsRequest = NamedTuple(
+      "loggingOptions" : LoggingOptions
+    )
+
+    alias QueueUrl = String
+
+    alias ResetTimerAction = NamedTuple(
+      "timerName" : TimerName
+    )
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (errorMessage)?,
+      "resourceId" : (resourceId)?,
+      "resourceArn" : (resourceArn)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias SNSTopicPublishAction = NamedTuple(
+      "targetArn" : AmazonResourceName,
+      "payload" : (Payload)?
+    )
+
+    alias Seconds = Int32
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias SetTimerAction = NamedTuple(
+      "timerName" : TimerName,
+      "seconds" : (Seconds)?,
+      "durationExpression" : (VariableValue)?
+    )
+
+    alias SetVariableAction = NamedTuple(
+      "variableName" : VariableName,
+      "value" : VariableValue
+    )
+
+    alias SqsAction = NamedTuple(
+      "queueUrl" : QueueUrl,
+      "useBase64" : (UseBase64)?,
+      "payload" : (Payload)?
+    )
+
+    alias State = NamedTuple(
+      "stateName" : StateName,
+      "onInput" : (OnInputLifecycle)?,
+      "onEnter" : (OnEnterLifecycle)?,
+      "onExit" : (OnExitLifecycle)?
+    )
+
+    alias StateName = String
+
+    alias States = Array(State)
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias TimerName = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TransitionEvent = NamedTuple(
+      "eventName" : EventName,
+      "condition" : Condition,
+      "actions" : (Actions)?,
+      "nextState" : StateName
+    )
+
+    alias TransitionEvents = Array(TransitionEvent)
+
+    alias UnsupportedOperationException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDetectorModelRequest = NamedTuple(
+      "detectorModelName" : DetectorModelName,
+      "detectorModelDefinition" : DetectorModelDefinition,
+      "detectorModelDescription" : (DetectorModelDescription)?,
+      "roleArn" : AmazonResourceName,
+      "evaluationMethod" : (EvaluationMethod)?
+    )
+
+    alias UpdateDetectorModelResponse = NamedTuple(
+      "detectorModelConfiguration" : (DetectorModelConfiguration)?
+    )
+
+    alias UpdateInputRequest = NamedTuple(
+      "inputName" : InputName,
+      "inputDescription" : (InputDescription)?,
+      "inputDefinition" : InputDefinition
+    )
+
+    alias UpdateInputResponse = NamedTuple(
+      "inputConfiguration" : (InputConfiguration)?
+    )
+
+    alias UseBase64 = Bool
+
+    alias VariableName = String
+
+    alias VariableValue = String
+
+    alias errorMessage = String
+
+    alias resourceArn = String
+
+    alias resourceId = String
   end
 end

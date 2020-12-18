@@ -2435,5 +2435,549 @@ module Aws::ManagedBlockchain
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      
+    )
+
+    alias ApprovalThresholdPolicy = NamedTuple(
+      "ThresholdPercentage" : (ThresholdPercentageInt)?,
+      "ProposalDurationInHours" : (ProposalDurationInt)?,
+      "ThresholdComparator" : (ThresholdComparator)?
+    )
+
+    alias AvailabilityZoneString = String
+
+    alias ClientRequestTokenString = String
+
+    alias CreateMemberInput = NamedTuple(
+      "ClientRequestToken" : ClientRequestTokenString,
+      "InvitationId" : ResourceIdString,
+      "NetworkId" : ResourceIdString,
+      "MemberConfiguration" : MemberConfiguration
+    )
+
+    alias CreateMemberOutput = NamedTuple(
+      "MemberId" : (ResourceIdString)?
+    )
+
+    alias CreateNetworkInput = NamedTuple(
+      "ClientRequestToken" : ClientRequestTokenString,
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "Framework" : Framework,
+      "FrameworkVersion" : FrameworkVersionString,
+      "FrameworkConfiguration" : (NetworkFrameworkConfiguration)?,
+      "VotingPolicy" : VotingPolicy,
+      "MemberConfiguration" : MemberConfiguration
+    )
+
+    alias CreateNetworkOutput = NamedTuple(
+      "NetworkId" : (ResourceIdString)?,
+      "MemberId" : (ResourceIdString)?
+    )
+
+    alias CreateNodeInput = NamedTuple(
+      "ClientRequestToken" : ClientRequestTokenString,
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "NodeConfiguration" : NodeConfiguration
+    )
+
+    alias CreateNodeOutput = NamedTuple(
+      "NodeId" : (ResourceIdString)?
+    )
+
+    alias CreateProposalInput = NamedTuple(
+      "ClientRequestToken" : ClientRequestTokenString,
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "Actions" : ProposalActions,
+      "Description" : (DescriptionString)?
+    )
+
+    alias CreateProposalOutput = NamedTuple(
+      "ProposalId" : (ResourceIdString)?
+    )
+
+    alias DeleteMemberInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString
+    )
+
+    alias DeleteMemberOutput = NamedTuple(
+      
+    )
+
+    alias DeleteNodeInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "NodeId" : ResourceIdString
+    )
+
+    alias DeleteNodeOutput = NamedTuple(
+      
+    )
+
+    alias DescriptionString = String
+
+    alias Edition = String
+
+    alias Enabled = Bool
+
+    alias Framework = String
+
+    alias FrameworkVersionString = String
+
+    alias GetMemberInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString
+    )
+
+    alias GetMemberOutput = NamedTuple(
+      "Member" : (Member)?
+    )
+
+    alias GetNetworkInput = NamedTuple(
+      "NetworkId" : ResourceIdString
+    )
+
+    alias GetNetworkOutput = NamedTuple(
+      "Network" : (Network)?
+    )
+
+    alias GetNodeInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "NodeId" : ResourceIdString
+    )
+
+    alias GetNodeOutput = NamedTuple(
+      "Node" : (Node)?
+    )
+
+    alias GetProposalInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "ProposalId" : ResourceIdString
+    )
+
+    alias GetProposalOutput = NamedTuple(
+      "Proposal" : (Proposal)?
+    )
+
+    alias IllegalActionException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InstanceTypeString = String
+
+    alias InternalServiceErrorException = NamedTuple(
+      
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Invitation = NamedTuple(
+      "InvitationId" : (ResourceIdString)?,
+      "CreationDate" : (Timestamp)?,
+      "ExpirationDate" : (Timestamp)?,
+      "Status" : (InvitationStatus)?,
+      "NetworkSummary" : (NetworkSummary)?
+    )
+
+    alias InvitationList = Array(Invitation)
+
+    alias InvitationStatus = String
+
+    alias InviteAction = NamedTuple(
+      "Principal" : PrincipalString
+    )
+
+    alias InviteActionList = Array(InviteAction)
+
+    alias IsOwned = Bool
+
+    alias ListInvitationsInput = NamedTuple(
+      "MaxResults" : (ProposalListMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListInvitationsOutput = NamedTuple(
+      "Invitations" : (InvitationList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListMembersInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "Name" : (String)?,
+      "Status" : (MemberStatus)?,
+      "IsOwned" : (IsOwned)?,
+      "MaxResults" : (MemberListMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListMembersOutput = NamedTuple(
+      "Members" : (MemberSummaryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListNetworksInput = NamedTuple(
+      "Name" : (String)?,
+      "Framework" : (Framework)?,
+      "Status" : (NetworkStatus)?,
+      "MaxResults" : (NetworkListMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListNetworksOutput = NamedTuple(
+      "Networks" : (NetworkSummaryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListNodesInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "Status" : (NodeStatus)?,
+      "MaxResults" : (NodeListMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListNodesOutput = NamedTuple(
+      "Nodes" : (NodeSummaryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListProposalVotesInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "ProposalId" : ResourceIdString,
+      "MaxResults" : (ProposalListMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListProposalVotesOutput = NamedTuple(
+      "ProposalVotes" : (ProposalVoteList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListProposalsInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MaxResults" : (ProposalListMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListProposalsOutput = NamedTuple(
+      "Proposals" : (ProposalSummaryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias LogConfiguration = NamedTuple(
+      "Enabled" : (Enabled)?
+    )
+
+    alias LogConfigurations = NamedTuple(
+      "Cloudwatch" : (LogConfiguration)?
+    )
+
+    alias Member = NamedTuple(
+      "NetworkId" : (ResourceIdString)?,
+      "Id" : (ResourceIdString)?,
+      "Name" : (NetworkMemberNameString)?,
+      "Description" : (DescriptionString)?,
+      "FrameworkAttributes" : (MemberFrameworkAttributes)?,
+      "LogPublishingConfiguration" : (MemberLogPublishingConfiguration)?,
+      "Status" : (MemberStatus)?,
+      "CreationDate" : (Timestamp)?
+    )
+
+    alias MemberConfiguration = NamedTuple(
+      "Name" : NetworkMemberNameString,
+      "Description" : (DescriptionString)?,
+      "FrameworkConfiguration" : MemberFrameworkConfiguration,
+      "LogPublishingConfiguration" : (MemberLogPublishingConfiguration)?
+    )
+
+    alias MemberFabricAttributes = NamedTuple(
+      "AdminUsername" : (UsernameString)?,
+      "CaEndpoint" : (String)?
+    )
+
+    alias MemberFabricConfiguration = NamedTuple(
+      "AdminUsername" : UsernameString,
+      "AdminPassword" : PasswordString
+    )
+
+    alias MemberFabricLogPublishingConfiguration = NamedTuple(
+      "CaLogs" : (LogConfigurations)?
+    )
+
+    alias MemberFrameworkAttributes = NamedTuple(
+      "Fabric" : (MemberFabricAttributes)?
+    )
+
+    alias MemberFrameworkConfiguration = NamedTuple(
+      "Fabric" : (MemberFabricConfiguration)?
+    )
+
+    alias MemberListMaxResults = Int32
+
+    alias MemberLogPublishingConfiguration = NamedTuple(
+      "Fabric" : (MemberFabricLogPublishingConfiguration)?
+    )
+
+    alias MemberStatus = String
+
+    alias MemberSummary = NamedTuple(
+      "Id" : (ResourceIdString)?,
+      "Name" : (NetworkMemberNameString)?,
+      "Description" : (DescriptionString)?,
+      "Status" : (MemberStatus)?,
+      "CreationDate" : (Timestamp)?,
+      "IsOwned" : (IsOwned)?
+    )
+
+    alias MemberSummaryList = Array(MemberSummary)
+
+    alias NameString = String
+
+    alias Network = NamedTuple(
+      "Id" : (ResourceIdString)?,
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Framework" : (Framework)?,
+      "FrameworkVersion" : (FrameworkVersionString)?,
+      "FrameworkAttributes" : (NetworkFrameworkAttributes)?,
+      "VpcEndpointServiceName" : (String)?,
+      "VotingPolicy" : (VotingPolicy)?,
+      "Status" : (NetworkStatus)?,
+      "CreationDate" : (Timestamp)?
+    )
+
+    alias NetworkFabricAttributes = NamedTuple(
+      "OrderingServiceEndpoint" : (String)?,
+      "Edition" : (Edition)?
+    )
+
+    alias NetworkFabricConfiguration = NamedTuple(
+      "Edition" : Edition
+    )
+
+    alias NetworkFrameworkAttributes = NamedTuple(
+      "Fabric" : (NetworkFabricAttributes)?
+    )
+
+    alias NetworkFrameworkConfiguration = NamedTuple(
+      "Fabric" : (NetworkFabricConfiguration)?
+    )
+
+    alias NetworkListMaxResults = Int32
+
+    alias NetworkMemberNameString = String
+
+    alias NetworkStatus = String
+
+    alias NetworkSummary = NamedTuple(
+      "Id" : (ResourceIdString)?,
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Framework" : (Framework)?,
+      "FrameworkVersion" : (FrameworkVersionString)?,
+      "Status" : (NetworkStatus)?,
+      "CreationDate" : (Timestamp)?
+    )
+
+    alias NetworkSummaryList = Array(NetworkSummary)
+
+    alias Node = NamedTuple(
+      "NetworkId" : (ResourceIdString)?,
+      "MemberId" : (ResourceIdString)?,
+      "Id" : (ResourceIdString)?,
+      "InstanceType" : (InstanceTypeString)?,
+      "AvailabilityZone" : (AvailabilityZoneString)?,
+      "FrameworkAttributes" : (NodeFrameworkAttributes)?,
+      "LogPublishingConfiguration" : (NodeLogPublishingConfiguration)?,
+      "StateDB" : (StateDBType)?,
+      "Status" : (NodeStatus)?,
+      "CreationDate" : (Timestamp)?
+    )
+
+    alias NodeConfiguration = NamedTuple(
+      "InstanceType" : InstanceTypeString,
+      "AvailabilityZone" : AvailabilityZoneString,
+      "LogPublishingConfiguration" : (NodeLogPublishingConfiguration)?,
+      "StateDB" : (StateDBType)?
+    )
+
+    alias NodeFabricAttributes = NamedTuple(
+      "PeerEndpoint" : (String)?,
+      "PeerEventEndpoint" : (String)?
+    )
+
+    alias NodeFabricLogPublishingConfiguration = NamedTuple(
+      "ChaincodeLogs" : (LogConfigurations)?,
+      "PeerLogs" : (LogConfigurations)?
+    )
+
+    alias NodeFrameworkAttributes = NamedTuple(
+      "Fabric" : (NodeFabricAttributes)?
+    )
+
+    alias NodeListMaxResults = Int32
+
+    alias NodeLogPublishingConfiguration = NamedTuple(
+      "Fabric" : (NodeFabricLogPublishingConfiguration)?
+    )
+
+    alias NodeStatus = String
+
+    alias NodeSummary = NamedTuple(
+      "Id" : (ResourceIdString)?,
+      "Status" : (NodeStatus)?,
+      "CreationDate" : (Timestamp)?,
+      "AvailabilityZone" : (AvailabilityZoneString)?,
+      "InstanceType" : (InstanceTypeString)?
+    )
+
+    alias NodeSummaryList = Array(NodeSummary)
+
+    alias PaginationToken = String
+
+    alias PasswordString = String
+
+    alias PrincipalString = String
+
+    alias Proposal = NamedTuple(
+      "ProposalId" : (ResourceIdString)?,
+      "NetworkId" : (ResourceIdString)?,
+      "Description" : (DescriptionString)?,
+      "Actions" : (ProposalActions)?,
+      "ProposedByMemberId" : (ResourceIdString)?,
+      "ProposedByMemberName" : (NetworkMemberNameString)?,
+      "Status" : (ProposalStatus)?,
+      "CreationDate" : (Timestamp)?,
+      "ExpirationDate" : (Timestamp)?,
+      "YesVoteCount" : (VoteCount)?,
+      "NoVoteCount" : (VoteCount)?,
+      "OutstandingVoteCount" : (VoteCount)?
+    )
+
+    alias ProposalActions = NamedTuple(
+      "Invitations" : (InviteActionList)?,
+      "Removals" : (RemoveActionList)?
+    )
+
+    alias ProposalDurationInt = Int32
+
+    alias ProposalListMaxResults = Int32
+
+    alias ProposalStatus = String
+
+    alias ProposalSummary = NamedTuple(
+      "ProposalId" : (ResourceIdString)?,
+      "Description" : (DescriptionString)?,
+      "ProposedByMemberId" : (ResourceIdString)?,
+      "ProposedByMemberName" : (NetworkMemberNameString)?,
+      "Status" : (ProposalStatus)?,
+      "CreationDate" : (Timestamp)?,
+      "ExpirationDate" : (Timestamp)?
+    )
+
+    alias ProposalSummaryList = Array(ProposalSummary)
+
+    alias ProposalVoteList = Array(VoteSummary)
+
+    alias RejectInvitationInput = NamedTuple(
+      "InvitationId" : ResourceIdString
+    )
+
+    alias RejectInvitationOutput = NamedTuple(
+      
+    )
+
+    alias RemoveAction = NamedTuple(
+      "MemberId" : ResourceIdString
+    )
+
+    alias RemoveActionList = Array(RemoveAction)
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceIdString = String
+
+    alias ResourceLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceNotReadyException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias StateDBType = String
+
+    alias String = String
+
+    alias ThresholdComparator = String
+
+    alias ThresholdPercentageInt = Int32
+
+    alias ThrottlingException = NamedTuple(
+      
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UpdateMemberInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "LogPublishingConfiguration" : (MemberLogPublishingConfiguration)?
+    )
+
+    alias UpdateMemberOutput = NamedTuple(
+      
+    )
+
+    alias UpdateNodeInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "MemberId" : ResourceIdString,
+      "NodeId" : ResourceIdString,
+      "LogPublishingConfiguration" : (NodeLogPublishingConfiguration)?
+    )
+
+    alias UpdateNodeOutput = NamedTuple(
+      
+    )
+
+    alias UsernameString = String
+
+    alias VoteCount = Int32
+
+    alias VoteOnProposalInput = NamedTuple(
+      "NetworkId" : ResourceIdString,
+      "ProposalId" : ResourceIdString,
+      "VoterMemberId" : ResourceIdString,
+      "Vote" : VoteValue
+    )
+
+    alias VoteOnProposalOutput = NamedTuple(
+      
+    )
+
+    alias VoteSummary = NamedTuple(
+      "Vote" : (VoteValue)?,
+      "MemberName" : (NetworkMemberNameString)?,
+      "MemberId" : (ResourceIdString)?
+    )
+
+    alias VoteValue = String
+
+    alias VotingPolicy = NamedTuple(
+      "ApprovalThresholdPolicy" : (ApprovalThresholdPolicy)?
+    )
   end
 end

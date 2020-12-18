@@ -360,8 +360,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload abort_environment_update(**params)
     # @param [Hash] params ({})
-    def abort_environment_update(params = {}, **options)
-      req = build_request(:abort_environment_update, params)
+    def abort_environment_update(, **options)
+      req = build_request(:abort_environment_update, )
       req.send_request(options)
     end
 
@@ -404,8 +404,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload apply_environment_managed_action(**params)
     # @param [Hash] params ({})
-    def apply_environment_managed_action(params = {}, **options)
-      req = build_request(:apply_environment_managed_action, params)
+    def apply_environment_managed_action(, **options)
+      req = build_request(:apply_environment_managed_action, )
       req.send_request(options)
     end
 
@@ -439,8 +439,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload associate_environment_operations_role(**params)
     # @param [Hash] params ({})
-    def associate_environment_operations_role(params = {}, **options)
-      req = build_request(:associate_environment_operations_role, params)
+    def associate_environment_operations_role(, **options)
+      req = build_request(:associate_environment_operations_role, )
       req.send_request(options)
     end
 
@@ -484,8 +484,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload check_dns_availability(**params)
     # @param [Hash] params ({})
-    def check_dns_availability(params = {}, **options)
-      req = build_request(:check_dns_availability, params)
+    def check_dns_availability(, **options)
+      req = build_request(:check_dns_availability, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload compose_environments(**params)
     # @param [Hash] params ({})
-    def compose_environments(params = {}, **options)
-      req = build_request(:compose_environments, params)
+    def compose_environments(, **options)
+      req = build_request(:compose_environments, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -851,8 +851,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload create_application_version(**params)
     # @param [Hash] params ({})
-    def create_application_version(params = {}, **options)
-      req = build_request(:create_application_version, params)
+    def create_application_version(, **options)
+      req = build_request(:create_application_version, )
       req.send_request(options)
     end
 
@@ -1036,8 +1036,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload create_configuration_template(**params)
     # @param [Hash] params ({})
-    def create_configuration_template(params = {}, **options)
-      req = build_request(:create_configuration_template, params)
+    def create_configuration_template(, **options)
+      req = build_request(:create_configuration_template, )
       req.send_request(options)
     end
 
@@ -1290,8 +1290,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload create_environment(**params)
     # @param [Hash] params ({})
-    def create_environment(params = {}, **options)
-      req = build_request(:create_environment, params)
+    def create_environment(, **options)
+      req = build_request(:create_environment, )
       req.send_request(options)
     end
 
@@ -1372,8 +1372,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload create_platform_version(**params)
     # @param [Hash] params ({})
-    def create_platform_version(params = {}, **options)
-      req = build_request(:create_platform_version, params)
+    def create_platform_version(, **options)
+      req = build_request(:create_platform_version, )
       req.send_request(options)
     end
 
@@ -1409,8 +1409,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload create_storage_location(**params)
     # @param [Hash] params ({})
-    def create_storage_location(params = {}, **options)
-      req = build_request(:create_storage_location, params)
+    def create_storage_location(, **options)
+      req = build_request(:create_storage_location, )
       req.send_request(options)
     end
 
@@ -1451,8 +1451,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -1499,8 +1499,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload delete_application_version(**params)
     # @param [Hash] params ({})
-    def delete_application_version(params = {}, **options)
-      req = build_request(:delete_application_version, params)
+    def delete_application_version(, **options)
+      req = build_request(:delete_application_version, )
       req.send_request(options)
     end
 
@@ -1542,8 +1542,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload delete_configuration_template(**params)
     # @param [Hash] params ({})
-    def delete_configuration_template(params = {}, **options)
-      req = build_request(:delete_configuration_template, params)
+    def delete_configuration_template(, **options)
+      req = build_request(:delete_configuration_template, )
       req.send_request(options)
     end
 
@@ -1587,8 +1587,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload delete_environment_configuration(**params)
     # @param [Hash] params ({})
-    def delete_environment_configuration(params = {}, **options)
-      req = build_request(:delete_environment_configuration, params)
+    def delete_environment_configuration(, **options)
+      req = build_request(:delete_environment_configuration, )
       req.send_request(options)
     end
 
@@ -1628,8 +1628,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload delete_platform_version(**params)
     # @param [Hash] params ({})
-    def delete_platform_version(params = {}, **options)
-      req = build_request(:delete_platform_version, params)
+    def delete_platform_version(, **options)
+      req = build_request(:delete_platform_version, )
       req.send_request(options)
     end
 
@@ -1654,8 +1654,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, **options)
-      req = build_request(:describe_account_attributes, params)
+    def describe_account_attributes(, **options)
+      req = build_request(:describe_account_attributes, )
       req.send_request(options)
     end
 
@@ -1758,8 +1758,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_application_versions(**params)
     # @param [Hash] params ({})
-    def describe_application_versions(params = {}, **options)
-      req = build_request(:describe_application_versions, params)
+    def describe_application_versions(, **options)
+      req = build_request(:describe_application_versions, )
       req.send_request(options)
     end
 
@@ -1849,8 +1849,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_applications(**params)
     # @param [Hash] params ({})
-    def describe_applications(params = {}, **options)
-      req = build_request(:describe_applications, params)
+    def describe_applications(, **options)
+      req = build_request(:describe_applications, )
       req.send_request(options)
     end
 
@@ -1966,8 +1966,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_configuration_options(**params)
     # @param [Hash] params ({})
-    def describe_configuration_options(params = {}, **options)
-      req = build_request(:describe_configuration_options, params)
+    def describe_configuration_options(, **options)
+      req = build_request(:describe_configuration_options, )
       req.send_request(options)
     end
 
@@ -2092,8 +2092,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_configuration_settings(**params)
     # @param [Hash] params ({})
-    def describe_configuration_settings(params = {}, **options)
-      req = build_request(:describe_configuration_settings, params)
+    def describe_configuration_settings(, **options)
+      req = build_request(:describe_configuration_settings, )
       req.send_request(options)
     end
 
@@ -2223,8 +2223,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_environment_health(**params)
     # @param [Hash] params ({})
-    def describe_environment_health(params = {}, **options)
-      req = build_request(:describe_environment_health, params)
+    def describe_environment_health(, **options)
+      req = build_request(:describe_environment_health, )
       req.send_request(options)
     end
 
@@ -2275,8 +2275,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_environment_managed_action_history(**params)
     # @param [Hash] params ({})
-    def describe_environment_managed_action_history(params = {}, **options)
-      req = build_request(:describe_environment_managed_action_history, params)
+    def describe_environment_managed_action_history(, **options)
+      req = build_request(:describe_environment_managed_action_history, )
       req.send_request(options)
     end
 
@@ -2316,8 +2316,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_environment_managed_actions(**params)
     # @param [Hash] params ({})
-    def describe_environment_managed_actions(params = {}, **options)
-      req = build_request(:describe_environment_managed_actions, params)
+    def describe_environment_managed_actions(, **options)
+      req = build_request(:describe_environment_managed_actions, )
       req.send_request(options)
     end
 
@@ -2411,8 +2411,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_environment_resources(**params)
     # @param [Hash] params ({})
-    def describe_environment_resources(params = {}, **options)
-      req = build_request(:describe_environment_resources, params)
+    def describe_environment_resources(, **options)
+      req = build_request(:describe_environment_resources, )
       req.send_request(options)
     end
 
@@ -2561,8 +2561,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_environments(**params)
     # @param [Hash] params ({})
-    def describe_environments(params = {}, **options)
-      req = build_request(:describe_environments, params)
+    def describe_environments(, **options)
+      req = build_request(:describe_environments, )
       req.send_request(options)
     end
 
@@ -2713,8 +2713,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -2864,8 +2864,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_instances_health(**params)
     # @param [Hash] params ({})
-    def describe_instances_health(params = {}, **options)
-      req = build_request(:describe_instances_health, params)
+    def describe_instances_health(, **options)
+      req = build_request(:describe_instances_health, )
       req.send_request(options)
     end
 
@@ -2929,8 +2929,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload describe_platform_version(**params)
     # @param [Hash] params ({})
-    def describe_platform_version(params = {}, **options)
-      req = build_request(:describe_platform_version, params)
+    def describe_platform_version(, **options)
+      req = build_request(:describe_platform_version, )
       req.send_request(options)
     end
 
@@ -2960,8 +2960,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload disassociate_environment_operations_role(**params)
     # @param [Hash] params ({})
-    def disassociate_environment_operations_role(params = {}, **options)
-      req = build_request(:disassociate_environment_operations_role, params)
+    def disassociate_environment_operations_role(, **options)
+      req = build_request(:disassociate_environment_operations_role, )
       req.send_request(options)
     end
 
@@ -3037,8 +3037,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload list_available_solution_stacks(**params)
     # @param [Hash] params ({})
-    def list_available_solution_stacks(params = {}, **options)
-      req = build_request(:list_available_solution_stacks, params)
+    def list_available_solution_stacks(, **options)
+      req = build_request(:list_available_solution_stacks, )
       req.send_request(options)
     end
 
@@ -3138,8 +3138,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload list_platform_branches(**params)
     # @param [Hash] params ({})
-    def list_platform_branches(params = {}, **options)
-      req = build_request(:list_platform_branches, params)
+    def list_platform_branches(, **options)
+      req = build_request(:list_platform_branches, )
       req.send_request(options)
     end
 
@@ -3214,8 +3214,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload list_platform_versions(**params)
     # @param [Hash] params ({})
-    def list_platform_versions(params = {}, **options)
-      req = build_request(:list_platform_versions, params)
+    def list_platform_versions(, **options)
+      req = build_request(:list_platform_versions, )
       req.send_request(options)
     end
 
@@ -3258,8 +3258,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3303,8 +3303,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload rebuild_environment(**params)
     # @param [Hash] params ({})
-    def rebuild_environment(params = {}, **options)
-      req = build_request(:rebuild_environment, params)
+    def rebuild_environment(, **options)
+      req = build_request(:rebuild_environment, )
       req.send_request(options)
     end
 
@@ -3374,8 +3374,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload request_environment_info(**params)
     # @param [Hash] params ({})
-    def request_environment_info(params = {}, **options)
-      req = build_request(:request_environment_info, params)
+    def request_environment_info(, **options)
+      req = build_request(:request_environment_info, )
       req.send_request(options)
     end
 
@@ -3418,8 +3418,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload restart_app_server(**params)
     # @param [Hash] params ({})
-    def restart_app_server(params = {}, **options)
-      req = build_request(:restart_app_server, params)
+    def restart_app_server(, **options)
+      req = build_request(:restart_app_server, )
       req.send_request(options)
     end
 
@@ -3501,8 +3501,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload retrieve_environment_info(**params)
     # @param [Hash] params ({})
-    def retrieve_environment_info(params = {}, **options)
-      req = build_request(:retrieve_environment_info, params)
+    def retrieve_environment_info(, **options)
+      req = build_request(:retrieve_environment_info, )
       req.send_request(options)
     end
 
@@ -3564,8 +3564,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload swap_environment_cnames(**params)
     # @param [Hash] params ({})
-    def swap_environment_cnames(params = {}, **options)
-      req = build_request(:swap_environment_cnames, params)
+    def swap_environment_cnames(, **options)
+      req = build_request(:swap_environment_cnames, )
       req.send_request(options)
     end
 
@@ -3708,8 +3708,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload terminate_environment(**params)
     # @param [Hash] params ({})
-    def terminate_environment(params = {}, **options)
-      req = build_request(:terminate_environment, params)
+    def terminate_environment(, **options)
+      req = build_request(:terminate_environment, )
       req.send_request(options)
     end
 
@@ -3793,8 +3793,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 
@@ -3847,8 +3847,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload update_application_resource_lifecycle(**params)
     # @param [Hash] params ({})
-    def update_application_resource_lifecycle(params = {}, **options)
-      req = build_request(:update_application_resource_lifecycle, params)
+    def update_application_resource_lifecycle(, **options)
+      req = build_request(:update_application_resource_lifecycle, )
       req.send_request(options)
     end
 
@@ -3933,8 +3933,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload update_application_version(**params)
     # @param [Hash] params ({})
-    def update_application_version(params = {}, **options)
-      req = build_request(:update_application_version, params)
+    def update_application_version(, **options)
+      req = build_request(:update_application_version, )
       req.send_request(options)
     end
 
@@ -4063,8 +4063,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload update_configuration_template(**params)
     # @param [Hash] params ({})
-    def update_configuration_template(params = {}, **options)
-      req = build_request(:update_configuration_template, params)
+    def update_configuration_template(, **options)
+      req = build_request(:update_configuration_template, )
       req.send_request(options)
     end
 
@@ -4326,8 +4326,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, **options)
-      req = build_request(:update_environment, params)
+    def update_environment(, **options)
+      req = build_request(:update_environment, )
       req.send_request(options)
     end
 
@@ -4397,8 +4397,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload update_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def update_tags_for_resource(params = {}, **options)
-      req = build_request(:update_tags_for_resource, params)
+    def update_tags_for_resource(, **options)
+      req = build_request(:update_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4483,8 +4483,8 @@ module Aws::ElasticBeanstalk
     #
     # @overload validate_configuration_settings(**params)
     # @param [Hash] params ({})
-    def validate_configuration_settings(params = {}, **options)
-      req = build_request(:validate_configuration_settings, params)
+    def validate_configuration_settings(, **options)
+      req = build_request(:validate_configuration_settings, )
       req.send_request(options)
     end
 

@@ -331,5 +331,105 @@ module Aws::CostandUsageReportService
       include Aws::Structure
     end
 
+    alias AWSRegion = String
+
+    alias AdditionalArtifact = String
+
+    alias AdditionalArtifactList = Array(AdditionalArtifact)
+
+    alias CompressionFormat = String
+
+    alias DeleteReportDefinitionRequest = NamedTuple(
+      "ReportName" : (ReportName)?
+    )
+
+    alias DeleteReportDefinitionResponse = NamedTuple(
+      "ResponseMessage" : (DeleteResponseMessage)?
+    )
+
+    alias DeleteResponseMessage = String
+
+    alias DescribeReportDefinitionsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias DescribeReportDefinitionsResponse = NamedTuple(
+      "ReportDefinitions" : (ReportDefinitionList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias DuplicateReportNameException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias GenericString = String
+
+    alias InternalErrorException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias MaxResults = Int32
+
+    alias ModifyReportDefinitionRequest = NamedTuple(
+      "ReportName" : ReportName,
+      "ReportDefinition" : ReportDefinition
+    )
+
+    alias ModifyReportDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias PutReportDefinitionRequest = NamedTuple(
+      "ReportDefinition" : ReportDefinition
+    )
+
+    alias PutReportDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias RefreshClosedReports = Bool
+
+    alias ReportDefinition = NamedTuple(
+      "ReportName" : ReportName,
+      "TimeUnit" : TimeUnit,
+      "Format" : ReportFormat,
+      "Compression" : CompressionFormat,
+      "AdditionalSchemaElements" : SchemaElementList,
+      "S3Bucket" : S3Bucket,
+      "S3Prefix" : S3Prefix,
+      "S3Region" : AWSRegion,
+      "AdditionalArtifacts" : (AdditionalArtifactList)?,
+      "RefreshClosedReports" : (RefreshClosedReports)?,
+      "ReportVersioning" : (ReportVersioning)?
+    )
+
+    alias ReportDefinitionList = Array(ReportDefinition)
+
+    alias ReportFormat = String
+
+    alias ReportLimitReachedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ReportName = String
+
+    alias ReportVersioning = String
+
+    alias S3Bucket = String
+
+    alias S3Prefix = String
+
+    alias SchemaElement = String
+
+    alias SchemaElementList = Array(SchemaElement)
+
+    alias TimeUnit = String
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

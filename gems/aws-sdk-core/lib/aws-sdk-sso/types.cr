@@ -348,5 +348,103 @@ module Aws::SSO
       include Aws::Structure
     end
 
+    alias AccessKeyType = String
+
+    alias AccessTokenType = String
+
+    alias AccountIdType = String
+
+    alias AccountInfo = NamedTuple(
+      "accountId" : (AccountIdType)?,
+      "accountName" : (AccountNameType)?,
+      "emailAddress" : (EmailAddressType)?
+    )
+
+    alias AccountListType = Array(AccountInfo)
+
+    alias AccountNameType = String
+
+    alias EmailAddressType = String
+
+    alias ErrorDescription = String
+
+    alias ExpirationTimestampType = Int64
+
+    alias GetRoleCredentialsRequest = NamedTuple(
+      "roleName" : RoleNameType,
+      "accountId" : AccountIdType,
+      "accessToken" : AccessTokenType
+    )
+
+    alias GetRoleCredentialsResponse = NamedTuple(
+      "roleCredentials" : (RoleCredentials)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (ErrorDescription)?
+    )
+
+    alias ListAccountRolesRequest = NamedTuple(
+      "nextToken" : (NextTokenType)?,
+      "maxResults" : (MaxResultType)?,
+      "accessToken" : AccessTokenType,
+      "accountId" : AccountIdType
+    )
+
+    alias ListAccountRolesResponse = NamedTuple(
+      "nextToken" : (NextTokenType)?,
+      "roleList" : (RoleListType)?
+    )
+
+    alias ListAccountsRequest = NamedTuple(
+      "nextToken" : (NextTokenType)?,
+      "maxResults" : (MaxResultType)?,
+      "accessToken" : AccessTokenType
+    )
+
+    alias ListAccountsResponse = NamedTuple(
+      "nextToken" : (NextTokenType)?,
+      "accountList" : (AccountListType)?
+    )
+
+    alias LogoutRequest = NamedTuple(
+      "accessToken" : AccessTokenType
+    )
+
+    alias MaxResultType = Int32
+
+    alias NextTokenType = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorDescription)?
+    )
+
+    alias RoleCredentials = NamedTuple(
+      "accessKeyId" : (AccessKeyType)?,
+      "secretAccessKey" : (SecretAccessKeyType)?,
+      "sessionToken" : (SessionTokenType)?,
+      "expiration" : (ExpirationTimestampType)?
+    )
+
+    alias RoleInfo = NamedTuple(
+      "roleName" : (RoleNameType)?,
+      "accountId" : (AccountIdType)?
+    )
+
+    alias RoleListType = Array(RoleInfo)
+
+    alias RoleNameType = String
+
+    alias SecretAccessKeyType = String
+
+    alias SessionTokenType = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "message" : (ErrorDescription)?
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "message" : (ErrorDescription)?
+    )
   end
 end

@@ -2019,5 +2019,580 @@ module Aws::Shield
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias AccessDeniedForDependencyException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias AssociateDRTLogBucketRequest = NamedTuple(
+      "LogBucket" : LogBucket
+    )
+
+    alias AssociateDRTLogBucketResponse = NamedTuple(
+      
+    )
+
+    alias AssociateDRTRoleRequest = NamedTuple(
+      "RoleArn" : RoleArn
+    )
+
+    alias AssociateDRTRoleResponse = NamedTuple(
+      
+    )
+
+    alias AssociateHealthCheckRequest = NamedTuple(
+      "ProtectionId" : ProtectionId,
+      "HealthCheckArn" : HealthCheckArn
+    )
+
+    alias AssociateHealthCheckResponse = NamedTuple(
+      
+    )
+
+    alias AssociateProactiveEngagementDetailsRequest = NamedTuple(
+      "EmergencyContactList" : EmergencyContactList
+    )
+
+    alias AssociateProactiveEngagementDetailsResponse = NamedTuple(
+      
+    )
+
+    alias AttackDetail = NamedTuple(
+      "AttackId" : (AttackId)?,
+      "ResourceArn" : (ResourceArn)?,
+      "SubResources" : (SubResourceSummaryList)?,
+      "StartTime" : (AttackTimestamp)?,
+      "EndTime" : (AttackTimestamp)?,
+      "AttackCounters" : (SummarizedCounterList)?,
+      "AttackProperties" : (AttackProperties)?,
+      "Mitigations" : (MitigationList)?
+    )
+
+    alias AttackId = String
+
+    alias AttackLayer = String
+
+    alias AttackProperties = Array(AttackProperty)
+
+    alias AttackProperty = NamedTuple(
+      "AttackLayer" : (AttackLayer)?,
+      "AttackPropertyIdentifier" : (AttackPropertyIdentifier)?,
+      "TopContributors" : (TopContributors)?,
+      "Unit" : (Unit)?,
+      "Total" : (Long)?
+    )
+
+    alias AttackPropertyIdentifier = String
+
+    alias AttackStatisticsDataItem = NamedTuple(
+      "AttackVolume" : (AttackVolume)?,
+      "AttackCount" : Long
+    )
+
+    alias AttackStatisticsDataList = Array(AttackStatisticsDataItem)
+
+    alias AttackSummaries = Array(AttackSummary)
+
+    alias AttackSummary = NamedTuple(
+      "AttackId" : (String)?,
+      "ResourceArn" : (String)?,
+      "StartTime" : (AttackTimestamp)?,
+      "EndTime" : (AttackTimestamp)?,
+      "AttackVectors" : (AttackVectorDescriptionList)?
+    )
+
+    alias AttackTimestamp = String | UInt64 | Time
+
+    alias AttackVectorDescription = NamedTuple(
+      "VectorType" : String
+    )
+
+    alias AttackVectorDescriptionList = Array(AttackVectorDescription)
+
+    alias AttackVolume = NamedTuple(
+      "BitsPerSecond" : (AttackVolumeStatistics)?,
+      "PacketsPerSecond" : (AttackVolumeStatistics)?,
+      "RequestsPerSecond" : (AttackVolumeStatistics)?
+    )
+
+    alias AttackVolumeStatistics = NamedTuple(
+      "Max" : Double
+    )
+
+    alias AutoRenew = String
+
+    alias ContactNotes = String
+
+    alias Contributor = NamedTuple(
+      "Name" : (String)?,
+      "Value" : (Long)?
+    )
+
+    alias CreateProtectionGroupRequest = NamedTuple(
+      "ProtectionGroupId" : ProtectionGroupId,
+      "Aggregation" : ProtectionGroupAggregation,
+      "Pattern" : ProtectionGroupPattern,
+      "ResourceType" : (ProtectedResourceType)?,
+      "Members" : (ProtectionGroupMembers)?
+    )
+
+    alias CreateProtectionGroupResponse = NamedTuple(
+      
+    )
+
+    alias CreateProtectionRequest = NamedTuple(
+      "Name" : ProtectionName,
+      "ResourceArn" : ResourceArn
+    )
+
+    alias CreateProtectionResponse = NamedTuple(
+      "ProtectionId" : (ProtectionId)?
+    )
+
+    alias CreateSubscriptionRequest = NamedTuple(
+      
+    )
+
+    alias CreateSubscriptionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteProtectionGroupRequest = NamedTuple(
+      "ProtectionGroupId" : ProtectionGroupId
+    )
+
+    alias DeleteProtectionGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteProtectionRequest = NamedTuple(
+      "ProtectionId" : ProtectionId
+    )
+
+    alias DeleteProtectionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSubscriptionRequest = NamedTuple(
+      
+    )
+
+    alias DeleteSubscriptionResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAttackRequest = NamedTuple(
+      "AttackId" : AttackId
+    )
+
+    alias DescribeAttackResponse = NamedTuple(
+      "Attack" : (AttackDetail)?
+    )
+
+    alias DescribeAttackStatisticsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeAttackStatisticsResponse = NamedTuple(
+      "TimeRange" : TimeRange,
+      "DataItems" : AttackStatisticsDataList
+    )
+
+    alias DescribeDRTAccessRequest = NamedTuple(
+      
+    )
+
+    alias DescribeDRTAccessResponse = NamedTuple(
+      "RoleArn" : (RoleArn)?,
+      "LogBucketList" : (LogBucketList)?
+    )
+
+    alias DescribeEmergencyContactSettingsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeEmergencyContactSettingsResponse = NamedTuple(
+      "EmergencyContactList" : (EmergencyContactList)?
+    )
+
+    alias DescribeProtectionGroupRequest = NamedTuple(
+      "ProtectionGroupId" : ProtectionGroupId
+    )
+
+    alias DescribeProtectionGroupResponse = NamedTuple(
+      "ProtectionGroup" : ProtectionGroup
+    )
+
+    alias DescribeProtectionRequest = NamedTuple(
+      "ProtectionId" : (ProtectionId)?,
+      "ResourceArn" : (ResourceArn)?
+    )
+
+    alias DescribeProtectionResponse = NamedTuple(
+      "Protection" : (Protection)?
+    )
+
+    alias DescribeSubscriptionRequest = NamedTuple(
+      
+    )
+
+    alias DescribeSubscriptionResponse = NamedTuple(
+      "Subscription" : (Subscription)?
+    )
+
+    alias DisableProactiveEngagementRequest = NamedTuple(
+      
+    )
+
+    alias DisableProactiveEngagementResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateDRTLogBucketRequest = NamedTuple(
+      "LogBucket" : LogBucket
+    )
+
+    alias DisassociateDRTLogBucketResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateDRTRoleRequest = NamedTuple(
+      
+    )
+
+    alias DisassociateDRTRoleResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateHealthCheckRequest = NamedTuple(
+      "ProtectionId" : ProtectionId,
+      "HealthCheckArn" : HealthCheckArn
+    )
+
+    alias DisassociateHealthCheckResponse = NamedTuple(
+      
+    )
+
+    alias Double = Float64
+
+    alias DurationInSeconds = Int64
+
+    alias EmailAddress = String
+
+    alias EmergencyContact = NamedTuple(
+      "EmailAddress" : EmailAddress,
+      "PhoneNumber" : (PhoneNumber)?,
+      "ContactNotes" : (ContactNotes)?
+    )
+
+    alias EmergencyContactList = Array(EmergencyContact)
+
+    alias EnableProactiveEngagementRequest = NamedTuple(
+      
+    )
+
+    alias EnableProactiveEngagementResponse = NamedTuple(
+      
+    )
+
+    alias GetSubscriptionStateRequest = NamedTuple(
+      
+    )
+
+    alias GetSubscriptionStateResponse = NamedTuple(
+      "SubscriptionState" : SubscriptionState
+    )
+
+    alias HealthCheckArn = String
+
+    alias HealthCheckId = String
+
+    alias HealthCheckIds = Array(HealthCheckId)
+
+    alias Integer = Int32
+
+    alias InternalErrorException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidPaginationTokenException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (errorMessage)?,
+      "reason" : (ValidationExceptionReason)?,
+      "fields" : (ValidationExceptionFieldList)?
+    )
+
+    alias InvalidResourceException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Limit = NamedTuple(
+      "Type" : (String)?,
+      "Max" : (Long)?
+    )
+
+    alias LimitNumber = Int64
+
+    alias LimitType = String
+
+    alias Limits = Array(Limit)
+
+    alias LimitsExceededException = NamedTuple(
+      "message" : (errorMessage)?,
+      "Type" : (LimitType)?,
+      "Limit" : (LimitNumber)?
+    )
+
+    alias ListAttacksRequest = NamedTuple(
+      "ResourceArns" : (ResourceArnFilterList)?,
+      "StartTime" : (TimeRange)?,
+      "EndTime" : (TimeRange)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAttacksResponse = NamedTuple(
+      "AttackSummaries" : (AttackSummaries)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListProtectionGroupsRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListProtectionGroupsResponse = NamedTuple(
+      "ProtectionGroups" : ProtectionGroups,
+      "NextToken" : (Token)?
+    )
+
+    alias ListProtectionsRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListProtectionsResponse = NamedTuple(
+      "Protections" : (Protections)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListResourcesInProtectionGroupRequest = NamedTuple(
+      "ProtectionGroupId" : ProtectionGroupId,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListResourcesInProtectionGroupResponse = NamedTuple(
+      "ResourceArns" : ResourceArnList,
+      "NextToken" : (Token)?
+    )
+
+    alias LockedSubscriptionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias LogBucket = String
+
+    alias LogBucketList = Array(LogBucket)
+
+    alias Long = Int64
+
+    alias MaxResults = Int32
+
+    alias Mitigation = NamedTuple(
+      "MitigationName" : (String)?
+    )
+
+    alias MitigationList = Array(Mitigation)
+
+    alias NoAssociatedRoleException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias OptimisticLockException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias PhoneNumber = String
+
+    alias ProactiveEngagementStatus = String
+
+    alias ProtectedResourceType = String
+
+    alias Protection = NamedTuple(
+      "Id" : (ProtectionId)?,
+      "Name" : (ProtectionName)?,
+      "ResourceArn" : (ResourceArn)?,
+      "HealthCheckIds" : (HealthCheckIds)?
+    )
+
+    alias ProtectionGroup = NamedTuple(
+      "ProtectionGroupId" : ProtectionGroupId,
+      "Aggregation" : ProtectionGroupAggregation,
+      "Pattern" : ProtectionGroupPattern,
+      "ResourceType" : (ProtectedResourceType)?,
+      "Members" : ProtectionGroupMembers
+    )
+
+    alias ProtectionGroupAggregation = String
+
+    alias ProtectionGroupArbitraryPatternLimits = NamedTuple(
+      "MaxMembers" : Long
+    )
+
+    alias ProtectionGroupId = String
+
+    alias ProtectionGroupLimits = NamedTuple(
+      "MaxProtectionGroups" : Long,
+      "PatternTypeLimits" : ProtectionGroupPatternTypeLimits
+    )
+
+    alias ProtectionGroupMembers = Array(ResourceArn)
+
+    alias ProtectionGroupPattern = String
+
+    alias ProtectionGroupPatternTypeLimits = NamedTuple(
+      "ArbitraryPatternLimits" : ProtectionGroupArbitraryPatternLimits
+    )
+
+    alias ProtectionGroups = Array(ProtectionGroup)
+
+    alias ProtectionId = String
+
+    alias ProtectionLimits = NamedTuple(
+      "ProtectedResourceTypeLimits" : Limits
+    )
+
+    alias ProtectionName = String
+
+    alias Protections = Array(Protection)
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (errorMessage)?,
+      "resourceType" : (String)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceArnFilterList = Array(ResourceArn)
+
+    alias ResourceArnList = Array(ResourceArn)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?,
+      "resourceType" : (String)?
+    )
+
+    alias RoleArn = String
+
+    alias String = String
+
+    alias SubResourceSummary = NamedTuple(
+      "Type" : (SubResourceType)?,
+      "Id" : (String)?,
+      "AttackVectors" : (SummarizedAttackVectorList)?,
+      "Counters" : (SummarizedCounterList)?
+    )
+
+    alias SubResourceSummaryList = Array(SubResourceSummary)
+
+    alias SubResourceType = String
+
+    alias Subscription = NamedTuple(
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "TimeCommitmentInSeconds" : (DurationInSeconds)?,
+      "AutoRenew" : (AutoRenew)?,
+      "Limits" : (Limits)?,
+      "ProactiveEngagementStatus" : (ProactiveEngagementStatus)?,
+      "SubscriptionLimits" : SubscriptionLimits
+    )
+
+    alias SubscriptionLimits = NamedTuple(
+      "ProtectionLimits" : ProtectionLimits,
+      "ProtectionGroupLimits" : ProtectionGroupLimits
+    )
+
+    alias SubscriptionState = String
+
+    alias SummarizedAttackVector = NamedTuple(
+      "VectorType" : String,
+      "VectorCounters" : (SummarizedCounterList)?
+    )
+
+    alias SummarizedAttackVectorList = Array(SummarizedAttackVector)
+
+    alias SummarizedCounter = NamedTuple(
+      "Name" : (String)?,
+      "Max" : (Double)?,
+      "Average" : (Double)?,
+      "Sum" : (Double)?,
+      "N" : (Integer)?,
+      "Unit" : (String)?
+    )
+
+    alias SummarizedCounterList = Array(SummarizedCounter)
+
+    alias TimeRange = NamedTuple(
+      "FromInclusive" : (AttackTimestamp)?,
+      "ToExclusive" : (AttackTimestamp)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias TopContributors = Array(Contributor)
+
+    alias Unit = String
+
+    alias UpdateEmergencyContactSettingsRequest = NamedTuple(
+      "EmergencyContactList" : (EmergencyContactList)?
+    )
+
+    alias UpdateEmergencyContactSettingsResponse = NamedTuple(
+      
+    )
+
+    alias UpdateProtectionGroupRequest = NamedTuple(
+      "ProtectionGroupId" : ProtectionGroupId,
+      "Aggregation" : ProtectionGroupAggregation,
+      "Pattern" : ProtectionGroupPattern,
+      "ResourceType" : (ProtectedResourceType)?,
+      "Members" : (ProtectionGroupMembers)?
+    )
+
+    alias UpdateProtectionGroupResponse = NamedTuple(
+      
+    )
+
+    alias UpdateSubscriptionRequest = NamedTuple(
+      "AutoRenew" : (AutoRenew)?
+    )
+
+    alias UpdateSubscriptionResponse = NamedTuple(
+      
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "name" : String,
+      "message" : String
+    )
+
+    alias ValidationExceptionFieldList = Array(ValidationExceptionField)
+
+    alias ValidationExceptionReason = String
+
+    alias errorMessage = String
   end
 end

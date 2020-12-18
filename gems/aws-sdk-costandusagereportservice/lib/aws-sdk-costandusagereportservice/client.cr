@@ -370,8 +370,8 @@ module Aws::CostandUsageReportService
     #
     # @overload delete_report_definition(**params)
     # @param [Hash] params ({})
-    def delete_report_definition(params = {}, **options)
-      req = build_request(:delete_report_definition, params)
+    def delete_report_definition(, **options)
+      req = build_request(:delete_report_definition, )
       req.send_request(options)
     end
 
@@ -464,8 +464,8 @@ module Aws::CostandUsageReportService
     #
     # @overload describe_report_definitions(**params)
     # @param [Hash] params ({})
-    def describe_report_definitions(params = {}, **options)
-      req = build_request(:describe_report_definitions, params)
+    def describe_report_definitions(, **options)
+      req = build_request(:describe_report_definitions, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::CostandUsageReportService
     #
     # @overload modify_report_definition(**params)
     # @param [Hash] params ({})
-    def modify_report_definition(params = {}, **options)
-      req = build_request(:modify_report_definition, params)
+    def modify_report_definition(, **options)
+      req = build_request(:modify_report_definition, )
       req.send_request(options)
     end
 
@@ -564,8 +564,8 @@ module Aws::CostandUsageReportService
     #
     # @overload put_report_definition(**params)
     # @param [Hash] params ({})
-    def put_report_definition(params = {}, **options)
-      req = build_request(:put_report_definition, params)
+    def put_report_definition(, **options)
+      req = build_request(:put_report_definition, )
       req.send_request(options)
     end
 

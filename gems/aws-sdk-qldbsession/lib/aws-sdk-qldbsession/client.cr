@@ -454,8 +454,8 @@ module Aws::QLDBSession
     #
     # @overload send_command(**params)
     # @param [Hash] params ({})
-    def send_command(params = {}, **options)
-      req = build_request(:send_command, params)
+    def send_command(, **options)
+      req = build_request(:send_command, )
       req.send_request(options)
     end
 

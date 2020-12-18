@@ -898,8 +898,8 @@ module Aws::Firehose
     #
     # @overload create_delivery_stream(**params)
     # @param [Hash] params ({})
-    def create_delivery_stream(params = {}, **options)
-      req = build_request(:create_delivery_stream, params)
+    def create_delivery_stream(, **options)
+      req = build_request(:create_delivery_stream, )
       req.send_request(options)
     end
 
@@ -950,8 +950,8 @@ module Aws::Firehose
     #
     # @overload delete_delivery_stream(**params)
     # @param [Hash] params ({})
-    def delete_delivery_stream(params = {}, **options)
-      req = build_request(:delete_delivery_stream, params)
+    def delete_delivery_stream(, **options)
+      req = build_request(:delete_delivery_stream, )
       req.send_request(options)
     end
 
@@ -1228,8 +1228,8 @@ module Aws::Firehose
     #
     # @overload describe_delivery_stream(**params)
     # @param [Hash] params ({})
-    def describe_delivery_stream(params = {}, **options)
-      req = build_request(:describe_delivery_stream, params)
+    def describe_delivery_stream(, **options)
+      req = build_request(:describe_delivery_stream, )
       req.send_request(options)
     end
 
@@ -1289,8 +1289,8 @@ module Aws::Firehose
     #
     # @overload list_delivery_streams(**params)
     # @param [Hash] params ({})
-    def list_delivery_streams(params = {}, **options)
-      req = build_request(:list_delivery_streams, params)
+    def list_delivery_streams(, **options)
+      req = build_request(:list_delivery_streams, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::Firehose
     #
     # @overload list_tags_for_delivery_stream(**params)
     # @param [Hash] params ({})
-    def list_tags_for_delivery_stream(params = {}, **options)
-      req = build_request(:list_tags_for_delivery_stream, params)
+    def list_tags_for_delivery_stream(, **options)
+      req = build_request(:list_tags_for_delivery_stream, )
       req.send_request(options)
     end
 
@@ -1415,8 +1415,8 @@ module Aws::Firehose
     #
     # @overload put_record(**params)
     # @param [Hash] params ({})
-    def put_record(params = {}, **options)
-      req = build_request(:put_record, params)
+    def put_record(, **options)
+      req = build_request(:put_record, )
       req.send_request(options)
     end
 
@@ -1528,8 +1528,8 @@ module Aws::Firehose
     #
     # @overload put_record_batch(**params)
     # @param [Hash] params ({})
-    def put_record_batch(params = {}, **options)
-      req = build_request(:put_record_batch, params)
+    def put_record_batch(, **options)
+      req = build_request(:put_record_batch, )
       req.send_request(options)
     end
 
@@ -1606,8 +1606,8 @@ module Aws::Firehose
     #
     # @overload start_delivery_stream_encryption(**params)
     # @param [Hash] params ({})
-    def start_delivery_stream_encryption(params = {}, **options)
-      req = build_request(:start_delivery_stream_encryption, params)
+    def start_delivery_stream_encryption(, **options)
+      req = build_request(:start_delivery_stream_encryption, )
       req.send_request(options)
     end
 
@@ -1655,8 +1655,8 @@ module Aws::Firehose
     #
     # @overload stop_delivery_stream_encryption(**params)
     # @param [Hash] params ({})
-    def stop_delivery_stream_encryption(params = {}, **options)
-      req = build_request(:stop_delivery_stream_encryption, params)
+    def stop_delivery_stream_encryption(, **options)
+      req = build_request(:stop_delivery_stream_encryption, )
       req.send_request(options)
     end
 
@@ -1702,8 +1702,8 @@ module Aws::Firehose
     #
     # @overload tag_delivery_stream(**params)
     # @param [Hash] params ({})
-    def tag_delivery_stream(params = {}, **options)
-      req = build_request(:tag_delivery_stream, params)
+    def tag_delivery_stream(, **options)
+      req = build_request(:tag_delivery_stream, )
       req.send_request(options)
     end
 
@@ -1736,8 +1736,8 @@ module Aws::Firehose
     #
     # @overload untag_delivery_stream(**params)
     # @param [Hash] params ({})
-    def untag_delivery_stream(params = {}, **options)
-      req = build_request(:untag_delivery_stream, params)
+    def untag_delivery_stream(, **options)
+      req = build_request(:untag_delivery_stream, )
       req.send_request(options)
     end
 
@@ -2205,8 +2205,8 @@ module Aws::Firehose
     #
     # @overload update_destination(**params)
     # @param [Hash] params ({})
-    def update_destination(params = {}, **options)
-      req = build_request(:update_destination, params)
+    def update_destination(, **options)
+      req = build_request(:update_destination, )
       req.send_request(options)
     end
 

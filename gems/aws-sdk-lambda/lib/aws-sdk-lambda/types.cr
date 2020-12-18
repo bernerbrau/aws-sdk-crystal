@@ -5633,5 +5633,1252 @@ module Aws::Lambda
       include Aws::Structure
     end
 
+    alias AccountLimit = NamedTuple(
+      "TotalCodeSize" : (Long)?,
+      "CodeSizeUnzipped" : (Long)?,
+      "CodeSizeZipped" : (Long)?,
+      "ConcurrentExecutions" : (Integer)?,
+      "UnreservedConcurrentExecutions" : (UnreservedConcurrentExecutions)?
+    )
+
+    alias AccountUsage = NamedTuple(
+      "TotalCodeSize" : (Long)?,
+      "FunctionCount" : (Long)?
+    )
+
+    alias Action = String
+
+    alias AddLayerVersionPermissionRequest = NamedTuple(
+      "LayerName" : LayerName,
+      "VersionNumber" : LayerVersionNumber,
+      "StatementId" : StatementId,
+      "Action" : LayerPermissionAllowedAction,
+      "Principal" : LayerPermissionAllowedPrincipal,
+      "OrganizationId" : (OrganizationId)?,
+      "RevisionId" : (String)?
+    )
+
+    alias AddLayerVersionPermissionResponse = NamedTuple(
+      "Statement" : (String)?,
+      "RevisionId" : (String)?
+    )
+
+    alias AddPermissionRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "StatementId" : StatementId,
+      "Action" : Action,
+      "Principal" : Principal,
+      "SourceArn" : (Arn)?,
+      "SourceAccount" : (SourceOwner)?,
+      "EventSourceToken" : (EventSourceToken)?,
+      "Qualifier" : (Qualifier)?,
+      "RevisionId" : (String)?
+    )
+
+    alias AddPermissionResponse = NamedTuple(
+      "Statement" : (String)?
+    )
+
+    alias AdditionalVersion = String
+
+    alias AdditionalVersionWeights = Hash(AdditionalVersion,Weight)
+
+    alias Alias = String
+
+    alias AliasConfiguration = NamedTuple(
+      "AliasArn" : (FunctionArn)?,
+      "Name" : (Alias)?,
+      "FunctionVersion" : (Version)?,
+      "Description" : (Description)?,
+      "RoutingConfig" : (AliasRoutingConfiguration)?,
+      "RevisionId" : (String)?
+    )
+
+    alias AliasList = Array(AliasConfiguration)
+
+    alias AliasRoutingConfiguration = NamedTuple(
+      "AdditionalVersionWeights" : (AdditionalVersionWeights)?
+    )
+
+    alias AllowedPublishers = NamedTuple(
+      "SigningProfileVersionArns" : SigningProfileVersionArns
+    )
+
+    alias Arn = String
+
+    alias BatchSize = Int32
+
+    alias BisectBatchOnFunctionError = Bool
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias BlobStream = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias CodeSigningConfig = NamedTuple(
+      "CodeSigningConfigId" : CodeSigningConfigId,
+      "CodeSigningConfigArn" : CodeSigningConfigArn,
+      "Description" : (Description)?,
+      "AllowedPublishers" : AllowedPublishers,
+      "CodeSigningPolicies" : CodeSigningPolicies,
+      "LastModified" : Timestamp
+    )
+
+    alias CodeSigningConfigArn = String
+
+    alias CodeSigningConfigId = String
+
+    alias CodeSigningConfigList = Array(CodeSigningConfig)
+
+    alias CodeSigningConfigNotFoundException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias CodeSigningPolicies = NamedTuple(
+      "UntrustedArtifactOnDeployment" : (CodeSigningPolicy)?
+    )
+
+    alias CodeSigningPolicy = String
+
+    alias CodeStorageExceededException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias CodeVerificationFailedException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias CompatibleRuntimes = Array(Runtime)
+
+    alias Concurrency = NamedTuple(
+      "ReservedConcurrentExecutions" : (ReservedConcurrentExecutions)?
+    )
+
+    alias CreateAliasRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Name" : Alias,
+      "FunctionVersion" : Version,
+      "Description" : (Description)?,
+      "RoutingConfig" : (AliasRoutingConfiguration)?
+    )
+
+    alias CreateCodeSigningConfigRequest = NamedTuple(
+      "Description" : (Description)?,
+      "AllowedPublishers" : AllowedPublishers,
+      "CodeSigningPolicies" : (CodeSigningPolicies)?
+    )
+
+    alias CreateCodeSigningConfigResponse = NamedTuple(
+      "CodeSigningConfig" : CodeSigningConfig
+    )
+
+    alias CreateEventSourceMappingRequest = NamedTuple(
+      "EventSourceArn" : (Arn)?,
+      "FunctionName" : FunctionName,
+      "Enabled" : (Enabled)?,
+      "BatchSize" : (BatchSize)?,
+      "MaximumBatchingWindowInSeconds" : (MaximumBatchingWindowInSeconds)?,
+      "ParallelizationFactor" : (ParallelizationFactor)?,
+      "StartingPosition" : (EventSourcePosition)?,
+      "StartingPositionTimestamp" : (Date)?,
+      "DestinationConfig" : (DestinationConfig)?,
+      "MaximumRecordAgeInSeconds" : (MaximumRecordAgeInSeconds)?,
+      "BisectBatchOnFunctionError" : (BisectBatchOnFunctionError)?,
+      "MaximumRetryAttempts" : (MaximumRetryAttemptsEventSourceMapping)?,
+      "TumblingWindowInSeconds" : (TumblingWindowInSeconds)?,
+      "Topics" : (Topics)?,
+      "Queues" : (Queues)?,
+      "SourceAccessConfigurations" : (SourceAccessConfigurations)?,
+      "SelfManagedEventSource" : (SelfManagedEventSource)?,
+      "FunctionResponseTypes" : (FunctionResponseTypeList)?
+    )
+
+    alias CreateFunctionRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Runtime" : (Runtime)?,
+      "Role" : RoleArn,
+      "Handler" : (Handler)?,
+      "Code" : FunctionCode,
+      "Description" : (Description)?,
+      "Timeout" : (Timeout)?,
+      "MemorySize" : (MemorySize)?,
+      "Publish" : (Boolean)?,
+      "VpcConfig" : (VpcConfig)?,
+      "PackageType" : (PackageType)?,
+      "DeadLetterConfig" : (DeadLetterConfig)?,
+      "Environment" : (Environment)?,
+      "KMSKeyArn" : (KMSKeyArn)?,
+      "TracingConfig" : (TracingConfig)?,
+      "Tags" : (Tags)?,
+      "Layers" : (LayerList)?,
+      "FileSystemConfigs" : (FileSystemConfigList)?,
+      "ImageConfig" : (ImageConfig)?,
+      "CodeSigningConfigArn" : (CodeSigningConfigArn)?
+    )
+
+    alias Date = String | UInt64 | Time
+
+    alias DeadLetterConfig = NamedTuple(
+      "TargetArn" : (ResourceArn)?
+    )
+
+    alias DeleteAliasRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Name" : Alias
+    )
+
+    alias DeleteCodeSigningConfigRequest = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn
+    )
+
+    alias DeleteCodeSigningConfigResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEventSourceMappingRequest = NamedTuple(
+      "UUID" : String
+    )
+
+    alias DeleteFunctionCodeSigningConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias DeleteFunctionConcurrencyRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias DeleteFunctionEventInvokeConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias DeleteFunctionRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias DeleteLayerVersionRequest = NamedTuple(
+      "LayerName" : LayerName,
+      "VersionNumber" : LayerVersionNumber
+    )
+
+    alias DeleteProvisionedConcurrencyConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : Qualifier
+    )
+
+    alias Description = String
+
+    alias DestinationArn = String
+
+    alias DestinationConfig = NamedTuple(
+      "OnSuccess" : (OnSuccess)?,
+      "OnFailure" : (OnFailure)?
+    )
+
+    alias EC2AccessDeniedException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias EC2ThrottledException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias EC2UnexpectedException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?,
+      "EC2ErrorCode" : (String)?
+    )
+
+    alias EFSIOException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias EFSMountConnectivityException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias EFSMountFailureException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias EFSMountTimeoutException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias ENILimitReachedException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias Enabled = Bool
+
+    alias EndPointType = String
+
+    alias Endpoint = String
+
+    alias EndpointLists = Array(Endpoint)
+
+    alias Endpoints = Hash(EndPointType,EndpointLists)
+
+    alias Environment = NamedTuple(
+      "Variables" : (EnvironmentVariables)?
+    )
+
+    alias EnvironmentError = NamedTuple(
+      "ErrorCode" : (String)?,
+      "Message" : (SensitiveString)?
+    )
+
+    alias EnvironmentResponse = NamedTuple(
+      "Variables" : (EnvironmentVariables)?,
+      "Error" : (EnvironmentError)?
+    )
+
+    alias EnvironmentVariableName = String
+
+    alias EnvironmentVariableValue = String
+
+    alias EnvironmentVariables = Hash(EnvironmentVariableName,EnvironmentVariableValue)
+
+    alias EventSourceMappingConfiguration = NamedTuple(
+      "UUID" : (String)?,
+      "StartingPosition" : (EventSourcePosition)?,
+      "StartingPositionTimestamp" : (Date)?,
+      "BatchSize" : (BatchSize)?,
+      "MaximumBatchingWindowInSeconds" : (MaximumBatchingWindowInSeconds)?,
+      "ParallelizationFactor" : (ParallelizationFactor)?,
+      "EventSourceArn" : (Arn)?,
+      "FunctionArn" : (FunctionArn)?,
+      "LastModified" : (Date)?,
+      "LastProcessingResult" : (String)?,
+      "State" : (String)?,
+      "StateTransitionReason" : (String)?,
+      "DestinationConfig" : (DestinationConfig)?,
+      "Topics" : (Topics)?,
+      "Queues" : (Queues)?,
+      "SourceAccessConfigurations" : (SourceAccessConfigurations)?,
+      "SelfManagedEventSource" : (SelfManagedEventSource)?,
+      "MaximumRecordAgeInSeconds" : (MaximumRecordAgeInSeconds)?,
+      "BisectBatchOnFunctionError" : (BisectBatchOnFunctionError)?,
+      "MaximumRetryAttempts" : (MaximumRetryAttemptsEventSourceMapping)?,
+      "TumblingWindowInSeconds" : (TumblingWindowInSeconds)?,
+      "FunctionResponseTypes" : (FunctionResponseTypeList)?
+    )
+
+    alias EventSourceMappingsList = Array(EventSourceMappingConfiguration)
+
+    alias EventSourcePosition = String
+
+    alias EventSourceToken = String
+
+    alias FileSystemArn = String
+
+    alias FileSystemConfig = NamedTuple(
+      "Arn" : FileSystemArn,
+      "LocalMountPath" : LocalMountPath
+    )
+
+    alias FileSystemConfigList = Array(FileSystemConfig)
+
+    alias FunctionArn = String
+
+    alias FunctionArnList = Array(FunctionArn)
+
+    alias FunctionCode = NamedTuple(
+      "ZipFile" : (Blob)?,
+      "S3Bucket" : (S3Bucket)?,
+      "S3Key" : (S3Key)?,
+      "S3ObjectVersion" : (S3ObjectVersion)?,
+      "ImageUri" : (String)?
+    )
+
+    alias FunctionCodeLocation = NamedTuple(
+      "RepositoryType" : (String)?,
+      "Location" : (String)?,
+      "ImageUri" : (String)?,
+      "ResolvedImageUri" : (String)?
+    )
+
+    alias FunctionConfiguration = NamedTuple(
+      "FunctionName" : (NamespacedFunctionName)?,
+      "FunctionArn" : (NameSpacedFunctionArn)?,
+      "Runtime" : (Runtime)?,
+      "Role" : (RoleArn)?,
+      "Handler" : (Handler)?,
+      "CodeSize" : (Long)?,
+      "Description" : (Description)?,
+      "Timeout" : (Timeout)?,
+      "MemorySize" : (MemorySize)?,
+      "LastModified" : (Timestamp)?,
+      "CodeSha256" : (String)?,
+      "Version" : (Version)?,
+      "VpcConfig" : (VpcConfigResponse)?,
+      "DeadLetterConfig" : (DeadLetterConfig)?,
+      "Environment" : (EnvironmentResponse)?,
+      "KMSKeyArn" : (KMSKeyArn)?,
+      "TracingConfig" : (TracingConfigResponse)?,
+      "MasterArn" : (FunctionArn)?,
+      "RevisionId" : (String)?,
+      "Layers" : (LayersReferenceList)?,
+      "State" : (State)?,
+      "StateReason" : (StateReason)?,
+      "StateReasonCode" : (StateReasonCode)?,
+      "LastUpdateStatus" : (LastUpdateStatus)?,
+      "LastUpdateStatusReason" : (LastUpdateStatusReason)?,
+      "LastUpdateStatusReasonCode" : (LastUpdateStatusReasonCode)?,
+      "FileSystemConfigs" : (FileSystemConfigList)?,
+      "PackageType" : (PackageType)?,
+      "ImageConfigResponse" : (ImageConfigResponse)?,
+      "SigningProfileVersionArn" : (Arn)?,
+      "SigningJobArn" : (Arn)?
+    )
+
+    alias FunctionEventInvokeConfig = NamedTuple(
+      "LastModified" : (Date)?,
+      "FunctionArn" : (FunctionArn)?,
+      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
+      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?,
+      "DestinationConfig" : (DestinationConfig)?
+    )
+
+    alias FunctionEventInvokeConfigList = Array(FunctionEventInvokeConfig)
+
+    alias FunctionList = Array(FunctionConfiguration)
+
+    alias FunctionName = String
+
+    alias FunctionResponseType = String
+
+    alias FunctionResponseTypeList = Array(FunctionResponseType)
+
+    alias FunctionVersion = String
+
+    alias GetAccountSettingsRequest = NamedTuple(
+      
+    )
+
+    alias GetAccountSettingsResponse = NamedTuple(
+      "AccountLimit" : (AccountLimit)?,
+      "AccountUsage" : (AccountUsage)?
+    )
+
+    alias GetAliasRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Name" : Alias
+    )
+
+    alias GetCodeSigningConfigRequest = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn
+    )
+
+    alias GetCodeSigningConfigResponse = NamedTuple(
+      "CodeSigningConfig" : CodeSigningConfig
+    )
+
+    alias GetEventSourceMappingRequest = NamedTuple(
+      "UUID" : String
+    )
+
+    alias GetFunctionCodeSigningConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias GetFunctionCodeSigningConfigResponse = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn,
+      "FunctionName" : FunctionName
+    )
+
+    alias GetFunctionConcurrencyRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias GetFunctionConcurrencyResponse = NamedTuple(
+      "ReservedConcurrentExecutions" : (ReservedConcurrentExecutions)?
+    )
+
+    alias GetFunctionConfigurationRequest = NamedTuple(
+      "FunctionName" : NamespacedFunctionName,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias GetFunctionEventInvokeConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias GetFunctionRequest = NamedTuple(
+      "FunctionName" : NamespacedFunctionName,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias GetFunctionResponse = NamedTuple(
+      "Configuration" : (FunctionConfiguration)?,
+      "Code" : (FunctionCodeLocation)?,
+      "Tags" : (Tags)?,
+      "Concurrency" : (Concurrency)?
+    )
+
+    alias GetLayerVersionByArnRequest = NamedTuple(
+      "Arn" : LayerVersionArn
+    )
+
+    alias GetLayerVersionPolicyRequest = NamedTuple(
+      "LayerName" : LayerName,
+      "VersionNumber" : LayerVersionNumber
+    )
+
+    alias GetLayerVersionPolicyResponse = NamedTuple(
+      "Policy" : (String)?,
+      "RevisionId" : (String)?
+    )
+
+    alias GetLayerVersionRequest = NamedTuple(
+      "LayerName" : LayerName,
+      "VersionNumber" : LayerVersionNumber
+    )
+
+    alias GetLayerVersionResponse = NamedTuple(
+      "Content" : (LayerVersionContentOutput)?,
+      "LayerArn" : (LayerArn)?,
+      "LayerVersionArn" : (LayerVersionArn)?,
+      "Description" : (Description)?,
+      "CreatedDate" : (Timestamp)?,
+      "Version" : (LayerVersionNumber)?,
+      "CompatibleRuntimes" : (CompatibleRuntimes)?,
+      "LicenseInfo" : (LicenseInfo)?
+    )
+
+    alias GetPolicyRequest = NamedTuple(
+      "FunctionName" : NamespacedFunctionName,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias GetPolicyResponse = NamedTuple(
+      "Policy" : (String)?,
+      "RevisionId" : (String)?
+    )
+
+    alias GetProvisionedConcurrencyConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : Qualifier
+    )
+
+    alias GetProvisionedConcurrencyConfigResponse = NamedTuple(
+      "RequestedProvisionedConcurrentExecutions" : (PositiveInteger)?,
+      "AvailableProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
+      "AllocatedProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
+      "Status" : (ProvisionedConcurrencyStatusEnum)?,
+      "StatusReason" : (String)?,
+      "LastModified" : (Timestamp)?
+    )
+
+    alias Handler = String
+
+    alias HttpStatus = Int32
+
+    alias ImageConfig = NamedTuple(
+      "EntryPoint" : (StringList)?,
+      "Command" : (StringList)?,
+      "WorkingDirectory" : (WorkingDirectory)?
+    )
+
+    alias ImageConfigError = NamedTuple(
+      "ErrorCode" : (String)?,
+      "Message" : (SensitiveString)?
+    )
+
+    alias ImageConfigResponse = NamedTuple(
+      "ImageConfig" : (ImageConfig)?,
+      "Error" : (ImageConfigError)?
+    )
+
+    alias Integer = Int32
+
+    alias InvalidCodeSignatureException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias InvalidRequestContentException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias InvalidRuntimeException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias InvalidSecurityGroupIDException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias InvalidSubnetIDException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias InvalidZipFileException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias InvocationRequest = NamedTuple(
+      "FunctionName" : NamespacedFunctionName,
+      "InvocationType" : (InvocationType)?,
+      "LogType" : (LogType)?,
+      "ClientContext" : (String)?,
+      "Payload" : (Blob)?,
+      "Qualifier" : (Qualifier)?
+    )
+
+    alias InvocationResponse = NamedTuple(
+      "StatusCode" : (Integer)?,
+      "FunctionError" : (String)?,
+      "LogResult" : (String)?,
+      "Payload" : (Blob)?,
+      "ExecutedVersion" : (Version)?
+    )
+
+    alias InvocationType = String
+
+    alias InvokeAsyncRequest = NamedTuple(
+      "FunctionName" : NamespacedFunctionName,
+      "InvokeArgs" : BlobStream
+    )
+
+    alias InvokeAsyncResponse = NamedTuple(
+      "Status" : (HttpStatus)?
+    )
+
+    alias KMSAccessDeniedException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias KMSDisabledException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias KMSInvalidStateException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias KMSKeyArn = String
+
+    alias KMSNotFoundException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias LastUpdateStatus = String
+
+    alias LastUpdateStatusReason = String
+
+    alias LastUpdateStatusReasonCode = String
+
+    alias Layer = NamedTuple(
+      "Arn" : (LayerVersionArn)?,
+      "CodeSize" : (Long)?,
+      "SigningProfileVersionArn" : (Arn)?,
+      "SigningJobArn" : (Arn)?
+    )
+
+    alias LayerArn = String
+
+    alias LayerList = Array(LayerVersionArn)
+
+    alias LayerName = String
+
+    alias LayerPermissionAllowedAction = String
+
+    alias LayerPermissionAllowedPrincipal = String
+
+    alias LayerVersionArn = String
+
+    alias LayerVersionContentInput = NamedTuple(
+      "S3Bucket" : (S3Bucket)?,
+      "S3Key" : (S3Key)?,
+      "S3ObjectVersion" : (S3ObjectVersion)?,
+      "ZipFile" : (Blob)?
+    )
+
+    alias LayerVersionContentOutput = NamedTuple(
+      "Location" : (String)?,
+      "CodeSha256" : (String)?,
+      "CodeSize" : (Long)?,
+      "SigningProfileVersionArn" : (String)?,
+      "SigningJobArn" : (String)?
+    )
+
+    alias LayerVersionNumber = Int64
+
+    alias LayerVersionsList = Array(LayerVersionsListItem)
+
+    alias LayerVersionsListItem = NamedTuple(
+      "LayerVersionArn" : (LayerVersionArn)?,
+      "Version" : (LayerVersionNumber)?,
+      "Description" : (Description)?,
+      "CreatedDate" : (Timestamp)?,
+      "CompatibleRuntimes" : (CompatibleRuntimes)?,
+      "LicenseInfo" : (LicenseInfo)?
+    )
+
+    alias LayersList = Array(LayersListItem)
+
+    alias LayersListItem = NamedTuple(
+      "LayerName" : (LayerName)?,
+      "LayerArn" : (LayerArn)?,
+      "LatestMatchingVersion" : (LayerVersionsListItem)?
+    )
+
+    alias LayersReferenceList = Array(Layer)
+
+    alias LicenseInfo = String
+
+    alias ListAliasesRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "FunctionVersion" : (Version)?,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListAliasesResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "Aliases" : (AliasList)?
+    )
+
+    alias ListCodeSigningConfigsRequest = NamedTuple(
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListCodeSigningConfigsResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "CodeSigningConfigs" : (CodeSigningConfigList)?
+    )
+
+    alias ListEventSourceMappingsRequest = NamedTuple(
+      "EventSourceArn" : (Arn)?,
+      "FunctionName" : (FunctionName)?,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListEventSourceMappingsResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "EventSourceMappings" : (EventSourceMappingsList)?
+    )
+
+    alias ListFunctionEventInvokeConfigsRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxFunctionEventInvokeConfigListItems)?
+    )
+
+    alias ListFunctionEventInvokeConfigsResponse = NamedTuple(
+      "FunctionEventInvokeConfigs" : (FunctionEventInvokeConfigList)?,
+      "NextMarker" : (String)?
+    )
+
+    alias ListFunctionsByCodeSigningConfigRequest = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListFunctionsByCodeSigningConfigResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "FunctionArns" : (FunctionArnList)?
+    )
+
+    alias ListFunctionsRequest = NamedTuple(
+      "MasterRegion" : (MasterRegion)?,
+      "FunctionVersion" : (FunctionVersion)?,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListFunctionsResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "Functions" : (FunctionList)?
+    )
+
+    alias ListLayerVersionsRequest = NamedTuple(
+      "CompatibleRuntime" : (Runtime)?,
+      "LayerName" : LayerName,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxLayerListItems)?
+    )
+
+    alias ListLayerVersionsResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "LayerVersions" : (LayerVersionsList)?
+    )
+
+    alias ListLayersRequest = NamedTuple(
+      "CompatibleRuntime" : (Runtime)?,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxLayerListItems)?
+    )
+
+    alias ListLayersResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "Layers" : (LayersList)?
+    )
+
+    alias ListProvisionedConcurrencyConfigsRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxProvisionedConcurrencyConfigListItems)?
+    )
+
+    alias ListProvisionedConcurrencyConfigsResponse = NamedTuple(
+      "ProvisionedConcurrencyConfigs" : (ProvisionedConcurrencyConfigList)?,
+      "NextMarker" : (String)?
+    )
+
+    alias ListTagsRequest = NamedTuple(
+      "Resource" : FunctionArn
+    )
+
+    alias ListTagsResponse = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias ListVersionsByFunctionRequest = NamedTuple(
+      "FunctionName" : NamespacedFunctionName,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListVersionsByFunctionResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "Versions" : (FunctionList)?
+    )
+
+    alias LocalMountPath = String
+
+    alias LogType = String
+
+    alias Long = Int64
+
+    alias MasterRegion = String
+
+    alias MaxFunctionEventInvokeConfigListItems = Int32
+
+    alias MaxLayerListItems = Int32
+
+    alias MaxListItems = Int32
+
+    alias MaxProvisionedConcurrencyConfigListItems = Int32
+
+    alias MaximumBatchingWindowInSeconds = Int32
+
+    alias MaximumEventAgeInSeconds = Int32
+
+    alias MaximumRecordAgeInSeconds = Int32
+
+    alias MaximumRetryAttempts = Int32
+
+    alias MaximumRetryAttemptsEventSourceMapping = Int32
+
+    alias MemorySize = Int32
+
+    alias NameSpacedFunctionArn = String
+
+    alias NamespacedFunctionName = String
+
+    alias NamespacedStatementId = String
+
+    alias NonNegativeInteger = Int32
+
+    alias OnFailure = NamedTuple(
+      "Destination" : (DestinationArn)?
+    )
+
+    alias OnSuccess = NamedTuple(
+      "Destination" : (DestinationArn)?
+    )
+
+    alias OrganizationId = String
+
+    alias PackageType = String
+
+    alias ParallelizationFactor = Int32
+
+    alias PolicyLengthExceededException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias PositiveInteger = Int32
+
+    alias PreconditionFailedException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias Principal = String
+
+    alias ProvisionedConcurrencyConfigList = Array(ProvisionedConcurrencyConfigListItem)
+
+    alias ProvisionedConcurrencyConfigListItem = NamedTuple(
+      "FunctionArn" : (FunctionArn)?,
+      "RequestedProvisionedConcurrentExecutions" : (PositiveInteger)?,
+      "AvailableProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
+      "AllocatedProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
+      "Status" : (ProvisionedConcurrencyStatusEnum)?,
+      "StatusReason" : (String)?,
+      "LastModified" : (Timestamp)?
+    )
+
+    alias ProvisionedConcurrencyConfigNotFoundException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias ProvisionedConcurrencyStatusEnum = String
+
+    alias PublishLayerVersionRequest = NamedTuple(
+      "LayerName" : LayerName,
+      "Description" : (Description)?,
+      "Content" : LayerVersionContentInput,
+      "CompatibleRuntimes" : (CompatibleRuntimes)?,
+      "LicenseInfo" : (LicenseInfo)?
+    )
+
+    alias PublishLayerVersionResponse = NamedTuple(
+      "Content" : (LayerVersionContentOutput)?,
+      "LayerArn" : (LayerArn)?,
+      "LayerVersionArn" : (LayerVersionArn)?,
+      "Description" : (Description)?,
+      "CreatedDate" : (Timestamp)?,
+      "Version" : (LayerVersionNumber)?,
+      "CompatibleRuntimes" : (CompatibleRuntimes)?,
+      "LicenseInfo" : (LicenseInfo)?
+    )
+
+    alias PublishVersionRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "CodeSha256" : (String)?,
+      "Description" : (Description)?,
+      "RevisionId" : (String)?
+    )
+
+    alias PutFunctionCodeSigningConfigRequest = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn,
+      "FunctionName" : FunctionName
+    )
+
+    alias PutFunctionCodeSigningConfigResponse = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn,
+      "FunctionName" : FunctionName
+    )
+
+    alias PutFunctionConcurrencyRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "ReservedConcurrentExecutions" : ReservedConcurrentExecutions
+    )
+
+    alias PutFunctionEventInvokeConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : (Qualifier)?,
+      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
+      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?,
+      "DestinationConfig" : (DestinationConfig)?
+    )
+
+    alias PutProvisionedConcurrencyConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : Qualifier,
+      "ProvisionedConcurrentExecutions" : PositiveInteger
+    )
+
+    alias PutProvisionedConcurrencyConfigResponse = NamedTuple(
+      "RequestedProvisionedConcurrentExecutions" : (PositiveInteger)?,
+      "AvailableProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
+      "AllocatedProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
+      "Status" : (ProvisionedConcurrencyStatusEnum)?,
+      "StatusReason" : (String)?,
+      "LastModified" : (Timestamp)?
+    )
+
+    alias Qualifier = String
+
+    alias Queue = String
+
+    alias Queues = Array(Queue)
+
+    alias RemoveLayerVersionPermissionRequest = NamedTuple(
+      "LayerName" : LayerName,
+      "VersionNumber" : LayerVersionNumber,
+      "StatementId" : StatementId,
+      "RevisionId" : (String)?
+    )
+
+    alias RemovePermissionRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "StatementId" : NamespacedStatementId,
+      "Qualifier" : (Qualifier)?,
+      "RevisionId" : (String)?
+    )
+
+    alias RequestTooLargeException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias ReservedConcurrentExecutions = Int32
+
+    alias ResourceArn = String
+
+    alias ResourceConflictException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias ResourceNotReadyException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias RoleArn = String
+
+    alias Runtime = String
+
+    alias S3Bucket = String
+
+    alias S3Key = String
+
+    alias S3ObjectVersion = String
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias SelfManagedEventSource = NamedTuple(
+      "Endpoints" : (Endpoints)?
+    )
+
+    alias SensitiveString = String
+
+    alias ServiceException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias SigningProfileVersionArns = Array(Arn)
+
+    alias SourceAccessConfiguration = NamedTuple(
+      "Type" : (SourceAccessType)?,
+      "URI" : (URI)?
+    )
+
+    alias SourceAccessConfigurations = Array(SourceAccessConfiguration)
+
+    alias SourceAccessType = String
+
+    alias SourceOwner = String
+
+    alias State = String
+
+    alias StateReason = String
+
+    alias StateReasonCode = String
+
+    alias StatementId = String
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias SubnetIPAddressLimitReachedException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "Resource" : FunctionArn,
+      "Tags" : Tags
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias ThrottleReason = String
+
+    alias Timeout = Int32
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "retryAfterSeconds" : (String)?,
+      "Type" : (String)?,
+      "message" : (String)?,
+      "Reason" : (ThrottleReason)?
+    )
+
+    alias Topic = String
+
+    alias Topics = Array(Topic)
+
+    alias TracingConfig = NamedTuple(
+      "Mode" : (TracingMode)?
+    )
+
+    alias TracingConfigResponse = NamedTuple(
+      "Mode" : (TracingMode)?
+    )
+
+    alias TracingMode = String
+
+    alias TumblingWindowInSeconds = Int32
+
+    alias URI = String
+
+    alias UnreservedConcurrentExecutions = Int32
+
+    alias UnsupportedMediaTypeException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "Resource" : FunctionArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UpdateAliasRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Name" : Alias,
+      "FunctionVersion" : (Version)?,
+      "Description" : (Description)?,
+      "RoutingConfig" : (AliasRoutingConfiguration)?,
+      "RevisionId" : (String)?
+    )
+
+    alias UpdateCodeSigningConfigRequest = NamedTuple(
+      "CodeSigningConfigArn" : CodeSigningConfigArn,
+      "Description" : (Description)?,
+      "AllowedPublishers" : (AllowedPublishers)?,
+      "CodeSigningPolicies" : (CodeSigningPolicies)?
+    )
+
+    alias UpdateCodeSigningConfigResponse = NamedTuple(
+      "CodeSigningConfig" : CodeSigningConfig
+    )
+
+    alias UpdateEventSourceMappingRequest = NamedTuple(
+      "UUID" : String,
+      "FunctionName" : (FunctionName)?,
+      "Enabled" : (Enabled)?,
+      "BatchSize" : (BatchSize)?,
+      "MaximumBatchingWindowInSeconds" : (MaximumBatchingWindowInSeconds)?,
+      "DestinationConfig" : (DestinationConfig)?,
+      "MaximumRecordAgeInSeconds" : (MaximumRecordAgeInSeconds)?,
+      "BisectBatchOnFunctionError" : (BisectBatchOnFunctionError)?,
+      "MaximumRetryAttempts" : (MaximumRetryAttemptsEventSourceMapping)?,
+      "ParallelizationFactor" : (ParallelizationFactor)?,
+      "SourceAccessConfigurations" : (SourceAccessConfigurations)?,
+      "TumblingWindowInSeconds" : (TumblingWindowInSeconds)?,
+      "FunctionResponseTypes" : (FunctionResponseTypeList)?
+    )
+
+    alias UpdateFunctionCodeRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "ZipFile" : (Blob)?,
+      "S3Bucket" : (S3Bucket)?,
+      "S3Key" : (S3Key)?,
+      "S3ObjectVersion" : (S3ObjectVersion)?,
+      "ImageUri" : (String)?,
+      "Publish" : (Boolean)?,
+      "DryRun" : (Boolean)?,
+      "RevisionId" : (String)?
+    )
+
+    alias UpdateFunctionConfigurationRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Role" : (RoleArn)?,
+      "Handler" : (Handler)?,
+      "Description" : (Description)?,
+      "Timeout" : (Timeout)?,
+      "MemorySize" : (MemorySize)?,
+      "VpcConfig" : (VpcConfig)?,
+      "Environment" : (Environment)?,
+      "Runtime" : (Runtime)?,
+      "DeadLetterConfig" : (DeadLetterConfig)?,
+      "KMSKeyArn" : (KMSKeyArn)?,
+      "TracingConfig" : (TracingConfig)?,
+      "RevisionId" : (String)?,
+      "Layers" : (LayerList)?,
+      "FileSystemConfigs" : (FileSystemConfigList)?,
+      "ImageConfig" : (ImageConfig)?
+    )
+
+    alias UpdateFunctionEventInvokeConfigRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Qualifier" : (Qualifier)?,
+      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
+      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?,
+      "DestinationConfig" : (DestinationConfig)?
+    )
+
+    alias Version = String
+
+    alias VpcConfig = NamedTuple(
+      "SubnetIds" : (SubnetIds)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?
+    )
+
+    alias VpcConfigResponse = NamedTuple(
+      "SubnetIds" : (SubnetIds)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?,
+      "VpcId" : (VpcId)?
+    )
+
+    alias VpcId = String
+
+    alias Weight = Float64
+
+    alias WorkingDirectory = String
   end
 end

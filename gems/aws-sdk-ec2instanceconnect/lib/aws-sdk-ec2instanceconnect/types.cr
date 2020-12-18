@@ -138,5 +138,50 @@ module Aws::EC2InstanceConnect
       include Aws::Structure
     end
 
+    alias AuthException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AvailabilityZone = String
+
+    alias EC2InstanceNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InstanceId = String
+
+    alias InstanceOSUser = String
+
+    alias InvalidArgsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias RequestId = String
+
+    alias SSHPublicKey = String
+
+    alias SendSSHPublicKeyRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "InstanceOSUser" : InstanceOSUser,
+      "SSHPublicKey" : SSHPublicKey,
+      "AvailabilityZone" : AvailabilityZone
+    )
+
+    alias SendSSHPublicKeyResponse = NamedTuple(
+      "RequestId" : (RequestId)?,
+      "Success" : (Success)?
+    )
+
+    alias ServiceException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias String = String
+
+    alias Success = Bool
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (String)?
+    )
   end
 end

@@ -355,8 +355,8 @@ module Aws::GuardDuty
     #
     # @overload accept_invitation(**params)
     # @param [Hash] params ({})
-    def accept_invitation(params = {}, **options)
-      req = build_request(:accept_invitation, params)
+    def accept_invitation(, **options)
+      req = build_request(:accept_invitation, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::GuardDuty
     #
     # @overload archive_findings(**params)
     # @param [Hash] params ({})
-    def archive_findings(params = {}, **options)
-      req = build_request(:archive_findings, params)
+    def archive_findings(, **options)
+      req = build_request(:archive_findings, )
       req.send_request(options)
     end
 
@@ -445,8 +445,8 @@ module Aws::GuardDuty
     #
     # @overload create_detector(**params)
     # @param [Hash] params ({})
-    def create_detector(params = {}, **options)
-      req = build_request(:create_detector, params)
+    def create_detector(, **options)
+      req = build_request(:create_detector, )
       req.send_request(options)
     end
 
@@ -643,8 +643,8 @@ module Aws::GuardDuty
     #
     # @overload create_filter(**params)
     # @param [Hash] params ({})
-    def create_filter(params = {}, **options)
-      req = build_request(:create_filter, params)
+    def create_filter(, **options)
+      req = build_request(:create_filter, )
       req.send_request(options)
     end
 
@@ -711,8 +711,8 @@ module Aws::GuardDuty
     #
     # @overload create_ip_set(**params)
     # @param [Hash] params ({})
-    def create_ip_set(params = {}, **options)
-      req = build_request(:create_ip_set, params)
+    def create_ip_set(, **options)
+      req = build_request(:create_ip_set, )
       req.send_request(options)
     end
 
@@ -769,8 +769,8 @@ module Aws::GuardDuty
     #
     # @overload create_members(**params)
     # @param [Hash] params ({})
-    def create_members(params = {}, **options)
-      req = build_request(:create_members, params)
+    def create_members(, **options)
+      req = build_request(:create_members, )
       req.send_request(options)
     end
 
@@ -819,8 +819,8 @@ module Aws::GuardDuty
     #
     # @overload create_publishing_destination(**params)
     # @param [Hash] params ({})
-    def create_publishing_destination(params = {}, **options)
-      req = build_request(:create_publishing_destination, params)
+    def create_publishing_destination(, **options)
+      req = build_request(:create_publishing_destination, )
       req.send_request(options)
     end
 
@@ -847,8 +847,8 @@ module Aws::GuardDuty
     #
     # @overload create_sample_findings(**params)
     # @param [Hash] params ({})
-    def create_sample_findings(params = {}, **options)
-      req = build_request(:create_sample_findings, params)
+    def create_sample_findings(, **options)
+      req = build_request(:create_sample_findings, )
       req.send_request(options)
     end
 
@@ -912,8 +912,8 @@ module Aws::GuardDuty
     #
     # @overload create_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def create_threat_intel_set(params = {}, **options)
-      req = build_request(:create_threat_intel_set, params)
+    def create_threat_intel_set(, **options)
+      req = build_request(:create_threat_intel_set, )
       req.send_request(options)
     end
 
@@ -944,8 +944,8 @@ module Aws::GuardDuty
     #
     # @overload decline_invitations(**params)
     # @param [Hash] params ({})
-    def decline_invitations(params = {}, **options)
-      req = build_request(:decline_invitations, params)
+    def decline_invitations(, **options)
+      req = build_request(:decline_invitations, )
       req.send_request(options)
     end
 
@@ -967,8 +967,8 @@ module Aws::GuardDuty
     #
     # @overload delete_detector(**params)
     # @param [Hash] params ({})
-    def delete_detector(params = {}, **options)
-      req = build_request(:delete_detector, params)
+    def delete_detector(, **options)
+      req = build_request(:delete_detector, )
       req.send_request(options)
     end
 
@@ -993,8 +993,8 @@ module Aws::GuardDuty
     #
     # @overload delete_filter(**params)
     # @param [Hash] params ({})
-    def delete_filter(params = {}, **options)
-      req = build_request(:delete_filter, params)
+    def delete_filter(, **options)
+      req = build_request(:delete_filter, )
       req.send_request(options)
     end
 
@@ -1020,8 +1020,8 @@ module Aws::GuardDuty
     #
     # @overload delete_ip_set(**params)
     # @param [Hash] params ({})
-    def delete_ip_set(params = {}, **options)
-      req = build_request(:delete_ip_set, params)
+    def delete_ip_set(, **options)
+      req = build_request(:delete_ip_set, )
       req.send_request(options)
     end
 
@@ -1052,8 +1052,8 @@ module Aws::GuardDuty
     #
     # @overload delete_invitations(**params)
     # @param [Hash] params ({})
-    def delete_invitations(params = {}, **options)
-      req = build_request(:delete_invitations, params)
+    def delete_invitations(, **options)
+      req = build_request(:delete_invitations, )
       req.send_request(options)
     end
 
@@ -1089,8 +1089,8 @@ module Aws::GuardDuty
     #
     # @overload delete_members(**params)
     # @param [Hash] params ({})
-    def delete_members(params = {}, **options)
-      req = build_request(:delete_members, params)
+    def delete_members(, **options)
+      req = build_request(:delete_members, )
       req.send_request(options)
     end
 
@@ -1116,8 +1116,8 @@ module Aws::GuardDuty
     #
     # @overload delete_publishing_destination(**params)
     # @param [Hash] params ({})
-    def delete_publishing_destination(params = {}, **options)
-      req = build_request(:delete_publishing_destination, params)
+    def delete_publishing_destination(, **options)
+      req = build_request(:delete_publishing_destination, )
       req.send_request(options)
     end
 
@@ -1143,8 +1143,8 @@ module Aws::GuardDuty
     #
     # @overload delete_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def delete_threat_intel_set(params = {}, **options)
-      req = build_request(:delete_threat_intel_set, params)
+    def delete_threat_intel_set(, **options)
+      req = build_request(:delete_threat_intel_set, )
       req.send_request(options)
     end
 
@@ -1177,8 +1177,8 @@ module Aws::GuardDuty
     #
     # @overload describe_organization_configuration(**params)
     # @param [Hash] params ({})
-    def describe_organization_configuration(params = {}, **options)
-      req = build_request(:describe_organization_configuration, params)
+    def describe_organization_configuration(, **options)
+      req = build_request(:describe_organization_configuration, )
       req.send_request(options)
     end
 
@@ -1220,8 +1220,8 @@ module Aws::GuardDuty
     #
     # @overload describe_publishing_destination(**params)
     # @param [Hash] params ({})
-    def describe_publishing_destination(params = {}, **options)
-      req = build_request(:describe_publishing_destination, params)
+    def describe_publishing_destination(, **options)
+      req = build_request(:describe_publishing_destination, )
       req.send_request(options)
     end
 
@@ -1244,8 +1244,8 @@ module Aws::GuardDuty
     #
     # @overload disable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def disable_organization_admin_account(params = {}, **options)
-      req = build_request(:disable_organization_admin_account, params)
+    def disable_organization_admin_account(, **options)
+      req = build_request(:disable_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -1267,8 +1267,8 @@ module Aws::GuardDuty
     #
     # @overload disassociate_from_master_account(**params)
     # @param [Hash] params ({})
-    def disassociate_from_master_account(params = {}, **options)
-      req = build_request(:disassociate_from_master_account, params)
+    def disassociate_from_master_account(, **options)
+      req = build_request(:disassociate_from_master_account, )
       req.send_request(options)
     end
 
@@ -1304,8 +1304,8 @@ module Aws::GuardDuty
     #
     # @overload disassociate_members(**params)
     # @param [Hash] params ({})
-    def disassociate_members(params = {}, **options)
-      req = build_request(:disassociate_members, params)
+    def disassociate_members(, **options)
+      req = build_request(:disassociate_members, )
       req.send_request(options)
     end
 
@@ -1328,8 +1328,8 @@ module Aws::GuardDuty
     #
     # @overload enable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def enable_organization_admin_account(params = {}, **options)
-      req = build_request(:enable_organization_admin_account, params)
+    def enable_organization_admin_account(, **options)
+      req = build_request(:enable_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -1372,8 +1372,8 @@ module Aws::GuardDuty
     #
     # @overload get_detector(**params)
     # @param [Hash] params ({})
-    def get_detector(params = {}, **options)
-      req = build_request(:get_detector, params)
+    def get_detector(, **options)
+      req = build_request(:get_detector, )
       req.send_request(options)
     end
 
@@ -1431,8 +1431,8 @@ module Aws::GuardDuty
     #
     # @overload get_filter(**params)
     # @param [Hash] params ({})
-    def get_filter(params = {}, **options)
-      req = build_request(:get_filter, params)
+    def get_filter(, **options)
+      req = build_request(:get_filter, )
       req.send_request(options)
     end
 
@@ -1608,8 +1608,8 @@ module Aws::GuardDuty
     #
     # @overload get_findings(**params)
     # @param [Hash] params ({})
-    def get_findings(params = {}, **options)
-      req = build_request(:get_findings, params)
+    def get_findings(, **options)
+      req = build_request(:get_findings, )
       req.send_request(options)
     end
 
@@ -1664,8 +1664,8 @@ module Aws::GuardDuty
     #
     # @overload get_findings_statistics(**params)
     # @param [Hash] params ({})
-    def get_findings_statistics(params = {}, **options)
-      req = build_request(:get_findings_statistics, params)
+    def get_findings_statistics(, **options)
+      req = build_request(:get_findings_statistics, )
       req.send_request(options)
     end
 
@@ -1705,8 +1705,8 @@ module Aws::GuardDuty
     #
     # @overload get_ip_set(**params)
     # @param [Hash] params ({})
-    def get_ip_set(params = {}, **options)
-      req = build_request(:get_ip_set, params)
+    def get_ip_set(, **options)
+      req = build_request(:get_ip_set, )
       req.send_request(options)
     end
 
@@ -1726,8 +1726,8 @@ module Aws::GuardDuty
     #
     # @overload get_invitations_count(**params)
     # @param [Hash] params ({})
-    def get_invitations_count(params = {}, **options)
-      req = build_request(:get_invitations_count, params)
+    def get_invitations_count(, **options)
+      req = build_request(:get_invitations_count, )
       req.send_request(options)
     end
 
@@ -1758,8 +1758,8 @@ module Aws::GuardDuty
     #
     # @overload get_master_account(**params)
     # @param [Hash] params ({})
-    def get_master_account(params = {}, **options)
-      req = build_request(:get_master_account, params)
+    def get_master_account(, **options)
+      req = build_request(:get_master_account, )
       req.send_request(options)
     end
 
@@ -1800,8 +1800,8 @@ module Aws::GuardDuty
     #
     # @overload get_member_detectors(**params)
     # @param [Hash] params ({})
-    def get_member_detectors(params = {}, **options)
-      req = build_request(:get_member_detectors, params)
+    def get_member_detectors(, **options)
+      req = build_request(:get_member_detectors, )
       req.send_request(options)
     end
 
@@ -1846,8 +1846,8 @@ module Aws::GuardDuty
     #
     # @overload get_members(**params)
     # @param [Hash] params ({})
-    def get_members(params = {}, **options)
-      req = build_request(:get_members, params)
+    def get_members(, **options)
+      req = build_request(:get_members, )
       req.send_request(options)
     end
 
@@ -1889,8 +1889,8 @@ module Aws::GuardDuty
     #
     # @overload get_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def get_threat_intel_set(params = {}, **options)
-      req = build_request(:get_threat_intel_set, params)
+    def get_threat_intel_set(, **options)
+      req = build_request(:get_threat_intel_set, )
       req.send_request(options)
     end
 
@@ -1975,8 +1975,8 @@ module Aws::GuardDuty
     #
     # @overload get_usage_statistics(**params)
     # @param [Hash] params ({})
-    def get_usage_statistics(params = {}, **options)
-      req = build_request(:get_usage_statistics, params)
+    def get_usage_statistics(, **options)
+      req = build_request(:get_usage_statistics, )
       req.send_request(options)
     end
 
@@ -2025,8 +2025,8 @@ module Aws::GuardDuty
     #
     # @overload invite_members(**params)
     # @param [Hash] params ({})
-    def invite_members(params = {}, **options)
-      req = build_request(:invite_members, params)
+    def invite_members(, **options)
+      req = build_request(:invite_members, )
       req.send_request(options)
     end
 
@@ -2069,8 +2069,8 @@ module Aws::GuardDuty
     #
     # @overload list_detectors(**params)
     # @param [Hash] params ({})
-    def list_detectors(params = {}, **options)
-      req = build_request(:list_detectors, params)
+    def list_detectors(, **options)
+      req = build_request(:list_detectors, )
       req.send_request(options)
     end
 
@@ -2116,8 +2116,8 @@ module Aws::GuardDuty
     #
     # @overload list_filters(**params)
     # @param [Hash] params ({})
-    def list_filters(params = {}, **options)
-      req = build_request(:list_filters, params)
+    def list_filters(, **options)
+      req = build_request(:list_filters, )
       req.send_request(options)
     end
 
@@ -2298,8 +2298,8 @@ module Aws::GuardDuty
     #
     # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, **options)
-      req = build_request(:list_findings, params)
+    def list_findings(, **options)
+      req = build_request(:list_findings, )
       req.send_request(options)
     end
 
@@ -2347,8 +2347,8 @@ module Aws::GuardDuty
     #
     # @overload list_ip_sets(**params)
     # @param [Hash] params ({})
-    def list_ip_sets(params = {}, **options)
-      req = build_request(:list_ip_sets, params)
+    def list_ip_sets(, **options)
+      req = build_request(:list_ip_sets, )
       req.send_request(options)
     end
 
@@ -2394,8 +2394,8 @@ module Aws::GuardDuty
     #
     # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, **options)
-      req = build_request(:list_invitations, params)
+    def list_invitations(, **options)
+      req = build_request(:list_invitations, )
       req.send_request(options)
     end
 
@@ -2454,8 +2454,8 @@ module Aws::GuardDuty
     #
     # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, **options)
-      req = build_request(:list_members, params)
+    def list_members(, **options)
+      req = build_request(:list_members, )
       req.send_request(options)
     end
 
@@ -2496,8 +2496,8 @@ module Aws::GuardDuty
     #
     # @overload list_organization_admin_accounts(**params)
     # @param [Hash] params ({})
-    def list_organization_admin_accounts(params = {}, **options)
-      req = build_request(:list_organization_admin_accounts, params)
+    def list_organization_admin_accounts(, **options)
+      req = build_request(:list_organization_admin_accounts, )
       req.send_request(options)
     end
 
@@ -2544,8 +2544,8 @@ module Aws::GuardDuty
     #
     # @overload list_publishing_destinations(**params)
     # @param [Hash] params ({})
-    def list_publishing_destinations(params = {}, **options)
-      req = build_request(:list_publishing_destinations, params)
+    def list_publishing_destinations(, **options)
+      req = build_request(:list_publishing_destinations, )
       req.send_request(options)
     end
 
@@ -2576,8 +2576,8 @@ module Aws::GuardDuty
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2627,8 +2627,8 @@ module Aws::GuardDuty
     #
     # @overload list_threat_intel_sets(**params)
     # @param [Hash] params ({})
-    def list_threat_intel_sets(params = {}, **options)
-      req = build_request(:list_threat_intel_sets, params)
+    def list_threat_intel_sets(, **options)
+      req = build_request(:list_threat_intel_sets, )
       req.send_request(options)
     end
 
@@ -2665,8 +2665,8 @@ module Aws::GuardDuty
     #
     # @overload start_monitoring_members(**params)
     # @param [Hash] params ({})
-    def start_monitoring_members(params = {}, **options)
-      req = build_request(:start_monitoring_members, params)
+    def start_monitoring_members(, **options)
+      req = build_request(:start_monitoring_members, )
       req.send_request(options)
     end
 
@@ -2702,8 +2702,8 @@ module Aws::GuardDuty
     #
     # @overload stop_monitoring_members(**params)
     # @param [Hash] params ({})
-    def stop_monitoring_members(params = {}, **options)
-      req = build_request(:stop_monitoring_members, params)
+    def stop_monitoring_members(, **options)
+      req = build_request(:stop_monitoring_members, )
       req.send_request(options)
     end
 
@@ -2731,8 +2731,8 @@ module Aws::GuardDuty
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2757,8 +2757,8 @@ module Aws::GuardDuty
     #
     # @overload unarchive_findings(**params)
     # @param [Hash] params ({})
-    def unarchive_findings(params = {}, **options)
-      req = build_request(:unarchive_findings, params)
+    def unarchive_findings(, **options)
+      req = build_request(:unarchive_findings, )
       req.send_request(options)
     end
 
@@ -2783,8 +2783,8 @@ module Aws::GuardDuty
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2822,8 +2822,8 @@ module Aws::GuardDuty
     #
     # @overload update_detector(**params)
     # @param [Hash] params ({})
-    def update_detector(params = {}, **options)
-      req = build_request(:update_detector, params)
+    def update_detector(, **options)
+      req = build_request(:update_detector, )
       req.send_request(options)
     end
 
@@ -2892,8 +2892,8 @@ module Aws::GuardDuty
     #
     # @overload update_filter(**params)
     # @param [Hash] params ({})
-    def update_filter(params = {}, **options)
-      req = build_request(:update_filter, params)
+    def update_filter(, **options)
+      req = build_request(:update_filter, )
       req.send_request(options)
     end
 
@@ -2927,8 +2927,8 @@ module Aws::GuardDuty
     #
     # @overload update_findings_feedback(**params)
     # @param [Hash] params ({})
-    def update_findings_feedback(params = {}, **options)
-      req = build_request(:update_findings_feedback, params)
+    def update_findings_feedback(, **options)
+      req = build_request(:update_findings_feedback, )
       req.send_request(options)
     end
 
@@ -2968,8 +2968,8 @@ module Aws::GuardDuty
     #
     # @overload update_ip_set(**params)
     # @param [Hash] params ({})
-    def update_ip_set(params = {}, **options)
-      req = build_request(:update_ip_set, params)
+    def update_ip_set(, **options)
+      req = build_request(:update_ip_set, )
       req.send_request(options)
     end
 
@@ -3010,8 +3010,8 @@ module Aws::GuardDuty
     #
     # @overload update_member_detectors(**params)
     # @param [Hash] params ({})
-    def update_member_detectors(params = {}, **options)
-      req = build_request(:update_member_detectors, params)
+    def update_member_detectors(, **options)
+      req = build_request(:update_member_detectors, )
       req.send_request(options)
     end
 
@@ -3045,8 +3045,8 @@ module Aws::GuardDuty
     #
     # @overload update_organization_configuration(**params)
     # @param [Hash] params ({})
-    def update_organization_configuration(params = {}, **options)
-      req = build_request(:update_organization_configuration, params)
+    def update_organization_configuration(, **options)
+      req = build_request(:update_organization_configuration, )
       req.send_request(options)
     end
 
@@ -3081,8 +3081,8 @@ module Aws::GuardDuty
     #
     # @overload update_publishing_destination(**params)
     # @param [Hash] params ({})
-    def update_publishing_destination(params = {}, **options)
-      req = build_request(:update_publishing_destination, params)
+    def update_publishing_destination(, **options)
+      req = build_request(:update_publishing_destination, )
       req.send_request(options)
     end
 
@@ -3123,8 +3123,8 @@ module Aws::GuardDuty
     #
     # @overload update_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def update_threat_intel_set(params = {}, **options)
-      req = build_request(:update_threat_intel_set, params)
+    def update_threat_intel_set(, **options)
+      req = build_request(:update_threat_intel_set, )
       req.send_request(options)
     end
 

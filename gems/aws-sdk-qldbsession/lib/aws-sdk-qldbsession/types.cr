@@ -497,5 +497,142 @@ module Aws::QLDBSession
       include Aws::Structure
     end
 
+    alias AbortTransactionRequest = NamedTuple(
+      
+    )
+
+    alias AbortTransactionResult = NamedTuple(
+      
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Code" : (ErrorCode)?
+    )
+
+    alias CommitDigest = String | Array(UInt8) | IO
+
+    alias CommitTransactionRequest = NamedTuple(
+      "TransactionId" : TransactionId,
+      "CommitDigest" : CommitDigest
+    )
+
+    alias CommitTransactionResult = NamedTuple(
+      "TransactionId" : (TransactionId)?,
+      "CommitDigest" : (CommitDigest)?
+    )
+
+    alias EndSessionRequest = NamedTuple(
+      
+    )
+
+    alias EndSessionResult = NamedTuple(
+      
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ExecuteStatementRequest = NamedTuple(
+      "TransactionId" : TransactionId,
+      "Statement" : Statement,
+      "Parameters" : (StatementParameters)?
+    )
+
+    alias ExecuteStatementResult = NamedTuple(
+      "FirstPage" : (Page)?
+    )
+
+    alias FetchPageRequest = NamedTuple(
+      "TransactionId" : TransactionId,
+      "NextPageToken" : PageToken
+    )
+
+    alias FetchPageResult = NamedTuple(
+      "Page" : (Page)?
+    )
+
+    alias InvalidSessionException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Code" : (ErrorCode)?
+    )
+
+    alias IonBinary = String | Array(UInt8) | IO
+
+    alias IonText = String
+
+    alias LedgerName = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias OccConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Page = NamedTuple(
+      "Values" : (ValueHolders)?,
+      "NextPageToken" : (PageToken)?
+    )
+
+    alias PageToken = String
+
+    alias RateExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SendCommandRequest = NamedTuple(
+      "SessionToken" : (SessionToken)?,
+      "StartSession" : (StartSessionRequest)?,
+      "StartTransaction" : (StartTransactionRequest)?,
+      "EndSession" : (EndSessionRequest)?,
+      "CommitTransaction" : (CommitTransactionRequest)?,
+      "AbortTransaction" : (AbortTransactionRequest)?,
+      "ExecuteStatement" : (ExecuteStatementRequest)?,
+      "FetchPage" : (FetchPageRequest)?
+    )
+
+    alias SendCommandResult = NamedTuple(
+      "StartSession" : (StartSessionResult)?,
+      "StartTransaction" : (StartTransactionResult)?,
+      "EndSession" : (EndSessionResult)?,
+      "CommitTransaction" : (CommitTransactionResult)?,
+      "AbortTransaction" : (AbortTransactionResult)?,
+      "ExecuteStatement" : (ExecuteStatementResult)?,
+      "FetchPage" : (FetchPageResult)?
+    )
+
+    alias SessionToken = String
+
+    alias StartSessionRequest = NamedTuple(
+      "LedgerName" : LedgerName
+    )
+
+    alias StartSessionResult = NamedTuple(
+      "SessionToken" : (SessionToken)?
+    )
+
+    alias StartTransactionRequest = NamedTuple(
+      
+    )
+
+    alias StartTransactionResult = NamedTuple(
+      "TransactionId" : (TransactionId)?
+    )
+
+    alias Statement = String
+
+    alias StatementParameters = Array(ValueHolder)
+
+    alias TransactionId = String
+
+    alias ValueHolder = NamedTuple(
+      "IonBinary" : (IonBinary)?,
+      "IonText" : (IonText)?
+    )
+
+    alias ValueHolders = Array(ValueHolder)
   end
 end

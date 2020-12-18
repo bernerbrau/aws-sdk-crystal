@@ -441,5 +441,163 @@ module Aws::ElasticInference
     #
     class UntagResourceResult < Aws::EmptyStructure; end
 
+    alias AcceleratorHealthStatus = String
+
+    alias AcceleratorId = String
+
+    alias AcceleratorIdList = Array(AcceleratorId)
+
+    alias AcceleratorType = NamedTuple(
+      "acceleratorTypeName" : (AcceleratorTypeName)?,
+      "memoryInfo" : (MemoryInfo)?,
+      "throughputInfo" : (ThroughputInfoList)?
+    )
+
+    alias AcceleratorTypeList = Array(AcceleratorType)
+
+    alias AcceleratorTypeName = String
+
+    alias AcceleratorTypeNameList = Array(AcceleratorTypeName)
+
+    alias AcceleratorTypeOffering = NamedTuple(
+      "acceleratorType" : (AcceleratorTypeName)?,
+      "locationType" : (LocationType)?,
+      "location" : (Location)?
+    )
+
+    alias AcceleratorTypeOfferingList = Array(AcceleratorTypeOffering)
+
+    alias AvailabilityZone = String
+
+    alias BadRequestException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias DescribeAcceleratorOfferingsRequest = NamedTuple(
+      "locationType" : LocationType,
+      "acceleratorTypes" : (AcceleratorTypeNameList)?
+    )
+
+    alias DescribeAcceleratorOfferingsResponse = NamedTuple(
+      "acceleratorTypeOfferings" : (AcceleratorTypeOfferingList)?
+    )
+
+    alias DescribeAcceleratorTypesRequest = NamedTuple(
+      
+    )
+
+    alias DescribeAcceleratorTypesResponse = NamedTuple(
+      "acceleratorTypes" : (AcceleratorTypeList)?
+    )
+
+    alias DescribeAcceleratorsRequest = NamedTuple(
+      "acceleratorIds" : (AcceleratorIdList)?,
+      "filters" : (FilterList)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeAcceleratorsResponse = NamedTuple(
+      "acceleratorSet" : (ElasticInferenceAcceleratorSet)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ElasticInferenceAccelerator = NamedTuple(
+      "acceleratorHealth" : (ElasticInferenceAcceleratorHealth)?,
+      "acceleratorType" : (AcceleratorTypeName)?,
+      "acceleratorId" : (AcceleratorId)?,
+      "availabilityZone" : (AvailabilityZone)?,
+      "attachedResource" : (ResourceArn)?
+    )
+
+    alias ElasticInferenceAcceleratorHealth = NamedTuple(
+      "status" : (AcceleratorHealthStatus)?
+    )
+
+    alias ElasticInferenceAcceleratorSet = Array(ElasticInferenceAccelerator)
+
+    alias Filter = NamedTuple(
+      "name" : (FilterName)?,
+      "values" : (ValueStringList)?
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterName = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Key = String
+
+    alias KeyValuePair = NamedTuple(
+      "key" : (Key)?,
+      "value" : (Value)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceARN
+    )
+
+    alias ListTagsForResourceResult = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias Location = String
+
+    alias LocationType = String
+
+    alias MaxResults = Int32
+
+    alias MemoryInfo = NamedTuple(
+      "sizeInMiB" : (Integer)?
+    )
+
+    alias NextToken = String
+
+    alias ResourceARN = String
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceARN,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResult = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThroughputInfoList = Array(KeyValuePair)
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceARN,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResult = NamedTuple(
+      
+    )
+
+    alias Value = Int32
+
+    alias ValueStringList = Array(String)
   end
 end

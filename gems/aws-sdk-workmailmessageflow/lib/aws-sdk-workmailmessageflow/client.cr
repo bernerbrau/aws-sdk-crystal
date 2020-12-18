@@ -351,8 +351,8 @@ module Aws::WorkMailMessageFlow
     #
     # @overload get_raw_message_content(**params)
     # @param [Hash] params ({})
-    def get_raw_message_content(params = {}, **options, &block)
-      req = build_request(:get_raw_message_content, params)
+    def get_raw_message_content(, **options, &block)
+      req = build_request(:get_raw_message_content, )
       req.send_request(options, &block)
     end
 

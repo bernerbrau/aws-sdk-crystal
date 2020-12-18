@@ -718,5 +718,225 @@ module Aws::IoT1ClickDevicesService
     #
     class UpdateDeviceStateResponse < Aws::EmptyStructure; end
 
+    alias Attributes = NamedTuple(
+      
+    )
+
+    alias ClaimDevicesByClaimCodeRequest = NamedTuple(
+      "ClaimCode" : __string
+    )
+
+    alias ClaimDevicesByClaimCodeResponse = NamedTuple(
+      "ClaimCode" : (__stringMin12Max40)?,
+      "Total" : (__integer)?
+    )
+
+    alias DescribeDeviceRequest = NamedTuple(
+      "DeviceId" : __string
+    )
+
+    alias DescribeDeviceResponse = NamedTuple(
+      "DeviceDescription" : (DeviceDescription)?
+    )
+
+    alias Device = NamedTuple(
+      "Attributes" : (Attributes)?,
+      "DeviceId" : (__string)?,
+      "Type" : (__string)?
+    )
+
+    alias DeviceAttributes = Hash(__string,__string)
+
+    alias DeviceClaimResponse = NamedTuple(
+      "State" : (__string)?
+    )
+
+    alias DeviceDescription = NamedTuple(
+      "Arn" : (__string)?,
+      "Attributes" : (DeviceAttributes)?,
+      "DeviceId" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "RemainingLife" : (__doubleMin0Max100)?,
+      "Type" : (__string)?,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias DeviceEvent = NamedTuple(
+      "Device" : (Device)?,
+      "StdEvent" : (__string)?
+    )
+
+    alias DeviceEventsResponse = NamedTuple(
+      "Events" : (__listOfDeviceEvent)?,
+      "NextToken" : (__string)?
+    )
+
+    alias DeviceMethod = NamedTuple(
+      "DeviceType" : (__string)?,
+      "MethodName" : (__string)?
+    )
+
+    alias Empty = NamedTuple(
+      
+    )
+
+    alias FinalizeDeviceClaimRequest = NamedTuple(
+      "DeviceId" : __string,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias FinalizeDeviceClaimResponse = NamedTuple(
+      "State" : (__string)?
+    )
+
+    alias ForbiddenException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias GetDeviceMethodsRequest = NamedTuple(
+      "DeviceId" : __string
+    )
+
+    alias GetDeviceMethodsResponse = NamedTuple(
+      "DeviceMethods" : (__listOfDeviceMethod)?
+    )
+
+    alias InitiateDeviceClaimRequest = NamedTuple(
+      "DeviceId" : __string
+    )
+
+    alias InitiateDeviceClaimResponse = NamedTuple(
+      "State" : (__string)?
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias InvokeDeviceMethodRequest = NamedTuple(
+      "DeviceId" : __string,
+      "DeviceMethod" : (DeviceMethod)?,
+      "DeviceMethodParameters" : (__string)?
+    )
+
+    alias InvokeDeviceMethodResponse = NamedTuple(
+      "DeviceMethodResponse" : (__string)?
+    )
+
+    alias ListDeviceEventsRequest = NamedTuple(
+      "DeviceId" : __string,
+      "FromTimeStamp" : __timestampIso8601,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "ToTimeStamp" : __timestampIso8601
+    )
+
+    alias ListDeviceEventsResponse = NamedTuple(
+      "Events" : (__listOfDeviceEvent)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDevicesRequest = NamedTuple(
+      "DeviceType" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDevicesResponse = NamedTuple(
+      "Devices" : (__listOfDeviceDescription)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias MaxResults = Int32
+
+    alias PreconditionFailedException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias RangeNotSatisfiableException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias ResourceConflictException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : __mapOf__string
+    )
+
+    alias UnclaimDeviceRequest = NamedTuple(
+      "DeviceId" : __string
+    )
+
+    alias UnclaimDeviceResponse = NamedTuple(
+      "State" : (__string)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias UpdateDeviceStateRequest = NamedTuple(
+      "DeviceId" : __string,
+      "Enabled" : (__boolean)?
+    )
+
+    alias UpdateDeviceStateResponse = NamedTuple(
+      
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __doubleMin0Max100 = Float64
+
+    alias __integer = Int32
+
+    alias __listOfDeviceDescription = Array(DeviceDescription)
+
+    alias __listOfDeviceEvent = Array(DeviceEvent)
+
+    alias __listOfDeviceMethod = Array(DeviceMethod)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __mapOf__string = Hash(__string,__string)
+
+    alias __string = String
+
+    alias __stringMin12Max40 = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

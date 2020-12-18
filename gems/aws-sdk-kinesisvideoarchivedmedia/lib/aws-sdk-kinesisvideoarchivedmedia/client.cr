@@ -399,8 +399,8 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @overload get_clip(**params)
     # @param [Hash] params ({})
-    def get_clip(params = {}, **options, &block)
-      req = build_request(:get_clip, params)
+    def get_clip(, **options, &block)
+      req = build_request(:get_clip, )
       req.send_request(options, &block)
     end
 
@@ -746,8 +746,8 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @overload get_dash_streaming_session_url(**params)
     # @param [Hash] params ({})
-    def get_dash_streaming_session_url(params = {}, **options)
-      req = build_request(:get_dash_streaming_session_url, params)
+    def get_dash_streaming_session_url(, **options)
+      req = build_request(:get_dash_streaming_session_url, )
       req.send_request(options)
     end
 
@@ -1161,8 +1161,8 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @overload get_hls_streaming_session_url(**params)
     # @param [Hash] params ({})
-    def get_hls_streaming_session_url(params = {}, **options)
-      req = build_request(:get_hls_streaming_session_url, params)
+    def get_hls_streaming_session_url(, **options)
+      req = build_request(:get_hls_streaming_session_url, )
       req.send_request(options)
     end
 
@@ -1239,8 +1239,8 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @overload get_media_for_fragment_list(**params)
     # @param [Hash] params ({})
-    def get_media_for_fragment_list(params = {}, **options, &block)
-      req = build_request(:get_media_for_fragment_list, params)
+    def get_media_for_fragment_list(, **options, &block)
+      req = build_request(:get_media_for_fragment_list, )
       req.send_request(options, &block)
     end
 
@@ -1338,8 +1338,8 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @overload list_fragments(**params)
     # @param [Hash] params ({})
-    def list_fragments(params = {}, **options)
-      req = build_request(:list_fragments, params)
+    def list_fragments(, **options)
+      req = build_request(:list_fragments, )
       req.send_request(options)
     end
 

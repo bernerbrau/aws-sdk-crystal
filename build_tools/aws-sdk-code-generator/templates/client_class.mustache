@@ -93,7 +93,7 @@ module {{module_name}}
     {{/documentation}}
     # @overload {{name}}(**params)
     # @param [Hash] params ({})
-    def {{name}}(params = {}, **options{{{block_option}}})
+    def {{name}}({{{param_list}}}, **options{{{block_option}}})
       {{#eventstream_output}}
       params = params.dup
       event_stream_handler = case handler = params.delete(:event_stream_handler)
@@ -110,7 +110,7 @@ module {{module_name}}
       yield(event_stream_handler) if block_given?
 
       {{/eventstream_output}}
-      req = build_request(:{{name}}, params)
+      req = build_request(:{{name}}, {{{param_tuple}}})
       {{#eventstream_output}}
 
       req.context[:event_stream_handler] = event_stream_handler

@@ -1540,5 +1540,346 @@ module Aws::QLDB
       include Aws::Structure
     end
 
+    alias Arn = String
+
+    alias Boolean = Bool
+
+    alias CancelJournalKinesisStreamRequest = NamedTuple(
+      "LedgerName" : LedgerName,
+      "StreamId" : UniqueId
+    )
+
+    alias CancelJournalKinesisStreamResponse = NamedTuple(
+      "StreamId" : (UniqueId)?
+    )
+
+    alias CreateLedgerRequest = NamedTuple(
+      "Name" : LedgerName,
+      "Tags" : (Tags)?,
+      "PermissionsMode" : PermissionsMode,
+      "DeletionProtection" : (DeletionProtection)?
+    )
+
+    alias CreateLedgerResponse = NamedTuple(
+      "Name" : (LedgerName)?,
+      "Arn" : (Arn)?,
+      "State" : (LedgerState)?,
+      "CreationDateTime" : (Timestamp)?,
+      "DeletionProtection" : (DeletionProtection)?
+    )
+
+    alias DeleteLedgerRequest = NamedTuple(
+      "Name" : LedgerName
+    )
+
+    alias DeletionProtection = Bool
+
+    alias DescribeJournalKinesisStreamRequest = NamedTuple(
+      "LedgerName" : LedgerName,
+      "StreamId" : UniqueId
+    )
+
+    alias DescribeJournalKinesisStreamResponse = NamedTuple(
+      "Stream" : (JournalKinesisStreamDescription)?
+    )
+
+    alias DescribeJournalS3ExportRequest = NamedTuple(
+      "Name" : LedgerName,
+      "ExportId" : UniqueId
+    )
+
+    alias DescribeJournalS3ExportResponse = NamedTuple(
+      "ExportDescription" : JournalS3ExportDescription
+    )
+
+    alias DescribeLedgerRequest = NamedTuple(
+      "Name" : LedgerName
+    )
+
+    alias DescribeLedgerResponse = NamedTuple(
+      "Name" : (LedgerName)?,
+      "Arn" : (Arn)?,
+      "State" : (LedgerState)?,
+      "CreationDateTime" : (Timestamp)?,
+      "DeletionProtection" : (DeletionProtection)?
+    )
+
+    alias Digest = String | Array(UInt8) | IO
+
+    alias ErrorCause = String
+
+    alias ErrorMessage = String
+
+    alias ExportJournalToS3Request = NamedTuple(
+      "Name" : LedgerName,
+      "InclusiveStartTime" : Timestamp,
+      "ExclusiveEndTime" : Timestamp,
+      "S3ExportConfiguration" : S3ExportConfiguration,
+      "RoleArn" : Arn
+    )
+
+    alias ExportJournalToS3Response = NamedTuple(
+      "ExportId" : UniqueId
+    )
+
+    alias ExportStatus = String
+
+    alias GetBlockRequest = NamedTuple(
+      "Name" : LedgerName,
+      "BlockAddress" : ValueHolder,
+      "DigestTipAddress" : (ValueHolder)?
+    )
+
+    alias GetBlockResponse = NamedTuple(
+      "Block" : ValueHolder,
+      "Proof" : (ValueHolder)?
+    )
+
+    alias GetDigestRequest = NamedTuple(
+      "Name" : LedgerName
+    )
+
+    alias GetDigestResponse = NamedTuple(
+      "Digest" : Digest,
+      "DigestTipAddress" : ValueHolder
+    )
+
+    alias GetRevisionRequest = NamedTuple(
+      "Name" : LedgerName,
+      "BlockAddress" : ValueHolder,
+      "DocumentId" : UniqueId,
+      "DigestTipAddress" : (ValueHolder)?
+    )
+
+    alias GetRevisionResponse = NamedTuple(
+      "Proof" : (ValueHolder)?,
+      "Revision" : ValueHolder
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ParameterName" : (ParameterName)?
+    )
+
+    alias IonText = String
+
+    alias JournalKinesisStreamDescription = NamedTuple(
+      "LedgerName" : LedgerName,
+      "CreationTime" : (Timestamp)?,
+      "InclusiveStartTime" : (Timestamp)?,
+      "ExclusiveEndTime" : (Timestamp)?,
+      "RoleArn" : Arn,
+      "StreamId" : UniqueId,
+      "Arn" : (Arn)?,
+      "Status" : StreamStatus,
+      "KinesisConfiguration" : KinesisConfiguration,
+      "ErrorCause" : (ErrorCause)?,
+      "StreamName" : StreamName
+    )
+
+    alias JournalKinesisStreamDescriptionList = Array(JournalKinesisStreamDescription)
+
+    alias JournalS3ExportDescription = NamedTuple(
+      "LedgerName" : LedgerName,
+      "ExportId" : UniqueId,
+      "ExportCreationTime" : Timestamp,
+      "Status" : ExportStatus,
+      "InclusiveStartTime" : Timestamp,
+      "ExclusiveEndTime" : Timestamp,
+      "S3ExportConfiguration" : S3ExportConfiguration,
+      "RoleArn" : Arn
+    )
+
+    alias JournalS3ExportList = Array(JournalS3ExportDescription)
+
+    alias KinesisConfiguration = NamedTuple(
+      "StreamArn" : Arn,
+      "AggregationEnabled" : (Boolean)?
+    )
+
+    alias LedgerList = Array(LedgerSummary)
+
+    alias LedgerName = String
+
+    alias LedgerState = String
+
+    alias LedgerSummary = NamedTuple(
+      "Name" : (LedgerName)?,
+      "State" : (LedgerState)?,
+      "CreationDateTime" : (Timestamp)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ListJournalKinesisStreamsForLedgerRequest = NamedTuple(
+      "LedgerName" : LedgerName,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJournalKinesisStreamsForLedgerResponse = NamedTuple(
+      "Streams" : (JournalKinesisStreamDescriptionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJournalS3ExportsForLedgerRequest = NamedTuple(
+      "Name" : LedgerName,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJournalS3ExportsForLedgerResponse = NamedTuple(
+      "JournalS3Exports" : (JournalS3ExportList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJournalS3ExportsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJournalS3ExportsResponse = NamedTuple(
+      "JournalS3Exports" : (JournalS3ExportList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLedgersRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLedgersResponse = NamedTuple(
+      "Ledgers" : (LedgerList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias ParameterName = String
+
+    alias PermissionsMode = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceName" : (ResourceName)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceName" : (ResourceName)?
+    )
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceName" : (ResourceName)?
+    )
+
+    alias ResourcePreconditionNotMetException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceName" : (ResourceName)?
+    )
+
+    alias ResourceType = String
+
+    alias S3Bucket = String
+
+    alias S3EncryptionConfiguration = NamedTuple(
+      "ObjectEncryptionType" : S3ObjectEncryptionType,
+      "KmsKeyArn" : (Arn)?
+    )
+
+    alias S3ExportConfiguration = NamedTuple(
+      "Bucket" : S3Bucket,
+      "Prefix" : S3Prefix,
+      "EncryptionConfiguration" : S3EncryptionConfiguration
+    )
+
+    alias S3ObjectEncryptionType = String
+
+    alias S3Prefix = String
+
+    alias StreamJournalToKinesisRequest = NamedTuple(
+      "LedgerName" : LedgerName,
+      "RoleArn" : Arn,
+      "Tags" : (Tags)?,
+      "InclusiveStartTime" : Timestamp,
+      "ExclusiveEndTime" : (Timestamp)?,
+      "KinesisConfiguration" : KinesisConfiguration,
+      "StreamName" : StreamName
+    )
+
+    alias StreamJournalToKinesisResponse = NamedTuple(
+      "StreamId" : (UniqueId)?
+    )
+
+    alias StreamName = String
+
+    alias StreamStatus = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "Tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UniqueId = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateLedgerRequest = NamedTuple(
+      "Name" : LedgerName,
+      "DeletionProtection" : (DeletionProtection)?
+    )
+
+    alias UpdateLedgerResponse = NamedTuple(
+      "Name" : (LedgerName)?,
+      "Arn" : (Arn)?,
+      "State" : (LedgerState)?,
+      "CreationDateTime" : (Timestamp)?,
+      "DeletionProtection" : (DeletionProtection)?
+    )
+
+    alias ValueHolder = NamedTuple(
+      "IonText" : (IonText)?
+    )
   end
 end

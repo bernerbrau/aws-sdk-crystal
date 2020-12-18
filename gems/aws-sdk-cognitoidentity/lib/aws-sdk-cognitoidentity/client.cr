@@ -457,8 +457,8 @@ module Aws::CognitoIdentity
     #
     # @overload create_identity_pool(**params)
     # @param [Hash] params ({})
-    def create_identity_pool(params = {}, **options)
-      req = build_request(:create_identity_pool, params)
+    def create_identity_pool(, **options)
+      req = build_request(:create_identity_pool, )
       req.send_request(options)
     end
 
@@ -490,8 +490,8 @@ module Aws::CognitoIdentity
     #
     # @overload delete_identities(**params)
     # @param [Hash] params ({})
-    def delete_identities(params = {}, **options)
-      req = build_request(:delete_identities, params)
+    def delete_identities(, **options)
+      req = build_request(:delete_identities, )
       req.send_request(options)
     end
 
@@ -515,8 +515,8 @@ module Aws::CognitoIdentity
     #
     # @overload delete_identity_pool(**params)
     # @param [Hash] params ({})
-    def delete_identity_pool(params = {}, **options)
-      req = build_request(:delete_identity_pool, params)
+    def delete_identity_pool(, **options)
+      req = build_request(:delete_identity_pool, )
       req.send_request(options)
     end
 
@@ -553,8 +553,8 @@ module Aws::CognitoIdentity
     #
     # @overload describe_identity(**params)
     # @param [Hash] params ({})
-    def describe_identity(params = {}, **options)
-      req = build_request(:describe_identity, params)
+    def describe_identity(, **options)
+      req = build_request(:describe_identity, )
       req.send_request(options)
     end
 
@@ -609,8 +609,8 @@ module Aws::CognitoIdentity
     #
     # @overload describe_identity_pool(**params)
     # @param [Hash] params ({})
-    def describe_identity_pool(params = {}, **options)
-      req = build_request(:describe_identity_pool, params)
+    def describe_identity_pool(, **options)
+      req = build_request(:describe_identity_pool, )
       req.send_request(options)
     end
 
@@ -675,8 +675,8 @@ module Aws::CognitoIdentity
     #
     # @overload get_credentials_for_identity(**params)
     # @param [Hash] params ({})
-    def get_credentials_for_identity(params = {}, **options)
-      req = build_request(:get_credentials_for_identity, params)
+    def get_credentials_for_identity(, **options)
+      req = build_request(:get_credentials_for_identity, )
       req.send_request(options)
     end
 
@@ -732,8 +732,8 @@ module Aws::CognitoIdentity
     #
     # @overload get_id(**params)
     # @param [Hash] params ({})
-    def get_id(params = {}, **options)
-      req = build_request(:get_id, params)
+    def get_id(, **options)
+      req = build_request(:get_id, )
       req.send_request(options)
     end
 
@@ -774,8 +774,8 @@ module Aws::CognitoIdentity
     #
     # @overload get_identity_pool_roles(**params)
     # @param [Hash] params ({})
-    def get_identity_pool_roles(params = {}, **options)
-      req = build_request(:get_identity_pool_roles, params)
+    def get_identity_pool_roles(, **options)
+      req = build_request(:get_identity_pool_roles, )
       req.send_request(options)
     end
 
@@ -821,8 +821,8 @@ module Aws::CognitoIdentity
     #
     # @overload get_open_id_token(**params)
     # @param [Hash] params ({})
-    def get_open_id_token(params = {}, **options)
-      req = build_request(:get_open_id_token, params)
+    def get_open_id_token(, **options)
+      req = build_request(:get_open_id_token, )
       req.send_request(options)
     end
 
@@ -903,8 +903,8 @@ module Aws::CognitoIdentity
     #
     # @overload get_open_id_token_for_developer_identity(**params)
     # @param [Hash] params ({})
-    def get_open_id_token_for_developer_identity(params = {}, **options)
-      req = build_request(:get_open_id_token_for_developer_identity, params)
+    def get_open_id_token_for_developer_identity(, **options)
+      req = build_request(:get_open_id_token_for_developer_identity, )
       req.send_request(options)
     end
 
@@ -956,8 +956,8 @@ module Aws::CognitoIdentity
     #
     # @overload list_identities(**params)
     # @param [Hash] params ({})
-    def list_identities(params = {}, **options)
-      req = build_request(:list_identities, params)
+    def list_identities(, **options)
+      req = build_request(:list_identities, )
       req.send_request(options)
     end
 
@@ -996,8 +996,8 @@ module Aws::CognitoIdentity
     #
     # @overload list_identity_pools(**params)
     # @param [Hash] params ({})
-    def list_identity_pools(params = {}, **options)
-      req = build_request(:list_identity_pools, params)
+    def list_identity_pools(, **options)
+      req = build_request(:list_identity_pools, )
       req.send_request(options)
     end
 
@@ -1032,8 +1032,8 @@ module Aws::CognitoIdentity
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1107,8 +1107,8 @@ module Aws::CognitoIdentity
     #
     # @overload lookup_developer_identity(**params)
     # @param [Hash] params ({})
-    def lookup_developer_identity(params = {}, **options)
-      req = build_request(:lookup_developer_identity, params)
+    def lookup_developer_identity(, **options)
+      req = build_request(:lookup_developer_identity, )
       req.send_request(options)
     end
 
@@ -1169,8 +1169,8 @@ module Aws::CognitoIdentity
     #
     # @overload merge_developer_identities(**params)
     # @param [Hash] params ({})
-    def merge_developer_identities(params = {}, **options)
-      req = build_request(:merge_developer_identities, params)
+    def merge_developer_identities(, **options)
+      req = build_request(:merge_developer_identities, )
       req.send_request(options)
     end
 
@@ -1226,8 +1226,8 @@ module Aws::CognitoIdentity
     #
     # @overload set_identity_pool_roles(**params)
     # @param [Hash] params ({})
-    def set_identity_pool_roles(params = {}, **options)
-      req = build_request(:set_identity_pool_roles, params)
+    def set_identity_pool_roles(, **options)
+      req = build_request(:set_identity_pool_roles, )
       req.send_request(options)
     end
 
@@ -1274,8 +1274,8 @@ module Aws::CognitoIdentity
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1315,8 +1315,8 @@ module Aws::CognitoIdentity
     #
     # @overload unlink_developer_identity(**params)
     # @param [Hash] params ({})
-    def unlink_developer_identity(params = {}, **options)
-      req = build_request(:unlink_developer_identity, params)
+    def unlink_developer_identity(, **options)
+      req = build_request(:unlink_developer_identity, )
       req.send_request(options)
     end
 
@@ -1353,8 +1353,8 @@ module Aws::CognitoIdentity
     #
     # @overload unlink_identity(**params)
     # @param [Hash] params ({})
-    def unlink_identity(params = {}, **options)
-      req = build_request(:unlink_identity, params)
+    def unlink_identity(, **options)
+      req = build_request(:unlink_identity, )
       req.send_request(options)
     end
 
@@ -1381,8 +1381,8 @@ module Aws::CognitoIdentity
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1492,8 +1492,8 @@ module Aws::CognitoIdentity
     #
     # @overload update_identity_pool(**params)
     # @param [Hash] params ({})
-    def update_identity_pool(params = {}, **options)
-      req = build_request(:update_identity_pool, params)
+    def update_identity_pool(, **options)
+      req = build_request(:update_identity_pool, )
       req.send_request(options)
     end
 

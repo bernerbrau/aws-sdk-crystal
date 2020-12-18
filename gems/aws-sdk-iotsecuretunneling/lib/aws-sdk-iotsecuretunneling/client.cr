@@ -359,8 +359,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload close_tunnel(**params)
     # @param [Hash] params ({})
-    def close_tunnel(params = {}, **options)
-      req = build_request(:close_tunnel, params)
+    def close_tunnel(, **options)
+      req = build_request(:close_tunnel, )
       req.send_request(options)
     end
 
@@ -401,8 +401,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload describe_tunnel(**params)
     # @param [Hash] params ({})
-    def describe_tunnel(params = {}, **options)
-      req = build_request(:describe_tunnel, params)
+    def describe_tunnel(, **options)
+      req = build_request(:describe_tunnel, )
       req.send_request(options)
     end
 
@@ -429,8 +429,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload list_tunnels(**params)
     # @param [Hash] params ({})
-    def list_tunnels(params = {}, **options)
-      req = build_request(:list_tunnels, params)
+    def list_tunnels(, **options)
+      req = build_request(:list_tunnels, )
       req.send_request(options)
     end
 
@@ -530,8 +530,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload open_tunnel(**params)
     # @param [Hash] params ({})
-    def open_tunnel(params = {}, **options)
-      req = build_request(:open_tunnel, params)
+    def open_tunnel(, **options)
+      req = build_request(:open_tunnel, )
       req.send_request(options)
     end
 
@@ -559,8 +559,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -583,8 +583,8 @@ module Aws::IoTSecureTunneling
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

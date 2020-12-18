@@ -387,8 +387,8 @@ module Aws::CodeStarconnections
     #
     # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, **options)
-      req = build_request(:create_connection, params)
+    def create_connection(, **options)
+      req = build_request(:create_connection, )
       req.send_request(options)
     end
 
@@ -449,8 +449,8 @@ module Aws::CodeStarconnections
     #
     # @overload create_host(**params)
     # @param [Hash] params ({})
-    def create_host(params = {}, **options)
-      req = build_request(:create_host, params)
+    def create_host(, **options)
+      req = build_request(:create_host, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::CodeStarconnections
     #
     # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, **options)
-      req = build_request(:delete_connection, params)
+    def delete_connection(, **options)
+      req = build_request(:delete_connection, )
       req.send_request(options)
     end
 
@@ -503,8 +503,8 @@ module Aws::CodeStarconnections
     #
     # @overload delete_host(**params)
     # @param [Hash] params ({})
-    def delete_host(params = {}, **options)
-      req = build_request(:delete_host, params)
+    def delete_host(, **options)
+      req = build_request(:delete_host, )
       req.send_request(options)
     end
 
@@ -537,8 +537,8 @@ module Aws::CodeStarconnections
     #
     # @overload get_connection(**params)
     # @param [Hash] params ({})
-    def get_connection(params = {}, **options)
-      req = build_request(:get_connection, params)
+    def get_connection(, **options)
+      req = build_request(:get_connection, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::CodeStarconnections
     #
     # @overload get_host(**params)
     # @param [Hash] params ({})
-    def get_host(params = {}, **options)
-      req = build_request(:get_host, params)
+    def get_host(, **options)
+      req = build_request(:get_host, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::CodeStarconnections
     #
     # @overload list_connections(**params)
     # @param [Hash] params ({})
-    def list_connections(params = {}, **options)
-      req = build_request(:list_connections, params)
+    def list_connections(, **options)
+      req = build_request(:list_connections, )
       req.send_request(options)
     end
 
@@ -685,8 +685,8 @@ module Aws::CodeStarconnections
     #
     # @overload list_hosts(**params)
     # @param [Hash] params ({})
-    def list_hosts(params = {}, **options)
-      req = build_request(:list_hosts, params)
+    def list_hosts(, **options)
+      req = build_request(:list_hosts, )
       req.send_request(options)
     end
 
@@ -717,8 +717,8 @@ module Aws::CodeStarconnections
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -750,8 +750,8 @@ module Aws::CodeStarconnections
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -776,8 +776,8 @@ module Aws::CodeStarconnections
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -813,8 +813,8 @@ module Aws::CodeStarconnections
     #
     # @overload update_host(**params)
     # @param [Hash] params ({})
-    def update_host(params = {}, **options)
-      req = build_request(:update_host, params)
+    def update_host(, **options)
+      req = build_request(:update_host, )
       req.send_request(options)
     end
 

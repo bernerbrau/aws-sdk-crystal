@@ -1506,5 +1506,322 @@ module Aws::LakeFormation
     #
     class UpdateResourceResponse < Aws::EmptyStructure; end
 
+    alias AlreadyExistsException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias BatchGrantPermissionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Entries" : BatchPermissionsRequestEntryList
+    )
+
+    alias BatchGrantPermissionsResponse = NamedTuple(
+      "Failures" : (BatchPermissionsFailureList)?
+    )
+
+    alias BatchPermissionsFailureEntry = NamedTuple(
+      "RequestEntry" : (BatchPermissionsRequestEntry)?,
+      "Error" : (ErrorDetail)?
+    )
+
+    alias BatchPermissionsFailureList = Array(BatchPermissionsFailureEntry)
+
+    alias BatchPermissionsRequestEntry = NamedTuple(
+      "Id" : Identifier,
+      "Principal" : (DataLakePrincipal)?,
+      "Resource" : (Resource)?,
+      "Permissions" : (PermissionList)?,
+      "PermissionsWithGrantOption" : (PermissionList)?
+    )
+
+    alias BatchPermissionsRequestEntryList = Array(BatchPermissionsRequestEntry)
+
+    alias BatchRevokePermissionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Entries" : BatchPermissionsRequestEntryList
+    )
+
+    alias BatchRevokePermissionsResponse = NamedTuple(
+      "Failures" : (BatchPermissionsFailureList)?
+    )
+
+    alias CatalogIdString = String
+
+    alias CatalogResource = NamedTuple(
+      
+    )
+
+    alias ColumnNames = Array(NameString)
+
+    alias ColumnWildcard = NamedTuple(
+      "ExcludedColumnNames" : (ColumnNames)?
+    )
+
+    alias ComparisonOperator = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias DataLakePrincipal = NamedTuple(
+      "DataLakePrincipalIdentifier" : (DataLakePrincipalString)?
+    )
+
+    alias DataLakePrincipalList = Array(DataLakePrincipal)
+
+    alias DataLakePrincipalString = String
+
+    alias DataLakeResourceType = String
+
+    alias DataLakeSettings = NamedTuple(
+      "DataLakeAdmins" : (DataLakePrincipalList)?,
+      "CreateDatabaseDefaultPermissions" : (PrincipalPermissionsList)?,
+      "CreateTableDefaultPermissions" : (PrincipalPermissionsList)?,
+      "TrustedResourceOwners" : (TrustedResourceOwners)?
+    )
+
+    alias DataLocationResource = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "ResourceArn" : ResourceArnString
+    )
+
+    alias DatabaseResource = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Name" : NameString
+    )
+
+    alias DeregisterResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArnString
+    )
+
+    alias DeregisterResourceResponse = NamedTuple(
+      
+    )
+
+    alias DescribeResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArnString
+    )
+
+    alias DescribeResourceResponse = NamedTuple(
+      "ResourceInfo" : (ResourceInfo)?
+    )
+
+    alias DescriptionString = String
+
+    alias DetailsMap = NamedTuple(
+      "ResourceShare" : (ResourceShareList)?
+    )
+
+    alias EntityNotFoundException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ErrorDetail = NamedTuple(
+      "ErrorCode" : (NameString)?,
+      "ErrorMessage" : (DescriptionString)?
+    )
+
+    alias FieldNameString = String
+
+    alias FilterCondition = NamedTuple(
+      "Field" : (FieldNameString)?,
+      "ComparisonOperator" : (ComparisonOperator)?,
+      "StringValueList" : (StringValueList)?
+    )
+
+    alias FilterConditionList = Array(FilterCondition)
+
+    alias GetDataLakeSettingsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias GetDataLakeSettingsResponse = NamedTuple(
+      "DataLakeSettings" : (DataLakeSettings)?
+    )
+
+    alias GetEffectivePermissionsForPathRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "ResourceArn" : ResourceArnString,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetEffectivePermissionsForPathResponse = NamedTuple(
+      "Permissions" : (PrincipalResourcePermissionsList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GrantPermissionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Principal" : DataLakePrincipal,
+      "Resource" : Resource,
+      "Permissions" : PermissionList,
+      "PermissionsWithGrantOption" : (PermissionList)?
+    )
+
+    alias GrantPermissionsResponse = NamedTuple(
+      
+    )
+
+    alias IAMRoleArn = String
+
+    alias Identifier = String
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias LastModifiedTimestamp = String | UInt64 | Time
+
+    alias ListPermissionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Principal" : (DataLakePrincipal)?,
+      "ResourceType" : (DataLakeResourceType)?,
+      "Resource" : (Resource)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias ListPermissionsResponse = NamedTuple(
+      "PrincipalResourcePermissions" : (PrincipalResourcePermissionsList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListResourcesRequest = NamedTuple(
+      "FilterConditionList" : (FilterConditionList)?,
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListResourcesResponse = NamedTuple(
+      "ResourceInfoList" : (ResourceInfoList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias MessageString = String
+
+    alias NameString = String
+
+    alias NullableBoolean = Bool
+
+    alias OperationTimeoutException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias PageSize = Int32
+
+    alias Permission = String
+
+    alias PermissionList = Array(Permission)
+
+    alias PrincipalPermissions = NamedTuple(
+      "Principal" : (DataLakePrincipal)?,
+      "Permissions" : (PermissionList)?
+    )
+
+    alias PrincipalPermissionsList = Array(PrincipalPermissions)
+
+    alias PrincipalResourcePermissions = NamedTuple(
+      "Principal" : (DataLakePrincipal)?,
+      "Resource" : (Resource)?,
+      "Permissions" : (PermissionList)?,
+      "PermissionsWithGrantOption" : (PermissionList)?,
+      "AdditionalDetails" : (DetailsMap)?
+    )
+
+    alias PrincipalResourcePermissionsList = Array(PrincipalResourcePermissions)
+
+    alias PutDataLakeSettingsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DataLakeSettings" : DataLakeSettings
+    )
+
+    alias PutDataLakeSettingsResponse = NamedTuple(
+      
+    )
+
+    alias RAMResourceShareArn = String
+
+    alias RegisterResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArnString,
+      "UseServiceLinkedRole" : (NullableBoolean)?,
+      "RoleArn" : (IAMRoleArn)?
+    )
+
+    alias RegisterResourceResponse = NamedTuple(
+      
+    )
+
+    alias Resource = NamedTuple(
+      "Catalog" : (CatalogResource)?,
+      "Database" : (DatabaseResource)?,
+      "Table" : (TableResource)?,
+      "TableWithColumns" : (TableWithColumnsResource)?,
+      "DataLocation" : (DataLocationResource)?
+    )
+
+    alias ResourceArnString = String
+
+    alias ResourceInfo = NamedTuple(
+      "ResourceArn" : (ResourceArnString)?,
+      "RoleArn" : (IAMRoleArn)?,
+      "LastModified" : (LastModifiedTimestamp)?
+    )
+
+    alias ResourceInfoList = Array(ResourceInfo)
+
+    alias ResourceShareList = Array(RAMResourceShareArn)
+
+    alias RevokePermissionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Principal" : DataLakePrincipal,
+      "Resource" : Resource,
+      "Permissions" : PermissionList,
+      "PermissionsWithGrantOption" : (PermissionList)?
+    )
+
+    alias RevokePermissionsResponse = NamedTuple(
+      
+    )
+
+    alias StringValue = String
+
+    alias StringValueList = Array(StringValue)
+
+    alias TableResource = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "Name" : (NameString)?,
+      "TableWildcard" : (TableWildcard)?
+    )
+
+    alias TableWildcard = NamedTuple(
+      
+    )
+
+    alias TableWithColumnsResource = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "Name" : NameString,
+      "ColumnNames" : (ColumnNames)?,
+      "ColumnWildcard" : (ColumnWildcard)?
+    )
+
+    alias Token = String
+
+    alias TrustedResourceOwners = Array(CatalogIdString)
+
+    alias UpdateResourceRequest = NamedTuple(
+      "RoleArn" : IAMRoleArn,
+      "ResourceArn" : ResourceArnString
+    )
+
+    alias UpdateResourceResponse = NamedTuple(
+      
+    )
   end
 end

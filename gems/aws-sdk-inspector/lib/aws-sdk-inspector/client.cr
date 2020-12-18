@@ -396,8 +396,8 @@ module Aws::Inspector
     #
     # @overload add_attributes_to_findings(**params)
     # @param [Hash] params ({})
-    def add_attributes_to_findings(params = {}, **options)
-      req = build_request(:add_attributes_to_findings, params)
+    def add_attributes_to_findings(, **options)
+      req = build_request(:add_attributes_to_findings, )
       req.send_request(options)
     end
 
@@ -462,8 +462,8 @@ module Aws::Inspector
     #
     # @overload create_assessment_target(**params)
     # @param [Hash] params ({})
-    def create_assessment_target(params = {}, **options)
-      req = build_request(:create_assessment_target, params)
+    def create_assessment_target(, **options)
+      req = build_request(:create_assessment_target, )
       req.send_request(options)
     end
 
@@ -552,8 +552,8 @@ module Aws::Inspector
     #
     # @overload create_assessment_template(**params)
     # @param [Hash] params ({})
-    def create_assessment_template(params = {}, **options)
-      req = build_request(:create_assessment_template, params)
+    def create_assessment_template(, **options)
+      req = build_request(:create_assessment_template, )
       req.send_request(options)
     end
 
@@ -584,8 +584,8 @@ module Aws::Inspector
     #
     # @overload create_exclusions_preview(**params)
     # @param [Hash] params ({})
-    def create_exclusions_preview(params = {}, **options)
-      req = build_request(:create_exclusions_preview, params)
+    def create_exclusions_preview(, **options)
+      req = build_request(:create_exclusions_preview, )
       req.send_request(options)
     end
 
@@ -646,8 +646,8 @@ module Aws::Inspector
     #
     # @overload create_resource_group(**params)
     # @param [Hash] params ({})
-    def create_resource_group(params = {}, **options)
-      req = build_request(:create_resource_group, params)
+    def create_resource_group(, **options)
+      req = build_request(:create_resource_group, )
       req.send_request(options)
     end
 
@@ -678,8 +678,8 @@ module Aws::Inspector
     #
     # @overload delete_assessment_run(**params)
     # @param [Hash] params ({})
-    def delete_assessment_run(params = {}, **options)
-      req = build_request(:delete_assessment_run, params)
+    def delete_assessment_run(, **options)
+      req = build_request(:delete_assessment_run, )
       req.send_request(options)
     end
 
@@ -710,8 +710,8 @@ module Aws::Inspector
     #
     # @overload delete_assessment_target(**params)
     # @param [Hash] params ({})
-    def delete_assessment_target(params = {}, **options)
-      req = build_request(:delete_assessment_target, params)
+    def delete_assessment_target(, **options)
+      req = build_request(:delete_assessment_target, )
       req.send_request(options)
     end
 
@@ -743,8 +743,8 @@ module Aws::Inspector
     #
     # @overload delete_assessment_template(**params)
     # @param [Hash] params ({})
-    def delete_assessment_template(params = {}, **options)
-      req = build_request(:delete_assessment_template, params)
+    def delete_assessment_template(, **options)
+      req = build_request(:delete_assessment_template, )
       req.send_request(options)
     end
 
@@ -882,8 +882,8 @@ module Aws::Inspector
     #
     # @overload describe_assessment_runs(**params)
     # @param [Hash] params ({})
-    def describe_assessment_runs(params = {}, **options)
-      req = build_request(:describe_assessment_runs, params)
+    def describe_assessment_runs(, **options)
+      req = build_request(:describe_assessment_runs, )
       req.send_request(options)
     end
 
@@ -947,8 +947,8 @@ module Aws::Inspector
     #
     # @overload describe_assessment_targets(**params)
     # @param [Hash] params ({})
-    def describe_assessment_targets(params = {}, **options)
-      req = build_request(:describe_assessment_targets, params)
+    def describe_assessment_targets(, **options)
+      req = build_request(:describe_assessment_targets, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::Inspector
     #
     # @overload describe_assessment_templates(**params)
     # @param [Hash] params ({})
-    def describe_assessment_templates(params = {}, **options)
-      req = build_request(:describe_assessment_templates, params)
+    def describe_assessment_templates(, **options)
+      req = build_request(:describe_assessment_templates, )
       req.send_request(options)
     end
 
@@ -1062,8 +1062,8 @@ module Aws::Inspector
     #
     # @overload describe_cross_account_access_role(**params)
     # @param [Hash] params ({})
-    def describe_cross_account_access_role(params = {}, **options)
-      req = build_request(:describe_cross_account_access_role, params)
+    def describe_cross_account_access_role(, **options)
+      req = build_request(:describe_cross_account_access_role, )
       req.send_request(options)
     end
 
@@ -1110,8 +1110,8 @@ module Aws::Inspector
     #
     # @overload describe_exclusions(**params)
     # @param [Hash] params ({})
-    def describe_exclusions(params = {}, **options)
-      req = build_request(:describe_exclusions, params)
+    def describe_exclusions(, **options)
+      req = build_request(:describe_exclusions, )
       req.send_request(options)
     end
 
@@ -1244,8 +1244,8 @@ module Aws::Inspector
     #
     # @overload describe_findings(**params)
     # @param [Hash] params ({})
-    def describe_findings(params = {}, **options)
-      req = build_request(:describe_findings, params)
+    def describe_findings(, **options)
+      req = build_request(:describe_findings, )
       req.send_request(options)
     end
 
@@ -1311,8 +1311,8 @@ module Aws::Inspector
     #
     # @overload describe_resource_groups(**params)
     # @param [Hash] params ({})
-    def describe_resource_groups(params = {}, **options)
-      req = build_request(:describe_resource_groups, params)
+    def describe_resource_groups(, **options)
+      req = build_request(:describe_resource_groups, )
       req.send_request(options)
     end
 
@@ -1380,8 +1380,8 @@ module Aws::Inspector
     #
     # @overload describe_rules_packages(**params)
     # @param [Hash] params ({})
-    def describe_rules_packages(params = {}, **options)
-      req = build_request(:describe_rules_packages, params)
+    def describe_rules_packages(, **options)
+      req = build_request(:describe_rules_packages, )
       req.send_request(options)
     end
 
@@ -1427,8 +1427,8 @@ module Aws::Inspector
     #
     # @overload get_assessment_report(**params)
     # @param [Hash] params ({})
-    def get_assessment_report(params = {}, **options)
-      req = build_request(:get_assessment_report, params)
+    def get_assessment_report(, **options)
+      req = build_request(:get_assessment_report, )
       req.send_request(options)
     end
 
@@ -1496,8 +1496,8 @@ module Aws::Inspector
     #
     # @overload get_exclusions_preview(**params)
     # @param [Hash] params ({})
-    def get_exclusions_preview(params = {}, **options)
-      req = build_request(:get_exclusions_preview, params)
+    def get_exclusions_preview(, **options)
+      req = build_request(:get_exclusions_preview, )
       req.send_request(options)
     end
 
@@ -1689,8 +1689,8 @@ module Aws::Inspector
     #
     # @overload get_telemetry_metadata(**params)
     # @param [Hash] params ({})
-    def get_telemetry_metadata(params = {}, **options)
-      req = build_request(:get_telemetry_metadata, params)
+    def get_telemetry_metadata(, **options)
+      req = build_request(:get_telemetry_metadata, )
       req.send_request(options)
     end
 
@@ -1929,8 +1929,8 @@ module Aws::Inspector
     #
     # @overload list_assessment_run_agents(**params)
     # @param [Hash] params ({})
-    def list_assessment_run_agents(params = {}, **options)
-      req = build_request(:list_assessment_run_agents, params)
+    def list_assessment_run_agents(, **options)
+      req = build_request(:list_assessment_run_agents, )
       req.send_request(options)
     end
 
@@ -2029,8 +2029,8 @@ module Aws::Inspector
     #
     # @overload list_assessment_runs(**params)
     # @param [Hash] params ({})
-    def list_assessment_runs(params = {}, **options)
-      req = build_request(:list_assessment_runs, params)
+    def list_assessment_runs(, **options)
+      req = build_request(:list_assessment_runs, )
       req.send_request(options)
     end
 
@@ -2106,8 +2106,8 @@ module Aws::Inspector
     #
     # @overload list_assessment_targets(**params)
     # @param [Hash] params ({})
-    def list_assessment_targets(params = {}, **options)
-      req = build_request(:list_assessment_targets, params)
+    def list_assessment_targets(, **options)
+      req = build_request(:list_assessment_targets, )
       req.send_request(options)
     end
 
@@ -2193,8 +2193,8 @@ module Aws::Inspector
     #
     # @overload list_assessment_templates(**params)
     # @param [Hash] params ({})
-    def list_assessment_templates(params = {}, **options)
-      req = build_request(:list_assessment_templates, params)
+    def list_assessment_templates(, **options)
+      req = build_request(:list_assessment_templates, )
       req.send_request(options)
     end
 
@@ -2274,8 +2274,8 @@ module Aws::Inspector
     #
     # @overload list_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def list_event_subscriptions(params = {}, **options)
-      req = build_request(:list_event_subscriptions, params)
+    def list_event_subscriptions(, **options)
+      req = build_request(:list_event_subscriptions, )
       req.send_request(options)
     end
 
@@ -2322,8 +2322,8 @@ module Aws::Inspector
     #
     # @overload list_exclusions(**params)
     # @param [Hash] params ({})
-    def list_exclusions(params = {}, **options)
-      req = build_request(:list_exclusions, params)
+    def list_exclusions(, **options)
+      req = build_request(:list_exclusions, )
       req.send_request(options)
     end
 
@@ -2423,8 +2423,8 @@ module Aws::Inspector
     #
     # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, **options)
-      req = build_request(:list_findings, params)
+    def list_findings(, **options)
+      req = build_request(:list_findings, )
       req.send_request(options)
     end
 
@@ -2486,8 +2486,8 @@ module Aws::Inspector
     #
     # @overload list_rules_packages(**params)
     # @param [Hash] params ({})
-    def list_rules_packages(params = {}, **options)
-      req = build_request(:list_rules_packages, params)
+    def list_rules_packages(, **options)
+      req = build_request(:list_rules_packages, )
       req.send_request(options)
     end
 
@@ -2536,8 +2536,8 @@ module Aws::Inspector
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2611,8 +2611,8 @@ module Aws::Inspector
     #
     # @overload preview_agents(**params)
     # @param [Hash] params ({})
-    def preview_agents(params = {}, **options)
-      req = build_request(:preview_agents, params)
+    def preview_agents(, **options)
+      req = build_request(:preview_agents, )
       req.send_request(options)
     end
 
@@ -2645,8 +2645,8 @@ module Aws::Inspector
     #
     # @overload register_cross_account_access_role(**params)
     # @param [Hash] params ({})
-    def register_cross_account_access_role(params = {}, **options)
-      req = build_request(:register_cross_account_access_role, params)
+    def register_cross_account_access_role(, **options)
+      req = build_request(:register_cross_account_access_role, )
       req.send_request(options)
     end
 
@@ -2704,8 +2704,8 @@ module Aws::Inspector
     #
     # @overload remove_attributes_from_findings(**params)
     # @param [Hash] params ({})
-    def remove_attributes_from_findings(params = {}, **options)
-      req = build_request(:remove_attributes_from_findings, params)
+    def remove_attributes_from_findings(, **options)
+      req = build_request(:remove_attributes_from_findings, )
       req.send_request(options)
     end
 
@@ -2752,8 +2752,8 @@ module Aws::Inspector
     #
     # @overload set_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def set_tags_for_resource(params = {}, **options)
-      req = build_request(:set_tags_for_resource, params)
+    def set_tags_for_resource(, **options)
+      req = build_request(:set_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2805,8 +2805,8 @@ module Aws::Inspector
     #
     # @overload start_assessment_run(**params)
     # @param [Hash] params ({})
-    def start_assessment_run(params = {}, **options)
-      req = build_request(:start_assessment_run, params)
+    def start_assessment_run(, **options)
+      req = build_request(:start_assessment_run, )
       req.send_request(options)
     end
 
@@ -2845,8 +2845,8 @@ module Aws::Inspector
     #
     # @overload stop_assessment_run(**params)
     # @param [Hash] params ({})
-    def stop_assessment_run(params = {}, **options)
-      req = build_request(:stop_assessment_run, params)
+    def stop_assessment_run(, **options)
+      req = build_request(:stop_assessment_run, )
       req.send_request(options)
     end
 
@@ -2889,8 +2889,8 @@ module Aws::Inspector
     #
     # @overload subscribe_to_event(**params)
     # @param [Hash] params ({})
-    def subscribe_to_event(params = {}, **options)
-      req = build_request(:subscribe_to_event, params)
+    def subscribe_to_event(, **options)
+      req = build_request(:subscribe_to_event, )
       req.send_request(options)
     end
 
@@ -2933,8 +2933,8 @@ module Aws::Inspector
     #
     # @overload unsubscribe_from_event(**params)
     # @param [Hash] params ({})
-    def unsubscribe_from_event(params = {}, **options)
-      req = build_request(:unsubscribe_from_event, params)
+    def unsubscribe_from_event(, **options)
+      req = build_request(:unsubscribe_from_event, )
       req.send_request(options)
     end
 
@@ -2979,8 +2979,8 @@ module Aws::Inspector
     #
     # @overload update_assessment_target(**params)
     # @param [Hash] params ({})
-    def update_assessment_target(params = {}, **options)
-      req = build_request(:update_assessment_target, params)
+    def update_assessment_target(, **options)
+      req = build_request(:update_assessment_target, )
       req.send_request(options)
     end
 

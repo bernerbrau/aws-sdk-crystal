@@ -372,8 +372,8 @@ module Aws::IoTSiteWise
     #
     # @overload associate_assets(**params)
     # @param [Hash] params ({})
-    def associate_assets(params = {}, **options)
-      req = build_request(:associate_assets, params)
+    def associate_assets(, **options)
+      req = build_request(:associate_assets, )
       req.send_request(options)
     end
 
@@ -415,8 +415,8 @@ module Aws::IoTSiteWise
     #
     # @overload batch_associate_project_assets(**params)
     # @param [Hash] params ({})
-    def batch_associate_project_assets(params = {}, **options)
-      req = build_request(:batch_associate_project_assets, params)
+    def batch_associate_project_assets(, **options)
+      req = build_request(:batch_associate_project_assets, )
       req.send_request(options)
     end
 
@@ -458,8 +458,8 @@ module Aws::IoTSiteWise
     #
     # @overload batch_disassociate_project_assets(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_project_assets(params = {}, **options)
-      req = build_request(:batch_disassociate_project_assets, params)
+    def batch_disassociate_project_assets(, **options)
+      req = build_request(:batch_disassociate_project_assets, )
       req.send_request(options)
     end
 
@@ -547,8 +547,8 @@ module Aws::IoTSiteWise
     #
     # @overload batch_put_asset_property_value(**params)
     # @param [Hash] params ({})
-    def batch_put_asset_property_value(params = {}, **options)
-      req = build_request(:batch_put_asset_property_value, params)
+    def batch_put_asset_property_value(, **options)
+      req = build_request(:batch_put_asset_property_value, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_access_policy(**params)
     # @param [Hash] params ({})
-    def create_access_policy(params = {}, **options)
-      req = build_request(:create_access_policy, params)
+    def create_access_policy(, **options)
+      req = build_request(:create_access_policy, )
       req.send_request(options)
     end
 
@@ -688,8 +688,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_asset(**params)
     # @param [Hash] params ({})
-    def create_asset(params = {}, **options)
-      req = build_request(:create_asset, params)
+    def create_asset(, **options)
+      req = build_request(:create_asset, )
       req.send_request(options)
     end
 
@@ -888,8 +888,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_asset_model(**params)
     # @param [Hash] params ({})
-    def create_asset_model(params = {}, **options)
-      req = build_request(:create_asset_model, params)
+    def create_asset_model(, **options)
+      req = build_request(:create_asset_model, )
       req.send_request(options)
     end
 
@@ -955,8 +955,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_dashboard(**params)
     # @param [Hash] params ({})
-    def create_dashboard(params = {}, **options)
-      req = build_request(:create_dashboard, params)
+    def create_dashboard(, **options)
+      req = build_request(:create_dashboard, )
       req.send_request(options)
     end
 
@@ -1011,8 +1011,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_gateway(**params)
     # @param [Hash] params ({})
-    def create_gateway(params = {}, **options)
-      req = build_request(:create_gateway, params)
+    def create_gateway(, **options)
+      req = build_request(:create_gateway, )
       req.send_request(options)
     end
 
@@ -1132,8 +1132,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_portal(**params)
     # @param [Hash] params ({})
-    def create_portal(params = {}, **options)
-      req = build_request(:create_portal, params)
+    def create_portal(, **options)
+      req = build_request(:create_portal, )
       req.send_request(options)
     end
 
@@ -1189,8 +1189,8 @@ module Aws::IoTSiteWise
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -1220,8 +1220,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_access_policy(**params)
     # @param [Hash] params ({})
-    def delete_access_policy(params = {}, **options)
-      req = build_request(:delete_access_policy, params)
+    def delete_access_policy(, **options)
+      req = build_request(:delete_access_policy, )
       req.send_request(options)
     end
 
@@ -1269,8 +1269,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_asset(**params)
     # @param [Hash] params ({})
-    def delete_asset(params = {}, **options)
-      req = build_request(:delete_asset, params)
+    def delete_asset(, **options)
+      req = build_request(:delete_asset, )
       req.send_request(options)
     end
 
@@ -1315,8 +1315,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_asset_model(**params)
     # @param [Hash] params ({})
-    def delete_asset_model(params = {}, **options)
-      req = build_request(:delete_asset_model, params)
+    def delete_asset_model(, **options)
+      req = build_request(:delete_asset_model, )
       req.send_request(options)
     end
 
@@ -1344,8 +1344,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_dashboard(**params)
     # @param [Hash] params ({})
-    def delete_dashboard(params = {}, **options)
-      req = build_request(:delete_dashboard, params)
+    def delete_dashboard(, **options)
+      req = build_request(:delete_dashboard, )
       req.send_request(options)
     end
 
@@ -1365,8 +1365,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_gateway(**params)
     # @param [Hash] params ({})
-    def delete_gateway(params = {}, **options)
-      req = build_request(:delete_gateway, params)
+    def delete_gateway(, **options)
+      req = build_request(:delete_gateway, )
       req.send_request(options)
     end
 
@@ -1402,8 +1402,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_portal(**params)
     # @param [Hash] params ({})
-    def delete_portal(params = {}, **options)
-      req = build_request(:delete_portal, params)
+    def delete_portal(, **options)
+      req = build_request(:delete_portal, )
       req.send_request(options)
     end
 
@@ -1431,8 +1431,8 @@ module Aws::IoTSiteWise
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -1473,8 +1473,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_access_policy(**params)
     # @param [Hash] params ({})
-    def describe_access_policy(params = {}, **options)
-      req = build_request(:describe_access_policy, params)
+    def describe_access_policy(, **options)
+      req = build_request(:describe_access_policy, )
       req.send_request(options)
     end
 
@@ -1547,8 +1547,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_asset(**params)
     # @param [Hash] params ({})
-    def describe_asset(params = {}, **options)
-      req = build_request(:describe_asset, params)
+    def describe_asset(, **options)
+      req = build_request(:describe_asset, )
       req.send_request(options)
     end
 
@@ -1640,8 +1640,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_asset_model(**params)
     # @param [Hash] params ({})
-    def describe_asset_model(params = {}, **options)
-      req = build_request(:describe_asset_model, params)
+    def describe_asset_model(, **options)
+      req = build_request(:describe_asset_model, )
       req.send_request(options)
     end
 
@@ -1730,8 +1730,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_asset_property(**params)
     # @param [Hash] params ({})
-    def describe_asset_property(params = {}, **options)
-      req = build_request(:describe_asset_property, params)
+    def describe_asset_property(, **options)
+      req = build_request(:describe_asset_property, )
       req.send_request(options)
     end
 
@@ -1770,8 +1770,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_dashboard(**params)
     # @param [Hash] params ({})
-    def describe_dashboard(params = {}, **options)
-      req = build_request(:describe_dashboard, params)
+    def describe_dashboard(, **options)
+      req = build_request(:describe_dashboard, )
       req.send_request(options)
     end
 
@@ -1800,8 +1800,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_default_encryption_configuration(**params)
     # @param [Hash] params ({})
-    def describe_default_encryption_configuration(params = {}, **options)
-      req = build_request(:describe_default_encryption_configuration, params)
+    def describe_default_encryption_configuration(, **options)
+      req = build_request(:describe_default_encryption_configuration, )
       req.send_request(options)
     end
 
@@ -1840,8 +1840,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_gateway(**params)
     # @param [Hash] params ({})
-    def describe_gateway(params = {}, **options)
-      req = build_request(:describe_gateway, params)
+    def describe_gateway(, **options)
+      req = build_request(:describe_gateway, )
       req.send_request(options)
     end
 
@@ -1890,8 +1890,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_gateway_capability_configuration(**params)
     # @param [Hash] params ({})
-    def describe_gateway_capability_configuration(params = {}, **options)
-      req = build_request(:describe_gateway_capability_configuration, params)
+    def describe_gateway_capability_configuration(, **options)
+      req = build_request(:describe_gateway_capability_configuration, )
       req.send_request(options)
     end
 
@@ -1907,8 +1907,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_logging_options(**params)
     # @param [Hash] params ({})
-    def describe_logging_options(params = {}, **options)
-      req = build_request(:describe_logging_options, params)
+    def describe_logging_options(, **options)
+      req = build_request(:describe_logging_options, )
       req.send_request(options)
     end
 
@@ -1966,8 +1966,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_portal(**params)
     # @param [Hash] params ({})
-    def describe_portal(params = {}, **options)
-      req = build_request(:describe_portal, params)
+    def describe_portal(, **options)
+      req = build_request(:describe_portal, )
       req.send_request(options)
     end
 
@@ -2004,8 +2004,8 @@ module Aws::IoTSiteWise
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -2050,8 +2050,8 @@ module Aws::IoTSiteWise
     #
     # @overload disassociate_assets(**params)
     # @param [Hash] params ({})
-    def disassociate_assets(params = {}, **options)
-      req = build_request(:disassociate_assets, params)
+    def disassociate_assets(, **options)
+      req = build_request(:disassociate_assets, )
       req.send_request(options)
     end
 
@@ -2156,8 +2156,8 @@ module Aws::IoTSiteWise
     #
     # @overload get_asset_property_aggregates(**params)
     # @param [Hash] params ({})
-    def get_asset_property_aggregates(params = {}, **options)
-      req = build_request(:get_asset_property_aggregates, params)
+    def get_asset_property_aggregates(, **options)
+      req = build_request(:get_asset_property_aggregates, )
       req.send_request(options)
     end
 
@@ -2218,8 +2218,8 @@ module Aws::IoTSiteWise
     #
     # @overload get_asset_property_value(**params)
     # @param [Hash] params ({})
-    def get_asset_property_value(params = {}, **options)
-      req = build_request(:get_asset_property_value, params)
+    def get_asset_property_value(, **options)
+      req = build_request(:get_asset_property_value, )
       req.send_request(options)
     end
 
@@ -2316,8 +2316,8 @@ module Aws::IoTSiteWise
     #
     # @overload get_asset_property_value_history(**params)
     # @param [Hash] params ({})
-    def get_asset_property_value_history(params = {}, **options)
-      req = build_request(:get_asset_property_value_history, params)
+    def get_asset_property_value_history(, **options)
+      req = build_request(:get_asset_property_value_history, )
       req.send_request(options)
     end
 
@@ -2393,8 +2393,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_access_policies(**params)
     # @param [Hash] params ({})
-    def list_access_policies(params = {}, **options)
-      req = build_request(:list_access_policies, params)
+    def list_access_policies(, **options)
+      req = build_request(:list_access_policies, )
       req.send_request(options)
     end
 
@@ -2438,8 +2438,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_asset_models(**params)
     # @param [Hash] params ({})
-    def list_asset_models(params = {}, **options)
-      req = build_request(:list_asset_models, params)
+    def list_asset_models(, **options)
+      req = build_request(:list_asset_models, )
       req.send_request(options)
     end
 
@@ -2493,8 +2493,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_asset_relationships(**params)
     # @param [Hash] params ({})
-    def list_asset_relationships(params = {}, **options)
-      req = build_request(:list_asset_relationships, params)
+    def list_asset_relationships(, **options)
+      req = build_request(:list_asset_relationships, )
       req.send_request(options)
     end
 
@@ -2574,8 +2574,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_assets(**params)
     # @param [Hash] params ({})
-    def list_assets(params = {}, **options)
-      req = build_request(:list_assets, params)
+    def list_assets(, **options)
+      req = build_request(:list_assets, )
       req.send_request(options)
     end
 
@@ -2662,8 +2662,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_associated_assets(**params)
     # @param [Hash] params ({})
-    def list_associated_assets(params = {}, **options)
-      req = build_request(:list_associated_assets, params)
+    def list_associated_assets(, **options)
+      req = build_request(:list_associated_assets, )
       req.send_request(options)
     end
 
@@ -2708,8 +2708,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_dashboards(**params)
     # @param [Hash] params ({})
-    def list_dashboards(params = {}, **options)
-      req = build_request(:list_dashboards, params)
+    def list_dashboards(, **options)
+      req = build_request(:list_dashboards, )
       req.send_request(options)
     end
 
@@ -2751,8 +2751,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_gateways(**params)
     # @param [Hash] params ({})
-    def list_gateways(params = {}, **options)
-      req = build_request(:list_gateways, params)
+    def list_gateways(, **options)
+      req = build_request(:list_gateways, )
       req.send_request(options)
     end
 
@@ -2797,8 +2797,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_portals(**params)
     # @param [Hash] params ({})
-    def list_portals(params = {}, **options)
-      req = build_request(:list_portals, params)
+    def list_portals(, **options)
+      req = build_request(:list_portals, )
       req.send_request(options)
     end
 
@@ -2839,8 +2839,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_project_assets(**params)
     # @param [Hash] params ({})
-    def list_project_assets(params = {}, **options)
-      req = build_request(:list_project_assets, params)
+    def list_project_assets(, **options)
+      req = build_request(:list_project_assets, )
       req.send_request(options)
     end
 
@@ -2885,8 +2885,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -2916,8 +2916,8 @@ module Aws::IoTSiteWise
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2960,8 +2960,8 @@ module Aws::IoTSiteWise
     #
     # @overload put_default_encryption_configuration(**params)
     # @param [Hash] params ({})
-    def put_default_encryption_configuration(params = {}, **options)
-      req = build_request(:put_default_encryption_configuration, params)
+    def put_default_encryption_configuration(, **options)
+      req = build_request(:put_default_encryption_configuration, )
       req.send_request(options)
     end
 
@@ -2982,8 +2982,8 @@ module Aws::IoTSiteWise
     #
     # @overload put_logging_options(**params)
     # @param [Hash] params ({})
-    def put_logging_options(params = {}, **options)
-      req = build_request(:put_logging_options, params)
+    def put_logging_options(, **options)
+      req = build_request(:put_logging_options, )
       req.send_request(options)
     end
 
@@ -3019,8 +3019,8 @@ module Aws::IoTSiteWise
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3047,8 +3047,8 @@ module Aws::IoTSiteWise
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3109,8 +3109,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_access_policy(**params)
     # @param [Hash] params ({})
-    def update_access_policy(params = {}, **options)
-      req = build_request(:update_access_policy, params)
+    def update_access_policy(, **options)
+      req = build_request(:update_access_policy, )
       req.send_request(options)
     end
 
@@ -3155,8 +3155,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_asset(**params)
     # @param [Hash] params ({})
-    def update_asset(params = {}, **options)
-      req = build_request(:update_asset, params)
+    def update_asset(, **options)
+      req = build_request(:update_asset, )
       req.send_request(options)
     end
 
@@ -3359,8 +3359,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_asset_model(**params)
     # @param [Hash] params ({})
-    def update_asset_model(params = {}, **options)
-      req = build_request(:update_asset_model, params)
+    def update_asset_model(, **options)
+      req = build_request(:update_asset_model, )
       req.send_request(options)
     end
 
@@ -3431,8 +3431,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_asset_property(**params)
     # @param [Hash] params ({})
-    def update_asset_property(params = {}, **options)
-      req = build_request(:update_asset_property, params)
+    def update_asset_property(, **options)
+      req = build_request(:update_asset_property, )
       req.send_request(options)
     end
 
@@ -3478,8 +3478,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_dashboard(**params)
     # @param [Hash] params ({})
-    def update_dashboard(params = {}, **options)
-      req = build_request(:update_dashboard, params)
+    def update_dashboard(, **options)
+      req = build_request(:update_dashboard, )
       req.send_request(options)
     end
 
@@ -3502,8 +3502,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_gateway(**params)
     # @param [Hash] params ({})
-    def update_gateway(params = {}, **options)
-      req = build_request(:update_gateway, params)
+    def update_gateway(, **options)
+      req = build_request(:update_gateway, )
       req.send_request(options)
     end
 
@@ -3558,8 +3558,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_gateway_capability_configuration(**params)
     # @param [Hash] params ({})
-    def update_gateway_capability_configuration(params = {}, **options)
-      req = build_request(:update_gateway_capability_configuration, params)
+    def update_gateway_capability_configuration(, **options)
+      req = build_request(:update_gateway_capability_configuration, )
       req.send_request(options)
     end
 
@@ -3634,8 +3634,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_portal(**params)
     # @param [Hash] params ({})
-    def update_portal(params = {}, **options)
-      req = build_request(:update_portal, params)
+    def update_portal(, **options)
+      req = build_request(:update_portal, )
       req.send_request(options)
     end
 
@@ -3671,8 +3671,8 @@ module Aws::IoTSiteWise
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 

@@ -382,8 +382,8 @@ module Aws::CodeStar
     #
     # @overload associate_team_member(**params)
     # @param [Hash] params ({})
-    def associate_team_member(params = {}, **options)
-      req = build_request(:associate_team_member, params)
+    def associate_team_member(, **options)
+      req = build_request(:associate_team_member, )
       req.send_request(options)
     end
 
@@ -485,8 +485,8 @@ module Aws::CodeStar
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -544,8 +544,8 @@ module Aws::CodeStar
     #
     # @overload create_user_profile(**params)
     # @param [Hash] params ({})
-    def create_user_profile(params = {}, **options)
-      req = build_request(:create_user_profile, params)
+    def create_user_profile(, **options)
+      req = build_request(:create_user_profile, )
       req.send_request(options)
     end
 
@@ -590,8 +590,8 @@ module Aws::CodeStar
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -622,8 +622,8 @@ module Aws::CodeStar
     #
     # @overload delete_user_profile(**params)
     # @param [Hash] params ({})
-    def delete_user_profile(params = {}, **options)
-      req = build_request(:delete_user_profile, params)
+    def delete_user_profile(, **options)
+      req = build_request(:delete_user_profile, )
       req.send_request(options)
     end
 
@@ -667,8 +667,8 @@ module Aws::CodeStar
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -706,8 +706,8 @@ module Aws::CodeStar
     #
     # @overload describe_user_profile(**params)
     # @param [Hash] params ({})
-    def describe_user_profile(params = {}, **options)
-      req = build_request(:describe_user_profile, params)
+    def describe_user_profile(, **options)
+      req = build_request(:describe_user_profile, )
       req.send_request(options)
     end
 
@@ -738,8 +738,8 @@ module Aws::CodeStar
     #
     # @overload disassociate_team_member(**params)
     # @param [Hash] params ({})
-    def disassociate_team_member(params = {}, **options)
-      req = build_request(:disassociate_team_member, params)
+    def disassociate_team_member(, **options)
+      req = build_request(:disassociate_team_member, )
       req.send_request(options)
     end
 
@@ -776,8 +776,8 @@ module Aws::CodeStar
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -817,8 +817,8 @@ module Aws::CodeStar
     #
     # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, **options)
-      req = build_request(:list_resources, params)
+    def list_resources(, **options)
+      req = build_request(:list_resources, )
       req.send_request(options)
     end
 
@@ -856,8 +856,8 @@ module Aws::CodeStar
     #
     # @overload list_tags_for_project(**params)
     # @param [Hash] params ({})
-    def list_tags_for_project(params = {}, **options)
-      req = build_request(:list_tags_for_project, params)
+    def list_tags_for_project(, **options)
+      req = build_request(:list_tags_for_project, )
       req.send_request(options)
     end
 
@@ -898,8 +898,8 @@ module Aws::CodeStar
     #
     # @overload list_team_members(**params)
     # @param [Hash] params ({})
-    def list_team_members(params = {}, **options)
-      req = build_request(:list_team_members, params)
+    def list_team_members(, **options)
+      req = build_request(:list_team_members, )
       req.send_request(options)
     end
 
@@ -938,8 +938,8 @@ module Aws::CodeStar
     #
     # @overload list_user_profiles(**params)
     # @param [Hash] params ({})
-    def list_user_profiles(params = {}, **options)
-      req = build_request(:list_user_profiles, params)
+    def list_user_profiles(, **options)
+      req = build_request(:list_user_profiles, )
       req.send_request(options)
     end
 
@@ -973,8 +973,8 @@ module Aws::CodeStar
     #
     # @overload tag_project(**params)
     # @param [Hash] params ({})
-    def tag_project(params = {}, **options)
-      req = build_request(:tag_project, params)
+    def tag_project(, **options)
+      req = build_request(:tag_project, )
       req.send_request(options)
     end
 
@@ -999,8 +999,8 @@ module Aws::CodeStar
     #
     # @overload untag_project(**params)
     # @param [Hash] params ({})
-    def untag_project(params = {}, **options)
-      req = build_request(:untag_project, params)
+    def untag_project(, **options)
+      req = build_request(:untag_project, )
       req.send_request(options)
     end
 
@@ -1029,8 +1029,8 @@ module Aws::CodeStar
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 
@@ -1085,8 +1085,8 @@ module Aws::CodeStar
     #
     # @overload update_team_member(**params)
     # @param [Hash] params ({})
-    def update_team_member(params = {}, **options)
-      req = build_request(:update_team_member, params)
+    def update_team_member(, **options)
+      req = build_request(:update_team_member, )
       req.send_request(options)
     end
 
@@ -1144,8 +1144,8 @@ module Aws::CodeStar
     #
     # @overload update_user_profile(**params)
     # @param [Hash] params ({})
-    def update_user_profile(params = {}, **options)
-      req = build_request(:update_user_profile, params)
+    def update_user_profile(, **options)
+      req = build_request(:update_user_profile, )
       req.send_request(options)
     end
 

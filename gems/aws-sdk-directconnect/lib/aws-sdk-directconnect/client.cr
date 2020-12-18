@@ -399,8 +399,8 @@ module Aws::DirectConnect
     #
     # @overload accept_direct_connect_gateway_association_proposal(**params)
     # @param [Hash] params ({})
-    def accept_direct_connect_gateway_association_proposal(params = {}, **options)
-      req = build_request(:accept_direct_connect_gateway_association_proposal, params)
+    def accept_direct_connect_gateway_association_proposal(, **options)
+      req = build_request(:accept_direct_connect_gateway_association_proposal, )
       req.send_request(options)
     end
 
@@ -492,8 +492,8 @@ module Aws::DirectConnect
     #
     # @overload allocate_connection_on_interconnect(**params)
     # @param [Hash] params ({})
-    def allocate_connection_on_interconnect(params = {}, **options)
-      req = build_request(:allocate_connection_on_interconnect, params)
+    def allocate_connection_on_interconnect(, **options)
+      req = build_request(:allocate_connection_on_interconnect, )
       req.send_request(options)
     end
 
@@ -594,8 +594,8 @@ module Aws::DirectConnect
     #
     # @overload allocate_hosted_connection(**params)
     # @param [Hash] params ({})
-    def allocate_hosted_connection(params = {}, **options)
-      req = build_request(:allocate_hosted_connection, params)
+    def allocate_hosted_connection(, **options)
+      req = build_request(:allocate_hosted_connection, )
       req.send_request(options)
     end
 
@@ -710,8 +710,8 @@ module Aws::DirectConnect
     #
     # @overload allocate_private_virtual_interface(**params)
     # @param [Hash] params ({})
-    def allocate_private_virtual_interface(params = {}, **options)
-      req = build_request(:allocate_private_virtual_interface, params)
+    def allocate_private_virtual_interface(, **options)
+      req = build_request(:allocate_private_virtual_interface, )
       req.send_request(options)
     end
 
@@ -838,8 +838,8 @@ module Aws::DirectConnect
     #
     # @overload allocate_public_virtual_interface(**params)
     # @param [Hash] params ({})
-    def allocate_public_virtual_interface(params = {}, **options)
-      req = build_request(:allocate_public_virtual_interface, params)
+    def allocate_public_virtual_interface(, **options)
+      req = build_request(:allocate_public_virtual_interface, )
       req.send_request(options)
     end
 
@@ -935,8 +935,8 @@ module Aws::DirectConnect
     #
     # @overload allocate_transit_virtual_interface(**params)
     # @param [Hash] params ({})
-    def allocate_transit_virtual_interface(params = {}, **options)
-      req = build_request(:allocate_transit_virtual_interface, params)
+    def allocate_transit_virtual_interface(, **options)
+      req = build_request(:allocate_transit_virtual_interface, )
       req.send_request(options)
     end
 
@@ -1019,8 +1019,8 @@ module Aws::DirectConnect
     #
     # @overload associate_connection_with_lag(**params)
     # @param [Hash] params ({})
-    def associate_connection_with_lag(params = {}, **options)
-      req = build_request(:associate_connection_with_lag, params)
+    def associate_connection_with_lag(, **options)
+      req = build_request(:associate_connection_with_lag, )
       req.send_request(options)
     end
 
@@ -1093,8 +1093,8 @@ module Aws::DirectConnect
     #
     # @overload associate_hosted_connection(**params)
     # @param [Hash] params ({})
-    def associate_hosted_connection(params = {}, **options)
-      req = build_request(:associate_hosted_connection, params)
+    def associate_hosted_connection(, **options)
+      req = build_request(:associate_hosted_connection, )
       req.send_request(options)
     end
 
@@ -1197,8 +1197,8 @@ module Aws::DirectConnect
     #
     # @overload associate_virtual_interface(**params)
     # @param [Hash] params ({})
-    def associate_virtual_interface(params = {}, **options)
-      req = build_request(:associate_virtual_interface, params)
+    def associate_virtual_interface(, **options)
+      req = build_request(:associate_virtual_interface, )
       req.send_request(options)
     end
 
@@ -1230,8 +1230,8 @@ module Aws::DirectConnect
     #
     # @overload confirm_connection(**params)
     # @param [Hash] params ({})
-    def confirm_connection(params = {}, **options)
-      req = build_request(:confirm_connection, params)
+    def confirm_connection(, **options)
+      req = build_request(:confirm_connection, )
       req.send_request(options)
     end
 
@@ -1272,8 +1272,8 @@ module Aws::DirectConnect
     #
     # @overload confirm_private_virtual_interface(**params)
     # @param [Hash] params ({})
-    def confirm_private_virtual_interface(params = {}, **options)
-      req = build_request(:confirm_private_virtual_interface, params)
+    def confirm_private_virtual_interface(, **options)
+      req = build_request(:confirm_private_virtual_interface, )
       req.send_request(options)
     end
 
@@ -1304,8 +1304,8 @@ module Aws::DirectConnect
     #
     # @overload confirm_public_virtual_interface(**params)
     # @param [Hash] params ({})
-    def confirm_public_virtual_interface(params = {}, **options)
-      req = build_request(:confirm_public_virtual_interface, params)
+    def confirm_public_virtual_interface(, **options)
+      req = build_request(:confirm_public_virtual_interface, )
       req.send_request(options)
     end
 
@@ -1341,8 +1341,8 @@ module Aws::DirectConnect
     #
     # @overload confirm_transit_virtual_interface(**params)
     # @param [Hash] params ({})
-    def confirm_transit_virtual_interface(params = {}, **options)
-      req = build_request(:confirm_transit_virtual_interface, params)
+    def confirm_transit_virtual_interface(, **options)
+      req = build_request(:confirm_transit_virtual_interface, )
       req.send_request(options)
     end
 
@@ -1429,8 +1429,8 @@ module Aws::DirectConnect
     #
     # @overload create_bgp_peer(**params)
     # @param [Hash] params ({})
-    def create_bgp_peer(params = {}, **options)
-      req = build_request(:create_bgp_peer, params)
+    def create_bgp_peer(, **options)
+      req = build_request(:create_bgp_peer, )
       req.send_request(options)
     end
 
@@ -1531,8 +1531,8 @@ module Aws::DirectConnect
     #
     # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, **options)
-      req = build_request(:create_connection, params)
+    def create_connection(, **options)
+      req = build_request(:create_connection, )
       req.send_request(options)
     end
 
@@ -1578,8 +1578,8 @@ module Aws::DirectConnect
     #
     # @overload create_direct_connect_gateway(**params)
     # @param [Hash] params ({})
-    def create_direct_connect_gateway(params = {}, **options)
-      req = build_request(:create_direct_connect_gateway, params)
+    def create_direct_connect_gateway(, **options)
+      req = build_request(:create_direct_connect_gateway, )
       req.send_request(options)
     end
 
@@ -1647,8 +1647,8 @@ module Aws::DirectConnect
     #
     # @overload create_direct_connect_gateway_association(**params)
     # @param [Hash] params ({})
-    def create_direct_connect_gateway_association(params = {}, **options)
-      req = build_request(:create_direct_connect_gateway_association, params)
+    def create_direct_connect_gateway_association(, **options)
+      req = build_request(:create_direct_connect_gateway_association, )
       req.send_request(options)
     end
 
@@ -1715,8 +1715,8 @@ module Aws::DirectConnect
     #
     # @overload create_direct_connect_gateway_association_proposal(**params)
     # @param [Hash] params ({})
-    def create_direct_connect_gateway_association_proposal(params = {}, **options)
-      req = build_request(:create_direct_connect_gateway_association_proposal, params)
+    def create_direct_connect_gateway_association_proposal(, **options)
+      req = build_request(:create_direct_connect_gateway_association_proposal, )
       req.send_request(options)
     end
 
@@ -1822,8 +1822,8 @@ module Aws::DirectConnect
     #
     # @overload create_interconnect(**params)
     # @param [Hash] params ({})
-    def create_interconnect(params = {}, **options)
-      req = build_request(:create_interconnect, params)
+    def create_interconnect(, **options)
+      req = build_request(:create_interconnect, )
       req.send_request(options)
     end
 
@@ -1970,8 +1970,8 @@ module Aws::DirectConnect
     #
     # @overload create_lag(**params)
     # @param [Hash] params ({})
-    def create_lag(params = {}, **options)
-      req = build_request(:create_lag, params)
+    def create_lag(, **options)
+      req = build_request(:create_lag, )
       req.send_request(options)
     end
 
@@ -2093,8 +2093,8 @@ module Aws::DirectConnect
     #
     # @overload create_private_virtual_interface(**params)
     # @param [Hash] params ({})
-    def create_private_virtual_interface(params = {}, **options)
-      req = build_request(:create_private_virtual_interface, params)
+    def create_private_virtual_interface(, **options)
+      req = build_request(:create_private_virtual_interface, )
       req.send_request(options)
     end
 
@@ -2208,8 +2208,8 @@ module Aws::DirectConnect
     #
     # @overload create_public_virtual_interface(**params)
     # @param [Hash] params ({})
-    def create_public_virtual_interface(params = {}, **options)
-      req = build_request(:create_public_virtual_interface, params)
+    def create_public_virtual_interface(, **options)
+      req = build_request(:create_public_virtual_interface, )
       req.send_request(options)
     end
 
@@ -2310,8 +2310,8 @@ module Aws::DirectConnect
     #
     # @overload create_transit_virtual_interface(**params)
     # @param [Hash] params ({})
-    def create_transit_virtual_interface(params = {}, **options)
-      req = build_request(:create_transit_virtual_interface, params)
+    def create_transit_virtual_interface(, **options)
+      req = build_request(:create_transit_virtual_interface, )
       req.send_request(options)
     end
 
@@ -2389,8 +2389,8 @@ module Aws::DirectConnect
     #
     # @overload delete_bgp_peer(**params)
     # @param [Hash] params ({})
-    def delete_bgp_peer(params = {}, **options)
-      req = build_request(:delete_bgp_peer, params)
+    def delete_bgp_peer(, **options)
+      req = build_request(:delete_bgp_peer, )
       req.send_request(options)
     end
 
@@ -2456,8 +2456,8 @@ module Aws::DirectConnect
     #
     # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, **options)
-      req = build_request(:delete_connection, params)
+    def delete_connection(, **options)
+      req = build_request(:delete_connection, )
       req.send_request(options)
     end
 
@@ -2492,8 +2492,8 @@ module Aws::DirectConnect
     #
     # @overload delete_direct_connect_gateway(**params)
     # @param [Hash] params ({})
-    def delete_direct_connect_gateway(params = {}, **options)
-      req = build_request(:delete_direct_connect_gateway, params)
+    def delete_direct_connect_gateway(, **options)
+      req = build_request(:delete_direct_connect_gateway, )
       req.send_request(options)
     end
 
@@ -2547,8 +2547,8 @@ module Aws::DirectConnect
     #
     # @overload delete_direct_connect_gateway_association(**params)
     # @param [Hash] params ({})
-    def delete_direct_connect_gateway_association(params = {}, **options)
-      req = build_request(:delete_direct_connect_gateway_association, params)
+    def delete_direct_connect_gateway_association(, **options)
+      req = build_request(:delete_direct_connect_gateway_association, )
       req.send_request(options)
     end
 
@@ -2587,8 +2587,8 @@ module Aws::DirectConnect
     #
     # @overload delete_direct_connect_gateway_association_proposal(**params)
     # @param [Hash] params ({})
-    def delete_direct_connect_gateway_association_proposal(params = {}, **options)
-      req = build_request(:delete_direct_connect_gateway_association_proposal, params)
+    def delete_direct_connect_gateway_association_proposal(, **options)
+      req = build_request(:delete_direct_connect_gateway_association_proposal, )
       req.send_request(options)
     end
 
@@ -2619,8 +2619,8 @@ module Aws::DirectConnect
     #
     # @overload delete_interconnect(**params)
     # @param [Hash] params ({})
-    def delete_interconnect(params = {}, **options)
-      req = build_request(:delete_interconnect, params)
+    def delete_interconnect(, **options)
+      req = build_request(:delete_interconnect, )
       req.send_request(options)
     end
 
@@ -2701,8 +2701,8 @@ module Aws::DirectConnect
     #
     # @overload delete_lag(**params)
     # @param [Hash] params ({})
-    def delete_lag(params = {}, **options)
-      req = build_request(:delete_lag, params)
+    def delete_lag(, **options)
+      req = build_request(:delete_lag, )
       req.send_request(options)
     end
 
@@ -2729,8 +2729,8 @@ module Aws::DirectConnect
     #
     # @overload delete_virtual_interface(**params)
     # @param [Hash] params ({})
-    def delete_virtual_interface(params = {}, **options)
-      req = build_request(:delete_virtual_interface, params)
+    def delete_virtual_interface(, **options)
+      req = build_request(:delete_virtual_interface, )
       req.send_request(options)
     end
 
@@ -2782,8 +2782,8 @@ module Aws::DirectConnect
     #
     # @overload describe_connection_loa(**params)
     # @param [Hash] params ({})
-    def describe_connection_loa(params = {}, **options)
-      req = build_request(:describe_connection_loa, params)
+    def describe_connection_loa(, **options)
+      req = build_request(:describe_connection_loa, )
       req.send_request(options)
     end
 
@@ -2829,8 +2829,8 @@ module Aws::DirectConnect
     #
     # @overload describe_connections(**params)
     # @param [Hash] params ({})
-    def describe_connections(params = {}, **options)
-      req = build_request(:describe_connections, params)
+    def describe_connections(, **options)
+      req = build_request(:describe_connections, )
       req.send_request(options)
     end
 
@@ -2883,8 +2883,8 @@ module Aws::DirectConnect
     #
     # @overload describe_connections_on_interconnect(**params)
     # @param [Hash] params ({})
-    def describe_connections_on_interconnect(params = {}, **options)
-      req = build_request(:describe_connections_on_interconnect, params)
+    def describe_connections_on_interconnect(, **options)
+      req = build_request(:describe_connections_on_interconnect, )
       req.send_request(options)
     end
 
@@ -2948,8 +2948,8 @@ module Aws::DirectConnect
     #
     # @overload describe_direct_connect_gateway_association_proposals(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateway_association_proposals(params = {}, **options)
-      req = build_request(:describe_direct_connect_gateway_association_proposals, params)
+    def describe_direct_connect_gateway_association_proposals(, **options)
+      req = build_request(:describe_direct_connect_gateway_association_proposals, )
       req.send_request(options)
     end
 
@@ -3025,8 +3025,8 @@ module Aws::DirectConnect
     #
     # @overload describe_direct_connect_gateway_associations(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateway_associations(params = {}, **options)
-      req = build_request(:describe_direct_connect_gateway_associations, params)
+    def describe_direct_connect_gateway_associations(, **options)
+      req = build_request(:describe_direct_connect_gateway_associations, )
       req.send_request(options)
     end
 
@@ -3086,8 +3086,8 @@ module Aws::DirectConnect
     #
     # @overload describe_direct_connect_gateway_attachments(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateway_attachments(params = {}, **options)
-      req = build_request(:describe_direct_connect_gateway_attachments, params)
+    def describe_direct_connect_gateway_attachments(, **options)
+      req = build_request(:describe_direct_connect_gateway_attachments, )
       req.send_request(options)
     end
 
@@ -3136,8 +3136,8 @@ module Aws::DirectConnect
     #
     # @overload describe_direct_connect_gateways(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateways(params = {}, **options)
-      req = build_request(:describe_direct_connect_gateways, params)
+    def describe_direct_connect_gateways(, **options)
+      req = build_request(:describe_direct_connect_gateways, )
       req.send_request(options)
     end
 
@@ -3188,8 +3188,8 @@ module Aws::DirectConnect
     #
     # @overload describe_hosted_connections(**params)
     # @param [Hash] params ({})
-    def describe_hosted_connections(params = {}, **options)
-      req = build_request(:describe_hosted_connections, params)
+    def describe_hosted_connections(, **options)
+      req = build_request(:describe_hosted_connections, )
       req.send_request(options)
     end
 
@@ -3241,8 +3241,8 @@ module Aws::DirectConnect
     #
     # @overload describe_interconnect_loa(**params)
     # @param [Hash] params ({})
-    def describe_interconnect_loa(params = {}, **options)
-      req = build_request(:describe_interconnect_loa, params)
+    def describe_interconnect_loa(, **options)
+      req = build_request(:describe_interconnect_loa, )
       req.send_request(options)
     end
 
@@ -3286,8 +3286,8 @@ module Aws::DirectConnect
     #
     # @overload describe_interconnects(**params)
     # @param [Hash] params ({})
-    def describe_interconnects(params = {}, **options)
-      req = build_request(:describe_interconnects, params)
+    def describe_interconnects(, **options)
+      req = build_request(:describe_interconnects, )
       req.send_request(options)
     end
 
@@ -3352,8 +3352,8 @@ module Aws::DirectConnect
     #
     # @overload describe_lags(**params)
     # @param [Hash] params ({})
-    def describe_lags(params = {}, **options)
-      req = build_request(:describe_lags, params)
+    def describe_lags(, **options)
+      req = build_request(:describe_lags, )
       req.send_request(options)
     end
 
@@ -3405,8 +3405,8 @@ module Aws::DirectConnect
     #
     # @overload describe_loa(**params)
     # @param [Hash] params ({})
-    def describe_loa(params = {}, **options)
-      req = build_request(:describe_loa, params)
+    def describe_loa(, **options)
+      req = build_request(:describe_loa, )
       req.send_request(options)
     end
 
@@ -3433,8 +3433,8 @@ module Aws::DirectConnect
     #
     # @overload describe_locations(**params)
     # @param [Hash] params ({})
-    def describe_locations(params = {}, **options)
-      req = build_request(:describe_locations, params)
+    def describe_locations(, **options)
+      req = build_request(:describe_locations, )
       req.send_request(options)
     end
 
@@ -3466,8 +3466,8 @@ module Aws::DirectConnect
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -3490,8 +3490,8 @@ module Aws::DirectConnect
     #
     # @overload describe_virtual_gateways(**params)
     # @param [Hash] params ({})
-    def describe_virtual_gateways(params = {}, **options)
-      req = build_request(:describe_virtual_gateways, params)
+    def describe_virtual_gateways(, **options)
+      req = build_request(:describe_virtual_gateways, )
       req.send_request(options)
     end
 
@@ -3565,8 +3565,8 @@ module Aws::DirectConnect
     #
     # @overload describe_virtual_interfaces(**params)
     # @param [Hash] params ({})
-    def describe_virtual_interfaces(params = {}, **options)
-      req = build_request(:describe_virtual_interfaces, params)
+    def describe_virtual_interfaces(, **options)
+      req = build_request(:describe_virtual_interfaces, )
       req.send_request(options)
     end
 
@@ -3643,8 +3643,8 @@ module Aws::DirectConnect
     #
     # @overload disassociate_connection_from_lag(**params)
     # @param [Hash] params ({})
-    def disassociate_connection_from_lag(params = {}, **options)
-      req = build_request(:disassociate_connection_from_lag, params)
+    def disassociate_connection_from_lag(, **options)
+      req = build_request(:disassociate_connection_from_lag, )
       req.send_request(options)
     end
 
@@ -3708,8 +3708,8 @@ module Aws::DirectConnect
     #
     # @overload list_virtual_interface_test_history(**params)
     # @param [Hash] params ({})
-    def list_virtual_interface_test_history(params = {}, **options)
-      req = build_request(:list_virtual_interface_test_history, params)
+    def list_virtual_interface_test_history(, **options)
+      req = build_request(:list_virtual_interface_test_history, )
       req.send_request(options)
     end
 
@@ -3774,8 +3774,8 @@ module Aws::DirectConnect
     #
     # @overload start_bgp_failover_test(**params)
     # @param [Hash] params ({})
-    def start_bgp_failover_test(params = {}, **options)
-      req = build_request(:start_bgp_failover_test, params)
+    def start_bgp_failover_test(, **options)
+      req = build_request(:start_bgp_failover_test, )
       req.send_request(options)
     end
 
@@ -3810,8 +3810,8 @@ module Aws::DirectConnect
     #
     # @overload stop_bgp_failover_test(**params)
     # @param [Hash] params ({})
-    def stop_bgp_failover_test(params = {}, **options)
-      req = build_request(:stop_bgp_failover_test, params)
+    def stop_bgp_failover_test(, **options)
+      req = build_request(:stop_bgp_failover_test, )
       req.send_request(options)
     end
 
@@ -3846,8 +3846,8 @@ module Aws::DirectConnect
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3873,8 +3873,8 @@ module Aws::DirectConnect
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3934,8 +3934,8 @@ module Aws::DirectConnect
     #
     # @overload update_direct_connect_gateway_association(**params)
     # @param [Hash] params ({})
-    def update_direct_connect_gateway_association(params = {}, **options)
-      req = build_request(:update_direct_connect_gateway_association, params)
+    def update_direct_connect_gateway_association(, **options)
+      req = build_request(:update_direct_connect_gateway_association, )
       req.send_request(options)
     end
 
@@ -4039,8 +4039,8 @@ module Aws::DirectConnect
     #
     # @overload update_lag(**params)
     # @param [Hash] params ({})
-    def update_lag(params = {}, **options)
-      req = build_request(:update_lag, params)
+    def update_lag(, **options)
+      req = build_request(:update_lag, )
       req.send_request(options)
     end
 
@@ -4140,8 +4140,8 @@ module Aws::DirectConnect
     #
     # @overload update_virtual_interface_attributes(**params)
     # @param [Hash] params ({})
-    def update_virtual_interface_attributes(params = {}, **options)
-      req = build_request(:update_virtual_interface_attributes, params)
+    def update_virtual_interface_attributes(, **options)
+      req = build_request(:update_virtual_interface_attributes, )
       req.send_request(options)
     end
 

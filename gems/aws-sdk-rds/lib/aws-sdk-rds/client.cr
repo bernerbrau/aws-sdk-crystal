@@ -369,8 +369,8 @@ module Aws::RDS
     #
     # @overload add_role_to_db_cluster(**params)
     # @param [Hash] params ({})
-    def add_role_to_db_cluster(params = {}, **options)
-      req = build_request(:add_role_to_db_cluster, params)
+    def add_role_to_db_cluster(, **options)
+      req = build_request(:add_role_to_db_cluster, )
       req.send_request(options)
     end
 
@@ -408,8 +408,8 @@ module Aws::RDS
     #
     # @overload add_role_to_db_instance(**params)
     # @param [Hash] params ({})
-    def add_role_to_db_instance(params = {}, **options)
-      req = build_request(:add_role_to_db_instance, params)
+    def add_role_to_db_instance(, **options)
+      req = build_request(:add_role_to_db_instance, )
       req.send_request(options)
     end
 
@@ -489,8 +489,8 @@ module Aws::RDS
     #
     # @overload add_source_identifier_to_subscription(**params)
     # @param [Hash] params ({})
-    def add_source_identifier_to_subscription(params = {}, **options)
-      req = build_request(:add_source_identifier_to_subscription, params)
+    def add_source_identifier_to_subscription(, **options)
+      req = build_request(:add_source_identifier_to_subscription, )
       req.send_request(options)
     end
 
@@ -551,8 +551,8 @@ module Aws::RDS
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -632,8 +632,8 @@ module Aws::RDS
     #
     # @overload apply_pending_maintenance_action(**params)
     # @param [Hash] params ({})
-    def apply_pending_maintenance_action(params = {}, **options)
-      req = build_request(:apply_pending_maintenance_action, params)
+    def apply_pending_maintenance_action(, **options)
+      req = build_request(:apply_pending_maintenance_action, )
       req.send_request(options)
     end
 
@@ -734,8 +734,8 @@ module Aws::RDS
     #
     # @overload authorize_db_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_db_security_group_ingress(params = {}, **options)
-      req = build_request(:authorize_db_security_group_ingress, params)
+    def authorize_db_security_group_ingress(, **options)
+      req = build_request(:authorize_db_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -833,8 +833,8 @@ module Aws::RDS
     #
     # @overload backtrack_db_cluster(**params)
     # @param [Hash] params ({})
-    def backtrack_db_cluster(params = {}, **options)
-      req = build_request(:backtrack_db_cluster, params)
+    def backtrack_db_cluster(, **options)
+      req = build_request(:backtrack_db_cluster, )
       req.send_request(options)
     end
 
@@ -892,8 +892,8 @@ module Aws::RDS
     #
     # @overload cancel_export_task(**params)
     # @param [Hash] params ({})
-    def cancel_export_task(params = {}, **options)
-      req = build_request(:cancel_export_task, params)
+    def cancel_export_task(, **options)
+      req = build_request(:cancel_export_task, )
       req.send_request(options)
     end
 
@@ -998,8 +998,8 @@ module Aws::RDS
     #
     # @overload copy_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def copy_db_cluster_parameter_group(params = {}, **options)
-      req = build_request(:copy_db_cluster_parameter_group, params)
+    def copy_db_cluster_parameter_group(, **options)
+      req = build_request(:copy_db_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -1290,8 +1290,8 @@ module Aws::RDS
     #
     # @overload copy_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_db_cluster_snapshot(params = {}, **options)
-      req = build_request(:copy_db_cluster_snapshot, params)
+    def copy_db_cluster_snapshot(, **options)
+      req = build_request(:copy_db_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -1385,8 +1385,8 @@ module Aws::RDS
     #
     # @overload copy_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def copy_db_parameter_group(params = {}, **options)
-      req = build_request(:copy_db_parameter_group, params)
+    def copy_db_parameter_group(, **options)
+      req = build_request(:copy_db_parameter_group, )
       req.send_request(options)
     end
 
@@ -1643,8 +1643,8 @@ module Aws::RDS
     #
     # @overload copy_db_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_db_snapshot(params = {}, **options)
-      req = build_request(:copy_db_snapshot, params)
+    def copy_db_snapshot(, **options)
+      req = build_request(:copy_db_snapshot, )
       req.send_request(options)
     end
 
@@ -1757,8 +1757,8 @@ module Aws::RDS
     #
     # @overload copy_option_group(**params)
     # @param [Hash] params ({})
-    def copy_option_group(params = {}, **options)
-      req = build_request(:copy_option_group, params)
+    def copy_option_group(, **options)
+      req = build_request(:copy_option_group, )
       req.send_request(options)
     end
 
@@ -1822,8 +1822,8 @@ module Aws::RDS
     #
     # @overload create_custom_availability_zone(**params)
     # @param [Hash] params ({})
-    def create_custom_availability_zone(params = {}, **options)
-      req = build_request(:create_custom_availability_zone, params)
+    def create_custom_availability_zone(, **options)
+      req = build_request(:create_custom_availability_zone, )
       req.send_request(options)
     end
 
@@ -2423,8 +2423,8 @@ module Aws::RDS
     #
     # @overload create_db_cluster(**params)
     # @param [Hash] params ({})
-    def create_db_cluster(params = {}, **options)
-      req = build_request(:create_db_cluster, params)
+    def create_db_cluster(, **options)
+      req = build_request(:create_db_cluster, )
       req.send_request(options)
     end
 
@@ -2506,8 +2506,8 @@ module Aws::RDS
     #
     # @overload create_db_cluster_endpoint(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_endpoint(params = {}, **options)
-      req = build_request(:create_db_cluster_endpoint, params)
+    def create_db_cluster_endpoint(, **options)
+      req = build_request(:create_db_cluster_endpoint, )
       req.send_request(options)
     end
 
@@ -2631,8 +2631,8 @@ module Aws::RDS
     #
     # @overload create_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_parameter_group(params = {}, **options)
-      req = build_request(:create_db_cluster_parameter_group, params)
+    def create_db_cluster_parameter_group(, **options)
+      req = build_request(:create_db_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -2741,8 +2741,8 @@ module Aws::RDS
     #
     # @overload create_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_snapshot(params = {}, **options)
-      req = build_request(:create_db_cluster_snapshot, params)
+    def create_db_cluster_snapshot(, **options)
+      req = build_request(:create_db_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -3821,8 +3821,8 @@ module Aws::RDS
     #
     # @overload create_db_instance(**params)
     # @param [Hash] params ({})
-    def create_db_instance(params = {}, **options)
-      req = build_request(:create_db_instance, params)
+    def create_db_instance(, **options)
+      req = build_request(:create_db_instance, )
       req.send_request(options)
     end
 
@@ -4468,8 +4468,8 @@ module Aws::RDS
     #
     # @overload create_db_instance_read_replica(**params)
     # @param [Hash] params ({})
-    def create_db_instance_read_replica(params = {}, **options)
-      req = build_request(:create_db_instance_read_replica, params)
+    def create_db_instance_read_replica(, **options)
+      req = build_request(:create_db_instance_read_replica, )
       req.send_request(options)
     end
 
@@ -4584,8 +4584,8 @@ module Aws::RDS
     #
     # @overload create_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_db_parameter_group(params = {}, **options)
-      req = build_request(:create_db_parameter_group, params)
+    def create_db_parameter_group(, **options)
+      req = build_request(:create_db_parameter_group, )
       req.send_request(options)
     end
 
@@ -4700,8 +4700,8 @@ module Aws::RDS
     #
     # @overload create_db_proxy(**params)
     # @param [Hash] params ({})
-    def create_db_proxy(params = {}, **options)
-      req = build_request(:create_db_proxy, params)
+    def create_db_proxy(, **options)
+      req = build_request(:create_db_proxy, )
       req.send_request(options)
     end
 
@@ -4788,8 +4788,8 @@ module Aws::RDS
     #
     # @overload create_db_security_group(**params)
     # @param [Hash] params ({})
-    def create_db_security_group(params = {}, **options)
-      req = build_request(:create_db_security_group, params)
+    def create_db_security_group(, **options)
+      req = build_request(:create_db_security_group, )
       req.send_request(options)
     end
 
@@ -4902,8 +4902,8 @@ module Aws::RDS
     #
     # @overload create_db_snapshot(**params)
     # @param [Hash] params ({})
-    def create_db_snapshot(params = {}, **options)
-      req = build_request(:create_db_snapshot, params)
+    def create_db_snapshot(, **options)
+      req = build_request(:create_db_snapshot, )
       req.send_request(options)
     end
 
@@ -4983,8 +4983,8 @@ module Aws::RDS
     #
     # @overload create_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_db_subnet_group(params = {}, **options)
-      req = build_request(:create_db_subnet_group, params)
+    def create_db_subnet_group(, **options)
+      req = build_request(:create_db_subnet_group, )
       req.send_request(options)
     end
 
@@ -5153,8 +5153,8 @@ module Aws::RDS
     #
     # @overload create_event_subscription(**params)
     # @param [Hash] params ({})
-    def create_event_subscription(params = {}, **options)
-      req = build_request(:create_event_subscription, params)
+    def create_event_subscription(, **options)
+      req = build_request(:create_event_subscription, )
       req.send_request(options)
     end
 
@@ -5236,8 +5236,8 @@ module Aws::RDS
     #
     # @overload create_global_cluster(**params)
     # @param [Hash] params ({})
-    def create_global_cluster(params = {}, **options)
-      req = build_request(:create_global_cluster, params)
+    def create_global_cluster(, **options)
+      req = build_request(:create_global_cluster, )
       req.send_request(options)
     end
 
@@ -5344,8 +5344,8 @@ module Aws::RDS
     #
     # @overload create_option_group(**params)
     # @param [Hash] params ({})
-    def create_option_group(params = {}, **options)
-      req = build_request(:create_option_group, params)
+    def create_option_group(, **options)
+      req = build_request(:create_option_group, )
       req.send_request(options)
     end
 
@@ -5390,8 +5390,8 @@ module Aws::RDS
     #
     # @overload delete_custom_availability_zone(**params)
     # @param [Hash] params ({})
-    def delete_custom_availability_zone(params = {}, **options)
-      req = build_request(:delete_custom_availability_zone, params)
+    def delete_custom_availability_zone(, **options)
+      req = build_request(:delete_custom_availability_zone, )
       req.send_request(options)
     end
 
@@ -5569,8 +5569,8 @@ module Aws::RDS
     #
     # @overload delete_db_cluster(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster(params = {}, **options)
-      req = build_request(:delete_db_cluster, params)
+    def delete_db_cluster(, **options)
+      req = build_request(:delete_db_cluster, )
       req.send_request(options)
     end
 
@@ -5623,8 +5623,8 @@ module Aws::RDS
     #
     # @overload delete_db_cluster_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_endpoint(params = {}, **options)
-      req = build_request(:delete_db_cluster_endpoint, params)
+    def delete_db_cluster_endpoint(, **options)
+      req = build_request(:delete_db_cluster_endpoint, )
       req.send_request(options)
     end
 
@@ -5675,8 +5675,8 @@ module Aws::RDS
     #
     # @overload delete_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_parameter_group(params = {}, **options)
-      req = build_request(:delete_db_cluster_parameter_group, params)
+    def delete_db_cluster_parameter_group(, **options)
+      req = build_request(:delete_db_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -5761,8 +5761,8 @@ module Aws::RDS
     #
     # @overload delete_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_snapshot(params = {}, **options)
-      req = build_request(:delete_db_cluster_snapshot, params)
+    def delete_db_cluster_snapshot(, **options)
+      req = build_request(:delete_db_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -6007,8 +6007,8 @@ module Aws::RDS
     #
     # @overload delete_db_instance(**params)
     # @param [Hash] params ({})
-    def delete_db_instance(params = {}, **options)
-      req = build_request(:delete_db_instance, params)
+    def delete_db_instance(, **options)
+      req = build_request(:delete_db_instance, )
       req.send_request(options)
     end
 
@@ -6071,8 +6071,8 @@ module Aws::RDS
     #
     # @overload delete_db_instance_automated_backup(**params)
     # @param [Hash] params ({})
-    def delete_db_instance_automated_backup(params = {}, **options)
-      req = build_request(:delete_db_instance_automated_backup, params)
+    def delete_db_instance_automated_backup(, **options)
+      req = build_request(:delete_db_instance_automated_backup, )
       req.send_request(options)
     end
 
@@ -6111,8 +6111,8 @@ module Aws::RDS
     #
     # @overload delete_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_db_parameter_group(params = {}, **options)
-      req = build_request(:delete_db_parameter_group, params)
+    def delete_db_parameter_group(, **options)
+      req = build_request(:delete_db_parameter_group, )
       req.send_request(options)
     end
 
@@ -6159,8 +6159,8 @@ module Aws::RDS
     #
     # @overload delete_db_proxy(**params)
     # @param [Hash] params ({})
-    def delete_db_proxy(params = {}, **options)
-      req = build_request(:delete_db_proxy, params)
+    def delete_db_proxy(, **options)
+      req = build_request(:delete_db_proxy, )
       req.send_request(options)
     end
 
@@ -6209,8 +6209,8 @@ module Aws::RDS
     #
     # @overload delete_db_security_group(**params)
     # @param [Hash] params ({})
-    def delete_db_security_group(params = {}, **options)
-      req = build_request(:delete_db_security_group, params)
+    def delete_db_security_group(, **options)
+      req = build_request(:delete_db_security_group, )
       req.send_request(options)
     end
 
@@ -6292,8 +6292,8 @@ module Aws::RDS
     #
     # @overload delete_db_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_db_snapshot(params = {}, **options)
-      req = build_request(:delete_db_snapshot, params)
+    def delete_db_snapshot(, **options)
+      req = build_request(:delete_db_snapshot, )
       req.send_request(options)
     end
 
@@ -6339,8 +6339,8 @@ module Aws::RDS
     #
     # @overload delete_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_db_subnet_group(params = {}, **options)
-      req = build_request(:delete_db_subnet_group, params)
+    def delete_db_subnet_group(, **options)
+      req = build_request(:delete_db_subnet_group, )
       req.send_request(options)
     end
 
@@ -6394,8 +6394,8 @@ module Aws::RDS
     #
     # @overload delete_event_subscription(**params)
     # @param [Hash] params ({})
-    def delete_event_subscription(params = {}, **options)
-      req = build_request(:delete_event_subscription, params)
+    def delete_event_subscription(, **options)
+      req = build_request(:delete_event_subscription, )
       req.send_request(options)
     end
 
@@ -6441,8 +6441,8 @@ module Aws::RDS
     #
     # @overload delete_global_cluster(**params)
     # @param [Hash] params ({})
-    def delete_global_cluster(params = {}, **options)
-      req = build_request(:delete_global_cluster, params)
+    def delete_global_cluster(, **options)
+      req = build_request(:delete_global_cluster, )
       req.send_request(options)
     end
 
@@ -6484,8 +6484,8 @@ module Aws::RDS
     #
     # @overload delete_installation_media(**params)
     # @param [Hash] params ({})
-    def delete_installation_media(params = {}, **options)
-      req = build_request(:delete_installation_media, params)
+    def delete_installation_media(, **options)
+      req = build_request(:delete_installation_media, )
       req.send_request(options)
     end
 
@@ -6519,8 +6519,8 @@ module Aws::RDS
     #
     # @overload delete_option_group(**params)
     # @param [Hash] params ({})
-    def delete_option_group(params = {}, **options)
-      req = build_request(:delete_option_group, params)
+    def delete_option_group(, **options)
+      req = build_request(:delete_option_group, )
       req.send_request(options)
     end
 
@@ -6555,8 +6555,8 @@ module Aws::RDS
     #
     # @overload deregister_db_proxy_targets(**params)
     # @param [Hash] params ({})
-    def deregister_db_proxy_targets(params = {}, **options)
-      req = build_request(:deregister_db_proxy_targets, params)
+    def deregister_db_proxy_targets(, **options)
+      req = build_request(:deregister_db_proxy_targets, )
       req.send_request(options)
     end
 
@@ -6594,8 +6594,8 @@ module Aws::RDS
     #
     # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, **options)
-      req = build_request(:describe_account_attributes, params)
+    def describe_account_attributes(, **options)
+      req = build_request(:describe_account_attributes, )
       req.send_request(options)
     end
 
@@ -6684,8 +6684,8 @@ module Aws::RDS
     #
     # @overload describe_certificates(**params)
     # @param [Hash] params ({})
-    def describe_certificates(params = {}, **options)
-      req = build_request(:describe_certificates, params)
+    def describe_certificates(, **options)
+      req = build_request(:describe_certificates, )
       req.send_request(options)
     end
 
@@ -6763,8 +6763,8 @@ module Aws::RDS
     #
     # @overload describe_custom_availability_zones(**params)
     # @param [Hash] params ({})
-    def describe_custom_availability_zones(params = {}, **options)
-      req = build_request(:describe_custom_availability_zones, params)
+    def describe_custom_availability_zones(, **options)
+      req = build_request(:describe_custom_availability_zones, )
       req.send_request(options)
     end
 
@@ -6888,8 +6888,8 @@ module Aws::RDS
     #
     # @overload describe_db_cluster_backtracks(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_backtracks(params = {}, **options)
-      req = build_request(:describe_db_cluster_backtracks, params)
+    def describe_db_cluster_backtracks(, **options)
+      req = build_request(:describe_db_cluster_backtracks, )
       req.send_request(options)
     end
 
@@ -6979,8 +6979,8 @@ module Aws::RDS
     #
     # @overload describe_db_cluster_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_endpoints(params = {}, **options)
-      req = build_request(:describe_db_cluster_endpoints, params)
+    def describe_db_cluster_endpoints(, **options)
+      req = build_request(:describe_db_cluster_endpoints, )
       req.send_request(options)
     end
 
@@ -7077,8 +7077,8 @@ module Aws::RDS
     #
     # @overload describe_db_cluster_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_parameter_groups(params = {}, **options)
-      req = build_request(:describe_db_cluster_parameter_groups, params)
+    def describe_db_cluster_parameter_groups(, **options)
+      req = build_request(:describe_db_cluster_parameter_groups, )
       req.send_request(options)
     end
 
@@ -7187,8 +7187,8 @@ module Aws::RDS
     #
     # @overload describe_db_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_parameters(params = {}, **options)
-      req = build_request(:describe_db_cluster_parameters, params)
+    def describe_db_cluster_parameters(, **options)
+      req = build_request(:describe_db_cluster_parameters, )
       req.send_request(options)
     end
 
@@ -7251,8 +7251,8 @@ module Aws::RDS
     #
     # @overload describe_db_cluster_snapshot_attributes(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_snapshot_attributes(params = {}, **options)
-      req = build_request(:describe_db_cluster_snapshot_attributes, params)
+    def describe_db_cluster_snapshot_attributes(, **options)
+      req = build_request(:describe_db_cluster_snapshot_attributes, )
       req.send_request(options)
     end
 
@@ -7449,8 +7449,8 @@ module Aws::RDS
     #
     # @overload describe_db_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_snapshots(params = {}, **options)
-      req = build_request(:describe_db_cluster_snapshots, params)
+    def describe_db_cluster_snapshots(, **options)
+      req = build_request(:describe_db_cluster_snapshots, )
       req.send_request(options)
     end
 
@@ -7635,8 +7635,8 @@ module Aws::RDS
     #
     # @overload describe_db_clusters(**params)
     # @param [Hash] params ({})
-    def describe_db_clusters(params = {}, **options)
-      req = build_request(:describe_db_clusters, params)
+    def describe_db_clusters(, **options)
+      req = build_request(:describe_db_clusters, )
       req.send_request(options)
     end
 
@@ -7788,8 +7788,8 @@ module Aws::RDS
     #
     # @overload describe_db_engine_versions(**params)
     # @param [Hash] params ({})
-    def describe_db_engine_versions(params = {}, **options)
-      req = build_request(:describe_db_engine_versions, params)
+    def describe_db_engine_versions(, **options)
+      req = build_request(:describe_db_engine_versions, )
       req.send_request(options)
     end
 
@@ -7915,8 +7915,8 @@ module Aws::RDS
     #
     # @overload describe_db_instance_automated_backups(**params)
     # @param [Hash] params ({})
-    def describe_db_instance_automated_backups(params = {}, **options)
-      req = build_request(:describe_db_instance_automated_backups, params)
+    def describe_db_instance_automated_backups(, **options)
+      req = build_request(:describe_db_instance_automated_backups, )
       req.send_request(options)
     end
 
@@ -8150,8 +8150,8 @@ module Aws::RDS
     #
     # @overload describe_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_db_instances(params = {}, **options)
-      req = build_request(:describe_db_instances, params)
+    def describe_db_instances(, **options)
+      req = build_request(:describe_db_instances, )
       req.send_request(options)
     end
 
@@ -8246,8 +8246,8 @@ module Aws::RDS
     #
     # @overload describe_db_log_files(**params)
     # @param [Hash] params ({})
-    def describe_db_log_files(params = {}, **options)
-      req = build_request(:describe_db_log_files, params)
+    def describe_db_log_files(, **options)
+      req = build_request(:describe_db_log_files, )
       req.send_request(options)
     end
 
@@ -8331,8 +8331,8 @@ module Aws::RDS
     #
     # @overload describe_db_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_parameter_groups(params = {}, **options)
-      req = build_request(:describe_db_parameter_groups, params)
+    def describe_db_parameter_groups(, **options)
+      req = build_request(:describe_db_parameter_groups, )
       req.send_request(options)
     end
 
@@ -8432,8 +8432,8 @@ module Aws::RDS
     #
     # @overload describe_db_parameters(**params)
     # @param [Hash] params ({})
-    def describe_db_parameters(params = {}, **options)
-      req = build_request(:describe_db_parameters, params)
+    def describe_db_parameters(, **options)
+      req = build_request(:describe_db_parameters, )
       req.send_request(options)
     end
 
@@ -8511,8 +8511,8 @@ module Aws::RDS
     #
     # @overload describe_db_proxies(**params)
     # @param [Hash] params ({})
-    def describe_db_proxies(params = {}, **options)
-      req = build_request(:describe_db_proxies, params)
+    def describe_db_proxies(, **options)
+      req = build_request(:describe_db_proxies, )
       req.send_request(options)
     end
 
@@ -8587,8 +8587,8 @@ module Aws::RDS
     #
     # @overload describe_db_proxy_target_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_proxy_target_groups(params = {}, **options)
-      req = build_request(:describe_db_proxy_target_groups, params)
+    def describe_db_proxy_target_groups(, **options)
+      req = build_request(:describe_db_proxy_target_groups, )
       req.send_request(options)
     end
 
@@ -8659,8 +8659,8 @@ module Aws::RDS
     #
     # @overload describe_db_proxy_targets(**params)
     # @param [Hash] params ({})
-    def describe_db_proxy_targets(params = {}, **options)
-      req = build_request(:describe_db_proxy_targets, params)
+    def describe_db_proxy_targets(, **options)
+      req = build_request(:describe_db_proxy_targets, )
       req.send_request(options)
     end
 
@@ -8746,8 +8746,8 @@ module Aws::RDS
     #
     # @overload describe_db_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_security_groups(params = {}, **options)
-      req = build_request(:describe_db_security_groups, params)
+    def describe_db_security_groups(, **options)
+      req = build_request(:describe_db_security_groups, )
       req.send_request(options)
     end
 
@@ -8805,8 +8805,8 @@ module Aws::RDS
     #
     # @overload describe_db_snapshot_attributes(**params)
     # @param [Hash] params ({})
-    def describe_db_snapshot_attributes(params = {}, **options)
-      req = build_request(:describe_db_snapshot_attributes, params)
+    def describe_db_snapshot_attributes(, **options)
+      req = build_request(:describe_db_snapshot_attributes, )
       req.send_request(options)
     end
 
@@ -9019,8 +9019,8 @@ module Aws::RDS
     #
     # @overload describe_db_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_db_snapshots(params = {}, **options)
-      req = build_request(:describe_db_snapshots, params)
+    def describe_db_snapshots(, **options)
+      req = build_request(:describe_db_snapshots, )
       req.send_request(options)
     end
 
@@ -9109,8 +9109,8 @@ module Aws::RDS
     #
     # @overload describe_db_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_subnet_groups(params = {}, **options)
-      req = build_request(:describe_db_subnet_groups, params)
+    def describe_db_subnet_groups(, **options)
+      req = build_request(:describe_db_subnet_groups, )
       req.send_request(options)
     end
 
@@ -9202,8 +9202,8 @@ module Aws::RDS
     #
     # @overload describe_engine_default_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_cluster_parameters(params = {}, **options)
-      req = build_request(:describe_engine_default_cluster_parameters, params)
+    def describe_engine_default_cluster_parameters(, **options)
+      req = build_request(:describe_engine_default_cluster_parameters, )
       req.send_request(options)
     end
 
@@ -9289,8 +9289,8 @@ module Aws::RDS
     #
     # @overload describe_engine_default_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_parameters(params = {}, **options)
-      req = build_request(:describe_engine_default_parameters, params)
+    def describe_engine_default_parameters(, **options)
+      req = build_request(:describe_engine_default_parameters, )
       req.send_request(options)
     end
 
@@ -9352,8 +9352,8 @@ module Aws::RDS
     #
     # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, **options)
-      req = build_request(:describe_event_categories, params)
+    def describe_event_categories(, **options)
+      req = build_request(:describe_event_categories, )
       req.send_request(options)
     end
 
@@ -9443,8 +9443,8 @@ module Aws::RDS
     #
     # @overload describe_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_event_subscriptions(params = {}, **options)
-      req = build_request(:describe_event_subscriptions, params)
+    def describe_event_subscriptions(, **options)
+      req = build_request(:describe_event_subscriptions, )
       req.send_request(options)
     end
 
@@ -9602,8 +9602,8 @@ module Aws::RDS
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -9697,8 +9697,8 @@ module Aws::RDS
     #
     # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, **options)
-      req = build_request(:describe_export_tasks, params)
+    def describe_export_tasks(, **options)
+      req = build_request(:describe_export_tasks, )
       req.send_request(options)
     end
 
@@ -9799,8 +9799,8 @@ module Aws::RDS
     #
     # @overload describe_global_clusters(**params)
     # @param [Hash] params ({})
-    def describe_global_clusters(params = {}, **options)
-      req = build_request(:describe_global_clusters, params)
+    def describe_global_clusters(, **options)
+      req = build_request(:describe_global_clusters, )
       req.send_request(options)
     end
 
@@ -9875,8 +9875,8 @@ module Aws::RDS
     #
     # @overload describe_installation_media(**params)
     # @param [Hash] params ({})
-    def describe_installation_media(params = {}, **options)
-      req = build_request(:describe_installation_media, params)
+    def describe_installation_media(, **options)
+      req = build_request(:describe_installation_media, )
       req.send_request(options)
     end
 
@@ -9983,8 +9983,8 @@ module Aws::RDS
     #
     # @overload describe_option_group_options(**params)
     # @param [Hash] params ({})
-    def describe_option_group_options(params = {}, **options)
-      req = build_request(:describe_option_group_options, params)
+    def describe_option_group_options(, **options)
+      req = build_request(:describe_option_group_options, )
       req.send_request(options)
     end
 
@@ -10098,8 +10098,8 @@ module Aws::RDS
     #
     # @overload describe_option_groups(**params)
     # @param [Hash] params ({})
-    def describe_option_groups(params = {}, **options)
-      req = build_request(:describe_option_groups, params)
+    def describe_option_groups(, **options)
+      req = build_request(:describe_option_groups, )
       req.send_request(options)
     end
 
@@ -10236,8 +10236,8 @@ module Aws::RDS
     #
     # @overload describe_orderable_db_instance_options(**params)
     # @param [Hash] params ({})
-    def describe_orderable_db_instance_options(params = {}, **options)
-      req = build_request(:describe_orderable_db_instance_options, params)
+    def describe_orderable_db_instance_options(, **options)
+      req = build_request(:describe_orderable_db_instance_options, )
       req.send_request(options)
     end
 
@@ -10329,8 +10329,8 @@ module Aws::RDS
     #
     # @overload describe_pending_maintenance_actions(**params)
     # @param [Hash] params ({})
-    def describe_pending_maintenance_actions(params = {}, **options)
-      req = build_request(:describe_pending_maintenance_actions, params)
+    def describe_pending_maintenance_actions(, **options)
+      req = build_request(:describe_pending_maintenance_actions, )
       req.send_request(options)
     end
 
@@ -10471,8 +10471,8 @@ module Aws::RDS
     #
     # @overload describe_reserved_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_reserved_db_instances(params = {}, **options)
-      req = build_request(:describe_reserved_db_instances, params)
+    def describe_reserved_db_instances(, **options)
+      req = build_request(:describe_reserved_db_instances, )
       req.send_request(options)
     end
 
@@ -10597,8 +10597,8 @@ module Aws::RDS
     #
     # @overload describe_reserved_db_instances_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_db_instances_offerings(params = {}, **options)
-      req = build_request(:describe_reserved_db_instances_offerings, params)
+    def describe_reserved_db_instances_offerings(, **options)
+      req = build_request(:describe_reserved_db_instances_offerings, )
       req.send_request(options)
     end
 
@@ -10732,8 +10732,8 @@ module Aws::RDS
     #
     # @overload describe_source_regions(**params)
     # @param [Hash] params ({})
-    def describe_source_regions(params = {}, **options)
-      req = build_request(:describe_source_regions, params)
+    def describe_source_regions(, **options)
+      req = build_request(:describe_source_regions, )
       req.send_request(options)
     end
 
@@ -10779,8 +10779,8 @@ module Aws::RDS
     #
     # @overload describe_valid_db_instance_modifications(**params)
     # @param [Hash] params ({})
-    def describe_valid_db_instance_modifications(params = {}, **options)
-      req = build_request(:describe_valid_db_instance_modifications, params)
+    def describe_valid_db_instance_modifications(, **options)
+      req = build_request(:describe_valid_db_instance_modifications, )
       req.send_request(options)
     end
 
@@ -10872,8 +10872,8 @@ module Aws::RDS
     #
     # @overload download_db_log_file_portion(**params)
     # @param [Hash] params ({})
-    def download_db_log_file_portion(params = {}, **options)
-      req = build_request(:download_db_log_file_portion, params)
+    def download_db_log_file_portion(, **options)
+      req = build_request(:download_db_log_file_portion, )
       req.send_request(options)
     end
 
@@ -11031,8 +11031,8 @@ module Aws::RDS
     #
     # @overload failover_db_cluster(**params)
     # @param [Hash] params ({})
-    def failover_db_cluster(params = {}, **options)
-      req = build_request(:failover_db_cluster, params)
+    def failover_db_cluster(, **options)
+      req = build_request(:failover_db_cluster, )
       req.send_request(options)
     end
 
@@ -11125,8 +11125,8 @@ module Aws::RDS
     #
     # @overload import_installation_media(**params)
     # @param [Hash] params ({})
-    def import_installation_media(params = {}, **options)
-      req = build_request(:import_installation_media, params)
+    def import_installation_media(, **options)
+      req = build_request(:import_installation_media, )
       req.send_request(options)
     end
 
@@ -11191,8 +11191,8 @@ module Aws::RDS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -11270,8 +11270,8 @@ module Aws::RDS
     #
     # @overload modify_certificates(**params)
     # @param [Hash] params ({})
-    def modify_certificates(params = {}, **options)
-      req = build_request(:modify_certificates, params)
+    def modify_certificates(, **options)
+      req = build_request(:modify_certificates, )
       req.send_request(options)
     end
 
@@ -11378,8 +11378,8 @@ module Aws::RDS
     #
     # @overload modify_current_db_cluster_capacity(**params)
     # @param [Hash] params ({})
-    def modify_current_db_cluster_capacity(params = {}, **options)
-      req = build_request(:modify_current_db_cluster_capacity, params)
+    def modify_current_db_cluster_capacity(, **options)
+      req = build_request(:modify_current_db_cluster_capacity, )
       req.send_request(options)
     end
 
@@ -11812,8 +11812,8 @@ module Aws::RDS
     #
     # @overload modify_db_cluster(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster(params = {}, **options)
-      req = build_request(:modify_db_cluster, params)
+    def modify_db_cluster(, **options)
+      req = build_request(:modify_db_cluster, )
       req.send_request(options)
     end
 
@@ -11880,8 +11880,8 @@ module Aws::RDS
     #
     # @overload modify_db_cluster_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_endpoint(params = {}, **options)
-      req = build_request(:modify_db_cluster_endpoint, params)
+    def modify_db_cluster_endpoint(, **options)
+      req = build_request(:modify_db_cluster_endpoint, )
       req.send_request(options)
     end
 
@@ -11985,8 +11985,8 @@ module Aws::RDS
     #
     # @overload modify_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_parameter_group(params = {}, **options)
-      req = build_request(:modify_db_cluster_parameter_group, params)
+    def modify_db_cluster_parameter_group(, **options)
+      req = build_request(:modify_db_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -12107,8 +12107,8 @@ module Aws::RDS
     #
     # @overload modify_db_cluster_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_snapshot_attribute(params = {}, **options)
-      req = build_request(:modify_db_cluster_snapshot_attribute, params)
+    def modify_db_cluster_snapshot_attribute(, **options)
+      req = build_request(:modify_db_cluster_snapshot_attribute, )
       req.send_request(options)
     end
 
@@ -12965,8 +12965,8 @@ module Aws::RDS
     #
     # @overload modify_db_instance(**params)
     # @param [Hash] params ({})
-    def modify_db_instance(params = {}, **options)
-      req = build_request(:modify_db_instance, params)
+    def modify_db_instance(, **options)
+      req = build_request(:modify_db_instance, )
       req.send_request(options)
     end
 
@@ -13075,8 +13075,8 @@ module Aws::RDS
     #
     # @overload modify_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_db_parameter_group(params = {}, **options)
-      req = build_request(:modify_db_parameter_group, params)
+    def modify_db_parameter_group(, **options)
+      req = build_request(:modify_db_parameter_group, )
       req.send_request(options)
     end
 
@@ -13173,8 +13173,8 @@ module Aws::RDS
     #
     # @overload modify_db_proxy(**params)
     # @param [Hash] params ({})
-    def modify_db_proxy(params = {}, **options)
-      req = build_request(:modify_db_proxy, params)
+    def modify_db_proxy(, **options)
+      req = build_request(:modify_db_proxy, )
       req.send_request(options)
     end
 
@@ -13235,8 +13235,8 @@ module Aws::RDS
     #
     # @overload modify_db_proxy_target_group(**params)
     # @param [Hash] params ({})
-    def modify_db_proxy_target_group(params = {}, **options)
-      req = build_request(:modify_db_proxy_target_group, params)
+    def modify_db_proxy_target_group(, **options)
+      req = build_request(:modify_db_proxy_target_group, )
       req.send_request(options)
     end
 
@@ -13342,8 +13342,8 @@ module Aws::RDS
     #
     # @overload modify_db_snapshot(**params)
     # @param [Hash] params ({})
-    def modify_db_snapshot(params = {}, **options)
-      req = build_request(:modify_db_snapshot, params)
+    def modify_db_snapshot(, **options)
+      req = build_request(:modify_db_snapshot, )
       req.send_request(options)
     end
 
@@ -13452,8 +13452,8 @@ module Aws::RDS
     #
     # @overload modify_db_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_db_snapshot_attribute(params = {}, **options)
-      req = build_request(:modify_db_snapshot_attribute, params)
+    def modify_db_snapshot_attribute(, **options)
+      req = build_request(:modify_db_snapshot_attribute, )
       req.send_request(options)
     end
 
@@ -13523,8 +13523,8 @@ module Aws::RDS
     #
     # @overload modify_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_db_subnet_group(params = {}, **options)
-      req = build_request(:modify_db_subnet_group, params)
+    def modify_db_subnet_group(, **options)
+      req = build_request(:modify_db_subnet_group, )
       req.send_request(options)
     end
 
@@ -13626,8 +13626,8 @@ module Aws::RDS
     #
     # @overload modify_event_subscription(**params)
     # @param [Hash] params ({})
-    def modify_event_subscription(params = {}, **options)
-      req = build_request(:modify_event_subscription, params)
+    def modify_event_subscription(, **options)
+      req = build_request(:modify_event_subscription, )
       req.send_request(options)
     end
 
@@ -13709,8 +13709,8 @@ module Aws::RDS
     #
     # @overload modify_global_cluster(**params)
     # @param [Hash] params ({})
-    def modify_global_cluster(params = {}, **options)
-      req = build_request(:modify_global_cluster, params)
+    def modify_global_cluster(, **options)
+      req = build_request(:modify_global_cluster, )
       req.send_request(options)
     end
 
@@ -13832,8 +13832,8 @@ module Aws::RDS
     #
     # @overload modify_option_group(**params)
     # @param [Hash] params ({})
-    def modify_option_group(params = {}, **options)
-      req = build_request(:modify_option_group, params)
+    def modify_option_group(, **options)
+      req = build_request(:modify_option_group, )
       req.send_request(options)
     end
 
@@ -14058,8 +14058,8 @@ module Aws::RDS
     #
     # @overload promote_read_replica(**params)
     # @param [Hash] params ({})
-    def promote_read_replica(params = {}, **options)
-      req = build_request(:promote_read_replica, params)
+    def promote_read_replica(, **options)
+      req = build_request(:promote_read_replica, )
       req.send_request(options)
     end
 
@@ -14178,8 +14178,8 @@ module Aws::RDS
     #
     # @overload promote_read_replica_db_cluster(**params)
     # @param [Hash] params ({})
-    def promote_read_replica_db_cluster(params = {}, **options)
-      req = build_request(:promote_read_replica_db_cluster, params)
+    def promote_read_replica_db_cluster(, **options)
+      req = build_request(:promote_read_replica_db_cluster, )
       req.send_request(options)
     end
 
@@ -14267,8 +14267,8 @@ module Aws::RDS
     #
     # @overload purchase_reserved_db_instances_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_db_instances_offering(params = {}, **options)
-      req = build_request(:purchase_reserved_db_instances_offering, params)
+    def purchase_reserved_db_instances_offering(, **options)
+      req = build_request(:purchase_reserved_db_instances_offering, )
       req.send_request(options)
     end
 
@@ -14460,8 +14460,8 @@ module Aws::RDS
     #
     # @overload reboot_db_instance(**params)
     # @param [Hash] params ({})
-    def reboot_db_instance(params = {}, **options)
-      req = build_request(:reboot_db_instance, params)
+    def reboot_db_instance(, **options)
+      req = build_request(:reboot_db_instance, )
       req.send_request(options)
     end
 
@@ -14511,8 +14511,8 @@ module Aws::RDS
     #
     # @overload register_db_proxy_targets(**params)
     # @param [Hash] params ({})
-    def register_db_proxy_targets(params = {}, **options)
-      req = build_request(:register_db_proxy_targets, params)
+    def register_db_proxy_targets(, **options)
+      req = build_request(:register_db_proxy_targets, )
       req.send_request(options)
     end
 
@@ -14566,8 +14566,8 @@ module Aws::RDS
     #
     # @overload remove_from_global_cluster(**params)
     # @param [Hash] params ({})
-    def remove_from_global_cluster(params = {}, **options)
-      req = build_request(:remove_from_global_cluster, params)
+    def remove_from_global_cluster(, **options)
+      req = build_request(:remove_from_global_cluster, )
       req.send_request(options)
     end
 
@@ -14611,8 +14611,8 @@ module Aws::RDS
     #
     # @overload remove_role_from_db_cluster(**params)
     # @param [Hash] params ({})
-    def remove_role_from_db_cluster(params = {}, **options)
-      req = build_request(:remove_role_from_db_cluster, params)
+    def remove_role_from_db_cluster(, **options)
+      req = build_request(:remove_role_from_db_cluster, )
       req.send_request(options)
     end
 
@@ -14646,8 +14646,8 @@ module Aws::RDS
     #
     # @overload remove_role_from_db_instance(**params)
     # @param [Hash] params ({})
-    def remove_role_from_db_instance(params = {}, **options)
-      req = build_request(:remove_role_from_db_instance, params)
+    def remove_role_from_db_instance(, **options)
+      req = build_request(:remove_role_from_db_instance, )
       req.send_request(options)
     end
 
@@ -14709,8 +14709,8 @@ module Aws::RDS
     #
     # @overload remove_source_identifier_from_subscription(**params)
     # @param [Hash] params ({})
-    def remove_source_identifier_from_subscription(params = {}, **options)
-      req = build_request(:remove_source_identifier_from_subscription, params)
+    def remove_source_identifier_from_subscription(, **options)
+      req = build_request(:remove_source_identifier_from_subscription, )
       req.send_request(options)
     end
 
@@ -14761,8 +14761,8 @@ module Aws::RDS
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 
@@ -14851,8 +14851,8 @@ module Aws::RDS
     #
     # @overload reset_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_db_cluster_parameter_group(params = {}, **options)
-      req = build_request(:reset_db_cluster_parameter_group, params)
+    def reset_db_cluster_parameter_group(, **options)
+      req = build_request(:reset_db_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -14954,8 +14954,8 @@ module Aws::RDS
     #
     # @overload reset_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_db_parameter_group(params = {}, **options)
-      req = build_request(:reset_db_parameter_group, params)
+    def reset_db_parameter_group(, **options)
+      req = build_request(:reset_db_parameter_group, )
       req.send_request(options)
     end
 
@@ -15408,8 +15408,8 @@ module Aws::RDS
     #
     # @overload restore_db_cluster_from_s3(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_from_s3(params = {}, **options)
-      req = build_request(:restore_db_cluster_from_s3, params)
+    def restore_db_cluster_from_s3(, **options)
+      req = build_request(:restore_db_cluster_from_s3, )
       req.send_request(options)
     end
 
@@ -15802,8 +15802,8 @@ module Aws::RDS
     #
     # @overload restore_db_cluster_from_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_from_snapshot(params = {}, **options)
-      req = build_request(:restore_db_cluster_from_snapshot, params)
+    def restore_db_cluster_from_snapshot(, **options)
+      req = build_request(:restore_db_cluster_from_snapshot, )
       req.send_request(options)
     end
 
@@ -16173,8 +16173,8 @@ module Aws::RDS
     #
     # @overload restore_db_cluster_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_to_point_in_time(params = {}, **options)
-      req = build_request(:restore_db_cluster_to_point_in_time, params)
+    def restore_db_cluster_to_point_in_time(, **options)
+      req = build_request(:restore_db_cluster_to_point_in_time, )
       req.send_request(options)
     end
 
@@ -16750,8 +16750,8 @@ module Aws::RDS
     #
     # @overload restore_db_instance_from_db_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_db_instance_from_db_snapshot(params = {}, **options)
-      req = build_request(:restore_db_instance_from_db_snapshot, params)
+    def restore_db_instance_from_db_snapshot(, **options)
+      req = build_request(:restore_db_instance_from_db_snapshot, )
       req.send_request(options)
     end
 
@@ -17318,8 +17318,8 @@ module Aws::RDS
     #
     # @overload restore_db_instance_from_s3(**params)
     # @param [Hash] params ({})
-    def restore_db_instance_from_s3(params = {}, **options)
-      req = build_request(:restore_db_instance_from_s3, params)
+    def restore_db_instance_from_s3(, **options)
+      req = build_request(:restore_db_instance_from_s3, )
       req.send_request(options)
     end
 
@@ -17913,8 +17913,8 @@ module Aws::RDS
     #
     # @overload restore_db_instance_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_db_instance_to_point_in_time(params = {}, **options)
-      req = build_request(:restore_db_instance_to_point_in_time, params)
+    def restore_db_instance_to_point_in_time(, **options)
+      req = build_request(:restore_db_instance_to_point_in_time, )
       req.send_request(options)
     end
 
@@ -18002,8 +18002,8 @@ module Aws::RDS
     #
     # @overload revoke_db_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_db_security_group_ingress(params = {}, **options)
-      req = build_request(:revoke_db_security_group_ingress, params)
+    def revoke_db_security_group_ingress(, **options)
+      req = build_request(:revoke_db_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -18064,8 +18064,8 @@ module Aws::RDS
     #
     # @overload start_activity_stream(**params)
     # @param [Hash] params ({})
-    def start_activity_stream(params = {}, **options)
-      req = build_request(:start_activity_stream, params)
+    def start_activity_stream(, **options)
+      req = build_request(:start_activity_stream, )
       req.send_request(options)
     end
 
@@ -18185,8 +18185,8 @@ module Aws::RDS
     #
     # @overload start_db_cluster(**params)
     # @param [Hash] params ({})
-    def start_db_cluster(params = {}, **options)
-      req = build_request(:start_db_cluster, params)
+    def start_db_cluster(, **options)
+      req = build_request(:start_db_cluster, )
       req.send_request(options)
     end
 
@@ -18347,8 +18347,8 @@ module Aws::RDS
     #
     # @overload start_db_instance(**params)
     # @param [Hash] params ({})
-    def start_db_instance(params = {}, **options)
-      req = build_request(:start_db_instance, params)
+    def start_db_instance(, **options)
+      req = build_request(:start_db_instance, )
       req.send_request(options)
     end
 
@@ -18436,8 +18436,8 @@ module Aws::RDS
     #
     # @overload start_db_instance_automated_backups_replication(**params)
     # @param [Hash] params ({})
-    def start_db_instance_automated_backups_replication(params = {}, **options)
-      req = build_request(:start_db_instance_automated_backups_replication, params)
+    def start_db_instance_automated_backups_replication(, **options)
+      req = build_request(:start_db_instance_automated_backups_replication, )
       req.send_request(options)
     end
 
@@ -18560,8 +18560,8 @@ module Aws::RDS
     #
     # @overload start_export_task(**params)
     # @param [Hash] params ({})
-    def start_export_task(params = {}, **options)
-      req = build_request(:start_export_task, params)
+    def start_export_task(, **options)
+      req = build_request(:start_export_task, )
       req.send_request(options)
     end
 
@@ -18609,8 +18609,8 @@ module Aws::RDS
     #
     # @overload stop_activity_stream(**params)
     # @param [Hash] params ({})
-    def stop_activity_stream(params = {}, **options)
-      req = build_request(:stop_activity_stream, params)
+    def stop_activity_stream(, **options)
+      req = build_request(:stop_activity_stream, )
       req.send_request(options)
     end
 
@@ -18731,8 +18731,8 @@ module Aws::RDS
     #
     # @overload stop_db_cluster(**params)
     # @param [Hash] params ({})
-    def stop_db_cluster(params = {}, **options)
-      req = build_request(:stop_db_cluster, params)
+    def stop_db_cluster(, **options)
+      req = build_request(:stop_db_cluster, )
       req.send_request(options)
     end
 
@@ -18900,8 +18900,8 @@ module Aws::RDS
     #
     # @overload stop_db_instance(**params)
     # @param [Hash] params ({})
-    def stop_db_instance(params = {}, **options)
-      req = build_request(:stop_db_instance, params)
+    def stop_db_instance(, **options)
+      req = build_request(:stop_db_instance, )
       req.send_request(options)
     end
 
@@ -18964,8 +18964,8 @@ module Aws::RDS
     #
     # @overload stop_db_instance_automated_backups_replication(**params)
     # @param [Hash] params ({})
-    def stop_db_instance_automated_backups_replication(params = {}, **options)
-      req = build_request(:stop_db_instance_automated_backups_replication, params)
+    def stop_db_instance_automated_backups_replication(, **options)
+      req = build_request(:stop_db_instance_automated_backups_replication, )
       req.send_request(options)
     end
 

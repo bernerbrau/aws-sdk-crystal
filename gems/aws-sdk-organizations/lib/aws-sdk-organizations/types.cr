@@ -4911,5 +4911,896 @@ module Aws::Organizations
       include Aws::Structure
     end
 
+    alias AWSOrganizationsNotInUseException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AcceptHandshakeRequest = NamedTuple(
+      "HandshakeId" : HandshakeId
+    )
+
+    alias AcceptHandshakeResponse = NamedTuple(
+      "Handshake" : (Handshake)?
+    )
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AccessDeniedForDependencyException = NamedTuple(
+      "Message" : (ExceptionMessage)?,
+      "Reason" : (AccessDeniedForDependencyExceptionReason)?
+    )
+
+    alias AccessDeniedForDependencyExceptionReason = String
+
+    alias Account = NamedTuple(
+      "Id" : (AccountId)?,
+      "Arn" : (AccountArn)?,
+      "Email" : (Email)?,
+      "Name" : (AccountName)?,
+      "Status" : (AccountStatus)?,
+      "JoinedMethod" : (AccountJoinedMethod)?,
+      "JoinedTimestamp" : (Timestamp)?
+    )
+
+    alias AccountAlreadyRegisteredException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AccountArn = String
+
+    alias AccountId = String
+
+    alias AccountJoinedMethod = String
+
+    alias AccountName = String
+
+    alias AccountNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AccountNotRegisteredException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AccountOwnerNotVerifiedException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AccountStatus = String
+
+    alias Accounts = Array(Account)
+
+    alias ActionType = String
+
+    alias AlreadyInOrganizationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AttachPolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "TargetId" : PolicyTargetId
+    )
+
+    alias AwsManagedPolicy = Bool
+
+    alias CancelHandshakeRequest = NamedTuple(
+      "HandshakeId" : HandshakeId
+    )
+
+    alias CancelHandshakeResponse = NamedTuple(
+      "Handshake" : (Handshake)?
+    )
+
+    alias Child = NamedTuple(
+      "Id" : (ChildId)?,
+      "Type" : (ChildType)?
+    )
+
+    alias ChildId = String
+
+    alias ChildNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ChildType = String
+
+    alias Children = Array(Child)
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ConstraintViolationException = NamedTuple(
+      "Message" : (ExceptionMessage)?,
+      "Reason" : (ConstraintViolationExceptionReason)?
+    )
+
+    alias ConstraintViolationExceptionReason = String
+
+    alias CreateAccountFailureReason = String
+
+    alias CreateAccountRequest = NamedTuple(
+      "Email" : Email,
+      "AccountName" : AccountName,
+      "RoleName" : (RoleName)?,
+      "IamUserAccessToBilling" : (IAMUserAccessToBilling)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateAccountRequestId = String
+
+    alias CreateAccountResponse = NamedTuple(
+      "CreateAccountStatus" : (CreateAccountStatus)?
+    )
+
+    alias CreateAccountState = String
+
+    alias CreateAccountStates = Array(CreateAccountState)
+
+    alias CreateAccountStatus = NamedTuple(
+      "Id" : (CreateAccountRequestId)?,
+      "AccountName" : (AccountName)?,
+      "State" : (CreateAccountState)?,
+      "RequestedTimestamp" : (Timestamp)?,
+      "CompletedTimestamp" : (Timestamp)?,
+      "AccountId" : (AccountId)?,
+      "GovCloudAccountId" : (AccountId)?,
+      "FailureReason" : (CreateAccountFailureReason)?
+    )
+
+    alias CreateAccountStatusNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias CreateAccountStatuses = Array(CreateAccountStatus)
+
+    alias CreateGovCloudAccountRequest = NamedTuple(
+      "Email" : Email,
+      "AccountName" : AccountName,
+      "RoleName" : (RoleName)?,
+      "IamUserAccessToBilling" : (IAMUserAccessToBilling)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateGovCloudAccountResponse = NamedTuple(
+      "CreateAccountStatus" : (CreateAccountStatus)?
+    )
+
+    alias CreateOrganizationRequest = NamedTuple(
+      "FeatureSet" : (OrganizationFeatureSet)?
+    )
+
+    alias CreateOrganizationResponse = NamedTuple(
+      "Organization" : (Organization)?
+    )
+
+    alias CreateOrganizationalUnitRequest = NamedTuple(
+      "ParentId" : ParentId,
+      "Name" : OrganizationalUnitName,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateOrganizationalUnitResponse = NamedTuple(
+      "OrganizationalUnit" : (OrganizationalUnit)?
+    )
+
+    alias CreatePolicyRequest = NamedTuple(
+      "Content" : PolicyContent,
+      "Description" : PolicyDescription,
+      "Name" : PolicyName,
+      "Type" : PolicyType,
+      "Tags" : (Tags)?
+    )
+
+    alias CreatePolicyResponse = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias DeclineHandshakeRequest = NamedTuple(
+      "HandshakeId" : HandshakeId
+    )
+
+    alias DeclineHandshakeResponse = NamedTuple(
+      "Handshake" : (Handshake)?
+    )
+
+    alias DelegatedAdministrator = NamedTuple(
+      "Id" : (AccountId)?,
+      "Arn" : (AccountArn)?,
+      "Email" : (Email)?,
+      "Name" : (AccountName)?,
+      "Status" : (AccountStatus)?,
+      "JoinedMethod" : (AccountJoinedMethod)?,
+      "JoinedTimestamp" : (Timestamp)?,
+      "DelegationEnabledDate" : (Timestamp)?
+    )
+
+    alias DelegatedAdministrators = Array(DelegatedAdministrator)
+
+    alias DelegatedService = NamedTuple(
+      "ServicePrincipal" : (ServicePrincipal)?,
+      "DelegationEnabledDate" : (Timestamp)?
+    )
+
+    alias DelegatedServices = Array(DelegatedService)
+
+    alias DeleteOrganizationalUnitRequest = NamedTuple(
+      "OrganizationalUnitId" : OrganizationalUnitId
+    )
+
+    alias DeletePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId
+    )
+
+    alias DeregisterDelegatedAdministratorRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "ServicePrincipal" : ServicePrincipal
+    )
+
+    alias DescribeAccountRequest = NamedTuple(
+      "AccountId" : AccountId
+    )
+
+    alias DescribeAccountResponse = NamedTuple(
+      "Account" : (Account)?
+    )
+
+    alias DescribeCreateAccountStatusRequest = NamedTuple(
+      "CreateAccountRequestId" : CreateAccountRequestId
+    )
+
+    alias DescribeCreateAccountStatusResponse = NamedTuple(
+      "CreateAccountStatus" : (CreateAccountStatus)?
+    )
+
+    alias DescribeEffectivePolicyRequest = NamedTuple(
+      "PolicyType" : EffectivePolicyType,
+      "TargetId" : (PolicyTargetId)?
+    )
+
+    alias DescribeEffectivePolicyResponse = NamedTuple(
+      "EffectivePolicy" : (EffectivePolicy)?
+    )
+
+    alias DescribeHandshakeRequest = NamedTuple(
+      "HandshakeId" : HandshakeId
+    )
+
+    alias DescribeHandshakeResponse = NamedTuple(
+      "Handshake" : (Handshake)?
+    )
+
+    alias DescribeOrganizationResponse = NamedTuple(
+      "Organization" : (Organization)?
+    )
+
+    alias DescribeOrganizationalUnitRequest = NamedTuple(
+      "OrganizationalUnitId" : OrganizationalUnitId
+    )
+
+    alias DescribeOrganizationalUnitResponse = NamedTuple(
+      "OrganizationalUnit" : (OrganizationalUnit)?
+    )
+
+    alias DescribePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId
+    )
+
+    alias DescribePolicyResponse = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias DestinationParentNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias DetachPolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "TargetId" : PolicyTargetId
+    )
+
+    alias DisableAWSServiceAccessRequest = NamedTuple(
+      "ServicePrincipal" : ServicePrincipal
+    )
+
+    alias DisablePolicyTypeRequest = NamedTuple(
+      "RootId" : RootId,
+      "PolicyType" : PolicyType
+    )
+
+    alias DisablePolicyTypeResponse = NamedTuple(
+      "Root" : (Root)?
+    )
+
+    alias DuplicateAccountException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias DuplicateHandshakeException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias DuplicateOrganizationalUnitException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias DuplicatePolicyAttachmentException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias DuplicatePolicyException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias EffectivePolicy = NamedTuple(
+      "PolicyContent" : (PolicyContent)?,
+      "LastUpdatedTimestamp" : (Timestamp)?,
+      "TargetId" : (PolicyTargetId)?,
+      "PolicyType" : (EffectivePolicyType)?
+    )
+
+    alias EffectivePolicyNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias EffectivePolicyType = String
+
+    alias Email = String
+
+    alias EnableAWSServiceAccessRequest = NamedTuple(
+      "ServicePrincipal" : ServicePrincipal
+    )
+
+    alias EnableAllFeaturesRequest = NamedTuple(
+      
+    )
+
+    alias EnableAllFeaturesResponse = NamedTuple(
+      "Handshake" : (Handshake)?
+    )
+
+    alias EnablePolicyTypeRequest = NamedTuple(
+      "RootId" : RootId,
+      "PolicyType" : PolicyType
+    )
+
+    alias EnablePolicyTypeResponse = NamedTuple(
+      "Root" : (Root)?
+    )
+
+    alias EnabledServicePrincipal = NamedTuple(
+      "ServicePrincipal" : (ServicePrincipal)?,
+      "DateEnabled" : (Timestamp)?
+    )
+
+    alias EnabledServicePrincipals = Array(EnabledServicePrincipal)
+
+    alias ExceptionMessage = String
+
+    alias ExceptionType = String
+
+    alias FinalizingOrganizationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias GenericArn = String
+
+    alias Handshake = NamedTuple(
+      "Id" : (HandshakeId)?,
+      "Arn" : (HandshakeArn)?,
+      "Parties" : (HandshakeParties)?,
+      "State" : (HandshakeState)?,
+      "RequestedTimestamp" : (Timestamp)?,
+      "ExpirationTimestamp" : (Timestamp)?,
+      "Action" : (ActionType)?,
+      "Resources" : (HandshakeResources)?
+    )
+
+    alias HandshakeAlreadyInStateException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias HandshakeArn = String
+
+    alias HandshakeConstraintViolationException = NamedTuple(
+      "Message" : (ExceptionMessage)?,
+      "Reason" : (HandshakeConstraintViolationExceptionReason)?
+    )
+
+    alias HandshakeConstraintViolationExceptionReason = String
+
+    alias HandshakeFilter = NamedTuple(
+      "ActionType" : (ActionType)?,
+      "ParentHandshakeId" : (HandshakeId)?
+    )
+
+    alias HandshakeId = String
+
+    alias HandshakeNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias HandshakeNotes = String
+
+    alias HandshakeParties = Array(HandshakeParty)
+
+    alias HandshakeParty = NamedTuple(
+      "Id" : HandshakePartyId,
+      "Type" : HandshakePartyType
+    )
+
+    alias HandshakePartyId = String
+
+    alias HandshakePartyType = String
+
+    alias HandshakeResource = NamedTuple(
+      "Value" : (HandshakeResourceValue)?,
+      "Type" : (HandshakeResourceType)?,
+      "Resources" : (HandshakeResources)?
+    )
+
+    alias HandshakeResourceType = String
+
+    alias HandshakeResourceValue = String
+
+    alias HandshakeResources = Array(HandshakeResource)
+
+    alias HandshakeState = String
+
+    alias Handshakes = Array(Handshake)
+
+    alias IAMUserAccessToBilling = String
+
+    alias InvalidHandshakeTransitionException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (ExceptionMessage)?,
+      "Reason" : (InvalidInputExceptionReason)?
+    )
+
+    alias InvalidInputExceptionReason = String
+
+    alias InviteAccountToOrganizationRequest = NamedTuple(
+      "Target" : HandshakeParty,
+      "Notes" : (HandshakeNotes)?,
+      "Tags" : (Tags)?
+    )
+
+    alias InviteAccountToOrganizationResponse = NamedTuple(
+      "Handshake" : (Handshake)?
+    )
+
+    alias ListAWSServiceAccessForOrganizationRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAWSServiceAccessForOrganizationResponse = NamedTuple(
+      "EnabledServicePrincipals" : (EnabledServicePrincipals)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAccountsForParentRequest = NamedTuple(
+      "ParentId" : ParentId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAccountsForParentResponse = NamedTuple(
+      "Accounts" : (Accounts)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAccountsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAccountsResponse = NamedTuple(
+      "Accounts" : (Accounts)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChildrenRequest = NamedTuple(
+      "ParentId" : ParentId,
+      "ChildType" : ChildType,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListChildrenResponse = NamedTuple(
+      "Children" : (Children)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCreateAccountStatusRequest = NamedTuple(
+      "States" : (CreateAccountStates)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListCreateAccountStatusResponse = NamedTuple(
+      "CreateAccountStatuses" : (CreateAccountStatuses)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDelegatedAdministratorsRequest = NamedTuple(
+      "ServicePrincipal" : (ServicePrincipal)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDelegatedAdministratorsResponse = NamedTuple(
+      "DelegatedAdministrators" : (DelegatedAdministrators)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDelegatedServicesForAccountRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDelegatedServicesForAccountResponse = NamedTuple(
+      "DelegatedServices" : (DelegatedServices)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHandshakesForAccountRequest = NamedTuple(
+      "Filter" : (HandshakeFilter)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListHandshakesForAccountResponse = NamedTuple(
+      "Handshakes" : (Handshakes)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHandshakesForOrganizationRequest = NamedTuple(
+      "Filter" : (HandshakeFilter)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListHandshakesForOrganizationResponse = NamedTuple(
+      "Handshakes" : (Handshakes)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOrganizationalUnitsForParentRequest = NamedTuple(
+      "ParentId" : ParentId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListOrganizationalUnitsForParentResponse = NamedTuple(
+      "OrganizationalUnits" : (OrganizationalUnits)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListParentsRequest = NamedTuple(
+      "ChildId" : ChildId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListParentsResponse = NamedTuple(
+      "Parents" : (Parents)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPoliciesForTargetRequest = NamedTuple(
+      "TargetId" : PolicyTargetId,
+      "Filter" : PolicyType,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListPoliciesForTargetResponse = NamedTuple(
+      "Policies" : (Policies)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPoliciesRequest = NamedTuple(
+      "Filter" : PolicyType,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListPoliciesResponse = NamedTuple(
+      "Policies" : (Policies)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRootsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListRootsResponse = NamedTuple(
+      "Roots" : (Roots)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceId" : TaggableResourceId,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTargetsForPolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTargetsForPolicyResponse = NamedTuple(
+      "Targets" : (PolicyTargets)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MalformedPolicyDocumentException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias MasterCannotLeaveOrganizationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MoveAccountRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "SourceParentId" : ParentId,
+      "DestinationParentId" : ParentId
+    )
+
+    alias NextToken = String
+
+    alias Organization = NamedTuple(
+      "Id" : (OrganizationId)?,
+      "Arn" : (OrganizationArn)?,
+      "FeatureSet" : (OrganizationFeatureSet)?,
+      "MasterAccountArn" : (AccountArn)?,
+      "MasterAccountId" : (AccountId)?,
+      "MasterAccountEmail" : (Email)?,
+      "AvailablePolicyTypes" : (PolicyTypes)?
+    )
+
+    alias OrganizationArn = String
+
+    alias OrganizationFeatureSet = String
+
+    alias OrganizationId = String
+
+    alias OrganizationNotEmptyException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias OrganizationalUnit = NamedTuple(
+      "Id" : (OrganizationalUnitId)?,
+      "Arn" : (OrganizationalUnitArn)?,
+      "Name" : (OrganizationalUnitName)?
+    )
+
+    alias OrganizationalUnitArn = String
+
+    alias OrganizationalUnitId = String
+
+    alias OrganizationalUnitName = String
+
+    alias OrganizationalUnitNotEmptyException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias OrganizationalUnitNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias OrganizationalUnits = Array(OrganizationalUnit)
+
+    alias Parent = NamedTuple(
+      "Id" : (ParentId)?,
+      "Type" : (ParentType)?
+    )
+
+    alias ParentId = String
+
+    alias ParentNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ParentType = String
+
+    alias Parents = Array(Parent)
+
+    alias Policies = Array(PolicySummary)
+
+    alias Policy = NamedTuple(
+      "PolicySummary" : (PolicySummary)?,
+      "Content" : (PolicyContent)?
+    )
+
+    alias PolicyArn = String
+
+    alias PolicyChangesInProgressException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicyContent = String
+
+    alias PolicyDescription = String
+
+    alias PolicyId = String
+
+    alias PolicyInUseException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicyName = String
+
+    alias PolicyNotAttachedException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicyNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicySummary = NamedTuple(
+      "Id" : (PolicyId)?,
+      "Arn" : (PolicyArn)?,
+      "Name" : (PolicyName)?,
+      "Description" : (PolicyDescription)?,
+      "Type" : (PolicyType)?,
+      "AwsManaged" : (AwsManagedPolicy)?
+    )
+
+    alias PolicyTargetId = String
+
+    alias PolicyTargetSummary = NamedTuple(
+      "TargetId" : (PolicyTargetId)?,
+      "Arn" : (GenericArn)?,
+      "Name" : (TargetName)?,
+      "Type" : (TargetType)?
+    )
+
+    alias PolicyTargets = Array(PolicyTargetSummary)
+
+    alias PolicyType = String
+
+    alias PolicyTypeAlreadyEnabledException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicyTypeNotAvailableForOrganizationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicyTypeNotEnabledException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias PolicyTypeStatus = String
+
+    alias PolicyTypeSummary = NamedTuple(
+      "Type" : (PolicyType)?,
+      "Status" : (PolicyTypeStatus)?
+    )
+
+    alias PolicyTypes = Array(PolicyTypeSummary)
+
+    alias RegisterDelegatedAdministratorRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "ServicePrincipal" : ServicePrincipal
+    )
+
+    alias RemoveAccountFromOrganizationRequest = NamedTuple(
+      "AccountId" : AccountId
+    )
+
+    alias RoleName = String
+
+    alias Root = NamedTuple(
+      "Id" : (RootId)?,
+      "Arn" : (RootArn)?,
+      "Name" : (RootName)?,
+      "PolicyTypes" : (PolicyTypes)?
+    )
+
+    alias RootArn = String
+
+    alias RootId = String
+
+    alias RootName = String
+
+    alias RootNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Roots = Array(Root)
+
+    alias ServiceException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ServicePrincipal = String
+
+    alias SourceParentNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceId" : TaggableResourceId,
+      "Tags" : Tags
+    )
+
+    alias TagValue = String
+
+    alias TaggableResourceId = String
+
+    alias Tags = Array(Tag)
+
+    alias TargetName = String
+
+    alias TargetNotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias TargetType = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "Type" : (ExceptionType)?,
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UnsupportedAPIEndpointException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceId" : TaggableResourceId,
+      "TagKeys" : TagKeys
+    )
+
+    alias UpdateOrganizationalUnitRequest = NamedTuple(
+      "OrganizationalUnitId" : OrganizationalUnitId,
+      "Name" : (OrganizationalUnitName)?
+    )
+
+    alias UpdateOrganizationalUnitResponse = NamedTuple(
+      "OrganizationalUnit" : (OrganizationalUnit)?
+    )
+
+    alias UpdatePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "Name" : (PolicyName)?,
+      "Description" : (PolicyDescription)?,
+      "Content" : (PolicyContent)?
+    )
+
+    alias UpdatePolicyResponse = NamedTuple(
+      "Policy" : (Policy)?
+    )
   end
 end

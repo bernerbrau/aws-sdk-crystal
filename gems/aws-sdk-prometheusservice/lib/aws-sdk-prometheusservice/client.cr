@@ -363,8 +363,8 @@ module Aws::PrometheusService
     #
     # @overload create_workspace(**params)
     # @param [Hash] params ({})
-    def create_workspace(params = {}, **options)
-      req = build_request(:create_workspace, params)
+    def create_workspace(, **options)
+      req = build_request(:create_workspace, )
       req.send_request(options)
     end
 
@@ -393,8 +393,8 @@ module Aws::PrometheusService
     #
     # @overload delete_workspace(**params)
     # @param [Hash] params ({})
-    def delete_workspace(params = {}, **options)
-      req = build_request(:delete_workspace, params)
+    def delete_workspace(, **options)
+      req = build_request(:delete_workspace, )
       req.send_request(options)
     end
 
@@ -426,8 +426,8 @@ module Aws::PrometheusService
     #
     # @overload describe_workspace(**params)
     # @param [Hash] params ({})
-    def describe_workspace(params = {}, **options)
-      req = build_request(:describe_workspace, params)
+    def describe_workspace(, **options)
+      req = build_request(:describe_workspace, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::PrometheusService
     #
     # @overload list_workspaces(**params)
     # @param [Hash] params ({})
-    def list_workspaces(params = {}, **options)
-      req = build_request(:list_workspaces, params)
+    def list_workspaces(, **options)
+      req = build_request(:list_workspaces, )
       req.send_request(options)
     end
 
@@ -509,8 +509,8 @@ module Aws::PrometheusService
     #
     # @overload update_workspace_alias(**params)
     # @param [Hash] params ({})
-    def update_workspace_alias(params = {}, **options)
-      req = build_request(:update_workspace_alias, params)
+    def update_workspace_alias(, **options)
+      req = build_request(:update_workspace_alias, )
       req.send_request(options)
     end
 

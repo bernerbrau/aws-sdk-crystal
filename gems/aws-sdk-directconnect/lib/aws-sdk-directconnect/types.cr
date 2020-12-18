@@ -4148,5 +4148,934 @@ module Aws::DirectConnect
       include Aws::Structure
     end
 
+    alias ASN = Int32
+
+    alias AcceptDirectConnectGatewayAssociationProposalRequest = NamedTuple(
+      "directConnectGatewayId" : DirectConnectGatewayId,
+      "proposalId" : DirectConnectGatewayAssociationProposalId,
+      "associatedGatewayOwnerAccount" : OwnerAccount,
+      "overrideAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?
+    )
+
+    alias AcceptDirectConnectGatewayAssociationProposalResult = NamedTuple(
+      "directConnectGatewayAssociation" : (DirectConnectGatewayAssociation)?
+    )
+
+    alias AddressFamily = String
+
+    alias AllocateConnectionOnInterconnectRequest = NamedTuple(
+      "bandwidth" : Bandwidth,
+      "connectionName" : ConnectionName,
+      "ownerAccount" : OwnerAccount,
+      "interconnectId" : InterconnectId,
+      "vlan" : VLAN
+    )
+
+    alias AllocateHostedConnectionRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "ownerAccount" : OwnerAccount,
+      "bandwidth" : Bandwidth,
+      "connectionName" : ConnectionName,
+      "vlan" : VLAN,
+      "tags" : (TagList)?
+    )
+
+    alias AllocatePrivateVirtualInterfaceRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "ownerAccount" : OwnerAccount,
+      "newPrivateVirtualInterfaceAllocation" : NewPrivateVirtualInterfaceAllocation
+    )
+
+    alias AllocatePublicVirtualInterfaceRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "ownerAccount" : OwnerAccount,
+      "newPublicVirtualInterfaceAllocation" : NewPublicVirtualInterfaceAllocation
+    )
+
+    alias AllocateTransitVirtualInterfaceRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "ownerAccount" : OwnerAccount,
+      "newTransitVirtualInterfaceAllocation" : NewTransitVirtualInterfaceAllocation
+    )
+
+    alias AllocateTransitVirtualInterfaceResult = NamedTuple(
+      "virtualInterface" : (VirtualInterface)?
+    )
+
+    alias AmazonAddress = String
+
+    alias AssociateConnectionWithLagRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "lagId" : LagId
+    )
+
+    alias AssociateHostedConnectionRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "parentConnectionId" : ConnectionId
+    )
+
+    alias AssociateVirtualInterfaceRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId,
+      "connectionId" : ConnectionId
+    )
+
+    alias AssociatedGateway = NamedTuple(
+      "id" : (GatewayIdentifier)?,
+      "type" : (GatewayType)?,
+      "ownerAccount" : (OwnerAccount)?,
+      "region" : (Region)?
+    )
+
+    alias AssociatedGatewayId = String
+
+    alias AvailablePortSpeeds = Array(PortSpeed)
+
+    alias AwsDevice = String
+
+    alias AwsDeviceV2 = String
+
+    alias BGPAuthKey = String
+
+    alias BGPPeer = NamedTuple(
+      "bgpPeerId" : (BGPPeerId)?,
+      "asn" : (ASN)?,
+      "authKey" : (BGPAuthKey)?,
+      "addressFamily" : (AddressFamily)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "bgpPeerState" : (BGPPeerState)?,
+      "bgpStatus" : (BGPStatus)?,
+      "awsDeviceV2" : (AwsDeviceV2)?
+    )
+
+    alias BGPPeerId = String
+
+    alias BGPPeerIdList = Array(BGPPeerId)
+
+    alias BGPPeerList = Array(BGPPeer)
+
+    alias BGPPeerState = String
+
+    alias BGPStatus = String
+
+    alias Bandwidth = String
+
+    alias BooleanFlag = Bool
+
+    alias CIDR = String
+
+    alias ConfirmConnectionRequest = NamedTuple(
+      "connectionId" : ConnectionId
+    )
+
+    alias ConfirmConnectionResponse = NamedTuple(
+      "connectionState" : (ConnectionState)?
+    )
+
+    alias ConfirmPrivateVirtualInterfaceRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId,
+      "virtualGatewayId" : (VirtualGatewayId)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?
+    )
+
+    alias ConfirmPrivateVirtualInterfaceResponse = NamedTuple(
+      "virtualInterfaceState" : (VirtualInterfaceState)?
+    )
+
+    alias ConfirmPublicVirtualInterfaceRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId
+    )
+
+    alias ConfirmPublicVirtualInterfaceResponse = NamedTuple(
+      "virtualInterfaceState" : (VirtualInterfaceState)?
+    )
+
+    alias ConfirmTransitVirtualInterfaceRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId,
+      "directConnectGatewayId" : DirectConnectGatewayId
+    )
+
+    alias ConfirmTransitVirtualInterfaceResponse = NamedTuple(
+      "virtualInterfaceState" : (VirtualInterfaceState)?
+    )
+
+    alias Connection = NamedTuple(
+      "ownerAccount" : (OwnerAccount)?,
+      "connectionId" : (ConnectionId)?,
+      "connectionName" : (ConnectionName)?,
+      "connectionState" : (ConnectionState)?,
+      "region" : (Region)?,
+      "location" : (LocationCode)?,
+      "bandwidth" : (Bandwidth)?,
+      "vlan" : (VLAN)?,
+      "partnerName" : (PartnerName)?,
+      "loaIssueTime" : (LoaIssueTime)?,
+      "lagId" : (LagId)?,
+      "awsDevice" : (AwsDevice)?,
+      "jumboFrameCapable" : (JumboFrameCapable)?,
+      "awsDeviceV2" : (AwsDeviceV2)?,
+      "hasLogicalRedundancy" : (HasLogicalRedundancy)?,
+      "tags" : (TagList)?,
+      "providerName" : (ProviderName)?
+    )
+
+    alias ConnectionId = String
+
+    alias ConnectionList = Array(Connection)
+
+    alias ConnectionName = String
+
+    alias ConnectionState = String
+
+    alias Connections = NamedTuple(
+      "connections" : (ConnectionList)?
+    )
+
+    alias Count = Int32
+
+    alias CreateBGPPeerRequest = NamedTuple(
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "newBGPPeer" : (NewBGPPeer)?
+    )
+
+    alias CreateBGPPeerResponse = NamedTuple(
+      "virtualInterface" : (VirtualInterface)?
+    )
+
+    alias CreateConnectionRequest = NamedTuple(
+      "location" : LocationCode,
+      "bandwidth" : Bandwidth,
+      "connectionName" : ConnectionName,
+      "lagId" : (LagId)?,
+      "tags" : (TagList)?,
+      "providerName" : (ProviderName)?
+    )
+
+    alias CreateDirectConnectGatewayAssociationProposalRequest = NamedTuple(
+      "directConnectGatewayId" : DirectConnectGatewayId,
+      "directConnectGatewayOwnerAccount" : OwnerAccount,
+      "gatewayId" : GatewayIdToAssociate,
+      "addAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?,
+      "removeAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?
+    )
+
+    alias CreateDirectConnectGatewayAssociationProposalResult = NamedTuple(
+      "directConnectGatewayAssociationProposal" : (DirectConnectGatewayAssociationProposal)?
+    )
+
+    alias CreateDirectConnectGatewayAssociationRequest = NamedTuple(
+      "directConnectGatewayId" : DirectConnectGatewayId,
+      "gatewayId" : (GatewayIdToAssociate)?,
+      "addAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?,
+      "virtualGatewayId" : (VirtualGatewayId)?
+    )
+
+    alias CreateDirectConnectGatewayAssociationResult = NamedTuple(
+      "directConnectGatewayAssociation" : (DirectConnectGatewayAssociation)?
+    )
+
+    alias CreateDirectConnectGatewayRequest = NamedTuple(
+      "directConnectGatewayName" : DirectConnectGatewayName,
+      "amazonSideAsn" : (LongAsn)?
+    )
+
+    alias CreateDirectConnectGatewayResult = NamedTuple(
+      "directConnectGateway" : (DirectConnectGateway)?
+    )
+
+    alias CreateInterconnectRequest = NamedTuple(
+      "interconnectName" : InterconnectName,
+      "bandwidth" : Bandwidth,
+      "location" : LocationCode,
+      "lagId" : (LagId)?,
+      "tags" : (TagList)?,
+      "providerName" : (ProviderName)?
+    )
+
+    alias CreateLagRequest = NamedTuple(
+      "numberOfConnections" : Count,
+      "location" : LocationCode,
+      "connectionsBandwidth" : Bandwidth,
+      "lagName" : LagName,
+      "connectionId" : (ConnectionId)?,
+      "tags" : (TagList)?,
+      "childConnectionTags" : (TagList)?,
+      "providerName" : (ProviderName)?
+    )
+
+    alias CreatePrivateVirtualInterfaceRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "newPrivateVirtualInterface" : NewPrivateVirtualInterface
+    )
+
+    alias CreatePublicVirtualInterfaceRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "newPublicVirtualInterface" : NewPublicVirtualInterface
+    )
+
+    alias CreateTransitVirtualInterfaceRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "newTransitVirtualInterface" : NewTransitVirtualInterface
+    )
+
+    alias CreateTransitVirtualInterfaceResult = NamedTuple(
+      "virtualInterface" : (VirtualInterface)?
+    )
+
+    alias CustomerAddress = String
+
+    alias DeleteBGPPeerRequest = NamedTuple(
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "asn" : (ASN)?,
+      "customerAddress" : (CustomerAddress)?,
+      "bgpPeerId" : (BGPPeerId)?
+    )
+
+    alias DeleteBGPPeerResponse = NamedTuple(
+      "virtualInterface" : (VirtualInterface)?
+    )
+
+    alias DeleteConnectionRequest = NamedTuple(
+      "connectionId" : ConnectionId
+    )
+
+    alias DeleteDirectConnectGatewayAssociationProposalRequest = NamedTuple(
+      "proposalId" : DirectConnectGatewayAssociationProposalId
+    )
+
+    alias DeleteDirectConnectGatewayAssociationProposalResult = NamedTuple(
+      "directConnectGatewayAssociationProposal" : (DirectConnectGatewayAssociationProposal)?
+    )
+
+    alias DeleteDirectConnectGatewayAssociationRequest = NamedTuple(
+      "associationId" : (DirectConnectGatewayAssociationId)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "virtualGatewayId" : (VirtualGatewayId)?
+    )
+
+    alias DeleteDirectConnectGatewayAssociationResult = NamedTuple(
+      "directConnectGatewayAssociation" : (DirectConnectGatewayAssociation)?
+    )
+
+    alias DeleteDirectConnectGatewayRequest = NamedTuple(
+      "directConnectGatewayId" : DirectConnectGatewayId
+    )
+
+    alias DeleteDirectConnectGatewayResult = NamedTuple(
+      "directConnectGateway" : (DirectConnectGateway)?
+    )
+
+    alias DeleteInterconnectRequest = NamedTuple(
+      "interconnectId" : InterconnectId
+    )
+
+    alias DeleteInterconnectResponse = NamedTuple(
+      "interconnectState" : (InterconnectState)?
+    )
+
+    alias DeleteLagRequest = NamedTuple(
+      "lagId" : LagId
+    )
+
+    alias DeleteVirtualInterfaceRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId
+    )
+
+    alias DeleteVirtualInterfaceResponse = NamedTuple(
+      "virtualInterfaceState" : (VirtualInterfaceState)?
+    )
+
+    alias DescribeConnectionLoaRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "providerName" : (ProviderName)?,
+      "loaContentType" : (LoaContentType)?
+    )
+
+    alias DescribeConnectionLoaResponse = NamedTuple(
+      "loa" : (Loa)?
+    )
+
+    alias DescribeConnectionsOnInterconnectRequest = NamedTuple(
+      "interconnectId" : InterconnectId
+    )
+
+    alias DescribeConnectionsRequest = NamedTuple(
+      "connectionId" : (ConnectionId)?
+    )
+
+    alias DescribeDirectConnectGatewayAssociationProposalsRequest = NamedTuple(
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "proposalId" : (DirectConnectGatewayAssociationProposalId)?,
+      "associatedGatewayId" : (AssociatedGatewayId)?,
+      "maxResults" : (MaxResultSetSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeDirectConnectGatewayAssociationProposalsResult = NamedTuple(
+      "directConnectGatewayAssociationProposals" : (DirectConnectGatewayAssociationProposalList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeDirectConnectGatewayAssociationsRequest = NamedTuple(
+      "associationId" : (DirectConnectGatewayAssociationId)?,
+      "associatedGatewayId" : (AssociatedGatewayId)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "maxResults" : (MaxResultSetSize)?,
+      "nextToken" : (PaginationToken)?,
+      "virtualGatewayId" : (VirtualGatewayId)?
+    )
+
+    alias DescribeDirectConnectGatewayAssociationsResult = NamedTuple(
+      "directConnectGatewayAssociations" : (DirectConnectGatewayAssociationList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeDirectConnectGatewayAttachmentsRequest = NamedTuple(
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "maxResults" : (MaxResultSetSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeDirectConnectGatewayAttachmentsResult = NamedTuple(
+      "directConnectGatewayAttachments" : (DirectConnectGatewayAttachmentList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeDirectConnectGatewaysRequest = NamedTuple(
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "maxResults" : (MaxResultSetSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeDirectConnectGatewaysResult = NamedTuple(
+      "directConnectGateways" : (DirectConnectGatewayList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeHostedConnectionsRequest = NamedTuple(
+      "connectionId" : ConnectionId
+    )
+
+    alias DescribeInterconnectLoaRequest = NamedTuple(
+      "interconnectId" : InterconnectId,
+      "providerName" : (ProviderName)?,
+      "loaContentType" : (LoaContentType)?
+    )
+
+    alias DescribeInterconnectLoaResponse = NamedTuple(
+      "loa" : (Loa)?
+    )
+
+    alias DescribeInterconnectsRequest = NamedTuple(
+      "interconnectId" : (InterconnectId)?
+    )
+
+    alias DescribeLagsRequest = NamedTuple(
+      "lagId" : (LagId)?
+    )
+
+    alias DescribeLoaRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "providerName" : (ProviderName)?,
+      "loaContentType" : (LoaContentType)?
+    )
+
+    alias DescribeTagsRequest = NamedTuple(
+      "resourceArns" : ResourceArnList
+    )
+
+    alias DescribeTagsResponse = NamedTuple(
+      "resourceTags" : (ResourceTagList)?
+    )
+
+    alias DescribeVirtualInterfacesRequest = NamedTuple(
+      "connectionId" : (ConnectionId)?,
+      "virtualInterfaceId" : (VirtualInterfaceId)?
+    )
+
+    alias DirectConnectClientException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DirectConnectGateway = NamedTuple(
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "directConnectGatewayName" : (DirectConnectGatewayName)?,
+      "amazonSideAsn" : (LongAsn)?,
+      "ownerAccount" : (OwnerAccount)?,
+      "directConnectGatewayState" : (DirectConnectGatewayState)?,
+      "stateChangeError" : (StateChangeError)?
+    )
+
+    alias DirectConnectGatewayAssociation = NamedTuple(
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "directConnectGatewayOwnerAccount" : (OwnerAccount)?,
+      "associationState" : (DirectConnectGatewayAssociationState)?,
+      "stateChangeError" : (StateChangeError)?,
+      "associatedGateway" : (AssociatedGateway)?,
+      "associationId" : (DirectConnectGatewayAssociationId)?,
+      "allowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?,
+      "virtualGatewayId" : (VirtualGatewayId)?,
+      "virtualGatewayRegion" : (VirtualGatewayRegion)?,
+      "virtualGatewayOwnerAccount" : (OwnerAccount)?
+    )
+
+    alias DirectConnectGatewayAssociationId = String
+
+    alias DirectConnectGatewayAssociationList = Array(DirectConnectGatewayAssociation)
+
+    alias DirectConnectGatewayAssociationProposal = NamedTuple(
+      "proposalId" : (DirectConnectGatewayAssociationProposalId)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "directConnectGatewayOwnerAccount" : (OwnerAccount)?,
+      "proposalState" : (DirectConnectGatewayAssociationProposalState)?,
+      "associatedGateway" : (AssociatedGateway)?,
+      "existingAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?,
+      "requestedAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?
+    )
+
+    alias DirectConnectGatewayAssociationProposalId = String
+
+    alias DirectConnectGatewayAssociationProposalList = Array(DirectConnectGatewayAssociationProposal)
+
+    alias DirectConnectGatewayAssociationProposalState = String
+
+    alias DirectConnectGatewayAssociationState = String
+
+    alias DirectConnectGatewayAttachment = NamedTuple(
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "virtualInterfaceRegion" : (VirtualInterfaceRegion)?,
+      "virtualInterfaceOwnerAccount" : (OwnerAccount)?,
+      "attachmentState" : (DirectConnectGatewayAttachmentState)?,
+      "attachmentType" : (DirectConnectGatewayAttachmentType)?,
+      "stateChangeError" : (StateChangeError)?
+    )
+
+    alias DirectConnectGatewayAttachmentList = Array(DirectConnectGatewayAttachment)
+
+    alias DirectConnectGatewayAttachmentState = String
+
+    alias DirectConnectGatewayAttachmentType = String
+
+    alias DirectConnectGatewayId = String
+
+    alias DirectConnectGatewayList = Array(DirectConnectGateway)
+
+    alias DirectConnectGatewayName = String
+
+    alias DirectConnectGatewayState = String
+
+    alias DirectConnectServerException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DisassociateConnectionFromLagRequest = NamedTuple(
+      "connectionId" : ConnectionId,
+      "lagId" : LagId
+    )
+
+    alias DuplicateTagKeysException = NamedTuple(
+      
+    )
+
+    alias EndTime = String | UInt64 | Time
+
+    alias ErrorMessage = String
+
+    alias FailureTestHistoryStatus = String
+
+    alias GatewayIdToAssociate = String
+
+    alias GatewayIdentifier = String
+
+    alias GatewayType = String
+
+    alias HasLogicalRedundancy = String
+
+    alias Interconnect = NamedTuple(
+      "interconnectId" : (InterconnectId)?,
+      "interconnectName" : (InterconnectName)?,
+      "interconnectState" : (InterconnectState)?,
+      "region" : (Region)?,
+      "location" : (LocationCode)?,
+      "bandwidth" : (Bandwidth)?,
+      "loaIssueTime" : (LoaIssueTime)?,
+      "lagId" : (LagId)?,
+      "awsDevice" : (AwsDevice)?,
+      "jumboFrameCapable" : (JumboFrameCapable)?,
+      "awsDeviceV2" : (AwsDeviceV2)?,
+      "hasLogicalRedundancy" : (HasLogicalRedundancy)?,
+      "tags" : (TagList)?,
+      "providerName" : (ProviderName)?
+    )
+
+    alias InterconnectId = String
+
+    alias InterconnectList = Array(Interconnect)
+
+    alias InterconnectName = String
+
+    alias InterconnectState = String
+
+    alias Interconnects = NamedTuple(
+      "interconnects" : (InterconnectList)?
+    )
+
+    alias JumboFrameCapable = Bool
+
+    alias Lag = NamedTuple(
+      "connectionsBandwidth" : (Bandwidth)?,
+      "numberOfConnections" : (Count)?,
+      "lagId" : (LagId)?,
+      "ownerAccount" : (OwnerAccount)?,
+      "lagName" : (LagName)?,
+      "lagState" : (LagState)?,
+      "location" : (LocationCode)?,
+      "region" : (Region)?,
+      "minimumLinks" : (Count)?,
+      "awsDevice" : (AwsDevice)?,
+      "awsDeviceV2" : (AwsDeviceV2)?,
+      "connections" : (ConnectionList)?,
+      "allowsHostedConnections" : (BooleanFlag)?,
+      "jumboFrameCapable" : (JumboFrameCapable)?,
+      "hasLogicalRedundancy" : (HasLogicalRedundancy)?,
+      "tags" : (TagList)?,
+      "providerName" : (ProviderName)?
+    )
+
+    alias LagId = String
+
+    alias LagList = Array(Lag)
+
+    alias LagName = String
+
+    alias LagState = String
+
+    alias Lags = NamedTuple(
+      "lags" : (LagList)?
+    )
+
+    alias ListVirtualInterfaceTestHistoryRequest = NamedTuple(
+      "testId" : (TestId)?,
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "bgpPeers" : (BGPPeerIdList)?,
+      "status" : (FailureTestHistoryStatus)?,
+      "maxResults" : (MaxResultSetSize)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListVirtualInterfaceTestHistoryResponse = NamedTuple(
+      "virtualInterfaceTestHistory" : (VirtualInterfaceTestHistoryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias Loa = NamedTuple(
+      "loaContent" : (LoaContent)?,
+      "loaContentType" : (LoaContentType)?
+    )
+
+    alias LoaContent = String | Array(UInt8) | IO
+
+    alias LoaContentType = String
+
+    alias LoaIssueTime = String | UInt64 | Time
+
+    alias Location = NamedTuple(
+      "locationCode" : (LocationCode)?,
+      "locationName" : (LocationName)?,
+      "region" : (Region)?,
+      "availablePortSpeeds" : (AvailablePortSpeeds)?,
+      "availableProviders" : (ProviderList)?
+    )
+
+    alias LocationCode = String
+
+    alias LocationList = Array(Location)
+
+    alias LocationName = String
+
+    alias Locations = NamedTuple(
+      "locations" : (LocationList)?
+    )
+
+    alias LongAsn = Int64
+
+    alias MTU = Int32
+
+    alias MaxResultSetSize = Int32
+
+    alias NewBGPPeer = NamedTuple(
+      "asn" : (ASN)?,
+      "authKey" : (BGPAuthKey)?,
+      "addressFamily" : (AddressFamily)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?
+    )
+
+    alias NewPrivateVirtualInterface = NamedTuple(
+      "virtualInterfaceName" : VirtualInterfaceName,
+      "vlan" : VLAN,
+      "asn" : ASN,
+      "mtu" : (MTU)?,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "virtualGatewayId" : (VirtualGatewayId)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "tags" : (TagList)?
+    )
+
+    alias NewPrivateVirtualInterfaceAllocation = NamedTuple(
+      "virtualInterfaceName" : VirtualInterfaceName,
+      "vlan" : VLAN,
+      "asn" : ASN,
+      "mtu" : (MTU)?,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "customerAddress" : (CustomerAddress)?,
+      "tags" : (TagList)?
+    )
+
+    alias NewPublicVirtualInterface = NamedTuple(
+      "virtualInterfaceName" : VirtualInterfaceName,
+      "vlan" : VLAN,
+      "asn" : ASN,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "routeFilterPrefixes" : (RouteFilterPrefixList)?,
+      "tags" : (TagList)?
+    )
+
+    alias NewPublicVirtualInterfaceAllocation = NamedTuple(
+      "virtualInterfaceName" : VirtualInterfaceName,
+      "vlan" : VLAN,
+      "asn" : ASN,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "routeFilterPrefixes" : (RouteFilterPrefixList)?,
+      "tags" : (TagList)?
+    )
+
+    alias NewTransitVirtualInterface = NamedTuple(
+      "virtualInterfaceName" : (VirtualInterfaceName)?,
+      "vlan" : (VLAN)?,
+      "asn" : (ASN)?,
+      "mtu" : (MTU)?,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "tags" : (TagList)?
+    )
+
+    alias NewTransitVirtualInterfaceAllocation = NamedTuple(
+      "virtualInterfaceName" : (VirtualInterfaceName)?,
+      "vlan" : (VLAN)?,
+      "asn" : (ASN)?,
+      "mtu" : (MTU)?,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "tags" : (TagList)?
+    )
+
+    alias OwnerAccount = String
+
+    alias PaginationToken = String
+
+    alias PartnerName = String
+
+    alias PortSpeed = String
+
+    alias ProviderList = Array(ProviderName)
+
+    alias ProviderName = String
+
+    alias Region = String
+
+    alias ResourceArn = String
+
+    alias ResourceArnList = Array(ResourceArn)
+
+    alias ResourceTag = NamedTuple(
+      "resourceArn" : (ResourceArn)?,
+      "tags" : (TagList)?
+    )
+
+    alias ResourceTagList = Array(ResourceTag)
+
+    alias RouteFilterPrefix = NamedTuple(
+      "cidr" : (CIDR)?
+    )
+
+    alias RouteFilterPrefixList = Array(RouteFilterPrefix)
+
+    alias RouterConfig = String
+
+    alias StartBgpFailoverTestRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId,
+      "bgpPeers" : (BGPPeerIdList)?,
+      "testDurationInMinutes" : (TestDuration)?
+    )
+
+    alias StartBgpFailoverTestResponse = NamedTuple(
+      "virtualInterfaceTest" : (VirtualInterfaceTestHistory)?
+    )
+
+    alias StartTime = String | UInt64 | Time
+
+    alias StateChangeError = String
+
+    alias StopBgpFailoverTestRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId
+    )
+
+    alias StopBgpFailoverTestResponse = NamedTuple(
+      "virtualInterfaceTest" : (VirtualInterfaceTestHistory)?
+    )
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TestDuration = Int32
+
+    alias TestId = String
+
+    alias TooManyTagsException = NamedTuple(
+      
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDirectConnectGatewayAssociationRequest = NamedTuple(
+      "associationId" : (DirectConnectGatewayAssociationId)?,
+      "addAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?,
+      "removeAllowedPrefixesToDirectConnectGateway" : (RouteFilterPrefixList)?
+    )
+
+    alias UpdateDirectConnectGatewayAssociationResult = NamedTuple(
+      "directConnectGatewayAssociation" : (DirectConnectGatewayAssociation)?
+    )
+
+    alias UpdateLagRequest = NamedTuple(
+      "lagId" : LagId,
+      "lagName" : (LagName)?,
+      "minimumLinks" : (Count)?
+    )
+
+    alias UpdateVirtualInterfaceAttributesRequest = NamedTuple(
+      "virtualInterfaceId" : VirtualInterfaceId,
+      "mtu" : (MTU)?
+    )
+
+    alias VLAN = Int32
+
+    alias VirtualGateway = NamedTuple(
+      "virtualGatewayId" : (VirtualGatewayId)?,
+      "virtualGatewayState" : (VirtualGatewayState)?
+    )
+
+    alias VirtualGatewayId = String
+
+    alias VirtualGatewayList = Array(VirtualGateway)
+
+    alias VirtualGatewayRegion = String
+
+    alias VirtualGatewayState = String
+
+    alias VirtualGateways = NamedTuple(
+      "virtualGateways" : (VirtualGatewayList)?
+    )
+
+    alias VirtualInterface = NamedTuple(
+      "ownerAccount" : (OwnerAccount)?,
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "location" : (LocationCode)?,
+      "connectionId" : (ConnectionId)?,
+      "virtualInterfaceType" : (VirtualInterfaceType)?,
+      "virtualInterfaceName" : (VirtualInterfaceName)?,
+      "vlan" : (VLAN)?,
+      "asn" : (ASN)?,
+      "amazonSideAsn" : (LongAsn)?,
+      "authKey" : (BGPAuthKey)?,
+      "amazonAddress" : (AmazonAddress)?,
+      "customerAddress" : (CustomerAddress)?,
+      "addressFamily" : (AddressFamily)?,
+      "virtualInterfaceState" : (VirtualInterfaceState)?,
+      "customerRouterConfig" : (RouterConfig)?,
+      "mtu" : (MTU)?,
+      "jumboFrameCapable" : (JumboFrameCapable)?,
+      "virtualGatewayId" : (VirtualGatewayId)?,
+      "directConnectGatewayId" : (DirectConnectGatewayId)?,
+      "routeFilterPrefixes" : (RouteFilterPrefixList)?,
+      "bgpPeers" : (BGPPeerList)?,
+      "region" : (Region)?,
+      "awsDeviceV2" : (AwsDeviceV2)?,
+      "tags" : (TagList)?
+    )
+
+    alias VirtualInterfaceId = String
+
+    alias VirtualInterfaceList = Array(VirtualInterface)
+
+    alias VirtualInterfaceName = String
+
+    alias VirtualInterfaceRegion = String
+
+    alias VirtualInterfaceState = String
+
+    alias VirtualInterfaceTestHistory = NamedTuple(
+      "testId" : (TestId)?,
+      "virtualInterfaceId" : (VirtualInterfaceId)?,
+      "bgpPeers" : (BGPPeerIdList)?,
+      "status" : (FailureTestHistoryStatus)?,
+      "ownerAccount" : (OwnerAccount)?,
+      "testDurationInMinutes" : (TestDuration)?,
+      "startTime" : (StartTime)?,
+      "endTime" : (EndTime)?
+    )
+
+    alias VirtualInterfaceTestHistoryList = Array(VirtualInterfaceTestHistory)
+
+    alias VirtualInterfaceType = String
+
+    alias VirtualInterfaces = NamedTuple(
+      "virtualInterfaces" : (VirtualInterfaceList)?
+    )
   end
 end

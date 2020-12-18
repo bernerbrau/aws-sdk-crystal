@@ -359,8 +359,8 @@ module Aws::Braket
     #
     # @overload cancel_quantum_task(**params)
     # @param [Hash] params ({})
-    def cancel_quantum_task(params = {}, **options)
-      req = build_request(:cancel_quantum_task, params)
+    def cancel_quantum_task(, **options)
+      req = build_request(:cancel_quantum_task, )
       req.send_request(options)
     end
 
@@ -429,8 +429,8 @@ module Aws::Braket
     #
     # @overload create_quantum_task(**params)
     # @param [Hash] params ({})
-    def create_quantum_task(params = {}, **options)
-      req = build_request(:create_quantum_task, params)
+    def create_quantum_task(, **options)
+      req = build_request(:create_quantum_task, )
       req.send_request(options)
     end
 
@@ -467,8 +467,8 @@ module Aws::Braket
     #
     # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, **options)
-      req = build_request(:get_device, params)
+    def get_device(, **options)
+      req = build_request(:get_device, )
       req.send_request(options)
     end
 
@@ -516,8 +516,8 @@ module Aws::Braket
     #
     # @overload get_quantum_task(**params)
     # @param [Hash] params ({})
-    def get_quantum_task(params = {}, **options)
-      req = build_request(:get_quantum_task, params)
+    def get_quantum_task(, **options)
+      req = build_request(:get_quantum_task, )
       req.send_request(options)
     end
 
@@ -545,8 +545,8 @@ module Aws::Braket
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -597,8 +597,8 @@ module Aws::Braket
     #
     # @overload search_devices(**params)
     # @param [Hash] params ({})
-    def search_devices(params = {}, **options)
-      req = build_request(:search_devices, params)
+    def search_devices(, **options)
+      req = build_request(:search_devices, )
       req.send_request(options)
     end
 
@@ -655,8 +655,8 @@ module Aws::Braket
     #
     # @overload search_quantum_tasks(**params)
     # @param [Hash] params ({})
-    def search_quantum_tasks(params = {}, **options)
-      req = build_request(:search_quantum_tasks, params)
+    def search_quantum_tasks(, **options)
+      req = build_request(:search_quantum_tasks, )
       req.send_request(options)
     end
 
@@ -684,8 +684,8 @@ module Aws::Braket
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -711,8 +711,8 @@ module Aws::Braket
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

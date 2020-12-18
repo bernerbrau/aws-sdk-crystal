@@ -367,8 +367,8 @@ module Aws::Polly
     #
     # @overload delete_lexicon(**params)
     # @param [Hash] params ({})
-    def delete_lexicon(params = {}, **options)
-      req = build_request(:delete_lexicon, params)
+    def delete_lexicon(, **options)
+      req = build_request(:delete_lexicon, )
       req.send_request(options)
     end
 
@@ -484,8 +484,8 @@ module Aws::Polly
     #
     # @overload describe_voices(**params)
     # @param [Hash] params ({})
-    def describe_voices(params = {}, **options)
-      req = build_request(:describe_voices, params)
+    def describe_voices(, **options)
+      req = build_request(:describe_voices, )
       req.send_request(options)
     end
 
@@ -550,8 +550,8 @@ module Aws::Polly
     #
     # @overload get_lexicon(**params)
     # @param [Hash] params ({})
-    def get_lexicon(params = {}, **options)
-      req = build_request(:get_lexicon, params)
+    def get_lexicon(, **options)
+      req = build_request(:get_lexicon, )
       req.send_request(options)
     end
 
@@ -597,8 +597,8 @@ module Aws::Polly
     #
     # @overload get_speech_synthesis_task(**params)
     # @param [Hash] params ({})
-    def get_speech_synthesis_task(params = {}, **options)
-      req = build_request(:get_speech_synthesis_task, params)
+    def get_speech_synthesis_task(, **options)
+      req = build_request(:get_speech_synthesis_task, )
       req.send_request(options)
     end
 
@@ -666,8 +666,8 @@ module Aws::Polly
     #
     # @overload list_lexicons(**params)
     # @param [Hash] params ({})
-    def list_lexicons(params = {}, **options)
-      req = build_request(:list_lexicons, params)
+    def list_lexicons(, **options)
+      req = build_request(:list_lexicons, )
       req.send_request(options)
     end
 
@@ -726,8 +726,8 @@ module Aws::Polly
     #
     # @overload list_speech_synthesis_tasks(**params)
     # @param [Hash] params ({})
-    def list_speech_synthesis_tasks(params = {}, **options)
-      req = build_request(:list_speech_synthesis_tasks, params)
+    def list_speech_synthesis_tasks(, **options)
+      req = build_request(:list_speech_synthesis_tasks, )
       req.send_request(options)
     end
 
@@ -778,8 +778,8 @@ module Aws::Polly
     #
     # @overload put_lexicon(**params)
     # @param [Hash] params ({})
-    def put_lexicon(params = {}, **options)
-      req = build_request(:put_lexicon, params)
+    def put_lexicon(, **options)
+      req = build_request(:put_lexicon, )
       req.send_request(options)
     end
 
@@ -902,8 +902,8 @@ module Aws::Polly
     #
     # @overload start_speech_synthesis_task(**params)
     # @param [Hash] params ({})
-    def start_speech_synthesis_task(params = {}, **options)
-      req = build_request(:start_speech_synthesis_task, params)
+    def start_speech_synthesis_task(, **options)
+      req = build_request(:start_speech_synthesis_task, )
       req.send_request(options)
     end
 
@@ -1067,8 +1067,8 @@ module Aws::Polly
     #
     # @overload synthesize_speech(**params)
     # @param [Hash] params ({})
-    def synthesize_speech(params = {}, **options, &block)
-      req = build_request(:synthesize_speech, params)
+    def synthesize_speech(, **options, &block)
+      req = build_request(:synthesize_speech, )
       req.send_request(options, &block)
     end
 

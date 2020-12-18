@@ -380,8 +380,8 @@ module Aws::ServiceCatalog
     #
     # @overload accept_portfolio_share(**params)
     # @param [Hash] params ({})
-    def accept_portfolio_share(params = {}, **options)
-      req = build_request(:accept_portfolio_share, params)
+    def accept_portfolio_share(, **options)
+      req = build_request(:accept_portfolio_share, )
       req.send_request(options)
     end
 
@@ -406,8 +406,8 @@ module Aws::ServiceCatalog
     #
     # @overload associate_budget_with_resource(**params)
     # @param [Hash] params ({})
-    def associate_budget_with_resource(params = {}, **options)
-      req = build_request(:associate_budget_with_resource, params)
+    def associate_budget_with_resource(, **options)
+      req = build_request(:associate_budget_with_resource, )
       req.send_request(options)
     end
 
@@ -446,8 +446,8 @@ module Aws::ServiceCatalog
     #
     # @overload associate_principal_with_portfolio(**params)
     # @param [Hash] params ({})
-    def associate_principal_with_portfolio(params = {}, **options)
-      req = build_request(:associate_principal_with_portfolio, params)
+    def associate_principal_with_portfolio(, **options)
+      req = build_request(:associate_principal_with_portfolio, )
       req.send_request(options)
     end
 
@@ -488,8 +488,8 @@ module Aws::ServiceCatalog
     #
     # @overload associate_product_with_portfolio(**params)
     # @param [Hash] params ({})
-    def associate_product_with_portfolio(params = {}, **options)
-      req = build_request(:associate_product_with_portfolio, params)
+    def associate_product_with_portfolio(, **options)
+      req = build_request(:associate_product_with_portfolio, )
       req.send_request(options)
     end
 
@@ -529,8 +529,8 @@ module Aws::ServiceCatalog
     #
     # @overload associate_service_action_with_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def associate_service_action_with_provisioning_artifact(params = {}, **options)
-      req = build_request(:associate_service_action_with_provisioning_artifact, params)
+    def associate_service_action_with_provisioning_artifact(, **options)
+      req = build_request(:associate_service_action_with_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -556,8 +556,8 @@ module Aws::ServiceCatalog
     #
     # @overload associate_tag_option_with_resource(**params)
     # @param [Hash] params ({})
-    def associate_tag_option_with_resource(params = {}, **options)
-      req = build_request(:associate_tag_option_with_resource, params)
+    def associate_tag_option_with_resource(, **options)
+      req = build_request(:associate_tag_option_with_resource, )
       req.send_request(options)
     end
 
@@ -606,8 +606,8 @@ module Aws::ServiceCatalog
     #
     # @overload batch_associate_service_action_with_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def batch_associate_service_action_with_provisioning_artifact(params = {}, **options)
-      req = build_request(:batch_associate_service_action_with_provisioning_artifact, params)
+    def batch_associate_service_action_with_provisioning_artifact(, **options)
+      req = build_request(:batch_associate_service_action_with_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -657,8 +657,8 @@ module Aws::ServiceCatalog
     #
     # @overload batch_disassociate_service_action_from_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_service_action_from_provisioning_artifact(params = {}, **options)
-      req = build_request(:batch_disassociate_service_action_from_provisioning_artifact, params)
+    def batch_disassociate_service_action_from_provisioning_artifact(, **options)
+      req = build_request(:batch_disassociate_service_action_from_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -736,8 +736,8 @@ module Aws::ServiceCatalog
     #
     # @overload copy_product(**params)
     # @param [Hash] params ({})
-    def copy_product(params = {}, **options)
-      req = build_request(:copy_product, params)
+    def copy_product(, **options)
+      req = build_request(:copy_product, )
       req.send_request(options)
     end
 
@@ -892,8 +892,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_constraint(**params)
     # @param [Hash] params ({})
-    def create_constraint(params = {}, **options)
-      req = build_request(:create_constraint, params)
+    def create_constraint(, **options)
+      req = build_request(:create_constraint, )
       req.send_request(options)
     end
 
@@ -967,8 +967,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_portfolio(**params)
     # @param [Hash] params ({})
-    def create_portfolio(params = {}, **options)
-      req = build_request(:create_portfolio, params)
+    def create_portfolio(, **options)
+      req = build_request(:create_portfolio, )
       req.send_request(options)
     end
 
@@ -1034,8 +1034,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_portfolio_share(**params)
     # @param [Hash] params ({})
-    def create_portfolio_share(params = {}, **options)
-      req = build_request(:create_portfolio_share, params)
+    def create_portfolio_share(, **options)
+      req = build_request(:create_portfolio_share, )
       req.send_request(options)
     end
 
@@ -1158,8 +1158,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_product(**params)
     # @param [Hash] params ({})
-    def create_product(params = {}, **options)
-      req = build_request(:create_product, params)
+    def create_product(, **options)
+      req = build_request(:create_product, )
       req.send_request(options)
     end
 
@@ -1277,8 +1277,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def create_provisioned_product_plan(params = {}, **options)
-      req = build_request(:create_provisioned_product_plan, params)
+    def create_provisioned_product_plan(, **options)
+      req = build_request(:create_provisioned_product_plan, )
       req.send_request(options)
     end
 
@@ -1352,8 +1352,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def create_provisioning_artifact(params = {}, **options)
-      req = build_request(:create_provisioning_artifact, params)
+    def create_provisioning_artifact(, **options)
+      req = build_request(:create_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_service_action(**params)
     # @param [Hash] params ({})
-    def create_service_action(params = {}, **options)
-      req = build_request(:create_service_action, params)
+    def create_service_action(, **options)
+      req = build_request(:create_service_action, )
       req.send_request(options)
     end
 
@@ -1482,8 +1482,8 @@ module Aws::ServiceCatalog
     #
     # @overload create_tag_option(**params)
     # @param [Hash] params ({})
-    def create_tag_option(params = {}, **options)
-      req = build_request(:create_tag_option, params)
+    def create_tag_option(, **options)
+      req = build_request(:create_tag_option, )
       req.send_request(options)
     end
 
@@ -1516,8 +1516,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_constraint(**params)
     # @param [Hash] params ({})
-    def delete_constraint(params = {}, **options)
-      req = build_request(:delete_constraint, params)
+    def delete_constraint(, **options)
+      req = build_request(:delete_constraint, )
       req.send_request(options)
     end
 
@@ -1553,8 +1553,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_portfolio(**params)
     # @param [Hash] params ({})
-    def delete_portfolio(params = {}, **options)
-      req = build_request(:delete_portfolio, params)
+    def delete_portfolio(, **options)
+      req = build_request(:delete_portfolio, )
       req.send_request(options)
     end
 
@@ -1608,8 +1608,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_portfolio_share(**params)
     # @param [Hash] params ({})
-    def delete_portfolio_share(params = {}, **options)
-      req = build_request(:delete_portfolio_share, params)
+    def delete_portfolio_share(, **options)
+      req = build_request(:delete_portfolio_share, )
       req.send_request(options)
     end
 
@@ -1645,8 +1645,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_product(**params)
     # @param [Hash] params ({})
-    def delete_product(params = {}, **options)
-      req = build_request(:delete_product, params)
+    def delete_product(, **options)
+      req = build_request(:delete_product, )
       req.send_request(options)
     end
 
@@ -1682,8 +1682,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def delete_provisioned_product_plan(params = {}, **options)
-      req = build_request(:delete_provisioned_product_plan, params)
+    def delete_provisioned_product_plan(, **options)
+      req = build_request(:delete_provisioned_product_plan, )
       req.send_request(options)
     end
 
@@ -1724,8 +1724,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def delete_provisioning_artifact(params = {}, **options)
-      req = build_request(:delete_provisioning_artifact, params)
+    def delete_provisioning_artifact(, **options)
+      req = build_request(:delete_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -1756,8 +1756,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_service_action(**params)
     # @param [Hash] params ({})
-    def delete_service_action(params = {}, **options)
-      req = build_request(:delete_service_action, params)
+    def delete_service_action(, **options)
+      req = build_request(:delete_service_action, )
       req.send_request(options)
     end
 
@@ -1781,8 +1781,8 @@ module Aws::ServiceCatalog
     #
     # @overload delete_tag_option(**params)
     # @param [Hash] params ({})
-    def delete_tag_option(params = {}, **options)
-      req = build_request(:delete_tag_option, params)
+    def delete_tag_option(, **options)
+      req = build_request(:delete_tag_option, )
       req.send_request(options)
     end
 
@@ -1828,8 +1828,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_constraint(**params)
     # @param [Hash] params ({})
-    def describe_constraint(params = {}, **options)
-      req = build_request(:describe_constraint, params)
+    def describe_constraint(, **options)
+      req = build_request(:describe_constraint, )
       req.send_request(options)
     end
 
@@ -1871,8 +1871,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_copy_product_status(**params)
     # @param [Hash] params ({})
-    def describe_copy_product_status(params = {}, **options)
-      req = build_request(:describe_copy_product_status, params)
+    def describe_copy_product_status(, **options)
+      req = build_request(:describe_copy_product_status, )
       req.send_request(options)
     end
 
@@ -1929,8 +1929,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_portfolio(**params)
     # @param [Hash] params ({})
-    def describe_portfolio(params = {}, **options)
-      req = build_request(:describe_portfolio, params)
+    def describe_portfolio(, **options)
+      req = build_request(:describe_portfolio, )
       req.send_request(options)
     end
 
@@ -1974,8 +1974,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_portfolio_share_status(**params)
     # @param [Hash] params ({})
-    def describe_portfolio_share_status(params = {}, **options)
-      req = build_request(:describe_portfolio_share_status, params)
+    def describe_portfolio_share_status(, **options)
+      req = build_request(:describe_portfolio_share_status, )
       req.send_request(options)
     end
 
@@ -2040,8 +2040,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_product(**params)
     # @param [Hash] params ({})
-    def describe_product(params = {}, **options)
-      req = build_request(:describe_product, params)
+    def describe_product(, **options)
+      req = build_request(:describe_product, )
       req.send_request(options)
     end
 
@@ -2117,8 +2117,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_product_as_admin(**params)
     # @param [Hash] params ({})
-    def describe_product_as_admin(params = {}, **options)
-      req = build_request(:describe_product_as_admin, params)
+    def describe_product_as_admin(, **options)
+      req = build_request(:describe_product_as_admin, )
       req.send_request(options)
     end
 
@@ -2172,8 +2172,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_product_view(**params)
     # @param [Hash] params ({})
-    def describe_product_view(params = {}, **options)
-      req = build_request(:describe_product_view, params)
+    def describe_product_view(, **options)
+      req = build_request(:describe_product_view, )
       req.send_request(options)
     end
 
@@ -2238,8 +2238,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_provisioned_product(**params)
     # @param [Hash] params ({})
-    def describe_provisioned_product(params = {}, **options)
-      req = build_request(:describe_provisioned_product, params)
+    def describe_provisioned_product(, **options)
+      req = build_request(:describe_provisioned_product, )
       req.send_request(options)
     end
 
@@ -2322,8 +2322,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def describe_provisioned_product_plan(params = {}, **options)
-      req = build_request(:describe_provisioned_product_plan, params)
+    def describe_provisioned_product_plan(, **options)
+      req = build_request(:describe_provisioned_product_plan, )
       req.send_request(options)
     end
 
@@ -2388,8 +2388,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_artifact(params = {}, **options)
-      req = build_request(:describe_provisioning_artifact, params)
+    def describe_provisioning_artifact(, **options)
+      req = build_request(:describe_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -2491,8 +2491,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_provisioning_parameters(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_parameters(params = {}, **options)
-      req = build_request(:describe_provisioning_parameters, params)
+    def describe_provisioning_parameters(, **options)
+      req = build_request(:describe_provisioning_parameters, )
       req.send_request(options)
     end
 
@@ -2576,8 +2576,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_record(**params)
     # @param [Hash] params ({})
-    def describe_record(params = {}, **options)
-      req = build_request(:describe_record, params)
+    def describe_record(, **options)
+      req = build_request(:describe_record, )
       req.send_request(options)
     end
 
@@ -2619,8 +2619,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_service_action(**params)
     # @param [Hash] params ({})
-    def describe_service_action(params = {}, **options)
-      req = build_request(:describe_service_action, params)
+    def describe_service_action(, **options)
+      req = build_request(:describe_service_action, )
       req.send_request(options)
     end
 
@@ -2667,8 +2667,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_service_action_execution_parameters(**params)
     # @param [Hash] params ({})
-    def describe_service_action_execution_parameters(params = {}, **options)
-      req = build_request(:describe_service_action_execution_parameters, params)
+    def describe_service_action_execution_parameters(, **options)
+      req = build_request(:describe_service_action_execution_parameters, )
       req.send_request(options)
     end
 
@@ -2698,8 +2698,8 @@ module Aws::ServiceCatalog
     #
     # @overload describe_tag_option(**params)
     # @param [Hash] params ({})
-    def describe_tag_option(params = {}, **options)
-      req = build_request(:describe_tag_option, params)
+    def describe_tag_option(, **options)
+      req = build_request(:describe_tag_option, )
       req.send_request(options)
     end
 
@@ -2722,8 +2722,8 @@ module Aws::ServiceCatalog
     #
     # @overload disable_aws_organizations_access(**params)
     # @param [Hash] params ({})
-    def disable_aws_organizations_access(params = {}, **options)
-      req = build_request(:disable_aws_organizations_access, params)
+    def disable_aws_organizations_access(, **options)
+      req = build_request(:disable_aws_organizations_access, )
       req.send_request(options)
     end
 
@@ -2749,8 +2749,8 @@ module Aws::ServiceCatalog
     #
     # @overload disassociate_budget_from_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_budget_from_resource(params = {}, **options)
-      req = build_request(:disassociate_budget_from_resource, params)
+    def disassociate_budget_from_resource(, **options)
+      req = build_request(:disassociate_budget_from_resource, )
       req.send_request(options)
     end
 
@@ -2786,8 +2786,8 @@ module Aws::ServiceCatalog
     #
     # @overload disassociate_principal_from_portfolio(**params)
     # @param [Hash] params ({})
-    def disassociate_principal_from_portfolio(params = {}, **options)
-      req = build_request(:disassociate_principal_from_portfolio, params)
+    def disassociate_principal_from_portfolio(, **options)
+      req = build_request(:disassociate_principal_from_portfolio, )
       req.send_request(options)
     end
 
@@ -2824,8 +2824,8 @@ module Aws::ServiceCatalog
     #
     # @overload disassociate_product_from_portfolio(**params)
     # @param [Hash] params ({})
-    def disassociate_product_from_portfolio(params = {}, **options)
-      req = build_request(:disassociate_product_from_portfolio, params)
+    def disassociate_product_from_portfolio(, **options)
+      req = build_request(:disassociate_product_from_portfolio, )
       req.send_request(options)
     end
 
@@ -2866,8 +2866,8 @@ module Aws::ServiceCatalog
     #
     # @overload disassociate_service_action_from_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def disassociate_service_action_from_provisioning_artifact(params = {}, **options)
-      req = build_request(:disassociate_service_action_from_provisioning_artifact, params)
+    def disassociate_service_action_from_provisioning_artifact(, **options)
+      req = build_request(:disassociate_service_action_from_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -2892,8 +2892,8 @@ module Aws::ServiceCatalog
     #
     # @overload disassociate_tag_option_from_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_tag_option_from_resource(params = {}, **options)
-      req = build_request(:disassociate_tag_option_from_resource, params)
+    def disassociate_tag_option_from_resource(, **options)
+      req = build_request(:disassociate_tag_option_from_resource, )
       req.send_request(options)
     end
 
@@ -2916,8 +2916,8 @@ module Aws::ServiceCatalog
     #
     # @overload enable_aws_organizations_access(**params)
     # @param [Hash] params ({})
-    def enable_aws_organizations_access(params = {}, **options)
-      req = build_request(:enable_aws_organizations_access, params)
+    def enable_aws_organizations_access(, **options)
+      req = build_request(:enable_aws_organizations_access, )
       req.send_request(options)
     end
 
@@ -2981,8 +2981,8 @@ module Aws::ServiceCatalog
     #
     # @overload execute_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def execute_provisioned_product_plan(params = {}, **options)
-      req = build_request(:execute_provisioned_product_plan, params)
+    def execute_provisioned_product_plan(, **options)
+      req = build_request(:execute_provisioned_product_plan, )
       req.send_request(options)
     end
 
@@ -3058,8 +3058,8 @@ module Aws::ServiceCatalog
     #
     # @overload execute_provisioned_product_service_action(**params)
     # @param [Hash] params ({})
-    def execute_provisioned_product_service_action(params = {}, **options)
-      req = build_request(:execute_provisioned_product_service_action, params)
+    def execute_provisioned_product_service_action(, **options)
+      req = build_request(:execute_provisioned_product_service_action, )
       req.send_request(options)
     end
 
@@ -3079,8 +3079,8 @@ module Aws::ServiceCatalog
     #
     # @overload get_aws_organizations_access_status(**params)
     # @param [Hash] params ({})
-    def get_aws_organizations_access_status(params = {}, **options)
-      req = build_request(:get_aws_organizations_access_status, params)
+    def get_aws_organizations_access_status(, **options)
+      req = build_request(:get_aws_organizations_access_status, )
       req.send_request(options)
     end
 
@@ -3146,8 +3146,8 @@ module Aws::ServiceCatalog
     #
     # @overload get_provisioned_product_outputs(**params)
     # @param [Hash] params ({})
-    def get_provisioned_product_outputs(params = {}, **options)
-      req = build_request(:get_provisioned_product_outputs, params)
+    def get_provisioned_product_outputs(, **options)
+      req = build_request(:get_provisioned_product_outputs, )
       req.send_request(options)
     end
 
@@ -3239,8 +3239,8 @@ module Aws::ServiceCatalog
     #
     # @overload import_as_provisioned_product(**params)
     # @param [Hash] params ({})
-    def import_as_provisioned_product(params = {}, **options)
-      req = build_request(:import_as_provisioned_product, params)
+    def import_as_provisioned_product(, **options)
+      req = build_request(:import_as_provisioned_product, )
       req.send_request(options)
     end
 
@@ -3304,8 +3304,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_accepted_portfolio_shares(**params)
     # @param [Hash] params ({})
-    def list_accepted_portfolio_shares(params = {}, **options)
-      req = build_request(:list_accepted_portfolio_shares, params)
+    def list_accepted_portfolio_shares(, **options)
+      req = build_request(:list_accepted_portfolio_shares, )
       req.send_request(options)
     end
 
@@ -3356,8 +3356,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_budgets_for_resource(**params)
     # @param [Hash] params ({})
-    def list_budgets_for_resource(params = {}, **options)
-      req = build_request(:list_budgets_for_resource, params)
+    def list_budgets_for_resource(, **options)
+      req = build_request(:list_budgets_for_resource, )
       req.send_request(options)
     end
 
@@ -3417,8 +3417,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_constraints_for_portfolio(**params)
     # @param [Hash] params ({})
-    def list_constraints_for_portfolio(params = {}, **options)
-      req = build_request(:list_constraints_for_portfolio, params)
+    def list_constraints_for_portfolio(, **options)
+      req = build_request(:list_constraints_for_portfolio, )
       req.send_request(options)
     end
 
@@ -3478,8 +3478,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_launch_paths(**params)
     # @param [Hash] params ({})
-    def list_launch_paths(params = {}, **options)
-      req = build_request(:list_launch_paths, params)
+    def list_launch_paths(, **options)
+      req = build_request(:list_launch_paths, )
       req.send_request(options)
     end
 
@@ -3548,8 +3548,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_organization_portfolio_access(**params)
     # @param [Hash] params ({})
-    def list_organization_portfolio_access(params = {}, **options)
-      req = build_request(:list_organization_portfolio_access, params)
+    def list_organization_portfolio_access(, **options)
+      req = build_request(:list_organization_portfolio_access, )
       req.send_request(options)
     end
 
@@ -3610,8 +3610,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_portfolio_access(**params)
     # @param [Hash] params ({})
-    def list_portfolio_access(params = {}, **options)
-      req = build_request(:list_portfolio_access, params)
+    def list_portfolio_access(, **options)
+      req = build_request(:list_portfolio_access, )
       req.send_request(options)
     end
 
@@ -3663,8 +3663,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_portfolios(**params)
     # @param [Hash] params ({})
-    def list_portfolios(params = {}, **options)
-      req = build_request(:list_portfolios, params)
+    def list_portfolios(, **options)
+      req = build_request(:list_portfolios, )
       req.send_request(options)
     end
 
@@ -3720,8 +3720,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_portfolios_for_product(**params)
     # @param [Hash] params ({})
-    def list_portfolios_for_product(params = {}, **options)
-      req = build_request(:list_portfolios_for_product, params)
+    def list_portfolios_for_product(, **options)
+      req = build_request(:list_portfolios_for_product, )
       req.send_request(options)
     end
 
@@ -3773,8 +3773,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_principals_for_portfolio(**params)
     # @param [Hash] params ({})
-    def list_principals_for_portfolio(params = {}, **options)
-      req = build_request(:list_principals_for_portfolio, params)
+    def list_principals_for_portfolio(, **options)
+      req = build_request(:list_principals_for_portfolio, )
       req.send_request(options)
     end
 
@@ -3836,8 +3836,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_provisioned_product_plans(**params)
     # @param [Hash] params ({})
-    def list_provisioned_product_plans(params = {}, **options)
-      req = build_request(:list_provisioned_product_plans, params)
+    def list_provisioned_product_plans(, **options)
+      req = build_request(:list_provisioned_product_plans, )
       req.send_request(options)
     end
 
@@ -3884,8 +3884,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_provisioning_artifacts(**params)
     # @param [Hash] params ({})
-    def list_provisioning_artifacts(params = {}, **options)
-      req = build_request(:list_provisioning_artifacts, params)
+    def list_provisioning_artifacts(, **options)
+      req = build_request(:list_provisioning_artifacts, )
       req.send_request(options)
     end
 
@@ -3952,8 +3952,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_provisioning_artifacts_for_service_action(**params)
     # @param [Hash] params ({})
-    def list_provisioning_artifacts_for_service_action(params = {}, **options)
-      req = build_request(:list_provisioning_artifacts_for_service_action, params)
+    def list_provisioning_artifacts_for_service_action(, **options)
+      req = build_request(:list_provisioning_artifacts_for_service_action, )
       req.send_request(options)
     end
 
@@ -4029,8 +4029,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_record_history(**params)
     # @param [Hash] params ({})
-    def list_record_history(params = {}, **options)
-      req = build_request(:list_record_history, params)
+    def list_record_history(, **options)
+      req = build_request(:list_record_history, )
       req.send_request(options)
     end
 
@@ -4083,8 +4083,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_resources_for_tag_option(**params)
     # @param [Hash] params ({})
-    def list_resources_for_tag_option(params = {}, **options)
-      req = build_request(:list_resources_for_tag_option, params)
+    def list_resources_for_tag_option(, **options)
+      req = build_request(:list_resources_for_tag_option, )
       req.send_request(options)
     end
 
@@ -4134,8 +4134,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_service_actions(**params)
     # @param [Hash] params ({})
-    def list_service_actions(params = {}, **options)
-      req = build_request(:list_service_actions, params)
+    def list_service_actions(, **options)
+      req = build_request(:list_service_actions, )
       req.send_request(options)
     end
 
@@ -4195,8 +4195,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_service_actions_for_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def list_service_actions_for_provisioning_artifact(params = {}, **options)
-      req = build_request(:list_service_actions_for_provisioning_artifact, params)
+    def list_service_actions_for_provisioning_artifact(, **options)
+      req = build_request(:list_service_actions_for_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -4250,8 +4250,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_stack_instances_for_provisioned_product(**params)
     # @param [Hash] params ({})
-    def list_stack_instances_for_provisioned_product(params = {}, **options)
-      req = build_request(:list_stack_instances_for_provisioned_product, params)
+    def list_stack_instances_for_provisioned_product(, **options)
+      req = build_request(:list_stack_instances_for_provisioned_product, )
       req.send_request(options)
     end
 
@@ -4300,8 +4300,8 @@ module Aws::ServiceCatalog
     #
     # @overload list_tag_options(**params)
     # @param [Hash] params ({})
-    def list_tag_options(params = {}, **options)
-      req = build_request(:list_tag_options, params)
+    def list_tag_options(, **options)
+      req = build_request(:list_tag_options, )
       req.send_request(options)
     end
 
@@ -4441,8 +4441,8 @@ module Aws::ServiceCatalog
     #
     # @overload provision_product(**params)
     # @param [Hash] params ({})
-    def provision_product(params = {}, **options)
-      req = build_request(:provision_product, params)
+    def provision_product(, **options)
+      req = build_request(:provision_product, )
       req.send_request(options)
     end
 
@@ -4489,8 +4489,8 @@ module Aws::ServiceCatalog
     #
     # @overload reject_portfolio_share(**params)
     # @param [Hash] params ({})
-    def reject_portfolio_share(params = {}, **options)
-      req = build_request(:reject_portfolio_share, params)
+    def reject_portfolio_share(, **options)
+      req = build_request(:reject_portfolio_share, )
       req.send_request(options)
     end
 
@@ -4557,8 +4557,8 @@ module Aws::ServiceCatalog
     #
     # @overload scan_provisioned_products(**params)
     # @param [Hash] params ({})
-    def scan_provisioned_products(params = {}, **options)
-      req = build_request(:scan_provisioned_products, params)
+    def scan_provisioned_products(, **options)
+      req = build_request(:scan_provisioned_products, )
       req.send_request(options)
     end
 
@@ -4635,8 +4635,8 @@ module Aws::ServiceCatalog
     #
     # @overload search_products(**params)
     # @param [Hash] params ({})
-    def search_products(params = {}, **options)
-      req = build_request(:search_products, params)
+    def search_products(, **options)
+      req = build_request(:search_products, )
       req.send_request(options)
     end
 
@@ -4720,8 +4720,8 @@ module Aws::ServiceCatalog
     #
     # @overload search_products_as_admin(**params)
     # @param [Hash] params ({})
-    def search_products_as_admin(params = {}, **options)
-      req = build_request(:search_products_as_admin, params)
+    def search_products_as_admin(, **options)
+      req = build_request(:search_products_as_admin, )
       req.send_request(options)
     end
 
@@ -4822,8 +4822,8 @@ module Aws::ServiceCatalog
     #
     # @overload search_provisioned_products(**params)
     # @param [Hash] params ({})
-    def search_provisioned_products(params = {}, **options)
-      req = build_request(:search_provisioned_products, params)
+    def search_provisioned_products(, **options)
+      req = build_request(:search_provisioned_products, )
       req.send_request(options)
     end
 
@@ -4911,8 +4911,8 @@ module Aws::ServiceCatalog
     #
     # @overload terminate_provisioned_product(**params)
     # @param [Hash] params ({})
-    def terminate_provisioned_product(params = {}, **options)
-      req = build_request(:terminate_provisioned_product, params)
+    def terminate_provisioned_product(, **options)
+      req = build_request(:terminate_provisioned_product, )
       req.send_request(options)
     end
 
@@ -5038,8 +5038,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_constraint(**params)
     # @param [Hash] params ({})
-    def update_constraint(params = {}, **options)
-      req = build_request(:update_constraint, params)
+    def update_constraint(, **options)
+      req = build_request(:update_constraint, )
       req.send_request(options)
     end
 
@@ -5112,8 +5112,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_portfolio(**params)
     # @param [Hash] params ({})
-    def update_portfolio(params = {}, **options)
-      req = build_request(:update_portfolio, params)
+    def update_portfolio(, **options)
+      req = build_request(:update_portfolio, )
       req.send_request(options)
     end
 
@@ -5208,8 +5208,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_product(**params)
     # @param [Hash] params ({})
-    def update_product(params = {}, **options)
-      req = build_request(:update_product, params)
+    def update_product(, **options)
+      req = build_request(:update_product, )
       req.send_request(options)
     end
 
@@ -5348,8 +5348,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_provisioned_product(**params)
     # @param [Hash] params ({})
-    def update_provisioned_product(params = {}, **options)
-      req = build_request(:update_provisioned_product, params)
+    def update_provisioned_product(, **options)
+      req = build_request(:update_provisioned_product, )
       req.send_request(options)
     end
 
@@ -5437,8 +5437,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_provisioned_product_properties(**params)
     # @param [Hash] params ({})
-    def update_provisioned_product_properties(params = {}, **options)
-      req = build_request(:update_provisioned_product_properties, params)
+    def update_provisioned_product_properties(, **options)
+      req = build_request(:update_provisioned_product_properties, )
       req.send_request(options)
     end
 
@@ -5522,8 +5522,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def update_provisioning_artifact(params = {}, **options)
-      req = build_request(:update_provisioning_artifact, params)
+    def update_provisioning_artifact(, **options)
+      req = build_request(:update_provisioning_artifact, )
       req.send_request(options)
     end
 
@@ -5579,8 +5579,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_service_action(**params)
     # @param [Hash] params ({})
-    def update_service_action(params = {}, **options)
-      req = build_request(:update_service_action, params)
+    def update_service_action(, **options)
+      req = build_request(:update_service_action, )
       req.send_request(options)
     end
 
@@ -5618,8 +5618,8 @@ module Aws::ServiceCatalog
     #
     # @overload update_tag_option(**params)
     # @param [Hash] params ({})
-    def update_tag_option(params = {}, **options)
-      req = build_request(:update_tag_option, params)
+    def update_tag_option(, **options)
+      req = build_request(:update_tag_option, )
       req.send_request(options)
     end
 

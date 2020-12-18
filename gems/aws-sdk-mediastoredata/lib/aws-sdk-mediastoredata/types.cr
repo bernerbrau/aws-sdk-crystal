@@ -500,5 +500,131 @@ module Aws::MediaStoreData
       include Aws::Structure
     end
 
+    alias ContainerNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ContentRangePattern = String
+
+    alias ContentType = String
+
+    alias DeleteObjectRequest = NamedTuple(
+      "Path" : PathNaming
+    )
+
+    alias DeleteObjectResponse = NamedTuple(
+      
+    )
+
+    alias DescribeObjectRequest = NamedTuple(
+      "Path" : PathNaming
+    )
+
+    alias DescribeObjectResponse = NamedTuple(
+      "ETag" : (ETag)?,
+      "ContentType" : (ContentType)?,
+      "ContentLength" : (NonNegativeLong)?,
+      "CacheControl" : (StringPrimitive)?,
+      "LastModified" : (TimeStamp)?
+    )
+
+    alias ETag = String
+
+    alias ErrorMessage = String
+
+    alias GetObjectRequest = NamedTuple(
+      "Path" : PathNaming,
+      "Range" : (RangePattern)?
+    )
+
+    alias GetObjectResponse = NamedTuple(
+      "Body" : (PayloadBlob)?,
+      "CacheControl" : (StringPrimitive)?,
+      "ContentRange" : (ContentRangePattern)?,
+      "ContentLength" : (NonNegativeLong)?,
+      "ContentType" : (ContentType)?,
+      "ETag" : (ETag)?,
+      "LastModified" : (TimeStamp)?,
+      "StatusCode" : statusCode
+    )
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Item = NamedTuple(
+      "Name" : (ItemName)?,
+      "Type" : (ItemType)?,
+      "ETag" : (ETag)?,
+      "LastModified" : (TimeStamp)?,
+      "ContentType" : (ContentType)?,
+      "ContentLength" : (NonNegativeLong)?
+    )
+
+    alias ItemList = Array(Item)
+
+    alias ItemName = String
+
+    alias ItemType = String
+
+    alias ListItemsRequest = NamedTuple(
+      "Path" : (ListPathNaming)?,
+      "MaxResults" : (ListLimit)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListItemsResponse = NamedTuple(
+      "Items" : (ItemList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListLimit = Int32
+
+    alias ListPathNaming = String
+
+    alias NonNegativeLong = Int64
+
+    alias ObjectNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias PaginationToken = String
+
+    alias PathNaming = String
+
+    alias PayloadBlob = String | Array(UInt8) | IO
+
+    alias PutObjectRequest = NamedTuple(
+      "Body" : PayloadBlob,
+      "Path" : PathNaming,
+      "ContentType" : (ContentType)?,
+      "CacheControl" : (StringPrimitive)?,
+      "StorageClass" : (StorageClass)?,
+      "UploadAvailability" : (UploadAvailability)?
+    )
+
+    alias PutObjectResponse = NamedTuple(
+      "ContentSHA256" : (SHA256Hash)?,
+      "ETag" : (ETag)?,
+      "StorageClass" : (StorageClass)?
+    )
+
+    alias RangePattern = String
+
+    alias RequestedRangeNotSatisfiableException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SHA256Hash = String
+
+    alias StorageClass = String
+
+    alias StringPrimitive = String
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias UploadAvailability = String
+
+    alias statusCode = Int32
   end
 end

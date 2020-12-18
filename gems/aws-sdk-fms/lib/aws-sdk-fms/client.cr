@@ -370,8 +370,8 @@ module Aws::FMS
     #
     # @overload associate_admin_account(**params)
     # @param [Hash] params ({})
-    def associate_admin_account(params = {}, **options)
-      req = build_request(:associate_admin_account, params)
+    def associate_admin_account(, **options)
+      req = build_request(:associate_admin_account, )
       req.send_request(options)
     end
 
@@ -394,8 +394,8 @@ module Aws::FMS
     #
     # @overload delete_apps_list(**params)
     # @param [Hash] params ({})
-    def delete_apps_list(params = {}, **options)
-      req = build_request(:delete_apps_list, params)
+    def delete_apps_list(, **options)
+      req = build_request(:delete_apps_list, )
       req.send_request(options)
     end
 
@@ -409,8 +409,8 @@ module Aws::FMS
     #
     # @overload delete_notification_channel(**params)
     # @param [Hash] params ({})
-    def delete_notification_channel(params = {}, **options)
-      req = build_request(:delete_notification_channel, params)
+    def delete_notification_channel(, **options)
+      req = build_request(:delete_notification_channel, )
       req.send_request(options)
     end
 
@@ -463,8 +463,8 @@ module Aws::FMS
     #
     # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, **options)
-      req = build_request(:delete_policy, params)
+    def delete_policy(, **options)
+      req = build_request(:delete_policy, )
       req.send_request(options)
     end
 
@@ -487,8 +487,8 @@ module Aws::FMS
     #
     # @overload delete_protocols_list(**params)
     # @param [Hash] params ({})
-    def delete_protocols_list(params = {}, **options)
-      req = build_request(:delete_protocols_list, params)
+    def delete_protocols_list(, **options)
+      req = build_request(:delete_protocols_list, )
       req.send_request(options)
     end
 
@@ -503,8 +503,8 @@ module Aws::FMS
     #
     # @overload disassociate_admin_account(**params)
     # @param [Hash] params ({})
-    def disassociate_admin_account(params = {}, **options)
-      req = build_request(:disassociate_admin_account, params)
+    def disassociate_admin_account(, **options)
+      req = build_request(:disassociate_admin_account, )
       req.send_request(options)
     end
 
@@ -525,8 +525,8 @@ module Aws::FMS
     #
     # @overload get_admin_account(**params)
     # @param [Hash] params ({})
-    def get_admin_account(params = {}, **options)
-      req = build_request(:get_admin_account, params)
+    def get_admin_account(, **options)
+      req = build_request(:get_admin_account, )
       req.send_request(options)
     end
 
@@ -575,8 +575,8 @@ module Aws::FMS
     #
     # @overload get_apps_list(**params)
     # @param [Hash] params ({})
-    def get_apps_list(params = {}, **options)
-      req = build_request(:get_apps_list, params)
+    def get_apps_list(, **options)
+      req = build_request(:get_apps_list, )
       req.send_request(options)
     end
 
@@ -631,8 +631,8 @@ module Aws::FMS
     #
     # @overload get_compliance_detail(**params)
     # @param [Hash] params ({})
-    def get_compliance_detail(params = {}, **options)
-      req = build_request(:get_compliance_detail, params)
+    def get_compliance_detail(, **options)
+      req = build_request(:get_compliance_detail, )
       req.send_request(options)
     end
 
@@ -653,8 +653,8 @@ module Aws::FMS
     #
     # @overload get_notification_channel(**params)
     # @param [Hash] params ({})
-    def get_notification_channel(params = {}, **options)
-      req = build_request(:get_notification_channel, params)
+    def get_notification_channel(, **options)
+      req = build_request(:get_notification_channel, )
       req.send_request(options)
     end
 
@@ -702,8 +702,8 @@ module Aws::FMS
     #
     # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, **options)
-      req = build_request(:get_policy, params)
+    def get_policy(, **options)
+      req = build_request(:get_policy, )
       req.send_request(options)
     end
 
@@ -774,8 +774,8 @@ module Aws::FMS
     #
     # @overload get_protection_status(**params)
     # @param [Hash] params ({})
-    def get_protection_status(params = {}, **options)
-      req = build_request(:get_protection_status, params)
+    def get_protection_status(, **options)
+      req = build_request(:get_protection_status, )
       req.send_request(options)
     end
 
@@ -820,8 +820,8 @@ module Aws::FMS
     #
     # @overload get_protocols_list(**params)
     # @param [Hash] params ({})
-    def get_protocols_list(params = {}, **options)
-      req = build_request(:get_protocols_list, params)
+    def get_protocols_list(, **options)
+      req = build_request(:get_protocols_list, )
       req.send_request(options)
     end
 
@@ -943,8 +943,8 @@ module Aws::FMS
     #
     # @overload get_violation_details(**params)
     # @param [Hash] params ({})
-    def get_violation_details(params = {}, **options)
-      req = build_request(:get_violation_details, params)
+    def get_violation_details(, **options)
+      req = build_request(:get_violation_details, )
       req.send_request(options)
     end
 
@@ -999,8 +999,8 @@ module Aws::FMS
     #
     # @overload list_apps_lists(**params)
     # @param [Hash] params ({})
-    def list_apps_lists(params = {}, **options)
-      req = build_request(:list_apps_lists, params)
+    def list_apps_lists(, **options)
+      req = build_request(:list_apps_lists, )
       req.send_request(options)
     end
 
@@ -1064,8 +1064,8 @@ module Aws::FMS
     #
     # @overload list_compliance_status(**params)
     # @param [Hash] params ({})
-    def list_compliance_status(params = {}, **options)
-      req = build_request(:list_compliance_status, params)
+    def list_compliance_status(, **options)
+      req = build_request(:list_compliance_status, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::FMS
     #
     # @overload list_member_accounts(**params)
     # @param [Hash] params ({})
-    def list_member_accounts(params = {}, **options)
-      req = build_request(:list_member_accounts, params)
+    def list_member_accounts(, **options)
+      req = build_request(:list_member_accounts, )
       req.send_request(options)
     end
 
@@ -1167,8 +1167,8 @@ module Aws::FMS
     #
     # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, **options)
-      req = build_request(:list_policies, params)
+    def list_policies(, **options)
+      req = build_request(:list_policies, )
       req.send_request(options)
     end
 
@@ -1221,8 +1221,8 @@ module Aws::FMS
     #
     # @overload list_protocols_lists(**params)
     # @param [Hash] params ({})
-    def list_protocols_lists(params = {}, **options)
-      req = build_request(:list_protocols_lists, params)
+    def list_protocols_lists(, **options)
+      req = build_request(:list_protocols_lists, )
       req.send_request(options)
     end
 
@@ -1253,8 +1253,8 @@ module Aws::FMS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1328,8 +1328,8 @@ module Aws::FMS
     #
     # @overload put_apps_list(**params)
     # @param [Hash] params ({})
-    def put_apps_list(params = {}, **options)
-      req = build_request(:put_apps_list, params)
+    def put_apps_list(, **options)
+      req = build_request(:put_apps_list, )
       req.send_request(options)
     end
 
@@ -1367,8 +1367,8 @@ module Aws::FMS
     #
     # @overload put_notification_channel(**params)
     # @param [Hash] params ({})
-    def put_notification_channel(params = {}, **options)
-      req = build_request(:put_notification_channel, params)
+    def put_notification_channel(, **options)
+      req = build_request(:put_notification_channel, )
       req.send_request(options)
     end
 
@@ -1477,8 +1477,8 @@ module Aws::FMS
     #
     # @overload put_policy(**params)
     # @param [Hash] params ({})
-    def put_policy(params = {}, **options)
-      req = build_request(:put_policy, params)
+    def put_policy(, **options)
+      req = build_request(:put_policy, )
       req.send_request(options)
     end
 
@@ -1535,8 +1535,8 @@ module Aws::FMS
     #
     # @overload put_protocols_list(**params)
     # @param [Hash] params ({})
-    def put_protocols_list(params = {}, **options)
-      req = build_request(:put_protocols_list, params)
+    def put_protocols_list(, **options)
+      req = build_request(:put_protocols_list, )
       req.send_request(options)
     end
 
@@ -1568,8 +1568,8 @@ module Aws::FMS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1596,8 +1596,8 @@ module Aws::FMS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

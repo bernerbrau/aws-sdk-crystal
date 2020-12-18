@@ -1526,5 +1526,291 @@ module Aws::AutoScalingPlans
       include Aws::Structure
     end
 
+    alias ApplicationSource = NamedTuple(
+      "CloudFormationStackARN" : (XmlString)?,
+      "TagFilters" : (TagFilters)?
+    )
+
+    alias ApplicationSources = Array(ApplicationSource)
+
+    alias ConcurrentUpdateException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Cooldown = Int32
+
+    alias CreateScalingPlanRequest = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ApplicationSource" : ApplicationSource,
+      "ScalingInstructions" : ScalingInstructions
+    )
+
+    alias CreateScalingPlanResponse = NamedTuple(
+      "ScalingPlanVersion" : ScalingPlanVersion
+    )
+
+    alias CustomizedLoadMetricSpecification = NamedTuple(
+      "MetricName" : MetricName,
+      "Namespace" : MetricNamespace,
+      "Dimensions" : (MetricDimensions)?,
+      "Statistic" : MetricStatistic,
+      "Unit" : (MetricUnit)?
+    )
+
+    alias CustomizedScalingMetricSpecification = NamedTuple(
+      "MetricName" : MetricName,
+      "Namespace" : MetricNamespace,
+      "Dimensions" : (MetricDimensions)?,
+      "Statistic" : MetricStatistic,
+      "Unit" : (MetricUnit)?
+    )
+
+    alias Datapoint = NamedTuple(
+      "Timestamp" : (TimestampType)?,
+      "Value" : (MetricScale)?
+    )
+
+    alias Datapoints = Array(Datapoint)
+
+    alias DeleteScalingPlanRequest = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ScalingPlanVersion" : ScalingPlanVersion
+    )
+
+    alias DeleteScalingPlanResponse = NamedTuple(
+      
+    )
+
+    alias DescribeScalingPlanResourcesRequest = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ScalingPlanVersion" : ScalingPlanVersion,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeScalingPlanResourcesResponse = NamedTuple(
+      "ScalingPlanResources" : (ScalingPlanResources)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeScalingPlansRequest = NamedTuple(
+      "ScalingPlanNames" : (ScalingPlanNames)?,
+      "ScalingPlanVersion" : (ScalingPlanVersion)?,
+      "ApplicationSources" : (ApplicationSources)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeScalingPlansResponse = NamedTuple(
+      "ScalingPlans" : (ScalingPlans)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DisableDynamicScaling = Bool
+
+    alias DisableScaleIn = Bool
+
+    alias ErrorMessage = String
+
+    alias ForecastDataType = String
+
+    alias GetScalingPlanResourceForecastDataRequest = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ScalingPlanVersion" : ScalingPlanVersion,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : XmlString,
+      "ScalableDimension" : ScalableDimension,
+      "ForecastDataType" : ForecastDataType,
+      "StartTime" : TimestampType,
+      "EndTime" : TimestampType
+    )
+
+    alias GetScalingPlanResourceForecastDataResponse = NamedTuple(
+      "Datapoints" : Datapoints
+    )
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LoadMetricType = String
+
+    alias MaxResults = Int32
+
+    alias MetricDimension = NamedTuple(
+      "Name" : MetricDimensionName,
+      "Value" : MetricDimensionValue
+    )
+
+    alias MetricDimensionName = String
+
+    alias MetricDimensionValue = String
+
+    alias MetricDimensions = Array(MetricDimension)
+
+    alias MetricName = String
+
+    alias MetricNamespace = String
+
+    alias MetricScale = Float64
+
+    alias MetricStatistic = String
+
+    alias MetricUnit = String
+
+    alias NextToken = String
+
+    alias ObjectNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias PolicyName = String
+
+    alias PolicyType = String
+
+    alias PredefinedLoadMetricSpecification = NamedTuple(
+      "PredefinedLoadMetricType" : LoadMetricType,
+      "ResourceLabel" : (ResourceLabel)?
+    )
+
+    alias PredefinedScalingMetricSpecification = NamedTuple(
+      "PredefinedScalingMetricType" : ScalingMetricType,
+      "ResourceLabel" : (ResourceLabel)?
+    )
+
+    alias PredictiveScalingMaxCapacityBehavior = String
+
+    alias PredictiveScalingMode = String
+
+    alias ResourceCapacity = Int32
+
+    alias ResourceIdMaxLen1600 = String
+
+    alias ResourceLabel = String
+
+    alias ScalableDimension = String
+
+    alias ScalingInstruction = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "MinCapacity" : ResourceCapacity,
+      "MaxCapacity" : ResourceCapacity,
+      "TargetTrackingConfigurations" : TargetTrackingConfigurations,
+      "PredefinedLoadMetricSpecification" : (PredefinedLoadMetricSpecification)?,
+      "CustomizedLoadMetricSpecification" : (CustomizedLoadMetricSpecification)?,
+      "ScheduledActionBufferTime" : (ScheduledActionBufferTime)?,
+      "PredictiveScalingMaxCapacityBehavior" : (PredictiveScalingMaxCapacityBehavior)?,
+      "PredictiveScalingMaxCapacityBuffer" : (ResourceCapacity)?,
+      "PredictiveScalingMode" : (PredictiveScalingMode)?,
+      "ScalingPolicyUpdateBehavior" : (ScalingPolicyUpdateBehavior)?,
+      "DisableDynamicScaling" : (DisableDynamicScaling)?
+    )
+
+    alias ScalingInstructions = Array(ScalingInstruction)
+
+    alias ScalingMetricType = String
+
+    alias ScalingPlan = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ScalingPlanVersion" : ScalingPlanVersion,
+      "ApplicationSource" : ApplicationSource,
+      "ScalingInstructions" : ScalingInstructions,
+      "StatusCode" : ScalingPlanStatusCode,
+      "StatusMessage" : (XmlString)?,
+      "StatusStartTime" : (TimestampType)?,
+      "CreationTime" : (TimestampType)?
+    )
+
+    alias ScalingPlanName = String
+
+    alias ScalingPlanNames = Array(ScalingPlanName)
+
+    alias ScalingPlanResource = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ScalingPlanVersion" : ScalingPlanVersion,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "ScalingPolicies" : (ScalingPolicies)?,
+      "ScalingStatusCode" : ScalingStatusCode,
+      "ScalingStatusMessage" : (XmlString)?
+    )
+
+    alias ScalingPlanResources = Array(ScalingPlanResource)
+
+    alias ScalingPlanStatusCode = String
+
+    alias ScalingPlanVersion = Int64
+
+    alias ScalingPlans = Array(ScalingPlan)
+
+    alias ScalingPolicies = Array(ScalingPolicy)
+
+    alias ScalingPolicy = NamedTuple(
+      "PolicyName" : PolicyName,
+      "PolicyType" : PolicyType,
+      "TargetTrackingConfiguration" : (TargetTrackingConfiguration)?
+    )
+
+    alias ScalingPolicyUpdateBehavior = String
+
+    alias ScalingStatusCode = String
+
+    alias ScheduledActionBufferTime = Int32
+
+    alias ServiceNamespace = String
+
+    alias TagFilter = NamedTuple(
+      "Key" : (XmlStringMaxLen128)?,
+      "Values" : (TagValues)?
+    )
+
+    alias TagFilters = Array(TagFilter)
+
+    alias TagValues = Array(XmlStringMaxLen256)
+
+    alias TargetTrackingConfiguration = NamedTuple(
+      "PredefinedScalingMetricSpecification" : (PredefinedScalingMetricSpecification)?,
+      "CustomizedScalingMetricSpecification" : (CustomizedScalingMetricSpecification)?,
+      "TargetValue" : MetricScale,
+      "DisableScaleIn" : (DisableScaleIn)?,
+      "ScaleOutCooldown" : (Cooldown)?,
+      "ScaleInCooldown" : (Cooldown)?,
+      "EstimatedInstanceWarmup" : (Cooldown)?
+    )
+
+    alias TargetTrackingConfigurations = Array(TargetTrackingConfiguration)
+
+    alias TimestampType = String | UInt64 | Time
+
+    alias UpdateScalingPlanRequest = NamedTuple(
+      "ScalingPlanName" : ScalingPlanName,
+      "ScalingPlanVersion" : ScalingPlanVersion,
+      "ApplicationSource" : (ApplicationSource)?,
+      "ScalingInstructions" : (ScalingInstructions)?
+    )
+
+    alias UpdateScalingPlanResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias XmlString = String
+
+    alias XmlStringMaxLen128 = String
+
+    alias XmlStringMaxLen256 = String
   end
 end

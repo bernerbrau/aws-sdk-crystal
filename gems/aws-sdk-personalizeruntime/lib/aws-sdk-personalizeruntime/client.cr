@@ -414,8 +414,8 @@ module Aws::PersonalizeRuntime
     #
     # @overload get_personalized_ranking(**params)
     # @param [Hash] params ({})
-    def get_personalized_ranking(params = {}, **options)
-      req = build_request(:get_personalized_ranking, params)
+    def get_personalized_ranking(, **options)
+      req = build_request(:get_personalized_ranking, )
       req.send_request(options)
     end
 
@@ -517,8 +517,8 @@ module Aws::PersonalizeRuntime
     #
     # @overload get_recommendations(**params)
     # @param [Hash] params ({})
-    def get_recommendations(params = {}, **options)
-      req = build_request(:get_recommendations, params)
+    def get_recommendations(, **options)
+      req = build_request(:get_recommendations, )
       req.send_request(options)
     end
 

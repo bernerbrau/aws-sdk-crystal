@@ -431,8 +431,8 @@ module Aws::DLM
     #
     # @overload create_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def create_lifecycle_policy(params = {}, **options)
-      req = build_request(:create_lifecycle_policy, params)
+    def create_lifecycle_policy(, **options)
+      req = build_request(:create_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -454,8 +454,8 @@ module Aws::DLM
     #
     # @overload delete_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_policy(params = {}, **options)
-      req = build_request(:delete_lifecycle_policy, params)
+    def delete_lifecycle_policy(, **options)
+      req = build_request(:delete_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -514,8 +514,8 @@ module Aws::DLM
     #
     # @overload get_lifecycle_policies(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policies(params = {}, **options)
-      req = build_request(:get_lifecycle_policies, params)
+    def get_lifecycle_policies(, **options)
+      req = build_request(:get_lifecycle_policies, )
       req.send_request(options)
     end
 
@@ -588,8 +588,8 @@ module Aws::DLM
     #
     # @overload get_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy(params = {}, **options)
-      req = build_request(:get_lifecycle_policy, params)
+    def get_lifecycle_policy(, **options)
+      req = build_request(:get_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -617,8 +617,8 @@ module Aws::DLM
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -645,8 +645,8 @@ module Aws::DLM
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -671,8 +671,8 @@ module Aws::DLM
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -771,8 +771,8 @@ module Aws::DLM
     #
     # @overload update_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def update_lifecycle_policy(params = {}, **options)
-      req = build_request(:update_lifecycle_policy, params)
+    def update_lifecycle_policy(, **options)
+      req = build_request(:update_lifecycle_policy, )
       req.send_request(options)
     end
 

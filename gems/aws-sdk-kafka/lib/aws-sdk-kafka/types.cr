@@ -2931,5 +2931,664 @@ module Aws::Kafka
       include Aws::Structure
     end
 
+    alias BatchAssociateScramSecretRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "SecretArnList" : __listOf__string
+    )
+
+    alias BatchAssociateScramSecretResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "UnprocessedScramSecrets" : (__listOfUnprocessedScramSecret)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias BrokerAZDistribution = String
+
+    alias BrokerEBSVolumeInfo = NamedTuple(
+      "KafkaBrokerNodeId" : __string,
+      "VolumeSizeGB" : __integer
+    )
+
+    alias BrokerLogs = NamedTuple(
+      "CloudWatchLogs" : (CloudWatchLogs)?,
+      "Firehose" : (Firehose)?,
+      "S3" : (S3)?
+    )
+
+    alias BrokerNodeGroupInfo = NamedTuple(
+      "BrokerAZDistribution" : (BrokerAZDistribution)?,
+      "ClientSubnets" : __listOf__string,
+      "InstanceType" : __stringMin5Max32,
+      "SecurityGroups" : (__listOf__string)?,
+      "StorageInfo" : (StorageInfo)?
+    )
+
+    alias BrokerNodeInfo = NamedTuple(
+      "AttachedENIId" : (__string)?,
+      "BrokerId" : (__double)?,
+      "ClientSubnet" : (__string)?,
+      "ClientVpcIpAddress" : (__string)?,
+      "CurrentBrokerSoftwareInfo" : (BrokerSoftwareInfo)?,
+      "Endpoints" : (__listOf__string)?
+    )
+
+    alias BrokerSoftwareInfo = NamedTuple(
+      "ConfigurationArn" : (__string)?,
+      "ConfigurationRevision" : (__long)?,
+      "KafkaVersion" : (__string)?
+    )
+
+    alias ClientAuthentication = NamedTuple(
+      "Sasl" : (Sasl)?,
+      "Tls" : (Tls)?
+    )
+
+    alias ClientBroker = String
+
+    alias CloudWatchLogs = NamedTuple(
+      "Enabled" : __boolean,
+      "LogGroup" : (__string)?
+    )
+
+    alias ClusterInfo = NamedTuple(
+      "ActiveOperationArn" : (__string)?,
+      "BrokerNodeGroupInfo" : (BrokerNodeGroupInfo)?,
+      "ClientAuthentication" : (ClientAuthentication)?,
+      "ClusterArn" : (__string)?,
+      "ClusterName" : (__string)?,
+      "CreationTime" : (__timestampIso8601)?,
+      "CurrentBrokerSoftwareInfo" : (BrokerSoftwareInfo)?,
+      "LoggingInfo" : (LoggingInfo)?,
+      "CurrentVersion" : (__string)?,
+      "EncryptionInfo" : (EncryptionInfo)?,
+      "EnhancedMonitoring" : (EnhancedMonitoring)?,
+      "NumberOfBrokerNodes" : (__integer)?,
+      "OpenMonitoring" : (OpenMonitoring)?,
+      "State" : (ClusterState)?,
+      "Tags" : (__mapOf__string)?,
+      "ZookeeperConnectString" : (__string)?,
+      "ZookeeperConnectStringTls" : (__string)?
+    )
+
+    alias ClusterOperationInfo = NamedTuple(
+      "ClientRequestId" : (__string)?,
+      "ClusterArn" : (__string)?,
+      "CreationTime" : (__timestampIso8601)?,
+      "EndTime" : (__timestampIso8601)?,
+      "ErrorInfo" : (ErrorInfo)?,
+      "OperationSteps" : (__listOfClusterOperationStep)?,
+      "OperationArn" : (__string)?,
+      "OperationState" : (__string)?,
+      "OperationType" : (__string)?,
+      "SourceClusterInfo" : (MutableClusterInfo)?,
+      "TargetClusterInfo" : (MutableClusterInfo)?
+    )
+
+    alias ClusterOperationStep = NamedTuple(
+      "StepInfo" : (ClusterOperationStepInfo)?,
+      "StepName" : (__string)?
+    )
+
+    alias ClusterOperationStepInfo = NamedTuple(
+      "StepStatus" : (__string)?
+    )
+
+    alias ClusterState = String
+
+    alias CompatibleKafkaVersion = NamedTuple(
+      "SourceVersion" : (__string)?,
+      "TargetVersions" : (__listOf__string)?
+    )
+
+    alias Configuration = NamedTuple(
+      "Arn" : __string,
+      "CreationTime" : __timestampIso8601,
+      "Description" : __string,
+      "KafkaVersions" : __listOf__string,
+      "LatestRevision" : ConfigurationRevision,
+      "Name" : __string,
+      "State" : ConfigurationState
+    )
+
+    alias ConfigurationInfo = NamedTuple(
+      "Arn" : __string,
+      "Revision" : __long
+    )
+
+    alias ConfigurationRevision = NamedTuple(
+      "CreationTime" : __timestampIso8601,
+      "Description" : (__string)?,
+      "Revision" : __long
+    )
+
+    alias ConfigurationState = String
+
+    alias ConflictException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias CreateClusterRequest = NamedTuple(
+      "BrokerNodeGroupInfo" : BrokerNodeGroupInfo,
+      "ClientAuthentication" : (ClientAuthentication)?,
+      "ClusterName" : __stringMin1Max64,
+      "ConfigurationInfo" : (ConfigurationInfo)?,
+      "EncryptionInfo" : (EncryptionInfo)?,
+      "EnhancedMonitoring" : (EnhancedMonitoring)?,
+      "KafkaVersion" : __stringMin1Max128,
+      "LoggingInfo" : (LoggingInfo)?,
+      "NumberOfBrokerNodes" : __integerMin1Max15,
+      "OpenMonitoring" : (OpenMonitoringInfo)?,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias CreateClusterResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterName" : (__string)?,
+      "State" : (ClusterState)?
+    )
+
+    alias CreateConfigurationRequest = NamedTuple(
+      "Description" : (__string)?,
+      "KafkaVersions" : (__listOf__string)?,
+      "Name" : __string,
+      "ServerProperties" : __blob
+    )
+
+    alias CreateConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTime" : (__timestampIso8601)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?,
+      "State" : (ConfigurationState)?
+    )
+
+    alias DeleteClusterRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "CurrentVersion" : (__string)?
+    )
+
+    alias DeleteClusterResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "State" : (ClusterState)?
+    )
+
+    alias DeleteConfigurationRequest = NamedTuple(
+      "Arn" : __string
+    )
+
+    alias DeleteConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "State" : (ConfigurationState)?
+    )
+
+    alias DescribeClusterOperationRequest = NamedTuple(
+      "ClusterOperationArn" : __string
+    )
+
+    alias DescribeClusterOperationResponse = NamedTuple(
+      "ClusterOperationInfo" : (ClusterOperationInfo)?
+    )
+
+    alias DescribeClusterRequest = NamedTuple(
+      "ClusterArn" : __string
+    )
+
+    alias DescribeClusterResponse = NamedTuple(
+      "ClusterInfo" : (ClusterInfo)?
+    )
+
+    alias DescribeConfigurationRequest = NamedTuple(
+      "Arn" : __string
+    )
+
+    alias DescribeConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTime" : (__timestampIso8601)?,
+      "Description" : (__string)?,
+      "KafkaVersions" : (__listOf__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?,
+      "State" : (ConfigurationState)?
+    )
+
+    alias DescribeConfigurationRevisionRequest = NamedTuple(
+      "Arn" : __string,
+      "Revision" : __long
+    )
+
+    alias DescribeConfigurationRevisionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTime" : (__timestampIso8601)?,
+      "Description" : (__string)?,
+      "Revision" : (__long)?,
+      "ServerProperties" : (__blob)?
+    )
+
+    alias BatchDisassociateScramSecretRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "SecretArnList" : __listOf__string
+    )
+
+    alias BatchDisassociateScramSecretResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "UnprocessedScramSecrets" : (__listOfUnprocessedScramSecret)?
+    )
+
+    alias EBSStorageInfo = NamedTuple(
+      "VolumeSize" : (__integerMin1Max16384)?
+    )
+
+    alias EncryptionAtRest = NamedTuple(
+      "DataVolumeKMSKeyId" : __string
+    )
+
+    alias EncryptionInTransit = NamedTuple(
+      "ClientBroker" : (ClientBroker)?,
+      "InCluster" : (__boolean)?
+    )
+
+    alias EncryptionInfo = NamedTuple(
+      "EncryptionAtRest" : (EncryptionAtRest)?,
+      "EncryptionInTransit" : (EncryptionInTransit)?
+    )
+
+    alias EnhancedMonitoring = String
+
+    alias Error = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias Firehose = NamedTuple(
+      "DeliveryStream" : (__string)?,
+      "Enabled" : __boolean
+    )
+
+    alias ErrorInfo = NamedTuple(
+      "ErrorCode" : (__string)?,
+      "ErrorString" : (__string)?
+    )
+
+    alias ForbiddenException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias GetBootstrapBrokersRequest = NamedTuple(
+      "ClusterArn" : __string
+    )
+
+    alias GetBootstrapBrokersResponse = NamedTuple(
+      "BootstrapBrokerString" : (__string)?,
+      "BootstrapBrokerStringTls" : (__string)?,
+      "BootstrapBrokerStringSaslScram" : (__string)?
+    )
+
+    alias GetCompatibleKafkaVersionsRequest = NamedTuple(
+      "ClusterArn" : (__string)?
+    )
+
+    alias GetCompatibleKafkaVersionsResponse = NamedTuple(
+      "CompatibleKafkaVersions" : (__listOfCompatibleKafkaVersion)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias KafkaVersion = NamedTuple(
+      "Version" : (__string)?,
+      "Status" : (KafkaVersionStatus)?
+    )
+
+    alias KafkaVersionStatus = String
+
+    alias ListClusterOperationsRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListClusterOperationsResponse = NamedTuple(
+      "ClusterOperationInfoList" : (__listOfClusterOperationInfo)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListClustersRequest = NamedTuple(
+      "ClusterNameFilter" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListClustersResponse = NamedTuple(
+      "ClusterInfoList" : (__listOfClusterInfo)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationRevisionsRequest = NamedTuple(
+      "Arn" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationRevisionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Revisions" : (__listOfConfigurationRevision)?
+    )
+
+    alias ListConfigurationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationsResponse = NamedTuple(
+      "Configurations" : (__listOfConfiguration)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListKafkaVersionsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListKafkaVersionsResponse = NamedTuple(
+      "KafkaVersions" : (__listOfKafkaVersion)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListNodesRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListNodesResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "NodeInfoList" : (__listOfNodeInfo)?
+    )
+
+    alias ListScramSecretsRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListScramSecretsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "SecretArnList" : (__listOf__string)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias MaxResults = Int32
+
+    alias LoggingInfo = NamedTuple(
+      "BrokerLogs" : BrokerLogs
+    )
+
+    alias MutableClusterInfo = NamedTuple(
+      "BrokerEBSVolumeInfo" : (__listOfBrokerEBSVolumeInfo)?,
+      "ConfigurationInfo" : (ConfigurationInfo)?,
+      "NumberOfBrokerNodes" : (__integer)?,
+      "OpenMonitoring" : (OpenMonitoring)?,
+      "EnhancedMonitoring" : (EnhancedMonitoring)?,
+      "KafkaVersion" : (__string)?,
+      "LoggingInfo" : (LoggingInfo)?
+    )
+
+    alias NodeInfo = NamedTuple(
+      "AddedToClusterTime" : (__string)?,
+      "BrokerNodeInfo" : (BrokerNodeInfo)?,
+      "InstanceType" : (__string)?,
+      "NodeARN" : (__string)?,
+      "NodeType" : (NodeType)?,
+      "ZookeeperNodeInfo" : (ZookeeperNodeInfo)?
+    )
+
+    alias NodeType = String
+
+    alias NotFoundException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias Sasl = NamedTuple(
+      "Scram" : (Scram)?
+    )
+
+    alias Scram = NamedTuple(
+      "Enabled" : (__boolean)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias StateInfo = NamedTuple(
+      "Code" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias StorageInfo = NamedTuple(
+      "EbsStorageInfo" : (EBSStorageInfo)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : __mapOf__string
+    )
+
+    alias Tls = NamedTuple(
+      "CertificateAuthorityArnList" : (__listOf__string)?
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "InvalidParameter" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias UnprocessedScramSecret = NamedTuple(
+      "ErrorCode" : (__string)?,
+      "ErrorMessage" : (__string)?,
+      "SecretArn" : (__string)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias UpdateBrokerCountRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "CurrentVersion" : __string,
+      "TargetNumberOfBrokerNodes" : __integerMin1Max15
+    )
+
+    alias UpdateBrokerCountResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterOperationArn" : (__string)?
+    )
+
+    alias UpdateBrokerStorageRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "CurrentVersion" : __string,
+      "TargetBrokerEBSVolumeInfo" : __listOfBrokerEBSVolumeInfo
+    )
+
+    alias UpdateBrokerStorageResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterOperationArn" : (__string)?
+    )
+
+    alias UpdateClusterConfigurationRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "ConfigurationInfo" : ConfigurationInfo,
+      "CurrentVersion" : __string
+    )
+
+    alias UpdateClusterConfigurationResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterOperationArn" : (__string)?
+    )
+
+    alias UpdateClusterKafkaVersionRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "ConfigurationInfo" : (ConfigurationInfo)?,
+      "CurrentVersion" : __string,
+      "TargetKafkaVersion" : __string
+    )
+
+    alias UpdateClusterKafkaVersionResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterOperationArn" : (__string)?
+    )
+
+    alias UpdateConfigurationRequest = NamedTuple(
+      "Arn" : __string,
+      "Description" : (__string)?,
+      "ServerProperties" : __blob
+    )
+
+    alias UpdateConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?
+    )
+
+    alias UpdateMonitoringRequest = NamedTuple(
+      "ClusterArn" : __string,
+      "CurrentVersion" : __string,
+      "EnhancedMonitoring" : (EnhancedMonitoring)?,
+      "OpenMonitoring" : (OpenMonitoringInfo)?,
+      "LoggingInfo" : (LoggingInfo)?
+    )
+
+    alias UpdateMonitoringResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterOperationArn" : (__string)?
+    )
+
+    alias ZookeeperNodeInfo = NamedTuple(
+      "AttachedENIId" : (__string)?,
+      "ClientVpcIpAddress" : (__string)?,
+      "Endpoints" : (__listOf__string)?,
+      "ZookeeperId" : (__double)?,
+      "ZookeeperVersion" : (__string)?
+    )
+
+    alias OpenMonitoring = NamedTuple(
+      "Prometheus" : Prometheus
+    )
+
+    alias OpenMonitoringInfo = NamedTuple(
+      "Prometheus" : PrometheusInfo
+    )
+
+    alias Prometheus = NamedTuple(
+      "JmxExporter" : (JmxExporter)?,
+      "NodeExporter" : (NodeExporter)?
+    )
+
+    alias PrometheusInfo = NamedTuple(
+      "JmxExporter" : (JmxExporterInfo)?,
+      "NodeExporter" : (NodeExporterInfo)?
+    )
+
+    alias RebootBrokerRequest = NamedTuple(
+      "BrokerIds" : __listOf__string,
+      "ClusterArn" : __string
+    )
+
+    alias RebootBrokerResponse = NamedTuple(
+      "ClusterArn" : (__string)?,
+      "ClusterOperationArn" : (__string)?
+    )
+
+    alias S3 = NamedTuple(
+      "Bucket" : (__string)?,
+      "Enabled" : __boolean,
+      "Prefix" : (__string)?
+    )
+
+    alias JmxExporter = NamedTuple(
+      "EnabledInBroker" : __boolean
+    )
+
+    alias JmxExporterInfo = NamedTuple(
+      "EnabledInBroker" : __boolean
+    )
+
+    alias NodeExporter = NamedTuple(
+      "EnabledInBroker" : __boolean
+    )
+
+    alias NodeExporterInfo = NamedTuple(
+      "EnabledInBroker" : __boolean
+    )
+
+    alias __boolean = Bool
+
+    alias __blob = String | Array(UInt8) | IO
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __integerMin1Max15 = Int32
+
+    alias __integerMin1Max16384 = Int32
+
+    alias __listOfBrokerEBSVolumeInfo = Array(BrokerEBSVolumeInfo)
+
+    alias __listOfClusterInfo = Array(ClusterInfo)
+
+    alias __listOfClusterOperationInfo = Array(ClusterOperationInfo)
+
+    alias __listOfClusterOperationStep = Array(ClusterOperationStep)
+
+    alias __listOfCompatibleKafkaVersion = Array(CompatibleKafkaVersion)
+
+    alias __listOfConfiguration = Array(Configuration)
+
+    alias __listOfConfigurationRevision = Array(ConfigurationRevision)
+
+    alias __listOfKafkaVersion = Array(KafkaVersion)
+
+    alias __listOfNodeInfo = Array(NodeInfo)
+
+    alias __listOfUnprocessedScramSecret = Array(UnprocessedScramSecret)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __mapOf__string = Hash(__string,__string)
+
+    alias __string = String
+
+    alias __stringMin1Max128 = String
+
+    alias __stringMin1Max64 = String
+
+    alias __stringMin5Max32 = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
   end
 end

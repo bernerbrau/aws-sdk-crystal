@@ -431,8 +431,8 @@ module Aws::CloudFront
     #
     # @overload create_cache_policy(**params)
     # @param [Hash] params ({})
-    def create_cache_policy(params = {}, **options)
-      req = build_request(:create_cache_policy, params)
+    def create_cache_policy(, **options)
+      req = build_request(:create_cache_policy, )
       req.send_request(options)
     end
 
@@ -478,8 +478,8 @@ module Aws::CloudFront
     #
     # @overload create_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def create_cloud_front_origin_access_identity(params = {}, **options)
-      req = build_request(:create_cloud_front_origin_access_identity, params)
+    def create_cloud_front_origin_access_identity(, **options)
+      req = build_request(:create_cloud_front_origin_access_identity, )
       req.send_request(options)
     end
 
@@ -929,8 +929,8 @@ module Aws::CloudFront
     #
     # @overload create_distribution(**params)
     # @param [Hash] params ({})
-    def create_distribution(params = {}, **options)
-      req = build_request(:create_distribution, params)
+    def create_distribution(, **options)
+      req = build_request(:create_distribution, )
       req.send_request(options)
     end
 
@@ -1372,8 +1372,8 @@ module Aws::CloudFront
     #
     # @overload create_distribution_with_tags(**params)
     # @param [Hash] params ({})
-    def create_distribution_with_tags(params = {}, **options)
-      req = build_request(:create_distribution_with_tags, params)
+    def create_distribution_with_tags(, **options)
+      req = build_request(:create_distribution_with_tags, )
       req.send_request(options)
     end
 
@@ -1446,8 +1446,8 @@ module Aws::CloudFront
     #
     # @overload create_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def create_field_level_encryption_config(params = {}, **options)
-      req = build_request(:create_field_level_encryption_config, params)
+    def create_field_level_encryption_config(, **options)
+      req = build_request(:create_field_level_encryption_config, )
       req.send_request(options)
     end
 
@@ -1506,8 +1506,8 @@ module Aws::CloudFront
     #
     # @overload create_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def create_field_level_encryption_profile(params = {}, **options)
-      req = build_request(:create_field_level_encryption_profile, params)
+    def create_field_level_encryption_profile(, **options)
+      req = build_request(:create_field_level_encryption_profile, )
       req.send_request(options)
     end
 
@@ -1552,8 +1552,8 @@ module Aws::CloudFront
     #
     # @overload create_invalidation(**params)
     # @param [Hash] params ({})
-    def create_invalidation(params = {}, **options)
-      req = build_request(:create_invalidation, params)
+    def create_invalidation(, **options)
+      req = build_request(:create_invalidation, )
       req.send_request(options)
     end
 
@@ -1609,8 +1609,8 @@ module Aws::CloudFront
     #
     # @overload create_key_group(**params)
     # @param [Hash] params ({})
-    def create_key_group(params = {}, **options)
-      req = build_request(:create_key_group, params)
+    def create_key_group(, **options)
+      req = build_request(:create_key_group, )
       req.send_request(options)
     end
 
@@ -1655,8 +1655,8 @@ module Aws::CloudFront
     #
     # @overload create_monitoring_subscription(**params)
     # @param [Hash] params ({})
-    def create_monitoring_subscription(params = {}, **options)
-      req = build_request(:create_monitoring_subscription, params)
+    def create_monitoring_subscription(, **options)
+      req = build_request(:create_monitoring_subscription, )
       req.send_request(options)
     end
 
@@ -1754,8 +1754,8 @@ module Aws::CloudFront
     #
     # @overload create_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def create_origin_request_policy(params = {}, **options)
-      req = build_request(:create_origin_request_policy, params)
+    def create_origin_request_policy(, **options)
+      req = build_request(:create_origin_request_policy, )
       req.send_request(options)
     end
 
@@ -1802,8 +1802,8 @@ module Aws::CloudFront
     #
     # @overload create_public_key(**params)
     # @param [Hash] params ({})
-    def create_public_key(params = {}, **options)
-      req = build_request(:create_public_key, params)
+    def create_public_key(, **options)
+      req = build_request(:create_public_key, )
       req.send_request(options)
     end
 
@@ -1880,8 +1880,8 @@ module Aws::CloudFront
     #
     # @overload create_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def create_realtime_log_config(params = {}, **options)
-      req = build_request(:create_realtime_log_config, params)
+    def create_realtime_log_config(, **options)
+      req = build_request(:create_realtime_log_config, )
       req.send_request(options)
     end
 
@@ -1995,8 +1995,8 @@ module Aws::CloudFront
     #
     # @overload create_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def create_streaming_distribution(params = {}, **options)
-      req = build_request(:create_streaming_distribution, params)
+    def create_streaming_distribution(, **options)
+      req = build_request(:create_streaming_distribution, )
       req.send_request(options)
     end
 
@@ -2087,8 +2087,8 @@ module Aws::CloudFront
     #
     # @overload create_streaming_distribution_with_tags(**params)
     # @param [Hash] params ({})
-    def create_streaming_distribution_with_tags(params = {}, **options)
-      req = build_request(:create_streaming_distribution_with_tags, params)
+    def create_streaming_distribution_with_tags(, **options)
+      req = build_request(:create_streaming_distribution_with_tags, )
       req.send_request(options)
     end
 
@@ -2124,8 +2124,8 @@ module Aws::CloudFront
     #
     # @overload delete_cache_policy(**params)
     # @param [Hash] params ({})
-    def delete_cache_policy(params = {}, **options)
-      req = build_request(:delete_cache_policy, params)
+    def delete_cache_policy(, **options)
+      req = build_request(:delete_cache_policy, )
       req.send_request(options)
     end
 
@@ -2151,8 +2151,8 @@ module Aws::CloudFront
     #
     # @overload delete_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def delete_cloud_front_origin_access_identity(params = {}, **options)
-      req = build_request(:delete_cloud_front_origin_access_identity, params)
+    def delete_cloud_front_origin_access_identity(, **options)
+      req = build_request(:delete_cloud_front_origin_access_identity, )
       req.send_request(options)
     end
 
@@ -2178,8 +2178,8 @@ module Aws::CloudFront
     #
     # @overload delete_distribution(**params)
     # @param [Hash] params ({})
-    def delete_distribution(params = {}, **options)
-      req = build_request(:delete_distribution, params)
+    def delete_distribution(, **options)
+      req = build_request(:delete_distribution, )
       req.send_request(options)
     end
 
@@ -2205,8 +2205,8 @@ module Aws::CloudFront
     #
     # @overload delete_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def delete_field_level_encryption_config(params = {}, **options)
-      req = build_request(:delete_field_level_encryption_config, params)
+    def delete_field_level_encryption_config(, **options)
+      req = build_request(:delete_field_level_encryption_config, )
       req.send_request(options)
     end
 
@@ -2232,8 +2232,8 @@ module Aws::CloudFront
     #
     # @overload delete_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def delete_field_level_encryption_profile(params = {}, **options)
-      req = build_request(:delete_field_level_encryption_profile, params)
+    def delete_field_level_encryption_profile(, **options)
+      req = build_request(:delete_field_level_encryption_profile, )
       req.send_request(options)
     end
 
@@ -2269,8 +2269,8 @@ module Aws::CloudFront
     #
     # @overload delete_key_group(**params)
     # @param [Hash] params ({})
-    def delete_key_group(params = {}, **options)
-      req = build_request(:delete_key_group, params)
+    def delete_key_group(, **options)
+      req = build_request(:delete_key_group, )
       req.send_request(options)
     end
 
@@ -2292,8 +2292,8 @@ module Aws::CloudFront
     #
     # @overload delete_monitoring_subscription(**params)
     # @param [Hash] params ({})
-    def delete_monitoring_subscription(params = {}, **options)
-      req = build_request(:delete_monitoring_subscription, params)
+    def delete_monitoring_subscription(, **options)
+      req = build_request(:delete_monitoring_subscription, )
       req.send_request(options)
     end
 
@@ -2332,8 +2332,8 @@ module Aws::CloudFront
     #
     # @overload delete_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def delete_origin_request_policy(params = {}, **options)
-      req = build_request(:delete_origin_request_policy, params)
+    def delete_origin_request_policy(, **options)
+      req = build_request(:delete_origin_request_policy, )
       req.send_request(options)
     end
 
@@ -2359,8 +2359,8 @@ module Aws::CloudFront
     #
     # @overload delete_public_key(**params)
     # @param [Hash] params ({})
-    def delete_public_key(params = {}, **options)
-      req = build_request(:delete_public_key, params)
+    def delete_public_key(, **options)
+      req = build_request(:delete_public_key, )
       req.send_request(options)
     end
 
@@ -2396,8 +2396,8 @@ module Aws::CloudFront
     #
     # @overload delete_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def delete_realtime_log_config(params = {}, **options)
-      req = build_request(:delete_realtime_log_config, params)
+    def delete_realtime_log_config(, **options)
+      req = build_request(:delete_realtime_log_config, )
       req.send_request(options)
     end
 
@@ -2466,8 +2466,8 @@ module Aws::CloudFront
     #
     # @overload delete_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def delete_streaming_distribution(params = {}, **options)
-      req = build_request(:delete_streaming_distribution, params)
+    def delete_streaming_distribution(, **options)
+      req = build_request(:delete_streaming_distribution, )
       req.send_request(options)
     end
 
@@ -2530,8 +2530,8 @@ module Aws::CloudFront
     #
     # @overload get_cache_policy(**params)
     # @param [Hash] params ({})
-    def get_cache_policy(params = {}, **options)
-      req = build_request(:get_cache_policy, params)
+    def get_cache_policy(, **options)
+      req = build_request(:get_cache_policy, )
       req.send_request(options)
     end
 
@@ -2589,8 +2589,8 @@ module Aws::CloudFront
     #
     # @overload get_cache_policy_config(**params)
     # @param [Hash] params ({})
-    def get_cache_policy_config(params = {}, **options)
-      req = build_request(:get_cache_policy_config, params)
+    def get_cache_policy_config(, **options)
+      req = build_request(:get_cache_policy_config, )
       req.send_request(options)
     end
 
@@ -2622,8 +2622,8 @@ module Aws::CloudFront
     #
     # @overload get_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def get_cloud_front_origin_access_identity(params = {}, **options)
-      req = build_request(:get_cloud_front_origin_access_identity, params)
+    def get_cloud_front_origin_access_identity(, **options)
+      req = build_request(:get_cloud_front_origin_access_identity, )
       req.send_request(options)
     end
 
@@ -2653,8 +2653,8 @@ module Aws::CloudFront
     #
     # @overload get_cloud_front_origin_access_identity_config(**params)
     # @param [Hash] params ({})
-    def get_cloud_front_origin_access_identity_config(params = {}, **options)
-      req = build_request(:get_cloud_front_origin_access_identity_config, params)
+    def get_cloud_front_origin_access_identity_config(, **options)
+      req = build_request(:get_cloud_front_origin_access_identity_config, )
       req.send_request(options)
     end
 
@@ -2859,8 +2859,8 @@ module Aws::CloudFront
     #
     # @overload get_distribution(**params)
     # @param [Hash] params ({})
-    def get_distribution(params = {}, **options)
-      req = build_request(:get_distribution, params)
+    def get_distribution(, **options)
+      req = build_request(:get_distribution, )
       req.send_request(options)
     end
 
@@ -3037,8 +3037,8 @@ module Aws::CloudFront
     #
     # @overload get_distribution_config(**params)
     # @param [Hash] params ({})
-    def get_distribution_config(params = {}, **options)
-      req = build_request(:get_distribution_config, params)
+    def get_distribution_config(, **options)
+      req = build_request(:get_distribution_config, )
       req.send_request(options)
     end
 
@@ -3082,8 +3082,8 @@ module Aws::CloudFront
     #
     # @overload get_field_level_encryption(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption(params = {}, **options)
-      req = build_request(:get_field_level_encryption, params)
+    def get_field_level_encryption(, **options)
+      req = build_request(:get_field_level_encryption, )
       req.send_request(options)
     end
 
@@ -3125,8 +3125,8 @@ module Aws::CloudFront
     #
     # @overload get_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption_config(params = {}, **options)
-      req = build_request(:get_field_level_encryption_config, params)
+    def get_field_level_encryption_config(, **options)
+      req = build_request(:get_field_level_encryption_config, )
       req.send_request(options)
     end
 
@@ -3166,8 +3166,8 @@ module Aws::CloudFront
     #
     # @overload get_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption_profile(params = {}, **options)
-      req = build_request(:get_field_level_encryption_profile, params)
+    def get_field_level_encryption_profile(, **options)
+      req = build_request(:get_field_level_encryption_profile, )
       req.send_request(options)
     end
 
@@ -3206,8 +3206,8 @@ module Aws::CloudFront
     #
     # @overload get_field_level_encryption_profile_config(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption_profile_config(params = {}, **options)
-      req = build_request(:get_field_level_encryption_profile_config, params)
+    def get_field_level_encryption_profile_config(, **options)
+      req = build_request(:get_field_level_encryption_profile_config, )
       req.send_request(options)
     end
 
@@ -3250,8 +3250,8 @@ module Aws::CloudFront
     #
     # @overload get_invalidation(**params)
     # @param [Hash] params ({})
-    def get_invalidation(params = {}, **options)
-      req = build_request(:get_invalidation, params)
+    def get_invalidation(, **options)
+      req = build_request(:get_invalidation, )
       req.send_request(options)
     end
 
@@ -3293,8 +3293,8 @@ module Aws::CloudFront
     #
     # @overload get_key_group(**params)
     # @param [Hash] params ({})
-    def get_key_group(params = {}, **options)
-      req = build_request(:get_key_group, params)
+    def get_key_group(, **options)
+      req = build_request(:get_key_group, )
       req.send_request(options)
     end
 
@@ -3334,8 +3334,8 @@ module Aws::CloudFront
     #
     # @overload get_key_group_config(**params)
     # @param [Hash] params ({})
-    def get_key_group_config(params = {}, **options)
-      req = build_request(:get_key_group_config, params)
+    def get_key_group_config(, **options)
+      req = build_request(:get_key_group_config, )
       req.send_request(options)
     end
 
@@ -3364,8 +3364,8 @@ module Aws::CloudFront
     #
     # @overload get_monitoring_subscription(**params)
     # @param [Hash] params ({})
-    def get_monitoring_subscription(params = {}, **options)
-      req = build_request(:get_monitoring_subscription, params)
+    def get_monitoring_subscription(, **options)
+      req = build_request(:get_monitoring_subscription, )
       req.send_request(options)
     end
 
@@ -3425,8 +3425,8 @@ module Aws::CloudFront
     #
     # @overload get_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def get_origin_request_policy(params = {}, **options)
-      req = build_request(:get_origin_request_policy, params)
+    def get_origin_request_policy(, **options)
+      req = build_request(:get_origin_request_policy, )
       req.send_request(options)
     end
 
@@ -3480,8 +3480,8 @@ module Aws::CloudFront
     #
     # @overload get_origin_request_policy_config(**params)
     # @param [Hash] params ({})
-    def get_origin_request_policy_config(params = {}, **options)
-      req = build_request(:get_origin_request_policy_config, params)
+    def get_origin_request_policy_config(, **options)
+      req = build_request(:get_origin_request_policy_config, )
       req.send_request(options)
     end
 
@@ -3515,8 +3515,8 @@ module Aws::CloudFront
     #
     # @overload get_public_key(**params)
     # @param [Hash] params ({})
-    def get_public_key(params = {}, **options)
-      req = build_request(:get_public_key, params)
+    def get_public_key(, **options)
+      req = build_request(:get_public_key, )
       req.send_request(options)
     end
 
@@ -3548,8 +3548,8 @@ module Aws::CloudFront
     #
     # @overload get_public_key_config(**params)
     # @param [Hash] params ({})
-    def get_public_key_config(params = {}, **options)
-      req = build_request(:get_public_key_config, params)
+    def get_public_key_config(, **options)
+      req = build_request(:get_public_key_config, )
       req.send_request(options)
     end
 
@@ -3594,8 +3594,8 @@ module Aws::CloudFront
     #
     # @overload get_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def get_realtime_log_config(params = {}, **options)
-      req = build_request(:get_realtime_log_config, params)
+    def get_realtime_log_config(, **options)
+      req = build_request(:get_realtime_log_config, )
       req.send_request(options)
     end
 
@@ -3657,8 +3657,8 @@ module Aws::CloudFront
     #
     # @overload get_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def get_streaming_distribution(params = {}, **options)
-      req = build_request(:get_streaming_distribution, params)
+    def get_streaming_distribution(, **options)
+      req = build_request(:get_streaming_distribution, )
       req.send_request(options)
     end
 
@@ -3702,8 +3702,8 @@ module Aws::CloudFront
     #
     # @overload get_streaming_distribution_config(**params)
     # @param [Hash] params ({})
-    def get_streaming_distribution_config(params = {}, **options)
-      req = build_request(:get_streaming_distribution_config, params)
+    def get_streaming_distribution_config(, **options)
+      req = build_request(:get_streaming_distribution_config, )
       req.send_request(options)
     end
 
@@ -3784,8 +3784,8 @@ module Aws::CloudFront
     #
     # @overload list_cache_policies(**params)
     # @param [Hash] params ({})
-    def list_cache_policies(params = {}, **options)
-      req = build_request(:list_cache_policies, params)
+    def list_cache_policies(, **options)
+      req = build_request(:list_cache_policies, )
       req.send_request(options)
     end
 
@@ -3832,8 +3832,8 @@ module Aws::CloudFront
     #
     # @overload list_cloud_front_origin_access_identities(**params)
     # @param [Hash] params ({})
-    def list_cloud_front_origin_access_identities(params = {}, **options)
-      req = build_request(:list_cloud_front_origin_access_identities, params)
+    def list_cloud_front_origin_access_identities(, **options)
+      req = build_request(:list_cloud_front_origin_access_identities, )
       req.send_request(options)
     end
 
@@ -4025,8 +4025,8 @@ module Aws::CloudFront
     #
     # @overload list_distributions(**params)
     # @param [Hash] params ({})
-    def list_distributions(params = {}, **options)
-      req = build_request(:list_distributions, params)
+    def list_distributions(, **options)
+      req = build_request(:list_distributions, )
       req.send_request(options)
     end
 
@@ -4080,8 +4080,8 @@ module Aws::CloudFront
     #
     # @overload list_distributions_by_cache_policy_id(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_cache_policy_id(params = {}, **options)
-      req = build_request(:list_distributions_by_cache_policy_id, params)
+    def list_distributions_by_cache_policy_id(, **options)
+      req = build_request(:list_distributions_by_cache_policy_id, )
       req.send_request(options)
     end
 
@@ -4135,8 +4135,8 @@ module Aws::CloudFront
     #
     # @overload list_distributions_by_key_group(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_key_group(params = {}, **options)
-      req = build_request(:list_distributions_by_key_group, params)
+    def list_distributions_by_key_group(, **options)
+      req = build_request(:list_distributions_by_key_group, )
       req.send_request(options)
     end
 
@@ -4190,8 +4190,8 @@ module Aws::CloudFront
     #
     # @overload list_distributions_by_origin_request_policy_id(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_origin_request_policy_id(params = {}, **options)
-      req = build_request(:list_distributions_by_origin_request_policy_id, params)
+    def list_distributions_by_origin_request_policy_id(, **options)
+      req = build_request(:list_distributions_by_origin_request_policy_id, )
       req.send_request(options)
     end
 
@@ -4404,8 +4404,8 @@ module Aws::CloudFront
     #
     # @overload list_distributions_by_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_realtime_log_config(params = {}, **options)
-      req = build_request(:list_distributions_by_realtime_log_config, params)
+    def list_distributions_by_realtime_log_config(, **options)
+      req = build_request(:list_distributions_by_realtime_log_config, )
       req.send_request(options)
     end
 
@@ -4604,8 +4604,8 @@ module Aws::CloudFront
     #
     # @overload list_distributions_by_web_acl_id(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_web_acl_id(params = {}, **options)
-      req = build_request(:list_distributions_by_web_acl_id, params)
+    def list_distributions_by_web_acl_id(, **options)
+      req = build_request(:list_distributions_by_web_acl_id, )
       req.send_request(options)
     end
 
@@ -4660,8 +4660,8 @@ module Aws::CloudFront
     #
     # @overload list_field_level_encryption_configs(**params)
     # @param [Hash] params ({})
-    def list_field_level_encryption_configs(params = {}, **options)
-      req = build_request(:list_field_level_encryption_configs, params)
+    def list_field_level_encryption_configs(, **options)
+      req = build_request(:list_field_level_encryption_configs, )
       req.send_request(options)
     end
 
@@ -4712,8 +4712,8 @@ module Aws::CloudFront
     #
     # @overload list_field_level_encryption_profiles(**params)
     # @param [Hash] params ({})
-    def list_field_level_encryption_profiles(params = {}, **options)
-      req = build_request(:list_field_level_encryption_profiles, params)
+    def list_field_level_encryption_profiles(, **options)
+      req = build_request(:list_field_level_encryption_profiles, )
       req.send_request(options)
     end
 
@@ -4766,8 +4766,8 @@ module Aws::CloudFront
     #
     # @overload list_invalidations(**params)
     # @param [Hash] params ({})
-    def list_invalidations(params = {}, **options)
-      req = build_request(:list_invalidations, params)
+    def list_invalidations(, **options)
+      req = build_request(:list_invalidations, )
       req.send_request(options)
     end
 
@@ -4818,8 +4818,8 @@ module Aws::CloudFront
     #
     # @overload list_key_groups(**params)
     # @param [Hash] params ({})
-    def list_key_groups(params = {}, **options)
-      req = build_request(:list_key_groups, params)
+    def list_key_groups(, **options)
+      req = build_request(:list_key_groups, )
       req.send_request(options)
     end
 
@@ -4896,8 +4896,8 @@ module Aws::CloudFront
     #
     # @overload list_origin_request_policies(**params)
     # @param [Hash] params ({})
-    def list_origin_request_policies(params = {}, **options)
-      req = build_request(:list_origin_request_policies, params)
+    def list_origin_request_policies(, **options)
+      req = build_request(:list_origin_request_policies, )
       req.send_request(options)
     end
 
@@ -4941,8 +4941,8 @@ module Aws::CloudFront
     #
     # @overload list_public_keys(**params)
     # @param [Hash] params ({})
-    def list_public_keys(params = {}, **options)
-      req = build_request(:list_public_keys, params)
+    def list_public_keys(, **options)
+      req = build_request(:list_public_keys, )
       req.send_request(options)
     end
 
@@ -4998,8 +4998,8 @@ module Aws::CloudFront
     #
     # @overload list_realtime_log_configs(**params)
     # @param [Hash] params ({})
-    def list_realtime_log_configs(params = {}, **options)
-      req = build_request(:list_realtime_log_configs, params)
+    def list_realtime_log_configs(, **options)
+      req = build_request(:list_realtime_log_configs, )
       req.send_request(options)
     end
 
@@ -5054,8 +5054,8 @@ module Aws::CloudFront
     #
     # @overload list_streaming_distributions(**params)
     # @param [Hash] params ({})
-    def list_streaming_distributions(params = {}, **options)
-      req = build_request(:list_streaming_distributions, params)
+    def list_streaming_distributions(, **options)
+      req = build_request(:list_streaming_distributions, )
       req.send_request(options)
     end
 
@@ -5084,8 +5084,8 @@ module Aws::CloudFront
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -5117,8 +5117,8 @@ module Aws::CloudFront
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5145,8 +5145,8 @@ module Aws::CloudFront
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5252,8 +5252,8 @@ module Aws::CloudFront
     #
     # @overload update_cache_policy(**params)
     # @param [Hash] params ({})
-    def update_cache_policy(params = {}, **options)
-      req = build_request(:update_cache_policy, params)
+    def update_cache_policy(, **options)
+      req = build_request(:update_cache_policy, )
       req.send_request(options)
     end
 
@@ -5297,8 +5297,8 @@ module Aws::CloudFront
     #
     # @overload update_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def update_cloud_front_origin_access_identity(params = {}, **options)
-      req = build_request(:update_cloud_front_origin_access_identity, params)
+    def update_cloud_front_origin_access_identity(, **options)
+      req = build_request(:update_cloud_front_origin_access_identity, )
       req.send_request(options)
     end
 
@@ -5812,8 +5812,8 @@ module Aws::CloudFront
     #
     # @overload update_distribution(**params)
     # @param [Hash] params ({})
-    def update_distribution(params = {}, **options)
-      req = build_request(:update_distribution, params)
+    def update_distribution(, **options)
+      req = build_request(:update_distribution, )
       req.send_request(options)
     end
 
@@ -5893,8 +5893,8 @@ module Aws::CloudFront
     #
     # @overload update_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def update_field_level_encryption_config(params = {}, **options)
-      req = build_request(:update_field_level_encryption_config, params)
+    def update_field_level_encryption_config(, **options)
+      req = build_request(:update_field_level_encryption_config, )
       req.send_request(options)
     end
 
@@ -5960,8 +5960,8 @@ module Aws::CloudFront
     #
     # @overload update_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def update_field_level_encryption_profile(params = {}, **options)
-      req = build_request(:update_field_level_encryption_profile, params)
+    def update_field_level_encryption_profile(, **options)
+      req = build_request(:update_field_level_encryption_profile, )
       req.send_request(options)
     end
 
@@ -6021,8 +6021,8 @@ module Aws::CloudFront
     #
     # @overload update_key_group(**params)
     # @param [Hash] params ({})
-    def update_key_group(params = {}, **options)
-      req = build_request(:update_key_group, params)
+    def update_key_group(, **options)
+      req = build_request(:update_key_group, )
       req.send_request(options)
     end
 
@@ -6118,8 +6118,8 @@ module Aws::CloudFront
     #
     # @overload update_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def update_origin_request_policy(params = {}, **options)
-      req = build_request(:update_origin_request_policy, params)
+    def update_origin_request_policy(, **options)
+      req = build_request(:update_origin_request_policy, )
       req.send_request(options)
     end
 
@@ -6168,8 +6168,8 @@ module Aws::CloudFront
     #
     # @overload update_public_key(**params)
     # @param [Hash] params ({})
-    def update_public_key(params = {}, **options)
-      req = build_request(:update_public_key, params)
+    def update_public_key(, **options)
+      req = build_request(:update_public_key, )
       req.send_request(options)
     end
 
@@ -6256,8 +6256,8 @@ module Aws::CloudFront
     #
     # @overload update_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def update_realtime_log_config(params = {}, **options)
-      req = build_request(:update_realtime_log_config, params)
+    def update_realtime_log_config(, **options)
+      req = build_request(:update_realtime_log_config, )
       req.send_request(options)
     end
 
@@ -6346,8 +6346,8 @@ module Aws::CloudFront
     #
     # @overload update_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def update_streaming_distribution(params = {}, **options)
-      req = build_request(:update_streaming_distribution, params)
+    def update_streaming_distribution(, **options)
+      req = build_request(:update_streaming_distribution, )
       req.send_request(options)
     end
 

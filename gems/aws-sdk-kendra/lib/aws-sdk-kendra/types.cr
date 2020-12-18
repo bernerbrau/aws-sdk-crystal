@@ -6775,5 +6775,1209 @@ module Aws::Kendra
       include Aws::Structure
     end
 
+    alias AccessControlListConfiguration = NamedTuple(
+      "KeyPath" : (S3ObjectKey)?
+    )
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AclConfiguration = NamedTuple(
+      "AllowedGroupsColumnName" : ColumnName
+    )
+
+    alias AdditionalResultAttribute = NamedTuple(
+      "Key" : String,
+      "ValueType" : AdditionalResultAttributeValueType,
+      "Value" : AdditionalResultAttributeValue
+    )
+
+    alias AdditionalResultAttributeList = Array(AdditionalResultAttribute)
+
+    alias AdditionalResultAttributeValue = NamedTuple(
+      "TextWithHighlightsValue" : (TextWithHighlights)?
+    )
+
+    alias AdditionalResultAttributeValueType = String
+
+    alias AmazonResourceName = String
+
+    alias AttributeFilter = NamedTuple(
+      "AndAllFilters" : (AttributeFilterList)?,
+      "OrAllFilters" : (AttributeFilterList)?,
+      "NotFilter" : (AttributeFilter)?,
+      "EqualsTo" : (DocumentAttribute)?,
+      "ContainsAll" : (DocumentAttribute)?,
+      "ContainsAny" : (DocumentAttribute)?,
+      "GreaterThan" : (DocumentAttribute)?,
+      "GreaterThanOrEquals" : (DocumentAttribute)?,
+      "LessThan" : (DocumentAttribute)?,
+      "LessThanOrEquals" : (DocumentAttribute)?
+    )
+
+    alias AttributeFilterList = Array(AttributeFilter)
+
+    alias BatchDeleteDocumentRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "DocumentIdList" : DocumentIdList,
+      "DataSourceSyncJobMetricTarget" : (DataSourceSyncJobMetricTarget)?
+    )
+
+    alias BatchDeleteDocumentResponse = NamedTuple(
+      "FailedDocuments" : (BatchDeleteDocumentResponseFailedDocuments)?
+    )
+
+    alias BatchDeleteDocumentResponseFailedDocument = NamedTuple(
+      "Id" : (DocumentId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchDeleteDocumentResponseFailedDocuments = Array(BatchDeleteDocumentResponseFailedDocument)
+
+    alias BatchPutDocumentRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "RoleArn" : (RoleArn)?,
+      "Documents" : DocumentList
+    )
+
+    alias BatchPutDocumentResponse = NamedTuple(
+      "FailedDocuments" : (BatchPutDocumentResponseFailedDocuments)?
+    )
+
+    alias BatchPutDocumentResponseFailedDocument = NamedTuple(
+      "Id" : (DocumentId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchPutDocumentResponseFailedDocuments = Array(BatchPutDocumentResponseFailedDocument)
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias CapacityUnitsConfiguration = NamedTuple(
+      "StorageCapacityUnits" : StorageCapacityUnit,
+      "QueryCapacityUnits" : QueryCapacityUnit
+    )
+
+    alias ChangeDetectingColumns = Array(ColumnName)
+
+    alias ClaimRegex = String
+
+    alias ClickFeedback = NamedTuple(
+      "ResultId" : ResultId,
+      "ClickTime" : Timestamp
+    )
+
+    alias ClickFeedbackList = Array(ClickFeedback)
+
+    alias ClientTokenName = String
+
+    alias ColumnConfiguration = NamedTuple(
+      "DocumentIdColumnName" : ColumnName,
+      "DocumentDataColumnName" : ColumnName,
+      "DocumentTitleColumnName" : (ColumnName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
+      "ChangeDetectingColumns" : ChangeDetectingColumns
+    )
+
+    alias ColumnName = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConfluenceAttachmentConfiguration = NamedTuple(
+      "CrawlAttachments" : (Boolean)?,
+      "AttachmentFieldMappings" : (ConfluenceAttachmentFieldMappingsList)?
+    )
+
+    alias ConfluenceAttachmentFieldMappingsList = Array(ConfluenceAttachmentToIndexFieldMapping)
+
+    alias ConfluenceAttachmentFieldName = String
+
+    alias ConfluenceAttachmentToIndexFieldMapping = NamedTuple(
+      "DataSourceFieldName" : (ConfluenceAttachmentFieldName)?,
+      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
+      "IndexFieldName" : (IndexFieldName)?
+    )
+
+    alias ConfluenceBlogConfiguration = NamedTuple(
+      "BlogFieldMappings" : (ConfluenceBlogFieldMappingsList)?
+    )
+
+    alias ConfluenceBlogFieldMappingsList = Array(ConfluenceBlogToIndexFieldMapping)
+
+    alias ConfluenceBlogFieldName = String
+
+    alias ConfluenceBlogToIndexFieldMapping = NamedTuple(
+      "DataSourceFieldName" : (ConfluenceBlogFieldName)?,
+      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
+      "IndexFieldName" : (IndexFieldName)?
+    )
+
+    alias ConfluenceConfiguration = NamedTuple(
+      "ServerUrl" : Url,
+      "SecretArn" : SecretArn,
+      "Version" : ConfluenceVersion,
+      "SpaceConfiguration" : (ConfluenceSpaceConfiguration)?,
+      "PageConfiguration" : (ConfluencePageConfiguration)?,
+      "BlogConfiguration" : (ConfluenceBlogConfiguration)?,
+      "AttachmentConfiguration" : (ConfluenceAttachmentConfiguration)?,
+      "VpcConfiguration" : (DataSourceVpcConfiguration)?,
+      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?
+    )
+
+    alias ConfluencePageConfiguration = NamedTuple(
+      "PageFieldMappings" : (ConfluencePageFieldMappingsList)?
+    )
+
+    alias ConfluencePageFieldMappingsList = Array(ConfluencePageToIndexFieldMapping)
+
+    alias ConfluencePageFieldName = String
+
+    alias ConfluencePageToIndexFieldMapping = NamedTuple(
+      "DataSourceFieldName" : (ConfluencePageFieldName)?,
+      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
+      "IndexFieldName" : (IndexFieldName)?
+    )
+
+    alias ConfluenceSpaceConfiguration = NamedTuple(
+      "CrawlPersonalSpaces" : (Boolean)?,
+      "CrawlArchivedSpaces" : (Boolean)?,
+      "IncludeSpaces" : (ConfluenceSpaceList)?,
+      "ExcludeSpaces" : (ConfluenceSpaceList)?,
+      "SpaceFieldMappings" : (ConfluenceSpaceFieldMappingsList)?
+    )
+
+    alias ConfluenceSpaceFieldMappingsList = Array(ConfluenceSpaceToIndexFieldMapping)
+
+    alias ConfluenceSpaceFieldName = String
+
+    alias ConfluenceSpaceIdentifier = String
+
+    alias ConfluenceSpaceList = Array(ConfluenceSpaceIdentifier)
+
+    alias ConfluenceSpaceToIndexFieldMapping = NamedTuple(
+      "DataSourceFieldName" : (ConfluenceSpaceFieldName)?,
+      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
+      "IndexFieldName" : (IndexFieldName)?
+    )
+
+    alias ConfluenceVersion = String
+
+    alias ConnectionConfiguration = NamedTuple(
+      "DatabaseHost" : DatabaseHost,
+      "DatabasePort" : DatabasePort,
+      "DatabaseName" : DatabaseName,
+      "TableName" : TableName,
+      "SecretArn" : SecretArn
+    )
+
+    alias ContentType = String
+
+    alias CreateDataSourceRequest = NamedTuple(
+      "Name" : DataSourceName,
+      "IndexId" : IndexId,
+      "Type" : DataSourceType,
+      "Configuration" : (DataSourceConfiguration)?,
+      "Description" : (Description)?,
+      "Schedule" : (ScanSchedule)?,
+      "RoleArn" : (RoleArn)?,
+      "Tags" : (TagList)?,
+      "ClientToken" : (ClientTokenName)?
+    )
+
+    alias CreateDataSourceResponse = NamedTuple(
+      "Id" : DataSourceId
+    )
+
+    alias CreateFaqRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "Name" : FaqName,
+      "Description" : (Description)?,
+      "S3Path" : S3Path,
+      "RoleArn" : RoleArn,
+      "Tags" : (TagList)?,
+      "FileFormat" : (FaqFileFormat)?,
+      "ClientToken" : (ClientTokenName)?
+    )
+
+    alias CreateFaqResponse = NamedTuple(
+      "Id" : (FaqId)?
+    )
+
+    alias CreateIndexRequest = NamedTuple(
+      "Name" : IndexName,
+      "Edition" : (IndexEdition)?,
+      "RoleArn" : RoleArn,
+      "ServerSideEncryptionConfiguration" : (ServerSideEncryptionConfiguration)?,
+      "Description" : (Description)?,
+      "ClientToken" : (ClientTokenName)?,
+      "Tags" : (TagList)?,
+      "UserTokenConfigurations" : (UserTokenConfigurationList)?,
+      "UserContextPolicy" : (UserContextPolicy)?
+    )
+
+    alias CreateIndexResponse = NamedTuple(
+      "Id" : (IndexId)?
+    )
+
+    alias CreateThesaurusRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "Name" : ThesaurusName,
+      "Description" : (Description)?,
+      "RoleArn" : RoleArn,
+      "Tags" : (TagList)?,
+      "SourceS3Path" : S3Path,
+      "ClientToken" : (ClientTokenName)?
+    )
+
+    alias CreateThesaurusResponse = NamedTuple(
+      "Id" : (ThesaurusId)?
+    )
+
+    alias DataSourceConfiguration = NamedTuple(
+      "S3Configuration" : (S3DataSourceConfiguration)?,
+      "SharePointConfiguration" : (SharePointConfiguration)?,
+      "DatabaseConfiguration" : (DatabaseConfiguration)?,
+      "SalesforceConfiguration" : (SalesforceConfiguration)?,
+      "OneDriveConfiguration" : (OneDriveConfiguration)?,
+      "ServiceNowConfiguration" : (ServiceNowConfiguration)?,
+      "ConfluenceConfiguration" : (ConfluenceConfiguration)?,
+      "GoogleDriveConfiguration" : (GoogleDriveConfiguration)?
+    )
+
+    alias DataSourceDateFieldFormat = String
+
+    alias DataSourceFieldName = String
+
+    alias DataSourceId = String
+
+    alias DataSourceInclusionsExclusionsStrings = Array(DataSourceInclusionsExclusionsStringsMember)
+
+    alias DataSourceInclusionsExclusionsStringsMember = String
+
+    alias DataSourceName = String
+
+    alias DataSourceStatus = String
+
+    alias DataSourceSummary = NamedTuple(
+      "Name" : (DataSourceName)?,
+      "Id" : (DataSourceId)?,
+      "Type" : (DataSourceType)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?,
+      "Status" : (DataSourceStatus)?
+    )
+
+    alias DataSourceSummaryList = Array(DataSourceSummary)
+
+    alias DataSourceSyncJob = NamedTuple(
+      "ExecutionId" : (String)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Status" : (DataSourceSyncJobStatus)?,
+      "ErrorMessage" : (ErrorMessage)?,
+      "ErrorCode" : (ErrorCode)?,
+      "DataSourceErrorCode" : (String)?,
+      "Metrics" : (DataSourceSyncJobMetrics)?
+    )
+
+    alias DataSourceSyncJobHistoryList = Array(DataSourceSyncJob)
+
+    alias DataSourceSyncJobId = String
+
+    alias DataSourceSyncJobMetricTarget = NamedTuple(
+      "DataSourceId" : DataSourceId,
+      "DataSourceSyncJobId" : DataSourceSyncJobId
+    )
+
+    alias DataSourceSyncJobMetrics = NamedTuple(
+      "DocumentsAdded" : (MetricValue)?,
+      "DocumentsModified" : (MetricValue)?,
+      "DocumentsDeleted" : (MetricValue)?,
+      "DocumentsFailed" : (MetricValue)?,
+      "DocumentsScanned" : (MetricValue)?
+    )
+
+    alias DataSourceSyncJobStatus = String
+
+    alias DataSourceToIndexFieldMapping = NamedTuple(
+      "DataSourceFieldName" : DataSourceFieldName,
+      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
+      "IndexFieldName" : IndexFieldName
+    )
+
+    alias DataSourceToIndexFieldMappingList = Array(DataSourceToIndexFieldMapping)
+
+    alias DataSourceType = String
+
+    alias DataSourceVpcConfiguration = NamedTuple(
+      "SubnetIds" : SubnetIdList,
+      "SecurityGroupIds" : SecurityGroupIdList
+    )
+
+    alias DatabaseConfiguration = NamedTuple(
+      "DatabaseEngineType" : DatabaseEngineType,
+      "ConnectionConfiguration" : ConnectionConfiguration,
+      "VpcConfiguration" : (DataSourceVpcConfiguration)?,
+      "ColumnConfiguration" : ColumnConfiguration,
+      "AclConfiguration" : (AclConfiguration)?,
+      "SqlConfiguration" : (SqlConfiguration)?
+    )
+
+    alias DatabaseEngineType = String
+
+    alias DatabaseHost = String
+
+    alias DatabaseName = String
+
+    alias DatabasePort = Int32
+
+    alias DeleteDataSourceRequest = NamedTuple(
+      "Id" : DataSourceId,
+      "IndexId" : IndexId
+    )
+
+    alias DeleteFaqRequest = NamedTuple(
+      "Id" : FaqId,
+      "IndexId" : IndexId
+    )
+
+    alias DeleteIndexRequest = NamedTuple(
+      "Id" : IndexId
+    )
+
+    alias DeleteThesaurusRequest = NamedTuple(
+      "Id" : ThesaurusId,
+      "IndexId" : IndexId
+    )
+
+    alias DescribeDataSourceRequest = NamedTuple(
+      "Id" : DataSourceId,
+      "IndexId" : IndexId
+    )
+
+    alias DescribeDataSourceResponse = NamedTuple(
+      "Id" : (DataSourceId)?,
+      "IndexId" : (IndexId)?,
+      "Name" : (DataSourceName)?,
+      "Type" : (DataSourceType)?,
+      "Configuration" : (DataSourceConfiguration)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?,
+      "Description" : (Description)?,
+      "Status" : (DataSourceStatus)?,
+      "Schedule" : (ScanSchedule)?,
+      "RoleArn" : (RoleArn)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias DescribeFaqRequest = NamedTuple(
+      "Id" : FaqId,
+      "IndexId" : IndexId
+    )
+
+    alias DescribeFaqResponse = NamedTuple(
+      "Id" : (FaqId)?,
+      "IndexId" : (IndexId)?,
+      "Name" : (FaqName)?,
+      "Description" : (Description)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?,
+      "S3Path" : (S3Path)?,
+      "Status" : (FaqStatus)?,
+      "RoleArn" : (RoleArn)?,
+      "ErrorMessage" : (ErrorMessage)?,
+      "FileFormat" : (FaqFileFormat)?
+    )
+
+    alias DescribeIndexRequest = NamedTuple(
+      "Id" : IndexId
+    )
+
+    alias DescribeIndexResponse = NamedTuple(
+      "Name" : (IndexName)?,
+      "Id" : (IndexId)?,
+      "Edition" : (IndexEdition)?,
+      "RoleArn" : (RoleArn)?,
+      "ServerSideEncryptionConfiguration" : (ServerSideEncryptionConfiguration)?,
+      "Status" : (IndexStatus)?,
+      "Description" : (Description)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?,
+      "DocumentMetadataConfigurations" : (DocumentMetadataConfigurationList)?,
+      "IndexStatistics" : (IndexStatistics)?,
+      "ErrorMessage" : (ErrorMessage)?,
+      "CapacityUnits" : (CapacityUnitsConfiguration)?,
+      "UserTokenConfigurations" : (UserTokenConfigurationList)?,
+      "UserContextPolicy" : (UserContextPolicy)?
+    )
+
+    alias DescribeThesaurusRequest = NamedTuple(
+      "Id" : ThesaurusId,
+      "IndexId" : IndexId
+    )
+
+    alias DescribeThesaurusResponse = NamedTuple(
+      "Id" : (ThesaurusId)?,
+      "IndexId" : (IndexId)?,
+      "Name" : (ThesaurusName)?,
+      "Description" : (Description)?,
+      "Status" : (ThesaurusStatus)?,
+      "ErrorMessage" : (ErrorMessage)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?,
+      "RoleArn" : (RoleArn)?,
+      "SourceS3Path" : (S3Path)?,
+      "FileSizeBytes" : (Long)?,
+      "TermCount" : (Long)?,
+      "SynonymRuleCount" : (Long)?
+    )
+
+    alias Description = String
+
+    alias Document = NamedTuple(
+      "Id" : DocumentId,
+      "Title" : (Title)?,
+      "Blob" : (Blob)?,
+      "S3Path" : (S3Path)?,
+      "Attributes" : (DocumentAttributeList)?,
+      "AccessControlList" : (PrincipalList)?,
+      "ContentType" : (ContentType)?
+    )
+
+    alias DocumentAttribute = NamedTuple(
+      "Key" : DocumentAttributeKey,
+      "Value" : DocumentAttributeValue
+    )
+
+    alias DocumentAttributeKey = String
+
+    alias DocumentAttributeKeyList = Array(DocumentAttributeKey)
+
+    alias DocumentAttributeList = Array(DocumentAttribute)
+
+    alias DocumentAttributeStringListValue = Array(String)
+
+    alias DocumentAttributeStringValue = String
+
+    alias DocumentAttributeValue = NamedTuple(
+      "StringValue" : (DocumentAttributeStringValue)?,
+      "StringListValue" : (DocumentAttributeStringListValue)?,
+      "LongValue" : (Long)?,
+      "DateValue" : (Timestamp)?
+    )
+
+    alias DocumentAttributeValueCountPair = NamedTuple(
+      "DocumentAttributeValue" : (DocumentAttributeValue)?,
+      "Count" : (Integer)?
+    )
+
+    alias DocumentAttributeValueCountPairList = Array(DocumentAttributeValueCountPair)
+
+    alias DocumentAttributeValueType = String
+
+    alias DocumentId = String
+
+    alias DocumentIdList = Array(DocumentId)
+
+    alias DocumentList = Array(Document)
+
+    alias DocumentMetadataBoolean = Bool
+
+    alias DocumentMetadataConfiguration = NamedTuple(
+      "Name" : DocumentMetadataConfigurationName,
+      "Type" : DocumentAttributeValueType,
+      "Relevance" : (Relevance)?,
+      "Search" : (Search)?
+    )
+
+    alias DocumentMetadataConfigurationList = Array(DocumentMetadataConfiguration)
+
+    alias DocumentMetadataConfigurationName = String
+
+    alias DocumentsMetadataConfiguration = NamedTuple(
+      "S3Prefix" : (S3ObjectKey)?
+    )
+
+    alias Duration = String
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ExcludeMimeTypesList = Array(MimeType)
+
+    alias ExcludeSharedDrivesList = Array(SharedDriveId)
+
+    alias ExcludeUserAccountsList = Array(UserAccount)
+
+    alias Facet = NamedTuple(
+      "DocumentAttributeKey" : (DocumentAttributeKey)?
+    )
+
+    alias FacetList = Array(Facet)
+
+    alias FacetResult = NamedTuple(
+      "DocumentAttributeKey" : (DocumentAttributeKey)?,
+      "DocumentAttributeValueType" : (DocumentAttributeValueType)?,
+      "DocumentAttributeValueCountPairs" : (DocumentAttributeValueCountPairList)?
+    )
+
+    alias FacetResultList = Array(FacetResult)
+
+    alias FaqFileFormat = String
+
+    alias FaqId = String
+
+    alias FaqName = String
+
+    alias FaqStatistics = NamedTuple(
+      "IndexedQuestionAnswersCount" : IndexedQuestionAnswersCount
+    )
+
+    alias FaqStatus = String
+
+    alias FaqSummary = NamedTuple(
+      "Id" : (FaqId)?,
+      "Name" : (FaqName)?,
+      "Status" : (FaqStatus)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?,
+      "FileFormat" : (FaqFileFormat)?
+    )
+
+    alias FaqSummaryItems = Array(FaqSummary)
+
+    alias FeedbackToken = String
+
+    alias GoogleDriveConfiguration = NamedTuple(
+      "SecretArn" : SecretArn,
+      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
+      "ExcludeMimeTypes" : (ExcludeMimeTypesList)?,
+      "ExcludeUserAccounts" : (ExcludeUserAccountsList)?,
+      "ExcludeSharedDrives" : (ExcludeSharedDrivesList)?
+    )
+
+    alias GroupAttributeField = String
+
+    alias Highlight = NamedTuple(
+      "BeginOffset" : Integer,
+      "EndOffset" : Integer,
+      "TopAnswer" : (Boolean)?,
+      "Type" : (HighlightType)?
+    )
+
+    alias HighlightList = Array(Highlight)
+
+    alias HighlightType = String
+
+    alias Importance = Int32
+
+    alias IndexConfigurationSummary = NamedTuple(
+      "Name" : (IndexName)?,
+      "Id" : (IndexId)?,
+      "Edition" : (IndexEdition)?,
+      "CreatedAt" : Timestamp,
+      "UpdatedAt" : Timestamp,
+      "Status" : IndexStatus
+    )
+
+    alias IndexConfigurationSummaryList = Array(IndexConfigurationSummary)
+
+    alias IndexEdition = String
+
+    alias IndexFieldName = String
+
+    alias IndexId = String
+
+    alias IndexName = String
+
+    alias IndexStatistics = NamedTuple(
+      "FaqStatistics" : FaqStatistics,
+      "TextDocumentStatistics" : TextDocumentStatistics
+    )
+
+    alias IndexStatus = String
+
+    alias IndexedQuestionAnswersCount = Int32
+
+    alias IndexedTextBytes = Int64
+
+    alias IndexedTextDocumentsCount = Int32
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Issuer = String
+
+    alias JsonTokenTypeConfiguration = NamedTuple(
+      "UserNameAttributeField" : String,
+      "GroupAttributeField" : String
+    )
+
+    alias JwtTokenTypeConfiguration = NamedTuple(
+      "KeyLocation" : KeyLocation,
+      "URL" : (Url)?,
+      "SecretManagerArn" : (RoleArn)?,
+      "UserNameAttributeField" : (UserNameAttributeField)?,
+      "GroupAttributeField" : (GroupAttributeField)?,
+      "Issuer" : (Issuer)?,
+      "ClaimRegex" : (ClaimRegex)?
+    )
+
+    alias KeyLocation = String
+
+    alias KmsKeyId = String
+
+    alias ListDataSourceSyncJobsRequest = NamedTuple(
+      "Id" : DataSourceId,
+      "IndexId" : IndexId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsIntegerForListDataSourceSyncJobsRequest)?,
+      "StartTimeFilter" : (TimeRange)?,
+      "StatusFilter" : (DataSourceSyncJobStatus)?
+    )
+
+    alias ListDataSourceSyncJobsResponse = NamedTuple(
+      "History" : (DataSourceSyncJobHistoryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDataSourcesRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsIntegerForListDataSourcesRequest)?
+    )
+
+    alias ListDataSourcesResponse = NamedTuple(
+      "SummaryItems" : (DataSourceSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListFaqsRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsIntegerForListFaqsRequest)?
+    )
+
+    alias ListFaqsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "FaqSummaryItems" : (FaqSummaryItems)?
+    )
+
+    alias ListIndicesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsIntegerForListIndicesRequest)?
+    )
+
+    alias ListIndicesResponse = NamedTuple(
+      "IndexConfigurationSummaryItems" : (IndexConfigurationSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListThesauriRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsIntegerForListThesauriRequest)?
+    )
+
+    alias ListThesauriResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "ThesaurusSummaryItems" : (ThesaurusSummaryItems)?
+    )
+
+    alias Long = Int64
+
+    alias MaxResultsIntegerForListDataSourceSyncJobsRequest = Int32
+
+    alias MaxResultsIntegerForListDataSourcesRequest = Int32
+
+    alias MaxResultsIntegerForListFaqsRequest = Int32
+
+    alias MaxResultsIntegerForListIndicesRequest = Int32
+
+    alias MaxResultsIntegerForListThesauriRequest = Int32
+
+    alias MetricValue = String
+
+    alias MimeType = String
+
+    alias NextToken = String
+
+    alias OneDriveConfiguration = NamedTuple(
+      "TenantDomain" : TenantDomain,
+      "SecretArn" : SecretArn,
+      "OneDriveUsers" : OneDriveUsers,
+      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
+      "DisableLocalGroups" : (Boolean)?
+    )
+
+    alias OneDriveUser = String
+
+    alias OneDriveUserList = Array(OneDriveUser)
+
+    alias OneDriveUsers = NamedTuple(
+      "OneDriveUserList" : (OneDriveUserList)?,
+      "OneDriveUserS3Path" : (S3Path)?
+    )
+
+    alias Order = String
+
+    alias Principal = NamedTuple(
+      "Name" : PrincipalName,
+      "Type" : PrincipalType,
+      "Access" : ReadAccessType
+    )
+
+    alias PrincipalList = Array(Principal)
+
+    alias PrincipalName = String
+
+    alias PrincipalType = String
+
+    alias QueryCapacityUnit = Int32
+
+    alias QueryId = String
+
+    alias QueryIdentifiersEnclosingOption = String
+
+    alias QueryRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "QueryText" : QueryText,
+      "AttributeFilter" : (AttributeFilter)?,
+      "Facets" : (FacetList)?,
+      "RequestedDocumentAttributes" : (DocumentAttributeKeyList)?,
+      "QueryResultTypeFilter" : (QueryResultType)?,
+      "PageNumber" : (Integer)?,
+      "PageSize" : (Integer)?,
+      "SortingConfiguration" : (SortingConfiguration)?,
+      "UserContext" : (UserContext)?,
+      "VisitorId" : (VisitorId)?
+    )
+
+    alias QueryResult = NamedTuple(
+      "QueryId" : (QueryId)?,
+      "ResultItems" : (QueryResultItemList)?,
+      "FacetResults" : (FacetResultList)?,
+      "TotalNumberOfResults" : (Integer)?
+    )
+
+    alias QueryResultItem = NamedTuple(
+      "Id" : (ResultId)?,
+      "Type" : (QueryResultType)?,
+      "AdditionalAttributes" : (AdditionalResultAttributeList)?,
+      "DocumentId" : (DocumentId)?,
+      "DocumentTitle" : (TextWithHighlights)?,
+      "DocumentExcerpt" : (TextWithHighlights)?,
+      "DocumentURI" : (Url)?,
+      "DocumentAttributes" : (DocumentAttributeList)?,
+      "ScoreAttributes" : (ScoreAttributes)?,
+      "FeedbackToken" : (FeedbackToken)?
+    )
+
+    alias QueryResultItemList = Array(QueryResultItem)
+
+    alias QueryResultType = String
+
+    alias QueryText = String
+
+    alias ReadAccessType = String
+
+    alias Relevance = NamedTuple(
+      "Freshness" : (DocumentMetadataBoolean)?,
+      "Importance" : (Importance)?,
+      "Duration" : (Duration)?,
+      "RankOrder" : (Order)?,
+      "ValueImportanceMap" : (ValueImportanceMap)?
+    )
+
+    alias RelevanceFeedback = NamedTuple(
+      "ResultId" : ResultId,
+      "RelevanceValue" : RelevanceType
+    )
+
+    alias RelevanceFeedbackList = Array(RelevanceFeedback)
+
+    alias RelevanceType = String
+
+    alias ResourceAlreadyExistException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceUnavailableException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResultId = String
+
+    alias RoleArn = String
+
+    alias S3BucketName = String
+
+    alias S3DataSourceConfiguration = NamedTuple(
+      "BucketName" : S3BucketName,
+      "InclusionPrefixes" : (DataSourceInclusionsExclusionsStrings)?,
+      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "DocumentsMetadataConfiguration" : (DocumentsMetadataConfiguration)?,
+      "AccessControlListConfiguration" : (AccessControlListConfiguration)?
+    )
+
+    alias S3ObjectKey = String
+
+    alias S3Path = NamedTuple(
+      "Bucket" : S3BucketName,
+      "Key" : S3ObjectKey
+    )
+
+    alias SalesforceChatterFeedConfiguration = NamedTuple(
+      "DocumentDataFieldName" : DataSourceFieldName,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
+      "IncludeFilterTypes" : (SalesforceChatterFeedIncludeFilterTypes)?
+    )
+
+    alias SalesforceChatterFeedIncludeFilterType = String
+
+    alias SalesforceChatterFeedIncludeFilterTypes = Array(SalesforceChatterFeedIncludeFilterType)
+
+    alias SalesforceConfiguration = NamedTuple(
+      "ServerUrl" : Url,
+      "SecretArn" : SecretArn,
+      "StandardObjectConfigurations" : (SalesforceStandardObjectConfigurationList)?,
+      "KnowledgeArticleConfiguration" : (SalesforceKnowledgeArticleConfiguration)?,
+      "ChatterFeedConfiguration" : (SalesforceChatterFeedConfiguration)?,
+      "CrawlAttachments" : (Boolean)?,
+      "StandardObjectAttachmentConfiguration" : (SalesforceStandardObjectAttachmentConfiguration)?,
+      "IncludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExcludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?
+    )
+
+    alias SalesforceCustomKnowledgeArticleTypeConfiguration = NamedTuple(
+      "Name" : SalesforceCustomKnowledgeArticleTypeName,
+      "DocumentDataFieldName" : DataSourceFieldName,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+    )
+
+    alias SalesforceCustomKnowledgeArticleTypeConfigurationList = Array(SalesforceCustomKnowledgeArticleTypeConfiguration)
+
+    alias SalesforceCustomKnowledgeArticleTypeName = String
+
+    alias SalesforceKnowledgeArticleConfiguration = NamedTuple(
+      "IncludedStates" : SalesforceKnowledgeArticleStateList,
+      "StandardKnowledgeArticleTypeConfiguration" : (SalesforceStandardKnowledgeArticleTypeConfiguration)?,
+      "CustomKnowledgeArticleTypeConfigurations" : (SalesforceCustomKnowledgeArticleTypeConfigurationList)?
+    )
+
+    alias SalesforceKnowledgeArticleState = String
+
+    alias SalesforceKnowledgeArticleStateList = Array(SalesforceKnowledgeArticleState)
+
+    alias SalesforceStandardKnowledgeArticleTypeConfiguration = NamedTuple(
+      "DocumentDataFieldName" : DataSourceFieldName,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+    )
+
+    alias SalesforceStandardObjectAttachmentConfiguration = NamedTuple(
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+    )
+
+    alias SalesforceStandardObjectConfiguration = NamedTuple(
+      "Name" : SalesforceStandardObjectName,
+      "DocumentDataFieldName" : DataSourceFieldName,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+    )
+
+    alias SalesforceStandardObjectConfigurationList = Array(SalesforceStandardObjectConfiguration)
+
+    alias SalesforceStandardObjectName = String
+
+    alias ScanSchedule = String
+
+    alias ScoreAttributes = NamedTuple(
+      "ScoreConfidence" : (ScoreConfidence)?
+    )
+
+    alias ScoreConfidence = String
+
+    alias Search = NamedTuple(
+      "Facetable" : (Boolean)?,
+      "Searchable" : (Boolean)?,
+      "Displayable" : (Boolean)?,
+      "Sortable" : (Boolean)?
+    )
+
+    alias SecretArn = String
+
+    alias SecurityGroupIdList = Array(VpcSecurityGroupId)
+
+    alias ServerSideEncryptionConfiguration = NamedTuple(
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ServiceNowBuildVersionType = String
+
+    alias ServiceNowConfiguration = NamedTuple(
+      "HostUrl" : ServiceNowHostUrl,
+      "SecretArn" : SecretArn,
+      "ServiceNowBuildVersion" : ServiceNowBuildVersionType,
+      "KnowledgeArticleConfiguration" : (ServiceNowKnowledgeArticleConfiguration)?,
+      "ServiceCatalogConfiguration" : (ServiceNowServiceCatalogConfiguration)?
+    )
+
+    alias ServiceNowHostUrl = String
+
+    alias ServiceNowKnowledgeArticleConfiguration = NamedTuple(
+      "CrawlAttachments" : (Boolean)?,
+      "IncludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExcludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "DocumentDataFieldName" : DataSourceFieldName,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+    )
+
+    alias ServiceNowServiceCatalogConfiguration = NamedTuple(
+      "CrawlAttachments" : (Boolean)?,
+      "IncludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExcludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "DocumentDataFieldName" : DataSourceFieldName,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SharePointConfiguration = NamedTuple(
+      "SharePointVersion" : SharePointVersion,
+      "Urls" : SharePointUrlList,
+      "SecretArn" : SecretArn,
+      "CrawlAttachments" : (Boolean)?,
+      "UseChangeLog" : (Boolean)?,
+      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
+      "VpcConfiguration" : (DataSourceVpcConfiguration)?,
+      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
+      "DocumentTitleFieldName" : (DataSourceFieldName)?,
+      "DisableLocalGroups" : (Boolean)?
+    )
+
+    alias SharePointUrlList = Array(Url)
+
+    alias SharePointVersion = String
+
+    alias SharedDriveId = String
+
+    alias SortOrder = String
+
+    alias SortingConfiguration = NamedTuple(
+      "DocumentAttributeKey" : DocumentAttributeKey,
+      "SortOrder" : SortOrder
+    )
+
+    alias SqlConfiguration = NamedTuple(
+      "QueryIdentifiersEnclosingOption" : (QueryIdentifiersEnclosingOption)?
+    )
+
+    alias StartDataSourceSyncJobRequest = NamedTuple(
+      "Id" : DataSourceId,
+      "IndexId" : IndexId
+    )
+
+    alias StartDataSourceSyncJobResponse = NamedTuple(
+      "ExecutionId" : (String)?
+    )
+
+    alias StopDataSourceSyncJobRequest = NamedTuple(
+      "Id" : DataSourceId,
+      "IndexId" : IndexId
+    )
+
+    alias StorageCapacityUnit = Int32
+
+    alias String = String
+
+    alias SubmitFeedbackRequest = NamedTuple(
+      "IndexId" : IndexId,
+      "QueryId" : QueryId,
+      "ClickFeedbackItems" : (ClickFeedbackList)?,
+      "RelevanceFeedbackItems" : (RelevanceFeedbackList)?
+    )
+
+    alias SubnetId = String
+
+    alias SubnetIdList = Array(SubnetId)
+
+    alias TableName = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TenantDomain = String
+
+    alias TextDocumentStatistics = NamedTuple(
+      "IndexedTextDocumentsCount" : IndexedTextDocumentsCount,
+      "IndexedTextBytes" : IndexedTextBytes
+    )
+
+    alias TextWithHighlights = NamedTuple(
+      "Text" : (String)?,
+      "Highlights" : (HighlightList)?
+    )
+
+    alias ThesaurusId = String
+
+    alias ThesaurusName = String
+
+    alias ThesaurusStatus = String
+
+    alias ThesaurusSummary = NamedTuple(
+      "Id" : (ThesaurusId)?,
+      "Name" : (ThesaurusName)?,
+      "Status" : (ThesaurusStatus)?,
+      "CreatedAt" : (Timestamp)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias ThesaurusSummaryItems = Array(ThesaurusSummary)
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias TimeRange = NamedTuple(
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Title = String
+
+    alias Token = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDataSourceRequest = NamedTuple(
+      "Id" : DataSourceId,
+      "Name" : (DataSourceName)?,
+      "IndexId" : IndexId,
+      "Configuration" : (DataSourceConfiguration)?,
+      "Description" : (Description)?,
+      "Schedule" : (ScanSchedule)?,
+      "RoleArn" : (RoleArn)?
+    )
+
+    alias UpdateIndexRequest = NamedTuple(
+      "Id" : IndexId,
+      "Name" : (IndexName)?,
+      "RoleArn" : (RoleArn)?,
+      "Description" : (Description)?,
+      "DocumentMetadataConfigurationUpdates" : (DocumentMetadataConfigurationList)?,
+      "CapacityUnits" : (CapacityUnitsConfiguration)?,
+      "UserTokenConfigurations" : (UserTokenConfigurationList)?,
+      "UserContextPolicy" : (UserContextPolicy)?
+    )
+
+    alias UpdateThesaurusRequest = NamedTuple(
+      "Id" : ThesaurusId,
+      "Name" : (ThesaurusName)?,
+      "IndexId" : IndexId,
+      "Description" : (Description)?,
+      "RoleArn" : (RoleArn)?,
+      "SourceS3Path" : (S3Path)?
+    )
+
+    alias Url = String
+
+    alias UserAccount = String
+
+    alias UserContext = NamedTuple(
+      "Token" : (Token)?
+    )
+
+    alias UserContextPolicy = String
+
+    alias UserNameAttributeField = String
+
+    alias UserTokenConfiguration = NamedTuple(
+      "JwtTokenTypeConfiguration" : (JwtTokenTypeConfiguration)?,
+      "JsonTokenTypeConfiguration" : (JsonTokenTypeConfiguration)?
+    )
+
+    alias UserTokenConfigurationList = Array(UserTokenConfiguration)
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ValueImportanceMap = Hash(ValueImportanceMapKey,Importance)
+
+    alias ValueImportanceMapKey = String
+
+    alias VisitorId = String
+
+    alias VpcSecurityGroupId = String
   end
 end

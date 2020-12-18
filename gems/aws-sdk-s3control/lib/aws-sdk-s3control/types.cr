@@ -4794,5 +4794,976 @@ module Aws::S3Control
       include Aws::Structure
     end
 
+    alias AbortIncompleteMultipartUpload = NamedTuple(
+      "DaysAfterInitiation" : (DaysAfterInitiation)?
+    )
+
+    alias AccessPoint = NamedTuple(
+      "Name" : AccessPointName,
+      "NetworkOrigin" : NetworkOrigin,
+      "VpcConfiguration" : (VpcConfiguration)?,
+      "Bucket" : BucketName,
+      "AccessPointArn" : (S3AccessPointArn)?
+    )
+
+    alias AccessPointList = Array(AccessPoint)
+
+    alias AccessPointName = String
+
+    alias AccountId = String
+
+    alias AccountLevel = NamedTuple(
+      "ActivityMetrics" : (ActivityMetrics)?,
+      "BucketLevel" : BucketLevel
+    )
+
+    alias ActivityMetrics = NamedTuple(
+      "IsEnabled" : (IsEnabled)?
+    )
+
+    alias AwsOrgArn = String
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Boolean = Bool
+
+    alias BucketAlreadyExists = NamedTuple(
+      
+    )
+
+    alias BucketAlreadyOwnedByYou = NamedTuple(
+      
+    )
+
+    alias BucketCannedACL = String
+
+    alias BucketLevel = NamedTuple(
+      "ActivityMetrics" : (ActivityMetrics)?,
+      "PrefixLevel" : (PrefixLevel)?
+    )
+
+    alias BucketLocationConstraint = String
+
+    alias BucketName = String
+
+    alias Buckets = Array(S3BucketArnString)
+
+    alias ConfigId = String
+
+    alias ConfirmRemoveSelfBucketAccess = Bool
+
+    alias ConfirmationRequired = Bool
+
+    alias ContinuationToken = String
+
+    alias CreateAccessPointRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName,
+      "Bucket" : BucketName,
+      "VpcConfiguration" : (VpcConfiguration)?,
+      "PublicAccessBlockConfiguration" : (PublicAccessBlockConfiguration)?
+    )
+
+    alias CreateAccessPointResult = NamedTuple(
+      "AccessPointArn" : (S3AccessPointArn)?
+    )
+
+    alias CreateBucketConfiguration = NamedTuple(
+      "LocationConstraint" : (BucketLocationConstraint)?
+    )
+
+    alias CreateBucketRequest = NamedTuple(
+      "ACL" : (BucketCannedACL)?,
+      "Bucket" : BucketName,
+      "CreateBucketConfiguration" : (CreateBucketConfiguration)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWrite" : (GrantWrite)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "ObjectLockEnabledForBucket" : (ObjectLockEnabledForBucket)?,
+      "OutpostId" : (NonEmptyMaxLength64String)?
+    )
+
+    alias CreateBucketResult = NamedTuple(
+      "Location" : (Location)?,
+      "BucketArn" : (S3RegionalBucketArn)?
+    )
+
+    alias CreateJobRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "ConfirmationRequired" : (ConfirmationRequired)?,
+      "Operation" : JobOperation,
+      "Report" : JobReport,
+      "ClientRequestToken" : NonEmptyMaxLength64String,
+      "Manifest" : JobManifest,
+      "Description" : (NonEmptyMaxLength256String)?,
+      "Priority" : JobPriority,
+      "RoleArn" : IAMRoleArn,
+      "Tags" : (S3TagSet)?
+    )
+
+    alias CreateJobResult = NamedTuple(
+      "JobId" : (JobId)?
+    )
+
+    alias CreationDate = String | UInt64 | Time
+
+    alias Date = String | UInt64 | Time
+
+    alias Days = Int32
+
+    alias DaysAfterInitiation = Int32
+
+    alias DeleteAccessPointPolicyRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName
+    )
+
+    alias DeleteAccessPointRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName
+    )
+
+    alias DeleteBucketLifecycleConfigurationRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias DeleteBucketPolicyRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias DeleteBucketRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias DeleteBucketTaggingRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias DeleteJobTaggingRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobId" : JobId
+    )
+
+    alias DeleteJobTaggingResult = NamedTuple(
+      
+    )
+
+    alias DeletePublicAccessBlockRequest = NamedTuple(
+      "AccountId" : AccountId
+    )
+
+    alias DeleteStorageLensConfigurationRequest = NamedTuple(
+      "ConfigId" : ConfigId,
+      "AccountId" : AccountId
+    )
+
+    alias DeleteStorageLensConfigurationTaggingRequest = NamedTuple(
+      "ConfigId" : ConfigId,
+      "AccountId" : AccountId
+    )
+
+    alias DeleteStorageLensConfigurationTaggingResult = NamedTuple(
+      
+    )
+
+    alias DescribeJobRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobId" : JobId
+    )
+
+    alias DescribeJobResult = NamedTuple(
+      "Job" : (JobDescriptor)?
+    )
+
+    alias ExceptionMessage = String
+
+    alias Exclude = NamedTuple(
+      "Buckets" : (Buckets)?,
+      "Regions" : (Regions)?
+    )
+
+    alias ExpirationStatus = String
+
+    alias ExpiredObjectDeleteMarker = Bool
+
+    alias Format = String
+
+    alias FunctionArnString = String
+
+    alias GetAccessPointPolicyRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName
+    )
+
+    alias GetAccessPointPolicyResult = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias GetAccessPointPolicyStatusRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName
+    )
+
+    alias GetAccessPointPolicyStatusResult = NamedTuple(
+      "PolicyStatus" : (PolicyStatus)?
+    )
+
+    alias GetAccessPointRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName
+    )
+
+    alias GetAccessPointResult = NamedTuple(
+      "Name" : (AccessPointName)?,
+      "Bucket" : (BucketName)?,
+      "NetworkOrigin" : (NetworkOrigin)?,
+      "VpcConfiguration" : (VpcConfiguration)?,
+      "PublicAccessBlockConfiguration" : (PublicAccessBlockConfiguration)?,
+      "CreationDate" : (CreationDate)?
+    )
+
+    alias GetBucketLifecycleConfigurationRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias GetBucketLifecycleConfigurationResult = NamedTuple(
+      "Rules" : (LifecycleRules)?
+    )
+
+    alias GetBucketPolicyRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias GetBucketPolicyResult = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias GetBucketRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias GetBucketResult = NamedTuple(
+      "Bucket" : (BucketName)?,
+      "PublicAccessBlockEnabled" : (PublicAccessBlockEnabled)?,
+      "CreationDate" : (CreationDate)?
+    )
+
+    alias GetBucketTaggingRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName
+    )
+
+    alias GetBucketTaggingResult = NamedTuple(
+      "TagSet" : S3TagSet
+    )
+
+    alias GetJobTaggingRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobId" : JobId
+    )
+
+    alias GetJobTaggingResult = NamedTuple(
+      "Tags" : (S3TagSet)?
+    )
+
+    alias GetPublicAccessBlockOutput = NamedTuple(
+      "PublicAccessBlockConfiguration" : (PublicAccessBlockConfiguration)?
+    )
+
+    alias GetPublicAccessBlockRequest = NamedTuple(
+      "AccountId" : AccountId
+    )
+
+    alias GetStorageLensConfigurationRequest = NamedTuple(
+      "ConfigId" : ConfigId,
+      "AccountId" : AccountId
+    )
+
+    alias GetStorageLensConfigurationResult = NamedTuple(
+      "StorageLensConfiguration" : (StorageLensConfiguration)?
+    )
+
+    alias GetStorageLensConfigurationTaggingRequest = NamedTuple(
+      "ConfigId" : ConfigId,
+      "AccountId" : AccountId
+    )
+
+    alias GetStorageLensConfigurationTaggingResult = NamedTuple(
+      "Tags" : (StorageLensTags)?
+    )
+
+    alias GrantFullControl = String
+
+    alias GrantRead = String
+
+    alias GrantReadACP = String
+
+    alias GrantWrite = String
+
+    alias GrantWriteACP = String
+
+    alias IAMRoleArn = String
+
+    alias ID = String
+
+    alias IdempotencyException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Include = NamedTuple(
+      "Buckets" : (Buckets)?,
+      "Regions" : (Regions)?
+    )
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias IsEnabled = Bool
+
+    alias IsPublic = Bool
+
+    alias JobArn = String
+
+    alias JobCreationTime = String | UInt64 | Time
+
+    alias JobDescriptor = NamedTuple(
+      "JobId" : (JobId)?,
+      "ConfirmationRequired" : (ConfirmationRequired)?,
+      "Description" : (NonEmptyMaxLength256String)?,
+      "JobArn" : (JobArn)?,
+      "Status" : (JobStatus)?,
+      "Manifest" : (JobManifest)?,
+      "Operation" : (JobOperation)?,
+      "Priority" : (JobPriority)?,
+      "ProgressSummary" : (JobProgressSummary)?,
+      "StatusUpdateReason" : (JobStatusUpdateReason)?,
+      "FailureReasons" : (JobFailureList)?,
+      "Report" : (JobReport)?,
+      "CreationTime" : (JobCreationTime)?,
+      "TerminationDate" : (JobTerminationDate)?,
+      "RoleArn" : (IAMRoleArn)?,
+      "SuspendedDate" : (SuspendedDate)?,
+      "SuspendedCause" : (SuspendedCause)?
+    )
+
+    alias JobFailure = NamedTuple(
+      "FailureCode" : (JobFailureCode)?,
+      "FailureReason" : (JobFailureReason)?
+    )
+
+    alias JobFailureCode = String
+
+    alias JobFailureList = Array(JobFailure)
+
+    alias JobFailureReason = String
+
+    alias JobId = String
+
+    alias JobListDescriptor = NamedTuple(
+      "JobId" : (JobId)?,
+      "Description" : (NonEmptyMaxLength256String)?,
+      "Operation" : (OperationName)?,
+      "Priority" : (JobPriority)?,
+      "Status" : (JobStatus)?,
+      "CreationTime" : (JobCreationTime)?,
+      "TerminationDate" : (JobTerminationDate)?,
+      "ProgressSummary" : (JobProgressSummary)?
+    )
+
+    alias JobListDescriptorList = Array(JobListDescriptor)
+
+    alias JobManifest = NamedTuple(
+      "Spec" : JobManifestSpec,
+      "Location" : JobManifestLocation
+    )
+
+    alias JobManifestFieldList = Array(JobManifestFieldName)
+
+    alias JobManifestFieldName = String
+
+    alias JobManifestFormat = String
+
+    alias JobManifestLocation = NamedTuple(
+      "ObjectArn" : S3KeyArnString,
+      "ObjectVersionId" : (S3ObjectVersionId)?,
+      "ETag" : NonEmptyMaxLength1024String
+    )
+
+    alias JobManifestSpec = NamedTuple(
+      "Format" : JobManifestFormat,
+      "Fields" : (JobManifestFieldList)?
+    )
+
+    alias JobNumberOfTasksFailed = Int64
+
+    alias JobNumberOfTasksSucceeded = Int64
+
+    alias JobOperation = NamedTuple(
+      "LambdaInvoke" : (LambdaInvokeOperation)?,
+      "S3PutObjectCopy" : (S3CopyObjectOperation)?,
+      "S3PutObjectAcl" : (S3SetObjectAclOperation)?,
+      "S3PutObjectTagging" : (S3SetObjectTaggingOperation)?,
+      "S3InitiateRestoreObject" : (S3InitiateRestoreObjectOperation)?,
+      "S3PutObjectLegalHold" : (S3SetObjectLegalHoldOperation)?,
+      "S3PutObjectRetention" : (S3SetObjectRetentionOperation)?
+    )
+
+    alias JobPriority = Int32
+
+    alias JobProgressSummary = NamedTuple(
+      "TotalNumberOfTasks" : (JobTotalNumberOfTasks)?,
+      "NumberOfTasksSucceeded" : (JobNumberOfTasksSucceeded)?,
+      "NumberOfTasksFailed" : (JobNumberOfTasksFailed)?
+    )
+
+    alias JobReport = NamedTuple(
+      "Bucket" : (S3BucketArnString)?,
+      "Format" : (JobReportFormat)?,
+      "Enabled" : Boolean,
+      "Prefix" : (ReportPrefixString)?,
+      "ReportScope" : (JobReportScope)?
+    )
+
+    alias JobReportFormat = String
+
+    alias JobReportScope = String
+
+    alias JobStatus = String
+
+    alias JobStatusException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias JobStatusList = Array(JobStatus)
+
+    alias JobStatusUpdateReason = String
+
+    alias JobTerminationDate = String | UInt64 | Time
+
+    alias JobTotalNumberOfTasks = Int64
+
+    alias KmsKeyArnString = String
+
+    alias LambdaInvokeOperation = NamedTuple(
+      "FunctionArn" : (FunctionArnString)?
+    )
+
+    alias LifecycleConfiguration = NamedTuple(
+      "Rules" : (LifecycleRules)?
+    )
+
+    alias LifecycleExpiration = NamedTuple(
+      "Date" : (Date)?,
+      "Days" : (Days)?,
+      "ExpiredObjectDeleteMarker" : (ExpiredObjectDeleteMarker)?
+    )
+
+    alias LifecycleRule = NamedTuple(
+      "Expiration" : (LifecycleExpiration)?,
+      "ID" : (ID)?,
+      "Filter" : (LifecycleRuleFilter)?,
+      "Status" : ExpirationStatus,
+      "Transitions" : (TransitionList)?,
+      "NoncurrentVersionTransitions" : (NoncurrentVersionTransitionList)?,
+      "NoncurrentVersionExpiration" : (NoncurrentVersionExpiration)?,
+      "AbortIncompleteMultipartUpload" : (AbortIncompleteMultipartUpload)?
+    )
+
+    alias LifecycleRuleAndOperator = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tags" : (S3TagSet)?
+    )
+
+    alias LifecycleRuleFilter = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tag" : (S3Tag)?,
+      "And" : (LifecycleRuleAndOperator)?
+    )
+
+    alias LifecycleRules = Array(LifecycleRule)
+
+    alias ListAccessPointsRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : (BucketName)?,
+      "NextToken" : (NonEmptyMaxLength1024String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAccessPointsResult = NamedTuple(
+      "AccessPointList" : (AccessPointList)?,
+      "NextToken" : (NonEmptyMaxLength1024String)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobStatuses" : (JobStatusList)?,
+      "NextToken" : (StringForNextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListJobsResult = NamedTuple(
+      "NextToken" : (StringForNextToken)?,
+      "Jobs" : (JobListDescriptorList)?
+    )
+
+    alias ListRegionalBucketsRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "NextToken" : (NonEmptyMaxLength1024String)?,
+      "MaxResults" : (MaxResults)?,
+      "OutpostId" : (NonEmptyMaxLength64String)?
+    )
+
+    alias ListRegionalBucketsResult = NamedTuple(
+      "RegionalBucketList" : (RegionalBucketList)?,
+      "NextToken" : (NonEmptyMaxLength1024String)?
+    )
+
+    alias ListStorageLensConfigurationEntry = NamedTuple(
+      "Id" : ConfigId,
+      "StorageLensArn" : StorageLensArn,
+      "HomeRegion" : S3AWSRegion,
+      "IsEnabled" : (IsEnabled)?
+    )
+
+    alias ListStorageLensConfigurationsRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "NextToken" : (ContinuationToken)?
+    )
+
+    alias ListStorageLensConfigurationsResult = NamedTuple(
+      "NextToken" : (ContinuationToken)?,
+      "StorageLensConfigurationList" : (StorageLensConfigurationList)?
+    )
+
+    alias Location = String
+
+    alias MaxLength1024String = String
+
+    alias MaxResults = Int32
+
+    alias MinStorageBytesPercentage = Float64
+
+    alias NetworkOrigin = String
+
+    alias NoSuchPublicAccessBlockConfiguration = NamedTuple(
+      "Message" : (NoSuchPublicAccessBlockConfigurationMessage)?
+    )
+
+    alias NoSuchPublicAccessBlockConfigurationMessage = String
+
+    alias NonEmptyMaxLength1024String = String
+
+    alias NonEmptyMaxLength2048String = String
+
+    alias NonEmptyMaxLength256String = String
+
+    alias NonEmptyMaxLength64String = String
+
+    alias NoncurrentVersionExpiration = NamedTuple(
+      "NoncurrentDays" : (Days)?
+    )
+
+    alias NoncurrentVersionTransition = NamedTuple(
+      "NoncurrentDays" : (Days)?,
+      "StorageClass" : (TransitionStorageClass)?
+    )
+
+    alias NoncurrentVersionTransitionList = Array(NoncurrentVersionTransition)
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ObjectLockEnabledForBucket = Bool
+
+    alias OperationName = String
+
+    alias OutputSchemaVersion = String
+
+    alias Policy = String
+
+    alias PolicyStatus = NamedTuple(
+      "IsPublic" : (IsPublic)?
+    )
+
+    alias Prefix = String
+
+    alias PrefixLevel = NamedTuple(
+      "StorageMetrics" : PrefixLevelStorageMetrics
+    )
+
+    alias PrefixLevelStorageMetrics = NamedTuple(
+      "IsEnabled" : (IsEnabled)?,
+      "SelectionCriteria" : (SelectionCriteria)?
+    )
+
+    alias PublicAccessBlockConfiguration = NamedTuple(
+      "BlockPublicAcls" : (Setting)?,
+      "IgnorePublicAcls" : (Setting)?,
+      "BlockPublicPolicy" : (Setting)?,
+      "RestrictPublicBuckets" : (Setting)?
+    )
+
+    alias PublicAccessBlockEnabled = Bool
+
+    alias PutAccessPointPolicyRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Name" : AccessPointName,
+      "Policy" : Policy
+    )
+
+    alias PutBucketLifecycleConfigurationRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName,
+      "LifecycleConfiguration" : (LifecycleConfiguration)?
+    )
+
+    alias PutBucketPolicyRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName,
+      "ConfirmRemoveSelfBucketAccess" : (ConfirmRemoveSelfBucketAccess)?,
+      "Policy" : Policy
+    )
+
+    alias PutBucketTaggingRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "Bucket" : BucketName,
+      "Tagging" : Tagging
+    )
+
+    alias PutJobTaggingRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobId" : JobId,
+      "Tags" : S3TagSet
+    )
+
+    alias PutJobTaggingResult = NamedTuple(
+      
+    )
+
+    alias PutPublicAccessBlockRequest = NamedTuple(
+      "PublicAccessBlockConfiguration" : PublicAccessBlockConfiguration,
+      "AccountId" : AccountId
+    )
+
+    alias PutStorageLensConfigurationRequest = NamedTuple(
+      "ConfigId" : ConfigId,
+      "AccountId" : AccountId,
+      "StorageLensConfiguration" : StorageLensConfiguration,
+      "Tags" : (StorageLensTags)?
+    )
+
+    alias PutStorageLensConfigurationTaggingRequest = NamedTuple(
+      "ConfigId" : ConfigId,
+      "AccountId" : AccountId,
+      "Tags" : StorageLensTags
+    )
+
+    alias PutStorageLensConfigurationTaggingResult = NamedTuple(
+      
+    )
+
+    alias RegionalBucket = NamedTuple(
+      "Bucket" : BucketName,
+      "BucketArn" : (S3RegionalBucketArn)?,
+      "PublicAccessBlockEnabled" : PublicAccessBlockEnabled,
+      "CreationDate" : CreationDate,
+      "OutpostId" : (NonEmptyMaxLength64String)?
+    )
+
+    alias RegionalBucketList = Array(RegionalBucket)
+
+    alias Regions = Array(S3AWSRegion)
+
+    alias ReportPrefixString = String
+
+    alias RequestedJobStatus = String
+
+    alias S3AWSRegion = String
+
+    alias S3AccessControlList = NamedTuple(
+      "Owner" : S3ObjectOwner,
+      "Grants" : (S3GrantList)?
+    )
+
+    alias S3AccessControlPolicy = NamedTuple(
+      "AccessControlList" : (S3AccessControlList)?,
+      "CannedAccessControlList" : (S3CannedAccessControlList)?
+    )
+
+    alias S3AccessPointArn = String
+
+    alias S3BucketArnString = String
+
+    alias S3BucketDestination = NamedTuple(
+      "Format" : Format,
+      "OutputSchemaVersion" : OutputSchemaVersion,
+      "AccountId" : AccountId,
+      "Arn" : S3BucketArnString,
+      "Prefix" : (Prefix)?,
+      "Encryption" : (StorageLensDataExportEncryption)?
+    )
+
+    alias S3CannedAccessControlList = String
+
+    alias S3ContentLength = Int64
+
+    alias S3CopyObjectOperation = NamedTuple(
+      "TargetResource" : (S3BucketArnString)?,
+      "CannedAccessControlList" : (S3CannedAccessControlList)?,
+      "AccessControlGrants" : (S3GrantList)?,
+      "MetadataDirective" : (S3MetadataDirective)?,
+      "ModifiedSinceConstraint" : (TimeStamp)?,
+      "NewObjectMetadata" : (S3ObjectMetadata)?,
+      "NewObjectTagging" : (S3TagSet)?,
+      "RedirectLocation" : (NonEmptyMaxLength2048String)?,
+      "RequesterPays" : (Boolean)?,
+      "StorageClass" : (S3StorageClass)?,
+      "UnModifiedSinceConstraint" : (TimeStamp)?,
+      "SSEAwsKmsKeyId" : (KmsKeyArnString)?,
+      "TargetKeyPrefix" : (NonEmptyMaxLength1024String)?,
+      "ObjectLockLegalHoldStatus" : (S3ObjectLockLegalHoldStatus)?,
+      "ObjectLockMode" : (S3ObjectLockMode)?,
+      "ObjectLockRetainUntilDate" : (TimeStamp)?
+    )
+
+    alias S3ExpirationInDays = Int32
+
+    alias S3GlacierJobTier = String
+
+    alias S3Grant = NamedTuple(
+      "Grantee" : (S3Grantee)?,
+      "Permission" : (S3Permission)?
+    )
+
+    alias S3GrantList = Array(S3Grant)
+
+    alias S3Grantee = NamedTuple(
+      "TypeIdentifier" : (S3GranteeTypeIdentifier)?,
+      "Identifier" : (NonEmptyMaxLength1024String)?,
+      "DisplayName" : (NonEmptyMaxLength1024String)?
+    )
+
+    alias S3GranteeTypeIdentifier = String
+
+    alias S3InitiateRestoreObjectOperation = NamedTuple(
+      "ExpirationInDays" : (S3ExpirationInDays)?,
+      "GlacierJobTier" : (S3GlacierJobTier)?
+    )
+
+    alias S3KeyArnString = String
+
+    alias S3MetadataDirective = String
+
+    alias S3ObjectLockLegalHold = NamedTuple(
+      "Status" : S3ObjectLockLegalHoldStatus
+    )
+
+    alias S3ObjectLockLegalHoldStatus = String
+
+    alias S3ObjectLockMode = String
+
+    alias S3ObjectLockRetentionMode = String
+
+    alias S3ObjectMetadata = NamedTuple(
+      "CacheControl" : (NonEmptyMaxLength1024String)?,
+      "ContentDisposition" : (NonEmptyMaxLength1024String)?,
+      "ContentEncoding" : (NonEmptyMaxLength1024String)?,
+      "ContentLanguage" : (NonEmptyMaxLength1024String)?,
+      "UserMetadata" : (S3UserMetadata)?,
+      "ContentLength" : (S3ContentLength)?,
+      "ContentMD5" : (NonEmptyMaxLength1024String)?,
+      "ContentType" : (NonEmptyMaxLength1024String)?,
+      "HttpExpiresDate" : (TimeStamp)?,
+      "RequesterCharged" : (Boolean)?,
+      "SSEAlgorithm" : (S3SSEAlgorithm)?
+    )
+
+    alias S3ObjectOwner = NamedTuple(
+      "ID" : (NonEmptyMaxLength1024String)?,
+      "DisplayName" : (NonEmptyMaxLength1024String)?
+    )
+
+    alias S3ObjectVersionId = String
+
+    alias S3Permission = String
+
+    alias S3RegionalBucketArn = String
+
+    alias S3Retention = NamedTuple(
+      "RetainUntilDate" : (TimeStamp)?,
+      "Mode" : (S3ObjectLockRetentionMode)?
+    )
+
+    alias S3SSEAlgorithm = String
+
+    alias S3SetObjectAclOperation = NamedTuple(
+      "AccessControlPolicy" : (S3AccessControlPolicy)?
+    )
+
+    alias S3SetObjectLegalHoldOperation = NamedTuple(
+      "LegalHold" : S3ObjectLockLegalHold
+    )
+
+    alias S3SetObjectRetentionOperation = NamedTuple(
+      "BypassGovernanceRetention" : (Boolean)?,
+      "Retention" : S3Retention
+    )
+
+    alias S3SetObjectTaggingOperation = NamedTuple(
+      "TagSet" : (S3TagSet)?
+    )
+
+    alias S3StorageClass = String
+
+    alias S3Tag = NamedTuple(
+      "Key" : TagKeyString,
+      "Value" : TagValueString
+    )
+
+    alias S3TagSet = Array(S3Tag)
+
+    alias S3UserMetadata = Hash(NonEmptyMaxLength1024String,MaxLength1024String)
+
+    alias SSEKMS = NamedTuple(
+      "KeyId" : SSEKMSKeyId
+    )
+
+    alias SSEKMSKeyId = String
+
+    alias SSES3 = NamedTuple(
+      
+    )
+
+    alias SelectionCriteria = NamedTuple(
+      "Delimiter" : (StorageLensPrefixLevelDelimiter)?,
+      "MaxDepth" : (StorageLensPrefixLevelMaxDepth)?,
+      "MinStorageBytesPercentage" : (MinStorageBytesPercentage)?
+    )
+
+    alias Setting = Bool
+
+    alias StorageLensArn = String
+
+    alias StorageLensAwsOrg = NamedTuple(
+      "Arn" : AwsOrgArn
+    )
+
+    alias StorageLensConfiguration = NamedTuple(
+      "Id" : ConfigId,
+      "AccountLevel" : AccountLevel,
+      "Include" : (Include)?,
+      "Exclude" : (Exclude)?,
+      "DataExport" : (StorageLensDataExport)?,
+      "IsEnabled" : IsEnabled,
+      "AwsOrg" : (StorageLensAwsOrg)?,
+      "StorageLensArn" : (StorageLensArn)?
+    )
+
+    alias StorageLensConfigurationList = Array(ListStorageLensConfigurationEntry)
+
+    alias StorageLensDataExport = NamedTuple(
+      "S3BucketDestination" : S3BucketDestination
+    )
+
+    alias StorageLensDataExportEncryption = NamedTuple(
+      "SSES3" : (SSES3)?,
+      "SSEKMS" : (SSEKMS)?
+    )
+
+    alias StorageLensPrefixLevelDelimiter = String
+
+    alias StorageLensPrefixLevelMaxDepth = Int32
+
+    alias StorageLensTag = NamedTuple(
+      "Key" : TagKeyString,
+      "Value" : TagValueString
+    )
+
+    alias StorageLensTags = Array(StorageLensTag)
+
+    alias StringForNextToken = String
+
+    alias SuspendedCause = String
+
+    alias SuspendedDate = String | UInt64 | Time
+
+    alias TagKeyString = String
+
+    alias TagValueString = String
+
+    alias Tagging = NamedTuple(
+      "TagSet" : S3TagSet
+    )
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Transition = NamedTuple(
+      "Date" : (Date)?,
+      "Days" : (Days)?,
+      "StorageClass" : (TransitionStorageClass)?
+    )
+
+    alias TransitionList = Array(Transition)
+
+    alias TransitionStorageClass = String
+
+    alias UpdateJobPriorityRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobId" : JobId,
+      "Priority" : JobPriority
+    )
+
+    alias UpdateJobPriorityResult = NamedTuple(
+      "JobId" : JobId,
+      "Priority" : JobPriority
+    )
+
+    alias UpdateJobStatusRequest = NamedTuple(
+      "AccountId" : AccountId,
+      "JobId" : JobId,
+      "RequestedJobStatus" : RequestedJobStatus,
+      "StatusUpdateReason" : (JobStatusUpdateReason)?
+    )
+
+    alias UpdateJobStatusResult = NamedTuple(
+      "JobId" : (JobId)?,
+      "Status" : (JobStatus)?,
+      "StatusUpdateReason" : (JobStatusUpdateReason)?
+    )
+
+    alias VpcConfiguration = NamedTuple(
+      "VpcId" : VpcId
+    )
+
+    alias VpcId = String
   end
 end

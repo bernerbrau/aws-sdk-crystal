@@ -280,5 +280,64 @@ module Aws::KinesisVideoMedia
       include Aws::Structure
     end
 
+    alias ClientLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConnectionLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ContentType = String
+
+    alias ContinuationToken = String
+
+    alias ErrorMessage = String
+
+    alias FragmentNumberString = String
+
+    alias GetMediaInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "StartSelector" : StartSelector
+    )
+
+    alias GetMediaOutput = NamedTuple(
+      "ContentType" : (ContentType)?,
+      "Payload" : (Payload)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidEndpointException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NotAuthorizedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Payload = String | Array(UInt8) | IO
+
+    alias ResourceARN = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias StartSelector = NamedTuple(
+      "StartSelectorType" : StartSelectorType,
+      "AfterFragmentNumber" : (FragmentNumberString)?,
+      "StartTimestamp" : (Timestamp)?,
+      "ContinuationToken" : (ContinuationToken)?
+    )
+
+    alias StartSelectorType = String
+
+    alias StreamName = String
+
+    alias Timestamp = String | UInt64 | Time
   end
 end

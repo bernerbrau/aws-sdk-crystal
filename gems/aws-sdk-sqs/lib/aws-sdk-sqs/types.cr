@@ -2395,5 +2395,371 @@ module Aws::SQS
       include Aws::Structure
     end
 
+    alias AWSAccountIdList = Array(String)
+
+    alias ActionNameList = Array(String)
+
+    alias AddPermissionRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Label" : String,
+      "AWSAccountIds" : AWSAccountIdList,
+      "Actions" : ActionNameList
+    )
+
+    alias AttributeNameList = Array(QueueAttributeName)
+
+    alias BatchEntryIdsNotDistinct = NamedTuple(
+      
+    )
+
+    alias BatchRequestTooLong = NamedTuple(
+      
+    )
+
+    alias BatchResultErrorEntry = NamedTuple(
+      "Id" : String,
+      "SenderFault" : Boolean,
+      "Code" : String,
+      "Message" : (String)?
+    )
+
+    alias BatchResultErrorEntryList = Array(BatchResultErrorEntry)
+
+    alias Binary = String | Array(UInt8) | IO
+
+    alias BinaryList = Array(Binary)
+
+    alias Boolean = Bool
+
+    alias BoxedInteger = Int32
+
+    alias ChangeMessageVisibilityBatchRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Entries" : ChangeMessageVisibilityBatchRequestEntryList
+    )
+
+    alias ChangeMessageVisibilityBatchRequestEntry = NamedTuple(
+      "Id" : String,
+      "ReceiptHandle" : String,
+      "VisibilityTimeout" : (Integer)?
+    )
+
+    alias ChangeMessageVisibilityBatchRequestEntryList = Array(ChangeMessageVisibilityBatchRequestEntry)
+
+    alias ChangeMessageVisibilityBatchResult = NamedTuple(
+      "Successful" : ChangeMessageVisibilityBatchResultEntryList,
+      "Failed" : BatchResultErrorEntryList
+    )
+
+    alias ChangeMessageVisibilityBatchResultEntry = NamedTuple(
+      "Id" : String
+    )
+
+    alias ChangeMessageVisibilityBatchResultEntryList = Array(ChangeMessageVisibilityBatchResultEntry)
+
+    alias ChangeMessageVisibilityRequest = NamedTuple(
+      "QueueUrl" : String,
+      "ReceiptHandle" : String,
+      "VisibilityTimeout" : Integer
+    )
+
+    alias CreateQueueRequest = NamedTuple(
+      "QueueName" : String,
+      "Attributes" : (QueueAttributeMap)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateQueueResult = NamedTuple(
+      "QueueUrl" : (String)?
+    )
+
+    alias DeleteMessageBatchRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Entries" : DeleteMessageBatchRequestEntryList
+    )
+
+    alias DeleteMessageBatchRequestEntry = NamedTuple(
+      "Id" : String,
+      "ReceiptHandle" : String
+    )
+
+    alias DeleteMessageBatchRequestEntryList = Array(DeleteMessageBatchRequestEntry)
+
+    alias DeleteMessageBatchResult = NamedTuple(
+      "Successful" : DeleteMessageBatchResultEntryList,
+      "Failed" : BatchResultErrorEntryList
+    )
+
+    alias DeleteMessageBatchResultEntry = NamedTuple(
+      "Id" : String
+    )
+
+    alias DeleteMessageBatchResultEntryList = Array(DeleteMessageBatchResultEntry)
+
+    alias DeleteMessageRequest = NamedTuple(
+      "QueueUrl" : String,
+      "ReceiptHandle" : String
+    )
+
+    alias DeleteQueueRequest = NamedTuple(
+      "QueueUrl" : String
+    )
+
+    alias EmptyBatchRequest = NamedTuple(
+      
+    )
+
+    alias GetQueueAttributesRequest = NamedTuple(
+      "QueueUrl" : String,
+      "AttributeNames" : (AttributeNameList)?
+    )
+
+    alias GetQueueAttributesResult = NamedTuple(
+      "Attributes" : (QueueAttributeMap)?
+    )
+
+    alias GetQueueUrlRequest = NamedTuple(
+      "QueueName" : String,
+      "QueueOwnerAWSAccountId" : (String)?
+    )
+
+    alias GetQueueUrlResult = NamedTuple(
+      "QueueUrl" : (String)?
+    )
+
+    alias Integer = Int32
+
+    alias InvalidAttributeName = NamedTuple(
+      
+    )
+
+    alias InvalidBatchEntryId = NamedTuple(
+      
+    )
+
+    alias InvalidIdFormat = NamedTuple(
+      
+    )
+
+    alias InvalidMessageContents = NamedTuple(
+      
+    )
+
+    alias ListDeadLetterSourceQueuesRequest = NamedTuple(
+      "QueueUrl" : String,
+      "NextToken" : (Token)?,
+      "MaxResults" : (BoxedInteger)?
+    )
+
+    alias ListDeadLetterSourceQueuesResult = NamedTuple(
+      "queueUrls" : QueueUrlList,
+      "NextToken" : (Token)?
+    )
+
+    alias ListQueueTagsRequest = NamedTuple(
+      "QueueUrl" : String
+    )
+
+    alias ListQueueTagsResult = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias ListQueuesRequest = NamedTuple(
+      "QueueNamePrefix" : (String)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (BoxedInteger)?
+    )
+
+    alias ListQueuesResult = NamedTuple(
+      "QueueUrls" : (QueueUrlList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias Message = NamedTuple(
+      "MessageId" : (String)?,
+      "ReceiptHandle" : (String)?,
+      "MD5OfBody" : (String)?,
+      "Body" : (String)?,
+      "Attributes" : (MessageSystemAttributeMap)?,
+      "MD5OfMessageAttributes" : (String)?,
+      "MessageAttributes" : (MessageBodyAttributeMap)?
+    )
+
+    alias MessageAttributeName = String
+
+    alias MessageAttributeNameList = Array(MessageAttributeName)
+
+    alias MessageAttributeValue = NamedTuple(
+      "StringValue" : (String)?,
+      "BinaryValue" : (Binary)?,
+      "StringListValues" : (StringList)?,
+      "BinaryListValues" : (BinaryList)?,
+      "DataType" : String
+    )
+
+    alias MessageBodyAttributeMap = Hash(String,MessageAttributeValue)
+
+    alias MessageBodySystemAttributeMap = Hash(MessageSystemAttributeNameForSends,MessageSystemAttributeValue)
+
+    alias MessageList = Array(Message)
+
+    alias MessageNotInflight = NamedTuple(
+      
+    )
+
+    alias MessageSystemAttributeMap = Hash(MessageSystemAttributeName,String)
+
+    alias MessageSystemAttributeName = String
+
+    alias MessageSystemAttributeNameForSends = String
+
+    alias MessageSystemAttributeValue = NamedTuple(
+      "StringValue" : (String)?,
+      "BinaryValue" : (Binary)?,
+      "StringListValues" : (StringList)?,
+      "BinaryListValues" : (BinaryList)?,
+      "DataType" : String
+    )
+
+    alias OverLimit = NamedTuple(
+      
+    )
+
+    alias PurgeQueueInProgress = NamedTuple(
+      
+    )
+
+    alias PurgeQueueRequest = NamedTuple(
+      "QueueUrl" : String
+    )
+
+    alias QueueAttributeMap = Hash(QueueAttributeName,String)
+
+    alias QueueAttributeName = String
+
+    alias QueueDeletedRecently = NamedTuple(
+      
+    )
+
+    alias QueueDoesNotExist = NamedTuple(
+      
+    )
+
+    alias QueueNameExists = NamedTuple(
+      
+    )
+
+    alias QueueUrlList = Array(String)
+
+    alias ReceiptHandleIsInvalid = NamedTuple(
+      
+    )
+
+    alias ReceiveMessageRequest = NamedTuple(
+      "QueueUrl" : String,
+      "AttributeNames" : (AttributeNameList)?,
+      "MessageAttributeNames" : (MessageAttributeNameList)?,
+      "MaxNumberOfMessages" : (Integer)?,
+      "VisibilityTimeout" : (Integer)?,
+      "WaitTimeSeconds" : (Integer)?,
+      "ReceiveRequestAttemptId" : (String)?
+    )
+
+    alias ReceiveMessageResult = NamedTuple(
+      "Messages" : (MessageList)?
+    )
+
+    alias RemovePermissionRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Label" : String
+    )
+
+    alias SendMessageBatchRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Entries" : SendMessageBatchRequestEntryList
+    )
+
+    alias SendMessageBatchRequestEntry = NamedTuple(
+      "Id" : String,
+      "MessageBody" : String,
+      "DelaySeconds" : (Integer)?,
+      "MessageAttributes" : (MessageBodyAttributeMap)?,
+      "MessageSystemAttributes" : (MessageBodySystemAttributeMap)?,
+      "MessageDeduplicationId" : (String)?,
+      "MessageGroupId" : (String)?
+    )
+
+    alias SendMessageBatchRequestEntryList = Array(SendMessageBatchRequestEntry)
+
+    alias SendMessageBatchResult = NamedTuple(
+      "Successful" : SendMessageBatchResultEntryList,
+      "Failed" : BatchResultErrorEntryList
+    )
+
+    alias SendMessageBatchResultEntry = NamedTuple(
+      "Id" : String,
+      "MessageId" : String,
+      "MD5OfMessageBody" : String,
+      "MD5OfMessageAttributes" : (String)?,
+      "MD5OfMessageSystemAttributes" : (String)?,
+      "SequenceNumber" : (String)?
+    )
+
+    alias SendMessageBatchResultEntryList = Array(SendMessageBatchResultEntry)
+
+    alias SendMessageRequest = NamedTuple(
+      "QueueUrl" : String,
+      "MessageBody" : String,
+      "DelaySeconds" : (Integer)?,
+      "MessageAttributes" : (MessageBodyAttributeMap)?,
+      "MessageSystemAttributes" : (MessageBodySystemAttributeMap)?,
+      "MessageDeduplicationId" : (String)?,
+      "MessageGroupId" : (String)?
+    )
+
+    alias SendMessageResult = NamedTuple(
+      "MD5OfMessageBody" : (String)?,
+      "MD5OfMessageAttributes" : (String)?,
+      "MD5OfMessageSystemAttributes" : (String)?,
+      "MessageId" : (String)?,
+      "SequenceNumber" : (String)?
+    )
+
+    alias SetQueueAttributesRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Attributes" : QueueAttributeMap
+    )
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagQueueRequest = NamedTuple(
+      "QueueUrl" : String,
+      "Tags" : TagMap
+    )
+
+    alias TagValue = String
+
+    alias Token = String
+
+    alias TooManyEntriesInBatchRequest = NamedTuple(
+      
+    )
+
+    alias UnsupportedOperation = NamedTuple(
+      
+    )
+
+    alias UntagQueueRequest = NamedTuple(
+      "QueueUrl" : String,
+      "TagKeys" : TagKeyList
+    )
   end
 end

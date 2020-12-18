@@ -358,8 +358,8 @@ module Aws::EMRContainers
     #
     # @overload cancel_job_run(**params)
     # @param [Hash] params ({})
-    def cancel_job_run(params = {}, **options)
-      req = build_request(:cancel_job_run, params)
+    def cancel_job_run(, **options)
+      req = build_request(:cancel_job_run, )
       req.send_request(options)
     end
 
@@ -454,8 +454,8 @@ module Aws::EMRContainers
     #
     # @overload create_managed_endpoint(**params)
     # @param [Hash] params ({})
-    def create_managed_endpoint(params = {}, **options)
-      req = build_request(:create_managed_endpoint, params)
+    def create_managed_endpoint(, **options)
+      req = build_request(:create_managed_endpoint, )
       req.send_request(options)
     end
 
@@ -516,8 +516,8 @@ module Aws::EMRContainers
     #
     # @overload create_virtual_cluster(**params)
     # @param [Hash] params ({})
-    def create_virtual_cluster(params = {}, **options)
-      req = build_request(:create_virtual_cluster, params)
+    def create_virtual_cluster(, **options)
+      req = build_request(:create_virtual_cluster, )
       req.send_request(options)
     end
 
@@ -552,8 +552,8 @@ module Aws::EMRContainers
     #
     # @overload delete_managed_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_managed_endpoint(params = {}, **options)
-      req = build_request(:delete_managed_endpoint, params)
+    def delete_managed_endpoint(, **options)
+      req = build_request(:delete_managed_endpoint, )
       req.send_request(options)
     end
 
@@ -585,8 +585,8 @@ module Aws::EMRContainers
     #
     # @overload delete_virtual_cluster(**params)
     # @param [Hash] params ({})
-    def delete_virtual_cluster(params = {}, **options)
-      req = build_request(:delete_virtual_cluster, params)
+    def delete_virtual_cluster(, **options)
+      req = build_request(:delete_virtual_cluster, )
       req.send_request(options)
     end
 
@@ -646,8 +646,8 @@ module Aws::EMRContainers
     #
     # @overload describe_job_run(**params)
     # @param [Hash] params ({})
-    def describe_job_run(params = {}, **options)
-      req = build_request(:describe_job_run, params)
+    def describe_job_run(, **options)
+      req = build_request(:describe_job_run, )
       req.send_request(options)
     end
 
@@ -704,8 +704,8 @@ module Aws::EMRContainers
     #
     # @overload describe_managed_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_managed_endpoint(params = {}, **options)
-      req = build_request(:describe_managed_endpoint, params)
+    def describe_managed_endpoint(, **options)
+      req = build_request(:describe_managed_endpoint, )
       req.send_request(options)
     end
 
@@ -747,8 +747,8 @@ module Aws::EMRContainers
     #
     # @overload describe_virtual_cluster(**params)
     # @param [Hash] params ({})
-    def describe_virtual_cluster(params = {}, **options)
-      req = build_request(:describe_virtual_cluster, params)
+    def describe_virtual_cluster(, **options)
+      req = build_request(:describe_virtual_cluster, )
       req.send_request(options)
     end
 
@@ -833,8 +833,8 @@ module Aws::EMRContainers
     #
     # @overload list_job_runs(**params)
     # @param [Hash] params ({})
-    def list_job_runs(params = {}, **options)
-      req = build_request(:list_job_runs, params)
+    def list_job_runs(, **options)
+      req = build_request(:list_job_runs, )
       req.send_request(options)
     end
 
@@ -916,8 +916,8 @@ module Aws::EMRContainers
     #
     # @overload list_managed_endpoints(**params)
     # @param [Hash] params ({})
-    def list_managed_endpoints(params = {}, **options)
-      req = build_request(:list_managed_endpoints, params)
+    def list_managed_endpoints(, **options)
+      req = build_request(:list_managed_endpoints, )
       req.send_request(options)
     end
 
@@ -945,8 +945,8 @@ module Aws::EMRContainers
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1018,8 +1018,8 @@ module Aws::EMRContainers
     #
     # @overload list_virtual_clusters(**params)
     # @param [Hash] params ({})
-    def list_virtual_clusters(params = {}, **options)
-      req = build_request(:list_virtual_clusters, params)
+    def list_virtual_clusters(, **options)
+      req = build_request(:list_virtual_clusters, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::EMRContainers
     #
     # @overload start_job_run(**params)
     # @param [Hash] params ({})
-    def start_job_run(params = {}, **options)
-      req = build_request(:start_job_run, params)
+    def start_job_run(, **options)
+      req = build_request(:start_job_run, )
       req.send_request(options)
     end
 
@@ -1152,8 +1152,8 @@ module Aws::EMRContainers
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::EMRContainers
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

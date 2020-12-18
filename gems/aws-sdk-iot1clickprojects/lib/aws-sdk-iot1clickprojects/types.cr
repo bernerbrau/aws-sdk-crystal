@@ -844,5 +844,280 @@ module Aws::IoT1ClickProjects
 
     class UpdateProjectResponse < Aws::EmptyStructure; end
 
+    alias AssociateDeviceWithPlacementRequest = NamedTuple(
+      "projectName" : ProjectName,
+      "placementName" : PlacementName,
+      "deviceId" : DeviceId,
+      "deviceTemplateName" : DeviceTemplateName
+    )
+
+    alias AssociateDeviceWithPlacementResponse = NamedTuple(
+      
+    )
+
+    alias AttributeDefaultValue = String
+
+    alias AttributeName = String
+
+    alias AttributeValue = String
+
+    alias Code = String
+
+    alias CreatePlacementRequest = NamedTuple(
+      "placementName" : PlacementName,
+      "projectName" : ProjectName,
+      "attributes" : (PlacementAttributeMap)?
+    )
+
+    alias CreatePlacementResponse = NamedTuple(
+      
+    )
+
+    alias CreateProjectRequest = NamedTuple(
+      "projectName" : ProjectName,
+      "description" : (Description)?,
+      "placementTemplate" : (PlacementTemplate)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateProjectResponse = NamedTuple(
+      
+    )
+
+    alias DefaultPlacementAttributeMap = Hash(AttributeName,AttributeDefaultValue)
+
+    alias DeletePlacementRequest = NamedTuple(
+      "placementName" : PlacementName,
+      "projectName" : ProjectName
+    )
+
+    alias DeletePlacementResponse = NamedTuple(
+      
+    )
+
+    alias DeleteProjectRequest = NamedTuple(
+      "projectName" : ProjectName
+    )
+
+    alias DeleteProjectResponse = NamedTuple(
+      
+    )
+
+    alias DescribePlacementRequest = NamedTuple(
+      "placementName" : PlacementName,
+      "projectName" : ProjectName
+    )
+
+    alias DescribePlacementResponse = NamedTuple(
+      "placement" : PlacementDescription
+    )
+
+    alias DescribeProjectRequest = NamedTuple(
+      "projectName" : ProjectName
+    )
+
+    alias DescribeProjectResponse = NamedTuple(
+      "project" : ProjectDescription
+    )
+
+    alias Description = String
+
+    alias DeviceCallbackKey = String
+
+    alias DeviceCallbackOverrideMap = Hash(DeviceCallbackKey,DeviceCallbackValue)
+
+    alias DeviceCallbackValue = String
+
+    alias DeviceId = String
+
+    alias DeviceMap = Hash(DeviceTemplateName,DeviceId)
+
+    alias DeviceTemplate = NamedTuple(
+      "deviceType" : (DeviceType)?,
+      "callbackOverrides" : (DeviceCallbackOverrideMap)?
+    )
+
+    alias DeviceTemplateMap = Hash(DeviceTemplateName,DeviceTemplate)
+
+    alias DeviceTemplateName = String
+
+    alias DeviceType = String
+
+    alias DisassociateDeviceFromPlacementRequest = NamedTuple(
+      "projectName" : ProjectName,
+      "placementName" : PlacementName,
+      "deviceTemplateName" : DeviceTemplateName
+    )
+
+    alias DisassociateDeviceFromPlacementResponse = NamedTuple(
+      
+    )
+
+    alias GetDevicesInPlacementRequest = NamedTuple(
+      "projectName" : ProjectName,
+      "placementName" : PlacementName
+    )
+
+    alias GetDevicesInPlacementResponse = NamedTuple(
+      "devices" : DeviceMap
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "code" : Code,
+      "message" : Message
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "code" : Code,
+      "message" : Message
+    )
+
+    alias ListPlacementsRequest = NamedTuple(
+      "projectName" : ProjectName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPlacementsResponse = NamedTuple(
+      "placements" : PlacementSummaryList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListProjectsResponse = NamedTuple(
+      "projects" : ProjectSummaryList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ProjectArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias NextToken = String
+
+    alias PlacementAttributeMap = Hash(AttributeName,AttributeValue)
+
+    alias PlacementDescription = NamedTuple(
+      "projectName" : ProjectName,
+      "placementName" : PlacementName,
+      "attributes" : PlacementAttributeMap,
+      "createdDate" : Time,
+      "updatedDate" : Time
+    )
+
+    alias PlacementName = String
+
+    alias PlacementSummary = NamedTuple(
+      "projectName" : ProjectName,
+      "placementName" : PlacementName,
+      "createdDate" : Time,
+      "updatedDate" : Time
+    )
+
+    alias PlacementSummaryList = Array(PlacementSummary)
+
+    alias PlacementTemplate = NamedTuple(
+      "defaultAttributes" : (DefaultPlacementAttributeMap)?,
+      "deviceTemplates" : (DeviceTemplateMap)?
+    )
+
+    alias ProjectArn = String
+
+    alias ProjectDescription = NamedTuple(
+      "arn" : (ProjectArn)?,
+      "projectName" : ProjectName,
+      "description" : (Description)?,
+      "createdDate" : Time,
+      "updatedDate" : Time,
+      "placementTemplate" : (PlacementTemplate)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ProjectName = String
+
+    alias ProjectSummary = NamedTuple(
+      "arn" : (ProjectArn)?,
+      "projectName" : ProjectName,
+      "createdDate" : Time,
+      "updatedDate" : Time,
+      "tags" : (TagMap)?
+    )
+
+    alias ProjectSummaryList = Array(ProjectSummary)
+
+    alias ResourceConflictException = NamedTuple(
+      "code" : Code,
+      "message" : Message
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "code" : Code,
+      "message" : Message
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ProjectArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Time = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "code" : Code,
+      "message" : Message
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ProjectArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdatePlacementRequest = NamedTuple(
+      "placementName" : PlacementName,
+      "projectName" : ProjectName,
+      "attributes" : (PlacementAttributeMap)?
+    )
+
+    alias UpdatePlacementResponse = NamedTuple(
+      
+    )
+
+    alias UpdateProjectRequest = NamedTuple(
+      "projectName" : ProjectName,
+      "description" : (Description)?,
+      "placementTemplate" : (PlacementTemplate)?
+    )
+
+    alias UpdateProjectResponse = NamedTuple(
+      
+    )
   end
 end

@@ -193,5 +193,69 @@ module Aws::ForecastQueryService
       include Aws::Structure
     end
 
+    alias Arn = String
+
+    alias AttributeName = String
+
+    alias AttributeValue = String
+
+    alias DataPoint = NamedTuple(
+      "Timestamp" : (Timestamp)?,
+      "Value" : (Double)?
+    )
+
+    alias DateTime = String
+
+    alias Double = Float64
+
+    alias ErrorMessage = String
+
+    alias Filters = Hash(AttributeName,AttributeValue)
+
+    alias Forecast = NamedTuple(
+      "Predictions" : (Predictions)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NextToken = String
+
+    alias Predictions = Hash(Statistic,TimeSeries)
+
+    alias QueryForecastRequest = NamedTuple(
+      "ForecastArn" : Arn,
+      "StartDate" : (DateTime)?,
+      "EndDate" : (DateTime)?,
+      "Filters" : Filters,
+      "NextToken" : (NextToken)?
+    )
+
+    alias QueryForecastResponse = NamedTuple(
+      "Forecast" : (Forecast)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Statistic = String
+
+    alias TimeSeries = Array(DataPoint)
+
+    alias Timestamp = String
   end
 end

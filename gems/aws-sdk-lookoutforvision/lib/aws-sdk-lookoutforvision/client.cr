@@ -406,8 +406,8 @@ module Aws::LookoutforVision
     #
     # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, **options)
-      req = build_request(:create_dataset, params)
+    def create_dataset(, **options)
+      req = build_request(:create_dataset, )
       req.send_request(options)
     end
 
@@ -520,8 +520,8 @@ module Aws::LookoutforVision
     #
     # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, **options)
-      req = build_request(:create_model, params)
+    def create_model(, **options)
+      req = build_request(:create_model, )
       req.send_request(options)
     end
 
@@ -566,8 +566,8 @@ module Aws::LookoutforVision
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -628,8 +628,8 @@ module Aws::LookoutforVision
     #
     # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, **options)
-      req = build_request(:delete_dataset, params)
+    def delete_dataset(, **options)
+      req = build_request(:delete_dataset, )
       req.send_request(options)
     end
 
@@ -677,8 +677,8 @@ module Aws::LookoutforVision
     #
     # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, **options)
-      req = build_request(:delete_model, params)
+    def delete_model(, **options)
+      req = build_request(:delete_model, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::LookoutforVision
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -771,8 +771,8 @@ module Aws::LookoutforVision
     #
     # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, **options)
-      req = build_request(:describe_dataset, params)
+    def describe_dataset(, **options)
+      req = build_request(:describe_dataset, )
       req.send_request(options)
     end
 
@@ -820,8 +820,8 @@ module Aws::LookoutforVision
     #
     # @overload describe_model(**params)
     # @param [Hash] params ({})
-    def describe_model(params = {}, **options)
-      req = build_request(:describe_model, params)
+    def describe_model(, **options)
+      req = build_request(:describe_model, )
       req.send_request(options)
     end
 
@@ -855,8 +855,8 @@ module Aws::LookoutforVision
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -911,8 +911,8 @@ module Aws::LookoutforVision
     #
     # @overload detect_anomalies(**params)
     # @param [Hash] params ({})
-    def detect_anomalies(params = {}, **options)
-      req = build_request(:detect_anomalies, params)
+    def detect_anomalies(, **options)
+      req = build_request(:detect_anomalies, )
       req.send_request(options)
     end
 
@@ -994,8 +994,8 @@ module Aws::LookoutforVision
     #
     # @overload list_dataset_entries(**params)
     # @param [Hash] params ({})
-    def list_dataset_entries(params = {}, **options)
-      req = build_request(:list_dataset_entries, params)
+    def list_dataset_entries(, **options)
+      req = build_request(:list_dataset_entries, )
       req.send_request(options)
     end
 
@@ -1050,8 +1050,8 @@ module Aws::LookoutforVision
     #
     # @overload list_models(**params)
     # @param [Hash] params ({})
-    def list_models(params = {}, **options)
-      req = build_request(:list_models, params)
+    def list_models(, **options)
+      req = build_request(:list_models, )
       req.send_request(options)
     end
 
@@ -1095,8 +1095,8 @@ module Aws::LookoutforVision
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -1161,8 +1161,8 @@ module Aws::LookoutforVision
     #
     # @overload start_model(**params)
     # @param [Hash] params ({})
-    def start_model(params = {}, **options)
-      req = build_request(:start_model, params)
+    def start_model(, **options)
+      req = build_request(:start_model, )
       req.send_request(options)
     end
 
@@ -1208,8 +1208,8 @@ module Aws::LookoutforVision
     #
     # @overload stop_model(**params)
     # @param [Hash] params ({})
-    def stop_model(params = {}, **options)
-      req = build_request(:stop_model, params)
+    def stop_model(, **options)
+      req = build_request(:stop_model, )
       req.send_request(options)
     end
 
@@ -1268,8 +1268,8 @@ module Aws::LookoutforVision
     #
     # @overload update_dataset_entries(**params)
     # @param [Hash] params ({})
-    def update_dataset_entries(params = {}, **options)
-      req = build_request(:update_dataset_entries, params)
+    def update_dataset_entries(, **options)
+      req = build_request(:update_dataset_entries, )
       req.send_request(options)
     end
 

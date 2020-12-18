@@ -379,8 +379,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload add_application_cloud_watch_logging_option(**params)
     # @param [Hash] params ({})
-    def add_application_cloud_watch_logging_option(params = {}, **options)
-      req = build_request(:add_application_cloud_watch_logging_option, params)
+    def add_application_cloud_watch_logging_option(, **options)
+      req = build_request(:add_application_cloud_watch_logging_option, )
       req.send_request(options)
     end
 
@@ -490,8 +490,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload add_application_input(**params)
     # @param [Hash] params ({})
-    def add_application_input(params = {}, **options)
-      req = build_request(:add_application_input, params)
+    def add_application_input(, **options)
+      req = build_request(:add_application_input, )
       req.send_request(options)
     end
 
@@ -555,8 +555,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload add_application_input_processing_configuration(**params)
     # @param [Hash] params ({})
-    def add_application_input_processing_configuration(params = {}, **options)
-      req = build_request(:add_application_input_processing_configuration, params)
+    def add_application_input_processing_configuration(, **options)
+      req = build_request(:add_application_input_processing_configuration, )
       req.send_request(options)
     end
 
@@ -645,8 +645,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload add_application_output(**params)
     # @param [Hash] params ({})
-    def add_application_output(params = {}, **options)
-      req = build_request(:add_application_output, params)
+    def add_application_output(, **options)
+      req = build_request(:add_application_output, )
       req.send_request(options)
     end
 
@@ -741,8 +741,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload add_application_reference_data_source(**params)
     # @param [Hash] params ({})
-    def add_application_reference_data_source(params = {}, **options)
-      req = build_request(:add_application_reference_data_source, params)
+    def add_application_reference_data_source(, **options)
+      req = build_request(:add_application_reference_data_source, )
       req.send_request(options)
     end
 
@@ -803,8 +803,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload add_application_vpc_configuration(**params)
     # @param [Hash] params ({})
-    def add_application_vpc_configuration(params = {}, **options)
-      req = build_request(:add_application_vpc_configuration, params)
+    def add_application_vpc_configuration(, **options)
+      req = build_request(:add_application_vpc_configuration, )
       req.send_request(options)
     end
 
@@ -1118,8 +1118,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -1170,8 +1170,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload create_application_presigned_url(**params)
     # @param [Hash] params ({})
-    def create_application_presigned_url(params = {}, **options)
-      req = build_request(:create_application_presigned_url, params)
+    def create_application_presigned_url(, **options)
+      req = build_request(:create_application_presigned_url, )
       req.send_request(options)
     end
 
@@ -1196,8 +1196,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload create_application_snapshot(**params)
     # @param [Hash] params ({})
-    def create_application_snapshot(params = {}, **options)
-      req = build_request(:create_application_snapshot, params)
+    def create_application_snapshot(, **options)
+      req = build_request(:create_application_snapshot, )
       req.send_request(options)
     end
 
@@ -1223,8 +1223,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -1270,8 +1270,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application_cloud_watch_logging_option(**params)
     # @param [Hash] params ({})
-    def delete_application_cloud_watch_logging_option(params = {}, **options)
-      req = build_request(:delete_application_cloud_watch_logging_option, params)
+    def delete_application_cloud_watch_logging_option(, **options)
+      req = build_request(:delete_application_cloud_watch_logging_option, )
       req.send_request(options)
     end
 
@@ -1313,8 +1313,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application_input_processing_configuration(**params)
     # @param [Hash] params ({})
-    def delete_application_input_processing_configuration(params = {}, **options)
-      req = build_request(:delete_application_input_processing_configuration, params)
+    def delete_application_input_processing_configuration(, **options)
+      req = build_request(:delete_application_input_processing_configuration, )
       req.send_request(options)
     end
 
@@ -1362,8 +1362,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application_output(**params)
     # @param [Hash] params ({})
-    def delete_application_output(params = {}, **options)
-      req = build_request(:delete_application_output, params)
+    def delete_application_output(, **options)
+      req = build_request(:delete_application_output, )
       req.send_request(options)
     end
 
@@ -1412,8 +1412,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application_reference_data_source(**params)
     # @param [Hash] params ({})
-    def delete_application_reference_data_source(params = {}, **options)
-      req = build_request(:delete_application_reference_data_source, params)
+    def delete_application_reference_data_source(, **options)
+      req = build_request(:delete_application_reference_data_source, )
       req.send_request(options)
     end
 
@@ -1443,8 +1443,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_application_snapshot(params = {}, **options)
-      req = build_request(:delete_application_snapshot, params)
+    def delete_application_snapshot(, **options)
+      req = build_request(:delete_application_snapshot, )
       req.send_request(options)
     end
 
@@ -1482,8 +1482,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload delete_application_vpc_configuration(**params)
     # @param [Hash] params ({})
-    def delete_application_vpc_configuration(params = {}, **options)
-      req = build_request(:delete_application_vpc_configuration, params)
+    def delete_application_vpc_configuration(, **options)
+      req = build_request(:delete_application_vpc_configuration, )
       req.send_request(options)
     end
 
@@ -1613,8 +1613,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload describe_application(**params)
     # @param [Hash] params ({})
-    def describe_application(params = {}, **options)
-      req = build_request(:describe_application, params)
+    def describe_application(, **options)
+      req = build_request(:describe_application, )
       req.send_request(options)
     end
 
@@ -1649,8 +1649,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload describe_application_snapshot(**params)
     # @param [Hash] params ({})
-    def describe_application_snapshot(params = {}, **options)
-      req = build_request(:describe_application_snapshot, params)
+    def describe_application_snapshot(, **options)
+      req = build_request(:describe_application_snapshot, )
       req.send_request(options)
     end
 
@@ -1732,8 +1732,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload discover_input_schema(**params)
     # @param [Hash] params ({})
-    def discover_input_schema(params = {}, **options)
-      req = build_request(:discover_input_schema, params)
+    def discover_input_schema(, **options)
+      req = build_request(:discover_input_schema, )
       req.send_request(options)
     end
 
@@ -1777,8 +1777,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload list_application_snapshots(**params)
     # @param [Hash] params ({})
-    def list_application_snapshots(params = {}, **options)
-      req = build_request(:list_application_snapshots, params)
+    def list_application_snapshots(, **options)
+      req = build_request(:list_application_snapshots, )
       req.send_request(options)
     end
 
@@ -1828,8 +1828,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, **options)
-      req = build_request(:list_applications, params)
+    def list_applications(, **options)
+      req = build_request(:list_applications, )
       req.send_request(options)
     end
 
@@ -1863,8 +1863,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1908,8 +1908,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload start_application(**params)
     # @param [Hash] params ({})
-    def start_application(params = {}, **options)
-      req = build_request(:start_application, params)
+    def start_application(, **options)
+      req = build_request(:start_application, )
       req.send_request(options)
     end
 
@@ -1958,8 +1958,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload stop_application(**params)
     # @param [Hash] params ({})
-    def stop_application(params = {}, **options)
-      req = build_request(:stop_application, params)
+    def stop_application(, **options)
+      req = build_request(:stop_application, )
       req.send_request(options)
     end
 
@@ -1996,8 +1996,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2028,8 +2028,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2344,8 +2344,8 @@ module Aws::KinesisAnalyticsV2
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 

@@ -365,5 +365,98 @@ module Aws::Pricing
       include Aws::Structure
     end
 
+    alias AttributeNameList = Array(String)
+
+    alias AttributeValue = NamedTuple(
+      "Value" : (String)?
+    )
+
+    alias AttributeValueList = Array(AttributeValue)
+
+    alias BoxedInteger = Int32
+
+    alias DescribeServicesRequest = NamedTuple(
+      "ServiceCode" : (String)?,
+      "FormatVersion" : (String)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (BoxedInteger)?
+    )
+
+    alias DescribeServicesResponse = NamedTuple(
+      "Services" : (ServiceList)?,
+      "FormatVersion" : (String)?,
+      "NextToken" : (String)?
+    )
+
+    alias ExpiredNextTokenException = NamedTuple(
+      "Message" : (errorMessage)?
+    )
+
+    alias Filter = NamedTuple(
+      "Type" : FilterType,
+      "Field" : String,
+      "Value" : String
+    )
+
+    alias FilterType = String
+
+    alias Filters = Array(Filter)
+
+    alias GetAttributeValuesRequest = NamedTuple(
+      "ServiceCode" : String,
+      "AttributeName" : String,
+      "NextToken" : (String)?,
+      "MaxResults" : (BoxedInteger)?
+    )
+
+    alias GetAttributeValuesResponse = NamedTuple(
+      "AttributeValues" : (AttributeValueList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetProductsRequest = NamedTuple(
+      "ServiceCode" : (String)?,
+      "Filters" : (Filters)?,
+      "FormatVersion" : (String)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (BoxedInteger)?
+    )
+
+    alias GetProductsResponse = NamedTuple(
+      "FormatVersion" : (String)?,
+      "PriceList" : (PriceList)?,
+      "NextToken" : (String)?
+    )
+
+    alias InternalErrorException = NamedTuple(
+      "Message" : (errorMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (errorMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "Message" : (errorMessage)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (errorMessage)?
+    )
+
+    alias PriceList = Array(PriceListItemJSON)
+
+    alias PriceListItemJSON = String
+
+    alias Service = NamedTuple(
+      "ServiceCode" : (String)?,
+      "AttributeNames" : (AttributeNameList)?
+    )
+
+    alias ServiceList = Array(Service)
+
+    alias String = String
+
+    alias errorMessage = String
   end
 end

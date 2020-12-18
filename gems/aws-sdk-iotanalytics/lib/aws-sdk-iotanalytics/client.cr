@@ -383,8 +383,8 @@ module Aws::IoTAnalytics
     #
     # @overload batch_put_message(**params)
     # @param [Hash] params ({})
-    def batch_put_message(params = {}, **options)
-      req = build_request(:batch_put_message, params)
+    def batch_put_message(, **options)
+      req = build_request(:batch_put_message, )
       req.send_request(options)
     end
 
@@ -408,8 +408,8 @@ module Aws::IoTAnalytics
     #
     # @overload cancel_pipeline_reprocessing(**params)
     # @param [Hash] params ({})
-    def cancel_pipeline_reprocessing(params = {}, **options)
-      req = build_request(:cancel_pipeline_reprocessing, params)
+    def cancel_pipeline_reprocessing(, **options)
+      req = build_request(:cancel_pipeline_reprocessing, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::IoTAnalytics
     #
     # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, **options)
-      req = build_request(:create_channel, params)
+    def create_channel(, **options)
+      req = build_request(:create_channel, )
       req.send_request(options)
     end
 
@@ -650,8 +650,8 @@ module Aws::IoTAnalytics
     #
     # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, **options)
-      req = build_request(:create_dataset, params)
+    def create_dataset(, **options)
+      req = build_request(:create_dataset, )
       req.send_request(options)
     end
 
@@ -686,8 +686,8 @@ module Aws::IoTAnalytics
     #
     # @overload create_dataset_content(**params)
     # @param [Hash] params ({})
-    def create_dataset_content(params = {}, **options)
-      req = build_request(:create_dataset_content, params)
+    def create_dataset_content(, **options)
+      req = build_request(:create_dataset_content, )
       req.send_request(options)
     end
 
@@ -775,8 +775,8 @@ module Aws::IoTAnalytics
     #
     # @overload create_datastore(**params)
     # @param [Hash] params ({})
-    def create_datastore(params = {}, **options)
-      req = build_request(:create_datastore, params)
+    def create_datastore(, **options)
+      req = build_request(:create_datastore, )
       req.send_request(options)
     end
 
@@ -891,8 +891,8 @@ module Aws::IoTAnalytics
     #
     # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, **options)
-      req = build_request(:create_pipeline, params)
+    def create_pipeline(, **options)
+      req = build_request(:create_pipeline, )
       req.send_request(options)
     end
 
@@ -911,8 +911,8 @@ module Aws::IoTAnalytics
     #
     # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, **options)
-      req = build_request(:delete_channel, params)
+    def delete_channel(, **options)
+      req = build_request(:delete_channel, )
       req.send_request(options)
     end
 
@@ -934,8 +934,8 @@ module Aws::IoTAnalytics
     #
     # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, **options)
-      req = build_request(:delete_dataset, params)
+    def delete_dataset(, **options)
+      req = build_request(:delete_dataset, )
       req.send_request(options)
     end
 
@@ -961,8 +961,8 @@ module Aws::IoTAnalytics
     #
     # @overload delete_dataset_content(**params)
     # @param [Hash] params ({})
-    def delete_dataset_content(params = {}, **options)
-      req = build_request(:delete_dataset_content, params)
+    def delete_dataset_content(, **options)
+      req = build_request(:delete_dataset_content, )
       req.send_request(options)
     end
 
@@ -981,8 +981,8 @@ module Aws::IoTAnalytics
     #
     # @overload delete_datastore(**params)
     # @param [Hash] params ({})
-    def delete_datastore(params = {}, **options)
-      req = build_request(:delete_datastore, params)
+    def delete_datastore(, **options)
+      req = build_request(:delete_datastore, )
       req.send_request(options)
     end
 
@@ -1001,8 +1001,8 @@ module Aws::IoTAnalytics
     #
     # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, **options)
-      req = build_request(:delete_pipeline, params)
+    def delete_pipeline(, **options)
+      req = build_request(:delete_pipeline, )
       req.send_request(options)
     end
 
@@ -1046,8 +1046,8 @@ module Aws::IoTAnalytics
     #
     # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, **options)
-      req = build_request(:describe_channel, params)
+    def describe_channel(, **options)
+      req = build_request(:describe_channel, )
       req.send_request(options)
     end
 
@@ -1111,8 +1111,8 @@ module Aws::IoTAnalytics
     #
     # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, **options)
-      req = build_request(:describe_dataset, params)
+    def describe_dataset(, **options)
+      req = build_request(:describe_dataset, )
       req.send_request(options)
     end
 
@@ -1159,8 +1159,8 @@ module Aws::IoTAnalytics
     #
     # @overload describe_datastore(**params)
     # @param [Hash] params ({})
-    def describe_datastore(params = {}, **options)
-      req = build_request(:describe_datastore, params)
+    def describe_datastore(, **options)
+      req = build_request(:describe_datastore, )
       req.send_request(options)
     end
 
@@ -1179,8 +1179,8 @@ module Aws::IoTAnalytics
     #
     # @overload describe_logging_options(**params)
     # @param [Hash] params ({})
-    def describe_logging_options(params = {}, **options)
-      req = build_request(:describe_logging_options, params)
+    def describe_logging_options(, **options)
+      req = build_request(:describe_logging_options, )
       req.send_request(options)
     end
 
@@ -1251,8 +1251,8 @@ module Aws::IoTAnalytics
     #
     # @overload describe_pipeline(**params)
     # @param [Hash] params ({})
-    def describe_pipeline(params = {}, **options)
-      req = build_request(:describe_pipeline, params)
+    def describe_pipeline(, **options)
+      req = build_request(:describe_pipeline, )
       req.send_request(options)
     end
 
@@ -1291,8 +1291,8 @@ module Aws::IoTAnalytics
     #
     # @overload get_dataset_content(**params)
     # @param [Hash] params ({})
-    def get_dataset_content(params = {}, **options)
-      req = build_request(:get_dataset_content, params)
+    def get_dataset_content(, **options)
+      req = build_request(:get_dataset_content, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::IoTAnalytics
     #
     # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, **options)
-      req = build_request(:list_channels, params)
+    def list_channels(, **options)
+      req = build_request(:list_channels, )
       req.send_request(options)
     end
 
@@ -1391,8 +1391,8 @@ module Aws::IoTAnalytics
     #
     # @overload list_dataset_contents(**params)
     # @param [Hash] params ({})
-    def list_dataset_contents(params = {}, **options)
-      req = build_request(:list_dataset_contents, params)
+    def list_dataset_contents(, **options)
+      req = build_request(:list_dataset_contents, )
       req.send_request(options)
     end
 
@@ -1437,8 +1437,8 @@ module Aws::IoTAnalytics
     #
     # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, **options)
-      req = build_request(:list_datasets, params)
+    def list_datasets(, **options)
+      req = build_request(:list_datasets, )
       req.send_request(options)
     end
 
@@ -1482,8 +1482,8 @@ module Aws::IoTAnalytics
     #
     # @overload list_datastores(**params)
     # @param [Hash] params ({})
-    def list_datastores(params = {}, **options)
-      req = build_request(:list_datastores, params)
+    def list_datastores(, **options)
+      req = build_request(:list_datastores, )
       req.send_request(options)
     end
 
@@ -1525,8 +1525,8 @@ module Aws::IoTAnalytics
     #
     # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, **options)
-      req = build_request(:list_pipelines, params)
+    def list_pipelines(, **options)
+      req = build_request(:list_pipelines, )
       req.send_request(options)
     end
 
@@ -1553,8 +1553,8 @@ module Aws::IoTAnalytics
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1583,8 +1583,8 @@ module Aws::IoTAnalytics
     #
     # @overload put_logging_options(**params)
     # @param [Hash] params ({})
-    def put_logging_options(params = {}, **options)
-      req = build_request(:put_logging_options, params)
+    def put_logging_options(, **options)
+      req = build_request(:put_logging_options, )
       req.send_request(options)
     end
 
@@ -1680,8 +1680,8 @@ module Aws::IoTAnalytics
     #
     # @overload run_pipeline_activity(**params)
     # @param [Hash] params ({})
-    def run_pipeline_activity(params = {}, **options)
-      req = build_request(:run_pipeline_activity, params)
+    def run_pipeline_activity(, **options)
+      req = build_request(:run_pipeline_activity, )
       req.send_request(options)
     end
 
@@ -1721,8 +1721,8 @@ module Aws::IoTAnalytics
     #
     # @overload sample_channel_data(**params)
     # @param [Hash] params ({})
-    def sample_channel_data(params = {}, **options)
-      req = build_request(:sample_channel_data, params)
+    def sample_channel_data(, **options)
+      req = build_request(:sample_channel_data, )
       req.send_request(options)
     end
 
@@ -1771,8 +1771,8 @@ module Aws::IoTAnalytics
     #
     # @overload start_pipeline_reprocessing(**params)
     # @param [Hash] params ({})
-    def start_pipeline_reprocessing(params = {}, **options)
-      req = build_request(:start_pipeline_reprocessing, params)
+    def start_pipeline_reprocessing(, **options)
+      req = build_request(:start_pipeline_reprocessing, )
       req.send_request(options)
     end
 
@@ -1801,8 +1801,8 @@ module Aws::IoTAnalytics
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1825,8 +1825,8 @@ module Aws::IoTAnalytics
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1869,8 +1869,8 @@ module Aws::IoTAnalytics
     #
     # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, **options)
-      req = build_request(:update_channel, params)
+    def update_channel(, **options)
+      req = build_request(:update_channel, )
       req.send_request(options)
     end
 
@@ -2009,8 +2009,8 @@ module Aws::IoTAnalytics
     #
     # @overload update_dataset(**params)
     # @param [Hash] params ({})
-    def update_dataset(params = {}, **options)
-      req = build_request(:update_dataset, params)
+    def update_dataset(, **options)
+      req = build_request(:update_dataset, )
       req.send_request(options)
     end
 
@@ -2079,8 +2079,8 @@ module Aws::IoTAnalytics
     #
     # @overload update_datastore(**params)
     # @param [Hash] params ({})
-    def update_datastore(params = {}, **options)
-      req = build_request(:update_datastore, params)
+    def update_datastore(, **options)
+      req = build_request(:update_datastore, )
       req.send_request(options)
     end
 
@@ -2176,8 +2176,8 @@ module Aws::IoTAnalytics
     #
     # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, **options)
-      req = build_request(:update_pipeline, params)
+    def update_pipeline(, **options)
+      req = build_request(:update_pipeline, )
       req.send_request(options)
     end
 

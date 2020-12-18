@@ -681,5 +681,177 @@ module Aws::MarketplaceMetering
       include Aws::Structure
     end
 
+    alias AllocatedUsageQuantity = Int32
+
+    alias BatchMeterUsageRequest = NamedTuple(
+      "UsageRecords" : UsageRecordList,
+      "ProductCode" : ProductCode
+    )
+
+    alias BatchMeterUsageResult = NamedTuple(
+      "Results" : (UsageRecordResultList)?,
+      "UnprocessedRecords" : (UsageRecordList)?
+    )
+
+    alias Boolean = Bool
+
+    alias CustomerIdentifier = String
+
+    alias CustomerNotEntitledException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias DisabledApiException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias DuplicateRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ExpiredTokenException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InternalServiceErrorException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidCustomerIdentifierException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidEndpointRegionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidProductCodeException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidPublicKeyVersionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidRegionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidTagException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidTokenException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidUsageAllocationsException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidUsageDimensionException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias MeterUsageRequest = NamedTuple(
+      "ProductCode" : ProductCode,
+      "Timestamp" : Timestamp,
+      "UsageDimension" : UsageDimension,
+      "UsageQuantity" : (UsageQuantity)?,
+      "DryRun" : (Boolean)?,
+      "UsageAllocations" : (UsageAllocations)?
+    )
+
+    alias MeterUsageResult = NamedTuple(
+      "MeteringRecordId" : (String)?
+    )
+
+    alias NonEmptyString = String
+
+    alias Nonce = String
+
+    alias PlatformNotSupportedException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ProductCode = String
+
+    alias RegisterUsageRequest = NamedTuple(
+      "ProductCode" : ProductCode,
+      "PublicKeyVersion" : VersionInteger,
+      "Nonce" : (Nonce)?
+    )
+
+    alias RegisterUsageResult = NamedTuple(
+      "PublicKeyRotationTimestamp" : (Timestamp)?,
+      "Signature" : (NonEmptyString)?
+    )
+
+    alias ResolveCustomerRequest = NamedTuple(
+      "RegistrationToken" : NonEmptyString
+    )
+
+    alias ResolveCustomerResult = NamedTuple(
+      "CustomerIdentifier" : (CustomerIdentifier)?,
+      "ProductCode" : (ProductCode)?
+    )
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampOutOfBoundsException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias UsageAllocation = NamedTuple(
+      "AllocatedUsageQuantity" : AllocatedUsageQuantity,
+      "Tags" : (TagList)?
+    )
+
+    alias UsageAllocations = Array(UsageAllocation)
+
+    alias UsageDimension = String
+
+    alias UsageQuantity = Int32
+
+    alias UsageRecord = NamedTuple(
+      "Timestamp" : Timestamp,
+      "CustomerIdentifier" : CustomerIdentifier,
+      "Dimension" : UsageDimension,
+      "Quantity" : (UsageQuantity)?,
+      "UsageAllocations" : (UsageAllocations)?
+    )
+
+    alias UsageRecordList = Array(UsageRecord)
+
+    alias UsageRecordResult = NamedTuple(
+      "UsageRecord" : (UsageRecord)?,
+      "MeteringRecordId" : (String)?,
+      "Status" : (UsageRecordResultStatus)?
+    )
+
+    alias UsageRecordResultList = Array(UsageRecordResult)
+
+    alias UsageRecordResultStatus = String
+
+    alias VersionInteger = Int32
+
+    alias errorMessage = String
   end
 end

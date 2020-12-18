@@ -7102,5 +7102,1533 @@ module Aws::SESV2
       include Aws::Structure
     end
 
+    alias AccountDetails = NamedTuple(
+      "MailType" : (MailType)?,
+      "WebsiteURL" : (WebsiteURL)?,
+      "ContactLanguage" : (ContactLanguage)?,
+      "UseCaseDescription" : (UseCaseDescription)?,
+      "AdditionalContactEmailAddresses" : (AdditionalContactEmailAddresses)?,
+      "ReviewDetails" : (ReviewDetails)?
+    )
+
+    alias AccountSuspendedException = NamedTuple(
+      
+    )
+
+    alias AdditionalContactEmailAddress = String
+
+    alias AdditionalContactEmailAddresses = Array(AdditionalContactEmailAddress)
+
+    alias AlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias AmazonResourceName = String
+
+    alias AttributesData = String
+
+    alias BadRequestException = NamedTuple(
+      
+    )
+
+    alias BehaviorOnMxFailure = String
+
+    alias BlacklistEntries = Array(BlacklistEntry)
+
+    alias BlacklistEntry = NamedTuple(
+      "RblName" : (RblName)?,
+      "ListingTime" : (Timestamp)?,
+      "Description" : (BlacklistingDescription)?
+    )
+
+    alias BlacklistItemName = String
+
+    alias BlacklistItemNames = Array(BlacklistItemName)
+
+    alias BlacklistReport = Hash(BlacklistItemName,BlacklistEntries)
+
+    alias BlacklistingDescription = String
+
+    alias Body = NamedTuple(
+      "Text" : (Content)?,
+      "Html" : (Content)?
+    )
+
+    alias BulkEmailContent = NamedTuple(
+      "Template" : (Template)?
+    )
+
+    alias BulkEmailEntry = NamedTuple(
+      "Destination" : Destination,
+      "ReplacementTags" : (MessageTagList)?,
+      "ReplacementEmailContent" : (ReplacementEmailContent)?
+    )
+
+    alias BulkEmailEntryList = Array(BulkEmailEntry)
+
+    alias BulkEmailEntryResult = NamedTuple(
+      "Status" : (BulkEmailStatus)?,
+      "Error" : (ErrorMessage)?,
+      "MessageId" : (OutboundMessageId)?
+    )
+
+    alias BulkEmailEntryResultList = Array(BulkEmailEntryResult)
+
+    alias BulkEmailStatus = String
+
+    alias CampaignId = String
+
+    alias CaseId = String
+
+    alias Charset = String
+
+    alias CloudWatchDestination = NamedTuple(
+      "DimensionConfigurations" : CloudWatchDimensionConfigurations
+    )
+
+    alias CloudWatchDimensionConfiguration = NamedTuple(
+      "DimensionName" : DimensionName,
+      "DimensionValueSource" : DimensionValueSource,
+      "DefaultDimensionValue" : DefaultDimensionValue
+    )
+
+    alias CloudWatchDimensionConfigurations = Array(CloudWatchDimensionConfiguration)
+
+    alias ConcurrentModificationException = NamedTuple(
+      
+    )
+
+    alias ConfigurationSetName = String
+
+    alias ConfigurationSetNameList = Array(ConfigurationSetName)
+
+    alias ConflictException = NamedTuple(
+      
+    )
+
+    alias Contact = NamedTuple(
+      "EmailAddress" : (EmailAddress)?,
+      "TopicPreferences" : (TopicPreferenceList)?,
+      "TopicDefaultPreferences" : (TopicPreferenceList)?,
+      "UnsubscribeAll" : (UnsubscribeAll)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias ContactLanguage = String
+
+    alias ContactList = NamedTuple(
+      "ContactListName" : (ContactListName)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias ContactListDestination = NamedTuple(
+      "ContactListName" : ContactListName,
+      "ContactListImportAction" : ContactListImportAction
+    )
+
+    alias ContactListImportAction = String
+
+    alias ContactListName = String
+
+    alias Content = NamedTuple(
+      "Data" : MessageData,
+      "Charset" : (Charset)?
+    )
+
+    alias CreateConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "EventDestinationName" : EventDestinationName,
+      "EventDestination" : EventDestinationDefinition
+    )
+
+    alias CreateConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias CreateConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "TrackingOptions" : (TrackingOptions)?,
+      "DeliveryOptions" : (DeliveryOptions)?,
+      "ReputationOptions" : (ReputationOptions)?,
+      "SendingOptions" : (SendingOptions)?,
+      "Tags" : (TagList)?,
+      "SuppressionOptions" : (SuppressionOptions)?
+    )
+
+    alias CreateConfigurationSetResponse = NamedTuple(
+      
+    )
+
+    alias CreateContactListRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "Topics" : (Topics)?,
+      "Description" : (Description)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateContactListResponse = NamedTuple(
+      
+    )
+
+    alias CreateContactRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "EmailAddress" : EmailAddress,
+      "TopicPreferences" : (TopicPreferenceList)?,
+      "UnsubscribeAll" : (UnsubscribeAll)?,
+      "AttributesData" : (AttributesData)?
+    )
+
+    alias CreateContactResponse = NamedTuple(
+      
+    )
+
+    alias CreateCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName,
+      "FromEmailAddress" : EmailAddress,
+      "TemplateSubject" : EmailTemplateSubject,
+      "TemplateContent" : TemplateContent,
+      "SuccessRedirectionURL" : SuccessRedirectionURL,
+      "FailureRedirectionURL" : FailureRedirectionURL
+    )
+
+    alias CreateCustomVerificationEmailTemplateResponse = NamedTuple(
+      
+    )
+
+    alias CreateDedicatedIpPoolRequest = NamedTuple(
+      "PoolName" : PoolName,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDedicatedIpPoolResponse = NamedTuple(
+      
+    )
+
+    alias CreateDeliverabilityTestReportRequest = NamedTuple(
+      "ReportName" : (ReportName)?,
+      "FromEmailAddress" : EmailAddress,
+      "Content" : EmailContent,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDeliverabilityTestReportResponse = NamedTuple(
+      "ReportId" : ReportId,
+      "DeliverabilityTestStatus" : DeliverabilityTestStatus
+    )
+
+    alias CreateEmailIdentityPolicyRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "PolicyName" : PolicyName,
+      "Policy" : Policy
+    )
+
+    alias CreateEmailIdentityPolicyResponse = NamedTuple(
+      
+    )
+
+    alias CreateEmailIdentityRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "Tags" : (TagList)?,
+      "DkimSigningAttributes" : (DkimSigningAttributes)?
+    )
+
+    alias CreateEmailIdentityResponse = NamedTuple(
+      "IdentityType" : (IdentityType)?,
+      "VerifiedForSendingStatus" : (Enabled)?,
+      "DkimAttributes" : (DkimAttributes)?
+    )
+
+    alias CreateEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName,
+      "TemplateContent" : EmailTemplateContent
+    )
+
+    alias CreateEmailTemplateResponse = NamedTuple(
+      
+    )
+
+    alias CreateImportJobRequest = NamedTuple(
+      "ImportDestination" : ImportDestination,
+      "ImportDataSource" : ImportDataSource
+    )
+
+    alias CreateImportJobResponse = NamedTuple(
+      "JobId" : (JobId)?
+    )
+
+    alias CustomRedirectDomain = String
+
+    alias CustomVerificationEmailTemplateMetadata = NamedTuple(
+      "TemplateName" : (EmailTemplateName)?,
+      "FromEmailAddress" : (EmailAddress)?,
+      "TemplateSubject" : (EmailTemplateSubject)?,
+      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
+      "FailureRedirectionURL" : (FailureRedirectionURL)?
+    )
+
+    alias CustomVerificationEmailTemplatesList = Array(CustomVerificationEmailTemplateMetadata)
+
+    alias DailyVolume = NamedTuple(
+      "StartDate" : (Timestamp)?,
+      "VolumeStatistics" : (VolumeStatistics)?,
+      "DomainIspPlacements" : (DomainIspPlacements)?
+    )
+
+    alias DailyVolumes = Array(DailyVolume)
+
+    alias DataFormat = String
+
+    alias DedicatedIp = NamedTuple(
+      "Ip" : Ip,
+      "WarmupStatus" : WarmupStatus,
+      "WarmupPercentage" : Percentage100Wrapper,
+      "PoolName" : (PoolName)?
+    )
+
+    alias DedicatedIpList = Array(DedicatedIp)
+
+    alias DefaultDimensionValue = String
+
+    alias DeleteConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "EventDestinationName" : EventDestinationName
+    )
+
+    alias DeleteConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName
+    )
+
+    alias DeleteConfigurationSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteContactListRequest = NamedTuple(
+      "ContactListName" : ContactListName
+    )
+
+    alias DeleteContactListResponse = NamedTuple(
+      
+    )
+
+    alias DeleteContactRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "EmailAddress" : EmailAddress
+    )
+
+    alias DeleteContactResponse = NamedTuple(
+      
+    )
+
+    alias DeleteCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName
+    )
+
+    alias DeleteCustomVerificationEmailTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDedicatedIpPoolRequest = NamedTuple(
+      "PoolName" : PoolName
+    )
+
+    alias DeleteDedicatedIpPoolResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEmailIdentityPolicyRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "PolicyName" : PolicyName
+    )
+
+    alias DeleteEmailIdentityPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEmailIdentityRequest = NamedTuple(
+      "EmailIdentity" : Identity
+    )
+
+    alias DeleteEmailIdentityResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName
+    )
+
+    alias DeleteEmailTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSuppressedDestinationRequest = NamedTuple(
+      "EmailAddress" : EmailAddress
+    )
+
+    alias DeleteSuppressedDestinationResponse = NamedTuple(
+      
+    )
+
+    alias DeliverabilityDashboardAccountStatus = String
+
+    alias DeliverabilityTestReport = NamedTuple(
+      "ReportId" : (ReportId)?,
+      "ReportName" : (ReportName)?,
+      "Subject" : (DeliverabilityTestSubject)?,
+      "FromEmailAddress" : (EmailAddress)?,
+      "CreateDate" : (Timestamp)?,
+      "DeliverabilityTestStatus" : (DeliverabilityTestStatus)?
+    )
+
+    alias DeliverabilityTestReports = Array(DeliverabilityTestReport)
+
+    alias DeliverabilityTestStatus = String
+
+    alias DeliverabilityTestSubject = String
+
+    alias DeliveryOptions = NamedTuple(
+      "TlsPolicy" : (TlsPolicy)?,
+      "SendingPoolName" : (PoolName)?
+    )
+
+    alias Description = String
+
+    alias Destination = NamedTuple(
+      "ToAddresses" : (EmailAddressList)?,
+      "CcAddresses" : (EmailAddressList)?,
+      "BccAddresses" : (EmailAddressList)?
+    )
+
+    alias DimensionName = String
+
+    alias DimensionValueSource = String
+
+    alias DisplayName = String
+
+    alias DkimAttributes = NamedTuple(
+      "SigningEnabled" : (Enabled)?,
+      "Status" : (DkimStatus)?,
+      "Tokens" : (DnsTokenList)?,
+      "SigningAttributesOrigin" : (DkimSigningAttributesOrigin)?
+    )
+
+    alias DkimSigningAttributes = NamedTuple(
+      "DomainSigningSelector" : Selector,
+      "DomainSigningPrivateKey" : PrivateKey
+    )
+
+    alias DkimSigningAttributesOrigin = String
+
+    alias DkimStatus = String
+
+    alias DnsToken = String
+
+    alias DnsTokenList = Array(DnsToken)
+
+    alias Domain = String
+
+    alias DomainDeliverabilityCampaign = NamedTuple(
+      "CampaignId" : (CampaignId)?,
+      "ImageUrl" : (ImageUrl)?,
+      "Subject" : (Subject)?,
+      "FromAddress" : (Identity)?,
+      "SendingIps" : (IpList)?,
+      "FirstSeenDateTime" : (Timestamp)?,
+      "LastSeenDateTime" : (Timestamp)?,
+      "InboxCount" : (Volume)?,
+      "SpamCount" : (Volume)?,
+      "ReadRate" : (Percentage)?,
+      "DeleteRate" : (Percentage)?,
+      "ReadDeleteRate" : (Percentage)?,
+      "ProjectedVolume" : (Volume)?,
+      "Esps" : (Esps)?
+    )
+
+    alias DomainDeliverabilityCampaignList = Array(DomainDeliverabilityCampaign)
+
+    alias DomainDeliverabilityTrackingOption = NamedTuple(
+      "Domain" : (Domain)?,
+      "SubscriptionStartDate" : (Timestamp)?,
+      "InboxPlacementTrackingOption" : (InboxPlacementTrackingOption)?
+    )
+
+    alias DomainDeliverabilityTrackingOptions = Array(DomainDeliverabilityTrackingOption)
+
+    alias DomainIspPlacement = NamedTuple(
+      "IspName" : (IspName)?,
+      "InboxRawCount" : (Volume)?,
+      "SpamRawCount" : (Volume)?,
+      "InboxPercentage" : (Percentage)?,
+      "SpamPercentage" : (Percentage)?
+    )
+
+    alias DomainIspPlacements = Array(DomainIspPlacement)
+
+    alias EmailAddress = String
+
+    alias EmailAddressList = Array(EmailAddress)
+
+    alias EmailContent = NamedTuple(
+      "Simple" : (Message)?,
+      "Raw" : (RawMessage)?,
+      "Template" : (Template)?
+    )
+
+    alias EmailTemplateContent = NamedTuple(
+      "Subject" : (EmailTemplateSubject)?,
+      "Text" : (EmailTemplateText)?,
+      "Html" : (EmailTemplateHtml)?
+    )
+
+    alias EmailTemplateData = String
+
+    alias EmailTemplateHtml = String
+
+    alias EmailTemplateMetadata = NamedTuple(
+      "TemplateName" : (EmailTemplateName)?,
+      "CreatedTimestamp" : (Timestamp)?
+    )
+
+    alias EmailTemplateMetadataList = Array(EmailTemplateMetadata)
+
+    alias EmailTemplateName = String
+
+    alias EmailTemplateSubject = String
+
+    alias EmailTemplateText = String
+
+    alias Enabled = Bool
+
+    alias EnabledWrapper = Bool
+
+    alias ErrorMessage = String
+
+    alias Esp = String
+
+    alias Esps = Array(Esp)
+
+    alias EventDestination = NamedTuple(
+      "Name" : EventDestinationName,
+      "Enabled" : (Enabled)?,
+      "MatchingEventTypes" : EventTypes,
+      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
+      "CloudWatchDestination" : (CloudWatchDestination)?,
+      "SnsDestination" : (SnsDestination)?,
+      "PinpointDestination" : (PinpointDestination)?
+    )
+
+    alias EventDestinationDefinition = NamedTuple(
+      "Enabled" : (Enabled)?,
+      "MatchingEventTypes" : (EventTypes)?,
+      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
+      "CloudWatchDestination" : (CloudWatchDestination)?,
+      "SnsDestination" : (SnsDestination)?,
+      "PinpointDestination" : (PinpointDestination)?
+    )
+
+    alias EventDestinationName = String
+
+    alias EventDestinations = Array(EventDestination)
+
+    alias EventType = String
+
+    alias EventTypes = Array(EventType)
+
+    alias FailedRecordsCount = Int32
+
+    alias FailedRecordsS3Url = String
+
+    alias FailureInfo = NamedTuple(
+      "FailedRecordsS3Url" : (FailedRecordsS3Url)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias FailureRedirectionURL = String
+
+    alias FeedbackId = String
+
+    alias GeneralEnforcementStatus = String
+
+    alias GetAccountRequest = NamedTuple(
+      
+    )
+
+    alias GetAccountResponse = NamedTuple(
+      "DedicatedIpAutoWarmupEnabled" : (Enabled)?,
+      "EnforcementStatus" : (GeneralEnforcementStatus)?,
+      "ProductionAccessEnabled" : (Enabled)?,
+      "SendQuota" : (SendQuota)?,
+      "SendingEnabled" : (Enabled)?,
+      "SuppressionAttributes" : (SuppressionAttributes)?,
+      "Details" : (AccountDetails)?
+    )
+
+    alias GetBlacklistReportsRequest = NamedTuple(
+      "BlacklistItemNames" : BlacklistItemNames
+    )
+
+    alias GetBlacklistReportsResponse = NamedTuple(
+      "BlacklistReport" : BlacklistReport
+    )
+
+    alias GetConfigurationSetEventDestinationsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName
+    )
+
+    alias GetConfigurationSetEventDestinationsResponse = NamedTuple(
+      "EventDestinations" : (EventDestinations)?
+    )
+
+    alias GetConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName
+    )
+
+    alias GetConfigurationSetResponse = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "TrackingOptions" : (TrackingOptions)?,
+      "DeliveryOptions" : (DeliveryOptions)?,
+      "ReputationOptions" : (ReputationOptions)?,
+      "SendingOptions" : (SendingOptions)?,
+      "Tags" : (TagList)?,
+      "SuppressionOptions" : (SuppressionOptions)?
+    )
+
+    alias GetContactListRequest = NamedTuple(
+      "ContactListName" : ContactListName
+    )
+
+    alias GetContactListResponse = NamedTuple(
+      "ContactListName" : (ContactListName)?,
+      "Topics" : (Topics)?,
+      "Description" : (Description)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?,
+      "Tags" : (TagList)?
+    )
+
+    alias GetContactRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "EmailAddress" : EmailAddress
+    )
+
+    alias GetContactResponse = NamedTuple(
+      "ContactListName" : (ContactListName)?,
+      "EmailAddress" : (EmailAddress)?,
+      "TopicPreferences" : (TopicPreferenceList)?,
+      "TopicDefaultPreferences" : (TopicPreferenceList)?,
+      "UnsubscribeAll" : (UnsubscribeAll)?,
+      "AttributesData" : (AttributesData)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "LastUpdatedTimestamp" : (Timestamp)?
+    )
+
+    alias GetCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName
+    )
+
+    alias GetCustomVerificationEmailTemplateResponse = NamedTuple(
+      "TemplateName" : (EmailTemplateName)?,
+      "FromEmailAddress" : (EmailAddress)?,
+      "TemplateSubject" : (EmailTemplateSubject)?,
+      "TemplateContent" : (TemplateContent)?,
+      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
+      "FailureRedirectionURL" : (FailureRedirectionURL)?
+    )
+
+    alias GetDedicatedIpRequest = NamedTuple(
+      "Ip" : Ip
+    )
+
+    alias GetDedicatedIpResponse = NamedTuple(
+      "DedicatedIp" : (DedicatedIp)?
+    )
+
+    alias GetDedicatedIpsRequest = NamedTuple(
+      "PoolName" : (PoolName)?,
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias GetDedicatedIpsResponse = NamedTuple(
+      "DedicatedIps" : (DedicatedIpList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetDeliverabilityDashboardOptionsRequest = NamedTuple(
+      
+    )
+
+    alias GetDeliverabilityDashboardOptionsResponse = NamedTuple(
+      "DashboardEnabled" : Enabled,
+      "SubscriptionExpiryDate" : (Timestamp)?,
+      "AccountStatus" : (DeliverabilityDashboardAccountStatus)?,
+      "ActiveSubscribedDomains" : (DomainDeliverabilityTrackingOptions)?,
+      "PendingExpirationSubscribedDomains" : (DomainDeliverabilityTrackingOptions)?
+    )
+
+    alias GetDeliverabilityTestReportRequest = NamedTuple(
+      "ReportId" : ReportId
+    )
+
+    alias GetDeliverabilityTestReportResponse = NamedTuple(
+      "DeliverabilityTestReport" : DeliverabilityTestReport,
+      "OverallPlacement" : PlacementStatistics,
+      "IspPlacements" : IspPlacements,
+      "Message" : (MessageContent)?,
+      "Tags" : (TagList)?
+    )
+
+    alias GetDomainDeliverabilityCampaignRequest = NamedTuple(
+      "CampaignId" : CampaignId
+    )
+
+    alias GetDomainDeliverabilityCampaignResponse = NamedTuple(
+      "DomainDeliverabilityCampaign" : DomainDeliverabilityCampaign
+    )
+
+    alias GetDomainStatisticsReportRequest = NamedTuple(
+      "Domain" : Identity,
+      "StartDate" : Timestamp,
+      "EndDate" : Timestamp
+    )
+
+    alias GetDomainStatisticsReportResponse = NamedTuple(
+      "OverallVolume" : OverallVolume,
+      "DailyVolumes" : DailyVolumes
+    )
+
+    alias GetEmailIdentityPoliciesRequest = NamedTuple(
+      "EmailIdentity" : Identity
+    )
+
+    alias GetEmailIdentityPoliciesResponse = NamedTuple(
+      "Policies" : (PolicyMap)?
+    )
+
+    alias GetEmailIdentityRequest = NamedTuple(
+      "EmailIdentity" : Identity
+    )
+
+    alias GetEmailIdentityResponse = NamedTuple(
+      "IdentityType" : (IdentityType)?,
+      "FeedbackForwardingStatus" : (Enabled)?,
+      "VerifiedForSendingStatus" : (Enabled)?,
+      "DkimAttributes" : (DkimAttributes)?,
+      "MailFromAttributes" : (MailFromAttributes)?,
+      "Policies" : (PolicyMap)?,
+      "Tags" : (TagList)?
+    )
+
+    alias GetEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName
+    )
+
+    alias GetEmailTemplateResponse = NamedTuple(
+      "TemplateName" : EmailTemplateName,
+      "TemplateContent" : EmailTemplateContent
+    )
+
+    alias GetImportJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias GetImportJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "ImportDestination" : (ImportDestination)?,
+      "ImportDataSource" : (ImportDataSource)?,
+      "FailureInfo" : (FailureInfo)?,
+      "JobStatus" : (JobStatus)?,
+      "CreatedTimestamp" : (Timestamp)?,
+      "CompletedTimestamp" : (Timestamp)?,
+      "ProcessedRecordsCount" : (ProcessedRecordsCount)?,
+      "FailedRecordsCount" : (FailedRecordsCount)?
+    )
+
+    alias GetSuppressedDestinationRequest = NamedTuple(
+      "EmailAddress" : EmailAddress
+    )
+
+    alias GetSuppressedDestinationResponse = NamedTuple(
+      "SuppressedDestination" : SuppressedDestination
+    )
+
+    alias Identity = String
+
+    alias IdentityInfo = NamedTuple(
+      "IdentityType" : (IdentityType)?,
+      "IdentityName" : (Identity)?,
+      "SendingEnabled" : (Enabled)?
+    )
+
+    alias IdentityInfoList = Array(IdentityInfo)
+
+    alias IdentityType = String
+
+    alias ImageUrl = String
+
+    alias ImportDataSource = NamedTuple(
+      "S3Url" : S3Url,
+      "DataFormat" : DataFormat
+    )
+
+    alias ImportDestination = NamedTuple(
+      "SuppressionListDestination" : (SuppressionListDestination)?,
+      "ContactListDestination" : (ContactListDestination)?
+    )
+
+    alias ImportDestinationType = String
+
+    alias ImportJobSummary = NamedTuple(
+      "JobId" : (JobId)?,
+      "ImportDestination" : (ImportDestination)?,
+      "JobStatus" : (JobStatus)?,
+      "CreatedTimestamp" : (Timestamp)?
+    )
+
+    alias ImportJobSummaryList = Array(ImportJobSummary)
+
+    alias InboxPlacementTrackingOption = NamedTuple(
+      "Global" : (Enabled)?,
+      "TrackedIsps" : (IspNameList)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      
+    )
+
+    alias Ip = String
+
+    alias IpList = Array(Ip)
+
+    alias IspName = String
+
+    alias IspNameList = Array(IspName)
+
+    alias IspPlacement = NamedTuple(
+      "IspName" : (IspName)?,
+      "PlacementStatistics" : (PlacementStatistics)?
+    )
+
+    alias IspPlacements = Array(IspPlacement)
+
+    alias JobId = String
+
+    alias JobStatus = String
+
+    alias KinesisFirehoseDestination = NamedTuple(
+      "IamRoleArn" : AmazonResourceName,
+      "DeliveryStreamArn" : AmazonResourceName
+    )
+
+    alias LastFreshStart = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListConfigurationSetsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListConfigurationSetsResponse = NamedTuple(
+      "ConfigurationSets" : (ConfigurationSetNameList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListContactListsRequest = NamedTuple(
+      "PageSize" : (MaxItems)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListContactListsResponse = NamedTuple(
+      "ContactLists" : (ListOfContactLists)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListContactsFilter = NamedTuple(
+      "FilteredStatus" : (SubscriptionStatus)?,
+      "TopicFilter" : (TopicFilter)?
+    )
+
+    alias ListContactsRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "Filter" : (ListContactsFilter)?,
+      "PageSize" : (MaxItems)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListContactsResponse = NamedTuple(
+      "Contacts" : (ListOfContacts)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCustomVerificationEmailTemplatesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListCustomVerificationEmailTemplatesResponse = NamedTuple(
+      "CustomVerificationEmailTemplates" : (CustomVerificationEmailTemplatesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDedicatedIpPoolsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListDedicatedIpPoolsResponse = NamedTuple(
+      "DedicatedIpPools" : (ListOfDedicatedIpPools)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDeliverabilityTestReportsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListDeliverabilityTestReportsResponse = NamedTuple(
+      "DeliverabilityTestReports" : DeliverabilityTestReports,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDomainDeliverabilityCampaignsRequest = NamedTuple(
+      "StartDate" : Timestamp,
+      "EndDate" : Timestamp,
+      "SubscribedDomain" : Domain,
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListDomainDeliverabilityCampaignsResponse = NamedTuple(
+      "DomainDeliverabilityCampaigns" : DomainDeliverabilityCampaignList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEmailIdentitiesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListEmailIdentitiesResponse = NamedTuple(
+      "EmailIdentities" : (IdentityInfoList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEmailTemplatesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListEmailTemplatesResponse = NamedTuple(
+      "TemplatesMetadata" : (EmailTemplateMetadataList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListImportJobsRequest = NamedTuple(
+      "ImportDestinationType" : (ImportDestinationType)?,
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListImportJobsResponse = NamedTuple(
+      "ImportJobs" : (ImportJobSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListManagementOptions = NamedTuple(
+      "ContactListName" : ContactListName,
+      "TopicName" : (TopicName)?
+    )
+
+    alias ListOfContactLists = Array(ContactList)
+
+    alias ListOfContacts = Array(Contact)
+
+    alias ListOfDedicatedIpPools = Array(PoolName)
+
+    alias ListSuppressedDestinationsRequest = NamedTuple(
+      "Reasons" : (SuppressionListReasons)?,
+      "StartDate" : (Timestamp)?,
+      "EndDate" : (Timestamp)?,
+      "NextToken" : (NextToken)?,
+      "PageSize" : (MaxItems)?
+    )
+
+    alias ListSuppressedDestinationsResponse = NamedTuple(
+      "SuppressedDestinationSummaries" : (SuppressedDestinationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : TagList
+    )
+
+    alias MailFromAttributes = NamedTuple(
+      "MailFromDomain" : MailFromDomainName,
+      "MailFromDomainStatus" : MailFromDomainStatus,
+      "BehaviorOnMxFailure" : BehaviorOnMxFailure
+    )
+
+    alias MailFromDomainName = String
+
+    alias MailFromDomainNotVerifiedException = NamedTuple(
+      
+    )
+
+    alias MailFromDomainStatus = String
+
+    alias MailType = String
+
+    alias Max24HourSend = Float64
+
+    alias MaxItems = Int32
+
+    alias MaxSendRate = Float64
+
+    alias Message = NamedTuple(
+      "Subject" : Content,
+      "Body" : Body
+    )
+
+    alias MessageContent = String
+
+    alias MessageData = String
+
+    alias MessageRejected = NamedTuple(
+      
+    )
+
+    alias MessageTag = NamedTuple(
+      "Name" : MessageTagName,
+      "Value" : MessageTagValue
+    )
+
+    alias MessageTagList = Array(MessageTag)
+
+    alias MessageTagName = String
+
+    alias MessageTagValue = String
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      
+    )
+
+    alias OutboundMessageId = String
+
+    alias OverallVolume = NamedTuple(
+      "VolumeStatistics" : (VolumeStatistics)?,
+      "ReadRatePercent" : (Percentage)?,
+      "DomainIspPlacements" : (DomainIspPlacements)?
+    )
+
+    alias Percentage = Float64
+
+    alias Percentage100Wrapper = Int32
+
+    alias PinpointDestination = NamedTuple(
+      "ApplicationArn" : (AmazonResourceName)?
+    )
+
+    alias PlacementStatistics = NamedTuple(
+      "InboxPercentage" : (Percentage)?,
+      "SpamPercentage" : (Percentage)?,
+      "MissingPercentage" : (Percentage)?,
+      "SpfPercentage" : (Percentage)?,
+      "DkimPercentage" : (Percentage)?
+    )
+
+    alias Policy = String
+
+    alias PolicyMap = Hash(PolicyName,Policy)
+
+    alias PolicyName = String
+
+    alias PoolName = String
+
+    alias PrivateKey = String
+
+    alias ProcessedRecordsCount = Int32
+
+    alias PutAccountDedicatedIpWarmupAttributesRequest = NamedTuple(
+      "AutoWarmupEnabled" : (Enabled)?
+    )
+
+    alias PutAccountDedicatedIpWarmupAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutAccountDetailsRequest = NamedTuple(
+      "MailType" : MailType,
+      "WebsiteURL" : WebsiteURL,
+      "ContactLanguage" : (ContactLanguage)?,
+      "UseCaseDescription" : UseCaseDescription,
+      "AdditionalContactEmailAddresses" : (AdditionalContactEmailAddresses)?,
+      "ProductionAccessEnabled" : (EnabledWrapper)?
+    )
+
+    alias PutAccountDetailsResponse = NamedTuple(
+      
+    )
+
+    alias PutAccountSendingAttributesRequest = NamedTuple(
+      "SendingEnabled" : (Enabled)?
+    )
+
+    alias PutAccountSendingAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutAccountSuppressionAttributesRequest = NamedTuple(
+      "SuppressedReasons" : (SuppressionListReasons)?
+    )
+
+    alias PutAccountSuppressionAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutConfigurationSetDeliveryOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "TlsPolicy" : (TlsPolicy)?,
+      "SendingPoolName" : (SendingPoolName)?
+    )
+
+    alias PutConfigurationSetDeliveryOptionsResponse = NamedTuple(
+      
+    )
+
+    alias PutConfigurationSetReputationOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "ReputationMetricsEnabled" : (Enabled)?
+    )
+
+    alias PutConfigurationSetReputationOptionsResponse = NamedTuple(
+      
+    )
+
+    alias PutConfigurationSetSendingOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "SendingEnabled" : (Enabled)?
+    )
+
+    alias PutConfigurationSetSendingOptionsResponse = NamedTuple(
+      
+    )
+
+    alias PutConfigurationSetSuppressionOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "SuppressedReasons" : (SuppressionListReasons)?
+    )
+
+    alias PutConfigurationSetSuppressionOptionsResponse = NamedTuple(
+      
+    )
+
+    alias PutConfigurationSetTrackingOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "CustomRedirectDomain" : (CustomRedirectDomain)?
+    )
+
+    alias PutConfigurationSetTrackingOptionsResponse = NamedTuple(
+      
+    )
+
+    alias PutDedicatedIpInPoolRequest = NamedTuple(
+      "Ip" : Ip,
+      "DestinationPoolName" : PoolName
+    )
+
+    alias PutDedicatedIpInPoolResponse = NamedTuple(
+      
+    )
+
+    alias PutDedicatedIpWarmupAttributesRequest = NamedTuple(
+      "Ip" : Ip,
+      "WarmupPercentage" : Percentage100Wrapper
+    )
+
+    alias PutDedicatedIpWarmupAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutDeliverabilityDashboardOptionRequest = NamedTuple(
+      "DashboardEnabled" : Enabled,
+      "SubscribedDomains" : (DomainDeliverabilityTrackingOptions)?
+    )
+
+    alias PutDeliverabilityDashboardOptionResponse = NamedTuple(
+      
+    )
+
+    alias PutEmailIdentityDkimAttributesRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "SigningEnabled" : (Enabled)?
+    )
+
+    alias PutEmailIdentityDkimAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutEmailIdentityDkimSigningAttributesRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "SigningAttributesOrigin" : DkimSigningAttributesOrigin,
+      "SigningAttributes" : (DkimSigningAttributes)?
+    )
+
+    alias PutEmailIdentityDkimSigningAttributesResponse = NamedTuple(
+      "DkimStatus" : (DkimStatus)?,
+      "DkimTokens" : (DnsTokenList)?
+    )
+
+    alias PutEmailIdentityFeedbackAttributesRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "EmailForwardingEnabled" : (Enabled)?
+    )
+
+    alias PutEmailIdentityFeedbackAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutEmailIdentityMailFromAttributesRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "MailFromDomain" : (MailFromDomainName)?,
+      "BehaviorOnMxFailure" : (BehaviorOnMxFailure)?
+    )
+
+    alias PutEmailIdentityMailFromAttributesResponse = NamedTuple(
+      
+    )
+
+    alias PutSuppressedDestinationRequest = NamedTuple(
+      "EmailAddress" : EmailAddress,
+      "Reason" : SuppressionListReason
+    )
+
+    alias PutSuppressedDestinationResponse = NamedTuple(
+      
+    )
+
+    alias RawMessage = NamedTuple(
+      "Data" : RawMessageData
+    )
+
+    alias RawMessageData = String | Array(UInt8) | IO
+
+    alias RblName = String
+
+    alias RenderedEmailTemplate = String
+
+    alias ReplacementEmailContent = NamedTuple(
+      "ReplacementTemplate" : (ReplacementTemplate)?
+    )
+
+    alias ReplacementTemplate = NamedTuple(
+      "ReplacementTemplateData" : (EmailTemplateData)?
+    )
+
+    alias ReportId = String
+
+    alias ReportName = String
+
+    alias ReputationOptions = NamedTuple(
+      "ReputationMetricsEnabled" : (Enabled)?,
+      "LastFreshStart" : (LastFreshStart)?
+    )
+
+    alias ReviewDetails = NamedTuple(
+      "Status" : (ReviewStatus)?,
+      "CaseId" : (CaseId)?
+    )
+
+    alias ReviewStatus = String
+
+    alias S3Url = String
+
+    alias Selector = String
+
+    alias SendBulkEmailRequest = NamedTuple(
+      "FromEmailAddress" : (EmailAddress)?,
+      "FromEmailAddressIdentityArn" : (AmazonResourceName)?,
+      "ReplyToAddresses" : (EmailAddressList)?,
+      "FeedbackForwardingEmailAddress" : (EmailAddress)?,
+      "FeedbackForwardingEmailAddressIdentityArn" : (AmazonResourceName)?,
+      "DefaultEmailTags" : (MessageTagList)?,
+      "DefaultContent" : BulkEmailContent,
+      "BulkEmailEntries" : BulkEmailEntryList,
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias SendBulkEmailResponse = NamedTuple(
+      "BulkEmailEntryResults" : BulkEmailEntryResultList
+    )
+
+    alias SendCustomVerificationEmailRequest = NamedTuple(
+      "EmailAddress" : EmailAddress,
+      "TemplateName" : EmailTemplateName,
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias SendCustomVerificationEmailResponse = NamedTuple(
+      "MessageId" : (OutboundMessageId)?
+    )
+
+    alias SendEmailRequest = NamedTuple(
+      "FromEmailAddress" : (EmailAddress)?,
+      "FromEmailAddressIdentityArn" : (AmazonResourceName)?,
+      "Destination" : (Destination)?,
+      "ReplyToAddresses" : (EmailAddressList)?,
+      "FeedbackForwardingEmailAddress" : (EmailAddress)?,
+      "FeedbackForwardingEmailAddressIdentityArn" : (AmazonResourceName)?,
+      "Content" : EmailContent,
+      "EmailTags" : (MessageTagList)?,
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "ListManagementOptions" : (ListManagementOptions)?
+    )
+
+    alias SendEmailResponse = NamedTuple(
+      "MessageId" : (OutboundMessageId)?
+    )
+
+    alias SendQuota = NamedTuple(
+      "Max24HourSend" : (Max24HourSend)?,
+      "MaxSendRate" : (MaxSendRate)?,
+      "SentLast24Hours" : (SentLast24Hours)?
+    )
+
+    alias SendingOptions = NamedTuple(
+      "SendingEnabled" : (Enabled)?
+    )
+
+    alias SendingPausedException = NamedTuple(
+      
+    )
+
+    alias SendingPoolName = String
+
+    alias SentLast24Hours = Float64
+
+    alias SnsDestination = NamedTuple(
+      "TopicArn" : AmazonResourceName
+    )
+
+    alias Subject = String
+
+    alias SubscriptionStatus = String
+
+    alias SuccessRedirectionURL = String
+
+    alias SuppressedDestination = NamedTuple(
+      "EmailAddress" : EmailAddress,
+      "Reason" : SuppressionListReason,
+      "LastUpdateTime" : Timestamp,
+      "Attributes" : (SuppressedDestinationAttributes)?
+    )
+
+    alias SuppressedDestinationAttributes = NamedTuple(
+      "MessageId" : (OutboundMessageId)?,
+      "FeedbackId" : (FeedbackId)?
+    )
+
+    alias SuppressedDestinationSummaries = Array(SuppressedDestinationSummary)
+
+    alias SuppressedDestinationSummary = NamedTuple(
+      "EmailAddress" : EmailAddress,
+      "Reason" : SuppressionListReason,
+      "LastUpdateTime" : Timestamp
+    )
+
+    alias SuppressionAttributes = NamedTuple(
+      "SuppressedReasons" : (SuppressionListReasons)?
+    )
+
+    alias SuppressionListDestination = NamedTuple(
+      "SuppressionListImportAction" : SuppressionListImportAction
+    )
+
+    alias SuppressionListImportAction = String
+
+    alias SuppressionListReason = String
+
+    alias SuppressionListReasons = Array(SuppressionListReason)
+
+    alias SuppressionOptions = NamedTuple(
+      "SuppressedReasons" : (SuppressionListReasons)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Template = NamedTuple(
+      "TemplateName" : (EmailTemplateName)?,
+      "TemplateArn" : (AmazonResourceName)?,
+      "TemplateData" : (EmailTemplateData)?
+    )
+
+    alias TemplateContent = String
+
+    alias TestRenderEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName,
+      "TemplateData" : EmailTemplateData
+    )
+
+    alias TestRenderEmailTemplateResponse = NamedTuple(
+      "RenderedTemplate" : RenderedEmailTemplate
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TlsPolicy = String
+
+    alias TooManyRequestsException = NamedTuple(
+      
+    )
+
+    alias Topic = NamedTuple(
+      "TopicName" : TopicName,
+      "DisplayName" : DisplayName,
+      "Description" : (Description)?,
+      "DefaultSubscriptionStatus" : SubscriptionStatus
+    )
+
+    alias TopicFilter = NamedTuple(
+      "TopicName" : (TopicName)?,
+      "UseDefaultIfPreferenceUnavailable" : (UseDefaultIfPreferenceUnavailable)?
+    )
+
+    alias TopicName = String
+
+    alias TopicPreference = NamedTuple(
+      "TopicName" : TopicName,
+      "SubscriptionStatus" : SubscriptionStatus
+    )
+
+    alias TopicPreferenceList = Array(TopicPreference)
+
+    alias Topics = Array(Topic)
+
+    alias TrackingOptions = NamedTuple(
+      "CustomRedirectDomain" : CustomRedirectDomain
+    )
+
+    alias UnsubscribeAll = Bool
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "EventDestinationName" : EventDestinationName,
+      "EventDestination" : EventDestinationDefinition
+    )
+
+    alias UpdateConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateContactListRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "Topics" : (Topics)?,
+      "Description" : (Description)?
+    )
+
+    alias UpdateContactListResponse = NamedTuple(
+      
+    )
+
+    alias UpdateContactRequest = NamedTuple(
+      "ContactListName" : ContactListName,
+      "EmailAddress" : EmailAddress,
+      "TopicPreferences" : (TopicPreferenceList)?,
+      "UnsubscribeAll" : (UnsubscribeAll)?,
+      "AttributesData" : (AttributesData)?
+    )
+
+    alias UpdateContactResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName,
+      "FromEmailAddress" : EmailAddress,
+      "TemplateSubject" : EmailTemplateSubject,
+      "TemplateContent" : TemplateContent,
+      "SuccessRedirectionURL" : SuccessRedirectionURL,
+      "FailureRedirectionURL" : FailureRedirectionURL
+    )
+
+    alias UpdateCustomVerificationEmailTemplateResponse = NamedTuple(
+      
+    )
+
+    alias UpdateEmailIdentityPolicyRequest = NamedTuple(
+      "EmailIdentity" : Identity,
+      "PolicyName" : PolicyName,
+      "Policy" : Policy
+    )
+
+    alias UpdateEmailIdentityPolicyResponse = NamedTuple(
+      
+    )
+
+    alias UpdateEmailTemplateRequest = NamedTuple(
+      "TemplateName" : EmailTemplateName,
+      "TemplateContent" : EmailTemplateContent
+    )
+
+    alias UpdateEmailTemplateResponse = NamedTuple(
+      
+    )
+
+    alias UseCaseDescription = String
+
+    alias UseDefaultIfPreferenceUnavailable = Bool
+
+    alias Volume = Int64
+
+    alias VolumeStatistics = NamedTuple(
+      "InboxRawCount" : (Volume)?,
+      "SpamRawCount" : (Volume)?,
+      "ProjectedInbox" : (Volume)?,
+      "ProjectedSpam" : (Volume)?
+    )
+
+    alias WarmupStatus = String
+
+    alias WebsiteURL = String
   end
 end

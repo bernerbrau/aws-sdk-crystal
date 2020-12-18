@@ -462,8 +462,8 @@ module Aws::Textract
     #
     # @overload analyze_document(**params)
     # @param [Hash] params ({})
-    def analyze_document(params = {}, **options)
-      req = build_request(:analyze_document, params)
+    def analyze_document(, **options)
+      req = build_request(:analyze_document, )
       req.send_request(options)
     end
 
@@ -549,8 +549,8 @@ module Aws::Textract
     #
     # @overload detect_document_text(**params)
     # @param [Hash] params ({})
-    def detect_document_text(params = {}, **options)
-      req = build_request(:detect_document_text, params)
+    def detect_document_text(, **options)
+      req = build_request(:detect_document_text, )
       req.send_request(options)
     end
 
@@ -681,8 +681,8 @@ module Aws::Textract
     #
     # @overload get_document_analysis(**params)
     # @param [Hash] params ({})
-    def get_document_analysis(params = {}, **options)
-      req = build_request(:get_document_analysis, params)
+    def get_document_analysis(, **options)
+      req = build_request(:get_document_analysis, )
       req.send_request(options)
     end
 
@@ -799,8 +799,8 @@ module Aws::Textract
     #
     # @overload get_document_text_detection(**params)
     # @param [Hash] params ({})
-    def get_document_text_detection(params = {}, **options)
-      req = build_request(:get_document_text_detection, params)
+    def get_document_text_detection(, **options)
+      req = build_request(:get_document_text_detection, )
       req.send_request(options)
     end
 
@@ -909,8 +909,8 @@ module Aws::Textract
     #
     # @overload start_document_analysis(**params)
     # @param [Hash] params ({})
-    def start_document_analysis(params = {}, **options)
-      req = build_request(:start_document_analysis, params)
+    def start_document_analysis(, **options)
+      req = build_request(:start_document_analysis, )
       req.send_request(options)
     end
 
@@ -1011,8 +1011,8 @@ module Aws::Textract
     #
     # @overload start_document_text_detection(**params)
     # @param [Hash] params ({})
-    def start_document_text_detection(params = {}, **options)
-      req = build_request(:start_document_text_detection, params)
+    def start_document_text_detection(, **options)
+      req = build_request(:start_document_text_detection, )
       req.send_request(options)
     end
 

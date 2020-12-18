@@ -352,8 +352,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload claim_devices_by_claim_code(**params)
     # @param [Hash] params ({})
-    def claim_devices_by_claim_code(params = {}, **options)
-      req = build_request(:claim_devices_by_claim_code, params)
+    def claim_devices_by_claim_code(, **options)
+      req = build_request(:claim_devices_by_claim_code, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload describe_device(**params)
     # @param [Hash] params ({})
-    def describe_device(params = {}, **options)
-      req = build_request(:describe_device, params)
+    def describe_device(, **options)
+      req = build_request(:describe_device, )
       req.send_request(options)
     end
 
@@ -427,8 +427,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload finalize_device_claim(**params)
     # @param [Hash] params ({})
-    def finalize_device_claim(params = {}, **options)
-      req = build_request(:finalize_device_claim, params)
+    def finalize_device_claim(, **options)
+      req = build_request(:finalize_device_claim, )
       req.send_request(options)
     end
 
@@ -457,8 +457,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload get_device_methods(**params)
     # @param [Hash] params ({})
-    def get_device_methods(params = {}, **options)
-      req = build_request(:get_device_methods, params)
+    def get_device_methods(, **options)
+      req = build_request(:get_device_methods, )
       req.send_request(options)
     end
 
@@ -491,8 +491,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload initiate_device_claim(**params)
     # @param [Hash] params ({})
-    def initiate_device_claim(params = {}, **options)
-      req = build_request(:initiate_device_claim, params)
+    def initiate_device_claim(, **options)
+      req = build_request(:initiate_device_claim, )
       req.send_request(options)
     end
 
@@ -531,8 +531,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload invoke_device_method(**params)
     # @param [Hash] params ({})
-    def invoke_device_method(params = {}, **options)
-      req = build_request(:invoke_device_method, params)
+    def invoke_device_method(, **options)
+      req = build_request(:invoke_device_method, )
       req.send_request(options)
     end
 
@@ -576,8 +576,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload list_device_events(**params)
     # @param [Hash] params ({})
-    def list_device_events(params = {}, **options)
-      req = build_request(:list_device_events, params)
+    def list_device_events(, **options)
+      req = build_request(:list_device_events, )
       req.send_request(options)
     end
 
@@ -620,8 +620,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, **options)
-      req = build_request(:list_devices, params)
+    def list_devices(, **options)
+      req = build_request(:list_devices, )
       req.send_request(options)
     end
 
@@ -648,8 +648,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -680,8 +680,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -707,8 +707,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload unclaim_device(**params)
     # @param [Hash] params ({})
-    def unclaim_device(params = {}, **options)
-      req = build_request(:unclaim_device, params)
+    def unclaim_device(, **options)
+      req = build_request(:unclaim_device, )
       req.send_request(options)
     end
 
@@ -732,8 +732,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -758,8 +758,8 @@ module Aws::IoT1ClickDevicesService
     #
     # @overload update_device_state(**params)
     # @param [Hash] params ({})
-    def update_device_state(params = {}, **options)
-      req = build_request(:update_device_state, params)
+    def update_device_state(, **options)
+      req = build_request(:update_device_state, )
       req.send_request(options)
     end
 

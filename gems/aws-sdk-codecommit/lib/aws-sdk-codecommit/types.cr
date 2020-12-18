@@ -7987,5 +7987,2275 @@ module Aws::CodeCommit
       include Aws::Structure
     end
 
+    alias AccountId = String
+
+    alias ActorDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias AdditionalData = String
+
+    alias Approval = NamedTuple(
+      "userArn" : (Arn)?,
+      "approvalState" : (ApprovalState)?
+    )
+
+    alias ApprovalList = Array(Approval)
+
+    alias ApprovalRule = NamedTuple(
+      "approvalRuleId" : (ApprovalRuleId)?,
+      "approvalRuleName" : (ApprovalRuleName)?,
+      "approvalRuleContent" : (ApprovalRuleContent)?,
+      "ruleContentSha256" : (RuleContentSha256)?,
+      "lastModifiedDate" : (LastModifiedDate)?,
+      "creationDate" : (CreationDate)?,
+      "lastModifiedUser" : (Arn)?,
+      "originApprovalRuleTemplate" : (OriginApprovalRuleTemplate)?
+    )
+
+    alias ApprovalRuleContent = String
+
+    alias ApprovalRuleContentRequiredException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleEventMetadata = NamedTuple(
+      "approvalRuleName" : (ApprovalRuleName)?,
+      "approvalRuleId" : (ApprovalRuleId)?,
+      "approvalRuleContent" : (ApprovalRuleContent)?
+    )
+
+    alias ApprovalRuleId = String
+
+    alias ApprovalRuleName = String
+
+    alias ApprovalRuleNameAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleNameRequiredException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleOverriddenEventMetadata = NamedTuple(
+      "revisionId" : (RevisionId)?,
+      "overrideStatus" : (OverrideStatus)?
+    )
+
+    alias ApprovalRuleTemplate = NamedTuple(
+      "approvalRuleTemplateId" : (ApprovalRuleTemplateId)?,
+      "approvalRuleTemplateName" : (ApprovalRuleTemplateName)?,
+      "approvalRuleTemplateDescription" : (ApprovalRuleTemplateDescription)?,
+      "approvalRuleTemplateContent" : (ApprovalRuleTemplateContent)?,
+      "ruleContentSha256" : (RuleContentSha256)?,
+      "lastModifiedDate" : (LastModifiedDate)?,
+      "creationDate" : (CreationDate)?,
+      "lastModifiedUser" : (Arn)?
+    )
+
+    alias ApprovalRuleTemplateContent = String
+
+    alias ApprovalRuleTemplateContentRequiredException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleTemplateDescription = String
+
+    alias ApprovalRuleTemplateDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleTemplateId = String
+
+    alias ApprovalRuleTemplateInUseException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleTemplateName = String
+
+    alias ApprovalRuleTemplateNameAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias ApprovalRuleTemplateNameList = Array(ApprovalRuleTemplateName)
+
+    alias ApprovalRuleTemplateNameRequiredException = NamedTuple(
+      
+    )
+
+    alias ApprovalRulesList = Array(ApprovalRule)
+
+    alias ApprovalRulesNotSatisfiedList = Array(ApprovalRuleName)
+
+    alias ApprovalRulesSatisfiedList = Array(ApprovalRuleName)
+
+    alias ApprovalState = String
+
+    alias ApprovalStateChangedEventMetadata = NamedTuple(
+      "revisionId" : (RevisionId)?,
+      "approvalStatus" : (ApprovalState)?
+    )
+
+    alias ApprovalStateRequiredException = NamedTuple(
+      
+    )
+
+    alias Approved = Bool
+
+    alias Arn = String
+
+    alias AssociateApprovalRuleTemplateWithRepositoryInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "repositoryName" : RepositoryName
+    )
+
+    alias AuthorDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias BatchAssociateApprovalRuleTemplateWithRepositoriesError = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchAssociateApprovalRuleTemplateWithRepositoriesErrorsList = Array(BatchAssociateApprovalRuleTemplateWithRepositoriesError)
+
+    alias BatchAssociateApprovalRuleTemplateWithRepositoriesInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "repositoryNames" : RepositoryNameList
+    )
+
+    alias BatchAssociateApprovalRuleTemplateWithRepositoriesOutput = NamedTuple(
+      "associatedRepositoryNames" : RepositoryNameList,
+      "errors" : BatchAssociateApprovalRuleTemplateWithRepositoriesErrorsList
+    )
+
+    alias BatchDescribeMergeConflictsError = NamedTuple(
+      "filePath" : Path,
+      "exceptionName" : ExceptionName,
+      "message" : Message
+    )
+
+    alias BatchDescribeMergeConflictsErrors = Array(BatchDescribeMergeConflictsError)
+
+    alias BatchDescribeMergeConflictsInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "destinationCommitSpecifier" : CommitName,
+      "sourceCommitSpecifier" : CommitName,
+      "mergeOption" : MergeOptionTypeEnum,
+      "maxMergeHunks" : (MaxResults)?,
+      "maxConflictFiles" : (MaxResults)?,
+      "filePaths" : (FilePaths)?,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias BatchDescribeMergeConflictsOutput = NamedTuple(
+      "conflicts" : Conflicts,
+      "nextToken" : (NextToken)?,
+      "errors" : (BatchDescribeMergeConflictsErrors)?,
+      "destinationCommitId" : ObjectId,
+      "sourceCommitId" : ObjectId,
+      "baseCommitId" : (ObjectId)?
+    )
+
+    alias BatchDisassociateApprovalRuleTemplateFromRepositoriesError = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchDisassociateApprovalRuleTemplateFromRepositoriesErrorsList = Array(BatchDisassociateApprovalRuleTemplateFromRepositoriesError)
+
+    alias BatchDisassociateApprovalRuleTemplateFromRepositoriesInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "repositoryNames" : RepositoryNameList
+    )
+
+    alias BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput = NamedTuple(
+      "disassociatedRepositoryNames" : RepositoryNameList,
+      "errors" : BatchDisassociateApprovalRuleTemplateFromRepositoriesErrorsList
+    )
+
+    alias BatchGetCommitsError = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchGetCommitsErrorsList = Array(BatchGetCommitsError)
+
+    alias BatchGetCommitsInput = NamedTuple(
+      "commitIds" : CommitIdsInputList,
+      "repositoryName" : RepositoryName
+    )
+
+    alias BatchGetCommitsOutput = NamedTuple(
+      "commits" : (CommitObjectsList)?,
+      "errors" : (BatchGetCommitsErrorsList)?
+    )
+
+    alias BatchGetRepositoriesInput = NamedTuple(
+      "repositoryNames" : RepositoryNameList
+    )
+
+    alias BatchGetRepositoriesOutput = NamedTuple(
+      "repositories" : (RepositoryMetadataList)?,
+      "repositoriesNotFound" : (RepositoryNotFoundList)?
+    )
+
+    alias BeforeCommitIdAndAfterCommitIdAreSameException = NamedTuple(
+      
+    )
+
+    alias BlobIdDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias BlobIdRequiredException = NamedTuple(
+      
+    )
+
+    alias BlobMetadata = NamedTuple(
+      "blobId" : (ObjectId)?,
+      "path" : (Path)?,
+      "mode" : (Mode)?
+    )
+
+    alias BranchDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias BranchInfo = NamedTuple(
+      "branchName" : (BranchName)?,
+      "commitId" : (CommitId)?
+    )
+
+    alias BranchName = String
+
+    alias BranchNameExistsException = NamedTuple(
+      
+    )
+
+    alias BranchNameIsTagNameException = NamedTuple(
+      
+    )
+
+    alias BranchNameList = Array(BranchName)
+
+    alias BranchNameRequiredException = NamedTuple(
+      
+    )
+
+    alias CallerReactions = Array(ReactionValue)
+
+    alias CannotDeleteApprovalRuleFromTemplateException = NamedTuple(
+      
+    )
+
+    alias CannotModifyApprovalRuleFromTemplateException = NamedTuple(
+      
+    )
+
+    alias CapitalBoolean = Bool
+
+    alias ChangeTypeEnum = String
+
+    alias ClientRequestToken = String
+
+    alias ClientRequestTokenRequiredException = NamedTuple(
+      
+    )
+
+    alias CloneUrlHttp = String
+
+    alias CloneUrlSsh = String
+
+    alias Comment = NamedTuple(
+      "commentId" : (CommentId)?,
+      "content" : (Content)?,
+      "inReplyTo" : (CommentId)?,
+      "creationDate" : (CreationDate)?,
+      "lastModifiedDate" : (LastModifiedDate)?,
+      "authorArn" : (Arn)?,
+      "deleted" : (IsCommentDeleted)?,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "callerReactions" : (CallerReactions)?,
+      "reactionCounts" : (ReactionCountsMap)?
+    )
+
+    alias CommentContentRequiredException = NamedTuple(
+      
+    )
+
+    alias CommentContentSizeLimitExceededException = NamedTuple(
+      
+    )
+
+    alias CommentDeletedException = NamedTuple(
+      
+    )
+
+    alias CommentDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias CommentId = String
+
+    alias CommentIdRequiredException = NamedTuple(
+      
+    )
+
+    alias CommentNotCreatedByCallerException = NamedTuple(
+      
+    )
+
+    alias Comments = Array(Comment)
+
+    alias CommentsForComparedCommit = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : (CommitId)?,
+      "beforeBlobId" : (ObjectId)?,
+      "afterBlobId" : (ObjectId)?,
+      "location" : (Location)?,
+      "comments" : (Comments)?
+    )
+
+    alias CommentsForComparedCommitData = Array(CommentsForComparedCommit)
+
+    alias CommentsForPullRequest = NamedTuple(
+      "pullRequestId" : (PullRequestId)?,
+      "repositoryName" : (RepositoryName)?,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : (CommitId)?,
+      "beforeBlobId" : (ObjectId)?,
+      "afterBlobId" : (ObjectId)?,
+      "location" : (Location)?,
+      "comments" : (Comments)?
+    )
+
+    alias CommentsForPullRequestData = Array(CommentsForPullRequest)
+
+    alias Commit = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "treeId" : (ObjectId)?,
+      "parents" : (ParentList)?,
+      "message" : (Message)?,
+      "author" : (UserInfo)?,
+      "committer" : (UserInfo)?,
+      "additionalData" : (AdditionalData)?
+    )
+
+    alias CommitDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias CommitId = String
+
+    alias CommitIdDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias CommitIdRequiredException = NamedTuple(
+      
+    )
+
+    alias CommitIdsInputList = Array(ObjectId)
+
+    alias CommitIdsLimitExceededException = NamedTuple(
+      
+    )
+
+    alias CommitIdsListRequiredException = NamedTuple(
+      
+    )
+
+    alias CommitMessageLengthExceededException = NamedTuple(
+      
+    )
+
+    alias CommitName = String
+
+    alias CommitObjectsList = Array(Commit)
+
+    alias CommitRequiredException = NamedTuple(
+      
+    )
+
+    alias ConcurrentReferenceUpdateException = NamedTuple(
+      
+    )
+
+    alias Conflict = NamedTuple(
+      "conflictMetadata" : (ConflictMetadata)?,
+      "mergeHunks" : (MergeHunks)?
+    )
+
+    alias ConflictDetailLevelTypeEnum = String
+
+    alias ConflictMetadata = NamedTuple(
+      "filePath" : (Path)?,
+      "fileSizes" : (FileSizes)?,
+      "fileModes" : (FileModes)?,
+      "objectTypes" : (ObjectTypes)?,
+      "numberOfConflicts" : (NumberOfConflicts)?,
+      "isBinaryFile" : (IsBinaryFile)?,
+      "contentConflict" : (IsContentConflict)?,
+      "fileModeConflict" : (IsFileModeConflict)?,
+      "objectTypeConflict" : (IsObjectTypeConflict)?,
+      "mergeOperations" : (MergeOperations)?
+    )
+
+    alias ConflictMetadataList = Array(ConflictMetadata)
+
+    alias ConflictResolution = NamedTuple(
+      "replaceContents" : (ReplaceContentEntries)?,
+      "deleteFiles" : (DeleteFileEntries)?,
+      "setFileModes" : (SetFileModeEntries)?
+    )
+
+    alias ConflictResolutionStrategyTypeEnum = String
+
+    alias Conflicts = Array(Conflict)
+
+    alias Content = String
+
+    alias Count = Int32
+
+    alias CreateApprovalRuleTemplateInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "approvalRuleTemplateContent" : ApprovalRuleTemplateContent,
+      "approvalRuleTemplateDescription" : (ApprovalRuleTemplateDescription)?
+    )
+
+    alias CreateApprovalRuleTemplateOutput = NamedTuple(
+      "approvalRuleTemplate" : ApprovalRuleTemplate
+    )
+
+    alias CreateBranchInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "branchName" : BranchName,
+      "commitId" : CommitId
+    )
+
+    alias CreateCommitInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "branchName" : BranchName,
+      "parentCommitId" : (CommitId)?,
+      "authorName" : (Name)?,
+      "email" : (Email)?,
+      "commitMessage" : (Message)?,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "putFiles" : (PutFileEntries)?,
+      "deleteFiles" : (DeleteFileEntries)?,
+      "setFileModes" : (SetFileModeEntries)?
+    )
+
+    alias CreateCommitOutput = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "treeId" : (ObjectId)?,
+      "filesAdded" : (FilesMetadata)?,
+      "filesUpdated" : (FilesMetadata)?,
+      "filesDeleted" : (FilesMetadata)?
+    )
+
+    alias CreatePullRequestApprovalRuleInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "approvalRuleName" : ApprovalRuleName,
+      "approvalRuleContent" : ApprovalRuleContent
+    )
+
+    alias CreatePullRequestApprovalRuleOutput = NamedTuple(
+      "approvalRule" : ApprovalRule
+    )
+
+    alias CreatePullRequestInput = NamedTuple(
+      "title" : Title,
+      "description" : (Description)?,
+      "targets" : TargetList,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreatePullRequestOutput = NamedTuple(
+      "pullRequest" : PullRequest
+    )
+
+    alias CreateRepositoryInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "repositoryDescription" : (RepositoryDescription)?,
+      "tags" : (TagsMap)?
+    )
+
+    alias CreateRepositoryOutput = NamedTuple(
+      "repositoryMetadata" : (RepositoryMetadata)?
+    )
+
+    alias CreateUnreferencedMergeCommitInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceCommitSpecifier" : CommitName,
+      "destinationCommitSpecifier" : CommitName,
+      "mergeOption" : MergeOptionTypeEnum,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "authorName" : (Name)?,
+      "email" : (Email)?,
+      "commitMessage" : (Message)?,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "conflictResolution" : (ConflictResolution)?
+    )
+
+    alias CreateUnreferencedMergeCommitOutput = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "treeId" : (ObjectId)?
+    )
+
+    alias CreationDate = String | UInt64 | Time
+
+    alias Date = String
+
+    alias DefaultBranchCannotBeDeletedException = NamedTuple(
+      
+    )
+
+    alias DeleteApprovalRuleTemplateInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName
+    )
+
+    alias DeleteApprovalRuleTemplateOutput = NamedTuple(
+      "approvalRuleTemplateId" : ApprovalRuleTemplateId
+    )
+
+    alias DeleteBranchInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "branchName" : BranchName
+    )
+
+    alias DeleteBranchOutput = NamedTuple(
+      "deletedBranch" : (BranchInfo)?
+    )
+
+    alias DeleteCommentContentInput = NamedTuple(
+      "commentId" : CommentId
+    )
+
+    alias DeleteCommentContentOutput = NamedTuple(
+      "comment" : (Comment)?
+    )
+
+    alias DeleteFileEntries = Array(DeleteFileEntry)
+
+    alias DeleteFileEntry = NamedTuple(
+      "filePath" : Path
+    )
+
+    alias DeleteFileInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "branchName" : BranchName,
+      "filePath" : Path,
+      "parentCommitId" : CommitId,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "commitMessage" : (Message)?,
+      "name" : (Name)?,
+      "email" : (Email)?
+    )
+
+    alias DeleteFileOutput = NamedTuple(
+      "commitId" : ObjectId,
+      "blobId" : ObjectId,
+      "treeId" : ObjectId,
+      "filePath" : Path
+    )
+
+    alias DeletePullRequestApprovalRuleInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "approvalRuleName" : ApprovalRuleName
+    )
+
+    alias DeletePullRequestApprovalRuleOutput = NamedTuple(
+      "approvalRuleId" : ApprovalRuleId
+    )
+
+    alias DeleteRepositoryInput = NamedTuple(
+      "repositoryName" : RepositoryName
+    )
+
+    alias DeleteRepositoryOutput = NamedTuple(
+      "repositoryId" : (RepositoryId)?
+    )
+
+    alias DescribeMergeConflictsInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "destinationCommitSpecifier" : CommitName,
+      "sourceCommitSpecifier" : CommitName,
+      "mergeOption" : MergeOptionTypeEnum,
+      "maxMergeHunks" : (MaxResults)?,
+      "filePath" : Path,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeMergeConflictsOutput = NamedTuple(
+      "conflictMetadata" : ConflictMetadata,
+      "mergeHunks" : MergeHunks,
+      "nextToken" : (NextToken)?,
+      "destinationCommitId" : ObjectId,
+      "sourceCommitId" : ObjectId,
+      "baseCommitId" : (ObjectId)?
+    )
+
+    alias DescribePullRequestEventsInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "pullRequestEventType" : (PullRequestEventType)?,
+      "actorArn" : (Arn)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias DescribePullRequestEventsOutput = NamedTuple(
+      "pullRequestEvents" : PullRequestEventList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias Description = String
+
+    alias Difference = NamedTuple(
+      "beforeBlob" : (BlobMetadata)?,
+      "afterBlob" : (BlobMetadata)?,
+      "changeType" : (ChangeTypeEnum)?
+    )
+
+    alias DifferenceList = Array(Difference)
+
+    alias DirectoryNameConflictsWithFileNameException = NamedTuple(
+      
+    )
+
+    alias DisassociateApprovalRuleTemplateFromRepositoryInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "repositoryName" : RepositoryName
+    )
+
+    alias Email = String
+
+    alias EncryptionIntegrityChecksFailedException = NamedTuple(
+      
+    )
+
+    alias EncryptionKeyAccessDeniedException = NamedTuple(
+      
+    )
+
+    alias EncryptionKeyDisabledException = NamedTuple(
+      
+    )
+
+    alias EncryptionKeyNotFoundException = NamedTuple(
+      
+    )
+
+    alias EncryptionKeyUnavailableException = NamedTuple(
+      
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias EvaluatePullRequestApprovalRulesInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "revisionId" : RevisionId
+    )
+
+    alias EvaluatePullRequestApprovalRulesOutput = NamedTuple(
+      "evaluation" : Evaluation
+    )
+
+    alias Evaluation = NamedTuple(
+      "approved" : (Approved)?,
+      "overridden" : (Overridden)?,
+      "approvalRulesSatisfied" : (ApprovalRulesSatisfiedList)?,
+      "approvalRulesNotSatisfied" : (ApprovalRulesNotSatisfiedList)?
+    )
+
+    alias EventDate = String | UInt64 | Time
+
+    alias ExceptionName = String
+
+    alias File = NamedTuple(
+      "blobId" : (ObjectId)?,
+      "absolutePath" : (Path)?,
+      "relativePath" : (Path)?,
+      "fileMode" : (FileModeTypeEnum)?
+    )
+
+    alias FileContent = String | Array(UInt8) | IO
+
+    alias FileContentAndSourceFileSpecifiedException = NamedTuple(
+      
+    )
+
+    alias FileContentRequiredException = NamedTuple(
+      
+    )
+
+    alias FileContentSizeLimitExceededException = NamedTuple(
+      
+    )
+
+    alias FileDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias FileEntryRequiredException = NamedTuple(
+      
+    )
+
+    alias FileList = Array(File)
+
+    alias FileMetadata = NamedTuple(
+      "absolutePath" : (Path)?,
+      "blobId" : (ObjectId)?,
+      "fileMode" : (FileModeTypeEnum)?
+    )
+
+    alias FileModeRequiredException = NamedTuple(
+      
+    )
+
+    alias FileModeTypeEnum = String
+
+    alias FileModes = NamedTuple(
+      "source" : (FileModeTypeEnum)?,
+      "destination" : (FileModeTypeEnum)?,
+      "base" : (FileModeTypeEnum)?
+    )
+
+    alias FileNameConflictsWithDirectoryNameException = NamedTuple(
+      
+    )
+
+    alias FilePathConflictsWithSubmodulePathException = NamedTuple(
+      
+    )
+
+    alias FilePaths = Array(Path)
+
+    alias FileSize = Int64
+
+    alias FileSizes = NamedTuple(
+      "source" : (FileSize)?,
+      "destination" : (FileSize)?,
+      "base" : (FileSize)?
+    )
+
+    alias FileTooLargeException = NamedTuple(
+      
+    )
+
+    alias FilesMetadata = Array(FileMetadata)
+
+    alias Folder = NamedTuple(
+      "treeId" : (ObjectId)?,
+      "absolutePath" : (Path)?,
+      "relativePath" : (Path)?
+    )
+
+    alias FolderContentSizeLimitExceededException = NamedTuple(
+      
+    )
+
+    alias FolderDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias FolderList = Array(Folder)
+
+    alias GetApprovalRuleTemplateInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName
+    )
+
+    alias GetApprovalRuleTemplateOutput = NamedTuple(
+      "approvalRuleTemplate" : ApprovalRuleTemplate
+    )
+
+    alias GetBlobInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "blobId" : ObjectId
+    )
+
+    alias GetBlobOutput = NamedTuple(
+      "content" : blob
+    )
+
+    alias GetBranchInput = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "branchName" : (BranchName)?
+    )
+
+    alias GetBranchOutput = NamedTuple(
+      "branch" : (BranchInfo)?
+    )
+
+    alias GetCommentInput = NamedTuple(
+      "commentId" : CommentId
+    )
+
+    alias GetCommentOutput = NamedTuple(
+      "comment" : (Comment)?
+    )
+
+    alias GetCommentReactionsInput = NamedTuple(
+      "commentId" : CommentId,
+      "reactionUserArn" : (Arn)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetCommentReactionsOutput = NamedTuple(
+      "reactionsForComment" : ReactionsForCommentList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetCommentsForComparedCommitInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : CommitId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetCommentsForComparedCommitOutput = NamedTuple(
+      "commentsForComparedCommitData" : (CommentsForComparedCommitData)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetCommentsForPullRequestInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "repositoryName" : (RepositoryName)?,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : (CommitId)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetCommentsForPullRequestOutput = NamedTuple(
+      "commentsForPullRequestData" : (CommentsForPullRequestData)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetCommitInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "commitId" : ObjectId
+    )
+
+    alias GetCommitOutput = NamedTuple(
+      "commit" : Commit
+    )
+
+    alias GetDifferencesInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "beforeCommitSpecifier" : (CommitName)?,
+      "afterCommitSpecifier" : CommitName,
+      "beforePath" : (Path)?,
+      "afterPath" : (Path)?,
+      "MaxResults" : (Limit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetDifferencesOutput = NamedTuple(
+      "differences" : (DifferenceList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetFileInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "commitSpecifier" : (CommitName)?,
+      "filePath" : Path
+    )
+
+    alias GetFileOutput = NamedTuple(
+      "commitId" : ObjectId,
+      "blobId" : ObjectId,
+      "filePath" : Path,
+      "fileMode" : FileModeTypeEnum,
+      "fileSize" : ObjectSize,
+      "fileContent" : FileContent
+    )
+
+    alias GetFolderInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "commitSpecifier" : (CommitName)?,
+      "folderPath" : Path
+    )
+
+    alias GetFolderOutput = NamedTuple(
+      "commitId" : ObjectId,
+      "folderPath" : Path,
+      "treeId" : (ObjectId)?,
+      "subFolders" : (FolderList)?,
+      "files" : (FileList)?,
+      "symbolicLinks" : (SymbolicLinkList)?,
+      "subModules" : (SubModuleList)?
+    )
+
+    alias GetMergeCommitInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceCommitSpecifier" : CommitName,
+      "destinationCommitSpecifier" : CommitName,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?
+    )
+
+    alias GetMergeCommitOutput = NamedTuple(
+      "sourceCommitId" : (ObjectId)?,
+      "destinationCommitId" : (ObjectId)?,
+      "baseCommitId" : (ObjectId)?,
+      "mergedCommitId" : (ObjectId)?
+    )
+
+    alias GetMergeConflictsInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "destinationCommitSpecifier" : CommitName,
+      "sourceCommitSpecifier" : CommitName,
+      "mergeOption" : MergeOptionTypeEnum,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "maxConflictFiles" : (MaxResults)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetMergeConflictsOutput = NamedTuple(
+      "mergeable" : IsMergeable,
+      "destinationCommitId" : ObjectId,
+      "sourceCommitId" : ObjectId,
+      "baseCommitId" : (ObjectId)?,
+      "conflictMetadataList" : ConflictMetadataList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetMergeOptionsInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceCommitSpecifier" : CommitName,
+      "destinationCommitSpecifier" : CommitName,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?
+    )
+
+    alias GetMergeOptionsOutput = NamedTuple(
+      "mergeOptions" : MergeOptions,
+      "sourceCommitId" : ObjectId,
+      "destinationCommitId" : ObjectId,
+      "baseCommitId" : ObjectId
+    )
+
+    alias GetPullRequestApprovalStatesInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "revisionId" : RevisionId
+    )
+
+    alias GetPullRequestApprovalStatesOutput = NamedTuple(
+      "approvals" : (ApprovalList)?
+    )
+
+    alias GetPullRequestInput = NamedTuple(
+      "pullRequestId" : PullRequestId
+    )
+
+    alias GetPullRequestOutput = NamedTuple(
+      "pullRequest" : PullRequest
+    )
+
+    alias GetPullRequestOverrideStateInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "revisionId" : RevisionId
+    )
+
+    alias GetPullRequestOverrideStateOutput = NamedTuple(
+      "overridden" : (Overridden)?,
+      "overrider" : (Arn)?
+    )
+
+    alias GetRepositoryInput = NamedTuple(
+      "repositoryName" : RepositoryName
+    )
+
+    alias GetRepositoryOutput = NamedTuple(
+      "repositoryMetadata" : (RepositoryMetadata)?
+    )
+
+    alias GetRepositoryTriggersInput = NamedTuple(
+      "repositoryName" : RepositoryName
+    )
+
+    alias GetRepositoryTriggersOutput = NamedTuple(
+      "configurationId" : (RepositoryTriggersConfigurationId)?,
+      "triggers" : (RepositoryTriggersList)?
+    )
+
+    alias HunkContent = String
+
+    alias IdempotencyParameterMismatchException = NamedTuple(
+      
+    )
+
+    alias InvalidActorArnException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalRuleContentException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalRuleNameException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalRuleTemplateContentException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalRuleTemplateDescriptionException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalRuleTemplateNameException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalStateException = NamedTuple(
+      
+    )
+
+    alias InvalidAuthorArnException = NamedTuple(
+      
+    )
+
+    alias InvalidBlobIdException = NamedTuple(
+      
+    )
+
+    alias InvalidBranchNameException = NamedTuple(
+      
+    )
+
+    alias InvalidClientRequestTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidCommentIdException = NamedTuple(
+      
+    )
+
+    alias InvalidCommitException = NamedTuple(
+      
+    )
+
+    alias InvalidCommitIdException = NamedTuple(
+      
+    )
+
+    alias InvalidConflictDetailLevelException = NamedTuple(
+      
+    )
+
+    alias InvalidConflictResolutionException = NamedTuple(
+      
+    )
+
+    alias InvalidConflictResolutionStrategyException = NamedTuple(
+      
+    )
+
+    alias InvalidContinuationTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidDeletionParameterException = NamedTuple(
+      
+    )
+
+    alias InvalidDescriptionException = NamedTuple(
+      
+    )
+
+    alias InvalidDestinationCommitSpecifierException = NamedTuple(
+      
+    )
+
+    alias InvalidEmailException = NamedTuple(
+      
+    )
+
+    alias InvalidFileLocationException = NamedTuple(
+      
+    )
+
+    alias InvalidFileModeException = NamedTuple(
+      
+    )
+
+    alias InvalidFilePositionException = NamedTuple(
+      
+    )
+
+    alias InvalidMaxConflictFilesException = NamedTuple(
+      
+    )
+
+    alias InvalidMaxMergeHunksException = NamedTuple(
+      
+    )
+
+    alias InvalidMaxResultsException = NamedTuple(
+      
+    )
+
+    alias InvalidMergeOptionException = NamedTuple(
+      
+    )
+
+    alias InvalidOrderException = NamedTuple(
+      
+    )
+
+    alias InvalidOverrideStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidParentCommitIdException = NamedTuple(
+      
+    )
+
+    alias InvalidPathException = NamedTuple(
+      
+    )
+
+    alias InvalidPullRequestEventTypeException = NamedTuple(
+      
+    )
+
+    alias InvalidPullRequestIdException = NamedTuple(
+      
+    )
+
+    alias InvalidPullRequestStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidPullRequestStatusUpdateException = NamedTuple(
+      
+    )
+
+    alias InvalidReactionUserArnException = NamedTuple(
+      
+    )
+
+    alias InvalidReactionValueException = NamedTuple(
+      
+    )
+
+    alias InvalidReferenceNameException = NamedTuple(
+      
+    )
+
+    alias InvalidRelativeFileVersionEnumException = NamedTuple(
+      
+    )
+
+    alias InvalidReplacementContentException = NamedTuple(
+      
+    )
+
+    alias InvalidReplacementTypeException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryDescriptionException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryNameException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryTriggerBranchNameException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryTriggerCustomDataException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryTriggerDestinationArnException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryTriggerEventsException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryTriggerNameException = NamedTuple(
+      
+    )
+
+    alias InvalidRepositoryTriggerRegionException = NamedTuple(
+      
+    )
+
+    alias InvalidResourceArnException = NamedTuple(
+      
+    )
+
+    alias InvalidRevisionIdException = NamedTuple(
+      
+    )
+
+    alias InvalidRuleContentSha256Exception = NamedTuple(
+      
+    )
+
+    alias InvalidSortByException = NamedTuple(
+      
+    )
+
+    alias InvalidSourceCommitSpecifierException = NamedTuple(
+      
+    )
+
+    alias InvalidSystemTagUsageException = NamedTuple(
+      
+    )
+
+    alias InvalidTagKeysListException = NamedTuple(
+      
+    )
+
+    alias InvalidTagsMapException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetBranchException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetsException = NamedTuple(
+      
+    )
+
+    alias InvalidTitleException = NamedTuple(
+      
+    )
+
+    alias IsBinaryFile = NamedTuple(
+      "source" : (CapitalBoolean)?,
+      "destination" : (CapitalBoolean)?,
+      "base" : (CapitalBoolean)?
+    )
+
+    alias IsCommentDeleted = Bool
+
+    alias IsContentConflict = Bool
+
+    alias IsFileModeConflict = Bool
+
+    alias IsHunkConflict = Bool
+
+    alias IsMergeable = Bool
+
+    alias IsMerged = Bool
+
+    alias IsMove = Bool
+
+    alias IsObjectTypeConflict = Bool
+
+    alias KeepEmptyFolders = Bool
+
+    alias LastModifiedDate = String | UInt64 | Time
+
+    alias Limit = Int32
+
+    alias LineNumber = Int32
+
+    alias ListApprovalRuleTemplatesInput = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListApprovalRuleTemplatesOutput = NamedTuple(
+      "approvalRuleTemplateNames" : (ApprovalRuleTemplateNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssociatedApprovalRuleTemplatesForRepositoryInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssociatedApprovalRuleTemplatesForRepositoryOutput = NamedTuple(
+      "approvalRuleTemplateNames" : (ApprovalRuleTemplateNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListBranchesInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListBranchesOutput = NamedTuple(
+      "branches" : (BranchNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPullRequestsInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "authorArn" : (Arn)?,
+      "pullRequestStatus" : (PullRequestStatusEnum)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPullRequestsOutput = NamedTuple(
+      "pullRequestIds" : PullRequestIdList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListRepositoriesForApprovalRuleTemplateInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListRepositoriesForApprovalRuleTemplateOutput = NamedTuple(
+      "repositoryNames" : (RepositoryNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListRepositoriesInput = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "sortBy" : (SortByEnum)?,
+      "order" : (OrderEnum)?
+    )
+
+    alias ListRepositoriesOutput = NamedTuple(
+      "repositories" : (RepositoryNameIdPairList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "tags" : (TagsMap)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias Location = NamedTuple(
+      "filePath" : (Path)?,
+      "filePosition" : (Position)?,
+      "relativeFileVersion" : (RelativeFileVersionEnum)?
+    )
+
+    alias ManualMergeRequiredException = NamedTuple(
+      
+    )
+
+    alias MaxResults = Int32
+
+    alias MaximumBranchesExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumConflictResolutionEntriesExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumFileContentToLoadExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumFileEntriesExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumItemsToCompareExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumNumberOfApprovalsExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumOpenPullRequestsExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumRepositoryNamesExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumRepositoryTriggersExceededException = NamedTuple(
+      
+    )
+
+    alias MaximumRuleTemplatesAssociatedWithRepositoryException = NamedTuple(
+      
+    )
+
+    alias MergeBranchesByFastForwardInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceCommitSpecifier" : CommitName,
+      "destinationCommitSpecifier" : CommitName,
+      "targetBranch" : (BranchName)?
+    )
+
+    alias MergeBranchesByFastForwardOutput = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "treeId" : (ObjectId)?
+    )
+
+    alias MergeBranchesBySquashInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceCommitSpecifier" : CommitName,
+      "destinationCommitSpecifier" : CommitName,
+      "targetBranch" : (BranchName)?,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "authorName" : (Name)?,
+      "email" : (Email)?,
+      "commitMessage" : (Message)?,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "conflictResolution" : (ConflictResolution)?
+    )
+
+    alias MergeBranchesBySquashOutput = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "treeId" : (ObjectId)?
+    )
+
+    alias MergeBranchesByThreeWayInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceCommitSpecifier" : CommitName,
+      "destinationCommitSpecifier" : CommitName,
+      "targetBranch" : (BranchName)?,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "authorName" : (Name)?,
+      "email" : (Email)?,
+      "commitMessage" : (Message)?,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "conflictResolution" : (ConflictResolution)?
+    )
+
+    alias MergeBranchesByThreeWayOutput = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "treeId" : (ObjectId)?
+    )
+
+    alias MergeHunk = NamedTuple(
+      "isConflict" : (IsHunkConflict)?,
+      "source" : (MergeHunkDetail)?,
+      "destination" : (MergeHunkDetail)?,
+      "base" : (MergeHunkDetail)?
+    )
+
+    alias MergeHunkDetail = NamedTuple(
+      "startLine" : (LineNumber)?,
+      "endLine" : (LineNumber)?,
+      "hunkContent" : (HunkContent)?
+    )
+
+    alias MergeHunks = Array(MergeHunk)
+
+    alias MergeMetadata = NamedTuple(
+      "isMerged" : (IsMerged)?,
+      "mergedBy" : (Arn)?,
+      "mergeCommitId" : (CommitId)?,
+      "mergeOption" : (MergeOptionTypeEnum)?
+    )
+
+    alias MergeOperations = NamedTuple(
+      "source" : (ChangeTypeEnum)?,
+      "destination" : (ChangeTypeEnum)?
+    )
+
+    alias MergeOptionRequiredException = NamedTuple(
+      
+    )
+
+    alias MergeOptionTypeEnum = String
+
+    alias MergeOptions = Array(MergeOptionTypeEnum)
+
+    alias MergePullRequestByFastForwardInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "repositoryName" : RepositoryName,
+      "sourceCommitId" : (ObjectId)?
+    )
+
+    alias MergePullRequestByFastForwardOutput = NamedTuple(
+      "pullRequest" : (PullRequest)?
+    )
+
+    alias MergePullRequestBySquashInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "repositoryName" : RepositoryName,
+      "sourceCommitId" : (ObjectId)?,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "commitMessage" : (Message)?,
+      "authorName" : (Name)?,
+      "email" : (Email)?,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "conflictResolution" : (ConflictResolution)?
+    )
+
+    alias MergePullRequestBySquashOutput = NamedTuple(
+      "pullRequest" : (PullRequest)?
+    )
+
+    alias MergePullRequestByThreeWayInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "repositoryName" : RepositoryName,
+      "sourceCommitId" : (ObjectId)?,
+      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
+      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
+      "commitMessage" : (Message)?,
+      "authorName" : (Name)?,
+      "email" : (Email)?,
+      "keepEmptyFolders" : (KeepEmptyFolders)?,
+      "conflictResolution" : (ConflictResolution)?
+    )
+
+    alias MergePullRequestByThreeWayOutput = NamedTuple(
+      "pullRequest" : (PullRequest)?
+    )
+
+    alias Message = String
+
+    alias Mode = String
+
+    alias MultipleConflictResolutionEntriesException = NamedTuple(
+      
+    )
+
+    alias MultipleRepositoriesInPullRequestException = NamedTuple(
+      
+    )
+
+    alias Name = String
+
+    alias NameLengthExceededException = NamedTuple(
+      
+    )
+
+    alias NextToken = String
+
+    alias NoChangeException = NamedTuple(
+      
+    )
+
+    alias NumberOfConflicts = Int32
+
+    alias NumberOfRuleTemplatesExceededException = NamedTuple(
+      
+    )
+
+    alias NumberOfRulesExceededException = NamedTuple(
+      
+    )
+
+    alias ObjectId = String
+
+    alias ObjectSize = Int64
+
+    alias ObjectTypeEnum = String
+
+    alias ObjectTypes = NamedTuple(
+      "source" : (ObjectTypeEnum)?,
+      "destination" : (ObjectTypeEnum)?,
+      "base" : (ObjectTypeEnum)?
+    )
+
+    alias OrderEnum = String
+
+    alias OriginApprovalRuleTemplate = NamedTuple(
+      "approvalRuleTemplateId" : (ApprovalRuleTemplateId)?,
+      "approvalRuleTemplateName" : (ApprovalRuleTemplateName)?
+    )
+
+    alias Overridden = Bool
+
+    alias OverrideAlreadySetException = NamedTuple(
+      
+    )
+
+    alias OverridePullRequestApprovalRulesInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "revisionId" : RevisionId,
+      "overrideStatus" : OverrideStatus
+    )
+
+    alias OverrideStatus = String
+
+    alias OverrideStatusRequiredException = NamedTuple(
+      
+    )
+
+    alias ParentCommitDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias ParentCommitIdOutdatedException = NamedTuple(
+      
+    )
+
+    alias ParentCommitIdRequiredException = NamedTuple(
+      
+    )
+
+    alias ParentList = Array(ObjectId)
+
+    alias Path = String
+
+    alias PathDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias PathRequiredException = NamedTuple(
+      
+    )
+
+    alias Position = Int64
+
+    alias PostCommentForComparedCommitInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : CommitId,
+      "location" : (Location)?,
+      "content" : Content,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias PostCommentForComparedCommitOutput = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : (CommitId)?,
+      "beforeBlobId" : (ObjectId)?,
+      "afterBlobId" : (ObjectId)?,
+      "location" : (Location)?,
+      "comment" : (Comment)?
+    )
+
+    alias PostCommentForPullRequestInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "repositoryName" : RepositoryName,
+      "beforeCommitId" : CommitId,
+      "afterCommitId" : CommitId,
+      "location" : (Location)?,
+      "content" : Content,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias PostCommentForPullRequestOutput = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "pullRequestId" : (PullRequestId)?,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : (CommitId)?,
+      "beforeBlobId" : (ObjectId)?,
+      "afterBlobId" : (ObjectId)?,
+      "location" : (Location)?,
+      "comment" : (Comment)?
+    )
+
+    alias PostCommentReplyInput = NamedTuple(
+      "inReplyTo" : CommentId,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "content" : Content
+    )
+
+    alias PostCommentReplyOutput = NamedTuple(
+      "comment" : (Comment)?
+    )
+
+    alias PullRequest = NamedTuple(
+      "pullRequestId" : (PullRequestId)?,
+      "title" : (Title)?,
+      "description" : (Description)?,
+      "lastActivityDate" : (LastModifiedDate)?,
+      "creationDate" : (CreationDate)?,
+      "pullRequestStatus" : (PullRequestStatusEnum)?,
+      "authorArn" : (Arn)?,
+      "pullRequestTargets" : (PullRequestTargetList)?,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "revisionId" : (RevisionId)?,
+      "approvalRules" : (ApprovalRulesList)?
+    )
+
+    alias PullRequestAlreadyClosedException = NamedTuple(
+      
+    )
+
+    alias PullRequestApprovalRulesNotSatisfiedException = NamedTuple(
+      
+    )
+
+    alias PullRequestCannotBeApprovedByAuthorException = NamedTuple(
+      
+    )
+
+    alias PullRequestCreatedEventMetadata = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "sourceCommitId" : (CommitId)?,
+      "destinationCommitId" : (CommitId)?,
+      "mergeBase" : (CommitId)?
+    )
+
+    alias PullRequestDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias PullRequestEvent = NamedTuple(
+      "pullRequestId" : (PullRequestId)?,
+      "eventDate" : (EventDate)?,
+      "pullRequestEventType" : (PullRequestEventType)?,
+      "actorArn" : (Arn)?,
+      "pullRequestCreatedEventMetadata" : (PullRequestCreatedEventMetadata)?,
+      "pullRequestStatusChangedEventMetadata" : (PullRequestStatusChangedEventMetadata)?,
+      "pullRequestSourceReferenceUpdatedEventMetadata" : (PullRequestSourceReferenceUpdatedEventMetadata)?,
+      "pullRequestMergedStateChangedEventMetadata" : (PullRequestMergedStateChangedEventMetadata)?,
+      "approvalRuleEventMetadata" : (ApprovalRuleEventMetadata)?,
+      "approvalStateChangedEventMetadata" : (ApprovalStateChangedEventMetadata)?,
+      "approvalRuleOverriddenEventMetadata" : (ApprovalRuleOverriddenEventMetadata)?
+    )
+
+    alias PullRequestEventList = Array(PullRequestEvent)
+
+    alias PullRequestEventType = String
+
+    alias PullRequestId = String
+
+    alias PullRequestIdList = Array(PullRequestId)
+
+    alias PullRequestIdRequiredException = NamedTuple(
+      
+    )
+
+    alias PullRequestMergedStateChangedEventMetadata = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "destinationReference" : (ReferenceName)?,
+      "mergeMetadata" : (MergeMetadata)?
+    )
+
+    alias PullRequestSourceReferenceUpdatedEventMetadata = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "beforeCommitId" : (CommitId)?,
+      "afterCommitId" : (CommitId)?,
+      "mergeBase" : (CommitId)?
+    )
+
+    alias PullRequestStatusChangedEventMetadata = NamedTuple(
+      "pullRequestStatus" : (PullRequestStatusEnum)?
+    )
+
+    alias PullRequestStatusEnum = String
+
+    alias PullRequestStatusRequiredException = NamedTuple(
+      
+    )
+
+    alias PullRequestTarget = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "sourceReference" : (ReferenceName)?,
+      "destinationReference" : (ReferenceName)?,
+      "destinationCommit" : (CommitId)?,
+      "sourceCommit" : (CommitId)?,
+      "mergeBase" : (CommitId)?,
+      "mergeMetadata" : (MergeMetadata)?
+    )
+
+    alias PullRequestTargetList = Array(PullRequestTarget)
+
+    alias PutCommentReactionInput = NamedTuple(
+      "commentId" : CommentId,
+      "reactionValue" : ReactionValue
+    )
+
+    alias PutFileEntries = Array(PutFileEntry)
+
+    alias PutFileEntry = NamedTuple(
+      "filePath" : Path,
+      "fileMode" : (FileModeTypeEnum)?,
+      "fileContent" : (FileContent)?,
+      "sourceFile" : (SourceFileSpecifier)?
+    )
+
+    alias PutFileEntryConflictException = NamedTuple(
+      
+    )
+
+    alias PutFileInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "branchName" : BranchName,
+      "fileContent" : FileContent,
+      "filePath" : Path,
+      "fileMode" : (FileModeTypeEnum)?,
+      "parentCommitId" : (CommitId)?,
+      "commitMessage" : (Message)?,
+      "name" : (Name)?,
+      "email" : (Email)?
+    )
+
+    alias PutFileOutput = NamedTuple(
+      "commitId" : ObjectId,
+      "blobId" : ObjectId,
+      "treeId" : ObjectId
+    )
+
+    alias PutRepositoryTriggersInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "triggers" : RepositoryTriggersList
+    )
+
+    alias PutRepositoryTriggersOutput = NamedTuple(
+      "configurationId" : (RepositoryTriggersConfigurationId)?
+    )
+
+    alias ReactionCountsMap = Hash(ReactionValue,Count)
+
+    alias ReactionEmoji = String
+
+    alias ReactionForComment = NamedTuple(
+      "reaction" : (ReactionValueFormats)?,
+      "reactionUsers" : (ReactionUsersList)?,
+      "reactionsFromDeletedUsersCount" : (Count)?
+    )
+
+    alias ReactionLimitExceededException = NamedTuple(
+      
+    )
+
+    alias ReactionShortCode = String
+
+    alias ReactionUnicode = String
+
+    alias ReactionUsersList = Array(Arn)
+
+    alias ReactionValue = String
+
+    alias ReactionValueFormats = NamedTuple(
+      "emoji" : (ReactionEmoji)?,
+      "shortCode" : (ReactionShortCode)?,
+      "unicode" : (ReactionUnicode)?
+    )
+
+    alias ReactionValueRequiredException = NamedTuple(
+      
+    )
+
+    alias ReactionsForCommentList = Array(ReactionForComment)
+
+    alias ReferenceDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias ReferenceName = String
+
+    alias ReferenceNameRequiredException = NamedTuple(
+      
+    )
+
+    alias ReferenceTypeNotSupportedException = NamedTuple(
+      
+    )
+
+    alias RelativeFileVersionEnum = String
+
+    alias ReplaceContentEntries = Array(ReplaceContentEntry)
+
+    alias ReplaceContentEntry = NamedTuple(
+      "filePath" : Path,
+      "replacementType" : ReplacementTypeEnum,
+      "content" : (FileContent)?,
+      "fileMode" : (FileModeTypeEnum)?
+    )
+
+    alias ReplacementContentRequiredException = NamedTuple(
+      
+    )
+
+    alias ReplacementTypeEnum = String
+
+    alias ReplacementTypeRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryDescription = String
+
+    alias RepositoryDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias RepositoryId = String
+
+    alias RepositoryLimitExceededException = NamedTuple(
+      
+    )
+
+    alias RepositoryMetadata = NamedTuple(
+      "accountId" : (AccountId)?,
+      "repositoryId" : (RepositoryId)?,
+      "repositoryName" : (RepositoryName)?,
+      "repositoryDescription" : (RepositoryDescription)?,
+      "defaultBranch" : (BranchName)?,
+      "lastModifiedDate" : (LastModifiedDate)?,
+      "creationDate" : (CreationDate)?,
+      "cloneUrlHttp" : (CloneUrlHttp)?,
+      "cloneUrlSsh" : (CloneUrlSsh)?,
+      "Arn" : (Arn)?
+    )
+
+    alias RepositoryMetadataList = Array(RepositoryMetadata)
+
+    alias RepositoryName = String
+
+    alias RepositoryNameExistsException = NamedTuple(
+      
+    )
+
+    alias RepositoryNameIdPair = NamedTuple(
+      "repositoryName" : (RepositoryName)?,
+      "repositoryId" : (RepositoryId)?
+    )
+
+    alias RepositoryNameIdPairList = Array(RepositoryNameIdPair)
+
+    alias RepositoryNameList = Array(RepositoryName)
+
+    alias RepositoryNameRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryNamesRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryNotAssociatedWithPullRequestException = NamedTuple(
+      
+    )
+
+    alias RepositoryNotFoundList = Array(RepositoryName)
+
+    alias RepositoryTrigger = NamedTuple(
+      "name" : RepositoryTriggerName,
+      "destinationArn" : Arn,
+      "customData" : (RepositoryTriggerCustomData)?,
+      "branches" : (BranchNameList)?,
+      "events" : RepositoryTriggerEventList
+    )
+
+    alias RepositoryTriggerBranchNameListRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryTriggerCustomData = String
+
+    alias RepositoryTriggerDestinationArnRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryTriggerEventEnum = String
+
+    alias RepositoryTriggerEventList = Array(RepositoryTriggerEventEnum)
+
+    alias RepositoryTriggerEventsListRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryTriggerExecutionFailure = NamedTuple(
+      "trigger" : (RepositoryTriggerName)?,
+      "failureMessage" : (RepositoryTriggerExecutionFailureMessage)?
+    )
+
+    alias RepositoryTriggerExecutionFailureList = Array(RepositoryTriggerExecutionFailure)
+
+    alias RepositoryTriggerExecutionFailureMessage = String
+
+    alias RepositoryTriggerName = String
+
+    alias RepositoryTriggerNameList = Array(RepositoryTriggerName)
+
+    alias RepositoryTriggerNameRequiredException = NamedTuple(
+      
+    )
+
+    alias RepositoryTriggersConfigurationId = String
+
+    alias RepositoryTriggersList = Array(RepositoryTrigger)
+
+    alias RepositoryTriggersListRequiredException = NamedTuple(
+      
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceArnRequiredException = NamedTuple(
+      
+    )
+
+    alias RestrictedSourceFileException = NamedTuple(
+      
+    )
+
+    alias RevisionId = String
+
+    alias RevisionIdRequiredException = NamedTuple(
+      
+    )
+
+    alias RevisionNotCurrentException = NamedTuple(
+      
+    )
+
+    alias RuleContentSha256 = String
+
+    alias SameFileContentException = NamedTuple(
+      
+    )
+
+    alias SamePathRequestException = NamedTuple(
+      
+    )
+
+    alias SetFileModeEntries = Array(SetFileModeEntry)
+
+    alias SetFileModeEntry = NamedTuple(
+      "filePath" : Path,
+      "fileMode" : FileModeTypeEnum
+    )
+
+    alias SortByEnum = String
+
+    alias SourceAndDestinationAreSameException = NamedTuple(
+      
+    )
+
+    alias SourceFileOrContentRequiredException = NamedTuple(
+      
+    )
+
+    alias SourceFileSpecifier = NamedTuple(
+      "filePath" : Path,
+      "isMove" : (IsMove)?
+    )
+
+    alias SubModule = NamedTuple(
+      "commitId" : (ObjectId)?,
+      "absolutePath" : (Path)?,
+      "relativePath" : (Path)?
+    )
+
+    alias SubModuleList = Array(SubModule)
+
+    alias SymbolicLink = NamedTuple(
+      "blobId" : (ObjectId)?,
+      "absolutePath" : (Path)?,
+      "relativePath" : (Path)?,
+      "fileMode" : (FileModeTypeEnum)?
+    )
+
+    alias SymbolicLinkList = Array(SymbolicLink)
+
+    alias TagKey = String
+
+    alias TagKeysList = Array(TagKey)
+
+    alias TagKeysListRequiredException = NamedTuple(
+      
+    )
+
+    alias TagPolicyException = NamedTuple(
+      
+    )
+
+    alias TagResourceInput = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagsMap
+    )
+
+    alias TagValue = String
+
+    alias TagsMap = Hash(TagKey,TagValue)
+
+    alias TagsMapRequiredException = NamedTuple(
+      
+    )
+
+    alias Target = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "sourceReference" : ReferenceName,
+      "destinationReference" : (ReferenceName)?
+    )
+
+    alias TargetList = Array(Target)
+
+    alias TargetRequiredException = NamedTuple(
+      
+    )
+
+    alias TargetsRequiredException = NamedTuple(
+      
+    )
+
+    alias TestRepositoryTriggersInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "triggers" : RepositoryTriggersList
+    )
+
+    alias TestRepositoryTriggersOutput = NamedTuple(
+      "successfulExecutions" : (RepositoryTriggerNameList)?,
+      "failedExecutions" : (RepositoryTriggerExecutionFailureList)?
+    )
+
+    alias TipOfSourceReferenceIsDifferentException = NamedTuple(
+      
+    )
+
+    alias TipsDivergenceExceededException = NamedTuple(
+      
+    )
+
+    alias Title = String
+
+    alias TitleRequiredException = NamedTuple(
+      
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      
+    )
+
+    alias UntagResourceInput = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeysList
+    )
+
+    alias UpdateApprovalRuleTemplateContentInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "newRuleContent" : ApprovalRuleTemplateContent,
+      "existingRuleContentSha256" : (RuleContentSha256)?
+    )
+
+    alias UpdateApprovalRuleTemplateContentOutput = NamedTuple(
+      "approvalRuleTemplate" : ApprovalRuleTemplate
+    )
+
+    alias UpdateApprovalRuleTemplateDescriptionInput = NamedTuple(
+      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
+      "approvalRuleTemplateDescription" : ApprovalRuleTemplateDescription
+    )
+
+    alias UpdateApprovalRuleTemplateDescriptionOutput = NamedTuple(
+      "approvalRuleTemplate" : ApprovalRuleTemplate
+    )
+
+    alias UpdateApprovalRuleTemplateNameInput = NamedTuple(
+      "oldApprovalRuleTemplateName" : ApprovalRuleTemplateName,
+      "newApprovalRuleTemplateName" : ApprovalRuleTemplateName
+    )
+
+    alias UpdateApprovalRuleTemplateNameOutput = NamedTuple(
+      "approvalRuleTemplate" : ApprovalRuleTemplate
+    )
+
+    alias UpdateCommentInput = NamedTuple(
+      "commentId" : CommentId,
+      "content" : Content
+    )
+
+    alias UpdateCommentOutput = NamedTuple(
+      "comment" : (Comment)?
+    )
+
+    alias UpdateDefaultBranchInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "defaultBranchName" : BranchName
+    )
+
+    alias UpdatePullRequestApprovalRuleContentInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "approvalRuleName" : ApprovalRuleName,
+      "existingRuleContentSha256" : (RuleContentSha256)?,
+      "newRuleContent" : ApprovalRuleContent
+    )
+
+    alias UpdatePullRequestApprovalRuleContentOutput = NamedTuple(
+      "approvalRule" : ApprovalRule
+    )
+
+    alias UpdatePullRequestApprovalStateInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "revisionId" : RevisionId,
+      "approvalState" : ApprovalState
+    )
+
+    alias UpdatePullRequestDescriptionInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "description" : Description
+    )
+
+    alias UpdatePullRequestDescriptionOutput = NamedTuple(
+      "pullRequest" : PullRequest
+    )
+
+    alias UpdatePullRequestStatusInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "pullRequestStatus" : PullRequestStatusEnum
+    )
+
+    alias UpdatePullRequestStatusOutput = NamedTuple(
+      "pullRequest" : PullRequest
+    )
+
+    alias UpdatePullRequestTitleInput = NamedTuple(
+      "pullRequestId" : PullRequestId,
+      "title" : Title
+    )
+
+    alias UpdatePullRequestTitleOutput = NamedTuple(
+      "pullRequest" : PullRequest
+    )
+
+    alias UpdateRepositoryDescriptionInput = NamedTuple(
+      "repositoryName" : RepositoryName,
+      "repositoryDescription" : (RepositoryDescription)?
+    )
+
+    alias UpdateRepositoryNameInput = NamedTuple(
+      "oldName" : RepositoryName,
+      "newName" : RepositoryName
+    )
+
+    alias UserInfo = NamedTuple(
+      "name" : (Name)?,
+      "email" : (Email)?,
+      "date" : (Date)?
+    )
+
+    alias blob = String | Array(UInt8) | IO
   end
 end

@@ -11385,5 +11385,1573 @@ module Aws::ECS
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      
+    )
+
+    alias AgentUpdateStatus = String
+
+    alias AssignPublicIp = String
+
+    alias Attachment = NamedTuple(
+      "id" : (String)?,
+      "type" : (String)?,
+      "status" : (String)?,
+      "details" : (AttachmentDetails)?
+    )
+
+    alias AttachmentDetails = Array(KeyValuePair)
+
+    alias AttachmentStateChange = NamedTuple(
+      "attachmentArn" : String,
+      "status" : String
+    )
+
+    alias AttachmentStateChanges = Array(AttachmentStateChange)
+
+    alias Attachments = Array(Attachment)
+
+    alias Attribute = NamedTuple(
+      "name" : String,
+      "value" : (String)?,
+      "targetType" : (TargetType)?,
+      "targetId" : (String)?
+    )
+
+    alias AttributeLimitExceededException = NamedTuple(
+      
+    )
+
+    alias Attributes = Array(Attribute)
+
+    alias AutoScalingGroupProvider = NamedTuple(
+      "autoScalingGroupArn" : String,
+      "managedScaling" : (ManagedScaling)?,
+      "managedTerminationProtection" : (ManagedTerminationProtection)?
+    )
+
+    alias AutoScalingGroupProviderUpdate = NamedTuple(
+      "managedScaling" : (ManagedScaling)?,
+      "managedTerminationProtection" : (ManagedTerminationProtection)?
+    )
+
+    alias AwsVpcConfiguration = NamedTuple(
+      "subnets" : StringList,
+      "securityGroups" : (StringList)?,
+      "assignPublicIp" : (AssignPublicIp)?
+    )
+
+    alias BlockedException = NamedTuple(
+      
+    )
+
+    alias Boolean = Bool
+
+    alias BoxedBoolean = Bool
+
+    alias BoxedInteger = Int32
+
+    alias CapacityProvider = NamedTuple(
+      "capacityProviderArn" : (String)?,
+      "name" : (String)?,
+      "status" : (CapacityProviderStatus)?,
+      "autoScalingGroupProvider" : (AutoScalingGroupProvider)?,
+      "updateStatus" : (CapacityProviderUpdateStatus)?,
+      "updateStatusReason" : (String)?,
+      "tags" : (Tags)?
+    )
+
+    alias CapacityProviderField = String
+
+    alias CapacityProviderFieldList = Array(CapacityProviderField)
+
+    alias CapacityProviderStatus = String
+
+    alias CapacityProviderStrategy = Array(CapacityProviderStrategyItem)
+
+    alias CapacityProviderStrategyItem = NamedTuple(
+      "capacityProvider" : String,
+      "weight" : (CapacityProviderStrategyItemWeight)?,
+      "base" : (CapacityProviderStrategyItemBase)?
+    )
+
+    alias CapacityProviderStrategyItemBase = Int32
+
+    alias CapacityProviderStrategyItemWeight = Int32
+
+    alias CapacityProviderUpdateStatus = String
+
+    alias CapacityProviders = Array(CapacityProvider)
+
+    alias ClientException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Cluster = NamedTuple(
+      "clusterArn" : (String)?,
+      "clusterName" : (String)?,
+      "status" : (String)?,
+      "registeredContainerInstancesCount" : (Integer)?,
+      "runningTasksCount" : (Integer)?,
+      "pendingTasksCount" : (Integer)?,
+      "activeServicesCount" : (Integer)?,
+      "statistics" : (Statistics)?,
+      "tags" : (Tags)?,
+      "settings" : (ClusterSettings)?,
+      "capacityProviders" : (StringList)?,
+      "defaultCapacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "attachments" : (Attachments)?,
+      "attachmentsStatus" : (String)?
+    )
+
+    alias ClusterContainsContainerInstancesException = NamedTuple(
+      
+    )
+
+    alias ClusterContainsServicesException = NamedTuple(
+      
+    )
+
+    alias ClusterContainsTasksException = NamedTuple(
+      
+    )
+
+    alias ClusterField = String
+
+    alias ClusterFieldList = Array(ClusterField)
+
+    alias ClusterNotFoundException = NamedTuple(
+      
+    )
+
+    alias ClusterSetting = NamedTuple(
+      "name" : (ClusterSettingName)?,
+      "value" : (String)?
+    )
+
+    alias ClusterSettingName = String
+
+    alias ClusterSettings = Array(ClusterSetting)
+
+    alias Clusters = Array(Cluster)
+
+    alias Compatibility = String
+
+    alias CompatibilityList = Array(Compatibility)
+
+    alias Connectivity = String
+
+    alias Container = NamedTuple(
+      "containerArn" : (String)?,
+      "taskArn" : (String)?,
+      "name" : (String)?,
+      "image" : (String)?,
+      "imageDigest" : (String)?,
+      "runtimeId" : (String)?,
+      "lastStatus" : (String)?,
+      "exitCode" : (BoxedInteger)?,
+      "reason" : (String)?,
+      "networkBindings" : (NetworkBindings)?,
+      "networkInterfaces" : (NetworkInterfaces)?,
+      "healthStatus" : (HealthStatus)?,
+      "cpu" : (String)?,
+      "memory" : (String)?,
+      "memoryReservation" : (String)?,
+      "gpuIds" : (GpuIds)?
+    )
+
+    alias ContainerCondition = String
+
+    alias ContainerDefinition = NamedTuple(
+      "name" : (String)?,
+      "image" : (String)?,
+      "repositoryCredentials" : (RepositoryCredentials)?,
+      "cpu" : (Integer)?,
+      "memory" : (BoxedInteger)?,
+      "memoryReservation" : (BoxedInteger)?,
+      "links" : (StringList)?,
+      "portMappings" : (PortMappingList)?,
+      "essential" : (BoxedBoolean)?,
+      "entryPoint" : (StringList)?,
+      "command" : (StringList)?,
+      "environment" : (EnvironmentVariables)?,
+      "environmentFiles" : (EnvironmentFiles)?,
+      "mountPoints" : (MountPointList)?,
+      "volumesFrom" : (VolumeFromList)?,
+      "linuxParameters" : (LinuxParameters)?,
+      "secrets" : (SecretList)?,
+      "dependsOn" : (ContainerDependencies)?,
+      "startTimeout" : (BoxedInteger)?,
+      "stopTimeout" : (BoxedInteger)?,
+      "hostname" : (String)?,
+      "user" : (String)?,
+      "workingDirectory" : (String)?,
+      "disableNetworking" : (BoxedBoolean)?,
+      "privileged" : (BoxedBoolean)?,
+      "readonlyRootFilesystem" : (BoxedBoolean)?,
+      "dnsServers" : (StringList)?,
+      "dnsSearchDomains" : (StringList)?,
+      "extraHosts" : (HostEntryList)?,
+      "dockerSecurityOptions" : (StringList)?,
+      "interactive" : (BoxedBoolean)?,
+      "pseudoTerminal" : (BoxedBoolean)?,
+      "dockerLabels" : (DockerLabelsMap)?,
+      "ulimits" : (UlimitList)?,
+      "logConfiguration" : (LogConfiguration)?,
+      "healthCheck" : (HealthCheck)?,
+      "systemControls" : (SystemControls)?,
+      "resourceRequirements" : (ResourceRequirements)?,
+      "firelensConfiguration" : (FirelensConfiguration)?
+    )
+
+    alias ContainerDefinitions = Array(ContainerDefinition)
+
+    alias ContainerDependencies = Array(ContainerDependency)
+
+    alias ContainerDependency = NamedTuple(
+      "containerName" : String,
+      "condition" : ContainerCondition
+    )
+
+    alias ContainerInstance = NamedTuple(
+      "containerInstanceArn" : (String)?,
+      "ec2InstanceId" : (String)?,
+      "capacityProviderName" : (String)?,
+      "version" : (Long)?,
+      "versionInfo" : (VersionInfo)?,
+      "remainingResources" : (Resources)?,
+      "registeredResources" : (Resources)?,
+      "status" : (String)?,
+      "statusReason" : (String)?,
+      "agentConnected" : (Boolean)?,
+      "runningTasksCount" : (Integer)?,
+      "pendingTasksCount" : (Integer)?,
+      "agentUpdateStatus" : (AgentUpdateStatus)?,
+      "attributes" : (Attributes)?,
+      "registeredAt" : (Timestamp)?,
+      "attachments" : (Attachments)?,
+      "tags" : (Tags)?
+    )
+
+    alias ContainerInstanceField = String
+
+    alias ContainerInstanceFieldList = Array(ContainerInstanceField)
+
+    alias ContainerInstanceStatus = String
+
+    alias ContainerInstances = Array(ContainerInstance)
+
+    alias ContainerOverride = NamedTuple(
+      "name" : (String)?,
+      "command" : (StringList)?,
+      "environment" : (EnvironmentVariables)?,
+      "environmentFiles" : (EnvironmentFiles)?,
+      "cpu" : (BoxedInteger)?,
+      "memory" : (BoxedInteger)?,
+      "memoryReservation" : (BoxedInteger)?,
+      "resourceRequirements" : (ResourceRequirements)?
+    )
+
+    alias ContainerOverrides = Array(ContainerOverride)
+
+    alias ContainerStateChange = NamedTuple(
+      "containerName" : (String)?,
+      "imageDigest" : (String)?,
+      "runtimeId" : (String)?,
+      "exitCode" : (BoxedInteger)?,
+      "networkBindings" : (NetworkBindings)?,
+      "reason" : (String)?,
+      "status" : (String)?
+    )
+
+    alias ContainerStateChanges = Array(ContainerStateChange)
+
+    alias Containers = Array(Container)
+
+    alias CreateCapacityProviderRequest = NamedTuple(
+      "name" : String,
+      "autoScalingGroupProvider" : AutoScalingGroupProvider,
+      "tags" : (Tags)?
+    )
+
+    alias CreateCapacityProviderResponse = NamedTuple(
+      "capacityProvider" : (CapacityProvider)?
+    )
+
+    alias CreateClusterRequest = NamedTuple(
+      "clusterName" : (String)?,
+      "tags" : (Tags)?,
+      "settings" : (ClusterSettings)?,
+      "capacityProviders" : (StringList)?,
+      "defaultCapacityProviderStrategy" : (CapacityProviderStrategy)?
+    )
+
+    alias CreateClusterResponse = NamedTuple(
+      "cluster" : (Cluster)?
+    )
+
+    alias CreateServiceRequest = NamedTuple(
+      "cluster" : (String)?,
+      "serviceName" : String,
+      "taskDefinition" : (String)?,
+      "loadBalancers" : (LoadBalancers)?,
+      "serviceRegistries" : (ServiceRegistries)?,
+      "desiredCount" : (BoxedInteger)?,
+      "clientToken" : (String)?,
+      "launchType" : (LaunchType)?,
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "platformVersion" : (String)?,
+      "role" : (String)?,
+      "deploymentConfiguration" : (DeploymentConfiguration)?,
+      "placementConstraints" : (PlacementConstraints)?,
+      "placementStrategy" : (PlacementStrategies)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "healthCheckGracePeriodSeconds" : (BoxedInteger)?,
+      "schedulingStrategy" : (SchedulingStrategy)?,
+      "deploymentController" : (DeploymentController)?,
+      "tags" : (Tags)?,
+      "enableECSManagedTags" : (Boolean)?,
+      "propagateTags" : (PropagateTags)?
+    )
+
+    alias CreateServiceResponse = NamedTuple(
+      "service" : (Service)?
+    )
+
+    alias CreateTaskSetRequest = NamedTuple(
+      "service" : String,
+      "cluster" : String,
+      "externalId" : (String)?,
+      "taskDefinition" : String,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "loadBalancers" : (LoadBalancers)?,
+      "serviceRegistries" : (ServiceRegistries)?,
+      "launchType" : (LaunchType)?,
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "platformVersion" : (String)?,
+      "scale" : (Scale)?,
+      "clientToken" : (String)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateTaskSetResponse = NamedTuple(
+      "taskSet" : (TaskSet)?
+    )
+
+    alias DeleteAccountSettingRequest = NamedTuple(
+      "name" : SettingName,
+      "principalArn" : (String)?
+    )
+
+    alias DeleteAccountSettingResponse = NamedTuple(
+      "setting" : (Setting)?
+    )
+
+    alias DeleteAttributesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "attributes" : Attributes
+    )
+
+    alias DeleteAttributesResponse = NamedTuple(
+      "attributes" : (Attributes)?
+    )
+
+    alias DeleteCapacityProviderRequest = NamedTuple(
+      "capacityProvider" : String
+    )
+
+    alias DeleteCapacityProviderResponse = NamedTuple(
+      "capacityProvider" : (CapacityProvider)?
+    )
+
+    alias DeleteClusterRequest = NamedTuple(
+      "cluster" : String
+    )
+
+    alias DeleteClusterResponse = NamedTuple(
+      "cluster" : (Cluster)?
+    )
+
+    alias DeleteServiceRequest = NamedTuple(
+      "cluster" : (String)?,
+      "service" : String,
+      "force" : (BoxedBoolean)?
+    )
+
+    alias DeleteServiceResponse = NamedTuple(
+      "service" : (Service)?
+    )
+
+    alias DeleteTaskSetRequest = NamedTuple(
+      "cluster" : String,
+      "service" : String,
+      "taskSet" : String,
+      "force" : (BoxedBoolean)?
+    )
+
+    alias DeleteTaskSetResponse = NamedTuple(
+      "taskSet" : (TaskSet)?
+    )
+
+    alias Deployment = NamedTuple(
+      "id" : (String)?,
+      "status" : (String)?,
+      "taskDefinition" : (String)?,
+      "desiredCount" : (Integer)?,
+      "pendingCount" : (Integer)?,
+      "runningCount" : (Integer)?,
+      "failedTasks" : (Integer)?,
+      "createdAt" : (Timestamp)?,
+      "updatedAt" : (Timestamp)?,
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "launchType" : (LaunchType)?,
+      "platformVersion" : (String)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "rolloutState" : (DeploymentRolloutState)?,
+      "rolloutStateReason" : (String)?
+    )
+
+    alias DeploymentCircuitBreaker = NamedTuple(
+      "enable" : Boolean,
+      "rollback" : Boolean
+    )
+
+    alias DeploymentConfiguration = NamedTuple(
+      "deploymentCircuitBreaker" : (DeploymentCircuitBreaker)?,
+      "maximumPercent" : (BoxedInteger)?,
+      "minimumHealthyPercent" : (BoxedInteger)?
+    )
+
+    alias DeploymentController = NamedTuple(
+      "type" : DeploymentControllerType
+    )
+
+    alias DeploymentControllerType = String
+
+    alias DeploymentRolloutState = String
+
+    alias Deployments = Array(Deployment)
+
+    alias DeregisterContainerInstanceRequest = NamedTuple(
+      "cluster" : (String)?,
+      "containerInstance" : String,
+      "force" : (BoxedBoolean)?
+    )
+
+    alias DeregisterContainerInstanceResponse = NamedTuple(
+      "containerInstance" : (ContainerInstance)?
+    )
+
+    alias DeregisterTaskDefinitionRequest = NamedTuple(
+      "taskDefinition" : String
+    )
+
+    alias DeregisterTaskDefinitionResponse = NamedTuple(
+      "taskDefinition" : (TaskDefinition)?
+    )
+
+    alias DescribeCapacityProvidersRequest = NamedTuple(
+      "capacityProviders" : (StringList)?,
+      "include" : (CapacityProviderFieldList)?,
+      "maxResults" : (BoxedInteger)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeCapacityProvidersResponse = NamedTuple(
+      "capacityProviders" : (CapacityProviders)?,
+      "failures" : (Failures)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeClustersRequest = NamedTuple(
+      "clusters" : (StringList)?,
+      "include" : (ClusterFieldList)?
+    )
+
+    alias DescribeClustersResponse = NamedTuple(
+      "clusters" : (Clusters)?,
+      "failures" : (Failures)?
+    )
+
+    alias DescribeContainerInstancesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "containerInstances" : StringList,
+      "include" : (ContainerInstanceFieldList)?
+    )
+
+    alias DescribeContainerInstancesResponse = NamedTuple(
+      "containerInstances" : (ContainerInstances)?,
+      "failures" : (Failures)?
+    )
+
+    alias DescribeServicesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "services" : StringList,
+      "include" : (ServiceFieldList)?
+    )
+
+    alias DescribeServicesResponse = NamedTuple(
+      "services" : (Services)?,
+      "failures" : (Failures)?
+    )
+
+    alias DescribeTaskDefinitionRequest = NamedTuple(
+      "taskDefinition" : String,
+      "include" : (TaskDefinitionFieldList)?
+    )
+
+    alias DescribeTaskDefinitionResponse = NamedTuple(
+      "taskDefinition" : (TaskDefinition)?,
+      "tags" : (Tags)?
+    )
+
+    alias DescribeTaskSetsRequest = NamedTuple(
+      "cluster" : String,
+      "service" : String,
+      "taskSets" : (StringList)?,
+      "include" : (TaskSetFieldList)?
+    )
+
+    alias DescribeTaskSetsResponse = NamedTuple(
+      "taskSets" : (TaskSets)?,
+      "failures" : (Failures)?
+    )
+
+    alias DescribeTasksRequest = NamedTuple(
+      "cluster" : (String)?,
+      "tasks" : StringList,
+      "include" : (TaskFieldList)?
+    )
+
+    alias DescribeTasksResponse = NamedTuple(
+      "tasks" : (Tasks)?,
+      "failures" : (Failures)?
+    )
+
+    alias DesiredStatus = String
+
+    alias Device = NamedTuple(
+      "hostPath" : String,
+      "containerPath" : (String)?,
+      "permissions" : (DeviceCgroupPermissions)?
+    )
+
+    alias DeviceCgroupPermission = String
+
+    alias DeviceCgroupPermissions = Array(DeviceCgroupPermission)
+
+    alias DevicesList = Array(Device)
+
+    alias DiscoverPollEndpointRequest = NamedTuple(
+      "containerInstance" : (String)?,
+      "cluster" : (String)?
+    )
+
+    alias DiscoverPollEndpointResponse = NamedTuple(
+      "endpoint" : (String)?,
+      "telemetryEndpoint" : (String)?
+    )
+
+    alias DockerLabelsMap = Hash(String,String)
+
+    alias DockerVolumeConfiguration = NamedTuple(
+      "scope" : (Scope)?,
+      "autoprovision" : (BoxedBoolean)?,
+      "driver" : (String)?,
+      "driverOpts" : (StringMap)?,
+      "labels" : (StringMap)?
+    )
+
+    alias Double = Float64
+
+    alias EFSAuthorizationConfig = NamedTuple(
+      "accessPointId" : (String)?,
+      "iam" : (EFSAuthorizationConfigIAM)?
+    )
+
+    alias EFSAuthorizationConfigIAM = String
+
+    alias EFSTransitEncryption = String
+
+    alias EFSVolumeConfiguration = NamedTuple(
+      "fileSystemId" : String,
+      "rootDirectory" : (String)?,
+      "transitEncryption" : (EFSTransitEncryption)?,
+      "transitEncryptionPort" : (BoxedInteger)?,
+      "authorizationConfig" : (EFSAuthorizationConfig)?
+    )
+
+    alias EnvironmentFile = NamedTuple(
+      "value" : String,
+      "type" : EnvironmentFileType
+    )
+
+    alias EnvironmentFileType = String
+
+    alias EnvironmentFiles = Array(EnvironmentFile)
+
+    alias EnvironmentVariables = Array(KeyValuePair)
+
+    alias FSxWindowsFileServerAuthorizationConfig = NamedTuple(
+      "credentialsParameter" : String,
+      "domain" : String
+    )
+
+    alias FSxWindowsFileServerVolumeConfiguration = NamedTuple(
+      "fileSystemId" : String,
+      "rootDirectory" : String,
+      "authorizationConfig" : FSxWindowsFileServerAuthorizationConfig
+    )
+
+    alias Failure = NamedTuple(
+      "arn" : (String)?,
+      "reason" : (String)?,
+      "detail" : (String)?
+    )
+
+    alias Failures = Array(Failure)
+
+    alias FirelensConfiguration = NamedTuple(
+      "type" : FirelensConfigurationType,
+      "options" : (FirelensConfigurationOptionsMap)?
+    )
+
+    alias FirelensConfigurationOptionsMap = Hash(String,String)
+
+    alias FirelensConfigurationType = String
+
+    alias GpuIds = Array(String)
+
+    alias HealthCheck = NamedTuple(
+      "command" : StringList,
+      "interval" : (BoxedInteger)?,
+      "timeout" : (BoxedInteger)?,
+      "retries" : (BoxedInteger)?,
+      "startPeriod" : (BoxedInteger)?
+    )
+
+    alias HealthStatus = String
+
+    alias HostEntry = NamedTuple(
+      "hostname" : String,
+      "ipAddress" : String
+    )
+
+    alias HostEntryList = Array(HostEntry)
+
+    alias HostVolumeProperties = NamedTuple(
+      "sourcePath" : (String)?
+    )
+
+    alias InferenceAccelerator = NamedTuple(
+      "deviceName" : String,
+      "deviceType" : String
+    )
+
+    alias InferenceAcceleratorOverride = NamedTuple(
+      "deviceName" : (String)?,
+      "deviceType" : (String)?
+    )
+
+    alias InferenceAcceleratorOverrides = Array(InferenceAcceleratorOverride)
+
+    alias InferenceAccelerators = Array(InferenceAccelerator)
+
+    alias Integer = Int32
+
+    alias InvalidParameterException = NamedTuple(
+      
+    )
+
+    alias IpcMode = String
+
+    alias KernelCapabilities = NamedTuple(
+      "add" : (StringList)?,
+      "drop" : (StringList)?
+    )
+
+    alias KeyValuePair = NamedTuple(
+      "name" : (String)?,
+      "value" : (String)?
+    )
+
+    alias LaunchType = String
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias LinuxParameters = NamedTuple(
+      "capabilities" : (KernelCapabilities)?,
+      "devices" : (DevicesList)?,
+      "initProcessEnabled" : (BoxedBoolean)?,
+      "sharedMemorySize" : (BoxedInteger)?,
+      "tmpfs" : (TmpfsList)?,
+      "maxSwap" : (BoxedInteger)?,
+      "swappiness" : (BoxedInteger)?
+    )
+
+    alias ListAccountSettingsRequest = NamedTuple(
+      "name" : (SettingName)?,
+      "value" : (String)?,
+      "principalArn" : (String)?,
+      "effectiveSettings" : (Boolean)?,
+      "nextToken" : (String)?,
+      "maxResults" : (Integer)?
+    )
+
+    alias ListAccountSettingsResponse = NamedTuple(
+      "settings" : (Settings)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListAttributesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "targetType" : TargetType,
+      "attributeName" : (String)?,
+      "attributeValue" : (String)?,
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?
+    )
+
+    alias ListAttributesResponse = NamedTuple(
+      "attributes" : (Attributes)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListClustersRequest = NamedTuple(
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?
+    )
+
+    alias ListClustersResponse = NamedTuple(
+      "clusterArns" : (StringList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListContainerInstancesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "filter" : (String)?,
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?,
+      "status" : (ContainerInstanceStatus)?
+    )
+
+    alias ListContainerInstancesResponse = NamedTuple(
+      "containerInstanceArns" : (StringList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListServicesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?,
+      "launchType" : (LaunchType)?,
+      "schedulingStrategy" : (SchedulingStrategy)?
+    )
+
+    alias ListServicesResponse = NamedTuple(
+      "serviceArns" : (StringList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (Tags)?
+    )
+
+    alias ListTaskDefinitionFamiliesRequest = NamedTuple(
+      "familyPrefix" : (String)?,
+      "status" : (TaskDefinitionFamilyStatus)?,
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?
+    )
+
+    alias ListTaskDefinitionFamiliesResponse = NamedTuple(
+      "families" : (StringList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListTaskDefinitionsRequest = NamedTuple(
+      "familyPrefix" : (String)?,
+      "status" : (TaskDefinitionStatus)?,
+      "sort" : (SortOrder)?,
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?
+    )
+
+    alias ListTaskDefinitionsResponse = NamedTuple(
+      "taskDefinitionArns" : (StringList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListTasksRequest = NamedTuple(
+      "cluster" : (String)?,
+      "containerInstance" : (String)?,
+      "family" : (String)?,
+      "nextToken" : (String)?,
+      "maxResults" : (BoxedInteger)?,
+      "startedBy" : (String)?,
+      "serviceName" : (String)?,
+      "desiredStatus" : (DesiredStatus)?,
+      "launchType" : (LaunchType)?
+    )
+
+    alias ListTasksResponse = NamedTuple(
+      "taskArns" : (StringList)?,
+      "nextToken" : (String)?
+    )
+
+    alias LoadBalancer = NamedTuple(
+      "targetGroupArn" : (String)?,
+      "loadBalancerName" : (String)?,
+      "containerName" : (String)?,
+      "containerPort" : (BoxedInteger)?
+    )
+
+    alias LoadBalancers = Array(LoadBalancer)
+
+    alias LogConfiguration = NamedTuple(
+      "logDriver" : LogDriver,
+      "options" : (LogConfigurationOptionsMap)?,
+      "secretOptions" : (SecretList)?
+    )
+
+    alias LogConfigurationOptionsMap = Hash(String,String)
+
+    alias LogDriver = String
+
+    alias Long = Int64
+
+    alias ManagedScaling = NamedTuple(
+      "status" : (ManagedScalingStatus)?,
+      "targetCapacity" : (ManagedScalingTargetCapacity)?,
+      "minimumScalingStepSize" : (ManagedScalingStepSize)?,
+      "maximumScalingStepSize" : (ManagedScalingStepSize)?,
+      "instanceWarmupPeriod" : (ManagedScalingInstanceWarmupPeriod)?
+    )
+
+    alias ManagedScalingInstanceWarmupPeriod = Int32
+
+    alias ManagedScalingStatus = String
+
+    alias ManagedScalingStepSize = Int32
+
+    alias ManagedScalingTargetCapacity = Int32
+
+    alias ManagedTerminationProtection = String
+
+    alias MissingVersionException = NamedTuple(
+      
+    )
+
+    alias MountPoint = NamedTuple(
+      "sourceVolume" : (String)?,
+      "containerPath" : (String)?,
+      "readOnly" : (BoxedBoolean)?
+    )
+
+    alias MountPointList = Array(MountPoint)
+
+    alias NetworkBinding = NamedTuple(
+      "bindIP" : (String)?,
+      "containerPort" : (BoxedInteger)?,
+      "hostPort" : (BoxedInteger)?,
+      "protocol" : (TransportProtocol)?
+    )
+
+    alias NetworkBindings = Array(NetworkBinding)
+
+    alias NetworkConfiguration = NamedTuple(
+      "awsvpcConfiguration" : (AwsVpcConfiguration)?
+    )
+
+    alias NetworkInterface = NamedTuple(
+      "attachmentId" : (String)?,
+      "privateIpv4Address" : (String)?,
+      "ipv6Address" : (String)?
+    )
+
+    alias NetworkInterfaces = Array(NetworkInterface)
+
+    alias NetworkMode = String
+
+    alias NoUpdateAvailableException = NamedTuple(
+      
+    )
+
+    alias PidMode = String
+
+    alias PlacementConstraint = NamedTuple(
+      "type" : (PlacementConstraintType)?,
+      "expression" : (String)?
+    )
+
+    alias PlacementConstraintType = String
+
+    alias PlacementConstraints = Array(PlacementConstraint)
+
+    alias PlacementStrategies = Array(PlacementStrategy)
+
+    alias PlacementStrategy = NamedTuple(
+      "type" : (PlacementStrategyType)?,
+      "field" : (String)?
+    )
+
+    alias PlacementStrategyType = String
+
+    alias PlatformDevice = NamedTuple(
+      "id" : String,
+      "type" : PlatformDeviceType
+    )
+
+    alias PlatformDeviceType = String
+
+    alias PlatformDevices = Array(PlatformDevice)
+
+    alias PlatformTaskDefinitionIncompatibilityException = NamedTuple(
+      
+    )
+
+    alias PlatformUnknownException = NamedTuple(
+      
+    )
+
+    alias PortMapping = NamedTuple(
+      "containerPort" : (BoxedInteger)?,
+      "hostPort" : (BoxedInteger)?,
+      "protocol" : (TransportProtocol)?
+    )
+
+    alias PortMappingList = Array(PortMapping)
+
+    alias PropagateTags = String
+
+    alias ProxyConfiguration = NamedTuple(
+      "type" : (ProxyConfigurationType)?,
+      "containerName" : String,
+      "properties" : (ProxyConfigurationProperties)?
+    )
+
+    alias ProxyConfigurationProperties = Array(KeyValuePair)
+
+    alias ProxyConfigurationType = String
+
+    alias PutAccountSettingDefaultRequest = NamedTuple(
+      "name" : SettingName,
+      "value" : String
+    )
+
+    alias PutAccountSettingDefaultResponse = NamedTuple(
+      "setting" : (Setting)?
+    )
+
+    alias PutAccountSettingRequest = NamedTuple(
+      "name" : SettingName,
+      "value" : String,
+      "principalArn" : (String)?
+    )
+
+    alias PutAccountSettingResponse = NamedTuple(
+      "setting" : (Setting)?
+    )
+
+    alias PutAttributesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "attributes" : Attributes
+    )
+
+    alias PutAttributesResponse = NamedTuple(
+      "attributes" : (Attributes)?
+    )
+
+    alias PutClusterCapacityProvidersRequest = NamedTuple(
+      "cluster" : String,
+      "capacityProviders" : StringList,
+      "defaultCapacityProviderStrategy" : CapacityProviderStrategy
+    )
+
+    alias PutClusterCapacityProvidersResponse = NamedTuple(
+      "cluster" : (Cluster)?
+    )
+
+    alias RegisterContainerInstanceRequest = NamedTuple(
+      "cluster" : (String)?,
+      "instanceIdentityDocument" : (String)?,
+      "instanceIdentityDocumentSignature" : (String)?,
+      "totalResources" : (Resources)?,
+      "versionInfo" : (VersionInfo)?,
+      "containerInstanceArn" : (String)?,
+      "attributes" : (Attributes)?,
+      "platformDevices" : (PlatformDevices)?,
+      "tags" : (Tags)?
+    )
+
+    alias RegisterContainerInstanceResponse = NamedTuple(
+      "containerInstance" : (ContainerInstance)?
+    )
+
+    alias RegisterTaskDefinitionRequest = NamedTuple(
+      "family" : String,
+      "taskRoleArn" : (String)?,
+      "executionRoleArn" : (String)?,
+      "networkMode" : (NetworkMode)?,
+      "containerDefinitions" : ContainerDefinitions,
+      "volumes" : (VolumeList)?,
+      "placementConstraints" : (TaskDefinitionPlacementConstraints)?,
+      "requiresCompatibilities" : (CompatibilityList)?,
+      "cpu" : (String)?,
+      "memory" : (String)?,
+      "tags" : (Tags)?,
+      "pidMode" : (PidMode)?,
+      "ipcMode" : (IpcMode)?,
+      "proxyConfiguration" : (ProxyConfiguration)?,
+      "inferenceAccelerators" : (InferenceAccelerators)?
+    )
+
+    alias RegisterTaskDefinitionResponse = NamedTuple(
+      "taskDefinition" : (TaskDefinition)?,
+      "tags" : (Tags)?
+    )
+
+    alias RepositoryCredentials = NamedTuple(
+      "credentialsParameter" : String
+    )
+
+    alias RequiresAttributes = Array(Attribute)
+
+    alias Resource = NamedTuple(
+      "name" : (String)?,
+      "type" : (String)?,
+      "doubleValue" : (Double)?,
+      "longValue" : (Long)?,
+      "integerValue" : (Integer)?,
+      "stringSetValue" : (StringList)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias ResourceRequirement = NamedTuple(
+      "value" : String,
+      "type" : ResourceType
+    )
+
+    alias ResourceRequirements = Array(ResourceRequirement)
+
+    alias ResourceType = String
+
+    alias Resources = Array(Resource)
+
+    alias RunTaskRequest = NamedTuple(
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "cluster" : (String)?,
+      "count" : (BoxedInteger)?,
+      "enableECSManagedTags" : (Boolean)?,
+      "group" : (String)?,
+      "launchType" : (LaunchType)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "overrides" : (TaskOverride)?,
+      "placementConstraints" : (PlacementConstraints)?,
+      "placementStrategy" : (PlacementStrategies)?,
+      "platformVersion" : (String)?,
+      "propagateTags" : (PropagateTags)?,
+      "referenceId" : (String)?,
+      "startedBy" : (String)?,
+      "tags" : (Tags)?,
+      "taskDefinition" : String
+    )
+
+    alias RunTaskResponse = NamedTuple(
+      "tasks" : (Tasks)?,
+      "failures" : (Failures)?
+    )
+
+    alias Scale = NamedTuple(
+      "value" : (Double)?,
+      "unit" : (ScaleUnit)?
+    )
+
+    alias ScaleUnit = String
+
+    alias SchedulingStrategy = String
+
+    alias Scope = String
+
+    alias Secret = NamedTuple(
+      "name" : String,
+      "valueFrom" : String
+    )
+
+    alias SecretList = Array(Secret)
+
+    alias ServerException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Service = NamedTuple(
+      "serviceArn" : (String)?,
+      "serviceName" : (String)?,
+      "clusterArn" : (String)?,
+      "loadBalancers" : (LoadBalancers)?,
+      "serviceRegistries" : (ServiceRegistries)?,
+      "status" : (String)?,
+      "desiredCount" : (Integer)?,
+      "runningCount" : (Integer)?,
+      "pendingCount" : (Integer)?,
+      "launchType" : (LaunchType)?,
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "platformVersion" : (String)?,
+      "taskDefinition" : (String)?,
+      "deploymentConfiguration" : (DeploymentConfiguration)?,
+      "taskSets" : (TaskSets)?,
+      "deployments" : (Deployments)?,
+      "roleArn" : (String)?,
+      "events" : (ServiceEvents)?,
+      "createdAt" : (Timestamp)?,
+      "placementConstraints" : (PlacementConstraints)?,
+      "placementStrategy" : (PlacementStrategies)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "healthCheckGracePeriodSeconds" : (BoxedInteger)?,
+      "schedulingStrategy" : (SchedulingStrategy)?,
+      "deploymentController" : (DeploymentController)?,
+      "tags" : (Tags)?,
+      "createdBy" : (String)?,
+      "enableECSManagedTags" : (Boolean)?,
+      "propagateTags" : (PropagateTags)?
+    )
+
+    alias ServiceEvent = NamedTuple(
+      "id" : (String)?,
+      "createdAt" : (Timestamp)?,
+      "message" : (String)?
+    )
+
+    alias ServiceEvents = Array(ServiceEvent)
+
+    alias ServiceField = String
+
+    alias ServiceFieldList = Array(ServiceField)
+
+    alias ServiceNotActiveException = NamedTuple(
+      
+    )
+
+    alias ServiceNotFoundException = NamedTuple(
+      
+    )
+
+    alias ServiceRegistries = Array(ServiceRegistry)
+
+    alias ServiceRegistry = NamedTuple(
+      "registryArn" : (String)?,
+      "port" : (BoxedInteger)?,
+      "containerName" : (String)?,
+      "containerPort" : (BoxedInteger)?
+    )
+
+    alias Services = Array(Service)
+
+    alias Setting = NamedTuple(
+      "name" : (SettingName)?,
+      "value" : (String)?,
+      "principalArn" : (String)?
+    )
+
+    alias SettingName = String
+
+    alias Settings = Array(Setting)
+
+    alias SortOrder = String
+
+    alias StabilityStatus = String
+
+    alias StartTaskRequest = NamedTuple(
+      "cluster" : (String)?,
+      "containerInstances" : StringList,
+      "enableECSManagedTags" : (Boolean)?,
+      "group" : (String)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "overrides" : (TaskOverride)?,
+      "propagateTags" : (PropagateTags)?,
+      "referenceId" : (String)?,
+      "startedBy" : (String)?,
+      "tags" : (Tags)?,
+      "taskDefinition" : String
+    )
+
+    alias StartTaskResponse = NamedTuple(
+      "tasks" : (Tasks)?,
+      "failures" : (Failures)?
+    )
+
+    alias Statistics = Array(KeyValuePair)
+
+    alias StopTaskRequest = NamedTuple(
+      "cluster" : (String)?,
+      "task" : String,
+      "reason" : (String)?
+    )
+
+    alias StopTaskResponse = NamedTuple(
+      "task" : (Task)?
+    )
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias StringMap = Hash(String,String)
+
+    alias SubmitAttachmentStateChangesRequest = NamedTuple(
+      "cluster" : (String)?,
+      "attachments" : AttachmentStateChanges
+    )
+
+    alias SubmitAttachmentStateChangesResponse = NamedTuple(
+      "acknowledgment" : (String)?
+    )
+
+    alias SubmitContainerStateChangeRequest = NamedTuple(
+      "cluster" : (String)?,
+      "task" : (String)?,
+      "containerName" : (String)?,
+      "runtimeId" : (String)?,
+      "status" : (String)?,
+      "exitCode" : (BoxedInteger)?,
+      "reason" : (String)?,
+      "networkBindings" : (NetworkBindings)?
+    )
+
+    alias SubmitContainerStateChangeResponse = NamedTuple(
+      "acknowledgment" : (String)?
+    )
+
+    alias SubmitTaskStateChangeRequest = NamedTuple(
+      "cluster" : (String)?,
+      "task" : (String)?,
+      "status" : (String)?,
+      "reason" : (String)?,
+      "containers" : (ContainerStateChanges)?,
+      "attachments" : (AttachmentStateChanges)?,
+      "pullStartedAt" : (Timestamp)?,
+      "pullStoppedAt" : (Timestamp)?,
+      "executionStoppedAt" : (Timestamp)?
+    )
+
+    alias SubmitTaskStateChangeResponse = NamedTuple(
+      "acknowledgment" : (String)?
+    )
+
+    alias SystemControl = NamedTuple(
+      "namespace" : (String)?,
+      "value" : (String)?
+    )
+
+    alias SystemControls = Array(SystemControl)
+
+    alias Tag = NamedTuple(
+      "key" : (TagKey)?,
+      "value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TargetNotFoundException = NamedTuple(
+      
+    )
+
+    alias TargetType = String
+
+    alias Task = NamedTuple(
+      "attachments" : (Attachments)?,
+      "attributes" : (Attributes)?,
+      "availabilityZone" : (String)?,
+      "capacityProviderName" : (String)?,
+      "clusterArn" : (String)?,
+      "connectivity" : (Connectivity)?,
+      "connectivityAt" : (Timestamp)?,
+      "containerInstanceArn" : (String)?,
+      "containers" : (Containers)?,
+      "cpu" : (String)?,
+      "createdAt" : (Timestamp)?,
+      "desiredStatus" : (String)?,
+      "executionStoppedAt" : (Timestamp)?,
+      "group" : (String)?,
+      "healthStatus" : (HealthStatus)?,
+      "inferenceAccelerators" : (InferenceAccelerators)?,
+      "lastStatus" : (String)?,
+      "launchType" : (LaunchType)?,
+      "memory" : (String)?,
+      "overrides" : (TaskOverride)?,
+      "platformVersion" : (String)?,
+      "pullStartedAt" : (Timestamp)?,
+      "pullStoppedAt" : (Timestamp)?,
+      "startedAt" : (Timestamp)?,
+      "startedBy" : (String)?,
+      "stopCode" : (TaskStopCode)?,
+      "stoppedAt" : (Timestamp)?,
+      "stoppedReason" : (String)?,
+      "stoppingAt" : (Timestamp)?,
+      "tags" : (Tags)?,
+      "taskArn" : (String)?,
+      "taskDefinitionArn" : (String)?,
+      "version" : (Long)?
+    )
+
+    alias TaskDefinition = NamedTuple(
+      "taskDefinitionArn" : (String)?,
+      "containerDefinitions" : (ContainerDefinitions)?,
+      "family" : (String)?,
+      "taskRoleArn" : (String)?,
+      "executionRoleArn" : (String)?,
+      "networkMode" : (NetworkMode)?,
+      "revision" : (Integer)?,
+      "volumes" : (VolumeList)?,
+      "status" : (TaskDefinitionStatus)?,
+      "requiresAttributes" : (RequiresAttributes)?,
+      "placementConstraints" : (TaskDefinitionPlacementConstraints)?,
+      "compatibilities" : (CompatibilityList)?,
+      "requiresCompatibilities" : (CompatibilityList)?,
+      "cpu" : (String)?,
+      "memory" : (String)?,
+      "inferenceAccelerators" : (InferenceAccelerators)?,
+      "pidMode" : (PidMode)?,
+      "ipcMode" : (IpcMode)?,
+      "proxyConfiguration" : (ProxyConfiguration)?
+    )
+
+    alias TaskDefinitionFamilyStatus = String
+
+    alias TaskDefinitionField = String
+
+    alias TaskDefinitionFieldList = Array(TaskDefinitionField)
+
+    alias TaskDefinitionPlacementConstraint = NamedTuple(
+      "type" : (TaskDefinitionPlacementConstraintType)?,
+      "expression" : (String)?
+    )
+
+    alias TaskDefinitionPlacementConstraintType = String
+
+    alias TaskDefinitionPlacementConstraints = Array(TaskDefinitionPlacementConstraint)
+
+    alias TaskDefinitionStatus = String
+
+    alias TaskField = String
+
+    alias TaskFieldList = Array(TaskField)
+
+    alias TaskOverride = NamedTuple(
+      "containerOverrides" : (ContainerOverrides)?,
+      "cpu" : (String)?,
+      "inferenceAcceleratorOverrides" : (InferenceAcceleratorOverrides)?,
+      "executionRoleArn" : (String)?,
+      "memory" : (String)?,
+      "taskRoleArn" : (String)?
+    )
+
+    alias TaskSet = NamedTuple(
+      "id" : (String)?,
+      "taskSetArn" : (String)?,
+      "serviceArn" : (String)?,
+      "clusterArn" : (String)?,
+      "startedBy" : (String)?,
+      "externalId" : (String)?,
+      "status" : (String)?,
+      "taskDefinition" : (String)?,
+      "computedDesiredCount" : (Integer)?,
+      "pendingCount" : (Integer)?,
+      "runningCount" : (Integer)?,
+      "createdAt" : (Timestamp)?,
+      "updatedAt" : (Timestamp)?,
+      "launchType" : (LaunchType)?,
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "platformVersion" : (String)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "loadBalancers" : (LoadBalancers)?,
+      "serviceRegistries" : (ServiceRegistries)?,
+      "scale" : (Scale)?,
+      "stabilityStatus" : (StabilityStatus)?,
+      "stabilityStatusAt" : (Timestamp)?,
+      "tags" : (Tags)?
+    )
+
+    alias TaskSetField = String
+
+    alias TaskSetFieldList = Array(TaskSetField)
+
+    alias TaskSetNotFoundException = NamedTuple(
+      
+    )
+
+    alias TaskSets = Array(TaskSet)
+
+    alias TaskStopCode = String
+
+    alias Tasks = Array(Task)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Tmpfs = NamedTuple(
+      "containerPath" : String,
+      "size" : Integer,
+      "mountOptions" : (StringList)?
+    )
+
+    alias TmpfsList = Array(Tmpfs)
+
+    alias TransportProtocol = String
+
+    alias Ulimit = NamedTuple(
+      "name" : UlimitName,
+      "softLimit" : Integer,
+      "hardLimit" : Integer
+    )
+
+    alias UlimitList = Array(Ulimit)
+
+    alias UlimitName = String
+
+    alias UnsupportedFeatureException = NamedTuple(
+      
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCapacityProviderRequest = NamedTuple(
+      "name" : String,
+      "autoScalingGroupProvider" : AutoScalingGroupProviderUpdate
+    )
+
+    alias UpdateCapacityProviderResponse = NamedTuple(
+      "capacityProvider" : (CapacityProvider)?
+    )
+
+    alias UpdateClusterSettingsRequest = NamedTuple(
+      "cluster" : String,
+      "settings" : ClusterSettings
+    )
+
+    alias UpdateClusterSettingsResponse = NamedTuple(
+      "cluster" : (Cluster)?
+    )
+
+    alias UpdateContainerAgentRequest = NamedTuple(
+      "cluster" : (String)?,
+      "containerInstance" : String
+    )
+
+    alias UpdateContainerAgentResponse = NamedTuple(
+      "containerInstance" : (ContainerInstance)?
+    )
+
+    alias UpdateContainerInstancesStateRequest = NamedTuple(
+      "cluster" : (String)?,
+      "containerInstances" : StringList,
+      "status" : ContainerInstanceStatus
+    )
+
+    alias UpdateContainerInstancesStateResponse = NamedTuple(
+      "containerInstances" : (ContainerInstances)?,
+      "failures" : (Failures)?
+    )
+
+    alias UpdateInProgressException = NamedTuple(
+      
+    )
+
+    alias UpdateServicePrimaryTaskSetRequest = NamedTuple(
+      "cluster" : String,
+      "service" : String,
+      "primaryTaskSet" : String
+    )
+
+    alias UpdateServicePrimaryTaskSetResponse = NamedTuple(
+      "taskSet" : (TaskSet)?
+    )
+
+    alias UpdateServiceRequest = NamedTuple(
+      "cluster" : (String)?,
+      "service" : String,
+      "desiredCount" : (BoxedInteger)?,
+      "taskDefinition" : (String)?,
+      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
+      "deploymentConfiguration" : (DeploymentConfiguration)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "placementConstraints" : (PlacementConstraints)?,
+      "placementStrategy" : (PlacementStrategies)?,
+      "platformVersion" : (String)?,
+      "forceNewDeployment" : (Boolean)?,
+      "healthCheckGracePeriodSeconds" : (BoxedInteger)?
+    )
+
+    alias UpdateServiceResponse = NamedTuple(
+      "service" : (Service)?
+    )
+
+    alias UpdateTaskSetRequest = NamedTuple(
+      "cluster" : String,
+      "service" : String,
+      "taskSet" : String,
+      "scale" : Scale
+    )
+
+    alias UpdateTaskSetResponse = NamedTuple(
+      "taskSet" : (TaskSet)?
+    )
+
+    alias VersionInfo = NamedTuple(
+      "agentVersion" : (String)?,
+      "agentHash" : (String)?,
+      "dockerVersion" : (String)?
+    )
+
+    alias Volume = NamedTuple(
+      "name" : (String)?,
+      "host" : (HostVolumeProperties)?,
+      "dockerVolumeConfiguration" : (DockerVolumeConfiguration)?,
+      "efsVolumeConfiguration" : (EFSVolumeConfiguration)?,
+      "fsxWindowsFileServerVolumeConfiguration" : (FSxWindowsFileServerVolumeConfiguration)?
+    )
+
+    alias VolumeFrom = NamedTuple(
+      "sourceContainer" : (String)?,
+      "readOnly" : (BoxedBoolean)?
+    )
+
+    alias VolumeFromList = Array(VolumeFrom)
+
+    alias VolumeList = Array(Volume)
   end
 end

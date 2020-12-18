@@ -5071,5 +5071,686 @@ module Aws::Batch
       include Aws::Structure
     end
 
+    alias ArrayJobDependency = String
+
+    alias ArrayJobStatusSummary = Hash(String,Integer)
+
+    alias ArrayProperties = NamedTuple(
+      "size" : (Integer)?
+    )
+
+    alias ArrayPropertiesDetail = NamedTuple(
+      "statusSummary" : (ArrayJobStatusSummary)?,
+      "size" : (Integer)?,
+      "index" : (Integer)?
+    )
+
+    alias ArrayPropertiesSummary = NamedTuple(
+      "size" : (Integer)?,
+      "index" : (Integer)?
+    )
+
+    alias AssignPublicIp = String
+
+    alias AttemptContainerDetail = NamedTuple(
+      "containerInstanceArn" : (String)?,
+      "taskArn" : (String)?,
+      "exitCode" : (Integer)?,
+      "reason" : (String)?,
+      "logStreamName" : (String)?,
+      "networkInterfaces" : (NetworkInterfaceList)?
+    )
+
+    alias AttemptDetail = NamedTuple(
+      "container" : (AttemptContainerDetail)?,
+      "startedAt" : (Long)?,
+      "stoppedAt" : (Long)?,
+      "statusReason" : (String)?
+    )
+
+    alias AttemptDetails = Array(AttemptDetail)
+
+    alias Boolean = Bool
+
+    alias CEState = String
+
+    alias CEStatus = String
+
+    alias CEType = String
+
+    alias CRAllocationStrategy = String
+
+    alias CRType = String
+
+    alias CancelJobRequest = NamedTuple(
+      "jobId" : String,
+      "reason" : String
+    )
+
+    alias CancelJobResponse = NamedTuple(
+      
+    )
+
+    alias ClientException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ComputeEnvironmentDetail = NamedTuple(
+      "computeEnvironmentName" : String,
+      "computeEnvironmentArn" : String,
+      "ecsClusterArn" : String,
+      "tags" : (TagrisTagsMap)?,
+      "type" : (CEType)?,
+      "state" : (CEState)?,
+      "status" : (CEStatus)?,
+      "statusReason" : (String)?,
+      "computeResources" : (ComputeResource)?,
+      "serviceRole" : (String)?
+    )
+
+    alias ComputeEnvironmentDetailList = Array(ComputeEnvironmentDetail)
+
+    alias ComputeEnvironmentOrder = NamedTuple(
+      "order" : Integer,
+      "computeEnvironment" : String
+    )
+
+    alias ComputeEnvironmentOrders = Array(ComputeEnvironmentOrder)
+
+    alias ComputeResource = NamedTuple(
+      "type" : CRType,
+      "allocationStrategy" : (CRAllocationStrategy)?,
+      "minvCpus" : (Integer)?,
+      "maxvCpus" : Integer,
+      "desiredvCpus" : (Integer)?,
+      "instanceTypes" : (StringList)?,
+      "imageId" : (String)?,
+      "subnets" : StringList,
+      "securityGroupIds" : (StringList)?,
+      "ec2KeyPair" : (String)?,
+      "instanceRole" : (String)?,
+      "tags" : (TagsMap)?,
+      "placementGroup" : (String)?,
+      "bidPercentage" : (Integer)?,
+      "spotIamFleetRole" : (String)?,
+      "launchTemplate" : (LaunchTemplateSpecification)?,
+      "ec2Configuration" : (Ec2ConfigurationList)?
+    )
+
+    alias ComputeResourceUpdate = NamedTuple(
+      "minvCpus" : (Integer)?,
+      "maxvCpus" : (Integer)?,
+      "desiredvCpus" : (Integer)?,
+      "subnets" : (StringList)?,
+      "securityGroupIds" : (StringList)?
+    )
+
+    alias ContainerDetail = NamedTuple(
+      "image" : (String)?,
+      "vcpus" : (Integer)?,
+      "memory" : (Integer)?,
+      "command" : (StringList)?,
+      "jobRoleArn" : (String)?,
+      "executionRoleArn" : (String)?,
+      "volumes" : (Volumes)?,
+      "environment" : (EnvironmentVariables)?,
+      "mountPoints" : (MountPoints)?,
+      "readonlyRootFilesystem" : (Boolean)?,
+      "ulimits" : (Ulimits)?,
+      "privileged" : (Boolean)?,
+      "user" : (String)?,
+      "exitCode" : (Integer)?,
+      "reason" : (String)?,
+      "containerInstanceArn" : (String)?,
+      "taskArn" : (String)?,
+      "logStreamName" : (String)?,
+      "instanceType" : (String)?,
+      "networkInterfaces" : (NetworkInterfaceList)?,
+      "resourceRequirements" : (ResourceRequirements)?,
+      "linuxParameters" : (LinuxParameters)?,
+      "logConfiguration" : (LogConfiguration)?,
+      "secrets" : (SecretList)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "fargatePlatformConfiguration" : (FargatePlatformConfiguration)?
+    )
+
+    alias ContainerOverrides = NamedTuple(
+      "vcpus" : (Integer)?,
+      "memory" : (Integer)?,
+      "command" : (StringList)?,
+      "instanceType" : (String)?,
+      "environment" : (EnvironmentVariables)?,
+      "resourceRequirements" : (ResourceRequirements)?
+    )
+
+    alias ContainerProperties = NamedTuple(
+      "image" : (String)?,
+      "vcpus" : (Integer)?,
+      "memory" : (Integer)?,
+      "command" : (StringList)?,
+      "jobRoleArn" : (String)?,
+      "executionRoleArn" : (String)?,
+      "volumes" : (Volumes)?,
+      "environment" : (EnvironmentVariables)?,
+      "mountPoints" : (MountPoints)?,
+      "readonlyRootFilesystem" : (Boolean)?,
+      "privileged" : (Boolean)?,
+      "ulimits" : (Ulimits)?,
+      "user" : (String)?,
+      "instanceType" : (String)?,
+      "resourceRequirements" : (ResourceRequirements)?,
+      "linuxParameters" : (LinuxParameters)?,
+      "logConfiguration" : (LogConfiguration)?,
+      "secrets" : (SecretList)?,
+      "networkConfiguration" : (NetworkConfiguration)?,
+      "fargatePlatformConfiguration" : (FargatePlatformConfiguration)?
+    )
+
+    alias ContainerSummary = NamedTuple(
+      "exitCode" : (Integer)?,
+      "reason" : (String)?
+    )
+
+    alias CreateComputeEnvironmentRequest = NamedTuple(
+      "computeEnvironmentName" : String,
+      "type" : CEType,
+      "state" : (CEState)?,
+      "computeResources" : (ComputeResource)?,
+      "serviceRole" : String,
+      "tags" : (TagrisTagsMap)?
+    )
+
+    alias CreateComputeEnvironmentResponse = NamedTuple(
+      "computeEnvironmentName" : (String)?,
+      "computeEnvironmentArn" : (String)?
+    )
+
+    alias CreateJobQueueRequest = NamedTuple(
+      "jobQueueName" : String,
+      "state" : (JQState)?,
+      "priority" : Integer,
+      "computeEnvironmentOrder" : ComputeEnvironmentOrders,
+      "tags" : (TagrisTagsMap)?
+    )
+
+    alias CreateJobQueueResponse = NamedTuple(
+      "jobQueueName" : String,
+      "jobQueueArn" : String
+    )
+
+    alias DeleteComputeEnvironmentRequest = NamedTuple(
+      "computeEnvironment" : String
+    )
+
+    alias DeleteComputeEnvironmentResponse = NamedTuple(
+      
+    )
+
+    alias DeleteJobQueueRequest = NamedTuple(
+      "jobQueue" : String
+    )
+
+    alias DeleteJobQueueResponse = NamedTuple(
+      
+    )
+
+    alias DeregisterJobDefinitionRequest = NamedTuple(
+      "jobDefinition" : String
+    )
+
+    alias DeregisterJobDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DescribeComputeEnvironmentsRequest = NamedTuple(
+      "computeEnvironments" : (StringList)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeComputeEnvironmentsResponse = NamedTuple(
+      "computeEnvironments" : (ComputeEnvironmentDetailList)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeJobDefinitionsRequest = NamedTuple(
+      "jobDefinitions" : (StringList)?,
+      "maxResults" : (Integer)?,
+      "jobDefinitionName" : (String)?,
+      "status" : (String)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeJobDefinitionsResponse = NamedTuple(
+      "jobDefinitions" : (JobDefinitionList)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeJobQueuesRequest = NamedTuple(
+      "jobQueues" : (StringList)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeJobQueuesResponse = NamedTuple(
+      "jobQueues" : (JobQueueDetailList)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeJobsRequest = NamedTuple(
+      "jobs" : StringList
+    )
+
+    alias DescribeJobsResponse = NamedTuple(
+      "jobs" : (JobDetailList)?
+    )
+
+    alias Device = NamedTuple(
+      "hostPath" : String,
+      "containerPath" : (String)?,
+      "permissions" : (DeviceCgroupPermissions)?
+    )
+
+    alias DeviceCgroupPermission = String
+
+    alias DeviceCgroupPermissions = Array(DeviceCgroupPermission)
+
+    alias DevicesList = Array(Device)
+
+    alias Ec2Configuration = NamedTuple(
+      "imageType" : ImageType,
+      "imageIdOverride" : (ImageIdOverride)?
+    )
+
+    alias Ec2ConfigurationList = Array(Ec2Configuration)
+
+    alias EnvironmentVariables = Array(KeyValuePair)
+
+    alias EvaluateOnExit = NamedTuple(
+      "onStatusReason" : (String)?,
+      "onReason" : (String)?,
+      "onExitCode" : (String)?,
+      "action" : RetryAction
+    )
+
+    alias EvaluateOnExitList = Array(EvaluateOnExit)
+
+    alias FargatePlatformConfiguration = NamedTuple(
+      "platformVersion" : (String)?
+    )
+
+    alias Host = NamedTuple(
+      "sourcePath" : (String)?
+    )
+
+    alias ImageIdOverride = String
+
+    alias ImageType = String
+
+    alias Integer = Int32
+
+    alias JQState = String
+
+    alias JQStatus = String
+
+    alias JobDefinition = NamedTuple(
+      "jobDefinitionName" : String,
+      "jobDefinitionArn" : String,
+      "revision" : Integer,
+      "status" : (String)?,
+      "type" : String,
+      "parameters" : (ParametersMap)?,
+      "retryStrategy" : (RetryStrategy)?,
+      "containerProperties" : (ContainerProperties)?,
+      "timeout" : (JobTimeout)?,
+      "nodeProperties" : (NodeProperties)?,
+      "tags" : (TagrisTagsMap)?,
+      "propagateTags" : (Boolean)?,
+      "platformCapabilities" : (PlatformCapabilityList)?
+    )
+
+    alias JobDefinitionList = Array(JobDefinition)
+
+    alias JobDefinitionType = String
+
+    alias JobDependency = NamedTuple(
+      "jobId" : (String)?,
+      "type" : (ArrayJobDependency)?
+    )
+
+    alias JobDependencyList = Array(JobDependency)
+
+    alias JobDetail = NamedTuple(
+      "jobArn" : (String)?,
+      "jobName" : String,
+      "jobId" : String,
+      "jobQueue" : String,
+      "status" : JobStatus,
+      "attempts" : (AttemptDetails)?,
+      "statusReason" : (String)?,
+      "createdAt" : (Long)?,
+      "retryStrategy" : (RetryStrategy)?,
+      "startedAt" : Long,
+      "stoppedAt" : (Long)?,
+      "dependsOn" : (JobDependencyList)?,
+      "jobDefinition" : String,
+      "parameters" : (ParametersMap)?,
+      "container" : (ContainerDetail)?,
+      "nodeDetails" : (NodeDetails)?,
+      "nodeProperties" : (NodeProperties)?,
+      "arrayProperties" : (ArrayPropertiesDetail)?,
+      "timeout" : (JobTimeout)?,
+      "tags" : (TagrisTagsMap)?,
+      "propagateTags" : (Boolean)?,
+      "platformCapabilities" : (PlatformCapabilityList)?
+    )
+
+    alias JobDetailList = Array(JobDetail)
+
+    alias JobQueueDetail = NamedTuple(
+      "jobQueueName" : String,
+      "jobQueueArn" : String,
+      "state" : JQState,
+      "status" : (JQStatus)?,
+      "statusReason" : (String)?,
+      "priority" : Integer,
+      "computeEnvironmentOrder" : ComputeEnvironmentOrders,
+      "tags" : (TagrisTagsMap)?
+    )
+
+    alias JobQueueDetailList = Array(JobQueueDetail)
+
+    alias JobStatus = String
+
+    alias JobSummary = NamedTuple(
+      "jobArn" : (String)?,
+      "jobId" : String,
+      "jobName" : String,
+      "createdAt" : (Long)?,
+      "status" : (JobStatus)?,
+      "statusReason" : (String)?,
+      "startedAt" : (Long)?,
+      "stoppedAt" : (Long)?,
+      "container" : (ContainerSummary)?,
+      "arrayProperties" : (ArrayPropertiesSummary)?,
+      "nodeProperties" : (NodePropertiesSummary)?
+    )
+
+    alias JobSummaryList = Array(JobSummary)
+
+    alias JobTimeout = NamedTuple(
+      "attemptDurationSeconds" : (Integer)?
+    )
+
+    alias KeyValuePair = NamedTuple(
+      "name" : (String)?,
+      "value" : (String)?
+    )
+
+    alias LaunchTemplateSpecification = NamedTuple(
+      "launchTemplateId" : (String)?,
+      "launchTemplateName" : (String)?,
+      "version" : (String)?
+    )
+
+    alias LinuxParameters = NamedTuple(
+      "devices" : (DevicesList)?,
+      "initProcessEnabled" : (Boolean)?,
+      "sharedMemorySize" : (Integer)?,
+      "tmpfs" : (TmpfsList)?,
+      "maxSwap" : (Integer)?,
+      "swappiness" : (Integer)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "jobQueue" : (String)?,
+      "arrayJobId" : (String)?,
+      "multiNodeJobId" : (String)?,
+      "jobStatus" : (JobStatus)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListJobsResponse = NamedTuple(
+      "jobSummaryList" : JobSummaryList,
+      "nextToken" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagrisTagsMap)?
+    )
+
+    alias LogConfiguration = NamedTuple(
+      "logDriver" : LogDriver,
+      "options" : (LogConfigurationOptionsMap)?,
+      "secretOptions" : (SecretList)?
+    )
+
+    alias LogConfigurationOptionsMap = Hash(String,String)
+
+    alias LogDriver = String
+
+    alias Long = Int64
+
+    alias MountPoint = NamedTuple(
+      "containerPath" : (String)?,
+      "readOnly" : (Boolean)?,
+      "sourceVolume" : (String)?
+    )
+
+    alias MountPoints = Array(MountPoint)
+
+    alias NetworkConfiguration = NamedTuple(
+      "assignPublicIp" : (AssignPublicIp)?
+    )
+
+    alias NetworkInterface = NamedTuple(
+      "attachmentId" : (String)?,
+      "ipv6Address" : (String)?,
+      "privateIpv4Address" : (String)?
+    )
+
+    alias NetworkInterfaceList = Array(NetworkInterface)
+
+    alias NodeDetails = NamedTuple(
+      "nodeIndex" : (Integer)?,
+      "isMainNode" : (Boolean)?
+    )
+
+    alias NodeOverrides = NamedTuple(
+      "numNodes" : (Integer)?,
+      "nodePropertyOverrides" : (NodePropertyOverrides)?
+    )
+
+    alias NodeProperties = NamedTuple(
+      "numNodes" : Integer,
+      "mainNode" : Integer,
+      "nodeRangeProperties" : NodeRangeProperties
+    )
+
+    alias NodePropertiesSummary = NamedTuple(
+      "isMainNode" : (Boolean)?,
+      "numNodes" : (Integer)?,
+      "nodeIndex" : (Integer)?
+    )
+
+    alias NodePropertyOverride = NamedTuple(
+      "targetNodes" : String,
+      "containerOverrides" : (ContainerOverrides)?
+    )
+
+    alias NodePropertyOverrides = Array(NodePropertyOverride)
+
+    alias NodeRangeProperties = Array(NodeRangeProperty)
+
+    alias NodeRangeProperty = NamedTuple(
+      "targetNodes" : String,
+      "container" : (ContainerProperties)?
+    )
+
+    alias ParametersMap = Hash(String,String)
+
+    alias PlatformCapability = String
+
+    alias PlatformCapabilityList = Array(PlatformCapability)
+
+    alias RegisterJobDefinitionRequest = NamedTuple(
+      "jobDefinitionName" : String,
+      "type" : JobDefinitionType,
+      "parameters" : (ParametersMap)?,
+      "containerProperties" : (ContainerProperties)?,
+      "nodeProperties" : (NodeProperties)?,
+      "retryStrategy" : (RetryStrategy)?,
+      "propagateTags" : (Boolean)?,
+      "timeout" : (JobTimeout)?,
+      "tags" : (TagrisTagsMap)?,
+      "platformCapabilities" : (PlatformCapabilityList)?
+    )
+
+    alias RegisterJobDefinitionResponse = NamedTuple(
+      "jobDefinitionName" : String,
+      "jobDefinitionArn" : String,
+      "revision" : Integer
+    )
+
+    alias ResourceRequirement = NamedTuple(
+      "value" : String,
+      "type" : ResourceType
+    )
+
+    alias ResourceRequirements = Array(ResourceRequirement)
+
+    alias ResourceType = String
+
+    alias RetryAction = String
+
+    alias RetryStrategy = NamedTuple(
+      "attempts" : (Integer)?,
+      "evaluateOnExit" : (EvaluateOnExitList)?
+    )
+
+    alias Secret = NamedTuple(
+      "name" : String,
+      "valueFrom" : String
+    )
+
+    alias SecretList = Array(Secret)
+
+    alias ServerException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias SubmitJobRequest = NamedTuple(
+      "jobName" : String,
+      "jobQueue" : String,
+      "arrayProperties" : (ArrayProperties)?,
+      "dependsOn" : (JobDependencyList)?,
+      "jobDefinition" : String,
+      "parameters" : (ParametersMap)?,
+      "containerOverrides" : (ContainerOverrides)?,
+      "nodeOverrides" : (NodeOverrides)?,
+      "retryStrategy" : (RetryStrategy)?,
+      "propagateTags" : (Boolean)?,
+      "timeout" : (JobTimeout)?,
+      "tags" : (TagrisTagsMap)?
+    )
+
+    alias SubmitJobResponse = NamedTuple(
+      "jobArn" : (String)?,
+      "jobName" : String,
+      "jobId" : String
+    )
+
+    alias TagKey = String
+
+    alias TagKeysList = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tags" : TagrisTagsMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagrisTagsMap = Hash(TagKey,TagValue)
+
+    alias TagsMap = Hash(String,String)
+
+    alias TerminateJobRequest = NamedTuple(
+      "jobId" : String,
+      "reason" : String
+    )
+
+    alias TerminateJobResponse = NamedTuple(
+      
+    )
+
+    alias Tmpfs = NamedTuple(
+      "containerPath" : String,
+      "size" : Integer,
+      "mountOptions" : (StringList)?
+    )
+
+    alias TmpfsList = Array(Tmpfs)
+
+    alias Ulimit = NamedTuple(
+      "hardLimit" : Integer,
+      "name" : String,
+      "softLimit" : Integer
+    )
+
+    alias Ulimits = Array(Ulimit)
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : String,
+      "tagKeys" : TagKeysList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateComputeEnvironmentRequest = NamedTuple(
+      "computeEnvironment" : String,
+      "state" : (CEState)?,
+      "computeResources" : (ComputeResourceUpdate)?,
+      "serviceRole" : (String)?
+    )
+
+    alias UpdateComputeEnvironmentResponse = NamedTuple(
+      "computeEnvironmentName" : (String)?,
+      "computeEnvironmentArn" : (String)?
+    )
+
+    alias UpdateJobQueueRequest = NamedTuple(
+      "jobQueue" : String,
+      "state" : (JQState)?,
+      "priority" : (Integer)?,
+      "computeEnvironmentOrder" : (ComputeEnvironmentOrders)?
+    )
+
+    alias UpdateJobQueueResponse = NamedTuple(
+      "jobQueueName" : (String)?,
+      "jobQueueArn" : (String)?
+    )
+
+    alias Volume = NamedTuple(
+      "host" : (Host)?,
+      "name" : (String)?
+    )
+
+    alias Volumes = Array(Volume)
   end
 end

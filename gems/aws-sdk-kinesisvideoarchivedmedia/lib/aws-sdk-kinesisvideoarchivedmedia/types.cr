@@ -1241,5 +1241,204 @@ module Aws::KinesisVideoArchivedMedia
       include Aws::Structure
     end
 
+    alias ClientLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ClipFragmentSelector = NamedTuple(
+      "FragmentSelectorType" : ClipFragmentSelectorType,
+      "TimestampRange" : ClipTimestampRange
+    )
+
+    alias ClipFragmentSelectorType = String
+
+    alias ClipTimestampRange = NamedTuple(
+      "StartTimestamp" : Timestamp,
+      "EndTimestamp" : Timestamp
+    )
+
+    alias ContainerFormat = String
+
+    alias ContentType = String
+
+    alias DASHDisplayFragmentNumber = String
+
+    alias DASHDisplayFragmentTimestamp = String
+
+    alias DASHFragmentSelector = NamedTuple(
+      "FragmentSelectorType" : (DASHFragmentSelectorType)?,
+      "TimestampRange" : (DASHTimestampRange)?
+    )
+
+    alias DASHFragmentSelectorType = String
+
+    alias DASHPlaybackMode = String
+
+    alias DASHStreamingSessionURL = String
+
+    alias DASHTimestampRange = NamedTuple(
+      "StartTimestamp" : (Timestamp)?,
+      "EndTimestamp" : (Timestamp)?
+    )
+
+    alias ErrorMessage = String
+
+    alias Expires = Int32
+
+    alias Fragment = NamedTuple(
+      "FragmentNumber" : (FragmentNumberString)?,
+      "FragmentSizeInBytes" : (Long)?,
+      "ProducerTimestamp" : (Timestamp)?,
+      "ServerTimestamp" : (Timestamp)?,
+      "FragmentLengthInMilliseconds" : (Long)?
+    )
+
+    alias FragmentList = Array(Fragment)
+
+    alias FragmentNumberList = Array(FragmentNumberString)
+
+    alias FragmentNumberString = String
+
+    alias FragmentSelector = NamedTuple(
+      "FragmentSelectorType" : FragmentSelectorType,
+      "TimestampRange" : TimestampRange
+    )
+
+    alias FragmentSelectorType = String
+
+    alias GetClipInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "ClipFragmentSelector" : ClipFragmentSelector
+    )
+
+    alias GetClipOutput = NamedTuple(
+      "ContentType" : (ContentType)?,
+      "Payload" : (Payload)?
+    )
+
+    alias GetDASHStreamingSessionURLInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "PlaybackMode" : (DASHPlaybackMode)?,
+      "DisplayFragmentTimestamp" : (DASHDisplayFragmentTimestamp)?,
+      "DisplayFragmentNumber" : (DASHDisplayFragmentNumber)?,
+      "DASHFragmentSelector" : (DASHFragmentSelector)?,
+      "Expires" : (Expires)?,
+      "MaxManifestFragmentResults" : (PageLimit)?
+    )
+
+    alias GetDASHStreamingSessionURLOutput = NamedTuple(
+      "DASHStreamingSessionURL" : (DASHStreamingSessionURL)?
+    )
+
+    alias GetHLSStreamingSessionURLInput = NamedTuple(
+      "StreamName" : (StreamName)?,
+      "StreamARN" : (ResourceARN)?,
+      "PlaybackMode" : (HLSPlaybackMode)?,
+      "HLSFragmentSelector" : (HLSFragmentSelector)?,
+      "ContainerFormat" : (ContainerFormat)?,
+      "DiscontinuityMode" : (HLSDiscontinuityMode)?,
+      "DisplayFragmentTimestamp" : (HLSDisplayFragmentTimestamp)?,
+      "Expires" : (Expires)?,
+      "MaxMediaPlaylistFragmentResults" : (PageLimit)?
+    )
+
+    alias GetHLSStreamingSessionURLOutput = NamedTuple(
+      "HLSStreamingSessionURL" : (HLSStreamingSessionURL)?
+    )
+
+    alias GetMediaForFragmentListInput = NamedTuple(
+      "StreamName" : StreamName,
+      "Fragments" : FragmentNumberList
+    )
+
+    alias GetMediaForFragmentListOutput = NamedTuple(
+      "ContentType" : (ContentType)?,
+      "Payload" : (Payload)?
+    )
+
+    alias HLSDiscontinuityMode = String
+
+    alias HLSDisplayFragmentTimestamp = String
+
+    alias HLSFragmentSelector = NamedTuple(
+      "FragmentSelectorType" : (HLSFragmentSelectorType)?,
+      "TimestampRange" : (HLSTimestampRange)?
+    )
+
+    alias HLSFragmentSelectorType = String
+
+    alias HLSPlaybackMode = String
+
+    alias HLSStreamingSessionURL = String
+
+    alias HLSTimestampRange = NamedTuple(
+      "StartTimestamp" : (Timestamp)?,
+      "EndTimestamp" : (Timestamp)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidCodecPrivateDataException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidMediaFrameException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListFragmentsInput = NamedTuple(
+      "StreamName" : StreamName,
+      "MaxResults" : (PageLimit)?,
+      "NextToken" : (NextToken)?,
+      "FragmentSelector" : (FragmentSelector)?
+    )
+
+    alias ListFragmentsOutput = NamedTuple(
+      "Fragments" : (FragmentList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Long = Int64
+
+    alias MissingCodecPrivateDataException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NextToken = String
+
+    alias NoDataRetentionException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NotAuthorizedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias PageLimit = Int64
+
+    alias Payload = String | Array(UInt8) | IO
+
+    alias ResourceARN = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias StreamName = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampRange = NamedTuple(
+      "StartTimestamp" : Timestamp,
+      "EndTimestamp" : Timestamp
+    )
+
+    alias UnsupportedStreamMediaTypeException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

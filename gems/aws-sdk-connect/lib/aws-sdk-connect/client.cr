@@ -348,8 +348,8 @@ module Aws::Connect
     #
     # @overload associate_approved_origin(**params)
     # @param [Hash] params ({})
-    def associate_approved_origin(params = {}, **options)
-      req = build_request(:associate_approved_origin, params)
+    def associate_approved_origin(, **options)
+      req = build_request(:associate_approved_origin, )
       req.send_request(options)
     end
 
@@ -417,8 +417,8 @@ module Aws::Connect
     #
     # @overload associate_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def associate_instance_storage_config(params = {}, **options)
-      req = build_request(:associate_instance_storage_config, params)
+    def associate_instance_storage_config(, **options)
+      req = build_request(:associate_instance_storage_config, )
       req.send_request(options)
     end
 
@@ -445,8 +445,8 @@ module Aws::Connect
     #
     # @overload associate_lambda_function(**params)
     # @param [Hash] params ({})
-    def associate_lambda_function(params = {}, **options)
-      req = build_request(:associate_lambda_function, params)
+    def associate_lambda_function(, **options)
+      req = build_request(:associate_lambda_function, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::Connect
     #
     # @overload associate_lex_bot(**params)
     # @param [Hash] params ({})
-    def associate_lex_bot(params = {}, **options)
-      req = build_request(:associate_lex_bot, params)
+    def associate_lex_bot(, **options)
+      req = build_request(:associate_lex_bot, )
       req.send_request(options)
     end
 
@@ -514,8 +514,8 @@ module Aws::Connect
     #
     # @overload associate_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def associate_routing_profile_queues(params = {}, **options)
-      req = build_request(:associate_routing_profile_queues, params)
+    def associate_routing_profile_queues(, **options)
+      req = build_request(:associate_routing_profile_queues, )
       req.send_request(options)
     end
 
@@ -546,8 +546,8 @@ module Aws::Connect
     #
     # @overload associate_security_key(**params)
     # @param [Hash] params ({})
-    def associate_security_key(params = {}, **options)
-      req = build_request(:associate_security_key, params)
+    def associate_security_key(, **options)
+      req = build_request(:associate_security_key, )
       req.send_request(options)
     end
 
@@ -611,8 +611,8 @@ module Aws::Connect
     #
     # @overload create_contact_flow(**params)
     # @param [Hash] params ({})
-    def create_contact_flow(params = {}, **options)
-      req = build_request(:create_contact_flow, params)
+    def create_contact_flow(, **options)
+      req = build_request(:create_contact_flow, )
       req.send_request(options)
     end
 
@@ -667,8 +667,8 @@ module Aws::Connect
     #
     # @overload create_instance(**params)
     # @param [Hash] params ({})
-    def create_instance(params = {}, **options)
-      req = build_request(:create_instance, params)
+    def create_instance(, **options)
+      req = build_request(:create_instance, )
       req.send_request(options)
     end
 
@@ -720,8 +720,8 @@ module Aws::Connect
     #
     # @overload create_integration_association(**params)
     # @param [Hash] params ({})
-    def create_integration_association(params = {}, **options)
-      req = build_request(:create_integration_association, params)
+    def create_integration_association(, **options)
+      req = build_request(:create_integration_association, )
       req.send_request(options)
     end
 
@@ -793,8 +793,8 @@ module Aws::Connect
     #
     # @overload create_routing_profile(**params)
     # @param [Hash] params ({})
-    def create_routing_profile(params = {}, **options)
-      req = build_request(:create_routing_profile, params)
+    def create_routing_profile(, **options)
+      req = build_request(:create_routing_profile, )
       req.send_request(options)
     end
 
@@ -836,8 +836,8 @@ module Aws::Connect
     #
     # @overload create_use_case(**params)
     # @param [Hash] params ({})
-    def create_use_case(params = {}, **options)
-      req = build_request(:create_use_case, params)
+    def create_use_case(, **options)
+      req = build_request(:create_use_case, )
       req.send_request(options)
     end
 
@@ -936,8 +936,8 @@ module Aws::Connect
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -976,8 +976,8 @@ module Aws::Connect
     #
     # @overload create_user_hierarchy_group(**params)
     # @param [Hash] params ({})
-    def create_user_hierarchy_group(params = {}, **options)
-      req = build_request(:create_user_hierarchy_group, params)
+    def create_user_hierarchy_group(, **options)
+      req = build_request(:create_user_hierarchy_group, )
       req.send_request(options)
     end
 
@@ -1001,8 +1001,8 @@ module Aws::Connect
     #
     # @overload delete_instance(**params)
     # @param [Hash] params ({})
-    def delete_instance(params = {}, **options)
-      req = build_request(:delete_instance, params)
+    def delete_instance(, **options)
+      req = build_request(:delete_instance, )
       req.send_request(options)
     end
 
@@ -1031,8 +1031,8 @@ module Aws::Connect
     #
     # @overload delete_integration_association(**params)
     # @param [Hash] params ({})
-    def delete_integration_association(params = {}, **options)
-      req = build_request(:delete_integration_association, params)
+    def delete_integration_association(, **options)
+      req = build_request(:delete_integration_association, )
       req.send_request(options)
     end
 
@@ -1064,8 +1064,8 @@ module Aws::Connect
     #
     # @overload delete_use_case(**params)
     # @param [Hash] params ({})
-    def delete_use_case(params = {}, **options)
-      req = build_request(:delete_use_case, params)
+    def delete_use_case(, **options)
+      req = build_request(:delete_use_case, )
       req.send_request(options)
     end
 
@@ -1098,8 +1098,8 @@ module Aws::Connect
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -1125,8 +1125,8 @@ module Aws::Connect
     #
     # @overload delete_user_hierarchy_group(**params)
     # @param [Hash] params ({})
-    def delete_user_hierarchy_group(params = {}, **options)
-      req = build_request(:delete_user_hierarchy_group, params)
+    def delete_user_hierarchy_group(, **options)
+      req = build_request(:delete_user_hierarchy_group, )
       req.send_request(options)
     end
 
@@ -1171,8 +1171,8 @@ module Aws::Connect
     #
     # @overload describe_contact_flow(**params)
     # @param [Hash] params ({})
-    def describe_contact_flow(params = {}, **options)
-      req = build_request(:describe_contact_flow, params)
+    def describe_contact_flow(, **options)
+      req = build_request(:describe_contact_flow, )
       req.send_request(options)
     end
 
@@ -1215,8 +1215,8 @@ module Aws::Connect
     #
     # @overload describe_instance(**params)
     # @param [Hash] params ({})
-    def describe_instance(params = {}, **options)
-      req = build_request(:describe_instance, params)
+    def describe_instance(, **options)
+      req = build_request(:describe_instance, )
       req.send_request(options)
     end
 
@@ -1248,8 +1248,8 @@ module Aws::Connect
     #
     # @overload describe_instance_attribute(**params)
     # @param [Hash] params ({})
-    def describe_instance_attribute(params = {}, **options)
-      req = build_request(:describe_instance_attribute, params)
+    def describe_instance_attribute(, **options)
+      req = build_request(:describe_instance_attribute, )
       req.send_request(options)
     end
 
@@ -1297,8 +1297,8 @@ module Aws::Connect
     #
     # @overload describe_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def describe_instance_storage_config(params = {}, **options)
-      req = build_request(:describe_instance_storage_config, params)
+    def describe_instance_storage_config(, **options)
+      req = build_request(:describe_instance_storage_config, )
       req.send_request(options)
     end
 
@@ -1339,8 +1339,8 @@ module Aws::Connect
     #
     # @overload describe_routing_profile(**params)
     # @param [Hash] params ({})
-    def describe_routing_profile(params = {}, **options)
-      req = build_request(:describe_routing_profile, params)
+    def describe_routing_profile(, **options)
+      req = build_request(:describe_routing_profile, )
       req.send_request(options)
     end
 
@@ -1390,8 +1390,8 @@ module Aws::Connect
     #
     # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, **options)
-      req = build_request(:describe_user, params)
+    def describe_user(, **options)
+      req = build_request(:describe_user, )
       req.send_request(options)
     end
 
@@ -1440,8 +1440,8 @@ module Aws::Connect
     #
     # @overload describe_user_hierarchy_group(**params)
     # @param [Hash] params ({})
-    def describe_user_hierarchy_group(params = {}, **options)
-      req = build_request(:describe_user_hierarchy_group, params)
+    def describe_user_hierarchy_group(, **options)
+      req = build_request(:describe_user_hierarchy_group, )
       req.send_request(options)
     end
 
@@ -1483,8 +1483,8 @@ module Aws::Connect
     #
     # @overload describe_user_hierarchy_structure(**params)
     # @param [Hash] params ({})
-    def describe_user_hierarchy_structure(params = {}, **options)
-      req = build_request(:describe_user_hierarchy_structure, params)
+    def describe_user_hierarchy_structure(, **options)
+      req = build_request(:describe_user_hierarchy_structure, )
       req.send_request(options)
     end
 
@@ -1509,8 +1509,8 @@ module Aws::Connect
     #
     # @overload disassociate_approved_origin(**params)
     # @param [Hash] params ({})
-    def disassociate_approved_origin(params = {}, **options)
-      req = build_request(:disassociate_approved_origin, params)
+    def disassociate_approved_origin(, **options)
+      req = build_request(:disassociate_approved_origin, )
       req.send_request(options)
     end
 
@@ -1541,8 +1541,8 @@ module Aws::Connect
     #
     # @overload disassociate_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def disassociate_instance_storage_config(params = {}, **options)
-      req = build_request(:disassociate_instance_storage_config, params)
+    def disassociate_instance_storage_config(, **options)
+      req = build_request(:disassociate_instance_storage_config, )
       req.send_request(options)
     end
 
@@ -1569,8 +1569,8 @@ module Aws::Connect
     #
     # @overload disassociate_lambda_function(**params)
     # @param [Hash] params ({})
-    def disassociate_lambda_function(params = {}, **options)
-      req = build_request(:disassociate_lambda_function, params)
+    def disassociate_lambda_function(, **options)
+      req = build_request(:disassociate_lambda_function, )
       req.send_request(options)
     end
 
@@ -1600,8 +1600,8 @@ module Aws::Connect
     #
     # @overload disassociate_lex_bot(**params)
     # @param [Hash] params ({})
-    def disassociate_lex_bot(params = {}, **options)
-      req = build_request(:disassociate_lex_bot, params)
+    def disassociate_lex_bot(, **options)
+      req = build_request(:disassociate_lex_bot, )
       req.send_request(options)
     end
 
@@ -1635,8 +1635,8 @@ module Aws::Connect
     #
     # @overload disassociate_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def disassociate_routing_profile_queues(params = {}, **options)
-      req = build_request(:disassociate_routing_profile_queues, params)
+    def disassociate_routing_profile_queues(, **options)
+      req = build_request(:disassociate_routing_profile_queues, )
       req.send_request(options)
     end
 
@@ -1662,8 +1662,8 @@ module Aws::Connect
     #
     # @overload disassociate_security_key(**params)
     # @param [Hash] params ({})
-    def disassociate_security_key(params = {}, **options)
-      req = build_request(:disassociate_security_key, params)
+    def disassociate_security_key(, **options)
+      req = build_request(:disassociate_security_key, )
       req.send_request(options)
     end
 
@@ -1695,8 +1695,8 @@ module Aws::Connect
     #
     # @overload get_contact_attributes(**params)
     # @param [Hash] params ({})
-    def get_contact_attributes(params = {}, **options)
-      req = build_request(:get_contact_attributes, params)
+    def get_contact_attributes(, **options)
+      req = build_request(:get_contact_attributes, )
       req.send_request(options)
     end
 
@@ -1894,8 +1894,8 @@ module Aws::Connect
     #
     # @overload get_current_metric_data(**params)
     # @param [Hash] params ({})
-    def get_current_metric_data(params = {}, **options)
-      req = build_request(:get_current_metric_data, params)
+    def get_current_metric_data(, **options)
+      req = build_request(:get_current_metric_data, )
       req.send_request(options)
     end
 
@@ -1925,8 +1925,8 @@ module Aws::Connect
     #
     # @overload get_federation_token(**params)
     # @param [Hash] params ({})
-    def get_federation_token(params = {}, **options)
-      req = build_request(:get_federation_token, params)
+    def get_federation_token(, **options)
+      req = build_request(:get_federation_token, )
       req.send_request(options)
     end
 
@@ -2203,8 +2203,8 @@ module Aws::Connect
     #
     # @overload get_metric_data(**params)
     # @param [Hash] params ({})
-    def get_metric_data(params = {}, **options)
-      req = build_request(:get_metric_data, params)
+    def get_metric_data(, **options)
+      req = build_request(:get_metric_data, )
       req.send_request(options)
     end
 
@@ -2247,8 +2247,8 @@ module Aws::Connect
     #
     # @overload list_approved_origins(**params)
     # @param [Hash] params ({})
-    def list_approved_origins(params = {}, **options)
-      req = build_request(:list_approved_origins, params)
+    def list_approved_origins(, **options)
+      req = build_request(:list_approved_origins, )
       req.send_request(options)
     end
 
@@ -2309,8 +2309,8 @@ module Aws::Connect
     #
     # @overload list_contact_flows(**params)
     # @param [Hash] params ({})
-    def list_contact_flows(params = {}, **options)
-      req = build_request(:list_contact_flows, params)
+    def list_contact_flows(, **options)
+      req = build_request(:list_contact_flows, )
       req.send_request(options)
     end
 
@@ -2362,8 +2362,8 @@ module Aws::Connect
     #
     # @overload list_hours_of_operations(**params)
     # @param [Hash] params ({})
-    def list_hours_of_operations(params = {}, **options)
-      req = build_request(:list_hours_of_operations, params)
+    def list_hours_of_operations(, **options)
+      req = build_request(:list_hours_of_operations, )
       req.send_request(options)
     end
 
@@ -2410,8 +2410,8 @@ module Aws::Connect
     #
     # @overload list_instance_attributes(**params)
     # @param [Hash] params ({})
-    def list_instance_attributes(params = {}, **options)
-      req = build_request(:list_instance_attributes, params)
+    def list_instance_attributes(, **options)
+      req = build_request(:list_instance_attributes, )
       req.send_request(options)
     end
 
@@ -2472,8 +2472,8 @@ module Aws::Connect
     #
     # @overload list_instance_storage_configs(**params)
     # @param [Hash] params ({})
-    def list_instance_storage_configs(params = {}, **options)
-      req = build_request(:list_instance_storage_configs, params)
+    def list_instance_storage_configs(, **options)
+      req = build_request(:list_instance_storage_configs, )
       req.send_request(options)
     end
 
@@ -2525,8 +2525,8 @@ module Aws::Connect
     #
     # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, **options)
-      req = build_request(:list_instances, params)
+    def list_instances(, **options)
+      req = build_request(:list_instances, )
       req.send_request(options)
     end
 
@@ -2579,8 +2579,8 @@ module Aws::Connect
     #
     # @overload list_integration_associations(**params)
     # @param [Hash] params ({})
-    def list_integration_associations(params = {}, **options)
-      req = build_request(:list_integration_associations, params)
+    def list_integration_associations(, **options)
+      req = build_request(:list_integration_associations, )
       req.send_request(options)
     end
 
@@ -2623,8 +2623,8 @@ module Aws::Connect
     #
     # @overload list_lambda_functions(**params)
     # @param [Hash] params ({})
-    def list_lambda_functions(params = {}, **options)
-      req = build_request(:list_lambda_functions, params)
+    def list_lambda_functions(, **options)
+      req = build_request(:list_lambda_functions, )
       req.send_request(options)
     end
 
@@ -2668,8 +2668,8 @@ module Aws::Connect
     #
     # @overload list_lex_bots(**params)
     # @param [Hash] params ({})
-    def list_lex_bots(params = {}, **options)
-      req = build_request(:list_lex_bots, params)
+    def list_lex_bots(, **options)
+      req = build_request(:list_lex_bots, )
       req.send_request(options)
     end
 
@@ -2732,8 +2732,8 @@ module Aws::Connect
     #
     # @overload list_phone_numbers(**params)
     # @param [Hash] params ({})
-    def list_phone_numbers(params = {}, **options)
-      req = build_request(:list_phone_numbers, params)
+    def list_phone_numbers(, **options)
+      req = build_request(:list_phone_numbers, )
       req.send_request(options)
     end
 
@@ -2778,8 +2778,8 @@ module Aws::Connect
     #
     # @overload list_prompts(**params)
     # @param [Hash] params ({})
-    def list_prompts(params = {}, **options)
-      req = build_request(:list_prompts, params)
+    def list_prompts(, **options)
+      req = build_request(:list_prompts, )
       req.send_request(options)
     end
 
@@ -2836,8 +2836,8 @@ module Aws::Connect
     #
     # @overload list_queues(**params)
     # @param [Hash] params ({})
-    def list_queues(params = {}, **options)
-      req = build_request(:list_queues, params)
+    def list_queues(, **options)
+      req = build_request(:list_queues, )
       req.send_request(options)
     end
 
@@ -2888,8 +2888,8 @@ module Aws::Connect
     #
     # @overload list_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def list_routing_profile_queues(params = {}, **options)
-      req = build_request(:list_routing_profile_queues, params)
+    def list_routing_profile_queues(, **options)
+      req = build_request(:list_routing_profile_queues, )
       req.send_request(options)
     end
 
@@ -2943,8 +2943,8 @@ module Aws::Connect
     #
     # @overload list_routing_profiles(**params)
     # @param [Hash] params ({})
-    def list_routing_profiles(params = {}, **options)
-      req = build_request(:list_routing_profiles, params)
+    def list_routing_profiles(, **options)
+      req = build_request(:list_routing_profiles, )
       req.send_request(options)
     end
 
@@ -2989,8 +2989,8 @@ module Aws::Connect
     #
     # @overload list_security_keys(**params)
     # @param [Hash] params ({})
-    def list_security_keys(params = {}, **options)
-      req = build_request(:list_security_keys, params)
+    def list_security_keys(, **options)
+      req = build_request(:list_security_keys, )
       req.send_request(options)
     end
 
@@ -3042,8 +3042,8 @@ module Aws::Connect
     #
     # @overload list_security_profiles(**params)
     # @param [Hash] params ({})
-    def list_security_profiles(params = {}, **options)
-      req = build_request(:list_security_profiles, params)
+    def list_security_profiles(, **options)
+      req = build_request(:list_security_profiles, )
       req.send_request(options)
     end
 
@@ -3078,8 +3078,8 @@ module Aws::Connect
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3130,8 +3130,8 @@ module Aws::Connect
     #
     # @overload list_use_cases(**params)
     # @param [Hash] params ({})
-    def list_use_cases(params = {}, **options)
-      req = build_request(:list_use_cases, params)
+    def list_use_cases(, **options)
+      req = build_request(:list_use_cases, )
       req.send_request(options)
     end
 
@@ -3183,8 +3183,8 @@ module Aws::Connect
     #
     # @overload list_user_hierarchy_groups(**params)
     # @param [Hash] params ({})
-    def list_user_hierarchy_groups(params = {}, **options)
-      req = build_request(:list_user_hierarchy_groups, params)
+    def list_user_hierarchy_groups(, **options)
+      req = build_request(:list_user_hierarchy_groups, )
       req.send_request(options)
     end
 
@@ -3229,8 +3229,8 @@ module Aws::Connect
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -3263,8 +3263,8 @@ module Aws::Connect
     #
     # @overload resume_contact_recording(**params)
     # @param [Hash] params ({})
-    def resume_contact_recording(params = {}, **options)
-      req = build_request(:resume_contact_recording, params)
+    def resume_contact_recording(, **options)
+      req = build_request(:resume_contact_recording, )
       req.send_request(options)
     end
 
@@ -3365,8 +3365,8 @@ module Aws::Connect
     #
     # @overload start_chat_contact(**params)
     # @param [Hash] params ({})
-    def start_chat_contact(params = {}, **options)
-      req = build_request(:start_chat_contact, params)
+    def start_chat_contact(, **options)
+      req = build_request(:start_chat_contact, )
       req.send_request(options)
     end
 
@@ -3417,8 +3417,8 @@ module Aws::Connect
     #
     # @overload start_contact_recording(**params)
     # @param [Hash] params ({})
-    def start_contact_recording(params = {}, **options)
-      req = build_request(:start_contact_recording, params)
+    def start_contact_recording(, **options)
+      req = build_request(:start_contact_recording, )
       req.send_request(options)
     end
 
@@ -3516,8 +3516,8 @@ module Aws::Connect
     #
     # @overload start_outbound_voice_contact(**params)
     # @param [Hash] params ({})
-    def start_outbound_voice_contact(params = {}, **options)
-      req = build_request(:start_outbound_voice_contact, params)
+    def start_outbound_voice_contact(, **options)
+      req = build_request(:start_outbound_voice_contact, )
       req.send_request(options)
     end
 
@@ -3599,8 +3599,8 @@ module Aws::Connect
     #
     # @overload start_task_contact(**params)
     # @param [Hash] params ({})
-    def start_task_contact(params = {}, **options)
-      req = build_request(:start_task_contact, params)
+    def start_task_contact(, **options)
+      req = build_request(:start_task_contact, )
       req.send_request(options)
     end
 
@@ -3625,8 +3625,8 @@ module Aws::Connect
     #
     # @overload stop_contact(**params)
     # @param [Hash] params ({})
-    def stop_contact(params = {}, **options)
-      req = build_request(:stop_contact, params)
+    def stop_contact(, **options)
+      req = build_request(:stop_contact, )
       req.send_request(options)
     end
 
@@ -3664,8 +3664,8 @@ module Aws::Connect
     #
     # @overload stop_contact_recording(**params)
     # @param [Hash] params ({})
-    def stop_contact_recording(params = {}, **options)
-      req = build_request(:stop_contact_recording, params)
+    def stop_contact_recording(, **options)
+      req = build_request(:stop_contact_recording, )
       req.send_request(options)
     end
 
@@ -3703,8 +3703,8 @@ module Aws::Connect
     #
     # @overload suspend_contact_recording(**params)
     # @param [Hash] params ({})
-    def suspend_contact_recording(params = {}, **options)
-      req = build_request(:suspend_contact_recording, params)
+    def suspend_contact_recording(, **options)
+      req = build_request(:suspend_contact_recording, )
       req.send_request(options)
     end
 
@@ -3742,8 +3742,8 @@ module Aws::Connect
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3768,8 +3768,8 @@ module Aws::Connect
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3828,8 +3828,8 @@ module Aws::Connect
     #
     # @overload update_contact_attributes(**params)
     # @param [Hash] params ({})
-    def update_contact_attributes(params = {}, **options)
-      req = build_request(:update_contact_attributes, params)
+    def update_contact_attributes(, **options)
+      req = build_request(:update_contact_attributes, )
       req.send_request(options)
     end
 
@@ -3871,8 +3871,8 @@ module Aws::Connect
     #
     # @overload update_contact_flow_content(**params)
     # @param [Hash] params ({})
-    def update_contact_flow_content(params = {}, **options)
-      req = build_request(:update_contact_flow_content, params)
+    def update_contact_flow_content(, **options)
+      req = build_request(:update_contact_flow_content, )
       req.send_request(options)
     end
 
@@ -3912,8 +3912,8 @@ module Aws::Connect
     #
     # @overload update_contact_flow_name(**params)
     # @param [Hash] params ({})
-    def update_contact_flow_name(params = {}, **options)
-      req = build_request(:update_contact_flow_name, params)
+    def update_contact_flow_name(, **options)
+      req = build_request(:update_contact_flow_name, )
       req.send_request(options)
     end
 
@@ -3945,8 +3945,8 @@ module Aws::Connect
     #
     # @overload update_instance_attribute(**params)
     # @param [Hash] params ({})
-    def update_instance_attribute(params = {}, **options)
-      req = build_request(:update_instance_attribute, params)
+    def update_instance_attribute(, **options)
+      req = build_request(:update_instance_attribute, )
       req.send_request(options)
     end
 
@@ -4009,8 +4009,8 @@ module Aws::Connect
     #
     # @overload update_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def update_instance_storage_config(params = {}, **options)
-      req = build_request(:update_instance_storage_config, params)
+    def update_instance_storage_config(, **options)
+      req = build_request(:update_instance_storage_config, )
       req.send_request(options)
     end
 
@@ -4045,8 +4045,8 @@ module Aws::Connect
     #
     # @overload update_routing_profile_concurrency(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_concurrency(params = {}, **options)
-      req = build_request(:update_routing_profile_concurrency, params)
+    def update_routing_profile_concurrency(, **options)
+      req = build_request(:update_routing_profile_concurrency, )
       req.send_request(options)
     end
 
@@ -4075,8 +4075,8 @@ module Aws::Connect
     #
     # @overload update_routing_profile_default_outbound_queue(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_default_outbound_queue(params = {}, **options)
-      req = build_request(:update_routing_profile_default_outbound_queue, params)
+    def update_routing_profile_default_outbound_queue(, **options)
+      req = build_request(:update_routing_profile_default_outbound_queue, )
       req.send_request(options)
     end
 
@@ -4112,8 +4112,8 @@ module Aws::Connect
     #
     # @overload update_routing_profile_name(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_name(params = {}, **options)
-      req = build_request(:update_routing_profile_name, params)
+    def update_routing_profile_name(, **options)
+      req = build_request(:update_routing_profile_name, )
       req.send_request(options)
     end
 
@@ -4154,8 +4154,8 @@ module Aws::Connect
     #
     # @overload update_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_queues(params = {}, **options)
-      req = build_request(:update_routing_profile_queues, params)
+    def update_routing_profile_queues(, **options)
+      req = build_request(:update_routing_profile_queues, )
       req.send_request(options)
     end
 
@@ -4184,8 +4184,8 @@ module Aws::Connect
     #
     # @overload update_user_hierarchy(**params)
     # @param [Hash] params ({})
-    def update_user_hierarchy(params = {}, **options)
-      req = build_request(:update_user_hierarchy, params)
+    def update_user_hierarchy(, **options)
+      req = build_request(:update_user_hierarchy, )
       req.send_request(options)
     end
 
@@ -4214,8 +4214,8 @@ module Aws::Connect
     #
     # @overload update_user_hierarchy_group_name(**params)
     # @param [Hash] params ({})
-    def update_user_hierarchy_group_name(params = {}, **options)
-      req = build_request(:update_user_hierarchy_group_name, params)
+    def update_user_hierarchy_group_name(, **options)
+      req = build_request(:update_user_hierarchy_group_name, )
       req.send_request(options)
     end
 
@@ -4257,8 +4257,8 @@ module Aws::Connect
     #
     # @overload update_user_hierarchy_structure(**params)
     # @param [Hash] params ({})
-    def update_user_hierarchy_structure(params = {}, **options)
-      req = build_request(:update_user_hierarchy_structure, params)
+    def update_user_hierarchy_structure(, **options)
+      req = build_request(:update_user_hierarchy_structure, )
       req.send_request(options)
     end
 
@@ -4304,8 +4304,8 @@ module Aws::Connect
     #
     # @overload update_user_identity_info(**params)
     # @param [Hash] params ({})
-    def update_user_identity_info(params = {}, **options)
-      req = build_request(:update_user_identity_info, params)
+    def update_user_identity_info(, **options)
+      req = build_request(:update_user_identity_info, )
       req.send_request(options)
     end
 
@@ -4339,8 +4339,8 @@ module Aws::Connect
     #
     # @overload update_user_phone_config(**params)
     # @param [Hash] params ({})
-    def update_user_phone_config(params = {}, **options)
-      req = build_request(:update_user_phone_config, params)
+    def update_user_phone_config(, **options)
+      req = build_request(:update_user_phone_config, )
       req.send_request(options)
     end
 
@@ -4369,8 +4369,8 @@ module Aws::Connect
     #
     # @overload update_user_routing_profile(**params)
     # @param [Hash] params ({})
-    def update_user_routing_profile(params = {}, **options)
-      req = build_request(:update_user_routing_profile, params)
+    def update_user_routing_profile(, **options)
+      req = build_request(:update_user_routing_profile, )
       req.send_request(options)
     end
 
@@ -4399,8 +4399,8 @@ module Aws::Connect
     #
     # @overload update_user_security_profiles(**params)
     # @param [Hash] params ({})
-    def update_user_security_profiles(params = {}, **options)
-      req = build_request(:update_user_security_profiles, params)
+    def update_user_security_profiles(, **options)
+      req = build_request(:update_user_security_profiles, )
       req.send_request(options)
     end
 

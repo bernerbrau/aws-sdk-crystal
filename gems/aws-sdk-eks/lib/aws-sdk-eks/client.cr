@@ -431,8 +431,8 @@ module Aws::EKS
     #
     # @overload create_addon(**params)
     # @param [Hash] params ({})
-    def create_addon(params = {}, **options)
-      req = build_request(:create_addon, params)
+    def create_addon(, **options)
+      req = build_request(:create_addon, )
       req.send_request(options)
     end
 
@@ -663,8 +663,8 @@ module Aws::EKS
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -799,8 +799,8 @@ module Aws::EKS
     #
     # @overload create_fargate_profile(**params)
     # @param [Hash] params ({})
-    def create_fargate_profile(params = {}, **options)
-      req = build_request(:create_fargate_profile, params)
+    def create_fargate_profile(, **options)
+      req = build_request(:create_fargate_profile, )
       req.send_request(options)
     end
 
@@ -1064,8 +1064,8 @@ module Aws::EKS
     #
     # @overload create_nodegroup(**params)
     # @param [Hash] params ({})
-    def create_nodegroup(params = {}, **options)
-      req = build_request(:create_nodegroup, params)
+    def create_nodegroup(, **options)
+      req = build_request(:create_nodegroup, )
       req.send_request(options)
     end
 
@@ -1119,8 +1119,8 @@ module Aws::EKS
     #
     # @overload delete_addon(**params)
     # @param [Hash] params ({})
-    def delete_addon(params = {}, **options)
-      req = build_request(:delete_addon, params)
+    def delete_addon(, **options)
+      req = build_request(:delete_addon, )
       req.send_request(options)
     end
 
@@ -1206,8 +1206,8 @@ module Aws::EKS
     #
     # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, **options)
-      req = build_request(:delete_cluster, params)
+    def delete_cluster(, **options)
+      req = build_request(:delete_cluster, )
       req.send_request(options)
     end
 
@@ -1262,8 +1262,8 @@ module Aws::EKS
     #
     # @overload delete_fargate_profile(**params)
     # @param [Hash] params ({})
-    def delete_fargate_profile(params = {}, **options)
-      req = build_request(:delete_fargate_profile, params)
+    def delete_fargate_profile(, **options)
+      req = build_request(:delete_fargate_profile, )
       req.send_request(options)
     end
 
@@ -1331,8 +1331,8 @@ module Aws::EKS
     #
     # @overload delete_nodegroup(**params)
     # @param [Hash] params ({})
-    def delete_nodegroup(params = {}, **options)
-      req = build_request(:delete_nodegroup, params)
+    def delete_nodegroup(, **options)
+      req = build_request(:delete_nodegroup, )
       req.send_request(options)
     end
 
@@ -1388,8 +1388,8 @@ module Aws::EKS
     #
     # @overload describe_addon(**params)
     # @param [Hash] params ({})
-    def describe_addon(params = {}, **options)
-      req = build_request(:describe_addon, params)
+    def describe_addon(, **options)
+      req = build_request(:describe_addon, )
       req.send_request(options)
     end
 
@@ -1458,8 +1458,8 @@ module Aws::EKS
     #
     # @overload describe_addon_versions(**params)
     # @param [Hash] params ({})
-    def describe_addon_versions(params = {}, **options)
-      req = build_request(:describe_addon_versions, params)
+    def describe_addon_versions(, **options)
+      req = build_request(:describe_addon_versions, )
       req.send_request(options)
     end
 
@@ -1572,8 +1572,8 @@ module Aws::EKS
     #
     # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, **options)
-      req = build_request(:describe_cluster, params)
+    def describe_cluster(, **options)
+      req = build_request(:describe_cluster, )
       req.send_request(options)
     end
 
@@ -1618,8 +1618,8 @@ module Aws::EKS
     #
     # @overload describe_fargate_profile(**params)
     # @param [Hash] params ({})
-    def describe_fargate_profile(params = {}, **options)
-      req = build_request(:describe_fargate_profile, params)
+    def describe_fargate_profile(, **options)
+      req = build_request(:describe_fargate_profile, )
       req.send_request(options)
     end
 
@@ -1692,8 +1692,8 @@ module Aws::EKS
     #
     # @overload describe_nodegroup(**params)
     # @param [Hash] params ({})
-    def describe_nodegroup(params = {}, **options)
-      req = build_request(:describe_nodegroup, params)
+    def describe_nodegroup(, **options)
+      req = build_request(:describe_nodegroup, )
       req.send_request(options)
     end
 
@@ -1753,8 +1753,8 @@ module Aws::EKS
     #
     # @overload describe_update(**params)
     # @param [Hash] params ({})
-    def describe_update(params = {}, **options)
-      req = build_request(:describe_update, params)
+    def describe_update(, **options)
+      req = build_request(:describe_update, )
       req.send_request(options)
     end
 
@@ -1810,8 +1810,8 @@ module Aws::EKS
     #
     # @overload list_addons(**params)
     # @param [Hash] params ({})
-    def list_addons(params = {}, **options)
-      req = build_request(:list_addons, params)
+    def list_addons(, **options)
+      req = build_request(:list_addons, )
       req.send_request(options)
     end
 
@@ -1880,8 +1880,8 @@ module Aws::EKS
     #
     # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, **options)
-      req = build_request(:list_clusters, params)
+    def list_clusters(, **options)
+      req = build_request(:list_clusters, )
       req.send_request(options)
     end
 
@@ -1935,8 +1935,8 @@ module Aws::EKS
     #
     # @overload list_fargate_profiles(**params)
     # @param [Hash] params ({})
-    def list_fargate_profiles(params = {}, **options)
-      req = build_request(:list_fargate_profiles, params)
+    def list_fargate_profiles(, **options)
+      req = build_request(:list_fargate_profiles, )
       req.send_request(options)
     end
 
@@ -1989,8 +1989,8 @@ module Aws::EKS
     #
     # @overload list_nodegroups(**params)
     # @param [Hash] params ({})
-    def list_nodegroups(params = {}, **options)
-      req = build_request(:list_nodegroups, params)
+    def list_nodegroups(, **options)
+      req = build_request(:list_nodegroups, )
       req.send_request(options)
     end
 
@@ -2036,8 +2036,8 @@ module Aws::EKS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2096,8 +2096,8 @@ module Aws::EKS
     #
     # @overload list_updates(**params)
     # @param [Hash] params ({})
-    def list_updates(params = {}, **options)
-      req = build_request(:list_updates, params)
+    def list_updates(, **options)
+      req = build_request(:list_updates, )
       req.send_request(options)
     end
 
@@ -2133,8 +2133,8 @@ module Aws::EKS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2161,8 +2161,8 @@ module Aws::EKS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2252,8 +2252,8 @@ module Aws::EKS
     #
     # @overload update_addon(**params)
     # @param [Hash] params ({})
-    def update_addon(params = {}, **options)
-      req = build_request(:update_addon, params)
+    def update_addon(, **options)
+      req = build_request(:update_addon, )
       req.send_request(options)
     end
 
@@ -2372,8 +2372,8 @@ module Aws::EKS
     #
     # @overload update_cluster_config(**params)
     # @param [Hash] params ({})
-    def update_cluster_config(params = {}, **options)
-      req = build_request(:update_cluster_config, params)
+    def update_cluster_config(, **options)
+      req = build_request(:update_cluster_config, )
       req.send_request(options)
     end
 
@@ -2436,8 +2436,8 @@ module Aws::EKS
     #
     # @overload update_cluster_version(**params)
     # @param [Hash] params ({})
-    def update_cluster_version(params = {}, **options)
-      req = build_request(:update_cluster_version, params)
+    def update_cluster_version(, **options)
+      req = build_request(:update_cluster_version, )
       req.send_request(options)
     end
 
@@ -2512,8 +2512,8 @@ module Aws::EKS
     #
     # @overload update_nodegroup_config(**params)
     # @param [Hash] params ({})
-    def update_nodegroup_config(params = {}, **options)
-      req = build_request(:update_nodegroup_config, params)
+    def update_nodegroup_config(, **options)
+      req = build_request(:update_nodegroup_config, )
       req.send_request(options)
     end
 
@@ -2643,8 +2643,8 @@ module Aws::EKS
     #
     # @overload update_nodegroup_version(**params)
     # @param [Hash] params ({})
-    def update_nodegroup_version(params = {}, **options)
-      req = build_request(:update_nodegroup_version, params)
+    def update_nodegroup_version(, **options)
+      req = build_request(:update_nodegroup_version, )
       req.send_request(options)
     end
 

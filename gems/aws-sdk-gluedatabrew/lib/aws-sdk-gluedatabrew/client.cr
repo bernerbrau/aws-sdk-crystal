@@ -359,8 +359,8 @@ module Aws::GlueDataBrew
     #
     # @overload batch_delete_recipe_version(**params)
     # @param [Hash] params ({})
-    def batch_delete_recipe_version(params = {}, **options)
-      req = build_request(:batch_delete_recipe_version, params)
+    def batch_delete_recipe_version(, **options)
+      req = build_request(:batch_delete_recipe_version, )
       req.send_request(options)
     end
 
@@ -425,8 +425,8 @@ module Aws::GlueDataBrew
     #
     # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, **options)
-      req = build_request(:create_dataset, params)
+    def create_dataset(, **options)
+      req = build_request(:create_dataset, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::GlueDataBrew
     #
     # @overload create_profile_job(**params)
     # @param [Hash] params ({})
-    def create_profile_job(params = {}, **options)
-      req = build_request(:create_profile_job, params)
+    def create_profile_job(, **options)
+      req = build_request(:create_profile_job, )
       req.send_request(options)
     end
 
@@ -566,8 +566,8 @@ module Aws::GlueDataBrew
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::GlueDataBrew
     #
     # @overload create_recipe(**params)
     # @param [Hash] params ({})
-    def create_recipe(params = {}, **options)
-      req = build_request(:create_recipe, params)
+    def create_recipe(, **options)
+      req = build_request(:create_recipe, )
       req.send_request(options)
     end
 
@@ -731,8 +731,8 @@ module Aws::GlueDataBrew
     #
     # @overload create_recipe_job(**params)
     # @param [Hash] params ({})
-    def create_recipe_job(params = {}, **options)
-      req = build_request(:create_recipe_job, params)
+    def create_recipe_job(, **options)
+      req = build_request(:create_recipe_job, )
       req.send_request(options)
     end
 
@@ -775,8 +775,8 @@ module Aws::GlueDataBrew
     #
     # @overload create_schedule(**params)
     # @param [Hash] params ({})
-    def create_schedule(params = {}, **options)
-      req = build_request(:create_schedule, params)
+    def create_schedule(, **options)
+      req = build_request(:create_schedule, )
       req.send_request(options)
     end
 
@@ -803,8 +803,8 @@ module Aws::GlueDataBrew
     #
     # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, **options)
-      req = build_request(:delete_dataset, params)
+    def delete_dataset(, **options)
+      req = build_request(:delete_dataset, )
       req.send_request(options)
     end
 
@@ -832,8 +832,8 @@ module Aws::GlueDataBrew
     #
     # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, **options)
-      req = build_request(:delete_job, params)
+    def delete_job(, **options)
+      req = build_request(:delete_job, )
       req.send_request(options)
     end
 
@@ -861,8 +861,8 @@ module Aws::GlueDataBrew
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -895,8 +895,8 @@ module Aws::GlueDataBrew
     #
     # @overload delete_recipe_version(**params)
     # @param [Hash] params ({})
-    def delete_recipe_version(params = {}, **options)
-      req = build_request(:delete_recipe_version, params)
+    def delete_recipe_version(, **options)
+      req = build_request(:delete_recipe_version, )
       req.send_request(options)
     end
 
@@ -924,8 +924,8 @@ module Aws::GlueDataBrew
     #
     # @overload delete_schedule(**params)
     # @param [Hash] params ({})
-    def delete_schedule(params = {}, **options)
-      req = build_request(:delete_schedule, params)
+    def delete_schedule(, **options)
+      req = build_request(:delete_schedule, )
       req.send_request(options)
     end
 
@@ -982,8 +982,8 @@ module Aws::GlueDataBrew
     #
     # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, **options)
-      req = build_request(:describe_dataset, params)
+    def describe_dataset(, **options)
+      req = build_request(:describe_dataset, )
       req.send_request(options)
     end
 
@@ -1056,8 +1056,8 @@ module Aws::GlueDataBrew
     #
     # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, **options)
-      req = build_request(:describe_job, params)
+    def describe_job(, **options)
+      req = build_request(:describe_job, )
       req.send_request(options)
     end
 
@@ -1113,8 +1113,8 @@ module Aws::GlueDataBrew
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -1179,8 +1179,8 @@ module Aws::GlueDataBrew
     #
     # @overload describe_recipe(**params)
     # @param [Hash] params ({})
-    def describe_recipe(params = {}, **options)
-      req = build_request(:describe_recipe, params)
+    def describe_recipe(, **options)
+      req = build_request(:describe_recipe, )
       req.send_request(options)
     end
 
@@ -1226,8 +1226,8 @@ module Aws::GlueDataBrew
     #
     # @overload describe_schedule(**params)
     # @param [Hash] params ({})
-    def describe_schedule(params = {}, **options)
-      req = build_request(:describe_schedule, params)
+    def describe_schedule(, **options)
+      req = build_request(:describe_schedule, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, **options)
-      req = build_request(:list_datasets, params)
+    def list_datasets(, **options)
+      req = build_request(:list_datasets, )
       req.send_request(options)
     end
 
@@ -1354,8 +1354,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_job_runs(**params)
     # @param [Hash] params ({})
-    def list_job_runs(params = {}, **options)
-      req = build_request(:list_job_runs, params)
+    def list_job_runs(, **options)
+      req = build_request(:list_job_runs, )
       req.send_request(options)
     end
 
@@ -1432,8 +1432,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -1546,8 +1546,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_recipe_versions(**params)
     # @param [Hash] params ({})
-    def list_recipe_versions(params = {}, **options)
-      req = build_request(:list_recipe_versions, params)
+    def list_recipe_versions(, **options)
+      req = build_request(:list_recipe_versions, )
       req.send_request(options)
     end
 
@@ -1608,8 +1608,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_recipes(**params)
     # @param [Hash] params ({})
-    def list_recipes(params = {}, **options)
-      req = build_request(:list_recipes, params)
+    def list_recipes(, **options)
+      req = build_request(:list_recipes, )
       req.send_request(options)
     end
 
@@ -1660,8 +1660,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_schedules(**params)
     # @param [Hash] params ({})
-    def list_schedules(params = {}, **options)
-      req = build_request(:list_schedules, params)
+    def list_schedules(, **options)
+      req = build_request(:list_schedules, )
       req.send_request(options)
     end
 
@@ -1690,8 +1690,8 @@ module Aws::GlueDataBrew
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1724,8 +1724,8 @@ module Aws::GlueDataBrew
     #
     # @overload publish_recipe(**params)
     # @param [Hash] params ({})
-    def publish_recipe(params = {}, **options)
-      req = build_request(:publish_recipe, params)
+    def publish_recipe(, **options)
+      req = build_request(:publish_recipe, )
       req.send_request(options)
     end
 
@@ -1801,8 +1801,8 @@ module Aws::GlueDataBrew
     #
     # @overload send_project_session_action(**params)
     # @param [Hash] params ({})
-    def send_project_session_action(params = {}, **options)
-      req = build_request(:send_project_session_action, params)
+    def send_project_session_action(, **options)
+      req = build_request(:send_project_session_action, )
       req.send_request(options)
     end
 
@@ -1829,8 +1829,8 @@ module Aws::GlueDataBrew
     #
     # @overload start_job_run(**params)
     # @param [Hash] params ({})
-    def start_job_run(params = {}, **options)
-      req = build_request(:start_job_run, params)
+    def start_job_run(, **options)
+      req = build_request(:start_job_run, )
       req.send_request(options)
     end
 
@@ -1865,8 +1865,8 @@ module Aws::GlueDataBrew
     #
     # @overload start_project_session(**params)
     # @param [Hash] params ({})
-    def start_project_session(params = {}, **options)
-      req = build_request(:start_project_session, params)
+    def start_project_session(, **options)
+      req = build_request(:start_project_session, )
       req.send_request(options)
     end
 
@@ -1897,8 +1897,8 @@ module Aws::GlueDataBrew
     #
     # @overload stop_job_run(**params)
     # @param [Hash] params ({})
-    def stop_job_run(params = {}, **options)
-      req = build_request(:stop_job_run, params)
+    def stop_job_run(, **options)
+      req = build_request(:stop_job_run, )
       req.send_request(options)
     end
 
@@ -1928,8 +1928,8 @@ module Aws::GlueDataBrew
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1955,8 +1955,8 @@ module Aws::GlueDataBrew
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2016,8 +2016,8 @@ module Aws::GlueDataBrew
     #
     # @overload update_dataset(**params)
     # @param [Hash] params ({})
-    def update_dataset(params = {}, **options)
-      req = build_request(:update_dataset, params)
+    def update_dataset(, **options)
+      req = build_request(:update_dataset, )
       req.send_request(options)
     end
 
@@ -2091,8 +2091,8 @@ module Aws::GlueDataBrew
     #
     # @overload update_profile_job(**params)
     # @param [Hash] params ({})
-    def update_profile_job(params = {}, **options)
-      req = build_request(:update_profile_job, params)
+    def update_profile_job(, **options)
+      req = build_request(:update_profile_job, )
       req.send_request(options)
     end
 
@@ -2135,8 +2135,8 @@ module Aws::GlueDataBrew
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 
@@ -2189,8 +2189,8 @@ module Aws::GlueDataBrew
     #
     # @overload update_recipe(**params)
     # @param [Hash] params ({})
-    def update_recipe(params = {}, **options)
-      req = build_request(:update_recipe, params)
+    def update_recipe(, **options)
+      req = build_request(:update_recipe, )
       req.send_request(options)
     end
 
@@ -2271,8 +2271,8 @@ module Aws::GlueDataBrew
     #
     # @overload update_recipe_job(**params)
     # @param [Hash] params ({})
-    def update_recipe_job(params = {}, **options)
-      req = build_request(:update_recipe_job, params)
+    def update_recipe_job(, **options)
+      req = build_request(:update_recipe_job, )
       req.send_request(options)
     end
 
@@ -2309,8 +2309,8 @@ module Aws::GlueDataBrew
     #
     # @overload update_schedule(**params)
     # @param [Hash] params ({})
-    def update_schedule(params = {}, **options)
-      req = build_request(:update_schedule, params)
+    def update_schedule(, **options)
+      req = build_request(:update_schedule, )
       req.send_request(options)
     end
 

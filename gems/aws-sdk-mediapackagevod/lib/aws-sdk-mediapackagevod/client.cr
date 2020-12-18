@@ -386,8 +386,8 @@ module Aws::MediaPackageVod
     #
     # @overload create_asset(**params)
     # @param [Hash] params ({})
-    def create_asset(params = {}, **options)
-      req = build_request(:create_asset, params)
+    def create_asset(, **options)
+      req = build_request(:create_asset, )
       req.send_request(options)
     end
 
@@ -598,8 +598,8 @@ module Aws::MediaPackageVod
     #
     # @overload create_packaging_configuration(**params)
     # @param [Hash] params ({})
-    def create_packaging_configuration(params = {}, **options)
-      req = build_request(:create_packaging_configuration, params)
+    def create_packaging_configuration(, **options)
+      req = build_request(:create_packaging_configuration, )
       req.send_request(options)
     end
 
@@ -648,8 +648,8 @@ module Aws::MediaPackageVod
     #
     # @overload create_packaging_group(**params)
     # @param [Hash] params ({})
-    def create_packaging_group(params = {}, **options)
-      req = build_request(:create_packaging_group, params)
+    def create_packaging_group(, **options)
+      req = build_request(:create_packaging_group, )
       req.send_request(options)
     end
 
@@ -669,8 +669,8 @@ module Aws::MediaPackageVod
     #
     # @overload delete_asset(**params)
     # @param [Hash] params ({})
-    def delete_asset(params = {}, **options)
-      req = build_request(:delete_asset, params)
+    def delete_asset(, **options)
+      req = build_request(:delete_asset, )
       req.send_request(options)
     end
 
@@ -690,8 +690,8 @@ module Aws::MediaPackageVod
     #
     # @overload delete_packaging_configuration(**params)
     # @param [Hash] params ({})
-    def delete_packaging_configuration(params = {}, **options)
-      req = build_request(:delete_packaging_configuration, params)
+    def delete_packaging_configuration(, **options)
+      req = build_request(:delete_packaging_configuration, )
       req.send_request(options)
     end
 
@@ -711,8 +711,8 @@ module Aws::MediaPackageVod
     #
     # @overload delete_packaging_group(**params)
     # @param [Hash] params ({})
-    def delete_packaging_group(params = {}, **options)
-      req = build_request(:delete_packaging_group, params)
+    def delete_packaging_group(, **options)
+      req = build_request(:delete_packaging_group, )
       req.send_request(options)
     end
 
@@ -757,8 +757,8 @@ module Aws::MediaPackageVod
     #
     # @overload describe_asset(**params)
     # @param [Hash] params ({})
-    def describe_asset(params = {}, **options)
-      req = build_request(:describe_asset, params)
+    def describe_asset(, **options)
+      req = build_request(:describe_asset, )
       req.send_request(options)
     end
 
@@ -853,8 +853,8 @@ module Aws::MediaPackageVod
     #
     # @overload describe_packaging_configuration(**params)
     # @param [Hash] params ({})
-    def describe_packaging_configuration(params = {}, **options)
-      req = build_request(:describe_packaging_configuration, params)
+    def describe_packaging_configuration(, **options)
+      req = build_request(:describe_packaging_configuration, )
       req.send_request(options)
     end
 
@@ -890,8 +890,8 @@ module Aws::MediaPackageVod
     #
     # @overload describe_packaging_group(**params)
     # @param [Hash] params ({})
-    def describe_packaging_group(params = {}, **options)
-      req = build_request(:describe_packaging_group, params)
+    def describe_packaging_group(, **options)
+      req = build_request(:describe_packaging_group, )
       req.send_request(options)
     end
 
@@ -936,8 +936,8 @@ module Aws::MediaPackageVod
     #
     # @overload list_assets(**params)
     # @param [Hash] params ({})
-    def list_assets(params = {}, **options)
-      req = build_request(:list_assets, params)
+    def list_assets(, **options)
+      req = build_request(:list_assets, )
       req.send_request(options)
     end
 
@@ -1036,8 +1036,8 @@ module Aws::MediaPackageVod
     #
     # @overload list_packaging_configurations(**params)
     # @param [Hash] params ({})
-    def list_packaging_configurations(params = {}, **options)
-      req = build_request(:list_packaging_configurations, params)
+    def list_packaging_configurations(, **options)
+      req = build_request(:list_packaging_configurations, )
       req.send_request(options)
     end
 
@@ -1077,8 +1077,8 @@ module Aws::MediaPackageVod
     #
     # @overload list_packaging_groups(**params)
     # @param [Hash] params ({})
-    def list_packaging_groups(params = {}, **options)
-      req = build_request(:list_packaging_groups, params)
+    def list_packaging_groups(, **options)
+      req = build_request(:list_packaging_groups, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::MediaPackageVod
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1132,8 +1132,8 @@ module Aws::MediaPackageVod
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1157,8 +1157,8 @@ module Aws::MediaPackageVod
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1202,8 +1202,8 @@ module Aws::MediaPackageVod
     #
     # @overload update_packaging_group(**params)
     # @param [Hash] params ({})
-    def update_packaging_group(params = {}, **options)
-      req = build_request(:update_packaging_group, params)
+    def update_packaging_group(, **options)
+      req = build_request(:update_packaging_group, )
       req.send_request(options)
     end
 

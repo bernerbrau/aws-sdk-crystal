@@ -3602,5 +3602,783 @@ module Aws::GlobalAccelerator
       include Aws::Structure
     end
 
+    alias Accelerator = NamedTuple(
+      "AcceleratorArn" : (GenericString)?,
+      "Name" : (GenericString)?,
+      "IpAddressType" : (IpAddressType)?,
+      "Enabled" : (GenericBoolean)?,
+      "IpSets" : (IpSets)?,
+      "DnsName" : (GenericString)?,
+      "Status" : (AcceleratorStatus)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias AcceleratorAttributes = NamedTuple(
+      "FlowLogsEnabled" : (GenericBoolean)?,
+      "FlowLogsS3Bucket" : (GenericString)?,
+      "FlowLogsS3Prefix" : (GenericString)?
+    )
+
+    alias AcceleratorNotDisabledException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AcceleratorNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AcceleratorStatus = String
+
+    alias Accelerators = Array(Accelerator)
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AddCustomRoutingEndpointsRequest = NamedTuple(
+      "EndpointConfigurations" : CustomRoutingEndpointConfigurations,
+      "EndpointGroupArn" : GenericString
+    )
+
+    alias AddCustomRoutingEndpointsResponse = NamedTuple(
+      "EndpointDescriptions" : (CustomRoutingEndpointDescriptions)?,
+      "EndpointGroupArn" : (GenericString)?
+    )
+
+    alias AdvertiseByoipCidrRequest = NamedTuple(
+      "Cidr" : GenericString
+    )
+
+    alias AdvertiseByoipCidrResponse = NamedTuple(
+      "ByoipCidr" : (ByoipCidr)?
+    )
+
+    alias AllowCustomRoutingTrafficRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString,
+      "EndpointId" : GenericString,
+      "DestinationAddresses" : (DestinationAddresses)?,
+      "DestinationPorts" : (DestinationPorts)?,
+      "AllowAllTrafficToEndpoint" : (GenericBoolean)?
+    )
+
+    alias AssociatedEndpointGroupFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AssociatedListenerFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ByoipCidr = NamedTuple(
+      "Cidr" : (GenericString)?,
+      "State" : (ByoipCidrState)?,
+      "Events" : (ByoipCidrEvents)?
+    )
+
+    alias ByoipCidrEvent = NamedTuple(
+      "Message" : (GenericString)?,
+      "Timestamp" : (Timestamp)?
+    )
+
+    alias ByoipCidrEvents = Array(ByoipCidrEvent)
+
+    alias ByoipCidrNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ByoipCidrState = String
+
+    alias ByoipCidrs = Array(ByoipCidr)
+
+    alias CidrAuthorizationContext = NamedTuple(
+      "Message" : GenericString,
+      "Signature" : GenericString
+    )
+
+    alias ClientAffinity = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CreateAcceleratorRequest = NamedTuple(
+      "Name" : GenericString,
+      "IpAddressType" : (IpAddressType)?,
+      "IpAddresses" : (IpAddresses)?,
+      "Enabled" : (GenericBoolean)?,
+      "IdempotencyToken" : IdempotencyToken,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateAcceleratorResponse = NamedTuple(
+      "Accelerator" : (Accelerator)?
+    )
+
+    alias CreateCustomRoutingAcceleratorRequest = NamedTuple(
+      "Name" : GenericString,
+      "IpAddressType" : (IpAddressType)?,
+      "Enabled" : (GenericBoolean)?,
+      "IdempotencyToken" : IdempotencyToken,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateCustomRoutingAcceleratorResponse = NamedTuple(
+      "Accelerator" : (CustomRoutingAccelerator)?
+    )
+
+    alias CreateCustomRoutingEndpointGroupRequest = NamedTuple(
+      "ListenerArn" : GenericString,
+      "EndpointGroupRegion" : GenericString,
+      "DestinationConfigurations" : CustomRoutingDestinationConfigurations,
+      "IdempotencyToken" : IdempotencyToken
+    )
+
+    alias CreateCustomRoutingEndpointGroupResponse = NamedTuple(
+      "EndpointGroup" : (CustomRoutingEndpointGroup)?
+    )
+
+    alias CreateCustomRoutingListenerRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "PortRanges" : PortRanges,
+      "IdempotencyToken" : IdempotencyToken
+    )
+
+    alias CreateCustomRoutingListenerResponse = NamedTuple(
+      "Listener" : (CustomRoutingListener)?
+    )
+
+    alias CreateEndpointGroupRequest = NamedTuple(
+      "ListenerArn" : GenericString,
+      "EndpointGroupRegion" : GenericString,
+      "EndpointConfigurations" : (EndpointConfigurations)?,
+      "TrafficDialPercentage" : (TrafficDialPercentage)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "HealthCheckProtocol" : (HealthCheckProtocol)?,
+      "HealthCheckPath" : (HealthCheckPath)?,
+      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
+      "ThresholdCount" : (ThresholdCount)?,
+      "IdempotencyToken" : IdempotencyToken,
+      "PortOverrides" : (PortOverrides)?
+    )
+
+    alias CreateEndpointGroupResponse = NamedTuple(
+      "EndpointGroup" : (EndpointGroup)?
+    )
+
+    alias CreateListenerRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "PortRanges" : PortRanges,
+      "Protocol" : Protocol,
+      "ClientAffinity" : (ClientAffinity)?,
+      "IdempotencyToken" : IdempotencyToken
+    )
+
+    alias CreateListenerResponse = NamedTuple(
+      "Listener" : (Listener)?
+    )
+
+    alias CustomRoutingAccelerator = NamedTuple(
+      "AcceleratorArn" : (GenericString)?,
+      "Name" : (GenericString)?,
+      "IpAddressType" : (IpAddressType)?,
+      "Enabled" : (GenericBoolean)?,
+      "IpSets" : (IpSets)?,
+      "DnsName" : (GenericString)?,
+      "Status" : (CustomRoutingAcceleratorStatus)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias CustomRoutingAcceleratorAttributes = NamedTuple(
+      "FlowLogsEnabled" : (GenericBoolean)?,
+      "FlowLogsS3Bucket" : (GenericString)?,
+      "FlowLogsS3Prefix" : (GenericString)?
+    )
+
+    alias CustomRoutingAcceleratorStatus = String
+
+    alias CustomRoutingAccelerators = Array(CustomRoutingAccelerator)
+
+    alias CustomRoutingDestinationConfiguration = NamedTuple(
+      "FromPort" : PortNumber,
+      "ToPort" : PortNumber,
+      "Protocols" : CustomRoutingProtocols
+    )
+
+    alias CustomRoutingDestinationConfigurations = Array(CustomRoutingDestinationConfiguration)
+
+    alias CustomRoutingDestinationDescription = NamedTuple(
+      "FromPort" : (PortNumber)?,
+      "ToPort" : (PortNumber)?,
+      "Protocols" : (Protocols)?
+    )
+
+    alias CustomRoutingDestinationDescriptions = Array(CustomRoutingDestinationDescription)
+
+    alias CustomRoutingDestinationTrafficState = String
+
+    alias CustomRoutingEndpointConfiguration = NamedTuple(
+      "EndpointId" : (GenericString)?
+    )
+
+    alias CustomRoutingEndpointConfigurations = Array(CustomRoutingEndpointConfiguration)
+
+    alias CustomRoutingEndpointDescription = NamedTuple(
+      "EndpointId" : (GenericString)?
+    )
+
+    alias CustomRoutingEndpointDescriptions = Array(CustomRoutingEndpointDescription)
+
+    alias CustomRoutingEndpointGroup = NamedTuple(
+      "EndpointGroupArn" : (GenericString)?,
+      "EndpointGroupRegion" : (GenericString)?,
+      "DestinationDescriptions" : (CustomRoutingDestinationDescriptions)?,
+      "EndpointDescriptions" : (CustomRoutingEndpointDescriptions)?
+    )
+
+    alias CustomRoutingEndpointGroups = Array(CustomRoutingEndpointGroup)
+
+    alias CustomRoutingListener = NamedTuple(
+      "ListenerArn" : (GenericString)?,
+      "PortRanges" : (PortRanges)?
+    )
+
+    alias CustomRoutingListeners = Array(CustomRoutingListener)
+
+    alias CustomRoutingProtocol = String
+
+    alias CustomRoutingProtocols = Array(CustomRoutingProtocol)
+
+    alias DeleteAcceleratorRequest = NamedTuple(
+      "AcceleratorArn" : GenericString
+    )
+
+    alias DeleteCustomRoutingAcceleratorRequest = NamedTuple(
+      "AcceleratorArn" : GenericString
+    )
+
+    alias DeleteCustomRoutingEndpointGroupRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString
+    )
+
+    alias DeleteCustomRoutingListenerRequest = NamedTuple(
+      "ListenerArn" : GenericString
+    )
+
+    alias DeleteEndpointGroupRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString
+    )
+
+    alias DeleteListenerRequest = NamedTuple(
+      "ListenerArn" : GenericString
+    )
+
+    alias DenyCustomRoutingTrafficRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString,
+      "EndpointId" : GenericString,
+      "DestinationAddresses" : (DestinationAddresses)?,
+      "DestinationPorts" : (DestinationPorts)?,
+      "DenyAllTrafficToEndpoint" : (GenericBoolean)?
+    )
+
+    alias DeprovisionByoipCidrRequest = NamedTuple(
+      "Cidr" : GenericString
+    )
+
+    alias DeprovisionByoipCidrResponse = NamedTuple(
+      "ByoipCidr" : (ByoipCidr)?
+    )
+
+    alias DescribeAcceleratorAttributesRequest = NamedTuple(
+      "AcceleratorArn" : GenericString
+    )
+
+    alias DescribeAcceleratorAttributesResponse = NamedTuple(
+      "AcceleratorAttributes" : (AcceleratorAttributes)?
+    )
+
+    alias DescribeAcceleratorRequest = NamedTuple(
+      "AcceleratorArn" : GenericString
+    )
+
+    alias DescribeAcceleratorResponse = NamedTuple(
+      "Accelerator" : (Accelerator)?
+    )
+
+    alias DescribeCustomRoutingAcceleratorAttributesRequest = NamedTuple(
+      "AcceleratorArn" : GenericString
+    )
+
+    alias DescribeCustomRoutingAcceleratorAttributesResponse = NamedTuple(
+      "AcceleratorAttributes" : (CustomRoutingAcceleratorAttributes)?
+    )
+
+    alias DescribeCustomRoutingAcceleratorRequest = NamedTuple(
+      "AcceleratorArn" : GenericString
+    )
+
+    alias DescribeCustomRoutingAcceleratorResponse = NamedTuple(
+      "Accelerator" : (CustomRoutingAccelerator)?
+    )
+
+    alias DescribeCustomRoutingEndpointGroupRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString
+    )
+
+    alias DescribeCustomRoutingEndpointGroupResponse = NamedTuple(
+      "EndpointGroup" : (CustomRoutingEndpointGroup)?
+    )
+
+    alias DescribeCustomRoutingListenerRequest = NamedTuple(
+      "ListenerArn" : GenericString
+    )
+
+    alias DescribeCustomRoutingListenerResponse = NamedTuple(
+      "Listener" : (CustomRoutingListener)?
+    )
+
+    alias DescribeEndpointGroupRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString
+    )
+
+    alias DescribeEndpointGroupResponse = NamedTuple(
+      "EndpointGroup" : (EndpointGroup)?
+    )
+
+    alias DescribeListenerRequest = NamedTuple(
+      "ListenerArn" : GenericString
+    )
+
+    alias DescribeListenerResponse = NamedTuple(
+      "Listener" : (Listener)?
+    )
+
+    alias DestinationAddresses = Array(IpAddress)
+
+    alias DestinationPortMapping = NamedTuple(
+      "AcceleratorArn" : (GenericString)?,
+      "AcceleratorSocketAddresses" : (SocketAddresses)?,
+      "EndpointGroupArn" : (GenericString)?,
+      "EndpointId" : (GenericString)?,
+      "EndpointGroupRegion" : (GenericString)?,
+      "DestinationSocketAddress" : (SocketAddress)?,
+      "IpAddressType" : (IpAddressType)?,
+      "DestinationTrafficState" : (CustomRoutingDestinationTrafficState)?
+    )
+
+    alias DestinationPortMappings = Array(DestinationPortMapping)
+
+    alias DestinationPorts = Array(PortNumber)
+
+    alias EndpointAlreadyExistsException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias EndpointConfiguration = NamedTuple(
+      "EndpointId" : (GenericString)?,
+      "Weight" : (EndpointWeight)?,
+      "ClientIPPreservationEnabled" : (GenericBoolean)?
+    )
+
+    alias EndpointConfigurations = Array(EndpointConfiguration)
+
+    alias EndpointDescription = NamedTuple(
+      "EndpointId" : (GenericString)?,
+      "Weight" : (EndpointWeight)?,
+      "HealthState" : (HealthState)?,
+      "HealthReason" : (GenericString)?,
+      "ClientIPPreservationEnabled" : (GenericBoolean)?
+    )
+
+    alias EndpointDescriptions = Array(EndpointDescription)
+
+    alias EndpointGroup = NamedTuple(
+      "EndpointGroupArn" : (GenericString)?,
+      "EndpointGroupRegion" : (GenericString)?,
+      "EndpointDescriptions" : (EndpointDescriptions)?,
+      "TrafficDialPercentage" : (TrafficDialPercentage)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "HealthCheckProtocol" : (HealthCheckProtocol)?,
+      "HealthCheckPath" : (HealthCheckPath)?,
+      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
+      "ThresholdCount" : (ThresholdCount)?,
+      "PortOverrides" : (PortOverrides)?
+    )
+
+    alias EndpointGroupAlreadyExistsException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias EndpointGroupNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias EndpointGroups = Array(EndpointGroup)
+
+    alias EndpointIds = Array(GenericString)
+
+    alias EndpointNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias EndpointWeight = Int32
+
+    alias ErrorMessage = String
+
+    alias GenericBoolean = Bool
+
+    alias GenericString = String
+
+    alias HealthCheckIntervalSeconds = Int32
+
+    alias HealthCheckPath = String
+
+    alias HealthCheckPort = Int32
+
+    alias HealthCheckProtocol = String
+
+    alias HealthState = String
+
+    alias IdempotencyToken = String
+
+    alias IncorrectCidrStateException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InternalServiceErrorException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidPortRangeException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias IpAddress = String
+
+    alias IpAddressType = String
+
+    alias IpAddresses = Array(IpAddress)
+
+    alias IpSet = NamedTuple(
+      "IpFamily" : (GenericString)?,
+      "IpAddresses" : (IpAddresses)?
+    )
+
+    alias IpSets = Array(IpSet)
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListAcceleratorsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListAcceleratorsResponse = NamedTuple(
+      "Accelerators" : (Accelerators)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListByoipCidrsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListByoipCidrsResponse = NamedTuple(
+      "ByoipCidrs" : (ByoipCidrs)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingAcceleratorsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingAcceleratorsResponse = NamedTuple(
+      "Accelerators" : (CustomRoutingAccelerators)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingEndpointGroupsRequest = NamedTuple(
+      "ListenerArn" : GenericString,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingEndpointGroupsResponse = NamedTuple(
+      "EndpointGroups" : (CustomRoutingEndpointGroups)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingListenersRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingListenersResponse = NamedTuple(
+      "Listeners" : (CustomRoutingListeners)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingPortMappingsByDestinationRequest = NamedTuple(
+      "EndpointId" : GenericString,
+      "DestinationAddress" : GenericString,
+      "MaxResults" : (PortMappingsMaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingPortMappingsByDestinationResponse = NamedTuple(
+      "DestinationPortMappings" : (DestinationPortMappings)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingPortMappingsRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "EndpointGroupArn" : (GenericString)?,
+      "MaxResults" : (PortMappingsMaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListCustomRoutingPortMappingsResponse = NamedTuple(
+      "PortMappings" : (PortMappings)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListEndpointGroupsRequest = NamedTuple(
+      "ListenerArn" : GenericString,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListEndpointGroupsResponse = NamedTuple(
+      "EndpointGroups" : (EndpointGroups)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListListenersRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListListenersResponse = NamedTuple(
+      "Listeners" : (Listeners)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias Listener = NamedTuple(
+      "ListenerArn" : (GenericString)?,
+      "PortRanges" : (PortRanges)?,
+      "Protocol" : (Protocol)?,
+      "ClientAffinity" : (ClientAffinity)?
+    )
+
+    alias ListenerNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Listeners = Array(Listener)
+
+    alias MaxResults = Int32
+
+    alias PortMapping = NamedTuple(
+      "AcceleratorPort" : (PortNumber)?,
+      "EndpointGroupArn" : (GenericString)?,
+      "EndpointId" : (GenericString)?,
+      "DestinationSocketAddress" : (SocketAddress)?,
+      "Protocols" : (CustomRoutingProtocols)?,
+      "DestinationTrafficState" : (CustomRoutingDestinationTrafficState)?
+    )
+
+    alias PortMappings = Array(PortMapping)
+
+    alias PortMappingsMaxResults = Int32
+
+    alias PortNumber = Int32
+
+    alias PortOverride = NamedTuple(
+      "ListenerPort" : (PortNumber)?,
+      "EndpointPort" : (PortNumber)?
+    )
+
+    alias PortOverrides = Array(PortOverride)
+
+    alias PortRange = NamedTuple(
+      "FromPort" : (PortNumber)?,
+      "ToPort" : (PortNumber)?
+    )
+
+    alias PortRanges = Array(PortRange)
+
+    alias Protocol = String
+
+    alias Protocols = Array(Protocol)
+
+    alias ProvisionByoipCidrRequest = NamedTuple(
+      "Cidr" : GenericString,
+      "CidrAuthorizationContext" : CidrAuthorizationContext
+    )
+
+    alias ProvisionByoipCidrResponse = NamedTuple(
+      "ByoipCidr" : (ByoipCidr)?
+    )
+
+    alias RemoveCustomRoutingEndpointsRequest = NamedTuple(
+      "EndpointIds" : EndpointIds,
+      "EndpointGroupArn" : GenericString
+    )
+
+    alias ResourceArn = String
+
+    alias SocketAddress = NamedTuple(
+      "IpAddress" : (GenericString)?,
+      "Port" : (PortNumber)?
+    )
+
+    alias SocketAddresses = Array(SocketAddress)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias ThresholdCount = Int32
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TrafficDialPercentage = Float32
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAcceleratorAttributesRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "FlowLogsEnabled" : (GenericBoolean)?,
+      "FlowLogsS3Bucket" : (GenericString)?,
+      "FlowLogsS3Prefix" : (GenericString)?
+    )
+
+    alias UpdateAcceleratorAttributesResponse = NamedTuple(
+      "AcceleratorAttributes" : (AcceleratorAttributes)?
+    )
+
+    alias UpdateAcceleratorRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "Name" : (GenericString)?,
+      "IpAddressType" : (IpAddressType)?,
+      "Enabled" : (GenericBoolean)?
+    )
+
+    alias UpdateAcceleratorResponse = NamedTuple(
+      "Accelerator" : (Accelerator)?
+    )
+
+    alias UpdateCustomRoutingAcceleratorAttributesRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "FlowLogsEnabled" : (GenericBoolean)?,
+      "FlowLogsS3Bucket" : (GenericString)?,
+      "FlowLogsS3Prefix" : (GenericString)?
+    )
+
+    alias UpdateCustomRoutingAcceleratorAttributesResponse = NamedTuple(
+      "AcceleratorAttributes" : (CustomRoutingAcceleratorAttributes)?
+    )
+
+    alias UpdateCustomRoutingAcceleratorRequest = NamedTuple(
+      "AcceleratorArn" : GenericString,
+      "Name" : (GenericString)?,
+      "IpAddressType" : (IpAddressType)?,
+      "Enabled" : (GenericBoolean)?
+    )
+
+    alias UpdateCustomRoutingAcceleratorResponse = NamedTuple(
+      "Accelerator" : (CustomRoutingAccelerator)?
+    )
+
+    alias UpdateCustomRoutingListenerRequest = NamedTuple(
+      "ListenerArn" : GenericString,
+      "PortRanges" : PortRanges
+    )
+
+    alias UpdateCustomRoutingListenerResponse = NamedTuple(
+      "Listener" : (CustomRoutingListener)?
+    )
+
+    alias UpdateEndpointGroupRequest = NamedTuple(
+      "EndpointGroupArn" : GenericString,
+      "EndpointConfigurations" : (EndpointConfigurations)?,
+      "TrafficDialPercentage" : (TrafficDialPercentage)?,
+      "HealthCheckPort" : (HealthCheckPort)?,
+      "HealthCheckProtocol" : (HealthCheckProtocol)?,
+      "HealthCheckPath" : (HealthCheckPath)?,
+      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
+      "ThresholdCount" : (ThresholdCount)?,
+      "PortOverrides" : (PortOverrides)?
+    )
+
+    alias UpdateEndpointGroupResponse = NamedTuple(
+      "EndpointGroup" : (EndpointGroup)?
+    )
+
+    alias UpdateListenerRequest = NamedTuple(
+      "ListenerArn" : GenericString,
+      "PortRanges" : (PortRanges)?,
+      "Protocol" : (Protocol)?,
+      "ClientAffinity" : (ClientAffinity)?
+    )
+
+    alias UpdateListenerResponse = NamedTuple(
+      "Listener" : (Listener)?
+    )
+
+    alias WithdrawByoipCidrRequest = NamedTuple(
+      "Cidr" : GenericString
+    )
+
+    alias WithdrawByoipCidrResponse = NamedTuple(
+      "ByoipCidr" : (ByoipCidr)?
+    )
   end
 end

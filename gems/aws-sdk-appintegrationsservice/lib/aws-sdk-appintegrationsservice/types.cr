@@ -575,5 +575,184 @@ module Aws::AppIntegrationsService
     #
     class UpdateEventIntegrationResponse < Aws::EmptyStructure; end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias Arn = String
+
+    alias ClientAssociationMetadata = Hash(NonBlankString,NonBlankString)
+
+    alias ClientId = String
+
+    alias CreateEventIntegrationRequest = NamedTuple(
+      "Name" : Name,
+      "Description" : (Description)?,
+      "EventFilter" : EventFilter,
+      "EventBridgeBus" : EventBridgeBus,
+      "ClientToken" : (IdempotencyToken)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateEventIntegrationResponse = NamedTuple(
+      "EventIntegrationArn" : (Arn)?
+    )
+
+    alias DeleteEventIntegrationRequest = NamedTuple(
+      "Name" : Name
+    )
+
+    alias DeleteEventIntegrationResponse = NamedTuple(
+      
+    )
+
+    alias Description = String
+
+    alias DuplicateResourceException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias EventBridgeBus = String
+
+    alias EventBridgeRuleName = String
+
+    alias EventFilter = NamedTuple(
+      "Source" : Source
+    )
+
+    alias EventIntegration = NamedTuple(
+      "EventIntegrationArn" : (Arn)?,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "EventFilter" : (EventFilter)?,
+      "EventBridgeBus" : (EventBridgeBus)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias EventIntegrationAssociation = NamedTuple(
+      "EventIntegrationAssociationArn" : (Arn)?,
+      "EventIntegrationAssociationId" : (UUID)?,
+      "EventIntegrationName" : (Name)?,
+      "ClientId" : (ClientId)?,
+      "EventBridgeRuleName" : (EventBridgeRuleName)?,
+      "ClientAssociationMetadata" : (ClientAssociationMetadata)?
+    )
+
+    alias EventIntegrationAssociationsList = Array(EventIntegrationAssociation)
+
+    alias EventIntegrationsList = Array(EventIntegration)
+
+    alias GetEventIntegrationRequest = NamedTuple(
+      "Name" : Name
+    )
+
+    alias GetEventIntegrationResponse = NamedTuple(
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "EventIntegrationArn" : (Arn)?,
+      "EventBridgeBus" : (EventBridgeBus)?,
+      "EventFilter" : (EventFilter)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias IdempotencyToken = String
+
+    alias InternalServiceError = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ListEventIntegrationAssociationsRequest = NamedTuple(
+      "EventIntegrationName" : Name,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListEventIntegrationAssociationsResponse = NamedTuple(
+      "EventIntegrationAssociations" : (EventIntegrationAssociationsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEventIntegrationsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListEventIntegrationsResponse = NamedTuple(
+      "EventIntegrations" : (EventIntegrationsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias NonBlankString = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ResourceQuotaExceededException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias Source = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias UUID = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateEventIntegrationRequest = NamedTuple(
+      "Name" : Name,
+      "Description" : (Description)?
+    )
+
+    alias UpdateEventIntegrationResponse = NamedTuple(
+      
+    )
   end
 end

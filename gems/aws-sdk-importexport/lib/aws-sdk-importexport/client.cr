@@ -353,8 +353,8 @@ module Aws::ImportExport
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -413,8 +413,8 @@ module Aws::ImportExport
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -491,8 +491,8 @@ module Aws::ImportExport
     #
     # @overload get_shipping_label(**params)
     # @param [Hash] params ({})
-    def get_shipping_label(params = {}, **options)
-      req = build_request(:get_shipping_label, params)
+    def get_shipping_label(, **options)
+      req = build_request(:get_shipping_label, )
       req.send_request(options)
     end
 
@@ -556,8 +556,8 @@ module Aws::ImportExport
     #
     # @overload get_status(**params)
     # @param [Hash] params ({})
-    def get_status(params = {}, **options)
-      req = build_request(:get_status, params)
+    def get_status(, **options)
+      req = build_request(:get_status, )
       req.send_request(options)
     end
 
@@ -607,8 +607,8 @@ module Aws::ImportExport
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -660,8 +660,8 @@ module Aws::ImportExport
     #
     # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, **options)
-      req = build_request(:update_job, params)
+    def update_job(, **options)
+      req = build_request(:update_job, )
       req.send_request(options)
     end
 

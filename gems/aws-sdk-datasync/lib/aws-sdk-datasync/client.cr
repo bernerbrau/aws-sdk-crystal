@@ -364,8 +364,8 @@ module Aws::DataSync
     #
     # @overload cancel_task_execution(**params)
     # @param [Hash] params ({})
-    def cancel_task_execution(params = {}, **options)
-      req = build_request(:cancel_task_execution, params)
+    def cancel_task_execution(, **options)
+      req = build_request(:cancel_task_execution, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::DataSync
     #
     # @overload create_agent(**params)
     # @param [Hash] params ({})
-    def create_agent(params = {}, **options)
-      req = build_request(:create_agent, params)
+    def create_agent(, **options)
+      req = build_request(:create_agent, )
       req.send_request(options)
     end
 
@@ -552,8 +552,8 @@ module Aws::DataSync
     #
     # @overload create_location_efs(**params)
     # @param [Hash] params ({})
-    def create_location_efs(params = {}, **options)
-      req = build_request(:create_location_efs, params)
+    def create_location_efs(, **options)
+      req = build_request(:create_location_efs, )
       req.send_request(options)
     end
 
@@ -619,8 +619,8 @@ module Aws::DataSync
     #
     # @overload create_location_fsx_windows(**params)
     # @param [Hash] params ({})
-    def create_location_fsx_windows(params = {}, **options)
-      req = build_request(:create_location_fsx_windows, params)
+    def create_location_fsx_windows(, **options)
+      req = build_request(:create_location_fsx_windows, )
       req.send_request(options)
     end
 
@@ -726,8 +726,8 @@ module Aws::DataSync
     #
     # @overload create_location_nfs(**params)
     # @param [Hash] params ({})
-    def create_location_nfs(params = {}, **options)
-      req = build_request(:create_location_nfs, params)
+    def create_location_nfs(, **options)
+      req = build_request(:create_location_nfs, )
       req.send_request(options)
     end
 
@@ -811,8 +811,8 @@ module Aws::DataSync
     #
     # @overload create_location_object_storage(**params)
     # @param [Hash] params ({})
-    def create_location_object_storage(params = {}, **options)
-      req = build_request(:create_location_object_storage, params)
+    def create_location_object_storage(, **options)
+      req = build_request(:create_location_object_storage, )
       req.send_request(options)
     end
 
@@ -893,8 +893,8 @@ module Aws::DataSync
     #
     # @overload create_location_s3(**params)
     # @param [Hash] params ({})
-    def create_location_s3(params = {}, **options)
-      req = build_request(:create_location_s3, params)
+    def create_location_s3(, **options)
+      req = build_request(:create_location_s3, )
       req.send_request(options)
     end
 
@@ -988,8 +988,8 @@ module Aws::DataSync
     #
     # @overload create_location_smb(**params)
     # @param [Hash] params ({})
-    def create_location_smb(params = {}, **options)
-      req = build_request(:create_location_smb, params)
+    def create_location_smb(, **options)
+      req = build_request(:create_location_smb, )
       req.send_request(options)
     end
 
@@ -1103,8 +1103,8 @@ module Aws::DataSync
     #
     # @overload create_task(**params)
     # @param [Hash] params ({})
-    def create_task(params = {}, **options)
-      req = build_request(:create_task, params)
+    def create_task(, **options)
+      req = build_request(:create_task, )
       req.send_request(options)
     end
 
@@ -1131,8 +1131,8 @@ module Aws::DataSync
     #
     # @overload delete_agent(**params)
     # @param [Hash] params ({})
-    def delete_agent(params = {}, **options)
-      req = build_request(:delete_agent, params)
+    def delete_agent(, **options)
+      req = build_request(:delete_agent, )
       req.send_request(options)
     end
 
@@ -1153,8 +1153,8 @@ module Aws::DataSync
     #
     # @overload delete_location(**params)
     # @param [Hash] params ({})
-    def delete_location(params = {}, **options)
-      req = build_request(:delete_location, params)
+    def delete_location(, **options)
+      req = build_request(:delete_location, )
       req.send_request(options)
     end
 
@@ -1175,8 +1175,8 @@ module Aws::DataSync
     #
     # @overload delete_task(**params)
     # @param [Hash] params ({})
-    def delete_task(params = {}, **options)
-      req = build_request(:delete_task, params)
+    def delete_task(, **options)
+      req = build_request(:delete_task, )
       req.send_request(options)
     end
 
@@ -1223,8 +1223,8 @@ module Aws::DataSync
     #
     # @overload describe_agent(**params)
     # @param [Hash] params ({})
-    def describe_agent(params = {}, **options)
-      req = build_request(:describe_agent, params)
+    def describe_agent(, **options)
+      req = build_request(:describe_agent, )
       req.send_request(options)
     end
 
@@ -1260,8 +1260,8 @@ module Aws::DataSync
     #
     # @overload describe_location_efs(**params)
     # @param [Hash] params ({})
-    def describe_location_efs(params = {}, **options)
-      req = build_request(:describe_location_efs, params)
+    def describe_location_efs(, **options)
+      req = build_request(:describe_location_efs, )
       req.send_request(options)
     end
 
@@ -1301,8 +1301,8 @@ module Aws::DataSync
     #
     # @overload describe_location_fsx_windows(**params)
     # @param [Hash] params ({})
-    def describe_location_fsx_windows(params = {}, **options)
-      req = build_request(:describe_location_fsx_windows, params)
+    def describe_location_fsx_windows(, **options)
+      req = build_request(:describe_location_fsx_windows, )
       req.send_request(options)
     end
 
@@ -1338,8 +1338,8 @@ module Aws::DataSync
     #
     # @overload describe_location_nfs(**params)
     # @param [Hash] params ({})
-    def describe_location_nfs(params = {}, **options)
-      req = build_request(:describe_location_nfs, params)
+    def describe_location_nfs(, **options)
+      req = build_request(:describe_location_nfs, )
       req.send_request(options)
     end
 
@@ -1382,8 +1382,8 @@ module Aws::DataSync
     #
     # @overload describe_location_object_storage(**params)
     # @param [Hash] params ({})
-    def describe_location_object_storage(params = {}, **options)
-      req = build_request(:describe_location_object_storage, params)
+    def describe_location_object_storage(, **options)
+      req = build_request(:describe_location_object_storage, )
       req.send_request(options)
     end
 
@@ -1423,8 +1423,8 @@ module Aws::DataSync
     #
     # @overload describe_location_s3(**params)
     # @param [Hash] params ({})
-    def describe_location_s3(params = {}, **options)
-      req = build_request(:describe_location_s3, params)
+    def describe_location_s3(, **options)
+      req = build_request(:describe_location_s3, )
       req.send_request(options)
     end
 
@@ -1465,8 +1465,8 @@ module Aws::DataSync
     #
     # @overload describe_location_smb(**params)
     # @param [Hash] params ({})
-    def describe_location_smb(params = {}, **options)
-      req = build_request(:describe_location_smb, params)
+    def describe_location_smb(, **options)
+      req = build_request(:describe_location_smb, )
       req.send_request(options)
     end
 
@@ -1537,8 +1537,8 @@ module Aws::DataSync
     #
     # @overload describe_task(**params)
     # @param [Hash] params ({})
-    def describe_task(params = {}, **options)
-      req = build_request(:describe_task, params)
+    def describe_task(, **options)
+      req = build_request(:describe_task, )
       req.send_request(options)
     end
 
@@ -1611,8 +1611,8 @@ module Aws::DataSync
     #
     # @overload describe_task_execution(**params)
     # @param [Hash] params ({})
-    def describe_task_execution(params = {}, **options)
-      req = build_request(:describe_task_execution, params)
+    def describe_task_execution(, **options)
+      req = build_request(:describe_task_execution, )
       req.send_request(options)
     end
 
@@ -1662,8 +1662,8 @@ module Aws::DataSync
     #
     # @overload list_agents(**params)
     # @param [Hash] params ({})
-    def list_agents(params = {}, **options)
-      req = build_request(:list_agents, params)
+    def list_agents(, **options)
+      req = build_request(:list_agents, )
       req.send_request(options)
     end
 
@@ -1719,8 +1719,8 @@ module Aws::DataSync
     #
     # @overload list_locations(**params)
     # @param [Hash] params ({})
-    def list_locations(params = {}, **options)
-      req = build_request(:list_locations, params)
+    def list_locations(, **options)
+      req = build_request(:list_locations, )
       req.send_request(options)
     end
 
@@ -1762,8 +1762,8 @@ module Aws::DataSync
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1806,8 +1806,8 @@ module Aws::DataSync
     #
     # @overload list_task_executions(**params)
     # @param [Hash] params ({})
-    def list_task_executions(params = {}, **options)
-      req = build_request(:list_task_executions, params)
+    def list_task_executions(, **options)
+      req = build_request(:list_task_executions, )
       req.send_request(options)
     end
 
@@ -1859,8 +1859,8 @@ module Aws::DataSync
     #
     # @overload list_tasks(**params)
     # @param [Hash] params ({})
-    def list_tasks(params = {}, **options)
-      req = build_request(:list_tasks, params)
+    def list_tasks(, **options)
+      req = build_request(:list_tasks, )
       req.send_request(options)
     end
 
@@ -1934,8 +1934,8 @@ module Aws::DataSync
     #
     # @overload start_task_execution(**params)
     # @param [Hash] params ({})
-    def start_task_execution(params = {}, **options)
-      req = build_request(:start_task_execution, params)
+    def start_task_execution(, **options)
+      req = build_request(:start_task_execution, )
       req.send_request(options)
     end
 
@@ -1965,8 +1965,8 @@ module Aws::DataSync
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1991,8 +1991,8 @@ module Aws::DataSync
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2017,8 +2017,8 @@ module Aws::DataSync
     #
     # @overload update_agent(**params)
     # @param [Hash] params ({})
-    def update_agent(params = {}, **options)
-      req = build_request(:update_agent, params)
+    def update_agent(, **options)
+      req = build_request(:update_agent, )
       req.send_request(options)
     end
 
@@ -2098,8 +2098,8 @@ module Aws::DataSync
     #
     # @overload update_task(**params)
     # @param [Hash] params ({})
-    def update_task(params = {}, **options)
-      req = build_request(:update_task, params)
+    def update_task(, **options)
+      req = build_request(:update_task, )
       req.send_request(options)
     end
 
@@ -2161,8 +2161,8 @@ module Aws::DataSync
     #
     # @overload update_task_execution(**params)
     # @param [Hash] params ({})
-    def update_task_execution(params = {}, **options)
-      req = build_request(:update_task_execution, params)
+    def update_task_execution(, **options)
+      req = build_request(:update_task_execution, )
       req.send_request(options)
     end
 

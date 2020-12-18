@@ -352,8 +352,8 @@ module Aws::ElasticTranscoder
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -924,8 +924,8 @@ module Aws::ElasticTranscoder
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -1231,8 +1231,8 @@ module Aws::ElasticTranscoder
     #
     # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, **options)
-      req = build_request(:create_pipeline, params)
+    def create_pipeline(, **options)
+      req = build_request(:create_pipeline, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::ElasticTranscoder
     #
     # @overload create_preset(**params)
     # @param [Hash] params ({})
-    def create_preset(params = {}, **options)
-      req = build_request(:create_preset, params)
+    def create_preset(, **options)
+      req = build_request(:create_preset, )
       req.send_request(options)
     end
 
@@ -1425,8 +1425,8 @@ module Aws::ElasticTranscoder
     #
     # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, **options)
-      req = build_request(:delete_pipeline, params)
+    def delete_pipeline(, **options)
+      req = build_request(:delete_pipeline, )
       req.send_request(options)
     end
 
@@ -1452,8 +1452,8 @@ module Aws::ElasticTranscoder
     #
     # @overload delete_preset(**params)
     # @param [Hash] params ({})
-    def delete_preset(params = {}, **options)
-      req = build_request(:delete_preset, params)
+    def delete_preset(, **options)
+      req = build_request(:delete_preset, )
       req.send_request(options)
     end
 
@@ -1708,8 +1708,8 @@ module Aws::ElasticTranscoder
     #
     # @overload list_jobs_by_pipeline(**params)
     # @param [Hash] params ({})
-    def list_jobs_by_pipeline(params = {}, **options)
-      req = build_request(:list_jobs_by_pipeline, params)
+    def list_jobs_by_pipeline(, **options)
+      req = build_request(:list_jobs_by_pipeline, )
       req.send_request(options)
     end
 
@@ -1963,8 +1963,8 @@ module Aws::ElasticTranscoder
     #
     # @overload list_jobs_by_status(**params)
     # @param [Hash] params ({})
-    def list_jobs_by_status(params = {}, **options)
-      req = build_request(:list_jobs_by_status, params)
+    def list_jobs_by_status(, **options)
+      req = build_request(:list_jobs_by_status, )
       req.send_request(options)
     end
 
@@ -2028,8 +2028,8 @@ module Aws::ElasticTranscoder
     #
     # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, **options)
-      req = build_request(:list_pipelines, params)
+    def list_pipelines(, **options)
+      req = build_request(:list_pipelines, )
       req.send_request(options)
     end
 
@@ -2117,8 +2117,8 @@ module Aws::ElasticTranscoder
     #
     # @overload list_presets(**params)
     # @param [Hash] params ({})
-    def list_presets(params = {}, **options)
-      req = build_request(:list_presets, params)
+    def list_presets(, **options)
+      req = build_request(:list_presets, )
       req.send_request(options)
     end
 
@@ -2357,8 +2357,8 @@ module Aws::ElasticTranscoder
     #
     # @overload read_job(**params)
     # @param [Hash] params ({})
-    def read_job(params = {}, **options)
-      req = build_request(:read_job, params)
+    def read_job(, **options)
+      req = build_request(:read_job, )
       req.send_request(options)
     end
 
@@ -2412,8 +2412,8 @@ module Aws::ElasticTranscoder
     #
     # @overload read_pipeline(**params)
     # @param [Hash] params ({})
-    def read_pipeline(params = {}, **options)
-      req = build_request(:read_pipeline, params)
+    def read_pipeline(, **options)
+      req = build_request(:read_pipeline, )
       req.send_request(options)
     end
 
@@ -2487,8 +2487,8 @@ module Aws::ElasticTranscoder
     #
     # @overload read_preset(**params)
     # @param [Hash] params ({})
-    def read_preset(params = {}, **options)
-      req = build_request(:read_preset, params)
+    def read_preset(, **options)
+      req = build_request(:read_preset, )
       req.send_request(options)
     end
 
@@ -2539,8 +2539,8 @@ module Aws::ElasticTranscoder
     #
     # @overload test_role(**params)
     # @param [Hash] params ({})
-    def test_role(params = {}, **options)
-      req = build_request(:test_role, params)
+    def test_role(, **options)
+      req = build_request(:test_role, )
       req.send_request(options)
     end
 
@@ -2820,8 +2820,8 @@ module Aws::ElasticTranscoder
     #
     # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, **options)
-      req = build_request(:update_pipeline, params)
+    def update_pipeline(, **options)
+      req = build_request(:update_pipeline, )
       req.send_request(options)
     end
 
@@ -2907,8 +2907,8 @@ module Aws::ElasticTranscoder
     #
     # @overload update_pipeline_notifications(**params)
     # @param [Hash] params ({})
-    def update_pipeline_notifications(params = {}, **options)
-      req = build_request(:update_pipeline_notifications, params)
+    def update_pipeline_notifications(, **options)
+      req = build_request(:update_pipeline_notifications, )
       req.send_request(options)
     end
 
@@ -2973,8 +2973,8 @@ module Aws::ElasticTranscoder
     #
     # @overload update_pipeline_status(**params)
     # @param [Hash] params ({})
-    def update_pipeline_status(params = {}, **options)
-      req = build_request(:update_pipeline_status, params)
+    def update_pipeline_status(, **options)
+      req = build_request(:update_pipeline_status, )
       req.send_request(options)
     end
 

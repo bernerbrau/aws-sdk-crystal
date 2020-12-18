@@ -1462,5 +1462,325 @@ module Aws::ACM
       include Aws::Structure
     end
 
+    alias AddTagsToCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn,
+      "Tags" : TagList
+    )
+
+    alias Arn = String
+
+    alias CertificateBody = String
+
+    alias CertificateBodyBlob = String | Array(UInt8) | IO
+
+    alias CertificateChain = String
+
+    alias CertificateChainBlob = String | Array(UInt8) | IO
+
+    alias CertificateDetail = NamedTuple(
+      "CertificateArn" : (Arn)?,
+      "DomainName" : (DomainNameString)?,
+      "SubjectAlternativeNames" : (DomainList)?,
+      "DomainValidationOptions" : (DomainValidationList)?,
+      "Serial" : (String)?,
+      "Subject" : (String)?,
+      "Issuer" : (String)?,
+      "CreatedAt" : (TStamp)?,
+      "IssuedAt" : (TStamp)?,
+      "ImportedAt" : (TStamp)?,
+      "Status" : (CertificateStatus)?,
+      "RevokedAt" : (TStamp)?,
+      "RevocationReason" : (RevocationReason)?,
+      "NotBefore" : (TStamp)?,
+      "NotAfter" : (TStamp)?,
+      "KeyAlgorithm" : (KeyAlgorithm)?,
+      "SignatureAlgorithm" : (String)?,
+      "InUseBy" : (InUseList)?,
+      "FailureReason" : (FailureReason)?,
+      "Type" : (CertificateType)?,
+      "RenewalSummary" : (RenewalSummary)?,
+      "KeyUsages" : (KeyUsageList)?,
+      "ExtendedKeyUsages" : (ExtendedKeyUsageList)?,
+      "CertificateAuthorityArn" : (Arn)?,
+      "RenewalEligibility" : (RenewalEligibility)?,
+      "Options" : (CertificateOptions)?
+    )
+
+    alias CertificateOptions = NamedTuple(
+      "CertificateTransparencyLoggingPreference" : (CertificateTransparencyLoggingPreference)?
+    )
+
+    alias CertificateStatus = String
+
+    alias CertificateStatuses = Array(CertificateStatus)
+
+    alias CertificateSummary = NamedTuple(
+      "CertificateArn" : (Arn)?,
+      "DomainName" : (DomainNameString)?
+    )
+
+    alias CertificateSummaryList = Array(CertificateSummary)
+
+    alias CertificateTransparencyLoggingPreference = String
+
+    alias CertificateType = String
+
+    alias DeleteCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn
+    )
+
+    alias DescribeCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn
+    )
+
+    alias DescribeCertificateResponse = NamedTuple(
+      "Certificate" : (CertificateDetail)?
+    )
+
+    alias DomainList = Array(DomainNameString)
+
+    alias DomainNameString = String
+
+    alias DomainStatus = String
+
+    alias DomainValidation = NamedTuple(
+      "DomainName" : DomainNameString,
+      "ValidationEmails" : (ValidationEmailList)?,
+      "ValidationDomain" : (DomainNameString)?,
+      "ValidationStatus" : (DomainStatus)?,
+      "ResourceRecord" : (ResourceRecord)?,
+      "ValidationMethod" : (ValidationMethod)?
+    )
+
+    alias DomainValidationList = Array(DomainValidation)
+
+    alias DomainValidationOption = NamedTuple(
+      "DomainName" : DomainNameString,
+      "ValidationDomain" : DomainNameString
+    )
+
+    alias DomainValidationOptionList = Array(DomainValidationOption)
+
+    alias ExportCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn,
+      "Passphrase" : PassphraseBlob
+    )
+
+    alias ExportCertificateResponse = NamedTuple(
+      "Certificate" : (CertificateBody)?,
+      "CertificateChain" : (CertificateChain)?,
+      "PrivateKey" : (PrivateKey)?
+    )
+
+    alias ExtendedKeyUsage = NamedTuple(
+      "Name" : (ExtendedKeyUsageName)?,
+      "OID" : (String)?
+    )
+
+    alias ExtendedKeyUsageFilterList = Array(ExtendedKeyUsageName)
+
+    alias ExtendedKeyUsageList = Array(ExtendedKeyUsage)
+
+    alias ExtendedKeyUsageName = String
+
+    alias FailureReason = String
+
+    alias Filters = NamedTuple(
+      "extendedKeyUsage" : (ExtendedKeyUsageFilterList)?,
+      "keyUsage" : (KeyUsageFilterList)?,
+      "keyTypes" : (KeyAlgorithmList)?
+    )
+
+    alias GetCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn
+    )
+
+    alias GetCertificateResponse = NamedTuple(
+      "Certificate" : (CertificateBody)?,
+      "CertificateChain" : (CertificateChain)?
+    )
+
+    alias IdempotencyToken = String
+
+    alias ImportCertificateRequest = NamedTuple(
+      "CertificateArn" : (Arn)?,
+      "Certificate" : CertificateBodyBlob,
+      "PrivateKey" : PrivateKeyBlob,
+      "CertificateChain" : (CertificateChainBlob)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ImportCertificateResponse = NamedTuple(
+      "CertificateArn" : (Arn)?
+    )
+
+    alias InUseList = Array(String)
+
+    alias InvalidArgsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidArnException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidDomainValidationOptionsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidStateException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidTagException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias KeyAlgorithm = String
+
+    alias KeyAlgorithmList = Array(KeyAlgorithm)
+
+    alias KeyUsage = NamedTuple(
+      "Name" : (KeyUsageName)?
+    )
+
+    alias KeyUsageFilterList = Array(KeyUsageName)
+
+    alias KeyUsageList = Array(KeyUsage)
+
+    alias KeyUsageName = String
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ListCertificatesRequest = NamedTuple(
+      "CertificateStatuses" : (CertificateStatuses)?,
+      "Includes" : (Filters)?,
+      "NextToken" : (NextToken)?,
+      "MaxItems" : (MaxItems)?
+    )
+
+    alias ListCertificatesResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "CertificateSummaryList" : (CertificateSummaryList)?
+    )
+
+    alias ListTagsForCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn
+    )
+
+    alias ListTagsForCertificateResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias MaxItems = Int32
+
+    alias NextToken = String
+
+    alias PassphraseBlob = String | Array(UInt8) | IO
+
+    alias PrivateKey = String
+
+    alias PrivateKeyBlob = String | Array(UInt8) | IO
+
+    alias RecordType = String
+
+    alias RemoveTagsFromCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn,
+      "Tags" : TagList
+    )
+
+    alias RenewCertificateRequest = NamedTuple(
+      "CertificateArn" : Arn
+    )
+
+    alias RenewalEligibility = String
+
+    alias RenewalStatus = String
+
+    alias RenewalSummary = NamedTuple(
+      "RenewalStatus" : RenewalStatus,
+      "DomainValidationOptions" : DomainValidationList,
+      "RenewalStatusReason" : (FailureReason)?,
+      "UpdatedAt" : TStamp
+    )
+
+    alias RequestCertificateRequest = NamedTuple(
+      "DomainName" : DomainNameString,
+      "ValidationMethod" : (ValidationMethod)?,
+      "SubjectAlternativeNames" : (DomainList)?,
+      "IdempotencyToken" : (IdempotencyToken)?,
+      "DomainValidationOptions" : (DomainValidationOptionList)?,
+      "Options" : (CertificateOptions)?,
+      "CertificateAuthorityArn" : (Arn)?,
+      "Tags" : (TagList)?
+    )
+
+    alias RequestCertificateResponse = NamedTuple(
+      "CertificateArn" : (Arn)?
+    )
+
+    alias RequestInProgressException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResendValidationEmailRequest = NamedTuple(
+      "CertificateArn" : Arn,
+      "Domain" : DomainNameString,
+      "ValidationDomain" : DomainNameString
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResourceRecord = NamedTuple(
+      "Name" : String,
+      "Type" : RecordType,
+      "Value" : String
+    )
+
+    alias RevocationReason = String
+
+    alias String = String
+
+    alias TStamp = String | UInt64 | Time
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagList = Array(Tag)
+
+    alias TagPolicyException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias TagValue = String
+
+    alias TooManyTagsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UpdateCertificateOptionsRequest = NamedTuple(
+      "CertificateArn" : Arn,
+      "Options" : CertificateOptions
+    )
+
+    alias ValidationEmailList = Array(String)
+
+    alias ValidationMethod = String
   end
 end

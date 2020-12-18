@@ -358,8 +358,8 @@ module Aws::CloudFormation
     #
     # @overload cancel_update_stack(**params)
     # @param [Hash] params ({})
-    def cancel_update_stack(params = {}, **options)
-      req = build_request(:cancel_update_stack, params)
+    def cancel_update_stack(, **options)
+      req = build_request(:cancel_update_stack, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::CloudFormation
     #
     # @overload continue_update_rollback(**params)
     # @param [Hash] params ({})
-    def continue_update_rollback(params = {}, **options)
-      req = build_request(:continue_update_rollback, params)
+    def continue_update_rollback(, **options)
+      req = build_request(:continue_update_rollback, )
       req.send_request(options)
     end
 
@@ -781,8 +781,8 @@ module Aws::CloudFormation
     #
     # @overload create_change_set(**params)
     # @param [Hash] params ({})
-    def create_change_set(params = {}, **options)
-      req = build_request(:create_change_set, params)
+    def create_change_set(, **options)
+      req = build_request(:create_change_set, )
       req.send_request(options)
     end
 
@@ -1099,8 +1099,8 @@ module Aws::CloudFormation
     #
     # @overload create_stack(**params)
     # @param [Hash] params ({})
-    def create_stack(params = {}, **options)
-      req = build_request(:create_stack, params)
+    def create_stack(, **options)
+      req = build_request(:create_stack, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::CloudFormation
     #
     # @overload create_stack_instances(**params)
     # @param [Hash] params ({})
-    def create_stack_instances(params = {}, **options)
-      req = build_request(:create_stack_instances, params)
+    def create_stack_instances(, **options)
+      req = build_request(:create_stack_instances, )
       req.send_request(options)
     end
 
@@ -1472,8 +1472,8 @@ module Aws::CloudFormation
     #
     # @overload create_stack_set(**params)
     # @param [Hash] params ({})
-    def create_stack_set(params = {}, **options)
-      req = build_request(:create_stack_set, params)
+    def create_stack_set(, **options)
+      req = build_request(:create_stack_set, )
       req.send_request(options)
     end
 
@@ -1509,8 +1509,8 @@ module Aws::CloudFormation
     #
     # @overload delete_change_set(**params)
     # @param [Hash] params ({})
-    def delete_change_set(params = {}, **options)
-      req = build_request(:delete_change_set, params)
+    def delete_change_set(, **options)
+      req = build_request(:delete_change_set, )
       req.send_request(options)
     end
 
@@ -1577,8 +1577,8 @@ module Aws::CloudFormation
     #
     # @overload delete_stack(**params)
     # @param [Hash] params ({})
-    def delete_stack(params = {}, **options)
-      req = build_request(:delete_stack, params)
+    def delete_stack(, **options)
+      req = build_request(:delete_stack, )
       req.send_request(options)
     end
 
@@ -1670,8 +1670,8 @@ module Aws::CloudFormation
     #
     # @overload delete_stack_instances(**params)
     # @param [Hash] params ({})
-    def delete_stack_instances(params = {}, **options)
-      req = build_request(:delete_stack_instances, params)
+    def delete_stack_instances(, **options)
+      req = build_request(:delete_stack_instances, )
       req.send_request(options)
     end
 
@@ -1695,8 +1695,8 @@ module Aws::CloudFormation
     #
     # @overload delete_stack_set(**params)
     # @param [Hash] params ({})
-    def delete_stack_set(params = {}, **options)
-      req = build_request(:delete_stack_set, params)
+    def delete_stack_set(, **options)
+      req = build_request(:delete_stack_set, )
       req.send_request(options)
     end
 
@@ -1750,8 +1750,8 @@ module Aws::CloudFormation
     #
     # @overload deregister_type(**params)
     # @param [Hash] params ({})
-    def deregister_type(params = {}, **options)
-      req = build_request(:deregister_type, params)
+    def deregister_type(, **options)
+      req = build_request(:deregister_type, )
       req.send_request(options)
     end
 
@@ -1792,8 +1792,8 @@ module Aws::CloudFormation
     #
     # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, **options)
-      req = build_request(:describe_account_limits, params)
+    def describe_account_limits(, **options)
+      req = build_request(:describe_account_limits, )
       req.send_request(options)
     end
 
@@ -1908,8 +1908,8 @@ module Aws::CloudFormation
     #
     # @overload describe_change_set(**params)
     # @param [Hash] params ({})
-    def describe_change_set(params = {}, **options)
-      req = build_request(:describe_change_set, params)
+    def describe_change_set(, **options)
+      req = build_request(:describe_change_set, )
       req.send_request(options)
     end
 
@@ -1971,8 +1971,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_drift_detection_status(**params)
     # @param [Hash] params ({})
-    def describe_stack_drift_detection_status(params = {}, **options)
-      req = build_request(:describe_stack_drift_detection_status, params)
+    def describe_stack_drift_detection_status(, **options)
+      req = build_request(:describe_stack_drift_detection_status, )
       req.send_request(options)
     end
 
@@ -2038,8 +2038,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_events(**params)
     # @param [Hash] params ({})
-    def describe_stack_events(params = {}, **options)
-      req = build_request(:describe_stack_events, params)
+    def describe_stack_events(, **options)
+      req = build_request(:describe_stack_events, )
       req.send_request(options)
     end
 
@@ -2093,8 +2093,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_instance(**params)
     # @param [Hash] params ({})
-    def describe_stack_instance(params = {}, **options)
-      req = build_request(:describe_stack_instance, params)
+    def describe_stack_instance(, **options)
+      req = build_request(:describe_stack_instance, )
       req.send_request(options)
     end
 
@@ -2152,8 +2152,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_resource(**params)
     # @param [Hash] params ({})
-    def describe_stack_resource(params = {}, **options)
-      req = build_request(:describe_stack_resource, params)
+    def describe_stack_resource(, **options)
+      req = build_request(:describe_stack_resource, )
       req.send_request(options)
     end
 
@@ -2249,8 +2249,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_resource_drifts(**params)
     # @param [Hash] params ({})
-    def describe_stack_resource_drifts(params = {}, **options)
-      req = build_request(:describe_stack_resource_drifts, params)
+    def describe_stack_resource_drifts(, **options)
+      req = build_request(:describe_stack_resource_drifts, )
       req.send_request(options)
     end
 
@@ -2349,8 +2349,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_resources(**params)
     # @param [Hash] params ({})
-    def describe_stack_resources(params = {}, **options)
-      req = build_request(:describe_stack_resources, params)
+    def describe_stack_resources(, **options)
+      req = build_request(:describe_stack_resources, )
       req.send_request(options)
     end
 
@@ -2407,8 +2407,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_set(**params)
     # @param [Hash] params ({})
-    def describe_stack_set(params = {}, **options)
-      req = build_request(:describe_stack_set, params)
+    def describe_stack_set(, **options)
+      req = build_request(:describe_stack_set, )
       req.send_request(options)
     end
 
@@ -2466,8 +2466,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stack_set_operation(**params)
     # @param [Hash] params ({})
-    def describe_stack_set_operation(params = {}, **options)
-      req = build_request(:describe_stack_set_operation, params)
+    def describe_stack_set_operation(, **options)
+      req = build_request(:describe_stack_set_operation, )
       req.send_request(options)
     end
 
@@ -2565,8 +2565,8 @@ module Aws::CloudFormation
     #
     # @overload describe_stacks(**params)
     # @param [Hash] params ({})
-    def describe_stacks(params = {}, **options)
-      req = build_request(:describe_stacks, params)
+    def describe_stacks(, **options)
+      req = build_request(:describe_stacks, )
       req.send_request(options)
     end
 
@@ -2654,8 +2654,8 @@ module Aws::CloudFormation
     #
     # @overload describe_type(**params)
     # @param [Hash] params ({})
-    def describe_type(params = {}, **options)
-      req = build_request(:describe_type, params)
+    def describe_type(, **options)
+      req = build_request(:describe_type, )
       req.send_request(options)
     end
 
@@ -2704,8 +2704,8 @@ module Aws::CloudFormation
     #
     # @overload describe_type_registration(**params)
     # @param [Hash] params ({})
-    def describe_type_registration(params = {}, **options)
-      req = build_request(:describe_type_registration, params)
+    def describe_type_registration(, **options)
+      req = build_request(:describe_type_registration, )
       req.send_request(options)
     end
 
@@ -2769,8 +2769,8 @@ module Aws::CloudFormation
     #
     # @overload detect_stack_drift(**params)
     # @param [Hash] params ({})
-    def detect_stack_drift(params = {}, **options)
-      req = build_request(:detect_stack_drift, params)
+    def detect_stack_drift(, **options)
+      req = build_request(:detect_stack_drift, )
       req.send_request(options)
     end
 
@@ -2840,8 +2840,8 @@ module Aws::CloudFormation
     #
     # @overload detect_stack_resource_drift(**params)
     # @param [Hash] params ({})
-    def detect_stack_resource_drift(params = {}, **options)
-      req = build_request(:detect_stack_resource_drift, params)
+    def detect_stack_resource_drift(, **options)
+      req = build_request(:detect_stack_resource_drift, )
       req.send_request(options)
     end
 
@@ -2934,8 +2934,8 @@ module Aws::CloudFormation
     #
     # @overload detect_stack_set_drift(**params)
     # @param [Hash] params ({})
-    def detect_stack_set_drift(params = {}, **options)
-      req = build_request(:detect_stack_set_drift, params)
+    def detect_stack_set_drift(, **options)
+      req = build_request(:detect_stack_set_drift, )
       req.send_request(options)
     end
 
@@ -2997,8 +2997,8 @@ module Aws::CloudFormation
     #
     # @overload estimate_template_cost(**params)
     # @param [Hash] params ({})
-    def estimate_template_cost(params = {}, **options)
-      req = build_request(:estimate_template_cost, params)
+    def estimate_template_cost(, **options)
+      req = build_request(:estimate_template_cost, )
       req.send_request(options)
     end
 
@@ -3047,8 +3047,8 @@ module Aws::CloudFormation
     #
     # @overload execute_change_set(**params)
     # @param [Hash] params ({})
-    def execute_change_set(params = {}, **options)
-      req = build_request(:execute_change_set, params)
+    def execute_change_set(, **options)
+      req = build_request(:execute_change_set, )
       req.send_request(options)
     end
 
@@ -3077,8 +3077,8 @@ module Aws::CloudFormation
     #
     # @overload get_stack_policy(**params)
     # @param [Hash] params ({})
-    def get_stack_policy(params = {}, **options)
-      req = build_request(:get_stack_policy, params)
+    def get_stack_policy(, **options)
+      req = build_request(:get_stack_policy, )
       req.send_request(options)
     end
 
@@ -3141,8 +3141,8 @@ module Aws::CloudFormation
     #
     # @overload get_template(**params)
     # @param [Hash] params ({})
-    def get_template(params = {}, **options)
-      req = build_request(:get_template, params)
+    def get_template(, **options)
+      req = build_request(:get_template, )
       req.send_request(options)
     end
 
@@ -3253,8 +3253,8 @@ module Aws::CloudFormation
     #
     # @overload get_template_summary(**params)
     # @param [Hash] params ({})
-    def get_template_summary(params = {}, **options)
-      req = build_request(:get_template_summary, params)
+    def get_template_summary(, **options)
+      req = build_request(:get_template_summary, )
       req.send_request(options)
     end
 
@@ -3305,8 +3305,8 @@ module Aws::CloudFormation
     #
     # @overload list_change_sets(**params)
     # @param [Hash] params ({})
-    def list_change_sets(params = {}, **options)
-      req = build_request(:list_change_sets, params)
+    def list_change_sets(, **options)
+      req = build_request(:list_change_sets, )
       req.send_request(options)
     end
 
@@ -3352,8 +3352,8 @@ module Aws::CloudFormation
     #
     # @overload list_exports(**params)
     # @param [Hash] params ({})
-    def list_exports(params = {}, **options)
-      req = build_request(:list_exports, params)
+    def list_exports(, **options)
+      req = build_request(:list_exports, )
       req.send_request(options)
     end
 
@@ -3402,8 +3402,8 @@ module Aws::CloudFormation
     #
     # @overload list_imports(**params)
     # @param [Hash] params ({})
-    def list_imports(params = {}, **options)
-      req = build_request(:list_imports, params)
+    def list_imports(, **options)
+      req = build_request(:list_imports, )
       req.send_request(options)
     end
 
@@ -3481,8 +3481,8 @@ module Aws::CloudFormation
     #
     # @overload list_stack_instances(**params)
     # @param [Hash] params ({})
-    def list_stack_instances(params = {}, **options)
-      req = build_request(:list_stack_instances, params)
+    def list_stack_instances(, **options)
+      req = build_request(:list_stack_instances, )
       req.send_request(options)
     end
 
@@ -3539,8 +3539,8 @@ module Aws::CloudFormation
     #
     # @overload list_stack_resources(**params)
     # @param [Hash] params ({})
-    def list_stack_resources(params = {}, **options)
-      req = build_request(:list_stack_resources, params)
+    def list_stack_resources(, **options)
+      req = build_request(:list_stack_resources, )
       req.send_request(options)
     end
 
@@ -3601,8 +3601,8 @@ module Aws::CloudFormation
     #
     # @overload list_stack_set_operation_results(**params)
     # @param [Hash] params ({})
-    def list_stack_set_operation_results(params = {}, **options)
-      req = build_request(:list_stack_set_operation_results, params)
+    def list_stack_set_operation_results(, **options)
+      req = build_request(:list_stack_set_operation_results, )
       req.send_request(options)
     end
 
@@ -3656,8 +3656,8 @@ module Aws::CloudFormation
     #
     # @overload list_stack_set_operations(**params)
     # @param [Hash] params ({})
-    def list_stack_set_operations(params = {}, **options)
-      req = build_request(:list_stack_set_operations, params)
+    def list_stack_set_operations(, **options)
+      req = build_request(:list_stack_set_operations, )
       req.send_request(options)
     end
 
@@ -3715,8 +3715,8 @@ module Aws::CloudFormation
     #
     # @overload list_stack_sets(**params)
     # @param [Hash] params ({})
-    def list_stack_sets(params = {}, **options)
-      req = build_request(:list_stack_sets, params)
+    def list_stack_sets(, **options)
+      req = build_request(:list_stack_sets, )
       req.send_request(options)
     end
 
@@ -3772,8 +3772,8 @@ module Aws::CloudFormation
     #
     # @overload list_stacks(**params)
     # @param [Hash] params ({})
-    def list_stacks(params = {}, **options)
-      req = build_request(:list_stacks, params)
+    def list_stacks(, **options)
+      req = build_request(:list_stacks, )
       req.send_request(options)
     end
 
@@ -3843,8 +3843,8 @@ module Aws::CloudFormation
     #
     # @overload list_type_registrations(**params)
     # @param [Hash] params ({})
-    def list_type_registrations(params = {}, **options)
-      req = build_request(:list_type_registrations, params)
+    def list_type_registrations(, **options)
+      req = build_request(:list_type_registrations, )
       req.send_request(options)
     end
 
@@ -3931,8 +3931,8 @@ module Aws::CloudFormation
     #
     # @overload list_type_versions(**params)
     # @param [Hash] params ({})
-    def list_type_versions(params = {}, **options)
-      req = build_request(:list_type_versions, params)
+    def list_type_versions(, **options)
+      req = build_request(:list_type_versions, )
       req.send_request(options)
     end
 
@@ -4033,8 +4033,8 @@ module Aws::CloudFormation
     #
     # @overload list_types(**params)
     # @param [Hash] params ({})
-    def list_types(params = {}, **options)
-      req = build_request(:list_types, params)
+    def list_types(, **options)
+      req = build_request(:list_types, )
       req.send_request(options)
     end
 
@@ -4114,8 +4114,8 @@ module Aws::CloudFormation
     #
     # @overload record_handler_progress(**params)
     # @param [Hash] params ({})
-    def record_handler_progress(params = {}, **options)
-      req = build_request(:record_handler_progress, params)
+    def record_handler_progress(, **options)
+      req = build_request(:record_handler_progress, )
       req.send_request(options)
     end
 
@@ -4247,8 +4247,8 @@ module Aws::CloudFormation
     #
     # @overload register_type(**params)
     # @param [Hash] params ({})
-    def register_type(params = {}, **options)
-      req = build_request(:register_type, params)
+    def register_type(, **options)
+      req = build_request(:register_type, )
       req.send_request(options)
     end
 
@@ -4287,8 +4287,8 @@ module Aws::CloudFormation
     #
     # @overload set_stack_policy(**params)
     # @param [Hash] params ({})
-    def set_stack_policy(params = {}, **options)
-      req = build_request(:set_stack_policy, params)
+    def set_stack_policy(, **options)
+      req = build_request(:set_stack_policy, )
       req.send_request(options)
     end
 
@@ -4331,8 +4331,8 @@ module Aws::CloudFormation
     #
     # @overload set_type_default_version(**params)
     # @param [Hash] params ({})
-    def set_type_default_version(params = {}, **options)
-      req = build_request(:set_type_default_version, params)
+    def set_type_default_version(, **options)
+      req = build_request(:set_type_default_version, )
       req.send_request(options)
     end
 
@@ -4379,8 +4379,8 @@ module Aws::CloudFormation
     #
     # @overload signal_resource(**params)
     # @param [Hash] params ({})
-    def signal_resource(params = {}, **options)
-      req = build_request(:signal_resource, params)
+    def signal_resource(, **options)
+      req = build_request(:signal_resource, )
       req.send_request(options)
     end
 
@@ -4407,8 +4407,8 @@ module Aws::CloudFormation
     #
     # @overload stop_stack_set_operation(**params)
     # @param [Hash] params ({})
-    def stop_stack_set_operation(params = {}, **options)
-      req = build_request(:stop_stack_set_operation, params)
+    def stop_stack_set_operation(, **options)
+      req = build_request(:stop_stack_set_operation, )
       req.send_request(options)
     end
 
@@ -4727,8 +4727,8 @@ module Aws::CloudFormation
     #
     # @overload update_stack(**params)
     # @param [Hash] params ({})
-    def update_stack(params = {}, **options)
-      req = build_request(:update_stack, params)
+    def update_stack(, **options)
+      req = build_request(:update_stack, )
       req.send_request(options)
     end
 
@@ -4889,8 +4889,8 @@ module Aws::CloudFormation
     #
     # @overload update_stack_instances(**params)
     # @param [Hash] params ({})
-    def update_stack_instances(params = {}, **options)
-      req = build_request(:update_stack_instances, params)
+    def update_stack_instances(, **options)
+      req = build_request(:update_stack_instances, )
       req.send_request(options)
     end
 
@@ -5243,8 +5243,8 @@ module Aws::CloudFormation
     #
     # @overload update_stack_set(**params)
     # @param [Hash] params ({})
-    def update_stack_set(params = {}, **options)
-      req = build_request(:update_stack_set, params)
+    def update_stack_set(, **options)
+      req = build_request(:update_stack_set, )
       req.send_request(options)
     end
 
@@ -5288,8 +5288,8 @@ module Aws::CloudFormation
     #
     # @overload update_termination_protection(**params)
     # @param [Hash] params ({})
-    def update_termination_protection(params = {}, **options)
-      req = build_request(:update_termination_protection, params)
+    def update_termination_protection(, **options)
+      req = build_request(:update_termination_protection, )
       req.send_request(options)
     end
 
@@ -5356,8 +5356,8 @@ module Aws::CloudFormation
     #
     # @overload validate_template(**params)
     # @param [Hash] params ({})
-    def validate_template(params = {}, **options)
-      req = build_request(:validate_template, params)
+    def validate_template(, **options)
+      req = build_request(:validate_template, )
       req.send_request(options)
     end
 

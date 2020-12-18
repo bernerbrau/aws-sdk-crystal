@@ -365,8 +365,8 @@ module Aws::Shield
     #
     # @overload associate_drt_log_bucket(**params)
     # @param [Hash] params ({})
-    def associate_drt_log_bucket(params = {}, **options)
-      req = build_request(:associate_drt_log_bucket, params)
+    def associate_drt_log_bucket(, **options)
+      req = build_request(:associate_drt_log_bucket, )
       req.send_request(options)
     end
 
@@ -436,8 +436,8 @@ module Aws::Shield
     #
     # @overload associate_drt_role(**params)
     # @param [Hash] params ({})
-    def associate_drt_role(params = {}, **options)
-      req = build_request(:associate_drt_role, params)
+    def associate_drt_role(, **options)
+      req = build_request(:associate_drt_role, )
       req.send_request(options)
     end
 
@@ -477,8 +477,8 @@ module Aws::Shield
     #
     # @overload associate_health_check(**params)
     # @param [Hash] params ({})
-    def associate_health_check(params = {}, **options)
-      req = build_request(:associate_health_check, params)
+    def associate_health_check(, **options)
+      req = build_request(:associate_health_check, )
       req.send_request(options)
     end
 
@@ -534,8 +534,8 @@ module Aws::Shield
     #
     # @overload associate_proactive_engagement_details(**params)
     # @param [Hash] params ({})
-    def associate_proactive_engagement_details(params = {}, **options)
-      req = build_request(:associate_proactive_engagement_details, params)
+    def associate_proactive_engagement_details(, **options)
+      req = build_request(:associate_proactive_engagement_details, )
       req.send_request(options)
     end
 
@@ -602,8 +602,8 @@ module Aws::Shield
     #
     # @overload create_protection(**params)
     # @param [Hash] params ({})
-    def create_protection(params = {}, **options)
-      req = build_request(:create_protection, params)
+    def create_protection(, **options)
+      req = build_request(:create_protection, )
       req.send_request(options)
     end
 
@@ -667,8 +667,8 @@ module Aws::Shield
     #
     # @overload create_protection_group(**params)
     # @param [Hash] params ({})
-    def create_protection_group(params = {}, **options)
-      req = build_request(:create_protection_group, params)
+    def create_protection_group(, **options)
+      req = build_request(:create_protection_group, )
       req.send_request(options)
     end
 
@@ -685,8 +685,8 @@ module Aws::Shield
     #
     # @overload create_subscription(**params)
     # @param [Hash] params ({})
-    def create_subscription(params = {}, **options)
-      req = build_request(:create_subscription, params)
+    def create_subscription(, **options)
+      req = build_request(:create_subscription, )
       req.send_request(options)
     end
 
@@ -707,8 +707,8 @@ module Aws::Shield
     #
     # @overload delete_protection(**params)
     # @param [Hash] params ({})
-    def delete_protection(params = {}, **options)
-      req = build_request(:delete_protection, params)
+    def delete_protection(, **options)
+      req = build_request(:delete_protection, )
       req.send_request(options)
     end
 
@@ -731,8 +731,8 @@ module Aws::Shield
     #
     # @overload delete_protection_group(**params)
     # @param [Hash] params ({})
-    def delete_protection_group(params = {}, **options)
-      req = build_request(:delete_protection_group, params)
+    def delete_protection_group(, **options)
+      req = build_request(:delete_protection_group, )
       req.send_request(options)
     end
 
@@ -746,8 +746,8 @@ module Aws::Shield
     #
     # @overload delete_subscription(**params)
     # @param [Hash] params ({})
-    def delete_subscription(params = {}, **options)
-      req = build_request(:delete_subscription, params)
+    def delete_subscription(, **options)
+      req = build_request(:delete_subscription, )
       req.send_request(options)
     end
 
@@ -813,8 +813,8 @@ module Aws::Shield
     #
     # @overload describe_attack(**params)
     # @param [Hash] params ({})
-    def describe_attack(params = {}, **options)
-      req = build_request(:describe_attack, params)
+    def describe_attack(, **options)
+      req = build_request(:describe_attack, )
       req.send_request(options)
     end
 
@@ -852,8 +852,8 @@ module Aws::Shield
     #
     # @overload describe_attack_statistics(**params)
     # @param [Hash] params ({})
-    def describe_attack_statistics(params = {}, **options)
-      req = build_request(:describe_attack_statistics, params)
+    def describe_attack_statistics(, **options)
+      req = build_request(:describe_attack_statistics, )
       req.send_request(options)
     end
 
@@ -876,8 +876,8 @@ module Aws::Shield
     #
     # @overload describe_drt_access(**params)
     # @param [Hash] params ({})
-    def describe_drt_access(params = {}, **options)
-      req = build_request(:describe_drt_access, params)
+    def describe_drt_access(, **options)
+      req = build_request(:describe_drt_access, )
       req.send_request(options)
     end
 
@@ -901,8 +901,8 @@ module Aws::Shield
     #
     # @overload describe_emergency_contact_settings(**params)
     # @param [Hash] params ({})
-    def describe_emergency_contact_settings(params = {}, **options)
-      req = build_request(:describe_emergency_contact_settings, params)
+    def describe_emergency_contact_settings(, **options)
+      req = build_request(:describe_emergency_contact_settings, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::Shield
     #
     # @overload describe_protection(**params)
     # @param [Hash] params ({})
-    def describe_protection(params = {}, **options)
-      req = build_request(:describe_protection, params)
+    def describe_protection(, **options)
+      req = build_request(:describe_protection, )
       req.send_request(options)
     end
 
@@ -977,8 +977,8 @@ module Aws::Shield
     #
     # @overload describe_protection_group(**params)
     # @param [Hash] params ({})
-    def describe_protection_group(params = {}, **options)
-      req = build_request(:describe_protection_group, params)
+    def describe_protection_group(, **options)
+      req = build_request(:describe_protection_group, )
       req.send_request(options)
     end
 
@@ -1009,8 +1009,8 @@ module Aws::Shield
     #
     # @overload describe_subscription(**params)
     # @param [Hash] params ({})
-    def describe_subscription(params = {}, **options)
-      req = build_request(:describe_subscription, params)
+    def describe_subscription(, **options)
+      req = build_request(:describe_subscription, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::Shield
     #
     # @overload disable_proactive_engagement(**params)
     # @param [Hash] params ({})
-    def disable_proactive_engagement(params = {}, **options)
-      req = build_request(:disable_proactive_engagement, params)
+    def disable_proactive_engagement(, **options)
+      req = build_request(:disable_proactive_engagement, )
       req.send_request(options)
     end
 
@@ -1059,8 +1059,8 @@ module Aws::Shield
     #
     # @overload disassociate_drt_log_bucket(**params)
     # @param [Hash] params ({})
-    def disassociate_drt_log_bucket(params = {}, **options)
-      req = build_request(:disassociate_drt_log_bucket, params)
+    def disassociate_drt_log_bucket(, **options)
+      req = build_request(:disassociate_drt_log_bucket, )
       req.send_request(options)
     end
 
@@ -1083,8 +1083,8 @@ module Aws::Shield
     #
     # @overload disassociate_drt_role(**params)
     # @param [Hash] params ({})
-    def disassociate_drt_role(params = {}, **options)
-      req = build_request(:disassociate_drt_role, params)
+    def disassociate_drt_role(, **options)
+      req = build_request(:disassociate_drt_role, )
       req.send_request(options)
     end
 
@@ -1124,8 +1124,8 @@ module Aws::Shield
     #
     # @overload disassociate_health_check(**params)
     # @param [Hash] params ({})
-    def disassociate_health_check(params = {}, **options)
-      req = build_request(:disassociate_health_check, params)
+    def disassociate_health_check(, **options)
+      req = build_request(:disassociate_health_check, )
       req.send_request(options)
     end
 
@@ -1139,8 +1139,8 @@ module Aws::Shield
     #
     # @overload enable_proactive_engagement(**params)
     # @param [Hash] params ({})
-    def enable_proactive_engagement(params = {}, **options)
-      req = build_request(:enable_proactive_engagement, params)
+    def enable_proactive_engagement(, **options)
+      req = build_request(:enable_proactive_engagement, )
       req.send_request(options)
     end
 
@@ -1158,8 +1158,8 @@ module Aws::Shield
     #
     # @overload get_subscription_state(**params)
     # @param [Hash] params ({})
-    def get_subscription_state(params = {}, **options)
-      req = build_request(:get_subscription_state, params)
+    def get_subscription_state(, **options)
+      req = build_request(:get_subscription_state, )
       req.send_request(options)
     end
 
@@ -1244,8 +1244,8 @@ module Aws::Shield
     #
     # @overload list_attacks(**params)
     # @param [Hash] params ({})
-    def list_attacks(params = {}, **options)
-      req = build_request(:list_attacks, params)
+    def list_attacks(, **options)
+      req = build_request(:list_attacks, )
       req.send_request(options)
     end
 
@@ -1295,8 +1295,8 @@ module Aws::Shield
     #
     # @overload list_protection_groups(**params)
     # @param [Hash] params ({})
-    def list_protection_groups(params = {}, **options)
-      req = build_request(:list_protection_groups, params)
+    def list_protection_groups(, **options)
+      req = build_request(:list_protection_groups, )
       req.send_request(options)
     end
 
@@ -1345,8 +1345,8 @@ module Aws::Shield
     #
     # @overload list_protections(**params)
     # @param [Hash] params ({})
-    def list_protections(params = {}, **options)
-      req = build_request(:list_protections, params)
+    def list_protections(, **options)
+      req = build_request(:list_protections, )
       req.send_request(options)
     end
 
@@ -1397,8 +1397,8 @@ module Aws::Shield
     #
     # @overload list_resources_in_protection_group(**params)
     # @param [Hash] params ({})
-    def list_resources_in_protection_group(params = {}, **options)
-      req = build_request(:list_resources_in_protection_group, params)
+    def list_resources_in_protection_group(, **options)
+      req = build_request(:list_resources_in_protection_group, )
       req.send_request(options)
     end
 
@@ -1434,8 +1434,8 @@ module Aws::Shield
     #
     # @overload update_emergency_contact_settings(**params)
     # @param [Hash] params ({})
-    def update_emergency_contact_settings(params = {}, **options)
-      req = build_request(:update_emergency_contact_settings, params)
+    def update_emergency_contact_settings(, **options)
+      req = build_request(:update_emergency_contact_settings, )
       req.send_request(options)
     end
 
@@ -1499,8 +1499,8 @@ module Aws::Shield
     #
     # @overload update_protection_group(**params)
     # @param [Hash] params ({})
-    def update_protection_group(params = {}, **options)
-      req = build_request(:update_protection_group, params)
+    def update_protection_group(, **options)
+      req = build_request(:update_protection_group, )
       req.send_request(options)
     end
 
@@ -1527,8 +1527,8 @@ module Aws::Shield
     #
     # @overload update_subscription(**params)
     # @param [Hash] params ({})
-    def update_subscription(params = {}, **options)
-      req = build_request(:update_subscription, params)
+    def update_subscription(, **options)
+      req = build_request(:update_subscription, )
       req.send_request(options)
     end
 

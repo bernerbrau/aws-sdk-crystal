@@ -717,5 +717,181 @@ module Aws::LambdaPreview
       include Aws::Structure
     end
 
+    alias AddEventSourceRequest = NamedTuple(
+      "EventSource" : String,
+      "FunctionName" : FunctionName,
+      "Role" : RoleArn,
+      "BatchSize" : (Integer)?,
+      "Parameters" : (Map)?
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias DeleteFunctionRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias Description = String
+
+    alias EventSourceConfiguration = NamedTuple(
+      "UUID" : (String)?,
+      "BatchSize" : (Integer)?,
+      "EventSource" : (String)?,
+      "FunctionName" : (FunctionName)?,
+      "Parameters" : (Map)?,
+      "Role" : (RoleArn)?,
+      "LastModified" : (Timestamp)?,
+      "IsActive" : (Boolean)?,
+      "Status" : (String)?
+    )
+
+    alias EventSourceList = Array(EventSourceConfiguration)
+
+    alias FunctionArn = String
+
+    alias FunctionCodeLocation = NamedTuple(
+      "RepositoryType" : (String)?,
+      "Location" : (String)?
+    )
+
+    alias FunctionConfiguration = NamedTuple(
+      "FunctionName" : (FunctionName)?,
+      "FunctionARN" : (FunctionArn)?,
+      "ConfigurationId" : (String)?,
+      "Runtime" : (Runtime)?,
+      "Role" : (RoleArn)?,
+      "Handler" : (Handler)?,
+      "Mode" : (Mode)?,
+      "CodeSize" : (Long)?,
+      "Description" : (Description)?,
+      "Timeout" : (Timeout)?,
+      "MemorySize" : (MemorySize)?,
+      "LastModified" : (Timestamp)?
+    )
+
+    alias FunctionList = Array(FunctionConfiguration)
+
+    alias FunctionName = String
+
+    alias GetEventSourceRequest = NamedTuple(
+      "UUID" : String
+    )
+
+    alias GetFunctionConfigurationRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias GetFunctionRequest = NamedTuple(
+      "FunctionName" : FunctionName
+    )
+
+    alias GetFunctionResponse = NamedTuple(
+      "Configuration" : (FunctionConfiguration)?,
+      "Code" : (FunctionCodeLocation)?
+    )
+
+    alias Handler = String
+
+    alias HttpStatus = Int32
+
+    alias Integer = Int32
+
+    alias InvalidParameterValueException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias InvalidRequestContentException = NamedTuple(
+      "Type" : (String)?,
+      "message" : (String)?
+    )
+
+    alias InvokeAsyncRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "InvokeArgs" : Blob
+    )
+
+    alias InvokeAsyncResponse = NamedTuple(
+      "Status" : (HttpStatus)?
+    )
+
+    alias ListEventSourcesRequest = NamedTuple(
+      "EventSourceArn" : (String)?,
+      "FunctionName" : (FunctionName)?,
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListEventSourcesResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "EventSources" : (EventSourceList)?
+    )
+
+    alias ListFunctionsRequest = NamedTuple(
+      "Marker" : (String)?,
+      "MaxItems" : (MaxListItems)?
+    )
+
+    alias ListFunctionsResponse = NamedTuple(
+      "NextMarker" : (String)?,
+      "Functions" : (FunctionList)?
+    )
+
+    alias Long = Int64
+
+    alias Map = Hash(String,String)
+
+    alias MaxListItems = Int32
+
+    alias MemorySize = Int32
+
+    alias Mode = String
+
+    alias RemoveEventSourceRequest = NamedTuple(
+      "UUID" : String
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias RoleArn = String
+
+    alias Runtime = String
+
+    alias ServiceException = NamedTuple(
+      "Type" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias String = String
+
+    alias Timeout = Int32
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UpdateFunctionConfigurationRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "Role" : (RoleArn)?,
+      "Handler" : (Handler)?,
+      "Description" : (Description)?,
+      "Timeout" : (Timeout)?,
+      "MemorySize" : (MemorySize)?
+    )
+
+    alias UploadFunctionRequest = NamedTuple(
+      "FunctionName" : FunctionName,
+      "FunctionZip" : Blob,
+      "Runtime" : Runtime,
+      "Role" : RoleArn,
+      "Handler" : Handler,
+      "Mode" : Mode,
+      "Description" : (Description)?,
+      "Timeout" : (Timeout)?,
+      "MemorySize" : (MemorySize)?
+    )
+
+    alias Boolean = Bool
   end
 end

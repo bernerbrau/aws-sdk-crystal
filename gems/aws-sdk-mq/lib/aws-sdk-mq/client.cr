@@ -453,8 +453,8 @@ module Aws::MQ
     #
     # @overload create_broker(**params)
     # @param [Hash] params ({})
-    def create_broker(params = {}, **options)
-      req = build_request(:create_broker, params)
+    def create_broker(, **options)
+      req = build_request(:create_broker, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::MQ
     #
     # @overload create_configuration(**params)
     # @param [Hash] params ({})
-    def create_configuration(params = {}, **options)
-      req = build_request(:create_configuration, params)
+    def create_configuration(, **options)
+      req = build_request(:create_configuration, )
       req.send_request(options)
     end
 
@@ -537,8 +537,8 @@ module Aws::MQ
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -570,8 +570,8 @@ module Aws::MQ
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -597,8 +597,8 @@ module Aws::MQ
     #
     # @overload delete_broker(**params)
     # @param [Hash] params ({})
-    def delete_broker(params = {}, **options)
-      req = build_request(:delete_broker, params)
+    def delete_broker(, **options)
+      req = build_request(:delete_broker, )
       req.send_request(options)
     end
 
@@ -621,8 +621,8 @@ module Aws::MQ
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -645,8 +645,8 @@ module Aws::MQ
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -770,8 +770,8 @@ module Aws::MQ
     #
     # @overload describe_broker(**params)
     # @param [Hash] params ({})
-    def describe_broker(params = {}, **options)
-      req = build_request(:describe_broker, params)
+    def describe_broker(, **options)
+      req = build_request(:describe_broker, )
       req.send_request(options)
     end
 
@@ -810,8 +810,8 @@ module Aws::MQ
     #
     # @overload describe_broker_engine_types(**params)
     # @param [Hash] params ({})
-    def describe_broker_engine_types(params = {}, **options)
-      req = build_request(:describe_broker_engine_types, params)
+    def describe_broker_engine_types(, **options)
+      req = build_request(:describe_broker_engine_types, )
       req.send_request(options)
     end
 
@@ -862,8 +862,8 @@ module Aws::MQ
     #
     # @overload describe_broker_instance_options(**params)
     # @param [Hash] params ({})
-    def describe_broker_instance_options(params = {}, **options)
-      req = build_request(:describe_broker_instance_options, params)
+    def describe_broker_instance_options(, **options)
+      req = build_request(:describe_broker_instance_options, )
       req.send_request(options)
     end
 
@@ -910,8 +910,8 @@ module Aws::MQ
     #
     # @overload describe_configuration(**params)
     # @param [Hash] params ({})
-    def describe_configuration(params = {}, **options)
-      req = build_request(:describe_configuration, params)
+    def describe_configuration(, **options)
+      req = build_request(:describe_configuration, )
       req.send_request(options)
     end
 
@@ -947,8 +947,8 @@ module Aws::MQ
     #
     # @overload describe_configuration_revision(**params)
     # @param [Hash] params ({})
-    def describe_configuration_revision(params = {}, **options)
-      req = build_request(:describe_configuration_revision, params)
+    def describe_configuration_revision(, **options)
+      req = build_request(:describe_configuration_revision, )
       req.send_request(options)
     end
 
@@ -989,8 +989,8 @@ module Aws::MQ
     #
     # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, **options)
-      req = build_request(:describe_user, params)
+    def describe_user(, **options)
+      req = build_request(:describe_user, )
       req.send_request(options)
     end
 
@@ -1031,8 +1031,8 @@ module Aws::MQ
     #
     # @overload list_brokers(**params)
     # @param [Hash] params ({})
-    def list_brokers(params = {}, **options)
-      req = build_request(:list_brokers, params)
+    def list_brokers(, **options)
+      req = build_request(:list_brokers, )
       req.send_request(options)
     end
 
@@ -1073,8 +1073,8 @@ module Aws::MQ
     #
     # @overload list_configuration_revisions(**params)
     # @param [Hash] params ({})
-    def list_configuration_revisions(params = {}, **options)
-      req = build_request(:list_configuration_revisions, params)
+    def list_configuration_revisions(, **options)
+      req = build_request(:list_configuration_revisions, )
       req.send_request(options)
     end
 
@@ -1120,8 +1120,8 @@ module Aws::MQ
     #
     # @overload list_configurations(**params)
     # @param [Hash] params ({})
-    def list_configurations(params = {}, **options)
-      req = build_request(:list_configurations, params)
+    def list_configurations(, **options)
+      req = build_request(:list_configurations, )
       req.send_request(options)
     end
 
@@ -1148,8 +1148,8 @@ module Aws::MQ
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -1189,8 +1189,8 @@ module Aws::MQ
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::MQ
     #
     # @overload reboot_broker(**params)
     # @param [Hash] params ({})
-    def reboot_broker(params = {}, **options)
-      req = build_request(:reboot_broker, params)
+    def reboot_broker(, **options)
+      req = build_request(:reboot_broker, )
       req.send_request(options)
     end
 
@@ -1313,8 +1313,8 @@ module Aws::MQ
     #
     # @overload update_broker(**params)
     # @param [Hash] params ({})
-    def update_broker(params = {}, **options)
-      req = build_request(:update_broker, params)
+    def update_broker(, **options)
+      req = build_request(:update_broker, )
       req.send_request(options)
     end
 
@@ -1361,8 +1361,8 @@ module Aws::MQ
     #
     # @overload update_configuration(**params)
     # @param [Hash] params ({})
-    def update_configuration(params = {}, **options)
-      req = build_request(:update_configuration, params)
+    def update_configuration(, **options)
+      req = build_request(:update_configuration, )
       req.send_request(options)
     end
 
@@ -1394,8 +1394,8 @@ module Aws::MQ
     #
     # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, **options)
-      req = build_request(:update_user, params)
+    def update_user(, **options)
+      req = build_request(:update_user, )
       req.send_request(options)
     end
 

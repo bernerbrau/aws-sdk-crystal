@@ -830,5 +830,249 @@ module Aws::Cloud9
     #
     class UpdateEnvironmentResult < Aws::EmptyStructure; end
 
+    alias AutomaticStopTimeMinutes = Int32
+
+    alias BadRequestException = NamedTuple(
+      
+    )
+
+    alias BoundedEnvironmentIdList = Array(EnvironmentId)
+
+    alias ClientRequestToken = String
+
+    alias ConcurrentAccessException = NamedTuple(
+      
+    )
+
+    alias ConflictException = NamedTuple(
+      
+    )
+
+    alias ConnectionType = String
+
+    alias CreateEnvironmentEC2Request = NamedTuple(
+      "name" : EnvironmentName,
+      "description" : (EnvironmentDescription)?,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "instanceType" : InstanceType,
+      "subnetId" : (SubnetId)?,
+      "automaticStopTimeMinutes" : (AutomaticStopTimeMinutes)?,
+      "ownerArn" : (UserArn)?,
+      "tags" : (TagList)?,
+      "connectionType" : (ConnectionType)?
+    )
+
+    alias CreateEnvironmentEC2Result = NamedTuple(
+      "environmentId" : (EnvironmentId)?
+    )
+
+    alias CreateEnvironmentMembershipRequest = NamedTuple(
+      "environmentId" : EnvironmentId,
+      "userArn" : UserArn,
+      "permissions" : MemberPermissions
+    )
+
+    alias CreateEnvironmentMembershipResult = NamedTuple(
+      "membership" : (EnvironmentMember)?
+    )
+
+    alias DeleteEnvironmentMembershipRequest = NamedTuple(
+      "environmentId" : EnvironmentId,
+      "userArn" : UserArn
+    )
+
+    alias DeleteEnvironmentMembershipResult = NamedTuple(
+      
+    )
+
+    alias DeleteEnvironmentRequest = NamedTuple(
+      "environmentId" : EnvironmentId
+    )
+
+    alias DeleteEnvironmentResult = NamedTuple(
+      
+    )
+
+    alias DescribeEnvironmentMembershipsRequest = NamedTuple(
+      "userArn" : (UserArn)?,
+      "environmentId" : (EnvironmentId)?,
+      "permissions" : (PermissionsList)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias DescribeEnvironmentMembershipsResult = NamedTuple(
+      "memberships" : (EnvironmentMembersList)?,
+      "nextToken" : (String)?
+    )
+
+    alias DescribeEnvironmentStatusRequest = NamedTuple(
+      "environmentId" : EnvironmentId
+    )
+
+    alias DescribeEnvironmentStatusResult = NamedTuple(
+      "status" : (EnvironmentStatus)?,
+      "message" : (String)?
+    )
+
+    alias DescribeEnvironmentsRequest = NamedTuple(
+      "environmentIds" : BoundedEnvironmentIdList
+    )
+
+    alias DescribeEnvironmentsResult = NamedTuple(
+      "environments" : (EnvironmentList)?
+    )
+
+    alias Environment = NamedTuple(
+      "id" : (EnvironmentId)?,
+      "name" : (EnvironmentName)?,
+      "description" : (EnvironmentDescription)?,
+      "type" : (EnvironmentType)?,
+      "connectionType" : (ConnectionType)?,
+      "arn" : (String)?,
+      "ownerArn" : (String)?,
+      "lifecycle" : (EnvironmentLifecycle)?
+    )
+
+    alias EnvironmentArn = String
+
+    alias EnvironmentDescription = String
+
+    alias EnvironmentId = String
+
+    alias EnvironmentIdList = Array(EnvironmentId)
+
+    alias EnvironmentLifecycle = NamedTuple(
+      "status" : (EnvironmentLifecycleStatus)?,
+      "reason" : (String)?,
+      "failureResource" : (String)?
+    )
+
+    alias EnvironmentLifecycleStatus = String
+
+    alias EnvironmentList = Array(Environment)
+
+    alias EnvironmentMember = NamedTuple(
+      "permissions" : (Permissions)?,
+      "userId" : (String)?,
+      "userArn" : (UserArn)?,
+      "environmentId" : (EnvironmentId)?,
+      "lastAccess" : (Timestamp)?
+    )
+
+    alias EnvironmentMembersList = Array(EnvironmentMember)
+
+    alias EnvironmentName = String
+
+    alias EnvironmentStatus = String
+
+    alias EnvironmentType = String
+
+    alias ForbiddenException = NamedTuple(
+      
+    )
+
+    alias InstanceType = String
+
+    alias InternalServerErrorException = NamedTuple(
+      
+    )
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListEnvironmentsRequest = NamedTuple(
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListEnvironmentsResult = NamedTuple(
+      "nextToken" : (String)?,
+      "environmentIds" : (EnvironmentIdList)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : EnvironmentArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MemberPermissions = String
+
+    alias NotFoundException = NamedTuple(
+      
+    )
+
+    alias Permissions = String
+
+    alias PermissionsList = Array(Permissions)
+
+    alias String = String
+
+    alias SubnetId = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : EnvironmentArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : EnvironmentArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateEnvironmentMembershipRequest = NamedTuple(
+      "environmentId" : EnvironmentId,
+      "userArn" : UserArn,
+      "permissions" : MemberPermissions
+    )
+
+    alias UpdateEnvironmentMembershipResult = NamedTuple(
+      "membership" : (EnvironmentMember)?
+    )
+
+    alias UpdateEnvironmentRequest = NamedTuple(
+      "environmentId" : EnvironmentId,
+      "name" : (EnvironmentName)?,
+      "description" : (EnvironmentDescription)?
+    )
+
+    alias UpdateEnvironmentResult = NamedTuple(
+      
+    )
+
+    alias UserArn = String
   end
 end

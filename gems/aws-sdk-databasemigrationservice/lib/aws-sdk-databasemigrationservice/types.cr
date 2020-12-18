@@ -8741,5 +8741,1424 @@ module Aws::DatabaseMigrationService
       include Aws::Structure
     end
 
+    alias AccessDeniedFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias AccountQuota = NamedTuple(
+      "AccountQuotaName" : (String)?,
+      "Used" : (Long)?,
+      "Max" : (Long)?
+    )
+
+    alias AccountQuotaList = Array(AccountQuota)
+
+    alias AddTagsToResourceMessage = NamedTuple(
+      "ResourceArn" : String,
+      "Tags" : TagList
+    )
+
+    alias AddTagsToResourceResponse = NamedTuple(
+      
+    )
+
+    alias ApplyPendingMaintenanceActionMessage = NamedTuple(
+      "ReplicationInstanceArn" : String,
+      "ApplyAction" : String,
+      "OptInType" : String
+    )
+
+    alias ApplyPendingMaintenanceActionResponse = NamedTuple(
+      "ResourcePendingMaintenanceActions" : (ResourcePendingMaintenanceActions)?
+    )
+
+    alias AuthMechanismValue = String
+
+    alias AuthTypeValue = String
+
+    alias AvailabilityZone = NamedTuple(
+      "Name" : (String)?
+    )
+
+    alias AvailabilityZonesList = Array(String)
+
+    alias Boolean = Bool
+
+    alias BooleanOptional = Bool
+
+    alias CancelReplicationTaskAssessmentRunMessage = NamedTuple(
+      "ReplicationTaskAssessmentRunArn" : String
+    )
+
+    alias CancelReplicationTaskAssessmentRunResponse = NamedTuple(
+      "ReplicationTaskAssessmentRun" : (ReplicationTaskAssessmentRun)?
+    )
+
+    alias Certificate = NamedTuple(
+      "CertificateIdentifier" : (String)?,
+      "CertificateCreationDate" : (TStamp)?,
+      "CertificatePem" : (String)?,
+      "CertificateWallet" : (CertificateWallet)?,
+      "CertificateArn" : (String)?,
+      "CertificateOwner" : (String)?,
+      "ValidFromDate" : (TStamp)?,
+      "ValidToDate" : (TStamp)?,
+      "SigningAlgorithm" : (String)?,
+      "KeyLength" : (IntegerOptional)?
+    )
+
+    alias CertificateList = Array(Certificate)
+
+    alias CertificateWallet = String | Array(UInt8) | IO
+
+    alias CharLengthSemantics = String
+
+    alias CompressionTypeValue = String
+
+    alias Connection = NamedTuple(
+      "ReplicationInstanceArn" : (String)?,
+      "EndpointArn" : (String)?,
+      "Status" : (String)?,
+      "LastFailureMessage" : (String)?,
+      "EndpointIdentifier" : (String)?,
+      "ReplicationInstanceIdentifier" : (String)?
+    )
+
+    alias ConnectionList = Array(Connection)
+
+    alias CreateEndpointMessage = NamedTuple(
+      "EndpointIdentifier" : String,
+      "EndpointType" : ReplicationEndpointTypeValue,
+      "EngineName" : String,
+      "Username" : (String)?,
+      "Password" : (SecretString)?,
+      "ServerName" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "ExtraConnectionAttributes" : (String)?,
+      "KmsKeyId" : (String)?,
+      "Tags" : (TagList)?,
+      "CertificateArn" : (String)?,
+      "SslMode" : (DmsSslModeValue)?,
+      "ServiceAccessRoleArn" : (String)?,
+      "ExternalTableDefinition" : (String)?,
+      "DynamoDbSettings" : (DynamoDbSettings)?,
+      "S3Settings" : (S3Settings)?,
+      "DmsTransferSettings" : (DmsTransferSettings)?,
+      "MongoDbSettings" : (MongoDbSettings)?,
+      "KinesisSettings" : (KinesisSettings)?,
+      "KafkaSettings" : (KafkaSettings)?,
+      "ElasticsearchSettings" : (ElasticsearchSettings)?,
+      "NeptuneSettings" : (NeptuneSettings)?,
+      "RedshiftSettings" : (RedshiftSettings)?,
+      "PostgreSQLSettings" : (PostgreSQLSettings)?,
+      "MySQLSettings" : (MySQLSettings)?,
+      "OracleSettings" : (OracleSettings)?,
+      "SybaseSettings" : (SybaseSettings)?,
+      "MicrosoftSQLServerSettings" : (MicrosoftSQLServerSettings)?,
+      "IBMDb2Settings" : (IBMDb2Settings)?,
+      "ResourceIdentifier" : (String)?,
+      "DocDbSettings" : (DocDbSettings)?
+    )
+
+    alias CreateEndpointResponse = NamedTuple(
+      "Endpoint" : (Endpoint)?
+    )
+
+    alias CreateEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SnsTopicArn" : String,
+      "SourceType" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "SourceIds" : (SourceIdsList)?,
+      "Enabled" : (BooleanOptional)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEventSubscriptionResponse = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias CreateReplicationInstanceMessage = NamedTuple(
+      "ReplicationInstanceIdentifier" : String,
+      "AllocatedStorage" : (IntegerOptional)?,
+      "ReplicationInstanceClass" : String,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "AvailabilityZone" : (String)?,
+      "ReplicationSubnetGroupIdentifier" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "MultiAZ" : (BooleanOptional)?,
+      "EngineVersion" : (String)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "Tags" : (TagList)?,
+      "KmsKeyId" : (String)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "DnsNameServers" : (String)?,
+      "ResourceIdentifier" : (String)?
+    )
+
+    alias CreateReplicationInstanceResponse = NamedTuple(
+      "ReplicationInstance" : (ReplicationInstance)?
+    )
+
+    alias CreateReplicationSubnetGroupMessage = NamedTuple(
+      "ReplicationSubnetGroupIdentifier" : String,
+      "ReplicationSubnetGroupDescription" : String,
+      "SubnetIds" : SubnetIdentifierList,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateReplicationSubnetGroupResponse = NamedTuple(
+      "ReplicationSubnetGroup" : (ReplicationSubnetGroup)?
+    )
+
+    alias CreateReplicationTaskMessage = NamedTuple(
+      "ReplicationTaskIdentifier" : String,
+      "SourceEndpointArn" : String,
+      "TargetEndpointArn" : String,
+      "ReplicationInstanceArn" : String,
+      "MigrationType" : MigrationTypeValue,
+      "TableMappings" : String,
+      "ReplicationTaskSettings" : (String)?,
+      "CdcStartTime" : (TStamp)?,
+      "CdcStartPosition" : (String)?,
+      "CdcStopPosition" : (String)?,
+      "Tags" : (TagList)?,
+      "TaskData" : (String)?,
+      "ResourceIdentifier" : (String)?
+    )
+
+    alias CreateReplicationTaskResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias DataFormatValue = String
+
+    alias DatePartitionDelimiterValue = String
+
+    alias DatePartitionSequenceValue = String
+
+    alias DeleteCertificateMessage = NamedTuple(
+      "CertificateArn" : String
+    )
+
+    alias DeleteCertificateResponse = NamedTuple(
+      "Certificate" : (Certificate)?
+    )
+
+    alias DeleteConnectionMessage = NamedTuple(
+      "EndpointArn" : String,
+      "ReplicationInstanceArn" : String
+    )
+
+    alias DeleteConnectionResponse = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias DeleteEndpointMessage = NamedTuple(
+      "EndpointArn" : String
+    )
+
+    alias DeleteEndpointResponse = NamedTuple(
+      "Endpoint" : (Endpoint)?
+    )
+
+    alias DeleteEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String
+    )
+
+    alias DeleteEventSubscriptionResponse = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias DeleteReplicationInstanceMessage = NamedTuple(
+      "ReplicationInstanceArn" : String
+    )
+
+    alias DeleteReplicationInstanceResponse = NamedTuple(
+      "ReplicationInstance" : (ReplicationInstance)?
+    )
+
+    alias DeleteReplicationSubnetGroupMessage = NamedTuple(
+      "ReplicationSubnetGroupIdentifier" : String
+    )
+
+    alias DeleteReplicationSubnetGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteReplicationTaskAssessmentRunMessage = NamedTuple(
+      "ReplicationTaskAssessmentRunArn" : String
+    )
+
+    alias DeleteReplicationTaskAssessmentRunResponse = NamedTuple(
+      "ReplicationTaskAssessmentRun" : (ReplicationTaskAssessmentRun)?
+    )
+
+    alias DeleteReplicationTaskMessage = NamedTuple(
+      "ReplicationTaskArn" : String
+    )
+
+    alias DeleteReplicationTaskResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias DescribeAccountAttributesMessage = NamedTuple(
+      
+    )
+
+    alias DescribeAccountAttributesResponse = NamedTuple(
+      "AccountQuotas" : (AccountQuotaList)?,
+      "UniqueAccountIdentifier" : (String)?
+    )
+
+    alias DescribeApplicableIndividualAssessmentsMessage = NamedTuple(
+      "ReplicationTaskArn" : (String)?,
+      "ReplicationInstanceArn" : (String)?,
+      "SourceEngineName" : (String)?,
+      "TargetEngineName" : (String)?,
+      "MigrationType" : (MigrationTypeValue)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeApplicableIndividualAssessmentsResponse = NamedTuple(
+      "IndividualAssessmentNames" : (IndividualAssessmentNameList)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeCertificatesMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeCertificatesResponse = NamedTuple(
+      "Marker" : (String)?,
+      "Certificates" : (CertificateList)?
+    )
+
+    alias DescribeConnectionsMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeConnectionsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "Connections" : (ConnectionList)?
+    )
+
+    alias DescribeEndpointTypesMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEndpointTypesResponse = NamedTuple(
+      "Marker" : (String)?,
+      "SupportedEndpointTypes" : (SupportedEndpointTypeList)?
+    )
+
+    alias DescribeEndpointsMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEndpointsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "Endpoints" : (EndpointList)?
+    )
+
+    alias DescribeEventCategoriesMessage = NamedTuple(
+      "SourceType" : (String)?,
+      "Filters" : (FilterList)?
+    )
+
+    alias DescribeEventCategoriesResponse = NamedTuple(
+      "EventCategoryGroupList" : (EventCategoryGroupList)?
+    )
+
+    alias DescribeEventSubscriptionsMessage = NamedTuple(
+      "SubscriptionName" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEventSubscriptionsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "EventSubscriptionsList" : (EventSubscriptionsList)?
+    )
+
+    alias DescribeEventsMessage = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Duration" : (IntegerOptional)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEventsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "Events" : (EventList)?
+    )
+
+    alias DescribeOrderableReplicationInstancesMessage = NamedTuple(
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeOrderableReplicationInstancesResponse = NamedTuple(
+      "OrderableReplicationInstances" : (OrderableReplicationInstanceList)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribePendingMaintenanceActionsMessage = NamedTuple(
+      "ReplicationInstanceArn" : (String)?,
+      "Filters" : (FilterList)?,
+      "Marker" : (String)?,
+      "MaxRecords" : (IntegerOptional)?
+    )
+
+    alias DescribePendingMaintenanceActionsResponse = NamedTuple(
+      "PendingMaintenanceActions" : (PendingMaintenanceActions)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeRefreshSchemasStatusMessage = NamedTuple(
+      "EndpointArn" : String
+    )
+
+    alias DescribeRefreshSchemasStatusResponse = NamedTuple(
+      "RefreshSchemasStatus" : (RefreshSchemasStatus)?
+    )
+
+    alias DescribeReplicationInstanceTaskLogsMessage = NamedTuple(
+      "ReplicationInstanceArn" : String,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationInstanceTaskLogsResponse = NamedTuple(
+      "ReplicationInstanceArn" : (String)?,
+      "ReplicationInstanceTaskLogs" : (ReplicationInstanceTaskLogsList)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationInstancesMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationInstancesResponse = NamedTuple(
+      "Marker" : (String)?,
+      "ReplicationInstances" : (ReplicationInstanceList)?
+    )
+
+    alias DescribeReplicationSubnetGroupsMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationSubnetGroupsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "ReplicationSubnetGroups" : (ReplicationSubnetGroups)?
+    )
+
+    alias DescribeReplicationTaskAssessmentResultsMessage = NamedTuple(
+      "ReplicationTaskArn" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationTaskAssessmentResultsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "BucketName" : (String)?,
+      "ReplicationTaskAssessmentResults" : (ReplicationTaskAssessmentResultList)?
+    )
+
+    alias DescribeReplicationTaskAssessmentRunsMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationTaskAssessmentRunsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "ReplicationTaskAssessmentRuns" : (ReplicationTaskAssessmentRunList)?
+    )
+
+    alias DescribeReplicationTaskIndividualAssessmentsMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReplicationTaskIndividualAssessmentsResponse = NamedTuple(
+      "Marker" : (String)?,
+      "ReplicationTaskIndividualAssessments" : (ReplicationTaskIndividualAssessmentList)?
+    )
+
+    alias DescribeReplicationTasksMessage = NamedTuple(
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "WithoutSettings" : (BooleanOptional)?
+    )
+
+    alias DescribeReplicationTasksResponse = NamedTuple(
+      "Marker" : (String)?,
+      "ReplicationTasks" : (ReplicationTaskList)?
+    )
+
+    alias DescribeSchemasMessage = NamedTuple(
+      "EndpointArn" : String,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeSchemasResponse = NamedTuple(
+      "Marker" : (String)?,
+      "Schemas" : (SchemaList)?
+    )
+
+    alias DescribeTableStatisticsMessage = NamedTuple(
+      "ReplicationTaskArn" : String,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "Filters" : (FilterList)?
+    )
+
+    alias DescribeTableStatisticsResponse = NamedTuple(
+      "ReplicationTaskArn" : (String)?,
+      "TableStatistics" : (TableStatisticsList)?,
+      "Marker" : (String)?
+    )
+
+    alias DmsSslModeValue = String
+
+    alias DmsTransferSettings = NamedTuple(
+      "ServiceAccessRoleArn" : (String)?,
+      "BucketName" : (String)?
+    )
+
+    alias DocDbSettings = NamedTuple(
+      "Username" : (String)?,
+      "Password" : (SecretString)?,
+      "ServerName" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "NestingLevel" : (NestingLevelValue)?,
+      "ExtractDocId" : (BooleanOptional)?,
+      "DocsToInvestigate" : (IntegerOptional)?,
+      "KmsKeyId" : (String)?
+    )
+
+    alias DynamoDbSettings = NamedTuple(
+      "ServiceAccessRoleArn" : String
+    )
+
+    alias ElasticsearchSettings = NamedTuple(
+      "ServiceAccessRoleArn" : String,
+      "EndpointUri" : String,
+      "FullLoadErrorPercentage" : (IntegerOptional)?,
+      "ErrorRetryDuration" : (IntegerOptional)?
+    )
+
+    alias EncodingTypeValue = String
+
+    alias EncryptionModeValue = String
+
+    alias Endpoint = NamedTuple(
+      "EndpointIdentifier" : (String)?,
+      "EndpointType" : (ReplicationEndpointTypeValue)?,
+      "EngineName" : (String)?,
+      "EngineDisplayName" : (String)?,
+      "Username" : (String)?,
+      "ServerName" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "ExtraConnectionAttributes" : (String)?,
+      "Status" : (String)?,
+      "KmsKeyId" : (String)?,
+      "EndpointArn" : (String)?,
+      "CertificateArn" : (String)?,
+      "SslMode" : (DmsSslModeValue)?,
+      "ServiceAccessRoleArn" : (String)?,
+      "ExternalTableDefinition" : (String)?,
+      "ExternalId" : (String)?,
+      "DynamoDbSettings" : (DynamoDbSettings)?,
+      "S3Settings" : (S3Settings)?,
+      "DmsTransferSettings" : (DmsTransferSettings)?,
+      "MongoDbSettings" : (MongoDbSettings)?,
+      "KinesisSettings" : (KinesisSettings)?,
+      "KafkaSettings" : (KafkaSettings)?,
+      "ElasticsearchSettings" : (ElasticsearchSettings)?,
+      "NeptuneSettings" : (NeptuneSettings)?,
+      "RedshiftSettings" : (RedshiftSettings)?,
+      "PostgreSQLSettings" : (PostgreSQLSettings)?,
+      "MySQLSettings" : (MySQLSettings)?,
+      "OracleSettings" : (OracleSettings)?,
+      "SybaseSettings" : (SybaseSettings)?,
+      "MicrosoftSQLServerSettings" : (MicrosoftSQLServerSettings)?,
+      "IBMDb2Settings" : (IBMDb2Settings)?,
+      "DocDbSettings" : (DocDbSettings)?
+    )
+
+    alias EndpointList = Array(Endpoint)
+
+    alias Event = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "Message" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Date" : (TStamp)?
+    )
+
+    alias EventCategoriesList = Array(String)
+
+    alias EventCategoryGroup = NamedTuple(
+      "SourceType" : (String)?,
+      "EventCategories" : (EventCategoriesList)?
+    )
+
+    alias EventCategoryGroupList = Array(EventCategoryGroup)
+
+    alias EventList = Array(Event)
+
+    alias EventSubscription = NamedTuple(
+      "CustomerAwsId" : (String)?,
+      "CustSubscriptionId" : (String)?,
+      "SnsTopicArn" : (String)?,
+      "Status" : (String)?,
+      "SubscriptionCreationTime" : (String)?,
+      "SourceType" : (String)?,
+      "SourceIdsList" : (SourceIdsList)?,
+      "EventCategoriesList" : (EventCategoriesList)?,
+      "Enabled" : (Boolean)?
+    )
+
+    alias EventSubscriptionsList = Array(EventSubscription)
+
+    alias ExceptionMessage = String
+
+    alias ExcludeTestList = Array(String)
+
+    alias Filter = NamedTuple(
+      "Name" : String,
+      "Values" : FilterValueList
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterValueList = Array(String)
+
+    alias IBMDb2Settings = NamedTuple(
+      "DatabaseName" : (String)?,
+      "Password" : (SecretString)?,
+      "Port" : (IntegerOptional)?,
+      "ServerName" : (String)?,
+      "SetDataCaptureChanges" : (BooleanOptional)?,
+      "CurrentLsn" : (String)?,
+      "MaxKBytesPerRead" : (IntegerOptional)?,
+      "Username" : (String)?
+    )
+
+    alias ImportCertificateMessage = NamedTuple(
+      "CertificateIdentifier" : String,
+      "CertificatePem" : (String)?,
+      "CertificateWallet" : (CertificateWallet)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ImportCertificateResponse = NamedTuple(
+      "Certificate" : (Certificate)?
+    )
+
+    alias IncludeTestList = Array(String)
+
+    alias IndividualAssessmentNameList = Array(String)
+
+    alias InsufficientResourceCapacityFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias Integer = Int32
+
+    alias IntegerOptional = Int32
+
+    alias InvalidCertificateFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias InvalidResourceStateFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias InvalidSubnet = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSAccessDeniedFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSDisabledFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSInvalidStateFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSKeyNotAccessibleFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSNotFoundFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KMSThrottlingFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias KafkaSettings = NamedTuple(
+      "Broker" : (String)?,
+      "Topic" : (String)?,
+      "MessageFormat" : (MessageFormatValue)?,
+      "IncludeTransactionDetails" : (BooleanOptional)?,
+      "IncludePartitionValue" : (BooleanOptional)?,
+      "PartitionIncludeSchemaTable" : (BooleanOptional)?,
+      "IncludeTableAlterOperations" : (BooleanOptional)?,
+      "IncludeControlDetails" : (BooleanOptional)?,
+      "MessageMaxBytes" : (IntegerOptional)?,
+      "IncludeNullAndEmpty" : (BooleanOptional)?
+    )
+
+    alias KeyList = Array(String)
+
+    alias KinesisSettings = NamedTuple(
+      "StreamArn" : (String)?,
+      "MessageFormat" : (MessageFormatValue)?,
+      "ServiceAccessRoleArn" : (String)?,
+      "IncludeTransactionDetails" : (BooleanOptional)?,
+      "IncludePartitionValue" : (BooleanOptional)?,
+      "PartitionIncludeSchemaTable" : (BooleanOptional)?,
+      "IncludeTableAlterOperations" : (BooleanOptional)?,
+      "IncludeControlDetails" : (BooleanOptional)?,
+      "IncludeNullAndEmpty" : (BooleanOptional)?
+    )
+
+    alias ListTagsForResourceMessage = NamedTuple(
+      "ResourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias Long = Int64
+
+    alias MessageFormatValue = String
+
+    alias MicrosoftSQLServerSettings = NamedTuple(
+      "Port" : (IntegerOptional)?,
+      "BcpPacketSize" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "ControlTablesFileGroup" : (String)?,
+      "Password" : (SecretString)?,
+      "ReadBackupOnly" : (BooleanOptional)?,
+      "SafeguardPolicy" : (SafeguardPolicy)?,
+      "ServerName" : (String)?,
+      "Username" : (String)?,
+      "UseBcpFullLoad" : (BooleanOptional)?
+    )
+
+    alias MigrationTypeValue = String
+
+    alias ModifyEndpointMessage = NamedTuple(
+      "EndpointArn" : String,
+      "EndpointIdentifier" : (String)?,
+      "EndpointType" : (ReplicationEndpointTypeValue)?,
+      "EngineName" : (String)?,
+      "Username" : (String)?,
+      "Password" : (SecretString)?,
+      "ServerName" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "ExtraConnectionAttributes" : (String)?,
+      "CertificateArn" : (String)?,
+      "SslMode" : (DmsSslModeValue)?,
+      "ServiceAccessRoleArn" : (String)?,
+      "ExternalTableDefinition" : (String)?,
+      "DynamoDbSettings" : (DynamoDbSettings)?,
+      "S3Settings" : (S3Settings)?,
+      "DmsTransferSettings" : (DmsTransferSettings)?,
+      "MongoDbSettings" : (MongoDbSettings)?,
+      "KinesisSettings" : (KinesisSettings)?,
+      "KafkaSettings" : (KafkaSettings)?,
+      "ElasticsearchSettings" : (ElasticsearchSettings)?,
+      "NeptuneSettings" : (NeptuneSettings)?,
+      "RedshiftSettings" : (RedshiftSettings)?,
+      "PostgreSQLSettings" : (PostgreSQLSettings)?,
+      "MySQLSettings" : (MySQLSettings)?,
+      "OracleSettings" : (OracleSettings)?,
+      "SybaseSettings" : (SybaseSettings)?,
+      "MicrosoftSQLServerSettings" : (MicrosoftSQLServerSettings)?,
+      "IBMDb2Settings" : (IBMDb2Settings)?,
+      "DocDbSettings" : (DocDbSettings)?
+    )
+
+    alias ModifyEndpointResponse = NamedTuple(
+      "Endpoint" : (Endpoint)?
+    )
+
+    alias ModifyEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SnsTopicArn" : (String)?,
+      "SourceType" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Enabled" : (BooleanOptional)?
+    )
+
+    alias ModifyEventSubscriptionResponse = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias ModifyReplicationInstanceMessage = NamedTuple(
+      "ReplicationInstanceArn" : String,
+      "AllocatedStorage" : (IntegerOptional)?,
+      "ApplyImmediately" : (Boolean)?,
+      "ReplicationInstanceClass" : (String)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "MultiAZ" : (BooleanOptional)?,
+      "EngineVersion" : (String)?,
+      "AllowMajorVersionUpgrade" : (Boolean)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "ReplicationInstanceIdentifier" : (String)?
+    )
+
+    alias ModifyReplicationInstanceResponse = NamedTuple(
+      "ReplicationInstance" : (ReplicationInstance)?
+    )
+
+    alias ModifyReplicationSubnetGroupMessage = NamedTuple(
+      "ReplicationSubnetGroupIdentifier" : String,
+      "ReplicationSubnetGroupDescription" : (String)?,
+      "SubnetIds" : SubnetIdentifierList
+    )
+
+    alias ModifyReplicationSubnetGroupResponse = NamedTuple(
+      "ReplicationSubnetGroup" : (ReplicationSubnetGroup)?
+    )
+
+    alias ModifyReplicationTaskMessage = NamedTuple(
+      "ReplicationTaskArn" : String,
+      "ReplicationTaskIdentifier" : (String)?,
+      "MigrationType" : (MigrationTypeValue)?,
+      "TableMappings" : (String)?,
+      "ReplicationTaskSettings" : (String)?,
+      "CdcStartTime" : (TStamp)?,
+      "CdcStartPosition" : (String)?,
+      "CdcStopPosition" : (String)?,
+      "TaskData" : (String)?
+    )
+
+    alias ModifyReplicationTaskResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias MongoDbSettings = NamedTuple(
+      "Username" : (String)?,
+      "Password" : (SecretString)?,
+      "ServerName" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "AuthType" : (AuthTypeValue)?,
+      "AuthMechanism" : (AuthMechanismValue)?,
+      "NestingLevel" : (NestingLevelValue)?,
+      "ExtractDocId" : (String)?,
+      "DocsToInvestigate" : (String)?,
+      "AuthSource" : (String)?,
+      "KmsKeyId" : (String)?
+    )
+
+    alias MoveReplicationTaskMessage = NamedTuple(
+      "ReplicationTaskArn" : String,
+      "TargetReplicationInstanceArn" : String
+    )
+
+    alias MoveReplicationTaskResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias MySQLSettings = NamedTuple(
+      "AfterConnectScript" : (String)?,
+      "DatabaseName" : (String)?,
+      "EventsPollInterval" : (IntegerOptional)?,
+      "TargetDbType" : (TargetDbType)?,
+      "MaxFileSize" : (IntegerOptional)?,
+      "ParallelLoadThreads" : (IntegerOptional)?,
+      "Password" : (SecretString)?,
+      "Port" : (IntegerOptional)?,
+      "ServerName" : (String)?,
+      "ServerTimezone" : (String)?,
+      "Username" : (String)?
+    )
+
+    alias NeptuneSettings = NamedTuple(
+      "ServiceAccessRoleArn" : (String)?,
+      "S3BucketName" : String,
+      "S3BucketFolder" : String,
+      "ErrorRetryDuration" : (IntegerOptional)?,
+      "MaxFileSize" : (IntegerOptional)?,
+      "MaxRetryCount" : (IntegerOptional)?,
+      "IamAuthEnabled" : (BooleanOptional)?
+    )
+
+    alias NestingLevelValue = String
+
+    alias OracleSettings = NamedTuple(
+      "AddSupplementalLogging" : (BooleanOptional)?,
+      "ArchivedLogDestId" : (IntegerOptional)?,
+      "AdditionalArchivedLogDestId" : (IntegerOptional)?,
+      "AllowSelectNestedTables" : (BooleanOptional)?,
+      "ParallelAsmReadThreads" : (IntegerOptional)?,
+      "ReadAheadBlocks" : (IntegerOptional)?,
+      "AccessAlternateDirectly" : (BooleanOptional)?,
+      "UseAlternateFolderForOnline" : (BooleanOptional)?,
+      "OraclePathPrefix" : (String)?,
+      "UsePathPrefix" : (String)?,
+      "ReplacePathPrefix" : (BooleanOptional)?,
+      "EnableHomogenousTablespace" : (BooleanOptional)?,
+      "DirectPathNoLog" : (BooleanOptional)?,
+      "ArchivedLogsOnly" : (BooleanOptional)?,
+      "AsmPassword" : (SecretString)?,
+      "AsmServer" : (String)?,
+      "AsmUser" : (String)?,
+      "CharLengthSemantics" : (CharLengthSemantics)?,
+      "DatabaseName" : (String)?,
+      "DirectPathParallelLoad" : (BooleanOptional)?,
+      "FailTasksOnLobTruncation" : (BooleanOptional)?,
+      "NumberDatatypeScale" : (IntegerOptional)?,
+      "Password" : (SecretString)?,
+      "Port" : (IntegerOptional)?,
+      "ReadTableSpaceName" : (BooleanOptional)?,
+      "RetryInterval" : (IntegerOptional)?,
+      "SecurityDbEncryption" : (SecretString)?,
+      "SecurityDbEncryptionName" : (String)?,
+      "ServerName" : (String)?,
+      "Username" : (String)?
+    )
+
+    alias OrderableReplicationInstance = NamedTuple(
+      "EngineVersion" : (String)?,
+      "ReplicationInstanceClass" : (String)?,
+      "StorageType" : (String)?,
+      "MinAllocatedStorage" : (Integer)?,
+      "MaxAllocatedStorage" : (Integer)?,
+      "DefaultAllocatedStorage" : (Integer)?,
+      "IncludedAllocatedStorage" : (Integer)?,
+      "AvailabilityZones" : (AvailabilityZonesList)?,
+      "ReleaseStatus" : (ReleaseStatusValues)?
+    )
+
+    alias OrderableReplicationInstanceList = Array(OrderableReplicationInstance)
+
+    alias ParquetVersionValue = String
+
+    alias PendingMaintenanceAction = NamedTuple(
+      "Action" : (String)?,
+      "AutoAppliedAfterDate" : (TStamp)?,
+      "ForcedApplyDate" : (TStamp)?,
+      "OptInStatus" : (String)?,
+      "CurrentApplyDate" : (TStamp)?,
+      "Description" : (String)?
+    )
+
+    alias PendingMaintenanceActionDetails = Array(PendingMaintenanceAction)
+
+    alias PendingMaintenanceActions = Array(ResourcePendingMaintenanceActions)
+
+    alias PostgreSQLSettings = NamedTuple(
+      "AfterConnectScript" : (String)?,
+      "CaptureDdls" : (BooleanOptional)?,
+      "MaxFileSize" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "DdlArtifactsSchema" : (String)?,
+      "ExecuteTimeout" : (IntegerOptional)?,
+      "FailTasksOnLobTruncation" : (BooleanOptional)?,
+      "Password" : (SecretString)?,
+      "Port" : (IntegerOptional)?,
+      "ServerName" : (String)?,
+      "Username" : (String)?,
+      "SlotName" : (String)?
+    )
+
+    alias RebootReplicationInstanceMessage = NamedTuple(
+      "ReplicationInstanceArn" : String,
+      "ForceFailover" : (BooleanOptional)?
+    )
+
+    alias RebootReplicationInstanceResponse = NamedTuple(
+      "ReplicationInstance" : (ReplicationInstance)?
+    )
+
+    alias RedshiftSettings = NamedTuple(
+      "AcceptAnyDate" : (BooleanOptional)?,
+      "AfterConnectScript" : (String)?,
+      "BucketFolder" : (String)?,
+      "BucketName" : (String)?,
+      "CaseSensitiveNames" : (BooleanOptional)?,
+      "CompUpdate" : (BooleanOptional)?,
+      "ConnectionTimeout" : (IntegerOptional)?,
+      "DatabaseName" : (String)?,
+      "DateFormat" : (String)?,
+      "EmptyAsNull" : (BooleanOptional)?,
+      "EncryptionMode" : (EncryptionModeValue)?,
+      "ExplicitIds" : (BooleanOptional)?,
+      "FileTransferUploadStreams" : (IntegerOptional)?,
+      "LoadTimeout" : (IntegerOptional)?,
+      "MaxFileSize" : (IntegerOptional)?,
+      "Password" : (SecretString)?,
+      "Port" : (IntegerOptional)?,
+      "RemoveQuotes" : (BooleanOptional)?,
+      "ReplaceInvalidChars" : (String)?,
+      "ReplaceChars" : (String)?,
+      "ServerName" : (String)?,
+      "ServiceAccessRoleArn" : (String)?,
+      "ServerSideEncryptionKmsKeyId" : (String)?,
+      "TimeFormat" : (String)?,
+      "TrimBlanks" : (BooleanOptional)?,
+      "TruncateColumns" : (BooleanOptional)?,
+      "Username" : (String)?,
+      "WriteBufferSize" : (IntegerOptional)?
+    )
+
+    alias RefreshSchemasMessage = NamedTuple(
+      "EndpointArn" : String,
+      "ReplicationInstanceArn" : String
+    )
+
+    alias RefreshSchemasResponse = NamedTuple(
+      "RefreshSchemasStatus" : (RefreshSchemasStatus)?
+    )
+
+    alias RefreshSchemasStatus = NamedTuple(
+      "EndpointArn" : (String)?,
+      "ReplicationInstanceArn" : (String)?,
+      "Status" : (RefreshSchemasStatusTypeValue)?,
+      "LastRefreshDate" : (TStamp)?,
+      "LastFailureMessage" : (String)?
+    )
+
+    alias RefreshSchemasStatusTypeValue = String
+
+    alias ReleaseStatusValues = String
+
+    alias ReloadOptionValue = String
+
+    alias ReloadTablesMessage = NamedTuple(
+      "ReplicationTaskArn" : String,
+      "TablesToReload" : TableListToReload,
+      "ReloadOption" : (ReloadOptionValue)?
+    )
+
+    alias ReloadTablesResponse = NamedTuple(
+      "ReplicationTaskArn" : (String)?
+    )
+
+    alias RemoveTagsFromResourceMessage = NamedTuple(
+      "ResourceArn" : String,
+      "TagKeys" : KeyList
+    )
+
+    alias RemoveTagsFromResourceResponse = NamedTuple(
+      
+    )
+
+    alias ReplicationEndpointTypeValue = String
+
+    alias ReplicationInstance = NamedTuple(
+      "ReplicationInstanceIdentifier" : (String)?,
+      "ReplicationInstanceClass" : (String)?,
+      "ReplicationInstanceStatus" : (String)?,
+      "AllocatedStorage" : (Integer)?,
+      "InstanceCreateTime" : (TStamp)?,
+      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
+      "AvailabilityZone" : (String)?,
+      "ReplicationSubnetGroup" : (ReplicationSubnetGroup)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "PendingModifiedValues" : (ReplicationPendingModifiedValues)?,
+      "MultiAZ" : (Boolean)?,
+      "EngineVersion" : (String)?,
+      "AutoMinorVersionUpgrade" : (Boolean)?,
+      "KmsKeyId" : (String)?,
+      "ReplicationInstanceArn" : (String)?,
+      "ReplicationInstancePublicIpAddress" : (String)?,
+      "ReplicationInstancePrivateIpAddress" : (String)?,
+      "ReplicationInstancePublicIpAddresses" : (ReplicationInstancePublicIpAddressList)?,
+      "ReplicationInstancePrivateIpAddresses" : (ReplicationInstancePrivateIpAddressList)?,
+      "PubliclyAccessible" : (Boolean)?,
+      "SecondaryAvailabilityZone" : (String)?,
+      "FreeUntil" : (TStamp)?,
+      "DnsNameServers" : (String)?
+    )
+
+    alias ReplicationInstanceList = Array(ReplicationInstance)
+
+    alias ReplicationInstancePrivateIpAddressList = Array(String)
+
+    alias ReplicationInstancePublicIpAddressList = Array(String)
+
+    alias ReplicationInstanceTaskLog = NamedTuple(
+      "ReplicationTaskName" : (String)?,
+      "ReplicationTaskArn" : (String)?,
+      "ReplicationInstanceTaskLogSize" : (Long)?
+    )
+
+    alias ReplicationInstanceTaskLogsList = Array(ReplicationInstanceTaskLog)
+
+    alias ReplicationPendingModifiedValues = NamedTuple(
+      "ReplicationInstanceClass" : (String)?,
+      "AllocatedStorage" : (IntegerOptional)?,
+      "MultiAZ" : (BooleanOptional)?,
+      "EngineVersion" : (String)?
+    )
+
+    alias ReplicationSubnetGroup = NamedTuple(
+      "ReplicationSubnetGroupIdentifier" : (String)?,
+      "ReplicationSubnetGroupDescription" : (String)?,
+      "VpcId" : (String)?,
+      "SubnetGroupStatus" : (String)?,
+      "Subnets" : (SubnetList)?
+    )
+
+    alias ReplicationSubnetGroupDoesNotCoverEnoughAZs = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias ReplicationSubnetGroups = Array(ReplicationSubnetGroup)
+
+    alias ReplicationTask = NamedTuple(
+      "ReplicationTaskIdentifier" : (String)?,
+      "SourceEndpointArn" : (String)?,
+      "TargetEndpointArn" : (String)?,
+      "ReplicationInstanceArn" : (String)?,
+      "MigrationType" : (MigrationTypeValue)?,
+      "TableMappings" : (String)?,
+      "ReplicationTaskSettings" : (String)?,
+      "Status" : (String)?,
+      "LastFailureMessage" : (String)?,
+      "StopReason" : (String)?,
+      "ReplicationTaskCreationDate" : (TStamp)?,
+      "ReplicationTaskStartDate" : (TStamp)?,
+      "CdcStartPosition" : (String)?,
+      "CdcStopPosition" : (String)?,
+      "RecoveryCheckpoint" : (String)?,
+      "ReplicationTaskArn" : (String)?,
+      "ReplicationTaskStats" : (ReplicationTaskStats)?,
+      "TaskData" : (String)?,
+      "TargetReplicationInstanceArn" : (String)?
+    )
+
+    alias ReplicationTaskAssessmentResult = NamedTuple(
+      "ReplicationTaskIdentifier" : (String)?,
+      "ReplicationTaskArn" : (String)?,
+      "ReplicationTaskLastAssessmentDate" : (TStamp)?,
+      "AssessmentStatus" : (String)?,
+      "AssessmentResultsFile" : (String)?,
+      "AssessmentResults" : (String)?,
+      "S3ObjectUrl" : (String)?
+    )
+
+    alias ReplicationTaskAssessmentResultList = Array(ReplicationTaskAssessmentResult)
+
+    alias ReplicationTaskAssessmentRun = NamedTuple(
+      "ReplicationTaskAssessmentRunArn" : (String)?,
+      "ReplicationTaskArn" : (String)?,
+      "Status" : (String)?,
+      "ReplicationTaskAssessmentRunCreationDate" : (TStamp)?,
+      "AssessmentProgress" : (ReplicationTaskAssessmentRunProgress)?,
+      "LastFailureMessage" : (String)?,
+      "ServiceAccessRoleArn" : (String)?,
+      "ResultLocationBucket" : (String)?,
+      "ResultLocationFolder" : (String)?,
+      "ResultEncryptionMode" : (String)?,
+      "ResultKmsKeyArn" : (String)?,
+      "AssessmentRunName" : (String)?
+    )
+
+    alias ReplicationTaskAssessmentRunList = Array(ReplicationTaskAssessmentRun)
+
+    alias ReplicationTaskAssessmentRunProgress = NamedTuple(
+      "IndividualAssessmentCount" : (Integer)?,
+      "IndividualAssessmentCompletedCount" : (Integer)?
+    )
+
+    alias ReplicationTaskIndividualAssessment = NamedTuple(
+      "ReplicationTaskIndividualAssessmentArn" : (String)?,
+      "ReplicationTaskAssessmentRunArn" : (String)?,
+      "IndividualAssessmentName" : (String)?,
+      "Status" : (String)?,
+      "ReplicationTaskIndividualAssessmentStartDate" : (TStamp)?
+    )
+
+    alias ReplicationTaskIndividualAssessmentList = Array(ReplicationTaskIndividualAssessment)
+
+    alias ReplicationTaskList = Array(ReplicationTask)
+
+    alias ReplicationTaskStats = NamedTuple(
+      "FullLoadProgressPercent" : (Integer)?,
+      "ElapsedTimeMillis" : (Long)?,
+      "TablesLoaded" : (Integer)?,
+      "TablesLoading" : (Integer)?,
+      "TablesQueued" : (Integer)?,
+      "TablesErrored" : (Integer)?,
+      "FreshStartDate" : (TStamp)?,
+      "StartDate" : (TStamp)?,
+      "StopDate" : (TStamp)?,
+      "FullLoadStartDate" : (TStamp)?,
+      "FullLoadFinishDate" : (TStamp)?
+    )
+
+    alias ResourceAlreadyExistsFault = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "resourceArn" : (ResourceArn)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias ResourcePendingMaintenanceActions = NamedTuple(
+      "ResourceIdentifier" : (String)?,
+      "PendingMaintenanceActionDetails" : (PendingMaintenanceActionDetails)?
+    )
+
+    alias ResourceQuotaExceededFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias S3AccessDeniedFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias S3ResourceNotFoundFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias S3Settings = NamedTuple(
+      "ServiceAccessRoleArn" : (String)?,
+      "ExternalTableDefinition" : (String)?,
+      "CsvRowDelimiter" : (String)?,
+      "CsvDelimiter" : (String)?,
+      "BucketFolder" : (String)?,
+      "BucketName" : (String)?,
+      "CompressionType" : (CompressionTypeValue)?,
+      "EncryptionMode" : (EncryptionModeValue)?,
+      "ServerSideEncryptionKmsKeyId" : (String)?,
+      "DataFormat" : (DataFormatValue)?,
+      "EncodingType" : (EncodingTypeValue)?,
+      "DictPageSizeLimit" : (IntegerOptional)?,
+      "RowGroupLength" : (IntegerOptional)?,
+      "DataPageSize" : (IntegerOptional)?,
+      "ParquetVersion" : (ParquetVersionValue)?,
+      "EnableStatistics" : (BooleanOptional)?,
+      "IncludeOpForFullLoad" : (BooleanOptional)?,
+      "CdcInsertsOnly" : (BooleanOptional)?,
+      "TimestampColumnName" : (String)?,
+      "ParquetTimestampInMillisecond" : (BooleanOptional)?,
+      "CdcInsertsAndUpdates" : (BooleanOptional)?,
+      "DatePartitionEnabled" : (BooleanOptional)?,
+      "DatePartitionSequence" : (DatePartitionSequenceValue)?,
+      "DatePartitionDelimiter" : (DatePartitionDelimiterValue)?,
+      "UseCsvNoSupValue" : (BooleanOptional)?,
+      "CsvNoSupValue" : (String)?,
+      "PreserveTransactions" : (BooleanOptional)?,
+      "CdcPath" : (String)?
+    )
+
+    alias SNSInvalidTopicFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias SNSNoAuthorizationFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias SafeguardPolicy = String
+
+    alias SchemaList = Array(String)
+
+    alias SecretString = String
+
+    alias SourceIdsList = Array(String)
+
+    alias SourceType = String
+
+    alias StartReplicationTaskAssessmentMessage = NamedTuple(
+      "ReplicationTaskArn" : String
+    )
+
+    alias StartReplicationTaskAssessmentResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias StartReplicationTaskAssessmentRunMessage = NamedTuple(
+      "ReplicationTaskArn" : String,
+      "ServiceAccessRoleArn" : String,
+      "ResultLocationBucket" : String,
+      "ResultLocationFolder" : (String)?,
+      "ResultEncryptionMode" : (String)?,
+      "ResultKmsKeyArn" : (String)?,
+      "AssessmentRunName" : String,
+      "IncludeOnly" : (IncludeTestList)?,
+      "Exclude" : (ExcludeTestList)?
+    )
+
+    alias StartReplicationTaskAssessmentRunResponse = NamedTuple(
+      "ReplicationTaskAssessmentRun" : (ReplicationTaskAssessmentRun)?
+    )
+
+    alias StartReplicationTaskMessage = NamedTuple(
+      "ReplicationTaskArn" : String,
+      "StartReplicationTaskType" : StartReplicationTaskTypeValue,
+      "CdcStartTime" : (TStamp)?,
+      "CdcStartPosition" : (String)?,
+      "CdcStopPosition" : (String)?
+    )
+
+    alias StartReplicationTaskResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias StartReplicationTaskTypeValue = String
+
+    alias StopReplicationTaskMessage = NamedTuple(
+      "ReplicationTaskArn" : String
+    )
+
+    alias StopReplicationTaskResponse = NamedTuple(
+      "ReplicationTask" : (ReplicationTask)?
+    )
+
+    alias StorageQuotaExceededFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias String = String
+
+    alias Subnet = NamedTuple(
+      "SubnetIdentifier" : (String)?,
+      "SubnetAvailabilityZone" : (AvailabilityZone)?,
+      "SubnetStatus" : (String)?
+    )
+
+    alias SubnetAlreadyInUse = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias SubnetIdentifierList = Array(String)
+
+    alias SubnetList = Array(Subnet)
+
+    alias SupportedEndpointType = NamedTuple(
+      "EngineName" : (String)?,
+      "SupportsCDC" : (Boolean)?,
+      "EndpointType" : (ReplicationEndpointTypeValue)?,
+      "ReplicationInstanceEngineMinimumVersion" : (String)?,
+      "EngineDisplayName" : (String)?
+    )
+
+    alias SupportedEndpointTypeList = Array(SupportedEndpointType)
+
+    alias SybaseSettings = NamedTuple(
+      "DatabaseName" : (String)?,
+      "Password" : (SecretString)?,
+      "Port" : (IntegerOptional)?,
+      "ServerName" : (String)?,
+      "Username" : (String)?
+    )
+
+    alias TStamp = String | UInt64 | Time
+
+    alias TableListToReload = Array(TableToReload)
+
+    alias TableStatistics = NamedTuple(
+      "SchemaName" : (String)?,
+      "TableName" : (String)?,
+      "Inserts" : (Long)?,
+      "Deletes" : (Long)?,
+      "Updates" : (Long)?,
+      "Ddls" : (Long)?,
+      "FullLoadRows" : (Long)?,
+      "FullLoadCondtnlChkFailedRows" : (Long)?,
+      "FullLoadErrorRows" : (Long)?,
+      "FullLoadStartTime" : (TStamp)?,
+      "FullLoadEndTime" : (TStamp)?,
+      "FullLoadReloaded" : (BooleanOptional)?,
+      "LastUpdateTime" : (TStamp)?,
+      "TableState" : (String)?,
+      "ValidationPendingRecords" : (Long)?,
+      "ValidationFailedRecords" : (Long)?,
+      "ValidationSuspendedRecords" : (Long)?,
+      "ValidationState" : (String)?,
+      "ValidationStateDetails" : (String)?
+    )
+
+    alias TableStatisticsList = Array(TableStatistics)
+
+    alias TableToReload = NamedTuple(
+      "SchemaName" : String,
+      "TableName" : String
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TargetDbType = String
+
+    alias TestConnectionMessage = NamedTuple(
+      "ReplicationInstanceArn" : String,
+      "EndpointArn" : String
+    )
+
+    alias TestConnectionResponse = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias UpgradeDependencyFailureFault = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias VpcSecurityGroupIdList = Array(String)
+
+    alias VpcSecurityGroupMembership = NamedTuple(
+      "VpcSecurityGroupId" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias VpcSecurityGroupMembershipList = Array(VpcSecurityGroupMembership)
   end
 end

@@ -1935,5 +1935,441 @@ module Aws::MediaPackageVod
       include Aws::Structure
     end
 
+    alias AdMarkers = String
+
+    alias Asset = NamedTuple(
+      "Arn" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "EgressEndpoints" : (__listOfEgressEndpoint)?,
+      "Id" : (__string)?,
+      "PackagingGroupId" : (__string)?,
+      "ResourceId" : (__string)?,
+      "SourceArn" : (__string)?,
+      "SourceRoleArn" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias AssetCreateParameters = NamedTuple(
+      "Id" : __string,
+      "PackagingGroupId" : __string,
+      "ResourceId" : (__string)?,
+      "SourceArn" : __string,
+      "SourceRoleArn" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias AssetList = NamedTuple(
+      "Assets" : (__listOfAssetShallow)?,
+      "NextToken" : (__string)?
+    )
+
+    alias AssetShallow = NamedTuple(
+      "Arn" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "Id" : (__string)?,
+      "PackagingGroupId" : (__string)?,
+      "ResourceId" : (__string)?,
+      "SourceArn" : (__string)?,
+      "SourceRoleArn" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias Authorization = NamedTuple(
+      "CdnIdentifierSecret" : __string,
+      "SecretsRoleArn" : __string
+    )
+
+    alias CmafEncryption = NamedTuple(
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias CmafPackage = NamedTuple(
+      "Encryption" : (CmafEncryption)?,
+      "HlsManifests" : __listOfHlsManifest,
+      "SegmentDurationSeconds" : (__integer)?
+    )
+
+    alias CreateAssetRequest = NamedTuple(
+      "Id" : __string,
+      "PackagingGroupId" : __string,
+      "ResourceId" : (__string)?,
+      "SourceArn" : __string,
+      "SourceRoleArn" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateAssetResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "EgressEndpoints" : (__listOfEgressEndpoint)?,
+      "Id" : (__string)?,
+      "PackagingGroupId" : (__string)?,
+      "ResourceId" : (__string)?,
+      "SourceArn" : (__string)?,
+      "SourceRoleArn" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreatePackagingConfigurationRequest = NamedTuple(
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : __string,
+      "MssPackage" : (MssPackage)?,
+      "PackagingGroupId" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias CreatePackagingConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "PackagingGroupId" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreatePackagingGroupRequest = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "Id" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias CreatePackagingGroupResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "DomainName" : (__string)?,
+      "Id" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DashEncryption = NamedTuple(
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias DashManifest = NamedTuple(
+      "ManifestLayout" : (ManifestLayout)?,
+      "ManifestName" : (__string)?,
+      "MinBufferTimeSeconds" : (__integer)?,
+      "Profile" : (Profile)?,
+      "StreamSelection" : (StreamSelection)?
+    )
+
+    alias DashPackage = NamedTuple(
+      "DashManifests" : __listOfDashManifest,
+      "Encryption" : (DashEncryption)?,
+      "PeriodTriggers" : (__listOf__PeriodTriggersElement)?,
+      "SegmentDurationSeconds" : (__integer)?,
+      "SegmentTemplateFormat" : (SegmentTemplateFormat)?
+    )
+
+    alias DeleteAssetRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DeleteAssetResponse = NamedTuple(
+      
+    )
+
+    alias DeletePackagingConfigurationRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DeletePackagingConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeletePackagingGroupRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DeletePackagingGroupResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAssetRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DescribeAssetResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "EgressEndpoints" : (__listOfEgressEndpoint)?,
+      "Id" : (__string)?,
+      "PackagingGroupId" : (__string)?,
+      "ResourceId" : (__string)?,
+      "SourceArn" : (__string)?,
+      "SourceRoleArn" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DescribePackagingConfigurationRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DescribePackagingConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "PackagingGroupId" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DescribePackagingGroupRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DescribePackagingGroupResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "DomainName" : (__string)?,
+      "Id" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias EgressEndpoint = NamedTuple(
+      "PackagingConfigurationId" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias EncryptionMethod = String
+
+    alias ForbiddenException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias HlsEncryption = NamedTuple(
+      "ConstantInitializationVector" : (__string)?,
+      "EncryptionMethod" : (EncryptionMethod)?,
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias HlsManifest = NamedTuple(
+      "AdMarkers" : (AdMarkers)?,
+      "IncludeIframeOnlyStream" : (__boolean)?,
+      "ManifestName" : (__string)?,
+      "ProgramDateTimeIntervalSeconds" : (__integer)?,
+      "RepeatExtXKey" : (__boolean)?,
+      "StreamSelection" : (StreamSelection)?
+    )
+
+    alias HlsPackage = NamedTuple(
+      "Encryption" : (HlsEncryption)?,
+      "HlsManifests" : __listOfHlsManifest,
+      "SegmentDurationSeconds" : (__integer)?,
+      "UseAudioRenditionGroup" : (__boolean)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias ListAssetsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "PackagingGroupId" : (__string)?
+    )
+
+    alias ListAssetsResponse = NamedTuple(
+      "Assets" : (__listOfAssetShallow)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListPackagingConfigurationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "PackagingGroupId" : (__string)?
+    )
+
+    alias ListPackagingConfigurationsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "PackagingConfigurations" : (__listOfPackagingConfiguration)?
+    )
+
+    alias ListPackagingGroupsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListPackagingGroupsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "PackagingGroups" : (__listOfPackagingGroup)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias ManifestLayout = String
+
+    alias MaxResults = Int32
+
+    alias MssEncryption = NamedTuple(
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias MssManifest = NamedTuple(
+      "ManifestName" : (__string)?,
+      "StreamSelection" : (StreamSelection)?
+    )
+
+    alias MssPackage = NamedTuple(
+      "Encryption" : (MssEncryption)?,
+      "MssManifests" : __listOfMssManifest,
+      "SegmentDurationSeconds" : (__integer)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias PackagingConfiguration = NamedTuple(
+      "Arn" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "PackagingGroupId" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias PackagingConfigurationCreateParameters = NamedTuple(
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : __string,
+      "MssPackage" : (MssPackage)?,
+      "PackagingGroupId" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias PackagingConfigurationList = NamedTuple(
+      "NextToken" : (__string)?,
+      "PackagingConfigurations" : (__listOfPackagingConfiguration)?
+    )
+
+    alias PackagingGroup = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "DomainName" : (__string)?,
+      "Id" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias PackagingGroupCreateParameters = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "Id" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias PackagingGroupList = NamedTuple(
+      "NextToken" : (__string)?,
+      "PackagingGroups" : (__listOfPackagingGroup)?
+    )
+
+    alias PackagingGroupUpdateParameters = NamedTuple(
+      "Authorization" : (Authorization)?
+    )
+
+    alias Profile = String
+
+    alias SegmentTemplateFormat = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias SpekeKeyProvider = NamedTuple(
+      "RoleArn" : __string,
+      "SystemIds" : __listOf__string,
+      "Url" : __string
+    )
+
+    alias StreamOrder = String
+
+    alias StreamSelection = NamedTuple(
+      "MaxVideoBitsPerSecond" : (__integer)?,
+      "MinVideoBitsPerSecond" : (__integer)?,
+      "StreamOrder" : (StreamOrder)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : __mapOf__string
+    )
+
+    alias Tags = Hash(__string,__string)
+
+    alias TagsModel = NamedTuple(
+      "Tags" : __mapOf__string
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias UnprocessableEntityException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias UpdatePackagingGroupRequest = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "Id" : __string
+    )
+
+    alias UpdatePackagingGroupResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "DomainName" : (__string)?,
+      "Id" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias __PeriodTriggersElement = String
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __listOfAssetShallow = Array(AssetShallow)
+
+    alias __listOfDashManifest = Array(DashManifest)
+
+    alias __listOfEgressEndpoint = Array(EgressEndpoint)
+
+    alias __listOfHlsManifest = Array(HlsManifest)
+
+    alias __listOfMssManifest = Array(MssManifest)
+
+    alias __listOfPackagingConfiguration = Array(PackagingConfiguration)
+
+    alias __listOfPackagingGroup = Array(PackagingGroup)
+
+    alias __listOf__PeriodTriggersElement = Array(__PeriodTriggersElement)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __mapOf__string = Hash(__string,__string)
+
+    alias __string = String
   end
 end

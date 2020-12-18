@@ -1128,5 +1128,284 @@ module Aws::DLM
     #
     class UpdateLifecyclePolicyResponse < Aws::EmptyStructure; end
 
+    alias AvailabilityZone = String
+
+    alias AvailabilityZoneList = Array(AvailabilityZone)
+
+    alias CmkArn = String
+
+    alias CopyTags = Bool
+
+    alias CopyTagsNullable = Bool
+
+    alias Count = Int32
+
+    alias CreateLifecyclePolicyRequest = NamedTuple(
+      "ExecutionRoleArn" : ExecutionRoleArn,
+      "Description" : PolicyDescription,
+      "State" : SettablePolicyStateValues,
+      "PolicyDetails" : PolicyDetails,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateLifecyclePolicyResponse = NamedTuple(
+      "PolicyId" : (PolicyId)?
+    )
+
+    alias CreateRule = NamedTuple(
+      "Interval" : (Interval)?,
+      "IntervalUnit" : (IntervalUnitValues)?,
+      "Times" : (TimesList)?,
+      "CronExpression" : (CronExpression)?
+    )
+
+    alias CronExpression = String
+
+    alias CrossRegionCopyRetainRule = NamedTuple(
+      "Interval" : (Interval)?,
+      "IntervalUnit" : (RetentionIntervalUnitValues)?
+    )
+
+    alias CrossRegionCopyRule = NamedTuple(
+      "TargetRegion" : TargetRegion,
+      "Encrypted" : Encrypted,
+      "CmkArn" : (CmkArn)?,
+      "CopyTags" : (CopyTagsNullable)?,
+      "RetainRule" : (CrossRegionCopyRetainRule)?
+    )
+
+    alias CrossRegionCopyRules = Array(CrossRegionCopyRule)
+
+    alias DeleteLifecyclePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId
+    )
+
+    alias DeleteLifecyclePolicyResponse = NamedTuple(
+      
+    )
+
+    alias Encrypted = Bool
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ExcludeBootVolume = Bool
+
+    alias ExecutionRoleArn = String
+
+    alias FastRestoreRule = NamedTuple(
+      "Count" : (Count)?,
+      "Interval" : (Interval)?,
+      "IntervalUnit" : (RetentionIntervalUnitValues)?,
+      "AvailabilityZones" : AvailabilityZoneList
+    )
+
+    alias GetLifecyclePoliciesRequest = NamedTuple(
+      "PolicyIds" : (PolicyIdList)?,
+      "State" : (GettablePolicyStateValues)?,
+      "ResourceTypes" : (ResourceTypeValuesList)?,
+      "TargetTags" : (TargetTagsFilterList)?,
+      "TagsToAdd" : (TagsToAddFilterList)?
+    )
+
+    alias GetLifecyclePoliciesResponse = NamedTuple(
+      "Policies" : (LifecyclePolicySummaryList)?
+    )
+
+    alias GetLifecyclePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId
+    )
+
+    alias GetLifecyclePolicyResponse = NamedTuple(
+      "Policy" : (LifecyclePolicy)?
+    )
+
+    alias GettablePolicyStateValues = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Code" : (ErrorCode)?
+    )
+
+    alias Interval = Int32
+
+    alias IntervalUnitValues = String
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Code" : (ErrorCode)?,
+      "RequiredParameters" : (ParameterList)?,
+      "MutuallyExclusiveParameters" : (ParameterList)?
+    )
+
+    alias LifecyclePolicy = NamedTuple(
+      "PolicyId" : (PolicyId)?,
+      "Description" : (PolicyDescription)?,
+      "State" : (GettablePolicyStateValues)?,
+      "StatusMessage" : (StatusMessage)?,
+      "ExecutionRoleArn" : (ExecutionRoleArn)?,
+      "DateCreated" : (Timestamp)?,
+      "DateModified" : (Timestamp)?,
+      "PolicyDetails" : (PolicyDetails)?,
+      "Tags" : (TagMap)?,
+      "PolicyArn" : (PolicyArn)?
+    )
+
+    alias LifecyclePolicySummary = NamedTuple(
+      "PolicyId" : (PolicyId)?,
+      "Description" : (PolicyDescription)?,
+      "State" : (GettablePolicyStateValues)?,
+      "Tags" : (TagMap)?,
+      "PolicyType" : (PolicyTypeValues)?
+    )
+
+    alias LifecyclePolicySummaryList = Array(LifecyclePolicySummary)
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Code" : (ErrorCode)?,
+      "ResourceType" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : PolicyArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias NoReboot = Bool
+
+    alias Parameter = String
+
+    alias ParameterList = Array(Parameter)
+
+    alias Parameters = NamedTuple(
+      "ExcludeBootVolume" : (ExcludeBootVolume)?,
+      "NoReboot" : (NoReboot)?
+    )
+
+    alias PolicyArn = String
+
+    alias PolicyDescription = String
+
+    alias PolicyDetails = NamedTuple(
+      "PolicyType" : (PolicyTypeValues)?,
+      "ResourceTypes" : (ResourceTypeValuesList)?,
+      "TargetTags" : (TargetTagList)?,
+      "Schedules" : (ScheduleList)?,
+      "Parameters" : (Parameters)?
+    )
+
+    alias PolicyId = String
+
+    alias PolicyIdList = Array(PolicyId)
+
+    alias PolicyTypeValues = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Code" : (ErrorCode)?,
+      "ResourceType" : (String)?,
+      "ResourceIds" : (PolicyIdList)?
+    )
+
+    alias ResourceTypeValues = String
+
+    alias ResourceTypeValuesList = Array(ResourceTypeValues)
+
+    alias RetainRule = NamedTuple(
+      "Count" : (Count)?,
+      "Interval" : (Interval)?,
+      "IntervalUnit" : (RetentionIntervalUnitValues)?
+    )
+
+    alias RetentionIntervalUnitValues = String
+
+    alias Schedule = NamedTuple(
+      "Name" : (ScheduleName)?,
+      "CopyTags" : (CopyTags)?,
+      "TagsToAdd" : (TagsToAddList)?,
+      "VariableTags" : (VariableTagsList)?,
+      "CreateRule" : (CreateRule)?,
+      "RetainRule" : (RetainRule)?,
+      "FastRestoreRule" : (FastRestoreRule)?,
+      "CrossRegionCopyRules" : (CrossRegionCopyRules)?
+    )
+
+    alias ScheduleList = Array(Schedule)
+
+    alias ScheduleName = String
+
+    alias SettablePolicyStateValues = String
+
+    alias StatusMessage = String
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "Key" : String,
+      "Value" : String
+    )
+
+    alias TagFilter = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : PolicyArn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagsToAddFilterList = Array(TagFilter)
+
+    alias TagsToAddList = Array(Tag)
+
+    alias TargetRegion = String
+
+    alias TargetTagList = Array(Tag)
+
+    alias TargetTagsFilterList = Array(TagFilter)
+
+    alias Time = String
+
+    alias TimesList = Array(Time)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : PolicyArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateLifecyclePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "ExecutionRoleArn" : (ExecutionRoleArn)?,
+      "State" : (SettablePolicyStateValues)?,
+      "Description" : (PolicyDescription)?,
+      "PolicyDetails" : (PolicyDetails)?
+    )
+
+    alias UpdateLifecyclePolicyResponse = NamedTuple(
+      
+    )
+
+    alias VariableTagsList = Array(Tag)
   end
 end

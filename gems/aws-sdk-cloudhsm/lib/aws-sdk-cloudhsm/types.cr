@@ -1072,5 +1072,315 @@ module Aws::CloudHSM
       include Aws::Structure
     end
 
+    alias AZ = String
+
+    alias AZList = Array(AZ)
+
+    alias AddTagsToResourceRequest = NamedTuple(
+      "ResourceArn" : String,
+      "TagList" : TagList
+    )
+
+    alias AddTagsToResourceResponse = NamedTuple(
+      "Status" : String
+    )
+
+    alias Boolean = Bool
+
+    alias Certificate = String
+
+    alias CertificateFingerprint = String
+
+    alias ClientArn = String
+
+    alias ClientLabel = String
+
+    alias ClientList = Array(ClientArn)
+
+    alias ClientToken = String
+
+    alias ClientVersion = String
+
+    alias CloudHsmInternalException = NamedTuple(
+      
+    )
+
+    alias CloudHsmObjectState = String
+
+    alias CloudHsmServiceException = NamedTuple(
+      "message" : (String)?,
+      "retryable" : (Boolean)?
+    )
+
+    alias CreateHapgRequest = NamedTuple(
+      "Label" : Label
+    )
+
+    alias CreateHapgResponse = NamedTuple(
+      "HapgArn" : (HapgArn)?
+    )
+
+    alias CreateHsmRequest = NamedTuple(
+      "SubnetId" : SubnetId,
+      "SshKey" : SshKey,
+      "EniIp" : (IpAddress)?,
+      "IamRoleArn" : IamRoleArn,
+      "ExternalId" : (ExternalId)?,
+      "SubscriptionType" : SubscriptionType,
+      "ClientToken" : (ClientToken)?,
+      "SyslogIp" : (IpAddress)?
+    )
+
+    alias CreateHsmResponse = NamedTuple(
+      "HsmArn" : (HsmArn)?
+    )
+
+    alias CreateLunaClientRequest = NamedTuple(
+      "Label" : (ClientLabel)?,
+      "Certificate" : Certificate
+    )
+
+    alias CreateLunaClientResponse = NamedTuple(
+      "ClientArn" : (ClientArn)?
+    )
+
+    alias DeleteHapgRequest = NamedTuple(
+      "HapgArn" : HapgArn
+    )
+
+    alias DeleteHapgResponse = NamedTuple(
+      "Status" : String
+    )
+
+    alias DeleteHsmRequest = NamedTuple(
+      "HsmArn" : HsmArn
+    )
+
+    alias DeleteHsmResponse = NamedTuple(
+      "Status" : String
+    )
+
+    alias DeleteLunaClientRequest = NamedTuple(
+      "ClientArn" : ClientArn
+    )
+
+    alias DeleteLunaClientResponse = NamedTuple(
+      "Status" : String
+    )
+
+    alias DescribeHapgRequest = NamedTuple(
+      "HapgArn" : HapgArn
+    )
+
+    alias DescribeHapgResponse = NamedTuple(
+      "HapgArn" : (HapgArn)?,
+      "HapgSerial" : (String)?,
+      "HsmsLastActionFailed" : (HsmList)?,
+      "HsmsPendingDeletion" : (HsmList)?,
+      "HsmsPendingRegistration" : (HsmList)?,
+      "Label" : (Label)?,
+      "LastModifiedTimestamp" : (Timestamp)?,
+      "PartitionSerialList" : (PartitionSerialList)?,
+      "State" : (CloudHsmObjectState)?
+    )
+
+    alias DescribeHsmRequest = NamedTuple(
+      "HsmArn" : (HsmArn)?,
+      "HsmSerialNumber" : (HsmSerialNumber)?
+    )
+
+    alias DescribeHsmResponse = NamedTuple(
+      "HsmArn" : (HsmArn)?,
+      "Status" : (HsmStatus)?,
+      "StatusDetails" : (String)?,
+      "AvailabilityZone" : (AZ)?,
+      "EniId" : (EniId)?,
+      "EniIp" : (IpAddress)?,
+      "SubscriptionType" : (SubscriptionType)?,
+      "SubscriptionStartDate" : (Timestamp)?,
+      "SubscriptionEndDate" : (Timestamp)?,
+      "VpcId" : (VpcId)?,
+      "SubnetId" : (SubnetId)?,
+      "IamRoleArn" : (IamRoleArn)?,
+      "SerialNumber" : (HsmSerialNumber)?,
+      "VendorName" : (String)?,
+      "HsmType" : (String)?,
+      "SoftwareVersion" : (String)?,
+      "SshPublicKey" : (SshKey)?,
+      "SshKeyLastUpdated" : (Timestamp)?,
+      "ServerCertUri" : (String)?,
+      "ServerCertLastUpdated" : (Timestamp)?,
+      "Partitions" : (PartitionList)?
+    )
+
+    alias DescribeLunaClientRequest = NamedTuple(
+      "ClientArn" : (ClientArn)?,
+      "CertificateFingerprint" : (CertificateFingerprint)?
+    )
+
+    alias DescribeLunaClientResponse = NamedTuple(
+      "ClientArn" : (ClientArn)?,
+      "Certificate" : (Certificate)?,
+      "CertificateFingerprint" : (CertificateFingerprint)?,
+      "LastModifiedTimestamp" : (Timestamp)?,
+      "Label" : (Label)?
+    )
+
+    alias EniId = String
+
+    alias ExternalId = String
+
+    alias GetConfigRequest = NamedTuple(
+      "ClientArn" : ClientArn,
+      "ClientVersion" : ClientVersion,
+      "HapgList" : HapgList
+    )
+
+    alias GetConfigResponse = NamedTuple(
+      "ConfigType" : (String)?,
+      "ConfigFile" : (String)?,
+      "ConfigCred" : (String)?
+    )
+
+    alias HapgArn = String
+
+    alias HapgList = Array(HapgArn)
+
+    alias HsmArn = String
+
+    alias HsmList = Array(HsmArn)
+
+    alias HsmSerialNumber = String
+
+    alias HsmStatus = String
+
+    alias IamRoleArn = String
+
+    alias InvalidRequestException = NamedTuple(
+      
+    )
+
+    alias IpAddress = String
+
+    alias Label = String
+
+    alias ListAvailableZonesRequest = NamedTuple(
+      
+    )
+
+    alias ListAvailableZonesResponse = NamedTuple(
+      "AZList" : (AZList)?
+    )
+
+    alias ListHapgsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListHapgsResponse = NamedTuple(
+      "HapgList" : HapgList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListHsmsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListHsmsResponse = NamedTuple(
+      "HsmList" : (HsmList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListLunaClientsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListLunaClientsResponse = NamedTuple(
+      "ClientList" : ClientList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "TagList" : TagList
+    )
+
+    alias ModifyHapgRequest = NamedTuple(
+      "HapgArn" : HapgArn,
+      "Label" : (Label)?,
+      "PartitionSerialList" : (PartitionSerialList)?
+    )
+
+    alias ModifyHapgResponse = NamedTuple(
+      "HapgArn" : (HapgArn)?
+    )
+
+    alias ModifyHsmRequest = NamedTuple(
+      "HsmArn" : HsmArn,
+      "SubnetId" : (SubnetId)?,
+      "EniIp" : (IpAddress)?,
+      "IamRoleArn" : (IamRoleArn)?,
+      "ExternalId" : (ExternalId)?,
+      "SyslogIp" : (IpAddress)?
+    )
+
+    alias ModifyHsmResponse = NamedTuple(
+      "HsmArn" : (HsmArn)?
+    )
+
+    alias ModifyLunaClientRequest = NamedTuple(
+      "ClientArn" : ClientArn,
+      "Certificate" : Certificate
+    )
+
+    alias ModifyLunaClientResponse = NamedTuple(
+      "ClientArn" : (ClientArn)?
+    )
+
+    alias PaginationToken = String
+
+    alias PartitionArn = String
+
+    alias PartitionList = Array(PartitionArn)
+
+    alias PartitionSerial = String
+
+    alias PartitionSerialList = Array(PartitionSerial)
+
+    alias RemoveTagsFromResourceRequest = NamedTuple(
+      "ResourceArn" : String,
+      "TagKeyList" : TagKeyList
+    )
+
+    alias RemoveTagsFromResourceResponse = NamedTuple(
+      "Status" : String
+    )
+
+    alias SshKey = String
+
+    alias String = String
+
+    alias SubnetId = String
+
+    alias SubscriptionType = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias Timestamp = String
+
+    alias VpcId = String
   end
 end

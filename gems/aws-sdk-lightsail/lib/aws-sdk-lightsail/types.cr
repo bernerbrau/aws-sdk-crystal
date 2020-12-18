@@ -13674,5 +13674,2604 @@ module Aws::Lightsail
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias AccessDirection = String
+
+    alias AccountSetupInProgressException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias AddOn = NamedTuple(
+      "name" : (string)?,
+      "status" : (string)?,
+      "snapshotTimeOfDay" : (TimeOfDay)?,
+      "nextSnapshotTimeOfDay" : (TimeOfDay)?
+    )
+
+    alias AddOnList = Array(AddOn)
+
+    alias AddOnRequest = NamedTuple(
+      "addOnType" : AddOnType,
+      "autoSnapshotAddOnRequest" : (AutoSnapshotAddOnRequest)?
+    )
+
+    alias AddOnRequestList = Array(AddOnRequest)
+
+    alias AddOnType = String
+
+    alias Alarm = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "supportCode" : (string)?,
+      "monitoredResourceInfo" : (MonitoredResourceInfo)?,
+      "comparisonOperator" : (ComparisonOperator)?,
+      "evaluationPeriods" : (integer)?,
+      "period" : (MetricPeriod)?,
+      "threshold" : (double)?,
+      "datapointsToAlarm" : (integer)?,
+      "treatMissingData" : (TreatMissingData)?,
+      "statistic" : (MetricStatistic)?,
+      "metricName" : (MetricName)?,
+      "state" : (AlarmState)?,
+      "unit" : (MetricUnit)?,
+      "contactProtocols" : (ContactProtocolsList)?,
+      "notificationTriggers" : (NotificationTriggerList)?,
+      "notificationEnabled" : (boolean)?
+    )
+
+    alias AlarmState = String
+
+    alias AlarmsList = Array(Alarm)
+
+    alias AllocateStaticIpRequest = NamedTuple(
+      "staticIpName" : ResourceName
+    )
+
+    alias AllocateStaticIpResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias AttachCertificateToDistributionRequest = NamedTuple(
+      "distributionName" : ResourceName,
+      "certificateName" : ResourceName
+    )
+
+    alias AttachCertificateToDistributionResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias AttachDiskRequest = NamedTuple(
+      "diskName" : ResourceName,
+      "instanceName" : ResourceName,
+      "diskPath" : NonEmptyString
+    )
+
+    alias AttachDiskResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias AttachInstancesToLoadBalancerRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "instanceNames" : ResourceNameList
+    )
+
+    alias AttachInstancesToLoadBalancerResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias AttachLoadBalancerTlsCertificateRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "certificateName" : ResourceName
+    )
+
+    alias AttachLoadBalancerTlsCertificateResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias AttachStaticIpRequest = NamedTuple(
+      "staticIpName" : ResourceName,
+      "instanceName" : ResourceName
+    )
+
+    alias AttachStaticIpResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias AttachedDisk = NamedTuple(
+      "path" : (string)?,
+      "sizeInGb" : (integer)?
+    )
+
+    alias AttachedDiskList = Array(AttachedDisk)
+
+    alias AttachedDiskMap = Hash(ResourceName,DiskMapList)
+
+    alias AutoSnapshotAddOnRequest = NamedTuple(
+      "snapshotTimeOfDay" : (TimeOfDay)?
+    )
+
+    alias AutoSnapshotDate = String
+
+    alias AutoSnapshotDetails = NamedTuple(
+      "date" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "status" : (AutoSnapshotStatus)?,
+      "fromAttachedDisks" : (AttachedDiskList)?
+    )
+
+    alias AutoSnapshotDetailsList = Array(AutoSnapshotDetails)
+
+    alias AutoSnapshotStatus = String
+
+    alias AvailabilityZone = NamedTuple(
+      "zoneName" : (NonEmptyString)?,
+      "state" : (NonEmptyString)?
+    )
+
+    alias AvailabilityZoneList = Array(AvailabilityZone)
+
+    alias Base64 = String
+
+    alias BehaviorEnum = String
+
+    alias Blueprint = NamedTuple(
+      "blueprintId" : (NonEmptyString)?,
+      "name" : (ResourceName)?,
+      "group" : (NonEmptyString)?,
+      "type" : (BlueprintType)?,
+      "description" : (string)?,
+      "isActive" : (boolean)?,
+      "minPower" : (integer)?,
+      "version" : (string)?,
+      "versionCode" : (string)?,
+      "productUrl" : (string)?,
+      "licenseUrl" : (string)?,
+      "platform" : (InstancePlatform)?
+    )
+
+    alias BlueprintList = Array(Blueprint)
+
+    alias BlueprintType = String
+
+    alias Bundle = NamedTuple(
+      "price" : (float)?,
+      "cpuCount" : (integer)?,
+      "diskSizeInGb" : (integer)?,
+      "bundleId" : (NonEmptyString)?,
+      "instanceType" : (string)?,
+      "isActive" : (boolean)?,
+      "name" : (string)?,
+      "power" : (integer)?,
+      "ramSizeInGb" : (float)?,
+      "transferPerMonthInGb" : (integer)?,
+      "supportedPlatforms" : (InstancePlatformList)?
+    )
+
+    alias BundleList = Array(Bundle)
+
+    alias CacheBehavior = NamedTuple(
+      "behavior" : (BehaviorEnum)?
+    )
+
+    alias CacheBehaviorList = Array(CacheBehaviorPerPath)
+
+    alias CacheBehaviorPerPath = NamedTuple(
+      "path" : (string)?,
+      "behavior" : (BehaviorEnum)?
+    )
+
+    alias CacheSettings = NamedTuple(
+      "defaultTTL" : (long)?,
+      "minimumTTL" : (long)?,
+      "maximumTTL" : (long)?,
+      "allowedHTTPMethods" : (NonEmptyString)?,
+      "cachedHTTPMethods" : (NonEmptyString)?,
+      "forwardedCookies" : (CookieObject)?,
+      "forwardedHeaders" : (HeaderObject)?,
+      "forwardedQueryStrings" : (QueryStringObject)?
+    )
+
+    alias Certificate = NamedTuple(
+      "arn" : (NonEmptyString)?,
+      "name" : (CertificateName)?,
+      "domainName" : (DomainName)?,
+      "status" : (CertificateStatus)?,
+      "serialNumber" : (SerialNumber)?,
+      "subjectAlternativeNames" : (SubjectAlternativeNameList)?,
+      "domainValidationRecords" : (DomainValidationRecordList)?,
+      "requestFailureReason" : (RequestFailureReason)?,
+      "inUseResourceCount" : (InUseResourceCount)?,
+      "keyAlgorithm" : (KeyAlgorithm)?,
+      "createdAt" : (IsoDate)?,
+      "issuedAt" : (IsoDate)?,
+      "issuerCA" : (IssuerCA)?,
+      "notBefore" : (IsoDate)?,
+      "notAfter" : (IsoDate)?,
+      "eligibleToRenew" : (EligibleToRenew)?,
+      "renewalSummary" : (RenewalSummary)?,
+      "revokedAt" : (IsoDate)?,
+      "revocationReason" : (RevocationReason)?,
+      "tags" : (TagList)?,
+      "supportCode" : (string)?
+    )
+
+    alias CertificateName = String
+
+    alias CertificateStatus = String
+
+    alias CertificateStatusList = Array(CertificateStatus)
+
+    alias CertificateSummary = NamedTuple(
+      "certificateArn" : (NonEmptyString)?,
+      "certificateName" : (CertificateName)?,
+      "domainName" : (DomainName)?,
+      "certificateDetail" : (Certificate)?,
+      "tags" : (TagList)?
+    )
+
+    alias CertificateSummaryList = Array(CertificateSummary)
+
+    alias CloseInstancePublicPortsRequest = NamedTuple(
+      "portInfo" : PortInfo,
+      "instanceName" : ResourceName
+    )
+
+    alias CloseInstancePublicPortsResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias CloudFormationStackRecord = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "state" : (RecordState)?,
+      "sourceInfo" : (CloudFormationStackRecordSourceInfoList)?,
+      "destinationInfo" : (DestinationInfo)?
+    )
+
+    alias CloudFormationStackRecordList = Array(CloudFormationStackRecord)
+
+    alias CloudFormationStackRecordSourceInfo = NamedTuple(
+      "resourceType" : (CloudFormationStackRecordSourceType)?,
+      "name" : (NonEmptyString)?,
+      "arn" : (NonEmptyString)?
+    )
+
+    alias CloudFormationStackRecordSourceInfoList = Array(CloudFormationStackRecordSourceInfo)
+
+    alias CloudFormationStackRecordSourceType = String
+
+    alias ComparisonOperator = String
+
+    alias ContactMethod = NamedTuple(
+      "contactEndpoint" : (NonEmptyString)?,
+      "status" : (ContactMethodStatus)?,
+      "protocol" : (ContactProtocol)?,
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "supportCode" : (string)?
+    )
+
+    alias ContactMethodStatus = String
+
+    alias ContactMethodVerificationProtocol = String
+
+    alias ContactMethodsList = Array(ContactMethod)
+
+    alias ContactProtocol = String
+
+    alias ContactProtocolsList = Array(ContactProtocol)
+
+    alias Container = NamedTuple(
+      "image" : (string)?,
+      "command" : (StringList)?,
+      "environment" : (Environment)?,
+      "ports" : (PortMap)?
+    )
+
+    alias ContainerImage = NamedTuple(
+      "image" : (string)?,
+      "digest" : (string)?,
+      "createdAt" : (IsoDate)?
+    )
+
+    alias ContainerImageList = Array(ContainerImage)
+
+    alias ContainerLabel = String
+
+    alias ContainerMap = Hash(ContainerName,Container)
+
+    alias ContainerName = String
+
+    alias ContainerService = NamedTuple(
+      "containerServiceName" : (ContainerServiceName)?,
+      "arn" : (NonEmptyString)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "power" : (ContainerServicePowerName)?,
+      "powerId" : (string)?,
+      "state" : (ContainerServiceState)?,
+      "scale" : (ContainerServiceScale)?,
+      "currentDeployment" : (ContainerServiceDeployment)?,
+      "nextDeployment" : (ContainerServiceDeployment)?,
+      "isDisabled" : (boolean)?,
+      "principalArn" : (string)?,
+      "privateDomainName" : (string)?,
+      "publicDomainNames" : (ContainerServicePublicDomains)?,
+      "url" : (string)?
+    )
+
+    alias ContainerServiceDeployment = NamedTuple(
+      "version" : (integer)?,
+      "state" : (ContainerServiceDeploymentState)?,
+      "containers" : (ContainerMap)?,
+      "publicEndpoint" : (ContainerServiceEndpoint)?,
+      "createdAt" : (IsoDate)?
+    )
+
+    alias ContainerServiceDeploymentList = Array(ContainerServiceDeployment)
+
+    alias ContainerServiceDeploymentRequest = NamedTuple(
+      "containers" : (ContainerMap)?,
+      "publicEndpoint" : (EndpointRequest)?
+    )
+
+    alias ContainerServiceDeploymentState = String
+
+    alias ContainerServiceEndpoint = NamedTuple(
+      "containerName" : (string)?,
+      "containerPort" : (integer)?,
+      "healthCheck" : (ContainerServiceHealthCheckConfig)?
+    )
+
+    alias ContainerServiceHealthCheckConfig = NamedTuple(
+      "healthyThreshold" : (integer)?,
+      "unhealthyThreshold" : (integer)?,
+      "timeoutSeconds" : (integer)?,
+      "intervalSeconds" : (integer)?,
+      "path" : (string)?,
+      "successCodes" : (string)?
+    )
+
+    alias ContainerServiceList = Array(ContainerService)
+
+    alias ContainerServiceLogEvent = NamedTuple(
+      "createdAt" : (IsoDate)?,
+      "message" : (string)?
+    )
+
+    alias ContainerServiceLogEventList = Array(ContainerServiceLogEvent)
+
+    alias ContainerServiceMetadataEntry = Hash(string,string)
+
+    alias ContainerServiceMetadataEntryList = Array(ContainerServiceMetadataEntry)
+
+    alias ContainerServiceMetricName = String
+
+    alias ContainerServiceName = String
+
+    alias ContainerServicePower = NamedTuple(
+      "powerId" : (string)?,
+      "price" : (float)?,
+      "cpuCount" : (float)?,
+      "ramSizeInGb" : (float)?,
+      "name" : (string)?,
+      "isActive" : (boolean)?
+    )
+
+    alias ContainerServicePowerList = Array(ContainerServicePower)
+
+    alias ContainerServicePowerName = String
+
+    alias ContainerServiceProtocol = String
+
+    alias ContainerServicePublicDomains = Hash(string,ContainerServicePublicDomainsList)
+
+    alias ContainerServicePublicDomainsList = Array(string)
+
+    alias ContainerServiceRegistryLogin = NamedTuple(
+      "username" : (string)?,
+      "password" : (string)?,
+      "expiresAt" : (IsoDate)?,
+      "registry" : (string)?
+    )
+
+    alias ContainerServiceScale = Int32
+
+    alias ContainerServiceState = String
+
+    alias ContainerServicesListResult = NamedTuple(
+      "containerServices" : (ContainerServiceList)?
+    )
+
+    alias CookieObject = NamedTuple(
+      "option" : (ForwardValues)?,
+      "cookiesAllowList" : (StringList)?
+    )
+
+    alias CopySnapshotRequest = NamedTuple(
+      "sourceSnapshotName" : (ResourceName)?,
+      "sourceResourceName" : (string)?,
+      "restoreDate" : (string)?,
+      "useLatestRestorableAutoSnapshot" : (boolean)?,
+      "targetSnapshotName" : ResourceName,
+      "sourceRegion" : RegionName
+    )
+
+    alias CopySnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateCertificateRequest = NamedTuple(
+      "certificateName" : CertificateName,
+      "domainName" : DomainName,
+      "subjectAlternativeNames" : (SubjectAlternativeNameList)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateCertificateResult = NamedTuple(
+      "certificate" : (CertificateSummary)?,
+      "operations" : (OperationList)?
+    )
+
+    alias CreateCloudFormationStackRequest = NamedTuple(
+      "instances" : InstanceEntryList
+    )
+
+    alias CreateCloudFormationStackResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateContactMethodRequest = NamedTuple(
+      "protocol" : ContactProtocol,
+      "contactEndpoint" : StringMax256
+    )
+
+    alias CreateContactMethodResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateContainerServiceDeploymentRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "containers" : (ContainerMap)?,
+      "publicEndpoint" : (EndpointRequest)?
+    )
+
+    alias CreateContainerServiceDeploymentResult = NamedTuple(
+      "containerService" : (ContainerService)?
+    )
+
+    alias CreateContainerServiceRegistryLoginRequest = NamedTuple(
+      
+    )
+
+    alias CreateContainerServiceRegistryLoginResult = NamedTuple(
+      "registryLogin" : (ContainerServiceRegistryLogin)?
+    )
+
+    alias CreateContainerServiceRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "power" : ContainerServicePowerName,
+      "scale" : ContainerServiceScale,
+      "tags" : (TagList)?,
+      "publicDomainNames" : (ContainerServicePublicDomains)?,
+      "deployment" : (ContainerServiceDeploymentRequest)?
+    )
+
+    alias CreateContainerServiceResult = NamedTuple(
+      "containerService" : (ContainerService)?
+    )
+
+    alias CreateDiskFromSnapshotRequest = NamedTuple(
+      "diskName" : ResourceName,
+      "diskSnapshotName" : (ResourceName)?,
+      "availabilityZone" : NonEmptyString,
+      "sizeInGb" : integer,
+      "tags" : (TagList)?,
+      "addOns" : (AddOnRequestList)?,
+      "sourceDiskName" : (string)?,
+      "restoreDate" : (string)?,
+      "useLatestRestorableAutoSnapshot" : (boolean)?
+    )
+
+    alias CreateDiskFromSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateDiskRequest = NamedTuple(
+      "diskName" : ResourceName,
+      "availabilityZone" : NonEmptyString,
+      "sizeInGb" : integer,
+      "tags" : (TagList)?,
+      "addOns" : (AddOnRequestList)?
+    )
+
+    alias CreateDiskResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateDiskSnapshotRequest = NamedTuple(
+      "diskName" : (ResourceName)?,
+      "diskSnapshotName" : ResourceName,
+      "instanceName" : (ResourceName)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDiskSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateDistributionRequest = NamedTuple(
+      "distributionName" : ResourceName,
+      "origin" : InputOrigin,
+      "defaultCacheBehavior" : CacheBehavior,
+      "cacheBehaviorSettings" : (CacheSettings)?,
+      "cacheBehaviors" : (CacheBehaviorList)?,
+      "bundleId" : string,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDistributionResult = NamedTuple(
+      "distribution" : (LightsailDistribution)?,
+      "operation" : (Operation)?
+    )
+
+    alias CreateDomainEntryRequest = NamedTuple(
+      "domainName" : DomainName,
+      "domainEntry" : DomainEntry
+    )
+
+    alias CreateDomainEntryResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias CreateDomainRequest = NamedTuple(
+      "domainName" : DomainName,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDomainResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias CreateInstanceSnapshotRequest = NamedTuple(
+      "instanceSnapshotName" : ResourceName,
+      "instanceName" : ResourceName,
+      "tags" : (TagList)?
+    )
+
+    alias CreateInstanceSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateInstancesFromSnapshotRequest = NamedTuple(
+      "instanceNames" : StringList,
+      "attachedDiskMapping" : (AttachedDiskMap)?,
+      "availabilityZone" : string,
+      "instanceSnapshotName" : (ResourceName)?,
+      "bundleId" : NonEmptyString,
+      "userData" : (string)?,
+      "keyPairName" : (ResourceName)?,
+      "tags" : (TagList)?,
+      "addOns" : (AddOnRequestList)?,
+      "sourceInstanceName" : (string)?,
+      "restoreDate" : (string)?,
+      "useLatestRestorableAutoSnapshot" : (boolean)?
+    )
+
+    alias CreateInstancesFromSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateInstancesRequest = NamedTuple(
+      "instanceNames" : StringList,
+      "availabilityZone" : string,
+      "customImageName" : (ResourceName)?,
+      "blueprintId" : NonEmptyString,
+      "bundleId" : NonEmptyString,
+      "userData" : (string)?,
+      "keyPairName" : (ResourceName)?,
+      "tags" : (TagList)?,
+      "addOns" : (AddOnRequestList)?
+    )
+
+    alias CreateInstancesResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateKeyPairRequest = NamedTuple(
+      "keyPairName" : ResourceName,
+      "tags" : (TagList)?
+    )
+
+    alias CreateKeyPairResult = NamedTuple(
+      "keyPair" : (KeyPair)?,
+      "publicKeyBase64" : (Base64)?,
+      "privateKeyBase64" : (Base64)?,
+      "operation" : (Operation)?
+    )
+
+    alias CreateLoadBalancerRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "instancePort" : Port,
+      "healthCheckPath" : (string)?,
+      "certificateName" : (ResourceName)?,
+      "certificateDomainName" : (DomainName)?,
+      "certificateAlternativeNames" : (DomainNameList)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateLoadBalancerResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateLoadBalancerTlsCertificateRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "certificateName" : ResourceName,
+      "certificateDomainName" : DomainName,
+      "certificateAlternativeNames" : (DomainNameList)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateLoadBalancerTlsCertificateResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateRelationalDatabaseFromSnapshotRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "availabilityZone" : (string)?,
+      "publiclyAccessible" : (boolean)?,
+      "relationalDatabaseSnapshotName" : (ResourceName)?,
+      "relationalDatabaseBundleId" : (string)?,
+      "sourceRelationalDatabaseName" : (ResourceName)?,
+      "restoreTime" : (IsoDate)?,
+      "useLatestRestorableTime" : (boolean)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateRelationalDatabaseFromSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "availabilityZone" : (string)?,
+      "relationalDatabaseBlueprintId" : string,
+      "relationalDatabaseBundleId" : string,
+      "masterDatabaseName" : string,
+      "masterUsername" : string,
+      "masterUserPassword" : (SensitiveString)?,
+      "preferredBackupWindow" : (string)?,
+      "preferredMaintenanceWindow" : (string)?,
+      "publiclyAccessible" : (boolean)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateRelationalDatabaseResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias CreateRelationalDatabaseSnapshotRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "relationalDatabaseSnapshotName" : ResourceName,
+      "tags" : (TagList)?
+    )
+
+    alias CreateRelationalDatabaseSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteAlarmRequest = NamedTuple(
+      "alarmName" : ResourceName
+    )
+
+    alias DeleteAlarmResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteAutoSnapshotRequest = NamedTuple(
+      "resourceName" : ResourceName,
+      "date" : AutoSnapshotDate
+    )
+
+    alias DeleteAutoSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteCertificateRequest = NamedTuple(
+      "certificateName" : CertificateName
+    )
+
+    alias DeleteCertificateResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteContactMethodRequest = NamedTuple(
+      "protocol" : ContactProtocol
+    )
+
+    alias DeleteContactMethodResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteContainerImageRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "image" : string
+    )
+
+    alias DeleteContainerImageResult = NamedTuple(
+      
+    )
+
+    alias DeleteContainerServiceRequest = NamedTuple(
+      "serviceName" : ContainerServiceName
+    )
+
+    alias DeleteContainerServiceResult = NamedTuple(
+      
+    )
+
+    alias DeleteDiskRequest = NamedTuple(
+      "diskName" : ResourceName,
+      "forceDeleteAddOns" : (boolean)?
+    )
+
+    alias DeleteDiskResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteDiskSnapshotRequest = NamedTuple(
+      "diskSnapshotName" : ResourceName
+    )
+
+    alias DeleteDiskSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteDistributionRequest = NamedTuple(
+      "distributionName" : (ResourceName)?
+    )
+
+    alias DeleteDistributionResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias DeleteDomainEntryRequest = NamedTuple(
+      "domainName" : DomainName,
+      "domainEntry" : DomainEntry
+    )
+
+    alias DeleteDomainEntryResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias DeleteDomainRequest = NamedTuple(
+      "domainName" : DomainName
+    )
+
+    alias DeleteDomainResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias DeleteInstanceRequest = NamedTuple(
+      "instanceName" : ResourceName,
+      "forceDeleteAddOns" : (boolean)?
+    )
+
+    alias DeleteInstanceResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteInstanceSnapshotRequest = NamedTuple(
+      "instanceSnapshotName" : ResourceName
+    )
+
+    alias DeleteInstanceSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteKeyPairRequest = NamedTuple(
+      "keyPairName" : ResourceName
+    )
+
+    alias DeleteKeyPairResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias DeleteKnownHostKeysRequest = NamedTuple(
+      "instanceName" : ResourceName
+    )
+
+    alias DeleteKnownHostKeysResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteLoadBalancerRequest = NamedTuple(
+      "loadBalancerName" : ResourceName
+    )
+
+    alias DeleteLoadBalancerResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteLoadBalancerTlsCertificateRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "certificateName" : ResourceName,
+      "force" : (boolean)?
+    )
+
+    alias DeleteLoadBalancerTlsCertificateResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "skipFinalSnapshot" : (boolean)?,
+      "finalRelationalDatabaseSnapshotName" : (ResourceName)?
+    )
+
+    alias DeleteRelationalDatabaseResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DeleteRelationalDatabaseSnapshotRequest = NamedTuple(
+      "relationalDatabaseSnapshotName" : ResourceName
+    )
+
+    alias DeleteRelationalDatabaseSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DestinationInfo = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "service" : (NonEmptyString)?
+    )
+
+    alias DetachCertificateFromDistributionRequest = NamedTuple(
+      "distributionName" : ResourceName
+    )
+
+    alias DetachCertificateFromDistributionResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias DetachDiskRequest = NamedTuple(
+      "diskName" : ResourceName
+    )
+
+    alias DetachDiskResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DetachInstancesFromLoadBalancerRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "instanceNames" : ResourceNameList
+    )
+
+    alias DetachInstancesFromLoadBalancerResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DetachStaticIpRequest = NamedTuple(
+      "staticIpName" : ResourceName
+    )
+
+    alias DetachStaticIpResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias DisableAddOnRequest = NamedTuple(
+      "addOnType" : AddOnType,
+      "resourceName" : ResourceName
+    )
+
+    alias DisableAddOnResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias Disk = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "addOns" : (AddOnList)?,
+      "sizeInGb" : (integer)?,
+      "isSystemDisk" : (boolean)?,
+      "iops" : (integer)?,
+      "path" : (string)?,
+      "state" : (DiskState)?,
+      "attachedTo" : (ResourceName)?,
+      "isAttached" : (boolean)?,
+      "attachmentState" : (string)?,
+      "gbInUse" : (integer)?
+    )
+
+    alias DiskInfo = NamedTuple(
+      "name" : (string)?,
+      "path" : (NonEmptyString)?,
+      "sizeInGb" : (integer)?,
+      "isSystemDisk" : (boolean)?
+    )
+
+    alias DiskInfoList = Array(DiskInfo)
+
+    alias DiskList = Array(Disk)
+
+    alias DiskMap = NamedTuple(
+      "originalDiskPath" : (NonEmptyString)?,
+      "newDiskName" : (ResourceName)?
+    )
+
+    alias DiskMapList = Array(DiskMap)
+
+    alias DiskSnapshot = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "sizeInGb" : (integer)?,
+      "state" : (DiskSnapshotState)?,
+      "progress" : (string)?,
+      "fromDiskName" : (ResourceName)?,
+      "fromDiskArn" : (NonEmptyString)?,
+      "fromInstanceName" : (ResourceName)?,
+      "fromInstanceArn" : (NonEmptyString)?,
+      "isFromAutoSnapshot" : (boolean)?
+    )
+
+    alias DiskSnapshotInfo = NamedTuple(
+      "sizeInGb" : (integer)?
+    )
+
+    alias DiskSnapshotList = Array(DiskSnapshot)
+
+    alias DiskSnapshotState = String
+
+    alias DiskState = String
+
+    alias DistributionBundle = NamedTuple(
+      "bundleId" : (string)?,
+      "name" : (string)?,
+      "price" : (float)?,
+      "transferPerMonthInGb" : (integer)?,
+      "isActive" : (boolean)?
+    )
+
+    alias DistributionBundleList = Array(DistributionBundle)
+
+    alias DistributionList = Array(LightsailDistribution)
+
+    alias DistributionMetricName = String
+
+    alias Domain = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "domainEntries" : (DomainEntryList)?
+    )
+
+    alias DomainEntry = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "name" : (DomainName)?,
+      "target" : (string)?,
+      "isAlias" : (boolean)?,
+      "type" : (DomainEntryType)?,
+      "options" : (DomainEntryOptions)?
+    )
+
+    alias DomainEntryList = Array(DomainEntry)
+
+    alias DomainEntryOptions = Hash(DomainEntryOptionsKeys,string)
+
+    alias DomainEntryOptionsKeys = String
+
+    alias DomainEntryType = String
+
+    alias DomainList = Array(Domain)
+
+    alias DomainName = String
+
+    alias DomainNameList = Array(DomainName)
+
+    alias DomainValidationRecord = NamedTuple(
+      "domainName" : (DomainName)?,
+      "resourceRecord" : (ResourceRecord)?
+    )
+
+    alias DomainValidationRecordList = Array(DomainValidationRecord)
+
+    alias DownloadDefaultKeyPairRequest = NamedTuple(
+      
+    )
+
+    alias DownloadDefaultKeyPairResult = NamedTuple(
+      "publicKeyBase64" : (Base64)?,
+      "privateKeyBase64" : (Base64)?
+    )
+
+    alias EligibleToRenew = String
+
+    alias EnableAddOnRequest = NamedTuple(
+      "resourceName" : ResourceName,
+      "addOnRequest" : AddOnRequest
+    )
+
+    alias EnableAddOnResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias EndpointRequest = NamedTuple(
+      "containerName" : string,
+      "containerPort" : integer,
+      "healthCheck" : (ContainerServiceHealthCheckConfig)?
+    )
+
+    alias Environment = Hash(string,string)
+
+    alias ExportSnapshotRecord = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "state" : (RecordState)?,
+      "sourceInfo" : (ExportSnapshotRecordSourceInfo)?,
+      "destinationInfo" : (DestinationInfo)?
+    )
+
+    alias ExportSnapshotRecordList = Array(ExportSnapshotRecord)
+
+    alias ExportSnapshotRecordSourceInfo = NamedTuple(
+      "resourceType" : (ExportSnapshotRecordSourceType)?,
+      "createdAt" : (IsoDate)?,
+      "name" : (NonEmptyString)?,
+      "arn" : (NonEmptyString)?,
+      "fromResourceName" : (NonEmptyString)?,
+      "fromResourceArn" : (NonEmptyString)?,
+      "instanceSnapshotInfo" : (InstanceSnapshotInfo)?,
+      "diskSnapshotInfo" : (DiskSnapshotInfo)?
+    )
+
+    alias ExportSnapshotRecordSourceType = String
+
+    alias ExportSnapshotRequest = NamedTuple(
+      "sourceSnapshotName" : ResourceName
+    )
+
+    alias ExportSnapshotResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias ForwardValues = String
+
+    alias GetActiveNamesRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetActiveNamesResult = NamedTuple(
+      "activeNames" : (StringList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetAlarmsRequest = NamedTuple(
+      "alarmName" : (ResourceName)?,
+      "pageToken" : (string)?,
+      "monitoredResourceName" : (ResourceName)?
+    )
+
+    alias GetAlarmsResult = NamedTuple(
+      "alarms" : (AlarmsList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetAutoSnapshotsRequest = NamedTuple(
+      "resourceName" : ResourceName
+    )
+
+    alias GetAutoSnapshotsResult = NamedTuple(
+      "resourceName" : (ResourceName)?,
+      "resourceType" : (ResourceType)?,
+      "autoSnapshots" : (AutoSnapshotDetailsList)?
+    )
+
+    alias GetBlueprintsRequest = NamedTuple(
+      "includeInactive" : (boolean)?,
+      "pageToken" : (string)?
+    )
+
+    alias GetBlueprintsResult = NamedTuple(
+      "blueprints" : (BlueprintList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetBundlesRequest = NamedTuple(
+      "includeInactive" : (boolean)?,
+      "pageToken" : (string)?
+    )
+
+    alias GetBundlesResult = NamedTuple(
+      "bundles" : (BundleList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetCertificatesRequest = NamedTuple(
+      "certificateStatuses" : (CertificateStatusList)?,
+      "includeCertificateDetails" : (IncludeCertificateDetails)?,
+      "certificateName" : (CertificateName)?
+    )
+
+    alias GetCertificatesResult = NamedTuple(
+      "certificates" : (CertificateSummaryList)?
+    )
+
+    alias GetCloudFormationStackRecordsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetCloudFormationStackRecordsResult = NamedTuple(
+      "cloudFormationStackRecords" : (CloudFormationStackRecordList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetContactMethodsRequest = NamedTuple(
+      "protocols" : (ContactProtocolsList)?
+    )
+
+    alias GetContactMethodsResult = NamedTuple(
+      "contactMethods" : (ContactMethodsList)?
+    )
+
+    alias GetContainerAPIMetadataRequest = NamedTuple(
+      
+    )
+
+    alias GetContainerAPIMetadataResult = NamedTuple(
+      "metadata" : (ContainerServiceMetadataEntryList)?
+    )
+
+    alias GetContainerImagesRequest = NamedTuple(
+      "serviceName" : ContainerServiceName
+    )
+
+    alias GetContainerImagesResult = NamedTuple(
+      "containerImages" : (ContainerImageList)?
+    )
+
+    alias GetContainerLogRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "containerName" : string,
+      "startTime" : (IsoDate)?,
+      "endTime" : (IsoDate)?,
+      "filterPattern" : (string)?,
+      "pageToken" : (string)?
+    )
+
+    alias GetContainerLogResult = NamedTuple(
+      "logEvents" : (ContainerServiceLogEventList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetContainerServiceDeploymentsRequest = NamedTuple(
+      "serviceName" : ContainerServiceName
+    )
+
+    alias GetContainerServiceDeploymentsResult = NamedTuple(
+      "deployments" : (ContainerServiceDeploymentList)?
+    )
+
+    alias GetContainerServiceMetricDataRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "metricName" : ContainerServiceMetricName,
+      "startTime" : IsoDate,
+      "endTime" : IsoDate,
+      "period" : MetricPeriod,
+      "statistics" : MetricStatisticList
+    )
+
+    alias GetContainerServiceMetricDataResult = NamedTuple(
+      "metricName" : (ContainerServiceMetricName)?,
+      "metricData" : (MetricDatapointList)?
+    )
+
+    alias GetContainerServicePowersRequest = NamedTuple(
+      
+    )
+
+    alias GetContainerServicePowersResult = NamedTuple(
+      "powers" : (ContainerServicePowerList)?
+    )
+
+    alias GetContainerServicesRequest = NamedTuple(
+      "serviceName" : (ContainerServiceName)?
+    )
+
+    alias GetDiskRequest = NamedTuple(
+      "diskName" : ResourceName
+    )
+
+    alias GetDiskResult = NamedTuple(
+      "disk" : (Disk)?
+    )
+
+    alias GetDiskSnapshotRequest = NamedTuple(
+      "diskSnapshotName" : ResourceName
+    )
+
+    alias GetDiskSnapshotResult = NamedTuple(
+      "diskSnapshot" : (DiskSnapshot)?
+    )
+
+    alias GetDiskSnapshotsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetDiskSnapshotsResult = NamedTuple(
+      "diskSnapshots" : (DiskSnapshotList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetDisksRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetDisksResult = NamedTuple(
+      "disks" : (DiskList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetDistributionBundlesRequest = NamedTuple(
+      
+    )
+
+    alias GetDistributionBundlesResult = NamedTuple(
+      "bundles" : (DistributionBundleList)?
+    )
+
+    alias GetDistributionLatestCacheResetRequest = NamedTuple(
+      "distributionName" : (ResourceName)?
+    )
+
+    alias GetDistributionLatestCacheResetResult = NamedTuple(
+      "status" : (string)?,
+      "createTime" : (IsoDate)?
+    )
+
+    alias GetDistributionMetricDataRequest = NamedTuple(
+      "distributionName" : ResourceName,
+      "metricName" : DistributionMetricName,
+      "startTime" : timestamp,
+      "endTime" : timestamp,
+      "period" : MetricPeriod,
+      "unit" : MetricUnit,
+      "statistics" : MetricStatisticList
+    )
+
+    alias GetDistributionMetricDataResult = NamedTuple(
+      "metricName" : (DistributionMetricName)?,
+      "metricData" : (MetricDatapointList)?
+    )
+
+    alias GetDistributionsRequest = NamedTuple(
+      "distributionName" : (ResourceName)?,
+      "pageToken" : (string)?
+    )
+
+    alias GetDistributionsResult = NamedTuple(
+      "distributions" : (DistributionList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetDomainRequest = NamedTuple(
+      "domainName" : DomainName
+    )
+
+    alias GetDomainResult = NamedTuple(
+      "domain" : (Domain)?
+    )
+
+    alias GetDomainsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetDomainsResult = NamedTuple(
+      "domains" : (DomainList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetExportSnapshotRecordsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetExportSnapshotRecordsResult = NamedTuple(
+      "exportSnapshotRecords" : (ExportSnapshotRecordList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetInstanceAccessDetailsRequest = NamedTuple(
+      "instanceName" : ResourceName,
+      "protocol" : (InstanceAccessProtocol)?
+    )
+
+    alias GetInstanceAccessDetailsResult = NamedTuple(
+      "accessDetails" : (InstanceAccessDetails)?
+    )
+
+    alias GetInstanceMetricDataRequest = NamedTuple(
+      "instanceName" : ResourceName,
+      "metricName" : InstanceMetricName,
+      "period" : MetricPeriod,
+      "startTime" : timestamp,
+      "endTime" : timestamp,
+      "unit" : MetricUnit,
+      "statistics" : MetricStatisticList
+    )
+
+    alias GetInstanceMetricDataResult = NamedTuple(
+      "metricName" : (InstanceMetricName)?,
+      "metricData" : (MetricDatapointList)?
+    )
+
+    alias GetInstancePortStatesRequest = NamedTuple(
+      "instanceName" : ResourceName
+    )
+
+    alias GetInstancePortStatesResult = NamedTuple(
+      "portStates" : (InstancePortStateList)?
+    )
+
+    alias GetInstanceRequest = NamedTuple(
+      "instanceName" : ResourceName
+    )
+
+    alias GetInstanceResult = NamedTuple(
+      "instance" : (Instance)?
+    )
+
+    alias GetInstanceSnapshotRequest = NamedTuple(
+      "instanceSnapshotName" : ResourceName
+    )
+
+    alias GetInstanceSnapshotResult = NamedTuple(
+      "instanceSnapshot" : (InstanceSnapshot)?
+    )
+
+    alias GetInstanceSnapshotsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetInstanceSnapshotsResult = NamedTuple(
+      "instanceSnapshots" : (InstanceSnapshotList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetInstanceStateRequest = NamedTuple(
+      "instanceName" : ResourceName
+    )
+
+    alias GetInstanceStateResult = NamedTuple(
+      "state" : (InstanceState)?
+    )
+
+    alias GetInstancesRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetInstancesResult = NamedTuple(
+      "instances" : (InstanceList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetKeyPairRequest = NamedTuple(
+      "keyPairName" : ResourceName
+    )
+
+    alias GetKeyPairResult = NamedTuple(
+      "keyPair" : (KeyPair)?
+    )
+
+    alias GetKeyPairsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetKeyPairsResult = NamedTuple(
+      "keyPairs" : (KeyPairList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetLoadBalancerMetricDataRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "metricName" : LoadBalancerMetricName,
+      "period" : MetricPeriod,
+      "startTime" : timestamp,
+      "endTime" : timestamp,
+      "unit" : MetricUnit,
+      "statistics" : MetricStatisticList
+    )
+
+    alias GetLoadBalancerMetricDataResult = NamedTuple(
+      "metricName" : (LoadBalancerMetricName)?,
+      "metricData" : (MetricDatapointList)?
+    )
+
+    alias GetLoadBalancerRequest = NamedTuple(
+      "loadBalancerName" : ResourceName
+    )
+
+    alias GetLoadBalancerResult = NamedTuple(
+      "loadBalancer" : (LoadBalancer)?
+    )
+
+    alias GetLoadBalancerTlsCertificatesRequest = NamedTuple(
+      "loadBalancerName" : ResourceName
+    )
+
+    alias GetLoadBalancerTlsCertificatesResult = NamedTuple(
+      "tlsCertificates" : (LoadBalancerTlsCertificateList)?
+    )
+
+    alias GetLoadBalancersRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetLoadBalancersResult = NamedTuple(
+      "loadBalancers" : (LoadBalancerList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetOperationRequest = NamedTuple(
+      "operationId" : NonEmptyString
+    )
+
+    alias GetOperationResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias GetOperationsForResourceRequest = NamedTuple(
+      "resourceName" : ResourceName,
+      "pageToken" : (string)?
+    )
+
+    alias GetOperationsForResourceResult = NamedTuple(
+      "operations" : (OperationList)?,
+      "nextPageCount" : (string)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetOperationsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetOperationsResult = NamedTuple(
+      "operations" : (OperationList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetRegionsRequest = NamedTuple(
+      "includeAvailabilityZones" : (boolean)?,
+      "includeRelationalDatabaseAvailabilityZones" : (boolean)?
+    )
+
+    alias GetRegionsResult = NamedTuple(
+      "regions" : (RegionList)?
+    )
+
+    alias GetRelationalDatabaseBlueprintsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseBlueprintsResult = NamedTuple(
+      "blueprints" : (RelationalDatabaseBlueprintList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseBundlesRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseBundlesResult = NamedTuple(
+      "bundles" : (RelationalDatabaseBundleList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseEventsRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "durationInMinutes" : (integer)?,
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseEventsResult = NamedTuple(
+      "relationalDatabaseEvents" : (RelationalDatabaseEventList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseLogEventsRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "logStreamName" : string,
+      "startTime" : (IsoDate)?,
+      "endTime" : (IsoDate)?,
+      "startFromHead" : (boolean)?,
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseLogEventsResult = NamedTuple(
+      "resourceLogEvents" : (LogEventList)?,
+      "nextBackwardToken" : (string)?,
+      "nextForwardToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseLogStreamsRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName
+    )
+
+    alias GetRelationalDatabaseLogStreamsResult = NamedTuple(
+      "logStreams" : (StringList)?
+    )
+
+    alias GetRelationalDatabaseMasterUserPasswordRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "passwordVersion" : (RelationalDatabasePasswordVersion)?
+    )
+
+    alias GetRelationalDatabaseMasterUserPasswordResult = NamedTuple(
+      "masterUserPassword" : (SensitiveString)?,
+      "createdAt" : (IsoDate)?
+    )
+
+    alias GetRelationalDatabaseMetricDataRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "metricName" : RelationalDatabaseMetricName,
+      "period" : MetricPeriod,
+      "startTime" : IsoDate,
+      "endTime" : IsoDate,
+      "unit" : MetricUnit,
+      "statistics" : MetricStatisticList
+    )
+
+    alias GetRelationalDatabaseMetricDataResult = NamedTuple(
+      "metricName" : (RelationalDatabaseMetricName)?,
+      "metricData" : (MetricDatapointList)?
+    )
+
+    alias GetRelationalDatabaseParametersRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseParametersResult = NamedTuple(
+      "parameters" : (RelationalDatabaseParameterList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName
+    )
+
+    alias GetRelationalDatabaseResult = NamedTuple(
+      "relationalDatabase" : (RelationalDatabase)?
+    )
+
+    alias GetRelationalDatabaseSnapshotRequest = NamedTuple(
+      "relationalDatabaseSnapshotName" : ResourceName
+    )
+
+    alias GetRelationalDatabaseSnapshotResult = NamedTuple(
+      "relationalDatabaseSnapshot" : (RelationalDatabaseSnapshot)?
+    )
+
+    alias GetRelationalDatabaseSnapshotsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabaseSnapshotsResult = NamedTuple(
+      "relationalDatabaseSnapshots" : (RelationalDatabaseSnapshotList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetRelationalDatabasesRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetRelationalDatabasesResult = NamedTuple(
+      "relationalDatabases" : (RelationalDatabaseList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias GetStaticIpRequest = NamedTuple(
+      "staticIpName" : ResourceName
+    )
+
+    alias GetStaticIpResult = NamedTuple(
+      "staticIp" : (StaticIp)?
+    )
+
+    alias GetStaticIpsRequest = NamedTuple(
+      "pageToken" : (string)?
+    )
+
+    alias GetStaticIpsResult = NamedTuple(
+      "staticIps" : (StaticIpList)?,
+      "nextPageToken" : (string)?
+    )
+
+    alias HeaderEnum = String
+
+    alias HeaderForwardList = Array(HeaderEnum)
+
+    alias HeaderObject = NamedTuple(
+      "option" : (ForwardValues)?,
+      "headersAllowList" : (HeaderForwardList)?
+    )
+
+    alias HostKeyAttributes = NamedTuple(
+      "algorithm" : (string)?,
+      "publicKey" : (string)?,
+      "witnessedAt" : (IsoDate)?,
+      "fingerprintSHA1" : (string)?,
+      "fingerprintSHA256" : (string)?,
+      "notValidBefore" : (IsoDate)?,
+      "notValidAfter" : (IsoDate)?
+    )
+
+    alias HostKeysList = Array(HostKeyAttributes)
+
+    alias ImportKeyPairRequest = NamedTuple(
+      "keyPairName" : ResourceName,
+      "publicKeyBase64" : Base64
+    )
+
+    alias ImportKeyPairResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias InUseResourceCount = Int32
+
+    alias IncludeCertificateDetails = Bool
+
+    alias InputOrigin = NamedTuple(
+      "name" : (ResourceName)?,
+      "regionName" : (RegionName)?,
+      "protocolPolicy" : (OriginProtocolPolicyEnum)?
+    )
+
+    alias Instance = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "blueprintId" : (NonEmptyString)?,
+      "blueprintName" : (NonEmptyString)?,
+      "bundleId" : (NonEmptyString)?,
+      "addOns" : (AddOnList)?,
+      "isStaticIp" : (boolean)?,
+      "privateIpAddress" : (IpAddress)?,
+      "publicIpAddress" : (IpAddress)?,
+      "ipv6Address" : (IpV6Address)?,
+      "hardware" : (InstanceHardware)?,
+      "networking" : (InstanceNetworking)?,
+      "state" : (InstanceState)?,
+      "username" : (NonEmptyString)?,
+      "sshKeyName" : (ResourceName)?
+    )
+
+    alias InstanceAccessDetails = NamedTuple(
+      "certKey" : (string)?,
+      "expiresAt" : (IsoDate)?,
+      "ipAddress" : (IpAddress)?,
+      "password" : (string)?,
+      "passwordData" : (PasswordData)?,
+      "privateKey" : (string)?,
+      "protocol" : (InstanceAccessProtocol)?,
+      "instanceName" : (ResourceName)?,
+      "username" : (string)?,
+      "hostKeys" : (HostKeysList)?
+    )
+
+    alias InstanceAccessProtocol = String
+
+    alias InstanceEntry = NamedTuple(
+      "sourceName" : ResourceName,
+      "instanceType" : NonEmptyString,
+      "portInfoSource" : PortInfoSourceType,
+      "userData" : (string)?,
+      "availabilityZone" : string
+    )
+
+    alias InstanceEntryList = Array(InstanceEntry)
+
+    alias InstanceHardware = NamedTuple(
+      "cpuCount" : (integer)?,
+      "disks" : (DiskList)?,
+      "ramSizeInGb" : (float)?
+    )
+
+    alias InstanceHealthReason = String
+
+    alias InstanceHealthState = String
+
+    alias InstanceHealthSummary = NamedTuple(
+      "instanceName" : (ResourceName)?,
+      "instanceHealth" : (InstanceHealthState)?,
+      "instanceHealthReason" : (InstanceHealthReason)?
+    )
+
+    alias InstanceHealthSummaryList = Array(InstanceHealthSummary)
+
+    alias InstanceList = Array(Instance)
+
+    alias InstanceMetricName = String
+
+    alias InstanceNetworking = NamedTuple(
+      "monthlyTransfer" : (MonthlyTransfer)?,
+      "ports" : (InstancePortInfoList)?
+    )
+
+    alias InstancePlatform = String
+
+    alias InstancePlatformList = Array(InstancePlatform)
+
+    alias InstancePortInfo = NamedTuple(
+      "fromPort" : (Port)?,
+      "toPort" : (Port)?,
+      "protocol" : (NetworkProtocol)?,
+      "accessFrom" : (string)?,
+      "accessType" : (PortAccessType)?,
+      "commonName" : (string)?,
+      "accessDirection" : (AccessDirection)?,
+      "cidrs" : (StringList)?,
+      "cidrListAliases" : (StringList)?
+    )
+
+    alias InstancePortInfoList = Array(InstancePortInfo)
+
+    alias InstancePortState = NamedTuple(
+      "fromPort" : (Port)?,
+      "toPort" : (Port)?,
+      "protocol" : (NetworkProtocol)?,
+      "state" : (PortState)?,
+      "cidrs" : (StringList)?,
+      "cidrListAliases" : (StringList)?
+    )
+
+    alias InstancePortStateList = Array(InstancePortState)
+
+    alias InstanceSnapshot = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "state" : (InstanceSnapshotState)?,
+      "progress" : (string)?,
+      "fromAttachedDisks" : (DiskList)?,
+      "fromInstanceName" : (ResourceName)?,
+      "fromInstanceArn" : (NonEmptyString)?,
+      "fromBlueprintId" : (string)?,
+      "fromBundleId" : (string)?,
+      "isFromAutoSnapshot" : (boolean)?,
+      "sizeInGb" : (integer)?
+    )
+
+    alias InstanceSnapshotInfo = NamedTuple(
+      "fromBundleId" : (NonEmptyString)?,
+      "fromBlueprintId" : (NonEmptyString)?,
+      "fromDiskInfo" : (DiskInfoList)?
+    )
+
+    alias InstanceSnapshotList = Array(InstanceSnapshot)
+
+    alias InstanceSnapshotState = String
+
+    alias InstanceState = NamedTuple(
+      "code" : (integer)?,
+      "name" : (string)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias IpAddress = String
+
+    alias IpV6Address = String
+
+    alias IsVpcPeeredRequest = NamedTuple(
+      
+    )
+
+    alias IsVpcPeeredResult = NamedTuple(
+      "isPeered" : (boolean)?
+    )
+
+    alias IsoDate = String | UInt64 | Time
+
+    alias IssuerCA = String
+
+    alias KeyAlgorithm = String
+
+    alias KeyPair = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "fingerprint" : (Base64)?
+    )
+
+    alias KeyPairList = Array(KeyPair)
+
+    alias LightsailDistribution = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "alternativeDomainNames" : (StringList)?,
+      "status" : (string)?,
+      "isEnabled" : (boolean)?,
+      "domainName" : (string)?,
+      "bundleId" : (string)?,
+      "certificateName" : (ResourceName)?,
+      "origin" : (Origin)?,
+      "originPublicDNS" : (string)?,
+      "defaultCacheBehavior" : (CacheBehavior)?,
+      "cacheBehaviorSettings" : (CacheSettings)?,
+      "cacheBehaviors" : (CacheBehaviorList)?,
+      "ableToUpdateBundle" : (boolean)?,
+      "tags" : (TagList)?
+    )
+
+    alias LoadBalancer = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "dnsName" : (NonEmptyString)?,
+      "state" : (LoadBalancerState)?,
+      "protocol" : (LoadBalancerProtocol)?,
+      "publicPorts" : (PortList)?,
+      "healthCheckPath" : (NonEmptyString)?,
+      "instancePort" : (integer)?,
+      "instanceHealthSummary" : (InstanceHealthSummaryList)?,
+      "tlsCertificateSummaries" : (LoadBalancerTlsCertificateSummaryList)?,
+      "configurationOptions" : (LoadBalancerConfigurationOptions)?
+    )
+
+    alias LoadBalancerAttributeName = String
+
+    alias LoadBalancerConfigurationOptions = Hash(LoadBalancerAttributeName,string)
+
+    alias LoadBalancerList = Array(LoadBalancer)
+
+    alias LoadBalancerMetricName = String
+
+    alias LoadBalancerProtocol = String
+
+    alias LoadBalancerState = String
+
+    alias LoadBalancerTlsCertificate = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "loadBalancerName" : (ResourceName)?,
+      "isAttached" : (boolean)?,
+      "status" : (LoadBalancerTlsCertificateStatus)?,
+      "domainName" : (DomainName)?,
+      "domainValidationRecords" : (LoadBalancerTlsCertificateDomainValidationRecordList)?,
+      "failureReason" : (LoadBalancerTlsCertificateFailureReason)?,
+      "issuedAt" : (IsoDate)?,
+      "issuer" : (NonEmptyString)?,
+      "keyAlgorithm" : (NonEmptyString)?,
+      "notAfter" : (IsoDate)?,
+      "notBefore" : (IsoDate)?,
+      "renewalSummary" : (LoadBalancerTlsCertificateRenewalSummary)?,
+      "revocationReason" : (LoadBalancerTlsCertificateRevocationReason)?,
+      "revokedAt" : (IsoDate)?,
+      "serial" : (NonEmptyString)?,
+      "signatureAlgorithm" : (NonEmptyString)?,
+      "subject" : (NonEmptyString)?,
+      "subjectAlternativeNames" : (StringList)?
+    )
+
+    alias LoadBalancerTlsCertificateDomainStatus = String
+
+    alias LoadBalancerTlsCertificateDomainValidationOption = NamedTuple(
+      "domainName" : (DomainName)?,
+      "validationStatus" : (LoadBalancerTlsCertificateDomainStatus)?
+    )
+
+    alias LoadBalancerTlsCertificateDomainValidationOptionList = Array(LoadBalancerTlsCertificateDomainValidationOption)
+
+    alias LoadBalancerTlsCertificateDomainValidationRecord = NamedTuple(
+      "name" : (NonEmptyString)?,
+      "type" : (NonEmptyString)?,
+      "value" : (NonEmptyString)?,
+      "validationStatus" : (LoadBalancerTlsCertificateDomainStatus)?,
+      "domainName" : (DomainName)?
+    )
+
+    alias LoadBalancerTlsCertificateDomainValidationRecordList = Array(LoadBalancerTlsCertificateDomainValidationRecord)
+
+    alias LoadBalancerTlsCertificateFailureReason = String
+
+    alias LoadBalancerTlsCertificateList = Array(LoadBalancerTlsCertificate)
+
+    alias LoadBalancerTlsCertificateRenewalStatus = String
+
+    alias LoadBalancerTlsCertificateRenewalSummary = NamedTuple(
+      "renewalStatus" : (LoadBalancerTlsCertificateRenewalStatus)?,
+      "domainValidationOptions" : (LoadBalancerTlsCertificateDomainValidationOptionList)?
+    )
+
+    alias LoadBalancerTlsCertificateRevocationReason = String
+
+    alias LoadBalancerTlsCertificateStatus = String
+
+    alias LoadBalancerTlsCertificateSummary = NamedTuple(
+      "name" : (ResourceName)?,
+      "isAttached" : (boolean)?
+    )
+
+    alias LoadBalancerTlsCertificateSummaryList = Array(LoadBalancerTlsCertificateSummary)
+
+    alias LogEvent = NamedTuple(
+      "createdAt" : (IsoDate)?,
+      "message" : (string)?
+    )
+
+    alias LogEventList = Array(LogEvent)
+
+    alias MetricDatapoint = NamedTuple(
+      "average" : (double)?,
+      "maximum" : (double)?,
+      "minimum" : (double)?,
+      "sampleCount" : (double)?,
+      "sum" : (double)?,
+      "timestamp" : (timestamp)?,
+      "unit" : (MetricUnit)?
+    )
+
+    alias MetricDatapointList = Array(MetricDatapoint)
+
+    alias MetricName = String
+
+    alias MetricPeriod = Int32
+
+    alias MetricStatistic = String
+
+    alias MetricStatisticList = Array(MetricStatistic)
+
+    alias MetricUnit = String
+
+    alias MonitoredResourceInfo = NamedTuple(
+      "arn" : (ResourceArn)?,
+      "name" : (ResourceName)?,
+      "resourceType" : (ResourceType)?
+    )
+
+    alias MonthlyTransfer = NamedTuple(
+      "gbPerMonthAllocated" : (integer)?
+    )
+
+    alias NetworkProtocol = String
+
+    alias NonEmptyString = String
+
+    alias NotFoundException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias NotificationTriggerList = Array(AlarmState)
+
+    alias OpenInstancePublicPortsRequest = NamedTuple(
+      "portInfo" : PortInfo,
+      "instanceName" : ResourceName
+    )
+
+    alias OpenInstancePublicPortsResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias Operation = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "resourceName" : (ResourceName)?,
+      "resourceType" : (ResourceType)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "isTerminal" : (boolean)?,
+      "operationDetails" : (string)?,
+      "operationType" : (OperationType)?,
+      "status" : (OperationStatus)?,
+      "statusChangedAt" : (IsoDate)?,
+      "errorCode" : (string)?,
+      "errorDetails" : (string)?
+    )
+
+    alias OperationFailureException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias OperationList = Array(Operation)
+
+    alias OperationStatus = String
+
+    alias OperationType = String
+
+    alias Origin = NamedTuple(
+      "name" : (ResourceName)?,
+      "resourceType" : (ResourceType)?,
+      "regionName" : (RegionName)?,
+      "protocolPolicy" : (OriginProtocolPolicyEnum)?
+    )
+
+    alias OriginProtocolPolicyEnum = String
+
+    alias PasswordData = NamedTuple(
+      "ciphertext" : (string)?,
+      "keyPairName" : (ResourceName)?
+    )
+
+    alias PeerVpcRequest = NamedTuple(
+      
+    )
+
+    alias PeerVpcResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias PendingMaintenanceAction = NamedTuple(
+      "action" : (NonEmptyString)?,
+      "description" : (NonEmptyString)?,
+      "currentApplyDate" : (IsoDate)?
+    )
+
+    alias PendingMaintenanceActionList = Array(PendingMaintenanceAction)
+
+    alias PendingModifiedRelationalDatabaseValues = NamedTuple(
+      "masterUserPassword" : (string)?,
+      "engineVersion" : (string)?,
+      "backupRetentionEnabled" : (boolean)?
+    )
+
+    alias Port = Int32
+
+    alias PortAccessType = String
+
+    alias PortInfo = NamedTuple(
+      "fromPort" : (Port)?,
+      "toPort" : (Port)?,
+      "protocol" : (NetworkProtocol)?,
+      "cidrs" : (StringList)?,
+      "cidrListAliases" : (StringList)?
+    )
+
+    alias PortInfoList = Array(PortInfo)
+
+    alias PortInfoSourceType = String
+
+    alias PortList = Array(Port)
+
+    alias PortMap = Hash(string,ContainerServiceProtocol)
+
+    alias PortState = String
+
+    alias PutAlarmRequest = NamedTuple(
+      "alarmName" : ResourceName,
+      "metricName" : MetricName,
+      "monitoredResourceName" : ResourceName,
+      "comparisonOperator" : ComparisonOperator,
+      "threshold" : double,
+      "evaluationPeriods" : integer,
+      "datapointsToAlarm" : (integer)?,
+      "treatMissingData" : (TreatMissingData)?,
+      "contactProtocols" : (ContactProtocolsList)?,
+      "notificationTriggers" : (NotificationTriggerList)?,
+      "notificationEnabled" : (boolean)?
+    )
+
+    alias PutAlarmResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias PutInstancePublicPortsRequest = NamedTuple(
+      "portInfos" : PortInfoList,
+      "instanceName" : ResourceName
+    )
+
+    alias PutInstancePublicPortsResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias QueryStringObject = NamedTuple(
+      "option" : (boolean)?,
+      "queryStringsAllowList" : (StringList)?
+    )
+
+    alias RebootInstanceRequest = NamedTuple(
+      "instanceName" : ResourceName
+    )
+
+    alias RebootInstanceResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias RebootRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName
+    )
+
+    alias RebootRelationalDatabaseResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias RecordState = String
+
+    alias Region = NamedTuple(
+      "continentCode" : (string)?,
+      "description" : (string)?,
+      "displayName" : (string)?,
+      "name" : (RegionName)?,
+      "availabilityZones" : (AvailabilityZoneList)?,
+      "relationalDatabaseAvailabilityZones" : (AvailabilityZoneList)?
+    )
+
+    alias RegionList = Array(Region)
+
+    alias RegionName = String
+
+    alias RegisterContainerImageRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "label" : ContainerLabel,
+      "digest" : string
+    )
+
+    alias RegisterContainerImageResult = NamedTuple(
+      "containerImage" : (ContainerImage)?
+    )
+
+    alias RelationalDatabase = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "relationalDatabaseBlueprintId" : (NonEmptyString)?,
+      "relationalDatabaseBundleId" : (NonEmptyString)?,
+      "masterDatabaseName" : (string)?,
+      "hardware" : (RelationalDatabaseHardware)?,
+      "state" : (NonEmptyString)?,
+      "secondaryAvailabilityZone" : (string)?,
+      "backupRetentionEnabled" : (boolean)?,
+      "pendingModifiedValues" : (PendingModifiedRelationalDatabaseValues)?,
+      "engine" : (NonEmptyString)?,
+      "engineVersion" : (NonEmptyString)?,
+      "latestRestorableTime" : (IsoDate)?,
+      "masterUsername" : (NonEmptyString)?,
+      "parameterApplyStatus" : (NonEmptyString)?,
+      "preferredBackupWindow" : (NonEmptyString)?,
+      "preferredMaintenanceWindow" : (NonEmptyString)?,
+      "publiclyAccessible" : (boolean)?,
+      "masterEndpoint" : (RelationalDatabaseEndpoint)?,
+      "pendingMaintenanceActions" : (PendingMaintenanceActionList)?,
+      "caCertificateIdentifier" : (string)?
+    )
+
+    alias RelationalDatabaseBlueprint = NamedTuple(
+      "blueprintId" : (string)?,
+      "engine" : (RelationalDatabaseEngine)?,
+      "engineVersion" : (string)?,
+      "engineDescription" : (string)?,
+      "engineVersionDescription" : (string)?,
+      "isEngineDefault" : (boolean)?
+    )
+
+    alias RelationalDatabaseBlueprintList = Array(RelationalDatabaseBlueprint)
+
+    alias RelationalDatabaseBundle = NamedTuple(
+      "bundleId" : (string)?,
+      "name" : (string)?,
+      "price" : (float)?,
+      "ramSizeInGb" : (float)?,
+      "diskSizeInGb" : (integer)?,
+      "transferPerMonthInGb" : (integer)?,
+      "cpuCount" : (integer)?,
+      "isEncrypted" : (boolean)?,
+      "isActive" : (boolean)?
+    )
+
+    alias RelationalDatabaseBundleList = Array(RelationalDatabaseBundle)
+
+    alias RelationalDatabaseEndpoint = NamedTuple(
+      "port" : (integer)?,
+      "address" : (NonEmptyString)?
+    )
+
+    alias RelationalDatabaseEngine = String
+
+    alias RelationalDatabaseEvent = NamedTuple(
+      "resource" : (ResourceName)?,
+      "createdAt" : (IsoDate)?,
+      "message" : (string)?,
+      "eventCategories" : (StringList)?
+    )
+
+    alias RelationalDatabaseEventList = Array(RelationalDatabaseEvent)
+
+    alias RelationalDatabaseHardware = NamedTuple(
+      "cpuCount" : (integer)?,
+      "diskSizeInGb" : (integer)?,
+      "ramSizeInGb" : (float)?
+    )
+
+    alias RelationalDatabaseList = Array(RelationalDatabase)
+
+    alias RelationalDatabaseMetricName = String
+
+    alias RelationalDatabaseParameter = NamedTuple(
+      "allowedValues" : (string)?,
+      "applyMethod" : (string)?,
+      "applyType" : (string)?,
+      "dataType" : (string)?,
+      "description" : (string)?,
+      "isModifiable" : (boolean)?,
+      "parameterName" : (string)?,
+      "parameterValue" : (string)?
+    )
+
+    alias RelationalDatabaseParameterList = Array(RelationalDatabaseParameter)
+
+    alias RelationalDatabasePasswordVersion = String
+
+    alias RelationalDatabaseSnapshot = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "tags" : (TagList)?,
+      "engine" : (NonEmptyString)?,
+      "engineVersion" : (NonEmptyString)?,
+      "sizeInGb" : (integer)?,
+      "state" : (NonEmptyString)?,
+      "fromRelationalDatabaseName" : (NonEmptyString)?,
+      "fromRelationalDatabaseArn" : (NonEmptyString)?,
+      "fromRelationalDatabaseBundleId" : (string)?,
+      "fromRelationalDatabaseBlueprintId" : (string)?
+    )
+
+    alias RelationalDatabaseSnapshotList = Array(RelationalDatabaseSnapshot)
+
+    alias ReleaseStaticIpRequest = NamedTuple(
+      "staticIpName" : ResourceName
+    )
+
+    alias ReleaseStaticIpResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias RenewalStatus = String
+
+    alias RenewalStatusReason = String
+
+    alias RenewalSummary = NamedTuple(
+      "domainValidationRecords" : (DomainValidationRecordList)?,
+      "renewalStatus" : (RenewalStatus)?,
+      "renewalStatusReason" : (RenewalStatusReason)?,
+      "updatedAt" : (IsoDate)?
+    )
+
+    alias RequestFailureReason = String
+
+    alias ResetDistributionCacheRequest = NamedTuple(
+      "distributionName" : (ResourceName)?
+    )
+
+    alias ResetDistributionCacheResult = NamedTuple(
+      "status" : (string)?,
+      "createTime" : (IsoDate)?,
+      "operation" : (Operation)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceLocation = NamedTuple(
+      "availabilityZone" : (string)?,
+      "regionName" : (RegionName)?
+    )
+
+    alias ResourceName = String
+
+    alias ResourceNameList = Array(ResourceName)
+
+    alias ResourceRecord = NamedTuple(
+      "name" : (string)?,
+      "type" : (string)?,
+      "value" : (string)?
+    )
+
+    alias ResourceType = String
+
+    alias RevocationReason = String
+
+    alias SendContactMethodVerificationRequest = NamedTuple(
+      "protocol" : ContactMethodVerificationProtocol
+    )
+
+    alias SendContactMethodVerificationResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias SensitiveString = String
+
+    alias SerialNumber = String
+
+    alias ServiceException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias StartInstanceRequest = NamedTuple(
+      "instanceName" : ResourceName
+    )
+
+    alias StartInstanceResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias StartRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName
+    )
+
+    alias StartRelationalDatabaseResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias StaticIp = NamedTuple(
+      "name" : (ResourceName)?,
+      "arn" : (NonEmptyString)?,
+      "supportCode" : (string)?,
+      "createdAt" : (IsoDate)?,
+      "location" : (ResourceLocation)?,
+      "resourceType" : (ResourceType)?,
+      "ipAddress" : (IpAddress)?,
+      "attachedTo" : (ResourceName)?,
+      "isAttached" : (boolean)?
+    )
+
+    alias StaticIpList = Array(StaticIp)
+
+    alias StopInstanceRequest = NamedTuple(
+      "instanceName" : ResourceName,
+      "force" : (boolean)?
+    )
+
+    alias StopInstanceResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias StopRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "relationalDatabaseSnapshotName" : (ResourceName)?
+    )
+
+    alias StopRelationalDatabaseResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias StringList = Array(string)
+
+    alias StringMax256 = String
+
+    alias SubjectAlternativeNameList = Array(DomainName)
+
+    alias Tag = NamedTuple(
+      "key" : (TagKey)?,
+      "value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceName" : ResourceName,
+      "resourceArn" : (ResourceArn)?,
+      "tags" : TagList
+    )
+
+    alias TagResourceResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias TagValue = String
+
+    alias TestAlarmRequest = NamedTuple(
+      "alarmName" : ResourceName,
+      "state" : AlarmState
+    )
+
+    alias TestAlarmResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias TimeOfDay = String
+
+    alias TreatMissingData = String
+
+    alias UnauthenticatedException = NamedTuple(
+      "code" : (string)?,
+      "docs" : (string)?,
+      "message" : (string)?,
+      "tip" : (string)?
+    )
+
+    alias UnpeerVpcRequest = NamedTuple(
+      
+    )
+
+    alias UnpeerVpcResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceName" : ResourceName,
+      "resourceArn" : (ResourceArn)?,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias UpdateContainerServiceRequest = NamedTuple(
+      "serviceName" : ContainerServiceName,
+      "power" : (ContainerServicePowerName)?,
+      "scale" : (ContainerServiceScale)?,
+      "isDisabled" : (boolean)?,
+      "publicDomainNames" : (ContainerServicePublicDomains)?
+    )
+
+    alias UpdateContainerServiceResult = NamedTuple(
+      "containerService" : (ContainerService)?
+    )
+
+    alias UpdateDistributionBundleRequest = NamedTuple(
+      "distributionName" : (ResourceName)?,
+      "bundleId" : (string)?
+    )
+
+    alias UpdateDistributionBundleResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias UpdateDistributionRequest = NamedTuple(
+      "distributionName" : ResourceName,
+      "origin" : (InputOrigin)?,
+      "defaultCacheBehavior" : (CacheBehavior)?,
+      "cacheBehaviorSettings" : (CacheSettings)?,
+      "cacheBehaviors" : (CacheBehaviorList)?,
+      "isEnabled" : (boolean)?
+    )
+
+    alias UpdateDistributionResult = NamedTuple(
+      "operation" : (Operation)?
+    )
+
+    alias UpdateDomainEntryRequest = NamedTuple(
+      "domainName" : DomainName,
+      "domainEntry" : DomainEntry
+    )
+
+    alias UpdateDomainEntryResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias UpdateLoadBalancerAttributeRequest = NamedTuple(
+      "loadBalancerName" : ResourceName,
+      "attributeName" : LoadBalancerAttributeName,
+      "attributeValue" : StringMax256
+    )
+
+    alias UpdateLoadBalancerAttributeResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias UpdateRelationalDatabaseParametersRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "parameters" : RelationalDatabaseParameterList
+    )
+
+    alias UpdateRelationalDatabaseParametersResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias UpdateRelationalDatabaseRequest = NamedTuple(
+      "relationalDatabaseName" : ResourceName,
+      "masterUserPassword" : (SensitiveString)?,
+      "rotateMasterUserPassword" : (boolean)?,
+      "preferredBackupWindow" : (string)?,
+      "preferredMaintenanceWindow" : (string)?,
+      "enableBackupRetention" : (boolean)?,
+      "disableBackupRetention" : (boolean)?,
+      "publiclyAccessible" : (boolean)?,
+      "applyImmediately" : (boolean)?,
+      "caCertificateIdentifier" : (string)?
+    )
+
+    alias UpdateRelationalDatabaseResult = NamedTuple(
+      "operations" : (OperationList)?
+    )
+
+    alias boolean = Bool
+
+    alias double = Float64
+
+    alias float = Float32
+
+    alias integer = Int32
+
+    alias long = Int64
+
+    alias string = String
+
+    alias timestamp = String | UInt64 | Time
   end
 end

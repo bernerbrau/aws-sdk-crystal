@@ -389,8 +389,8 @@ module Aws::NetworkManager
     #
     # @overload associate_customer_gateway(**params)
     # @param [Hash] params ({})
-    def associate_customer_gateway(params = {}, **options)
-      req = build_request(:associate_customer_gateway, params)
+    def associate_customer_gateway(, **options)
+      req = build_request(:associate_customer_gateway, )
       req.send_request(options)
     end
 
@@ -430,8 +430,8 @@ module Aws::NetworkManager
     #
     # @overload associate_link(**params)
     # @param [Hash] params ({})
-    def associate_link(params = {}, **options)
-      req = build_request(:associate_link, params)
+    def associate_link(, **options)
+      req = build_request(:associate_link, )
       req.send_request(options)
     end
 
@@ -483,8 +483,8 @@ module Aws::NetworkManager
     #
     # @overload associate_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def associate_transit_gateway_connect_peer(params = {}, **options)
-      req = build_request(:associate_transit_gateway_connect_peer, params)
+    def associate_transit_gateway_connect_peer(, **options)
+      req = build_request(:associate_transit_gateway_connect_peer, )
       req.send_request(options)
     end
 
@@ -557,8 +557,8 @@ module Aws::NetworkManager
     #
     # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, **options)
-      req = build_request(:create_connection, params)
+    def create_connection(, **options)
+      req = build_request(:create_connection, )
       req.send_request(options)
     end
 
@@ -661,8 +661,8 @@ module Aws::NetworkManager
     #
     # @overload create_device(**params)
     # @param [Hash] params ({})
-    def create_device(params = {}, **options)
-      req = build_request(:create_device, params)
+    def create_device(, **options)
+      req = build_request(:create_device, )
       req.send_request(options)
     end
 
@@ -707,8 +707,8 @@ module Aws::NetworkManager
     #
     # @overload create_global_network(**params)
     # @param [Hash] params ({})
-    def create_global_network(params = {}, **options)
-      req = build_request(:create_global_network, params)
+    def create_global_network(, **options)
+      req = build_request(:create_global_network, )
       req.send_request(options)
     end
 
@@ -790,8 +790,8 @@ module Aws::NetworkManager
     #
     # @overload create_link(**params)
     # @param [Hash] params ({})
-    def create_link(params = {}, **options)
-      req = build_request(:create_link, params)
+    def create_link(, **options)
+      req = build_request(:create_link, )
       req.send_request(options)
     end
 
@@ -860,8 +860,8 @@ module Aws::NetworkManager
     #
     # @overload create_site(**params)
     # @param [Hash] params ({})
-    def create_site(params = {}, **options)
-      req = build_request(:create_site, params)
+    def create_site(, **options)
+      req = build_request(:create_site, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::NetworkManager
     #
     # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, **options)
-      req = build_request(:delete_connection, params)
+    def delete_connection(, **options)
+      req = build_request(:delete_connection, )
       req.send_request(options)
     end
 
@@ -955,8 +955,8 @@ module Aws::NetworkManager
     #
     # @overload delete_device(**params)
     # @param [Hash] params ({})
-    def delete_device(params = {}, **options)
-      req = build_request(:delete_device, params)
+    def delete_device(, **options)
+      req = build_request(:delete_device, )
       req.send_request(options)
     end
 
@@ -992,8 +992,8 @@ module Aws::NetworkManager
     #
     # @overload delete_global_network(**params)
     # @param [Hash] params ({})
-    def delete_global_network(params = {}, **options)
-      req = build_request(:delete_global_network, params)
+    def delete_global_network(, **options)
+      req = build_request(:delete_global_network, )
       req.send_request(options)
     end
 
@@ -1038,8 +1038,8 @@ module Aws::NetworkManager
     #
     # @overload delete_link(**params)
     # @param [Hash] params ({})
-    def delete_link(params = {}, **options)
-      req = build_request(:delete_link, params)
+    def delete_link(, **options)
+      req = build_request(:delete_link, )
       req.send_request(options)
     end
 
@@ -1082,8 +1082,8 @@ module Aws::NetworkManager
     #
     # @overload delete_site(**params)
     # @param [Hash] params ({})
-    def delete_site(params = {}, **options)
-      req = build_request(:delete_site, params)
+    def delete_site(, **options)
+      req = build_request(:delete_site, )
       req.send_request(options)
     end
 
@@ -1119,8 +1119,8 @@ module Aws::NetworkManager
     #
     # @overload deregister_transit_gateway(**params)
     # @param [Hash] params ({})
-    def deregister_transit_gateway(params = {}, **options)
-      req = build_request(:deregister_transit_gateway, params)
+    def deregister_transit_gateway(, **options)
+      req = build_request(:deregister_transit_gateway, )
       req.send_request(options)
     end
 
@@ -1171,8 +1171,8 @@ module Aws::NetworkManager
     #
     # @overload describe_global_networks(**params)
     # @param [Hash] params ({})
-    def describe_global_networks(params = {}, **options)
-      req = build_request(:describe_global_networks, params)
+    def describe_global_networks(, **options)
+      req = build_request(:describe_global_networks, )
       req.send_request(options)
     end
 
@@ -1212,8 +1212,8 @@ module Aws::NetworkManager
     #
     # @overload disassociate_customer_gateway(**params)
     # @param [Hash] params ({})
-    def disassociate_customer_gateway(params = {}, **options)
-      req = build_request(:disassociate_customer_gateway, params)
+    def disassociate_customer_gateway(, **options)
+      req = build_request(:disassociate_customer_gateway, )
       req.send_request(options)
     end
 
@@ -1252,8 +1252,8 @@ module Aws::NetworkManager
     #
     # @overload disassociate_link(**params)
     # @param [Hash] params ({})
-    def disassociate_link(params = {}, **options)
-      req = build_request(:disassociate_link, params)
+    def disassociate_link(, **options)
+      req = build_request(:disassociate_link, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::NetworkManager
     #
     # @overload disassociate_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def disassociate_transit_gateway_connect_peer(params = {}, **options)
-      req = build_request(:disassociate_transit_gateway_connect_peer, params)
+    def disassociate_transit_gateway_connect_peer(, **options)
+      req = build_request(:disassociate_transit_gateway_connect_peer, )
       req.send_request(options)
     end
 
@@ -1350,8 +1350,8 @@ module Aws::NetworkManager
     #
     # @overload get_connections(**params)
     # @param [Hash] params ({})
-    def get_connections(params = {}, **options)
-      req = build_request(:get_connections, params)
+    def get_connections(, **options)
+      req = build_request(:get_connections, )
       req.send_request(options)
     end
 
@@ -1406,8 +1406,8 @@ module Aws::NetworkManager
     #
     # @overload get_customer_gateway_associations(**params)
     # @param [Hash] params ({})
-    def get_customer_gateway_associations(params = {}, **options)
-      req = build_request(:get_customer_gateway_associations, params)
+    def get_customer_gateway_associations(, **options)
+      req = build_request(:get_customer_gateway_associations, )
       req.send_request(options)
     end
 
@@ -1474,8 +1474,8 @@ module Aws::NetworkManager
     #
     # @overload get_devices(**params)
     # @param [Hash] params ({})
-    def get_devices(params = {}, **options)
-      req = build_request(:get_devices, params)
+    def get_devices(, **options)
+      req = build_request(:get_devices, )
       req.send_request(options)
     end
 
@@ -1527,8 +1527,8 @@ module Aws::NetworkManager
     #
     # @overload get_link_associations(**params)
     # @param [Hash] params ({})
-    def get_link_associations(params = {}, **options)
-      req = build_request(:get_link_associations, params)
+    def get_link_associations(, **options)
+      req = build_request(:get_link_associations, )
       req.send_request(options)
     end
 
@@ -1602,8 +1602,8 @@ module Aws::NetworkManager
     #
     # @overload get_links(**params)
     # @param [Hash] params ({})
-    def get_links(params = {}, **options)
-      req = build_request(:get_links, params)
+    def get_links(, **options)
+      req = build_request(:get_links, )
       req.send_request(options)
     end
 
@@ -1658,8 +1658,8 @@ module Aws::NetworkManager
     #
     # @overload get_sites(**params)
     # @param [Hash] params ({})
-    def get_sites(params = {}, **options)
-      req = build_request(:get_sites, params)
+    def get_sites(, **options)
+      req = build_request(:get_sites, )
       req.send_request(options)
     end
 
@@ -1708,8 +1708,8 @@ module Aws::NetworkManager
     #
     # @overload get_transit_gateway_connect_peer_associations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_connect_peer_associations(params = {}, **options)
-      req = build_request(:get_transit_gateway_connect_peer_associations, params)
+    def get_transit_gateway_connect_peer_associations(, **options)
+      req = build_request(:get_transit_gateway_connect_peer_associations, )
       req.send_request(options)
     end
 
@@ -1758,8 +1758,8 @@ module Aws::NetworkManager
     #
     # @overload get_transit_gateway_registrations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_registrations(params = {}, **options)
-      req = build_request(:get_transit_gateway_registrations, params)
+    def get_transit_gateway_registrations(, **options)
+      req = build_request(:get_transit_gateway_registrations, )
       req.send_request(options)
     end
 
@@ -1788,8 +1788,8 @@ module Aws::NetworkManager
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1831,8 +1831,8 @@ module Aws::NetworkManager
     #
     # @overload register_transit_gateway(**params)
     # @param [Hash] params ({})
-    def register_transit_gateway(params = {}, **options)
-      req = build_request(:register_transit_gateway, params)
+    def register_transit_gateway(, **options)
+      req = build_request(:register_transit_gateway, )
       req.send_request(options)
     end
 
@@ -1862,8 +1862,8 @@ module Aws::NetworkManager
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1888,8 +1888,8 @@ module Aws::NetworkManager
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1947,8 +1947,8 @@ module Aws::NetworkManager
     #
     # @overload update_connection(**params)
     # @param [Hash] params ({})
-    def update_connection(params = {}, **options)
-      req = build_request(:update_connection, params)
+    def update_connection(, **options)
+      req = build_request(:update_connection, )
       req.send_request(options)
     end
 
@@ -2045,8 +2045,8 @@ module Aws::NetworkManager
     #
     # @overload update_device(**params)
     # @param [Hash] params ({})
-    def update_device(params = {}, **options)
-      req = build_request(:update_device, params)
+    def update_device(, **options)
+      req = build_request(:update_device, )
       req.send_request(options)
     end
 
@@ -2087,8 +2087,8 @@ module Aws::NetworkManager
     #
     # @overload update_global_network(**params)
     # @param [Hash] params ({})
-    def update_global_network(params = {}, **options)
-      req = build_request(:update_global_network, params)
+    def update_global_network(, **options)
+      req = build_request(:update_global_network, )
       req.send_request(options)
     end
 
@@ -2158,8 +2158,8 @@ module Aws::NetworkManager
     #
     # @overload update_link(**params)
     # @param [Hash] params ({})
-    def update_link(params = {}, **options)
-      req = build_request(:update_link, params)
+    def update_link(, **options)
+      req = build_request(:update_link, )
       req.send_request(options)
     end
 
@@ -2222,8 +2222,8 @@ module Aws::NetworkManager
     #
     # @overload update_site(**params)
     # @param [Hash] params ({})
-    def update_site(params = {}, **options)
-      req = build_request(:update_site, params)
+    def update_site(, **options)
+      req = build_request(:update_site, )
       req.send_request(options)
     end
 

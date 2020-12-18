@@ -346,8 +346,8 @@ module Aws::MediaStoreData
     #
     # @overload delete_object(**params)
     # @param [Hash] params ({})
-    def delete_object(params = {}, **options)
-      req = build_request(:delete_object, params)
+    def delete_object(, **options)
+      req = build_request(:delete_object, )
       req.send_request(options)
     end
 
@@ -384,8 +384,8 @@ module Aws::MediaStoreData
     #
     # @overload describe_object(**params)
     # @param [Hash] params ({})
-    def describe_object(params = {}, **options)
-      req = build_request(:describe_object, params)
+    def describe_object(, **options)
+      req = build_request(:describe_object, )
       req.send_request(options)
     end
 
@@ -469,8 +469,8 @@ module Aws::MediaStoreData
     #
     # @overload get_object(**params)
     # @param [Hash] params ({})
-    def get_object(params = {}, **options, &block)
-      req = build_request(:get_object, params)
+    def get_object(, **options, &block)
+      req = build_request(:get_object, )
       req.send_request(options, &block)
     end
 
@@ -532,8 +532,8 @@ module Aws::MediaStoreData
     #
     # @overload list_items(**params)
     # @param [Hash] params ({})
-    def list_items(params = {}, **options)
-      req = build_request(:list_items, params)
+    def list_items(, **options)
+      req = build_request(:list_items, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::MediaStoreData
     #
     # @overload put_object(**params)
     # @param [Hash] params ({})
-    def put_object(params = {}, **options)
-      req = build_request(:put_object, params)
+    def put_object(, **options)
+      req = build_request(:put_object, )
       req.send_request(options)
     end
 

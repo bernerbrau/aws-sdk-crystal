@@ -386,8 +386,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -448,8 +448,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload apply_security_groups_to_load_balancer(**params)
     # @param [Hash] params ({})
-    def apply_security_groups_to_load_balancer(params = {}, **options)
-      req = build_request(:apply_security_groups_to_load_balancer, params)
+    def apply_security_groups_to_load_balancer(, **options)
+      req = build_request(:apply_security_groups_to_load_balancer, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload attach_load_balancer_to_subnets(**params)
     # @param [Hash] params ({})
-    def attach_load_balancer_to_subnets(params = {}, **options)
-      req = build_request(:attach_load_balancer_to_subnets, params)
+    def attach_load_balancer_to_subnets(, **options)
+      req = build_request(:attach_load_balancer_to_subnets, )
       req.send_request(options)
     end
 
@@ -588,8 +588,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload configure_health_check(**params)
     # @param [Hash] params ({})
-    def configure_health_check(params = {}, **options)
-      req = build_request(:configure_health_check, params)
+    def configure_health_check(, **options)
+      req = build_request(:configure_health_check, )
       req.send_request(options)
     end
 
@@ -651,8 +651,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload create_app_cookie_stickiness_policy(**params)
     # @param [Hash] params ({})
-    def create_app_cookie_stickiness_policy(params = {}, **options)
-      req = build_request(:create_app_cookie_stickiness_policy, params)
+    def create_app_cookie_stickiness_policy(, **options)
+      req = build_request(:create_app_cookie_stickiness_policy, )
       req.send_request(options)
     end
 
@@ -719,8 +719,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload create_lb_cookie_stickiness_policy(**params)
     # @param [Hash] params ({})
-    def create_lb_cookie_stickiness_policy(params = {}, **options)
-      req = build_request(:create_lb_cookie_stickiness_policy, params)
+    def create_lb_cookie_stickiness_policy(, **options)
+      req = build_request(:create_lb_cookie_stickiness_policy, )
       req.send_request(options)
     end
 
@@ -987,8 +987,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload create_load_balancer(**params)
     # @param [Hash] params ({})
-    def create_load_balancer(params = {}, **options)
-      req = build_request(:create_load_balancer, params)
+    def create_load_balancer(, **options)
+      req = build_request(:create_load_balancer, )
       req.send_request(options)
     end
 
@@ -1065,8 +1065,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload create_load_balancer_listeners(**params)
     # @param [Hash] params ({})
-    def create_load_balancer_listeners(params = {}, **options)
-      req = build_request(:create_load_balancer_listeners, params)
+    def create_load_balancer_listeners(, **options)
+      req = build_request(:create_load_balancer_listeners, )
       req.send_request(options)
     end
 
@@ -1161,8 +1161,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload create_load_balancer_policy(**params)
     # @param [Hash] params ({})
-    def create_load_balancer_policy(params = {}, **options)
-      req = build_request(:create_load_balancer_policy, params)
+    def create_load_balancer_policy(, **options)
+      req = build_request(:create_load_balancer_policy, )
       req.send_request(options)
     end
 
@@ -1201,8 +1201,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload delete_load_balancer(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer(params = {}, **options)
-      req = build_request(:delete_load_balancer, params)
+    def delete_load_balancer(, **options)
+      req = build_request(:delete_load_balancer, )
       req.send_request(options)
     end
 
@@ -1239,8 +1239,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload delete_load_balancer_listeners(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer_listeners(params = {}, **options)
-      req = build_request(:delete_load_balancer_listeners, params)
+    def delete_load_balancer_listeners(, **options)
+      req = build_request(:delete_load_balancer_listeners, )
       req.send_request(options)
     end
 
@@ -1277,8 +1277,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload delete_load_balancer_policy(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer_policy(params = {}, **options)
-      req = build_request(:delete_load_balancer_policy, params)
+    def delete_load_balancer_policy(, **options)
+      req = build_request(:delete_load_balancer_policy, )
       req.send_request(options)
     end
 
@@ -1352,8 +1352,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload deregister_instances_from_load_balancer(**params)
     # @param [Hash] params ({})
-    def deregister_instances_from_load_balancer(params = {}, **options)
-      req = build_request(:deregister_instances_from_load_balancer, params)
+    def deregister_instances_from_load_balancer(, **options)
+      req = build_request(:deregister_instances_from_load_balancer, )
       req.send_request(options)
     end
 
@@ -1397,8 +1397,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, **options)
-      req = build_request(:describe_account_limits, params)
+    def describe_account_limits(, **options)
+      req = build_request(:describe_account_limits, )
       req.send_request(options)
     end
 
@@ -1476,8 +1476,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_instance_health(**params)
     # @param [Hash] params ({})
-    def describe_instance_health(params = {}, **options)
-      req = build_request(:describe_instance_health, params)
+    def describe_instance_health(, **options)
+      req = build_request(:describe_instance_health, )
       req.send_request(options)
     end
 
@@ -1542,8 +1542,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_load_balancer_attributes(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_attributes(params = {}, **options)
-      req = build_request(:describe_load_balancer_attributes, params)
+    def describe_load_balancer_attributes(, **options)
+      req = build_request(:describe_load_balancer_attributes, )
       req.send_request(options)
     end
 
@@ -1615,8 +1615,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_load_balancer_policies(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_policies(params = {}, **options)
-      req = build_request(:describe_load_balancer_policies, params)
+    def describe_load_balancer_policies(, **options)
+      req = build_request(:describe_load_balancer_policies, )
       req.send_request(options)
     end
 
@@ -1691,8 +1691,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_load_balancer_policy_types(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_policy_types(params = {}, **options)
-      req = build_request(:describe_load_balancer_policy_types, params)
+    def describe_load_balancer_policy_types(, **options)
+      req = build_request(:describe_load_balancer_policy_types, )
       req.send_request(options)
     end
 
@@ -1879,8 +1879,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_load_balancers(params = {}, **options)
-      req = build_request(:describe_load_balancers, params)
+    def describe_load_balancers(, **options)
+      req = build_request(:describe_load_balancers, )
       req.send_request(options)
     end
 
@@ -1941,8 +1941,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -1999,8 +1999,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload detach_load_balancer_from_subnets(**params)
     # @param [Hash] params ({})
-    def detach_load_balancer_from_subnets(params = {}, **options)
-      req = build_request(:detach_load_balancer_from_subnets, params)
+    def detach_load_balancer_from_subnets(, **options)
+      req = build_request(:detach_load_balancer_from_subnets, )
       req.send_request(options)
     end
 
@@ -2069,8 +2069,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload disable_availability_zones_for_load_balancer(**params)
     # @param [Hash] params ({})
-    def disable_availability_zones_for_load_balancer(params = {}, **options)
-      req = build_request(:disable_availability_zones_for_load_balancer, params)
+    def disable_availability_zones_for_load_balancer(, **options)
+      req = build_request(:disable_availability_zones_for_load_balancer, )
       req.send_request(options)
     end
 
@@ -2136,8 +2136,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload enable_availability_zones_for_load_balancer(**params)
     # @param [Hash] params ({})
-    def enable_availability_zones_for_load_balancer(params = {}, **options)
-      req = build_request(:enable_availability_zones_for_load_balancer, params)
+    def enable_availability_zones_for_load_balancer(, **options)
+      req = build_request(:enable_availability_zones_for_load_balancer, )
       req.send_request(options)
     end
 
@@ -2276,8 +2276,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload modify_load_balancer_attributes(**params)
     # @param [Hash] params ({})
-    def modify_load_balancer_attributes(params = {}, **options)
-      req = build_request(:modify_load_balancer_attributes, params)
+    def modify_load_balancer_attributes(, **options)
+      req = build_request(:modify_load_balancer_attributes, )
       req.send_request(options)
     end
 
@@ -2370,8 +2370,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload register_instances_with_load_balancer(**params)
     # @param [Hash] params ({})
-    def register_instances_with_load_balancer(params = {}, **options)
-      req = build_request(:register_instances_with_load_balancer, params)
+    def register_instances_with_load_balancer(, **options)
+      req = build_request(:register_instances_with_load_balancer, )
       req.send_request(options)
     end
 
@@ -2417,8 +2417,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, **options)
-      req = build_request(:remove_tags, params)
+    def remove_tags(, **options)
+      req = build_request(:remove_tags, )
       req.send_request(options)
     end
 
@@ -2468,8 +2468,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload set_load_balancer_listener_ssl_certificate(**params)
     # @param [Hash] params ({})
-    def set_load_balancer_listener_ssl_certificate(params = {}, **options)
-      req = build_request(:set_load_balancer_listener_ssl_certificate, params)
+    def set_load_balancer_listener_ssl_certificate(, **options)
+      req = build_request(:set_load_balancer_listener_ssl_certificate, )
       req.send_request(options)
     end
 
@@ -2534,8 +2534,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload set_load_balancer_policies_for_backend_server(**params)
     # @param [Hash] params ({})
-    def set_load_balancer_policies_for_backend_server(params = {}, **options)
-      req = build_request(:set_load_balancer_policies_for_backend_server, params)
+    def set_load_balancer_policies_for_backend_server(, **options)
+      req = build_request(:set_load_balancer_policies_for_backend_server, )
       req.send_request(options)
     end
 
@@ -2594,8 +2594,8 @@ module Aws::ElasticLoadBalancing
     #
     # @overload set_load_balancer_policies_of_listener(**params)
     # @param [Hash] params ({})
-    def set_load_balancer_policies_of_listener(params = {}, **options)
-      req = build_request(:set_load_balancer_policies_of_listener, params)
+    def set_load_balancer_policies_of_listener(, **options)
+      req = build_request(:set_load_balancer_policies_of_listener, )
       req.send_request(options)
     end
 

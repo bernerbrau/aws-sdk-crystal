@@ -378,8 +378,8 @@ module Aws::ComprehendMedical
     #
     # @overload describe_entities_detection_v2_job(**params)
     # @param [Hash] params ({})
-    def describe_entities_detection_v2_job(params = {}, **options)
-      req = build_request(:describe_entities_detection_v2_job, params)
+    def describe_entities_detection_v2_job(, **options)
+      req = build_request(:describe_entities_detection_v2_job, )
       req.send_request(options)
     end
 
@@ -424,8 +424,8 @@ module Aws::ComprehendMedical
     #
     # @overload describe_icd10cm_inference_job(**params)
     # @param [Hash] params ({})
-    def describe_icd10cm_inference_job(params = {}, **options)
-      req = build_request(:describe_icd10cm_inference_job, params)
+    def describe_icd10cm_inference_job(, **options)
+      req = build_request(:describe_icd10cm_inference_job, )
       req.send_request(options)
     end
 
@@ -471,8 +471,8 @@ module Aws::ComprehendMedical
     #
     # @overload describe_phi_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_phi_detection_job(params = {}, **options)
-      req = build_request(:describe_phi_detection_job, params)
+    def describe_phi_detection_job(, **options)
+      req = build_request(:describe_phi_detection_job, )
       req.send_request(options)
     end
 
@@ -517,8 +517,8 @@ module Aws::ComprehendMedical
     #
     # @overload describe_rx_norm_inference_job(**params)
     # @param [Hash] params ({})
-    def describe_rx_norm_inference_job(params = {}, **options)
-      req = build_request(:describe_rx_norm_inference_job, params)
+    def describe_rx_norm_inference_job(, **options)
+      req = build_request(:describe_rx_norm_inference_job, )
       req.send_request(options)
     end
 
@@ -594,8 +594,8 @@ module Aws::ComprehendMedical
     #
     # @overload detect_entities(**params)
     # @param [Hash] params ({})
-    def detect_entities(params = {}, **options)
-      req = build_request(:detect_entities, params)
+    def detect_entities(, **options)
+      req = build_request(:detect_entities, )
       req.send_request(options)
     end
 
@@ -678,8 +678,8 @@ module Aws::ComprehendMedical
     #
     # @overload detect_entities_v2(**params)
     # @param [Hash] params ({})
-    def detect_entities_v2(params = {}, **options)
-      req = build_request(:detect_entities_v2, params)
+    def detect_entities_v2(, **options)
+      req = build_request(:detect_entities_v2, )
       req.send_request(options)
     end
 
@@ -738,8 +738,8 @@ module Aws::ComprehendMedical
     #
     # @overload detect_phi(**params)
     # @param [Hash] params ({})
-    def detect_phi(params = {}, **options)
-      req = build_request(:detect_phi, params)
+    def detect_phi(, **options)
+      req = build_request(:detect_phi, )
       req.send_request(options)
     end
 
@@ -800,8 +800,8 @@ module Aws::ComprehendMedical
     #
     # @overload infer_icd10cm(**params)
     # @param [Hash] params ({})
-    def infer_icd10cm(params = {}, **options)
-      req = build_request(:infer_icd10cm, params)
+    def infer_icd10cm(, **options)
+      req = build_request(:infer_icd10cm, )
       req.send_request(options)
     end
 
@@ -861,8 +861,8 @@ module Aws::ComprehendMedical
     #
     # @overload infer_rx_norm(**params)
     # @param [Hash] params ({})
-    def infer_rx_norm(params = {}, **options)
-      req = build_request(:infer_rx_norm, params)
+    def infer_rx_norm(, **options)
+      req = build_request(:infer_rx_norm, )
       req.send_request(options)
     end
 
@@ -923,8 +923,8 @@ module Aws::ComprehendMedical
     #
     # @overload list_entities_detection_v2_jobs(**params)
     # @param [Hash] params ({})
-    def list_entities_detection_v2_jobs(params = {}, **options)
-      req = build_request(:list_entities_detection_v2_jobs, params)
+    def list_entities_detection_v2_jobs(, **options)
+      req = build_request(:list_entities_detection_v2_jobs, )
       req.send_request(options)
     end
 
@@ -985,8 +985,8 @@ module Aws::ComprehendMedical
     #
     # @overload list_icd10cm_inference_jobs(**params)
     # @param [Hash] params ({})
-    def list_icd10cm_inference_jobs(params = {}, **options)
-      req = build_request(:list_icd10cm_inference_jobs, params)
+    def list_icd10cm_inference_jobs(, **options)
+      req = build_request(:list_icd10cm_inference_jobs, )
       req.send_request(options)
     end
 
@@ -1048,8 +1048,8 @@ module Aws::ComprehendMedical
     #
     # @overload list_phi_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_phi_detection_jobs(params = {}, **options)
-      req = build_request(:list_phi_detection_jobs, params)
+    def list_phi_detection_jobs(, **options)
+      req = build_request(:list_phi_detection_jobs, )
       req.send_request(options)
     end
 
@@ -1109,8 +1109,8 @@ module Aws::ComprehendMedical
     #
     # @overload list_rx_norm_inference_jobs(**params)
     # @param [Hash] params ({})
-    def list_rx_norm_inference_jobs(params = {}, **options)
-      req = build_request(:list_rx_norm_inference_jobs, params)
+    def list_rx_norm_inference_jobs(, **options)
+      req = build_request(:list_rx_norm_inference_jobs, )
       req.send_request(options)
     end
 
@@ -1182,8 +1182,8 @@ module Aws::ComprehendMedical
     #
     # @overload start_entities_detection_v2_job(**params)
     # @param [Hash] params ({})
-    def start_entities_detection_v2_job(params = {}, **options)
-      req = build_request(:start_entities_detection_v2_job, params)
+    def start_entities_detection_v2_job(, **options)
+      req = build_request(:start_entities_detection_v2_job, )
       req.send_request(options)
     end
 
@@ -1255,8 +1255,8 @@ module Aws::ComprehendMedical
     #
     # @overload start_icd10cm_inference_job(**params)
     # @param [Hash] params ({})
-    def start_icd10cm_inference_job(params = {}, **options)
-      req = build_request(:start_icd10cm_inference_job, params)
+    def start_icd10cm_inference_job(, **options)
+      req = build_request(:start_icd10cm_inference_job, )
       req.send_request(options)
     end
 
@@ -1328,8 +1328,8 @@ module Aws::ComprehendMedical
     #
     # @overload start_phi_detection_job(**params)
     # @param [Hash] params ({})
-    def start_phi_detection_job(params = {}, **options)
-      req = build_request(:start_phi_detection_job, params)
+    def start_phi_detection_job(, **options)
+      req = build_request(:start_phi_detection_job, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::ComprehendMedical
     #
     # @overload start_rx_norm_inference_job(**params)
     # @param [Hash] params ({})
-    def start_rx_norm_inference_job(params = {}, **options)
-      req = build_request(:start_rx_norm_inference_job, params)
+    def start_rx_norm_inference_job(, **options)
+      req = build_request(:start_rx_norm_inference_job, )
       req.send_request(options)
     end
 
@@ -1429,8 +1429,8 @@ module Aws::ComprehendMedical
     #
     # @overload stop_entities_detection_v2_job(**params)
     # @param [Hash] params ({})
-    def stop_entities_detection_v2_job(params = {}, **options)
-      req = build_request(:stop_entities_detection_v2_job, params)
+    def stop_entities_detection_v2_job(, **options)
+      req = build_request(:stop_entities_detection_v2_job, )
       req.send_request(options)
     end
 
@@ -1457,8 +1457,8 @@ module Aws::ComprehendMedical
     #
     # @overload stop_icd10cm_inference_job(**params)
     # @param [Hash] params ({})
-    def stop_icd10cm_inference_job(params = {}, **options)
-      req = build_request(:stop_icd10cm_inference_job, params)
+    def stop_icd10cm_inference_job(, **options)
+      req = build_request(:stop_icd10cm_inference_job, )
       req.send_request(options)
     end
 
@@ -1485,8 +1485,8 @@ module Aws::ComprehendMedical
     #
     # @overload stop_phi_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_phi_detection_job(params = {}, **options)
-      req = build_request(:stop_phi_detection_job, params)
+    def stop_phi_detection_job(, **options)
+      req = build_request(:stop_phi_detection_job, )
       req.send_request(options)
     end
 
@@ -1513,8 +1513,8 @@ module Aws::ComprehendMedical
     #
     # @overload stop_rx_norm_inference_job(**params)
     # @param [Hash] params ({})
-    def stop_rx_norm_inference_job(params = {}, **options)
-      req = build_request(:stop_rx_norm_inference_job, params)
+    def stop_rx_norm_inference_job(, **options)
+      req = build_request(:stop_rx_norm_inference_job, )
       req.send_request(options)
     end
 

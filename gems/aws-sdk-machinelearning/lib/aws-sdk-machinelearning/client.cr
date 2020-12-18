@@ -380,8 +380,8 @@ module Aws::MachineLearning
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -451,8 +451,8 @@ module Aws::MachineLearning
     #
     # @overload create_batch_prediction(**params)
     # @param [Hash] params ({})
-    def create_batch_prediction(params = {}, **options)
-      req = build_request(:create_batch_prediction, params)
+    def create_batch_prediction(, **options)
+      req = build_request(:create_batch_prediction, )
       req.send_request(options)
     end
 
@@ -585,8 +585,8 @@ module Aws::MachineLearning
     #
     # @overload create_data_source_from_rds(**params)
     # @param [Hash] params ({})
-    def create_data_source_from_rds(params = {}, **options)
-      req = build_request(:create_data_source_from_rds, params)
+    def create_data_source_from_rds(, **options)
+      req = build_request(:create_data_source_from_rds, )
       req.send_request(options)
     end
 
@@ -720,8 +720,8 @@ module Aws::MachineLearning
     #
     # @overload create_data_source_from_redshift(**params)
     # @param [Hash] params ({})
-    def create_data_source_from_redshift(params = {}, **options)
-      req = build_request(:create_data_source_from_redshift, params)
+    def create_data_source_from_redshift(, **options)
+      req = build_request(:create_data_source_from_redshift, )
       req.send_request(options)
     end
 
@@ -812,8 +812,8 @@ module Aws::MachineLearning
     #
     # @overload create_data_source_from_s3(**params)
     # @param [Hash] params ({})
-    def create_data_source_from_s3(params = {}, **options)
-      req = build_request(:create_data_source_from_s3, params)
+    def create_data_source_from_s3(, **options)
+      req = build_request(:create_data_source_from_s3, )
       req.send_request(options)
     end
 
@@ -872,8 +872,8 @@ module Aws::MachineLearning
     #
     # @overload create_evaluation(**params)
     # @param [Hash] params ({})
-    def create_evaluation(params = {}, **options)
-      req = build_request(:create_evaluation, params)
+    def create_evaluation(, **options)
+      req = build_request(:create_evaluation, )
       req.send_request(options)
     end
 
@@ -1003,8 +1003,8 @@ module Aws::MachineLearning
     #
     # @overload create_ml_model(**params)
     # @param [Hash] params ({})
-    def create_ml_model(params = {}, **options)
-      req = build_request(:create_ml_model, params)
+    def create_ml_model(, **options)
+      req = build_request(:create_ml_model, )
       req.send_request(options)
     end
 
@@ -1036,8 +1036,8 @@ module Aws::MachineLearning
     #
     # @overload create_realtime_endpoint(**params)
     # @param [Hash] params ({})
-    def create_realtime_endpoint(params = {}, **options)
-      req = build_request(:create_realtime_endpoint, params)
+    def create_realtime_endpoint(, **options)
+      req = build_request(:create_realtime_endpoint, )
       req.send_request(options)
     end
 
@@ -1070,8 +1070,8 @@ module Aws::MachineLearning
     #
     # @overload delete_batch_prediction(**params)
     # @param [Hash] params ({})
-    def delete_batch_prediction(params = {}, **options)
-      req = build_request(:delete_batch_prediction, params)
+    def delete_batch_prediction(, **options)
+      req = build_request(:delete_batch_prediction, )
       req.send_request(options)
     end
 
@@ -1103,8 +1103,8 @@ module Aws::MachineLearning
     #
     # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, **options)
-      req = build_request(:delete_data_source, params)
+    def delete_data_source(, **options)
+      req = build_request(:delete_data_source, )
       req.send_request(options)
     end
 
@@ -1139,8 +1139,8 @@ module Aws::MachineLearning
     #
     # @overload delete_evaluation(**params)
     # @param [Hash] params ({})
-    def delete_evaluation(params = {}, **options)
-      req = build_request(:delete_evaluation, params)
+    def delete_evaluation(, **options)
+      req = build_request(:delete_evaluation, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::MachineLearning
     #
     # @overload delete_ml_model(**params)
     # @param [Hash] params ({})
-    def delete_ml_model(params = {}, **options)
-      req = build_request(:delete_ml_model, params)
+    def delete_ml_model(, **options)
+      req = build_request(:delete_ml_model, )
       req.send_request(options)
     end
 
@@ -1203,8 +1203,8 @@ module Aws::MachineLearning
     #
     # @overload delete_realtime_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_realtime_endpoint(params = {}, **options)
-      req = build_request(:delete_realtime_endpoint, params)
+    def delete_realtime_endpoint(, **options)
+      req = build_request(:delete_realtime_endpoint, )
       req.send_request(options)
     end
 
@@ -1242,8 +1242,8 @@ module Aws::MachineLearning
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -1380,8 +1380,8 @@ module Aws::MachineLearning
     #
     # @overload describe_batch_predictions(**params)
     # @param [Hash] params ({})
-    def describe_batch_predictions(params = {}, **options)
-      req = build_request(:describe_batch_predictions, params)
+    def describe_batch_predictions(, **options)
+      req = build_request(:describe_batch_predictions, )
       req.send_request(options)
     end
 
@@ -1523,8 +1523,8 @@ module Aws::MachineLearning
     #
     # @overload describe_data_sources(**params)
     # @param [Hash] params ({})
-    def describe_data_sources(params = {}, **options)
-      req = build_request(:describe_data_sources, params)
+    def describe_data_sources(, **options)
+      req = build_request(:describe_data_sources, )
       req.send_request(options)
     end
 
@@ -1659,8 +1659,8 @@ module Aws::MachineLearning
     #
     # @overload describe_evaluations(**params)
     # @param [Hash] params ({})
-    def describe_evaluations(params = {}, **options)
-      req = build_request(:describe_evaluations, params)
+    def describe_evaluations(, **options)
+      req = build_request(:describe_evaluations, )
       req.send_request(options)
     end
 
@@ -1806,8 +1806,8 @@ module Aws::MachineLearning
     #
     # @overload describe_ml_models(**params)
     # @param [Hash] params ({})
-    def describe_ml_models(params = {}, **options)
-      req = build_request(:describe_ml_models, params)
+    def describe_ml_models(, **options)
+      req = build_request(:describe_ml_models, )
       req.send_request(options)
     end
 
@@ -1842,8 +1842,8 @@ module Aws::MachineLearning
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -1901,8 +1901,8 @@ module Aws::MachineLearning
     #
     # @overload get_batch_prediction(**params)
     # @param [Hash] params ({})
-    def get_batch_prediction(params = {}, **options)
-      req = build_request(:get_batch_prediction, params)
+    def get_batch_prediction(, **options)
+      req = build_request(:get_batch_prediction, )
       req.send_request(options)
     end
 
@@ -1988,8 +1988,8 @@ module Aws::MachineLearning
     #
     # @overload get_data_source(**params)
     # @param [Hash] params ({})
-    def get_data_source(params = {}, **options)
-      req = build_request(:get_data_source, params)
+    def get_data_source(, **options)
+      req = build_request(:get_data_source, )
       req.send_request(options)
     end
 
@@ -2046,8 +2046,8 @@ module Aws::MachineLearning
     #
     # @overload get_evaluation(**params)
     # @param [Hash] params ({})
-    def get_evaluation(params = {}, **options)
-      req = build_request(:get_evaluation, params)
+    def get_evaluation(, **options)
+      req = build_request(:get_evaluation, )
       req.send_request(options)
     end
 
@@ -2127,8 +2127,8 @@ module Aws::MachineLearning
     #
     # @overload get_ml_model(**params)
     # @param [Hash] params ({})
-    def get_ml_model(params = {}, **options)
-      req = build_request(:get_ml_model, params)
+    def get_ml_model(, **options)
+      req = build_request(:get_ml_model, )
       req.send_request(options)
     end
 
@@ -2173,8 +2173,8 @@ module Aws::MachineLearning
     #
     # @overload predict(**params)
     # @param [Hash] params ({})
-    def predict(params = {}, **options)
-      req = build_request(:predict, params)
+    def predict(, **options)
+      req = build_request(:predict, )
       req.send_request(options)
     end
 
@@ -2206,8 +2206,8 @@ module Aws::MachineLearning
     #
     # @overload update_batch_prediction(**params)
     # @param [Hash] params ({})
-    def update_batch_prediction(params = {}, **options)
-      req = build_request(:update_batch_prediction, params)
+    def update_batch_prediction(, **options)
+      req = build_request(:update_batch_prediction, )
       req.send_request(options)
     end
 
@@ -2240,8 +2240,8 @@ module Aws::MachineLearning
     #
     # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, **options)
-      req = build_request(:update_data_source, params)
+    def update_data_source(, **options)
+      req = build_request(:update_data_source, )
       req.send_request(options)
     end
 
@@ -2274,8 +2274,8 @@ module Aws::MachineLearning
     #
     # @overload update_evaluation(**params)
     # @param [Hash] params ({})
-    def update_evaluation(params = {}, **options)
-      req = build_request(:update_evaluation, params)
+    def update_evaluation(, **options)
+      req = build_request(:update_evaluation, )
       req.send_request(options)
     end
 
@@ -2318,8 +2318,8 @@ module Aws::MachineLearning
     #
     # @overload update_ml_model(**params)
     # @param [Hash] params ({})
-    def update_ml_model(params = {}, **options)
-      req = build_request(:update_ml_model, params)
+    def update_ml_model(, **options)
+      req = build_request(:update_ml_model, )
       req.send_request(options)
     end
 

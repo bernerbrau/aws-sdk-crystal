@@ -6542,5 +6542,1233 @@ module Aws::SES
       include Aws::Structure
     end
 
+    alias AccountSendingPausedException = NamedTuple(
+      
+    )
+
+    alias AddHeaderAction = NamedTuple(
+      "HeaderName" : HeaderName,
+      "HeaderValue" : HeaderValue
+    )
+
+    alias Address = String
+
+    alias AddressList = Array(Address)
+
+    alias AlreadyExistsException = NamedTuple(
+      "Name" : (RuleOrRuleSetName)?
+    )
+
+    alias AmazonResourceName = String
+
+    alias ArrivalDate = String | UInt64 | Time
+
+    alias BehaviorOnMXFailure = String
+
+    alias Body = NamedTuple(
+      "Text" : (Content)?,
+      "Html" : (Content)?
+    )
+
+    alias BounceAction = NamedTuple(
+      "TopicArn" : (AmazonResourceName)?,
+      "SmtpReplyCode" : BounceSmtpReplyCode,
+      "StatusCode" : (BounceStatusCode)?,
+      "Message" : BounceMessage,
+      "Sender" : Address
+    )
+
+    alias BounceMessage = String
+
+    alias BounceSmtpReplyCode = String
+
+    alias BounceStatusCode = String
+
+    alias BounceType = String
+
+    alias BouncedRecipientInfo = NamedTuple(
+      "Recipient" : Address,
+      "RecipientArn" : (AmazonResourceName)?,
+      "BounceType" : (BounceType)?,
+      "RecipientDsnFields" : (RecipientDsnFields)?
+    )
+
+    alias BouncedRecipientInfoList = Array(BouncedRecipientInfo)
+
+    alias BulkEmailDestination = NamedTuple(
+      "Destination" : Destination,
+      "ReplacementTags" : (MessageTagList)?,
+      "ReplacementTemplateData" : (TemplateData)?
+    )
+
+    alias BulkEmailDestinationList = Array(BulkEmailDestination)
+
+    alias BulkEmailDestinationStatus = NamedTuple(
+      "Status" : (BulkEmailStatus)?,
+      "Error" : (Error)?,
+      "MessageId" : (MessageId)?
+    )
+
+    alias BulkEmailDestinationStatusList = Array(BulkEmailDestinationStatus)
+
+    alias BulkEmailStatus = String
+
+    alias CannotDeleteException = NamedTuple(
+      "Name" : (RuleOrRuleSetName)?
+    )
+
+    alias Charset = String
+
+    alias Cidr = String
+
+    alias CloneReceiptRuleSetRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "OriginalRuleSetName" : ReceiptRuleSetName
+    )
+
+    alias CloneReceiptRuleSetResponse = NamedTuple(
+      
+    )
+
+    alias CloudWatchDestination = NamedTuple(
+      "DimensionConfigurations" : CloudWatchDimensionConfigurations
+    )
+
+    alias CloudWatchDimensionConfiguration = NamedTuple(
+      "DimensionName" : DimensionName,
+      "DimensionValueSource" : DimensionValueSource,
+      "DefaultDimensionValue" : DefaultDimensionValue
+    )
+
+    alias CloudWatchDimensionConfigurations = Array(CloudWatchDimensionConfiguration)
+
+    alias ConfigurationSet = NamedTuple(
+      "Name" : ConfigurationSetName
+    )
+
+    alias ConfigurationSetAlreadyExistsException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias ConfigurationSetAttribute = String
+
+    alias ConfigurationSetAttributeList = Array(ConfigurationSetAttribute)
+
+    alias ConfigurationSetDoesNotExistException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias ConfigurationSetName = String
+
+    alias ConfigurationSetSendingPausedException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias ConfigurationSets = Array(ConfigurationSet)
+
+    alias Content = NamedTuple(
+      "Data" : MessageData,
+      "Charset" : (Charset)?
+    )
+
+    alias Counter = Int64
+
+    alias CreateConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "EventDestination" : EventDestination
+    )
+
+    alias CreateConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias CreateConfigurationSetRequest = NamedTuple(
+      "ConfigurationSet" : ConfigurationSet
+    )
+
+    alias CreateConfigurationSetResponse = NamedTuple(
+      
+    )
+
+    alias CreateConfigurationSetTrackingOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "TrackingOptions" : TrackingOptions
+    )
+
+    alias CreateConfigurationSetTrackingOptionsResponse = NamedTuple(
+      
+    )
+
+    alias CreateCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName,
+      "FromEmailAddress" : FromAddress,
+      "TemplateSubject" : Subject,
+      "TemplateContent" : TemplateContent,
+      "SuccessRedirectionURL" : SuccessRedirectionURL,
+      "FailureRedirectionURL" : FailureRedirectionURL
+    )
+
+    alias CreateReceiptFilterRequest = NamedTuple(
+      "Filter" : ReceiptFilter
+    )
+
+    alias CreateReceiptFilterResponse = NamedTuple(
+      
+    )
+
+    alias CreateReceiptRuleRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "After" : (ReceiptRuleName)?,
+      "Rule" : ReceiptRule
+    )
+
+    alias CreateReceiptRuleResponse = NamedTuple(
+      
+    )
+
+    alias CreateReceiptRuleSetRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName
+    )
+
+    alias CreateReceiptRuleSetResponse = NamedTuple(
+      
+    )
+
+    alias CreateTemplateRequest = NamedTuple(
+      "Template" : Template
+    )
+
+    alias CreateTemplateResponse = NamedTuple(
+      
+    )
+
+    alias CustomMailFromStatus = String
+
+    alias CustomRedirectDomain = String
+
+    alias CustomVerificationEmailInvalidContentException = NamedTuple(
+      
+    )
+
+    alias CustomVerificationEmailTemplate = NamedTuple(
+      "TemplateName" : (TemplateName)?,
+      "FromEmailAddress" : (FromAddress)?,
+      "TemplateSubject" : (Subject)?,
+      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
+      "FailureRedirectionURL" : (FailureRedirectionURL)?
+    )
+
+    alias CustomVerificationEmailTemplateAlreadyExistsException = NamedTuple(
+      "CustomVerificationEmailTemplateName" : (TemplateName)?
+    )
+
+    alias CustomVerificationEmailTemplateDoesNotExistException = NamedTuple(
+      "CustomVerificationEmailTemplateName" : (TemplateName)?
+    )
+
+    alias CustomVerificationEmailTemplates = Array(CustomVerificationEmailTemplate)
+
+    alias DefaultDimensionValue = String
+
+    alias DeleteConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "EventDestinationName" : EventDestinationName
+    )
+
+    alias DeleteConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName
+    )
+
+    alias DeleteConfigurationSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConfigurationSetTrackingOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName
+    )
+
+    alias DeleteConfigurationSetTrackingOptionsResponse = NamedTuple(
+      
+    )
+
+    alias DeleteCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName
+    )
+
+    alias DeleteIdentityPolicyRequest = NamedTuple(
+      "Identity" : Identity,
+      "PolicyName" : PolicyName
+    )
+
+    alias DeleteIdentityPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteIdentityRequest = NamedTuple(
+      "Identity" : Identity
+    )
+
+    alias DeleteIdentityResponse = NamedTuple(
+      
+    )
+
+    alias DeleteReceiptFilterRequest = NamedTuple(
+      "FilterName" : ReceiptFilterName
+    )
+
+    alias DeleteReceiptFilterResponse = NamedTuple(
+      
+    )
+
+    alias DeleteReceiptRuleRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "RuleName" : ReceiptRuleName
+    )
+
+    alias DeleteReceiptRuleResponse = NamedTuple(
+      
+    )
+
+    alias DeleteReceiptRuleSetRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName
+    )
+
+    alias DeleteReceiptRuleSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName
+    )
+
+    alias DeleteTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DeleteVerifiedEmailAddressRequest = NamedTuple(
+      "EmailAddress" : Address
+    )
+
+    alias DeliveryOptions = NamedTuple(
+      "TlsPolicy" : (TlsPolicy)?
+    )
+
+    alias DescribeActiveReceiptRuleSetRequest = NamedTuple(
+      
+    )
+
+    alias DescribeActiveReceiptRuleSetResponse = NamedTuple(
+      "Metadata" : (ReceiptRuleSetMetadata)?,
+      "Rules" : (ReceiptRulesList)?
+    )
+
+    alias DescribeConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "ConfigurationSetAttributeNames" : (ConfigurationSetAttributeList)?
+    )
+
+    alias DescribeConfigurationSetResponse = NamedTuple(
+      "ConfigurationSet" : (ConfigurationSet)?,
+      "EventDestinations" : (EventDestinations)?,
+      "TrackingOptions" : (TrackingOptions)?,
+      "DeliveryOptions" : (DeliveryOptions)?,
+      "ReputationOptions" : (ReputationOptions)?
+    )
+
+    alias DescribeReceiptRuleRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "RuleName" : ReceiptRuleName
+    )
+
+    alias DescribeReceiptRuleResponse = NamedTuple(
+      "Rule" : (ReceiptRule)?
+    )
+
+    alias DescribeReceiptRuleSetRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName
+    )
+
+    alias DescribeReceiptRuleSetResponse = NamedTuple(
+      "Metadata" : (ReceiptRuleSetMetadata)?,
+      "Rules" : (ReceiptRulesList)?
+    )
+
+    alias Destination = NamedTuple(
+      "ToAddresses" : (AddressList)?,
+      "CcAddresses" : (AddressList)?,
+      "BccAddresses" : (AddressList)?
+    )
+
+    alias DiagnosticCode = String
+
+    alias DimensionName = String
+
+    alias DimensionValueSource = String
+
+    alias DkimAttributes = Hash(Identity,IdentityDkimAttributes)
+
+    alias Domain = String
+
+    alias DsnAction = String
+
+    alias DsnStatus = String
+
+    alias Enabled = Bool
+
+    alias Error = String
+
+    alias EventDestination = NamedTuple(
+      "Name" : EventDestinationName,
+      "Enabled" : (Enabled)?,
+      "MatchingEventTypes" : EventTypes,
+      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
+      "CloudWatchDestination" : (CloudWatchDestination)?,
+      "SNSDestination" : (SNSDestination)?
+    )
+
+    alias EventDestinationAlreadyExistsException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "EventDestinationName" : (EventDestinationName)?
+    )
+
+    alias EventDestinationDoesNotExistException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "EventDestinationName" : (EventDestinationName)?
+    )
+
+    alias EventDestinationName = String
+
+    alias EventDestinations = Array(EventDestination)
+
+    alias EventType = String
+
+    alias EventTypes = Array(EventType)
+
+    alias Explanation = String
+
+    alias ExtensionField = NamedTuple(
+      "Name" : ExtensionFieldName,
+      "Value" : ExtensionFieldValue
+    )
+
+    alias ExtensionFieldList = Array(ExtensionField)
+
+    alias ExtensionFieldName = String
+
+    alias ExtensionFieldValue = String
+
+    alias FailureRedirectionURL = String
+
+    alias FromAddress = String
+
+    alias FromEmailAddressNotVerifiedException = NamedTuple(
+      "FromEmailAddress" : (FromAddress)?
+    )
+
+    alias GetAccountSendingEnabledResponse = NamedTuple(
+      "Enabled" : (Enabled)?
+    )
+
+    alias GetCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName
+    )
+
+    alias GetCustomVerificationEmailTemplateResponse = NamedTuple(
+      "TemplateName" : (TemplateName)?,
+      "FromEmailAddress" : (FromAddress)?,
+      "TemplateSubject" : (Subject)?,
+      "TemplateContent" : (TemplateContent)?,
+      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
+      "FailureRedirectionURL" : (FailureRedirectionURL)?
+    )
+
+    alias GetIdentityDkimAttributesRequest = NamedTuple(
+      "Identities" : IdentityList
+    )
+
+    alias GetIdentityDkimAttributesResponse = NamedTuple(
+      "DkimAttributes" : DkimAttributes
+    )
+
+    alias GetIdentityMailFromDomainAttributesRequest = NamedTuple(
+      "Identities" : IdentityList
+    )
+
+    alias GetIdentityMailFromDomainAttributesResponse = NamedTuple(
+      "MailFromDomainAttributes" : MailFromDomainAttributes
+    )
+
+    alias GetIdentityNotificationAttributesRequest = NamedTuple(
+      "Identities" : IdentityList
+    )
+
+    alias GetIdentityNotificationAttributesResponse = NamedTuple(
+      "NotificationAttributes" : NotificationAttributes
+    )
+
+    alias GetIdentityPoliciesRequest = NamedTuple(
+      "Identity" : Identity,
+      "PolicyNames" : PolicyNameList
+    )
+
+    alias GetIdentityPoliciesResponse = NamedTuple(
+      "Policies" : PolicyMap
+    )
+
+    alias GetIdentityVerificationAttributesRequest = NamedTuple(
+      "Identities" : IdentityList
+    )
+
+    alias GetIdentityVerificationAttributesResponse = NamedTuple(
+      "VerificationAttributes" : VerificationAttributes
+    )
+
+    alias GetSendQuotaResponse = NamedTuple(
+      "Max24HourSend" : (Max24HourSend)?,
+      "MaxSendRate" : (MaxSendRate)?,
+      "SentLast24Hours" : (SentLast24Hours)?
+    )
+
+    alias GetSendStatisticsResponse = NamedTuple(
+      "SendDataPoints" : (SendDataPointList)?
+    )
+
+    alias GetTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName
+    )
+
+    alias GetTemplateResponse = NamedTuple(
+      "Template" : (Template)?
+    )
+
+    alias HeaderName = String
+
+    alias HeaderValue = String
+
+    alias HtmlPart = String
+
+    alias Identity = String
+
+    alias IdentityDkimAttributes = NamedTuple(
+      "DkimEnabled" : Enabled,
+      "DkimVerificationStatus" : VerificationStatus,
+      "DkimTokens" : (VerificationTokenList)?
+    )
+
+    alias IdentityList = Array(Identity)
+
+    alias IdentityMailFromDomainAttributes = NamedTuple(
+      "MailFromDomain" : MailFromDomainName,
+      "MailFromDomainStatus" : CustomMailFromStatus,
+      "BehaviorOnMXFailure" : BehaviorOnMXFailure
+    )
+
+    alias IdentityNotificationAttributes = NamedTuple(
+      "BounceTopic" : NotificationTopic,
+      "ComplaintTopic" : NotificationTopic,
+      "DeliveryTopic" : NotificationTopic,
+      "ForwardingEnabled" : Enabled,
+      "HeadersInBounceNotificationsEnabled" : (Enabled)?,
+      "HeadersInComplaintNotificationsEnabled" : (Enabled)?,
+      "HeadersInDeliveryNotificationsEnabled" : (Enabled)?
+    )
+
+    alias IdentityType = String
+
+    alias IdentityVerificationAttributes = NamedTuple(
+      "VerificationStatus" : VerificationStatus,
+      "VerificationToken" : (VerificationToken)?
+    )
+
+    alias InvalidCloudWatchDestinationException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "EventDestinationName" : (EventDestinationName)?
+    )
+
+    alias InvalidConfigurationSetException = NamedTuple(
+      
+    )
+
+    alias InvalidDeliveryOptionsException = NamedTuple(
+      
+    )
+
+    alias InvalidFirehoseDestinationException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "EventDestinationName" : (EventDestinationName)?
+    )
+
+    alias InvalidLambdaFunctionException = NamedTuple(
+      "FunctionArn" : (AmazonResourceName)?
+    )
+
+    alias InvalidPolicyException = NamedTuple(
+      
+    )
+
+    alias InvalidRenderingParameterException = NamedTuple(
+      "TemplateName" : (TemplateName)?
+    )
+
+    alias InvalidS3ConfigurationException = NamedTuple(
+      "Bucket" : (S3BucketName)?
+    )
+
+    alias InvalidSNSDestinationException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "EventDestinationName" : (EventDestinationName)?
+    )
+
+    alias InvalidSnsTopicException = NamedTuple(
+      "Topic" : (AmazonResourceName)?
+    )
+
+    alias InvalidTemplateException = NamedTuple(
+      "TemplateName" : (TemplateName)?
+    )
+
+    alias InvalidTrackingOptionsException = NamedTuple(
+      
+    )
+
+    alias InvocationType = String
+
+    alias KinesisFirehoseDestination = NamedTuple(
+      "IAMRoleARN" : AmazonResourceName,
+      "DeliveryStreamARN" : AmazonResourceName
+    )
+
+    alias LambdaAction = NamedTuple(
+      "TopicArn" : (AmazonResourceName)?,
+      "FunctionArn" : AmazonResourceName,
+      "InvocationType" : (InvocationType)?
+    )
+
+    alias LastAttemptDate = String | UInt64 | Time
+
+    alias LastFreshStart = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListConfigurationSetsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxItems" : (MaxItems)?
+    )
+
+    alias ListConfigurationSetsResponse = NamedTuple(
+      "ConfigurationSets" : (ConfigurationSets)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCustomVerificationEmailTemplatesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListCustomVerificationEmailTemplatesResponse = NamedTuple(
+      "CustomVerificationEmailTemplates" : (CustomVerificationEmailTemplates)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListIdentitiesRequest = NamedTuple(
+      "IdentityType" : (IdentityType)?,
+      "NextToken" : (NextToken)?,
+      "MaxItems" : (MaxItems)?
+    )
+
+    alias ListIdentitiesResponse = NamedTuple(
+      "Identities" : IdentityList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListIdentityPoliciesRequest = NamedTuple(
+      "Identity" : Identity
+    )
+
+    alias ListIdentityPoliciesResponse = NamedTuple(
+      "PolicyNames" : PolicyNameList
+    )
+
+    alias ListReceiptFiltersRequest = NamedTuple(
+      
+    )
+
+    alias ListReceiptFiltersResponse = NamedTuple(
+      "Filters" : (ReceiptFilterList)?
+    )
+
+    alias ListReceiptRuleSetsRequest = NamedTuple(
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListReceiptRuleSetsResponse = NamedTuple(
+      "RuleSets" : (ReceiptRuleSetsLists)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTemplatesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxItems" : (MaxItems)?
+    )
+
+    alias ListTemplatesResponse = NamedTuple(
+      "TemplatesMetadata" : (TemplateMetadataList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListVerifiedEmailAddressesResponse = NamedTuple(
+      "VerifiedEmailAddresses" : (AddressList)?
+    )
+
+    alias MailFromDomainAttributes = Hash(Identity,IdentityMailFromDomainAttributes)
+
+    alias MailFromDomainName = String
+
+    alias MailFromDomainNotVerifiedException = NamedTuple(
+      
+    )
+
+    alias Max24HourSend = Float64
+
+    alias MaxItems = Int32
+
+    alias MaxResults = Int32
+
+    alias MaxSendRate = Float64
+
+    alias Message = NamedTuple(
+      "Subject" : Content,
+      "Body" : Body
+    )
+
+    alias MessageData = String
+
+    alias MessageDsn = NamedTuple(
+      "ReportingMta" : ReportingMta,
+      "ArrivalDate" : (ArrivalDate)?,
+      "ExtensionFields" : (ExtensionFieldList)?
+    )
+
+    alias MessageId = String
+
+    alias MessageRejected = NamedTuple(
+      
+    )
+
+    alias MessageTag = NamedTuple(
+      "Name" : MessageTagName,
+      "Value" : MessageTagValue
+    )
+
+    alias MessageTagList = Array(MessageTag)
+
+    alias MessageTagName = String
+
+    alias MessageTagValue = String
+
+    alias MissingRenderingAttributeException = NamedTuple(
+      "TemplateName" : (TemplateName)?
+    )
+
+    alias NextToken = String
+
+    alias NotificationAttributes = Hash(Identity,IdentityNotificationAttributes)
+
+    alias NotificationTopic = String
+
+    alias NotificationType = String
+
+    alias Policy = String
+
+    alias PolicyMap = Hash(PolicyName,Policy)
+
+    alias PolicyName = String
+
+    alias PolicyNameList = Array(PolicyName)
+
+    alias ProductionAccessNotGrantedException = NamedTuple(
+      
+    )
+
+    alias PutConfigurationSetDeliveryOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "DeliveryOptions" : (DeliveryOptions)?
+    )
+
+    alias PutConfigurationSetDeliveryOptionsResponse = NamedTuple(
+      
+    )
+
+    alias PutIdentityPolicyRequest = NamedTuple(
+      "Identity" : Identity,
+      "PolicyName" : PolicyName,
+      "Policy" : Policy
+    )
+
+    alias PutIdentityPolicyResponse = NamedTuple(
+      
+    )
+
+    alias RawMessage = NamedTuple(
+      "Data" : RawMessageData
+    )
+
+    alias RawMessageData = String | Array(UInt8) | IO
+
+    alias ReceiptAction = NamedTuple(
+      "S3Action" : (S3Action)?,
+      "BounceAction" : (BounceAction)?,
+      "WorkmailAction" : (WorkmailAction)?,
+      "LambdaAction" : (LambdaAction)?,
+      "StopAction" : (StopAction)?,
+      "AddHeaderAction" : (AddHeaderAction)?,
+      "SNSAction" : (SNSAction)?
+    )
+
+    alias ReceiptActionsList = Array(ReceiptAction)
+
+    alias ReceiptFilter = NamedTuple(
+      "Name" : ReceiptFilterName,
+      "IpFilter" : ReceiptIpFilter
+    )
+
+    alias ReceiptFilterList = Array(ReceiptFilter)
+
+    alias ReceiptFilterName = String
+
+    alias ReceiptFilterPolicy = String
+
+    alias ReceiptIpFilter = NamedTuple(
+      "Policy" : ReceiptFilterPolicy,
+      "Cidr" : Cidr
+    )
+
+    alias ReceiptRule = NamedTuple(
+      "Name" : ReceiptRuleName,
+      "Enabled" : (Enabled)?,
+      "TlsPolicy" : (TlsPolicy)?,
+      "Recipients" : (RecipientsList)?,
+      "Actions" : (ReceiptActionsList)?,
+      "ScanEnabled" : (Enabled)?
+    )
+
+    alias ReceiptRuleName = String
+
+    alias ReceiptRuleNamesList = Array(ReceiptRuleName)
+
+    alias ReceiptRuleSetMetadata = NamedTuple(
+      "Name" : (ReceiptRuleSetName)?,
+      "CreatedTimestamp" : (Timestamp)?
+    )
+
+    alias ReceiptRuleSetName = String
+
+    alias ReceiptRuleSetsLists = Array(ReceiptRuleSetMetadata)
+
+    alias ReceiptRulesList = Array(ReceiptRule)
+
+    alias Recipient = String
+
+    alias RecipientDsnFields = NamedTuple(
+      "FinalRecipient" : (Address)?,
+      "Action" : DsnAction,
+      "RemoteMta" : (RemoteMta)?,
+      "Status" : DsnStatus,
+      "DiagnosticCode" : (DiagnosticCode)?,
+      "LastAttemptDate" : (LastAttemptDate)?,
+      "ExtensionFields" : (ExtensionFieldList)?
+    )
+
+    alias RecipientsList = Array(Recipient)
+
+    alias RemoteMta = String
+
+    alias RenderedTemplate = String
+
+    alias ReorderReceiptRuleSetRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "RuleNames" : ReceiptRuleNamesList
+    )
+
+    alias ReorderReceiptRuleSetResponse = NamedTuple(
+      
+    )
+
+    alias ReportingMta = String
+
+    alias ReputationOptions = NamedTuple(
+      "SendingEnabled" : (Enabled)?,
+      "ReputationMetricsEnabled" : (Enabled)?,
+      "LastFreshStart" : (LastFreshStart)?
+    )
+
+    alias RuleDoesNotExistException = NamedTuple(
+      "Name" : (RuleOrRuleSetName)?
+    )
+
+    alias RuleOrRuleSetName = String
+
+    alias RuleSetDoesNotExistException = NamedTuple(
+      "Name" : (RuleOrRuleSetName)?
+    )
+
+    alias S3Action = NamedTuple(
+      "TopicArn" : (AmazonResourceName)?,
+      "BucketName" : S3BucketName,
+      "ObjectKeyPrefix" : (S3KeyPrefix)?,
+      "KmsKeyArn" : (AmazonResourceName)?
+    )
+
+    alias S3BucketName = String
+
+    alias S3KeyPrefix = String
+
+    alias SNSAction = NamedTuple(
+      "TopicArn" : AmazonResourceName,
+      "Encoding" : (SNSActionEncoding)?
+    )
+
+    alias SNSActionEncoding = String
+
+    alias SNSDestination = NamedTuple(
+      "TopicARN" : AmazonResourceName
+    )
+
+    alias SendBounceRequest = NamedTuple(
+      "OriginalMessageId" : MessageId,
+      "BounceSender" : Address,
+      "Explanation" : (Explanation)?,
+      "MessageDsn" : (MessageDsn)?,
+      "BouncedRecipientInfoList" : BouncedRecipientInfoList,
+      "BounceSenderArn" : (AmazonResourceName)?
+    )
+
+    alias SendBounceResponse = NamedTuple(
+      "MessageId" : (MessageId)?
+    )
+
+    alias SendBulkTemplatedEmailRequest = NamedTuple(
+      "Source" : Address,
+      "SourceArn" : (AmazonResourceName)?,
+      "ReplyToAddresses" : (AddressList)?,
+      "ReturnPath" : (Address)?,
+      "ReturnPathArn" : (AmazonResourceName)?,
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "DefaultTags" : (MessageTagList)?,
+      "Template" : TemplateName,
+      "TemplateArn" : (AmazonResourceName)?,
+      "DefaultTemplateData" : (TemplateData)?,
+      "Destinations" : BulkEmailDestinationList
+    )
+
+    alias SendBulkTemplatedEmailResponse = NamedTuple(
+      "Status" : BulkEmailDestinationStatusList
+    )
+
+    alias SendCustomVerificationEmailRequest = NamedTuple(
+      "EmailAddress" : Address,
+      "TemplateName" : TemplateName,
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias SendCustomVerificationEmailResponse = NamedTuple(
+      "MessageId" : (MessageId)?
+    )
+
+    alias SendDataPoint = NamedTuple(
+      "Timestamp" : (Timestamp)?,
+      "DeliveryAttempts" : (Counter)?,
+      "Bounces" : (Counter)?,
+      "Complaints" : (Counter)?,
+      "Rejects" : (Counter)?
+    )
+
+    alias SendDataPointList = Array(SendDataPoint)
+
+    alias SendEmailRequest = NamedTuple(
+      "Source" : Address,
+      "Destination" : Destination,
+      "Message" : Message,
+      "ReplyToAddresses" : (AddressList)?,
+      "ReturnPath" : (Address)?,
+      "SourceArn" : (AmazonResourceName)?,
+      "ReturnPathArn" : (AmazonResourceName)?,
+      "Tags" : (MessageTagList)?,
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias SendEmailResponse = NamedTuple(
+      "MessageId" : MessageId
+    )
+
+    alias SendRawEmailRequest = NamedTuple(
+      "Source" : (Address)?,
+      "Destinations" : (AddressList)?,
+      "RawMessage" : RawMessage,
+      "FromArn" : (AmazonResourceName)?,
+      "SourceArn" : (AmazonResourceName)?,
+      "ReturnPathArn" : (AmazonResourceName)?,
+      "Tags" : (MessageTagList)?,
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias SendRawEmailResponse = NamedTuple(
+      "MessageId" : MessageId
+    )
+
+    alias SendTemplatedEmailRequest = NamedTuple(
+      "Source" : Address,
+      "Destination" : Destination,
+      "ReplyToAddresses" : (AddressList)?,
+      "ReturnPath" : (Address)?,
+      "SourceArn" : (AmazonResourceName)?,
+      "ReturnPathArn" : (AmazonResourceName)?,
+      "Tags" : (MessageTagList)?,
+      "ConfigurationSetName" : (ConfigurationSetName)?,
+      "Template" : TemplateName,
+      "TemplateArn" : (AmazonResourceName)?,
+      "TemplateData" : TemplateData
+    )
+
+    alias SendTemplatedEmailResponse = NamedTuple(
+      "MessageId" : MessageId
+    )
+
+    alias SentLast24Hours = Float64
+
+    alias SetActiveReceiptRuleSetRequest = NamedTuple(
+      "RuleSetName" : (ReceiptRuleSetName)?
+    )
+
+    alias SetActiveReceiptRuleSetResponse = NamedTuple(
+      
+    )
+
+    alias SetIdentityDkimEnabledRequest = NamedTuple(
+      "Identity" : Identity,
+      "DkimEnabled" : Enabled
+    )
+
+    alias SetIdentityDkimEnabledResponse = NamedTuple(
+      
+    )
+
+    alias SetIdentityFeedbackForwardingEnabledRequest = NamedTuple(
+      "Identity" : Identity,
+      "ForwardingEnabled" : Enabled
+    )
+
+    alias SetIdentityFeedbackForwardingEnabledResponse = NamedTuple(
+      
+    )
+
+    alias SetIdentityHeadersInNotificationsEnabledRequest = NamedTuple(
+      "Identity" : Identity,
+      "NotificationType" : NotificationType,
+      "Enabled" : Enabled
+    )
+
+    alias SetIdentityHeadersInNotificationsEnabledResponse = NamedTuple(
+      
+    )
+
+    alias SetIdentityMailFromDomainRequest = NamedTuple(
+      "Identity" : Identity,
+      "MailFromDomain" : (MailFromDomainName)?,
+      "BehaviorOnMXFailure" : (BehaviorOnMXFailure)?
+    )
+
+    alias SetIdentityMailFromDomainResponse = NamedTuple(
+      
+    )
+
+    alias SetIdentityNotificationTopicRequest = NamedTuple(
+      "Identity" : Identity,
+      "NotificationType" : NotificationType,
+      "SnsTopic" : (NotificationTopic)?
+    )
+
+    alias SetIdentityNotificationTopicResponse = NamedTuple(
+      
+    )
+
+    alias SetReceiptRulePositionRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "RuleName" : ReceiptRuleName,
+      "After" : (ReceiptRuleName)?
+    )
+
+    alias SetReceiptRulePositionResponse = NamedTuple(
+      
+    )
+
+    alias StopAction = NamedTuple(
+      "Scope" : StopScope,
+      "TopicArn" : (AmazonResourceName)?
+    )
+
+    alias StopScope = String
+
+    alias Subject = String
+
+    alias SubjectPart = String
+
+    alias SuccessRedirectionURL = String
+
+    alias Template = NamedTuple(
+      "TemplateName" : TemplateName,
+      "SubjectPart" : (SubjectPart)?,
+      "TextPart" : (TextPart)?,
+      "HtmlPart" : (HtmlPart)?
+    )
+
+    alias TemplateContent = String
+
+    alias TemplateData = String
+
+    alias TemplateDoesNotExistException = NamedTuple(
+      "TemplateName" : (TemplateName)?
+    )
+
+    alias TemplateMetadata = NamedTuple(
+      "Name" : (TemplateName)?,
+      "CreatedTimestamp" : (Timestamp)?
+    )
+
+    alias TemplateMetadataList = Array(TemplateMetadata)
+
+    alias TemplateName = String
+
+    alias TestRenderTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName,
+      "TemplateData" : TemplateData
+    )
+
+    alias TestRenderTemplateResponse = NamedTuple(
+      "RenderedTemplate" : (RenderedTemplate)?
+    )
+
+    alias TextPart = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TlsPolicy = String
+
+    alias TrackingOptions = NamedTuple(
+      "CustomRedirectDomain" : (CustomRedirectDomain)?
+    )
+
+    alias TrackingOptionsAlreadyExistsException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias TrackingOptionsDoesNotExistException = NamedTuple(
+      "ConfigurationSetName" : (ConfigurationSetName)?
+    )
+
+    alias UpdateAccountSendingEnabledRequest = NamedTuple(
+      "Enabled" : (Enabled)?
+    )
+
+    alias UpdateConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "EventDestination" : EventDestination
+    )
+
+    alias UpdateConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateConfigurationSetReputationMetricsEnabledRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "Enabled" : Enabled
+    )
+
+    alias UpdateConfigurationSetSendingEnabledRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "Enabled" : Enabled
+    )
+
+    alias UpdateConfigurationSetTrackingOptionsRequest = NamedTuple(
+      "ConfigurationSetName" : ConfigurationSetName,
+      "TrackingOptions" : TrackingOptions
+    )
+
+    alias UpdateConfigurationSetTrackingOptionsResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCustomVerificationEmailTemplateRequest = NamedTuple(
+      "TemplateName" : TemplateName,
+      "FromEmailAddress" : (FromAddress)?,
+      "TemplateSubject" : (Subject)?,
+      "TemplateContent" : (TemplateContent)?,
+      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
+      "FailureRedirectionURL" : (FailureRedirectionURL)?
+    )
+
+    alias UpdateReceiptRuleRequest = NamedTuple(
+      "RuleSetName" : ReceiptRuleSetName,
+      "Rule" : ReceiptRule
+    )
+
+    alias UpdateReceiptRuleResponse = NamedTuple(
+      
+    )
+
+    alias UpdateTemplateRequest = NamedTuple(
+      "Template" : Template
+    )
+
+    alias UpdateTemplateResponse = NamedTuple(
+      
+    )
+
+    alias VerificationAttributes = Hash(Identity,IdentityVerificationAttributes)
+
+    alias VerificationStatus = String
+
+    alias VerificationToken = String
+
+    alias VerificationTokenList = Array(VerificationToken)
+
+    alias VerifyDomainDkimRequest = NamedTuple(
+      "Domain" : Domain
+    )
+
+    alias VerifyDomainDkimResponse = NamedTuple(
+      "DkimTokens" : VerificationTokenList
+    )
+
+    alias VerifyDomainIdentityRequest = NamedTuple(
+      "Domain" : Domain
+    )
+
+    alias VerifyDomainIdentityResponse = NamedTuple(
+      "VerificationToken" : VerificationToken
+    )
+
+    alias VerifyEmailAddressRequest = NamedTuple(
+      "EmailAddress" : Address
+    )
+
+    alias VerifyEmailIdentityRequest = NamedTuple(
+      "EmailAddress" : Address
+    )
+
+    alias VerifyEmailIdentityResponse = NamedTuple(
+      
+    )
+
+    alias WorkmailAction = NamedTuple(
+      "TopicArn" : (AmazonResourceName)?,
+      "OrganizationArn" : AmazonResourceName
+    )
   end
 end

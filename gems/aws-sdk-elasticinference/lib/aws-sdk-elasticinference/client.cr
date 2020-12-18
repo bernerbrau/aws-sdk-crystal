@@ -363,8 +363,8 @@ module Aws::ElasticInference
     #
     # @overload describe_accelerator_offerings(**params)
     # @param [Hash] params ({})
-    def describe_accelerator_offerings(params = {}, **options)
-      req = build_request(:describe_accelerator_offerings, params)
+    def describe_accelerator_offerings(, **options)
+      req = build_request(:describe_accelerator_offerings, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::ElasticInference
     #
     # @overload describe_accelerator_types(**params)
     # @param [Hash] params ({})
-    def describe_accelerator_types(params = {}, **options)
-      req = build_request(:describe_accelerator_types, params)
+    def describe_accelerator_types(, **options)
+      req = build_request(:describe_accelerator_types, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::ElasticInference
     #
     # @overload describe_accelerators(**params)
     # @param [Hash] params ({})
-    def describe_accelerators(params = {}, **options)
-      req = build_request(:describe_accelerators, params)
+    def describe_accelerators(, **options)
+      req = build_request(:describe_accelerators, )
       req.send_request(options)
     end
 
@@ -481,8 +481,8 @@ module Aws::ElasticInference
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -509,8 +509,8 @@ module Aws::ElasticInference
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -535,8 +535,8 @@ module Aws::ElasticInference
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

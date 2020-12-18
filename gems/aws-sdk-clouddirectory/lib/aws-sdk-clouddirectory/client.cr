@@ -379,8 +379,8 @@ module Aws::CloudDirectory
     #
     # @overload add_facet_to_object(**params)
     # @param [Hash] params ({})
-    def add_facet_to_object(params = {}, **options)
-      req = build_request(:add_facet_to_object, params)
+    def add_facet_to_object(, **options)
+      req = build_request(:add_facet_to_object, )
       req.send_request(options)
     end
 
@@ -417,8 +417,8 @@ module Aws::CloudDirectory
     #
     # @overload apply_schema(**params)
     # @param [Hash] params ({})
-    def apply_schema(params = {}, **options)
-      req = build_request(:apply_schema, params)
+    def apply_schema(, **options)
+      req = build_request(:apply_schema, )
       req.send_request(options)
     end
 
@@ -467,8 +467,8 @@ module Aws::CloudDirectory
     #
     # @overload attach_object(**params)
     # @param [Hash] params ({})
-    def attach_object(params = {}, **options)
-      req = build_request(:attach_object, params)
+    def attach_object(, **options)
+      req = build_request(:attach_object, )
       req.send_request(options)
     end
 
@@ -504,8 +504,8 @@ module Aws::CloudDirectory
     #
     # @overload attach_policy(**params)
     # @param [Hash] params ({})
-    def attach_policy(params = {}, **options)
-      req = build_request(:attach_policy, params)
+    def attach_policy(, **options)
+      req = build_request(:attach_policy, )
       req.send_request(options)
     end
 
@@ -545,8 +545,8 @@ module Aws::CloudDirectory
     #
     # @overload attach_to_index(**params)
     # @param [Hash] params ({})
-    def attach_to_index(params = {}, **options)
-      req = build_request(:attach_to_index, params)
+    def attach_to_index(, **options)
+      req = build_request(:attach_to_index, )
       req.send_request(options)
     end
 
@@ -624,8 +624,8 @@ module Aws::CloudDirectory
     #
     # @overload attach_typed_link(**params)
     # @param [Hash] params ({})
-    def attach_typed_link(params = {}, **options)
-      req = build_request(:attach_typed_link, params)
+    def attach_typed_link(, **options)
+      req = build_request(:attach_typed_link, )
       req.send_request(options)
     end
 
@@ -979,8 +979,8 @@ module Aws::CloudDirectory
     #
     # @overload batch_read(**params)
     # @param [Hash] params ({})
-    def batch_read(params = {}, **options)
-      req = build_request(:batch_read, params)
+    def batch_read(, **options)
+      req = build_request(:batch_read, )
       req.send_request(options)
     end
 
@@ -1284,8 +1284,8 @@ module Aws::CloudDirectory
     #
     # @overload batch_write(**params)
     # @param [Hash] params ({})
-    def batch_write(params = {}, **options)
-      req = build_request(:batch_write, params)
+    def batch_write(, **options)
+      req = build_request(:batch_write, )
       req.send_request(options)
     end
 
@@ -1332,8 +1332,8 @@ module Aws::CloudDirectory
     #
     # @overload create_directory(**params)
     # @param [Hash] params ({})
-    def create_directory(params = {}, **options)
-      req = build_request(:create_directory, params)
+    def create_directory(, **options)
+      req = build_request(:create_directory, )
       req.send_request(options)
     end
 
@@ -1428,8 +1428,8 @@ module Aws::CloudDirectory
     #
     # @overload create_facet(**params)
     # @param [Hash] params ({})
-    def create_facet(params = {}, **options)
-      req = build_request(:create_facet, params)
+    def create_facet(, **options)
+      req = build_request(:create_facet, )
       req.send_request(options)
     end
 
@@ -1487,8 +1487,8 @@ module Aws::CloudDirectory
     #
     # @overload create_index(**params)
     # @param [Hash] params ({})
-    def create_index(params = {}, **options)
-      req = build_request(:create_index, params)
+    def create_index(, **options)
+      req = build_request(:create_index, )
       req.send_request(options)
     end
 
@@ -1561,8 +1561,8 @@ module Aws::CloudDirectory
     #
     # @overload create_object(**params)
     # @param [Hash] params ({})
-    def create_object(params = {}, **options)
-      req = build_request(:create_object, params)
+    def create_object(, **options)
+      req = build_request(:create_object, )
       req.send_request(options)
     end
 
@@ -1603,8 +1603,8 @@ module Aws::CloudDirectory
     #
     # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, **options)
-      req = build_request(:create_schema, params)
+    def create_schema(, **options)
+      req = build_request(:create_schema, )
       req.send_request(options)
     end
 
@@ -1660,8 +1660,8 @@ module Aws::CloudDirectory
     #
     # @overload create_typed_link_facet(**params)
     # @param [Hash] params ({})
-    def create_typed_link_facet(params = {}, **options)
-      req = build_request(:create_typed_link_facet, params)
+    def create_typed_link_facet(, **options)
+      req = build_request(:create_typed_link_facet, )
       req.send_request(options)
     end
 
@@ -1690,8 +1690,8 @@ module Aws::CloudDirectory
     #
     # @overload delete_directory(**params)
     # @param [Hash] params ({})
-    def delete_directory(params = {}, **options)
-      req = build_request(:delete_directory, params)
+    def delete_directory(, **options)
+      req = build_request(:delete_directory, )
       req.send_request(options)
     end
 
@@ -1719,8 +1719,8 @@ module Aws::CloudDirectory
     #
     # @overload delete_facet(**params)
     # @param [Hash] params ({})
-    def delete_facet(params = {}, **options)
-      req = build_request(:delete_facet, params)
+    def delete_facet(, **options)
+      req = build_request(:delete_facet, )
       req.send_request(options)
     end
 
@@ -1755,8 +1755,8 @@ module Aws::CloudDirectory
     #
     # @overload delete_object(**params)
     # @param [Hash] params ({})
-    def delete_object(params = {}, **options)
-      req = build_request(:delete_object, params)
+    def delete_object(, **options)
+      req = build_request(:delete_object, )
       req.send_request(options)
     end
 
@@ -1785,8 +1785,8 @@ module Aws::CloudDirectory
     #
     # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, **options)
-      req = build_request(:delete_schema, params)
+    def delete_schema(, **options)
+      req = build_request(:delete_schema, )
       req.send_request(options)
     end
 
@@ -1816,8 +1816,8 @@ module Aws::CloudDirectory
     #
     # @overload delete_typed_link_facet(**params)
     # @param [Hash] params ({})
-    def delete_typed_link_facet(params = {}, **options)
-      req = build_request(:delete_typed_link_facet, params)
+    def delete_typed_link_facet(, **options)
+      req = build_request(:delete_typed_link_facet, )
       req.send_request(options)
     end
 
@@ -1857,8 +1857,8 @@ module Aws::CloudDirectory
     #
     # @overload detach_from_index(**params)
     # @param [Hash] params ({})
-    def detach_from_index(params = {}, **options)
-      req = build_request(:detach_from_index, params)
+    def detach_from_index(, **options)
+      req = build_request(:detach_from_index, )
       req.send_request(options)
     end
 
@@ -1898,8 +1898,8 @@ module Aws::CloudDirectory
     #
     # @overload detach_object(**params)
     # @param [Hash] params ({})
-    def detach_object(params = {}, **options)
-      req = build_request(:detach_object, params)
+    def detach_object(, **options)
+      req = build_request(:detach_object, )
       req.send_request(options)
     end
 
@@ -1934,8 +1934,8 @@ module Aws::CloudDirectory
     #
     # @overload detach_policy(**params)
     # @param [Hash] params ({})
-    def detach_policy(params = {}, **options)
-      req = build_request(:detach_policy, params)
+    def detach_policy(, **options)
+      req = build_request(:detach_policy, )
       req.send_request(options)
     end
 
@@ -1989,8 +1989,8 @@ module Aws::CloudDirectory
     #
     # @overload detach_typed_link(**params)
     # @param [Hash] params ({})
-    def detach_typed_link(params = {}, **options)
-      req = build_request(:detach_typed_link, params)
+    def detach_typed_link(, **options)
+      req = build_request(:detach_typed_link, )
       req.send_request(options)
     end
 
@@ -2019,8 +2019,8 @@ module Aws::CloudDirectory
     #
     # @overload disable_directory(**params)
     # @param [Hash] params ({})
-    def disable_directory(params = {}, **options)
-      req = build_request(:disable_directory, params)
+    def disable_directory(, **options)
+      req = build_request(:disable_directory, )
       req.send_request(options)
     end
 
@@ -2048,8 +2048,8 @@ module Aws::CloudDirectory
     #
     # @overload enable_directory(**params)
     # @param [Hash] params ({})
-    def enable_directory(params = {}, **options)
-      req = build_request(:enable_directory, params)
+    def enable_directory(, **options)
+      req = build_request(:enable_directory, )
       req.send_request(options)
     end
 
@@ -2077,8 +2077,8 @@ module Aws::CloudDirectory
     #
     # @overload get_applied_schema_version(**params)
     # @param [Hash] params ({})
-    def get_applied_schema_version(params = {}, **options)
-      req = build_request(:get_applied_schema_version, params)
+    def get_applied_schema_version(, **options)
+      req = build_request(:get_applied_schema_version, )
       req.send_request(options)
     end
 
@@ -2108,8 +2108,8 @@ module Aws::CloudDirectory
     #
     # @overload get_directory(**params)
     # @param [Hash] params ({})
-    def get_directory(params = {}, **options)
-      req = build_request(:get_directory, params)
+    def get_directory(, **options)
+      req = build_request(:get_directory, )
       req.send_request(options)
     end
 
@@ -2145,8 +2145,8 @@ module Aws::CloudDirectory
     #
     # @overload get_facet(**params)
     # @param [Hash] params ({})
-    def get_facet(params = {}, **options)
-      req = build_request(:get_facet, params)
+    def get_facet(, **options)
+      req = build_request(:get_facet, )
       req.send_request(options)
     end
 
@@ -2223,8 +2223,8 @@ module Aws::CloudDirectory
     #
     # @overload get_link_attributes(**params)
     # @param [Hash] params ({})
-    def get_link_attributes(params = {}, **options)
-      req = build_request(:get_link_attributes, params)
+    def get_link_attributes(, **options)
+      req = build_request(:get_link_attributes, )
       req.send_request(options)
     end
 
@@ -2285,8 +2285,8 @@ module Aws::CloudDirectory
     #
     # @overload get_object_attributes(**params)
     # @param [Hash] params ({})
-    def get_object_attributes(params = {}, **options)
-      req = build_request(:get_object_attributes, params)
+    def get_object_attributes(, **options)
+      req = build_request(:get_object_attributes, )
       req.send_request(options)
     end
 
@@ -2327,8 +2327,8 @@ module Aws::CloudDirectory
     #
     # @overload get_object_information(**params)
     # @param [Hash] params ({})
-    def get_object_information(params = {}, **options)
-      req = build_request(:get_object_information, params)
+    def get_object_information(, **options)
+      req = build_request(:get_object_information, )
       req.send_request(options)
     end
 
@@ -2362,8 +2362,8 @@ module Aws::CloudDirectory
     #
     # @overload get_schema_as_json(**params)
     # @param [Hash] params ({})
-    def get_schema_as_json(params = {}, **options)
-      req = build_request(:get_schema_as_json, params)
+    def get_schema_as_json(, **options)
+      req = build_request(:get_schema_as_json, )
       req.send_request(options)
     end
 
@@ -2401,8 +2401,8 @@ module Aws::CloudDirectory
     #
     # @overload get_typed_link_facet_information(**params)
     # @param [Hash] params ({})
-    def get_typed_link_facet_information(params = {}, **options)
-      req = build_request(:get_typed_link_facet_information, params)
+    def get_typed_link_facet_information(, **options)
+      req = build_request(:get_typed_link_facet_information, )
       req.send_request(options)
     end
 
@@ -2448,8 +2448,8 @@ module Aws::CloudDirectory
     #
     # @overload list_applied_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_applied_schema_arns(params = {}, **options)
-      req = build_request(:list_applied_schema_arns, params)
+    def list_applied_schema_arns(, **options)
+      req = build_request(:list_applied_schema_arns, )
       req.send_request(options)
     end
 
@@ -2508,8 +2508,8 @@ module Aws::CloudDirectory
     #
     # @overload list_attached_indices(**params)
     # @param [Hash] params ({})
-    def list_attached_indices(params = {}, **options)
-      req = build_request(:list_attached_indices, params)
+    def list_attached_indices(, **options)
+      req = build_request(:list_attached_indices, )
       req.send_request(options)
     end
 
@@ -2546,8 +2546,8 @@ module Aws::CloudDirectory
     #
     # @overload list_development_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_development_schema_arns(params = {}, **options)
-      req = build_request(:list_development_schema_arns, params)
+    def list_development_schema_arns(, **options)
+      req = build_request(:list_development_schema_arns, )
       req.send_request(options)
     end
 
@@ -2591,8 +2591,8 @@ module Aws::CloudDirectory
     #
     # @overload list_directories(**params)
     # @param [Hash] params ({})
-    def list_directories(params = {}, **options)
-      req = build_request(:list_directories, params)
+    def list_directories(, **options)
+      req = build_request(:list_directories, )
       req.send_request(options)
     end
 
@@ -2650,8 +2650,8 @@ module Aws::CloudDirectory
     #
     # @overload list_facet_attributes(**params)
     # @param [Hash] params ({})
-    def list_facet_attributes(params = {}, **options)
-      req = build_request(:list_facet_attributes, params)
+    def list_facet_attributes(, **options)
+      req = build_request(:list_facet_attributes, )
       req.send_request(options)
     end
 
@@ -2691,8 +2691,8 @@ module Aws::CloudDirectory
     #
     # @overload list_facet_names(**params)
     # @param [Hash] params ({})
-    def list_facet_names(params = {}, **options)
-      req = build_request(:list_facet_names, params)
+    def list_facet_names(, **options)
+      req = build_request(:list_facet_names, )
       req.send_request(options)
     end
 
@@ -2795,8 +2795,8 @@ module Aws::CloudDirectory
     #
     # @overload list_incoming_typed_links(**params)
     # @param [Hash] params ({})
-    def list_incoming_typed_links(params = {}, **options)
-      req = build_request(:list_incoming_typed_links, params)
+    def list_incoming_typed_links(, **options)
+      req = build_request(:list_incoming_typed_links, )
       req.send_request(options)
     end
 
@@ -2891,8 +2891,8 @@ module Aws::CloudDirectory
     #
     # @overload list_index(**params)
     # @param [Hash] params ({})
-    def list_index(params = {}, **options)
-      req = build_request(:list_index, params)
+    def list_index(, **options)
+      req = build_request(:list_index, )
       req.send_request(options)
     end
 
@@ -2935,8 +2935,8 @@ module Aws::CloudDirectory
     #
     # @overload list_managed_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_managed_schema_arns(params = {}, **options)
-      req = build_request(:list_managed_schema_arns, params)
+    def list_managed_schema_arns(, **options)
+      req = build_request(:list_managed_schema_arns, )
       req.send_request(options)
     end
 
@@ -3006,8 +3006,8 @@ module Aws::CloudDirectory
     #
     # @overload list_object_attributes(**params)
     # @param [Hash] params ({})
-    def list_object_attributes(params = {}, **options)
-      req = build_request(:list_object_attributes, params)
+    def list_object_attributes(, **options)
+      req = build_request(:list_object_attributes, )
       req.send_request(options)
     end
 
@@ -3063,8 +3063,8 @@ module Aws::CloudDirectory
     #
     # @overload list_object_children(**params)
     # @param [Hash] params ({})
-    def list_object_children(params = {}, **options)
-      req = build_request(:list_object_children, params)
+    def list_object_children(, **options)
+      req = build_request(:list_object_children, )
       req.send_request(options)
     end
 
@@ -3128,8 +3128,8 @@ module Aws::CloudDirectory
     #
     # @overload list_object_parent_paths(**params)
     # @param [Hash] params ({})
-    def list_object_parent_paths(params = {}, **options)
-      req = build_request(:list_object_parent_paths, params)
+    def list_object_parent_paths(, **options)
+      req = build_request(:list_object_parent_paths, )
       req.send_request(options)
     end
 
@@ -3194,8 +3194,8 @@ module Aws::CloudDirectory
     #
     # @overload list_object_parents(**params)
     # @param [Hash] params ({})
-    def list_object_parents(params = {}, **options)
-      req = build_request(:list_object_parents, params)
+    def list_object_parents(, **options)
+      req = build_request(:list_object_parents, )
       req.send_request(options)
     end
 
@@ -3250,8 +3250,8 @@ module Aws::CloudDirectory
     #
     # @overload list_object_policies(**params)
     # @param [Hash] params ({})
-    def list_object_policies(params = {}, **options)
-      req = build_request(:list_object_policies, params)
+    def list_object_policies(, **options)
+      req = build_request(:list_object_policies, )
       req.send_request(options)
     end
 
@@ -3355,8 +3355,8 @@ module Aws::CloudDirectory
     #
     # @overload list_outgoing_typed_links(**params)
     # @param [Hash] params ({})
-    def list_outgoing_typed_links(params = {}, **options)
-      req = build_request(:list_outgoing_typed_links, params)
+    def list_outgoing_typed_links(, **options)
+      req = build_request(:list_outgoing_typed_links, )
       req.send_request(options)
     end
 
@@ -3411,8 +3411,8 @@ module Aws::CloudDirectory
     #
     # @overload list_policy_attachments(**params)
     # @param [Hash] params ({})
-    def list_policy_attachments(params = {}, **options)
-      req = build_request(:list_policy_attachments, params)
+    def list_policy_attachments(, **options)
+      req = build_request(:list_policy_attachments, )
       req.send_request(options)
     end
 
@@ -3455,8 +3455,8 @@ module Aws::CloudDirectory
     #
     # @overload list_published_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_published_schema_arns(params = {}, **options)
-      req = build_request(:list_published_schema_arns, params)
+    def list_published_schema_arns(, **options)
+      req = build_request(:list_published_schema_arns, )
       req.send_request(options)
     end
 
@@ -3503,8 +3503,8 @@ module Aws::CloudDirectory
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3566,8 +3566,8 @@ module Aws::CloudDirectory
     #
     # @overload list_typed_link_facet_attributes(**params)
     # @param [Hash] params ({})
-    def list_typed_link_facet_attributes(params = {}, **options)
-      req = build_request(:list_typed_link_facet_attributes, params)
+    def list_typed_link_facet_attributes(, **options)
+      req = build_request(:list_typed_link_facet_attributes, )
       req.send_request(options)
     end
 
@@ -3613,8 +3613,8 @@ module Aws::CloudDirectory
     #
     # @overload list_typed_link_facet_names(**params)
     # @param [Hash] params ({})
-    def list_typed_link_facet_names(params = {}, **options)
-      req = build_request(:list_typed_link_facet_names, params)
+    def list_typed_link_facet_names(, **options)
+      req = build_request(:list_typed_link_facet_names, )
       req.send_request(options)
     end
 
@@ -3676,8 +3676,8 @@ module Aws::CloudDirectory
     #
     # @overload lookup_policy(**params)
     # @param [Hash] params ({})
-    def lookup_policy(params = {}, **options)
-      req = build_request(:lookup_policy, params)
+    def lookup_policy(, **options)
+      req = build_request(:lookup_policy, )
       req.send_request(options)
     end
 
@@ -3722,8 +3722,8 @@ module Aws::CloudDirectory
     #
     # @overload publish_schema(**params)
     # @param [Hash] params ({})
-    def publish_schema(params = {}, **options)
-      req = build_request(:publish_schema, params)
+    def publish_schema(, **options)
+      req = build_request(:publish_schema, )
       req.send_request(options)
     end
 
@@ -3759,8 +3759,8 @@ module Aws::CloudDirectory
     #
     # @overload put_schema_from_json(**params)
     # @param [Hash] params ({})
-    def put_schema_from_json(params = {}, **options)
-      req = build_request(:put_schema_from_json, params)
+    def put_schema_from_json(, **options)
+      req = build_request(:put_schema_from_json, )
       req.send_request(options)
     end
 
@@ -3794,8 +3794,8 @@ module Aws::CloudDirectory
     #
     # @overload remove_facet_from_object(**params)
     # @param [Hash] params ({})
-    def remove_facet_from_object(params = {}, **options)
-      req = build_request(:remove_facet_from_object, params)
+    def remove_facet_from_object(, **options)
+      req = build_request(:remove_facet_from_object, )
       req.send_request(options)
     end
 
@@ -3826,8 +3826,8 @@ module Aws::CloudDirectory
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3853,8 +3853,8 @@ module Aws::CloudDirectory
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3928,8 +3928,8 @@ module Aws::CloudDirectory
     #
     # @overload update_facet(**params)
     # @param [Hash] params ({})
-    def update_facet(params = {}, **options)
-      req = build_request(:update_facet, params)
+    def update_facet(, **options)
+      req = build_request(:update_facet, )
       req.send_request(options)
     end
 
@@ -4007,8 +4007,8 @@ module Aws::CloudDirectory
     #
     # @overload update_link_attributes(**params)
     # @param [Hash] params ({})
-    def update_link_attributes(params = {}, **options)
-      req = build_request(:update_link_attributes, params)
+    def update_link_attributes(, **options)
+      req = build_request(:update_link_attributes, )
       req.send_request(options)
     end
 
@@ -4064,8 +4064,8 @@ module Aws::CloudDirectory
     #
     # @overload update_object_attributes(**params)
     # @param [Hash] params ({})
-    def update_object_attributes(params = {}, **options)
-      req = build_request(:update_object_attributes, params)
+    def update_object_attributes(, **options)
+      req = build_request(:update_object_attributes, )
       req.send_request(options)
     end
 
@@ -4098,8 +4098,8 @@ module Aws::CloudDirectory
     #
     # @overload update_schema(**params)
     # @param [Hash] params ({})
-    def update_schema(params = {}, **options)
-      req = build_request(:update_schema, params)
+    def update_schema(, **options)
+      req = build_request(:update_schema, )
       req.send_request(options)
     end
 
@@ -4174,8 +4174,8 @@ module Aws::CloudDirectory
     #
     # @overload update_typed_link_facet(**params)
     # @param [Hash] params ({})
-    def update_typed_link_facet(params = {}, **options)
-      req = build_request(:update_typed_link_facet, params)
+    def update_typed_link_facet(, **options)
+      req = build_request(:update_typed_link_facet, )
       req.send_request(options)
     end
 
@@ -4222,8 +4222,8 @@ module Aws::CloudDirectory
     #
     # @overload upgrade_applied_schema(**params)
     # @param [Hash] params ({})
-    def upgrade_applied_schema(params = {}, **options)
-      req = build_request(:upgrade_applied_schema, params)
+    def upgrade_applied_schema(, **options)
+      req = build_request(:upgrade_applied_schema, )
       req.send_request(options)
     end
 
@@ -4269,8 +4269,8 @@ module Aws::CloudDirectory
     #
     # @overload upgrade_published_schema(**params)
     # @param [Hash] params ({})
-    def upgrade_published_schema(params = {}, **options)
-      req = build_request(:upgrade_published_schema, params)
+    def upgrade_published_schema(, **options)
+      req = build_request(:upgrade_published_schema, )
       req.send_request(options)
     end
 

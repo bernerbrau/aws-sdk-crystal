@@ -374,8 +374,8 @@ module Aws::DevOpsGuru
     #
     # @overload add_notification_channel(**params)
     # @param [Hash] params ({})
-    def add_notification_channel(params = {}, **options)
-      req = build_request(:add_notification_channel, params)
+    def add_notification_channel(, **options)
+      req = build_request(:add_notification_channel, )
       req.send_request(options)
     end
 
@@ -400,8 +400,8 @@ module Aws::DevOpsGuru
     #
     # @overload describe_account_health(**params)
     # @param [Hash] params ({})
-    def describe_account_health(params = {}, **options)
-      req = build_request(:describe_account_health, params)
+    def describe_account_health(, **options)
+      req = build_request(:describe_account_health, )
       req.send_request(options)
     end
 
@@ -444,8 +444,8 @@ module Aws::DevOpsGuru
     #
     # @overload describe_account_overview(**params)
     # @param [Hash] params ({})
-    def describe_account_overview(params = {}, **options)
-      req = build_request(:describe_account_overview, params)
+    def describe_account_overview(, **options)
+      req = build_request(:describe_account_overview, )
       req.send_request(options)
     end
 
@@ -510,8 +510,8 @@ module Aws::DevOpsGuru
     #
     # @overload describe_anomaly(**params)
     # @param [Hash] params ({})
-    def describe_anomaly(params = {}, **options)
-      req = build_request(:describe_anomaly, params)
+    def describe_anomaly(, **options)
+      req = build_request(:describe_anomaly, )
       req.send_request(options)
     end
 
@@ -558,8 +558,8 @@ module Aws::DevOpsGuru
     #
     # @overload describe_insight(**params)
     # @param [Hash] params ({})
-    def describe_insight(params = {}, **options)
-      req = build_request(:describe_insight, params)
+    def describe_insight(, **options)
+      req = build_request(:describe_insight, )
       req.send_request(options)
     end
 
@@ -607,8 +607,8 @@ module Aws::DevOpsGuru
     #
     # @overload describe_resource_collection_health(**params)
     # @param [Hash] params ({})
-    def describe_resource_collection_health(params = {}, **options)
-      req = build_request(:describe_resource_collection_health, params)
+    def describe_resource_collection_health(, **options)
+      req = build_request(:describe_resource_collection_health, )
       req.send_request(options)
     end
 
@@ -629,8 +629,8 @@ module Aws::DevOpsGuru
     #
     # @overload describe_service_integration(**params)
     # @param [Hash] params ({})
-    def describe_service_integration(params = {}, **options)
-      req = build_request(:describe_service_integration, params)
+    def describe_service_integration(, **options)
+      req = build_request(:describe_service_integration, )
       req.send_request(options)
     end
 
@@ -671,8 +671,8 @@ module Aws::DevOpsGuru
     #
     # @overload get_resource_collection(**params)
     # @param [Hash] params ({})
-    def get_resource_collection(params = {}, **options)
-      req = build_request(:get_resource_collection, params)
+    def get_resource_collection(, **options)
+      req = build_request(:get_resource_collection, )
       req.send_request(options)
     end
 
@@ -763,8 +763,8 @@ module Aws::DevOpsGuru
     #
     # @overload list_anomalies_for_insight(**params)
     # @param [Hash] params ({})
-    def list_anomalies_for_insight(params = {}, **options)
-      req = build_request(:list_anomalies_for_insight, params)
+    def list_anomalies_for_insight(, **options)
+      req = build_request(:list_anomalies_for_insight, )
       req.send_request(options)
     end
 
@@ -834,8 +834,8 @@ module Aws::DevOpsGuru
     #
     # @overload list_events(**params)
     # @param [Hash] params ({})
-    def list_events(params = {}, **options)
-      req = build_request(:list_events, params)
+    def list_events(, **options)
+      req = build_request(:list_events, )
       req.send_request(options)
     end
 
@@ -918,8 +918,8 @@ module Aws::DevOpsGuru
     #
     # @overload list_insights(**params)
     # @param [Hash] params ({})
-    def list_insights(params = {}, **options)
-      req = build_request(:list_insights, params)
+    def list_insights(, **options)
+      req = build_request(:list_insights, )
       req.send_request(options)
     end
 
@@ -957,8 +957,8 @@ module Aws::DevOpsGuru
     #
     # @overload list_notification_channels(**params)
     # @param [Hash] params ({})
-    def list_notification_channels(params = {}, **options)
-      req = build_request(:list_notification_channels, params)
+    def list_notification_channels(, **options)
+      req = build_request(:list_notification_channels, )
       req.send_request(options)
     end
 
@@ -1013,8 +1013,8 @@ module Aws::DevOpsGuru
     #
     # @overload list_recommendations(**params)
     # @param [Hash] params ({})
-    def list_recommendations(params = {}, **options)
-      req = build_request(:list_recommendations, params)
+    def list_recommendations(, **options)
+      req = build_request(:list_recommendations, )
       req.send_request(options)
     end
 
@@ -1039,8 +1039,8 @@ module Aws::DevOpsGuru
     #
     # @overload put_feedback(**params)
     # @param [Hash] params ({})
-    def put_feedback(params = {}, **options)
-      req = build_request(:put_feedback, params)
+    def put_feedback(, **options)
+      req = build_request(:put_feedback, )
       req.send_request(options)
     end
 
@@ -1063,8 +1063,8 @@ module Aws::DevOpsGuru
     #
     # @overload remove_notification_channel(**params)
     # @param [Hash] params ({})
-    def remove_notification_channel(params = {}, **options)
-      req = build_request(:remove_notification_channel, params)
+    def remove_notification_channel(, **options)
+      req = build_request(:remove_notification_channel, )
       req.send_request(options)
     end
 
@@ -1155,8 +1155,8 @@ module Aws::DevOpsGuru
     #
     # @overload search_insights(**params)
     # @param [Hash] params ({})
-    def search_insights(params = {}, **options)
-      req = build_request(:search_insights, params)
+    def search_insights(, **options)
+      req = build_request(:search_insights, )
       req.send_request(options)
     end
 
@@ -1190,8 +1190,8 @@ module Aws::DevOpsGuru
     #
     # @overload update_resource_collection(**params)
     # @param [Hash] params ({})
-    def update_resource_collection(params = {}, **options)
-      req = build_request(:update_resource_collection, params)
+    def update_resource_collection(, **options)
+      req = build_request(:update_resource_collection, )
       req.send_request(options)
     end
 
@@ -1221,8 +1221,8 @@ module Aws::DevOpsGuru
     #
     # @overload update_service_integration(**params)
     # @param [Hash] params ({})
-    def update_service_integration(params = {}, **options)
-      req = build_request(:update_service_integration, params)
+    def update_service_integration(, **options)
+      req = build_request(:update_service_integration, )
       req.send_request(options)
     end
 

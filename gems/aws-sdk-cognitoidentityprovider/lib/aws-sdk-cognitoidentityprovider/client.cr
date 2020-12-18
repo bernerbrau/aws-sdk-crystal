@@ -375,8 +375,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload add_custom_attributes(**params)
     # @param [Hash] params ({})
-    def add_custom_attributes(params = {}, **options)
-      req = build_request(:add_custom_attributes, params)
+    def add_custom_attributes(, **options)
+      req = build_request(:add_custom_attributes, )
       req.send_request(options)
     end
 
@@ -407,8 +407,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_add_user_to_group(**params)
     # @param [Hash] params ({})
-    def admin_add_user_to_group(params = {}, **options)
-      req = build_request(:admin_add_user_to_group, params)
+    def admin_add_user_to_group(, **options)
+      req = build_request(:admin_add_user_to_group, )
       req.send_request(options)
     end
 
@@ -476,8 +476,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_confirm_sign_up(**params)
     # @param [Hash] params ({})
-    def admin_confirm_sign_up(params = {}, **options)
-      req = build_request(:admin_confirm_sign_up, params)
+    def admin_confirm_sign_up(, **options)
+      req = build_request(:admin_confirm_sign_up, )
       req.send_request(options)
     end
 
@@ -685,8 +685,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_create_user(**params)
     # @param [Hash] params ({})
-    def admin_create_user(params = {}, **options)
-      req = build_request(:admin_create_user, params)
+    def admin_create_user(, **options)
+      req = build_request(:admin_create_user, )
       req.send_request(options)
     end
 
@@ -713,8 +713,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_delete_user(**params)
     # @param [Hash] params ({})
-    def admin_delete_user(params = {}, **options)
-      req = build_request(:admin_delete_user, params)
+    def admin_delete_user(, **options)
+      req = build_request(:admin_delete_user, )
       req.send_request(options)
     end
 
@@ -752,8 +752,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_delete_user_attributes(**params)
     # @param [Hash] params ({})
-    def admin_delete_user_attributes(params = {}, **options)
-      req = build_request(:admin_delete_user_attributes, params)
+    def admin_delete_user_attributes(, **options)
+      req = build_request(:admin_delete_user_attributes, )
       req.send_request(options)
     end
 
@@ -819,8 +819,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_disable_provider_for_user(**params)
     # @param [Hash] params ({})
-    def admin_disable_provider_for_user(params = {}, **options)
-      req = build_request(:admin_disable_provider_for_user, params)
+    def admin_disable_provider_for_user(, **options)
+      req = build_request(:admin_disable_provider_for_user, )
       req.send_request(options)
     end
 
@@ -847,8 +847,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_disable_user(**params)
     # @param [Hash] params ({})
-    def admin_disable_user(params = {}, **options)
-      req = build_request(:admin_disable_user, params)
+    def admin_disable_user(, **options)
+      req = build_request(:admin_disable_user, )
       req.send_request(options)
     end
 
@@ -875,8 +875,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_enable_user(**params)
     # @param [Hash] params ({})
-    def admin_enable_user(params = {}, **options)
-      req = build_request(:admin_enable_user, params)
+    def admin_enable_user(, **options)
+      req = build_request(:admin_enable_user, )
       req.send_request(options)
     end
 
@@ -907,8 +907,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_forget_device(**params)
     # @param [Hash] params ({})
-    def admin_forget_device(params = {}, **options)
-      req = build_request(:admin_forget_device, params)
+    def admin_forget_device(, **options)
+      req = build_request(:admin_forget_device, )
       req.send_request(options)
     end
 
@@ -951,8 +951,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_get_device(**params)
     # @param [Hash] params ({})
-    def admin_get_device(params = {}, **options)
-      req = build_request(:admin_get_device, params)
+    def admin_get_device(, **options)
+      req = build_request(:admin_get_device, )
       req.send_request(options)
     end
 
@@ -1008,8 +1008,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_get_user(**params)
     # @param [Hash] params ({})
-    def admin_get_user(params = {}, **options)
-      req = build_request(:admin_get_user, params)
+    def admin_get_user(, **options)
+      req = build_request(:admin_get_user, )
       req.send_request(options)
     end
 
@@ -1209,8 +1209,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_initiate_auth(**params)
     # @param [Hash] params ({})
-    def admin_initiate_auth(params = {}, **options)
-      req = build_request(:admin_initiate_auth, params)
+    def admin_initiate_auth(, **options)
+      req = build_request(:admin_initiate_auth, )
       req.send_request(options)
     end
 
@@ -1306,8 +1306,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_link_provider_for_user(**params)
     # @param [Hash] params ({})
-    def admin_link_provider_for_user(params = {}, **options)
-      req = build_request(:admin_link_provider_for_user, params)
+    def admin_link_provider_for_user(, **options)
+      req = build_request(:admin_link_provider_for_user, )
       req.send_request(options)
     end
 
@@ -1357,8 +1357,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_list_devices(**params)
     # @param [Hash] params ({})
-    def admin_list_devices(params = {}, **options)
-      req = build_request(:admin_list_devices, params)
+    def admin_list_devices(, **options)
+      req = build_request(:admin_list_devices, )
       req.send_request(options)
     end
 
@@ -1412,8 +1412,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_list_groups_for_user(**params)
     # @param [Hash] params ({})
-    def admin_list_groups_for_user(params = {}, **options)
-      req = build_request(:admin_list_groups_for_user, params)
+    def admin_list_groups_for_user(, **options)
+      req = build_request(:admin_list_groups_for_user, )
       req.send_request(options)
     end
 
@@ -1475,8 +1475,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_list_user_auth_events(**params)
     # @param [Hash] params ({})
-    def admin_list_user_auth_events(params = {}, **options)
-      req = build_request(:admin_list_user_auth_events, params)
+    def admin_list_user_auth_events(, **options)
+      req = build_request(:admin_list_user_auth_events, )
       req.send_request(options)
     end
 
@@ -1507,8 +1507,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_remove_user_from_group(**params)
     # @param [Hash] params ({})
-    def admin_remove_user_from_group(params = {}, **options)
-      req = build_request(:admin_remove_user_from_group, params)
+    def admin_remove_user_from_group(, **options)
+      req = build_request(:admin_remove_user_from_group, )
       req.send_request(options)
     end
 
@@ -1589,8 +1589,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_reset_user_password(**params)
     # @param [Hash] params ({})
-    def admin_reset_user_password(params = {}, **options)
-      req = build_request(:admin_reset_user_password, params)
+    def admin_reset_user_password(, **options)
+      req = build_request(:admin_reset_user_password, )
       req.send_request(options)
     end
 
@@ -1748,8 +1748,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_respond_to_auth_challenge(**params)
     # @param [Hash] params ({})
-    def admin_respond_to_auth_challenge(params = {}, **options)
-      req = build_request(:admin_respond_to_auth_challenge, params)
+    def admin_respond_to_auth_challenge(, **options)
+      req = build_request(:admin_respond_to_auth_challenge, )
       req.send_request(options)
     end
 
@@ -1793,8 +1793,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_set_user_mfa_preference(**params)
     # @param [Hash] params ({})
-    def admin_set_user_mfa_preference(params = {}, **options)
-      req = build_request(:admin_set_user_mfa_preference, params)
+    def admin_set_user_mfa_preference(, **options)
+      req = build_request(:admin_set_user_mfa_preference, )
       req.send_request(options)
     end
 
@@ -1840,8 +1840,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_set_user_password(**params)
     # @param [Hash] params ({})
-    def admin_set_user_password(params = {}, **options)
-      req = build_request(:admin_set_user_password, params)
+    def admin_set_user_password(, **options)
+      req = build_request(:admin_set_user_password, )
       req.send_request(options)
     end
 
@@ -1884,8 +1884,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_set_user_settings(**params)
     # @param [Hash] params ({})
-    def admin_set_user_settings(params = {}, **options)
-      req = build_request(:admin_set_user_settings, params)
+    def admin_set_user_settings(, **options)
+      req = build_request(:admin_set_user_settings, )
       req.send_request(options)
     end
 
@@ -1921,8 +1921,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_update_auth_event_feedback(**params)
     # @param [Hash] params ({})
-    def admin_update_auth_event_feedback(params = {}, **options)
-      req = build_request(:admin_update_auth_event_feedback, params)
+    def admin_update_auth_event_feedback(, **options)
+      req = build_request(:admin_update_auth_event_feedback, )
       req.send_request(options)
     end
 
@@ -1957,8 +1957,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_update_device_status(**params)
     # @param [Hash] params ({})
-    def admin_update_device_status(params = {}, **options)
-      req = build_request(:admin_update_device_status, params)
+    def admin_update_device_status(, **options)
+      req = build_request(:admin_update_device_status, )
       req.send_request(options)
     end
 
@@ -2046,8 +2046,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_update_user_attributes(**params)
     # @param [Hash] params ({})
-    def admin_update_user_attributes(params = {}, **options)
-      req = build_request(:admin_update_user_attributes, params)
+    def admin_update_user_attributes(, **options)
+      req = build_request(:admin_update_user_attributes, )
       req.send_request(options)
     end
 
@@ -2077,8 +2077,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload admin_user_global_sign_out(**params)
     # @param [Hash] params ({})
-    def admin_user_global_sign_out(params = {}, **options)
-      req = build_request(:admin_user_global_sign_out, params)
+    def admin_user_global_sign_out(, **options)
+      req = build_request(:admin_user_global_sign_out, )
       req.send_request(options)
     end
 
@@ -2115,8 +2115,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload associate_software_token(**params)
     # @param [Hash] params ({})
-    def associate_software_token(params = {}, **options)
-      req = build_request(:associate_software_token, params)
+    def associate_software_token(, **options)
+      req = build_request(:associate_software_token, )
       req.send_request(options)
     end
 
@@ -2145,8 +2145,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload change_password(**params)
     # @param [Hash] params ({})
-    def change_password(params = {}, **options)
-      req = build_request(:change_password, params)
+    def change_password(, **options)
+      req = build_request(:change_password, )
       req.send_request(options)
     end
 
@@ -2189,8 +2189,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload confirm_device(**params)
     # @param [Hash] params ({})
-    def confirm_device(params = {}, **options)
-      req = build_request(:confirm_device, params)
+    def confirm_device(, **options)
+      req = build_request(:confirm_device, )
       req.send_request(options)
     end
 
@@ -2293,8 +2293,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload confirm_forgot_password(**params)
     # @param [Hash] params ({})
-    def confirm_forgot_password(params = {}, **options)
-      req = build_request(:confirm_forgot_password, params)
+    def confirm_forgot_password(, **options)
+      req = build_request(:confirm_forgot_password, )
       req.send_request(options)
     end
 
@@ -2397,8 +2397,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload confirm_sign_up(**params)
     # @param [Hash] params ({})
-    def confirm_sign_up(params = {}, **options)
-      req = build_request(:confirm_sign_up, params)
+    def confirm_sign_up(, **options)
+      req = build_request(:confirm_sign_up, )
       req.send_request(options)
     end
 
@@ -2465,8 +2465,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -2589,8 +2589,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_identity_provider(**params)
     # @param [Hash] params ({})
-    def create_identity_provider(params = {}, **options)
-      req = build_request(:create_identity_provider, params)
+    def create_identity_provider(, **options)
+      req = build_request(:create_identity_provider, )
       req.send_request(options)
     end
 
@@ -2643,8 +2643,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_resource_server(**params)
     # @param [Hash] params ({})
-    def create_resource_server(params = {}, **options)
-      req = build_request(:create_resource_server, params)
+    def create_resource_server(, **options)
+      req = build_request(:create_resource_server, )
       req.send_request(options)
     end
 
@@ -2693,8 +2693,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_user_import_job(**params)
     # @param [Hash] params ({})
-    def create_user_import_job(params = {}, **options)
-      req = build_request(:create_user_import_job, params)
+    def create_user_import_job(, **options)
+      req = build_request(:create_user_import_job, )
       req.send_request(options)
     end
 
@@ -3019,8 +3019,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_user_pool(**params)
     # @param [Hash] params ({})
-    def create_user_pool(params = {}, **options)
-      req = build_request(:create_user_pool, params)
+    def create_user_pool(, **options)
+      req = build_request(:create_user_pool, )
       req.send_request(options)
     end
 
@@ -3291,8 +3291,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_user_pool_client(**params)
     # @param [Hash] params ({})
-    def create_user_pool_client(params = {}, **options)
-      req = build_request(:create_user_pool_client, params)
+    def create_user_pool_client(, **options)
+      req = build_request(:create_user_pool_client, )
       req.send_request(options)
     end
 
@@ -3341,8 +3341,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload create_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def create_user_pool_domain(params = {}, **options)
-      req = build_request(:create_user_pool_domain, params)
+    def create_user_pool_domain(, **options)
+      req = build_request(:create_user_pool_domain, )
       req.send_request(options)
     end
 
@@ -3369,8 +3369,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -3395,8 +3395,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_identity_provider(**params)
     # @param [Hash] params ({})
-    def delete_identity_provider(params = {}, **options)
-      req = build_request(:delete_identity_provider, params)
+    def delete_identity_provider(, **options)
+      req = build_request(:delete_identity_provider, )
       req.send_request(options)
     end
 
@@ -3421,8 +3421,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_resource_server(**params)
     # @param [Hash] params ({})
-    def delete_resource_server(params = {}, **options)
-      req = build_request(:delete_resource_server, params)
+    def delete_resource_server(, **options)
+      req = build_request(:delete_resource_server, )
       req.send_request(options)
     end
 
@@ -3443,8 +3443,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -3473,8 +3473,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_user_attributes(**params)
     # @param [Hash] params ({})
-    def delete_user_attributes(params = {}, **options)
-      req = build_request(:delete_user_attributes, params)
+    def delete_user_attributes(, **options)
+      req = build_request(:delete_user_attributes, )
       req.send_request(options)
     end
 
@@ -3495,8 +3495,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_user_pool(**params)
     # @param [Hash] params ({})
-    def delete_user_pool(params = {}, **options)
-      req = build_request(:delete_user_pool, params)
+    def delete_user_pool(, **options)
+      req = build_request(:delete_user_pool, )
       req.send_request(options)
     end
 
@@ -3522,8 +3522,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_user_pool_client(**params)
     # @param [Hash] params ({})
-    def delete_user_pool_client(params = {}, **options)
-      req = build_request(:delete_user_pool_client, params)
+    def delete_user_pool_client(, **options)
+      req = build_request(:delete_user_pool_client, )
       req.send_request(options)
     end
 
@@ -3548,8 +3548,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload delete_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def delete_user_pool_domain(params = {}, **options)
-      req = build_request(:delete_user_pool_domain, params)
+    def delete_user_pool_domain(, **options)
+      req = build_request(:delete_user_pool_domain, )
       req.send_request(options)
     end
 
@@ -3590,8 +3590,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_identity_provider(**params)
     # @param [Hash] params ({})
-    def describe_identity_provider(params = {}, **options)
-      req = build_request(:describe_identity_provider, params)
+    def describe_identity_provider(, **options)
+      req = build_request(:describe_identity_provider, )
       req.send_request(options)
     end
 
@@ -3627,8 +3627,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_resource_server(**params)
     # @param [Hash] params ({})
-    def describe_resource_server(params = {}, **options)
-      req = build_request(:describe_resource_server, params)
+    def describe_resource_server(, **options)
+      req = build_request(:describe_resource_server, )
       req.send_request(options)
     end
 
@@ -3686,8 +3686,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_risk_configuration(**params)
     # @param [Hash] params ({})
-    def describe_risk_configuration(params = {}, **options)
-      req = build_request(:describe_risk_configuration, params)
+    def describe_risk_configuration(, **options)
+      req = build_request(:describe_risk_configuration, )
       req.send_request(options)
     end
 
@@ -3731,8 +3731,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_user_import_job(**params)
     # @param [Hash] params ({})
-    def describe_user_import_job(params = {}, **options)
-      req = build_request(:describe_user_import_job, params)
+    def describe_user_import_job(, **options)
+      req = build_request(:describe_user_import_job, )
       req.send_request(options)
     end
 
@@ -3839,8 +3839,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_user_pool(**params)
     # @param [Hash] params ({})
-    def describe_user_pool(params = {}, **options)
-      req = build_request(:describe_user_pool, params)
+    def describe_user_pool(, **options)
+      req = build_request(:describe_user_pool, )
       req.send_request(options)
     end
 
@@ -3907,8 +3907,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_user_pool_client(**params)
     # @param [Hash] params ({})
-    def describe_user_pool_client(params = {}, **options)
-      req = build_request(:describe_user_pool_client, params)
+    def describe_user_pool_client(, **options)
+      req = build_request(:describe_user_pool_client, )
       req.send_request(options)
     end
 
@@ -3942,8 +3942,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload describe_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def describe_user_pool_domain(params = {}, **options)
-      req = build_request(:describe_user_pool_domain, params)
+    def describe_user_pool_domain(, **options)
+      req = build_request(:describe_user_pool_domain, )
       req.send_request(options)
     end
 
@@ -3968,8 +3968,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload forget_device(**params)
     # @param [Hash] params ({})
-    def forget_device(params = {}, **options)
-      req = build_request(:forget_device, params)
+    def forget_device(, **options)
+      req = build_request(:forget_device, )
       req.send_request(options)
     end
 
@@ -4078,8 +4078,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload forgot_password(**params)
     # @param [Hash] params ({})
-    def forgot_password(params = {}, **options)
-      req = build_request(:forgot_password, params)
+    def forgot_password(, **options)
+      req = build_request(:forgot_password, )
       req.send_request(options)
     end
 
@@ -4111,8 +4111,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_csv_header(**params)
     # @param [Hash] params ({})
-    def get_csv_header(params = {}, **options)
-      req = build_request(:get_csv_header, params)
+    def get_csv_header(, **options)
+      req = build_request(:get_csv_header, )
       req.send_request(options)
     end
 
@@ -4149,8 +4149,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, **options)
-      req = build_request(:get_device, params)
+    def get_device(, **options)
+      req = build_request(:get_device, )
       req.send_request(options)
     end
 
@@ -4189,8 +4189,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, **options)
-      req = build_request(:get_group, params)
+    def get_group(, **options)
+      req = build_request(:get_group, )
       req.send_request(options)
     end
 
@@ -4231,8 +4231,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_identity_provider_by_identifier(**params)
     # @param [Hash] params ({})
-    def get_identity_provider_by_identifier(params = {}, **options)
-      req = build_request(:get_identity_provider_by_identifier, params)
+    def get_identity_provider_by_identifier(, **options)
+      req = build_request(:get_identity_provider_by_identifier, )
       req.send_request(options)
     end
 
@@ -4259,8 +4259,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_signing_certificate(**params)
     # @param [Hash] params ({})
-    def get_signing_certificate(params = {}, **options)
-      req = build_request(:get_signing_certificate, params)
+    def get_signing_certificate(, **options)
+      req = build_request(:get_signing_certificate, )
       req.send_request(options)
     end
 
@@ -4301,8 +4301,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_ui_customization(**params)
     # @param [Hash] params ({})
-    def get_ui_customization(params = {}, **options)
-      req = build_request(:get_ui_customization, params)
+    def get_ui_customization(, **options)
+      req = build_request(:get_ui_customization, )
       req.send_request(options)
     end
 
@@ -4343,8 +4343,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_user(**params)
     # @param [Hash] params ({})
-    def get_user(params = {}, **options)
-      req = build_request(:get_user, params)
+    def get_user(, **options)
+      req = build_request(:get_user, )
       req.send_request(options)
     end
 
@@ -4421,8 +4421,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_user_attribute_verification_code(**params)
     # @param [Hash] params ({})
-    def get_user_attribute_verification_code(params = {}, **options)
-      req = build_request(:get_user_attribute_verification_code, params)
+    def get_user_attribute_verification_code(, **options)
+      req = build_request(:get_user_attribute_verification_code, )
       req.send_request(options)
     end
 
@@ -4455,8 +4455,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload get_user_pool_mfa_config(**params)
     # @param [Hash] params ({})
-    def get_user_pool_mfa_config(params = {}, **options)
-      req = build_request(:get_user_pool_mfa_config, params)
+    def get_user_pool_mfa_config(, **options)
+      req = build_request(:get_user_pool_mfa_config, )
       req.send_request(options)
     end
 
@@ -4480,8 +4480,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload global_sign_out(**params)
     # @param [Hash] params ({})
-    def global_sign_out(params = {}, **options)
-      req = build_request(:global_sign_out, params)
+    def global_sign_out(, **options)
+      req = build_request(:global_sign_out, )
       req.send_request(options)
     end
 
@@ -4660,8 +4660,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload initiate_auth(**params)
     # @param [Hash] params ({})
-    def initiate_auth(params = {}, **options)
-      req = build_request(:initiate_auth, params)
+    def initiate_auth(, **options)
+      req = build_request(:initiate_auth, )
       req.send_request(options)
     end
 
@@ -4705,8 +4705,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, **options)
-      req = build_request(:list_devices, params)
+    def list_devices(, **options)
+      req = build_request(:list_devices, )
       req.send_request(options)
     end
 
@@ -4756,8 +4756,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -4800,8 +4800,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_identity_providers(**params)
     # @param [Hash] params ({})
-    def list_identity_providers(params = {}, **options)
-      req = build_request(:list_identity_providers, params)
+    def list_identity_providers(, **options)
+      req = build_request(:list_identity_providers, )
       req.send_request(options)
     end
 
@@ -4846,8 +4846,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_resource_servers(**params)
     # @param [Hash] params ({})
-    def list_resource_servers(params = {}, **options)
-      req = build_request(:list_resource_servers, params)
+    def list_resource_servers(, **options)
+      req = build_request(:list_resource_servers, )
       req.send_request(options)
     end
 
@@ -4882,8 +4882,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4936,8 +4936,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_user_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_user_import_jobs(params = {}, **options)
-      req = build_request(:list_user_import_jobs, params)
+    def list_user_import_jobs(, **options)
+      req = build_request(:list_user_import_jobs, )
       req.send_request(options)
     end
 
@@ -4983,8 +4983,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_user_pool_clients(**params)
     # @param [Hash] params ({})
-    def list_user_pool_clients(params = {}, **options)
-      req = build_request(:list_user_pool_clients, params)
+    def list_user_pool_clients(, **options)
+      req = build_request(:list_user_pool_clients, )
       req.send_request(options)
     end
 
@@ -5042,8 +5042,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_user_pools(**params)
     # @param [Hash] params ({})
-    def list_user_pools(params = {}, **options)
-      req = build_request(:list_user_pools, params)
+    def list_user_pools(, **options)
+      req = build_request(:list_user_pools, )
       req.send_request(options)
     end
 
@@ -5156,8 +5156,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -5215,8 +5215,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload list_users_in_group(**params)
     # @param [Hash] params ({})
-    def list_users_in_group(params = {}, **options)
-      req = build_request(:list_users_in_group, params)
+    def list_users_in_group(, **options)
+      req = build_request(:list_users_in_group, )
       req.send_request(options)
     end
 
@@ -5313,8 +5313,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload resend_confirmation_code(**params)
     # @param [Hash] params ({})
-    def resend_confirmation_code(params = {}, **options)
-      req = build_request(:resend_confirmation_code, params)
+    def resend_confirmation_code(, **options)
+      req = build_request(:resend_confirmation_code, )
       req.send_request(options)
     end
 
@@ -5460,8 +5460,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload respond_to_auth_challenge(**params)
     # @param [Hash] params ({})
-    def respond_to_auth_challenge(params = {}, **options)
-      req = build_request(:respond_to_auth_challenge, params)
+    def respond_to_auth_challenge(, **options)
+      req = build_request(:respond_to_auth_challenge, )
       req.send_request(options)
     end
 
@@ -5585,8 +5585,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload set_risk_configuration(**params)
     # @param [Hash] params ({})
-    def set_risk_configuration(params = {}, **options)
-      req = build_request(:set_risk_configuration, params)
+    def set_risk_configuration(, **options)
+      req = build_request(:set_risk_configuration, )
       req.send_request(options)
     end
 
@@ -5645,8 +5645,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload set_ui_customization(**params)
     # @param [Hash] params ({})
-    def set_ui_customization(params = {}, **options)
-      req = build_request(:set_ui_customization, params)
+    def set_ui_customization(, **options)
+      req = build_request(:set_ui_customization, )
       req.send_request(options)
     end
 
@@ -5691,8 +5691,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload set_user_mfa_preference(**params)
     # @param [Hash] params ({})
-    def set_user_mfa_preference(params = {}, **options)
-      req = build_request(:set_user_mfa_preference, params)
+    def set_user_mfa_preference(, **options)
+      req = build_request(:set_user_mfa_preference, )
       req.send_request(options)
     end
 
@@ -5752,8 +5752,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload set_user_pool_mfa_config(**params)
     # @param [Hash] params ({})
-    def set_user_pool_mfa_config(params = {}, **options)
-      req = build_request(:set_user_pool_mfa_config, params)
+    def set_user_pool_mfa_config(, **options)
+      req = build_request(:set_user_pool_mfa_config, )
       req.send_request(options)
     end
 
@@ -5790,8 +5790,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload set_user_settings(**params)
     # @param [Hash] params ({})
-    def set_user_settings(params = {}, **options)
-      req = build_request(:set_user_settings, params)
+    def set_user_settings(, **options)
+      req = build_request(:set_user_settings, )
       req.send_request(options)
     end
 
@@ -5916,8 +5916,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload sign_up(**params)
     # @param [Hash] params ({})
-    def sign_up(params = {}, **options)
-      req = build_request(:sign_up, params)
+    def sign_up(, **options)
+      req = build_request(:sign_up, )
       req.send_request(options)
     end
 
@@ -5961,8 +5961,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload start_user_import_job(**params)
     # @param [Hash] params ({})
-    def start_user_import_job(params = {}, **options)
-      req = build_request(:start_user_import_job, params)
+    def start_user_import_job(, **options)
+      req = build_request(:start_user_import_job, )
       req.send_request(options)
     end
 
@@ -6006,8 +6006,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload stop_user_import_job(**params)
     # @param [Hash] params ({})
-    def stop_user_import_job(params = {}, **options)
-      req = build_request(:stop_user_import_job, params)
+    def stop_user_import_job(, **options)
+      req = build_request(:stop_user_import_job, )
       req.send_request(options)
     end
 
@@ -6052,8 +6052,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -6080,8 +6080,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -6121,8 +6121,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_auth_event_feedback(**params)
     # @param [Hash] params ({})
-    def update_auth_event_feedback(params = {}, **options)
-      req = build_request(:update_auth_event_feedback, params)
+    def update_auth_event_feedback(, **options)
+      req = build_request(:update_auth_event_feedback, )
       req.send_request(options)
     end
 
@@ -6151,8 +6151,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_device_status(**params)
     # @param [Hash] params ({})
-    def update_device_status(params = {}, **options)
-      req = build_request(:update_device_status, params)
+    def update_device_status(, **options)
+      req = build_request(:update_device_status, )
       req.send_request(options)
     end
 
@@ -6212,8 +6212,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, **options)
-      req = build_request(:update_group, params)
+    def update_group(, **options)
+      req = build_request(:update_group, )
       req.send_request(options)
     end
 
@@ -6271,8 +6271,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_identity_provider(**params)
     # @param [Hash] params ({})
-    def update_identity_provider(params = {}, **options)
-      req = build_request(:update_identity_provider, params)
+    def update_identity_provider(, **options)
+      req = build_request(:update_identity_provider, )
       req.send_request(options)
     end
 
@@ -6325,8 +6325,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_resource_server(**params)
     # @param [Hash] params ({})
-    def update_resource_server(params = {}, **options)
-      req = build_request(:update_resource_server, params)
+    def update_resource_server(, **options)
+      req = build_request(:update_resource_server, )
       req.send_request(options)
     end
 
@@ -6409,8 +6409,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_user_attributes(**params)
     # @param [Hash] params ({})
-    def update_user_attributes(params = {}, **options)
-      req = build_request(:update_user_attributes, params)
+    def update_user_attributes(, **options)
+      req = build_request(:update_user_attributes, )
       req.send_request(options)
     end
 
@@ -6591,8 +6591,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_user_pool(**params)
     # @param [Hash] params ({})
-    def update_user_pool(params = {}, **options)
-      req = build_request(:update_user_pool, params)
+    def update_user_pool(, **options)
+      req = build_request(:update_user_pool, )
       req.send_request(options)
     end
 
@@ -6855,8 +6855,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_user_pool_client(**params)
     # @param [Hash] params ({})
-    def update_user_pool_client(params = {}, **options)
-      req = build_request(:update_user_pool_client, params)
+    def update_user_pool_client(, **options)
+      req = build_request(:update_user_pool_client, )
       req.send_request(options)
     end
 
@@ -6934,8 +6934,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload update_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def update_user_pool_domain(params = {}, **options)
-      req = build_request(:update_user_pool_domain, params)
+    def update_user_pool_domain(, **options)
+      req = build_request(:update_user_pool_domain, )
       req.send_request(options)
     end
 
@@ -6984,8 +6984,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload verify_software_token(**params)
     # @param [Hash] params ({})
-    def verify_software_token(params = {}, **options)
-      req = build_request(:verify_software_token, params)
+    def verify_software_token(, **options)
+      req = build_request(:verify_software_token, )
       req.send_request(options)
     end
 
@@ -7014,8 +7014,8 @@ module Aws::CognitoIdentityProvider
     #
     # @overload verify_user_attribute(**params)
     # @param [Hash] params ({})
-    def verify_user_attribute(params = {}, **options)
-      req = build_request(:verify_user_attribute, params)
+    def verify_user_attribute(, **options)
+      req = build_request(:verify_user_attribute, )
       req.send_request(options)
     end
 

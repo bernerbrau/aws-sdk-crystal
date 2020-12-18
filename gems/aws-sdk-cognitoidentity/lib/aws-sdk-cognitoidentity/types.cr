@@ -1539,5 +1539,386 @@ module Aws::CognitoIdentity
     #
     class UntagResourceResponse < Aws::EmptyStructure; end
 
+    alias ARNString = String
+
+    alias AccessKeyString = String
+
+    alias AccountId = String
+
+    alias AmbiguousRoleResolutionType = String
+
+    alias ClaimName = String
+
+    alias ClaimValue = String
+
+    alias ClassicFlow = Bool
+
+    alias CognitoIdentityProvider = NamedTuple(
+      "ProviderName" : (CognitoIdentityProviderName)?,
+      "ClientId" : (CognitoIdentityProviderClientId)?,
+      "ServerSideTokenCheck" : (CognitoIdentityProviderTokenCheck)?
+    )
+
+    alias CognitoIdentityProviderClientId = String
+
+    alias CognitoIdentityProviderList = Array(CognitoIdentityProvider)
+
+    alias CognitoIdentityProviderName = String
+
+    alias CognitoIdentityProviderTokenCheck = Bool
+
+    alias ConcurrentModificationException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias CreateIdentityPoolInput = NamedTuple(
+      "IdentityPoolName" : IdentityPoolName,
+      "AllowUnauthenticatedIdentities" : IdentityPoolUnauthenticated,
+      "AllowClassicFlow" : (ClassicFlow)?,
+      "SupportedLoginProviders" : (IdentityProviders)?,
+      "DeveloperProviderName" : (DeveloperProviderName)?,
+      "OpenIdConnectProviderARNs" : (OIDCProviderList)?,
+      "CognitoIdentityProviders" : (CognitoIdentityProviderList)?,
+      "SamlProviderARNs" : (SAMLProviderList)?,
+      "IdentityPoolTags" : (IdentityPoolTagsType)?
+    )
+
+    alias Credentials = NamedTuple(
+      "AccessKeyId" : (AccessKeyString)?,
+      "SecretKey" : (SecretKeyString)?,
+      "SessionToken" : (SessionTokenString)?,
+      "Expiration" : (DateType)?
+    )
+
+    alias DateType = String | UInt64 | Time
+
+    alias DeleteIdentitiesInput = NamedTuple(
+      "IdentityIdsToDelete" : IdentityIdList
+    )
+
+    alias DeleteIdentitiesResponse = NamedTuple(
+      "UnprocessedIdentityIds" : (UnprocessedIdentityIdList)?
+    )
+
+    alias DeleteIdentityPoolInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId
+    )
+
+    alias DescribeIdentityInput = NamedTuple(
+      "IdentityId" : IdentityId
+    )
+
+    alias DescribeIdentityPoolInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId
+    )
+
+    alias DeveloperProviderName = String
+
+    alias DeveloperUserAlreadyRegisteredException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias DeveloperUserIdentifier = String
+
+    alias DeveloperUserIdentifierList = Array(DeveloperUserIdentifier)
+
+    alias ErrorCode = String
+
+    alias ExternalServiceException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias GetCredentialsForIdentityInput = NamedTuple(
+      "IdentityId" : IdentityId,
+      "Logins" : (LoginsMap)?,
+      "CustomRoleArn" : (ARNString)?
+    )
+
+    alias GetCredentialsForIdentityResponse = NamedTuple(
+      "IdentityId" : (IdentityId)?,
+      "Credentials" : (Credentials)?
+    )
+
+    alias GetIdInput = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "IdentityPoolId" : IdentityPoolId,
+      "Logins" : (LoginsMap)?
+    )
+
+    alias GetIdResponse = NamedTuple(
+      "IdentityId" : (IdentityId)?
+    )
+
+    alias GetIdentityPoolRolesInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId
+    )
+
+    alias GetIdentityPoolRolesResponse = NamedTuple(
+      "IdentityPoolId" : (IdentityPoolId)?,
+      "Roles" : (RolesMap)?,
+      "RoleMappings" : (RoleMappingMap)?
+    )
+
+    alias GetOpenIdTokenForDeveloperIdentityInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId,
+      "IdentityId" : (IdentityId)?,
+      "Logins" : LoginsMap,
+      "TokenDuration" : (TokenDuration)?
+    )
+
+    alias GetOpenIdTokenForDeveloperIdentityResponse = NamedTuple(
+      "IdentityId" : (IdentityId)?,
+      "Token" : (OIDCToken)?
+    )
+
+    alias GetOpenIdTokenInput = NamedTuple(
+      "IdentityId" : IdentityId,
+      "Logins" : (LoginsMap)?
+    )
+
+    alias GetOpenIdTokenResponse = NamedTuple(
+      "IdentityId" : (IdentityId)?,
+      "Token" : (OIDCToken)?
+    )
+
+    alias HideDisabled = Bool
+
+    alias IdentitiesList = Array(IdentityDescription)
+
+    alias IdentityDescription = NamedTuple(
+      "IdentityId" : (IdentityId)?,
+      "Logins" : (LoginsList)?,
+      "CreationDate" : (DateType)?,
+      "LastModifiedDate" : (DateType)?
+    )
+
+    alias IdentityId = String
+
+    alias IdentityIdList = Array(IdentityId)
+
+    alias IdentityPool = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId,
+      "IdentityPoolName" : IdentityPoolName,
+      "AllowUnauthenticatedIdentities" : IdentityPoolUnauthenticated,
+      "AllowClassicFlow" : (ClassicFlow)?,
+      "SupportedLoginProviders" : (IdentityProviders)?,
+      "DeveloperProviderName" : (DeveloperProviderName)?,
+      "OpenIdConnectProviderARNs" : (OIDCProviderList)?,
+      "CognitoIdentityProviders" : (CognitoIdentityProviderList)?,
+      "SamlProviderARNs" : (SAMLProviderList)?,
+      "IdentityPoolTags" : (IdentityPoolTagsType)?
+    )
+
+    alias IdentityPoolId = String
+
+    alias IdentityPoolName = String
+
+    alias IdentityPoolShortDescription = NamedTuple(
+      "IdentityPoolId" : (IdentityPoolId)?,
+      "IdentityPoolName" : (IdentityPoolName)?
+    )
+
+    alias IdentityPoolTagsListType = Array(TagKeysType)
+
+    alias IdentityPoolTagsType = Hash(TagKeysType,TagValueType)
+
+    alias IdentityPoolUnauthenticated = Bool
+
+    alias IdentityPoolsList = Array(IdentityPoolShortDescription)
+
+    alias IdentityProviderId = String
+
+    alias IdentityProviderName = String
+
+    alias IdentityProviderToken = String
+
+    alias IdentityProviders = Hash(IdentityProviderName,IdentityProviderId)
+
+    alias InternalErrorException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidIdentityPoolConfigurationException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ListIdentitiesInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId,
+      "MaxResults" : QueryLimit,
+      "NextToken" : (PaginationKey)?,
+      "HideDisabled" : (HideDisabled)?
+    )
+
+    alias ListIdentitiesResponse = NamedTuple(
+      "IdentityPoolId" : (IdentityPoolId)?,
+      "Identities" : (IdentitiesList)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListIdentityPoolsInput = NamedTuple(
+      "MaxResults" : QueryLimit,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListIdentityPoolsResponse = NamedTuple(
+      "IdentityPools" : (IdentityPoolsList)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "ResourceArn" : ARNString
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (IdentityPoolTagsType)?
+    )
+
+    alias LoginsList = Array(IdentityProviderName)
+
+    alias LoginsMap = Hash(IdentityProviderName,IdentityProviderToken)
+
+    alias LookupDeveloperIdentityInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId,
+      "IdentityId" : (IdentityId)?,
+      "DeveloperUserIdentifier" : (DeveloperUserIdentifier)?,
+      "MaxResults" : (QueryLimit)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias LookupDeveloperIdentityResponse = NamedTuple(
+      "IdentityId" : (IdentityId)?,
+      "DeveloperUserIdentifierList" : (DeveloperUserIdentifierList)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias MappingRule = NamedTuple(
+      "Claim" : ClaimName,
+      "MatchType" : MappingRuleMatchType,
+      "Value" : ClaimValue,
+      "RoleARN" : ARNString
+    )
+
+    alias MappingRuleMatchType = String
+
+    alias MappingRulesList = Array(MappingRule)
+
+    alias MergeDeveloperIdentitiesInput = NamedTuple(
+      "SourceUserIdentifier" : DeveloperUserIdentifier,
+      "DestinationUserIdentifier" : DeveloperUserIdentifier,
+      "DeveloperProviderName" : DeveloperProviderName,
+      "IdentityPoolId" : IdentityPoolId
+    )
+
+    alias MergeDeveloperIdentitiesResponse = NamedTuple(
+      "IdentityId" : (IdentityId)?
+    )
+
+    alias NotAuthorizedException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OIDCProviderList = Array(ARNString)
+
+    alias OIDCToken = String
+
+    alias PaginationKey = String
+
+    alias QueryLimit = Int32
+
+    alias ResourceConflictException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias RoleMapping = NamedTuple(
+      "Type" : RoleMappingType,
+      "AmbiguousRoleResolution" : (AmbiguousRoleResolutionType)?,
+      "RulesConfiguration" : (RulesConfigurationType)?
+    )
+
+    alias RoleMappingMap = Hash(IdentityProviderName,RoleMapping)
+
+    alias RoleMappingType = String
+
+    alias RoleType = String
+
+    alias RolesMap = Hash(RoleType,ARNString)
+
+    alias RulesConfigurationType = NamedTuple(
+      "Rules" : MappingRulesList
+    )
+
+    alias SAMLProviderList = Array(ARNString)
+
+    alias SecretKeyString = String
+
+    alias SessionTokenString = String
+
+    alias SetIdentityPoolRolesInput = NamedTuple(
+      "IdentityPoolId" : IdentityPoolId,
+      "Roles" : RolesMap,
+      "RoleMappings" : (RoleMappingMap)?
+    )
+
+    alias String = String
+
+    alias TagKeysType = String
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceArn" : ARNString,
+      "Tags" : IdentityPoolTagsType
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValueType = String
+
+    alias TokenDuration = Int64
+
+    alias TooManyRequestsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UnlinkDeveloperIdentityInput = NamedTuple(
+      "IdentityId" : IdentityId,
+      "IdentityPoolId" : IdentityPoolId,
+      "DeveloperProviderName" : DeveloperProviderName,
+      "DeveloperUserIdentifier" : DeveloperUserIdentifier
+    )
+
+    alias UnlinkIdentityInput = NamedTuple(
+      "IdentityId" : IdentityId,
+      "Logins" : LoginsMap,
+      "LoginsToRemove" : LoginsList
+    )
+
+    alias UnprocessedIdentityId = NamedTuple(
+      "IdentityId" : (IdentityId)?,
+      "ErrorCode" : (ErrorCode)?
+    )
+
+    alias UnprocessedIdentityIdList = Array(UnprocessedIdentityId)
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceArn" : ARNString,
+      "TagKeys" : IdentityPoolTagsListType
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
   end
 end

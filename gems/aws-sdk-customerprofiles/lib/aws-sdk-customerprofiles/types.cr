@@ -2547,5 +2547,594 @@ module Aws::CustomerProfiles
       include Aws::Structure
     end
 
+    alias name = String
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias AddProfileKeyRequest = NamedTuple(
+      "ProfileId" : uuid,
+      "KeyName" : name,
+      "Values" : requestValueList,
+      "DomainName" : name
+    )
+
+    alias AddProfileKeyResponse = NamedTuple(
+      "KeyName" : (name)?,
+      "Values" : (requestValueList)?
+    )
+
+    alias Address = NamedTuple(
+      "Address1" : (string1To255)?,
+      "Address2" : (string1To255)?,
+      "Address3" : (string1To255)?,
+      "Address4" : (string1To255)?,
+      "City" : (string1To255)?,
+      "County" : (string1To255)?,
+      "State" : (string1To255)?,
+      "Province" : (string1To255)?,
+      "Country" : (string1To255)?,
+      "PostalCode" : (string1To255)?
+    )
+
+    alias Attributes = Hash(string1To255,string1To255)
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias CreateDomainRequest = NamedTuple(
+      "DomainName" : name,
+      "DefaultExpirationDays" : expirationDaysInteger,
+      "DefaultEncryptionKey" : (encryptionKey)?,
+      "DeadLetterQueueUrl" : (sqsQueueUrl)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateDomainResponse = NamedTuple(
+      "DomainName" : name,
+      "DefaultExpirationDays" : expirationDaysInteger,
+      "DefaultEncryptionKey" : (encryptionKey)?,
+      "DeadLetterQueueUrl" : (sqsQueueUrl)?,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateProfileRequest = NamedTuple(
+      "DomainName" : name,
+      "AccountNumber" : (string1To255)?,
+      "AdditionalInformation" : (string1To1000)?,
+      "PartyType" : (PartyType)?,
+      "BusinessName" : (string1To255)?,
+      "FirstName" : (string1To255)?,
+      "MiddleName" : (string1To255)?,
+      "LastName" : (string1To255)?,
+      "BirthDate" : (string1To255)?,
+      "Gender" : (Gender)?,
+      "PhoneNumber" : (string1To255)?,
+      "MobilePhoneNumber" : (string1To255)?,
+      "HomePhoneNumber" : (string1To255)?,
+      "BusinessPhoneNumber" : (string1To255)?,
+      "EmailAddress" : (string1To255)?,
+      "PersonalEmailAddress" : (string1To255)?,
+      "BusinessEmailAddress" : (string1To255)?,
+      "Address" : (Address)?,
+      "ShippingAddress" : (Address)?,
+      "MailingAddress" : (Address)?,
+      "BillingAddress" : (Address)?,
+      "Attributes" : (Attributes)?
+    )
+
+    alias CreateProfileResponse = NamedTuple(
+      "ProfileId" : uuid
+    )
+
+    alias DeleteDomainRequest = NamedTuple(
+      "DomainName" : name
+    )
+
+    alias DeleteDomainResponse = NamedTuple(
+      "Message" : message
+    )
+
+    alias DeleteIntegrationRequest = NamedTuple(
+      "DomainName" : name,
+      "Uri" : (string1To255)?
+    )
+
+    alias DeleteIntegrationResponse = NamedTuple(
+      "Message" : message
+    )
+
+    alias DeleteProfileKeyRequest = NamedTuple(
+      "ProfileId" : uuid,
+      "KeyName" : name,
+      "Values" : requestValueList,
+      "DomainName" : name
+    )
+
+    alias DeleteProfileKeyResponse = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias DeleteProfileObjectRequest = NamedTuple(
+      "ProfileId" : uuid,
+      "ProfileObjectUniqueKey" : string1To255,
+      "ObjectTypeName" : typeName,
+      "DomainName" : name
+    )
+
+    alias DeleteProfileObjectResponse = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias DeleteProfileObjectTypeRequest = NamedTuple(
+      "DomainName" : name,
+      "ObjectTypeName" : typeName
+    )
+
+    alias DeleteProfileObjectTypeResponse = NamedTuple(
+      "Message" : message
+    )
+
+    alias DeleteProfileRequest = NamedTuple(
+      "ProfileId" : uuid,
+      "DomainName" : name
+    )
+
+    alias DeleteProfileResponse = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias DomainList = Array(ListDomainItem)
+
+    alias DomainStats = NamedTuple(
+      "ProfileCount" : (long)?,
+      "MeteringProfileCount" : (long)?,
+      "ObjectCount" : (long)?,
+      "TotalSize" : (long)?
+    )
+
+    alias FieldContentType = String
+
+    alias FieldMap = Hash(name,ObjectTypeField)
+
+    alias FieldNameList = Array(name)
+
+    alias Gender = String
+
+    alias GetDomainRequest = NamedTuple(
+      "DomainName" : name
+    )
+
+    alias GetDomainResponse = NamedTuple(
+      "DomainName" : name,
+      "DefaultExpirationDays" : (expirationDaysInteger)?,
+      "DefaultEncryptionKey" : (encryptionKey)?,
+      "DeadLetterQueueUrl" : (sqsQueueUrl)?,
+      "Stats" : (DomainStats)?,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetIntegrationRequest = NamedTuple(
+      "DomainName" : name,
+      "Uri" : (string1To255)?
+    )
+
+    alias GetIntegrationResponse = NamedTuple(
+      "DomainName" : name,
+      "Uri" : string1To255,
+      "ObjectTypeName" : typeName,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetProfileObjectTypeRequest = NamedTuple(
+      "DomainName" : name,
+      "ObjectTypeName" : typeName
+    )
+
+    alias GetProfileObjectTypeResponse = NamedTuple(
+      "ObjectTypeName" : typeName,
+      "Description" : text,
+      "TemplateId" : (name)?,
+      "ExpirationDays" : (expirationDaysInteger)?,
+      "EncryptionKey" : (encryptionKey)?,
+      "AllowProfileCreation" : (boolean)?,
+      "Fields" : (FieldMap)?,
+      "Keys" : (KeyMap)?,
+      "CreatedAt" : (timestamp)?,
+      "LastUpdatedAt" : (timestamp)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetProfileObjectTypeTemplateRequest = NamedTuple(
+      "TemplateId" : name
+    )
+
+    alias GetProfileObjectTypeTemplateResponse = NamedTuple(
+      "TemplateId" : (name)?,
+      "SourceName" : (name)?,
+      "SourceObject" : (name)?,
+      "AllowProfileCreation" : (boolean)?,
+      "Fields" : (FieldMap)?,
+      "Keys" : (KeyMap)?
+    )
+
+    alias IntegrationList = Array(ListIntegrationItem)
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias KeyMap = Hash(name,ObjectTypeKeyList)
+
+    alias ListAccountIntegrationsRequest = NamedTuple(
+      "Uri" : string1To255,
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?
+    )
+
+    alias ListAccountIntegrationsResponse = NamedTuple(
+      "Items" : (IntegrationList)?,
+      "NextToken" : (token)?
+    )
+
+    alias ListDomainItem = NamedTuple(
+      "DomainName" : name,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias ListDomainsRequest = NamedTuple(
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?
+    )
+
+    alias ListDomainsResponse = NamedTuple(
+      "Items" : (DomainList)?,
+      "NextToken" : (token)?
+    )
+
+    alias ListIntegrationItem = NamedTuple(
+      "DomainName" : name,
+      "Uri" : string1To255,
+      "ObjectTypeName" : typeName,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias ListIntegrationsRequest = NamedTuple(
+      "DomainName" : name,
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?
+    )
+
+    alias ListIntegrationsResponse = NamedTuple(
+      "Items" : (IntegrationList)?,
+      "NextToken" : (token)?
+    )
+
+    alias ListProfileObjectTypeItem = NamedTuple(
+      "ObjectTypeName" : typeName,
+      "Description" : text,
+      "CreatedAt" : (timestamp)?,
+      "LastUpdatedAt" : (timestamp)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias ListProfileObjectTypeTemplateItem = NamedTuple(
+      "TemplateId" : (name)?,
+      "SourceName" : (name)?,
+      "SourceObject" : (name)?
+    )
+
+    alias ListProfileObjectTypeTemplatesRequest = NamedTuple(
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?
+    )
+
+    alias ListProfileObjectTypeTemplatesResponse = NamedTuple(
+      "Items" : (ProfileObjectTypeTemplateList)?,
+      "NextToken" : (token)?
+    )
+
+    alias ListProfileObjectTypesRequest = NamedTuple(
+      "DomainName" : name,
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?
+    )
+
+    alias ListProfileObjectTypesResponse = NamedTuple(
+      "Items" : (ProfileObjectTypeList)?,
+      "NextToken" : (token)?
+    )
+
+    alias ListProfileObjectsItem = NamedTuple(
+      "ObjectTypeName" : (typeName)?,
+      "ProfileObjectUniqueKey" : (string1To255)?,
+      "Object" : (stringifiedJson)?
+    )
+
+    alias ListProfileObjectsRequest = NamedTuple(
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?,
+      "DomainName" : name,
+      "ObjectTypeName" : typeName,
+      "ProfileId" : uuid
+    )
+
+    alias ListProfileObjectsResponse = NamedTuple(
+      "Items" : (ProfileObjectList)?,
+      "NextToken" : (token)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : TagArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias ObjectTypeField = NamedTuple(
+      "Source" : (text)?,
+      "Target" : (text)?,
+      "ContentType" : (FieldContentType)?
+    )
+
+    alias ObjectTypeKey = NamedTuple(
+      "StandardIdentifiers" : (StandardIdentifierList)?,
+      "FieldNames" : (FieldNameList)?
+    )
+
+    alias ObjectTypeKeyList = Array(ObjectTypeKey)
+
+    alias PartyType = String
+
+    alias Profile = NamedTuple(
+      "ProfileId" : (uuid)?,
+      "AccountNumber" : (string1To255)?,
+      "AdditionalInformation" : (string1To1000)?,
+      "PartyType" : (PartyType)?,
+      "BusinessName" : (string1To255)?,
+      "FirstName" : (string1To255)?,
+      "MiddleName" : (string1To255)?,
+      "LastName" : (string1To255)?,
+      "BirthDate" : (string1To255)?,
+      "Gender" : (Gender)?,
+      "PhoneNumber" : (string1To255)?,
+      "MobilePhoneNumber" : (string1To255)?,
+      "HomePhoneNumber" : (string1To255)?,
+      "BusinessPhoneNumber" : (string1To255)?,
+      "EmailAddress" : (string1To255)?,
+      "PersonalEmailAddress" : (string1To255)?,
+      "BusinessEmailAddress" : (string1To255)?,
+      "Address" : (Address)?,
+      "ShippingAddress" : (Address)?,
+      "MailingAddress" : (Address)?,
+      "BillingAddress" : (Address)?,
+      "Attributes" : (Attributes)?
+    )
+
+    alias ProfileList = Array(Profile)
+
+    alias ProfileObjectList = Array(ListProfileObjectsItem)
+
+    alias ProfileObjectTypeList = Array(ListProfileObjectTypeItem)
+
+    alias ProfileObjectTypeTemplateList = Array(ListProfileObjectTypeTemplateItem)
+
+    alias PutIntegrationRequest = NamedTuple(
+      "DomainName" : name,
+      "Uri" : string1To255,
+      "ObjectTypeName" : typeName,
+      "Tags" : (TagMap)?
+    )
+
+    alias PutIntegrationResponse = NamedTuple(
+      "DomainName" : name,
+      "Uri" : string1To255,
+      "ObjectTypeName" : typeName,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias PutProfileObjectRequest = NamedTuple(
+      "ObjectTypeName" : typeName,
+      "Object" : stringifiedJson,
+      "DomainName" : name
+    )
+
+    alias PutProfileObjectResponse = NamedTuple(
+      "ProfileObjectUniqueKey" : (string1To255)?
+    )
+
+    alias PutProfileObjectTypeRequest = NamedTuple(
+      "DomainName" : name,
+      "ObjectTypeName" : typeName,
+      "Description" : text,
+      "TemplateId" : (name)?,
+      "ExpirationDays" : (expirationDaysInteger)?,
+      "EncryptionKey" : (encryptionKey)?,
+      "AllowProfileCreation" : (boolean)?,
+      "Fields" : (FieldMap)?,
+      "Keys" : (KeyMap)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias PutProfileObjectTypeResponse = NamedTuple(
+      "ObjectTypeName" : typeName,
+      "Description" : text,
+      "TemplateId" : (name)?,
+      "ExpirationDays" : (expirationDaysInteger)?,
+      "EncryptionKey" : (encryptionKey)?,
+      "AllowProfileCreation" : (boolean)?,
+      "Fields" : (FieldMap)?,
+      "Keys" : (KeyMap)?,
+      "CreatedAt" : (timestamp)?,
+      "LastUpdatedAt" : (timestamp)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias SearchProfilesRequest = NamedTuple(
+      "NextToken" : (token)?,
+      "MaxResults" : (maxSize100)?,
+      "DomainName" : name,
+      "KeyName" : name,
+      "Values" : requestValueList
+    )
+
+    alias SearchProfilesResponse = NamedTuple(
+      "Items" : (ProfileList)?,
+      "NextToken" : (token)?
+    )
+
+    alias StandardIdentifier = String
+
+    alias StandardIdentifierList = Array(StandardIdentifier)
+
+    alias TagArn = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : TagArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (message)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : TagArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAddress = NamedTuple(
+      "Address1" : (string0To255)?,
+      "Address2" : (string0To255)?,
+      "Address3" : (string0To255)?,
+      "Address4" : (string0To255)?,
+      "City" : (string0To255)?,
+      "County" : (string0To255)?,
+      "State" : (string0To255)?,
+      "Province" : (string0To255)?,
+      "Country" : (string0To255)?,
+      "PostalCode" : (string0To255)?
+    )
+
+    alias UpdateAttributes = Hash(string1To255,string0To255)
+
+    alias UpdateDomainRequest = NamedTuple(
+      "DomainName" : name,
+      "DefaultExpirationDays" : (expirationDaysInteger)?,
+      "DefaultEncryptionKey" : (encryptionKey)?,
+      "DeadLetterQueueUrl" : (sqsQueueUrl)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias UpdateDomainResponse = NamedTuple(
+      "DomainName" : name,
+      "DefaultExpirationDays" : (expirationDaysInteger)?,
+      "DefaultEncryptionKey" : (encryptionKey)?,
+      "DeadLetterQueueUrl" : (sqsQueueUrl)?,
+      "CreatedAt" : timestamp,
+      "LastUpdatedAt" : timestamp,
+      "Tags" : (TagMap)?
+    )
+
+    alias UpdateProfileRequest = NamedTuple(
+      "DomainName" : name,
+      "ProfileId" : uuid,
+      "AdditionalInformation" : (string0To1000)?,
+      "AccountNumber" : (string0To255)?,
+      "PartyType" : (PartyType)?,
+      "BusinessName" : (string0To255)?,
+      "FirstName" : (string0To255)?,
+      "MiddleName" : (string0To255)?,
+      "LastName" : (string0To255)?,
+      "BirthDate" : (string0To255)?,
+      "Gender" : (Gender)?,
+      "PhoneNumber" : (string0To255)?,
+      "MobilePhoneNumber" : (string0To255)?,
+      "HomePhoneNumber" : (string0To255)?,
+      "BusinessPhoneNumber" : (string0To255)?,
+      "EmailAddress" : (string0To255)?,
+      "PersonalEmailAddress" : (string0To255)?,
+      "BusinessEmailAddress" : (string0To255)?,
+      "Address" : (UpdateAddress)?,
+      "ShippingAddress" : (UpdateAddress)?,
+      "MailingAddress" : (UpdateAddress)?,
+      "BillingAddress" : (UpdateAddress)?,
+      "Attributes" : (UpdateAttributes)?
+    )
+
+    alias UpdateProfileResponse = NamedTuple(
+      "ProfileId" : uuid
+    )
+
+    alias boolean = Bool
+
+    alias encryptionKey = String
+
+    alias expirationDaysInteger = Int32
+
+    alias long = Int64
+
+    alias maxSize100 = Int32
+
+    alias message = String
+
+    alias requestValueList = Array(string1To255)
+
+    alias sqsQueueUrl = String
+
+    alias string0To1000 = String
+
+    alias string0To255 = String
+
+    alias string1To1000 = String
+
+    alias string1To255 = String
+
+    alias stringifiedJson = String
+
+    alias text = String
+
+    alias timestamp = String | UInt64 | Time
+
+    alias token = String
+
+    alias typeName = String
+
+    alias uuid = String
   end
 end

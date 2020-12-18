@@ -510,8 +510,8 @@ module Aws::DAX
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -545,8 +545,8 @@ module Aws::DAX
     #
     # @overload create_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_parameter_group(params = {}, **options)
-      req = build_request(:create_parameter_group, params)
+    def create_parameter_group(, **options)
+      req = build_request(:create_parameter_group, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::DAX
     #
     # @overload create_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_subnet_group(params = {}, **options)
-      req = build_request(:create_subnet_group, params)
+    def create_subnet_group(, **options)
+      req = build_request(:create_subnet_group, )
       req.send_request(options)
     end
 
@@ -663,8 +663,8 @@ module Aws::DAX
     #
     # @overload decrease_replication_factor(**params)
     # @param [Hash] params ({})
-    def decrease_replication_factor(params = {}, **options)
-      req = build_request(:decrease_replication_factor, params)
+    def decrease_replication_factor(, **options)
+      req = build_request(:decrease_replication_factor, )
       req.send_request(options)
     end
 
@@ -725,8 +725,8 @@ module Aws::DAX
     #
     # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, **options)
-      req = build_request(:delete_cluster, params)
+    def delete_cluster(, **options)
+      req = build_request(:delete_cluster, )
       req.send_request(options)
     end
 
@@ -754,8 +754,8 @@ module Aws::DAX
     #
     # @overload delete_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_parameter_group(params = {}, **options)
-      req = build_request(:delete_parameter_group, params)
+    def delete_parameter_group(, **options)
+      req = build_request(:delete_parameter_group, )
       req.send_request(options)
     end
 
@@ -787,8 +787,8 @@ module Aws::DAX
     #
     # @overload delete_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_subnet_group(params = {}, **options)
-      req = build_request(:delete_subnet_group, params)
+    def delete_subnet_group(, **options)
+      req = build_request(:delete_subnet_group, )
       req.send_request(options)
     end
 
@@ -882,8 +882,8 @@ module Aws::DAX
     #
     # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, **options)
-      req = build_request(:describe_clusters, params)
+    def describe_clusters(, **options)
+      req = build_request(:describe_clusters, )
       req.send_request(options)
     end
 
@@ -937,8 +937,8 @@ module Aws::DAX
     #
     # @overload describe_default_parameters(**params)
     # @param [Hash] params ({})
-    def describe_default_parameters(params = {}, **options)
-      req = build_request(:describe_default_parameters, params)
+    def describe_default_parameters(, **options)
+      req = build_request(:describe_default_parameters, )
       req.send_request(options)
     end
 
@@ -1013,8 +1013,8 @@ module Aws::DAX
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -1063,8 +1063,8 @@ module Aws::DAX
     #
     # @overload describe_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_parameter_groups(params = {}, **options)
-      req = build_request(:describe_parameter_groups, params)
+    def describe_parameter_groups(, **options)
+      req = build_request(:describe_parameter_groups, )
       req.send_request(options)
     end
 
@@ -1126,8 +1126,8 @@ module Aws::DAX
     #
     # @overload describe_parameters(**params)
     # @param [Hash] params ({})
-    def describe_parameters(params = {}, **options)
-      req = build_request(:describe_parameters, params)
+    def describe_parameters(, **options)
+      req = build_request(:describe_parameters, )
       req.send_request(options)
     end
 
@@ -1179,8 +1179,8 @@ module Aws::DAX
     #
     # @overload describe_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_subnet_groups(params = {}, **options)
-      req = build_request(:describe_subnet_groups, params)
+    def describe_subnet_groups(, **options)
+      req = build_request(:describe_subnet_groups, )
       req.send_request(options)
     end
 
@@ -1249,8 +1249,8 @@ module Aws::DAX
     #
     # @overload increase_replication_factor(**params)
     # @param [Hash] params ({})
-    def increase_replication_factor(params = {}, **options)
-      req = build_request(:increase_replication_factor, params)
+    def increase_replication_factor(, **options)
+      req = build_request(:increase_replication_factor, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::DAX
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -1358,8 +1358,8 @@ module Aws::DAX
     #
     # @overload reboot_node(**params)
     # @param [Hash] params ({})
-    def reboot_node(params = {}, **options)
-      req = build_request(:reboot_node, params)
+    def reboot_node(, **options)
+      req = build_request(:reboot_node, )
       req.send_request(options)
     end
 
@@ -1398,8 +1398,8 @@ module Aws::DAX
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1434,8 +1434,8 @@ module Aws::DAX
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1524,8 +1524,8 @@ module Aws::DAX
     #
     # @overload update_cluster(**params)
     # @param [Hash] params ({})
-    def update_cluster(params = {}, **options)
-      req = build_request(:update_cluster, params)
+    def update_cluster(, **options)
+      req = build_request(:update_cluster, )
       req.send_request(options)
     end
 
@@ -1565,8 +1565,8 @@ module Aws::DAX
     #
     # @overload update_parameter_group(**params)
     # @param [Hash] params ({})
-    def update_parameter_group(params = {}, **options)
-      req = build_request(:update_parameter_group, params)
+    def update_parameter_group(, **options)
+      req = build_request(:update_parameter_group, )
       req.send_request(options)
     end
 
@@ -1606,8 +1606,8 @@ module Aws::DAX
     #
     # @overload update_subnet_group(**params)
     # @param [Hash] params ({})
-    def update_subnet_group(params = {}, **options)
-      req = build_request(:update_subnet_group, params)
+    def update_subnet_group(, **options)
+      req = build_request(:update_subnet_group, )
       req.send_request(options)
     end
 

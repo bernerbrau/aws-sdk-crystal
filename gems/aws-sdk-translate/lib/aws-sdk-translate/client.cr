@@ -394,8 +394,8 @@ module Aws::Translate
     #
     # @overload create_parallel_data(**params)
     # @param [Hash] params ({})
-    def create_parallel_data(params = {}, **options)
-      req = build_request(:create_parallel_data, params)
+    def create_parallel_data(, **options)
+      req = build_request(:create_parallel_data, )
       req.send_request(options)
     end
 
@@ -424,8 +424,8 @@ module Aws::Translate
     #
     # @overload delete_parallel_data(**params)
     # @param [Hash] params ({})
-    def delete_parallel_data(params = {}, **options)
-      req = build_request(:delete_parallel_data, params)
+    def delete_parallel_data(, **options)
+      req = build_request(:delete_parallel_data, )
       req.send_request(options)
     end
 
@@ -446,8 +446,8 @@ module Aws::Translate
     #
     # @overload delete_terminology(**params)
     # @param [Hash] params ({})
-    def delete_terminology(params = {}, **options)
-      req = build_request(:delete_terminology, params)
+    def delete_terminology(, **options)
+      req = build_request(:delete_terminology, )
       req.send_request(options)
     end
 
@@ -497,8 +497,8 @@ module Aws::Translate
     #
     # @overload describe_text_translation_job(**params)
     # @param [Hash] params ({})
-    def describe_text_translation_job(params = {}, **options)
-      req = build_request(:describe_text_translation_job, params)
+    def describe_text_translation_job(, **options)
+      req = build_request(:describe_text_translation_job, )
       req.send_request(options)
     end
 
@@ -553,8 +553,8 @@ module Aws::Translate
     #
     # @overload get_parallel_data(**params)
     # @param [Hash] params ({})
-    def get_parallel_data(params = {}, **options)
-      req = build_request(:get_parallel_data, params)
+    def get_parallel_data(, **options)
+      req = build_request(:get_parallel_data, )
       req.send_request(options)
     end
 
@@ -600,8 +600,8 @@ module Aws::Translate
     #
     # @overload get_terminology(**params)
     # @param [Hash] params ({})
-    def get_terminology(params = {}, **options)
-      req = build_request(:get_terminology, params)
+    def get_terminology(, **options)
+      req = build_request(:get_terminology, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::Translate
     #
     # @overload import_terminology(**params)
     # @param [Hash] params ({})
-    def import_terminology(params = {}, **options)
-      req = build_request(:import_terminology, params)
+    def import_terminology(, **options)
+      req = build_request(:import_terminology, )
       req.send_request(options)
     end
 
@@ -732,8 +732,8 @@ module Aws::Translate
     #
     # @overload list_parallel_data(**params)
     # @param [Hash] params ({})
-    def list_parallel_data(params = {}, **options)
-      req = build_request(:list_parallel_data, params)
+    def list_parallel_data(, **options)
+      req = build_request(:list_parallel_data, )
       req.send_request(options)
     end
 
@@ -781,8 +781,8 @@ module Aws::Translate
     #
     # @overload list_terminologies(**params)
     # @param [Hash] params ({})
-    def list_terminologies(params = {}, **options)
-      req = build_request(:list_terminologies, params)
+    def list_terminologies(, **options)
+      req = build_request(:list_terminologies, )
       req.send_request(options)
     end
 
@@ -849,8 +849,8 @@ module Aws::Translate
     #
     # @overload list_text_translation_jobs(**params)
     # @param [Hash] params ({})
-    def list_text_translation_jobs(params = {}, **options)
-      req = build_request(:list_text_translation_jobs, params)
+    def list_text_translation_jobs(, **options)
+      req = build_request(:list_text_translation_jobs, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::Translate
     #
     # @overload start_text_translation_job(**params)
     # @param [Hash] params ({})
-    def start_text_translation_job(params = {}, **options)
-      req = build_request(:start_text_translation_job, params)
+    def start_text_translation_job(, **options)
+      req = build_request(:start_text_translation_job, )
       req.send_request(options)
     end
 
@@ -982,8 +982,8 @@ module Aws::Translate
     #
     # @overload stop_text_translation_job(**params)
     # @param [Hash] params ({})
-    def stop_text_translation_job(params = {}, **options)
-      req = build_request(:stop_text_translation_job, params)
+    def stop_text_translation_job(, **options)
+      req = build_request(:stop_text_translation_job, )
       req.send_request(options)
     end
 
@@ -1050,8 +1050,8 @@ module Aws::Translate
     #
     # @overload translate_text(**params)
     # @param [Hash] params ({})
-    def translate_text(params = {}, **options)
-      req = build_request(:translate_text, params)
+    def translate_text(, **options)
+      req = build_request(:translate_text, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::Translate
     #
     # @overload update_parallel_data(**params)
     # @param [Hash] params ({})
-    def update_parallel_data(params = {}, **options)
-      req = build_request(:update_parallel_data, params)
+    def update_parallel_data(, **options)
+      req = build_request(:update_parallel_data, )
       req.send_request(options)
     end
 

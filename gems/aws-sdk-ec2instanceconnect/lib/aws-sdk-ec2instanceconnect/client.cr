@@ -396,8 +396,8 @@ module Aws::EC2InstanceConnect
     #
     # @overload send_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def send_ssh_public_key(params = {}, **options)
-      req = build_request(:send_ssh_public_key, params)
+    def send_ssh_public_key(, **options)
+      req = build_request(:send_ssh_public_key, )
       req.send_request(options)
     end
 

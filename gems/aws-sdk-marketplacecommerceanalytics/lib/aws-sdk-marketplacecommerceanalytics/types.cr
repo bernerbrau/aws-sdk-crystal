@@ -306,5 +306,62 @@ module Aws::MarketplaceCommerceAnalytics
       include Aws::Structure
     end
 
+    alias CustomerDefinedValues = Hash(OptionalKey,OptionalValue)
+
+    alias DataSetPublicationDate = String | UInt64 | Time
+
+    alias DataSetRequestId = String
+
+    alias DataSetType = String
+
+    alias DestinationS3BucketName = String
+
+    alias DestinationS3Prefix = String
+
+    alias ExceptionMessage = String
+
+    alias FromDate = String | UInt64 | Time
+
+    alias GenerateDataSetRequest = NamedTuple(
+      "dataSetType" : DataSetType,
+      "dataSetPublicationDate" : DataSetPublicationDate,
+      "roleNameArn" : RoleNameArn,
+      "destinationS3BucketName" : DestinationS3BucketName,
+      "destinationS3Prefix" : (DestinationS3Prefix)?,
+      "snsTopicArn" : SnsTopicArn,
+      "customerDefinedValues" : (CustomerDefinedValues)?
+    )
+
+    alias GenerateDataSetResult = NamedTuple(
+      "dataSetRequestId" : (DataSetRequestId)?
+    )
+
+    alias MarketplaceCommerceAnalyticsException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias OptionalKey = String
+
+    alias OptionalValue = String
+
+    alias RoleNameArn = String
+
+    alias SnsTopicArn = String
+
+    alias StartSupportDataExportRequest = NamedTuple(
+      "dataSetType" : SupportDataSetType,
+      "fromDate" : FromDate,
+      "roleNameArn" : RoleNameArn,
+      "destinationS3BucketName" : DestinationS3BucketName,
+      "destinationS3Prefix" : (DestinationS3Prefix)?,
+      "snsTopicArn" : SnsTopicArn,
+      "customerDefinedValues" : (CustomerDefinedValues)?
+    )
+
+    alias StartSupportDataExportResult = NamedTuple(
+      "dataSetRequestId" : (DataSetRequestId)?
+    )
+
+    alias SupportDataSetType = String
   end
 end

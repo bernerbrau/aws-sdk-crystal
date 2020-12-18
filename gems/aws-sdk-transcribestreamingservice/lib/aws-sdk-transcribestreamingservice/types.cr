@@ -835,5 +835,216 @@ module Aws::TranscribeStreamingService
 
     end
 
+    alias Alternative = NamedTuple(
+      "Transcript" : (String)?,
+      "Items" : (ItemList)?
+    )
+
+    alias AlternativeList = Array(Alternative)
+
+    alias AudioChunk = String | Array(UInt8) | IO
+
+    alias AudioEvent = NamedTuple(
+      "AudioChunk" : (AudioChunk)?
+    )
+
+    alias AudioStream = NamedTuple(
+      "AudioEvent" : (AudioEvent)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Boolean = Bool
+
+    alias Confidence = Float64
+
+    alias ConflictException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Double = Float64
+
+    alias InternalFailureException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Item = NamedTuple(
+      "StartTime" : (Double)?,
+      "EndTime" : (Double)?,
+      "Type" : (ItemType)?,
+      "Content" : (String)?,
+      "VocabularyFilterMatch" : (Boolean)?,
+      "Speaker" : (String)?
+    )
+
+    alias ItemList = Array(Item)
+
+    alias ItemType = String
+
+    alias LanguageCode = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias MediaEncoding = String
+
+    alias MediaSampleRateHertz = Int32
+
+    alias MedicalAlternative = NamedTuple(
+      "Transcript" : (String)?,
+      "Items" : (MedicalItemList)?
+    )
+
+    alias MedicalAlternativeList = Array(MedicalAlternative)
+
+    alias MedicalItem = NamedTuple(
+      "StartTime" : (Double)?,
+      "EndTime" : (Double)?,
+      "Type" : (ItemType)?,
+      "Content" : (String)?,
+      "Confidence" : (Confidence)?,
+      "Speaker" : (String)?
+    )
+
+    alias MedicalItemList = Array(MedicalItem)
+
+    alias MedicalResult = NamedTuple(
+      "ResultId" : (String)?,
+      "StartTime" : (Double)?,
+      "EndTime" : (Double)?,
+      "IsPartial" : (Boolean)?,
+      "Alternatives" : (MedicalAlternativeList)?,
+      "ChannelId" : (String)?
+    )
+
+    alias MedicalResultList = Array(MedicalResult)
+
+    alias MedicalTranscript = NamedTuple(
+      "Results" : (MedicalResultList)?
+    )
+
+    alias MedicalTranscriptEvent = NamedTuple(
+      "Transcript" : (MedicalTranscript)?
+    )
+
+    alias MedicalTranscriptResultStream = NamedTuple(
+      "TranscriptEvent" : (MedicalTranscriptEvent)?,
+      "BadRequestException" : (BadRequestException)?,
+      "LimitExceededException" : (LimitExceededException)?,
+      "InternalFailureException" : (InternalFailureException)?,
+      "ConflictException" : (ConflictException)?,
+      "ServiceUnavailableException" : (ServiceUnavailableException)?
+    )
+
+    alias NumberOfChannels = Int32
+
+    alias RequestId = String
+
+    alias Result = NamedTuple(
+      "ResultId" : (String)?,
+      "StartTime" : (Double)?,
+      "EndTime" : (Double)?,
+      "IsPartial" : (Boolean)?,
+      "Alternatives" : (AlternativeList)?,
+      "ChannelId" : (String)?
+    )
+
+    alias ResultList = Array(Result)
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias SessionId = String
+
+    alias Specialty = String
+
+    alias StartMedicalStreamTranscriptionRequest = NamedTuple(
+      "LanguageCode" : LanguageCode,
+      "MediaSampleRateHertz" : MediaSampleRateHertz,
+      "MediaEncoding" : MediaEncoding,
+      "VocabularyName" : (VocabularyName)?,
+      "Specialty" : Specialty,
+      "Type" : Type,
+      "ShowSpeakerLabel" : (Boolean)?,
+      "SessionId" : (SessionId)?,
+      "AudioStream" : AudioStream,
+      "EnableChannelIdentification" : (Boolean)?,
+      "NumberOfChannels" : (NumberOfChannels)?
+    )
+
+    alias StartMedicalStreamTranscriptionResponse = NamedTuple(
+      "RequestId" : (RequestId)?,
+      "LanguageCode" : (LanguageCode)?,
+      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
+      "MediaEncoding" : (MediaEncoding)?,
+      "VocabularyName" : (VocabularyName)?,
+      "Specialty" : (Specialty)?,
+      "Type" : (Type)?,
+      "ShowSpeakerLabel" : (Boolean)?,
+      "SessionId" : (SessionId)?,
+      "TranscriptResultStream" : (MedicalTranscriptResultStream)?,
+      "EnableChannelIdentification" : (Boolean)?,
+      "NumberOfChannels" : (NumberOfChannels)?
+    )
+
+    alias StartStreamTranscriptionRequest = NamedTuple(
+      "LanguageCode" : LanguageCode,
+      "MediaSampleRateHertz" : MediaSampleRateHertz,
+      "MediaEncoding" : MediaEncoding,
+      "VocabularyName" : (VocabularyName)?,
+      "SessionId" : (SessionId)?,
+      "AudioStream" : AudioStream,
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "VocabularyFilterMethod" : (VocabularyFilterMethod)?,
+      "ShowSpeakerLabel" : (Boolean)?,
+      "EnableChannelIdentification" : (Boolean)?,
+      "NumberOfChannels" : (NumberOfChannels)?
+    )
+
+    alias StartStreamTranscriptionResponse = NamedTuple(
+      "RequestId" : (RequestId)?,
+      "LanguageCode" : (LanguageCode)?,
+      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
+      "MediaEncoding" : (MediaEncoding)?,
+      "VocabularyName" : (VocabularyName)?,
+      "SessionId" : (SessionId)?,
+      "TranscriptResultStream" : (TranscriptResultStream)?,
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "VocabularyFilterMethod" : (VocabularyFilterMethod)?,
+      "ShowSpeakerLabel" : (Boolean)?,
+      "EnableChannelIdentification" : (Boolean)?,
+      "NumberOfChannels" : (NumberOfChannels)?
+    )
+
+    alias String = String
+
+    alias Transcript = NamedTuple(
+      "Results" : (ResultList)?
+    )
+
+    alias TranscriptEvent = NamedTuple(
+      "Transcript" : (Transcript)?
+    )
+
+    alias TranscriptResultStream = NamedTuple(
+      "TranscriptEvent" : (TranscriptEvent)?,
+      "BadRequestException" : (BadRequestException)?,
+      "LimitExceededException" : (LimitExceededException)?,
+      "InternalFailureException" : (InternalFailureException)?,
+      "ConflictException" : (ConflictException)?,
+      "ServiceUnavailableException" : (ServiceUnavailableException)?
+    )
+
+    alias Type = String
+
+    alias VocabularyFilterMethod = String
+
+    alias VocabularyFilterName = String
+
+    alias VocabularyName = String
   end
 end

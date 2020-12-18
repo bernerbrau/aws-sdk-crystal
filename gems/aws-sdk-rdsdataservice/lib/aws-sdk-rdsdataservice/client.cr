@@ -444,8 +444,8 @@ module Aws::RDSDataService
     #
     # @overload batch_execute_statement(**params)
     # @param [Hash] params ({})
-    def batch_execute_statement(params = {}, **options)
-      req = build_request(:batch_execute_statement, params)
+    def batch_execute_statement(, **options)
+      req = build_request(:batch_execute_statement, )
       req.send_request(options)
     end
 
@@ -486,8 +486,8 @@ module Aws::RDSDataService
     #
     # @overload begin_transaction(**params)
     # @param [Hash] params ({})
-    def begin_transaction(params = {}, **options)
-      req = build_request(:begin_transaction, params)
+    def begin_transaction(, **options)
+      req = build_request(:begin_transaction, )
       req.send_request(options)
     end
 
@@ -523,8 +523,8 @@ module Aws::RDSDataService
     #
     # @overload commit_transaction(**params)
     # @param [Hash] params ({})
-    def commit_transaction(params = {}, **options)
-      req = build_request(:commit_transaction, params)
+    def commit_transaction(, **options)
+      req = build_request(:commit_transaction, )
       req.send_request(options)
     end
 
@@ -606,8 +606,8 @@ module Aws::RDSDataService
     #
     # @overload execute_sql(**params)
     # @param [Hash] params ({})
-    def execute_sql(params = {}, **options)
-      req = build_request(:execute_sql, params)
+    def execute_sql(, **options)
+      req = build_request(:execute_sql, )
       req.send_request(options)
     end
 
@@ -772,8 +772,8 @@ module Aws::RDSDataService
     #
     # @overload execute_statement(**params)
     # @param [Hash] params ({})
-    def execute_statement(params = {}, **options)
-      req = build_request(:execute_statement, params)
+    def execute_statement(, **options)
+      req = build_request(:execute_statement, )
       req.send_request(options)
     end
 
@@ -809,8 +809,8 @@ module Aws::RDSDataService
     #
     # @overload rollback_transaction(**params)
     # @param [Hash] params ({})
-    def rollback_transaction(params = {}, **options)
-      req = build_request(:rollback_transaction, params)
+    def rollback_transaction(, **options)
+      req = build_request(:rollback_transaction, )
       req.send_request(options)
     end
 

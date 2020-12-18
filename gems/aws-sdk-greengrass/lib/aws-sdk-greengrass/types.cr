@@ -6312,5 +6312,1448 @@ module Aws::Greengrass
       include Aws::Structure
     end
 
+    alias AssociateRoleToGroupRequest = NamedTuple(
+      "GroupId" : __string,
+      "RoleArn" : __string
+    )
+
+    alias AssociateRoleToGroupResponse = NamedTuple(
+      "AssociatedAt" : (__string)?
+    )
+
+    alias AssociateServiceRoleToAccountRequest = NamedTuple(
+      "RoleArn" : __string
+    )
+
+    alias AssociateServiceRoleToAccountResponse = NamedTuple(
+      "AssociatedAt" : (__string)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "ErrorDetails" : (ErrorDetails)?,
+      "Message" : (__string)?
+    )
+
+    alias BulkDeployment = NamedTuple(
+      "BulkDeploymentArn" : (__string)?,
+      "BulkDeploymentId" : (__string)?,
+      "CreatedAt" : (__string)?
+    )
+
+    alias BulkDeploymentMetrics = NamedTuple(
+      "InvalidInputRecords" : (__integer)?,
+      "RecordsProcessed" : (__integer)?,
+      "RetryAttempts" : (__integer)?
+    )
+
+    alias BulkDeploymentResult = NamedTuple(
+      "CreatedAt" : (__string)?,
+      "DeploymentArn" : (__string)?,
+      "DeploymentId" : (__string)?,
+      "DeploymentStatus" : (__string)?,
+      "DeploymentType" : (DeploymentType)?,
+      "ErrorDetails" : (ErrorDetails)?,
+      "ErrorMessage" : (__string)?,
+      "GroupArn" : (__string)?
+    )
+
+    alias BulkDeploymentResults = Array(BulkDeploymentResult)
+
+    alias BulkDeploymentStatus = String
+
+    alias BulkDeployments = Array(BulkDeployment)
+
+    alias ConfigurationSyncStatus = String
+
+    alias ConnectivityInfo = NamedTuple(
+      "HostAddress" : (__string)?,
+      "Id" : (__string)?,
+      "Metadata" : (__string)?,
+      "PortNumber" : (__integer)?
+    )
+
+    alias Connector = NamedTuple(
+      "ConnectorArn" : __string,
+      "Id" : __string,
+      "Parameters" : (__mapOf__string)?
+    )
+
+    alias ConnectorDefinitionVersion = NamedTuple(
+      "Connectors" : (__listOfConnector)?
+    )
+
+    alias Core = NamedTuple(
+      "CertificateArn" : __string,
+      "Id" : __string,
+      "SyncShadow" : (__boolean)?,
+      "ThingArn" : __string
+    )
+
+    alias CoreDefinitionVersion = NamedTuple(
+      "Cores" : (__listOfCore)?
+    )
+
+    alias CreateConnectorDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (ConnectorDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateConnectorDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateConnectorDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "ConnectorDefinitionId" : __string,
+      "Connectors" : (__listOfConnector)?
+    )
+
+    alias CreateConnectorDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateCoreDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (CoreDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateCoreDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateCoreDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "CoreDefinitionId" : __string,
+      "Cores" : (__listOfCore)?
+    )
+
+    alias CreateCoreDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateDeploymentRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "DeploymentId" : (__string)?,
+      "DeploymentType" : DeploymentType,
+      "GroupId" : __string,
+      "GroupVersionId" : (__string)?
+    )
+
+    alias CreateDeploymentResponse = NamedTuple(
+      "DeploymentArn" : (__string)?,
+      "DeploymentId" : (__string)?
+    )
+
+    alias CreateDeviceDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (DeviceDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateDeviceDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateDeviceDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "DeviceDefinitionId" : __string,
+      "Devices" : (__listOfDevice)?
+    )
+
+    alias CreateDeviceDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateFunctionDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (FunctionDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateFunctionDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateFunctionDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "DefaultConfig" : (FunctionDefaultConfig)?,
+      "FunctionDefinitionId" : __string,
+      "Functions" : (__listOfFunction)?
+    )
+
+    alias CreateFunctionDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateGroupCertificateAuthorityRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "GroupId" : __string
+    )
+
+    alias CreateGroupCertificateAuthorityResponse = NamedTuple(
+      "GroupCertificateAuthorityArn" : (__string)?
+    )
+
+    alias CreateGroupRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (GroupVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateGroupResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateGroupVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "ConnectorDefinitionVersionArn" : (__string)?,
+      "CoreDefinitionVersionArn" : (__string)?,
+      "DeviceDefinitionVersionArn" : (__string)?,
+      "FunctionDefinitionVersionArn" : (__string)?,
+      "GroupId" : __string,
+      "LoggerDefinitionVersionArn" : (__string)?,
+      "ResourceDefinitionVersionArn" : (__string)?,
+      "SubscriptionDefinitionVersionArn" : (__string)?
+    )
+
+    alias CreateGroupVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateLoggerDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (LoggerDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateLoggerDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateLoggerDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "LoggerDefinitionId" : __string,
+      "Loggers" : (__listOfLogger)?
+    )
+
+    alias CreateLoggerDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateResourceDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (ResourceDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateResourceDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateResourceDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "ResourceDefinitionId" : __string,
+      "Resources" : (__listOfResource)?
+    )
+
+    alias CreateResourceDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias CreateSoftwareUpdateJobRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "S3UrlSignerRole" : S3UrlSignerRole,
+      "SoftwareToUpdate" : SoftwareToUpdate,
+      "UpdateAgentLogLevel" : (UpdateAgentLogLevel)?,
+      "UpdateTargets" : UpdateTargets,
+      "UpdateTargetsArchitecture" : UpdateTargetsArchitecture,
+      "UpdateTargetsOperatingSystem" : UpdateTargetsOperatingSystem
+    )
+
+    alias CreateSoftwareUpdateJobResponse = NamedTuple(
+      "IotJobArn" : (__string)?,
+      "IotJobId" : (__string)?,
+      "PlatformSoftwareVersion" : (__string)?
+    )
+
+    alias CreateSubscriptionDefinitionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "InitialVersion" : (SubscriptionDefinitionVersion)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateSubscriptionDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateSubscriptionDefinitionVersionRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "SubscriptionDefinitionId" : __string,
+      "Subscriptions" : (__listOfSubscription)?
+    )
+
+    alias CreateSubscriptionDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias DefinitionInformation = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DeleteConnectorDefinitionRequest = NamedTuple(
+      "ConnectorDefinitionId" : __string
+    )
+
+    alias DeleteConnectorDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteCoreDefinitionRequest = NamedTuple(
+      "CoreDefinitionId" : __string
+    )
+
+    alias DeleteCoreDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDeviceDefinitionRequest = NamedTuple(
+      "DeviceDefinitionId" : __string
+    )
+
+    alias DeleteDeviceDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteFunctionDefinitionRequest = NamedTuple(
+      "FunctionDefinitionId" : __string
+    )
+
+    alias DeleteFunctionDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteGroupRequest = NamedTuple(
+      "GroupId" : __string
+    )
+
+    alias DeleteGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteLoggerDefinitionRequest = NamedTuple(
+      "LoggerDefinitionId" : __string
+    )
+
+    alias DeleteLoggerDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteResourceDefinitionRequest = NamedTuple(
+      "ResourceDefinitionId" : __string
+    )
+
+    alias DeleteResourceDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSubscriptionDefinitionRequest = NamedTuple(
+      "SubscriptionDefinitionId" : __string
+    )
+
+    alias DeleteSubscriptionDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias Deployment = NamedTuple(
+      "CreatedAt" : (__string)?,
+      "DeploymentArn" : (__string)?,
+      "DeploymentId" : (__string)?,
+      "DeploymentType" : (DeploymentType)?,
+      "GroupArn" : (__string)?
+    )
+
+    alias DeploymentType = String
+
+    alias Deployments = Array(Deployment)
+
+    alias Device = NamedTuple(
+      "CertificateArn" : __string,
+      "Id" : __string,
+      "SyncShadow" : (__boolean)?,
+      "ThingArn" : __string
+    )
+
+    alias DeviceDefinitionVersion = NamedTuple(
+      "Devices" : (__listOfDevice)?
+    )
+
+    alias DisassociateRoleFromGroupRequest = NamedTuple(
+      "GroupId" : __string
+    )
+
+    alias DisassociateRoleFromGroupResponse = NamedTuple(
+      "DisassociatedAt" : (__string)?
+    )
+
+    alias DisassociateServiceRoleFromAccountRequest = NamedTuple(
+      
+    )
+
+    alias DisassociateServiceRoleFromAccountResponse = NamedTuple(
+      "DisassociatedAt" : (__string)?
+    )
+
+    alias Empty = NamedTuple(
+      
+    )
+
+    alias EncodingType = String
+
+    alias ErrorDetail = NamedTuple(
+      "DetailedErrorCode" : (__string)?,
+      "DetailedErrorMessage" : (__string)?
+    )
+
+    alias ErrorDetails = Array(ErrorDetail)
+
+    alias Function = NamedTuple(
+      "FunctionArn" : (__string)?,
+      "FunctionConfiguration" : (FunctionConfiguration)?,
+      "Id" : __string
+    )
+
+    alias FunctionConfiguration = NamedTuple(
+      "EncodingType" : (EncodingType)?,
+      "Environment" : (FunctionConfigurationEnvironment)?,
+      "ExecArgs" : (__string)?,
+      "Executable" : (__string)?,
+      "MemorySize" : (__integer)?,
+      "Pinned" : (__boolean)?,
+      "Timeout" : (__integer)?
+    )
+
+    alias FunctionConfigurationEnvironment = NamedTuple(
+      "AccessSysfs" : (__boolean)?,
+      "Execution" : (FunctionExecutionConfig)?,
+      "ResourceAccessPolicies" : (__listOfResourceAccessPolicy)?,
+      "Variables" : (__mapOf__string)?
+    )
+
+    alias FunctionDefaultConfig = NamedTuple(
+      "Execution" : (FunctionDefaultExecutionConfig)?
+    )
+
+    alias FunctionDefaultExecutionConfig = NamedTuple(
+      "IsolationMode" : (FunctionIsolationMode)?,
+      "RunAs" : (FunctionRunAsConfig)?
+    )
+
+    alias FunctionDefinitionVersion = NamedTuple(
+      "DefaultConfig" : (FunctionDefaultConfig)?,
+      "Functions" : (__listOfFunction)?
+    )
+
+    alias FunctionExecutionConfig = NamedTuple(
+      "IsolationMode" : (FunctionIsolationMode)?,
+      "RunAs" : (FunctionRunAsConfig)?
+    )
+
+    alias FunctionIsolationMode = String
+
+    alias FunctionRunAsConfig = NamedTuple(
+      "Gid" : (__integer)?,
+      "Uid" : (__integer)?
+    )
+
+    alias GeneralError = NamedTuple(
+      "ErrorDetails" : (ErrorDetails)?,
+      "Message" : (__string)?
+    )
+
+    alias GetAssociatedRoleRequest = NamedTuple(
+      "GroupId" : __string
+    )
+
+    alias GetAssociatedRoleResponse = NamedTuple(
+      "AssociatedAt" : (__string)?,
+      "RoleArn" : (__string)?
+    )
+
+    alias GetBulkDeploymentStatusRequest = NamedTuple(
+      "BulkDeploymentId" : __string
+    )
+
+    alias GetBulkDeploymentStatusResponse = NamedTuple(
+      "BulkDeploymentMetrics" : (BulkDeploymentMetrics)?,
+      "BulkDeploymentStatus" : (BulkDeploymentStatus)?,
+      "CreatedAt" : (__string)?,
+      "ErrorDetails" : (ErrorDetails)?,
+      "ErrorMessage" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetConnectivityInfoRequest = NamedTuple(
+      "ThingName" : __string
+    )
+
+    alias GetConnectivityInfoResponse = NamedTuple(
+      "ConnectivityInfo" : (__listOfConnectivityInfo)?,
+      "Message" : (__string)?
+    )
+
+    alias GetConnectorDefinitionRequest = NamedTuple(
+      "ConnectorDefinitionId" : __string
+    )
+
+    alias GetConnectorDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetConnectorDefinitionVersionRequest = NamedTuple(
+      "ConnectorDefinitionId" : __string,
+      "ConnectorDefinitionVersionId" : __string,
+      "NextToken" : (__string)?
+    )
+
+    alias GetConnectorDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (ConnectorDefinitionVersion)?,
+      "Id" : (__string)?,
+      "NextToken" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetCoreDefinitionRequest = NamedTuple(
+      "CoreDefinitionId" : __string
+    )
+
+    alias GetCoreDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetCoreDefinitionVersionRequest = NamedTuple(
+      "CoreDefinitionId" : __string,
+      "CoreDefinitionVersionId" : __string
+    )
+
+    alias GetCoreDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (CoreDefinitionVersion)?,
+      "Id" : (__string)?,
+      "NextToken" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetDeploymentStatusRequest = NamedTuple(
+      "DeploymentId" : __string,
+      "GroupId" : __string
+    )
+
+    alias GetDeploymentStatusResponse = NamedTuple(
+      "DeploymentStatus" : (__string)?,
+      "DeploymentType" : (DeploymentType)?,
+      "ErrorDetails" : (ErrorDetails)?,
+      "ErrorMessage" : (__string)?,
+      "UpdatedAt" : (__string)?
+    )
+
+    alias GetDeviceDefinitionRequest = NamedTuple(
+      "DeviceDefinitionId" : __string
+    )
+
+    alias GetDeviceDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetDeviceDefinitionVersionRequest = NamedTuple(
+      "DeviceDefinitionId" : __string,
+      "DeviceDefinitionVersionId" : __string,
+      "NextToken" : (__string)?
+    )
+
+    alias GetDeviceDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (DeviceDefinitionVersion)?,
+      "Id" : (__string)?,
+      "NextToken" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetFunctionDefinitionRequest = NamedTuple(
+      "FunctionDefinitionId" : __string
+    )
+
+    alias GetFunctionDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetFunctionDefinitionVersionRequest = NamedTuple(
+      "FunctionDefinitionId" : __string,
+      "FunctionDefinitionVersionId" : __string,
+      "NextToken" : (__string)?
+    )
+
+    alias GetFunctionDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (FunctionDefinitionVersion)?,
+      "Id" : (__string)?,
+      "NextToken" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetGroupCertificateAuthorityRequest = NamedTuple(
+      "CertificateAuthorityId" : __string,
+      "GroupId" : __string
+    )
+
+    alias GetGroupCertificateAuthorityResponse = NamedTuple(
+      "GroupCertificateAuthorityArn" : (__string)?,
+      "GroupCertificateAuthorityId" : (__string)?,
+      "PemEncodedCertificate" : (__string)?
+    )
+
+    alias GetGroupCertificateConfigurationRequest = NamedTuple(
+      "GroupId" : __string
+    )
+
+    alias GetGroupCertificateConfigurationResponse = NamedTuple(
+      "CertificateAuthorityExpiryInMilliseconds" : (__string)?,
+      "CertificateExpiryInMilliseconds" : (__string)?,
+      "GroupId" : (__string)?
+    )
+
+    alias GetGroupRequest = NamedTuple(
+      "GroupId" : __string
+    )
+
+    alias GetGroupResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetGroupVersionRequest = NamedTuple(
+      "GroupId" : __string,
+      "GroupVersionId" : __string
+    )
+
+    alias GetGroupVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (GroupVersion)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetLoggerDefinitionRequest = NamedTuple(
+      "LoggerDefinitionId" : __string
+    )
+
+    alias GetLoggerDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetLoggerDefinitionVersionRequest = NamedTuple(
+      "LoggerDefinitionId" : __string,
+      "LoggerDefinitionVersionId" : __string,
+      "NextToken" : (__string)?
+    )
+
+    alias GetLoggerDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (LoggerDefinitionVersion)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetResourceDefinitionRequest = NamedTuple(
+      "ResourceDefinitionId" : __string
+    )
+
+    alias GetResourceDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetResourceDefinitionVersionRequest = NamedTuple(
+      "ResourceDefinitionId" : __string,
+      "ResourceDefinitionVersionId" : __string
+    )
+
+    alias GetResourceDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (ResourceDefinitionVersion)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetServiceRoleForAccountRequest = NamedTuple(
+      
+    )
+
+    alias GetServiceRoleForAccountResponse = NamedTuple(
+      "AssociatedAt" : (__string)?,
+      "RoleArn" : (__string)?
+    )
+
+    alias GetSubscriptionDefinitionRequest = NamedTuple(
+      "SubscriptionDefinitionId" : __string
+    )
+
+    alias GetSubscriptionDefinitionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetSubscriptionDefinitionVersionRequest = NamedTuple(
+      "NextToken" : (__string)?,
+      "SubscriptionDefinitionId" : __string,
+      "SubscriptionDefinitionVersionId" : __string
+    )
+
+    alias GetSubscriptionDefinitionVersionResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Definition" : (SubscriptionDefinitionVersion)?,
+      "Id" : (__string)?,
+      "NextToken" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias GetThingRuntimeConfigurationRequest = NamedTuple(
+      "ThingName" : __string
+    )
+
+    alias GetThingRuntimeConfigurationResponse = NamedTuple(
+      "RuntimeConfiguration" : (RuntimeConfiguration)?
+    )
+
+    alias GroupCertificateAuthorityProperties = NamedTuple(
+      "GroupCertificateAuthorityArn" : (__string)?,
+      "GroupCertificateAuthorityId" : (__string)?
+    )
+
+    alias GroupCertificateConfiguration = NamedTuple(
+      "CertificateAuthorityExpiryInMilliseconds" : (__string)?,
+      "CertificateExpiryInMilliseconds" : (__string)?,
+      "GroupId" : (__string)?
+    )
+
+    alias GroupInformation = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "LastUpdatedTimestamp" : (__string)?,
+      "LatestVersion" : (__string)?,
+      "LatestVersionArn" : (__string)?,
+      "Name" : (__string)?
+    )
+
+    alias GroupOwnerSetting = NamedTuple(
+      "AutoAddGroupOwner" : (__boolean)?,
+      "GroupOwner" : (__string)?
+    )
+
+    alias GroupVersion = NamedTuple(
+      "ConnectorDefinitionVersionArn" : (__string)?,
+      "CoreDefinitionVersionArn" : (__string)?,
+      "DeviceDefinitionVersionArn" : (__string)?,
+      "FunctionDefinitionVersionArn" : (__string)?,
+      "LoggerDefinitionVersionArn" : (__string)?,
+      "ResourceDefinitionVersionArn" : (__string)?,
+      "SubscriptionDefinitionVersionArn" : (__string)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "ErrorDetails" : (ErrorDetails)?,
+      "Message" : (__string)?
+    )
+
+    alias ListBulkDeploymentDetailedReportsRequest = NamedTuple(
+      "BulkDeploymentId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListBulkDeploymentDetailedReportsResponse = NamedTuple(
+      "Deployments" : (BulkDeploymentResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListBulkDeploymentsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListBulkDeploymentsResponse = NamedTuple(
+      "BulkDeployments" : (BulkDeployments)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConnectorDefinitionVersionsRequest = NamedTuple(
+      "ConnectorDefinitionId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConnectorDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListConnectorDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConnectorDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListCoreDefinitionVersionsRequest = NamedTuple(
+      "CoreDefinitionId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListCoreDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListCoreDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListCoreDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDeploymentsRequest = NamedTuple(
+      "GroupId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDeploymentsResponse = NamedTuple(
+      "Deployments" : (Deployments)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDeviceDefinitionVersionsRequest = NamedTuple(
+      "DeviceDefinitionId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDeviceDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListDeviceDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDeviceDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListFunctionDefinitionVersionsRequest = NamedTuple(
+      "FunctionDefinitionId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListFunctionDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListFunctionDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListFunctionDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListGroupCertificateAuthoritiesRequest = NamedTuple(
+      "GroupId" : __string
+    )
+
+    alias ListGroupCertificateAuthoritiesResponse = NamedTuple(
+      "GroupCertificateAuthorities" : (__listOfGroupCertificateAuthorityProperties)?
+    )
+
+    alias ListGroupVersionsRequest = NamedTuple(
+      "GroupId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListGroupVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListGroupsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListGroupsResponse = NamedTuple(
+      "Groups" : (__listOfGroupInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListLoggerDefinitionVersionsRequest = NamedTuple(
+      "LoggerDefinitionId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListLoggerDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListLoggerDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListLoggerDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListResourceDefinitionVersionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?,
+      "ResourceDefinitionId" : __string
+    )
+
+    alias ListResourceDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListResourceDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListResourceDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListSubscriptionDefinitionVersionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?,
+      "SubscriptionDefinitionId" : __string
+    )
+
+    alias ListSubscriptionDefinitionVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias ListSubscriptionDefinitionsRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListSubscriptionDefinitionsResponse = NamedTuple(
+      "Definitions" : (__listOfDefinitionInformation)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (Tags)?
+    )
+
+    alias ListVersionsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Versions" : (__listOfVersionInformation)?
+    )
+
+    alias LocalDeviceResourceData = NamedTuple(
+      "GroupOwnerSetting" : (GroupOwnerSetting)?,
+      "SourcePath" : (__string)?
+    )
+
+    alias LocalVolumeResourceData = NamedTuple(
+      "DestinationPath" : (__string)?,
+      "GroupOwnerSetting" : (GroupOwnerSetting)?,
+      "SourcePath" : (__string)?
+    )
+
+    alias Logger = NamedTuple(
+      "Component" : LoggerComponent,
+      "Id" : __string,
+      "Level" : LoggerLevel,
+      "Space" : (__integer)?,
+      "Type" : LoggerType
+    )
+
+    alias LoggerComponent = String
+
+    alias LoggerDefinitionVersion = NamedTuple(
+      "Loggers" : (__listOfLogger)?
+    )
+
+    alias LoggerLevel = String
+
+    alias LoggerType = String
+
+    alias Permission = String
+
+    alias ResetDeploymentsRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "Force" : (__boolean)?,
+      "GroupId" : __string
+    )
+
+    alias ResetDeploymentsResponse = NamedTuple(
+      "DeploymentArn" : (__string)?,
+      "DeploymentId" : (__string)?
+    )
+
+    alias Resource = NamedTuple(
+      "Id" : __string,
+      "Name" : __string,
+      "ResourceDataContainer" : ResourceDataContainer
+    )
+
+    alias ResourceAccessPolicy = NamedTuple(
+      "Permission" : (Permission)?,
+      "ResourceId" : __string
+    )
+
+    alias ResourceDataContainer = NamedTuple(
+      "LocalDeviceResourceData" : (LocalDeviceResourceData)?,
+      "LocalVolumeResourceData" : (LocalVolumeResourceData)?,
+      "S3MachineLearningModelResourceData" : (S3MachineLearningModelResourceData)?,
+      "SageMakerMachineLearningModelResourceData" : (SageMakerMachineLearningModelResourceData)?,
+      "SecretsManagerSecretResourceData" : (SecretsManagerSecretResourceData)?
+    )
+
+    alias ResourceDefinitionVersion = NamedTuple(
+      "Resources" : (__listOfResource)?
+    )
+
+    alias ResourceDownloadOwnerSetting = NamedTuple(
+      "GroupOwner" : __string,
+      "GroupPermission" : Permission
+    )
+
+    alias RuntimeConfiguration = NamedTuple(
+      "TelemetryConfiguration" : (TelemetryConfiguration)?
+    )
+
+    alias RuntimeConfigurationUpdate = NamedTuple(
+      "TelemetryConfiguration" : (TelemetryConfigurationUpdate)?
+    )
+
+    alias S3MachineLearningModelResourceData = NamedTuple(
+      "DestinationPath" : (__string)?,
+      "OwnerSetting" : (ResourceDownloadOwnerSetting)?,
+      "S3Uri" : (__string)?
+    )
+
+    alias S3UrlSignerRole = String
+
+    alias SageMakerMachineLearningModelResourceData = NamedTuple(
+      "DestinationPath" : (__string)?,
+      "OwnerSetting" : (ResourceDownloadOwnerSetting)?,
+      "SageMakerJobArn" : (__string)?
+    )
+
+    alias SecretsManagerSecretResourceData = NamedTuple(
+      "ARN" : (__string)?,
+      "AdditionalStagingLabelsToDownload" : (__listOf__string)?
+    )
+
+    alias SoftwareToUpdate = String
+
+    alias StartBulkDeploymentRequest = NamedTuple(
+      "AmznClientToken" : (__string)?,
+      "ExecutionRoleArn" : __string,
+      "InputFileUri" : __string,
+      "tags" : (Tags)?
+    )
+
+    alias StartBulkDeploymentResponse = NamedTuple(
+      "BulkDeploymentArn" : (__string)?,
+      "BulkDeploymentId" : (__string)?
+    )
+
+    alias StopBulkDeploymentRequest = NamedTuple(
+      "BulkDeploymentId" : __string
+    )
+
+    alias StopBulkDeploymentResponse = NamedTuple(
+      
+    )
+
+    alias Subscription = NamedTuple(
+      "Id" : __string,
+      "Source" : __string,
+      "Subject" : __string,
+      "Target" : __string
+    )
+
+    alias SubscriptionDefinitionVersion = NamedTuple(
+      "Subscriptions" : (__listOfSubscription)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "tags" : (Tags)?
+    )
+
+    alias Tags = Hash(__string,__string)
+
+    alias Telemetry = String
+
+    alias TelemetryConfiguration = NamedTuple(
+      "ConfigurationSyncStatus" : (ConfigurationSyncStatus)?,
+      "Telemetry" : Telemetry
+    )
+
+    alias TelemetryConfigurationUpdate = NamedTuple(
+      "Telemetry" : Telemetry
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias UpdateAgentLogLevel = String
+
+    alias UpdateConnectivityInfoRequest = NamedTuple(
+      "ConnectivityInfo" : (__listOfConnectivityInfo)?,
+      "ThingName" : __string
+    )
+
+    alias UpdateConnectivityInfoResponse = NamedTuple(
+      "Message" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias UpdateConnectorDefinitionRequest = NamedTuple(
+      "ConnectorDefinitionId" : __string,
+      "Name" : (__string)?
+    )
+
+    alias UpdateConnectorDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCoreDefinitionRequest = NamedTuple(
+      "CoreDefinitionId" : __string,
+      "Name" : (__string)?
+    )
+
+    alias UpdateCoreDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDeviceDefinitionRequest = NamedTuple(
+      "DeviceDefinitionId" : __string,
+      "Name" : (__string)?
+    )
+
+    alias UpdateDeviceDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFunctionDefinitionRequest = NamedTuple(
+      "FunctionDefinitionId" : __string,
+      "Name" : (__string)?
+    )
+
+    alias UpdateFunctionDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateGroupCertificateConfigurationRequest = NamedTuple(
+      "CertificateExpiryInMilliseconds" : (__string)?,
+      "GroupId" : __string
+    )
+
+    alias UpdateGroupCertificateConfigurationResponse = NamedTuple(
+      "CertificateAuthorityExpiryInMilliseconds" : (__string)?,
+      "CertificateExpiryInMilliseconds" : (__string)?,
+      "GroupId" : (__string)?
+    )
+
+    alias UpdateGroupRequest = NamedTuple(
+      "GroupId" : __string,
+      "Name" : (__string)?
+    )
+
+    alias UpdateGroupResponse = NamedTuple(
+      
+    )
+
+    alias UpdateLoggerDefinitionRequest = NamedTuple(
+      "LoggerDefinitionId" : __string,
+      "Name" : (__string)?
+    )
+
+    alias UpdateLoggerDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateResourceDefinitionRequest = NamedTuple(
+      "Name" : (__string)?,
+      "ResourceDefinitionId" : __string
+    )
+
+    alias UpdateResourceDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateSubscriptionDefinitionRequest = NamedTuple(
+      "Name" : (__string)?,
+      "SubscriptionDefinitionId" : __string
+    )
+
+    alias UpdateSubscriptionDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateTargets = Array(__string)
+
+    alias UpdateTargetsArchitecture = String
+
+    alias UpdateTargetsOperatingSystem = String
+
+    alias UpdateThingRuntimeConfigurationRequest = NamedTuple(
+      "TelemetryConfiguration" : (TelemetryConfigurationUpdate)?,
+      "ThingName" : __string
+    )
+
+    alias UpdateThingRuntimeConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias VersionInformation = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationTimestamp" : (__string)?,
+      "Id" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __listOfConnectivityInfo = Array(ConnectivityInfo)
+
+    alias __listOfConnector = Array(Connector)
+
+    alias __listOfCore = Array(Core)
+
+    alias __listOfDefinitionInformation = Array(DefinitionInformation)
+
+    alias __listOfDevice = Array(Device)
+
+    alias __listOfFunction = Array(Function)
+
+    alias __listOfGroupCertificateAuthorityProperties = Array(GroupCertificateAuthorityProperties)
+
+    alias __listOfGroupInformation = Array(GroupInformation)
+
+    alias __listOfLogger = Array(Logger)
+
+    alias __listOfResource = Array(Resource)
+
+    alias __listOfResourceAccessPolicy = Array(ResourceAccessPolicy)
+
+    alias __listOfSubscription = Array(Subscription)
+
+    alias __listOfVersionInformation = Array(VersionInformation)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __mapOf__string = Hash(__string,__string)
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

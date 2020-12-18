@@ -379,8 +379,8 @@ module Aws::Mobile
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -421,8 +421,8 @@ module Aws::Mobile
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -455,8 +455,8 @@ module Aws::Mobile
     #
     # @overload describe_bundle(**params)
     # @param [Hash] params ({})
-    def describe_bundle(params = {}, **options)
-      req = build_request(:describe_bundle, params)
+    def describe_bundle(, **options)
+      req = build_request(:describe_bundle, )
       req.send_request(options)
     end
 
@@ -502,8 +502,8 @@ module Aws::Mobile
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::Mobile
     #
     # @overload export_bundle(**params)
     # @param [Hash] params ({})
-    def export_bundle(params = {}, **options)
-      req = build_request(:export_bundle, params)
+    def export_bundle(, **options)
+      req = build_request(:export_bundle, )
       req.send_request(options)
     end
 
@@ -575,8 +575,8 @@ module Aws::Mobile
     #
     # @overload export_project(**params)
     # @param [Hash] params ({})
-    def export_project(params = {}, **options)
-      req = build_request(:export_project, params)
+    def export_project(, **options)
+      req = build_request(:export_project, )
       req.send_request(options)
     end
 
@@ -620,8 +620,8 @@ module Aws::Mobile
     #
     # @overload list_bundles(**params)
     # @param [Hash] params ({})
-    def list_bundles(params = {}, **options)
-      req = build_request(:list_bundles, params)
+    def list_bundles(, **options)
+      req = build_request(:list_bundles, )
       req.send_request(options)
     end
 
@@ -660,8 +660,8 @@ module Aws::Mobile
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -707,8 +707,8 @@ module Aws::Mobile
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 

@@ -394,8 +394,8 @@ module Aws::MarketplaceEntitlementService
     #
     # @overload get_entitlements(**params)
     # @param [Hash] params ({})
-    def get_entitlements(params = {}, **options)
-      req = build_request(:get_entitlements, params)
+    def get_entitlements(, **options)
+      req = build_request(:get_entitlements, )
       req.send_request(options)
     end
 

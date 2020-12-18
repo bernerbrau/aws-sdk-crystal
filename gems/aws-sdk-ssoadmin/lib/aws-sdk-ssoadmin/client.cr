@@ -374,8 +374,8 @@ module Aws::SSOAdmin
     #
     # @overload attach_managed_policy_to_permission_set(**params)
     # @param [Hash] params ({})
-    def attach_managed_policy_to_permission_set(params = {}, **options)
-      req = build_request(:attach_managed_policy_to_permission_set, params)
+    def attach_managed_policy_to_permission_set(, **options)
+      req = build_request(:attach_managed_policy_to_permission_set, )
       req.send_request(options)
     end
 
@@ -456,8 +456,8 @@ module Aws::SSOAdmin
     #
     # @overload create_account_assignment(**params)
     # @param [Hash] params ({})
-    def create_account_assignment(params = {}, **options)
-      req = build_request(:create_account_assignment, params)
+    def create_account_assignment(, **options)
+      req = build_request(:create_account_assignment, )
       req.send_request(options)
     end
 
@@ -503,8 +503,8 @@ module Aws::SSOAdmin
     #
     # @overload create_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def create_instance_access_control_attribute_configuration(params = {}, **options)
-      req = build_request(:create_instance_access_control_attribute_configuration, params)
+    def create_instance_access_control_attribute_configuration(, **options)
+      req = build_request(:create_instance_access_control_attribute_configuration, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::SSOAdmin
     #
     # @overload create_permission_set(**params)
     # @param [Hash] params ({})
-    def create_permission_set(params = {}, **options)
-      req = build_request(:create_permission_set, params)
+    def create_permission_set(, **options)
+      req = build_request(:create_permission_set, )
       req.send_request(options)
     end
 
@@ -638,8 +638,8 @@ module Aws::SSOAdmin
     #
     # @overload delete_account_assignment(**params)
     # @param [Hash] params ({})
-    def delete_account_assignment(params = {}, **options)
-      req = build_request(:delete_account_assignment, params)
+    def delete_account_assignment(, **options)
+      req = build_request(:delete_account_assignment, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::SSOAdmin
     #
     # @overload delete_inline_policy_from_permission_set(**params)
     # @param [Hash] params ({})
-    def delete_inline_policy_from_permission_set(params = {}, **options)
-      req = build_request(:delete_inline_policy_from_permission_set, params)
+    def delete_inline_policy_from_permission_set(, **options)
+      req = build_request(:delete_inline_policy_from_permission_set, )
       req.send_request(options)
     end
 
@@ -698,8 +698,8 @@ module Aws::SSOAdmin
     #
     # @overload delete_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def delete_instance_access_control_attribute_configuration(params = {}, **options)
-      req = build_request(:delete_instance_access_control_attribute_configuration, params)
+    def delete_instance_access_control_attribute_configuration(, **options)
+      req = build_request(:delete_instance_access_control_attribute_configuration, )
       req.send_request(options)
     end
 
@@ -728,8 +728,8 @@ module Aws::SSOAdmin
     #
     # @overload delete_permission_set(**params)
     # @param [Hash] params ({})
-    def delete_permission_set(params = {}, **options)
-      req = build_request(:delete_permission_set, params)
+    def delete_permission_set(, **options)
+      req = build_request(:delete_permission_set, )
       req.send_request(options)
     end
 
@@ -772,8 +772,8 @@ module Aws::SSOAdmin
     #
     # @overload describe_account_assignment_creation_status(**params)
     # @param [Hash] params ({})
-    def describe_account_assignment_creation_status(params = {}, **options)
-      req = build_request(:describe_account_assignment_creation_status, params)
+    def describe_account_assignment_creation_status(, **options)
+      req = build_request(:describe_account_assignment_creation_status, )
       req.send_request(options)
     end
 
@@ -816,8 +816,8 @@ module Aws::SSOAdmin
     #
     # @overload describe_account_assignment_deletion_status(**params)
     # @param [Hash] params ({})
-    def describe_account_assignment_deletion_status(params = {}, **options)
-      req = build_request(:describe_account_assignment_deletion_status, params)
+    def describe_account_assignment_deletion_status(, **options)
+      req = build_request(:describe_account_assignment_deletion_status, )
       req.send_request(options)
     end
 
@@ -858,8 +858,8 @@ module Aws::SSOAdmin
     #
     # @overload describe_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def describe_instance_access_control_attribute_configuration(params = {}, **options)
-      req = build_request(:describe_instance_access_control_attribute_configuration, params)
+    def describe_instance_access_control_attribute_configuration(, **options)
+      req = build_request(:describe_instance_access_control_attribute_configuration, )
       req.send_request(options)
     end
 
@@ -899,8 +899,8 @@ module Aws::SSOAdmin
     #
     # @overload describe_permission_set(**params)
     # @param [Hash] params ({})
-    def describe_permission_set(params = {}, **options)
-      req = build_request(:describe_permission_set, params)
+    def describe_permission_set(, **options)
+      req = build_request(:describe_permission_set, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::SSOAdmin
     #
     # @overload describe_permission_set_provisioning_status(**params)
     # @param [Hash] params ({})
-    def describe_permission_set_provisioning_status(params = {}, **options)
-      req = build_request(:describe_permission_set_provisioning_status, params)
+    def describe_permission_set_provisioning_status(, **options)
+      req = build_request(:describe_permission_set_provisioning_status, )
       req.send_request(options)
     end
 
@@ -977,8 +977,8 @@ module Aws::SSOAdmin
     #
     # @overload detach_managed_policy_from_permission_set(**params)
     # @param [Hash] params ({})
-    def detach_managed_policy_from_permission_set(params = {}, **options)
-      req = build_request(:detach_managed_policy_from_permission_set, params)
+    def detach_managed_policy_from_permission_set(, **options)
+      req = build_request(:detach_managed_policy_from_permission_set, )
       req.send_request(options)
     end
 
@@ -1013,8 +1013,8 @@ module Aws::SSOAdmin
     #
     # @overload get_inline_policy_for_permission_set(**params)
     # @param [Hash] params ({})
-    def get_inline_policy_for_permission_set(params = {}, **options)
-      req = build_request(:get_inline_policy_for_permission_set, params)
+    def get_inline_policy_for_permission_set(, **options)
+      req = build_request(:get_inline_policy_for_permission_set, )
       req.send_request(options)
     end
 
@@ -1068,8 +1068,8 @@ module Aws::SSOAdmin
     #
     # @overload list_account_assignment_creation_status(**params)
     # @param [Hash] params ({})
-    def list_account_assignment_creation_status(params = {}, **options)
-      req = build_request(:list_account_assignment_creation_status, params)
+    def list_account_assignment_creation_status(, **options)
+      req = build_request(:list_account_assignment_creation_status, )
       req.send_request(options)
     end
 
@@ -1123,8 +1123,8 @@ module Aws::SSOAdmin
     #
     # @overload list_account_assignment_deletion_status(**params)
     # @param [Hash] params ({})
-    def list_account_assignment_deletion_status(params = {}, **options)
-      req = build_request(:list_account_assignment_deletion_status, params)
+    def list_account_assignment_deletion_status(, **options)
+      req = build_request(:list_account_assignment_deletion_status, )
       req.send_request(options)
     end
 
@@ -1181,8 +1181,8 @@ module Aws::SSOAdmin
     #
     # @overload list_account_assignments(**params)
     # @param [Hash] params ({})
-    def list_account_assignments(params = {}, **options)
-      req = build_request(:list_account_assignments, params)
+    def list_account_assignments(, **options)
+      req = build_request(:list_account_assignments, )
       req.send_request(options)
     end
 
@@ -1237,8 +1237,8 @@ module Aws::SSOAdmin
     #
     # @overload list_accounts_for_provisioned_permission_set(**params)
     # @param [Hash] params ({})
-    def list_accounts_for_provisioned_permission_set(params = {}, **options)
-      req = build_request(:list_accounts_for_provisioned_permission_set, params)
+    def list_accounts_for_provisioned_permission_set(, **options)
+      req = build_request(:list_accounts_for_provisioned_permission_set, )
       req.send_request(options)
     end
 
@@ -1276,8 +1276,8 @@ module Aws::SSOAdmin
     #
     # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, **options)
-      req = build_request(:list_instances, params)
+    def list_instances(, **options)
+      req = build_request(:list_instances, )
       req.send_request(options)
     end
 
@@ -1328,8 +1328,8 @@ module Aws::SSOAdmin
     #
     # @overload list_managed_policies_in_permission_set(**params)
     # @param [Hash] params ({})
-    def list_managed_policies_in_permission_set(params = {}, **options)
-      req = build_request(:list_managed_policies_in_permission_set, params)
+    def list_managed_policies_in_permission_set(, **options)
+      req = build_request(:list_managed_policies_in_permission_set, )
       req.send_request(options)
     end
 
@@ -1383,8 +1383,8 @@ module Aws::SSOAdmin
     #
     # @overload list_permission_set_provisioning_status(**params)
     # @param [Hash] params ({})
-    def list_permission_set_provisioning_status(params = {}, **options)
-      req = build_request(:list_permission_set_provisioning_status, params)
+    def list_permission_set_provisioning_status(, **options)
+      req = build_request(:list_permission_set_provisioning_status, )
       req.send_request(options)
     end
 
@@ -1429,8 +1429,8 @@ module Aws::SSOAdmin
     #
     # @overload list_permission_sets(**params)
     # @param [Hash] params ({})
-    def list_permission_sets(params = {}, **options)
-      req = build_request(:list_permission_sets, params)
+    def list_permission_sets(, **options)
+      req = build_request(:list_permission_sets, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::SSOAdmin
     #
     # @overload list_permission_sets_provisioned_to_account(**params)
     # @param [Hash] params ({})
-    def list_permission_sets_provisioned_to_account(params = {}, **options)
-      req = build_request(:list_permission_sets_provisioned_to_account, params)
+    def list_permission_sets_provisioned_to_account(, **options)
+      req = build_request(:list_permission_sets_provisioned_to_account, )
       req.send_request(options)
     end
 
@@ -1531,8 +1531,8 @@ module Aws::SSOAdmin
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1582,8 +1582,8 @@ module Aws::SSOAdmin
     #
     # @overload provision_permission_set(**params)
     # @param [Hash] params ({})
-    def provision_permission_set(params = {}, **options)
-      req = build_request(:provision_permission_set, params)
+    def provision_permission_set(, **options)
+      req = build_request(:provision_permission_set, )
       req.send_request(options)
     end
 
@@ -1623,8 +1623,8 @@ module Aws::SSOAdmin
     #
     # @overload put_inline_policy_to_permission_set(**params)
     # @param [Hash] params ({})
-    def put_inline_policy_to_permission_set(params = {}, **options)
-      req = build_request(:put_inline_policy_to_permission_set, params)
+    def put_inline_policy_to_permission_set(, **options)
+      req = build_request(:put_inline_policy_to_permission_set, )
       req.send_request(options)
     end
 
@@ -1662,8 +1662,8 @@ module Aws::SSOAdmin
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1696,8 +1696,8 @@ module Aws::SSOAdmin
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1741,8 +1741,8 @@ module Aws::SSOAdmin
     #
     # @overload update_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def update_instance_access_control_attribute_configuration(params = {}, **options)
-      req = build_request(:update_instance_access_control_attribute_configuration, params)
+    def update_instance_access_control_attribute_configuration(, **options)
+      req = build_request(:update_instance_access_control_attribute_configuration, )
       req.send_request(options)
     end
 
@@ -1785,8 +1785,8 @@ module Aws::SSOAdmin
     #
     # @overload update_permission_set(**params)
     # @param [Hash] params ({})
-    def update_permission_set(params = {}, **options)
-      req = build_request(:update_permission_set, params)
+    def update_permission_set(, **options)
+      req = build_request(:update_permission_set, )
       req.send_request(options)
     end
 

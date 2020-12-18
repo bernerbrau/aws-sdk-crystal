@@ -412,8 +412,8 @@ module Aws::OpsWorksCM
     #
     # @overload associate_node(**params)
     # @param [Hash] params ({})
-    def associate_node(params = {}, **options)
-      req = build_request(:associate_node, params)
+    def associate_node(, **options)
+      req = build_request(:associate_node, )
       req.send_request(options)
     end
 
@@ -510,8 +510,8 @@ module Aws::OpsWorksCM
     #
     # @overload create_backup(**params)
     # @param [Hash] params ({})
-    def create_backup(params = {}, **options)
-      req = build_request(:create_backup, params)
+    def create_backup(, **options)
+      req = build_request(:create_backup, )
       req.send_request(options)
     end
 
@@ -840,8 +840,8 @@ module Aws::OpsWorksCM
     #
     # @overload create_server(**params)
     # @param [Hash] params ({})
-    def create_server(params = {}, **options)
-      req = build_request(:create_server, params)
+    def create_server(, **options)
+      req = build_request(:create_server, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::OpsWorksCM
     #
     # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, **options)
-      req = build_request(:delete_backup, params)
+    def delete_backup(, **options)
+      req = build_request(:delete_backup, )
       req.send_request(options)
     end
 
@@ -903,8 +903,8 @@ module Aws::OpsWorksCM
     #
     # @overload delete_server(**params)
     # @param [Hash] params ({})
-    def delete_server(params = {}, **options)
-      req = build_request(:delete_server, params)
+    def delete_server(, **options)
+      req = build_request(:delete_server, )
       req.send_request(options)
     end
 
@@ -927,8 +927,8 @@ module Aws::OpsWorksCM
     #
     # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, **options)
-      req = build_request(:describe_account_attributes, params)
+    def describe_account_attributes(, **options)
+      req = build_request(:describe_account_attributes, )
       req.send_request(options)
     end
 
@@ -1005,8 +1005,8 @@ module Aws::OpsWorksCM
     #
     # @overload describe_backups(**params)
     # @param [Hash] params ({})
-    def describe_backups(params = {}, **options)
-      req = build_request(:describe_backups, params)
+    def describe_backups(, **options)
+      req = build_request(:describe_backups, )
       req.send_request(options)
     end
 
@@ -1067,8 +1067,8 @@ module Aws::OpsWorksCM
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::OpsWorksCM
     #
     # @overload describe_node_association_status(**params)
     # @param [Hash] params ({})
-    def describe_node_association_status(params = {}, **options)
-      req = build_request(:describe_node_association_status, params)
+    def describe_node_association_status(, **options)
+      req = build_request(:describe_node_association_status, )
       req.send_request(options)
     end
 
@@ -1191,8 +1191,8 @@ module Aws::OpsWorksCM
     #
     # @overload describe_servers(**params)
     # @param [Hash] params ({})
-    def describe_servers(params = {}, **options)
-      req = build_request(:describe_servers, params)
+    def describe_servers(, **options)
+      req = build_request(:describe_servers, )
       req.send_request(options)
     end
 
@@ -1251,8 +1251,8 @@ module Aws::OpsWorksCM
     #
     # @overload disassociate_node(**params)
     # @param [Hash] params ({})
-    def disassociate_node(params = {}, **options)
-      req = build_request(:disassociate_node, params)
+    def disassociate_node(, **options)
+      req = build_request(:disassociate_node, )
       req.send_request(options)
     end
 
@@ -1326,8 +1326,8 @@ module Aws::OpsWorksCM
     #
     # @overload export_server_engine_attribute(**params)
     # @param [Hash] params ({})
-    def export_server_engine_attribute(params = {}, **options)
-      req = build_request(:export_server_engine_attribute, params)
+    def export_server_engine_attribute(, **options)
+      req = build_request(:export_server_engine_attribute, )
       req.send_request(options)
     end
 
@@ -1385,8 +1385,8 @@ module Aws::OpsWorksCM
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1442,8 +1442,8 @@ module Aws::OpsWorksCM
     #
     # @overload restore_server(**params)
     # @param [Hash] params ({})
-    def restore_server(params = {}, **options)
-      req = build_request(:restore_server, params)
+    def restore_server(, **options)
+      req = build_request(:restore_server, )
       req.send_request(options)
     end
 
@@ -1530,8 +1530,8 @@ module Aws::OpsWorksCM
     #
     # @overload start_maintenance(**params)
     # @param [Hash] params ({})
-    def start_maintenance(params = {}, **options)
-      req = build_request(:start_maintenance, params)
+    def start_maintenance(, **options)
+      req = build_request(:start_maintenance, )
       req.send_request(options)
     end
 
@@ -1581,8 +1581,8 @@ module Aws::OpsWorksCM
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1609,8 +1609,8 @@ module Aws::OpsWorksCM
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1691,8 +1691,8 @@ module Aws::OpsWorksCM
     #
     # @overload update_server(**params)
     # @param [Hash] params ({})
-    def update_server(params = {}, **options)
-      req = build_request(:update_server, params)
+    def update_server(, **options)
+      req = build_request(:update_server, )
       req.send_request(options)
     end
 
@@ -1766,8 +1766,8 @@ module Aws::OpsWorksCM
     #
     # @overload update_server_engine_attributes(**params)
     # @param [Hash] params ({})
-    def update_server_engine_attributes(params = {}, **options)
-      req = build_request(:update_server_engine_attributes, params)
+    def update_server_engine_attributes(, **options)
+      req = build_request(:update_server_engine_attributes, )
       req.send_request(options)
     end
 

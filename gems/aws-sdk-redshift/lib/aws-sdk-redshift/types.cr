@@ -10256,5 +10256,2142 @@ module Aws::Redshift
       include Aws::Structure
     end
 
+    alias AcceptReservedNodeExchangeInputMessage = NamedTuple(
+      "ReservedNodeId" : String,
+      "TargetReservedNodeOfferingId" : String
+    )
+
+    alias AcceptReservedNodeExchangeOutputMessage = NamedTuple(
+      "ExchangedReservedNode" : (ReservedNode)?
+    )
+
+    alias AccessToSnapshotDeniedFault = NamedTuple(
+      
+    )
+
+    alias AccountAttribute = NamedTuple(
+      "AttributeName" : (String)?,
+      "AttributeValues" : (AttributeValueList)?
+    )
+
+    alias AccountAttributeList = NamedTuple(
+      "AccountAttributes" : (AttributeList)?
+    )
+
+    alias AccountWithRestoreAccess = NamedTuple(
+      "AccountId" : (String)?,
+      "AccountAlias" : (String)?
+    )
+
+    alias AccountsWithRestoreAccessList = Array(AccountWithRestoreAccess)
+
+    alias ActionType = String
+
+    alias AssociatedClusterList = Array(ClusterAssociatedToSchedule)
+
+    alias AttributeList = Array(AccountAttribute)
+
+    alias AttributeNameList = Array(String)
+
+    alias AttributeValueList = Array(AttributeValueTarget)
+
+    alias AttributeValueTarget = NamedTuple(
+      "AttributeValue" : (String)?
+    )
+
+    alias AuthorizationAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias AuthorizationNotFoundFault = NamedTuple(
+      
+    )
+
+    alias AuthorizationQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias AuthorizeClusterSecurityGroupIngressMessage = NamedTuple(
+      "ClusterSecurityGroupName" : String,
+      "CIDRIP" : (String)?,
+      "EC2SecurityGroupName" : (String)?,
+      "EC2SecurityGroupOwnerId" : (String)?
+    )
+
+    alias AuthorizeClusterSecurityGroupIngressResult = NamedTuple(
+      "ClusterSecurityGroup" : (ClusterSecurityGroup)?
+    )
+
+    alias AuthorizeSnapshotAccessMessage = NamedTuple(
+      "SnapshotIdentifier" : String,
+      "SnapshotClusterIdentifier" : (String)?,
+      "AccountWithRestoreAccess" : String
+    )
+
+    alias AuthorizeSnapshotAccessResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias AvailabilityZone = NamedTuple(
+      "Name" : (String)?,
+      "SupportedPlatforms" : (SupportedPlatformsList)?
+    )
+
+    alias AvailabilityZoneList = Array(AvailabilityZone)
+
+    alias BatchDeleteClusterSnapshotsRequest = NamedTuple(
+      "Identifiers" : DeleteClusterSnapshotMessageList
+    )
+
+    alias BatchDeleteClusterSnapshotsResult = NamedTuple(
+      "Resources" : (SnapshotIdentifierList)?,
+      "Errors" : (BatchSnapshotOperationErrorList)?
+    )
+
+    alias BatchDeleteRequestSizeExceededFault = NamedTuple(
+      
+    )
+
+    alias BatchModifyClusterSnapshotsLimitExceededFault = NamedTuple(
+      
+    )
+
+    alias BatchModifyClusterSnapshotsMessage = NamedTuple(
+      "SnapshotIdentifierList" : SnapshotIdentifierList,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "Force" : (Boolean)?
+    )
+
+    alias BatchModifyClusterSnapshotsOutputMessage = NamedTuple(
+      "Resources" : (SnapshotIdentifierList)?,
+      "Errors" : (BatchSnapshotOperationErrors)?
+    )
+
+    alias BatchSnapshotOperationErrorList = Array(SnapshotErrorMessage)
+
+    alias BatchSnapshotOperationErrors = Array(SnapshotErrorMessage)
+
+    alias Boolean = Bool
+
+    alias BooleanOptional = Bool
+
+    alias BucketNotFoundFault = NamedTuple(
+      
+    )
+
+    alias CancelResizeMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias Cluster = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "NodeType" : (String)?,
+      "ClusterStatus" : (String)?,
+      "ClusterAvailabilityStatus" : (String)?,
+      "ModifyStatus" : (String)?,
+      "MasterUsername" : (String)?,
+      "DBName" : (String)?,
+      "Endpoint" : (Endpoint)?,
+      "ClusterCreateTime" : (TStamp)?,
+      "AutomatedSnapshotRetentionPeriod" : (Integer)?,
+      "ManualSnapshotRetentionPeriod" : (Integer)?,
+      "ClusterSecurityGroups" : (ClusterSecurityGroupMembershipList)?,
+      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
+      "ClusterParameterGroups" : (ClusterParameterGroupStatusList)?,
+      "ClusterSubnetGroupName" : (String)?,
+      "VpcId" : (String)?,
+      "AvailabilityZone" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "PendingModifiedValues" : (PendingModifiedValues)?,
+      "ClusterVersion" : (String)?,
+      "AllowVersionUpgrade" : (Boolean)?,
+      "NumberOfNodes" : (Integer)?,
+      "PubliclyAccessible" : (Boolean)?,
+      "Encrypted" : (Boolean)?,
+      "RestoreStatus" : (RestoreStatus)?,
+      "DataTransferProgress" : (DataTransferProgress)?,
+      "HsmStatus" : (HsmStatus)?,
+      "ClusterSnapshotCopyStatus" : (ClusterSnapshotCopyStatus)?,
+      "ClusterPublicKey" : (String)?,
+      "ClusterNodes" : (ClusterNodesList)?,
+      "ElasticIpStatus" : (ElasticIpStatus)?,
+      "ClusterRevisionNumber" : (String)?,
+      "Tags" : (TagList)?,
+      "KmsKeyId" : (String)?,
+      "EnhancedVpcRouting" : (Boolean)?,
+      "IamRoles" : (ClusterIamRoleList)?,
+      "PendingActions" : (PendingActionsList)?,
+      "MaintenanceTrackName" : (String)?,
+      "ElasticResizeNumberOfNodeOptions" : (String)?,
+      "DeferredMaintenanceWindows" : (DeferredMaintenanceWindowsList)?,
+      "SnapshotScheduleIdentifier" : (String)?,
+      "SnapshotScheduleState" : (ScheduleState)?,
+      "ExpectedNextSnapshotScheduleTime" : (TStamp)?,
+      "ExpectedNextSnapshotScheduleTimeStatus" : (String)?,
+      "NextMaintenanceWindowStartTime" : (TStamp)?,
+      "ResizeInfo" : (ResizeInfo)?,
+      "AvailabilityZoneRelocationStatus" : (String)?,
+      "ClusterNamespaceArn" : (String)?
+    )
+
+    alias ClusterAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ClusterAssociatedToSchedule = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "ScheduleAssociationState" : (ScheduleState)?
+    )
+
+    alias ClusterCredentials = NamedTuple(
+      "DbUser" : (String)?,
+      "DbPassword" : (SensitiveString)?,
+      "Expiration" : (TStamp)?
+    )
+
+    alias ClusterDbRevision = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "CurrentDatabaseRevision" : (String)?,
+      "DatabaseRevisionReleaseDate" : (TStamp)?,
+      "RevisionTargets" : (RevisionTargetsList)?
+    )
+
+    alias ClusterDbRevisionsList = Array(ClusterDbRevision)
+
+    alias ClusterDbRevisionsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ClusterDbRevisions" : (ClusterDbRevisionsList)?
+    )
+
+    alias ClusterIamRole = NamedTuple(
+      "IamRoleArn" : (String)?,
+      "ApplyStatus" : (String)?
+    )
+
+    alias ClusterIamRoleList = Array(ClusterIamRole)
+
+    alias ClusterList = Array(Cluster)
+
+    alias ClusterNode = NamedTuple(
+      "NodeRole" : (String)?,
+      "PrivateIPAddress" : (String)?,
+      "PublicIPAddress" : (String)?
+    )
+
+    alias ClusterNodesList = Array(ClusterNode)
+
+    alias ClusterNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ClusterOnLatestRevisionFault = NamedTuple(
+      
+    )
+
+    alias ClusterParameterGroup = NamedTuple(
+      "ParameterGroupName" : (String)?,
+      "ParameterGroupFamily" : (String)?,
+      "Description" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ClusterParameterGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ClusterParameterGroupDetails = NamedTuple(
+      "Parameters" : (ParametersList)?,
+      "Marker" : (String)?
+    )
+
+    alias ClusterParameterGroupNameMessage = NamedTuple(
+      "ParameterGroupName" : (String)?,
+      "ParameterGroupStatus" : (String)?
+    )
+
+    alias ClusterParameterGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ClusterParameterGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ClusterParameterGroupStatus = NamedTuple(
+      "ParameterGroupName" : (String)?,
+      "ParameterApplyStatus" : (String)?,
+      "ClusterParameterStatusList" : (ClusterParameterStatusList)?
+    )
+
+    alias ClusterParameterGroupStatusList = Array(ClusterParameterGroupStatus)
+
+    alias ClusterParameterGroupsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ParameterGroups" : (ParameterGroupList)?
+    )
+
+    alias ClusterParameterStatus = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterApplyStatus" : (String)?,
+      "ParameterApplyErrorDescription" : (String)?
+    )
+
+    alias ClusterParameterStatusList = Array(ClusterParameterStatus)
+
+    alias ClusterQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ClusterSecurityGroup = NamedTuple(
+      "ClusterSecurityGroupName" : (String)?,
+      "Description" : (String)?,
+      "EC2SecurityGroups" : (EC2SecurityGroupList)?,
+      "IPRanges" : (IPRangeList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ClusterSecurityGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ClusterSecurityGroupMembership = NamedTuple(
+      "ClusterSecurityGroupName" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias ClusterSecurityGroupMembershipList = Array(ClusterSecurityGroupMembership)
+
+    alias ClusterSecurityGroupMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ClusterSecurityGroups" : (ClusterSecurityGroups)?
+    )
+
+    alias ClusterSecurityGroupNameList = Array(String)
+
+    alias ClusterSecurityGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ClusterSecurityGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ClusterSecurityGroups = Array(ClusterSecurityGroup)
+
+    alias ClusterSnapshotAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ClusterSnapshotCopyStatus = NamedTuple(
+      "DestinationRegion" : (String)?,
+      "RetentionPeriod" : (Long)?,
+      "ManualSnapshotRetentionPeriod" : (Integer)?,
+      "SnapshotCopyGrantName" : (String)?
+    )
+
+    alias ClusterSnapshotNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ClusterSnapshotQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ClusterSubnetGroup = NamedTuple(
+      "ClusterSubnetGroupName" : (String)?,
+      "Description" : (String)?,
+      "VpcId" : (String)?,
+      "SubnetGroupStatus" : (String)?,
+      "Subnets" : (SubnetList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ClusterSubnetGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ClusterSubnetGroupMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ClusterSubnetGroups" : (ClusterSubnetGroups)?
+    )
+
+    alias ClusterSubnetGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ClusterSubnetGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ClusterSubnetGroups = Array(ClusterSubnetGroup)
+
+    alias ClusterSubnetQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ClusterVersion = NamedTuple(
+      "ClusterVersion" : (String)?,
+      "ClusterParameterGroupFamily" : (String)?,
+      "Description" : (String)?
+    )
+
+    alias ClusterVersionList = Array(ClusterVersion)
+
+    alias ClusterVersionsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ClusterVersions" : (ClusterVersionList)?
+    )
+
+    alias ClustersMessage = NamedTuple(
+      "Marker" : (String)?,
+      "Clusters" : (ClusterList)?
+    )
+
+    alias CopyClusterSnapshotMessage = NamedTuple(
+      "SourceSnapshotIdentifier" : String,
+      "SourceSnapshotClusterIdentifier" : (String)?,
+      "TargetSnapshotIdentifier" : String,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?
+    )
+
+    alias CopyClusterSnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias CopyToRegionDisabledFault = NamedTuple(
+      
+    )
+
+    alias CreateClusterMessage = NamedTuple(
+      "DBName" : (String)?,
+      "ClusterIdentifier" : String,
+      "ClusterType" : (String)?,
+      "NodeType" : String,
+      "MasterUsername" : String,
+      "MasterUserPassword" : String,
+      "ClusterSecurityGroups" : (ClusterSecurityGroupNameList)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "ClusterSubnetGroupName" : (String)?,
+      "AvailabilityZone" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "ClusterParameterGroupName" : (String)?,
+      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "Port" : (IntegerOptional)?,
+      "ClusterVersion" : (String)?,
+      "AllowVersionUpgrade" : (BooleanOptional)?,
+      "NumberOfNodes" : (IntegerOptional)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "Encrypted" : (BooleanOptional)?,
+      "HsmClientCertificateIdentifier" : (String)?,
+      "HsmConfigurationIdentifier" : (String)?,
+      "ElasticIp" : (String)?,
+      "Tags" : (TagList)?,
+      "KmsKeyId" : (String)?,
+      "EnhancedVpcRouting" : (BooleanOptional)?,
+      "AdditionalInfo" : (String)?,
+      "IamRoles" : (IamRoleArnList)?,
+      "MaintenanceTrackName" : (String)?,
+      "SnapshotScheduleIdentifier" : (String)?,
+      "AvailabilityZoneRelocation" : (BooleanOptional)?
+    )
+
+    alias CreateClusterParameterGroupMessage = NamedTuple(
+      "ParameterGroupName" : String,
+      "ParameterGroupFamily" : String,
+      "Description" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateClusterParameterGroupResult = NamedTuple(
+      "ClusterParameterGroup" : (ClusterParameterGroup)?
+    )
+
+    alias CreateClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias CreateClusterSecurityGroupMessage = NamedTuple(
+      "ClusterSecurityGroupName" : String,
+      "Description" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateClusterSecurityGroupResult = NamedTuple(
+      "ClusterSecurityGroup" : (ClusterSecurityGroup)?
+    )
+
+    alias CreateClusterSnapshotMessage = NamedTuple(
+      "SnapshotIdentifier" : String,
+      "ClusterIdentifier" : String,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateClusterSnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias CreateClusterSubnetGroupMessage = NamedTuple(
+      "ClusterSubnetGroupName" : String,
+      "Description" : String,
+      "SubnetIds" : SubnetIdentifierList,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateClusterSubnetGroupResult = NamedTuple(
+      "ClusterSubnetGroup" : (ClusterSubnetGroup)?
+    )
+
+    alias CreateEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SnsTopicArn" : String,
+      "SourceType" : (String)?,
+      "SourceIds" : (SourceIdsList)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Severity" : (String)?,
+      "Enabled" : (BooleanOptional)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEventSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias CreateHsmClientCertificateMessage = NamedTuple(
+      "HsmClientCertificateIdentifier" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateHsmClientCertificateResult = NamedTuple(
+      "HsmClientCertificate" : (HsmClientCertificate)?
+    )
+
+    alias CreateHsmConfigurationMessage = NamedTuple(
+      "HsmConfigurationIdentifier" : String,
+      "Description" : String,
+      "HsmIpAddress" : String,
+      "HsmPartitionName" : String,
+      "HsmPartitionPassword" : String,
+      "HsmServerPublicCertificate" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateHsmConfigurationResult = NamedTuple(
+      "HsmConfiguration" : (HsmConfiguration)?
+    )
+
+    alias CreateScheduledActionMessage = NamedTuple(
+      "ScheduledActionName" : String,
+      "TargetAction" : ScheduledActionType,
+      "Schedule" : String,
+      "IamRole" : String,
+      "ScheduledActionDescription" : (String)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Enable" : (BooleanOptional)?
+    )
+
+    alias CreateSnapshotCopyGrantMessage = NamedTuple(
+      "SnapshotCopyGrantName" : String,
+      "KmsKeyId" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateSnapshotCopyGrantResult = NamedTuple(
+      "SnapshotCopyGrant" : (SnapshotCopyGrant)?
+    )
+
+    alias CreateSnapshotScheduleMessage = NamedTuple(
+      "ScheduleDefinitions" : (ScheduleDefinitionList)?,
+      "ScheduleIdentifier" : (String)?,
+      "ScheduleDescription" : (String)?,
+      "Tags" : (TagList)?,
+      "DryRun" : (BooleanOptional)?,
+      "NextInvocations" : (IntegerOptional)?
+    )
+
+    alias CreateTagsMessage = NamedTuple(
+      "ResourceName" : String,
+      "Tags" : TagList
+    )
+
+    alias CreateUsageLimitMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "FeatureType" : UsageLimitFeatureType,
+      "LimitType" : UsageLimitLimitType,
+      "Amount" : Long,
+      "Period" : (UsageLimitPeriod)?,
+      "BreachAction" : (UsageLimitBreachAction)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CustomerStorageMessage = NamedTuple(
+      "TotalBackupSizeInMegaBytes" : (Double)?,
+      "TotalProvisionedStorageInMegaBytes" : (Double)?
+    )
+
+    alias DataTransferProgress = NamedTuple(
+      "Status" : (String)?,
+      "CurrentRateInMegaBytesPerSecond" : (DoubleOptional)?,
+      "TotalDataInMegaBytes" : (Long)?,
+      "DataTransferredInMegaBytes" : (Long)?,
+      "EstimatedTimeToCompletionInSeconds" : (LongOptional)?,
+      "ElapsedTimeInSeconds" : (LongOptional)?
+    )
+
+    alias DbGroupList = Array(String)
+
+    alias DefaultClusterParameters = NamedTuple(
+      "ParameterGroupFamily" : (String)?,
+      "Marker" : (String)?,
+      "Parameters" : (ParametersList)?
+    )
+
+    alias DeferredMaintenanceWindow = NamedTuple(
+      "DeferMaintenanceIdentifier" : (String)?,
+      "DeferMaintenanceStartTime" : (TStamp)?,
+      "DeferMaintenanceEndTime" : (TStamp)?
+    )
+
+    alias DeferredMaintenanceWindowsList = Array(DeferredMaintenanceWindow)
+
+    alias DeleteClusterMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "SkipFinalClusterSnapshot" : (Boolean)?,
+      "FinalClusterSnapshotIdentifier" : (String)?,
+      "FinalClusterSnapshotRetentionPeriod" : (IntegerOptional)?
+    )
+
+    alias DeleteClusterParameterGroupMessage = NamedTuple(
+      "ParameterGroupName" : String
+    )
+
+    alias DeleteClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias DeleteClusterSecurityGroupMessage = NamedTuple(
+      "ClusterSecurityGroupName" : String
+    )
+
+    alias DeleteClusterSnapshotMessage = NamedTuple(
+      "SnapshotIdentifier" : String,
+      "SnapshotClusterIdentifier" : (String)?
+    )
+
+    alias DeleteClusterSnapshotMessageList = Array(DeleteClusterSnapshotMessage)
+
+    alias DeleteClusterSnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias DeleteClusterSubnetGroupMessage = NamedTuple(
+      "ClusterSubnetGroupName" : String
+    )
+
+    alias DeleteEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String
+    )
+
+    alias DeleteHsmClientCertificateMessage = NamedTuple(
+      "HsmClientCertificateIdentifier" : String
+    )
+
+    alias DeleteHsmConfigurationMessage = NamedTuple(
+      "HsmConfigurationIdentifier" : String
+    )
+
+    alias DeleteScheduledActionMessage = NamedTuple(
+      "ScheduledActionName" : String
+    )
+
+    alias DeleteSnapshotCopyGrantMessage = NamedTuple(
+      "SnapshotCopyGrantName" : String
+    )
+
+    alias DeleteSnapshotScheduleMessage = NamedTuple(
+      "ScheduleIdentifier" : String
+    )
+
+    alias DeleteTagsMessage = NamedTuple(
+      "ResourceName" : String,
+      "TagKeys" : TagKeyList
+    )
+
+    alias DeleteUsageLimitMessage = NamedTuple(
+      "UsageLimitId" : String
+    )
+
+    alias DependentServiceRequestThrottlingFault = NamedTuple(
+      
+    )
+
+    alias DependentServiceUnavailableFault = NamedTuple(
+      
+    )
+
+    alias DescribeAccountAttributesMessage = NamedTuple(
+      "AttributeNames" : (AttributeNameList)?
+    )
+
+    alias DescribeClusterDbRevisionsMessage = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeClusterParameterGroupsMessage = NamedTuple(
+      "ParameterGroupName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeClusterParametersMessage = NamedTuple(
+      "ParameterGroupName" : String,
+      "Source" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeClusterSecurityGroupsMessage = NamedTuple(
+      "ClusterSecurityGroupName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeClusterSnapshotsMessage = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "SnapshotIdentifier" : (String)?,
+      "SnapshotType" : (String)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "OwnerAccount" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?,
+      "ClusterExists" : (BooleanOptional)?,
+      "SortingEntities" : (SnapshotSortingEntityList)?
+    )
+
+    alias DescribeClusterSubnetGroupsMessage = NamedTuple(
+      "ClusterSubnetGroupName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeClusterTracksMessage = NamedTuple(
+      "MaintenanceTrackName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeClusterVersionsMessage = NamedTuple(
+      "ClusterVersion" : (String)?,
+      "ClusterParameterGroupFamily" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeClustersMessage = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeDefaultClusterParametersMessage = NamedTuple(
+      "ParameterGroupFamily" : String,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDefaultClusterParametersResult = NamedTuple(
+      "DefaultClusterParameters" : (DefaultClusterParameters)?
+    )
+
+    alias DescribeEventCategoriesMessage = NamedTuple(
+      "SourceType" : (String)?
+    )
+
+    alias DescribeEventSubscriptionsMessage = NamedTuple(
+      "SubscriptionName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeEventsMessage = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Duration" : (IntegerOptional)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeHsmClientCertificatesMessage = NamedTuple(
+      "HsmClientCertificateIdentifier" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeHsmConfigurationsMessage = NamedTuple(
+      "HsmConfigurationIdentifier" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeLoggingStatusMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias DescribeNodeConfigurationOptionsMessage = NamedTuple(
+      "ActionType" : ActionType,
+      "ClusterIdentifier" : (String)?,
+      "SnapshotIdentifier" : (String)?,
+      "OwnerAccount" : (String)?,
+      "Filters" : (NodeConfigurationOptionsFilterList)?,
+      "Marker" : (String)?,
+      "MaxRecords" : (IntegerOptional)?
+    )
+
+    alias DescribeOrderableClusterOptionsMessage = NamedTuple(
+      "ClusterVersion" : (String)?,
+      "NodeType" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReservedNodeOfferingsMessage = NamedTuple(
+      "ReservedNodeOfferingId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReservedNodesMessage = NamedTuple(
+      "ReservedNodeId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeResizeMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias DescribeScheduledActionsMessage = NamedTuple(
+      "ScheduledActionName" : (String)?,
+      "TargetActionType" : (ScheduledActionTypeValues)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Active" : (BooleanOptional)?,
+      "Filters" : (ScheduledActionFilterList)?,
+      "Marker" : (String)?,
+      "MaxRecords" : (IntegerOptional)?
+    )
+
+    alias DescribeSnapshotCopyGrantsMessage = NamedTuple(
+      "SnapshotCopyGrantName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeSnapshotSchedulesMessage = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "ScheduleIdentifier" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?,
+      "Marker" : (String)?,
+      "MaxRecords" : (IntegerOptional)?
+    )
+
+    alias DescribeSnapshotSchedulesOutputMessage = NamedTuple(
+      "SnapshotSchedules" : (SnapshotScheduleList)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeTableRestoreStatusMessage = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "TableRestoreRequestId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeTagsMessage = NamedTuple(
+      "ResourceName" : (String)?,
+      "ResourceType" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DescribeUsageLimitsMessage = NamedTuple(
+      "UsageLimitId" : (String)?,
+      "ClusterIdentifier" : (String)?,
+      "FeatureType" : (UsageLimitFeatureType)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "TagKeys" : (TagKeyList)?,
+      "TagValues" : (TagValueList)?
+    )
+
+    alias DisableLoggingMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias DisableSnapshotCopyMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias DisableSnapshotCopyResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias Double = Float64
+
+    alias DoubleOptional = Float64
+
+    alias EC2SecurityGroup = NamedTuple(
+      "Status" : (String)?,
+      "EC2SecurityGroupName" : (String)?,
+      "EC2SecurityGroupOwnerId" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias EC2SecurityGroupList = Array(EC2SecurityGroup)
+
+    alias ElasticIpStatus = NamedTuple(
+      "ElasticIp" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias EligibleTracksToUpdateList = Array(UpdateTarget)
+
+    alias EnableLoggingMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "BucketName" : String,
+      "S3KeyPrefix" : (String)?
+    )
+
+    alias EnableSnapshotCopyMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "DestinationRegion" : String,
+      "RetentionPeriod" : (IntegerOptional)?,
+      "SnapshotCopyGrantName" : (String)?,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?
+    )
+
+    alias EnableSnapshotCopyResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias Endpoint = NamedTuple(
+      "Address" : (String)?,
+      "Port" : (Integer)?,
+      "VpcEndpoints" : (SpartaProxyVpcEndpointList)?
+    )
+
+    alias Event = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "Message" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Severity" : (String)?,
+      "Date" : (TStamp)?,
+      "EventId" : (String)?
+    )
+
+    alias EventCategoriesList = Array(String)
+
+    alias EventCategoriesMap = NamedTuple(
+      "SourceType" : (String)?,
+      "Events" : (EventInfoMapList)?
+    )
+
+    alias EventCategoriesMapList = Array(EventCategoriesMap)
+
+    alias EventCategoriesMessage = NamedTuple(
+      "EventCategoriesMapList" : (EventCategoriesMapList)?
+    )
+
+    alias EventInfoMap = NamedTuple(
+      "EventId" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "EventDescription" : (String)?,
+      "Severity" : (String)?
+    )
+
+    alias EventInfoMapList = Array(EventInfoMap)
+
+    alias EventList = Array(Event)
+
+    alias EventSubscription = NamedTuple(
+      "CustomerAwsId" : (String)?,
+      "CustSubscriptionId" : (String)?,
+      "SnsTopicArn" : (String)?,
+      "Status" : (String)?,
+      "SubscriptionCreationTime" : (TStamp)?,
+      "SourceType" : (String)?,
+      "SourceIdsList" : (SourceIdsList)?,
+      "EventCategoriesList" : (EventCategoriesList)?,
+      "Severity" : (String)?,
+      "Enabled" : (Boolean)?,
+      "Tags" : (TagList)?
+    )
+
+    alias EventSubscriptionQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias EventSubscriptionsList = Array(EventSubscription)
+
+    alias EventSubscriptionsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "EventSubscriptionsList" : (EventSubscriptionsList)?
+    )
+
+    alias EventsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "Events" : (EventList)?
+    )
+
+    alias GetClusterCredentialsMessage = NamedTuple(
+      "DbUser" : String,
+      "DbName" : (String)?,
+      "ClusterIdentifier" : String,
+      "DurationSeconds" : (IntegerOptional)?,
+      "AutoCreate" : (BooleanOptional)?,
+      "DbGroups" : (DbGroupList)?
+    )
+
+    alias GetReservedNodeExchangeOfferingsInputMessage = NamedTuple(
+      "ReservedNodeId" : String,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias GetReservedNodeExchangeOfferingsOutputMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ReservedNodeOfferings" : (ReservedNodeOfferingList)?
+    )
+
+    alias HsmClientCertificate = NamedTuple(
+      "HsmClientCertificateIdentifier" : (String)?,
+      "HsmClientCertificatePublicKey" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias HsmClientCertificateAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias HsmClientCertificateList = Array(HsmClientCertificate)
+
+    alias HsmClientCertificateMessage = NamedTuple(
+      "Marker" : (String)?,
+      "HsmClientCertificates" : (HsmClientCertificateList)?
+    )
+
+    alias HsmClientCertificateNotFoundFault = NamedTuple(
+      
+    )
+
+    alias HsmClientCertificateQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias HsmConfiguration = NamedTuple(
+      "HsmConfigurationIdentifier" : (String)?,
+      "Description" : (String)?,
+      "HsmIpAddress" : (String)?,
+      "HsmPartitionName" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias HsmConfigurationAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias HsmConfigurationList = Array(HsmConfiguration)
+
+    alias HsmConfigurationMessage = NamedTuple(
+      "Marker" : (String)?,
+      "HsmConfigurations" : (HsmConfigurationList)?
+    )
+
+    alias HsmConfigurationNotFoundFault = NamedTuple(
+      
+    )
+
+    alias HsmConfigurationQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias HsmStatus = NamedTuple(
+      "HsmClientCertificateIdentifier" : (String)?,
+      "HsmConfigurationIdentifier" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias IPRange = NamedTuple(
+      "Status" : (String)?,
+      "CIDRIP" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias IPRangeList = Array(IPRange)
+
+    alias IamRoleArnList = Array(String)
+
+    alias ImportTablesCompleted = Array(String)
+
+    alias ImportTablesInProgress = Array(String)
+
+    alias ImportTablesNotStarted = Array(String)
+
+    alias InProgressTableRestoreQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias IncompatibleOrderableOptions = NamedTuple(
+      
+    )
+
+    alias InsufficientClusterCapacityFault = NamedTuple(
+      
+    )
+
+    alias InsufficientS3BucketPolicyFault = NamedTuple(
+      
+    )
+
+    alias Integer = Int32
+
+    alias IntegerOptional = Int32
+
+    alias InvalidClusterParameterGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterSecurityGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterSnapshotScheduleStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterSnapshotStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterSubnetGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterSubnetStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterTrackFault = NamedTuple(
+      
+    )
+
+    alias InvalidElasticIpFault = NamedTuple(
+      
+    )
+
+    alias InvalidHsmClientCertificateStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidHsmConfigurationStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidReservedNodeStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidRestoreFault = NamedTuple(
+      
+    )
+
+    alias InvalidRetentionPeriodFault = NamedTuple(
+      
+    )
+
+    alias InvalidS3BucketNameFault = NamedTuple(
+      
+    )
+
+    alias InvalidS3KeyPrefixFault = NamedTuple(
+      
+    )
+
+    alias InvalidScheduleFault = NamedTuple(
+      
+    )
+
+    alias InvalidScheduledActionFault = NamedTuple(
+      
+    )
+
+    alias InvalidSnapshotCopyGrantStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidSubnet = NamedTuple(
+      
+    )
+
+    alias InvalidSubscriptionStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidTableRestoreArgumentFault = NamedTuple(
+      
+    )
+
+    alias InvalidTagFault = NamedTuple(
+      
+    )
+
+    alias InvalidUsageLimitFault = NamedTuple(
+      
+    )
+
+    alias InvalidVPCNetworkStateFault = NamedTuple(
+      
+    )
+
+    alias LimitExceededFault = NamedTuple(
+      
+    )
+
+    alias LoggingStatus = NamedTuple(
+      "LoggingEnabled" : (Boolean)?,
+      "BucketName" : (String)?,
+      "S3KeyPrefix" : (String)?,
+      "LastSuccessfulDeliveryTime" : (TStamp)?,
+      "LastFailureTime" : (TStamp)?,
+      "LastFailureMessage" : (String)?
+    )
+
+    alias Long = Int64
+
+    alias LongOptional = Int64
+
+    alias MaintenanceTrack = NamedTuple(
+      "MaintenanceTrackName" : (String)?,
+      "DatabaseVersion" : (String)?,
+      "UpdateTargets" : (EligibleTracksToUpdateList)?
+    )
+
+    alias Mode = String
+
+    alias ModifyClusterDbRevisionMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "RevisionTarget" : String
+    )
+
+    alias ModifyClusterDbRevisionResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias ModifyClusterIamRolesMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "AddIamRoles" : (IamRoleArnList)?,
+      "RemoveIamRoles" : (IamRoleArnList)?
+    )
+
+    alias ModifyClusterIamRolesResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias ModifyClusterMaintenanceMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "DeferMaintenance" : (BooleanOptional)?,
+      "DeferMaintenanceIdentifier" : (String)?,
+      "DeferMaintenanceStartTime" : (TStamp)?,
+      "DeferMaintenanceEndTime" : (TStamp)?,
+      "DeferMaintenanceDuration" : (IntegerOptional)?
+    )
+
+    alias ModifyClusterMaintenanceResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias ModifyClusterMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "ClusterType" : (String)?,
+      "NodeType" : (String)?,
+      "NumberOfNodes" : (IntegerOptional)?,
+      "ClusterSecurityGroups" : (ClusterSecurityGroupNameList)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "MasterUserPassword" : (String)?,
+      "ClusterParameterGroupName" : (String)?,
+      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "ClusterVersion" : (String)?,
+      "AllowVersionUpgrade" : (BooleanOptional)?,
+      "HsmClientCertificateIdentifier" : (String)?,
+      "HsmConfigurationIdentifier" : (String)?,
+      "NewClusterIdentifier" : (String)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "ElasticIp" : (String)?,
+      "EnhancedVpcRouting" : (BooleanOptional)?,
+      "MaintenanceTrackName" : (String)?,
+      "Encrypted" : (BooleanOptional)?,
+      "KmsKeyId" : (String)?,
+      "AvailabilityZoneRelocation" : (BooleanOptional)?,
+      "AvailabilityZone" : (String)?,
+      "Port" : (IntegerOptional)?
+    )
+
+    alias ModifyClusterParameterGroupMessage = NamedTuple(
+      "ParameterGroupName" : String,
+      "Parameters" : ParametersList
+    )
+
+    alias ModifyClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias ModifyClusterSnapshotMessage = NamedTuple(
+      "SnapshotIdentifier" : String,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "Force" : (Boolean)?
+    )
+
+    alias ModifyClusterSnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias ModifyClusterSnapshotScheduleMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "ScheduleIdentifier" : (String)?,
+      "DisassociateSchedule" : (BooleanOptional)?
+    )
+
+    alias ModifyClusterSubnetGroupMessage = NamedTuple(
+      "ClusterSubnetGroupName" : String,
+      "Description" : (String)?,
+      "SubnetIds" : SubnetIdentifierList
+    )
+
+    alias ModifyClusterSubnetGroupResult = NamedTuple(
+      "ClusterSubnetGroup" : (ClusterSubnetGroup)?
+    )
+
+    alias ModifyEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SnsTopicArn" : (String)?,
+      "SourceType" : (String)?,
+      "SourceIds" : (SourceIdsList)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Severity" : (String)?,
+      "Enabled" : (BooleanOptional)?
+    )
+
+    alias ModifyEventSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias ModifyScheduledActionMessage = NamedTuple(
+      "ScheduledActionName" : String,
+      "TargetAction" : (ScheduledActionType)?,
+      "Schedule" : (String)?,
+      "IamRole" : (String)?,
+      "ScheduledActionDescription" : (String)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Enable" : (BooleanOptional)?
+    )
+
+    alias ModifySnapshotCopyRetentionPeriodMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "RetentionPeriod" : Integer,
+      "Manual" : (Boolean)?
+    )
+
+    alias ModifySnapshotCopyRetentionPeriodResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias ModifySnapshotScheduleMessage = NamedTuple(
+      "ScheduleIdentifier" : String,
+      "ScheduleDefinitions" : ScheduleDefinitionList
+    )
+
+    alias ModifyUsageLimitMessage = NamedTuple(
+      "UsageLimitId" : String,
+      "Amount" : (LongOptional)?,
+      "BreachAction" : (UsageLimitBreachAction)?
+    )
+
+    alias NodeConfigurationOption = NamedTuple(
+      "NodeType" : (String)?,
+      "NumberOfNodes" : (Integer)?,
+      "EstimatedDiskUtilizationPercent" : (DoubleOptional)?,
+      "Mode" : (Mode)?
+    )
+
+    alias NodeConfigurationOptionList = Array(NodeConfigurationOption)
+
+    alias NodeConfigurationOptionsFilter = NamedTuple(
+      "Name" : (NodeConfigurationOptionsFilterName)?,
+      "Operator" : (OperatorType)?,
+      "Values" : (ValueStringList)?
+    )
+
+    alias NodeConfigurationOptionsFilterList = Array(NodeConfigurationOptionsFilter)
+
+    alias NodeConfigurationOptionsFilterName = String
+
+    alias NodeConfigurationOptionsMessage = NamedTuple(
+      "NodeConfigurationOptionList" : (NodeConfigurationOptionList)?,
+      "Marker" : (String)?
+    )
+
+    alias NumberOfNodesPerClusterLimitExceededFault = NamedTuple(
+      
+    )
+
+    alias NumberOfNodesQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias OperatorType = String
+
+    alias OrderableClusterOption = NamedTuple(
+      "ClusterVersion" : (String)?,
+      "ClusterType" : (String)?,
+      "NodeType" : (String)?,
+      "AvailabilityZones" : (AvailabilityZoneList)?
+    )
+
+    alias OrderableClusterOptionsList = Array(OrderableClusterOption)
+
+    alias OrderableClusterOptionsMessage = NamedTuple(
+      "OrderableClusterOptions" : (OrderableClusterOptionsList)?,
+      "Marker" : (String)?
+    )
+
+    alias Parameter = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterValue" : (String)?,
+      "Description" : (String)?,
+      "Source" : (String)?,
+      "DataType" : (String)?,
+      "AllowedValues" : (String)?,
+      "ApplyType" : (ParameterApplyType)?,
+      "IsModifiable" : (Boolean)?,
+      "MinimumEngineVersion" : (String)?
+    )
+
+    alias ParameterApplyType = String
+
+    alias ParameterGroupList = Array(ClusterParameterGroup)
+
+    alias ParametersList = Array(Parameter)
+
+    alias PauseClusterMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias PauseClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias PendingActionsList = Array(String)
+
+    alias PendingModifiedValues = NamedTuple(
+      "MasterUserPassword" : (String)?,
+      "NodeType" : (String)?,
+      "NumberOfNodes" : (IntegerOptional)?,
+      "ClusterType" : (String)?,
+      "ClusterVersion" : (String)?,
+      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "ClusterIdentifier" : (String)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "EnhancedVpcRouting" : (BooleanOptional)?,
+      "MaintenanceTrackName" : (String)?,
+      "EncryptionType" : (String)?
+    )
+
+    alias PurchaseReservedNodeOfferingMessage = NamedTuple(
+      "ReservedNodeOfferingId" : String,
+      "NodeCount" : (IntegerOptional)?
+    )
+
+    alias PurchaseReservedNodeOfferingResult = NamedTuple(
+      "ReservedNode" : (ReservedNode)?
+    )
+
+    alias RebootClusterMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias RebootClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias RecurringCharge = NamedTuple(
+      "RecurringChargeAmount" : (Double)?,
+      "RecurringChargeFrequency" : (String)?
+    )
+
+    alias RecurringChargeList = Array(RecurringCharge)
+
+    alias ReservedNode = NamedTuple(
+      "ReservedNodeId" : (String)?,
+      "ReservedNodeOfferingId" : (String)?,
+      "NodeType" : (String)?,
+      "StartTime" : (TStamp)?,
+      "Duration" : (Integer)?,
+      "FixedPrice" : (Double)?,
+      "UsagePrice" : (Double)?,
+      "CurrencyCode" : (String)?,
+      "NodeCount" : (Integer)?,
+      "State" : (String)?,
+      "OfferingType" : (String)?,
+      "RecurringCharges" : (RecurringChargeList)?,
+      "ReservedNodeOfferingType" : (ReservedNodeOfferingType)?
+    )
+
+    alias ReservedNodeAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ReservedNodeAlreadyMigratedFault = NamedTuple(
+      
+    )
+
+    alias ReservedNodeList = Array(ReservedNode)
+
+    alias ReservedNodeNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ReservedNodeOffering = NamedTuple(
+      "ReservedNodeOfferingId" : (String)?,
+      "NodeType" : (String)?,
+      "Duration" : (Integer)?,
+      "FixedPrice" : (Double)?,
+      "UsagePrice" : (Double)?,
+      "CurrencyCode" : (String)?,
+      "OfferingType" : (String)?,
+      "RecurringCharges" : (RecurringChargeList)?,
+      "ReservedNodeOfferingType" : (ReservedNodeOfferingType)?
+    )
+
+    alias ReservedNodeOfferingList = Array(ReservedNodeOffering)
+
+    alias ReservedNodeOfferingNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ReservedNodeOfferingType = String
+
+    alias ReservedNodeOfferingsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ReservedNodeOfferings" : (ReservedNodeOfferingList)?
+    )
+
+    alias ReservedNodeQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ReservedNodesMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ReservedNodes" : (ReservedNodeList)?
+    )
+
+    alias ResetClusterParameterGroupMessage = NamedTuple(
+      "ParameterGroupName" : String,
+      "ResetAllParameters" : (Boolean)?,
+      "Parameters" : (ParametersList)?
+    )
+
+    alias ResizeClusterMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "ClusterType" : (String)?,
+      "NodeType" : (String)?,
+      "NumberOfNodes" : (IntegerOptional)?,
+      "Classic" : (BooleanOptional)?
+    )
+
+    alias ResizeClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias ResizeInfo = NamedTuple(
+      "ResizeType" : (String)?,
+      "AllowCancelResize" : (Boolean)?
+    )
+
+    alias ResizeNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ResizeProgressMessage = NamedTuple(
+      "TargetNodeType" : (String)?,
+      "TargetNumberOfNodes" : (IntegerOptional)?,
+      "TargetClusterType" : (String)?,
+      "Status" : (String)?,
+      "ImportTablesCompleted" : (ImportTablesCompleted)?,
+      "ImportTablesInProgress" : (ImportTablesInProgress)?,
+      "ImportTablesNotStarted" : (ImportTablesNotStarted)?,
+      "AvgResizeRateInMegaBytesPerSecond" : (DoubleOptional)?,
+      "TotalResizeDataInMegaBytes" : (LongOptional)?,
+      "ProgressInMegaBytes" : (LongOptional)?,
+      "ElapsedTimeInSeconds" : (LongOptional)?,
+      "EstimatedTimeToCompletionInSeconds" : (LongOptional)?,
+      "ResizeType" : (String)?,
+      "Message" : (String)?,
+      "TargetEncryptionType" : (String)?,
+      "DataTransferProgressPercent" : (DoubleOptional)?
+    )
+
+    alias ResourceNotFoundFault = NamedTuple(
+      
+    )
+
+    alias RestorableNodeTypeList = Array(String)
+
+    alias RestoreFromClusterSnapshotMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "SnapshotIdentifier" : String,
+      "SnapshotClusterIdentifier" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "AvailabilityZone" : (String)?,
+      "AllowVersionUpgrade" : (BooleanOptional)?,
+      "ClusterSubnetGroupName" : (String)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "OwnerAccount" : (String)?,
+      "HsmClientCertificateIdentifier" : (String)?,
+      "HsmConfigurationIdentifier" : (String)?,
+      "ElasticIp" : (String)?,
+      "ClusterParameterGroupName" : (String)?,
+      "ClusterSecurityGroups" : (ClusterSecurityGroupNameList)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "KmsKeyId" : (String)?,
+      "NodeType" : (String)?,
+      "EnhancedVpcRouting" : (BooleanOptional)?,
+      "AdditionalInfo" : (String)?,
+      "IamRoles" : (IamRoleArnList)?,
+      "MaintenanceTrackName" : (String)?,
+      "SnapshotScheduleIdentifier" : (String)?,
+      "NumberOfNodes" : (IntegerOptional)?,
+      "AvailabilityZoneRelocation" : (BooleanOptional)?
+    )
+
+    alias RestoreFromClusterSnapshotResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias RestoreStatus = NamedTuple(
+      "Status" : (String)?,
+      "CurrentRestoreRateInMegaBytesPerSecond" : (Double)?,
+      "SnapshotSizeInMegaBytes" : (Long)?,
+      "ProgressInMegaBytes" : (Long)?,
+      "ElapsedTimeInSeconds" : (Long)?,
+      "EstimatedTimeToCompletionInSeconds" : (Long)?
+    )
+
+    alias RestoreTableFromClusterSnapshotMessage = NamedTuple(
+      "ClusterIdentifier" : String,
+      "SnapshotIdentifier" : String,
+      "SourceDatabaseName" : String,
+      "SourceSchemaName" : (String)?,
+      "SourceTableName" : String,
+      "TargetDatabaseName" : (String)?,
+      "TargetSchemaName" : (String)?,
+      "NewTableName" : String
+    )
+
+    alias RestoreTableFromClusterSnapshotResult = NamedTuple(
+      "TableRestoreStatus" : (TableRestoreStatus)?
+    )
+
+    alias ResumeClusterMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias ResumeClusterResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias RevisionTarget = NamedTuple(
+      "DatabaseRevision" : (String)?,
+      "Description" : (String)?,
+      "DatabaseRevisionReleaseDate" : (TStamp)?
+    )
+
+    alias RevisionTargetsList = Array(RevisionTarget)
+
+    alias RevokeClusterSecurityGroupIngressMessage = NamedTuple(
+      "ClusterSecurityGroupName" : String,
+      "CIDRIP" : (String)?,
+      "EC2SecurityGroupName" : (String)?,
+      "EC2SecurityGroupOwnerId" : (String)?
+    )
+
+    alias RevokeClusterSecurityGroupIngressResult = NamedTuple(
+      "ClusterSecurityGroup" : (ClusterSecurityGroup)?
+    )
+
+    alias RevokeSnapshotAccessMessage = NamedTuple(
+      "SnapshotIdentifier" : String,
+      "SnapshotClusterIdentifier" : (String)?,
+      "AccountWithRestoreAccess" : String
+    )
+
+    alias RevokeSnapshotAccessResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias RotateEncryptionKeyMessage = NamedTuple(
+      "ClusterIdentifier" : String
+    )
+
+    alias RotateEncryptionKeyResult = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias SNSInvalidTopicFault = NamedTuple(
+      
+    )
+
+    alias SNSNoAuthorizationFault = NamedTuple(
+      
+    )
+
+    alias SNSTopicArnNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ScheduleDefinitionList = Array(String)
+
+    alias ScheduleDefinitionTypeUnsupportedFault = NamedTuple(
+      
+    )
+
+    alias ScheduleState = String
+
+    alias ScheduledAction = NamedTuple(
+      "ScheduledActionName" : (String)?,
+      "TargetAction" : (ScheduledActionType)?,
+      "Schedule" : (String)?,
+      "IamRole" : (String)?,
+      "ScheduledActionDescription" : (String)?,
+      "State" : (ScheduledActionState)?,
+      "NextInvocations" : (ScheduledActionTimeList)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?
+    )
+
+    alias ScheduledActionAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ScheduledActionFilter = NamedTuple(
+      "Name" : ScheduledActionFilterName,
+      "Values" : ValueStringList
+    )
+
+    alias ScheduledActionFilterList = Array(ScheduledActionFilter)
+
+    alias ScheduledActionFilterName = String
+
+    alias ScheduledActionList = Array(ScheduledAction)
+
+    alias ScheduledActionNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ScheduledActionQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ScheduledActionState = String
+
+    alias ScheduledActionTimeList = Array(TStamp)
+
+    alias ScheduledActionType = NamedTuple(
+      "ResizeCluster" : (ResizeClusterMessage)?,
+      "PauseCluster" : (PauseClusterMessage)?,
+      "ResumeCluster" : (ResumeClusterMessage)?
+    )
+
+    alias ScheduledActionTypeUnsupportedFault = NamedTuple(
+      
+    )
+
+    alias ScheduledActionTypeValues = String
+
+    alias ScheduledActionsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ScheduledActions" : (ScheduledActionList)?
+    )
+
+    alias ScheduledSnapshotTimeList = Array(TStamp)
+
+    alias SensitiveString = String
+
+    alias Snapshot = NamedTuple(
+      "SnapshotIdentifier" : (String)?,
+      "ClusterIdentifier" : (String)?,
+      "SnapshotCreateTime" : (TStamp)?,
+      "Status" : (String)?,
+      "Port" : (Integer)?,
+      "AvailabilityZone" : (String)?,
+      "ClusterCreateTime" : (TStamp)?,
+      "MasterUsername" : (String)?,
+      "ClusterVersion" : (String)?,
+      "EngineFullVersion" : (String)?,
+      "SnapshotType" : (String)?,
+      "NodeType" : (String)?,
+      "NumberOfNodes" : (Integer)?,
+      "DBName" : (String)?,
+      "VpcId" : (String)?,
+      "Encrypted" : (Boolean)?,
+      "KmsKeyId" : (String)?,
+      "EncryptedWithHSM" : (Boolean)?,
+      "AccountsWithRestoreAccess" : (AccountsWithRestoreAccessList)?,
+      "OwnerAccount" : (String)?,
+      "TotalBackupSizeInMegaBytes" : (Double)?,
+      "ActualIncrementalBackupSizeInMegaBytes" : (Double)?,
+      "BackupProgressInMegaBytes" : (Double)?,
+      "CurrentBackupRateInMegaBytesPerSecond" : (Double)?,
+      "EstimatedSecondsToCompletion" : (Long)?,
+      "ElapsedTimeInSeconds" : (Long)?,
+      "SourceRegion" : (String)?,
+      "Tags" : (TagList)?,
+      "RestorableNodeTypes" : (RestorableNodeTypeList)?,
+      "EnhancedVpcRouting" : (Boolean)?,
+      "MaintenanceTrackName" : (String)?,
+      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
+      "ManualSnapshotRemainingDays" : (IntegerOptional)?,
+      "SnapshotRetentionStartTime" : (TStamp)?
+    )
+
+    alias SnapshotAttributeToSortBy = String
+
+    alias SnapshotCopyAlreadyDisabledFault = NamedTuple(
+      
+    )
+
+    alias SnapshotCopyAlreadyEnabledFault = NamedTuple(
+      
+    )
+
+    alias SnapshotCopyDisabledFault = NamedTuple(
+      
+    )
+
+    alias SnapshotCopyGrant = NamedTuple(
+      "SnapshotCopyGrantName" : (String)?,
+      "KmsKeyId" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias SnapshotCopyGrantAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias SnapshotCopyGrantList = Array(SnapshotCopyGrant)
+
+    alias SnapshotCopyGrantMessage = NamedTuple(
+      "Marker" : (String)?,
+      "SnapshotCopyGrants" : (SnapshotCopyGrantList)?
+    )
+
+    alias SnapshotCopyGrantNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SnapshotCopyGrantQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias SnapshotErrorMessage = NamedTuple(
+      "SnapshotIdentifier" : (String)?,
+      "SnapshotClusterIdentifier" : (String)?,
+      "FailureCode" : (String)?,
+      "FailureReason" : (String)?
+    )
+
+    alias SnapshotIdentifierList = Array(String)
+
+    alias SnapshotList = Array(Snapshot)
+
+    alias SnapshotMessage = NamedTuple(
+      "Marker" : (String)?,
+      "Snapshots" : (SnapshotList)?
+    )
+
+    alias SnapshotSchedule = NamedTuple(
+      "ScheduleDefinitions" : (ScheduleDefinitionList)?,
+      "ScheduleIdentifier" : (String)?,
+      "ScheduleDescription" : (String)?,
+      "Tags" : (TagList)?,
+      "NextInvocations" : (ScheduledSnapshotTimeList)?,
+      "AssociatedClusterCount" : (IntegerOptional)?,
+      "AssociatedClusters" : (AssociatedClusterList)?
+    )
+
+    alias SnapshotScheduleAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias SnapshotScheduleList = Array(SnapshotSchedule)
+
+    alias SnapshotScheduleNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SnapshotScheduleQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias SnapshotScheduleUpdateInProgressFault = NamedTuple(
+      
+    )
+
+    alias SnapshotSortingEntity = NamedTuple(
+      "Attribute" : SnapshotAttributeToSortBy,
+      "SortOrder" : (SortByOrder)?
+    )
+
+    alias SnapshotSortingEntityList = Array(SnapshotSortingEntity)
+
+    alias SortByOrder = String
+
+    alias SourceIdsList = Array(String)
+
+    alias SourceNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SourceType = String
+
+    alias SpartaProxyVpcEndpoint = NamedTuple(
+      "VpcEndpointId" : (String)?
+    )
+
+    alias SpartaProxyVpcEndpointList = Array(SpartaProxyVpcEndpoint)
+
+    alias String = String
+
+    alias Subnet = NamedTuple(
+      "SubnetIdentifier" : (String)?,
+      "SubnetAvailabilityZone" : (AvailabilityZone)?,
+      "SubnetStatus" : (String)?
+    )
+
+    alias SubnetAlreadyInUse = NamedTuple(
+      
+    )
+
+    alias SubnetIdentifierList = Array(String)
+
+    alias SubnetList = Array(Subnet)
+
+    alias SubscriptionAlreadyExistFault = NamedTuple(
+      
+    )
+
+    alias SubscriptionCategoryNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SubscriptionEventIdNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SubscriptionNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SubscriptionSeverityNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SupportedOperation = NamedTuple(
+      "OperationName" : (String)?
+    )
+
+    alias SupportedOperationList = Array(SupportedOperation)
+
+    alias SupportedPlatform = NamedTuple(
+      "Name" : (String)?
+    )
+
+    alias SupportedPlatformsList = Array(SupportedPlatform)
+
+    alias TStamp = String | UInt64 | Time
+
+    alias TableLimitExceededFault = NamedTuple(
+      
+    )
+
+    alias TableRestoreNotFoundFault = NamedTuple(
+      
+    )
+
+    alias TableRestoreStatus = NamedTuple(
+      "TableRestoreRequestId" : (String)?,
+      "Status" : (TableRestoreStatusType)?,
+      "Message" : (String)?,
+      "RequestTime" : (TStamp)?,
+      "ProgressInMegaBytes" : (LongOptional)?,
+      "TotalDataInMegaBytes" : (LongOptional)?,
+      "ClusterIdentifier" : (String)?,
+      "SnapshotIdentifier" : (String)?,
+      "SourceDatabaseName" : (String)?,
+      "SourceSchemaName" : (String)?,
+      "SourceTableName" : (String)?,
+      "TargetDatabaseName" : (String)?,
+      "TargetSchemaName" : (String)?,
+      "NewTableName" : (String)?
+    )
+
+    alias TableRestoreStatusList = Array(TableRestoreStatus)
+
+    alias TableRestoreStatusMessage = NamedTuple(
+      "TableRestoreStatusDetails" : (TableRestoreStatusList)?,
+      "Marker" : (String)?
+    )
+
+    alias TableRestoreStatusType = String
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagKeyList = Array(String)
+
+    alias TagLimitExceededFault = NamedTuple(
+      
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagValueList = Array(String)
+
+    alias TaggedResource = NamedTuple(
+      "Tag" : (Tag)?,
+      "ResourceName" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias TaggedResourceList = Array(TaggedResource)
+
+    alias TaggedResourceListMessage = NamedTuple(
+      "TaggedResources" : (TaggedResourceList)?,
+      "Marker" : (String)?
+    )
+
+    alias TrackList = Array(MaintenanceTrack)
+
+    alias TrackListMessage = NamedTuple(
+      "MaintenanceTracks" : (TrackList)?,
+      "Marker" : (String)?
+    )
+
+    alias UnauthorizedOperation = NamedTuple(
+      
+    )
+
+    alias UnknownSnapshotCopyRegionFault = NamedTuple(
+      
+    )
+
+    alias UnsupportedOperationFault = NamedTuple(
+      
+    )
+
+    alias UnsupportedOptionFault = NamedTuple(
+      
+    )
+
+    alias UpdateTarget = NamedTuple(
+      "MaintenanceTrackName" : (String)?,
+      "DatabaseVersion" : (String)?,
+      "SupportedOperations" : (SupportedOperationList)?
+    )
+
+    alias UsageLimit = NamedTuple(
+      "UsageLimitId" : (String)?,
+      "ClusterIdentifier" : (String)?,
+      "FeatureType" : (UsageLimitFeatureType)?,
+      "LimitType" : (UsageLimitLimitType)?,
+      "Amount" : (Long)?,
+      "Period" : (UsageLimitPeriod)?,
+      "BreachAction" : (UsageLimitBreachAction)?,
+      "Tags" : (TagList)?
+    )
+
+    alias UsageLimitAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias UsageLimitBreachAction = String
+
+    alias UsageLimitFeatureType = String
+
+    alias UsageLimitLimitType = String
+
+    alias UsageLimitList = NamedTuple(
+      "UsageLimits" : (UsageLimits)?,
+      "Marker" : (String)?
+    )
+
+    alias UsageLimitNotFoundFault = NamedTuple(
+      
+    )
+
+    alias UsageLimitPeriod = String
+
+    alias UsageLimits = Array(UsageLimit)
+
+    alias ValueStringList = Array(String)
+
+    alias VpcSecurityGroupIdList = Array(String)
+
+    alias VpcSecurityGroupMembership = NamedTuple(
+      "VpcSecurityGroupId" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias VpcSecurityGroupMembershipList = Array(VpcSecurityGroupMembership)
   end
 end

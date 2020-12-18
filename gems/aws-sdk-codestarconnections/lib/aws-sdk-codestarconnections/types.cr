@@ -779,5 +779,224 @@ module Aws::CodeStarconnections
       include Aws::Structure
     end
 
+    alias AccountId = String
+
+    alias AmazonResourceName = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Connection = NamedTuple(
+      "ConnectionName" : (ConnectionName)?,
+      "ConnectionArn" : (ConnectionArn)?,
+      "ProviderType" : (ProviderType)?,
+      "OwnerAccountId" : (AccountId)?,
+      "ConnectionStatus" : (ConnectionStatus)?,
+      "HostArn" : (HostArn)?
+    )
+
+    alias ConnectionArn = String
+
+    alias ConnectionList = Array(Connection)
+
+    alias ConnectionName = String
+
+    alias ConnectionStatus = String
+
+    alias CreateConnectionInput = NamedTuple(
+      "ProviderType" : (ProviderType)?,
+      "ConnectionName" : ConnectionName,
+      "Tags" : (TagList)?,
+      "HostArn" : (HostArn)?
+    )
+
+    alias CreateConnectionOutput = NamedTuple(
+      "ConnectionArn" : ConnectionArn,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateHostInput = NamedTuple(
+      "Name" : HostName,
+      "ProviderType" : ProviderType,
+      "ProviderEndpoint" : Url,
+      "VpcConfiguration" : (VpcConfiguration)?
+    )
+
+    alias CreateHostOutput = NamedTuple(
+      "HostArn" : (HostArn)?
+    )
+
+    alias DeleteConnectionInput = NamedTuple(
+      "ConnectionArn" : ConnectionArn
+    )
+
+    alias DeleteConnectionOutput = NamedTuple(
+      
+    )
+
+    alias DeleteHostInput = NamedTuple(
+      "HostArn" : HostArn
+    )
+
+    alias DeleteHostOutput = NamedTuple(
+      
+    )
+
+    alias ErrorMessage = String
+
+    alias GetConnectionInput = NamedTuple(
+      "ConnectionArn" : ConnectionArn
+    )
+
+    alias GetConnectionOutput = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias GetHostInput = NamedTuple(
+      "HostArn" : HostArn
+    )
+
+    alias GetHostOutput = NamedTuple(
+      "Name" : (HostName)?,
+      "Status" : (HostStatus)?,
+      "ProviderType" : (ProviderType)?,
+      "ProviderEndpoint" : (Url)?,
+      "VpcConfiguration" : (VpcConfiguration)?
+    )
+
+    alias Host = NamedTuple(
+      "Name" : (HostName)?,
+      "HostArn" : (HostArn)?,
+      "ProviderType" : (ProviderType)?,
+      "ProviderEndpoint" : (Url)?,
+      "VpcConfiguration" : (VpcConfiguration)?,
+      "Status" : (HostStatus)?,
+      "StatusMessage" : (HostStatusMessage)?
+    )
+
+    alias HostArn = String
+
+    alias HostList = Array(Host)
+
+    alias HostName = String
+
+    alias HostStatus = String
+
+    alias HostStatusMessage = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListConnectionsInput = NamedTuple(
+      "ProviderTypeFilter" : (ProviderType)?,
+      "HostArnFilter" : (HostArn)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListConnectionsOutput = NamedTuple(
+      "Connections" : (ConnectionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHostsInput = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHostsOutput = NamedTuple(
+      "Hosts" : (HostList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "ResourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias ProviderType = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceUnavailableException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TlsCertificate = String
+
+    alias UnsupportedOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceArn" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UpdateHostInput = NamedTuple(
+      "HostArn" : HostArn,
+      "ProviderEndpoint" : (Url)?,
+      "VpcConfiguration" : (VpcConfiguration)?
+    )
+
+    alias UpdateHostOutput = NamedTuple(
+      
+    )
+
+    alias Url = String
+
+    alias VpcConfiguration = NamedTuple(
+      "VpcId" : VpcId,
+      "SubnetIds" : SubnetIds,
+      "SecurityGroupIds" : SecurityGroupIds,
+      "TlsCertificate" : (TlsCertificate)?
+    )
+
+    alias VpcId = String
   end
 end

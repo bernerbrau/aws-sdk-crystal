@@ -2021,5 +2021,518 @@ module Aws::RAM
       include Aws::Structure
     end
 
+    alias AcceptResourceShareInvitationRequest = NamedTuple(
+      "resourceShareInvitationArn" : String,
+      "clientToken" : (String)?
+    )
+
+    alias AcceptResourceShareInvitationResponse = NamedTuple(
+      "resourceShareInvitation" : (ResourceShareInvitation)?,
+      "clientToken" : (String)?
+    )
+
+    alias AssociateResourceSharePermissionRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "permissionArn" : String,
+      "replace" : (Boolean)?,
+      "clientToken" : (String)?
+    )
+
+    alias AssociateResourceSharePermissionResponse = NamedTuple(
+      "returnValue" : (Boolean)?,
+      "clientToken" : (String)?
+    )
+
+    alias AssociateResourceShareRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "resourceArns" : (ResourceArnList)?,
+      "principals" : (PrincipalArnOrIdList)?,
+      "clientToken" : (String)?
+    )
+
+    alias AssociateResourceShareResponse = NamedTuple(
+      "resourceShareAssociations" : (ResourceShareAssociationList)?,
+      "clientToken" : (String)?
+    )
+
+    alias Boolean = Bool
+
+    alias CreateResourceShareRequest = NamedTuple(
+      "name" : String,
+      "resourceArns" : (ResourceArnList)?,
+      "principals" : (PrincipalArnOrIdList)?,
+      "tags" : (TagList)?,
+      "allowExternalPrincipals" : (Boolean)?,
+      "clientToken" : (String)?,
+      "permissionArns" : (PermissionArnList)?
+    )
+
+    alias CreateResourceShareResponse = NamedTuple(
+      "resourceShare" : (ResourceShare)?,
+      "clientToken" : (String)?
+    )
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteResourceShareRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "clientToken" : (String)?
+    )
+
+    alias DeleteResourceShareResponse = NamedTuple(
+      "returnValue" : (Boolean)?,
+      "clientToken" : (String)?
+    )
+
+    alias DisassociateResourceSharePermissionRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "permissionArn" : String,
+      "clientToken" : (String)?
+    )
+
+    alias DisassociateResourceSharePermissionResponse = NamedTuple(
+      "returnValue" : (Boolean)?,
+      "clientToken" : (String)?
+    )
+
+    alias DisassociateResourceShareRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "resourceArns" : (ResourceArnList)?,
+      "principals" : (PrincipalArnOrIdList)?,
+      "clientToken" : (String)?
+    )
+
+    alias DisassociateResourceShareResponse = NamedTuple(
+      "resourceShareAssociations" : (ResourceShareAssociationList)?,
+      "clientToken" : (String)?
+    )
+
+    alias EnableSharingWithAwsOrganizationRequest = NamedTuple(
+      
+    )
+
+    alias EnableSharingWithAwsOrganizationResponse = NamedTuple(
+      "returnValue" : (Boolean)?
+    )
+
+    alias GetPermissionRequest = NamedTuple(
+      "permissionArn" : String,
+      "permissionVersion" : (Integer)?
+    )
+
+    alias GetPermissionResponse = NamedTuple(
+      "permission" : (ResourceSharePermissionDetail)?
+    )
+
+    alias GetResourcePoliciesRequest = NamedTuple(
+      "resourceArns" : ResourceArnList,
+      "principal" : (String)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetResourcePoliciesResponse = NamedTuple(
+      "policies" : (PolicyList)?,
+      "nextToken" : (String)?
+    )
+
+    alias GetResourceShareAssociationsRequest = NamedTuple(
+      "associationType" : ResourceShareAssociationType,
+      "resourceShareArns" : (ResourceShareArnList)?,
+      "resourceArn" : (String)?,
+      "principal" : (String)?,
+      "associationStatus" : (ResourceShareAssociationStatus)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetResourceShareAssociationsResponse = NamedTuple(
+      "resourceShareAssociations" : (ResourceShareAssociationList)?,
+      "nextToken" : (String)?
+    )
+
+    alias GetResourceShareInvitationsRequest = NamedTuple(
+      "resourceShareInvitationArns" : (ResourceShareInvitationArnList)?,
+      "resourceShareArns" : (ResourceShareArnList)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetResourceShareInvitationsResponse = NamedTuple(
+      "resourceShareInvitations" : (ResourceShareInvitationList)?,
+      "nextToken" : (String)?
+    )
+
+    alias GetResourceSharesRequest = NamedTuple(
+      "resourceShareArns" : (ResourceShareArnList)?,
+      "resourceShareStatus" : (ResourceShareStatus)?,
+      "resourceOwner" : ResourceOwner,
+      "name" : (String)?,
+      "tagFilters" : (TagFilters)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetResourceSharesResponse = NamedTuple(
+      "resourceShares" : (ResourceShareList)?,
+      "nextToken" : (String)?
+    )
+
+    alias IdempotentParameterMismatchException = NamedTuple(
+      "message" : String
+    )
+
+    alias Integer = Int32
+
+    alias InvalidClientTokenException = NamedTuple(
+      "message" : String
+    )
+
+    alias InvalidMaxResultsException = NamedTuple(
+      "message" : String
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "message" : String
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : String
+    )
+
+    alias InvalidResourceTypeException = NamedTuple(
+      "message" : String
+    )
+
+    alias InvalidStateTransitionException = NamedTuple(
+      "message" : String
+    )
+
+    alias ListPendingInvitationResourcesRequest = NamedTuple(
+      "resourceShareInvitationArn" : String,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPendingInvitationResourcesResponse = NamedTuple(
+      "resources" : (ResourceList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListPermissionsRequest = NamedTuple(
+      "resourceType" : (String)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPermissionsResponse = NamedTuple(
+      "permissions" : (ResourceSharePermissionList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListPrincipalsRequest = NamedTuple(
+      "resourceOwner" : ResourceOwner,
+      "resourceArn" : (String)?,
+      "principals" : (PrincipalArnOrIdList)?,
+      "resourceType" : (String)?,
+      "resourceShareArns" : (ResourceShareArnList)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPrincipalsResponse = NamedTuple(
+      "principals" : (PrincipalList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListResourceSharePermissionsRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListResourceSharePermissionsResponse = NamedTuple(
+      "permissions" : (ResourceSharePermissionList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListResourceTypesRequest = NamedTuple(
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListResourceTypesResponse = NamedTuple(
+      "resourceTypes" : (ServiceNameAndResourceTypeList)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListResourcesRequest = NamedTuple(
+      "resourceOwner" : ResourceOwner,
+      "principal" : (String)?,
+      "resourceType" : (String)?,
+      "resourceArns" : (ResourceArnList)?,
+      "resourceShareArns" : (ResourceShareArnList)?,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListResourcesResponse = NamedTuple(
+      "resources" : (ResourceList)?,
+      "nextToken" : (String)?
+    )
+
+    alias MalformedArnException = NamedTuple(
+      "message" : String
+    )
+
+    alias MaxResults = Int32
+
+    alias MissingRequiredParameterException = NamedTuple(
+      "message" : String
+    )
+
+    alias OperationNotPermittedException = NamedTuple(
+      "message" : String
+    )
+
+    alias PermissionArnList = Array(String)
+
+    alias Policy = String
+
+    alias PolicyList = Array(Policy)
+
+    alias Principal = NamedTuple(
+      "id" : (String)?,
+      "resourceShareArn" : (String)?,
+      "creationTime" : (DateTime)?,
+      "lastUpdatedTime" : (DateTime)?,
+      "external" : (Boolean)?
+    )
+
+    alias PrincipalArnOrIdList = Array(String)
+
+    alias PrincipalList = Array(Principal)
+
+    alias PromoteResourceShareCreatedFromPolicyRequest = NamedTuple(
+      "resourceShareArn" : String
+    )
+
+    alias PromoteResourceShareCreatedFromPolicyResponse = NamedTuple(
+      "returnValue" : (Boolean)?
+    )
+
+    alias RejectResourceShareInvitationRequest = NamedTuple(
+      "resourceShareInvitationArn" : String,
+      "clientToken" : (String)?
+    )
+
+    alias RejectResourceShareInvitationResponse = NamedTuple(
+      "resourceShareInvitation" : (ResourceShareInvitation)?,
+      "clientToken" : (String)?
+    )
+
+    alias Resource = NamedTuple(
+      "arn" : (String)?,
+      "type" : (String)?,
+      "resourceShareArn" : (String)?,
+      "resourceGroupArn" : (String)?,
+      "status" : (ResourceStatus)?,
+      "statusMessage" : (String)?,
+      "creationTime" : (DateTime)?,
+      "lastUpdatedTime" : (DateTime)?
+    )
+
+    alias ResourceArnList = Array(String)
+
+    alias ResourceArnNotFoundException = NamedTuple(
+      "message" : String
+    )
+
+    alias ResourceList = Array(Resource)
+
+    alias ResourceOwner = String
+
+    alias ResourceShare = NamedTuple(
+      "resourceShareArn" : (String)?,
+      "name" : (String)?,
+      "owningAccountId" : (String)?,
+      "allowExternalPrincipals" : (Boolean)?,
+      "status" : (ResourceShareStatus)?,
+      "statusMessage" : (String)?,
+      "tags" : (TagList)?,
+      "creationTime" : (DateTime)?,
+      "lastUpdatedTime" : (DateTime)?,
+      "featureSet" : (ResourceShareFeatureSet)?
+    )
+
+    alias ResourceShareArnList = Array(String)
+
+    alias ResourceShareAssociation = NamedTuple(
+      "resourceShareArn" : (String)?,
+      "resourceShareName" : (String)?,
+      "associatedEntity" : (String)?,
+      "associationType" : (ResourceShareAssociationType)?,
+      "status" : (ResourceShareAssociationStatus)?,
+      "statusMessage" : (String)?,
+      "creationTime" : (DateTime)?,
+      "lastUpdatedTime" : (DateTime)?,
+      "external" : (Boolean)?
+    )
+
+    alias ResourceShareAssociationList = Array(ResourceShareAssociation)
+
+    alias ResourceShareAssociationStatus = String
+
+    alias ResourceShareAssociationType = String
+
+    alias ResourceShareFeatureSet = String
+
+    alias ResourceShareInvitation = NamedTuple(
+      "resourceShareInvitationArn" : (String)?,
+      "resourceShareName" : (String)?,
+      "resourceShareArn" : (String)?,
+      "senderAccountId" : (String)?,
+      "receiverAccountId" : (String)?,
+      "invitationTimestamp" : (DateTime)?,
+      "status" : (ResourceShareInvitationStatus)?,
+      "resourceShareAssociations" : (ResourceShareAssociationList)?
+    )
+
+    alias ResourceShareInvitationAlreadyAcceptedException = NamedTuple(
+      "message" : String
+    )
+
+    alias ResourceShareInvitationAlreadyRejectedException = NamedTuple(
+      "message" : String
+    )
+
+    alias ResourceShareInvitationArnList = Array(String)
+
+    alias ResourceShareInvitationArnNotFoundException = NamedTuple(
+      "message" : String
+    )
+
+    alias ResourceShareInvitationExpiredException = NamedTuple(
+      "message" : String
+    )
+
+    alias ResourceShareInvitationList = Array(ResourceShareInvitation)
+
+    alias ResourceShareInvitationStatus = String
+
+    alias ResourceShareLimitExceededException = NamedTuple(
+      "message" : String
+    )
+
+    alias ResourceShareList = Array(ResourceShare)
+
+    alias ResourceSharePermissionDetail = NamedTuple(
+      "arn" : (String)?,
+      "version" : (String)?,
+      "defaultVersion" : (Boolean)?,
+      "name" : (String)?,
+      "resourceType" : (String)?,
+      "permission" : (String)?,
+      "creationTime" : (DateTime)?,
+      "lastUpdatedTime" : (DateTime)?
+    )
+
+    alias ResourceSharePermissionList = Array(ResourceSharePermissionSummary)
+
+    alias ResourceSharePermissionSummary = NamedTuple(
+      "arn" : (String)?,
+      "version" : (String)?,
+      "defaultVersion" : (Boolean)?,
+      "name" : (String)?,
+      "resourceType" : (String)?,
+      "status" : (String)?,
+      "creationTime" : (DateTime)?,
+      "lastUpdatedTime" : (DateTime)?
+    )
+
+    alias ResourceShareStatus = String
+
+    alias ResourceStatus = String
+
+    alias ServerInternalException = NamedTuple(
+      "message" : String
+    )
+
+    alias ServiceNameAndResourceType = NamedTuple(
+      "resourceType" : (String)?,
+      "serviceName" : (String)?
+    )
+
+    alias ServiceNameAndResourceTypeList = Array(ServiceNameAndResourceType)
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : String
+    )
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "key" : (TagKey)?,
+      "value" : (TagValue)?
+    )
+
+    alias TagFilter = NamedTuple(
+      "tagKey" : (TagKey)?,
+      "tagValues" : (TagValueList)?
+    )
+
+    alias TagFilters = Array(TagFilter)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagLimitExceededException = NamedTuple(
+      "message" : String
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagPolicyViolationException = NamedTuple(
+      "message" : String
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagValueList = Array(TagValue)
+
+    alias UnknownResourceException = NamedTuple(
+      "message" : String
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateResourceShareRequest = NamedTuple(
+      "resourceShareArn" : String,
+      "name" : (String)?,
+      "allowExternalPrincipals" : (Boolean)?,
+      "clientToken" : (String)?
+    )
+
+    alias UpdateResourceShareResponse = NamedTuple(
+      "resourceShare" : (ResourceShare)?,
+      "clientToken" : (String)?
+    )
   end
 end

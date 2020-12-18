@@ -4197,5 +4197,1150 @@ module Aws::AuditManager
       include Aws::Structure
     end
 
+    alias AWSAccount = NamedTuple(
+      "id" : (AccountId)?,
+      "emailAddress" : (EmailAddress)?,
+      "name" : (AccountName)?
+    )
+
+    alias AWSAccounts = Array(AWSAccount)
+
+    alias AWSService = NamedTuple(
+      "serviceName" : (AWSServiceName)?
+    )
+
+    alias AWSServiceName = String
+
+    alias AWSServices = Array(AWSService)
+
+    alias AccessDeniedException = NamedTuple(
+      "message" : String
+    )
+
+    alias AccountId = String
+
+    alias AccountName = String
+
+    alias AccountStatus = String
+
+    alias ActionEnum = String
+
+    alias ActionPlanInstructions = String
+
+    alias ActionPlanTitle = String
+
+    alias Assessment = NamedTuple(
+      "arn" : (AuditManagerArn)?,
+      "awsAccount" : (AWSAccount)?,
+      "metadata" : (AssessmentMetadata)?,
+      "framework" : (AssessmentFramework)?,
+      "tags" : (TagMap)?
+    )
+
+    alias AssessmentControl = NamedTuple(
+      "id" : (UUID)?,
+      "name" : (ControlName)?,
+      "description" : (ControlDescription)?,
+      "status" : (ControlStatus)?,
+      "response" : (ControlResponse)?,
+      "comments" : (ControlComments)?,
+      "evidenceSources" : (EvidenceSources)?,
+      "evidenceCount" : (Integer)?,
+      "assessmentReportEvidenceCount" : (Integer)?
+    )
+
+    alias AssessmentControlSet = NamedTuple(
+      "id" : (ControlSetId)?,
+      "description" : (NonEmptyString)?,
+      "status" : (ControlSetStatus)?,
+      "roles" : (Roles)?,
+      "controls" : (AssessmentControls)?,
+      "delegations" : (Delegations)?,
+      "systemEvidenceCount" : (Integer)?,
+      "manualEvidenceCount" : (Integer)?
+    )
+
+    alias AssessmentControlSets = Array(AssessmentControlSet)
+
+    alias AssessmentControls = Array(AssessmentControl)
+
+    alias AssessmentDescription = String
+
+    alias AssessmentEvidenceFolder = NamedTuple(
+      "name" : (AssessmentEvidenceFolderName)?,
+      "date" : (Timestamp)?,
+      "assessmentId" : (UUID)?,
+      "controlSetId" : (ControlSetId)?,
+      "controlId" : (UUID)?,
+      "id" : (UUID)?,
+      "dataSource" : (String)?,
+      "author" : (String)?,
+      "totalEvidence" : (Integer)?,
+      "assessmentReportSelectionCount" : (Integer)?,
+      "controlName" : (ControlName)?,
+      "evidenceResourcesIncludedCount" : (Integer)?,
+      "evidenceByTypeConfigurationDataCount" : (Integer)?,
+      "evidenceByTypeManualCount" : (Integer)?,
+      "evidenceByTypeComplianceCheckCount" : (Integer)?,
+      "evidenceByTypeComplianceCheckIssuesCount" : (Integer)?,
+      "evidenceByTypeUserActivityCount" : (Integer)?,
+      "evidenceAwsServiceSourceCount" : (Integer)?
+    )
+
+    alias AssessmentEvidenceFolderName = String
+
+    alias AssessmentEvidenceFolders = Array(AssessmentEvidenceFolder)
+
+    alias AssessmentFramework = NamedTuple(
+      "id" : (UUID)?,
+      "arn" : (AuditManagerArn)?,
+      "metadata" : (FrameworkMetadata)?,
+      "controlSets" : (AssessmentControlSets)?
+    )
+
+    alias AssessmentFrameworkDescription = String
+
+    alias AssessmentFrameworkMetadata = NamedTuple(
+      "id" : (UUID)?,
+      "type" : (FrameworkType)?,
+      "name" : (FrameworkName)?,
+      "description" : (FrameworkDescription)?,
+      "logo" : (Filename)?,
+      "complianceType" : (ComplianceType)?,
+      "controlsCount" : (ControlsCount)?,
+      "controlSetsCount" : (ControlSetsCount)?,
+      "createdAt" : (Timestamp)?,
+      "lastUpdatedAt" : (Timestamp)?
+    )
+
+    alias AssessmentMetadata = NamedTuple(
+      "name" : (AssessmentName)?,
+      "id" : (UUID)?,
+      "description" : (AssessmentDescription)?,
+      "complianceType" : (ComplianceType)?,
+      "status" : (AssessmentStatus)?,
+      "assessmentReportsDestination" : (AssessmentReportsDestination)?,
+      "scope" : (Scope)?,
+      "roles" : (Roles)?,
+      "delegations" : (Delegations)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdated" : (Timestamp)?
+    )
+
+    alias AssessmentMetadataItem = NamedTuple(
+      "name" : (AssessmentName)?,
+      "id" : (UUID)?,
+      "complianceType" : (ComplianceType)?,
+      "status" : (AssessmentStatus)?,
+      "roles" : (Roles)?,
+      "delegations" : (Delegations)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdated" : (Timestamp)?
+    )
+
+    alias AssessmentName = String
+
+    alias AssessmentReport = NamedTuple(
+      "id" : (UUID)?,
+      "name" : (AssessmentReportName)?,
+      "description" : (AssessmentReportDescription)?,
+      "awsAccountId" : (AccountId)?,
+      "assessmentId" : (UUID)?,
+      "assessmentName" : (AssessmentName)?,
+      "author" : (Username)?,
+      "status" : (AssessmentReportStatus)?,
+      "creationTime" : (Timestamp)?
+    )
+
+    alias AssessmentReportDescription = String
+
+    alias AssessmentReportDestinationType = String
+
+    alias AssessmentReportEvidenceError = NamedTuple(
+      "evidenceId" : (UUID)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias AssessmentReportEvidenceErrors = Array(AssessmentReportEvidenceError)
+
+    alias AssessmentReportMetadata = NamedTuple(
+      "id" : (UUID)?,
+      "name" : (AssessmentReportName)?,
+      "description" : (AssessmentReportDescription)?,
+      "assessmentId" : (UUID)?,
+      "assessmentName" : (AssessmentName)?,
+      "author" : (Username)?,
+      "status" : (AssessmentReportStatus)?,
+      "creationTime" : (Timestamp)?
+    )
+
+    alias AssessmentReportName = String
+
+    alias AssessmentReportStatus = String
+
+    alias AssessmentReportsDestination = NamedTuple(
+      "destinationType" : (AssessmentReportDestinationType)?,
+      "destination" : (S3Url)?
+    )
+
+    alias AssessmentReportsMetadata = Array(AssessmentReportMetadata)
+
+    alias AssessmentStatus = String
+
+    alias AssociateAssessmentReportEvidenceFolderRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "evidenceFolderId" : UUID
+    )
+
+    alias AssociateAssessmentReportEvidenceFolderResponse = NamedTuple(
+      
+    )
+
+    alias AuditManagerArn = String
+
+    alias BatchAssociateAssessmentReportEvidenceRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "evidenceFolderId" : UUID,
+      "evidenceIds" : EvidenceIds
+    )
+
+    alias BatchAssociateAssessmentReportEvidenceResponse = NamedTuple(
+      "evidenceIds" : (EvidenceIds)?,
+      "errors" : (AssessmentReportEvidenceErrors)?
+    )
+
+    alias BatchCreateDelegationByAssessmentError = NamedTuple(
+      "createDelegationRequest" : (CreateDelegationRequest)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchCreateDelegationByAssessmentErrors = Array(BatchCreateDelegationByAssessmentError)
+
+    alias BatchCreateDelegationByAssessmentRequest = NamedTuple(
+      "createDelegationRequests" : CreateDelegationRequests,
+      "assessmentId" : UUID
+    )
+
+    alias BatchCreateDelegationByAssessmentResponse = NamedTuple(
+      "delegations" : (Delegations)?,
+      "errors" : (BatchCreateDelegationByAssessmentErrors)?
+    )
+
+    alias BatchDeleteDelegationByAssessmentError = NamedTuple(
+      "delegationId" : (UUID)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchDeleteDelegationByAssessmentErrors = Array(BatchDeleteDelegationByAssessmentError)
+
+    alias BatchDeleteDelegationByAssessmentRequest = NamedTuple(
+      "delegationIds" : DelegationIds,
+      "assessmentId" : UUID
+    )
+
+    alias BatchDeleteDelegationByAssessmentResponse = NamedTuple(
+      "errors" : (BatchDeleteDelegationByAssessmentErrors)?
+    )
+
+    alias BatchDisassociateAssessmentReportEvidenceRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "evidenceFolderId" : UUID,
+      "evidenceIds" : EvidenceIds
+    )
+
+    alias BatchDisassociateAssessmentReportEvidenceResponse = NamedTuple(
+      "evidenceIds" : (EvidenceIds)?,
+      "errors" : (AssessmentReportEvidenceErrors)?
+    )
+
+    alias BatchImportEvidenceToAssessmentControlError = NamedTuple(
+      "manualEvidence" : (ManualEvidence)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchImportEvidenceToAssessmentControlErrors = Array(BatchImportEvidenceToAssessmentControlError)
+
+    alias BatchImportEvidenceToAssessmentControlRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : ControlSetId,
+      "controlId" : UUID,
+      "manualEvidence" : ManualEvidenceList
+    )
+
+    alias BatchImportEvidenceToAssessmentControlResponse = NamedTuple(
+      "errors" : (BatchImportEvidenceToAssessmentControlErrors)?
+    )
+
+    alias Boolean = Bool
+
+    alias ChangeLog = NamedTuple(
+      "objectType" : (ObjectTypeEnum)?,
+      "objectName" : (NonEmptyString)?,
+      "action" : (ActionEnum)?,
+      "createdAt" : (Timestamp)?,
+      "createdBy" : (IamArn)?
+    )
+
+    alias ChangeLogs = Array(ChangeLog)
+
+    alias ComplianceType = String
+
+    alias Control = NamedTuple(
+      "arn" : (AuditManagerArn)?,
+      "id" : (UUID)?,
+      "type" : (ControlType)?,
+      "name" : (ControlName)?,
+      "description" : (ControlDescription)?,
+      "testingInformation" : (TestingInformation)?,
+      "actionPlanTitle" : (ActionPlanTitle)?,
+      "actionPlanInstructions" : (ActionPlanInstructions)?,
+      "controlSources" : (ControlSources)?,
+      "controlMappingSources" : (ControlMappingSources)?,
+      "createdAt" : (Timestamp)?,
+      "lastUpdatedAt" : (Timestamp)?,
+      "createdBy" : (CreatedBy)?,
+      "lastUpdatedBy" : (LastUpdatedBy)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ControlComment = NamedTuple(
+      "authorName" : (Username)?,
+      "commentBody" : (ControlCommentBody)?,
+      "postedDate" : (Timestamp)?
+    )
+
+    alias ControlCommentBody = String
+
+    alias ControlComments = Array(ControlComment)
+
+    alias ControlDescription = String
+
+    alias ControlMappingSource = NamedTuple(
+      "sourceId" : (UUID)?,
+      "sourceName" : (SourceName)?,
+      "sourceDescription" : (SourceDescription)?,
+      "sourceSetUpOption" : (SourceSetUpOption)?,
+      "sourceType" : (SourceType)?,
+      "sourceKeyword" : (SourceKeyword)?,
+      "sourceFrequency" : (SourceFrequency)?,
+      "troubleshootingText" : (TroubleshootingText)?
+    )
+
+    alias ControlMappingSources = Array(ControlMappingSource)
+
+    alias ControlMetadata = NamedTuple(
+      "arn" : (AuditManagerArn)?,
+      "id" : (UUID)?,
+      "name" : (ControlName)?,
+      "controlSources" : (ControlSources)?,
+      "createdAt" : (Timestamp)?,
+      "lastUpdatedAt" : (Timestamp)?
+    )
+
+    alias ControlMetadataList = Array(ControlMetadata)
+
+    alias ControlName = String
+
+    alias ControlResponse = String
+
+    alias ControlSet = NamedTuple(
+      "id" : (UUID)?,
+      "name" : (ControlSetName)?,
+      "controls" : (Controls)?
+    )
+
+    alias ControlSetId = String
+
+    alias ControlSetName = String
+
+    alias ControlSetStatus = String
+
+    alias ControlSets = Array(ControlSet)
+
+    alias ControlSetsCount = Int32
+
+    alias ControlSources = String
+
+    alias ControlStatus = String
+
+    alias ControlType = String
+
+    alias Controls = Array(Control)
+
+    alias ControlsCount = Int32
+
+    alias CreateAssessmentFrameworkControl = NamedTuple(
+      "id" : (UUID)?
+    )
+
+    alias CreateAssessmentFrameworkControlSet = NamedTuple(
+      "name" : (ControlSetName)?,
+      "controls" : (CreateAssessmentFrameworkControls)?
+    )
+
+    alias CreateAssessmentFrameworkControlSets = Array(CreateAssessmentFrameworkControlSet)
+
+    alias CreateAssessmentFrameworkControls = Array(CreateAssessmentFrameworkControl)
+
+    alias CreateAssessmentFrameworkRequest = NamedTuple(
+      "name" : FrameworkName,
+      "description" : (FrameworkDescription)?,
+      "complianceType" : (ComplianceType)?,
+      "controlSets" : CreateAssessmentFrameworkControlSets
+    )
+
+    alias CreateAssessmentFrameworkResponse = NamedTuple(
+      "framework" : (Framework)?
+    )
+
+    alias CreateAssessmentReportRequest = NamedTuple(
+      "name" : AssessmentReportName,
+      "description" : (AssessmentReportDescription)?,
+      "assessmentId" : UUID
+    )
+
+    alias CreateAssessmentReportResponse = NamedTuple(
+      "assessmentReport" : (AssessmentReport)?
+    )
+
+    alias CreateAssessmentRequest = NamedTuple(
+      "name" : AssessmentName,
+      "description" : (AssessmentDescription)?,
+      "assessmentReportsDestination" : AssessmentReportsDestination,
+      "scope" : Scope,
+      "roles" : Roles,
+      "frameworkId" : UUID,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateAssessmentResponse = NamedTuple(
+      "assessment" : (Assessment)?
+    )
+
+    alias CreateControlMappingSource = NamedTuple(
+      "sourceName" : (SourceName)?,
+      "sourceDescription" : (SourceDescription)?,
+      "sourceSetUpOption" : (SourceSetUpOption)?,
+      "sourceType" : (SourceType)?,
+      "sourceKeyword" : (SourceKeyword)?,
+      "sourceFrequency" : (SourceFrequency)?,
+      "troubleshootingText" : (TroubleshootingText)?
+    )
+
+    alias CreateControlMappingSources = Array(CreateControlMappingSource)
+
+    alias CreateControlRequest = NamedTuple(
+      "name" : ControlName,
+      "description" : (ControlDescription)?,
+      "testingInformation" : (TestingInformation)?,
+      "actionPlanTitle" : (ActionPlanTitle)?,
+      "actionPlanInstructions" : (ActionPlanInstructions)?,
+      "controlMappingSources" : CreateControlMappingSources,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateControlResponse = NamedTuple(
+      "control" : (Control)?
+    )
+
+    alias CreateDelegationRequest = NamedTuple(
+      "comment" : (DelegationComment)?,
+      "controlSetId" : (ControlSetId)?,
+      "roleArn" : (IamArn)?,
+      "roleType" : (RoleType)?
+    )
+
+    alias CreateDelegationRequests = Array(CreateDelegationRequest)
+
+    alias CreatedBy = String
+
+    alias Delegation = NamedTuple(
+      "id" : (UUID)?,
+      "assessmentName" : (AssessmentName)?,
+      "assessmentId" : (UUID)?,
+      "status" : (DelegationStatus)?,
+      "roleArn" : (IamArn)?,
+      "roleType" : (RoleType)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdated" : (Timestamp)?,
+      "controlSetId" : (ControlSetId)?,
+      "comment" : (DelegationComment)?,
+      "createdBy" : (CreatedBy)?
+    )
+
+    alias DelegationComment = String
+
+    alias DelegationIds = Array(UUID)
+
+    alias DelegationMetadata = NamedTuple(
+      "id" : (UUID)?,
+      "assessmentName" : (AssessmentName)?,
+      "assessmentId" : (UUID)?,
+      "status" : (DelegationStatus)?,
+      "roleArn" : (IamArn)?,
+      "creationTime" : (Timestamp)?,
+      "controlSetName" : (NonEmptyString)?
+    )
+
+    alias DelegationMetadataList = Array(DelegationMetadata)
+
+    alias DelegationStatus = String
+
+    alias Delegations = Array(Delegation)
+
+    alias DeleteAssessmentFrameworkRequest = NamedTuple(
+      "frameworkId" : UUID
+    )
+
+    alias DeleteAssessmentFrameworkResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAssessmentReportRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "assessmentReportId" : UUID
+    )
+
+    alias DeleteAssessmentReportResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAssessmentRequest = NamedTuple(
+      "assessmentId" : UUID
+    )
+
+    alias DeleteAssessmentResponse = NamedTuple(
+      
+    )
+
+    alias DeleteControlRequest = NamedTuple(
+      "controlId" : UUID
+    )
+
+    alias DeleteControlResponse = NamedTuple(
+      
+    )
+
+    alias DeregisterAccountRequest = NamedTuple(
+      
+    )
+
+    alias DeregisterAccountResponse = NamedTuple(
+      "status" : (AccountStatus)?
+    )
+
+    alias DeregisterOrganizationAdminAccountRequest = NamedTuple(
+      "adminAccountId" : (AccountId)?
+    )
+
+    alias DeregisterOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateAssessmentReportEvidenceFolderRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "evidenceFolderId" : UUID
+    )
+
+    alias DisassociateAssessmentReportEvidenceFolderResponse = NamedTuple(
+      
+    )
+
+    alias EmailAddress = String
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias EventName = String
+
+    alias Evidence = NamedTuple(
+      "dataSource" : (String)?,
+      "evidenceAwsAccountId" : (AccountId)?,
+      "time" : (Timestamp)?,
+      "eventSource" : (AWSServiceName)?,
+      "eventName" : (EventName)?,
+      "evidenceByType" : (String)?,
+      "resourcesIncluded" : (Resources)?,
+      "attributes" : (EvidenceAttributes)?,
+      "iamId" : (IamArn)?,
+      "complianceCheck" : (String)?,
+      "awsOrganization" : (String)?,
+      "awsAccountId" : (AccountId)?,
+      "evidenceFolderId" : (UUID)?,
+      "id" : (UUID)?,
+      "assessmentReportSelection" : (String)?
+    )
+
+    alias EvidenceAttributeKey = String
+
+    alias EvidenceAttributeValue = String
+
+    alias EvidenceAttributes = Hash(EvidenceAttributeKey,EvidenceAttributeValue)
+
+    alias EvidenceIds = Array(UUID)
+
+    alias EvidenceList = Array(Evidence)
+
+    alias EvidenceSources = Array(NonEmptyString)
+
+    alias Filename = String
+
+    alias Framework = NamedTuple(
+      "arn" : (AuditManagerArn)?,
+      "id" : (UUID)?,
+      "name" : (FrameworkName)?,
+      "type" : (FrameworkType)?,
+      "complianceType" : (ComplianceType)?,
+      "description" : (FrameworkDescription)?,
+      "logo" : (Filename)?,
+      "controlSources" : (ControlSources)?,
+      "controlSets" : (ControlSets)?,
+      "createdAt" : (Timestamp)?,
+      "lastUpdatedAt" : (Timestamp)?,
+      "createdBy" : (CreatedBy)?,
+      "lastUpdatedBy" : (LastUpdatedBy)?
+    )
+
+    alias FrameworkDescription = String
+
+    alias FrameworkMetadata = NamedTuple(
+      "name" : (AssessmentName)?,
+      "description" : (AssessmentFrameworkDescription)?,
+      "logo" : (Filename)?,
+      "complianceType" : (ComplianceType)?
+    )
+
+    alias FrameworkMetadataList = Array(AssessmentFrameworkMetadata)
+
+    alias FrameworkName = String
+
+    alias FrameworkType = String
+
+    alias GenericArn = String
+
+    alias GetAccountStatusRequest = NamedTuple(
+      
+    )
+
+    alias GetAccountStatusResponse = NamedTuple(
+      "status" : (AccountStatus)?
+    )
+
+    alias GetAssessmentFrameworkRequest = NamedTuple(
+      "frameworkId" : UUID
+    )
+
+    alias GetAssessmentFrameworkResponse = NamedTuple(
+      "framework" : (Framework)?
+    )
+
+    alias GetAssessmentReportUrlRequest = NamedTuple(
+      "assessmentReportId" : UUID,
+      "assessmentId" : UUID
+    )
+
+    alias GetAssessmentReportUrlResponse = NamedTuple(
+      "preSignedUrl" : (URL)?
+    )
+
+    alias GetAssessmentRequest = NamedTuple(
+      "assessmentId" : UUID
+    )
+
+    alias GetAssessmentResponse = NamedTuple(
+      "assessment" : (Assessment)?
+    )
+
+    alias GetChangeLogsRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : (ControlSetId)?,
+      "controlId" : (UUID)?,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetChangeLogsResponse = NamedTuple(
+      "changeLogs" : (ChangeLogs)?,
+      "nextToken" : (Token)?
+    )
+
+    alias GetControlRequest = NamedTuple(
+      "controlId" : UUID
+    )
+
+    alias GetControlResponse = NamedTuple(
+      "control" : (Control)?
+    )
+
+    alias GetDelegationsRequest = NamedTuple(
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetDelegationsResponse = NamedTuple(
+      "delegations" : (DelegationMetadataList)?,
+      "nextToken" : (Token)?
+    )
+
+    alias GetEvidenceByEvidenceFolderRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : ControlSetId,
+      "evidenceFolderId" : UUID,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetEvidenceByEvidenceFolderResponse = NamedTuple(
+      "evidence" : (EvidenceList)?,
+      "nextToken" : (Token)?
+    )
+
+    alias GetEvidenceFolderRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : ControlSetId,
+      "evidenceFolderId" : UUID
+    )
+
+    alias GetEvidenceFolderResponse = NamedTuple(
+      "evidenceFolder" : (AssessmentEvidenceFolder)?
+    )
+
+    alias GetEvidenceFoldersByAssessmentControlRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : ControlSetId,
+      "controlId" : UUID,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetEvidenceFoldersByAssessmentControlResponse = NamedTuple(
+      "evidenceFolders" : (AssessmentEvidenceFolders)?,
+      "nextToken" : (Token)?
+    )
+
+    alias GetEvidenceFoldersByAssessmentRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetEvidenceFoldersByAssessmentResponse = NamedTuple(
+      "evidenceFolders" : (AssessmentEvidenceFolders)?,
+      "nextToken" : (Token)?
+    )
+
+    alias GetEvidenceRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : ControlSetId,
+      "evidenceFolderId" : UUID,
+      "evidenceId" : UUID
+    )
+
+    alias GetEvidenceResponse = NamedTuple(
+      "evidence" : (Evidence)?
+    )
+
+    alias GetOrganizationAdminAccountRequest = NamedTuple(
+      
+    )
+
+    alias GetOrganizationAdminAccountResponse = NamedTuple(
+      "adminAccountId" : (AccountId)?,
+      "organizationId" : (organizationId)?
+    )
+
+    alias GetServicesInScopeRequest = NamedTuple(
+      
+    )
+
+    alias GetServicesInScopeResponse = NamedTuple(
+      "serviceMetadata" : (ServiceMetadataList)?
+    )
+
+    alias GetSettingsRequest = NamedTuple(
+      "attribute" : SettingAttribute
+    )
+
+    alias GetSettingsResponse = NamedTuple(
+      "settings" : (Settings)?
+    )
+
+    alias HyperlinkName = String
+
+    alias IamArn = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "message" : String
+    )
+
+    alias KeywordInputType = String
+
+    alias KeywordValue = String
+
+    alias Keywords = Array(KeywordValue)
+
+    alias KmsKey = String
+
+    alias LastUpdatedBy = String
+
+    alias ListAssessmentFrameworksRequest = NamedTuple(
+      "frameworkType" : FrameworkType,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssessmentFrameworksResponse = NamedTuple(
+      "frameworkMetadataList" : (FrameworkMetadataList)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListAssessmentMetadata = Array(AssessmentMetadataItem)
+
+    alias ListAssessmentReportsRequest = NamedTuple(
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssessmentReportsResponse = NamedTuple(
+      "assessmentReports" : (AssessmentReportsMetadata)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListAssessmentsRequest = NamedTuple(
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssessmentsResponse = NamedTuple(
+      "assessmentMetadata" : (ListAssessmentMetadata)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListControlsRequest = NamedTuple(
+      "controlType" : ControlType,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListControlsResponse = NamedTuple(
+      "controlMetadataList" : (ControlMetadataList)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListKeywordsForDataSourceRequest = NamedTuple(
+      "source" : SourceType,
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListKeywordsForDataSourceResponse = NamedTuple(
+      "keywords" : (Keywords)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListNotificationsRequest = NamedTuple(
+      "nextToken" : (Token)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListNotificationsResponse = NamedTuple(
+      "notifications" : (Notifications)?,
+      "nextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AuditManagerArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias ManualEvidence = NamedTuple(
+      "s3ResourcePath" : (S3Url)?
+    )
+
+    alias ManualEvidenceList = Array(ManualEvidence)
+
+    alias MaxResults = Int32
+
+    alias NonEmptyString = String
+
+    alias Notification = NamedTuple(
+      "id" : (TimestampUUID)?,
+      "assessmentId" : (UUID)?,
+      "assessmentName" : (AssessmentName)?,
+      "controlSetId" : (ControlSetId)?,
+      "controlSetName" : (NonEmptyString)?,
+      "description" : (NonEmptyString)?,
+      "eventTime" : (Timestamp)?,
+      "source" : (NonEmptyString)?
+    )
+
+    alias Notifications = Array(Notification)
+
+    alias ObjectTypeEnum = String
+
+    alias RegisterAccountRequest = NamedTuple(
+      "kmsKey" : (KmsKey)?,
+      "delegatedAdminAccount" : (AccountId)?
+    )
+
+    alias RegisterAccountResponse = NamedTuple(
+      "status" : (AccountStatus)?
+    )
+
+    alias RegisterOrganizationAdminAccountRequest = NamedTuple(
+      "adminAccountId" : AccountId
+    )
+
+    alias RegisterOrganizationAdminAccountResponse = NamedTuple(
+      "adminAccountId" : (AccountId)?,
+      "organizationId" : (organizationId)?
+    )
+
+    alias Resource = NamedTuple(
+      "arn" : (GenericArn)?,
+      "value" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : String,
+      "resourceId" : String,
+      "resourceType" : String
+    )
+
+    alias Resources = Array(Resource)
+
+    alias Role = NamedTuple(
+      "roleType" : (RoleType)?,
+      "roleArn" : (IamArn)?
+    )
+
+    alias RoleType = String
+
+    alias Roles = Array(Role)
+
+    alias S3Url = String
+
+    alias SNSTopic = String
+
+    alias Scope = NamedTuple(
+      "awsAccounts" : (AWSAccounts)?,
+      "awsServices" : (AWSServices)?
+    )
+
+    alias ServiceMetadata = NamedTuple(
+      "name" : (AWSServiceName)?,
+      "displayName" : (NonEmptyString)?,
+      "description" : (NonEmptyString)?,
+      "category" : (NonEmptyString)?
+    )
+
+    alias ServiceMetadataList = Array(ServiceMetadata)
+
+    alias SettingAttribute = String
+
+    alias Settings = NamedTuple(
+      "isAwsOrgEnabled" : (Boolean)?,
+      "snsTopic" : (SNSTopic)?,
+      "defaultAssessmentReportsDestination" : (AssessmentReportsDestination)?,
+      "defaultProcessOwners" : (Roles)?,
+      "kmsKey" : (KmsKey)?
+    )
+
+    alias SnsArn = String
+
+    alias SourceDescription = String
+
+    alias SourceFrequency = String
+
+    alias SourceKeyword = NamedTuple(
+      "keywordInputType" : (KeywordInputType)?,
+      "keywordValue" : (KeywordValue)?
+    )
+
+    alias SourceName = String
+
+    alias SourceSetUpOption = String
+
+    alias SourceType = String
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AuditManagerArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TestingInformation = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampUUID = String
+
+    alias Token = String
+
+    alias TroubleshootingText = String
+
+    alias URL = NamedTuple(
+      "hyperlinkName" : (HyperlinkName)?,
+      "link" : (UrlLink)?
+    )
+
+    alias UUID = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AuditManagerArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAssessmentControlRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : ControlSetId,
+      "controlId" : UUID,
+      "controlStatus" : (ControlStatus)?,
+      "commentBody" : (ControlCommentBody)?
+    )
+
+    alias UpdateAssessmentControlResponse = NamedTuple(
+      "control" : (AssessmentControl)?
+    )
+
+    alias UpdateAssessmentControlSetStatusRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "controlSetId" : String,
+      "status" : ControlSetStatus,
+      "comment" : DelegationComment
+    )
+
+    alias UpdateAssessmentControlSetStatusResponse = NamedTuple(
+      "controlSet" : (AssessmentControlSet)?
+    )
+
+    alias UpdateAssessmentFrameworkControlSet = NamedTuple(
+      "id" : (UUID)?,
+      "name" : (ControlSetName)?,
+      "controls" : (CreateAssessmentFrameworkControls)?
+    )
+
+    alias UpdateAssessmentFrameworkControlSets = Array(UpdateAssessmentFrameworkControlSet)
+
+    alias UpdateAssessmentFrameworkRequest = NamedTuple(
+      "frameworkId" : UUID,
+      "name" : FrameworkName,
+      "description" : (FrameworkDescription)?,
+      "complianceType" : (ComplianceType)?,
+      "controlSets" : UpdateAssessmentFrameworkControlSets
+    )
+
+    alias UpdateAssessmentFrameworkResponse = NamedTuple(
+      "framework" : (Framework)?
+    )
+
+    alias UpdateAssessmentRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "assessmentName" : (AssessmentName)?,
+      "assessmentDescription" : (AssessmentDescription)?,
+      "scope" : Scope,
+      "assessmentReportsDestination" : (AssessmentReportsDestination)?,
+      "roles" : (Roles)?
+    )
+
+    alias UpdateAssessmentResponse = NamedTuple(
+      "assessment" : (Assessment)?
+    )
+
+    alias UpdateAssessmentStatusRequest = NamedTuple(
+      "assessmentId" : UUID,
+      "status" : AssessmentStatus
+    )
+
+    alias UpdateAssessmentStatusResponse = NamedTuple(
+      "assessment" : (Assessment)?
+    )
+
+    alias UpdateControlRequest = NamedTuple(
+      "controlId" : UUID,
+      "name" : ControlName,
+      "description" : (ControlDescription)?,
+      "testingInformation" : (TestingInformation)?,
+      "actionPlanTitle" : (ActionPlanTitle)?,
+      "actionPlanInstructions" : (ActionPlanInstructions)?,
+      "controlMappingSources" : ControlMappingSources
+    )
+
+    alias UpdateControlResponse = NamedTuple(
+      "control" : (Control)?
+    )
+
+    alias UpdateSettingsRequest = NamedTuple(
+      "snsTopic" : (SnsArn)?,
+      "defaultAssessmentReportsDestination" : (AssessmentReportsDestination)?,
+      "defaultProcessOwners" : (Roles)?,
+      "kmsKey" : (KmsKey)?
+    )
+
+    alias UpdateSettingsResponse = NamedTuple(
+      "settings" : (Settings)?
+    )
+
+    alias UrlLink = String
+
+    alias Username = String
+
+    alias ValidateAssessmentReportIntegrityRequest = NamedTuple(
+      "s3RelativePath" : S3Url
+    )
+
+    alias ValidateAssessmentReportIntegrityResponse = NamedTuple(
+      "signatureValid" : (Boolean)?,
+      "signatureAlgorithm" : (String)?,
+      "signatureDateTime" : (String)?,
+      "signatureKeyId" : (String)?,
+      "validationErrors" : (ValidationErrors)?
+    )
+
+    alias ValidationErrors = Array(NonEmptyString)
+
+    alias ValidationException = NamedTuple(
+      "message" : String,
+      "reason" : (ValidationExceptionReason)?,
+      "fields" : (ValidationExceptionFieldList)?
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "name" : String,
+      "message" : String
+    )
+
+    alias ValidationExceptionFieldList = Array(ValidationExceptionField)
+
+    alias ValidationExceptionReason = String
+
+    alias organizationId = String
   end
 end

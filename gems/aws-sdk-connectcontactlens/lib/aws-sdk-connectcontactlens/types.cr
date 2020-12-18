@@ -303,5 +303,111 @@ module Aws::ConnectContactLens
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : Message
+    )
+
+    alias Categories = NamedTuple(
+      "MatchedCategories" : MatchedCategories,
+      "MatchedDetails" : MatchedDetails
+    )
+
+    alias CategoryDetails = NamedTuple(
+      "PointsOfInterest" : PointsOfInterest
+    )
+
+    alias CategoryName = String
+
+    alias CharacterOffset = Int32
+
+    alias CharacterOffsets = NamedTuple(
+      "BeginOffsetChar" : CharacterOffset,
+      "EndOffsetChar" : CharacterOffset
+    )
+
+    alias ContactId = String
+
+    alias InstanceId = String
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias IssueDetected = NamedTuple(
+      "CharacterOffsets" : CharacterOffsets
+    )
+
+    alias IssuesDetected = Array(IssueDetected)
+
+    alias ListRealtimeContactAnalysisSegmentsRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "ContactId" : ContactId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRealtimeContactAnalysisSegmentsResponse = NamedTuple(
+      "Segments" : RealtimeContactAnalysisSegments,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MatchedCategories = Array(CategoryName)
+
+    alias MatchedDetails = Hash(CategoryName,CategoryDetails)
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias NextToken = String
+
+    alias OffsetMillis = Int32
+
+    alias ParticipantId = String
+
+    alias ParticipantRole = String
+
+    alias PointOfInterest = NamedTuple(
+      "BeginOffsetMillis" : OffsetMillis,
+      "EndOffsetMillis" : OffsetMillis
+    )
+
+    alias PointsOfInterest = Array(PointOfInterest)
+
+    alias RealtimeContactAnalysisSegment = NamedTuple(
+      "Transcript" : (Transcript)?,
+      "Categories" : (Categories)?
+    )
+
+    alias RealtimeContactAnalysisSegments = Array(RealtimeContactAnalysisSegment)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias SentimentValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : Message
+    )
+
+    alias Transcript = NamedTuple(
+      "Id" : TranscriptId,
+      "ParticipantId" : ParticipantId,
+      "ParticipantRole" : ParticipantRole,
+      "Content" : TranscriptContent,
+      "BeginOffsetMillis" : OffsetMillis,
+      "EndOffsetMillis" : OffsetMillis,
+      "Sentiment" : SentimentValue,
+      "IssuesDetected" : (IssuesDetected)?
+    )
+
+    alias TranscriptContent = String
+
+    alias TranscriptId = String
   end
 end

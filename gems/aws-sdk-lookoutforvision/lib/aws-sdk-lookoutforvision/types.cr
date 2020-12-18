@@ -1656,5 +1656,396 @@ module Aws::LookoutforVision
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : ExceptionString
+    )
+
+    alias AnomalyClassFilter = String
+
+    alias Boolean = Bool
+
+    alias ClientToken = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : ExceptionString,
+      "ResourceId" : ExceptionString,
+      "ResourceType" : ResourceType
+    )
+
+    alias ContentType = String
+
+    alias CreateDatasetRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "DatasetType" : DatasetType,
+      "DatasetSource" : (DatasetSource)?,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias CreateDatasetResponse = NamedTuple(
+      "DatasetMetadata" : (DatasetMetadata)?
+    )
+
+    alias CreateModelRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "Description" : (ModelDescription)?,
+      "ClientToken" : (ClientToken)?,
+      "OutputConfig" : OutputConfig,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias CreateModelResponse = NamedTuple(
+      "ModelMetadata" : (ModelMetadata)?
+    )
+
+    alias CreateProjectRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias CreateProjectResponse = NamedTuple(
+      "ProjectMetadata" : (ProjectMetadata)?
+    )
+
+    alias DatasetChanges = String | Array(UInt8) | IO
+
+    alias DatasetDescription = NamedTuple(
+      "ProjectName" : (ProjectName)?,
+      "DatasetType" : (DatasetType)?,
+      "CreationTimestamp" : (DateTime)?,
+      "LastUpdatedTimestamp" : (DateTime)?,
+      "Status" : (DatasetStatus)?,
+      "StatusMessage" : (DatasetStatusMessage)?,
+      "ImageStats" : (DatasetImageStats)?
+    )
+
+    alias DatasetEntry = String
+
+    alias DatasetEntryList = Array(DatasetEntry)
+
+    alias DatasetGroundTruthManifest = NamedTuple(
+      "S3Object" : (InputS3Object)?
+    )
+
+    alias DatasetImageStats = NamedTuple(
+      "Total" : (Integer)?,
+      "Labeled" : (Integer)?,
+      "Normal" : (Integer)?,
+      "Anomaly" : (Integer)?
+    )
+
+    alias DatasetMetadata = NamedTuple(
+      "DatasetType" : (DatasetType)?,
+      "CreationTimestamp" : (DateTime)?,
+      "Status" : (DatasetStatus)?,
+      "StatusMessage" : (DatasetStatusMessage)?
+    )
+
+    alias DatasetMetadataList = Array(DatasetMetadata)
+
+    alias DatasetSource = NamedTuple(
+      "GroundTruthManifest" : (DatasetGroundTruthManifest)?
+    )
+
+    alias DatasetStatus = String
+
+    alias DatasetStatusMessage = String
+
+    alias DatasetType = String
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteDatasetRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "DatasetType" : DatasetType,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias DeleteDatasetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteModelRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ModelVersion" : ModelVersion,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias DeleteModelResponse = NamedTuple(
+      "ModelArn" : (ModelArn)?
+    )
+
+    alias DeleteProjectRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias DeleteProjectResponse = NamedTuple(
+      "ProjectArn" : (ProjectArn)?
+    )
+
+    alias DescribeDatasetRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "DatasetType" : DatasetType
+    )
+
+    alias DescribeDatasetResponse = NamedTuple(
+      "DatasetDescription" : (DatasetDescription)?
+    )
+
+    alias DescribeModelRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ModelVersion" : ModelVersion
+    )
+
+    alias DescribeModelResponse = NamedTuple(
+      "ModelDescription" : (ModelDescription)?
+    )
+
+    alias DescribeProjectRequest = NamedTuple(
+      "ProjectName" : ProjectName
+    )
+
+    alias DescribeProjectResponse = NamedTuple(
+      "ProjectDescription" : (ProjectDescription)?
+    )
+
+    alias DetectAnomaliesRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ModelVersion" : ModelVersion,
+      "Body" : Stream,
+      "ContentType" : ContentType
+    )
+
+    alias DetectAnomaliesResponse = NamedTuple(
+      "DetectAnomalyResult" : (DetectAnomalyResult)?
+    )
+
+    alias DetectAnomalyResult = NamedTuple(
+      "Source" : (ImageSource)?,
+      "IsAnomalous" : (Boolean)?,
+      "Confidence" : (Float)?
+    )
+
+    alias ExceptionString = String
+
+    alias Float = Float32
+
+    alias ImageSource = NamedTuple(
+      "Type" : (ImageSourceType)?
+    )
+
+    alias ImageSourceType = String
+
+    alias InferenceUnits = Int32
+
+    alias InputS3Object = NamedTuple(
+      "Bucket" : S3BucketName,
+      "Key" : S3ObjectKey,
+      "VersionId" : (S3ObjectVersion)?
+    )
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : ExceptionString,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias IsLabeled = Bool
+
+    alias KmsKeyId = String
+
+    alias ListDatasetEntriesRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "DatasetType" : DatasetType,
+      "Labeled" : (IsLabeled)?,
+      "AnomalyClass" : (AnomalyClassFilter)?,
+      "BeforeCreationDate" : (DateTime)?,
+      "AfterCreationDate" : (DateTime)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PageSize)?,
+      "SourceRefContains" : (QueryString)?
+    )
+
+    alias ListDatasetEntriesResponse = NamedTuple(
+      "DatasetEntries" : (DatasetEntryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListModelsRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias ListModelsResponse = NamedTuple(
+      "Models" : (ModelMetadataList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias ListProjectsResponse = NamedTuple(
+      "Projects" : (ProjectMetadataList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ModelArn = String
+
+    alias ModelDescription = NamedTuple(
+      "ModelVersion" : (ModelVersion)?,
+      "ModelArn" : (ModelArn)?,
+      "CreationTimestamp" : (DateTime)?,
+      "Description" : (ModelDescriptionMessage)?,
+      "Status" : (ModelStatus)?,
+      "StatusMessage" : (ModelStatusMessage)?,
+      "Performance" : (ModelPerformance)?,
+      "OutputConfig" : (OutputConfig)?,
+      "EvaluationManifest" : (OutputS3Object)?,
+      "EvaluationResult" : (OutputS3Object)?,
+      "EvaluationEndTimestamp" : (DateTime)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ModelDescriptionMessage = String
+
+    alias ModelHostingStatus = String
+
+    alias ModelMetadata = NamedTuple(
+      "CreationTimestamp" : (DateTime)?,
+      "ModelVersion" : (ModelVersion)?,
+      "ModelArn" : (ModelArn)?,
+      "Description" : (ModelDescriptionMessage)?,
+      "Status" : (ModelStatus)?,
+      "StatusMessage" : (ModelStatusMessage)?,
+      "Performance" : (ModelPerformance)?
+    )
+
+    alias ModelMetadataList = Array(ModelMetadata)
+
+    alias ModelPerformance = NamedTuple(
+      "F1Score" : (Float)?,
+      "Recall" : (Float)?,
+      "Precision" : (Float)?
+    )
+
+    alias ModelStatus = String
+
+    alias ModelStatusMessage = String
+
+    alias ModelVersion = String
+
+    alias OutputConfig = NamedTuple(
+      "S3Location" : S3Location
+    )
+
+    alias OutputS3Object = NamedTuple(
+      "Bucket" : S3BucketName,
+      "Key" : S3ObjectKey
+    )
+
+    alias PageSize = Int32
+
+    alias PaginationToken = String
+
+    alias ProjectArn = String
+
+    alias ProjectDescription = NamedTuple(
+      "ProjectArn" : (ProjectArn)?,
+      "ProjectName" : (ProjectName)?,
+      "CreationTimestamp" : (DateTime)?,
+      "Datasets" : (DatasetMetadataList)?
+    )
+
+    alias ProjectMetadata = NamedTuple(
+      "ProjectArn" : (ProjectArn)?,
+      "ProjectName" : (ProjectName)?,
+      "CreationTimestamp" : (DateTime)?
+    )
+
+    alias ProjectMetadataList = Array(ProjectMetadata)
+
+    alias ProjectName = String
+
+    alias QueryString = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : ExceptionString,
+      "ResourceId" : ExceptionString,
+      "ResourceType" : ResourceType
+    )
+
+    alias ResourceType = String
+
+    alias RetryAfterSeconds = Int32
+
+    alias S3BucketName = String
+
+    alias S3KeyPrefix = String
+
+    alias S3Location = NamedTuple(
+      "Bucket" : S3BucketName,
+      "Prefix" : (S3KeyPrefix)?
+    )
+
+    alias S3ObjectKey = String
+
+    alias S3ObjectVersion = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : ExceptionString,
+      "ResourceId" : (ExceptionString)?,
+      "ResourceType" : (ResourceType)?,
+      "QuotaCode" : ExceptionString,
+      "ServiceCode" : ExceptionString
+    )
+
+    alias StartModelRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ModelVersion" : ModelVersion,
+      "MinInferenceUnits" : InferenceUnits,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias StartModelResponse = NamedTuple(
+      "Status" : (ModelHostingStatus)?
+    )
+
+    alias StopModelRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "ModelVersion" : ModelVersion,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias StopModelResponse = NamedTuple(
+      "Status" : (ModelHostingStatus)?
+    )
+
+    alias Stream = String | Array(UInt8) | IO
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : ExceptionString,
+      "QuotaCode" : (ExceptionString)?,
+      "ServiceCode" : (ExceptionString)?,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias UpdateDatasetEntriesRequest = NamedTuple(
+      "ProjectName" : ProjectName,
+      "DatasetType" : DatasetType,
+      "Changes" : DatasetChanges,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias UpdateDatasetEntriesResponse = NamedTuple(
+      "Status" : (DatasetStatus)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : ExceptionString
+    )
   end
 end

@@ -1232,5 +1232,336 @@ module Aws::MigrationHub
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ApplicationId = String
+
+    alias ApplicationIds = Array(ApplicationId)
+
+    alias ApplicationState = NamedTuple(
+      "ApplicationId" : (ApplicationId)?,
+      "ApplicationStatus" : (ApplicationStatus)?,
+      "LastUpdatedTime" : (UpdateDateTime)?
+    )
+
+    alias ApplicationStateList = Array(ApplicationState)
+
+    alias ApplicationStatus = String
+
+    alias AssociateCreatedArtifactRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "CreatedArtifact" : CreatedArtifact,
+      "DryRun" : (DryRun)?
+    )
+
+    alias AssociateCreatedArtifactResult = NamedTuple(
+      
+    )
+
+    alias AssociateDiscoveredResourceRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "DiscoveredResource" : DiscoveredResource,
+      "DryRun" : (DryRun)?
+    )
+
+    alias AssociateDiscoveredResourceResult = NamedTuple(
+      
+    )
+
+    alias ConfigurationId = String
+
+    alias CreateProgressUpdateStreamRequest = NamedTuple(
+      "ProgressUpdateStreamName" : ProgressUpdateStream,
+      "DryRun" : (DryRun)?
+    )
+
+    alias CreateProgressUpdateStreamResult = NamedTuple(
+      
+    )
+
+    alias CreatedArtifact = NamedTuple(
+      "Name" : CreatedArtifactName,
+      "Description" : (CreatedArtifactDescription)?
+    )
+
+    alias CreatedArtifactDescription = String
+
+    alias CreatedArtifactList = Array(CreatedArtifact)
+
+    alias CreatedArtifactName = String
+
+    alias DeleteProgressUpdateStreamRequest = NamedTuple(
+      "ProgressUpdateStreamName" : ProgressUpdateStream,
+      "DryRun" : (DryRun)?
+    )
+
+    alias DeleteProgressUpdateStreamResult = NamedTuple(
+      
+    )
+
+    alias DescribeApplicationStateRequest = NamedTuple(
+      "ApplicationId" : ApplicationId
+    )
+
+    alias DescribeApplicationStateResult = NamedTuple(
+      "ApplicationStatus" : (ApplicationStatus)?,
+      "LastUpdatedTime" : (UpdateDateTime)?
+    )
+
+    alias DescribeMigrationTaskRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName
+    )
+
+    alias DescribeMigrationTaskResult = NamedTuple(
+      "MigrationTask" : (MigrationTask)?
+    )
+
+    alias DisassociateCreatedArtifactRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "CreatedArtifactName" : CreatedArtifactName,
+      "DryRun" : (DryRun)?
+    )
+
+    alias DisassociateCreatedArtifactResult = NamedTuple(
+      
+    )
+
+    alias DisassociateDiscoveredResourceRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "ConfigurationId" : ConfigurationId,
+      "DryRun" : (DryRun)?
+    )
+
+    alias DisassociateDiscoveredResourceResult = NamedTuple(
+      
+    )
+
+    alias DiscoveredResource = NamedTuple(
+      "ConfigurationId" : ConfigurationId,
+      "Description" : (DiscoveredResourceDescription)?
+    )
+
+    alias DiscoveredResourceDescription = String
+
+    alias DiscoveredResourceList = Array(DiscoveredResource)
+
+    alias DryRun = Bool
+
+    alias DryRunOperation = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias HomeRegionNotSetException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ImportMigrationTaskRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "DryRun" : (DryRun)?
+    )
+
+    alias ImportMigrationTaskResult = NamedTuple(
+      
+    )
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LatestResourceAttributeList = Array(ResourceAttribute)
+
+    alias ListApplicationStatesRequest = NamedTuple(
+      "ApplicationIds" : (ApplicationIds)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListApplicationStatesResult = NamedTuple(
+      "ApplicationStateList" : (ApplicationStateList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListCreatedArtifactsRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResultsCreatedArtifacts)?
+    )
+
+    alias ListCreatedArtifactsResult = NamedTuple(
+      "NextToken" : (Token)?,
+      "CreatedArtifactList" : (CreatedArtifactList)?
+    )
+
+    alias ListDiscoveredResourcesRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResultsResources)?
+    )
+
+    alias ListDiscoveredResourcesResult = NamedTuple(
+      "NextToken" : (Token)?,
+      "DiscoveredResourceList" : (DiscoveredResourceList)?
+    )
+
+    alias ListMigrationTasksRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?,
+      "ResourceName" : (ResourceName)?
+    )
+
+    alias ListMigrationTasksResult = NamedTuple(
+      "NextToken" : (Token)?,
+      "MigrationTaskSummaryList" : (MigrationTaskSummaryList)?
+    )
+
+    alias ListProgressUpdateStreamsRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListProgressUpdateStreamsResult = NamedTuple(
+      "ProgressUpdateStreamSummaryList" : (ProgressUpdateStreamSummaryList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MaxResultsCreatedArtifacts = Int32
+
+    alias MaxResultsResources = Int32
+
+    alias MigrationTask = NamedTuple(
+      "ProgressUpdateStream" : (ProgressUpdateStream)?,
+      "MigrationTaskName" : (MigrationTaskName)?,
+      "Task" : (Task)?,
+      "UpdateDateTime" : (UpdateDateTime)?,
+      "ResourceAttributeList" : (LatestResourceAttributeList)?
+    )
+
+    alias MigrationTaskName = String
+
+    alias MigrationTaskSummary = NamedTuple(
+      "ProgressUpdateStream" : (ProgressUpdateStream)?,
+      "MigrationTaskName" : (MigrationTaskName)?,
+      "Status" : (Status)?,
+      "ProgressPercent" : (ProgressPercent)?,
+      "StatusDetail" : (StatusDetail)?,
+      "UpdateDateTime" : (UpdateDateTime)?
+    )
+
+    alias MigrationTaskSummaryList = Array(MigrationTaskSummary)
+
+    alias NextUpdateSeconds = Int32
+
+    alias NotifyApplicationStateRequest = NamedTuple(
+      "ApplicationId" : ApplicationId,
+      "Status" : ApplicationStatus,
+      "UpdateDateTime" : (UpdateDateTime)?,
+      "DryRun" : (DryRun)?
+    )
+
+    alias NotifyApplicationStateResult = NamedTuple(
+      
+    )
+
+    alias NotifyMigrationTaskStateRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "Task" : Task,
+      "UpdateDateTime" : UpdateDateTime,
+      "NextUpdateSeconds" : NextUpdateSeconds,
+      "DryRun" : (DryRun)?
+    )
+
+    alias NotifyMigrationTaskStateResult = NamedTuple(
+      
+    )
+
+    alias PolicyErrorException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ProgressPercent = Int32
+
+    alias ProgressUpdateStream = String
+
+    alias ProgressUpdateStreamSummary = NamedTuple(
+      "ProgressUpdateStreamName" : (ProgressUpdateStream)?
+    )
+
+    alias ProgressUpdateStreamSummaryList = Array(ProgressUpdateStreamSummary)
+
+    alias PutResourceAttributesRequest = NamedTuple(
+      "ProgressUpdateStream" : ProgressUpdateStream,
+      "MigrationTaskName" : MigrationTaskName,
+      "ResourceAttributeList" : ResourceAttributeList,
+      "DryRun" : (DryRun)?
+    )
+
+    alias PutResourceAttributesResult = NamedTuple(
+      
+    )
+
+    alias ResourceAttribute = NamedTuple(
+      "Type" : ResourceAttributeType,
+      "Value" : ResourceAttributeValue
+    )
+
+    alias ResourceAttributeList = Array(ResourceAttribute)
+
+    alias ResourceAttributeType = String
+
+    alias ResourceAttributeValue = String
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias RetryAfterSeconds = Int32
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Status = String
+
+    alias StatusDetail = String
+
+    alias Task = NamedTuple(
+      "Status" : Status,
+      "StatusDetail" : (StatusDetail)?,
+      "ProgressPercent" : (ProgressPercent)?
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : ErrorMessage,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias Token = String
+
+    alias UnauthorizedOperation = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UpdateDateTime = String | UInt64 | Time
   end
 end

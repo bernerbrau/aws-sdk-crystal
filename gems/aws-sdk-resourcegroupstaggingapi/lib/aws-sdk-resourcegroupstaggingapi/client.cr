@@ -358,8 +358,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload describe_report_creation(**params)
     # @param [Hash] params ({})
-    def describe_report_creation(params = {}, **options)
-      req = build_request(:describe_report_creation, params)
+    def describe_report_creation(, **options)
+      req = build_request(:describe_report_creation, )
       req.send_request(options)
     end
 
@@ -468,8 +468,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload get_compliance_summary(**params)
     # @param [Hash] params ({})
-    def get_compliance_summary(params = {}, **options)
-      req = build_request(:get_compliance_summary, params)
+    def get_compliance_summary(, **options)
+      req = build_request(:get_compliance_summary, )
       req.send_request(options)
     end
 
@@ -656,8 +656,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload get_resources(**params)
     # @param [Hash] params ({})
-    def get_resources(params = {}, **options)
-      req = build_request(:get_resources, params)
+    def get_resources(, **options)
+      req = build_request(:get_resources, )
       req.send_request(options)
     end
 
@@ -692,8 +692,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload get_tag_keys(**params)
     # @param [Hash] params ({})
-    def get_tag_keys(params = {}, **options)
-      req = build_request(:get_tag_keys, params)
+    def get_tag_keys(, **options)
+      req = build_request(:get_tag_keys, )
       req.send_request(options)
     end
 
@@ -734,8 +734,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload get_tag_values(**params)
     # @param [Hash] params ({})
-    def get_tag_values(params = {}, **options)
-      req = build_request(:get_tag_values, params)
+    def get_tag_values(, **options)
+      req = build_request(:get_tag_values, )
       req.send_request(options)
     end
 
@@ -771,8 +771,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload start_report_creation(**params)
     # @param [Hash] params ({})
-    def start_report_creation(params = {}, **options)
-      req = build_request(:start_report_creation, params)
+    def start_report_creation(, **options)
+      req = build_request(:start_report_creation, )
       req.send_request(options)
     end
 
@@ -839,8 +839,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload tag_resources(**params)
     # @param [Hash] params ({})
-    def tag_resources(params = {}, **options)
-      req = build_request(:tag_resources, params)
+    def tag_resources(, **options)
+      req = build_request(:tag_resources, )
       req.send_request(options)
     end
 
@@ -895,8 +895,8 @@ module Aws::ResourceGroupsTaggingAPI
     #
     # @overload untag_resources(**params)
     # @param [Hash] params ({})
-    def untag_resources(params = {}, **options)
-      req = build_request(:untag_resources, params)
+    def untag_resources(, **options)
+      req = build_request(:untag_resources, )
       req.send_request(options)
     end
 

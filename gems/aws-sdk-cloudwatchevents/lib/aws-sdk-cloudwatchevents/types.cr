@@ -3627,5 +3627,879 @@ module Aws::CloudWatchEvents
       include Aws::Structure
     end
 
+    alias AccountId = String
+
+    alias Action = String
+
+    alias ActivateEventSourceRequest = NamedTuple(
+      "Name" : EventSourceName
+    )
+
+    alias Archive = NamedTuple(
+      "ArchiveName" : (ArchiveName)?,
+      "EventSourceArn" : (Arn)?,
+      "State" : (ArchiveState)?,
+      "StateReason" : (ArchiveStateReason)?,
+      "RetentionDays" : (RetentionDays)?,
+      "SizeBytes" : (Long)?,
+      "EventCount" : (Long)?,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias ArchiveArn = String
+
+    alias ArchiveDescription = String
+
+    alias ArchiveName = String
+
+    alias ArchiveResponseList = Array(Archive)
+
+    alias ArchiveState = String
+
+    alias ArchiveStateReason = String
+
+    alias Arn = String
+
+    alias AssignPublicIp = String
+
+    alias AwsVpcConfiguration = NamedTuple(
+      "Subnets" : StringList,
+      "SecurityGroups" : (StringList)?,
+      "AssignPublicIp" : (AssignPublicIp)?
+    )
+
+    alias BatchArrayProperties = NamedTuple(
+      "Size" : (Integer)?
+    )
+
+    alias BatchParameters = NamedTuple(
+      "JobDefinition" : String,
+      "JobName" : String,
+      "ArrayProperties" : (BatchArrayProperties)?,
+      "RetryStrategy" : (BatchRetryStrategy)?
+    )
+
+    alias BatchRetryStrategy = NamedTuple(
+      "Attempts" : (Integer)?
+    )
+
+    alias Boolean = Bool
+
+    alias CancelReplayRequest = NamedTuple(
+      "ReplayName" : ReplayName
+    )
+
+    alias CancelReplayResponse = NamedTuple(
+      "ReplayArn" : (ReplayArn)?,
+      "State" : (ReplayState)?,
+      "StateReason" : (ReplayStateReason)?
+    )
+
+    alias ConcurrentModificationException = NamedTuple(
+      
+    )
+
+    alias Condition = NamedTuple(
+      "Type" : String,
+      "Key" : String,
+      "Value" : String
+    )
+
+    alias CreateArchiveRequest = NamedTuple(
+      "ArchiveName" : ArchiveName,
+      "EventSourceArn" : Arn,
+      "Description" : (ArchiveDescription)?,
+      "EventPattern" : (EventPattern)?,
+      "RetentionDays" : (RetentionDays)?
+    )
+
+    alias CreateArchiveResponse = NamedTuple(
+      "ArchiveArn" : (ArchiveArn)?,
+      "State" : (ArchiveState)?,
+      "StateReason" : (ArchiveStateReason)?,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias CreateEventBusRequest = NamedTuple(
+      "Name" : EventBusName,
+      "EventSourceName" : (EventSourceName)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEventBusResponse = NamedTuple(
+      "EventBusArn" : (String)?
+    )
+
+    alias CreatePartnerEventSourceRequest = NamedTuple(
+      "Name" : EventSourceName,
+      "Account" : AccountId
+    )
+
+    alias CreatePartnerEventSourceResponse = NamedTuple(
+      "EventSourceArn" : (String)?
+    )
+
+    alias CreatedBy = String
+
+    alias Database = String
+
+    alias DbUser = String
+
+    alias DeactivateEventSourceRequest = NamedTuple(
+      "Name" : EventSourceName
+    )
+
+    alias DeadLetterConfig = NamedTuple(
+      "Arn" : (ResourceArn)?
+    )
+
+    alias DeleteArchiveRequest = NamedTuple(
+      "ArchiveName" : ArchiveName
+    )
+
+    alias DeleteArchiveResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEventBusRequest = NamedTuple(
+      "Name" : EventBusName
+    )
+
+    alias DeletePartnerEventSourceRequest = NamedTuple(
+      "Name" : EventSourceName,
+      "Account" : AccountId
+    )
+
+    alias DeleteRuleRequest = NamedTuple(
+      "Name" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?,
+      "Force" : (Boolean)?
+    )
+
+    alias DescribeArchiveRequest = NamedTuple(
+      "ArchiveName" : ArchiveName
+    )
+
+    alias DescribeArchiveResponse = NamedTuple(
+      "ArchiveArn" : (ArchiveArn)?,
+      "ArchiveName" : (ArchiveName)?,
+      "EventSourceArn" : (Arn)?,
+      "Description" : (ArchiveDescription)?,
+      "EventPattern" : (EventPattern)?,
+      "State" : (ArchiveState)?,
+      "StateReason" : (ArchiveStateReason)?,
+      "RetentionDays" : (RetentionDays)?,
+      "SizeBytes" : (Long)?,
+      "EventCount" : (Long)?,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias DescribeEventBusRequest = NamedTuple(
+      "Name" : (EventBusNameOrArn)?
+    )
+
+    alias DescribeEventBusResponse = NamedTuple(
+      "Name" : (String)?,
+      "Arn" : (String)?,
+      "Policy" : (String)?
+    )
+
+    alias DescribeEventSourceRequest = NamedTuple(
+      "Name" : EventSourceName
+    )
+
+    alias DescribeEventSourceResponse = NamedTuple(
+      "Arn" : (String)?,
+      "CreatedBy" : (String)?,
+      "CreationTime" : (Timestamp)?,
+      "ExpirationTime" : (Timestamp)?,
+      "Name" : (String)?,
+      "State" : (EventSourceState)?
+    )
+
+    alias DescribePartnerEventSourceRequest = NamedTuple(
+      "Name" : EventSourceName
+    )
+
+    alias DescribePartnerEventSourceResponse = NamedTuple(
+      "Arn" : (String)?,
+      "Name" : (String)?
+    )
+
+    alias DescribeReplayRequest = NamedTuple(
+      "ReplayName" : ReplayName
+    )
+
+    alias DescribeReplayResponse = NamedTuple(
+      "ReplayName" : (ReplayName)?,
+      "ReplayArn" : (ReplayArn)?,
+      "Description" : (ReplayDescription)?,
+      "State" : (ReplayState)?,
+      "StateReason" : (ReplayStateReason)?,
+      "EventSourceArn" : (Arn)?,
+      "Destination" : (ReplayDestination)?,
+      "EventStartTime" : (Timestamp)?,
+      "EventEndTime" : (Timestamp)?,
+      "EventLastReplayedTime" : (Timestamp)?,
+      "ReplayStartTime" : (Timestamp)?,
+      "ReplayEndTime" : (Timestamp)?
+    )
+
+    alias DescribeRuleRequest = NamedTuple(
+      "Name" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?
+    )
+
+    alias DescribeRuleResponse = NamedTuple(
+      "Name" : (RuleName)?,
+      "Arn" : (RuleArn)?,
+      "EventPattern" : (EventPattern)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "State" : (RuleState)?,
+      "Description" : (RuleDescription)?,
+      "RoleArn" : (RoleArn)?,
+      "ManagedBy" : (ManagedBy)?,
+      "EventBusName" : (EventBusName)?,
+      "CreatedBy" : (CreatedBy)?
+    )
+
+    alias DisableRuleRequest = NamedTuple(
+      "Name" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?
+    )
+
+    alias EcsParameters = NamedTuple(
+      "TaskDefinitionArn" : Arn,
+      "TaskCount" : (LimitMin1)?,
+      "LaunchType" : (LaunchType)?,
+      "NetworkConfiguration" : (NetworkConfiguration)?,
+      "PlatformVersion" : (String)?,
+      "Group" : (String)?
+    )
+
+    alias EnableRuleRequest = NamedTuple(
+      "Name" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias EventBus = NamedTuple(
+      "Name" : (String)?,
+      "Arn" : (String)?,
+      "Policy" : (String)?
+    )
+
+    alias EventBusList = Array(EventBus)
+
+    alias EventBusName = String
+
+    alias EventBusNameOrArn = String
+
+    alias EventId = String
+
+    alias EventPattern = String
+
+    alias EventResource = String
+
+    alias EventResourceList = Array(EventResource)
+
+    alias EventSource = NamedTuple(
+      "Arn" : (String)?,
+      "CreatedBy" : (String)?,
+      "CreationTime" : (Timestamp)?,
+      "ExpirationTime" : (Timestamp)?,
+      "Name" : (String)?,
+      "State" : (EventSourceState)?
+    )
+
+    alias EventSourceList = Array(EventSource)
+
+    alias EventSourceName = String
+
+    alias EventSourceNamePrefix = String
+
+    alias EventSourceState = String
+
+    alias EventTime = String | UInt64 | Time
+
+    alias HeaderKey = String
+
+    alias HeaderParametersMap = Hash(HeaderKey,HeaderValue)
+
+    alias HeaderValue = String
+
+    alias HttpParameters = NamedTuple(
+      "PathParameterValues" : (PathParameterList)?,
+      "HeaderParameters" : (HeaderParametersMap)?,
+      "QueryStringParameters" : (QueryStringParametersMap)?
+    )
+
+    alias IllegalStatusException = NamedTuple(
+      
+    )
+
+    alias InputTransformer = NamedTuple(
+      "InputPathsMap" : (TransformerPaths)?,
+      "InputTemplate" : TransformerInput
+    )
+
+    alias InputTransformerPathKey = String
+
+    alias Integer = Int32
+
+    alias InternalException = NamedTuple(
+      
+    )
+
+    alias InvalidEventPatternException = NamedTuple(
+      
+    )
+
+    alias InvalidStateException = NamedTuple(
+      
+    )
+
+    alias KinesisParameters = NamedTuple(
+      "PartitionKeyPath" : TargetPartitionKeyPath
+    )
+
+    alias LaunchType = String
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias LimitMax100 = Int32
+
+    alias LimitMin1 = Int32
+
+    alias ListArchivesRequest = NamedTuple(
+      "NamePrefix" : (ArchiveName)?,
+      "EventSourceArn" : (Arn)?,
+      "State" : (ArchiveState)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListArchivesResponse = NamedTuple(
+      "Archives" : (ArchiveResponseList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEventBusesRequest = NamedTuple(
+      "NamePrefix" : (EventBusName)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListEventBusesResponse = NamedTuple(
+      "EventBuses" : (EventBusList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEventSourcesRequest = NamedTuple(
+      "NamePrefix" : (EventSourceNamePrefix)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListEventSourcesResponse = NamedTuple(
+      "EventSources" : (EventSourceList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPartnerEventSourceAccountsRequest = NamedTuple(
+      "EventSourceName" : EventSourceName,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListPartnerEventSourceAccountsResponse = NamedTuple(
+      "PartnerEventSourceAccounts" : (PartnerEventSourceAccountList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPartnerEventSourcesRequest = NamedTuple(
+      "NamePrefix" : PartnerEventSourceNamePrefix,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListPartnerEventSourcesResponse = NamedTuple(
+      "PartnerEventSources" : (PartnerEventSourceList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListReplaysRequest = NamedTuple(
+      "NamePrefix" : (ReplayName)?,
+      "State" : (ReplayState)?,
+      "EventSourceArn" : (Arn)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListReplaysResponse = NamedTuple(
+      "Replays" : (ReplayList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRuleNamesByTargetRequest = NamedTuple(
+      "TargetArn" : TargetArn,
+      "EventBusName" : (EventBusNameOrArn)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListRuleNamesByTargetResponse = NamedTuple(
+      "RuleNames" : (RuleNameList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRulesRequest = NamedTuple(
+      "NamePrefix" : (RuleName)?,
+      "EventBusName" : (EventBusNameOrArn)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListRulesResponse = NamedTuple(
+      "Rules" : (RuleResponseList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListTargetsByRuleRequest = NamedTuple(
+      "Rule" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?,
+      "NextToken" : (NextToken)?,
+      "Limit" : (LimitMax100)?
+    )
+
+    alias ListTargetsByRuleResponse = NamedTuple(
+      "Targets" : (TargetList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Long = Int64
+
+    alias ManagedBy = String
+
+    alias ManagedRuleException = NamedTuple(
+      
+    )
+
+    alias MaximumEventAgeInSeconds = Int32
+
+    alias MaximumRetryAttempts = Int32
+
+    alias MessageGroupId = String
+
+    alias NetworkConfiguration = NamedTuple(
+      "awsvpcConfiguration" : (AwsVpcConfiguration)?
+    )
+
+    alias NextToken = String
+
+    alias NonPartnerEventBusName = String
+
+    alias NonPartnerEventBusNameOrArn = String
+
+    alias OperationDisabledException = NamedTuple(
+      
+    )
+
+    alias PartnerEventSource = NamedTuple(
+      "Arn" : (String)?,
+      "Name" : (String)?
+    )
+
+    alias PartnerEventSourceAccount = NamedTuple(
+      "Account" : (AccountId)?,
+      "CreationTime" : (Timestamp)?,
+      "ExpirationTime" : (Timestamp)?,
+      "State" : (EventSourceState)?
+    )
+
+    alias PartnerEventSourceAccountList = Array(PartnerEventSourceAccount)
+
+    alias PartnerEventSourceList = Array(PartnerEventSource)
+
+    alias PartnerEventSourceNamePrefix = String
+
+    alias PathParameter = String
+
+    alias PathParameterList = Array(PathParameter)
+
+    alias PolicyLengthExceededException = NamedTuple(
+      
+    )
+
+    alias Principal = String
+
+    alias PutEventsRequest = NamedTuple(
+      "Entries" : PutEventsRequestEntryList
+    )
+
+    alias PutEventsRequestEntry = NamedTuple(
+      "Time" : (EventTime)?,
+      "Source" : (String)?,
+      "Resources" : (EventResourceList)?,
+      "DetailType" : (String)?,
+      "Detail" : (String)?,
+      "EventBusName" : (NonPartnerEventBusNameOrArn)?
+    )
+
+    alias PutEventsRequestEntryList = Array(PutEventsRequestEntry)
+
+    alias PutEventsResponse = NamedTuple(
+      "FailedEntryCount" : (Integer)?,
+      "Entries" : (PutEventsResultEntryList)?
+    )
+
+    alias PutEventsResultEntry = NamedTuple(
+      "EventId" : (EventId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias PutEventsResultEntryList = Array(PutEventsResultEntry)
+
+    alias PutPartnerEventsRequest = NamedTuple(
+      "Entries" : PutPartnerEventsRequestEntryList
+    )
+
+    alias PutPartnerEventsRequestEntry = NamedTuple(
+      "Time" : (EventTime)?,
+      "Source" : (EventSourceName)?,
+      "Resources" : (EventResourceList)?,
+      "DetailType" : (String)?,
+      "Detail" : (String)?
+    )
+
+    alias PutPartnerEventsRequestEntryList = Array(PutPartnerEventsRequestEntry)
+
+    alias PutPartnerEventsResponse = NamedTuple(
+      "FailedEntryCount" : (Integer)?,
+      "Entries" : (PutPartnerEventsResultEntryList)?
+    )
+
+    alias PutPartnerEventsResultEntry = NamedTuple(
+      "EventId" : (EventId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias PutPartnerEventsResultEntryList = Array(PutPartnerEventsResultEntry)
+
+    alias PutPermissionRequest = NamedTuple(
+      "EventBusName" : (NonPartnerEventBusName)?,
+      "Action" : (Action)?,
+      "Principal" : (Principal)?,
+      "StatementId" : (StatementId)?,
+      "Condition" : (Condition)?,
+      "Policy" : (String)?
+    )
+
+    alias PutRuleRequest = NamedTuple(
+      "Name" : RuleName,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "EventPattern" : (EventPattern)?,
+      "State" : (RuleState)?,
+      "Description" : (RuleDescription)?,
+      "RoleArn" : (RoleArn)?,
+      "Tags" : (TagList)?,
+      "EventBusName" : (EventBusNameOrArn)?
+    )
+
+    alias PutRuleResponse = NamedTuple(
+      "RuleArn" : (RuleArn)?
+    )
+
+    alias PutTargetsRequest = NamedTuple(
+      "Rule" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?,
+      "Targets" : TargetList
+    )
+
+    alias PutTargetsResponse = NamedTuple(
+      "FailedEntryCount" : (Integer)?,
+      "FailedEntries" : (PutTargetsResultEntryList)?
+    )
+
+    alias PutTargetsResultEntry = NamedTuple(
+      "TargetId" : (TargetId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias PutTargetsResultEntryList = Array(PutTargetsResultEntry)
+
+    alias QueryStringKey = String
+
+    alias QueryStringParametersMap = Hash(QueryStringKey,QueryStringValue)
+
+    alias QueryStringValue = String
+
+    alias RedshiftDataParameters = NamedTuple(
+      "SecretManagerArn" : (RedshiftSecretManagerArn)?,
+      "Database" : Database,
+      "DbUser" : (DbUser)?,
+      "Sql" : Sql,
+      "StatementName" : (StatementName)?,
+      "WithEvent" : (Boolean)?
+    )
+
+    alias RedshiftSecretManagerArn = String
+
+    alias RemovePermissionRequest = NamedTuple(
+      "StatementId" : (StatementId)?,
+      "RemoveAllPermissions" : (Boolean)?,
+      "EventBusName" : (NonPartnerEventBusName)?
+    )
+
+    alias RemoveTargetsRequest = NamedTuple(
+      "Rule" : RuleName,
+      "EventBusName" : (EventBusNameOrArn)?,
+      "Ids" : TargetIdList,
+      "Force" : (Boolean)?
+    )
+
+    alias RemoveTargetsResponse = NamedTuple(
+      "FailedEntryCount" : (Integer)?,
+      "FailedEntries" : (RemoveTargetsResultEntryList)?
+    )
+
+    alias RemoveTargetsResultEntry = NamedTuple(
+      "TargetId" : (TargetId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias RemoveTargetsResultEntryList = Array(RemoveTargetsResultEntry)
+
+    alias Replay = NamedTuple(
+      "ReplayName" : (ReplayName)?,
+      "EventSourceArn" : (Arn)?,
+      "State" : (ReplayState)?,
+      "StateReason" : (ReplayStateReason)?,
+      "EventStartTime" : (Timestamp)?,
+      "EventEndTime" : (Timestamp)?,
+      "EventLastReplayedTime" : (Timestamp)?,
+      "ReplayStartTime" : (Timestamp)?,
+      "ReplayEndTime" : (Timestamp)?
+    )
+
+    alias ReplayArn = String
+
+    alias ReplayDescription = String
+
+    alias ReplayDestination = NamedTuple(
+      "Arn" : Arn,
+      "FilterArns" : (ReplayDestinationFilters)?
+    )
+
+    alias ReplayDestinationFilters = Array(Arn)
+
+    alias ReplayList = Array(Replay)
+
+    alias ReplayName = String
+
+    alias ReplayState = String
+
+    alias ReplayStateReason = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias RetentionDays = Int32
+
+    alias RetryPolicy = NamedTuple(
+      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
+      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?
+    )
+
+    alias RoleArn = String
+
+    alias Rule = NamedTuple(
+      "Name" : (RuleName)?,
+      "Arn" : (RuleArn)?,
+      "EventPattern" : (EventPattern)?,
+      "State" : (RuleState)?,
+      "Description" : (RuleDescription)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "RoleArn" : (RoleArn)?,
+      "ManagedBy" : (ManagedBy)?,
+      "EventBusName" : (EventBusName)?
+    )
+
+    alias RuleArn = String
+
+    alias RuleDescription = String
+
+    alias RuleName = String
+
+    alias RuleNameList = Array(RuleName)
+
+    alias RuleResponseList = Array(Rule)
+
+    alias RuleState = String
+
+    alias RunCommandParameters = NamedTuple(
+      "RunCommandTargets" : RunCommandTargets
+    )
+
+    alias RunCommandTarget = NamedTuple(
+      "Key" : RunCommandTargetKey,
+      "Values" : RunCommandTargetValues
+    )
+
+    alias RunCommandTargetKey = String
+
+    alias RunCommandTargetValue = String
+
+    alias RunCommandTargetValues = Array(RunCommandTargetValue)
+
+    alias RunCommandTargets = Array(RunCommandTarget)
+
+    alias ScheduleExpression = String
+
+    alias Sql = String
+
+    alias SqsParameters = NamedTuple(
+      "MessageGroupId" : (MessageGroupId)?
+    )
+
+    alias StartReplayRequest = NamedTuple(
+      "ReplayName" : ReplayName,
+      "Description" : (ReplayDescription)?,
+      "EventSourceArn" : Arn,
+      "EventStartTime" : Timestamp,
+      "EventEndTime" : Timestamp,
+      "Destination" : ReplayDestination
+    )
+
+    alias StartReplayResponse = NamedTuple(
+      "ReplayArn" : (ReplayArn)?,
+      "State" : (ReplayState)?,
+      "StateReason" : (ReplayStateReason)?,
+      "ReplayStartTime" : (Timestamp)?
+    )
+
+    alias StatementId = String
+
+    alias StatementName = String
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : Arn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Target = NamedTuple(
+      "Id" : TargetId,
+      "Arn" : TargetArn,
+      "RoleArn" : (RoleArn)?,
+      "Input" : (TargetInput)?,
+      "InputPath" : (TargetInputPath)?,
+      "InputTransformer" : (InputTransformer)?,
+      "KinesisParameters" : (KinesisParameters)?,
+      "RunCommandParameters" : (RunCommandParameters)?,
+      "EcsParameters" : (EcsParameters)?,
+      "BatchParameters" : (BatchParameters)?,
+      "SqsParameters" : (SqsParameters)?,
+      "HttpParameters" : (HttpParameters)?,
+      "RedshiftDataParameters" : (RedshiftDataParameters)?,
+      "DeadLetterConfig" : (DeadLetterConfig)?,
+      "RetryPolicy" : (RetryPolicy)?
+    )
+
+    alias TargetArn = String
+
+    alias TargetId = String
+
+    alias TargetIdList = Array(TargetId)
+
+    alias TargetInput = String
+
+    alias TargetInputPath = String
+
+    alias TargetList = Array(Target)
+
+    alias TargetPartitionKeyPath = String
+
+    alias TestEventPatternRequest = NamedTuple(
+      "EventPattern" : EventPattern,
+      "Event" : String
+    )
+
+    alias TestEventPatternResponse = NamedTuple(
+      "Result" : (Boolean)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TransformerInput = String
+
+    alias TransformerPaths = Hash(InputTransformerPathKey,TargetInputPath)
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateArchiveRequest = NamedTuple(
+      "ArchiveName" : ArchiveName,
+      "Description" : (ArchiveDescription)?,
+      "EventPattern" : (EventPattern)?,
+      "RetentionDays" : (RetentionDays)?
+    )
+
+    alias UpdateArchiveResponse = NamedTuple(
+      "ArchiveArn" : (ArchiveArn)?,
+      "State" : (ArchiveState)?,
+      "StateReason" : (ArchiveStateReason)?,
+      "CreationTime" : (Timestamp)?
+    )
   end
 end

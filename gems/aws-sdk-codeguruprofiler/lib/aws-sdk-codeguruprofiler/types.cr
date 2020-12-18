@@ -2269,5 +2269,510 @@ module Aws::CodeGuruProfiler
       include Aws::Structure
     end
 
+    alias ActionGroup = String
+
+    alias AddNotificationChannelsRequest = NamedTuple(
+      "channels" : Channels,
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias AddNotificationChannelsResponse = NamedTuple(
+      "notificationConfiguration" : (NotificationConfiguration)?
+    )
+
+    alias AgentConfiguration = NamedTuple(
+      "agentParameters" : (AgentParameters)?,
+      "periodInSeconds" : Integer,
+      "shouldProfile" : Boolean
+    )
+
+    alias AgentOrchestrationConfig = NamedTuple(
+      "profilingEnabled" : Boolean
+    )
+
+    alias AgentParameterField = String
+
+    alias AgentParameters = Hash(AgentParameterField,String)
+
+    alias AgentProfile = String | Array(UInt8) | IO
+
+    alias AggregatedProfile = String | Array(UInt8) | IO
+
+    alias AggregatedProfileTime = NamedTuple(
+      "period" : (AggregationPeriod)?,
+      "start" : (Timestamp)?
+    )
+
+    alias AggregationPeriod = String
+
+    alias Anomalies = Array(Anomaly)
+
+    alias Anomaly = NamedTuple(
+      "instances" : AnomalyInstances,
+      "metric" : Metric,
+      "reason" : String
+    )
+
+    alias AnomalyInstance = NamedTuple(
+      "endTime" : (Timestamp)?,
+      "id" : String,
+      "startTime" : Timestamp,
+      "userFeedback" : (UserFeedback)?
+    )
+
+    alias AnomalyInstanceId = String
+
+    alias AnomalyInstances = Array(AnomalyInstance)
+
+    alias BatchGetFrameMetricDataRequest = NamedTuple(
+      "endTime" : (Timestamp)?,
+      "frameMetrics" : (FrameMetrics)?,
+      "period" : (Period)?,
+      "profilingGroupName" : ProfilingGroupName,
+      "startTime" : (Timestamp)?,
+      "targetResolution" : (AggregationPeriod)?
+    )
+
+    alias BatchGetFrameMetricDataResponse = NamedTuple(
+      "endTime" : Timestamp,
+      "endTimes" : ListOfTimestamps,
+      "frameMetricData" : FrameMetricData,
+      "resolution" : AggregationPeriod,
+      "startTime" : Timestamp,
+      "unprocessedEndTimes" : UnprocessedEndTimeMap
+    )
+
+    alias Boolean = Bool
+
+    alias Channel = NamedTuple(
+      "eventPublishers" : EventPublishers,
+      "id" : (ChannelId)?,
+      "uri" : ChannelUri
+    )
+
+    alias ChannelId = String
+
+    alias ChannelUri = String
+
+    alias Channels = Array(Channel)
+
+    alias ClientToken = String
+
+    alias ComputePlatform = String
+
+    alias ConfigureAgentRequest = NamedTuple(
+      "fleetInstanceId" : (FleetInstanceId)?,
+      "metadata" : (Metadata)?,
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias ConfigureAgentResponse = NamedTuple(
+      "configuration" : AgentConfiguration
+    )
+
+    alias ConflictException = NamedTuple(
+      "message" : String
+    )
+
+    alias CreateProfilingGroupRequest = NamedTuple(
+      "agentOrchestrationConfig" : (AgentOrchestrationConfig)?,
+      "clientToken" : ClientToken,
+      "computePlatform" : (ComputePlatform)?,
+      "profilingGroupName" : ProfilingGroupName,
+      "tags" : (TagsMap)?
+    )
+
+    alias CreateProfilingGroupResponse = NamedTuple(
+      "profilingGroup" : ProfilingGroupDescription
+    )
+
+    alias DeleteProfilingGroupRequest = NamedTuple(
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias DeleteProfilingGroupResponse = NamedTuple(
+      
+    )
+
+    alias DescribeProfilingGroupRequest = NamedTuple(
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias DescribeProfilingGroupResponse = NamedTuple(
+      "profilingGroup" : ProfilingGroupDescription
+    )
+
+    alias Double = Float64
+
+    alias EventPublisher = String
+
+    alias EventPublishers = Array(EventPublisher)
+
+    alias FeedbackType = String
+
+    alias FindingsReportId = String
+
+    alias FindingsReportSummaries = Array(FindingsReportSummary)
+
+    alias FindingsReportSummary = NamedTuple(
+      "id" : (FindingsReportId)?,
+      "profileEndTime" : (Timestamp)?,
+      "profileStartTime" : (Timestamp)?,
+      "profilingGroupName" : (String)?,
+      "totalNumberOfFindings" : (Integer)?
+    )
+
+    alias FleetInstanceId = String
+
+    alias FrameMetric = NamedTuple(
+      "frameName" : String,
+      "threadStates" : ThreadStates,
+      "type" : MetricType
+    )
+
+    alias FrameMetricData = Array(FrameMetricDatum)
+
+    alias FrameMetricDatum = NamedTuple(
+      "frameMetric" : FrameMetric,
+      "values" : FrameMetricValues
+    )
+
+    alias FrameMetricValues = Array(Double)
+
+    alias FrameMetrics = Array(FrameMetric)
+
+    alias GetFindingsReportAccountSummaryRequest = NamedTuple(
+      "dailyReportsOnly" : (Boolean)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias GetFindingsReportAccountSummaryResponse = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "reportSummaries" : FindingsReportSummaries
+    )
+
+    alias GetNotificationConfigurationRequest = NamedTuple(
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias GetNotificationConfigurationResponse = NamedTuple(
+      "notificationConfiguration" : NotificationConfiguration
+    )
+
+    alias GetPolicyRequest = NamedTuple(
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias GetPolicyResponse = NamedTuple(
+      "policy" : String,
+      "revisionId" : RevisionId
+    )
+
+    alias GetProfileRequest = NamedTuple(
+      "accept" : (String)?,
+      "endTime" : (Timestamp)?,
+      "maxDepth" : (MaxDepth)?,
+      "period" : (Period)?,
+      "profilingGroupName" : ProfilingGroupName,
+      "startTime" : (Timestamp)?
+    )
+
+    alias GetProfileResponse = NamedTuple(
+      "contentEncoding" : (String)?,
+      "contentType" : String,
+      "profile" : AggregatedProfile
+    )
+
+    alias GetRecommendationsRequest = NamedTuple(
+      "endTime" : Timestamp,
+      "locale" : (Locale)?,
+      "profilingGroupName" : ProfilingGroupName,
+      "startTime" : Timestamp
+    )
+
+    alias GetRecommendationsResponse = NamedTuple(
+      "anomalies" : Anomalies,
+      "profileEndTime" : Timestamp,
+      "profileStartTime" : Timestamp,
+      "profilingGroupName" : ProfilingGroupName,
+      "recommendations" : Recommendations
+    )
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "message" : String
+    )
+
+    alias ListFindingsReportsRequest = NamedTuple(
+      "dailyReportsOnly" : (Boolean)?,
+      "endTime" : Timestamp,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?,
+      "profilingGroupName" : ProfilingGroupName,
+      "startTime" : Timestamp
+    )
+
+    alias ListFindingsReportsResponse = NamedTuple(
+      "findingsReportSummaries" : FindingsReportSummaries,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListOfTimestamps = Array(TimestampStructure)
+
+    alias ListProfileTimesRequest = NamedTuple(
+      "endTime" : Timestamp,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?,
+      "orderBy" : (OrderBy)?,
+      "period" : AggregationPeriod,
+      "profilingGroupName" : ProfilingGroupName,
+      "startTime" : Timestamp
+    )
+
+    alias ListProfileTimesResponse = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "profileTimes" : ProfileTimes
+    )
+
+    alias ListProfilingGroupsRequest = NamedTuple(
+      "includeDescription" : (Boolean)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListProfilingGroupsResponse = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "profilingGroupNames" : ProfilingGroupNames,
+      "profilingGroups" : (ProfilingGroupDescriptions)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ProfilingGroupArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagsMap)?
+    )
+
+    alias Locale = String
+
+    alias Match = NamedTuple(
+      "frameAddress" : (String)?,
+      "targetFramesIndex" : (Integer)?,
+      "thresholdBreachValue" : (Double)?
+    )
+
+    alias Matches = Array(Match)
+
+    alias MaxDepth = Int32
+
+    alias MaxResults = Int32
+
+    alias Metadata = Hash(MetadataField,String)
+
+    alias MetadataField = String
+
+    alias Metric = NamedTuple(
+      "frameName" : String,
+      "threadStates" : Strings,
+      "type" : MetricType
+    )
+
+    alias MetricType = String
+
+    alias NotificationConfiguration = NamedTuple(
+      "channels" : (Channels)?
+    )
+
+    alias OrderBy = String
+
+    alias PaginationToken = String
+
+    alias Pattern = NamedTuple(
+      "countersToAggregate" : (Strings)?,
+      "description" : (String)?,
+      "id" : (String)?,
+      "name" : (String)?,
+      "resolutionSteps" : (String)?,
+      "targetFrames" : (TargetFrames)?,
+      "thresholdPercent" : (Percentage)?
+    )
+
+    alias Percentage = Float64
+
+    alias Period = String
+
+    alias PostAgentProfileRequest = NamedTuple(
+      "agentProfile" : AgentProfile,
+      "contentType" : String,
+      "profileToken" : (ClientToken)?,
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias PostAgentProfileResponse = NamedTuple(
+      
+    )
+
+    alias Principal = String
+
+    alias Principals = Array(Principal)
+
+    alias ProfileTime = NamedTuple(
+      "start" : (Timestamp)?
+    )
+
+    alias ProfileTimes = Array(ProfileTime)
+
+    alias ProfilingGroupArn = String
+
+    alias ProfilingGroupDescription = NamedTuple(
+      "agentOrchestrationConfig" : (AgentOrchestrationConfig)?,
+      "arn" : (ProfilingGroupArn)?,
+      "computePlatform" : (ComputePlatform)?,
+      "createdAt" : (Timestamp)?,
+      "name" : (ProfilingGroupName)?,
+      "profilingStatus" : (ProfilingStatus)?,
+      "tags" : (TagsMap)?,
+      "updatedAt" : (Timestamp)?
+    )
+
+    alias ProfilingGroupDescriptions = Array(ProfilingGroupDescription)
+
+    alias ProfilingGroupName = String
+
+    alias ProfilingGroupNames = Array(ProfilingGroupName)
+
+    alias ProfilingStatus = NamedTuple(
+      "latestAgentOrchestratedAt" : (Timestamp)?,
+      "latestAgentProfileReportedAt" : (Timestamp)?,
+      "latestAggregatedProfile" : (AggregatedProfileTime)?
+    )
+
+    alias PutPermissionRequest = NamedTuple(
+      "actionGroup" : ActionGroup,
+      "principals" : Principals,
+      "profilingGroupName" : ProfilingGroupName,
+      "revisionId" : (RevisionId)?
+    )
+
+    alias PutPermissionResponse = NamedTuple(
+      "policy" : String,
+      "revisionId" : RevisionId
+    )
+
+    alias Recommendation = NamedTuple(
+      "allMatchesCount" : Integer,
+      "allMatchesSum" : Double,
+      "endTime" : Timestamp,
+      "pattern" : Pattern,
+      "startTime" : Timestamp,
+      "topMatches" : Matches
+    )
+
+    alias Recommendations = Array(Recommendation)
+
+    alias RemoveNotificationChannelRequest = NamedTuple(
+      "channelId" : ChannelId,
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias RemoveNotificationChannelResponse = NamedTuple(
+      "notificationConfiguration" : (NotificationConfiguration)?
+    )
+
+    alias RemovePermissionRequest = NamedTuple(
+      "actionGroup" : ActionGroup,
+      "profilingGroupName" : ProfilingGroupName,
+      "revisionId" : RevisionId
+    )
+
+    alias RemovePermissionResponse = NamedTuple(
+      "policy" : String,
+      "revisionId" : RevisionId
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : String
+    )
+
+    alias RevisionId = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : String
+    )
+
+    alias String = String
+
+    alias Strings = Array(String)
+
+    alias SubmitFeedbackRequest = NamedTuple(
+      "anomalyInstanceId" : AnomalyInstanceId,
+      "comment" : (String)?,
+      "profilingGroupName" : ProfilingGroupName,
+      "type" : FeedbackType
+    )
+
+    alias SubmitFeedbackResponse = NamedTuple(
+      
+    )
+
+    alias TagKeys = Array(String)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ProfilingGroupArn,
+      "tags" : TagsMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagsMap = Hash(String,String)
+
+    alias TargetFrame = Array(String)
+
+    alias TargetFrames = Array(TargetFrame)
+
+    alias ThreadStates = Array(String)
+
+    alias ThrottlingException = NamedTuple(
+      "message" : String
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampStructure = NamedTuple(
+      "value" : Timestamp
+    )
+
+    alias UnprocessedEndTimeMap = Hash(String,ListOfTimestamps)
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ProfilingGroupArn,
+      "tagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateProfilingGroupRequest = NamedTuple(
+      "agentOrchestrationConfig" : AgentOrchestrationConfig,
+      "profilingGroupName" : ProfilingGroupName
+    )
+
+    alias UpdateProfilingGroupResponse = NamedTuple(
+      "profilingGroup" : ProfilingGroupDescription
+    )
+
+    alias UserFeedback = NamedTuple(
+      "type" : FeedbackType
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : String
+    )
   end
 end

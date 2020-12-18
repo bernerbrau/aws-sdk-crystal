@@ -390,8 +390,8 @@ module Aws::ECR
     #
     # @overload batch_check_layer_availability(**params)
     # @param [Hash] params ({})
-    def batch_check_layer_availability(params = {}, **options)
-      req = build_request(:batch_check_layer_availability, params)
+    def batch_check_layer_availability(, **options)
+      req = build_request(:batch_check_layer_availability, )
       req.send_request(options)
     end
 
@@ -478,8 +478,8 @@ module Aws::ECR
     #
     # @overload batch_delete_image(**params)
     # @param [Hash] params ({})
-    def batch_delete_image(params = {}, **options)
-      req = build_request(:batch_delete_image, params)
+    def batch_delete_image(, **options)
+      req = build_request(:batch_delete_image, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::ECR
     #
     # @overload batch_get_image(**params)
     # @param [Hash] params ({})
-    def batch_get_image(params = {}, **options)
-      req = build_request(:batch_get_image, params)
+    def batch_get_image(, **options)
+      req = build_request(:batch_get_image, )
       req.send_request(options)
     end
 
@@ -640,8 +640,8 @@ module Aws::ECR
     #
     # @overload complete_layer_upload(**params)
     # @param [Hash] params ({})
-    def complete_layer_upload(params = {}, **options)
-      req = build_request(:complete_layer_upload, params)
+    def complete_layer_upload(, **options)
+      req = build_request(:complete_layer_upload, )
       req.send_request(options)
     end
 
@@ -741,8 +741,8 @@ module Aws::ECR
     #
     # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, **options)
-      req = build_request(:create_repository, params)
+    def create_repository(, **options)
+      req = build_request(:create_repository, )
       req.send_request(options)
     end
 
@@ -781,8 +781,8 @@ module Aws::ECR
     #
     # @overload delete_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_policy(params = {}, **options)
-      req = build_request(:delete_lifecycle_policy, params)
+    def delete_lifecycle_policy(, **options)
+      req = build_request(:delete_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -802,8 +802,8 @@ module Aws::ECR
     #
     # @overload delete_registry_policy(**params)
     # @param [Hash] params ({})
-    def delete_registry_policy(params = {}, **options)
-      req = build_request(:delete_registry_policy, params)
+    def delete_registry_policy(, **options)
+      req = build_request(:delete_registry_policy, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::ECR
     #
     # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, **options)
-      req = build_request(:delete_repository, params)
+    def delete_repository(, **options)
+      req = build_request(:delete_repository, )
       req.send_request(options)
     end
 
@@ -926,8 +926,8 @@ module Aws::ECR
     #
     # @overload delete_repository_policy(**params)
     # @param [Hash] params ({})
-    def delete_repository_policy(params = {}, **options)
-      req = build_request(:delete_repository_policy, params)
+    def delete_repository_policy(, **options)
+      req = build_request(:delete_repository_policy, )
       req.send_request(options)
     end
 
@@ -1017,8 +1017,8 @@ module Aws::ECR
     #
     # @overload describe_image_scan_findings(**params)
     # @param [Hash] params ({})
-    def describe_image_scan_findings(params = {}, **options)
-      req = build_request(:describe_image_scan_findings, params)
+    def describe_image_scan_findings(, **options)
+      req = build_request(:describe_image_scan_findings, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::ECR
     #
     # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, **options)
-      req = build_request(:describe_images, params)
+    def describe_images(, **options)
+      req = build_request(:describe_images, )
       req.send_request(options)
     end
 
@@ -1141,8 +1141,8 @@ module Aws::ECR
     #
     # @overload describe_registry(**params)
     # @param [Hash] params ({})
-    def describe_registry(params = {}, **options)
-      req = build_request(:describe_registry, params)
+    def describe_registry(, **options)
+      req = build_request(:describe_registry, )
       req.send_request(options)
     end
 
@@ -1243,8 +1243,8 @@ module Aws::ECR
     #
     # @overload describe_repositories(**params)
     # @param [Hash] params ({})
-    def describe_repositories(params = {}, **options)
-      req = build_request(:describe_repositories, params)
+    def describe_repositories(, **options)
+      req = build_request(:describe_repositories, )
       req.send_request(options)
     end
 
@@ -1309,8 +1309,8 @@ module Aws::ECR
     #
     # @overload get_authorization_token(**params)
     # @param [Hash] params ({})
-    def get_authorization_token(params = {}, **options)
-      req = build_request(:get_authorization_token, params)
+    def get_authorization_token(, **options)
+      req = build_request(:get_authorization_token, )
       req.send_request(options)
     end
 
@@ -1361,8 +1361,8 @@ module Aws::ECR
     #
     # @overload get_download_url_for_layer(**params)
     # @param [Hash] params ({})
-    def get_download_url_for_layer(params = {}, **options)
-      req = build_request(:get_download_url_for_layer, params)
+    def get_download_url_for_layer(, **options)
+      req = build_request(:get_download_url_for_layer, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::ECR
     #
     # @overload get_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy(params = {}, **options)
-      req = build_request(:get_lifecycle_policy, params)
+    def get_lifecycle_policy(, **options)
+      req = build_request(:get_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -1501,8 +1501,8 @@ module Aws::ECR
     #
     # @overload get_lifecycle_policy_preview(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy_preview(params = {}, **options)
-      req = build_request(:get_lifecycle_policy_preview, params)
+    def get_lifecycle_policy_preview(, **options)
+      req = build_request(:get_lifecycle_policy_preview, )
       req.send_request(options)
     end
 
@@ -1522,8 +1522,8 @@ module Aws::ECR
     #
     # @overload get_registry_policy(**params)
     # @param [Hash] params ({})
-    def get_registry_policy(params = {}, **options)
-      req = build_request(:get_registry_policy, params)
+    def get_registry_policy(, **options)
+      req = build_request(:get_registry_policy, )
       req.send_request(options)
     end
 
@@ -1576,8 +1576,8 @@ module Aws::ECR
     #
     # @overload get_repository_policy(**params)
     # @param [Hash] params ({})
-    def get_repository_policy(params = {}, **options)
-      req = build_request(:get_repository_policy, params)
+    def get_repository_policy(, **options)
+      req = build_request(:get_repository_policy, )
       req.send_request(options)
     end
 
@@ -1623,8 +1623,8 @@ module Aws::ECR
     #
     # @overload initiate_layer_upload(**params)
     # @param [Hash] params ({})
-    def initiate_layer_upload(params = {}, **options)
-      req = build_request(:initiate_layer_upload, params)
+    def initiate_layer_upload(, **options)
+      req = build_request(:initiate_layer_upload, )
       req.send_request(options)
     end
 
@@ -1721,8 +1721,8 @@ module Aws::ECR
     #
     # @overload list_images(**params)
     # @param [Hash] params ({})
-    def list_images(params = {}, **options)
-      req = build_request(:list_images, params)
+    def list_images(, **options)
+      req = build_request(:list_images, )
       req.send_request(options)
     end
 
@@ -1753,8 +1753,8 @@ module Aws::ECR
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1823,8 +1823,8 @@ module Aws::ECR
     #
     # @overload put_image(**params)
     # @param [Hash] params ({})
-    def put_image(params = {}, **options)
-      req = build_request(:put_image, params)
+    def put_image(, **options)
+      req = build_request(:put_image, )
       req.send_request(options)
     end
 
@@ -1871,8 +1871,8 @@ module Aws::ECR
     #
     # @overload put_image_scanning_configuration(**params)
     # @param [Hash] params ({})
-    def put_image_scanning_configuration(params = {}, **options)
-      req = build_request(:put_image_scanning_configuration, params)
+    def put_image_scanning_configuration(, **options)
+      req = build_request(:put_image_scanning_configuration, )
       req.send_request(options)
     end
 
@@ -1923,8 +1923,8 @@ module Aws::ECR
     #
     # @overload put_image_tag_mutability(**params)
     # @param [Hash] params ({})
-    def put_image_tag_mutability(params = {}, **options)
-      req = build_request(:put_image_tag_mutability, params)
+    def put_image_tag_mutability(, **options)
+      req = build_request(:put_image_tag_mutability, )
       req.send_request(options)
     end
 
@@ -1970,8 +1970,8 @@ module Aws::ECR
     #
     # @overload put_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_policy(params = {}, **options)
-      req = build_request(:put_lifecycle_policy, params)
+    def put_lifecycle_policy(, **options)
+      req = build_request(:put_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -2016,8 +2016,8 @@ module Aws::ECR
     #
     # @overload put_registry_policy(**params)
     # @param [Hash] params ({})
-    def put_registry_policy(params = {}, **options)
-      req = build_request(:put_registry_policy, params)
+    def put_registry_policy(, **options)
+      req = build_request(:put_registry_policy, )
       req.send_request(options)
     end
 
@@ -2075,8 +2075,8 @@ module Aws::ECR
     #
     # @overload put_replication_configuration(**params)
     # @param [Hash] params ({})
-    def put_replication_configuration(params = {}, **options)
-      req = build_request(:put_replication_configuration, params)
+    def put_replication_configuration(, **options)
+      req = build_request(:put_replication_configuration, )
       req.send_request(options)
     end
 
@@ -2136,8 +2136,8 @@ module Aws::ECR
     #
     # @overload set_repository_policy(**params)
     # @param [Hash] params ({})
-    def set_repository_policy(params = {}, **options)
-      req = build_request(:set_repository_policy, params)
+    def set_repository_policy(, **options)
+      req = build_request(:set_repository_policy, )
       req.send_request(options)
     end
 
@@ -2192,8 +2192,8 @@ module Aws::ECR
     #
     # @overload start_image_scan(**params)
     # @param [Hash] params ({})
-    def start_image_scan(params = {}, **options)
-      req = build_request(:start_image_scan, params)
+    def start_image_scan(, **options)
+      req = build_request(:start_image_scan, )
       req.send_request(options)
     end
 
@@ -2239,8 +2239,8 @@ module Aws::ECR
     #
     # @overload start_lifecycle_policy_preview(**params)
     # @param [Hash] params ({})
-    def start_lifecycle_policy_preview(params = {}, **options)
-      req = build_request(:start_lifecycle_policy_preview, params)
+    def start_lifecycle_policy_preview(, **options)
+      req = build_request(:start_lifecycle_policy_preview, )
       req.send_request(options)
     end
 
@@ -2276,8 +2276,8 @@ module Aws::ECR
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2304,8 +2304,8 @@ module Aws::ECR
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2374,8 +2374,8 @@ module Aws::ECR
     #
     # @overload upload_layer_part(**params)
     # @param [Hash] params ({})
-    def upload_layer_part(params = {}, **options)
-      req = build_request(:upload_layer_part, params)
+    def upload_layer_part(, **options)
+      req = build_request(:upload_layer_part, )
       req.send_request(options)
     end
 

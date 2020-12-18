@@ -528,8 +528,8 @@ module Aws::S3
     #
     # @overload abort_multipart_upload(**params)
     # @param [Hash] params ({})
-    def abort_multipart_upload(params = {}, **options)
-      req = build_request(:abort_multipart_upload, params)
+    def abort_multipart_upload(, **options)
+      req = build_request(:abort_multipart_upload, )
       req.send_request(options)
     end
 
@@ -728,8 +728,8 @@ module Aws::S3
     #
     # @overload complete_multipart_upload(**params)
     # @param [Hash] params ({})
-    def complete_multipart_upload(params = {}, **options)
-      req = build_request(:complete_multipart_upload, params)
+    def complete_multipart_upload(, **options)
+      req = build_request(:complete_multipart_upload, )
       req.send_request(options)
     end
 
@@ -1268,8 +1268,8 @@ module Aws::S3
     #
     # @overload copy_object(**params)
     # @param [Hash] params ({})
-    def copy_object(params = {}, **options)
-      req = build_request(:copy_object, params)
+    def copy_object(, **options)
+      req = build_request(:copy_object, )
       req.send_request(options)
     end
 
@@ -1471,8 +1471,8 @@ module Aws::S3
     #
     # @overload create_bucket(**params)
     # @param [Hash] params ({})
-    def create_bucket(params = {}, **options)
-      req = build_request(:create_bucket, params)
+    def create_bucket(, **options)
+      req = build_request(:create_bucket, )
       req.send_request(options)
     end
 
@@ -1967,8 +1967,8 @@ module Aws::S3
     #
     # @overload create_multipart_upload(**params)
     # @param [Hash] params ({})
-    def create_multipart_upload(params = {}, **options)
-      req = build_request(:create_multipart_upload, params)
+    def create_multipart_upload(, **options)
+      req = build_request(:create_multipart_upload, )
       req.send_request(options)
     end
 
@@ -2017,8 +2017,8 @@ module Aws::S3
     #
     # @overload delete_bucket(**params)
     # @param [Hash] params ({})
-    def delete_bucket(params = {}, **options)
-      req = build_request(:delete_bucket, params)
+    def delete_bucket(, **options)
+      req = build_request(:delete_bucket, )
       req.send_request(options)
     end
 
@@ -2079,8 +2079,8 @@ module Aws::S3
     #
     # @overload delete_bucket_analytics_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_analytics_configuration(params = {}, **options)
-      req = build_request(:delete_bucket_analytics_configuration, params)
+    def delete_bucket_analytics_configuration(, **options)
+      req = build_request(:delete_bucket_analytics_configuration, )
       req.send_request(options)
     end
 
@@ -2135,8 +2135,8 @@ module Aws::S3
     #
     # @overload delete_bucket_cors(**params)
     # @param [Hash] params ({})
-    def delete_bucket_cors(params = {}, **options)
-      req = build_request(:delete_bucket_cors, params)
+    def delete_bucket_cors(, **options)
+      req = build_request(:delete_bucket_cors, )
       req.send_request(options)
     end
 
@@ -2189,8 +2189,8 @@ module Aws::S3
     #
     # @overload delete_bucket_encryption(**params)
     # @param [Hash] params ({})
-    def delete_bucket_encryption(params = {}, **options)
-      req = build_request(:delete_bucket_encryption, params)
+    def delete_bucket_encryption(, **options)
+      req = build_request(:delete_bucket_encryption, )
       req.send_request(options)
     end
 
@@ -2251,8 +2251,8 @@ module Aws::S3
     #
     # @overload delete_bucket_intelligent_tiering_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_intelligent_tiering_configuration(params = {}, **options)
-      req = build_request(:delete_bucket_intelligent_tiering_configuration, params)
+    def delete_bucket_intelligent_tiering_configuration(, **options)
+      req = build_request(:delete_bucket_intelligent_tiering_configuration, )
       req.send_request(options)
     end
 
@@ -2312,8 +2312,8 @@ module Aws::S3
     #
     # @overload delete_bucket_inventory_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_inventory_configuration(params = {}, **options)
-      req = build_request(:delete_bucket_inventory_configuration, params)
+    def delete_bucket_inventory_configuration(, **options)
+      req = build_request(:delete_bucket_inventory_configuration, )
       req.send_request(options)
     end
 
@@ -2376,8 +2376,8 @@ module Aws::S3
     #
     # @overload delete_bucket_lifecycle(**params)
     # @param [Hash] params ({})
-    def delete_bucket_lifecycle(params = {}, **options)
-      req = build_request(:delete_bucket_lifecycle, params)
+    def delete_bucket_lifecycle(, **options)
+      req = build_request(:delete_bucket_lifecycle, )
       req.send_request(options)
     end
 
@@ -2440,8 +2440,8 @@ module Aws::S3
     #
     # @overload delete_bucket_metrics_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_metrics_configuration(params = {}, **options)
-      req = build_request(:delete_bucket_metrics_configuration, params)
+    def delete_bucket_metrics_configuration(, **options)
+      req = build_request(:delete_bucket_metrics_configuration, )
       req.send_request(options)
     end
 
@@ -2486,8 +2486,8 @@ module Aws::S3
     #
     # @overload delete_bucket_ownership_controls(**params)
     # @param [Hash] params ({})
-    def delete_bucket_ownership_controls(params = {}, **options)
-      req = build_request(:delete_bucket_ownership_controls, params)
+    def delete_bucket_ownership_controls(, **options)
+      req = build_request(:delete_bucket_ownership_controls, )
       req.send_request(options)
     end
 
@@ -2552,8 +2552,8 @@ module Aws::S3
     #
     # @overload delete_bucket_policy(**params)
     # @param [Hash] params ({})
-    def delete_bucket_policy(params = {}, **options)
-      req = build_request(:delete_bucket_policy, params)
+    def delete_bucket_policy(, **options)
+      req = build_request(:delete_bucket_policy, )
       req.send_request(options)
     end
 
@@ -2618,8 +2618,8 @@ module Aws::S3
     #
     # @overload delete_bucket_replication(**params)
     # @param [Hash] params ({})
-    def delete_bucket_replication(params = {}, **options)
-      req = build_request(:delete_bucket_replication, params)
+    def delete_bucket_replication(, **options)
+      req = build_request(:delete_bucket_replication, )
       req.send_request(options)
     end
 
@@ -2670,8 +2670,8 @@ module Aws::S3
     #
     # @overload delete_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def delete_bucket_tagging(params = {}, **options)
-      req = build_request(:delete_bucket_tagging, params)
+    def delete_bucket_tagging(, **options)
+      req = build_request(:delete_bucket_tagging, )
       req.send_request(options)
     end
 
@@ -2734,8 +2734,8 @@ module Aws::S3
     #
     # @overload delete_bucket_website(**params)
     # @param [Hash] params ({})
-    def delete_bucket_website(params = {}, **options)
-      req = build_request(:delete_bucket_website, params)
+    def delete_bucket_website(, **options)
+      req = build_request(:delete_bucket_website, )
       req.send_request(options)
     end
 
@@ -2885,8 +2885,8 @@ module Aws::S3
     #
     # @overload delete_object(**params)
     # @param [Hash] params ({})
-    def delete_object(params = {}, **options)
-      req = build_request(:delete_object, params)
+    def delete_object(, **options)
+      req = build_request(:delete_object, )
       req.send_request(options)
     end
 
@@ -3002,8 +3002,8 @@ module Aws::S3
     #
     # @overload delete_object_tagging(**params)
     # @param [Hash] params ({})
-    def delete_object_tagging(params = {}, **options)
-      req = build_request(:delete_object_tagging, params)
+    def delete_object_tagging(, **options)
+      req = build_request(:delete_object_tagging, )
       req.send_request(options)
     end
 
@@ -3231,8 +3231,8 @@ module Aws::S3
     #
     # @overload delete_objects(**params)
     # @param [Hash] params ({})
-    def delete_objects(params = {}, **options)
-      req = build_request(:delete_objects, params)
+    def delete_objects(, **options)
+      req = build_request(:delete_objects, )
       req.send_request(options)
     end
 
@@ -3284,8 +3284,8 @@ module Aws::S3
     #
     # @overload delete_public_access_block(**params)
     # @param [Hash] params ({})
-    def delete_public_access_block(params = {}, **options)
-      req = build_request(:delete_public_access_block, params)
+    def delete_public_access_block(, **options)
+      req = build_request(:delete_public_access_block, )
       req.send_request(options)
     end
 
@@ -3355,8 +3355,8 @@ module Aws::S3
     #
     # @overload get_bucket_accelerate_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_accelerate_configuration(params = {}, **options)
-      req = build_request(:get_bucket_accelerate_configuration, params)
+    def get_bucket_accelerate_configuration(, **options)
+      req = build_request(:get_bucket_accelerate_configuration, )
       req.send_request(options)
     end
 
@@ -3413,8 +3413,8 @@ module Aws::S3
     #
     # @overload get_bucket_acl(**params)
     # @param [Hash] params ({})
-    def get_bucket_acl(params = {}, **options)
-      req = build_request(:get_bucket_acl, params)
+    def get_bucket_acl(, **options)
+      req = build_request(:get_bucket_acl, )
       req.send_request(options)
     end
 
@@ -3495,8 +3495,8 @@ module Aws::S3
     #
     # @overload get_bucket_analytics_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_analytics_configuration(params = {}, **options)
-      req = build_request(:get_bucket_analytics_configuration, params)
+    def get_bucket_analytics_configuration(, **options)
+      req = build_request(:get_bucket_analytics_configuration, )
       req.send_request(options)
     end
 
@@ -3584,8 +3584,8 @@ module Aws::S3
     #
     # @overload get_bucket_cors(**params)
     # @param [Hash] params ({})
-    def get_bucket_cors(params = {}, **options)
-      req = build_request(:get_bucket_cors, params)
+    def get_bucket_cors(, **options)
+      req = build_request(:get_bucket_cors, )
       req.send_request(options)
     end
 
@@ -3645,8 +3645,8 @@ module Aws::S3
     #
     # @overload get_bucket_encryption(**params)
     # @param [Hash] params ({})
-    def get_bucket_encryption(params = {}, **options)
-      req = build_request(:get_bucket_encryption, params)
+    def get_bucket_encryption(, **options)
+      req = build_request(:get_bucket_encryption, )
       req.send_request(options)
     end
 
@@ -3724,8 +3724,8 @@ module Aws::S3
     #
     # @overload get_bucket_intelligent_tiering_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_intelligent_tiering_configuration(params = {}, **options)
-      req = build_request(:get_bucket_intelligent_tiering_configuration, params)
+    def get_bucket_intelligent_tiering_configuration(, **options)
+      req = build_request(:get_bucket_intelligent_tiering_configuration, )
       req.send_request(options)
     end
 
@@ -3803,8 +3803,8 @@ module Aws::S3
     #
     # @overload get_bucket_inventory_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_inventory_configuration(params = {}, **options)
-      req = build_request(:get_bucket_inventory_configuration, params)
+    def get_bucket_inventory_configuration(, **options)
+      req = build_request(:get_bucket_inventory_configuration, )
       req.send_request(options)
     end
 
@@ -3915,8 +3915,8 @@ module Aws::S3
     #
     # @overload get_bucket_lifecycle(**params)
     # @param [Hash] params ({})
-    def get_bucket_lifecycle(params = {}, **options)
-      req = build_request(:get_bucket_lifecycle, params)
+    def get_bucket_lifecycle(, **options)
+      req = build_request(:get_bucket_lifecycle, )
       req.send_request(options)
     end
 
@@ -4045,8 +4045,8 @@ module Aws::S3
     #
     # @overload get_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_lifecycle_configuration(params = {}, **options)
-      req = build_request(:get_bucket_lifecycle_configuration, params)
+    def get_bucket_lifecycle_configuration(, **options)
+      req = build_request(:get_bucket_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -4109,8 +4109,8 @@ module Aws::S3
     #
     # @overload get_bucket_location(**params)
     # @param [Hash] params ({})
-    def get_bucket_location(params = {}, **options)
-      req = build_request(:get_bucket_location, params)
+    def get_bucket_location(, **options)
+      req = build_request(:get_bucket_location, )
       req.send_request(options)
     end
 
@@ -4164,8 +4164,8 @@ module Aws::S3
     #
     # @overload get_bucket_logging(**params)
     # @param [Hash] params ({})
-    def get_bucket_logging(params = {}, **options)
-      req = build_request(:get_bucket_logging, params)
+    def get_bucket_logging(, **options)
+      req = build_request(:get_bucket_logging, )
       req.send_request(options)
     end
 
@@ -4242,8 +4242,8 @@ module Aws::S3
     #
     # @overload get_bucket_metrics_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_metrics_configuration(params = {}, **options)
-      req = build_request(:get_bucket_metrics_configuration, params)
+    def get_bucket_metrics_configuration(, **options)
+      req = build_request(:get_bucket_metrics_configuration, )
       req.send_request(options)
     end
 
@@ -4355,8 +4355,8 @@ module Aws::S3
     #
     # @overload get_bucket_notification(**params)
     # @param [Hash] params ({})
-    def get_bucket_notification(params = {}, **options)
-      req = build_request(:get_bucket_notification, params)
+    def get_bucket_notification(, **options)
+      req = build_request(:get_bucket_notification, )
       req.send_request(options)
     end
 
@@ -4440,8 +4440,8 @@ module Aws::S3
     #
     # @overload get_bucket_notification_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_notification_configuration(params = {}, **options)
-      req = build_request(:get_bucket_notification_configuration, params)
+    def get_bucket_notification_configuration(, **options)
+      req = build_request(:get_bucket_notification_configuration, )
       req.send_request(options)
     end
 
@@ -4493,8 +4493,8 @@ module Aws::S3
     #
     # @overload get_bucket_ownership_controls(**params)
     # @param [Hash] params ({})
-    def get_bucket_ownership_controls(params = {}, **options)
-      req = build_request(:get_bucket_ownership_controls, params)
+    def get_bucket_ownership_controls(, **options)
+      req = build_request(:get_bucket_ownership_controls, )
       req.send_request(options)
     end
 
@@ -4568,8 +4568,8 @@ module Aws::S3
     #
     # @overload get_bucket_policy(**params)
     # @param [Hash] params ({})
-    def get_bucket_policy(params = {}, **options, &block)
-      req = build_request(:get_bucket_policy, params)
+    def get_bucket_policy(, **options, &block)
+      req = build_request(:get_bucket_policy, )
       req.send_request(options, &block)
     end
 
@@ -4629,8 +4629,8 @@ module Aws::S3
     #
     # @overload get_bucket_policy_status(**params)
     # @param [Hash] params ({})
-    def get_bucket_policy_status(params = {}, **options)
-      req = build_request(:get_bucket_policy_status, params)
+    def get_bucket_policy_status(, **options)
+      req = build_request(:get_bucket_policy_status, )
       req.send_request(options)
     end
 
@@ -4748,8 +4748,8 @@ module Aws::S3
     #
     # @overload get_bucket_replication(**params)
     # @param [Hash] params ({})
-    def get_bucket_replication(params = {}, **options)
-      req = build_request(:get_bucket_replication, params)
+    def get_bucket_replication(, **options)
+      req = build_request(:get_bucket_replication, )
       req.send_request(options)
     end
 
@@ -4810,8 +4810,8 @@ module Aws::S3
     #
     # @overload get_bucket_request_payment(**params)
     # @param [Hash] params ({})
-    def get_bucket_request_payment(params = {}, **options)
-      req = build_request(:get_bucket_request_payment, params)
+    def get_bucket_request_payment(, **options)
+      req = build_request(:get_bucket_request_payment, )
       req.send_request(options)
     end
 
@@ -4892,8 +4892,8 @@ module Aws::S3
     #
     # @overload get_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def get_bucket_tagging(params = {}, **options)
-      req = build_request(:get_bucket_tagging, params)
+    def get_bucket_tagging(, **options)
+      req = build_request(:get_bucket_tagging, )
       req.send_request(options)
     end
 
@@ -4965,8 +4965,8 @@ module Aws::S3
     #
     # @overload get_bucket_versioning(**params)
     # @param [Hash] params ({})
-    def get_bucket_versioning(params = {}, **options)
-      req = build_request(:get_bucket_versioning, params)
+    def get_bucket_versioning(, **options)
+      req = build_request(:get_bucket_versioning, )
       req.send_request(options)
     end
 
@@ -5053,8 +5053,8 @@ module Aws::S3
     #
     # @overload get_bucket_website(**params)
     # @param [Hash] params ({})
-    def get_bucket_website(params = {}, **options)
-      req = build_request(:get_bucket_website, params)
+    def get_bucket_website(, **options)
+      req = build_request(:get_bucket_website, )
       req.send_request(options)
     end
 
@@ -5483,8 +5483,8 @@ module Aws::S3
     #
     # @overload get_object(**params)
     # @param [Hash] params ({})
-    def get_object(params = {}, **options, &block)
-      req = build_request(:get_object, params)
+    def get_object(, **options, &block)
+      req = build_request(:get_object, )
       req.send_request(options, &block)
     end
 
@@ -5636,8 +5636,8 @@ module Aws::S3
     #
     # @overload get_object_acl(**params)
     # @param [Hash] params ({})
-    def get_object_acl(params = {}, **options)
-      req = build_request(:get_object_acl, params)
+    def get_object_acl(, **options)
+      req = build_request(:get_object_acl, )
       req.send_request(options)
     end
 
@@ -5712,8 +5712,8 @@ module Aws::S3
     #
     # @overload get_object_legal_hold(**params)
     # @param [Hash] params ({})
-    def get_object_legal_hold(params = {}, **options)
-      req = build_request(:get_object_legal_hold, params)
+    def get_object_legal_hold(, **options)
+      req = build_request(:get_object_legal_hold, )
       req.send_request(options)
     end
 
@@ -5768,8 +5768,8 @@ module Aws::S3
     #
     # @overload get_object_lock_configuration(**params)
     # @param [Hash] params ({})
-    def get_object_lock_configuration(params = {}, **options)
-      req = build_request(:get_object_lock_configuration, params)
+    def get_object_lock_configuration(, **options)
+      req = build_request(:get_object_lock_configuration, )
       req.send_request(options)
     end
 
@@ -5845,8 +5845,8 @@ module Aws::S3
     #
     # @overload get_object_retention(**params)
     # @param [Hash] params ({})
-    def get_object_retention(params = {}, **options)
-      req = build_request(:get_object_retention, params)
+    def get_object_retention(, **options)
+      req = build_request(:get_object_retention, )
       req.send_request(options)
     end
 
@@ -5985,8 +5985,8 @@ module Aws::S3
     #
     # @overload get_object_tagging(**params)
     # @param [Hash] params ({})
-    def get_object_tagging(params = {}, **options)
-      req = build_request(:get_object_tagging, params)
+    def get_object_tagging(, **options)
+      req = build_request(:get_object_tagging, )
       req.send_request(options)
     end
 
@@ -6078,8 +6078,8 @@ module Aws::S3
     #
     # @overload get_object_torrent(**params)
     # @param [Hash] params ({})
-    def get_object_torrent(params = {}, **options, &block)
-      req = build_request(:get_object_torrent, params)
+    def get_object_torrent(, **options, &block)
+      req = build_request(:get_object_torrent, )
       req.send_request(options, &block)
     end
 
@@ -6149,8 +6149,8 @@ module Aws::S3
     #
     # @overload get_public_access_block(**params)
     # @param [Hash] params ({})
-    def get_public_access_block(params = {}, **options)
-      req = build_request(:get_public_access_block, params)
+    def get_public_access_block(, **options)
+      req = build_request(:get_public_access_block, )
       req.send_request(options)
     end
 
@@ -6230,8 +6230,8 @@ module Aws::S3
     #
     # @overload head_bucket(**params)
     # @param [Hash] params ({})
-    def head_bucket(params = {}, **options)
-      req = build_request(:head_bucket, params)
+    def head_bucket(, **options)
+      req = build_request(:head_bucket, )
       req.send_request(options)
     end
 
@@ -6538,8 +6538,8 @@ module Aws::S3
     #
     # @overload head_object(**params)
     # @param [Hash] params ({})
-    def head_object(params = {}, **options)
-      req = build_request(:head_object, params)
+    def head_object(, **options)
+      req = build_request(:head_object, )
       req.send_request(options)
     end
 
@@ -6636,8 +6636,8 @@ module Aws::S3
     #
     # @overload list_bucket_analytics_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_analytics_configurations(params = {}, **options)
-      req = build_request(:list_bucket_analytics_configurations, params)
+    def list_bucket_analytics_configurations(, **options)
+      req = build_request(:list_bucket_analytics_configurations, )
       req.send_request(options)
     end
 
@@ -6723,8 +6723,8 @@ module Aws::S3
     #
     # @overload list_bucket_intelligent_tiering_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_intelligent_tiering_configurations(params = {}, **options)
-      req = build_request(:list_bucket_intelligent_tiering_configurations, params)
+    def list_bucket_intelligent_tiering_configurations(, **options)
+      req = build_request(:list_bucket_intelligent_tiering_configurations, )
       req.send_request(options)
     end
 
@@ -6821,8 +6821,8 @@ module Aws::S3
     #
     # @overload list_bucket_inventory_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_inventory_configurations(params = {}, **options)
-      req = build_request(:list_bucket_inventory_configurations, params)
+    def list_bucket_inventory_configurations(, **options)
+      req = build_request(:list_bucket_inventory_configurations, )
       req.send_request(options)
     end
 
@@ -6917,8 +6917,8 @@ module Aws::S3
     #
     # @overload list_bucket_metrics_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_metrics_configurations(params = {}, **options)
-      req = build_request(:list_bucket_metrics_configurations, params)
+    def list_bucket_metrics_configurations(, **options)
+      req = build_request(:list_bucket_metrics_configurations, )
       req.send_request(options)
     end
 
@@ -6974,8 +6974,8 @@ module Aws::S3
     #
     # @overload list_buckets(**params)
     # @param [Hash] params ({})
-    def list_buckets(params = {}, **options)
-      req = build_request(:list_buckets, params)
+    def list_buckets(, **options)
+      req = build_request(:list_buckets, )
       req.send_request(options)
     end
 
@@ -7262,8 +7262,8 @@ module Aws::S3
     #
     # @overload list_multipart_uploads(**params)
     # @param [Hash] params ({})
-    def list_multipart_uploads(params = {}, **options)
-      req = build_request(:list_multipart_uploads, params)
+    def list_multipart_uploads(, **options)
+      req = build_request(:list_multipart_uploads, )
       req.send_request(options)
     end
 
@@ -7455,8 +7455,8 @@ module Aws::S3
     #
     # @overload list_object_versions(**params)
     # @param [Hash] params ({})
-    def list_object_versions(params = {}, **options)
-      req = build_request(:list_object_versions, params)
+    def list_object_versions(, **options)
+      req = build_request(:list_object_versions, )
       req.send_request(options)
     end
 
@@ -7639,8 +7639,8 @@ module Aws::S3
     #
     # @overload list_objects(**params)
     # @param [Hash] params ({})
-    def list_objects(params = {}, **options)
-      req = build_request(:list_objects, params)
+    def list_objects(, **options)
+      req = build_request(:list_objects, )
       req.send_request(options)
     end
 
@@ -7844,8 +7844,8 @@ module Aws::S3
     #
     # @overload list_objects_v2(**params)
     # @param [Hash] params ({})
-    def list_objects_v2(params = {}, **options)
-      req = build_request(:list_objects_v2, params)
+    def list_objects_v2(, **options)
+      req = build_request(:list_objects_v2, )
       req.send_request(options)
     end
 
@@ -8041,8 +8041,8 @@ module Aws::S3
     #
     # @overload list_parts(**params)
     # @param [Hash] params ({})
-    def list_parts(params = {}, **options)
-      req = build_request(:list_parts, params)
+    def list_parts(, **options)
+      req = build_request(:list_parts, )
       req.send_request(options)
     end
 
@@ -8119,8 +8119,8 @@ module Aws::S3
     #
     # @overload put_bucket_accelerate_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_accelerate_configuration(params = {}, **options)
-      req = build_request(:put_bucket_accelerate_configuration, params)
+    def put_bucket_accelerate_configuration(, **options)
+      req = build_request(:put_bucket_accelerate_configuration, )
       req.send_request(options)
     end
 
@@ -8376,8 +8376,8 @@ module Aws::S3
     #
     # @overload put_bucket_acl(**params)
     # @param [Hash] params ({})
-    def put_bucket_acl(params = {}, **options)
-      req = build_request(:put_bucket_acl, params)
+    def put_bucket_acl(, **options)
+      req = build_request(:put_bucket_acl, )
       req.send_request(options)
     end
 
@@ -8509,8 +8509,8 @@ module Aws::S3
     #
     # @overload put_bucket_analytics_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_analytics_configuration(params = {}, **options)
-      req = build_request(:put_bucket_analytics_configuration, params)
+    def put_bucket_analytics_configuration(, **options)
+      req = build_request(:put_bucket_analytics_configuration, )
       req.send_request(options)
     end
 
@@ -8666,8 +8666,8 @@ module Aws::S3
     #
     # @overload put_bucket_cors(**params)
     # @param [Hash] params ({})
-    def put_bucket_cors(params = {}, **options)
-      req = build_request(:put_bucket_cors, params)
+    def put_bucket_cors(, **options)
+      req = build_request(:put_bucket_cors, )
       req.send_request(options)
     end
 
@@ -8761,8 +8761,8 @@ module Aws::S3
     #
     # @overload put_bucket_encryption(**params)
     # @param [Hash] params ({})
-    def put_bucket_encryption(params = {}, **options)
-      req = build_request(:put_bucket_encryption, params)
+    def put_bucket_encryption(, **options)
+      req = build_request(:put_bucket_encryption, )
       req.send_request(options)
     end
 
@@ -8851,8 +8851,8 @@ module Aws::S3
     #
     # @overload put_bucket_intelligent_tiering_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_intelligent_tiering_configuration(params = {}, **options)
-      req = build_request(:put_bucket_intelligent_tiering_configuration, params)
+    def put_bucket_intelligent_tiering_configuration(, **options)
+      req = build_request(:put_bucket_intelligent_tiering_configuration, )
       req.send_request(options)
     end
 
@@ -8985,8 +8985,8 @@ module Aws::S3
     #
     # @overload put_bucket_inventory_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_inventory_configuration(params = {}, **options)
-      req = build_request(:put_bucket_inventory_configuration, params)
+    def put_bucket_inventory_configuration(, **options)
+      req = build_request(:put_bucket_inventory_configuration, )
       req.send_request(options)
     end
 
@@ -9112,8 +9112,8 @@ module Aws::S3
     #
     # @overload put_bucket_lifecycle(**params)
     # @param [Hash] params ({})
-    def put_bucket_lifecycle(params = {}, **options)
-      req = build_request(:put_bucket_lifecycle, params)
+    def put_bucket_lifecycle(, **options)
+      req = build_request(:put_bucket_lifecycle, )
       req.send_request(options)
     end
 
@@ -9299,8 +9299,8 @@ module Aws::S3
     #
     # @overload put_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_lifecycle_configuration(params = {}, **options)
-      req = build_request(:put_bucket_lifecycle_configuration, params)
+    def put_bucket_lifecycle_configuration(, **options)
+      req = build_request(:put_bucket_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -9446,8 +9446,8 @@ module Aws::S3
     #
     # @overload put_bucket_logging(**params)
     # @param [Hash] params ({})
-    def put_bucket_logging(params = {}, **options)
-      req = build_request(:put_bucket_logging, params)
+    def put_bucket_logging(, **options)
+      req = build_request(:put_bucket_logging, )
       req.send_request(options)
     end
 
@@ -9542,8 +9542,8 @@ module Aws::S3
     #
     # @overload put_bucket_metrics_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_metrics_configuration(params = {}, **options)
-      req = build_request(:put_bucket_metrics_configuration, params)
+    def put_bucket_metrics_configuration(, **options)
+      req = build_request(:put_bucket_metrics_configuration, )
       req.send_request(options)
     end
 
@@ -9606,8 +9606,8 @@ module Aws::S3
     #
     # @overload put_bucket_notification(**params)
     # @param [Hash] params ({})
-    def put_bucket_notification(params = {}, **options)
-      req = build_request(:put_bucket_notification, params)
+    def put_bucket_notification(, **options)
+      req = build_request(:put_bucket_notification, )
       req.send_request(options)
     end
 
@@ -9776,8 +9776,8 @@ module Aws::S3
     #
     # @overload put_bucket_notification_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_notification_configuration(params = {}, **options)
-      req = build_request(:put_bucket_notification_configuration, params)
+    def put_bucket_notification_configuration(, **options)
+      req = build_request(:put_bucket_notification_configuration, )
       req.send_request(options)
     end
 
@@ -9840,8 +9840,8 @@ module Aws::S3
     #
     # @overload put_bucket_ownership_controls(**params)
     # @param [Hash] params ({})
-    def put_bucket_ownership_controls(params = {}, **options)
-      req = build_request(:put_bucket_ownership_controls, params)
+    def put_bucket_ownership_controls(, **options)
+      req = build_request(:put_bucket_ownership_controls, )
       req.send_request(options)
     end
 
@@ -9922,8 +9922,8 @@ module Aws::S3
     #
     # @overload put_bucket_policy(**params)
     # @param [Hash] params ({})
-    def put_bucket_policy(params = {}, **options)
-      req = build_request(:put_bucket_policy, params)
+    def put_bucket_policy(, **options)
+      req = build_request(:put_bucket_policy, )
       req.send_request(options)
     end
 
@@ -10131,8 +10131,8 @@ module Aws::S3
     #
     # @overload put_bucket_replication(**params)
     # @param [Hash] params ({})
-    def put_bucket_replication(params = {}, **options)
-      req = build_request(:put_bucket_replication, params)
+    def put_bucket_replication(, **options)
+      req = build_request(:put_bucket_replication, )
       req.send_request(options)
     end
 
@@ -10207,8 +10207,8 @@ module Aws::S3
     #
     # @overload put_bucket_request_payment(**params)
     # @param [Hash] params ({})
-    def put_bucket_request_payment(params = {}, **options)
-      req = build_request(:put_bucket_request_payment, params)
+    def put_bucket_request_payment(, **options)
+      req = build_request(:put_bucket_request_payment, )
       req.send_request(options)
     end
 
@@ -10350,8 +10350,8 @@ module Aws::S3
     #
     # @overload put_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def put_bucket_tagging(params = {}, **options)
-      req = build_request(:put_bucket_tagging, params)
+    def put_bucket_tagging(, **options)
+      req = build_request(:put_bucket_tagging, )
       req.send_request(options)
     end
 
@@ -10459,8 +10459,8 @@ module Aws::S3
     #
     # @overload put_bucket_versioning(**params)
     # @param [Hash] params ({})
-    def put_bucket_versioning(params = {}, **options)
-      req = build_request(:put_bucket_versioning, params)
+    def put_bucket_versioning(, **options)
+      req = build_request(:put_bucket_versioning, )
       req.send_request(options)
     end
 
@@ -10619,8 +10619,8 @@ module Aws::S3
     #
     # @overload put_bucket_website(**params)
     # @param [Hash] params ({})
-    def put_bucket_website(params = {}, **options)
-      req = build_request(:put_bucket_website, params)
+    def put_bucket_website(, **options)
+      req = build_request(:put_bucket_website, )
       req.send_request(options)
     end
 
@@ -11170,8 +11170,8 @@ module Aws::S3
     #
     # @overload put_object(**params)
     # @param [Hash] params ({})
-    def put_object(params = {}, **options)
-      req = build_request(:put_object, params)
+    def put_object(, **options)
+      req = build_request(:put_object, )
       req.send_request(options)
     end
 
@@ -11503,8 +11503,8 @@ module Aws::S3
     #
     # @overload put_object_acl(**params)
     # @param [Hash] params ({})
-    def put_object_acl(params = {}, **options)
-      req = build_request(:put_object_acl, params)
+    def put_object_acl(, **options)
+      req = build_request(:put_object_acl, )
       req.send_request(options)
     end
 
@@ -11596,8 +11596,8 @@ module Aws::S3
     #
     # @overload put_object_legal_hold(**params)
     # @param [Hash] params ({})
-    def put_object_legal_hold(params = {}, **options)
-      req = build_request(:put_object_legal_hold, params)
+    def put_object_legal_hold(, **options)
+      req = build_request(:put_object_legal_hold, )
       req.send_request(options)
     end
 
@@ -11685,8 +11685,8 @@ module Aws::S3
     #
     # @overload put_object_lock_configuration(**params)
     # @param [Hash] params ({})
-    def put_object_lock_configuration(params = {}, **options)
-      req = build_request(:put_object_lock_configuration, params)
+    def put_object_lock_configuration(, **options)
+      req = build_request(:put_object_lock_configuration, )
       req.send_request(options)
     end
 
@@ -11785,8 +11785,8 @@ module Aws::S3
     #
     # @overload put_object_retention(**params)
     # @param [Hash] params ({})
-    def put_object_retention(params = {}, **options)
-      req = build_request(:put_object_retention, params)
+    def put_object_retention(, **options)
+      req = build_request(:put_object_retention, )
       req.send_request(options)
     end
 
@@ -11948,8 +11948,8 @@ module Aws::S3
     #
     # @overload put_object_tagging(**params)
     # @param [Hash] params ({})
-    def put_object_tagging(params = {}, **options)
-      req = build_request(:put_object_tagging, params)
+    def put_object_tagging(, **options)
+      req = build_request(:put_object_tagging, )
       req.send_request(options)
     end
 
@@ -12034,8 +12034,8 @@ module Aws::S3
     #
     # @overload put_public_access_block(**params)
     # @param [Hash] params ({})
-    def put_public_access_block(params = {}, **options)
-      req = build_request(:put_public_access_block, params)
+    def put_public_access_block(, **options)
+      req = build_request(:put_public_access_block, )
       req.send_request(options)
     end
 
@@ -12455,8 +12455,8 @@ module Aws::S3
     #
     # @overload restore_object(**params)
     # @param [Hash] params ({})
-    def restore_object(params = {}, **options)
-      req = build_request(:restore_object, params)
+    def restore_object(, **options)
+      req = build_request(:restore_object, )
       req.send_request(options)
     end
 
@@ -12851,7 +12851,7 @@ module Aws::S3
     #
     # @overload select_object_content(**params)
     # @param [Hash] params ({})
-    def select_object_content(params = {}, **options, &block)
+    def select_object_content(, **options, &block)
       params = params.dup
       event_stream_handler = case handler = params.delete(:event_stream_handler)
         when EventStreams::SelectObjectContentEventStream then handler
@@ -12866,7 +12866,7 @@ module Aws::S3
 
       yield(event_stream_handler) if block_given?
 
-      req = build_request(:select_object_content, params)
+      req = build_request(:select_object_content, )
 
       req.context[:event_stream_handler] = event_stream_handler
       req.handlers.add(Aws::Binary::DecodeHandler, priority: 95)
@@ -13128,8 +13128,8 @@ module Aws::S3
     #
     # @overload upload_part(**params)
     # @param [Hash] params ({})
-    def upload_part(params = {}, **options)
-      req = build_request(:upload_part, params)
+    def upload_part(, **options)
+      req = build_request(:upload_part, )
       req.send_request(options)
     end
 
@@ -13513,8 +13513,8 @@ module Aws::S3
     #
     # @overload upload_part_copy(**params)
     # @param [Hash] params ({})
-    def upload_part_copy(params = {}, **options)
-      req = build_request(:upload_part_copy, params)
+    def upload_part_copy(, **options)
+      req = build_request(:upload_part_copy, )
       req.send_request(options)
     end
 

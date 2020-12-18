@@ -418,8 +418,8 @@ module Aws::LexModelBuildingService
     #
     # @overload create_bot_version(**params)
     # @param [Hash] params ({})
-    def create_bot_version(params = {}, **options)
-      req = build_request(:create_bot_version, params)
+    def create_bot_version(, **options)
+      req = build_request(:create_bot_version, )
       req.send_request(options)
     end
 
@@ -557,8 +557,8 @@ module Aws::LexModelBuildingService
     #
     # @overload create_intent_version(**params)
     # @param [Hash] params ({})
-    def create_intent_version(params = {}, **options)
-      req = build_request(:create_intent_version, params)
+    def create_intent_version(, **options)
+      req = build_request(:create_intent_version, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::LexModelBuildingService
     #
     # @overload create_slot_type_version(**params)
     # @param [Hash] params ({})
-    def create_slot_type_version(params = {}, **options)
-      req = build_request(:create_slot_type_version, params)
+    def create_slot_type_version(, **options)
+      req = build_request(:create_slot_type_version, )
       req.send_request(options)
     end
 
@@ -673,8 +673,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_bot(**params)
     # @param [Hash] params ({})
-    def delete_bot(params = {}, **options)
-      req = build_request(:delete_bot, params)
+    def delete_bot(, **options)
+      req = build_request(:delete_bot, )
       req.send_request(options)
     end
 
@@ -708,8 +708,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_bot_alias(**params)
     # @param [Hash] params ({})
-    def delete_bot_alias(params = {}, **options)
-      req = build_request(:delete_bot_alias, params)
+    def delete_bot_alias(, **options)
+      req = build_request(:delete_bot_alias, )
       req.send_request(options)
     end
 
@@ -743,8 +743,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_bot_channel_association(**params)
     # @param [Hash] params ({})
-    def delete_bot_channel_association(params = {}, **options)
-      req = build_request(:delete_bot_channel_association, params)
+    def delete_bot_channel_association(, **options)
+      req = build_request(:delete_bot_channel_association, )
       req.send_request(options)
     end
 
@@ -775,8 +775,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_bot_version(**params)
     # @param [Hash] params ({})
-    def delete_bot_version(params = {}, **options)
-      req = build_request(:delete_bot_version, params)
+    def delete_bot_version(, **options)
+      req = build_request(:delete_bot_version, )
       req.send_request(options)
     end
 
@@ -814,8 +814,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_intent(**params)
     # @param [Hash] params ({})
-    def delete_intent(params = {}, **options)
-      req = build_request(:delete_intent, params)
+    def delete_intent(, **options)
+      req = build_request(:delete_intent, )
       req.send_request(options)
     end
 
@@ -846,8 +846,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_intent_version(**params)
     # @param [Hash] params ({})
-    def delete_intent_version(params = {}, **options)
-      req = build_request(:delete_intent_version, params)
+    def delete_intent_version(, **options)
+      req = build_request(:delete_intent_version, )
       req.send_request(options)
     end
 
@@ -886,8 +886,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_slot_type(**params)
     # @param [Hash] params ({})
-    def delete_slot_type(params = {}, **options)
-      req = build_request(:delete_slot_type, params)
+    def delete_slot_type(, **options)
+      req = build_request(:delete_slot_type, )
       req.send_request(options)
     end
 
@@ -918,8 +918,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_slot_type_version(**params)
     # @param [Hash] params ({})
-    def delete_slot_type_version(params = {}, **options)
-      req = build_request(:delete_slot_type_version, params)
+    def delete_slot_type_version(, **options)
+      req = build_request(:delete_slot_type_version, )
       req.send_request(options)
     end
 
@@ -965,8 +965,8 @@ module Aws::LexModelBuildingService
     #
     # @overload delete_utterances(**params)
     # @param [Hash] params ({})
-    def delete_utterances(params = {}, **options)
-      req = build_request(:delete_utterances, params)
+    def delete_utterances(, **options)
+      req = build_request(:delete_utterances, )
       req.send_request(options)
     end
 
@@ -1100,8 +1100,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bot(**params)
     # @param [Hash] params ({})
-    def get_bot(params = {}, **options)
-      req = build_request(:get_bot, params)
+    def get_bot(, **options)
+      req = build_request(:get_bot, )
       req.send_request(options)
     end
 
@@ -1155,8 +1155,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bot_alias(**params)
     # @param [Hash] params ({})
-    def get_bot_alias(params = {}, **options)
-      req = build_request(:get_bot_alias, params)
+    def get_bot_alias(, **options)
+      req = build_request(:get_bot_alias, )
       req.send_request(options)
     end
 
@@ -1222,8 +1222,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bot_aliases(**params)
     # @param [Hash] params ({})
-    def get_bot_aliases(params = {}, **options)
-      req = build_request(:get_bot_aliases, params)
+    def get_bot_aliases(, **options)
+      req = build_request(:get_bot_aliases, )
       req.send_request(options)
     end
 
@@ -1281,8 +1281,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bot_channel_association(**params)
     # @param [Hash] params ({})
-    def get_bot_channel_association(params = {}, **options)
-      req = build_request(:get_bot_channel_association, params)
+    def get_bot_channel_association(, **options)
+      req = build_request(:get_bot_channel_association, )
       req.send_request(options)
     end
 
@@ -1352,8 +1352,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bot_channel_associations(**params)
     # @param [Hash] params ({})
-    def get_bot_channel_associations(params = {}, **options)
-      req = build_request(:get_bot_channel_associations, params)
+    def get_bot_channel_associations(, **options)
+      req = build_request(:get_bot_channel_associations, )
       req.send_request(options)
     end
 
@@ -1414,8 +1414,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bot_versions(**params)
     # @param [Hash] params ({})
-    def get_bot_versions(params = {}, **options)
-      req = build_request(:get_bot_versions, params)
+    def get_bot_versions(, **options)
+      req = build_request(:get_bot_versions, )
       req.send_request(options)
     end
 
@@ -1499,8 +1499,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_bots(**params)
     # @param [Hash] params ({})
-    def get_bots(params = {}, **options)
-      req = build_request(:get_bots, params)
+    def get_bots(, **options)
+      req = build_request(:get_bots, )
       req.send_request(options)
     end
 
@@ -1542,8 +1542,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_builtin_intent(**params)
     # @param [Hash] params ({})
-    def get_builtin_intent(params = {}, **options)
-      req = build_request(:get_builtin_intent, params)
+    def get_builtin_intent(, **options)
+      req = build_request(:get_builtin_intent, )
       req.send_request(options)
     end
 
@@ -1604,8 +1604,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_builtin_intents(**params)
     # @param [Hash] params ({})
-    def get_builtin_intents(params = {}, **options)
-      req = build_request(:get_builtin_intents, params)
+    def get_builtin_intents(, **options)
+      req = build_request(:get_builtin_intents, )
       req.send_request(options)
     end
 
@@ -1667,8 +1667,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_builtin_slot_types(**params)
     # @param [Hash] params ({})
-    def get_builtin_slot_types(params = {}, **options)
-      req = build_request(:get_builtin_slot_types, params)
+    def get_builtin_slot_types(, **options)
+      req = build_request(:get_builtin_slot_types, )
       req.send_request(options)
     end
 
@@ -1719,8 +1719,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_export(**params)
     # @param [Hash] params ({})
-    def get_export(params = {}, **options)
-      req = build_request(:get_export, params)
+    def get_export(, **options)
+      req = build_request(:get_export, )
       req.send_request(options)
     end
 
@@ -1761,8 +1761,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_import(**params)
     # @param [Hash] params ({})
-    def get_import(params = {}, **options)
-      req = build_request(:get_import, params)
+    def get_import(, **options)
+      req = build_request(:get_import, )
       req.send_request(options)
     end
 
@@ -2027,8 +2027,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_intent(**params)
     # @param [Hash] params ({})
-    def get_intent(params = {}, **options)
-      req = build_request(:get_intent, params)
+    def get_intent(, **options)
+      req = build_request(:get_intent, )
       req.send_request(options)
     end
 
@@ -2088,8 +2088,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_intent_versions(**params)
     # @param [Hash] params ({})
-    def get_intent_versions(params = {}, **options)
-      req = build_request(:get_intent_versions, params)
+    def get_intent_versions(, **options)
+      req = build_request(:get_intent_versions, )
       req.send_request(options)
     end
 
@@ -2170,8 +2170,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_intents(**params)
     # @param [Hash] params ({})
-    def get_intents(params = {}, **options)
-      req = build_request(:get_intents, params)
+    def get_intents(, **options)
+      req = build_request(:get_intents, )
       req.send_request(options)
     end
 
@@ -2256,8 +2256,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_slot_type(**params)
     # @param [Hash] params ({})
-    def get_slot_type(params = {}, **options)
-      req = build_request(:get_slot_type, params)
+    def get_slot_type(, **options)
+      req = build_request(:get_slot_type, )
       req.send_request(options)
     end
 
@@ -2317,8 +2317,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_slot_type_versions(**params)
     # @param [Hash] params ({})
-    def get_slot_type_versions(params = {}, **options)
-      req = build_request(:get_slot_type_versions, params)
+    def get_slot_type_versions(, **options)
+      req = build_request(:get_slot_type_versions, )
       req.send_request(options)
     end
 
@@ -2413,8 +2413,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_slot_types(**params)
     # @param [Hash] params ({})
-    def get_slot_types(params = {}, **options)
-      req = build_request(:get_slot_types, params)
+    def get_slot_types(, **options)
+      req = build_request(:get_slot_types, )
       req.send_request(options)
     end
 
@@ -2488,8 +2488,8 @@ module Aws::LexModelBuildingService
     #
     # @overload get_utterances_view(**params)
     # @param [Hash] params ({})
-    def get_utterances_view(params = {}, **options)
-      req = build_request(:get_utterances_view, params)
+    def get_utterances_view(, **options)
+      req = build_request(:get_utterances_view, )
       req.send_request(options)
     end
 
@@ -2520,8 +2520,8 @@ module Aws::LexModelBuildingService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2997,8 +2997,8 @@ module Aws::LexModelBuildingService
     #
     # @overload put_bot(**params)
     # @param [Hash] params ({})
-    def put_bot(params = {}, **options)
-      req = build_request(:put_bot, params)
+    def put_bot(, **options)
+      req = build_request(:put_bot, )
       req.send_request(options)
     end
 
@@ -3105,8 +3105,8 @@ module Aws::LexModelBuildingService
     #
     # @overload put_bot_alias(**params)
     # @param [Hash] params ({})
-    def put_bot_alias(params = {}, **options)
-      req = build_request(:put_bot_alias, params)
+    def put_bot_alias(, **options)
+      req = build_request(:put_bot_alias, )
       req.send_request(options)
     end
 
@@ -3810,8 +3810,8 @@ module Aws::LexModelBuildingService
     #
     # @overload put_intent(**params)
     # @param [Hash] params ({})
-    def put_intent(params = {}, **options)
-      req = build_request(:put_intent, params)
+    def put_intent(, **options)
+      req = build_request(:put_intent, )
       req.send_request(options)
     end
 
@@ -4004,8 +4004,8 @@ module Aws::LexModelBuildingService
     #
     # @overload put_slot_type(**params)
     # @param [Hash] params ({})
-    def put_slot_type(params = {}, **options)
-      req = build_request(:put_slot_type, params)
+    def put_slot_type(, **options)
+      req = build_request(:put_slot_type, )
       req.send_request(options)
     end
 
@@ -4081,8 +4081,8 @@ module Aws::LexModelBuildingService
     #
     # @overload start_import(**params)
     # @param [Hash] params ({})
-    def start_import(params = {}, **options)
-      req = build_request(:start_import, params)
+    def start_import(, **options)
+      req = build_request(:start_import, )
       req.send_request(options)
     end
 
@@ -4115,8 +4115,8 @@ module Aws::LexModelBuildingService
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -4143,8 +4143,8 @@ module Aws::LexModelBuildingService
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

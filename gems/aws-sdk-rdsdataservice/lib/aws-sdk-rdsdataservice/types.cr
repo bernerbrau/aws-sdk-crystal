@@ -1031,5 +1031,261 @@ module Aws::RDSDataService
       include Aws::Structure
     end
 
+    alias Arn = String
+
+    alias ArrayOfArray = Array(ArrayValue)
+
+    alias ArrayValue = NamedTuple(
+      "arrayValues" : (ArrayOfArray)?,
+      "booleanValues" : (BooleanArray)?,
+      "doubleValues" : (DoubleArray)?,
+      "longValues" : (LongArray)?,
+      "stringValues" : (StringArray)?
+    )
+
+    alias ArrayValueList = Array(Value)
+
+    alias BadRequestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias BatchExecuteStatementRequest = NamedTuple(
+      "database" : (DbName)?,
+      "parameterSets" : (SqlParameterSets)?,
+      "resourceArn" : Arn,
+      "schema" : (DbName)?,
+      "secretArn" : Arn,
+      "sql" : SqlStatement,
+      "transactionId" : (Id)?
+    )
+
+    alias BatchExecuteStatementResponse = NamedTuple(
+      "updateResults" : (UpdateResults)?
+    )
+
+    alias BeginTransactionRequest = NamedTuple(
+      "database" : (DbName)?,
+      "resourceArn" : Arn,
+      "schema" : (DbName)?,
+      "secretArn" : Arn
+    )
+
+    alias BeginTransactionResponse = NamedTuple(
+      "transactionId" : (Id)?
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias BooleanArray = Array(BoxedBoolean)
+
+    alias BoxedBoolean = Bool
+
+    alias BoxedDouble = Float64
+
+    alias BoxedFloat = Float32
+
+    alias BoxedInteger = Int32
+
+    alias BoxedLong = Int64
+
+    alias ColumnMetadata = NamedTuple(
+      "arrayBaseColumnType" : (Integer)?,
+      "isAutoIncrement" : (Boolean)?,
+      "isCaseSensitive" : (Boolean)?,
+      "isCurrency" : (Boolean)?,
+      "isSigned" : (Boolean)?,
+      "label" : (String)?,
+      "name" : (String)?,
+      "nullable" : (Integer)?,
+      "precision" : (Integer)?,
+      "scale" : (Integer)?,
+      "schemaName" : (String)?,
+      "tableName" : (String)?,
+      "type" : (Integer)?,
+      "typeName" : (String)?
+    )
+
+    alias CommitTransactionRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "secretArn" : Arn,
+      "transactionId" : Id
+    )
+
+    alias CommitTransactionResponse = NamedTuple(
+      "transactionStatus" : (TransactionStatus)?
+    )
+
+    alias DbName = String
+
+    alias DecimalReturnType = String
+
+    alias DoubleArray = Array(BoxedDouble)
+
+    alias ErrorMessage = String
+
+    alias ExecuteSqlRequest = NamedTuple(
+      "awsSecretStoreArn" : Arn,
+      "database" : (DbName)?,
+      "dbClusterOrInstanceArn" : Arn,
+      "schema" : (DbName)?,
+      "sqlStatements" : SqlStatement
+    )
+
+    alias ExecuteSqlResponse = NamedTuple(
+      "sqlStatementResults" : (SqlStatementResults)?
+    )
+
+    alias ExecuteStatementRequest = NamedTuple(
+      "continueAfterTimeout" : (Boolean)?,
+      "database" : (DbName)?,
+      "includeResultMetadata" : (Boolean)?,
+      "parameters" : (SqlParametersList)?,
+      "resourceArn" : Arn,
+      "resultSetOptions" : (ResultSetOptions)?,
+      "schema" : (DbName)?,
+      "secretArn" : Arn,
+      "sql" : SqlStatement,
+      "transactionId" : (Id)?
+    )
+
+    alias ExecuteStatementResponse = NamedTuple(
+      "columnMetadata" : (Metadata)?,
+      "generatedFields" : (FieldList)?,
+      "numberOfRecordsUpdated" : (RecordsUpdated)?,
+      "records" : (SqlRecords)?
+    )
+
+    alias Field = NamedTuple(
+      "arrayValue" : (ArrayValue)?,
+      "blobValue" : (Blob)?,
+      "booleanValue" : (BoxedBoolean)?,
+      "doubleValue" : (BoxedDouble)?,
+      "isNull" : (BoxedBoolean)?,
+      "longValue" : (BoxedLong)?,
+      "stringValue" : (String)?
+    )
+
+    alias FieldList = Array(Field)
+
+    alias ForbiddenException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Id = String
+
+    alias Integer = Int32
+
+    alias InternalServerErrorException = NamedTuple(
+      
+    )
+
+    alias Long = Int64
+
+    alias LongArray = Array(BoxedLong)
+
+    alias Metadata = Array(ColumnMetadata)
+
+    alias NotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ParameterName = String
+
+    alias Record = NamedTuple(
+      "values" : (Row)?
+    )
+
+    alias Records = Array(Record)
+
+    alias RecordsUpdated = Int64
+
+    alias ResultFrame = NamedTuple(
+      "records" : (Records)?,
+      "resultSetMetadata" : (ResultSetMetadata)?
+    )
+
+    alias ResultSetMetadata = NamedTuple(
+      "columnCount" : (Long)?,
+      "columnMetadata" : (Metadata)?
+    )
+
+    alias ResultSetOptions = NamedTuple(
+      "decimalReturnType" : (DecimalReturnType)?
+    )
+
+    alias RollbackTransactionRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "secretArn" : Arn,
+      "transactionId" : Id
+    )
+
+    alias RollbackTransactionResponse = NamedTuple(
+      "transactionStatus" : (TransactionStatus)?
+    )
+
+    alias Row = Array(Value)
+
+    alias ServiceUnavailableError = NamedTuple(
+      
+    )
+
+    alias SqlParameter = NamedTuple(
+      "name" : (ParameterName)?,
+      "typeHint" : (TypeHint)?,
+      "value" : (Field)?
+    )
+
+    alias SqlParameterSets = Array(SqlParametersList)
+
+    alias SqlParametersList = Array(SqlParameter)
+
+    alias SqlRecords = Array(FieldList)
+
+    alias SqlStatement = String
+
+    alias SqlStatementResult = NamedTuple(
+      "numberOfRecordsUpdated" : (RecordsUpdated)?,
+      "resultFrame" : (ResultFrame)?
+    )
+
+    alias SqlStatementResults = Array(SqlStatementResult)
+
+    alias StatementTimeoutException = NamedTuple(
+      "dbConnectionId" : (Long)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias String = String
+
+    alias StringArray = Array(String)
+
+    alias StructValue = NamedTuple(
+      "attributes" : (ArrayValueList)?
+    )
+
+    alias TransactionStatus = String
+
+    alias TypeHint = String
+
+    alias UpdateResult = NamedTuple(
+      "generatedFields" : (FieldList)?
+    )
+
+    alias UpdateResults = Array(UpdateResult)
+
+    alias Value = NamedTuple(
+      "arrayValues" : (ArrayValueList)?,
+      "bigIntValue" : (BoxedLong)?,
+      "bitValue" : (BoxedBoolean)?,
+      "blobValue" : (Blob)?,
+      "doubleValue" : (BoxedDouble)?,
+      "intValue" : (BoxedInteger)?,
+      "isNull" : (BoxedBoolean)?,
+      "realValue" : (BoxedFloat)?,
+      "stringValue" : (String)?,
+      "structValue" : (StructValue)?
+    )
   end
 end

@@ -356,8 +356,8 @@ module Aws::AccessAnalyzer
     #
     # @overload apply_archive_rule(**params)
     # @param [Hash] params ({})
-    def apply_archive_rule(params = {}, **options)
-      req = build_request(:apply_archive_rule, params)
+    def apply_archive_rule(, **options)
+      req = build_request(:apply_archive_rule, )
       req.send_request(options)
     end
 
@@ -420,8 +420,8 @@ module Aws::AccessAnalyzer
     #
     # @overload create_analyzer(**params)
     # @param [Hash] params ({})
-    def create_analyzer(params = {}, **options)
-      req = build_request(:create_analyzer, params)
+    def create_analyzer(, **options)
+      req = build_request(:create_analyzer, )
       req.send_request(options)
     end
 
@@ -466,8 +466,8 @@ module Aws::AccessAnalyzer
     #
     # @overload create_archive_rule(**params)
     # @param [Hash] params ({})
-    def create_archive_rule(params = {}, **options)
-      req = build_request(:create_archive_rule, params)
+    def create_archive_rule(, **options)
+      req = build_request(:create_archive_rule, )
       req.send_request(options)
     end
 
@@ -498,8 +498,8 @@ module Aws::AccessAnalyzer
     #
     # @overload delete_analyzer(**params)
     # @param [Hash] params ({})
-    def delete_analyzer(params = {}, **options)
-      req = build_request(:delete_analyzer, params)
+    def delete_analyzer(, **options)
+      req = build_request(:delete_analyzer, )
       req.send_request(options)
     end
 
@@ -532,8 +532,8 @@ module Aws::AccessAnalyzer
     #
     # @overload delete_archive_rule(**params)
     # @param [Hash] params ({})
-    def delete_archive_rule(params = {}, **options)
-      req = build_request(:delete_archive_rule, params)
+    def delete_archive_rule(, **options)
+      req = build_request(:delete_archive_rule, )
       req.send_request(options)
     end
 
@@ -576,8 +576,8 @@ module Aws::AccessAnalyzer
     #
     # @overload get_analyzed_resource(**params)
     # @param [Hash] params ({})
-    def get_analyzed_resource(params = {}, **options)
-      req = build_request(:get_analyzed_resource, params)
+    def get_analyzed_resource(, **options)
+      req = build_request(:get_analyzed_resource, )
       req.send_request(options)
     end
 
@@ -613,8 +613,8 @@ module Aws::AccessAnalyzer
     #
     # @overload get_analyzer(**params)
     # @param [Hash] params ({})
-    def get_analyzer(params = {}, **options)
-      req = build_request(:get_analyzer, params)
+    def get_analyzer(, **options)
+      req = build_request(:get_analyzer, )
       req.send_request(options)
     end
 
@@ -662,8 +662,8 @@ module Aws::AccessAnalyzer
     #
     # @overload get_archive_rule(**params)
     # @param [Hash] params ({})
-    def get_archive_rule(params = {}, **options)
-      req = build_request(:get_archive_rule, params)
+    def get_archive_rule(, **options)
+      req = build_request(:get_archive_rule, )
       req.send_request(options)
     end
 
@@ -712,8 +712,8 @@ module Aws::AccessAnalyzer
     #
     # @overload get_finding(**params)
     # @param [Hash] params ({})
-    def get_finding(params = {}, **options)
-      req = build_request(:get_finding, params)
+    def get_finding(, **options)
+      req = build_request(:get_finding, )
       req.send_request(options)
     end
 
@@ -760,8 +760,8 @@ module Aws::AccessAnalyzer
     #
     # @overload list_analyzed_resources(**params)
     # @param [Hash] params ({})
-    def list_analyzed_resources(params = {}, **options)
-      req = build_request(:list_analyzed_resources, params)
+    def list_analyzed_resources(, **options)
+      req = build_request(:list_analyzed_resources, )
       req.send_request(options)
     end
 
@@ -810,8 +810,8 @@ module Aws::AccessAnalyzer
     #
     # @overload list_analyzers(**params)
     # @param [Hash] params ({})
-    def list_analyzers(params = {}, **options)
-      req = build_request(:list_analyzers, params)
+    def list_analyzers(, **options)
+      req = build_request(:list_analyzers, )
       req.send_request(options)
     end
 
@@ -861,8 +861,8 @@ module Aws::AccessAnalyzer
     #
     # @overload list_archive_rules(**params)
     # @param [Hash] params ({})
-    def list_archive_rules(params = {}, **options)
-      req = build_request(:list_archive_rules, params)
+    def list_archive_rules(, **options)
+      req = build_request(:list_archive_rules, )
       req.send_request(options)
     end
 
@@ -945,8 +945,8 @@ module Aws::AccessAnalyzer
     #
     # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, **options)
-      req = build_request(:list_findings, params)
+    def list_findings(, **options)
+      req = build_request(:list_findings, )
       req.send_request(options)
     end
 
@@ -974,8 +974,8 @@ module Aws::AccessAnalyzer
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1002,8 +1002,8 @@ module Aws::AccessAnalyzer
     #
     # @overload start_resource_scan(**params)
     # @param [Hash] params ({})
-    def start_resource_scan(params = {}, **options)
-      req = build_request(:start_resource_scan, params)
+    def start_resource_scan(, **options)
+      req = build_request(:start_resource_scan, )
       req.send_request(options)
     end
 
@@ -1030,8 +1030,8 @@ module Aws::AccessAnalyzer
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1056,8 +1056,8 @@ module Aws::AccessAnalyzer
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1101,8 +1101,8 @@ module Aws::AccessAnalyzer
     #
     # @overload update_archive_rule(**params)
     # @param [Hash] params ({})
-    def update_archive_rule(params = {}, **options)
-      req = build_request(:update_archive_rule, params)
+    def update_archive_rule(, **options)
+      req = build_request(:update_archive_rule, )
       req.send_request(options)
     end
 
@@ -1144,8 +1144,8 @@ module Aws::AccessAnalyzer
     #
     # @overload update_findings(**params)
     # @param [Hash] params ({})
-    def update_findings(params = {}, **options)
-      req = build_request(:update_findings, params)
+    def update_findings(, **options)
+      req = build_request(:update_findings, )
       req.send_request(options)
     end
 

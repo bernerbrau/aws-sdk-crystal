@@ -483,8 +483,8 @@ module Aws::ForecastService
     #
     # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, **options)
-      req = build_request(:create_dataset, params)
+    def create_dataset(, **options)
+      req = build_request(:create_dataset, )
       req.send_request(options)
     end
 
@@ -582,8 +582,8 @@ module Aws::ForecastService
     #
     # @overload create_dataset_group(**params)
     # @param [Hash] params ({})
-    def create_dataset_group(params = {}, **options)
-      req = build_request(:create_dataset_group, params)
+    def create_dataset_group(, **options)
+      req = build_request(:create_dataset_group, )
       req.send_request(options)
     end
 
@@ -748,8 +748,8 @@ module Aws::ForecastService
     #
     # @overload create_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def create_dataset_import_job(params = {}, **options)
-      req = build_request(:create_dataset_import_job, params)
+    def create_dataset_import_job(, **options)
+      req = build_request(:create_dataset_import_job, )
       req.send_request(options)
     end
 
@@ -853,8 +853,8 @@ module Aws::ForecastService
     #
     # @overload create_forecast(**params)
     # @param [Hash] params ({})
-    def create_forecast(params = {}, **options)
-      req = build_request(:create_forecast, params)
+    def create_forecast(, **options)
+      req = build_request(:create_forecast, )
       req.send_request(options)
     end
 
@@ -964,8 +964,8 @@ module Aws::ForecastService
     #
     # @overload create_forecast_export_job(**params)
     # @param [Hash] params ({})
-    def create_forecast_export_job(params = {}, **options)
-      req = build_request(:create_forecast_export_job, params)
+    def create_forecast_export_job(, **options)
+      req = build_request(:create_forecast_export_job, )
       req.send_request(options)
     end
 
@@ -1256,8 +1256,8 @@ module Aws::ForecastService
     #
     # @overload create_predictor(**params)
     # @param [Hash] params ({})
-    def create_predictor(params = {}, **options)
-      req = build_request(:create_predictor, params)
+    def create_predictor(, **options)
+      req = build_request(:create_predictor, )
       req.send_request(options)
     end
 
@@ -1355,8 +1355,8 @@ module Aws::ForecastService
     #
     # @overload create_predictor_backtest_export_job(**params)
     # @param [Hash] params ({})
-    def create_predictor_backtest_export_job(params = {}, **options)
-      req = build_request(:create_predictor_backtest_export_job, params)
+    def create_predictor_backtest_export_job(, **options)
+      req = build_request(:create_predictor_backtest_export_job, )
       req.send_request(options)
     end
 
@@ -1386,8 +1386,8 @@ module Aws::ForecastService
     #
     # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, **options)
-      req = build_request(:delete_dataset, params)
+    def delete_dataset(, **options)
+      req = build_request(:delete_dataset, )
       req.send_request(options)
     end
 
@@ -1414,8 +1414,8 @@ module Aws::ForecastService
     #
     # @overload delete_dataset_group(**params)
     # @param [Hash] params ({})
-    def delete_dataset_group(params = {}, **options)
-      req = build_request(:delete_dataset_group, params)
+    def delete_dataset_group(, **options)
+      req = build_request(:delete_dataset_group, )
       req.send_request(options)
     end
 
@@ -1439,8 +1439,8 @@ module Aws::ForecastService
     #
     # @overload delete_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def delete_dataset_import_job(params = {}, **options)
-      req = build_request(:delete_dataset_import_job, params)
+    def delete_dataset_import_job(, **options)
+      req = build_request(:delete_dataset_import_job, )
       req.send_request(options)
     end
 
@@ -1467,8 +1467,8 @@ module Aws::ForecastService
     #
     # @overload delete_forecast(**params)
     # @param [Hash] params ({})
-    def delete_forecast(params = {}, **options)
-      req = build_request(:delete_forecast, params)
+    def delete_forecast(, **options)
+      req = build_request(:delete_forecast, )
       req.send_request(options)
     end
 
@@ -1492,8 +1492,8 @@ module Aws::ForecastService
     #
     # @overload delete_forecast_export_job(**params)
     # @param [Hash] params ({})
-    def delete_forecast_export_job(params = {}, **options)
-      req = build_request(:delete_forecast_export_job, params)
+    def delete_forecast_export_job(, **options)
+      req = build_request(:delete_forecast_export_job, )
       req.send_request(options)
     end
 
@@ -1517,8 +1517,8 @@ module Aws::ForecastService
     #
     # @overload delete_predictor(**params)
     # @param [Hash] params ({})
-    def delete_predictor(params = {}, **options)
-      req = build_request(:delete_predictor, params)
+    def delete_predictor(, **options)
+      req = build_request(:delete_predictor, )
       req.send_request(options)
     end
 
@@ -1540,8 +1540,8 @@ module Aws::ForecastService
     #
     # @overload delete_predictor_backtest_export_job(**params)
     # @param [Hash] params ({})
-    def delete_predictor_backtest_export_job(params = {}, **options)
-      req = build_request(:delete_predictor_backtest_export_job, params)
+    def delete_predictor_backtest_export_job(, **options)
+      req = build_request(:delete_predictor_backtest_export_job, )
       req.send_request(options)
     end
 
@@ -1599,8 +1599,8 @@ module Aws::ForecastService
     #
     # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, **options)
-      req = build_request(:describe_dataset, params)
+    def describe_dataset(, **options)
+      req = build_request(:describe_dataset, )
       req.send_request(options)
     end
 
@@ -1653,8 +1653,8 @@ module Aws::ForecastService
     #
     # @overload describe_dataset_group(**params)
     # @param [Hash] params ({})
-    def describe_dataset_group(params = {}, **options)
-      req = build_request(:describe_dataset_group, params)
+    def describe_dataset_group(, **options)
+      req = build_request(:describe_dataset_group, )
       req.send_request(options)
     end
 
@@ -1734,8 +1734,8 @@ module Aws::ForecastService
     #
     # @overload describe_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def describe_dataset_import_job(params = {}, **options)
-      req = build_request(:describe_dataset_import_job, params)
+    def describe_dataset_import_job(, **options)
+      req = build_request(:describe_dataset_import_job, )
       req.send_request(options)
     end
 
@@ -1793,8 +1793,8 @@ module Aws::ForecastService
     #
     # @overload describe_forecast(**params)
     # @param [Hash] params ({})
-    def describe_forecast(params = {}, **options)
-      req = build_request(:describe_forecast, params)
+    def describe_forecast(, **options)
+      req = build_request(:describe_forecast, )
       req.send_request(options)
     end
 
@@ -1850,8 +1850,8 @@ module Aws::ForecastService
     #
     # @overload describe_forecast_export_job(**params)
     # @param [Hash] params ({})
-    def describe_forecast_export_job(params = {}, **options)
-      req = build_request(:describe_forecast_export_job, params)
+    def describe_forecast_export_job(, **options)
+      req = build_request(:describe_forecast_export_job, )
       req.send_request(options)
     end
 
@@ -1971,8 +1971,8 @@ module Aws::ForecastService
     #
     # @overload describe_predictor(**params)
     # @param [Hash] params ({})
-    def describe_predictor(params = {}, **options)
-      req = build_request(:describe_predictor, params)
+    def describe_predictor(, **options)
+      req = build_request(:describe_predictor, )
       req.send_request(options)
     end
 
@@ -2028,8 +2028,8 @@ module Aws::ForecastService
     #
     # @overload describe_predictor_backtest_export_job(**params)
     # @param [Hash] params ({})
-    def describe_predictor_backtest_export_job(params = {}, **options)
-      req = build_request(:describe_predictor_backtest_export_job, params)
+    def describe_predictor_backtest_export_job(, **options)
+      req = build_request(:describe_predictor_backtest_export_job, )
       req.send_request(options)
     end
 
@@ -2096,8 +2096,8 @@ module Aws::ForecastService
     #
     # @overload get_accuracy_metrics(**params)
     # @param [Hash] params ({})
-    def get_accuracy_metrics(params = {}, **options)
-      req = build_request(:get_accuracy_metrics, params)
+    def get_accuracy_metrics(, **options)
+      req = build_request(:get_accuracy_metrics, )
       req.send_request(options)
     end
 
@@ -2142,8 +2142,8 @@ module Aws::ForecastService
     #
     # @overload list_dataset_groups(**params)
     # @param [Hash] params ({})
-    def list_dataset_groups(params = {}, **options)
-      req = build_request(:list_dataset_groups, params)
+    def list_dataset_groups(, **options)
+      req = build_request(:list_dataset_groups, )
       req.send_request(options)
     end
 
@@ -2225,8 +2225,8 @@ module Aws::ForecastService
     #
     # @overload list_dataset_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_dataset_import_jobs(params = {}, **options)
-      req = build_request(:list_dataset_import_jobs, params)
+    def list_dataset_import_jobs(, **options)
+      req = build_request(:list_dataset_import_jobs, )
       req.send_request(options)
     end
 
@@ -2272,8 +2272,8 @@ module Aws::ForecastService
     #
     # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, **options)
-      req = build_request(:list_datasets, params)
+    def list_datasets(, **options)
+      req = build_request(:list_datasets, )
       req.send_request(options)
     end
 
@@ -2357,8 +2357,8 @@ module Aws::ForecastService
     #
     # @overload list_forecast_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_forecast_export_jobs(params = {}, **options)
-      req = build_request(:list_forecast_export_jobs, params)
+    def list_forecast_export_jobs(, **options)
+      req = build_request(:list_forecast_export_jobs, )
       req.send_request(options)
     end
 
@@ -2438,8 +2438,8 @@ module Aws::ForecastService
     #
     # @overload list_forecasts(**params)
     # @param [Hash] params ({})
-    def list_forecasts(params = {}, **options)
-      req = build_request(:list_forecasts, params)
+    def list_forecasts(, **options)
+      req = build_request(:list_forecasts, )
       req.send_request(options)
     end
 
@@ -2518,8 +2518,8 @@ module Aws::ForecastService
     #
     # @overload list_predictor_backtest_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_predictor_backtest_export_jobs(params = {}, **options)
-      req = build_request(:list_predictor_backtest_export_jobs, params)
+    def list_predictor_backtest_export_jobs(, **options)
+      req = build_request(:list_predictor_backtest_export_jobs, )
       req.send_request(options)
     end
 
@@ -2599,8 +2599,8 @@ module Aws::ForecastService
     #
     # @overload list_predictors(**params)
     # @param [Hash] params ({})
-    def list_predictors(params = {}, **options)
-      req = build_request(:list_predictors, params)
+    def list_predictors(, **options)
+      req = build_request(:list_predictors, )
       req.send_request(options)
     end
 
@@ -2632,8 +2632,8 @@ module Aws::ForecastService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2696,8 +2696,8 @@ module Aws::ForecastService
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2725,8 +2725,8 @@ module Aws::ForecastService
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2758,8 +2758,8 @@ module Aws::ForecastService
     #
     # @overload update_dataset_group(**params)
     # @param [Hash] params ({})
-    def update_dataset_group(params = {}, **options)
-      req = build_request(:update_dataset_group, params)
+    def update_dataset_group(, **options)
+      req = build_request(:update_dataset_group, )
       req.send_request(options)
     end
 

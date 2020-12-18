@@ -468,5 +468,118 @@ module Aws::IdentityStore
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (Message)?,
+      "RequestId" : (RequestId)?
+    )
+
+    alias AttributePath = String
+
+    alias DescribeGroupRequest = NamedTuple(
+      "IdentityStoreId" : IdentityStoreId,
+      "GroupId" : ResourceId
+    )
+
+    alias DescribeGroupResponse = NamedTuple(
+      "GroupId" : ResourceId,
+      "DisplayName" : GroupDisplayName
+    )
+
+    alias DescribeUserRequest = NamedTuple(
+      "IdentityStoreId" : IdentityStoreId,
+      "UserId" : ResourceId
+    )
+
+    alias DescribeUserResponse = NamedTuple(
+      "UserName" : UserName,
+      "UserId" : ResourceId
+    )
+
+    alias Filter = NamedTuple(
+      "AttributePath" : AttributePath,
+      "AttributeValue" : SensitiveStringType
+    )
+
+    alias Filters = Array(Filter)
+
+    alias Group = NamedTuple(
+      "GroupId" : ResourceId,
+      "DisplayName" : GroupDisplayName
+    )
+
+    alias GroupDisplayName = String
+
+    alias Groups = Array(Group)
+
+    alias IdentityStoreId = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (Message)?,
+      "RequestId" : (RequestId)?
+    )
+
+    alias ListGroupsRequest = NamedTuple(
+      "IdentityStoreId" : IdentityStoreId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListGroupsResponse = NamedTuple(
+      "Groups" : Groups,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "IdentityStoreId" : IdentityStoreId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "Users" : Users,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias NextToken = String
+
+    alias RequestId = String
+
+    alias ResourceId = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "ResourceId" : (ResourceId)?,
+      "Message" : (Message)?,
+      "RequestId" : (RequestId)?
+    )
+
+    alias ResourceType = String
+
+    alias SensitiveStringType = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (Message)?,
+      "RequestId" : (RequestId)?
+    )
+
+    alias User = NamedTuple(
+      "UserName" : UserName,
+      "UserId" : ResourceId
+    )
+
+    alias UserName = String
+
+    alias Users = Array(User)
+
+    alias ValidationException = NamedTuple(
+      "Message" : (Message)?,
+      "RequestId" : (RequestId)?
+    )
   end
 end

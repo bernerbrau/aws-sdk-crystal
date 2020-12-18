@@ -13166,5 +13166,2645 @@ module Aws::QuickSight
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias AccountCustomization = NamedTuple(
+      "DefaultTheme" : (Arn)?
+    )
+
+    alias AccountSettings = NamedTuple(
+      "AccountName" : (String)?,
+      "Edition" : (Edition)?,
+      "DefaultNamespace" : (Namespace)?,
+      "NotificationEmail" : (String)?
+    )
+
+    alias ActionList = Array(String)
+
+    alias ActiveIAMPolicyAssignment = NamedTuple(
+      "AssignmentName" : (IAMPolicyAssignmentName)?,
+      "PolicyArn" : (Arn)?
+    )
+
+    alias ActiveIAMPolicyAssignmentList = Array(ActiveIAMPolicyAssignment)
+
+    alias AdHocFilteringOption = NamedTuple(
+      "AvailabilityStatus" : (DashboardBehavior)?
+    )
+
+    alias AdditionalDashboardIdList = Array(RestrictiveResourceId)
+
+    alias AliasName = String
+
+    alias AmazonElasticsearchParameters = NamedTuple(
+      "Domain" : Domain
+    )
+
+    alias Analysis = NamedTuple(
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "Arn" : (Arn)?,
+      "Name" : (AnalysisName)?,
+      "Status" : (ResourceStatus)?,
+      "Errors" : (AnalysisErrorList)?,
+      "DataSetArns" : (DataSetArnsList)?,
+      "ThemeArn" : (Arn)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "Sheets" : (SheetList)?
+    )
+
+    alias AnalysisError = NamedTuple(
+      "Type" : (AnalysisErrorType)?,
+      "Message" : (NonEmptyString)?
+    )
+
+    alias AnalysisErrorList = Array(AnalysisError)
+
+    alias AnalysisErrorType = String
+
+    alias AnalysisFilterAttribute = String
+
+    alias AnalysisName = String
+
+    alias AnalysisSearchFilter = NamedTuple(
+      "Operator" : (FilterOperator)?,
+      "Name" : (AnalysisFilterAttribute)?,
+      "Value" : (String)?
+    )
+
+    alias AnalysisSearchFilterList = Array(AnalysisSearchFilter)
+
+    alias AnalysisSourceEntity = NamedTuple(
+      "SourceTemplate" : (AnalysisSourceTemplate)?
+    )
+
+    alias AnalysisSourceTemplate = NamedTuple(
+      "DataSetReferences" : DataSetReferenceList,
+      "Arn" : Arn
+    )
+
+    alias AnalysisSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "Name" : (AnalysisName)?,
+      "Status" : (ResourceStatus)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias AnalysisSummaryList = Array(AnalysisSummary)
+
+    alias Arn = String
+
+    alias AssignmentStatus = String
+
+    alias AthenaParameters = NamedTuple(
+      "WorkGroup" : (WorkGroup)?
+    )
+
+    alias AuroraParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias AuroraPostgreSqlParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias AwsAccountId = String
+
+    alias AwsAndAccountId = String
+
+    alias AwsIotAnalyticsParameters = NamedTuple(
+      "DataSetName" : DataSetName
+    )
+
+    alias Boolean = Bool
+
+    alias BorderStyle = NamedTuple(
+      "Show" : (boolean)?
+    )
+
+    alias CalculatedColumn = NamedTuple(
+      "ColumnName" : ColumnName,
+      "ColumnId" : ColumnId,
+      "Expression" : Expression
+    )
+
+    alias CalculatedColumnList = Array(CalculatedColumn)
+
+    alias CancelIngestionRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : string,
+      "IngestionId" : IngestionId
+    )
+
+    alias CancelIngestionResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "IngestionId" : (IngestionId)?,
+      "RequestId" : (string)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CastColumnTypeOperation = NamedTuple(
+      "ColumnName" : ColumnName,
+      "NewColumnType" : ColumnDataType,
+      "Format" : (TypeCastFormat)?
+    )
+
+    alias Catalog = String
+
+    alias ClusterId = String
+
+    alias ColorList = Array(HexColor)
+
+    alias ColumnDataType = String
+
+    alias ColumnDescription = NamedTuple(
+      "Text" : (ColumnDescriptiveText)?
+    )
+
+    alias ColumnDescriptiveText = String
+
+    alias ColumnGroup = NamedTuple(
+      "GeoSpatialColumnGroup" : (GeoSpatialColumnGroup)?
+    )
+
+    alias ColumnGroupColumnSchema = NamedTuple(
+      "Name" : (String)?
+    )
+
+    alias ColumnGroupColumnSchemaList = Array(ColumnGroupColumnSchema)
+
+    alias ColumnGroupList = Array(ColumnGroup)
+
+    alias ColumnGroupName = String
+
+    alias ColumnGroupSchema = NamedTuple(
+      "Name" : (String)?,
+      "ColumnGroupColumnSchemaList" : (ColumnGroupColumnSchemaList)?
+    )
+
+    alias ColumnGroupSchemaList = Array(ColumnGroupSchema)
+
+    alias ColumnId = String
+
+    alias ColumnLevelPermissionRule = NamedTuple(
+      "Principals" : (PrincipalList)?,
+      "ColumnNames" : (ColumnNameList)?
+    )
+
+    alias ColumnLevelPermissionRuleList = Array(ColumnLevelPermissionRule)
+
+    alias ColumnList = Array(ColumnName)
+
+    alias ColumnName = String
+
+    alias ColumnNameList = Array(String)
+
+    alias ColumnSchema = NamedTuple(
+      "Name" : (String)?,
+      "DataType" : (String)?,
+      "GeographicRole" : (String)?
+    )
+
+    alias ColumnSchemaList = Array(ColumnSchema)
+
+    alias ColumnTag = NamedTuple(
+      "ColumnGeographicRole" : (GeoSpatialDataRole)?,
+      "ColumnDescription" : (ColumnDescription)?
+    )
+
+    alias ColumnTagList = Array(ColumnTag)
+
+    alias ConcurrentUpdatingException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias CopySourceArn = String
+
+    alias CreateAccountCustomizationRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : (Namespace)?,
+      "AccountCustomization" : AccountCustomization,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateAccountCustomizationResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AwsAccountId" : (AwsAccountId)?,
+      "Namespace" : (Namespace)?,
+      "AccountCustomization" : (AccountCustomization)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateAnalysisRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId,
+      "Name" : AnalysisName,
+      "Parameters" : (Parameters)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "SourceEntity" : AnalysisSourceEntity,
+      "ThemeArn" : (Arn)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateAnalysisResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias CreateColumnsOperation = NamedTuple(
+      "Columns" : CalculatedColumnList
+    )
+
+    alias CreateDashboardRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "Name" : DashboardName,
+      "Parameters" : (Parameters)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "SourceEntity" : DashboardSourceEntity,
+      "Tags" : (TagList)?,
+      "VersionDescription" : (VersionDescription)?,
+      "DashboardPublishOptions" : (DashboardPublishOptions)?,
+      "ThemeArn" : (Arn)?
+    )
+
+    alias CreateDashboardResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "VersionArn" : (Arn)?,
+      "DashboardId" : (RestrictiveResourceId)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias CreateDataSetRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : ResourceId,
+      "Name" : ResourceName,
+      "PhysicalTableMap" : PhysicalTableMap,
+      "LogicalTableMap" : (LogicalTableMap)?,
+      "ImportMode" : DataSetImportMode,
+      "ColumnGroups" : (ColumnGroupList)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
+      "ColumnLevelPermissionRules" : (ColumnLevelPermissionRuleList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDataSetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "IngestionArn" : (Arn)?,
+      "IngestionId" : (ResourceId)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateDataSourceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSourceId" : ResourceId,
+      "Name" : ResourceName,
+      "Type" : DataSourceType,
+      "DataSourceParameters" : (DataSourceParameters)?,
+      "Credentials" : (DataSourceCredentials)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "VpcConnectionProperties" : (VpcConnectionProperties)?,
+      "SslProperties" : (SslProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDataSourceResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSourceId" : (ResourceId)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateGroupMembershipRequest = NamedTuple(
+      "MemberName" : GroupMemberName,
+      "GroupName" : GroupName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias CreateGroupMembershipResponse = NamedTuple(
+      "GroupMember" : (GroupMember)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateGroupRequest = NamedTuple(
+      "GroupName" : GroupName,
+      "Description" : (GroupDescription)?,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias CreateGroupResponse = NamedTuple(
+      "Group" : (Group)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateIAMPolicyAssignmentRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AssignmentName" : IAMPolicyAssignmentName,
+      "AssignmentStatus" : AssignmentStatus,
+      "PolicyArn" : (Arn)?,
+      "Identities" : (IdentityMap)?,
+      "Namespace" : Namespace
+    )
+
+    alias CreateIAMPolicyAssignmentResponse = NamedTuple(
+      "AssignmentName" : (IAMPolicyAssignmentName)?,
+      "AssignmentId" : (String)?,
+      "AssignmentStatus" : (AssignmentStatus)?,
+      "PolicyArn" : (Arn)?,
+      "Identities" : (IdentityMap)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateIngestionRequest = NamedTuple(
+      "DataSetId" : string,
+      "IngestionId" : IngestionId,
+      "AwsAccountId" : AwsAccountId
+    )
+
+    alias CreateIngestionResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "IngestionId" : (IngestionId)?,
+      "IngestionStatus" : (IngestionStatus)?,
+      "RequestId" : (string)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateNamespaceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace,
+      "IdentityStore" : IdentityStore,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateNamespaceResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (Namespace)?,
+      "CapacityRegion" : (String)?,
+      "CreationStatus" : (NamespaceStatus)?,
+      "IdentityStore" : (IdentityStore)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias CreateTemplateAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "AliasName" : AliasName,
+      "TemplateVersionNumber" : VersionNumber
+    )
+
+    alias CreateTemplateAliasResponse = NamedTuple(
+      "TemplateAlias" : (TemplateAlias)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias CreateTemplateRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "Name" : (TemplateName)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "SourceEntity" : TemplateSourceEntity,
+      "Tags" : (TagList)?,
+      "VersionDescription" : (VersionDescription)?
+    )
+
+    alias CreateTemplateResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "VersionArn" : (Arn)?,
+      "TemplateId" : (RestrictiveResourceId)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias CreateThemeAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "AliasName" : AliasName,
+      "ThemeVersionNumber" : VersionNumber
+    )
+
+    alias CreateThemeAliasResponse = NamedTuple(
+      "ThemeAlias" : (ThemeAlias)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias CreateThemeRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "Name" : ThemeName,
+      "BaseThemeId" : RestrictiveResourceId,
+      "VersionDescription" : (VersionDescription)?,
+      "Configuration" : ThemeConfiguration,
+      "Permissions" : (ResourcePermissionList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateThemeResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "VersionArn" : (Arn)?,
+      "ThemeId" : (RestrictiveResourceId)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias CredentialPair = NamedTuple(
+      "Username" : Username,
+      "Password" : Password,
+      "AlternateDataSourceParameters" : (DataSourceParametersList)?
+    )
+
+    alias CustomSql = NamedTuple(
+      "DataSourceArn" : Arn,
+      "Name" : CustomSqlName,
+      "SqlQuery" : SqlQuery,
+      "Columns" : (InputColumnList)?
+    )
+
+    alias CustomSqlName = String
+
+    alias Dashboard = NamedTuple(
+      "DashboardId" : (RestrictiveResourceId)?,
+      "Arn" : (Arn)?,
+      "Name" : (DashboardName)?,
+      "Version" : (DashboardVersion)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastPublishedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias DashboardBehavior = String
+
+    alias DashboardError = NamedTuple(
+      "Type" : (DashboardErrorType)?,
+      "Message" : (NonEmptyString)?
+    )
+
+    alias DashboardErrorList = Array(DashboardError)
+
+    alias DashboardErrorType = String
+
+    alias DashboardFilterAttribute = String
+
+    alias DashboardName = String
+
+    alias DashboardPublishOptions = NamedTuple(
+      "AdHocFilteringOption" : (AdHocFilteringOption)?,
+      "ExportToCSVOption" : (ExportToCSVOption)?,
+      "SheetControlsOption" : (SheetControlsOption)?
+    )
+
+    alias DashboardSearchFilter = NamedTuple(
+      "Operator" : FilterOperator,
+      "Name" : (DashboardFilterAttribute)?,
+      "Value" : (String)?
+    )
+
+    alias DashboardSearchFilterList = Array(DashboardSearchFilter)
+
+    alias DashboardSourceEntity = NamedTuple(
+      "SourceTemplate" : (DashboardSourceTemplate)?
+    )
+
+    alias DashboardSourceTemplate = NamedTuple(
+      "DataSetReferences" : DataSetReferenceList,
+      "Arn" : Arn
+    )
+
+    alias DashboardSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "DashboardId" : (RestrictiveResourceId)?,
+      "Name" : (DashboardName)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "PublishedVersionNumber" : (VersionNumber)?,
+      "LastPublishedTime" : (Timestamp)?
+    )
+
+    alias DashboardSummaryList = Array(DashboardSummary)
+
+    alias DashboardUIState = String
+
+    alias DashboardVersion = NamedTuple(
+      "CreatedTime" : (Timestamp)?,
+      "Errors" : (DashboardErrorList)?,
+      "VersionNumber" : (VersionNumber)?,
+      "Status" : (ResourceStatus)?,
+      "Arn" : (Arn)?,
+      "SourceEntityArn" : (Arn)?,
+      "DataSetArns" : (DataSetArnsList)?,
+      "Description" : (VersionDescription)?,
+      "ThemeArn" : (Arn)?,
+      "Sheets" : (SheetList)?
+    )
+
+    alias DashboardVersionSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "CreatedTime" : (Timestamp)?,
+      "VersionNumber" : (VersionNumber)?,
+      "Status" : (ResourceStatus)?,
+      "SourceEntityArn" : (Arn)?,
+      "Description" : (VersionDescription)?
+    )
+
+    alias DashboardVersionSummaryList = Array(DashboardVersionSummary)
+
+    alias DataColorPalette = NamedTuple(
+      "Colors" : (ColorList)?,
+      "MinMaxGradient" : (ColorList)?,
+      "EmptyFillColor" : (HexColor)?
+    )
+
+    alias DataSet = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "Name" : (ResourceName)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "PhysicalTableMap" : (PhysicalTableMap)?,
+      "LogicalTableMap" : (LogicalTableMap)?,
+      "OutputColumns" : (OutputColumnList)?,
+      "ImportMode" : (DataSetImportMode)?,
+      "ConsumedSpiceCapacityInBytes" : (Long)?,
+      "ColumnGroups" : (ColumnGroupList)?,
+      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
+      "ColumnLevelPermissionRules" : (ColumnLevelPermissionRuleList)?
+    )
+
+    alias DataSetArnsList = Array(Arn)
+
+    alias DataSetConfiguration = NamedTuple(
+      "Placeholder" : (String)?,
+      "DataSetSchema" : (DataSetSchema)?,
+      "ColumnGroupSchemaList" : (ColumnGroupSchemaList)?
+    )
+
+    alias DataSetConfigurationList = Array(DataSetConfiguration)
+
+    alias DataSetImportMode = String
+
+    alias DataSetName = String
+
+    alias DataSetReference = NamedTuple(
+      "DataSetPlaceholder" : NonEmptyString,
+      "DataSetArn" : Arn
+    )
+
+    alias DataSetReferenceList = Array(DataSetReference)
+
+    alias DataSetSchema = NamedTuple(
+      "ColumnSchemaList" : (ColumnSchemaList)?
+    )
+
+    alias DataSetSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "Name" : (ResourceName)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "ImportMode" : (DataSetImportMode)?,
+      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
+      "ColumnLevelPermissionRulesApplied" : (Boolean)?
+    )
+
+    alias DataSetSummaryList = Array(DataSetSummary)
+
+    alias DataSource = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSourceId" : (ResourceId)?,
+      "Name" : (ResourceName)?,
+      "Type" : (DataSourceType)?,
+      "Status" : (ResourceStatus)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "DataSourceParameters" : (DataSourceParameters)?,
+      "AlternateDataSourceParameters" : (DataSourceParametersList)?,
+      "VpcConnectionProperties" : (VpcConnectionProperties)?,
+      "SslProperties" : (SslProperties)?,
+      "ErrorInfo" : (DataSourceErrorInfo)?
+    )
+
+    alias DataSourceCredentials = NamedTuple(
+      "CredentialPair" : (CredentialPair)?,
+      "CopySourceArn" : (CopySourceArn)?
+    )
+
+    alias DataSourceErrorInfo = NamedTuple(
+      "Type" : (DataSourceErrorInfoType)?,
+      "Message" : (String)?
+    )
+
+    alias DataSourceErrorInfoType = String
+
+    alias DataSourceList = Array(DataSource)
+
+    alias DataSourceParameters = NamedTuple(
+      "AmazonElasticsearchParameters" : (AmazonElasticsearchParameters)?,
+      "AthenaParameters" : (AthenaParameters)?,
+      "AuroraParameters" : (AuroraParameters)?,
+      "AuroraPostgreSqlParameters" : (AuroraPostgreSqlParameters)?,
+      "AwsIotAnalyticsParameters" : (AwsIotAnalyticsParameters)?,
+      "JiraParameters" : (JiraParameters)?,
+      "MariaDbParameters" : (MariaDbParameters)?,
+      "MySqlParameters" : (MySqlParameters)?,
+      "OracleParameters" : (OracleParameters)?,
+      "PostgreSqlParameters" : (PostgreSqlParameters)?,
+      "PrestoParameters" : (PrestoParameters)?,
+      "RdsParameters" : (RdsParameters)?,
+      "RedshiftParameters" : (RedshiftParameters)?,
+      "S3Parameters" : (S3Parameters)?,
+      "ServiceNowParameters" : (ServiceNowParameters)?,
+      "SnowflakeParameters" : (SnowflakeParameters)?,
+      "SparkParameters" : (SparkParameters)?,
+      "SqlServerParameters" : (SqlServerParameters)?,
+      "TeradataParameters" : (TeradataParameters)?,
+      "TwitterParameters" : (TwitterParameters)?
+    )
+
+    alias DataSourceParametersList = Array(DataSourceParameters)
+
+    alias DataSourceType = String
+
+    alias Database = String
+
+    alias DateTimeParameter = NamedTuple(
+      "Name" : NonEmptyString,
+      "Values" : TimestampList
+    )
+
+    alias DateTimeParameterList = Array(DateTimeParameter)
+
+    alias DecimalParameter = NamedTuple(
+      "Name" : NonEmptyString,
+      "Values" : DoubleList
+    )
+
+    alias DecimalParameterList = Array(DecimalParameter)
+
+    alias DeleteAccountCustomizationRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : (Namespace)?
+    )
+
+    alias DeleteAccountCustomizationResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteAnalysisRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId,
+      "RecoveryWindowInDays" : (RecoveryWindowInDays)?,
+      "ForceDeleteWithoutRecovery" : (boolean)?
+    )
+
+    alias DeleteAnalysisResponse = NamedTuple(
+      "Status" : (StatusCode)?,
+      "Arn" : (Arn)?,
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "DeletionTime" : (Timestamp)?,
+      "RequestId" : (String)?
+    )
+
+    alias DeleteDashboardRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "VersionNumber" : (VersionNumber)?
+    )
+
+    alias DeleteDashboardResponse = NamedTuple(
+      "Status" : (StatusCode)?,
+      "Arn" : (Arn)?,
+      "DashboardId" : (RestrictiveResourceId)?,
+      "RequestId" : (String)?
+    )
+
+    alias DeleteDataSetRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : ResourceId
+    )
+
+    alias DeleteDataSetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteDataSourceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSourceId" : ResourceId
+    )
+
+    alias DeleteDataSourceResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSourceId" : (ResourceId)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteGroupMembershipRequest = NamedTuple(
+      "MemberName" : GroupMemberName,
+      "GroupName" : GroupName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DeleteGroupMembershipResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteGroupRequest = NamedTuple(
+      "GroupName" : GroupName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DeleteGroupResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteIAMPolicyAssignmentRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AssignmentName" : IAMPolicyAssignmentName,
+      "Namespace" : Namespace
+    )
+
+    alias DeleteIAMPolicyAssignmentResponse = NamedTuple(
+      "AssignmentName" : (IAMPolicyAssignmentName)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteNamespaceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DeleteNamespaceResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteTemplateAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "AliasName" : AliasName
+    )
+
+    alias DeleteTemplateAliasResponse = NamedTuple(
+      "Status" : (StatusCode)?,
+      "TemplateId" : (RestrictiveResourceId)?,
+      "AliasName" : (AliasName)?,
+      "Arn" : (Arn)?,
+      "RequestId" : (String)?
+    )
+
+    alias DeleteTemplateRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "VersionNumber" : (VersionNumber)?
+    )
+
+    alias DeleteTemplateResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Arn" : (Arn)?,
+      "TemplateId" : (RestrictiveResourceId)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteThemeAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "AliasName" : AliasName
+    )
+
+    alias DeleteThemeAliasResponse = NamedTuple(
+      "AliasName" : (AliasName)?,
+      "Arn" : (Arn)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?,
+      "ThemeId" : (RestrictiveResourceId)?
+    )
+
+    alias DeleteThemeRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "VersionNumber" : (VersionNumber)?
+    )
+
+    alias DeleteThemeResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?,
+      "ThemeId" : (RestrictiveResourceId)?
+    )
+
+    alias DeleteUserByPrincipalIdRequest = NamedTuple(
+      "PrincipalId" : String,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DeleteUserByPrincipalIdResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "UserName" : UserName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DeleteUserResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias Delimiter = String
+
+    alias DescribeAccountCustomizationRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : (Namespace)?,
+      "Resolved" : (boolean)?
+    )
+
+    alias DescribeAccountCustomizationResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AwsAccountId" : (AwsAccountId)?,
+      "Namespace" : (Namespace)?,
+      "AccountCustomization" : (AccountCustomization)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeAccountSettingsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId
+    )
+
+    alias DescribeAccountSettingsResponse = NamedTuple(
+      "AccountSettings" : (AccountSettings)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeAnalysisPermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId
+    )
+
+    alias DescribeAnalysisPermissionsResponse = NamedTuple(
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "AnalysisArn" : (Arn)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeAnalysisRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId
+    )
+
+    alias DescribeAnalysisResponse = NamedTuple(
+      "Analysis" : (Analysis)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeDashboardPermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId
+    )
+
+    alias DescribeDashboardPermissionsResponse = NamedTuple(
+      "DashboardId" : (RestrictiveResourceId)?,
+      "DashboardArn" : (Arn)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeDashboardRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "VersionNumber" : (VersionNumber)?,
+      "AliasName" : (AliasName)?
+    )
+
+    alias DescribeDashboardResponse = NamedTuple(
+      "Dashboard" : (Dashboard)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeDataSetPermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : ResourceId
+    )
+
+    alias DescribeDataSetPermissionsResponse = NamedTuple(
+      "DataSetArn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeDataSetRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : ResourceId
+    )
+
+    alias DescribeDataSetResponse = NamedTuple(
+      "DataSet" : (DataSet)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeDataSourcePermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSourceId" : ResourceId
+    )
+
+    alias DescribeDataSourcePermissionsResponse = NamedTuple(
+      "DataSourceArn" : (Arn)?,
+      "DataSourceId" : (ResourceId)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeDataSourceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSourceId" : ResourceId
+    )
+
+    alias DescribeDataSourceResponse = NamedTuple(
+      "DataSource" : (DataSource)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeGroupRequest = NamedTuple(
+      "GroupName" : GroupName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DescribeGroupResponse = NamedTuple(
+      "Group" : (Group)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeIAMPolicyAssignmentRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AssignmentName" : IAMPolicyAssignmentName,
+      "Namespace" : Namespace
+    )
+
+    alias DescribeIAMPolicyAssignmentResponse = NamedTuple(
+      "IAMPolicyAssignment" : (IAMPolicyAssignment)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeIngestionRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : string,
+      "IngestionId" : IngestionId
+    )
+
+    alias DescribeIngestionResponse = NamedTuple(
+      "Ingestion" : (Ingestion)?,
+      "RequestId" : (string)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeNamespaceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DescribeNamespaceResponse = NamedTuple(
+      "Namespace" : (NamespaceInfoV2)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeTemplateAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "AliasName" : AliasName
+    )
+
+    alias DescribeTemplateAliasResponse = NamedTuple(
+      "TemplateAlias" : (TemplateAlias)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeTemplatePermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId
+    )
+
+    alias DescribeTemplatePermissionsResponse = NamedTuple(
+      "TemplateId" : (RestrictiveResourceId)?,
+      "TemplateArn" : (Arn)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeTemplateRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "VersionNumber" : (VersionNumber)?,
+      "AliasName" : (AliasName)?
+    )
+
+    alias DescribeTemplateResponse = NamedTuple(
+      "Template" : (Template)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeThemeAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "AliasName" : AliasName
+    )
+
+    alias DescribeThemeAliasResponse = NamedTuple(
+      "ThemeAlias" : (ThemeAlias)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeThemePermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId
+    )
+
+    alias DescribeThemePermissionsResponse = NamedTuple(
+      "ThemeId" : (RestrictiveResourceId)?,
+      "ThemeArn" : (Arn)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias DescribeThemeRequest = NamedTuple(
+      "AwsAccountId" : AwsAndAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "VersionNumber" : (VersionNumber)?,
+      "AliasName" : (AliasName)?
+    )
+
+    alias DescribeThemeResponse = NamedTuple(
+      "Theme" : (Theme)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias DescribeUserRequest = NamedTuple(
+      "UserName" : UserName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias DescribeUserResponse = NamedTuple(
+      "User" : (User)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias Domain = String
+
+    alias DomainNotWhitelistedException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias Double = Float64
+
+    alias DoubleList = Array(Double)
+
+    alias Edition = String
+
+    alias EmbeddingIdentityType = String
+
+    alias EmbeddingUrl = String
+
+    alias EntryPoint = String
+
+    alias ErrorInfo = NamedTuple(
+      "Type" : (IngestionErrorType)?,
+      "Message" : (string)?
+    )
+
+    alias ExceptionResourceType = String
+
+    alias ExportToCSVOption = NamedTuple(
+      "AvailabilityStatus" : (DashboardBehavior)?
+    )
+
+    alias Expression = String
+
+    alias FileFormat = String
+
+    alias FilterOperation = NamedTuple(
+      "ConditionExpression" : Expression
+    )
+
+    alias FilterOperator = String
+
+    alias GeoSpatialColumnGroup = NamedTuple(
+      "Name" : ColumnGroupName,
+      "CountryCode" : GeoSpatialCountryCode,
+      "Columns" : ColumnList
+    )
+
+    alias GeoSpatialCountryCode = String
+
+    alias GeoSpatialDataRole = String
+
+    alias GetDashboardEmbedUrlRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "IdentityType" : EmbeddingIdentityType,
+      "SessionLifetimeInMinutes" : (SessionLifetimeInMinutes)?,
+      "UndoRedoDisabled" : (Boolean)?,
+      "ResetDisabled" : (Boolean)?,
+      "StatePersistenceEnabled" : (Boolean)?,
+      "UserArn" : (Arn)?,
+      "Namespace" : (Namespace)?,
+      "AdditionalDashboardIds" : (AdditionalDashboardIdList)?
+    )
+
+    alias GetDashboardEmbedUrlResponse = NamedTuple(
+      "EmbedUrl" : (EmbeddingUrl)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias GetSessionEmbedUrlRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "EntryPoint" : (EntryPoint)?,
+      "SessionLifetimeInMinutes" : (SessionLifetimeInMinutes)?,
+      "UserArn" : (Arn)?
+    )
+
+    alias GetSessionEmbedUrlResponse = NamedTuple(
+      "EmbedUrl" : (EmbeddingUrl)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias Group = NamedTuple(
+      "Arn" : (Arn)?,
+      "GroupName" : (GroupName)?,
+      "Description" : (GroupDescription)?,
+      "PrincipalId" : (String)?
+    )
+
+    alias GroupDescription = String
+
+    alias GroupList = Array(Group)
+
+    alias GroupMember = NamedTuple(
+      "Arn" : (Arn)?,
+      "MemberName" : (GroupMemberName)?
+    )
+
+    alias GroupMemberList = Array(GroupMember)
+
+    alias GroupMemberName = String
+
+    alias GroupName = String
+
+    alias GutterStyle = NamedTuple(
+      "Show" : (boolean)?
+    )
+
+    alias HexColor = String
+
+    alias Host = String
+
+    alias IAMPolicyAssignment = NamedTuple(
+      "AwsAccountId" : (AwsAccountId)?,
+      "AssignmentId" : (String)?,
+      "AssignmentName" : (IAMPolicyAssignmentName)?,
+      "PolicyArn" : (Arn)?,
+      "Identities" : (IdentityMap)?,
+      "AssignmentStatus" : (AssignmentStatus)?
+    )
+
+    alias IAMPolicyAssignmentName = String
+
+    alias IAMPolicyAssignmentSummary = NamedTuple(
+      "AssignmentName" : (IAMPolicyAssignmentName)?,
+      "AssignmentStatus" : (AssignmentStatus)?
+    )
+
+    alias IAMPolicyAssignmentSummaryList = Array(IAMPolicyAssignmentSummary)
+
+    alias IdentityMap = Hash(String,IdentityNameList)
+
+    alias IdentityName = String
+
+    alias IdentityNameList = Array(IdentityName)
+
+    alias IdentityStore = String
+
+    alias IdentityType = String
+
+    alias IdentityTypeNotSupportedException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias Ingestion = NamedTuple(
+      "Arn" : Arn,
+      "IngestionId" : (IngestionId)?,
+      "IngestionStatus" : IngestionStatus,
+      "ErrorInfo" : (ErrorInfo)?,
+      "RowInfo" : (RowInfo)?,
+      "QueueInfo" : (QueueInfo)?,
+      "CreatedTime" : timestamp,
+      "IngestionTimeInSeconds" : (long)?,
+      "IngestionSizeInBytes" : (long)?,
+      "RequestSource" : (IngestionRequestSource)?,
+      "RequestType" : (IngestionRequestType)?
+    )
+
+    alias IngestionErrorType = String
+
+    alias IngestionId = String
+
+    alias IngestionMaxResults = Int32
+
+    alias IngestionRequestSource = String
+
+    alias IngestionRequestType = String
+
+    alias IngestionStatus = String
+
+    alias Ingestions = Array(Ingestion)
+
+    alias InputColumn = NamedTuple(
+      "Name" : ColumnName,
+      "Type" : InputColumnDataType
+    )
+
+    alias InputColumnDataType = String
+
+    alias InputColumnList = Array(InputColumn)
+
+    alias InstanceId = String
+
+    alias IntegerParameter = NamedTuple(
+      "Name" : NonEmptyString,
+      "Values" : LongList
+    )
+
+    alias IntegerParameterList = Array(IntegerParameter)
+
+    alias InternalFailureException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias JiraParameters = NamedTuple(
+      "SiteBaseUrl" : SiteBaseUrl
+    )
+
+    alias JoinInstruction = NamedTuple(
+      "LeftOperand" : LogicalTableId,
+      "RightOperand" : LogicalTableId,
+      "LeftJoinKeyProperties" : (JoinKeyProperties)?,
+      "RightJoinKeyProperties" : (JoinKeyProperties)?,
+      "Type" : JoinType,
+      "OnClause" : OnClause
+    )
+
+    alias JoinKeyProperties = NamedTuple(
+      "UniqueKey" : (Boolean)?
+    )
+
+    alias JoinType = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (ExceptionResourceType)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListAnalysesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAnalysesResponse = NamedTuple(
+      "AnalysisSummaryList" : (AnalysisSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListDashboardVersionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDashboardVersionsResponse = NamedTuple(
+      "DashboardVersionSummaryList" : (DashboardVersionSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListDashboardsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDashboardsResponse = NamedTuple(
+      "DashboardSummaryList" : (DashboardSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListDataSetsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDataSetsResponse = NamedTuple(
+      "DataSetSummaries" : (DataSetSummaryList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListDataSourcesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDataSourcesResponse = NamedTuple(
+      "DataSources" : (DataSourceList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListGroupMembershipsRequest = NamedTuple(
+      "GroupName" : GroupName,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias ListGroupMembershipsResponse = NamedTuple(
+      "GroupMemberList" : (GroupMemberList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListGroupsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "Namespace" : Namespace
+    )
+
+    alias ListGroupsResponse = NamedTuple(
+      "GroupList" : (GroupList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListIAMPolicyAssignmentsForUserRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "UserName" : UserName,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "Namespace" : Namespace
+    )
+
+    alias ListIAMPolicyAssignmentsForUserResponse = NamedTuple(
+      "ActiveAssignments" : (ActiveIAMPolicyAssignmentList)?,
+      "RequestId" : (String)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListIAMPolicyAssignmentsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AssignmentStatus" : (AssignmentStatus)?,
+      "Namespace" : Namespace,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListIAMPolicyAssignmentsResponse = NamedTuple(
+      "IAMPolicyAssignments" : (IAMPolicyAssignmentSummaryList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListIngestionsRequest = NamedTuple(
+      "DataSetId" : string,
+      "NextToken" : (string)?,
+      "AwsAccountId" : AwsAccountId,
+      "MaxResults" : (IngestionMaxResults)?
+    )
+
+    alias ListIngestionsResponse = NamedTuple(
+      "Ingestions" : (Ingestions)?,
+      "NextToken" : (string)?,
+      "RequestId" : (string)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListNamespacesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListNamespacesResponse = NamedTuple(
+      "Namespaces" : (Namespaces)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListTemplateAliasesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTemplateAliasesResponse = NamedTuple(
+      "TemplateAliasList" : (TemplateAliasList)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTemplateVersionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTemplateVersionsResponse = NamedTuple(
+      "TemplateVersionSummaryList" : (TemplateVersionSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListTemplatesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTemplatesResponse = NamedTuple(
+      "TemplateSummaryList" : (TemplateSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListThemeAliasesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListThemeAliasesResponse = NamedTuple(
+      "ThemeAliasList" : (ThemeAliasList)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListThemeVersionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListThemeVersionsResponse = NamedTuple(
+      "ThemeVersionSummaryList" : (ThemeVersionSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListThemesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "Type" : (ThemeType)?
+    )
+
+    alias ListThemesResponse = NamedTuple(
+      "ThemeSummaryList" : (ThemeSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ListUserGroupsRequest = NamedTuple(
+      "UserName" : UserName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListUserGroupsResponse = NamedTuple(
+      "GroupList" : (GroupList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "Namespace" : Namespace
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "UserList" : (UserList)?,
+      "NextToken" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias LogicalTable = NamedTuple(
+      "Alias" : LogicalTableAlias,
+      "DataTransforms" : (TransformOperationList)?,
+      "Source" : LogicalTableSource
+    )
+
+    alias LogicalTableAlias = String
+
+    alias LogicalTableId = String
+
+    alias LogicalTableMap = Hash(LogicalTableId,LogicalTable)
+
+    alias LogicalTableSource = NamedTuple(
+      "JoinInstruction" : (JoinInstruction)?,
+      "PhysicalTableId" : (PhysicalTableId)?
+    )
+
+    alias Long = Int64
+
+    alias LongList = Array(Long)
+
+    alias ManifestFileLocation = NamedTuple(
+      "Bucket" : S3Bucket,
+      "Key" : S3Key
+    )
+
+    alias MarginStyle = NamedTuple(
+      "Show" : (boolean)?
+    )
+
+    alias MariaDbParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias MaxResults = Int32
+
+    alias MySqlParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias Namespace = String
+
+    alias NamespaceError = NamedTuple(
+      "Type" : (NamespaceErrorType)?,
+      "Message" : (String)?
+    )
+
+    alias NamespaceErrorType = String
+
+    alias NamespaceInfoV2 = NamedTuple(
+      "Name" : (Namespace)?,
+      "Arn" : (Arn)?,
+      "CapacityRegion" : (String)?,
+      "CreationStatus" : (NamespaceStatus)?,
+      "IdentityStore" : (IdentityStore)?,
+      "NamespaceError" : (NamespaceError)?
+    )
+
+    alias NamespaceStatus = String
+
+    alias Namespaces = Array(NamespaceInfoV2)
+
+    alias NonEmptyString = String
+
+    alias OnClause = String
+
+    alias OptionalPort = Int32
+
+    alias OracleParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias OutputColumn = NamedTuple(
+      "Name" : (ColumnName)?,
+      "Description" : (ColumnDescriptiveText)?,
+      "Type" : (ColumnDataType)?
+    )
+
+    alias OutputColumnList = Array(OutputColumn)
+
+    alias Parameters = NamedTuple(
+      "StringParameters" : (StringParameterList)?,
+      "IntegerParameters" : (IntegerParameterList)?,
+      "DecimalParameters" : (DecimalParameterList)?,
+      "DateTimeParameters" : (DateTimeParameterList)?
+    )
+
+    alias Password = String
+
+    alias PhysicalTable = NamedTuple(
+      "RelationalTable" : (RelationalTable)?,
+      "CustomSql" : (CustomSql)?,
+      "S3Source" : (S3Source)?
+    )
+
+    alias PhysicalTableId = String
+
+    alias PhysicalTableMap = Hash(PhysicalTableId,PhysicalTable)
+
+    alias Port = Int32
+
+    alias PositiveInteger = Int32
+
+    alias PostgreSqlParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias PreconditionNotMetException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias PrestoParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Catalog" : Catalog
+    )
+
+    alias Principal = String
+
+    alias PrincipalList = Array(String)
+
+    alias ProjectOperation = NamedTuple(
+      "ProjectedColumns" : ProjectedColumnList
+    )
+
+    alias ProjectedColumnList = Array(String)
+
+    alias Query = String
+
+    alias QueueInfo = NamedTuple(
+      "WaitingOnIngestion" : string,
+      "QueuedIngestion" : string
+    )
+
+    alias QuickSightUserNotFoundException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias RdsParameters = NamedTuple(
+      "InstanceId" : InstanceId,
+      "Database" : Database
+    )
+
+    alias RecoveryWindowInDays = Int64
+
+    alias RedshiftParameters = NamedTuple(
+      "Host" : (Host)?,
+      "Port" : (OptionalPort)?,
+      "Database" : Database,
+      "ClusterId" : (ClusterId)?
+    )
+
+    alias RegisterUserRequest = NamedTuple(
+      "IdentityType" : IdentityType,
+      "Email" : String,
+      "UserRole" : UserRole,
+      "IamArn" : (String)?,
+      "SessionName" : (RoleSessionName)?,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace,
+      "UserName" : (UserName)?,
+      "CustomPermissionsName" : (RoleName)?
+    )
+
+    alias RegisterUserResponse = NamedTuple(
+      "User" : (User)?,
+      "UserInvitationUrl" : (String)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias RelationalTable = NamedTuple(
+      "DataSourceArn" : Arn,
+      "Catalog" : (RelationalTableCatalog)?,
+      "Schema" : (RelationalTableSchema)?,
+      "Name" : RelationalTableName,
+      "InputColumns" : InputColumnList
+    )
+
+    alias RelationalTableCatalog = String
+
+    alias RelationalTableName = String
+
+    alias RelationalTableSchema = String
+
+    alias RenameColumnOperation = NamedTuple(
+      "ColumnName" : ColumnName,
+      "NewColumnName" : ColumnName
+    )
+
+    alias ResourceExistsException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (ExceptionResourceType)?,
+      "RequestId" : (String)?
+    )
+
+    alias ResourceId = String
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (ExceptionResourceType)?,
+      "RequestId" : (String)?
+    )
+
+    alias ResourcePermission = NamedTuple(
+      "Principal" : Principal,
+      "Actions" : ActionList
+    )
+
+    alias ResourcePermissionList = Array(ResourcePermission)
+
+    alias ResourceStatus = String
+
+    alias ResourceUnavailableException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (ExceptionResourceType)?,
+      "RequestId" : (String)?
+    )
+
+    alias RestoreAnalysisRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId
+    )
+
+    alias RestoreAnalysisResponse = NamedTuple(
+      "Status" : (StatusCode)?,
+      "Arn" : (Arn)?,
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "RequestId" : (String)?
+    )
+
+    alias RestrictiveResourceId = String
+
+    alias RoleName = String
+
+    alias RoleSessionName = String
+
+    alias RowInfo = NamedTuple(
+      "RowsIngested" : (long)?,
+      "RowsDropped" : (long)?
+    )
+
+    alias RowLevelPermissionDataSet = NamedTuple(
+      "Namespace" : (Namespace)?,
+      "Arn" : Arn,
+      "PermissionPolicy" : RowLevelPermissionPolicy
+    )
+
+    alias RowLevelPermissionPolicy = String
+
+    alias S3Bucket = String
+
+    alias S3Key = String
+
+    alias S3Parameters = NamedTuple(
+      "ManifestFileLocation" : ManifestFileLocation
+    )
+
+    alias S3Source = NamedTuple(
+      "DataSourceArn" : Arn,
+      "UploadSettings" : (UploadSettings)?,
+      "InputColumns" : InputColumnList
+    )
+
+    alias SearchAnalysesRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Filters" : AnalysisSearchFilterList,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias SearchAnalysesResponse = NamedTuple(
+      "AnalysisSummaryList" : (AnalysisSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias SearchDashboardsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Filters" : DashboardSearchFilterList,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias SearchDashboardsResponse = NamedTuple(
+      "DashboardSummaryList" : (DashboardSummaryList)?,
+      "NextToken" : (String)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias ServiceNowParameters = NamedTuple(
+      "SiteBaseUrl" : SiteBaseUrl
+    )
+
+    alias SessionLifetimeInMinutes = Int64
+
+    alias SessionLifetimeInMinutesInvalidException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias Sheet = NamedTuple(
+      "SheetId" : (RestrictiveResourceId)?,
+      "Name" : (NonEmptyString)?
+    )
+
+    alias SheetControlsOption = NamedTuple(
+      "VisibilityState" : (DashboardUIState)?
+    )
+
+    alias SheetList = Array(Sheet)
+
+    alias SheetStyle = NamedTuple(
+      "Tile" : (TileStyle)?,
+      "TileLayout" : (TileLayoutStyle)?
+    )
+
+    alias SiteBaseUrl = String
+
+    alias SnowflakeParameters = NamedTuple(
+      "Host" : Host,
+      "Database" : Database,
+      "Warehouse" : Warehouse
+    )
+
+    alias SparkParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port
+    )
+
+    alias SqlQuery = String
+
+    alias SqlServerParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias SslProperties = NamedTuple(
+      "DisableSsl" : (Boolean)?
+    )
+
+    alias StatusCode = Int32
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias StringParameter = NamedTuple(
+      "Name" : NonEmptyString,
+      "Values" : StringList
+    )
+
+    alias StringParameterList = Array(StringParameter)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagColumnOperation = NamedTuple(
+      "ColumnName" : ColumnName,
+      "Tags" : ColumnTagList
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias TagValue = String
+
+    alias Template = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (TemplateName)?,
+      "Version" : (TemplateVersion)?,
+      "TemplateId" : (RestrictiveResourceId)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "CreatedTime" : (Timestamp)?
+    )
+
+    alias TemplateAlias = NamedTuple(
+      "AliasName" : (AliasName)?,
+      "Arn" : (Arn)?,
+      "TemplateVersionNumber" : (VersionNumber)?
+    )
+
+    alias TemplateAliasList = Array(TemplateAlias)
+
+    alias TemplateError = NamedTuple(
+      "Type" : (TemplateErrorType)?,
+      "Message" : (NonEmptyString)?
+    )
+
+    alias TemplateErrorList = Array(TemplateError)
+
+    alias TemplateErrorType = String
+
+    alias TemplateName = String
+
+    alias TemplateSourceAnalysis = NamedTuple(
+      "Arn" : Arn,
+      "DataSetReferences" : DataSetReferenceList
+    )
+
+    alias TemplateSourceEntity = NamedTuple(
+      "SourceAnalysis" : (TemplateSourceAnalysis)?,
+      "SourceTemplate" : (TemplateSourceTemplate)?
+    )
+
+    alias TemplateSourceTemplate = NamedTuple(
+      "Arn" : Arn
+    )
+
+    alias TemplateSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "TemplateId" : (RestrictiveResourceId)?,
+      "Name" : (TemplateName)?,
+      "LatestVersionNumber" : (VersionNumber)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias TemplateSummaryList = Array(TemplateSummary)
+
+    alias TemplateVersion = NamedTuple(
+      "CreatedTime" : (Timestamp)?,
+      "Errors" : (TemplateErrorList)?,
+      "VersionNumber" : (VersionNumber)?,
+      "Status" : (ResourceStatus)?,
+      "DataSetConfigurations" : (DataSetConfigurationList)?,
+      "Description" : (VersionDescription)?,
+      "SourceEntityArn" : (Arn)?,
+      "ThemeArn" : (Arn)?,
+      "Sheets" : (SheetList)?
+    )
+
+    alias TemplateVersionSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "VersionNumber" : (VersionNumber)?,
+      "CreatedTime" : (Timestamp)?,
+      "Status" : (ResourceStatus)?,
+      "Description" : (VersionDescription)?
+    )
+
+    alias TemplateVersionSummaryList = Array(TemplateVersionSummary)
+
+    alias TeradataParameters = NamedTuple(
+      "Host" : Host,
+      "Port" : Port,
+      "Database" : Database
+    )
+
+    alias TextQualifier = String
+
+    alias Theme = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (ThemeName)?,
+      "ThemeId" : (RestrictiveResourceId)?,
+      "Version" : (ThemeVersion)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "Type" : (ThemeType)?
+    )
+
+    alias ThemeAlias = NamedTuple(
+      "Arn" : (Arn)?,
+      "AliasName" : (AliasName)?,
+      "ThemeVersionNumber" : (VersionNumber)?
+    )
+
+    alias ThemeAliasList = Array(ThemeAlias)
+
+    alias ThemeConfiguration = NamedTuple(
+      "DataColorPalette" : (DataColorPalette)?,
+      "UIColorPalette" : (UIColorPalette)?,
+      "Sheet" : (SheetStyle)?
+    )
+
+    alias ThemeError = NamedTuple(
+      "Type" : (ThemeErrorType)?,
+      "Message" : (NonEmptyString)?
+    )
+
+    alias ThemeErrorList = Array(ThemeError)
+
+    alias ThemeErrorType = String
+
+    alias ThemeName = String
+
+    alias ThemeSummary = NamedTuple(
+      "Arn" : (Arn)?,
+      "Name" : (ThemeName)?,
+      "ThemeId" : (RestrictiveResourceId)?,
+      "LatestVersionNumber" : (VersionNumber)?,
+      "CreatedTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias ThemeSummaryList = Array(ThemeSummary)
+
+    alias ThemeType = String
+
+    alias ThemeVersion = NamedTuple(
+      "VersionNumber" : (VersionNumber)?,
+      "Arn" : (Arn)?,
+      "Description" : (VersionDescription)?,
+      "BaseThemeId" : (RestrictiveResourceId)?,
+      "CreatedTime" : (Timestamp)?,
+      "Configuration" : (ThemeConfiguration)?,
+      "Errors" : (ThemeErrorList)?,
+      "Status" : (ResourceStatus)?
+    )
+
+    alias ThemeVersionSummary = NamedTuple(
+      "VersionNumber" : (VersionNumber)?,
+      "Arn" : (Arn)?,
+      "Description" : (VersionDescription)?,
+      "CreatedTime" : (Timestamp)?,
+      "Status" : (ResourceStatus)?
+    )
+
+    alias ThemeVersionSummaryList = Array(ThemeVersionSummary)
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias TileLayoutStyle = NamedTuple(
+      "Gutter" : (GutterStyle)?,
+      "Margin" : (MarginStyle)?
+    )
+
+    alias TileStyle = NamedTuple(
+      "Border" : (BorderStyle)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampList = Array(Timestamp)
+
+    alias TransformOperation = NamedTuple(
+      "ProjectOperation" : (ProjectOperation)?,
+      "FilterOperation" : (FilterOperation)?,
+      "CreateColumnsOperation" : (CreateColumnsOperation)?,
+      "RenameColumnOperation" : (RenameColumnOperation)?,
+      "CastColumnTypeOperation" : (CastColumnTypeOperation)?,
+      "TagColumnOperation" : (TagColumnOperation)?
+    )
+
+    alias TransformOperationList = Array(TransformOperation)
+
+    alias TwitterParameters = NamedTuple(
+      "Query" : Query,
+      "MaxRows" : PositiveInteger
+    )
+
+    alias TypeCastFormat = String
+
+    alias UIColorPalette = NamedTuple(
+      "PrimaryForeground" : (HexColor)?,
+      "PrimaryBackground" : (HexColor)?,
+      "SecondaryForeground" : (HexColor)?,
+      "SecondaryBackground" : (HexColor)?,
+      "Accent" : (HexColor)?,
+      "AccentForeground" : (HexColor)?,
+      "Danger" : (HexColor)?,
+      "DangerForeground" : (HexColor)?,
+      "Warning" : (HexColor)?,
+      "WarningForeground" : (HexColor)?,
+      "Success" : (HexColor)?,
+      "SuccessForeground" : (HexColor)?,
+      "Dimension" : (HexColor)?,
+      "DimensionForeground" : (HexColor)?,
+      "Measure" : (HexColor)?,
+      "MeasureForeground" : (HexColor)?
+    )
+
+    alias UnsupportedPricingPlanException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias UnsupportedUserEditionException = NamedTuple(
+      "Message" : (String)?,
+      "RequestId" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateAccountCustomizationRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : (Namespace)?,
+      "AccountCustomization" : AccountCustomization
+    )
+
+    alias UpdateAccountCustomizationResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AwsAccountId" : (AwsAccountId)?,
+      "Namespace" : (Namespace)?,
+      "AccountCustomization" : (AccountCustomization)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateAccountSettingsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DefaultNamespace" : Namespace,
+      "NotificationEmail" : (String)?
+    )
+
+    alias UpdateAccountSettingsResponse = NamedTuple(
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateAnalysisPermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId,
+      "GrantPermissions" : (UpdateResourcePermissionList)?,
+      "RevokePermissions" : (UpdateResourcePermissionList)?
+    )
+
+    alias UpdateAnalysisPermissionsResponse = NamedTuple(
+      "AnalysisArn" : (Arn)?,
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateAnalysisRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AnalysisId" : RestrictiveResourceId,
+      "Name" : AnalysisName,
+      "Parameters" : (Parameters)?,
+      "SourceEntity" : AnalysisSourceEntity,
+      "ThemeArn" : (Arn)?
+    )
+
+    alias UpdateAnalysisResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AnalysisId" : (RestrictiveResourceId)?,
+      "UpdateStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateDashboardPermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "GrantPermissions" : (UpdateResourcePermissionList)?,
+      "RevokePermissions" : (UpdateResourcePermissionList)?
+    )
+
+    alias UpdateDashboardPermissionsResponse = NamedTuple(
+      "DashboardArn" : (Arn)?,
+      "DashboardId" : (RestrictiveResourceId)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateDashboardPublishedVersionRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "VersionNumber" : VersionNumber
+    )
+
+    alias UpdateDashboardPublishedVersionResponse = NamedTuple(
+      "DashboardId" : (RestrictiveResourceId)?,
+      "DashboardArn" : (Arn)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateDashboardRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DashboardId" : RestrictiveResourceId,
+      "Name" : DashboardName,
+      "SourceEntity" : DashboardSourceEntity,
+      "Parameters" : (Parameters)?,
+      "VersionDescription" : (VersionDescription)?,
+      "DashboardPublishOptions" : (DashboardPublishOptions)?,
+      "ThemeArn" : (Arn)?
+    )
+
+    alias UpdateDashboardResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "VersionArn" : (Arn)?,
+      "DashboardId" : (RestrictiveResourceId)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateDataSetPermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : ResourceId,
+      "GrantPermissions" : (ResourcePermissionList)?,
+      "RevokePermissions" : (ResourcePermissionList)?
+    )
+
+    alias UpdateDataSetPermissionsResponse = NamedTuple(
+      "DataSetArn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateDataSetRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSetId" : ResourceId,
+      "Name" : ResourceName,
+      "PhysicalTableMap" : PhysicalTableMap,
+      "LogicalTableMap" : (LogicalTableMap)?,
+      "ImportMode" : DataSetImportMode,
+      "ColumnGroups" : (ColumnGroupList)?,
+      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
+      "ColumnLevelPermissionRules" : (ColumnLevelPermissionRuleList)?
+    )
+
+    alias UpdateDataSetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSetId" : (ResourceId)?,
+      "IngestionArn" : (Arn)?,
+      "IngestionId" : (ResourceId)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateDataSourcePermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSourceId" : ResourceId,
+      "GrantPermissions" : (ResourcePermissionList)?,
+      "RevokePermissions" : (ResourcePermissionList)?
+    )
+
+    alias UpdateDataSourcePermissionsResponse = NamedTuple(
+      "DataSourceArn" : (Arn)?,
+      "DataSourceId" : (ResourceId)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateDataSourceRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "DataSourceId" : ResourceId,
+      "Name" : ResourceName,
+      "DataSourceParameters" : (DataSourceParameters)?,
+      "Credentials" : (DataSourceCredentials)?,
+      "VpcConnectionProperties" : (VpcConnectionProperties)?,
+      "SslProperties" : (SslProperties)?
+    )
+
+    alias UpdateDataSourceResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "DataSourceId" : (ResourceId)?,
+      "UpdateStatus" : (ResourceStatus)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateGroupRequest = NamedTuple(
+      "GroupName" : GroupName,
+      "Description" : (GroupDescription)?,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace
+    )
+
+    alias UpdateGroupResponse = NamedTuple(
+      "Group" : (Group)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateIAMPolicyAssignmentRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "AssignmentName" : IAMPolicyAssignmentName,
+      "Namespace" : Namespace,
+      "AssignmentStatus" : (AssignmentStatus)?,
+      "PolicyArn" : (Arn)?,
+      "Identities" : (IdentityMap)?
+    )
+
+    alias UpdateIAMPolicyAssignmentResponse = NamedTuple(
+      "AssignmentName" : (IAMPolicyAssignmentName)?,
+      "AssignmentId" : (String)?,
+      "PolicyArn" : (Arn)?,
+      "Identities" : (IdentityMap)?,
+      "AssignmentStatus" : (AssignmentStatus)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateResourcePermissionList = Array(ResourcePermission)
+
+    alias UpdateTemplateAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "AliasName" : AliasName,
+      "TemplateVersionNumber" : VersionNumber
+    )
+
+    alias UpdateTemplateAliasResponse = NamedTuple(
+      "TemplateAlias" : (TemplateAlias)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateTemplatePermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "GrantPermissions" : (UpdateResourcePermissionList)?,
+      "RevokePermissions" : (UpdateResourcePermissionList)?
+    )
+
+    alias UpdateTemplatePermissionsResponse = NamedTuple(
+      "TemplateId" : (RestrictiveResourceId)?,
+      "TemplateArn" : (Arn)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateTemplateRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "TemplateId" : RestrictiveResourceId,
+      "SourceEntity" : TemplateSourceEntity,
+      "VersionDescription" : (VersionDescription)?,
+      "Name" : (TemplateName)?
+    )
+
+    alias UpdateTemplateResponse = NamedTuple(
+      "TemplateId" : (RestrictiveResourceId)?,
+      "Arn" : (Arn)?,
+      "VersionArn" : (Arn)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateThemeAliasRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "AliasName" : AliasName,
+      "ThemeVersionNumber" : VersionNumber
+    )
+
+    alias UpdateThemeAliasResponse = NamedTuple(
+      "ThemeAlias" : (ThemeAlias)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateThemePermissionsRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "GrantPermissions" : (UpdateResourcePermissionList)?,
+      "RevokePermissions" : (UpdateResourcePermissionList)?
+    )
+
+    alias UpdateThemePermissionsResponse = NamedTuple(
+      "ThemeId" : (RestrictiveResourceId)?,
+      "ThemeArn" : (Arn)?,
+      "Permissions" : (ResourcePermissionList)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UpdateThemeRequest = NamedTuple(
+      "AwsAccountId" : AwsAccountId,
+      "ThemeId" : RestrictiveResourceId,
+      "Name" : (ThemeName)?,
+      "BaseThemeId" : RestrictiveResourceId,
+      "VersionDescription" : (VersionDescription)?,
+      "Configuration" : (ThemeConfiguration)?
+    )
+
+    alias UpdateThemeResponse = NamedTuple(
+      "ThemeId" : (RestrictiveResourceId)?,
+      "Arn" : (Arn)?,
+      "VersionArn" : (Arn)?,
+      "CreationStatus" : (ResourceStatus)?,
+      "Status" : (StatusCode)?,
+      "RequestId" : (String)?
+    )
+
+    alias UpdateUserRequest = NamedTuple(
+      "UserName" : UserName,
+      "AwsAccountId" : AwsAccountId,
+      "Namespace" : Namespace,
+      "Email" : String,
+      "Role" : UserRole,
+      "CustomPermissionsName" : (RoleName)?,
+      "UnapplyCustomPermissions" : (Boolean)?
+    )
+
+    alias UpdateUserResponse = NamedTuple(
+      "User" : (User)?,
+      "RequestId" : (String)?,
+      "Status" : (StatusCode)?
+    )
+
+    alias UploadSettings = NamedTuple(
+      "Format" : (FileFormat)?,
+      "StartFromRow" : (PositiveInteger)?,
+      "ContainsHeader" : (Boolean)?,
+      "TextQualifier" : (TextQualifier)?,
+      "Delimiter" : (Delimiter)?
+    )
+
+    alias User = NamedTuple(
+      "Arn" : (Arn)?,
+      "UserName" : (UserName)?,
+      "Email" : (String)?,
+      "Role" : (UserRole)?,
+      "IdentityType" : (IdentityType)?,
+      "Active" : (Boolean)?,
+      "PrincipalId" : (String)?,
+      "CustomPermissionsName" : (RoleName)?
+    )
+
+    alias UserList = Array(User)
+
+    alias UserName = String
+
+    alias UserRole = String
+
+    alias Username = String
+
+    alias VersionDescription = String
+
+    alias VersionNumber = Int64
+
+    alias VpcConnectionProperties = NamedTuple(
+      "VpcConnectionArn" : Arn
+    )
+
+    alias Warehouse = String
+
+    alias WorkGroup = String
+
+    alias boolean = Bool
+
+    alias long = Int64
+
+    alias string = String
+
+    alias timestamp = String | UInt64 | Time
   end
 end

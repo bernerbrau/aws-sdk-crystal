@@ -1917,5 +1917,429 @@ module Aws::Honeycode
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AutomationExecutionException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AutomationExecutionTimeoutException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AwsUserArn = String
+
+    alias BatchCreateTableRowsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "rowsToCreate" : CreateRowDataList,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias BatchCreateTableRowsResult = NamedTuple(
+      "workbookCursor" : WorkbookCursor,
+      "createdRows" : CreatedRowsMap,
+      "failedBatchItems" : (FailedBatchItems)?
+    )
+
+    alias BatchDeleteTableRowsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "rowIds" : RowIdList,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias BatchDeleteTableRowsResult = NamedTuple(
+      "workbookCursor" : WorkbookCursor,
+      "failedBatchItems" : (FailedBatchItems)?
+    )
+
+    alias BatchErrorMessage = String
+
+    alias BatchItemId = String
+
+    alias BatchUpdateTableRowsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "rowsToUpdate" : UpdateRowDataList,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias BatchUpdateTableRowsResult = NamedTuple(
+      "workbookCursor" : WorkbookCursor,
+      "failedBatchItems" : (FailedBatchItems)?
+    )
+
+    alias BatchUpsertTableRowsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "rowsToUpsert" : UpsertRowDataList,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias BatchUpsertTableRowsResult = NamedTuple(
+      "rows" : UpsertRowsResultMap,
+      "workbookCursor" : WorkbookCursor,
+      "failedBatchItems" : (FailedBatchItems)?
+    )
+
+    alias Cell = NamedTuple(
+      "formula" : (Formula)?,
+      "format" : (Format)?,
+      "rawValue" : (RawValue)?,
+      "formattedValue" : (FormattedValue)?
+    )
+
+    alias CellInput = NamedTuple(
+      "fact" : (Fact)?
+    )
+
+    alias Cells = Array(Cell)
+
+    alias ClientRequestToken = String
+
+    alias ColumnMetadata = NamedTuple(
+      "name" : Name,
+      "format" : Format
+    )
+
+    alias CreateRowData = NamedTuple(
+      "batchItemId" : BatchItemId,
+      "cellsToCreate" : RowDataInput
+    )
+
+    alias CreateRowDataList = Array(CreateRowData)
+
+    alias CreatedRowsMap = Hash(BatchItemId,RowId)
+
+    alias DataItem = NamedTuple(
+      "overrideFormat" : (Format)?,
+      "rawValue" : (RawValue)?,
+      "formattedValue" : (FormattedValue)?
+    )
+
+    alias DataItems = Array(DataItem)
+
+    alias DelimitedTextDelimiter = String
+
+    alias DelimitedTextImportOptions = NamedTuple(
+      "delimiter" : DelimitedTextDelimiter,
+      "hasHeaderRow" : (HasHeaderRow)?,
+      "ignoreEmptyRows" : (IgnoreEmptyRows)?,
+      "dataCharacterEncoding" : (ImportDataCharacterEncoding)?
+    )
+
+    alias DescribeTableDataImportJobRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "jobId" : JobId
+    )
+
+    alias DescribeTableDataImportJobResult = NamedTuple(
+      "jobStatus" : TableDataImportJobStatus,
+      "message" : TableDataImportJobMessage,
+      "jobMetadata" : TableDataImportJobMetadata
+    )
+
+    alias DestinationOptions = NamedTuple(
+      "columnMap" : (ImportColumnMap)?
+    )
+
+    alias Email = String
+
+    alias ErrorMessage = String
+
+    alias Fact = String
+
+    alias FailedBatchItem = NamedTuple(
+      "id" : BatchItemId,
+      "errorMessage" : BatchErrorMessage
+    )
+
+    alias FailedBatchItems = Array(FailedBatchItem)
+
+    alias Filter = NamedTuple(
+      "formula" : Formula,
+      "contextRowId" : (RowId)?
+    )
+
+    alias Format = String
+
+    alias FormattedValue = String
+
+    alias Formula = String
+
+    alias GetScreenDataRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "appId" : ResourceId,
+      "screenId" : ResourceId,
+      "variables" : (VariableValueMap)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias GetScreenDataResult = NamedTuple(
+      "results" : ResultSetMap,
+      "workbookCursor" : WorkbookCursor,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias HasHeaderRow = Bool
+
+    alias IgnoreEmptyRows = Bool
+
+    alias ImportColumnMap = Hash(ResourceId,SourceDataColumnProperties)
+
+    alias ImportDataCharacterEncoding = String
+
+    alias ImportDataSource = NamedTuple(
+      "dataSourceConfig" : ImportDataSourceConfig
+    )
+
+    alias ImportDataSourceConfig = NamedTuple(
+      "dataSourceUrl" : (SecureURL)?
+    )
+
+    alias ImportJobSubmitter = NamedTuple(
+      "email" : (Email)?,
+      "userArn" : (AwsUserArn)?
+    )
+
+    alias ImportOptions = NamedTuple(
+      "destinationOptions" : (DestinationOptions)?,
+      "delimitedTextOptions" : (DelimitedTextImportOptions)?
+    )
+
+    alias ImportSourceDataFormat = String
+
+    alias InternalServerException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvokeScreenAutomationRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "appId" : ResourceId,
+      "screenId" : ResourceId,
+      "screenAutomationId" : ResourceId,
+      "variables" : (VariableValueMap)?,
+      "rowId" : (RowId)?,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias InvokeScreenAutomationResult = NamedTuple(
+      "workbookCursor" : WorkbookCursor
+    )
+
+    alias JobId = String
+
+    alias ListTableColumnsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTableColumnsResult = NamedTuple(
+      "tableColumns" : TableColumns,
+      "nextToken" : (PaginationToken)?,
+      "workbookCursor" : (WorkbookCursor)?
+    )
+
+    alias ListTableRowsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "rowIds" : (RowIdList)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTableRowsResult = NamedTuple(
+      "columnIds" : ResourceIds,
+      "rows" : TableRows,
+      "rowIdsNotFound" : (RowIdList)?,
+      "nextToken" : (PaginationToken)?,
+      "workbookCursor" : WorkbookCursor
+    )
+
+    alias ListTablesRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTablesResult = NamedTuple(
+      "tables" : Tables,
+      "nextToken" : (PaginationToken)?,
+      "workbookCursor" : (WorkbookCursor)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Name = String
+
+    alias PaginationToken = String
+
+    alias QueryTableRowsRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "tableId" : ResourceId,
+      "filterFormula" : Filter,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias QueryTableRowsResult = NamedTuple(
+      "columnIds" : ResourceIds,
+      "rows" : TableRows,
+      "nextToken" : (PaginationToken)?,
+      "workbookCursor" : WorkbookCursor
+    )
+
+    alias RawValue = String
+
+    alias RequestTimeoutException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceId = String
+
+    alias ResourceIds = Array(ResourceId)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResultHeader = Array(ColumnMetadata)
+
+    alias ResultRow = NamedTuple(
+      "rowId" : (RowId)?,
+      "dataItems" : DataItems
+    )
+
+    alias ResultRows = Array(ResultRow)
+
+    alias ResultSet = NamedTuple(
+      "headers" : ResultHeader,
+      "rows" : ResultRows
+    )
+
+    alias ResultSetMap = Hash(Name,ResultSet)
+
+    alias RowDataInput = Hash(ResourceId,CellInput)
+
+    alias RowId = String
+
+    alias RowIdList = Array(RowId)
+
+    alias SecureURL = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias SourceDataColumnIndex = Int32
+
+    alias SourceDataColumnProperties = NamedTuple(
+      "columnIndex" : (SourceDataColumnIndex)?
+    )
+
+    alias StartTableDataImportJobRequest = NamedTuple(
+      "workbookId" : ResourceId,
+      "dataSource" : ImportDataSource,
+      "dataFormat" : ImportSourceDataFormat,
+      "destinationTableId" : ResourceId,
+      "importOptions" : ImportOptions,
+      "clientRequestToken" : ClientRequestToken
+    )
+
+    alias StartTableDataImportJobResult = NamedTuple(
+      "jobId" : JobId,
+      "jobStatus" : TableDataImportJobStatus
+    )
+
+    alias Table = NamedTuple(
+      "tableId" : (ResourceId)?,
+      "tableName" : (TableName)?
+    )
+
+    alias TableColumn = NamedTuple(
+      "tableColumnId" : (ResourceId)?,
+      "tableColumnName" : (TableColumnName)?,
+      "format" : (Format)?
+    )
+
+    alias TableColumnName = String
+
+    alias TableColumns = Array(TableColumn)
+
+    alias TableDataImportJobMessage = String
+
+    alias TableDataImportJobMetadata = NamedTuple(
+      "submitter" : ImportJobSubmitter,
+      "submitTime" : TimestampInMillis,
+      "importOptions" : ImportOptions,
+      "dataSource" : ImportDataSource
+    )
+
+    alias TableDataImportJobStatus = String
+
+    alias TableName = String
+
+    alias TableRow = NamedTuple(
+      "rowId" : RowId,
+      "cells" : Cells
+    )
+
+    alias TableRows = Array(TableRow)
+
+    alias Tables = Array(Table)
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TimestampInMillis = String | UInt64 | Time
+
+    alias UpdateRowData = NamedTuple(
+      "rowId" : RowId,
+      "cellsToUpdate" : RowDataInput
+    )
+
+    alias UpdateRowDataList = Array(UpdateRowData)
+
+    alias UpsertAction = String
+
+    alias UpsertRowData = NamedTuple(
+      "batchItemId" : BatchItemId,
+      "filter" : Filter,
+      "cellsToUpdate" : RowDataInput
+    )
+
+    alias UpsertRowDataList = Array(UpsertRowData)
+
+    alias UpsertRowsResult = NamedTuple(
+      "rowIds" : RowIdList,
+      "upsertAction" : UpsertAction
+    )
+
+    alias UpsertRowsResultMap = Hash(BatchItemId,UpsertRowsResult)
+
+    alias ValidationException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias VariableName = String
+
+    alias VariableValue = NamedTuple(
+      "rawValue" : RawValue
+    )
+
+    alias VariableValueMap = Hash(VariableName,VariableValue)
+
+    alias WorkbookCursor = Int64
   end
 end

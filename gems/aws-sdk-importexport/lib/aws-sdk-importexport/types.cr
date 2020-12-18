@@ -780,5 +780,275 @@ module Aws::ImportExport
       include Aws::Structure
     end
 
+    alias APIVersion = String
+
+    alias Artifact = NamedTuple(
+      "Description" : (Description)?,
+      "URL" : (URL)?
+    )
+
+    alias ArtifactList = Array(Artifact)
+
+    alias BucketPermissionException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias CancelJobInput = NamedTuple(
+      "JobId" : JobId,
+      "APIVersion" : (APIVersion)?
+    )
+
+    alias CancelJobOutput = NamedTuple(
+      "Success" : (Success)?
+    )
+
+    alias CanceledJobIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Carrier = String
+
+    alias CreateJobInput = NamedTuple(
+      "JobType" : JobType,
+      "Manifest" : Manifest,
+      "ManifestAddendum" : (ManifestAddendum)?,
+      "ValidateOnly" : ValidateOnly,
+      "APIVersion" : (APIVersion)?
+    )
+
+    alias CreateJobOutput = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobType" : (JobType)?,
+      "Signature" : (Signature)?,
+      "SignatureFileContents" : (SignatureFileContents)?,
+      "WarningMessage" : (WarningMessage)?,
+      "ArtifactList" : (ArtifactList)?
+    )
+
+    alias CreateJobQuotaExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias CreationDate = String | UInt64 | Time
+
+    alias CurrentManifest = String
+
+    alias Description = String
+
+    alias ErrorCount = Int32
+
+    alias ErrorMessage = String
+
+    alias ExpiredJobIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias GenericString = String
+
+    alias GetShippingLabelInput = NamedTuple(
+      "jobIds" : JobIdList,
+      "name" : (name)?,
+      "company" : (company)?,
+      "phoneNumber" : (phoneNumber)?,
+      "country" : (country)?,
+      "stateOrProvince" : (stateOrProvince)?,
+      "city" : (city)?,
+      "postalCode" : (postalCode)?,
+      "street1" : (street1)?,
+      "street2" : (street2)?,
+      "street3" : (street3)?,
+      "APIVersion" : (APIVersion)?
+    )
+
+    alias GetShippingLabelOutput = NamedTuple(
+      "ShippingLabelURL" : (GenericString)?,
+      "Warning" : (GenericString)?
+    )
+
+    alias GetStatusInput = NamedTuple(
+      "JobId" : JobId,
+      "APIVersion" : (APIVersion)?
+    )
+
+    alias GetStatusOutput = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobType" : (JobType)?,
+      "LocationCode" : (LocationCode)?,
+      "LocationMessage" : (LocationMessage)?,
+      "ProgressCode" : (ProgressCode)?,
+      "ProgressMessage" : (ProgressMessage)?,
+      "Carrier" : (Carrier)?,
+      "TrackingNumber" : (TrackingNumber)?,
+      "LogBucket" : (LogBucket)?,
+      "LogKey" : (LogKey)?,
+      "ErrorCount" : (ErrorCount)?,
+      "Signature" : (Signature)?,
+      "SignatureFileContents" : (Signature)?,
+      "CurrentManifest" : (CurrentManifest)?,
+      "CreationDate" : (CreationDate)?,
+      "ArtifactList" : (ArtifactList)?
+    )
+
+    alias InvalidAccessKeyIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidAddressException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidCustomsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidFileSystemException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidJobIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidManifestFieldException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidVersionException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias IsCanceled = Bool
+
+    alias IsTruncated = Bool
+
+    alias Job = NamedTuple(
+      "JobId" : (JobId)?,
+      "CreationDate" : (CreationDate)?,
+      "IsCanceled" : (IsCanceled)?,
+      "JobType" : (JobType)?
+    )
+
+    alias JobId = String
+
+    alias JobIdList = Array(GenericString)
+
+    alias JobType = String
+
+    alias JobsList = Array(Job)
+
+    alias ListJobsInput = NamedTuple(
+      "MaxJobs" : (MaxJobs)?,
+      "Marker" : (Marker)?,
+      "APIVersion" : (APIVersion)?
+    )
+
+    alias ListJobsOutput = NamedTuple(
+      "Jobs" : (JobsList)?,
+      "IsTruncated" : (IsTruncated)?
+    )
+
+    alias LocationCode = String
+
+    alias LocationMessage = String
+
+    alias LogBucket = String
+
+    alias LogKey = String
+
+    alias MalformedManifestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Manifest = String
+
+    alias ManifestAddendum = String
+
+    alias Marker = String
+
+    alias MaxJobs = Int32
+
+    alias MissingCustomsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias MissingManifestFieldException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias MissingParameterException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias MultipleRegionsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchBucketException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ProgressCode = String
+
+    alias ProgressMessage = String
+
+    alias Signature = String
+
+    alias SignatureFileContents = String
+
+    alias Success = Bool
+
+    alias TrackingNumber = String
+
+    alias URL = String
+
+    alias UnableToCancelJobIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UnableToUpdateJobIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UpdateJobInput = NamedTuple(
+      "JobId" : JobId,
+      "Manifest" : Manifest,
+      "JobType" : JobType,
+      "ValidateOnly" : ValidateOnly,
+      "APIVersion" : (APIVersion)?
+    )
+
+    alias UpdateJobOutput = NamedTuple(
+      "Success" : (Success)?,
+      "WarningMessage" : (WarningMessage)?,
+      "ArtifactList" : (ArtifactList)?
+    )
+
+    alias ValidateOnly = Bool
+
+    alias WarningMessage = String
+
+    alias city = String
+
+    alias company = String
+
+    alias country = String
+
+    alias name = String
+
+    alias phoneNumber = String
+
+    alias postalCode = String
+
+    alias stateOrProvince = String
+
+    alias street1 = String
+
+    alias street2 = String
+
+    alias street3 = String
   end
 end

@@ -8493,5 +8493,1581 @@ module Aws::CloudFormation
       include Aws::Structure
     end
 
+    alias Account = String
+
+    alias AccountGateResult = NamedTuple(
+      "Status" : (AccountGateStatus)?,
+      "StatusReason" : (AccountGateStatusReason)?
+    )
+
+    alias AccountGateStatus = String
+
+    alias AccountGateStatusReason = String
+
+    alias AccountLimit = NamedTuple(
+      "Name" : (LimitName)?,
+      "Value" : (LimitValue)?
+    )
+
+    alias AccountLimitList = Array(AccountLimit)
+
+    alias AccountList = Array(Account)
+
+    alias AllowedValue = String
+
+    alias AllowedValues = Array(AllowedValue)
+
+    alias AlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias Arn = String
+
+    alias AutoDeployment = NamedTuple(
+      "Enabled" : (AutoDeploymentNullable)?,
+      "RetainStacksOnAccountRemoval" : (RetainStacksOnAccountRemovalNullable)?
+    )
+
+    alias AutoDeploymentNullable = Bool
+
+    alias BoxedInteger = Int32
+
+    alias BoxedMaxResults = Int32
+
+    alias CFNRegistryException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CancelUpdateStackInput = NamedTuple(
+      "StackName" : StackName,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias Capabilities = Array(Capability)
+
+    alias CapabilitiesReason = String
+
+    alias Capability = String
+
+    alias CausingEntity = String
+
+    alias Change = NamedTuple(
+      "Type" : (ChangeType)?,
+      "ResourceChange" : (ResourceChange)?
+    )
+
+    alias ChangeAction = String
+
+    alias ChangeSetId = String
+
+    alias ChangeSetName = String
+
+    alias ChangeSetNameOrId = String
+
+    alias ChangeSetNotFoundException = NamedTuple(
+      
+    )
+
+    alias ChangeSetStatus = String
+
+    alias ChangeSetStatusReason = String
+
+    alias ChangeSetSummaries = Array(ChangeSetSummary)
+
+    alias ChangeSetSummary = NamedTuple(
+      "StackId" : (StackId)?,
+      "StackName" : (StackName)?,
+      "ChangeSetId" : (ChangeSetId)?,
+      "ChangeSetName" : (ChangeSetName)?,
+      "ExecutionStatus" : (ExecutionStatus)?,
+      "Status" : (ChangeSetStatus)?,
+      "StatusReason" : (ChangeSetStatusReason)?,
+      "CreationTime" : (CreationTime)?,
+      "Description" : (Description)?,
+      "IncludeNestedStacks" : (IncludeNestedStacks)?,
+      "ParentChangeSetId" : (ChangeSetId)?,
+      "RootChangeSetId" : (ChangeSetId)?
+    )
+
+    alias ChangeSetType = String
+
+    alias ChangeSource = String
+
+    alias ChangeType = String
+
+    alias Changes = Array(Change)
+
+    alias ClientRequestToken = String
+
+    alias ClientToken = String
+
+    alias ContinueUpdateRollbackInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "RoleARN" : (RoleARN)?,
+      "ResourcesToSkip" : (ResourcesToSkip)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias ContinueUpdateRollbackOutput = NamedTuple(
+      
+    )
+
+    alias CreateChangeSetInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "UsePreviousTemplate" : (UsePreviousTemplate)?,
+      "Parameters" : (Parameters)?,
+      "Capabilities" : (Capabilities)?,
+      "ResourceTypes" : (ResourceTypes)?,
+      "RoleARN" : (RoleARN)?,
+      "RollbackConfiguration" : (RollbackConfiguration)?,
+      "NotificationARNs" : (NotificationARNs)?,
+      "Tags" : (Tags)?,
+      "ChangeSetName" : ChangeSetName,
+      "ClientToken" : (ClientToken)?,
+      "Description" : (Description)?,
+      "ChangeSetType" : (ChangeSetType)?,
+      "ResourcesToImport" : (ResourcesToImport)?,
+      "IncludeNestedStacks" : (IncludeNestedStacks)?
+    )
+
+    alias CreateChangeSetOutput = NamedTuple(
+      "Id" : (ChangeSetId)?,
+      "StackId" : (StackId)?
+    )
+
+    alias CreateStackInput = NamedTuple(
+      "StackName" : StackName,
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "Parameters" : (Parameters)?,
+      "DisableRollback" : (DisableRollback)?,
+      "RollbackConfiguration" : (RollbackConfiguration)?,
+      "TimeoutInMinutes" : (TimeoutMinutes)?,
+      "NotificationARNs" : (NotificationARNs)?,
+      "Capabilities" : (Capabilities)?,
+      "ResourceTypes" : (ResourceTypes)?,
+      "RoleARN" : (RoleARN)?,
+      "OnFailure" : (OnFailure)?,
+      "StackPolicyBody" : (StackPolicyBody)?,
+      "StackPolicyURL" : (StackPolicyURL)?,
+      "Tags" : (Tags)?,
+      "ClientRequestToken" : (ClientRequestToken)?,
+      "EnableTerminationProtection" : (EnableTerminationProtection)?
+    )
+
+    alias CreateStackInstancesInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "Accounts" : (AccountList)?,
+      "DeploymentTargets" : (DeploymentTargets)?,
+      "Regions" : RegionList,
+      "ParameterOverrides" : (Parameters)?,
+      "OperationPreferences" : (StackSetOperationPreferences)?,
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias CreateStackInstancesOutput = NamedTuple(
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias CreateStackOutput = NamedTuple(
+      "StackId" : (StackId)?
+    )
+
+    alias CreateStackSetInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "Description" : (Description)?,
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "Parameters" : (Parameters)?,
+      "Capabilities" : (Capabilities)?,
+      "Tags" : (Tags)?,
+      "AdministrationRoleARN" : (RoleARN)?,
+      "ExecutionRoleName" : (ExecutionRoleName)?,
+      "PermissionModel" : (PermissionModels)?,
+      "AutoDeployment" : (AutoDeployment)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias CreateStackSetOutput = NamedTuple(
+      "StackSetId" : (StackSetId)?
+    )
+
+    alias CreatedButModifiedException = NamedTuple(
+      
+    )
+
+    alias CreationTime = String | UInt64 | Time
+
+    alias DeleteChangeSetInput = NamedTuple(
+      "ChangeSetName" : ChangeSetNameOrId,
+      "StackName" : (StackNameOrId)?
+    )
+
+    alias DeleteChangeSetOutput = NamedTuple(
+      
+    )
+
+    alias DeleteStackInput = NamedTuple(
+      "StackName" : StackName,
+      "RetainResources" : (RetainResources)?,
+      "RoleARN" : (RoleARN)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias DeleteStackInstancesInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "Accounts" : (AccountList)?,
+      "DeploymentTargets" : (DeploymentTargets)?,
+      "Regions" : RegionList,
+      "OperationPreferences" : (StackSetOperationPreferences)?,
+      "RetainStacks" : RetainStacks,
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias DeleteStackInstancesOutput = NamedTuple(
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias DeleteStackSetInput = NamedTuple(
+      "StackSetName" : StackSetName
+    )
+
+    alias DeleteStackSetOutput = NamedTuple(
+      
+    )
+
+    alias DeletionTime = String | UInt64 | Time
+
+    alias DeploymentTargets = NamedTuple(
+      "Accounts" : (AccountList)?,
+      "OrganizationalUnitIds" : (OrganizationalUnitIdList)?
+    )
+
+    alias DeprecatedStatus = String
+
+    alias DeregisterTypeInput = NamedTuple(
+      "Arn" : (PrivateTypeArn)?,
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "VersionId" : (TypeVersionId)?
+    )
+
+    alias DeregisterTypeOutput = NamedTuple(
+      
+    )
+
+    alias DescribeAccountLimitsInput = NamedTuple(
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAccountLimitsOutput = NamedTuple(
+      "AccountLimits" : (AccountLimitList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeChangeSetInput = NamedTuple(
+      "ChangeSetName" : ChangeSetNameOrId,
+      "StackName" : (StackNameOrId)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeChangeSetOutput = NamedTuple(
+      "ChangeSetName" : (ChangeSetName)?,
+      "ChangeSetId" : (ChangeSetId)?,
+      "StackId" : (StackId)?,
+      "StackName" : (StackName)?,
+      "Description" : (Description)?,
+      "Parameters" : (Parameters)?,
+      "CreationTime" : (CreationTime)?,
+      "ExecutionStatus" : (ExecutionStatus)?,
+      "Status" : (ChangeSetStatus)?,
+      "StatusReason" : (ChangeSetStatusReason)?,
+      "NotificationARNs" : (NotificationARNs)?,
+      "RollbackConfiguration" : (RollbackConfiguration)?,
+      "Capabilities" : (Capabilities)?,
+      "Tags" : (Tags)?,
+      "Changes" : (Changes)?,
+      "NextToken" : (NextToken)?,
+      "IncludeNestedStacks" : (IncludeNestedStacks)?,
+      "ParentChangeSetId" : (ChangeSetId)?,
+      "RootChangeSetId" : (ChangeSetId)?
+    )
+
+    alias DescribeStackDriftDetectionStatusInput = NamedTuple(
+      "StackDriftDetectionId" : StackDriftDetectionId
+    )
+
+    alias DescribeStackDriftDetectionStatusOutput = NamedTuple(
+      "StackId" : StackId,
+      "StackDriftDetectionId" : StackDriftDetectionId,
+      "StackDriftStatus" : (StackDriftStatus)?,
+      "DetectionStatus" : StackDriftDetectionStatus,
+      "DetectionStatusReason" : (StackDriftDetectionStatusReason)?,
+      "DriftedStackResourceCount" : (BoxedInteger)?,
+      "Timestamp" : Timestamp
+    )
+
+    alias DescribeStackEventsInput = NamedTuple(
+      "StackName" : (StackName)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeStackEventsOutput = NamedTuple(
+      "StackEvents" : (StackEvents)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeStackInstanceInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "StackInstanceAccount" : Account,
+      "StackInstanceRegion" : Region
+    )
+
+    alias DescribeStackInstanceOutput = NamedTuple(
+      "StackInstance" : (StackInstance)?
+    )
+
+    alias DescribeStackResourceDriftsInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "StackResourceDriftStatusFilters" : (StackResourceDriftStatusFilters)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (BoxedMaxResults)?
+    )
+
+    alias DescribeStackResourceDriftsOutput = NamedTuple(
+      "StackResourceDrifts" : StackResourceDrifts,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeStackResourceInput = NamedTuple(
+      "StackName" : StackName,
+      "LogicalResourceId" : LogicalResourceId
+    )
+
+    alias DescribeStackResourceOutput = NamedTuple(
+      "StackResourceDetail" : (StackResourceDetail)?
+    )
+
+    alias DescribeStackResourcesInput = NamedTuple(
+      "StackName" : (StackName)?,
+      "LogicalResourceId" : (LogicalResourceId)?,
+      "PhysicalResourceId" : (PhysicalResourceId)?
+    )
+
+    alias DescribeStackResourcesOutput = NamedTuple(
+      "StackResources" : (StackResources)?
+    )
+
+    alias DescribeStackSetInput = NamedTuple(
+      "StackSetName" : StackSetName
+    )
+
+    alias DescribeStackSetOperationInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "OperationId" : ClientRequestToken
+    )
+
+    alias DescribeStackSetOperationOutput = NamedTuple(
+      "StackSetOperation" : (StackSetOperation)?
+    )
+
+    alias DescribeStackSetOutput = NamedTuple(
+      "StackSet" : (StackSet)?
+    )
+
+    alias DescribeStacksInput = NamedTuple(
+      "StackName" : (StackName)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeStacksOutput = NamedTuple(
+      "Stacks" : (Stacks)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeTypeInput = NamedTuple(
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "Arn" : (TypeArn)?,
+      "VersionId" : (TypeVersionId)?
+    )
+
+    alias DescribeTypeOutput = NamedTuple(
+      "Arn" : (TypeArn)?,
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "DefaultVersionId" : (TypeVersionId)?,
+      "IsDefaultVersion" : (IsDefaultVersion)?,
+      "Description" : (Description)?,
+      "Schema" : (TypeSchema)?,
+      "ProvisioningType" : (ProvisioningType)?,
+      "DeprecatedStatus" : (DeprecatedStatus)?,
+      "LoggingConfig" : (LoggingConfig)?,
+      "ExecutionRoleArn" : (RoleArn)?,
+      "Visibility" : (Visibility)?,
+      "SourceUrl" : (OptionalSecureUrl)?,
+      "DocumentationUrl" : (OptionalSecureUrl)?,
+      "LastUpdated" : (Timestamp)?,
+      "TimeCreated" : (Timestamp)?
+    )
+
+    alias DescribeTypeRegistrationInput = NamedTuple(
+      "RegistrationToken" : RegistrationToken
+    )
+
+    alias DescribeTypeRegistrationOutput = NamedTuple(
+      "ProgressStatus" : (RegistrationStatus)?,
+      "Description" : (Description)?,
+      "TypeArn" : (TypeArn)?,
+      "TypeVersionArn" : (TypeArn)?
+    )
+
+    alias Description = String
+
+    alias DetectStackDriftInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "LogicalResourceIds" : (LogicalResourceIds)?
+    )
+
+    alias DetectStackDriftOutput = NamedTuple(
+      "StackDriftDetectionId" : StackDriftDetectionId
+    )
+
+    alias DetectStackResourceDriftInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "LogicalResourceId" : LogicalResourceId
+    )
+
+    alias DetectStackResourceDriftOutput = NamedTuple(
+      "StackResourceDrift" : StackResourceDrift
+    )
+
+    alias DetectStackSetDriftInput = NamedTuple(
+      "StackSetName" : StackSetNameOrId,
+      "OperationPreferences" : (StackSetOperationPreferences)?,
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias DetectStackSetDriftOutput = NamedTuple(
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias DifferenceType = String
+
+    alias DisableRollback = Bool
+
+    alias DriftedStackInstancesCount = Int32
+
+    alias EnableTerminationProtection = Bool
+
+    alias ErrorMessage = String
+
+    alias EstimateTemplateCostInput = NamedTuple(
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "Parameters" : (Parameters)?
+    )
+
+    alias EstimateTemplateCostOutput = NamedTuple(
+      "Url" : (Url)?
+    )
+
+    alias EvaluationType = String
+
+    alias EventId = String
+
+    alias ExecuteChangeSetInput = NamedTuple(
+      "ChangeSetName" : ChangeSetNameOrId,
+      "StackName" : (StackNameOrId)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias ExecuteChangeSetOutput = NamedTuple(
+      
+    )
+
+    alias ExecutionRoleName = String
+
+    alias ExecutionStatus = String
+
+    alias Export = NamedTuple(
+      "ExportingStackId" : (StackId)?,
+      "Name" : (ExportName)?,
+      "Value" : (ExportValue)?
+    )
+
+    alias ExportName = String
+
+    alias ExportValue = String
+
+    alias Exports = Array(Export)
+
+    alias FailedStackInstancesCount = Int32
+
+    alias FailureToleranceCount = Int32
+
+    alias FailureTolerancePercentage = Int32
+
+    alias GetStackPolicyInput = NamedTuple(
+      "StackName" : StackName
+    )
+
+    alias GetStackPolicyOutput = NamedTuple(
+      "StackPolicyBody" : (StackPolicyBody)?
+    )
+
+    alias GetTemplateInput = NamedTuple(
+      "StackName" : (StackName)?,
+      "ChangeSetName" : (ChangeSetNameOrId)?,
+      "TemplateStage" : (TemplateStage)?
+    )
+
+    alias GetTemplateOutput = NamedTuple(
+      "TemplateBody" : (TemplateBody)?,
+      "StagesAvailable" : (StageList)?
+    )
+
+    alias GetTemplateSummaryInput = NamedTuple(
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "StackName" : (StackNameOrId)?,
+      "StackSetName" : (StackSetNameOrId)?
+    )
+
+    alias GetTemplateSummaryOutput = NamedTuple(
+      "Parameters" : (ParameterDeclarations)?,
+      "Description" : (Description)?,
+      "Capabilities" : (Capabilities)?,
+      "CapabilitiesReason" : (CapabilitiesReason)?,
+      "ResourceTypes" : (ResourceTypes)?,
+      "Version" : (Version)?,
+      "Metadata" : (Metadata)?,
+      "DeclaredTransforms" : (TransformsList)?,
+      "ResourceIdentifierSummaries" : (ResourceIdentifierSummaries)?
+    )
+
+    alias HandlerErrorCode = String
+
+    alias Imports = Array(StackName)
+
+    alias InProgressStackInstancesCount = Int32
+
+    alias InSyncStackInstancesCount = Int32
+
+    alias IncludeNestedStacks = Bool
+
+    alias InsufficientCapabilitiesException = NamedTuple(
+      
+    )
+
+    alias InvalidChangeSetStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      
+    )
+
+    alias InvalidStateTransitionException = NamedTuple(
+      
+    )
+
+    alias IsDefaultVersion = Bool
+
+    alias Key = String
+
+    alias LastUpdatedTime = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias LimitName = String
+
+    alias LimitValue = Int32
+
+    alias ListChangeSetsInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChangeSetsOutput = NamedTuple(
+      "Summaries" : (ChangeSetSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListExportsInput = NamedTuple(
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListExportsOutput = NamedTuple(
+      "Exports" : (Exports)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListImportsInput = NamedTuple(
+      "ExportName" : ExportName,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListImportsOutput = NamedTuple(
+      "Imports" : (Imports)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStackInstancesInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Filters" : (StackInstanceFilters)?,
+      "StackInstanceAccount" : (Account)?,
+      "StackInstanceRegion" : (Region)?
+    )
+
+    alias ListStackInstancesOutput = NamedTuple(
+      "Summaries" : (StackInstanceSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStackResourcesInput = NamedTuple(
+      "StackName" : StackName,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStackResourcesOutput = NamedTuple(
+      "StackResourceSummaries" : (StackResourceSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStackSetOperationResultsInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "OperationId" : ClientRequestToken,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListStackSetOperationResultsOutput = NamedTuple(
+      "Summaries" : (StackSetOperationResultSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStackSetOperationsInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListStackSetOperationsOutput = NamedTuple(
+      "Summaries" : (StackSetOperationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStackSetsInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "Status" : (StackSetStatus)?
+    )
+
+    alias ListStackSetsOutput = NamedTuple(
+      "Summaries" : (StackSetSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListStacksInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "StackStatusFilter" : (StackStatusFilter)?
+    )
+
+    alias ListStacksOutput = NamedTuple(
+      "StackSummaries" : (StackSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTypeRegistrationsInput = NamedTuple(
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "TypeArn" : (TypeArn)?,
+      "RegistrationStatusFilter" : (RegistrationStatus)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTypeRegistrationsOutput = NamedTuple(
+      "RegistrationTokenList" : (RegistrationTokenList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTypeVersionsInput = NamedTuple(
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "Arn" : (PrivateTypeArn)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "DeprecatedStatus" : (DeprecatedStatus)?
+    )
+
+    alias ListTypeVersionsOutput = NamedTuple(
+      "TypeVersionSummaries" : (TypeVersionSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTypesInput = NamedTuple(
+      "Visibility" : (Visibility)?,
+      "ProvisioningType" : (ProvisioningType)?,
+      "DeprecatedStatus" : (DeprecatedStatus)?,
+      "Type" : (RegistryType)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTypesOutput = NamedTuple(
+      "TypeSummaries" : (TypeSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias LogGroupName = String
+
+    alias LoggingConfig = NamedTuple(
+      "LogRoleArn" : RoleArn,
+      "LogGroupName" : LogGroupName
+    )
+
+    alias LogicalIdHierarchy = String
+
+    alias LogicalResourceId = String
+
+    alias LogicalResourceIds = Array(LogicalResourceId)
+
+    alias MaxConcurrentCount = Int32
+
+    alias MaxConcurrentPercentage = Int32
+
+    alias MaxResults = Int32
+
+    alias Metadata = String
+
+    alias ModuleInfo = NamedTuple(
+      "TypeHierarchy" : (TypeHierarchy)?,
+      "LogicalIdHierarchy" : (LogicalIdHierarchy)?
+    )
+
+    alias MonitoringTimeInMinutes = Int32
+
+    alias NameAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias NextToken = String
+
+    alias NoEcho = Bool
+
+    alias NotificationARN = String
+
+    alias NotificationARNs = Array(NotificationARN)
+
+    alias OnFailure = String
+
+    alias OperationIdAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias OperationInProgressException = NamedTuple(
+      
+    )
+
+    alias OperationNotFoundException = NamedTuple(
+      
+    )
+
+    alias OperationStatus = String
+
+    alias OperationStatusCheckFailedException = NamedTuple(
+      
+    )
+
+    alias OptionalSecureUrl = String
+
+    alias OrganizationalUnitId = String
+
+    alias OrganizationalUnitIdList = Array(OrganizationalUnitId)
+
+    alias Output = NamedTuple(
+      "OutputKey" : (OutputKey)?,
+      "OutputValue" : (OutputValue)?,
+      "Description" : (Description)?,
+      "ExportName" : (ExportName)?
+    )
+
+    alias OutputKey = String
+
+    alias OutputValue = String
+
+    alias Outputs = Array(Output)
+
+    alias Parameter = NamedTuple(
+      "ParameterKey" : (ParameterKey)?,
+      "ParameterValue" : (ParameterValue)?,
+      "UsePreviousValue" : (UsePreviousValue)?,
+      "ResolvedValue" : (ParameterValue)?
+    )
+
+    alias ParameterConstraints = NamedTuple(
+      "AllowedValues" : (AllowedValues)?
+    )
+
+    alias ParameterDeclaration = NamedTuple(
+      "ParameterKey" : (ParameterKey)?,
+      "DefaultValue" : (ParameterValue)?,
+      "ParameterType" : (ParameterType)?,
+      "NoEcho" : (NoEcho)?,
+      "Description" : (Description)?,
+      "ParameterConstraints" : (ParameterConstraints)?
+    )
+
+    alias ParameterDeclarations = Array(ParameterDeclaration)
+
+    alias ParameterKey = String
+
+    alias ParameterType = String
+
+    alias ParameterValue = String
+
+    alias Parameters = Array(Parameter)
+
+    alias PermissionModels = String
+
+    alias PhysicalResourceId = String
+
+    alias PhysicalResourceIdContext = Array(PhysicalResourceIdContextKeyValuePair)
+
+    alias PhysicalResourceIdContextKeyValuePair = NamedTuple(
+      "Key" : Key,
+      "Value" : Value
+    )
+
+    alias PrivateTypeArn = String
+
+    alias Properties = String
+
+    alias PropertyDifference = NamedTuple(
+      "PropertyPath" : PropertyPath,
+      "ExpectedValue" : PropertyValue,
+      "ActualValue" : PropertyValue,
+      "DifferenceType" : DifferenceType
+    )
+
+    alias PropertyDifferences = Array(PropertyDifference)
+
+    alias PropertyName = String
+
+    alias PropertyPath = String
+
+    alias PropertyValue = String
+
+    alias ProvisioningType = String
+
+    alias Reason = String
+
+    alias RecordHandlerProgressInput = NamedTuple(
+      "BearerToken" : ClientToken,
+      "OperationStatus" : OperationStatus,
+      "CurrentOperationStatus" : (OperationStatus)?,
+      "StatusMessage" : (StatusMessage)?,
+      "ErrorCode" : (HandlerErrorCode)?,
+      "ResourceModel" : (ResourceModel)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias RecordHandlerProgressOutput = NamedTuple(
+      
+    )
+
+    alias Region = String
+
+    alias RegionList = Array(Region)
+
+    alias RegisterTypeInput = NamedTuple(
+      "Type" : (RegistryType)?,
+      "TypeName" : TypeName,
+      "SchemaHandlerPackage" : S3Url,
+      "LoggingConfig" : (LoggingConfig)?,
+      "ExecutionRoleArn" : (RoleArn)?,
+      "ClientRequestToken" : (RequestToken)?
+    )
+
+    alias RegisterTypeOutput = NamedTuple(
+      "RegistrationToken" : (RegistrationToken)?
+    )
+
+    alias RegistrationStatus = String
+
+    alias RegistrationToken = String
+
+    alias RegistrationTokenList = Array(RegistrationToken)
+
+    alias RegistryType = String
+
+    alias Replacement = String
+
+    alias RequestToken = String
+
+    alias RequiresRecreation = String
+
+    alias ResourceAttribute = String
+
+    alias ResourceChange = NamedTuple(
+      "Action" : (ChangeAction)?,
+      "LogicalResourceId" : (LogicalResourceId)?,
+      "PhysicalResourceId" : (PhysicalResourceId)?,
+      "ResourceType" : (ResourceType)?,
+      "Replacement" : (Replacement)?,
+      "Scope" : (Scope)?,
+      "Details" : (ResourceChangeDetails)?,
+      "ChangeSetId" : (ChangeSetId)?,
+      "ModuleInfo" : (ModuleInfo)?
+    )
+
+    alias ResourceChangeDetail = NamedTuple(
+      "Target" : (ResourceTargetDefinition)?,
+      "Evaluation" : (EvaluationType)?,
+      "ChangeSource" : (ChangeSource)?,
+      "CausingEntity" : (CausingEntity)?
+    )
+
+    alias ResourceChangeDetails = Array(ResourceChangeDetail)
+
+    alias ResourceIdentifierProperties = Hash(ResourceIdentifierPropertyKey,ResourceIdentifierPropertyValue)
+
+    alias ResourceIdentifierPropertyKey = String
+
+    alias ResourceIdentifierPropertyValue = String
+
+    alias ResourceIdentifierSummaries = Array(ResourceIdentifierSummary)
+
+    alias ResourceIdentifierSummary = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "LogicalResourceIds" : (LogicalResourceIds)?,
+      "ResourceIdentifiers" : (ResourceIdentifiers)?
+    )
+
+    alias ResourceIdentifiers = Array(ResourceIdentifierPropertyKey)
+
+    alias ResourceModel = String
+
+    alias ResourceProperties = String
+
+    alias ResourceSignalStatus = String
+
+    alias ResourceSignalUniqueId = String
+
+    alias ResourceStatus = String
+
+    alias ResourceStatusReason = String
+
+    alias ResourceTargetDefinition = NamedTuple(
+      "Attribute" : (ResourceAttribute)?,
+      "Name" : (PropertyName)?,
+      "RequiresRecreation" : (RequiresRecreation)?
+    )
+
+    alias ResourceToImport = NamedTuple(
+      "ResourceType" : ResourceType,
+      "LogicalResourceId" : LogicalResourceId,
+      "ResourceIdentifier" : ResourceIdentifierProperties
+    )
+
+    alias ResourceToSkip = String
+
+    alias ResourceType = String
+
+    alias ResourceTypes = Array(ResourceType)
+
+    alias ResourcesToImport = Array(ResourceToImport)
+
+    alias ResourcesToSkip = Array(ResourceToSkip)
+
+    alias RetainResources = Array(LogicalResourceId)
+
+    alias RetainStacks = Bool
+
+    alias RetainStacksNullable = Bool
+
+    alias RetainStacksOnAccountRemovalNullable = Bool
+
+    alias RoleARN = String
+
+    alias RoleArn = String
+
+    alias RollbackConfiguration = NamedTuple(
+      "RollbackTriggers" : (RollbackTriggers)?,
+      "MonitoringTimeInMinutes" : (MonitoringTimeInMinutes)?
+    )
+
+    alias RollbackTrigger = NamedTuple(
+      "Arn" : Arn,
+      "Type" : Type
+    )
+
+    alias RollbackTriggers = Array(RollbackTrigger)
+
+    alias S3Url = String
+
+    alias Scope = Array(ResourceAttribute)
+
+    alias SetStackPolicyInput = NamedTuple(
+      "StackName" : StackName,
+      "StackPolicyBody" : (StackPolicyBody)?,
+      "StackPolicyURL" : (StackPolicyURL)?
+    )
+
+    alias SetTypeDefaultVersionInput = NamedTuple(
+      "Arn" : (PrivateTypeArn)?,
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "VersionId" : (TypeVersionId)?
+    )
+
+    alias SetTypeDefaultVersionOutput = NamedTuple(
+      
+    )
+
+    alias SignalResourceInput = NamedTuple(
+      "StackName" : StackNameOrId,
+      "LogicalResourceId" : LogicalResourceId,
+      "UniqueId" : ResourceSignalUniqueId,
+      "Status" : ResourceSignalStatus
+    )
+
+    alias Stack = NamedTuple(
+      "StackId" : (StackId)?,
+      "StackName" : StackName,
+      "ChangeSetId" : (ChangeSetId)?,
+      "Description" : (Description)?,
+      "Parameters" : (Parameters)?,
+      "CreationTime" : CreationTime,
+      "DeletionTime" : (DeletionTime)?,
+      "LastUpdatedTime" : (LastUpdatedTime)?,
+      "RollbackConfiguration" : (RollbackConfiguration)?,
+      "StackStatus" : StackStatus,
+      "StackStatusReason" : (StackStatusReason)?,
+      "DisableRollback" : (DisableRollback)?,
+      "NotificationARNs" : (NotificationARNs)?,
+      "TimeoutInMinutes" : (TimeoutMinutes)?,
+      "Capabilities" : (Capabilities)?,
+      "Outputs" : (Outputs)?,
+      "RoleARN" : (RoleARN)?,
+      "Tags" : (Tags)?,
+      "EnableTerminationProtection" : (EnableTerminationProtection)?,
+      "ParentId" : (StackId)?,
+      "RootId" : (StackId)?,
+      "DriftInformation" : (StackDriftInformation)?
+    )
+
+    alias StackDriftDetectionId = String
+
+    alias StackDriftDetectionStatus = String
+
+    alias StackDriftDetectionStatusReason = String
+
+    alias StackDriftInformation = NamedTuple(
+      "StackDriftStatus" : StackDriftStatus,
+      "LastCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackDriftInformationSummary = NamedTuple(
+      "StackDriftStatus" : StackDriftStatus,
+      "LastCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackDriftStatus = String
+
+    alias StackEvent = NamedTuple(
+      "StackId" : StackId,
+      "EventId" : EventId,
+      "StackName" : StackName,
+      "LogicalResourceId" : (LogicalResourceId)?,
+      "PhysicalResourceId" : (PhysicalResourceId)?,
+      "ResourceType" : (ResourceType)?,
+      "Timestamp" : Timestamp,
+      "ResourceStatus" : (ResourceStatus)?,
+      "ResourceStatusReason" : (ResourceStatusReason)?,
+      "ResourceProperties" : (ResourceProperties)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias StackEvents = Array(StackEvent)
+
+    alias StackId = String
+
+    alias StackInstance = NamedTuple(
+      "StackSetId" : (StackSetId)?,
+      "Region" : (Region)?,
+      "Account" : (Account)?,
+      "StackId" : (StackId)?,
+      "ParameterOverrides" : (Parameters)?,
+      "Status" : (StackInstanceStatus)?,
+      "StackInstanceStatus" : (StackInstanceComprehensiveStatus)?,
+      "StatusReason" : (Reason)?,
+      "OrganizationalUnitId" : (OrganizationalUnitId)?,
+      "DriftStatus" : (StackDriftStatus)?,
+      "LastDriftCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackInstanceComprehensiveStatus = NamedTuple(
+      "DetailedStatus" : (StackInstanceDetailedStatus)?
+    )
+
+    alias StackInstanceDetailedStatus = String
+
+    alias StackInstanceFilter = NamedTuple(
+      "Name" : (StackInstanceFilterName)?,
+      "Values" : (StackInstanceFilterValues)?
+    )
+
+    alias StackInstanceFilterName = String
+
+    alias StackInstanceFilterValues = String
+
+    alias StackInstanceFilters = Array(StackInstanceFilter)
+
+    alias StackInstanceNotFoundException = NamedTuple(
+      
+    )
+
+    alias StackInstanceStatus = String
+
+    alias StackInstanceSummaries = Array(StackInstanceSummary)
+
+    alias StackInstanceSummary = NamedTuple(
+      "StackSetId" : (StackSetId)?,
+      "Region" : (Region)?,
+      "Account" : (Account)?,
+      "StackId" : (StackId)?,
+      "Status" : (StackInstanceStatus)?,
+      "StatusReason" : (Reason)?,
+      "StackInstanceStatus" : (StackInstanceComprehensiveStatus)?,
+      "OrganizationalUnitId" : (OrganizationalUnitId)?,
+      "DriftStatus" : (StackDriftStatus)?,
+      "LastDriftCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackName = String
+
+    alias StackNameOrId = String
+
+    alias StackPolicyBody = String
+
+    alias StackPolicyDuringUpdateBody = String
+
+    alias StackPolicyDuringUpdateURL = String
+
+    alias StackPolicyURL = String
+
+    alias StackResource = NamedTuple(
+      "StackName" : (StackName)?,
+      "StackId" : (StackId)?,
+      "LogicalResourceId" : LogicalResourceId,
+      "PhysicalResourceId" : (PhysicalResourceId)?,
+      "ResourceType" : ResourceType,
+      "Timestamp" : Timestamp,
+      "ResourceStatus" : ResourceStatus,
+      "ResourceStatusReason" : (ResourceStatusReason)?,
+      "Description" : (Description)?,
+      "DriftInformation" : (StackResourceDriftInformation)?,
+      "ModuleInfo" : (ModuleInfo)?
+    )
+
+    alias StackResourceDetail = NamedTuple(
+      "StackName" : (StackName)?,
+      "StackId" : (StackId)?,
+      "LogicalResourceId" : LogicalResourceId,
+      "PhysicalResourceId" : (PhysicalResourceId)?,
+      "ResourceType" : ResourceType,
+      "LastUpdatedTimestamp" : Timestamp,
+      "ResourceStatus" : ResourceStatus,
+      "ResourceStatusReason" : (ResourceStatusReason)?,
+      "Description" : (Description)?,
+      "Metadata" : (Metadata)?,
+      "DriftInformation" : (StackResourceDriftInformation)?,
+      "ModuleInfo" : (ModuleInfo)?
+    )
+
+    alias StackResourceDrift = NamedTuple(
+      "StackId" : StackId,
+      "LogicalResourceId" : LogicalResourceId,
+      "PhysicalResourceId" : (PhysicalResourceId)?,
+      "PhysicalResourceIdContext" : (PhysicalResourceIdContext)?,
+      "ResourceType" : ResourceType,
+      "ExpectedProperties" : (Properties)?,
+      "ActualProperties" : (Properties)?,
+      "PropertyDifferences" : (PropertyDifferences)?,
+      "StackResourceDriftStatus" : StackResourceDriftStatus,
+      "Timestamp" : Timestamp,
+      "ModuleInfo" : (ModuleInfo)?
+    )
+
+    alias StackResourceDriftInformation = NamedTuple(
+      "StackResourceDriftStatus" : StackResourceDriftStatus,
+      "LastCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackResourceDriftInformationSummary = NamedTuple(
+      "StackResourceDriftStatus" : StackResourceDriftStatus,
+      "LastCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackResourceDriftStatus = String
+
+    alias StackResourceDriftStatusFilters = Array(StackResourceDriftStatus)
+
+    alias StackResourceDrifts = Array(StackResourceDrift)
+
+    alias StackResourceSummaries = Array(StackResourceSummary)
+
+    alias StackResourceSummary = NamedTuple(
+      "LogicalResourceId" : LogicalResourceId,
+      "PhysicalResourceId" : (PhysicalResourceId)?,
+      "ResourceType" : ResourceType,
+      "LastUpdatedTimestamp" : Timestamp,
+      "ResourceStatus" : ResourceStatus,
+      "ResourceStatusReason" : (ResourceStatusReason)?,
+      "DriftInformation" : (StackResourceDriftInformationSummary)?,
+      "ModuleInfo" : (ModuleInfo)?
+    )
+
+    alias StackResources = Array(StackResource)
+
+    alias StackSet = NamedTuple(
+      "StackSetName" : (StackSetName)?,
+      "StackSetId" : (StackSetId)?,
+      "Description" : (Description)?,
+      "Status" : (StackSetStatus)?,
+      "TemplateBody" : (TemplateBody)?,
+      "Parameters" : (Parameters)?,
+      "Capabilities" : (Capabilities)?,
+      "Tags" : (Tags)?,
+      "StackSetARN" : (StackSetARN)?,
+      "AdministrationRoleARN" : (RoleARN)?,
+      "ExecutionRoleName" : (ExecutionRoleName)?,
+      "StackSetDriftDetectionDetails" : (StackSetDriftDetectionDetails)?,
+      "AutoDeployment" : (AutoDeployment)?,
+      "PermissionModel" : (PermissionModels)?,
+      "OrganizationalUnitIds" : (OrganizationalUnitIdList)?
+    )
+
+    alias StackSetARN = String
+
+    alias StackSetDriftDetectionDetails = NamedTuple(
+      "DriftStatus" : (StackSetDriftStatus)?,
+      "DriftDetectionStatus" : (StackSetDriftDetectionStatus)?,
+      "LastDriftCheckTimestamp" : (Timestamp)?,
+      "TotalStackInstancesCount" : (TotalStackInstancesCount)?,
+      "DriftedStackInstancesCount" : (DriftedStackInstancesCount)?,
+      "InSyncStackInstancesCount" : (InSyncStackInstancesCount)?,
+      "InProgressStackInstancesCount" : (InProgressStackInstancesCount)?,
+      "FailedStackInstancesCount" : (FailedStackInstancesCount)?
+    )
+
+    alias StackSetDriftDetectionStatus = String
+
+    alias StackSetDriftStatus = String
+
+    alias StackSetId = String
+
+    alias StackSetName = String
+
+    alias StackSetNameOrId = String
+
+    alias StackSetNotEmptyException = NamedTuple(
+      
+    )
+
+    alias StackSetNotFoundException = NamedTuple(
+      
+    )
+
+    alias StackSetOperation = NamedTuple(
+      "OperationId" : (ClientRequestToken)?,
+      "StackSetId" : (StackSetId)?,
+      "Action" : (StackSetOperationAction)?,
+      "Status" : (StackSetOperationStatus)?,
+      "OperationPreferences" : (StackSetOperationPreferences)?,
+      "RetainStacks" : (RetainStacksNullable)?,
+      "AdministrationRoleARN" : (RoleARN)?,
+      "ExecutionRoleName" : (ExecutionRoleName)?,
+      "CreationTimestamp" : (Timestamp)?,
+      "EndTimestamp" : (Timestamp)?,
+      "DeploymentTargets" : (DeploymentTargets)?,
+      "StackSetDriftDetectionDetails" : (StackSetDriftDetectionDetails)?
+    )
+
+    alias StackSetOperationAction = String
+
+    alias StackSetOperationPreferences = NamedTuple(
+      "RegionOrder" : (RegionList)?,
+      "FailureToleranceCount" : (FailureToleranceCount)?,
+      "FailureTolerancePercentage" : (FailureTolerancePercentage)?,
+      "MaxConcurrentCount" : (MaxConcurrentCount)?,
+      "MaxConcurrentPercentage" : (MaxConcurrentPercentage)?
+    )
+
+    alias StackSetOperationResultStatus = String
+
+    alias StackSetOperationResultSummaries = Array(StackSetOperationResultSummary)
+
+    alias StackSetOperationResultSummary = NamedTuple(
+      "Account" : (Account)?,
+      "Region" : (Region)?,
+      "Status" : (StackSetOperationResultStatus)?,
+      "StatusReason" : (Reason)?,
+      "AccountGateResult" : (AccountGateResult)?,
+      "OrganizationalUnitId" : (OrganizationalUnitId)?
+    )
+
+    alias StackSetOperationStatus = String
+
+    alias StackSetOperationSummaries = Array(StackSetOperationSummary)
+
+    alias StackSetOperationSummary = NamedTuple(
+      "OperationId" : (ClientRequestToken)?,
+      "Action" : (StackSetOperationAction)?,
+      "Status" : (StackSetOperationStatus)?,
+      "CreationTimestamp" : (Timestamp)?,
+      "EndTimestamp" : (Timestamp)?
+    )
+
+    alias StackSetStatus = String
+
+    alias StackSetSummaries = Array(StackSetSummary)
+
+    alias StackSetSummary = NamedTuple(
+      "StackSetName" : (StackSetName)?,
+      "StackSetId" : (StackSetId)?,
+      "Description" : (Description)?,
+      "Status" : (StackSetStatus)?,
+      "AutoDeployment" : (AutoDeployment)?,
+      "PermissionModel" : (PermissionModels)?,
+      "DriftStatus" : (StackDriftStatus)?,
+      "LastDriftCheckTimestamp" : (Timestamp)?
+    )
+
+    alias StackStatus = String
+
+    alias StackStatusFilter = Array(StackStatus)
+
+    alias StackStatusReason = String
+
+    alias StackSummaries = Array(StackSummary)
+
+    alias StackSummary = NamedTuple(
+      "StackId" : (StackId)?,
+      "StackName" : StackName,
+      "TemplateDescription" : (TemplateDescription)?,
+      "CreationTime" : CreationTime,
+      "LastUpdatedTime" : (LastUpdatedTime)?,
+      "DeletionTime" : (DeletionTime)?,
+      "StackStatus" : StackStatus,
+      "StackStatusReason" : (StackStatusReason)?,
+      "ParentId" : (StackId)?,
+      "RootId" : (StackId)?,
+      "DriftInformation" : (StackDriftInformationSummary)?
+    )
+
+    alias Stacks = Array(Stack)
+
+    alias StageList = Array(TemplateStage)
+
+    alias StaleRequestException = NamedTuple(
+      
+    )
+
+    alias StatusMessage = String
+
+    alias StopStackSetOperationInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "OperationId" : ClientRequestToken
+    )
+
+    alias StopStackSetOperationOutput = NamedTuple(
+      
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TemplateBody = String
+
+    alias TemplateDescription = String
+
+    alias TemplateParameter = NamedTuple(
+      "ParameterKey" : (ParameterKey)?,
+      "DefaultValue" : (ParameterValue)?,
+      "NoEcho" : (NoEcho)?,
+      "Description" : (Description)?
+    )
+
+    alias TemplateParameters = Array(TemplateParameter)
+
+    alias TemplateStage = String
+
+    alias TemplateURL = String
+
+    alias TimeoutMinutes = Int32
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TokenAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias TotalStackInstancesCount = Int32
+
+    alias TransformName = String
+
+    alias TransformsList = Array(TransformName)
+
+    alias Type = String
+
+    alias TypeArn = String
+
+    alias TypeHierarchy = String
+
+    alias TypeName = String
+
+    alias TypeNotFoundException = NamedTuple(
+      
+    )
+
+    alias TypeSchema = String
+
+    alias TypeSummaries = Array(TypeSummary)
+
+    alias TypeSummary = NamedTuple(
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "DefaultVersionId" : (TypeVersionId)?,
+      "TypeArn" : (TypeArn)?,
+      "LastUpdated" : (Timestamp)?,
+      "Description" : (Description)?
+    )
+
+    alias TypeVersionId = String
+
+    alias TypeVersionSummaries = Array(TypeVersionSummary)
+
+    alias TypeVersionSummary = NamedTuple(
+      "Type" : (RegistryType)?,
+      "TypeName" : (TypeName)?,
+      "VersionId" : (TypeVersionId)?,
+      "IsDefaultVersion" : (IsDefaultVersion)?,
+      "Arn" : (TypeArn)?,
+      "TimeCreated" : (Timestamp)?,
+      "Description" : (Description)?
+    )
+
+    alias UpdateStackInput = NamedTuple(
+      "StackName" : StackName,
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "UsePreviousTemplate" : (UsePreviousTemplate)?,
+      "StackPolicyDuringUpdateBody" : (StackPolicyDuringUpdateBody)?,
+      "StackPolicyDuringUpdateURL" : (StackPolicyDuringUpdateURL)?,
+      "Parameters" : (Parameters)?,
+      "Capabilities" : (Capabilities)?,
+      "ResourceTypes" : (ResourceTypes)?,
+      "RoleARN" : (RoleARN)?,
+      "RollbackConfiguration" : (RollbackConfiguration)?,
+      "StackPolicyBody" : (StackPolicyBody)?,
+      "StackPolicyURL" : (StackPolicyURL)?,
+      "NotificationARNs" : (NotificationARNs)?,
+      "Tags" : (Tags)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias UpdateStackInstancesInput = NamedTuple(
+      "StackSetName" : StackSetNameOrId,
+      "Accounts" : (AccountList)?,
+      "DeploymentTargets" : (DeploymentTargets)?,
+      "Regions" : RegionList,
+      "ParameterOverrides" : (Parameters)?,
+      "OperationPreferences" : (StackSetOperationPreferences)?,
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias UpdateStackInstancesOutput = NamedTuple(
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias UpdateStackOutput = NamedTuple(
+      "StackId" : (StackId)?
+    )
+
+    alias UpdateStackSetInput = NamedTuple(
+      "StackSetName" : StackSetName,
+      "Description" : (Description)?,
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?,
+      "UsePreviousTemplate" : (UsePreviousTemplate)?,
+      "Parameters" : (Parameters)?,
+      "Capabilities" : (Capabilities)?,
+      "Tags" : (Tags)?,
+      "OperationPreferences" : (StackSetOperationPreferences)?,
+      "AdministrationRoleARN" : (RoleARN)?,
+      "ExecutionRoleName" : (ExecutionRoleName)?,
+      "DeploymentTargets" : (DeploymentTargets)?,
+      "PermissionModel" : (PermissionModels)?,
+      "AutoDeployment" : (AutoDeployment)?,
+      "OperationId" : (ClientRequestToken)?,
+      "Accounts" : (AccountList)?,
+      "Regions" : (RegionList)?
+    )
+
+    alias UpdateStackSetOutput = NamedTuple(
+      "OperationId" : (ClientRequestToken)?
+    )
+
+    alias UpdateTerminationProtectionInput = NamedTuple(
+      "EnableTerminationProtection" : EnableTerminationProtection,
+      "StackName" : StackNameOrId
+    )
+
+    alias UpdateTerminationProtectionOutput = NamedTuple(
+      "StackId" : (StackId)?
+    )
+
+    alias Url = String
+
+    alias UsePreviousTemplate = Bool
+
+    alias UsePreviousValue = Bool
+
+    alias ValidateTemplateInput = NamedTuple(
+      "TemplateBody" : (TemplateBody)?,
+      "TemplateURL" : (TemplateURL)?
+    )
+
+    alias ValidateTemplateOutput = NamedTuple(
+      "Parameters" : (TemplateParameters)?,
+      "Description" : (Description)?,
+      "Capabilities" : (Capabilities)?,
+      "CapabilitiesReason" : (CapabilitiesReason)?,
+      "DeclaredTransforms" : (TransformsList)?
+    )
+
+    alias Value = String
+
+    alias Version = String
+
+    alias Visibility = String
   end
 end

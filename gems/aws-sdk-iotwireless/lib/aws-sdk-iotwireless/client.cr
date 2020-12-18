@@ -362,8 +362,8 @@ module Aws::IoTWireless
     #
     # @overload associate_aws_account_with_partner_account(**params)
     # @param [Hash] params ({})
-    def associate_aws_account_with_partner_account(params = {}, **options)
-      req = build_request(:associate_aws_account_with_partner_account, params)
+    def associate_aws_account_with_partner_account(, **options)
+      req = build_request(:associate_aws_account_with_partner_account, )
       req.send_request(options)
     end
 
@@ -386,8 +386,8 @@ module Aws::IoTWireless
     #
     # @overload associate_wireless_device_with_thing(**params)
     # @param [Hash] params ({})
-    def associate_wireless_device_with_thing(params = {}, **options)
-      req = build_request(:associate_wireless_device_with_thing, params)
+    def associate_wireless_device_with_thing(, **options)
+      req = build_request(:associate_wireless_device_with_thing, )
       req.send_request(options)
     end
 
@@ -416,8 +416,8 @@ module Aws::IoTWireless
     #
     # @overload associate_wireless_gateway_with_certificate(**params)
     # @param [Hash] params ({})
-    def associate_wireless_gateway_with_certificate(params = {}, **options)
-      req = build_request(:associate_wireless_gateway_with_certificate, params)
+    def associate_wireless_gateway_with_certificate(, **options)
+      req = build_request(:associate_wireless_gateway_with_certificate, )
       req.send_request(options)
     end
 
@@ -440,8 +440,8 @@ module Aws::IoTWireless
     #
     # @overload associate_wireless_gateway_with_thing(**params)
     # @param [Hash] params ({})
-    def associate_wireless_gateway_with_thing(params = {}, **options)
-      req = build_request(:associate_wireless_gateway_with_thing, params)
+    def associate_wireless_gateway_with_thing(, **options)
+      req = build_request(:associate_wireless_gateway_with_thing, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::IoTWireless
     #
     # @overload create_destination(**params)
     # @param [Hash] params ({})
-    def create_destination(params = {}, **options)
-      req = build_request(:create_destination, params)
+    def create_destination(, **options)
+      req = build_request(:create_destination, )
       req.send_request(options)
     end
 
@@ -577,8 +577,8 @@ module Aws::IoTWireless
     #
     # @overload create_device_profile(**params)
     # @param [Hash] params ({})
-    def create_device_profile(params = {}, **options)
-      req = build_request(:create_device_profile, params)
+    def create_device_profile(, **options)
+      req = build_request(:create_device_profile, )
       req.send_request(options)
     end
 
@@ -631,8 +631,8 @@ module Aws::IoTWireless
     #
     # @overload create_service_profile(**params)
     # @param [Hash] params ({})
-    def create_service_profile(params = {}, **options)
-      req = build_request(:create_service_profile, params)
+    def create_service_profile(, **options)
+      req = build_request(:create_service_profile, )
       req.send_request(options)
     end
 
@@ -715,8 +715,8 @@ module Aws::IoTWireless
     #
     # @overload create_wireless_device(**params)
     # @param [Hash] params ({})
-    def create_wireless_device(params = {}, **options)
-      req = build_request(:create_wireless_device, params)
+    def create_wireless_device(, **options)
+      req = build_request(:create_wireless_device, )
       req.send_request(options)
     end
 
@@ -775,8 +775,8 @@ module Aws::IoTWireless
     #
     # @overload create_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def create_wireless_gateway(params = {}, **options)
-      req = build_request(:create_wireless_gateway, params)
+    def create_wireless_gateway(, **options)
+      req = build_request(:create_wireless_gateway, )
       req.send_request(options)
     end
 
@@ -807,8 +807,8 @@ module Aws::IoTWireless
     #
     # @overload create_wireless_gateway_task(**params)
     # @param [Hash] params ({})
-    def create_wireless_gateway_task(params = {}, **options)
-      req = build_request(:create_wireless_gateway_task, params)
+    def create_wireless_gateway_task(, **options)
+      req = build_request(:create_wireless_gateway_task, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::IoTWireless
     #
     # @overload create_wireless_gateway_task_definition(**params)
     # @param [Hash] params ({})
-    def create_wireless_gateway_task_definition(params = {}, **options)
-      req = build_request(:create_wireless_gateway_task_definition, params)
+    def create_wireless_gateway_task_definition(, **options)
+      req = build_request(:create_wireless_gateway_task_definition, )
       req.send_request(options)
     end
 
@@ -890,8 +890,8 @@ module Aws::IoTWireless
     #
     # @overload delete_destination(**params)
     # @param [Hash] params ({})
-    def delete_destination(params = {}, **options)
-      req = build_request(:delete_destination, params)
+    def delete_destination(, **options)
+      req = build_request(:delete_destination, )
       req.send_request(options)
     end
 
@@ -910,8 +910,8 @@ module Aws::IoTWireless
     #
     # @overload delete_device_profile(**params)
     # @param [Hash] params ({})
-    def delete_device_profile(params = {}, **options)
-      req = build_request(:delete_device_profile, params)
+    def delete_device_profile(, **options)
+      req = build_request(:delete_device_profile, )
       req.send_request(options)
     end
 
@@ -930,8 +930,8 @@ module Aws::IoTWireless
     #
     # @overload delete_service_profile(**params)
     # @param [Hash] params ({})
-    def delete_service_profile(params = {}, **options)
-      req = build_request(:delete_service_profile, params)
+    def delete_service_profile(, **options)
+      req = build_request(:delete_service_profile, )
       req.send_request(options)
     end
 
@@ -950,8 +950,8 @@ module Aws::IoTWireless
     #
     # @overload delete_wireless_device(**params)
     # @param [Hash] params ({})
-    def delete_wireless_device(params = {}, **options)
-      req = build_request(:delete_wireless_device, params)
+    def delete_wireless_device(, **options)
+      req = build_request(:delete_wireless_device, )
       req.send_request(options)
     end
 
@@ -970,8 +970,8 @@ module Aws::IoTWireless
     #
     # @overload delete_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def delete_wireless_gateway(params = {}, **options)
-      req = build_request(:delete_wireless_gateway, params)
+    def delete_wireless_gateway(, **options)
+      req = build_request(:delete_wireless_gateway, )
       req.send_request(options)
     end
 
@@ -990,8 +990,8 @@ module Aws::IoTWireless
     #
     # @overload delete_wireless_gateway_task(**params)
     # @param [Hash] params ({})
-    def delete_wireless_gateway_task(params = {}, **options)
-      req = build_request(:delete_wireless_gateway_task, params)
+    def delete_wireless_gateway_task(, **options)
+      req = build_request(:delete_wireless_gateway_task, )
       req.send_request(options)
     end
 
@@ -1011,8 +1011,8 @@ module Aws::IoTWireless
     #
     # @overload delete_wireless_gateway_task_definition(**params)
     # @param [Hash] params ({})
-    def delete_wireless_gateway_task_definition(params = {}, **options)
-      req = build_request(:delete_wireless_gateway_task_definition, params)
+    def delete_wireless_gateway_task_definition(, **options)
+      req = build_request(:delete_wireless_gateway_task_definition, )
       req.send_request(options)
     end
 
@@ -1037,8 +1037,8 @@ module Aws::IoTWireless
     #
     # @overload disassociate_aws_account_from_partner_account(**params)
     # @param [Hash] params ({})
-    def disassociate_aws_account_from_partner_account(params = {}, **options)
-      req = build_request(:disassociate_aws_account_from_partner_account, params)
+    def disassociate_aws_account_from_partner_account(, **options)
+      req = build_request(:disassociate_aws_account_from_partner_account, )
       req.send_request(options)
     end
 
@@ -1057,8 +1057,8 @@ module Aws::IoTWireless
     #
     # @overload disassociate_wireless_device_from_thing(**params)
     # @param [Hash] params ({})
-    def disassociate_wireless_device_from_thing(params = {}, **options)
-      req = build_request(:disassociate_wireless_device_from_thing, params)
+    def disassociate_wireless_device_from_thing(, **options)
+      req = build_request(:disassociate_wireless_device_from_thing, )
       req.send_request(options)
     end
 
@@ -1078,8 +1078,8 @@ module Aws::IoTWireless
     #
     # @overload disassociate_wireless_gateway_from_certificate(**params)
     # @param [Hash] params ({})
-    def disassociate_wireless_gateway_from_certificate(params = {}, **options)
-      req = build_request(:disassociate_wireless_gateway_from_certificate, params)
+    def disassociate_wireless_gateway_from_certificate(, **options)
+      req = build_request(:disassociate_wireless_gateway_from_certificate, )
       req.send_request(options)
     end
 
@@ -1098,8 +1098,8 @@ module Aws::IoTWireless
     #
     # @overload disassociate_wireless_gateway_from_thing(**params)
     # @param [Hash] params ({})
-    def disassociate_wireless_gateway_from_thing(params = {}, **options)
-      req = build_request(:disassociate_wireless_gateway_from_thing, params)
+    def disassociate_wireless_gateway_from_thing(, **options)
+      req = build_request(:disassociate_wireless_gateway_from_thing, )
       req.send_request(options)
     end
 
@@ -1134,8 +1134,8 @@ module Aws::IoTWireless
     #
     # @overload get_destination(**params)
     # @param [Hash] params ({})
-    def get_destination(params = {}, **options)
-      req = build_request(:get_destination, params)
+    def get_destination(, **options)
+      req = build_request(:get_destination, )
       req.send_request(options)
     end
 
@@ -1185,8 +1185,8 @@ module Aws::IoTWireless
     #
     # @overload get_device_profile(**params)
     # @param [Hash] params ({})
-    def get_device_profile(params = {}, **options)
-      req = build_request(:get_device_profile, params)
+    def get_device_profile(, **options)
+      req = build_request(:get_device_profile, )
       req.send_request(options)
     end
 
@@ -1219,8 +1219,8 @@ module Aws::IoTWireless
     #
     # @overload get_partner_account(**params)
     # @param [Hash] params ({})
-    def get_partner_account(params = {}, **options)
-      req = build_request(:get_partner_account, params)
+    def get_partner_account(, **options)
+      req = build_request(:get_partner_account, )
       req.send_request(options)
     end
 
@@ -1252,8 +1252,8 @@ module Aws::IoTWireless
     #
     # @overload get_service_endpoint(**params)
     # @param [Hash] params ({})
-    def get_service_endpoint(params = {}, **options)
-      req = build_request(:get_service_endpoint, params)
+    def get_service_endpoint(, **options)
+      req = build_request(:get_service_endpoint, )
       req.send_request(options)
     end
 
@@ -1302,8 +1302,8 @@ module Aws::IoTWireless
     #
     # @overload get_service_profile(**params)
     # @param [Hash] params ({})
-    def get_service_profile(params = {}, **options)
-      req = build_request(:get_service_profile, params)
+    def get_service_profile(, **options)
+      req = build_request(:get_service_profile, )
       req.send_request(options)
     end
 
@@ -1363,8 +1363,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_device(**params)
     # @param [Hash] params ({})
-    def get_wireless_device(params = {}, **options)
-      req = build_request(:get_wireless_device, params)
+    def get_wireless_device(, **options)
+      req = build_request(:get_wireless_device, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_device_statistics(**params)
     # @param [Hash] params ({})
-    def get_wireless_device_statistics(params = {}, **options)
-      req = build_request(:get_wireless_device_statistics, params)
+    def get_wireless_device_statistics(, **options)
+      req = build_request(:get_wireless_device_statistics, )
       req.send_request(options)
     end
 
@@ -1444,8 +1444,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway(params = {}, **options)
-      req = build_request(:get_wireless_gateway, params)
+    def get_wireless_gateway(, **options)
+      req = build_request(:get_wireless_gateway, )
       req.send_request(options)
     end
 
@@ -1471,8 +1471,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_gateway_certificate(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_certificate(params = {}, **options)
-      req = build_request(:get_wireless_gateway_certificate, params)
+    def get_wireless_gateway_certificate(, **options)
+      req = build_request(:get_wireless_gateway_certificate, )
       req.send_request(options)
     end
 
@@ -1500,8 +1500,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_gateway_firmware_information(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_firmware_information(params = {}, **options)
-      req = build_request(:get_wireless_gateway_firmware_information, params)
+    def get_wireless_gateway_firmware_information(, **options)
+      req = build_request(:get_wireless_gateway_firmware_information, )
       req.send_request(options)
     end
 
@@ -1528,8 +1528,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_gateway_statistics(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_statistics(params = {}, **options)
-      req = build_request(:get_wireless_gateway_statistics, params)
+    def get_wireless_gateway_statistics(, **options)
+      req = build_request(:get_wireless_gateway_statistics, )
       req.send_request(options)
     end
 
@@ -1562,8 +1562,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_gateway_task(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_task(params = {}, **options)
-      req = build_request(:get_wireless_gateway_task, params)
+    def get_wireless_gateway_task(, **options)
+      req = build_request(:get_wireless_gateway_task, )
       req.send_request(options)
     end
 
@@ -1601,8 +1601,8 @@ module Aws::IoTWireless
     #
     # @overload get_wireless_gateway_task_definition(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_task_definition(params = {}, **options)
-      req = build_request(:get_wireless_gateway_task_definition, params)
+    def get_wireless_gateway_task_definition(, **options)
+      req = build_request(:get_wireless_gateway_task_definition, )
       req.send_request(options)
     end
 
@@ -1643,8 +1643,8 @@ module Aws::IoTWireless
     #
     # @overload list_destinations(**params)
     # @param [Hash] params ({})
-    def list_destinations(params = {}, **options)
-      req = build_request(:list_destinations, params)
+    def list_destinations(, **options)
+      req = build_request(:list_destinations, )
       req.send_request(options)
     end
 
@@ -1682,8 +1682,8 @@ module Aws::IoTWireless
     #
     # @overload list_device_profiles(**params)
     # @param [Hash] params ({})
-    def list_device_profiles(params = {}, **options)
-      req = build_request(:list_device_profiles, params)
+    def list_device_profiles(, **options)
+      req = build_request(:list_device_profiles, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::IoTWireless
     #
     # @overload list_partner_accounts(**params)
     # @param [Hash] params ({})
-    def list_partner_accounts(params = {}, **options)
-      req = build_request(:list_partner_accounts, params)
+    def list_partner_accounts(, **options)
+      req = build_request(:list_partner_accounts, )
       req.send_request(options)
     end
 
@@ -1757,8 +1757,8 @@ module Aws::IoTWireless
     #
     # @overload list_service_profiles(**params)
     # @param [Hash] params ({})
-    def list_service_profiles(params = {}, **options)
-      req = build_request(:list_service_profiles, params)
+    def list_service_profiles(, **options)
+      req = build_request(:list_service_profiles, )
       req.send_request(options)
     end
 
@@ -1785,8 +1785,8 @@ module Aws::IoTWireless
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1848,8 +1848,8 @@ module Aws::IoTWireless
     #
     # @overload list_wireless_devices(**params)
     # @param [Hash] params ({})
-    def list_wireless_devices(params = {}, **options)
-      req = build_request(:list_wireless_devices, params)
+    def list_wireless_devices(, **options)
+      req = build_request(:list_wireless_devices, )
       req.send_request(options)
     end
 
@@ -1895,8 +1895,8 @@ module Aws::IoTWireless
     #
     # @overload list_wireless_gateway_task_definitions(**params)
     # @param [Hash] params ({})
-    def list_wireless_gateway_task_definitions(params = {}, **options)
-      req = build_request(:list_wireless_gateway_task_definitions, params)
+    def list_wireless_gateway_task_definitions(, **options)
+      req = build_request(:list_wireless_gateway_task_definitions, )
       req.send_request(options)
     end
 
@@ -1938,8 +1938,8 @@ module Aws::IoTWireless
     #
     # @overload list_wireless_gateways(**params)
     # @param [Hash] params ({})
-    def list_wireless_gateways(params = {}, **options)
-      req = build_request(:list_wireless_gateways, params)
+    def list_wireless_gateways(, **options)
+      req = build_request(:list_wireless_gateways, )
       req.send_request(options)
     end
 
@@ -1985,8 +1985,8 @@ module Aws::IoTWireless
     #
     # @overload send_data_to_wireless_device(**params)
     # @param [Hash] params ({})
-    def send_data_to_wireless_device(params = {}, **options)
-      req = build_request(:send_data_to_wireless_device, params)
+    def send_data_to_wireless_device(, **options)
+      req = build_request(:send_data_to_wireless_device, )
       req.send_request(options)
     end
 
@@ -2015,8 +2015,8 @@ module Aws::IoTWireless
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2042,8 +2042,8 @@ module Aws::IoTWireless
     #
     # @overload test_wireless_device(**params)
     # @param [Hash] params ({})
-    def test_wireless_device(params = {}, **options)
-      req = build_request(:test_wireless_device, params)
+    def test_wireless_device(, **options)
+      req = build_request(:test_wireless_device, )
       req.send_request(options)
     end
 
@@ -2066,8 +2066,8 @@ module Aws::IoTWireless
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2102,8 +2102,8 @@ module Aws::IoTWireless
     #
     # @overload update_destination(**params)
     # @param [Hash] params ({})
-    def update_destination(params = {}, **options)
-      req = build_request(:update_destination, params)
+    def update_destination(, **options)
+      req = build_request(:update_destination, )
       req.send_request(options)
     end
 
@@ -2132,8 +2132,8 @@ module Aws::IoTWireless
     #
     # @overload update_partner_account(**params)
     # @param [Hash] params ({})
-    def update_partner_account(params = {}, **options)
-      req = build_request(:update_partner_account, params)
+    def update_partner_account(, **options)
+      req = build_request(:update_partner_account, )
       req.send_request(options)
     end
 
@@ -2171,8 +2171,8 @@ module Aws::IoTWireless
     #
     # @overload update_wireless_device(**params)
     # @param [Hash] params ({})
-    def update_wireless_device(params = {}, **options)
-      req = build_request(:update_wireless_device, params)
+    def update_wireless_device(, **options)
+      req = build_request(:update_wireless_device, )
       req.send_request(options)
     end
 
@@ -2199,8 +2199,8 @@ module Aws::IoTWireless
     #
     # @overload update_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def update_wireless_gateway(params = {}, **options)
-      req = build_request(:update_wireless_gateway, params)
+    def update_wireless_gateway(, **options)
+      req = build_request(:update_wireless_gateway, )
       req.send_request(options)
     end
 

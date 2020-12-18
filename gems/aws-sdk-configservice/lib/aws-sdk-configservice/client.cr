@@ -404,8 +404,8 @@ module Aws::ConfigService
     #
     # @overload batch_get_aggregate_resource_config(**params)
     # @param [Hash] params ({})
-    def batch_get_aggregate_resource_config(params = {}, **options)
-      req = build_request(:batch_get_aggregate_resource_config, params)
+    def batch_get_aggregate_resource_config(, **options)
+      req = build_request(:batch_get_aggregate_resource_config, )
       req.send_request(options)
     end
 
@@ -468,8 +468,8 @@ module Aws::ConfigService
     #
     # @overload batch_get_resource_config(**params)
     # @param [Hash] params ({})
-    def batch_get_resource_config(params = {}, **options)
-      req = build_request(:batch_get_resource_config, params)
+    def batch_get_resource_config(, **options)
+      req = build_request(:batch_get_resource_config, )
       req.send_request(options)
     end
 
@@ -495,8 +495,8 @@ module Aws::ConfigService
     #
     # @overload delete_aggregation_authorization(**params)
     # @param [Hash] params ({})
-    def delete_aggregation_authorization(params = {}, **options)
-      req = build_request(:delete_aggregation_authorization, params)
+    def delete_aggregation_authorization(, **options)
+      req = build_request(:delete_aggregation_authorization, )
       req.send_request(options)
     end
 
@@ -526,8 +526,8 @@ module Aws::ConfigService
     #
     # @overload delete_config_rule(**params)
     # @param [Hash] params ({})
-    def delete_config_rule(params = {}, **options)
-      req = build_request(:delete_config_rule, params)
+    def delete_config_rule(, **options)
+      req = build_request(:delete_config_rule, )
       req.send_request(options)
     end
 
@@ -549,8 +549,8 @@ module Aws::ConfigService
     #
     # @overload delete_configuration_aggregator(**params)
     # @param [Hash] params ({})
-    def delete_configuration_aggregator(params = {}, **options)
-      req = build_request(:delete_configuration_aggregator, params)
+    def delete_configuration_aggregator(, **options)
+      req = build_request(:delete_configuration_aggregator, )
       req.send_request(options)
     end
 
@@ -583,8 +583,8 @@ module Aws::ConfigService
     #
     # @overload delete_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def delete_configuration_recorder(params = {}, **options)
-      req = build_request(:delete_configuration_recorder, params)
+    def delete_configuration_recorder(, **options)
+      req = build_request(:delete_configuration_recorder, )
       req.send_request(options)
     end
 
@@ -611,8 +611,8 @@ module Aws::ConfigService
     #
     # @overload delete_conformance_pack(**params)
     # @param [Hash] params ({})
-    def delete_conformance_pack(params = {}, **options)
-      req = build_request(:delete_conformance_pack, params)
+    def delete_conformance_pack(, **options)
+      req = build_request(:delete_conformance_pack, )
       req.send_request(options)
     end
 
@@ -636,8 +636,8 @@ module Aws::ConfigService
     #
     # @overload delete_delivery_channel(**params)
     # @param [Hash] params ({})
-    def delete_delivery_channel(params = {}, **options)
-      req = build_request(:delete_delivery_channel, params)
+    def delete_delivery_channel(, **options)
+      req = build_request(:delete_delivery_channel, )
       req.send_request(options)
     end
 
@@ -662,8 +662,8 @@ module Aws::ConfigService
     #
     # @overload delete_evaluation_results(**params)
     # @param [Hash] params ({})
-    def delete_evaluation_results(params = {}, **options)
-      req = build_request(:delete_evaluation_results, params)
+    def delete_evaluation_results(, **options)
+      req = build_request(:delete_evaluation_results, )
       req.send_request(options)
     end
 
@@ -694,8 +694,8 @@ module Aws::ConfigService
     #
     # @overload delete_organization_config_rule(**params)
     # @param [Hash] params ({})
-    def delete_organization_config_rule(params = {}, **options)
-      req = build_request(:delete_organization_config_rule, params)
+    def delete_organization_config_rule(, **options)
+      req = build_request(:delete_organization_config_rule, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::ConfigService
     #
     # @overload delete_organization_conformance_pack(**params)
     # @param [Hash] params ({})
-    def delete_organization_conformance_pack(params = {}, **options)
-      req = build_request(:delete_organization_conformance_pack, params)
+    def delete_organization_conformance_pack(, **options)
+      req = build_request(:delete_organization_conformance_pack, )
       req.send_request(options)
     end
 
@@ -754,8 +754,8 @@ module Aws::ConfigService
     #
     # @overload delete_pending_aggregation_request(**params)
     # @param [Hash] params ({})
-    def delete_pending_aggregation_request(params = {}, **options)
-      req = build_request(:delete_pending_aggregation_request, params)
+    def delete_pending_aggregation_request(, **options)
+      req = build_request(:delete_pending_aggregation_request, )
       req.send_request(options)
     end
 
@@ -781,8 +781,8 @@ module Aws::ConfigService
     #
     # @overload delete_remediation_configuration(**params)
     # @param [Hash] params ({})
-    def delete_remediation_configuration(params = {}, **options)
-      req = build_request(:delete_remediation_configuration, params)
+    def delete_remediation_configuration(, **options)
+      req = build_request(:delete_remediation_configuration, )
       req.send_request(options)
     end
 
@@ -832,8 +832,8 @@ module Aws::ConfigService
     #
     # @overload delete_remediation_exceptions(**params)
     # @param [Hash] params ({})
-    def delete_remediation_exceptions(params = {}, **options)
-      req = build_request(:delete_remediation_exceptions, params)
+    def delete_remediation_exceptions(, **options)
+      req = build_request(:delete_remediation_exceptions, )
       req.send_request(options)
     end
 
@@ -861,8 +861,8 @@ module Aws::ConfigService
     #
     # @overload delete_resource_config(**params)
     # @param [Hash] params ({})
-    def delete_resource_config(params = {}, **options)
-      req = build_request(:delete_resource_config, params)
+    def delete_resource_config(, **options)
+      req = build_request(:delete_resource_config, )
       req.send_request(options)
     end
 
@@ -883,8 +883,8 @@ module Aws::ConfigService
     #
     # @overload delete_retention_configuration(**params)
     # @param [Hash] params ({})
-    def delete_retention_configuration(params = {}, **options)
-      req = build_request(:delete_retention_configuration, params)
+    def delete_retention_configuration(, **options)
+      req = build_request(:delete_retention_configuration, )
       req.send_request(options)
     end
 
@@ -922,8 +922,8 @@ module Aws::ConfigService
     #
     # @overload deliver_config_snapshot(**params)
     # @param [Hash] params ({})
-    def deliver_config_snapshot(params = {}, **options)
-      req = build_request(:deliver_config_snapshot, params)
+    def deliver_config_snapshot(, **options)
+      req = build_request(:deliver_config_snapshot, )
       req.send_request(options)
     end
 
@@ -983,8 +983,8 @@ module Aws::ConfigService
     #
     # @overload describe_aggregate_compliance_by_config_rules(**params)
     # @param [Hash] params ({})
-    def describe_aggregate_compliance_by_config_rules(params = {}, **options)
-      req = build_request(:describe_aggregate_compliance_by_config_rules, params)
+    def describe_aggregate_compliance_by_config_rules(, **options)
+      req = build_request(:describe_aggregate_compliance_by_config_rules, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::ConfigService
     #
     # @overload describe_aggregation_authorizations(**params)
     # @param [Hash] params ({})
-    def describe_aggregation_authorizations(params = {}, **options)
-      req = build_request(:describe_aggregation_authorizations, params)
+    def describe_aggregation_authorizations(, **options)
+      req = build_request(:describe_aggregation_authorizations, )
       req.send_request(options)
     end
 
@@ -1094,8 +1094,8 @@ module Aws::ConfigService
     #
     # @overload describe_compliance_by_config_rule(**params)
     # @param [Hash] params ({})
-    def describe_compliance_by_config_rule(params = {}, **options)
-      req = build_request(:describe_compliance_by_config_rule, params)
+    def describe_compliance_by_config_rule(, **options)
+      req = build_request(:describe_compliance_by_config_rule, )
       req.send_request(options)
     end
 
@@ -1181,8 +1181,8 @@ module Aws::ConfigService
     #
     # @overload describe_compliance_by_resource(**params)
     # @param [Hash] params ({})
-    def describe_compliance_by_resource(params = {}, **options)
-      req = build_request(:describe_compliance_by_resource, params)
+    def describe_compliance_by_resource(, **options)
+      req = build_request(:describe_compliance_by_resource, )
       req.send_request(options)
     end
 
@@ -1247,8 +1247,8 @@ module Aws::ConfigService
     #
     # @overload describe_config_rule_evaluation_status(**params)
     # @param [Hash] params ({})
-    def describe_config_rule_evaluation_status(params = {}, **options)
-      req = build_request(:describe_config_rule_evaluation_status, params)
+    def describe_config_rule_evaluation_status(, **options)
+      req = build_request(:describe_config_rule_evaluation_status, )
       req.send_request(options)
     end
 
@@ -1303,8 +1303,8 @@ module Aws::ConfigService
     #
     # @overload describe_config_rules(**params)
     # @param [Hash] params ({})
-    def describe_config_rules(params = {}, **options)
-      req = build_request(:describe_config_rules, params)
+    def describe_config_rules(, **options)
+      req = build_request(:describe_config_rules, )
       req.send_request(options)
     end
 
@@ -1364,8 +1364,8 @@ module Aws::ConfigService
     #
     # @overload describe_configuration_aggregator_sources_status(**params)
     # @param [Hash] params ({})
-    def describe_configuration_aggregator_sources_status(params = {}, **options)
-      req = build_request(:describe_configuration_aggregator_sources_status, params)
+    def describe_configuration_aggregator_sources_status(, **options)
+      req = build_request(:describe_configuration_aggregator_sources_status, )
       req.send_request(options)
     end
 
@@ -1422,8 +1422,8 @@ module Aws::ConfigService
     #
     # @overload describe_configuration_aggregators(**params)
     # @param [Hash] params ({})
-    def describe_configuration_aggregators(params = {}, **options)
-      req = build_request(:describe_configuration_aggregators, params)
+    def describe_configuration_aggregators(, **options)
+      req = build_request(:describe_configuration_aggregators, )
       req.send_request(options)
     end
 
@@ -1467,8 +1467,8 @@ module Aws::ConfigService
     #
     # @overload describe_configuration_recorder_status(**params)
     # @param [Hash] params ({})
-    def describe_configuration_recorder_status(params = {}, **options)
-      req = build_request(:describe_configuration_recorder_status, params)
+    def describe_configuration_recorder_status(, **options)
+      req = build_request(:describe_configuration_recorder_status, )
       req.send_request(options)
     end
 
@@ -1508,8 +1508,8 @@ module Aws::ConfigService
     #
     # @overload describe_configuration_recorders(**params)
     # @param [Hash] params ({})
-    def describe_configuration_recorders(params = {}, **options)
-      req = build_request(:describe_configuration_recorders, params)
+    def describe_configuration_recorders(, **options)
+      req = build_request(:describe_configuration_recorders, )
       req.send_request(options)
     end
 
@@ -1563,8 +1563,8 @@ module Aws::ConfigService
     #
     # @overload describe_conformance_pack_compliance(**params)
     # @param [Hash] params ({})
-    def describe_conformance_pack_compliance(params = {}, **options)
-      req = build_request(:describe_conformance_pack_compliance, params)
+    def describe_conformance_pack_compliance(, **options)
+      req = build_request(:describe_conformance_pack_compliance, )
       req.send_request(options)
     end
 
@@ -1614,8 +1614,8 @@ module Aws::ConfigService
     #
     # @overload describe_conformance_pack_status(**params)
     # @param [Hash] params ({})
-    def describe_conformance_pack_status(params = {}, **options)
-      req = build_request(:describe_conformance_pack_status, params)
+    def describe_conformance_pack_status(, **options)
+      req = build_request(:describe_conformance_pack_status, )
       req.send_request(options)
     end
 
@@ -1665,8 +1665,8 @@ module Aws::ConfigService
     #
     # @overload describe_conformance_packs(**params)
     # @param [Hash] params ({})
-    def describe_conformance_packs(params = {}, **options)
-      req = build_request(:describe_conformance_packs, params)
+    def describe_conformance_packs(, **options)
+      req = build_request(:describe_conformance_packs, )
       req.send_request(options)
     end
 
@@ -1717,8 +1717,8 @@ module Aws::ConfigService
     #
     # @overload describe_delivery_channel_status(**params)
     # @param [Hash] params ({})
-    def describe_delivery_channel_status(params = {}, **options)
-      req = build_request(:describe_delivery_channel_status, params)
+    def describe_delivery_channel_status(, **options)
+      req = build_request(:describe_delivery_channel_status, )
       req.send_request(options)
     end
 
@@ -1757,8 +1757,8 @@ module Aws::ConfigService
     #
     # @overload describe_delivery_channels(**params)
     # @param [Hash] params ({})
-    def describe_delivery_channels(params = {}, **options)
-      req = build_request(:describe_delivery_channels, params)
+    def describe_delivery_channels(, **options)
+      req = build_request(:describe_delivery_channels, )
       req.send_request(options)
     end
 
@@ -1822,8 +1822,8 @@ module Aws::ConfigService
     #
     # @overload describe_organization_config_rule_statuses(**params)
     # @param [Hash] params ({})
-    def describe_organization_config_rule_statuses(params = {}, **options)
-      req = build_request(:describe_organization_config_rule_statuses, params)
+    def describe_organization_config_rule_statuses(, **options)
+      req = build_request(:describe_organization_config_rule_statuses, )
       req.send_request(options)
     end
 
@@ -1902,8 +1902,8 @@ module Aws::ConfigService
     #
     # @overload describe_organization_config_rules(**params)
     # @param [Hash] params ({})
-    def describe_organization_config_rules(params = {}, **options)
-      req = build_request(:describe_organization_config_rules, params)
+    def describe_organization_config_rules(, **options)
+      req = build_request(:describe_organization_config_rules, )
       req.send_request(options)
     end
 
@@ -1967,8 +1967,8 @@ module Aws::ConfigService
     #
     # @overload describe_organization_conformance_pack_statuses(**params)
     # @param [Hash] params ({})
-    def describe_organization_conformance_pack_statuses(params = {}, **options)
-      req = build_request(:describe_organization_conformance_pack_statuses, params)
+    def describe_organization_conformance_pack_statuses(, **options)
+      req = build_request(:describe_organization_conformance_pack_statuses, )
       req.send_request(options)
     end
 
@@ -2032,8 +2032,8 @@ module Aws::ConfigService
     #
     # @overload describe_organization_conformance_packs(**params)
     # @param [Hash] params ({})
-    def describe_organization_conformance_packs(params = {}, **options)
-      req = build_request(:describe_organization_conformance_packs, params)
+    def describe_organization_conformance_packs(, **options)
+      req = build_request(:describe_organization_conformance_packs, )
       req.send_request(options)
     end
 
@@ -2070,8 +2070,8 @@ module Aws::ConfigService
     #
     # @overload describe_pending_aggregation_requests(**params)
     # @param [Hash] params ({})
-    def describe_pending_aggregation_requests(params = {}, **options)
-      req = build_request(:describe_pending_aggregation_requests, params)
+    def describe_pending_aggregation_requests(, **options)
+      req = build_request(:describe_pending_aggregation_requests, )
       req.send_request(options)
     end
 
@@ -2115,8 +2115,8 @@ module Aws::ConfigService
     #
     # @overload describe_remediation_configurations(**params)
     # @param [Hash] params ({})
-    def describe_remediation_configurations(params = {}, **options)
-      req = build_request(:describe_remediation_configurations, params)
+    def describe_remediation_configurations(, **options)
+      req = build_request(:describe_remediation_configurations, )
       req.send_request(options)
     end
 
@@ -2190,8 +2190,8 @@ module Aws::ConfigService
     #
     # @overload describe_remediation_exceptions(**params)
     # @param [Hash] params ({})
-    def describe_remediation_exceptions(params = {}, **options)
-      req = build_request(:describe_remediation_exceptions, params)
+    def describe_remediation_exceptions(, **options)
+      req = build_request(:describe_remediation_exceptions, )
       req.send_request(options)
     end
 
@@ -2258,8 +2258,8 @@ module Aws::ConfigService
     #
     # @overload describe_remediation_execution_status(**params)
     # @param [Hash] params ({})
-    def describe_remediation_execution_status(params = {}, **options)
-      req = build_request(:describe_remediation_execution_status, params)
+    def describe_remediation_execution_status(, **options)
+      req = build_request(:describe_remediation_execution_status, )
       req.send_request(options)
     end
 
@@ -2309,8 +2309,8 @@ module Aws::ConfigService
     #
     # @overload describe_retention_configurations(**params)
     # @param [Hash] params ({})
-    def describe_retention_configurations(params = {}, **options)
-      req = build_request(:describe_retention_configurations, params)
+    def describe_retention_configurations(, **options)
+      req = build_request(:describe_retention_configurations, )
       req.send_request(options)
     end
 
@@ -2392,8 +2392,8 @@ module Aws::ConfigService
     #
     # @overload get_aggregate_compliance_details_by_config_rule(**params)
     # @param [Hash] params ({})
-    def get_aggregate_compliance_details_by_config_rule(params = {}, **options)
-      req = build_request(:get_aggregate_compliance_details_by_config_rule, params)
+    def get_aggregate_compliance_details_by_config_rule(, **options)
+      req = build_request(:get_aggregate_compliance_details_by_config_rule, )
       req.send_request(options)
     end
 
@@ -2459,8 +2459,8 @@ module Aws::ConfigService
     #
     # @overload get_aggregate_config_rule_compliance_summary(**params)
     # @param [Hash] params ({})
-    def get_aggregate_config_rule_compliance_summary(params = {}, **options)
-      req = build_request(:get_aggregate_config_rule_compliance_summary, params)
+    def get_aggregate_config_rule_compliance_summary(, **options)
+      req = build_request(:get_aggregate_config_rule_compliance_summary, )
       req.send_request(options)
     end
 
@@ -2526,8 +2526,8 @@ module Aws::ConfigService
     #
     # @overload get_aggregate_discovered_resource_counts(**params)
     # @param [Hash] params ({})
-    def get_aggregate_discovered_resource_counts(params = {}, **options)
-      req = build_request(:get_aggregate_discovered_resource_counts, params)
+    def get_aggregate_discovered_resource_counts(, **options)
+      req = build_request(:get_aggregate_discovered_resource_counts, )
       req.send_request(options)
     end
 
@@ -2589,8 +2589,8 @@ module Aws::ConfigService
     #
     # @overload get_aggregate_resource_config(**params)
     # @param [Hash] params ({})
-    def get_aggregate_resource_config(params = {}, **options)
-      req = build_request(:get_aggregate_resource_config, params)
+    def get_aggregate_resource_config(, **options)
+      req = build_request(:get_aggregate_resource_config, )
       req.send_request(options)
     end
 
@@ -2650,8 +2650,8 @@ module Aws::ConfigService
     #
     # @overload get_compliance_details_by_config_rule(**params)
     # @param [Hash] params ({})
-    def get_compliance_details_by_config_rule(params = {}, **options)
-      req = build_request(:get_compliance_details_by_config_rule, params)
+    def get_compliance_details_by_config_rule(, **options)
+      req = build_request(:get_compliance_details_by_config_rule, )
       req.send_request(options)
     end
 
@@ -2709,8 +2709,8 @@ module Aws::ConfigService
     #
     # @overload get_compliance_details_by_resource(**params)
     # @param [Hash] params ({})
-    def get_compliance_details_by_resource(params = {}, **options)
-      req = build_request(:get_compliance_details_by_resource, params)
+    def get_compliance_details_by_resource(, **options)
+      req = build_request(:get_compliance_details_by_resource, )
       req.send_request(options)
     end
 
@@ -2733,8 +2733,8 @@ module Aws::ConfigService
     #
     # @overload get_compliance_summary_by_config_rule(**params)
     # @param [Hash] params ({})
-    def get_compliance_summary_by_config_rule(params = {}, **options)
-      req = build_request(:get_compliance_summary_by_config_rule, params)
+    def get_compliance_summary_by_config_rule(, **options)
+      req = build_request(:get_compliance_summary_by_config_rule, )
       req.send_request(options)
     end
 
@@ -2776,8 +2776,8 @@ module Aws::ConfigService
     #
     # @overload get_compliance_summary_by_resource_type(**params)
     # @param [Hash] params ({})
-    def get_compliance_summary_by_resource_type(params = {}, **options)
-      req = build_request(:get_compliance_summary_by_resource_type, params)
+    def get_compliance_summary_by_resource_type(, **options)
+      req = build_request(:get_compliance_summary_by_resource_type, )
       req.send_request(options)
     end
 
@@ -2837,8 +2837,8 @@ module Aws::ConfigService
     #
     # @overload get_conformance_pack_compliance_details(**params)
     # @param [Hash] params ({})
-    def get_conformance_pack_compliance_details(params = {}, **options)
-      req = build_request(:get_conformance_pack_compliance_details, params)
+    def get_conformance_pack_compliance_details(, **options)
+      req = build_request(:get_conformance_pack_compliance_details, )
       req.send_request(options)
     end
 
@@ -2880,8 +2880,8 @@ module Aws::ConfigService
     #
     # @overload get_conformance_pack_compliance_summary(**params)
     # @param [Hash] params ({})
-    def get_conformance_pack_compliance_summary(params = {}, **options)
-      req = build_request(:get_conformance_pack_compliance_summary, params)
+    def get_conformance_pack_compliance_summary(, **options)
+      req = build_request(:get_conformance_pack_compliance_summary, )
       req.send_request(options)
     end
 
@@ -2977,8 +2977,8 @@ module Aws::ConfigService
     #
     # @overload get_discovered_resource_counts(**params)
     # @param [Hash] params ({})
-    def get_discovered_resource_counts(params = {}, **options)
-      req = build_request(:get_discovered_resource_counts, params)
+    def get_discovered_resource_counts(, **options)
+      req = build_request(:get_discovered_resource_counts, )
       req.send_request(options)
     end
 
@@ -3038,8 +3038,8 @@ module Aws::ConfigService
     #
     # @overload get_organization_config_rule_detailed_status(**params)
     # @param [Hash] params ({})
-    def get_organization_config_rule_detailed_status(params = {}, **options)
-      req = build_request(:get_organization_config_rule_detailed_status, params)
+    def get_organization_config_rule_detailed_status(, **options)
+      req = build_request(:get_organization_config_rule_detailed_status, )
       req.send_request(options)
     end
 
@@ -3099,8 +3099,8 @@ module Aws::ConfigService
     #
     # @overload get_organization_conformance_pack_detailed_status(**params)
     # @param [Hash] params ({})
-    def get_organization_conformance_pack_detailed_status(params = {}, **options)
-      req = build_request(:get_organization_conformance_pack_detailed_status, params)
+    def get_organization_conformance_pack_detailed_status(, **options)
+      req = build_request(:get_organization_conformance_pack_detailed_status, )
       req.send_request(options)
     end
 
@@ -3205,8 +3205,8 @@ module Aws::ConfigService
     #
     # @overload get_resource_config_history(**params)
     # @param [Hash] params ({})
-    def get_resource_config_history(params = {}, **options)
-      req = build_request(:get_resource_config_history, params)
+    def get_resource_config_history(, **options)
+      req = build_request(:get_resource_config_history, )
       req.send_request(options)
     end
 
@@ -3276,8 +3276,8 @@ module Aws::ConfigService
     #
     # @overload list_aggregate_discovered_resources(**params)
     # @param [Hash] params ({})
-    def list_aggregate_discovered_resources(params = {}, **options)
-      req = build_request(:list_aggregate_discovered_resources, params)
+    def list_aggregate_discovered_resources(, **options)
+      req = build_request(:list_aggregate_discovered_resources, )
       req.send_request(options)
     end
 
@@ -3356,8 +3356,8 @@ module Aws::ConfigService
     #
     # @overload list_discovered_resources(**params)
     # @param [Hash] params ({})
-    def list_discovered_resources(params = {}, **options)
-      req = build_request(:list_discovered_resources, params)
+    def list_discovered_resources(, **options)
+      req = build_request(:list_discovered_resources, )
       req.send_request(options)
     end
 
@@ -3401,8 +3401,8 @@ module Aws::ConfigService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3446,8 +3446,8 @@ module Aws::ConfigService
     #
     # @overload put_aggregation_authorization(**params)
     # @param [Hash] params ({})
-    def put_aggregation_authorization(params = {}, **options)
-      req = build_request(:put_aggregation_authorization, params)
+    def put_aggregation_authorization(, **options)
+      req = build_request(:put_aggregation_authorization, )
       req.send_request(options)
     end
 
@@ -3545,8 +3545,8 @@ module Aws::ConfigService
     #
     # @overload put_config_rule(**params)
     # @param [Hash] params ({})
-    def put_config_rule(params = {}, **options)
-      req = build_request(:put_config_rule, params)
+    def put_config_rule(, **options)
+      req = build_request(:put_config_rule, )
       req.send_request(options)
     end
 
@@ -3626,8 +3626,8 @@ module Aws::ConfigService
     #
     # @overload put_configuration_aggregator(**params)
     # @param [Hash] params ({})
-    def put_configuration_aggregator(params = {}, **options)
-      req = build_request(:put_configuration_aggregator, params)
+    def put_configuration_aggregator(, **options)
+      req = build_request(:put_configuration_aggregator, )
       req.send_request(options)
     end
 
@@ -3671,8 +3671,8 @@ module Aws::ConfigService
     #
     # @overload put_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def put_configuration_recorder(params = {}, **options)
-      req = build_request(:put_configuration_recorder, params)
+    def put_configuration_recorder(, **options)
+      req = build_request(:put_configuration_recorder, )
       req.send_request(options)
     end
 
@@ -3751,8 +3751,8 @@ module Aws::ConfigService
     #
     # @overload put_conformance_pack(**params)
     # @param [Hash] params ({})
-    def put_conformance_pack(params = {}, **options)
-      req = build_request(:put_conformance_pack, params)
+    def put_conformance_pack(, **options)
+      req = build_request(:put_conformance_pack, )
       req.send_request(options)
     end
 
@@ -3798,8 +3798,8 @@ module Aws::ConfigService
     #
     # @overload put_delivery_channel(**params)
     # @param [Hash] params ({})
-    def put_delivery_channel(params = {}, **options)
-      req = build_request(:put_delivery_channel, params)
+    def put_delivery_channel(, **options)
+      req = build_request(:put_delivery_channel, )
       req.send_request(options)
     end
 
@@ -3860,8 +3860,8 @@ module Aws::ConfigService
     #
     # @overload put_evaluations(**params)
     # @param [Hash] params ({})
-    def put_evaluations(params = {}, **options)
-      req = build_request(:put_evaluations, params)
+    def put_evaluations(, **options)
+      req = build_request(:put_evaluations, )
       req.send_request(options)
     end
 
@@ -3960,8 +3960,8 @@ module Aws::ConfigService
     #
     # @overload put_organization_config_rule(**params)
     # @param [Hash] params ({})
-    def put_organization_config_rule(params = {}, **options)
-      req = build_request(:put_organization_config_rule, params)
+    def put_organization_config_rule(, **options)
+      req = build_request(:put_organization_config_rule, )
       req.send_request(options)
     end
 
@@ -4068,8 +4068,8 @@ module Aws::ConfigService
     #
     # @overload put_organization_conformance_pack(**params)
     # @param [Hash] params ({})
-    def put_organization_conformance_pack(params = {}, **options)
-      req = build_request(:put_organization_conformance_pack, params)
+    def put_organization_conformance_pack(, **options)
+      req = build_request(:put_organization_conformance_pack, )
       req.send_request(options)
     end
 
@@ -4153,8 +4153,8 @@ module Aws::ConfigService
     #
     # @overload put_remediation_configurations(**params)
     # @param [Hash] params ({})
-    def put_remediation_configurations(params = {}, **options)
-      req = build_request(:put_remediation_configurations, params)
+    def put_remediation_configurations(, **options)
+      req = build_request(:put_remediation_configurations, )
       req.send_request(options)
     end
 
@@ -4217,8 +4217,8 @@ module Aws::ConfigService
     #
     # @overload put_remediation_exceptions(**params)
     # @param [Hash] params ({})
-    def put_remediation_exceptions(params = {}, **options)
-      req = build_request(:put_remediation_exceptions, params)
+    def put_remediation_exceptions(, **options)
+      req = build_request(:put_remediation_exceptions, )
       req.send_request(options)
     end
 
@@ -4291,8 +4291,8 @@ module Aws::ConfigService
     #
     # @overload put_resource_config(**params)
     # @param [Hash] params ({})
-    def put_resource_config(params = {}, **options)
-      req = build_request(:put_resource_config, params)
+    def put_resource_config(, **options)
+      req = build_request(:put_resource_config, )
       req.send_request(options)
     end
 
@@ -4334,8 +4334,8 @@ module Aws::ConfigService
     #
     # @overload put_retention_configuration(**params)
     # @param [Hash] params ({})
-    def put_retention_configuration(params = {}, **options)
-      req = build_request(:put_retention_configuration, params)
+    def put_retention_configuration(, **options)
+      req = build_request(:put_retention_configuration, )
       req.send_request(options)
     end
 
@@ -4398,8 +4398,8 @@ module Aws::ConfigService
     #
     # @overload select_aggregate_resource_config(**params)
     # @param [Hash] params ({})
-    def select_aggregate_resource_config(params = {}, **options)
-      req = build_request(:select_aggregate_resource_config, params)
+    def select_aggregate_resource_config(, **options)
+      req = build_request(:select_aggregate_resource_config, )
       req.send_request(options)
     end
 
@@ -4450,8 +4450,8 @@ module Aws::ConfigService
     #
     # @overload select_resource_config(**params)
     # @param [Hash] params ({})
-    def select_resource_config(params = {}, **options)
-      req = build_request(:select_resource_config, params)
+    def select_resource_config(, **options)
+      req = build_request(:select_resource_config, )
       req.send_request(options)
     end
 
@@ -4509,8 +4509,8 @@ module Aws::ConfigService
     #
     # @overload start_config_rules_evaluation(**params)
     # @param [Hash] params ({})
-    def start_config_rules_evaluation(params = {}, **options)
-      req = build_request(:start_config_rules_evaluation, params)
+    def start_config_rules_evaluation(, **options)
+      req = build_request(:start_config_rules_evaluation, )
       req.send_request(options)
     end
 
@@ -4536,8 +4536,8 @@ module Aws::ConfigService
     #
     # @overload start_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def start_configuration_recorder(params = {}, **options)
-      req = build_request(:start_configuration_recorder, params)
+    def start_configuration_recorder(, **options)
+      req = build_request(:start_configuration_recorder, )
       req.send_request(options)
     end
 
@@ -4586,8 +4586,8 @@ module Aws::ConfigService
     #
     # @overload start_remediation_execution(**params)
     # @param [Hash] params ({})
-    def start_remediation_execution(params = {}, **options)
-      req = build_request(:start_remediation_execution, params)
+    def start_remediation_execution(, **options)
+      req = build_request(:start_remediation_execution, )
       req.send_request(options)
     end
 
@@ -4610,8 +4610,8 @@ module Aws::ConfigService
     #
     # @overload stop_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def stop_configuration_recorder(params = {}, **options)
-      req = build_request(:stop_configuration_recorder, params)
+    def stop_configuration_recorder(, **options)
+      req = build_request(:stop_configuration_recorder, )
       req.send_request(options)
     end
 
@@ -4646,8 +4646,8 @@ module Aws::ConfigService
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -4674,8 +4674,8 @@ module Aws::ConfigService
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

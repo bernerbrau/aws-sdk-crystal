@@ -365,8 +365,8 @@ module Aws::AmplifyBackend
     #
     # @overload clone_backend(**params)
     # @param [Hash] params ({})
-    def clone_backend(params = {}, **options)
-      req = build_request(:clone_backend, params)
+    def clone_backend(, **options)
+      req = build_request(:clone_backend, )
       req.send_request(options)
     end
 
@@ -416,8 +416,8 @@ module Aws::AmplifyBackend
     #
     # @overload create_backend(**params)
     # @param [Hash] params ({})
-    def create_backend(params = {}, **options)
-      req = build_request(:create_backend, params)
+    def create_backend(, **options)
+      req = build_request(:create_backend, )
       req.send_request(options)
     end
 
@@ -499,8 +499,8 @@ module Aws::AmplifyBackend
     #
     # @overload create_backend_api(**params)
     # @param [Hash] params ({})
-    def create_backend_api(params = {}, **options)
-      req = build_request(:create_backend_api, params)
+    def create_backend_api(, **options)
+      req = build_request(:create_backend_api, )
       req.send_request(options)
     end
 
@@ -601,8 +601,8 @@ module Aws::AmplifyBackend
     #
     # @overload create_backend_auth(**params)
     # @param [Hash] params ({})
-    def create_backend_auth(params = {}, **options)
-      req = build_request(:create_backend_auth, params)
+    def create_backend_auth(, **options)
+      req = build_request(:create_backend_auth, )
       req.send_request(options)
     end
 
@@ -637,8 +637,8 @@ module Aws::AmplifyBackend
     #
     # @overload create_backend_config(**params)
     # @param [Hash] params ({})
-    def create_backend_config(params = {}, **options)
-      req = build_request(:create_backend_config, params)
+    def create_backend_config(, **options)
+      req = build_request(:create_backend_config, )
       req.send_request(options)
     end
 
@@ -671,8 +671,8 @@ module Aws::AmplifyBackend
     #
     # @overload create_token(**params)
     # @param [Hash] params ({})
-    def create_token(params = {}, **options)
-      req = build_request(:create_token, params)
+    def create_token(, **options)
+      req = build_request(:create_token, )
       req.send_request(options)
     end
 
@@ -711,8 +711,8 @@ module Aws::AmplifyBackend
     #
     # @overload delete_backend(**params)
     # @param [Hash] params ({})
-    def delete_backend(params = {}, **options)
-      req = build_request(:delete_backend, params)
+    def delete_backend(, **options)
+      req = build_request(:delete_backend, )
       req.send_request(options)
     end
 
@@ -794,8 +794,8 @@ module Aws::AmplifyBackend
     #
     # @overload delete_backend_api(**params)
     # @param [Hash] params ({})
-    def delete_backend_api(params = {}, **options)
-      req = build_request(:delete_backend_api, params)
+    def delete_backend_api(, **options)
+      req = build_request(:delete_backend_api, )
       req.send_request(options)
     end
 
@@ -837,8 +837,8 @@ module Aws::AmplifyBackend
     #
     # @overload delete_backend_auth(**params)
     # @param [Hash] params ({})
-    def delete_backend_auth(params = {}, **options)
-      req = build_request(:delete_backend_auth, params)
+    def delete_backend_auth(, **options)
+      req = build_request(:delete_backend_auth, )
       req.send_request(options)
     end
 
@@ -867,8 +867,8 @@ module Aws::AmplifyBackend
     #
     # @overload delete_token(**params)
     # @param [Hash] params ({})
-    def delete_token(params = {}, **options)
-      req = build_request(:delete_token, params)
+    def delete_token(, **options)
+      req = build_request(:delete_token, )
       req.send_request(options)
     end
 
@@ -910,8 +910,8 @@ module Aws::AmplifyBackend
     #
     # @overload generate_backend_api_models(**params)
     # @param [Hash] params ({})
-    def generate_backend_api_models(params = {}, **options)
-      req = build_request(:generate_backend_api_models, params)
+    def generate_backend_api_models(, **options)
+      req = build_request(:generate_backend_api_models, )
       req.send_request(options)
     end
 
@@ -951,8 +951,8 @@ module Aws::AmplifyBackend
     #
     # @overload get_backend(**params)
     # @param [Hash] params ({})
-    def get_backend(params = {}, **options)
-      req = build_request(:get_backend, params)
+    def get_backend(, **options)
+      req = build_request(:get_backend, )
       req.send_request(options)
     end
 
@@ -1054,8 +1054,8 @@ module Aws::AmplifyBackend
     #
     # @overload get_backend_api(**params)
     # @param [Hash] params ({})
-    def get_backend_api(params = {}, **options)
-      req = build_request(:get_backend_api, params)
+    def get_backend_api(, **options)
+      req = build_request(:get_backend_api, )
       req.send_request(options)
     end
 
@@ -1089,8 +1089,8 @@ module Aws::AmplifyBackend
     #
     # @overload get_backend_api_models(**params)
     # @param [Hash] params ({})
-    def get_backend_api_models(params = {}, **options)
-      req = build_request(:get_backend_api_models, params)
+    def get_backend_api_models(, **options)
+      req = build_request(:get_backend_api_models, )
       req.send_request(options)
     end
 
@@ -1162,8 +1162,8 @@ module Aws::AmplifyBackend
     #
     # @overload get_backend_auth(**params)
     # @param [Hash] params ({})
-    def get_backend_auth(params = {}, **options)
-      req = build_request(:get_backend_auth, params)
+    def get_backend_auth(, **options)
+      req = build_request(:get_backend_auth, )
       req.send_request(options)
     end
 
@@ -1209,8 +1209,8 @@ module Aws::AmplifyBackend
     #
     # @overload get_backend_job(**params)
     # @param [Hash] params ({})
-    def get_backend_job(params = {}, **options)
-      req = build_request(:get_backend_job, params)
+    def get_backend_job(, **options)
+      req = build_request(:get_backend_job, )
       req.send_request(options)
     end
 
@@ -1245,8 +1245,8 @@ module Aws::AmplifyBackend
     #
     # @overload get_token(**params)
     # @param [Hash] params ({})
-    def get_token(params = {}, **options)
-      req = build_request(:get_token, params)
+    def get_token(, **options)
+      req = build_request(:get_token, )
       req.send_request(options)
     end
 
@@ -1302,8 +1302,8 @@ module Aws::AmplifyBackend
     #
     # @overload list_backend_jobs(**params)
     # @param [Hash] params ({})
-    def list_backend_jobs(params = {}, **options)
-      req = build_request(:list_backend_jobs, params)
+    def list_backend_jobs(, **options)
+      req = build_request(:list_backend_jobs, )
       req.send_request(options)
     end
 
@@ -1340,8 +1340,8 @@ module Aws::AmplifyBackend
     #
     # @overload remove_all_backends(**params)
     # @param [Hash] params ({})
-    def remove_all_backends(params = {}, **options)
-      req = build_request(:remove_all_backends, params)
+    def remove_all_backends(, **options)
+      req = build_request(:remove_all_backends, )
       req.send_request(options)
     end
 
@@ -1368,8 +1368,8 @@ module Aws::AmplifyBackend
     #
     # @overload remove_backend_config(**params)
     # @param [Hash] params ({})
-    def remove_backend_config(params = {}, **options)
-      req = build_request(:remove_backend_config, params)
+    def remove_backend_config(, **options)
+      req = build_request(:remove_backend_config, )
       req.send_request(options)
     end
 
@@ -1451,8 +1451,8 @@ module Aws::AmplifyBackend
     #
     # @overload update_backend_api(**params)
     # @param [Hash] params ({})
-    def update_backend_api(params = {}, **options)
-      req = build_request(:update_backend_api, params)
+    def update_backend_api(, **options)
+      req = build_request(:update_backend_api, )
       req.send_request(options)
     end
 
@@ -1549,8 +1549,8 @@ module Aws::AmplifyBackend
     #
     # @overload update_backend_auth(**params)
     # @param [Hash] params ({})
-    def update_backend_auth(params = {}, **options)
-      req = build_request(:update_backend_auth, params)
+    def update_backend_auth(, **options)
+      req = build_request(:update_backend_auth, )
       req.send_request(options)
     end
 
@@ -1595,8 +1595,8 @@ module Aws::AmplifyBackend
     #
     # @overload update_backend_config(**params)
     # @param [Hash] params ({})
-    def update_backend_config(params = {}, **options)
-      req = build_request(:update_backend_config, params)
+    def update_backend_config(, **options)
+      req = build_request(:update_backend_config, )
       req.send_request(options)
     end
 
@@ -1648,8 +1648,8 @@ module Aws::AmplifyBackend
     #
     # @overload update_backend_job(**params)
     # @param [Hash] params ({})
-    def update_backend_job(params = {}, **options)
-      req = build_request(:update_backend_job, params)
+    def update_backend_job(, **options)
+      req = build_request(:update_backend_job, )
       req.send_request(options)
     end
 

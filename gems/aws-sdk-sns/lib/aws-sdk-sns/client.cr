@@ -361,8 +361,8 @@ module Aws::SNS
     #
     # @overload add_permission(**params)
     # @param [Hash] params ({})
-    def add_permission(params = {}, **options)
-      req = build_request(:add_permission, params)
+    def add_permission(, **options)
+      req = build_request(:add_permission, )
       req.send_request(options)
     end
 
@@ -394,8 +394,8 @@ module Aws::SNS
     #
     # @overload check_if_phone_number_is_opted_out(**params)
     # @param [Hash] params ({})
-    def check_if_phone_number_is_opted_out(params = {}, **options)
-      req = build_request(:check_if_phone_number_is_opted_out, params)
+    def check_if_phone_number_is_opted_out(, **options)
+      req = build_request(:check_if_phone_number_is_opted_out, )
       req.send_request(options)
     end
 
@@ -438,8 +438,8 @@ module Aws::SNS
     #
     # @overload confirm_subscription(**params)
     # @param [Hash] params ({})
-    def confirm_subscription(params = {}, **options)
-      req = build_request(:confirm_subscription, params)
+    def confirm_subscription(, **options)
+      req = build_request(:confirm_subscription, )
       req.send_request(options)
     end
 
@@ -512,8 +512,8 @@ module Aws::SNS
     #
     # @overload create_platform_application(**params)
     # @param [Hash] params ({})
-    def create_platform_application(params = {}, **options)
-      req = build_request(:create_platform_application, params)
+    def create_platform_application(, **options)
+      req = build_request(:create_platform_application, )
       req.send_request(options)
     end
 
@@ -585,8 +585,8 @@ module Aws::SNS
     #
     # @overload create_platform_endpoint(**params)
     # @param [Hash] params ({})
-    def create_platform_endpoint(params = {}, **options)
-      req = build_request(:create_platform_endpoint, params)
+    def create_platform_endpoint(, **options)
+      req = build_request(:create_platform_endpoint, )
       req.send_request(options)
     end
 
@@ -700,8 +700,8 @@ module Aws::SNS
     #
     # @overload create_topic(**params)
     # @param [Hash] params ({})
-    def create_topic(params = {}, **options)
-      req = build_request(:create_topic, params)
+    def create_topic(, **options)
+      req = build_request(:create_topic, )
       req.send_request(options)
     end
 
@@ -731,8 +731,8 @@ module Aws::SNS
     #
     # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, **options)
-      req = build_request(:delete_endpoint, params)
+    def delete_endpoint(, **options)
+      req = build_request(:delete_endpoint, )
       req.send_request(options)
     end
 
@@ -760,8 +760,8 @@ module Aws::SNS
     #
     # @overload delete_platform_application(**params)
     # @param [Hash] params ({})
-    def delete_platform_application(params = {}, **options)
-      req = build_request(:delete_platform_application, params)
+    def delete_platform_application(, **options)
+      req = build_request(:delete_platform_application, )
       req.send_request(options)
     end
 
@@ -785,8 +785,8 @@ module Aws::SNS
     #
     # @overload delete_topic(**params)
     # @param [Hash] params ({})
-    def delete_topic(params = {}, **options)
-      req = build_request(:delete_topic, params)
+    def delete_topic(, **options)
+      req = build_request(:delete_topic, )
       req.send_request(options)
     end
 
@@ -821,8 +821,8 @@ module Aws::SNS
     #
     # @overload get_endpoint_attributes(**params)
     # @param [Hash] params ({})
-    def get_endpoint_attributes(params = {}, **options)
-      req = build_request(:get_endpoint_attributes, params)
+    def get_endpoint_attributes(, **options)
+      req = build_request(:get_endpoint_attributes, )
       req.send_request(options)
     end
 
@@ -857,8 +857,8 @@ module Aws::SNS
     #
     # @overload get_platform_application_attributes(**params)
     # @param [Hash] params ({})
-    def get_platform_application_attributes(params = {}, **options)
-      req = build_request(:get_platform_application_attributes, params)
+    def get_platform_application_attributes(, **options)
+      req = build_request(:get_platform_application_attributes, )
       req.send_request(options)
     end
 
@@ -898,8 +898,8 @@ module Aws::SNS
     #
     # @overload get_sms_attributes(**params)
     # @param [Hash] params ({})
-    def get_sms_attributes(params = {}, **options)
-      req = build_request(:get_sms_attributes, params)
+    def get_sms_attributes(, **options)
+      req = build_request(:get_sms_attributes, )
       req.send_request(options)
     end
 
@@ -927,8 +927,8 @@ module Aws::SNS
     #
     # @overload get_subscription_attributes(**params)
     # @param [Hash] params ({})
-    def get_subscription_attributes(params = {}, **options)
-      req = build_request(:get_subscription_attributes, params)
+    def get_subscription_attributes(, **options)
+      req = build_request(:get_subscription_attributes, )
       req.send_request(options)
     end
 
@@ -957,8 +957,8 @@ module Aws::SNS
     #
     # @overload get_topic_attributes(**params)
     # @param [Hash] params ({})
-    def get_topic_attributes(params = {}, **options)
-      req = build_request(:get_topic_attributes, params)
+    def get_topic_attributes(, **options)
+      req = build_request(:get_topic_attributes, )
       req.send_request(options)
     end
 
@@ -1014,8 +1014,8 @@ module Aws::SNS
     #
     # @overload list_endpoints_by_platform_application(**params)
     # @param [Hash] params ({})
-    def list_endpoints_by_platform_application(params = {}, **options)
-      req = build_request(:list_endpoints_by_platform_application, params)
+    def list_endpoints_by_platform_application(, **options)
+      req = build_request(:list_endpoints_by_platform_application, )
       req.send_request(options)
     end
 
@@ -1056,8 +1056,8 @@ module Aws::SNS
     #
     # @overload list_phone_numbers_opted_out(**params)
     # @param [Hash] params ({})
-    def list_phone_numbers_opted_out(params = {}, **options)
-      req = build_request(:list_phone_numbers_opted_out, params)
+    def list_phone_numbers_opted_out(, **options)
+      req = build_request(:list_phone_numbers_opted_out, )
       req.send_request(options)
     end
 
@@ -1108,8 +1108,8 @@ module Aws::SNS
     #
     # @overload list_platform_applications(**params)
     # @param [Hash] params ({})
-    def list_platform_applications(params = {}, **options)
-      req = build_request(:list_platform_applications, params)
+    def list_platform_applications(, **options)
+      req = build_request(:list_platform_applications, )
       req.send_request(options)
     end
 
@@ -1150,8 +1150,8 @@ module Aws::SNS
     #
     # @overload list_subscriptions(**params)
     # @param [Hash] params ({})
-    def list_subscriptions(params = {}, **options)
-      req = build_request(:list_subscriptions, params)
+    def list_subscriptions(, **options)
+      req = build_request(:list_subscriptions, )
       req.send_request(options)
     end
 
@@ -1197,8 +1197,8 @@ module Aws::SNS
     #
     # @overload list_subscriptions_by_topic(**params)
     # @param [Hash] params ({})
-    def list_subscriptions_by_topic(params = {}, **options)
-      req = build_request(:list_subscriptions_by_topic, params)
+    def list_subscriptions_by_topic(, **options)
+      req = build_request(:list_subscriptions_by_topic, )
       req.send_request(options)
     end
 
@@ -1233,8 +1233,8 @@ module Aws::SNS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1271,8 +1271,8 @@ module Aws::SNS
     #
     # @overload list_topics(**params)
     # @param [Hash] params ({})
-    def list_topics(params = {}, **options)
-      req = build_request(:list_topics, params)
+    def list_topics(, **options)
+      req = build_request(:list_topics, )
       req.send_request(options)
     end
 
@@ -1296,8 +1296,8 @@ module Aws::SNS
     #
     # @overload opt_in_phone_number(**params)
     # @param [Hash] params ({})
-    def opt_in_phone_number(params = {}, **options)
-      req = build_request(:opt_in_phone_number, params)
+    def opt_in_phone_number(, **options)
+      req = build_request(:opt_in_phone_number, )
       req.send_request(options)
     end
 
@@ -1492,8 +1492,8 @@ module Aws::SNS
     #
     # @overload publish(**params)
     # @param [Hash] params ({})
-    def publish(params = {}, **options)
-      req = build_request(:publish, params)
+    def publish(, **options)
+      req = build_request(:publish, )
       req.send_request(options)
     end
 
@@ -1518,8 +1518,8 @@ module Aws::SNS
     #
     # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, **options)
-      req = build_request(:remove_permission, params)
+    def remove_permission(, **options)
+      req = build_request(:remove_permission, )
       req.send_request(options)
     end
 
@@ -1568,8 +1568,8 @@ module Aws::SNS
     #
     # @overload set_endpoint_attributes(**params)
     # @param [Hash] params ({})
-    def set_endpoint_attributes(params = {}, **options)
-      req = build_request(:set_endpoint_attributes, params)
+    def set_endpoint_attributes(, **options)
+      req = build_request(:set_endpoint_attributes, )
       req.send_request(options)
     end
 
@@ -1640,8 +1640,8 @@ module Aws::SNS
     #
     # @overload set_platform_application_attributes(**params)
     # @param [Hash] params ({})
-    def set_platform_application_attributes(params = {}, **options)
-      req = build_request(:set_platform_application_attributes, params)
+    def set_platform_application_attributes(, **options)
+      req = build_request(:set_platform_application_attributes, )
       req.send_request(options)
     end
 
@@ -1755,8 +1755,8 @@ module Aws::SNS
     #
     # @overload set_sms_attributes(**params)
     # @param [Hash] params ({})
-    def set_sms_attributes(params = {}, **options)
-      req = build_request(:set_sms_attributes, params)
+    def set_sms_attributes(, **options)
+      req = build_request(:set_sms_attributes, )
       req.send_request(options)
     end
 
@@ -1808,8 +1808,8 @@ module Aws::SNS
     #
     # @overload set_subscription_attributes(**params)
     # @param [Hash] params ({})
-    def set_subscription_attributes(params = {}, **options)
-      req = build_request(:set_subscription_attributes, params)
+    def set_subscription_attributes(, **options)
+      req = build_request(:set_subscription_attributes, )
       req.send_request(options)
     end
 
@@ -1885,8 +1885,8 @@ module Aws::SNS
     #
     # @overload set_topic_attributes(**params)
     # @param [Hash] params ({})
-    def set_topic_attributes(params = {}, **options)
-      req = build_request(:set_topic_attributes, params)
+    def set_topic_attributes(, **options)
+      req = build_request(:set_topic_attributes, )
       req.send_request(options)
     end
 
@@ -2014,8 +2014,8 @@ module Aws::SNS
     #
     # @overload subscribe(**params)
     # @param [Hash] params ({})
-    def subscribe(params = {}, **options)
-      req = build_request(:subscribe, params)
+    def subscribe(, **options)
+      req = build_request(:subscribe, )
       req.send_request(options)
     end
 
@@ -2068,8 +2068,8 @@ module Aws::SNS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2098,8 +2098,8 @@ module Aws::SNS
     #
     # @overload unsubscribe(**params)
     # @param [Hash] params ({})
-    def unsubscribe(params = {}, **options)
-      req = build_request(:unsubscribe, params)
+    def unsubscribe(, **options)
+      req = build_request(:unsubscribe, )
       req.send_request(options)
     end
 
@@ -2129,8 +2129,8 @@ module Aws::SNS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

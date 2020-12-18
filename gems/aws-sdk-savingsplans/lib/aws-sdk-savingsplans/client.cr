@@ -381,8 +381,8 @@ module Aws::SavingsPlans
     #
     # @overload create_savings_plan(**params)
     # @param [Hash] params ({})
-    def create_savings_plan(params = {}, **options)
-      req = build_request(:create_savings_plan, params)
+    def create_savings_plan(, **options)
+      req = build_request(:create_savings_plan, )
       req.send_request(options)
     end
 
@@ -403,8 +403,8 @@ module Aws::SavingsPlans
     #
     # @overload delete_queued_savings_plan(**params)
     # @param [Hash] params ({})
-    def delete_queued_savings_plan(params = {}, **options)
-      req = build_request(:delete_queued_savings_plan, params)
+    def delete_queued_savings_plan(, **options)
+      req = build_request(:delete_queued_savings_plan, )
       req.send_request(options)
     end
 
@@ -464,8 +464,8 @@ module Aws::SavingsPlans
     #
     # @overload describe_savings_plan_rates(**params)
     # @param [Hash] params ({})
-    def describe_savings_plan_rates(params = {}, **options)
-      req = build_request(:describe_savings_plan_rates, params)
+    def describe_savings_plan_rates(, **options)
+      req = build_request(:describe_savings_plan_rates, )
       req.send_request(options)
     end
 
@@ -541,8 +541,8 @@ module Aws::SavingsPlans
     #
     # @overload describe_savings_plans(**params)
     # @param [Hash] params ({})
-    def describe_savings_plans(params = {}, **options)
-      req = build_request(:describe_savings_plans, params)
+    def describe_savings_plans(, **options)
+      req = build_request(:describe_savings_plans, )
       req.send_request(options)
     end
 
@@ -629,8 +629,8 @@ module Aws::SavingsPlans
     #
     # @overload describe_savings_plans_offering_rates(**params)
     # @param [Hash] params ({})
-    def describe_savings_plans_offering_rates(params = {}, **options)
-      req = build_request(:describe_savings_plans_offering_rates, params)
+    def describe_savings_plans_offering_rates(, **options)
+      req = build_request(:describe_savings_plans_offering_rates, )
       req.send_request(options)
     end
 
@@ -728,8 +728,8 @@ module Aws::SavingsPlans
     #
     # @overload describe_savings_plans_offerings(**params)
     # @param [Hash] params ({})
-    def describe_savings_plans_offerings(params = {}, **options)
-      req = build_request(:describe_savings_plans_offerings, params)
+    def describe_savings_plans_offerings(, **options)
+      req = build_request(:describe_savings_plans_offerings, )
       req.send_request(options)
     end
 
@@ -757,8 +757,8 @@ module Aws::SavingsPlans
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -786,8 +786,8 @@ module Aws::SavingsPlans
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -812,8 +812,8 @@ module Aws::SavingsPlans
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

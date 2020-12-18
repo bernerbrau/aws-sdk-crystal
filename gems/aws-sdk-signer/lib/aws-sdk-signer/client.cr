@@ -371,8 +371,8 @@ module Aws::Signer
     #
     # @overload add_profile_permission(**params)
     # @param [Hash] params ({})
-    def add_profile_permission(params = {}, **options)
-      req = build_request(:add_profile_permission, params)
+    def add_profile_permission(, **options)
+      req = build_request(:add_profile_permission, )
       req.send_request(options)
     end
 
@@ -396,8 +396,8 @@ module Aws::Signer
     #
     # @overload cancel_signing_profile(**params)
     # @param [Hash] params ({})
-    def cancel_signing_profile(params = {}, **options)
-      req = build_request(:cancel_signing_profile, params)
+    def cancel_signing_profile(, **options)
+      req = build_request(:cancel_signing_profile, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::Signer
     #
     # @overload describe_signing_job(**params)
     # @param [Hash] params ({})
-    def describe_signing_job(params = {}, **options)
-      req = build_request(:describe_signing_job, params)
+    def describe_signing_job(, **options)
+      req = build_request(:describe_signing_job, )
       req.send_request(options)
     end
 
@@ -526,8 +526,8 @@ module Aws::Signer
     #
     # @overload get_signing_platform(**params)
     # @param [Hash] params ({})
-    def get_signing_platform(params = {}, **options)
-      req = build_request(:get_signing_platform, params)
+    def get_signing_platform(, **options)
+      req = build_request(:get_signing_platform, )
       req.send_request(options)
     end
 
@@ -591,8 +591,8 @@ module Aws::Signer
     #
     # @overload get_signing_profile(**params)
     # @param [Hash] params ({})
-    def get_signing_profile(params = {}, **options)
-      req = build_request(:get_signing_profile, params)
+    def get_signing_profile(, **options)
+      req = build_request(:get_signing_profile, )
       req.send_request(options)
     end
 
@@ -633,8 +633,8 @@ module Aws::Signer
     #
     # @overload list_profile_permissions(**params)
     # @param [Hash] params ({})
-    def list_profile_permissions(params = {}, **options)
-      req = build_request(:list_profile_permissions, params)
+    def list_profile_permissions(, **options)
+      req = build_request(:list_profile_permissions, )
       req.send_request(options)
     end
 
@@ -732,8 +732,8 @@ module Aws::Signer
     #
     # @overload list_signing_jobs(**params)
     # @param [Hash] params ({})
-    def list_signing_jobs(params = {}, **options)
-      req = build_request(:list_signing_jobs, params)
+    def list_signing_jobs(, **options)
+      req = build_request(:list_signing_jobs, )
       req.send_request(options)
     end
 
@@ -805,8 +805,8 @@ module Aws::Signer
     #
     # @overload list_signing_platforms(**params)
     # @param [Hash] params ({})
-    def list_signing_platforms(params = {}, **options)
-      req = build_request(:list_signing_platforms, params)
+    def list_signing_platforms(, **options)
+      req = build_request(:list_signing_platforms, )
       req.send_request(options)
     end
 
@@ -879,8 +879,8 @@ module Aws::Signer
     #
     # @overload list_signing_profiles(**params)
     # @param [Hash] params ({})
-    def list_signing_profiles(params = {}, **options)
-      req = build_request(:list_signing_profiles, params)
+    def list_signing_profiles(, **options)
+      req = build_request(:list_signing_profiles, )
       req.send_request(options)
     end
 
@@ -908,8 +908,8 @@ module Aws::Signer
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -991,8 +991,8 @@ module Aws::Signer
     #
     # @overload put_signing_profile(**params)
     # @param [Hash] params ({})
-    def put_signing_profile(params = {}, **options)
-      req = build_request(:put_signing_profile, params)
+    def put_signing_profile(, **options)
+      req = build_request(:put_signing_profile, )
       req.send_request(options)
     end
 
@@ -1029,8 +1029,8 @@ module Aws::Signer
     #
     # @overload remove_profile_permission(**params)
     # @param [Hash] params ({})
-    def remove_profile_permission(params = {}, **options)
-      req = build_request(:remove_profile_permission, params)
+    def remove_profile_permission(, **options)
+      req = build_request(:remove_profile_permission, )
       req.send_request(options)
     end
 
@@ -1060,8 +1060,8 @@ module Aws::Signer
     #
     # @overload revoke_signature(**params)
     # @param [Hash] params ({})
-    def revoke_signature(params = {}, **options)
-      req = build_request(:revoke_signature, params)
+    def revoke_signature(, **options)
+      req = build_request(:revoke_signature, )
       req.send_request(options)
     end
 
@@ -1098,8 +1098,8 @@ module Aws::Signer
     #
     # @overload revoke_signing_profile(**params)
     # @param [Hash] params ({})
-    def revoke_signing_profile(params = {}, **options)
-      req = build_request(:revoke_signing_profile, params)
+    def revoke_signing_profile(, **options)
+      req = build_request(:revoke_signing_profile, )
       req.send_request(options)
     end
 
@@ -1188,8 +1188,8 @@ module Aws::Signer
     #
     # @overload start_signing_job(**params)
     # @param [Hash] params ({})
-    def start_signing_job(params = {}, **options)
-      req = build_request(:start_signing_job, params)
+    def start_signing_job(, **options)
+      req = build_request(:start_signing_job, )
       req.send_request(options)
     end
 
@@ -1220,8 +1220,8 @@ module Aws::Signer
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1247,8 +1247,8 @@ module Aws::Signer
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

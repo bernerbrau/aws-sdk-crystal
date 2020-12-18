@@ -5332,5 +5332,1282 @@ module Aws::ElasticBeanstalk
       include Aws::Structure
     end
 
+    alias ARN = String
+
+    alias AbortEnvironmentUpdateMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?
+    )
+
+    alias AbortableOperationInProgress = Bool
+
+    alias ActionHistoryStatus = String
+
+    alias ActionStatus = String
+
+    alias ActionType = String
+
+    alias ApplicationArn = String
+
+    alias ApplicationDescription = NamedTuple(
+      "ApplicationArn" : (ApplicationArn)?,
+      "ApplicationName" : (ApplicationName)?,
+      "Description" : (Description)?,
+      "DateCreated" : (CreationDate)?,
+      "DateUpdated" : (UpdateDate)?,
+      "Versions" : (VersionLabelsList)?,
+      "ConfigurationTemplates" : (ConfigurationTemplateNamesList)?,
+      "ResourceLifecycleConfig" : (ApplicationResourceLifecycleConfig)?
+    )
+
+    alias ApplicationDescriptionList = Array(ApplicationDescription)
+
+    alias ApplicationDescriptionMessage = NamedTuple(
+      "Application" : (ApplicationDescription)?
+    )
+
+    alias ApplicationDescriptionsMessage = NamedTuple(
+      "Applications" : (ApplicationDescriptionList)?
+    )
+
+    alias ApplicationMetrics = NamedTuple(
+      "Duration" : (NullableInteger)?,
+      "RequestCount" : (RequestCount)?,
+      "StatusCodes" : (StatusCodes)?,
+      "Latency" : (Latency)?
+    )
+
+    alias ApplicationName = String
+
+    alias ApplicationNamesList = Array(ApplicationName)
+
+    alias ApplicationResourceLifecycleConfig = NamedTuple(
+      "ServiceRole" : (String)?,
+      "VersionLifecycleConfig" : (ApplicationVersionLifecycleConfig)?
+    )
+
+    alias ApplicationResourceLifecycleDescriptionMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "ResourceLifecycleConfig" : (ApplicationResourceLifecycleConfig)?
+    )
+
+    alias ApplicationVersionArn = String
+
+    alias ApplicationVersionDescription = NamedTuple(
+      "ApplicationVersionArn" : (ApplicationVersionArn)?,
+      "ApplicationName" : (ApplicationName)?,
+      "Description" : (Description)?,
+      "VersionLabel" : (VersionLabel)?,
+      "SourceBuildInformation" : (SourceBuildInformation)?,
+      "BuildArn" : (String)?,
+      "SourceBundle" : (S3Location)?,
+      "DateCreated" : (CreationDate)?,
+      "DateUpdated" : (UpdateDate)?,
+      "Status" : (ApplicationVersionStatus)?
+    )
+
+    alias ApplicationVersionDescriptionList = Array(ApplicationVersionDescription)
+
+    alias ApplicationVersionDescriptionMessage = NamedTuple(
+      "ApplicationVersion" : (ApplicationVersionDescription)?
+    )
+
+    alias ApplicationVersionDescriptionsMessage = NamedTuple(
+      "ApplicationVersions" : (ApplicationVersionDescriptionList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ApplicationVersionLifecycleConfig = NamedTuple(
+      "MaxCountRule" : (MaxCountRule)?,
+      "MaxAgeRule" : (MaxAgeRule)?
+    )
+
+    alias ApplicationVersionProccess = Bool
+
+    alias ApplicationVersionStatus = String
+
+    alias ApplyEnvironmentManagedActionRequest = NamedTuple(
+      "EnvironmentName" : (String)?,
+      "EnvironmentId" : (String)?,
+      "ActionId" : String
+    )
+
+    alias ApplyEnvironmentManagedActionResult = NamedTuple(
+      "ActionId" : (String)?,
+      "ActionDescription" : (String)?,
+      "ActionType" : (ActionType)?,
+      "Status" : (String)?
+    )
+
+    alias AssociateEnvironmentOperationsRoleMessage = NamedTuple(
+      "EnvironmentName" : EnvironmentName,
+      "OperationsRole" : OperationsRole
+    )
+
+    alias AutoCreateApplication = Bool
+
+    alias AutoScalingGroup = NamedTuple(
+      "Name" : (ResourceId)?
+    )
+
+    alias AutoScalingGroupList = Array(AutoScalingGroup)
+
+    alias AvailableSolutionStackDetailsList = Array(SolutionStackDescription)
+
+    alias AvailableSolutionStackNamesList = Array(SolutionStackName)
+
+    alias BoxedBoolean = Bool
+
+    alias BoxedInt = Int32
+
+    alias BranchName = String
+
+    alias BranchOrder = Int32
+
+    alias BuildConfiguration = NamedTuple(
+      "ArtifactName" : (String)?,
+      "CodeBuildServiceRole" : NonEmptyString,
+      "ComputeType" : (ComputeType)?,
+      "Image" : NonEmptyString,
+      "TimeoutInMinutes" : (BoxedInt)?
+    )
+
+    alias Builder = NamedTuple(
+      "ARN" : (ARN)?
+    )
+
+    alias CPUUtilization = NamedTuple(
+      "User" : (NullableDouble)?,
+      "Nice" : (NullableDouble)?,
+      "System" : (NullableDouble)?,
+      "Idle" : (NullableDouble)?,
+      "IOWait" : (NullableDouble)?,
+      "IRQ" : (NullableDouble)?,
+      "SoftIRQ" : (NullableDouble)?,
+      "Privileged" : (NullableDouble)?
+    )
+
+    alias Cause = String
+
+    alias Causes = Array(Cause)
+
+    alias CheckDNSAvailabilityMessage = NamedTuple(
+      "CNAMEPrefix" : DNSCnamePrefix
+    )
+
+    alias CheckDNSAvailabilityResultMessage = NamedTuple(
+      "Available" : (CnameAvailability)?,
+      "FullyQualifiedCNAME" : (DNSCname)?
+    )
+
+    alias CnameAvailability = Bool
+
+    alias CodeBuildNotInServiceRegionException = NamedTuple(
+      
+    )
+
+    alias ComposeEnvironmentsMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "GroupName" : (GroupName)?,
+      "VersionLabels" : (VersionLabels)?
+    )
+
+    alias ComputeType = String
+
+    alias ConfigurationDeploymentStatus = String
+
+    alias ConfigurationOptionDefaultValue = String
+
+    alias ConfigurationOptionDescription = NamedTuple(
+      "Namespace" : (OptionNamespace)?,
+      "Name" : (ConfigurationOptionName)?,
+      "DefaultValue" : (ConfigurationOptionDefaultValue)?,
+      "ChangeSeverity" : (ConfigurationOptionSeverity)?,
+      "UserDefined" : (UserDefinedOption)?,
+      "ValueType" : (ConfigurationOptionValueType)?,
+      "ValueOptions" : (ConfigurationOptionPossibleValues)?,
+      "MinValue" : (OptionRestrictionMinValue)?,
+      "MaxValue" : (OptionRestrictionMaxValue)?,
+      "MaxLength" : (OptionRestrictionMaxLength)?,
+      "Regex" : (OptionRestrictionRegex)?
+    )
+
+    alias ConfigurationOptionDescriptionsList = Array(ConfigurationOptionDescription)
+
+    alias ConfigurationOptionName = String
+
+    alias ConfigurationOptionPossibleValue = String
+
+    alias ConfigurationOptionPossibleValues = Array(ConfigurationOptionPossibleValue)
+
+    alias ConfigurationOptionSetting = NamedTuple(
+      "ResourceName" : (ResourceName)?,
+      "Namespace" : (OptionNamespace)?,
+      "OptionName" : (ConfigurationOptionName)?,
+      "Value" : (ConfigurationOptionValue)?
+    )
+
+    alias ConfigurationOptionSettingsList = Array(ConfigurationOptionSetting)
+
+    alias ConfigurationOptionSeverity = String
+
+    alias ConfigurationOptionValue = String
+
+    alias ConfigurationOptionValueType = String
+
+    alias ConfigurationOptionsDescription = NamedTuple(
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "Options" : (ConfigurationOptionDescriptionsList)?
+    )
+
+    alias ConfigurationSettingsDescription = NamedTuple(
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "ApplicationName" : (ApplicationName)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "Description" : (Description)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "DeploymentStatus" : (ConfigurationDeploymentStatus)?,
+      "DateCreated" : (CreationDate)?,
+      "DateUpdated" : (UpdateDate)?,
+      "OptionSettings" : (ConfigurationOptionSettingsList)?
+    )
+
+    alias ConfigurationSettingsDescriptionList = Array(ConfigurationSettingsDescription)
+
+    alias ConfigurationSettingsDescriptions = NamedTuple(
+      "ConfigurationSettings" : (ConfigurationSettingsDescriptionList)?
+    )
+
+    alias ConfigurationSettingsValidationMessages = NamedTuple(
+      "Messages" : (ValidationMessagesList)?
+    )
+
+    alias ConfigurationTemplateName = String
+
+    alias ConfigurationTemplateNamesList = Array(ConfigurationTemplateName)
+
+    alias CreateApplicationMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "Description" : (Description)?,
+      "ResourceLifecycleConfig" : (ApplicationResourceLifecycleConfig)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateApplicationVersionMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "VersionLabel" : VersionLabel,
+      "Description" : (Description)?,
+      "SourceBuildInformation" : (SourceBuildInformation)?,
+      "SourceBundle" : (S3Location)?,
+      "BuildConfiguration" : (BuildConfiguration)?,
+      "AutoCreateApplication" : (AutoCreateApplication)?,
+      "Process" : (ApplicationVersionProccess)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateConfigurationTemplateMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "TemplateName" : ConfigurationTemplateName,
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "SourceConfiguration" : (SourceConfiguration)?,
+      "EnvironmentId" : (EnvironmentId)?,
+      "Description" : (Description)?,
+      "OptionSettings" : (ConfigurationOptionSettingsList)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateEnvironmentMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "EnvironmentName" : (EnvironmentName)?,
+      "GroupName" : (GroupName)?,
+      "Description" : (Description)?,
+      "CNAMEPrefix" : (DNSCnamePrefix)?,
+      "Tier" : (EnvironmentTier)?,
+      "Tags" : (Tags)?,
+      "VersionLabel" : (VersionLabel)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "OptionSettings" : (ConfigurationOptionSettingsList)?,
+      "OptionsToRemove" : (OptionsSpecifierList)?,
+      "OperationsRole" : (OperationsRole)?
+    )
+
+    alias CreatePlatformVersionRequest = NamedTuple(
+      "PlatformName" : PlatformName,
+      "PlatformVersion" : PlatformVersion,
+      "PlatformDefinitionBundle" : S3Location,
+      "EnvironmentName" : (EnvironmentName)?,
+      "OptionSettings" : (ConfigurationOptionSettingsList)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreatePlatformVersionResult = NamedTuple(
+      "PlatformSummary" : (PlatformSummary)?,
+      "Builder" : (Builder)?
+    )
+
+    alias CreateStorageLocationResultMessage = NamedTuple(
+      "S3Bucket" : (S3Bucket)?
+    )
+
+    alias CreationDate = String | UInt64 | Time
+
+    alias CustomAmi = NamedTuple(
+      "VirtualizationType" : (VirtualizationType)?,
+      "ImageId" : (ImageId)?
+    )
+
+    alias CustomAmiList = Array(CustomAmi)
+
+    alias DNSCname = String
+
+    alias DNSCnamePrefix = String
+
+    alias DeleteApplicationMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "TerminateEnvByForce" : (TerminateEnvForce)?
+    )
+
+    alias DeleteApplicationVersionMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "VersionLabel" : VersionLabel,
+      "DeleteSourceBundle" : (DeleteSourceBundle)?
+    )
+
+    alias DeleteConfigurationTemplateMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "TemplateName" : ConfigurationTemplateName
+    )
+
+    alias DeleteEnvironmentConfigurationMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "EnvironmentName" : EnvironmentName
+    )
+
+    alias DeletePlatformVersionRequest = NamedTuple(
+      "PlatformArn" : (PlatformArn)?
+    )
+
+    alias DeletePlatformVersionResult = NamedTuple(
+      "PlatformSummary" : (PlatformSummary)?
+    )
+
+    alias DeleteSourceBundle = Bool
+
+    alias Deployment = NamedTuple(
+      "VersionLabel" : (String)?,
+      "DeploymentId" : (NullableLong)?,
+      "Status" : (String)?,
+      "DeploymentTime" : (DeploymentTimestamp)?
+    )
+
+    alias DeploymentTimestamp = String | UInt64 | Time
+
+    alias DescribeAccountAttributesResult = NamedTuple(
+      "ResourceQuotas" : (ResourceQuotas)?
+    )
+
+    alias DescribeApplicationVersionsMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "VersionLabels" : (VersionLabelsList)?,
+      "MaxRecords" : (MaxRecords)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeApplicationsMessage = NamedTuple(
+      "ApplicationNames" : (ApplicationNamesList)?
+    )
+
+    alias DescribeConfigurationOptionsMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "Options" : (OptionsSpecifierList)?
+    )
+
+    alias DescribeConfigurationSettingsMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "EnvironmentName" : (EnvironmentName)?
+    )
+
+    alias DescribeEnvironmentHealthRequest = NamedTuple(
+      "EnvironmentName" : (EnvironmentName)?,
+      "EnvironmentId" : (EnvironmentId)?,
+      "AttributeNames" : (EnvironmentHealthAttributes)?
+    )
+
+    alias DescribeEnvironmentHealthResult = NamedTuple(
+      "EnvironmentName" : (EnvironmentName)?,
+      "HealthStatus" : (String)?,
+      "Status" : (EnvironmentHealth)?,
+      "Color" : (String)?,
+      "Causes" : (Causes)?,
+      "ApplicationMetrics" : (ApplicationMetrics)?,
+      "InstancesHealth" : (InstanceHealthSummary)?,
+      "RefreshedAt" : (RefreshedAt)?
+    )
+
+    alias DescribeEnvironmentManagedActionHistoryRequest = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "NextToken" : (String)?,
+      "MaxItems" : (ManagedActionHistoryMaxItems)?
+    )
+
+    alias DescribeEnvironmentManagedActionHistoryResult = NamedTuple(
+      "ManagedActionHistoryItems" : (ManagedActionHistoryItems)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeEnvironmentManagedActionsRequest = NamedTuple(
+      "EnvironmentName" : (String)?,
+      "EnvironmentId" : (String)?,
+      "Status" : (ActionStatus)?
+    )
+
+    alias DescribeEnvironmentManagedActionsResult = NamedTuple(
+      "ManagedActions" : (ManagedActions)?
+    )
+
+    alias DescribeEnvironmentResourcesMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?
+    )
+
+    alias DescribeEnvironmentsMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "VersionLabel" : (VersionLabel)?,
+      "EnvironmentIds" : (EnvironmentIdList)?,
+      "EnvironmentNames" : (EnvironmentNamesList)?,
+      "IncludeDeleted" : (IncludeDeleted)?,
+      "IncludedDeletedBackTo" : (IncludeDeletedBackTo)?,
+      "MaxRecords" : (MaxRecords)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeEventsMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "VersionLabel" : (VersionLabel)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "RequestId" : (RequestId)?,
+      "Severity" : (EventSeverity)?,
+      "StartTime" : (TimeFilterStart)?,
+      "EndTime" : (TimeFilterEnd)?,
+      "MaxRecords" : (MaxRecords)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeInstancesHealthRequest = NamedTuple(
+      "EnvironmentName" : (EnvironmentName)?,
+      "EnvironmentId" : (EnvironmentId)?,
+      "AttributeNames" : (InstancesHealthAttributes)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstancesHealthResult = NamedTuple(
+      "InstanceHealthList" : (InstanceHealthList)?,
+      "RefreshedAt" : (RefreshedAt)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePlatformVersionRequest = NamedTuple(
+      "PlatformArn" : (PlatformArn)?
+    )
+
+    alias DescribePlatformVersionResult = NamedTuple(
+      "PlatformDescription" : (PlatformDescription)?
+    )
+
+    alias Description = String
+
+    alias DisassociateEnvironmentOperationsRoleMessage = NamedTuple(
+      "EnvironmentName" : EnvironmentName
+    )
+
+    alias Ec2InstanceId = String
+
+    alias ElasticBeanstalkServiceException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias EndpointURL = String
+
+    alias EnvironmentArn = String
+
+    alias EnvironmentDescription = NamedTuple(
+      "EnvironmentName" : (EnvironmentName)?,
+      "EnvironmentId" : (EnvironmentId)?,
+      "ApplicationName" : (ApplicationName)?,
+      "VersionLabel" : (VersionLabel)?,
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "Description" : (Description)?,
+      "EndpointURL" : (EndpointURL)?,
+      "CNAME" : (DNSCname)?,
+      "DateCreated" : (CreationDate)?,
+      "DateUpdated" : (UpdateDate)?,
+      "Status" : (EnvironmentStatus)?,
+      "AbortableOperationInProgress" : (AbortableOperationInProgress)?,
+      "Health" : (EnvironmentHealth)?,
+      "HealthStatus" : (EnvironmentHealthStatus)?,
+      "Resources" : (EnvironmentResourcesDescription)?,
+      "Tier" : (EnvironmentTier)?,
+      "EnvironmentLinks" : (EnvironmentLinks)?,
+      "EnvironmentArn" : (EnvironmentArn)?,
+      "OperationsRole" : (OperationsRole)?
+    )
+
+    alias EnvironmentDescriptionsList = Array(EnvironmentDescription)
+
+    alias EnvironmentDescriptionsMessage = NamedTuple(
+      "Environments" : (EnvironmentDescriptionsList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias EnvironmentHealth = String
+
+    alias EnvironmentHealthAttribute = String
+
+    alias EnvironmentHealthAttributes = Array(EnvironmentHealthAttribute)
+
+    alias EnvironmentHealthStatus = String
+
+    alias EnvironmentId = String
+
+    alias EnvironmentIdList = Array(EnvironmentId)
+
+    alias EnvironmentInfoDescription = NamedTuple(
+      "InfoType" : (EnvironmentInfoType)?,
+      "Ec2InstanceId" : (Ec2InstanceId)?,
+      "SampleTimestamp" : (SampleTimestamp)?,
+      "Message" : (Message)?
+    )
+
+    alias EnvironmentInfoDescriptionList = Array(EnvironmentInfoDescription)
+
+    alias EnvironmentInfoType = String
+
+    alias EnvironmentLink = NamedTuple(
+      "LinkName" : (String)?,
+      "EnvironmentName" : (String)?
+    )
+
+    alias EnvironmentLinks = Array(EnvironmentLink)
+
+    alias EnvironmentName = String
+
+    alias EnvironmentNamesList = Array(EnvironmentName)
+
+    alias EnvironmentResourceDescription = NamedTuple(
+      "EnvironmentName" : (EnvironmentName)?,
+      "AutoScalingGroups" : (AutoScalingGroupList)?,
+      "Instances" : (InstanceList)?,
+      "LaunchConfigurations" : (LaunchConfigurationList)?,
+      "LaunchTemplates" : (LaunchTemplateList)?,
+      "LoadBalancers" : (LoadBalancerList)?,
+      "Triggers" : (TriggerList)?,
+      "Queues" : (QueueList)?
+    )
+
+    alias EnvironmentResourceDescriptionsMessage = NamedTuple(
+      "EnvironmentResources" : (EnvironmentResourceDescription)?
+    )
+
+    alias EnvironmentResourcesDescription = NamedTuple(
+      "LoadBalancer" : (LoadBalancerDescription)?
+    )
+
+    alias EnvironmentStatus = String
+
+    alias EnvironmentTier = NamedTuple(
+      "Name" : (String)?,
+      "Type" : (String)?,
+      "Version" : (String)?
+    )
+
+    alias EventDate = String | UInt64 | Time
+
+    alias EventDescription = NamedTuple(
+      "EventDate" : (EventDate)?,
+      "Message" : (EventMessage)?,
+      "ApplicationName" : (ApplicationName)?,
+      "VersionLabel" : (VersionLabel)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "RequestId" : (RequestId)?,
+      "Severity" : (EventSeverity)?
+    )
+
+    alias EventDescriptionList = Array(EventDescription)
+
+    alias EventDescriptionsMessage = NamedTuple(
+      "Events" : (EventDescriptionList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias EventMessage = String
+
+    alias EventSeverity = String
+
+    alias ExceptionMessage = String
+
+    alias FailureType = String
+
+    alias FileTypeExtension = String
+
+    alias ForceTerminate = Bool
+
+    alias GroupName = String
+
+    alias ImageId = String
+
+    alias IncludeDeleted = Bool
+
+    alias IncludeDeletedBackTo = String | UInt64 | Time
+
+    alias Instance = NamedTuple(
+      "Id" : (ResourceId)?
+    )
+
+    alias InstanceHealthList = Array(SingleInstanceHealth)
+
+    alias InstanceHealthSummary = NamedTuple(
+      "NoData" : (NullableInteger)?,
+      "Unknown" : (NullableInteger)?,
+      "Pending" : (NullableInteger)?,
+      "Ok" : (NullableInteger)?,
+      "Info" : (NullableInteger)?,
+      "Warning" : (NullableInteger)?,
+      "Degraded" : (NullableInteger)?,
+      "Severe" : (NullableInteger)?
+    )
+
+    alias InstanceId = String
+
+    alias InstanceList = Array(Instance)
+
+    alias InstancesHealthAttribute = String
+
+    alias InstancesHealthAttributes = Array(InstancesHealthAttribute)
+
+    alias InsufficientPrivilegesException = NamedTuple(
+      
+    )
+
+    alias Integer = Int32
+
+    alias InvalidRequestException = NamedTuple(
+      
+    )
+
+    alias Latency = NamedTuple(
+      "P999" : (NullableDouble)?,
+      "P99" : (NullableDouble)?,
+      "P95" : (NullableDouble)?,
+      "P90" : (NullableDouble)?,
+      "P85" : (NullableDouble)?,
+      "P75" : (NullableDouble)?,
+      "P50" : (NullableDouble)?,
+      "P10" : (NullableDouble)?
+    )
+
+    alias LaunchConfiguration = NamedTuple(
+      "Name" : (ResourceId)?
+    )
+
+    alias LaunchConfigurationList = Array(LaunchConfiguration)
+
+    alias LaunchTemplate = NamedTuple(
+      "Id" : (ResourceId)?
+    )
+
+    alias LaunchTemplateList = Array(LaunchTemplate)
+
+    alias LaunchedAt = String | UInt64 | Time
+
+    alias ListAvailableSolutionStacksResultMessage = NamedTuple(
+      "SolutionStacks" : (AvailableSolutionStackNamesList)?,
+      "SolutionStackDetails" : (AvailableSolutionStackDetailsList)?
+    )
+
+    alias ListPlatformBranchesRequest = NamedTuple(
+      "Filters" : (SearchFilters)?,
+      "MaxRecords" : (PlatformBranchMaxRecords)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPlatformBranchesResult = NamedTuple(
+      "PlatformBranchSummaryList" : (PlatformBranchSummaryList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPlatformVersionsRequest = NamedTuple(
+      "Filters" : (PlatformFilters)?,
+      "MaxRecords" : (PlatformMaxRecords)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPlatformVersionsResult = NamedTuple(
+      "PlatformSummaryList" : (PlatformSummaryList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceMessage = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias Listener = NamedTuple(
+      "Protocol" : (String)?,
+      "Port" : (Integer)?
+    )
+
+    alias LoadAverage = Array(LoadAverageValue)
+
+    alias LoadAverageValue = Float64
+
+    alias LoadBalancer = NamedTuple(
+      "Name" : (ResourceId)?
+    )
+
+    alias LoadBalancerDescription = NamedTuple(
+      "LoadBalancerName" : (String)?,
+      "Domain" : (String)?,
+      "Listeners" : (LoadBalancerListenersDescription)?
+    )
+
+    alias LoadBalancerList = Array(LoadBalancer)
+
+    alias LoadBalancerListenersDescription = Array(Listener)
+
+    alias Maintainer = String
+
+    alias ManagedAction = NamedTuple(
+      "ActionId" : (String)?,
+      "ActionDescription" : (String)?,
+      "ActionType" : (ActionType)?,
+      "Status" : (ActionStatus)?,
+      "WindowStartTime" : (Timestamp)?
+    )
+
+    alias ManagedActionHistoryItem = NamedTuple(
+      "ActionId" : (String)?,
+      "ActionType" : (ActionType)?,
+      "ActionDescription" : (String)?,
+      "FailureType" : (FailureType)?,
+      "Status" : (ActionHistoryStatus)?,
+      "FailureDescription" : (String)?,
+      "ExecutedTime" : (Timestamp)?,
+      "FinishedTime" : (Timestamp)?
+    )
+
+    alias ManagedActionHistoryItems = Array(ManagedActionHistoryItem)
+
+    alias ManagedActionHistoryMaxItems = Int32
+
+    alias ManagedActionInvalidStateException = NamedTuple(
+      
+    )
+
+    alias ManagedActions = Array(ManagedAction)
+
+    alias MaxAgeRule = NamedTuple(
+      "Enabled" : BoxedBoolean,
+      "MaxAgeInDays" : (BoxedInt)?,
+      "DeleteSourceFromS3" : (BoxedBoolean)?
+    )
+
+    alias MaxCountRule = NamedTuple(
+      "Enabled" : BoxedBoolean,
+      "MaxCount" : (BoxedInt)?,
+      "DeleteSourceFromS3" : (BoxedBoolean)?
+    )
+
+    alias MaxRecords = Int32
+
+    alias Message = String
+
+    alias NextToken = String
+
+    alias NonEmptyString = String
+
+    alias NullableDouble = Float64
+
+    alias NullableInteger = Int32
+
+    alias NullableLong = Int64
+
+    alias OperatingSystemName = String
+
+    alias OperatingSystemVersion = String
+
+    alias OperationInProgressException = NamedTuple(
+      
+    )
+
+    alias OperationsRole = String
+
+    alias OptionNamespace = String
+
+    alias OptionRestrictionMaxLength = Int32
+
+    alias OptionRestrictionMaxValue = Int32
+
+    alias OptionRestrictionMinValue = Int32
+
+    alias OptionRestrictionRegex = NamedTuple(
+      "Pattern" : (RegexPattern)?,
+      "Label" : (RegexLabel)?
+    )
+
+    alias OptionSpecification = NamedTuple(
+      "ResourceName" : (ResourceName)?,
+      "Namespace" : (OptionNamespace)?,
+      "OptionName" : (ConfigurationOptionName)?
+    )
+
+    alias OptionsSpecifierList = Array(OptionSpecification)
+
+    alias PlatformArn = String
+
+    alias PlatformBranchLifecycleState = String
+
+    alias PlatformBranchMaxRecords = Int32
+
+    alias PlatformBranchSummary = NamedTuple(
+      "PlatformName" : (PlatformName)?,
+      "BranchName" : (BranchName)?,
+      "LifecycleState" : (PlatformBranchLifecycleState)?,
+      "BranchOrder" : (BranchOrder)?,
+      "SupportedTierList" : (SupportedTierList)?
+    )
+
+    alias PlatformBranchSummaryList = Array(PlatformBranchSummary)
+
+    alias PlatformCategory = String
+
+    alias PlatformDescription = NamedTuple(
+      "PlatformArn" : (PlatformArn)?,
+      "PlatformOwner" : (PlatformOwner)?,
+      "PlatformName" : (PlatformName)?,
+      "PlatformVersion" : (PlatformVersion)?,
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformStatus" : (PlatformStatus)?,
+      "DateCreated" : (CreationDate)?,
+      "DateUpdated" : (UpdateDate)?,
+      "PlatformCategory" : (PlatformCategory)?,
+      "Description" : (Description)?,
+      "Maintainer" : (Maintainer)?,
+      "OperatingSystemName" : (OperatingSystemName)?,
+      "OperatingSystemVersion" : (OperatingSystemVersion)?,
+      "ProgrammingLanguages" : (PlatformProgrammingLanguages)?,
+      "Frameworks" : (PlatformFrameworks)?,
+      "CustomAmiList" : (CustomAmiList)?,
+      "SupportedTierList" : (SupportedTierList)?,
+      "SupportedAddonList" : (SupportedAddonList)?,
+      "PlatformLifecycleState" : (PlatformLifecycleState)?,
+      "PlatformBranchName" : (BranchName)?,
+      "PlatformBranchLifecycleState" : (PlatformBranchLifecycleState)?
+    )
+
+    alias PlatformFilter = NamedTuple(
+      "Type" : (PlatformFilterType)?,
+      "Operator" : (PlatformFilterOperator)?,
+      "Values" : (PlatformFilterValueList)?
+    )
+
+    alias PlatformFilterOperator = String
+
+    alias PlatformFilterType = String
+
+    alias PlatformFilterValue = String
+
+    alias PlatformFilterValueList = Array(PlatformFilterValue)
+
+    alias PlatformFilters = Array(PlatformFilter)
+
+    alias PlatformFramework = NamedTuple(
+      "Name" : (String)?,
+      "Version" : (String)?
+    )
+
+    alias PlatformFrameworks = Array(PlatformFramework)
+
+    alias PlatformLifecycleState = String
+
+    alias PlatformMaxRecords = Int32
+
+    alias PlatformName = String
+
+    alias PlatformOwner = String
+
+    alias PlatformProgrammingLanguage = NamedTuple(
+      "Name" : (String)?,
+      "Version" : (String)?
+    )
+
+    alias PlatformProgrammingLanguages = Array(PlatformProgrammingLanguage)
+
+    alias PlatformStatus = String
+
+    alias PlatformSummary = NamedTuple(
+      "PlatformArn" : (PlatformArn)?,
+      "PlatformOwner" : (PlatformOwner)?,
+      "PlatformStatus" : (PlatformStatus)?,
+      "PlatformCategory" : (PlatformCategory)?,
+      "OperatingSystemName" : (OperatingSystemName)?,
+      "OperatingSystemVersion" : (OperatingSystemVersion)?,
+      "SupportedTierList" : (SupportedTierList)?,
+      "SupportedAddonList" : (SupportedAddonList)?,
+      "PlatformLifecycleState" : (PlatformLifecycleState)?,
+      "PlatformVersion" : (PlatformVersion)?,
+      "PlatformBranchName" : (BranchName)?,
+      "PlatformBranchLifecycleState" : (PlatformBranchLifecycleState)?
+    )
+
+    alias PlatformSummaryList = Array(PlatformSummary)
+
+    alias PlatformVersion = String
+
+    alias PlatformVersionStillReferencedException = NamedTuple(
+      
+    )
+
+    alias Queue = NamedTuple(
+      "Name" : (String)?,
+      "URL" : (String)?
+    )
+
+    alias QueueList = Array(Queue)
+
+    alias RebuildEnvironmentMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?
+    )
+
+    alias RefreshedAt = String | UInt64 | Time
+
+    alias RegexLabel = String
+
+    alias RegexPattern = String
+
+    alias RequestCount = Int32
+
+    alias RequestEnvironmentInfoMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "InfoType" : EnvironmentInfoType
+    )
+
+    alias RequestId = String
+
+    alias ResourceArn = String
+
+    alias ResourceId = String
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias ResourceQuota = NamedTuple(
+      "Maximum" : (BoxedInt)?
+    )
+
+    alias ResourceQuotas = NamedTuple(
+      "ApplicationQuota" : (ResourceQuota)?,
+      "ApplicationVersionQuota" : (ResourceQuota)?,
+      "EnvironmentQuota" : (ResourceQuota)?,
+      "ConfigurationTemplateQuota" : (ResourceQuota)?,
+      "CustomPlatformQuota" : (ResourceQuota)?
+    )
+
+    alias ResourceTagsDescriptionMessage = NamedTuple(
+      "ResourceArn" : (ResourceArn)?,
+      "ResourceTags" : (TagList)?
+    )
+
+    alias ResourceTypeNotSupportedException = NamedTuple(
+      
+    )
+
+    alias RestartAppServerMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?
+    )
+
+    alias RetrieveEnvironmentInfoMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "InfoType" : EnvironmentInfoType
+    )
+
+    alias RetrieveEnvironmentInfoResultMessage = NamedTuple(
+      "EnvironmentInfo" : (EnvironmentInfoDescriptionList)?
+    )
+
+    alias S3Bucket = String
+
+    alias S3Key = String
+
+    alias S3Location = NamedTuple(
+      "S3Bucket" : (S3Bucket)?,
+      "S3Key" : (S3Key)?
+    )
+
+    alias S3LocationNotInServiceRegionException = NamedTuple(
+      
+    )
+
+    alias S3SubscriptionRequiredException = NamedTuple(
+      
+    )
+
+    alias SampleTimestamp = String | UInt64 | Time
+
+    alias SearchFilter = NamedTuple(
+      "Attribute" : (SearchFilterAttribute)?,
+      "Operator" : (SearchFilterOperator)?,
+      "Values" : (SearchFilterValues)?
+    )
+
+    alias SearchFilterAttribute = String
+
+    alias SearchFilterOperator = String
+
+    alias SearchFilterValue = String
+
+    alias SearchFilterValues = Array(SearchFilterValue)
+
+    alias SearchFilters = Array(SearchFilter)
+
+    alias SingleInstanceHealth = NamedTuple(
+      "InstanceId" : (InstanceId)?,
+      "HealthStatus" : (String)?,
+      "Color" : (String)?,
+      "Causes" : (Causes)?,
+      "LaunchedAt" : (LaunchedAt)?,
+      "ApplicationMetrics" : (ApplicationMetrics)?,
+      "System" : (SystemStatus)?,
+      "Deployment" : (Deployment)?,
+      "AvailabilityZone" : (String)?,
+      "InstanceType" : (String)?
+    )
+
+    alias SolutionStackDescription = NamedTuple(
+      "SolutionStackName" : (SolutionStackName)?,
+      "PermittedFileTypes" : (SolutionStackFileTypeList)?
+    )
+
+    alias SolutionStackFileTypeList = Array(FileTypeExtension)
+
+    alias SolutionStackName = String
+
+    alias SourceBuildInformation = NamedTuple(
+      "SourceType" : SourceType,
+      "SourceRepository" : SourceRepository,
+      "SourceLocation" : SourceLocation
+    )
+
+    alias SourceBundleDeletionException = NamedTuple(
+      
+    )
+
+    alias SourceConfiguration = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "TemplateName" : (ConfigurationTemplateName)?
+    )
+
+    alias SourceLocation = String
+
+    alias SourceRepository = String
+
+    alias SourceType = String
+
+    alias StatusCodes = NamedTuple(
+      "Status2xx" : (NullableInteger)?,
+      "Status3xx" : (NullableInteger)?,
+      "Status4xx" : (NullableInteger)?,
+      "Status5xx" : (NullableInteger)?
+    )
+
+    alias String = String
+
+    alias SupportedAddon = String
+
+    alias SupportedAddonList = Array(SupportedAddon)
+
+    alias SupportedTier = String
+
+    alias SupportedTierList = Array(SupportedTier)
+
+    alias SwapEnvironmentCNAMEsMessage = NamedTuple(
+      "SourceEnvironmentId" : (EnvironmentId)?,
+      "SourceEnvironmentName" : (EnvironmentName)?,
+      "DestinationEnvironmentId" : (EnvironmentId)?,
+      "DestinationEnvironmentName" : (EnvironmentName)?
+    )
+
+    alias SystemStatus = NamedTuple(
+      "CPUUtilization" : (CPUUtilization)?,
+      "LoadAverage" : (LoadAverage)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TerminateEnvForce = Bool
+
+    alias TerminateEnvironmentMessage = NamedTuple(
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "TerminateResources" : (TerminateEnvironmentResources)?,
+      "ForceTerminate" : (ForceTerminate)?
+    )
+
+    alias TerminateEnvironmentResources = Bool
+
+    alias TimeFilterEnd = String | UInt64 | Time
+
+    alias TimeFilterStart = String | UInt64 | Time
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias TooManyApplicationVersionsException = NamedTuple(
+      
+    )
+
+    alias TooManyApplicationsException = NamedTuple(
+      
+    )
+
+    alias TooManyBucketsException = NamedTuple(
+      
+    )
+
+    alias TooManyConfigurationTemplatesException = NamedTuple(
+      
+    )
+
+    alias TooManyEnvironmentsException = NamedTuple(
+      
+    )
+
+    alias TooManyPlatformsException = NamedTuple(
+      
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      
+    )
+
+    alias Trigger = NamedTuple(
+      "Name" : (ResourceId)?
+    )
+
+    alias TriggerList = Array(Trigger)
+
+    alias UpdateApplicationMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "Description" : (Description)?
+    )
+
+    alias UpdateApplicationResourceLifecycleMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "ResourceLifecycleConfig" : ApplicationResourceLifecycleConfig
+    )
+
+    alias UpdateApplicationVersionMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "VersionLabel" : VersionLabel,
+      "Description" : (Description)?
+    )
+
+    alias UpdateConfigurationTemplateMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "TemplateName" : ConfigurationTemplateName,
+      "Description" : (Description)?,
+      "OptionSettings" : (ConfigurationOptionSettingsList)?,
+      "OptionsToRemove" : (OptionsSpecifierList)?
+    )
+
+    alias UpdateDate = String | UInt64 | Time
+
+    alias UpdateEnvironmentMessage = NamedTuple(
+      "ApplicationName" : (ApplicationName)?,
+      "EnvironmentId" : (EnvironmentId)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "GroupName" : (GroupName)?,
+      "Description" : (Description)?,
+      "Tier" : (EnvironmentTier)?,
+      "VersionLabel" : (VersionLabel)?,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "SolutionStackName" : (SolutionStackName)?,
+      "PlatformArn" : (PlatformArn)?,
+      "OptionSettings" : (ConfigurationOptionSettingsList)?,
+      "OptionsToRemove" : (OptionsSpecifierList)?
+    )
+
+    alias UpdateTagsForResourceMessage = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagsToAdd" : (TagList)?,
+      "TagsToRemove" : (TagKeyList)?
+    )
+
+    alias UserDefinedOption = Bool
+
+    alias ValidateConfigurationSettingsMessage = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "TemplateName" : (ConfigurationTemplateName)?,
+      "EnvironmentName" : (EnvironmentName)?,
+      "OptionSettings" : ConfigurationOptionSettingsList
+    )
+
+    alias ValidationMessage = NamedTuple(
+      "Message" : (ValidationMessageString)?,
+      "Severity" : (ValidationSeverity)?,
+      "Namespace" : (OptionNamespace)?,
+      "OptionName" : (ConfigurationOptionName)?
+    )
+
+    alias ValidationMessageString = String
+
+    alias ValidationMessagesList = Array(ValidationMessage)
+
+    alias ValidationSeverity = String
+
+    alias VersionLabel = String
+
+    alias VersionLabels = Array(VersionLabel)
+
+    alias VersionLabelsList = Array(VersionLabel)
+
+    alias VirtualizationType = String
   end
 end

@@ -350,8 +350,8 @@ module Aws::GroundStation
     #
     # @overload cancel_contact(**params)
     # @param [Hash] params ({})
-    def cancel_contact(params = {}, **options)
-      req = build_request(:cancel_contact, params)
+    def cancel_contact(, **options)
+      req = build_request(:cancel_contact, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::GroundStation
     #
     # @overload create_config(**params)
     # @param [Hash] params ({})
-    def create_config(params = {}, **options)
-      req = build_request(:create_config, params)
+    def create_config(, **options)
+      req = build_request(:create_config, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::GroundStation
     #
     # @overload create_dataflow_endpoint_group(**params)
     # @param [Hash] params ({})
-    def create_dataflow_endpoint_group(params = {}, **options)
-      req = build_request(:create_dataflow_endpoint_group, params)
+    def create_dataflow_endpoint_group(, **options)
+      req = build_request(:create_dataflow_endpoint_group, )
       req.send_request(options)
     end
 
@@ -575,8 +575,8 @@ module Aws::GroundStation
     #
     # @overload create_mission_profile(**params)
     # @param [Hash] params ({})
-    def create_mission_profile(params = {}, **options)
-      req = build_request(:create_mission_profile, params)
+    def create_mission_profile(, **options)
+      req = build_request(:create_mission_profile, )
       req.send_request(options)
     end
 
@@ -611,8 +611,8 @@ module Aws::GroundStation
     #
     # @overload delete_config(**params)
     # @param [Hash] params ({})
-    def delete_config(params = {}, **options)
-      req = build_request(:delete_config, params)
+    def delete_config(, **options)
+      req = build_request(:delete_config, )
       req.send_request(options)
     end
 
@@ -639,8 +639,8 @@ module Aws::GroundStation
     #
     # @overload delete_dataflow_endpoint_group(**params)
     # @param [Hash] params ({})
-    def delete_dataflow_endpoint_group(params = {}, **options)
-      req = build_request(:delete_dataflow_endpoint_group, params)
+    def delete_dataflow_endpoint_group(, **options)
+      req = build_request(:delete_dataflow_endpoint_group, )
       req.send_request(options)
     end
 
@@ -667,8 +667,8 @@ module Aws::GroundStation
     #
     # @overload delete_mission_profile(**params)
     # @param [Hash] params ({})
-    def delete_mission_profile(params = {}, **options)
-      req = build_request(:delete_mission_profile, params)
+    def delete_mission_profile(, **options)
+      req = build_request(:delete_mission_profile, )
       req.send_request(options)
     end
 
@@ -752,8 +752,8 @@ module Aws::GroundStation
     #
     # @overload describe_contact(**params)
     # @param [Hash] params ({})
-    def describe_contact(params = {}, **options)
-      req = build_request(:describe_contact, params)
+    def describe_contact(, **options)
+      req = build_request(:describe_contact, )
       req.send_request(options)
     end
 
@@ -819,8 +819,8 @@ module Aws::GroundStation
     #
     # @overload get_config(**params)
     # @param [Hash] params ({})
-    def get_config(params = {}, **options)
-      req = build_request(:get_config, params)
+    def get_config(, **options)
+      req = build_request(:get_config, )
       req.send_request(options)
     end
 
@@ -864,8 +864,8 @@ module Aws::GroundStation
     #
     # @overload get_dataflow_endpoint_group(**params)
     # @param [Hash] params ({})
-    def get_dataflow_endpoint_group(params = {}, **options)
-      req = build_request(:get_dataflow_endpoint_group, params)
+    def get_dataflow_endpoint_group(, **options)
+      req = build_request(:get_dataflow_endpoint_group, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::GroundStation
     #
     # @overload get_minute_usage(**params)
     # @param [Hash] params ({})
-    def get_minute_usage(params = {}, **options)
-      req = build_request(:get_minute_usage, params)
+    def get_minute_usage(, **options)
+      req = build_request(:get_minute_usage, )
       req.send_request(options)
     end
 
@@ -953,8 +953,8 @@ module Aws::GroundStation
     #
     # @overload get_mission_profile(**params)
     # @param [Hash] params ({})
-    def get_mission_profile(params = {}, **options)
-      req = build_request(:get_mission_profile, params)
+    def get_mission_profile(, **options)
+      req = build_request(:get_mission_profile, )
       req.send_request(options)
     end
 
@@ -988,8 +988,8 @@ module Aws::GroundStation
     #
     # @overload get_satellite(**params)
     # @param [Hash] params ({})
-    def get_satellite(params = {}, **options)
-      req = build_request(:get_satellite, params)
+    def get_satellite(, **options)
+      req = build_request(:get_satellite, )
       req.send_request(options)
     end
 
@@ -1029,8 +1029,8 @@ module Aws::GroundStation
     #
     # @overload list_configs(**params)
     # @param [Hash] params ({})
-    def list_configs(params = {}, **options)
-      req = build_request(:list_configs, params)
+    def list_configs(, **options)
+      req = build_request(:list_configs, )
       req.send_request(options)
     end
 
@@ -1108,8 +1108,8 @@ module Aws::GroundStation
     #
     # @overload list_contacts(**params)
     # @param [Hash] params ({})
-    def list_contacts(params = {}, **options)
-      req = build_request(:list_contacts, params)
+    def list_contacts(, **options)
+      req = build_request(:list_contacts, )
       req.send_request(options)
     end
 
@@ -1148,8 +1148,8 @@ module Aws::GroundStation
     #
     # @overload list_dataflow_endpoint_groups(**params)
     # @param [Hash] params ({})
-    def list_dataflow_endpoint_groups(params = {}, **options)
-      req = build_request(:list_dataflow_endpoint_groups, params)
+    def list_dataflow_endpoint_groups(, **options)
+      req = build_request(:list_dataflow_endpoint_groups, )
       req.send_request(options)
     end
 
@@ -1192,8 +1192,8 @@ module Aws::GroundStation
     #
     # @overload list_ground_stations(**params)
     # @param [Hash] params ({})
-    def list_ground_stations(params = {}, **options)
-      req = build_request(:list_ground_stations, params)
+    def list_ground_stations(, **options)
+      req = build_request(:list_ground_stations, )
       req.send_request(options)
     end
 
@@ -1233,8 +1233,8 @@ module Aws::GroundStation
     #
     # @overload list_mission_profiles(**params)
     # @param [Hash] params ({})
-    def list_mission_profiles(params = {}, **options)
-      req = build_request(:list_mission_profiles, params)
+    def list_mission_profiles(, **options)
+      req = build_request(:list_mission_profiles, )
       req.send_request(options)
     end
 
@@ -1275,8 +1275,8 @@ module Aws::GroundStation
     #
     # @overload list_satellites(**params)
     # @param [Hash] params ({})
-    def list_satellites(params = {}, **options)
-      req = build_request(:list_satellites, params)
+    def list_satellites(, **options)
+      req = build_request(:list_satellites, )
       req.send_request(options)
     end
 
@@ -1304,8 +1304,8 @@ module Aws::GroundStation
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1354,8 +1354,8 @@ module Aws::GroundStation
     #
     # @overload reserve_contact(**params)
     # @param [Hash] params ({})
-    def reserve_contact(params = {}, **options)
-      req = build_request(:reserve_contact, params)
+    def reserve_contact(, **options)
+      req = build_request(:reserve_contact, )
       req.send_request(options)
     end
 
@@ -1382,8 +1382,8 @@ module Aws::GroundStation
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1408,8 +1408,8 @@ module Aws::GroundStation
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1513,8 +1513,8 @@ module Aws::GroundStation
     #
     # @overload update_config(**params)
     # @param [Hash] params ({})
-    def update_config(params = {}, **options)
-      req = build_request(:update_config, params)
+    def update_config(, **options)
+      req = build_request(:update_config, )
       req.send_request(options)
     end
 
@@ -1575,8 +1575,8 @@ module Aws::GroundStation
     #
     # @overload update_mission_profile(**params)
     # @param [Hash] params ({})
-    def update_mission_profile(params = {}, **options)
-      req = build_request(:update_mission_profile, params)
+    def update_mission_profile(, **options)
+      req = build_request(:update_mission_profile, )
       req.send_request(options)
     end
 

@@ -427,5 +427,139 @@ module Aws::TimestreamQuery
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ServiceErrorMessage)?
+    )
+
+    alias CancelQueryRequest = NamedTuple(
+      "QueryId" : QueryId
+    )
+
+    alias CancelQueryResponse = NamedTuple(
+      "CancellationMessage" : (String)?
+    )
+
+    alias ClientRequestToken = String
+
+    alias ColumnInfo = NamedTuple(
+      "Name" : (String)?,
+      "Type" : Type
+    )
+
+    alias ColumnInfoList = Array(ColumnInfo)
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Datum = NamedTuple(
+      "ScalarValue" : (ScalarValue)?,
+      "TimeSeriesValue" : (TimeSeriesDataPointList)?,
+      "ArrayValue" : (DatumList)?,
+      "RowValue" : (Row)?,
+      "NullValue" : (NullableBoolean)?
+    )
+
+    alias DatumList = Array(Datum)
+
+    alias DescribeEndpointsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeEndpointsResponse = NamedTuple(
+      "Endpoints" : Endpoints
+    )
+
+    alias Double = Float64
+
+    alias Endpoint = NamedTuple(
+      "Address" : String,
+      "CachePeriodInMinutes" : Long
+    )
+
+    alias Endpoints = Array(Endpoint)
+
+    alias ErrorMessage = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidEndpointException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Long = Int64
+
+    alias MaxQueryResults = Int32
+
+    alias NullableBoolean = Bool
+
+    alias QueryExecutionException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias QueryId = String
+
+    alias QueryRequest = NamedTuple(
+      "QueryString" : QueryString,
+      "ClientToken" : (ClientRequestToken)?,
+      "NextToken" : (String)?,
+      "MaxRows" : (MaxQueryResults)?
+    )
+
+    alias QueryResponse = NamedTuple(
+      "QueryId" : QueryId,
+      "NextToken" : (String)?,
+      "Rows" : RowList,
+      "ColumnInfo" : ColumnInfoList,
+      "QueryStatus" : (QueryStatus)?
+    )
+
+    alias QueryStatus = NamedTuple(
+      "ProgressPercentage" : (Double)?,
+      "CumulativeBytesScanned" : (Long)?,
+      "CumulativeBytesMetered" : (Long)?
+    )
+
+    alias QueryString = String
+
+    alias Row = NamedTuple(
+      "Data" : DatumList
+    )
+
+    alias RowList = Array(Row)
+
+    alias ScalarType = String
+
+    alias ScalarValue = String
+
+    alias ServiceErrorMessage = String
+
+    alias String = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias TimeSeriesDataPoint = NamedTuple(
+      "Time" : Timestamp,
+      "Value" : Datum
+    )
+
+    alias TimeSeriesDataPointList = Array(TimeSeriesDataPoint)
+
+    alias Timestamp = String
+
+    alias Type = NamedTuple(
+      "ScalarType" : (ScalarType)?,
+      "ArrayColumnInfo" : (ColumnInfo)?,
+      "TimeSeriesMeasureValueColumnInfo" : (ColumnInfo)?,
+      "RowColumnInfo" : (ColumnInfoList)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

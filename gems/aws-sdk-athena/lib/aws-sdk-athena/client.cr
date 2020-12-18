@@ -380,8 +380,8 @@ module Aws::Athena
     #
     # @overload batch_get_named_query(**params)
     # @param [Hash] params ({})
-    def batch_get_named_query(params = {}, **options)
-      req = build_request(:batch_get_named_query, params)
+    def batch_get_named_query(, **options)
+      req = build_request(:batch_get_named_query, )
       req.send_request(options)
     end
 
@@ -439,8 +439,8 @@ module Aws::Athena
     #
     # @overload batch_get_query_execution(**params)
     # @param [Hash] params ({})
-    def batch_get_query_execution(params = {}, **options)
-      req = build_request(:batch_get_query_execution, params)
+    def batch_get_query_execution(, **options)
+      req = build_request(:batch_get_query_execution, )
       req.send_request(options)
     end
 
@@ -516,8 +516,8 @@ module Aws::Athena
     #
     # @overload create_data_catalog(**params)
     # @param [Hash] params ({})
-    def create_data_catalog(params = {}, **options)
-      req = build_request(:create_data_catalog, params)
+    def create_data_catalog(, **options)
+      req = build_request(:create_data_catalog, )
       req.send_request(options)
     end
 
@@ -584,8 +584,8 @@ module Aws::Athena
     #
     # @overload create_named_query(**params)
     # @param [Hash] params ({})
-    def create_named_query(params = {}, **options)
-      req = build_request(:create_named_query, params)
+    def create_named_query(, **options)
+      req = build_request(:create_named_query, )
       req.send_request(options)
     end
 
@@ -644,8 +644,8 @@ module Aws::Athena
     #
     # @overload create_work_group(**params)
     # @param [Hash] params ({})
-    def create_work_group(params = {}, **options)
-      req = build_request(:create_work_group, params)
+    def create_work_group(, **options)
+      req = build_request(:create_work_group, )
       req.send_request(options)
     end
 
@@ -666,8 +666,8 @@ module Aws::Athena
     #
     # @overload delete_data_catalog(**params)
     # @param [Hash] params ({})
-    def delete_data_catalog(params = {}, **options)
-      req = build_request(:delete_data_catalog, params)
+    def delete_data_catalog(, **options)
+      req = build_request(:delete_data_catalog, )
       req.send_request(options)
     end
 
@@ -699,8 +699,8 @@ module Aws::Athena
     #
     # @overload delete_named_query(**params)
     # @param [Hash] params ({})
-    def delete_named_query(params = {}, **options)
-      req = build_request(:delete_named_query, params)
+    def delete_named_query(, **options)
+      req = build_request(:delete_named_query, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::Athena
     #
     # @overload delete_work_group(**params)
     # @param [Hash] params ({})
-    def delete_work_group(params = {}, **options)
-      req = build_request(:delete_work_group, params)
+    def delete_work_group(, **options)
+      req = build_request(:delete_work_group, )
       req.send_request(options)
     end
 
@@ -759,8 +759,8 @@ module Aws::Athena
     #
     # @overload get_data_catalog(**params)
     # @param [Hash] params ({})
-    def get_data_catalog(params = {}, **options)
-      req = build_request(:get_data_catalog, params)
+    def get_data_catalog(, **options)
+      req = build_request(:get_data_catalog, )
       req.send_request(options)
     end
 
@@ -794,8 +794,8 @@ module Aws::Athena
     #
     # @overload get_database(**params)
     # @param [Hash] params ({})
-    def get_database(params = {}, **options)
-      req = build_request(:get_database, params)
+    def get_database(, **options)
+      req = build_request(:get_database, )
       req.send_request(options)
     end
 
@@ -828,8 +828,8 @@ module Aws::Athena
     #
     # @overload get_named_query(**params)
     # @param [Hash] params ({})
-    def get_named_query(params = {}, **options)
-      req = build_request(:get_named_query, params)
+    def get_named_query(, **options)
+      req = build_request(:get_named_query, )
       req.send_request(options)
     end
 
@@ -878,8 +878,8 @@ module Aws::Athena
     #
     # @overload get_query_execution(**params)
     # @param [Hash] params ({})
-    def get_query_execution(params = {}, **options)
-      req = build_request(:get_query_execution, params)
+    def get_query_execution(, **options)
+      req = build_request(:get_query_execution, )
       req.send_request(options)
     end
 
@@ -954,8 +954,8 @@ module Aws::Athena
     #
     # @overload get_query_results(**params)
     # @param [Hash] params ({})
-    def get_query_results(params = {}, **options)
-      req = build_request(:get_query_results, params)
+    def get_query_results(, **options)
+      req = build_request(:get_query_results, )
       req.send_request(options)
     end
 
@@ -1004,8 +1004,8 @@ module Aws::Athena
     #
     # @overload get_table_metadata(**params)
     # @param [Hash] params ({})
-    def get_table_metadata(params = {}, **options)
-      req = build_request(:get_table_metadata, params)
+    def get_table_metadata(, **options)
+      req = build_request(:get_table_metadata, )
       req.send_request(options)
     end
 
@@ -1042,8 +1042,8 @@ module Aws::Athena
     #
     # @overload get_work_group(**params)
     # @param [Hash] params ({})
-    def get_work_group(params = {}, **options)
-      req = build_request(:get_work_group, params)
+    def get_work_group(, **options)
+      req = build_request(:get_work_group, )
       req.send_request(options)
     end
 
@@ -1083,8 +1083,8 @@ module Aws::Athena
     #
     # @overload list_data_catalogs(**params)
     # @param [Hash] params ({})
-    def list_data_catalogs(params = {}, **options)
-      req = build_request(:list_data_catalogs, params)
+    def list_data_catalogs(, **options)
+      req = build_request(:list_data_catalogs, )
       req.send_request(options)
     end
 
@@ -1130,8 +1130,8 @@ module Aws::Athena
     #
     # @overload list_databases(**params)
     # @param [Hash] params ({})
-    def list_databases(params = {}, **options)
-      req = build_request(:list_databases, params)
+    def list_databases(, **options)
+      req = build_request(:list_databases, )
       req.send_request(options)
     end
 
@@ -1186,8 +1186,8 @@ module Aws::Athena
     #
     # @overload list_named_queries(**params)
     # @param [Hash] params ({})
-    def list_named_queries(params = {}, **options)
-      req = build_request(:list_named_queries, params)
+    def list_named_queries(, **options)
+      req = build_request(:list_named_queries, )
       req.send_request(options)
     end
 
@@ -1242,8 +1242,8 @@ module Aws::Athena
     #
     # @overload list_query_executions(**params)
     # @param [Hash] params ({})
-    def list_query_executions(params = {}, **options)
-      req = build_request(:list_query_executions, params)
+    def list_query_executions(, **options)
+      req = build_request(:list_query_executions, )
       req.send_request(options)
     end
 
@@ -1310,8 +1310,8 @@ module Aws::Athena
     #
     # @overload list_table_metadata(**params)
     # @param [Hash] params ({})
-    def list_table_metadata(params = {}, **options)
-      req = build_request(:list_table_metadata, params)
+    def list_table_metadata(, **options)
+      req = build_request(:list_table_metadata, )
       req.send_request(options)
     end
 
@@ -1356,8 +1356,8 @@ module Aws::Athena
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1399,8 +1399,8 @@ module Aws::Athena
     #
     # @overload list_work_groups(**params)
     # @param [Hash] params ({})
-    def list_work_groups(params = {}, **options)
-      req = build_request(:list_work_groups, params)
+    def list_work_groups(, **options)
+      req = build_request(:list_work_groups, )
       req.send_request(options)
     end
 
@@ -1478,8 +1478,8 @@ module Aws::Athena
     #
     # @overload start_query_execution(**params)
     # @param [Hash] params ({})
-    def start_query_execution(params = {}, **options)
-      req = build_request(:start_query_execution, params)
+    def start_query_execution(, **options)
+      req = build_request(:start_query_execution, )
       req.send_request(options)
     end
 
@@ -1511,8 +1511,8 @@ module Aws::Athena
     #
     # @overload stop_query_execution(**params)
     # @param [Hash] params ({})
-    def stop_query_execution(params = {}, **options)
-      req = build_request(:stop_query_execution, params)
+    def stop_query_execution(, **options)
+      req = build_request(:stop_query_execution, )
       req.send_request(options)
     end
 
@@ -1560,8 +1560,8 @@ module Aws::Athena
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1587,8 +1587,8 @@ module Aws::Athena
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1653,8 +1653,8 @@ module Aws::Athena
     #
     # @overload update_data_catalog(**params)
     # @param [Hash] params ({})
-    def update_data_catalog(params = {}, **options)
-      req = build_request(:update_data_catalog, params)
+    def update_data_catalog(, **options)
+      req = build_request(:update_data_catalog, )
       req.send_request(options)
     end
 
@@ -1704,8 +1704,8 @@ module Aws::Athena
     #
     # @overload update_work_group(**params)
     # @param [Hash] params ({})
-    def update_work_group(params = {}, **options)
-      req = build_request(:update_work_group, params)
+    def update_work_group(, **options)
+      req = build_request(:update_work_group, )
       req.send_request(options)
     end
 

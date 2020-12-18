@@ -604,5 +604,151 @@ module Aws::Macie
       include Aws::Structure
     end
 
+    alias AWSAccountId = String
+
+    alias AccessDeniedException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "resourceType" : (ResourceType)?
+    )
+
+    alias AssociateMemberAccountRequest = NamedTuple(
+      "memberAccountId" : AWSAccountId
+    )
+
+    alias AssociateS3ResourcesRequest = NamedTuple(
+      "memberAccountId" : (AWSAccountId)?,
+      "s3Resources" : S3ResourcesClassification
+    )
+
+    alias AssociateS3ResourcesResult = NamedTuple(
+      "failedS3Resources" : (FailedS3Resources)?
+    )
+
+    alias BucketName = String
+
+    alias ClassificationType = NamedTuple(
+      "oneTime" : S3OneTimeClassificationType,
+      "continuous" : S3ContinuousClassificationType
+    )
+
+    alias ClassificationTypeUpdate = NamedTuple(
+      "oneTime" : (S3OneTimeClassificationType)?,
+      "continuous" : (S3ContinuousClassificationType)?
+    )
+
+    alias DisassociateMemberAccountRequest = NamedTuple(
+      "memberAccountId" : AWSAccountId
+    )
+
+    alias DisassociateS3ResourcesRequest = NamedTuple(
+      "memberAccountId" : (AWSAccountId)?,
+      "associatedS3Resources" : S3Resources
+    )
+
+    alias DisassociateS3ResourcesResult = NamedTuple(
+      "failedS3Resources" : (FailedS3Resources)?
+    )
+
+    alias ErrorCode = String
+
+    alias ExceptionMessage = String
+
+    alias FailedS3Resource = NamedTuple(
+      "failedItem" : (S3Resource)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ExceptionMessage)?
+    )
+
+    alias FailedS3Resources = Array(FailedS3Resource)
+
+    alias FieldName = String
+
+    alias InternalException = NamedTuple(
+      "errorCode" : (ErrorCode)?,
+      "message" : (ExceptionMessage)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "errorCode" : (ErrorCode)?,
+      "message" : (ExceptionMessage)?,
+      "fieldName" : (FieldName)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "errorCode" : (ErrorCode)?,
+      "message" : (ExceptionMessage)?,
+      "resourceType" : (ResourceType)?
+    )
+
+    alias ListMemberAccountsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListMemberAccountsResult = NamedTuple(
+      "memberAccounts" : (MemberAccounts)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListS3ResourcesRequest = NamedTuple(
+      "memberAccountId" : (AWSAccountId)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListS3ResourcesResult = NamedTuple(
+      "s3Resources" : (S3ResourcesClassification)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MemberAccount = NamedTuple(
+      "accountId" : (AWSAccountId)?
+    )
+
+    alias MemberAccounts = Array(MemberAccount)
+
+    alias NextToken = String
+
+    alias Prefix = String
+
+    alias ResourceType = String
+
+    alias S3ContinuousClassificationType = String
+
+    alias S3OneTimeClassificationType = String
+
+    alias S3Resource = NamedTuple(
+      "bucketName" : BucketName,
+      "prefix" : (Prefix)?
+    )
+
+    alias S3ResourceClassification = NamedTuple(
+      "bucketName" : BucketName,
+      "prefix" : (Prefix)?,
+      "classificationType" : ClassificationType
+    )
+
+    alias S3ResourceClassificationUpdate = NamedTuple(
+      "bucketName" : BucketName,
+      "prefix" : (Prefix)?,
+      "classificationTypeUpdate" : ClassificationTypeUpdate
+    )
+
+    alias S3Resources = Array(S3Resource)
+
+    alias S3ResourcesClassification = Array(S3ResourceClassification)
+
+    alias S3ResourcesClassificationUpdate = Array(S3ResourceClassificationUpdate)
+
+    alias UpdateS3ResourcesRequest = NamedTuple(
+      "memberAccountId" : (AWSAccountId)?,
+      "s3ResourcesUpdate" : S3ResourcesClassificationUpdate
+    )
+
+    alias UpdateS3ResourcesResult = NamedTuple(
+      "failedS3Resources" : (FailedS3Resources)?
+    )
   end
 end

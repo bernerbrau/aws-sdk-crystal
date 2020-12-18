@@ -3014,5 +3014,654 @@ module Aws::GreengrassV2
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : String
+    )
+
+    alias CancelDeploymentRequest = NamedTuple(
+      "deploymentId" : NonEmptyString
+    )
+
+    alias CancelDeploymentResponse = NamedTuple(
+      "message" : (NonEmptyString)?
+    )
+
+    alias CloudComponentState = String
+
+    alias CloudComponentStatus = NamedTuple(
+      "componentState" : (CloudComponentState)?,
+      "message" : (NonEmptyString)?,
+      "errors" : (StringMap)?
+    )
+
+    alias Component = NamedTuple(
+      "arn" : (ComponentARN)?,
+      "componentName" : (ComponentNameString)?,
+      "latestVersion" : (ComponentLatestVersion)?
+    )
+
+    alias ComponentARN = String
+
+    alias ComponentCandidate = NamedTuple(
+      "componentName" : (ComponentNameString)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "versionRequirements" : (ComponentVersionRequirementMap)?
+    )
+
+    alias ComponentCandidateList = Array(ComponentCandidate)
+
+    alias ComponentConfigurationPath = String
+
+    alias ComponentConfigurationPathList = Array(ComponentConfigurationPath)
+
+    alias ComponentConfigurationString = String
+
+    alias ComponentConfigurationUpdate = NamedTuple(
+      "merge" : (ComponentConfigurationString)?,
+      "reset" : (ComponentConfigurationPathList)?
+    )
+
+    alias ComponentDependencyMap = Hash(NonEmptyString,ComponentDependencyRequirement)
+
+    alias ComponentDependencyRequirement = NamedTuple(
+      "versionRequirement" : (NonEmptyString)?,
+      "dependencyType" : (ComponentDependencyType)?
+    )
+
+    alias ComponentDependencyType = String
+
+    alias ComponentDeploymentSpecification = NamedTuple(
+      "componentVersion" : (ComponentVersionString)?,
+      "configurationUpdate" : (ComponentConfigurationUpdate)?,
+      "runWith" : (ComponentRunWith)?
+    )
+
+    alias ComponentDeploymentSpecifications = Hash(NonEmptyString,ComponentDeploymentSpecification)
+
+    alias ComponentLatestVersion = NamedTuple(
+      "arn" : (ComponentVersionARN)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "creationTimestamp" : (Timestamp)?,
+      "description" : (NonEmptyString)?,
+      "publisher" : (NonEmptyString)?,
+      "platforms" : (ComponentPlatformList)?
+    )
+
+    alias ComponentList = Array(Component)
+
+    alias ComponentNameString = String
+
+    alias ComponentPlatform = NamedTuple(
+      "name" : (NonEmptyString)?,
+      "attributes" : (PlatformAttributesMap)?
+    )
+
+    alias ComponentPlatformList = Array(ComponentPlatform)
+
+    alias ComponentRunWith = NamedTuple(
+      "posixUser" : (NonEmptyString)?
+    )
+
+    alias ComponentVersionARN = String
+
+    alias ComponentVersionList = Array(ComponentVersionListItem)
+
+    alias ComponentVersionListItem = NamedTuple(
+      "componentName" : (ComponentNameString)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "arn" : (NonEmptyString)?
+    )
+
+    alias ComponentVersionRequirementMap = Hash(NonEmptyString,NonEmptyString)
+
+    alias ComponentVersionString = String
+
+    alias ComponentVisibilityScope = String
+
+    alias ConflictException = NamedTuple(
+      "message" : String,
+      "resourceId" : String,
+      "resourceType" : String
+    )
+
+    alias CoreDevice = NamedTuple(
+      "coreDeviceThingName" : (CoreDeviceThingName)?,
+      "status" : (CoreDeviceStatus)?,
+      "lastStatusUpdateTimestamp" : (Timestamp)?
+    )
+
+    alias CoreDeviceArchitectureString = String
+
+    alias CoreDevicePlatformString = String
+
+    alias CoreDeviceStatus = String
+
+    alias CoreDeviceThingName = String
+
+    alias CoreDevicesList = Array(CoreDevice)
+
+    alias CreateComponentVersionRequest = NamedTuple(
+      "inlineRecipe" : (RecipeBlob)?,
+      "lambdaFunction" : (LambdaFunctionRecipeSource)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateComponentVersionResponse = NamedTuple(
+      "arn" : (ComponentVersionARN)?,
+      "componentName" : ComponentNameString,
+      "componentVersion" : ComponentVersionString,
+      "creationTimestamp" : Timestamp,
+      "status" : CloudComponentStatus
+    )
+
+    alias CreateDeploymentRequest = NamedTuple(
+      "targetArn" : TargetARN,
+      "deploymentName" : (NonEmptyString)?,
+      "components" : (ComponentDeploymentSpecifications)?,
+      "iotJobConfiguration" : (DeploymentIoTJobConfiguration)?,
+      "deploymentPolicies" : (DeploymentPolicies)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateDeploymentResponse = NamedTuple(
+      "deploymentId" : (NonEmptyString)?,
+      "iotJobId" : (NonEmptyString)?,
+      "iotJobArn" : (IoTJobARN)?
+    )
+
+    alias DefaultMaxResults = Int32
+
+    alias DeleteComponentRequest = NamedTuple(
+      "arn" : ComponentVersionARN
+    )
+
+    alias DeleteCoreDeviceRequest = NamedTuple(
+      "coreDeviceThingName" : CoreDeviceThingName
+    )
+
+    alias Deployment = NamedTuple(
+      "targetArn" : (TargetARN)?,
+      "revisionId" : (NonEmptyString)?,
+      "deploymentId" : (NonEmptyString)?,
+      "deploymentName" : (NonEmptyString)?,
+      "creationTimestamp" : (Timestamp)?,
+      "deploymentStatus" : (DeploymentStatus)?,
+      "isLatestForTarget" : (IsLatestForTarget)?
+    )
+
+    alias DeploymentComponentUpdatePolicy = NamedTuple(
+      "timeoutInSeconds" : (OptionalInteger)?,
+      "action" : (DeploymentComponentUpdatePolicyAction)?
+    )
+
+    alias DeploymentComponentUpdatePolicyAction = String
+
+    alias DeploymentConfigurationValidationPolicy = NamedTuple(
+      "timeoutInSeconds" : (OptionalInteger)?
+    )
+
+    alias DeploymentFailureHandlingPolicy = String
+
+    alias DeploymentHistoryFilter = String
+
+    alias DeploymentID = String
+
+    alias DeploymentIoTJobConfiguration = NamedTuple(
+      "jobExecutionsRolloutConfig" : (IoTJobExecutionsRolloutConfig)?,
+      "abortConfig" : (IoTJobAbortConfig)?,
+      "timeoutConfig" : (IoTJobTimeoutConfig)?
+    )
+
+    alias DeploymentList = Array(Deployment)
+
+    alias DeploymentName = String
+
+    alias DeploymentPolicies = NamedTuple(
+      "failureHandlingPolicy" : (DeploymentFailureHandlingPolicy)?,
+      "componentUpdatePolicy" : (DeploymentComponentUpdatePolicy)?,
+      "configurationValidationPolicy" : (DeploymentConfigurationValidationPolicy)?
+    )
+
+    alias DeploymentStatus = String
+
+    alias DescribeComponentRequest = NamedTuple(
+      "arn" : ComponentVersionARN
+    )
+
+    alias DescribeComponentResponse = NamedTuple(
+      "arn" : (ComponentVersionARN)?,
+      "componentName" : (ComponentNameString)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "creationTimestamp" : (Timestamp)?,
+      "publisher" : (PublisherString)?,
+      "description" : (DescriptionString)?,
+      "status" : (CloudComponentStatus)?,
+      "platforms" : (ComponentPlatformList)?,
+      "tags" : (TagMap)?
+    )
+
+    alias Description = String
+
+    alias DescriptionString = String
+
+    alias EffectiveDeployment = NamedTuple(
+      "deploymentId" : DeploymentID,
+      "deploymentName" : DeploymentName,
+      "iotJobId" : (IoTJobId)?,
+      "iotJobArn" : (IoTJobARN)?,
+      "description" : (Description)?,
+      "targetArn" : TargetARN,
+      "coreDeviceExecutionStatus" : EffectiveDeploymentExecutionStatus,
+      "reason" : (Reason)?,
+      "creationTimestamp" : Timestamp,
+      "modifiedTimestamp" : Timestamp
+    )
+
+    alias EffectiveDeploymentExecutionStatus = String
+
+    alias EffectiveDeploymentsList = Array(EffectiveDeployment)
+
+    alias FileSystemPath = String
+
+    alias GGCVersion = String
+
+    alias GenericV2ARN = String
+
+    alias GetComponentRequest = NamedTuple(
+      "recipeOutputFormat" : (RecipeOutputFormat)?,
+      "arn" : ComponentVersionARN
+    )
+
+    alias GetComponentResponse = NamedTuple(
+      "recipeOutputFormat" : RecipeOutputFormat,
+      "recipe" : RecipeBlob,
+      "tags" : (TagMap)?
+    )
+
+    alias GetComponentVersionArtifactRequest = NamedTuple(
+      "arn" : ComponentVersionARN,
+      "artifactName" : NonEmptyString
+    )
+
+    alias GetComponentVersionArtifactResponse = NamedTuple(
+      "preSignedUrl" : NonEmptyString
+    )
+
+    alias GetCoreDeviceRequest = NamedTuple(
+      "coreDeviceThingName" : CoreDeviceThingName
+    )
+
+    alias GetCoreDeviceResponse = NamedTuple(
+      "coreDeviceThingName" : (CoreDeviceThingName)?,
+      "coreVersion" : (GGCVersion)?,
+      "platform" : (CoreDevicePlatformString)?,
+      "architecture" : (CoreDeviceArchitectureString)?,
+      "status" : (CoreDeviceStatus)?,
+      "lastStatusUpdateTimestamp" : (Timestamp)?,
+      "tags" : (TagMap)?
+    )
+
+    alias GetDeploymentRequest = NamedTuple(
+      "deploymentId" : NonEmptyString
+    )
+
+    alias GetDeploymentResponse = NamedTuple(
+      "targetArn" : (TargetARN)?,
+      "revisionId" : (NonEmptyString)?,
+      "deploymentId" : (NonEmptyString)?,
+      "deploymentName" : (NullableString)?,
+      "deploymentStatus" : (DeploymentStatus)?,
+      "iotJobId" : (NullableString)?,
+      "iotJobArn" : (IoTJobARN)?,
+      "components" : (ComponentDeploymentSpecifications)?,
+      "deploymentPolicies" : (DeploymentPolicies)?,
+      "iotJobConfiguration" : (DeploymentIoTJobConfiguration)?,
+      "creationTimestamp" : (Timestamp)?,
+      "isLatestForTarget" : (IsLatestForTarget)?,
+      "tags" : (TagMap)?
+    )
+
+    alias InstalledComponent = NamedTuple(
+      "componentName" : (ComponentNameString)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "lifecycleState" : (InstalledComponentLifecycleState)?,
+      "lifecycleStateDetails" : (LifecycleStateDetails)?,
+      "isRoot" : (IsRoot)?
+    )
+
+    alias InstalledComponentLifecycleState = String
+
+    alias InstalledComponentList = Array(InstalledComponent)
+
+    alias InternalServerException = NamedTuple(
+      "message" : String,
+      "retryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias IoTJobARN = String
+
+    alias IoTJobAbortAction = String
+
+    alias IoTJobAbortConfig = NamedTuple(
+      "criteriaList" : IoTJobAbortCriteriaList
+    )
+
+    alias IoTJobAbortCriteria = NamedTuple(
+      "failureType" : IoTJobExecutionFailureType,
+      "action" : IoTJobAbortAction,
+      "thresholdPercentage" : IoTJobAbortThresholdPercentage,
+      "minNumberOfExecutedThings" : IoTJobMinimumNumberOfExecutedThings
+    )
+
+    alias IoTJobAbortCriteriaList = Array(IoTJobAbortCriteria)
+
+    alias IoTJobAbortThresholdPercentage = Float64
+
+    alias IoTJobExecutionFailureType = String
+
+    alias IoTJobExecutionsRolloutConfig = NamedTuple(
+      "exponentialRate" : (IoTJobExponentialRolloutRate)?,
+      "maximumPerMinute" : (IoTJobMaxExecutionsPerMin)?
+    )
+
+    alias IoTJobExponentialRolloutRate = NamedTuple(
+      "baseRatePerMinute" : IoTJobRolloutBaseRatePerMinute,
+      "incrementFactor" : IoTJobRolloutIncrementFactor,
+      "rateIncreaseCriteria" : IoTJobRateIncreaseCriteria
+    )
+
+    alias IoTJobId = String
+
+    alias IoTJobInProgressTimeoutInMinutes = Int64
+
+    alias IoTJobMaxExecutionsPerMin = Int32
+
+    alias IoTJobMinimumNumberOfExecutedThings = Int32
+
+    alias IoTJobNumberOfThings = Int32
+
+    alias IoTJobRateIncreaseCriteria = NamedTuple(
+      "numberOfNotifiedThings" : (IoTJobNumberOfThings)?,
+      "numberOfSucceededThings" : (IoTJobNumberOfThings)?
+    )
+
+    alias IoTJobRolloutBaseRatePerMinute = Int32
+
+    alias IoTJobRolloutIncrementFactor = Float64
+
+    alias IoTJobTimeoutConfig = NamedTuple(
+      "inProgressTimeoutInMinutes" : (IoTJobInProgressTimeoutInMinutes)?
+    )
+
+    alias IsLatestForTarget = Bool
+
+    alias IsRoot = Bool
+
+    alias LambdaContainerParams = NamedTuple(
+      "memorySizeInKB" : (OptionalInteger)?,
+      "mountROSysfs" : (OptionalBoolean)?,
+      "volumes" : (LambdaVolumeList)?,
+      "devices" : (LambdaDeviceList)?
+    )
+
+    alias LambdaDeviceList = Array(LambdaDeviceMount)
+
+    alias LambdaDeviceMount = NamedTuple(
+      "path" : FileSystemPath,
+      "permission" : (LambdaFilesystemPermission)?,
+      "addGroupOwner" : (OptionalBoolean)?
+    )
+
+    alias LambdaEnvironmentVariables = Hash(NonEmptyString,String)
+
+    alias LambdaEventSource = NamedTuple(
+      "topic" : TopicString,
+      "type" : LambdaEventSourceType
+    )
+
+    alias LambdaEventSourceList = Array(LambdaEventSource)
+
+    alias LambdaEventSourceType = String
+
+    alias LambdaExecArg = String
+
+    alias LambdaExecArgsList = Array(LambdaExecArg)
+
+    alias LambdaExecutionParameters = NamedTuple(
+      "eventSources" : (LambdaEventSourceList)?,
+      "maxQueueSize" : (OptionalInteger)?,
+      "maxInstancesCount" : (OptionalInteger)?,
+      "maxIdleTimeInSeconds" : (OptionalInteger)?,
+      "timeoutInSeconds" : (OptionalInteger)?,
+      "statusTimeoutInSeconds" : (OptionalInteger)?,
+      "pinned" : (OptionalBoolean)?,
+      "inputPayloadEncodingType" : (LambdaInputPayloadEncodingType)?,
+      "execArgs" : (LambdaExecArgsList)?,
+      "environmentVariables" : (LambdaEnvironmentVariables)?,
+      "linuxProcessParams" : (LambdaLinuxProcessParams)?
+    )
+
+    alias LambdaFilesystemPermission = String
+
+    alias LambdaFunctionARNWithVersionNumber = String
+
+    alias LambdaFunctionRecipeSource = NamedTuple(
+      "lambdaArn" : LambdaFunctionARNWithVersionNumber,
+      "componentName" : (ComponentNameString)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "componentPlatforms" : (ComponentPlatformList)?,
+      "componentDependencies" : (ComponentDependencyMap)?,
+      "componentLambdaParameters" : (LambdaExecutionParameters)?
+    )
+
+    alias LambdaInputPayloadEncodingType = String
+
+    alias LambdaIsolationMode = String
+
+    alias LambdaLinuxProcessParams = NamedTuple(
+      "isolationMode" : (LambdaIsolationMode)?,
+      "containerParams" : (LambdaContainerParams)?
+    )
+
+    alias LambdaVolumeList = Array(LambdaVolumeMount)
+
+    alias LambdaVolumeMount = NamedTuple(
+      "sourcePath" : FileSystemPath,
+      "destinationPath" : FileSystemPath,
+      "permission" : (LambdaFilesystemPermission)?,
+      "addGroupOwner" : (OptionalBoolean)?
+    )
+
+    alias LifecycleStateDetails = String
+
+    alias ListComponentVersionsRequest = NamedTuple(
+      "arn" : ComponentARN,
+      "maxResults" : (DefaultMaxResults)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListComponentVersionsResponse = NamedTuple(
+      "componentVersions" : (ComponentVersionList)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListComponentsRequest = NamedTuple(
+      "scope" : (ComponentVisibilityScope)?,
+      "maxResults" : (DefaultMaxResults)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListComponentsResponse = NamedTuple(
+      "components" : (ComponentList)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListCoreDevicesRequest = NamedTuple(
+      "thingGroupArn" : (ThingGroupARN)?,
+      "status" : (CoreDeviceStatus)?,
+      "maxResults" : (DefaultMaxResults)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListCoreDevicesResponse = NamedTuple(
+      "coreDevices" : (CoreDevicesList)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListDeploymentsRequest = NamedTuple(
+      "targetArn" : (TargetARN)?,
+      "historyFilter" : (DeploymentHistoryFilter)?,
+      "maxResults" : (DefaultMaxResults)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListDeploymentsResponse = NamedTuple(
+      "deployments" : (DeploymentList)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListEffectiveDeploymentsRequest = NamedTuple(
+      "coreDeviceThingName" : CoreDeviceThingName,
+      "maxResults" : (DefaultMaxResults)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListEffectiveDeploymentsResponse = NamedTuple(
+      "effectiveDeployments" : (EffectiveDeploymentsList)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListInstalledComponentsRequest = NamedTuple(
+      "coreDeviceThingName" : CoreDeviceThingName,
+      "maxResults" : (DefaultMaxResults)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListInstalledComponentsResponse = NamedTuple(
+      "installedComponents" : (InstalledComponentList)?,
+      "nextToken" : (NextTokenString)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : GenericV2ARN
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias NextTokenString = String
+
+    alias NonEmptyString = String
+
+    alias NullableString = String
+
+    alias OptionalBoolean = Bool
+
+    alias OptionalInteger = Int32
+
+    alias PlatformAttributesMap = Hash(NonEmptyString,NonEmptyString)
+
+    alias PublisherString = String
+
+    alias Reason = String
+
+    alias RecipeBlob = String | Array(UInt8) | IO
+
+    alias RecipeOutputFormat = String
+
+    alias ResolveComponentCandidatesRequest = NamedTuple(
+      "platform" : ComponentPlatform,
+      "componentCandidates" : ComponentCandidateList
+    )
+
+    alias ResolveComponentCandidatesResponse = NamedTuple(
+      "resolvedComponentVersions" : (ResolvedComponentVersionsList)?
+    )
+
+    alias ResolvedComponentVersion = NamedTuple(
+      "arn" : (ComponentVersionARN)?,
+      "componentName" : (ComponentNameString)?,
+      "componentVersion" : (ComponentVersionString)?,
+      "recipe" : (RecipeBlob)?
+    )
+
+    alias ResolvedComponentVersionsList = Array(ResolvedComponentVersion)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : String,
+      "resourceId" : String,
+      "resourceType" : String
+    )
+
+    alias RetryAfterSeconds = Int32
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : String,
+      "resourceId" : (String)?,
+      "resourceType" : (String)?,
+      "quotaCode" : String,
+      "serviceCode" : String
+    )
+
+    alias String = String
+
+    alias StringMap = Hash(NonEmptyString,NonEmptyString)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : GenericV2ARN,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TargetARN = String
+
+    alias ThingGroupARN = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : String,
+      "quotaCode" : (String)?,
+      "serviceCode" : (String)?,
+      "retryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TopicString = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : GenericV2ARN,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : String,
+      "reason" : (ValidationExceptionReason)?,
+      "fields" : (ValidationExceptionFieldList)?
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "name" : String,
+      "message" : String
+    )
+
+    alias ValidationExceptionFieldList = Array(ValidationExceptionField)
+
+    alias ValidationExceptionReason = String
   end
 end

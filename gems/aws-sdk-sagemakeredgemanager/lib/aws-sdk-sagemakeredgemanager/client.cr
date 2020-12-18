@@ -357,8 +357,8 @@ module Aws::SagemakerEdgeManager
     #
     # @overload get_device_registration(**params)
     # @param [Hash] params ({})
-    def get_device_registration(params = {}, **options)
-      req = build_request(:get_device_registration, params)
+    def get_device_registration(, **options)
+      req = build_request(:get_device_registration, )
       req.send_request(options)
     end
 
@@ -419,8 +419,8 @@ module Aws::SagemakerEdgeManager
     #
     # @overload send_heartbeat(**params)
     # @param [Hash] params ({})
-    def send_heartbeat(params = {}, **options)
-      req = build_request(:send_heartbeat, params)
+    def send_heartbeat(, **options)
+      req = build_request(:send_heartbeat, )
       req.send_request(options)
     end
 

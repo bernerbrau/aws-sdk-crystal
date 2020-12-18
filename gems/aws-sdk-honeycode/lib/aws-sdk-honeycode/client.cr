@@ -408,8 +408,8 @@ module Aws::Honeycode
     #
     # @overload batch_create_table_rows(**params)
     # @param [Hash] params ({})
-    def batch_create_table_rows(params = {}, **options)
-      req = build_request(:batch_create_table_rows, params)
+    def batch_create_table_rows(, **options)
+      req = build_request(:batch_create_table_rows, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::Honeycode
     #
     # @overload batch_delete_table_rows(**params)
     # @param [Hash] params ({})
-    def batch_delete_table_rows(params = {}, **options)
-      req = build_request(:batch_delete_table_rows, params)
+    def batch_delete_table_rows(, **options)
+      req = build_request(:batch_delete_table_rows, )
       req.send_request(options)
     end
 
@@ -555,8 +555,8 @@ module Aws::Honeycode
     #
     # @overload batch_update_table_rows(**params)
     # @param [Hash] params ({})
-    def batch_update_table_rows(params = {}, **options)
-      req = build_request(:batch_update_table_rows, params)
+    def batch_update_table_rows(, **options)
+      req = build_request(:batch_update_table_rows, )
       req.send_request(options)
     end
 
@@ -652,8 +652,8 @@ module Aws::Honeycode
     #
     # @overload batch_upsert_table_rows(**params)
     # @param [Hash] params ({})
-    def batch_upsert_table_rows(params = {}, **options)
-      req = build_request(:batch_upsert_table_rows, params)
+    def batch_upsert_table_rows(, **options)
+      req = build_request(:batch_upsert_table_rows, )
       req.send_request(options)
     end
 
@@ -712,8 +712,8 @@ module Aws::Honeycode
     #
     # @overload describe_table_data_import_job(**params)
     # @param [Hash] params ({})
-    def describe_table_data_import_job(params = {}, **options)
-      req = build_request(:describe_table_data_import_job, params)
+    def describe_table_data_import_job(, **options)
+      req = build_request(:describe_table_data_import_job, )
       req.send_request(options)
     end
 
@@ -792,8 +792,8 @@ module Aws::Honeycode
     #
     # @overload get_screen_data(**params)
     # @param [Hash] params ({})
-    def get_screen_data(params = {}, **options)
-      req = build_request(:get_screen_data, params)
+    def get_screen_data(, **options)
+      req = build_request(:get_screen_data, )
       req.send_request(options)
     end
 
@@ -866,8 +866,8 @@ module Aws::Honeycode
     #
     # @overload invoke_screen_automation(**params)
     # @param [Hash] params ({})
-    def invoke_screen_automation(params = {}, **options)
-      req = build_request(:invoke_screen_automation, params)
+    def invoke_screen_automation(, **options)
+      req = build_request(:invoke_screen_automation, )
       req.send_request(options)
     end
 
@@ -924,8 +924,8 @@ module Aws::Honeycode
     #
     # @overload list_table_columns(**params)
     # @param [Hash] params ({})
-    def list_table_columns(params = {}, **options)
-      req = build_request(:list_table_columns, params)
+    def list_table_columns(, **options)
+      req = build_request(:list_table_columns, )
       req.send_request(options)
     end
 
@@ -1002,8 +1002,8 @@ module Aws::Honeycode
     #
     # @overload list_table_rows(**params)
     # @param [Hash] params ({})
-    def list_table_rows(params = {}, **options)
-      req = build_request(:list_table_rows, params)
+    def list_table_rows(, **options)
+      req = build_request(:list_table_rows, )
       req.send_request(options)
     end
 
@@ -1055,8 +1055,8 @@ module Aws::Honeycode
     #
     # @overload list_tables(**params)
     # @param [Hash] params ({})
-    def list_tables(params = {}, **options)
-      req = build_request(:list_tables, params)
+    def list_tables(, **options)
+      req = build_request(:list_tables, )
       req.send_request(options)
     end
 
@@ -1130,8 +1130,8 @@ module Aws::Honeycode
     #
     # @overload query_table_rows(**params)
     # @param [Hash] params ({})
-    def query_table_rows(params = {}, **options)
-      req = build_request(:query_table_rows, params)
+    def query_table_rows(, **options)
+      req = build_request(:query_table_rows, )
       req.send_request(options)
     end
 
@@ -1218,8 +1218,8 @@ module Aws::Honeycode
     #
     # @overload start_table_data_import_job(**params)
     # @param [Hash] params ({})
-    def start_table_data_import_job(params = {}, **options)
-      req = build_request(:start_table_data_import_job, params)
+    def start_table_data_import_job(, **options)
+      req = build_request(:start_table_data_import_job, )
       req.send_request(options)
     end
 

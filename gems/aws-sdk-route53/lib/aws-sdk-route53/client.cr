@@ -408,8 +408,8 @@ module Aws::Route53
     #
     # @overload associate_vpc_with_hosted_zone(**params)
     # @param [Hash] params ({})
-    def associate_vpc_with_hosted_zone(params = {}, **options)
-      req = build_request(:associate_vpc_with_hosted_zone, params)
+    def associate_vpc_with_hosted_zone(, **options)
+      req = build_request(:associate_vpc_with_hosted_zone, )
       req.send_request(options)
     end
 
@@ -1159,8 +1159,8 @@ module Aws::Route53
     #
     # @overload change_resource_record_sets(**params)
     # @param [Hash] params ({})
-    def change_resource_record_sets(params = {}, **options)
-      req = build_request(:change_resource_record_sets, params)
+    def change_resource_record_sets(, **options)
+      req = build_request(:change_resource_record_sets, )
       req.send_request(options)
     end
 
@@ -1244,8 +1244,8 @@ module Aws::Route53
     #
     # @overload change_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def change_tags_for_resource(params = {}, **options)
-      req = build_request(:change_tags_for_resource, params)
+    def change_tags_for_resource(, **options)
+      req = build_request(:change_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1392,8 +1392,8 @@ module Aws::Route53
     #
     # @overload create_health_check(**params)
     # @param [Hash] params ({})
-    def create_health_check(params = {}, **options)
-      req = build_request(:create_health_check, params)
+    def create_health_check(, **options)
+      req = build_request(:create_health_check, )
       req.send_request(options)
     end
 
@@ -1548,8 +1548,8 @@ module Aws::Route53
     #
     # @overload create_hosted_zone(**params)
     # @param [Hash] params ({})
-    def create_hosted_zone(params = {}, **options)
-      req = build_request(:create_hosted_zone, params)
+    def create_hosted_zone(, **options)
+      req = build_request(:create_hosted_zone, )
       req.send_request(options)
     end
 
@@ -1722,8 +1722,8 @@ module Aws::Route53
     #
     # @overload create_query_logging_config(**params)
     # @param [Hash] params ({})
-    def create_query_logging_config(params = {}, **options)
-      req = build_request(:create_query_logging_config, params)
+    def create_query_logging_config(, **options)
+      req = build_request(:create_query_logging_config, )
       req.send_request(options)
     end
 
@@ -1820,8 +1820,8 @@ module Aws::Route53
     #
     # @overload create_reusable_delegation_set(**params)
     # @param [Hash] params ({})
-    def create_reusable_delegation_set(params = {}, **options)
-      req = build_request(:create_reusable_delegation_set, params)
+    def create_reusable_delegation_set(, **options)
+      req = build_request(:create_reusable_delegation_set, )
       req.send_request(options)
     end
 
@@ -1871,8 +1871,8 @@ module Aws::Route53
     #
     # @overload create_traffic_policy(**params)
     # @param [Hash] params ({})
-    def create_traffic_policy(params = {}, **options)
-      req = build_request(:create_traffic_policy, params)
+    def create_traffic_policy(, **options)
+      req = build_request(:create_traffic_policy, )
       req.send_request(options)
     end
 
@@ -1939,8 +1939,8 @@ module Aws::Route53
     #
     # @overload create_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def create_traffic_policy_instance(params = {}, **options)
-      req = build_request(:create_traffic_policy_instance, params)
+    def create_traffic_policy_instance(, **options)
+      req = build_request(:create_traffic_policy_instance, )
       req.send_request(options)
     end
 
@@ -1998,8 +1998,8 @@ module Aws::Route53
     #
     # @overload create_traffic_policy_version(**params)
     # @param [Hash] params ({})
-    def create_traffic_policy_version(params = {}, **options)
-      req = build_request(:create_traffic_policy_version, params)
+    def create_traffic_policy_version(, **options)
+      req = build_request(:create_traffic_policy_version, )
       req.send_request(options)
     end
 
@@ -2050,8 +2050,8 @@ module Aws::Route53
     #
     # @overload create_vpc_association_authorization(**params)
     # @param [Hash] params ({})
-    def create_vpc_association_authorization(params = {}, **options)
-      req = build_request(:create_vpc_association_authorization, params)
+    def create_vpc_association_authorization(, **options)
+      req = build_request(:create_vpc_association_authorization, )
       req.send_request(options)
     end
 
@@ -2092,8 +2092,8 @@ module Aws::Route53
     #
     # @overload delete_health_check(**params)
     # @param [Hash] params ({})
-    def delete_health_check(params = {}, **options)
-      req = build_request(:delete_health_check, params)
+    def delete_health_check(, **options)
+      req = build_request(:delete_health_check, )
       req.send_request(options)
     end
 
@@ -2177,8 +2177,8 @@ module Aws::Route53
     #
     # @overload delete_hosted_zone(**params)
     # @param [Hash] params ({})
-    def delete_hosted_zone(params = {}, **options)
-      req = build_request(:delete_hosted_zone, params)
+    def delete_hosted_zone(, **options)
+      req = build_request(:delete_hosted_zone, )
       req.send_request(options)
     end
 
@@ -2209,8 +2209,8 @@ module Aws::Route53
     #
     # @overload delete_query_logging_config(**params)
     # @param [Hash] params ({})
-    def delete_query_logging_config(params = {}, **options)
-      req = build_request(:delete_query_logging_config, params)
+    def delete_query_logging_config(, **options)
+      req = build_request(:delete_query_logging_config, )
       req.send_request(options)
     end
 
@@ -2242,8 +2242,8 @@ module Aws::Route53
     #
     # @overload delete_reusable_delegation_set(**params)
     # @param [Hash] params ({})
-    def delete_reusable_delegation_set(params = {}, **options)
-      req = build_request(:delete_reusable_delegation_set, params)
+    def delete_reusable_delegation_set(, **options)
+      req = build_request(:delete_reusable_delegation_set, )
       req.send_request(options)
     end
 
@@ -2286,8 +2286,8 @@ module Aws::Route53
     #
     # @overload delete_traffic_policy(**params)
     # @param [Hash] params ({})
-    def delete_traffic_policy(params = {}, **options)
-      req = build_request(:delete_traffic_policy, params)
+    def delete_traffic_policy(, **options)
+      req = build_request(:delete_traffic_policy, )
       req.send_request(options)
     end
 
@@ -2318,8 +2318,8 @@ module Aws::Route53
     #
     # @overload delete_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def delete_traffic_policy_instance(params = {}, **options)
-      req = build_request(:delete_traffic_policy_instance, params)
+    def delete_traffic_policy_instance(, **options)
+      req = build_request(:delete_traffic_policy_instance, )
       req.send_request(options)
     end
 
@@ -2362,8 +2362,8 @@ module Aws::Route53
     #
     # @overload delete_vpc_association_authorization(**params)
     # @param [Hash] params ({})
-    def delete_vpc_association_authorization(params = {}, **options)
-      req = build_request(:delete_vpc_association_authorization, params)
+    def delete_vpc_association_authorization(, **options)
+      req = build_request(:delete_vpc_association_authorization, )
       req.send_request(options)
     end
 
@@ -2432,8 +2432,8 @@ module Aws::Route53
     #
     # @overload disassociate_vpc_from_hosted_zone(**params)
     # @param [Hash] params ({})
-    def disassociate_vpc_from_hosted_zone(params = {}, **options)
-      req = build_request(:disassociate_vpc_from_hosted_zone, params)
+    def disassociate_vpc_from_hosted_zone(, **options)
+      req = build_request(:disassociate_vpc_from_hosted_zone, )
       req.send_request(options)
     end
 
@@ -2498,8 +2498,8 @@ module Aws::Route53
     #
     # @overload get_account_limit(**params)
     # @param [Hash] params ({})
-    def get_account_limit(params = {}, **options)
-      req = build_request(:get_account_limit, params)
+    def get_account_limit(, **options)
+      req = build_request(:get_account_limit, )
       req.send_request(options)
     end
 
@@ -2544,8 +2544,8 @@ module Aws::Route53
     #
     # @overload get_change(**params)
     # @param [Hash] params ({})
-    def get_change(params = {}, **options)
-      req = build_request(:get_change, params)
+    def get_change(, **options)
+      req = build_request(:get_change, )
       req.send_request(options)
     end
 
@@ -2571,8 +2571,8 @@ module Aws::Route53
     #
     # @overload get_checker_ip_ranges(**params)
     # @param [Hash] params ({})
-    def get_checker_ip_ranges(params = {}, **options)
-      req = build_request(:get_checker_ip_ranges, params)
+    def get_checker_ip_ranges(, **options)
+      req = build_request(:get_checker_ip_ranges, )
       req.send_request(options)
     end
 
@@ -2661,8 +2661,8 @@ module Aws::Route53
     #
     # @overload get_geo_location(**params)
     # @param [Hash] params ({})
-    def get_geo_location(params = {}, **options)
-      req = build_request(:get_geo_location, params)
+    def get_geo_location(, **options)
+      req = build_request(:get_geo_location, )
       req.send_request(options)
     end
 
@@ -2726,8 +2726,8 @@ module Aws::Route53
     #
     # @overload get_health_check(**params)
     # @param [Hash] params ({})
-    def get_health_check(params = {}, **options)
-      req = build_request(:get_health_check, params)
+    def get_health_check(, **options)
+      req = build_request(:get_health_check, )
       req.send_request(options)
     end
 
@@ -2746,8 +2746,8 @@ module Aws::Route53
     #
     # @overload get_health_check_count(**params)
     # @param [Hash] params ({})
-    def get_health_check_count(params = {}, **options)
-      req = build_request(:get_health_check_count, params)
+    def get_health_check_count(, **options)
+      req = build_request(:get_health_check_count, )
       req.send_request(options)
     end
 
@@ -2787,8 +2787,8 @@ module Aws::Route53
     #
     # @overload get_health_check_last_failure_reason(**params)
     # @param [Hash] params ({})
-    def get_health_check_last_failure_reason(params = {}, **options)
-      req = build_request(:get_health_check_last_failure_reason, params)
+    def get_health_check_last_failure_reason(, **options)
+      req = build_request(:get_health_check_last_failure_reason, )
       req.send_request(options)
     end
 
@@ -2828,8 +2828,8 @@ module Aws::Route53
     #
     # @overload get_health_check_status(**params)
     # @param [Hash] params ({})
-    def get_health_check_status(params = {}, **options)
-      req = build_request(:get_health_check_status, params)
+    def get_health_check_status(, **options)
+      req = build_request(:get_health_check_status, )
       req.send_request(options)
     end
 
@@ -2903,8 +2903,8 @@ module Aws::Route53
     #
     # @overload get_hosted_zone(**params)
     # @param [Hash] params ({})
-    def get_hosted_zone(params = {}, **options)
-      req = build_request(:get_hosted_zone, params)
+    def get_hosted_zone(, **options)
+      req = build_request(:get_hosted_zone, )
       req.send_request(options)
     end
 
@@ -2923,8 +2923,8 @@ module Aws::Route53
     #
     # @overload get_hosted_zone_count(**params)
     # @param [Hash] params ({})
-    def get_hosted_zone_count(params = {}, **options)
-      req = build_request(:get_hosted_zone_count, params)
+    def get_hosted_zone_count(, **options)
+      req = build_request(:get_hosted_zone_count, )
       req.send_request(options)
     end
 
@@ -2973,8 +2973,8 @@ module Aws::Route53
     #
     # @overload get_hosted_zone_limit(**params)
     # @param [Hash] params ({})
-    def get_hosted_zone_limit(params = {}, **options)
-      req = build_request(:get_hosted_zone_limit, params)
+    def get_hosted_zone_limit(, **options)
+      req = build_request(:get_hosted_zone_limit, )
       req.send_request(options)
     end
 
@@ -3013,8 +3013,8 @@ module Aws::Route53
     #
     # @overload get_query_logging_config(**params)
     # @param [Hash] params ({})
-    def get_query_logging_config(params = {}, **options)
-      req = build_request(:get_query_logging_config, params)
+    def get_query_logging_config(, **options)
+      req = build_request(:get_query_logging_config, )
       req.send_request(options)
     end
 
@@ -3047,8 +3047,8 @@ module Aws::Route53
     #
     # @overload get_reusable_delegation_set(**params)
     # @param [Hash] params ({})
-    def get_reusable_delegation_set(params = {}, **options)
-      req = build_request(:get_reusable_delegation_set, params)
+    def get_reusable_delegation_set(, **options)
+      req = build_request(:get_reusable_delegation_set, )
       req.send_request(options)
     end
 
@@ -3093,8 +3093,8 @@ module Aws::Route53
     #
     # @overload get_reusable_delegation_set_limit(**params)
     # @param [Hash] params ({})
-    def get_reusable_delegation_set_limit(params = {}, **options)
-      req = build_request(:get_reusable_delegation_set_limit, params)
+    def get_reusable_delegation_set_limit(, **options)
+      req = build_request(:get_reusable_delegation_set_limit, )
       req.send_request(options)
     end
 
@@ -3138,8 +3138,8 @@ module Aws::Route53
     #
     # @overload get_traffic_policy(**params)
     # @param [Hash] params ({})
-    def get_traffic_policy(params = {}, **options)
-      req = build_request(:get_traffic_policy, params)
+    def get_traffic_policy(, **options)
+      req = build_request(:get_traffic_policy, )
       req.send_request(options)
     end
 
@@ -3188,8 +3188,8 @@ module Aws::Route53
     #
     # @overload get_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def get_traffic_policy_instance(params = {}, **options)
-      req = build_request(:get_traffic_policy_instance, params)
+    def get_traffic_policy_instance(, **options)
+      req = build_request(:get_traffic_policy_instance, )
       req.send_request(options)
     end
 
@@ -3208,8 +3208,8 @@ module Aws::Route53
     #
     # @overload get_traffic_policy_instance_count(**params)
     # @param [Hash] params ({})
-    def get_traffic_policy_instance_count(params = {}, **options)
-      req = build_request(:get_traffic_policy_instance_count, params)
+    def get_traffic_policy_instance_count(, **options)
+      req = build_request(:get_traffic_policy_instance_count, )
       req.send_request(options)
     end
 
@@ -3301,8 +3301,8 @@ module Aws::Route53
     #
     # @overload list_geo_locations(**params)
     # @param [Hash] params ({})
-    def list_geo_locations(params = {}, **options)
-      req = build_request(:list_geo_locations, params)
+    def list_geo_locations(, **options)
+      req = build_request(:list_geo_locations, )
       req.send_request(options)
     end
 
@@ -3391,8 +3391,8 @@ module Aws::Route53
     #
     # @overload list_health_checks(**params)
     # @param [Hash] params ({})
-    def list_health_checks(params = {}, **options)
-      req = build_request(:list_health_checks, params)
+    def list_health_checks(, **options)
+      req = build_request(:list_health_checks, )
       req.send_request(options)
     end
 
@@ -3466,8 +3466,8 @@ module Aws::Route53
     #
     # @overload list_hosted_zones(**params)
     # @param [Hash] params ({})
-    def list_hosted_zones(params = {}, **options)
-      req = build_request(:list_hosted_zones, params)
+    def list_hosted_zones(, **options)
+      req = build_request(:list_hosted_zones, )
       req.send_request(options)
     end
 
@@ -3599,8 +3599,8 @@ module Aws::Route53
     #
     # @overload list_hosted_zones_by_name(**params)
     # @param [Hash] params ({})
-    def list_hosted_zones_by_name(params = {}, **options)
-      req = build_request(:list_hosted_zones_by_name, params)
+    def list_hosted_zones_by_name(, **options)
+      req = build_request(:list_hosted_zones_by_name, )
       req.send_request(options)
     end
 
@@ -3673,8 +3673,8 @@ module Aws::Route53
     #
     # @overload list_hosted_zones_by_vpc(**params)
     # @param [Hash] params ({})
-    def list_hosted_zones_by_vpc(params = {}, **options)
-      req = build_request(:list_hosted_zones_by_vpc, params)
+    def list_hosted_zones_by_vpc(, **options)
+      req = build_request(:list_hosted_zones_by_vpc, )
       req.send_request(options)
     end
 
@@ -3752,8 +3752,8 @@ module Aws::Route53
     #
     # @overload list_query_logging_configs(**params)
     # @param [Hash] params ({})
-    def list_query_logging_configs(params = {}, **options)
-      req = build_request(:list_query_logging_configs, params)
+    def list_query_logging_configs(, **options)
+      req = build_request(:list_query_logging_configs, )
       req.send_request(options)
     end
 
@@ -3936,8 +3936,8 @@ module Aws::Route53
     #
     # @overload list_resource_record_sets(**params)
     # @param [Hash] params ({})
-    def list_resource_record_sets(params = {}, **options)
-      req = build_request(:list_resource_record_sets, params)
+    def list_resource_record_sets(, **options)
+      req = build_request(:list_resource_record_sets, )
       req.send_request(options)
     end
 
@@ -3993,8 +3993,8 @@ module Aws::Route53
     #
     # @overload list_reusable_delegation_sets(**params)
     # @param [Hash] params ({})
-    def list_reusable_delegation_sets(params = {}, **options)
-      req = build_request(:list_reusable_delegation_sets, params)
+    def list_reusable_delegation_sets(, **options)
+      req = build_request(:list_reusable_delegation_sets, )
       req.send_request(options)
     end
 
@@ -4041,8 +4041,8 @@ module Aws::Route53
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4091,8 +4091,8 @@ module Aws::Route53
     #
     # @overload list_tags_for_resources(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resources(params = {}, **options)
-      req = build_request(:list_tags_for_resources, params)
+    def list_tags_for_resources(, **options)
+      req = build_request(:list_tags_for_resources, )
       req.send_request(options)
     end
 
@@ -4156,8 +4156,8 @@ module Aws::Route53
     #
     # @overload list_traffic_policies(**params)
     # @param [Hash] params ({})
-    def list_traffic_policies(params = {}, **options)
-      req = build_request(:list_traffic_policies, params)
+    def list_traffic_policies(, **options)
+      req = build_request(:list_traffic_policies, )
       req.send_request(options)
     end
 
@@ -4260,8 +4260,8 @@ module Aws::Route53
     #
     # @overload list_traffic_policy_instances(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_instances(params = {}, **options)
-      req = build_request(:list_traffic_policy_instances, params)
+    def list_traffic_policy_instances(, **options)
+      req = build_request(:list_traffic_policy_instances, )
       req.send_request(options)
     end
 
@@ -4356,8 +4356,8 @@ module Aws::Route53
     #
     # @overload list_traffic_policy_instances_by_hosted_zone(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_instances_by_hosted_zone(params = {}, **options)
-      req = build_request(:list_traffic_policy_instances_by_hosted_zone, params)
+    def list_traffic_policy_instances_by_hosted_zone(, **options)
+      req = build_request(:list_traffic_policy_instances_by_hosted_zone, )
       req.send_request(options)
     end
 
@@ -4479,8 +4479,8 @@ module Aws::Route53
     #
     # @overload list_traffic_policy_instances_by_policy(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_instances_by_policy(params = {}, **options)
-      req = build_request(:list_traffic_policy_instances_by_policy, params)
+    def list_traffic_policy_instances_by_policy(, **options)
+      req = build_request(:list_traffic_policy_instances_by_policy, )
       req.send_request(options)
     end
 
@@ -4545,8 +4545,8 @@ module Aws::Route53
     #
     # @overload list_traffic_policy_versions(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_versions(params = {}, **options)
-      req = build_request(:list_traffic_policy_versions, params)
+    def list_traffic_policy_versions(, **options)
+      req = build_request(:list_traffic_policy_versions, )
       req.send_request(options)
     end
 
@@ -4599,8 +4599,8 @@ module Aws::Route53
     #
     # @overload list_vpc_association_authorizations(**params)
     # @param [Hash] params ({})
-    def list_vpc_association_authorizations(params = {}, **options)
-      req = build_request(:list_vpc_association_authorizations, params)
+    def list_vpc_association_authorizations(, **options)
+      req = build_request(:list_vpc_association_authorizations, )
       req.send_request(options)
     end
 
@@ -4681,8 +4681,8 @@ module Aws::Route53
     #
     # @overload test_dns_answer(**params)
     # @param [Hash] params ({})
-    def test_dns_answer(params = {}, **options)
-      req = build_request(:test_dns_answer, params)
+    def test_dns_answer(, **options)
+      req = build_request(:test_dns_answer, )
       req.send_request(options)
     end
 
@@ -5091,8 +5091,8 @@ module Aws::Route53
     #
     # @overload update_health_check(**params)
     # @param [Hash] params ({})
-    def update_health_check(params = {}, **options)
-      req = build_request(:update_health_check, params)
+    def update_health_check(, **options)
+      req = build_request(:update_health_check, )
       req.send_request(options)
     end
 
@@ -5132,8 +5132,8 @@ module Aws::Route53
     #
     # @overload update_hosted_zone_comment(**params)
     # @param [Hash] params ({})
-    def update_hosted_zone_comment(params = {}, **options)
-      req = build_request(:update_hosted_zone_comment, params)
+    def update_hosted_zone_comment(, **options)
+      req = build_request(:update_hosted_zone_comment, )
       req.send_request(options)
     end
 
@@ -5175,8 +5175,8 @@ module Aws::Route53
     #
     # @overload update_traffic_policy_comment(**params)
     # @param [Hash] params ({})
-    def update_traffic_policy_comment(params = {}, **options)
-      req = build_request(:update_traffic_policy_comment, params)
+    def update_traffic_policy_comment(, **options)
+      req = build_request(:update_traffic_policy_comment, )
       req.send_request(options)
     end
 
@@ -5246,8 +5246,8 @@ module Aws::Route53
     #
     # @overload update_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def update_traffic_policy_instance(params = {}, **options)
-      req = build_request(:update_traffic_policy_instance, params)
+    def update_traffic_policy_instance(, **options)
+      req = build_request(:update_traffic_policy_instance, )
       req.send_request(options)
     end
 

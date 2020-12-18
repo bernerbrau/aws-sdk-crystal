@@ -436,8 +436,8 @@ module Aws::SQS
     #
     # @overload add_permission(**params)
     # @param [Hash] params ({})
-    def add_permission(params = {}, **options)
-      req = build_request(:add_permission, params)
+    def add_permission(, **options)
+      req = build_request(:add_permission, )
       req.send_request(options)
     end
 
@@ -533,8 +533,8 @@ module Aws::SQS
     #
     # @overload change_message_visibility(**params)
     # @param [Hash] params ({})
-    def change_message_visibility(params = {}, **options)
-      req = build_request(:change_message_visibility, params)
+    def change_message_visibility(, **options)
+      req = build_request(:change_message_visibility, )
       req.send_request(options)
     end
 
@@ -598,8 +598,8 @@ module Aws::SQS
     #
     # @overload change_message_visibility_batch(**params)
     # @param [Hash] params ({})
-    def change_message_visibility_batch(params = {}, **options)
-      req = build_request(:change_message_visibility_batch, params)
+    def change_message_visibility_batch(, **options)
+      req = build_request(:change_message_visibility_batch, )
       req.send_request(options)
     end
 
@@ -868,8 +868,8 @@ module Aws::SQS
     #
     # @overload create_queue(**params)
     # @param [Hash] params ({})
-    def create_queue(params = {}, **options)
-      req = build_request(:create_queue, params)
+    def create_queue(, **options)
+      req = build_request(:create_queue, )
       req.send_request(options)
     end
 
@@ -919,8 +919,8 @@ module Aws::SQS
     #
     # @overload delete_message(**params)
     # @param [Hash] params ({})
-    def delete_message(params = {}, **options)
-      req = build_request(:delete_message, params)
+    def delete_message(, **options)
+      req = build_request(:delete_message, )
       req.send_request(options)
     end
 
@@ -979,8 +979,8 @@ module Aws::SQS
     #
     # @overload delete_message_batch(**params)
     # @param [Hash] params ({})
-    def delete_message_batch(params = {}, **options)
-      req = build_request(:delete_message_batch, params)
+    def delete_message_batch(, **options)
+      req = build_request(:delete_message_batch, )
       req.send_request(options)
     end
 
@@ -1025,8 +1025,8 @@ module Aws::SQS
     #
     # @overload delete_queue(**params)
     # @param [Hash] params ({})
-    def delete_queue(params = {}, **options)
-      req = build_request(:delete_queue, params)
+    def delete_queue(, **options)
+      req = build_request(:delete_queue, )
       req.send_request(options)
     end
 
@@ -1182,8 +1182,8 @@ module Aws::SQS
     #
     # @overload get_queue_attributes(**params)
     # @param [Hash] params ({})
-    def get_queue_attributes(params = {}, **options)
-      req = build_request(:get_queue_attributes, params)
+    def get_queue_attributes(, **options)
+      req = build_request(:get_queue_attributes, )
       req.send_request(options)
     end
 
@@ -1229,8 +1229,8 @@ module Aws::SQS
     #
     # @overload get_queue_url(**params)
     # @param [Hash] params ({})
-    def get_queue_url(params = {}, **options)
-      req = build_request(:get_queue_url, params)
+    def get_queue_url(, **options)
+      req = build_request(:get_queue_url, )
       req.send_request(options)
     end
 
@@ -1292,8 +1292,8 @@ module Aws::SQS
     #
     # @overload list_dead_letter_source_queues(**params)
     # @param [Hash] params ({})
-    def list_dead_letter_source_queues(params = {}, **options)
-      req = build_request(:list_dead_letter_source_queues, params)
+    def list_dead_letter_source_queues(, **options)
+      req = build_request(:list_dead_letter_source_queues, )
       req.send_request(options)
     end
 
@@ -1334,8 +1334,8 @@ module Aws::SQS
     #
     # @overload list_queue_tags(**params)
     # @param [Hash] params ({})
-    def list_queue_tags(params = {}, **options)
-      req = build_request(:list_queue_tags, params)
+    def list_queue_tags(, **options)
+      req = build_request(:list_queue_tags, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::SQS
     #
     # @overload list_queues(**params)
     # @param [Hash] params ({})
-    def list_queues(params = {}, **options)
-      req = build_request(:list_queues, params)
+    def list_queues(, **options)
+      req = build_request(:list_queues, )
       req.send_request(options)
     end
 
@@ -1438,8 +1438,8 @@ module Aws::SQS
     #
     # @overload purge_queue(**params)
     # @param [Hash] params ({})
-    def purge_queue(params = {}, **options)
-      req = build_request(:purge_queue, params)
+    def purge_queue(, **options)
+      req = build_request(:purge_queue, )
       req.send_request(options)
     end
 
@@ -1698,8 +1698,8 @@ module Aws::SQS
     #
     # @overload receive_message(**params)
     # @param [Hash] params ({})
-    def receive_message(params = {}, **options)
-      req = build_request(:receive_message, params)
+    def receive_message(, **options)
+      req = build_request(:receive_message, )
       req.send_request(options)
     end
 
@@ -1744,8 +1744,8 @@ module Aws::SQS
     #
     # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, **options)
-      req = build_request(:remove_permission, params)
+    def remove_permission(, **options)
+      req = build_request(:remove_permission, )
       req.send_request(options)
     end
 
@@ -1962,8 +1962,8 @@ module Aws::SQS
     #
     # @overload send_message(**params)
     # @param [Hash] params ({})
-    def send_message(params = {}, **options)
-      req = build_request(:send_message, params)
+    def send_message(, **options)
+      req = build_request(:send_message, )
       req.send_request(options)
     end
 
@@ -2069,8 +2069,8 @@ module Aws::SQS
     #
     # @overload send_message_batch(**params)
     # @param [Hash] params ({})
-    def send_message_batch(params = {}, **options)
-      req = build_request(:send_message_batch, params)
+    def send_message_batch(, **options)
+      req = build_request(:send_message_batch, )
       req.send_request(options)
     end
 
@@ -2239,8 +2239,8 @@ module Aws::SQS
     #
     # @overload set_queue_attributes(**params)
     # @param [Hash] params ({})
-    def set_queue_attributes(params = {}, **options)
-      req = build_request(:set_queue_attributes, params)
+    def set_queue_attributes(, **options)
+      req = build_request(:set_queue_attributes, )
       req.send_request(options)
     end
 
@@ -2296,8 +2296,8 @@ module Aws::SQS
     #
     # @overload tag_queue(**params)
     # @param [Hash] params ({})
-    def tag_queue(params = {}, **options)
-      req = build_request(:tag_queue, params)
+    def tag_queue(, **options)
+      req = build_request(:tag_queue, )
       req.send_request(options)
     end
 
@@ -2335,8 +2335,8 @@ module Aws::SQS
     #
     # @overload untag_queue(**params)
     # @param [Hash] params ({})
-    def untag_queue(params = {}, **options)
-      req = build_request(:untag_queue, params)
+    def untag_queue(, **options)
+      req = build_request(:untag_queue, )
       req.send_request(options)
     end
 

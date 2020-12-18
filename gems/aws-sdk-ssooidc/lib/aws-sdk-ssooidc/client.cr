@@ -401,8 +401,8 @@ module Aws::SSOOIDC
     #
     # @overload create_token(**params)
     # @param [Hash] params ({})
-    def create_token(params = {}, **options)
-      req = build_request(:create_token, params)
+    def create_token(, **options)
+      req = build_request(:create_token, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::SSOOIDC
     #
     # @overload register_client(**params)
     # @param [Hash] params ({})
-    def register_client(params = {}, **options)
-      req = build_request(:register_client, params)
+    def register_client(, **options)
+      req = build_request(:register_client, )
       req.send_request(options)
     end
 
@@ -507,8 +507,8 @@ module Aws::SSOOIDC
     #
     # @overload start_device_authorization(**params)
     # @param [Hash] params ({})
-    def start_device_authorization(params = {}, **options)
-      req = build_request(:start_device_authorization, params)
+    def start_device_authorization(, **options)
+      req = build_request(:start_device_authorization, )
       req.send_request(options)
     end
 

@@ -360,8 +360,8 @@ module Aws::AppRegistry
     #
     # @overload associate_attribute_group(**params)
     # @param [Hash] params ({})
-    def associate_attribute_group(params = {}, **options)
-      req = build_request(:associate_attribute_group, params)
+    def associate_attribute_group(, **options)
+      req = build_request(:associate_attribute_group, )
       req.send_request(options)
     end
 
@@ -400,8 +400,8 @@ module Aws::AppRegistry
     #
     # @overload associate_resource(**params)
     # @param [Hash] params ({})
-    def associate_resource(params = {}, **options)
-      req = build_request(:associate_resource, params)
+    def associate_resource(, **options)
+      req = build_request(:associate_resource, )
       req.send_request(options)
     end
 
@@ -459,8 +459,8 @@ module Aws::AppRegistry
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -525,8 +525,8 @@ module Aws::AppRegistry
     #
     # @overload create_attribute_group(**params)
     # @param [Hash] params ({})
-    def create_attribute_group(params = {}, **options)
-      req = build_request(:create_attribute_group, params)
+    def create_attribute_group(, **options)
+      req = build_request(:create_attribute_group, )
       req.send_request(options)
     end
 
@@ -560,8 +560,8 @@ module Aws::AppRegistry
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -595,8 +595,8 @@ module Aws::AppRegistry
     #
     # @overload delete_attribute_group(**params)
     # @param [Hash] params ({})
-    def delete_attribute_group(params = {}, **options)
-      req = build_request(:delete_attribute_group, params)
+    def delete_attribute_group(, **options)
+      req = build_request(:delete_attribute_group, )
       req.send_request(options)
     end
 
@@ -633,8 +633,8 @@ module Aws::AppRegistry
     #
     # @overload disassociate_attribute_group(**params)
     # @param [Hash] params ({})
-    def disassociate_attribute_group(params = {}, **options)
-      req = build_request(:disassociate_attribute_group, params)
+    def disassociate_attribute_group(, **options)
+      req = build_request(:disassociate_attribute_group, )
       req.send_request(options)
     end
 
@@ -672,8 +672,8 @@ module Aws::AppRegistry
     #
     # @overload disassociate_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_resource(params = {}, **options)
-      req = build_request(:disassociate_resource, params)
+    def disassociate_resource(, **options)
+      req = build_request(:disassociate_resource, )
       req.send_request(options)
     end
 
@@ -721,8 +721,8 @@ module Aws::AppRegistry
     #
     # @overload get_application(**params)
     # @param [Hash] params ({})
-    def get_application(params = {}, **options)
-      req = build_request(:get_application, params)
+    def get_application(, **options)
+      req = build_request(:get_application, )
       req.send_request(options)
     end
 
@@ -767,8 +767,8 @@ module Aws::AppRegistry
     #
     # @overload get_attribute_group(**params)
     # @param [Hash] params ({})
-    def get_attribute_group(params = {}, **options)
-      req = build_request(:get_attribute_group, params)
+    def get_attribute_group(, **options)
+      req = build_request(:get_attribute_group, )
       req.send_request(options)
     end
 
@@ -812,8 +812,8 @@ module Aws::AppRegistry
     #
     # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, **options)
-      req = build_request(:list_applications, params)
+    def list_applications(, **options)
+      req = build_request(:list_applications, )
       req.send_request(options)
     end
 
@@ -857,8 +857,8 @@ module Aws::AppRegistry
     #
     # @overload list_associated_attribute_groups(**params)
     # @param [Hash] params ({})
-    def list_associated_attribute_groups(params = {}, **options)
-      req = build_request(:list_associated_attribute_groups, params)
+    def list_associated_attribute_groups(, **options)
+      req = build_request(:list_associated_attribute_groups, )
       req.send_request(options)
     end
 
@@ -903,8 +903,8 @@ module Aws::AppRegistry
     #
     # @overload list_associated_resources(**params)
     # @param [Hash] params ({})
-    def list_associated_resources(params = {}, **options)
-      req = build_request(:list_associated_resources, params)
+    def list_associated_resources(, **options)
+      req = build_request(:list_associated_resources, )
       req.send_request(options)
     end
 
@@ -949,8 +949,8 @@ module Aws::AppRegistry
     #
     # @overload list_attribute_groups(**params)
     # @param [Hash] params ({})
-    def list_attribute_groups(params = {}, **options)
-      req = build_request(:list_attribute_groups, params)
+    def list_attribute_groups(, **options)
+      req = build_request(:list_attribute_groups, )
       req.send_request(options)
     end
 
@@ -978,8 +978,8 @@ module Aws::AppRegistry
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1010,8 +1010,8 @@ module Aws::AppRegistry
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1036,8 +1036,8 @@ module Aws::AppRegistry
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1080,8 +1080,8 @@ module Aws::AppRegistry
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 
@@ -1131,8 +1131,8 @@ module Aws::AppRegistry
     #
     # @overload update_attribute_group(**params)
     # @param [Hash] params ({})
-    def update_attribute_group(params = {}, **options)
-      req = build_request(:update_attribute_group, params)
+    def update_attribute_group(, **options)
+      req = build_request(:update_attribute_group, )
       req.send_request(options)
     end
 

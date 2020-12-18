@@ -2080,5 +2080,635 @@ module Aws::IoTThingsGraph
       include Aws::Structure
     end
 
+    alias Arn = String
+
+    alias AssociateEntityToThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "entityId" : Urn,
+      "namespaceVersion" : (Version)?
+    )
+
+    alias AssociateEntityToThingResponse = NamedTuple(
+      
+    )
+
+    alias CreateFlowTemplateRequest = NamedTuple(
+      "definition" : DefinitionDocument,
+      "compatibleNamespaceVersion" : (Version)?
+    )
+
+    alias CreateFlowTemplateResponse = NamedTuple(
+      "summary" : (FlowTemplateSummary)?
+    )
+
+    alias CreateSystemInstanceRequest = NamedTuple(
+      "tags" : (TagList)?,
+      "definition" : DefinitionDocument,
+      "target" : DeploymentTarget,
+      "greengrassGroupName" : (GroupName)?,
+      "s3BucketName" : (S3BucketName)?,
+      "metricsConfiguration" : (MetricsConfiguration)?,
+      "flowActionsRoleArn" : (RoleArn)?
+    )
+
+    alias CreateSystemInstanceResponse = NamedTuple(
+      "summary" : (SystemInstanceSummary)?
+    )
+
+    alias CreateSystemTemplateRequest = NamedTuple(
+      "definition" : DefinitionDocument,
+      "compatibleNamespaceVersion" : (Version)?
+    )
+
+    alias CreateSystemTemplateResponse = NamedTuple(
+      "summary" : (SystemTemplateSummary)?
+    )
+
+    alias DefinitionDocument = NamedTuple(
+      "language" : DefinitionLanguage,
+      "text" : DefinitionText
+    )
+
+    alias DefinitionLanguage = String
+
+    alias DefinitionText = String
+
+    alias DeleteFlowTemplateRequest = NamedTuple(
+      "id" : Urn
+    )
+
+    alias DeleteFlowTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DeleteNamespaceRequest = NamedTuple(
+      
+    )
+
+    alias DeleteNamespaceResponse = NamedTuple(
+      "namespaceArn" : (Arn)?,
+      "namespaceName" : (NamespaceName)?
+    )
+
+    alias DeleteSystemInstanceRequest = NamedTuple(
+      "id" : (Urn)?
+    )
+
+    alias DeleteSystemInstanceResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSystemTemplateRequest = NamedTuple(
+      "id" : Urn
+    )
+
+    alias DeleteSystemTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DependencyRevision = NamedTuple(
+      "id" : (Urn)?,
+      "revisionNumber" : (Version)?
+    )
+
+    alias DependencyRevisions = Array(DependencyRevision)
+
+    alias DeploySystemInstanceRequest = NamedTuple(
+      "id" : (Urn)?
+    )
+
+    alias DeploySystemInstanceResponse = NamedTuple(
+      "summary" : SystemInstanceSummary,
+      "greengrassDeploymentId" : (GreengrassDeploymentId)?
+    )
+
+    alias DeploymentTarget = String
+
+    alias DeprecateExistingEntities = Bool
+
+    alias DeprecateFlowTemplateRequest = NamedTuple(
+      "id" : Urn
+    )
+
+    alias DeprecateFlowTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DeprecateSystemTemplateRequest = NamedTuple(
+      "id" : Urn
+    )
+
+    alias DeprecateSystemTemplateResponse = NamedTuple(
+      
+    )
+
+    alias DescribeNamespaceRequest = NamedTuple(
+      "namespaceName" : (NamespaceName)?
+    )
+
+    alias DescribeNamespaceResponse = NamedTuple(
+      "namespaceArn" : (Arn)?,
+      "namespaceName" : (NamespaceName)?,
+      "trackingNamespaceName" : (NamespaceName)?,
+      "trackingNamespaceVersion" : (Version)?,
+      "namespaceVersion" : (Version)?
+    )
+
+    alias DissociateEntityFromThingRequest = NamedTuple(
+      "thingName" : ThingName,
+      "entityType" : EntityType
+    )
+
+    alias DissociateEntityFromThingResponse = NamedTuple(
+      
+    )
+
+    alias Enabled = Bool
+
+    alias EntityDescription = NamedTuple(
+      "id" : (Urn)?,
+      "arn" : (Arn)?,
+      "type" : (EntityType)?,
+      "createdAt" : (Timestamp)?,
+      "definition" : (DefinitionDocument)?
+    )
+
+    alias EntityDescriptions = Array(EntityDescription)
+
+    alias EntityFilter = NamedTuple(
+      "name" : (EntityFilterName)?,
+      "value" : (EntityFilterValues)?
+    )
+
+    alias EntityFilterName = String
+
+    alias EntityFilterValue = String
+
+    alias EntityFilterValues = Array(EntityFilterValue)
+
+    alias EntityFilters = Array(EntityFilter)
+
+    alias EntityType = String
+
+    alias EntityTypes = Array(EntityType)
+
+    alias ErrorMessage = String
+
+    alias FlowExecutionEventType = String
+
+    alias FlowExecutionId = String
+
+    alias FlowExecutionMessage = NamedTuple(
+      "messageId" : (FlowExecutionMessageId)?,
+      "eventType" : (FlowExecutionEventType)?,
+      "timestamp" : (Timestamp)?,
+      "payload" : (FlowExecutionMessagePayload)?
+    )
+
+    alias FlowExecutionMessageId = String
+
+    alias FlowExecutionMessagePayload = String
+
+    alias FlowExecutionMessages = Array(FlowExecutionMessage)
+
+    alias FlowExecutionStatus = String
+
+    alias FlowExecutionSummaries = Array(FlowExecutionSummary)
+
+    alias FlowExecutionSummary = NamedTuple(
+      "flowExecutionId" : (FlowExecutionId)?,
+      "status" : (FlowExecutionStatus)?,
+      "systemInstanceId" : (Urn)?,
+      "flowTemplateId" : (Urn)?,
+      "createdAt" : (Timestamp)?,
+      "updatedAt" : (Timestamp)?
+    )
+
+    alias FlowTemplateDescription = NamedTuple(
+      "summary" : (FlowTemplateSummary)?,
+      "definition" : (DefinitionDocument)?,
+      "validatedNamespaceVersion" : (Version)?
+    )
+
+    alias FlowTemplateFilter = NamedTuple(
+      "name" : FlowTemplateFilterName,
+      "value" : FlowTemplateFilterValues
+    )
+
+    alias FlowTemplateFilterName = String
+
+    alias FlowTemplateFilterValue = String
+
+    alias FlowTemplateFilterValues = Array(FlowTemplateFilterValue)
+
+    alias FlowTemplateFilters = Array(FlowTemplateFilter)
+
+    alias FlowTemplateSummaries = Array(FlowTemplateSummary)
+
+    alias FlowTemplateSummary = NamedTuple(
+      "id" : (Urn)?,
+      "arn" : (Arn)?,
+      "revisionNumber" : (Version)?,
+      "createdAt" : (Timestamp)?
+    )
+
+    alias GetEntitiesRequest = NamedTuple(
+      "ids" : Urns,
+      "namespaceVersion" : (Version)?
+    )
+
+    alias GetEntitiesResponse = NamedTuple(
+      "descriptions" : (EntityDescriptions)?
+    )
+
+    alias GetFlowTemplateRequest = NamedTuple(
+      "id" : Urn,
+      "revisionNumber" : (Version)?
+    )
+
+    alias GetFlowTemplateResponse = NamedTuple(
+      "description" : (FlowTemplateDescription)?
+    )
+
+    alias GetFlowTemplateRevisionsRequest = NamedTuple(
+      "id" : Urn,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetFlowTemplateRevisionsResponse = NamedTuple(
+      "summaries" : (FlowTemplateSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetNamespaceDeletionStatusRequest = NamedTuple(
+      
+    )
+
+    alias GetNamespaceDeletionStatusResponse = NamedTuple(
+      "namespaceArn" : (Arn)?,
+      "namespaceName" : (NamespaceName)?,
+      "status" : (NamespaceDeletionStatus)?,
+      "errorCode" : (NamespaceDeletionStatusErrorCodes)?,
+      "errorMessage" : (String)?
+    )
+
+    alias GetSystemInstanceRequest = NamedTuple(
+      "id" : Urn
+    )
+
+    alias GetSystemInstanceResponse = NamedTuple(
+      "description" : (SystemInstanceDescription)?
+    )
+
+    alias GetSystemTemplateRequest = NamedTuple(
+      "id" : Urn,
+      "revisionNumber" : (Version)?
+    )
+
+    alias GetSystemTemplateResponse = NamedTuple(
+      "description" : (SystemTemplateDescription)?
+    )
+
+    alias GetSystemTemplateRevisionsRequest = NamedTuple(
+      "id" : Urn,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetSystemTemplateRevisionsResponse = NamedTuple(
+      "summaries" : (SystemTemplateSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetUploadStatusRequest = NamedTuple(
+      "uploadId" : UploadId
+    )
+
+    alias GetUploadStatusResponse = NamedTuple(
+      "uploadId" : UploadId,
+      "uploadStatus" : UploadStatus,
+      "namespaceArn" : (Arn)?,
+      "namespaceName" : (NamespaceName)?,
+      "namespaceVersion" : (Version)?,
+      "failureReason" : (StringList)?,
+      "createdDate" : Timestamp
+    )
+
+    alias GreengrassDeploymentId = String
+
+    alias GreengrassGroupId = String
+
+    alias GreengrassGroupVersionId = String
+
+    alias GroupName = String
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListFlowExecutionMessagesRequest = NamedTuple(
+      "flowExecutionId" : FlowExecutionId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListFlowExecutionMessagesResponse = NamedTuple(
+      "messages" : (FlowExecutionMessages)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "resourceArn" : ResourceArn,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MetricsConfiguration = NamedTuple(
+      "cloudMetricEnabled" : (Enabled)?,
+      "metricRuleRoleArn" : (RoleArn)?
+    )
+
+    alias NamespaceDeletionStatus = String
+
+    alias NamespaceDeletionStatusErrorCodes = String
+
+    alias NamespaceName = String
+
+    alias NextToken = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias RoleArn = String
+
+    alias S3BucketName = String
+
+    alias SearchEntitiesRequest = NamedTuple(
+      "entityTypes" : EntityTypes,
+      "filters" : (EntityFilters)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "namespaceVersion" : (Version)?
+    )
+
+    alias SearchEntitiesResponse = NamedTuple(
+      "descriptions" : (EntityDescriptions)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias SearchFlowExecutionsRequest = NamedTuple(
+      "systemInstanceId" : Urn,
+      "flowExecutionId" : (FlowExecutionId)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias SearchFlowExecutionsResponse = NamedTuple(
+      "summaries" : (FlowExecutionSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias SearchFlowTemplatesRequest = NamedTuple(
+      "filters" : (FlowTemplateFilters)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias SearchFlowTemplatesResponse = NamedTuple(
+      "summaries" : (FlowTemplateSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias SearchSystemInstancesRequest = NamedTuple(
+      "filters" : (SystemInstanceFilters)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias SearchSystemInstancesResponse = NamedTuple(
+      "summaries" : (SystemInstanceSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias SearchSystemTemplatesRequest = NamedTuple(
+      "filters" : (SystemTemplateFilters)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias SearchSystemTemplatesResponse = NamedTuple(
+      "summaries" : (SystemTemplateSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias SearchThingsRequest = NamedTuple(
+      "entityId" : Urn,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "namespaceVersion" : (Version)?
+    )
+
+    alias SearchThingsResponse = NamedTuple(
+      "things" : (Things)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias SyncWithPublicNamespace = Bool
+
+    alias SystemInstanceDeploymentStatus = String
+
+    alias SystemInstanceDescription = NamedTuple(
+      "summary" : (SystemInstanceSummary)?,
+      "definition" : (DefinitionDocument)?,
+      "s3BucketName" : (S3BucketName)?,
+      "metricsConfiguration" : (MetricsConfiguration)?,
+      "validatedNamespaceVersion" : (Version)?,
+      "validatedDependencyRevisions" : (DependencyRevisions)?,
+      "flowActionsRoleArn" : (RoleArn)?
+    )
+
+    alias SystemInstanceFilter = NamedTuple(
+      "name" : (SystemInstanceFilterName)?,
+      "value" : (SystemInstanceFilterValues)?
+    )
+
+    alias SystemInstanceFilterName = String
+
+    alias SystemInstanceFilterValue = String
+
+    alias SystemInstanceFilterValues = Array(SystemInstanceFilterValue)
+
+    alias SystemInstanceFilters = Array(SystemInstanceFilter)
+
+    alias SystemInstanceSummaries = Array(SystemInstanceSummary)
+
+    alias SystemInstanceSummary = NamedTuple(
+      "id" : (Urn)?,
+      "arn" : (Arn)?,
+      "status" : (SystemInstanceDeploymentStatus)?,
+      "target" : (DeploymentTarget)?,
+      "greengrassGroupName" : (GroupName)?,
+      "createdAt" : (Timestamp)?,
+      "updatedAt" : (Timestamp)?,
+      "greengrassGroupId" : (GreengrassGroupId)?,
+      "greengrassGroupVersionId" : (GreengrassGroupVersionId)?
+    )
+
+    alias SystemTemplateDescription = NamedTuple(
+      "summary" : (SystemTemplateSummary)?,
+      "definition" : (DefinitionDocument)?,
+      "validatedNamespaceVersion" : (Version)?
+    )
+
+    alias SystemTemplateFilter = NamedTuple(
+      "name" : SystemTemplateFilterName,
+      "value" : SystemTemplateFilterValues
+    )
+
+    alias SystemTemplateFilterName = String
+
+    alias SystemTemplateFilterValue = String
+
+    alias SystemTemplateFilterValues = Array(SystemTemplateFilterValue)
+
+    alias SystemTemplateFilters = Array(SystemTemplateFilter)
+
+    alias SystemTemplateSummaries = Array(SystemTemplateSummary)
+
+    alias SystemTemplateSummary = NamedTuple(
+      "id" : (Urn)?,
+      "arn" : (Arn)?,
+      "revisionNumber" : (Version)?,
+      "createdAt" : (Timestamp)?
+    )
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Thing = NamedTuple(
+      "thingArn" : (ThingArn)?,
+      "thingName" : (ThingName)?
+    )
+
+    alias ThingArn = String
+
+    alias ThingName = String
+
+    alias Things = Array(Thing)
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UndeploySystemInstanceRequest = NamedTuple(
+      "id" : (Urn)?
+    )
+
+    alias UndeploySystemInstanceResponse = NamedTuple(
+      "summary" : (SystemInstanceSummary)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFlowTemplateRequest = NamedTuple(
+      "id" : Urn,
+      "definition" : DefinitionDocument,
+      "compatibleNamespaceVersion" : (Version)?
+    )
+
+    alias UpdateFlowTemplateResponse = NamedTuple(
+      "summary" : (FlowTemplateSummary)?
+    )
+
+    alias UpdateSystemTemplateRequest = NamedTuple(
+      "id" : Urn,
+      "definition" : DefinitionDocument,
+      "compatibleNamespaceVersion" : (Version)?
+    )
+
+    alias UpdateSystemTemplateResponse = NamedTuple(
+      "summary" : (SystemTemplateSummary)?
+    )
+
+    alias UploadEntityDefinitionsRequest = NamedTuple(
+      "document" : (DefinitionDocument)?,
+      "syncWithPublicNamespace" : (SyncWithPublicNamespace)?,
+      "deprecateExistingEntities" : (DeprecateExistingEntities)?
+    )
+
+    alias UploadEntityDefinitionsResponse = NamedTuple(
+      "uploadId" : UploadId
+    )
+
+    alias UploadId = String
+
+    alias UploadStatus = String
+
+    alias Urn = String
+
+    alias Urns = Array(Urn)
+
+    alias Version = Int64
   end
 end

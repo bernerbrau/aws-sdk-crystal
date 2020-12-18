@@ -368,8 +368,8 @@ module Aws::MTurk
     #
     # @overload accept_qualification_request(**params)
     # @param [Hash] params ({})
-    def accept_qualification_request(params = {}, **options)
-      req = build_request(:accept_qualification_request, params)
+    def accept_qualification_request(, **options)
+      req = build_request(:accept_qualification_request, )
       req.send_request(options)
     end
 
@@ -422,8 +422,8 @@ module Aws::MTurk
     #
     # @overload approve_assignment(**params)
     # @param [Hash] params ({})
-    def approve_assignment(params = {}, **options)
-      req = build_request(:approve_assignment, params)
+    def approve_assignment(, **options)
+      req = build_request(:approve_assignment, )
       req.send_request(options)
     end
 
@@ -477,8 +477,8 @@ module Aws::MTurk
     #
     # @overload associate_qualification_with_worker(**params)
     # @param [Hash] params ({})
-    def associate_qualification_with_worker(params = {}, **options)
-      req = build_request(:associate_qualification_with_worker, params)
+    def associate_qualification_with_worker(, **options)
+      req = build_request(:associate_qualification_with_worker, )
       req.send_request(options)
     end
 
@@ -530,8 +530,8 @@ module Aws::MTurk
     #
     # @overload create_additional_assignments_for_hit(**params)
     # @param [Hash] params ({})
-    def create_additional_assignments_for_hit(params = {}, **options)
-      req = build_request(:create_additional_assignments_for_hit, params)
+    def create_additional_assignments_for_hit(, **options)
+      req = build_request(:create_additional_assignments_for_hit, )
       req.send_request(options)
     end
 
@@ -790,8 +790,8 @@ module Aws::MTurk
     #
     # @overload create_hit(**params)
     # @param [Hash] params ({})
-    def create_hit(params = {}, **options)
-      req = build_request(:create_hit, params)
+    def create_hit(, **options)
+      req = build_request(:create_hit, )
       req.send_request(options)
     end
 
@@ -881,8 +881,8 @@ module Aws::MTurk
     #
     # @overload create_hit_type(**params)
     # @param [Hash] params ({})
-    def create_hit_type(params = {}, **options)
-      req = build_request(:create_hit_type, params)
+    def create_hit_type(, **options)
+      req = build_request(:create_hit_type, )
       req.send_request(options)
     end
 
@@ -1073,8 +1073,8 @@ module Aws::MTurk
     #
     # @overload create_hit_with_hit_type(**params)
     # @param [Hash] params ({})
-    def create_hit_with_hit_type(params = {}, **options)
-      req = build_request(:create_hit_with_hit_type, params)
+    def create_hit_with_hit_type(, **options)
+      req = build_request(:create_hit_with_hit_type, )
       req.send_request(options)
     end
 
@@ -1191,8 +1191,8 @@ module Aws::MTurk
     #
     # @overload create_qualification_type(**params)
     # @param [Hash] params ({})
-    def create_qualification_type(params = {}, **options)
-      req = build_request(:create_qualification_type, params)
+    def create_qualification_type(, **options)
+      req = build_request(:create_qualification_type, )
       req.send_request(options)
     end
 
@@ -1221,8 +1221,8 @@ module Aws::MTurk
     #
     # @overload create_worker_block(**params)
     # @param [Hash] params ({})
-    def create_worker_block(params = {}, **options)
-      req = build_request(:create_worker_block, params)
+    def create_worker_block(, **options)
+      req = build_request(:create_worker_block, )
       req.send_request(options)
     end
 
@@ -1265,8 +1265,8 @@ module Aws::MTurk
     #
     # @overload delete_hit(**params)
     # @param [Hash] params ({})
-    def delete_hit(params = {}, **options)
-      req = build_request(:delete_hit, params)
+    def delete_hit(, **options)
+      req = build_request(:delete_hit, )
       req.send_request(options)
     end
 
@@ -1303,8 +1303,8 @@ module Aws::MTurk
     #
     # @overload delete_qualification_type(**params)
     # @param [Hash] params ({})
-    def delete_qualification_type(params = {}, **options)
-      req = build_request(:delete_qualification_type, params)
+    def delete_qualification_type(, **options)
+      req = build_request(:delete_qualification_type, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::MTurk
     #
     # @overload delete_worker_block(**params)
     # @param [Hash] params ({})
-    def delete_worker_block(params = {}, **options)
-      req = build_request(:delete_worker_block, params)
+    def delete_worker_block(, **options)
+      req = build_request(:delete_worker_block, )
       req.send_request(options)
     end
 
@@ -1370,8 +1370,8 @@ module Aws::MTurk
     #
     # @overload disassociate_qualification_from_worker(**params)
     # @param [Hash] params ({})
-    def disassociate_qualification_from_worker(params = {}, **options)
-      req = build_request(:disassociate_qualification_from_worker, params)
+    def disassociate_qualification_from_worker(, **options)
+      req = build_request(:disassociate_qualification_from_worker, )
       req.send_request(options)
     end
 
@@ -1392,8 +1392,8 @@ module Aws::MTurk
     #
     # @overload get_account_balance(**params)
     # @param [Hash] params ({})
-    def get_account_balance(params = {}, **options)
-      req = build_request(:get_account_balance, params)
+    def get_account_balance(, **options)
+      req = build_request(:get_account_balance, )
       req.send_request(options)
     end
 
@@ -1463,8 +1463,8 @@ module Aws::MTurk
     #
     # @overload get_assignment(**params)
     # @param [Hash] params ({})
-    def get_assignment(params = {}, **options)
-      req = build_request(:get_assignment, params)
+    def get_assignment(, **options)
+      req = build_request(:get_assignment, )
       req.send_request(options)
     end
 
@@ -1508,8 +1508,8 @@ module Aws::MTurk
     #
     # @overload get_file_upload_url(**params)
     # @param [Hash] params ({})
-    def get_file_upload_url(params = {}, **options)
-      req = build_request(:get_file_upload_url, params)
+    def get_file_upload_url(, **options)
+      req = build_request(:get_file_upload_url, )
       req.send_request(options)
     end
 
@@ -1565,8 +1565,8 @@ module Aws::MTurk
     #
     # @overload get_hit(**params)
     # @param [Hash] params ({})
-    def get_hit(params = {}, **options)
-      req = build_request(:get_hit, params)
+    def get_hit(, **options)
+      req = build_request(:get_hit, )
       req.send_request(options)
     end
 
@@ -1611,8 +1611,8 @@ module Aws::MTurk
     #
     # @overload get_qualification_score(**params)
     # @param [Hash] params ({})
-    def get_qualification_score(params = {}, **options)
-      req = build_request(:get_qualification_score, params)
+    def get_qualification_score(, **options)
+      req = build_request(:get_qualification_score, )
       req.send_request(options)
     end
 
@@ -1652,8 +1652,8 @@ module Aws::MTurk
     #
     # @overload get_qualification_type(**params)
     # @param [Hash] params ({})
-    def get_qualification_type(params = {}, **options)
-      req = build_request(:get_qualification_type, params)
+    def get_qualification_type(, **options)
+      req = build_request(:get_qualification_type, )
       req.send_request(options)
     end
 
@@ -1731,8 +1731,8 @@ module Aws::MTurk
     #
     # @overload list_assignments_for_hit(**params)
     # @param [Hash] params ({})
-    def list_assignments_for_hit(params = {}, **options)
-      req = build_request(:list_assignments_for_hit, params)
+    def list_assignments_for_hit(, **options)
+      req = build_request(:list_assignments_for_hit, )
       req.send_request(options)
     end
 
@@ -1788,8 +1788,8 @@ module Aws::MTurk
     #
     # @overload list_bonus_payments(**params)
     # @param [Hash] params ({})
-    def list_bonus_payments(params = {}, **options)
-      req = build_request(:list_bonus_payments, params)
+    def list_bonus_payments(, **options)
+      req = build_request(:list_bonus_payments, )
       req.send_request(options)
     end
 
@@ -1858,8 +1858,8 @@ module Aws::MTurk
     #
     # @overload list_hits(**params)
     # @param [Hash] params ({})
-    def list_hits(params = {}, **options)
-      req = build_request(:list_hits, params)
+    def list_hits(, **options)
+      req = build_request(:list_hits, )
       req.send_request(options)
     end
 
@@ -1933,8 +1933,8 @@ module Aws::MTurk
     #
     # @overload list_hits_for_qualification_type(**params)
     # @param [Hash] params ({})
-    def list_hits_for_qualification_type(params = {}, **options)
-      req = build_request(:list_hits_for_qualification_type, params)
+    def list_hits_for_qualification_type(, **options)
+      req = build_request(:list_hits_for_qualification_type, )
       req.send_request(options)
     end
 
@@ -1987,8 +1987,8 @@ module Aws::MTurk
     #
     # @overload list_qualification_requests(**params)
     # @param [Hash] params ({})
-    def list_qualification_requests(params = {}, **options)
-      req = build_request(:list_qualification_requests, params)
+    def list_qualification_requests(, **options)
+      req = build_request(:list_qualification_requests, )
       req.send_request(options)
     end
 
@@ -2062,8 +2062,8 @@ module Aws::MTurk
     #
     # @overload list_qualification_types(**params)
     # @param [Hash] params ({})
-    def list_qualification_types(params = {}, **options)
-      req = build_request(:list_qualification_types, params)
+    def list_qualification_types(, **options)
+      req = build_request(:list_qualification_types, )
       req.send_request(options)
     end
 
@@ -2178,8 +2178,8 @@ module Aws::MTurk
     #
     # @overload list_review_policy_results_for_hit(**params)
     # @param [Hash] params ({})
-    def list_review_policy_results_for_hit(params = {}, **options)
-      req = build_request(:list_review_policy_results_for_hit, params)
+    def list_review_policy_results_for_hit(, **options)
+      req = build_request(:list_review_policy_results_for_hit, )
       req.send_request(options)
     end
 
@@ -2258,8 +2258,8 @@ module Aws::MTurk
     #
     # @overload list_reviewable_hits(**params)
     # @param [Hash] params ({})
-    def list_reviewable_hits(params = {}, **options)
-      req = build_request(:list_reviewable_hits, params)
+    def list_reviewable_hits(, **options)
+      req = build_request(:list_reviewable_hits, )
       req.send_request(options)
     end
 
@@ -2298,8 +2298,8 @@ module Aws::MTurk
     #
     # @overload list_worker_blocks(**params)
     # @param [Hash] params ({})
-    def list_worker_blocks(params = {}, **options)
-      req = build_request(:list_worker_blocks, params)
+    def list_worker_blocks(, **options)
+      req = build_request(:list_worker_blocks, )
       req.send_request(options)
     end
 
@@ -2353,8 +2353,8 @@ module Aws::MTurk
     #
     # @overload list_workers_with_qualification_type(**params)
     # @param [Hash] params ({})
-    def list_workers_with_qualification_type(params = {}, **options)
-      req = build_request(:list_workers_with_qualification_type, params)
+    def list_workers_with_qualification_type(, **options)
+      req = build_request(:list_workers_with_qualification_type, )
       req.send_request(options)
     end
 
@@ -2400,8 +2400,8 @@ module Aws::MTurk
     #
     # @overload notify_workers(**params)
     # @param [Hash] params ({})
-    def notify_workers(params = {}, **options)
-      req = build_request(:notify_workers, params)
+    def notify_workers(, **options)
+      req = build_request(:notify_workers, )
       req.send_request(options)
     end
 
@@ -2438,8 +2438,8 @@ module Aws::MTurk
     #
     # @overload reject_assignment(**params)
     # @param [Hash] params ({})
-    def reject_assignment(params = {}, **options)
-      req = build_request(:reject_assignment, params)
+    def reject_assignment(, **options)
+      req = build_request(:reject_assignment, )
       req.send_request(options)
     end
 
@@ -2470,8 +2470,8 @@ module Aws::MTurk
     #
     # @overload reject_qualification_request(**params)
     # @param [Hash] params ({})
-    def reject_qualification_request(params = {}, **options)
-      req = build_request(:reject_qualification_request, params)
+    def reject_qualification_request(, **options)
+      req = build_request(:reject_qualification_request, )
       req.send_request(options)
     end
 
@@ -2526,8 +2526,8 @@ module Aws::MTurk
     #
     # @overload send_bonus(**params)
     # @param [Hash] params ({})
-    def send_bonus(params = {}, **options)
-      req = build_request(:send_bonus, params)
+    def send_bonus(, **options)
+      req = build_request(:send_bonus, )
       req.send_request(options)
     end
 
@@ -2568,8 +2568,8 @@ module Aws::MTurk
     #
     # @overload send_test_event_notification(**params)
     # @param [Hash] params ({})
-    def send_test_event_notification(params = {}, **options)
-      req = build_request(:send_test_event_notification, params)
+    def send_test_event_notification(, **options)
+      req = build_request(:send_test_event_notification, )
       req.send_request(options)
     end
 
@@ -2596,8 +2596,8 @@ module Aws::MTurk
     #
     # @overload update_expiration_for_hit(**params)
     # @param [Hash] params ({})
-    def update_expiration_for_hit(params = {}, **options)
-      req = build_request(:update_expiration_for_hit, params)
+    def update_expiration_for_hit(, **options)
+      req = build_request(:update_expiration_for_hit, )
       req.send_request(options)
     end
 
@@ -2631,8 +2631,8 @@ module Aws::MTurk
     #
     # @overload update_hit_review_status(**params)
     # @param [Hash] params ({})
-    def update_hit_review_status(params = {}, **options)
-      req = build_request(:update_hit_review_status, params)
+    def update_hit_review_status(, **options)
+      req = build_request(:update_hit_review_status, )
       req.send_request(options)
     end
 
@@ -2661,8 +2661,8 @@ module Aws::MTurk
     #
     # @overload update_hit_type_of_hit(**params)
     # @param [Hash] params ({})
-    def update_hit_type_of_hit(params = {}, **options)
-      req = build_request(:update_hit_type_of_hit, params)
+    def update_hit_type_of_hit(, **options)
+      req = build_request(:update_hit_type_of_hit, )
       req.send_request(options)
     end
 
@@ -2711,8 +2711,8 @@ module Aws::MTurk
     #
     # @overload update_notification_settings(**params)
     # @param [Hash] params ({})
-    def update_notification_settings(params = {}, **options)
-      req = build_request(:update_notification_settings, params)
+    def update_notification_settings(, **options)
+      req = build_request(:update_notification_settings, )
       req.send_request(options)
     end
 
@@ -2841,8 +2841,8 @@ module Aws::MTurk
     #
     # @overload update_qualification_type(**params)
     # @param [Hash] params ({})
-    def update_qualification_type(params = {}, **options)
-      req = build_request(:update_qualification_type, params)
+    def update_qualification_type(, **options)
+      req = build_request(:update_qualification_type, )
       req.send_request(options)
     end
 

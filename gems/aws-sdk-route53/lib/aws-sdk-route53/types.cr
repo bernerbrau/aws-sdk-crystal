@@ -7549,5 +7549,1300 @@ module Aws::Route53
       include Aws::Structure
     end
 
+    alias AWSAccountID = String
+
+    alias AccountLimit = NamedTuple(
+      "Type" : AccountLimitType,
+      "Value" : LimitValue
+    )
+
+    alias AccountLimitType = String
+
+    alias AlarmIdentifier = NamedTuple(
+      "Region" : CloudWatchRegion,
+      "Name" : AlarmName
+    )
+
+    alias AlarmName = String
+
+    alias AliasHealthEnabled = Bool
+
+    alias AliasTarget = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "DNSName" : DNSName,
+      "EvaluateTargetHealth" : AliasHealthEnabled
+    )
+
+    alias AssociateVPCComment = String
+
+    alias AssociateVPCWithHostedZoneRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "VPC" : VPC,
+      "Comment" : (AssociateVPCComment)?
+    )
+
+    alias AssociateVPCWithHostedZoneResponse = NamedTuple(
+      "ChangeInfo" : ChangeInfo
+    )
+
+    alias Change = NamedTuple(
+      "Action" : ChangeAction,
+      "ResourceRecordSet" : ResourceRecordSet
+    )
+
+    alias ChangeAction = String
+
+    alias ChangeBatch = NamedTuple(
+      "Comment" : (ResourceDescription)?,
+      "Changes" : Changes
+    )
+
+    alias ChangeInfo = NamedTuple(
+      "Id" : ResourceId,
+      "Status" : ChangeStatus,
+      "SubmittedAt" : TimeStamp,
+      "Comment" : (ResourceDescription)?
+    )
+
+    alias ChangeResourceRecordSetsRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "ChangeBatch" : ChangeBatch
+    )
+
+    alias ChangeResourceRecordSetsResponse = NamedTuple(
+      "ChangeInfo" : ChangeInfo
+    )
+
+    alias ChangeStatus = String
+
+    alias ChangeTagsForResourceRequest = NamedTuple(
+      "ResourceType" : TagResourceType,
+      "ResourceId" : TagResourceId,
+      "AddTags" : (TagList)?,
+      "RemoveTagKeys" : (TagKeyList)?
+    )
+
+    alias ChangeTagsForResourceResponse = NamedTuple(
+      
+    )
+
+    alias Changes = Array(Change)
+
+    alias CheckerIpRanges = Array(IPAddressCidr)
+
+    alias ChildHealthCheckList = Array(HealthCheckId)
+
+    alias CloudWatchAlarmConfiguration = NamedTuple(
+      "EvaluationPeriods" : EvaluationPeriods,
+      "Threshold" : Threshold,
+      "ComparisonOperator" : ComparisonOperator,
+      "Period" : Period,
+      "MetricName" : MetricName,
+      "Namespace" : Namespace,
+      "Statistic" : Statistic,
+      "Dimensions" : (DimensionList)?
+    )
+
+    alias CloudWatchLogsLogGroupArn = String
+
+    alias CloudWatchRegion = String
+
+    alias ComparisonOperator = String
+
+    alias ConcurrentModification = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConflictingDomainExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConflictingTypes = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias CreateHealthCheckRequest = NamedTuple(
+      "CallerReference" : HealthCheckNonce,
+      "HealthCheckConfig" : HealthCheckConfig
+    )
+
+    alias CreateHealthCheckResponse = NamedTuple(
+      "HealthCheck" : HealthCheck,
+      "Location" : ResourceURI
+    )
+
+    alias CreateHostedZoneRequest = NamedTuple(
+      "Name" : DNSName,
+      "VPC" : (VPC)?,
+      "CallerReference" : Nonce,
+      "HostedZoneConfig" : (HostedZoneConfig)?,
+      "DelegationSetId" : (ResourceId)?
+    )
+
+    alias CreateHostedZoneResponse = NamedTuple(
+      "HostedZone" : HostedZone,
+      "ChangeInfo" : ChangeInfo,
+      "DelegationSet" : DelegationSet,
+      "VPC" : (VPC)?,
+      "Location" : ResourceURI
+    )
+
+    alias CreateQueryLoggingConfigRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "CloudWatchLogsLogGroupArn" : CloudWatchLogsLogGroupArn
+    )
+
+    alias CreateQueryLoggingConfigResponse = NamedTuple(
+      "QueryLoggingConfig" : QueryLoggingConfig,
+      "Location" : ResourceURI
+    )
+
+    alias CreateReusableDelegationSetRequest = NamedTuple(
+      "CallerReference" : Nonce,
+      "HostedZoneId" : (ResourceId)?
+    )
+
+    alias CreateReusableDelegationSetResponse = NamedTuple(
+      "DelegationSet" : DelegationSet,
+      "Location" : ResourceURI
+    )
+
+    alias CreateTrafficPolicyInstanceRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "Name" : DNSName,
+      "TTL" : TTL,
+      "TrafficPolicyId" : TrafficPolicyId,
+      "TrafficPolicyVersion" : TrafficPolicyVersion
+    )
+
+    alias CreateTrafficPolicyInstanceResponse = NamedTuple(
+      "TrafficPolicyInstance" : TrafficPolicyInstance,
+      "Location" : ResourceURI
+    )
+
+    alias CreateTrafficPolicyRequest = NamedTuple(
+      "Name" : TrafficPolicyName,
+      "Document" : TrafficPolicyDocument,
+      "Comment" : (TrafficPolicyComment)?
+    )
+
+    alias CreateTrafficPolicyResponse = NamedTuple(
+      "TrafficPolicy" : TrafficPolicy,
+      "Location" : ResourceURI
+    )
+
+    alias CreateTrafficPolicyVersionRequest = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "Document" : TrafficPolicyDocument,
+      "Comment" : (TrafficPolicyComment)?
+    )
+
+    alias CreateTrafficPolicyVersionResponse = NamedTuple(
+      "TrafficPolicy" : TrafficPolicy,
+      "Location" : ResourceURI
+    )
+
+    alias CreateVPCAssociationAuthorizationRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "VPC" : VPC
+    )
+
+    alias CreateVPCAssociationAuthorizationResponse = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "VPC" : VPC
+    )
+
+    alias DNSName = String
+
+    alias DNSRCode = String
+
+    alias DelegationSet = NamedTuple(
+      "Id" : (ResourceId)?,
+      "CallerReference" : (Nonce)?,
+      "NameServers" : DelegationSetNameServers
+    )
+
+    alias DelegationSetAlreadyCreated = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DelegationSetAlreadyReusable = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DelegationSetInUse = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DelegationSetNameServers = Array(DNSName)
+
+    alias DelegationSetNotAvailable = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DelegationSetNotReusable = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DelegationSets = Array(DelegationSet)
+
+    alias DeleteHealthCheckRequest = NamedTuple(
+      "HealthCheckId" : HealthCheckId
+    )
+
+    alias DeleteHealthCheckResponse = NamedTuple(
+      
+    )
+
+    alias DeleteHostedZoneRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias DeleteHostedZoneResponse = NamedTuple(
+      "ChangeInfo" : ChangeInfo
+    )
+
+    alias DeleteQueryLoggingConfigRequest = NamedTuple(
+      "Id" : QueryLoggingConfigId
+    )
+
+    alias DeleteQueryLoggingConfigResponse = NamedTuple(
+      
+    )
+
+    alias DeleteReusableDelegationSetRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias DeleteReusableDelegationSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTrafficPolicyInstanceRequest = NamedTuple(
+      "Id" : TrafficPolicyInstanceId
+    )
+
+    alias DeleteTrafficPolicyInstanceResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTrafficPolicyRequest = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "Version" : TrafficPolicyVersion
+    )
+
+    alias DeleteTrafficPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteVPCAssociationAuthorizationRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "VPC" : VPC
+    )
+
+    alias DeleteVPCAssociationAuthorizationResponse = NamedTuple(
+      
+    )
+
+    alias Dimension = NamedTuple(
+      "Name" : DimensionField,
+      "Value" : DimensionField
+    )
+
+    alias DimensionField = String
+
+    alias DimensionList = Array(Dimension)
+
+    alias Disabled = Bool
+
+    alias DisassociateVPCComment = String
+
+    alias DisassociateVPCFromHostedZoneRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "VPC" : VPC,
+      "Comment" : (DisassociateVPCComment)?
+    )
+
+    alias DisassociateVPCFromHostedZoneResponse = NamedTuple(
+      "ChangeInfo" : ChangeInfo
+    )
+
+    alias EnableSNI = Bool
+
+    alias ErrorMessage = String
+
+    alias ErrorMessages = Array(ErrorMessage)
+
+    alias EvaluationPeriods = Int32
+
+    alias FailureThreshold = Int32
+
+    alias FullyQualifiedDomainName = String
+
+    alias GeoLocation = NamedTuple(
+      "ContinentCode" : (GeoLocationContinentCode)?,
+      "CountryCode" : (GeoLocationCountryCode)?,
+      "SubdivisionCode" : (GeoLocationSubdivisionCode)?
+    )
+
+    alias GeoLocationContinentCode = String
+
+    alias GeoLocationContinentName = String
+
+    alias GeoLocationCountryCode = String
+
+    alias GeoLocationCountryName = String
+
+    alias GeoLocationDetails = NamedTuple(
+      "ContinentCode" : (GeoLocationContinentCode)?,
+      "ContinentName" : (GeoLocationContinentName)?,
+      "CountryCode" : (GeoLocationCountryCode)?,
+      "CountryName" : (GeoLocationCountryName)?,
+      "SubdivisionCode" : (GeoLocationSubdivisionCode)?,
+      "SubdivisionName" : (GeoLocationSubdivisionName)?
+    )
+
+    alias GeoLocationDetailsList = Array(GeoLocationDetails)
+
+    alias GeoLocationSubdivisionCode = String
+
+    alias GeoLocationSubdivisionName = String
+
+    alias GetAccountLimitRequest = NamedTuple(
+      "Type" : AccountLimitType
+    )
+
+    alias GetAccountLimitResponse = NamedTuple(
+      "Limit" : AccountLimit,
+      "Count" : UsageCount
+    )
+
+    alias GetChangeRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias GetChangeResponse = NamedTuple(
+      "ChangeInfo" : ChangeInfo
+    )
+
+    alias GetCheckerIpRangesRequest = NamedTuple(
+      
+    )
+
+    alias GetCheckerIpRangesResponse = NamedTuple(
+      "CheckerIpRanges" : CheckerIpRanges
+    )
+
+    alias GetGeoLocationRequest = NamedTuple(
+      "ContinentCode" : (GeoLocationContinentCode)?,
+      "CountryCode" : (GeoLocationCountryCode)?,
+      "SubdivisionCode" : (GeoLocationSubdivisionCode)?
+    )
+
+    alias GetGeoLocationResponse = NamedTuple(
+      "GeoLocationDetails" : GeoLocationDetails
+    )
+
+    alias GetHealthCheckCountRequest = NamedTuple(
+      
+    )
+
+    alias GetHealthCheckCountResponse = NamedTuple(
+      "HealthCheckCount" : HealthCheckCount
+    )
+
+    alias GetHealthCheckLastFailureReasonRequest = NamedTuple(
+      "HealthCheckId" : HealthCheckId
+    )
+
+    alias GetHealthCheckLastFailureReasonResponse = NamedTuple(
+      "HealthCheckObservations" : HealthCheckObservations
+    )
+
+    alias GetHealthCheckRequest = NamedTuple(
+      "HealthCheckId" : HealthCheckId
+    )
+
+    alias GetHealthCheckResponse = NamedTuple(
+      "HealthCheck" : HealthCheck
+    )
+
+    alias GetHealthCheckStatusRequest = NamedTuple(
+      "HealthCheckId" : HealthCheckId
+    )
+
+    alias GetHealthCheckStatusResponse = NamedTuple(
+      "HealthCheckObservations" : HealthCheckObservations
+    )
+
+    alias GetHostedZoneCountRequest = NamedTuple(
+      
+    )
+
+    alias GetHostedZoneCountResponse = NamedTuple(
+      "HostedZoneCount" : HostedZoneCount
+    )
+
+    alias GetHostedZoneLimitRequest = NamedTuple(
+      "Type" : HostedZoneLimitType,
+      "HostedZoneId" : ResourceId
+    )
+
+    alias GetHostedZoneLimitResponse = NamedTuple(
+      "Limit" : HostedZoneLimit,
+      "Count" : UsageCount
+    )
+
+    alias GetHostedZoneRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias GetHostedZoneResponse = NamedTuple(
+      "HostedZone" : HostedZone,
+      "DelegationSet" : (DelegationSet)?,
+      "VPCs" : (VPCs)?
+    )
+
+    alias GetQueryLoggingConfigRequest = NamedTuple(
+      "Id" : QueryLoggingConfigId
+    )
+
+    alias GetQueryLoggingConfigResponse = NamedTuple(
+      "QueryLoggingConfig" : QueryLoggingConfig
+    )
+
+    alias GetReusableDelegationSetLimitRequest = NamedTuple(
+      "Type" : ReusableDelegationSetLimitType,
+      "DelegationSetId" : ResourceId
+    )
+
+    alias GetReusableDelegationSetLimitResponse = NamedTuple(
+      "Limit" : ReusableDelegationSetLimit,
+      "Count" : UsageCount
+    )
+
+    alias GetReusableDelegationSetRequest = NamedTuple(
+      "Id" : ResourceId
+    )
+
+    alias GetReusableDelegationSetResponse = NamedTuple(
+      "DelegationSet" : DelegationSet
+    )
+
+    alias GetTrafficPolicyInstanceCountRequest = NamedTuple(
+      
+    )
+
+    alias GetTrafficPolicyInstanceCountResponse = NamedTuple(
+      "TrafficPolicyInstanceCount" : TrafficPolicyInstanceCount
+    )
+
+    alias GetTrafficPolicyInstanceRequest = NamedTuple(
+      "Id" : TrafficPolicyInstanceId
+    )
+
+    alias GetTrafficPolicyInstanceResponse = NamedTuple(
+      "TrafficPolicyInstance" : TrafficPolicyInstance
+    )
+
+    alias GetTrafficPolicyRequest = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "Version" : TrafficPolicyVersion
+    )
+
+    alias GetTrafficPolicyResponse = NamedTuple(
+      "TrafficPolicy" : TrafficPolicy
+    )
+
+    alias HealthCheck = NamedTuple(
+      "Id" : HealthCheckId,
+      "CallerReference" : HealthCheckNonce,
+      "LinkedService" : (LinkedService)?,
+      "HealthCheckConfig" : HealthCheckConfig,
+      "HealthCheckVersion" : HealthCheckVersion,
+      "CloudWatchAlarmConfiguration" : (CloudWatchAlarmConfiguration)?
+    )
+
+    alias HealthCheckAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HealthCheckConfig = NamedTuple(
+      "IPAddress" : (IPAddress)?,
+      "Port" : (Port)?,
+      "Type" : HealthCheckType,
+      "ResourcePath" : (ResourcePath)?,
+      "FullyQualifiedDomainName" : (FullyQualifiedDomainName)?,
+      "SearchString" : (SearchString)?,
+      "RequestInterval" : (RequestInterval)?,
+      "FailureThreshold" : (FailureThreshold)?,
+      "MeasureLatency" : (MeasureLatency)?,
+      "Inverted" : (Inverted)?,
+      "Disabled" : (Disabled)?,
+      "HealthThreshold" : (HealthThreshold)?,
+      "ChildHealthChecks" : (ChildHealthCheckList)?,
+      "EnableSNI" : (EnableSNI)?,
+      "Regions" : (HealthCheckRegionList)?,
+      "AlarmIdentifier" : (AlarmIdentifier)?,
+      "InsufficientDataHealthStatus" : (InsufficientDataHealthStatus)?
+    )
+
+    alias HealthCheckCount = Int64
+
+    alias HealthCheckId = String
+
+    alias HealthCheckInUse = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HealthCheckNonce = String
+
+    alias HealthCheckObservation = NamedTuple(
+      "Region" : (HealthCheckRegion)?,
+      "IPAddress" : (IPAddress)?,
+      "StatusReport" : (StatusReport)?
+    )
+
+    alias HealthCheckObservations = Array(HealthCheckObservation)
+
+    alias HealthCheckRegion = String
+
+    alias HealthCheckRegionList = Array(HealthCheckRegion)
+
+    alias HealthCheckType = String
+
+    alias HealthCheckVersion = Int64
+
+    alias HealthCheckVersionMismatch = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HealthChecks = Array(HealthCheck)
+
+    alias HealthThreshold = Int32
+
+    alias HostedZone = NamedTuple(
+      "Id" : ResourceId,
+      "Name" : DNSName,
+      "CallerReference" : Nonce,
+      "Config" : (HostedZoneConfig)?,
+      "ResourceRecordSetCount" : (HostedZoneRRSetCount)?,
+      "LinkedService" : (LinkedService)?
+    )
+
+    alias HostedZoneAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HostedZoneConfig = NamedTuple(
+      "Comment" : (ResourceDescription)?,
+      "PrivateZone" : (IsPrivateZone)?
+    )
+
+    alias HostedZoneCount = Int64
+
+    alias HostedZoneLimit = NamedTuple(
+      "Type" : HostedZoneLimitType,
+      "Value" : LimitValue
+    )
+
+    alias HostedZoneLimitType = String
+
+    alias HostedZoneNotEmpty = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HostedZoneNotFound = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HostedZoneNotPrivate = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias HostedZoneOwner = NamedTuple(
+      "OwningAccount" : (AWSAccountID)?,
+      "OwningService" : (HostedZoneOwningService)?
+    )
+
+    alias HostedZoneOwningService = String
+
+    alias HostedZoneRRSetCount = Int64
+
+    alias HostedZoneSummaries = Array(HostedZoneSummary)
+
+    alias HostedZoneSummary = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "Name" : DNSName,
+      "Owner" : HostedZoneOwner
+    )
+
+    alias HostedZones = Array(HostedZone)
+
+    alias IPAddress = String
+
+    alias IPAddressCidr = String
+
+    alias IncompatibleVersion = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InsufficientCloudWatchLogsResourcePolicy = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InsufficientDataHealthStatus = String
+
+    alias InvalidArgument = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidChangeBatch = NamedTuple(
+      "messages" : (ErrorMessages)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidDomainName = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidInput = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidPaginationToken = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidTrafficPolicyDocument = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidVPCId = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Inverted = Bool
+
+    alias IsPrivateZone = Bool
+
+    alias LastVPCAssociation = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LimitValue = Int64
+
+    alias LimitsExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LinkedService = NamedTuple(
+      "ServicePrincipal" : (ServicePrincipal)?,
+      "Description" : (ResourceDescription)?
+    )
+
+    alias ListGeoLocationsRequest = NamedTuple(
+      "StartContinentCode" : (GeoLocationContinentCode)?,
+      "StartCountryCode" : (GeoLocationCountryCode)?,
+      "StartSubdivisionCode" : (GeoLocationSubdivisionCode)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListGeoLocationsResponse = NamedTuple(
+      "GeoLocationDetailsList" : GeoLocationDetailsList,
+      "IsTruncated" : PageTruncated,
+      "NextContinentCode" : (GeoLocationContinentCode)?,
+      "NextCountryCode" : (GeoLocationCountryCode)?,
+      "NextSubdivisionCode" : (GeoLocationSubdivisionCode)?,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListHealthChecksRequest = NamedTuple(
+      "Marker" : (PageMarker)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListHealthChecksResponse = NamedTuple(
+      "HealthChecks" : HealthChecks,
+      "Marker" : PageMarker,
+      "IsTruncated" : PageTruncated,
+      "NextMarker" : (PageMarker)?,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListHostedZonesByNameRequest = NamedTuple(
+      "DNSName" : (DNSName)?,
+      "HostedZoneId" : (ResourceId)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListHostedZonesByNameResponse = NamedTuple(
+      "HostedZones" : HostedZones,
+      "DNSName" : (DNSName)?,
+      "HostedZoneId" : (ResourceId)?,
+      "IsTruncated" : PageTruncated,
+      "NextDNSName" : (DNSName)?,
+      "NextHostedZoneId" : (ResourceId)?,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListHostedZonesByVPCRequest = NamedTuple(
+      "VPCId" : VPCId,
+      "VPCRegion" : VPCRegion,
+      "MaxItems" : (PageMaxItems)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListHostedZonesByVPCResponse = NamedTuple(
+      "HostedZoneSummaries" : HostedZoneSummaries,
+      "MaxItems" : PageMaxItems,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListHostedZonesRequest = NamedTuple(
+      "Marker" : (PageMarker)?,
+      "MaxItems" : (PageMaxItems)?,
+      "DelegationSetId" : (ResourceId)?
+    )
+
+    alias ListHostedZonesResponse = NamedTuple(
+      "HostedZones" : HostedZones,
+      "Marker" : PageMarker,
+      "IsTruncated" : PageTruncated,
+      "NextMarker" : (PageMarker)?,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListQueryLoggingConfigsRequest = NamedTuple(
+      "HostedZoneId" : (ResourceId)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListQueryLoggingConfigsResponse = NamedTuple(
+      "QueryLoggingConfigs" : QueryLoggingConfigs,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListResourceRecordSetsRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "StartRecordName" : (DNSName)?,
+      "StartRecordType" : (RRType)?,
+      "StartRecordIdentifier" : (ResourceRecordSetIdentifier)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListResourceRecordSetsResponse = NamedTuple(
+      "ResourceRecordSets" : ResourceRecordSets,
+      "IsTruncated" : PageTruncated,
+      "NextRecordName" : (DNSName)?,
+      "NextRecordType" : (RRType)?,
+      "NextRecordIdentifier" : (ResourceRecordSetIdentifier)?,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListReusableDelegationSetsRequest = NamedTuple(
+      "Marker" : (PageMarker)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListReusableDelegationSetsResponse = NamedTuple(
+      "DelegationSets" : DelegationSets,
+      "Marker" : PageMarker,
+      "IsTruncated" : PageTruncated,
+      "NextMarker" : (PageMarker)?,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceType" : TagResourceType,
+      "ResourceId" : TagResourceId
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "ResourceTagSet" : ResourceTagSet
+    )
+
+    alias ListTagsForResourcesRequest = NamedTuple(
+      "ResourceType" : TagResourceType,
+      "ResourceIds" : TagResourceIdList
+    )
+
+    alias ListTagsForResourcesResponse = NamedTuple(
+      "ResourceTagSets" : ResourceTagSetList
+    )
+
+    alias ListTrafficPoliciesRequest = NamedTuple(
+      "TrafficPolicyIdMarker" : (TrafficPolicyId)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListTrafficPoliciesResponse = NamedTuple(
+      "TrafficPolicySummaries" : TrafficPolicySummaries,
+      "IsTruncated" : PageTruncated,
+      "TrafficPolicyIdMarker" : TrafficPolicyId,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListTrafficPolicyInstancesByHostedZoneRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
+      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListTrafficPolicyInstancesByHostedZoneResponse = NamedTuple(
+      "TrafficPolicyInstances" : TrafficPolicyInstances,
+      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
+      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
+      "IsTruncated" : PageTruncated,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListTrafficPolicyInstancesByPolicyRequest = NamedTuple(
+      "TrafficPolicyId" : TrafficPolicyId,
+      "TrafficPolicyVersion" : TrafficPolicyVersion,
+      "HostedZoneIdMarker" : (ResourceId)?,
+      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
+      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListTrafficPolicyInstancesByPolicyResponse = NamedTuple(
+      "TrafficPolicyInstances" : TrafficPolicyInstances,
+      "HostedZoneIdMarker" : (ResourceId)?,
+      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
+      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
+      "IsTruncated" : PageTruncated,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListTrafficPolicyInstancesRequest = NamedTuple(
+      "HostedZoneIdMarker" : (ResourceId)?,
+      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
+      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListTrafficPolicyInstancesResponse = NamedTuple(
+      "TrafficPolicyInstances" : TrafficPolicyInstances,
+      "HostedZoneIdMarker" : (ResourceId)?,
+      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
+      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
+      "IsTruncated" : PageTruncated,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListTrafficPolicyVersionsRequest = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "TrafficPolicyVersionMarker" : (TrafficPolicyVersionMarker)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListTrafficPolicyVersionsResponse = NamedTuple(
+      "TrafficPolicies" : TrafficPolicies,
+      "IsTruncated" : PageTruncated,
+      "TrafficPolicyVersionMarker" : TrafficPolicyVersionMarker,
+      "MaxItems" : PageMaxItems
+    )
+
+    alias ListVPCAssociationAuthorizationsRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListVPCAssociationAuthorizationsResponse = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "NextToken" : (PaginationToken)?,
+      "VPCs" : VPCs
+    )
+
+    alias MaxResults = String
+
+    alias MeasureLatency = Bool
+
+    alias Message = String
+
+    alias MetricName = String
+
+    alias Nameserver = String
+
+    alias Namespace = String
+
+    alias NoSuchChange = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchCloudWatchLogsLogGroup = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchDelegationSet = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchGeoLocation = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchHealthCheck = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchHostedZone = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchQueryLoggingConfig = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchTrafficPolicy = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NoSuchTrafficPolicyInstance = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Nonce = String
+
+    alias NotAuthorizedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias PageMarker = String
+
+    alias PageMaxItems = Int32
+
+    alias PageTruncated = Bool
+
+    alias PaginationToken = String
+
+    alias Period = Int32
+
+    alias Port = Int32
+
+    alias PriorRequestNotComplete = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias PublicZoneVPCAssociation = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias QueryLoggingConfig = NamedTuple(
+      "Id" : QueryLoggingConfigId,
+      "HostedZoneId" : ResourceId,
+      "CloudWatchLogsLogGroupArn" : CloudWatchLogsLogGroupArn
+    )
+
+    alias QueryLoggingConfigAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias QueryLoggingConfigId = String
+
+    alias QueryLoggingConfigs = Array(QueryLoggingConfig)
+
+    alias RData = String
+
+    alias RRType = String
+
+    alias RecordData = Array(RecordDataEntry)
+
+    alias RecordDataEntry = String
+
+    alias RequestInterval = Int32
+
+    alias ResettableElementName = String
+
+    alias ResettableElementNameList = Array(ResettableElementName)
+
+    alias ResourceDescription = String
+
+    alias ResourceId = String
+
+    alias ResourcePath = String
+
+    alias ResourceRecord = NamedTuple(
+      "Value" : RData
+    )
+
+    alias ResourceRecordSet = NamedTuple(
+      "Name" : DNSName,
+      "Type" : RRType,
+      "SetIdentifier" : (ResourceRecordSetIdentifier)?,
+      "Weight" : (ResourceRecordSetWeight)?,
+      "Region" : (ResourceRecordSetRegion)?,
+      "GeoLocation" : (GeoLocation)?,
+      "Failover" : (ResourceRecordSetFailover)?,
+      "MultiValueAnswer" : (ResourceRecordSetMultiValueAnswer)?,
+      "TTL" : (TTL)?,
+      "ResourceRecords" : (ResourceRecords)?,
+      "AliasTarget" : (AliasTarget)?,
+      "HealthCheckId" : (HealthCheckId)?,
+      "TrafficPolicyInstanceId" : (TrafficPolicyInstanceId)?
+    )
+
+    alias ResourceRecordSetFailover = String
+
+    alias ResourceRecordSetIdentifier = String
+
+    alias ResourceRecordSetMultiValueAnswer = Bool
+
+    alias ResourceRecordSetRegion = String
+
+    alias ResourceRecordSetWeight = Int64
+
+    alias ResourceRecordSets = Array(ResourceRecordSet)
+
+    alias ResourceRecords = Array(ResourceRecord)
+
+    alias ResourceTagSet = NamedTuple(
+      "ResourceType" : (TagResourceType)?,
+      "ResourceId" : (TagResourceId)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ResourceTagSetList = Array(ResourceTagSet)
+
+    alias ResourceURI = String
+
+    alias ReusableDelegationSetLimit = NamedTuple(
+      "Type" : ReusableDelegationSetLimitType,
+      "Value" : LimitValue
+    )
+
+    alias ReusableDelegationSetLimitType = String
+
+    alias SearchString = String
+
+    alias ServicePrincipal = String
+
+    alias Statistic = String
+
+    alias Status = String
+
+    alias StatusReport = NamedTuple(
+      "Status" : (Status)?,
+      "CheckedTime" : (TimeStamp)?
+    )
+
+    alias SubnetMask = String
+
+    alias TTL = Int64
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceId = String
+
+    alias TagResourceIdList = Array(TagResourceId)
+
+    alias TagResourceType = String
+
+    alias TagValue = String
+
+    alias TestDNSAnswerRequest = NamedTuple(
+      "HostedZoneId" : ResourceId,
+      "RecordName" : DNSName,
+      "RecordType" : RRType,
+      "ResolverIP" : (IPAddress)?,
+      "EDNS0ClientSubnetIP" : (IPAddress)?,
+      "EDNS0ClientSubnetMask" : (SubnetMask)?
+    )
+
+    alias TestDNSAnswerResponse = NamedTuple(
+      "Nameserver" : Nameserver,
+      "RecordName" : DNSName,
+      "RecordType" : RRType,
+      "RecordData" : RecordData,
+      "ResponseCode" : DNSRCode,
+      "Protocol" : TransportProtocol
+    )
+
+    alias Threshold = Float64
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias TooManyHealthChecks = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TooManyHostedZones = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TooManyTrafficPolicies = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TooManyTrafficPolicyInstances = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TooManyTrafficPolicyVersionsForCurrentPolicy = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TooManyVPCAssociationAuthorizations = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TrafficPolicies = Array(TrafficPolicy)
+
+    alias TrafficPolicy = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "Version" : TrafficPolicyVersion,
+      "Name" : TrafficPolicyName,
+      "Type" : RRType,
+      "Document" : TrafficPolicyDocument,
+      "Comment" : (TrafficPolicyComment)?
+    )
+
+    alias TrafficPolicyAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TrafficPolicyComment = String
+
+    alias TrafficPolicyDocument = String
+
+    alias TrafficPolicyId = String
+
+    alias TrafficPolicyInUse = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TrafficPolicyInstance = NamedTuple(
+      "Id" : TrafficPolicyInstanceId,
+      "HostedZoneId" : ResourceId,
+      "Name" : DNSName,
+      "TTL" : TTL,
+      "State" : TrafficPolicyInstanceState,
+      "Message" : Message,
+      "TrafficPolicyId" : TrafficPolicyId,
+      "TrafficPolicyVersion" : TrafficPolicyVersion,
+      "TrafficPolicyType" : RRType
+    )
+
+    alias TrafficPolicyInstanceAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TrafficPolicyInstanceCount = Int32
+
+    alias TrafficPolicyInstanceId = String
+
+    alias TrafficPolicyInstanceState = String
+
+    alias TrafficPolicyInstances = Array(TrafficPolicyInstance)
+
+    alias TrafficPolicyName = String
+
+    alias TrafficPolicySummaries = Array(TrafficPolicySummary)
+
+    alias TrafficPolicySummary = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "Name" : TrafficPolicyName,
+      "Type" : RRType,
+      "LatestVersion" : TrafficPolicyVersion,
+      "TrafficPolicyCount" : TrafficPolicyVersion
+    )
+
+    alias TrafficPolicyVersion = Int32
+
+    alias TrafficPolicyVersionMarker = String
+
+    alias TransportProtocol = String
+
+    alias UpdateHealthCheckRequest = NamedTuple(
+      "HealthCheckId" : HealthCheckId,
+      "HealthCheckVersion" : (HealthCheckVersion)?,
+      "IPAddress" : (IPAddress)?,
+      "Port" : (Port)?,
+      "ResourcePath" : (ResourcePath)?,
+      "FullyQualifiedDomainName" : (FullyQualifiedDomainName)?,
+      "SearchString" : (SearchString)?,
+      "FailureThreshold" : (FailureThreshold)?,
+      "Inverted" : (Inverted)?,
+      "Disabled" : (Disabled)?,
+      "HealthThreshold" : (HealthThreshold)?,
+      "ChildHealthChecks" : (ChildHealthCheckList)?,
+      "EnableSNI" : (EnableSNI)?,
+      "Regions" : (HealthCheckRegionList)?,
+      "AlarmIdentifier" : (AlarmIdentifier)?,
+      "InsufficientDataHealthStatus" : (InsufficientDataHealthStatus)?,
+      "ResetElements" : (ResettableElementNameList)?
+    )
+
+    alias UpdateHealthCheckResponse = NamedTuple(
+      "HealthCheck" : HealthCheck
+    )
+
+    alias UpdateHostedZoneCommentRequest = NamedTuple(
+      "Id" : ResourceId,
+      "Comment" : (ResourceDescription)?
+    )
+
+    alias UpdateHostedZoneCommentResponse = NamedTuple(
+      "HostedZone" : HostedZone
+    )
+
+    alias UpdateTrafficPolicyCommentRequest = NamedTuple(
+      "Id" : TrafficPolicyId,
+      "Version" : TrafficPolicyVersion,
+      "Comment" : TrafficPolicyComment
+    )
+
+    alias UpdateTrafficPolicyCommentResponse = NamedTuple(
+      "TrafficPolicy" : TrafficPolicy
+    )
+
+    alias UpdateTrafficPolicyInstanceRequest = NamedTuple(
+      "Id" : TrafficPolicyInstanceId,
+      "TTL" : TTL,
+      "TrafficPolicyId" : TrafficPolicyId,
+      "TrafficPolicyVersion" : TrafficPolicyVersion
+    )
+
+    alias UpdateTrafficPolicyInstanceResponse = NamedTuple(
+      "TrafficPolicyInstance" : TrafficPolicyInstance
+    )
+
+    alias UsageCount = Int64
+
+    alias VPC = NamedTuple(
+      "VPCRegion" : (VPCRegion)?,
+      "VPCId" : (VPCId)?
+    )
+
+    alias VPCAssociationAuthorizationNotFound = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias VPCAssociationNotFound = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias VPCId = String
+
+    alias VPCRegion = String
+
+    alias VPCs = Array(VPC)
   end
 end

@@ -353,8 +353,8 @@ module Aws::Detective
     #
     # @overload accept_invitation(**params)
     # @param [Hash] params ({})
-    def accept_invitation(params = {}, **options)
-      req = build_request(:accept_invitation, params)
+    def accept_invitation(, **options)
+      req = build_request(:accept_invitation, )
       req.send_request(options)
     end
 
@@ -393,8 +393,8 @@ module Aws::Detective
     #
     # @overload create_graph(**params)
     # @param [Hash] params ({})
-    def create_graph(params = {}, **options)
-      req = build_request(:create_graph, params)
+    def create_graph(, **options)
+      req = build_request(:create_graph, )
       req.send_request(options)
     end
 
@@ -471,8 +471,8 @@ module Aws::Detective
     #
     # @overload create_members(**params)
     # @param [Hash] params ({})
-    def create_members(params = {}, **options)
-      req = build_request(:create_members, params)
+    def create_members(, **options)
+      req = build_request(:create_members, )
       req.send_request(options)
     end
 
@@ -498,8 +498,8 @@ module Aws::Detective
     #
     # @overload delete_graph(**params)
     # @param [Hash] params ({})
-    def delete_graph(params = {}, **options)
-      req = build_request(:delete_graph, params)
+    def delete_graph(, **options)
+      req = build_request(:delete_graph, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::Detective
     #
     # @overload delete_members(**params)
     # @param [Hash] params ({})
-    def delete_members(params = {}, **options)
-      req = build_request(:delete_members, params)
+    def delete_members(, **options)
+      req = build_request(:delete_members, )
       req.send_request(options)
     end
 
@@ -567,8 +567,8 @@ module Aws::Detective
     #
     # @overload disassociate_membership(**params)
     # @param [Hash] params ({})
-    def disassociate_membership(params = {}, **options)
-      req = build_request(:disassociate_membership, params)
+    def disassociate_membership(, **options)
+      req = build_request(:disassociate_membership, )
       req.send_request(options)
     end
 
@@ -618,8 +618,8 @@ module Aws::Detective
     #
     # @overload get_members(**params)
     # @param [Hash] params ({})
-    def get_members(params = {}, **options)
-      req = build_request(:get_members, params)
+    def get_members(, **options)
+      req = build_request(:get_members, )
       req.send_request(options)
     end
 
@@ -664,8 +664,8 @@ module Aws::Detective
     #
     # @overload list_graphs(**params)
     # @param [Hash] params ({})
-    def list_graphs(params = {}, **options)
-      req = build_request(:list_graphs, params)
+    def list_graphs(, **options)
+      req = build_request(:list_graphs, )
       req.send_request(options)
     end
 
@@ -724,8 +724,8 @@ module Aws::Detective
     #
     # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, **options)
-      req = build_request(:list_invitations, params)
+    def list_invitations(, **options)
+      req = build_request(:list_invitations, )
       req.send_request(options)
     end
 
@@ -780,8 +780,8 @@ module Aws::Detective
     #
     # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, **options)
-      req = build_request(:list_members, params)
+    def list_members(, **options)
+      req = build_request(:list_members, )
       req.send_request(options)
     end
 
@@ -807,8 +807,8 @@ module Aws::Detective
     #
     # @overload reject_invitation(**params)
     # @param [Hash] params ({})
-    def reject_invitation(params = {}, **options)
-      req = build_request(:reject_invitation, params)
+    def reject_invitation(, **options)
+      req = build_request(:reject_invitation, )
       req.send_request(options)
     end
 
@@ -845,8 +845,8 @@ module Aws::Detective
     #
     # @overload start_monitoring_member(**params)
     # @param [Hash] params ({})
-    def start_monitoring_member(params = {}, **options)
-      req = build_request(:start_monitoring_member, params)
+    def start_monitoring_member(, **options)
+      req = build_request(:start_monitoring_member, )
       req.send_request(options)
     end
 

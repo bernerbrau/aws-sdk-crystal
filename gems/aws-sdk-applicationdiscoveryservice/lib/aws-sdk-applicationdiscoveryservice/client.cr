@@ -358,8 +358,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload associate_configuration_items_to_application(**params)
     # @param [Hash] params ({})
-    def associate_configuration_items_to_application(params = {}, **options)
-      req = build_request(:associate_configuration_items_to_application, params)
+    def associate_configuration_items_to_application(, **options)
+      req = build_request(:associate_configuration_items_to_application, )
       req.send_request(options)
     end
 
@@ -397,8 +397,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload batch_delete_import_data(**params)
     # @param [Hash] params ({})
-    def batch_delete_import_data(params = {}, **options)
-      req = build_request(:batch_delete_import_data, params)
+    def batch_delete_import_data(, **options)
+      req = build_request(:batch_delete_import_data, )
       req.send_request(options)
     end
 
@@ -427,8 +427,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -462,8 +462,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -483,8 +483,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload delete_applications(**params)
     # @param [Hash] params ({})
-    def delete_applications(params = {}, **options)
-      req = build_request(:delete_applications, params)
+    def delete_applications(, **options)
+      req = build_request(:delete_applications, )
       req.send_request(options)
     end
 
@@ -517,8 +517,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_agents(**params)
     # @param [Hash] params ({})
-    def describe_agents(params = {}, **options)
-      req = build_request(:describe_agents, params)
+    def describe_agents(, **options)
+      req = build_request(:describe_agents, )
       req.send_request(options)
     end
 
@@ -641,8 +641,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_configurations(**params)
     # @param [Hash] params ({})
-    def describe_configurations(params = {}, **options)
-      req = build_request(:describe_configurations, params)
+    def describe_configurations(, **options)
+      req = build_request(:describe_configurations, )
       req.send_request(options)
     end
 
@@ -691,8 +691,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_continuous_exports(**params)
     # @param [Hash] params ({})
-    def describe_continuous_exports(params = {}, **options)
-      req = build_request(:describe_continuous_exports, params)
+    def describe_continuous_exports(, **options)
+      req = build_request(:describe_continuous_exports, )
       req.send_request(options)
     end
 
@@ -741,8 +741,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_export_configurations(**params)
     # @param [Hash] params ({})
-    def describe_export_configurations(params = {}, **options)
-      req = build_request(:describe_export_configurations, params)
+    def describe_export_configurations(, **options)
+      req = build_request(:describe_export_configurations, )
       req.send_request(options)
     end
 
@@ -808,8 +808,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, **options)
-      req = build_request(:describe_export_tasks, params)
+    def describe_export_tasks(, **options)
+      req = build_request(:describe_export_tasks, )
       req.send_request(options)
     end
 
@@ -869,8 +869,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_import_tasks(**params)
     # @param [Hash] params ({})
-    def describe_import_tasks(params = {}, **options)
-      req = build_request(:describe_import_tasks, params)
+    def describe_import_tasks(, **options)
+      req = build_request(:describe_import_tasks, )
       req.send_request(options)
     end
 
@@ -933,8 +933,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -958,8 +958,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload disassociate_configuration_items_from_application(**params)
     # @param [Hash] params ({})
-    def disassociate_configuration_items_from_application(params = {}, **options)
-      req = build_request(:disassociate_configuration_items_from_application, params)
+    def disassociate_configuration_items_from_application(, **options)
+      req = build_request(:disassociate_configuration_items_from_application, )
       req.send_request(options)
     end
 
@@ -982,8 +982,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload export_configurations(**params)
     # @param [Hash] params ({})
-    def export_configurations(params = {}, **options)
-      req = build_request(:export_configurations, params)
+    def export_configurations(, **options)
+      req = build_request(:export_configurations, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload get_discovery_summary(**params)
     # @param [Hash] params ({})
-    def get_discovery_summary(params = {}, **options)
-      req = build_request(:get_discovery_summary, params)
+    def get_discovery_summary(, **options)
+      req = build_request(:get_discovery_summary, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload list_configurations(**params)
     # @param [Hash] params ({})
-    def list_configurations(params = {}, **options)
-      req = build_request(:list_configurations, params)
+    def list_configurations(, **options)
+      req = build_request(:list_configurations, )
       req.send_request(options)
     end
 
@@ -1163,8 +1163,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload list_server_neighbors(**params)
     # @param [Hash] params ({})
-    def list_server_neighbors(params = {}, **options)
-      req = build_request(:list_server_neighbors, params)
+    def list_server_neighbors(, **options)
+      req = build_request(:list_server_neighbors, )
       req.send_request(options)
     end
 
@@ -1190,8 +1190,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload start_continuous_export(**params)
     # @param [Hash] params ({})
-    def start_continuous_export(params = {}, **options)
-      req = build_request(:start_continuous_export, params)
+    def start_continuous_export(, **options)
+      req = build_request(:start_continuous_export, )
       req.send_request(options)
     end
 
@@ -1226,8 +1226,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload start_data_collection_by_agent_ids(**params)
     # @param [Hash] params ({})
-    def start_data_collection_by_agent_ids(params = {}, **options)
-      req = build_request(:start_data_collection_by_agent_ids, params)
+    def start_data_collection_by_agent_ids(, **options)
+      req = build_request(:start_data_collection_by_agent_ids, )
       req.send_request(options)
     end
 
@@ -1292,8 +1292,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload start_export_task(**params)
     # @param [Hash] params ({})
-    def start_export_task(params = {}, **options)
-      req = build_request(:start_export_task, params)
+    def start_export_task(, **options)
+      req = build_request(:start_export_task, )
       req.send_request(options)
     end
 
@@ -1392,8 +1392,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload start_import_task(**params)
     # @param [Hash] params ({})
-    def start_import_task(params = {}, **options)
-      req = build_request(:start_import_task, params)
+    def start_import_task(, **options)
+      req = build_request(:start_import_task, )
       req.send_request(options)
     end
 
@@ -1421,8 +1421,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload stop_continuous_export(**params)
     # @param [Hash] params ({})
-    def stop_continuous_export(params = {}, **options)
-      req = build_request(:stop_continuous_export, params)
+    def stop_continuous_export(, **options)
+      req = build_request(:stop_continuous_export, )
       req.send_request(options)
     end
 
@@ -1451,8 +1451,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload stop_data_collection_by_agent_ids(**params)
     # @param [Hash] params ({})
-    def stop_data_collection_by_agent_ids(params = {}, **options)
-      req = build_request(:stop_data_collection_by_agent_ids, params)
+    def stop_data_collection_by_agent_ids(, **options)
+      req = build_request(:stop_data_collection_by_agent_ids, )
       req.send_request(options)
     end
 
@@ -1479,8 +1479,8 @@ module Aws::ApplicationDiscoveryService
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 

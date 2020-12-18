@@ -381,8 +381,8 @@ module Aws::FraudDetector
     #
     # @overload batch_create_variable(**params)
     # @param [Hash] params ({})
-    def batch_create_variable(params = {}, **options)
-      req = build_request(:batch_create_variable, params)
+    def batch_create_variable(, **options)
+      req = build_request(:batch_create_variable, )
       req.send_request(options)
     end
 
@@ -423,8 +423,8 @@ module Aws::FraudDetector
     #
     # @overload batch_get_variable(**params)
     # @param [Hash] params ({})
-    def batch_get_variable(params = {}, **options)
-      req = build_request(:batch_get_variable, params)
+    def batch_get_variable(, **options)
+      req = build_request(:batch_get_variable, )
       req.send_request(options)
     end
 
@@ -513,8 +513,8 @@ module Aws::FraudDetector
     #
     # @overload create_detector_version(**params)
     # @param [Hash] params ({})
-    def create_detector_version(params = {}, **options)
-      req = build_request(:create_detector_version, params)
+    def create_detector_version(, **options)
+      req = build_request(:create_detector_version, )
       req.send_request(options)
     end
 
@@ -556,8 +556,8 @@ module Aws::FraudDetector
     #
     # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, **options)
-      req = build_request(:create_model, params)
+    def create_model(, **options)
+      req = build_request(:create_model, )
       req.send_request(options)
     end
 
@@ -627,8 +627,8 @@ module Aws::FraudDetector
     #
     # @overload create_model_version(**params)
     # @param [Hash] params ({})
-    def create_model_version(params = {}, **options)
-      req = build_request(:create_model_version, params)
+    def create_model_version(, **options)
+      req = build_request(:create_model_version, )
       req.send_request(options)
     end
 
@@ -686,8 +686,8 @@ module Aws::FraudDetector
     #
     # @overload create_rule(**params)
     # @param [Hash] params ({})
-    def create_rule(params = {}, **options)
-      req = build_request(:create_rule, params)
+    def create_rule(, **options)
+      req = build_request(:create_rule, )
       req.send_request(options)
     end
 
@@ -750,8 +750,8 @@ module Aws::FraudDetector
     #
     # @overload create_variable(**params)
     # @param [Hash] params ({})
-    def create_variable(params = {}, **options)
-      req = build_request(:create_variable, params)
+    def create_variable(, **options)
+      req = build_request(:create_variable, )
       req.send_request(options)
     end
 
@@ -778,8 +778,8 @@ module Aws::FraudDetector
     #
     # @overload delete_detector(**params)
     # @param [Hash] params ({})
-    def delete_detector(params = {}, **options)
-      req = build_request(:delete_detector, params)
+    def delete_detector(, **options)
+      req = build_request(:delete_detector, )
       req.send_request(options)
     end
 
@@ -809,8 +809,8 @@ module Aws::FraudDetector
     #
     # @overload delete_detector_version(**params)
     # @param [Hash] params ({})
-    def delete_detector_version(params = {}, **options)
-      req = build_request(:delete_detector_version, params)
+    def delete_detector_version(, **options)
+      req = build_request(:delete_detector_version, )
       req.send_request(options)
     end
 
@@ -837,8 +837,8 @@ module Aws::FraudDetector
     #
     # @overload delete_entity_type(**params)
     # @param [Hash] params ({})
-    def delete_entity_type(params = {}, **options)
-      req = build_request(:delete_entity_type, params)
+    def delete_entity_type(, **options)
+      req = build_request(:delete_entity_type, )
       req.send_request(options)
     end
 
@@ -867,8 +867,8 @@ module Aws::FraudDetector
     #
     # @overload delete_event(**params)
     # @param [Hash] params ({})
-    def delete_event(params = {}, **options)
-      req = build_request(:delete_event, params)
+    def delete_event(, **options)
+      req = build_request(:delete_event, )
       req.send_request(options)
     end
 
@@ -895,8 +895,8 @@ module Aws::FraudDetector
     #
     # @overload delete_event_type(**params)
     # @param [Hash] params ({})
-    def delete_event_type(params = {}, **options)
-      req = build_request(:delete_event_type, params)
+    def delete_event_type(, **options)
+      req = build_request(:delete_event_type, )
       req.send_request(options)
     end
 
@@ -921,8 +921,8 @@ module Aws::FraudDetector
     #
     # @overload delete_external_model(**params)
     # @param [Hash] params ({})
-    def delete_external_model(params = {}, **options)
-      req = build_request(:delete_external_model, params)
+    def delete_external_model(, **options)
+      req = build_request(:delete_external_model, )
       req.send_request(options)
     end
 
@@ -953,8 +953,8 @@ module Aws::FraudDetector
     #
     # @overload delete_label(**params)
     # @param [Hash] params ({})
-    def delete_label(params = {}, **options)
-      req = build_request(:delete_label, params)
+    def delete_label(, **options)
+      req = build_request(:delete_label, )
       req.send_request(options)
     end
 
@@ -986,8 +986,8 @@ module Aws::FraudDetector
     #
     # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, **options)
-      req = build_request(:delete_model, params)
+    def delete_model(, **options)
+      req = build_request(:delete_model, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::FraudDetector
     #
     # @overload delete_model_version(**params)
     # @param [Hash] params ({})
-    def delete_model_version(params = {}, **options)
-      req = build_request(:delete_model_version, params)
+    def delete_model_version(, **options)
+      req = build_request(:delete_model_version, )
       req.send_request(options)
     end
 
@@ -1051,8 +1051,8 @@ module Aws::FraudDetector
     #
     # @overload delete_outcome(**params)
     # @param [Hash] params ({})
-    def delete_outcome(params = {}, **options)
-      req = build_request(:delete_outcome, params)
+    def delete_outcome(, **options)
+      req = build_request(:delete_outcome, )
       req.send_request(options)
     end
 
@@ -1082,8 +1082,8 @@ module Aws::FraudDetector
     #
     # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, **options)
-      req = build_request(:delete_rule, params)
+    def delete_rule(, **options)
+      req = build_request(:delete_rule, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::FraudDetector
     #
     # @overload delete_variable(**params)
     # @param [Hash] params ({})
-    def delete_variable(params = {}, **options)
-      req = build_request(:delete_variable, params)
+    def delete_variable(, **options)
+      req = build_request(:delete_variable, )
       req.send_request(options)
     end
 
@@ -1161,8 +1161,8 @@ module Aws::FraudDetector
     #
     # @overload describe_detector(**params)
     # @param [Hash] params ({})
-    def describe_detector(params = {}, **options)
-      req = build_request(:describe_detector, params)
+    def describe_detector(, **options)
+      req = build_request(:describe_detector, )
       req.send_request(options)
     end
 
@@ -1242,8 +1242,8 @@ module Aws::FraudDetector
     #
     # @overload describe_model_versions(**params)
     # @param [Hash] params ({})
-    def describe_model_versions(params = {}, **options)
-      req = build_request(:describe_model_versions, params)
+    def describe_model_versions(, **options)
+      req = build_request(:describe_model_versions, )
       req.send_request(options)
     end
 
@@ -1302,8 +1302,8 @@ module Aws::FraudDetector
     #
     # @overload get_detector_version(**params)
     # @param [Hash] params ({})
-    def get_detector_version(params = {}, **options)
-      req = build_request(:get_detector_version, params)
+    def get_detector_version(, **options)
+      req = build_request(:get_detector_version, )
       req.send_request(options)
     end
 
@@ -1354,8 +1354,8 @@ module Aws::FraudDetector
     #
     # @overload get_detectors(**params)
     # @param [Hash] params ({})
-    def get_detectors(params = {}, **options)
-      req = build_request(:get_detectors, params)
+    def get_detectors(, **options)
+      req = build_request(:get_detectors, )
       req.send_request(options)
     end
 
@@ -1405,8 +1405,8 @@ module Aws::FraudDetector
     #
     # @overload get_entity_types(**params)
     # @param [Hash] params ({})
-    def get_entity_types(params = {}, **options)
-      req = build_request(:get_entity_types, params)
+    def get_entity_types(, **options)
+      req = build_request(:get_entity_types, )
       req.send_request(options)
     end
 
@@ -1490,8 +1490,8 @@ module Aws::FraudDetector
     #
     # @overload get_event_prediction(**params)
     # @param [Hash] params ({})
-    def get_event_prediction(params = {}, **options)
-      req = build_request(:get_event_prediction, params)
+    def get_event_prediction(, **options)
+      req = build_request(:get_event_prediction, )
       req.send_request(options)
     end
 
@@ -1547,8 +1547,8 @@ module Aws::FraudDetector
     #
     # @overload get_event_types(**params)
     # @param [Hash] params ({})
-    def get_event_types(params = {}, **options)
-      req = build_request(:get_event_types, params)
+    def get_event_types(, **options)
+      req = build_request(:get_event_types, )
       req.send_request(options)
     end
 
@@ -1610,8 +1610,8 @@ module Aws::FraudDetector
     #
     # @overload get_external_models(**params)
     # @param [Hash] params ({})
-    def get_external_models(params = {}, **options)
-      req = build_request(:get_external_models, params)
+    def get_external_models(, **options)
+      req = build_request(:get_external_models, )
       req.send_request(options)
     end
 
@@ -1631,8 +1631,8 @@ module Aws::FraudDetector
     #
     # @overload get_kms_encryption_key(**params)
     # @param [Hash] params ({})
-    def get_kms_encryption_key(params = {}, **options)
-      req = build_request(:get_kms_encryption_key, params)
+    def get_kms_encryption_key(, **options)
+      req = build_request(:get_kms_encryption_key, )
       req.send_request(options)
     end
 
@@ -1682,8 +1682,8 @@ module Aws::FraudDetector
     #
     # @overload get_labels(**params)
     # @param [Hash] params ({})
-    def get_labels(params = {}, **options)
-      req = build_request(:get_labels, params)
+    def get_labels(, **options)
+      req = build_request(:get_labels, )
       req.send_request(options)
     end
 
@@ -1737,8 +1737,8 @@ module Aws::FraudDetector
     #
     # @overload get_model_version(**params)
     # @param [Hash] params ({})
-    def get_model_version(params = {}, **options)
-      req = build_request(:get_model_version, params)
+    def get_model_version(, **options)
+      req = build_request(:get_model_version, )
       req.send_request(options)
     end
 
@@ -1799,8 +1799,8 @@ module Aws::FraudDetector
     #
     # @overload get_models(**params)
     # @param [Hash] params ({})
-    def get_models(params = {}, **options)
-      req = build_request(:get_models, params)
+    def get_models(, **options)
+      req = build_request(:get_models, )
       req.send_request(options)
     end
 
@@ -1849,8 +1849,8 @@ module Aws::FraudDetector
     #
     # @overload get_outcomes(**params)
     # @param [Hash] params ({})
-    def get_outcomes(params = {}, **options)
-      req = build_request(:get_outcomes, params)
+    def get_outcomes(, **options)
+      req = build_request(:get_outcomes, )
       req.send_request(options)
     end
 
@@ -1917,8 +1917,8 @@ module Aws::FraudDetector
     #
     # @overload get_rules(**params)
     # @param [Hash] params ({})
-    def get_rules(params = {}, **options)
-      req = build_request(:get_rules, params)
+    def get_rules(, **options)
+      req = build_request(:get_rules, )
       req.send_request(options)
     end
 
@@ -1971,8 +1971,8 @@ module Aws::FraudDetector
     #
     # @overload get_variables(**params)
     # @param [Hash] params ({})
-    def get_variables(params = {}, **options)
-      req = build_request(:get_variables, params)
+    def get_variables(, **options)
+      req = build_request(:get_variables, )
       req.send_request(options)
     end
 
@@ -2016,8 +2016,8 @@ module Aws::FraudDetector
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2055,8 +2055,8 @@ module Aws::FraudDetector
     #
     # @overload put_detector(**params)
     # @param [Hash] params ({})
-    def put_detector(params = {}, **options)
-      req = build_request(:put_detector, params)
+    def put_detector(, **options)
+      req = build_request(:put_detector, )
       req.send_request(options)
     end
 
@@ -2094,8 +2094,8 @@ module Aws::FraudDetector
     #
     # @overload put_entity_type(**params)
     # @param [Hash] params ({})
-    def put_entity_type(params = {}, **options)
-      req = build_request(:put_entity_type, params)
+    def put_entity_type(, **options)
+      req = build_request(:put_entity_type, )
       req.send_request(options)
     end
 
@@ -2149,8 +2149,8 @@ module Aws::FraudDetector
     #
     # @overload put_event_type(**params)
     # @param [Hash] params ({})
-    def put_event_type(params = {}, **options)
-      req = build_request(:put_event_type, params)
+    def put_event_type(, **options)
+      req = build_request(:put_event_type, )
       req.send_request(options)
     end
 
@@ -2216,8 +2216,8 @@ module Aws::FraudDetector
     #
     # @overload put_external_model(**params)
     # @param [Hash] params ({})
-    def put_external_model(params = {}, **options)
-      req = build_request(:put_external_model, params)
+    def put_external_model(, **options)
+      req = build_request(:put_external_model, )
       req.send_request(options)
     end
 
@@ -2239,8 +2239,8 @@ module Aws::FraudDetector
     #
     # @overload put_kms_encryption_key(**params)
     # @param [Hash] params ({})
-    def put_kms_encryption_key(params = {}, **options)
-      req = build_request(:put_kms_encryption_key, params)
+    def put_kms_encryption_key(, **options)
+      req = build_request(:put_kms_encryption_key, )
       req.send_request(options)
     end
 
@@ -2275,8 +2275,8 @@ module Aws::FraudDetector
     #
     # @overload put_label(**params)
     # @param [Hash] params ({})
-    def put_label(params = {}, **options)
-      req = build_request(:put_label, params)
+    def put_label(, **options)
+      req = build_request(:put_label, )
       req.send_request(options)
     end
 
@@ -2310,8 +2310,8 @@ module Aws::FraudDetector
     #
     # @overload put_outcome(**params)
     # @param [Hash] params ({})
-    def put_outcome(params = {}, **options)
-      req = build_request(:put_outcome, params)
+    def put_outcome(, **options)
+      req = build_request(:put_outcome, )
       req.send_request(options)
     end
 
@@ -2341,8 +2341,8 @@ module Aws::FraudDetector
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2367,8 +2367,8 @@ module Aws::FraudDetector
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2442,8 +2442,8 @@ module Aws::FraudDetector
     #
     # @overload update_detector_version(**params)
     # @param [Hash] params ({})
-    def update_detector_version(params = {}, **options)
-      req = build_request(:update_detector_version, params)
+    def update_detector_version(, **options)
+      req = build_request(:update_detector_version, )
       req.send_request(options)
     end
 
@@ -2473,8 +2473,8 @@ module Aws::FraudDetector
     #
     # @overload update_detector_version_metadata(**params)
     # @param [Hash] params ({})
-    def update_detector_version_metadata(params = {}, **options)
-      req = build_request(:update_detector_version_metadata, params)
+    def update_detector_version_metadata(, **options)
+      req = build_request(:update_detector_version_metadata, )
       req.send_request(options)
     end
 
@@ -2505,8 +2505,8 @@ module Aws::FraudDetector
     #
     # @overload update_detector_version_status(**params)
     # @param [Hash] params ({})
-    def update_detector_version_status(params = {}, **options)
-      req = build_request(:update_detector_version_status, params)
+    def update_detector_version_status(, **options)
+      req = build_request(:update_detector_version_status, )
       req.send_request(options)
     end
 
@@ -2536,8 +2536,8 @@ module Aws::FraudDetector
     #
     # @overload update_model(**params)
     # @param [Hash] params ({})
-    def update_model(params = {}, **options)
-      req = build_request(:update_model, params)
+    def update_model(, **options)
+      req = build_request(:update_model, )
       req.send_request(options)
     end
 
@@ -2599,8 +2599,8 @@ module Aws::FraudDetector
     #
     # @overload update_model_version(**params)
     # @param [Hash] params ({})
-    def update_model_version(params = {}, **options)
-      req = build_request(:update_model_version, params)
+    def update_model_version(, **options)
+      req = build_request(:update_model_version, )
       req.send_request(options)
     end
 
@@ -2639,8 +2639,8 @@ module Aws::FraudDetector
     #
     # @overload update_model_version_status(**params)
     # @param [Hash] params ({})
-    def update_model_version_status(params = {}, **options)
-      req = build_request(:update_model_version_status, params)
+    def update_model_version_status(, **options)
+      req = build_request(:update_model_version_status, )
       req.send_request(options)
     end
 
@@ -2669,8 +2669,8 @@ module Aws::FraudDetector
     #
     # @overload update_rule_metadata(**params)
     # @param [Hash] params ({})
-    def update_rule_metadata(params = {}, **options)
-      req = build_request(:update_rule_metadata, params)
+    def update_rule_metadata(, **options)
+      req = build_request(:update_rule_metadata, )
       req.send_request(options)
     end
 
@@ -2729,8 +2729,8 @@ module Aws::FraudDetector
     #
     # @overload update_rule_version(**params)
     # @param [Hash] params ({})
-    def update_rule_version(params = {}, **options)
-      req = build_request(:update_rule_version, params)
+    def update_rule_version(, **options)
+      req = build_request(:update_rule_version, )
       req.send_request(options)
     end
 
@@ -2767,8 +2767,8 @@ module Aws::FraudDetector
     #
     # @overload update_variable(**params)
     # @param [Hash] params ({})
-    def update_variable(params = {}, **options)
-      req = build_request(:update_variable, params)
+    def update_variable(, **options)
+      req = build_request(:update_variable, )
       req.send_request(options)
     end
 

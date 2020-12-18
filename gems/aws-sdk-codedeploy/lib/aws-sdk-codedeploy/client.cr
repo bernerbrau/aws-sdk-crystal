@@ -366,8 +366,8 @@ module Aws::CodeDeploy
     #
     # @overload add_tags_to_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def add_tags_to_on_premises_instances(params = {}, **options)
-      req = build_request(:add_tags_to_on_premises_instances, params)
+    def add_tags_to_on_premises_instances(, **options)
+      req = build_request(:add_tags_to_on_premises_instances, )
       req.send_request(options)
     end
 
@@ -447,8 +447,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_application_revisions(**params)
     # @param [Hash] params ({})
-    def batch_get_application_revisions(params = {}, **options)
-      req = build_request(:batch_get_application_revisions, params)
+    def batch_get_application_revisions(, **options)
+      req = build_request(:batch_get_application_revisions, )
       req.send_request(options)
     end
 
@@ -483,8 +483,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_applications(**params)
     # @param [Hash] params ({})
-    def batch_get_applications(params = {}, **options)
-      req = build_request(:batch_get_applications, params)
+    def batch_get_applications(, **options)
+      req = build_request(:batch_get_applications, )
       req.send_request(options)
     end
 
@@ -598,8 +598,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_deployment_groups(**params)
     # @param [Hash] params ({})
-    def batch_get_deployment_groups(params = {}, **options)
-      req = build_request(:batch_get_deployment_groups, params)
+    def batch_get_deployment_groups(, **options)
+      req = build_request(:batch_get_deployment_groups, )
       req.send_request(options)
     end
 
@@ -656,8 +656,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_deployment_instances(**params)
     # @param [Hash] params ({})
-    def batch_get_deployment_instances(params = {}, **options)
-      req = build_request(:batch_get_deployment_instances, params)
+    def batch_get_deployment_instances(, **options)
+      req = build_request(:batch_get_deployment_instances, )
       req.send_request(options)
     end
 
@@ -795,8 +795,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_deployment_targets(**params)
     # @param [Hash] params ({})
-    def batch_get_deployment_targets(params = {}, **options)
-      req = build_request(:batch_get_deployment_targets, params)
+    def batch_get_deployment_targets(, **options)
+      req = build_request(:batch_get_deployment_targets, )
       req.send_request(options)
     end
 
@@ -911,8 +911,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_deployments(**params)
     # @param [Hash] params ({})
-    def batch_get_deployments(params = {}, **options)
-      req = build_request(:batch_get_deployments, params)
+    def batch_get_deployments(, **options)
+      req = build_request(:batch_get_deployments, )
       req.send_request(options)
     end
 
@@ -950,8 +950,8 @@ module Aws::CodeDeploy
     #
     # @overload batch_get_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def batch_get_on_premises_instances(params = {}, **options)
-      req = build_request(:batch_get_on_premises_instances, params)
+    def batch_get_on_premises_instances(, **options)
+      req = build_request(:batch_get_on_premises_instances, )
       req.send_request(options)
     end
 
@@ -985,8 +985,8 @@ module Aws::CodeDeploy
     #
     # @overload continue_deployment(**params)
     # @param [Hash] params ({})
-    def continue_deployment(params = {}, **options)
-      req = build_request(:continue_deployment, params)
+    def continue_deployment(, **options)
+      req = build_request(:continue_deployment, )
       req.send_request(options)
     end
 
@@ -1030,8 +1030,8 @@ module Aws::CodeDeploy
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -1188,8 +1188,8 @@ module Aws::CodeDeploy
     #
     # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, **options)
-      req = build_request(:create_deployment, params)
+    def create_deployment(, **options)
+      req = build_request(:create_deployment, )
       req.send_request(options)
     end
 
@@ -1260,8 +1260,8 @@ module Aws::CodeDeploy
     #
     # @overload create_deployment_config(**params)
     # @param [Hash] params ({})
-    def create_deployment_config(params = {}, **options)
-      req = build_request(:create_deployment_config, params)
+    def create_deployment_config(, **options)
+      req = build_request(:create_deployment_config, )
       req.send_request(options)
     end
 
@@ -1495,8 +1495,8 @@ module Aws::CodeDeploy
     #
     # @overload create_deployment_group(**params)
     # @param [Hash] params ({})
-    def create_deployment_group(params = {}, **options)
-      req = build_request(:create_deployment_group, params)
+    def create_deployment_group(, **options)
+      req = build_request(:create_deployment_group, )
       req.send_request(options)
     end
 
@@ -1518,8 +1518,8 @@ module Aws::CodeDeploy
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -1546,8 +1546,8 @@ module Aws::CodeDeploy
     #
     # @overload delete_deployment_config(**params)
     # @param [Hash] params ({})
-    def delete_deployment_config(params = {}, **options)
-      req = build_request(:delete_deployment_config, params)
+    def delete_deployment_config(, **options)
+      req = build_request(:delete_deployment_config, )
       req.send_request(options)
     end
 
@@ -1581,8 +1581,8 @@ module Aws::CodeDeploy
     #
     # @overload delete_deployment_group(**params)
     # @param [Hash] params ({})
-    def delete_deployment_group(params = {}, **options)
-      req = build_request(:delete_deployment_group, params)
+    def delete_deployment_group(, **options)
+      req = build_request(:delete_deployment_group, )
       req.send_request(options)
     end
 
@@ -1609,8 +1609,8 @@ module Aws::CodeDeploy
     #
     # @overload delete_git_hub_account_token(**params)
     # @param [Hash] params ({})
-    def delete_git_hub_account_token(params = {}, **options)
-      req = build_request(:delete_git_hub_account_token, params)
+    def delete_git_hub_account_token(, **options)
+      req = build_request(:delete_git_hub_account_token, )
       req.send_request(options)
     end
 
@@ -1632,8 +1632,8 @@ module Aws::CodeDeploy
     #
     # @overload delete_resources_by_external_id(**params)
     # @param [Hash] params ({})
-    def delete_resources_by_external_id(params = {}, **options)
-      req = build_request(:delete_resources_by_external_id, params)
+    def delete_resources_by_external_id(, **options)
+      req = build_request(:delete_resources_by_external_id, )
       req.send_request(options)
     end
 
@@ -1654,8 +1654,8 @@ module Aws::CodeDeploy
     #
     # @overload deregister_on_premises_instance(**params)
     # @param [Hash] params ({})
-    def deregister_on_premises_instance(params = {}, **options)
-      req = build_request(:deregister_on_premises_instance, params)
+    def deregister_on_premises_instance(, **options)
+      req = build_request(:deregister_on_premises_instance, )
       req.send_request(options)
     end
 
@@ -1688,8 +1688,8 @@ module Aws::CodeDeploy
     #
     # @overload get_application(**params)
     # @param [Hash] params ({})
-    def get_application(params = {}, **options)
-      req = build_request(:get_application, params)
+    def get_application(, **options)
+      req = build_request(:get_application, )
       req.send_request(options)
     end
 
@@ -1762,8 +1762,8 @@ module Aws::CodeDeploy
     #
     # @overload get_application_revision(**params)
     # @param [Hash] params ({})
-    def get_application_revision(params = {}, **options)
-      req = build_request(:get_application_revision, params)
+    def get_application_revision(, **options)
+      req = build_request(:get_application_revision, )
       req.send_request(options)
     end
 
@@ -1888,8 +1888,8 @@ module Aws::CodeDeploy
     #
     # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, **options)
-      req = build_request(:get_deployment, params)
+    def get_deployment(, **options)
+      req = build_request(:get_deployment, )
       req.send_request(options)
     end
 
@@ -1927,8 +1927,8 @@ module Aws::CodeDeploy
     #
     # @overload get_deployment_config(**params)
     # @param [Hash] params ({})
-    def get_deployment_config(params = {}, **options)
-      req = build_request(:get_deployment_config, params)
+    def get_deployment_config(, **options)
+      req = build_request(:get_deployment_config, )
       req.send_request(options)
     end
 
@@ -2039,8 +2039,8 @@ module Aws::CodeDeploy
     #
     # @overload get_deployment_group(**params)
     # @param [Hash] params ({})
-    def get_deployment_group(params = {}, **options)
-      req = build_request(:get_deployment_group, params)
+    def get_deployment_group(, **options)
+      req = build_request(:get_deployment_group, )
       req.send_request(options)
     end
 
@@ -2084,8 +2084,8 @@ module Aws::CodeDeploy
     #
     # @overload get_deployment_instance(**params)
     # @param [Hash] params ({})
-    def get_deployment_instance(params = {}, **options)
-      req = build_request(:get_deployment_instance, params)
+    def get_deployment_instance(, **options)
+      req = build_request(:get_deployment_instance, )
       req.send_request(options)
     end
 
@@ -2188,8 +2188,8 @@ module Aws::CodeDeploy
     #
     # @overload get_deployment_target(**params)
     # @param [Hash] params ({})
-    def get_deployment_target(params = {}, **options)
-      req = build_request(:get_deployment_target, params)
+    def get_deployment_target(, **options)
+      req = build_request(:get_deployment_target, )
       req.send_request(options)
     end
 
@@ -2224,8 +2224,8 @@ module Aws::CodeDeploy
     #
     # @overload get_on_premises_instance(**params)
     # @param [Hash] params ({})
-    def get_on_premises_instance(params = {}, **options)
-      req = build_request(:get_on_premises_instance, params)
+    def get_on_premises_instance(, **options)
+      req = build_request(:get_on_premises_instance, )
       req.send_request(options)
     end
 
@@ -2327,8 +2327,8 @@ module Aws::CodeDeploy
     #
     # @overload list_application_revisions(**params)
     # @param [Hash] params ({})
-    def list_application_revisions(params = {}, **options)
-      req = build_request(:list_application_revisions, params)
+    def list_application_revisions(, **options)
+      req = build_request(:list_application_revisions, )
       req.send_request(options)
     end
 
@@ -2361,8 +2361,8 @@ module Aws::CodeDeploy
     #
     # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, **options)
-      req = build_request(:list_applications, params)
+    def list_applications(, **options)
+      req = build_request(:list_applications, )
       req.send_request(options)
     end
 
@@ -2396,8 +2396,8 @@ module Aws::CodeDeploy
     #
     # @overload list_deployment_configs(**params)
     # @param [Hash] params ({})
-    def list_deployment_configs(params = {}, **options)
-      req = build_request(:list_deployment_configs, params)
+    def list_deployment_configs(, **options)
+      req = build_request(:list_deployment_configs, )
       req.send_request(options)
     end
 
@@ -2439,8 +2439,8 @@ module Aws::CodeDeploy
     #
     # @overload list_deployment_groups(**params)
     # @param [Hash] params ({})
-    def list_deployment_groups(params = {}, **options)
-      req = build_request(:list_deployment_groups, params)
+    def list_deployment_groups(, **options)
+      req = build_request(:list_deployment_groups, )
       req.send_request(options)
     end
 
@@ -2511,8 +2511,8 @@ module Aws::CodeDeploy
     #
     # @overload list_deployment_instances(**params)
     # @param [Hash] params ({})
-    def list_deployment_instances(params = {}, **options)
-      req = build_request(:list_deployment_instances, params)
+    def list_deployment_instances(, **options)
+      req = build_request(:list_deployment_instances, )
       req.send_request(options)
     end
 
@@ -2561,8 +2561,8 @@ module Aws::CodeDeploy
     #
     # @overload list_deployment_targets(**params)
     # @param [Hash] params ({})
-    def list_deployment_targets(params = {}, **options)
-      req = build_request(:list_deployment_targets, params)
+    def list_deployment_targets(, **options)
+      req = build_request(:list_deployment_targets, )
       req.send_request(options)
     end
 
@@ -2647,8 +2647,8 @@ module Aws::CodeDeploy
     #
     # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, **options)
-      req = build_request(:list_deployments, params)
+    def list_deployments(, **options)
+      req = build_request(:list_deployments, )
       req.send_request(options)
     end
 
@@ -2679,8 +2679,8 @@ module Aws::CodeDeploy
     #
     # @overload list_git_hub_account_token_names(**params)
     # @param [Hash] params ({})
-    def list_git_hub_account_token_names(params = {}, **options)
-      req = build_request(:list_git_hub_account_token_names, params)
+    def list_git_hub_account_token_names(, **options)
+      req = build_request(:list_git_hub_account_token_names, )
       req.send_request(options)
     end
 
@@ -2738,8 +2738,8 @@ module Aws::CodeDeploy
     #
     # @overload list_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def list_on_premises_instances(params = {}, **options)
-      req = build_request(:list_on_premises_instances, params)
+    def list_on_premises_instances(, **options)
+      req = build_request(:list_on_premises_instances, )
       req.send_request(options)
     end
 
@@ -2779,8 +2779,8 @@ module Aws::CodeDeploy
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2834,8 +2834,8 @@ module Aws::CodeDeploy
     #
     # @overload put_lifecycle_event_hook_execution_status(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_event_hook_execution_status(params = {}, **options)
-      req = build_request(:put_lifecycle_event_hook_execution_status, params)
+    def put_lifecycle_event_hook_execution_status(, **options)
+      req = build_request(:put_lifecycle_event_hook_execution_status, )
       req.send_request(options)
     end
 
@@ -2888,8 +2888,8 @@ module Aws::CodeDeploy
     #
     # @overload register_application_revision(**params)
     # @param [Hash] params ({})
-    def register_application_revision(params = {}, **options)
-      req = build_request(:register_application_revision, params)
+    def register_application_revision(, **options)
+      req = build_request(:register_application_revision, )
       req.send_request(options)
     end
 
@@ -2923,8 +2923,8 @@ module Aws::CodeDeploy
     #
     # @overload register_on_premises_instance(**params)
     # @param [Hash] params ({})
-    def register_on_premises_instance(params = {}, **options)
-      req = build_request(:register_on_premises_instance, params)
+    def register_on_premises_instance(, **options)
+      req = build_request(:register_on_premises_instance, )
       req.send_request(options)
     end
 
@@ -2954,8 +2954,8 @@ module Aws::CodeDeploy
     #
     # @overload remove_tags_from_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_on_premises_instances(params = {}, **options)
-      req = build_request(:remove_tags_from_on_premises_instances, params)
+    def remove_tags_from_on_premises_instances(, **options)
+      req = build_request(:remove_tags_from_on_premises_instances, )
       req.send_request(options)
     end
 
@@ -2979,8 +2979,8 @@ module Aws::CodeDeploy
     #
     # @overload skip_wait_time_for_instance_termination(**params)
     # @param [Hash] params ({})
-    def skip_wait_time_for_instance_termination(params = {}, **options)
-      req = build_request(:skip_wait_time_for_instance_termination, params)
+    def skip_wait_time_for_instance_termination(, **options)
+      req = build_request(:skip_wait_time_for_instance_termination, )
       req.send_request(options)
     end
 
@@ -3015,8 +3015,8 @@ module Aws::CodeDeploy
     #
     # @overload stop_deployment(**params)
     # @param [Hash] params ({})
-    def stop_deployment(params = {}, **options)
-      req = build_request(:stop_deployment, params)
+    def stop_deployment(, **options)
+      req = build_request(:stop_deployment, )
       req.send_request(options)
     end
 
@@ -3049,8 +3049,8 @@ module Aws::CodeDeploy
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3080,8 +3080,8 @@ module Aws::CodeDeploy
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3106,8 +3106,8 @@ module Aws::CodeDeploy
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 
@@ -3322,8 +3322,8 @@ module Aws::CodeDeploy
     #
     # @overload update_deployment_group(**params)
     # @param [Hash] params ({})
-    def update_deployment_group(params = {}, **options)
-      req = build_request(:update_deployment_group, params)
+    def update_deployment_group(, **options)
+      req = build_request(:update_deployment_group, )
       req.send_request(options)
     end
 

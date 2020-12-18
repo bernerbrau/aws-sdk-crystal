@@ -3146,5 +3146,834 @@ module Aws::SMS
       include Aws::Structure
     end
 
+    alias AmiId = String
+
+    alias AppDescription = String
+
+    alias AppId = String
+
+    alias AppIdWithValidation = String
+
+    alias AppIds = Array(AppId)
+
+    alias AppLaunchConfigurationStatus = String
+
+    alias AppLaunchStatus = String
+
+    alias AppLaunchStatusMessage = String
+
+    alias AppName = String
+
+    alias AppReplicationConfigurationStatus = String
+
+    alias AppReplicationStatus = String
+
+    alias AppReplicationStatusMessage = String
+
+    alias AppStatus = String
+
+    alias AppStatusMessage = String
+
+    alias AppSummary = NamedTuple(
+      "appId" : (AppId)?,
+      "importedAppId" : (ImportedAppId)?,
+      "name" : (AppName)?,
+      "description" : (AppDescription)?,
+      "status" : (AppStatus)?,
+      "statusMessage" : (AppStatusMessage)?,
+      "replicationConfigurationStatus" : (AppReplicationConfigurationStatus)?,
+      "replicationStatus" : (AppReplicationStatus)?,
+      "replicationStatusMessage" : (AppReplicationStatusMessage)?,
+      "latestReplicationTime" : (Timestamp)?,
+      "launchConfigurationStatus" : (AppLaunchConfigurationStatus)?,
+      "launchStatus" : (AppLaunchStatus)?,
+      "launchStatusMessage" : (AppLaunchStatusMessage)?,
+      "launchDetails" : (LaunchDetails)?,
+      "creationTime" : (Timestamp)?,
+      "lastModified" : (Timestamp)?,
+      "roleName" : (RoleName)?,
+      "totalServerGroups" : (TotalServerGroups)?,
+      "totalServers" : (TotalServers)?
+    )
+
+    alias AppValidationConfiguration = NamedTuple(
+      "validationId" : (ValidationId)?,
+      "name" : (NonEmptyStringWithMaxLen255)?,
+      "appValidationStrategy" : (AppValidationStrategy)?,
+      "ssmValidationParameters" : (SSMValidationParameters)?
+    )
+
+    alias AppValidationConfigurations = Array(AppValidationConfiguration)
+
+    alias AppValidationOutput = NamedTuple(
+      "ssmOutput" : (SSMOutput)?
+    )
+
+    alias AppValidationStrategy = String
+
+    alias Apps = Array(AppSummary)
+
+    alias AssociatePublicIpAddress = Bool
+
+    alias AutoLaunch = Bool
+
+    alias BucketName = String
+
+    alias ClientToken = String
+
+    alias Command = String
+
+    alias Connector = NamedTuple(
+      "connectorId" : (ConnectorId)?,
+      "version" : (ConnectorVersion)?,
+      "status" : (ConnectorStatus)?,
+      "capabilityList" : (ConnectorCapabilityList)?,
+      "vmManagerName" : (VmManagerName)?,
+      "vmManagerType" : (VmManagerType)?,
+      "vmManagerId" : (VmManagerId)?,
+      "ipAddress" : (IpAddress)?,
+      "macAddress" : (MacAddress)?,
+      "associatedOn" : (Timestamp)?
+    )
+
+    alias ConnectorCapability = String
+
+    alias ConnectorCapabilityList = Array(ConnectorCapability)
+
+    alias ConnectorId = String
+
+    alias ConnectorList = Array(Connector)
+
+    alias ConnectorStatus = String
+
+    alias ConnectorVersion = String
+
+    alias CreateAppRequest = NamedTuple(
+      "name" : (AppName)?,
+      "description" : (AppDescription)?,
+      "roleName" : (RoleName)?,
+      "clientToken" : (ClientToken)?,
+      "serverGroups" : (ServerGroups)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateAppResponse = NamedTuple(
+      "appSummary" : (AppSummary)?,
+      "serverGroups" : (ServerGroups)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateReplicationJobRequest = NamedTuple(
+      "serverId" : ServerId,
+      "seedReplicationTime" : Timestamp,
+      "frequency" : (Frequency)?,
+      "runOnce" : (RunOnce)?,
+      "licenseType" : (LicenseType)?,
+      "roleName" : (RoleName)?,
+      "description" : (Description)?,
+      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
+      "encrypted" : (Encrypted)?,
+      "kmsKeyId" : (KmsKeyId)?
+    )
+
+    alias CreateReplicationJobResponse = NamedTuple(
+      "replicationJobId" : (ReplicationJobId)?
+    )
+
+    alias DeleteAppLaunchConfigurationRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias DeleteAppLaunchConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAppReplicationConfigurationRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias DeleteAppReplicationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAppRequest = NamedTuple(
+      "appId" : (AppId)?,
+      "forceStopAppReplication" : (ForceStopAppReplication)?,
+      "forceTerminateApp" : (ForceTerminateApp)?
+    )
+
+    alias DeleteAppResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAppValidationConfigurationRequest = NamedTuple(
+      "appId" : AppIdWithValidation
+    )
+
+    alias DeleteAppValidationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteReplicationJobRequest = NamedTuple(
+      "replicationJobId" : ReplicationJobId
+    )
+
+    alias DeleteReplicationJobResponse = NamedTuple(
+      
+    )
+
+    alias DeleteServerCatalogRequest = NamedTuple(
+      
+    )
+
+    alias DeleteServerCatalogResponse = NamedTuple(
+      
+    )
+
+    alias Description = String
+
+    alias DisassociateConnectorRequest = NamedTuple(
+      "connectorId" : ConnectorId
+    )
+
+    alias DisassociateConnectorResponse = NamedTuple(
+      
+    )
+
+    alias DryRunOperationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias EC2KeyName = String
+
+    alias Encrypted = Bool
+
+    alias ErrorMessage = String
+
+    alias ExecutionTimeoutSeconds = Int32
+
+    alias ForceStopAppReplication = Bool
+
+    alias ForceTerminateApp = Bool
+
+    alias Frequency = Int32
+
+    alias GenerateChangeSetRequest = NamedTuple(
+      "appId" : (AppId)?,
+      "changesetFormat" : (OutputFormat)?
+    )
+
+    alias GenerateChangeSetResponse = NamedTuple(
+      "s3Location" : (S3Location)?
+    )
+
+    alias GenerateTemplateRequest = NamedTuple(
+      "appId" : (AppId)?,
+      "templateFormat" : (OutputFormat)?
+    )
+
+    alias GenerateTemplateResponse = NamedTuple(
+      "s3Location" : (S3Location)?
+    )
+
+    alias GetAppLaunchConfigurationRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias GetAppLaunchConfigurationResponse = NamedTuple(
+      "appId" : (AppId)?,
+      "roleName" : (RoleName)?,
+      "autoLaunch" : (AutoLaunch)?,
+      "serverGroupLaunchConfigurations" : (ServerGroupLaunchConfigurations)?
+    )
+
+    alias GetAppReplicationConfigurationRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias GetAppReplicationConfigurationResponse = NamedTuple(
+      "serverGroupReplicationConfigurations" : (ServerGroupReplicationConfigurations)?
+    )
+
+    alias GetAppRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias GetAppResponse = NamedTuple(
+      "appSummary" : (AppSummary)?,
+      "serverGroups" : (ServerGroups)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetAppValidationConfigurationRequest = NamedTuple(
+      "appId" : AppIdWithValidation
+    )
+
+    alias GetAppValidationConfigurationResponse = NamedTuple(
+      "appValidationConfigurations" : (AppValidationConfigurations)?,
+      "serverGroupValidationConfigurations" : (ServerGroupValidationConfigurations)?
+    )
+
+    alias GetAppValidationOutputRequest = NamedTuple(
+      "appId" : AppIdWithValidation
+    )
+
+    alias GetAppValidationOutputResponse = NamedTuple(
+      "validationOutputList" : (ValidationOutputList)?
+    )
+
+    alias GetConnectorsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetConnectorsResponse = NamedTuple(
+      "connectorList" : (ConnectorList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetReplicationJobsRequest = NamedTuple(
+      "replicationJobId" : (ReplicationJobId)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetReplicationJobsResponse = NamedTuple(
+      "replicationJobList" : (ReplicationJobList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetReplicationRunsRequest = NamedTuple(
+      "replicationJobId" : ReplicationJobId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetReplicationRunsResponse = NamedTuple(
+      "replicationJob" : (ReplicationJob)?,
+      "replicationRunList" : (ReplicationRunList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetServersRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "vmServerAddressList" : (VmServerAddressList)?
+    )
+
+    alias GetServersResponse = NamedTuple(
+      "lastModifiedOn" : (Timestamp)?,
+      "serverCatalogStatus" : (ServerCatalogStatus)?,
+      "serverList" : (ServerList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ImportAppCatalogRequest = NamedTuple(
+      "roleName" : (RoleName)?
+    )
+
+    alias ImportAppCatalogResponse = NamedTuple(
+      
+    )
+
+    alias ImportServerCatalogRequest = NamedTuple(
+      
+    )
+
+    alias ImportServerCatalogResponse = NamedTuple(
+      
+    )
+
+    alias ImportedAppId = String
+
+    alias InstanceId = String
+
+    alias InstanceType = String
+
+    alias InternalError = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias IpAddress = String
+
+    alias KmsKeyId = String
+
+    alias LaunchAppRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias LaunchAppResponse = NamedTuple(
+      
+    )
+
+    alias LaunchDetails = NamedTuple(
+      "latestLaunchTime" : (Timestamp)?,
+      "stackName" : (StackName)?,
+      "stackId" : (StackId)?
+    )
+
+    alias LaunchOrder = Int32
+
+    alias LicenseType = String
+
+    alias ListAppsRequest = NamedTuple(
+      "appIds" : (AppIds)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAppsResponse = NamedTuple(
+      "apps" : (Apps)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias LogicalId = String
+
+    alias MacAddress = String
+
+    alias MaxResults = Int32
+
+    alias MissingRequiredParameterException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NextToken = String
+
+    alias NoConnectorsAvailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NonEmptyStringWithMaxLen255 = String
+
+    alias NotificationContext = NamedTuple(
+      "validationId" : (ValidationId)?,
+      "status" : (ValidationStatus)?,
+      "statusMessage" : (ValidationStatusMessage)?
+    )
+
+    alias NotifyAppValidationOutputRequest = NamedTuple(
+      "appId" : AppIdWithValidation,
+      "notificationContext" : (NotificationContext)?
+    )
+
+    alias NotifyAppValidationOutputResponse = NamedTuple(
+      
+    )
+
+    alias NumberOfRecentAmisToKeep = Int32
+
+    alias OperationNotPermittedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias OutputFormat = String
+
+    alias PutAppLaunchConfigurationRequest = NamedTuple(
+      "appId" : (AppId)?,
+      "roleName" : (RoleName)?,
+      "autoLaunch" : (AutoLaunch)?,
+      "serverGroupLaunchConfigurations" : (ServerGroupLaunchConfigurations)?
+    )
+
+    alias PutAppLaunchConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias PutAppReplicationConfigurationRequest = NamedTuple(
+      "appId" : (AppId)?,
+      "serverGroupReplicationConfigurations" : (ServerGroupReplicationConfigurations)?
+    )
+
+    alias PutAppReplicationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias PutAppValidationConfigurationRequest = NamedTuple(
+      "appId" : AppIdWithValidation,
+      "appValidationConfigurations" : (AppValidationConfigurations)?,
+      "serverGroupValidationConfigurations" : (ServerGroupValidationConfigurations)?
+    )
+
+    alias PutAppValidationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias ReplicationJob = NamedTuple(
+      "replicationJobId" : (ReplicationJobId)?,
+      "serverId" : (ServerId)?,
+      "serverType" : (ServerType)?,
+      "vmServer" : (VmServer)?,
+      "seedReplicationTime" : (Timestamp)?,
+      "frequency" : (Frequency)?,
+      "runOnce" : (RunOnce)?,
+      "nextReplicationRunStartTime" : (Timestamp)?,
+      "licenseType" : (LicenseType)?,
+      "roleName" : (RoleName)?,
+      "latestAmiId" : (AmiId)?,
+      "state" : (ReplicationJobState)?,
+      "statusMessage" : (ReplicationJobStatusMessage)?,
+      "description" : (Description)?,
+      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
+      "encrypted" : (Encrypted)?,
+      "kmsKeyId" : (KmsKeyId)?,
+      "replicationRunList" : (ReplicationRunList)?
+    )
+
+    alias ReplicationJobAlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ReplicationJobId = String
+
+    alias ReplicationJobList = Array(ReplicationJob)
+
+    alias ReplicationJobNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ReplicationJobState = String
+
+    alias ReplicationJobStatusMessage = String
+
+    alias ReplicationJobTerminated = Bool
+
+    alias ReplicationRun = NamedTuple(
+      "replicationRunId" : (ReplicationRunId)?,
+      "state" : (ReplicationRunState)?,
+      "type" : (ReplicationRunType)?,
+      "stageDetails" : (ReplicationRunStageDetails)?,
+      "statusMessage" : (ReplicationRunStatusMessage)?,
+      "amiId" : (AmiId)?,
+      "scheduledStartTime" : (Timestamp)?,
+      "completedTime" : (Timestamp)?,
+      "description" : (Description)?,
+      "encrypted" : (Encrypted)?,
+      "kmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ReplicationRunId = String
+
+    alias ReplicationRunLimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ReplicationRunList = Array(ReplicationRun)
+
+    alias ReplicationRunStage = String
+
+    alias ReplicationRunStageDetails = NamedTuple(
+      "stage" : (ReplicationRunStage)?,
+      "stageProgress" : (ReplicationRunStageProgress)?
+    )
+
+    alias ReplicationRunStageProgress = String
+
+    alias ReplicationRunState = String
+
+    alias ReplicationRunStatusMessage = String
+
+    alias ReplicationRunType = String
+
+    alias RoleName = String
+
+    alias RunOnce = Bool
+
+    alias S3BucketName = String
+
+    alias S3KeyName = String
+
+    alias S3Location = NamedTuple(
+      "bucket" : (S3BucketName)?,
+      "key" : (S3KeyName)?
+    )
+
+    alias SSMOutput = NamedTuple(
+      "s3Location" : (S3Location)?
+    )
+
+    alias SSMValidationParameters = NamedTuple(
+      "source" : (Source)?,
+      "instanceId" : (InstanceId)?,
+      "scriptType" : (ScriptType)?,
+      "command" : (Command)?,
+      "executionTimeoutSeconds" : (ExecutionTimeoutSeconds)?,
+      "outputS3BucketName" : (BucketName)?
+    )
+
+    alias ScriptType = String
+
+    alias SecurityGroup = String
+
+    alias Server = NamedTuple(
+      "serverId" : (ServerId)?,
+      "serverType" : (ServerType)?,
+      "vmServer" : (VmServer)?,
+      "replicationJobId" : (ReplicationJobId)?,
+      "replicationJobTerminated" : (ReplicationJobTerminated)?
+    )
+
+    alias ServerCannotBeReplicatedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ServerCatalogStatus = String
+
+    alias ServerGroup = NamedTuple(
+      "serverGroupId" : (ServerGroupId)?,
+      "name" : (ServerGroupName)?,
+      "serverList" : (ServerList)?
+    )
+
+    alias ServerGroupId = String
+
+    alias ServerGroupLaunchConfiguration = NamedTuple(
+      "serverGroupId" : (ServerGroupId)?,
+      "launchOrder" : (LaunchOrder)?,
+      "serverLaunchConfigurations" : (ServerLaunchConfigurations)?
+    )
+
+    alias ServerGroupLaunchConfigurations = Array(ServerGroupLaunchConfiguration)
+
+    alias ServerGroupName = String
+
+    alias ServerGroupReplicationConfiguration = NamedTuple(
+      "serverGroupId" : (ServerGroupId)?,
+      "serverReplicationConfigurations" : (ServerReplicationConfigurations)?
+    )
+
+    alias ServerGroupReplicationConfigurations = Array(ServerGroupReplicationConfiguration)
+
+    alias ServerGroupValidationConfiguration = NamedTuple(
+      "serverGroupId" : (ServerGroupId)?,
+      "serverValidationConfigurations" : (ServerValidationConfigurations)?
+    )
+
+    alias ServerGroupValidationConfigurations = Array(ServerGroupValidationConfiguration)
+
+    alias ServerGroups = Array(ServerGroup)
+
+    alias ServerId = String
+
+    alias ServerLaunchConfiguration = NamedTuple(
+      "server" : (Server)?,
+      "logicalId" : (LogicalId)?,
+      "vpc" : (VPC)?,
+      "subnet" : (Subnet)?,
+      "securityGroup" : (SecurityGroup)?,
+      "ec2KeyName" : (EC2KeyName)?,
+      "userData" : (UserData)?,
+      "instanceType" : (InstanceType)?,
+      "associatePublicIpAddress" : (AssociatePublicIpAddress)?,
+      "iamInstanceProfileName" : (RoleName)?,
+      "configureScript" : (S3Location)?,
+      "configureScriptType" : (ScriptType)?
+    )
+
+    alias ServerLaunchConfigurations = Array(ServerLaunchConfiguration)
+
+    alias ServerList = Array(Server)
+
+    alias ServerReplicationConfiguration = NamedTuple(
+      "server" : (Server)?,
+      "serverReplicationParameters" : (ServerReplicationParameters)?
+    )
+
+    alias ServerReplicationConfigurations = Array(ServerReplicationConfiguration)
+
+    alias ServerReplicationParameters = NamedTuple(
+      "seedTime" : (Timestamp)?,
+      "frequency" : (Frequency)?,
+      "runOnce" : (RunOnce)?,
+      "licenseType" : (LicenseType)?,
+      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
+      "encrypted" : (Encrypted)?,
+      "kmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ServerType = String
+
+    alias ServerValidationConfiguration = NamedTuple(
+      "server" : (Server)?,
+      "validationId" : (ValidationId)?,
+      "name" : (NonEmptyStringWithMaxLen255)?,
+      "serverValidationStrategy" : (ServerValidationStrategy)?,
+      "userDataValidationParameters" : (UserDataValidationParameters)?
+    )
+
+    alias ServerValidationConfigurations = Array(ServerValidationConfiguration)
+
+    alias ServerValidationOutput = NamedTuple(
+      "server" : (Server)?
+    )
+
+    alias ServerValidationStrategy = String
+
+    alias Source = NamedTuple(
+      "s3Location" : (S3Location)?
+    )
+
+    alias StackId = String
+
+    alias StackName = String
+
+    alias StartAppReplicationRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias StartAppReplicationResponse = NamedTuple(
+      
+    )
+
+    alias StartOnDemandAppReplicationRequest = NamedTuple(
+      "appId" : AppId,
+      "description" : (Description)?
+    )
+
+    alias StartOnDemandAppReplicationResponse = NamedTuple(
+      
+    )
+
+    alias StartOnDemandReplicationRunRequest = NamedTuple(
+      "replicationJobId" : ReplicationJobId,
+      "description" : (Description)?
+    )
+
+    alias StartOnDemandReplicationRunResponse = NamedTuple(
+      "replicationRunId" : (ReplicationRunId)?
+    )
+
+    alias StopAppReplicationRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias StopAppReplicationResponse = NamedTuple(
+      
+    )
+
+    alias Subnet = String
+
+    alias Tag = NamedTuple(
+      "key" : (TagKey)?,
+      "value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TemporarilyUnavailableException = NamedTuple(
+      
+    )
+
+    alias TerminateAppRequest = NamedTuple(
+      "appId" : (AppId)?
+    )
+
+    alias TerminateAppResponse = NamedTuple(
+      
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TotalServerGroups = Int32
+
+    alias TotalServers = Int32
+
+    alias UnauthorizedOperationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UpdateAppRequest = NamedTuple(
+      "appId" : (AppId)?,
+      "name" : (AppName)?,
+      "description" : (AppDescription)?,
+      "roleName" : (RoleName)?,
+      "serverGroups" : (ServerGroups)?,
+      "tags" : (Tags)?
+    )
+
+    alias UpdateAppResponse = NamedTuple(
+      "appSummary" : (AppSummary)?,
+      "serverGroups" : (ServerGroups)?,
+      "tags" : (Tags)?
+    )
+
+    alias UpdateReplicationJobRequest = NamedTuple(
+      "replicationJobId" : ReplicationJobId,
+      "frequency" : (Frequency)?,
+      "nextReplicationRunStartTime" : (Timestamp)?,
+      "licenseType" : (LicenseType)?,
+      "roleName" : (RoleName)?,
+      "description" : (Description)?,
+      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
+      "encrypted" : (Encrypted)?,
+      "kmsKeyId" : (KmsKeyId)?
+    )
+
+    alias UpdateReplicationJobResponse = NamedTuple(
+      
+    )
+
+    alias UserData = NamedTuple(
+      "s3Location" : (S3Location)?
+    )
+
+    alias UserDataValidationParameters = NamedTuple(
+      "source" : (Source)?,
+      "scriptType" : (ScriptType)?
+    )
+
+    alias VPC = String
+
+    alias ValidationId = String
+
+    alias ValidationOutput = NamedTuple(
+      "validationId" : (ValidationId)?,
+      "name" : (NonEmptyStringWithMaxLen255)?,
+      "status" : (ValidationStatus)?,
+      "statusMessage" : (ValidationStatusMessage)?,
+      "latestValidationTime" : (Timestamp)?,
+      "appValidationOutput" : (AppValidationOutput)?,
+      "serverValidationOutput" : (ServerValidationOutput)?
+    )
+
+    alias ValidationOutputList = Array(ValidationOutput)
+
+    alias ValidationStatus = String
+
+    alias ValidationStatusMessage = String
+
+    alias VmId = String
+
+    alias VmManagerId = String
+
+    alias VmManagerName = String
+
+    alias VmManagerType = String
+
+    alias VmName = String
+
+    alias VmPath = String
+
+    alias VmServer = NamedTuple(
+      "vmServerAddress" : (VmServerAddress)?,
+      "vmName" : (VmName)?,
+      "vmManagerName" : (VmManagerName)?,
+      "vmManagerType" : (VmManagerType)?,
+      "vmPath" : (VmPath)?
+    )
+
+    alias VmServerAddress = NamedTuple(
+      "vmManagerId" : (VmManagerId)?,
+      "vmId" : (VmId)?
+    )
+
+    alias VmServerAddressList = Array(VmServerAddress)
   end
 end

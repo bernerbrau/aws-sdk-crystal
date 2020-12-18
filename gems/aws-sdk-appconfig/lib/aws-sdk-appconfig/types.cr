@@ -2057,5 +2057,481 @@ module Aws::AppConfig
       include Aws::Structure
     end
 
+    alias Application = NamedTuple(
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Description" : (Description)?
+    )
+
+    alias ApplicationList = Array(Application)
+
+    alias Applications = NamedTuple(
+      "Items" : (ApplicationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Arn = String
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias BytesMeasure = String
+
+    alias Configuration = NamedTuple(
+      "Content" : (Blob)?,
+      "ConfigurationVersion" : (Version)?,
+      "ContentType" : (String)?
+    )
+
+    alias ConfigurationProfile = NamedTuple(
+      "ApplicationId" : (Id)?,
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "LocationUri" : (Uri)?,
+      "RetrievalRoleArn" : (RoleArn)?,
+      "Validators" : (ValidatorList)?
+    )
+
+    alias ConfigurationProfileSummary = NamedTuple(
+      "ApplicationId" : (Id)?,
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "LocationUri" : (Uri)?,
+      "ValidatorTypes" : (ValidatorTypeList)?
+    )
+
+    alias ConfigurationProfileSummaryList = Array(ConfigurationProfileSummary)
+
+    alias ConfigurationProfiles = NamedTuple(
+      "Items" : (ConfigurationProfileSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias CreateApplicationRequest = NamedTuple(
+      "Name" : Name,
+      "Description" : (Description)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateConfigurationProfileRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "Name" : Name,
+      "Description" : (Description)?,
+      "LocationUri" : Uri,
+      "RetrievalRoleArn" : (RoleArn)?,
+      "Validators" : (ValidatorList)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateDeploymentStrategyRequest = NamedTuple(
+      "Name" : Name,
+      "Description" : (Description)?,
+      "DeploymentDurationInMinutes" : MinutesBetween0And24Hours,
+      "FinalBakeTimeInMinutes" : (MinutesBetween0And24Hours)?,
+      "GrowthFactor" : GrowthFactor,
+      "GrowthType" : (GrowthType)?,
+      "ReplicateTo" : ReplicateTo,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateEnvironmentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "Name" : Name,
+      "Description" : (Description)?,
+      "Monitors" : (MonitorList)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateHostedConfigurationVersionRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id,
+      "Description" : (Description)?,
+      "Content" : Blob,
+      "ContentType" : StringWithLengthBetween1And255,
+      "LatestVersionNumber" : (Integer)?
+    )
+
+    alias DeleteApplicationRequest = NamedTuple(
+      "ApplicationId" : Id
+    )
+
+    alias DeleteConfigurationProfileRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id
+    )
+
+    alias DeleteDeploymentStrategyRequest = NamedTuple(
+      "DeploymentStrategyId" : DeploymentStrategyId
+    )
+
+    alias DeleteEnvironmentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id
+    )
+
+    alias DeleteHostedConfigurationVersionRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id,
+      "VersionNumber" : Integer
+    )
+
+    alias Deployment = NamedTuple(
+      "ApplicationId" : (Id)?,
+      "EnvironmentId" : (Id)?,
+      "DeploymentStrategyId" : (Id)?,
+      "ConfigurationProfileId" : (Id)?,
+      "DeploymentNumber" : (Integer)?,
+      "ConfigurationName" : (Name)?,
+      "ConfigurationLocationUri" : (Uri)?,
+      "ConfigurationVersion" : (Version)?,
+      "Description" : (Description)?,
+      "DeploymentDurationInMinutes" : (MinutesBetween0And24Hours)?,
+      "GrowthType" : (GrowthType)?,
+      "GrowthFactor" : (Percentage)?,
+      "FinalBakeTimeInMinutes" : (MinutesBetween0And24Hours)?,
+      "State" : (DeploymentState)?,
+      "EventLog" : (DeploymentEvents)?,
+      "PercentageComplete" : (Percentage)?,
+      "StartedAt" : (Iso8601DateTime)?,
+      "CompletedAt" : (Iso8601DateTime)?
+    )
+
+    alias DeploymentEvent = NamedTuple(
+      "EventType" : (DeploymentEventType)?,
+      "TriggeredBy" : (TriggeredBy)?,
+      "Description" : (Description)?,
+      "OccurredAt" : (Iso8601DateTime)?
+    )
+
+    alias DeploymentEventType = String
+
+    alias DeploymentEvents = Array(DeploymentEvent)
+
+    alias DeploymentList = Array(DeploymentSummary)
+
+    alias DeploymentState = String
+
+    alias DeploymentStrategies = NamedTuple(
+      "Items" : (DeploymentStrategyList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DeploymentStrategy = NamedTuple(
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "DeploymentDurationInMinutes" : (MinutesBetween0And24Hours)?,
+      "GrowthType" : (GrowthType)?,
+      "GrowthFactor" : (Percentage)?,
+      "FinalBakeTimeInMinutes" : (MinutesBetween0And24Hours)?,
+      "ReplicateTo" : (ReplicateTo)?
+    )
+
+    alias DeploymentStrategyId = String
+
+    alias DeploymentStrategyList = Array(DeploymentStrategy)
+
+    alias DeploymentSummary = NamedTuple(
+      "DeploymentNumber" : (Integer)?,
+      "ConfigurationName" : (Name)?,
+      "ConfigurationVersion" : (Version)?,
+      "DeploymentDurationInMinutes" : (MinutesBetween0And24Hours)?,
+      "GrowthType" : (GrowthType)?,
+      "GrowthFactor" : (Percentage)?,
+      "FinalBakeTimeInMinutes" : (MinutesBetween0And24Hours)?,
+      "State" : (DeploymentState)?,
+      "PercentageComplete" : (Percentage)?,
+      "StartedAt" : (Iso8601DateTime)?,
+      "CompletedAt" : (Iso8601DateTime)?
+    )
+
+    alias Deployments = NamedTuple(
+      "Items" : (DeploymentList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Description = String
+
+    alias Environment = NamedTuple(
+      "ApplicationId" : (Id)?,
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "State" : (EnvironmentState)?,
+      "Monitors" : (MonitorList)?
+    )
+
+    alias EnvironmentList = Array(Environment)
+
+    alias EnvironmentState = String
+
+    alias Environments = NamedTuple(
+      "Items" : (EnvironmentList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Float = Float32
+
+    alias GetApplicationRequest = NamedTuple(
+      "ApplicationId" : Id
+    )
+
+    alias GetConfigurationProfileRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id
+    )
+
+    alias GetConfigurationRequest = NamedTuple(
+      "Application" : StringWithLengthBetween1And64,
+      "Environment" : StringWithLengthBetween1And64,
+      "Configuration" : StringWithLengthBetween1And64,
+      "ClientId" : StringWithLengthBetween1And64,
+      "ClientConfigurationVersion" : (Version)?
+    )
+
+    alias GetDeploymentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id,
+      "DeploymentNumber" : Integer
+    )
+
+    alias GetDeploymentStrategyRequest = NamedTuple(
+      "DeploymentStrategyId" : DeploymentStrategyId
+    )
+
+    alias GetEnvironmentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id
+    )
+
+    alias GetHostedConfigurationVersionRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id,
+      "VersionNumber" : Integer
+    )
+
+    alias GrowthFactor = Float32
+
+    alias GrowthType = String
+
+    alias HostedConfigurationVersion = NamedTuple(
+      "ApplicationId" : (Id)?,
+      "ConfigurationProfileId" : (Id)?,
+      "VersionNumber" : (Integer)?,
+      "Description" : (Description)?,
+      "Content" : (Blob)?,
+      "ContentType" : (StringWithLengthBetween1And255)?
+    )
+
+    alias HostedConfigurationVersionSummary = NamedTuple(
+      "ApplicationId" : (Id)?,
+      "ConfigurationProfileId" : (Id)?,
+      "VersionNumber" : (Integer)?,
+      "Description" : (Description)?,
+      "ContentType" : (StringWithLengthBetween1And255)?
+    )
+
+    alias HostedConfigurationVersionSummaryList = Array(HostedConfigurationVersionSummary)
+
+    alias HostedConfigurationVersions = NamedTuple(
+      "Items" : (HostedConfigurationVersionSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Id = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Iso8601DateTime = String | UInt64 | Time
+
+    alias ListApplicationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListConfigurationProfilesRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentStrategiesRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentsRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEnvironmentsRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHostedConfigurationVersionsRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : Arn
+    )
+
+    alias MaxResults = Int32
+
+    alias MinutesBetween0And24Hours = Int32
+
+    alias Monitor = NamedTuple(
+      "AlarmArn" : (Arn)?,
+      "AlarmRoleArn" : (RoleArn)?
+    )
+
+    alias MonitorList = Array(Monitor)
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias PayloadTooLargeException = NamedTuple(
+      "Message" : (String)?,
+      "Measure" : (BytesMeasure)?,
+      "Limit" : (Float)?,
+      "Size" : (Float)?
+    )
+
+    alias Percentage = Float32
+
+    alias ReplicateTo = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceName" : (String)?
+    )
+
+    alias ResourceTags = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias RoleArn = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias StartDeploymentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id,
+      "DeploymentStrategyId" : DeploymentStrategyId,
+      "ConfigurationProfileId" : Id,
+      "ConfigurationVersion" : Version,
+      "Description" : (Description)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias StopDeploymentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id,
+      "DeploymentNumber" : Integer
+    )
+
+    alias String = String
+
+    alias StringWithLengthBetween0And32768 = String
+
+    alias StringWithLengthBetween1And255 = String
+
+    alias StringWithLengthBetween1And64 = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "Tags" : TagMap
+    )
+
+    alias TagValue = String
+
+    alias TriggeredBy = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UpdateApplicationRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "Name" : (Name)?,
+      "Description" : (Description)?
+    )
+
+    alias UpdateConfigurationProfileRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "RetrievalRoleArn" : (RoleArn)?,
+      "Validators" : (ValidatorList)?
+    )
+
+    alias UpdateDeploymentStrategyRequest = NamedTuple(
+      "DeploymentStrategyId" : DeploymentStrategyId,
+      "Description" : (Description)?,
+      "DeploymentDurationInMinutes" : (MinutesBetween0And24Hours)?,
+      "FinalBakeTimeInMinutes" : (MinutesBetween0And24Hours)?,
+      "GrowthFactor" : (GrowthFactor)?,
+      "GrowthType" : (GrowthType)?
+    )
+
+    alias UpdateEnvironmentRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "EnvironmentId" : Id,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "Monitors" : (MonitorList)?
+    )
+
+    alias Uri = String
+
+    alias ValidateConfigurationRequest = NamedTuple(
+      "ApplicationId" : Id,
+      "ConfigurationProfileId" : Id,
+      "ConfigurationVersion" : Version
+    )
+
+    alias Validator = NamedTuple(
+      "Type" : ValidatorType,
+      "Content" : StringWithLengthBetween0And32768
+    )
+
+    alias ValidatorList = Array(Validator)
+
+    alias ValidatorType = String
+
+    alias ValidatorTypeList = Array(ValidatorType)
+
+    alias Version = String
   end
 end

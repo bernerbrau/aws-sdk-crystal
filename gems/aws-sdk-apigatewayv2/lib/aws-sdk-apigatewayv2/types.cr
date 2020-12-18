@@ -8696,5 +8696,1777 @@ module Aws::ApiGatewayV2
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias AccessLogSettings = NamedTuple(
+      "DestinationArn" : (Arn)?,
+      "Format" : (StringWithLengthBetween1And1024)?
+    )
+
+    alias Api = NamedTuple(
+      "ApiEndpoint" : (__string)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiId" : (Id)?,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "ImportInfo" : (__listOf__string)?,
+      "Name" : StringWithLengthBetween1And128,
+      "ProtocolType" : ProtocolType,
+      "RouteSelectionExpression" : SelectionExpression,
+      "Tags" : (Tags)?,
+      "Version" : (StringWithLengthBetween1And64)?,
+      "Warnings" : (__listOf__string)?
+    )
+
+    alias ApiMapping = NamedTuple(
+      "ApiId" : Id,
+      "ApiMappingId" : (Id)?,
+      "ApiMappingKey" : (SelectionKey)?,
+      "Stage" : StringWithLengthBetween1And128
+    )
+
+    alias ApiMappings = NamedTuple(
+      "Items" : (__listOfApiMapping)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Apis = NamedTuple(
+      "Items" : (__listOfApi)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Arn = String
+
+    alias AuthorizationScopes = Array(StringWithLengthBetween1And64)
+
+    alias AuthorizationType = String
+
+    alias Authorizer = NamedTuple(
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerId" : (Id)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : (AuthorizerType)?,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : (IdentitySourceList)?,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : StringWithLengthBetween1And128,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias AuthorizerType = String
+
+    alias Authorizers = NamedTuple(
+      "Items" : (__listOfAuthorizer)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias ConnectionType = String
+
+    alias ContentHandlingStrategy = String
+
+    alias Cors = NamedTuple(
+      "AllowCredentials" : (__boolean)?,
+      "AllowHeaders" : (CorsHeaderList)?,
+      "AllowMethods" : (CorsMethodList)?,
+      "AllowOrigins" : (CorsOriginList)?,
+      "ExposeHeaders" : (CorsHeaderList)?,
+      "MaxAge" : (IntegerWithLengthBetweenMinus1And86400)?
+    )
+
+    alias CorsHeaderList = Array(__string)
+
+    alias CorsMethodList = Array(StringWithLengthBetween1And64)
+
+    alias CorsOriginList = Array(__string)
+
+    alias CreateApiInput = NamedTuple(
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "Name" : StringWithLengthBetween1And128,
+      "ProtocolType" : ProtocolType,
+      "RouteKey" : (SelectionKey)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Target" : (UriWithLengthBetween1And2048)?,
+      "Version" : (StringWithLengthBetween1And64)?
+    )
+
+    alias CreateApiMappingInput = NamedTuple(
+      "ApiId" : Id,
+      "ApiMappingKey" : (SelectionKey)?,
+      "Stage" : StringWithLengthBetween1And128
+    )
+
+    alias CreateApiMappingRequest = NamedTuple(
+      "ApiId" : Id,
+      "ApiMappingKey" : (SelectionKey)?,
+      "DomainName" : __string,
+      "Stage" : StringWithLengthBetween1And128
+    )
+
+    alias CreateApiMappingResponse = NamedTuple(
+      "ApiId" : (Id)?,
+      "ApiMappingId" : (Id)?,
+      "ApiMappingKey" : (SelectionKey)?,
+      "Stage" : (StringWithLengthBetween1And128)?
+    )
+
+    alias CreateApiRequest = NamedTuple(
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "Name" : StringWithLengthBetween1And128,
+      "ProtocolType" : ProtocolType,
+      "RouteKey" : (SelectionKey)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Target" : (UriWithLengthBetween1And2048)?,
+      "Version" : (StringWithLengthBetween1And64)?
+    )
+
+    alias CreateApiResponse = NamedTuple(
+      "ApiEndpoint" : (__string)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiId" : (Id)?,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "ImportInfo" : (__listOf__string)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "ProtocolType" : (ProtocolType)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Version" : (StringWithLengthBetween1And64)?,
+      "Warnings" : (__listOf__string)?
+    )
+
+    alias CreateAuthorizerInput = NamedTuple(
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : AuthorizerType,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : IdentitySourceList,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : StringWithLengthBetween1And128,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias CreateAuthorizerRequest = NamedTuple(
+      "ApiId" : __string,
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : AuthorizerType,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : IdentitySourceList,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : StringWithLengthBetween1And128,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias CreateAuthorizerResponse = NamedTuple(
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerId" : (Id)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : (AuthorizerType)?,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : (IdentitySourceList)?,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias CreateDeploymentInput = NamedTuple(
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "StageName" : (StringWithLengthBetween1And128)?
+    )
+
+    alias CreateDeploymentRequest = NamedTuple(
+      "ApiId" : __string,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "StageName" : (StringWithLengthBetween1And128)?
+    )
+
+    alias CreateDeploymentResponse = NamedTuple(
+      "AutoDeployed" : (__boolean)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DeploymentId" : (Id)?,
+      "DeploymentStatus" : (DeploymentStatus)?,
+      "DeploymentStatusMessage" : (__string)?,
+      "Description" : (StringWithLengthBetween0And1024)?
+    )
+
+    alias CreateDomainNameInput = NamedTuple(
+      "DomainName" : StringWithLengthBetween1And512,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthenticationInput)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateDomainNameRequest = NamedTuple(
+      "DomainName" : StringWithLengthBetween1And512,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthenticationInput)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateDomainNameResponse = NamedTuple(
+      "ApiMappingSelectionExpression" : (SelectionExpression)?,
+      "DomainName" : (StringWithLengthBetween1And512)?,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthentication)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateIntegrationInput = NamedTuple(
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : IntegrationType,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfigInput)?
+    )
+
+    alias CreateIntegrationRequest = NamedTuple(
+      "ApiId" : __string,
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : IntegrationType,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfigInput)?
+    )
+
+    alias CreateIntegrationResult = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationId" : (Id)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationResponseSelectionExpression" : (SelectionExpression)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : (IntegrationType)?,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfig)?
+    )
+
+    alias CreateIntegrationResponseInput = NamedTuple(
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationResponseKey" : SelectionKey,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias CreateIntegrationResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationId" : __string,
+      "IntegrationResponseKey" : SelectionKey,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias CreateIntegrationResponseResponse = NamedTuple(
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationResponseId" : (Id)?,
+      "IntegrationResponseKey" : (SelectionKey)?,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias CreateModelInput = NamedTuple(
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "Name" : StringWithLengthBetween1And128,
+      "Schema" : StringWithLengthBetween0And32K
+    )
+
+    alias CreateModelRequest = NamedTuple(
+      "ApiId" : __string,
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "Name" : StringWithLengthBetween1And128,
+      "Schema" : StringWithLengthBetween0And32K
+    )
+
+    alias CreateModelResponse = NamedTuple(
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "ModelId" : (Id)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "Schema" : (StringWithLengthBetween0And32K)?
+    )
+
+    alias CreateRouteInput = NamedTuple(
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteKey" : SelectionKey,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias CreateRouteRequest = NamedTuple(
+      "ApiId" : __string,
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteKey" : SelectionKey,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias CreateRouteResult = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteId" : (Id)?,
+      "RouteKey" : (SelectionKey)?,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias CreateRouteResponseInput = NamedTuple(
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteResponseKey" : SelectionKey
+    )
+
+    alias CreateRouteResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteId" : __string,
+      "RouteResponseKey" : SelectionKey
+    )
+
+    alias CreateRouteResponseResponse = NamedTuple(
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteResponseId" : (Id)?,
+      "RouteResponseKey" : (SelectionKey)?
+    )
+
+    alias CreateStageInput = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : StringWithLengthBetween1And128,
+      "StageVariables" : (StageVariablesMap)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateStageRequest = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "ApiId" : __string,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : StringWithLengthBetween1And128,
+      "StageVariables" : (StageVariablesMap)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateStageResponse = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "LastDeploymentStatusMessage" : (__string)?,
+      "LastUpdatedDate" : (__timestampIso8601)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : (StringWithLengthBetween1And128)?,
+      "StageVariables" : (StageVariablesMap)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateVpcLinkInput = NamedTuple(
+      "Name" : StringWithLengthBetween1And128,
+      "SecurityGroupIds" : (SecurityGroupIdList)?,
+      "SubnetIds" : SubnetIdList,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateVpcLinkRequest = NamedTuple(
+      "Name" : StringWithLengthBetween1And128,
+      "SecurityGroupIds" : (SecurityGroupIdList)?,
+      "SubnetIds" : SubnetIdList,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateVpcLinkResponse = NamedTuple(
+      "CreatedDate" : (__timestampIso8601)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "SecurityGroupIds" : (SecurityGroupIdList)?,
+      "SubnetIds" : (SubnetIdList)?,
+      "Tags" : (Tags)?,
+      "VpcLinkId" : (Id)?,
+      "VpcLinkStatus" : (VpcLinkStatus)?,
+      "VpcLinkStatusMessage" : (StringWithLengthBetween0And1024)?,
+      "VpcLinkVersion" : (VpcLinkVersion)?
+    )
+
+    alias DeleteAccessLogSettingsRequest = NamedTuple(
+      "ApiId" : __string,
+      "StageName" : __string
+    )
+
+    alias DeleteApiMappingRequest = NamedTuple(
+      "ApiMappingId" : __string,
+      "DomainName" : __string
+    )
+
+    alias DeleteApiRequest = NamedTuple(
+      "ApiId" : __string
+    )
+
+    alias DeleteAuthorizerRequest = NamedTuple(
+      "ApiId" : __string,
+      "AuthorizerId" : __string
+    )
+
+    alias DeleteCorsConfigurationRequest = NamedTuple(
+      "ApiId" : __string
+    )
+
+    alias DeleteDeploymentRequest = NamedTuple(
+      "ApiId" : __string,
+      "DeploymentId" : __string
+    )
+
+    alias DeleteDomainNameRequest = NamedTuple(
+      "DomainName" : __string
+    )
+
+    alias DeleteIntegrationRequest = NamedTuple(
+      "ApiId" : __string,
+      "IntegrationId" : __string
+    )
+
+    alias DeleteIntegrationResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "IntegrationId" : __string,
+      "IntegrationResponseId" : __string
+    )
+
+    alias DeleteModelRequest = NamedTuple(
+      "ApiId" : __string,
+      "ModelId" : __string
+    )
+
+    alias DeleteRouteRequest = NamedTuple(
+      "ApiId" : __string,
+      "RouteId" : __string
+    )
+
+    alias DeleteRouteRequestParameterRequest = NamedTuple(
+      "ApiId" : __string,
+      "RequestParameterKey" : __string,
+      "RouteId" : __string
+    )
+
+    alias DeleteRouteResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "RouteId" : __string,
+      "RouteResponseId" : __string
+    )
+
+    alias DeleteRouteSettingsRequest = NamedTuple(
+      "ApiId" : __string,
+      "RouteKey" : __string,
+      "StageName" : __string
+    )
+
+    alias DeleteStageRequest = NamedTuple(
+      "ApiId" : __string,
+      "StageName" : __string
+    )
+
+    alias DeleteVpcLinkRequest = NamedTuple(
+      "VpcLinkId" : __string
+    )
+
+    alias DeleteVpcLinkResponse = NamedTuple(
+      
+    )
+
+    alias Deployment = NamedTuple(
+      "AutoDeployed" : (__boolean)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DeploymentId" : (Id)?,
+      "DeploymentStatus" : (DeploymentStatus)?,
+      "DeploymentStatusMessage" : (__string)?,
+      "Description" : (StringWithLengthBetween0And1024)?
+    )
+
+    alias DeploymentStatus = String
+
+    alias Deployments = NamedTuple(
+      "Items" : (__listOfDeployment)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DomainName = NamedTuple(
+      "ApiMappingSelectionExpression" : (SelectionExpression)?,
+      "DomainName" : StringWithLengthBetween1And512,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthentication)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DomainNameConfiguration = NamedTuple(
+      "ApiGatewayDomainName" : (__string)?,
+      "CertificateArn" : (Arn)?,
+      "CertificateName" : (StringWithLengthBetween1And128)?,
+      "CertificateUploadDate" : (__timestampIso8601)?,
+      "DomainNameStatus" : (DomainNameStatus)?,
+      "DomainNameStatusMessage" : (__string)?,
+      "EndpointType" : (EndpointType)?,
+      "HostedZoneId" : (__string)?,
+      "SecurityPolicy" : (SecurityPolicy)?
+    )
+
+    alias DomainNameConfigurations = Array(DomainNameConfiguration)
+
+    alias DomainNameStatus = String
+
+    alias DomainNames = NamedTuple(
+      "Items" : (__listOfDomainName)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias EndpointType = String
+
+    alias ExportApiRequest = NamedTuple(
+      "ApiId" : __string,
+      "ExportVersion" : (__string)?,
+      "IncludeExtensions" : (__boolean)?,
+      "OutputType" : __string,
+      "Specification" : __string,
+      "StageName" : (__string)?
+    )
+
+    alias ExportApiResponse = NamedTuple(
+      "body" : (ExportedApi)?
+    )
+
+    alias ExportedApi = String | Array(UInt8) | IO
+
+    alias ResetAuthorizersCacheRequest = NamedTuple(
+      "ApiId" : __string,
+      "StageName" : __string
+    )
+
+    alias GetApiMappingRequest = NamedTuple(
+      "ApiMappingId" : __string,
+      "DomainName" : __string
+    )
+
+    alias GetApiMappingResponse = NamedTuple(
+      "ApiId" : (Id)?,
+      "ApiMappingId" : (Id)?,
+      "ApiMappingKey" : (SelectionKey)?,
+      "Stage" : (StringWithLengthBetween1And128)?
+    )
+
+    alias GetApiMappingsRequest = NamedTuple(
+      "DomainName" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetApiMappingsResponse = NamedTuple(
+      "Items" : (__listOfApiMapping)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetApiRequest = NamedTuple(
+      "ApiId" : __string
+    )
+
+    alias GetApiResponse = NamedTuple(
+      "ApiEndpoint" : (__string)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiId" : (Id)?,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "ImportInfo" : (__listOf__string)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "ProtocolType" : (ProtocolType)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Version" : (StringWithLengthBetween1And64)?,
+      "Warnings" : (__listOf__string)?
+    )
+
+    alias GetApisRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetApisResponse = NamedTuple(
+      "Items" : (__listOfApi)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetAuthorizerRequest = NamedTuple(
+      "ApiId" : __string,
+      "AuthorizerId" : __string
+    )
+
+    alias GetAuthorizerResponse = NamedTuple(
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerId" : (Id)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : (AuthorizerType)?,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : (IdentitySourceList)?,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias GetAuthorizersRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetAuthorizersResponse = NamedTuple(
+      "Items" : (__listOfAuthorizer)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetDeploymentRequest = NamedTuple(
+      "ApiId" : __string,
+      "DeploymentId" : __string
+    )
+
+    alias GetDeploymentResponse = NamedTuple(
+      "AutoDeployed" : (__boolean)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DeploymentId" : (Id)?,
+      "DeploymentStatus" : (DeploymentStatus)?,
+      "DeploymentStatusMessage" : (__string)?,
+      "Description" : (StringWithLengthBetween0And1024)?
+    )
+
+    alias GetDeploymentsRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetDeploymentsResponse = NamedTuple(
+      "Items" : (__listOfDeployment)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetDomainNameRequest = NamedTuple(
+      "DomainName" : __string
+    )
+
+    alias GetDomainNameResponse = NamedTuple(
+      "ApiMappingSelectionExpression" : (SelectionExpression)?,
+      "DomainName" : (StringWithLengthBetween1And512)?,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthentication)?,
+      "Tags" : (Tags)?
+    )
+
+    alias GetDomainNamesRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetDomainNamesResponse = NamedTuple(
+      "Items" : (__listOfDomainName)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetIntegrationRequest = NamedTuple(
+      "ApiId" : __string,
+      "IntegrationId" : __string
+    )
+
+    alias GetIntegrationResult = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationId" : (Id)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationResponseSelectionExpression" : (SelectionExpression)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : (IntegrationType)?,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfig)?
+    )
+
+    alias GetIntegrationResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "IntegrationId" : __string,
+      "IntegrationResponseId" : __string
+    )
+
+    alias GetIntegrationResponseResponse = NamedTuple(
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationResponseId" : (Id)?,
+      "IntegrationResponseKey" : (SelectionKey)?,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias GetIntegrationResponsesRequest = NamedTuple(
+      "ApiId" : __string,
+      "IntegrationId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetIntegrationResponsesResponse = NamedTuple(
+      "Items" : (__listOfIntegrationResponse)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetIntegrationsRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetIntegrationsResponse = NamedTuple(
+      "Items" : (__listOfIntegration)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetModelRequest = NamedTuple(
+      "ApiId" : __string,
+      "ModelId" : __string
+    )
+
+    alias GetModelResponse = NamedTuple(
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "ModelId" : (Id)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "Schema" : (StringWithLengthBetween0And32K)?
+    )
+
+    alias GetModelTemplateRequest = NamedTuple(
+      "ApiId" : __string,
+      "ModelId" : __string
+    )
+
+    alias GetModelTemplateResponse = NamedTuple(
+      "Value" : (__string)?
+    )
+
+    alias GetModelsRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetModelsResponse = NamedTuple(
+      "Items" : (__listOfModel)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetRouteRequest = NamedTuple(
+      "ApiId" : __string,
+      "RouteId" : __string
+    )
+
+    alias GetRouteResult = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteId" : (Id)?,
+      "RouteKey" : (SelectionKey)?,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias GetRouteResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "RouteId" : __string,
+      "RouteResponseId" : __string
+    )
+
+    alias GetRouteResponseResponse = NamedTuple(
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteResponseId" : (Id)?,
+      "RouteResponseKey" : (SelectionKey)?
+    )
+
+    alias GetRouteResponsesRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?,
+      "RouteId" : __string
+    )
+
+    alias GetRouteResponsesResponse = NamedTuple(
+      "Items" : (__listOfRouteResponse)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetRoutesRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetRoutesResponse = NamedTuple(
+      "Items" : (__listOfRoute)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetStageRequest = NamedTuple(
+      "ApiId" : __string,
+      "StageName" : __string
+    )
+
+    alias GetStageResponse = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "LastDeploymentStatusMessage" : (__string)?,
+      "LastUpdatedDate" : (__timestampIso8601)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : (StringWithLengthBetween1And128)?,
+      "StageVariables" : (StageVariablesMap)?,
+      "Tags" : (Tags)?
+    )
+
+    alias GetStagesRequest = NamedTuple(
+      "ApiId" : __string,
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetStagesResponse = NamedTuple(
+      "Items" : (__listOfStage)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetTagsRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias GetTagsResponse = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias GetVpcLinkRequest = NamedTuple(
+      "VpcLinkId" : __string
+    )
+
+    alias GetVpcLinkResponse = NamedTuple(
+      "CreatedDate" : (__timestampIso8601)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "SecurityGroupIds" : (SecurityGroupIdList)?,
+      "SubnetIds" : (SubnetIdList)?,
+      "Tags" : (Tags)?,
+      "VpcLinkId" : (Id)?,
+      "VpcLinkStatus" : (VpcLinkStatus)?,
+      "VpcLinkStatusMessage" : (StringWithLengthBetween0And1024)?,
+      "VpcLinkVersion" : (VpcLinkVersion)?
+    )
+
+    alias GetVpcLinksRequest = NamedTuple(
+      "MaxResults" : (__string)?,
+      "NextToken" : (__string)?
+    )
+
+    alias GetVpcLinksResponse = NamedTuple(
+      "Items" : (__listOfVpcLink)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Id = String
+
+    alias IdentitySourceList = Array(__string)
+
+    alias ImportApiInput = NamedTuple(
+      "Body" : __string
+    )
+
+    alias ImportApiRequest = NamedTuple(
+      "Basepath" : (__string)?,
+      "Body" : __string,
+      "FailOnWarnings" : (__boolean)?
+    )
+
+    alias ImportApiResponse = NamedTuple(
+      "ApiEndpoint" : (__string)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiId" : (Id)?,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "ImportInfo" : (__listOf__string)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "ProtocolType" : (ProtocolType)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Version" : (StringWithLengthBetween1And64)?,
+      "Warnings" : (__listOf__string)?
+    )
+
+    alias IntegerWithLengthBetween0And3600 = Int32
+
+    alias IntegerWithLengthBetween50And30000 = Int32
+
+    alias IntegerWithLengthBetweenMinus1And86400 = Int32
+
+    alias Integration = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationId" : (Id)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationResponseSelectionExpression" : (SelectionExpression)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : (IntegrationType)?,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfig)?
+    )
+
+    alias IntegrationParameters = Hash(__string,StringWithLengthBetween1And512)
+
+    alias IntegrationResponse = NamedTuple(
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationResponseId" : (Id)?,
+      "IntegrationResponseKey" : SelectionKey,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias IntegrationResponses = NamedTuple(
+      "Items" : (__listOfIntegrationResponse)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias IntegrationType = String
+
+    alias Integrations = NamedTuple(
+      "Items" : (__listOfIntegration)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias JWTConfiguration = NamedTuple(
+      "Audience" : (__listOf__string)?,
+      "Issuer" : (UriWithLengthBetween1And2048)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "LimitType" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias LoggingLevel = String
+
+    alias Model = NamedTuple(
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "ModelId" : (Id)?,
+      "Name" : StringWithLengthBetween1And128,
+      "Schema" : (StringWithLengthBetween0And32K)?
+    )
+
+    alias Models = NamedTuple(
+      "Items" : (__listOfModel)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MutualTlsAuthentication = NamedTuple(
+      "TruststoreUri" : (UriWithLengthBetween1And2048)?,
+      "TruststoreVersion" : (StringWithLengthBetween1And64)?,
+      "TruststoreWarnings" : (__listOf__string)?
+    )
+
+    alias MutualTlsAuthenticationInput = NamedTuple(
+      "TruststoreUri" : (UriWithLengthBetween1And2048)?,
+      "TruststoreVersion" : (StringWithLengthBetween1And64)?
+    )
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (__string)?,
+      "ResourceType" : (__string)?
+    )
+
+    alias ParameterConstraints = NamedTuple(
+      "Required" : (__boolean)?
+    )
+
+    alias PassthroughBehavior = String
+
+    alias ProtocolType = String
+
+    alias ReimportApiInput = NamedTuple(
+      "Body" : __string
+    )
+
+    alias ReimportApiRequest = NamedTuple(
+      "ApiId" : __string,
+      "Basepath" : (__string)?,
+      "Body" : __string,
+      "FailOnWarnings" : (__boolean)?
+    )
+
+    alias ReimportApiResponse = NamedTuple(
+      "ApiEndpoint" : (__string)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiId" : (Id)?,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "ImportInfo" : (__listOf__string)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "ProtocolType" : (ProtocolType)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Version" : (StringWithLengthBetween1And64)?,
+      "Warnings" : (__listOf__string)?
+    )
+
+    alias Route = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteId" : (Id)?,
+      "RouteKey" : SelectionKey,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias RouteModels = Hash(__string,StringWithLengthBetween1And128)
+
+    alias RouteParameters = Hash(__string,ParameterConstraints)
+
+    alias RouteResponse = NamedTuple(
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteResponseId" : (Id)?,
+      "RouteResponseKey" : SelectionKey
+    )
+
+    alias RouteResponses = NamedTuple(
+      "Items" : (__listOfRouteResponse)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias RouteSettings = NamedTuple(
+      "DataTraceEnabled" : (__boolean)?,
+      "DetailedMetricsEnabled" : (__boolean)?,
+      "LoggingLevel" : (LoggingLevel)?,
+      "ThrottlingBurstLimit" : (__integer)?,
+      "ThrottlingRateLimit" : (__double)?
+    )
+
+    alias RouteSettingsMap = Hash(__string,RouteSettings)
+
+    alias Routes = NamedTuple(
+      "Items" : (__listOfRoute)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias SecurityGroupIdList = Array(__string)
+
+    alias SecurityPolicy = String
+
+    alias SelectionExpression = String
+
+    alias SelectionKey = String
+
+    alias Stage = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "LastDeploymentStatusMessage" : (__string)?,
+      "LastUpdatedDate" : (__timestampIso8601)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : StringWithLengthBetween1And128,
+      "StageVariables" : (StageVariablesMap)?,
+      "Tags" : (Tags)?
+    )
+
+    alias StageVariablesMap = Hash(__string,StringWithLengthBetween0And2048)
+
+    alias Stages = NamedTuple(
+      "Items" : (__listOfStage)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias StringWithLengthBetween0And1024 = String
+
+    alias StringWithLengthBetween0And2048 = String
+
+    alias StringWithLengthBetween0And32K = String
+
+    alias StringWithLengthBetween1And1024 = String
+
+    alias StringWithLengthBetween1And128 = String
+
+    alias StringWithLengthBetween1And1600 = String
+
+    alias StringWithLengthBetween1And256 = String
+
+    alias StringWithLengthBetween1And512 = String
+
+    alias StringWithLengthBetween1And64 = String
+
+    alias SubnetIdList = Array(__string)
+
+    alias TagResourceInput = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias Tags = Hash(__string,StringWithLengthBetween1And1600)
+
+    alias Template = NamedTuple(
+      "Value" : (__string)?
+    )
+
+    alias TemplateMap = Hash(__string,StringWithLengthBetween0And32K)
+
+    alias TlsConfig = NamedTuple(
+      "ServerNameToVerify" : (StringWithLengthBetween1And512)?
+    )
+
+    alias TlsConfigInput = NamedTuple(
+      "ServerNameToVerify" : (StringWithLengthBetween1And512)?
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "LimitType" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias UpdateApiInput = NamedTuple(
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "RouteKey" : (SelectionKey)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Target" : (UriWithLengthBetween1And2048)?,
+      "Version" : (StringWithLengthBetween1And64)?
+    )
+
+    alias UpdateApiMappingInput = NamedTuple(
+      "ApiId" : (Id)?,
+      "ApiMappingKey" : (SelectionKey)?,
+      "Stage" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateApiMappingRequest = NamedTuple(
+      "ApiId" : Id,
+      "ApiMappingId" : __string,
+      "ApiMappingKey" : (SelectionKey)?,
+      "DomainName" : __string,
+      "Stage" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateApiMappingResponse = NamedTuple(
+      "ApiId" : (Id)?,
+      "ApiMappingId" : (Id)?,
+      "ApiMappingKey" : (SelectionKey)?,
+      "Stage" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateApiRequest = NamedTuple(
+      "ApiId" : __string,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "RouteKey" : (SelectionKey)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Target" : (UriWithLengthBetween1And2048)?,
+      "Version" : (StringWithLengthBetween1And64)?
+    )
+
+    alias UpdateApiResponse = NamedTuple(
+      "ApiEndpoint" : (__string)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiId" : (Id)?,
+      "ApiKeySelectionExpression" : (SelectionExpression)?,
+      "CorsConfiguration" : (Cors)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "DisableSchemaValidation" : (__boolean)?,
+      "DisableExecuteApiEndpoint" : (__boolean)?,
+      "ImportInfo" : (__listOf__string)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "ProtocolType" : (ProtocolType)?,
+      "RouteSelectionExpression" : (SelectionExpression)?,
+      "Tags" : (Tags)?,
+      "Version" : (StringWithLengthBetween1And64)?,
+      "Warnings" : (__listOf__string)?
+    )
+
+    alias UpdateAuthorizerInput = NamedTuple(
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : (AuthorizerType)?,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : (IdentitySourceList)?,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias UpdateAuthorizerRequest = NamedTuple(
+      "ApiId" : __string,
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerId" : __string,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : (AuthorizerType)?,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : (IdentitySourceList)?,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias UpdateAuthorizerResponse = NamedTuple(
+      "AuthorizerCredentialsArn" : (Arn)?,
+      "AuthorizerId" : (Id)?,
+      "AuthorizerResultTtlInSeconds" : (IntegerWithLengthBetween0And3600)?,
+      "AuthorizerType" : (AuthorizerType)?,
+      "AuthorizerUri" : (UriWithLengthBetween1And2048)?,
+      "IdentitySource" : (IdentitySourceList)?,
+      "IdentityValidationExpression" : (StringWithLengthBetween0And1024)?,
+      "JwtConfiguration" : (JWTConfiguration)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "AuthorizerPayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "EnableSimpleResponses" : (__boolean)?
+    )
+
+    alias UpdateDeploymentInput = NamedTuple(
+      "Description" : (StringWithLengthBetween0And1024)?
+    )
+
+    alias UpdateDeploymentRequest = NamedTuple(
+      "ApiId" : __string,
+      "DeploymentId" : __string,
+      "Description" : (StringWithLengthBetween0And1024)?
+    )
+
+    alias UpdateDeploymentResponse = NamedTuple(
+      "AutoDeployed" : (__boolean)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DeploymentId" : (Id)?,
+      "DeploymentStatus" : (DeploymentStatus)?,
+      "DeploymentStatusMessage" : (__string)?,
+      "Description" : (StringWithLengthBetween0And1024)?
+    )
+
+    alias UpdateDomainNameInput = NamedTuple(
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthenticationInput)?
+    )
+
+    alias UpdateDomainNameRequest = NamedTuple(
+      "DomainName" : __string,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthenticationInput)?
+    )
+
+    alias UpdateDomainNameResponse = NamedTuple(
+      "ApiMappingSelectionExpression" : (SelectionExpression)?,
+      "DomainName" : (StringWithLengthBetween1And512)?,
+      "DomainNameConfigurations" : (DomainNameConfigurations)?,
+      "MutualTlsAuthentication" : (MutualTlsAuthentication)?,
+      "Tags" : (Tags)?
+    )
+
+    alias UpdateIntegrationInput = NamedTuple(
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : (IntegrationType)?,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfigInput)?
+    )
+
+    alias UpdateIntegrationRequest = NamedTuple(
+      "ApiId" : __string,
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationId" : __string,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : (IntegrationType)?,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfigInput)?
+    )
+
+    alias UpdateIntegrationResult = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ConnectionId" : (StringWithLengthBetween1And1024)?,
+      "ConnectionType" : (ConnectionType)?,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "CredentialsArn" : (Arn)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "IntegrationId" : (Id)?,
+      "IntegrationMethod" : (StringWithLengthBetween1And64)?,
+      "IntegrationResponseSelectionExpression" : (SelectionExpression)?,
+      "IntegrationSubtype" : (StringWithLengthBetween1And128)?,
+      "IntegrationType" : (IntegrationType)?,
+      "IntegrationUri" : (UriWithLengthBetween1And2048)?,
+      "PassthroughBehavior" : (PassthroughBehavior)?,
+      "PayloadFormatVersion" : (StringWithLengthBetween1And64)?,
+      "RequestParameters" : (IntegrationParameters)?,
+      "RequestTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?,
+      "TimeoutInMillis" : (IntegerWithLengthBetween50And30000)?,
+      "TlsConfig" : (TlsConfig)?
+    )
+
+    alias UpdateIntegrationResponseInput = NamedTuple(
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationResponseKey" : (SelectionKey)?,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias UpdateIntegrationResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationId" : __string,
+      "IntegrationResponseId" : __string,
+      "IntegrationResponseKey" : (SelectionKey)?,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias UpdateIntegrationResponseResponse = NamedTuple(
+      "ContentHandlingStrategy" : (ContentHandlingStrategy)?,
+      "IntegrationResponseId" : (Id)?,
+      "IntegrationResponseKey" : (SelectionKey)?,
+      "ResponseParameters" : (IntegrationParameters)?,
+      "ResponseTemplates" : (TemplateMap)?,
+      "TemplateSelectionExpression" : (SelectionExpression)?
+    )
+
+    alias UpdateModelInput = NamedTuple(
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "Schema" : (StringWithLengthBetween0And32K)?
+    )
+
+    alias UpdateModelRequest = NamedTuple(
+      "ApiId" : __string,
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "ModelId" : __string,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "Schema" : (StringWithLengthBetween0And32K)?
+    )
+
+    alias UpdateModelResponse = NamedTuple(
+      "ContentType" : (StringWithLengthBetween1And256)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "ModelId" : (Id)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "Schema" : (StringWithLengthBetween0And32K)?
+    )
+
+    alias UpdateRouteInput = NamedTuple(
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteKey" : (SelectionKey)?,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateRouteRequest = NamedTuple(
+      "ApiId" : __string,
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteId" : __string,
+      "RouteKey" : (SelectionKey)?,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateRouteResult = NamedTuple(
+      "ApiGatewayManaged" : (__boolean)?,
+      "ApiKeyRequired" : (__boolean)?,
+      "AuthorizationScopes" : (AuthorizationScopes)?,
+      "AuthorizationType" : (AuthorizationType)?,
+      "AuthorizerId" : (Id)?,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "OperationName" : (StringWithLengthBetween1And64)?,
+      "RequestModels" : (RouteModels)?,
+      "RequestParameters" : (RouteParameters)?,
+      "RouteId" : (Id)?,
+      "RouteKey" : (SelectionKey)?,
+      "RouteResponseSelectionExpression" : (SelectionExpression)?,
+      "Target" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateRouteResponseInput = NamedTuple(
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteResponseKey" : (SelectionKey)?
+    )
+
+    alias UpdateRouteResponseRequest = NamedTuple(
+      "ApiId" : __string,
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteId" : __string,
+      "RouteResponseId" : __string,
+      "RouteResponseKey" : (SelectionKey)?
+    )
+
+    alias UpdateRouteResponseResponse = NamedTuple(
+      "ModelSelectionExpression" : (SelectionExpression)?,
+      "ResponseModels" : (RouteModels)?,
+      "ResponseParameters" : (RouteParameters)?,
+      "RouteResponseId" : (Id)?,
+      "RouteResponseKey" : (SelectionKey)?
+    )
+
+    alias UpdateStageInput = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageVariables" : (StageVariablesMap)?
+    )
+
+    alias UpdateStageRequest = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "ApiId" : __string,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : __string,
+      "StageVariables" : (StageVariablesMap)?
+    )
+
+    alias UpdateStageResponse = NamedTuple(
+      "AccessLogSettings" : (AccessLogSettings)?,
+      "ApiGatewayManaged" : (__boolean)?,
+      "AutoDeploy" : (__boolean)?,
+      "ClientCertificateId" : (Id)?,
+      "CreatedDate" : (__timestampIso8601)?,
+      "DefaultRouteSettings" : (RouteSettings)?,
+      "DeploymentId" : (Id)?,
+      "Description" : (StringWithLengthBetween0And1024)?,
+      "LastDeploymentStatusMessage" : (__string)?,
+      "LastUpdatedDate" : (__timestampIso8601)?,
+      "RouteSettings" : (RouteSettingsMap)?,
+      "StageName" : (StringWithLengthBetween1And128)?,
+      "StageVariables" : (StageVariablesMap)?,
+      "Tags" : (Tags)?
+    )
+
+    alias UpdateVpcLinkInput = NamedTuple(
+      "Name" : (StringWithLengthBetween1And128)?
+    )
+
+    alias UpdateVpcLinkRequest = NamedTuple(
+      "Name" : (StringWithLengthBetween1And128)?,
+      "VpcLinkId" : __string
+    )
+
+    alias UpdateVpcLinkResponse = NamedTuple(
+      "CreatedDate" : (__timestampIso8601)?,
+      "Name" : (StringWithLengthBetween1And128)?,
+      "SecurityGroupIds" : (SecurityGroupIdList)?,
+      "SubnetIds" : (SubnetIdList)?,
+      "Tags" : (Tags)?,
+      "VpcLinkId" : (Id)?,
+      "VpcLinkStatus" : (VpcLinkStatus)?,
+      "VpcLinkStatusMessage" : (StringWithLengthBetween0And1024)?,
+      "VpcLinkVersion" : (VpcLinkVersion)?
+    )
+
+    alias UriWithLengthBetween1And2048 = String
+
+    alias VpcLink = NamedTuple(
+      "CreatedDate" : (__timestampIso8601)?,
+      "Name" : StringWithLengthBetween1And128,
+      "SecurityGroupIds" : SecurityGroupIdList,
+      "SubnetIds" : SubnetIdList,
+      "Tags" : (Tags)?,
+      "VpcLinkId" : Id,
+      "VpcLinkStatus" : (VpcLinkStatus)?,
+      "VpcLinkStatusMessage" : (StringWithLengthBetween0And1024)?,
+      "VpcLinkVersion" : (VpcLinkVersion)?
+    )
+
+    alias VpcLinkStatus = String
+
+    alias VpcLinkVersion = String
+
+    alias VpcLinks = NamedTuple(
+      "Items" : (__listOfVpcLink)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __listOfApi = Array(Api)
+
+    alias __listOfApiMapping = Array(ApiMapping)
+
+    alias __listOfAuthorizer = Array(Authorizer)
+
+    alias __listOfDeployment = Array(Deployment)
+
+    alias __listOfDomainName = Array(DomainName)
+
+    alias __listOfIntegration = Array(Integration)
+
+    alias __listOfIntegrationResponse = Array(IntegrationResponse)
+
+    alias __listOfModel = Array(Model)
+
+    alias __listOfRoute = Array(Route)
+
+    alias __listOfRouteResponse = Array(RouteResponse)
+
+    alias __listOfStage = Array(Stage)
+
+    alias __listOfVpcLink = Array(VpcLink)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

@@ -496,8 +496,8 @@ module Aws::PI
     #
     # @overload describe_dimension_keys(**params)
     # @param [Hash] params ({})
-    def describe_dimension_keys(params = {}, **options)
-      req = build_request(:describe_dimension_keys, params)
+    def describe_dimension_keys(, **options)
+      req = build_request(:describe_dimension_keys, )
       req.send_request(options)
     end
 
@@ -625,8 +625,8 @@ module Aws::PI
     #
     # @overload get_resource_metrics(**params)
     # @param [Hash] params ({})
-    def get_resource_metrics(params = {}, **options)
-      req = build_request(:get_resource_metrics, params)
+    def get_resource_metrics(, **options)
+      req = build_request(:get_resource_metrics, )
       req.send_request(options)
     end
 

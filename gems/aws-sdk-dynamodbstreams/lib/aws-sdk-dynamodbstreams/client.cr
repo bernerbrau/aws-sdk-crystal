@@ -461,8 +461,8 @@ module Aws::DynamoDBStreams
     #
     # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, **options)
-      req = build_request(:describe_stream, params)
+    def describe_stream(, **options)
+      req = build_request(:describe_stream, )
       req.send_request(options)
     end
 
@@ -607,8 +607,8 @@ module Aws::DynamoDBStreams
     #
     # @overload get_records(**params)
     # @param [Hash] params ({})
-    def get_records(params = {}, **options)
-      req = build_request(:get_records, params)
+    def get_records(, **options)
+      req = build_request(:get_records, )
       req.send_request(options)
     end
 
@@ -690,8 +690,8 @@ module Aws::DynamoDBStreams
     #
     # @overload get_shard_iterator(**params)
     # @param [Hash] params ({})
-    def get_shard_iterator(params = {}, **options)
-      req = build_request(:get_shard_iterator, params)
+    def get_shard_iterator(, **options)
+      req = build_request(:get_shard_iterator, )
       req.send_request(options)
     end
 
@@ -769,8 +769,8 @@ module Aws::DynamoDBStreams
     #
     # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, **options)
-      req = build_request(:list_streams, params)
+    def list_streams(, **options)
+      req = build_request(:list_streams, )
       req.send_request(options)
     end
 

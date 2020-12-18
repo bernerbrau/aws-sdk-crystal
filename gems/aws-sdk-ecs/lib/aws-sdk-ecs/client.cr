@@ -434,8 +434,8 @@ module Aws::ECS
     #
     # @overload create_capacity_provider(**params)
     # @param [Hash] params ({})
-    def create_capacity_provider(params = {}, **options)
-      req = build_request(:create_capacity_provider, params)
+    def create_capacity_provider(, **options)
+      req = build_request(:create_capacity_provider, )
       req.send_request(options)
     end
 
@@ -633,8 +633,8 @@ module Aws::ECS
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -1395,8 +1395,8 @@ module Aws::ECS
     #
     # @overload create_service(**params)
     # @param [Hash] params ({})
-    def create_service(params = {}, **options)
-      req = build_request(:create_service, params)
+    def create_service(, **options)
+      req = build_request(:create_service, )
       req.send_request(options)
     end
 
@@ -1633,8 +1633,8 @@ module Aws::ECS
     #
     # @overload create_task_set(**params)
     # @param [Hash] params ({})
-    def create_task_set(params = {}, **options)
-      req = build_request(:create_task_set, params)
+    def create_task_set(, **options)
+      req = build_request(:create_task_set, )
       req.send_request(options)
     end
 
@@ -1717,8 +1717,8 @@ module Aws::ECS
     #
     # @overload delete_account_setting(**params)
     # @param [Hash] params ({})
-    def delete_account_setting(params = {}, **options)
-      req = build_request(:delete_account_setting, params)
+    def delete_account_setting(, **options)
+      req = build_request(:delete_account_setting, )
       req.send_request(options)
     end
 
@@ -1765,8 +1765,8 @@ module Aws::ECS
     #
     # @overload delete_attributes(**params)
     # @param [Hash] params ({})
-    def delete_attributes(params = {}, **options)
-      req = build_request(:delete_attributes, params)
+    def delete_attributes(, **options)
+      req = build_request(:delete_attributes, )
       req.send_request(options)
     end
 
@@ -1825,8 +1825,8 @@ module Aws::ECS
     #
     # @overload delete_capacity_provider(**params)
     # @param [Hash] params ({})
-    def delete_capacity_provider(params = {}, **options)
-      req = build_request(:delete_capacity_provider, params)
+    def delete_capacity_provider(, **options)
+      req = build_request(:delete_capacity_provider, )
       req.send_request(options)
     end
 
@@ -1914,8 +1914,8 @@ module Aws::ECS
     #
     # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, **options)
-      req = build_request(:delete_cluster, params)
+    def delete_cluster(, **options)
+      req = build_request(:delete_cluster, )
       req.send_request(options)
     end
 
@@ -2107,8 +2107,8 @@ module Aws::ECS
     #
     # @overload delete_service(**params)
     # @param [Hash] params ({})
-    def delete_service(params = {}, **options)
-      req = build_request(:delete_service, params)
+    def delete_service(, **options)
+      req = build_request(:delete_service, )
       req.send_request(options)
     end
 
@@ -2198,8 +2198,8 @@ module Aws::ECS
     #
     # @overload delete_task_set(**params)
     # @param [Hash] params ({})
-    def delete_task_set(params = {}, **options)
-      req = build_request(:delete_task_set, params)
+    def delete_task_set(, **options)
+      req = build_request(:delete_task_set, )
       req.send_request(options)
     end
 
@@ -2331,8 +2331,8 @@ module Aws::ECS
     #
     # @overload deregister_container_instance(**params)
     # @param [Hash] params ({})
-    def deregister_container_instance(params = {}, **options)
-      req = build_request(:deregister_container_instance, params)
+    def deregister_container_instance(, **options)
+      req = build_request(:deregister_container_instance, )
       req.send_request(options)
     end
 
@@ -2530,8 +2530,8 @@ module Aws::ECS
     #
     # @overload deregister_task_definition(**params)
     # @param [Hash] params ({})
-    def deregister_task_definition(params = {}, **options)
-      req = build_request(:deregister_task_definition, params)
+    def deregister_task_definition(, **options)
+      req = build_request(:deregister_task_definition, )
       req.send_request(options)
     end
 
@@ -2615,8 +2615,8 @@ module Aws::ECS
     #
     # @overload describe_capacity_providers(**params)
     # @param [Hash] params ({})
-    def describe_capacity_providers(params = {}, **options)
-      req = build_request(:describe_capacity_providers, params)
+    def describe_capacity_providers(, **options)
+      req = build_request(:describe_capacity_providers, )
       req.send_request(options)
     end
 
@@ -2737,8 +2737,8 @@ module Aws::ECS
     #
     # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, **options)
-      req = build_request(:describe_clusters, params)
+    def describe_clusters(, **options)
+      req = build_request(:describe_clusters, )
       req.send_request(options)
     end
 
@@ -2921,8 +2921,8 @@ module Aws::ECS
     #
     # @overload describe_container_instances(**params)
     # @param [Hash] params ({})
-    def describe_container_instances(params = {}, **options)
-      req = build_request(:describe_container_instances, params)
+    def describe_container_instances(, **options)
+      req = build_request(:describe_container_instances, )
       req.send_request(options)
     end
 
@@ -3149,8 +3149,8 @@ module Aws::ECS
     #
     # @overload describe_services(**params)
     # @param [Hash] params ({})
-    def describe_services(params = {}, **options)
-      req = build_request(:describe_services, params)
+    def describe_services(, **options)
+      req = build_request(:describe_services, )
       req.send_request(options)
     end
 
@@ -3411,8 +3411,8 @@ module Aws::ECS
     #
     # @overload describe_task_definition(**params)
     # @param [Hash] params ({})
-    def describe_task_definition(params = {}, **options)
-      req = build_request(:describe_task_definition, params)
+    def describe_task_definition(, **options)
+      req = build_request(:describe_task_definition, )
       req.send_request(options)
     end
 
@@ -3508,8 +3508,8 @@ module Aws::ECS
     #
     # @overload describe_task_sets(**params)
     # @param [Hash] params ({})
-    def describe_task_sets(params = {}, **options)
-      req = build_request(:describe_task_sets, params)
+    def describe_task_sets(, **options)
+      req = build_request(:describe_task_sets, )
       req.send_request(options)
     end
 
@@ -3704,8 +3704,8 @@ module Aws::ECS
     #
     # @overload describe_tasks(**params)
     # @param [Hash] params ({})
-    def describe_tasks(params = {}, **options)
-      req = build_request(:describe_tasks, params)
+    def describe_tasks(, **options)
+      req = build_request(:describe_tasks, )
       req.send_request(options)
     end
 
@@ -3749,8 +3749,8 @@ module Aws::ECS
     #
     # @overload discover_poll_endpoint(**params)
     # @param [Hash] params ({})
-    def discover_poll_endpoint(params = {}, **options)
-      req = build_request(:discover_poll_endpoint, params)
+    def discover_poll_endpoint(, **options)
+      req = build_request(:discover_poll_endpoint, )
       req.send_request(options)
     end
 
@@ -3888,8 +3888,8 @@ module Aws::ECS
     #
     # @overload list_account_settings(**params)
     # @param [Hash] params ({})
-    def list_account_settings(params = {}, **options)
-      req = build_request(:list_account_settings, params)
+    def list_account_settings(, **options)
+      req = build_request(:list_account_settings, )
       req.send_request(options)
     end
 
@@ -3970,8 +3970,8 @@ module Aws::ECS
     #
     # @overload list_attributes(**params)
     # @param [Hash] params ({})
-    def list_attributes(params = {}, **options)
-      req = build_request(:list_attributes, params)
+    def list_attributes(, **options)
+      req = build_request(:list_attributes, )
       req.send_request(options)
     end
 
@@ -4039,8 +4039,8 @@ module Aws::ECS
     #
     # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, **options)
-      req = build_request(:list_clusters, params)
+    def list_clusters(, **options)
+      req = build_request(:list_clusters, )
       req.send_request(options)
     end
 
@@ -4143,8 +4143,8 @@ module Aws::ECS
     #
     # @overload list_container_instances(**params)
     # @param [Hash] params ({})
-    def list_container_instances(params = {}, **options)
-      req = build_request(:list_container_instances, params)
+    def list_container_instances(, **options)
+      req = build_request(:list_container_instances, )
       req.send_request(options)
     end
 
@@ -4225,8 +4225,8 @@ module Aws::ECS
     #
     # @overload list_services(**params)
     # @param [Hash] params ({})
-    def list_services(params = {}, **options)
-      req = build_request(:list_services, params)
+    def list_services(, **options)
+      req = build_request(:list_services, )
       req.send_request(options)
     end
 
@@ -4276,8 +4276,8 @@ module Aws::ECS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4391,8 +4391,8 @@ module Aws::ECS
     #
     # @overload list_task_definition_families(**params)
     # @param [Hash] params ({})
-    def list_task_definition_families(params = {}, **options)
-      req = build_request(:list_task_definition_families, params)
+    def list_task_definition_families(, **options)
+      req = build_request(:list_task_definition_families, )
       req.send_request(options)
     end
 
@@ -4511,8 +4511,8 @@ module Aws::ECS
     #
     # @overload list_task_definitions(**params)
     # @param [Hash] params ({})
-    def list_task_definitions(params = {}, **options)
-      req = build_request(:list_task_definitions, params)
+    def list_task_definitions(, **options)
+      req = build_request(:list_task_definitions, )
       req.send_request(options)
     end
 
@@ -4656,8 +4656,8 @@ module Aws::ECS
     #
     # @overload list_tasks(**params)
     # @param [Hash] params ({})
-    def list_tasks(params = {}, **options)
-      req = build_request(:list_tasks, params)
+    def list_tasks(, **options)
+      req = build_request(:list_tasks, )
       req.send_request(options)
     end
 
@@ -4790,8 +4790,8 @@ module Aws::ECS
     #
     # @overload put_account_setting(**params)
     # @param [Hash] params ({})
-    def put_account_setting(params = {}, **options)
-      req = build_request(:put_account_setting, params)
+    def put_account_setting(, **options)
+      req = build_request(:put_account_setting, )
       req.send_request(options)
     end
 
@@ -4857,8 +4857,8 @@ module Aws::ECS
     #
     # @overload put_account_setting_default(**params)
     # @param [Hash] params ({})
-    def put_account_setting_default(params = {}, **options)
-      req = build_request(:put_account_setting_default, params)
+    def put_account_setting_default(, **options)
+      req = build_request(:put_account_setting_default, )
       req.send_request(options)
     end
 
@@ -4912,8 +4912,8 @@ module Aws::ECS
     #
     # @overload put_attributes(**params)
     # @param [Hash] params ({})
-    def put_attributes(params = {}, **options)
-      req = build_request(:put_attributes, params)
+    def put_attributes(, **options)
+      req = build_request(:put_attributes, )
       req.send_request(options)
     end
 
@@ -5032,8 +5032,8 @@ module Aws::ECS
     #
     # @overload put_cluster_capacity_providers(**params)
     # @param [Hash] params ({})
-    def put_cluster_capacity_providers(params = {}, **options)
-      req = build_request(:put_cluster_capacity_providers, params)
+    def put_cluster_capacity_providers(, **options)
+      req = build_request(:put_cluster_capacity_providers, )
       req.send_request(options)
     end
 
@@ -5210,8 +5210,8 @@ module Aws::ECS
     #
     # @overload register_container_instance(**params)
     # @param [Hash] params ({})
-    def register_container_instance(params = {}, **options)
-      req = build_request(:register_container_instance, params)
+    def register_container_instance(, **options)
+      req = build_request(:register_container_instance, )
       req.send_request(options)
     end
 
@@ -5984,8 +5984,8 @@ module Aws::ECS
     #
     # @overload register_task_definition(**params)
     # @param [Hash] params ({})
-    def register_task_definition(params = {}, **options)
-      req = build_request(:register_task_definition, params)
+    def register_task_definition(, **options)
+      req = build_request(:register_task_definition, )
       req.send_request(options)
     end
 
@@ -6429,8 +6429,8 @@ module Aws::ECS
     #
     # @overload run_task(**params)
     # @param [Hash] params ({})
-    def run_task(params = {}, **options)
-      req = build_request(:run_task, params)
+    def run_task(, **options)
+      req = build_request(:run_task, )
       req.send_request(options)
     end
 
@@ -6719,8 +6719,8 @@ module Aws::ECS
     #
     # @overload start_task(**params)
     # @param [Hash] params ({})
-    def start_task(params = {}, **options)
-      req = build_request(:start_task, params)
+    def start_task(, **options)
+      req = build_request(:start_task, )
       req.send_request(options)
     end
 
@@ -6872,8 +6872,8 @@ module Aws::ECS
     #
     # @overload stop_task(**params)
     # @param [Hash] params ({})
-    def stop_task(params = {}, **options)
-      req = build_request(:stop_task, params)
+    def stop_task(, **options)
+      req = build_request(:stop_task, )
       req.send_request(options)
     end
 
@@ -6915,8 +6915,8 @@ module Aws::ECS
     #
     # @overload submit_attachment_state_changes(**params)
     # @param [Hash] params ({})
-    def submit_attachment_state_changes(params = {}, **options)
-      req = build_request(:submit_attachment_state_changes, params)
+    def submit_attachment_state_changes(, **options)
+      req = build_request(:submit_attachment_state_changes, )
       req.send_request(options)
     end
 
@@ -6984,8 +6984,8 @@ module Aws::ECS
     #
     # @overload submit_container_state_change(**params)
     # @param [Hash] params ({})
-    def submit_container_state_change(params = {}, **options)
-      req = build_request(:submit_container_state_change, params)
+    def submit_container_state_change(, **options)
+      req = build_request(:submit_container_state_change, )
       req.send_request(options)
     end
 
@@ -7072,8 +7072,8 @@ module Aws::ECS
     #
     # @overload submit_task_state_change(**params)
     # @param [Hash] params ({})
-    def submit_task_state_change(params = {}, **options)
-      req = build_request(:submit_task_state_change, params)
+    def submit_task_state_change(, **options)
+      req = build_request(:submit_task_state_change, )
       req.send_request(options)
     end
 
@@ -7152,8 +7152,8 @@ module Aws::ECS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -7197,8 +7197,8 @@ module Aws::ECS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -7253,8 +7253,8 @@ module Aws::ECS
     #
     # @overload update_capacity_provider(**params)
     # @param [Hash] params ({})
-    def update_capacity_provider(params = {}, **options)
-      req = build_request(:update_capacity_provider, params)
+    def update_capacity_provider(, **options)
+      req = build_request(:update_capacity_provider, )
       req.send_request(options)
     end
 
@@ -7322,8 +7322,8 @@ module Aws::ECS
     #
     # @overload update_cluster_settings(**params)
     # @param [Hash] params ({})
-    def update_cluster_settings(params = {}, **options)
-      req = build_request(:update_cluster_settings, params)
+    def update_cluster_settings(, **options)
+      req = build_request(:update_cluster_settings, )
       req.send_request(options)
     end
 
@@ -7417,8 +7417,8 @@ module Aws::ECS
     #
     # @overload update_container_agent(**params)
     # @param [Hash] params ({})
-    def update_container_agent(params = {}, **options)
-      req = build_request(:update_container_agent, params)
+    def update_container_agent(, **options)
+      req = build_request(:update_container_agent, )
       req.send_request(options)
     end
 
@@ -7564,8 +7564,8 @@ module Aws::ECS
     #
     # @overload update_container_instances_state(**params)
     # @param [Hash] params ({})
-    def update_container_instances_state(params = {}, **options)
-      req = build_request(:update_container_instances_state, params)
+    def update_container_instances_state(, **options)
+      req = build_request(:update_container_instances_state, )
       req.send_request(options)
     end
 
@@ -8001,8 +8001,8 @@ module Aws::ECS
     #
     # @overload update_service(**params)
     # @param [Hash] params ({})
-    def update_service(params = {}, **options)
-      req = build_request(:update_service, params)
+    def update_service(, **options)
+      req = build_request(:update_service, )
       req.send_request(options)
     end
 
@@ -8089,8 +8089,8 @@ module Aws::ECS
     #
     # @overload update_service_primary_task_set(**params)
     # @param [Hash] params ({})
-    def update_service_primary_task_set(params = {}, **options)
-      req = build_request(:update_service_primary_task_set, params)
+    def update_service_primary_task_set(, **options)
+      req = build_request(:update_service_primary_task_set, )
       req.send_request(options)
     end
 
@@ -8183,8 +8183,8 @@ module Aws::ECS
     #
     # @overload update_task_set(**params)
     # @param [Hash] params ({})
-    def update_task_set(params = {}, **options)
-      req = build_request(:update_task_set, params)
+    def update_task_set(, **options)
+      req = build_request(:update_task_set, )
       req.send_request(options)
     end
 

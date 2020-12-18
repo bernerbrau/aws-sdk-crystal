@@ -7519,5 +7519,1235 @@ module Aws::OpsWorks
       include Aws::Structure
     end
 
+    alias AgentVersion = NamedTuple(
+      "Version" : (String)?,
+      "ConfigurationManager" : (StackConfigurationManager)?
+    )
+
+    alias AgentVersions = Array(AgentVersion)
+
+    alias App = NamedTuple(
+      "AppId" : (String)?,
+      "StackId" : (String)?,
+      "Shortname" : (String)?,
+      "Name" : (String)?,
+      "Description" : (String)?,
+      "DataSources" : (DataSources)?,
+      "Type" : (AppType)?,
+      "AppSource" : (Source)?,
+      "Domains" : (Strings)?,
+      "EnableSsl" : (Boolean)?,
+      "SslConfiguration" : (SslConfiguration)?,
+      "Attributes" : (AppAttributes)?,
+      "CreatedAt" : (String)?,
+      "Environment" : (EnvironmentVariables)?
+    )
+
+    alias AppAttributes = Hash(AppAttributesKeys,String)
+
+    alias AppAttributesKeys = String
+
+    alias AppType = String
+
+    alias Apps = Array(App)
+
+    alias Architecture = String
+
+    alias AssignInstanceRequest = NamedTuple(
+      "InstanceId" : String,
+      "LayerIds" : Strings
+    )
+
+    alias AssignVolumeRequest = NamedTuple(
+      "VolumeId" : String,
+      "InstanceId" : (String)?
+    )
+
+    alias AssociateElasticIpRequest = NamedTuple(
+      "ElasticIp" : String,
+      "InstanceId" : (String)?
+    )
+
+    alias AttachElasticLoadBalancerRequest = NamedTuple(
+      "ElasticLoadBalancerName" : String,
+      "LayerId" : String
+    )
+
+    alias AutoScalingThresholds = NamedTuple(
+      "InstanceCount" : (Integer)?,
+      "ThresholdsWaitTime" : (Minute)?,
+      "IgnoreMetricsTime" : (Minute)?,
+      "CpuThreshold" : (Double)?,
+      "MemoryThreshold" : (Double)?,
+      "LoadThreshold" : (Double)?,
+      "Alarms" : (Strings)?
+    )
+
+    alias AutoScalingType = String
+
+    alias BlockDeviceMapping = NamedTuple(
+      "DeviceName" : (String)?,
+      "NoDevice" : (String)?,
+      "VirtualName" : (String)?,
+      "Ebs" : (EbsBlockDevice)?
+    )
+
+    alias BlockDeviceMappings = Array(BlockDeviceMapping)
+
+    alias Boolean = Bool
+
+    alias ChefConfiguration = NamedTuple(
+      "ManageBerkshelf" : (Boolean)?,
+      "BerkshelfVersion" : (String)?
+    )
+
+    alias CloneStackRequest = NamedTuple(
+      "SourceStackId" : String,
+      "Name" : (String)?,
+      "Region" : (String)?,
+      "VpcId" : (String)?,
+      "Attributes" : (StackAttributes)?,
+      "ServiceRoleArn" : String,
+      "DefaultInstanceProfileArn" : (String)?,
+      "DefaultOs" : (String)?,
+      "HostnameTheme" : (String)?,
+      "DefaultAvailabilityZone" : (String)?,
+      "DefaultSubnetId" : (String)?,
+      "CustomJson" : (String)?,
+      "ConfigurationManager" : (StackConfigurationManager)?,
+      "ChefConfiguration" : (ChefConfiguration)?,
+      "UseCustomCookbooks" : (Boolean)?,
+      "UseOpsworksSecurityGroups" : (Boolean)?,
+      "CustomCookbooksSource" : (Source)?,
+      "DefaultSshKeyName" : (String)?,
+      "ClonePermissions" : (Boolean)?,
+      "CloneAppIds" : (Strings)?,
+      "DefaultRootDeviceType" : (RootDeviceType)?,
+      "AgentVersion" : (String)?
+    )
+
+    alias CloneStackResult = NamedTuple(
+      "StackId" : (String)?
+    )
+
+    alias CloudWatchLogsConfiguration = NamedTuple(
+      "Enabled" : (Boolean)?,
+      "LogStreams" : (CloudWatchLogsLogStreams)?
+    )
+
+    alias CloudWatchLogsEncoding = String
+
+    alias CloudWatchLogsInitialPosition = String
+
+    alias CloudWatchLogsLogStream = NamedTuple(
+      "LogGroupName" : (String)?,
+      "DatetimeFormat" : (String)?,
+      "TimeZone" : (CloudWatchLogsTimeZone)?,
+      "File" : (String)?,
+      "FileFingerprintLines" : (String)?,
+      "MultiLineStartPattern" : (String)?,
+      "InitialPosition" : (CloudWatchLogsInitialPosition)?,
+      "Encoding" : (CloudWatchLogsEncoding)?,
+      "BufferDuration" : (Integer)?,
+      "BatchCount" : (Integer)?,
+      "BatchSize" : (Integer)?
+    )
+
+    alias CloudWatchLogsLogStreams = Array(CloudWatchLogsLogStream)
+
+    alias CloudWatchLogsTimeZone = String
+
+    alias Command = NamedTuple(
+      "CommandId" : (String)?,
+      "InstanceId" : (String)?,
+      "DeploymentId" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "AcknowledgedAt" : (DateTime)?,
+      "CompletedAt" : (DateTime)?,
+      "Status" : (String)?,
+      "ExitCode" : (Integer)?,
+      "LogUrl" : (String)?,
+      "Type" : (String)?
+    )
+
+    alias Commands = Array(Command)
+
+    alias CreateAppRequest = NamedTuple(
+      "StackId" : String,
+      "Shortname" : (String)?,
+      "Name" : String,
+      "Description" : (String)?,
+      "DataSources" : (DataSources)?,
+      "Type" : AppType,
+      "AppSource" : (Source)?,
+      "Domains" : (Strings)?,
+      "EnableSsl" : (Boolean)?,
+      "SslConfiguration" : (SslConfiguration)?,
+      "Attributes" : (AppAttributes)?,
+      "Environment" : (EnvironmentVariables)?
+    )
+
+    alias CreateAppResult = NamedTuple(
+      "AppId" : (String)?
+    )
+
+    alias CreateDeploymentRequest = NamedTuple(
+      "StackId" : String,
+      "AppId" : (String)?,
+      "InstanceIds" : (Strings)?,
+      "LayerIds" : (Strings)?,
+      "Command" : DeploymentCommand,
+      "Comment" : (String)?,
+      "CustomJson" : (String)?
+    )
+
+    alias CreateDeploymentResult = NamedTuple(
+      "DeploymentId" : (String)?
+    )
+
+    alias CreateInstanceRequest = NamedTuple(
+      "StackId" : String,
+      "LayerIds" : Strings,
+      "InstanceType" : String,
+      "AutoScalingType" : (AutoScalingType)?,
+      "Hostname" : (String)?,
+      "Os" : (String)?,
+      "AmiId" : (String)?,
+      "SshKeyName" : (String)?,
+      "AvailabilityZone" : (String)?,
+      "VirtualizationType" : (String)?,
+      "SubnetId" : (String)?,
+      "Architecture" : (Architecture)?,
+      "RootDeviceType" : (RootDeviceType)?,
+      "BlockDeviceMappings" : (BlockDeviceMappings)?,
+      "InstallUpdatesOnBoot" : (Boolean)?,
+      "EbsOptimized" : (Boolean)?,
+      "AgentVersion" : (String)?,
+      "Tenancy" : (String)?
+    )
+
+    alias CreateInstanceResult = NamedTuple(
+      "InstanceId" : (String)?
+    )
+
+    alias CreateLayerRequest = NamedTuple(
+      "StackId" : String,
+      "Type" : LayerType,
+      "Name" : String,
+      "Shortname" : String,
+      "Attributes" : (LayerAttributes)?,
+      "CloudWatchLogsConfiguration" : (CloudWatchLogsConfiguration)?,
+      "CustomInstanceProfileArn" : (String)?,
+      "CustomJson" : (String)?,
+      "CustomSecurityGroupIds" : (Strings)?,
+      "Packages" : (Strings)?,
+      "VolumeConfigurations" : (VolumeConfigurations)?,
+      "EnableAutoHealing" : (Boolean)?,
+      "AutoAssignElasticIps" : (Boolean)?,
+      "AutoAssignPublicIps" : (Boolean)?,
+      "CustomRecipes" : (Recipes)?,
+      "InstallUpdatesOnBoot" : (Boolean)?,
+      "UseEbsOptimizedInstances" : (Boolean)?,
+      "LifecycleEventConfiguration" : (LifecycleEventConfiguration)?
+    )
+
+    alias CreateLayerResult = NamedTuple(
+      "LayerId" : (String)?
+    )
+
+    alias CreateStackRequest = NamedTuple(
+      "Name" : String,
+      "Region" : String,
+      "VpcId" : (String)?,
+      "Attributes" : (StackAttributes)?,
+      "ServiceRoleArn" : String,
+      "DefaultInstanceProfileArn" : String,
+      "DefaultOs" : (String)?,
+      "HostnameTheme" : (String)?,
+      "DefaultAvailabilityZone" : (String)?,
+      "DefaultSubnetId" : (String)?,
+      "CustomJson" : (String)?,
+      "ConfigurationManager" : (StackConfigurationManager)?,
+      "ChefConfiguration" : (ChefConfiguration)?,
+      "UseCustomCookbooks" : (Boolean)?,
+      "UseOpsworksSecurityGroups" : (Boolean)?,
+      "CustomCookbooksSource" : (Source)?,
+      "DefaultSshKeyName" : (String)?,
+      "DefaultRootDeviceType" : (RootDeviceType)?,
+      "AgentVersion" : (String)?
+    )
+
+    alias CreateStackResult = NamedTuple(
+      "StackId" : (String)?
+    )
+
+    alias CreateUserProfileRequest = NamedTuple(
+      "IamUserArn" : String,
+      "SshUsername" : (String)?,
+      "SshPublicKey" : (String)?,
+      "AllowSelfManagement" : (Boolean)?
+    )
+
+    alias CreateUserProfileResult = NamedTuple(
+      "IamUserArn" : (String)?
+    )
+
+    alias DailyAutoScalingSchedule = Hash(Hour,Switch)
+
+    alias DataSource = NamedTuple(
+      "Type" : (String)?,
+      "Arn" : (String)?,
+      "DatabaseName" : (String)?
+    )
+
+    alias DataSources = Array(DataSource)
+
+    alias DateTime = String
+
+    alias DeleteAppRequest = NamedTuple(
+      "AppId" : String
+    )
+
+    alias DeleteInstanceRequest = NamedTuple(
+      "InstanceId" : String,
+      "DeleteElasticIp" : (Boolean)?,
+      "DeleteVolumes" : (Boolean)?
+    )
+
+    alias DeleteLayerRequest = NamedTuple(
+      "LayerId" : String
+    )
+
+    alias DeleteStackRequest = NamedTuple(
+      "StackId" : String
+    )
+
+    alias DeleteUserProfileRequest = NamedTuple(
+      "IamUserArn" : String
+    )
+
+    alias Deployment = NamedTuple(
+      "DeploymentId" : (String)?,
+      "StackId" : (String)?,
+      "AppId" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "CompletedAt" : (DateTime)?,
+      "Duration" : (Integer)?,
+      "IamUserArn" : (String)?,
+      "Comment" : (String)?,
+      "Command" : (DeploymentCommand)?,
+      "Status" : (String)?,
+      "CustomJson" : (String)?,
+      "InstanceIds" : (Strings)?
+    )
+
+    alias DeploymentCommand = NamedTuple(
+      "Name" : DeploymentCommandName,
+      "Args" : (DeploymentCommandArgs)?
+    )
+
+    alias DeploymentCommandArgs = Hash(String,Strings)
+
+    alias DeploymentCommandName = String
+
+    alias Deployments = Array(Deployment)
+
+    alias DeregisterEcsClusterRequest = NamedTuple(
+      "EcsClusterArn" : String
+    )
+
+    alias DeregisterElasticIpRequest = NamedTuple(
+      "ElasticIp" : String
+    )
+
+    alias DeregisterInstanceRequest = NamedTuple(
+      "InstanceId" : String
+    )
+
+    alias DeregisterRdsDbInstanceRequest = NamedTuple(
+      "RdsDbInstanceArn" : String
+    )
+
+    alias DeregisterVolumeRequest = NamedTuple(
+      "VolumeId" : String
+    )
+
+    alias DescribeAgentVersionsRequest = NamedTuple(
+      "StackId" : (String)?,
+      "ConfigurationManager" : (StackConfigurationManager)?
+    )
+
+    alias DescribeAgentVersionsResult = NamedTuple(
+      "AgentVersions" : (AgentVersions)?
+    )
+
+    alias DescribeAppsRequest = NamedTuple(
+      "StackId" : (String)?,
+      "AppIds" : (Strings)?
+    )
+
+    alias DescribeAppsResult = NamedTuple(
+      "Apps" : (Apps)?
+    )
+
+    alias DescribeCommandsRequest = NamedTuple(
+      "DeploymentId" : (String)?,
+      "InstanceId" : (String)?,
+      "CommandIds" : (Strings)?
+    )
+
+    alias DescribeCommandsResult = NamedTuple(
+      "Commands" : (Commands)?
+    )
+
+    alias DescribeDeploymentsRequest = NamedTuple(
+      "StackId" : (String)?,
+      "AppId" : (String)?,
+      "DeploymentIds" : (Strings)?
+    )
+
+    alias DescribeDeploymentsResult = NamedTuple(
+      "Deployments" : (Deployments)?
+    )
+
+    alias DescribeEcsClustersRequest = NamedTuple(
+      "EcsClusterArns" : (Strings)?,
+      "StackId" : (String)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (Integer)?
+    )
+
+    alias DescribeEcsClustersResult = NamedTuple(
+      "EcsClusters" : (EcsClusters)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeElasticIpsRequest = NamedTuple(
+      "InstanceId" : (String)?,
+      "StackId" : (String)?,
+      "Ips" : (Strings)?
+    )
+
+    alias DescribeElasticIpsResult = NamedTuple(
+      "ElasticIps" : (ElasticIps)?
+    )
+
+    alias DescribeElasticLoadBalancersRequest = NamedTuple(
+      "StackId" : (String)?,
+      "LayerIds" : (Strings)?
+    )
+
+    alias DescribeElasticLoadBalancersResult = NamedTuple(
+      "ElasticLoadBalancers" : (ElasticLoadBalancers)?
+    )
+
+    alias DescribeInstancesRequest = NamedTuple(
+      "StackId" : (String)?,
+      "LayerId" : (String)?,
+      "InstanceIds" : (Strings)?
+    )
+
+    alias DescribeInstancesResult = NamedTuple(
+      "Instances" : (Instances)?
+    )
+
+    alias DescribeLayersRequest = NamedTuple(
+      "StackId" : (String)?,
+      "LayerIds" : (Strings)?
+    )
+
+    alias DescribeLayersResult = NamedTuple(
+      "Layers" : (Layers)?
+    )
+
+    alias DescribeLoadBasedAutoScalingRequest = NamedTuple(
+      "LayerIds" : Strings
+    )
+
+    alias DescribeLoadBasedAutoScalingResult = NamedTuple(
+      "LoadBasedAutoScalingConfigurations" : (LoadBasedAutoScalingConfigurations)?
+    )
+
+    alias DescribeMyUserProfileResult = NamedTuple(
+      "UserProfile" : (SelfUserProfile)?
+    )
+
+    alias DescribeOperatingSystemsResponse = NamedTuple(
+      "OperatingSystems" : (OperatingSystems)?
+    )
+
+    alias DescribePermissionsRequest = NamedTuple(
+      "IamUserArn" : (String)?,
+      "StackId" : (String)?
+    )
+
+    alias DescribePermissionsResult = NamedTuple(
+      "Permissions" : (Permissions)?
+    )
+
+    alias DescribeRaidArraysRequest = NamedTuple(
+      "InstanceId" : (String)?,
+      "StackId" : (String)?,
+      "RaidArrayIds" : (Strings)?
+    )
+
+    alias DescribeRaidArraysResult = NamedTuple(
+      "RaidArrays" : (RaidArrays)?
+    )
+
+    alias DescribeRdsDbInstancesRequest = NamedTuple(
+      "StackId" : String,
+      "RdsDbInstanceArns" : (Strings)?
+    )
+
+    alias DescribeRdsDbInstancesResult = NamedTuple(
+      "RdsDbInstances" : (RdsDbInstances)?
+    )
+
+    alias DescribeServiceErrorsRequest = NamedTuple(
+      "StackId" : (String)?,
+      "InstanceId" : (String)?,
+      "ServiceErrorIds" : (Strings)?
+    )
+
+    alias DescribeServiceErrorsResult = NamedTuple(
+      "ServiceErrors" : (ServiceErrors)?
+    )
+
+    alias DescribeStackProvisioningParametersRequest = NamedTuple(
+      "StackId" : String
+    )
+
+    alias DescribeStackProvisioningParametersResult = NamedTuple(
+      "AgentInstallerUrl" : (String)?,
+      "Parameters" : (Parameters)?
+    )
+
+    alias DescribeStackSummaryRequest = NamedTuple(
+      "StackId" : String
+    )
+
+    alias DescribeStackSummaryResult = NamedTuple(
+      "StackSummary" : (StackSummary)?
+    )
+
+    alias DescribeStacksRequest = NamedTuple(
+      "StackIds" : (Strings)?
+    )
+
+    alias DescribeStacksResult = NamedTuple(
+      "Stacks" : (Stacks)?
+    )
+
+    alias DescribeTimeBasedAutoScalingRequest = NamedTuple(
+      "InstanceIds" : Strings
+    )
+
+    alias DescribeTimeBasedAutoScalingResult = NamedTuple(
+      "TimeBasedAutoScalingConfigurations" : (TimeBasedAutoScalingConfigurations)?
+    )
+
+    alias DescribeUserProfilesRequest = NamedTuple(
+      "IamUserArns" : (Strings)?
+    )
+
+    alias DescribeUserProfilesResult = NamedTuple(
+      "UserProfiles" : (UserProfiles)?
+    )
+
+    alias DescribeVolumesRequest = NamedTuple(
+      "InstanceId" : (String)?,
+      "StackId" : (String)?,
+      "RaidArrayId" : (String)?,
+      "VolumeIds" : (Strings)?
+    )
+
+    alias DescribeVolumesResult = NamedTuple(
+      "Volumes" : (Volumes)?
+    )
+
+    alias DetachElasticLoadBalancerRequest = NamedTuple(
+      "ElasticLoadBalancerName" : String,
+      "LayerId" : String
+    )
+
+    alias DisassociateElasticIpRequest = NamedTuple(
+      "ElasticIp" : String
+    )
+
+    alias Double = Float64
+
+    alias EbsBlockDevice = NamedTuple(
+      "SnapshotId" : (String)?,
+      "Iops" : (Integer)?,
+      "VolumeSize" : (Integer)?,
+      "VolumeType" : (VolumeType)?,
+      "DeleteOnTermination" : (Boolean)?
+    )
+
+    alias EcsCluster = NamedTuple(
+      "EcsClusterArn" : (String)?,
+      "EcsClusterName" : (String)?,
+      "StackId" : (String)?,
+      "RegisteredAt" : (DateTime)?
+    )
+
+    alias EcsClusters = Array(EcsCluster)
+
+    alias ElasticIp = NamedTuple(
+      "Ip" : (String)?,
+      "Name" : (String)?,
+      "Domain" : (String)?,
+      "Region" : (String)?,
+      "InstanceId" : (String)?
+    )
+
+    alias ElasticIps = Array(ElasticIp)
+
+    alias ElasticLoadBalancer = NamedTuple(
+      "ElasticLoadBalancerName" : (String)?,
+      "Region" : (String)?,
+      "DnsName" : (String)?,
+      "StackId" : (String)?,
+      "LayerId" : (String)?,
+      "VpcId" : (String)?,
+      "AvailabilityZones" : (Strings)?,
+      "SubnetIds" : (Strings)?,
+      "Ec2InstanceIds" : (Strings)?
+    )
+
+    alias ElasticLoadBalancers = Array(ElasticLoadBalancer)
+
+    alias EnvironmentVariable = NamedTuple(
+      "Key" : String,
+      "Value" : String,
+      "Secure" : (Boolean)?
+    )
+
+    alias EnvironmentVariables = Array(EnvironmentVariable)
+
+    alias GetHostnameSuggestionRequest = NamedTuple(
+      "LayerId" : String
+    )
+
+    alias GetHostnameSuggestionResult = NamedTuple(
+      "LayerId" : (String)?,
+      "Hostname" : (String)?
+    )
+
+    alias GrantAccessRequest = NamedTuple(
+      "InstanceId" : String,
+      "ValidForInMinutes" : (ValidForInMinutes)?
+    )
+
+    alias GrantAccessResult = NamedTuple(
+      "TemporaryCredential" : (TemporaryCredential)?
+    )
+
+    alias Hour = String
+
+    alias Instance = NamedTuple(
+      "AgentVersion" : (String)?,
+      "AmiId" : (String)?,
+      "Architecture" : (Architecture)?,
+      "Arn" : (String)?,
+      "AutoScalingType" : (AutoScalingType)?,
+      "AvailabilityZone" : (String)?,
+      "BlockDeviceMappings" : (BlockDeviceMappings)?,
+      "CreatedAt" : (DateTime)?,
+      "EbsOptimized" : (Boolean)?,
+      "Ec2InstanceId" : (String)?,
+      "EcsClusterArn" : (String)?,
+      "EcsContainerInstanceArn" : (String)?,
+      "ElasticIp" : (String)?,
+      "Hostname" : (String)?,
+      "InfrastructureClass" : (String)?,
+      "InstallUpdatesOnBoot" : (Boolean)?,
+      "InstanceId" : (String)?,
+      "InstanceProfileArn" : (String)?,
+      "InstanceType" : (String)?,
+      "LastServiceErrorId" : (String)?,
+      "LayerIds" : (Strings)?,
+      "Os" : (String)?,
+      "Platform" : (String)?,
+      "PrivateDns" : (String)?,
+      "PrivateIp" : (String)?,
+      "PublicDns" : (String)?,
+      "PublicIp" : (String)?,
+      "RegisteredBy" : (String)?,
+      "ReportedAgentVersion" : (String)?,
+      "ReportedOs" : (ReportedOs)?,
+      "RootDeviceType" : (RootDeviceType)?,
+      "RootDeviceVolumeId" : (String)?,
+      "SecurityGroupIds" : (Strings)?,
+      "SshHostDsaKeyFingerprint" : (String)?,
+      "SshHostRsaKeyFingerprint" : (String)?,
+      "SshKeyName" : (String)?,
+      "StackId" : (String)?,
+      "Status" : (String)?,
+      "SubnetId" : (String)?,
+      "Tenancy" : (String)?,
+      "VirtualizationType" : (VirtualizationType)?
+    )
+
+    alias InstanceIdentity = NamedTuple(
+      "Document" : (String)?,
+      "Signature" : (String)?
+    )
+
+    alias Instances = Array(Instance)
+
+    alias InstancesCount = NamedTuple(
+      "Assigning" : (Integer)?,
+      "Booting" : (Integer)?,
+      "ConnectionLost" : (Integer)?,
+      "Deregistering" : (Integer)?,
+      "Online" : (Integer)?,
+      "Pending" : (Integer)?,
+      "Rebooting" : (Integer)?,
+      "Registered" : (Integer)?,
+      "Registering" : (Integer)?,
+      "Requested" : (Integer)?,
+      "RunningSetup" : (Integer)?,
+      "SetupFailed" : (Integer)?,
+      "ShuttingDown" : (Integer)?,
+      "StartFailed" : (Integer)?,
+      "StopFailed" : (Integer)?,
+      "Stopped" : (Integer)?,
+      "Stopping" : (Integer)?,
+      "Terminated" : (Integer)?,
+      "Terminating" : (Integer)?,
+      "Unassigning" : (Integer)?
+    )
+
+    alias Integer = Int32
+
+    alias Layer = NamedTuple(
+      "Arn" : (String)?,
+      "StackId" : (String)?,
+      "LayerId" : (String)?,
+      "Type" : (LayerType)?,
+      "Name" : (String)?,
+      "Shortname" : (String)?,
+      "Attributes" : (LayerAttributes)?,
+      "CloudWatchLogsConfiguration" : (CloudWatchLogsConfiguration)?,
+      "CustomInstanceProfileArn" : (String)?,
+      "CustomJson" : (String)?,
+      "CustomSecurityGroupIds" : (Strings)?,
+      "DefaultSecurityGroupNames" : (Strings)?,
+      "Packages" : (Strings)?,
+      "VolumeConfigurations" : (VolumeConfigurations)?,
+      "EnableAutoHealing" : (Boolean)?,
+      "AutoAssignElasticIps" : (Boolean)?,
+      "AutoAssignPublicIps" : (Boolean)?,
+      "DefaultRecipes" : (Recipes)?,
+      "CustomRecipes" : (Recipes)?,
+      "CreatedAt" : (DateTime)?,
+      "InstallUpdatesOnBoot" : (Boolean)?,
+      "UseEbsOptimizedInstances" : (Boolean)?,
+      "LifecycleEventConfiguration" : (LifecycleEventConfiguration)?
+    )
+
+    alias LayerAttributes = Hash(LayerAttributesKeys,String)
+
+    alias LayerAttributesKeys = String
+
+    alias LayerType = String
+
+    alias Layers = Array(Layer)
+
+    alias LifecycleEventConfiguration = NamedTuple(
+      "Shutdown" : (ShutdownEventConfiguration)?
+    )
+
+    alias ListTagsRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsResult = NamedTuple(
+      "Tags" : (Tags)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias LoadBasedAutoScalingConfiguration = NamedTuple(
+      "LayerId" : (String)?,
+      "Enable" : (Boolean)?,
+      "UpScaling" : (AutoScalingThresholds)?,
+      "DownScaling" : (AutoScalingThresholds)?
+    )
+
+    alias LoadBasedAutoScalingConfigurations = Array(LoadBasedAutoScalingConfiguration)
+
+    alias MaxResults = Int32
+
+    alias Minute = Int32
+
+    alias NextToken = String
+
+    alias OperatingSystem = NamedTuple(
+      "Name" : (String)?,
+      "Id" : (String)?,
+      "Type" : (String)?,
+      "ConfigurationManagers" : (OperatingSystemConfigurationManagers)?,
+      "ReportedName" : (String)?,
+      "ReportedVersion" : (String)?,
+      "Supported" : (Boolean)?
+    )
+
+    alias OperatingSystemConfigurationManager = NamedTuple(
+      "Name" : (String)?,
+      "Version" : (String)?
+    )
+
+    alias OperatingSystemConfigurationManagers = Array(OperatingSystemConfigurationManager)
+
+    alias OperatingSystems = Array(OperatingSystem)
+
+    alias Parameters = Hash(String,String)
+
+    alias Permission = NamedTuple(
+      "StackId" : (String)?,
+      "IamUserArn" : (String)?,
+      "AllowSsh" : (Boolean)?,
+      "AllowSudo" : (Boolean)?,
+      "Level" : (String)?
+    )
+
+    alias Permissions = Array(Permission)
+
+    alias RaidArray = NamedTuple(
+      "RaidArrayId" : (String)?,
+      "InstanceId" : (String)?,
+      "Name" : (String)?,
+      "RaidLevel" : (Integer)?,
+      "NumberOfDisks" : (Integer)?,
+      "Size" : (Integer)?,
+      "Device" : (String)?,
+      "MountPoint" : (String)?,
+      "AvailabilityZone" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "StackId" : (String)?,
+      "VolumeType" : (String)?,
+      "Iops" : (Integer)?
+    )
+
+    alias RaidArrays = Array(RaidArray)
+
+    alias RdsDbInstance = NamedTuple(
+      "RdsDbInstanceArn" : (String)?,
+      "DbInstanceIdentifier" : (String)?,
+      "DbUser" : (String)?,
+      "DbPassword" : (String)?,
+      "Region" : (String)?,
+      "Address" : (String)?,
+      "Engine" : (String)?,
+      "StackId" : (String)?,
+      "MissingOnRds" : (Boolean)?
+    )
+
+    alias RdsDbInstances = Array(RdsDbInstance)
+
+    alias RebootInstanceRequest = NamedTuple(
+      "InstanceId" : String
+    )
+
+    alias Recipes = NamedTuple(
+      "Setup" : (Strings)?,
+      "Configure" : (Strings)?,
+      "Deploy" : (Strings)?,
+      "Undeploy" : (Strings)?,
+      "Shutdown" : (Strings)?
+    )
+
+    alias RegisterEcsClusterRequest = NamedTuple(
+      "EcsClusterArn" : String,
+      "StackId" : String
+    )
+
+    alias RegisterEcsClusterResult = NamedTuple(
+      "EcsClusterArn" : (String)?
+    )
+
+    alias RegisterElasticIpRequest = NamedTuple(
+      "ElasticIp" : String,
+      "StackId" : String
+    )
+
+    alias RegisterElasticIpResult = NamedTuple(
+      "ElasticIp" : (String)?
+    )
+
+    alias RegisterInstanceRequest = NamedTuple(
+      "StackId" : String,
+      "Hostname" : (String)?,
+      "PublicIp" : (String)?,
+      "PrivateIp" : (String)?,
+      "RsaPublicKey" : (String)?,
+      "RsaPublicKeyFingerprint" : (String)?,
+      "InstanceIdentity" : (InstanceIdentity)?
+    )
+
+    alias RegisterInstanceResult = NamedTuple(
+      "InstanceId" : (String)?
+    )
+
+    alias RegisterRdsDbInstanceRequest = NamedTuple(
+      "StackId" : String,
+      "RdsDbInstanceArn" : String,
+      "DbUser" : String,
+      "DbPassword" : String
+    )
+
+    alias RegisterVolumeRequest = NamedTuple(
+      "Ec2VolumeId" : (String)?,
+      "StackId" : String
+    )
+
+    alias RegisterVolumeResult = NamedTuple(
+      "VolumeId" : (String)?
+    )
+
+    alias ReportedOs = NamedTuple(
+      "Family" : (String)?,
+      "Name" : (String)?,
+      "Version" : (String)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias RootDeviceType = String
+
+    alias SelfUserProfile = NamedTuple(
+      "IamUserArn" : (String)?,
+      "Name" : (String)?,
+      "SshUsername" : (String)?,
+      "SshPublicKey" : (String)?
+    )
+
+    alias ServiceError = NamedTuple(
+      "ServiceErrorId" : (String)?,
+      "StackId" : (String)?,
+      "InstanceId" : (String)?,
+      "Type" : (String)?,
+      "Message" : (String)?,
+      "CreatedAt" : (DateTime)?
+    )
+
+    alias ServiceErrors = Array(ServiceError)
+
+    alias SetLoadBasedAutoScalingRequest = NamedTuple(
+      "LayerId" : String,
+      "Enable" : (Boolean)?,
+      "UpScaling" : (AutoScalingThresholds)?,
+      "DownScaling" : (AutoScalingThresholds)?
+    )
+
+    alias SetPermissionRequest = NamedTuple(
+      "StackId" : String,
+      "IamUserArn" : String,
+      "AllowSsh" : (Boolean)?,
+      "AllowSudo" : (Boolean)?,
+      "Level" : (String)?
+    )
+
+    alias SetTimeBasedAutoScalingRequest = NamedTuple(
+      "InstanceId" : String,
+      "AutoScalingSchedule" : (WeeklyAutoScalingSchedule)?
+    )
+
+    alias ShutdownEventConfiguration = NamedTuple(
+      "ExecutionTimeout" : (Integer)?,
+      "DelayUntilElbConnectionsDrained" : (Boolean)?
+    )
+
+    alias Source = NamedTuple(
+      "Type" : (SourceType)?,
+      "Url" : (String)?,
+      "Username" : (String)?,
+      "Password" : (String)?,
+      "SshKey" : (String)?,
+      "Revision" : (String)?
+    )
+
+    alias SourceType = String
+
+    alias SslConfiguration = NamedTuple(
+      "Certificate" : String,
+      "PrivateKey" : String,
+      "Chain" : (String)?
+    )
+
+    alias Stack = NamedTuple(
+      "StackId" : (String)?,
+      "Name" : (String)?,
+      "Arn" : (String)?,
+      "Region" : (String)?,
+      "VpcId" : (String)?,
+      "Attributes" : (StackAttributes)?,
+      "ServiceRoleArn" : (String)?,
+      "DefaultInstanceProfileArn" : (String)?,
+      "DefaultOs" : (String)?,
+      "HostnameTheme" : (String)?,
+      "DefaultAvailabilityZone" : (String)?,
+      "DefaultSubnetId" : (String)?,
+      "CustomJson" : (String)?,
+      "ConfigurationManager" : (StackConfigurationManager)?,
+      "ChefConfiguration" : (ChefConfiguration)?,
+      "UseCustomCookbooks" : (Boolean)?,
+      "UseOpsworksSecurityGroups" : (Boolean)?,
+      "CustomCookbooksSource" : (Source)?,
+      "DefaultSshKeyName" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "DefaultRootDeviceType" : (RootDeviceType)?,
+      "AgentVersion" : (String)?
+    )
+
+    alias StackAttributes = Hash(StackAttributesKeys,String)
+
+    alias StackAttributesKeys = String
+
+    alias StackConfigurationManager = NamedTuple(
+      "Name" : (String)?,
+      "Version" : (String)?
+    )
+
+    alias StackSummary = NamedTuple(
+      "StackId" : (String)?,
+      "Name" : (String)?,
+      "Arn" : (String)?,
+      "LayersCount" : (Integer)?,
+      "AppsCount" : (Integer)?,
+      "InstancesCount" : (InstancesCount)?
+    )
+
+    alias Stacks = Array(Stack)
+
+    alias StartInstanceRequest = NamedTuple(
+      "InstanceId" : String
+    )
+
+    alias StartStackRequest = NamedTuple(
+      "StackId" : String
+    )
+
+    alias StopInstanceRequest = NamedTuple(
+      "InstanceId" : String,
+      "Force" : (Boolean)?
+    )
+
+    alias StopStackRequest = NamedTuple(
+      "StackId" : String
+    )
+
+    alias String = String
+
+    alias Strings = Array(String)
+
+    alias Switch = String
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Tags" : Tags
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias TemporaryCredential = NamedTuple(
+      "Username" : (String)?,
+      "Password" : (String)?,
+      "ValidForInMinutes" : (Integer)?,
+      "InstanceId" : (String)?
+    )
+
+    alias TimeBasedAutoScalingConfiguration = NamedTuple(
+      "InstanceId" : (String)?,
+      "AutoScalingSchedule" : (WeeklyAutoScalingSchedule)?
+    )
+
+    alias TimeBasedAutoScalingConfigurations = Array(TimeBasedAutoScalingConfiguration)
+
+    alias UnassignInstanceRequest = NamedTuple(
+      "InstanceId" : String
+    )
+
+    alias UnassignVolumeRequest = NamedTuple(
+      "VolumeId" : String
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagKeys" : TagKeys
+    )
+
+    alias UpdateAppRequest = NamedTuple(
+      "AppId" : String,
+      "Name" : (String)?,
+      "Description" : (String)?,
+      "DataSources" : (DataSources)?,
+      "Type" : (AppType)?,
+      "AppSource" : (Source)?,
+      "Domains" : (Strings)?,
+      "EnableSsl" : (Boolean)?,
+      "SslConfiguration" : (SslConfiguration)?,
+      "Attributes" : (AppAttributes)?,
+      "Environment" : (EnvironmentVariables)?
+    )
+
+    alias UpdateElasticIpRequest = NamedTuple(
+      "ElasticIp" : String,
+      "Name" : (String)?
+    )
+
+    alias UpdateInstanceRequest = NamedTuple(
+      "InstanceId" : String,
+      "LayerIds" : (Strings)?,
+      "InstanceType" : (String)?,
+      "AutoScalingType" : (AutoScalingType)?,
+      "Hostname" : (String)?,
+      "Os" : (String)?,
+      "AmiId" : (String)?,
+      "SshKeyName" : (String)?,
+      "Architecture" : (Architecture)?,
+      "InstallUpdatesOnBoot" : (Boolean)?,
+      "EbsOptimized" : (Boolean)?,
+      "AgentVersion" : (String)?
+    )
+
+    alias UpdateLayerRequest = NamedTuple(
+      "LayerId" : String,
+      "Name" : (String)?,
+      "Shortname" : (String)?,
+      "Attributes" : (LayerAttributes)?,
+      "CloudWatchLogsConfiguration" : (CloudWatchLogsConfiguration)?,
+      "CustomInstanceProfileArn" : (String)?,
+      "CustomJson" : (String)?,
+      "CustomSecurityGroupIds" : (Strings)?,
+      "Packages" : (Strings)?,
+      "VolumeConfigurations" : (VolumeConfigurations)?,
+      "EnableAutoHealing" : (Boolean)?,
+      "AutoAssignElasticIps" : (Boolean)?,
+      "AutoAssignPublicIps" : (Boolean)?,
+      "CustomRecipes" : (Recipes)?,
+      "InstallUpdatesOnBoot" : (Boolean)?,
+      "UseEbsOptimizedInstances" : (Boolean)?,
+      "LifecycleEventConfiguration" : (LifecycleEventConfiguration)?
+    )
+
+    alias UpdateMyUserProfileRequest = NamedTuple(
+      "SshPublicKey" : (String)?
+    )
+
+    alias UpdateRdsDbInstanceRequest = NamedTuple(
+      "RdsDbInstanceArn" : String,
+      "DbUser" : (String)?,
+      "DbPassword" : (String)?
+    )
+
+    alias UpdateStackRequest = NamedTuple(
+      "StackId" : String,
+      "Name" : (String)?,
+      "Attributes" : (StackAttributes)?,
+      "ServiceRoleArn" : (String)?,
+      "DefaultInstanceProfileArn" : (String)?,
+      "DefaultOs" : (String)?,
+      "HostnameTheme" : (String)?,
+      "DefaultAvailabilityZone" : (String)?,
+      "DefaultSubnetId" : (String)?,
+      "CustomJson" : (String)?,
+      "ConfigurationManager" : (StackConfigurationManager)?,
+      "ChefConfiguration" : (ChefConfiguration)?,
+      "UseCustomCookbooks" : (Boolean)?,
+      "CustomCookbooksSource" : (Source)?,
+      "DefaultSshKeyName" : (String)?,
+      "DefaultRootDeviceType" : (RootDeviceType)?,
+      "UseOpsworksSecurityGroups" : (Boolean)?,
+      "AgentVersion" : (String)?
+    )
+
+    alias UpdateUserProfileRequest = NamedTuple(
+      "IamUserArn" : String,
+      "SshUsername" : (String)?,
+      "SshPublicKey" : (String)?,
+      "AllowSelfManagement" : (Boolean)?
+    )
+
+    alias UpdateVolumeRequest = NamedTuple(
+      "VolumeId" : String,
+      "Name" : (String)?,
+      "MountPoint" : (String)?
+    )
+
+    alias UserProfile = NamedTuple(
+      "IamUserArn" : (String)?,
+      "Name" : (String)?,
+      "SshUsername" : (String)?,
+      "SshPublicKey" : (String)?,
+      "AllowSelfManagement" : (Boolean)?
+    )
+
+    alias UserProfiles = Array(UserProfile)
+
+    alias ValidForInMinutes = Int32
+
+    alias ValidationException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias VirtualizationType = String
+
+    alias Volume = NamedTuple(
+      "VolumeId" : (String)?,
+      "Ec2VolumeId" : (String)?,
+      "Name" : (String)?,
+      "RaidArrayId" : (String)?,
+      "InstanceId" : (String)?,
+      "Status" : (String)?,
+      "Size" : (Integer)?,
+      "Device" : (String)?,
+      "MountPoint" : (String)?,
+      "Region" : (String)?,
+      "AvailabilityZone" : (String)?,
+      "VolumeType" : (String)?,
+      "Iops" : (Integer)?,
+      "Encrypted" : (Boolean)?
+    )
+
+    alias VolumeConfiguration = NamedTuple(
+      "MountPoint" : String,
+      "RaidLevel" : (Integer)?,
+      "NumberOfDisks" : Integer,
+      "Size" : Integer,
+      "VolumeType" : (String)?,
+      "Iops" : (Integer)?,
+      "Encrypted" : (Boolean)?
+    )
+
+    alias VolumeConfigurations = Array(VolumeConfiguration)
+
+    alias VolumeType = String
+
+    alias Volumes = Array(Volume)
+
+    alias WeeklyAutoScalingSchedule = NamedTuple(
+      "Monday" : (DailyAutoScalingSchedule)?,
+      "Tuesday" : (DailyAutoScalingSchedule)?,
+      "Wednesday" : (DailyAutoScalingSchedule)?,
+      "Thursday" : (DailyAutoScalingSchedule)?,
+      "Friday" : (DailyAutoScalingSchedule)?,
+      "Saturday" : (DailyAutoScalingSchedule)?,
+      "Sunday" : (DailyAutoScalingSchedule)?
+    )
   end
 end

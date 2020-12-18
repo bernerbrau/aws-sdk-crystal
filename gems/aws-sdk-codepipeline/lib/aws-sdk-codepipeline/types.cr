@@ -4527,5 +4527,1127 @@ module Aws::CodePipeline
     #
     class WebhookNotFoundException < Aws::EmptyStructure; end
 
+    alias AWSRegionName = String
+
+    alias AWSSessionCredentials = NamedTuple(
+      "accessKeyId" : AccessKeyId,
+      "secretAccessKey" : SecretAccessKey,
+      "sessionToken" : SessionToken
+    )
+
+    alias AccessKeyId = String
+
+    alias AccountId = String
+
+    alias AcknowledgeJobInput = NamedTuple(
+      "jobId" : JobId,
+      "nonce" : Nonce
+    )
+
+    alias AcknowledgeJobOutput = NamedTuple(
+      "status" : (JobStatus)?
+    )
+
+    alias AcknowledgeThirdPartyJobInput = NamedTuple(
+      "jobId" : ThirdPartyJobId,
+      "nonce" : Nonce,
+      "clientToken" : ClientToken
+    )
+
+    alias AcknowledgeThirdPartyJobOutput = NamedTuple(
+      "status" : (JobStatus)?
+    )
+
+    alias ActionCategory = String
+
+    alias ActionConfiguration = NamedTuple(
+      "configuration" : (ActionConfigurationMap)?
+    )
+
+    alias ActionConfigurationKey = String
+
+    alias ActionConfigurationMap = Hash(ActionConfigurationKey,ActionConfigurationValue)
+
+    alias ActionConfigurationProperty = NamedTuple(
+      "name" : ActionConfigurationKey,
+      "required" : Boolean,
+      "key" : Boolean,
+      "secret" : Boolean,
+      "queryable" : (Boolean)?,
+      "description" : (Description)?,
+      "type" : (ActionConfigurationPropertyType)?
+    )
+
+    alias ActionConfigurationPropertyList = Array(ActionConfigurationProperty)
+
+    alias ActionConfigurationPropertyType = String
+
+    alias ActionConfigurationQueryableValue = String
+
+    alias ActionConfigurationValue = String
+
+    alias ActionContext = NamedTuple(
+      "name" : (ActionName)?,
+      "actionExecutionId" : (ActionExecutionId)?
+    )
+
+    alias ActionDeclaration = NamedTuple(
+      "name" : ActionName,
+      "actionTypeId" : ActionTypeId,
+      "runOrder" : (ActionRunOrder)?,
+      "configuration" : (ActionConfigurationMap)?,
+      "outputArtifacts" : (OutputArtifactList)?,
+      "inputArtifacts" : (InputArtifactList)?,
+      "roleArn" : (RoleArn)?,
+      "region" : (AWSRegionName)?,
+      "namespace" : (ActionNamespace)?
+    )
+
+    alias ActionExecution = NamedTuple(
+      "actionExecutionId" : (ActionExecutionId)?,
+      "status" : (ActionExecutionStatus)?,
+      "summary" : (ExecutionSummary)?,
+      "lastStatusChange" : (Timestamp)?,
+      "token" : (ActionExecutionToken)?,
+      "lastUpdatedBy" : (LastUpdatedBy)?,
+      "externalExecutionId" : (ExecutionId)?,
+      "externalExecutionUrl" : (Url)?,
+      "percentComplete" : (Percentage)?,
+      "errorDetails" : (ErrorDetails)?
+    )
+
+    alias ActionExecutionDetail = NamedTuple(
+      "pipelineExecutionId" : (PipelineExecutionId)?,
+      "actionExecutionId" : (ActionExecutionId)?,
+      "pipelineVersion" : (PipelineVersion)?,
+      "stageName" : (StageName)?,
+      "actionName" : (ActionName)?,
+      "startTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "status" : (ActionExecutionStatus)?,
+      "input" : (ActionExecutionInput)?,
+      "output" : (ActionExecutionOutput)?
+    )
+
+    alias ActionExecutionDetailList = Array(ActionExecutionDetail)
+
+    alias ActionExecutionFilter = NamedTuple(
+      "pipelineExecutionId" : (PipelineExecutionId)?
+    )
+
+    alias ActionExecutionId = String
+
+    alias ActionExecutionInput = NamedTuple(
+      "actionTypeId" : (ActionTypeId)?,
+      "configuration" : (ActionConfigurationMap)?,
+      "resolvedConfiguration" : (ResolvedActionConfigurationMap)?,
+      "roleArn" : (RoleArn)?,
+      "region" : (AWSRegionName)?,
+      "inputArtifacts" : (ArtifactDetailList)?,
+      "namespace" : (ActionNamespace)?
+    )
+
+    alias ActionExecutionOutput = NamedTuple(
+      "outputArtifacts" : (ArtifactDetailList)?,
+      "executionResult" : (ActionExecutionResult)?,
+      "outputVariables" : (OutputVariablesMap)?
+    )
+
+    alias ActionExecutionResult = NamedTuple(
+      "externalExecutionId" : (ExternalExecutionId)?,
+      "externalExecutionSummary" : (ExternalExecutionSummary)?,
+      "externalExecutionUrl" : (Url)?
+    )
+
+    alias ActionExecutionStatus = String
+
+    alias ActionExecutionToken = String
+
+    alias ActionName = String
+
+    alias ActionNamespace = String
+
+    alias ActionNotFoundException = NamedTuple(
+      
+    )
+
+    alias ActionOwner = String
+
+    alias ActionProvider = String
+
+    alias ActionRevision = NamedTuple(
+      "revisionId" : Revision,
+      "revisionChangeId" : RevisionChangeIdentifier,
+      "created" : Timestamp
+    )
+
+    alias ActionRunOrder = Int32
+
+    alias ActionState = NamedTuple(
+      "actionName" : (ActionName)?,
+      "currentRevision" : (ActionRevision)?,
+      "latestExecution" : (ActionExecution)?,
+      "entityUrl" : (Url)?,
+      "revisionUrl" : (Url)?
+    )
+
+    alias ActionStateList = Array(ActionState)
+
+    alias ActionType = NamedTuple(
+      "id" : ActionTypeId,
+      "settings" : (ActionTypeSettings)?,
+      "actionConfigurationProperties" : (ActionConfigurationPropertyList)?,
+      "inputArtifactDetails" : ArtifactDetails,
+      "outputArtifactDetails" : ArtifactDetails
+    )
+
+    alias ActionTypeId = NamedTuple(
+      "category" : ActionCategory,
+      "owner" : ActionOwner,
+      "provider" : ActionProvider,
+      "version" : Version
+    )
+
+    alias ActionTypeList = Array(ActionType)
+
+    alias ActionTypeNotFoundException = NamedTuple(
+      
+    )
+
+    alias ActionTypeSettings = NamedTuple(
+      "thirdPartyConfigurationUrl" : (Url)?,
+      "entityUrlTemplate" : (UrlTemplate)?,
+      "executionUrlTemplate" : (UrlTemplate)?,
+      "revisionUrlTemplate" : (UrlTemplate)?
+    )
+
+    alias ApprovalAlreadyCompletedException = NamedTuple(
+      
+    )
+
+    alias ApprovalResult = NamedTuple(
+      "summary" : ApprovalSummary,
+      "status" : ApprovalStatus
+    )
+
+    alias ApprovalStatus = String
+
+    alias ApprovalSummary = String
+
+    alias ApprovalToken = String
+
+    alias Artifact = NamedTuple(
+      "name" : (ArtifactName)?,
+      "revision" : (Revision)?,
+      "location" : (ArtifactLocation)?
+    )
+
+    alias ArtifactDetail = NamedTuple(
+      "name" : (ArtifactName)?,
+      "s3location" : (S3Location)?
+    )
+
+    alias ArtifactDetailList = Array(ArtifactDetail)
+
+    alias ArtifactDetails = NamedTuple(
+      "minimumCount" : MinimumArtifactCount,
+      "maximumCount" : MaximumArtifactCount
+    )
+
+    alias ArtifactList = Array(Artifact)
+
+    alias ArtifactLocation = NamedTuple(
+      "type" : (ArtifactLocationType)?,
+      "s3Location" : (S3ArtifactLocation)?
+    )
+
+    alias ArtifactLocationType = String
+
+    alias ArtifactName = String
+
+    alias ArtifactRevision = NamedTuple(
+      "name" : (ArtifactName)?,
+      "revisionId" : (Revision)?,
+      "revisionChangeIdentifier" : (RevisionChangeIdentifier)?,
+      "revisionSummary" : (RevisionSummary)?,
+      "created" : (Timestamp)?,
+      "revisionUrl" : (Url)?
+    )
+
+    alias ArtifactRevisionList = Array(ArtifactRevision)
+
+    alias ArtifactStore = NamedTuple(
+      "type" : ArtifactStoreType,
+      "location" : ArtifactStoreLocation,
+      "encryptionKey" : (EncryptionKey)?
+    )
+
+    alias ArtifactStoreLocation = String
+
+    alias ArtifactStoreMap = Hash(AWSRegionName,ArtifactStore)
+
+    alias ArtifactStoreType = String
+
+    alias BlockerDeclaration = NamedTuple(
+      "name" : BlockerName,
+      "type" : BlockerType
+    )
+
+    alias BlockerName = String
+
+    alias BlockerType = String
+
+    alias Boolean = Bool
+
+    alias ClientId = String
+
+    alias ClientRequestToken = String
+
+    alias ClientToken = String
+
+    alias Code = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ContinuationToken = String
+
+    alias CreateCustomActionTypeInput = NamedTuple(
+      "category" : ActionCategory,
+      "provider" : ActionProvider,
+      "version" : Version,
+      "settings" : (ActionTypeSettings)?,
+      "configurationProperties" : (ActionConfigurationPropertyList)?,
+      "inputArtifactDetails" : ArtifactDetails,
+      "outputArtifactDetails" : ArtifactDetails,
+      "tags" : (TagList)?
+    )
+
+    alias CreateCustomActionTypeOutput = NamedTuple(
+      "actionType" : ActionType,
+      "tags" : (TagList)?
+    )
+
+    alias CreatePipelineInput = NamedTuple(
+      "pipeline" : PipelineDeclaration,
+      "tags" : (TagList)?
+    )
+
+    alias CreatePipelineOutput = NamedTuple(
+      "pipeline" : (PipelineDeclaration)?,
+      "tags" : (TagList)?
+    )
+
+    alias CurrentRevision = NamedTuple(
+      "revision" : Revision,
+      "changeIdentifier" : RevisionChangeIdentifier,
+      "created" : (Time)?,
+      "revisionSummary" : (RevisionSummary)?
+    )
+
+    alias DeleteCustomActionTypeInput = NamedTuple(
+      "category" : ActionCategory,
+      "provider" : ActionProvider,
+      "version" : Version
+    )
+
+    alias DeletePipelineInput = NamedTuple(
+      "name" : PipelineName
+    )
+
+    alias DeleteWebhookInput = NamedTuple(
+      "name" : WebhookName
+    )
+
+    alias DeleteWebhookOutput = NamedTuple(
+      
+    )
+
+    alias DeregisterWebhookWithThirdPartyInput = NamedTuple(
+      "webhookName" : (WebhookName)?
+    )
+
+    alias DeregisterWebhookWithThirdPartyOutput = NamedTuple(
+      
+    )
+
+    alias Description = String
+
+    alias DisableStageTransitionInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "stageName" : StageName,
+      "transitionType" : StageTransitionType,
+      "reason" : DisabledReason
+    )
+
+    alias DisabledReason = String
+
+    alias DuplicatedStopRequestException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias EnableStageTransitionInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "stageName" : StageName,
+      "transitionType" : StageTransitionType
+    )
+
+    alias Enabled = Bool
+
+    alias EncryptionKey = NamedTuple(
+      "id" : EncryptionKeyId,
+      "type" : EncryptionKeyType
+    )
+
+    alias EncryptionKeyId = String
+
+    alias EncryptionKeyType = String
+
+    alias ErrorDetails = NamedTuple(
+      "code" : (Code)?,
+      "message" : (Message)?
+    )
+
+    alias ExecutionDetails = NamedTuple(
+      "summary" : (ExecutionSummary)?,
+      "externalExecutionId" : (ExecutionId)?,
+      "percentComplete" : (Percentage)?
+    )
+
+    alias ExecutionId = String
+
+    alias ExecutionSummary = String
+
+    alias ExecutionTrigger = NamedTuple(
+      "triggerType" : (TriggerType)?,
+      "triggerDetail" : (TriggerDetail)?
+    )
+
+    alias ExternalExecutionId = String
+
+    alias ExternalExecutionSummary = String
+
+    alias FailureDetails = NamedTuple(
+      "type" : FailureType,
+      "message" : Message,
+      "externalExecutionId" : (ExecutionId)?
+    )
+
+    alias FailureType = String
+
+    alias GetJobDetailsInput = NamedTuple(
+      "jobId" : JobId
+    )
+
+    alias GetJobDetailsOutput = NamedTuple(
+      "jobDetails" : (JobDetails)?
+    )
+
+    alias GetPipelineExecutionInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "pipelineExecutionId" : PipelineExecutionId
+    )
+
+    alias GetPipelineExecutionOutput = NamedTuple(
+      "pipelineExecution" : (PipelineExecution)?
+    )
+
+    alias GetPipelineInput = NamedTuple(
+      "name" : PipelineName,
+      "version" : (PipelineVersion)?
+    )
+
+    alias GetPipelineOutput = NamedTuple(
+      "pipeline" : (PipelineDeclaration)?,
+      "metadata" : (PipelineMetadata)?
+    )
+
+    alias GetPipelineStateInput = NamedTuple(
+      "name" : PipelineName
+    )
+
+    alias GetPipelineStateOutput = NamedTuple(
+      "pipelineName" : (PipelineName)?,
+      "pipelineVersion" : (PipelineVersion)?,
+      "stageStates" : (StageStateList)?,
+      "created" : (Timestamp)?,
+      "updated" : (Timestamp)?
+    )
+
+    alias GetThirdPartyJobDetailsInput = NamedTuple(
+      "jobId" : ThirdPartyJobId,
+      "clientToken" : ClientToken
+    )
+
+    alias GetThirdPartyJobDetailsOutput = NamedTuple(
+      "jobDetails" : (ThirdPartyJobDetails)?
+    )
+
+    alias InputArtifact = NamedTuple(
+      "name" : ArtifactName
+    )
+
+    alias InputArtifactList = Array(InputArtifact)
+
+    alias InvalidActionDeclarationException = NamedTuple(
+      
+    )
+
+    alias InvalidApprovalTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidArnException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias InvalidBlockerDeclarationException = NamedTuple(
+      
+    )
+
+    alias InvalidClientTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidJobException = NamedTuple(
+      
+    )
+
+    alias InvalidJobStateException = NamedTuple(
+      
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidNonceException = NamedTuple(
+      
+    )
+
+    alias InvalidStageDeclarationException = NamedTuple(
+      
+    )
+
+    alias InvalidStructureException = NamedTuple(
+      
+    )
+
+    alias InvalidTagsException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias InvalidWebhookAuthenticationParametersException = NamedTuple(
+      
+    )
+
+    alias InvalidWebhookFilterPatternException = NamedTuple(
+      
+    )
+
+    alias Job = NamedTuple(
+      "id" : (JobId)?,
+      "data" : (JobData)?,
+      "nonce" : (Nonce)?,
+      "accountId" : (AccountId)?
+    )
+
+    alias JobData = NamedTuple(
+      "actionTypeId" : (ActionTypeId)?,
+      "actionConfiguration" : (ActionConfiguration)?,
+      "pipelineContext" : (PipelineContext)?,
+      "inputArtifacts" : (ArtifactList)?,
+      "outputArtifacts" : (ArtifactList)?,
+      "artifactCredentials" : (AWSSessionCredentials)?,
+      "continuationToken" : (ContinuationToken)?,
+      "encryptionKey" : (EncryptionKey)?
+    )
+
+    alias JobDetails = NamedTuple(
+      "id" : (JobId)?,
+      "data" : (JobData)?,
+      "accountId" : (AccountId)?
+    )
+
+    alias JobId = String
+
+    alias JobList = Array(Job)
+
+    alias JobNotFoundException = NamedTuple(
+      
+    )
+
+    alias JobStatus = String
+
+    alias JsonPath = String
+
+    alias LastChangedAt = String | UInt64 | Time
+
+    alias LastChangedBy = String
+
+    alias LastUpdatedBy = String
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListActionExecutionsInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "filter" : (ActionExecutionFilter)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListActionExecutionsOutput = NamedTuple(
+      "actionExecutionDetails" : (ActionExecutionDetailList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListActionTypesInput = NamedTuple(
+      "actionOwnerFilter" : (ActionOwner)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListActionTypesOutput = NamedTuple(
+      "actionTypes" : ActionTypeList,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPipelineExecutionsInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPipelineExecutionsOutput = NamedTuple(
+      "pipelineExecutionSummaries" : (PipelineExecutionSummaryList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPipelinesInput = NamedTuple(
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPipelinesOutput = NamedTuple(
+      "pipelines" : (PipelineList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "tags" : (TagList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListWebhookItem = NamedTuple(
+      "definition" : WebhookDefinition,
+      "url" : WebhookUrl,
+      "errorMessage" : (WebhookErrorMessage)?,
+      "errorCode" : (WebhookErrorCode)?,
+      "lastTriggered" : (WebhookLastTriggered)?,
+      "arn" : (WebhookArn)?,
+      "tags" : (TagList)?
+    )
+
+    alias ListWebhooksInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListWebhooksOutput = NamedTuple(
+      "webhooks" : (WebhookList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MatchEquals = String
+
+    alias MaxBatchSize = Int32
+
+    alias MaxResults = Int32
+
+    alias MaximumArtifactCount = Int32
+
+    alias Message = String
+
+    alias MinimumArtifactCount = Int32
+
+    alias NextToken = String
+
+    alias Nonce = String
+
+    alias NotLatestPipelineExecutionException = NamedTuple(
+      
+    )
+
+    alias OutputArtifact = NamedTuple(
+      "name" : ArtifactName
+    )
+
+    alias OutputArtifactList = Array(OutputArtifact)
+
+    alias OutputVariablesKey = String
+
+    alias OutputVariablesMap = Hash(OutputVariablesKey,OutputVariablesValue)
+
+    alias OutputVariablesSizeExceededException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias OutputVariablesValue = String
+
+    alias Percentage = Int32
+
+    alias PipelineArn = String
+
+    alias PipelineContext = NamedTuple(
+      "pipelineName" : (PipelineName)?,
+      "stage" : (StageContext)?,
+      "action" : (ActionContext)?,
+      "pipelineArn" : (PipelineArn)?,
+      "pipelineExecutionId" : (PipelineExecutionId)?
+    )
+
+    alias PipelineDeclaration = NamedTuple(
+      "name" : PipelineName,
+      "roleArn" : RoleArn,
+      "artifactStore" : (ArtifactStore)?,
+      "artifactStores" : (ArtifactStoreMap)?,
+      "stages" : PipelineStageDeclarationList,
+      "version" : (PipelineVersion)?
+    )
+
+    alias PipelineExecution = NamedTuple(
+      "pipelineName" : (PipelineName)?,
+      "pipelineVersion" : (PipelineVersion)?,
+      "pipelineExecutionId" : (PipelineExecutionId)?,
+      "status" : (PipelineExecutionStatus)?,
+      "artifactRevisions" : (ArtifactRevisionList)?
+    )
+
+    alias PipelineExecutionId = String
+
+    alias PipelineExecutionNotFoundException = NamedTuple(
+      
+    )
+
+    alias PipelineExecutionNotStoppableException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias PipelineExecutionStatus = String
+
+    alias PipelineExecutionSummary = NamedTuple(
+      "pipelineExecutionId" : (PipelineExecutionId)?,
+      "status" : (PipelineExecutionStatus)?,
+      "startTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "sourceRevisions" : (SourceRevisionList)?,
+      "trigger" : (ExecutionTrigger)?,
+      "stopTrigger" : (StopExecutionTrigger)?
+    )
+
+    alias PipelineExecutionSummaryList = Array(PipelineExecutionSummary)
+
+    alias PipelineList = Array(PipelineSummary)
+
+    alias PipelineMetadata = NamedTuple(
+      "pipelineArn" : (PipelineArn)?,
+      "created" : (Timestamp)?,
+      "updated" : (Timestamp)?
+    )
+
+    alias PipelineName = String
+
+    alias PipelineNameInUseException = NamedTuple(
+      
+    )
+
+    alias PipelineNotFoundException = NamedTuple(
+      
+    )
+
+    alias PipelineStageDeclarationList = Array(StageDeclaration)
+
+    alias PipelineSummary = NamedTuple(
+      "name" : (PipelineName)?,
+      "version" : (PipelineVersion)?,
+      "created" : (Timestamp)?,
+      "updated" : (Timestamp)?
+    )
+
+    alias PipelineVersion = Int32
+
+    alias PipelineVersionNotFoundException = NamedTuple(
+      
+    )
+
+    alias PollForJobsInput = NamedTuple(
+      "actionTypeId" : ActionTypeId,
+      "maxBatchSize" : (MaxBatchSize)?,
+      "queryParam" : (QueryParamMap)?
+    )
+
+    alias PollForJobsOutput = NamedTuple(
+      "jobs" : (JobList)?
+    )
+
+    alias PollForThirdPartyJobsInput = NamedTuple(
+      "actionTypeId" : ActionTypeId,
+      "maxBatchSize" : (MaxBatchSize)?
+    )
+
+    alias PollForThirdPartyJobsOutput = NamedTuple(
+      "jobs" : (ThirdPartyJobList)?
+    )
+
+    alias PutActionRevisionInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "stageName" : StageName,
+      "actionName" : ActionName,
+      "actionRevision" : ActionRevision
+    )
+
+    alias PutActionRevisionOutput = NamedTuple(
+      "newRevision" : (Boolean)?,
+      "pipelineExecutionId" : (PipelineExecutionId)?
+    )
+
+    alias PutApprovalResultInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "stageName" : StageName,
+      "actionName" : ActionName,
+      "result" : ApprovalResult,
+      "token" : ApprovalToken
+    )
+
+    alias PutApprovalResultOutput = NamedTuple(
+      "approvedAt" : (Timestamp)?
+    )
+
+    alias PutJobFailureResultInput = NamedTuple(
+      "jobId" : JobId,
+      "failureDetails" : FailureDetails
+    )
+
+    alias PutJobSuccessResultInput = NamedTuple(
+      "jobId" : JobId,
+      "currentRevision" : (CurrentRevision)?,
+      "continuationToken" : (ContinuationToken)?,
+      "executionDetails" : (ExecutionDetails)?,
+      "outputVariables" : (OutputVariablesMap)?
+    )
+
+    alias PutThirdPartyJobFailureResultInput = NamedTuple(
+      "jobId" : ThirdPartyJobId,
+      "clientToken" : ClientToken,
+      "failureDetails" : FailureDetails
+    )
+
+    alias PutThirdPartyJobSuccessResultInput = NamedTuple(
+      "jobId" : ThirdPartyJobId,
+      "clientToken" : ClientToken,
+      "currentRevision" : (CurrentRevision)?,
+      "continuationToken" : (ContinuationToken)?,
+      "executionDetails" : (ExecutionDetails)?
+    )
+
+    alias PutWebhookInput = NamedTuple(
+      "webhook" : WebhookDefinition,
+      "tags" : (TagList)?
+    )
+
+    alias PutWebhookOutput = NamedTuple(
+      "webhook" : (ListWebhookItem)?
+    )
+
+    alias QueryParamMap = Hash(ActionConfigurationKey,ActionConfigurationQueryableValue)
+
+    alias RegisterWebhookWithThirdPartyInput = NamedTuple(
+      "webhookName" : (WebhookName)?
+    )
+
+    alias RegisterWebhookWithThirdPartyOutput = NamedTuple(
+      
+    )
+
+    alias ResolvedActionConfigurationMap = Hash(String,String)
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias RetryStageExecutionInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "stageName" : StageName,
+      "pipelineExecutionId" : PipelineExecutionId,
+      "retryMode" : StageRetryMode
+    )
+
+    alias RetryStageExecutionOutput = NamedTuple(
+      "pipelineExecutionId" : (PipelineExecutionId)?
+    )
+
+    alias Revision = String
+
+    alias RevisionChangeIdentifier = String
+
+    alias RevisionSummary = String
+
+    alias RoleArn = String
+
+    alias S3ArtifactLocation = NamedTuple(
+      "bucketName" : S3BucketName,
+      "objectKey" : S3ObjectKey
+    )
+
+    alias S3Bucket = String
+
+    alias S3BucketName = String
+
+    alias S3Key = String
+
+    alias S3Location = NamedTuple(
+      "bucket" : (S3Bucket)?,
+      "key" : (S3Key)?
+    )
+
+    alias S3ObjectKey = String
+
+    alias SecretAccessKey = String
+
+    alias SessionToken = String
+
+    alias SourceRevision = NamedTuple(
+      "actionName" : ActionName,
+      "revisionId" : (Revision)?,
+      "revisionSummary" : (RevisionSummary)?,
+      "revisionUrl" : (Url)?
+    )
+
+    alias SourceRevisionList = Array(SourceRevision)
+
+    alias StageActionDeclarationList = Array(ActionDeclaration)
+
+    alias StageBlockerDeclarationList = Array(BlockerDeclaration)
+
+    alias StageContext = NamedTuple(
+      "name" : (StageName)?
+    )
+
+    alias StageDeclaration = NamedTuple(
+      "name" : StageName,
+      "blockers" : (StageBlockerDeclarationList)?,
+      "actions" : StageActionDeclarationList
+    )
+
+    alias StageExecution = NamedTuple(
+      "pipelineExecutionId" : PipelineExecutionId,
+      "status" : StageExecutionStatus
+    )
+
+    alias StageExecutionStatus = String
+
+    alias StageName = String
+
+    alias StageNotFoundException = NamedTuple(
+      
+    )
+
+    alias StageNotRetryableException = NamedTuple(
+      
+    )
+
+    alias StageRetryMode = String
+
+    alias StageState = NamedTuple(
+      "stageName" : (StageName)?,
+      "inboundExecution" : (StageExecution)?,
+      "inboundTransitionState" : (TransitionState)?,
+      "actionStates" : (ActionStateList)?,
+      "latestExecution" : (StageExecution)?
+    )
+
+    alias StageStateList = Array(StageState)
+
+    alias StageTransitionType = String
+
+    alias StartPipelineExecutionInput = NamedTuple(
+      "name" : PipelineName,
+      "clientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias StartPipelineExecutionOutput = NamedTuple(
+      "pipelineExecutionId" : (PipelineExecutionId)?
+    )
+
+    alias StopExecutionTrigger = NamedTuple(
+      "reason" : (StopPipelineExecutionReason)?
+    )
+
+    alias StopPipelineExecutionInput = NamedTuple(
+      "pipelineName" : PipelineName,
+      "pipelineExecutionId" : PipelineExecutionId,
+      "abandon" : (Boolean)?,
+      "reason" : (StopPipelineExecutionReason)?
+    )
+
+    alias StopPipelineExecutionOutput = NamedTuple(
+      "pipelineExecutionId" : (PipelineExecutionId)?
+    )
+
+    alias StopPipelineExecutionReason = String
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThirdPartyJob = NamedTuple(
+      "clientId" : (ClientId)?,
+      "jobId" : (JobId)?
+    )
+
+    alias ThirdPartyJobData = NamedTuple(
+      "actionTypeId" : (ActionTypeId)?,
+      "actionConfiguration" : (ActionConfiguration)?,
+      "pipelineContext" : (PipelineContext)?,
+      "inputArtifacts" : (ArtifactList)?,
+      "outputArtifacts" : (ArtifactList)?,
+      "artifactCredentials" : (AWSSessionCredentials)?,
+      "continuationToken" : (ContinuationToken)?,
+      "encryptionKey" : (EncryptionKey)?
+    )
+
+    alias ThirdPartyJobDetails = NamedTuple(
+      "id" : (ThirdPartyJobId)?,
+      "data" : (ThirdPartyJobData)?,
+      "nonce" : (Nonce)?
+    )
+
+    alias ThirdPartyJobId = String
+
+    alias ThirdPartyJobList = Array(ThirdPartyJob)
+
+    alias Time = String | UInt64 | Time
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyTagsException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias TransitionState = NamedTuple(
+      "enabled" : (Enabled)?,
+      "lastChangedBy" : (LastChangedBy)?,
+      "lastChangedAt" : (LastChangedAt)?,
+      "disabledReason" : (DisabledReason)?
+    )
+
+    alias TriggerDetail = String
+
+    alias TriggerType = String
+
+    alias UntagResourceInput = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UpdatePipelineInput = NamedTuple(
+      "pipeline" : PipelineDeclaration
+    )
+
+    alias UpdatePipelineOutput = NamedTuple(
+      "pipeline" : (PipelineDeclaration)?
+    )
+
+    alias Url = String
+
+    alias UrlTemplate = String
+
+    alias ValidationException = NamedTuple(
+      
+    )
+
+    alias Version = String
+
+    alias WebhookArn = String
+
+    alias WebhookAuthConfiguration = NamedTuple(
+      "AllowedIPRange" : (WebhookAuthConfigurationAllowedIPRange)?,
+      "SecretToken" : (WebhookAuthConfigurationSecretToken)?
+    )
+
+    alias WebhookAuthConfigurationAllowedIPRange = String
+
+    alias WebhookAuthConfigurationSecretToken = String
+
+    alias WebhookAuthenticationType = String
+
+    alias WebhookDefinition = NamedTuple(
+      "name" : WebhookName,
+      "targetPipeline" : PipelineName,
+      "targetAction" : ActionName,
+      "filters" : WebhookFilters,
+      "authentication" : WebhookAuthenticationType,
+      "authenticationConfiguration" : WebhookAuthConfiguration
+    )
+
+    alias WebhookErrorCode = String
+
+    alias WebhookErrorMessage = String
+
+    alias WebhookFilterRule = NamedTuple(
+      "jsonPath" : JsonPath,
+      "matchEquals" : (MatchEquals)?
+    )
+
+    alias WebhookFilters = Array(WebhookFilterRule)
+
+    alias WebhookLastTriggered = String | UInt64 | Time
+
+    alias WebhookList = Array(ListWebhookItem)
+
+    alias WebhookName = String
+
+    alias WebhookNotFoundException = NamedTuple(
+      
+    )
+
+    alias WebhookUrl = String
   end
 end

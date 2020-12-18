@@ -3066,5 +3066,736 @@ module Aws::MQ
       include Aws::Structure
     end
 
+    alias AuthenticationStrategy = String
+
+    alias AvailabilityZone = NamedTuple(
+      "Name" : (__string)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias BrokerEngineType = NamedTuple(
+      "EngineType" : (EngineType)?,
+      "EngineVersions" : (__listOfEngineVersion)?
+    )
+
+    alias BrokerEngineTypeOutput = NamedTuple(
+      "BrokerEngineTypes" : (__listOfBrokerEngineType)?,
+      "MaxResults" : (__integerMin5Max100)?,
+      "NextToken" : (__string)?
+    )
+
+    alias BrokerInstance = NamedTuple(
+      "ConsoleURL" : (__string)?,
+      "Endpoints" : (__listOf__string)?,
+      "IpAddress" : (__string)?
+    )
+
+    alias BrokerInstanceOption = NamedTuple(
+      "AvailabilityZones" : (__listOfAvailabilityZone)?,
+      "EngineType" : (EngineType)?,
+      "HostInstanceType" : (__string)?,
+      "StorageType" : (BrokerStorageType)?,
+      "SupportedDeploymentModes" : (__listOfDeploymentMode)?,
+      "SupportedEngineVersions" : (__listOf__string)?
+    )
+
+    alias BrokerInstanceOptionsOutput = NamedTuple(
+      "BrokerInstanceOptions" : (__listOfBrokerInstanceOption)?,
+      "MaxResults" : (__integerMin5Max100)?,
+      "NextToken" : (__string)?
+    )
+
+    alias BrokerState = String
+
+    alias BrokerStorageType = String
+
+    alias BrokerSummary = NamedTuple(
+      "BrokerArn" : (__string)?,
+      "BrokerId" : (__string)?,
+      "BrokerName" : (__string)?,
+      "BrokerState" : (BrokerState)?,
+      "Created" : (__timestampIso8601)?,
+      "DeploymentMode" : (DeploymentMode)?,
+      "EngineType" : (EngineType)?,
+      "HostInstanceType" : (__string)?
+    )
+
+    alias ChangeType = String
+
+    alias Configuration = NamedTuple(
+      "Arn" : (__string)?,
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "Created" : (__timestampIso8601)?,
+      "Description" : (__string)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "Id" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias ConfigurationId = NamedTuple(
+      "Id" : (__string)?,
+      "Revision" : (__integer)?
+    )
+
+    alias ConfigurationRevision = NamedTuple(
+      "Created" : (__timestampIso8601)?,
+      "Description" : (__string)?,
+      "Revision" : (__integer)?
+    )
+
+    alias Configurations = NamedTuple(
+      "Current" : (ConfigurationId)?,
+      "History" : (__listOfConfigurationId)?,
+      "Pending" : (ConfigurationId)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias CreateBrokerInput = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerName" : (__string)?,
+      "Configuration" : (ConfigurationId)?,
+      "CreatorRequestId" : (__string)?,
+      "DeploymentMode" : (DeploymentMode)?,
+      "EncryptionOptions" : (EncryptionOptions)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataInput)?,
+      "Logs" : (Logs)?,
+      "MaintenanceWindowStartTime" : (WeeklyStartTime)?,
+      "PubliclyAccessible" : (__boolean)?,
+      "SecurityGroups" : (__listOf__string)?,
+      "StorageType" : (BrokerStorageType)?,
+      "SubnetIds" : (__listOf__string)?,
+      "Tags" : (__mapOf__string)?,
+      "Users" : (__listOfUser)?
+    )
+
+    alias CreateBrokerOutput = NamedTuple(
+      "BrokerArn" : (__string)?,
+      "BrokerId" : (__string)?
+    )
+
+    alias CreateBrokerRequest = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerName" : (__string)?,
+      "Configuration" : (ConfigurationId)?,
+      "CreatorRequestId" : (__string)?,
+      "DeploymentMode" : (DeploymentMode)?,
+      "EncryptionOptions" : (EncryptionOptions)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataInput)?,
+      "Logs" : (Logs)?,
+      "MaintenanceWindowStartTime" : (WeeklyStartTime)?,
+      "PubliclyAccessible" : (__boolean)?,
+      "SecurityGroups" : (__listOf__string)?,
+      "StorageType" : (BrokerStorageType)?,
+      "SubnetIds" : (__listOf__string)?,
+      "Tags" : (__mapOf__string)?,
+      "Users" : (__listOfUser)?
+    )
+
+    alias CreateBrokerResponse = NamedTuple(
+      "BrokerArn" : (__string)?,
+      "BrokerId" : (__string)?
+    )
+
+    alias CreateConfigurationInput = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "Name" : (__string)?,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias CreateConfigurationOutput = NamedTuple(
+      "Arn" : (__string)?,
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "Created" : (__timestampIso8601)?,
+      "Id" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateConfigurationRequest = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "Name" : (__string)?,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias CreateConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "Created" : (__timestampIso8601)?,
+      "Id" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?
+    )
+
+    alias CreateTagsRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias CreateUserInput = NamedTuple(
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Password" : (__string)?
+    )
+
+    alias CreateUserRequest = NamedTuple(
+      "BrokerId" : __string,
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Password" : (__string)?,
+      "Username" : __string
+    )
+
+    alias CreateUserResponse = NamedTuple(
+      
+    )
+
+    alias DayOfWeek = String
+
+    alias DeleteBrokerOutput = NamedTuple(
+      "BrokerId" : (__string)?
+    )
+
+    alias DeleteBrokerRequest = NamedTuple(
+      "BrokerId" : __string
+    )
+
+    alias DeleteBrokerResponse = NamedTuple(
+      "BrokerId" : (__string)?
+    )
+
+    alias DeleteTagsRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "BrokerId" : __string,
+      "Username" : __string
+    )
+
+    alias DeleteUserResponse = NamedTuple(
+      
+    )
+
+    alias DeploymentMode = String
+
+    alias DescribeBrokerEngineTypesRequest = NamedTuple(
+      "EngineType" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias DescribeBrokerEngineTypesResponse = NamedTuple(
+      "BrokerEngineTypes" : (__listOfBrokerEngineType)?,
+      "MaxResults" : (__integerMin5Max100)?,
+      "NextToken" : (__string)?
+    )
+
+    alias DescribeBrokerInstanceOptionsRequest = NamedTuple(
+      "EngineType" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "StorageType" : (__string)?
+    )
+
+    alias DescribeBrokerInstanceOptionsResponse = NamedTuple(
+      "BrokerInstanceOptions" : (__listOfBrokerInstanceOption)?,
+      "MaxResults" : (__integerMin5Max100)?,
+      "NextToken" : (__string)?
+    )
+
+    alias DescribeBrokerOutput = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerArn" : (__string)?,
+      "BrokerId" : (__string)?,
+      "BrokerInstances" : (__listOfBrokerInstance)?,
+      "BrokerName" : (__string)?,
+      "BrokerState" : (BrokerState)?,
+      "Configurations" : (Configurations)?,
+      "Created" : (__timestampIso8601)?,
+      "DeploymentMode" : (DeploymentMode)?,
+      "EncryptionOptions" : (EncryptionOptions)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataOutput)?,
+      "Logs" : (LogsSummary)?,
+      "MaintenanceWindowStartTime" : (WeeklyStartTime)?,
+      "PendingAuthenticationStrategy" : (AuthenticationStrategy)?,
+      "PendingEngineVersion" : (__string)?,
+      "PendingHostInstanceType" : (__string)?,
+      "PendingLdapServerMetadata" : (LdapServerMetadataOutput)?,
+      "PendingSecurityGroups" : (__listOf__string)?,
+      "PubliclyAccessible" : (__boolean)?,
+      "SecurityGroups" : (__listOf__string)?,
+      "StorageType" : (BrokerStorageType)?,
+      "SubnetIds" : (__listOf__string)?,
+      "Tags" : (__mapOf__string)?,
+      "Users" : (__listOfUserSummary)?
+    )
+
+    alias DescribeBrokerRequest = NamedTuple(
+      "BrokerId" : __string
+    )
+
+    alias DescribeBrokerResponse = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerArn" : (__string)?,
+      "BrokerId" : (__string)?,
+      "BrokerInstances" : (__listOfBrokerInstance)?,
+      "BrokerName" : (__string)?,
+      "BrokerState" : (BrokerState)?,
+      "Configurations" : (Configurations)?,
+      "Created" : (__timestampIso8601)?,
+      "DeploymentMode" : (DeploymentMode)?,
+      "EncryptionOptions" : (EncryptionOptions)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataOutput)?,
+      "Logs" : (LogsSummary)?,
+      "MaintenanceWindowStartTime" : (WeeklyStartTime)?,
+      "PendingAuthenticationStrategy" : (AuthenticationStrategy)?,
+      "PendingEngineVersion" : (__string)?,
+      "PendingHostInstanceType" : (__string)?,
+      "PendingLdapServerMetadata" : (LdapServerMetadataOutput)?,
+      "PendingSecurityGroups" : (__listOf__string)?,
+      "PubliclyAccessible" : (__boolean)?,
+      "SecurityGroups" : (__listOf__string)?,
+      "StorageType" : (BrokerStorageType)?,
+      "SubnetIds" : (__listOf__string)?,
+      "Tags" : (__mapOf__string)?,
+      "Users" : (__listOfUserSummary)?
+    )
+
+    alias DescribeConfigurationRequest = NamedTuple(
+      "ConfigurationId" : __string
+    )
+
+    alias DescribeConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "Created" : (__timestampIso8601)?,
+      "Description" : (__string)?,
+      "EngineType" : (EngineType)?,
+      "EngineVersion" : (__string)?,
+      "Id" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?,
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias DescribeConfigurationRevisionOutput = NamedTuple(
+      "ConfigurationId" : (__string)?,
+      "Created" : (__timestampIso8601)?,
+      "Data" : (__string)?,
+      "Description" : (__string)?
+    )
+
+    alias DescribeConfigurationRevisionRequest = NamedTuple(
+      "ConfigurationId" : __string,
+      "ConfigurationRevision" : __string
+    )
+
+    alias DescribeConfigurationRevisionResponse = NamedTuple(
+      "ConfigurationId" : (__string)?,
+      "Created" : (__timestampIso8601)?,
+      "Data" : (__string)?,
+      "Description" : (__string)?
+    )
+
+    alias DescribeUserOutput = NamedTuple(
+      "BrokerId" : (__string)?,
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Pending" : (UserPendingChanges)?,
+      "Username" : (__string)?
+    )
+
+    alias DescribeUserRequest = NamedTuple(
+      "BrokerId" : __string,
+      "Username" : __string
+    )
+
+    alias DescribeUserResponse = NamedTuple(
+      "BrokerId" : (__string)?,
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Pending" : (UserPendingChanges)?,
+      "Username" : (__string)?
+    )
+
+    alias EncryptionOptions = NamedTuple(
+      "KmsKeyId" : (__string)?,
+      "UseAwsOwnedKey" : __boolean
+    )
+
+    alias EngineType = String
+
+    alias EngineVersion = NamedTuple(
+      "Name" : (__string)?
+    )
+
+    alias Error = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias ForbiddenException = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias LdapServerMetadataInput = NamedTuple(
+      "Hosts" : (__listOf__string)?,
+      "RoleBase" : (__string)?,
+      "RoleName" : (__string)?,
+      "RoleSearchMatching" : (__string)?,
+      "RoleSearchSubtree" : (__boolean)?,
+      "ServiceAccountPassword" : (__string)?,
+      "ServiceAccountUsername" : (__string)?,
+      "UserBase" : (__string)?,
+      "UserRoleName" : (__string)?,
+      "UserSearchMatching" : (__string)?,
+      "UserSearchSubtree" : (__boolean)?
+    )
+
+    alias LdapServerMetadataOutput = NamedTuple(
+      "Hosts" : (__listOf__string)?,
+      "RoleBase" : (__string)?,
+      "RoleName" : (__string)?,
+      "RoleSearchMatching" : (__string)?,
+      "RoleSearchSubtree" : (__boolean)?,
+      "ServiceAccountUsername" : (__string)?,
+      "UserBase" : (__string)?,
+      "UserRoleName" : (__string)?,
+      "UserSearchMatching" : (__string)?,
+      "UserSearchSubtree" : (__boolean)?
+    )
+
+    alias ListBrokersOutput = NamedTuple(
+      "BrokerSummaries" : (__listOfBrokerSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListBrokersRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListBrokersResponse = NamedTuple(
+      "BrokerSummaries" : (__listOfBrokerSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationRevisionsOutput = NamedTuple(
+      "ConfigurationId" : (__string)?,
+      "MaxResults" : (__integer)?,
+      "NextToken" : (__string)?,
+      "Revisions" : (__listOfConfigurationRevision)?
+    )
+
+    alias ListConfigurationRevisionsRequest = NamedTuple(
+      "ConfigurationId" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationRevisionsResponse = NamedTuple(
+      "ConfigurationId" : (__string)?,
+      "MaxResults" : (__integer)?,
+      "NextToken" : (__string)?,
+      "Revisions" : (__listOfConfigurationRevision)?
+    )
+
+    alias ListConfigurationsOutput = NamedTuple(
+      "Configurations" : (__listOfConfiguration)?,
+      "MaxResults" : (__integer)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListConfigurationsResponse = NamedTuple(
+      "Configurations" : (__listOfConfiguration)?,
+      "MaxResults" : (__integer)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListTagsRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsResponse = NamedTuple(
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias ListUsersOutput = NamedTuple(
+      "BrokerId" : (__string)?,
+      "MaxResults" : (__integerMin5Max100)?,
+      "NextToken" : (__string)?,
+      "Users" : (__listOfUserSummary)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "BrokerId" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "BrokerId" : (__string)?,
+      "MaxResults" : (__integerMin5Max100)?,
+      "NextToken" : (__string)?,
+      "Users" : (__listOfUserSummary)?
+    )
+
+    alias Logs = NamedTuple(
+      "Audit" : (__boolean)?,
+      "General" : (__boolean)?
+    )
+
+    alias LogsSummary = NamedTuple(
+      "Audit" : (__boolean)?,
+      "AuditLogGroup" : (__string)?,
+      "General" : (__boolean)?,
+      "GeneralLogGroup" : (__string)?,
+      "Pending" : (PendingLogs)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NotFoundException = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias PendingLogs = NamedTuple(
+      "Audit" : (__boolean)?,
+      "General" : (__boolean)?
+    )
+
+    alias RebootBrokerRequest = NamedTuple(
+      "BrokerId" : __string
+    )
+
+    alias RebootBrokerResponse = NamedTuple(
+      
+    )
+
+    alias SanitizationWarning = NamedTuple(
+      "AttributeName" : (__string)?,
+      "ElementName" : (__string)?,
+      "Reason" : (SanitizationWarningReason)?
+    )
+
+    alias SanitizationWarningReason = String
+
+    alias Tags = NamedTuple(
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "ErrorAttribute" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias UpdateBrokerInput = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "Configuration" : (ConfigurationId)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataInput)?,
+      "Logs" : (Logs)?,
+      "SecurityGroups" : (__listOf__string)?
+    )
+
+    alias UpdateBrokerOutput = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerId" : (__string)?,
+      "Configuration" : (ConfigurationId)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataOutput)?,
+      "Logs" : (Logs)?,
+      "SecurityGroups" : (__listOf__string)?
+    )
+
+    alias UpdateBrokerRequest = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerId" : __string,
+      "Configuration" : (ConfigurationId)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataInput)?,
+      "Logs" : (Logs)?,
+      "SecurityGroups" : (__listOf__string)?
+    )
+
+    alias UpdateBrokerResponse = NamedTuple(
+      "AuthenticationStrategy" : (AuthenticationStrategy)?,
+      "AutoMinorVersionUpgrade" : (__boolean)?,
+      "BrokerId" : (__string)?,
+      "Configuration" : (ConfigurationId)?,
+      "EngineVersion" : (__string)?,
+      "HostInstanceType" : (__string)?,
+      "LdapServerMetadata" : (LdapServerMetadataOutput)?,
+      "Logs" : (Logs)?,
+      "SecurityGroups" : (__listOf__string)?
+    )
+
+    alias UpdateConfigurationInput = NamedTuple(
+      "Data" : (__string)?,
+      "Description" : (__string)?
+    )
+
+    alias UpdateConfigurationOutput = NamedTuple(
+      "Arn" : (__string)?,
+      "Created" : (__timestampIso8601)?,
+      "Id" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?,
+      "Warnings" : (__listOfSanitizationWarning)?
+    )
+
+    alias UpdateConfigurationRequest = NamedTuple(
+      "ConfigurationId" : __string,
+      "Data" : (__string)?,
+      "Description" : (__string)?
+    )
+
+    alias UpdateConfigurationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Created" : (__timestampIso8601)?,
+      "Id" : (__string)?,
+      "LatestRevision" : (ConfigurationRevision)?,
+      "Name" : (__string)?,
+      "Warnings" : (__listOfSanitizationWarning)?
+    )
+
+    alias UpdateUserInput = NamedTuple(
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Password" : (__string)?
+    )
+
+    alias UpdateUserRequest = NamedTuple(
+      "BrokerId" : __string,
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Password" : (__string)?,
+      "Username" : __string
+    )
+
+    alias UpdateUserResponse = NamedTuple(
+      
+    )
+
+    alias User = NamedTuple(
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "Password" : (__string)?,
+      "Username" : (__string)?
+    )
+
+    alias UserPendingChanges = NamedTuple(
+      "ConsoleAccess" : (__boolean)?,
+      "Groups" : (__listOf__string)?,
+      "PendingChange" : (ChangeType)?
+    )
+
+    alias UserSummary = NamedTuple(
+      "PendingChange" : (ChangeType)?,
+      "Username" : (__string)?
+    )
+
+    alias WeeklyStartTime = NamedTuple(
+      "DayOfWeek" : (DayOfWeek)?,
+      "TimeOfDay" : (__string)?,
+      "TimeZone" : (__string)?
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __integerMin5Max100 = Int32
+
+    alias __listOfAvailabilityZone = Array(AvailabilityZone)
+
+    alias __listOfBrokerEngineType = Array(BrokerEngineType)
+
+    alias __listOfBrokerInstance = Array(BrokerInstance)
+
+    alias __listOfBrokerInstanceOption = Array(BrokerInstanceOption)
+
+    alias __listOfBrokerSummary = Array(BrokerSummary)
+
+    alias __listOfConfiguration = Array(Configuration)
+
+    alias __listOfConfigurationId = Array(ConfigurationId)
+
+    alias __listOfConfigurationRevision = Array(ConfigurationRevision)
+
+    alias __listOfDeploymentMode = Array(DeploymentMode)
+
+    alias __listOfEngineVersion = Array(EngineVersion)
+
+    alias __listOfSanitizationWarning = Array(SanitizationWarning)
+
+    alias __listOfUser = Array(User)
+
+    alias __listOfUserSummary = Array(UserSummary)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __mapOf__string = Hash(__string,__string)
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

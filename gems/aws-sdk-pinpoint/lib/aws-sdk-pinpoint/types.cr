@@ -20014,5 +20014,2750 @@ module Aws::Pinpoint
       include Aws::Structure
     end
 
+    alias ADMChannelRequest = NamedTuple(
+      "ClientId" : __string,
+      "ClientSecret" : __string,
+      "Enabled" : (__boolean)?
+    )
+
+    alias ADMChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias ADMMessage = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "ConsolidationKey" : (__string)?,
+      "Data" : (MapOf__string)?,
+      "ExpiresAfter" : (__string)?,
+      "IconReference" : (__string)?,
+      "ImageIconUrl" : (__string)?,
+      "ImageUrl" : (__string)?,
+      "MD5" : (__string)?,
+      "RawContent" : (__string)?,
+      "SilentPush" : (__boolean)?,
+      "SmallImageIconUrl" : (__string)?,
+      "Sound" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias APNSChannelRequest = NamedTuple(
+      "BundleId" : (__string)?,
+      "Certificate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "PrivateKey" : (__string)?,
+      "TeamId" : (__string)?,
+      "TokenKey" : (__string)?,
+      "TokenKeyId" : (__string)?
+    )
+
+    alias APNSChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "HasTokenKey" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias APNSMessage = NamedTuple(
+      "APNSPushType" : (__string)?,
+      "Action" : (Action)?,
+      "Badge" : (__integer)?,
+      "Body" : (__string)?,
+      "Category" : (__string)?,
+      "CollapseId" : (__string)?,
+      "Data" : (MapOf__string)?,
+      "MediaUrl" : (__string)?,
+      "PreferredAuthenticationMethod" : (__string)?,
+      "Priority" : (__string)?,
+      "RawContent" : (__string)?,
+      "SilentPush" : (__boolean)?,
+      "Sound" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "ThreadId" : (__string)?,
+      "TimeToLive" : (__integer)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias APNSPushNotificationTemplate = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "MediaUrl" : (__string)?,
+      "RawContent" : (__string)?,
+      "Sound" : (__string)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias APNSSandboxChannelRequest = NamedTuple(
+      "BundleId" : (__string)?,
+      "Certificate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "PrivateKey" : (__string)?,
+      "TeamId" : (__string)?,
+      "TokenKey" : (__string)?,
+      "TokenKeyId" : (__string)?
+    )
+
+    alias APNSSandboxChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "HasTokenKey" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias APNSVoipChannelRequest = NamedTuple(
+      "BundleId" : (__string)?,
+      "Certificate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "PrivateKey" : (__string)?,
+      "TeamId" : (__string)?,
+      "TokenKey" : (__string)?,
+      "TokenKeyId" : (__string)?
+    )
+
+    alias APNSVoipChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "HasTokenKey" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias APNSVoipSandboxChannelRequest = NamedTuple(
+      "BundleId" : (__string)?,
+      "Certificate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "PrivateKey" : (__string)?,
+      "TeamId" : (__string)?,
+      "TokenKey" : (__string)?,
+      "TokenKeyId" : (__string)?
+    )
+
+    alias APNSVoipSandboxChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "DefaultAuthenticationMethod" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "HasTokenKey" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias Action = String
+
+    alias ActivitiesResponse = NamedTuple(
+      "Item" : ListOfActivityResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias Activity = NamedTuple(
+      "CUSTOM" : (CustomMessageActivity)?,
+      "ConditionalSplit" : (ConditionalSplitActivity)?,
+      "Description" : (__string)?,
+      "EMAIL" : (EmailMessageActivity)?,
+      "Holdout" : (HoldoutActivity)?,
+      "MultiCondition" : (MultiConditionalSplitActivity)?,
+      "PUSH" : (PushMessageActivity)?,
+      "RandomSplit" : (RandomSplitActivity)?,
+      "SMS" : (SMSMessageActivity)?,
+      "Wait" : (WaitActivity)?
+    )
+
+    alias ActivityResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "End" : (__string)?,
+      "Id" : __string,
+      "Result" : (__string)?,
+      "ScheduledStart" : (__string)?,
+      "Start" : (__string)?,
+      "State" : (__string)?,
+      "SuccessfulEndpointCount" : (__integer)?,
+      "TimezonesCompletedCount" : (__integer)?,
+      "TimezonesTotalCount" : (__integer)?,
+      "TotalEndpointCount" : (__integer)?,
+      "TreatmentId" : (__string)?
+    )
+
+    alias AddressConfiguration = NamedTuple(
+      "BodyOverride" : (__string)?,
+      "ChannelType" : (ChannelType)?,
+      "Context" : (MapOf__string)?,
+      "RawContent" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "TitleOverride" : (__string)?
+    )
+
+    alias AndroidPushNotificationTemplate = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "ImageIconUrl" : (__string)?,
+      "ImageUrl" : (__string)?,
+      "RawContent" : (__string)?,
+      "SmallImageIconUrl" : (__string)?,
+      "Sound" : (__string)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias ApplicationDateRangeKpiResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "EndTime" : __timestampIso8601,
+      "KpiName" : __string,
+      "KpiResult" : BaseKpiResult,
+      "NextToken" : (__string)?,
+      "StartTime" : __timestampIso8601
+    )
+
+    alias ApplicationResponse = NamedTuple(
+      "Arn" : __string,
+      "Id" : __string,
+      "Name" : __string,
+      "tags" : (MapOf__string)?
+    )
+
+    alias ApplicationSettingsResource = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignHook" : (CampaignHook)?,
+      "LastModifiedDate" : (__string)?,
+      "Limits" : (CampaignLimits)?,
+      "QuietTime" : (QuietTime)?
+    )
+
+    alias ApplicationsResponse = NamedTuple(
+      "Item" : (ListOfApplicationResponse)?,
+      "NextToken" : (__string)?
+    )
+
+    alias AttributeDimension = NamedTuple(
+      "AttributeType" : (AttributeType)?,
+      "Values" : ListOf__string
+    )
+
+    alias AttributeType = String
+
+    alias AttributesResource = NamedTuple(
+      "ApplicationId" : __string,
+      "AttributeType" : __string,
+      "Attributes" : (ListOf__string)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias BaiduChannelRequest = NamedTuple(
+      "ApiKey" : __string,
+      "Enabled" : (__boolean)?,
+      "SecretKey" : __string
+    )
+
+    alias BaiduChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Credential" : __string,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias BaiduMessage = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "Data" : (MapOf__string)?,
+      "IconReference" : (__string)?,
+      "ImageIconUrl" : (__string)?,
+      "ImageUrl" : (__string)?,
+      "RawContent" : (__string)?,
+      "SilentPush" : (__boolean)?,
+      "SmallImageIconUrl" : (__string)?,
+      "Sound" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "TimeToLive" : (__integer)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias BaseKpiResult = NamedTuple(
+      "Rows" : ListOfResultRow
+    )
+
+    alias CampaignCustomMessage = NamedTuple(
+      "Data" : (__string)?
+    )
+
+    alias CampaignDateRangeKpiResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "EndTime" : __timestampIso8601,
+      "KpiName" : __string,
+      "KpiResult" : BaseKpiResult,
+      "NextToken" : (__string)?,
+      "StartTime" : __timestampIso8601
+    )
+
+    alias CampaignEmailMessage = NamedTuple(
+      "Body" : (__string)?,
+      "FromAddress" : (__string)?,
+      "HtmlBody" : (__string)?,
+      "Title" : (__string)?
+    )
+
+    alias CampaignEventFilter = NamedTuple(
+      "Dimensions" : EventDimensions,
+      "FilterType" : FilterType
+    )
+
+    alias CampaignHook = NamedTuple(
+      "LambdaFunctionName" : (__string)?,
+      "Mode" : (Mode)?,
+      "WebUrl" : (__string)?
+    )
+
+    alias CampaignLimits = NamedTuple(
+      "Daily" : (__integer)?,
+      "MaximumDuration" : (__integer)?,
+      "MessagesPerSecond" : (__integer)?,
+      "Total" : (__integer)?
+    )
+
+    alias CampaignResponse = NamedTuple(
+      "AdditionalTreatments" : (ListOfTreatmentResource)?,
+      "ApplicationId" : __string,
+      "Arn" : __string,
+      "CreationDate" : __string,
+      "CustomDeliveryConfiguration" : (CustomDeliveryConfiguration)?,
+      "DefaultState" : (CampaignState)?,
+      "Description" : (__string)?,
+      "HoldoutPercent" : (__integer)?,
+      "Hook" : (CampaignHook)?,
+      "Id" : __string,
+      "IsPaused" : (__boolean)?,
+      "LastModifiedDate" : __string,
+      "Limits" : (CampaignLimits)?,
+      "MessageConfiguration" : (MessageConfiguration)?,
+      "Name" : (__string)?,
+      "Schedule" : (Schedule)?,
+      "SegmentId" : __string,
+      "SegmentVersion" : __integer,
+      "State" : (CampaignState)?,
+      "tags" : (MapOf__string)?,
+      "TemplateConfiguration" : (TemplateConfiguration)?,
+      "TreatmentDescription" : (__string)?,
+      "TreatmentName" : (__string)?,
+      "Version" : (__integer)?
+    )
+
+    alias CampaignSmsMessage = NamedTuple(
+      "Body" : (__string)?,
+      "MessageType" : (MessageType)?,
+      "SenderId" : (__string)?
+    )
+
+    alias CampaignState = NamedTuple(
+      "CampaignStatus" : (CampaignStatus)?
+    )
+
+    alias CampaignStatus = String
+
+    alias CampaignsResponse = NamedTuple(
+      "Item" : ListOfCampaignResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias ChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Version" : (__integer)?
+    )
+
+    alias ChannelType = String
+
+    alias ChannelsResponse = NamedTuple(
+      "Channels" : MapOfChannelResponse
+    )
+
+    alias Condition = NamedTuple(
+      "Conditions" : (ListOfSimpleCondition)?,
+      "Operator" : (Operator)?
+    )
+
+    alias ConditionalSplitActivity = NamedTuple(
+      "Condition" : (Condition)?,
+      "EvaluationWaitTime" : (WaitTime)?,
+      "FalseActivity" : (__string)?,
+      "TrueActivity" : (__string)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias CreateAppRequest = NamedTuple(
+      "CreateApplicationRequest" : CreateApplicationRequest
+    )
+
+    alias CreateAppResponse = NamedTuple(
+      "ApplicationResponse" : ApplicationResponse
+    )
+
+    alias CreateApplicationRequest = NamedTuple(
+      "Name" : __string,
+      "tags" : (MapOf__string)?
+    )
+
+    alias CreateCampaignRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "WriteCampaignRequest" : WriteCampaignRequest
+    )
+
+    alias CreateCampaignResponse = NamedTuple(
+      "CampaignResponse" : CampaignResponse
+    )
+
+    alias CreateEmailTemplateRequest = NamedTuple(
+      "EmailTemplateRequest" : EmailTemplateRequest,
+      "TemplateName" : __string
+    )
+
+    alias CreateEmailTemplateResponse = NamedTuple(
+      "CreateTemplateMessageBody" : CreateTemplateMessageBody
+    )
+
+    alias CreateExportJobRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "ExportJobRequest" : ExportJobRequest
+    )
+
+    alias CreateExportJobResponse = NamedTuple(
+      "ExportJobResponse" : ExportJobResponse
+    )
+
+    alias CreateImportJobRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "ImportJobRequest" : ImportJobRequest
+    )
+
+    alias CreateImportJobResponse = NamedTuple(
+      "ImportJobResponse" : ImportJobResponse
+    )
+
+    alias CreateJourneyRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "WriteJourneyRequest" : WriteJourneyRequest
+    )
+
+    alias CreateJourneyResponse = NamedTuple(
+      "JourneyResponse" : JourneyResponse
+    )
+
+    alias CreatePushTemplateRequest = NamedTuple(
+      "PushNotificationTemplateRequest" : PushNotificationTemplateRequest,
+      "TemplateName" : __string
+    )
+
+    alias CreatePushTemplateResponse = NamedTuple(
+      "CreateTemplateMessageBody" : CreateTemplateMessageBody
+    )
+
+    alias CreateRecommenderConfiguration = NamedTuple(
+      "Attributes" : (MapOf__string)?,
+      "Description" : (__string)?,
+      "Name" : (__string)?,
+      "RecommendationProviderIdType" : (__string)?,
+      "RecommendationProviderRoleArn" : __string,
+      "RecommendationProviderUri" : __string,
+      "RecommendationTransformerUri" : (__string)?,
+      "RecommendationsDisplayName" : (__string)?,
+      "RecommendationsPerMessage" : (__integer)?
+    )
+
+    alias CreateRecommenderConfigurationRequest = NamedTuple(
+      "CreateRecommenderConfiguration" : CreateRecommenderConfiguration
+    )
+
+    alias CreateRecommenderConfigurationResponse = NamedTuple(
+      "RecommenderConfigurationResponse" : RecommenderConfigurationResponse
+    )
+
+    alias CreateSegmentRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "WriteSegmentRequest" : WriteSegmentRequest
+    )
+
+    alias CreateSegmentResponse = NamedTuple(
+      "SegmentResponse" : SegmentResponse
+    )
+
+    alias CreateSmsTemplateRequest = NamedTuple(
+      "SMSTemplateRequest" : SMSTemplateRequest,
+      "TemplateName" : __string
+    )
+
+    alias CreateSmsTemplateResponse = NamedTuple(
+      "CreateTemplateMessageBody" : CreateTemplateMessageBody
+    )
+
+    alias CreateTemplateMessageBody = NamedTuple(
+      "Arn" : (__string)?,
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias CreateVoiceTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "VoiceTemplateRequest" : VoiceTemplateRequest
+    )
+
+    alias CreateVoiceTemplateResponse = NamedTuple(
+      "CreateTemplateMessageBody" : CreateTemplateMessageBody
+    )
+
+    alias CustomDeliveryConfiguration = NamedTuple(
+      "DeliveryUri" : __string,
+      "EndpointTypes" : (ListOf__EndpointTypesElement)?
+    )
+
+    alias CustomMessageActivity = NamedTuple(
+      "DeliveryUri" : (__string)?,
+      "EndpointTypes" : (ListOf__EndpointTypesElement)?,
+      "MessageConfig" : (JourneyCustomMessage)?,
+      "NextActivity" : (__string)?,
+      "TemplateName" : (__string)?,
+      "TemplateVersion" : (__string)?
+    )
+
+    alias DefaultMessage = NamedTuple(
+      "Body" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?
+    )
+
+    alias DefaultPushNotificationMessage = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "Data" : (MapOf__string)?,
+      "SilentPush" : (__boolean)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias DefaultPushNotificationTemplate = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "Sound" : (__string)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias DeleteAdmChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteAdmChannelResponse = NamedTuple(
+      "ADMChannelResponse" : ADMChannelResponse
+    )
+
+    alias DeleteApnsChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteApnsChannelResponse = NamedTuple(
+      "APNSChannelResponse" : APNSChannelResponse
+    )
+
+    alias DeleteApnsSandboxChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteApnsSandboxChannelResponse = NamedTuple(
+      "APNSSandboxChannelResponse" : APNSSandboxChannelResponse
+    )
+
+    alias DeleteApnsVoipChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteApnsVoipChannelResponse = NamedTuple(
+      "APNSVoipChannelResponse" : APNSVoipChannelResponse
+    )
+
+    alias DeleteApnsVoipSandboxChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteApnsVoipSandboxChannelResponse = NamedTuple(
+      "APNSVoipSandboxChannelResponse" : APNSVoipSandboxChannelResponse
+    )
+
+    alias DeleteAppRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteAppResponse = NamedTuple(
+      "ApplicationResponse" : ApplicationResponse
+    )
+
+    alias DeleteBaiduChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteBaiduChannelResponse = NamedTuple(
+      "BaiduChannelResponse" : BaiduChannelResponse
+    )
+
+    alias DeleteCampaignRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string
+    )
+
+    alias DeleteCampaignResponse = NamedTuple(
+      "CampaignResponse" : CampaignResponse
+    )
+
+    alias DeleteEmailChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteEmailChannelResponse = NamedTuple(
+      "EmailChannelResponse" : EmailChannelResponse
+    )
+
+    alias DeleteEmailTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias DeleteEmailTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias DeleteEndpointRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EndpointId" : __string
+    )
+
+    alias DeleteEndpointResponse = NamedTuple(
+      "EndpointResponse" : EndpointResponse
+    )
+
+    alias DeleteEventStreamRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteEventStreamResponse = NamedTuple(
+      "EventStream" : EventStream
+    )
+
+    alias DeleteGcmChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteGcmChannelResponse = NamedTuple(
+      "GCMChannelResponse" : GCMChannelResponse
+    )
+
+    alias DeleteJourneyRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyId" : __string
+    )
+
+    alias DeleteJourneyResponse = NamedTuple(
+      "JourneyResponse" : JourneyResponse
+    )
+
+    alias DeletePushTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias DeletePushTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias DeleteRecommenderConfigurationRequest = NamedTuple(
+      "RecommenderId" : __string
+    )
+
+    alias DeleteRecommenderConfigurationResponse = NamedTuple(
+      "RecommenderConfigurationResponse" : RecommenderConfigurationResponse
+    )
+
+    alias DeleteSegmentRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "SegmentId" : __string
+    )
+
+    alias DeleteSegmentResponse = NamedTuple(
+      "SegmentResponse" : SegmentResponse
+    )
+
+    alias DeleteSmsChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteSmsChannelResponse = NamedTuple(
+      "SMSChannelResponse" : SMSChannelResponse
+    )
+
+    alias DeleteSmsTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias DeleteSmsTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias DeleteUserEndpointsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "UserId" : __string
+    )
+
+    alias DeleteUserEndpointsResponse = NamedTuple(
+      "EndpointsResponse" : EndpointsResponse
+    )
+
+    alias DeleteVoiceChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias DeleteVoiceChannelResponse = NamedTuple(
+      "VoiceChannelResponse" : VoiceChannelResponse
+    )
+
+    alias DeleteVoiceTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias DeleteVoiceTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias DeliveryStatus = String
+
+    alias DimensionType = String
+
+    alias DirectMessageConfiguration = NamedTuple(
+      "ADMMessage" : (ADMMessage)?,
+      "APNSMessage" : (APNSMessage)?,
+      "BaiduMessage" : (BaiduMessage)?,
+      "DefaultMessage" : (DefaultMessage)?,
+      "DefaultPushNotificationMessage" : (DefaultPushNotificationMessage)?,
+      "EmailMessage" : (EmailMessage)?,
+      "GCMMessage" : (GCMMessage)?,
+      "SMSMessage" : (SMSMessage)?,
+      "VoiceMessage" : (VoiceMessage)?
+    )
+
+    alias Duration = String
+
+    alias EmailChannelRequest = NamedTuple(
+      "ConfigurationSet" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "FromAddress" : __string,
+      "Identity" : __string,
+      "RoleArn" : (__string)?
+    )
+
+    alias EmailChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "ConfigurationSet" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "FromAddress" : (__string)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "Identity" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "MessagesPerSecond" : (__integer)?,
+      "Platform" : __string,
+      "RoleArn" : (__string)?,
+      "Version" : (__integer)?
+    )
+
+    alias EmailMessage = NamedTuple(
+      "Body" : (__string)?,
+      "FeedbackForwardingAddress" : (__string)?,
+      "FromAddress" : (__string)?,
+      "RawEmail" : (RawEmail)?,
+      "ReplyToAddresses" : (ListOf__string)?,
+      "SimpleEmail" : (SimpleEmail)?,
+      "Substitutions" : (MapOfListOf__string)?
+    )
+
+    alias EmailMessageActivity = NamedTuple(
+      "MessageConfig" : (JourneyEmailMessage)?,
+      "NextActivity" : (__string)?,
+      "TemplateName" : (__string)?,
+      "TemplateVersion" : (__string)?
+    )
+
+    alias EmailTemplateRequest = NamedTuple(
+      "DefaultSubstitutions" : (__string)?,
+      "HtmlPart" : (__string)?,
+      "RecommenderId" : (__string)?,
+      "Subject" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "TextPart" : (__string)?
+    )
+
+    alias EmailTemplateResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationDate" : __string,
+      "DefaultSubstitutions" : (__string)?,
+      "HtmlPart" : (__string)?,
+      "LastModifiedDate" : __string,
+      "RecommenderId" : (__string)?,
+      "Subject" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : TemplateType,
+      "TextPart" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias EndpointBatchItem = NamedTuple(
+      "Address" : (__string)?,
+      "Attributes" : (MapOfListOf__string)?,
+      "ChannelType" : (ChannelType)?,
+      "Demographic" : (EndpointDemographic)?,
+      "EffectiveDate" : (__string)?,
+      "EndpointStatus" : (__string)?,
+      "Id" : (__string)?,
+      "Location" : (EndpointLocation)?,
+      "Metrics" : (MapOf__double)?,
+      "OptOut" : (__string)?,
+      "RequestId" : (__string)?,
+      "User" : (EndpointUser)?
+    )
+
+    alias EndpointBatchRequest = NamedTuple(
+      "Item" : ListOfEndpointBatchItem
+    )
+
+    alias EndpointDemographic = NamedTuple(
+      "AppVersion" : (__string)?,
+      "Locale" : (__string)?,
+      "Make" : (__string)?,
+      "Model" : (__string)?,
+      "ModelVersion" : (__string)?,
+      "Platform" : (__string)?,
+      "PlatformVersion" : (__string)?,
+      "Timezone" : (__string)?
+    )
+
+    alias EndpointItemResponse = NamedTuple(
+      "Message" : (__string)?,
+      "StatusCode" : (__integer)?
+    )
+
+    alias EndpointLocation = NamedTuple(
+      "City" : (__string)?,
+      "Country" : (__string)?,
+      "Latitude" : (__double)?,
+      "Longitude" : (__double)?,
+      "PostalCode" : (__string)?,
+      "Region" : (__string)?
+    )
+
+    alias EndpointMessageResult = NamedTuple(
+      "Address" : (__string)?,
+      "DeliveryStatus" : DeliveryStatus,
+      "MessageId" : (__string)?,
+      "StatusCode" : __integer,
+      "StatusMessage" : (__string)?,
+      "UpdatedToken" : (__string)?
+    )
+
+    alias EndpointRequest = NamedTuple(
+      "Address" : (__string)?,
+      "Attributes" : (MapOfListOf__string)?,
+      "ChannelType" : (ChannelType)?,
+      "Demographic" : (EndpointDemographic)?,
+      "EffectiveDate" : (__string)?,
+      "EndpointStatus" : (__string)?,
+      "Location" : (EndpointLocation)?,
+      "Metrics" : (MapOf__double)?,
+      "OptOut" : (__string)?,
+      "RequestId" : (__string)?,
+      "User" : (EndpointUser)?
+    )
+
+    alias EndpointResponse = NamedTuple(
+      "Address" : (__string)?,
+      "ApplicationId" : (__string)?,
+      "Attributes" : (MapOfListOf__string)?,
+      "ChannelType" : (ChannelType)?,
+      "CohortId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Demographic" : (EndpointDemographic)?,
+      "EffectiveDate" : (__string)?,
+      "EndpointStatus" : (__string)?,
+      "Id" : (__string)?,
+      "Location" : (EndpointLocation)?,
+      "Metrics" : (MapOf__double)?,
+      "OptOut" : (__string)?,
+      "RequestId" : (__string)?,
+      "User" : (EndpointUser)?
+    )
+
+    alias EndpointSendConfiguration = NamedTuple(
+      "BodyOverride" : (__string)?,
+      "Context" : (MapOf__string)?,
+      "RawContent" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "TitleOverride" : (__string)?
+    )
+
+    alias EndpointUser = NamedTuple(
+      "UserAttributes" : (MapOfListOf__string)?,
+      "UserId" : (__string)?
+    )
+
+    alias EndpointsResponse = NamedTuple(
+      "Item" : ListOfEndpointResponse
+    )
+
+    alias Event = NamedTuple(
+      "AppPackageName" : (__string)?,
+      "AppTitle" : (__string)?,
+      "AppVersionCode" : (__string)?,
+      "Attributes" : (MapOf__string)?,
+      "ClientSdkVersion" : (__string)?,
+      "EventType" : __string,
+      "Metrics" : (MapOf__double)?,
+      "SdkName" : (__string)?,
+      "Session" : (Session)?,
+      "Timestamp" : __string
+    )
+
+    alias EventCondition = NamedTuple(
+      "Dimensions" : (EventDimensions)?,
+      "MessageActivity" : (__string)?
+    )
+
+    alias EventDimensions = NamedTuple(
+      "Attributes" : (MapOfAttributeDimension)?,
+      "EventType" : (SetDimension)?,
+      "Metrics" : (MapOfMetricDimension)?
+    )
+
+    alias EventFilter = NamedTuple(
+      "Dimensions" : EventDimensions,
+      "FilterType" : FilterType
+    )
+
+    alias EventItemResponse = NamedTuple(
+      "Message" : (__string)?,
+      "StatusCode" : (__integer)?
+    )
+
+    alias EventStartCondition = NamedTuple(
+      "EventFilter" : (EventFilter)?,
+      "SegmentId" : (__string)?
+    )
+
+    alias EventStream = NamedTuple(
+      "ApplicationId" : __string,
+      "DestinationStreamArn" : __string,
+      "ExternalId" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "LastUpdatedBy" : (__string)?,
+      "RoleArn" : __string
+    )
+
+    alias EventsBatch = NamedTuple(
+      "Endpoint" : PublicEndpoint,
+      "Events" : MapOfEvent
+    )
+
+    alias EventsRequest = NamedTuple(
+      "BatchItem" : MapOfEventsBatch
+    )
+
+    alias EventsResponse = NamedTuple(
+      "Results" : (MapOfItemResponse)?
+    )
+
+    alias ExportJobRequest = NamedTuple(
+      "RoleArn" : __string,
+      "S3UrlPrefix" : __string,
+      "SegmentId" : (__string)?,
+      "SegmentVersion" : (__integer)?
+    )
+
+    alias ExportJobResource = NamedTuple(
+      "RoleArn" : __string,
+      "S3UrlPrefix" : __string,
+      "SegmentId" : (__string)?,
+      "SegmentVersion" : (__integer)?
+    )
+
+    alias ExportJobResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "CompletedPieces" : (__integer)?,
+      "CompletionDate" : (__string)?,
+      "CreationDate" : __string,
+      "Definition" : ExportJobResource,
+      "FailedPieces" : (__integer)?,
+      "Failures" : (ListOf__string)?,
+      "Id" : __string,
+      "JobStatus" : JobStatus,
+      "TotalFailures" : (__integer)?,
+      "TotalPieces" : (__integer)?,
+      "TotalProcessed" : (__integer)?,
+      "Type" : __string
+    )
+
+    alias ExportJobsResponse = NamedTuple(
+      "Item" : ListOfExportJobResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias FilterType = String
+
+    alias ForbiddenException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias Format = String
+
+    alias Frequency = String
+
+    alias GCMChannelRequest = NamedTuple(
+      "ApiKey" : __string,
+      "Enabled" : (__boolean)?
+    )
+
+    alias GCMChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Credential" : __string,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias GCMMessage = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "CollapseKey" : (__string)?,
+      "Data" : (MapOf__string)?,
+      "IconReference" : (__string)?,
+      "ImageIconUrl" : (__string)?,
+      "ImageUrl" : (__string)?,
+      "Priority" : (__string)?,
+      "RawContent" : (__string)?,
+      "RestrictedPackageName" : (__string)?,
+      "SilentPush" : (__boolean)?,
+      "SmallImageIconUrl" : (__string)?,
+      "Sound" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "TimeToLive" : (__integer)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias GPSCoordinates = NamedTuple(
+      "Latitude" : __double,
+      "Longitude" : __double
+    )
+
+    alias GPSPointDimension = NamedTuple(
+      "Coordinates" : GPSCoordinates,
+      "RangeInKilometers" : (__double)?
+    )
+
+    alias GetAdmChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetAdmChannelResponse = NamedTuple(
+      "ADMChannelResponse" : ADMChannelResponse
+    )
+
+    alias GetApnsChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetApnsChannelResponse = NamedTuple(
+      "APNSChannelResponse" : APNSChannelResponse
+    )
+
+    alias GetApnsSandboxChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetApnsSandboxChannelResponse = NamedTuple(
+      "APNSSandboxChannelResponse" : APNSSandboxChannelResponse
+    )
+
+    alias GetApnsVoipChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetApnsVoipChannelResponse = NamedTuple(
+      "APNSVoipChannelResponse" : APNSVoipChannelResponse
+    )
+
+    alias GetApnsVoipSandboxChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetApnsVoipSandboxChannelResponse = NamedTuple(
+      "APNSVoipSandboxChannelResponse" : APNSVoipSandboxChannelResponse
+    )
+
+    alias GetAppRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetAppResponse = NamedTuple(
+      "ApplicationResponse" : ApplicationResponse
+    )
+
+    alias GetApplicationDateRangeKpiRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EndTime" : (__timestampIso8601)?,
+      "KpiName" : __string,
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?,
+      "StartTime" : (__timestampIso8601)?
+    )
+
+    alias GetApplicationDateRangeKpiResponse = NamedTuple(
+      "ApplicationDateRangeKpiResponse" : ApplicationDateRangeKpiResponse
+    )
+
+    alias GetApplicationSettingsRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetApplicationSettingsResponse = NamedTuple(
+      "ApplicationSettingsResource" : ApplicationSettingsResource
+    )
+
+    alias GetAppsRequest = NamedTuple(
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetAppsResponse = NamedTuple(
+      "ApplicationsResponse" : ApplicationsResponse
+    )
+
+    alias GetBaiduChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetBaiduChannelResponse = NamedTuple(
+      "BaiduChannelResponse" : BaiduChannelResponse
+    )
+
+    alias GetCampaignActivitiesRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetCampaignActivitiesResponse = NamedTuple(
+      "ActivitiesResponse" : ActivitiesResponse
+    )
+
+    alias GetCampaignDateRangeKpiRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "EndTime" : (__timestampIso8601)?,
+      "KpiName" : __string,
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?,
+      "StartTime" : (__timestampIso8601)?
+    )
+
+    alias GetCampaignDateRangeKpiResponse = NamedTuple(
+      "CampaignDateRangeKpiResponse" : CampaignDateRangeKpiResponse
+    )
+
+    alias GetCampaignRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string
+    )
+
+    alias GetCampaignResponse = NamedTuple(
+      "CampaignResponse" : CampaignResponse
+    )
+
+    alias GetCampaignVersionRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "Version" : __string
+    )
+
+    alias GetCampaignVersionResponse = NamedTuple(
+      "CampaignResponse" : CampaignResponse
+    )
+
+    alias GetCampaignVersionsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetCampaignVersionsResponse = NamedTuple(
+      "CampaignsResponse" : CampaignsResponse
+    )
+
+    alias GetCampaignsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetCampaignsResponse = NamedTuple(
+      "CampaignsResponse" : CampaignsResponse
+    )
+
+    alias GetChannelsRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetChannelsResponse = NamedTuple(
+      "ChannelsResponse" : ChannelsResponse
+    )
+
+    alias GetEmailChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetEmailChannelResponse = NamedTuple(
+      "EmailChannelResponse" : EmailChannelResponse
+    )
+
+    alias GetEmailTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias GetEmailTemplateResponse = NamedTuple(
+      "EmailTemplateResponse" : EmailTemplateResponse
+    )
+
+    alias GetEndpointRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EndpointId" : __string
+    )
+
+    alias GetEndpointResponse = NamedTuple(
+      "EndpointResponse" : EndpointResponse
+    )
+
+    alias GetEventStreamRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetEventStreamResponse = NamedTuple(
+      "EventStream" : EventStream
+    )
+
+    alias GetExportJobRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JobId" : __string
+    )
+
+    alias GetExportJobResponse = NamedTuple(
+      "ExportJobResponse" : ExportJobResponse
+    )
+
+    alias GetExportJobsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetExportJobsResponse = NamedTuple(
+      "ExportJobsResponse" : ExportJobsResponse
+    )
+
+    alias GetGcmChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetGcmChannelResponse = NamedTuple(
+      "GCMChannelResponse" : GCMChannelResponse
+    )
+
+    alias GetImportJobRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JobId" : __string
+    )
+
+    alias GetImportJobResponse = NamedTuple(
+      "ImportJobResponse" : ImportJobResponse
+    )
+
+    alias GetImportJobsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetImportJobsResponse = NamedTuple(
+      "ImportJobsResponse" : ImportJobsResponse
+    )
+
+    alias GetJourneyDateRangeKpiRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EndTime" : (__timestampIso8601)?,
+      "JourneyId" : __string,
+      "KpiName" : __string,
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?,
+      "StartTime" : (__timestampIso8601)?
+    )
+
+    alias GetJourneyDateRangeKpiResponse = NamedTuple(
+      "JourneyDateRangeKpiResponse" : JourneyDateRangeKpiResponse
+    )
+
+    alias GetJourneyExecutionActivityMetricsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyActivityId" : __string,
+      "JourneyId" : __string,
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?
+    )
+
+    alias GetJourneyExecutionActivityMetricsResponse = NamedTuple(
+      "JourneyExecutionActivityMetricsResponse" : JourneyExecutionActivityMetricsResponse
+    )
+
+    alias GetJourneyExecutionMetricsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyId" : __string,
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?
+    )
+
+    alias GetJourneyExecutionMetricsResponse = NamedTuple(
+      "JourneyExecutionMetricsResponse" : JourneyExecutionMetricsResponse
+    )
+
+    alias GetJourneyRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyId" : __string
+    )
+
+    alias GetJourneyResponse = NamedTuple(
+      "JourneyResponse" : JourneyResponse
+    )
+
+    alias GetPushTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias GetPushTemplateResponse = NamedTuple(
+      "PushNotificationTemplateResponse" : PushNotificationTemplateResponse
+    )
+
+    alias GetRecommenderConfigurationRequest = NamedTuple(
+      "RecommenderId" : __string
+    )
+
+    alias GetRecommenderConfigurationResponse = NamedTuple(
+      "RecommenderConfigurationResponse" : RecommenderConfigurationResponse
+    )
+
+    alias GetRecommenderConfigurationsRequest = NamedTuple(
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetRecommenderConfigurationsResponse = NamedTuple(
+      "ListRecommenderConfigurationsResponse" : ListRecommenderConfigurationsResponse
+    )
+
+    alias GetSegmentExportJobsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "SegmentId" : __string,
+      "Token" : (__string)?
+    )
+
+    alias GetSegmentExportJobsResponse = NamedTuple(
+      "ExportJobsResponse" : ExportJobsResponse
+    )
+
+    alias GetSegmentImportJobsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "SegmentId" : __string,
+      "Token" : (__string)?
+    )
+
+    alias GetSegmentImportJobsResponse = NamedTuple(
+      "ImportJobsResponse" : ImportJobsResponse
+    )
+
+    alias GetSegmentRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "SegmentId" : __string
+    )
+
+    alias GetSegmentResponse = NamedTuple(
+      "SegmentResponse" : SegmentResponse
+    )
+
+    alias GetSegmentVersionRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "SegmentId" : __string,
+      "Version" : __string
+    )
+
+    alias GetSegmentVersionResponse = NamedTuple(
+      "SegmentResponse" : SegmentResponse
+    )
+
+    alias GetSegmentVersionsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "SegmentId" : __string,
+      "Token" : (__string)?
+    )
+
+    alias GetSegmentVersionsResponse = NamedTuple(
+      "SegmentsResponse" : SegmentsResponse
+    )
+
+    alias GetSegmentsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias GetSegmentsResponse = NamedTuple(
+      "SegmentsResponse" : SegmentsResponse
+    )
+
+    alias GetSmsChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetSmsChannelResponse = NamedTuple(
+      "SMSChannelResponse" : SMSChannelResponse
+    )
+
+    alias GetSmsTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias GetSmsTemplateResponse = NamedTuple(
+      "SMSTemplateResponse" : SMSTemplateResponse
+    )
+
+    alias GetUserEndpointsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "UserId" : __string
+    )
+
+    alias GetUserEndpointsResponse = NamedTuple(
+      "EndpointsResponse" : EndpointsResponse
+    )
+
+    alias GetVoiceChannelRequest = NamedTuple(
+      "ApplicationId" : __string
+    )
+
+    alias GetVoiceChannelResponse = NamedTuple(
+      "VoiceChannelResponse" : VoiceChannelResponse
+    )
+
+    alias GetVoiceTemplateRequest = NamedTuple(
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias GetVoiceTemplateResponse = NamedTuple(
+      "VoiceTemplateResponse" : VoiceTemplateResponse
+    )
+
+    alias HoldoutActivity = NamedTuple(
+      "NextActivity" : (__string)?,
+      "Percentage" : __integer
+    )
+
+    alias ImportJobRequest = NamedTuple(
+      "DefineSegment" : (__boolean)?,
+      "ExternalId" : (__string)?,
+      "Format" : Format,
+      "RegisterEndpoints" : (__boolean)?,
+      "RoleArn" : __string,
+      "S3Url" : __string,
+      "SegmentId" : (__string)?,
+      "SegmentName" : (__string)?
+    )
+
+    alias ImportJobResource = NamedTuple(
+      "DefineSegment" : (__boolean)?,
+      "ExternalId" : (__string)?,
+      "Format" : Format,
+      "RegisterEndpoints" : (__boolean)?,
+      "RoleArn" : __string,
+      "S3Url" : __string,
+      "SegmentId" : (__string)?,
+      "SegmentName" : (__string)?
+    )
+
+    alias ImportJobResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "CompletedPieces" : (__integer)?,
+      "CompletionDate" : (__string)?,
+      "CreationDate" : __string,
+      "Definition" : ImportJobResource,
+      "FailedPieces" : (__integer)?,
+      "Failures" : (ListOf__string)?,
+      "Id" : __string,
+      "JobStatus" : JobStatus,
+      "TotalFailures" : (__integer)?,
+      "TotalPieces" : (__integer)?,
+      "TotalProcessed" : (__integer)?,
+      "Type" : __string
+    )
+
+    alias ImportJobsResponse = NamedTuple(
+      "Item" : ListOfImportJobResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias Include = String
+
+    alias InternalServerErrorException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias ItemResponse = NamedTuple(
+      "EndpointItemResponse" : (EndpointItemResponse)?,
+      "EventsItemResponse" : (MapOfEventItemResponse)?
+    )
+
+    alias JobStatus = String
+
+    alias JourneyCustomMessage = NamedTuple(
+      "Data" : (__string)?
+    )
+
+    alias JourneyDateRangeKpiResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "EndTime" : __timestampIso8601,
+      "JourneyId" : __string,
+      "KpiName" : __string,
+      "KpiResult" : BaseKpiResult,
+      "NextToken" : (__string)?,
+      "StartTime" : __timestampIso8601
+    )
+
+    alias JourneyEmailMessage = NamedTuple(
+      "FromAddress" : (__string)?
+    )
+
+    alias JourneyExecutionActivityMetricsResponse = NamedTuple(
+      "ActivityType" : __string,
+      "ApplicationId" : __string,
+      "JourneyActivityId" : __string,
+      "JourneyId" : __string,
+      "LastEvaluatedTime" : __string,
+      "Metrics" : MapOf__string
+    )
+
+    alias JourneyExecutionMetricsResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyId" : __string,
+      "LastEvaluatedTime" : __string,
+      "Metrics" : MapOf__string
+    )
+
+    alias JourneyLimits = NamedTuple(
+      "DailyCap" : (__integer)?,
+      "EndpointReentryCap" : (__integer)?,
+      "MessagesPerSecond" : (__integer)?
+    )
+
+    alias JourneyPushMessage = NamedTuple(
+      "TimeToLive" : (__string)?
+    )
+
+    alias JourneyResponse = NamedTuple(
+      "Activities" : (MapOfActivity)?,
+      "ApplicationId" : __string,
+      "CreationDate" : (__string)?,
+      "Id" : __string,
+      "LastModifiedDate" : (__string)?,
+      "Limits" : (JourneyLimits)?,
+      "LocalTime" : (__boolean)?,
+      "Name" : __string,
+      "QuietTime" : (QuietTime)?,
+      "RefreshFrequency" : (__string)?,
+      "Schedule" : (JourneySchedule)?,
+      "StartActivity" : (__string)?,
+      "StartCondition" : (StartCondition)?,
+      "State" : (State)?,
+      "tags" : (MapOf__string)?
+    )
+
+    alias JourneySMSMessage = NamedTuple(
+      "MessageType" : (MessageType)?,
+      "SenderId" : (__string)?
+    )
+
+    alias JourneySchedule = NamedTuple(
+      "EndTime" : (__timestampIso8601)?,
+      "StartTime" : (__timestampIso8601)?,
+      "Timezone" : (__string)?
+    )
+
+    alias JourneyStateRequest = NamedTuple(
+      "State" : (State)?
+    )
+
+    alias JourneysResponse = NamedTuple(
+      "Item" : ListOfJourneyResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias ListJourneysRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "PageSize" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias ListJourneysResponse = NamedTuple(
+      "JourneysResponse" : JourneysResponse
+    )
+
+    alias ListRecommenderConfigurationsResponse = NamedTuple(
+      "Item" : ListOfRecommenderConfigurationResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "TagsModel" : TagsModel
+    )
+
+    alias ListTemplateVersionsRequest = NamedTuple(
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : __string
+    )
+
+    alias ListTemplateVersionsResponse = NamedTuple(
+      "TemplateVersionsResponse" : TemplateVersionsResponse
+    )
+
+    alias ListTemplatesRequest = NamedTuple(
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?,
+      "Prefix" : (__string)?,
+      "TemplateType" : (__string)?
+    )
+
+    alias ListTemplatesResponse = NamedTuple(
+      "TemplatesResponse" : TemplatesResponse
+    )
+
+    alias Message = NamedTuple(
+      "Action" : (Action)?,
+      "Body" : (__string)?,
+      "ImageIconUrl" : (__string)?,
+      "ImageSmallIconUrl" : (__string)?,
+      "ImageUrl" : (__string)?,
+      "JsonBody" : (__string)?,
+      "MediaUrl" : (__string)?,
+      "RawContent" : (__string)?,
+      "SilentPush" : (__boolean)?,
+      "TimeToLive" : (__integer)?,
+      "Title" : (__string)?,
+      "Url" : (__string)?
+    )
+
+    alias MessageBody = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias MessageConfiguration = NamedTuple(
+      "ADMMessage" : (Message)?,
+      "APNSMessage" : (Message)?,
+      "BaiduMessage" : (Message)?,
+      "CustomMessage" : (CampaignCustomMessage)?,
+      "DefaultMessage" : (Message)?,
+      "EmailMessage" : (CampaignEmailMessage)?,
+      "GCMMessage" : (Message)?,
+      "SMSMessage" : (CampaignSmsMessage)?
+    )
+
+    alias MessageRequest = NamedTuple(
+      "Addresses" : (MapOfAddressConfiguration)?,
+      "Context" : (MapOf__string)?,
+      "Endpoints" : (MapOfEndpointSendConfiguration)?,
+      "MessageConfiguration" : DirectMessageConfiguration,
+      "TemplateConfiguration" : (TemplateConfiguration)?,
+      "TraceId" : (__string)?
+    )
+
+    alias MessageResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "EndpointResult" : (MapOfEndpointMessageResult)?,
+      "RequestId" : (__string)?,
+      "Result" : (MapOfMessageResult)?
+    )
+
+    alias MessageResult = NamedTuple(
+      "DeliveryStatus" : DeliveryStatus,
+      "MessageId" : (__string)?,
+      "StatusCode" : __integer,
+      "StatusMessage" : (__string)?,
+      "UpdatedToken" : (__string)?
+    )
+
+    alias MessageType = String
+
+    alias MethodNotAllowedException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias MetricDimension = NamedTuple(
+      "ComparisonOperator" : __string,
+      "Value" : __double
+    )
+
+    alias Mode = String
+
+    alias MultiConditionalBranch = NamedTuple(
+      "Condition" : (SimpleCondition)?,
+      "NextActivity" : (__string)?
+    )
+
+    alias MultiConditionalSplitActivity = NamedTuple(
+      "Branches" : (ListOfMultiConditionalBranch)?,
+      "DefaultActivity" : (__string)?,
+      "EvaluationWaitTime" : (WaitTime)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias NumberValidateRequest = NamedTuple(
+      "IsoCountryCode" : (__string)?,
+      "PhoneNumber" : (__string)?
+    )
+
+    alias NumberValidateResponse = NamedTuple(
+      "Carrier" : (__string)?,
+      "City" : (__string)?,
+      "CleansedPhoneNumberE164" : (__string)?,
+      "CleansedPhoneNumberNational" : (__string)?,
+      "Country" : (__string)?,
+      "CountryCodeIso2" : (__string)?,
+      "CountryCodeNumeric" : (__string)?,
+      "County" : (__string)?,
+      "OriginalCountryCodeIso2" : (__string)?,
+      "OriginalPhoneNumber" : (__string)?,
+      "PhoneType" : (__string)?,
+      "PhoneTypeCode" : (__integer)?,
+      "Timezone" : (__string)?,
+      "ZipCode" : (__string)?
+    )
+
+    alias Operator = String
+
+    alias PayloadTooLargeException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias PhoneNumberValidateRequest = NamedTuple(
+      "NumberValidateRequest" : NumberValidateRequest
+    )
+
+    alias PhoneNumberValidateResponse = NamedTuple(
+      "NumberValidateResponse" : NumberValidateResponse
+    )
+
+    alias PublicEndpoint = NamedTuple(
+      "Address" : (__string)?,
+      "Attributes" : (MapOfListOf__string)?,
+      "ChannelType" : (ChannelType)?,
+      "Demographic" : (EndpointDemographic)?,
+      "EffectiveDate" : (__string)?,
+      "EndpointStatus" : (__string)?,
+      "Location" : (EndpointLocation)?,
+      "Metrics" : (MapOf__double)?,
+      "OptOut" : (__string)?,
+      "RequestId" : (__string)?,
+      "User" : (EndpointUser)?
+    )
+
+    alias PushMessageActivity = NamedTuple(
+      "MessageConfig" : (JourneyPushMessage)?,
+      "NextActivity" : (__string)?,
+      "TemplateName" : (__string)?,
+      "TemplateVersion" : (__string)?
+    )
+
+    alias PushNotificationTemplateRequest = NamedTuple(
+      "ADM" : (AndroidPushNotificationTemplate)?,
+      "APNS" : (APNSPushNotificationTemplate)?,
+      "Baidu" : (AndroidPushNotificationTemplate)?,
+      "Default" : (DefaultPushNotificationTemplate)?,
+      "DefaultSubstitutions" : (__string)?,
+      "GCM" : (AndroidPushNotificationTemplate)?,
+      "RecommenderId" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?
+    )
+
+    alias PushNotificationTemplateResponse = NamedTuple(
+      "ADM" : (AndroidPushNotificationTemplate)?,
+      "APNS" : (APNSPushNotificationTemplate)?,
+      "Arn" : (__string)?,
+      "Baidu" : (AndroidPushNotificationTemplate)?,
+      "CreationDate" : __string,
+      "Default" : (DefaultPushNotificationTemplate)?,
+      "DefaultSubstitutions" : (__string)?,
+      "GCM" : (AndroidPushNotificationTemplate)?,
+      "LastModifiedDate" : __string,
+      "RecommenderId" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : TemplateType,
+      "Version" : (__string)?
+    )
+
+    alias PutEventStreamRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "WriteEventStream" : WriteEventStream
+    )
+
+    alias PutEventStreamResponse = NamedTuple(
+      "EventStream" : EventStream
+    )
+
+    alias PutEventsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EventsRequest" : EventsRequest
+    )
+
+    alias PutEventsResponse = NamedTuple(
+      "EventsResponse" : EventsResponse
+    )
+
+    alias QuietTime = NamedTuple(
+      "End" : (__string)?,
+      "Start" : (__string)?
+    )
+
+    alias RandomSplitActivity = NamedTuple(
+      "Branches" : (ListOfRandomSplitEntry)?
+    )
+
+    alias RandomSplitEntry = NamedTuple(
+      "NextActivity" : (__string)?,
+      "Percentage" : (__integer)?
+    )
+
+    alias RawEmail = NamedTuple(
+      "Data" : (__blob)?
+    )
+
+    alias __blob = String | Array(UInt8) | IO
+
+    alias RecencyDimension = NamedTuple(
+      "Duration" : Duration,
+      "RecencyType" : RecencyType
+    )
+
+    alias RecencyType = String
+
+    alias RecommenderConfigurationResponse = NamedTuple(
+      "Attributes" : (MapOf__string)?,
+      "CreationDate" : __string,
+      "Description" : (__string)?,
+      "Id" : __string,
+      "LastModifiedDate" : __string,
+      "Name" : (__string)?,
+      "RecommendationProviderIdType" : (__string)?,
+      "RecommendationProviderRoleArn" : __string,
+      "RecommendationProviderUri" : __string,
+      "RecommendationTransformerUri" : (__string)?,
+      "RecommendationsDisplayName" : (__string)?,
+      "RecommendationsPerMessage" : (__integer)?
+    )
+
+    alias RemoveAttributesRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "AttributeType" : __string,
+      "UpdateAttributesRequest" : UpdateAttributesRequest
+    )
+
+    alias RemoveAttributesResponse = NamedTuple(
+      "AttributesResource" : AttributesResource
+    )
+
+    alias ResultRow = NamedTuple(
+      "GroupedBys" : ListOfResultRowValue,
+      "Values" : ListOfResultRowValue
+    )
+
+    alias ResultRowValue = NamedTuple(
+      "Key" : __string,
+      "Type" : __string,
+      "Value" : __string
+    )
+
+    alias SMSChannelRequest = NamedTuple(
+      "Enabled" : (__boolean)?,
+      "SenderId" : (__string)?,
+      "ShortCode" : (__string)?
+    )
+
+    alias SMSChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "PromotionalMessagesPerSecond" : (__integer)?,
+      "SenderId" : (__string)?,
+      "ShortCode" : (__string)?,
+      "TransactionalMessagesPerSecond" : (__integer)?,
+      "Version" : (__integer)?
+    )
+
+    alias SMSMessage = NamedTuple(
+      "Body" : (__string)?,
+      "Keyword" : (__string)?,
+      "MediaUrl" : (__string)?,
+      "MessageType" : (MessageType)?,
+      "OriginationNumber" : (__string)?,
+      "SenderId" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?
+    )
+
+    alias SMSMessageActivity = NamedTuple(
+      "MessageConfig" : (JourneySMSMessage)?,
+      "NextActivity" : (__string)?,
+      "TemplateName" : (__string)?,
+      "TemplateVersion" : (__string)?
+    )
+
+    alias SMSTemplateRequest = NamedTuple(
+      "Body" : (__string)?,
+      "DefaultSubstitutions" : (__string)?,
+      "RecommenderId" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?
+    )
+
+    alias SMSTemplateResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Body" : (__string)?,
+      "CreationDate" : __string,
+      "DefaultSubstitutions" : (__string)?,
+      "LastModifiedDate" : __string,
+      "RecommenderId" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : TemplateType,
+      "Version" : (__string)?
+    )
+
+    alias Schedule = NamedTuple(
+      "EndTime" : (__string)?,
+      "EventFilter" : (CampaignEventFilter)?,
+      "Frequency" : (Frequency)?,
+      "IsLocalTime" : (__boolean)?,
+      "QuietTime" : (QuietTime)?,
+      "StartTime" : __string,
+      "Timezone" : (__string)?
+    )
+
+    alias SegmentBehaviors = NamedTuple(
+      "Recency" : (RecencyDimension)?
+    )
+
+    alias SegmentCondition = NamedTuple(
+      "SegmentId" : __string
+    )
+
+    alias SegmentDemographics = NamedTuple(
+      "AppVersion" : (SetDimension)?,
+      "Channel" : (SetDimension)?,
+      "DeviceType" : (SetDimension)?,
+      "Make" : (SetDimension)?,
+      "Model" : (SetDimension)?,
+      "Platform" : (SetDimension)?
+    )
+
+    alias SegmentDimensions = NamedTuple(
+      "Attributes" : (MapOfAttributeDimension)?,
+      "Behavior" : (SegmentBehaviors)?,
+      "Demographic" : (SegmentDemographics)?,
+      "Location" : (SegmentLocation)?,
+      "Metrics" : (MapOfMetricDimension)?,
+      "UserAttributes" : (MapOfAttributeDimension)?
+    )
+
+    alias SegmentGroup = NamedTuple(
+      "Dimensions" : (ListOfSegmentDimensions)?,
+      "SourceSegments" : (ListOfSegmentReference)?,
+      "SourceType" : (SourceType)?,
+      "Type" : (Type)?
+    )
+
+    alias SegmentGroupList = NamedTuple(
+      "Groups" : (ListOfSegmentGroup)?,
+      "Include" : (Include)?
+    )
+
+    alias SegmentImportResource = NamedTuple(
+      "ChannelCounts" : (MapOf__integer)?,
+      "ExternalId" : __string,
+      "Format" : Format,
+      "RoleArn" : __string,
+      "S3Url" : __string,
+      "Size" : __integer
+    )
+
+    alias SegmentLocation = NamedTuple(
+      "Country" : (SetDimension)?,
+      "GPSPoint" : (GPSPointDimension)?
+    )
+
+    alias SegmentReference = NamedTuple(
+      "Id" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias SegmentResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "Arn" : __string,
+      "CreationDate" : __string,
+      "Dimensions" : (SegmentDimensions)?,
+      "Id" : __string,
+      "ImportDefinition" : (SegmentImportResource)?,
+      "LastModifiedDate" : (__string)?,
+      "Name" : (__string)?,
+      "SegmentGroups" : (SegmentGroupList)?,
+      "SegmentType" : SegmentType,
+      "tags" : (MapOf__string)?,
+      "Version" : (__integer)?
+    )
+
+    alias SegmentType = String
+
+    alias SegmentsResponse = NamedTuple(
+      "Item" : ListOfSegmentResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias SendMessagesRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "MessageRequest" : MessageRequest
+    )
+
+    alias SendMessagesResponse = NamedTuple(
+      "MessageResponse" : MessageResponse
+    )
+
+    alias SendUsersMessageRequest = NamedTuple(
+      "Context" : (MapOf__string)?,
+      "MessageConfiguration" : DirectMessageConfiguration,
+      "TemplateConfiguration" : (TemplateConfiguration)?,
+      "TraceId" : (__string)?,
+      "Users" : MapOfEndpointSendConfiguration
+    )
+
+    alias SendUsersMessageResponse = NamedTuple(
+      "ApplicationId" : __string,
+      "RequestId" : (__string)?,
+      "Result" : (MapOfMapOfEndpointMessageResult)?
+    )
+
+    alias SendUsersMessagesRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "SendUsersMessageRequest" : SendUsersMessageRequest
+    )
+
+    alias SendUsersMessagesResponse = NamedTuple(
+      "SendUsersMessageResponse" : SendUsersMessageResponse
+    )
+
+    alias Session = NamedTuple(
+      "Duration" : (__integer)?,
+      "Id" : __string,
+      "StartTimestamp" : __string,
+      "StopTimestamp" : (__string)?
+    )
+
+    alias SetDimension = NamedTuple(
+      "DimensionType" : (DimensionType)?,
+      "Values" : ListOf__string
+    )
+
+    alias SimpleCondition = NamedTuple(
+      "EventCondition" : (EventCondition)?,
+      "SegmentCondition" : (SegmentCondition)?,
+      "SegmentDimensions" : (SegmentDimensions)?
+    )
+
+    alias SimpleEmail = NamedTuple(
+      "HtmlPart" : (SimpleEmailPart)?,
+      "Subject" : (SimpleEmailPart)?,
+      "TextPart" : (SimpleEmailPart)?
+    )
+
+    alias SimpleEmailPart = NamedTuple(
+      "Charset" : (__string)?,
+      "Data" : (__string)?
+    )
+
+    alias SourceType = String
+
+    alias StartCondition = NamedTuple(
+      "Description" : (__string)?,
+      "EventStartCondition" : (EventStartCondition)?,
+      "SegmentStartCondition" : (SegmentCondition)?
+    )
+
+    alias State = String
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagsModel" : TagsModel
+    )
+
+    alias TagsModel = NamedTuple(
+      "tags" : MapOf__string
+    )
+
+    alias Template = NamedTuple(
+      "Name" : (__string)?,
+      "Version" : (__string)?
+    )
+
+    alias TemplateActiveVersionRequest = NamedTuple(
+      "Version" : (__string)?
+    )
+
+    alias TemplateConfiguration = NamedTuple(
+      "EmailTemplate" : (Template)?,
+      "PushTemplate" : (Template)?,
+      "SMSTemplate" : (Template)?,
+      "VoiceTemplate" : (Template)?
+    )
+
+    alias TemplateResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CreationDate" : __string,
+      "DefaultSubstitutions" : (__string)?,
+      "LastModifiedDate" : __string,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : TemplateType,
+      "Version" : (__string)?
+    )
+
+    alias TemplateType = String
+
+    alias TemplateVersionResponse = NamedTuple(
+      "CreationDate" : __string,
+      "DefaultSubstitutions" : (__string)?,
+      "LastModifiedDate" : __string,
+      "TemplateDescription" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : __string,
+      "Version" : (__string)?
+    )
+
+    alias TemplateVersionsResponse = NamedTuple(
+      "Item" : ListOfTemplateVersionResponse,
+      "Message" : (__string)?,
+      "NextToken" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias TemplatesResponse = NamedTuple(
+      "Item" : ListOfTemplateResponse,
+      "NextToken" : (__string)?
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (__string)?,
+      "RequestID" : (__string)?
+    )
+
+    alias TreatmentResource = NamedTuple(
+      "CustomDeliveryConfiguration" : (CustomDeliveryConfiguration)?,
+      "Id" : __string,
+      "MessageConfiguration" : (MessageConfiguration)?,
+      "Schedule" : (Schedule)?,
+      "SizePercent" : __integer,
+      "State" : (CampaignState)?,
+      "TemplateConfiguration" : (TemplateConfiguration)?,
+      "TreatmentDescription" : (__string)?,
+      "TreatmentName" : (__string)?
+    )
+
+    alias Type = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : ListOf__string
+    )
+
+    alias UpdateAdmChannelRequest = NamedTuple(
+      "ADMChannelRequest" : ADMChannelRequest,
+      "ApplicationId" : __string
+    )
+
+    alias UpdateAdmChannelResponse = NamedTuple(
+      "ADMChannelResponse" : ADMChannelResponse
+    )
+
+    alias UpdateApnsChannelRequest = NamedTuple(
+      "APNSChannelRequest" : APNSChannelRequest,
+      "ApplicationId" : __string
+    )
+
+    alias UpdateApnsChannelResponse = NamedTuple(
+      "APNSChannelResponse" : APNSChannelResponse
+    )
+
+    alias UpdateApnsSandboxChannelRequest = NamedTuple(
+      "APNSSandboxChannelRequest" : APNSSandboxChannelRequest,
+      "ApplicationId" : __string
+    )
+
+    alias UpdateApnsSandboxChannelResponse = NamedTuple(
+      "APNSSandboxChannelResponse" : APNSSandboxChannelResponse
+    )
+
+    alias UpdateApnsVoipChannelRequest = NamedTuple(
+      "APNSVoipChannelRequest" : APNSVoipChannelRequest,
+      "ApplicationId" : __string
+    )
+
+    alias UpdateApnsVoipChannelResponse = NamedTuple(
+      "APNSVoipChannelResponse" : APNSVoipChannelResponse
+    )
+
+    alias UpdateApnsVoipSandboxChannelRequest = NamedTuple(
+      "APNSVoipSandboxChannelRequest" : APNSVoipSandboxChannelRequest,
+      "ApplicationId" : __string
+    )
+
+    alias UpdateApnsVoipSandboxChannelResponse = NamedTuple(
+      "APNSVoipSandboxChannelResponse" : APNSVoipSandboxChannelResponse
+    )
+
+    alias UpdateApplicationSettingsRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "WriteApplicationSettingsRequest" : WriteApplicationSettingsRequest
+    )
+
+    alias UpdateApplicationSettingsResponse = NamedTuple(
+      "ApplicationSettingsResource" : ApplicationSettingsResource
+    )
+
+    alias UpdateAttributesRequest = NamedTuple(
+      "Blacklist" : (ListOf__string)?
+    )
+
+    alias UpdateBaiduChannelRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "BaiduChannelRequest" : BaiduChannelRequest
+    )
+
+    alias UpdateBaiduChannelResponse = NamedTuple(
+      "BaiduChannelResponse" : BaiduChannelResponse
+    )
+
+    alias UpdateCampaignRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "CampaignId" : __string,
+      "WriteCampaignRequest" : WriteCampaignRequest
+    )
+
+    alias UpdateCampaignResponse = NamedTuple(
+      "CampaignResponse" : CampaignResponse
+    )
+
+    alias UpdateEmailChannelRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EmailChannelRequest" : EmailChannelRequest
+    )
+
+    alias UpdateEmailChannelResponse = NamedTuple(
+      "EmailChannelResponse" : EmailChannelResponse
+    )
+
+    alias UpdateEmailTemplateRequest = NamedTuple(
+      "CreateNewVersion" : (__boolean)?,
+      "EmailTemplateRequest" : EmailTemplateRequest,
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias UpdateEmailTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias UpdateEndpointRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EndpointId" : __string,
+      "EndpointRequest" : EndpointRequest
+    )
+
+    alias UpdateEndpointResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias UpdateEndpointsBatchRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "EndpointBatchRequest" : EndpointBatchRequest
+    )
+
+    alias UpdateEndpointsBatchResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias UpdateGcmChannelRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "GCMChannelRequest" : GCMChannelRequest
+    )
+
+    alias UpdateGcmChannelResponse = NamedTuple(
+      "GCMChannelResponse" : GCMChannelResponse
+    )
+
+    alias UpdateJourneyRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyId" : __string,
+      "WriteJourneyRequest" : WriteJourneyRequest
+    )
+
+    alias UpdateJourneyResponse = NamedTuple(
+      "JourneyResponse" : JourneyResponse
+    )
+
+    alias UpdateJourneyStateRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "JourneyId" : __string,
+      "JourneyStateRequest" : JourneyStateRequest
+    )
+
+    alias UpdateJourneyStateResponse = NamedTuple(
+      "JourneyResponse" : JourneyResponse
+    )
+
+    alias UpdatePushTemplateRequest = NamedTuple(
+      "CreateNewVersion" : (__boolean)?,
+      "PushNotificationTemplateRequest" : PushNotificationTemplateRequest,
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias UpdatePushTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias UpdateRecommenderConfiguration = NamedTuple(
+      "Attributes" : (MapOf__string)?,
+      "Description" : (__string)?,
+      "Name" : (__string)?,
+      "RecommendationProviderIdType" : (__string)?,
+      "RecommendationProviderRoleArn" : __string,
+      "RecommendationProviderUri" : __string,
+      "RecommendationTransformerUri" : (__string)?,
+      "RecommendationsDisplayName" : (__string)?,
+      "RecommendationsPerMessage" : (__integer)?
+    )
+
+    alias UpdateRecommenderConfigurationRequest = NamedTuple(
+      "RecommenderId" : __string,
+      "UpdateRecommenderConfiguration" : UpdateRecommenderConfiguration
+    )
+
+    alias UpdateRecommenderConfigurationResponse = NamedTuple(
+      "RecommenderConfigurationResponse" : RecommenderConfigurationResponse
+    )
+
+    alias UpdateSegmentRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "SegmentId" : __string,
+      "WriteSegmentRequest" : WriteSegmentRequest
+    )
+
+    alias UpdateSegmentResponse = NamedTuple(
+      "SegmentResponse" : SegmentResponse
+    )
+
+    alias UpdateSmsChannelRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "SMSChannelRequest" : SMSChannelRequest
+    )
+
+    alias UpdateSmsChannelResponse = NamedTuple(
+      "SMSChannelResponse" : SMSChannelResponse
+    )
+
+    alias UpdateSmsTemplateRequest = NamedTuple(
+      "CreateNewVersion" : (__boolean)?,
+      "SMSTemplateRequest" : SMSTemplateRequest,
+      "TemplateName" : __string,
+      "Version" : (__string)?
+    )
+
+    alias UpdateSmsTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias UpdateTemplateActiveVersionRequest = NamedTuple(
+      "TemplateActiveVersionRequest" : TemplateActiveVersionRequest,
+      "TemplateName" : __string,
+      "TemplateType" : __string
+    )
+
+    alias UpdateTemplateActiveVersionResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias UpdateVoiceChannelRequest = NamedTuple(
+      "ApplicationId" : __string,
+      "VoiceChannelRequest" : VoiceChannelRequest
+    )
+
+    alias UpdateVoiceChannelResponse = NamedTuple(
+      "VoiceChannelResponse" : VoiceChannelResponse
+    )
+
+    alias UpdateVoiceTemplateRequest = NamedTuple(
+      "CreateNewVersion" : (__boolean)?,
+      "TemplateName" : __string,
+      "Version" : (__string)?,
+      "VoiceTemplateRequest" : VoiceTemplateRequest
+    )
+
+    alias UpdateVoiceTemplateResponse = NamedTuple(
+      "MessageBody" : MessageBody
+    )
+
+    alias VoiceChannelRequest = NamedTuple(
+      "Enabled" : (__boolean)?
+    )
+
+    alias VoiceChannelResponse = NamedTuple(
+      "ApplicationId" : (__string)?,
+      "CreationDate" : (__string)?,
+      "Enabled" : (__boolean)?,
+      "HasCredential" : (__boolean)?,
+      "Id" : (__string)?,
+      "IsArchived" : (__boolean)?,
+      "LastModifiedBy" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Platform" : __string,
+      "Version" : (__integer)?
+    )
+
+    alias VoiceMessage = NamedTuple(
+      "Body" : (__string)?,
+      "LanguageCode" : (__string)?,
+      "OriginationNumber" : (__string)?,
+      "Substitutions" : (MapOfListOf__string)?,
+      "VoiceId" : (__string)?
+    )
+
+    alias VoiceTemplateRequest = NamedTuple(
+      "Body" : (__string)?,
+      "DefaultSubstitutions" : (__string)?,
+      "LanguageCode" : (__string)?,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "VoiceId" : (__string)?
+    )
+
+    alias VoiceTemplateResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Body" : (__string)?,
+      "CreationDate" : __string,
+      "DefaultSubstitutions" : (__string)?,
+      "LanguageCode" : (__string)?,
+      "LastModifiedDate" : __string,
+      "tags" : (MapOf__string)?,
+      "TemplateDescription" : (__string)?,
+      "TemplateName" : __string,
+      "TemplateType" : TemplateType,
+      "Version" : (__string)?,
+      "VoiceId" : (__string)?
+    )
+
+    alias WaitActivity = NamedTuple(
+      "NextActivity" : (__string)?,
+      "WaitTime" : (WaitTime)?
+    )
+
+    alias WaitTime = NamedTuple(
+      "WaitFor" : (__string)?,
+      "WaitUntil" : (__string)?
+    )
+
+    alias WriteApplicationSettingsRequest = NamedTuple(
+      "CampaignHook" : (CampaignHook)?,
+      "CloudWatchMetricsEnabled" : (__boolean)?,
+      "Limits" : (CampaignLimits)?,
+      "QuietTime" : (QuietTime)?
+    )
+
+    alias WriteCampaignRequest = NamedTuple(
+      "AdditionalTreatments" : (ListOfWriteTreatmentResource)?,
+      "CustomDeliveryConfiguration" : (CustomDeliveryConfiguration)?,
+      "Description" : (__string)?,
+      "HoldoutPercent" : (__integer)?,
+      "Hook" : (CampaignHook)?,
+      "IsPaused" : (__boolean)?,
+      "Limits" : (CampaignLimits)?,
+      "MessageConfiguration" : (MessageConfiguration)?,
+      "Name" : (__string)?,
+      "Schedule" : (Schedule)?,
+      "SegmentId" : (__string)?,
+      "SegmentVersion" : (__integer)?,
+      "tags" : (MapOf__string)?,
+      "TemplateConfiguration" : (TemplateConfiguration)?,
+      "TreatmentDescription" : (__string)?,
+      "TreatmentName" : (__string)?
+    )
+
+    alias WriteEventStream = NamedTuple(
+      "DestinationStreamArn" : __string,
+      "RoleArn" : __string
+    )
+
+    alias WriteJourneyRequest = NamedTuple(
+      "Activities" : (MapOfActivity)?,
+      "CreationDate" : (__string)?,
+      "LastModifiedDate" : (__string)?,
+      "Limits" : (JourneyLimits)?,
+      "LocalTime" : (__boolean)?,
+      "Name" : __string,
+      "QuietTime" : (QuietTime)?,
+      "RefreshFrequency" : (__string)?,
+      "Schedule" : (JourneySchedule)?,
+      "StartActivity" : (__string)?,
+      "StartCondition" : (StartCondition)?,
+      "State" : (State)?
+    )
+
+    alias WriteSegmentRequest = NamedTuple(
+      "Dimensions" : (SegmentDimensions)?,
+      "Name" : (__string)?,
+      "SegmentGroups" : (SegmentGroupList)?,
+      "tags" : (MapOf__string)?
+    )
+
+    alias WriteTreatmentResource = NamedTuple(
+      "CustomDeliveryConfiguration" : (CustomDeliveryConfiguration)?,
+      "MessageConfiguration" : (MessageConfiguration)?,
+      "Schedule" : (Schedule)?,
+      "SizePercent" : __integer,
+      "TemplateConfiguration" : (TemplateConfiguration)?,
+      "TreatmentDescription" : (__string)?,
+      "TreatmentName" : (__string)?
+    )
+
+    alias __EndpointTypesElement = String
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias ListOfActivityResponse = Array(ActivityResponse)
+
+    alias ListOfApplicationResponse = Array(ApplicationResponse)
+
+    alias ListOfCampaignResponse = Array(CampaignResponse)
+
+    alias ListOfEndpointBatchItem = Array(EndpointBatchItem)
+
+    alias ListOfEndpointResponse = Array(EndpointResponse)
+
+    alias ListOfExportJobResponse = Array(ExportJobResponse)
+
+    alias ListOfImportJobResponse = Array(ImportJobResponse)
+
+    alias ListOfJourneyResponse = Array(JourneyResponse)
+
+    alias ListOfMultiConditionalBranch = Array(MultiConditionalBranch)
+
+    alias ListOfRandomSplitEntry = Array(RandomSplitEntry)
+
+    alias ListOfRecommenderConfigurationResponse = Array(RecommenderConfigurationResponse)
+
+    alias ListOfResultRow = Array(ResultRow)
+
+    alias ListOfResultRowValue = Array(ResultRowValue)
+
+    alias ListOfSegmentDimensions = Array(SegmentDimensions)
+
+    alias ListOfSegmentGroup = Array(SegmentGroup)
+
+    alias ListOfSegmentReference = Array(SegmentReference)
+
+    alias ListOfSegmentResponse = Array(SegmentResponse)
+
+    alias ListOfSimpleCondition = Array(SimpleCondition)
+
+    alias ListOfTemplateResponse = Array(TemplateResponse)
+
+    alias ListOfTemplateVersionResponse = Array(TemplateVersionResponse)
+
+    alias ListOfTreatmentResource = Array(TreatmentResource)
+
+    alias ListOfWriteTreatmentResource = Array(WriteTreatmentResource)
+
+    alias ListOf__EndpointTypesElement = Array(__EndpointTypesElement)
+
+    alias ListOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias MapOfActivity = Hash(__string,Activity)
+
+    alias MapOfAddressConfiguration = Hash(__string,AddressConfiguration)
+
+    alias MapOfAttributeDimension = Hash(__string,AttributeDimension)
+
+    alias MapOfChannelResponse = Hash(__string,ChannelResponse)
+
+    alias MapOfEndpointMessageResult = Hash(__string,EndpointMessageResult)
+
+    alias MapOfEndpointSendConfiguration = Hash(__string,EndpointSendConfiguration)
+
+    alias MapOfEvent = Hash(__string,Event)
+
+    alias MapOfEventItemResponse = Hash(__string,EventItemResponse)
+
+    alias MapOfEventsBatch = Hash(__string,EventsBatch)
+
+    alias MapOfItemResponse = Hash(__string,ItemResponse)
+
+    alias MapOfMessageResult = Hash(__string,MessageResult)
+
+    alias MapOfMetricDimension = Hash(__string,MetricDimension)
+
+    alias MapOf__double = Hash(__string,__double)
+
+    alias MapOf__integer = Hash(__string,__integer)
+
+    alias MapOfListOf__string = Hash(__string,ListOf__string)
+
+    alias MapOfMapOfEndpointMessageResult = Hash(__string,MapOfEndpointMessageResult)
+
+    alias MapOf__string = Hash(__string,__string)
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

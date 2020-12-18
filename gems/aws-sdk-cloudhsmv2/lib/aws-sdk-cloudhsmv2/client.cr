@@ -379,8 +379,8 @@ module Aws::CloudHSMV2
     #
     # @overload copy_backup_to_region(**params)
     # @param [Hash] params ({})
-    def copy_backup_to_region(params = {}, **options)
-      req = build_request(:copy_backup_to_region, params)
+    def copy_backup_to_region(, **options)
+      req = build_request(:copy_backup_to_region, )
       req.send_request(options)
     end
 
@@ -470,8 +470,8 @@ module Aws::CloudHSMV2
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -519,8 +519,8 @@ module Aws::CloudHSMV2
     #
     # @overload create_hsm(**params)
     # @param [Hash] params ({})
-    def create_hsm(params = {}, **options)
-      req = build_request(:create_hsm, params)
+    def create_hsm(, **options)
+      req = build_request(:create_hsm, )
       req.send_request(options)
     end
 
@@ -562,8 +562,8 @@ module Aws::CloudHSMV2
     #
     # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, **options)
-      req = build_request(:delete_backup, params)
+    def delete_backup(, **options)
+      req = build_request(:delete_backup, )
       req.send_request(options)
     end
 
@@ -624,8 +624,8 @@ module Aws::CloudHSMV2
     #
     # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, **options)
-      req = build_request(:delete_cluster, params)
+    def delete_cluster(, **options)
+      req = build_request(:delete_cluster, )
       req.send_request(options)
     end
 
@@ -670,8 +670,8 @@ module Aws::CloudHSMV2
     #
     # @overload delete_hsm(**params)
     # @param [Hash] params ({})
-    def delete_hsm(params = {}, **options)
-      req = build_request(:delete_hsm, params)
+    def delete_hsm(, **options)
+      req = build_request(:delete_hsm, )
       req.send_request(options)
     end
 
@@ -758,8 +758,8 @@ module Aws::CloudHSMV2
     #
     # @overload describe_backups(**params)
     # @param [Hash] params ({})
-    def describe_backups(params = {}, **options)
-      req = build_request(:describe_backups, params)
+    def describe_backups(, **options)
+      req = build_request(:describe_backups, )
       req.send_request(options)
     end
 
@@ -851,8 +851,8 @@ module Aws::CloudHSMV2
     #
     # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, **options)
-      req = build_request(:describe_clusters, params)
+    def describe_clusters(, **options)
+      req = build_request(:describe_clusters, )
       req.send_request(options)
     end
 
@@ -900,8 +900,8 @@ module Aws::CloudHSMV2
     #
     # @overload initialize_cluster(**params)
     # @param [Hash] params ({})
-    def initialize_cluster(params = {}, **options)
-      req = build_request(:initialize_cluster, params)
+    def initialize_cluster(, **options)
+      req = build_request(:initialize_cluster, )
       req.send_request(options)
     end
 
@@ -953,8 +953,8 @@ module Aws::CloudHSMV2
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -1001,8 +1001,8 @@ module Aws::CloudHSMV2
     #
     # @overload modify_backup_attributes(**params)
     # @param [Hash] params ({})
-    def modify_backup_attributes(params = {}, **options)
-      req = build_request(:modify_backup_attributes, params)
+    def modify_backup_attributes(, **options)
+      req = build_request(:modify_backup_attributes, )
       req.send_request(options)
     end
 
@@ -1067,8 +1067,8 @@ module Aws::CloudHSMV2
     #
     # @overload modify_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cluster(params = {}, **options)
-      req = build_request(:modify_cluster, params)
+    def modify_cluster(, **options)
+      req = build_request(:modify_cluster, )
       req.send_request(options)
     end
 
@@ -1110,8 +1110,8 @@ module Aws::CloudHSMV2
     #
     # @overload restore_backup(**params)
     # @param [Hash] params ({})
-    def restore_backup(params = {}, **options)
-      req = build_request(:restore_backup, params)
+    def restore_backup(, **options)
+      req = build_request(:restore_backup, )
       req.send_request(options)
     end
 
@@ -1143,8 +1143,8 @@ module Aws::CloudHSMV2
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::CloudHSMV2
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

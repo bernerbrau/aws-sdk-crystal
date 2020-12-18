@@ -1870,5 +1870,502 @@ module Aws::DAX
       include Aws::Structure
     end
 
+    alias AvailabilityZoneList = Array(String)
+
+    alias AwsQueryErrorMessage = String
+
+    alias ChangeType = String
+
+    alias Cluster = NamedTuple(
+      "ClusterName" : (String)?,
+      "Description" : (String)?,
+      "ClusterArn" : (String)?,
+      "TotalNodes" : (IntegerOptional)?,
+      "ActiveNodes" : (IntegerOptional)?,
+      "NodeType" : (String)?,
+      "Status" : (String)?,
+      "ClusterDiscoveryEndpoint" : (Endpoint)?,
+      "NodeIdsToRemove" : (NodeIdentifierList)?,
+      "Nodes" : (NodeList)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "NotificationConfiguration" : (NotificationConfiguration)?,
+      "SubnetGroup" : (String)?,
+      "SecurityGroups" : (SecurityGroupMembershipList)?,
+      "IamRoleArn" : (String)?,
+      "ParameterGroup" : (ParameterGroupStatus)?,
+      "SSEDescription" : (SSEDescription)?
+    )
+
+    alias ClusterAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ClusterList = Array(Cluster)
+
+    alias ClusterNameList = Array(String)
+
+    alias ClusterNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ClusterQuotaForCustomerExceededFault = NamedTuple(
+      
+    )
+
+    alias CreateClusterRequest = NamedTuple(
+      "ClusterName" : String,
+      "NodeType" : String,
+      "Description" : (String)?,
+      "ReplicationFactor" : Integer,
+      "AvailabilityZones" : (AvailabilityZoneList)?,
+      "SubnetGroupName" : (String)?,
+      "SecurityGroupIds" : (SecurityGroupIdentifierList)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "NotificationTopicArn" : (String)?,
+      "IamRoleArn" : String,
+      "ParameterGroupName" : (String)?,
+      "Tags" : (TagList)?,
+      "SSESpecification" : (SSESpecification)?
+    )
+
+    alias CreateClusterResponse = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias CreateParameterGroupRequest = NamedTuple(
+      "ParameterGroupName" : String,
+      "Description" : (String)?
+    )
+
+    alias CreateParameterGroupResponse = NamedTuple(
+      "ParameterGroup" : (ParameterGroup)?
+    )
+
+    alias CreateSubnetGroupRequest = NamedTuple(
+      "SubnetGroupName" : String,
+      "Description" : (String)?,
+      "SubnetIds" : SubnetIdentifierList
+    )
+
+    alias CreateSubnetGroupResponse = NamedTuple(
+      "SubnetGroup" : (SubnetGroup)?
+    )
+
+    alias DecreaseReplicationFactorRequest = NamedTuple(
+      "ClusterName" : String,
+      "NewReplicationFactor" : Integer,
+      "AvailabilityZones" : (AvailabilityZoneList)?,
+      "NodeIdsToRemove" : (NodeIdentifierList)?
+    )
+
+    alias DecreaseReplicationFactorResponse = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias DeleteClusterRequest = NamedTuple(
+      "ClusterName" : String
+    )
+
+    alias DeleteClusterResponse = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias DeleteParameterGroupRequest = NamedTuple(
+      "ParameterGroupName" : String
+    )
+
+    alias DeleteParameterGroupResponse = NamedTuple(
+      "DeletionMessage" : (String)?
+    )
+
+    alias DeleteSubnetGroupRequest = NamedTuple(
+      "SubnetGroupName" : String
+    )
+
+    alias DeleteSubnetGroupResponse = NamedTuple(
+      "DeletionMessage" : (String)?
+    )
+
+    alias DescribeClustersRequest = NamedTuple(
+      "ClusterNames" : (ClusterNameList)?,
+      "MaxResults" : (IntegerOptional)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeClustersResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Clusters" : (ClusterList)?
+    )
+
+    alias DescribeDefaultParametersRequest = NamedTuple(
+      "MaxResults" : (IntegerOptional)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeDefaultParametersResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Parameters" : (ParameterList)?
+    )
+
+    alias DescribeEventsRequest = NamedTuple(
+      "SourceName" : (String)?,
+      "SourceType" : (SourceType)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Duration" : (IntegerOptional)?,
+      "MaxResults" : (IntegerOptional)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeEventsResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Events" : (EventList)?
+    )
+
+    alias DescribeParameterGroupsRequest = NamedTuple(
+      "ParameterGroupNames" : (ParameterGroupNameList)?,
+      "MaxResults" : (IntegerOptional)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeParameterGroupsResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "ParameterGroups" : (ParameterGroupList)?
+    )
+
+    alias DescribeParametersRequest = NamedTuple(
+      "ParameterGroupName" : String,
+      "Source" : (String)?,
+      "MaxResults" : (IntegerOptional)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeParametersResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Parameters" : (ParameterList)?
+    )
+
+    alias DescribeSubnetGroupsRequest = NamedTuple(
+      "SubnetGroupNames" : (SubnetGroupNameList)?,
+      "MaxResults" : (IntegerOptional)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeSubnetGroupsResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "SubnetGroups" : (SubnetGroupList)?
+    )
+
+    alias Endpoint = NamedTuple(
+      "Address" : (String)?,
+      "Port" : (Integer)?
+    )
+
+    alias Event = NamedTuple(
+      "SourceName" : (String)?,
+      "SourceType" : (SourceType)?,
+      "Message" : (String)?,
+      "Date" : (TStamp)?
+    )
+
+    alias EventList = Array(Event)
+
+    alias IncreaseReplicationFactorRequest = NamedTuple(
+      "ClusterName" : String,
+      "NewReplicationFactor" : Integer,
+      "AvailabilityZones" : (AvailabilityZoneList)?
+    )
+
+    alias IncreaseReplicationFactorResponse = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias InsufficientClusterCapacityFault = NamedTuple(
+      
+    )
+
+    alias Integer = Int32
+
+    alias IntegerOptional = Int32
+
+    alias InvalidARNFault = NamedTuple(
+      
+    )
+
+    alias InvalidClusterStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidParameterCombinationException = NamedTuple(
+      "message" : (AwsQueryErrorMessage)?
+    )
+
+    alias InvalidParameterGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "message" : (AwsQueryErrorMessage)?
+    )
+
+    alias InvalidSubnet = NamedTuple(
+      
+    )
+
+    alias InvalidVPCNetworkStateFault = NamedTuple(
+      
+    )
+
+    alias IsModifiable = String
+
+    alias KeyList = Array(String)
+
+    alias ListTagsRequest = NamedTuple(
+      "ResourceName" : String,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (String)?
+    )
+
+    alias Node = NamedTuple(
+      "NodeId" : (String)?,
+      "Endpoint" : (Endpoint)?,
+      "NodeCreateTime" : (TStamp)?,
+      "AvailabilityZone" : (String)?,
+      "NodeStatus" : (String)?,
+      "ParameterGroupStatus" : (String)?
+    )
+
+    alias NodeIdentifierList = Array(String)
+
+    alias NodeList = Array(Node)
+
+    alias NodeNotFoundFault = NamedTuple(
+      
+    )
+
+    alias NodeQuotaForClusterExceededFault = NamedTuple(
+      
+    )
+
+    alias NodeQuotaForCustomerExceededFault = NamedTuple(
+      
+    )
+
+    alias NodeTypeSpecificValue = NamedTuple(
+      "NodeType" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias NodeTypeSpecificValueList = Array(NodeTypeSpecificValue)
+
+    alias NotificationConfiguration = NamedTuple(
+      "TopicArn" : (String)?,
+      "TopicStatus" : (String)?
+    )
+
+    alias Parameter = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterType" : (ParameterType)?,
+      "ParameterValue" : (String)?,
+      "NodeTypeSpecificValues" : (NodeTypeSpecificValueList)?,
+      "Description" : (String)?,
+      "Source" : (String)?,
+      "DataType" : (String)?,
+      "AllowedValues" : (String)?,
+      "IsModifiable" : (IsModifiable)?,
+      "ChangeType" : (ChangeType)?
+    )
+
+    alias ParameterGroup = NamedTuple(
+      "ParameterGroupName" : (String)?,
+      "Description" : (String)?
+    )
+
+    alias ParameterGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ParameterGroupList = Array(ParameterGroup)
+
+    alias ParameterGroupNameList = Array(String)
+
+    alias ParameterGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ParameterGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ParameterGroupStatus = NamedTuple(
+      "ParameterGroupName" : (String)?,
+      "ParameterApplyStatus" : (String)?,
+      "NodeIdsToReboot" : (NodeIdentifierList)?
+    )
+
+    alias ParameterList = Array(Parameter)
+
+    alias ParameterNameValue = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterValue" : (String)?
+    )
+
+    alias ParameterNameValueList = Array(ParameterNameValue)
+
+    alias ParameterType = String
+
+    alias RebootNodeRequest = NamedTuple(
+      "ClusterName" : String,
+      "NodeId" : String
+    )
+
+    alias RebootNodeResponse = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias SSEDescription = NamedTuple(
+      "Status" : (SSEStatus)?
+    )
+
+    alias SSEEnabled = Bool
+
+    alias SSESpecification = NamedTuple(
+      "Enabled" : SSEEnabled
+    )
+
+    alias SSEStatus = String
+
+    alias SecurityGroupIdentifierList = Array(String)
+
+    alias SecurityGroupMembership = NamedTuple(
+      "SecurityGroupIdentifier" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias SecurityGroupMembershipList = Array(SecurityGroupMembership)
+
+    alias ServiceLinkedRoleNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SourceType = String
+
+    alias String = String
+
+    alias Subnet = NamedTuple(
+      "SubnetIdentifier" : (String)?,
+      "SubnetAvailabilityZone" : (String)?
+    )
+
+    alias SubnetGroup = NamedTuple(
+      "SubnetGroupName" : (String)?,
+      "Description" : (String)?,
+      "VpcId" : (String)?,
+      "Subnets" : (SubnetList)?
+    )
+
+    alias SubnetGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias SubnetGroupInUseFault = NamedTuple(
+      
+    )
+
+    alias SubnetGroupList = Array(SubnetGroup)
+
+    alias SubnetGroupNameList = Array(String)
+
+    alias SubnetGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SubnetGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias SubnetIdentifierList = Array(String)
+
+    alias SubnetInUse = NamedTuple(
+      
+    )
+
+    alias SubnetList = Array(Subnet)
+
+    alias SubnetQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias TStamp = String | UInt64 | Time
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagNotFoundFault = NamedTuple(
+      
+    )
+
+    alias TagQuotaPerResourceExceeded = NamedTuple(
+      
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceName" : String,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceName" : String,
+      "TagKeys" : KeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias UpdateClusterRequest = NamedTuple(
+      "ClusterName" : String,
+      "Description" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "NotificationTopicArn" : (String)?,
+      "NotificationTopicStatus" : (String)?,
+      "ParameterGroupName" : (String)?,
+      "SecurityGroupIds" : (SecurityGroupIdentifierList)?
+    )
+
+    alias UpdateClusterResponse = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias UpdateParameterGroupRequest = NamedTuple(
+      "ParameterGroupName" : String,
+      "ParameterNameValues" : ParameterNameValueList
+    )
+
+    alias UpdateParameterGroupResponse = NamedTuple(
+      "ParameterGroup" : (ParameterGroup)?
+    )
+
+    alias UpdateSubnetGroupRequest = NamedTuple(
+      "SubnetGroupName" : String,
+      "Description" : (String)?,
+      "SubnetIds" : (SubnetIdentifierList)?
+    )
+
+    alias UpdateSubnetGroupResponse = NamedTuple(
+      "SubnetGroup" : (SubnetGroup)?
+    )
   end
 end

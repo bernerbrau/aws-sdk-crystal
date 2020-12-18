@@ -369,8 +369,8 @@ module Aws::CodePipeline
     #
     # @overload acknowledge_job(**params)
     # @param [Hash] params ({})
-    def acknowledge_job(params = {}, **options)
-      req = build_request(:acknowledge_job, params)
+    def acknowledge_job(, **options)
+      req = build_request(:acknowledge_job, )
       req.send_request(options)
     end
 
@@ -410,8 +410,8 @@ module Aws::CodePipeline
     #
     # @overload acknowledge_third_party_job(**params)
     # @param [Hash] params ({})
-    def acknowledge_third_party_job(params = {}, **options)
-      req = build_request(:acknowledge_third_party_job, params)
+    def acknowledge_third_party_job(, **options)
+      req = build_request(:acknowledge_third_party_job, )
       req.send_request(options)
     end
 
@@ -532,8 +532,8 @@ module Aws::CodePipeline
     #
     # @overload create_custom_action_type(**params)
     # @param [Hash] params ({})
-    def create_custom_action_type(params = {}, **options)
-      req = build_request(:create_custom_action_type, params)
+    def create_custom_action_type(, **options)
+      req = build_request(:create_custom_action_type, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::CodePipeline
     #
     # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, **options)
-      req = build_request(:create_pipeline, params)
+    def create_pipeline(, **options)
+      req = build_request(:create_pipeline, )
       req.send_request(options)
     end
 
@@ -714,8 +714,8 @@ module Aws::CodePipeline
     #
     # @overload delete_custom_action_type(**params)
     # @param [Hash] params ({})
-    def delete_custom_action_type(params = {}, **options)
-      req = build_request(:delete_custom_action_type, params)
+    def delete_custom_action_type(, **options)
+      req = build_request(:delete_custom_action_type, )
       req.send_request(options)
     end
 
@@ -736,8 +736,8 @@ module Aws::CodePipeline
     #
     # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, **options)
-      req = build_request(:delete_pipeline, params)
+    def delete_pipeline(, **options)
+      req = build_request(:delete_pipeline, )
       req.send_request(options)
     end
 
@@ -762,8 +762,8 @@ module Aws::CodePipeline
     #
     # @overload delete_webhook(**params)
     # @param [Hash] params ({})
-    def delete_webhook(params = {}, **options)
-      req = build_request(:delete_webhook, params)
+    def delete_webhook(, **options)
+      req = build_request(:delete_webhook, )
       req.send_request(options)
     end
 
@@ -787,8 +787,8 @@ module Aws::CodePipeline
     #
     # @overload deregister_webhook_with_third_party(**params)
     # @param [Hash] params ({})
-    def deregister_webhook_with_third_party(params = {}, **options)
-      req = build_request(:deregister_webhook_with_third_party, params)
+    def deregister_webhook_with_third_party(, **options)
+      req = build_request(:deregister_webhook_with_third_party, )
       req.send_request(options)
     end
 
@@ -829,8 +829,8 @@ module Aws::CodePipeline
     #
     # @overload disable_stage_transition(**params)
     # @param [Hash] params ({})
-    def disable_stage_transition(params = {}, **options)
-      req = build_request(:disable_stage_transition, params)
+    def disable_stage_transition(, **options)
+      req = build_request(:disable_stage_transition, )
       req.send_request(options)
     end
 
@@ -866,8 +866,8 @@ module Aws::CodePipeline
     #
     # @overload enable_stage_transition(**params)
     # @param [Hash] params ({})
-    def enable_stage_transition(params = {}, **options)
-      req = build_request(:enable_stage_transition, params)
+    def enable_stage_transition(, **options)
+      req = build_request(:enable_stage_transition, )
       req.send_request(options)
     end
 
@@ -931,8 +931,8 @@ module Aws::CodePipeline
     #
     # @overload get_job_details(**params)
     # @param [Hash] params ({})
-    def get_job_details(params = {}, **options)
-      req = build_request(:get_job_details, params)
+    def get_job_details(, **options)
+      req = build_request(:get_job_details, )
       req.send_request(options)
     end
 
@@ -1004,8 +1004,8 @@ module Aws::CodePipeline
     #
     # @overload get_pipeline(**params)
     # @param [Hash] params ({})
-    def get_pipeline(params = {}, **options)
-      req = build_request(:get_pipeline, params)
+    def get_pipeline(, **options)
+      req = build_request(:get_pipeline, )
       req.send_request(options)
     end
 
@@ -1050,8 +1050,8 @@ module Aws::CodePipeline
     #
     # @overload get_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def get_pipeline_execution(params = {}, **options)
-      req = build_request(:get_pipeline_execution, params)
+    def get_pipeline_execution(, **options)
+      req = build_request(:get_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -1120,8 +1120,8 @@ module Aws::CodePipeline
     #
     # @overload get_pipeline_state(**params)
     # @param [Hash] params ({})
-    def get_pipeline_state(params = {}, **options)
-      req = build_request(:get_pipeline_state, params)
+    def get_pipeline_state(, **options)
+      req = build_request(:get_pipeline_state, )
       req.send_request(options)
     end
 
@@ -1192,8 +1192,8 @@ module Aws::CodePipeline
     #
     # @overload get_third_party_job_details(**params)
     # @param [Hash] params ({})
-    def get_third_party_job_details(params = {}, **options)
-      req = build_request(:get_third_party_job_details, params)
+    def get_third_party_job_details(, **options)
+      req = build_request(:get_third_party_job_details, )
       req.send_request(options)
     end
 
@@ -1281,8 +1281,8 @@ module Aws::CodePipeline
     #
     # @overload list_action_executions(**params)
     # @param [Hash] params ({})
-    def list_action_executions(params = {}, **options)
-      req = build_request(:list_action_executions, params)
+    def list_action_executions(, **options)
+      req = build_request(:list_action_executions, )
       req.send_request(options)
     end
 
@@ -1341,8 +1341,8 @@ module Aws::CodePipeline
     #
     # @overload list_action_types(**params)
     # @param [Hash] params ({})
-    def list_action_types(params = {}, **options)
-      req = build_request(:list_action_types, params)
+    def list_action_types(, **options)
+      req = build_request(:list_action_types, )
       req.send_request(options)
     end
 
@@ -1399,8 +1399,8 @@ module Aws::CodePipeline
     #
     # @overload list_pipeline_executions(**params)
     # @param [Hash] params ({})
-    def list_pipeline_executions(params = {}, **options)
-      req = build_request(:list_pipeline_executions, params)
+    def list_pipeline_executions(, **options)
+      req = build_request(:list_pipeline_executions, )
       req.send_request(options)
     end
 
@@ -1436,8 +1436,8 @@ module Aws::CodePipeline
     #
     # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, **options)
-      req = build_request(:list_pipelines, params)
+    def list_pipelines(, **options)
+      req = build_request(:list_pipelines, )
       req.send_request(options)
     end
 
@@ -1481,8 +1481,8 @@ module Aws::CodePipeline
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1539,8 +1539,8 @@ module Aws::CodePipeline
     #
     # @overload list_webhooks(**params)
     # @param [Hash] params ({})
-    def list_webhooks(params = {}, **options)
-      req = build_request(:list_webhooks, params)
+    def list_webhooks(, **options)
+      req = build_request(:list_webhooks, )
       req.send_request(options)
     end
 
@@ -1628,8 +1628,8 @@ module Aws::CodePipeline
     #
     # @overload poll_for_jobs(**params)
     # @param [Hash] params ({})
-    def poll_for_jobs(params = {}, **options)
-      req = build_request(:poll_for_jobs, params)
+    def poll_for_jobs(, **options)
+      req = build_request(:poll_for_jobs, )
       req.send_request(options)
     end
 
@@ -1673,8 +1673,8 @@ module Aws::CodePipeline
     #
     # @overload poll_for_third_party_jobs(**params)
     # @param [Hash] params ({})
-    def poll_for_third_party_jobs(params = {}, **options)
-      req = build_request(:poll_for_third_party_jobs, params)
+    def poll_for_third_party_jobs(, **options)
+      req = build_request(:poll_for_third_party_jobs, )
       req.send_request(options)
     end
 
@@ -1722,8 +1722,8 @@ module Aws::CodePipeline
     #
     # @overload put_action_revision(**params)
     # @param [Hash] params ({})
-    def put_action_revision(params = {}, **options)
-      req = build_request(:put_action_revision, params)
+    def put_action_revision(, **options)
+      req = build_request(:put_action_revision, )
       req.send_request(options)
     end
 
@@ -1773,8 +1773,8 @@ module Aws::CodePipeline
     #
     # @overload put_approval_result(**params)
     # @param [Hash] params ({})
-    def put_approval_result(params = {}, **options)
-      req = build_request(:put_approval_result, params)
+    def put_approval_result(, **options)
+      req = build_request(:put_approval_result, )
       req.send_request(options)
     end
 
@@ -1805,8 +1805,8 @@ module Aws::CodePipeline
     #
     # @overload put_job_failure_result(**params)
     # @param [Hash] params ({})
-    def put_job_failure_result(params = {}, **options)
-      req = build_request(:put_job_failure_result, params)
+    def put_job_failure_result(, **options)
+      req = build_request(:put_job_failure_result, )
       req.send_request(options)
     end
 
@@ -1865,8 +1865,8 @@ module Aws::CodePipeline
     #
     # @overload put_job_success_result(**params)
     # @param [Hash] params ({})
-    def put_job_success_result(params = {}, **options)
-      req = build_request(:put_job_success_result, params)
+    def put_job_success_result(, **options)
+      req = build_request(:put_job_success_result, )
       req.send_request(options)
     end
 
@@ -1903,8 +1903,8 @@ module Aws::CodePipeline
     #
     # @overload put_third_party_job_failure_result(**params)
     # @param [Hash] params ({})
-    def put_third_party_job_failure_result(params = {}, **options)
-      req = build_request(:put_third_party_job_failure_result, params)
+    def put_third_party_job_failure_result(, **options)
+      req = build_request(:put_third_party_job_failure_result, )
       req.send_request(options)
     end
 
@@ -1960,8 +1960,8 @@ module Aws::CodePipeline
     #
     # @overload put_third_party_job_success_result(**params)
     # @param [Hash] params ({})
-    def put_third_party_job_success_result(params = {}, **options)
-      req = build_request(:put_third_party_job_success_result, params)
+    def put_third_party_job_success_result(, **options)
+      req = build_request(:put_third_party_job_success_result, )
       req.send_request(options)
     end
 
@@ -2040,8 +2040,8 @@ module Aws::CodePipeline
     #
     # @overload put_webhook(**params)
     # @param [Hash] params ({})
-    def put_webhook(params = {}, **options)
-      req = build_request(:put_webhook, params)
+    def put_webhook(, **options)
+      req = build_request(:put_webhook, )
       req.send_request(options)
     end
 
@@ -2064,8 +2064,8 @@ module Aws::CodePipeline
     #
     # @overload register_webhook_with_third_party(**params)
     # @param [Hash] params ({})
-    def register_webhook_with_third_party(params = {}, **options)
-      req = build_request(:register_webhook_with_third_party, params)
+    def register_webhook_with_third_party(, **options)
+      req = build_request(:register_webhook_with_third_party, )
       req.send_request(options)
     end
 
@@ -2110,8 +2110,8 @@ module Aws::CodePipeline
     #
     # @overload retry_stage_execution(**params)
     # @param [Hash] params ({})
-    def retry_stage_execution(params = {}, **options)
-      req = build_request(:retry_stage_execution, params)
+    def retry_stage_execution(, **options)
+      req = build_request(:retry_stage_execution, )
       req.send_request(options)
     end
 
@@ -2148,8 +2148,8 @@ module Aws::CodePipeline
     #
     # @overload start_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def start_pipeline_execution(params = {}, **options)
-      req = build_request(:start_pipeline_execution, params)
+    def start_pipeline_execution(, **options)
+      req = build_request(:start_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -2201,8 +2201,8 @@ module Aws::CodePipeline
     #
     # @overload stop_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def stop_pipeline_execution(params = {}, **options)
-      req = build_request(:stop_pipeline_execution, params)
+    def stop_pipeline_execution(, **options)
+      req = build_request(:stop_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -2234,8 +2234,8 @@ module Aws::CodePipeline
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2260,8 +2260,8 @@ module Aws::CodePipeline
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2384,8 +2384,8 @@ module Aws::CodePipeline
     #
     # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, **options)
-      req = build_request(:update_pipeline, params)
+    def update_pipeline(, **options)
+      req = build_request(:update_pipeline, )
       req.send_request(options)
     end
 

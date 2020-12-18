@@ -410,8 +410,8 @@ module Aws::Lambda
     #
     # @overload add_layer_version_permission(**params)
     # @param [Hash] params ({})
-    def add_layer_version_permission(params = {}, **options)
-      req = build_request(:add_layer_version_permission, params)
+    def add_layer_version_permission(, **options)
+      req = build_request(:add_layer_version_permission, )
       req.send_request(options)
     end
 
@@ -553,8 +553,8 @@ module Aws::Lambda
     #
     # @overload add_permission(**params)
     # @param [Hash] params ({})
-    def add_permission(params = {}, **options)
-      req = build_request(:add_permission, params)
+    def add_permission(, **options)
+      req = build_request(:add_permission, )
       req.send_request(options)
     end
 
@@ -659,8 +659,8 @@ module Aws::Lambda
     #
     # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, **options)
-      req = build_request(:create_alias, params)
+    def create_alias(, **options)
+      req = build_request(:create_alias, )
       req.send_request(options)
     end
 
@@ -713,8 +713,8 @@ module Aws::Lambda
     #
     # @overload create_code_signing_config(**params)
     # @param [Hash] params ({})
-    def create_code_signing_config(params = {}, **options)
-      req = build_request(:create_code_signing_config, params)
+    def create_code_signing_config(, **options)
+      req = build_request(:create_code_signing_config, )
       req.send_request(options)
     end
 
@@ -992,8 +992,8 @@ module Aws::Lambda
     #
     # @overload create_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def create_event_source_mapping(params = {}, **options)
-      req = build_request(:create_event_source_mapping, params)
+    def create_event_source_mapping(, **options)
+      req = build_request(:create_event_source_mapping, )
       req.send_request(options)
     end
 
@@ -1377,8 +1377,8 @@ module Aws::Lambda
     #
     # @overload create_function(**params)
     # @param [Hash] params ({})
-    def create_function(params = {}, **options)
-      req = build_request(:create_function, params)
+    def create_function(, **options)
+      req = build_request(:create_function, )
       req.send_request(options)
     end
 
@@ -1429,8 +1429,8 @@ module Aws::Lambda
     #
     # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, **options)
-      req = build_request(:delete_alias, params)
+    def delete_alias(, **options)
+      req = build_request(:delete_alias, )
       req.send_request(options)
     end
 
@@ -1452,8 +1452,8 @@ module Aws::Lambda
     #
     # @overload delete_code_signing_config(**params)
     # @param [Hash] params ({})
-    def delete_code_signing_config(params = {}, **options)
-      req = build_request(:delete_code_signing_config, params)
+    def delete_code_signing_config(, **options)
+      req = build_request(:delete_code_signing_config, )
       req.send_request(options)
     end
 
@@ -1558,8 +1558,8 @@ module Aws::Lambda
     #
     # @overload delete_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def delete_event_source_mapping(params = {}, **options)
-      req = build_request(:delete_event_source_mapping, params)
+    def delete_event_source_mapping(, **options)
+      req = build_request(:delete_event_source_mapping, )
       req.send_request(options)
     end
 
@@ -1616,8 +1616,8 @@ module Aws::Lambda
     #
     # @overload delete_function(**params)
     # @param [Hash] params ({})
-    def delete_function(params = {}, **options)
-      req = build_request(:delete_function, params)
+    def delete_function(, **options)
+      req = build_request(:delete_function, )
       req.send_request(options)
     end
 
@@ -1650,8 +1650,8 @@ module Aws::Lambda
     #
     # @overload delete_function_code_signing_config(**params)
     # @param [Hash] params ({})
-    def delete_function_code_signing_config(params = {}, **options)
-      req = build_request(:delete_function_code_signing_config, params)
+    def delete_function_code_signing_config(, **options)
+      req = build_request(:delete_function_code_signing_config, )
       req.send_request(options)
     end
 
@@ -1693,8 +1693,8 @@ module Aws::Lambda
     #
     # @overload delete_function_concurrency(**params)
     # @param [Hash] params ({})
-    def delete_function_concurrency(params = {}, **options)
-      req = build_request(:delete_function_concurrency, params)
+    def delete_function_concurrency(, **options)
+      req = build_request(:delete_function_concurrency, )
       req.send_request(options)
     end
 
@@ -1748,8 +1748,8 @@ module Aws::Lambda
     #
     # @overload delete_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def delete_function_event_invoke_config(params = {}, **options)
-      req = build_request(:delete_function_event_invoke_config, params)
+    def delete_function_event_invoke_config(, **options)
+      req = build_request(:delete_function_event_invoke_config, )
       req.send_request(options)
     end
 
@@ -1790,8 +1790,8 @@ module Aws::Lambda
     #
     # @overload delete_layer_version(**params)
     # @param [Hash] params ({})
-    def delete_layer_version(params = {}, **options)
-      req = build_request(:delete_layer_version, params)
+    def delete_layer_version(, **options)
+      req = build_request(:delete_layer_version, )
       req.send_request(options)
     end
 
@@ -1839,8 +1839,8 @@ module Aws::Lambda
     #
     # @overload delete_provisioned_concurrency_config(**params)
     # @param [Hash] params ({})
-    def delete_provisioned_concurrency_config(params = {}, **options)
-      req = build_request(:delete_provisioned_concurrency_config, params)
+    def delete_provisioned_concurrency_config(, **options)
+      req = build_request(:delete_provisioned_concurrency_config, )
       req.send_request(options)
     end
 
@@ -1893,8 +1893,8 @@ module Aws::Lambda
     #
     # @overload get_account_settings(**params)
     # @param [Hash] params ({})
-    def get_account_settings(params = {}, **options)
-      req = build_request(:get_account_settings, params)
+    def get_account_settings(, **options)
+      req = build_request(:get_account_settings, )
       req.send_request(options)
     end
 
@@ -1971,8 +1971,8 @@ module Aws::Lambda
     #
     # @overload get_alias(**params)
     # @param [Hash] params ({})
-    def get_alias(params = {}, **options)
-      req = build_request(:get_alias, params)
+    def get_alias(, **options)
+      req = build_request(:get_alias, )
       req.send_request(options)
     end
 
@@ -2005,8 +2005,8 @@ module Aws::Lambda
     #
     # @overload get_code_signing_config(**params)
     # @param [Hash] params ({})
-    def get_code_signing_config(params = {}, **options)
-      req = build_request(:get_code_signing_config, params)
+    def get_code_signing_config(, **options)
+      req = build_request(:get_code_signing_config, )
       req.send_request(options)
     end
 
@@ -2111,8 +2111,8 @@ module Aws::Lambda
     #
     # @overload get_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def get_event_source_mapping(params = {}, **options)
-      req = build_request(:get_event_source_mapping, params)
+    def get_event_source_mapping(, **options)
+      req = build_request(:get_event_source_mapping, )
       req.send_request(options)
     end
 
@@ -2273,8 +2273,8 @@ module Aws::Lambda
     #
     # @overload get_function(**params)
     # @param [Hash] params ({})
-    def get_function(params = {}, **options)
-      req = build_request(:get_function, params)
+    def get_function(, **options)
+      req = build_request(:get_function, )
       req.send_request(options)
     end
 
@@ -2315,8 +2315,8 @@ module Aws::Lambda
     #
     # @overload get_function_code_signing_config(**params)
     # @param [Hash] params ({})
-    def get_function_code_signing_config(params = {}, **options)
-      req = build_request(:get_function_code_signing_config, params)
+    def get_function_code_signing_config(, **options)
+      req = build_request(:get_function_code_signing_config, )
       req.send_request(options)
     end
 
@@ -2371,8 +2371,8 @@ module Aws::Lambda
     #
     # @overload get_function_concurrency(**params)
     # @param [Hash] params ({})
-    def get_function_concurrency(params = {}, **options)
-      req = build_request(:get_function_concurrency, params)
+    def get_function_concurrency(, **options)
+      req = build_request(:get_function_concurrency, )
       req.send_request(options)
     end
 
@@ -2547,8 +2547,8 @@ module Aws::Lambda
     #
     # @overload get_function_configuration(**params)
     # @param [Hash] params ({})
-    def get_function_configuration(params = {}, **options)
-      req = build_request(:get_function_configuration, params)
+    def get_function_configuration(, **options)
+      req = build_request(:get_function_configuration, )
       req.send_request(options)
     end
 
@@ -2632,8 +2632,8 @@ module Aws::Lambda
     #
     # @overload get_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def get_function_event_invoke_config(params = {}, **options)
-      req = build_request(:get_function_event_invoke_config, params)
+    def get_function_event_invoke_config(, **options)
+      req = build_request(:get_function_event_invoke_config, )
       req.send_request(options)
     end
 
@@ -2717,8 +2717,8 @@ module Aws::Lambda
     #
     # @overload get_layer_version(**params)
     # @param [Hash] params ({})
-    def get_layer_version(params = {}, **options)
-      req = build_request(:get_layer_version, params)
+    def get_layer_version(, **options)
+      req = build_request(:get_layer_version, )
       req.send_request(options)
     end
 
@@ -2795,8 +2795,8 @@ module Aws::Lambda
     #
     # @overload get_layer_version_by_arn(**params)
     # @param [Hash] params ({})
-    def get_layer_version_by_arn(params = {}, **options)
-      req = build_request(:get_layer_version_by_arn, params)
+    def get_layer_version_by_arn(, **options)
+      req = build_request(:get_layer_version_by_arn, )
       req.send_request(options)
     end
 
@@ -2834,8 +2834,8 @@ module Aws::Lambda
     #
     # @overload get_layer_version_policy(**params)
     # @param [Hash] params ({})
-    def get_layer_version_policy(params = {}, **options)
-      req = build_request(:get_layer_version_policy, params)
+    def get_layer_version_policy(, **options)
+      req = build_request(:get_layer_version_policy, )
       req.send_request(options)
     end
 
@@ -2903,8 +2903,8 @@ module Aws::Lambda
     #
     # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, **options)
-      req = build_request(:get_policy, params)
+    def get_policy(, **options)
+      req = build_request(:get_policy, )
       req.send_request(options)
     end
 
@@ -2997,8 +2997,8 @@ module Aws::Lambda
     #
     # @overload get_provisioned_concurrency_config(**params)
     # @param [Hash] params ({})
-    def get_provisioned_concurrency_config(params = {}, **options)
-      req = build_request(:get_provisioned_concurrency_config, params)
+    def get_provisioned_concurrency_config(, **options)
+      req = build_request(:get_provisioned_concurrency_config, )
       req.send_request(options)
     end
 
@@ -3163,8 +3163,8 @@ module Aws::Lambda
     #
     # @overload invoke(**params)
     # @param [Hash] params ({})
-    def invoke(params = {}, **options)
-      req = build_request(:invoke, params)
+    def invoke(, **options)
+      req = build_request(:invoke, )
       req.send_request(options)
     end
 
@@ -3224,8 +3224,8 @@ module Aws::Lambda
     #
     # @overload invoke_async(**params)
     # @param [Hash] params ({})
-    def invoke_async(params = {}, **options)
-      req = build_request(:invoke_async, params)
+    def invoke_async(, **options)
+      req = build_request(:invoke_async, )
       req.send_request(options)
     end
 
@@ -3327,8 +3327,8 @@ module Aws::Lambda
     #
     # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, **options)
-      req = build_request(:list_aliases, params)
+    def list_aliases(, **options)
+      req = build_request(:list_aliases, )
       req.send_request(options)
     end
 
@@ -3377,8 +3377,8 @@ module Aws::Lambda
     #
     # @overload list_code_signing_configs(**params)
     # @param [Hash] params ({})
-    def list_code_signing_configs(params = {}, **options)
-      req = build_request(:list_code_signing_configs, params)
+    def list_code_signing_configs(, **options)
+      req = build_request(:list_code_signing_configs, )
       req.send_request(options)
     end
 
@@ -3501,8 +3501,8 @@ module Aws::Lambda
     #
     # @overload list_event_source_mappings(**params)
     # @param [Hash] params ({})
-    def list_event_source_mappings(params = {}, **options)
-      req = build_request(:list_event_source_mappings, params)
+    def list_event_source_mappings(, **options)
+      req = build_request(:list_event_source_mappings, )
       req.send_request(options)
     end
 
@@ -3591,8 +3591,8 @@ module Aws::Lambda
     #
     # @overload list_function_event_invoke_configs(**params)
     # @param [Hash] params ({})
-    def list_function_event_invoke_configs(params = {}, **options)
-      req = build_request(:list_function_event_invoke_configs, params)
+    def list_function_event_invoke_configs(, **options)
+      req = build_request(:list_function_event_invoke_configs, )
       req.send_request(options)
     end
 
@@ -3753,8 +3753,8 @@ module Aws::Lambda
     #
     # @overload list_functions(**params)
     # @param [Hash] params ({})
-    def list_functions(params = {}, **options)
-      req = build_request(:list_functions, params)
+    def list_functions(, **options)
+      req = build_request(:list_functions, )
       req.send_request(options)
     end
 
@@ -3797,8 +3797,8 @@ module Aws::Lambda
     #
     # @overload list_functions_by_code_signing_config(**params)
     # @param [Hash] params ({})
-    def list_functions_by_code_signing_config(params = {}, **options)
-      req = build_request(:list_functions_by_code_signing_config, params)
+    def list_functions_by_code_signing_config(, **options)
+      req = build_request(:list_functions_by_code_signing_config, )
       req.send_request(options)
     end
 
@@ -3889,8 +3889,8 @@ module Aws::Lambda
     #
     # @overload list_layer_versions(**params)
     # @param [Hash] params ({})
-    def list_layer_versions(params = {}, **options)
-      req = build_request(:list_layer_versions, params)
+    def list_layer_versions(, **options)
+      req = build_request(:list_layer_versions, )
       req.send_request(options)
     end
 
@@ -3974,8 +3974,8 @@ module Aws::Lambda
     #
     # @overload list_layers(**params)
     # @param [Hash] params ({})
-    def list_layers(params = {}, **options)
-      req = build_request(:list_layers, params)
+    def list_layers(, **options)
+      req = build_request(:list_layers, )
       req.send_request(options)
     end
 
@@ -4066,8 +4066,8 @@ module Aws::Lambda
     #
     # @overload list_provisioned_concurrency_configs(**params)
     # @param [Hash] params ({})
-    def list_provisioned_concurrency_configs(params = {}, **options)
-      req = build_request(:list_provisioned_concurrency_configs, params)
+    def list_provisioned_concurrency_configs(, **options)
+      req = build_request(:list_provisioned_concurrency_configs, )
       req.send_request(options)
     end
 
@@ -4117,8 +4117,8 @@ module Aws::Lambda
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -4290,8 +4290,8 @@ module Aws::Lambda
     #
     # @overload list_versions_by_function(**params)
     # @param [Hash] params ({})
-    def list_versions_by_function(params = {}, **options)
-      req = build_request(:list_versions_by_function, params)
+    def list_versions_by_function(, **options)
+      req = build_request(:list_versions_by_function, )
       req.send_request(options)
     end
 
@@ -4422,8 +4422,8 @@ module Aws::Lambda
     #
     # @overload publish_layer_version(**params)
     # @param [Hash] params ({})
-    def publish_layer_version(params = {}, **options)
-      req = build_request(:publish_layer_version, params)
+    def publish_layer_version(, **options)
+      req = build_request(:publish_layer_version, )
       req.send_request(options)
     end
 
@@ -4614,8 +4614,8 @@ module Aws::Lambda
     #
     # @overload publish_version(**params)
     # @param [Hash] params ({})
-    def publish_version(params = {}, **options)
-      req = build_request(:publish_version, params)
+    def publish_version(, **options)
+      req = build_request(:publish_version, )
       req.send_request(options)
     end
 
@@ -4662,8 +4662,8 @@ module Aws::Lambda
     #
     # @overload put_function_code_signing_config(**params)
     # @param [Hash] params ({})
-    def put_function_code_signing_config(params = {}, **options)
-      req = build_request(:put_function_code_signing_config, params)
+    def put_function_code_signing_config(, **options)
+      req = build_request(:put_function_code_signing_config, )
       req.send_request(options)
     end
 
@@ -4738,8 +4738,8 @@ module Aws::Lambda
     #
     # @overload put_function_concurrency(**params)
     # @param [Hash] params ({})
-    def put_function_concurrency(params = {}, **options)
-      req = build_request(:put_function_concurrency, params)
+    def put_function_concurrency(, **options)
+      req = build_request(:put_function_concurrency, )
       req.send_request(options)
     end
 
@@ -4873,8 +4873,8 @@ module Aws::Lambda
     #
     # @overload put_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def put_function_event_invoke_config(params = {}, **options)
-      req = build_request(:put_function_event_invoke_config, params)
+    def put_function_event_invoke_config(, **options)
+      req = build_request(:put_function_event_invoke_config, )
       req.send_request(options)
     end
 
@@ -4952,8 +4952,8 @@ module Aws::Lambda
     #
     # @overload put_provisioned_concurrency_config(**params)
     # @param [Hash] params ({})
-    def put_provisioned_concurrency_config(params = {}, **options)
-      req = build_request(:put_provisioned_concurrency_config, params)
+    def put_provisioned_concurrency_config(, **options)
+      req = build_request(:put_provisioned_concurrency_config, )
       req.send_request(options)
     end
 
@@ -5005,8 +5005,8 @@ module Aws::Lambda
     #
     # @overload remove_layer_version_permission(**params)
     # @param [Hash] params ({})
-    def remove_layer_version_permission(params = {}, **options)
-      req = build_request(:remove_layer_version_permission, params)
+    def remove_layer_version_permission(, **options)
+      req = build_request(:remove_layer_version_permission, )
       req.send_request(options)
     end
 
@@ -5070,8 +5070,8 @@ module Aws::Lambda
     #
     # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, **options)
-      req = build_request(:remove_permission, params)
+    def remove_permission(, **options)
+      req = build_request(:remove_permission, )
       req.send_request(options)
     end
 
@@ -5115,8 +5115,8 @@ module Aws::Lambda
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5157,8 +5157,8 @@ module Aws::Lambda
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5272,8 +5272,8 @@ module Aws::Lambda
     #
     # @overload update_alias(**params)
     # @param [Hash] params ({})
-    def update_alias(params = {}, **options)
-      req = build_request(:update_alias, params)
+    def update_alias(, **options)
+      req = build_request(:update_alias, )
       req.send_request(options)
     end
 
@@ -5324,8 +5324,8 @@ module Aws::Lambda
     #
     # @overload update_code_signing_config(**params)
     # @param [Hash] params ({})
-    def update_code_signing_config(params = {}, **options)
-      req = build_request(:update_code_signing_config, params)
+    def update_code_signing_config(, **options)
+      req = build_request(:update_code_signing_config, )
       req.send_request(options)
     end
 
@@ -5546,8 +5546,8 @@ module Aws::Lambda
     #
     # @overload update_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def update_event_source_mapping(params = {}, **options)
-      req = build_request(:update_event_source_mapping, params)
+    def update_event_source_mapping(, **options)
+      req = build_request(:update_event_source_mapping, )
       req.send_request(options)
     end
 
@@ -5752,8 +5752,8 @@ module Aws::Lambda
     #
     # @overload update_function_code(**params)
     # @param [Hash] params ({})
-    def update_function_code(params = {}, **options)
-      req = build_request(:update_function_code, params)
+    def update_function_code(, **options)
+      req = build_request(:update_function_code, )
       req.send_request(options)
     end
 
@@ -6043,8 +6043,8 @@ module Aws::Lambda
     #
     # @overload update_function_configuration(**params)
     # @param [Hash] params ({})
-    def update_function_configuration(params = {}, **options)
-      req = build_request(:update_function_configuration, params)
+    def update_function_configuration(, **options)
+      req = build_request(:update_function_configuration, )
       req.send_request(options)
     end
 
@@ -6164,8 +6164,8 @@ module Aws::Lambda
     #
     # @overload update_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def update_function_event_invoke_config(params = {}, **options)
-      req = build_request(:update_function_event_invoke_config, params)
+    def update_function_event_invoke_config(, **options)
+      req = build_request(:update_function_event_invoke_config, )
       req.send_request(options)
     end
 

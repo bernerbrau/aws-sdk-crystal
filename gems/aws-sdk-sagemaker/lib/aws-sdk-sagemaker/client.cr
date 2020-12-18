@@ -393,8 +393,8 @@ module Aws::SageMaker
     #
     # @overload add_association(**params)
     # @param [Hash] params ({})
-    def add_association(params = {}, **options)
-      req = build_request(:add_association, params)
+    def add_association(, **options)
+      req = build_request(:add_association, )
       req.send_request(options)
     end
 
@@ -461,8 +461,8 @@ module Aws::SageMaker
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -497,8 +497,8 @@ module Aws::SageMaker
     #
     # @overload associate_trial_component(**params)
     # @param [Hash] params ({})
-    def associate_trial_component(params = {}, **options)
-      req = build_request(:associate_trial_component, params)
+    def associate_trial_component(, **options)
+      req = build_request(:associate_trial_component, )
       req.send_request(options)
     end
 
@@ -578,8 +578,8 @@ module Aws::SageMaker
     #
     # @overload create_action(**params)
     # @param [Hash] params ({})
-    def create_action(params = {}, **options)
-      req = build_request(:create_action, params)
+    def create_action(, **options)
+      req = build_request(:create_action, )
       req.send_request(options)
     end
 
@@ -822,8 +822,8 @@ module Aws::SageMaker
     #
     # @overload create_algorithm(**params)
     # @param [Hash] params ({})
-    def create_algorithm(params = {}, **options)
-      req = build_request(:create_algorithm, params)
+    def create_algorithm(, **options)
+      req = build_request(:create_algorithm, )
       req.send_request(options)
     end
 
@@ -885,8 +885,8 @@ module Aws::SageMaker
     #
     # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, **options)
-      req = build_request(:create_app, params)
+    def create_app(, **options)
+      req = build_request(:create_app, )
       req.send_request(options)
     end
 
@@ -941,8 +941,8 @@ module Aws::SageMaker
     #
     # @overload create_app_image_config(**params)
     # @param [Hash] params ({})
-    def create_app_image_config(params = {}, **options)
-      req = build_request(:create_app_image_config, params)
+    def create_app_image_config(, **options)
+      req = build_request(:create_app_image_config, )
       req.send_request(options)
     end
 
@@ -1017,8 +1017,8 @@ module Aws::SageMaker
     #
     # @overload create_artifact(**params)
     # @param [Hash] params ({})
-    def create_artifact(params = {}, **options)
-      req = build_request(:create_artifact, params)
+    def create_artifact(, **options)
+      req = build_request(:create_artifact, )
       req.send_request(options)
     end
 
@@ -1135,8 +1135,8 @@ module Aws::SageMaker
     #
     # @overload create_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def create_auto_ml_job(params = {}, **options)
-      req = build_request(:create_auto_ml_job, params)
+    def create_auto_ml_job(, **options)
+      req = build_request(:create_auto_ml_job, )
       req.send_request(options)
     end
 
@@ -1202,8 +1202,8 @@ module Aws::SageMaker
     #
     # @overload create_code_repository(**params)
     # @param [Hash] params ({})
-    def create_code_repository(params = {}, **options)
-      req = build_request(:create_code_repository, params)
+    def create_code_repository(, **options)
+      req = build_request(:create_code_repository, )
       req.send_request(options)
     end
 
@@ -1332,8 +1332,8 @@ module Aws::SageMaker
     #
     # @overload create_compilation_job(**params)
     # @param [Hash] params ({})
-    def create_compilation_job(params = {}, **options)
-      req = build_request(:create_compilation_job, params)
+    def create_compilation_job(, **options)
+      req = build_request(:create_compilation_job, )
       req.send_request(options)
     end
 
@@ -1399,8 +1399,8 @@ module Aws::SageMaker
     #
     # @overload create_context(**params)
     # @param [Hash] params ({})
-    def create_context(params = {}, **options)
-      req = build_request(:create_context, params)
+    def create_context(, **options)
+      req = build_request(:create_context, )
       req.send_request(options)
     end
 
@@ -1540,8 +1540,8 @@ module Aws::SageMaker
     #
     # @overload create_data_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def create_data_quality_job_definition(params = {}, **options)
-      req = build_request(:create_data_quality_job_definition, params)
+    def create_data_quality_job_definition(, **options)
+      req = build_request(:create_data_quality_job_definition, )
       req.send_request(options)
     end
 
@@ -1588,8 +1588,8 @@ module Aws::SageMaker
     #
     # @overload create_device_fleet(**params)
     # @param [Hash] params ({})
-    def create_device_fleet(params = {}, **options)
-      req = build_request(:create_device_fleet, params)
+    def create_device_fleet(, **options)
+      req = build_request(:create_device_fleet, )
       req.send_request(options)
     end
 
@@ -1751,8 +1751,8 @@ module Aws::SageMaker
     #
     # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, **options)
-      req = build_request(:create_domain, params)
+    def create_domain(, **options)
+      req = build_request(:create_domain, )
       req.send_request(options)
     end
 
@@ -1816,8 +1816,8 @@ module Aws::SageMaker
     #
     # @overload create_edge_packaging_job(**params)
     # @param [Hash] params ({})
-    def create_edge_packaging_job(params = {}, **options)
-      req = build_request(:create_edge_packaging_job, params)
+    def create_edge_packaging_job(, **options)
+      req = build_request(:create_edge_packaging_job, )
       req.send_request(options)
     end
 
@@ -1955,8 +1955,8 @@ module Aws::SageMaker
     #
     # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, **options)
-      req = build_request(:create_endpoint, params)
+    def create_endpoint(, **options)
+      req = build_request(:create_endpoint, )
       req.send_request(options)
     end
 
@@ -2121,8 +2121,8 @@ module Aws::SageMaker
     #
     # @overload create_endpoint_config(**params)
     # @param [Hash] params ({})
-    def create_endpoint_config(params = {}, **options)
-      req = build_request(:create_endpoint_config, params)
+    def create_endpoint_config(, **options)
+      req = build_request(:create_endpoint_config, )
       req.send_request(options)
     end
 
@@ -2195,8 +2195,8 @@ module Aws::SageMaker
     #
     # @overload create_experiment(**params)
     # @param [Hash] params ({})
-    def create_experiment(params = {}, **options)
-      req = build_request(:create_experiment, params)
+    def create_experiment(, **options)
+      req = build_request(:create_experiment, )
       req.send_request(options)
     end
 
@@ -2362,8 +2362,8 @@ module Aws::SageMaker
     #
     # @overload create_feature_group(**params)
     # @param [Hash] params ({})
-    def create_feature_group(params = {}, **options)
-      req = build_request(:create_feature_group, params)
+    def create_feature_group(, **options)
+      req = build_request(:create_feature_group, )
       req.send_request(options)
     end
 
@@ -2453,8 +2453,8 @@ module Aws::SageMaker
     #
     # @overload create_flow_definition(**params)
     # @param [Hash] params ({})
-    def create_flow_definition(params = {}, **options)
-      req = build_request(:create_flow_definition, params)
+    def create_flow_definition(, **options)
+      req = build_request(:create_flow_definition, )
       req.send_request(options)
     end
 
@@ -2500,8 +2500,8 @@ module Aws::SageMaker
     #
     # @overload create_human_task_ui(**params)
     # @param [Hash] params ({})
-    def create_human_task_ui(params = {}, **options)
-      req = build_request(:create_human_task_ui, params)
+    def create_human_task_ui(, **options)
+      req = build_request(:create_human_task_ui, )
       req.send_request(options)
     end
 
@@ -2840,8 +2840,8 @@ module Aws::SageMaker
     #
     # @overload create_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def create_hyper_parameter_tuning_job(params = {}, **options)
-      req = build_request(:create_hyper_parameter_tuning_job, params)
+    def create_hyper_parameter_tuning_job(, **options)
+      req = build_request(:create_hyper_parameter_tuning_job, )
       req.send_request(options)
     end
 
@@ -2898,8 +2898,8 @@ module Aws::SageMaker
     #
     # @overload create_image(**params)
     # @param [Hash] params ({})
-    def create_image(params = {}, **options)
-      req = build_request(:create_image, params)
+    def create_image(, **options)
+      req = build_request(:create_image, )
       req.send_request(options)
     end
 
@@ -2945,8 +2945,8 @@ module Aws::SageMaker
     #
     # @overload create_image_version(**params)
     # @param [Hash] params ({})
-    def create_image_version(params = {}, **options)
-      req = build_request(:create_image_version, params)
+    def create_image_version(, **options)
+      req = build_request(:create_image_version, )
       req.send_request(options)
     end
 
@@ -3165,8 +3165,8 @@ module Aws::SageMaker
     #
     # @overload create_labeling_job(**params)
     # @param [Hash] params ({})
-    def create_labeling_job(params = {}, **options)
-      req = build_request(:create_labeling_job, params)
+    def create_labeling_job(, **options)
+      req = build_request(:create_labeling_job, )
       req.send_request(options)
     end
 
@@ -3318,8 +3318,8 @@ module Aws::SageMaker
     #
     # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, **options)
-      req = build_request(:create_model, params)
+    def create_model(, **options)
+      req = build_request(:create_model, )
       req.send_request(options)
     end
 
@@ -3451,8 +3451,8 @@ module Aws::SageMaker
     #
     # @overload create_model_bias_job_definition(**params)
     # @param [Hash] params ({})
-    def create_model_bias_job_definition(params = {}, **options)
-      req = build_request(:create_model_bias_job_definition, params)
+    def create_model_bias_job_definition(, **options)
+      req = build_request(:create_model_bias_job_definition, )
       req.send_request(options)
     end
 
@@ -3581,8 +3581,8 @@ module Aws::SageMaker
     #
     # @overload create_model_explainability_job_definition(**params)
     # @param [Hash] params ({})
-    def create_model_explainability_job_definition(params = {}, **options)
-      req = build_request(:create_model_explainability_job_definition, params)
+    def create_model_explainability_job_definition(, **options)
+      req = build_request(:create_model_explainability_job_definition, )
       req.send_request(options)
     end
 
@@ -3815,8 +3815,8 @@ module Aws::SageMaker
     #
     # @overload create_model_package(**params)
     # @param [Hash] params ({})
-    def create_model_package(params = {}, **options)
-      req = build_request(:create_model_package, params)
+    def create_model_package(, **options)
+      req = build_request(:create_model_package, )
       req.send_request(options)
     end
 
@@ -3863,8 +3863,8 @@ module Aws::SageMaker
     #
     # @overload create_model_package_group(**params)
     # @param [Hash] params ({})
-    def create_model_package_group(params = {}, **options)
-      req = build_request(:create_model_package_group, params)
+    def create_model_package_group(, **options)
+      req = build_request(:create_model_package_group, )
       req.send_request(options)
     end
 
@@ -4005,8 +4005,8 @@ module Aws::SageMaker
     #
     # @overload create_model_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def create_model_quality_job_definition(params = {}, **options)
-      req = build_request(:create_model_quality_job_definition, params)
+    def create_model_quality_job_definition(, **options)
+      req = build_request(:create_model_quality_job_definition, )
       req.send_request(options)
     end
 
@@ -4127,8 +4127,8 @@ module Aws::SageMaker
     #
     # @overload create_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def create_monitoring_schedule(params = {}, **options)
-      req = build_request(:create_monitoring_schedule, params)
+    def create_monitoring_schedule(, **options)
+      req = build_request(:create_monitoring_schedule, )
       req.send_request(options)
     end
 
@@ -4344,8 +4344,8 @@ module Aws::SageMaker
     #
     # @overload create_notebook_instance(**params)
     # @param [Hash] params ({})
-    def create_notebook_instance(params = {}, **options)
-      req = build_request(:create_notebook_instance, params)
+    def create_notebook_instance(, **options)
+      req = build_request(:create_notebook_instance, )
       req.send_request(options)
     end
 
@@ -4413,8 +4413,8 @@ module Aws::SageMaker
     #
     # @overload create_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def create_notebook_instance_lifecycle_config(params = {}, **options)
-      req = build_request(:create_notebook_instance_lifecycle_config, params)
+    def create_notebook_instance_lifecycle_config(, **options)
+      req = build_request(:create_notebook_instance_lifecycle_config, )
       req.send_request(options)
     end
 
@@ -4476,8 +4476,8 @@ module Aws::SageMaker
     #
     # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, **options)
-      req = build_request(:create_pipeline, params)
+    def create_pipeline(, **options)
+      req = build_request(:create_pipeline, )
       req.send_request(options)
     end
 
@@ -4523,8 +4523,8 @@ module Aws::SageMaker
     #
     # @overload create_presigned_domain_url(**params)
     # @param [Hash] params ({})
-    def create_presigned_domain_url(params = {}, **options)
-      req = build_request(:create_presigned_domain_url, params)
+    def create_presigned_domain_url(, **options)
+      req = build_request(:create_presigned_domain_url, )
       req.send_request(options)
     end
 
@@ -4584,8 +4584,8 @@ module Aws::SageMaker
     #
     # @overload create_presigned_notebook_instance_url(**params)
     # @param [Hash] params ({})
-    def create_presigned_notebook_instance_url(params = {}, **options)
-      req = build_request(:create_presigned_notebook_instance_url, params)
+    def create_presigned_notebook_instance_url(, **options)
+      req = build_request(:create_presigned_notebook_instance_url, )
       req.send_request(options)
     end
 
@@ -4756,8 +4756,8 @@ module Aws::SageMaker
     #
     # @overload create_processing_job(**params)
     # @param [Hash] params ({})
-    def create_processing_job(params = {}, **options)
-      req = build_request(:create_processing_job, params)
+    def create_processing_job(, **options)
+      req = build_request(:create_processing_job, )
       req.send_request(options)
     end
 
@@ -4826,8 +4826,8 @@ module Aws::SageMaker
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -5222,8 +5222,8 @@ module Aws::SageMaker
     #
     # @overload create_training_job(**params)
     # @param [Hash] params ({})
-    def create_training_job(params = {}, **options)
-      req = build_request(:create_training_job, params)
+    def create_training_job(, **options)
+      req = build_request(:create_training_job, )
       req.send_request(options)
     end
 
@@ -5432,8 +5432,8 @@ module Aws::SageMaker
     #
     # @overload create_transform_job(**params)
     # @param [Hash] params ({})
-    def create_transform_job(params = {}, **options)
-      req = build_request(:create_transform_job, params)
+    def create_transform_job(, **options)
+      req = build_request(:create_transform_job, )
       req.send_request(options)
     end
 
@@ -5503,8 +5503,8 @@ module Aws::SageMaker
     #
     # @overload create_trial(**params)
     # @param [Hash] params ({})
-    def create_trial(params = {}, **options)
-      req = build_request(:create_trial, params)
+    def create_trial(, **options)
+      req = build_request(:create_trial, )
       req.send_request(options)
     end
 
@@ -5629,8 +5629,8 @@ module Aws::SageMaker
     #
     # @overload create_trial_component(**params)
     # @param [Hash] params ({})
-    def create_trial_component(params = {}, **options)
-      req = build_request(:create_trial_component, params)
+    def create_trial_component(, **options)
+      req = build_request(:create_trial_component, )
       req.send_request(options)
     end
 
@@ -5732,8 +5732,8 @@ module Aws::SageMaker
     #
     # @overload create_user_profile(**params)
     # @param [Hash] params ({})
-    def create_user_profile(params = {}, **options)
-      req = build_request(:create_user_profile, params)
+    def create_user_profile(, **options)
+      req = build_request(:create_user_profile, )
       req.send_request(options)
     end
 
@@ -5838,8 +5838,8 @@ module Aws::SageMaker
     #
     # @overload create_workforce(**params)
     # @param [Hash] params ({})
-    def create_workforce(params = {}, **options)
-      req = build_request(:create_workforce, params)
+    def create_workforce(, **options)
+      req = build_request(:create_workforce, )
       req.send_request(options)
     end
 
@@ -5940,8 +5940,8 @@ module Aws::SageMaker
     #
     # @overload create_workteam(**params)
     # @param [Hash] params ({})
-    def create_workteam(params = {}, **options)
-      req = build_request(:create_workteam, params)
+    def create_workteam(, **options)
+      req = build_request(:create_workteam, )
       req.send_request(options)
     end
 
@@ -5968,8 +5968,8 @@ module Aws::SageMaker
     #
     # @overload delete_action(**params)
     # @param [Hash] params ({})
-    def delete_action(params = {}, **options)
-      req = build_request(:delete_action, params)
+    def delete_action(, **options)
+      req = build_request(:delete_action, )
       req.send_request(options)
     end
 
@@ -5990,8 +5990,8 @@ module Aws::SageMaker
     #
     # @overload delete_algorithm(**params)
     # @param [Hash] params ({})
-    def delete_algorithm(params = {}, **options)
-      req = build_request(:delete_algorithm, params)
+    def delete_algorithm(, **options)
+      req = build_request(:delete_algorithm, )
       req.send_request(options)
     end
 
@@ -6024,8 +6024,8 @@ module Aws::SageMaker
     #
     # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, **options)
-      req = build_request(:delete_app, params)
+    def delete_app(, **options)
+      req = build_request(:delete_app, )
       req.send_request(options)
     end
 
@@ -6046,8 +6046,8 @@ module Aws::SageMaker
     #
     # @overload delete_app_image_config(**params)
     # @param [Hash] params ({})
-    def delete_app_image_config(params = {}, **options)
-      req = build_request(:delete_app_image_config, params)
+    def delete_app_image_config(, **options)
+      req = build_request(:delete_app_image_config, )
       req.send_request(options)
     end
 
@@ -6087,8 +6087,8 @@ module Aws::SageMaker
     #
     # @overload delete_artifact(**params)
     # @param [Hash] params ({})
-    def delete_artifact(params = {}, **options)
-      req = build_request(:delete_artifact, params)
+    def delete_artifact(, **options)
+      req = build_request(:delete_artifact, )
       req.send_request(options)
     end
 
@@ -6121,8 +6121,8 @@ module Aws::SageMaker
     #
     # @overload delete_association(**params)
     # @param [Hash] params ({})
-    def delete_association(params = {}, **options)
-      req = build_request(:delete_association, params)
+    def delete_association(, **options)
+      req = build_request(:delete_association, )
       req.send_request(options)
     end
 
@@ -6143,8 +6143,8 @@ module Aws::SageMaker
     #
     # @overload delete_code_repository(**params)
     # @param [Hash] params ({})
-    def delete_code_repository(params = {}, **options)
-      req = build_request(:delete_code_repository, params)
+    def delete_code_repository(, **options)
+      req = build_request(:delete_code_repository, )
       req.send_request(options)
     end
 
@@ -6171,8 +6171,8 @@ module Aws::SageMaker
     #
     # @overload delete_context(**params)
     # @param [Hash] params ({})
-    def delete_context(params = {}, **options)
-      req = build_request(:delete_context, params)
+    def delete_context(, **options)
+      req = build_request(:delete_context, )
       req.send_request(options)
     end
 
@@ -6193,8 +6193,8 @@ module Aws::SageMaker
     #
     # @overload delete_data_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_data_quality_job_definition(params = {}, **options)
-      req = build_request(:delete_data_quality_job_definition, params)
+    def delete_data_quality_job_definition(, **options)
+      req = build_request(:delete_data_quality_job_definition, )
       req.send_request(options)
     end
 
@@ -6215,8 +6215,8 @@ module Aws::SageMaker
     #
     # @overload delete_device_fleet(**params)
     # @param [Hash] params ({})
-    def delete_device_fleet(params = {}, **options)
-      req = build_request(:delete_device_fleet, params)
+    def delete_device_fleet(, **options)
+      req = build_request(:delete_device_fleet, )
       req.send_request(options)
     end
 
@@ -6248,8 +6248,8 @@ module Aws::SageMaker
     #
     # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, **options)
-      req = build_request(:delete_domain, params)
+    def delete_domain(, **options)
+      req = build_request(:delete_domain, )
       req.send_request(options)
     end
 
@@ -6279,8 +6279,8 @@ module Aws::SageMaker
     #
     # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, **options)
-      req = build_request(:delete_endpoint, params)
+    def delete_endpoint(, **options)
+      req = build_request(:delete_endpoint, )
       req.send_request(options)
     end
 
@@ -6310,8 +6310,8 @@ module Aws::SageMaker
     #
     # @overload delete_endpoint_config(**params)
     # @param [Hash] params ({})
-    def delete_endpoint_config(params = {}, **options)
-      req = build_request(:delete_endpoint_config, params)
+    def delete_endpoint_config(, **options)
+      req = build_request(:delete_endpoint_config, )
       req.send_request(options)
     end
 
@@ -6340,8 +6340,8 @@ module Aws::SageMaker
     #
     # @overload delete_experiment(**params)
     # @param [Hash] params ({})
-    def delete_experiment(params = {}, **options)
-      req = build_request(:delete_experiment, params)
+    def delete_experiment(, **options)
+      req = build_request(:delete_experiment, )
       req.send_request(options)
     end
 
@@ -6369,8 +6369,8 @@ module Aws::SageMaker
     #
     # @overload delete_feature_group(**params)
     # @param [Hash] params ({})
-    def delete_feature_group(params = {}, **options)
-      req = build_request(:delete_feature_group, params)
+    def delete_feature_group(, **options)
+      req = build_request(:delete_feature_group, )
       req.send_request(options)
     end
 
@@ -6391,8 +6391,8 @@ module Aws::SageMaker
     #
     # @overload delete_flow_definition(**params)
     # @param [Hash] params ({})
-    def delete_flow_definition(params = {}, **options)
-      req = build_request(:delete_flow_definition, params)
+    def delete_flow_definition(, **options)
+      req = build_request(:delete_flow_definition, )
       req.send_request(options)
     end
 
@@ -6419,8 +6419,8 @@ module Aws::SageMaker
     #
     # @overload delete_human_task_ui(**params)
     # @param [Hash] params ({})
-    def delete_human_task_ui(params = {}, **options)
-      req = build_request(:delete_human_task_ui, params)
+    def delete_human_task_ui(, **options)
+      req = build_request(:delete_human_task_ui, )
       req.send_request(options)
     end
 
@@ -6442,8 +6442,8 @@ module Aws::SageMaker
     #
     # @overload delete_image(**params)
     # @param [Hash] params ({})
-    def delete_image(params = {}, **options)
-      req = build_request(:delete_image, params)
+    def delete_image(, **options)
+      req = build_request(:delete_image, )
       req.send_request(options)
     end
 
@@ -6469,8 +6469,8 @@ module Aws::SageMaker
     #
     # @overload delete_image_version(**params)
     # @param [Hash] params ({})
-    def delete_image_version(params = {}, **options)
-      req = build_request(:delete_image_version, params)
+    def delete_image_version(, **options)
+      req = build_request(:delete_image_version, )
       req.send_request(options)
     end
 
@@ -6494,8 +6494,8 @@ module Aws::SageMaker
     #
     # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, **options)
-      req = build_request(:delete_model, params)
+    def delete_model(, **options)
+      req = build_request(:delete_model, )
       req.send_request(options)
     end
 
@@ -6516,8 +6516,8 @@ module Aws::SageMaker
     #
     # @overload delete_model_bias_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_model_bias_job_definition(params = {}, **options)
-      req = build_request(:delete_model_bias_job_definition, params)
+    def delete_model_bias_job_definition(, **options)
+      req = build_request(:delete_model_bias_job_definition, )
       req.send_request(options)
     end
 
@@ -6538,8 +6538,8 @@ module Aws::SageMaker
     #
     # @overload delete_model_explainability_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_model_explainability_job_definition(params = {}, **options)
-      req = build_request(:delete_model_explainability_job_definition, params)
+    def delete_model_explainability_job_definition(, **options)
+      req = build_request(:delete_model_explainability_job_definition, )
       req.send_request(options)
     end
 
@@ -6565,8 +6565,8 @@ module Aws::SageMaker
     #
     # @overload delete_model_package(**params)
     # @param [Hash] params ({})
-    def delete_model_package(params = {}, **options)
-      req = build_request(:delete_model_package, params)
+    def delete_model_package(, **options)
+      req = build_request(:delete_model_package, )
       req.send_request(options)
     end
 
@@ -6587,8 +6587,8 @@ module Aws::SageMaker
     #
     # @overload delete_model_package_group(**params)
     # @param [Hash] params ({})
-    def delete_model_package_group(params = {}, **options)
-      req = build_request(:delete_model_package_group, params)
+    def delete_model_package_group(, **options)
+      req = build_request(:delete_model_package_group, )
       req.send_request(options)
     end
 
@@ -6609,8 +6609,8 @@ module Aws::SageMaker
     #
     # @overload delete_model_package_group_policy(**params)
     # @param [Hash] params ({})
-    def delete_model_package_group_policy(params = {}, **options)
-      req = build_request(:delete_model_package_group_policy, params)
+    def delete_model_package_group_policy(, **options)
+      req = build_request(:delete_model_package_group_policy, )
       req.send_request(options)
     end
 
@@ -6631,8 +6631,8 @@ module Aws::SageMaker
     #
     # @overload delete_model_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_model_quality_job_definition(params = {}, **options)
-      req = build_request(:delete_model_quality_job_definition, params)
+    def delete_model_quality_job_definition(, **options)
+      req = build_request(:delete_model_quality_job_definition, )
       req.send_request(options)
     end
 
@@ -6655,8 +6655,8 @@ module Aws::SageMaker
     #
     # @overload delete_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def delete_monitoring_schedule(params = {}, **options)
-      req = build_request(:delete_monitoring_schedule, params)
+    def delete_monitoring_schedule(, **options)
+      req = build_request(:delete_monitoring_schedule, )
       req.send_request(options)
     end
 
@@ -6683,8 +6683,8 @@ module Aws::SageMaker
     #
     # @overload delete_notebook_instance(**params)
     # @param [Hash] params ({})
-    def delete_notebook_instance(params = {}, **options)
-      req = build_request(:delete_notebook_instance, params)
+    def delete_notebook_instance(, **options)
+      req = build_request(:delete_notebook_instance, )
       req.send_request(options)
     end
 
@@ -6705,8 +6705,8 @@ module Aws::SageMaker
     #
     # @overload delete_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def delete_notebook_instance_lifecycle_config(params = {}, **options)
-      req = build_request(:delete_notebook_instance_lifecycle_config, params)
+    def delete_notebook_instance_lifecycle_config(, **options)
+      req = build_request(:delete_notebook_instance_lifecycle_config, )
       req.send_request(options)
     end
 
@@ -6742,8 +6742,8 @@ module Aws::SageMaker
     #
     # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, **options)
-      req = build_request(:delete_pipeline, params)
+    def delete_pipeline(, **options)
+      req = build_request(:delete_pipeline, )
       req.send_request(options)
     end
 
@@ -6764,8 +6764,8 @@ module Aws::SageMaker
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -6799,8 +6799,8 @@ module Aws::SageMaker
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -6829,8 +6829,8 @@ module Aws::SageMaker
     #
     # @overload delete_trial(**params)
     # @param [Hash] params ({})
-    def delete_trial(params = {}, **options)
-      req = build_request(:delete_trial, params)
+    def delete_trial(, **options)
+      req = build_request(:delete_trial, )
       req.send_request(options)
     end
 
@@ -6860,8 +6860,8 @@ module Aws::SageMaker
     #
     # @overload delete_trial_component(**params)
     # @param [Hash] params ({})
-    def delete_trial_component(params = {}, **options)
-      req = build_request(:delete_trial_component, params)
+    def delete_trial_component(, **options)
+      req = build_request(:delete_trial_component, )
       req.send_request(options)
     end
 
@@ -6888,8 +6888,8 @@ module Aws::SageMaker
     #
     # @overload delete_user_profile(**params)
     # @param [Hash] params ({})
-    def delete_user_profile(params = {}, **options)
-      req = build_request(:delete_user_profile, params)
+    def delete_user_profile(, **options)
+      req = build_request(:delete_user_profile, )
       req.send_request(options)
     end
 
@@ -6919,8 +6919,8 @@ module Aws::SageMaker
     #
     # @overload delete_workforce(**params)
     # @param [Hash] params ({})
-    def delete_workforce(params = {}, **options)
-      req = build_request(:delete_workforce, params)
+    def delete_workforce(, **options)
+      req = build_request(:delete_workforce, )
       req.send_request(options)
     end
 
@@ -6947,8 +6947,8 @@ module Aws::SageMaker
     #
     # @overload delete_workteam(**params)
     # @param [Hash] params ({})
-    def delete_workteam(params = {}, **options)
-      req = build_request(:delete_workteam, params)
+    def delete_workteam(, **options)
+      req = build_request(:delete_workteam, )
       req.send_request(options)
     end
 
@@ -6974,8 +6974,8 @@ module Aws::SageMaker
     #
     # @overload deregister_devices(**params)
     # @param [Hash] params ({})
-    def deregister_devices(params = {}, **options)
-      req = build_request(:deregister_devices, params)
+    def deregister_devices(, **options)
+      req = build_request(:deregister_devices, )
       req.send_request(options)
     end
 
@@ -7034,8 +7034,8 @@ module Aws::SageMaker
     #
     # @overload describe_action(**params)
     # @param [Hash] params ({})
-    def describe_action(params = {}, **options)
-      req = build_request(:describe_action, params)
+    def describe_action(, **options)
+      req = build_request(:describe_action, )
       req.send_request(options)
     end
 
@@ -7182,8 +7182,8 @@ module Aws::SageMaker
     #
     # @overload describe_algorithm(**params)
     # @param [Hash] params ({})
-    def describe_algorithm(params = {}, **options)
-      req = build_request(:describe_algorithm, params)
+    def describe_algorithm(, **options)
+      req = build_request(:describe_algorithm, )
       req.send_request(options)
     end
 
@@ -7244,8 +7244,8 @@ module Aws::SageMaker
     #
     # @overload describe_app(**params)
     # @param [Hash] params ({})
-    def describe_app(params = {}, **options)
-      req = build_request(:describe_app, params)
+    def describe_app(, **options)
+      req = build_request(:describe_app, )
       req.send_request(options)
     end
 
@@ -7285,8 +7285,8 @@ module Aws::SageMaker
     #
     # @overload describe_app_image_config(**params)
     # @param [Hash] params ({})
-    def describe_app_image_config(params = {}, **options)
-      req = build_request(:describe_app_image_config, params)
+    def describe_app_image_config(, **options)
+      req = build_request(:describe_app_image_config, )
       req.send_request(options)
     end
 
@@ -7342,8 +7342,8 @@ module Aws::SageMaker
     #
     # @overload describe_artifact(**params)
     # @param [Hash] params ({})
-    def describe_artifact(params = {}, **options)
-      req = build_request(:describe_artifact, params)
+    def describe_artifact(, **options)
+      req = build_request(:describe_artifact, )
       req.send_request(options)
     end
 
@@ -7440,8 +7440,8 @@ module Aws::SageMaker
     #
     # @overload describe_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def describe_auto_ml_job(params = {}, **options)
-      req = build_request(:describe_auto_ml_job, params)
+    def describe_auto_ml_job(, **options)
+      req = build_request(:describe_auto_ml_job, )
       req.send_request(options)
     end
 
@@ -7478,8 +7478,8 @@ module Aws::SageMaker
     #
     # @overload describe_code_repository(**params)
     # @param [Hash] params ({})
-    def describe_code_repository(params = {}, **options)
-      req = build_request(:describe_code_repository, params)
+    def describe_code_repository(, **options)
+      req = build_request(:describe_code_repository, )
       req.send_request(options)
     end
 
@@ -7545,8 +7545,8 @@ module Aws::SageMaker
     #
     # @overload describe_compilation_job(**params)
     # @param [Hash] params ({})
-    def describe_compilation_job(params = {}, **options)
-      req = build_request(:describe_compilation_job, params)
+    def describe_compilation_job(, **options)
+      req = build_request(:describe_compilation_job, )
       req.send_request(options)
     end
 
@@ -7598,8 +7598,8 @@ module Aws::SageMaker
     #
     # @overload describe_context(**params)
     # @param [Hash] params ({})
-    def describe_context(params = {}, **options)
-      req = build_request(:describe_context, params)
+    def describe_context(, **options)
+      req = build_request(:describe_context, )
       req.send_request(options)
     end
 
@@ -7677,8 +7677,8 @@ module Aws::SageMaker
     #
     # @overload describe_data_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_data_quality_job_definition(params = {}, **options)
-      req = build_request(:describe_data_quality_job_definition, params)
+    def describe_data_quality_job_definition(, **options)
+      req = build_request(:describe_data_quality_job_definition, )
       req.send_request(options)
     end
 
@@ -7735,8 +7735,8 @@ module Aws::SageMaker
     #
     # @overload describe_device(**params)
     # @param [Hash] params ({})
-    def describe_device(params = {}, **options)
-      req = build_request(:describe_device, params)
+    def describe_device(, **options)
+      req = build_request(:describe_device, )
       req.send_request(options)
     end
 
@@ -7778,8 +7778,8 @@ module Aws::SageMaker
     #
     # @overload describe_device_fleet(**params)
     # @param [Hash] params ({})
-    def describe_device_fleet(params = {}, **options)
-      req = build_request(:describe_device_fleet, params)
+    def describe_device_fleet(, **options)
+      req = build_request(:describe_device_fleet, )
       req.send_request(options)
     end
 
@@ -7857,8 +7857,8 @@ module Aws::SageMaker
     #
     # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, **options)
-      req = build_request(:describe_domain, params)
+    def describe_domain(, **options)
+      req = build_request(:describe_domain, )
       req.send_request(options)
     end
 
@@ -7912,8 +7912,8 @@ module Aws::SageMaker
     #
     # @overload describe_edge_packaging_job(**params)
     # @param [Hash] params ({})
-    def describe_edge_packaging_job(params = {}, **options)
-      req = build_request(:describe_edge_packaging_job, params)
+    def describe_edge_packaging_job(, **options)
+      req = build_request(:describe_edge_packaging_job, )
       req.send_request(options)
     end
 
@@ -7984,8 +7984,8 @@ module Aws::SageMaker
     #
     # @overload describe_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_endpoint(params = {}, **options)
-      req = build_request(:describe_endpoint, params)
+    def describe_endpoint(, **options)
+      req = build_request(:describe_endpoint, )
       req.send_request(options)
     end
 
@@ -8038,8 +8038,8 @@ module Aws::SageMaker
     #
     # @overload describe_endpoint_config(**params)
     # @param [Hash] params ({})
-    def describe_endpoint_config(params = {}, **options)
-      req = build_request(:describe_endpoint_config, params)
+    def describe_endpoint_config(, **options)
+      req = build_request(:describe_endpoint_config, )
       req.send_request(options)
     end
 
@@ -8087,8 +8087,8 @@ module Aws::SageMaker
     #
     # @overload describe_experiment(**params)
     # @param [Hash] params ({})
-    def describe_experiment(params = {}, **options)
-      req = build_request(:describe_experiment, params)
+    def describe_experiment(, **options)
+      req = build_request(:describe_experiment, )
       req.send_request(options)
     end
 
@@ -8157,8 +8157,8 @@ module Aws::SageMaker
     #
     # @overload describe_feature_group(**params)
     # @param [Hash] params ({})
-    def describe_feature_group(params = {}, **options)
-      req = build_request(:describe_feature_group, params)
+    def describe_feature_group(, **options)
+      req = build_request(:describe_feature_group, )
       req.send_request(options)
     end
 
@@ -8215,8 +8215,8 @@ module Aws::SageMaker
     #
     # @overload describe_flow_definition(**params)
     # @param [Hash] params ({})
-    def describe_flow_definition(params = {}, **options)
-      req = build_request(:describe_flow_definition, params)
+    def describe_flow_definition(, **options)
+      req = build_request(:describe_flow_definition, )
       req.send_request(options)
     end
 
@@ -8254,8 +8254,8 @@ module Aws::SageMaker
     #
     # @overload describe_human_task_ui(**params)
     # @param [Hash] params ({})
-    def describe_human_task_ui(params = {}, **options)
-      req = build_request(:describe_human_task_ui, params)
+    def describe_human_task_ui(, **options)
+      req = build_request(:describe_human_task_ui, )
       req.send_request(options)
     end
 
@@ -8483,8 +8483,8 @@ module Aws::SageMaker
     #
     # @overload describe_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def describe_hyper_parameter_tuning_job(params = {}, **options)
-      req = build_request(:describe_hyper_parameter_tuning_job, params)
+    def describe_hyper_parameter_tuning_job(, **options)
+      req = build_request(:describe_hyper_parameter_tuning_job, )
       req.send_request(options)
     end
 
@@ -8527,8 +8527,8 @@ module Aws::SageMaker
     #
     # @overload describe_image(**params)
     # @param [Hash] params ({})
-    def describe_image(params = {}, **options)
-      req = build_request(:describe_image, params)
+    def describe_image(, **options)
+      req = build_request(:describe_image, )
       req.send_request(options)
     end
 
@@ -8576,8 +8576,8 @@ module Aws::SageMaker
     #
     # @overload describe_image_version(**params)
     # @param [Hash] params ({})
-    def describe_image_version(params = {}, **options)
-      req = build_request(:describe_image_version, params)
+    def describe_image_version(, **options)
+      req = build_request(:describe_image_version, )
       req.send_request(options)
     end
 
@@ -8668,8 +8668,8 @@ module Aws::SageMaker
     #
     # @overload describe_labeling_job(**params)
     # @param [Hash] params ({})
-    def describe_labeling_job(params = {}, **options)
-      req = build_request(:describe_labeling_job, params)
+    def describe_labeling_job(, **options)
+      req = build_request(:describe_labeling_job, )
       req.send_request(options)
     end
 
@@ -8728,8 +8728,8 @@ module Aws::SageMaker
     #
     # @overload describe_model(**params)
     # @param [Hash] params ({})
-    def describe_model(params = {}, **options)
-      req = build_request(:describe_model, params)
+    def describe_model(, **options)
+      req = build_request(:describe_model, )
       req.send_request(options)
     end
 
@@ -8803,8 +8803,8 @@ module Aws::SageMaker
     #
     # @overload describe_model_bias_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_model_bias_job_definition(params = {}, **options)
-      req = build_request(:describe_model_bias_job_definition, params)
+    def describe_model_bias_job_definition(, **options)
+      req = build_request(:describe_model_bias_job_definition, )
       req.send_request(options)
     end
 
@@ -8877,8 +8877,8 @@ module Aws::SageMaker
     #
     # @overload describe_model_explainability_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_model_explainability_job_definition(params = {}, **options)
-      req = build_request(:describe_model_explainability_job_definition, params)
+    def describe_model_explainability_job_definition(, **options)
+      req = build_request(:describe_model_explainability_job_definition, )
       req.send_request(options)
     end
 
@@ -9010,8 +9010,8 @@ module Aws::SageMaker
     #
     # @overload describe_model_package(**params)
     # @param [Hash] params ({})
-    def describe_model_package(params = {}, **options)
-      req = build_request(:describe_model_package, params)
+    def describe_model_package(, **options)
+      req = build_request(:describe_model_package, )
       req.send_request(options)
     end
 
@@ -9050,8 +9050,8 @@ module Aws::SageMaker
     #
     # @overload describe_model_package_group(**params)
     # @param [Hash] params ({})
-    def describe_model_package_group(params = {}, **options)
-      req = build_request(:describe_model_package_group, params)
+    def describe_model_package_group(, **options)
+      req = build_request(:describe_model_package_group, )
       req.send_request(options)
     end
 
@@ -9131,8 +9131,8 @@ module Aws::SageMaker
     #
     # @overload describe_model_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_model_quality_job_definition(params = {}, **options)
-      req = build_request(:describe_model_quality_job_definition, params)
+    def describe_model_quality_job_definition(, **options)
+      req = build_request(:describe_model_quality_job_definition, )
       req.send_request(options)
     end
 
@@ -9228,8 +9228,8 @@ module Aws::SageMaker
     #
     # @overload describe_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def describe_monitoring_schedule(params = {}, **options)
-      req = build_request(:describe_monitoring_schedule, params)
+    def describe_monitoring_schedule(, **options)
+      req = build_request(:describe_monitoring_schedule, )
       req.send_request(options)
     end
 
@@ -9304,8 +9304,8 @@ module Aws::SageMaker
     #
     # @overload describe_notebook_instance(**params)
     # @param [Hash] params ({})
-    def describe_notebook_instance(params = {}, **options)
-      req = build_request(:describe_notebook_instance, params)
+    def describe_notebook_instance(, **options)
+      req = build_request(:describe_notebook_instance, )
       req.send_request(options)
     end
 
@@ -9351,8 +9351,8 @@ module Aws::SageMaker
     #
     # @overload describe_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def describe_notebook_instance_lifecycle_config(params = {}, **options)
-      req = build_request(:describe_notebook_instance_lifecycle_config, params)
+    def describe_notebook_instance_lifecycle_config(, **options)
+      req = build_request(:describe_notebook_instance_lifecycle_config, )
       req.send_request(options)
     end
 
@@ -9405,8 +9405,8 @@ module Aws::SageMaker
     #
     # @overload describe_pipeline(**params)
     # @param [Hash] params ({})
-    def describe_pipeline(params = {}, **options)
-      req = build_request(:describe_pipeline, params)
+    def describe_pipeline(, **options)
+      req = build_request(:describe_pipeline, )
       req.send_request(options)
     end
 
@@ -9435,8 +9435,8 @@ module Aws::SageMaker
     #
     # @overload describe_pipeline_definition_for_execution(**params)
     # @param [Hash] params ({})
-    def describe_pipeline_definition_for_execution(params = {}, **options)
-      req = build_request(:describe_pipeline_definition_for_execution, params)
+    def describe_pipeline_definition_for_execution(, **options)
+      req = build_request(:describe_pipeline_definition_for_execution, )
       req.send_request(options)
     end
 
@@ -9483,8 +9483,8 @@ module Aws::SageMaker
     #
     # @overload describe_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def describe_pipeline_execution(params = {}, **options)
-      req = build_request(:describe_pipeline_execution, params)
+    def describe_pipeline_execution(, **options)
+      req = build_request(:describe_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -9607,8 +9607,8 @@ module Aws::SageMaker
     #
     # @overload describe_processing_job(**params)
     # @param [Hash] params ({})
-    def describe_processing_job(params = {}, **options)
-      req = build_request(:describe_processing_job, params)
+    def describe_processing_job(, **options)
+      req = build_request(:describe_processing_job, )
       req.send_request(options)
     end
 
@@ -9659,8 +9659,8 @@ module Aws::SageMaker
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -9693,8 +9693,8 @@ module Aws::SageMaker
     #
     # @overload describe_subscribed_workteam(**params)
     # @param [Hash] params ({})
-    def describe_subscribed_workteam(params = {}, **options)
-      req = build_request(:describe_subscribed_workteam, params)
+    def describe_subscribed_workteam(, **options)
+      req = build_request(:describe_subscribed_workteam, )
       req.send_request(options)
     end
 
@@ -9877,8 +9877,8 @@ module Aws::SageMaker
     #
     # @overload describe_training_job(**params)
     # @param [Hash] params ({})
-    def describe_training_job(params = {}, **options)
-      req = build_request(:describe_training_job, params)
+    def describe_training_job(, **options)
+      req = build_request(:describe_training_job, )
       req.send_request(options)
     end
 
@@ -9963,8 +9963,8 @@ module Aws::SageMaker
     #
     # @overload describe_transform_job(**params)
     # @param [Hash] params ({})
-    def describe_transform_job(params = {}, **options)
-      req = build_request(:describe_transform_job, params)
+    def describe_transform_job(, **options)
+      req = build_request(:describe_transform_job, )
       req.send_request(options)
     end
 
@@ -10017,8 +10017,8 @@ module Aws::SageMaker
     #
     # @overload describe_trial(**params)
     # @param [Hash] params ({})
-    def describe_trial(params = {}, **options)
-      req = build_request(:describe_trial, params)
+    def describe_trial(, **options)
+      req = build_request(:describe_trial, )
       req.send_request(options)
     end
 
@@ -10099,8 +10099,8 @@ module Aws::SageMaker
     #
     # @overload describe_trial_component(**params)
     # @param [Hash] params ({})
-    def describe_trial_component(params = {}, **options)
-      req = build_request(:describe_trial_component, params)
+    def describe_trial_component(, **options)
+      req = build_request(:describe_trial_component, )
       req.send_request(options)
     end
 
@@ -10170,8 +10170,8 @@ module Aws::SageMaker
     #
     # @overload describe_user_profile(**params)
     # @param [Hash] params ({})
-    def describe_user_profile(params = {}, **options)
-      req = build_request(:describe_user_profile, params)
+    def describe_user_profile(, **options)
+      req = build_request(:describe_user_profile, )
       req.send_request(options)
     end
 
@@ -10224,8 +10224,8 @@ module Aws::SageMaker
     #
     # @overload describe_workforce(**params)
     # @param [Hash] params ({})
-    def describe_workforce(params = {}, **options)
-      req = build_request(:describe_workforce, params)
+    def describe_workforce(, **options)
+      req = build_request(:describe_workforce, )
       req.send_request(options)
     end
 
@@ -10269,8 +10269,8 @@ module Aws::SageMaker
     #
     # @overload describe_workteam(**params)
     # @param [Hash] params ({})
-    def describe_workteam(params = {}, **options)
-      req = build_request(:describe_workteam, params)
+    def describe_workteam(, **options)
+      req = build_request(:describe_workteam, )
       req.send_request(options)
     end
 
@@ -10283,8 +10283,8 @@ module Aws::SageMaker
     #
     # @overload disable_sagemaker_servicecatalog_portfolio(**params)
     # @param [Hash] params ({})
-    def disable_sagemaker_servicecatalog_portfolio(params = {}, **options)
-      req = build_request(:disable_sagemaker_servicecatalog_portfolio, params)
+    def disable_sagemaker_servicecatalog_portfolio(, **options)
+      req = build_request(:disable_sagemaker_servicecatalog_portfolio, )
       req.send_request(options)
     end
 
@@ -10326,8 +10326,8 @@ module Aws::SageMaker
     #
     # @overload disassociate_trial_component(**params)
     # @param [Hash] params ({})
-    def disassociate_trial_component(params = {}, **options)
-      req = build_request(:disassociate_trial_component, params)
+    def disassociate_trial_component(, **options)
+      req = build_request(:disassociate_trial_component, )
       req.send_request(options)
     end
 
@@ -10340,8 +10340,8 @@ module Aws::SageMaker
     #
     # @overload enable_sagemaker_servicecatalog_portfolio(**params)
     # @param [Hash] params ({})
-    def enable_sagemaker_servicecatalog_portfolio(params = {}, **options)
-      req = build_request(:enable_sagemaker_servicecatalog_portfolio, params)
+    def enable_sagemaker_servicecatalog_portfolio(, **options)
+      req = build_request(:enable_sagemaker_servicecatalog_portfolio, )
       req.send_request(options)
     end
 
@@ -10392,8 +10392,8 @@ module Aws::SageMaker
     #
     # @overload get_device_fleet_report(**params)
     # @param [Hash] params ({})
-    def get_device_fleet_report(params = {}, **options)
-      req = build_request(:get_device_fleet_report, params)
+    def get_device_fleet_report(, **options)
+      req = build_request(:get_device_fleet_report, )
       req.send_request(options)
     end
 
@@ -10427,8 +10427,8 @@ module Aws::SageMaker
     #
     # @overload get_model_package_group_policy(**params)
     # @param [Hash] params ({})
-    def get_model_package_group_policy(params = {}, **options)
-      req = build_request(:get_model_package_group_policy, params)
+    def get_model_package_group_policy(, **options)
+      req = build_request(:get_model_package_group_policy, )
       req.send_request(options)
     end
 
@@ -10447,8 +10447,8 @@ module Aws::SageMaker
     #
     # @overload get_sagemaker_servicecatalog_portfolio_status(**params)
     # @param [Hash] params ({})
-    def get_sagemaker_servicecatalog_portfolio_status(params = {}, **options)
-      req = build_request(:get_sagemaker_servicecatalog_portfolio_status, params)
+    def get_sagemaker_servicecatalog_portfolio_status(, **options)
+      req = build_request(:get_sagemaker_servicecatalog_portfolio_status, )
       req.send_request(options)
     end
 
@@ -10487,8 +10487,8 @@ module Aws::SageMaker
     #
     # @overload get_search_suggestions(**params)
     # @param [Hash] params ({})
-    def get_search_suggestions(params = {}, **options)
-      req = build_request(:get_search_suggestions, params)
+    def get_search_suggestions(, **options)
+      req = build_request(:get_search_suggestions, )
       req.send_request(options)
     end
 
@@ -10561,8 +10561,8 @@ module Aws::SageMaker
     #
     # @overload list_actions(**params)
     # @param [Hash] params ({})
-    def list_actions(params = {}, **options)
-      req = build_request(:list_actions, params)
+    def list_actions(, **options)
+      req = build_request(:list_actions, )
       req.send_request(options)
     end
 
@@ -10628,8 +10628,8 @@ module Aws::SageMaker
     #
     # @overload list_algorithms(**params)
     # @param [Hash] params ({})
-    def list_algorithms(params = {}, **options)
-      req = build_request(:list_algorithms, params)
+    def list_algorithms(, **options)
+      req = build_request(:list_algorithms, )
       req.send_request(options)
     end
 
@@ -10713,8 +10713,8 @@ module Aws::SageMaker
     #
     # @overload list_app_image_configs(**params)
     # @param [Hash] params ({})
-    def list_app_image_configs(params = {}, **options)
-      req = build_request(:list_app_image_configs, params)
+    def list_app_image_configs(, **options)
+      req = build_request(:list_app_image_configs, )
       req.send_request(options)
     end
 
@@ -10773,8 +10773,8 @@ module Aws::SageMaker
     #
     # @overload list_apps(**params)
     # @param [Hash] params ({})
-    def list_apps(params = {}, **options)
-      req = build_request(:list_apps, params)
+    def list_apps(, **options)
+      req = build_request(:list_apps, )
       req.send_request(options)
     end
 
@@ -10848,8 +10848,8 @@ module Aws::SageMaker
     #
     # @overload list_artifacts(**params)
     # @param [Hash] params ({})
-    def list_artifacts(params = {}, **options)
-      req = build_request(:list_artifacts, params)
+    def list_artifacts(, **options)
+      req = build_request(:list_artifacts, )
       req.send_request(options)
     end
 
@@ -10940,8 +10940,8 @@ module Aws::SageMaker
     #
     # @overload list_associations(**params)
     # @param [Hash] params ({})
-    def list_associations(params = {}, **options)
-      req = build_request(:list_associations, params)
+    def list_associations(, **options)
+      req = build_request(:list_associations, )
       req.send_request(options)
     end
 
@@ -11018,8 +11018,8 @@ module Aws::SageMaker
     #
     # @overload list_auto_ml_jobs(**params)
     # @param [Hash] params ({})
-    def list_auto_ml_jobs(params = {}, **options)
-      req = build_request(:list_auto_ml_jobs, params)
+    def list_auto_ml_jobs(, **options)
+      req = build_request(:list_auto_ml_jobs, )
       req.send_request(options)
     end
 
@@ -11094,8 +11094,8 @@ module Aws::SageMaker
     #
     # @overload list_candidates_for_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def list_candidates_for_auto_ml_job(params = {}, **options)
-      req = build_request(:list_candidates_for_auto_ml_job, params)
+    def list_candidates_for_auto_ml_job(, **options)
+      req = build_request(:list_candidates_for_auto_ml_job, )
       req.send_request(options)
     end
 
@@ -11172,8 +11172,8 @@ module Aws::SageMaker
     #
     # @overload list_code_repositories(**params)
     # @param [Hash] params ({})
-    def list_code_repositories(params = {}, **options)
-      req = build_request(:list_code_repositories, params)
+    def list_code_repositories(, **options)
+      req = build_request(:list_code_repositories, )
       req.send_request(options)
     end
 
@@ -11264,8 +11264,8 @@ module Aws::SageMaker
     #
     # @overload list_compilation_jobs(**params)
     # @param [Hash] params ({})
-    def list_compilation_jobs(params = {}, **options)
-      req = build_request(:list_compilation_jobs, params)
+    def list_compilation_jobs(, **options)
+      req = build_request(:list_compilation_jobs, )
       req.send_request(options)
     end
 
@@ -11338,8 +11338,8 @@ module Aws::SageMaker
     #
     # @overload list_contexts(**params)
     # @param [Hash] params ({})
-    def list_contexts(params = {}, **options)
-      req = build_request(:list_contexts, params)
+    def list_contexts(, **options)
+      req = build_request(:list_contexts, )
       req.send_request(options)
     end
 
@@ -11410,8 +11410,8 @@ module Aws::SageMaker
     #
     # @overload list_data_quality_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_data_quality_job_definitions(params = {}, **options)
-      req = build_request(:list_data_quality_job_definitions, params)
+    def list_data_quality_job_definitions(, **options)
+      req = build_request(:list_data_quality_job_definitions, )
       req.send_request(options)
     end
 
@@ -11480,8 +11480,8 @@ module Aws::SageMaker
     #
     # @overload list_device_fleets(**params)
     # @param [Hash] params ({})
-    def list_device_fleets(params = {}, **options)
-      req = build_request(:list_device_fleets, params)
+    def list_device_fleets(, **options)
+      req = build_request(:list_device_fleets, )
       req.send_request(options)
     end
 
@@ -11540,8 +11540,8 @@ module Aws::SageMaker
     #
     # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, **options)
-      req = build_request(:list_devices, params)
+    def list_devices(, **options)
+      req = build_request(:list_devices, )
       req.send_request(options)
     end
 
@@ -11584,8 +11584,8 @@ module Aws::SageMaker
     #
     # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, **options)
-      req = build_request(:list_domains, params)
+    def list_domains(, **options)
+      req = build_request(:list_domains, )
       req.send_request(options)
     end
 
@@ -11665,8 +11665,8 @@ module Aws::SageMaker
     #
     # @overload list_edge_packaging_jobs(**params)
     # @param [Hash] params ({})
-    def list_edge_packaging_jobs(params = {}, **options)
-      req = build_request(:list_edge_packaging_jobs, params)
+    def list_edge_packaging_jobs(, **options)
+      req = build_request(:list_edge_packaging_jobs, )
       req.send_request(options)
     end
 
@@ -11729,8 +11729,8 @@ module Aws::SageMaker
     #
     # @overload list_endpoint_configs(**params)
     # @param [Hash] params ({})
-    def list_endpoint_configs(params = {}, **options)
-      req = build_request(:list_endpoint_configs, params)
+    def list_endpoint_configs(, **options)
+      req = build_request(:list_endpoint_configs, )
       req.send_request(options)
     end
 
@@ -11809,8 +11809,8 @@ module Aws::SageMaker
     #
     # @overload list_endpoints(**params)
     # @param [Hash] params ({})
-    def list_endpoints(params = {}, **options)
-      req = build_request(:list_endpoints, params)
+    def list_endpoints(, **options)
+      req = build_request(:list_endpoints, )
       req.send_request(options)
     end
 
@@ -11876,8 +11876,8 @@ module Aws::SageMaker
     #
     # @overload list_experiments(**params)
     # @param [Hash] params ({})
-    def list_experiments(params = {}, **options)
-      req = build_request(:list_experiments, params)
+    def list_experiments(, **options)
+      req = build_request(:list_experiments, )
       req.send_request(options)
     end
 
@@ -11949,8 +11949,8 @@ module Aws::SageMaker
     #
     # @overload list_feature_groups(**params)
     # @param [Hash] params ({})
-    def list_feature_groups(params = {}, **options)
-      req = build_request(:list_feature_groups, params)
+    def list_feature_groups(, **options)
+      req = build_request(:list_feature_groups, )
       req.send_request(options)
     end
 
@@ -12008,8 +12008,8 @@ module Aws::SageMaker
     #
     # @overload list_flow_definitions(**params)
     # @param [Hash] params ({})
-    def list_flow_definitions(params = {}, **options)
-      req = build_request(:list_flow_definitions, params)
+    def list_flow_definitions(, **options)
+      req = build_request(:list_flow_definitions, )
       req.send_request(options)
     end
 
@@ -12066,8 +12066,8 @@ module Aws::SageMaker
     #
     # @overload list_human_task_uis(**params)
     # @param [Hash] params ({})
-    def list_human_task_uis(params = {}, **options)
-      req = build_request(:list_human_task_uis, params)
+    def list_human_task_uis(, **options)
+      req = build_request(:list_human_task_uis, )
       req.send_request(options)
     end
 
@@ -12159,8 +12159,8 @@ module Aws::SageMaker
     #
     # @overload list_hyper_parameter_tuning_jobs(**params)
     # @param [Hash] params ({})
-    def list_hyper_parameter_tuning_jobs(params = {}, **options)
-      req = build_request(:list_hyper_parameter_tuning_jobs, params)
+    def list_hyper_parameter_tuning_jobs(, **options)
+      req = build_request(:list_hyper_parameter_tuning_jobs, )
       req.send_request(options)
     end
 
@@ -12239,8 +12239,8 @@ module Aws::SageMaker
     #
     # @overload list_image_versions(**params)
     # @param [Hash] params ({})
-    def list_image_versions(params = {}, **options)
-      req = build_request(:list_image_versions, params)
+    def list_image_versions(, **options)
+      req = build_request(:list_image_versions, )
       req.send_request(options)
     end
 
@@ -12321,8 +12321,8 @@ module Aws::SageMaker
     #
     # @overload list_images(**params)
     # @param [Hash] params ({})
-    def list_images(params = {}, **options)
-      req = build_request(:list_images, params)
+    def list_images(, **options)
+      req = build_request(:list_images, )
       req.send_request(options)
     end
 
@@ -12417,8 +12417,8 @@ module Aws::SageMaker
     #
     # @overload list_labeling_jobs(**params)
     # @param [Hash] params ({})
-    def list_labeling_jobs(params = {}, **options)
-      req = build_request(:list_labeling_jobs, params)
+    def list_labeling_jobs(, **options)
+      req = build_request(:list_labeling_jobs, )
       req.send_request(options)
     end
 
@@ -12492,8 +12492,8 @@ module Aws::SageMaker
     #
     # @overload list_labeling_jobs_for_workteam(**params)
     # @param [Hash] params ({})
-    def list_labeling_jobs_for_workteam(params = {}, **options)
-      req = build_request(:list_labeling_jobs_for_workteam, params)
+    def list_labeling_jobs_for_workteam(, **options)
+      req = build_request(:list_labeling_jobs_for_workteam, )
       req.send_request(options)
     end
 
@@ -12562,8 +12562,8 @@ module Aws::SageMaker
     #
     # @overload list_model_bias_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_model_bias_job_definitions(params = {}, **options)
-      req = build_request(:list_model_bias_job_definitions, params)
+    def list_model_bias_job_definitions(, **options)
+      req = build_request(:list_model_bias_job_definitions, )
       req.send_request(options)
     end
 
@@ -12634,8 +12634,8 @@ module Aws::SageMaker
     #
     # @overload list_model_explainability_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_model_explainability_job_definitions(params = {}, **options)
-      req = build_request(:list_model_explainability_job_definitions, params)
+    def list_model_explainability_job_definitions(, **options)
+      req = build_request(:list_model_explainability_job_definitions, )
       req.send_request(options)
     end
 
@@ -12700,8 +12700,8 @@ module Aws::SageMaker
     #
     # @overload list_model_package_groups(**params)
     # @param [Hash] params ({})
-    def list_model_package_groups(params = {}, **options)
-      req = build_request(:list_model_package_groups, params)
+    def list_model_package_groups(, **options)
+      req = build_request(:list_model_package_groups, )
       req.send_request(options)
     end
 
@@ -12791,8 +12791,8 @@ module Aws::SageMaker
     #
     # @overload list_model_packages(**params)
     # @param [Hash] params ({})
-    def list_model_packages(params = {}, **options)
-      req = build_request(:list_model_packages, params)
+    def list_model_packages(, **options)
+      req = build_request(:list_model_packages, )
       req.send_request(options)
     end
 
@@ -12865,8 +12865,8 @@ module Aws::SageMaker
     #
     # @overload list_model_quality_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_model_quality_job_definitions(params = {}, **options)
-      req = build_request(:list_model_quality_job_definitions, params)
+    def list_model_quality_job_definitions(, **options)
+      req = build_request(:list_model_quality_job_definitions, )
       req.send_request(options)
     end
 
@@ -12929,8 +12929,8 @@ module Aws::SageMaker
     #
     # @overload list_models(**params)
     # @param [Hash] params ({})
-    def list_models(params = {}, **options)
-      req = build_request(:list_models, params)
+    def list_models(, **options)
+      req = build_request(:list_models, )
       req.send_request(options)
     end
 
@@ -13033,8 +13033,8 @@ module Aws::SageMaker
     #
     # @overload list_monitoring_executions(**params)
     # @param [Hash] params ({})
-    def list_monitoring_executions(params = {}, **options)
-      req = build_request(:list_monitoring_executions, params)
+    def list_monitoring_executions(, **options)
+      req = build_request(:list_monitoring_executions, )
       req.send_request(options)
     end
 
@@ -13133,8 +13133,8 @@ module Aws::SageMaker
     #
     # @overload list_monitoring_schedules(**params)
     # @param [Hash] params ({})
-    def list_monitoring_schedules(params = {}, **options)
-      req = build_request(:list_monitoring_schedules, params)
+    def list_monitoring_schedules(, **options)
+      req = build_request(:list_monitoring_schedules, )
       req.send_request(options)
     end
 
@@ -13210,8 +13210,8 @@ module Aws::SageMaker
     #
     # @overload list_notebook_instance_lifecycle_configs(**params)
     # @param [Hash] params ({})
-    def list_notebook_instance_lifecycle_configs(params = {}, **options)
-      req = build_request(:list_notebook_instance_lifecycle_configs, params)
+    def list_notebook_instance_lifecycle_configs(, **options)
+      req = build_request(:list_notebook_instance_lifecycle_configs, )
       req.send_request(options)
     end
 
@@ -13324,8 +13324,8 @@ module Aws::SageMaker
     #
     # @overload list_notebook_instances(**params)
     # @param [Hash] params ({})
-    def list_notebook_instances(params = {}, **options)
-      req = build_request(:list_notebook_instances, params)
+    def list_notebook_instances(, **options)
+      req = build_request(:list_notebook_instances, )
       req.send_request(options)
     end
 
@@ -13383,8 +13383,8 @@ module Aws::SageMaker
     #
     # @overload list_pipeline_execution_steps(**params)
     # @param [Hash] params ({})
-    def list_pipeline_execution_steps(params = {}, **options)
-      req = build_request(:list_pipeline_execution_steps, params)
+    def list_pipeline_execution_steps(, **options)
+      req = build_request(:list_pipeline_execution_steps, )
       req.send_request(options)
     end
 
@@ -13448,8 +13448,8 @@ module Aws::SageMaker
     #
     # @overload list_pipeline_executions(**params)
     # @param [Hash] params ({})
-    def list_pipeline_executions(params = {}, **options)
-      req = build_request(:list_pipeline_executions, params)
+    def list_pipeline_executions(, **options)
+      req = build_request(:list_pipeline_executions, )
       req.send_request(options)
     end
 
@@ -13493,8 +13493,8 @@ module Aws::SageMaker
     #
     # @overload list_pipeline_parameters_for_execution(**params)
     # @param [Hash] params ({})
-    def list_pipeline_parameters_for_execution(params = {}, **options)
-      req = build_request(:list_pipeline_parameters_for_execution, params)
+    def list_pipeline_parameters_for_execution(, **options)
+      req = build_request(:list_pipeline_parameters_for_execution, )
       req.send_request(options)
     end
 
@@ -13561,8 +13561,8 @@ module Aws::SageMaker
     #
     # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, **options)
-      req = build_request(:list_pipelines, params)
+    def list_pipelines(, **options)
+      req = build_request(:list_pipelines, )
       req.send_request(options)
     end
 
@@ -13644,8 +13644,8 @@ module Aws::SageMaker
     #
     # @overload list_processing_jobs(**params)
     # @param [Hash] params ({})
-    def list_processing_jobs(params = {}, **options)
-      req = build_request(:list_processing_jobs, params)
+    def list_processing_jobs(, **options)
+      req = build_request(:list_processing_jobs, )
       req.send_request(options)
     end
 
@@ -13711,8 +13711,8 @@ module Aws::SageMaker
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -13762,8 +13762,8 @@ module Aws::SageMaker
     #
     # @overload list_subscribed_workteams(**params)
     # @param [Hash] params ({})
-    def list_subscribed_workteams(params = {}, **options)
-      req = build_request(:list_subscribed_workteams, params)
+    def list_subscribed_workteams(, **options)
+      req = build_request(:list_subscribed_workteams, )
       req.send_request(options)
     end
 
@@ -13807,8 +13807,8 @@ module Aws::SageMaker
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -13888,8 +13888,8 @@ module Aws::SageMaker
     #
     # @overload list_training_jobs(**params)
     # @param [Hash] params ({})
-    def list_training_jobs(params = {}, **options)
-      req = build_request(:list_training_jobs, params)
+    def list_training_jobs(, **options)
+      req = build_request(:list_training_jobs, )
       req.send_request(options)
     end
 
@@ -13963,8 +13963,8 @@ module Aws::SageMaker
     #
     # @overload list_training_jobs_for_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def list_training_jobs_for_hyper_parameter_tuning_job(params = {}, **options)
-      req = build_request(:list_training_jobs_for_hyper_parameter_tuning_job, params)
+    def list_training_jobs_for_hyper_parameter_tuning_job(, **options)
+      req = build_request(:list_training_jobs_for_hyper_parameter_tuning_job, )
       req.send_request(options)
     end
 
@@ -14046,8 +14046,8 @@ module Aws::SageMaker
     #
     # @overload list_transform_jobs(**params)
     # @param [Hash] params ({})
-    def list_transform_jobs(params = {}, **options)
-      req = build_request(:list_transform_jobs, params)
+    def list_transform_jobs(, **options)
+      req = build_request(:list_transform_jobs, )
       req.send_request(options)
     end
 
@@ -14148,8 +14148,8 @@ module Aws::SageMaker
     #
     # @overload list_trial_components(**params)
     # @param [Hash] params ({})
-    def list_trial_components(params = {}, **options)
-      req = build_request(:list_trial_components, params)
+    def list_trial_components(, **options)
+      req = build_request(:list_trial_components, )
       req.send_request(options)
     end
 
@@ -14225,8 +14225,8 @@ module Aws::SageMaker
     #
     # @overload list_trials(**params)
     # @param [Hash] params ({})
-    def list_trials(params = {}, **options)
-      req = build_request(:list_trials, params)
+    def list_trials(, **options)
+      req = build_request(:list_trials, )
       req.send_request(options)
     end
 
@@ -14284,8 +14284,8 @@ module Aws::SageMaker
     #
     # @overload list_user_profiles(**params)
     # @param [Hash] params ({})
-    def list_user_profiles(params = {}, **options)
-      req = build_request(:list_user_profiles, params)
+    def list_user_profiles(, **options)
+      req = build_request(:list_user_profiles, )
       req.send_request(options)
     end
 
@@ -14351,8 +14351,8 @@ module Aws::SageMaker
     #
     # @overload list_workforces(**params)
     # @param [Hash] params ({})
-    def list_workforces(params = {}, **options)
-      req = build_request(:list_workforces, params)
+    def list_workforces(, **options)
+      req = build_request(:list_workforces, )
       req.send_request(options)
     end
 
@@ -14421,8 +14421,8 @@ module Aws::SageMaker
     #
     # @overload list_workteams(**params)
     # @param [Hash] params ({})
-    def list_workteams(params = {}, **options)
-      req = build_request(:list_workteams, params)
+    def list_workteams(, **options)
+      req = build_request(:list_workteams, )
       req.send_request(options)
     end
 
@@ -14460,8 +14460,8 @@ module Aws::SageMaker
     #
     # @overload put_model_package_group_policy(**params)
     # @param [Hash] params ({})
-    def put_model_package_group_policy(params = {}, **options)
-      req = build_request(:put_model_package_group_policy, params)
+    def put_model_package_group_policy(, **options)
+      req = build_request(:put_model_package_group_policy, )
       req.send_request(options)
     end
 
@@ -14501,8 +14501,8 @@ module Aws::SageMaker
     #
     # @overload register_devices(**params)
     # @param [Hash] params ({})
-    def register_devices(params = {}, **options)
-      req = build_request(:register_devices, params)
+    def register_devices(, **options)
+      req = build_request(:register_devices, )
       req.send_request(options)
     end
 
@@ -14555,8 +14555,8 @@ module Aws::SageMaker
     #
     # @overload render_ui_template(**params)
     # @param [Hash] params ({})
-    def render_ui_template(params = {}, **options)
-      req = build_request(:render_ui_template, params)
+    def render_ui_template(, **options)
+      req = build_request(:render_ui_template, )
       req.send_request(options)
     end
 
@@ -15297,8 +15297,8 @@ module Aws::SageMaker
     #
     # @overload search(**params)
     # @param [Hash] params ({})
-    def search(params = {}, **options)
-      req = build_request(:search, params)
+    def search(, **options)
+      req = build_request(:search, )
       req.send_request(options)
     end
 
@@ -15324,8 +15324,8 @@ module Aws::SageMaker
     #
     # @overload start_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def start_monitoring_schedule(params = {}, **options)
-      req = build_request(:start_monitoring_schedule, params)
+    def start_monitoring_schedule(, **options)
+      req = build_request(:start_monitoring_schedule, )
       req.send_request(options)
     end
 
@@ -15350,8 +15350,8 @@ module Aws::SageMaker
     #
     # @overload start_notebook_instance(**params)
     # @param [Hash] params ({})
-    def start_notebook_instance(params = {}, **options)
-      req = build_request(:start_notebook_instance, params)
+    def start_notebook_instance(, **options)
+      req = build_request(:start_notebook_instance, )
       req.send_request(options)
     end
 
@@ -15404,8 +15404,8 @@ module Aws::SageMaker
     #
     # @overload start_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def start_pipeline_execution(params = {}, **options)
-      req = build_request(:start_pipeline_execution, params)
+    def start_pipeline_execution(, **options)
+      req = build_request(:start_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -15426,8 +15426,8 @@ module Aws::SageMaker
     #
     # @overload stop_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def stop_auto_ml_job(params = {}, **options)
-      req = build_request(:stop_auto_ml_job, params)
+    def stop_auto_ml_job(, **options)
+      req = build_request(:stop_auto_ml_job, )
       req.send_request(options)
     end
 
@@ -15457,8 +15457,8 @@ module Aws::SageMaker
     #
     # @overload stop_compilation_job(**params)
     # @param [Hash] params ({})
-    def stop_compilation_job(params = {}, **options)
-      req = build_request(:stop_compilation_job, params)
+    def stop_compilation_job(, **options)
+      req = build_request(:stop_compilation_job, )
       req.send_request(options)
     end
 
@@ -15479,8 +15479,8 @@ module Aws::SageMaker
     #
     # @overload stop_edge_packaging_job(**params)
     # @param [Hash] params ({})
-    def stop_edge_packaging_job(params = {}, **options)
-      req = build_request(:stop_edge_packaging_job, params)
+    def stop_edge_packaging_job(, **options)
+      req = build_request(:stop_edge_packaging_job, )
       req.send_request(options)
     end
 
@@ -15508,8 +15508,8 @@ module Aws::SageMaker
     #
     # @overload stop_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def stop_hyper_parameter_tuning_job(params = {}, **options)
-      req = build_request(:stop_hyper_parameter_tuning_job, params)
+    def stop_hyper_parameter_tuning_job(, **options)
+      req = build_request(:stop_hyper_parameter_tuning_job, )
       req.send_request(options)
     end
 
@@ -15532,8 +15532,8 @@ module Aws::SageMaker
     #
     # @overload stop_labeling_job(**params)
     # @param [Hash] params ({})
-    def stop_labeling_job(params = {}, **options)
-      req = build_request(:stop_labeling_job, params)
+    def stop_labeling_job(, **options)
+      req = build_request(:stop_labeling_job, )
       req.send_request(options)
     end
 
@@ -15554,8 +15554,8 @@ module Aws::SageMaker
     #
     # @overload stop_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def stop_monitoring_schedule(params = {}, **options)
-      req = build_request(:stop_monitoring_schedule, params)
+    def stop_monitoring_schedule(, **options)
+      req = build_request(:stop_monitoring_schedule, )
       req.send_request(options)
     end
 
@@ -15586,8 +15586,8 @@ module Aws::SageMaker
     #
     # @overload stop_notebook_instance(**params)
     # @param [Hash] params ({})
-    def stop_notebook_instance(params = {}, **options)
-      req = build_request(:stop_notebook_instance, params)
+    def stop_notebook_instance(, **options)
+      req = build_request(:stop_notebook_instance, )
       req.send_request(options)
     end
 
@@ -15623,8 +15623,8 @@ module Aws::SageMaker
     #
     # @overload stop_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def stop_pipeline_execution(params = {}, **options)
-      req = build_request(:stop_pipeline_execution, params)
+    def stop_pipeline_execution(, **options)
+      req = build_request(:stop_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -15645,8 +15645,8 @@ module Aws::SageMaker
     #
     # @overload stop_processing_job(**params)
     # @param [Hash] params ({})
-    def stop_processing_job(params = {}, **options)
-      req = build_request(:stop_processing_job, params)
+    def stop_processing_job(, **options)
+      req = build_request(:stop_processing_job, )
       req.send_request(options)
     end
 
@@ -15674,8 +15674,8 @@ module Aws::SageMaker
     #
     # @overload stop_training_job(**params)
     # @param [Hash] params ({})
-    def stop_training_job(params = {}, **options)
-      req = build_request(:stop_training_job, params)
+    def stop_training_job(, **options)
+      req = build_request(:stop_training_job, )
       req.send_request(options)
     end
 
@@ -15702,8 +15702,8 @@ module Aws::SageMaker
     #
     # @overload stop_transform_job(**params)
     # @param [Hash] params ({})
-    def stop_transform_job(params = {}, **options)
-      req = build_request(:stop_transform_job, params)
+    def stop_transform_job(, **options)
+      req = build_request(:stop_transform_job, )
       req.send_request(options)
     end
 
@@ -15748,8 +15748,8 @@ module Aws::SageMaker
     #
     # @overload update_action(**params)
     # @param [Hash] params ({})
-    def update_action(params = {}, **options)
-      req = build_request(:update_action, params)
+    def update_action(, **options)
+      req = build_request(:update_action, )
       req.send_request(options)
     end
 
@@ -15792,8 +15792,8 @@ module Aws::SageMaker
     #
     # @overload update_app_image_config(**params)
     # @param [Hash] params ({})
-    def update_app_image_config(params = {}, **options)
-      req = build_request(:update_app_image_config, params)
+    def update_app_image_config(, **options)
+      req = build_request(:update_app_image_config, )
       req.send_request(options)
     end
 
@@ -15834,8 +15834,8 @@ module Aws::SageMaker
     #
     # @overload update_artifact(**params)
     # @param [Hash] params ({})
-    def update_artifact(params = {}, **options)
-      req = build_request(:update_artifact, params)
+    def update_artifact(, **options)
+      req = build_request(:update_artifact, )
       req.send_request(options)
     end
 
@@ -15874,8 +15874,8 @@ module Aws::SageMaker
     #
     # @overload update_code_repository(**params)
     # @param [Hash] params ({})
-    def update_code_repository(params = {}, **options)
-      req = build_request(:update_code_repository, params)
+    def update_code_repository(, **options)
+      req = build_request(:update_code_repository, )
       req.send_request(options)
     end
 
@@ -15916,8 +15916,8 @@ module Aws::SageMaker
     #
     # @overload update_context(**params)
     # @param [Hash] params ({})
-    def update_context(params = {}, **options)
-      req = build_request(:update_context, params)
+    def update_context(, **options)
+      req = build_request(:update_context, )
       req.send_request(options)
     end
 
@@ -15953,8 +15953,8 @@ module Aws::SageMaker
     #
     # @overload update_device_fleet(**params)
     # @param [Hash] params ({})
-    def update_device_fleet(params = {}, **options)
-      req = build_request(:update_device_fleet, params)
+    def update_device_fleet(, **options)
+      req = build_request(:update_device_fleet, )
       req.send_request(options)
     end
 
@@ -15985,8 +15985,8 @@ module Aws::SageMaker
     #
     # @overload update_devices(**params)
     # @param [Hash] params ({})
-    def update_devices(params = {}, **options)
-      req = build_request(:update_devices, params)
+    def update_devices(, **options)
+      req = build_request(:update_devices, )
       req.send_request(options)
     end
 
@@ -16053,8 +16053,8 @@ module Aws::SageMaker
     #
     # @overload update_domain(**params)
     # @param [Hash] params ({})
-    def update_domain(params = {}, **options)
-      req = build_request(:update_domain, params)
+    def update_domain(, **options)
+      req = build_request(:update_domain, )
       req.send_request(options)
     end
 
@@ -16156,8 +16156,8 @@ module Aws::SageMaker
     #
     # @overload update_endpoint(**params)
     # @param [Hash] params ({})
-    def update_endpoint(params = {}, **options)
-      req = build_request(:update_endpoint, params)
+    def update_endpoint(, **options)
+      req = build_request(:update_endpoint, )
       req.send_request(options)
     end
 
@@ -16199,8 +16199,8 @@ module Aws::SageMaker
     #
     # @overload update_endpoint_weights_and_capacities(**params)
     # @param [Hash] params ({})
-    def update_endpoint_weights_and_capacities(params = {}, **options)
-      req = build_request(:update_endpoint_weights_and_capacities, params)
+    def update_endpoint_weights_and_capacities(, **options)
+      req = build_request(:update_endpoint_weights_and_capacities, )
       req.send_request(options)
     end
 
@@ -16238,8 +16238,8 @@ module Aws::SageMaker
     #
     # @overload update_experiment(**params)
     # @param [Hash] params ({})
-    def update_experiment(params = {}, **options)
-      req = build_request(:update_experiment, params)
+    def update_experiment(, **options)
+      req = build_request(:update_experiment, )
       req.send_request(options)
     end
 
@@ -16285,8 +16285,8 @@ module Aws::SageMaker
     #
     # @overload update_image(**params)
     # @param [Hash] params ({})
-    def update_image(params = {}, **options)
-      req = build_request(:update_image, params)
+    def update_image(, **options)
+      req = build_request(:update_image, )
       req.send_request(options)
     end
 
@@ -16321,8 +16321,8 @@ module Aws::SageMaker
     #
     # @overload update_model_package(**params)
     # @param [Hash] params ({})
-    def update_model_package(params = {}, **options)
-      req = build_request(:update_model_package, params)
+    def update_model_package(, **options)
+      req = build_request(:update_model_package, )
       req.send_request(options)
     end
 
@@ -16430,8 +16430,8 @@ module Aws::SageMaker
     #
     # @overload update_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def update_monitoring_schedule(params = {}, **options)
-      req = build_request(:update_monitoring_schedule, params)
+    def update_monitoring_schedule(, **options)
+      req = build_request(:update_monitoring_schedule, )
       req.send_request(options)
     end
 
@@ -16575,8 +16575,8 @@ module Aws::SageMaker
     #
     # @overload update_notebook_instance(**params)
     # @param [Hash] params ({})
-    def update_notebook_instance(params = {}, **options)
-      req = build_request(:update_notebook_instance, params)
+    def update_notebook_instance(, **options)
+      req = build_request(:update_notebook_instance, )
       req.send_request(options)
     end
 
@@ -16617,8 +16617,8 @@ module Aws::SageMaker
     #
     # @overload update_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def update_notebook_instance_lifecycle_config(params = {}, **options)
-      req = build_request(:update_notebook_instance_lifecycle_config, params)
+    def update_notebook_instance_lifecycle_config(, **options)
+      req = build_request(:update_notebook_instance_lifecycle_config, )
       req.send_request(options)
     end
 
@@ -16661,8 +16661,8 @@ module Aws::SageMaker
     #
     # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, **options)
-      req = build_request(:update_pipeline, params)
+    def update_pipeline(, **options)
+      req = build_request(:update_pipeline, )
       req.send_request(options)
     end
 
@@ -16697,8 +16697,8 @@ module Aws::SageMaker
     #
     # @overload update_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def update_pipeline_execution(params = {}, **options)
-      req = build_request(:update_pipeline_execution, params)
+    def update_pipeline_execution(, **options)
+      req = build_request(:update_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -16756,8 +16756,8 @@ module Aws::SageMaker
     #
     # @overload update_training_job(**params)
     # @param [Hash] params ({})
-    def update_training_job(params = {}, **options)
-      req = build_request(:update_training_job, params)
+    def update_training_job(, **options)
+      req = build_request(:update_training_job, )
       req.send_request(options)
     end
 
@@ -16789,8 +16789,8 @@ module Aws::SageMaker
     #
     # @overload update_trial(**params)
     # @param [Hash] params ({})
-    def update_trial(params = {}, **options)
-      req = build_request(:update_trial, params)
+    def update_trial(, **options)
+      req = build_request(:update_trial, )
       req.send_request(options)
     end
 
@@ -16880,8 +16880,8 @@ module Aws::SageMaker
     #
     # @overload update_trial_component(**params)
     # @param [Hash] params ({})
-    def update_trial_component(params = {}, **options)
-      req = build_request(:update_trial_component, params)
+    def update_trial_component(, **options)
+      req = build_request(:update_trial_component, )
       req.send_request(options)
     end
 
@@ -16952,8 +16952,8 @@ module Aws::SageMaker
     #
     # @overload update_user_profile(**params)
     # @param [Hash] params ({})
-    def update_user_profile(params = {}, **options)
-      req = build_request(:update_user_profile, params)
+    def update_user_profile(, **options)
+      req = build_request(:update_user_profile, )
       req.send_request(options)
     end
 
@@ -17051,8 +17051,8 @@ module Aws::SageMaker
     #
     # @overload update_workforce(**params)
     # @param [Hash] params ({})
-    def update_workforce(params = {}, **options)
-      req = build_request(:update_workforce, params)
+    def update_workforce(, **options)
+      req = build_request(:update_workforce, )
       req.send_request(options)
     end
 
@@ -17149,8 +17149,8 @@ module Aws::SageMaker
     #
     # @overload update_workteam(**params)
     # @param [Hash] params ({})
-    def update_workteam(params = {}, **options)
-      req = build_request(:update_workteam, params)
+    def update_workteam(, **options)
+      req = build_request(:update_workteam, )
       req.send_request(options)
     end
 

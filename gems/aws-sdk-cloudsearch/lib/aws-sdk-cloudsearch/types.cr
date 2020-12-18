@@ -2702,5 +2702,572 @@ module Aws::CloudSearch
     #
     class ValidationException < Aws::EmptyStructure; end
 
+    alias APIVersion = String
+
+    alias ARN = String
+
+    alias AccessPoliciesStatus = NamedTuple(
+      "Options" : PolicyDocument,
+      "Status" : OptionStatus
+    )
+
+    alias AlgorithmicStemming = String
+
+    alias AnalysisOptions = NamedTuple(
+      "Synonyms" : (String)?,
+      "Stopwords" : (String)?,
+      "StemmingDictionary" : (String)?,
+      "JapaneseTokenizationDictionary" : (String)?,
+      "AlgorithmicStemming" : (AlgorithmicStemming)?
+    )
+
+    alias AnalysisScheme = NamedTuple(
+      "AnalysisSchemeName" : StandardName,
+      "AnalysisSchemeLanguage" : AnalysisSchemeLanguage,
+      "AnalysisOptions" : (AnalysisOptions)?
+    )
+
+    alias AnalysisSchemeLanguage = String
+
+    alias AnalysisSchemeStatus = NamedTuple(
+      "Options" : AnalysisScheme,
+      "Status" : OptionStatus
+    )
+
+    alias AnalysisSchemeStatusList = Array(AnalysisSchemeStatus)
+
+    alias AvailabilityOptionsStatus = NamedTuple(
+      "Options" : MultiAZ,
+      "Status" : OptionStatus
+    )
+
+    alias BaseException = NamedTuple(
+      "Code" : (ErrorCode)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Boolean = Bool
+
+    alias BuildSuggestersRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias BuildSuggestersResponse = NamedTuple(
+      "FieldNames" : (FieldNameList)?
+    )
+
+    alias CreateDomainRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias CreateDomainResponse = NamedTuple(
+      "DomainStatus" : (DomainStatus)?
+    )
+
+    alias DateArrayOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceFields" : (FieldNameCommaList)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?
+    )
+
+    alias DateOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceField" : (FieldName)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?,
+      "SortEnabled" : (Boolean)?
+    )
+
+    alias DefineAnalysisSchemeRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AnalysisScheme" : AnalysisScheme
+    )
+
+    alias DefineAnalysisSchemeResponse = NamedTuple(
+      "AnalysisScheme" : AnalysisSchemeStatus
+    )
+
+    alias DefineExpressionRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "Expression" : Expression
+    )
+
+    alias DefineExpressionResponse = NamedTuple(
+      "Expression" : ExpressionStatus
+    )
+
+    alias DefineIndexFieldRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "IndexField" : IndexField
+    )
+
+    alias DefineIndexFieldResponse = NamedTuple(
+      "IndexField" : IndexFieldStatus
+    )
+
+    alias DefineSuggesterRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "Suggester" : Suggester
+    )
+
+    alias DefineSuggesterResponse = NamedTuple(
+      "Suggester" : SuggesterStatus
+    )
+
+    alias DeleteAnalysisSchemeRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AnalysisSchemeName" : StandardName
+    )
+
+    alias DeleteAnalysisSchemeResponse = NamedTuple(
+      "AnalysisScheme" : AnalysisSchemeStatus
+    )
+
+    alias DeleteDomainRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias DeleteDomainResponse = NamedTuple(
+      "DomainStatus" : (DomainStatus)?
+    )
+
+    alias DeleteExpressionRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "ExpressionName" : StandardName
+    )
+
+    alias DeleteExpressionResponse = NamedTuple(
+      "Expression" : ExpressionStatus
+    )
+
+    alias DeleteIndexFieldRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "IndexFieldName" : DynamicFieldName
+    )
+
+    alias DeleteIndexFieldResponse = NamedTuple(
+      "IndexField" : IndexFieldStatus
+    )
+
+    alias DeleteSuggesterRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "SuggesterName" : StandardName
+    )
+
+    alias DeleteSuggesterResponse = NamedTuple(
+      "Suggester" : SuggesterStatus
+    )
+
+    alias DescribeAnalysisSchemesRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AnalysisSchemeNames" : (StandardNameList)?,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeAnalysisSchemesResponse = NamedTuple(
+      "AnalysisSchemes" : AnalysisSchemeStatusList
+    )
+
+    alias DescribeAvailabilityOptionsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeAvailabilityOptionsResponse = NamedTuple(
+      "AvailabilityOptions" : (AvailabilityOptionsStatus)?
+    )
+
+    alias DescribeDomainEndpointOptionsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeDomainEndpointOptionsResponse = NamedTuple(
+      "DomainEndpointOptions" : (DomainEndpointOptionsStatus)?
+    )
+
+    alias DescribeDomainsRequest = NamedTuple(
+      "DomainNames" : (DomainNameList)?
+    )
+
+    alias DescribeDomainsResponse = NamedTuple(
+      "DomainStatusList" : DomainStatusList
+    )
+
+    alias DescribeExpressionsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "ExpressionNames" : (StandardNameList)?,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeExpressionsResponse = NamedTuple(
+      "Expressions" : ExpressionStatusList
+    )
+
+    alias DescribeIndexFieldsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "FieldNames" : (DynamicFieldNameList)?,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeIndexFieldsResponse = NamedTuple(
+      "IndexFields" : IndexFieldStatusList
+    )
+
+    alias DescribeScalingParametersRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias DescribeScalingParametersResponse = NamedTuple(
+      "ScalingParameters" : ScalingParametersStatus
+    )
+
+    alias DescribeServiceAccessPoliciesRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeServiceAccessPoliciesResponse = NamedTuple(
+      "AccessPolicies" : AccessPoliciesStatus
+    )
+
+    alias DescribeSuggestersRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "SuggesterNames" : (StandardNameList)?,
+      "Deployed" : (Boolean)?
+    )
+
+    alias DescribeSuggestersResponse = NamedTuple(
+      "Suggesters" : SuggesterStatusList
+    )
+
+    alias DisabledOperationException = NamedTuple(
+      
+    )
+
+    alias DocumentSuggesterOptions = NamedTuple(
+      "SourceField" : FieldName,
+      "FuzzyMatching" : (SuggesterFuzzyMatching)?,
+      "SortExpression" : (String)?
+    )
+
+    alias DomainEndpointOptions = NamedTuple(
+      "EnforceHTTPS" : (Boolean)?,
+      "TLSSecurityPolicy" : (TLSSecurityPolicy)?
+    )
+
+    alias DomainEndpointOptionsStatus = NamedTuple(
+      "Options" : DomainEndpointOptions,
+      "Status" : OptionStatus
+    )
+
+    alias DomainId = String
+
+    alias DomainName = String
+
+    alias DomainNameList = Array(DomainName)
+
+    alias DomainNameMap = Hash(DomainName,APIVersion)
+
+    alias DomainStatus = NamedTuple(
+      "DomainId" : DomainId,
+      "DomainName" : DomainName,
+      "ARN" : (ARN)?,
+      "Created" : (Boolean)?,
+      "Deleted" : (Boolean)?,
+      "DocService" : (ServiceEndpoint)?,
+      "SearchService" : (ServiceEndpoint)?,
+      "RequiresIndexDocuments" : Boolean,
+      "Processing" : (Boolean)?,
+      "SearchInstanceType" : (SearchInstanceType)?,
+      "SearchPartitionCount" : (PartitionCount)?,
+      "SearchInstanceCount" : (InstanceCount)?,
+      "Limits" : (Limits)?
+    )
+
+    alias DomainStatusList = Array(DomainStatus)
+
+    alias Double = Float64
+
+    alias DoubleArrayOptions = NamedTuple(
+      "DefaultValue" : (Double)?,
+      "SourceFields" : (FieldNameCommaList)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?
+    )
+
+    alias DoubleOptions = NamedTuple(
+      "DefaultValue" : (Double)?,
+      "SourceField" : (FieldName)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?,
+      "SortEnabled" : (Boolean)?
+    )
+
+    alias DynamicFieldName = String
+
+    alias DynamicFieldNameList = Array(DynamicFieldName)
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias Expression = NamedTuple(
+      "ExpressionName" : StandardName,
+      "ExpressionValue" : ExpressionValue
+    )
+
+    alias ExpressionStatus = NamedTuple(
+      "Options" : Expression,
+      "Status" : OptionStatus
+    )
+
+    alias ExpressionStatusList = Array(ExpressionStatus)
+
+    alias ExpressionValue = String
+
+    alias FieldName = String
+
+    alias FieldNameCommaList = String
+
+    alias FieldNameList = Array(FieldName)
+
+    alias FieldValue = String
+
+    alias IndexDocumentsRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias IndexDocumentsResponse = NamedTuple(
+      "FieldNames" : (FieldNameList)?
+    )
+
+    alias IndexField = NamedTuple(
+      "IndexFieldName" : DynamicFieldName,
+      "IndexFieldType" : IndexFieldType,
+      "IntOptions" : (IntOptions)?,
+      "DoubleOptions" : (DoubleOptions)?,
+      "LiteralOptions" : (LiteralOptions)?,
+      "TextOptions" : (TextOptions)?,
+      "DateOptions" : (DateOptions)?,
+      "LatLonOptions" : (LatLonOptions)?,
+      "IntArrayOptions" : (IntArrayOptions)?,
+      "DoubleArrayOptions" : (DoubleArrayOptions)?,
+      "LiteralArrayOptions" : (LiteralArrayOptions)?,
+      "TextArrayOptions" : (TextArrayOptions)?,
+      "DateArrayOptions" : (DateArrayOptions)?
+    )
+
+    alias IndexFieldStatus = NamedTuple(
+      "Options" : IndexField,
+      "Status" : OptionStatus
+    )
+
+    alias IndexFieldStatusList = Array(IndexFieldStatus)
+
+    alias IndexFieldType = String
+
+    alias InstanceCount = Int32
+
+    alias IntArrayOptions = NamedTuple(
+      "DefaultValue" : (Long)?,
+      "SourceFields" : (FieldNameCommaList)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?
+    )
+
+    alias IntOptions = NamedTuple(
+      "DefaultValue" : (Long)?,
+      "SourceField" : (FieldName)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?,
+      "SortEnabled" : (Boolean)?
+    )
+
+    alias InternalException = NamedTuple(
+      
+    )
+
+    alias InvalidTypeException = NamedTuple(
+      
+    )
+
+    alias LatLonOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceField" : (FieldName)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?,
+      "SortEnabled" : (Boolean)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias Limits = NamedTuple(
+      "MaximumReplicationCount" : MaximumReplicationCount,
+      "MaximumPartitionCount" : MaximumPartitionCount
+    )
+
+    alias ListDomainNamesResponse = NamedTuple(
+      "DomainNames" : (DomainNameMap)?
+    )
+
+    alias LiteralArrayOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceFields" : (FieldNameCommaList)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?
+    )
+
+    alias LiteralOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceField" : (FieldName)?,
+      "FacetEnabled" : (Boolean)?,
+      "SearchEnabled" : (Boolean)?,
+      "ReturnEnabled" : (Boolean)?,
+      "SortEnabled" : (Boolean)?
+    )
+
+    alias Long = Int64
+
+    alias MaximumPartitionCount = Int32
+
+    alias MaximumReplicationCount = Int32
+
+    alias MultiAZ = Bool
+
+    alias OptionState = String
+
+    alias OptionStatus = NamedTuple(
+      "CreationDate" : UpdateTimestamp,
+      "UpdateDate" : UpdateTimestamp,
+      "UpdateVersion" : (UIntValue)?,
+      "State" : OptionState,
+      "PendingDeletion" : (Boolean)?
+    )
+
+    alias PartitionCount = Int32
+
+    alias PartitionInstanceType = String
+
+    alias PolicyDocument = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias ScalingParameters = NamedTuple(
+      "DesiredInstanceType" : (PartitionInstanceType)?,
+      "DesiredReplicationCount" : (UIntValue)?,
+      "DesiredPartitionCount" : (UIntValue)?
+    )
+
+    alias ScalingParametersStatus = NamedTuple(
+      "Options" : ScalingParameters,
+      "Status" : OptionStatus
+    )
+
+    alias SearchInstanceType = String
+
+    alias ServiceEndpoint = NamedTuple(
+      "Endpoint" : (ServiceUrl)?
+    )
+
+    alias ServiceUrl = String
+
+    alias StandardName = String
+
+    alias StandardNameList = Array(StandardName)
+
+    alias String = String
+
+    alias Suggester = NamedTuple(
+      "SuggesterName" : StandardName,
+      "DocumentSuggesterOptions" : DocumentSuggesterOptions
+    )
+
+    alias SuggesterFuzzyMatching = String
+
+    alias SuggesterStatus = NamedTuple(
+      "Options" : Suggester,
+      "Status" : OptionStatus
+    )
+
+    alias SuggesterStatusList = Array(SuggesterStatus)
+
+    alias TLSSecurityPolicy = String
+
+    alias TextArrayOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceFields" : (FieldNameCommaList)?,
+      "ReturnEnabled" : (Boolean)?,
+      "HighlightEnabled" : (Boolean)?,
+      "AnalysisScheme" : (Word)?
+    )
+
+    alias TextOptions = NamedTuple(
+      "DefaultValue" : (FieldValue)?,
+      "SourceField" : (FieldName)?,
+      "ReturnEnabled" : (Boolean)?,
+      "SortEnabled" : (Boolean)?,
+      "HighlightEnabled" : (Boolean)?,
+      "AnalysisScheme" : (Word)?
+    )
+
+    alias UIntValue = Int32
+
+    alias UpdateAvailabilityOptionsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "MultiAZ" : Boolean
+    )
+
+    alias UpdateAvailabilityOptionsResponse = NamedTuple(
+      "AvailabilityOptions" : (AvailabilityOptionsStatus)?
+    )
+
+    alias UpdateDomainEndpointOptionsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "DomainEndpointOptions" : DomainEndpointOptions
+    )
+
+    alias UpdateDomainEndpointOptionsResponse = NamedTuple(
+      "DomainEndpointOptions" : (DomainEndpointOptionsStatus)?
+    )
+
+    alias UpdateScalingParametersRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "ScalingParameters" : ScalingParameters
+    )
+
+    alias UpdateScalingParametersResponse = NamedTuple(
+      "ScalingParameters" : ScalingParametersStatus
+    )
+
+    alias UpdateServiceAccessPoliciesRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AccessPolicies" : PolicyDocument
+    )
+
+    alias UpdateServiceAccessPoliciesResponse = NamedTuple(
+      "AccessPolicies" : AccessPoliciesStatus
+    )
+
+    alias UpdateTimestamp = String | UInt64 | Time
+
+    alias ValidationException = NamedTuple(
+      
+    )
+
+    alias Word = String
   end
 end

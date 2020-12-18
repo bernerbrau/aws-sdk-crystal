@@ -378,8 +378,8 @@ module Aws::Comprehend
     #
     # @overload batch_detect_dominant_language(**params)
     # @param [Hash] params ({})
-    def batch_detect_dominant_language(params = {}, **options)
-      req = build_request(:batch_detect_dominant_language, params)
+    def batch_detect_dominant_language(, **options)
+      req = build_request(:batch_detect_dominant_language, )
       req.send_request(options)
     end
 
@@ -428,8 +428,8 @@ module Aws::Comprehend
     #
     # @overload batch_detect_entities(**params)
     # @param [Hash] params ({})
-    def batch_detect_entities(params = {}, **options)
-      req = build_request(:batch_detect_entities, params)
+    def batch_detect_entities(, **options)
+      req = build_request(:batch_detect_entities, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::Comprehend
     #
     # @overload batch_detect_key_phrases(**params)
     # @param [Hash] params ({})
-    def batch_detect_key_phrases(params = {}, **options)
-      req = build_request(:batch_detect_key_phrases, params)
+    def batch_detect_key_phrases(, **options)
+      req = build_request(:batch_detect_key_phrases, )
       req.send_request(options)
     end
 
@@ -524,8 +524,8 @@ module Aws::Comprehend
     #
     # @overload batch_detect_sentiment(**params)
     # @param [Hash] params ({})
-    def batch_detect_sentiment(params = {}, **options)
-      req = build_request(:batch_detect_sentiment, params)
+    def batch_detect_sentiment(, **options)
+      req = build_request(:batch_detect_sentiment, )
       req.send_request(options)
     end
 
@@ -576,8 +576,8 @@ module Aws::Comprehend
     #
     # @overload batch_detect_syntax(**params)
     # @param [Hash] params ({})
-    def batch_detect_syntax(params = {}, **options)
-      req = build_request(:batch_detect_syntax, params)
+    def batch_detect_syntax(, **options)
+      req = build_request(:batch_detect_syntax, )
       req.send_request(options)
     end
 
@@ -616,8 +616,8 @@ module Aws::Comprehend
     #
     # @overload classify_document(**params)
     # @param [Hash] params ({})
-    def classify_document(params = {}, **options)
-      req = build_request(:classify_document, params)
+    def classify_document(, **options)
+      req = build_request(:classify_document, )
       req.send_request(options)
     end
 
@@ -738,8 +738,8 @@ module Aws::Comprehend
     #
     # @overload create_document_classifier(**params)
     # @param [Hash] params ({})
-    def create_document_classifier(params = {}, **options)
-      req = build_request(:create_document_classifier, params)
+    def create_document_classifier(, **options)
+      req = build_request(:create_document_classifier, )
       req.send_request(options)
     end
 
@@ -800,8 +800,8 @@ module Aws::Comprehend
     #
     # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, **options)
-      req = build_request(:create_endpoint, params)
+    def create_endpoint(, **options)
+      req = build_request(:create_endpoint, )
       req.send_request(options)
     end
 
@@ -919,8 +919,8 @@ module Aws::Comprehend
     #
     # @overload create_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def create_entity_recognizer(params = {}, **options)
-      req = build_request(:create_entity_recognizer, params)
+    def create_entity_recognizer(, **options)
+      req = build_request(:create_entity_recognizer, )
       req.send_request(options)
     end
 
@@ -951,8 +951,8 @@ module Aws::Comprehend
     #
     # @overload delete_document_classifier(**params)
     # @param [Hash] params ({})
-    def delete_document_classifier(params = {}, **options)
-      req = build_request(:delete_document_classifier, params)
+    def delete_document_classifier(, **options)
+      req = build_request(:delete_document_classifier, )
       req.send_request(options)
     end
 
@@ -975,8 +975,8 @@ module Aws::Comprehend
     #
     # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, **options)
-      req = build_request(:delete_endpoint, params)
+    def delete_endpoint(, **options)
+      req = build_request(:delete_endpoint, )
       req.send_request(options)
     end
 
@@ -1006,8 +1006,8 @@ module Aws::Comprehend
     #
     # @overload delete_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def delete_entity_recognizer(params = {}, **options)
-      req = build_request(:delete_entity_recognizer, params)
+    def delete_entity_recognizer(, **options)
+      req = build_request(:delete_entity_recognizer, )
       req.send_request(options)
     end
 
@@ -1052,8 +1052,8 @@ module Aws::Comprehend
     #
     # @overload describe_document_classification_job(**params)
     # @param [Hash] params ({})
-    def describe_document_classification_job(params = {}, **options)
-      req = build_request(:describe_document_classification_job, params)
+    def describe_document_classification_job(, **options)
+      req = build_request(:describe_document_classification_job, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::Comprehend
     #
     # @overload describe_document_classifier(**params)
     # @param [Hash] params ({})
-    def describe_document_classifier(params = {}, **options)
-      req = build_request(:describe_document_classifier, params)
+    def describe_document_classifier(, **options)
+      req = build_request(:describe_document_classifier, )
       req.send_request(options)
     end
 
@@ -1160,8 +1160,8 @@ module Aws::Comprehend
     #
     # @overload describe_dominant_language_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_dominant_language_detection_job(params = {}, **options)
-      req = build_request(:describe_dominant_language_detection_job, params)
+    def describe_dominant_language_detection_job(, **options)
+      req = build_request(:describe_dominant_language_detection_job, )
       req.send_request(options)
     end
 
@@ -1196,8 +1196,8 @@ module Aws::Comprehend
     #
     # @overload describe_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_endpoint(params = {}, **options)
-      req = build_request(:describe_endpoint, params)
+    def describe_endpoint(, **options)
+      req = build_request(:describe_endpoint, )
       req.send_request(options)
     end
 
@@ -1243,8 +1243,8 @@ module Aws::Comprehend
     #
     # @overload describe_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_entities_detection_job(params = {}, **options)
-      req = build_request(:describe_entities_detection_job, params)
+    def describe_entities_detection_job(, **options)
+      req = build_request(:describe_entities_detection_job, )
       req.send_request(options)
     end
 
@@ -1307,8 +1307,8 @@ module Aws::Comprehend
     #
     # @overload describe_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def describe_entity_recognizer(params = {}, **options)
-      req = build_request(:describe_entity_recognizer, params)
+    def describe_entity_recognizer(, **options)
+      req = build_request(:describe_entity_recognizer, )
       req.send_request(options)
     end
 
@@ -1348,8 +1348,8 @@ module Aws::Comprehend
     #
     # @overload describe_events_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_events_detection_job(params = {}, **options)
-      req = build_request(:describe_events_detection_job, params)
+    def describe_events_detection_job(, **options)
+      req = build_request(:describe_events_detection_job, )
       req.send_request(options)
     end
 
@@ -1394,8 +1394,8 @@ module Aws::Comprehend
     #
     # @overload describe_key_phrases_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_key_phrases_detection_job(params = {}, **options)
-      req = build_request(:describe_key_phrases_detection_job, params)
+    def describe_key_phrases_detection_job(, **options)
+      req = build_request(:describe_key_phrases_detection_job, )
       req.send_request(options)
     end
 
@@ -1440,8 +1440,8 @@ module Aws::Comprehend
     #
     # @overload describe_pii_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_pii_entities_detection_job(params = {}, **options)
-      req = build_request(:describe_pii_entities_detection_job, params)
+    def describe_pii_entities_detection_job(, **options)
+      req = build_request(:describe_pii_entities_detection_job, )
       req.send_request(options)
     end
 
@@ -1486,8 +1486,8 @@ module Aws::Comprehend
     #
     # @overload describe_sentiment_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_sentiment_detection_job(params = {}, **options)
-      req = build_request(:describe_sentiment_detection_job, params)
+    def describe_sentiment_detection_job(, **options)
+      req = build_request(:describe_sentiment_detection_job, )
       req.send_request(options)
     end
 
@@ -1531,8 +1531,8 @@ module Aws::Comprehend
     #
     # @overload describe_topics_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_topics_detection_job(params = {}, **options)
-      req = build_request(:describe_topics_detection_job, params)
+    def describe_topics_detection_job(, **options)
+      req = build_request(:describe_topics_detection_job, )
       req.send_request(options)
     end
 
@@ -1568,8 +1568,8 @@ module Aws::Comprehend
     #
     # @overload detect_dominant_language(**params)
     # @param [Hash] params ({})
-    def detect_dominant_language(params = {}, **options)
-      req = build_request(:detect_dominant_language, params)
+    def detect_dominant_language(, **options)
+      req = build_request(:detect_dominant_language, )
       req.send_request(options)
     end
 
@@ -1624,8 +1624,8 @@ module Aws::Comprehend
     #
     # @overload detect_entities(**params)
     # @param [Hash] params ({})
-    def detect_entities(params = {}, **options)
-      req = build_request(:detect_entities, params)
+    def detect_entities(, **options)
+      req = build_request(:detect_entities, )
       req.send_request(options)
     end
 
@@ -1663,8 +1663,8 @@ module Aws::Comprehend
     #
     # @overload detect_key_phrases(**params)
     # @param [Hash] params ({})
-    def detect_key_phrases(params = {}, **options)
-      req = build_request(:detect_key_phrases, params)
+    def detect_key_phrases(, **options)
+      req = build_request(:detect_key_phrases, )
       req.send_request(options)
     end
 
@@ -1701,8 +1701,8 @@ module Aws::Comprehend
     #
     # @overload detect_pii_entities(**params)
     # @param [Hash] params ({})
-    def detect_pii_entities(params = {}, **options)
-      req = build_request(:detect_pii_entities, params)
+    def detect_pii_entities(, **options)
+      req = build_request(:detect_pii_entities, )
       req.send_request(options)
     end
 
@@ -1742,8 +1742,8 @@ module Aws::Comprehend
     #
     # @overload detect_sentiment(**params)
     # @param [Hash] params ({})
-    def detect_sentiment(params = {}, **options)
-      req = build_request(:detect_sentiment, params)
+    def detect_sentiment(, **options)
+      req = build_request(:detect_sentiment, )
       req.send_request(options)
     end
 
@@ -1785,8 +1785,8 @@ module Aws::Comprehend
     #
     # @overload detect_syntax(**params)
     # @param [Hash] params ({})
-    def detect_syntax(params = {}, **options)
-      req = build_request(:detect_syntax, params)
+    def detect_syntax(, **options)
+      req = build_request(:detect_syntax, )
       req.send_request(options)
     end
 
@@ -1851,8 +1851,8 @@ module Aws::Comprehend
     #
     # @overload list_document_classification_jobs(**params)
     # @param [Hash] params ({})
-    def list_document_classification_jobs(params = {}, **options)
-      req = build_request(:list_document_classification_jobs, params)
+    def list_document_classification_jobs(, **options)
+      req = build_request(:list_document_classification_jobs, )
       req.send_request(options)
     end
 
@@ -1933,8 +1933,8 @@ module Aws::Comprehend
     #
     # @overload list_document_classifiers(**params)
     # @param [Hash] params ({})
-    def list_document_classifiers(params = {}, **options)
-      req = build_request(:list_document_classifiers, params)
+    def list_document_classifiers(, **options)
+      req = build_request(:list_document_classifiers, )
       req.send_request(options)
     end
 
@@ -1998,8 +1998,8 @@ module Aws::Comprehend
     #
     # @overload list_dominant_language_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_dominant_language_detection_jobs(params = {}, **options)
-      req = build_request(:list_dominant_language_detection_jobs, params)
+    def list_dominant_language_detection_jobs(, **options)
+      req = build_request(:list_dominant_language_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2052,8 +2052,8 @@ module Aws::Comprehend
     #
     # @overload list_endpoints(**params)
     # @param [Hash] params ({})
-    def list_endpoints(params = {}, **options)
-      req = build_request(:list_endpoints, params)
+    def list_endpoints(, **options)
+      req = build_request(:list_endpoints, )
       req.send_request(options)
     end
 
@@ -2118,8 +2118,8 @@ module Aws::Comprehend
     #
     # @overload list_entities_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_entities_detection_jobs(params = {}, **options)
-      req = build_request(:list_entities_detection_jobs, params)
+    def list_entities_detection_jobs(, **options)
+      req = build_request(:list_entities_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2207,8 +2207,8 @@ module Aws::Comprehend
     #
     # @overload list_entity_recognizers(**params)
     # @param [Hash] params ({})
-    def list_entity_recognizers(params = {}, **options)
-      req = build_request(:list_entity_recognizers, params)
+    def list_entity_recognizers(, **options)
+      req = build_request(:list_entity_recognizers, )
       req.send_request(options)
     end
 
@@ -2268,8 +2268,8 @@ module Aws::Comprehend
     #
     # @overload list_events_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_events_detection_jobs(params = {}, **options)
-      req = build_request(:list_events_detection_jobs, params)
+    def list_events_detection_jobs(, **options)
+      req = build_request(:list_events_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2333,8 +2333,8 @@ module Aws::Comprehend
     #
     # @overload list_key_phrases_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_key_phrases_detection_jobs(params = {}, **options)
-      req = build_request(:list_key_phrases_detection_jobs, params)
+    def list_key_phrases_detection_jobs(, **options)
+      req = build_request(:list_key_phrases_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2395,8 +2395,8 @@ module Aws::Comprehend
     #
     # @overload list_pii_entities_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_pii_entities_detection_jobs(params = {}, **options)
-      req = build_request(:list_pii_entities_detection_jobs, params)
+    def list_pii_entities_detection_jobs(, **options)
+      req = build_request(:list_pii_entities_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2460,8 +2460,8 @@ module Aws::Comprehend
     #
     # @overload list_sentiment_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_sentiment_detection_jobs(params = {}, **options)
-      req = build_request(:list_sentiment_detection_jobs, params)
+    def list_sentiment_detection_jobs(, **options)
+      req = build_request(:list_sentiment_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2493,8 +2493,8 @@ module Aws::Comprehend
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2558,8 +2558,8 @@ module Aws::Comprehend
     #
     # @overload list_topics_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_topics_detection_jobs(params = {}, **options)
-      req = build_request(:list_topics_detection_jobs, params)
+    def list_topics_detection_jobs(, **options)
+      req = build_request(:list_topics_detection_jobs, )
       req.send_request(options)
     end
 
@@ -2647,8 +2647,8 @@ module Aws::Comprehend
     #
     # @overload start_document_classification_job(**params)
     # @param [Hash] params ({})
-    def start_document_classification_job(params = {}, **options)
-      req = build_request(:start_document_classification_job, params)
+    def start_document_classification_job(, **options)
+      req = build_request(:start_document_classification_job, )
       req.send_request(options)
     end
 
@@ -2737,8 +2737,8 @@ module Aws::Comprehend
     #
     # @overload start_dominant_language_detection_job(**params)
     # @param [Hash] params ({})
-    def start_dominant_language_detection_job(params = {}, **options)
-      req = build_request(:start_dominant_language_detection_job, params)
+    def start_dominant_language_detection_job(, **options)
+      req = build_request(:start_dominant_language_detection_job, )
       req.send_request(options)
     end
 
@@ -2844,8 +2844,8 @@ module Aws::Comprehend
     #
     # @overload start_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def start_entities_detection_job(params = {}, **options)
-      req = build_request(:start_entities_detection_job, params)
+    def start_entities_detection_job(, **options)
+      req = build_request(:start_entities_detection_job, )
       req.send_request(options)
     end
 
@@ -2911,8 +2911,8 @@ module Aws::Comprehend
     #
     # @overload start_events_detection_job(**params)
     # @param [Hash] params ({})
-    def start_events_detection_job(params = {}, **options)
-      req = build_request(:start_events_detection_job, params)
+    def start_events_detection_job(, **options)
+      req = build_request(:start_events_detection_job, )
       req.send_request(options)
     end
 
@@ -3006,8 +3006,8 @@ module Aws::Comprehend
     #
     # @overload start_key_phrases_detection_job(**params)
     # @param [Hash] params ({})
-    def start_key_phrases_detection_job(params = {}, **options)
-      req = build_request(:start_key_phrases_detection_job, params)
+    def start_key_phrases_detection_job(, **options)
+      req = build_request(:start_key_phrases_detection_job, )
       req.send_request(options)
     end
 
@@ -3087,8 +3087,8 @@ module Aws::Comprehend
     #
     # @overload start_pii_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def start_pii_entities_detection_job(params = {}, **options)
-      req = build_request(:start_pii_entities_detection_job, params)
+    def start_pii_entities_detection_job(, **options)
+      req = build_request(:start_pii_entities_detection_job, )
       req.send_request(options)
     end
 
@@ -3182,8 +3182,8 @@ module Aws::Comprehend
     #
     # @overload start_sentiment_detection_job(**params)
     # @param [Hash] params ({})
-    def start_sentiment_detection_job(params = {}, **options)
-      req = build_request(:start_sentiment_detection_job, params)
+    def start_sentiment_detection_job(, **options)
+      req = build_request(:start_sentiment_detection_job, )
       req.send_request(options)
     end
 
@@ -3278,8 +3278,8 @@ module Aws::Comprehend
     #
     # @overload start_topics_detection_job(**params)
     # @param [Hash] params ({})
-    def start_topics_detection_job(params = {}, **options)
-      req = build_request(:start_topics_detection_job, params)
+    def start_topics_detection_job(, **options)
+      req = build_request(:start_topics_detection_job, )
       req.send_request(options)
     end
 
@@ -3320,8 +3320,8 @@ module Aws::Comprehend
     #
     # @overload stop_dominant_language_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_dominant_language_detection_job(params = {}, **options)
-      req = build_request(:stop_dominant_language_detection_job, params)
+    def stop_dominant_language_detection_job(, **options)
+      req = build_request(:stop_dominant_language_detection_job, )
       req.send_request(options)
     end
 
@@ -3362,8 +3362,8 @@ module Aws::Comprehend
     #
     # @overload stop_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_entities_detection_job(params = {}, **options)
-      req = build_request(:stop_entities_detection_job, params)
+    def stop_entities_detection_job(, **options)
+      req = build_request(:stop_entities_detection_job, )
       req.send_request(options)
     end
 
@@ -3392,8 +3392,8 @@ module Aws::Comprehend
     #
     # @overload stop_events_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_events_detection_job(params = {}, **options)
-      req = build_request(:stop_events_detection_job, params)
+    def stop_events_detection_job(, **options)
+      req = build_request(:stop_events_detection_job, )
       req.send_request(options)
     end
 
@@ -3434,8 +3434,8 @@ module Aws::Comprehend
     #
     # @overload stop_key_phrases_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_key_phrases_detection_job(params = {}, **options)
-      req = build_request(:stop_key_phrases_detection_job, params)
+    def stop_key_phrases_detection_job(, **options)
+      req = build_request(:stop_key_phrases_detection_job, )
       req.send_request(options)
     end
 
@@ -3464,8 +3464,8 @@ module Aws::Comprehend
     #
     # @overload stop_pii_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_pii_entities_detection_job(params = {}, **options)
-      req = build_request(:stop_pii_entities_detection_job, params)
+    def stop_pii_entities_detection_job(, **options)
+      req = build_request(:stop_pii_entities_detection_job, )
       req.send_request(options)
     end
 
@@ -3506,8 +3506,8 @@ module Aws::Comprehend
     #
     # @overload stop_sentiment_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_sentiment_detection_job(params = {}, **options)
-      req = build_request(:stop_sentiment_detection_job, params)
+    def stop_sentiment_detection_job(, **options)
+      req = build_request(:stop_sentiment_detection_job, )
       req.send_request(options)
     end
 
@@ -3536,8 +3536,8 @@ module Aws::Comprehend
     #
     # @overload stop_training_document_classifier(**params)
     # @param [Hash] params ({})
-    def stop_training_document_classifier(params = {}, **options)
-      req = build_request(:stop_training_document_classifier, params)
+    def stop_training_document_classifier(, **options)
+      req = build_request(:stop_training_document_classifier, )
       req.send_request(options)
     end
 
@@ -3566,8 +3566,8 @@ module Aws::Comprehend
     #
     # @overload stop_training_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def stop_training_entity_recognizer(params = {}, **options)
-      req = build_request(:stop_training_entity_recognizer, params)
+    def stop_training_entity_recognizer(, **options)
+      req = build_request(:stop_training_entity_recognizer, )
       req.send_request(options)
     end
 
@@ -3603,8 +3603,8 @@ module Aws::Comprehend
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3634,8 +3634,8 @@ module Aws::Comprehend
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3662,8 +3662,8 @@ module Aws::Comprehend
     #
     # @overload update_endpoint(**params)
     # @param [Hash] params ({})
-    def update_endpoint(params = {}, **options)
-      req = build_request(:update_endpoint, params)
+    def update_endpoint(, **options)
+      req = build_request(:update_endpoint, )
       req.send_request(options)
     end
 

@@ -421,8 +421,8 @@ module Aws::AppSync
     #
     # @overload create_api_cache(**params)
     # @param [Hash] params ({})
-    def create_api_cache(params = {}, **options)
-      req = build_request(:create_api_cache, params)
+    def create_api_cache(, **options)
+      req = build_request(:create_api_cache, )
       req.send_request(options)
     end
 
@@ -464,8 +464,8 @@ module Aws::AppSync
     #
     # @overload create_api_key(**params)
     # @param [Hash] params ({})
-    def create_api_key(params = {}, **options)
-      req = build_request(:create_api_key, params)
+    def create_api_key(, **options)
+      req = build_request(:create_api_key, )
       req.send_request(options)
     end
 
@@ -586,8 +586,8 @@ module Aws::AppSync
     #
     # @overload create_data_source(**params)
     # @param [Hash] params ({})
-    def create_data_source(params = {}, **options)
-      req = build_request(:create_data_source, params)
+    def create_data_source(, **options)
+      req = build_request(:create_data_source, )
       req.send_request(options)
     end
 
@@ -650,8 +650,8 @@ module Aws::AppSync
     #
     # @overload create_function(**params)
     # @param [Hash] params ({})
-    def create_function(params = {}, **options)
-      req = build_request(:create_function, params)
+    def create_function(, **options)
+      req = build_request(:create_function, )
       req.send_request(options)
     end
 
@@ -769,8 +769,8 @@ module Aws::AppSync
     #
     # @overload create_graphql_api(**params)
     # @param [Hash] params ({})
-    def create_graphql_api(params = {}, **options)
-      req = build_request(:create_graphql_api, params)
+    def create_graphql_api(, **options)
+      req = build_request(:create_graphql_api, )
       req.send_request(options)
     end
 
@@ -878,8 +878,8 @@ module Aws::AppSync
     #
     # @overload create_resolver(**params)
     # @param [Hash] params ({})
-    def create_resolver(params = {}, **options)
-      req = build_request(:create_resolver, params)
+    def create_resolver(, **options)
+      req = build_request(:create_resolver, )
       req.send_request(options)
     end
 
@@ -925,8 +925,8 @@ module Aws::AppSync
     #
     # @overload create_type(**params)
     # @param [Hash] params ({})
-    def create_type(params = {}, **options)
-      req = build_request(:create_type, params)
+    def create_type(, **options)
+      req = build_request(:create_type, )
       req.send_request(options)
     end
 
@@ -947,8 +947,8 @@ module Aws::AppSync
     #
     # @overload delete_api_cache(**params)
     # @param [Hash] params ({})
-    def delete_api_cache(params = {}, **options)
-      req = build_request(:delete_api_cache, params)
+    def delete_api_cache(, **options)
+      req = build_request(:delete_api_cache, )
       req.send_request(options)
     end
 
@@ -973,8 +973,8 @@ module Aws::AppSync
     #
     # @overload delete_api_key(**params)
     # @param [Hash] params ({})
-    def delete_api_key(params = {}, **options)
-      req = build_request(:delete_api_key, params)
+    def delete_api_key(, **options)
+      req = build_request(:delete_api_key, )
       req.send_request(options)
     end
 
@@ -999,8 +999,8 @@ module Aws::AppSync
     #
     # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, **options)
-      req = build_request(:delete_data_source, params)
+    def delete_data_source(, **options)
+      req = build_request(:delete_data_source, )
       req.send_request(options)
     end
 
@@ -1025,8 +1025,8 @@ module Aws::AppSync
     #
     # @overload delete_function(**params)
     # @param [Hash] params ({})
-    def delete_function(params = {}, **options)
-      req = build_request(:delete_function, params)
+    def delete_function(, **options)
+      req = build_request(:delete_function, )
       req.send_request(options)
     end
 
@@ -1047,8 +1047,8 @@ module Aws::AppSync
     #
     # @overload delete_graphql_api(**params)
     # @param [Hash] params ({})
-    def delete_graphql_api(params = {}, **options)
-      req = build_request(:delete_graphql_api, params)
+    def delete_graphql_api(, **options)
+      req = build_request(:delete_graphql_api, )
       req.send_request(options)
     end
 
@@ -1077,8 +1077,8 @@ module Aws::AppSync
     #
     # @overload delete_resolver(**params)
     # @param [Hash] params ({})
-    def delete_resolver(params = {}, **options)
-      req = build_request(:delete_resolver, params)
+    def delete_resolver(, **options)
+      req = build_request(:delete_resolver, )
       req.send_request(options)
     end
 
@@ -1103,8 +1103,8 @@ module Aws::AppSync
     #
     # @overload delete_type(**params)
     # @param [Hash] params ({})
-    def delete_type(params = {}, **options)
-      req = build_request(:delete_type, params)
+    def delete_type(, **options)
+      req = build_request(:delete_type, )
       req.send_request(options)
     end
 
@@ -1125,8 +1125,8 @@ module Aws::AppSync
     #
     # @overload flush_api_cache(**params)
     # @param [Hash] params ({})
-    def flush_api_cache(params = {}, **options)
-      req = build_request(:flush_api_cache, params)
+    def flush_api_cache(, **options)
+      req = build_request(:flush_api_cache, )
       req.send_request(options)
     end
 
@@ -1158,8 +1158,8 @@ module Aws::AppSync
     #
     # @overload get_api_cache(**params)
     # @param [Hash] params ({})
-    def get_api_cache(params = {}, **options)
-      req = build_request(:get_api_cache, params)
+    def get_api_cache(, **options)
+      req = build_request(:get_api_cache, )
       req.send_request(options)
     end
 
@@ -1214,8 +1214,8 @@ module Aws::AppSync
     #
     # @overload get_data_source(**params)
     # @param [Hash] params ({})
-    def get_data_source(params = {}, **options)
-      req = build_request(:get_data_source, params)
+    def get_data_source(, **options)
+      req = build_request(:get_data_source, )
       req.send_request(options)
     end
 
@@ -1253,8 +1253,8 @@ module Aws::AppSync
     #
     # @overload get_function(**params)
     # @param [Hash] params ({})
-    def get_function(params = {}, **options)
-      req = build_request(:get_function, params)
+    def get_function(, **options)
+      req = build_request(:get_function, )
       req.send_request(options)
     end
 
@@ -1310,8 +1310,8 @@ module Aws::AppSync
     #
     # @overload get_graphql_api(**params)
     # @param [Hash] params ({})
-    def get_graphql_api(params = {}, **options)
-      req = build_request(:get_graphql_api, params)
+    def get_graphql_api(, **options)
+      req = build_request(:get_graphql_api, )
       req.send_request(options)
     end
 
@@ -1347,8 +1347,8 @@ module Aws::AppSync
     #
     # @overload get_introspection_schema(**params)
     # @param [Hash] params ({})
-    def get_introspection_schema(params = {}, **options)
-      req = build_request(:get_introspection_schema, params)
+    def get_introspection_schema(, **options)
+      req = build_request(:get_introspection_schema, )
       req.send_request(options)
     end
 
@@ -1397,8 +1397,8 @@ module Aws::AppSync
     #
     # @overload get_resolver(**params)
     # @param [Hash] params ({})
-    def get_resolver(params = {}, **options)
-      req = build_request(:get_resolver, params)
+    def get_resolver(, **options)
+      req = build_request(:get_resolver, )
       req.send_request(options)
     end
 
@@ -1427,8 +1427,8 @@ module Aws::AppSync
     #
     # @overload get_schema_creation_status(**params)
     # @param [Hash] params ({})
-    def get_schema_creation_status(params = {}, **options)
-      req = build_request(:get_schema_creation_status, params)
+    def get_schema_creation_status(, **options)
+      req = build_request(:get_schema_creation_status, )
       req.send_request(options)
     end
 
@@ -1467,8 +1467,8 @@ module Aws::AppSync
     #
     # @overload get_type(**params)
     # @param [Hash] params ({})
-    def get_type(params = {}, **options)
-      req = build_request(:get_type, params)
+    def get_type(, **options)
+      req = build_request(:get_type, )
       req.send_request(options)
     end
 
@@ -1518,8 +1518,8 @@ module Aws::AppSync
     #
     # @overload list_api_keys(**params)
     # @param [Hash] params ({})
-    def list_api_keys(params = {}, **options)
-      req = build_request(:list_api_keys, params)
+    def list_api_keys(, **options)
+      req = build_request(:list_api_keys, )
       req.send_request(options)
     end
 
@@ -1583,8 +1583,8 @@ module Aws::AppSync
     #
     # @overload list_data_sources(**params)
     # @param [Hash] params ({})
-    def list_data_sources(params = {}, **options)
-      req = build_request(:list_data_sources, params)
+    def list_data_sources(, **options)
+      req = build_request(:list_data_sources, )
       req.send_request(options)
     end
 
@@ -1631,8 +1631,8 @@ module Aws::AppSync
     #
     # @overload list_functions(**params)
     # @param [Hash] params ({})
-    def list_functions(params = {}, **options)
-      req = build_request(:list_functions, params)
+    def list_functions(, **options)
+      req = build_request(:list_functions, )
       req.send_request(options)
     end
 
@@ -1697,8 +1697,8 @@ module Aws::AppSync
     #
     # @overload list_graphql_apis(**params)
     # @param [Hash] params ({})
-    def list_graphql_apis(params = {}, **options)
-      req = build_request(:list_graphql_apis, params)
+    def list_graphql_apis(, **options)
+      req = build_request(:list_graphql_apis, )
       req.send_request(options)
     end
 
@@ -1756,8 +1756,8 @@ module Aws::AppSync
     #
     # @overload list_resolvers(**params)
     # @param [Hash] params ({})
-    def list_resolvers(params = {}, **options)
-      req = build_request(:list_resolvers, params)
+    def list_resolvers(, **options)
+      req = build_request(:list_resolvers, )
       req.send_request(options)
     end
 
@@ -1815,8 +1815,8 @@ module Aws::AppSync
     #
     # @overload list_resolvers_by_function(**params)
     # @param [Hash] params ({})
-    def list_resolvers_by_function(params = {}, **options)
-      req = build_request(:list_resolvers_by_function, params)
+    def list_resolvers_by_function(, **options)
+      req = build_request(:list_resolvers_by_function, )
       req.send_request(options)
     end
 
@@ -1844,8 +1844,8 @@ module Aws::AppSync
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1893,8 +1893,8 @@ module Aws::AppSync
     #
     # @overload list_types(**params)
     # @param [Hash] params ({})
-    def list_types(params = {}, **options)
-      req = build_request(:list_types, params)
+    def list_types(, **options)
+      req = build_request(:list_types, )
       req.send_request(options)
     end
 
@@ -1928,8 +1928,8 @@ module Aws::AppSync
     #
     # @overload start_schema_creation(**params)
     # @param [Hash] params ({})
-    def start_schema_creation(params = {}, **options)
-      req = build_request(:start_schema_creation, params)
+    def start_schema_creation(, **options)
+      req = build_request(:start_schema_creation, )
       req.send_request(options)
     end
 
@@ -1956,8 +1956,8 @@ module Aws::AppSync
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1982,8 +1982,8 @@ module Aws::AppSync
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2071,8 +2071,8 @@ module Aws::AppSync
     #
     # @overload update_api_cache(**params)
     # @param [Hash] params ({})
-    def update_api_cache(params = {}, **options)
-      req = build_request(:update_api_cache, params)
+    def update_api_cache(, **options)
+      req = build_request(:update_api_cache, )
       req.send_request(options)
     end
 
@@ -2115,8 +2115,8 @@ module Aws::AppSync
     #
     # @overload update_api_key(**params)
     # @param [Hash] params ({})
-    def update_api_key(params = {}, **options)
-      req = build_request(:update_api_key, params)
+    def update_api_key(, **options)
+      req = build_request(:update_api_key, )
       req.send_request(options)
     end
 
@@ -2236,8 +2236,8 @@ module Aws::AppSync
     #
     # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, **options)
-      req = build_request(:update_data_source, params)
+    def update_data_source(, **options)
+      req = build_request(:update_data_source, )
       req.send_request(options)
     end
 
@@ -2301,8 +2301,8 @@ module Aws::AppSync
     #
     # @overload update_function(**params)
     # @param [Hash] params ({})
-    def update_function(params = {}, **options)
-      req = build_request(:update_function, params)
+    def update_function(, **options)
+      req = build_request(:update_function, )
       req.send_request(options)
     end
 
@@ -2418,8 +2418,8 @@ module Aws::AppSync
     #
     # @overload update_graphql_api(**params)
     # @param [Hash] params ({})
-    def update_graphql_api(params = {}, **options)
-      req = build_request(:update_graphql_api, params)
+    def update_graphql_api(, **options)
+      req = build_request(:update_graphql_api, )
       req.send_request(options)
     end
 
@@ -2524,8 +2524,8 @@ module Aws::AppSync
     #
     # @overload update_resolver(**params)
     # @param [Hash] params ({})
-    def update_resolver(params = {}, **options)
-      req = build_request(:update_resolver, params)
+    def update_resolver(, **options)
+      req = build_request(:update_resolver, )
       req.send_request(options)
     end
 
@@ -2568,8 +2568,8 @@ module Aws::AppSync
     #
     # @overload update_type(**params)
     # @param [Hash] params ({})
-    def update_type(params = {}, **options)
-      req = build_request(:update_type, params)
+    def update_type(, **options)
+      req = build_request(:update_type, )
       req.send_request(options)
     end
 

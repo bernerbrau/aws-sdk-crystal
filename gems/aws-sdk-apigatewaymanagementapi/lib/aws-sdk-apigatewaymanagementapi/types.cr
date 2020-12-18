@@ -121,5 +121,50 @@ module Aws::ApiGatewayManagementApi
     #
     class LimitExceededException < Aws::EmptyStructure; end
 
+    alias Data = String | Array(UInt8) | IO
+
+    alias DeleteConnectionRequest = NamedTuple(
+      "ConnectionId" : __string
+    )
+
+    alias ForbiddenException = NamedTuple(
+      
+    )
+
+    alias GetConnectionRequest = NamedTuple(
+      "ConnectionId" : __string
+    )
+
+    alias GetConnectionResponse = NamedTuple(
+      "ConnectedAt" : (__timestampIso8601)?,
+      "Identity" : (Identity)?,
+      "LastActiveAt" : (__timestampIso8601)?
+    )
+
+    alias GoneException = NamedTuple(
+      
+    )
+
+    alias Identity = NamedTuple(
+      "SourceIp" : __string,
+      "UserAgent" : __string
+    )
+
+    alias PayloadTooLargeException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias PostToConnectionRequest = NamedTuple(
+      "Data" : Data,
+      "ConnectionId" : __string
+    )
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
   end
 end

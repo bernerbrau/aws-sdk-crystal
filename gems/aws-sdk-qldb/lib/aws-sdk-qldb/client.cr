@@ -359,8 +359,8 @@ module Aws::QLDB
     #
     # @overload cancel_journal_kinesis_stream(**params)
     # @param [Hash] params ({})
-    def cancel_journal_kinesis_stream(params = {}, **options)
-      req = build_request(:cancel_journal_kinesis_stream, params)
+    def cancel_journal_kinesis_stream(, **options)
+      req = build_request(:cancel_journal_kinesis_stream, )
       req.send_request(options)
     end
 
@@ -427,8 +427,8 @@ module Aws::QLDB
     #
     # @overload create_ledger(**params)
     # @param [Hash] params ({})
-    def create_ledger(params = {}, **options)
-      req = build_request(:create_ledger, params)
+    def create_ledger(, **options)
+      req = build_request(:create_ledger, )
       req.send_request(options)
     end
 
@@ -455,8 +455,8 @@ module Aws::QLDB
     #
     # @overload delete_ledger(**params)
     # @param [Hash] params ({})
-    def delete_ledger(params = {}, **options)
-      req = build_request(:delete_ledger, params)
+    def delete_ledger(, **options)
+      req = build_request(:delete_ledger, )
       req.send_request(options)
     end
 
@@ -501,8 +501,8 @@ module Aws::QLDB
     #
     # @overload describe_journal_kinesis_stream(**params)
     # @param [Hash] params ({})
-    def describe_journal_kinesis_stream(params = {}, **options)
-      req = build_request(:describe_journal_kinesis_stream, params)
+    def describe_journal_kinesis_stream(, **options)
+      req = build_request(:describe_journal_kinesis_stream, )
       req.send_request(options)
     end
 
@@ -559,8 +559,8 @@ module Aws::QLDB
     #
     # @overload describe_journal_s3_export(**params)
     # @param [Hash] params ({})
-    def describe_journal_s3_export(params = {}, **options)
-      req = build_request(:describe_journal_s3_export, params)
+    def describe_journal_s3_export(, **options)
+      req = build_request(:describe_journal_s3_export, )
       req.send_request(options)
     end
 
@@ -596,8 +596,8 @@ module Aws::QLDB
     #
     # @overload describe_ledger(**params)
     # @param [Hash] params ({})
-    def describe_ledger(params = {}, **options)
-      req = build_request(:describe_ledger, params)
+    def describe_ledger(, **options)
+      req = build_request(:describe_ledger, )
       req.send_request(options)
     end
 
@@ -686,8 +686,8 @@ module Aws::QLDB
     #
     # @overload export_journal_to_s3(**params)
     # @param [Hash] params ({})
-    def export_journal_to_s3(params = {}, **options)
-      req = build_request(:export_journal_to_s3, params)
+    def export_journal_to_s3(, **options)
+      req = build_request(:export_journal_to_s3, )
       req.send_request(options)
     end
 
@@ -753,8 +753,8 @@ module Aws::QLDB
     #
     # @overload get_block(**params)
     # @param [Hash] params ({})
-    def get_block(params = {}, **options)
-      req = build_request(:get_block, params)
+    def get_block(, **options)
+      req = build_request(:get_block, )
       req.send_request(options)
     end
 
@@ -785,8 +785,8 @@ module Aws::QLDB
     #
     # @overload get_digest(**params)
     # @param [Hash] params ({})
-    def get_digest(params = {}, **options)
-      req = build_request(:get_digest, params)
+    def get_digest(, **options)
+      req = build_request(:get_digest, )
       req.send_request(options)
     end
 
@@ -841,8 +841,8 @@ module Aws::QLDB
     #
     # @overload get_revision(**params)
     # @param [Hash] params ({})
-    def get_revision(params = {}, **options)
-      req = build_request(:get_revision, params)
+    def get_revision(, **options)
+      req = build_request(:get_revision, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::QLDB
     #
     # @overload list_journal_kinesis_streams_for_ledger(**params)
     # @param [Hash] params ({})
-    def list_journal_kinesis_streams_for_ledger(params = {}, **options)
-      req = build_request(:list_journal_kinesis_streams_for_ledger, params)
+    def list_journal_kinesis_streams_for_ledger(, **options)
+      req = build_request(:list_journal_kinesis_streams_for_ledger, )
       req.send_request(options)
     end
 
@@ -969,8 +969,8 @@ module Aws::QLDB
     #
     # @overload list_journal_s3_exports(**params)
     # @param [Hash] params ({})
-    def list_journal_s3_exports(params = {}, **options)
-      req = build_request(:list_journal_s3_exports, params)
+    def list_journal_s3_exports(, **options)
+      req = build_request(:list_journal_s3_exports, )
       req.send_request(options)
     end
 
@@ -1038,8 +1038,8 @@ module Aws::QLDB
     #
     # @overload list_journal_s3_exports_for_ledger(**params)
     # @param [Hash] params ({})
-    def list_journal_s3_exports_for_ledger(params = {}, **options)
-      req = build_request(:list_journal_s3_exports_for_ledger, params)
+    def list_journal_s3_exports_for_ledger(, **options)
+      req = build_request(:list_journal_s3_exports_for_ledger, )
       req.send_request(options)
     end
 
@@ -1086,8 +1086,8 @@ module Aws::QLDB
     #
     # @overload list_ledgers(**params)
     # @param [Hash] params ({})
-    def list_ledgers(params = {}, **options)
-      req = build_request(:list_ledgers, params)
+    def list_ledgers(, **options)
+      req = build_request(:list_ledgers, )
       req.send_request(options)
     end
 
@@ -1118,8 +1118,8 @@ module Aws::QLDB
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::QLDB
     #
     # @overload stream_journal_to_kinesis(**params)
     # @param [Hash] params ({})
-    def stream_journal_to_kinesis(params = {}, **options)
-      req = build_request(:stream_journal_to_kinesis, params)
+    def stream_journal_to_kinesis(, **options)
+      req = build_request(:stream_journal_to_kinesis, )
       req.send_request(options)
     end
 
@@ -1247,8 +1247,8 @@ module Aws::QLDB
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1277,8 +1277,8 @@ module Aws::QLDB
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1325,8 +1325,8 @@ module Aws::QLDB
     #
     # @overload update_ledger(**params)
     # @param [Hash] params ({})
-    def update_ledger(params = {}, **options)
-      req = build_request(:update_ledger, params)
+    def update_ledger(, **options)
+      req = build_request(:update_ledger, )
       req.send_request(options)
     end
 

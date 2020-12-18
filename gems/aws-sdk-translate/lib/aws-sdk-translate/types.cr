@@ -1611,5 +1611,388 @@ module Aws::Translate
       include Aws::Structure
     end
 
+    alias AppliedTerminology = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Terms" : (TermList)?
+    )
+
+    alias AppliedTerminologyList = Array(AppliedTerminology)
+
+    alias BoundedLengthString = String
+
+    alias ClientTokenString = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ContentType = String
+
+    alias CreateParallelDataRequest = NamedTuple(
+      "Name" : ResourceName,
+      "Description" : (Description)?,
+      "ParallelDataConfig" : ParallelDataConfig,
+      "EncryptionKey" : (EncryptionKey)?,
+      "ClientToken" : ClientTokenString
+    )
+
+    alias CreateParallelDataResponse = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Status" : (ParallelDataStatus)?
+    )
+
+    alias DeleteParallelDataRequest = NamedTuple(
+      "Name" : ResourceName
+    )
+
+    alias DeleteParallelDataResponse = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Status" : (ParallelDataStatus)?
+    )
+
+    alias DeleteTerminologyRequest = NamedTuple(
+      "Name" : ResourceName
+    )
+
+    alias DescribeTextTranslationJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeTextTranslationJobResponse = NamedTuple(
+      "TextTranslationJobProperties" : (TextTranslationJobProperties)?
+    )
+
+    alias Description = String
+
+    alias DetectedLanguageLowConfidenceException = NamedTuple(
+      "Message" : (String)?,
+      "DetectedLanguageCode" : (LanguageCodeString)?
+    )
+
+    alias EncryptionKey = NamedTuple(
+      "Type" : EncryptionKeyType,
+      "Id" : EncryptionKeyID
+    )
+
+    alias EncryptionKeyID = String
+
+    alias EncryptionKeyType = String
+
+    alias GetParallelDataRequest = NamedTuple(
+      "Name" : ResourceName
+    )
+
+    alias GetParallelDataResponse = NamedTuple(
+      "ParallelDataProperties" : (ParallelDataProperties)?,
+      "DataLocation" : (ParallelDataDataLocation)?,
+      "AuxiliaryDataLocation" : (ParallelDataDataLocation)?,
+      "LatestUpdateAttemptAuxiliaryDataLocation" : (ParallelDataDataLocation)?
+    )
+
+    alias GetTerminologyRequest = NamedTuple(
+      "Name" : ResourceName,
+      "TerminologyDataFormat" : TerminologyDataFormat
+    )
+
+    alias GetTerminologyResponse = NamedTuple(
+      "TerminologyProperties" : (TerminologyProperties)?,
+      "TerminologyDataLocation" : (TerminologyDataLocation)?
+    )
+
+    alias IamRoleArn = String
+
+    alias ImportTerminologyRequest = NamedTuple(
+      "Name" : ResourceName,
+      "MergeStrategy" : MergeStrategy,
+      "Description" : (Description)?,
+      "TerminologyData" : TerminologyData,
+      "EncryptionKey" : (EncryptionKey)?
+    )
+
+    alias ImportTerminologyResponse = NamedTuple(
+      "TerminologyProperties" : (TerminologyProperties)?
+    )
+
+    alias InputDataConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "ContentType" : ContentType
+    )
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidFilterException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias JobDetails = NamedTuple(
+      "TranslatedDocumentsCount" : (Integer)?,
+      "DocumentsWithErrorsCount" : (Integer)?,
+      "InputDocumentsCount" : (Integer)?
+    )
+
+    alias JobId = String
+
+    alias JobName = String
+
+    alias JobStatus = String
+
+    alias LanguageCodeString = String
+
+    alias LanguageCodeStringList = Array(LanguageCodeString)
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ListParallelDataRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListParallelDataResponse = NamedTuple(
+      "ParallelDataPropertiesList" : (ParallelDataPropertiesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTerminologiesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListTerminologiesResponse = NamedTuple(
+      "TerminologyPropertiesList" : (TerminologyPropertiesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTextTranslationJobsRequest = NamedTuple(
+      "Filter" : (TextTranslationJobFilter)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListTextTranslationJobsResponse = NamedTuple(
+      "TextTranslationJobPropertiesList" : (TextTranslationJobPropertiesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Long = Int64
+
+    alias MaxResultsInteger = Int32
+
+    alias MergeStrategy = String
+
+    alias NextToken = String
+
+    alias OutputDataConfig = NamedTuple(
+      "S3Uri" : S3Uri
+    )
+
+    alias ParallelDataArn = String
+
+    alias ParallelDataConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "Format" : ParallelDataFormat
+    )
+
+    alias ParallelDataDataLocation = NamedTuple(
+      "RepositoryType" : String,
+      "Location" : String
+    )
+
+    alias ParallelDataFormat = String
+
+    alias ParallelDataProperties = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Arn" : (ParallelDataArn)?,
+      "Description" : (Description)?,
+      "Status" : (ParallelDataStatus)?,
+      "SourceLanguageCode" : (LanguageCodeString)?,
+      "TargetLanguageCodes" : (LanguageCodeStringList)?,
+      "ParallelDataConfig" : (ParallelDataConfig)?,
+      "Message" : (UnboundedLengthString)?,
+      "ImportedDataSize" : (Long)?,
+      "ImportedRecordCount" : (Long)?,
+      "FailedRecordCount" : (Long)?,
+      "SkippedRecordCount" : (Long)?,
+      "EncryptionKey" : (EncryptionKey)?,
+      "CreatedAt" : (Timestamp)?,
+      "LastUpdatedAt" : (Timestamp)?,
+      "LatestUpdateAttemptStatus" : (ParallelDataStatus)?,
+      "LatestUpdateAttemptAt" : (Timestamp)?
+    )
+
+    alias ParallelDataPropertiesList = Array(ParallelDataProperties)
+
+    alias ParallelDataStatus = String
+
+    alias ResourceName = String
+
+    alias ResourceNameList = Array(ResourceName)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias S3Uri = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias StartTextTranslationJobRequest = NamedTuple(
+      "JobName" : (JobName)?,
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "SourceLanguageCode" : LanguageCodeString,
+      "TargetLanguageCodes" : TargetLanguageCodeStringList,
+      "TerminologyNames" : (ResourceNameList)?,
+      "ParallelDataNames" : (ResourceNameList)?,
+      "ClientToken" : ClientTokenString
+    )
+
+    alias StartTextTranslationJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopTextTranslationJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopTextTranslationJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias String = String
+
+    alias TargetLanguageCodeStringList = Array(LanguageCodeString)
+
+    alias Term = NamedTuple(
+      "SourceText" : (String)?,
+      "TargetText" : (String)?
+    )
+
+    alias TermList = Array(Term)
+
+    alias TerminologyArn = String
+
+    alias TerminologyData = NamedTuple(
+      "File" : TerminologyFile,
+      "Format" : TerminologyDataFormat
+    )
+
+    alias TerminologyDataFormat = String
+
+    alias TerminologyDataLocation = NamedTuple(
+      "RepositoryType" : String,
+      "Location" : String
+    )
+
+    alias TerminologyFile = String | Array(UInt8) | IO
+
+    alias TerminologyProperties = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Description" : (Description)?,
+      "Arn" : (TerminologyArn)?,
+      "SourceLanguageCode" : (LanguageCodeString)?,
+      "TargetLanguageCodes" : (LanguageCodeStringList)?,
+      "EncryptionKey" : (EncryptionKey)?,
+      "SizeBytes" : (Integer)?,
+      "TermCount" : (Integer)?,
+      "CreatedAt" : (Timestamp)?,
+      "LastUpdatedAt" : (Timestamp)?
+    )
+
+    alias TerminologyPropertiesList = Array(TerminologyProperties)
+
+    alias TextSizeLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TextTranslationJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmittedBeforeTime" : (Timestamp)?,
+      "SubmittedAfterTime" : (Timestamp)?
+    )
+
+    alias TextTranslationJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "JobDetails" : (JobDetails)?,
+      "SourceLanguageCode" : (LanguageCodeString)?,
+      "TargetLanguageCodes" : (TargetLanguageCodeStringList)?,
+      "TerminologyNames" : (ResourceNameList)?,
+      "ParallelDataNames" : (ResourceNameList)?,
+      "Message" : (UnboundedLengthString)?,
+      "SubmittedTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "DataAccessRoleArn" : (IamRoleArn)?
+    )
+
+    alias TextTranslationJobPropertiesList = Array(TextTranslationJobProperties)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TranslateTextRequest = NamedTuple(
+      "Text" : BoundedLengthString,
+      "TerminologyNames" : (ResourceNameList)?,
+      "SourceLanguageCode" : LanguageCodeString,
+      "TargetLanguageCode" : LanguageCodeString
+    )
+
+    alias TranslateTextResponse = NamedTuple(
+      "TranslatedText" : String,
+      "SourceLanguageCode" : LanguageCodeString,
+      "TargetLanguageCode" : LanguageCodeString,
+      "AppliedTerminologies" : (AppliedTerminologyList)?
+    )
+
+    alias UnboundedLengthString = String
+
+    alias UnsupportedLanguagePairException = NamedTuple(
+      "Message" : (String)?,
+      "SourceLanguageCode" : (LanguageCodeString)?,
+      "TargetLanguageCode" : (LanguageCodeString)?
+    )
+
+    alias UpdateParallelDataRequest = NamedTuple(
+      "Name" : ResourceName,
+      "Description" : (Description)?,
+      "ParallelDataConfig" : ParallelDataConfig,
+      "ClientToken" : ClientTokenString
+    )
+
+    alias UpdateParallelDataResponse = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Status" : (ParallelDataStatus)?,
+      "LatestUpdateAttemptStatus" : (ParallelDataStatus)?,
+      "LatestUpdateAttemptAt" : (Timestamp)?
+    )
   end
 end

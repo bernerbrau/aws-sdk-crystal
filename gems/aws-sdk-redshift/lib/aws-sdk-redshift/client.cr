@@ -373,8 +373,8 @@ module Aws::Redshift
     #
     # @overload accept_reserved_node_exchange(**params)
     # @param [Hash] params ({})
-    def accept_reserved_node_exchange(params = {}, **options)
-      req = build_request(:accept_reserved_node_exchange, params)
+    def accept_reserved_node_exchange(, **options)
+      req = build_request(:accept_reserved_node_exchange, )
       req.send_request(options)
     end
 
@@ -459,8 +459,8 @@ module Aws::Redshift
     #
     # @overload authorize_cluster_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_cluster_security_group_ingress(params = {}, **options)
-      req = build_request(:authorize_cluster_security_group_ingress, params)
+    def authorize_cluster_security_group_ingress(, **options)
+      req = build_request(:authorize_cluster_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -548,8 +548,8 @@ module Aws::Redshift
     #
     # @overload authorize_snapshot_access(**params)
     # @param [Hash] params ({})
-    def authorize_snapshot_access(params = {}, **options)
-      req = build_request(:authorize_snapshot_access, params)
+    def authorize_snapshot_access(, **options)
+      req = build_request(:authorize_snapshot_access, )
       req.send_request(options)
     end
 
@@ -588,8 +588,8 @@ module Aws::Redshift
     #
     # @overload batch_delete_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def batch_delete_cluster_snapshots(params = {}, **options)
-      req = build_request(:batch_delete_cluster_snapshots, params)
+    def batch_delete_cluster_snapshots(, **options)
+      req = build_request(:batch_delete_cluster_snapshots, )
       req.send_request(options)
     end
 
@@ -640,8 +640,8 @@ module Aws::Redshift
     #
     # @overload batch_modify_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def batch_modify_cluster_snapshots(params = {}, **options)
-      req = build_request(:batch_modify_cluster_snapshots, params)
+    def batch_modify_cluster_snapshots(, **options)
+      req = build_request(:batch_modify_cluster_snapshots, )
       req.send_request(options)
     end
 
@@ -702,8 +702,8 @@ module Aws::Redshift
     #
     # @overload cancel_resize(**params)
     # @param [Hash] params ({})
-    def cancel_resize(params = {}, **options)
-      req = build_request(:cancel_resize, params)
+    def cancel_resize(, **options)
+      req = build_request(:cancel_resize, )
       req.send_request(options)
     end
 
@@ -830,8 +830,8 @@ module Aws::Redshift
     #
     # @overload copy_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_cluster_snapshot(params = {}, **options)
-      req = build_request(:copy_cluster_snapshot, params)
+    def copy_cluster_snapshot(, **options)
+      req = build_request(:copy_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -1320,8 +1320,8 @@ module Aws::Redshift
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -1409,8 +1409,8 @@ module Aws::Redshift
     #
     # @overload create_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_cluster_parameter_group(params = {}, **options)
-      req = build_request(:create_cluster_parameter_group, params)
+    def create_cluster_parameter_group(, **options)
+      req = build_request(:create_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -1488,8 +1488,8 @@ module Aws::Redshift
     #
     # @overload create_cluster_security_group(**params)
     # @param [Hash] params ({})
-    def create_cluster_security_group(params = {}, **options)
-      req = build_request(:create_cluster_security_group, params)
+    def create_cluster_security_group(, **options)
+      req = build_request(:create_cluster_security_group, )
       req.send_request(options)
     end
 
@@ -1598,8 +1598,8 @@ module Aws::Redshift
     #
     # @overload create_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def create_cluster_snapshot(params = {}, **options)
-      req = build_request(:create_cluster_snapshot, params)
+    def create_cluster_snapshot(, **options)
+      req = build_request(:create_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -1677,8 +1677,8 @@ module Aws::Redshift
     #
     # @overload create_cluster_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_cluster_subnet_group(params = {}, **options)
-      req = build_request(:create_cluster_subnet_group, params)
+    def create_cluster_subnet_group(, **options)
+      req = build_request(:create_cluster_subnet_group, )
       req.send_request(options)
     end
 
@@ -1810,8 +1810,8 @@ module Aws::Redshift
     #
     # @overload create_event_subscription(**params)
     # @param [Hash] params ({})
-    def create_event_subscription(params = {}, **options)
-      req = build_request(:create_event_subscription, params)
+    def create_event_subscription(, **options)
+      req = build_request(:create_event_subscription, )
       req.send_request(options)
     end
 
@@ -1866,8 +1866,8 @@ module Aws::Redshift
     #
     # @overload create_hsm_client_certificate(**params)
     # @param [Hash] params ({})
-    def create_hsm_client_certificate(params = {}, **options)
-      req = build_request(:create_hsm_client_certificate, params)
+    def create_hsm_client_certificate(, **options)
+      req = build_request(:create_hsm_client_certificate, )
       req.send_request(options)
     end
 
@@ -1945,8 +1945,8 @@ module Aws::Redshift
     #
     # @overload create_hsm_configuration(**params)
     # @param [Hash] params ({})
-    def create_hsm_configuration(params = {}, **options)
-      req = build_request(:create_hsm_configuration, params)
+    def create_hsm_configuration(, **options)
+      req = build_request(:create_hsm_configuration, )
       req.send_request(options)
     end
 
@@ -2052,8 +2052,8 @@ module Aws::Redshift
     #
     # @overload create_scheduled_action(**params)
     # @param [Hash] params ({})
-    def create_scheduled_action(params = {}, **options)
-      req = build_request(:create_scheduled_action, params)
+    def create_scheduled_action(, **options)
+      req = build_request(:create_scheduled_action, )
       req.send_request(options)
     end
 
@@ -2122,8 +2122,8 @@ module Aws::Redshift
     #
     # @overload create_snapshot_copy_grant(**params)
     # @param [Hash] params ({})
-    def create_snapshot_copy_grant(params = {}, **options)
-      req = build_request(:create_snapshot_copy_grant, params)
+    def create_snapshot_copy_grant(, **options)
+      req = build_request(:create_snapshot_copy_grant, )
       req.send_request(options)
     end
 
@@ -2195,8 +2195,8 @@ module Aws::Redshift
     #
     # @overload create_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def create_snapshot_schedule(params = {}, **options)
-      req = build_request(:create_snapshot_schedule, params)
+    def create_snapshot_schedule(, **options)
+      req = build_request(:create_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -2239,8 +2239,8 @@ module Aws::Redshift
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -2322,8 +2322,8 @@ module Aws::Redshift
     #
     # @overload create_usage_limit(**params)
     # @param [Hash] params ({})
-    def create_usage_limit(params = {}, **options)
-      req = build_request(:create_usage_limit, params)
+    def create_usage_limit(, **options)
+      req = build_request(:create_usage_limit, )
       req.send_request(options)
     end
 
@@ -2516,8 +2516,8 @@ module Aws::Redshift
     #
     # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, **options)
-      req = build_request(:delete_cluster, params)
+    def delete_cluster(, **options)
+      req = build_request(:delete_cluster, )
       req.send_request(options)
     end
 
@@ -2549,8 +2549,8 @@ module Aws::Redshift
     #
     # @overload delete_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_cluster_parameter_group(params = {}, **options)
-      req = build_request(:delete_cluster_parameter_group, params)
+    def delete_cluster_parameter_group(, **options)
+      req = build_request(:delete_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -2584,8 +2584,8 @@ module Aws::Redshift
     #
     # @overload delete_cluster_security_group(**params)
     # @param [Hash] params ({})
-    def delete_cluster_security_group(params = {}, **options)
-      req = build_request(:delete_cluster_security_group, params)
+    def delete_cluster_security_group(, **options)
+      req = build_request(:delete_cluster_security_group, )
       req.send_request(options)
     end
 
@@ -2671,8 +2671,8 @@ module Aws::Redshift
     #
     # @overload delete_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_cluster_snapshot(params = {}, **options)
-      req = build_request(:delete_cluster_snapshot, params)
+    def delete_cluster_snapshot(, **options)
+      req = build_request(:delete_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -2693,8 +2693,8 @@ module Aws::Redshift
     #
     # @overload delete_cluster_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_cluster_subnet_group(params = {}, **options)
-      req = build_request(:delete_cluster_subnet_group, params)
+    def delete_cluster_subnet_group(, **options)
+      req = build_request(:delete_cluster_subnet_group, )
       req.send_request(options)
     end
 
@@ -2716,8 +2716,8 @@ module Aws::Redshift
     #
     # @overload delete_event_subscription(**params)
     # @param [Hash] params ({})
-    def delete_event_subscription(params = {}, **options)
-      req = build_request(:delete_event_subscription, params)
+    def delete_event_subscription(, **options)
+      req = build_request(:delete_event_subscription, )
       req.send_request(options)
     end
 
@@ -2738,8 +2738,8 @@ module Aws::Redshift
     #
     # @overload delete_hsm_client_certificate(**params)
     # @param [Hash] params ({})
-    def delete_hsm_client_certificate(params = {}, **options)
-      req = build_request(:delete_hsm_client_certificate, params)
+    def delete_hsm_client_certificate(, **options)
+      req = build_request(:delete_hsm_client_certificate, )
       req.send_request(options)
     end
 
@@ -2760,8 +2760,8 @@ module Aws::Redshift
     #
     # @overload delete_hsm_configuration(**params)
     # @param [Hash] params ({})
-    def delete_hsm_configuration(params = {}, **options)
-      req = build_request(:delete_hsm_configuration, params)
+    def delete_hsm_configuration(, **options)
+      req = build_request(:delete_hsm_configuration, )
       req.send_request(options)
     end
 
@@ -2782,8 +2782,8 @@ module Aws::Redshift
     #
     # @overload delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_action(params = {}, **options)
-      req = build_request(:delete_scheduled_action, params)
+    def delete_scheduled_action(, **options)
+      req = build_request(:delete_scheduled_action, )
       req.send_request(options)
     end
 
@@ -2804,8 +2804,8 @@ module Aws::Redshift
     #
     # @overload delete_snapshot_copy_grant(**params)
     # @param [Hash] params ({})
-    def delete_snapshot_copy_grant(params = {}, **options)
-      req = build_request(:delete_snapshot_copy_grant, params)
+    def delete_snapshot_copy_grant(, **options)
+      req = build_request(:delete_snapshot_copy_grant, )
       req.send_request(options)
     end
 
@@ -2826,8 +2826,8 @@ module Aws::Redshift
     #
     # @overload delete_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def delete_snapshot_schedule(params = {}, **options)
-      req = build_request(:delete_snapshot_schedule, params)
+    def delete_snapshot_schedule(, **options)
+      req = build_request(:delete_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -2855,8 +2855,8 @@ module Aws::Redshift
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -2877,8 +2877,8 @@ module Aws::Redshift
     #
     # @overload delete_usage_limit(**params)
     # @param [Hash] params ({})
-    def delete_usage_limit(params = {}, **options)
-      req = build_request(:delete_usage_limit, params)
+    def delete_usage_limit(, **options)
+      req = build_request(:delete_usage_limit, )
       req.send_request(options)
     end
 
@@ -2908,8 +2908,8 @@ module Aws::Redshift
     #
     # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, **options)
-      req = build_request(:describe_account_attributes, params)
+    def describe_account_attributes(, **options)
+      req = build_request(:describe_account_attributes, )
       req.send_request(options)
     end
 
@@ -2975,8 +2975,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_db_revisions(**params)
     # @param [Hash] params ({})
-    def describe_cluster_db_revisions(params = {}, **options)
-      req = build_request(:describe_cluster_db_revisions, params)
+    def describe_cluster_db_revisions(, **options)
+      req = build_request(:describe_cluster_db_revisions, )
       req.send_request(options)
     end
 
@@ -3081,8 +3081,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_cluster_parameter_groups(params = {}, **options)
-      req = build_request(:describe_cluster_parameter_groups, params)
+    def describe_cluster_parameter_groups(, **options)
+      req = build_request(:describe_cluster_parameter_groups, )
       req.send_request(options)
     end
 
@@ -3170,8 +3170,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_cluster_parameters(params = {}, **options)
-      req = build_request(:describe_cluster_parameters, params)
+    def describe_cluster_parameters(, **options)
+      req = build_request(:describe_cluster_parameters, )
       req.send_request(options)
     end
 
@@ -3290,8 +3290,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_cluster_security_groups(params = {}, **options)
-      req = build_request(:describe_cluster_security_groups, params)
+    def describe_cluster_security_groups(, **options)
+      req = build_request(:describe_cluster_security_groups, )
       req.send_request(options)
     end
 
@@ -3497,8 +3497,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_cluster_snapshots(params = {}, **options)
-      req = build_request(:describe_cluster_snapshots, params)
+    def describe_cluster_snapshots(, **options)
+      req = build_request(:describe_cluster_snapshots, )
       req.send_request(options)
     end
 
@@ -3598,8 +3598,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_cluster_subnet_groups(params = {}, **options)
-      req = build_request(:describe_cluster_subnet_groups, params)
+    def describe_cluster_subnet_groups(, **options)
+      req = build_request(:describe_cluster_subnet_groups, )
       req.send_request(options)
     end
 
@@ -3651,8 +3651,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_tracks(**params)
     # @param [Hash] params ({})
-    def describe_cluster_tracks(params = {}, **options)
-      req = build_request(:describe_cluster_tracks, params)
+    def describe_cluster_tracks(, **options)
+      req = build_request(:describe_cluster_tracks, )
       req.send_request(options)
     end
 
@@ -3730,8 +3730,8 @@ module Aws::Redshift
     #
     # @overload describe_cluster_versions(**params)
     # @param [Hash] params ({})
-    def describe_cluster_versions(params = {}, **options)
-      req = build_request(:describe_cluster_versions, params)
+    def describe_cluster_versions(, **options)
+      req = build_request(:describe_cluster_versions, )
       req.send_request(options)
     end
 
@@ -3933,8 +3933,8 @@ module Aws::Redshift
     #
     # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, **options)
-      req = build_request(:describe_clusters, params)
+    def describe_clusters(, **options)
+      req = build_request(:describe_clusters, )
       req.send_request(options)
     end
 
@@ -4005,8 +4005,8 @@ module Aws::Redshift
     #
     # @overload describe_default_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_default_cluster_parameters(params = {}, **options)
-      req = build_request(:describe_default_cluster_parameters, params)
+    def describe_default_cluster_parameters(, **options)
+      req = build_request(:describe_default_cluster_parameters, )
       req.send_request(options)
     end
 
@@ -4050,8 +4050,8 @@ module Aws::Redshift
     #
     # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, **options)
-      req = build_request(:describe_event_categories, params)
+    def describe_event_categories(, **options)
+      req = build_request(:describe_event_categories, )
       req.send_request(options)
     end
 
@@ -4153,8 +4153,8 @@ module Aws::Redshift
     #
     # @overload describe_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_event_subscriptions(params = {}, **options)
-      req = build_request(:describe_event_subscriptions, params)
+    def describe_event_subscriptions(, **options)
+      req = build_request(:describe_event_subscriptions, )
       req.send_request(options)
     end
 
@@ -4288,8 +4288,8 @@ module Aws::Redshift
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -4382,8 +4382,8 @@ module Aws::Redshift
     #
     # @overload describe_hsm_client_certificates(**params)
     # @param [Hash] params ({})
-    def describe_hsm_client_certificates(params = {}, **options)
-      req = build_request(:describe_hsm_client_certificates, params)
+    def describe_hsm_client_certificates(, **options)
+      req = build_request(:describe_hsm_client_certificates, )
       req.send_request(options)
     end
 
@@ -4479,8 +4479,8 @@ module Aws::Redshift
     #
     # @overload describe_hsm_configurations(**params)
     # @param [Hash] params ({})
-    def describe_hsm_configurations(params = {}, **options)
-      req = build_request(:describe_hsm_configurations, params)
+    def describe_hsm_configurations(, **options)
+      req = build_request(:describe_hsm_configurations, )
       req.send_request(options)
     end
 
@@ -4520,8 +4520,8 @@ module Aws::Redshift
     #
     # @overload describe_logging_status(**params)
     # @param [Hash] params ({})
-    def describe_logging_status(params = {}, **options)
-      req = build_request(:describe_logging_status, params)
+    def describe_logging_status(, **options)
+      req = build_request(:describe_logging_status, )
       req.send_request(options)
     end
 
@@ -4610,8 +4610,8 @@ module Aws::Redshift
     #
     # @overload describe_node_configuration_options(**params)
     # @param [Hash] params ({})
-    def describe_node_configuration_options(params = {}, **options)
-      req = build_request(:describe_node_configuration_options, params)
+    def describe_node_configuration_options(, **options)
+      req = build_request(:describe_node_configuration_options, )
       req.send_request(options)
     end
 
@@ -4694,8 +4694,8 @@ module Aws::Redshift
     #
     # @overload describe_orderable_cluster_options(**params)
     # @param [Hash] params ({})
-    def describe_orderable_cluster_options(params = {}, **options)
-      req = build_request(:describe_orderable_cluster_options, params)
+    def describe_orderable_cluster_options(, **options)
+      req = build_request(:describe_orderable_cluster_options, )
       req.send_request(options)
     end
 
@@ -4772,8 +4772,8 @@ module Aws::Redshift
     #
     # @overload describe_reserved_node_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_node_offerings(params = {}, **options)
-      req = build_request(:describe_reserved_node_offerings, params)
+    def describe_reserved_node_offerings(, **options)
+      req = build_request(:describe_reserved_node_offerings, )
       req.send_request(options)
     end
 
@@ -4840,8 +4840,8 @@ module Aws::Redshift
     #
     # @overload describe_reserved_nodes(**params)
     # @param [Hash] params ({})
-    def describe_reserved_nodes(params = {}, **options)
-      req = build_request(:describe_reserved_nodes, params)
+    def describe_reserved_nodes(, **options)
+      req = build_request(:describe_reserved_nodes, )
       req.send_request(options)
     end
 
@@ -4912,8 +4912,8 @@ module Aws::Redshift
     #
     # @overload describe_resize(**params)
     # @param [Hash] params ({})
-    def describe_resize(params = {}, **options)
-      req = build_request(:describe_resize, params)
+    def describe_resize(, **options)
+      req = build_request(:describe_resize, )
       req.send_request(options)
     end
 
@@ -5012,8 +5012,8 @@ module Aws::Redshift
     #
     # @overload describe_scheduled_actions(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_actions(params = {}, **options)
-      req = build_request(:describe_scheduled_actions, params)
+    def describe_scheduled_actions(, **options)
+      req = build_request(:describe_scheduled_actions, )
       req.send_request(options)
     end
 
@@ -5101,8 +5101,8 @@ module Aws::Redshift
     #
     # @overload describe_snapshot_copy_grants(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_copy_grants(params = {}, **options)
-      req = build_request(:describe_snapshot_copy_grants, params)
+    def describe_snapshot_copy_grants(, **options)
+      req = build_request(:describe_snapshot_copy_grants, )
       req.send_request(options)
     end
 
@@ -5176,8 +5176,8 @@ module Aws::Redshift
     #
     # @overload describe_snapshot_schedules(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_schedules(params = {}, **options)
-      req = build_request(:describe_snapshot_schedules, params)
+    def describe_snapshot_schedules(, **options)
+      req = build_request(:describe_snapshot_schedules, )
       req.send_request(options)
     end
 
@@ -5197,8 +5197,8 @@ module Aws::Redshift
     #
     # @overload describe_storage(**params)
     # @param [Hash] params ({})
-    def describe_storage(params = {}, **options)
-      req = build_request(:describe_storage, params)
+    def describe_storage(, **options)
+      req = build_request(:describe_storage, )
       req.send_request(options)
     end
 
@@ -5270,8 +5270,8 @@ module Aws::Redshift
     #
     # @overload describe_table_restore_status(**params)
     # @param [Hash] params ({})
-    def describe_table_restore_status(params = {}, **options)
-      req = build_request(:describe_table_restore_status, params)
+    def describe_table_restore_status(, **options)
+      req = build_request(:describe_table_restore_status, )
       req.send_request(options)
     end
 
@@ -5400,8 +5400,8 @@ module Aws::Redshift
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -5508,8 +5508,8 @@ module Aws::Redshift
     #
     # @overload describe_usage_limits(**params)
     # @param [Hash] params ({})
-    def describe_usage_limits(params = {}, **options)
-      req = build_request(:describe_usage_limits, params)
+    def describe_usage_limits(, **options)
+      req = build_request(:describe_usage_limits, )
       req.send_request(options)
     end
 
@@ -5549,8 +5549,8 @@ module Aws::Redshift
     #
     # @overload disable_logging(**params)
     # @param [Hash] params ({})
-    def disable_logging(params = {}, **options)
-      req = build_request(:disable_logging, params)
+    def disable_logging(, **options)
+      req = build_request(:disable_logging, )
       req.send_request(options)
     end
 
@@ -5685,8 +5685,8 @@ module Aws::Redshift
     #
     # @overload disable_snapshot_copy(**params)
     # @param [Hash] params ({})
-    def disable_snapshot_copy(params = {}, **options)
-      req = build_request(:disable_snapshot_copy, params)
+    def disable_snapshot_copy(, **options)
+      req = build_request(:disable_snapshot_copy, )
       req.send_request(options)
     end
 
@@ -5759,8 +5759,8 @@ module Aws::Redshift
     #
     # @overload enable_logging(**params)
     # @param [Hash] params ({})
-    def enable_logging(params = {}, **options)
-      req = build_request(:enable_logging, params)
+    def enable_logging(, **options)
+      req = build_request(:enable_logging, )
       req.send_request(options)
     end
 
@@ -5923,8 +5923,8 @@ module Aws::Redshift
     #
     # @overload enable_snapshot_copy(**params)
     # @param [Hash] params ({})
-    def enable_snapshot_copy(params = {}, **options)
-      req = build_request(:enable_snapshot_copy, params)
+    def enable_snapshot_copy(, **options)
+      req = build_request(:enable_snapshot_copy, )
       req.send_request(options)
     end
 
@@ -6083,8 +6083,8 @@ module Aws::Redshift
     #
     # @overload get_cluster_credentials(**params)
     # @param [Hash] params ({})
-    def get_cluster_credentials(params = {}, **options)
-      req = build_request(:get_cluster_credentials, params)
+    def get_cluster_credentials(, **options)
+      req = build_request(:get_cluster_credentials, )
       req.send_request(options)
     end
 
@@ -6138,8 +6138,8 @@ module Aws::Redshift
     #
     # @overload get_reserved_node_exchange_offerings(**params)
     # @param [Hash] params ({})
-    def get_reserved_node_exchange_offerings(params = {}, **options)
-      req = build_request(:get_reserved_node_exchange_offerings, params)
+    def get_reserved_node_exchange_offerings(, **options)
+      req = build_request(:get_reserved_node_exchange_offerings, )
       req.send_request(options)
     end
 
@@ -6561,8 +6561,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cluster(params = {}, **options)
-      req = build_request(:modify_cluster, params)
+    def modify_cluster(, **options)
+      req = build_request(:modify_cluster, )
       req.send_request(options)
     end
 
@@ -6696,8 +6696,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_db_revision(**params)
     # @param [Hash] params ({})
-    def modify_cluster_db_revision(params = {}, **options)
-      req = build_request(:modify_cluster_db_revision, params)
+    def modify_cluster_db_revision(, **options)
+      req = build_request(:modify_cluster_db_revision, )
       req.send_request(options)
     end
 
@@ -6838,8 +6838,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_iam_roles(**params)
     # @param [Hash] params ({})
-    def modify_cluster_iam_roles(params = {}, **options)
-      req = build_request(:modify_cluster_iam_roles, params)
+    def modify_cluster_iam_roles(, **options)
+      req = build_request(:modify_cluster_iam_roles, )
       req.send_request(options)
     end
 
@@ -6989,8 +6989,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_maintenance(**params)
     # @param [Hash] params ({})
-    def modify_cluster_maintenance(params = {}, **options)
-      req = build_request(:modify_cluster_maintenance, params)
+    def modify_cluster_maintenance(, **options)
+      req = build_request(:modify_cluster_maintenance, )
       req.send_request(options)
     end
 
@@ -7051,8 +7051,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_cluster_parameter_group(params = {}, **options)
-      req = build_request(:modify_cluster_parameter_group, params)
+    def modify_cluster_parameter_group(, **options)
+      req = build_request(:modify_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -7135,8 +7135,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def modify_cluster_snapshot(params = {}, **options)
-      req = build_request(:modify_cluster_snapshot, params)
+    def modify_cluster_snapshot(, **options)
+      req = build_request(:modify_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -7168,8 +7168,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def modify_cluster_snapshot_schedule(params = {}, **options)
-      req = build_request(:modify_cluster_snapshot_schedule, params)
+    def modify_cluster_snapshot_schedule(, **options)
+      req = build_request(:modify_cluster_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -7219,8 +7219,8 @@ module Aws::Redshift
     #
     # @overload modify_cluster_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_cluster_subnet_group(params = {}, **options)
-      req = build_request(:modify_cluster_subnet_group, params)
+    def modify_cluster_subnet_group(, **options)
+      req = build_request(:modify_cluster_subnet_group, )
       req.send_request(options)
     end
 
@@ -7309,8 +7309,8 @@ module Aws::Redshift
     #
     # @overload modify_event_subscription(**params)
     # @param [Hash] params ({})
-    def modify_event_subscription(params = {}, **options)
-      req = build_request(:modify_event_subscription, params)
+    def modify_event_subscription(, **options)
+      req = build_request(:modify_event_subscription, )
       req.send_request(options)
     end
 
@@ -7408,8 +7408,8 @@ module Aws::Redshift
     #
     # @overload modify_scheduled_action(**params)
     # @param [Hash] params ({})
-    def modify_scheduled_action(params = {}, **options)
-      req = build_request(:modify_scheduled_action, params)
+    def modify_scheduled_action(, **options)
+      req = build_request(:modify_scheduled_action, )
       req.send_request(options)
     end
 
@@ -7576,8 +7576,8 @@ module Aws::Redshift
     #
     # @overload modify_snapshot_copy_retention_period(**params)
     # @param [Hash] params ({})
-    def modify_snapshot_copy_retention_period(params = {}, **options)
-      req = build_request(:modify_snapshot_copy_retention_period, params)
+    def modify_snapshot_copy_retention_period(, **options)
+      req = build_request(:modify_snapshot_copy_retention_period, )
       req.send_request(options)
     end
 
@@ -7629,8 +7629,8 @@ module Aws::Redshift
     #
     # @overload modify_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def modify_snapshot_schedule(params = {}, **options)
-      req = build_request(:modify_snapshot_schedule, params)
+    def modify_snapshot_schedule(, **options)
+      req = build_request(:modify_snapshot_schedule, )
       req.send_request(options)
     end
 
@@ -7684,8 +7684,8 @@ module Aws::Redshift
     #
     # @overload modify_usage_limit(**params)
     # @param [Hash] params ({})
-    def modify_usage_limit(params = {}, **options)
-      req = build_request(:modify_usage_limit, params)
+    def modify_usage_limit(, **options)
+      req = build_request(:modify_usage_limit, )
       req.send_request(options)
     end
 
@@ -7810,8 +7810,8 @@ module Aws::Redshift
     #
     # @overload pause_cluster(**params)
     # @param [Hash] params ({})
-    def pause_cluster(params = {}, **options)
-      req = build_request(:pause_cluster, params)
+    def pause_cluster(, **options)
+      req = build_request(:pause_cluster, )
       req.send_request(options)
     end
 
@@ -7871,8 +7871,8 @@ module Aws::Redshift
     #
     # @overload purchase_reserved_node_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_node_offering(params = {}, **options)
-      req = build_request(:purchase_reserved_node_offering, params)
+    def purchase_reserved_node_offering(, **options)
+      req = build_request(:purchase_reserved_node_offering, )
       req.send_request(options)
     end
 
@@ -8007,8 +8007,8 @@ module Aws::Redshift
     #
     # @overload reboot_cluster(**params)
     # @param [Hash] params ({})
-    def reboot_cluster(params = {}, **options)
-      req = build_request(:reboot_cluster, params)
+    def reboot_cluster(, **options)
+      req = build_request(:reboot_cluster, )
       req.send_request(options)
     end
 
@@ -8068,8 +8068,8 @@ module Aws::Redshift
     #
     # @overload reset_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_cluster_parameter_group(params = {}, **options)
-      req = build_request(:reset_cluster_parameter_group, params)
+    def reset_cluster_parameter_group(, **options)
+      req = build_request(:reset_cluster_parameter_group, )
       req.send_request(options)
     end
 
@@ -8243,8 +8243,8 @@ module Aws::Redshift
     #
     # @overload resize_cluster(**params)
     # @param [Hash] params ({})
-    def resize_cluster(params = {}, **options)
-      req = build_request(:resize_cluster, params)
+    def resize_cluster(, **options)
+      req = build_request(:resize_cluster, )
       req.send_request(options)
     end
 
@@ -8629,8 +8629,8 @@ module Aws::Redshift
     #
     # @overload restore_from_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_from_cluster_snapshot(params = {}, **options)
-      req = build_request(:restore_from_cluster_snapshot, params)
+    def restore_from_cluster_snapshot(, **options)
+      req = build_request(:restore_from_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -8716,8 +8716,8 @@ module Aws::Redshift
     #
     # @overload restore_table_from_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_table_from_cluster_snapshot(params = {}, **options)
-      req = build_request(:restore_table_from_cluster_snapshot, params)
+    def restore_table_from_cluster_snapshot(, **options)
+      req = build_request(:restore_table_from_cluster_snapshot, )
       req.send_request(options)
     end
 
@@ -8842,8 +8842,8 @@ module Aws::Redshift
     #
     # @overload resume_cluster(**params)
     # @param [Hash] params ({})
-    def resume_cluster(params = {}, **options)
-      req = build_request(:resume_cluster, params)
+    def resume_cluster(, **options)
+      req = build_request(:resume_cluster, )
       req.send_request(options)
     end
 
@@ -8919,8 +8919,8 @@ module Aws::Redshift
     #
     # @overload revoke_cluster_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_cluster_security_group_ingress(params = {}, **options)
-      req = build_request(:revoke_cluster_security_group_ingress, params)
+    def revoke_cluster_security_group_ingress(, **options)
+      req = build_request(:revoke_cluster_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -9007,8 +9007,8 @@ module Aws::Redshift
     #
     # @overload revoke_snapshot_access(**params)
     # @param [Hash] params ({})
-    def revoke_snapshot_access(params = {}, **options)
-      req = build_request(:revoke_snapshot_access, params)
+    def revoke_snapshot_access(, **options)
+      req = build_request(:revoke_snapshot_access, )
       req.send_request(options)
     end
 
@@ -9137,8 +9137,8 @@ module Aws::Redshift
     #
     # @overload rotate_encryption_key(**params)
     # @param [Hash] params ({})
-    def rotate_encryption_key(params = {}, **options)
-      req = build_request(:rotate_encryption_key, params)
+    def rotate_encryption_key(, **options)
+      req = build_request(:rotate_encryption_key, )
       req.send_request(options)
     end
 

@@ -411,8 +411,8 @@ module Aws::Personalize
     #
     # @overload create_batch_inference_job(**params)
     # @param [Hash] params ({})
-    def create_batch_inference_job(params = {}, **options)
-      req = build_request(:create_batch_inference_job, params)
+    def create_batch_inference_job(, **options)
+      req = build_request(:create_batch_inference_job, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::Personalize
     #
     # @overload create_campaign(**params)
     # @param [Hash] params ({})
-    def create_campaign(params = {}, **options)
-      req = build_request(:create_campaign, params)
+    def create_campaign(, **options)
+      req = build_request(:create_campaign, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::Personalize
     #
     # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, **options)
-      req = build_request(:create_dataset, params)
+    def create_dataset(, **options)
+      req = build_request(:create_dataset, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::Personalize
     #
     # @overload create_dataset_group(**params)
     # @param [Hash] params ({})
-    def create_dataset_group(params = {}, **options)
-      req = build_request(:create_dataset_group, params)
+    def create_dataset_group(, **options)
+      req = build_request(:create_dataset_group, )
       req.send_request(options)
     end
 
@@ -750,8 +750,8 @@ module Aws::Personalize
     #
     # @overload create_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def create_dataset_import_job(params = {}, **options)
-      req = build_request(:create_dataset_import_job, params)
+    def create_dataset_import_job(, **options)
+      req = build_request(:create_dataset_import_job, )
       req.send_request(options)
     end
 
@@ -827,8 +827,8 @@ module Aws::Personalize
     #
     # @overload create_event_tracker(**params)
     # @param [Hash] params ({})
-    def create_event_tracker(params = {}, **options)
-      req = build_request(:create_event_tracker, params)
+    def create_event_tracker(, **options)
+      req = build_request(:create_event_tracker, )
       req.send_request(options)
     end
 
@@ -881,8 +881,8 @@ module Aws::Personalize
     #
     # @overload create_filter(**params)
     # @param [Hash] params ({})
-    def create_filter(params = {}, **options)
-      req = build_request(:create_filter, params)
+    def create_filter(, **options)
+      req = build_request(:create_filter, )
       req.send_request(options)
     end
 
@@ -926,8 +926,8 @@ module Aws::Personalize
     #
     # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, **options)
-      req = build_request(:create_schema, params)
+    def create_schema(, **options)
+      req = build_request(:create_schema, )
       req.send_request(options)
     end
 
@@ -1089,8 +1089,8 @@ module Aws::Personalize
     #
     # @overload create_solution(**params)
     # @param [Hash] params ({})
-    def create_solution(params = {}, **options)
-      req = build_request(:create_solution, params)
+    def create_solution(, **options)
+      req = build_request(:create_solution, )
       req.send_request(options)
     end
 
@@ -1165,8 +1165,8 @@ module Aws::Personalize
     #
     # @overload create_solution_version(**params)
     # @param [Hash] params ({})
-    def create_solution_version(params = {}, **options)
-      req = build_request(:create_solution_version, params)
+    def create_solution_version(, **options)
+      req = build_request(:create_solution_version, )
       req.send_request(options)
     end
 
@@ -1195,8 +1195,8 @@ module Aws::Personalize
     #
     # @overload delete_campaign(**params)
     # @param [Hash] params ({})
-    def delete_campaign(params = {}, **options)
-      req = build_request(:delete_campaign, params)
+    def delete_campaign(, **options)
+      req = build_request(:delete_campaign, )
       req.send_request(options)
     end
 
@@ -1219,8 +1219,8 @@ module Aws::Personalize
     #
     # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, **options)
-      req = build_request(:delete_dataset, params)
+    def delete_dataset(, **options)
+      req = build_request(:delete_dataset, )
       req.send_request(options)
     end
 
@@ -1248,8 +1248,8 @@ module Aws::Personalize
     #
     # @overload delete_dataset_group(**params)
     # @param [Hash] params ({})
-    def delete_dataset_group(params = {}, **options)
-      req = build_request(:delete_dataset_group, params)
+    def delete_dataset_group(, **options)
+      req = build_request(:delete_dataset_group, )
       req.send_request(options)
     end
 
@@ -1272,8 +1272,8 @@ module Aws::Personalize
     #
     # @overload delete_event_tracker(**params)
     # @param [Hash] params ({})
-    def delete_event_tracker(params = {}, **options)
-      req = build_request(:delete_event_tracker, params)
+    def delete_event_tracker(, **options)
+      req = build_request(:delete_event_tracker, )
       req.send_request(options)
     end
 
@@ -1294,8 +1294,8 @@ module Aws::Personalize
     #
     # @overload delete_filter(**params)
     # @param [Hash] params ({})
-    def delete_filter(params = {}, **options)
-      req = build_request(:delete_filter, params)
+    def delete_filter(, **options)
+      req = build_request(:delete_filter, )
       req.send_request(options)
     end
 
@@ -1318,8 +1318,8 @@ module Aws::Personalize
     #
     # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, **options)
-      req = build_request(:delete_schema, params)
+    def delete_schema(, **options)
+      req = build_request(:delete_schema, )
       req.send_request(options)
     end
 
@@ -1346,8 +1346,8 @@ module Aws::Personalize
     #
     # @overload delete_solution(**params)
     # @param [Hash] params ({})
-    def delete_solution(params = {}, **options)
-      req = build_request(:delete_solution, params)
+    def delete_solution(, **options)
+      req = build_request(:delete_solution, )
       req.send_request(options)
     end
 
@@ -1400,8 +1400,8 @@ module Aws::Personalize
     #
     # @overload describe_algorithm(**params)
     # @param [Hash] params ({})
-    def describe_algorithm(params = {}, **options)
-      req = build_request(:describe_algorithm, params)
+    def describe_algorithm(, **options)
+      req = build_request(:describe_algorithm, )
       req.send_request(options)
     end
 
@@ -1445,8 +1445,8 @@ module Aws::Personalize
     #
     # @overload describe_batch_inference_job(**params)
     # @param [Hash] params ({})
-    def describe_batch_inference_job(params = {}, **options)
-      req = build_request(:describe_batch_inference_job, params)
+    def describe_batch_inference_job(, **options)
+      req = build_request(:describe_batch_inference_job, )
       req.send_request(options)
     end
 
@@ -1502,8 +1502,8 @@ module Aws::Personalize
     #
     # @overload describe_campaign(**params)
     # @param [Hash] params ({})
-    def describe_campaign(params = {}, **options)
-      req = build_request(:describe_campaign, params)
+    def describe_campaign(, **options)
+      req = build_request(:describe_campaign, )
       req.send_request(options)
     end
 
@@ -1538,8 +1538,8 @@ module Aws::Personalize
     #
     # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, **options)
-      req = build_request(:describe_dataset, params)
+    def describe_dataset(, **options)
+      req = build_request(:describe_dataset, )
       req.send_request(options)
     end
 
@@ -1574,8 +1574,8 @@ module Aws::Personalize
     #
     # @overload describe_dataset_group(**params)
     # @param [Hash] params ({})
-    def describe_dataset_group(params = {}, **options)
-      req = build_request(:describe_dataset_group, params)
+    def describe_dataset_group(, **options)
+      req = build_request(:describe_dataset_group, )
       req.send_request(options)
     end
 
@@ -1611,8 +1611,8 @@ module Aws::Personalize
     #
     # @overload describe_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def describe_dataset_import_job(params = {}, **options)
-      req = build_request(:describe_dataset_import_job, params)
+    def describe_dataset_import_job(, **options)
+      req = build_request(:describe_dataset_import_job, )
       req.send_request(options)
     end
 
@@ -1648,8 +1648,8 @@ module Aws::Personalize
     #
     # @overload describe_event_tracker(**params)
     # @param [Hash] params ({})
-    def describe_event_tracker(params = {}, **options)
-      req = build_request(:describe_event_tracker, params)
+    def describe_event_tracker(, **options)
+      req = build_request(:describe_event_tracker, )
       req.send_request(options)
     end
 
@@ -1683,8 +1683,8 @@ module Aws::Personalize
     #
     # @overload describe_feature_transformation(**params)
     # @param [Hash] params ({})
-    def describe_feature_transformation(params = {}, **options)
-      req = build_request(:describe_feature_transformation, params)
+    def describe_feature_transformation(, **options)
+      req = build_request(:describe_feature_transformation, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::Personalize
     #
     # @overload describe_filter(**params)
     # @param [Hash] params ({})
-    def describe_filter(params = {}, **options)
-      req = build_request(:describe_filter, params)
+    def describe_filter(, **options)
+      req = build_request(:describe_filter, )
       req.send_request(options)
     end
 
@@ -1774,8 +1774,8 @@ module Aws::Personalize
     #
     # @overload describe_recipe(**params)
     # @param [Hash] params ({})
-    def describe_recipe(params = {}, **options)
-      req = build_request(:describe_recipe, params)
+    def describe_recipe(, **options)
+      req = build_request(:describe_recipe, )
       req.send_request(options)
     end
 
@@ -1806,8 +1806,8 @@ module Aws::Personalize
     #
     # @overload describe_schema(**params)
     # @param [Hash] params ({})
-    def describe_schema(params = {}, **options)
-      req = build_request(:describe_schema, params)
+    def describe_schema(, **options)
+      req = build_request(:describe_schema, )
       req.send_request(options)
     end
 
@@ -1875,8 +1875,8 @@ module Aws::Personalize
     #
     # @overload describe_solution(**params)
     # @param [Hash] params ({})
-    def describe_solution(params = {}, **options)
-      req = build_request(:describe_solution, params)
+    def describe_solution(, **options)
+      req = build_request(:describe_solution, )
       req.send_request(options)
     end
 
@@ -1943,8 +1943,8 @@ module Aws::Personalize
     #
     # @overload describe_solution_version(**params)
     # @param [Hash] params ({})
-    def describe_solution_version(params = {}, **options)
-      req = build_request(:describe_solution_version, params)
+    def describe_solution_version(, **options)
+      req = build_request(:describe_solution_version, )
       req.send_request(options)
     end
 
@@ -1975,8 +1975,8 @@ module Aws::Personalize
     #
     # @overload get_solution_metrics(**params)
     # @param [Hash] params ({})
-    def get_solution_metrics(params = {}, **options)
-      req = build_request(:get_solution_metrics, params)
+    def get_solution_metrics(, **options)
+      req = build_request(:get_solution_metrics, )
       req.send_request(options)
     end
 
@@ -2025,8 +2025,8 @@ module Aws::Personalize
     #
     # @overload list_batch_inference_jobs(**params)
     # @param [Hash] params ({})
-    def list_batch_inference_jobs(params = {}, **options)
-      req = build_request(:list_batch_inference_jobs, params)
+    def list_batch_inference_jobs(, **options)
+      req = build_request(:list_batch_inference_jobs, )
       req.send_request(options)
     end
 
@@ -2078,8 +2078,8 @@ module Aws::Personalize
     #
     # @overload list_campaigns(**params)
     # @param [Hash] params ({})
-    def list_campaigns(params = {}, **options)
-      req = build_request(:list_campaigns, params)
+    def list_campaigns(, **options)
+      req = build_request(:list_campaigns, )
       req.send_request(options)
     end
 
@@ -2123,8 +2123,8 @@ module Aws::Personalize
     #
     # @overload list_dataset_groups(**params)
     # @param [Hash] params ({})
-    def list_dataset_groups(params = {}, **options)
-      req = build_request(:list_dataset_groups, params)
+    def list_dataset_groups(, **options)
+      req = build_request(:list_dataset_groups, )
       req.send_request(options)
     end
 
@@ -2176,8 +2176,8 @@ module Aws::Personalize
     #
     # @overload list_dataset_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_dataset_import_jobs(params = {}, **options)
-      req = build_request(:list_dataset_import_jobs, params)
+    def list_dataset_import_jobs(, **options)
+      req = build_request(:list_dataset_import_jobs, )
       req.send_request(options)
     end
 
@@ -2227,8 +2227,8 @@ module Aws::Personalize
     #
     # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, **options)
-      req = build_request(:list_datasets, params)
+    def list_datasets(, **options)
+      req = build_request(:list_datasets, )
       req.send_request(options)
     end
 
@@ -2276,8 +2276,8 @@ module Aws::Personalize
     #
     # @overload list_event_trackers(**params)
     # @param [Hash] params ({})
-    def list_event_trackers(params = {}, **options)
-      req = build_request(:list_event_trackers, params)
+    def list_event_trackers(, **options)
+      req = build_request(:list_event_trackers, )
       req.send_request(options)
     end
 
@@ -2322,8 +2322,8 @@ module Aws::Personalize
     #
     # @overload list_filters(**params)
     # @param [Hash] params ({})
-    def list_filters(params = {}, **options)
-      req = build_request(:list_filters, params)
+    def list_filters(, **options)
+      req = build_request(:list_filters, )
       req.send_request(options)
     end
 
@@ -2370,8 +2370,8 @@ module Aws::Personalize
     #
     # @overload list_recipes(**params)
     # @param [Hash] params ({})
-    def list_recipes(params = {}, **options)
-      req = build_request(:list_recipes, params)
+    def list_recipes(, **options)
+      req = build_request(:list_recipes, )
       req.send_request(options)
     end
 
@@ -2413,8 +2413,8 @@ module Aws::Personalize
     #
     # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, **options)
-      req = build_request(:list_schemas, params)
+    def list_schemas(, **options)
+      req = build_request(:list_schemas, )
       req.send_request(options)
     end
 
@@ -2463,8 +2463,8 @@ module Aws::Personalize
     #
     # @overload list_solution_versions(**params)
     # @param [Hash] params ({})
-    def list_solution_versions(params = {}, **options)
-      req = build_request(:list_solution_versions, params)
+    def list_solution_versions(, **options)
+      req = build_request(:list_solution_versions, )
       req.send_request(options)
     end
 
@@ -2513,8 +2513,8 @@ module Aws::Personalize
     #
     # @overload list_solutions(**params)
     # @param [Hash] params ({})
-    def list_solutions(params = {}, **options)
-      req = build_request(:list_solutions, params)
+    def list_solutions(, **options)
+      req = build_request(:list_solutions, )
       req.send_request(options)
     end
 
@@ -2569,8 +2569,8 @@ module Aws::Personalize
     #
     # @overload update_campaign(**params)
     # @param [Hash] params ({})
-    def update_campaign(params = {}, **options)
-      req = build_request(:update_campaign, params)
+    def update_campaign(, **options)
+      req = build_request(:update_campaign, )
       req.send_request(options)
     end
 

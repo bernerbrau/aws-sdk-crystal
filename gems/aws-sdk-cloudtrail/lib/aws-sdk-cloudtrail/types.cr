@@ -2616,5 +2616,562 @@ module Aws::CloudTrail
       include Aws::Structure
     end
 
+    alias AddTagsRequest = NamedTuple(
+      "ResourceId" : String,
+      "TagsList" : (TagsList)?
+    )
+
+    alias AddTagsResponse = NamedTuple(
+      
+    )
+
+    alias AdvancedEventSelector = NamedTuple(
+      "Name" : (SelectorName)?,
+      "FieldSelectors" : AdvancedFieldSelectors
+    )
+
+    alias AdvancedEventSelectors = Array(AdvancedEventSelector)
+
+    alias AdvancedFieldSelector = NamedTuple(
+      "Field" : SelectorField,
+      "Equals" : (Operator)?,
+      "StartsWith" : (Operator)?,
+      "EndsWith" : (Operator)?,
+      "NotEquals" : (Operator)?,
+      "NotStartsWith" : (Operator)?,
+      "NotEndsWith" : (Operator)?
+    )
+
+    alias AdvancedFieldSelectors = Array(AdvancedFieldSelector)
+
+    alias Boolean = Bool
+
+    alias ByteBuffer = String | Array(UInt8) | IO
+
+    alias CloudTrailARNInvalidException = NamedTuple(
+      
+    )
+
+    alias CloudTrailAccessNotEnabledException = NamedTuple(
+      
+    )
+
+    alias CloudTrailInvalidClientTokenIdException = NamedTuple(
+      
+    )
+
+    alias CloudWatchLogsDeliveryUnavailableException = NamedTuple(
+      
+    )
+
+    alias CreateTrailRequest = NamedTuple(
+      "Name" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : (String)?,
+      "SnsTopicName" : (String)?,
+      "IncludeGlobalServiceEvents" : (Boolean)?,
+      "IsMultiRegionTrail" : (Boolean)?,
+      "EnableLogFileValidation" : (Boolean)?,
+      "CloudWatchLogsLogGroupArn" : (String)?,
+      "CloudWatchLogsRoleArn" : (String)?,
+      "KmsKeyId" : (String)?,
+      "IsOrganizationTrail" : (Boolean)?,
+      "TagsList" : (TagsList)?
+    )
+
+    alias CreateTrailResponse = NamedTuple(
+      "Name" : (String)?,
+      "S3BucketName" : (String)?,
+      "S3KeyPrefix" : (String)?,
+      "SnsTopicName" : (String)?,
+      "SnsTopicARN" : (String)?,
+      "IncludeGlobalServiceEvents" : (Boolean)?,
+      "IsMultiRegionTrail" : (Boolean)?,
+      "TrailARN" : (String)?,
+      "LogFileValidationEnabled" : (Boolean)?,
+      "CloudWatchLogsLogGroupArn" : (String)?,
+      "CloudWatchLogsRoleArn" : (String)?,
+      "KmsKeyId" : (String)?,
+      "IsOrganizationTrail" : (Boolean)?
+    )
+
+    alias DataResource = NamedTuple(
+      "Type" : (String)?,
+      "Values" : (DataResourceValues)?
+    )
+
+    alias DataResourceValues = Array(String)
+
+    alias DataResources = Array(DataResource)
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteTrailRequest = NamedTuple(
+      "Name" : String
+    )
+
+    alias DeleteTrailResponse = NamedTuple(
+      
+    )
+
+    alias DescribeTrailsRequest = NamedTuple(
+      "trailNameList" : (TrailNameList)?,
+      "includeShadowTrails" : (Boolean)?
+    )
+
+    alias DescribeTrailsResponse = NamedTuple(
+      "trailList" : (TrailList)?
+    )
+
+    alias Event = NamedTuple(
+      "EventId" : (String)?,
+      "EventName" : (String)?,
+      "ReadOnly" : (String)?,
+      "AccessKeyId" : (String)?,
+      "EventTime" : (Date)?,
+      "EventSource" : (String)?,
+      "Username" : (String)?,
+      "Resources" : (ResourceList)?,
+      "CloudTrailEvent" : (String)?
+    )
+
+    alias EventCategory = String
+
+    alias EventSelector = NamedTuple(
+      "ReadWriteType" : (ReadWriteType)?,
+      "IncludeManagementEvents" : (Boolean)?,
+      "DataResources" : (DataResources)?,
+      "ExcludeManagementEventSources" : (ExcludeManagementEventSources)?
+    )
+
+    alias EventSelectors = Array(EventSelector)
+
+    alias EventsList = Array(Event)
+
+    alias ExcludeManagementEventSources = Array(String)
+
+    alias GetEventSelectorsRequest = NamedTuple(
+      "TrailName" : String
+    )
+
+    alias GetEventSelectorsResponse = NamedTuple(
+      "TrailARN" : (String)?,
+      "EventSelectors" : (EventSelectors)?,
+      "AdvancedEventSelectors" : (AdvancedEventSelectors)?
+    )
+
+    alias GetInsightSelectorsRequest = NamedTuple(
+      "TrailName" : String
+    )
+
+    alias GetInsightSelectorsResponse = NamedTuple(
+      "TrailARN" : (String)?,
+      "InsightSelectors" : (InsightSelectors)?
+    )
+
+    alias GetTrailRequest = NamedTuple(
+      "Name" : String
+    )
+
+    alias GetTrailResponse = NamedTuple(
+      "Trail" : (Trail)?
+    )
+
+    alias GetTrailStatusRequest = NamedTuple(
+      "Name" : String
+    )
+
+    alias GetTrailStatusResponse = NamedTuple(
+      "IsLogging" : (Boolean)?,
+      "LatestDeliveryError" : (String)?,
+      "LatestNotificationError" : (String)?,
+      "LatestDeliveryTime" : (Date)?,
+      "LatestNotificationTime" : (Date)?,
+      "StartLoggingTime" : (Date)?,
+      "StopLoggingTime" : (Date)?,
+      "LatestCloudWatchLogsDeliveryError" : (String)?,
+      "LatestCloudWatchLogsDeliveryTime" : (Date)?,
+      "LatestDigestDeliveryTime" : (Date)?,
+      "LatestDigestDeliveryError" : (String)?,
+      "LatestDeliveryAttemptTime" : (String)?,
+      "LatestNotificationAttemptTime" : (String)?,
+      "LatestNotificationAttemptSucceeded" : (String)?,
+      "LatestDeliveryAttemptSucceeded" : (String)?,
+      "TimeLoggingStarted" : (String)?,
+      "TimeLoggingStopped" : (String)?
+    )
+
+    alias InsightNotEnabledException = NamedTuple(
+      
+    )
+
+    alias InsightSelector = NamedTuple(
+      "InsightType" : (InsightType)?
+    )
+
+    alias InsightSelectors = Array(InsightSelector)
+
+    alias InsightType = String
+
+    alias InsufficientDependencyServiceAccessPermissionException = NamedTuple(
+      
+    )
+
+    alias InsufficientEncryptionPolicyException = NamedTuple(
+      
+    )
+
+    alias InsufficientS3BucketPolicyException = NamedTuple(
+      
+    )
+
+    alias InsufficientSnsTopicPolicyException = NamedTuple(
+      
+    )
+
+    alias InvalidCloudWatchLogsLogGroupArnException = NamedTuple(
+      
+    )
+
+    alias InvalidCloudWatchLogsRoleArnException = NamedTuple(
+      
+    )
+
+    alias InvalidEventCategoryException = NamedTuple(
+      
+    )
+
+    alias InvalidEventSelectorsException = NamedTuple(
+      
+    )
+
+    alias InvalidHomeRegionException = NamedTuple(
+      
+    )
+
+    alias InvalidInsightSelectorsException = NamedTuple(
+      
+    )
+
+    alias InvalidKmsKeyIdException = NamedTuple(
+      
+    )
+
+    alias InvalidLookupAttributesException = NamedTuple(
+      
+    )
+
+    alias InvalidMaxResultsException = NamedTuple(
+      
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidParameterCombinationException = NamedTuple(
+      
+    )
+
+    alias InvalidS3BucketNameException = NamedTuple(
+      
+    )
+
+    alias InvalidS3PrefixException = NamedTuple(
+      
+    )
+
+    alias InvalidSnsTopicNameException = NamedTuple(
+      
+    )
+
+    alias InvalidTagParameterException = NamedTuple(
+      
+    )
+
+    alias InvalidTimeRangeException = NamedTuple(
+      
+    )
+
+    alias InvalidTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidTrailNameException = NamedTuple(
+      
+    )
+
+    alias KmsException = NamedTuple(
+      
+    )
+
+    alias KmsKeyDisabledException = NamedTuple(
+      
+    )
+
+    alias KmsKeyNotFoundException = NamedTuple(
+      
+    )
+
+    alias ListPublicKeysRequest = NamedTuple(
+      "StartTime" : (Date)?,
+      "EndTime" : (Date)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListPublicKeysResponse = NamedTuple(
+      "PublicKeyList" : (PublicKeyList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsRequest = NamedTuple(
+      "ResourceIdList" : ResourceIdList,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsResponse = NamedTuple(
+      "ResourceTagList" : (ResourceTagList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTrailsRequest = NamedTuple(
+      "NextToken" : (String)?
+    )
+
+    alias ListTrailsResponse = NamedTuple(
+      "Trails" : (Trails)?,
+      "NextToken" : (String)?
+    )
+
+    alias LookupAttribute = NamedTuple(
+      "AttributeKey" : LookupAttributeKey,
+      "AttributeValue" : String
+    )
+
+    alias LookupAttributeKey = String
+
+    alias LookupAttributesList = Array(LookupAttribute)
+
+    alias LookupEventsRequest = NamedTuple(
+      "LookupAttributes" : (LookupAttributesList)?,
+      "StartTime" : (Date)?,
+      "EndTime" : (Date)?,
+      "EventCategory" : (EventCategory)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias LookupEventsResponse = NamedTuple(
+      "Events" : (EventsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MaximumNumberOfTrailsExceededException = NamedTuple(
+      
+    )
+
+    alias NextToken = String
+
+    alias NotOrganizationMasterAccountException = NamedTuple(
+      
+    )
+
+    alias OperationNotPermittedException = NamedTuple(
+      
+    )
+
+    alias Operator = Array(OperatorValue)
+
+    alias OperatorValue = String
+
+    alias OrganizationNotInAllFeaturesModeException = NamedTuple(
+      
+    )
+
+    alias OrganizationsNotInUseException = NamedTuple(
+      
+    )
+
+    alias PublicKey = NamedTuple(
+      "Value" : (ByteBuffer)?,
+      "ValidityStartTime" : (Date)?,
+      "ValidityEndTime" : (Date)?,
+      "Fingerprint" : (String)?
+    )
+
+    alias PublicKeyList = Array(PublicKey)
+
+    alias PutEventSelectorsRequest = NamedTuple(
+      "TrailName" : String,
+      "EventSelectors" : (EventSelectors)?,
+      "AdvancedEventSelectors" : (AdvancedEventSelectors)?
+    )
+
+    alias PutEventSelectorsResponse = NamedTuple(
+      "TrailARN" : (String)?,
+      "EventSelectors" : (EventSelectors)?,
+      "AdvancedEventSelectors" : (AdvancedEventSelectors)?
+    )
+
+    alias PutInsightSelectorsRequest = NamedTuple(
+      "TrailName" : String,
+      "InsightSelectors" : InsightSelectors
+    )
+
+    alias PutInsightSelectorsResponse = NamedTuple(
+      "TrailARN" : (String)?,
+      "InsightSelectors" : (InsightSelectors)?
+    )
+
+    alias ReadWriteType = String
+
+    alias RemoveTagsRequest = NamedTuple(
+      "ResourceId" : String,
+      "TagsList" : (TagsList)?
+    )
+
+    alias RemoveTagsResponse = NamedTuple(
+      
+    )
+
+    alias Resource = NamedTuple(
+      "ResourceType" : (String)?,
+      "ResourceName" : (String)?
+    )
+
+    alias ResourceIdList = Array(String)
+
+    alias ResourceList = Array(Resource)
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias ResourceTag = NamedTuple(
+      "ResourceId" : (String)?,
+      "TagsList" : (TagsList)?
+    )
+
+    alias ResourceTagList = Array(ResourceTag)
+
+    alias ResourceTypeNotSupportedException = NamedTuple(
+      
+    )
+
+    alias S3BucketDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias SelectorField = String
+
+    alias SelectorName = String
+
+    alias StartLoggingRequest = NamedTuple(
+      "Name" : String
+    )
+
+    alias StartLoggingResponse = NamedTuple(
+      
+    )
+
+    alias StopLoggingRequest = NamedTuple(
+      "Name" : String
+    )
+
+    alias StopLoggingResponse = NamedTuple(
+      
+    )
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "Key" : String,
+      "Value" : (String)?
+    )
+
+    alias TagsLimitExceededException = NamedTuple(
+      
+    )
+
+    alias TagsList = Array(Tag)
+
+    alias Trail = NamedTuple(
+      "Name" : (String)?,
+      "S3BucketName" : (String)?,
+      "S3KeyPrefix" : (String)?,
+      "SnsTopicName" : (String)?,
+      "SnsTopicARN" : (String)?,
+      "IncludeGlobalServiceEvents" : (Boolean)?,
+      "IsMultiRegionTrail" : (Boolean)?,
+      "HomeRegion" : (String)?,
+      "TrailARN" : (String)?,
+      "LogFileValidationEnabled" : (Boolean)?,
+      "CloudWatchLogsLogGroupArn" : (String)?,
+      "CloudWatchLogsRoleArn" : (String)?,
+      "KmsKeyId" : (String)?,
+      "HasCustomEventSelectors" : (Boolean)?,
+      "HasInsightSelectors" : (Boolean)?,
+      "IsOrganizationTrail" : (Boolean)?
+    )
+
+    alias TrailAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias TrailInfo = NamedTuple(
+      "TrailARN" : (String)?,
+      "Name" : (String)?,
+      "HomeRegion" : (String)?
+    )
+
+    alias TrailList = Array(Trail)
+
+    alias TrailNameList = Array(String)
+
+    alias TrailNotFoundException = NamedTuple(
+      
+    )
+
+    alias TrailNotProvidedException = NamedTuple(
+      
+    )
+
+    alias Trails = Array(TrailInfo)
+
+    alias UnsupportedOperationException = NamedTuple(
+      
+    )
+
+    alias UpdateTrailRequest = NamedTuple(
+      "Name" : String,
+      "S3BucketName" : (String)?,
+      "S3KeyPrefix" : (String)?,
+      "SnsTopicName" : (String)?,
+      "IncludeGlobalServiceEvents" : (Boolean)?,
+      "IsMultiRegionTrail" : (Boolean)?,
+      "EnableLogFileValidation" : (Boolean)?,
+      "CloudWatchLogsLogGroupArn" : (String)?,
+      "CloudWatchLogsRoleArn" : (String)?,
+      "KmsKeyId" : (String)?,
+      "IsOrganizationTrail" : (Boolean)?
+    )
+
+    alias UpdateTrailResponse = NamedTuple(
+      "Name" : (String)?,
+      "S3BucketName" : (String)?,
+      "S3KeyPrefix" : (String)?,
+      "SnsTopicName" : (String)?,
+      "SnsTopicARN" : (String)?,
+      "IncludeGlobalServiceEvents" : (Boolean)?,
+      "IsMultiRegionTrail" : (Boolean)?,
+      "TrailARN" : (String)?,
+      "LogFileValidationEnabled" : (Boolean)?,
+      "CloudWatchLogsLogGroupArn" : (String)?,
+      "CloudWatchLogsRoleArn" : (String)?,
+      "KmsKeyId" : (String)?,
+      "IsOrganizationTrail" : (Boolean)?
+    )
   end
 end

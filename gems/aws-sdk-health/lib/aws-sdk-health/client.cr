@@ -400,8 +400,8 @@ module Aws::Health
     #
     # @overload describe_affected_accounts_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_affected_accounts_for_organization(params = {}, **options)
-      req = build_request(:describe_affected_accounts_for_organization, params)
+    def describe_affected_accounts_for_organization(, **options)
+      req = build_request(:describe_affected_accounts_for_organization, )
       req.send_request(options)
     end
 
@@ -489,8 +489,8 @@ module Aws::Health
     #
     # @overload describe_affected_entities(**params)
     # @param [Hash] params ({})
-    def describe_affected_entities(params = {}, **options)
-      req = build_request(:describe_affected_entities, params)
+    def describe_affected_entities(, **options)
+      req = build_request(:describe_affected_entities, )
       req.send_request(options)
     end
 
@@ -582,8 +582,8 @@ module Aws::Health
     #
     # @overload describe_affected_entities_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_affected_entities_for_organization(params = {}, **options)
-      req = build_request(:describe_affected_entities_for_organization, params)
+    def describe_affected_entities_for_organization(, **options)
+      req = build_request(:describe_affected_entities_for_organization, )
       req.send_request(options)
     end
 
@@ -616,8 +616,8 @@ module Aws::Health
     #
     # @overload describe_entity_aggregates(**params)
     # @param [Hash] params ({})
-    def describe_entity_aggregates(params = {}, **options)
-      req = build_request(:describe_entity_aggregates, params)
+    def describe_entity_aggregates(, **options)
+      req = build_request(:describe_entity_aggregates, )
       req.send_request(options)
     end
 
@@ -707,8 +707,8 @@ module Aws::Health
     #
     # @overload describe_event_aggregates(**params)
     # @param [Hash] params ({})
-    def describe_event_aggregates(params = {}, **options)
-      req = build_request(:describe_event_aggregates, params)
+    def describe_event_aggregates(, **options)
+      req = build_request(:describe_event_aggregates, )
       req.send_request(options)
     end
 
@@ -774,8 +774,8 @@ module Aws::Health
     #
     # @overload describe_event_details(**params)
     # @param [Hash] params ({})
-    def describe_event_details(params = {}, **options)
-      req = build_request(:describe_event_details, params)
+    def describe_event_details(, **options)
+      req = build_request(:describe_event_details, )
       req.send_request(options)
     end
 
@@ -869,8 +869,8 @@ module Aws::Health
     #
     # @overload describe_event_details_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_event_details_for_organization(params = {}, **options)
-      req = build_request(:describe_event_details_for_organization, params)
+    def describe_event_details_for_organization(, **options)
+      req = build_request(:describe_event_details_for_organization, )
       req.send_request(options)
     end
 
@@ -933,8 +933,8 @@ module Aws::Health
     #
     # @overload describe_event_types(**params)
     # @param [Hash] params ({})
-    def describe_event_types(params = {}, **options)
-      req = build_request(:describe_event_types, params)
+    def describe_event_types(, **options)
+      req = build_request(:describe_event_types, )
       req.send_request(options)
     end
 
@@ -1055,8 +1055,8 @@ module Aws::Health
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::Health
     #
     # @overload describe_events_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_events_for_organization(params = {}, **options)
-      req = build_request(:describe_events_for_organization, params)
+    def describe_events_for_organization(, **options)
+      req = build_request(:describe_events_for_organization, )
       req.send_request(options)
     end
 
@@ -1194,8 +1194,8 @@ module Aws::Health
     #
     # @overload describe_health_service_status_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_health_service_status_for_organization(params = {}, **options)
-      req = build_request(:describe_health_service_status_for_organization, params)
+    def describe_health_service_status_for_organization(, **options)
+      req = build_request(:describe_health_service_status_for_organization, )
       req.send_request(options)
     end
 
@@ -1233,8 +1233,8 @@ module Aws::Health
     #
     # @overload disable_health_service_access_for_organization(**params)
     # @param [Hash] params ({})
-    def disable_health_service_access_for_organization(params = {}, **options)
-      req = build_request(:disable_health_service_access_for_organization, params)
+    def disable_health_service_access_for_organization(, **options)
+      req = build_request(:disable_health_service_access_for_organization, )
       req.send_request(options)
     end
 
@@ -1257,8 +1257,8 @@ module Aws::Health
     #
     # @overload enable_health_service_access_for_organization(**params)
     # @param [Hash] params ({})
-    def enable_health_service_access_for_organization(params = {}, **options)
-      req = build_request(:enable_health_service_access_for_organization, params)
+    def enable_health_service_access_for_organization(, **options)
+      req = build_request(:enable_health_service_access_for_organization, )
       req.send_request(options)
     end
 

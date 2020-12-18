@@ -378,8 +378,8 @@ module Aws::MediaPackage
     #
     # @overload configure_logs(**params)
     # @param [Hash] params ({})
-    def configure_logs(params = {}, **options)
-      req = build_request(:configure_logs, params)
+    def configure_logs(, **options)
+      req = build_request(:configure_logs, )
       req.send_request(options)
     end
 
@@ -431,8 +431,8 @@ module Aws::MediaPackage
     #
     # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, **options)
-      req = build_request(:create_channel, params)
+    def create_channel(, **options)
+      req = build_request(:create_channel, )
       req.send_request(options)
     end
 
@@ -494,8 +494,8 @@ module Aws::MediaPackage
     #
     # @overload create_harvest_job(**params)
     # @param [Hash] params ({})
-    def create_harvest_job(params = {}, **options)
-      req = build_request(:create_harvest_job, params)
+    def create_harvest_job(, **options)
+      req = build_request(:create_harvest_job, )
       req.send_request(options)
     end
 
@@ -785,8 +785,8 @@ module Aws::MediaPackage
     #
     # @overload create_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def create_origin_endpoint(params = {}, **options)
-      req = build_request(:create_origin_endpoint, params)
+    def create_origin_endpoint(, **options)
+      req = build_request(:create_origin_endpoint, )
       req.send_request(options)
     end
 
@@ -806,8 +806,8 @@ module Aws::MediaPackage
     #
     # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, **options)
-      req = build_request(:delete_channel, params)
+    def delete_channel(, **options)
+      req = build_request(:delete_channel, )
       req.send_request(options)
     end
 
@@ -827,8 +827,8 @@ module Aws::MediaPackage
     #
     # @overload delete_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_origin_endpoint(params = {}, **options)
-      req = build_request(:delete_origin_endpoint, params)
+    def delete_origin_endpoint(, **options)
+      req = build_request(:delete_origin_endpoint, )
       req.send_request(options)
     end
 
@@ -871,8 +871,8 @@ module Aws::MediaPackage
     #
     # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, **options)
-      req = build_request(:describe_channel, params)
+    def describe_channel(, **options)
+      req = build_request(:describe_channel, )
       req.send_request(options)
     end
 
@@ -916,8 +916,8 @@ module Aws::MediaPackage
     #
     # @overload describe_harvest_job(**params)
     # @param [Hash] params ({})
-    def describe_harvest_job(params = {}, **options)
-      req = build_request(:describe_harvest_job, params)
+    def describe_harvest_job(, **options)
+      req = build_request(:describe_harvest_job, )
       req.send_request(options)
     end
 
@@ -1052,8 +1052,8 @@ module Aws::MediaPackage
     #
     # @overload describe_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_origin_endpoint(params = {}, **options)
-      req = build_request(:describe_origin_endpoint, params)
+    def describe_origin_endpoint(, **options)
+      req = build_request(:describe_origin_endpoint, )
       req.send_request(options)
     end
 
@@ -1098,8 +1098,8 @@ module Aws::MediaPackage
     #
     # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, **options)
-      req = build_request(:list_channels, params)
+    def list_channels(, **options)
+      req = build_request(:list_channels, )
       req.send_request(options)
     end
 
@@ -1149,8 +1149,8 @@ module Aws::MediaPackage
     #
     # @overload list_harvest_jobs(**params)
     # @param [Hash] params ({})
-    def list_harvest_jobs(params = {}, **options)
-      req = build_request(:list_harvest_jobs, params)
+    def list_harvest_jobs(, **options)
+      req = build_request(:list_harvest_jobs, )
       req.send_request(options)
     end
 
@@ -1281,8 +1281,8 @@ module Aws::MediaPackage
     #
     # @overload list_origin_endpoints(**params)
     # @param [Hash] params ({})
-    def list_origin_endpoints(params = {}, **options)
-      req = build_request(:list_origin_endpoints, params)
+    def list_origin_endpoints(, **options)
+      req = build_request(:list_origin_endpoints, )
       req.send_request(options)
     end
 
@@ -1307,8 +1307,8 @@ module Aws::MediaPackage
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1353,8 +1353,8 @@ module Aws::MediaPackage
     #
     # @overload rotate_channel_credentials(**params)
     # @param [Hash] params ({})
-    def rotate_channel_credentials(params = {}, **options)
-      req = build_request(:rotate_channel_credentials, params)
+    def rotate_channel_credentials(, **options)
+      req = build_request(:rotate_channel_credentials, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::MediaPackage
     #
     # @overload rotate_ingest_endpoint_credentials(**params)
     # @param [Hash] params ({})
-    def rotate_ingest_endpoint_credentials(params = {}, **options)
-      req = build_request(:rotate_ingest_endpoint_credentials, params)
+    def rotate_ingest_endpoint_credentials(, **options)
+      req = build_request(:rotate_ingest_endpoint_credentials, )
       req.send_request(options)
     end
 
@@ -1425,8 +1425,8 @@ module Aws::MediaPackage
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::MediaPackage
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1494,8 +1494,8 @@ module Aws::MediaPackage
     #
     # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, **options)
-      req = build_request(:update_channel, params)
+    def update_channel(, **options)
+      req = build_request(:update_channel, )
       req.send_request(options)
     end
 
@@ -1776,8 +1776,8 @@ module Aws::MediaPackage
     #
     # @overload update_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def update_origin_endpoint(params = {}, **options)
-      req = build_request(:update_origin_endpoint, params)
+    def update_origin_endpoint(, **options)
+      req = build_request(:update_origin_endpoint, )
       req.send_request(options)
     end
 

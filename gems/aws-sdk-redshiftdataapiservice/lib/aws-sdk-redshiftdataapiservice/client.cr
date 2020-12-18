@@ -363,8 +363,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload cancel_statement(**params)
     # @param [Hash] params ({})
-    def cancel_statement(params = {}, **options)
-      req = build_request(:cancel_statement, params)
+    def cancel_statement(, **options)
+      req = build_request(:cancel_statement, )
       req.send_request(options)
     end
 
@@ -425,8 +425,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload describe_statement(**params)
     # @param [Hash] params ({})
-    def describe_statement(params = {}, **options)
-      req = build_request(:describe_statement, params)
+    def describe_statement(, **options)
+      req = build_request(:describe_statement, )
       req.send_request(options)
     end
 
@@ -527,8 +527,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload describe_table(**params)
     # @param [Hash] params ({})
-    def describe_table(params = {}, **options)
-      req = build_request(:describe_table, params)
+    def describe_table(, **options)
+      req = build_request(:describe_table, )
       req.send_request(options)
     end
 
@@ -608,8 +608,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload execute_statement(**params)
     # @param [Hash] params ({})
-    def execute_statement(params = {}, **options)
-      req = build_request(:execute_statement, params)
+    def execute_statement(, **options)
+      req = build_request(:execute_statement, )
       req.send_request(options)
     end
 
@@ -677,8 +677,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload get_statement_result(**params)
     # @param [Hash] params ({})
-    def get_statement_result(params = {}, **options)
-      req = build_request(:get_statement_result, params)
+    def get_statement_result(, **options)
+      req = build_request(:get_statement_result, )
       req.send_request(options)
     end
 
@@ -753,8 +753,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload list_databases(**params)
     # @param [Hash] params ({})
-    def list_databases(params = {}, **options)
-      req = build_request(:list_databases, params)
+    def list_databases(, **options)
+      req = build_request(:list_databases, )
       req.send_request(options)
     end
 
@@ -836,8 +836,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, **options)
-      req = build_request(:list_schemas, params)
+    def list_schemas(, **options)
+      req = build_request(:list_schemas, )
       req.send_request(options)
     end
 
@@ -916,8 +916,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload list_statements(**params)
     # @param [Hash] params ({})
-    def list_statements(params = {}, **options)
-      req = build_request(:list_statements, params)
+    def list_statements(, **options)
+      req = build_request(:list_statements, )
       req.send_request(options)
     end
 
@@ -1016,8 +1016,8 @@ module Aws::RedshiftDataAPIService
     #
     # @overload list_tables(**params)
     # @param [Hash] params ({})
-    def list_tables(params = {}, **options)
-      req = build_request(:list_tables, params)
+    def list_tables(, **options)
+      req = build_request(:list_tables, )
       req.send_request(options)
     end
 

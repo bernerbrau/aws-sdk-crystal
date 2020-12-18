@@ -412,8 +412,8 @@ module Aws::CodeStarNotifications
     #
     # @overload create_notification_rule(**params)
     # @param [Hash] params ({})
-    def create_notification_rule(params = {}, **options)
-      req = build_request(:create_notification_rule, params)
+    def create_notification_rule(, **options)
+      req = build_request(:create_notification_rule, )
       req.send_request(options)
     end
 
@@ -441,8 +441,8 @@ module Aws::CodeStarNotifications
     #
     # @overload delete_notification_rule(**params)
     # @param [Hash] params ({})
-    def delete_notification_rule(params = {}, **options)
-      req = build_request(:delete_notification_rule, params)
+    def delete_notification_rule(, **options)
+      req = build_request(:delete_notification_rule, )
       req.send_request(options)
     end
 
@@ -470,8 +470,8 @@ module Aws::CodeStarNotifications
     #
     # @overload delete_target(**params)
     # @param [Hash] params ({})
-    def delete_target(params = {}, **options)
-      req = build_request(:delete_target, params)
+    def delete_target(, **options)
+      req = build_request(:delete_target, )
       req.send_request(options)
     end
 
@@ -526,8 +526,8 @@ module Aws::CodeStarNotifications
     #
     # @overload describe_notification_rule(**params)
     # @param [Hash] params ({})
-    def describe_notification_rule(params = {}, **options)
-      req = build_request(:describe_notification_rule, params)
+    def describe_notification_rule(, **options)
+      req = build_request(:describe_notification_rule, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::CodeStarNotifications
     #
     # @overload list_event_types(**params)
     # @param [Hash] params ({})
-    def list_event_types(params = {}, **options)
-      req = build_request(:list_event_types, params)
+    def list_event_types(, **options)
+      req = build_request(:list_event_types, )
       req.send_request(options)
     end
 
@@ -635,8 +635,8 @@ module Aws::CodeStarNotifications
     #
     # @overload list_notification_rules(**params)
     # @param [Hash] params ({})
-    def list_notification_rules(params = {}, **options)
-      req = build_request(:list_notification_rules, params)
+    def list_notification_rules(, **options)
+      req = build_request(:list_notification_rules, )
       req.send_request(options)
     end
 
@@ -664,8 +664,8 @@ module Aws::CodeStarNotifications
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -721,8 +721,8 @@ module Aws::CodeStarNotifications
     #
     # @overload list_targets(**params)
     # @param [Hash] params ({})
-    def list_targets(params = {}, **options)
-      req = build_request(:list_targets, params)
+    def list_targets(, **options)
+      req = build_request(:list_targets, )
       req.send_request(options)
     end
 
@@ -764,8 +764,8 @@ module Aws::CodeStarNotifications
     #
     # @overload subscribe(**params)
     # @param [Hash] params ({})
-    def subscribe(params = {}, **options)
-      req = build_request(:subscribe, params)
+    def subscribe(, **options)
+      req = build_request(:subscribe, )
       req.send_request(options)
     end
 
@@ -800,8 +800,8 @@ module Aws::CodeStarNotifications
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -834,8 +834,8 @@ module Aws::CodeStarNotifications
     #
     # @overload unsubscribe(**params)
     # @param [Hash] params ({})
-    def unsubscribe(params = {}, **options)
-      req = build_request(:unsubscribe, params)
+    def unsubscribe(, **options)
+      req = build_request(:unsubscribe, )
       req.send_request(options)
     end
 
@@ -862,8 +862,8 @@ module Aws::CodeStarNotifications
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -922,8 +922,8 @@ module Aws::CodeStarNotifications
     #
     # @overload update_notification_rule(**params)
     # @param [Hash] params ({})
-    def update_notification_rule(params = {}, **options)
-      req = build_request(:update_notification_rule, params)
+    def update_notification_rule(, **options)
+      req = build_request(:update_notification_rule, )
       req.send_request(options)
     end
 

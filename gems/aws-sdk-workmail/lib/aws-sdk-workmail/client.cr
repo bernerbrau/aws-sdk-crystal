@@ -362,8 +362,8 @@ module Aws::WorkMail
     #
     # @overload associate_delegate_to_resource(**params)
     # @param [Hash] params ({})
-    def associate_delegate_to_resource(params = {}, **options)
-      req = build_request(:associate_delegate_to_resource, params)
+    def associate_delegate_to_resource(, **options)
+      req = build_request(:associate_delegate_to_resource, )
       req.send_request(options)
     end
 
@@ -392,8 +392,8 @@ module Aws::WorkMail
     #
     # @overload associate_member_to_group(**params)
     # @param [Hash] params ({})
-    def associate_member_to_group(params = {}, **options)
-      req = build_request(:associate_member_to_group, params)
+    def associate_member_to_group(, **options)
+      req = build_request(:associate_member_to_group, )
       req.send_request(options)
     end
 
@@ -430,8 +430,8 @@ module Aws::WorkMail
     #
     # @overload cancel_mailbox_export_job(**params)
     # @param [Hash] params ({})
-    def cancel_mailbox_export_job(params = {}, **options)
-      req = build_request(:cancel_mailbox_export_job, params)
+    def cancel_mailbox_export_job(, **options)
+      req = build_request(:cancel_mailbox_export_job, )
       req.send_request(options)
     end
 
@@ -461,8 +461,8 @@ module Aws::WorkMail
     #
     # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, **options)
-      req = build_request(:create_alias, params)
+    def create_alias(, **options)
+      req = build_request(:create_alias, )
       req.send_request(options)
     end
 
@@ -494,8 +494,8 @@ module Aws::WorkMail
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -578,8 +578,8 @@ module Aws::WorkMail
     #
     # @overload create_organization(**params)
     # @param [Hash] params ({})
-    def create_organization(params = {}, **options)
-      req = build_request(:create_organization, params)
+    def create_organization(, **options)
+      req = build_request(:create_organization, )
       req.send_request(options)
     end
 
@@ -616,8 +616,8 @@ module Aws::WorkMail
     #
     # @overload create_resource(**params)
     # @param [Hash] params ({})
-    def create_resource(params = {}, **options)
-      req = build_request(:create_resource, params)
+    def create_resource(, **options)
+      req = build_request(:create_resource, )
       req.send_request(options)
     end
 
@@ -658,8 +658,8 @@ module Aws::WorkMail
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -685,8 +685,8 @@ module Aws::WorkMail
     #
     # @overload delete_access_control_rule(**params)
     # @param [Hash] params ({})
-    def delete_access_control_rule(params = {}, **options)
-      req = build_request(:delete_access_control_rule, params)
+    def delete_access_control_rule(, **options)
+      req = build_request(:delete_access_control_rule, )
       req.send_request(options)
     end
 
@@ -719,8 +719,8 @@ module Aws::WorkMail
     #
     # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, **options)
-      req = build_request(:delete_alias, params)
+    def delete_alias(, **options)
+      req = build_request(:delete_alias, )
       req.send_request(options)
     end
 
@@ -745,8 +745,8 @@ module Aws::WorkMail
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -777,8 +777,8 @@ module Aws::WorkMail
     #
     # @overload delete_mailbox_permissions(**params)
     # @param [Hash] params ({})
-    def delete_mailbox_permissions(params = {}, **options)
-      req = build_request(:delete_mailbox_permissions, params)
+    def delete_mailbox_permissions(, **options)
+      req = build_request(:delete_mailbox_permissions, )
       req.send_request(options)
     end
 
@@ -827,8 +827,8 @@ module Aws::WorkMail
     #
     # @overload delete_organization(**params)
     # @param [Hash] params ({})
-    def delete_organization(params = {}, **options)
-      req = build_request(:delete_organization, params)
+    def delete_organization(, **options)
+      req = build_request(:delete_organization, )
       req.send_request(options)
     end
 
@@ -854,8 +854,8 @@ module Aws::WorkMail
     #
     # @overload delete_resource(**params)
     # @param [Hash] params ({})
-    def delete_resource(params = {}, **options)
-      req = build_request(:delete_resource, params)
+    def delete_resource(, **options)
+      req = build_request(:delete_resource, )
       req.send_request(options)
     end
 
@@ -881,8 +881,8 @@ module Aws::WorkMail
     #
     # @overload delete_retention_policy(**params)
     # @param [Hash] params ({})
-    def delete_retention_policy(params = {}, **options)
-      req = build_request(:delete_retention_policy, params)
+    def delete_retention_policy(, **options)
+      req = build_request(:delete_retention_policy, )
       req.send_request(options)
     end
 
@@ -912,8 +912,8 @@ module Aws::WorkMail
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::WorkMail
     #
     # @overload deregister_from_work_mail(**params)
     # @param [Hash] params ({})
-    def deregister_from_work_mail(params = {}, **options)
-      req = build_request(:deregister_from_work_mail, params)
+    def deregister_from_work_mail(, **options)
+      req = build_request(:deregister_from_work_mail, )
       req.send_request(options)
     end
 
@@ -984,8 +984,8 @@ module Aws::WorkMail
     #
     # @overload describe_group(**params)
     # @param [Hash] params ({})
-    def describe_group(params = {}, **options)
-      req = build_request(:describe_group, params)
+    def describe_group(, **options)
+      req = build_request(:describe_group, )
       req.send_request(options)
     end
 
@@ -1038,8 +1038,8 @@ module Aws::WorkMail
     #
     # @overload describe_mailbox_export_job(**params)
     # @param [Hash] params ({})
-    def describe_mailbox_export_job(params = {}, **options)
-      req = build_request(:describe_mailbox_export_job, params)
+    def describe_mailbox_export_job(, **options)
+      req = build_request(:describe_mailbox_export_job, )
       req.send_request(options)
     end
 
@@ -1083,8 +1083,8 @@ module Aws::WorkMail
     #
     # @overload describe_organization(**params)
     # @param [Hash] params ({})
-    def describe_organization(params = {}, **options)
-      req = build_request(:describe_organization, params)
+    def describe_organization(, **options)
+      req = build_request(:describe_organization, )
       req.send_request(options)
     end
 
@@ -1132,8 +1132,8 @@ module Aws::WorkMail
     #
     # @overload describe_resource(**params)
     # @param [Hash] params ({})
-    def describe_resource(params = {}, **options)
-      req = build_request(:describe_resource, params)
+    def describe_resource(, **options)
+      req = build_request(:describe_resource, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::WorkMail
     #
     # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, **options)
-      req = build_request(:describe_user, params)
+    def describe_user(, **options)
+      req = build_request(:describe_user, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::WorkMail
     #
     # @overload disassociate_delegate_from_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_delegate_from_resource(params = {}, **options)
-      req = build_request(:disassociate_delegate_from_resource, params)
+    def disassociate_delegate_from_resource(, **options)
+      req = build_request(:disassociate_delegate_from_resource, )
       req.send_request(options)
     end
 
@@ -1240,8 +1240,8 @@ module Aws::WorkMail
     #
     # @overload disassociate_member_from_group(**params)
     # @param [Hash] params ({})
-    def disassociate_member_from_group(params = {}, **options)
-      req = build_request(:disassociate_member_from_group, params)
+    def disassociate_member_from_group(, **options)
+      req = build_request(:disassociate_member_from_group, )
       req.send_request(options)
     end
 
@@ -1286,8 +1286,8 @@ module Aws::WorkMail
     #
     # @overload get_access_control_effect(**params)
     # @param [Hash] params ({})
-    def get_access_control_effect(params = {}, **options)
-      req = build_request(:get_access_control_effect, params)
+    def get_access_control_effect(, **options)
+      req = build_request(:get_access_control_effect, )
       req.send_request(options)
     end
 
@@ -1324,8 +1324,8 @@ module Aws::WorkMail
     #
     # @overload get_default_retention_policy(**params)
     # @param [Hash] params ({})
-    def get_default_retention_policy(params = {}, **options)
-      req = build_request(:get_default_retention_policy, params)
+    def get_default_retention_policy(, **options)
+      req = build_request(:get_default_retention_policy, )
       req.send_request(options)
     end
 
@@ -1360,8 +1360,8 @@ module Aws::WorkMail
     #
     # @overload get_mailbox_details(**params)
     # @param [Hash] params ({})
-    def get_mailbox_details(params = {}, **options)
-      req = build_request(:get_mailbox_details, params)
+    def get_mailbox_details(, **options)
+      req = build_request(:get_mailbox_details, )
       req.send_request(options)
     end
 
@@ -1405,8 +1405,8 @@ module Aws::WorkMail
     #
     # @overload list_access_control_rules(**params)
     # @param [Hash] params ({})
-    def list_access_control_rules(params = {}, **options)
-      req = build_request(:list_access_control_rules, params)
+    def list_access_control_rules(, **options)
+      req = build_request(:list_access_control_rules, )
       req.send_request(options)
     end
 
@@ -1452,8 +1452,8 @@ module Aws::WorkMail
     #
     # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, **options)
-      req = build_request(:list_aliases, params)
+    def list_aliases(, **options)
+      req = build_request(:list_aliases, )
       req.send_request(options)
     end
 
@@ -1505,8 +1505,8 @@ module Aws::WorkMail
     #
     # @overload list_group_members(**params)
     # @param [Hash] params ({})
-    def list_group_members(params = {}, **options)
-      req = build_request(:list_group_members, params)
+    def list_group_members(, **options)
+      req = build_request(:list_group_members, )
       req.send_request(options)
     end
 
@@ -1552,8 +1552,8 @@ module Aws::WorkMail
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -1602,8 +1602,8 @@ module Aws::WorkMail
     #
     # @overload list_mailbox_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_mailbox_export_jobs(params = {}, **options)
-      req = build_request(:list_mailbox_export_jobs, params)
+    def list_mailbox_export_jobs(, **options)
+      req = build_request(:list_mailbox_export_jobs, )
       req.send_request(options)
     end
 
@@ -1654,8 +1654,8 @@ module Aws::WorkMail
     #
     # @overload list_mailbox_permissions(**params)
     # @param [Hash] params ({})
-    def list_mailbox_permissions(params = {}, **options)
-      req = build_request(:list_mailbox_permissions, params)
+    def list_mailbox_permissions(, **options)
+      req = build_request(:list_mailbox_permissions, )
       req.send_request(options)
     end
 
@@ -1696,8 +1696,8 @@ module Aws::WorkMail
     #
     # @overload list_organizations(**params)
     # @param [Hash] params ({})
-    def list_organizations(params = {}, **options)
-      req = build_request(:list_organizations, params)
+    def list_organizations(, **options)
+      req = build_request(:list_organizations, )
       req.send_request(options)
     end
 
@@ -1745,8 +1745,8 @@ module Aws::WorkMail
     #
     # @overload list_resource_delegates(**params)
     # @param [Hash] params ({})
-    def list_resource_delegates(params = {}, **options)
-      req = build_request(:list_resource_delegates, params)
+    def list_resource_delegates(, **options)
+      req = build_request(:list_resource_delegates, )
       req.send_request(options)
     end
 
@@ -1793,8 +1793,8 @@ module Aws::WorkMail
     #
     # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, **options)
-      req = build_request(:list_resources, params)
+    def list_resources(, **options)
+      req = build_request(:list_resources, )
       req.send_request(options)
     end
 
@@ -1823,8 +1823,8 @@ module Aws::WorkMail
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1872,8 +1872,8 @@ module Aws::WorkMail
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -1937,8 +1937,8 @@ module Aws::WorkMail
     #
     # @overload put_access_control_rule(**params)
     # @param [Hash] params ({})
-    def put_access_control_rule(params = {}, **options)
-      req = build_request(:put_access_control_rule, params)
+    def put_access_control_rule(, **options)
+      req = build_request(:put_access_control_rule, )
       req.send_request(options)
     end
 
@@ -1981,8 +1981,8 @@ module Aws::WorkMail
     #
     # @overload put_mailbox_permissions(**params)
     # @param [Hash] params ({})
-    def put_mailbox_permissions(params = {}, **options)
-      req = build_request(:put_mailbox_permissions, params)
+    def put_mailbox_permissions(, **options)
+      req = build_request(:put_mailbox_permissions, )
       req.send_request(options)
     end
 
@@ -2025,8 +2025,8 @@ module Aws::WorkMail
     #
     # @overload put_retention_policy(**params)
     # @param [Hash] params ({})
-    def put_retention_policy(params = {}, **options)
-      req = build_request(:put_retention_policy, params)
+    def put_retention_policy(, **options)
+      req = build_request(:put_retention_policy, )
       req.send_request(options)
     end
 
@@ -2070,8 +2070,8 @@ module Aws::WorkMail
     #
     # @overload register_to_work_mail(**params)
     # @param [Hash] params ({})
-    def register_to_work_mail(params = {}, **options)
-      req = build_request(:register_to_work_mail, params)
+    def register_to_work_mail(, **options)
+      req = build_request(:register_to_work_mail, )
       req.send_request(options)
     end
 
@@ -2101,8 +2101,8 @@ module Aws::WorkMail
     #
     # @overload reset_password(**params)
     # @param [Hash] params ({})
-    def reset_password(params = {}, **options)
-      req = build_request(:reset_password, params)
+    def reset_password(, **options)
+      req = build_request(:reset_password, )
       req.send_request(options)
     end
 
@@ -2170,8 +2170,8 @@ module Aws::WorkMail
     #
     # @overload start_mailbox_export_job(**params)
     # @param [Hash] params ({})
-    def start_mailbox_export_job(params = {}, **options)
-      req = build_request(:start_mailbox_export_job, params)
+    def start_mailbox_export_job(, **options)
+      req = build_request(:start_mailbox_export_job, )
       req.send_request(options)
     end
 
@@ -2202,8 +2202,8 @@ module Aws::WorkMail
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2229,8 +2229,8 @@ module Aws::WorkMail
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2261,8 +2261,8 @@ module Aws::WorkMail
     #
     # @overload update_mailbox_quota(**params)
     # @param [Hash] params ({})
-    def update_mailbox_quota(params = {}, **options)
-      req = build_request(:update_mailbox_quota, params)
+    def update_mailbox_quota(, **options)
+      req = build_request(:update_mailbox_quota, )
       req.send_request(options)
     end
 
@@ -2294,8 +2294,8 @@ module Aws::WorkMail
     #
     # @overload update_primary_email_address(**params)
     # @param [Hash] params ({})
-    def update_primary_email_address(params = {}, **options)
-      req = build_request(:update_primary_email_address, params)
+    def update_primary_email_address(, **options)
+      req = build_request(:update_primary_email_address, )
       req.send_request(options)
     end
 
@@ -2336,8 +2336,8 @@ module Aws::WorkMail
     #
     # @overload update_resource(**params)
     # @param [Hash] params ({})
-    def update_resource(params = {}, **options)
-      req = build_request(:update_resource, params)
+    def update_resource(, **options)
+      req = build_request(:update_resource, )
       req.send_request(options)
     end
 

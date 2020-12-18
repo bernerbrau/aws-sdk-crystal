@@ -361,8 +361,8 @@ module Aws::MarketplaceCatalog
     #
     # @overload cancel_change_set(**params)
     # @param [Hash] params ({})
-    def cancel_change_set(params = {}, **options)
-      req = build_request(:cancel_change_set, params)
+    def cancel_change_set(, **options)
+      req = build_request(:cancel_change_set, )
       req.send_request(options)
     end
 
@@ -418,8 +418,8 @@ module Aws::MarketplaceCatalog
     #
     # @overload describe_change_set(**params)
     # @param [Hash] params ({})
-    def describe_change_set(params = {}, **options)
-      req = build_request(:describe_change_set, params)
+    def describe_change_set(, **options)
+      req = build_request(:describe_change_set, )
       req.send_request(options)
     end
 
@@ -459,8 +459,8 @@ module Aws::MarketplaceCatalog
     #
     # @overload describe_entity(**params)
     # @param [Hash] params ({})
-    def describe_entity(params = {}, **options)
-      req = build_request(:describe_entity, params)
+    def describe_entity(, **options)
+      req = build_request(:describe_entity, )
       req.send_request(options)
     end
 
@@ -534,8 +534,8 @@ module Aws::MarketplaceCatalog
     #
     # @overload list_change_sets(**params)
     # @param [Hash] params ({})
-    def list_change_sets(params = {}, **options)
-      req = build_request(:list_change_sets, params)
+    def list_change_sets(, **options)
+      req = build_request(:list_change_sets, )
       req.send_request(options)
     end
 
@@ -603,8 +603,8 @@ module Aws::MarketplaceCatalog
     #
     # @overload list_entities(**params)
     # @param [Hash] params ({})
-    def list_entities(params = {}, **options)
-      req = build_request(:list_entities, params)
+    def list_entities(, **options)
+      req = build_request(:list_entities, )
       req.send_request(options)
     end
 
@@ -669,8 +669,8 @@ module Aws::MarketplaceCatalog
     #
     # @overload start_change_set(**params)
     # @param [Hash] params ({})
-    def start_change_set(params = {}, **options)
-      req = build_request(:start_change_set, params)
+    def start_change_set(, **options)
+      req = build_request(:start_change_set, )
       req.send_request(options)
     end
 

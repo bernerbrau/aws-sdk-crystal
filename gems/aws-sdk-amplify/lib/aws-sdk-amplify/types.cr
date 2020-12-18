@@ -3188,5 +3188,858 @@ module Aws::Amplify
       include Aws::Structure
     end
 
+    alias AccessToken = String
+
+    alias ActiveJobId = String
+
+    alias App = NamedTuple(
+      "appId" : AppId,
+      "appArn" : AppArn,
+      "name" : Name,
+      "tags" : (TagMap)?,
+      "description" : Description,
+      "repository" : Repository,
+      "platform" : Platform,
+      "createTime" : CreateTime,
+      "updateTime" : UpdateTime,
+      "iamServiceRoleArn" : (ServiceRoleArn)?,
+      "environmentVariables" : EnvironmentVariables,
+      "defaultDomain" : DefaultDomain,
+      "enableBranchAutoBuild" : EnableBranchAutoBuild,
+      "enableBranchAutoDeletion" : (EnableBranchAutoDeletion)?,
+      "enableBasicAuth" : EnableBasicAuth,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "customRules" : (CustomRules)?,
+      "productionBranch" : (ProductionBranch)?,
+      "buildSpec" : (BuildSpec)?,
+      "customHeaders" : (CustomHeaders)?,
+      "enableAutoBranchCreation" : (EnableAutoBranchCreation)?,
+      "autoBranchCreationPatterns" : (AutoBranchCreationPatterns)?,
+      "autoBranchCreationConfig" : (AutoBranchCreationConfig)?
+    )
+
+    alias AppArn = String
+
+    alias AppId = String
+
+    alias Apps = Array(App)
+
+    alias Artifact = NamedTuple(
+      "artifactFileName" : ArtifactFileName,
+      "artifactId" : ArtifactId
+    )
+
+    alias ArtifactFileName = String
+
+    alias ArtifactId = String
+
+    alias ArtifactUrl = String
+
+    alias Artifacts = Array(Artifact)
+
+    alias ArtifactsUrl = String
+
+    alias AssociatedResource = String
+
+    alias AssociatedResources = Array(AssociatedResource)
+
+    alias AutoBranchCreationConfig = NamedTuple(
+      "stage" : (Stage)?,
+      "framework" : (Framework)?,
+      "enableAutoBuild" : (EnableAutoBuild)?,
+      "environmentVariables" : (EnvironmentVariables)?,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "enableBasicAuth" : (EnableBasicAuth)?,
+      "enablePerformanceMode" : (EnablePerformanceMode)?,
+      "buildSpec" : (BuildSpec)?,
+      "enablePullRequestPreview" : (EnablePullRequestPreview)?,
+      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?
+    )
+
+    alias AutoBranchCreationPattern = String
+
+    alias AutoBranchCreationPatterns = Array(AutoBranchCreationPattern)
+
+    alias AutoSubDomainCreationPattern = String
+
+    alias AutoSubDomainCreationPatterns = Array(AutoSubDomainCreationPattern)
+
+    alias AutoSubDomainIAMRole = String
+
+    alias BackendEnvironment = NamedTuple(
+      "backendEnvironmentArn" : BackendEnvironmentArn,
+      "environmentName" : EnvironmentName,
+      "stackName" : (StackName)?,
+      "deploymentArtifacts" : (DeploymentArtifacts)?,
+      "createTime" : CreateTime,
+      "updateTime" : UpdateTime
+    )
+
+    alias BackendEnvironmentArn = String
+
+    alias BackendEnvironments = Array(BackendEnvironment)
+
+    alias BadRequestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias BasicAuthCredentials = String
+
+    alias Branch = NamedTuple(
+      "branchArn" : BranchArn,
+      "branchName" : BranchName,
+      "description" : Description,
+      "tags" : (TagMap)?,
+      "stage" : Stage,
+      "displayName" : DisplayName,
+      "enableNotification" : EnableNotification,
+      "createTime" : CreateTime,
+      "updateTime" : UpdateTime,
+      "environmentVariables" : EnvironmentVariables,
+      "enableAutoBuild" : EnableAutoBuild,
+      "customDomains" : CustomDomains,
+      "framework" : Framework,
+      "activeJobId" : ActiveJobId,
+      "totalNumberOfJobs" : TotalNumberOfJobs,
+      "enableBasicAuth" : EnableBasicAuth,
+      "enablePerformanceMode" : (EnablePerformanceMode)?,
+      "thumbnailUrl" : (ThumbnailUrl)?,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "buildSpec" : (BuildSpec)?,
+      "ttl" : TTL,
+      "associatedResources" : (AssociatedResources)?,
+      "enablePullRequestPreview" : EnablePullRequestPreview,
+      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?,
+      "destinationBranch" : (BranchName)?,
+      "sourceBranch" : (BranchName)?,
+      "backendEnvironmentArn" : (BackendEnvironmentArn)?
+    )
+
+    alias BranchArn = String
+
+    alias BranchName = String
+
+    alias Branches = Array(Branch)
+
+    alias BuildSpec = String
+
+    alias CertificateVerificationDNSRecord = String
+
+    alias Code = String
+
+    alias CommitId = String
+
+    alias CommitMessage = String
+
+    alias CommitTime = String | UInt64 | Time
+
+    alias Condition = String
+
+    alias Context = String
+
+    alias CreateAppRequest = NamedTuple(
+      "name" : Name,
+      "description" : (Description)?,
+      "repository" : (Repository)?,
+      "platform" : (Platform)?,
+      "iamServiceRoleArn" : (ServiceRoleArn)?,
+      "oauthToken" : (OauthToken)?,
+      "accessToken" : (AccessToken)?,
+      "environmentVariables" : (EnvironmentVariables)?,
+      "enableBranchAutoBuild" : (EnableBranchAutoBuild)?,
+      "enableBranchAutoDeletion" : (EnableBranchAutoDeletion)?,
+      "enableBasicAuth" : (EnableBasicAuth)?,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "customRules" : (CustomRules)?,
+      "tags" : (TagMap)?,
+      "buildSpec" : (BuildSpec)?,
+      "customHeaders" : (CustomHeaders)?,
+      "enableAutoBranchCreation" : (EnableAutoBranchCreation)?,
+      "autoBranchCreationPatterns" : (AutoBranchCreationPatterns)?,
+      "autoBranchCreationConfig" : (AutoBranchCreationConfig)?
+    )
+
+    alias CreateAppResult = NamedTuple(
+      "app" : App
+    )
+
+    alias CreateBackendEnvironmentRequest = NamedTuple(
+      "appId" : AppId,
+      "environmentName" : EnvironmentName,
+      "stackName" : (StackName)?,
+      "deploymentArtifacts" : (DeploymentArtifacts)?
+    )
+
+    alias CreateBackendEnvironmentResult = NamedTuple(
+      "backendEnvironment" : BackendEnvironment
+    )
+
+    alias CreateBranchRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "description" : (Description)?,
+      "stage" : (Stage)?,
+      "framework" : (Framework)?,
+      "enableNotification" : (EnableNotification)?,
+      "enableAutoBuild" : (EnableAutoBuild)?,
+      "environmentVariables" : (EnvironmentVariables)?,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "enableBasicAuth" : (EnableBasicAuth)?,
+      "enablePerformanceMode" : (EnablePerformanceMode)?,
+      "tags" : (TagMap)?,
+      "buildSpec" : (BuildSpec)?,
+      "ttl" : (TTL)?,
+      "displayName" : (DisplayName)?,
+      "enablePullRequestPreview" : (EnablePullRequestPreview)?,
+      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?,
+      "backendEnvironmentArn" : (BackendEnvironmentArn)?
+    )
+
+    alias CreateBranchResult = NamedTuple(
+      "branch" : Branch
+    )
+
+    alias CreateDeploymentRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "fileMap" : (FileMap)?
+    )
+
+    alias CreateDeploymentResult = NamedTuple(
+      "jobId" : (JobId)?,
+      "fileUploadUrls" : FileUploadUrls,
+      "zipUploadUrl" : UploadUrl
+    )
+
+    alias CreateDomainAssociationRequest = NamedTuple(
+      "appId" : AppId,
+      "domainName" : DomainName,
+      "enableAutoSubDomain" : (EnableAutoSubDomain)?,
+      "subDomainSettings" : SubDomainSettings,
+      "autoSubDomainCreationPatterns" : (AutoSubDomainCreationPatterns)?,
+      "autoSubDomainIAMRole" : (AutoSubDomainIAMRole)?
+    )
+
+    alias CreateDomainAssociationResult = NamedTuple(
+      "domainAssociation" : DomainAssociation
+    )
+
+    alias CreateTime = String | UInt64 | Time
+
+    alias CreateWebhookRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "description" : (Description)?
+    )
+
+    alias CreateWebhookResult = NamedTuple(
+      "webhook" : Webhook
+    )
+
+    alias CustomDomain = String
+
+    alias CustomDomains = Array(CustomDomain)
+
+    alias CustomHeaders = String
+
+    alias CustomRule = NamedTuple(
+      "source" : Source,
+      "target" : Target,
+      "status" : (Status)?,
+      "condition" : (Condition)?
+    )
+
+    alias CustomRules = Array(CustomRule)
+
+    alias DNSRecord = String
+
+    alias DefaultDomain = String
+
+    alias DeleteAppRequest = NamedTuple(
+      "appId" : AppId
+    )
+
+    alias DeleteAppResult = NamedTuple(
+      "app" : App
+    )
+
+    alias DeleteBackendEnvironmentRequest = NamedTuple(
+      "appId" : AppId,
+      "environmentName" : EnvironmentName
+    )
+
+    alias DeleteBackendEnvironmentResult = NamedTuple(
+      "backendEnvironment" : BackendEnvironment
+    )
+
+    alias DeleteBranchRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName
+    )
+
+    alias DeleteBranchResult = NamedTuple(
+      "branch" : Branch
+    )
+
+    alias DeleteDomainAssociationRequest = NamedTuple(
+      "appId" : AppId,
+      "domainName" : DomainName
+    )
+
+    alias DeleteDomainAssociationResult = NamedTuple(
+      "domainAssociation" : DomainAssociation
+    )
+
+    alias DeleteJobRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "jobId" : JobId
+    )
+
+    alias DeleteJobResult = NamedTuple(
+      "jobSummary" : JobSummary
+    )
+
+    alias DeleteWebhookRequest = NamedTuple(
+      "webhookId" : WebhookId
+    )
+
+    alias DeleteWebhookResult = NamedTuple(
+      "webhook" : Webhook
+    )
+
+    alias DependentServiceFailureException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DeploymentArtifacts = String
+
+    alias Description = String
+
+    alias DisplayName = String
+
+    alias DomainAssociation = NamedTuple(
+      "domainAssociationArn" : DomainAssociationArn,
+      "domainName" : DomainName,
+      "enableAutoSubDomain" : EnableAutoSubDomain,
+      "autoSubDomainCreationPatterns" : (AutoSubDomainCreationPatterns)?,
+      "autoSubDomainIAMRole" : (AutoSubDomainIAMRole)?,
+      "domainStatus" : DomainStatus,
+      "statusReason" : StatusReason,
+      "certificateVerificationDNSRecord" : (CertificateVerificationDNSRecord)?,
+      "subDomains" : SubDomains
+    )
+
+    alias DomainAssociationArn = String
+
+    alias DomainAssociations = Array(DomainAssociation)
+
+    alias DomainName = String
+
+    alias DomainPrefix = String
+
+    alias DomainStatus = String
+
+    alias EnableAutoBranchCreation = Bool
+
+    alias EnableAutoBuild = Bool
+
+    alias EnableAutoSubDomain = Bool
+
+    alias EnableBasicAuth = Bool
+
+    alias EnableBranchAutoBuild = Bool
+
+    alias EnableBranchAutoDeletion = Bool
+
+    alias EnableNotification = Bool
+
+    alias EnablePerformanceMode = Bool
+
+    alias EnablePullRequestPreview = Bool
+
+    alias EndTime = String | UInt64 | Time
+
+    alias EnvKey = String
+
+    alias EnvValue = String
+
+    alias EnvironmentName = String
+
+    alias EnvironmentVariables = Hash(EnvKey,EnvValue)
+
+    alias ErrorMessage = String
+
+    alias FileMap = Hash(FileName,MD5Hash)
+
+    alias FileName = String
+
+    alias FileUploadUrls = Hash(FileName,UploadUrl)
+
+    alias Framework = String
+
+    alias GenerateAccessLogsRequest = NamedTuple(
+      "startTime" : (StartTime)?,
+      "endTime" : (EndTime)?,
+      "domainName" : DomainName,
+      "appId" : AppId
+    )
+
+    alias GenerateAccessLogsResult = NamedTuple(
+      "logUrl" : (LogUrl)?
+    )
+
+    alias GetAppRequest = NamedTuple(
+      "appId" : AppId
+    )
+
+    alias GetAppResult = NamedTuple(
+      "app" : App
+    )
+
+    alias GetArtifactUrlRequest = NamedTuple(
+      "artifactId" : ArtifactId
+    )
+
+    alias GetArtifactUrlResult = NamedTuple(
+      "artifactId" : ArtifactId,
+      "artifactUrl" : ArtifactUrl
+    )
+
+    alias GetBackendEnvironmentRequest = NamedTuple(
+      "appId" : AppId,
+      "environmentName" : EnvironmentName
+    )
+
+    alias GetBackendEnvironmentResult = NamedTuple(
+      "backendEnvironment" : BackendEnvironment
+    )
+
+    alias GetBranchRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName
+    )
+
+    alias GetBranchResult = NamedTuple(
+      "branch" : Branch
+    )
+
+    alias GetDomainAssociationRequest = NamedTuple(
+      "appId" : AppId,
+      "domainName" : DomainName
+    )
+
+    alias GetDomainAssociationResult = NamedTuple(
+      "domainAssociation" : DomainAssociation
+    )
+
+    alias GetJobRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "jobId" : JobId
+    )
+
+    alias GetJobResult = NamedTuple(
+      "job" : Job
+    )
+
+    alias GetWebhookRequest = NamedTuple(
+      "webhookId" : WebhookId
+    )
+
+    alias GetWebhookResult = NamedTuple(
+      "webhook" : Webhook
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Job = NamedTuple(
+      "summary" : JobSummary,
+      "steps" : Steps
+    )
+
+    alias JobArn = String
+
+    alias JobId = String
+
+    alias JobReason = String
+
+    alias JobStatus = String
+
+    alias JobSummaries = Array(JobSummary)
+
+    alias JobSummary = NamedTuple(
+      "jobArn" : JobArn,
+      "jobId" : JobId,
+      "commitId" : CommitId,
+      "commitMessage" : CommitMessage,
+      "commitTime" : CommitTime,
+      "startTime" : StartTime,
+      "status" : JobStatus,
+      "endTime" : (EndTime)?,
+      "jobType" : JobType
+    )
+
+    alias JobType = String
+
+    alias LastDeployTime = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListAppsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAppsResult = NamedTuple(
+      "apps" : Apps,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListArtifactsRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "jobId" : JobId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListArtifactsResult = NamedTuple(
+      "artifacts" : Artifacts,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListBackendEnvironmentsRequest = NamedTuple(
+      "appId" : AppId,
+      "environmentName" : (EnvironmentName)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListBackendEnvironmentsResult = NamedTuple(
+      "backendEnvironments" : BackendEnvironments,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListBranchesRequest = NamedTuple(
+      "appId" : AppId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListBranchesResult = NamedTuple(
+      "branches" : Branches,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDomainAssociationsRequest = NamedTuple(
+      "appId" : AppId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDomainAssociationsResult = NamedTuple(
+      "domainAssociations" : DomainAssociations,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListJobsResult = NamedTuple(
+      "jobSummaries" : JobSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias ListWebhooksRequest = NamedTuple(
+      "appId" : AppId,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListWebhooksResult = NamedTuple(
+      "webhooks" : Webhooks,
+      "nextToken" : (NextToken)?
+    )
+
+    alias LogUrl = String
+
+    alias MD5Hash = String
+
+    alias MaxResults = Int32
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias OauthToken = String
+
+    alias Platform = String
+
+    alias ProductionBranch = NamedTuple(
+      "lastDeployTime" : (LastDeployTime)?,
+      "status" : (Status)?,
+      "thumbnailUrl" : (ThumbnailUrl)?,
+      "branchName" : (BranchName)?
+    )
+
+    alias PullRequestEnvironmentName = String
+
+    alias Repository = String
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "code" : Code,
+      "message" : ErrorMessage
+    )
+
+    alias Screenshots = Hash(ThumbnailName,ThumbnailUrl)
+
+    alias ServiceRoleArn = String
+
+    alias Source = String
+
+    alias SourceUrl = String
+
+    alias StackName = String
+
+    alias Stage = String
+
+    alias StartDeploymentRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "jobId" : (JobId)?,
+      "sourceUrl" : (SourceUrl)?
+    )
+
+    alias StartDeploymentResult = NamedTuple(
+      "jobSummary" : JobSummary
+    )
+
+    alias StartJobRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "jobId" : (JobId)?,
+      "jobType" : JobType,
+      "jobReason" : (JobReason)?,
+      "commitId" : (CommitId)?,
+      "commitMessage" : (CommitMessage)?,
+      "commitTime" : (CommitTime)?
+    )
+
+    alias StartJobResult = NamedTuple(
+      "jobSummary" : JobSummary
+    )
+
+    alias StartTime = String | UInt64 | Time
+
+    alias Status = String
+
+    alias StatusReason = String
+
+    alias Step = NamedTuple(
+      "stepName" : StepName,
+      "startTime" : StartTime,
+      "status" : JobStatus,
+      "endTime" : EndTime,
+      "logUrl" : (LogUrl)?,
+      "artifactsUrl" : (ArtifactsUrl)?,
+      "testArtifactsUrl" : (TestArtifactsUrl)?,
+      "testConfigUrl" : (TestConfigUrl)?,
+      "screenshots" : (Screenshots)?,
+      "statusReason" : (StatusReason)?,
+      "context" : (Context)?
+    )
+
+    alias StepName = String
+
+    alias Steps = Array(Step)
+
+    alias StopJobRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "jobId" : JobId
+    )
+
+    alias StopJobResult = NamedTuple(
+      "jobSummary" : JobSummary
+    )
+
+    alias SubDomain = NamedTuple(
+      "subDomainSetting" : SubDomainSetting,
+      "verified" : Verified,
+      "dnsRecord" : DNSRecord
+    )
+
+    alias SubDomainSetting = NamedTuple(
+      "prefix" : DomainPrefix,
+      "branchName" : BranchName
+    )
+
+    alias SubDomainSettings = Array(SubDomainSetting)
+
+    alias SubDomains = Array(SubDomain)
+
+    alias TTL = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Target = String
+
+    alias TestArtifactsUrl = String
+
+    alias TestConfigUrl = String
+
+    alias ThumbnailName = String
+
+    alias ThumbnailUrl = String
+
+    alias TotalNumberOfJobs = String
+
+    alias UnauthorizedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAppRequest = NamedTuple(
+      "appId" : AppId,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "platform" : (Platform)?,
+      "iamServiceRoleArn" : (ServiceRoleArn)?,
+      "environmentVariables" : (EnvironmentVariables)?,
+      "enableBranchAutoBuild" : (EnableAutoBuild)?,
+      "enableBranchAutoDeletion" : (EnableBranchAutoDeletion)?,
+      "enableBasicAuth" : (EnableBasicAuth)?,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "customRules" : (CustomRules)?,
+      "buildSpec" : (BuildSpec)?,
+      "customHeaders" : (CustomHeaders)?,
+      "enableAutoBranchCreation" : (EnableAutoBranchCreation)?,
+      "autoBranchCreationPatterns" : (AutoBranchCreationPatterns)?,
+      "autoBranchCreationConfig" : (AutoBranchCreationConfig)?,
+      "repository" : (Repository)?,
+      "oauthToken" : (OauthToken)?,
+      "accessToken" : (AccessToken)?
+    )
+
+    alias UpdateAppResult = NamedTuple(
+      "app" : App
+    )
+
+    alias UpdateBranchRequest = NamedTuple(
+      "appId" : AppId,
+      "branchName" : BranchName,
+      "description" : (Description)?,
+      "framework" : (Framework)?,
+      "stage" : (Stage)?,
+      "enableNotification" : (EnableNotification)?,
+      "enableAutoBuild" : (EnableAutoBuild)?,
+      "environmentVariables" : (EnvironmentVariables)?,
+      "basicAuthCredentials" : (BasicAuthCredentials)?,
+      "enableBasicAuth" : (EnableBasicAuth)?,
+      "enablePerformanceMode" : (EnablePerformanceMode)?,
+      "buildSpec" : (BuildSpec)?,
+      "ttl" : (TTL)?,
+      "displayName" : (DisplayName)?,
+      "enablePullRequestPreview" : (EnablePullRequestPreview)?,
+      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?,
+      "backendEnvironmentArn" : (BackendEnvironmentArn)?
+    )
+
+    alias UpdateBranchResult = NamedTuple(
+      "branch" : Branch
+    )
+
+    alias UpdateDomainAssociationRequest = NamedTuple(
+      "appId" : AppId,
+      "domainName" : DomainName,
+      "enableAutoSubDomain" : (EnableAutoSubDomain)?,
+      "subDomainSettings" : SubDomainSettings,
+      "autoSubDomainCreationPatterns" : (AutoSubDomainCreationPatterns)?,
+      "autoSubDomainIAMRole" : (AutoSubDomainIAMRole)?
+    )
+
+    alias UpdateDomainAssociationResult = NamedTuple(
+      "domainAssociation" : DomainAssociation
+    )
+
+    alias UpdateTime = String | UInt64 | Time
+
+    alias UpdateWebhookRequest = NamedTuple(
+      "webhookId" : WebhookId,
+      "branchName" : (BranchName)?,
+      "description" : (Description)?
+    )
+
+    alias UpdateWebhookResult = NamedTuple(
+      "webhook" : Webhook
+    )
+
+    alias UploadUrl = String
+
+    alias Verified = Bool
+
+    alias Webhook = NamedTuple(
+      "webhookArn" : WebhookArn,
+      "webhookId" : WebhookId,
+      "webhookUrl" : WebhookUrl,
+      "branchName" : BranchName,
+      "description" : Description,
+      "createTime" : CreateTime,
+      "updateTime" : UpdateTime
+    )
+
+    alias WebhookArn = String
+
+    alias WebhookId = String
+
+    alias WebhookUrl = String
+
+    alias Webhooks = Array(Webhook)
   end
 end

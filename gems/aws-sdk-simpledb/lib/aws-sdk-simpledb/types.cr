@@ -770,5 +770,209 @@ module Aws::SimpleDB
       include Aws::Structure
     end
 
+    alias Attribute = NamedTuple(
+      "Name" : String,
+      "AlternateNameEncoding" : (String)?,
+      "Value" : String,
+      "AlternateValueEncoding" : (String)?
+    )
+
+    alias AttributeDoesNotExist = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias AttributeList = Array(Attribute)
+
+    alias AttributeNameList = Array(String)
+
+    alias BatchDeleteAttributesRequest = NamedTuple(
+      "DomainName" : String,
+      "Items" : DeletableItemList
+    )
+
+    alias BatchPutAttributesRequest = NamedTuple(
+      "DomainName" : String,
+      "Items" : ReplaceableItemList
+    )
+
+    alias Boolean = Bool
+
+    alias CreateDomainRequest = NamedTuple(
+      "DomainName" : String
+    )
+
+    alias DeletableItem = NamedTuple(
+      "Name" : String,
+      "Attributes" : (AttributeList)?
+    )
+
+    alias DeletableItemList = Array(DeletableItem)
+
+    alias DeleteAttributesRequest = NamedTuple(
+      "DomainName" : String,
+      "ItemName" : String,
+      "Attributes" : (AttributeList)?,
+      "Expected" : (UpdateCondition)?
+    )
+
+    alias DeleteDomainRequest = NamedTuple(
+      "DomainName" : String
+    )
+
+    alias DomainMetadataRequest = NamedTuple(
+      "DomainName" : String
+    )
+
+    alias DomainMetadataResult = NamedTuple(
+      "ItemCount" : (Integer)?,
+      "ItemNamesSizeBytes" : (Long)?,
+      "AttributeNameCount" : (Integer)?,
+      "AttributeNamesSizeBytes" : (Long)?,
+      "AttributeValueCount" : (Integer)?,
+      "AttributeValuesSizeBytes" : (Long)?,
+      "Timestamp" : (Integer)?
+    )
+
+    alias DomainNameList = Array(String)
+
+    alias DuplicateItemName = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias Float = Float32
+
+    alias GetAttributesRequest = NamedTuple(
+      "DomainName" : String,
+      "ItemName" : String,
+      "AttributeNames" : (AttributeNameList)?,
+      "ConsistentRead" : (Boolean)?
+    )
+
+    alias GetAttributesResult = NamedTuple(
+      "Attributes" : (AttributeList)?
+    )
+
+    alias Integer = Int32
+
+    alias InvalidNextToken = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias InvalidNumberPredicates = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias InvalidNumberValueTests = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias InvalidParameterValue = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias InvalidQueryExpression = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias Item = NamedTuple(
+      "Name" : String,
+      "AlternateNameEncoding" : (String)?,
+      "Attributes" : AttributeList
+    )
+
+    alias ItemList = Array(Item)
+
+    alias ListDomainsRequest = NamedTuple(
+      "MaxNumberOfDomains" : (Integer)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListDomainsResult = NamedTuple(
+      "DomainNames" : (DomainNameList)?,
+      "NextToken" : (String)?
+    )
+
+    alias Long = Int64
+
+    alias MissingParameter = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NoSuchDomain = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NumberDomainAttributesExceeded = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NumberDomainBytesExceeded = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NumberDomainsExceeded = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NumberItemAttributesExceeded = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NumberSubmittedAttributesExceeded = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias NumberSubmittedItemsExceeded = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias PutAttributesRequest = NamedTuple(
+      "DomainName" : String,
+      "ItemName" : String,
+      "Attributes" : ReplaceableAttributeList,
+      "Expected" : (UpdateCondition)?
+    )
+
+    alias ReplaceableAttribute = NamedTuple(
+      "Name" : String,
+      "Value" : String,
+      "Replace" : (Boolean)?
+    )
+
+    alias ReplaceableAttributeList = Array(ReplaceableAttribute)
+
+    alias ReplaceableItem = NamedTuple(
+      "Name" : String,
+      "Attributes" : ReplaceableAttributeList
+    )
+
+    alias ReplaceableItemList = Array(ReplaceableItem)
+
+    alias RequestTimeout = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias SelectRequest = NamedTuple(
+      "SelectExpression" : String,
+      "NextToken" : (String)?,
+      "ConsistentRead" : (Boolean)?
+    )
+
+    alias SelectResult = NamedTuple(
+      "Items" : (ItemList)?,
+      "NextToken" : (String)?
+    )
+
+    alias String = String
+
+    alias TooManyRequestedAttributes = NamedTuple(
+      "BoxUsage" : (Float)?
+    )
+
+    alias UpdateCondition = NamedTuple(
+      "Name" : (String)?,
+      "Value" : (String)?,
+      "Exists" : (Boolean)?
+    )
   end
 end

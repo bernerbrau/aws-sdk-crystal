@@ -358,8 +358,8 @@ module Aws::AppStream
     #
     # @overload associate_fleet(**params)
     # @param [Hash] params ({})
-    def associate_fleet(params = {}, **options)
-      req = build_request(:associate_fleet, params)
+    def associate_fleet(, **options)
+      req = build_request(:associate_fleet, )
       req.send_request(options)
     end
 
@@ -401,8 +401,8 @@ module Aws::AppStream
     #
     # @overload batch_associate_user_stack(**params)
     # @param [Hash] params ({})
-    def batch_associate_user_stack(params = {}, **options)
-      req = build_request(:batch_associate_user_stack, params)
+    def batch_associate_user_stack(, **options)
+      req = build_request(:batch_associate_user_stack, )
       req.send_request(options)
     end
 
@@ -442,8 +442,8 @@ module Aws::AppStream
     #
     # @overload batch_disassociate_user_stack(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_user_stack(params = {}, **options)
-      req = build_request(:batch_disassociate_user_stack, params)
+    def batch_disassociate_user_stack(, **options)
+      req = build_request(:batch_disassociate_user_stack, )
       req.send_request(options)
     end
 
@@ -488,8 +488,8 @@ module Aws::AppStream
     #
     # @overload copy_image(**params)
     # @param [Hash] params ({})
-    def copy_image(params = {}, **options)
-      req = build_request(:copy_image, params)
+    def copy_image(, **options)
+      req = build_request(:copy_image, )
       req.send_request(options)
     end
 
@@ -537,8 +537,8 @@ module Aws::AppStream
     #
     # @overload create_directory_config(**params)
     # @param [Hash] params ({})
-    def create_directory_config(params = {}, **options)
-      req = build_request(:create_directory_config, params)
+    def create_directory_config(, **options)
+      req = build_request(:create_directory_config, )
       req.send_request(options)
     end
 
@@ -819,8 +819,8 @@ module Aws::AppStream
     #
     # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, **options)
-      req = build_request(:create_fleet, params)
+    def create_fleet(, **options)
+      req = build_request(:create_fleet, )
       req.send_request(options)
     end
 
@@ -1041,8 +1041,8 @@ module Aws::AppStream
     #
     # @overload create_image_builder(**params)
     # @param [Hash] params ({})
-    def create_image_builder(params = {}, **options)
-      req = build_request(:create_image_builder, params)
+    def create_image_builder(, **options)
+      req = build_request(:create_image_builder, )
       req.send_request(options)
     end
 
@@ -1076,8 +1076,8 @@ module Aws::AppStream
     #
     # @overload create_image_builder_streaming_url(**params)
     # @param [Hash] params ({})
-    def create_image_builder_streaming_url(params = {}, **options)
-      req = build_request(:create_image_builder_streaming_url, params)
+    def create_image_builder_streaming_url(, **options)
+      req = build_request(:create_image_builder_streaming_url, )
       req.send_request(options)
     end
 
@@ -1219,8 +1219,8 @@ module Aws::AppStream
     #
     # @overload create_stack(**params)
     # @param [Hash] params ({})
-    def create_stack(params = {}, **options)
-      req = build_request(:create_stack, params)
+    def create_stack(, **options)
+      req = build_request(:create_stack, )
       req.send_request(options)
     end
 
@@ -1278,8 +1278,8 @@ module Aws::AppStream
     #
     # @overload create_streaming_url(**params)
     # @param [Hash] params ({})
-    def create_streaming_url(params = {}, **options)
-      req = build_request(:create_streaming_url, params)
+    def create_streaming_url(, **options)
+      req = build_request(:create_streaming_url, )
       req.send_request(options)
     end
 
@@ -1300,8 +1300,8 @@ module Aws::AppStream
     #
     # @overload create_usage_report_subscription(**params)
     # @param [Hash] params ({})
-    def create_usage_report_subscription(params = {}, **options)
-      req = build_request(:create_usage_report_subscription, params)
+    def create_usage_report_subscription(, **options)
+      req = build_request(:create_usage_report_subscription, )
       req.send_request(options)
     end
 
@@ -1354,8 +1354,8 @@ module Aws::AppStream
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -1378,8 +1378,8 @@ module Aws::AppStream
     #
     # @overload delete_directory_config(**params)
     # @param [Hash] params ({})
-    def delete_directory_config(params = {}, **options)
-      req = build_request(:delete_directory_config, params)
+    def delete_directory_config(, **options)
+      req = build_request(:delete_directory_config, )
       req.send_request(options)
     end
 
@@ -1400,8 +1400,8 @@ module Aws::AppStream
     #
     # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, **options)
-      req = build_request(:delete_fleet, params)
+    def delete_fleet(, **options)
+      req = build_request(:delete_fleet, )
       req.send_request(options)
     end
 
@@ -1455,8 +1455,8 @@ module Aws::AppStream
     #
     # @overload delete_image(**params)
     # @param [Hash] params ({})
-    def delete_image(params = {}, **options)
-      req = build_request(:delete_image, params)
+    def delete_image(, **options)
+      req = build_request(:delete_image, )
       req.send_request(options)
     end
 
@@ -1511,8 +1511,8 @@ module Aws::AppStream
     #
     # @overload delete_image_builder(**params)
     # @param [Hash] params ({})
-    def delete_image_builder(params = {}, **options)
-      req = build_request(:delete_image_builder, params)
+    def delete_image_builder(, **options)
+      req = build_request(:delete_image_builder, )
       req.send_request(options)
     end
 
@@ -1540,8 +1540,8 @@ module Aws::AppStream
     #
     # @overload delete_image_permissions(**params)
     # @param [Hash] params ({})
-    def delete_image_permissions(params = {}, **options)
-      req = build_request(:delete_image_permissions, params)
+    def delete_image_permissions(, **options)
+      req = build_request(:delete_image_permissions, )
       req.send_request(options)
     end
 
@@ -1565,8 +1565,8 @@ module Aws::AppStream
     #
     # @overload delete_stack(**params)
     # @param [Hash] params ({})
-    def delete_stack(params = {}, **options)
-      req = build_request(:delete_stack, params)
+    def delete_stack(, **options)
+      req = build_request(:delete_stack, )
       req.send_request(options)
     end
 
@@ -1578,8 +1578,8 @@ module Aws::AppStream
     #
     # @overload delete_usage_report_subscription(**params)
     # @param [Hash] params ({})
-    def delete_usage_report_subscription(params = {}, **options)
-      req = build_request(:delete_usage_report_subscription, params)
+    def delete_usage_report_subscription(, **options)
+      req = build_request(:delete_usage_report_subscription, )
       req.send_request(options)
     end
 
@@ -1608,8 +1608,8 @@ module Aws::AppStream
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -1661,8 +1661,8 @@ module Aws::AppStream
     #
     # @overload describe_directory_configs(**params)
     # @param [Hash] params ({})
-    def describe_directory_configs(params = {}, **options)
-      req = build_request(:describe_directory_configs, params)
+    def describe_directory_configs(, **options)
+      req = build_request(:describe_directory_configs, )
       req.send_request(options)
     end
 
@@ -1733,8 +1733,8 @@ module Aws::AppStream
     #
     # @overload describe_fleets(**params)
     # @param [Hash] params ({})
-    def describe_fleets(params = {}, **options)
-      req = build_request(:describe_fleets, params)
+    def describe_fleets(, **options)
+      req = build_request(:describe_fleets, )
       req.send_request(options)
     end
 
@@ -1803,8 +1803,8 @@ module Aws::AppStream
     #
     # @overload describe_image_builders(**params)
     # @param [Hash] params ({})
-    def describe_image_builders(params = {}, **options)
-      req = build_request(:describe_image_builders, params)
+    def describe_image_builders(, **options)
+      req = build_request(:describe_image_builders, )
       req.send_request(options)
     end
 
@@ -1856,8 +1856,8 @@ module Aws::AppStream
     #
     # @overload describe_image_permissions(**params)
     # @param [Hash] params ({})
-    def describe_image_permissions(params = {}, **options)
-      req = build_request(:describe_image_permissions, params)
+    def describe_image_permissions(, **options)
+      req = build_request(:describe_image_permissions, )
       req.send_request(options)
     end
 
@@ -1933,8 +1933,8 @@ module Aws::AppStream
     #
     # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, **options)
-      req = build_request(:describe_images, params)
+    def describe_images(, **options)
+      req = build_request(:describe_images, )
       req.send_request(options)
     end
 
@@ -2003,8 +2003,8 @@ module Aws::AppStream
     #
     # @overload describe_sessions(**params)
     # @param [Hash] params ({})
-    def describe_sessions(params = {}, **options)
-      req = build_request(:describe_sessions, params)
+    def describe_sessions(, **options)
+      req = build_request(:describe_sessions, )
       req.send_request(options)
     end
 
@@ -2066,8 +2066,8 @@ module Aws::AppStream
     #
     # @overload describe_stacks(**params)
     # @param [Hash] params ({})
-    def describe_stacks(params = {}, **options)
-      req = build_request(:describe_stacks, params)
+    def describe_stacks(, **options)
+      req = build_request(:describe_stacks, )
       req.send_request(options)
     end
 
@@ -2108,8 +2108,8 @@ module Aws::AppStream
     #
     # @overload describe_usage_report_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_usage_report_subscriptions(params = {}, **options)
-      req = build_request(:describe_usage_report_subscriptions, params)
+    def describe_usage_report_subscriptions(, **options)
+      req = build_request(:describe_usage_report_subscriptions, )
       req.send_request(options)
     end
 
@@ -2170,8 +2170,8 @@ module Aws::AppStream
     #
     # @overload describe_user_stack_associations(**params)
     # @param [Hash] params ({})
-    def describe_user_stack_associations(params = {}, **options)
-      req = build_request(:describe_user_stack_associations, params)
+    def describe_user_stack_associations(, **options)
+      req = build_request(:describe_user_stack_associations, )
       req.send_request(options)
     end
 
@@ -2219,8 +2219,8 @@ module Aws::AppStream
     #
     # @overload describe_users(**params)
     # @param [Hash] params ({})
-    def describe_users(params = {}, **options)
-      req = build_request(:describe_users, params)
+    def describe_users(, **options)
+      req = build_request(:describe_users, )
       req.send_request(options)
     end
 
@@ -2251,8 +2251,8 @@ module Aws::AppStream
     #
     # @overload disable_user(**params)
     # @param [Hash] params ({})
-    def disable_user(params = {}, **options)
-      req = build_request(:disable_user, params)
+    def disable_user(, **options)
+      req = build_request(:disable_user, )
       req.send_request(options)
     end
 
@@ -2277,8 +2277,8 @@ module Aws::AppStream
     #
     # @overload disassociate_fleet(**params)
     # @param [Hash] params ({})
-    def disassociate_fleet(params = {}, **options)
-      req = build_request(:disassociate_fleet, params)
+    def disassociate_fleet(, **options)
+      req = build_request(:disassociate_fleet, )
       req.send_request(options)
     end
 
@@ -2312,8 +2312,8 @@ module Aws::AppStream
     #
     # @overload enable_user(**params)
     # @param [Hash] params ({})
-    def enable_user(params = {}, **options)
-      req = build_request(:enable_user, params)
+    def enable_user(, **options)
+      req = build_request(:enable_user, )
       req.send_request(options)
     end
 
@@ -2334,8 +2334,8 @@ module Aws::AppStream
     #
     # @overload expire_session(**params)
     # @param [Hash] params ({})
-    def expire_session(params = {}, **options)
-      req = build_request(:expire_session, params)
+    def expire_session(, **options)
+      req = build_request(:expire_session, )
       req.send_request(options)
     end
 
@@ -2371,8 +2371,8 @@ module Aws::AppStream
     #
     # @overload list_associated_fleets(**params)
     # @param [Hash] params ({})
-    def list_associated_fleets(params = {}, **options)
-      req = build_request(:list_associated_fleets, params)
+    def list_associated_fleets(, **options)
+      req = build_request(:list_associated_fleets, )
       req.send_request(options)
     end
 
@@ -2408,8 +2408,8 @@ module Aws::AppStream
     #
     # @overload list_associated_stacks(**params)
     # @param [Hash] params ({})
-    def list_associated_stacks(params = {}, **options)
-      req = build_request(:list_associated_stacks, params)
+    def list_associated_stacks(, **options)
+      req = build_request(:list_associated_stacks, )
       req.send_request(options)
     end
 
@@ -2445,8 +2445,8 @@ module Aws::AppStream
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2467,8 +2467,8 @@ module Aws::AppStream
     #
     # @overload start_fleet(**params)
     # @param [Hash] params ({})
-    def start_fleet(params = {}, **options)
-      req = build_request(:start_fleet, params)
+    def start_fleet(, **options)
+      req = build_request(:start_fleet, )
       req.send_request(options)
     end
 
@@ -2529,8 +2529,8 @@ module Aws::AppStream
     #
     # @overload start_image_builder(**params)
     # @param [Hash] params ({})
-    def start_image_builder(params = {}, **options)
-      req = build_request(:start_image_builder, params)
+    def start_image_builder(, **options)
+      req = build_request(:start_image_builder, )
       req.send_request(options)
     end
 
@@ -2551,8 +2551,8 @@ module Aws::AppStream
     #
     # @overload stop_fleet(**params)
     # @param [Hash] params ({})
-    def stop_fleet(params = {}, **options)
-      req = build_request(:stop_fleet, params)
+    def stop_fleet(, **options)
+      req = build_request(:stop_fleet, )
       req.send_request(options)
     end
 
@@ -2607,8 +2607,8 @@ module Aws::AppStream
     #
     # @overload stop_image_builder(**params)
     # @param [Hash] params ({})
-    def stop_image_builder(params = {}, **options)
-      req = build_request(:stop_image_builder, params)
+    def stop_image_builder(, **options)
+      req = build_request(:stop_image_builder, )
       req.send_request(options)
     end
 
@@ -2659,8 +2659,8 @@ module Aws::AppStream
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2695,8 +2695,8 @@ module Aws::AppStream
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2743,8 +2743,8 @@ module Aws::AppStream
     #
     # @overload update_directory_config(**params)
     # @param [Hash] params ({})
-    def update_directory_config(params = {}, **options)
-      req = build_request(:update_directory_config, params)
+    def update_directory_config(, **options)
+      req = build_request(:update_directory_config, )
       req.send_request(options)
     end
 
@@ -3000,8 +3000,8 @@ module Aws::AppStream
     #
     # @overload update_fleet(**params)
     # @param [Hash] params ({})
-    def update_fleet(params = {}, **options)
-      req = build_request(:update_fleet, params)
+    def update_fleet(, **options)
+      req = build_request(:update_fleet, )
       req.send_request(options)
     end
 
@@ -3034,8 +3034,8 @@ module Aws::AppStream
     #
     # @overload update_image_permissions(**params)
     # @param [Hash] params ({})
-    def update_image_permissions(params = {}, **options)
-      req = build_request(:update_image_permissions, params)
+    def update_image_permissions(, **options)
+      req = build_request(:update_image_permissions, )
       req.send_request(options)
     end
 
@@ -3161,8 +3161,8 @@ module Aws::AppStream
     #
     # @overload update_stack(**params)
     # @param [Hash] params ({})
-    def update_stack(params = {}, **options)
-      req = build_request(:update_stack, params)
+    def update_stack(, **options)
+      req = build_request(:update_stack, )
       req.send_request(options)
     end
 

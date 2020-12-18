@@ -464,5 +464,161 @@ module Aws::IoTFleetHub
 
     class UpdateApplicationResponse < Aws::EmptyStructure; end
 
+    alias ApplicationState = String
+
+    alias ApplicationSummaries = Array(ApplicationSummary)
+
+    alias ApplicationSummary = NamedTuple(
+      "applicationId" : Id,
+      "applicationName" : Name,
+      "applicationDescription" : (Description)?,
+      "applicationUrl" : Url,
+      "applicationCreationDate" : (Timestamp)?,
+      "applicationLastUpdateDate" : (Timestamp)?,
+      "applicationState" : (ApplicationState)?
+    )
+
+    alias Arn = String
+
+    alias ClientRequestToken = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias CreateApplicationRequest = NamedTuple(
+      "applicationName" : Name,
+      "applicationDescription" : (Description)?,
+      "clientToken" : (ClientRequestToken)?,
+      "roleArn" : Arn,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateApplicationResponse = NamedTuple(
+      "applicationId" : Id,
+      "applicationArn" : Arn
+    )
+
+    alias DeleteApplicationRequest = NamedTuple(
+      "applicationId" : Id,
+      "clientToken" : (ClientRequestToken)?
+    )
+
+    alias DeleteApplicationResponse = NamedTuple(
+      
+    )
+
+    alias DescribeApplicationRequest = NamedTuple(
+      "applicationId" : Id
+    )
+
+    alias DescribeApplicationResponse = NamedTuple(
+      "applicationId" : Id,
+      "applicationArn" : Arn,
+      "applicationName" : Name,
+      "applicationDescription" : (Description)?,
+      "applicationUrl" : Url,
+      "applicationState" : ApplicationState,
+      "applicationCreationDate" : Timestamp,
+      "applicationLastUpdateDate" : Timestamp,
+      "roleArn" : Arn,
+      "ssoClientId" : (SsoClientId)?,
+      "errorMessage" : (ErrorMessage)?,
+      "tags" : (TagMap)?
+    )
+
+    alias Description = String
+
+    alias ErrorMessage = String
+
+    alias Id = String
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ListApplicationsRequest = NamedTuple(
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListApplicationsResponse = NamedTuple(
+      "applicationSummaries" : (ApplicationSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias SsoClientId = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Timestamp = Int64
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateApplicationRequest = NamedTuple(
+      "applicationId" : Id,
+      "applicationName" : (Name)?,
+      "applicationDescription" : (Description)?,
+      "clientToken" : (ClientRequestToken)?
+    )
+
+    alias UpdateApplicationResponse = NamedTuple(
+      
+    )
+
+    alias Url = String
+
+    alias errorMessage = String
   end
 end

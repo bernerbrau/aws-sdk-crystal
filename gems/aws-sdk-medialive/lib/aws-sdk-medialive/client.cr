@@ -344,8 +344,8 @@ module Aws::MediaLive
     #
     # @overload accept_input_device_transfer(**params)
     # @param [Hash] params ({})
-    def accept_input_device_transfer(params = {}, **options)
-      req = build_request(:accept_input_device_transfer, params)
+    def accept_input_device_transfer(, **options)
+      req = build_request(:accept_input_device_transfer, )
       req.send_request(options)
     end
 
@@ -389,8 +389,8 @@ module Aws::MediaLive
     #
     # @overload batch_delete(**params)
     # @param [Hash] params ({})
-    def batch_delete(params = {}, **options)
-      req = build_request(:batch_delete, params)
+    def batch_delete(, **options)
+      req = build_request(:batch_delete, )
       req.send_request(options)
     end
 
@@ -428,8 +428,8 @@ module Aws::MediaLive
     #
     # @overload batch_start(**params)
     # @param [Hash] params ({})
-    def batch_start(params = {}, **options)
-      req = build_request(:batch_start, params)
+    def batch_start(, **options)
+      req = build_request(:batch_start, )
       req.send_request(options)
     end
 
@@ -467,8 +467,8 @@ module Aws::MediaLive
     #
     # @overload batch_stop(**params)
     # @param [Hash] params ({})
-    def batch_stop(params = {}, **options)
-      req = build_request(:batch_stop, params)
+    def batch_stop(, **options)
+      req = build_request(:batch_stop, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::MediaLive
     #
     # @overload batch_update_schedule(**params)
     # @param [Hash] params ({})
-    def batch_update_schedule(params = {}, **options)
-      req = build_request(:batch_update_schedule, params)
+    def batch_update_schedule(, **options)
+      req = build_request(:batch_update_schedule, )
       req.send_request(options)
     end
 
@@ -748,8 +748,8 @@ module Aws::MediaLive
     #
     # @overload cancel_input_device_transfer(**params)
     # @param [Hash] params ({})
-    def cancel_input_device_transfer(params = {}, **options)
-      req = build_request(:cancel_input_device_transfer, params)
+    def cancel_input_device_transfer(, **options)
+      req = build_request(:cancel_input_device_transfer, )
       req.send_request(options)
     end
 
@@ -2278,8 +2278,8 @@ module Aws::MediaLive
     #
     # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, **options)
-      req = build_request(:create_channel, params)
+    def create_channel(, **options)
+      req = build_request(:create_channel, )
       req.send_request(options)
     end
 
@@ -2392,8 +2392,8 @@ module Aws::MediaLive
     #
     # @overload create_input(**params)
     # @param [Hash] params ({})
-    def create_input(params = {}, **options)
-      req = build_request(:create_input, params)
+    def create_input(, **options)
+      req = build_request(:create_input, )
       req.send_request(options)
     end
 
@@ -2436,8 +2436,8 @@ module Aws::MediaLive
     #
     # @overload create_input_security_group(**params)
     # @param [Hash] params ({})
-    def create_input_security_group(params = {}, **options)
-      req = build_request(:create_input_security_group, params)
+    def create_input_security_group(, **options)
+      req = build_request(:create_input_security_group, )
       req.send_request(options)
     end
 
@@ -2500,8 +2500,8 @@ module Aws::MediaLive
     #
     # @overload create_multiplex(**params)
     # @param [Hash] params ({})
-    def create_multiplex(params = {}, **options)
-      req = build_request(:create_multiplex, params)
+    def create_multiplex(, **options)
+      req = build_request(:create_multiplex, )
       req.send_request(options)
     end
 
@@ -2583,8 +2583,8 @@ module Aws::MediaLive
     #
     # @overload create_multiplex_program(**params)
     # @param [Hash] params ({})
-    def create_multiplex_program(params = {}, **options)
-      req = build_request(:create_multiplex_program, params)
+    def create_multiplex_program(, **options)
+      req = build_request(:create_multiplex_program, )
       req.send_request(options)
     end
 
@@ -2609,8 +2609,8 @@ module Aws::MediaLive
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -3230,8 +3230,8 @@ module Aws::MediaLive
     #
     # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, **options)
-      req = build_request(:delete_channel, params)
+    def delete_channel(, **options)
+      req = build_request(:delete_channel, )
       req.send_request(options)
     end
 
@@ -3251,8 +3251,8 @@ module Aws::MediaLive
     #
     # @overload delete_input(**params)
     # @param [Hash] params ({})
-    def delete_input(params = {}, **options)
-      req = build_request(:delete_input, params)
+    def delete_input(, **options)
+      req = build_request(:delete_input, )
       req.send_request(options)
     end
 
@@ -3272,8 +3272,8 @@ module Aws::MediaLive
     #
     # @overload delete_input_security_group(**params)
     # @param [Hash] params ({})
-    def delete_input_security_group(params = {}, **options)
-      req = build_request(:delete_input_security_group, params)
+    def delete_input_security_group(, **options)
+      req = build_request(:delete_input_security_group, )
       req.send_request(options)
     end
 
@@ -3323,8 +3323,8 @@ module Aws::MediaLive
     #
     # @overload delete_multiplex(**params)
     # @param [Hash] params ({})
-    def delete_multiplex(params = {}, **options)
-      req = build_request(:delete_multiplex, params)
+    def delete_multiplex(, **options)
+      req = build_request(:delete_multiplex, )
       req.send_request(options)
     end
 
@@ -3386,8 +3386,8 @@ module Aws::MediaLive
     #
     # @overload delete_multiplex_program(**params)
     # @param [Hash] params ({})
-    def delete_multiplex_program(params = {}, **options)
-      req = build_request(:delete_multiplex_program, params)
+    def delete_multiplex_program(, **options)
+      req = build_request(:delete_multiplex_program, )
       req.send_request(options)
     end
 
@@ -3455,8 +3455,8 @@ module Aws::MediaLive
     #
     # @overload delete_reservation(**params)
     # @param [Hash] params ({})
-    def delete_reservation(params = {}, **options)
-      req = build_request(:delete_reservation, params)
+    def delete_reservation(, **options)
+      req = build_request(:delete_reservation, )
       req.send_request(options)
     end
 
@@ -3476,8 +3476,8 @@ module Aws::MediaLive
     #
     # @overload delete_schedule(**params)
     # @param [Hash] params ({})
-    def delete_schedule(params = {}, **options)
-      req = build_request(:delete_schedule, params)
+    def delete_schedule(, **options)
+      req = build_request(:delete_schedule, )
       req.send_request(options)
     end
 
@@ -3500,8 +3500,8 @@ module Aws::MediaLive
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -4129,8 +4129,8 @@ module Aws::MediaLive
     #
     # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, **options)
-      req = build_request(:describe_channel, params)
+    def describe_channel(, **options)
+      req = build_request(:describe_channel, )
       req.send_request(options)
     end
 
@@ -4204,8 +4204,8 @@ module Aws::MediaLive
     #
     # @overload describe_input(**params)
     # @param [Hash] params ({})
-    def describe_input(params = {}, **options)
-      req = build_request(:describe_input, params)
+    def describe_input(, **options)
+      req = build_request(:describe_input, )
       req.send_request(options)
     end
 
@@ -4272,8 +4272,8 @@ module Aws::MediaLive
     #
     # @overload describe_input_device(**params)
     # @param [Hash] params ({})
-    def describe_input_device(params = {}, **options)
-      req = build_request(:describe_input_device, params)
+    def describe_input_device(, **options)
+      req = build_request(:describe_input_device, )
       req.send_request(options)
     end
 
@@ -4310,8 +4310,8 @@ module Aws::MediaLive
     #
     # @overload describe_input_device_thumbnail(**params)
     # @param [Hash] params ({})
-    def describe_input_device_thumbnail(params = {}, **options, &block)
-      req = build_request(:describe_input_device_thumbnail, params)
+    def describe_input_device_thumbnail(, **options, &block)
+      req = build_request(:describe_input_device_thumbnail, )
       req.send_request(options, &block)
     end
 
@@ -4350,8 +4350,8 @@ module Aws::MediaLive
     #
     # @overload describe_input_security_group(**params)
     # @param [Hash] params ({})
-    def describe_input_security_group(params = {}, **options)
-      req = build_request(:describe_input_security_group, params)
+    def describe_input_security_group(, **options)
+      req = build_request(:describe_input_security_group, )
       req.send_request(options)
     end
 
@@ -4409,8 +4409,8 @@ module Aws::MediaLive
     #
     # @overload describe_multiplex(**params)
     # @param [Hash] params ({})
-    def describe_multiplex(params = {}, **options)
-      req = build_request(:describe_multiplex, params)
+    def describe_multiplex(, **options)
+      req = build_request(:describe_multiplex, )
       req.send_request(options)
     end
 
@@ -4472,8 +4472,8 @@ module Aws::MediaLive
     #
     # @overload describe_multiplex_program(**params)
     # @param [Hash] params ({})
-    def describe_multiplex_program(params = {}, **options)
-      req = build_request(:describe_multiplex_program, params)
+    def describe_multiplex_program(, **options)
+      req = build_request(:describe_multiplex_program, )
       req.send_request(options)
     end
 
@@ -4526,8 +4526,8 @@ module Aws::MediaLive
     #
     # @overload describe_offering(**params)
     # @param [Hash] params ({})
-    def describe_offering(params = {}, **options)
-      req = build_request(:describe_offering, params)
+    def describe_offering(, **options)
+      req = build_request(:describe_offering, )
       req.send_request(options)
     end
 
@@ -4595,8 +4595,8 @@ module Aws::MediaLive
     #
     # @overload describe_reservation(**params)
     # @param [Hash] params ({})
-    def describe_reservation(params = {}, **options)
-      req = build_request(:describe_reservation, params)
+    def describe_reservation(, **options)
+      req = build_request(:describe_reservation, )
       req.send_request(options)
     end
 
@@ -4686,8 +4686,8 @@ module Aws::MediaLive
     #
     # @overload describe_schedule(**params)
     # @param [Hash] params ({})
-    def describe_schedule(params = {}, **options)
-      req = build_request(:describe_schedule, params)
+    def describe_schedule(, **options)
+      req = build_request(:describe_schedule, )
       req.send_request(options)
     end
 
@@ -4794,8 +4794,8 @@ module Aws::MediaLive
     #
     # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, **options)
-      req = build_request(:list_channels, params)
+    def list_channels(, **options)
+      req = build_request(:list_channels, )
       req.send_request(options)
     end
 
@@ -4837,8 +4837,8 @@ module Aws::MediaLive
     #
     # @overload list_input_device_transfers(**params)
     # @param [Hash] params ({})
-    def list_input_device_transfers(params = {}, **options)
-      req = build_request(:list_input_device_transfers, params)
+    def list_input_device_transfers(, **options)
+      req = build_request(:list_input_device_transfers, )
       req.send_request(options)
     end
 
@@ -4902,8 +4902,8 @@ module Aws::MediaLive
     #
     # @overload list_input_devices(**params)
     # @param [Hash] params ({})
-    def list_input_devices(params = {}, **options)
-      req = build_request(:list_input_devices, params)
+    def list_input_devices(, **options)
+      req = build_request(:list_input_devices, )
       req.send_request(options)
     end
 
@@ -4945,8 +4945,8 @@ module Aws::MediaLive
     #
     # @overload list_input_security_groups(**params)
     # @param [Hash] params ({})
-    def list_input_security_groups(params = {}, **options)
-      req = build_request(:list_input_security_groups, params)
+    def list_input_security_groups(, **options)
+      req = build_request(:list_input_security_groups, )
       req.send_request(options)
     end
 
@@ -5007,8 +5007,8 @@ module Aws::MediaLive
     #
     # @overload list_inputs(**params)
     # @param [Hash] params ({})
-    def list_inputs(params = {}, **options)
-      req = build_request(:list_inputs, params)
+    def list_inputs(, **options)
+      req = build_request(:list_inputs, )
       req.send_request(options)
     end
 
@@ -5046,8 +5046,8 @@ module Aws::MediaLive
     #
     # @overload list_multiplex_programs(**params)
     # @param [Hash] params ({})
-    def list_multiplex_programs(params = {}, **options)
-      req = build_request(:list_multiplex_programs, params)
+    def list_multiplex_programs(, **options)
+      req = build_request(:list_multiplex_programs, )
       req.send_request(options)
     end
 
@@ -5091,8 +5091,8 @@ module Aws::MediaLive
     #
     # @overload list_multiplexes(**params)
     # @param [Hash] params ({})
-    def list_multiplexes(params = {}, **options)
-      req = build_request(:list_multiplexes, params)
+    def list_multiplexes(, **options)
+      req = build_request(:list_multiplexes, )
       req.send_request(options)
     end
 
@@ -5173,8 +5173,8 @@ module Aws::MediaLive
     #
     # @overload list_offerings(**params)
     # @param [Hash] params ({})
-    def list_offerings(params = {}, **options)
-      req = build_request(:list_offerings, params)
+    def list_offerings(, **options)
+      req = build_request(:list_offerings, )
       req.send_request(options)
     end
 
@@ -5257,8 +5257,8 @@ module Aws::MediaLive
     #
     # @overload list_reservations(**params)
     # @param [Hash] params ({})
-    def list_reservations(params = {}, **options)
-      req = build_request(:list_reservations, params)
+    def list_reservations(, **options)
+      req = build_request(:list_reservations, )
       req.send_request(options)
     end
 
@@ -5285,8 +5285,8 @@ module Aws::MediaLive
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -5356,8 +5356,8 @@ module Aws::MediaLive
     #
     # @overload purchase_offering(**params)
     # @param [Hash] params ({})
-    def purchase_offering(params = {}, **options)
-      req = build_request(:purchase_offering, params)
+    def purchase_offering(, **options)
+      req = build_request(:purchase_offering, )
       req.send_request(options)
     end
 
@@ -5377,8 +5377,8 @@ module Aws::MediaLive
     #
     # @overload reject_input_device_transfer(**params)
     # @param [Hash] params ({})
-    def reject_input_device_transfer(params = {}, **options)
-      req = build_request(:reject_input_device_transfer, params)
+    def reject_input_device_transfer(, **options)
+      req = build_request(:reject_input_device_transfer, )
       req.send_request(options)
     end
 
@@ -5998,8 +5998,8 @@ module Aws::MediaLive
     #
     # @overload start_channel(**params)
     # @param [Hash] params ({})
-    def start_channel(params = {}, **options)
-      req = build_request(:start_channel, params)
+    def start_channel(, **options)
+      req = build_request(:start_channel, )
       req.send_request(options)
     end
 
@@ -6050,8 +6050,8 @@ module Aws::MediaLive
     #
     # @overload start_multiplex(**params)
     # @param [Hash] params ({})
-    def start_multiplex(params = {}, **options)
-      req = build_request(:start_multiplex, params)
+    def start_multiplex(, **options)
+      req = build_request(:start_multiplex, )
       req.send_request(options)
     end
 
@@ -6671,8 +6671,8 @@ module Aws::MediaLive
     #
     # @overload stop_channel(**params)
     # @param [Hash] params ({})
-    def stop_channel(params = {}, **options)
-      req = build_request(:stop_channel, params)
+    def stop_channel(, **options)
+      req = build_request(:stop_channel, )
       req.send_request(options)
     end
 
@@ -6723,8 +6723,8 @@ module Aws::MediaLive
     #
     # @overload stop_multiplex(**params)
     # @param [Hash] params ({})
-    def stop_multiplex(params = {}, **options)
-      req = build_request(:stop_multiplex, params)
+    def stop_multiplex(, **options)
+      req = build_request(:stop_multiplex, )
       req.send_request(options)
     end
 
@@ -6751,8 +6751,8 @@ module Aws::MediaLive
     #
     # @overload transfer_input_device(**params)
     # @param [Hash] params ({})
-    def transfer_input_device(params = {}, **options)
-      req = build_request(:transfer_input_device, params)
+    def transfer_input_device(, **options)
+      req = build_request(:transfer_input_device, )
       req.send_request(options)
     end
 
@@ -8266,8 +8266,8 @@ module Aws::MediaLive
     #
     # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, **options)
-      req = build_request(:update_channel, params)
+    def update_channel(, **options)
+      req = build_request(:update_channel, )
       req.send_request(options)
     end
 
@@ -8901,8 +8901,8 @@ module Aws::MediaLive
     #
     # @overload update_channel_class(**params)
     # @param [Hash] params ({})
-    def update_channel_class(params = {}, **options)
-      req = build_request(:update_channel_class, params)
+    def update_channel_class(, **options)
+      req = build_request(:update_channel_class, )
       req.send_request(options)
     end
 
@@ -8994,8 +8994,8 @@ module Aws::MediaLive
     #
     # @overload update_input(**params)
     # @param [Hash] params ({})
-    def update_input(params = {}, **options)
-      req = build_request(:update_input, params)
+    def update_input(, **options)
+      req = build_request(:update_input, )
       req.send_request(options)
     end
 
@@ -9079,8 +9079,8 @@ module Aws::MediaLive
     #
     # @overload update_input_device(**params)
     # @param [Hash] params ({})
-    def update_input_device(params = {}, **options)
-      req = build_request(:update_input_device, params)
+    def update_input_device(, **options)
+      req = build_request(:update_input_device, )
       req.send_request(options)
     end
 
@@ -9126,8 +9126,8 @@ module Aws::MediaLive
     #
     # @overload update_input_security_group(**params)
     # @param [Hash] params ({})
-    def update_input_security_group(params = {}, **options)
-      req = build_request(:update_input_security_group, params)
+    def update_input_security_group(, **options)
+      req = build_request(:update_input_security_group, )
       req.send_request(options)
     end
 
@@ -9180,8 +9180,8 @@ module Aws::MediaLive
     #
     # @overload update_multiplex(**params)
     # @param [Hash] params ({})
-    def update_multiplex(params = {}, **options)
-      req = build_request(:update_multiplex, params)
+    def update_multiplex(, **options)
+      req = build_request(:update_multiplex, )
       req.send_request(options)
     end
 
@@ -9258,8 +9258,8 @@ module Aws::MediaLive
     #
     # @overload update_multiplex_program(**params)
     # @param [Hash] params ({})
-    def update_multiplex_program(params = {}, **options)
-      req = build_request(:update_multiplex_program, params)
+    def update_multiplex_program(, **options)
+      req = build_request(:update_multiplex_program, )
       req.send_request(options)
     end
 
@@ -9313,8 +9313,8 @@ module Aws::MediaLive
     #
     # @overload update_reservation(**params)
     # @param [Hash] params ({})
-    def update_reservation(params = {}, **options)
-      req = build_request(:update_reservation, params)
+    def update_reservation(, **options)
+      req = build_request(:update_reservation, )
       req.send_request(options)
     end
 

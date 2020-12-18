@@ -387,8 +387,8 @@ module Aws::Route53Domains
     #
     # @overload accept_domain_transfer_from_another_aws_account(**params)
     # @param [Hash] params ({})
-    def accept_domain_transfer_from_another_aws_account(params = {}, **options)
-      req = build_request(:accept_domain_transfer_from_another_aws_account, params)
+    def accept_domain_transfer_from_another_aws_account(, **options)
+      req = build_request(:accept_domain_transfer_from_another_aws_account, )
       req.send_request(options)
     end
 
@@ -433,8 +433,8 @@ module Aws::Route53Domains
     #
     # @overload cancel_domain_transfer_to_another_aws_account(**params)
     # @param [Hash] params ({})
-    def cancel_domain_transfer_to_another_aws_account(params = {}, **options)
-      req = build_request(:cancel_domain_transfer_to_another_aws_account, params)
+    def cancel_domain_transfer_to_another_aws_account(, **options)
+      req = build_request(:cancel_domain_transfer_to_another_aws_account, )
       req.send_request(options)
     end
 
@@ -494,8 +494,8 @@ module Aws::Route53Domains
     #
     # @overload check_domain_availability(**params)
     # @param [Hash] params ({})
-    def check_domain_availability(params = {}, **options)
-      req = build_request(:check_domain_availability, params)
+    def check_domain_availability(, **options)
+      req = build_request(:check_domain_availability, )
       req.send_request(options)
     end
 
@@ -548,8 +548,8 @@ module Aws::Route53Domains
     #
     # @overload check_domain_transferability(**params)
     # @param [Hash] params ({})
-    def check_domain_transferability(params = {}, **options)
-      req = build_request(:check_domain_transferability, params)
+    def check_domain_transferability(, **options)
+      req = build_request(:check_domain_transferability, )
       req.send_request(options)
     end
 
@@ -577,8 +577,8 @@ module Aws::Route53Domains
     #
     # @overload delete_tags_for_domain(**params)
     # @param [Hash] params ({})
-    def delete_tags_for_domain(params = {}, **options)
-      req = build_request(:delete_tags_for_domain, params)
+    def delete_tags_for_domain(, **options)
+      req = build_request(:delete_tags_for_domain, )
       req.send_request(options)
     end
 
@@ -600,8 +600,8 @@ module Aws::Route53Domains
     #
     # @overload disable_domain_auto_renew(**params)
     # @param [Hash] params ({})
-    def disable_domain_auto_renew(params = {}, **options)
-      req = build_request(:disable_domain_auto_renew, params)
+    def disable_domain_auto_renew(, **options)
+      req = build_request(:disable_domain_auto_renew, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::Route53Domains
     #
     # @overload disable_domain_transfer_lock(**params)
     # @param [Hash] params ({})
-    def disable_domain_transfer_lock(params = {}, **options)
-      req = build_request(:disable_domain_transfer_lock, params)
+    def disable_domain_transfer_lock(, **options)
+      req = build_request(:disable_domain_transfer_lock, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::Route53Domains
     #
     # @overload enable_domain_auto_renew(**params)
     # @param [Hash] params ({})
-    def enable_domain_auto_renew(params = {}, **options)
-      req = build_request(:enable_domain_auto_renew, params)
+    def enable_domain_auto_renew(, **options)
+      req = build_request(:enable_domain_auto_renew, )
       req.send_request(options)
     end
 
@@ -701,8 +701,8 @@ module Aws::Route53Domains
     #
     # @overload enable_domain_transfer_lock(**params)
     # @param [Hash] params ({})
-    def enable_domain_transfer_lock(params = {}, **options)
-      req = build_request(:enable_domain_transfer_lock, params)
+    def enable_domain_transfer_lock(, **options)
+      req = build_request(:enable_domain_transfer_lock, )
       req.send_request(options)
     end
 
@@ -738,8 +738,8 @@ module Aws::Route53Domains
     #
     # @overload get_contact_reachability_status(**params)
     # @param [Hash] params ({})
-    def get_contact_reachability_status(params = {}, **options)
-      req = build_request(:get_contact_reachability_status, params)
+    def get_contact_reachability_status(, **options)
+      req = build_request(:get_contact_reachability_status, )
       req.send_request(options)
     end
 
@@ -858,8 +858,8 @@ module Aws::Route53Domains
     #
     # @overload get_domain_detail(**params)
     # @param [Hash] params ({})
-    def get_domain_detail(params = {}, **options)
-      req = build_request(:get_domain_detail, params)
+    def get_domain_detail(, **options)
+      req = build_request(:get_domain_detail, )
       req.send_request(options)
     end
 
@@ -927,8 +927,8 @@ module Aws::Route53Domains
     #
     # @overload get_domain_suggestions(**params)
     # @param [Hash] params ({})
-    def get_domain_suggestions(params = {}, **options)
-      req = build_request(:get_domain_suggestions, params)
+    def get_domain_suggestions(, **options)
+      req = build_request(:get_domain_suggestions, )
       req.send_request(options)
     end
 
@@ -968,8 +968,8 @@ module Aws::Route53Domains
     #
     # @overload get_operation_detail(**params)
     # @param [Hash] params ({})
-    def get_operation_detail(params = {}, **options)
-      req = build_request(:get_operation_detail, params)
+    def get_operation_detail(, **options)
+      req = build_request(:get_operation_detail, )
       req.send_request(options)
     end
 
@@ -1020,8 +1020,8 @@ module Aws::Route53Domains
     #
     # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, **options)
-      req = build_request(:list_domains, params)
+    def list_domains(, **options)
+      req = build_request(:list_domains, )
       req.send_request(options)
     end
 
@@ -1076,8 +1076,8 @@ module Aws::Route53Domains
     #
     # @overload list_operations(**params)
     # @param [Hash] params ({})
-    def list_operations(params = {}, **options)
-      req = build_request(:list_operations, params)
+    def list_operations(, **options)
+      req = build_request(:list_operations, )
       req.send_request(options)
     end
 
@@ -1110,8 +1110,8 @@ module Aws::Route53Domains
     #
     # @overload list_tags_for_domain(**params)
     # @param [Hash] params ({})
-    def list_tags_for_domain(params = {}, **options)
-      req = build_request(:list_tags_for_domain, params)
+    def list_tags_for_domain(, **options)
+      req = build_request(:list_tags_for_domain, )
       req.send_request(options)
     end
 
@@ -1343,8 +1343,8 @@ module Aws::Route53Domains
     #
     # @overload register_domain(**params)
     # @param [Hash] params ({})
-    def register_domain(params = {}, **options)
-      req = build_request(:register_domain, params)
+    def register_domain(, **options)
+      req = build_request(:register_domain, )
       req.send_request(options)
     end
 
@@ -1389,8 +1389,8 @@ module Aws::Route53Domains
     #
     # @overload reject_domain_transfer_from_another_aws_account(**params)
     # @param [Hash] params ({})
-    def reject_domain_transfer_from_another_aws_account(params = {}, **options)
-      req = build_request(:reject_domain_transfer_from_another_aws_account, params)
+    def reject_domain_transfer_from_another_aws_account(, **options)
+      req = build_request(:reject_domain_transfer_from_another_aws_account, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::Route53Domains
     #
     # @overload renew_domain(**params)
     # @param [Hash] params ({})
-    def renew_domain(params = {}, **options)
-      req = build_request(:renew_domain, params)
+    def renew_domain(, **options)
+      req = build_request(:renew_domain, )
       req.send_request(options)
     end
 
@@ -1483,8 +1483,8 @@ module Aws::Route53Domains
     #
     # @overload resend_contact_reachability_email(**params)
     # @param [Hash] params ({})
-    def resend_contact_reachability_email(params = {}, **options)
-      req = build_request(:resend_contact_reachability_email, params)
+    def resend_contact_reachability_email(, **options)
+      req = build_request(:resend_contact_reachability_email, )
       req.send_request(options)
     end
 
@@ -1513,8 +1513,8 @@ module Aws::Route53Domains
     #
     # @overload retrieve_domain_auth_code(**params)
     # @param [Hash] params ({})
-    def retrieve_domain_auth_code(params = {}, **options)
-      req = build_request(:retrieve_domain_auth_code, params)
+    def retrieve_domain_auth_code(, **options)
+      req = build_request(:retrieve_domain_auth_code, )
       req.send_request(options)
     end
 
@@ -1742,8 +1742,8 @@ module Aws::Route53Domains
     #
     # @overload transfer_domain(**params)
     # @param [Hash] params ({})
-    def transfer_domain(params = {}, **options)
-      req = build_request(:transfer_domain, params)
+    def transfer_domain(, **options)
+      req = build_request(:transfer_domain, )
       req.send_request(options)
     end
 
@@ -1812,8 +1812,8 @@ module Aws::Route53Domains
     #
     # @overload transfer_domain_to_another_aws_account(**params)
     # @param [Hash] params ({})
-    def transfer_domain_to_another_aws_account(params = {}, **options)
-      req = build_request(:transfer_domain_to_another_aws_account, params)
+    def transfer_domain_to_another_aws_account(, **options)
+      req = build_request(:transfer_domain_to_another_aws_account, )
       req.send_request(options)
     end
 
@@ -1920,8 +1920,8 @@ module Aws::Route53Domains
     #
     # @overload update_domain_contact(**params)
     # @param [Hash] params ({})
-    def update_domain_contact(params = {}, **options)
-      req = build_request(:update_domain_contact, params)
+    def update_domain_contact(, **options)
+      req = build_request(:update_domain_contact, )
       req.send_request(options)
     end
 
@@ -2002,8 +2002,8 @@ module Aws::Route53Domains
     #
     # @overload update_domain_contact_privacy(**params)
     # @param [Hash] params ({})
-    def update_domain_contact_privacy(params = {}, **options)
-      req = build_request(:update_domain_contact_privacy, params)
+    def update_domain_contact_privacy(, **options)
+      req = build_request(:update_domain_contact_privacy, )
       req.send_request(options)
     end
 
@@ -2051,8 +2051,8 @@ module Aws::Route53Domains
     #
     # @overload update_domain_nameservers(**params)
     # @param [Hash] params ({})
-    def update_domain_nameservers(params = {}, **options)
-      req = build_request(:update_domain_nameservers, params)
+    def update_domain_nameservers(, **options)
+      req = build_request(:update_domain_nameservers, )
       req.send_request(options)
     end
 
@@ -2087,8 +2087,8 @@ module Aws::Route53Domains
     #
     # @overload update_tags_for_domain(**params)
     # @param [Hash] params ({})
-    def update_tags_for_domain(params = {}, **options)
-      req = build_request(:update_tags_for_domain, params)
+    def update_tags_for_domain(, **options)
+      req = build_request(:update_tags_for_domain, )
       req.send_request(options)
     end
 
@@ -2150,8 +2150,8 @@ module Aws::Route53Domains
     #
     # @overload view_billing(**params)
     # @param [Hash] params ({})
-    def view_billing(params = {}, **options)
-      req = build_request(:view_billing, params)
+    def view_billing(, **options)
+      req = build_request(:view_billing, )
       req.send_request(options)
     end
 

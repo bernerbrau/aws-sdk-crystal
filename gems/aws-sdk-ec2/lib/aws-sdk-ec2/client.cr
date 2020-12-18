@@ -373,8 +373,8 @@ module Aws::EC2
     #
     # @overload accept_reserved_instances_exchange_quote(**params)
     # @param [Hash] params ({})
-    def accept_reserved_instances_exchange_quote(params = {}, **options)
-      req = build_request(:accept_reserved_instances_exchange_quote, params)
+    def accept_reserved_instances_exchange_quote(, **options)
+      req = build_request(:accept_reserved_instances_exchange_quote, )
       req.send_request(options)
     end
 
@@ -425,8 +425,8 @@ module Aws::EC2
     #
     # @overload accept_transit_gateway_multicast_domain_associations(**params)
     # @param [Hash] params ({})
-    def accept_transit_gateway_multicast_domain_associations(params = {}, **options)
-      req = build_request(:accept_transit_gateway_multicast_domain_associations, params)
+    def accept_transit_gateway_multicast_domain_associations(, **options)
+      req = build_request(:accept_transit_gateway_multicast_domain_associations, )
       req.send_request(options)
     end
 
@@ -474,8 +474,8 @@ module Aws::EC2
     #
     # @overload accept_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def accept_transit_gateway_peering_attachment(params = {}, **options)
-      req = build_request(:accept_transit_gateway_peering_attachment, params)
+    def accept_transit_gateway_peering_attachment(, **options)
+      req = build_request(:accept_transit_gateway_peering_attachment, )
       req.send_request(options)
     end
 
@@ -527,8 +527,8 @@ module Aws::EC2
     #
     # @overload accept_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def accept_transit_gateway_vpc_attachment(params = {}, **options)
-      req = build_request(:accept_transit_gateway_vpc_attachment, params)
+    def accept_transit_gateway_vpc_attachment(, **options)
+      req = build_request(:accept_transit_gateway_vpc_attachment, )
       req.send_request(options)
     end
 
@@ -570,8 +570,8 @@ module Aws::EC2
     #
     # @overload accept_vpc_endpoint_connections(**params)
     # @param [Hash] params ({})
-    def accept_vpc_endpoint_connections(params = {}, **options)
-      req = build_request(:accept_vpc_endpoint_connections, params)
+    def accept_vpc_endpoint_connections(, **options)
+      req = build_request(:accept_vpc_endpoint_connections, )
       req.send_request(options)
     end
 
@@ -640,8 +640,8 @@ module Aws::EC2
     #
     # @overload accept_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def accept_vpc_peering_connection(params = {}, **options)
-      req = build_request(:accept_vpc_peering_connection, params)
+    def accept_vpc_peering_connection(, **options)
+      req = build_request(:accept_vpc_peering_connection, )
       req.send_request(options)
     end
 
@@ -695,8 +695,8 @@ module Aws::EC2
     #
     # @overload advertise_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def advertise_byoip_cidr(params = {}, **options)
-      req = build_request(:advertise_byoip_cidr, params)
+    def advertise_byoip_cidr(, **options)
+      req = build_request(:advertise_byoip_cidr, )
       req.send_request(options)
     end
 
@@ -850,8 +850,8 @@ module Aws::EC2
     #
     # @overload allocate_address(**params)
     # @param [Hash] params ({})
-    def allocate_address(params = {}, **options)
-      req = build_request(:allocate_address, params)
+    def allocate_address(, **options)
+      req = build_request(:allocate_address, )
       req.send_request(options)
     end
 
@@ -958,8 +958,8 @@ module Aws::EC2
     #
     # @overload allocate_hosts(**params)
     # @param [Hash] params ({})
-    def allocate_hosts(params = {}, **options)
-      req = build_request(:allocate_hosts, params)
+    def allocate_hosts(, **options)
+      req = build_request(:allocate_hosts, )
       req.send_request(options)
     end
 
@@ -1006,8 +1006,8 @@ module Aws::EC2
     #
     # @overload apply_security_groups_to_client_vpn_target_network(**params)
     # @param [Hash] params ({})
-    def apply_security_groups_to_client_vpn_target_network(params = {}, **options)
-      req = build_request(:apply_security_groups_to_client_vpn_target_network, params)
+    def apply_security_groups_to_client_vpn_target_network(, **options)
+      req = build_request(:apply_security_groups_to_client_vpn_target_network, )
       req.send_request(options)
     end
 
@@ -1064,8 +1064,8 @@ module Aws::EC2
     #
     # @overload assign_ipv_6_addresses(**params)
     # @param [Hash] params ({})
-    def assign_ipv_6_addresses(params = {}, **options)
-      req = build_request(:assign_ipv_6_addresses, params)
+    def assign_ipv_6_addresses(, **options)
+      req = build_request(:assign_ipv_6_addresses, )
       req.send_request(options)
     end
 
@@ -1166,8 +1166,8 @@ module Aws::EC2
     #
     # @overload assign_private_ip_addresses(**params)
     # @param [Hash] params ({})
-    def assign_private_ip_addresses(params = {}, **options)
-      req = build_request(:assign_private_ip_addresses, params)
+    def assign_private_ip_addresses(, **options)
+      req = build_request(:assign_private_ip_addresses, )
       req.send_request(options)
     end
 
@@ -1316,8 +1316,8 @@ module Aws::EC2
     #
     # @overload associate_address(**params)
     # @param [Hash] params ({})
-    def associate_address(params = {}, **options)
-      req = build_request(:associate_address, params)
+    def associate_address(, **options)
+      req = build_request(:associate_address, )
       req.send_request(options)
     end
 
@@ -1381,8 +1381,8 @@ module Aws::EC2
     #
     # @overload associate_client_vpn_target_network(**params)
     # @param [Hash] params ({})
-    def associate_client_vpn_target_network(params = {}, **options)
-      req = build_request(:associate_client_vpn_target_network, params)
+    def associate_client_vpn_target_network(, **options)
+      req = build_request(:associate_client_vpn_target_network, )
       req.send_request(options)
     end
 
@@ -1449,8 +1449,8 @@ module Aws::EC2
     #
     # @overload associate_dhcp_options(**params)
     # @param [Hash] params ({})
-    def associate_dhcp_options(params = {}, **options)
-      req = build_request(:associate_dhcp_options, params)
+    def associate_dhcp_options(, **options)
+      req = build_request(:associate_dhcp_options, )
       req.send_request(options)
     end
 
@@ -1516,8 +1516,8 @@ module Aws::EC2
     #
     # @overload associate_enclave_certificate_iam_role(**params)
     # @param [Hash] params ({})
-    def associate_enclave_certificate_iam_role(params = {}, **options)
-      req = build_request(:associate_enclave_certificate_iam_role, params)
+    def associate_enclave_certificate_iam_role(, **options)
+      req = build_request(:associate_enclave_certificate_iam_role, )
       req.send_request(options)
     end
 
@@ -1583,8 +1583,8 @@ module Aws::EC2
     #
     # @overload associate_iam_instance_profile(**params)
     # @param [Hash] params ({})
-    def associate_iam_instance_profile(params = {}, **options)
-      req = build_request(:associate_iam_instance_profile, params)
+    def associate_iam_instance_profile(, **options)
+      req = build_request(:associate_iam_instance_profile, )
       req.send_request(options)
     end
 
@@ -1656,8 +1656,8 @@ module Aws::EC2
     #
     # @overload associate_route_table(**params)
     # @param [Hash] params ({})
-    def associate_route_table(params = {}, **options)
-      req = build_request(:associate_route_table, params)
+    def associate_route_table(, **options)
+      req = build_request(:associate_route_table, )
       req.send_request(options)
     end
 
@@ -1696,8 +1696,8 @@ module Aws::EC2
     #
     # @overload associate_subnet_cidr_block(**params)
     # @param [Hash] params ({})
-    def associate_subnet_cidr_block(params = {}, **options)
-      req = build_request(:associate_subnet_cidr_block, params)
+    def associate_subnet_cidr_block(, **options)
+      req = build_request(:associate_subnet_cidr_block, )
       req.send_request(options)
     end
 
@@ -1757,8 +1757,8 @@ module Aws::EC2
     #
     # @overload associate_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def associate_transit_gateway_multicast_domain(params = {}, **options)
-      req = build_request(:associate_transit_gateway_multicast_domain, params)
+    def associate_transit_gateway_multicast_domain(, **options)
+      req = build_request(:associate_transit_gateway_multicast_domain, )
       req.send_request(options)
     end
 
@@ -1802,8 +1802,8 @@ module Aws::EC2
     #
     # @overload associate_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def associate_transit_gateway_route_table(params = {}, **options)
-      req = build_request(:associate_transit_gateway_route_table, params)
+    def associate_transit_gateway_route_table(, **options)
+      req = build_request(:associate_transit_gateway_route_table, )
       req.send_request(options)
     end
 
@@ -1890,8 +1890,8 @@ module Aws::EC2
     #
     # @overload associate_vpc_cidr_block(**params)
     # @param [Hash] params ({})
-    def associate_vpc_cidr_block(params = {}, **options)
-      req = build_request(:associate_vpc_cidr_block, params)
+    def associate_vpc_cidr_block(, **options)
+      req = build_request(:associate_vpc_cidr_block, )
       req.send_request(options)
     end
 
@@ -1947,8 +1947,8 @@ module Aws::EC2
     #
     # @overload attach_classic_link_vpc(**params)
     # @param [Hash] params ({})
-    def attach_classic_link_vpc(params = {}, **options)
-      req = build_request(:attach_classic_link_vpc, params)
+    def attach_classic_link_vpc(, **options)
+      req = build_request(:attach_classic_link_vpc, )
       req.send_request(options)
     end
 
@@ -1997,8 +1997,8 @@ module Aws::EC2
     #
     # @overload attach_internet_gateway(**params)
     # @param [Hash] params ({})
-    def attach_internet_gateway(params = {}, **options)
-      req = build_request(:attach_internet_gateway, params)
+    def attach_internet_gateway(, **options)
+      req = build_request(:attach_internet_gateway, )
       req.send_request(options)
     end
 
@@ -2064,8 +2064,8 @@ module Aws::EC2
     #
     # @overload attach_network_interface(**params)
     # @param [Hash] params ({})
-    def attach_network_interface(params = {}, **options)
-      req = build_request(:attach_network_interface, params)
+    def attach_network_interface(, **options)
+      req = build_request(:attach_network_interface, )
       req.send_request(options)
     end
 
@@ -2168,8 +2168,8 @@ module Aws::EC2
     #
     # @overload attach_volume(**params)
     # @param [Hash] params ({})
-    def attach_volume(params = {}, **options)
-      req = build_request(:attach_volume, params)
+    def attach_volume(, **options)
+      req = build_request(:attach_volume, )
       req.send_request(options)
     end
 
@@ -2216,8 +2216,8 @@ module Aws::EC2
     #
     # @overload attach_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def attach_vpn_gateway(params = {}, **options)
-      req = build_request(:attach_vpn_gateway, params)
+    def attach_vpn_gateway(, **options)
+      req = build_request(:attach_vpn_gateway, )
       req.send_request(options)
     end
 
@@ -2290,8 +2290,8 @@ module Aws::EC2
     #
     # @overload authorize_client_vpn_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_client_vpn_ingress(params = {}, **options)
-      req = build_request(:authorize_client_vpn_ingress, params)
+    def authorize_client_vpn_ingress(, **options)
+      req = build_request(:authorize_client_vpn_ingress, )
       req.send_request(options)
     end
 
@@ -2456,8 +2456,8 @@ module Aws::EC2
     #
     # @overload authorize_security_group_egress(**params)
     # @param [Hash] params ({})
-    def authorize_security_group_egress(params = {}, **options)
-      req = build_request(:authorize_security_group_egress, params)
+    def authorize_security_group_egress(, **options)
+      req = build_request(:authorize_security_group_egress, )
       req.send_request(options)
     end
 
@@ -2694,8 +2694,8 @@ module Aws::EC2
     #
     # @overload authorize_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_security_group_ingress(params = {}, **options)
-      req = build_request(:authorize_security_group_ingress, params)
+    def authorize_security_group_ingress(, **options)
+      req = build_request(:authorize_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -2770,8 +2770,8 @@ module Aws::EC2
     #
     # @overload bundle_instance(**params)
     # @param [Hash] params ({})
-    def bundle_instance(params = {}, **options)
-      req = build_request(:bundle_instance, params)
+    def bundle_instance(, **options)
+      req = build_request(:bundle_instance, )
       req.send_request(options)
     end
 
@@ -2818,8 +2818,8 @@ module Aws::EC2
     #
     # @overload cancel_bundle_task(**params)
     # @param [Hash] params ({})
-    def cancel_bundle_task(params = {}, **options)
-      req = build_request(:cancel_bundle_task, params)
+    def cancel_bundle_task(, **options)
+      req = build_request(:cancel_bundle_task, )
       req.send_request(options)
     end
 
@@ -2862,8 +2862,8 @@ module Aws::EC2
     #
     # @overload cancel_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def cancel_capacity_reservation(params = {}, **options)
-      req = build_request(:cancel_capacity_reservation, params)
+    def cancel_capacity_reservation(, **options)
+      req = build_request(:cancel_capacity_reservation, )
       req.send_request(options)
     end
 
@@ -2906,8 +2906,8 @@ module Aws::EC2
     #
     # @overload cancel_conversion_task(**params)
     # @param [Hash] params ({})
-    def cancel_conversion_task(params = {}, **options)
-      req = build_request(:cancel_conversion_task, params)
+    def cancel_conversion_task(, **options)
+      req = build_request(:cancel_conversion_task, )
       req.send_request(options)
     end
 
@@ -2932,8 +2932,8 @@ module Aws::EC2
     #
     # @overload cancel_export_task(**params)
     # @param [Hash] params ({})
-    def cancel_export_task(params = {}, **options)
-      req = build_request(:cancel_export_task, params)
+    def cancel_export_task(, **options)
+      req = build_request(:cancel_export_task, )
       req.send_request(options)
     end
 
@@ -2975,8 +2975,8 @@ module Aws::EC2
     #
     # @overload cancel_import_task(**params)
     # @param [Hash] params ({})
-    def cancel_import_task(params = {}, **options)
-      req = build_request(:cancel_import_task, params)
+    def cancel_import_task(, **options)
+      req = build_request(:cancel_import_task, )
       req.send_request(options)
     end
 
@@ -3029,8 +3029,8 @@ module Aws::EC2
     #
     # @overload cancel_reserved_instances_listing(**params)
     # @param [Hash] params ({})
-    def cancel_reserved_instances_listing(params = {}, **options)
-      req = build_request(:cancel_reserved_instances_listing, params)
+    def cancel_reserved_instances_listing(, **options)
+      req = build_request(:cancel_reserved_instances_listing, )
       req.send_request(options)
     end
 
@@ -3130,8 +3130,8 @@ module Aws::EC2
     #
     # @overload cancel_spot_fleet_requests(**params)
     # @param [Hash] params ({})
-    def cancel_spot_fleet_requests(params = {}, **options)
-      req = build_request(:cancel_spot_fleet_requests, params)
+    def cancel_spot_fleet_requests(, **options)
+      req = build_request(:cancel_spot_fleet_requests, )
       req.send_request(options)
     end
 
@@ -3191,8 +3191,8 @@ module Aws::EC2
     #
     # @overload cancel_spot_instance_requests(**params)
     # @param [Hash] params ({})
-    def cancel_spot_instance_requests(params = {}, **options)
-      req = build_request(:cancel_spot_instance_requests, params)
+    def cancel_spot_instance_requests(, **options)
+      req = build_request(:cancel_spot_instance_requests, )
       req.send_request(options)
     end
 
@@ -3250,8 +3250,8 @@ module Aws::EC2
     #
     # @overload confirm_product_instance(**params)
     # @param [Hash] params ({})
-    def confirm_product_instance(params = {}, **options)
-      req = build_request(:confirm_product_instance, params)
+    def confirm_product_instance(, **options)
+      req = build_request(:confirm_product_instance, )
       req.send_request(options)
     end
 
@@ -3307,8 +3307,8 @@ module Aws::EC2
     #
     # @overload copy_fpga_image(**params)
     # @param [Hash] params ({})
-    def copy_fpga_image(params = {}, **options)
-      req = build_request(:copy_fpga_image, params)
+    def copy_fpga_image(, **options)
+      req = build_request(:copy_fpga_image, )
       req.send_request(options)
     end
 
@@ -3437,8 +3437,8 @@ module Aws::EC2
     #
     # @overload copy_image(**params)
     # @param [Hash] params ({})
-    def copy_image(params = {}, **options)
-      req = build_request(:copy_image, params)
+    def copy_image(, **options)
+      req = build_request(:copy_image, )
       req.send_request(options)
     end
 
@@ -3609,8 +3609,8 @@ module Aws::EC2
     #
     # @overload copy_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_snapshot(params = {}, **options)
-      req = build_request(:copy_snapshot, params)
+    def copy_snapshot(, **options)
+      req = build_request(:copy_snapshot, )
       req.send_request(options)
     end
 
@@ -3811,8 +3811,8 @@ module Aws::EC2
     #
     # @overload create_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def create_capacity_reservation(params = {}, **options)
-      req = build_request(:create_capacity_reservation, params)
+    def create_capacity_reservation(, **options)
+      req = build_request(:create_capacity_reservation, )
       req.send_request(options)
     end
 
@@ -3885,8 +3885,8 @@ module Aws::EC2
     #
     # @overload create_carrier_gateway(**params)
     # @param [Hash] params ({})
-    def create_carrier_gateway(params = {}, **options)
-      req = build_request(:create_carrier_gateway, params)
+    def create_carrier_gateway(, **options)
+      req = build_request(:create_carrier_gateway, )
       req.send_request(options)
     end
 
@@ -4076,8 +4076,8 @@ module Aws::EC2
     #
     # @overload create_client_vpn_endpoint(**params)
     # @param [Hash] params ({})
-    def create_client_vpn_endpoint(params = {}, **options)
-      req = build_request(:create_client_vpn_endpoint, params)
+    def create_client_vpn_endpoint(, **options)
+      req = build_request(:create_client_vpn_endpoint, )
       req.send_request(options)
     end
 
@@ -4156,8 +4156,8 @@ module Aws::EC2
     #
     # @overload create_client_vpn_route(**params)
     # @param [Hash] params ({})
-    def create_client_vpn_route(params = {}, **options)
-      req = build_request(:create_client_vpn_route, params)
+    def create_client_vpn_route(, **options)
+      req = build_request(:create_client_vpn_route, )
       req.send_request(options)
     end
 
@@ -4294,8 +4294,8 @@ module Aws::EC2
     #
     # @overload create_customer_gateway(**params)
     # @param [Hash] params ({})
-    def create_customer_gateway(params = {}, **options)
-      req = build_request(:create_customer_gateway, params)
+    def create_customer_gateway(, **options)
+      req = build_request(:create_customer_gateway, )
       req.send_request(options)
     end
 
@@ -4359,8 +4359,8 @@ module Aws::EC2
     #
     # @overload create_default_subnet(**params)
     # @param [Hash] params ({})
-    def create_default_subnet(params = {}, **options)
-      req = build_request(:create_default_subnet, params)
+    def create_default_subnet(, **options)
+      req = build_request(:create_default_subnet, )
       req.send_request(options)
     end
 
@@ -4429,8 +4429,8 @@ module Aws::EC2
     #
     # @overload create_default_vpc(**params)
     # @param [Hash] params ({})
-    def create_default_vpc(params = {}, **options)
-      req = build_request(:create_default_vpc, params)
+    def create_default_vpc(, **options)
+      req = build_request(:create_default_vpc, )
       req.send_request(options)
     end
 
@@ -4576,8 +4576,8 @@ module Aws::EC2
     #
     # @overload create_dhcp_options(**params)
     # @param [Hash] params ({})
-    def create_dhcp_options(params = {}, **options)
-      req = build_request(:create_dhcp_options, params)
+    def create_dhcp_options(, **options)
+      req = build_request(:create_dhcp_options, )
       req.send_request(options)
     end
 
@@ -4648,8 +4648,8 @@ module Aws::EC2
     #
     # @overload create_egress_only_internet_gateway(**params)
     # @param [Hash] params ({})
-    def create_egress_only_internet_gateway(params = {}, **options)
-      req = build_request(:create_egress_only_internet_gateway, params)
+    def create_egress_only_internet_gateway(, **options)
+      req = build_request(:create_egress_only_internet_gateway, )
       req.send_request(options)
     end
 
@@ -4878,8 +4878,8 @@ module Aws::EC2
     #
     # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, **options)
-      req = build_request(:create_fleet, params)
+    def create_fleet(, **options)
+      req = build_request(:create_fleet, )
       req.send_request(options)
     end
 
@@ -5061,8 +5061,8 @@ module Aws::EC2
     #
     # @overload create_flow_logs(**params)
     # @param [Hash] params ({})
-    def create_flow_logs(params = {}, **options)
-      req = build_request(:create_flow_logs, params)
+    def create_flow_logs(, **options)
+      req = build_request(:create_flow_logs, )
       req.send_request(options)
     end
 
@@ -5154,8 +5154,8 @@ module Aws::EC2
     #
     # @overload create_fpga_image(**params)
     # @param [Hash] params ({})
-    def create_fpga_image(params = {}, **options)
-      req = build_request(:create_fpga_image, params)
+    def create_fpga_image(, **options)
+      req = build_request(:create_fpga_image, )
       req.send_request(options)
     end
 
@@ -5306,8 +5306,8 @@ module Aws::EC2
     #
     # @overload create_image(**params)
     # @param [Hash] params ({})
-    def create_image(params = {}, **options)
-      req = build_request(:create_image, params)
+    def create_image(, **options)
+      req = build_request(:create_image, )
       req.send_request(options)
     end
 
@@ -5387,8 +5387,8 @@ module Aws::EC2
     #
     # @overload create_instance_export_task(**params)
     # @param [Hash] params ({})
-    def create_instance_export_task(params = {}, **options)
-      req = build_request(:create_instance_export_task, params)
+    def create_instance_export_task(, **options)
+      req = build_request(:create_instance_export_task, )
       req.send_request(options)
     end
 
@@ -5466,8 +5466,8 @@ module Aws::EC2
     #
     # @overload create_internet_gateway(**params)
     # @param [Hash] params ({})
-    def create_internet_gateway(params = {}, **options)
-      req = build_request(:create_internet_gateway, params)
+    def create_internet_gateway(, **options)
+      req = build_request(:create_internet_gateway, )
       req.send_request(options)
     end
 
@@ -5553,8 +5553,8 @@ module Aws::EC2
     #
     # @overload create_key_pair(**params)
     # @param [Hash] params ({})
-    def create_key_pair(params = {}, **options)
-      req = build_request(:create_key_pair, params)
+    def create_key_pair(, **options)
+      req = build_request(:create_key_pair, )
       req.send_request(options)
     end
 
@@ -5825,8 +5825,8 @@ module Aws::EC2
     #
     # @overload create_launch_template(**params)
     # @param [Hash] params ({})
-    def create_launch_template(params = {}, **options)
-      req = build_request(:create_launch_template, params)
+    def create_launch_template(, **options)
+      req = build_request(:create_launch_template, )
       req.send_request(options)
     end
 
@@ -6184,8 +6184,8 @@ module Aws::EC2
     #
     # @overload create_launch_template_version(**params)
     # @param [Hash] params ({})
-    def create_launch_template_version(params = {}, **options)
-      req = build_request(:create_launch_template_version, params)
+    def create_launch_template_version(, **options)
+      req = build_request(:create_launch_template_version, )
       req.send_request(options)
     end
 
@@ -6234,8 +6234,8 @@ module Aws::EC2
     #
     # @overload create_local_gateway_route(**params)
     # @param [Hash] params ({})
-    def create_local_gateway_route(params = {}, **options)
-      req = build_request(:create_local_gateway_route, params)
+    def create_local_gateway_route(, **options)
+      req = build_request(:create_local_gateway_route, )
       req.send_request(options)
     end
 
@@ -6297,8 +6297,8 @@ module Aws::EC2
     #
     # @overload create_local_gateway_route_table_vpc_association(**params)
     # @param [Hash] params ({})
-    def create_local_gateway_route_table_vpc_association(params = {}, **options)
-      req = build_request(:create_local_gateway_route_table_vpc_association, params)
+    def create_local_gateway_route_table_vpc_association(, **options)
+      req = build_request(:create_local_gateway_route_table_vpc_association, )
       req.send_request(options)
     end
 
@@ -6399,8 +6399,8 @@ module Aws::EC2
     #
     # @overload create_managed_prefix_list(**params)
     # @param [Hash] params ({})
-    def create_managed_prefix_list(params = {}, **options)
-      req = build_request(:create_managed_prefix_list, params)
+    def create_managed_prefix_list(, **options)
+      req = build_request(:create_managed_prefix_list, )
       req.send_request(options)
     end
 
@@ -6528,8 +6528,8 @@ module Aws::EC2
     #
     # @overload create_nat_gateway(**params)
     # @param [Hash] params ({})
-    def create_nat_gateway(params = {}, **options)
-      req = build_request(:create_nat_gateway, params)
+    def create_nat_gateway(, **options)
+      req = build_request(:create_nat_gateway, )
       req.send_request(options)
     end
 
@@ -6645,8 +6645,8 @@ module Aws::EC2
     #
     # @overload create_network_acl(**params)
     # @param [Hash] params ({})
-    def create_network_acl(params = {}, **options)
-      req = build_request(:create_network_acl, params)
+    def create_network_acl(, **options)
+      req = build_request(:create_network_acl, )
       req.send_request(options)
     end
 
@@ -6771,8 +6771,8 @@ module Aws::EC2
     #
     # @overload create_network_acl_entry(**params)
     # @param [Hash] params ({})
-    def create_network_acl_entry(params = {}, **options)
-      req = build_request(:create_network_acl_entry, params)
+    def create_network_acl_entry(, **options)
+      req = build_request(:create_network_acl_entry, )
       req.send_request(options)
     end
 
@@ -6873,8 +6873,8 @@ module Aws::EC2
     #
     # @overload create_network_insights_path(**params)
     # @param [Hash] params ({})
-    def create_network_insights_path(params = {}, **options)
-      req = build_request(:create_network_insights_path, params)
+    def create_network_insights_path(, **options)
+      req = build_request(:create_network_insights_path, )
       req.send_request(options)
     end
 
@@ -7092,8 +7092,8 @@ module Aws::EC2
     #
     # @overload create_network_interface(**params)
     # @param [Hash] params ({})
-    def create_network_interface(params = {}, **options)
-      req = build_request(:create_network_interface, params)
+    def create_network_interface(, **options)
+      req = build_request(:create_network_interface, )
       req.send_request(options)
     end
 
@@ -7149,8 +7149,8 @@ module Aws::EC2
     #
     # @overload create_network_interface_permission(**params)
     # @param [Hash] params ({})
-    def create_network_interface_permission(params = {}, **options)
-      req = build_request(:create_network_interface_permission, params)
+    def create_network_interface_permission(, **options)
+      req = build_request(:create_network_interface_permission, )
       req.send_request(options)
     end
 
@@ -7247,8 +7247,8 @@ module Aws::EC2
     #
     # @overload create_placement_group(**params)
     # @param [Hash] params ({})
-    def create_placement_group(params = {}, **options)
-      req = build_request(:create_placement_group, params)
+    def create_placement_group(, **options)
+      req = build_request(:create_placement_group, )
       req.send_request(options)
     end
 
@@ -7352,8 +7352,8 @@ module Aws::EC2
     #
     # @overload create_reserved_instances_listing(**params)
     # @param [Hash] params ({})
-    def create_reserved_instances_listing(params = {}, **options)
-      req = build_request(:create_reserved_instances_listing, params)
+    def create_reserved_instances_listing(, **options)
+      req = build_request(:create_reserved_instances_listing, )
       req.send_request(options)
     end
 
@@ -7488,8 +7488,8 @@ module Aws::EC2
     #
     # @overload create_route(**params)
     # @param [Hash] params ({})
-    def create_route(params = {}, **options)
-      req = build_request(:create_route, params)
+    def create_route(, **options)
+      req = build_request(:create_route, )
       req.send_request(options)
     end
 
@@ -7606,8 +7606,8 @@ module Aws::EC2
     #
     # @overload create_route_table(**params)
     # @param [Hash] params ({})
-    def create_route_table(params = {}, **options)
-      req = build_request(:create_route_table, params)
+    def create_route_table(, **options)
+      req = build_request(:create_route_table, )
       req.send_request(options)
     end
 
@@ -7729,8 +7729,8 @@ module Aws::EC2
     #
     # @overload create_security_group(**params)
     # @param [Hash] params ({})
-    def create_security_group(params = {}, **options)
-      req = build_request(:create_security_group, params)
+    def create_security_group(, **options)
+      req = build_request(:create_security_group, )
       req.send_request(options)
     end
 
@@ -7871,8 +7871,8 @@ module Aws::EC2
     #
     # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, **options)
-      req = build_request(:create_snapshot, params)
+    def create_snapshot(, **options)
+      req = build_request(:create_snapshot, )
       req.send_request(options)
     end
 
@@ -7948,8 +7948,8 @@ module Aws::EC2
     #
     # @overload create_snapshots(**params)
     # @param [Hash] params ({})
-    def create_snapshots(params = {}, **options)
-      req = build_request(:create_snapshots, params)
+    def create_snapshots(, **options)
+      req = build_request(:create_snapshots, )
       req.send_request(options)
     end
 
@@ -8025,8 +8025,8 @@ module Aws::EC2
     #
     # @overload create_spot_datafeed_subscription(**params)
     # @param [Hash] params ({})
-    def create_spot_datafeed_subscription(params = {}, **options)
-      req = build_request(:create_spot_datafeed_subscription, params)
+    def create_spot_datafeed_subscription(, **options)
+      req = build_request(:create_spot_datafeed_subscription, )
       req.send_request(options)
     end
 
@@ -8188,8 +8188,8 @@ module Aws::EC2
     #
     # @overload create_subnet(**params)
     # @param [Hash] params ({})
-    def create_subnet(params = {}, **options)
-      req = build_request(:create_subnet, params)
+    def create_subnet(, **options)
+      req = build_request(:create_subnet, )
       req.send_request(options)
     end
 
@@ -8264,8 +8264,8 @@ module Aws::EC2
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -8376,8 +8376,8 @@ module Aws::EC2
     #
     # @overload create_traffic_mirror_filter(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_filter(params = {}, **options)
-      req = build_request(:create_traffic_mirror_filter, params)
+    def create_traffic_mirror_filter(, **options)
+      req = build_request(:create_traffic_mirror_filter, )
       req.send_request(options)
     end
 
@@ -8494,8 +8494,8 @@ module Aws::EC2
     #
     # @overload create_traffic_mirror_filter_rule(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_filter_rule(params = {}, **options)
-      req = build_request(:create_traffic_mirror_filter_rule, params)
+    def create_traffic_mirror_filter_rule(, **options)
+      req = build_request(:create_traffic_mirror_filter_rule, )
       req.send_request(options)
     end
 
@@ -8627,8 +8627,8 @@ module Aws::EC2
     #
     # @overload create_traffic_mirror_session(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_session(params = {}, **options)
-      req = build_request(:create_traffic_mirror_session, params)
+    def create_traffic_mirror_session(, **options)
+      req = build_request(:create_traffic_mirror_session, )
       req.send_request(options)
     end
 
@@ -8723,8 +8723,8 @@ module Aws::EC2
     #
     # @overload create_traffic_mirror_target(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_target(params = {}, **options)
-      req = build_request(:create_traffic_mirror_target, params)
+    def create_traffic_mirror_target(, **options)
+      req = build_request(:create_traffic_mirror_target, )
       req.send_request(options)
     end
 
@@ -8826,8 +8826,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway(params = {}, **options)
-      req = build_request(:create_transit_gateway, params)
+    def create_transit_gateway(, **options)
+      req = build_request(:create_transit_gateway, )
       req.send_request(options)
     end
 
@@ -8896,8 +8896,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_connect(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_connect(params = {}, **options)
-      req = build_request(:create_transit_gateway_connect, params)
+    def create_transit_gateway_connect(, **options)
+      req = build_request(:create_transit_gateway_connect, )
       req.send_request(options)
     end
 
@@ -8999,8 +8999,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_connect_peer(params = {}, **options)
-      req = build_request(:create_transit_gateway_connect_peer, params)
+    def create_transit_gateway_connect_peer(, **options)
+      req = build_request(:create_transit_gateway_connect_peer, )
       req.send_request(options)
     end
 
@@ -9075,8 +9075,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_multicast_domain(params = {}, **options)
-      req = build_request(:create_transit_gateway_multicast_domain, params)
+    def create_transit_gateway_multicast_domain(, **options)
+      req = build_request(:create_transit_gateway_multicast_domain, )
       req.send_request(options)
     end
 
@@ -9156,8 +9156,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_peering_attachment(params = {}, **options)
-      req = build_request(:create_transit_gateway_peering_attachment, params)
+    def create_transit_gateway_peering_attachment(, **options)
+      req = build_request(:create_transit_gateway_peering_attachment, )
       req.send_request(options)
     end
 
@@ -9211,8 +9211,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_prefix_list_reference(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_prefix_list_reference(params = {}, **options)
-      req = build_request(:create_transit_gateway_prefix_list_reference, params)
+    def create_transit_gateway_prefix_list_reference(, **options)
+      req = build_request(:create_transit_gateway_prefix_list_reference, )
       req.send_request(options)
     end
 
@@ -9266,8 +9266,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_route(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_route(params = {}, **options)
-      req = build_request(:create_transit_gateway_route, params)
+    def create_transit_gateway_route(, **options)
+      req = build_request(:create_transit_gateway_route, )
       req.send_request(options)
     end
 
@@ -9323,8 +9323,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_route_table(params = {}, **options)
-      req = build_request(:create_transit_gateway_route_table, params)
+    def create_transit_gateway_route_table(, **options)
+      req = build_request(:create_transit_gateway_route_table, )
       req.send_request(options)
     end
 
@@ -9411,8 +9411,8 @@ module Aws::EC2
     #
     # @overload create_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_vpc_attachment(params = {}, **options)
-      req = build_request(:create_transit_gateway_vpc_attachment, params)
+    def create_transit_gateway_vpc_attachment(, **options)
+      req = build_request(:create_transit_gateway_vpc_attachment, )
       req.send_request(options)
     end
 
@@ -9715,8 +9715,8 @@ module Aws::EC2
     #
     # @overload create_volume(**params)
     # @param [Hash] params ({})
-    def create_volume(params = {}, **options)
-      req = build_request(:create_volume, params)
+    def create_volume(, **options)
+      req = build_request(:create_volume, )
       req.send_request(options)
     end
 
@@ -9874,8 +9874,8 @@ module Aws::EC2
     #
     # @overload create_vpc(**params)
     # @param [Hash] params ({})
-    def create_vpc(params = {}, **options)
-      req = build_request(:create_vpc, params)
+    def create_vpc(, **options)
+      req = build_request(:create_vpc, )
       req.send_request(options)
     end
 
@@ -10037,8 +10037,8 @@ module Aws::EC2
     #
     # @overload create_vpc_endpoint(**params)
     # @param [Hash] params ({})
-    def create_vpc_endpoint(params = {}, **options)
-      req = build_request(:create_vpc_endpoint, params)
+    def create_vpc_endpoint(, **options)
+      req = build_request(:create_vpc_endpoint, )
       req.send_request(options)
     end
 
@@ -10114,8 +10114,8 @@ module Aws::EC2
     #
     # @overload create_vpc_endpoint_connection_notification(**params)
     # @param [Hash] params ({})
-    def create_vpc_endpoint_connection_notification(params = {}, **options)
-      req = build_request(:create_vpc_endpoint_connection_notification, params)
+    def create_vpc_endpoint_connection_notification(, **options)
+      req = build_request(:create_vpc_endpoint_connection_notification, )
       req.send_request(options)
     end
 
@@ -10239,8 +10239,8 @@ module Aws::EC2
     #
     # @overload create_vpc_endpoint_service_configuration(**params)
     # @param [Hash] params ({})
-    def create_vpc_endpoint_service_configuration(params = {}, **options)
-      req = build_request(:create_vpc_endpoint_service_configuration, params)
+    def create_vpc_endpoint_service_configuration(, **options)
+      req = build_request(:create_vpc_endpoint_service_configuration, )
       req.send_request(options)
     end
 
@@ -10357,8 +10357,8 @@ module Aws::EC2
     #
     # @overload create_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def create_vpc_peering_connection(params = {}, **options)
-      req = build_request(:create_vpc_peering_connection, params)
+    def create_vpc_peering_connection(, **options)
+      req = build_request(:create_vpc_peering_connection, )
       req.send_request(options)
     end
 
@@ -10560,8 +10560,8 @@ module Aws::EC2
     #
     # @overload create_vpn_connection(**params)
     # @param [Hash] params ({})
-    def create_vpn_connection(params = {}, **options)
-      req = build_request(:create_vpn_connection, params)
+    def create_vpn_connection(, **options)
+      req = build_request(:create_vpn_connection, )
       req.send_request(options)
     end
 
@@ -10597,8 +10597,8 @@ module Aws::EC2
     #
     # @overload create_vpn_connection_route(**params)
     # @param [Hash] params ({})
-    def create_vpn_connection_route(params = {}, **options)
-      req = build_request(:create_vpn_connection_route, params)
+    def create_vpn_connection_route(, **options)
+      req = build_request(:create_vpn_connection_route, )
       req.send_request(options)
     end
 
@@ -10678,8 +10678,8 @@ module Aws::EC2
     #
     # @overload create_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def create_vpn_gateway(params = {}, **options)
-      req = build_request(:create_vpn_gateway, params)
+    def create_vpn_gateway(, **options)
+      req = build_request(:create_vpn_gateway, )
       req.send_request(options)
     end
 
@@ -10727,8 +10727,8 @@ module Aws::EC2
     #
     # @overload delete_carrier_gateway(**params)
     # @param [Hash] params ({})
-    def delete_carrier_gateway(params = {}, **options)
-      req = build_request(:delete_carrier_gateway, params)
+    def delete_carrier_gateway(, **options)
+      req = build_request(:delete_carrier_gateway, )
       req.send_request(options)
     end
 
@@ -10764,8 +10764,8 @@ module Aws::EC2
     #
     # @overload delete_client_vpn_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_client_vpn_endpoint(params = {}, **options)
-      req = build_request(:delete_client_vpn_endpoint, params)
+    def delete_client_vpn_endpoint(, **options)
+      req = build_request(:delete_client_vpn_endpoint, )
       req.send_request(options)
     end
 
@@ -10813,8 +10813,8 @@ module Aws::EC2
     #
     # @overload delete_client_vpn_route(**params)
     # @param [Hash] params ({})
-    def delete_client_vpn_route(params = {}, **options)
-      req = build_request(:delete_client_vpn_route, params)
+    def delete_client_vpn_route(, **options)
+      req = build_request(:delete_client_vpn_route, )
       req.send_request(options)
     end
 
@@ -10852,8 +10852,8 @@ module Aws::EC2
     #
     # @overload delete_customer_gateway(**params)
     # @param [Hash] params ({})
-    def delete_customer_gateway(params = {}, **options)
-      req = build_request(:delete_customer_gateway, params)
+    def delete_customer_gateway(, **options)
+      req = build_request(:delete_customer_gateway, )
       req.send_request(options)
     end
 
@@ -10893,8 +10893,8 @@ module Aws::EC2
     #
     # @overload delete_dhcp_options(**params)
     # @param [Hash] params ({})
-    def delete_dhcp_options(params = {}, **options)
-      req = build_request(:delete_dhcp_options, params)
+    def delete_dhcp_options(, **options)
+      req = build_request(:delete_dhcp_options, )
       req.send_request(options)
     end
 
@@ -10928,8 +10928,8 @@ module Aws::EC2
     #
     # @overload delete_egress_only_internet_gateway(**params)
     # @param [Hash] params ({})
-    def delete_egress_only_internet_gateway(params = {}, **options)
-      req = build_request(:delete_egress_only_internet_gateway, params)
+    def delete_egress_only_internet_gateway(, **options)
+      req = build_request(:delete_egress_only_internet_gateway, )
       req.send_request(options)
     end
 
@@ -11012,8 +11012,8 @@ module Aws::EC2
     #
     # @overload delete_fleets(**params)
     # @param [Hash] params ({})
-    def delete_fleets(params = {}, **options)
-      req = build_request(:delete_fleets, params)
+    def delete_fleets(, **options)
+      req = build_request(:delete_fleets, )
       req.send_request(options)
     end
 
@@ -11052,8 +11052,8 @@ module Aws::EC2
     #
     # @overload delete_flow_logs(**params)
     # @param [Hash] params ({})
-    def delete_flow_logs(params = {}, **options)
-      req = build_request(:delete_flow_logs, params)
+    def delete_flow_logs(, **options)
+      req = build_request(:delete_flow_logs, )
       req.send_request(options)
     end
 
@@ -11087,8 +11087,8 @@ module Aws::EC2
     #
     # @overload delete_fpga_image(**params)
     # @param [Hash] params ({})
-    def delete_fpga_image(params = {}, **options)
-      req = build_request(:delete_fpga_image, params)
+    def delete_fpga_image(, **options)
+      req = build_request(:delete_fpga_image, )
       req.send_request(options)
     end
 
@@ -11126,8 +11126,8 @@ module Aws::EC2
     #
     # @overload delete_internet_gateway(**params)
     # @param [Hash] params ({})
-    def delete_internet_gateway(params = {}, **options)
-      req = build_request(:delete_internet_gateway, params)
+    def delete_internet_gateway(, **options)
+      req = build_request(:delete_internet_gateway, )
       req.send_request(options)
     end
 
@@ -11169,8 +11169,8 @@ module Aws::EC2
     #
     # @overload delete_key_pair(**params)
     # @param [Hash] params ({})
-    def delete_key_pair(params = {}, **options)
-      req = build_request(:delete_key_pair, params)
+    def delete_key_pair(, **options)
+      req = build_request(:delete_key_pair, )
       req.send_request(options)
     end
 
@@ -11240,8 +11240,8 @@ module Aws::EC2
     #
     # @overload delete_launch_template(**params)
     # @param [Hash] params ({})
-    def delete_launch_template(params = {}, **options)
-      req = build_request(:delete_launch_template, params)
+    def delete_launch_template(, **options)
+      req = build_request(:delete_launch_template, )
       req.send_request(options)
     end
 
@@ -11324,8 +11324,8 @@ module Aws::EC2
     #
     # @overload delete_launch_template_versions(**params)
     # @param [Hash] params ({})
-    def delete_launch_template_versions(params = {}, **options)
-      req = build_request(:delete_launch_template_versions, params)
+    def delete_launch_template_versions(, **options)
+      req = build_request(:delete_launch_template_versions, )
       req.send_request(options)
     end
 
@@ -11371,8 +11371,8 @@ module Aws::EC2
     #
     # @overload delete_local_gateway_route(**params)
     # @param [Hash] params ({})
-    def delete_local_gateway_route(params = {}, **options)
-      req = build_request(:delete_local_gateway_route, params)
+    def delete_local_gateway_route(, **options)
+      req = build_request(:delete_local_gateway_route, )
       req.send_request(options)
     end
 
@@ -11416,8 +11416,8 @@ module Aws::EC2
     #
     # @overload delete_local_gateway_route_table_vpc_association(**params)
     # @param [Hash] params ({})
-    def delete_local_gateway_route_table_vpc_association(params = {}, **options)
-      req = build_request(:delete_local_gateway_route_table_vpc_association, params)
+    def delete_local_gateway_route_table_vpc_association(, **options)
+      req = build_request(:delete_local_gateway_route_table_vpc_association, )
       req.send_request(options)
     end
 
@@ -11463,8 +11463,8 @@ module Aws::EC2
     #
     # @overload delete_managed_prefix_list(**params)
     # @param [Hash] params ({})
-    def delete_managed_prefix_list(params = {}, **options)
-      req = build_request(:delete_managed_prefix_list, params)
+    def delete_managed_prefix_list(, **options)
+      req = build_request(:delete_managed_prefix_list, )
       req.send_request(options)
     end
 
@@ -11515,8 +11515,8 @@ module Aws::EC2
     #
     # @overload delete_nat_gateway(**params)
     # @param [Hash] params ({})
-    def delete_nat_gateway(params = {}, **options)
-      req = build_request(:delete_nat_gateway, params)
+    def delete_nat_gateway(, **options)
+      req = build_request(:delete_nat_gateway, )
       req.send_request(options)
     end
 
@@ -11555,8 +11555,8 @@ module Aws::EC2
     #
     # @overload delete_network_acl(**params)
     # @param [Hash] params ({})
-    def delete_network_acl(params = {}, **options)
-      req = build_request(:delete_network_acl, params)
+    def delete_network_acl(, **options)
+      req = build_request(:delete_network_acl, )
       req.send_request(options)
     end
 
@@ -11604,8 +11604,8 @@ module Aws::EC2
     #
     # @overload delete_network_acl_entry(**params)
     # @param [Hash] params ({})
-    def delete_network_acl_entry(params = {}, **options)
-      req = build_request(:delete_network_acl_entry, params)
+    def delete_network_acl_entry(, **options)
+      req = build_request(:delete_network_acl_entry, )
       req.send_request(options)
     end
 
@@ -11639,8 +11639,8 @@ module Aws::EC2
     #
     # @overload delete_network_insights_analysis(**params)
     # @param [Hash] params ({})
-    def delete_network_insights_analysis(params = {}, **options)
-      req = build_request(:delete_network_insights_analysis, params)
+    def delete_network_insights_analysis(, **options)
+      req = build_request(:delete_network_insights_analysis, )
       req.send_request(options)
     end
 
@@ -11674,8 +11674,8 @@ module Aws::EC2
     #
     # @overload delete_network_insights_path(**params)
     # @param [Hash] params ({})
-    def delete_network_insights_path(params = {}, **options)
-      req = build_request(:delete_network_insights_path, params)
+    def delete_network_insights_path(, **options)
+      req = build_request(:delete_network_insights_path, )
       req.send_request(options)
     end
 
@@ -11713,8 +11713,8 @@ module Aws::EC2
     #
     # @overload delete_network_interface(**params)
     # @param [Hash] params ({})
-    def delete_network_interface(params = {}, **options)
-      req = build_request(:delete_network_interface, params)
+    def delete_network_interface(, **options)
+      req = build_request(:delete_network_interface, )
       req.send_request(options)
     end
 
@@ -11756,8 +11756,8 @@ module Aws::EC2
     #
     # @overload delete_network_interface_permission(**params)
     # @param [Hash] params ({})
-    def delete_network_interface_permission(params = {}, **options)
-      req = build_request(:delete_network_interface_permission, params)
+    def delete_network_interface_permission(, **options)
+      req = build_request(:delete_network_interface_permission, )
       req.send_request(options)
     end
 
@@ -11805,8 +11805,8 @@ module Aws::EC2
     #
     # @overload delete_placement_group(**params)
     # @param [Hash] params ({})
-    def delete_placement_group(params = {}, **options)
-      req = build_request(:delete_placement_group, params)
+    def delete_placement_group(, **options)
+      req = build_request(:delete_placement_group, )
       req.send_request(options)
     end
 
@@ -11846,8 +11846,8 @@ module Aws::EC2
     #
     # @overload delete_queued_reserved_instances(**params)
     # @param [Hash] params ({})
-    def delete_queued_reserved_instances(params = {}, **options)
-      req = build_request(:delete_queued_reserved_instances, params)
+    def delete_queued_reserved_instances(, **options)
+      req = build_request(:delete_queued_reserved_instances, )
       req.send_request(options)
     end
 
@@ -11899,8 +11899,8 @@ module Aws::EC2
     #
     # @overload delete_route(**params)
     # @param [Hash] params ({})
-    def delete_route(params = {}, **options)
-      req = build_request(:delete_route, params)
+    def delete_route(, **options)
+      req = build_request(:delete_route, )
       req.send_request(options)
     end
 
@@ -11939,8 +11939,8 @@ module Aws::EC2
     #
     # @overload delete_route_table(**params)
     # @param [Hash] params ({})
-    def delete_route_table(params = {}, **options)
-      req = build_request(:delete_route_table, params)
+    def delete_route_table(, **options)
+      req = build_request(:delete_route_table, )
       req.send_request(options)
     end
 
@@ -11991,8 +11991,8 @@ module Aws::EC2
     #
     # @overload delete_security_group(**params)
     # @param [Hash] params ({})
-    def delete_security_group(params = {}, **options)
-      req = build_request(:delete_security_group, params)
+    def delete_security_group(, **options)
+      req = build_request(:delete_security_group, )
       req.send_request(options)
     end
 
@@ -12053,8 +12053,8 @@ module Aws::EC2
     #
     # @overload delete_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_snapshot(params = {}, **options)
-      req = build_request(:delete_snapshot, params)
+    def delete_snapshot(, **options)
+      req = build_request(:delete_snapshot, )
       req.send_request(options)
     end
 
@@ -12086,8 +12086,8 @@ module Aws::EC2
     #
     # @overload delete_spot_datafeed_subscription(**params)
     # @param [Hash] params ({})
-    def delete_spot_datafeed_subscription(params = {}, **options)
-      req = build_request(:delete_spot_datafeed_subscription, params)
+    def delete_spot_datafeed_subscription(, **options)
+      req = build_request(:delete_spot_datafeed_subscription, )
       req.send_request(options)
     end
 
@@ -12125,8 +12125,8 @@ module Aws::EC2
     #
     # @overload delete_subnet(**params)
     # @param [Hash] params ({})
-    def delete_subnet(params = {}, **options)
-      req = build_request(:delete_subnet, params)
+    def delete_subnet(, **options)
+      req = build_request(:delete_subnet, )
       req.send_request(options)
     end
 
@@ -12199,8 +12199,8 @@ module Aws::EC2
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -12237,8 +12237,8 @@ module Aws::EC2
     #
     # @overload delete_traffic_mirror_filter(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_filter(params = {}, **options)
-      req = build_request(:delete_traffic_mirror_filter, params)
+    def delete_traffic_mirror_filter(, **options)
+      req = build_request(:delete_traffic_mirror_filter, )
       req.send_request(options)
     end
 
@@ -12272,8 +12272,8 @@ module Aws::EC2
     #
     # @overload delete_traffic_mirror_filter_rule(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_filter_rule(params = {}, **options)
-      req = build_request(:delete_traffic_mirror_filter_rule, params)
+    def delete_traffic_mirror_filter_rule(, **options)
+      req = build_request(:delete_traffic_mirror_filter_rule, )
       req.send_request(options)
     end
 
@@ -12307,8 +12307,8 @@ module Aws::EC2
     #
     # @overload delete_traffic_mirror_session(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_session(params = {}, **options)
-      req = build_request(:delete_traffic_mirror_session, params)
+    def delete_traffic_mirror_session(, **options)
+      req = build_request(:delete_traffic_mirror_session, )
       req.send_request(options)
     end
 
@@ -12345,8 +12345,8 @@ module Aws::EC2
     #
     # @overload delete_traffic_mirror_target(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_target(params = {}, **options)
-      req = build_request(:delete_traffic_mirror_target, params)
+    def delete_traffic_mirror_target(, **options)
+      req = build_request(:delete_traffic_mirror_target, )
       req.send_request(options)
     end
 
@@ -12399,8 +12399,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway(params = {}, **options)
-      req = build_request(:delete_transit_gateway, params)
+    def delete_transit_gateway(, **options)
+      req = build_request(:delete_transit_gateway, )
       req.send_request(options)
     end
 
@@ -12443,8 +12443,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_connect(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_connect(params = {}, **options)
-      req = build_request(:delete_transit_gateway_connect, params)
+    def delete_transit_gateway_connect(, **options)
+      req = build_request(:delete_transit_gateway_connect, )
       req.send_request(options)
     end
 
@@ -12495,8 +12495,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_connect_peer(params = {}, **options)
-      req = build_request(:delete_transit_gateway_connect_peer, params)
+    def delete_transit_gateway_connect_peer(, **options)
+      req = build_request(:delete_transit_gateway_connect_peer, )
       req.send_request(options)
     end
 
@@ -12541,8 +12541,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_multicast_domain(params = {}, **options)
-      req = build_request(:delete_transit_gateway_multicast_domain, params)
+    def delete_transit_gateway_multicast_domain(, **options)
+      req = build_request(:delete_transit_gateway_multicast_domain, )
       req.send_request(options)
     end
 
@@ -12589,8 +12589,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_peering_attachment(params = {}, **options)
-      req = build_request(:delete_transit_gateway_peering_attachment, params)
+    def delete_transit_gateway_peering_attachment(, **options)
+      req = build_request(:delete_transit_gateway_peering_attachment, )
       req.send_request(options)
     end
 
@@ -12636,8 +12636,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_prefix_list_reference(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_prefix_list_reference(params = {}, **options)
-      req = build_request(:delete_transit_gateway_prefix_list_reference, params)
+    def delete_transit_gateway_prefix_list_reference(, **options)
+      req = build_request(:delete_transit_gateway_prefix_list_reference, )
       req.send_request(options)
     end
 
@@ -12684,8 +12684,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_route(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_route(params = {}, **options)
-      req = build_request(:delete_transit_gateway_route, params)
+    def delete_transit_gateway_route(, **options)
+      req = build_request(:delete_transit_gateway_route, )
       req.send_request(options)
     end
 
@@ -12729,8 +12729,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_route_table(params = {}, **options)
-      req = build_request(:delete_transit_gateway_route_table, params)
+    def delete_transit_gateway_route_table(, **options)
+      req = build_request(:delete_transit_gateway_route_table, )
       req.send_request(options)
     end
 
@@ -12777,8 +12777,8 @@ module Aws::EC2
     #
     # @overload delete_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_vpc_attachment(params = {}, **options)
-      req = build_request(:delete_transit_gateway_vpc_attachment, params)
+    def delete_transit_gateway_vpc_attachment(, **options)
+      req = build_request(:delete_transit_gateway_vpc_attachment, )
       req.send_request(options)
     end
 
@@ -12830,8 +12830,8 @@ module Aws::EC2
     #
     # @overload delete_volume(**params)
     # @param [Hash] params ({})
-    def delete_volume(params = {}, **options)
-      req = build_request(:delete_volume, params)
+    def delete_volume(, **options)
+      req = build_request(:delete_volume, )
       req.send_request(options)
     end
 
@@ -12873,8 +12873,8 @@ module Aws::EC2
     #
     # @overload delete_vpc(**params)
     # @param [Hash] params ({})
-    def delete_vpc(params = {}, **options)
-      req = build_request(:delete_vpc, params)
+    def delete_vpc(, **options)
+      req = build_request(:delete_vpc, )
       req.send_request(options)
     end
 
@@ -12911,8 +12911,8 @@ module Aws::EC2
     #
     # @overload delete_vpc_endpoint_connection_notifications(**params)
     # @param [Hash] params ({})
-    def delete_vpc_endpoint_connection_notifications(params = {}, **options)
-      req = build_request(:delete_vpc_endpoint_connection_notifications, params)
+    def delete_vpc_endpoint_connection_notifications(, **options)
+      req = build_request(:delete_vpc_endpoint_connection_notifications, )
       req.send_request(options)
     end
 
@@ -12952,8 +12952,8 @@ module Aws::EC2
     #
     # @overload delete_vpc_endpoint_service_configurations(**params)
     # @param [Hash] params ({})
-    def delete_vpc_endpoint_service_configurations(params = {}, **options)
-      req = build_request(:delete_vpc_endpoint_service_configurations, params)
+    def delete_vpc_endpoint_service_configurations(, **options)
+      req = build_request(:delete_vpc_endpoint_service_configurations, )
       req.send_request(options)
     end
 
@@ -12995,8 +12995,8 @@ module Aws::EC2
     #
     # @overload delete_vpc_endpoints(**params)
     # @param [Hash] params ({})
-    def delete_vpc_endpoints(params = {}, **options)
-      req = build_request(:delete_vpc_endpoints, params)
+    def delete_vpc_endpoints(, **options)
+      req = build_request(:delete_vpc_endpoints, )
       req.send_request(options)
     end
 
@@ -13035,8 +13035,8 @@ module Aws::EC2
     #
     # @overload delete_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def delete_vpc_peering_connection(params = {}, **options)
-      req = build_request(:delete_vpc_peering_connection, params)
+    def delete_vpc_peering_connection(, **options)
+      req = build_request(:delete_vpc_peering_connection, )
       req.send_request(options)
     end
 
@@ -13078,8 +13078,8 @@ module Aws::EC2
     #
     # @overload delete_vpn_connection(**params)
     # @param [Hash] params ({})
-    def delete_vpn_connection(params = {}, **options)
-      req = build_request(:delete_vpn_connection, params)
+    def delete_vpn_connection(, **options)
+      req = build_request(:delete_vpn_connection, )
       req.send_request(options)
     end
 
@@ -13108,8 +13108,8 @@ module Aws::EC2
     #
     # @overload delete_vpn_connection_route(**params)
     # @param [Hash] params ({})
-    def delete_vpn_connection_route(params = {}, **options)
-      req = build_request(:delete_vpn_connection_route, params)
+    def delete_vpn_connection_route(, **options)
+      req = build_request(:delete_vpn_connection_route, )
       req.send_request(options)
     end
 
@@ -13140,8 +13140,8 @@ module Aws::EC2
     #
     # @overload delete_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def delete_vpn_gateway(params = {}, **options)
-      req = build_request(:delete_vpn_gateway, params)
+    def delete_vpn_gateway(, **options)
+      req = build_request(:delete_vpn_gateway, )
       req.send_request(options)
     end
 
@@ -13185,8 +13185,8 @@ module Aws::EC2
     #
     # @overload deprovision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def deprovision_byoip_cidr(params = {}, **options)
-      req = build_request(:deprovision_byoip_cidr, params)
+    def deprovision_byoip_cidr(, **options)
+      req = build_request(:deprovision_byoip_cidr, )
       req.send_request(options)
     end
 
@@ -13223,8 +13223,8 @@ module Aws::EC2
     #
     # @overload deregister_image(**params)
     # @param [Hash] params ({})
-    def deregister_image(params = {}, **options)
-      req = build_request(:deregister_image, params)
+    def deregister_image(, **options)
+      req = build_request(:deregister_image, )
       req.send_request(options)
     end
 
@@ -13265,8 +13265,8 @@ module Aws::EC2
     #
     # @overload deregister_instance_event_notification_attributes(**params)
     # @param [Hash] params ({})
-    def deregister_instance_event_notification_attributes(params = {}, **options)
-      req = build_request(:deregister_instance_event_notification_attributes, params)
+    def deregister_instance_event_notification_attributes(, **options)
+      req = build_request(:deregister_instance_event_notification_attributes, )
       req.send_request(options)
     end
 
@@ -13312,8 +13312,8 @@ module Aws::EC2
     #
     # @overload deregister_transit_gateway_multicast_group_members(**params)
     # @param [Hash] params ({})
-    def deregister_transit_gateway_multicast_group_members(params = {}, **options)
-      req = build_request(:deregister_transit_gateway_multicast_group_members, params)
+    def deregister_transit_gateway_multicast_group_members(, **options)
+      req = build_request(:deregister_transit_gateway_multicast_group_members, )
       req.send_request(options)
     end
 
@@ -13359,8 +13359,8 @@ module Aws::EC2
     #
     # @overload deregister_transit_gateway_multicast_group_sources(**params)
     # @param [Hash] params ({})
-    def deregister_transit_gateway_multicast_group_sources(params = {}, **options)
-      req = build_request(:deregister_transit_gateway_multicast_group_sources, params)
+    def deregister_transit_gateway_multicast_group_sources(, **options)
+      req = build_request(:deregister_transit_gateway_multicast_group_sources, )
       req.send_request(options)
     end
 
@@ -13514,8 +13514,8 @@ module Aws::EC2
     #
     # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, **options)
-      req = build_request(:describe_account_attributes, params)
+    def describe_account_attributes(, **options)
+      req = build_request(:describe_account_attributes, )
       req.send_request(options)
     end
 
@@ -13708,8 +13708,8 @@ module Aws::EC2
     #
     # @overload describe_addresses(**params)
     # @param [Hash] params ({})
-    def describe_addresses(params = {}, **options)
-      req = build_request(:describe_addresses, params)
+    def describe_addresses(, **options)
+      req = build_request(:describe_addresses, )
       req.send_request(options)
     end
 
@@ -13762,8 +13762,8 @@ module Aws::EC2
     #
     # @overload describe_aggregate_id_format(**params)
     # @param [Hash] params ({})
-    def describe_aggregate_id_format(params = {}, **options)
-      req = build_request(:describe_aggregate_id_format, params)
+    def describe_aggregate_id_format(, **options)
+      req = build_request(:describe_aggregate_id_format, )
       req.send_request(options)
     end
 
@@ -13923,8 +13923,8 @@ module Aws::EC2
     #
     # @overload describe_availability_zones(**params)
     # @param [Hash] params ({})
-    def describe_availability_zones(params = {}, **options)
-      req = build_request(:describe_availability_zones, params)
+    def describe_availability_zones(, **options)
+      req = build_request(:describe_availability_zones, )
       req.send_request(options)
     end
 
@@ -14018,8 +14018,8 @@ module Aws::EC2
     #
     # @overload describe_bundle_tasks(**params)
     # @param [Hash] params ({})
-    def describe_bundle_tasks(params = {}, **options)
-      req = build_request(:describe_bundle_tasks, params)
+    def describe_bundle_tasks(, **options)
+      req = build_request(:describe_bundle_tasks, )
       req.send_request(options)
     end
 
@@ -14071,8 +14071,8 @@ module Aws::EC2
     #
     # @overload describe_byoip_cidrs(**params)
     # @param [Hash] params ({})
-    def describe_byoip_cidrs(params = {}, **options)
-      req = build_request(:describe_byoip_cidrs, params)
+    def describe_byoip_cidrs(, **options)
+      req = build_request(:describe_byoip_cidrs, )
       req.send_request(options)
     end
 
@@ -14229,8 +14229,8 @@ module Aws::EC2
     #
     # @overload describe_capacity_reservations(**params)
     # @param [Hash] params ({})
-    def describe_capacity_reservations(params = {}, **options)
-      req = build_request(:describe_capacity_reservations, params)
+    def describe_capacity_reservations(, **options)
+      req = build_request(:describe_capacity_reservations, )
       req.send_request(options)
     end
 
@@ -14313,8 +14313,8 @@ module Aws::EC2
     #
     # @overload describe_carrier_gateways(**params)
     # @param [Hash] params ({})
-    def describe_carrier_gateways(params = {}, **options)
-      req = build_request(:describe_carrier_gateways, params)
+    def describe_carrier_gateways(, **options)
+      req = build_request(:describe_carrier_gateways, )
       req.send_request(options)
     end
 
@@ -14405,8 +14405,8 @@ module Aws::EC2
     #
     # @overload describe_classic_link_instances(**params)
     # @param [Hash] params ({})
-    def describe_classic_link_instances(params = {}, **options)
-      req = build_request(:describe_classic_link_instances, params)
+    def describe_classic_link_instances(, **options)
+      req = build_request(:describe_classic_link_instances, )
       req.send_request(options)
     end
 
@@ -14478,8 +14478,8 @@ module Aws::EC2
     #
     # @overload describe_client_vpn_authorization_rules(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_authorization_rules(params = {}, **options)
-      req = build_request(:describe_client_vpn_authorization_rules, params)
+    def describe_client_vpn_authorization_rules(, **options)
+      req = build_request(:describe_client_vpn_authorization_rules, )
       req.send_request(options)
     end
 
@@ -14559,8 +14559,8 @@ module Aws::EC2
     #
     # @overload describe_client_vpn_connections(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_connections(params = {}, **options)
-      req = build_request(:describe_client_vpn_connections, params)
+    def describe_client_vpn_connections(, **options)
+      req = build_request(:describe_client_vpn_connections, )
       req.send_request(options)
     end
 
@@ -14659,8 +14659,8 @@ module Aws::EC2
     #
     # @overload describe_client_vpn_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_endpoints(params = {}, **options)
-      req = build_request(:describe_client_vpn_endpoints, params)
+    def describe_client_vpn_endpoints(, **options)
+      req = build_request(:describe_client_vpn_endpoints, )
       req.send_request(options)
     end
 
@@ -14733,8 +14733,8 @@ module Aws::EC2
     #
     # @overload describe_client_vpn_routes(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_routes(params = {}, **options)
-      req = build_request(:describe_client_vpn_routes, params)
+    def describe_client_vpn_routes(, **options)
+      req = build_request(:describe_client_vpn_routes, )
       req.send_request(options)
     end
 
@@ -14811,8 +14811,8 @@ module Aws::EC2
     #
     # @overload describe_client_vpn_target_networks(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_target_networks(params = {}, **options)
-      req = build_request(:describe_client_vpn_target_networks, params)
+    def describe_client_vpn_target_networks(, **options)
+      req = build_request(:describe_client_vpn_target_networks, )
       req.send_request(options)
     end
 
@@ -14887,8 +14887,8 @@ module Aws::EC2
     #
     # @overload describe_coip_pools(**params)
     # @param [Hash] params ({})
-    def describe_coip_pools(params = {}, **options)
-      req = build_request(:describe_coip_pools, params)
+    def describe_coip_pools(, **options)
+      req = build_request(:describe_coip_pools, )
       req.send_request(options)
     end
 
@@ -14969,8 +14969,8 @@ module Aws::EC2
     #
     # @overload describe_conversion_tasks(**params)
     # @param [Hash] params ({})
-    def describe_conversion_tasks(params = {}, **options)
-      req = build_request(:describe_conversion_tasks, params)
+    def describe_conversion_tasks(, **options)
+      req = build_request(:describe_conversion_tasks, )
       req.send_request(options)
     end
 
@@ -15085,8 +15085,8 @@ module Aws::EC2
     #
     # @overload describe_customer_gateways(**params)
     # @param [Hash] params ({})
-    def describe_customer_gateways(params = {}, **options)
-      req = build_request(:describe_customer_gateways, params)
+    def describe_customer_gateways(, **options)
+      req = build_request(:describe_customer_gateways, )
       req.send_request(options)
     end
 
@@ -15213,8 +15213,8 @@ module Aws::EC2
     #
     # @overload describe_dhcp_options(**params)
     # @param [Hash] params ({})
-    def describe_dhcp_options(params = {}, **options)
-      req = build_request(:describe_dhcp_options, params)
+    def describe_dhcp_options(, **options)
+      req = build_request(:describe_dhcp_options, )
       req.send_request(options)
     end
 
@@ -15288,8 +15288,8 @@ module Aws::EC2
     #
     # @overload describe_egress_only_internet_gateways(**params)
     # @param [Hash] params ({})
-    def describe_egress_only_internet_gateways(params = {}, **options)
-      req = build_request(:describe_egress_only_internet_gateways, params)
+    def describe_egress_only_internet_gateways(, **options)
+      req = build_request(:describe_egress_only_internet_gateways, )
       req.send_request(options)
     end
 
@@ -15376,8 +15376,8 @@ module Aws::EC2
     #
     # @overload describe_elastic_gpus(**params)
     # @param [Hash] params ({})
-    def describe_elastic_gpus(params = {}, **options)
-      req = build_request(:describe_elastic_gpus, params)
+    def describe_elastic_gpus(, **options)
+      req = build_request(:describe_elastic_gpus, )
       req.send_request(options)
     end
 
@@ -15445,8 +15445,8 @@ module Aws::EC2
     #
     # @overload describe_export_image_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_image_tasks(params = {}, **options)
-      req = build_request(:describe_export_image_tasks, params)
+    def describe_export_image_tasks(, **options)
+      req = build_request(:describe_export_image_tasks, )
       req.send_request(options)
     end
 
@@ -15502,8 +15502,8 @@ module Aws::EC2
     #
     # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, **options)
-      req = build_request(:describe_export_tasks, params)
+    def describe_export_tasks(, **options)
+      req = build_request(:describe_export_tasks, )
       req.send_request(options)
     end
 
@@ -15578,8 +15578,8 @@ module Aws::EC2
     #
     # @overload describe_fast_snapshot_restores(**params)
     # @param [Hash] params ({})
-    def describe_fast_snapshot_restores(params = {}, **options)
-      req = build_request(:describe_fast_snapshot_restores, params)
+    def describe_fast_snapshot_restores(, **options)
+      req = build_request(:describe_fast_snapshot_restores, )
       req.send_request(options)
     end
 
@@ -15652,8 +15652,8 @@ module Aws::EC2
     #
     # @overload describe_fleet_history(**params)
     # @param [Hash] params ({})
-    def describe_fleet_history(params = {}, **options)
-      req = build_request(:describe_fleet_history, params)
+    def describe_fleet_history(, **options)
+      req = build_request(:describe_fleet_history, )
       req.send_request(options)
     end
 
@@ -15719,8 +15719,8 @@ module Aws::EC2
     #
     # @overload describe_fleet_instances(**params)
     # @param [Hash] params ({})
-    def describe_fleet_instances(params = {}, **options)
-      req = build_request(:describe_fleet_instances, params)
+    def describe_fleet_instances(, **options)
+      req = build_request(:describe_fleet_instances, )
       req.send_request(options)
     end
 
@@ -15870,8 +15870,8 @@ module Aws::EC2
     #
     # @overload describe_fleets(**params)
     # @param [Hash] params ({})
-    def describe_fleets(params = {}, **options)
-      req = build_request(:describe_fleets, params)
+    def describe_fleets(, **options)
+      req = build_request(:describe_fleets, )
       req.send_request(options)
     end
 
@@ -15974,8 +15974,8 @@ module Aws::EC2
     #
     # @overload describe_flow_logs(**params)
     # @param [Hash] params ({})
-    def describe_flow_logs(params = {}, **options)
-      req = build_request(:describe_flow_logs, params)
+    def describe_flow_logs(, **options)
+      req = build_request(:describe_flow_logs, )
       req.send_request(options)
     end
 
@@ -16022,8 +16022,8 @@ module Aws::EC2
     #
     # @overload describe_fpga_image_attribute(**params)
     # @param [Hash] params ({})
-    def describe_fpga_image_attribute(params = {}, **options)
-      req = build_request(:describe_fpga_image_attribute, params)
+    def describe_fpga_image_attribute(, **options)
+      req = build_request(:describe_fpga_image_attribute, )
       req.send_request(options)
     end
 
@@ -16139,8 +16139,8 @@ module Aws::EC2
     #
     # @overload describe_fpga_images(**params)
     # @param [Hash] params ({})
-    def describe_fpga_images(params = {}, **options)
-      req = build_request(:describe_fpga_images, params)
+    def describe_fpga_images(, **options)
+      req = build_request(:describe_fpga_images, )
       req.send_request(options)
     end
 
@@ -16234,8 +16234,8 @@ module Aws::EC2
     #
     # @overload describe_host_reservation_offerings(**params)
     # @param [Hash] params ({})
-    def describe_host_reservation_offerings(params = {}, **options)
-      req = build_request(:describe_host_reservation_offerings, params)
+    def describe_host_reservation_offerings(, **options)
+      req = build_request(:describe_host_reservation_offerings, )
       req.send_request(options)
     end
 
@@ -16323,8 +16323,8 @@ module Aws::EC2
     #
     # @overload describe_host_reservations(**params)
     # @param [Hash] params ({})
-    def describe_host_reservations(params = {}, **options)
-      req = build_request(:describe_host_reservations, params)
+    def describe_host_reservations(, **options)
+      req = build_request(:describe_host_reservations, )
       req.send_request(options)
     end
 
@@ -16437,8 +16437,8 @@ module Aws::EC2
     #
     # @overload describe_hosts(**params)
     # @param [Hash] params ({})
-    def describe_hosts(params = {}, **options)
-      req = build_request(:describe_hosts, params)
+    def describe_hosts(, **options)
+      req = build_request(:describe_hosts, )
       req.send_request(options)
     end
 
@@ -16525,8 +16525,8 @@ module Aws::EC2
     #
     # @overload describe_iam_instance_profile_associations(**params)
     # @param [Hash] params ({})
-    def describe_iam_instance_profile_associations(params = {}, **options)
-      req = build_request(:describe_iam_instance_profile_associations, params)
+    def describe_iam_instance_profile_associations(, **options)
+      req = build_request(:describe_iam_instance_profile_associations, )
       req.send_request(options)
     end
 
@@ -16589,8 +16589,8 @@ module Aws::EC2
     #
     # @overload describe_id_format(**params)
     # @param [Hash] params ({})
-    def describe_id_format(params = {}, **options)
-      req = build_request(:describe_id_format, params)
+    def describe_id_format(, **options)
+      req = build_request(:describe_id_format, )
       req.send_request(options)
     end
 
@@ -16659,8 +16659,8 @@ module Aws::EC2
     #
     # @overload describe_identity_id_format(**params)
     # @param [Hash] params ({})
-    def describe_identity_id_format(params = {}, **options)
-      req = build_request(:describe_identity_id_format, params)
+    def describe_identity_id_format(, **options)
+      req = build_request(:describe_identity_id_format, )
       req.send_request(options)
     end
 
@@ -16753,8 +16753,8 @@ module Aws::EC2
     #
     # @overload describe_image_attribute(**params)
     # @param [Hash] params ({})
-    def describe_image_attribute(params = {}, **options)
-      req = build_request(:describe_image_attribute, params)
+    def describe_image_attribute(, **options)
+      req = build_request(:describe_image_attribute, )
       req.send_request(options)
     end
 
@@ -17003,8 +17003,8 @@ module Aws::EC2
     #
     # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, **options)
-      req = build_request(:describe_images, params)
+    def describe_images(, **options)
+      req = build_request(:describe_images, )
       req.send_request(options)
     end
 
@@ -17090,8 +17090,8 @@ module Aws::EC2
     #
     # @overload describe_import_image_tasks(**params)
     # @param [Hash] params ({})
-    def describe_import_image_tasks(params = {}, **options)
-      req = build_request(:describe_import_image_tasks, params)
+    def describe_import_image_tasks(, **options)
+      req = build_request(:describe_import_image_tasks, )
       req.send_request(options)
     end
 
@@ -17165,8 +17165,8 @@ module Aws::EC2
     #
     # @overload describe_import_snapshot_tasks(**params)
     # @param [Hash] params ({})
-    def describe_import_snapshot_tasks(params = {}, **options)
-      req = build_request(:describe_import_snapshot_tasks, params)
+    def describe_import_snapshot_tasks(, **options)
+      req = build_request(:describe_import_snapshot_tasks, )
       req.send_request(options)
     end
 
@@ -17319,8 +17319,8 @@ module Aws::EC2
     #
     # @overload describe_instance_attribute(**params)
     # @param [Hash] params ({})
-    def describe_instance_attribute(params = {}, **options)
-      req = build_request(:describe_instance_attribute, params)
+    def describe_instance_attribute(, **options)
+      req = build_request(:describe_instance_attribute, )
       req.send_request(options)
     end
 
@@ -17417,8 +17417,8 @@ module Aws::EC2
     #
     # @overload describe_instance_credit_specifications(**params)
     # @param [Hash] params ({})
-    def describe_instance_credit_specifications(params = {}, **options)
-      req = build_request(:describe_instance_credit_specifications, params)
+    def describe_instance_credit_specifications(, **options)
+      req = build_request(:describe_instance_credit_specifications, )
       req.send_request(options)
     end
 
@@ -17451,8 +17451,8 @@ module Aws::EC2
     #
     # @overload describe_instance_event_notification_attributes(**params)
     # @param [Hash] params ({})
-    def describe_instance_event_notification_attributes(params = {}, **options)
-      req = build_request(:describe_instance_event_notification_attributes, params)
+    def describe_instance_event_notification_attributes(, **options)
+      req = build_request(:describe_instance_event_notification_attributes, )
       req.send_request(options)
     end
 
@@ -17666,8 +17666,8 @@ module Aws::EC2
     #
     # @overload describe_instance_status(**params)
     # @param [Hash] params ({})
-    def describe_instance_status(params = {}, **options)
-      req = build_request(:describe_instance_status, params)
+    def describe_instance_status(, **options)
+      req = build_request(:describe_instance_status, )
       req.send_request(options)
     end
 
@@ -17736,8 +17736,8 @@ module Aws::EC2
     #
     # @overload describe_instance_type_offerings(**params)
     # @param [Hash] params ({})
-    def describe_instance_type_offerings(params = {}, **options)
-      req = build_request(:describe_instance_type_offerings, params)
+    def describe_instance_type_offerings(, **options)
+      req = build_request(:describe_instance_type_offerings, )
       req.send_request(options)
     end
 
@@ -18004,8 +18004,8 @@ module Aws::EC2
     #
     # @overload describe_instance_types(**params)
     # @param [Hash] params ({})
-    def describe_instance_types(params = {}, **options)
-      req = build_request(:describe_instance_types, params)
+    def describe_instance_types(, **options)
+      req = build_request(:describe_instance_types, )
       req.send_request(options)
     end
 
@@ -18544,8 +18544,8 @@ module Aws::EC2
     #
     # @overload describe_instances(**params)
     # @param [Hash] params ({})
-    def describe_instances(params = {}, **options)
-      req = build_request(:describe_instances, params)
+    def describe_instances(, **options)
+      req = build_request(:describe_instances, )
       req.send_request(options)
     end
 
@@ -18666,8 +18666,8 @@ module Aws::EC2
     #
     # @overload describe_internet_gateways(**params)
     # @param [Hash] params ({})
-    def describe_internet_gateways(params = {}, **options)
-      req = build_request(:describe_internet_gateways, params)
+    def describe_internet_gateways(, **options)
+      req = build_request(:describe_internet_gateways, )
       req.send_request(options)
     end
 
@@ -18741,8 +18741,8 @@ module Aws::EC2
     #
     # @overload describe_ipv_6_pools(**params)
     # @param [Hash] params ({})
-    def describe_ipv_6_pools(params = {}, **options)
-      req = build_request(:describe_ipv_6_pools, params)
+    def describe_ipv_6_pools(, **options)
+      req = build_request(:describe_ipv_6_pools, )
       req.send_request(options)
     end
 
@@ -18846,8 +18846,8 @@ module Aws::EC2
     #
     # @overload describe_key_pairs(**params)
     # @param [Hash] params ({})
-    def describe_key_pairs(params = {}, **options)
-      req = build_request(:describe_key_pairs, params)
+    def describe_key_pairs(, **options)
+      req = build_request(:describe_key_pairs, )
       req.send_request(options)
     end
 
@@ -19115,8 +19115,8 @@ module Aws::EC2
     #
     # @overload describe_launch_template_versions(**params)
     # @param [Hash] params ({})
-    def describe_launch_template_versions(params = {}, **options)
-      req = build_request(:describe_launch_template_versions, params)
+    def describe_launch_template_versions(, **options)
+      req = build_request(:describe_launch_template_versions, )
       req.send_request(options)
     end
 
@@ -19225,8 +19225,8 @@ module Aws::EC2
     #
     # @overload describe_launch_templates(**params)
     # @param [Hash] params ({})
-    def describe_launch_templates(params = {}, **options)
-      req = build_request(:describe_launch_templates, params)
+    def describe_launch_templates(, **options)
+      req = build_request(:describe_launch_templates, )
       req.send_request(options)
     end
 
@@ -19307,8 +19307,8 @@ module Aws::EC2
     #
     # @overload describe_local_gateway_route_table_virtual_interface_group_associations(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_route_table_virtual_interface_group_associations(params = {}, **options)
-      req = build_request(:describe_local_gateway_route_table_virtual_interface_group_associations, params)
+    def describe_local_gateway_route_table_virtual_interface_group_associations(, **options)
+      req = build_request(:describe_local_gateway_route_table_virtual_interface_group_associations, )
       req.send_request(options)
     end
 
@@ -19388,8 +19388,8 @@ module Aws::EC2
     #
     # @overload describe_local_gateway_route_table_vpc_associations(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_route_table_vpc_associations(params = {}, **options)
-      req = build_request(:describe_local_gateway_route_table_vpc_associations, params)
+    def describe_local_gateway_route_table_vpc_associations(, **options)
+      req = build_request(:describe_local_gateway_route_table_vpc_associations, )
       req.send_request(options)
     end
 
@@ -19466,8 +19466,8 @@ module Aws::EC2
     #
     # @overload describe_local_gateway_route_tables(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_route_tables(params = {}, **options)
-      req = build_request(:describe_local_gateway_route_tables, params)
+    def describe_local_gateway_route_tables(, **options)
+      req = build_request(:describe_local_gateway_route_tables, )
       req.send_request(options)
     end
 
@@ -19540,8 +19540,8 @@ module Aws::EC2
     #
     # @overload describe_local_gateway_virtual_interface_groups(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_virtual_interface_groups(params = {}, **options)
-      req = build_request(:describe_local_gateway_virtual_interface_groups, params)
+    def describe_local_gateway_virtual_interface_groups(, **options)
+      req = build_request(:describe_local_gateway_virtual_interface_groups, )
       req.send_request(options)
     end
 
@@ -19609,8 +19609,8 @@ module Aws::EC2
     #
     # @overload describe_local_gateway_virtual_interfaces(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_virtual_interfaces(params = {}, **options)
-      req = build_request(:describe_local_gateway_virtual_interfaces, params)
+    def describe_local_gateway_virtual_interfaces(, **options)
+      req = build_request(:describe_local_gateway_virtual_interfaces, )
       req.send_request(options)
     end
 
@@ -19690,8 +19690,8 @@ module Aws::EC2
     #
     # @overload describe_local_gateways(**params)
     # @param [Hash] params ({})
-    def describe_local_gateways(params = {}, **options)
-      req = build_request(:describe_local_gateways, params)
+    def describe_local_gateways(, **options)
+      req = build_request(:describe_local_gateways, )
       req.send_request(options)
     end
 
@@ -19769,8 +19769,8 @@ module Aws::EC2
     #
     # @overload describe_managed_prefix_lists(**params)
     # @param [Hash] params ({})
-    def describe_managed_prefix_lists(params = {}, **options)
-      req = build_request(:describe_managed_prefix_lists, params)
+    def describe_managed_prefix_lists(, **options)
+      req = build_request(:describe_managed_prefix_lists, )
       req.send_request(options)
     end
 
@@ -19859,8 +19859,8 @@ module Aws::EC2
     #
     # @overload describe_moving_addresses(**params)
     # @param [Hash] params ({})
-    def describe_moving_addresses(params = {}, **options)
-      req = build_request(:describe_moving_addresses, params)
+    def describe_moving_addresses(, **options)
+      req = build_request(:describe_moving_addresses, )
       req.send_request(options)
     end
 
@@ -19999,8 +19999,8 @@ module Aws::EC2
     #
     # @overload describe_nat_gateways(**params)
     # @param [Hash] params ({})
-    def describe_nat_gateways(params = {}, **options)
-      req = build_request(:describe_nat_gateways, params)
+    def describe_nat_gateways(, **options)
+      req = build_request(:describe_nat_gateways, )
       req.send_request(options)
     end
 
@@ -20186,8 +20186,8 @@ module Aws::EC2
     #
     # @overload describe_network_acls(**params)
     # @param [Hash] params ({})
-    def describe_network_acls(params = {}, **options)
-      req = build_request(:describe_network_acls, params)
+    def describe_network_acls(, **options)
+      req = build_request(:describe_network_acls, )
       req.send_request(options)
     end
 
@@ -20499,8 +20499,8 @@ module Aws::EC2
     #
     # @overload describe_network_insights_analyses(**params)
     # @param [Hash] params ({})
-    def describe_network_insights_analyses(params = {}, **options)
-      req = build_request(:describe_network_insights_analyses, params)
+    def describe_network_insights_analyses(, **options)
+      req = build_request(:describe_network_insights_analyses, )
       req.send_request(options)
     end
 
@@ -20579,8 +20579,8 @@ module Aws::EC2
     #
     # @overload describe_network_insights_paths(**params)
     # @param [Hash] params ({})
-    def describe_network_insights_paths(params = {}, **options)
-      req = build_request(:describe_network_insights_paths, params)
+    def describe_network_insights_paths(, **options)
+      req = build_request(:describe_network_insights_paths, )
       req.send_request(options)
     end
 
@@ -20714,8 +20714,8 @@ module Aws::EC2
     #
     # @overload describe_network_interface_attribute(**params)
     # @param [Hash] params ({})
-    def describe_network_interface_attribute(params = {}, **options)
-      req = build_request(:describe_network_interface_attribute, params)
+    def describe_network_interface_attribute(, **options)
+      req = build_request(:describe_network_interface_attribute, )
       req.send_request(options)
     end
 
@@ -20786,8 +20786,8 @@ module Aws::EC2
     #
     # @overload describe_network_interface_permissions(**params)
     # @param [Hash] params ({})
-    def describe_network_interface_permissions(params = {}, **options)
-      req = build_request(:describe_network_interface_permissions, params)
+    def describe_network_interface_permissions(, **options)
+      req = build_request(:describe_network_interface_permissions, )
       req.send_request(options)
     end
 
@@ -21073,8 +21073,8 @@ module Aws::EC2
     #
     # @overload describe_network_interfaces(**params)
     # @param [Hash] params ({})
-    def describe_network_interfaces(params = {}, **options)
-      req = build_request(:describe_network_interfaces, params)
+    def describe_network_interfaces(, **options)
+      req = build_request(:describe_network_interfaces, )
       req.send_request(options)
     end
 
@@ -21156,8 +21156,8 @@ module Aws::EC2
     #
     # @overload describe_placement_groups(**params)
     # @param [Hash] params ({})
-    def describe_placement_groups(params = {}, **options)
-      req = build_request(:describe_placement_groups, params)
+    def describe_placement_groups(, **options)
+      req = build_request(:describe_placement_groups, )
       req.send_request(options)
     end
 
@@ -21226,8 +21226,8 @@ module Aws::EC2
     #
     # @overload describe_prefix_lists(**params)
     # @param [Hash] params ({})
-    def describe_prefix_lists(params = {}, **options)
-      req = build_request(:describe_prefix_lists, params)
+    def describe_prefix_lists(, **options)
+      req = build_request(:describe_prefix_lists, )
       req.send_request(options)
     end
 
@@ -21308,8 +21308,8 @@ module Aws::EC2
     #
     # @overload describe_principal_id_format(**params)
     # @param [Hash] params ({})
-    def describe_principal_id_format(params = {}, **options)
-      req = build_request(:describe_principal_id_format, params)
+    def describe_principal_id_format(, **options)
+      req = build_request(:describe_principal_id_format, )
       req.send_request(options)
     end
 
@@ -21382,8 +21382,8 @@ module Aws::EC2
     #
     # @overload describe_public_ipv_4_pools(**params)
     # @param [Hash] params ({})
-    def describe_public_ipv_4_pools(params = {}, **options)
-      req = build_request(:describe_public_ipv_4_pools, params)
+    def describe_public_ipv_4_pools(, **options)
+      req = build_request(:describe_public_ipv_4_pools, )
       req.send_request(options)
     end
 
@@ -21513,8 +21513,8 @@ module Aws::EC2
     #
     # @overload describe_regions(**params)
     # @param [Hash] params ({})
-    def describe_regions(params = {}, **options)
-      req = build_request(:describe_regions, params)
+    def describe_regions(, **options)
+      req = build_request(:describe_regions, )
       req.send_request(options)
     end
 
@@ -21650,8 +21650,8 @@ module Aws::EC2
     #
     # @overload describe_reserved_instances(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances(params = {}, **options)
-      req = build_request(:describe_reserved_instances, params)
+    def describe_reserved_instances(, **options)
+      req = build_request(:describe_reserved_instances, )
       req.send_request(options)
     end
 
@@ -21745,8 +21745,8 @@ module Aws::EC2
     #
     # @overload describe_reserved_instances_listings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances_listings(params = {}, **options)
-      req = build_request(:describe_reserved_instances_listings, params)
+    def describe_reserved_instances_listings(, **options)
+      req = build_request(:describe_reserved_instances_listings, )
       req.send_request(options)
     end
 
@@ -21852,8 +21852,8 @@ module Aws::EC2
     #
     # @overload describe_reserved_instances_modifications(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances_modifications(params = {}, **options)
-      req = build_request(:describe_reserved_instances_modifications, params)
+    def describe_reserved_instances_modifications(, **options)
+      req = build_request(:describe_reserved_instances_modifications, )
       req.send_request(options)
     end
 
@@ -22052,8 +22052,8 @@ module Aws::EC2
     #
     # @overload describe_reserved_instances_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances_offerings(params = {}, **options)
-      req = build_request(:describe_reserved_instances_offerings, params)
+    def describe_reserved_instances_offerings(, **options)
+      req = build_request(:describe_reserved_instances_offerings, )
       req.send_request(options)
     end
 
@@ -22262,8 +22262,8 @@ module Aws::EC2
     #
     # @overload describe_route_tables(**params)
     # @param [Hash] params ({})
-    def describe_route_tables(params = {}, **options)
-      req = build_request(:describe_route_tables, params)
+    def describe_route_tables(, **options)
+      req = build_request(:describe_route_tables, )
       req.send_request(options)
     end
 
@@ -22432,8 +22432,8 @@ module Aws::EC2
     #
     # @overload describe_scheduled_instance_availability(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_instance_availability(params = {}, **options)
-      req = build_request(:describe_scheduled_instance_availability, params)
+    def describe_scheduled_instance_availability(, **options)
+      req = build_request(:describe_scheduled_instance_availability, )
       req.send_request(options)
     end
 
@@ -22570,8 +22570,8 @@ module Aws::EC2
     #
     # @overload describe_scheduled_instances(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_instances(params = {}, **options)
-      req = build_request(:describe_scheduled_instances, params)
+    def describe_scheduled_instances(, **options)
+      req = build_request(:describe_scheduled_instances, )
       req.send_request(options)
     end
 
@@ -22632,8 +22632,8 @@ module Aws::EC2
     #
     # @overload describe_security_group_references(**params)
     # @param [Hash] params ({})
-    def describe_security_group_references(params = {}, **options)
-      req = build_request(:describe_security_group_references, params)
+    def describe_security_group_references(, **options)
+      req = build_request(:describe_security_group_references, )
       req.send_request(options)
     end
 
@@ -22881,8 +22881,8 @@ module Aws::EC2
     #
     # @overload describe_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_security_groups(params = {}, **options)
-      req = build_request(:describe_security_groups, params)
+    def describe_security_groups(, **options)
+      req = build_request(:describe_security_groups, )
       req.send_request(options)
     end
 
@@ -22954,8 +22954,8 @@ module Aws::EC2
     #
     # @overload describe_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_attribute(params = {}, **options)
-      req = build_request(:describe_snapshot_attribute, params)
+    def describe_snapshot_attribute(, **options)
+      req = build_request(:describe_snapshot_attribute, )
       req.send_request(options)
     end
 
@@ -23212,8 +23212,8 @@ module Aws::EC2
     #
     # @overload describe_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_snapshots(params = {}, **options)
-      req = build_request(:describe_snapshots, params)
+    def describe_snapshots(, **options)
+      req = build_request(:describe_snapshots, )
       req.send_request(options)
     end
 
@@ -23272,8 +23272,8 @@ module Aws::EC2
     #
     # @overload describe_spot_datafeed_subscription(**params)
     # @param [Hash] params ({})
-    def describe_spot_datafeed_subscription(params = {}, **options)
-      req = build_request(:describe_spot_datafeed_subscription, params)
+    def describe_spot_datafeed_subscription(, **options)
+      req = build_request(:describe_spot_datafeed_subscription, )
       req.send_request(options)
     end
 
@@ -23347,8 +23347,8 @@ module Aws::EC2
     #
     # @overload describe_spot_fleet_instances(**params)
     # @param [Hash] params ({})
-    def describe_spot_fleet_instances(params = {}, **options)
-      req = build_request(:describe_spot_fleet_instances, params)
+    def describe_spot_fleet_instances(, **options)
+      req = build_request(:describe_spot_fleet_instances, )
       req.send_request(options)
     end
 
@@ -23470,8 +23470,8 @@ module Aws::EC2
     #
     # @overload describe_spot_fleet_request_history(**params)
     # @param [Hash] params ({})
-    def describe_spot_fleet_request_history(params = {}, **options)
-      req = build_request(:describe_spot_fleet_request_history, params)
+    def describe_spot_fleet_request_history(, **options)
+      req = build_request(:describe_spot_fleet_request_history, )
       req.send_request(options)
     end
 
@@ -23684,8 +23684,8 @@ module Aws::EC2
     #
     # @overload describe_spot_fleet_requests(**params)
     # @param [Hash] params ({})
-    def describe_spot_fleet_requests(params = {}, **options)
-      req = build_request(:describe_spot_fleet_requests, params)
+    def describe_spot_fleet_requests(, **options)
+      req = build_request(:describe_spot_fleet_requests, )
       req.send_request(options)
     end
 
@@ -24016,8 +24016,8 @@ module Aws::EC2
     #
     # @overload describe_spot_instance_requests(**params)
     # @param [Hash] params ({})
-    def describe_spot_instance_requests(params = {}, **options)
-      req = build_request(:describe_spot_instance_requests, params)
+    def describe_spot_instance_requests(, **options)
+      req = build_request(:describe_spot_instance_requests, )
       req.send_request(options)
     end
 
@@ -24168,8 +24168,8 @@ module Aws::EC2
     #
     # @overload describe_spot_price_history(**params)
     # @param [Hash] params ({})
-    def describe_spot_price_history(params = {}, **options)
-      req = build_request(:describe_spot_price_history, params)
+    def describe_spot_price_history(, **options)
+      req = build_request(:describe_spot_price_history, )
       req.send_request(options)
     end
 
@@ -24257,8 +24257,8 @@ module Aws::EC2
     #
     # @overload describe_stale_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_stale_security_groups(params = {}, **options)
-      req = build_request(:describe_stale_security_groups, params)
+    def describe_stale_security_groups(, **options)
+      req = build_request(:describe_stale_security_groups, )
       req.send_request(options)
     end
 
@@ -24431,8 +24431,8 @@ module Aws::EC2
     #
     # @overload describe_subnets(**params)
     # @param [Hash] params ({})
-    def describe_subnets(params = {}, **options)
-      req = build_request(:describe_subnets, params)
+    def describe_subnets(, **options)
+      req = build_request(:describe_subnets, )
       req.send_request(options)
     end
 
@@ -24551,8 +24551,8 @@ module Aws::EC2
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -24648,8 +24648,8 @@ module Aws::EC2
     #
     # @overload describe_traffic_mirror_filters(**params)
     # @param [Hash] params ({})
-    def describe_traffic_mirror_filters(params = {}, **options)
-      req = build_request(:describe_traffic_mirror_filters, params)
+    def describe_traffic_mirror_filters(, **options)
+      req = build_request(:describe_traffic_mirror_filters, )
       req.send_request(options)
     end
 
@@ -24741,8 +24741,8 @@ module Aws::EC2
     #
     # @overload describe_traffic_mirror_sessions(**params)
     # @param [Hash] params ({})
-    def describe_traffic_mirror_sessions(params = {}, **options)
-      req = build_request(:describe_traffic_mirror_sessions, params)
+    def describe_traffic_mirror_sessions(, **options)
+      req = build_request(:describe_traffic_mirror_sessions, )
       req.send_request(options)
     end
 
@@ -24821,8 +24821,8 @@ module Aws::EC2
     #
     # @overload describe_traffic_mirror_targets(**params)
     # @param [Hash] params ({})
-    def describe_traffic_mirror_targets(params = {}, **options)
-      req = build_request(:describe_traffic_mirror_targets, params)
+    def describe_traffic_mirror_targets(, **options)
+      req = build_request(:describe_traffic_mirror_targets, )
       req.send_request(options)
     end
 
@@ -24921,8 +24921,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_attachments(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_attachments(params = {}, **options)
-      req = build_request(:describe_transit_gateway_attachments, params)
+    def describe_transit_gateway_attachments(, **options)
+      req = build_request(:describe_transit_gateway_attachments, )
       req.send_request(options)
     end
 
@@ -25004,8 +25004,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_connect_peers(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_connect_peers(params = {}, **options)
-      req = build_request(:describe_transit_gateway_connect_peers, params)
+    def describe_transit_gateway_connect_peers(, **options)
+      req = build_request(:describe_transit_gateway_connect_peers, )
       req.send_request(options)
     end
 
@@ -25085,8 +25085,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_connects(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_connects(params = {}, **options)
-      req = build_request(:describe_transit_gateway_connects, params)
+    def describe_transit_gateway_connects(, **options)
+      req = build_request(:describe_transit_gateway_connects, )
       req.send_request(options)
     end
 
@@ -25163,8 +25163,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_multicast_domains(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_multicast_domains(params = {}, **options)
-      req = build_request(:describe_transit_gateway_multicast_domains, params)
+    def describe_transit_gateway_multicast_domains(, **options)
+      req = build_request(:describe_transit_gateway_multicast_domains, )
       req.send_request(options)
     end
 
@@ -25260,8 +25260,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_peering_attachments(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_peering_attachments(params = {}, **options)
-      req = build_request(:describe_transit_gateway_peering_attachments, params)
+    def describe_transit_gateway_peering_attachments(, **options)
+      req = build_request(:describe_transit_gateway_peering_attachments, )
       req.send_request(options)
     end
 
@@ -25345,8 +25345,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_route_tables(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_route_tables(params = {}, **options)
-      req = build_request(:describe_transit_gateway_route_tables, params)
+    def describe_transit_gateway_route_tables(, **options)
+      req = build_request(:describe_transit_gateway_route_tables, )
       req.send_request(options)
     end
 
@@ -25429,8 +25429,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateway_vpc_attachments(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_vpc_attachments(params = {}, **options)
-      req = build_request(:describe_transit_gateway_vpc_attachments, params)
+    def describe_transit_gateway_vpc_attachments(, **options)
+      req = build_request(:describe_transit_gateway_vpc_attachments, )
       req.send_request(options)
     end
 
@@ -25543,8 +25543,8 @@ module Aws::EC2
     #
     # @overload describe_transit_gateways(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateways(params = {}, **options)
-      req = build_request(:describe_transit_gateways, params)
+    def describe_transit_gateways(, **options)
+      req = build_request(:describe_transit_gateways, )
       req.send_request(options)
     end
 
@@ -25614,8 +25614,8 @@ module Aws::EC2
     #
     # @overload describe_volume_attribute(**params)
     # @param [Hash] params ({})
-    def describe_volume_attribute(params = {}, **options)
-      req = build_request(:describe_volume_attribute, params)
+    def describe_volume_attribute(, **options)
+      req = build_request(:describe_volume_attribute, )
       req.send_request(options)
     end
 
@@ -25841,8 +25841,8 @@ module Aws::EC2
     #
     # @overload describe_volume_status(**params)
     # @param [Hash] params ({})
-    def describe_volume_status(params = {}, **options)
-      req = build_request(:describe_volume_status, params)
+    def describe_volume_status(, **options)
+      req = build_request(:describe_volume_status, )
       req.send_request(options)
     end
 
@@ -26089,8 +26089,8 @@ module Aws::EC2
     #
     # @overload describe_volumes(**params)
     # @param [Hash] params ({})
-    def describe_volumes(params = {}, **options)
-      req = build_request(:describe_volumes, params)
+    def describe_volumes(, **options)
+      req = build_request(:describe_volumes, )
       req.send_request(options)
     end
 
@@ -26203,8 +26203,8 @@ module Aws::EC2
     #
     # @overload describe_volumes_modifications(**params)
     # @param [Hash] params ({})
-    def describe_volumes_modifications(params = {}, **options)
-      req = build_request(:describe_volumes_modifications, params)
+    def describe_volumes_modifications(, **options)
+      req = build_request(:describe_volumes_modifications, )
       req.send_request(options)
     end
 
@@ -26285,8 +26285,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_attribute(**params)
     # @param [Hash] params ({})
-    def describe_vpc_attribute(params = {}, **options)
-      req = build_request(:describe_vpc_attribute, params)
+    def describe_vpc_attribute(, **options)
+      req = build_request(:describe_vpc_attribute, )
       req.send_request(options)
     end
 
@@ -26348,8 +26348,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_classic_link(**params)
     # @param [Hash] params ({})
-    def describe_vpc_classic_link(params = {}, **options)
-      req = build_request(:describe_vpc_classic_link, params)
+    def describe_vpc_classic_link(, **options)
+      req = build_request(:describe_vpc_classic_link, )
       req.send_request(options)
     end
 
@@ -26402,8 +26402,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_classic_link_dns_support(**params)
     # @param [Hash] params ({})
-    def describe_vpc_classic_link_dns_support(params = {}, **options)
-      req = build_request(:describe_vpc_classic_link_dns_support, params)
+    def describe_vpc_classic_link_dns_support(, **options)
+      req = build_request(:describe_vpc_classic_link_dns_support, )
       req.send_request(options)
     end
 
@@ -26483,8 +26483,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_endpoint_connection_notifications(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_connection_notifications(params = {}, **options)
-      req = build_request(:describe_vpc_endpoint_connection_notifications, params)
+    def describe_vpc_endpoint_connection_notifications(, **options)
+      req = build_request(:describe_vpc_endpoint_connection_notifications, )
       req.send_request(options)
     end
 
@@ -26563,8 +26563,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_endpoint_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_connections(params = {}, **options)
-      req = build_request(:describe_vpc_endpoint_connections, params)
+    def describe_vpc_endpoint_connections(, **options)
+      req = build_request(:describe_vpc_endpoint_connections, )
       req.send_request(options)
     end
 
@@ -26664,8 +26664,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_endpoint_service_configurations(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_service_configurations(params = {}, **options)
-      req = build_request(:describe_vpc_endpoint_service_configurations, params)
+    def describe_vpc_endpoint_service_configurations(, **options)
+      req = build_request(:describe_vpc_endpoint_service_configurations, )
       req.send_request(options)
     end
 
@@ -26732,8 +26732,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_endpoint_service_permissions(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_service_permissions(params = {}, **options)
-      req = build_request(:describe_vpc_endpoint_service_permissions, params)
+    def describe_vpc_endpoint_service_permissions(, **options)
+      req = build_request(:describe_vpc_endpoint_service_permissions, )
       req.send_request(options)
     end
 
@@ -26834,8 +26834,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_endpoint_services(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_services(params = {}, **options)
-      req = build_request(:describe_vpc_endpoint_services, params)
+    def describe_vpc_endpoint_services(, **options)
+      req = build_request(:describe_vpc_endpoint_services, )
       req.send_request(options)
     end
 
@@ -26946,8 +26946,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoints(params = {}, **options)
-      req = build_request(:describe_vpc_endpoints, params)
+    def describe_vpc_endpoints(, **options)
+      req = build_request(:describe_vpc_endpoints, )
       req.send_request(options)
     end
 
@@ -27079,8 +27079,8 @@ module Aws::EC2
     #
     # @overload describe_vpc_peering_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpc_peering_connections(params = {}, **options)
-      req = build_request(:describe_vpc_peering_connections, params)
+    def describe_vpc_peering_connections(, **options)
+      req = build_request(:describe_vpc_peering_connections, )
       req.send_request(options)
     end
 
@@ -27244,8 +27244,8 @@ module Aws::EC2
     #
     # @overload describe_vpcs(**params)
     # @param [Hash] params ({})
-    def describe_vpcs(params = {}, **options)
-      req = build_request(:describe_vpcs, params)
+    def describe_vpcs(, **options)
+      req = build_request(:describe_vpcs, )
       req.send_request(options)
     end
 
@@ -27399,8 +27399,8 @@ module Aws::EC2
     #
     # @overload describe_vpn_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpn_connections(params = {}, **options)
-      req = build_request(:describe_vpn_connections, params)
+    def describe_vpn_connections(, **options)
+      req = build_request(:describe_vpn_connections, )
       req.send_request(options)
     end
 
@@ -27493,8 +27493,8 @@ module Aws::EC2
     #
     # @overload describe_vpn_gateways(**params)
     # @param [Hash] params ({})
-    def describe_vpn_gateways(params = {}, **options)
-      req = build_request(:describe_vpn_gateways, params)
+    def describe_vpn_gateways(, **options)
+      req = build_request(:describe_vpn_gateways, )
       req.send_request(options)
     end
 
@@ -27535,8 +27535,8 @@ module Aws::EC2
     #
     # @overload detach_classic_link_vpc(**params)
     # @param [Hash] params ({})
-    def detach_classic_link_vpc(params = {}, **options)
-      req = build_request(:detach_classic_link_vpc, params)
+    def detach_classic_link_vpc(, **options)
+      req = build_request(:detach_classic_link_vpc, )
       req.send_request(options)
     end
 
@@ -27580,8 +27580,8 @@ module Aws::EC2
     #
     # @overload detach_internet_gateway(**params)
     # @param [Hash] params ({})
-    def detach_internet_gateway(params = {}, **options)
-      req = build_request(:detach_internet_gateway, params)
+    def detach_internet_gateway(, **options)
+      req = build_request(:detach_internet_gateway, )
       req.send_request(options)
     end
 
@@ -27642,8 +27642,8 @@ module Aws::EC2
     #
     # @overload detach_network_interface(**params)
     # @param [Hash] params ({})
-    def detach_network_interface(params = {}, **options)
-      req = build_request(:detach_network_interface, params)
+    def detach_network_interface(, **options)
+      req = build_request(:detach_network_interface, )
       req.send_request(options)
     end
 
@@ -27742,8 +27742,8 @@ module Aws::EC2
     #
     # @overload detach_volume(**params)
     # @param [Hash] params ({})
-    def detach_volume(params = {}, **options)
-      req = build_request(:detach_volume, params)
+    def detach_volume(, **options)
+      req = build_request(:detach_volume, )
       req.send_request(options)
     end
 
@@ -27783,8 +27783,8 @@ module Aws::EC2
     #
     # @overload detach_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def detach_vpn_gateway(params = {}, **options)
-      req = build_request(:detach_vpn_gateway, params)
+    def detach_vpn_gateway(, **options)
+      req = build_request(:detach_vpn_gateway, )
       req.send_request(options)
     end
 
@@ -27828,8 +27828,8 @@ module Aws::EC2
     #
     # @overload disable_ebs_encryption_by_default(**params)
     # @param [Hash] params ({})
-    def disable_ebs_encryption_by_default(params = {}, **options)
-      req = build_request(:disable_ebs_encryption_by_default, params)
+    def disable_ebs_encryption_by_default(, **options)
+      req = build_request(:disable_ebs_encryption_by_default, )
       req.send_request(options)
     end
 
@@ -27887,8 +27887,8 @@ module Aws::EC2
     #
     # @overload disable_fast_snapshot_restores(**params)
     # @param [Hash] params ({})
-    def disable_fast_snapshot_restores(params = {}, **options)
-      req = build_request(:disable_fast_snapshot_restores, params)
+    def disable_fast_snapshot_restores(, **options)
+      req = build_request(:disable_fast_snapshot_restores, )
       req.send_request(options)
     end
 
@@ -27931,8 +27931,8 @@ module Aws::EC2
     #
     # @overload disable_transit_gateway_route_table_propagation(**params)
     # @param [Hash] params ({})
-    def disable_transit_gateway_route_table_propagation(params = {}, **options)
-      req = build_request(:disable_transit_gateway_route_table_propagation, params)
+    def disable_transit_gateway_route_table_propagation(, **options)
+      req = build_request(:disable_transit_gateway_route_table_propagation, )
       req.send_request(options)
     end
 
@@ -27975,8 +27975,8 @@ module Aws::EC2
     #
     # @overload disable_vgw_route_propagation(**params)
     # @param [Hash] params ({})
-    def disable_vgw_route_propagation(params = {}, **options)
-      req = build_request(:disable_vgw_route_propagation, params)
+    def disable_vgw_route_propagation(, **options)
+      req = build_request(:disable_vgw_route_propagation, )
       req.send_request(options)
     end
 
@@ -28011,8 +28011,8 @@ module Aws::EC2
     #
     # @overload disable_vpc_classic_link(**params)
     # @param [Hash] params ({})
-    def disable_vpc_classic_link(params = {}, **options)
-      req = build_request(:disable_vpc_classic_link, params)
+    def disable_vpc_classic_link(, **options)
+      req = build_request(:disable_vpc_classic_link, )
       req.send_request(options)
     end
 
@@ -28049,8 +28049,8 @@ module Aws::EC2
     #
     # @overload disable_vpc_classic_link_dns_support(**params)
     # @param [Hash] params ({})
-    def disable_vpc_classic_link_dns_support(params = {}, **options)
-      req = build_request(:disable_vpc_classic_link_dns_support, params)
+    def disable_vpc_classic_link_dns_support(, **options)
+      req = build_request(:disable_vpc_classic_link_dns_support, )
       req.send_request(options)
     end
 
@@ -28111,8 +28111,8 @@ module Aws::EC2
     #
     # @overload disassociate_address(**params)
     # @param [Hash] params ({})
-    def disassociate_address(params = {}, **options)
-      req = build_request(:disassociate_address, params)
+    def disassociate_address(, **options)
+      req = build_request(:disassociate_address, )
       req.send_request(options)
     end
 
@@ -28164,8 +28164,8 @@ module Aws::EC2
     #
     # @overload disassociate_client_vpn_target_network(**params)
     # @param [Hash] params ({})
-    def disassociate_client_vpn_target_network(params = {}, **options)
-      req = build_request(:disassociate_client_vpn_target_network, params)
+    def disassociate_client_vpn_target_network(, **options)
+      req = build_request(:disassociate_client_vpn_target_network, )
       req.send_request(options)
     end
 
@@ -28211,8 +28211,8 @@ module Aws::EC2
     #
     # @overload disassociate_enclave_certificate_iam_role(**params)
     # @param [Hash] params ({})
-    def disassociate_enclave_certificate_iam_role(params = {}, **options)
-      req = build_request(:disassociate_enclave_certificate_iam_role, params)
+    def disassociate_enclave_certificate_iam_role(, **options)
+      req = build_request(:disassociate_enclave_certificate_iam_role, )
       req.send_request(options)
     end
 
@@ -28269,8 +28269,8 @@ module Aws::EC2
     #
     # @overload disassociate_iam_instance_profile(**params)
     # @param [Hash] params ({})
-    def disassociate_iam_instance_profile(params = {}, **options)
-      req = build_request(:disassociate_iam_instance_profile, params)
+    def disassociate_iam_instance_profile(, **options)
+      req = build_request(:disassociate_iam_instance_profile, )
       req.send_request(options)
     end
 
@@ -28317,8 +28317,8 @@ module Aws::EC2
     #
     # @overload disassociate_route_table(**params)
     # @param [Hash] params ({})
-    def disassociate_route_table(params = {}, **options)
-      req = build_request(:disassociate_route_table, params)
+    def disassociate_route_table(, **options)
+      req = build_request(:disassociate_route_table, )
       req.send_request(options)
     end
 
@@ -28353,8 +28353,8 @@ module Aws::EC2
     #
     # @overload disassociate_subnet_cidr_block(**params)
     # @param [Hash] params ({})
-    def disassociate_subnet_cidr_block(params = {}, **options)
-      req = build_request(:disassociate_subnet_cidr_block, params)
+    def disassociate_subnet_cidr_block(, **options)
+      req = build_request(:disassociate_subnet_cidr_block, )
       req.send_request(options)
     end
 
@@ -28404,8 +28404,8 @@ module Aws::EC2
     #
     # @overload disassociate_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def disassociate_transit_gateway_multicast_domain(params = {}, **options)
-      req = build_request(:disassociate_transit_gateway_multicast_domain, params)
+    def disassociate_transit_gateway_multicast_domain(, **options)
+      req = build_request(:disassociate_transit_gateway_multicast_domain, )
       req.send_request(options)
     end
 
@@ -28448,8 +28448,8 @@ module Aws::EC2
     #
     # @overload disassociate_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def disassociate_transit_gateway_route_table(params = {}, **options)
-      req = build_request(:disassociate_transit_gateway_route_table, params)
+    def disassociate_transit_gateway_route_table(, **options)
+      req = build_request(:disassociate_transit_gateway_route_table, )
       req.send_request(options)
     end
 
@@ -28495,8 +28495,8 @@ module Aws::EC2
     #
     # @overload disassociate_vpc_cidr_block(**params)
     # @param [Hash] params ({})
-    def disassociate_vpc_cidr_block(params = {}, **options)
-      req = build_request(:disassociate_vpc_cidr_block, params)
+    def disassociate_vpc_cidr_block(, **options)
+      req = build_request(:disassociate_vpc_cidr_block, )
       req.send_request(options)
     end
 
@@ -28548,8 +28548,8 @@ module Aws::EC2
     #
     # @overload enable_ebs_encryption_by_default(**params)
     # @param [Hash] params ({})
-    def enable_ebs_encryption_by_default(params = {}, **options)
-      req = build_request(:enable_ebs_encryption_by_default, params)
+    def enable_ebs_encryption_by_default(, **options)
+      req = build_request(:enable_ebs_encryption_by_default, )
       req.send_request(options)
     end
 
@@ -28620,8 +28620,8 @@ module Aws::EC2
     #
     # @overload enable_fast_snapshot_restores(**params)
     # @param [Hash] params ({})
-    def enable_fast_snapshot_restores(params = {}, **options)
-      req = build_request(:enable_fast_snapshot_restores, params)
+    def enable_fast_snapshot_restores(, **options)
+      req = build_request(:enable_fast_snapshot_restores, )
       req.send_request(options)
     end
 
@@ -28664,8 +28664,8 @@ module Aws::EC2
     #
     # @overload enable_transit_gateway_route_table_propagation(**params)
     # @param [Hash] params ({})
-    def enable_transit_gateway_route_table_propagation(params = {}, **options)
-      req = build_request(:enable_transit_gateway_route_table_propagation, params)
+    def enable_transit_gateway_route_table_propagation(, **options)
+      req = build_request(:enable_transit_gateway_route_table_propagation, )
       req.send_request(options)
     end
 
@@ -28711,8 +28711,8 @@ module Aws::EC2
     #
     # @overload enable_vgw_route_propagation(**params)
     # @param [Hash] params ({})
-    def enable_vgw_route_propagation(params = {}, **options)
-      req = build_request(:enable_vgw_route_propagation, params)
+    def enable_vgw_route_propagation(, **options)
+      req = build_request(:enable_vgw_route_propagation, )
       req.send_request(options)
     end
 
@@ -28750,8 +28750,8 @@ module Aws::EC2
     #
     # @overload enable_volume_io(**params)
     # @param [Hash] params ({})
-    def enable_volume_io(params = {}, **options)
-      req = build_request(:enable_volume_io, params)
+    def enable_volume_io(, **options)
+      req = build_request(:enable_volume_io, )
       req.send_request(options)
     end
 
@@ -28796,8 +28796,8 @@ module Aws::EC2
     #
     # @overload enable_vpc_classic_link(**params)
     # @param [Hash] params ({})
-    def enable_vpc_classic_link(params = {}, **options)
-      req = build_request(:enable_vpc_classic_link, params)
+    def enable_vpc_classic_link(, **options)
+      req = build_request(:enable_vpc_classic_link, )
       req.send_request(options)
     end
 
@@ -28836,8 +28836,8 @@ module Aws::EC2
     #
     # @overload enable_vpc_classic_link_dns_support(**params)
     # @param [Hash] params ({})
-    def enable_vpc_classic_link_dns_support(params = {}, **options)
-      req = build_request(:enable_vpc_classic_link_dns_support, params)
+    def enable_vpc_classic_link_dns_support(, **options)
+      req = build_request(:enable_vpc_classic_link_dns_support, )
       req.send_request(options)
     end
 
@@ -28875,8 +28875,8 @@ module Aws::EC2
     #
     # @overload export_client_vpn_client_certificate_revocation_list(**params)
     # @param [Hash] params ({})
-    def export_client_vpn_client_certificate_revocation_list(params = {}, **options)
-      req = build_request(:export_client_vpn_client_certificate_revocation_list, params)
+    def export_client_vpn_client_certificate_revocation_list(, **options)
+      req = build_request(:export_client_vpn_client_certificate_revocation_list, )
       req.send_request(options)
     end
 
@@ -28914,8 +28914,8 @@ module Aws::EC2
     #
     # @overload export_client_vpn_client_configuration(**params)
     # @param [Hash] params ({})
-    def export_client_vpn_client_configuration(params = {}, **options)
-      req = build_request(:export_client_vpn_client_configuration, params)
+    def export_client_vpn_client_configuration(, **options)
+      req = build_request(:export_client_vpn_client_configuration, )
       req.send_request(options)
     end
 
@@ -29021,8 +29021,8 @@ module Aws::EC2
     #
     # @overload export_image(**params)
     # @param [Hash] params ({})
-    def export_image(params = {}, **options)
-      req = build_request(:export_image, params)
+    def export_image(, **options)
+      req = build_request(:export_image, )
       req.send_request(options)
     end
 
@@ -29106,8 +29106,8 @@ module Aws::EC2
     #
     # @overload export_transit_gateway_routes(**params)
     # @param [Hash] params ({})
-    def export_transit_gateway_routes(params = {}, **options)
-      req = build_request(:export_transit_gateway_routes, params)
+    def export_transit_gateway_routes(, **options)
+      req = build_request(:export_transit_gateway_routes, )
       req.send_request(options)
     end
 
@@ -29151,8 +29151,8 @@ module Aws::EC2
     #
     # @overload get_associated_enclave_certificate_iam_roles(**params)
     # @param [Hash] params ({})
-    def get_associated_enclave_certificate_iam_roles(params = {}, **options)
-      req = build_request(:get_associated_enclave_certificate_iam_roles, params)
+    def get_associated_enclave_certificate_iam_roles(, **options)
+      req = build_request(:get_associated_enclave_certificate_iam_roles, )
       req.send_request(options)
     end
 
@@ -29203,8 +29203,8 @@ module Aws::EC2
     #
     # @overload get_associated_ipv_6_pool_cidrs(**params)
     # @param [Hash] params ({})
-    def get_associated_ipv_6_pool_cidrs(params = {}, **options)
-      req = build_request(:get_associated_ipv_6_pool_cidrs, params)
+    def get_associated_ipv_6_pool_cidrs(, **options)
+      req = build_request(:get_associated_ipv_6_pool_cidrs, )
       req.send_request(options)
     end
 
@@ -29270,8 +29270,8 @@ module Aws::EC2
     #
     # @overload get_capacity_reservation_usage(**params)
     # @param [Hash] params ({})
-    def get_capacity_reservation_usage(params = {}, **options)
-      req = build_request(:get_capacity_reservation_usage, params)
+    def get_capacity_reservation_usage(, **options)
+      req = build_request(:get_capacity_reservation_usage, )
       req.send_request(options)
     end
 
@@ -29352,8 +29352,8 @@ module Aws::EC2
     #
     # @overload get_coip_pool_usage(**params)
     # @param [Hash] params ({})
-    def get_coip_pool_usage(params = {}, **options)
-      req = build_request(:get_coip_pool_usage, params)
+    def get_coip_pool_usage(, **options)
+      req = build_request(:get_coip_pool_usage, )
       req.send_request(options)
     end
 
@@ -29434,8 +29434,8 @@ module Aws::EC2
     #
     # @overload get_console_output(**params)
     # @param [Hash] params ({})
-    def get_console_output(params = {}, **options)
-      req = build_request(:get_console_output, params)
+    def get_console_output(, **options)
+      req = build_request(:get_console_output, )
       req.send_request(options)
     end
 
@@ -29479,8 +29479,8 @@ module Aws::EC2
     #
     # @overload get_console_screenshot(**params)
     # @param [Hash] params ({})
-    def get_console_screenshot(params = {}, **options)
-      req = build_request(:get_console_screenshot, params)
+    def get_console_screenshot(, **options)
+      req = build_request(:get_console_screenshot, )
       req.send_request(options)
     end
 
@@ -29523,8 +29523,8 @@ module Aws::EC2
     #
     # @overload get_default_credit_specification(**params)
     # @param [Hash] params ({})
-    def get_default_credit_specification(params = {}, **options)
-      req = build_request(:get_default_credit_specification, params)
+    def get_default_credit_specification(, **options)
+      req = build_request(:get_default_credit_specification, )
       req.send_request(options)
     end
 
@@ -29564,8 +29564,8 @@ module Aws::EC2
     #
     # @overload get_ebs_default_kms_key_id(**params)
     # @param [Hash] params ({})
-    def get_ebs_default_kms_key_id(params = {}, **options)
-      req = build_request(:get_ebs_default_kms_key_id, params)
+    def get_ebs_default_kms_key_id(, **options)
+      req = build_request(:get_ebs_default_kms_key_id, )
       req.send_request(options)
     end
 
@@ -29603,8 +29603,8 @@ module Aws::EC2
     #
     # @overload get_ebs_encryption_by_default(**params)
     # @param [Hash] params ({})
-    def get_ebs_encryption_by_default(params = {}, **options)
-      req = build_request(:get_ebs_encryption_by_default, params)
+    def get_ebs_encryption_by_default(, **options)
+      req = build_request(:get_ebs_encryption_by_default, )
       req.send_request(options)
     end
 
@@ -29657,8 +29657,8 @@ module Aws::EC2
     #
     # @overload get_groups_for_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def get_groups_for_capacity_reservation(params = {}, **options)
-      req = build_request(:get_groups_for_capacity_reservation, params)
+    def get_groups_for_capacity_reservation(, **options)
+      req = build_request(:get_groups_for_capacity_reservation, )
       req.send_request(options)
     end
 
@@ -29710,8 +29710,8 @@ module Aws::EC2
     #
     # @overload get_host_reservation_purchase_preview(**params)
     # @param [Hash] params ({})
-    def get_host_reservation_purchase_preview(params = {}, **options)
-      req = build_request(:get_host_reservation_purchase_preview, params)
+    def get_host_reservation_purchase_preview(, **options)
+      req = build_request(:get_host_reservation_purchase_preview, )
       req.send_request(options)
     end
 
@@ -29900,8 +29900,8 @@ module Aws::EC2
     #
     # @overload get_launch_template_data(**params)
     # @param [Hash] params ({})
-    def get_launch_template_data(params = {}, **options)
-      req = build_request(:get_launch_template_data, params)
+    def get_launch_template_data(, **options)
+      req = build_request(:get_launch_template_data, )
       req.send_request(options)
     end
 
@@ -29952,8 +29952,8 @@ module Aws::EC2
     #
     # @overload get_managed_prefix_list_associations(**params)
     # @param [Hash] params ({})
-    def get_managed_prefix_list_associations(params = {}, **options)
-      req = build_request(:get_managed_prefix_list_associations, params)
+    def get_managed_prefix_list_associations(, **options)
+      req = build_request(:get_managed_prefix_list_associations, )
       req.send_request(options)
     end
 
@@ -30009,8 +30009,8 @@ module Aws::EC2
     #
     # @overload get_managed_prefix_list_entries(**params)
     # @param [Hash] params ({})
-    def get_managed_prefix_list_entries(params = {}, **options)
-      req = build_request(:get_managed_prefix_list_entries, params)
+    def get_managed_prefix_list_entries(, **options)
+      req = build_request(:get_managed_prefix_list_entries, )
       req.send_request(options)
     end
 
@@ -30078,8 +30078,8 @@ module Aws::EC2
     #
     # @overload get_password_data(**params)
     # @param [Hash] params ({})
-    def get_password_data(params = {}, **options)
-      req = build_request(:get_password_data, params)
+    def get_password_data(, **options)
+      req = build_request(:get_password_data, )
       req.send_request(options)
     end
 
@@ -30156,8 +30156,8 @@ module Aws::EC2
     #
     # @overload get_reserved_instances_exchange_quote(**params)
     # @param [Hash] params ({})
-    def get_reserved_instances_exchange_quote(params = {}, **options)
-      req = build_request(:get_reserved_instances_exchange_quote, params)
+    def get_reserved_instances_exchange_quote(, **options)
+      req = build_request(:get_reserved_instances_exchange_quote, )
       req.send_request(options)
     end
 
@@ -30222,8 +30222,8 @@ module Aws::EC2
     #
     # @overload get_transit_gateway_attachment_propagations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_attachment_propagations(params = {}, **options)
-      req = build_request(:get_transit_gateway_attachment_propagations, params)
+    def get_transit_gateway_attachment_propagations(, **options)
+      req = build_request(:get_transit_gateway_attachment_propagations, )
       req.send_request(options)
     end
 
@@ -30300,8 +30300,8 @@ module Aws::EC2
     #
     # @overload get_transit_gateway_multicast_domain_associations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_multicast_domain_associations(params = {}, **options)
-      req = build_request(:get_transit_gateway_multicast_domain_associations, params)
+    def get_transit_gateway_multicast_domain_associations(, **options)
+      req = build_request(:get_transit_gateway_multicast_domain_associations, )
       req.send_request(options)
     end
 
@@ -30387,8 +30387,8 @@ module Aws::EC2
     #
     # @overload get_transit_gateway_prefix_list_references(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_prefix_list_references(params = {}, **options)
-      req = build_request(:get_transit_gateway_prefix_list_references, params)
+    def get_transit_gateway_prefix_list_references(, **options)
+      req = build_request(:get_transit_gateway_prefix_list_references, )
       req.send_request(options)
     end
 
@@ -30457,8 +30457,8 @@ module Aws::EC2
     #
     # @overload get_transit_gateway_route_table_associations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_route_table_associations(params = {}, **options)
-      req = build_request(:get_transit_gateway_route_table_associations, params)
+    def get_transit_gateway_route_table_associations(, **options)
+      req = build_request(:get_transit_gateway_route_table_associations, )
       req.send_request(options)
     end
 
@@ -30527,8 +30527,8 @@ module Aws::EC2
     #
     # @overload get_transit_gateway_route_table_propagations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_route_table_propagations(params = {}, **options)
-      req = build_request(:get_transit_gateway_route_table_propagations, params)
+    def get_transit_gateway_route_table_propagations(, **options)
+      req = build_request(:get_transit_gateway_route_table_propagations, )
       req.send_request(options)
     end
 
@@ -30578,8 +30578,8 @@ module Aws::EC2
     #
     # @overload import_client_vpn_client_certificate_revocation_list(**params)
     # @param [Hash] params ({})
-    def import_client_vpn_client_certificate_revocation_list(params = {}, **options)
-      req = build_request(:import_client_vpn_client_certificate_revocation_list, params)
+    def import_client_vpn_client_certificate_revocation_list(, **options)
+      req = build_request(:import_client_vpn_client_certificate_revocation_list, )
       req.send_request(options)
     end
 
@@ -30804,8 +30804,8 @@ module Aws::EC2
     #
     # @overload import_image(**params)
     # @param [Hash] params ({})
-    def import_image(params = {}, **options)
-      req = build_request(:import_image, params)
+    def import_image(, **options)
+      req = build_request(:import_image, )
       req.send_request(options)
     end
 
@@ -30927,8 +30927,8 @@ module Aws::EC2
     #
     # @overload import_instance(**params)
     # @param [Hash] params ({})
-    def import_instance(params = {}, **options)
-      req = build_request(:import_instance, params)
+    def import_instance(, **options)
+      req = build_request(:import_instance, )
       req.send_request(options)
     end
 
@@ -31001,8 +31001,8 @@ module Aws::EC2
     #
     # @overload import_key_pair(**params)
     # @param [Hash] params ({})
-    def import_key_pair(params = {}, **options)
-      req = build_request(:import_key_pair, params)
+    def import_key_pair(, **options)
+      req = build_request(:import_key_pair, )
       req.send_request(options)
     end
 
@@ -31148,8 +31148,8 @@ module Aws::EC2
     #
     # @overload import_snapshot(**params)
     # @param [Hash] params ({})
-    def import_snapshot(params = {}, **options)
-      req = build_request(:import_snapshot, params)
+    def import_snapshot(, **options)
+      req = build_request(:import_snapshot, )
       req.send_request(options)
     end
 
@@ -31240,8 +31240,8 @@ module Aws::EC2
     #
     # @overload import_volume(**params)
     # @param [Hash] params ({})
-    def import_volume(params = {}, **options)
-      req = build_request(:import_volume, params)
+    def import_volume(, **options)
+      req = build_request(:import_volume, )
       req.send_request(options)
     end
 
@@ -31294,8 +31294,8 @@ module Aws::EC2
     #
     # @overload modify_availability_zone_group(**params)
     # @param [Hash] params ({})
-    def modify_availability_zone_group(params = {}, **options)
-      req = build_request(:modify_availability_zone_group, params)
+    def modify_availability_zone_group(, **options)
+      req = build_request(:modify_availability_zone_group, )
       req.send_request(options)
     end
 
@@ -31368,8 +31368,8 @@ module Aws::EC2
     #
     # @overload modify_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def modify_capacity_reservation(params = {}, **options)
-      req = build_request(:modify_capacity_reservation, params)
+    def modify_capacity_reservation(, **options)
+      req = build_request(:modify_capacity_reservation, )
       req.send_request(options)
     end
 
@@ -31483,8 +31483,8 @@ module Aws::EC2
     #
     # @overload modify_client_vpn_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_client_vpn_endpoint(params = {}, **options)
-      req = build_request(:modify_client_vpn_endpoint, params)
+    def modify_client_vpn_endpoint(, **options)
+      req = build_request(:modify_client_vpn_endpoint, )
       req.send_request(options)
     end
 
@@ -31545,8 +31545,8 @@ module Aws::EC2
     #
     # @overload modify_default_credit_specification(**params)
     # @param [Hash] params ({})
-    def modify_default_credit_specification(params = {}, **options)
-      req = build_request(:modify_default_credit_specification, params)
+    def modify_default_credit_specification(, **options)
+      req = build_request(:modify_default_credit_specification, )
       req.send_request(options)
     end
 
@@ -31619,8 +31619,8 @@ module Aws::EC2
     #
     # @overload modify_ebs_default_kms_key_id(**params)
     # @param [Hash] params ({})
-    def modify_ebs_default_kms_key_id(params = {}, **options)
-      req = build_request(:modify_ebs_default_kms_key_id, params)
+    def modify_ebs_default_kms_key_id(, **options)
+      req = build_request(:modify_ebs_default_kms_key_id, )
       req.send_request(options)
     end
 
@@ -31733,8 +31733,8 @@ module Aws::EC2
     #
     # @overload modify_fleet(**params)
     # @param [Hash] params ({})
-    def modify_fleet(params = {}, **options)
-      req = build_request(:modify_fleet, params)
+    def modify_fleet(, **options)
+      req = build_request(:modify_fleet, )
       req.send_request(options)
     end
 
@@ -31826,8 +31826,8 @@ module Aws::EC2
     #
     # @overload modify_fpga_image_attribute(**params)
     # @param [Hash] params ({})
-    def modify_fpga_image_attribute(params = {}, **options)
-      req = build_request(:modify_fpga_image_attribute, params)
+    def modify_fpga_image_attribute(, **options)
+      req = build_request(:modify_fpga_image_attribute, )
       req.send_request(options)
     end
 
@@ -31907,8 +31907,8 @@ module Aws::EC2
     #
     # @overload modify_hosts(**params)
     # @param [Hash] params ({})
-    def modify_hosts(params = {}, **options)
-      req = build_request(:modify_hosts, params)
+    def modify_hosts(, **options)
+      req = build_request(:modify_hosts, )
       req.send_request(options)
     end
 
@@ -31978,8 +31978,8 @@ module Aws::EC2
     #
     # @overload modify_id_format(**params)
     # @param [Hash] params ({})
-    def modify_id_format(params = {}, **options)
-      req = build_request(:modify_id_format, params)
+    def modify_id_format(, **options)
+      req = build_request(:modify_id_format, )
       req.send_request(options)
     end
 
@@ -32054,8 +32054,8 @@ module Aws::EC2
     #
     # @overload modify_identity_id_format(**params)
     # @param [Hash] params ({})
-    def modify_identity_id_format(params = {}, **options)
-      req = build_request(:modify_identity_id_format, params)
+    def modify_identity_id_format(, **options)
+      req = build_request(:modify_identity_id_format, )
       req.send_request(options)
     end
 
@@ -32184,8 +32184,8 @@ module Aws::EC2
     #
     # @overload modify_image_attribute(**params)
     # @param [Hash] params ({})
-    def modify_image_attribute(params = {}, **options)
-      req = build_request(:modify_image_attribute, params)
+    def modify_image_attribute(, **options)
+      req = build_request(:modify_image_attribute, )
       req.send_request(options)
     end
 
@@ -32395,8 +32395,8 @@ module Aws::EC2
     #
     # @overload modify_instance_attribute(**params)
     # @param [Hash] params ({})
-    def modify_instance_attribute(params = {}, **options)
-      req = build_request(:modify_instance_attribute, params)
+    def modify_instance_attribute(, **options)
+      req = build_request(:modify_instance_attribute, )
       req.send_request(options)
     end
 
@@ -32443,8 +32443,8 @@ module Aws::EC2
     #
     # @overload modify_instance_capacity_reservation_attributes(**params)
     # @param [Hash] params ({})
-    def modify_instance_capacity_reservation_attributes(params = {}, **options)
-      req = build_request(:modify_instance_capacity_reservation_attributes, params)
+    def modify_instance_capacity_reservation_attributes(, **options)
+      req = build_request(:modify_instance_capacity_reservation_attributes, )
       req.send_request(options)
     end
 
@@ -32508,8 +32508,8 @@ module Aws::EC2
     #
     # @overload modify_instance_credit_specification(**params)
     # @param [Hash] params ({})
-    def modify_instance_credit_specification(params = {}, **options)
-      req = build_request(:modify_instance_credit_specification, params)
+    def modify_instance_credit_specification(, **options)
+      req = build_request(:modify_instance_credit_specification, )
       req.send_request(options)
     end
 
@@ -32556,8 +32556,8 @@ module Aws::EC2
     #
     # @overload modify_instance_event_start_time(**params)
     # @param [Hash] params ({})
-    def modify_instance_event_start_time(params = {}, **options)
-      req = build_request(:modify_instance_event_start_time, params)
+    def modify_instance_event_start_time(, **options)
+      req = build_request(:modify_instance_event_start_time, )
       req.send_request(options)
     end
 
@@ -32645,8 +32645,8 @@ module Aws::EC2
     #
     # @overload modify_instance_metadata_options(**params)
     # @param [Hash] params ({})
-    def modify_instance_metadata_options(params = {}, **options)
-      req = build_request(:modify_instance_metadata_options, params)
+    def modify_instance_metadata_options(, **options)
+      req = build_request(:modify_instance_metadata_options, )
       req.send_request(options)
     end
 
@@ -32730,8 +32730,8 @@ module Aws::EC2
     #
     # @overload modify_instance_placement(**params)
     # @param [Hash] params ({})
-    def modify_instance_placement(params = {}, **options)
-      req = build_request(:modify_instance_placement, params)
+    def modify_instance_placement(, **options)
+      req = build_request(:modify_instance_placement, )
       req.send_request(options)
     end
 
@@ -32821,8 +32821,8 @@ module Aws::EC2
     #
     # @overload modify_launch_template(**params)
     # @param [Hash] params ({})
-    def modify_launch_template(params = {}, **options)
-      req = build_request(:modify_launch_template, params)
+    def modify_launch_template(, **options)
+      req = build_request(:modify_launch_template, )
       req.send_request(options)
     end
 
@@ -32899,8 +32899,8 @@ module Aws::EC2
     #
     # @overload modify_managed_prefix_list(**params)
     # @param [Hash] params ({})
-    def modify_managed_prefix_list(params = {}, **options)
-      req = build_request(:modify_managed_prefix_list, params)
+    def modify_managed_prefix_list(, **options)
+      req = build_request(:modify_managed_prefix_list, )
       req.send_request(options)
     end
 
@@ -33011,8 +33011,8 @@ module Aws::EC2
     #
     # @overload modify_network_interface_attribute(**params)
     # @param [Hash] params ({})
-    def modify_network_interface_attribute(params = {}, **options)
-      req = build_request(:modify_network_interface_attribute, params)
+    def modify_network_interface_attribute(, **options)
+      req = build_request(:modify_network_interface_attribute, )
       req.send_request(options)
     end
 
@@ -33071,8 +33071,8 @@ module Aws::EC2
     #
     # @overload modify_reserved_instances(**params)
     # @param [Hash] params ({})
-    def modify_reserved_instances(params = {}, **options)
-      req = build_request(:modify_reserved_instances, params)
+    def modify_reserved_instances(, **options)
+      req = build_request(:modify_reserved_instances, )
       req.send_request(options)
     end
 
@@ -33187,8 +33187,8 @@ module Aws::EC2
     #
     # @overload modify_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_snapshot_attribute(params = {}, **options)
-      req = build_request(:modify_snapshot_attribute, params)
+    def modify_snapshot_attribute(, **options)
+      req = build_request(:modify_snapshot_attribute, )
       req.send_request(options)
     end
 
@@ -33318,8 +33318,8 @@ module Aws::EC2
     #
     # @overload modify_spot_fleet_request(**params)
     # @param [Hash] params ({})
-    def modify_spot_fleet_request(params = {}, **options)
-      req = build_request(:modify_spot_fleet_request, params)
+    def modify_spot_fleet_request(, **options)
+      req = build_request(:modify_spot_fleet_request, )
       req.send_request(options)
     end
 
@@ -33393,8 +33393,8 @@ module Aws::EC2
     #
     # @overload modify_subnet_attribute(**params)
     # @param [Hash] params ({})
-    def modify_subnet_attribute(params = {}, **options)
-      req = build_request(:modify_subnet_attribute, params)
+    def modify_subnet_attribute(, **options)
+      req = build_request(:modify_subnet_attribute, )
       req.send_request(options)
     end
 
@@ -33486,8 +33486,8 @@ module Aws::EC2
     #
     # @overload modify_traffic_mirror_filter_network_services(**params)
     # @param [Hash] params ({})
-    def modify_traffic_mirror_filter_network_services(params = {}, **options)
-      req = build_request(:modify_traffic_mirror_filter_network_services, params)
+    def modify_traffic_mirror_filter_network_services(, **options)
+      req = build_request(:modify_traffic_mirror_filter_network_services, )
       req.send_request(options)
     end
 
@@ -33589,8 +33589,8 @@ module Aws::EC2
     #
     # @overload modify_traffic_mirror_filter_rule(**params)
     # @param [Hash] params ({})
-    def modify_traffic_mirror_filter_rule(params = {}, **options)
-      req = build_request(:modify_traffic_mirror_filter_rule, params)
+    def modify_traffic_mirror_filter_rule(, **options)
+      req = build_request(:modify_traffic_mirror_filter_rule, )
       req.send_request(options)
     end
 
@@ -33677,8 +33677,8 @@ module Aws::EC2
     #
     # @overload modify_traffic_mirror_session(**params)
     # @param [Hash] params ({})
-    def modify_traffic_mirror_session(params = {}, **options)
-      req = build_request(:modify_traffic_mirror_session, params)
+    def modify_traffic_mirror_session(, **options)
+      req = build_request(:modify_traffic_mirror_session, )
       req.send_request(options)
     end
 
@@ -33752,8 +33752,8 @@ module Aws::EC2
     #
     # @overload modify_transit_gateway(**params)
     # @param [Hash] params ({})
-    def modify_transit_gateway(params = {}, **options)
-      req = build_request(:modify_transit_gateway, params)
+    def modify_transit_gateway(, **options)
+      req = build_request(:modify_transit_gateway, )
       req.send_request(options)
     end
 
@@ -33807,8 +33807,8 @@ module Aws::EC2
     #
     # @overload modify_transit_gateway_prefix_list_reference(**params)
     # @param [Hash] params ({})
-    def modify_transit_gateway_prefix_list_reference(params = {}, **options)
-      req = build_request(:modify_transit_gateway_prefix_list_reference, params)
+    def modify_transit_gateway_prefix_list_reference(, **options)
+      req = build_request(:modify_transit_gateway_prefix_list_reference, )
       req.send_request(options)
     end
 
@@ -33876,8 +33876,8 @@ module Aws::EC2
     #
     # @overload modify_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def modify_transit_gateway_vpc_attachment(params = {}, **options)
-      req = build_request(:modify_transit_gateway_vpc_attachment, params)
+    def modify_transit_gateway_vpc_attachment(, **options)
+      req = build_request(:modify_transit_gateway_vpc_attachment, )
       req.send_request(options)
     end
 
@@ -34021,8 +34021,8 @@ module Aws::EC2
     #
     # @overload modify_volume(**params)
     # @param [Hash] params ({})
-    def modify_volume(params = {}, **options)
-      req = build_request(:modify_volume, params)
+    def modify_volume(, **options)
+      req = build_request(:modify_volume, )
       req.send_request(options)
     end
 
@@ -34085,8 +34085,8 @@ module Aws::EC2
     #
     # @overload modify_volume_attribute(**params)
     # @param [Hash] params ({})
-    def modify_volume_attribute(params = {}, **options)
-      req = build_request(:modify_volume_attribute, params)
+    def modify_volume_attribute(, **options)
+      req = build_request(:modify_volume_attribute, )
       req.send_request(options)
     end
 
@@ -34159,8 +34159,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_attribute(**params)
     # @param [Hash] params ({})
-    def modify_vpc_attribute(params = {}, **options)
-      req = build_request(:modify_vpc_attribute, params)
+    def modify_vpc_attribute(, **options)
+      req = build_request(:modify_vpc_attribute, )
       req.send_request(options)
     end
 
@@ -34248,8 +34248,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint(params = {}, **options)
-      req = build_request(:modify_vpc_endpoint, params)
+    def modify_vpc_endpoint(, **options)
+      req = build_request(:modify_vpc_endpoint, )
       req.send_request(options)
     end
 
@@ -34294,8 +34294,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_endpoint_connection_notification(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint_connection_notification(params = {}, **options)
-      req = build_request(:modify_vpc_endpoint_connection_notification, params)
+    def modify_vpc_endpoint_connection_notification(, **options)
+      req = build_request(:modify_vpc_endpoint_connection_notification, )
       req.send_request(options)
     end
 
@@ -34377,8 +34377,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_endpoint_service_configuration(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint_service_configuration(params = {}, **options)
-      req = build_request(:modify_vpc_endpoint_service_configuration, params)
+    def modify_vpc_endpoint_service_configuration(, **options)
+      req = build_request(:modify_vpc_endpoint_service_configuration, )
       req.send_request(options)
     end
 
@@ -34434,8 +34434,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_endpoint_service_permissions(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint_service_permissions(params = {}, **options)
-      req = build_request(:modify_vpc_endpoint_service_permissions, params)
+    def modify_vpc_endpoint_service_permissions(, **options)
+      req = build_request(:modify_vpc_endpoint_service_permissions, )
       req.send_request(options)
     end
 
@@ -34516,8 +34516,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_peering_connection_options(**params)
     # @param [Hash] params ({})
-    def modify_vpc_peering_connection_options(params = {}, **options)
-      req = build_request(:modify_vpc_peering_connection_options, params)
+    def modify_vpc_peering_connection_options(, **options)
+      req = build_request(:modify_vpc_peering_connection_options, )
       req.send_request(options)
     end
 
@@ -34569,8 +34569,8 @@ module Aws::EC2
     #
     # @overload modify_vpc_tenancy(**params)
     # @param [Hash] params ({})
-    def modify_vpc_tenancy(params = {}, **options)
-      req = build_request(:modify_vpc_tenancy, params)
+    def modify_vpc_tenancy(, **options)
+      req = build_request(:modify_vpc_tenancy, )
       req.send_request(options)
     end
 
@@ -34717,8 +34717,8 @@ module Aws::EC2
     #
     # @overload modify_vpn_connection(**params)
     # @param [Hash] params ({})
-    def modify_vpn_connection(params = {}, **options)
-      req = build_request(:modify_vpn_connection, params)
+    def modify_vpn_connection(, **options)
+      req = build_request(:modify_vpn_connection, )
       req.send_request(options)
     end
 
@@ -34838,8 +34838,8 @@ module Aws::EC2
     #
     # @overload modify_vpn_connection_options(**params)
     # @param [Hash] params ({})
-    def modify_vpn_connection_options(params = {}, **options)
-      req = build_request(:modify_vpn_connection_options, params)
+    def modify_vpn_connection_options(, **options)
+      req = build_request(:modify_vpn_connection_options, )
       req.send_request(options)
     end
 
@@ -34932,8 +34932,8 @@ module Aws::EC2
     #
     # @overload modify_vpn_tunnel_certificate(**params)
     # @param [Hash] params ({})
-    def modify_vpn_tunnel_certificate(params = {}, **options)
-      req = build_request(:modify_vpn_tunnel_certificate, params)
+    def modify_vpn_tunnel_certificate(, **options)
+      req = build_request(:modify_vpn_tunnel_certificate, )
       req.send_request(options)
     end
 
@@ -35086,8 +35086,8 @@ module Aws::EC2
     #
     # @overload modify_vpn_tunnel_options(**params)
     # @param [Hash] params ({})
-    def modify_vpn_tunnel_options(params = {}, **options)
-      req = build_request(:modify_vpn_tunnel_options, params)
+    def modify_vpn_tunnel_options(, **options)
+      req = build_request(:modify_vpn_tunnel_options, )
       req.send_request(options)
     end
 
@@ -35132,8 +35132,8 @@ module Aws::EC2
     #
     # @overload monitor_instances(**params)
     # @param [Hash] params ({})
-    def monitor_instances(params = {}, **options)
-      req = build_request(:monitor_instances, params)
+    def monitor_instances(, **options)
+      req = build_request(:monitor_instances, )
       req.send_request(options)
     end
 
@@ -35190,8 +35190,8 @@ module Aws::EC2
     #
     # @overload move_address_to_vpc(**params)
     # @param [Hash] params ({})
-    def move_address_to_vpc(params = {}, **options)
-      req = build_request(:move_address_to_vpc, params)
+    def move_address_to_vpc(, **options)
+      req = build_request(:move_address_to_vpc, )
       req.send_request(options)
     end
 
@@ -35287,8 +35287,8 @@ module Aws::EC2
     #
     # @overload provision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def provision_byoip_cidr(params = {}, **options)
-      req = build_request(:provision_byoip_cidr, params)
+    def provision_byoip_cidr(, **options)
+      req = build_request(:provision_byoip_cidr, )
       req.send_request(options)
     end
 
@@ -35380,8 +35380,8 @@ module Aws::EC2
     #
     # @overload purchase_host_reservation(**params)
     # @param [Hash] params ({})
-    def purchase_host_reservation(params = {}, **options)
-      req = build_request(:purchase_host_reservation, params)
+    def purchase_host_reservation(, **options)
+      req = build_request(:purchase_host_reservation, )
       req.send_request(options)
     end
 
@@ -35453,8 +35453,8 @@ module Aws::EC2
     #
     # @overload purchase_reserved_instances_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_instances_offering(params = {}, **options)
-      req = build_request(:purchase_reserved_instances_offering, params)
+    def purchase_reserved_instances_offering(, **options)
+      req = build_request(:purchase_reserved_instances_offering, )
       req.send_request(options)
     end
 
@@ -35579,8 +35579,8 @@ module Aws::EC2
     #
     # @overload purchase_scheduled_instances(**params)
     # @param [Hash] params ({})
-    def purchase_scheduled_instances(params = {}, **options)
-      req = build_request(:purchase_scheduled_instances, params)
+    def purchase_scheduled_instances(, **options)
+      req = build_request(:purchase_scheduled_instances, )
       req.send_request(options)
     end
 
@@ -35637,8 +35637,8 @@ module Aws::EC2
     #
     # @overload reboot_instances(**params)
     # @param [Hash] params ({})
-    def reboot_instances(params = {}, **options)
-      req = build_request(:reboot_instances, params)
+    def reboot_instances(, **options)
+      req = build_request(:reboot_instances, )
       req.send_request(options)
     end
 
@@ -35813,8 +35813,8 @@ module Aws::EC2
     #
     # @overload register_image(**params)
     # @param [Hash] params ({})
-    def register_image(params = {}, **options)
-      req = build_request(:register_image, params)
+    def register_image(, **options)
+      req = build_request(:register_image, )
       req.send_request(options)
     end
 
@@ -35856,8 +35856,8 @@ module Aws::EC2
     #
     # @overload register_instance_event_notification_attributes(**params)
     # @param [Hash] params ({})
-    def register_instance_event_notification_attributes(params = {}, **options)
-      req = build_request(:register_instance_event_notification_attributes, params)
+    def register_instance_event_notification_attributes(, **options)
+      req = build_request(:register_instance_event_notification_attributes, )
       req.send_request(options)
     end
 
@@ -35916,8 +35916,8 @@ module Aws::EC2
     #
     # @overload register_transit_gateway_multicast_group_members(**params)
     # @param [Hash] params ({})
-    def register_transit_gateway_multicast_group_members(params = {}, **options)
-      req = build_request(:register_transit_gateway_multicast_group_members, params)
+    def register_transit_gateway_multicast_group_members(, **options)
+      req = build_request(:register_transit_gateway_multicast_group_members, )
       req.send_request(options)
     end
 
@@ -35977,8 +35977,8 @@ module Aws::EC2
     #
     # @overload register_transit_gateway_multicast_group_sources(**params)
     # @param [Hash] params ({})
-    def register_transit_gateway_multicast_group_sources(params = {}, **options)
-      req = build_request(:register_transit_gateway_multicast_group_sources, params)
+    def register_transit_gateway_multicast_group_sources(, **options)
+      req = build_request(:register_transit_gateway_multicast_group_sources, )
       req.send_request(options)
     end
 
@@ -36029,8 +36029,8 @@ module Aws::EC2
     #
     # @overload reject_transit_gateway_multicast_domain_associations(**params)
     # @param [Hash] params ({})
-    def reject_transit_gateway_multicast_domain_associations(params = {}, **options)
-      req = build_request(:reject_transit_gateway_multicast_domain_associations, params)
+    def reject_transit_gateway_multicast_domain_associations(, **options)
+      req = build_request(:reject_transit_gateway_multicast_domain_associations, )
       req.send_request(options)
     end
 
@@ -36077,8 +36077,8 @@ module Aws::EC2
     #
     # @overload reject_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def reject_transit_gateway_peering_attachment(params = {}, **options)
-      req = build_request(:reject_transit_gateway_peering_attachment, params)
+    def reject_transit_gateway_peering_attachment(, **options)
+      req = build_request(:reject_transit_gateway_peering_attachment, )
       req.send_request(options)
     end
 
@@ -36130,8 +36130,8 @@ module Aws::EC2
     #
     # @overload reject_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def reject_transit_gateway_vpc_attachment(params = {}, **options)
-      req = build_request(:reject_transit_gateway_vpc_attachment, params)
+    def reject_transit_gateway_vpc_attachment(, **options)
+      req = build_request(:reject_transit_gateway_vpc_attachment, )
       req.send_request(options)
     end
 
@@ -36173,8 +36173,8 @@ module Aws::EC2
     #
     # @overload reject_vpc_endpoint_connections(**params)
     # @param [Hash] params ({})
-    def reject_vpc_endpoint_connections(params = {}, **options)
-      req = build_request(:reject_vpc_endpoint_connections, params)
+    def reject_vpc_endpoint_connections(, **options)
+      req = build_request(:reject_vpc_endpoint_connections, )
       req.send_request(options)
     end
 
@@ -36213,8 +36213,8 @@ module Aws::EC2
     #
     # @overload reject_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def reject_vpc_peering_connection(params = {}, **options)
-      req = build_request(:reject_vpc_peering_connection, params)
+    def reject_vpc_peering_connection(, **options)
+      req = build_request(:reject_vpc_peering_connection, )
       req.send_request(options)
     end
 
@@ -36303,8 +36303,8 @@ module Aws::EC2
     #
     # @overload release_address(**params)
     # @param [Hash] params ({})
-    def release_address(params = {}, **options)
-      req = build_request(:release_address, params)
+    def release_address(, **options)
+      req = build_request(:release_address, )
       req.send_request(options)
     end
 
@@ -36349,8 +36349,8 @@ module Aws::EC2
     #
     # @overload release_hosts(**params)
     # @param [Hash] params ({})
-    def release_hosts(params = {}, **options)
-      req = build_request(:release_hosts, params)
+    def release_hosts(, **options)
+      req = build_request(:release_hosts, )
       req.send_request(options)
     end
 
@@ -36394,8 +36394,8 @@ module Aws::EC2
     #
     # @overload replace_iam_instance_profile_association(**params)
     # @param [Hash] params ({})
-    def replace_iam_instance_profile_association(params = {}, **options)
-      req = build_request(:replace_iam_instance_profile_association, params)
+    def replace_iam_instance_profile_association(, **options)
+      req = build_request(:replace_iam_instance_profile_association, )
       req.send_request(options)
     end
 
@@ -36458,8 +36458,8 @@ module Aws::EC2
     #
     # @overload replace_network_acl_association(**params)
     # @param [Hash] params ({})
-    def replace_network_acl_association(params = {}, **options)
-      req = build_request(:replace_network_acl_association, params)
+    def replace_network_acl_association(, **options)
+      req = build_request(:replace_network_acl_association, )
       req.send_request(options)
     end
 
@@ -36563,8 +36563,8 @@ module Aws::EC2
     #
     # @overload replace_network_acl_entry(**params)
     # @param [Hash] params ({})
-    def replace_network_acl_entry(params = {}, **options)
-      req = build_request(:replace_network_acl_entry, params)
+    def replace_network_acl_entry(, **options)
+      req = build_request(:replace_network_acl_entry, )
       req.send_request(options)
     end
 
@@ -36676,8 +36676,8 @@ module Aws::EC2
     #
     # @overload replace_route(**params)
     # @param [Hash] params ({})
-    def replace_route(params = {}, **options)
-      req = build_request(:replace_route, params)
+    def replace_route(, **options)
+      req = build_request(:replace_route, )
       req.send_request(options)
     end
 
@@ -36745,8 +36745,8 @@ module Aws::EC2
     #
     # @overload replace_route_table_association(**params)
     # @param [Hash] params ({})
-    def replace_route_table_association(params = {}, **options)
-      req = build_request(:replace_route_table_association, params)
+    def replace_route_table_association(, **options)
+      req = build_request(:replace_route_table_association, )
       req.send_request(options)
     end
 
@@ -36801,8 +36801,8 @@ module Aws::EC2
     #
     # @overload replace_transit_gateway_route(**params)
     # @param [Hash] params ({})
-    def replace_transit_gateway_route(params = {}, **options)
-      req = build_request(:replace_transit_gateway_route, params)
+    def replace_transit_gateway_route(, **options)
+      req = build_request(:replace_transit_gateway_route, )
       req.send_request(options)
     end
 
@@ -36883,8 +36883,8 @@ module Aws::EC2
     #
     # @overload report_instance_status(**params)
     # @param [Hash] params ({})
-    def report_instance_status(params = {}, **options)
-      req = build_request(:report_instance_status, params)
+    def report_instance_status(, **options)
+      req = build_request(:report_instance_status, )
       req.send_request(options)
     end
 
@@ -37261,8 +37261,8 @@ module Aws::EC2
     #
     # @overload request_spot_fleet(**params)
     # @param [Hash] params ({})
-    def request_spot_fleet(params = {}, **options)
-      req = build_request(:request_spot_fleet, params)
+    def request_spot_fleet(, **options)
+      req = build_request(:request_spot_fleet, )
       req.send_request(options)
     end
 
@@ -37625,8 +37625,8 @@ module Aws::EC2
     #
     # @overload request_spot_instances(**params)
     # @param [Hash] params ({})
-    def request_spot_instances(params = {}, **options)
-      req = build_request(:request_spot_instances, params)
+    def request_spot_instances(, **options)
+      req = build_request(:request_spot_instances, )
       req.send_request(options)
     end
 
@@ -37666,8 +37666,8 @@ module Aws::EC2
     #
     # @overload reset_ebs_default_kms_key_id(**params)
     # @param [Hash] params ({})
-    def reset_ebs_default_kms_key_id(params = {}, **options)
-      req = build_request(:reset_ebs_default_kms_key_id, params)
+    def reset_ebs_default_kms_key_id(, **options)
+      req = build_request(:reset_ebs_default_kms_key_id, )
       req.send_request(options)
     end
 
@@ -37707,8 +37707,8 @@ module Aws::EC2
     #
     # @overload reset_fpga_image_attribute(**params)
     # @param [Hash] params ({})
-    def reset_fpga_image_attribute(params = {}, **options)
-      req = build_request(:reset_fpga_image_attribute, params)
+    def reset_fpga_image_attribute(, **options)
+      req = build_request(:reset_fpga_image_attribute, )
       req.send_request(options)
     end
 
@@ -37759,8 +37759,8 @@ module Aws::EC2
     #
     # @overload reset_image_attribute(**params)
     # @param [Hash] params ({})
-    def reset_image_attribute(params = {}, **options)
-      req = build_request(:reset_image_attribute, params)
+    def reset_image_attribute(, **options)
+      req = build_request(:reset_image_attribute, )
       req.send_request(options)
     end
 
@@ -37823,8 +37823,8 @@ module Aws::EC2
     #
     # @overload reset_instance_attribute(**params)
     # @param [Hash] params ({})
-    def reset_instance_attribute(params = {}, **options)
-      req = build_request(:reset_instance_attribute, params)
+    def reset_instance_attribute(, **options)
+      req = build_request(:reset_instance_attribute, )
       req.send_request(options)
     end
 
@@ -37857,8 +37857,8 @@ module Aws::EC2
     #
     # @overload reset_network_interface_attribute(**params)
     # @param [Hash] params ({})
-    def reset_network_interface_attribute(params = {}, **options)
-      req = build_request(:reset_network_interface_attribute, params)
+    def reset_network_interface_attribute(, **options)
+      req = build_request(:reset_network_interface_attribute, )
       req.send_request(options)
     end
 
@@ -37914,8 +37914,8 @@ module Aws::EC2
     #
     # @overload reset_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def reset_snapshot_attribute(params = {}, **options)
-      req = build_request(:reset_snapshot_attribute, params)
+    def reset_snapshot_attribute(, **options)
+      req = build_request(:reset_snapshot_attribute, )
       req.send_request(options)
     end
 
@@ -37970,8 +37970,8 @@ module Aws::EC2
     #
     # @overload restore_address_to_classic(**params)
     # @param [Hash] params ({})
-    def restore_address_to_classic(params = {}, **options)
-      req = build_request(:restore_address_to_classic, params)
+    def restore_address_to_classic(, **options)
+      req = build_request(:restore_address_to_classic, )
       req.send_request(options)
     end
 
@@ -38025,8 +38025,8 @@ module Aws::EC2
     #
     # @overload restore_managed_prefix_list_version(**params)
     # @param [Hash] params ({})
-    def restore_managed_prefix_list_version(params = {}, **options)
-      req = build_request(:restore_managed_prefix_list_version, params)
+    def restore_managed_prefix_list_version(, **options)
+      req = build_request(:restore_managed_prefix_list_version, )
       req.send_request(options)
     end
 
@@ -38075,8 +38075,8 @@ module Aws::EC2
     #
     # @overload revoke_client_vpn_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_client_vpn_ingress(params = {}, **options)
-      req = build_request(:revoke_client_vpn_ingress, params)
+    def revoke_client_vpn_ingress(, **options)
+      req = build_request(:revoke_client_vpn_ingress, )
       req.send_request(options)
     end
 
@@ -38221,8 +38221,8 @@ module Aws::EC2
     #
     # @overload revoke_security_group_egress(**params)
     # @param [Hash] params ({})
-    def revoke_security_group_egress(params = {}, **options)
-      req = build_request(:revoke_security_group_egress, params)
+    def revoke_security_group_egress(, **options)
+      req = build_request(:revoke_security_group_egress, )
       req.send_request(options)
     end
 
@@ -38391,8 +38391,8 @@ module Aws::EC2
     #
     # @overload revoke_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_security_group_ingress(params = {}, **options)
-      req = build_request(:revoke_security_group_ingress, params)
+    def revoke_security_group_ingress(, **options)
+      req = build_request(:revoke_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -39138,8 +39138,8 @@ module Aws::EC2
     #
     # @overload run_instances(**params)
     # @param [Hash] params ({})
-    def run_instances(params = {}, **options)
-      req = build_request(:run_instances, params)
+    def run_instances(, **options)
+      req = build_request(:run_instances, )
       req.send_request(options)
     end
 
@@ -39338,8 +39338,8 @@ module Aws::EC2
     #
     # @overload run_scheduled_instances(**params)
     # @param [Hash] params ({})
-    def run_scheduled_instances(params = {}, **options)
-      req = build_request(:run_scheduled_instances, params)
+    def run_scheduled_instances(, **options)
+      req = build_request(:run_scheduled_instances, )
       req.send_request(options)
     end
 
@@ -39403,8 +39403,8 @@ module Aws::EC2
     #
     # @overload search_local_gateway_routes(**params)
     # @param [Hash] params ({})
-    def search_local_gateway_routes(params = {}, **options)
-      req = build_request(:search_local_gateway_routes, params)
+    def search_local_gateway_routes(, **options)
+      req = build_request(:search_local_gateway_routes, )
       req.send_request(options)
     end
 
@@ -39501,8 +39501,8 @@ module Aws::EC2
     #
     # @overload search_transit_gateway_multicast_groups(**params)
     # @param [Hash] params ({})
-    def search_transit_gateway_multicast_groups(params = {}, **options)
-      req = build_request(:search_transit_gateway_multicast_groups, params)
+    def search_transit_gateway_multicast_groups(, **options)
+      req = build_request(:search_transit_gateway_multicast_groups, )
       req.send_request(options)
     end
 
@@ -39590,8 +39590,8 @@ module Aws::EC2
     #
     # @overload search_transit_gateway_routes(**params)
     # @param [Hash] params ({})
-    def search_transit_gateway_routes(params = {}, **options)
-      req = build_request(:search_transit_gateway_routes, params)
+    def search_transit_gateway_routes(, **options)
+      req = build_request(:search_transit_gateway_routes, )
       req.send_request(options)
     end
 
@@ -39642,8 +39642,8 @@ module Aws::EC2
     #
     # @overload send_diagnostic_interrupt(**params)
     # @param [Hash] params ({})
-    def send_diagnostic_interrupt(params = {}, **options)
-      req = build_request(:send_diagnostic_interrupt, params)
+    def send_diagnostic_interrupt(, **options)
+      req = build_request(:send_diagnostic_interrupt, )
       req.send_request(options)
     end
 
@@ -39742,8 +39742,8 @@ module Aws::EC2
     #
     # @overload start_instances(**params)
     # @param [Hash] params ({})
-    def start_instances(params = {}, **options)
-      req = build_request(:start_instances, params)
+    def start_instances(, **options)
+      req = build_request(:start_instances, )
       req.send_request(options)
     end
 
@@ -40045,8 +40045,8 @@ module Aws::EC2
     #
     # @overload start_network_insights_analysis(**params)
     # @param [Hash] params ({})
-    def start_network_insights_analysis(params = {}, **options)
-      req = build_request(:start_network_insights_analysis, params)
+    def start_network_insights_analysis(, **options)
+      req = build_request(:start_network_insights_analysis, )
       req.send_request(options)
     end
 
@@ -40092,8 +40092,8 @@ module Aws::EC2
     #
     # @overload start_vpc_endpoint_service_private_dns_verification(**params)
     # @param [Hash] params ({})
-    def start_vpc_endpoint_service_private_dns_verification(params = {}, **options)
-      req = build_request(:start_vpc_endpoint_service_private_dns_verification, params)
+    def start_vpc_endpoint_service_private_dns_verification(, **options)
+      req = build_request(:start_vpc_endpoint_service_private_dns_verification, )
       req.send_request(options)
     end
 
@@ -40235,8 +40235,8 @@ module Aws::EC2
     #
     # @overload stop_instances(**params)
     # @param [Hash] params ({})
-    def stop_instances(params = {}, **options)
-      req = build_request(:stop_instances, params)
+    def stop_instances(, **options)
+      req = build_request(:stop_instances, )
       req.send_request(options)
     end
 
@@ -40291,8 +40291,8 @@ module Aws::EC2
     #
     # @overload terminate_client_vpn_connections(**params)
     # @param [Hash] params ({})
-    def terminate_client_vpn_connections(params = {}, **options)
-      req = build_request(:terminate_client_vpn_connections, params)
+    def terminate_client_vpn_connections(, **options)
+      req = build_request(:terminate_client_vpn_connections, )
       req.send_request(options)
     end
 
@@ -40394,8 +40394,8 @@ module Aws::EC2
     #
     # @overload terminate_instances(**params)
     # @param [Hash] params ({})
-    def terminate_instances(params = {}, **options)
-      req = build_request(:terminate_instances, params)
+    def terminate_instances(, **options)
+      req = build_request(:terminate_instances, )
       req.send_request(options)
     end
 
@@ -40429,8 +40429,8 @@ module Aws::EC2
     #
     # @overload unassign_ipv_6_addresses(**params)
     # @param [Hash] params ({})
-    def unassign_ipv_6_addresses(params = {}, **options)
-      req = build_request(:unassign_ipv_6_addresses, params)
+    def unassign_ipv_6_addresses(, **options)
+      req = build_request(:unassign_ipv_6_addresses, )
       req.send_request(options)
     end
 
@@ -40470,8 +40470,8 @@ module Aws::EC2
     #
     # @overload unassign_private_ip_addresses(**params)
     # @param [Hash] params ({})
-    def unassign_private_ip_addresses(params = {}, **options)
-      req = build_request(:unassign_private_ip_addresses, params)
+    def unassign_private_ip_addresses(, **options)
+      req = build_request(:unassign_private_ip_addresses, )
       req.send_request(options)
     end
 
@@ -40513,8 +40513,8 @@ module Aws::EC2
     #
     # @overload unmonitor_instances(**params)
     # @param [Hash] params ({})
-    def unmonitor_instances(params = {}, **options)
-      req = build_request(:unmonitor_instances, params)
+    def unmonitor_instances(, **options)
+      req = build_request(:unmonitor_instances, )
       req.send_request(options)
     end
 
@@ -40627,8 +40627,8 @@ module Aws::EC2
     #
     # @overload update_security_group_rule_descriptions_egress(**params)
     # @param [Hash] params ({})
-    def update_security_group_rule_descriptions_egress(params = {}, **options)
-      req = build_request(:update_security_group_rule_descriptions_egress, params)
+    def update_security_group_rule_descriptions_egress(, **options)
+      req = build_request(:update_security_group_rule_descriptions_egress, )
       req.send_request(options)
     end
 
@@ -40741,8 +40741,8 @@ module Aws::EC2
     #
     # @overload update_security_group_rule_descriptions_ingress(**params)
     # @param [Hash] params ({})
-    def update_security_group_rule_descriptions_ingress(params = {}, **options)
-      req = build_request(:update_security_group_rule_descriptions_ingress, params)
+    def update_security_group_rule_descriptions_ingress(, **options)
+      req = build_request(:update_security_group_rule_descriptions_ingress, )
       req.send_request(options)
     end
 
@@ -40786,8 +40786,8 @@ module Aws::EC2
     #
     # @overload withdraw_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def withdraw_byoip_cidr(params = {}, **options)
-      req = build_request(:withdraw_byoip_cidr, params)
+    def withdraw_byoip_cidr(, **options)
+      req = build_request(:withdraw_byoip_cidr, )
       req.send_request(options)
     end
 

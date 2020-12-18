@@ -356,8 +356,8 @@ module Aws::EventBridge
     #
     # @overload activate_event_source(**params)
     # @param [Hash] params ({})
-    def activate_event_source(params = {}, **options)
-      req = build_request(:activate_event_source, params)
+    def activate_event_source(, **options)
+      req = build_request(:activate_event_source, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::EventBridge
     #
     # @overload cancel_replay(**params)
     # @param [Hash] params ({})
-    def cancel_replay(params = {}, **options)
-      req = build_request(:cancel_replay, params)
+    def cancel_replay(, **options)
+      req = build_request(:cancel_replay, )
       req.send_request(options)
     end
 
@@ -444,8 +444,8 @@ module Aws::EventBridge
     #
     # @overload create_archive(**params)
     # @param [Hash] params ({})
-    def create_archive(params = {}, **options)
-      req = build_request(:create_archive, params)
+    def create_archive(, **options)
+      req = build_request(:create_archive, )
       req.send_request(options)
     end
 
@@ -496,8 +496,8 @@ module Aws::EventBridge
     #
     # @overload create_event_bus(**params)
     # @param [Hash] params ({})
-    def create_event_bus(params = {}, **options)
-      req = build_request(:create_event_bus, params)
+    def create_event_bus(, **options)
+      req = build_request(:create_event_bus, )
       req.send_request(options)
     end
 
@@ -559,8 +559,8 @@ module Aws::EventBridge
     #
     # @overload create_partner_event_source(**params)
     # @param [Hash] params ({})
-    def create_partner_event_source(params = {}, **options)
-      req = build_request(:create_partner_event_source, params)
+    def create_partner_event_source(, **options)
+      req = build_request(:create_partner_event_source, )
       req.send_request(options)
     end
 
@@ -590,8 +590,8 @@ module Aws::EventBridge
     #
     # @overload deactivate_event_source(**params)
     # @param [Hash] params ({})
-    def deactivate_event_source(params = {}, **options)
-      req = build_request(:deactivate_event_source, params)
+    def deactivate_event_source(, **options)
+      req = build_request(:deactivate_event_source, )
       req.send_request(options)
     end
 
@@ -612,8 +612,8 @@ module Aws::EventBridge
     #
     # @overload delete_archive(**params)
     # @param [Hash] params ({})
-    def delete_archive(params = {}, **options)
-      req = build_request(:delete_archive, params)
+    def delete_archive(, **options)
+      req = build_request(:delete_archive, )
       req.send_request(options)
     end
 
@@ -636,8 +636,8 @@ module Aws::EventBridge
     #
     # @overload delete_event_bus(**params)
     # @param [Hash] params ({})
-    def delete_event_bus(params = {}, **options)
-      req = build_request(:delete_event_bus, params)
+    def delete_event_bus(, **options)
+      req = build_request(:delete_event_bus, )
       req.send_request(options)
     end
 
@@ -667,8 +667,8 @@ module Aws::EventBridge
     #
     # @overload delete_partner_event_source(**params)
     # @param [Hash] params ({})
-    def delete_partner_event_source(params = {}, **options)
-      req = build_request(:delete_partner_event_source, params)
+    def delete_partner_event_source(, **options)
+      req = build_request(:delete_partner_event_source, )
       req.send_request(options)
     end
 
@@ -714,8 +714,8 @@ module Aws::EventBridge
     #
     # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, **options)
-      req = build_request(:delete_rule, params)
+    def delete_rule(, **options)
+      req = build_request(:delete_rule, )
       req.send_request(options)
     end
 
@@ -762,8 +762,8 @@ module Aws::EventBridge
     #
     # @overload describe_archive(**params)
     # @param [Hash] params ({})
-    def describe_archive(params = {}, **options)
-      req = build_request(:describe_archive, params)
+    def describe_archive(, **options)
+      req = build_request(:describe_archive, )
       req.send_request(options)
     end
 
@@ -804,8 +804,8 @@ module Aws::EventBridge
     #
     # @overload describe_event_bus(**params)
     # @param [Hash] params ({})
-    def describe_event_bus(params = {}, **options)
-      req = build_request(:describe_event_bus, params)
+    def describe_event_bus(, **options)
+      req = build_request(:describe_event_bus, )
       req.send_request(options)
     end
 
@@ -843,8 +843,8 @@ module Aws::EventBridge
     #
     # @overload describe_event_source(**params)
     # @param [Hash] params ({})
-    def describe_event_source(params = {}, **options)
-      req = build_request(:describe_event_source, params)
+    def describe_event_source(, **options)
+      req = build_request(:describe_event_source, )
       req.send_request(options)
     end
 
@@ -876,8 +876,8 @@ module Aws::EventBridge
     #
     # @overload describe_partner_event_source(**params)
     # @param [Hash] params ({})
-    def describe_partner_event_source(params = {}, **options)
-      req = build_request(:describe_partner_event_source, params)
+    def describe_partner_event_source(, **options)
+      req = build_request(:describe_partner_event_source, )
       req.send_request(options)
     end
 
@@ -937,8 +937,8 @@ module Aws::EventBridge
     #
     # @overload describe_replay(**params)
     # @param [Hash] params ({})
-    def describe_replay(params = {}, **options)
-      req = build_request(:describe_replay, params)
+    def describe_replay(, **options)
+      req = build_request(:describe_replay, )
       req.send_request(options)
     end
 
@@ -991,8 +991,8 @@ module Aws::EventBridge
     #
     # @overload describe_rule(**params)
     # @param [Hash] params ({})
-    def describe_rule(params = {}, **options)
-      req = build_request(:describe_rule, params)
+    def describe_rule(, **options)
+      req = build_request(:describe_rule, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::EventBridge
     #
     # @overload disable_rule(**params)
     # @param [Hash] params ({})
-    def disable_rule(params = {}, **options)
-      req = build_request(:disable_rule, params)
+    def disable_rule(, **options)
+      req = build_request(:disable_rule, )
       req.send_request(options)
     end
 
@@ -1055,8 +1055,8 @@ module Aws::EventBridge
     #
     # @overload enable_rule(**params)
     # @param [Hash] params ({})
-    def enable_rule(params = {}, **options)
-      req = build_request(:enable_rule, params)
+    def enable_rule(, **options)
+      req = build_request(:enable_rule, )
       req.send_request(options)
     end
 
@@ -1113,8 +1113,8 @@ module Aws::EventBridge
     #
     # @overload list_archives(**params)
     # @param [Hash] params ({})
-    def list_archives(params = {}, **options)
-      req = build_request(:list_archives, params)
+    def list_archives(, **options)
+      req = build_request(:list_archives, )
       req.send_request(options)
     end
 
@@ -1159,8 +1159,8 @@ module Aws::EventBridge
     #
     # @overload list_event_buses(**params)
     # @param [Hash] params ({})
-    def list_event_buses(params = {}, **options)
-      req = build_request(:list_event_buses, params)
+    def list_event_buses(, **options)
+      req = build_request(:list_event_buses, )
       req.send_request(options)
     end
 
@@ -1209,8 +1209,8 @@ module Aws::EventBridge
     #
     # @overload list_event_sources(**params)
     # @param [Hash] params ({})
-    def list_event_sources(params = {}, **options)
-      req = build_request(:list_event_sources, params)
+    def list_event_sources(, **options)
+      req = build_request(:list_event_sources, )
       req.send_request(options)
     end
 
@@ -1257,8 +1257,8 @@ module Aws::EventBridge
     #
     # @overload list_partner_event_source_accounts(**params)
     # @param [Hash] params ({})
-    def list_partner_event_source_accounts(params = {}, **options)
-      req = build_request(:list_partner_event_source_accounts, params)
+    def list_partner_event_source_accounts(, **options)
+      req = build_request(:list_partner_event_source_accounts, )
       req.send_request(options)
     end
 
@@ -1303,8 +1303,8 @@ module Aws::EventBridge
     #
     # @overload list_partner_event_sources(**params)
     # @param [Hash] params ({})
-    def list_partner_event_sources(params = {}, **options)
-      req = build_request(:list_partner_event_sources, params)
+    def list_partner_event_sources(, **options)
+      req = build_request(:list_partner_event_sources, )
       req.send_request(options)
     end
 
@@ -1362,8 +1362,8 @@ module Aws::EventBridge
     #
     # @overload list_replays(**params)
     # @param [Hash] params ({})
-    def list_replays(params = {}, **options)
-      req = build_request(:list_replays, params)
+    def list_replays(, **options)
+      req = build_request(:list_replays, )
       req.send_request(options)
     end
 
@@ -1409,8 +1409,8 @@ module Aws::EventBridge
     #
     # @overload list_rule_names_by_target(**params)
     # @param [Hash] params ({})
-    def list_rule_names_by_target(params = {}, **options)
-      req = build_request(:list_rule_names_by_target, params)
+    def list_rule_names_by_target(, **options)
+      req = build_request(:list_rule_names_by_target, )
       req.send_request(options)
     end
 
@@ -1466,8 +1466,8 @@ module Aws::EventBridge
     #
     # @overload list_rules(**params)
     # @param [Hash] params ({})
-    def list_rules(params = {}, **options)
-      req = build_request(:list_rules, params)
+    def list_rules(, **options)
+      req = build_request(:list_rules, )
       req.send_request(options)
     end
 
@@ -1497,8 +1497,8 @@ module Aws::EventBridge
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1584,8 +1584,8 @@ module Aws::EventBridge
     #
     # @overload list_targets_by_rule(**params)
     # @param [Hash] params ({})
-    def list_targets_by_rule(params = {}, **options)
-      req = build_request(:list_targets_by_rule, params)
+    def list_targets_by_rule(, **options)
+      req = build_request(:list_targets_by_rule, )
       req.send_request(options)
     end
 
@@ -1629,8 +1629,8 @@ module Aws::EventBridge
     #
     # @overload put_events(**params)
     # @param [Hash] params ({})
-    def put_events(params = {}, **options)
-      req = build_request(:put_events, params)
+    def put_events(, **options)
+      req = build_request(:put_events, )
       req.send_request(options)
     end
 
@@ -1671,8 +1671,8 @@ module Aws::EventBridge
     #
     # @overload put_partner_events(**params)
     # @param [Hash] params ({})
-    def put_partner_events(params = {}, **options)
-      req = build_request(:put_partner_events, params)
+    def put_partner_events(, **options)
+      req = build_request(:put_partner_events, )
       req.send_request(options)
     end
 
@@ -1774,8 +1774,8 @@ module Aws::EventBridge
     #
     # @overload put_permission(**params)
     # @param [Hash] params ({})
-    def put_permission(params = {}, **options)
-      req = build_request(:put_permission, params)
+    def put_permission(, **options)
+      req = build_request(:put_permission, )
       req.send_request(options)
     end
 
@@ -1906,8 +1906,8 @@ module Aws::EventBridge
     #
     # @overload put_rule(**params)
     # @param [Hash] params ({})
-    def put_rule(params = {}, **options)
-      req = build_request(:put_rule, params)
+    def put_rule(, **options)
+      req = build_request(:put_rule, )
       req.send_request(options)
     end
 
@@ -2148,8 +2148,8 @@ module Aws::EventBridge
     #
     # @overload put_targets(**params)
     # @param [Hash] params ({})
-    def put_targets(params = {}, **options)
-      req = build_request(:put_targets, params)
+    def put_targets(, **options)
+      req = build_request(:put_targets, )
       req.send_request(options)
     end
 
@@ -2184,8 +2184,8 @@ module Aws::EventBridge
     #
     # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, **options)
-      req = build_request(:remove_permission, params)
+    def remove_permission(, **options)
+      req = build_request(:remove_permission, )
       req.send_request(options)
     end
 
@@ -2244,8 +2244,8 @@ module Aws::EventBridge
     #
     # @overload remove_targets(**params)
     # @param [Hash] params ({})
-    def remove_targets(params = {}, **options)
-      req = build_request(:remove_targets, params)
+    def remove_targets(, **options)
+      req = build_request(:remove_targets, )
       req.send_request(options)
     end
 
@@ -2313,8 +2313,8 @@ module Aws::EventBridge
     #
     # @overload start_replay(**params)
     # @param [Hash] params ({})
-    def start_replay(params = {}, **options)
-      req = build_request(:start_replay, params)
+    def start_replay(, **options)
+      req = build_request(:start_replay, )
       req.send_request(options)
     end
 
@@ -2359,8 +2359,8 @@ module Aws::EventBridge
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2402,8 +2402,8 @@ module Aws::EventBridge
     #
     # @overload test_event_pattern(**params)
     # @param [Hash] params ({})
-    def test_event_pattern(params = {}, **options)
-      req = build_request(:test_event_pattern, params)
+    def test_event_pattern(, **options)
+      req = build_request(:test_event_pattern, )
       req.send_request(options)
     end
 
@@ -2430,8 +2430,8 @@ module Aws::EventBridge
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2476,8 +2476,8 @@ module Aws::EventBridge
     #
     # @overload update_archive(**params)
     # @param [Hash] params ({})
-    def update_archive(params = {}, **options)
-      req = build_request(:update_archive, params)
+    def update_archive(, **options)
+      req = build_request(:update_archive, )
       req.send_request(options)
     end
 

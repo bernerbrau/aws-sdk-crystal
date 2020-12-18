@@ -372,8 +372,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload create_suite_definition(**params)
     # @param [Hash] params ({})
-    def create_suite_definition(params = {}, **options)
-      req = build_request(:create_suite_definition, params)
+    def create_suite_definition(, **options)
+      req = build_request(:create_suite_definition, )
       req.send_request(options)
     end
 
@@ -392,8 +392,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload delete_suite_definition(**params)
     # @param [Hash] params ({})
-    def delete_suite_definition(params = {}, **options)
-      req = build_request(:delete_suite_definition, params)
+    def delete_suite_definition(, **options)
+      req = build_request(:delete_suite_definition, )
       req.send_request(options)
     end
 
@@ -443,8 +443,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload get_suite_definition(**params)
     # @param [Hash] params ({})
-    def get_suite_definition(params = {}, **options)
-      req = build_request(:get_suite_definition, params)
+    def get_suite_definition(, **options)
+      req = build_request(:get_suite_definition, )
       req.send_request(options)
     end
 
@@ -513,8 +513,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload get_suite_run(**params)
     # @param [Hash] params ({})
-    def get_suite_run(params = {}, **options)
-      req = build_request(:get_suite_run, params)
+    def get_suite_run(, **options)
+      req = build_request(:get_suite_run, )
       req.send_request(options)
     end
 
@@ -544,8 +544,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload get_suite_run_report(**params)
     # @param [Hash] params ({})
-    def get_suite_run_report(params = {}, **options)
-      req = build_request(:get_suite_run_report, params)
+    def get_suite_run_report(, **options)
+      req = build_request(:get_suite_run_report, )
       req.send_request(options)
     end
 
@@ -585,8 +585,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload list_suite_definitions(**params)
     # @param [Hash] params ({})
-    def list_suite_definitions(params = {}, **options)
-      req = build_request(:list_suite_definitions, params)
+    def list_suite_definitions(, **options)
+      req = build_request(:list_suite_definitions, )
       req.send_request(options)
     end
 
@@ -641,8 +641,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload list_suite_runs(**params)
     # @param [Hash] params ({})
-    def list_suite_runs(params = {}, **options)
-      req = build_request(:list_suite_runs, params)
+    def list_suite_runs(, **options)
+      req = build_request(:list_suite_runs, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -719,8 +719,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload list_test_cases(**params)
     # @param [Hash] params ({})
-    def list_test_cases(params = {}, **options)
-      req = build_request(:list_test_cases, params)
+    def list_test_cases(, **options)
+      req = build_request(:list_test_cases, )
       req.send_request(options)
     end
 
@@ -773,8 +773,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload start_suite_run(**params)
     # @param [Hash] params ({})
-    def start_suite_run(params = {}, **options)
-      req = build_request(:start_suite_run, params)
+    def start_suite_run(, **options)
+      req = build_request(:start_suite_run, )
       req.send_request(options)
     end
 
@@ -799,8 +799,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -823,8 +823,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -875,8 +875,8 @@ module Aws::IoTDeviceAdvisor
     #
     # @overload update_suite_definition(**params)
     # @param [Hash] params ({})
-    def update_suite_definition(params = {}, **options)
-      req = build_request(:update_suite_definition, params)
+    def update_suite_definition(, **options)
+      req = build_request(:update_suite_definition, )
       req.send_request(options)
     end
 

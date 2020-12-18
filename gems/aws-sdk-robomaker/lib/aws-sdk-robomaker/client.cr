@@ -352,8 +352,8 @@ module Aws::RoboMaker
     #
     # @overload batch_delete_worlds(**params)
     # @param [Hash] params ({})
-    def batch_delete_worlds(params = {}, **options)
-      req = build_request(:batch_delete_worlds, params)
+    def batch_delete_worlds(, **options)
+      req = build_request(:batch_delete_worlds, )
       req.send_request(options)
     end
 
@@ -442,8 +442,8 @@ module Aws::RoboMaker
     #
     # @overload batch_describe_simulation_job(**params)
     # @param [Hash] params ({})
-    def batch_describe_simulation_job(params = {}, **options)
-      req = build_request(:batch_describe_simulation_job, params)
+    def batch_describe_simulation_job(, **options)
+      req = build_request(:batch_describe_simulation_job, )
       req.send_request(options)
     end
 
@@ -464,8 +464,8 @@ module Aws::RoboMaker
     #
     # @overload cancel_deployment_job(**params)
     # @param [Hash] params ({})
-    def cancel_deployment_job(params = {}, **options)
-      req = build_request(:cancel_deployment_job, params)
+    def cancel_deployment_job(, **options)
+      req = build_request(:cancel_deployment_job, )
       req.send_request(options)
     end
 
@@ -486,8 +486,8 @@ module Aws::RoboMaker
     #
     # @overload cancel_simulation_job(**params)
     # @param [Hash] params ({})
-    def cancel_simulation_job(params = {}, **options)
-      req = build_request(:cancel_simulation_job, params)
+    def cancel_simulation_job(, **options)
+      req = build_request(:cancel_simulation_job, )
       req.send_request(options)
     end
 
@@ -510,8 +510,8 @@ module Aws::RoboMaker
     #
     # @overload cancel_simulation_job_batch(**params)
     # @param [Hash] params ({})
-    def cancel_simulation_job_batch(params = {}, **options)
-      req = build_request(:cancel_simulation_job_batch, params)
+    def cancel_simulation_job_batch(, **options)
+      req = build_request(:cancel_simulation_job_batch, )
       req.send_request(options)
     end
 
@@ -532,8 +532,8 @@ module Aws::RoboMaker
     #
     # @overload cancel_world_export_job(**params)
     # @param [Hash] params ({})
-    def cancel_world_export_job(params = {}, **options)
-      req = build_request(:cancel_world_export_job, params)
+    def cancel_world_export_job(, **options)
+      req = build_request(:cancel_world_export_job, )
       req.send_request(options)
     end
 
@@ -554,8 +554,8 @@ module Aws::RoboMaker
     #
     # @overload cancel_world_generation_job(**params)
     # @param [Hash] params ({})
-    def cancel_world_generation_job(params = {}, **options)
-      req = build_request(:cancel_world_generation_job, params)
+    def cancel_world_generation_job(, **options)
+      req = build_request(:cancel_world_generation_job, )
       req.send_request(options)
     end
 
@@ -673,8 +673,8 @@ module Aws::RoboMaker
     #
     # @overload create_deployment_job(**params)
     # @param [Hash] params ({})
-    def create_deployment_job(params = {}, **options)
-      req = build_request(:create_deployment_job, params)
+    def create_deployment_job(, **options)
+      req = build_request(:create_deployment_job, )
       req.send_request(options)
     end
 
@@ -716,8 +716,8 @@ module Aws::RoboMaker
     #
     # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, **options)
-      req = build_request(:create_fleet, params)
+    def create_fleet(, **options)
+      req = build_request(:create_fleet, )
       req.send_request(options)
     end
 
@@ -770,8 +770,8 @@ module Aws::RoboMaker
     #
     # @overload create_robot(**params)
     # @param [Hash] params ({})
-    def create_robot(params = {}, **options)
-      req = build_request(:create_robot, params)
+    def create_robot(, **options)
+      req = build_request(:create_robot, )
       req.send_request(options)
     end
 
@@ -843,8 +843,8 @@ module Aws::RoboMaker
     #
     # @overload create_robot_application(**params)
     # @param [Hash] params ({})
-    def create_robot_application(params = {}, **options)
-      req = build_request(:create_robot_application, params)
+    def create_robot_application(, **options)
+      req = build_request(:create_robot_application, )
       req.send_request(options)
     end
 
@@ -894,8 +894,8 @@ module Aws::RoboMaker
     #
     # @overload create_robot_application_version(**params)
     # @param [Hash] params ({})
-    def create_robot_application_version(params = {}, **options)
-      req = build_request(:create_robot_application_version, params)
+    def create_robot_application_version(, **options)
+      req = build_request(:create_robot_application_version, )
       req.send_request(options)
     end
 
@@ -987,8 +987,8 @@ module Aws::RoboMaker
     #
     # @overload create_simulation_application(**params)
     # @param [Hash] params ({})
-    def create_simulation_application(params = {}, **options)
-      req = build_request(:create_simulation_application, params)
+    def create_simulation_application(, **options)
+      req = build_request(:create_simulation_application, )
       req.send_request(options)
     end
 
@@ -1044,8 +1044,8 @@ module Aws::RoboMaker
     #
     # @overload create_simulation_application_version(**params)
     # @param [Hash] params ({})
-    def create_simulation_application_version(params = {}, **options)
-      req = build_request(:create_simulation_application_version, params)
+    def create_simulation_application_version(, **options)
+      req = build_request(:create_simulation_application_version, )
       req.send_request(options)
     end
 
@@ -1286,8 +1286,8 @@ module Aws::RoboMaker
     #
     # @overload create_simulation_job(**params)
     # @param [Hash] params ({})
-    def create_simulation_job(params = {}, **options)
-      req = build_request(:create_simulation_job, params)
+    def create_simulation_job(, **options)
+      req = build_request(:create_simulation_job, )
       req.send_request(options)
     end
 
@@ -1358,8 +1358,8 @@ module Aws::RoboMaker
     #
     # @overload create_world_export_job(**params)
     # @param [Hash] params ({})
-    def create_world_export_job(params = {}, **options)
-      req = build_request(:create_world_export_job, params)
+    def create_world_export_job(, **options)
+      req = build_request(:create_world_export_job, )
       req.send_request(options)
     end
 
@@ -1435,8 +1435,8 @@ module Aws::RoboMaker
     #
     # @overload create_world_generation_job(**params)
     # @param [Hash] params ({})
-    def create_world_generation_job(params = {}, **options)
-      req = build_request(:create_world_generation_job, params)
+    def create_world_generation_job(, **options)
+      req = build_request(:create_world_generation_job, )
       req.send_request(options)
     end
 
@@ -1495,8 +1495,8 @@ module Aws::RoboMaker
     #
     # @overload create_world_template(**params)
     # @param [Hash] params ({})
-    def create_world_template(params = {}, **options)
-      req = build_request(:create_world_template, params)
+    def create_world_template(, **options)
+      req = build_request(:create_world_template, )
       req.send_request(options)
     end
 
@@ -1517,8 +1517,8 @@ module Aws::RoboMaker
     #
     # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, **options)
-      req = build_request(:delete_fleet, params)
+    def delete_fleet(, **options)
+      req = build_request(:delete_fleet, )
       req.send_request(options)
     end
 
@@ -1539,8 +1539,8 @@ module Aws::RoboMaker
     #
     # @overload delete_robot(**params)
     # @param [Hash] params ({})
-    def delete_robot(params = {}, **options)
-      req = build_request(:delete_robot, params)
+    def delete_robot(, **options)
+      req = build_request(:delete_robot, )
       req.send_request(options)
     end
 
@@ -1565,8 +1565,8 @@ module Aws::RoboMaker
     #
     # @overload delete_robot_application(**params)
     # @param [Hash] params ({})
-    def delete_robot_application(params = {}, **options)
-      req = build_request(:delete_robot_application, params)
+    def delete_robot_application(, **options)
+      req = build_request(:delete_robot_application, )
       req.send_request(options)
     end
 
@@ -1591,8 +1591,8 @@ module Aws::RoboMaker
     #
     # @overload delete_simulation_application(**params)
     # @param [Hash] params ({})
-    def delete_simulation_application(params = {}, **options)
-      req = build_request(:delete_simulation_application, params)
+    def delete_simulation_application(, **options)
+      req = build_request(:delete_simulation_application, )
       req.send_request(options)
     end
 
@@ -1614,8 +1614,8 @@ module Aws::RoboMaker
     #
     # @overload delete_world_template(**params)
     # @param [Hash] params ({})
-    def delete_world_template(params = {}, **options)
-      req = build_request(:delete_world_template, params)
+    def delete_world_template(, **options)
+      req = build_request(:delete_world_template, )
       req.send_request(options)
     end
 
@@ -1648,8 +1648,8 @@ module Aws::RoboMaker
     #
     # @overload deregister_robot(**params)
     # @param [Hash] params ({})
-    def deregister_robot(params = {}, **options)
-      req = build_request(:deregister_robot, params)
+    def deregister_robot(, **options)
+      req = build_request(:deregister_robot, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::RoboMaker
     #
     # @overload describe_deployment_job(**params)
     # @param [Hash] params ({})
-    def describe_deployment_job(params = {}, **options)
-      req = build_request(:describe_deployment_job, params)
+    def describe_deployment_job(, **options)
+      req = build_request(:describe_deployment_job, )
       req.send_request(options)
     end
 
@@ -1770,8 +1770,8 @@ module Aws::RoboMaker
     #
     # @overload describe_fleet(**params)
     # @param [Hash] params ({})
-    def describe_fleet(params = {}, **options)
-      req = build_request(:describe_fleet, params)
+    def describe_fleet(, **options)
+      req = build_request(:describe_fleet, )
       req.send_request(options)
     end
 
@@ -1817,8 +1817,8 @@ module Aws::RoboMaker
     #
     # @overload describe_robot(**params)
     # @param [Hash] params ({})
-    def describe_robot(params = {}, **options)
-      req = build_request(:describe_robot, params)
+    def describe_robot(, **options)
+      req = build_request(:describe_robot, )
       req.send_request(options)
     end
 
@@ -1869,8 +1869,8 @@ module Aws::RoboMaker
     #
     # @overload describe_robot_application(**params)
     # @param [Hash] params ({})
-    def describe_robot_application(params = {}, **options)
-      req = build_request(:describe_robot_application, params)
+    def describe_robot_application(, **options)
+      req = build_request(:describe_robot_application, )
       req.send_request(options)
     end
 
@@ -1927,8 +1927,8 @@ module Aws::RoboMaker
     #
     # @overload describe_simulation_application(**params)
     # @param [Hash] params ({})
-    def describe_simulation_application(params = {}, **options)
-      req = build_request(:describe_simulation_application, params)
+    def describe_simulation_application(, **options)
+      req = build_request(:describe_simulation_application, )
       req.send_request(options)
     end
 
@@ -2033,8 +2033,8 @@ module Aws::RoboMaker
     #
     # @overload describe_simulation_job(**params)
     # @param [Hash] params ({})
-    def describe_simulation_job(params = {}, **options)
-      req = build_request(:describe_simulation_job, params)
+    def describe_simulation_job(, **options)
+      req = build_request(:describe_simulation_job, )
       req.send_request(options)
     end
 
@@ -2190,8 +2190,8 @@ module Aws::RoboMaker
     #
     # @overload describe_simulation_job_batch(**params)
     # @param [Hash] params ({})
-    def describe_simulation_job_batch(params = {}, **options)
-      req = build_request(:describe_simulation_job_batch, params)
+    def describe_simulation_job_batch(, **options)
+      req = build_request(:describe_simulation_job_batch, )
       req.send_request(options)
     end
 
@@ -2227,8 +2227,8 @@ module Aws::RoboMaker
     #
     # @overload describe_world(**params)
     # @param [Hash] params ({})
-    def describe_world(params = {}, **options)
-      req = build_request(:describe_world, params)
+    def describe_world(, **options)
+      req = build_request(:describe_world, )
       req.send_request(options)
     end
 
@@ -2276,8 +2276,8 @@ module Aws::RoboMaker
     #
     # @overload describe_world_export_job(**params)
     # @param [Hash] params ({})
-    def describe_world_export_job(params = {}, **options)
-      req = build_request(:describe_world_export_job, params)
+    def describe_world_export_job(, **options)
+      req = build_request(:describe_world_export_job, )
       req.send_request(options)
     end
 
@@ -2335,8 +2335,8 @@ module Aws::RoboMaker
     #
     # @overload describe_world_generation_job(**params)
     # @param [Hash] params ({})
-    def describe_world_generation_job(params = {}, **options)
-      req = build_request(:describe_world_generation_job, params)
+    def describe_world_generation_job(, **options)
+      req = build_request(:describe_world_generation_job, )
       req.send_request(options)
     end
 
@@ -2375,8 +2375,8 @@ module Aws::RoboMaker
     #
     # @overload describe_world_template(**params)
     # @param [Hash] params ({})
-    def describe_world_template(params = {}, **options)
-      req = build_request(:describe_world_template, params)
+    def describe_world_template(, **options)
+      req = build_request(:describe_world_template, )
       req.send_request(options)
     end
 
@@ -2407,8 +2407,8 @@ module Aws::RoboMaker
     #
     # @overload get_world_template_body(**params)
     # @param [Hash] params ({})
-    def get_world_template_body(params = {}, **options)
-      req = build_request(:get_world_template_body, params)
+    def get_world_template_body(, **options)
+      req = build_request(:get_world_template_body, )
       req.send_request(options)
     end
 
@@ -2491,8 +2491,8 @@ module Aws::RoboMaker
     #
     # @overload list_deployment_jobs(**params)
     # @param [Hash] params ({})
-    def list_deployment_jobs(params = {}, **options)
-      req = build_request(:list_deployment_jobs, params)
+    def list_deployment_jobs(, **options)
+      req = build_request(:list_deployment_jobs, )
       req.send_request(options)
     end
 
@@ -2563,8 +2563,8 @@ module Aws::RoboMaker
     #
     # @overload list_fleets(**params)
     # @param [Hash] params ({})
-    def list_fleets(params = {}, **options)
-      req = build_request(:list_fleets, params)
+    def list_fleets(, **options)
+      req = build_request(:list_fleets, )
       req.send_request(options)
     end
 
@@ -2633,8 +2633,8 @@ module Aws::RoboMaker
     #
     # @overload list_robot_applications(**params)
     # @param [Hash] params ({})
-    def list_robot_applications(params = {}, **options)
-      req = build_request(:list_robot_applications, params)
+    def list_robot_applications(, **options)
+      req = build_request(:list_robot_applications, )
       req.send_request(options)
     end
 
@@ -2705,8 +2705,8 @@ module Aws::RoboMaker
     #
     # @overload list_robots(**params)
     # @param [Hash] params ({})
-    def list_robots(params = {}, **options)
-      req = build_request(:list_robots, params)
+    def list_robots(, **options)
+      req = build_request(:list_robots, )
       req.send_request(options)
     end
 
@@ -2778,8 +2778,8 @@ module Aws::RoboMaker
     #
     # @overload list_simulation_applications(**params)
     # @param [Hash] params ({})
-    def list_simulation_applications(params = {}, **options)
-      req = build_request(:list_simulation_applications, params)
+    def list_simulation_applications(, **options)
+      req = build_request(:list_simulation_applications, )
       req.send_request(options)
     end
 
@@ -2840,8 +2840,8 @@ module Aws::RoboMaker
     #
     # @overload list_simulation_job_batches(**params)
     # @param [Hash] params ({})
-    def list_simulation_job_batches(params = {}, **options)
-      req = build_request(:list_simulation_job_batches, params)
+    def list_simulation_job_batches(, **options)
+      req = build_request(:list_simulation_job_batches, )
       req.send_request(options)
     end
 
@@ -2913,8 +2913,8 @@ module Aws::RoboMaker
     #
     # @overload list_simulation_jobs(**params)
     # @param [Hash] params ({})
-    def list_simulation_jobs(params = {}, **options)
-      req = build_request(:list_simulation_jobs, params)
+    def list_simulation_jobs(, **options)
+      req = build_request(:list_simulation_jobs, )
       req.send_request(options)
     end
 
@@ -2942,8 +2942,8 @@ module Aws::RoboMaker
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3004,8 +3004,8 @@ module Aws::RoboMaker
     #
     # @overload list_world_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_world_export_jobs(params = {}, **options)
-      req = build_request(:list_world_export_jobs, params)
+    def list_world_export_jobs(, **options)
+      req = build_request(:list_world_export_jobs, )
       req.send_request(options)
     end
 
@@ -3070,8 +3070,8 @@ module Aws::RoboMaker
     #
     # @overload list_world_generation_jobs(**params)
     # @param [Hash] params ({})
-    def list_world_generation_jobs(params = {}, **options)
-      req = build_request(:list_world_generation_jobs, params)
+    def list_world_generation_jobs(, **options)
+      req = build_request(:list_world_generation_jobs, )
       req.send_request(options)
     end
 
@@ -3121,8 +3121,8 @@ module Aws::RoboMaker
     #
     # @overload list_world_templates(**params)
     # @param [Hash] params ({})
-    def list_world_templates(params = {}, **options)
-      req = build_request(:list_world_templates, params)
+    def list_world_templates(, **options)
+      req = build_request(:list_world_templates, )
       req.send_request(options)
     end
 
@@ -3181,8 +3181,8 @@ module Aws::RoboMaker
     #
     # @overload list_worlds(**params)
     # @param [Hash] params ({})
-    def list_worlds(params = {}, **options)
-      req = build_request(:list_worlds, params)
+    def list_worlds(, **options)
+      req = build_request(:list_worlds, )
       req.send_request(options)
     end
 
@@ -3215,8 +3215,8 @@ module Aws::RoboMaker
     #
     # @overload register_robot(**params)
     # @param [Hash] params ({})
-    def register_robot(params = {}, **options)
-      req = build_request(:register_robot, params)
+    def register_robot(, **options)
+      req = build_request(:register_robot, )
       req.send_request(options)
     end
 
@@ -3237,8 +3237,8 @@ module Aws::RoboMaker
     #
     # @overload restart_simulation_job(**params)
     # @param [Hash] params ({})
-    def restart_simulation_job(params = {}, **options)
-      req = build_request(:restart_simulation_job, params)
+    def restart_simulation_job(, **options)
+      req = build_request(:restart_simulation_job, )
       req.send_request(options)
     end
 
@@ -3498,8 +3498,8 @@ module Aws::RoboMaker
     #
     # @overload start_simulation_job_batch(**params)
     # @param [Hash] params ({})
-    def start_simulation_job_batch(params = {}, **options)
-      req = build_request(:start_simulation_job_batch, params)
+    def start_simulation_job_batch(, **options)
+      req = build_request(:start_simulation_job_batch, )
       req.send_request(options)
     end
 
@@ -3562,8 +3562,8 @@ module Aws::RoboMaker
     #
     # @overload sync_deployment_job(**params)
     # @param [Hash] params ({})
-    def sync_deployment_job(params = {}, **options)
-      req = build_request(:sync_deployment_job, params)
+    def sync_deployment_job(, **options)
+      req = build_request(:sync_deployment_job, )
       req.send_request(options)
     end
 
@@ -3603,8 +3603,8 @@ module Aws::RoboMaker
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3638,8 +3638,8 @@ module Aws::RoboMaker
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3705,8 +3705,8 @@ module Aws::RoboMaker
     #
     # @overload update_robot_application(**params)
     # @param [Hash] params ({})
-    def update_robot_application(params = {}, **options)
-      req = build_request(:update_robot_application, params)
+    def update_robot_application(, **options)
+      req = build_request(:update_robot_application, )
       req.send_request(options)
     end
 
@@ -3791,8 +3791,8 @@ module Aws::RoboMaker
     #
     # @overload update_simulation_application(**params)
     # @param [Hash] params ({})
-    def update_simulation_application(params = {}, **options)
-      req = build_request(:update_simulation_application, params)
+    def update_simulation_application(, **options)
+      req = build_request(:update_simulation_application, )
       req.send_request(options)
     end
 
@@ -3840,8 +3840,8 @@ module Aws::RoboMaker
     #
     # @overload update_world_template(**params)
     # @param [Hash] params ({})
-    def update_world_template(params = {}, **options)
-      req = build_request(:update_world_template, params)
+    def update_world_template(, **options)
+      req = build_request(:update_world_template, )
       req.send_request(options)
     end
 

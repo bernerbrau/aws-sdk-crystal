@@ -356,8 +356,8 @@ module Aws::SageMakerFeatureStoreRuntime
     #
     # @overload delete_record(**params)
     # @param [Hash] params ({})
-    def delete_record(params = {}, **options)
-      req = build_request(:delete_record, params)
+    def delete_record(, **options)
+      req = build_request(:delete_record, )
       req.send_request(options)
     end
 
@@ -399,8 +399,8 @@ module Aws::SageMakerFeatureStoreRuntime
     #
     # @overload get_record(**params)
     # @param [Hash] params ({})
-    def get_record(params = {}, **options)
-      req = build_request(:get_record, params)
+    def get_record(, **options)
+      req = build_request(:get_record, )
       req.send_request(options)
     end
 
@@ -442,8 +442,8 @@ module Aws::SageMakerFeatureStoreRuntime
     #
     # @overload put_record(**params)
     # @param [Hash] params ({})
-    def put_record(params = {}, **options)
-      req = build_request(:put_record, params)
+    def put_record(, **options)
+      req = build_request(:put_record, )
       req.send_request(options)
     end
 

@@ -392,8 +392,8 @@ module Aws::GlobalAccelerator
     #
     # @overload add_custom_routing_endpoints(**params)
     # @param [Hash] params ({})
-    def add_custom_routing_endpoints(params = {}, **options)
-      req = build_request(:add_custom_routing_endpoints, params)
+    def add_custom_routing_endpoints(, **options)
+      req = build_request(:add_custom_routing_endpoints, )
       req.send_request(options)
     end
 
@@ -440,8 +440,8 @@ module Aws::GlobalAccelerator
     #
     # @overload advertise_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def advertise_byoip_cidr(params = {}, **options)
-      req = build_request(:advertise_byoip_cidr, params)
+    def advertise_byoip_cidr(, **options)
+      req = build_request(:advertise_byoip_cidr, )
       req.send_request(options)
     end
 
@@ -510,8 +510,8 @@ module Aws::GlobalAccelerator
     #
     # @overload allow_custom_routing_traffic(**params)
     # @param [Hash] params ({})
-    def allow_custom_routing_traffic(params = {}, **options)
-      req = build_request(:allow_custom_routing_traffic, params)
+    def allow_custom_routing_traffic(, **options)
+      req = build_request(:allow_custom_routing_traffic, )
       req.send_request(options)
     end
 
@@ -618,8 +618,8 @@ module Aws::GlobalAccelerator
     #
     # @overload create_accelerator(**params)
     # @param [Hash] params ({})
-    def create_accelerator(params = {}, **options)
-      req = build_request(:create_accelerator, params)
+    def create_accelerator(, **options)
+      req = build_request(:create_accelerator, )
       req.send_request(options)
     end
 
@@ -707,8 +707,8 @@ module Aws::GlobalAccelerator
     #
     # @overload create_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def create_custom_routing_accelerator(params = {}, **options)
-      req = build_request(:create_custom_routing_accelerator, params)
+    def create_custom_routing_accelerator(, **options)
+      req = build_request(:create_custom_routing_accelerator, )
       req.send_request(options)
     end
 
@@ -771,8 +771,8 @@ module Aws::GlobalAccelerator
     #
     # @overload create_custom_routing_endpoint_group(**params)
     # @param [Hash] params ({})
-    def create_custom_routing_endpoint_group(params = {}, **options)
-      req = build_request(:create_custom_routing_endpoint_group, params)
+    def create_custom_routing_endpoint_group(, **options)
+      req = build_request(:create_custom_routing_endpoint_group, )
       req.send_request(options)
     end
 
@@ -830,8 +830,8 @@ module Aws::GlobalAccelerator
     #
     # @overload create_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def create_custom_routing_listener(params = {}, **options)
-      req = build_request(:create_custom_routing_listener, params)
+    def create_custom_routing_listener(, **options)
+      req = build_request(:create_custom_routing_listener, )
       req.send_request(options)
     end
 
@@ -961,8 +961,8 @@ module Aws::GlobalAccelerator
     #
     # @overload create_endpoint_group(**params)
     # @param [Hash] params ({})
-    def create_endpoint_group(params = {}, **options)
-      req = build_request(:create_endpoint_group, params)
+    def create_endpoint_group(, **options)
+      req = build_request(:create_endpoint_group, )
       req.send_request(options)
     end
 
@@ -1044,8 +1044,8 @@ module Aws::GlobalAccelerator
     #
     # @overload create_listener(**params)
     # @param [Hash] params ({})
-    def create_listener(params = {}, **options)
-      req = build_request(:create_listener, params)
+    def create_listener(, **options)
+      req = build_request(:create_listener, )
       req.send_request(options)
     end
 
@@ -1089,8 +1089,8 @@ module Aws::GlobalAccelerator
     #
     # @overload delete_accelerator(**params)
     # @param [Hash] params ({})
-    def delete_accelerator(params = {}, **options)
-      req = build_request(:delete_accelerator, params)
+    def delete_accelerator(, **options)
+      req = build_request(:delete_accelerator, )
       req.send_request(options)
     end
 
@@ -1133,8 +1133,8 @@ module Aws::GlobalAccelerator
     #
     # @overload delete_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def delete_custom_routing_accelerator(params = {}, **options)
-      req = build_request(:delete_custom_routing_accelerator, params)
+    def delete_custom_routing_accelerator(, **options)
+      req = build_request(:delete_custom_routing_accelerator, )
       req.send_request(options)
     end
 
@@ -1156,8 +1156,8 @@ module Aws::GlobalAccelerator
     #
     # @overload delete_custom_routing_endpoint_group(**params)
     # @param [Hash] params ({})
-    def delete_custom_routing_endpoint_group(params = {}, **options)
-      req = build_request(:delete_custom_routing_endpoint_group, params)
+    def delete_custom_routing_endpoint_group(, **options)
+      req = build_request(:delete_custom_routing_endpoint_group, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::GlobalAccelerator
     #
     # @overload delete_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def delete_custom_routing_listener(params = {}, **options)
-      req = build_request(:delete_custom_routing_listener, params)
+    def delete_custom_routing_listener(, **options)
+      req = build_request(:delete_custom_routing_listener, )
       req.send_request(options)
     end
 
@@ -1200,8 +1200,8 @@ module Aws::GlobalAccelerator
     #
     # @overload delete_endpoint_group(**params)
     # @param [Hash] params ({})
-    def delete_endpoint_group(params = {}, **options)
-      req = build_request(:delete_endpoint_group, params)
+    def delete_endpoint_group(, **options)
+      req = build_request(:delete_endpoint_group, )
       req.send_request(options)
     end
 
@@ -1222,8 +1222,8 @@ module Aws::GlobalAccelerator
     #
     # @overload delete_listener(**params)
     # @param [Hash] params ({})
-    def delete_listener(params = {}, **options)
-      req = build_request(:delete_listener, params)
+    def delete_listener(, **options)
+      req = build_request(:delete_listener, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::GlobalAccelerator
     #
     # @overload deny_custom_routing_traffic(**params)
     # @param [Hash] params ({})
-    def deny_custom_routing_traffic(params = {}, **options)
-      req = build_request(:deny_custom_routing_traffic, params)
+    def deny_custom_routing_traffic(, **options)
+      req = build_request(:deny_custom_routing_traffic, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::GlobalAccelerator
     #
     # @overload deprovision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def deprovision_byoip_cidr(params = {}, **options)
-      req = build_request(:deprovision_byoip_cidr, params)
+    def deprovision_byoip_cidr(, **options)
+      req = build_request(:deprovision_byoip_cidr, )
       req.send_request(options)
     end
 
@@ -1374,8 +1374,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_accelerator(**params)
     # @param [Hash] params ({})
-    def describe_accelerator(params = {}, **options)
-      req = build_request(:describe_accelerator, params)
+    def describe_accelerator(, **options)
+      req = build_request(:describe_accelerator, )
       req.send_request(options)
     end
 
@@ -1405,8 +1405,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def describe_accelerator_attributes(params = {}, **options)
-      req = build_request(:describe_accelerator_attributes, params)
+    def describe_accelerator_attributes(, **options)
+      req = build_request(:describe_accelerator_attributes, )
       req.send_request(options)
     end
 
@@ -1444,8 +1444,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_accelerator(params = {}, **options)
-      req = build_request(:describe_custom_routing_accelerator, params)
+    def describe_custom_routing_accelerator(, **options)
+      req = build_request(:describe_custom_routing_accelerator, )
       req.send_request(options)
     end
 
@@ -1475,8 +1475,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_custom_routing_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_accelerator_attributes(params = {}, **options)
-      req = build_request(:describe_custom_routing_accelerator_attributes, params)
+    def describe_custom_routing_accelerator_attributes(, **options)
+      req = build_request(:describe_custom_routing_accelerator_attributes, )
       req.send_request(options)
     end
 
@@ -1511,8 +1511,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_custom_routing_endpoint_group(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_endpoint_group(params = {}, **options)
-      req = build_request(:describe_custom_routing_endpoint_group, params)
+    def describe_custom_routing_endpoint_group(, **options)
+      req = build_request(:describe_custom_routing_endpoint_group, )
       req.send_request(options)
     end
 
@@ -1542,8 +1542,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_listener(params = {}, **options)
-      req = build_request(:describe_custom_routing_listener, params)
+    def describe_custom_routing_listener(, **options)
+      req = build_request(:describe_custom_routing_listener, )
       req.send_request(options)
     end
 
@@ -1586,8 +1586,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_endpoint_group(**params)
     # @param [Hash] params ({})
-    def describe_endpoint_group(params = {}, **options)
-      req = build_request(:describe_endpoint_group, params)
+    def describe_endpoint_group(, **options)
+      req = build_request(:describe_endpoint_group, )
       req.send_request(options)
     end
 
@@ -1619,8 +1619,8 @@ module Aws::GlobalAccelerator
     #
     # @overload describe_listener(**params)
     # @param [Hash] params ({})
-    def describe_listener(params = {}, **options)
-      req = build_request(:describe_listener, params)
+    def describe_listener(, **options)
+      req = build_request(:describe_listener, )
       req.send_request(options)
     end
 
@@ -1669,8 +1669,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_accelerators(**params)
     # @param [Hash] params ({})
-    def list_accelerators(params = {}, **options)
-      req = build_request(:list_accelerators, params)
+    def list_accelerators(, **options)
+      req = build_request(:list_accelerators, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_byoip_cidrs(**params)
     # @param [Hash] params ({})
-    def list_byoip_cidrs(params = {}, **options)
-      req = build_request(:list_byoip_cidrs, params)
+    def list_byoip_cidrs(, **options)
+      req = build_request(:list_byoip_cidrs, )
       req.send_request(options)
     end
 
@@ -1768,8 +1768,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_custom_routing_accelerators(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_accelerators(params = {}, **options)
-      req = build_request(:list_custom_routing_accelerators, params)
+    def list_custom_routing_accelerators(, **options)
+      req = build_request(:list_custom_routing_accelerators, )
       req.send_request(options)
     end
 
@@ -1821,8 +1821,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_custom_routing_endpoint_groups(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_endpoint_groups(params = {}, **options)
-      req = build_request(:list_custom_routing_endpoint_groups, params)
+    def list_custom_routing_endpoint_groups(, **options)
+      req = build_request(:list_custom_routing_endpoint_groups, )
       req.send_request(options)
     end
 
@@ -1868,8 +1868,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_custom_routing_listeners(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_listeners(params = {}, **options)
-      req = build_request(:list_custom_routing_listeners, params)
+    def list_custom_routing_listeners(, **options)
+      req = build_request(:list_custom_routing_listeners, )
       req.send_request(options)
     end
 
@@ -1940,8 +1940,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_custom_routing_port_mappings(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_port_mappings(params = {}, **options)
-      req = build_request(:list_custom_routing_port_mappings, params)
+    def list_custom_routing_port_mappings(, **options)
+      req = build_request(:list_custom_routing_port_mappings, )
       req.send_request(options)
     end
 
@@ -2003,8 +2003,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_custom_routing_port_mappings_by_destination(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_port_mappings_by_destination(params = {}, **options)
-      req = build_request(:list_custom_routing_port_mappings_by_destination, params)
+    def list_custom_routing_port_mappings_by_destination(, **options)
+      req = build_request(:list_custom_routing_port_mappings_by_destination, )
       req.send_request(options)
     end
 
@@ -2062,8 +2062,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_endpoint_groups(**params)
     # @param [Hash] params ({})
-    def list_endpoint_groups(params = {}, **options)
-      req = build_request(:list_endpoint_groups, params)
+    def list_endpoint_groups(, **options)
+      req = build_request(:list_endpoint_groups, )
       req.send_request(options)
     end
 
@@ -2111,8 +2111,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_listeners(**params)
     # @param [Hash] params ({})
-    def list_listeners(params = {}, **options)
-      req = build_request(:list_listeners, params)
+    def list_listeners(, **options)
+      req = build_request(:list_listeners, )
       req.send_request(options)
     end
 
@@ -2149,8 +2149,8 @@ module Aws::GlobalAccelerator
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2203,8 +2203,8 @@ module Aws::GlobalAccelerator
     #
     # @overload provision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def provision_byoip_cidr(params = {}, **options)
-      req = build_request(:provision_byoip_cidr, params)
+    def provision_byoip_cidr(, **options)
+      req = build_request(:provision_byoip_cidr, )
       req.send_request(options)
     end
 
@@ -2231,8 +2231,8 @@ module Aws::GlobalAccelerator
     #
     # @overload remove_custom_routing_endpoints(**params)
     # @param [Hash] params ({})
-    def remove_custom_routing_endpoints(params = {}, **options)
-      req = build_request(:remove_custom_routing_endpoints, params)
+    def remove_custom_routing_endpoints(, **options)
+      req = build_request(:remove_custom_routing_endpoints, )
       req.send_request(options)
     end
 
@@ -2271,8 +2271,8 @@ module Aws::GlobalAccelerator
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2309,8 +2309,8 @@ module Aws::GlobalAccelerator
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2370,8 +2370,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_accelerator(**params)
     # @param [Hash] params ({})
-    def update_accelerator(params = {}, **options)
-      req = build_request(:update_accelerator, params)
+    def update_accelerator(, **options)
+      req = build_request(:update_accelerator, )
       req.send_request(options)
     end
 
@@ -2433,8 +2433,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def update_accelerator_attributes(params = {}, **options)
-      req = build_request(:update_accelerator_attributes, params)
+    def update_accelerator_attributes(, **options)
+      req = build_request(:update_accelerator_attributes, )
       req.send_request(options)
     end
 
@@ -2490,8 +2490,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def update_custom_routing_accelerator(params = {}, **options)
-      req = build_request(:update_custom_routing_accelerator, params)
+    def update_custom_routing_accelerator(, **options)
+      req = build_request(:update_custom_routing_accelerator, )
       req.send_request(options)
     end
 
@@ -2553,8 +2553,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_custom_routing_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def update_custom_routing_accelerator_attributes(params = {}, **options)
-      req = build_request(:update_custom_routing_accelerator_attributes, params)
+    def update_custom_routing_accelerator_attributes(, **options)
+      req = build_request(:update_custom_routing_accelerator_attributes, )
       req.send_request(options)
     end
 
@@ -2602,8 +2602,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def update_custom_routing_listener(params = {}, **options)
-      req = build_request(:update_custom_routing_listener, params)
+    def update_custom_routing_listener(, **options)
+      req = build_request(:update_custom_routing_listener, )
       req.send_request(options)
     end
 
@@ -2720,8 +2720,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_endpoint_group(**params)
     # @param [Hash] params ({})
-    def update_endpoint_group(params = {}, **options)
-      req = build_request(:update_endpoint_group, params)
+    def update_endpoint_group(, **options)
+      req = build_request(:update_endpoint_group, )
       req.send_request(options)
     end
 
@@ -2794,8 +2794,8 @@ module Aws::GlobalAccelerator
     #
     # @overload update_listener(**params)
     # @param [Hash] params ({})
-    def update_listener(params = {}, **options)
-      req = build_request(:update_listener, params)
+    def update_listener(, **options)
+      req = build_request(:update_listener, )
       req.send_request(options)
     end
 
@@ -2838,8 +2838,8 @@ module Aws::GlobalAccelerator
     #
     # @overload withdraw_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def withdraw_byoip_cidr(params = {}, **options)
-      req = build_request(:withdraw_byoip_cidr, params)
+    def withdraw_byoip_cidr(, **options)
+      req = build_request(:withdraw_byoip_cidr, )
       req.send_request(options)
     end
 

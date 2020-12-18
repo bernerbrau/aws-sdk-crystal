@@ -349,8 +349,8 @@ module Aws::AuditManager
     #
     # @overload associate_assessment_report_evidence_folder(**params)
     # @param [Hash] params ({})
-    def associate_assessment_report_evidence_folder(params = {}, **options)
-      req = build_request(:associate_assessment_report_evidence_folder, params)
+    def associate_assessment_report_evidence_folder(, **options)
+      req = build_request(:associate_assessment_report_evidence_folder, )
       req.send_request(options)
     end
 
@@ -392,8 +392,8 @@ module Aws::AuditManager
     #
     # @overload batch_associate_assessment_report_evidence(**params)
     # @param [Hash] params ({})
-    def batch_associate_assessment_report_evidence(params = {}, **options)
-      req = build_request(:batch_associate_assessment_report_evidence, params)
+    def batch_associate_assessment_report_evidence(, **options)
+      req = build_request(:batch_associate_assessment_report_evidence, )
       req.send_request(options)
     end
 
@@ -451,8 +451,8 @@ module Aws::AuditManager
     #
     # @overload batch_create_delegation_by_assessment(**params)
     # @param [Hash] params ({})
-    def batch_create_delegation_by_assessment(params = {}, **options)
-      req = build_request(:batch_create_delegation_by_assessment, params)
+    def batch_create_delegation_by_assessment(, **options)
+      req = build_request(:batch_create_delegation_by_assessment, )
       req.send_request(options)
     end
 
@@ -486,8 +486,8 @@ module Aws::AuditManager
     #
     # @overload batch_delete_delegation_by_assessment(**params)
     # @param [Hash] params ({})
-    def batch_delete_delegation_by_assessment(params = {}, **options)
-      req = build_request(:batch_delete_delegation_by_assessment, params)
+    def batch_delete_delegation_by_assessment(, **options)
+      req = build_request(:batch_delete_delegation_by_assessment, )
       req.send_request(options)
     end
 
@@ -529,8 +529,8 @@ module Aws::AuditManager
     #
     # @overload batch_disassociate_assessment_report_evidence(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_assessment_report_evidence(params = {}, **options)
-      req = build_request(:batch_disassociate_assessment_report_evidence, params)
+    def batch_disassociate_assessment_report_evidence(, **options)
+      req = build_request(:batch_disassociate_assessment_report_evidence, )
       req.send_request(options)
     end
 
@@ -577,8 +577,8 @@ module Aws::AuditManager
     #
     # @overload batch_import_evidence_to_assessment_control(**params)
     # @param [Hash] params ({})
-    def batch_import_evidence_to_assessment_control(params = {}, **options)
-      req = build_request(:batch_import_evidence_to_assessment_control, params)
+    def batch_import_evidence_to_assessment_control(, **options)
+      req = build_request(:batch_import_evidence_to_assessment_control, )
       req.send_request(options)
     end
 
@@ -730,8 +730,8 @@ module Aws::AuditManager
     #
     # @overload create_assessment(**params)
     # @param [Hash] params ({})
-    def create_assessment(params = {}, **options)
-      req = build_request(:create_assessment, params)
+    def create_assessment(, **options)
+      req = build_request(:create_assessment, )
       req.send_request(options)
     end
 
@@ -820,8 +820,8 @@ module Aws::AuditManager
     #
     # @overload create_assessment_framework(**params)
     # @param [Hash] params ({})
-    def create_assessment_framework(params = {}, **options)
-      req = build_request(:create_assessment_framework, params)
+    def create_assessment_framework(, **options)
+      req = build_request(:create_assessment_framework, )
       req.send_request(options)
     end
 
@@ -864,8 +864,8 @@ module Aws::AuditManager
     #
     # @overload create_assessment_report(**params)
     # @param [Hash] params ({})
-    def create_assessment_report(params = {}, **options)
-      req = build_request(:create_assessment_report, params)
+    def create_assessment_report(, **options)
+      req = build_request(:create_assessment_report, )
       req.send_request(options)
     end
 
@@ -956,8 +956,8 @@ module Aws::AuditManager
     #
     # @overload create_control(**params)
     # @param [Hash] params ({})
-    def create_control(params = {}, **options)
-      req = build_request(:create_control, params)
+    def create_control(, **options)
+      req = build_request(:create_control, )
       req.send_request(options)
     end
 
@@ -978,8 +978,8 @@ module Aws::AuditManager
     #
     # @overload delete_assessment(**params)
     # @param [Hash] params ({})
-    def delete_assessment(params = {}, **options)
-      req = build_request(:delete_assessment, params)
+    def delete_assessment(, **options)
+      req = build_request(:delete_assessment, )
       req.send_request(options)
     end
 
@@ -1000,8 +1000,8 @@ module Aws::AuditManager
     #
     # @overload delete_assessment_framework(**params)
     # @param [Hash] params ({})
-    def delete_assessment_framework(params = {}, **options)
-      req = build_request(:delete_assessment_framework, params)
+    def delete_assessment_framework(, **options)
+      req = build_request(:delete_assessment_framework, )
       req.send_request(options)
     end
 
@@ -1026,8 +1026,8 @@ module Aws::AuditManager
     #
     # @overload delete_assessment_report(**params)
     # @param [Hash] params ({})
-    def delete_assessment_report(params = {}, **options)
-      req = build_request(:delete_assessment_report, params)
+    def delete_assessment_report(, **options)
+      req = build_request(:delete_assessment_report, )
       req.send_request(options)
     end
 
@@ -1048,8 +1048,8 @@ module Aws::AuditManager
     #
     # @overload delete_control(**params)
     # @param [Hash] params ({})
-    def delete_control(params = {}, **options)
-      req = build_request(:delete_control, params)
+    def delete_control(, **options)
+      req = build_request(:delete_control, )
       req.send_request(options)
     end
 
@@ -1067,8 +1067,8 @@ module Aws::AuditManager
     #
     # @overload deregister_account(**params)
     # @param [Hash] params ({})
-    def deregister_account(params = {}, **options)
-      req = build_request(:deregister_account, params)
+    def deregister_account(, **options)
+      req = build_request(:deregister_account, )
       req.send_request(options)
     end
 
@@ -1090,8 +1090,8 @@ module Aws::AuditManager
     #
     # @overload deregister_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def deregister_organization_admin_account(params = {}, **options)
-      req = build_request(:deregister_organization_admin_account, params)
+    def deregister_organization_admin_account(, **options)
+      req = build_request(:deregister_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -1117,8 +1117,8 @@ module Aws::AuditManager
     #
     # @overload disassociate_assessment_report_evidence_folder(**params)
     # @param [Hash] params ({})
-    def disassociate_assessment_report_evidence_folder(params = {}, **options)
-      req = build_request(:disassociate_assessment_report_evidence_folder, params)
+    def disassociate_assessment_report_evidence_folder(, **options)
+      req = build_request(:disassociate_assessment_report_evidence_folder, )
       req.send_request(options)
     end
 
@@ -1136,8 +1136,8 @@ module Aws::AuditManager
     #
     # @overload get_account_status(**params)
     # @param [Hash] params ({})
-    def get_account_status(params = {}, **options)
-      req = build_request(:get_account_status, params)
+    def get_account_status(, **options)
+      req = build_request(:get_account_status, )
       req.send_request(options)
     end
 
@@ -1240,8 +1240,8 @@ module Aws::AuditManager
     #
     # @overload get_assessment(**params)
     # @param [Hash] params ({})
-    def get_assessment(params = {}, **options)
-      req = build_request(:get_assessment, params)
+    def get_assessment(, **options)
+      req = build_request(:get_assessment, )
       req.send_request(options)
     end
 
@@ -1308,8 +1308,8 @@ module Aws::AuditManager
     #
     # @overload get_assessment_framework(**params)
     # @param [Hash] params ({})
-    def get_assessment_framework(params = {}, **options)
-      req = build_request(:get_assessment_framework, params)
+    def get_assessment_framework(, **options)
+      req = build_request(:get_assessment_framework, )
       req.send_request(options)
     end
 
@@ -1341,8 +1341,8 @@ module Aws::AuditManager
     #
     # @overload get_assessment_report_url(**params)
     # @param [Hash] params ({})
-    def get_assessment_report_url(params = {}, **options)
-      req = build_request(:get_assessment_report_url, params)
+    def get_assessment_report_url(, **options)
+      req = build_request(:get_assessment_report_url, )
       req.send_request(options)
     end
 
@@ -1395,8 +1395,8 @@ module Aws::AuditManager
     #
     # @overload get_change_logs(**params)
     # @param [Hash] params ({})
-    def get_change_logs(params = {}, **options)
-      req = build_request(:get_change_logs, params)
+    def get_change_logs(, **options)
+      req = build_request(:get_change_logs, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::AuditManager
     #
     # @overload get_control(**params)
     # @param [Hash] params ({})
-    def get_control(params = {}, **options)
-      req = build_request(:get_control, params)
+    def get_control(, **options)
+      req = build_request(:get_control, )
       req.send_request(options)
     end
 
@@ -1491,8 +1491,8 @@ module Aws::AuditManager
     #
     # @overload get_delegations(**params)
     # @param [Hash] params ({})
-    def get_delegations(params = {}, **options)
-      req = build_request(:get_delegations, params)
+    def get_delegations(, **options)
+      req = build_request(:get_delegations, )
       req.send_request(options)
     end
 
@@ -1548,8 +1548,8 @@ module Aws::AuditManager
     #
     # @overload get_evidence(**params)
     # @param [Hash] params ({})
-    def get_evidence(params = {}, **options)
-      req = build_request(:get_evidence, params)
+    def get_evidence(, **options)
+      req = build_request(:get_evidence, )
       req.send_request(options)
     end
 
@@ -1616,8 +1616,8 @@ module Aws::AuditManager
     #
     # @overload get_evidence_by_evidence_folder(**params)
     # @param [Hash] params ({})
-    def get_evidence_by_evidence_folder(params = {}, **options)
-      req = build_request(:get_evidence_by_evidence_folder, params)
+    def get_evidence_by_evidence_folder(, **options)
+      req = build_request(:get_evidence_by_evidence_folder, )
       req.send_request(options)
     end
 
@@ -1670,8 +1670,8 @@ module Aws::AuditManager
     #
     # @overload get_evidence_folder(**params)
     # @param [Hash] params ({})
-    def get_evidence_folder(params = {}, **options)
-      req = build_request(:get_evidence_folder, params)
+    def get_evidence_folder(, **options)
+      req = build_request(:get_evidence_folder, )
       req.send_request(options)
     end
 
@@ -1730,8 +1730,8 @@ module Aws::AuditManager
     #
     # @overload get_evidence_folders_by_assessment(**params)
     # @param [Hash] params ({})
-    def get_evidence_folders_by_assessment(params = {}, **options)
-      req = build_request(:get_evidence_folders_by_assessment, params)
+    def get_evidence_folders_by_assessment(, **options)
+      req = build_request(:get_evidence_folders_by_assessment, )
       req.send_request(options)
     end
 
@@ -1798,8 +1798,8 @@ module Aws::AuditManager
     #
     # @overload get_evidence_folders_by_assessment_control(**params)
     # @param [Hash] params ({})
-    def get_evidence_folders_by_assessment_control(params = {}, **options)
-      req = build_request(:get_evidence_folders_by_assessment_control, params)
+    def get_evidence_folders_by_assessment_control(, **options)
+      req = build_request(:get_evidence_folders_by_assessment_control, )
       req.send_request(options)
     end
 
@@ -1820,8 +1820,8 @@ module Aws::AuditManager
     #
     # @overload get_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def get_organization_admin_account(params = {}, **options)
-      req = build_request(:get_organization_admin_account, params)
+    def get_organization_admin_account(, **options)
+      req = build_request(:get_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -1844,8 +1844,8 @@ module Aws::AuditManager
     #
     # @overload get_services_in_scope(**params)
     # @param [Hash] params ({})
-    def get_services_in_scope(params = {}, **options)
-      req = build_request(:get_services_in_scope, params)
+    def get_services_in_scope(, **options)
+      req = build_request(:get_services_in_scope, )
       req.send_request(options)
     end
 
@@ -1879,8 +1879,8 @@ module Aws::AuditManager
     #
     # @overload get_settings(**params)
     # @param [Hash] params ({})
-    def get_settings(params = {}, **options)
-      req = build_request(:get_settings, params)
+    def get_settings(, **options)
+      req = build_request(:get_settings, )
       req.send_request(options)
     end
 
@@ -1931,8 +1931,8 @@ module Aws::AuditManager
     #
     # @overload list_assessment_frameworks(**params)
     # @param [Hash] params ({})
-    def list_assessment_frameworks(params = {}, **options)
-      req = build_request(:list_assessment_frameworks, params)
+    def list_assessment_frameworks(, **options)
+      req = build_request(:list_assessment_frameworks, )
       req.send_request(options)
     end
 
@@ -1976,8 +1976,8 @@ module Aws::AuditManager
     #
     # @overload list_assessment_reports(**params)
     # @param [Hash] params ({})
-    def list_assessment_reports(params = {}, **options)
-      req = build_request(:list_assessment_reports, params)
+    def list_assessment_reports(, **options)
+      req = build_request(:list_assessment_reports, )
       req.send_request(options)
     end
 
@@ -2034,8 +2034,8 @@ module Aws::AuditManager
     #
     # @overload list_assessments(**params)
     # @param [Hash] params ({})
-    def list_assessments(params = {}, **options)
-      req = build_request(:list_assessments, params)
+    def list_assessments(, **options)
+      req = build_request(:list_assessments, )
       req.send_request(options)
     end
 
@@ -2081,8 +2081,8 @@ module Aws::AuditManager
     #
     # @overload list_controls(**params)
     # @param [Hash] params ({})
-    def list_controls(params = {}, **options)
-      req = build_request(:list_controls, params)
+    def list_controls(, **options)
+      req = build_request(:list_controls, )
       req.send_request(options)
     end
 
@@ -2124,8 +2124,8 @@ module Aws::AuditManager
     #
     # @overload list_keywords_for_data_source(**params)
     # @param [Hash] params ({})
-    def list_keywords_for_data_source(params = {}, **options)
-      req = build_request(:list_keywords_for_data_source, params)
+    def list_keywords_for_data_source(, **options)
+      req = build_request(:list_keywords_for_data_source, )
       req.send_request(options)
     end
 
@@ -2169,8 +2169,8 @@ module Aws::AuditManager
     #
     # @overload list_notifications(**params)
     # @param [Hash] params ({})
-    def list_notifications(params = {}, **options)
-      req = build_request(:list_notifications, params)
+    def list_notifications(, **options)
+      req = build_request(:list_notifications, )
       req.send_request(options)
     end
 
@@ -2199,8 +2199,8 @@ module Aws::AuditManager
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2231,8 +2231,8 @@ module Aws::AuditManager
     #
     # @overload register_account(**params)
     # @param [Hash] params ({})
-    def register_account(params = {}, **options)
-      req = build_request(:register_account, params)
+    def register_account(, **options)
+      req = build_request(:register_account, )
       req.send_request(options)
     end
 
@@ -2262,8 +2262,8 @@ module Aws::AuditManager
     #
     # @overload register_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def register_organization_admin_account(params = {}, **options)
-      req = build_request(:register_organization_admin_account, params)
+    def register_organization_admin_account(, **options)
+      req = build_request(:register_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -2290,8 +2290,8 @@ module Aws::AuditManager
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2316,8 +2316,8 @@ module Aws::AuditManager
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2462,8 +2462,8 @@ module Aws::AuditManager
     #
     # @overload update_assessment(**params)
     # @param [Hash] params ({})
-    def update_assessment(params = {}, **options)
-      req = build_request(:update_assessment, params)
+    def update_assessment(, **options)
+      req = build_request(:update_assessment, )
       req.send_request(options)
     end
 
@@ -2518,8 +2518,8 @@ module Aws::AuditManager
     #
     # @overload update_assessment_control(**params)
     # @param [Hash] params ({})
-    def update_assessment_control(params = {}, **options)
-      req = build_request(:update_assessment_control, params)
+    def update_assessment_control(, **options)
+      req = build_request(:update_assessment_control, )
       req.send_request(options)
     end
 
@@ -2592,8 +2592,8 @@ module Aws::AuditManager
     #
     # @overload update_assessment_control_set_status(**params)
     # @param [Hash] params ({})
-    def update_assessment_control_set_status(params = {}, **options)
-      req = build_request(:update_assessment_control_set_status, params)
+    def update_assessment_control_set_status(, **options)
+      req = build_request(:update_assessment_control_set_status, )
       req.send_request(options)
     end
 
@@ -2687,8 +2687,8 @@ module Aws::AuditManager
     #
     # @overload update_assessment_framework(**params)
     # @param [Hash] params ({})
-    def update_assessment_framework(params = {}, **options)
-      req = build_request(:update_assessment_framework, params)
+    def update_assessment_framework(, **options)
+      req = build_request(:update_assessment_framework, )
       req.send_request(options)
     end
 
@@ -2795,8 +2795,8 @@ module Aws::AuditManager
     #
     # @overload update_assessment_status(**params)
     # @param [Hash] params ({})
-    def update_assessment_status(params = {}, **options)
-      req = build_request(:update_assessment_status, params)
+    def update_assessment_status(, **options)
+      req = build_request(:update_assessment_status, )
       req.send_request(options)
     end
 
@@ -2887,8 +2887,8 @@ module Aws::AuditManager
     #
     # @overload update_control(**params)
     # @param [Hash] params ({})
-    def update_control(params = {}, **options)
-      req = build_request(:update_control, params)
+    def update_control(, **options)
+      req = build_request(:update_control, )
       req.send_request(options)
     end
 
@@ -2943,8 +2943,8 @@ module Aws::AuditManager
     #
     # @overload update_settings(**params)
     # @param [Hash] params ({})
-    def update_settings(params = {}, **options)
-      req = build_request(:update_settings, params)
+    def update_settings(, **options)
+      req = build_request(:update_settings, )
       req.send_request(options)
     end
 
@@ -2981,8 +2981,8 @@ module Aws::AuditManager
     #
     # @overload validate_assessment_report_integrity(**params)
     # @param [Hash] params ({})
-    def validate_assessment_report_integrity(params = {}, **options)
-      req = build_request(:validate_assessment_report_integrity, params)
+    def validate_assessment_report_integrity(, **options)
+      req = build_request(:validate_assessment_report_integrity, )
       req.send_request(options)
     end
 

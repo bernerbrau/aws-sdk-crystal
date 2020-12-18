@@ -45,6 +45,8 @@ module AwsSdkCodeGenerator
                   client_examples: client_examples[method_name] || [],
                   async_client: true
                 ).to_s,
+                param_list: get_param_list(operation, api),
+                param_tuple: get_param_tuple(operation, api),
                 streaming: AwsSdkCodeGenerator::Helper.operation_streaming?(operation, api),
                 eventstream_output: es_output,
                 eventstream_input: es_input
@@ -64,6 +66,8 @@ module AwsSdkCodeGenerator
                 client_examples: client_examples[method_name] || [],
                 async_client: false
               ).to_s,
+              param_list: get_param_list(operation, api),
+              param_tuple: get_param_tuple(operation, api),
               streaming: AwsSdkCodeGenerator::Helper.operation_streaming?(operation, api),
               eventstream_output: es_output,
               eventstream_input: false
@@ -86,6 +90,8 @@ module AwsSdkCodeGenerator
               pager: paginators && paginators['pagination'][name],
               waiters: waiters
             ).to_s,
+            param_list: get_param_list(operation, api),
+            param_tuple: get_param_tuple(operation, api),
             streaming: AwsSdkCodeGenerator::Helper.operation_streaming?(operation, api),
             eventstream_output: false,
             eventstream_input: false
@@ -101,11 +107,38 @@ module AwsSdkCodeGenerator
       @operations.each(&block)
     end
 
+    # TODO generate types in types.cr and just refer to them here.
+    # (see types_module.rb)
+    
+    def get_param_list(operation, api)
+      ""
+      # param name (underscored) + type annotation as in method signature
+      # input = operation.fetch("input", nil)
+      # if (input.nil?)
+      #   ""
+      # else
+      #   " : " + describe_shape(api.fetch("shapes"), operation.fetch("input").fetch("shape"))
+      # end
+    end
+
+    def get_param_tuple(operation, api)
+      ""
+      # # code assembling a tuple ({}) of strings -> param names (underscored)
+      # input = operation.fetch("input", nil)
+      # if (input.nil?)
+      #   " : Hash(String,NoReturn)"
+      # else
+      #   " : " + describe_shape(api.fetch("shapes"), operation.fetch("input").fetch("shape"))
+      # end
+    end
+
     class Operation
 
       def initialize(options)
         @name = options.fetch(:name)
         @documentation = options.fetch(:documentation)
+        @param_list = options.fetch(:param_list)
+        @param_tuple = options.fetch(:param_tuple)
         @streaming = options.fetch(:streaming)
         @eventstream_output = !!options.fetch(:eventstream_output)
         @eventstream_input = !!options.fetch(:eventstream_input)
@@ -121,6 +154,12 @@ module AwsSdkCodeGenerator
 
       # @return [String, nil]
       attr_reader :documentation
+
+      # @return [String]
+      attr_reader :param_list
+
+      # @return [String]
+      attr_reader :param_tuple
 
       # @return [Boolean]
       attr_reader :eventstream_input

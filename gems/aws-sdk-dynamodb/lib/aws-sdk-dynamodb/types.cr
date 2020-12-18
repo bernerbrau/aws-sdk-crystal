@@ -10992,5 +10992,1721 @@ module Aws::DynamoDB
       include Aws::Structure
     end
 
+    alias ArchivalReason = String
+
+    alias ArchivalSummary = NamedTuple(
+      "ArchivalDateTime" : (Date)?,
+      "ArchivalReason" : (ArchivalReason)?,
+      "ArchivalBackupArn" : (BackupArn)?
+    )
+
+    alias AttributeAction = String
+
+    alias AttributeDefinition = NamedTuple(
+      "AttributeName" : KeySchemaAttributeName,
+      "AttributeType" : ScalarAttributeType
+    )
+
+    alias AttributeDefinitions = Array(AttributeDefinition)
+
+    alias AttributeMap = Hash(AttributeName,AttributeValue)
+
+    alias AttributeName = String
+
+    alias AttributeNameList = Array(AttributeName)
+
+    alias AttributeUpdates = Hash(AttributeName,AttributeValueUpdate)
+
+    alias AttributeValue = NamedTuple(
+      "S" : (StringAttributeValue)?,
+      "N" : (NumberAttributeValue)?,
+      "B" : (BinaryAttributeValue)?,
+      "SS" : (StringSetAttributeValue)?,
+      "NS" : (NumberSetAttributeValue)?,
+      "BS" : (BinarySetAttributeValue)?,
+      "M" : (MapAttributeValue)?,
+      "L" : (ListAttributeValue)?,
+      "NULL" : (NullAttributeValue)?,
+      "BOOL" : (BooleanAttributeValue)?
+    )
+
+    alias AttributeValueList = Array(AttributeValue)
+
+    alias AttributeValueUpdate = NamedTuple(
+      "Value" : (AttributeValue)?,
+      "Action" : (AttributeAction)?
+    )
+
+    alias AutoScalingPolicyDescription = NamedTuple(
+      "PolicyName" : (AutoScalingPolicyName)?,
+      "TargetTrackingScalingPolicyConfiguration" : (AutoScalingTargetTrackingScalingPolicyConfigurationDescription)?
+    )
+
+    alias AutoScalingPolicyDescriptionList = Array(AutoScalingPolicyDescription)
+
+    alias AutoScalingPolicyName = String
+
+    alias AutoScalingPolicyUpdate = NamedTuple(
+      "PolicyName" : (AutoScalingPolicyName)?,
+      "TargetTrackingScalingPolicyConfiguration" : AutoScalingTargetTrackingScalingPolicyConfigurationUpdate
+    )
+
+    alias AutoScalingRoleArn = String
+
+    alias AutoScalingSettingsDescription = NamedTuple(
+      "MinimumUnits" : (PositiveLongObject)?,
+      "MaximumUnits" : (PositiveLongObject)?,
+      "AutoScalingDisabled" : (BooleanObject)?,
+      "AutoScalingRoleArn" : (String)?,
+      "ScalingPolicies" : (AutoScalingPolicyDescriptionList)?
+    )
+
+    alias AutoScalingSettingsUpdate = NamedTuple(
+      "MinimumUnits" : (PositiveLongObject)?,
+      "MaximumUnits" : (PositiveLongObject)?,
+      "AutoScalingDisabled" : (BooleanObject)?,
+      "AutoScalingRoleArn" : (AutoScalingRoleArn)?,
+      "ScalingPolicyUpdate" : (AutoScalingPolicyUpdate)?
+    )
+
+    alias AutoScalingTargetTrackingScalingPolicyConfigurationDescription = NamedTuple(
+      "DisableScaleIn" : (BooleanObject)?,
+      "ScaleInCooldown" : (IntegerObject)?,
+      "ScaleOutCooldown" : (IntegerObject)?,
+      "TargetValue" : Double
+    )
+
+    alias AutoScalingTargetTrackingScalingPolicyConfigurationUpdate = NamedTuple(
+      "DisableScaleIn" : (BooleanObject)?,
+      "ScaleInCooldown" : (IntegerObject)?,
+      "ScaleOutCooldown" : (IntegerObject)?,
+      "TargetValue" : Double
+    )
+
+    alias Backfilling = Bool
+
+    alias BackupArn = String
+
+    alias BackupCreationDateTime = String | UInt64 | Time
+
+    alias BackupDescription = NamedTuple(
+      "BackupDetails" : (BackupDetails)?,
+      "SourceTableDetails" : (SourceTableDetails)?,
+      "SourceTableFeatureDetails" : (SourceTableFeatureDetails)?
+    )
+
+    alias BackupDetails = NamedTuple(
+      "BackupArn" : BackupArn,
+      "BackupName" : BackupName,
+      "BackupSizeBytes" : (BackupSizeBytes)?,
+      "BackupStatus" : BackupStatus,
+      "BackupType" : BackupType,
+      "BackupCreationDateTime" : BackupCreationDateTime,
+      "BackupExpiryDateTime" : (Date)?
+    )
+
+    alias BackupInUseException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias BackupName = String
+
+    alias BackupNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias BackupSizeBytes = Int64
+
+    alias BackupStatus = String
+
+    alias BackupSummaries = Array(BackupSummary)
+
+    alias BackupSummary = NamedTuple(
+      "TableName" : (TableName)?,
+      "TableId" : (TableId)?,
+      "TableArn" : (TableArn)?,
+      "BackupArn" : (BackupArn)?,
+      "BackupName" : (BackupName)?,
+      "BackupCreationDateTime" : (BackupCreationDateTime)?,
+      "BackupExpiryDateTime" : (Date)?,
+      "BackupStatus" : (BackupStatus)?,
+      "BackupType" : (BackupType)?,
+      "BackupSizeBytes" : (BackupSizeBytes)?
+    )
+
+    alias BackupType = String
+
+    alias BackupTypeFilter = String
+
+    alias BackupsInputLimit = Int32
+
+    alias BatchExecuteStatementInput = NamedTuple(
+      "Statements" : PartiQLBatchRequest
+    )
+
+    alias BatchExecuteStatementOutput = NamedTuple(
+      "Responses" : (PartiQLBatchResponse)?
+    )
+
+    alias BatchGetItemInput = NamedTuple(
+      "RequestItems" : BatchGetRequestMap,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?
+    )
+
+    alias BatchGetItemOutput = NamedTuple(
+      "Responses" : (BatchGetResponseMap)?,
+      "UnprocessedKeys" : (BatchGetRequestMap)?,
+      "ConsumedCapacity" : (ConsumedCapacityMultiple)?
+    )
+
+    alias BatchGetRequestMap = Hash(TableName,KeysAndAttributes)
+
+    alias BatchGetResponseMap = Hash(TableName,ItemList)
+
+    alias BatchStatementError = NamedTuple(
+      "Code" : (BatchStatementErrorCodeEnum)?,
+      "Message" : (String)?
+    )
+
+    alias BatchStatementErrorCodeEnum = String
+
+    alias BatchStatementRequest = NamedTuple(
+      "Statement" : PartiQLStatement,
+      "Parameters" : (PreparedStatementParameters)?,
+      "ConsistentRead" : (ConsistentRead)?
+    )
+
+    alias BatchStatementResponse = NamedTuple(
+      "Error" : (BatchStatementError)?,
+      "TableName" : (TableName)?,
+      "Item" : (AttributeMap)?
+    )
+
+    alias BatchWriteItemInput = NamedTuple(
+      "RequestItems" : BatchWriteItemRequestMap,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?
+    )
+
+    alias BatchWriteItemOutput = NamedTuple(
+      "UnprocessedItems" : (BatchWriteItemRequestMap)?,
+      "ItemCollectionMetrics" : (ItemCollectionMetricsPerTable)?,
+      "ConsumedCapacity" : (ConsumedCapacityMultiple)?
+    )
+
+    alias BatchWriteItemRequestMap = Hash(TableName,WriteRequests)
+
+    alias BilledSizeBytes = Int64
+
+    alias BillingMode = String
+
+    alias BillingModeSummary = NamedTuple(
+      "BillingMode" : (BillingMode)?,
+      "LastUpdateToPayPerRequestDateTime" : (Date)?
+    )
+
+    alias BinaryAttributeValue = String | Array(UInt8) | IO
+
+    alias BinarySetAttributeValue = Array(BinaryAttributeValue)
+
+    alias BooleanAttributeValue = Bool
+
+    alias BooleanObject = Bool
+
+    alias CancellationReason = NamedTuple(
+      "Item" : (AttributeMap)?,
+      "Code" : (Code)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CancellationReasonList = Array(CancellationReason)
+
+    alias Capacity = NamedTuple(
+      "ReadCapacityUnits" : (ConsumedCapacityUnits)?,
+      "WriteCapacityUnits" : (ConsumedCapacityUnits)?,
+      "CapacityUnits" : (ConsumedCapacityUnits)?
+    )
+
+    alias ClientRequestToken = String
+
+    alias ClientToken = String
+
+    alias Code = String
+
+    alias ComparisonOperator = String
+
+    alias Condition = NamedTuple(
+      "AttributeValueList" : (AttributeValueList)?,
+      "ComparisonOperator" : ComparisonOperator
+    )
+
+    alias ConditionCheck = NamedTuple(
+      "Key" : Key,
+      "TableName" : TableName,
+      "ConditionExpression" : ConditionExpression,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
+      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+    )
+
+    alias ConditionExpression = String
+
+    alias ConditionalCheckFailedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConditionalOperator = String
+
+    alias ConsistentRead = Bool
+
+    alias ConsumedCapacity = NamedTuple(
+      "TableName" : (TableName)?,
+      "CapacityUnits" : (ConsumedCapacityUnits)?,
+      "ReadCapacityUnits" : (ConsumedCapacityUnits)?,
+      "WriteCapacityUnits" : (ConsumedCapacityUnits)?,
+      "Table" : (Capacity)?,
+      "LocalSecondaryIndexes" : (SecondaryIndexesCapacityMap)?,
+      "GlobalSecondaryIndexes" : (SecondaryIndexesCapacityMap)?
+    )
+
+    alias ConsumedCapacityMultiple = Array(ConsumedCapacity)
+
+    alias ConsumedCapacityUnits = Float64
+
+    alias ContinuousBackupsDescription = NamedTuple(
+      "ContinuousBackupsStatus" : ContinuousBackupsStatus,
+      "PointInTimeRecoveryDescription" : (PointInTimeRecoveryDescription)?
+    )
+
+    alias ContinuousBackupsStatus = String
+
+    alias ContinuousBackupsUnavailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ContributorInsightsAction = String
+
+    alias ContributorInsightsRule = String
+
+    alias ContributorInsightsRuleList = Array(ContributorInsightsRule)
+
+    alias ContributorInsightsStatus = String
+
+    alias ContributorInsightsSummaries = Array(ContributorInsightsSummary)
+
+    alias ContributorInsightsSummary = NamedTuple(
+      "TableName" : (TableName)?,
+      "IndexName" : (IndexName)?,
+      "ContributorInsightsStatus" : (ContributorInsightsStatus)?
+    )
+
+    alias CreateBackupInput = NamedTuple(
+      "TableName" : TableName,
+      "BackupName" : BackupName
+    )
+
+    alias CreateBackupOutput = NamedTuple(
+      "BackupDetails" : (BackupDetails)?
+    )
+
+    alias CreateGlobalSecondaryIndexAction = NamedTuple(
+      "IndexName" : IndexName,
+      "KeySchema" : KeySchema,
+      "Projection" : Projection,
+      "ProvisionedThroughput" : (ProvisionedThroughput)?
+    )
+
+    alias CreateGlobalTableInput = NamedTuple(
+      "GlobalTableName" : TableName,
+      "ReplicationGroup" : ReplicaList
+    )
+
+    alias CreateGlobalTableOutput = NamedTuple(
+      "GlobalTableDescription" : (GlobalTableDescription)?
+    )
+
+    alias CreateReplicaAction = NamedTuple(
+      "RegionName" : RegionName
+    )
+
+    alias CreateReplicationGroupMemberAction = NamedTuple(
+      "RegionName" : RegionName,
+      "KMSMasterKeyId" : (KMSMasterKeyId)?,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?,
+      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexList)?
+    )
+
+    alias CreateTableInput = NamedTuple(
+      "AttributeDefinitions" : AttributeDefinitions,
+      "TableName" : TableName,
+      "KeySchema" : KeySchema,
+      "LocalSecondaryIndexes" : (LocalSecondaryIndexList)?,
+      "GlobalSecondaryIndexes" : (GlobalSecondaryIndexList)?,
+      "BillingMode" : (BillingMode)?,
+      "ProvisionedThroughput" : (ProvisionedThroughput)?,
+      "StreamSpecification" : (StreamSpecification)?,
+      "SSESpecification" : (SSESpecification)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateTableOutput = NamedTuple(
+      "TableDescription" : (TableDescription)?
+    )
+
+    alias Date = String | UInt64 | Time
+
+    alias Delete = NamedTuple(
+      "Key" : Key,
+      "TableName" : TableName,
+      "ConditionExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
+      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+    )
+
+    alias DeleteBackupInput = NamedTuple(
+      "BackupArn" : BackupArn
+    )
+
+    alias DeleteBackupOutput = NamedTuple(
+      "BackupDescription" : (BackupDescription)?
+    )
+
+    alias DeleteGlobalSecondaryIndexAction = NamedTuple(
+      "IndexName" : IndexName
+    )
+
+    alias DeleteItemInput = NamedTuple(
+      "TableName" : TableName,
+      "Key" : Key,
+      "Expected" : (ExpectedAttributeMap)?,
+      "ConditionalOperator" : (ConditionalOperator)?,
+      "ReturnValues" : (ReturnValue)?,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
+      "ConditionExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+    )
+
+    alias DeleteItemOutput = NamedTuple(
+      "Attributes" : (AttributeMap)?,
+      "ConsumedCapacity" : (ConsumedCapacity)?,
+      "ItemCollectionMetrics" : (ItemCollectionMetrics)?
+    )
+
+    alias DeleteReplicaAction = NamedTuple(
+      "RegionName" : RegionName
+    )
+
+    alias DeleteReplicationGroupMemberAction = NamedTuple(
+      "RegionName" : RegionName
+    )
+
+    alias DeleteRequest = NamedTuple(
+      "Key" : Key
+    )
+
+    alias DeleteTableInput = NamedTuple(
+      "TableName" : TableName
+    )
+
+    alias DeleteTableOutput = NamedTuple(
+      "TableDescription" : (TableDescription)?
+    )
+
+    alias DescribeBackupInput = NamedTuple(
+      "BackupArn" : BackupArn
+    )
+
+    alias DescribeBackupOutput = NamedTuple(
+      "BackupDescription" : (BackupDescription)?
+    )
+
+    alias DescribeContinuousBackupsInput = NamedTuple(
+      "TableName" : TableName
+    )
+
+    alias DescribeContinuousBackupsOutput = NamedTuple(
+      "ContinuousBackupsDescription" : (ContinuousBackupsDescription)?
+    )
+
+    alias DescribeContributorInsightsInput = NamedTuple(
+      "TableName" : TableName,
+      "IndexName" : (IndexName)?
+    )
+
+    alias DescribeContributorInsightsOutput = NamedTuple(
+      "TableName" : (TableName)?,
+      "IndexName" : (IndexName)?,
+      "ContributorInsightsRuleList" : (ContributorInsightsRuleList)?,
+      "ContributorInsightsStatus" : (ContributorInsightsStatus)?,
+      "LastUpdateDateTime" : (LastUpdateDateTime)?,
+      "FailureException" : (FailureException)?
+    )
+
+    alias DescribeEndpointsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeEndpointsResponse = NamedTuple(
+      "Endpoints" : Endpoints
+    )
+
+    alias DescribeExportInput = NamedTuple(
+      "ExportArn" : ExportArn
+    )
+
+    alias DescribeExportOutput = NamedTuple(
+      "ExportDescription" : (ExportDescription)?
+    )
+
+    alias DescribeGlobalTableInput = NamedTuple(
+      "GlobalTableName" : TableName
+    )
+
+    alias DescribeGlobalTableOutput = NamedTuple(
+      "GlobalTableDescription" : (GlobalTableDescription)?
+    )
+
+    alias DescribeGlobalTableSettingsInput = NamedTuple(
+      "GlobalTableName" : TableName
+    )
+
+    alias DescribeGlobalTableSettingsOutput = NamedTuple(
+      "GlobalTableName" : (TableName)?,
+      "ReplicaSettings" : (ReplicaSettingsDescriptionList)?
+    )
+
+    alias DescribeKinesisStreamingDestinationInput = NamedTuple(
+      "TableName" : TableName
+    )
+
+    alias DescribeKinesisStreamingDestinationOutput = NamedTuple(
+      "TableName" : (TableName)?,
+      "KinesisDataStreamDestinations" : (KinesisDataStreamDestinations)?
+    )
+
+    alias DescribeLimitsInput = NamedTuple(
+      
+    )
+
+    alias DescribeLimitsOutput = NamedTuple(
+      "AccountMaxReadCapacityUnits" : (PositiveLongObject)?,
+      "AccountMaxWriteCapacityUnits" : (PositiveLongObject)?,
+      "TableMaxReadCapacityUnits" : (PositiveLongObject)?,
+      "TableMaxWriteCapacityUnits" : (PositiveLongObject)?
+    )
+
+    alias DescribeTableInput = NamedTuple(
+      "TableName" : TableName
+    )
+
+    alias DescribeTableOutput = NamedTuple(
+      "Table" : (TableDescription)?
+    )
+
+    alias DescribeTableReplicaAutoScalingInput = NamedTuple(
+      "TableName" : TableName
+    )
+
+    alias DescribeTableReplicaAutoScalingOutput = NamedTuple(
+      "TableAutoScalingDescription" : (TableAutoScalingDescription)?
+    )
+
+    alias DescribeTimeToLiveInput = NamedTuple(
+      "TableName" : TableName
+    )
+
+    alias DescribeTimeToLiveOutput = NamedTuple(
+      "TimeToLiveDescription" : (TimeToLiveDescription)?
+    )
+
+    alias DestinationStatus = String
+
+    alias Double = Float64
+
+    alias DuplicateItemException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Endpoint = NamedTuple(
+      "Address" : String,
+      "CachePeriodInMinutes" : Long
+    )
+
+    alias Endpoints = Array(Endpoint)
+
+    alias ErrorMessage = String
+
+    alias ExceptionDescription = String
+
+    alias ExceptionName = String
+
+    alias ExecuteStatementInput = NamedTuple(
+      "Statement" : PartiQLStatement,
+      "Parameters" : (PreparedStatementParameters)?,
+      "ConsistentRead" : (ConsistentRead)?,
+      "NextToken" : (PartiQLNextToken)?
+    )
+
+    alias ExecuteStatementOutput = NamedTuple(
+      "Items" : (ItemList)?,
+      "NextToken" : (PartiQLNextToken)?
+    )
+
+    alias ExecuteTransactionInput = NamedTuple(
+      "TransactStatements" : ParameterizedStatements,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias ExecuteTransactionOutput = NamedTuple(
+      "Responses" : (ItemResponseList)?
+    )
+
+    alias ExpectedAttributeMap = Hash(AttributeName,ExpectedAttributeValue)
+
+    alias ExpectedAttributeValue = NamedTuple(
+      "Value" : (AttributeValue)?,
+      "Exists" : (BooleanObject)?,
+      "ComparisonOperator" : (ComparisonOperator)?,
+      "AttributeValueList" : (AttributeValueList)?
+    )
+
+    alias ExportArn = String
+
+    alias ExportConflictException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ExportDescription = NamedTuple(
+      "ExportArn" : (ExportArn)?,
+      "ExportStatus" : (ExportStatus)?,
+      "StartTime" : (ExportStartTime)?,
+      "EndTime" : (ExportEndTime)?,
+      "ExportManifest" : (ExportManifest)?,
+      "TableArn" : (TableArn)?,
+      "TableId" : (TableId)?,
+      "ExportTime" : (ExportTime)?,
+      "ClientToken" : (ClientToken)?,
+      "S3Bucket" : (S3Bucket)?,
+      "S3BucketOwner" : (S3BucketOwner)?,
+      "S3Prefix" : (S3Prefix)?,
+      "S3SseAlgorithm" : (S3SseAlgorithm)?,
+      "S3SseKmsKeyId" : (S3SseKmsKeyId)?,
+      "FailureCode" : (FailureCode)?,
+      "FailureMessage" : (FailureMessage)?,
+      "ExportFormat" : (ExportFormat)?,
+      "BilledSizeBytes" : (BilledSizeBytes)?,
+      "ItemCount" : (ItemCount)?
+    )
+
+    alias ExportEndTime = String | UInt64 | Time
+
+    alias ExportFormat = String
+
+    alias ExportManifest = String
+
+    alias ExportNextToken = String
+
+    alias ExportNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ExportStartTime = String | UInt64 | Time
+
+    alias ExportStatus = String
+
+    alias ExportSummaries = Array(ExportSummary)
+
+    alias ExportSummary = NamedTuple(
+      "ExportArn" : (ExportArn)?,
+      "ExportStatus" : (ExportStatus)?
+    )
+
+    alias ExportTableToPointInTimeInput = NamedTuple(
+      "TableArn" : TableArn,
+      "ExportTime" : (ExportTime)?,
+      "ClientToken" : (ClientToken)?,
+      "S3Bucket" : S3Bucket,
+      "S3BucketOwner" : (S3BucketOwner)?,
+      "S3Prefix" : (S3Prefix)?,
+      "S3SseAlgorithm" : (S3SseAlgorithm)?,
+      "S3SseKmsKeyId" : (S3SseKmsKeyId)?,
+      "ExportFormat" : (ExportFormat)?
+    )
+
+    alias ExportTableToPointInTimeOutput = NamedTuple(
+      "ExportDescription" : (ExportDescription)?
+    )
+
+    alias ExportTime = String | UInt64 | Time
+
+    alias ExpressionAttributeNameMap = Hash(ExpressionAttributeNameVariable,AttributeName)
+
+    alias ExpressionAttributeNameVariable = String
+
+    alias ExpressionAttributeValueMap = Hash(ExpressionAttributeValueVariable,AttributeValue)
+
+    alias ExpressionAttributeValueVariable = String
+
+    alias FailureCode = String
+
+    alias FailureException = NamedTuple(
+      "ExceptionName" : (ExceptionName)?,
+      "ExceptionDescription" : (ExceptionDescription)?
+    )
+
+    alias FailureMessage = String
+
+    alias FilterConditionMap = Hash(AttributeName,Condition)
+
+    alias Get = NamedTuple(
+      "Key" : Key,
+      "TableName" : TableName,
+      "ProjectionExpression" : (ProjectionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?
+    )
+
+    alias GetItemInput = NamedTuple(
+      "TableName" : TableName,
+      "Key" : Key,
+      "AttributesToGet" : (AttributeNameList)?,
+      "ConsistentRead" : (ConsistentRead)?,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ProjectionExpression" : (ProjectionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?
+    )
+
+    alias GetItemOutput = NamedTuple(
+      "Item" : (AttributeMap)?,
+      "ConsumedCapacity" : (ConsumedCapacity)?
+    )
+
+    alias GlobalSecondaryIndex = NamedTuple(
+      "IndexName" : IndexName,
+      "KeySchema" : KeySchema,
+      "Projection" : Projection,
+      "ProvisionedThroughput" : (ProvisionedThroughput)?
+    )
+
+    alias GlobalSecondaryIndexAutoScalingUpdate = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "ProvisionedWriteCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?
+    )
+
+    alias GlobalSecondaryIndexAutoScalingUpdateList = Array(GlobalSecondaryIndexAutoScalingUpdate)
+
+    alias GlobalSecondaryIndexDescription = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "KeySchema" : (KeySchema)?,
+      "Projection" : (Projection)?,
+      "IndexStatus" : (IndexStatus)?,
+      "Backfilling" : (Backfilling)?,
+      "ProvisionedThroughput" : (ProvisionedThroughputDescription)?,
+      "IndexSizeBytes" : (Long)?,
+      "ItemCount" : (Long)?,
+      "IndexArn" : (String)?
+    )
+
+    alias GlobalSecondaryIndexDescriptionList = Array(GlobalSecondaryIndexDescription)
+
+    alias GlobalSecondaryIndexInfo = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "KeySchema" : (KeySchema)?,
+      "Projection" : (Projection)?,
+      "ProvisionedThroughput" : (ProvisionedThroughput)?
+    )
+
+    alias GlobalSecondaryIndexList = Array(GlobalSecondaryIndex)
+
+    alias GlobalSecondaryIndexUpdate = NamedTuple(
+      "Update" : (UpdateGlobalSecondaryIndexAction)?,
+      "Create" : (CreateGlobalSecondaryIndexAction)?,
+      "Delete" : (DeleteGlobalSecondaryIndexAction)?
+    )
+
+    alias GlobalSecondaryIndexUpdateList = Array(GlobalSecondaryIndexUpdate)
+
+    alias GlobalSecondaryIndexes = Array(GlobalSecondaryIndexInfo)
+
+    alias GlobalTable = NamedTuple(
+      "GlobalTableName" : (TableName)?,
+      "ReplicationGroup" : (ReplicaList)?
+    )
+
+    alias GlobalTableAlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias GlobalTableArnString = String
+
+    alias GlobalTableDescription = NamedTuple(
+      "ReplicationGroup" : (ReplicaDescriptionList)?,
+      "GlobalTableArn" : (GlobalTableArnString)?,
+      "CreationDateTime" : (Date)?,
+      "GlobalTableStatus" : (GlobalTableStatus)?,
+      "GlobalTableName" : (TableName)?
+    )
+
+    alias GlobalTableGlobalSecondaryIndexSettingsUpdate = NamedTuple(
+      "IndexName" : IndexName,
+      "ProvisionedWriteCapacityUnits" : (PositiveLongObject)?,
+      "ProvisionedWriteCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?
+    )
+
+    alias GlobalTableGlobalSecondaryIndexSettingsUpdateList = Array(GlobalTableGlobalSecondaryIndexSettingsUpdate)
+
+    alias GlobalTableList = Array(GlobalTable)
+
+    alias GlobalTableNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias GlobalTableStatus = String
+
+    alias IdempotentParameterMismatchException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias IndexName = String
+
+    alias IndexNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias IndexStatus = String
+
+    alias Integer = Int32
+
+    alias IntegerObject = Int32
+
+    alias InternalServerError = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidExportTimeException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidRestoreTimeException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ItemCollectionKeyAttributeMap = Hash(AttributeName,AttributeValue)
+
+    alias ItemCollectionMetrics = NamedTuple(
+      "ItemCollectionKey" : (ItemCollectionKeyAttributeMap)?,
+      "SizeEstimateRangeGB" : (ItemCollectionSizeEstimateRange)?
+    )
+
+    alias ItemCollectionMetricsMultiple = Array(ItemCollectionMetrics)
+
+    alias ItemCollectionMetricsPerTable = Hash(TableName,ItemCollectionMetricsMultiple)
+
+    alias ItemCollectionSizeEstimateBound = Float64
+
+    alias ItemCollectionSizeEstimateRange = Array(ItemCollectionSizeEstimateBound)
+
+    alias ItemCollectionSizeLimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ItemCount = Int64
+
+    alias ItemList = Array(AttributeMap)
+
+    alias ItemResponse = NamedTuple(
+      "Item" : (AttributeMap)?
+    )
+
+    alias ItemResponseList = Array(ItemResponse)
+
+    alias KMSMasterKeyArn = String
+
+    alias KMSMasterKeyId = String
+
+    alias Key = Hash(AttributeName,AttributeValue)
+
+    alias KeyConditions = Hash(AttributeName,Condition)
+
+    alias KeyExpression = String
+
+    alias KeyList = Array(Key)
+
+    alias KeySchema = Array(KeySchemaElement)
+
+    alias KeySchemaAttributeName = String
+
+    alias KeySchemaElement = NamedTuple(
+      "AttributeName" : KeySchemaAttributeName,
+      "KeyType" : KeyType
+    )
+
+    alias KeyType = String
+
+    alias KeysAndAttributes = NamedTuple(
+      "Keys" : KeyList,
+      "AttributesToGet" : (AttributeNameList)?,
+      "ConsistentRead" : (ConsistentRead)?,
+      "ProjectionExpression" : (ProjectionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?
+    )
+
+    alias KinesisDataStreamDestination = NamedTuple(
+      "StreamArn" : (StreamArn)?,
+      "DestinationStatus" : (DestinationStatus)?,
+      "DestinationStatusDescription" : (String)?
+    )
+
+    alias KinesisDataStreamDestinations = Array(KinesisDataStreamDestination)
+
+    alias KinesisStreamingDestinationInput = NamedTuple(
+      "TableName" : TableName,
+      "StreamArn" : StreamArn
+    )
+
+    alias KinesisStreamingDestinationOutput = NamedTuple(
+      "TableName" : (TableName)?,
+      "StreamArn" : (StreamArn)?,
+      "DestinationStatus" : (DestinationStatus)?
+    )
+
+    alias LastUpdateDateTime = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListAttributeValue = Array(AttributeValue)
+
+    alias ListBackupsInput = NamedTuple(
+      "TableName" : (TableName)?,
+      "Limit" : (BackupsInputLimit)?,
+      "TimeRangeLowerBound" : (TimeRangeLowerBound)?,
+      "TimeRangeUpperBound" : (TimeRangeUpperBound)?,
+      "ExclusiveStartBackupArn" : (BackupArn)?,
+      "BackupType" : (BackupTypeFilter)?
+    )
+
+    alias ListBackupsOutput = NamedTuple(
+      "BackupSummaries" : (BackupSummaries)?,
+      "LastEvaluatedBackupArn" : (BackupArn)?
+    )
+
+    alias ListContributorInsightsInput = NamedTuple(
+      "TableName" : (TableName)?,
+      "NextToken" : (NextTokenString)?,
+      "MaxResults" : (ListContributorInsightsLimit)?
+    )
+
+    alias ListContributorInsightsLimit = Int32
+
+    alias ListContributorInsightsOutput = NamedTuple(
+      "ContributorInsightsSummaries" : (ContributorInsightsSummaries)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListExportsInput = NamedTuple(
+      "TableArn" : (TableArn)?,
+      "MaxResults" : (ListExportsMaxLimit)?,
+      "NextToken" : (ExportNextToken)?
+    )
+
+    alias ListExportsMaxLimit = Int32
+
+    alias ListExportsOutput = NamedTuple(
+      "ExportSummaries" : (ExportSummaries)?,
+      "NextToken" : (ExportNextToken)?
+    )
+
+    alias ListGlobalTablesInput = NamedTuple(
+      "ExclusiveStartGlobalTableName" : (TableName)?,
+      "Limit" : (PositiveIntegerObject)?,
+      "RegionName" : (RegionName)?
+    )
+
+    alias ListGlobalTablesOutput = NamedTuple(
+      "GlobalTables" : (GlobalTableList)?,
+      "LastEvaluatedGlobalTableName" : (TableName)?
+    )
+
+    alias ListTablesInput = NamedTuple(
+      "ExclusiveStartTableName" : (TableName)?,
+      "Limit" : (ListTablesInputLimit)?
+    )
+
+    alias ListTablesInputLimit = Int32
+
+    alias ListTablesOutput = NamedTuple(
+      "TableNames" : (TableNameList)?,
+      "LastEvaluatedTableName" : (TableName)?
+    )
+
+    alias ListTagsOfResourceInput = NamedTuple(
+      "ResourceArn" : ResourceArnString,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias ListTagsOfResourceOutput = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias LocalSecondaryIndex = NamedTuple(
+      "IndexName" : IndexName,
+      "KeySchema" : KeySchema,
+      "Projection" : Projection
+    )
+
+    alias LocalSecondaryIndexDescription = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "KeySchema" : (KeySchema)?,
+      "Projection" : (Projection)?,
+      "IndexSizeBytes" : (Long)?,
+      "ItemCount" : (Long)?,
+      "IndexArn" : (String)?
+    )
+
+    alias LocalSecondaryIndexDescriptionList = Array(LocalSecondaryIndexDescription)
+
+    alias LocalSecondaryIndexInfo = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "KeySchema" : (KeySchema)?,
+      "Projection" : (Projection)?
+    )
+
+    alias LocalSecondaryIndexList = Array(LocalSecondaryIndex)
+
+    alias LocalSecondaryIndexes = Array(LocalSecondaryIndexInfo)
+
+    alias Long = Int64
+
+    alias MapAttributeValue = Hash(AttributeName,AttributeValue)
+
+    alias NextTokenString = String
+
+    alias NonKeyAttributeName = String
+
+    alias NonKeyAttributeNameList = Array(NonKeyAttributeName)
+
+    alias NonNegativeLongObject = Int64
+
+    alias NullAttributeValue = Bool
+
+    alias NumberAttributeValue = String
+
+    alias NumberSetAttributeValue = Array(NumberAttributeValue)
+
+    alias ParameterizedStatement = NamedTuple(
+      "Statement" : PartiQLStatement,
+      "Parameters" : (PreparedStatementParameters)?
+    )
+
+    alias ParameterizedStatements = Array(ParameterizedStatement)
+
+    alias PartiQLBatchRequest = Array(BatchStatementRequest)
+
+    alias PartiQLBatchResponse = Array(BatchStatementResponse)
+
+    alias PartiQLNextToken = String
+
+    alias PartiQLStatement = String
+
+    alias PointInTimeRecoveryDescription = NamedTuple(
+      "PointInTimeRecoveryStatus" : (PointInTimeRecoveryStatus)?,
+      "EarliestRestorableDateTime" : (Date)?,
+      "LatestRestorableDateTime" : (Date)?
+    )
+
+    alias PointInTimeRecoverySpecification = NamedTuple(
+      "PointInTimeRecoveryEnabled" : BooleanObject
+    )
+
+    alias PointInTimeRecoveryStatus = String
+
+    alias PointInTimeRecoveryUnavailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias PositiveIntegerObject = Int32
+
+    alias PositiveLongObject = Int64
+
+    alias PreparedStatementParameters = Array(AttributeValue)
+
+    alias Projection = NamedTuple(
+      "ProjectionType" : (ProjectionType)?,
+      "NonKeyAttributes" : (NonKeyAttributeNameList)?
+    )
+
+    alias ProjectionExpression = String
+
+    alias ProjectionType = String
+
+    alias ProvisionedThroughput = NamedTuple(
+      "ReadCapacityUnits" : PositiveLongObject,
+      "WriteCapacityUnits" : PositiveLongObject
+    )
+
+    alias ProvisionedThroughputDescription = NamedTuple(
+      "LastIncreaseDateTime" : (Date)?,
+      "LastDecreaseDateTime" : (Date)?,
+      "NumberOfDecreasesToday" : (PositiveLongObject)?,
+      "ReadCapacityUnits" : (NonNegativeLongObject)?,
+      "WriteCapacityUnits" : (NonNegativeLongObject)?
+    )
+
+    alias ProvisionedThroughputExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ProvisionedThroughputOverride = NamedTuple(
+      "ReadCapacityUnits" : (PositiveLongObject)?
+    )
+
+    alias Put = NamedTuple(
+      "Item" : PutItemInputAttributeMap,
+      "TableName" : TableName,
+      "ConditionExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
+      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+    )
+
+    alias PutItemInput = NamedTuple(
+      "TableName" : TableName,
+      "Item" : PutItemInputAttributeMap,
+      "Expected" : (ExpectedAttributeMap)?,
+      "ReturnValues" : (ReturnValue)?,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
+      "ConditionalOperator" : (ConditionalOperator)?,
+      "ConditionExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+    )
+
+    alias PutItemInputAttributeMap = Hash(AttributeName,AttributeValue)
+
+    alias PutItemOutput = NamedTuple(
+      "Attributes" : (AttributeMap)?,
+      "ConsumedCapacity" : (ConsumedCapacity)?,
+      "ItemCollectionMetrics" : (ItemCollectionMetrics)?
+    )
+
+    alias PutRequest = NamedTuple(
+      "Item" : PutItemInputAttributeMap
+    )
+
+    alias QueryInput = NamedTuple(
+      "TableName" : TableName,
+      "IndexName" : (IndexName)?,
+      "Select" : (Select)?,
+      "AttributesToGet" : (AttributeNameList)?,
+      "Limit" : (PositiveIntegerObject)?,
+      "ConsistentRead" : (ConsistentRead)?,
+      "KeyConditions" : (KeyConditions)?,
+      "QueryFilter" : (FilterConditionMap)?,
+      "ConditionalOperator" : (ConditionalOperator)?,
+      "ScanIndexForward" : (BooleanObject)?,
+      "ExclusiveStartKey" : (Key)?,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ProjectionExpression" : (ProjectionExpression)?,
+      "FilterExpression" : (ConditionExpression)?,
+      "KeyConditionExpression" : (KeyExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+    )
+
+    alias QueryOutput = NamedTuple(
+      "Items" : (ItemList)?,
+      "Count" : (Integer)?,
+      "ScannedCount" : (Integer)?,
+      "LastEvaluatedKey" : (Key)?,
+      "ConsumedCapacity" : (ConsumedCapacity)?
+    )
+
+    alias RegionName = String
+
+    alias Replica = NamedTuple(
+      "RegionName" : (RegionName)?
+    )
+
+    alias ReplicaAlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ReplicaAutoScalingDescription = NamedTuple(
+      "RegionName" : (RegionName)?,
+      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexAutoScalingDescriptionList)?,
+      "ReplicaProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
+      "ReplicaProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
+      "ReplicaStatus" : (ReplicaStatus)?
+    )
+
+    alias ReplicaAutoScalingDescriptionList = Array(ReplicaAutoScalingDescription)
+
+    alias ReplicaAutoScalingUpdate = NamedTuple(
+      "RegionName" : RegionName,
+      "ReplicaGlobalSecondaryIndexUpdates" : (ReplicaGlobalSecondaryIndexAutoScalingUpdateList)?,
+      "ReplicaProvisionedReadCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?
+    )
+
+    alias ReplicaAutoScalingUpdateList = Array(ReplicaAutoScalingUpdate)
+
+    alias ReplicaDescription = NamedTuple(
+      "RegionName" : (RegionName)?,
+      "ReplicaStatus" : (ReplicaStatus)?,
+      "ReplicaStatusDescription" : (ReplicaStatusDescription)?,
+      "ReplicaStatusPercentProgress" : (ReplicaStatusPercentProgress)?,
+      "KMSMasterKeyId" : (KMSMasterKeyId)?,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?,
+      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexDescriptionList)?,
+      "ReplicaInaccessibleDateTime" : (Date)?
+    )
+
+    alias ReplicaDescriptionList = Array(ReplicaDescription)
+
+    alias ReplicaGlobalSecondaryIndex = NamedTuple(
+      "IndexName" : IndexName,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?
+    )
+
+    alias ReplicaGlobalSecondaryIndexAutoScalingDescription = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "IndexStatus" : (IndexStatus)?,
+      "ProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
+      "ProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?
+    )
+
+    alias ReplicaGlobalSecondaryIndexAutoScalingDescriptionList = Array(ReplicaGlobalSecondaryIndexAutoScalingDescription)
+
+    alias ReplicaGlobalSecondaryIndexAutoScalingUpdate = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "ProvisionedReadCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?
+    )
+
+    alias ReplicaGlobalSecondaryIndexAutoScalingUpdateList = Array(ReplicaGlobalSecondaryIndexAutoScalingUpdate)
+
+    alias ReplicaGlobalSecondaryIndexDescription = NamedTuple(
+      "IndexName" : (IndexName)?,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?
+    )
+
+    alias ReplicaGlobalSecondaryIndexDescriptionList = Array(ReplicaGlobalSecondaryIndexDescription)
+
+    alias ReplicaGlobalSecondaryIndexList = Array(ReplicaGlobalSecondaryIndex)
+
+    alias ReplicaGlobalSecondaryIndexSettingsDescription = NamedTuple(
+      "IndexName" : IndexName,
+      "IndexStatus" : (IndexStatus)?,
+      "ProvisionedReadCapacityUnits" : (PositiveLongObject)?,
+      "ProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
+      "ProvisionedWriteCapacityUnits" : (PositiveLongObject)?,
+      "ProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?
+    )
+
+    alias ReplicaGlobalSecondaryIndexSettingsDescriptionList = Array(ReplicaGlobalSecondaryIndexSettingsDescription)
+
+    alias ReplicaGlobalSecondaryIndexSettingsUpdate = NamedTuple(
+      "IndexName" : IndexName,
+      "ProvisionedReadCapacityUnits" : (PositiveLongObject)?,
+      "ProvisionedReadCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?
+    )
+
+    alias ReplicaGlobalSecondaryIndexSettingsUpdateList = Array(ReplicaGlobalSecondaryIndexSettingsUpdate)
+
+    alias ReplicaList = Array(Replica)
+
+    alias ReplicaNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ReplicaSettingsDescription = NamedTuple(
+      "RegionName" : RegionName,
+      "ReplicaStatus" : (ReplicaStatus)?,
+      "ReplicaBillingModeSummary" : (BillingModeSummary)?,
+      "ReplicaProvisionedReadCapacityUnits" : (NonNegativeLongObject)?,
+      "ReplicaProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
+      "ReplicaProvisionedWriteCapacityUnits" : (NonNegativeLongObject)?,
+      "ReplicaProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
+      "ReplicaGlobalSecondaryIndexSettings" : (ReplicaGlobalSecondaryIndexSettingsDescriptionList)?
+    )
+
+    alias ReplicaSettingsDescriptionList = Array(ReplicaSettingsDescription)
+
+    alias ReplicaSettingsUpdate = NamedTuple(
+      "RegionName" : RegionName,
+      "ReplicaProvisionedReadCapacityUnits" : (PositiveLongObject)?,
+      "ReplicaProvisionedReadCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?,
+      "ReplicaGlobalSecondaryIndexSettingsUpdate" : (ReplicaGlobalSecondaryIndexSettingsUpdateList)?
+    )
+
+    alias ReplicaSettingsUpdateList = Array(ReplicaSettingsUpdate)
+
+    alias ReplicaStatus = String
+
+    alias ReplicaStatusDescription = String
+
+    alias ReplicaStatusPercentProgress = String
+
+    alias ReplicaUpdate = NamedTuple(
+      "Create" : (CreateReplicaAction)?,
+      "Delete" : (DeleteReplicaAction)?
+    )
+
+    alias ReplicaUpdateList = Array(ReplicaUpdate)
+
+    alias ReplicationGroupUpdate = NamedTuple(
+      "Create" : (CreateReplicationGroupMemberAction)?,
+      "Update" : (UpdateReplicationGroupMemberAction)?,
+      "Delete" : (DeleteReplicationGroupMemberAction)?
+    )
+
+    alias ReplicationGroupUpdateList = Array(ReplicationGroupUpdate)
+
+    alias RequestLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceArnString = String
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias RestoreInProgress = Bool
+
+    alias RestoreSummary = NamedTuple(
+      "SourceBackupArn" : (BackupArn)?,
+      "SourceTableArn" : (TableArn)?,
+      "RestoreDateTime" : Date,
+      "RestoreInProgress" : RestoreInProgress
+    )
+
+    alias RestoreTableFromBackupInput = NamedTuple(
+      "TargetTableName" : TableName,
+      "BackupArn" : BackupArn,
+      "BillingModeOverride" : (BillingMode)?,
+      "GlobalSecondaryIndexOverride" : (GlobalSecondaryIndexList)?,
+      "LocalSecondaryIndexOverride" : (LocalSecondaryIndexList)?,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughput)?,
+      "SSESpecificationOverride" : (SSESpecification)?
+    )
+
+    alias RestoreTableFromBackupOutput = NamedTuple(
+      "TableDescription" : (TableDescription)?
+    )
+
+    alias RestoreTableToPointInTimeInput = NamedTuple(
+      "SourceTableArn" : (TableArn)?,
+      "SourceTableName" : (TableName)?,
+      "TargetTableName" : TableName,
+      "UseLatestRestorableTime" : (BooleanObject)?,
+      "RestoreDateTime" : (Date)?,
+      "BillingModeOverride" : (BillingMode)?,
+      "GlobalSecondaryIndexOverride" : (GlobalSecondaryIndexList)?,
+      "LocalSecondaryIndexOverride" : (LocalSecondaryIndexList)?,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughput)?,
+      "SSESpecificationOverride" : (SSESpecification)?
+    )
+
+    alias RestoreTableToPointInTimeOutput = NamedTuple(
+      "TableDescription" : (TableDescription)?
+    )
+
+    alias ReturnConsumedCapacity = String
+
+    alias ReturnItemCollectionMetrics = String
+
+    alias ReturnValue = String
+
+    alias ReturnValuesOnConditionCheckFailure = String
+
+    alias S3Bucket = String
+
+    alias S3BucketOwner = String
+
+    alias S3Prefix = String
+
+    alias S3SseAlgorithm = String
+
+    alias S3SseKmsKeyId = String
+
+    alias SSEDescription = NamedTuple(
+      "Status" : (SSEStatus)?,
+      "SSEType" : (SSEType)?,
+      "KMSMasterKeyArn" : (KMSMasterKeyArn)?,
+      "InaccessibleEncryptionDateTime" : (Date)?
+    )
+
+    alias SSEEnabled = Bool
+
+    alias SSESpecification = NamedTuple(
+      "Enabled" : (SSEEnabled)?,
+      "SSEType" : (SSEType)?,
+      "KMSMasterKeyId" : (KMSMasterKeyId)?
+    )
+
+    alias SSEStatus = String
+
+    alias SSEType = String
+
+    alias ScalarAttributeType = String
+
+    alias ScanInput = NamedTuple(
+      "TableName" : TableName,
+      "IndexName" : (IndexName)?,
+      "AttributesToGet" : (AttributeNameList)?,
+      "Limit" : (PositiveIntegerObject)?,
+      "Select" : (Select)?,
+      "ScanFilter" : (FilterConditionMap)?,
+      "ConditionalOperator" : (ConditionalOperator)?,
+      "ExclusiveStartKey" : (Key)?,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "TotalSegments" : (ScanTotalSegments)?,
+      "Segment" : (ScanSegment)?,
+      "ProjectionExpression" : (ProjectionExpression)?,
+      "FilterExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
+      "ConsistentRead" : (ConsistentRead)?
+    )
+
+    alias ScanOutput = NamedTuple(
+      "Items" : (ItemList)?,
+      "Count" : (Integer)?,
+      "ScannedCount" : (Integer)?,
+      "LastEvaluatedKey" : (Key)?,
+      "ConsumedCapacity" : (ConsumedCapacity)?
+    )
+
+    alias ScanSegment = Int32
+
+    alias ScanTotalSegments = Int32
+
+    alias SecondaryIndexesCapacityMap = Hash(IndexName,Capacity)
+
+    alias Select = String
+
+    alias SourceTableDetails = NamedTuple(
+      "TableName" : TableName,
+      "TableId" : TableId,
+      "TableArn" : (TableArn)?,
+      "TableSizeBytes" : (Long)?,
+      "KeySchema" : KeySchema,
+      "TableCreationDateTime" : TableCreationDateTime,
+      "ProvisionedThroughput" : ProvisionedThroughput,
+      "ItemCount" : (ItemCount)?,
+      "BillingMode" : (BillingMode)?
+    )
+
+    alias SourceTableFeatureDetails = NamedTuple(
+      "LocalSecondaryIndexes" : (LocalSecondaryIndexes)?,
+      "GlobalSecondaryIndexes" : (GlobalSecondaryIndexes)?,
+      "StreamDescription" : (StreamSpecification)?,
+      "TimeToLiveDescription" : (TimeToLiveDescription)?,
+      "SSEDescription" : (SSEDescription)?
+    )
+
+    alias StreamArn = String
+
+    alias StreamEnabled = Bool
+
+    alias StreamSpecification = NamedTuple(
+      "StreamEnabled" : StreamEnabled,
+      "StreamViewType" : (StreamViewType)?
+    )
+
+    alias StreamViewType = String
+
+    alias String = String
+
+    alias StringAttributeValue = String
+
+    alias StringSetAttributeValue = Array(StringAttributeValue)
+
+    alias TableAlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TableArn = String
+
+    alias TableAutoScalingDescription = NamedTuple(
+      "TableName" : (TableName)?,
+      "TableStatus" : (TableStatus)?,
+      "Replicas" : (ReplicaAutoScalingDescriptionList)?
+    )
+
+    alias TableCreationDateTime = String | UInt64 | Time
+
+    alias TableDescription = NamedTuple(
+      "AttributeDefinitions" : (AttributeDefinitions)?,
+      "TableName" : (TableName)?,
+      "KeySchema" : (KeySchema)?,
+      "TableStatus" : (TableStatus)?,
+      "CreationDateTime" : (Date)?,
+      "ProvisionedThroughput" : (ProvisionedThroughputDescription)?,
+      "TableSizeBytes" : (Long)?,
+      "ItemCount" : (Long)?,
+      "TableArn" : (String)?,
+      "TableId" : (TableId)?,
+      "BillingModeSummary" : (BillingModeSummary)?,
+      "LocalSecondaryIndexes" : (LocalSecondaryIndexDescriptionList)?,
+      "GlobalSecondaryIndexes" : (GlobalSecondaryIndexDescriptionList)?,
+      "StreamSpecification" : (StreamSpecification)?,
+      "LatestStreamLabel" : (String)?,
+      "LatestStreamArn" : (StreamArn)?,
+      "GlobalTableVersion" : (String)?,
+      "Replicas" : (ReplicaDescriptionList)?,
+      "RestoreSummary" : (RestoreSummary)?,
+      "SSEDescription" : (SSEDescription)?,
+      "ArchivalSummary" : (ArchivalSummary)?
+    )
+
+    alias TableId = String
+
+    alias TableInUseException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TableName = String
+
+    alias TableNameList = Array(TableName)
+
+    alias TableNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TableStatus = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKeyString,
+      "Value" : TagValueString
+    )
+
+    alias TagKeyList = Array(TagKeyString)
+
+    alias TagKeyString = String
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceArn" : ResourceArnString,
+      "Tags" : TagList
+    )
+
+    alias TagValueString = String
+
+    alias TimeRangeLowerBound = String | UInt64 | Time
+
+    alias TimeRangeUpperBound = String | UInt64 | Time
+
+    alias TimeToLiveAttributeName = String
+
+    alias TimeToLiveDescription = NamedTuple(
+      "TimeToLiveStatus" : (TimeToLiveStatus)?,
+      "AttributeName" : (TimeToLiveAttributeName)?
+    )
+
+    alias TimeToLiveEnabled = Bool
+
+    alias TimeToLiveSpecification = NamedTuple(
+      "Enabled" : TimeToLiveEnabled,
+      "AttributeName" : TimeToLiveAttributeName
+    )
+
+    alias TimeToLiveStatus = String
+
+    alias TransactGetItem = NamedTuple(
+      "Get" : Get
+    )
+
+    alias TransactGetItemList = Array(TransactGetItem)
+
+    alias TransactGetItemsInput = NamedTuple(
+      "TransactItems" : TransactGetItemList,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?
+    )
+
+    alias TransactGetItemsOutput = NamedTuple(
+      "ConsumedCapacity" : (ConsumedCapacityMultiple)?,
+      "Responses" : (ItemResponseList)?
+    )
+
+    alias TransactWriteItem = NamedTuple(
+      "ConditionCheck" : (ConditionCheck)?,
+      "Put" : (Put)?,
+      "Delete" : (Delete)?,
+      "Update" : (Update)?
+    )
+
+    alias TransactWriteItemList = Array(TransactWriteItem)
+
+    alias TransactWriteItemsInput = NamedTuple(
+      "TransactItems" : TransactWriteItemList,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias TransactWriteItemsOutput = NamedTuple(
+      "ConsumedCapacity" : (ConsumedCapacityMultiple)?,
+      "ItemCollectionMetrics" : (ItemCollectionMetricsPerTable)?
+    )
+
+    alias TransactionCanceledException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "CancellationReasons" : (CancellationReasonList)?
+    )
+
+    alias TransactionConflictException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TransactionInProgressException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceArn" : ResourceArnString,
+      "TagKeys" : TagKeyList
+    )
+
+    alias Update = NamedTuple(
+      "Key" : Key,
+      "UpdateExpression" : UpdateExpression,
+      "TableName" : TableName,
+      "ConditionExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
+      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+    )
+
+    alias UpdateContinuousBackupsInput = NamedTuple(
+      "TableName" : TableName,
+      "PointInTimeRecoverySpecification" : PointInTimeRecoverySpecification
+    )
+
+    alias UpdateContinuousBackupsOutput = NamedTuple(
+      "ContinuousBackupsDescription" : (ContinuousBackupsDescription)?
+    )
+
+    alias UpdateContributorInsightsInput = NamedTuple(
+      "TableName" : TableName,
+      "IndexName" : (IndexName)?,
+      "ContributorInsightsAction" : ContributorInsightsAction
+    )
+
+    alias UpdateContributorInsightsOutput = NamedTuple(
+      "TableName" : (TableName)?,
+      "IndexName" : (IndexName)?,
+      "ContributorInsightsStatus" : (ContributorInsightsStatus)?
+    )
+
+    alias UpdateExpression = String
+
+    alias UpdateGlobalSecondaryIndexAction = NamedTuple(
+      "IndexName" : IndexName,
+      "ProvisionedThroughput" : ProvisionedThroughput
+    )
+
+    alias UpdateGlobalTableInput = NamedTuple(
+      "GlobalTableName" : TableName,
+      "ReplicaUpdates" : ReplicaUpdateList
+    )
+
+    alias UpdateGlobalTableOutput = NamedTuple(
+      "GlobalTableDescription" : (GlobalTableDescription)?
+    )
+
+    alias UpdateGlobalTableSettingsInput = NamedTuple(
+      "GlobalTableName" : TableName,
+      "GlobalTableBillingMode" : (BillingMode)?,
+      "GlobalTableProvisionedWriteCapacityUnits" : (PositiveLongObject)?,
+      "GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?,
+      "GlobalTableGlobalSecondaryIndexSettingsUpdate" : (GlobalTableGlobalSecondaryIndexSettingsUpdateList)?,
+      "ReplicaSettingsUpdate" : (ReplicaSettingsUpdateList)?
+    )
+
+    alias UpdateGlobalTableSettingsOutput = NamedTuple(
+      "GlobalTableName" : (TableName)?,
+      "ReplicaSettings" : (ReplicaSettingsDescriptionList)?
+    )
+
+    alias UpdateItemInput = NamedTuple(
+      "TableName" : TableName,
+      "Key" : Key,
+      "AttributeUpdates" : (AttributeUpdates)?,
+      "Expected" : (ExpectedAttributeMap)?,
+      "ConditionalOperator" : (ConditionalOperator)?,
+      "ReturnValues" : (ReturnValue)?,
+      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
+      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
+      "UpdateExpression" : (UpdateExpression)?,
+      "ConditionExpression" : (ConditionExpression)?,
+      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
+      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+    )
+
+    alias UpdateItemOutput = NamedTuple(
+      "Attributes" : (AttributeMap)?,
+      "ConsumedCapacity" : (ConsumedCapacity)?,
+      "ItemCollectionMetrics" : (ItemCollectionMetrics)?
+    )
+
+    alias UpdateReplicationGroupMemberAction = NamedTuple(
+      "RegionName" : RegionName,
+      "KMSMasterKeyId" : (KMSMasterKeyId)?,
+      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?,
+      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexList)?
+    )
+
+    alias UpdateTableInput = NamedTuple(
+      "AttributeDefinitions" : (AttributeDefinitions)?,
+      "TableName" : TableName,
+      "BillingMode" : (BillingMode)?,
+      "ProvisionedThroughput" : (ProvisionedThroughput)?,
+      "GlobalSecondaryIndexUpdates" : (GlobalSecondaryIndexUpdateList)?,
+      "StreamSpecification" : (StreamSpecification)?,
+      "SSESpecification" : (SSESpecification)?,
+      "ReplicaUpdates" : (ReplicationGroupUpdateList)?
+    )
+
+    alias UpdateTableOutput = NamedTuple(
+      "TableDescription" : (TableDescription)?
+    )
+
+    alias UpdateTableReplicaAutoScalingInput = NamedTuple(
+      "GlobalSecondaryIndexUpdates" : (GlobalSecondaryIndexAutoScalingUpdateList)?,
+      "TableName" : TableName,
+      "ProvisionedWriteCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?,
+      "ReplicaUpdates" : (ReplicaAutoScalingUpdateList)?
+    )
+
+    alias UpdateTableReplicaAutoScalingOutput = NamedTuple(
+      "TableAutoScalingDescription" : (TableAutoScalingDescription)?
+    )
+
+    alias UpdateTimeToLiveInput = NamedTuple(
+      "TableName" : TableName,
+      "TimeToLiveSpecification" : TimeToLiveSpecification
+    )
+
+    alias UpdateTimeToLiveOutput = NamedTuple(
+      "TimeToLiveSpecification" : (TimeToLiveSpecification)?
+    )
+
+    alias WriteRequest = NamedTuple(
+      "PutRequest" : (PutRequest)?,
+      "DeleteRequest" : (DeleteRequest)?
+    )
+
+    alias WriteRequests = Array(WriteRequest)
   end
 end

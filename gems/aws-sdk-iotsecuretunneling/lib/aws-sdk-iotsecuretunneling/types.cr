@@ -482,5 +482,164 @@ module Aws::IoTSecureTunneling
 
     class UntagResourceResponse < Aws::EmptyStructure; end
 
+    alias AmazonResourceName = String
+
+    alias ClientAccessToken = String
+
+    alias CloseTunnelRequest = NamedTuple(
+      "tunnelId" : TunnelId,
+      "delete" : (DeleteFlag)?
+    )
+
+    alias CloseTunnelResponse = NamedTuple(
+      
+    )
+
+    alias ConnectionState = NamedTuple(
+      "status" : (ConnectionStatus)?,
+      "lastUpdatedAt" : (DateType)?
+    )
+
+    alias ConnectionStatus = String
+
+    alias DateType = String | UInt64 | Time
+
+    alias DeleteFlag = Bool
+
+    alias DescribeTunnelRequest = NamedTuple(
+      "tunnelId" : TunnelId
+    )
+
+    alias DescribeTunnelResponse = NamedTuple(
+      "tunnel" : (Tunnel)?
+    )
+
+    alias Description = String
+
+    alias DestinationConfig = NamedTuple(
+      "thingName" : (ThingName)?,
+      "services" : ServiceList
+    )
+
+    alias ErrorMessage = String
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagList)?
+    )
+
+    alias ListTunnelsRequest = NamedTuple(
+      "thingName" : (ThingName)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTunnelsResponse = NamedTuple(
+      "tunnelSummaries" : (TunnelSummaryList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias OpenTunnelRequest = NamedTuple(
+      "description" : (Description)?,
+      "tags" : (TagList)?,
+      "destinationConfig" : (DestinationConfig)?,
+      "timeoutConfig" : (TimeoutConfig)?
+    )
+
+    alias OpenTunnelResponse = NamedTuple(
+      "tunnelId" : (TunnelId)?,
+      "tunnelArn" : (TunnelArn)?,
+      "sourceAccessToken" : (ClientAccessToken)?,
+      "destinationAccessToken" : (ClientAccessToken)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Service = String
+
+    alias ServiceList = Array(Service)
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThingName = String
+
+    alias TimeoutConfig = NamedTuple(
+      "maxLifetimeTimeoutMinutes" : (TimeoutInMin)?
+    )
+
+    alias TimeoutInMin = Int32
+
+    alias Tunnel = NamedTuple(
+      "tunnelId" : (TunnelId)?,
+      "tunnelArn" : (TunnelArn)?,
+      "status" : (TunnelStatus)?,
+      "sourceConnectionState" : (ConnectionState)?,
+      "destinationConnectionState" : (ConnectionState)?,
+      "description" : (Description)?,
+      "destinationConfig" : (DestinationConfig)?,
+      "timeoutConfig" : (TimeoutConfig)?,
+      "tags" : (TagList)?,
+      "createdAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?
+    )
+
+    alias TunnelArn = String
+
+    alias TunnelId = String
+
+    alias TunnelStatus = String
+
+    alias TunnelSummary = NamedTuple(
+      "tunnelId" : (TunnelId)?,
+      "tunnelArn" : (TunnelArn)?,
+      "status" : (TunnelStatus)?,
+      "description" : (Description)?,
+      "createdAt" : (DateType)?,
+      "lastUpdatedAt" : (DateType)?
+    )
+
+    alias TunnelSummaryList = Array(TunnelSummary)
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
   end
 end

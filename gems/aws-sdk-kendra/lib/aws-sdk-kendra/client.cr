@@ -379,8 +379,8 @@ module Aws::Kendra
     #
     # @overload batch_delete_document(**params)
     # @param [Hash] params ({})
-    def batch_delete_document(params = {}, **options)
-      req = build_request(:batch_delete_document, params)
+    def batch_delete_document(, **options)
+      req = build_request(:batch_delete_document, )
       req.send_request(options)
     end
 
@@ -479,8 +479,8 @@ module Aws::Kendra
     #
     # @overload batch_put_document(**params)
     # @param [Hash] params ({})
-    def batch_put_document(params = {}, **options)
-      req = build_request(:batch_put_document, params)
+    def batch_put_document(, **options)
+      req = build_request(:batch_put_document, )
       req.send_request(options)
     end
 
@@ -848,8 +848,8 @@ module Aws::Kendra
     #
     # @overload create_data_source(**params)
     # @param [Hash] params ({})
-    def create_data_source(params = {}, **options)
-      req = build_request(:create_data_source, params)
+    def create_data_source(, **options)
+      req = build_request(:create_data_source, )
       req.send_request(options)
     end
 
@@ -937,8 +937,8 @@ module Aws::Kendra
     #
     # @overload create_faq(**params)
     # @param [Hash] params ({})
-    def create_faq(params = {}, **options)
-      req = build_request(:create_faq, params)
+    def create_faq(, **options)
+      req = build_request(:create_faq, )
       req.send_request(options)
     end
 
@@ -1057,8 +1057,8 @@ module Aws::Kendra
     #
     # @overload create_index(**params)
     # @param [Hash] params ({})
-    def create_index(params = {}, **options)
-      req = build_request(:create_index, params)
+    def create_index(, **options)
+      req = build_request(:create_index, )
       req.send_request(options)
     end
 
@@ -1127,8 +1127,8 @@ module Aws::Kendra
     #
     # @overload create_thesaurus(**params)
     # @param [Hash] params ({})
-    def create_thesaurus(params = {}, **options)
-      req = build_request(:create_thesaurus, params)
+    def create_thesaurus(, **options)
+      req = build_request(:create_thesaurus, )
       req.send_request(options)
     end
 
@@ -1161,8 +1161,8 @@ module Aws::Kendra
     #
     # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, **options)
-      req = build_request(:delete_data_source, params)
+    def delete_data_source(, **options)
+      req = build_request(:delete_data_source, )
       req.send_request(options)
     end
 
@@ -1187,8 +1187,8 @@ module Aws::Kendra
     #
     # @overload delete_faq(**params)
     # @param [Hash] params ({})
-    def delete_faq(params = {}, **options)
-      req = build_request(:delete_faq, params)
+    def delete_faq(, **options)
+      req = build_request(:delete_faq, )
       req.send_request(options)
     end
 
@@ -1212,8 +1212,8 @@ module Aws::Kendra
     #
     # @overload delete_index(**params)
     # @param [Hash] params ({})
-    def delete_index(params = {}, **options)
-      req = build_request(:delete_index, params)
+    def delete_index(, **options)
+      req = build_request(:delete_index, )
       req.send_request(options)
     end
 
@@ -1238,8 +1238,8 @@ module Aws::Kendra
     #
     # @overload delete_thesaurus(**params)
     # @param [Hash] params ({})
-    def delete_thesaurus(params = {}, **options)
-      req = build_request(:delete_thesaurus, params)
+    def delete_thesaurus(, **options)
+      req = build_request(:delete_thesaurus, )
       req.send_request(options)
     end
 
@@ -1474,8 +1474,8 @@ module Aws::Kendra
     #
     # @overload describe_data_source(**params)
     # @param [Hash] params ({})
-    def describe_data_source(params = {}, **options)
-      req = build_request(:describe_data_source, params)
+    def describe_data_source(, **options)
+      req = build_request(:describe_data_source, )
       req.send_request(options)
     end
 
@@ -1527,8 +1527,8 @@ module Aws::Kendra
     #
     # @overload describe_faq(**params)
     # @param [Hash] params ({})
-    def describe_faq(params = {}, **options)
-      req = build_request(:describe_faq, params)
+    def describe_faq(, **options)
+      req = build_request(:describe_faq, )
       req.send_request(options)
     end
 
@@ -1607,8 +1607,8 @@ module Aws::Kendra
     #
     # @overload describe_index(**params)
     # @param [Hash] params ({})
-    def describe_index(params = {}, **options)
-      req = build_request(:describe_index, params)
+    def describe_index(, **options)
+      req = build_request(:describe_index, )
       req.send_request(options)
     end
 
@@ -1664,8 +1664,8 @@ module Aws::Kendra
     #
     # @overload describe_thesaurus(**params)
     # @param [Hash] params ({})
-    def describe_thesaurus(params = {}, **options)
-      req = build_request(:describe_thesaurus, params)
+    def describe_thesaurus(, **options)
+      req = build_request(:describe_thesaurus, )
       req.send_request(options)
     end
 
@@ -1736,8 +1736,8 @@ module Aws::Kendra
     #
     # @overload list_data_source_sync_jobs(**params)
     # @param [Hash] params ({})
-    def list_data_source_sync_jobs(params = {}, **options)
-      req = build_request(:list_data_source_sync_jobs, params)
+    def list_data_source_sync_jobs(, **options)
+      req = build_request(:list_data_source_sync_jobs, )
       req.send_request(options)
     end
 
@@ -1785,8 +1785,8 @@ module Aws::Kendra
     #
     # @overload list_data_sources(**params)
     # @param [Hash] params ({})
-    def list_data_sources(params = {}, **options)
-      req = build_request(:list_data_sources, params)
+    def list_data_sources(, **options)
+      req = build_request(:list_data_sources, )
       req.send_request(options)
     end
 
@@ -1832,8 +1832,8 @@ module Aws::Kendra
     #
     # @overload list_faqs(**params)
     # @param [Hash] params ({})
-    def list_faqs(params = {}, **options)
-      req = build_request(:list_faqs, params)
+    def list_faqs(, **options)
+      req = build_request(:list_faqs, )
       req.send_request(options)
     end
 
@@ -1877,8 +1877,8 @@ module Aws::Kendra
     #
     # @overload list_indices(**params)
     # @param [Hash] params ({})
-    def list_indices(params = {}, **options)
-      req = build_request(:list_indices, params)
+    def list_indices(, **options)
+      req = build_request(:list_indices, )
       req.send_request(options)
     end
 
@@ -1909,8 +1909,8 @@ module Aws::Kendra
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1955,8 +1955,8 @@ module Aws::Kendra
     #
     # @overload list_thesauri(**params)
     # @param [Hash] params ({})
-    def list_thesauri(params = {}, **options)
-      req = build_request(:list_thesauri, params)
+    def list_thesauri(, **options)
+      req = build_request(:list_thesauri, )
       req.send_request(options)
     end
 
@@ -2205,8 +2205,8 @@ module Aws::Kendra
     #
     # @overload query(**params)
     # @param [Hash] params ({})
-    def query(params = {}, **options)
-      req = build_request(:query, params)
+    def query(, **options)
+      req = build_request(:query, )
       req.send_request(options)
     end
 
@@ -2239,8 +2239,8 @@ module Aws::Kendra
     #
     # @overload start_data_source_sync_job(**params)
     # @param [Hash] params ({})
-    def start_data_source_sync_job(params = {}, **options)
-      req = build_request(:start_data_source_sync_job, params)
+    def start_data_source_sync_job(, **options)
+      req = build_request(:start_data_source_sync_job, )
       req.send_request(options)
     end
 
@@ -2267,8 +2267,8 @@ module Aws::Kendra
     #
     # @overload stop_data_source_sync_job(**params)
     # @param [Hash] params ({})
-    def stop_data_source_sync_job(params = {}, **options)
-      req = build_request(:stop_data_source_sync_job, params)
+    def stop_data_source_sync_job(, **options)
+      req = build_request(:stop_data_source_sync_job, )
       req.send_request(options)
     end
 
@@ -2315,8 +2315,8 @@ module Aws::Kendra
     #
     # @overload submit_feedback(**params)
     # @param [Hash] params ({})
-    def submit_feedback(params = {}, **options)
-      req = build_request(:submit_feedback, params)
+    def submit_feedback(, **options)
+      req = build_request(:submit_feedback, )
       req.send_request(options)
     end
 
@@ -2350,8 +2350,8 @@ module Aws::Kendra
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2378,8 +2378,8 @@ module Aws::Kendra
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2687,8 +2687,8 @@ module Aws::Kendra
     #
     # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, **options)
-      req = build_request(:update_data_source, params)
+    def update_data_source(, **options)
+      req = build_request(:update_data_source, )
       req.send_request(options)
     end
 
@@ -2782,8 +2782,8 @@ module Aws::Kendra
     #
     # @overload update_index(**params)
     # @param [Hash] params ({})
-    def update_index(params = {}, **options)
-      req = build_request(:update_index, params)
+    def update_index(, **options)
+      req = build_request(:update_index, )
       req.send_request(options)
     end
 
@@ -2827,8 +2827,8 @@ module Aws::Kendra
     #
     # @overload update_thesaurus(**params)
     # @param [Hash] params ({})
-    def update_thesaurus(params = {}, **options)
-      req = build_request(:update_thesaurus, params)
+    def update_thesaurus(, **options)
+      req = build_request(:update_thesaurus, )
       req.send_request(options)
     end
 

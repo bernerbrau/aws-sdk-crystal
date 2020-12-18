@@ -364,8 +364,8 @@ module Aws::SimpleDB
     #
     # @overload batch_delete_attributes(**params)
     # @param [Hash] params ({})
-    def batch_delete_attributes(params = {}, **options)
-      req = build_request(:batch_delete_attributes, params)
+    def batch_delete_attributes(, **options)
+      req = build_request(:batch_delete_attributes, )
       req.send_request(options)
     end
 
@@ -445,8 +445,8 @@ module Aws::SimpleDB
     #
     # @overload batch_put_attributes(**params)
     # @param [Hash] params ({})
-    def batch_put_attributes(params = {}, **options)
-      req = build_request(:batch_put_attributes, params)
+    def batch_put_attributes(, **options)
+      req = build_request(:batch_put_attributes, )
       req.send_request(options)
     end
 
@@ -479,8 +479,8 @@ module Aws::SimpleDB
     #
     # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, **options)
-      req = build_request(:create_domain, params)
+    def create_domain(, **options)
+      req = build_request(:create_domain, )
       req.send_request(options)
     end
 
@@ -538,8 +538,8 @@ module Aws::SimpleDB
     #
     # @overload delete_attributes(**params)
     # @param [Hash] params ({})
-    def delete_attributes(params = {}, **options)
-      req = build_request(:delete_attributes, params)
+    def delete_attributes(, **options)
+      req = build_request(:delete_attributes, )
       req.send_request(options)
     end
 
@@ -560,8 +560,8 @@ module Aws::SimpleDB
     #
     # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, **options)
-      req = build_request(:delete_domain, params)
+    def delete_domain(, **options)
+      req = build_request(:delete_domain, )
       req.send_request(options)
     end
 
@@ -600,8 +600,8 @@ module Aws::SimpleDB
     #
     # @overload domain_metadata(**params)
     # @param [Hash] params ({})
-    def domain_metadata(params = {}, **options)
-      req = build_request(:domain_metadata, params)
+    def domain_metadata(, **options)
+      req = build_request(:domain_metadata, )
       req.send_request(options)
     end
 
@@ -649,8 +649,8 @@ module Aws::SimpleDB
     #
     # @overload get_attributes(**params)
     # @param [Hash] params ({})
-    def get_attributes(params = {}, **options)
-      req = build_request(:get_attributes, params)
+    def get_attributes(, **options)
+      req = build_request(:get_attributes, )
       req.send_request(options)
     end
 
@@ -692,8 +692,8 @@ module Aws::SimpleDB
     #
     # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, **options)
-      req = build_request(:list_domains, params)
+    def list_domains(, **options)
+      req = build_request(:list_domains, )
       req.send_request(options)
     end
 
@@ -770,8 +770,8 @@ module Aws::SimpleDB
     #
     # @overload put_attributes(**params)
     # @param [Hash] params ({})
-    def put_attributes(params = {}, **options)
-      req = build_request(:put_attributes, params)
+    def put_attributes(, **options)
+      req = build_request(:put_attributes, )
       req.send_request(options)
     end
 
@@ -827,8 +827,8 @@ module Aws::SimpleDB
     #
     # @overload select(**params)
     # @param [Hash] params ({})
-    def select(params = {}, **options)
-      req = build_request(:select, params)
+    def select(, **options)
+      req = build_request(:select, )
       req.send_request(options)
     end
 

@@ -15181,5 +15181,2505 @@ module Aws::S3
 
     end
 
+    alias AbortDate = String | UInt64 | Time
+
+    alias AbortIncompleteMultipartUpload = NamedTuple(
+      "DaysAfterInitiation" : (DaysAfterInitiation)?
+    )
+
+    alias AbortMultipartUploadOutput = NamedTuple(
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias AbortMultipartUploadRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "UploadId" : MultipartUploadId,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias AbortRuleId = String
+
+    alias AccelerateConfiguration = NamedTuple(
+      "Status" : (BucketAccelerateStatus)?
+    )
+
+    alias AcceptRanges = String
+
+    alias AccessControlPolicy = NamedTuple(
+      "Grants" : (Grants)?,
+      "Owner" : (Owner)?
+    )
+
+    alias AccessControlTranslation = NamedTuple(
+      "Owner" : OwnerOverride
+    )
+
+    alias AccountId = String
+
+    alias AllowQuotedRecordDelimiter = Bool
+
+    alias AllowedHeader = String
+
+    alias AllowedHeaders = Array(AllowedHeader)
+
+    alias AllowedMethod = String
+
+    alias AllowedMethods = Array(AllowedMethod)
+
+    alias AllowedOrigin = String
+
+    alias AllowedOrigins = Array(AllowedOrigin)
+
+    alias AnalyticsAndOperator = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tags" : (TagSet)?
+    )
+
+    alias AnalyticsConfiguration = NamedTuple(
+      "Id" : AnalyticsId,
+      "Filter" : (AnalyticsFilter)?,
+      "StorageClassAnalysis" : StorageClassAnalysis
+    )
+
+    alias AnalyticsConfigurationList = Array(AnalyticsConfiguration)
+
+    alias AnalyticsExportDestination = NamedTuple(
+      "S3BucketDestination" : AnalyticsS3BucketDestination
+    )
+
+    alias AnalyticsFilter = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tag" : (Tag)?,
+      "And" : (AnalyticsAndOperator)?
+    )
+
+    alias AnalyticsId = String
+
+    alias AnalyticsS3BucketDestination = NamedTuple(
+      "Format" : AnalyticsS3ExportFileFormat,
+      "BucketAccountId" : (AccountId)?,
+      "Bucket" : BucketName,
+      "Prefix" : (Prefix)?
+    )
+
+    alias AnalyticsS3ExportFileFormat = String
+
+    alias ArchiveStatus = String
+
+    alias Body = String | Array(UInt8) | IO
+
+    alias Bucket = NamedTuple(
+      "Name" : (BucketName)?,
+      "CreationDate" : (CreationDate)?
+    )
+
+    alias BucketAccelerateStatus = String
+
+    alias BucketAlreadyExists = NamedTuple(
+      
+    )
+
+    alias BucketAlreadyOwnedByYou = NamedTuple(
+      
+    )
+
+    alias BucketCannedACL = String
+
+    alias BucketKeyEnabled = Bool
+
+    alias BucketLifecycleConfiguration = NamedTuple(
+      "Rules" : LifecycleRules
+    )
+
+    alias BucketLocationConstraint = String
+
+    alias BucketLoggingStatus = NamedTuple(
+      "LoggingEnabled" : (LoggingEnabled)?
+    )
+
+    alias BucketLogsPermission = String
+
+    alias BucketName = String
+
+    alias BucketVersioningStatus = String
+
+    alias Buckets = Array(Bucket)
+
+    alias BypassGovernanceRetention = Bool
+
+    alias BytesProcessed = Int64
+
+    alias BytesReturned = Int64
+
+    alias BytesScanned = Int64
+
+    alias CORSConfiguration = NamedTuple(
+      "CORSRules" : CORSRules
+    )
+
+    alias CORSRule = NamedTuple(
+      "AllowedHeaders" : (AllowedHeaders)?,
+      "AllowedMethods" : AllowedMethods,
+      "AllowedOrigins" : AllowedOrigins,
+      "ExposeHeaders" : (ExposeHeaders)?,
+      "MaxAgeSeconds" : (MaxAgeSeconds)?
+    )
+
+    alias CORSRules = Array(CORSRule)
+
+    alias CSVInput = NamedTuple(
+      "FileHeaderInfo" : (FileHeaderInfo)?,
+      "Comments" : (Comments)?,
+      "QuoteEscapeCharacter" : (QuoteEscapeCharacter)?,
+      "RecordDelimiter" : (RecordDelimiter)?,
+      "FieldDelimiter" : (FieldDelimiter)?,
+      "QuoteCharacter" : (QuoteCharacter)?,
+      "AllowQuotedRecordDelimiter" : (AllowQuotedRecordDelimiter)?
+    )
+
+    alias CSVOutput = NamedTuple(
+      "QuoteFields" : (QuoteFields)?,
+      "QuoteEscapeCharacter" : (QuoteEscapeCharacter)?,
+      "RecordDelimiter" : (RecordDelimiter)?,
+      "FieldDelimiter" : (FieldDelimiter)?,
+      "QuoteCharacter" : (QuoteCharacter)?
+    )
+
+    alias CacheControl = String
+
+    alias CloudFunction = String
+
+    alias CloudFunctionConfiguration = NamedTuple(
+      "Id" : (NotificationId)?,
+      "Event" : (Event)?,
+      "Events" : (EventList)?,
+      "CloudFunction" : (CloudFunction)?,
+      "InvocationRole" : (CloudFunctionInvocationRole)?
+    )
+
+    alias CloudFunctionInvocationRole = String
+
+    alias Code = String
+
+    alias Comments = String
+
+    alias CommonPrefix = NamedTuple(
+      "Prefix" : (Prefix)?
+    )
+
+    alias CommonPrefixList = Array(CommonPrefix)
+
+    alias CompleteMultipartUploadOutput = NamedTuple(
+      "Location" : (Location)?,
+      "Bucket" : (BucketName)?,
+      "Key" : (ObjectKey)?,
+      "Expiration" : (Expiration)?,
+      "ETag" : (ETag)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "VersionId" : (ObjectVersionId)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias CompleteMultipartUploadRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "MultipartUpload" : (CompletedMultipartUpload)?,
+      "UploadId" : MultipartUploadId,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias CompletedMultipartUpload = NamedTuple(
+      "Parts" : (CompletedPartList)?
+    )
+
+    alias CompletedPart = NamedTuple(
+      "ETag" : (ETag)?,
+      "PartNumber" : (PartNumber)?
+    )
+
+    alias CompletedPartList = Array(CompletedPart)
+
+    alias CompressionType = String
+
+    alias Condition = NamedTuple(
+      "HttpErrorCodeReturnedEquals" : (HttpErrorCodeReturnedEquals)?,
+      "KeyPrefixEquals" : (KeyPrefixEquals)?
+    )
+
+    alias ConfirmRemoveSelfBucketAccess = Bool
+
+    alias ContentDisposition = String
+
+    alias ContentEncoding = String
+
+    alias ContentLanguage = String
+
+    alias ContentLength = Int64
+
+    alias ContentMD5 = String
+
+    alias ContentRange = String
+
+    alias ContentType = String
+
+    alias ContinuationEvent = NamedTuple(
+      
+    )
+
+    alias CopyObjectOutput = NamedTuple(
+      "CopyObjectResult" : (CopyObjectResult)?,
+      "Expiration" : (Expiration)?,
+      "CopySourceVersionId" : (CopySourceVersionId)?,
+      "VersionId" : (ObjectVersionId)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias CopyObjectRequest = NamedTuple(
+      "ACL" : (ObjectCannedACL)?,
+      "Bucket" : BucketName,
+      "CacheControl" : (CacheControl)?,
+      "ContentDisposition" : (ContentDisposition)?,
+      "ContentEncoding" : (ContentEncoding)?,
+      "ContentLanguage" : (ContentLanguage)?,
+      "ContentType" : (ContentType)?,
+      "CopySource" : CopySource,
+      "CopySourceIfMatch" : (CopySourceIfMatch)?,
+      "CopySourceIfModifiedSince" : (CopySourceIfModifiedSince)?,
+      "CopySourceIfNoneMatch" : (CopySourceIfNoneMatch)?,
+      "CopySourceIfUnmodifiedSince" : (CopySourceIfUnmodifiedSince)?,
+      "Expires" : (Expires)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "Key" : ObjectKey,
+      "Metadata" : (Metadata)?,
+      "MetadataDirective" : (MetadataDirective)?,
+      "TaggingDirective" : (TaggingDirective)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "StorageClass" : (StorageClass)?,
+      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "CopySourceSSECustomerAlgorithm" : (CopySourceSSECustomerAlgorithm)?,
+      "CopySourceSSECustomerKey" : (CopySourceSSECustomerKey)?,
+      "CopySourceSSECustomerKeyMD5" : (CopySourceSSECustomerKeyMD5)?,
+      "RequestPayer" : (RequestPayer)?,
+      "Tagging" : (TaggingHeader)?,
+      "ObjectLockMode" : (ObjectLockMode)?,
+      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
+      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?,
+      "ExpectedBucketOwner" : (AccountId)?,
+      "ExpectedSourceBucketOwner" : (AccountId)?
+    )
+
+    alias CopyObjectResult = NamedTuple(
+      "ETag" : (ETag)?,
+      "LastModified" : (LastModified)?
+    )
+
+    alias CopyPartResult = NamedTuple(
+      "ETag" : (ETag)?,
+      "LastModified" : (LastModified)?
+    )
+
+    alias CopySource = String
+
+    alias CopySourceIfMatch = String
+
+    alias CopySourceIfModifiedSince = String | UInt64 | Time
+
+    alias CopySourceIfNoneMatch = String
+
+    alias CopySourceIfUnmodifiedSince = String | UInt64 | Time
+
+    alias CopySourceRange = String
+
+    alias CopySourceSSECustomerAlgorithm = String
+
+    alias CopySourceSSECustomerKey = String
+
+    alias CopySourceSSECustomerKeyMD5 = String
+
+    alias CopySourceVersionId = String
+
+    alias CreateBucketConfiguration = NamedTuple(
+      "LocationConstraint" : (BucketLocationConstraint)?
+    )
+
+    alias CreateBucketOutput = NamedTuple(
+      "Location" : (Location)?
+    )
+
+    alias CreateBucketRequest = NamedTuple(
+      "ACL" : (BucketCannedACL)?,
+      "Bucket" : BucketName,
+      "CreateBucketConfiguration" : (CreateBucketConfiguration)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWrite" : (GrantWrite)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "ObjectLockEnabledForBucket" : (ObjectLockEnabledForBucket)?
+    )
+
+    alias CreateMultipartUploadOutput = NamedTuple(
+      "AbortDate" : (AbortDate)?,
+      "AbortRuleId" : (AbortRuleId)?,
+      "Bucket" : (BucketName)?,
+      "Key" : (ObjectKey)?,
+      "UploadId" : (MultipartUploadId)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias CreateMultipartUploadRequest = NamedTuple(
+      "ACL" : (ObjectCannedACL)?,
+      "Bucket" : BucketName,
+      "CacheControl" : (CacheControl)?,
+      "ContentDisposition" : (ContentDisposition)?,
+      "ContentEncoding" : (ContentEncoding)?,
+      "ContentLanguage" : (ContentLanguage)?,
+      "ContentType" : (ContentType)?,
+      "Expires" : (Expires)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "Key" : ObjectKey,
+      "Metadata" : (Metadata)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "StorageClass" : (StorageClass)?,
+      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestPayer" : (RequestPayer)?,
+      "Tagging" : (TaggingHeader)?,
+      "ObjectLockMode" : (ObjectLockMode)?,
+      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
+      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias CreationDate = String | UInt64 | Time
+
+    alias Date = String | UInt64 | Time
+
+    alias Days = Int32
+
+    alias DaysAfterInitiation = Int32
+
+    alias DefaultRetention = NamedTuple(
+      "Mode" : (ObjectLockRetentionMode)?,
+      "Days" : (Days)?,
+      "Years" : (Years)?
+    )
+
+    alias Delete = NamedTuple(
+      "Objects" : ObjectIdentifierList,
+      "Quiet" : (Quiet)?
+    )
+
+    alias DeleteBucketAnalyticsConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : AnalyticsId,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketCorsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketEncryptionRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketIntelligentTieringConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : IntelligentTieringId
+    )
+
+    alias DeleteBucketInventoryConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : InventoryId,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketLifecycleRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketMetricsConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : MetricsId,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketOwnershipControlsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketPolicyRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketReplicationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketTaggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteBucketWebsiteRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteMarker = Bool
+
+    alias DeleteMarkerEntry = NamedTuple(
+      "Owner" : (Owner)?,
+      "Key" : (ObjectKey)?,
+      "VersionId" : (ObjectVersionId)?,
+      "IsLatest" : (IsLatest)?,
+      "LastModified" : (LastModified)?
+    )
+
+    alias DeleteMarkerReplication = NamedTuple(
+      "Status" : (DeleteMarkerReplicationStatus)?
+    )
+
+    alias DeleteMarkerReplicationStatus = String
+
+    alias DeleteMarkerVersionId = String
+
+    alias DeleteMarkers = Array(DeleteMarkerEntry)
+
+    alias DeleteObjectOutput = NamedTuple(
+      "DeleteMarker" : (DeleteMarker)?,
+      "VersionId" : (ObjectVersionId)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias DeleteObjectRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "MFA" : (MFA)?,
+      "VersionId" : (ObjectVersionId)?,
+      "RequestPayer" : (RequestPayer)?,
+      "BypassGovernanceRetention" : (BypassGovernanceRetention)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteObjectTaggingOutput = NamedTuple(
+      "VersionId" : (ObjectVersionId)?
+    )
+
+    alias DeleteObjectTaggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeleteObjectsOutput = NamedTuple(
+      "Deleted" : (DeletedObjects)?,
+      "RequestCharged" : (RequestCharged)?,
+      "Errors" : (Errors)?
+    )
+
+    alias DeleteObjectsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Delete" : Delete,
+      "MFA" : (MFA)?,
+      "RequestPayer" : (RequestPayer)?,
+      "BypassGovernanceRetention" : (BypassGovernanceRetention)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeletePublicAccessBlockRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias DeletedObject = NamedTuple(
+      "Key" : (ObjectKey)?,
+      "VersionId" : (ObjectVersionId)?,
+      "DeleteMarker" : (DeleteMarker)?,
+      "DeleteMarkerVersionId" : (DeleteMarkerVersionId)?
+    )
+
+    alias DeletedObjects = Array(DeletedObject)
+
+    alias Delimiter = String
+
+    alias Description = String
+
+    alias Destination = NamedTuple(
+      "Bucket" : BucketName,
+      "Account" : (AccountId)?,
+      "StorageClass" : (StorageClass)?,
+      "AccessControlTranslation" : (AccessControlTranslation)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?,
+      "ReplicationTime" : (ReplicationTime)?,
+      "Metrics" : (Metrics)?
+    )
+
+    alias DisplayName = String
+
+    alias ETag = String
+
+    alias EmailAddress = String
+
+    alias EnableRequestProgress = Bool
+
+    alias EncodingType = String
+
+    alias Encryption = NamedTuple(
+      "EncryptionType" : ServerSideEncryption,
+      "KMSKeyId" : (SSEKMSKeyId)?,
+      "KMSContext" : (KMSContext)?
+    )
+
+    alias EncryptionConfiguration = NamedTuple(
+      "ReplicaKmsKeyID" : (ReplicaKmsKeyID)?
+    )
+
+    alias End = Int64
+
+    alias EndEvent = NamedTuple(
+      
+    )
+
+    alias Error = NamedTuple(
+      "Key" : (ObjectKey)?,
+      "VersionId" : (ObjectVersionId)?,
+      "Code" : (Code)?,
+      "Message" : (Message)?
+    )
+
+    alias ErrorDocument = NamedTuple(
+      "Key" : ObjectKey
+    )
+
+    alias Errors = Array(Error)
+
+    alias Event = String
+
+    alias EventList = Array(Event)
+
+    alias ExistingObjectReplication = NamedTuple(
+      "Status" : ExistingObjectReplicationStatus
+    )
+
+    alias ExistingObjectReplicationStatus = String
+
+    alias Expiration = String
+
+    alias ExpirationStatus = String
+
+    alias ExpiredObjectDeleteMarker = Bool
+
+    alias Expires = String | UInt64 | Time
+
+    alias ExposeHeader = String
+
+    alias ExposeHeaders = Array(ExposeHeader)
+
+    alias Expression = String
+
+    alias ExpressionType = String
+
+    alias FetchOwner = Bool
+
+    alias FieldDelimiter = String
+
+    alias FileHeaderInfo = String
+
+    alias FilterRule = NamedTuple(
+      "Name" : (FilterRuleName)?,
+      "Value" : (FilterRuleValue)?
+    )
+
+    alias FilterRuleList = Array(FilterRule)
+
+    alias FilterRuleName = String
+
+    alias FilterRuleValue = String
+
+    alias GetBucketAccelerateConfigurationOutput = NamedTuple(
+      "Status" : (BucketAccelerateStatus)?
+    )
+
+    alias GetBucketAccelerateConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketAclOutput = NamedTuple(
+      "Owner" : (Owner)?,
+      "Grants" : (Grants)?
+    )
+
+    alias GetBucketAclRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketAnalyticsConfigurationOutput = NamedTuple(
+      "AnalyticsConfiguration" : (AnalyticsConfiguration)?
+    )
+
+    alias GetBucketAnalyticsConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : AnalyticsId,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketCorsOutput = NamedTuple(
+      "CORSRules" : (CORSRules)?
+    )
+
+    alias GetBucketCorsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketEncryptionOutput = NamedTuple(
+      "ServerSideEncryptionConfiguration" : (ServerSideEncryptionConfiguration)?
+    )
+
+    alias GetBucketEncryptionRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketIntelligentTieringConfigurationOutput = NamedTuple(
+      "IntelligentTieringConfiguration" : (IntelligentTieringConfiguration)?
+    )
+
+    alias GetBucketIntelligentTieringConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : IntelligentTieringId
+    )
+
+    alias GetBucketInventoryConfigurationOutput = NamedTuple(
+      "InventoryConfiguration" : (InventoryConfiguration)?
+    )
+
+    alias GetBucketInventoryConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : InventoryId,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketLifecycleConfigurationOutput = NamedTuple(
+      "Rules" : (LifecycleRules)?
+    )
+
+    alias GetBucketLifecycleConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketLifecycleOutput = NamedTuple(
+      "Rules" : (Rules)?
+    )
+
+    alias GetBucketLifecycleRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketLocationOutput = NamedTuple(
+      "LocationConstraint" : (BucketLocationConstraint)?
+    )
+
+    alias GetBucketLocationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketLoggingOutput = NamedTuple(
+      "LoggingEnabled" : (LoggingEnabled)?
+    )
+
+    alias GetBucketLoggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketMetricsConfigurationOutput = NamedTuple(
+      "MetricsConfiguration" : (MetricsConfiguration)?
+    )
+
+    alias GetBucketMetricsConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : MetricsId,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketNotificationConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketOwnershipControlsOutput = NamedTuple(
+      "OwnershipControls" : (OwnershipControls)?
+    )
+
+    alias GetBucketOwnershipControlsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketPolicyOutput = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias GetBucketPolicyRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketPolicyStatusOutput = NamedTuple(
+      "PolicyStatus" : (PolicyStatus)?
+    )
+
+    alias GetBucketPolicyStatusRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketReplicationOutput = NamedTuple(
+      "ReplicationConfiguration" : (ReplicationConfiguration)?
+    )
+
+    alias GetBucketReplicationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketRequestPaymentOutput = NamedTuple(
+      "Payer" : (Payer)?
+    )
+
+    alias GetBucketRequestPaymentRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketTaggingOutput = NamedTuple(
+      "TagSet" : TagSet
+    )
+
+    alias GetBucketTaggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketVersioningOutput = NamedTuple(
+      "Status" : (BucketVersioningStatus)?,
+      "MFADelete" : (MFADeleteStatus)?
+    )
+
+    alias GetBucketVersioningRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetBucketWebsiteOutput = NamedTuple(
+      "RedirectAllRequestsTo" : (RedirectAllRequestsTo)?,
+      "IndexDocument" : (IndexDocument)?,
+      "ErrorDocument" : (ErrorDocument)?,
+      "RoutingRules" : (RoutingRules)?
+    )
+
+    alias GetBucketWebsiteRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectAclOutput = NamedTuple(
+      "Owner" : (Owner)?,
+      "Grants" : (Grants)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias GetObjectAclRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectLegalHoldOutput = NamedTuple(
+      "LegalHold" : (ObjectLockLegalHold)?
+    )
+
+    alias GetObjectLegalHoldRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectLockConfigurationOutput = NamedTuple(
+      "ObjectLockConfiguration" : (ObjectLockConfiguration)?
+    )
+
+    alias GetObjectLockConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectOutput = NamedTuple(
+      "Body" : (Body)?,
+      "DeleteMarker" : (DeleteMarker)?,
+      "AcceptRanges" : (AcceptRanges)?,
+      "Expiration" : (Expiration)?,
+      "Restore" : (Restore)?,
+      "LastModified" : (LastModified)?,
+      "ContentLength" : (ContentLength)?,
+      "ETag" : (ETag)?,
+      "MissingMeta" : (MissingMeta)?,
+      "VersionId" : (ObjectVersionId)?,
+      "CacheControl" : (CacheControl)?,
+      "ContentDisposition" : (ContentDisposition)?,
+      "ContentEncoding" : (ContentEncoding)?,
+      "ContentLanguage" : (ContentLanguage)?,
+      "ContentRange" : (ContentRange)?,
+      "ContentType" : (ContentType)?,
+      "Expires" : (Expires)?,
+      "ExpiresString" : (ExpiresString)?,
+      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "Metadata" : (Metadata)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "StorageClass" : (StorageClass)?,
+      "RequestCharged" : (RequestCharged)?,
+      "ReplicationStatus" : (ReplicationStatus)?,
+      "PartsCount" : (PartsCount)?,
+      "TagCount" : (TagCount)?,
+      "ObjectLockMode" : (ObjectLockMode)?,
+      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
+      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?
+    )
+
+    alias GetObjectRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "IfMatch" : (IfMatch)?,
+      "IfModifiedSince" : (IfModifiedSince)?,
+      "IfNoneMatch" : (IfNoneMatch)?,
+      "IfUnmodifiedSince" : (IfUnmodifiedSince)?,
+      "Key" : ObjectKey,
+      "Range" : (Range)?,
+      "ResponseCacheControl" : (ResponseCacheControl)?,
+      "ResponseContentDisposition" : (ResponseContentDisposition)?,
+      "ResponseContentEncoding" : (ResponseContentEncoding)?,
+      "ResponseContentLanguage" : (ResponseContentLanguage)?,
+      "ResponseContentType" : (ResponseContentType)?,
+      "ResponseExpires" : (ResponseExpires)?,
+      "VersionId" : (ObjectVersionId)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "RequestPayer" : (RequestPayer)?,
+      "PartNumber" : (PartNumber)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectRetentionOutput = NamedTuple(
+      "Retention" : (ObjectLockRetention)?
+    )
+
+    alias GetObjectRetentionRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectTaggingOutput = NamedTuple(
+      "VersionId" : (ObjectVersionId)?,
+      "TagSet" : TagSet
+    )
+
+    alias GetObjectTaggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetObjectTorrentOutput = NamedTuple(
+      "Body" : (Body)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias GetObjectTorrentRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GetPublicAccessBlockOutput = NamedTuple(
+      "PublicAccessBlockConfiguration" : (PublicAccessBlockConfiguration)?
+    )
+
+    alias GetPublicAccessBlockRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias GlacierJobParameters = NamedTuple(
+      "Tier" : Tier
+    )
+
+    alias Grant = NamedTuple(
+      "Grantee" : (Grantee)?,
+      "Permission" : (Permission)?
+    )
+
+    alias GrantFullControl = String
+
+    alias GrantRead = String
+
+    alias GrantReadACP = String
+
+    alias GrantWrite = String
+
+    alias GrantWriteACP = String
+
+    alias Grantee = NamedTuple(
+      "DisplayName" : (DisplayName)?,
+      "EmailAddress" : (EmailAddress)?,
+      "ID" : (ID)?,
+      "Type" : Type,
+      "URI" : (URI)?
+    )
+
+    alias Grants = Array(Grant)
+
+    alias HeadBucketRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias HeadObjectOutput = NamedTuple(
+      "DeleteMarker" : (DeleteMarker)?,
+      "AcceptRanges" : (AcceptRanges)?,
+      "Expiration" : (Expiration)?,
+      "Restore" : (Restore)?,
+      "ArchiveStatus" : (ArchiveStatus)?,
+      "LastModified" : (LastModified)?,
+      "ContentLength" : (ContentLength)?,
+      "ETag" : (ETag)?,
+      "MissingMeta" : (MissingMeta)?,
+      "VersionId" : (ObjectVersionId)?,
+      "CacheControl" : (CacheControl)?,
+      "ContentDisposition" : (ContentDisposition)?,
+      "ContentEncoding" : (ContentEncoding)?,
+      "ContentLanguage" : (ContentLanguage)?,
+      "ContentType" : (ContentType)?,
+      "Expires" : (Expires)?,
+      "ExpiresString" : (ExpiresString)?,
+      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "Metadata" : (Metadata)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "StorageClass" : (StorageClass)?,
+      "RequestCharged" : (RequestCharged)?,
+      "ReplicationStatus" : (ReplicationStatus)?,
+      "PartsCount" : (PartsCount)?,
+      "ObjectLockMode" : (ObjectLockMode)?,
+      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
+      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?
+    )
+
+    alias HeadObjectRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "IfMatch" : (IfMatch)?,
+      "IfModifiedSince" : (IfModifiedSince)?,
+      "IfNoneMatch" : (IfNoneMatch)?,
+      "IfUnmodifiedSince" : (IfUnmodifiedSince)?,
+      "Key" : ObjectKey,
+      "Range" : (Range)?,
+      "VersionId" : (ObjectVersionId)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "RequestPayer" : (RequestPayer)?,
+      "PartNumber" : (PartNumber)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias HostName = String
+
+    alias HttpErrorCodeReturnedEquals = String
+
+    alias HttpRedirectCode = String
+
+    alias ID = String
+
+    alias IfMatch = String
+
+    alias IfModifiedSince = String | UInt64 | Time
+
+    alias IfNoneMatch = String
+
+    alias IfUnmodifiedSince = String | UInt64 | Time
+
+    alias IndexDocument = NamedTuple(
+      "Suffix" : Suffix
+    )
+
+    alias Initiated = String | UInt64 | Time
+
+    alias Initiator = NamedTuple(
+      "ID" : (ID)?,
+      "DisplayName" : (DisplayName)?
+    )
+
+    alias InputSerialization = NamedTuple(
+      "CSV" : (CSVInput)?,
+      "CompressionType" : (CompressionType)?,
+      "JSON" : (JSONInput)?,
+      "Parquet" : (ParquetInput)?
+    )
+
+    alias IntelligentTieringAccessTier = String
+
+    alias IntelligentTieringAndOperator = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tags" : (TagSet)?
+    )
+
+    alias IntelligentTieringConfiguration = NamedTuple(
+      "Id" : IntelligentTieringId,
+      "Filter" : (IntelligentTieringFilter)?,
+      "Status" : IntelligentTieringStatus,
+      "Tierings" : TieringList
+    )
+
+    alias IntelligentTieringConfigurationList = Array(IntelligentTieringConfiguration)
+
+    alias IntelligentTieringDays = Int32
+
+    alias IntelligentTieringFilter = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tag" : (Tag)?,
+      "And" : (IntelligentTieringAndOperator)?
+    )
+
+    alias IntelligentTieringId = String
+
+    alias IntelligentTieringStatus = String
+
+    alias InvalidObjectState = NamedTuple(
+      "StorageClass" : (StorageClass)?,
+      "AccessTier" : (IntelligentTieringAccessTier)?
+    )
+
+    alias InventoryConfiguration = NamedTuple(
+      "Destination" : InventoryDestination,
+      "IsEnabled" : IsEnabled,
+      "Filter" : (InventoryFilter)?,
+      "Id" : InventoryId,
+      "IncludedObjectVersions" : InventoryIncludedObjectVersions,
+      "OptionalFields" : (InventoryOptionalFields)?,
+      "Schedule" : InventorySchedule
+    )
+
+    alias InventoryConfigurationList = Array(InventoryConfiguration)
+
+    alias InventoryDestination = NamedTuple(
+      "S3BucketDestination" : InventoryS3BucketDestination
+    )
+
+    alias InventoryEncryption = NamedTuple(
+      "SSES3" : (SSES3)?,
+      "SSEKMS" : (SSEKMS)?
+    )
+
+    alias InventoryFilter = NamedTuple(
+      "Prefix" : Prefix
+    )
+
+    alias InventoryFormat = String
+
+    alias InventoryFrequency = String
+
+    alias InventoryId = String
+
+    alias InventoryIncludedObjectVersions = String
+
+    alias InventoryOptionalField = String
+
+    alias InventoryOptionalFields = Array(InventoryOptionalField)
+
+    alias InventoryS3BucketDestination = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "Bucket" : BucketName,
+      "Format" : InventoryFormat,
+      "Prefix" : (Prefix)?,
+      "Encryption" : (InventoryEncryption)?
+    )
+
+    alias InventorySchedule = NamedTuple(
+      "Frequency" : InventoryFrequency
+    )
+
+    alias IsEnabled = Bool
+
+    alias IsLatest = Bool
+
+    alias IsPublic = Bool
+
+    alias IsTruncated = Bool
+
+    alias JSONInput = NamedTuple(
+      "Type" : (JSONType)?
+    )
+
+    alias JSONOutput = NamedTuple(
+      "RecordDelimiter" : (RecordDelimiter)?
+    )
+
+    alias JSONType = String
+
+    alias KMSContext = String
+
+    alias KeyCount = Int32
+
+    alias KeyMarker = String
+
+    alias KeyPrefixEquals = String
+
+    alias LambdaFunctionArn = String
+
+    alias LambdaFunctionConfiguration = NamedTuple(
+      "Id" : (NotificationId)?,
+      "LambdaFunctionArn" : LambdaFunctionArn,
+      "Events" : EventList,
+      "Filter" : (NotificationConfigurationFilter)?
+    )
+
+    alias LambdaFunctionConfigurationList = Array(LambdaFunctionConfiguration)
+
+    alias LastModified = String | UInt64 | Time
+
+    alias LifecycleConfiguration = NamedTuple(
+      "Rules" : Rules
+    )
+
+    alias LifecycleExpiration = NamedTuple(
+      "Date" : (Date)?,
+      "Days" : (Days)?,
+      "ExpiredObjectDeleteMarker" : (ExpiredObjectDeleteMarker)?
+    )
+
+    alias LifecycleRule = NamedTuple(
+      "Expiration" : (LifecycleExpiration)?,
+      "ID" : (ID)?,
+      "Prefix" : (Prefix)?,
+      "Filter" : (LifecycleRuleFilter)?,
+      "Status" : ExpirationStatus,
+      "Transitions" : (TransitionList)?,
+      "NoncurrentVersionTransitions" : (NoncurrentVersionTransitionList)?,
+      "NoncurrentVersionExpiration" : (NoncurrentVersionExpiration)?,
+      "AbortIncompleteMultipartUpload" : (AbortIncompleteMultipartUpload)?
+    )
+
+    alias LifecycleRuleAndOperator = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tags" : (TagSet)?
+    )
+
+    alias LifecycleRuleFilter = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tag" : (Tag)?,
+      "And" : (LifecycleRuleAndOperator)?
+    )
+
+    alias LifecycleRules = Array(LifecycleRule)
+
+    alias ListBucketAnalyticsConfigurationsOutput = NamedTuple(
+      "IsTruncated" : (IsTruncated)?,
+      "ContinuationToken" : (Token)?,
+      "NextContinuationToken" : (NextToken)?,
+      "AnalyticsConfigurationList" : (AnalyticsConfigurationList)?
+    )
+
+    alias ListBucketAnalyticsConfigurationsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContinuationToken" : (Token)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListBucketIntelligentTieringConfigurationsOutput = NamedTuple(
+      "IsTruncated" : (IsTruncated)?,
+      "ContinuationToken" : (Token)?,
+      "NextContinuationToken" : (NextToken)?,
+      "IntelligentTieringConfigurationList" : (IntelligentTieringConfigurationList)?
+    )
+
+    alias ListBucketIntelligentTieringConfigurationsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContinuationToken" : (Token)?
+    )
+
+    alias ListBucketInventoryConfigurationsOutput = NamedTuple(
+      "ContinuationToken" : (Token)?,
+      "InventoryConfigurationList" : (InventoryConfigurationList)?,
+      "IsTruncated" : (IsTruncated)?,
+      "NextContinuationToken" : (NextToken)?
+    )
+
+    alias ListBucketInventoryConfigurationsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContinuationToken" : (Token)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListBucketMetricsConfigurationsOutput = NamedTuple(
+      "IsTruncated" : (IsTruncated)?,
+      "ContinuationToken" : (Token)?,
+      "NextContinuationToken" : (NextToken)?,
+      "MetricsConfigurationList" : (MetricsConfigurationList)?
+    )
+
+    alias ListBucketMetricsConfigurationsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContinuationToken" : (Token)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListBucketsOutput = NamedTuple(
+      "Buckets" : (Buckets)?,
+      "Owner" : (Owner)?
+    )
+
+    alias ListMultipartUploadsOutput = NamedTuple(
+      "Bucket" : (BucketName)?,
+      "KeyMarker" : (KeyMarker)?,
+      "UploadIdMarker" : (UploadIdMarker)?,
+      "NextKeyMarker" : (NextKeyMarker)?,
+      "Prefix" : (Prefix)?,
+      "Delimiter" : (Delimiter)?,
+      "NextUploadIdMarker" : (NextUploadIdMarker)?,
+      "MaxUploads" : (MaxUploads)?,
+      "IsTruncated" : (IsTruncated)?,
+      "Uploads" : (MultipartUploadList)?,
+      "CommonPrefixes" : (CommonPrefixList)?,
+      "EncodingType" : (EncodingType)?
+    )
+
+    alias ListMultipartUploadsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Delimiter" : (Delimiter)?,
+      "EncodingType" : (EncodingType)?,
+      "KeyMarker" : (KeyMarker)?,
+      "MaxUploads" : (MaxUploads)?,
+      "Prefix" : (Prefix)?,
+      "UploadIdMarker" : (UploadIdMarker)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListObjectVersionsOutput = NamedTuple(
+      "IsTruncated" : (IsTruncated)?,
+      "KeyMarker" : (KeyMarker)?,
+      "VersionIdMarker" : (VersionIdMarker)?,
+      "NextKeyMarker" : (NextKeyMarker)?,
+      "NextVersionIdMarker" : (NextVersionIdMarker)?,
+      "Versions" : (ObjectVersionList)?,
+      "DeleteMarkers" : (DeleteMarkers)?,
+      "Name" : (BucketName)?,
+      "Prefix" : (Prefix)?,
+      "Delimiter" : (Delimiter)?,
+      "MaxKeys" : (MaxKeys)?,
+      "CommonPrefixes" : (CommonPrefixList)?,
+      "EncodingType" : (EncodingType)?
+    )
+
+    alias ListObjectVersionsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Delimiter" : (Delimiter)?,
+      "EncodingType" : (EncodingType)?,
+      "KeyMarker" : (KeyMarker)?,
+      "MaxKeys" : (MaxKeys)?,
+      "Prefix" : (Prefix)?,
+      "VersionIdMarker" : (VersionIdMarker)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListObjectsOutput = NamedTuple(
+      "IsTruncated" : (IsTruncated)?,
+      "Marker" : (Marker)?,
+      "NextMarker" : (NextMarker)?,
+      "Contents" : (ObjectList)?,
+      "Name" : (BucketName)?,
+      "Prefix" : (Prefix)?,
+      "Delimiter" : (Delimiter)?,
+      "MaxKeys" : (MaxKeys)?,
+      "CommonPrefixes" : (CommonPrefixList)?,
+      "EncodingType" : (EncodingType)?
+    )
+
+    alias ListObjectsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Delimiter" : (Delimiter)?,
+      "EncodingType" : (EncodingType)?,
+      "Marker" : (Marker)?,
+      "MaxKeys" : (MaxKeys)?,
+      "Prefix" : (Prefix)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListObjectsV2Output = NamedTuple(
+      "IsTruncated" : (IsTruncated)?,
+      "Contents" : (ObjectList)?,
+      "Name" : (BucketName)?,
+      "Prefix" : (Prefix)?,
+      "Delimiter" : (Delimiter)?,
+      "MaxKeys" : (MaxKeys)?,
+      "CommonPrefixes" : (CommonPrefixList)?,
+      "EncodingType" : (EncodingType)?,
+      "KeyCount" : (KeyCount)?,
+      "ContinuationToken" : (Token)?,
+      "NextContinuationToken" : (NextToken)?,
+      "StartAfter" : (StartAfter)?
+    )
+
+    alias ListObjectsV2Request = NamedTuple(
+      "Bucket" : BucketName,
+      "Delimiter" : (Delimiter)?,
+      "EncodingType" : (EncodingType)?,
+      "MaxKeys" : (MaxKeys)?,
+      "Prefix" : (Prefix)?,
+      "ContinuationToken" : (Token)?,
+      "FetchOwner" : (FetchOwner)?,
+      "StartAfter" : (StartAfter)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias ListPartsOutput = NamedTuple(
+      "AbortDate" : (AbortDate)?,
+      "AbortRuleId" : (AbortRuleId)?,
+      "Bucket" : (BucketName)?,
+      "Key" : (ObjectKey)?,
+      "UploadId" : (MultipartUploadId)?,
+      "PartNumberMarker" : (PartNumberMarker)?,
+      "NextPartNumberMarker" : (NextPartNumberMarker)?,
+      "MaxParts" : (MaxParts)?,
+      "IsTruncated" : (IsTruncated)?,
+      "Parts" : (Parts)?,
+      "Initiator" : (Initiator)?,
+      "Owner" : (Owner)?,
+      "StorageClass" : (StorageClass)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias ListPartsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "MaxParts" : (MaxParts)?,
+      "PartNumberMarker" : (PartNumberMarker)?,
+      "UploadId" : MultipartUploadId,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias Location = String
+
+    alias LocationPrefix = String
+
+    alias LoggingEnabled = NamedTuple(
+      "TargetBucket" : TargetBucket,
+      "TargetGrants" : (TargetGrants)?,
+      "TargetPrefix" : TargetPrefix
+    )
+
+    alias MFA = String
+
+    alias MFADelete = String
+
+    alias MFADeleteStatus = String
+
+    alias Marker = String
+
+    alias MaxAgeSeconds = Int32
+
+    alias MaxKeys = Int32
+
+    alias MaxParts = Int32
+
+    alias MaxUploads = Int32
+
+    alias Message = String
+
+    alias Metadata = Hash(MetadataKey,MetadataValue)
+
+    alias MetadataDirective = String
+
+    alias MetadataEntry = NamedTuple(
+      "Name" : (MetadataKey)?,
+      "Value" : (MetadataValue)?
+    )
+
+    alias MetadataKey = String
+
+    alias MetadataValue = String
+
+    alias Metrics = NamedTuple(
+      "Status" : MetricsStatus,
+      "EventThreshold" : (ReplicationTimeValue)?
+    )
+
+    alias MetricsAndOperator = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tags" : (TagSet)?
+    )
+
+    alias MetricsConfiguration = NamedTuple(
+      "Id" : MetricsId,
+      "Filter" : (MetricsFilter)?
+    )
+
+    alias MetricsConfigurationList = Array(MetricsConfiguration)
+
+    alias MetricsFilter = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tag" : (Tag)?,
+      "And" : (MetricsAndOperator)?
+    )
+
+    alias MetricsId = String
+
+    alias MetricsStatus = String
+
+    alias Minutes = Int32
+
+    alias MissingMeta = Int32
+
+    alias MultipartUpload = NamedTuple(
+      "UploadId" : (MultipartUploadId)?,
+      "Key" : (ObjectKey)?,
+      "Initiated" : (Initiated)?,
+      "StorageClass" : (StorageClass)?,
+      "Owner" : (Owner)?,
+      "Initiator" : (Initiator)?
+    )
+
+    alias MultipartUploadId = String
+
+    alias MultipartUploadList = Array(MultipartUpload)
+
+    alias NextKeyMarker = String
+
+    alias NextMarker = String
+
+    alias NextPartNumberMarker = Int32
+
+    alias NextToken = String
+
+    alias NextUploadIdMarker = String
+
+    alias NextVersionIdMarker = String
+
+    alias NoSuchBucket = NamedTuple(
+      
+    )
+
+    alias NoSuchKey = NamedTuple(
+      
+    )
+
+    alias NoSuchUpload = NamedTuple(
+      
+    )
+
+    alias NoncurrentVersionExpiration = NamedTuple(
+      "NoncurrentDays" : (Days)?
+    )
+
+    alias NoncurrentVersionTransition = NamedTuple(
+      "NoncurrentDays" : (Days)?,
+      "StorageClass" : (TransitionStorageClass)?
+    )
+
+    alias NoncurrentVersionTransitionList = Array(NoncurrentVersionTransition)
+
+    alias NotificationConfiguration = NamedTuple(
+      "TopicConfigurations" : (TopicConfigurationList)?,
+      "QueueConfigurations" : (QueueConfigurationList)?,
+      "LambdaFunctionConfigurations" : (LambdaFunctionConfigurationList)?
+    )
+
+    alias NotificationConfigurationDeprecated = NamedTuple(
+      "TopicConfiguration" : (TopicConfigurationDeprecated)?,
+      "QueueConfiguration" : (QueueConfigurationDeprecated)?,
+      "CloudFunctionConfiguration" : (CloudFunctionConfiguration)?
+    )
+
+    alias NotificationConfigurationFilter = NamedTuple(
+      "Key" : (S3KeyFilter)?
+    )
+
+    alias NotificationId = String
+
+    alias Object = NamedTuple(
+      "Key" : (ObjectKey)?,
+      "LastModified" : (LastModified)?,
+      "ETag" : (ETag)?,
+      "Size" : (Size)?,
+      "StorageClass" : (ObjectStorageClass)?,
+      "Owner" : (Owner)?
+    )
+
+    alias ObjectAlreadyInActiveTierError = NamedTuple(
+      
+    )
+
+    alias ObjectCannedACL = String
+
+    alias ObjectIdentifier = NamedTuple(
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?
+    )
+
+    alias ObjectIdentifierList = Array(ObjectIdentifier)
+
+    alias ObjectKey = String
+
+    alias ObjectList = Array(Object)
+
+    alias ObjectLockConfiguration = NamedTuple(
+      "ObjectLockEnabled" : (ObjectLockEnabled)?,
+      "Rule" : (ObjectLockRule)?
+    )
+
+    alias ObjectLockEnabled = String
+
+    alias ObjectLockEnabledForBucket = Bool
+
+    alias ObjectLockLegalHold = NamedTuple(
+      "Status" : (ObjectLockLegalHoldStatus)?
+    )
+
+    alias ObjectLockLegalHoldStatus = String
+
+    alias ObjectLockMode = String
+
+    alias ObjectLockRetainUntilDate = String | UInt64 | Time
+
+    alias ObjectLockRetention = NamedTuple(
+      "Mode" : (ObjectLockRetentionMode)?,
+      "RetainUntilDate" : (Date)?
+    )
+
+    alias ObjectLockRetentionMode = String
+
+    alias ObjectLockRule = NamedTuple(
+      "DefaultRetention" : (DefaultRetention)?
+    )
+
+    alias ObjectLockToken = String
+
+    alias ObjectNotInActiveTierError = NamedTuple(
+      
+    )
+
+    alias ObjectOwnership = String
+
+    alias ObjectStorageClass = String
+
+    alias ObjectVersion = NamedTuple(
+      "ETag" : (ETag)?,
+      "Size" : (Size)?,
+      "StorageClass" : (ObjectVersionStorageClass)?,
+      "Key" : (ObjectKey)?,
+      "VersionId" : (ObjectVersionId)?,
+      "IsLatest" : (IsLatest)?,
+      "LastModified" : (LastModified)?,
+      "Owner" : (Owner)?
+    )
+
+    alias ObjectVersionId = String
+
+    alias ObjectVersionList = Array(ObjectVersion)
+
+    alias ObjectVersionStorageClass = String
+
+    alias OutputLocation = NamedTuple(
+      "S3" : (S3Location)?
+    )
+
+    alias OutputSerialization = NamedTuple(
+      "CSV" : (CSVOutput)?,
+      "JSON" : (JSONOutput)?
+    )
+
+    alias Owner = NamedTuple(
+      "DisplayName" : (DisplayName)?,
+      "ID" : (ID)?
+    )
+
+    alias OwnerOverride = String
+
+    alias OwnershipControls = NamedTuple(
+      "Rules" : OwnershipControlsRules
+    )
+
+    alias OwnershipControlsRule = NamedTuple(
+      "ObjectOwnership" : ObjectOwnership
+    )
+
+    alias OwnershipControlsRules = Array(OwnershipControlsRule)
+
+    alias ParquetInput = NamedTuple(
+      
+    )
+
+    alias Part = NamedTuple(
+      "PartNumber" : (PartNumber)?,
+      "LastModified" : (LastModified)?,
+      "ETag" : (ETag)?,
+      "Size" : (Size)?
+    )
+
+    alias PartNumber = Int32
+
+    alias PartNumberMarker = Int32
+
+    alias Parts = Array(Part)
+
+    alias PartsCount = Int32
+
+    alias Payer = String
+
+    alias Permission = String
+
+    alias Policy = String
+
+    alias PolicyStatus = NamedTuple(
+      "IsPublic" : (IsPublic)?
+    )
+
+    alias Prefix = String
+
+    alias Priority = Int32
+
+    alias Progress = NamedTuple(
+      "BytesScanned" : (BytesScanned)?,
+      "BytesProcessed" : (BytesProcessed)?,
+      "BytesReturned" : (BytesReturned)?
+    )
+
+    alias ProgressEvent = NamedTuple(
+      "Details" : (Progress)?
+    )
+
+    alias Protocol = String
+
+    alias PublicAccessBlockConfiguration = NamedTuple(
+      "BlockPublicAcls" : (Setting)?,
+      "IgnorePublicAcls" : (Setting)?,
+      "BlockPublicPolicy" : (Setting)?,
+      "RestrictPublicBuckets" : (Setting)?
+    )
+
+    alias PutBucketAccelerateConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "AccelerateConfiguration" : AccelerateConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketAclRequest = NamedTuple(
+      "ACL" : (BucketCannedACL)?,
+      "AccessControlPolicy" : (AccessControlPolicy)?,
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWrite" : (GrantWrite)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketAnalyticsConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : AnalyticsId,
+      "AnalyticsConfiguration" : AnalyticsConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketCorsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "CORSConfiguration" : CORSConfiguration,
+      "ContentMD5" : (ContentMD5)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketEncryptionRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "ServerSideEncryptionConfiguration" : ServerSideEncryptionConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketIntelligentTieringConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : IntelligentTieringId,
+      "IntelligentTieringConfiguration" : IntelligentTieringConfiguration
+    )
+
+    alias PutBucketInventoryConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : InventoryId,
+      "InventoryConfiguration" : InventoryConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketLifecycleConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "LifecycleConfiguration" : (BucketLifecycleConfiguration)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketLifecycleRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "LifecycleConfiguration" : (LifecycleConfiguration)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketLoggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "BucketLoggingStatus" : BucketLoggingStatus,
+      "ContentMD5" : (ContentMD5)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketMetricsConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Id" : MetricsId,
+      "MetricsConfiguration" : MetricsConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketNotificationConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "NotificationConfiguration" : NotificationConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketNotificationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "NotificationConfiguration" : NotificationConfigurationDeprecated,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketOwnershipControlsRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "ExpectedBucketOwner" : (AccountId)?,
+      "OwnershipControls" : OwnershipControls
+    )
+
+    alias PutBucketPolicyRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "ConfirmRemoveSelfBucketAccess" : (ConfirmRemoveSelfBucketAccess)?,
+      "Policy" : Policy,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketReplicationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "ReplicationConfiguration" : ReplicationConfiguration,
+      "Token" : (ObjectLockToken)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketRequestPaymentRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "RequestPaymentConfiguration" : RequestPaymentConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketTaggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "Tagging" : Tagging,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketVersioningRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "MFA" : (MFA)?,
+      "VersioningConfiguration" : VersioningConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutBucketWebsiteRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "WebsiteConfiguration" : WebsiteConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutObjectAclOutput = NamedTuple(
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias PutObjectAclRequest = NamedTuple(
+      "ACL" : (ObjectCannedACL)?,
+      "AccessControlPolicy" : (AccessControlPolicy)?,
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWrite" : (GrantWrite)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "Key" : ObjectKey,
+      "RequestPayer" : (RequestPayer)?,
+      "VersionId" : (ObjectVersionId)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutObjectLegalHoldOutput = NamedTuple(
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias PutObjectLegalHoldRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "LegalHold" : (ObjectLockLegalHold)?,
+      "RequestPayer" : (RequestPayer)?,
+      "VersionId" : (ObjectVersionId)?,
+      "ContentMD5" : (ContentMD5)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutObjectLockConfigurationOutput = NamedTuple(
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias PutObjectLockConfigurationRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ObjectLockConfiguration" : (ObjectLockConfiguration)?,
+      "RequestPayer" : (RequestPayer)?,
+      "Token" : (ObjectLockToken)?,
+      "ContentMD5" : (ContentMD5)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutObjectOutput = NamedTuple(
+      "Expiration" : (Expiration)?,
+      "ETag" : (ETag)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "VersionId" : (ObjectVersionId)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias PutObjectRequest = NamedTuple(
+      "ACL" : (ObjectCannedACL)?,
+      "Body" : (Body)?,
+      "Bucket" : BucketName,
+      "CacheControl" : (CacheControl)?,
+      "ContentDisposition" : (ContentDisposition)?,
+      "ContentEncoding" : (ContentEncoding)?,
+      "ContentLanguage" : (ContentLanguage)?,
+      "ContentLength" : (ContentLength)?,
+      "ContentMD5" : (ContentMD5)?,
+      "ContentType" : (ContentType)?,
+      "Expires" : (Expires)?,
+      "GrantFullControl" : (GrantFullControl)?,
+      "GrantRead" : (GrantRead)?,
+      "GrantReadACP" : (GrantReadACP)?,
+      "GrantWriteACP" : (GrantWriteACP)?,
+      "Key" : ObjectKey,
+      "Metadata" : (Metadata)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "StorageClass" : (StorageClass)?,
+      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestPayer" : (RequestPayer)?,
+      "Tagging" : (TaggingHeader)?,
+      "ObjectLockMode" : (ObjectLockMode)?,
+      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
+      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutObjectRetentionOutput = NamedTuple(
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias PutObjectRetentionRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "Retention" : (ObjectLockRetention)?,
+      "RequestPayer" : (RequestPayer)?,
+      "VersionId" : (ObjectVersionId)?,
+      "BypassGovernanceRetention" : (BypassGovernanceRetention)?,
+      "ContentMD5" : (ContentMD5)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutObjectTaggingOutput = NamedTuple(
+      "VersionId" : (ObjectVersionId)?
+    )
+
+    alias PutObjectTaggingRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "ContentMD5" : (ContentMD5)?,
+      "Tagging" : Tagging,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias PutPublicAccessBlockRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "ContentMD5" : (ContentMD5)?,
+      "PublicAccessBlockConfiguration" : PublicAccessBlockConfiguration,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias QueueArn = String
+
+    alias QueueConfiguration = NamedTuple(
+      "Id" : (NotificationId)?,
+      "QueueArn" : QueueArn,
+      "Events" : EventList,
+      "Filter" : (NotificationConfigurationFilter)?
+    )
+
+    alias QueueConfigurationDeprecated = NamedTuple(
+      "Id" : (NotificationId)?,
+      "Event" : (Event)?,
+      "Events" : (EventList)?,
+      "Queue" : (QueueArn)?
+    )
+
+    alias QueueConfigurationList = Array(QueueConfiguration)
+
+    alias Quiet = Bool
+
+    alias QuoteCharacter = String
+
+    alias QuoteEscapeCharacter = String
+
+    alias QuoteFields = String
+
+    alias Range = String
+
+    alias RecordDelimiter = String
+
+    alias RecordsEvent = NamedTuple(
+      "Payload" : (Body)?
+    )
+
+    alias Redirect = NamedTuple(
+      "HostName" : (HostName)?,
+      "HttpRedirectCode" : (HttpRedirectCode)?,
+      "Protocol" : (Protocol)?,
+      "ReplaceKeyPrefixWith" : (ReplaceKeyPrefixWith)?,
+      "ReplaceKeyWith" : (ReplaceKeyWith)?
+    )
+
+    alias RedirectAllRequestsTo = NamedTuple(
+      "HostName" : HostName,
+      "Protocol" : (Protocol)?
+    )
+
+    alias ReplaceKeyPrefixWith = String
+
+    alias ReplaceKeyWith = String
+
+    alias ReplicaKmsKeyID = String
+
+    alias ReplicaModifications = NamedTuple(
+      "Status" : ReplicaModificationsStatus
+    )
+
+    alias ReplicaModificationsStatus = String
+
+    alias ReplicationConfiguration = NamedTuple(
+      "Role" : Role,
+      "Rules" : ReplicationRules
+    )
+
+    alias ReplicationRule = NamedTuple(
+      "ID" : (ID)?,
+      "Priority" : (Priority)?,
+      "Prefix" : (Prefix)?,
+      "Filter" : (ReplicationRuleFilter)?,
+      "Status" : ReplicationRuleStatus,
+      "SourceSelectionCriteria" : (SourceSelectionCriteria)?,
+      "ExistingObjectReplication" : (ExistingObjectReplication)?,
+      "Destination" : Destination,
+      "DeleteMarkerReplication" : (DeleteMarkerReplication)?
+    )
+
+    alias ReplicationRuleAndOperator = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tags" : (TagSet)?
+    )
+
+    alias ReplicationRuleFilter = NamedTuple(
+      "Prefix" : (Prefix)?,
+      "Tag" : (Tag)?,
+      "And" : (ReplicationRuleAndOperator)?
+    )
+
+    alias ReplicationRuleStatus = String
+
+    alias ReplicationRules = Array(ReplicationRule)
+
+    alias ReplicationStatus = String
+
+    alias ReplicationTime = NamedTuple(
+      "Status" : ReplicationTimeStatus,
+      "Time" : ReplicationTimeValue
+    )
+
+    alias ReplicationTimeStatus = String
+
+    alias ReplicationTimeValue = NamedTuple(
+      "Minutes" : (Minutes)?
+    )
+
+    alias RequestCharged = String
+
+    alias RequestPayer = String
+
+    alias RequestPaymentConfiguration = NamedTuple(
+      "Payer" : Payer
+    )
+
+    alias RequestProgress = NamedTuple(
+      "Enabled" : (EnableRequestProgress)?
+    )
+
+    alias ResponseCacheControl = String
+
+    alias ResponseContentDisposition = String
+
+    alias ResponseContentEncoding = String
+
+    alias ResponseContentLanguage = String
+
+    alias ResponseContentType = String
+
+    alias ResponseExpires = String | UInt64 | Time
+
+    alias Restore = String
+
+    alias RestoreObjectOutput = NamedTuple(
+      "RequestCharged" : (RequestCharged)?,
+      "RestoreOutputPath" : (RestoreOutputPath)?
+    )
+
+    alias RestoreObjectRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "VersionId" : (ObjectVersionId)?,
+      "RestoreRequest" : (RestoreRequest)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias RestoreOutputPath = String
+
+    alias RestoreRequest = NamedTuple(
+      "Days" : (Days)?,
+      "GlacierJobParameters" : (GlacierJobParameters)?,
+      "Type" : (RestoreRequestType)?,
+      "Tier" : (Tier)?,
+      "Description" : (Description)?,
+      "SelectParameters" : (SelectParameters)?,
+      "OutputLocation" : (OutputLocation)?
+    )
+
+    alias RestoreRequestType = String
+
+    alias Role = String
+
+    alias RoutingRule = NamedTuple(
+      "Condition" : (Condition)?,
+      "Redirect" : Redirect
+    )
+
+    alias RoutingRules = Array(RoutingRule)
+
+    alias Rule = NamedTuple(
+      "Expiration" : (LifecycleExpiration)?,
+      "ID" : (ID)?,
+      "Prefix" : Prefix,
+      "Status" : ExpirationStatus,
+      "Transition" : (Transition)?,
+      "NoncurrentVersionTransition" : (NoncurrentVersionTransition)?,
+      "NoncurrentVersionExpiration" : (NoncurrentVersionExpiration)?,
+      "AbortIncompleteMultipartUpload" : (AbortIncompleteMultipartUpload)?
+    )
+
+    alias Rules = Array(Rule)
+
+    alias S3KeyFilter = NamedTuple(
+      "FilterRules" : (FilterRuleList)?
+    )
+
+    alias S3Location = NamedTuple(
+      "BucketName" : BucketName,
+      "Prefix" : LocationPrefix,
+      "Encryption" : (Encryption)?,
+      "CannedACL" : (ObjectCannedACL)?,
+      "AccessControlList" : (Grants)?,
+      "Tagging" : (Tagging)?,
+      "UserMetadata" : (UserMetadata)?,
+      "StorageClass" : (StorageClass)?
+    )
+
+    alias SSECustomerAlgorithm = String
+
+    alias SSECustomerKey = String
+
+    alias SSECustomerKeyMD5 = String
+
+    alias SSEKMS = NamedTuple(
+      "KeyId" : SSEKMSKeyId
+    )
+
+    alias SSEKMSEncryptionContext = String
+
+    alias SSEKMSKeyId = String
+
+    alias SSES3 = NamedTuple(
+      
+    )
+
+    alias ScanRange = NamedTuple(
+      "Start" : (Start)?,
+      "End" : (End)?
+    )
+
+    alias SelectObjectContentEventStream = NamedTuple(
+      "Records" : (RecordsEvent)?,
+      "Stats" : (StatsEvent)?,
+      "Progress" : (ProgressEvent)?,
+      "Cont" : (ContinuationEvent)?,
+      "End" : (EndEvent)?
+    )
+
+    alias SelectObjectContentOutput = NamedTuple(
+      "Payload" : (SelectObjectContentEventStream)?
+    )
+
+    alias SelectObjectContentRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "Key" : ObjectKey,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "Expression" : Expression,
+      "ExpressionType" : ExpressionType,
+      "RequestProgress" : (RequestProgress)?,
+      "InputSerialization" : InputSerialization,
+      "OutputSerialization" : OutputSerialization,
+      "ScanRange" : (ScanRange)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias SelectParameters = NamedTuple(
+      "InputSerialization" : InputSerialization,
+      "ExpressionType" : ExpressionType,
+      "Expression" : Expression,
+      "OutputSerialization" : OutputSerialization
+    )
+
+    alias ServerSideEncryption = String
+
+    alias ServerSideEncryptionByDefault = NamedTuple(
+      "SSEAlgorithm" : ServerSideEncryption,
+      "KMSMasterKeyID" : (SSEKMSKeyId)?
+    )
+
+    alias ServerSideEncryptionConfiguration = NamedTuple(
+      "Rules" : ServerSideEncryptionRules
+    )
+
+    alias ServerSideEncryptionRule = NamedTuple(
+      "ApplyServerSideEncryptionByDefault" : (ServerSideEncryptionByDefault)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?
+    )
+
+    alias ServerSideEncryptionRules = Array(ServerSideEncryptionRule)
+
+    alias Setting = Bool
+
+    alias Size = Int32
+
+    alias SourceSelectionCriteria = NamedTuple(
+      "SseKmsEncryptedObjects" : (SseKmsEncryptedObjects)?,
+      "ReplicaModifications" : (ReplicaModifications)?
+    )
+
+    alias SseKmsEncryptedObjects = NamedTuple(
+      "Status" : SseKmsEncryptedObjectsStatus
+    )
+
+    alias SseKmsEncryptedObjectsStatus = String
+
+    alias Start = Int64
+
+    alias StartAfter = String
+
+    alias Stats = NamedTuple(
+      "BytesScanned" : (BytesScanned)?,
+      "BytesProcessed" : (BytesProcessed)?,
+      "BytesReturned" : (BytesReturned)?
+    )
+
+    alias StatsEvent = NamedTuple(
+      "Details" : (Stats)?
+    )
+
+    alias StorageClass = String
+
+    alias StorageClassAnalysis = NamedTuple(
+      "DataExport" : (StorageClassAnalysisDataExport)?
+    )
+
+    alias StorageClassAnalysisDataExport = NamedTuple(
+      "OutputSchemaVersion" : StorageClassAnalysisSchemaVersion,
+      "Destination" : AnalyticsExportDestination
+    )
+
+    alias StorageClassAnalysisSchemaVersion = String
+
+    alias Suffix = String
+
+    alias Tag = NamedTuple(
+      "Key" : ObjectKey,
+      "Value" : Value
+    )
+
+    alias TagCount = Int32
+
+    alias TagSet = Array(Tag)
+
+    alias Tagging = NamedTuple(
+      "TagSet" : TagSet
+    )
+
+    alias TaggingDirective = String
+
+    alias TaggingHeader = String
+
+    alias TargetBucket = String
+
+    alias TargetGrant = NamedTuple(
+      "Grantee" : (Grantee)?,
+      "Permission" : (BucketLogsPermission)?
+    )
+
+    alias TargetGrants = Array(TargetGrant)
+
+    alias TargetPrefix = String
+
+    alias Tier = String
+
+    alias Tiering = NamedTuple(
+      "Days" : IntelligentTieringDays,
+      "AccessTier" : IntelligentTieringAccessTier
+    )
+
+    alias TieringList = Array(Tiering)
+
+    alias Token = String
+
+    alias TopicArn = String
+
+    alias TopicConfiguration = NamedTuple(
+      "Id" : (NotificationId)?,
+      "TopicArn" : TopicArn,
+      "Events" : EventList,
+      "Filter" : (NotificationConfigurationFilter)?
+    )
+
+    alias TopicConfigurationDeprecated = NamedTuple(
+      "Id" : (NotificationId)?,
+      "Events" : (EventList)?,
+      "Event" : (Event)?,
+      "Topic" : (TopicArn)?
+    )
+
+    alias TopicConfigurationList = Array(TopicConfiguration)
+
+    alias Transition = NamedTuple(
+      "Date" : (Date)?,
+      "Days" : (Days)?,
+      "StorageClass" : (TransitionStorageClass)?
+    )
+
+    alias TransitionList = Array(Transition)
+
+    alias TransitionStorageClass = String
+
+    alias Type = String
+
+    alias URI = String
+
+    alias UploadIdMarker = String
+
+    alias UploadPartCopyOutput = NamedTuple(
+      "CopySourceVersionId" : (CopySourceVersionId)?,
+      "CopyPartResult" : (CopyPartResult)?,
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias UploadPartCopyRequest = NamedTuple(
+      "Bucket" : BucketName,
+      "CopySource" : CopySource,
+      "CopySourceIfMatch" : (CopySourceIfMatch)?,
+      "CopySourceIfModifiedSince" : (CopySourceIfModifiedSince)?,
+      "CopySourceIfNoneMatch" : (CopySourceIfNoneMatch)?,
+      "CopySourceIfUnmodifiedSince" : (CopySourceIfUnmodifiedSince)?,
+      "CopySourceRange" : (CopySourceRange)?,
+      "Key" : ObjectKey,
+      "PartNumber" : PartNumber,
+      "UploadId" : MultipartUploadId,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "CopySourceSSECustomerAlgorithm" : (CopySourceSSECustomerAlgorithm)?,
+      "CopySourceSSECustomerKey" : (CopySourceSSECustomerKey)?,
+      "CopySourceSSECustomerKeyMD5" : (CopySourceSSECustomerKeyMD5)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?,
+      "ExpectedSourceBucketOwner" : (AccountId)?
+    )
+
+    alias UploadPartOutput = NamedTuple(
+      "ServerSideEncryption" : (ServerSideEncryption)?,
+      "ETag" : (ETag)?,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "SSEKMSKeyId" : (SSEKMSKeyId)?,
+      "BucketKeyEnabled" : (BucketKeyEnabled)?,
+      "RequestCharged" : (RequestCharged)?
+    )
+
+    alias UploadPartRequest = NamedTuple(
+      "Body" : (Body)?,
+      "Bucket" : BucketName,
+      "ContentLength" : (ContentLength)?,
+      "ContentMD5" : (ContentMD5)?,
+      "Key" : ObjectKey,
+      "PartNumber" : PartNumber,
+      "UploadId" : MultipartUploadId,
+      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
+      "SSECustomerKey" : (SSECustomerKey)?,
+      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
+      "RequestPayer" : (RequestPayer)?,
+      "ExpectedBucketOwner" : (AccountId)?
+    )
+
+    alias UserMetadata = Array(MetadataEntry)
+
+    alias Value = String
+
+    alias VersionIdMarker = String
+
+    alias VersioningConfiguration = NamedTuple(
+      "MFADelete" : (MFADelete)?,
+      "Status" : (BucketVersioningStatus)?
+    )
+
+    alias WebsiteConfiguration = NamedTuple(
+      "ErrorDocument" : (ErrorDocument)?,
+      "IndexDocument" : (IndexDocument)?,
+      "RedirectAllRequestsTo" : (RedirectAllRequestsTo)?,
+      "RoutingRules" : (RoutingRules)?
+    )
+
+    alias WebsiteRedirectLocation = String
+
+    alias Years = Int32
+
+    alias ExpiresString = String
   end
 end

@@ -5925,5 +5925,1286 @@ module Aws::IoTSiteWise
       include Aws::Structure
     end
 
+    alias ARN = String
+
+    alias AccessPolicySummaries = Array(AccessPolicySummary)
+
+    alias AccessPolicySummary = NamedTuple(
+      "id" : ID,
+      "identity" : Identity,
+      "resource" : Resource,
+      "permission" : Permission,
+      "creationDate" : (Timestamp)?,
+      "lastUpdateDate" : (Timestamp)?
+    )
+
+    alias AggregateType = String
+
+    alias AggregateTypes = Array(AggregateType)
+
+    alias AggregatedDoubleValue = Float64
+
+    alias AggregatedValue = NamedTuple(
+      "timestamp" : Timestamp,
+      "quality" : (Quality)?,
+      "value" : Aggregates
+    )
+
+    alias AggregatedValues = Array(AggregatedValue)
+
+    alias Aggregates = NamedTuple(
+      "average" : (AggregatedDoubleValue)?,
+      "count" : (AggregatedDoubleValue)?,
+      "maximum" : (AggregatedDoubleValue)?,
+      "minimum" : (AggregatedDoubleValue)?,
+      "sum" : (AggregatedDoubleValue)?,
+      "standardDeviation" : (AggregatedDoubleValue)?
+    )
+
+    alias AmazonResourceName = String
+
+    alias AssetCompositeModel = NamedTuple(
+      "name" : Name,
+      "description" : (Description)?,
+      "type" : Name,
+      "properties" : AssetProperties
+    )
+
+    alias AssetCompositeModels = Array(AssetCompositeModel)
+
+    alias AssetErrorCode = String
+
+    alias AssetErrorDetails = NamedTuple(
+      "assetId" : ID,
+      "code" : AssetErrorCode,
+      "message" : AssetErrorMessage
+    )
+
+    alias AssetErrorMessage = String
+
+    alias AssetHierarchies = Array(AssetHierarchy)
+
+    alias AssetHierarchy = NamedTuple(
+      "id" : (ID)?,
+      "name" : Name
+    )
+
+    alias AssetHierarchyInfo = NamedTuple(
+      "parentAssetId" : (ID)?,
+      "childAssetId" : (ID)?
+    )
+
+    alias AssetIDs = Array(ID)
+
+    alias AssetModelCompositeModel = NamedTuple(
+      "name" : Name,
+      "description" : (Description)?,
+      "type" : Name,
+      "properties" : (AssetModelProperties)?
+    )
+
+    alias AssetModelCompositeModelDefinition = NamedTuple(
+      "name" : Name,
+      "description" : (Description)?,
+      "type" : Name,
+      "properties" : (AssetModelPropertyDefinitions)?
+    )
+
+    alias AssetModelCompositeModelDefinitions = Array(AssetModelCompositeModelDefinition)
+
+    alias AssetModelCompositeModels = Array(AssetModelCompositeModel)
+
+    alias AssetModelHierarchies = Array(AssetModelHierarchy)
+
+    alias AssetModelHierarchy = NamedTuple(
+      "id" : (ID)?,
+      "name" : Name,
+      "childAssetModelId" : ID
+    )
+
+    alias AssetModelHierarchyDefinition = NamedTuple(
+      "name" : Name,
+      "childAssetModelId" : ID
+    )
+
+    alias AssetModelHierarchyDefinitions = Array(AssetModelHierarchyDefinition)
+
+    alias AssetModelProperties = Array(AssetModelProperty)
+
+    alias AssetModelProperty = NamedTuple(
+      "id" : (ID)?,
+      "name" : Name,
+      "dataType" : PropertyDataType,
+      "dataTypeSpec" : (Name)?,
+      "unit" : (PropertyUnit)?,
+      "type" : PropertyType
+    )
+
+    alias AssetModelPropertyDefinition = NamedTuple(
+      "name" : Name,
+      "dataType" : PropertyDataType,
+      "dataTypeSpec" : (Name)?,
+      "unit" : (PropertyUnit)?,
+      "type" : PropertyType
+    )
+
+    alias AssetModelPropertyDefinitions = Array(AssetModelPropertyDefinition)
+
+    alias AssetModelState = String
+
+    alias AssetModelStatus = NamedTuple(
+      "state" : AssetModelState,
+      "error" : (ErrorDetails)?
+    )
+
+    alias AssetModelSummaries = Array(AssetModelSummary)
+
+    alias AssetModelSummary = NamedTuple(
+      "id" : ID,
+      "arn" : ARN,
+      "name" : Name,
+      "description" : Description,
+      "creationDate" : Timestamp,
+      "lastUpdateDate" : Timestamp,
+      "status" : AssetModelStatus
+    )
+
+    alias AssetProperties = Array(AssetProperty)
+
+    alias AssetProperty = NamedTuple(
+      "id" : ID,
+      "name" : Name,
+      "alias" : (PropertyAlias)?,
+      "notification" : (PropertyNotification)?,
+      "dataType" : PropertyDataType,
+      "dataTypeSpec" : (Name)?,
+      "unit" : (PropertyUnit)?
+    )
+
+    alias AssetPropertyAlias = String
+
+    alias AssetPropertyValue = NamedTuple(
+      "value" : Variant,
+      "timestamp" : TimeInNanos,
+      "quality" : (Quality)?
+    )
+
+    alias AssetPropertyValueHistory = Array(AssetPropertyValue)
+
+    alias AssetPropertyValues = Array(AssetPropertyValue)
+
+    alias AssetRelationshipSummaries = Array(AssetRelationshipSummary)
+
+    alias AssetRelationshipSummary = NamedTuple(
+      "hierarchyInfo" : (AssetHierarchyInfo)?,
+      "relationshipType" : AssetRelationshipType
+    )
+
+    alias AssetRelationshipType = String
+
+    alias AssetState = String
+
+    alias AssetStatus = NamedTuple(
+      "state" : AssetState,
+      "error" : (ErrorDetails)?
+    )
+
+    alias AssetSummaries = Array(AssetSummary)
+
+    alias AssetSummary = NamedTuple(
+      "id" : ID,
+      "arn" : ARN,
+      "name" : Name,
+      "assetModelId" : ID,
+      "creationDate" : Timestamp,
+      "lastUpdateDate" : Timestamp,
+      "status" : AssetStatus,
+      "hierarchies" : AssetHierarchies
+    )
+
+    alias AssociateAssetsRequest = NamedTuple(
+      "assetId" : ID,
+      "hierarchyId" : ID,
+      "childAssetId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias AssociatedAssetsSummaries = Array(AssociatedAssetsSummary)
+
+    alias AssociatedAssetsSummary = NamedTuple(
+      "id" : ID,
+      "arn" : ARN,
+      "name" : Name,
+      "assetModelId" : ID,
+      "creationDate" : Timestamp,
+      "lastUpdateDate" : Timestamp,
+      "status" : AssetStatus,
+      "hierarchies" : AssetHierarchies
+    )
+
+    alias Attribute = NamedTuple(
+      "defaultValue" : (DefaultValue)?
+    )
+
+    alias AuthMode = String
+
+    alias BatchAssociateProjectAssetsErrors = Array(AssetErrorDetails)
+
+    alias BatchAssociateProjectAssetsRequest = NamedTuple(
+      "projectId" : ID,
+      "assetIds" : IDs,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias BatchAssociateProjectAssetsResponse = NamedTuple(
+      "errors" : (BatchAssociateProjectAssetsErrors)?
+    )
+
+    alias BatchDisassociateProjectAssetsErrors = Array(AssetErrorDetails)
+
+    alias BatchDisassociateProjectAssetsRequest = NamedTuple(
+      "projectId" : ID,
+      "assetIds" : IDs,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias BatchDisassociateProjectAssetsResponse = NamedTuple(
+      "errors" : (BatchDisassociateProjectAssetsErrors)?
+    )
+
+    alias BatchPutAssetPropertyError = NamedTuple(
+      "errorCode" : BatchPutAssetPropertyValueErrorCode,
+      "errorMessage" : ErrorMessage,
+      "timestamps" : Timestamps
+    )
+
+    alias BatchPutAssetPropertyErrorEntries = Array(BatchPutAssetPropertyErrorEntry)
+
+    alias BatchPutAssetPropertyErrorEntry = NamedTuple(
+      "entryId" : EntryId,
+      "errors" : BatchPutAssetPropertyErrors
+    )
+
+    alias BatchPutAssetPropertyErrors = Array(BatchPutAssetPropertyError)
+
+    alias BatchPutAssetPropertyValueErrorCode = String
+
+    alias BatchPutAssetPropertyValueRequest = NamedTuple(
+      "entries" : PutAssetPropertyValueEntries
+    )
+
+    alias BatchPutAssetPropertyValueResponse = NamedTuple(
+      "errorEntries" : BatchPutAssetPropertyErrorEntries
+    )
+
+    alias CapabilityConfiguration = String
+
+    alias CapabilityNamespace = String
+
+    alias CapabilitySyncStatus = String
+
+    alias ClientToken = String
+
+    alias CompositeModelProperty = NamedTuple(
+      "name" : Name,
+      "type" : Name,
+      "assetProperty" : Property
+    )
+
+    alias ConfigurationErrorDetails = NamedTuple(
+      "code" : ErrorCode,
+      "message" : ErrorMessage
+    )
+
+    alias ConfigurationState = String
+
+    alias ConfigurationStatus = NamedTuple(
+      "state" : ConfigurationState,
+      "error" : (ConfigurationErrorDetails)?
+    )
+
+    alias ConflictingOperationException = NamedTuple(
+      "message" : ErrorMessage,
+      "resourceId" : ResourceId,
+      "resourceArn" : ResourceArn
+    )
+
+    alias CreateAccessPolicyRequest = NamedTuple(
+      "accessPolicyIdentity" : Identity,
+      "accessPolicyResource" : Resource,
+      "accessPolicyPermission" : Permission,
+      "clientToken" : (ClientToken)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateAccessPolicyResponse = NamedTuple(
+      "accessPolicyId" : ID,
+      "accessPolicyArn" : ARN
+    )
+
+    alias CreateAssetModelRequest = NamedTuple(
+      "assetModelName" : Name,
+      "assetModelDescription" : (Description)?,
+      "assetModelProperties" : (AssetModelPropertyDefinitions)?,
+      "assetModelHierarchies" : (AssetModelHierarchyDefinitions)?,
+      "assetModelCompositeModels" : (AssetModelCompositeModelDefinitions)?,
+      "clientToken" : (ClientToken)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateAssetModelResponse = NamedTuple(
+      "assetModelId" : ID,
+      "assetModelArn" : ARN,
+      "assetModelStatus" : AssetModelStatus
+    )
+
+    alias CreateAssetRequest = NamedTuple(
+      "assetName" : Name,
+      "assetModelId" : ID,
+      "clientToken" : (ClientToken)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateAssetResponse = NamedTuple(
+      "assetId" : ID,
+      "assetArn" : ARN,
+      "assetStatus" : AssetStatus
+    )
+
+    alias CreateDashboardRequest = NamedTuple(
+      "projectId" : ID,
+      "dashboardName" : Name,
+      "dashboardDescription" : (Description)?,
+      "dashboardDefinition" : DashboardDefinition,
+      "clientToken" : (ClientToken)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateDashboardResponse = NamedTuple(
+      "dashboardId" : ID,
+      "dashboardArn" : ARN
+    )
+
+    alias CreateGatewayRequest = NamedTuple(
+      "gatewayName" : Name,
+      "gatewayPlatform" : GatewayPlatform,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateGatewayResponse = NamedTuple(
+      "gatewayId" : ID,
+      "gatewayArn" : ARN
+    )
+
+    alias CreatePortalRequest = NamedTuple(
+      "portalName" : Name,
+      "portalDescription" : (Description)?,
+      "portalContactEmail" : Email,
+      "clientToken" : (ClientToken)?,
+      "portalLogoImageFile" : (ImageFile)?,
+      "roleArn" : ARN,
+      "tags" : (TagMap)?,
+      "portalAuthMode" : (AuthMode)?
+    )
+
+    alias CreatePortalResponse = NamedTuple(
+      "portalId" : ID,
+      "portalArn" : ARN,
+      "portalStartUrl" : Url,
+      "portalStatus" : PortalStatus,
+      "ssoApplicationId" : SSOApplicationId
+    )
+
+    alias CreateProjectRequest = NamedTuple(
+      "portalId" : ID,
+      "projectName" : Name,
+      "projectDescription" : (Description)?,
+      "clientToken" : (ClientToken)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateProjectResponse = NamedTuple(
+      "projectId" : ID,
+      "projectArn" : ARN
+    )
+
+    alias DashboardDefinition = String
+
+    alias DashboardSummaries = Array(DashboardSummary)
+
+    alias DashboardSummary = NamedTuple(
+      "id" : ID,
+      "name" : Name,
+      "description" : (Description)?,
+      "creationDate" : (Timestamp)?,
+      "lastUpdateDate" : (Timestamp)?
+    )
+
+    alias DefaultValue = String
+
+    alias DeleteAccessPolicyRequest = NamedTuple(
+      "accessPolicyId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias DeleteAccessPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAssetModelRequest = NamedTuple(
+      "assetModelId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias DeleteAssetModelResponse = NamedTuple(
+      "assetModelStatus" : AssetModelStatus
+    )
+
+    alias DeleteAssetRequest = NamedTuple(
+      "assetId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias DeleteAssetResponse = NamedTuple(
+      "assetStatus" : AssetStatus
+    )
+
+    alias DeleteDashboardRequest = NamedTuple(
+      "dashboardId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias DeleteDashboardResponse = NamedTuple(
+      
+    )
+
+    alias DeleteGatewayRequest = NamedTuple(
+      "gatewayId" : ID
+    )
+
+    alias DeletePortalRequest = NamedTuple(
+      "portalId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias DeletePortalResponse = NamedTuple(
+      "portalStatus" : PortalStatus
+    )
+
+    alias DeleteProjectRequest = NamedTuple(
+      "projectId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias DeleteProjectResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAccessPolicyRequest = NamedTuple(
+      "accessPolicyId" : ID
+    )
+
+    alias DescribeAccessPolicyResponse = NamedTuple(
+      "accessPolicyId" : ID,
+      "accessPolicyArn" : ARN,
+      "accessPolicyIdentity" : Identity,
+      "accessPolicyResource" : Resource,
+      "accessPolicyPermission" : Permission,
+      "accessPolicyCreationDate" : Timestamp,
+      "accessPolicyLastUpdateDate" : Timestamp
+    )
+
+    alias DescribeAssetModelRequest = NamedTuple(
+      "assetModelId" : ID
+    )
+
+    alias DescribeAssetModelResponse = NamedTuple(
+      "assetModelId" : ID,
+      "assetModelArn" : ARN,
+      "assetModelName" : Name,
+      "assetModelDescription" : Description,
+      "assetModelProperties" : AssetModelProperties,
+      "assetModelHierarchies" : AssetModelHierarchies,
+      "assetModelCompositeModels" : (AssetModelCompositeModels)?,
+      "assetModelCreationDate" : Timestamp,
+      "assetModelLastUpdateDate" : Timestamp,
+      "assetModelStatus" : AssetModelStatus
+    )
+
+    alias DescribeAssetPropertyRequest = NamedTuple(
+      "assetId" : ID,
+      "propertyId" : ID
+    )
+
+    alias DescribeAssetPropertyResponse = NamedTuple(
+      "assetId" : ID,
+      "assetName" : Name,
+      "assetModelId" : ID,
+      "assetProperty" : (Property)?,
+      "compositeModel" : (CompositeModelProperty)?
+    )
+
+    alias DescribeAssetRequest = NamedTuple(
+      "assetId" : ID
+    )
+
+    alias DescribeAssetResponse = NamedTuple(
+      "assetId" : ID,
+      "assetArn" : ARN,
+      "assetName" : Name,
+      "assetModelId" : ID,
+      "assetProperties" : AssetProperties,
+      "assetHierarchies" : AssetHierarchies,
+      "assetCompositeModels" : (AssetCompositeModels)?,
+      "assetCreationDate" : Timestamp,
+      "assetLastUpdateDate" : Timestamp,
+      "assetStatus" : AssetStatus
+    )
+
+    alias DescribeDashboardRequest = NamedTuple(
+      "dashboardId" : ID
+    )
+
+    alias DescribeDashboardResponse = NamedTuple(
+      "dashboardId" : ID,
+      "dashboardArn" : ARN,
+      "dashboardName" : Name,
+      "projectId" : ID,
+      "dashboardDescription" : (Description)?,
+      "dashboardDefinition" : DashboardDefinition,
+      "dashboardCreationDate" : Timestamp,
+      "dashboardLastUpdateDate" : Timestamp
+    )
+
+    alias DescribeDefaultEncryptionConfigurationRequest = NamedTuple(
+      
+    )
+
+    alias DescribeDefaultEncryptionConfigurationResponse = NamedTuple(
+      "encryptionType" : EncryptionType,
+      "kmsKeyArn" : (ARN)?,
+      "configurationStatus" : ConfigurationStatus
+    )
+
+    alias DescribeGatewayCapabilityConfigurationRequest = NamedTuple(
+      "gatewayId" : ID,
+      "capabilityNamespace" : CapabilityNamespace
+    )
+
+    alias DescribeGatewayCapabilityConfigurationResponse = NamedTuple(
+      "gatewayId" : ID,
+      "capabilityNamespace" : CapabilityNamespace,
+      "capabilityConfiguration" : CapabilityConfiguration,
+      "capabilitySyncStatus" : CapabilitySyncStatus
+    )
+
+    alias DescribeGatewayRequest = NamedTuple(
+      "gatewayId" : ID
+    )
+
+    alias DescribeGatewayResponse = NamedTuple(
+      "gatewayId" : ID,
+      "gatewayName" : Name,
+      "gatewayArn" : ARN,
+      "gatewayPlatform" : (GatewayPlatform)?,
+      "gatewayCapabilitySummaries" : GatewayCapabilitySummaries,
+      "creationDate" : Timestamp,
+      "lastUpdateDate" : Timestamp
+    )
+
+    alias DescribeLoggingOptionsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeLoggingOptionsResponse = NamedTuple(
+      "loggingOptions" : LoggingOptions
+    )
+
+    alias DescribePortalRequest = NamedTuple(
+      "portalId" : ID
+    )
+
+    alias DescribePortalResponse = NamedTuple(
+      "portalId" : ID,
+      "portalArn" : ARN,
+      "portalName" : Name,
+      "portalDescription" : (Description)?,
+      "portalClientId" : PortalClientId,
+      "portalStartUrl" : Url,
+      "portalContactEmail" : Email,
+      "portalStatus" : PortalStatus,
+      "portalCreationDate" : Timestamp,
+      "portalLastUpdateDate" : Timestamp,
+      "portalLogoImageLocation" : (ImageLocation)?,
+      "roleArn" : (ARN)?,
+      "portalAuthMode" : (AuthMode)?
+    )
+
+    alias DescribeProjectRequest = NamedTuple(
+      "projectId" : ID
+    )
+
+    alias DescribeProjectResponse = NamedTuple(
+      "projectId" : ID,
+      "projectArn" : ARN,
+      "projectName" : Name,
+      "portalId" : ID,
+      "projectDescription" : (Description)?,
+      "projectCreationDate" : Timestamp,
+      "projectLastUpdateDate" : Timestamp
+    )
+
+    alias Description = String
+
+    alias DisassociateAssetsRequest = NamedTuple(
+      "assetId" : ID,
+      "hierarchyId" : ID,
+      "childAssetId" : ID,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias Email = String
+
+    alias EncryptionType = String
+
+    alias EntryId = String
+
+    alias ErrorCode = String
+
+    alias ErrorDetails = NamedTuple(
+      "code" : ErrorCode,
+      "message" : ErrorMessage
+    )
+
+    alias ErrorMessage = String
+
+    alias ExceptionMessage = String
+
+    alias Expression = String
+
+    alias ExpressionVariable = NamedTuple(
+      "name" : VariableName,
+      "value" : VariableValue
+    )
+
+    alias ExpressionVariables = Array(ExpressionVariable)
+
+    alias GatewayCapabilitySummaries = Array(GatewayCapabilitySummary)
+
+    alias GatewayCapabilitySummary = NamedTuple(
+      "capabilityNamespace" : CapabilityNamespace,
+      "capabilitySyncStatus" : CapabilitySyncStatus
+    )
+
+    alias GatewayPlatform = NamedTuple(
+      "greengrass" : Greengrass
+    )
+
+    alias GatewaySummaries = Array(GatewaySummary)
+
+    alias GatewaySummary = NamedTuple(
+      "gatewayId" : ID,
+      "gatewayName" : Name,
+      "gatewayCapabilitySummaries" : (GatewayCapabilitySummaries)?,
+      "creationDate" : Timestamp,
+      "lastUpdateDate" : Timestamp
+    )
+
+    alias GetAssetPropertyAggregatesRequest = NamedTuple(
+      "assetId" : (ID)?,
+      "propertyId" : (ID)?,
+      "propertyAlias" : (AssetPropertyAlias)?,
+      "aggregateTypes" : AggregateTypes,
+      "resolution" : Resolution,
+      "qualities" : (Qualities)?,
+      "startDate" : Timestamp,
+      "endDate" : Timestamp,
+      "timeOrdering" : (TimeOrdering)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetAssetPropertyAggregatesResponse = NamedTuple(
+      "aggregatedValues" : AggregatedValues,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetAssetPropertyValueHistoryRequest = NamedTuple(
+      "assetId" : (ID)?,
+      "propertyId" : (ID)?,
+      "propertyAlias" : (AssetPropertyAlias)?,
+      "startDate" : (Timestamp)?,
+      "endDate" : (Timestamp)?,
+      "qualities" : (Qualities)?,
+      "timeOrdering" : (TimeOrdering)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetAssetPropertyValueHistoryResponse = NamedTuple(
+      "assetPropertyValueHistory" : AssetPropertyValueHistory,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetAssetPropertyValueRequest = NamedTuple(
+      "assetId" : (ID)?,
+      "propertyId" : (ID)?,
+      "propertyAlias" : (AssetPropertyAlias)?
+    )
+
+    alias GetAssetPropertyValueResponse = NamedTuple(
+      "propertyValue" : (AssetPropertyValue)?
+    )
+
+    alias Greengrass = NamedTuple(
+      "groupArn" : ARN
+    )
+
+    alias GroupIdentity = NamedTuple(
+      "id" : IdentityId
+    )
+
+    alias IAMUserIdentity = NamedTuple(
+      "arn" : ARN
+    )
+
+    alias ID = String
+
+    alias IDs = Array(ID)
+
+    alias Identity = NamedTuple(
+      "user" : (UserIdentity)?,
+      "group" : (GroupIdentity)?,
+      "iamUser" : (IAMUserIdentity)?
+    )
+
+    alias IdentityId = String
+
+    alias IdentityType = String
+
+    alias Image = NamedTuple(
+      "id" : (ID)?,
+      "file" : (ImageFile)?
+    )
+
+    alias ImageFile = NamedTuple(
+      "data" : ImageFileData,
+      "type" : ImageFileType
+    )
+
+    alias ImageFileData = String | Array(UInt8) | IO
+
+    alias ImageFileType = String
+
+    alias ImageLocation = NamedTuple(
+      "id" : ID,
+      "url" : Url
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias Interval = String
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias KmsKeyId = String
+
+    alias LimitExceededException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias ListAccessPoliciesRequest = NamedTuple(
+      "identityType" : (IdentityType)?,
+      "identityId" : (IdentityId)?,
+      "resourceType" : (ResourceType)?,
+      "resourceId" : (ID)?,
+      "iamArn" : (ARN)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAccessPoliciesResponse = NamedTuple(
+      "accessPolicySummaries" : AccessPolicySummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssetModelsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssetModelsResponse = NamedTuple(
+      "assetModelSummaries" : AssetModelSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssetRelationshipsRequest = NamedTuple(
+      "assetId" : ID,
+      "traversalType" : TraversalType,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssetRelationshipsResponse = NamedTuple(
+      "assetRelationshipSummaries" : AssetRelationshipSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssetsFilter = String
+
+    alias ListAssetsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "assetModelId" : (ID)?,
+      "filter" : (ListAssetsFilter)?
+    )
+
+    alias ListAssetsResponse = NamedTuple(
+      "assetSummaries" : AssetSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssociatedAssetsRequest = NamedTuple(
+      "assetId" : ID,
+      "hierarchyId" : (ID)?,
+      "traversalDirection" : (TraversalDirection)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssociatedAssetsResponse = NamedTuple(
+      "assetSummaries" : AssociatedAssetsSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDashboardsRequest = NamedTuple(
+      "projectId" : ID,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDashboardsResponse = NamedTuple(
+      "dashboardSummaries" : DashboardSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListGatewaysRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListGatewaysResponse = NamedTuple(
+      "gatewaySummaries" : GatewaySummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPortalsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPortalsResponse = NamedTuple(
+      "portalSummaries" : (PortalSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProjectAssetsRequest = NamedTuple(
+      "projectId" : ID,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListProjectAssetsResponse = NamedTuple(
+      "assetIds" : AssetIDs,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "portalId" : ID,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListProjectsResponse = NamedTuple(
+      "projectSummaries" : ProjectSummaries,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias LoggingLevel = String
+
+    alias LoggingOptions = NamedTuple(
+      "level" : LoggingLevel
+    )
+
+    alias Macro = String
+
+    alias MaxResults = Int32
+
+    alias Measurement = NamedTuple(
+      
+    )
+
+    alias Metric = NamedTuple(
+      "expression" : Expression,
+      "variables" : ExpressionVariables,
+      "window" : MetricWindow
+    )
+
+    alias MetricWindow = NamedTuple(
+      "tumbling" : (TumblingWindow)?
+    )
+
+    alias MonitorErrorCode = String
+
+    alias MonitorErrorDetails = NamedTuple(
+      "code" : (MonitorErrorCode)?,
+      "message" : (MonitorErrorMessage)?
+    )
+
+    alias MonitorErrorMessage = String
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias OffsetInNanos = Int32
+
+    alias Permission = String
+
+    alias PortalClientId = String
+
+    alias PortalResource = NamedTuple(
+      "id" : ID
+    )
+
+    alias PortalState = String
+
+    alias PortalStatus = NamedTuple(
+      "state" : PortalState,
+      "error" : (MonitorErrorDetails)?
+    )
+
+    alias PortalSummaries = Array(PortalSummary)
+
+    alias PortalSummary = NamedTuple(
+      "id" : ID,
+      "name" : Name,
+      "description" : (Description)?,
+      "startUrl" : Url,
+      "creationDate" : (Timestamp)?,
+      "lastUpdateDate" : (Timestamp)?,
+      "roleArn" : (ARN)?,
+      "status" : PortalStatus
+    )
+
+    alias ProjectResource = NamedTuple(
+      "id" : ID
+    )
+
+    alias ProjectSummaries = Array(ProjectSummary)
+
+    alias ProjectSummary = NamedTuple(
+      "id" : ID,
+      "name" : Name,
+      "description" : (Description)?,
+      "creationDate" : (Timestamp)?,
+      "lastUpdateDate" : (Timestamp)?
+    )
+
+    alias Property = NamedTuple(
+      "id" : ID,
+      "name" : Name,
+      "alias" : (PropertyAlias)?,
+      "notification" : (PropertyNotification)?,
+      "dataType" : PropertyDataType,
+      "unit" : (PropertyUnit)?,
+      "type" : (PropertyType)?
+    )
+
+    alias PropertyAlias = String
+
+    alias PropertyDataType = String
+
+    alias PropertyNotification = NamedTuple(
+      "topic" : PropertyNotificationTopic,
+      "state" : PropertyNotificationState
+    )
+
+    alias PropertyNotificationState = String
+
+    alias PropertyNotificationTopic = String
+
+    alias PropertyType = NamedTuple(
+      "attribute" : (Attribute)?,
+      "measurement" : (Measurement)?,
+      "transform" : (Transform)?,
+      "metric" : (Metric)?
+    )
+
+    alias PropertyUnit = String
+
+    alias PropertyValueBooleanValue = Bool
+
+    alias PropertyValueDoubleValue = Float64
+
+    alias PropertyValueIntegerValue = Int32
+
+    alias PropertyValueStringValue = String
+
+    alias PutAssetPropertyValueEntries = Array(PutAssetPropertyValueEntry)
+
+    alias PutAssetPropertyValueEntry = NamedTuple(
+      "entryId" : EntryId,
+      "assetId" : (ID)?,
+      "propertyId" : (ID)?,
+      "propertyAlias" : (AssetPropertyAlias)?,
+      "propertyValues" : AssetPropertyValues
+    )
+
+    alias PutDefaultEncryptionConfigurationRequest = NamedTuple(
+      "encryptionType" : EncryptionType,
+      "kmsKeyId" : (KmsKeyId)?
+    )
+
+    alias PutDefaultEncryptionConfigurationResponse = NamedTuple(
+      "encryptionType" : EncryptionType,
+      "kmsKeyArn" : (ARN)?,
+      "configurationStatus" : ConfigurationStatus
+    )
+
+    alias PutLoggingOptionsRequest = NamedTuple(
+      "loggingOptions" : LoggingOptions
+    )
+
+    alias PutLoggingOptionsResponse = NamedTuple(
+      
+    )
+
+    alias Qualities = Array(Quality)
+
+    alias Quality = String
+
+    alias Resolution = String
+
+    alias Resource = NamedTuple(
+      "portal" : (PortalResource)?,
+      "project" : (ProjectResource)?
+    )
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : ErrorMessage,
+      "resourceId" : ResourceId,
+      "resourceArn" : ResourceArn
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceId = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias ResourceType = String
+
+    alias SSOApplicationId = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias TimeInNanos = NamedTuple(
+      "timeInSeconds" : TimeInSeconds,
+      "offsetInNanos" : (OffsetInNanos)?
+    )
+
+    alias TimeInSeconds = Int64
+
+    alias TimeOrdering = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Timestamps = Array(TimeInNanos)
+
+    alias TooManyTagsException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "resourceName" : (AmazonResourceName)?
+    )
+
+    alias Transform = NamedTuple(
+      "expression" : Expression,
+      "variables" : ExpressionVariables
+    )
+
+    alias TraversalDirection = String
+
+    alias TraversalType = String
+
+    alias TumblingWindow = NamedTuple(
+      "interval" : Interval
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAccessPolicyRequest = NamedTuple(
+      "accessPolicyId" : ID,
+      "accessPolicyIdentity" : Identity,
+      "accessPolicyResource" : Resource,
+      "accessPolicyPermission" : Permission,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdateAccessPolicyResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAssetModelRequest = NamedTuple(
+      "assetModelId" : ID,
+      "assetModelName" : Name,
+      "assetModelDescription" : (Description)?,
+      "assetModelProperties" : (AssetModelProperties)?,
+      "assetModelHierarchies" : (AssetModelHierarchies)?,
+      "assetModelCompositeModels" : (AssetModelCompositeModels)?,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdateAssetModelResponse = NamedTuple(
+      "assetModelStatus" : AssetModelStatus
+    )
+
+    alias UpdateAssetPropertyRequest = NamedTuple(
+      "assetId" : ID,
+      "propertyId" : ID,
+      "propertyAlias" : (PropertyAlias)?,
+      "propertyNotificationState" : (PropertyNotificationState)?,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdateAssetRequest = NamedTuple(
+      "assetId" : ID,
+      "assetName" : Name,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdateAssetResponse = NamedTuple(
+      "assetStatus" : AssetStatus
+    )
+
+    alias UpdateDashboardRequest = NamedTuple(
+      "dashboardId" : ID,
+      "dashboardName" : Name,
+      "dashboardDescription" : (Description)?,
+      "dashboardDefinition" : DashboardDefinition,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdateDashboardResponse = NamedTuple(
+      
+    )
+
+    alias UpdateGatewayCapabilityConfigurationRequest = NamedTuple(
+      "gatewayId" : ID,
+      "capabilityNamespace" : CapabilityNamespace,
+      "capabilityConfiguration" : CapabilityConfiguration
+    )
+
+    alias UpdateGatewayCapabilityConfigurationResponse = NamedTuple(
+      "capabilityNamespace" : CapabilityNamespace,
+      "capabilitySyncStatus" : CapabilitySyncStatus
+    )
+
+    alias UpdateGatewayRequest = NamedTuple(
+      "gatewayId" : ID,
+      "gatewayName" : Name
+    )
+
+    alias UpdatePortalRequest = NamedTuple(
+      "portalId" : ID,
+      "portalName" : Name,
+      "portalDescription" : (Description)?,
+      "portalContactEmail" : Email,
+      "portalLogoImage" : (Image)?,
+      "roleArn" : ARN,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdatePortalResponse = NamedTuple(
+      "portalStatus" : PortalStatus
+    )
+
+    alias UpdateProjectRequest = NamedTuple(
+      "projectId" : ID,
+      "projectName" : Name,
+      "projectDescription" : (Description)?,
+      "clientToken" : (ClientToken)?
+    )
+
+    alias UpdateProjectResponse = NamedTuple(
+      
+    )
+
+    alias Url = String
+
+    alias UserIdentity = NamedTuple(
+      "id" : IdentityId
+    )
+
+    alias VariableName = String
+
+    alias VariableValue = NamedTuple(
+      "propertyId" : Macro,
+      "hierarchyId" : (Macro)?
+    )
+
+    alias Variant = NamedTuple(
+      "stringValue" : (PropertyValueStringValue)?,
+      "integerValue" : (PropertyValueIntegerValue)?,
+      "doubleValue" : (PropertyValueDoubleValue)?,
+      "booleanValue" : (PropertyValueBooleanValue)?
+    )
   end
 end

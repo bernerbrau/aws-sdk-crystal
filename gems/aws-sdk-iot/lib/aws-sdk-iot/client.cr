@@ -351,8 +351,8 @@ module Aws::IoT
     #
     # @overload accept_certificate_transfer(**params)
     # @param [Hash] params ({})
-    def accept_certificate_transfer(params = {}, **options)
-      req = build_request(:accept_certificate_transfer, params)
+    def accept_certificate_transfer(, **options)
+      req = build_request(:accept_certificate_transfer, )
       req.send_request(options)
     end
 
@@ -383,8 +383,8 @@ module Aws::IoT
     #
     # @overload add_thing_to_billing_group(**params)
     # @param [Hash] params ({})
-    def add_thing_to_billing_group(params = {}, **options)
-      req = build_request(:add_thing_to_billing_group, params)
+    def add_thing_to_billing_group(, **options)
+      req = build_request(:add_thing_to_billing_group, )
       req.send_request(options)
     end
 
@@ -422,8 +422,8 @@ module Aws::IoT
     #
     # @overload add_thing_to_thing_group(**params)
     # @param [Hash] params ({})
-    def add_thing_to_thing_group(params = {}, **options)
-      req = build_request(:add_thing_to_thing_group, params)
+    def add_thing_to_thing_group(, **options)
+      req = build_request(:add_thing_to_thing_group, )
       req.send_request(options)
     end
 
@@ -484,8 +484,8 @@ module Aws::IoT
     #
     # @overload associate_targets_with_job(**params)
     # @param [Hash] params ({})
-    def associate_targets_with_job(params = {}, **options)
-      req = build_request(:associate_targets_with_job, params)
+    def associate_targets_with_job(, **options)
+      req = build_request(:associate_targets_with_job, )
       req.send_request(options)
     end
 
@@ -512,8 +512,8 @@ module Aws::IoT
     #
     # @overload attach_policy(**params)
     # @param [Hash] params ({})
-    def attach_policy(params = {}, **options)
-      req = build_request(:attach_policy, params)
+    def attach_policy(, **options)
+      req = build_request(:attach_policy, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::IoT
     #
     # @overload attach_principal_policy(**params)
     # @param [Hash] params ({})
-    def attach_principal_policy(params = {}, **options)
-      req = build_request(:attach_principal_policy, params)
+    def attach_principal_policy(, **options)
+      req = build_request(:attach_principal_policy, )
       req.send_request(options)
     end
 
@@ -567,8 +567,8 @@ module Aws::IoT
     #
     # @overload attach_security_profile(**params)
     # @param [Hash] params ({})
-    def attach_security_profile(params = {}, **options)
-      req = build_request(:attach_security_profile, params)
+    def attach_security_profile(, **options)
+      req = build_request(:attach_security_profile, )
       req.send_request(options)
     end
 
@@ -594,8 +594,8 @@ module Aws::IoT
     #
     # @overload attach_thing_principal(**params)
     # @param [Hash] params ({})
-    def attach_thing_principal(params = {}, **options)
-      req = build_request(:attach_thing_principal, params)
+    def attach_thing_principal(, **options)
+      req = build_request(:attach_thing_principal, )
       req.send_request(options)
     end
 
@@ -615,8 +615,8 @@ module Aws::IoT
     #
     # @overload cancel_audit_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def cancel_audit_mitigation_actions_task(params = {}, **options)
-      req = build_request(:cancel_audit_mitigation_actions_task, params)
+    def cancel_audit_mitigation_actions_task(, **options)
+      req = build_request(:cancel_audit_mitigation_actions_task, )
       req.send_request(options)
     end
 
@@ -638,8 +638,8 @@ module Aws::IoT
     #
     # @overload cancel_audit_task(**params)
     # @param [Hash] params ({})
-    def cancel_audit_task(params = {}, **options)
-      req = build_request(:cancel_audit_task, params)
+    def cancel_audit_task(, **options)
+      req = build_request(:cancel_audit_task, )
       req.send_request(options)
     end
 
@@ -669,8 +669,8 @@ module Aws::IoT
     #
     # @overload cancel_certificate_transfer(**params)
     # @param [Hash] params ({})
-    def cancel_certificate_transfer(params = {}, **options)
-      req = build_request(:cancel_certificate_transfer, params)
+    def cancel_certificate_transfer(, **options)
+      req = build_request(:cancel_certificate_transfer, )
       req.send_request(options)
     end
 
@@ -689,8 +689,8 @@ module Aws::IoT
     #
     # @overload cancel_detect_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def cancel_detect_mitigation_actions_task(params = {}, **options)
-      req = build_request(:cancel_detect_mitigation_actions_task, params)
+    def cancel_detect_mitigation_actions_task(, **options)
+      req = build_request(:cancel_detect_mitigation_actions_task, )
       req.send_request(options)
     end
 
@@ -738,8 +738,8 @@ module Aws::IoT
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -793,8 +793,8 @@ module Aws::IoT
     #
     # @overload cancel_job_execution(**params)
     # @param [Hash] params ({})
-    def cancel_job_execution(params = {}, **options)
-      req = build_request(:cancel_job_execution, params)
+    def cancel_job_execution(, **options)
+      req = build_request(:cancel_job_execution, )
       req.send_request(options)
     end
 
@@ -804,8 +804,8 @@ module Aws::IoT
     #
     # @overload clear_default_authorizer(**params)
     # @param [Hash] params ({})
-    def clear_default_authorizer(params = {}, **options)
-      req = build_request(:clear_default_authorizer, params)
+    def clear_default_authorizer(, **options)
+      req = build_request(:clear_default_authorizer, )
       req.send_request(options)
     end
 
@@ -829,8 +829,8 @@ module Aws::IoT
     #
     # @overload confirm_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def confirm_topic_rule_destination(params = {}, **options)
-      req = build_request(:confirm_topic_rule_destination, params)
+    def confirm_topic_rule_destination(, **options)
+      req = build_request(:confirm_topic_rule_destination, )
       req.send_request(options)
     end
 
@@ -887,8 +887,8 @@ module Aws::IoT
     #
     # @overload create_audit_suppression(**params)
     # @param [Hash] params ({})
-    def create_audit_suppression(params = {}, **options)
-      req = build_request(:create_audit_suppression, params)
+    def create_audit_suppression(, **options)
+      req = build_request(:create_audit_suppression, )
       req.send_request(options)
     end
 
@@ -960,8 +960,8 @@ module Aws::IoT
     #
     # @overload create_authorizer(**params)
     # @param [Hash] params ({})
-    def create_authorizer(params = {}, **options)
-      req = build_request(:create_authorizer, params)
+    def create_authorizer(, **options)
+      req = build_request(:create_authorizer, )
       req.send_request(options)
     end
 
@@ -1005,8 +1005,8 @@ module Aws::IoT
     #
     # @overload create_billing_group(**params)
     # @param [Hash] params ({})
-    def create_billing_group(params = {}, **options)
-      req = build_request(:create_billing_group, params)
+    def create_billing_group(, **options)
+      req = build_request(:create_billing_group, )
       req.send_request(options)
     end
 
@@ -1086,8 +1086,8 @@ module Aws::IoT
     #
     # @overload create_certificate_from_csr(**params)
     # @param [Hash] params ({})
-    def create_certificate_from_csr(params = {}, **options)
-      req = build_request(:create_certificate_from_csr, params)
+    def create_certificate_from_csr(, **options)
+      req = build_request(:create_certificate_from_csr, )
       req.send_request(options)
     end
 
@@ -1147,8 +1147,8 @@ module Aws::IoT
     #
     # @overload create_custom_metric(**params)
     # @param [Hash] params ({})
-    def create_custom_metric(params = {}, **options)
-      req = build_request(:create_custom_metric, params)
+    def create_custom_metric(, **options)
+      req = build_request(:create_custom_metric, )
       req.send_request(options)
     end
 
@@ -1209,8 +1209,8 @@ module Aws::IoT
     #
     # @overload create_dimension(**params)
     # @param [Hash] params ({})
-    def create_dimension(params = {}, **options)
-      req = build_request(:create_dimension, params)
+    def create_dimension(, **options)
+      req = build_request(:create_dimension, )
       req.send_request(options)
     end
 
@@ -1295,8 +1295,8 @@ module Aws::IoT
     #
     # @overload create_domain_configuration(**params)
     # @param [Hash] params ({})
-    def create_domain_configuration(params = {}, **options)
-      req = build_request(:create_domain_configuration, params)
+    def create_domain_configuration(, **options)
+      req = build_request(:create_domain_configuration, )
       req.send_request(options)
     end
 
@@ -1379,8 +1379,8 @@ module Aws::IoT
     #
     # @overload create_dynamic_thing_group(**params)
     # @param [Hash] params ({})
-    def create_dynamic_thing_group(params = {}, **options)
-      req = build_request(:create_dynamic_thing_group, params)
+    def create_dynamic_thing_group(, **options)
+      req = build_request(:create_dynamic_thing_group, )
       req.send_request(options)
     end
 
@@ -1515,8 +1515,8 @@ module Aws::IoT
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -1558,8 +1558,8 @@ module Aws::IoT
     #
     # @overload create_keys_and_certificate(**params)
     # @param [Hash] params ({})
-    def create_keys_and_certificate(params = {}, **options)
-      req = build_request(:create_keys_and_certificate, params)
+    def create_keys_and_certificate(, **options)
+      req = build_request(:create_keys_and_certificate, )
       req.send_request(options)
     end
 
@@ -1633,8 +1633,8 @@ module Aws::IoT
     #
     # @overload create_mitigation_action(**params)
     # @param [Hash] params ({})
-    def create_mitigation_action(params = {}, **options)
-      req = build_request(:create_mitigation_action, params)
+    def create_mitigation_action(, **options)
+      req = build_request(:create_mitigation_action, )
       req.send_request(options)
     end
 
@@ -1806,8 +1806,8 @@ module Aws::IoT
     #
     # @overload create_ota_update(**params)
     # @param [Hash] params ({})
-    def create_ota_update(params = {}, **options)
-      req = build_request(:create_ota_update, params)
+    def create_ota_update(, **options)
+      req = build_request(:create_ota_update, )
       req.send_request(options)
     end
 
@@ -1868,8 +1868,8 @@ module Aws::IoT
     #
     # @overload create_policy(**params)
     # @param [Hash] params ({})
-    def create_policy(params = {}, **options)
-      req = build_request(:create_policy, params)
+    def create_policy(, **options)
+      req = build_request(:create_policy, )
       req.send_request(options)
     end
 
@@ -1921,8 +1921,8 @@ module Aws::IoT
     #
     # @overload create_policy_version(**params)
     # @param [Hash] params ({})
-    def create_policy_version(params = {}, **options)
-      req = build_request(:create_policy_version, params)
+    def create_policy_version(, **options)
+      req = build_request(:create_policy_version, )
       req.send_request(options)
     end
 
@@ -1954,8 +1954,8 @@ module Aws::IoT
     #
     # @overload create_provisioning_claim(**params)
     # @param [Hash] params ({})
-    def create_provisioning_claim(params = {}, **options)
-      req = build_request(:create_provisioning_claim, params)
+    def create_provisioning_claim(, **options)
+      req = build_request(:create_provisioning_claim, )
       req.send_request(options)
     end
 
@@ -2028,8 +2028,8 @@ module Aws::IoT
     #
     # @overload create_provisioning_template(**params)
     # @param [Hash] params ({})
-    def create_provisioning_template(params = {}, **options)
-      req = build_request(:create_provisioning_template, params)
+    def create_provisioning_template(, **options)
+      req = build_request(:create_provisioning_template, )
       req.send_request(options)
     end
 
@@ -2068,8 +2068,8 @@ module Aws::IoT
     #
     # @overload create_provisioning_template_version(**params)
     # @param [Hash] params ({})
-    def create_provisioning_template_version(params = {}, **options)
-      req = build_request(:create_provisioning_template_version, params)
+    def create_provisioning_template_version(, **options)
+      req = build_request(:create_provisioning_template_version, )
       req.send_request(options)
     end
 
@@ -2125,8 +2125,8 @@ module Aws::IoT
     #
     # @overload create_role_alias(**params)
     # @param [Hash] params ({})
-    def create_role_alias(params = {}, **options)
-      req = build_request(:create_role_alias, params)
+    def create_role_alias(, **options)
+      req = build_request(:create_role_alias, )
       req.send_request(options)
     end
 
@@ -2188,8 +2188,8 @@ module Aws::IoT
     #
     # @overload create_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def create_scheduled_audit(params = {}, **options)
-      req = build_request(:create_scheduled_audit, params)
+    def create_scheduled_audit(, **options)
+      req = build_request(:create_scheduled_audit, )
       req.send_request(options)
     end
 
@@ -2300,8 +2300,8 @@ module Aws::IoT
     #
     # @overload create_security_profile(**params)
     # @param [Hash] params ({})
-    def create_security_profile(params = {}, **options)
-      req = build_request(:create_security_profile, params)
+    def create_security_profile(, **options)
+      req = build_request(:create_security_profile, )
       req.send_request(options)
     end
 
@@ -2366,8 +2366,8 @@ module Aws::IoT
     #
     # @overload create_stream(**params)
     # @param [Hash] params ({})
-    def create_stream(params = {}, **options)
-      req = build_request(:create_stream, params)
+    def create_stream(, **options)
+      req = build_request(:create_stream, )
       req.send_request(options)
     end
 
@@ -2432,8 +2432,8 @@ module Aws::IoT
     #
     # @overload create_thing(**params)
     # @param [Hash] params ({})
-    def create_thing(params = {}, **options)
-      req = build_request(:create_thing, params)
+    def create_thing(, **options)
+      req = build_request(:create_thing, )
       req.send_request(options)
     end
 
@@ -2496,8 +2496,8 @@ module Aws::IoT
     #
     # @overload create_thing_group(**params)
     # @param [Hash] params ({})
-    def create_thing_group(params = {}, **options)
-      req = build_request(:create_thing_group, params)
+    def create_thing_group(, **options)
+      req = build_request(:create_thing_group, )
       req.send_request(options)
     end
 
@@ -2544,8 +2544,8 @@ module Aws::IoT
     #
     # @overload create_thing_type(**params)
     # @param [Hash] params ({})
-    def create_thing_type(params = {}, **options)
-      req = build_request(:create_thing_type, params)
+    def create_thing_type(, **options)
+      req = build_request(:create_thing_type, )
       req.send_request(options)
     end
 
@@ -2928,8 +2928,8 @@ module Aws::IoT
     #
     # @overload create_topic_rule(**params)
     # @param [Hash] params ({})
-    def create_topic_rule(params = {}, **options)
-      req = build_request(:create_topic_rule, params)
+    def create_topic_rule(, **options)
+      req = build_request(:create_topic_rule, )
       req.send_request(options)
     end
 
@@ -2976,8 +2976,8 @@ module Aws::IoT
     #
     # @overload create_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def create_topic_rule_destination(params = {}, **options)
-      req = build_request(:create_topic_rule_destination, params)
+    def create_topic_rule_destination(, **options)
+      req = build_request(:create_topic_rule_destination, )
       req.send_request(options)
     end
 
@@ -2998,8 +2998,8 @@ module Aws::IoT
     #
     # @overload delete_account_audit_configuration(**params)
     # @param [Hash] params ({})
-    def delete_account_audit_configuration(params = {}, **options)
-      req = build_request(:delete_account_audit_configuration, params)
+    def delete_account_audit_configuration(, **options)
+      req = build_request(:delete_account_audit_configuration, )
       req.send_request(options)
     end
 
@@ -3037,8 +3037,8 @@ module Aws::IoT
     #
     # @overload delete_audit_suppression(**params)
     # @param [Hash] params ({})
-    def delete_audit_suppression(params = {}, **options)
-      req = build_request(:delete_audit_suppression, params)
+    def delete_audit_suppression(, **options)
+      req = build_request(:delete_audit_suppression, )
       req.send_request(options)
     end
 
@@ -3057,8 +3057,8 @@ module Aws::IoT
     #
     # @overload delete_authorizer(**params)
     # @param [Hash] params ({})
-    def delete_authorizer(params = {}, **options)
-      req = build_request(:delete_authorizer, params)
+    def delete_authorizer(, **options)
+      req = build_request(:delete_authorizer, )
       req.send_request(options)
     end
 
@@ -3084,8 +3084,8 @@ module Aws::IoT
     #
     # @overload delete_billing_group(**params)
     # @param [Hash] params ({})
-    def delete_billing_group(params = {}, **options)
-      req = build_request(:delete_billing_group, params)
+    def delete_billing_group(, **options)
+      req = build_request(:delete_billing_group, )
       req.send_request(options)
     end
 
@@ -3105,8 +3105,8 @@ module Aws::IoT
     #
     # @overload delete_ca_certificate(**params)
     # @param [Hash] params ({})
-    def delete_ca_certificate(params = {}, **options)
-      req = build_request(:delete_ca_certificate, params)
+    def delete_ca_certificate(, **options)
+      req = build_request(:delete_ca_certificate, )
       req.send_request(options)
     end
 
@@ -3137,8 +3137,8 @@ module Aws::IoT
     #
     # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, **options)
-      req = build_request(:delete_certificate, params)
+    def delete_certificate(, **options)
+      req = build_request(:delete_certificate, )
       req.send_request(options)
     end
 
@@ -3169,8 +3169,8 @@ module Aws::IoT
     #
     # @overload delete_custom_metric(**params)
     # @param [Hash] params ({})
-    def delete_custom_metric(params = {}, **options)
-      req = build_request(:delete_custom_metric, params)
+    def delete_custom_metric(, **options)
+      req = build_request(:delete_custom_metric, )
       req.send_request(options)
     end
 
@@ -3189,8 +3189,8 @@ module Aws::IoT
     #
     # @overload delete_dimension(**params)
     # @param [Hash] params ({})
-    def delete_dimension(params = {}, **options)
-      req = build_request(:delete_dimension, params)
+    def delete_dimension(, **options)
+      req = build_request(:delete_dimension, )
       req.send_request(options)
     end
 
@@ -3214,8 +3214,8 @@ module Aws::IoT
     #
     # @overload delete_domain_configuration(**params)
     # @param [Hash] params ({})
-    def delete_domain_configuration(params = {}, **options)
-      req = build_request(:delete_domain_configuration, params)
+    def delete_domain_configuration(, **options)
+      req = build_request(:delete_domain_configuration, )
       req.send_request(options)
     end
 
@@ -3238,8 +3238,8 @@ module Aws::IoT
     #
     # @overload delete_dynamic_thing_group(**params)
     # @param [Hash] params ({})
-    def delete_dynamic_thing_group(params = {}, **options)
-      req = build_request(:delete_dynamic_thing_group, params)
+    def delete_dynamic_thing_group(, **options)
+      req = build_request(:delete_dynamic_thing_group, )
       req.send_request(options)
     end
 
@@ -3300,8 +3300,8 @@ module Aws::IoT
     #
     # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, **options)
-      req = build_request(:delete_job, params)
+    def delete_job(, **options)
+      req = build_request(:delete_job, )
       req.send_request(options)
     end
 
@@ -3362,8 +3362,8 @@ module Aws::IoT
     #
     # @overload delete_job_execution(**params)
     # @param [Hash] params ({})
-    def delete_job_execution(params = {}, **options)
-      req = build_request(:delete_job_execution, params)
+    def delete_job_execution(, **options)
+      req = build_request(:delete_job_execution, )
       req.send_request(options)
     end
 
@@ -3382,8 +3382,8 @@ module Aws::IoT
     #
     # @overload delete_mitigation_action(**params)
     # @param [Hash] params ({})
-    def delete_mitigation_action(params = {}, **options)
-      req = build_request(:delete_mitigation_action, params)
+    def delete_mitigation_action(, **options)
+      req = build_request(:delete_mitigation_action, )
       req.send_request(options)
     end
 
@@ -3412,8 +3412,8 @@ module Aws::IoT
     #
     # @overload delete_ota_update(**params)
     # @param [Hash] params ({})
-    def delete_ota_update(params = {}, **options)
-      req = build_request(:delete_ota_update, params)
+    def delete_ota_update(, **options)
+      req = build_request(:delete_ota_update, )
       req.send_request(options)
     end
 
@@ -3443,8 +3443,8 @@ module Aws::IoT
     #
     # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, **options)
-      req = build_request(:delete_policy, params)
+    def delete_policy(, **options)
+      req = build_request(:delete_policy, )
       req.send_request(options)
     end
 
@@ -3471,8 +3471,8 @@ module Aws::IoT
     #
     # @overload delete_policy_version(**params)
     # @param [Hash] params ({})
-    def delete_policy_version(params = {}, **options)
-      req = build_request(:delete_policy_version, params)
+    def delete_policy_version(, **options)
+      req = build_request(:delete_policy_version, )
       req.send_request(options)
     end
 
@@ -3491,8 +3491,8 @@ module Aws::IoT
     #
     # @overload delete_provisioning_template(**params)
     # @param [Hash] params ({})
-    def delete_provisioning_template(params = {}, **options)
-      req = build_request(:delete_provisioning_template, params)
+    def delete_provisioning_template(, **options)
+      req = build_request(:delete_provisioning_template, )
       req.send_request(options)
     end
 
@@ -3515,8 +3515,8 @@ module Aws::IoT
     #
     # @overload delete_provisioning_template_version(**params)
     # @param [Hash] params ({})
-    def delete_provisioning_template_version(params = {}, **options)
-      req = build_request(:delete_provisioning_template_version, params)
+    def delete_provisioning_template_version(, **options)
+      req = build_request(:delete_provisioning_template_version, )
       req.send_request(options)
     end
 
@@ -3526,8 +3526,8 @@ module Aws::IoT
     #
     # @overload delete_registration_code(**params)
     # @param [Hash] params ({})
-    def delete_registration_code(params = {}, **options)
-      req = build_request(:delete_registration_code, params)
+    def delete_registration_code(, **options)
+      req = build_request(:delete_registration_code, )
       req.send_request(options)
     end
 
@@ -3546,8 +3546,8 @@ module Aws::IoT
     #
     # @overload delete_role_alias(**params)
     # @param [Hash] params ({})
-    def delete_role_alias(params = {}, **options)
-      req = build_request(:delete_role_alias, params)
+    def delete_role_alias(, **options)
+      req = build_request(:delete_role_alias, )
       req.send_request(options)
     end
 
@@ -3566,8 +3566,8 @@ module Aws::IoT
     #
     # @overload delete_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_audit(params = {}, **options)
-      req = build_request(:delete_scheduled_audit, params)
+    def delete_scheduled_audit(, **options)
+      req = build_request(:delete_scheduled_audit, )
       req.send_request(options)
     end
 
@@ -3593,8 +3593,8 @@ module Aws::IoT
     #
     # @overload delete_security_profile(**params)
     # @param [Hash] params ({})
-    def delete_security_profile(params = {}, **options)
-      req = build_request(:delete_security_profile, params)
+    def delete_security_profile(, **options)
+      req = build_request(:delete_security_profile, )
       req.send_request(options)
     end
 
@@ -3613,8 +3613,8 @@ module Aws::IoT
     #
     # @overload delete_stream(**params)
     # @param [Hash] params ({})
-    def delete_stream(params = {}, **options)
-      req = build_request(:delete_stream, params)
+    def delete_stream(, **options)
+      req = build_request(:delete_stream, )
       req.send_request(options)
     end
 
@@ -3641,8 +3641,8 @@ module Aws::IoT
     #
     # @overload delete_thing(**params)
     # @param [Hash] params ({})
-    def delete_thing(params = {}, **options)
-      req = build_request(:delete_thing, params)
+    def delete_thing(, **options)
+      req = build_request(:delete_thing, )
       req.send_request(options)
     end
 
@@ -3665,8 +3665,8 @@ module Aws::IoT
     #
     # @overload delete_thing_group(**params)
     # @param [Hash] params ({})
-    def delete_thing_group(params = {}, **options)
-      req = build_request(:delete_thing_group, params)
+    def delete_thing_group(, **options)
+      req = build_request(:delete_thing_group, )
       req.send_request(options)
     end
 
@@ -3690,8 +3690,8 @@ module Aws::IoT
     #
     # @overload delete_thing_type(**params)
     # @param [Hash] params ({})
-    def delete_thing_type(params = {}, **options)
-      req = build_request(:delete_thing_type, params)
+    def delete_thing_type(, **options)
+      req = build_request(:delete_thing_type, )
       req.send_request(options)
     end
 
@@ -3710,8 +3710,8 @@ module Aws::IoT
     #
     # @overload delete_topic_rule(**params)
     # @param [Hash] params ({})
-    def delete_topic_rule(params = {}, **options)
-      req = build_request(:delete_topic_rule, params)
+    def delete_topic_rule(, **options)
+      req = build_request(:delete_topic_rule, )
       req.send_request(options)
     end
 
@@ -3730,8 +3730,8 @@ module Aws::IoT
     #
     # @overload delete_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def delete_topic_rule_destination(params = {}, **options)
-      req = build_request(:delete_topic_rule_destination, params)
+    def delete_topic_rule_destination(, **options)
+      req = build_request(:delete_topic_rule_destination, )
       req.send_request(options)
     end
 
@@ -3755,8 +3755,8 @@ module Aws::IoT
     #
     # @overload delete_v2_logging_level(**params)
     # @param [Hash] params ({})
-    def delete_v2_logging_level(params = {}, **options)
-      req = build_request(:delete_v2_logging_level, params)
+    def delete_v2_logging_level(, **options)
+      req = build_request(:delete_v2_logging_level, )
       req.send_request(options)
     end
 
@@ -3782,8 +3782,8 @@ module Aws::IoT
     #
     # @overload deprecate_thing_type(**params)
     # @param [Hash] params ({})
-    def deprecate_thing_type(params = {}, **options)
-      req = build_request(:deprecate_thing_type, params)
+    def deprecate_thing_type(, **options)
+      req = build_request(:deprecate_thing_type, )
       req.send_request(options)
     end
 
@@ -3809,8 +3809,8 @@ module Aws::IoT
     #
     # @overload describe_account_audit_configuration(**params)
     # @param [Hash] params ({})
-    def describe_account_audit_configuration(params = {}, **options)
-      req = build_request(:describe_account_audit_configuration, params)
+    def describe_account_audit_configuration(, **options)
+      req = build_request(:describe_account_audit_configuration, )
       req.send_request(options)
     end
 
@@ -3871,8 +3871,8 @@ module Aws::IoT
     #
     # @overload describe_audit_finding(**params)
     # @param [Hash] params ({})
-    def describe_audit_finding(params = {}, **options)
-      req = build_request(:describe_audit_finding, params)
+    def describe_audit_finding(, **options)
+      req = build_request(:describe_audit_finding, )
       req.send_request(options)
     end
 
@@ -3936,8 +3936,8 @@ module Aws::IoT
     #
     # @overload describe_audit_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def describe_audit_mitigation_actions_task(params = {}, **options)
-      req = build_request(:describe_audit_mitigation_actions_task, params)
+    def describe_audit_mitigation_actions_task(, **options)
+      req = build_request(:describe_audit_mitigation_actions_task, )
       req.send_request(options)
     end
 
@@ -3997,8 +3997,8 @@ module Aws::IoT
     #
     # @overload describe_audit_suppression(**params)
     # @param [Hash] params ({})
-    def describe_audit_suppression(params = {}, **options)
-      req = build_request(:describe_audit_suppression, params)
+    def describe_audit_suppression(, **options)
+      req = build_request(:describe_audit_suppression, )
       req.send_request(options)
     end
 
@@ -4046,8 +4046,8 @@ module Aws::IoT
     #
     # @overload describe_audit_task(**params)
     # @param [Hash] params ({})
-    def describe_audit_task(params = {}, **options)
-      req = build_request(:describe_audit_task, params)
+    def describe_audit_task(, **options)
+      req = build_request(:describe_audit_task, )
       req.send_request(options)
     end
 
@@ -4081,8 +4081,8 @@ module Aws::IoT
     #
     # @overload describe_authorizer(**params)
     # @param [Hash] params ({})
-    def describe_authorizer(params = {}, **options)
-      req = build_request(:describe_authorizer, params)
+    def describe_authorizer(, **options)
+      req = build_request(:describe_authorizer, )
       req.send_request(options)
     end
 
@@ -4117,8 +4117,8 @@ module Aws::IoT
     #
     # @overload describe_billing_group(**params)
     # @param [Hash] params ({})
-    def describe_billing_group(params = {}, **options)
-      req = build_request(:describe_billing_group, params)
+    def describe_billing_group(, **options)
+      req = build_request(:describe_billing_group, )
       req.send_request(options)
     end
 
@@ -4157,8 +4157,8 @@ module Aws::IoT
     #
     # @overload describe_ca_certificate(**params)
     # @param [Hash] params ({})
-    def describe_ca_certificate(params = {}, **options)
-      req = build_request(:describe_ca_certificate, params)
+    def describe_ca_certificate(, **options)
+      req = build_request(:describe_ca_certificate, )
       req.send_request(options)
     end
 
@@ -4202,8 +4202,8 @@ module Aws::IoT
     #
     # @overload describe_certificate(**params)
     # @param [Hash] params ({})
-    def describe_certificate(params = {}, **options)
-      req = build_request(:describe_certificate, params)
+    def describe_certificate(, **options)
+      req = build_request(:describe_certificate, )
       req.send_request(options)
     end
 
@@ -4238,8 +4238,8 @@ module Aws::IoT
     #
     # @overload describe_custom_metric(**params)
     # @param [Hash] params ({})
-    def describe_custom_metric(params = {}, **options)
-      req = build_request(:describe_custom_metric, params)
+    def describe_custom_metric(, **options)
+      req = build_request(:describe_custom_metric, )
       req.send_request(options)
     end
 
@@ -4264,8 +4264,8 @@ module Aws::IoT
     #
     # @overload describe_default_authorizer(**params)
     # @param [Hash] params ({})
-    def describe_default_authorizer(params = {}, **options)
-      req = build_request(:describe_default_authorizer, params)
+    def describe_default_authorizer(, **options)
+      req = build_request(:describe_default_authorizer, )
       req.send_request(options)
     end
 
@@ -4317,8 +4317,8 @@ module Aws::IoT
     #
     # @overload describe_detect_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def describe_detect_mitigation_actions_task(params = {}, **options)
-      req = build_request(:describe_detect_mitigation_actions_task, params)
+    def describe_detect_mitigation_actions_task(, **options)
+      req = build_request(:describe_detect_mitigation_actions_task, )
       req.send_request(options)
     end
 
@@ -4355,8 +4355,8 @@ module Aws::IoT
     #
     # @overload describe_dimension(**params)
     # @param [Hash] params ({})
-    def describe_dimension(params = {}, **options)
-      req = build_request(:describe_dimension, params)
+    def describe_dimension(, **options)
+      req = build_request(:describe_dimension, )
       req.send_request(options)
     end
 
@@ -4406,8 +4406,8 @@ module Aws::IoT
     #
     # @overload describe_domain_configuration(**params)
     # @param [Hash] params ({})
-    def describe_domain_configuration(params = {}, **options)
-      req = build_request(:describe_domain_configuration, params)
+    def describe_domain_configuration(, **options)
+      req = build_request(:describe_domain_configuration, )
       req.send_request(options)
     end
 
@@ -4456,8 +4456,8 @@ module Aws::IoT
     #
     # @overload describe_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_endpoint(params = {}, **options)
-      req = build_request(:describe_endpoint, params)
+    def describe_endpoint(, **options)
+      req = build_request(:describe_endpoint, )
       req.send_request(options)
     end
 
@@ -4478,8 +4478,8 @@ module Aws::IoT
     #
     # @overload describe_event_configurations(**params)
     # @param [Hash] params ({})
-    def describe_event_configurations(params = {}, **options)
-      req = build_request(:describe_event_configurations, params)
+    def describe_event_configurations(, **options)
+      req = build_request(:describe_event_configurations, )
       req.send_request(options)
     end
 
@@ -4508,8 +4508,8 @@ module Aws::IoT
     #
     # @overload describe_index(**params)
     # @param [Hash] params ({})
-    def describe_index(params = {}, **options)
-      req = build_request(:describe_index, params)
+    def describe_index(, **options)
+      req = build_request(:describe_index, )
       req.send_request(options)
     end
 
@@ -4572,8 +4572,8 @@ module Aws::IoT
     #
     # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, **options)
-      req = build_request(:describe_job, params)
+    def describe_job(, **options)
+      req = build_request(:describe_job, )
       req.send_request(options)
     end
 
@@ -4618,8 +4618,8 @@ module Aws::IoT
     #
     # @overload describe_job_execution(**params)
     # @param [Hash] params ({})
-    def describe_job_execution(params = {}, **options)
-      req = build_request(:describe_job_execution, params)
+    def describe_job_execution(, **options)
+      req = build_request(:describe_job_execution, )
       req.send_request(options)
     end
 
@@ -4666,8 +4666,8 @@ module Aws::IoT
     #
     # @overload describe_mitigation_action(**params)
     # @param [Hash] params ({})
-    def describe_mitigation_action(params = {}, **options)
-      req = build_request(:describe_mitigation_action, params)
+    def describe_mitigation_action(, **options)
+      req = build_request(:describe_mitigation_action, )
       req.send_request(options)
     end
 
@@ -4711,8 +4711,8 @@ module Aws::IoT
     #
     # @overload describe_provisioning_template(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_template(params = {}, **options)
-      req = build_request(:describe_provisioning_template, params)
+    def describe_provisioning_template(, **options)
+      req = build_request(:describe_provisioning_template, )
       req.send_request(options)
     end
 
@@ -4747,8 +4747,8 @@ module Aws::IoT
     #
     # @overload describe_provisioning_template_version(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_template_version(params = {}, **options)
-      req = build_request(:describe_provisioning_template_version, params)
+    def describe_provisioning_template_version(, **options)
+      req = build_request(:describe_provisioning_template_version, )
       req.send_request(options)
     end
 
@@ -4779,8 +4779,8 @@ module Aws::IoT
     #
     # @overload describe_role_alias(**params)
     # @param [Hash] params ({})
-    def describe_role_alias(params = {}, **options)
-      req = build_request(:describe_role_alias, params)
+    def describe_role_alias(, **options)
+      req = build_request(:describe_role_alias, )
       req.send_request(options)
     end
 
@@ -4816,8 +4816,8 @@ module Aws::IoT
     #
     # @overload describe_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_audit(params = {}, **options)
-      req = build_request(:describe_scheduled_audit, params)
+    def describe_scheduled_audit(, **options)
+      req = build_request(:describe_scheduled_audit, )
       req.send_request(options)
     end
 
@@ -4887,8 +4887,8 @@ module Aws::IoT
     #
     # @overload describe_security_profile(**params)
     # @param [Hash] params ({})
-    def describe_security_profile(params = {}, **options)
-      req = build_request(:describe_security_profile, params)
+    def describe_security_profile(, **options)
+      req = build_request(:describe_security_profile, )
       req.send_request(options)
     end
 
@@ -4924,8 +4924,8 @@ module Aws::IoT
     #
     # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, **options)
-      req = build_request(:describe_stream, params)
+    def describe_stream(, **options)
+      req = build_request(:describe_stream, )
       req.send_request(options)
     end
 
@@ -4965,8 +4965,8 @@ module Aws::IoT
     #
     # @overload describe_thing(**params)
     # @param [Hash] params ({})
-    def describe_thing(params = {}, **options)
-      req = build_request(:describe_thing, params)
+    def describe_thing(, **options)
+      req = build_request(:describe_thing, )
       req.send_request(options)
     end
 
@@ -5016,8 +5016,8 @@ module Aws::IoT
     #
     # @overload describe_thing_group(**params)
     # @param [Hash] params ({})
-    def describe_thing_group(params = {}, **options)
-      req = build_request(:describe_thing_group, params)
+    def describe_thing_group(, **options)
+      req = build_request(:describe_thing_group, )
       req.send_request(options)
     end
 
@@ -5064,8 +5064,8 @@ module Aws::IoT
     #
     # @overload describe_thing_registration_task(**params)
     # @param [Hash] params ({})
-    def describe_thing_registration_task(params = {}, **options)
-      req = build_request(:describe_thing_registration_task, params)
+    def describe_thing_registration_task(, **options)
+      req = build_request(:describe_thing_registration_task, )
       req.send_request(options)
     end
 
@@ -5102,8 +5102,8 @@ module Aws::IoT
     #
     # @overload describe_thing_type(**params)
     # @param [Hash] params ({})
-    def describe_thing_type(params = {}, **options)
-      req = build_request(:describe_thing_type, params)
+    def describe_thing_type(, **options)
+      req = build_request(:describe_thing_type, )
       req.send_request(options)
     end
 
@@ -5126,8 +5126,8 @@ module Aws::IoT
     #
     # @overload detach_policy(**params)
     # @param [Hash] params ({})
-    def detach_policy(params = {}, **options)
-      req = build_request(:detach_policy, params)
+    def detach_policy(, **options)
+      req = build_request(:detach_policy, )
       req.send_request(options)
     end
 
@@ -5158,8 +5158,8 @@ module Aws::IoT
     #
     # @overload detach_principal_policy(**params)
     # @param [Hash] params ({})
-    def detach_principal_policy(params = {}, **options)
-      req = build_request(:detach_principal_policy, params)
+    def detach_principal_policy(, **options)
+      req = build_request(:detach_principal_policy, )
       req.send_request(options)
     end
 
@@ -5184,8 +5184,8 @@ module Aws::IoT
     #
     # @overload detach_security_profile(**params)
     # @param [Hash] params ({})
-    def detach_security_profile(params = {}, **options)
-      req = build_request(:detach_security_profile, params)
+    def detach_security_profile(, **options)
+      req = build_request(:detach_security_profile, )
       req.send_request(options)
     end
 
@@ -5217,8 +5217,8 @@ module Aws::IoT
     #
     # @overload detach_thing_principal(**params)
     # @param [Hash] params ({})
-    def detach_thing_principal(params = {}, **options)
-      req = build_request(:detach_thing_principal, params)
+    def detach_thing_principal(, **options)
+      req = build_request(:detach_thing_principal, )
       req.send_request(options)
     end
 
@@ -5237,8 +5237,8 @@ module Aws::IoT
     #
     # @overload disable_topic_rule(**params)
     # @param [Hash] params ({})
-    def disable_topic_rule(params = {}, **options)
-      req = build_request(:disable_topic_rule, params)
+    def disable_topic_rule(, **options)
+      req = build_request(:disable_topic_rule, )
       req.send_request(options)
     end
 
@@ -5257,8 +5257,8 @@ module Aws::IoT
     #
     # @overload enable_topic_rule(**params)
     # @param [Hash] params ({})
-    def enable_topic_rule(params = {}, **options)
-      req = build_request(:enable_topic_rule, params)
+    def enable_topic_rule(, **options)
+      req = build_request(:enable_topic_rule, )
       req.send_request(options)
     end
 
@@ -5303,8 +5303,8 @@ module Aws::IoT
     #
     # @overload get_behavior_model_training_summaries(**params)
     # @param [Hash] params ({})
-    def get_behavior_model_training_summaries(params = {}, **options)
-      req = build_request(:get_behavior_model_training_summaries, params)
+    def get_behavior_model_training_summaries(, **options)
+      req = build_request(:get_behavior_model_training_summaries, )
       req.send_request(options)
     end
 
@@ -5341,8 +5341,8 @@ module Aws::IoT
     #
     # @overload get_cardinality(**params)
     # @param [Hash] params ({})
-    def get_cardinality(params = {}, **options)
-      req = build_request(:get_cardinality, params)
+    def get_cardinality(, **options)
+      req = build_request(:get_cardinality, )
       req.send_request(options)
     end
 
@@ -5384,8 +5384,8 @@ module Aws::IoT
     #
     # @overload get_effective_policies(**params)
     # @param [Hash] params ({})
-    def get_effective_policies(params = {}, **options)
-      req = build_request(:get_effective_policies, params)
+    def get_effective_policies(, **options)
+      req = build_request(:get_effective_policies, )
       req.send_request(options)
     end
 
@@ -5416,8 +5416,8 @@ module Aws::IoT
     #
     # @overload get_indexing_configuration(**params)
     # @param [Hash] params ({})
-    def get_indexing_configuration(params = {}, **options)
-      req = build_request(:get_indexing_configuration, params)
+    def get_indexing_configuration(, **options)
+      req = build_request(:get_indexing_configuration, )
       req.send_request(options)
     end
 
@@ -5442,8 +5442,8 @@ module Aws::IoT
     #
     # @overload get_job_document(**params)
     # @param [Hash] params ({})
-    def get_job_document(params = {}, **options)
-      req = build_request(:get_job_document, params)
+    def get_job_document(, **options)
+      req = build_request(:get_job_document, )
       req.send_request(options)
     end
 
@@ -5464,8 +5464,8 @@ module Aws::IoT
     #
     # @overload get_logging_options(**params)
     # @param [Hash] params ({})
-    def get_logging_options(params = {}, **options)
-      req = build_request(:get_logging_options, params)
+    def get_logging_options(, **options)
+      req = build_request(:get_logging_options, )
       req.send_request(options)
     end
 
@@ -5535,8 +5535,8 @@ module Aws::IoT
     #
     # @overload get_ota_update(**params)
     # @param [Hash] params ({})
-    def get_ota_update(params = {}, **options)
-      req = build_request(:get_ota_update, params)
+    def get_ota_update(, **options)
+      req = build_request(:get_ota_update, )
       req.send_request(options)
     end
 
@@ -5589,8 +5589,8 @@ module Aws::IoT
     #
     # @overload get_percentiles(**params)
     # @param [Hash] params ({})
-    def get_percentiles(params = {}, **options)
-      req = build_request(:get_percentiles, params)
+    def get_percentiles(, **options)
+      req = build_request(:get_percentiles, )
       req.send_request(options)
     end
 
@@ -5628,8 +5628,8 @@ module Aws::IoT
     #
     # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, **options)
-      req = build_request(:get_policy, params)
+    def get_policy(, **options)
+      req = build_request(:get_policy, )
       req.send_request(options)
     end
 
@@ -5672,8 +5672,8 @@ module Aws::IoT
     #
     # @overload get_policy_version(**params)
     # @param [Hash] params ({})
-    def get_policy_version(params = {}, **options)
-      req = build_request(:get_policy_version, params)
+    def get_policy_version(, **options)
+      req = build_request(:get_policy_version, )
       req.send_request(options)
     end
 
@@ -5690,8 +5690,8 @@ module Aws::IoT
     #
     # @overload get_registration_code(**params)
     # @param [Hash] params ({})
-    def get_registration_code(params = {}, **options)
-      req = build_request(:get_registration_code, params)
+    def get_registration_code(, **options)
+      req = build_request(:get_registration_code, )
       req.send_request(options)
     end
 
@@ -5739,8 +5739,8 @@ module Aws::IoT
     #
     # @overload get_statistics(**params)
     # @param [Hash] params ({})
-    def get_statistics(params = {}, **options)
-      req = build_request(:get_statistics, params)
+    def get_statistics(, **options)
+      req = build_request(:get_statistics, )
       req.send_request(options)
     end
 
@@ -5971,8 +5971,8 @@ module Aws::IoT
     #
     # @overload get_topic_rule(**params)
     # @param [Hash] params ({})
-    def get_topic_rule(params = {}, **options)
-      req = build_request(:get_topic_rule, params)
+    def get_topic_rule(, **options)
+      req = build_request(:get_topic_rule, )
       req.send_request(options)
     end
 
@@ -6008,8 +6008,8 @@ module Aws::IoT
     #
     # @overload get_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def get_topic_rule_destination(params = {}, **options)
-      req = build_request(:get_topic_rule_destination, params)
+    def get_topic_rule_destination(, **options)
+      req = build_request(:get_topic_rule_destination, )
       req.send_request(options)
     end
 
@@ -6029,8 +6029,8 @@ module Aws::IoT
     #
     # @overload get_v2_logging_options(**params)
     # @param [Hash] params ({})
-    def get_v2_logging_options(params = {}, **options)
-      req = build_request(:get_v2_logging_options, params)
+    def get_v2_logging_options(, **options)
+      req = build_request(:get_v2_logging_options, )
       req.send_request(options)
     end
 
@@ -6118,8 +6118,8 @@ module Aws::IoT
     #
     # @overload list_active_violations(**params)
     # @param [Hash] params ({})
-    def list_active_violations(params = {}, **options)
-      req = build_request(:list_active_violations, params)
+    def list_active_violations(, **options)
+      req = build_request(:list_active_violations, )
       req.send_request(options)
     end
 
@@ -6167,8 +6167,8 @@ module Aws::IoT
     #
     # @overload list_attached_policies(**params)
     # @param [Hash] params ({})
-    def list_attached_policies(params = {}, **options)
-      req = build_request(:list_attached_policies, params)
+    def list_attached_policies(, **options)
+      req = build_request(:list_attached_policies, )
       req.send_request(options)
     end
 
@@ -6283,8 +6283,8 @@ module Aws::IoT
     #
     # @overload list_audit_findings(**params)
     # @param [Hash] params ({})
-    def list_audit_findings(params = {}, **options)
-      req = build_request(:list_audit_findings, params)
+    def list_audit_findings(, **options)
+      req = build_request(:list_audit_findings, )
       req.send_request(options)
     end
 
@@ -6341,8 +6341,8 @@ module Aws::IoT
     #
     # @overload list_audit_mitigation_actions_executions(**params)
     # @param [Hash] params ({})
-    def list_audit_mitigation_actions_executions(params = {}, **options)
-      req = build_request(:list_audit_mitigation_actions_executions, params)
+    def list_audit_mitigation_actions_executions(, **options)
+      req = build_request(:list_audit_mitigation_actions_executions, )
       req.send_request(options)
     end
 
@@ -6405,8 +6405,8 @@ module Aws::IoT
     #
     # @overload list_audit_mitigation_actions_tasks(**params)
     # @param [Hash] params ({})
-    def list_audit_mitigation_actions_tasks(params = {}, **options)
-      req = build_request(:list_audit_mitigation_actions_tasks, params)
+    def list_audit_mitigation_actions_tasks(, **options)
+      req = build_request(:list_audit_mitigation_actions_tasks, )
       req.send_request(options)
     end
 
@@ -6482,8 +6482,8 @@ module Aws::IoT
     #
     # @overload list_audit_suppressions(**params)
     # @param [Hash] params ({})
-    def list_audit_suppressions(params = {}, **options)
-      req = build_request(:list_audit_suppressions, params)
+    def list_audit_suppressions(, **options)
+      req = build_request(:list_audit_suppressions, )
       req.send_request(options)
     end
 
@@ -6542,8 +6542,8 @@ module Aws::IoT
     #
     # @overload list_audit_tasks(**params)
     # @param [Hash] params ({})
-    def list_audit_tasks(params = {}, **options)
-      req = build_request(:list_audit_tasks, params)
+    def list_audit_tasks(, **options)
+      req = build_request(:list_audit_tasks, )
       req.send_request(options)
     end
 
@@ -6586,8 +6586,8 @@ module Aws::IoT
     #
     # @overload list_authorizers(**params)
     # @param [Hash] params ({})
-    def list_authorizers(params = {}, **options)
-      req = build_request(:list_authorizers, params)
+    def list_authorizers(, **options)
+      req = build_request(:list_authorizers, )
       req.send_request(options)
     end
 
@@ -6628,8 +6628,8 @@ module Aws::IoT
     #
     # @overload list_billing_groups(**params)
     # @param [Hash] params ({})
-    def list_billing_groups(params = {}, **options)
-      req = build_request(:list_billing_groups, params)
+    def list_billing_groups(, **options)
+      req = build_request(:list_billing_groups, )
       req.send_request(options)
     end
 
@@ -6673,8 +6673,8 @@ module Aws::IoT
     #
     # @overload list_ca_certificates(**params)
     # @param [Hash] params ({})
-    def list_ca_certificates(params = {}, **options)
-      req = build_request(:list_ca_certificates, params)
+    def list_ca_certificates(, **options)
+      req = build_request(:list_ca_certificates, )
       req.send_request(options)
     end
 
@@ -6720,8 +6720,8 @@ module Aws::IoT
     #
     # @overload list_certificates(**params)
     # @param [Hash] params ({})
-    def list_certificates(params = {}, **options)
-      req = build_request(:list_certificates, params)
+    def list_certificates(, **options)
+      req = build_request(:list_certificates, )
       req.send_request(options)
     end
 
@@ -6769,8 +6769,8 @@ module Aws::IoT
     #
     # @overload list_certificates_by_ca(**params)
     # @param [Hash] params ({})
-    def list_certificates_by_ca(params = {}, **options)
-      req = build_request(:list_certificates_by_ca, params)
+    def list_certificates_by_ca(, **options)
+      req = build_request(:list_certificates_by_ca, )
       req.send_request(options)
     end
 
@@ -6805,8 +6805,8 @@ module Aws::IoT
     #
     # @overload list_custom_metrics(**params)
     # @param [Hash] params ({})
-    def list_custom_metrics(params = {}, **options)
-      req = build_request(:list_custom_metrics, params)
+    def list_custom_metrics(, **options)
+      req = build_request(:list_custom_metrics, )
       req.send_request(options)
     end
 
@@ -6873,8 +6873,8 @@ module Aws::IoT
     #
     # @overload list_detect_mitigation_actions_executions(**params)
     # @param [Hash] params ({})
-    def list_detect_mitigation_actions_executions(params = {}, **options)
-      req = build_request(:list_detect_mitigation_actions_executions, params)
+    def list_detect_mitigation_actions_executions(, **options)
+      req = build_request(:list_detect_mitigation_actions_executions, )
       req.send_request(options)
     end
 
@@ -6947,8 +6947,8 @@ module Aws::IoT
     #
     # @overload list_detect_mitigation_actions_tasks(**params)
     # @param [Hash] params ({})
-    def list_detect_mitigation_actions_tasks(params = {}, **options)
-      req = build_request(:list_detect_mitigation_actions_tasks, params)
+    def list_detect_mitigation_actions_tasks(, **options)
+      req = build_request(:list_detect_mitigation_actions_tasks, )
       req.send_request(options)
     end
 
@@ -6982,8 +6982,8 @@ module Aws::IoT
     #
     # @overload list_dimensions(**params)
     # @param [Hash] params ({})
-    def list_dimensions(params = {}, **options)
-      req = build_request(:list_dimensions, params)
+    def list_dimensions(, **options)
+      req = build_request(:list_dimensions, )
       req.send_request(options)
     end
 
@@ -7029,8 +7029,8 @@ module Aws::IoT
     #
     # @overload list_domain_configurations(**params)
     # @param [Hash] params ({})
-    def list_domain_configurations(params = {}, **options)
-      req = build_request(:list_domain_configurations, params)
+    def list_domain_configurations(, **options)
+      req = build_request(:list_domain_configurations, )
       req.send_request(options)
     end
 
@@ -7065,8 +7065,8 @@ module Aws::IoT
     #
     # @overload list_indices(**params)
     # @param [Hash] params ({})
-    def list_indices(params = {}, **options)
-      req = build_request(:list_indices, params)
+    def list_indices(, **options)
+      req = build_request(:list_indices, )
       req.send_request(options)
     end
 
@@ -7113,8 +7113,8 @@ module Aws::IoT
     #
     # @overload list_job_executions_for_job(**params)
     # @param [Hash] params ({})
-    def list_job_executions_for_job(params = {}, **options)
-      req = build_request(:list_job_executions_for_job, params)
+    def list_job_executions_for_job(, **options)
+      req = build_request(:list_job_executions_for_job, )
       req.send_request(options)
     end
 
@@ -7176,8 +7176,8 @@ module Aws::IoT
     #
     # @overload list_job_executions_for_thing(**params)
     # @param [Hash] params ({})
-    def list_job_executions_for_thing(params = {}, **options)
-      req = build_request(:list_job_executions_for_thing, params)
+    def list_job_executions_for_thing(, **options)
+      req = build_request(:list_job_executions_for_thing, )
       req.send_request(options)
     end
 
@@ -7256,8 +7256,8 @@ module Aws::IoT
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -7300,8 +7300,8 @@ module Aws::IoT
     #
     # @overload list_mitigation_actions(**params)
     # @param [Hash] params ({})
-    def list_mitigation_actions(params = {}, **options)
-      req = build_request(:list_mitigation_actions, params)
+    def list_mitigation_actions(, **options)
+      req = build_request(:list_mitigation_actions, )
       req.send_request(options)
     end
 
@@ -7341,8 +7341,8 @@ module Aws::IoT
     #
     # @overload list_ota_updates(**params)
     # @param [Hash] params ({})
-    def list_ota_updates(params = {}, **options)
-      req = build_request(:list_ota_updates, params)
+    def list_ota_updates(, **options)
+      req = build_request(:list_ota_updates, )
       req.send_request(options)
     end
 
@@ -7386,8 +7386,8 @@ module Aws::IoT
     #
     # @overload list_outgoing_certificates(**params)
     # @param [Hash] params ({})
-    def list_outgoing_certificates(params = {}, **options)
-      req = build_request(:list_outgoing_certificates, params)
+    def list_outgoing_certificates(, **options)
+      req = build_request(:list_outgoing_certificates, )
       req.send_request(options)
     end
 
@@ -7427,8 +7427,8 @@ module Aws::IoT
     #
     # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, **options)
-      req = build_request(:list_policies, params)
+    def list_policies(, **options)
+      req = build_request(:list_policies, )
       req.send_request(options)
     end
 
@@ -7474,8 +7474,8 @@ module Aws::IoT
     #
     # @overload list_policy_principals(**params)
     # @param [Hash] params ({})
-    def list_policy_principals(params = {}, **options)
-      req = build_request(:list_policy_principals, params)
+    def list_policy_principals(, **options)
+      req = build_request(:list_policy_principals, )
       req.send_request(options)
     end
 
@@ -7504,8 +7504,8 @@ module Aws::IoT
     #
     # @overload list_policy_versions(**params)
     # @param [Hash] params ({})
-    def list_policy_versions(params = {}, **options)
-      req = build_request(:list_policy_versions, params)
+    def list_policy_versions(, **options)
+      req = build_request(:list_policy_versions, )
       req.send_request(options)
     end
 
@@ -7562,8 +7562,8 @@ module Aws::IoT
     #
     # @overload list_principal_policies(**params)
     # @param [Hash] params ({})
-    def list_principal_policies(params = {}, **options)
-      req = build_request(:list_principal_policies, params)
+    def list_principal_policies(, **options)
+      req = build_request(:list_principal_policies, )
       req.send_request(options)
     end
 
@@ -7605,8 +7605,8 @@ module Aws::IoT
     #
     # @overload list_principal_things(**params)
     # @param [Hash] params ({})
-    def list_principal_things(params = {}, **options)
-      req = build_request(:list_principal_things, params)
+    def list_principal_things(, **options)
+      req = build_request(:list_principal_things, )
       req.send_request(options)
     end
 
@@ -7646,8 +7646,8 @@ module Aws::IoT
     #
     # @overload list_provisioning_template_versions(**params)
     # @param [Hash] params ({})
-    def list_provisioning_template_versions(params = {}, **options)
-      req = build_request(:list_provisioning_template_versions, params)
+    def list_provisioning_template_versions(, **options)
+      req = build_request(:list_provisioning_template_versions, )
       req.send_request(options)
     end
 
@@ -7686,8 +7686,8 @@ module Aws::IoT
     #
     # @overload list_provisioning_templates(**params)
     # @param [Hash] params ({})
-    def list_provisioning_templates(params = {}, **options)
-      req = build_request(:list_provisioning_templates, params)
+    def list_provisioning_templates(, **options)
+      req = build_request(:list_provisioning_templates, )
       req.send_request(options)
     end
 
@@ -7725,8 +7725,8 @@ module Aws::IoT
     #
     # @overload list_role_aliases(**params)
     # @param [Hash] params ({})
-    def list_role_aliases(params = {}, **options)
-      req = build_request(:list_role_aliases, params)
+    def list_role_aliases(, **options)
+      req = build_request(:list_role_aliases, )
       req.send_request(options)
     end
 
@@ -7765,8 +7765,8 @@ module Aws::IoT
     #
     # @overload list_scheduled_audits(**params)
     # @param [Hash] params ({})
-    def list_scheduled_audits(params = {}, **options)
-      req = build_request(:list_scheduled_audits, params)
+    def list_scheduled_audits(, **options)
+      req = build_request(:list_scheduled_audits, )
       req.send_request(options)
     end
 
@@ -7815,8 +7815,8 @@ module Aws::IoT
     #
     # @overload list_security_profiles(**params)
     # @param [Hash] params ({})
-    def list_security_profiles(params = {}, **options)
-      req = build_request(:list_security_profiles, params)
+    def list_security_profiles(, **options)
+      req = build_request(:list_security_profiles, )
       req.send_request(options)
     end
 
@@ -7862,8 +7862,8 @@ module Aws::IoT
     #
     # @overload list_security_profiles_for_target(**params)
     # @param [Hash] params ({})
-    def list_security_profiles_for_target(params = {}, **options)
-      req = build_request(:list_security_profiles_for_target, params)
+    def list_security_profiles_for_target(, **options)
+      req = build_request(:list_security_profiles_for_target, )
       req.send_request(options)
     end
 
@@ -7904,8 +7904,8 @@ module Aws::IoT
     #
     # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, **options)
-      req = build_request(:list_streams, params)
+    def list_streams(, **options)
+      req = build_request(:list_streams, )
       req.send_request(options)
     end
 
@@ -7942,8 +7942,8 @@ module Aws::IoT
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -7981,8 +7981,8 @@ module Aws::IoT
     #
     # @overload list_targets_for_policy(**params)
     # @param [Hash] params ({})
-    def list_targets_for_policy(params = {}, **options)
-      req = build_request(:list_targets_for_policy, params)
+    def list_targets_for_policy(, **options)
+      req = build_request(:list_targets_for_policy, )
       req.send_request(options)
     end
 
@@ -8021,8 +8021,8 @@ module Aws::IoT
     #
     # @overload list_targets_for_security_profile(**params)
     # @param [Hash] params ({})
-    def list_targets_for_security_profile(params = {}, **options)
-      req = build_request(:list_targets_for_security_profile, params)
+    def list_targets_for_security_profile(, **options)
+      req = build_request(:list_targets_for_security_profile, )
       req.send_request(options)
     end
 
@@ -8073,8 +8073,8 @@ module Aws::IoT
     #
     # @overload list_thing_groups(**params)
     # @param [Hash] params ({})
-    def list_thing_groups(params = {}, **options)
-      req = build_request(:list_thing_groups, params)
+    def list_thing_groups(, **options)
+      req = build_request(:list_thing_groups, )
       req.send_request(options)
     end
 
@@ -8115,8 +8115,8 @@ module Aws::IoT
     #
     # @overload list_thing_groups_for_thing(**params)
     # @param [Hash] params ({})
-    def list_thing_groups_for_thing(params = {}, **options)
-      req = build_request(:list_thing_groups_for_thing, params)
+    def list_thing_groups_for_thing(, **options)
+      req = build_request(:list_thing_groups_for_thing, )
       req.send_request(options)
     end
 
@@ -8158,8 +8158,8 @@ module Aws::IoT
     #
     # @overload list_thing_principals(**params)
     # @param [Hash] params ({})
-    def list_thing_principals(params = {}, **options)
-      req = build_request(:list_thing_principals, params)
+    def list_thing_principals(, **options)
+      req = build_request(:list_thing_principals, )
       req.send_request(options)
     end
 
@@ -8205,8 +8205,8 @@ module Aws::IoT
     #
     # @overload list_thing_registration_task_reports(**params)
     # @param [Hash] params ({})
-    def list_thing_registration_task_reports(params = {}, **options)
-      req = build_request(:list_thing_registration_task_reports, params)
+    def list_thing_registration_task_reports(, **options)
+      req = build_request(:list_thing_registration_task_reports, )
       req.send_request(options)
     end
 
@@ -8246,8 +8246,8 @@ module Aws::IoT
     #
     # @overload list_thing_registration_tasks(**params)
     # @param [Hash] params ({})
-    def list_thing_registration_tasks(params = {}, **options)
-      req = build_request(:list_thing_registration_tasks, params)
+    def list_thing_registration_tasks(, **options)
+      req = build_request(:list_thing_registration_tasks, )
       req.send_request(options)
     end
 
@@ -8294,8 +8294,8 @@ module Aws::IoT
     #
     # @overload list_thing_types(**params)
     # @param [Hash] params ({})
-    def list_thing_types(params = {}, **options)
-      req = build_request(:list_thing_types, params)
+    def list_thing_types(, **options)
+      req = build_request(:list_thing_types, )
       req.send_request(options)
     end
 
@@ -8359,8 +8359,8 @@ module Aws::IoT
     #
     # @overload list_things(**params)
     # @param [Hash] params ({})
-    def list_things(params = {}, **options)
-      req = build_request(:list_things, params)
+    def list_things(, **options)
+      req = build_request(:list_things, )
       req.send_request(options)
     end
 
@@ -8400,8 +8400,8 @@ module Aws::IoT
     #
     # @overload list_things_in_billing_group(**params)
     # @param [Hash] params ({})
-    def list_things_in_billing_group(params = {}, **options)
-      req = build_request(:list_things_in_billing_group, params)
+    def list_things_in_billing_group(, **options)
+      req = build_request(:list_things_in_billing_group, )
       req.send_request(options)
     end
 
@@ -8446,8 +8446,8 @@ module Aws::IoT
     #
     # @overload list_things_in_thing_group(**params)
     # @param [Hash] params ({})
-    def list_things_in_thing_group(params = {}, **options)
-      req = build_request(:list_things_in_thing_group, params)
+    def list_things_in_thing_group(, **options)
+      req = build_request(:list_things_in_thing_group, )
       req.send_request(options)
     end
 
@@ -8494,8 +8494,8 @@ module Aws::IoT
     #
     # @overload list_topic_rule_destinations(**params)
     # @param [Hash] params ({})
-    def list_topic_rule_destinations(params = {}, **options)
-      req = build_request(:list_topic_rule_destinations, params)
+    def list_topic_rule_destinations(, **options)
+      req = build_request(:list_topic_rule_destinations, )
       req.send_request(options)
     end
 
@@ -8543,8 +8543,8 @@ module Aws::IoT
     #
     # @overload list_topic_rules(**params)
     # @param [Hash] params ({})
-    def list_topic_rules(params = {}, **options)
-      req = build_request(:list_topic_rules, params)
+    def list_topic_rules(, **options)
+      req = build_request(:list_topic_rules, )
       req.send_request(options)
     end
 
@@ -8587,8 +8587,8 @@ module Aws::IoT
     #
     # @overload list_v2_logging_levels(**params)
     # @param [Hash] params ({})
-    def list_v2_logging_levels(params = {}, **options)
-      req = build_request(:list_v2_logging_levels, params)
+    def list_v2_logging_levels(, **options)
+      req = build_request(:list_v2_logging_levels, )
       req.send_request(options)
     end
 
@@ -8687,8 +8687,8 @@ module Aws::IoT
     #
     # @overload list_violation_events(**params)
     # @param [Hash] params ({})
-    def list_violation_events(params = {}, **options)
-      req = build_request(:list_violation_events, params)
+    def list_violation_events(, **options)
+      req = build_request(:list_violation_events, )
       req.send_request(options)
     end
 
@@ -8762,8 +8762,8 @@ module Aws::IoT
     #
     # @overload register_ca_certificate(**params)
     # @param [Hash] params ({})
-    def register_ca_certificate(params = {}, **options)
-      req = build_request(:register_ca_certificate, params)
+    def register_ca_certificate(, **options)
+      req = build_request(:register_ca_certificate, )
       req.send_request(options)
     end
 
@@ -8806,8 +8806,8 @@ module Aws::IoT
     #
     # @overload register_certificate(**params)
     # @param [Hash] params ({})
-    def register_certificate(params = {}, **options)
-      req = build_request(:register_certificate, params)
+    def register_certificate(, **options)
+      req = build_request(:register_certificate, )
       req.send_request(options)
     end
 
@@ -8839,8 +8839,8 @@ module Aws::IoT
     #
     # @overload register_certificate_without_ca(**params)
     # @param [Hash] params ({})
-    def register_certificate_without_ca(params = {}, **options)
-      req = build_request(:register_certificate_without_ca, params)
+    def register_certificate_without_ca(, **options)
+      req = build_request(:register_certificate_without_ca, )
       req.send_request(options)
     end
 
@@ -8893,8 +8893,8 @@ module Aws::IoT
     #
     # @overload register_thing(**params)
     # @param [Hash] params ({})
-    def register_thing(params = {}, **options)
-      req = build_request(:register_thing, params)
+    def register_thing(, **options)
+      req = build_request(:register_thing, )
       req.send_request(options)
     end
 
@@ -8927,8 +8927,8 @@ module Aws::IoT
     #
     # @overload reject_certificate_transfer(**params)
     # @param [Hash] params ({})
-    def reject_certificate_transfer(params = {}, **options)
-      req = build_request(:reject_certificate_transfer, params)
+    def reject_certificate_transfer(, **options)
+      req = build_request(:reject_certificate_transfer, )
       req.send_request(options)
     end
 
@@ -8959,8 +8959,8 @@ module Aws::IoT
     #
     # @overload remove_thing_from_billing_group(**params)
     # @param [Hash] params ({})
-    def remove_thing_from_billing_group(params = {}, **options)
-      req = build_request(:remove_thing_from_billing_group, params)
+    def remove_thing_from_billing_group(, **options)
+      req = build_request(:remove_thing_from_billing_group, )
       req.send_request(options)
     end
 
@@ -8995,8 +8995,8 @@ module Aws::IoT
     #
     # @overload remove_thing_from_thing_group(**params)
     # @param [Hash] params ({})
-    def remove_thing_from_thing_group(params = {}, **options)
-      req = build_request(:remove_thing_from_thing_group, params)
+    def remove_thing_from_thing_group(, **options)
+      req = build_request(:remove_thing_from_thing_group, )
       req.send_request(options)
     end
 
@@ -9365,8 +9365,8 @@ module Aws::IoT
     #
     # @overload replace_topic_rule(**params)
     # @param [Hash] params ({})
-    def replace_topic_rule(params = {}, **options)
-      req = build_request(:replace_topic_rule, params)
+    def replace_topic_rule(, **options)
+      req = build_request(:replace_topic_rule, )
       req.send_request(options)
     end
 
@@ -9429,8 +9429,8 @@ module Aws::IoT
     #
     # @overload search_index(**params)
     # @param [Hash] params ({})
-    def search_index(params = {}, **options)
-      req = build_request(:search_index, params)
+    def search_index(, **options)
+      req = build_request(:search_index, )
       req.send_request(options)
     end
 
@@ -9458,8 +9458,8 @@ module Aws::IoT
     #
     # @overload set_default_authorizer(**params)
     # @param [Hash] params ({})
-    def set_default_authorizer(params = {}, **options)
-      req = build_request(:set_default_authorizer, params)
+    def set_default_authorizer(, **options)
+      req = build_request(:set_default_authorizer, )
       req.send_request(options)
     end
 
@@ -9485,8 +9485,8 @@ module Aws::IoT
     #
     # @overload set_default_policy_version(**params)
     # @param [Hash] params ({})
-    def set_default_policy_version(params = {}, **options)
-      req = build_request(:set_default_policy_version, params)
+    def set_default_policy_version(, **options)
+      req = build_request(:set_default_policy_version, )
       req.send_request(options)
     end
 
@@ -9511,8 +9511,8 @@ module Aws::IoT
     #
     # @overload set_logging_options(**params)
     # @param [Hash] params ({})
-    def set_logging_options(params = {}, **options)
-      req = build_request(:set_logging_options, params)
+    def set_logging_options(, **options)
+      req = build_request(:set_logging_options, )
       req.send_request(options)
     end
 
@@ -9538,8 +9538,8 @@ module Aws::IoT
     #
     # @overload set_v2_logging_level(**params)
     # @param [Hash] params ({})
-    def set_v2_logging_level(params = {}, **options)
-      req = build_request(:set_v2_logging_level, params)
+    def set_v2_logging_level(, **options)
+      req = build_request(:set_v2_logging_level, )
       req.send_request(options)
     end
 
@@ -9566,8 +9566,8 @@ module Aws::IoT
     #
     # @overload set_v2_logging_options(**params)
     # @param [Hash] params ({})
-    def set_v2_logging_options(params = {}, **options)
-      req = build_request(:set_v2_logging_options, params)
+    def set_v2_logging_options(, **options)
+      req = build_request(:set_v2_logging_options, )
       req.send_request(options)
     end
 
@@ -9623,8 +9623,8 @@ module Aws::IoT
     #
     # @overload start_audit_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def start_audit_mitigation_actions_task(params = {}, **options)
-      req = build_request(:start_audit_mitigation_actions_task, params)
+    def start_audit_mitigation_actions_task(, **options)
+      req = build_request(:start_audit_mitigation_actions_task, )
       req.send_request(options)
     end
 
@@ -9687,8 +9687,8 @@ module Aws::IoT
     #
     # @overload start_detect_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def start_detect_mitigation_actions_task(params = {}, **options)
-      req = build_request(:start_detect_mitigation_actions_task, params)
+    def start_detect_mitigation_actions_task(, **options)
+      req = build_request(:start_detect_mitigation_actions_task, )
       req.send_request(options)
     end
 
@@ -9717,8 +9717,8 @@ module Aws::IoT
     #
     # @overload start_on_demand_audit_task(**params)
     # @param [Hash] params ({})
-    def start_on_demand_audit_task(params = {}, **options)
-      req = build_request(:start_on_demand_audit_task, params)
+    def start_on_demand_audit_task(, **options)
+      req = build_request(:start_on_demand_audit_task, )
       req.send_request(options)
     end
 
@@ -9757,8 +9757,8 @@ module Aws::IoT
     #
     # @overload start_thing_registration_task(**params)
     # @param [Hash] params ({})
-    def start_thing_registration_task(params = {}, **options)
-      req = build_request(:start_thing_registration_task, params)
+    def start_thing_registration_task(, **options)
+      req = build_request(:start_thing_registration_task, )
       req.send_request(options)
     end
 
@@ -9777,8 +9777,8 @@ module Aws::IoT
     #
     # @overload stop_thing_registration_task(**params)
     # @param [Hash] params ({})
-    def stop_thing_registration_task(params = {}, **options)
-      req = build_request(:stop_thing_registration_task, params)
+    def stop_thing_registration_task(, **options)
+      req = build_request(:stop_thing_registration_task, )
       req.send_request(options)
     end
 
@@ -9807,8 +9807,8 @@ module Aws::IoT
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -9883,8 +9883,8 @@ module Aws::IoT
     #
     # @overload test_authorization(**params)
     # @param [Hash] params ({})
-    def test_authorization(params = {}, **options)
-      req = build_request(:test_authorization, params)
+    def test_authorization(, **options)
+      req = build_request(:test_authorization, )
       req.send_request(options)
     end
 
@@ -9952,8 +9952,8 @@ module Aws::IoT
     #
     # @overload test_invoke_authorizer(**params)
     # @param [Hash] params ({})
-    def test_invoke_authorizer(params = {}, **options)
-      req = build_request(:test_invoke_authorizer, params)
+    def test_invoke_authorizer(, **options)
+      req = build_request(:test_invoke_authorizer, )
       req.send_request(options)
     end
 
@@ -9998,8 +9998,8 @@ module Aws::IoT
     #
     # @overload transfer_certificate(**params)
     # @param [Hash] params ({})
-    def transfer_certificate(params = {}, **options)
-      req = build_request(:transfer_certificate, params)
+    def transfer_certificate(, **options)
+      req = build_request(:transfer_certificate, )
       req.send_request(options)
     end
 
@@ -10022,8 +10022,8 @@ module Aws::IoT
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -10077,8 +10077,8 @@ module Aws::IoT
     #
     # @overload update_account_audit_configuration(**params)
     # @param [Hash] params ({})
-    def update_account_audit_configuration(params = {}, **options)
-      req = build_request(:update_account_audit_configuration, params)
+    def update_account_audit_configuration(, **options)
+      req = build_request(:update_account_audit_configuration, )
       req.send_request(options)
     end
 
@@ -10129,8 +10129,8 @@ module Aws::IoT
     #
     # @overload update_audit_suppression(**params)
     # @param [Hash] params ({})
-    def update_audit_suppression(params = {}, **options)
-      req = build_request(:update_audit_suppression, params)
+    def update_audit_suppression(, **options)
+      req = build_request(:update_audit_suppression, )
       req.send_request(options)
     end
 
@@ -10175,8 +10175,8 @@ module Aws::IoT
     #
     # @overload update_authorizer(**params)
     # @param [Hash] params ({})
-    def update_authorizer(params = {}, **options)
-      req = build_request(:update_authorizer, params)
+    def update_authorizer(, **options)
+      req = build_request(:update_authorizer, )
       req.send_request(options)
     end
 
@@ -10214,8 +10214,8 @@ module Aws::IoT
     #
     # @overload update_billing_group(**params)
     # @param [Hash] params ({})
-    def update_billing_group(params = {}, **options)
-      req = build_request(:update_billing_group, params)
+    def update_billing_group(, **options)
+      req = build_request(:update_billing_group, )
       req.send_request(options)
     end
 
@@ -10257,8 +10257,8 @@ module Aws::IoT
     #
     # @overload update_ca_certificate(**params)
     # @param [Hash] params ({})
-    def update_ca_certificate(params = {}, **options)
-      req = build_request(:update_ca_certificate, params)
+    def update_ca_certificate(, **options)
+      req = build_request(:update_ca_certificate, )
       req.send_request(options)
     end
 
@@ -10299,8 +10299,8 @@ module Aws::IoT
     #
     # @overload update_certificate(**params)
     # @param [Hash] params ({})
-    def update_certificate(params = {}, **options)
-      req = build_request(:update_certificate, params)
+    def update_certificate(, **options)
+      req = build_request(:update_certificate, )
       req.send_request(options)
     end
 
@@ -10341,8 +10341,8 @@ module Aws::IoT
     #
     # @overload update_custom_metric(**params)
     # @param [Hash] params ({})
-    def update_custom_metric(params = {}, **options)
-      req = build_request(:update_custom_metric, params)
+    def update_custom_metric(, **options)
+      req = build_request(:update_custom_metric, )
       req.send_request(options)
     end
 
@@ -10386,8 +10386,8 @@ module Aws::IoT
     #
     # @overload update_dimension(**params)
     # @param [Hash] params ({})
-    def update_dimension(params = {}, **options)
-      req = build_request(:update_dimension, params)
+    def update_dimension(, **options)
+      req = build_request(:update_dimension, )
       req.send_request(options)
     end
 
@@ -10435,8 +10435,8 @@ module Aws::IoT
     #
     # @overload update_domain_configuration(**params)
     # @param [Hash] params ({})
-    def update_domain_configuration(params = {}, **options)
-      req = build_request(:update_domain_configuration, params)
+    def update_domain_configuration(, **options)
+      req = build_request(:update_domain_configuration, )
       req.send_request(options)
     end
 
@@ -10498,8 +10498,8 @@ module Aws::IoT
     #
     # @overload update_dynamic_thing_group(**params)
     # @param [Hash] params ({})
-    def update_dynamic_thing_group(params = {}, **options)
-      req = build_request(:update_dynamic_thing_group, params)
+    def update_dynamic_thing_group(, **options)
+      req = build_request(:update_dynamic_thing_group, )
       req.send_request(options)
     end
 
@@ -10522,8 +10522,8 @@ module Aws::IoT
     #
     # @overload update_event_configurations(**params)
     # @param [Hash] params ({})
-    def update_event_configurations(params = {}, **options)
-      req = build_request(:update_event_configurations, params)
+    def update_event_configurations(, **options)
+      req = build_request(:update_event_configurations, )
       req.send_request(options)
     end
 
@@ -10575,8 +10575,8 @@ module Aws::IoT
     #
     # @overload update_indexing_configuration(**params)
     # @param [Hash] params ({})
-    def update_indexing_configuration(params = {}, **options)
-      req = build_request(:update_indexing_configuration, params)
+    def update_indexing_configuration(, **options)
+      req = build_request(:update_indexing_configuration, )
       req.send_request(options)
     end
 
@@ -10657,8 +10657,8 @@ module Aws::IoT
     #
     # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, **options)
-      req = build_request(:update_job, params)
+    def update_job(, **options)
+      req = build_request(:update_job, )
       req.send_request(options)
     end
 
@@ -10716,8 +10716,8 @@ module Aws::IoT
     #
     # @overload update_mitigation_action(**params)
     # @param [Hash] params ({})
-    def update_mitigation_action(params = {}, **options)
-      req = build_request(:update_mitigation_action, params)
+    def update_mitigation_action(, **options)
+      req = build_request(:update_mitigation_action, )
       req.send_request(options)
     end
 
@@ -10764,8 +10764,8 @@ module Aws::IoT
     #
     # @overload update_provisioning_template(**params)
     # @param [Hash] params ({})
-    def update_provisioning_template(params = {}, **options)
-      req = build_request(:update_provisioning_template, params)
+    def update_provisioning_template(, **options)
+      req = build_request(:update_provisioning_template, )
       req.send_request(options)
     end
 
@@ -10800,8 +10800,8 @@ module Aws::IoT
     #
     # @overload update_role_alias(**params)
     # @param [Hash] params ({})
-    def update_role_alias(params = {}, **options)
-      req = build_request(:update_role_alias, params)
+    def update_role_alias(, **options)
+      req = build_request(:update_role_alias, )
       req.send_request(options)
     end
 
@@ -10855,8 +10855,8 @@ module Aws::IoT
     #
     # @overload update_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def update_scheduled_audit(params = {}, **options)
-      req = build_request(:update_scheduled_audit, params)
+    def update_scheduled_audit(, **options)
+      req = build_request(:update_scheduled_audit, )
       req.send_request(options)
     end
 
@@ -11024,8 +11024,8 @@ module Aws::IoT
     #
     # @overload update_security_profile(**params)
     # @param [Hash] params ({})
-    def update_security_profile(params = {}, **options)
-      req = build_request(:update_security_profile, params)
+    def update_security_profile(, **options)
+      req = build_request(:update_security_profile, )
       req.send_request(options)
     end
 
@@ -11079,8 +11079,8 @@ module Aws::IoT
     #
     # @overload update_stream(**params)
     # @param [Hash] params ({})
-    def update_stream(params = {}, **options)
-      req = build_request(:update_stream, params)
+    def update_stream(, **options)
+      req = build_request(:update_stream, )
       req.send_request(options)
     end
 
@@ -11133,8 +11133,8 @@ module Aws::IoT
     #
     # @overload update_thing(**params)
     # @param [Hash] params ({})
-    def update_thing(params = {}, **options)
-      req = build_request(:update_thing, params)
+    def update_thing(, **options)
+      req = build_request(:update_thing, )
       req.send_request(options)
     end
 
@@ -11176,8 +11176,8 @@ module Aws::IoT
     #
     # @overload update_thing_group(**params)
     # @param [Hash] params ({})
-    def update_thing_group(params = {}, **options)
-      req = build_request(:update_thing_group, params)
+    def update_thing_group(, **options)
+      req = build_request(:update_thing_group, )
       req.send_request(options)
     end
 
@@ -11211,8 +11211,8 @@ module Aws::IoT
     #
     # @overload update_thing_groups_for_thing(**params)
     # @param [Hash] params ({})
-    def update_thing_groups_for_thing(params = {}, **options)
-      req = build_request(:update_thing_groups_for_thing, params)
+    def update_thing_groups_for_thing(, **options)
+      req = build_request(:update_thing_groups_for_thing, )
       req.send_request(options)
     end
 
@@ -11265,8 +11265,8 @@ module Aws::IoT
     #
     # @overload update_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def update_topic_rule_destination(params = {}, **options)
-      req = build_request(:update_topic_rule_destination, params)
+    def update_topic_rule_destination(, **options)
+      req = build_request(:update_topic_rule_destination, )
       req.send_request(options)
     end
 
@@ -11325,8 +11325,8 @@ module Aws::IoT
     #
     # @overload validate_security_profile_behaviors(**params)
     # @param [Hash] params ({})
-    def validate_security_profile_behaviors(params = {}, **options)
-      req = build_request(:validate_security_profile_behaviors, params)
+    def validate_security_profile_behaviors(, **options)
+      req = build_request(:validate_security_profile_behaviors, )
       req.send_request(options)
     end
 

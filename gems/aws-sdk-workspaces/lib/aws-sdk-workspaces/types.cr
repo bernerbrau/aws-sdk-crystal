@@ -3680,5 +3680,1002 @@ module Aws::WorkSpaces
       include Aws::Structure
     end
 
+    alias ARN = String
+
+    alias AccessDeniedException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias AccessPropertyValue = String
+
+    alias AccountModification = NamedTuple(
+      "ModificationState" : (DedicatedTenancyModificationStateEnum)?,
+      "DedicatedTenancySupport" : (DedicatedTenancySupportResultEnum)?,
+      "DedicatedTenancyManagementCidrRange" : (DedicatedTenancyManagementCidrRange)?,
+      "StartTime" : (Timestamp)?,
+      "ErrorCode" : (WorkspaceErrorCode)?,
+      "ErrorMessage" : (Description)?
+    )
+
+    alias AccountModificationList = Array(AccountModification)
+
+    alias Alias = String
+
+    alias Application = String
+
+    alias ApplicationList = Array(Application)
+
+    alias AssociateConnectionAliasRequest = NamedTuple(
+      "AliasId" : ConnectionAliasId,
+      "ResourceId" : NonEmptyString
+    )
+
+    alias AssociateConnectionAliasResult = NamedTuple(
+      "ConnectionIdentifier" : (ConnectionIdentifier)?
+    )
+
+    alias AssociateIpGroupsRequest = NamedTuple(
+      "DirectoryId" : DirectoryId,
+      "GroupIds" : IpGroupIdList
+    )
+
+    alias AssociateIpGroupsResult = NamedTuple(
+      
+    )
+
+    alias AssociationStatus = String
+
+    alias AuthorizeIpRulesRequest = NamedTuple(
+      "GroupId" : IpGroupId,
+      "UserRules" : IpRuleList
+    )
+
+    alias AuthorizeIpRulesResult = NamedTuple(
+      
+    )
+
+    alias AwsAccount = String
+
+    alias BooleanObject = Bool
+
+    alias BundleId = String
+
+    alias BundleIdList = Array(BundleId)
+
+    alias BundleList = Array(WorkspaceBundle)
+
+    alias BundleOwner = String
+
+    alias ClientProperties = NamedTuple(
+      "ReconnectEnabled" : (ReconnectEnum)?
+    )
+
+    alias ClientPropertiesList = Array(ClientPropertiesResult)
+
+    alias ClientPropertiesResult = NamedTuple(
+      "ResourceId" : (NonEmptyString)?,
+      "ClientProperties" : (ClientProperties)?
+    )
+
+    alias Compute = String
+
+    alias ComputeType = NamedTuple(
+      "Name" : (Compute)?
+    )
+
+    alias ComputerName = String
+
+    alias ConnectionAlias = NamedTuple(
+      "ConnectionString" : (ConnectionString)?,
+      "AliasId" : (ConnectionAliasId)?,
+      "State" : (ConnectionAliasState)?,
+      "OwnerAccountId" : (AwsAccount)?,
+      "Associations" : (ConnectionAliasAssociationList)?
+    )
+
+    alias ConnectionAliasAssociation = NamedTuple(
+      "AssociationStatus" : (AssociationStatus)?,
+      "AssociatedAccountId" : (AwsAccount)?,
+      "ResourceId" : (NonEmptyString)?,
+      "ConnectionIdentifier" : (ConnectionIdentifier)?
+    )
+
+    alias ConnectionAliasAssociationList = Array(ConnectionAliasAssociation)
+
+    alias ConnectionAliasId = String
+
+    alias ConnectionAliasIdList = Array(ConnectionAliasId)
+
+    alias ConnectionAliasList = Array(ConnectionAlias)
+
+    alias ConnectionAliasPermission = NamedTuple(
+      "SharedAccountId" : AwsAccount,
+      "AllowAssociation" : BooleanObject
+    )
+
+    alias ConnectionAliasPermissions = Array(ConnectionAliasPermission)
+
+    alias ConnectionAliasState = String
+
+    alias ConnectionIdentifier = String
+
+    alias ConnectionState = String
+
+    alias ConnectionString = String
+
+    alias CopyWorkspaceImageRequest = NamedTuple(
+      "Name" : WorkspaceImageName,
+      "Description" : (WorkspaceImageDescription)?,
+      "SourceImageId" : WorkspaceImageId,
+      "SourceRegion" : Region,
+      "Tags" : (TagList)?
+    )
+
+    alias CopyWorkspaceImageResult = NamedTuple(
+      "ImageId" : (WorkspaceImageId)?
+    )
+
+    alias CreateConnectionAliasRequest = NamedTuple(
+      "ConnectionString" : ConnectionString,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateConnectionAliasResult = NamedTuple(
+      "AliasId" : (ConnectionAliasId)?
+    )
+
+    alias CreateIpGroupRequest = NamedTuple(
+      "GroupName" : IpGroupName,
+      "GroupDesc" : (IpGroupDesc)?,
+      "UserRules" : (IpRuleList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateIpGroupResult = NamedTuple(
+      "GroupId" : (IpGroupId)?
+    )
+
+    alias CreateTagsRequest = NamedTuple(
+      "ResourceId" : NonEmptyString,
+      "Tags" : TagList
+    )
+
+    alias CreateTagsResult = NamedTuple(
+      
+    )
+
+    alias CreateWorkspacesRequest = NamedTuple(
+      "Workspaces" : WorkspaceRequestList
+    )
+
+    alias CreateWorkspacesResult = NamedTuple(
+      "FailedRequests" : (FailedCreateWorkspaceRequests)?,
+      "PendingRequests" : (WorkspaceList)?
+    )
+
+    alias DedicatedTenancyCidrRangeList = Array(DedicatedTenancyManagementCidrRange)
+
+    alias DedicatedTenancyManagementCidrRange = String
+
+    alias DedicatedTenancyModificationStateEnum = String
+
+    alias DedicatedTenancySupportEnum = String
+
+    alias DedicatedTenancySupportResultEnum = String
+
+    alias DefaultOu = String
+
+    alias DefaultWorkspaceCreationProperties = NamedTuple(
+      "EnableWorkDocs" : (BooleanObject)?,
+      "EnableInternetAccess" : (BooleanObject)?,
+      "DefaultOu" : (DefaultOu)?,
+      "CustomSecurityGroupId" : (SecurityGroupId)?,
+      "UserEnabledAsLocalAdministrator" : (BooleanObject)?,
+      "EnableMaintenanceMode" : (BooleanObject)?
+    )
+
+    alias DeleteConnectionAliasRequest = NamedTuple(
+      "AliasId" : ConnectionAliasId
+    )
+
+    alias DeleteConnectionAliasResult = NamedTuple(
+      
+    )
+
+    alias DeleteIpGroupRequest = NamedTuple(
+      "GroupId" : IpGroupId
+    )
+
+    alias DeleteIpGroupResult = NamedTuple(
+      
+    )
+
+    alias DeleteTagsRequest = NamedTuple(
+      "ResourceId" : NonEmptyString,
+      "TagKeys" : TagKeyList
+    )
+
+    alias DeleteTagsResult = NamedTuple(
+      
+    )
+
+    alias DeleteWorkspaceImageRequest = NamedTuple(
+      "ImageId" : WorkspaceImageId
+    )
+
+    alias DeleteWorkspaceImageResult = NamedTuple(
+      
+    )
+
+    alias DeregisterWorkspaceDirectoryRequest = NamedTuple(
+      "DirectoryId" : DirectoryId
+    )
+
+    alias DeregisterWorkspaceDirectoryResult = NamedTuple(
+      
+    )
+
+    alias DescribeAccountModificationsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeAccountModificationsResult = NamedTuple(
+      "AccountModifications" : (AccountModificationList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeAccountRequest = NamedTuple(
+      
+    )
+
+    alias DescribeAccountResult = NamedTuple(
+      "DedicatedTenancySupport" : (DedicatedTenancySupportResultEnum)?,
+      "DedicatedTenancyManagementCidrRange" : (DedicatedTenancyManagementCidrRange)?
+    )
+
+    alias DescribeClientPropertiesRequest = NamedTuple(
+      "ResourceIds" : ResourceIdList
+    )
+
+    alias DescribeClientPropertiesResult = NamedTuple(
+      "ClientPropertiesList" : (ClientPropertiesList)?
+    )
+
+    alias DescribeConnectionAliasPermissionsRequest = NamedTuple(
+      "AliasId" : ConnectionAliasId,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (Limit)?
+    )
+
+    alias DescribeConnectionAliasPermissionsResult = NamedTuple(
+      "AliasId" : (ConnectionAliasId)?,
+      "ConnectionAliasPermissions" : (ConnectionAliasPermissions)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeConnectionAliasesRequest = NamedTuple(
+      "AliasIds" : (ConnectionAliasIdList)?,
+      "ResourceId" : (NonEmptyString)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeConnectionAliasesResult = NamedTuple(
+      "ConnectionAliases" : (ConnectionAliasList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeIpGroupsRequest = NamedTuple(
+      "GroupIds" : (IpGroupIdList)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (Limit)?
+    )
+
+    alias DescribeIpGroupsResult = NamedTuple(
+      "Result" : (WorkspacesIpGroupsList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeTagsRequest = NamedTuple(
+      "ResourceId" : NonEmptyString
+    )
+
+    alias DescribeTagsResult = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias DescribeWorkspaceBundlesRequest = NamedTuple(
+      "BundleIds" : (BundleIdList)?,
+      "Owner" : (BundleOwner)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspaceBundlesResult = NamedTuple(
+      "Bundles" : (BundleList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspaceDirectoriesRequest = NamedTuple(
+      "DirectoryIds" : (DirectoryIdList)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspaceDirectoriesResult = NamedTuple(
+      "Directories" : (DirectoryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspaceImagePermissionsRequest = NamedTuple(
+      "ImageId" : WorkspaceImageId,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (Limit)?
+    )
+
+    alias DescribeWorkspaceImagePermissionsResult = NamedTuple(
+      "ImageId" : (WorkspaceImageId)?,
+      "ImagePermissions" : (ImagePermissions)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspaceImagesRequest = NamedTuple(
+      "ImageIds" : (WorkspaceImageIdList)?,
+      "ImageType" : (ImageType)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (Limit)?
+    )
+
+    alias DescribeWorkspaceImagesResult = NamedTuple(
+      "Images" : (WorkspaceImageList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspaceSnapshotsRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId
+    )
+
+    alias DescribeWorkspaceSnapshotsResult = NamedTuple(
+      "RebuildSnapshots" : (SnapshotList)?,
+      "RestoreSnapshots" : (SnapshotList)?
+    )
+
+    alias DescribeWorkspacesConnectionStatusRequest = NamedTuple(
+      "WorkspaceIds" : (WorkspaceIdList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspacesConnectionStatusResult = NamedTuple(
+      "WorkspacesConnectionStatus" : (WorkspaceConnectionStatusList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspacesRequest = NamedTuple(
+      "WorkspaceIds" : (WorkspaceIdList)?,
+      "DirectoryId" : (DirectoryId)?,
+      "UserName" : (UserName)?,
+      "BundleId" : (BundleId)?,
+      "Limit" : (Limit)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias DescribeWorkspacesResult = NamedTuple(
+      "Workspaces" : (WorkspaceList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias Description = String
+
+    alias DirectoryId = String
+
+    alias DirectoryIdList = Array(DirectoryId)
+
+    alias DirectoryList = Array(WorkspaceDirectory)
+
+    alias DirectoryName = String
+
+    alias DisassociateConnectionAliasRequest = NamedTuple(
+      "AliasId" : ConnectionAliasId
+    )
+
+    alias DisassociateConnectionAliasResult = NamedTuple(
+      
+    )
+
+    alias DisassociateIpGroupsRequest = NamedTuple(
+      "DirectoryId" : DirectoryId,
+      "GroupIds" : IpGroupIdList
+    )
+
+    alias DisassociateIpGroupsResult = NamedTuple(
+      
+    )
+
+    alias DnsIpAddresses = Array(IpAddress)
+
+    alias Ec2ImageId = String
+
+    alias ErrorType = String
+
+    alias ExceptionMessage = String
+
+    alias FailedCreateWorkspaceRequest = NamedTuple(
+      "WorkspaceRequest" : (WorkspaceRequest)?,
+      "ErrorCode" : (ErrorType)?,
+      "ErrorMessage" : (Description)?
+    )
+
+    alias FailedCreateWorkspaceRequests = Array(FailedCreateWorkspaceRequest)
+
+    alias FailedRebootWorkspaceRequests = Array(FailedWorkspaceChangeRequest)
+
+    alias FailedRebuildWorkspaceRequests = Array(FailedWorkspaceChangeRequest)
+
+    alias FailedStartWorkspaceRequests = Array(FailedWorkspaceChangeRequest)
+
+    alias FailedStopWorkspaceRequests = Array(FailedWorkspaceChangeRequest)
+
+    alias FailedTerminateWorkspaceRequests = Array(FailedWorkspaceChangeRequest)
+
+    alias FailedWorkspaceChangeRequest = NamedTuple(
+      "WorkspaceId" : (WorkspaceId)?,
+      "ErrorCode" : (ErrorType)?,
+      "ErrorMessage" : (Description)?
+    )
+
+    alias ImagePermission = NamedTuple(
+      "SharedAccountId" : (AwsAccount)?
+    )
+
+    alias ImagePermissions = Array(ImagePermission)
+
+    alias ImageType = String
+
+    alias ImportWorkspaceImageRequest = NamedTuple(
+      "Ec2ImageId" : Ec2ImageId,
+      "IngestionProcess" : WorkspaceImageIngestionProcess,
+      "ImageName" : WorkspaceImageName,
+      "ImageDescription" : WorkspaceImageDescription,
+      "Tags" : (TagList)?,
+      "Applications" : (ApplicationList)?
+    )
+
+    alias ImportWorkspaceImageResult = NamedTuple(
+      "ImageId" : (WorkspaceImageId)?
+    )
+
+    alias InvalidParameterValuesException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias InvalidResourceStateException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias IpAddress = String
+
+    alias IpGroupDesc = String
+
+    alias IpGroupId = String
+
+    alias IpGroupIdList = Array(IpGroupId)
+
+    alias IpGroupName = String
+
+    alias IpRevokedRuleList = Array(IpRule)
+
+    alias IpRule = String
+
+    alias IpRuleDesc = String
+
+    alias IpRuleItem = NamedTuple(
+      "ipRule" : (IpRule)?,
+      "ruleDesc" : (IpRuleDesc)?
+    )
+
+    alias IpRuleList = Array(IpRuleItem)
+
+    alias Limit = Int32
+
+    alias ListAvailableManagementCidrRangesRequest = NamedTuple(
+      "ManagementCidrRangeConstraint" : ManagementCidrRangeConstraint,
+      "MaxResults" : (ManagementCidrRangeMaxResults)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListAvailableManagementCidrRangesResult = NamedTuple(
+      "ManagementCidrRanges" : (DedicatedTenancyCidrRangeList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ManagementCidrRangeConstraint = String
+
+    alias ManagementCidrRangeMaxResults = Int32
+
+    alias MigrateWorkspaceRequest = NamedTuple(
+      "SourceWorkspaceId" : WorkspaceId,
+      "BundleId" : BundleId
+    )
+
+    alias MigrateWorkspaceResult = NamedTuple(
+      "SourceWorkspaceId" : (WorkspaceId)?,
+      "TargetWorkspaceId" : (WorkspaceId)?
+    )
+
+    alias ModificationResourceEnum = String
+
+    alias ModificationState = NamedTuple(
+      "Resource" : (ModificationResourceEnum)?,
+      "State" : (ModificationStateEnum)?
+    )
+
+    alias ModificationStateEnum = String
+
+    alias ModificationStateList = Array(ModificationState)
+
+    alias ModifyAccountRequest = NamedTuple(
+      "DedicatedTenancySupport" : (DedicatedTenancySupportEnum)?,
+      "DedicatedTenancyManagementCidrRange" : (DedicatedTenancyManagementCidrRange)?
+    )
+
+    alias ModifyAccountResult = NamedTuple(
+      
+    )
+
+    alias ModifyClientPropertiesRequest = NamedTuple(
+      "ResourceId" : NonEmptyString,
+      "ClientProperties" : ClientProperties
+    )
+
+    alias ModifyClientPropertiesResult = NamedTuple(
+      
+    )
+
+    alias ModifySelfservicePermissionsRequest = NamedTuple(
+      "ResourceId" : DirectoryId,
+      "SelfservicePermissions" : SelfservicePermissions
+    )
+
+    alias ModifySelfservicePermissionsResult = NamedTuple(
+      
+    )
+
+    alias ModifyWorkspaceAccessPropertiesRequest = NamedTuple(
+      "ResourceId" : DirectoryId,
+      "WorkspaceAccessProperties" : WorkspaceAccessProperties
+    )
+
+    alias ModifyWorkspaceAccessPropertiesResult = NamedTuple(
+      
+    )
+
+    alias ModifyWorkspaceCreationPropertiesRequest = NamedTuple(
+      "ResourceId" : DirectoryId,
+      "WorkspaceCreationProperties" : WorkspaceCreationProperties
+    )
+
+    alias ModifyWorkspaceCreationPropertiesResult = NamedTuple(
+      
+    )
+
+    alias ModifyWorkspacePropertiesRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId,
+      "WorkspaceProperties" : WorkspaceProperties
+    )
+
+    alias ModifyWorkspacePropertiesResult = NamedTuple(
+      
+    )
+
+    alias ModifyWorkspaceStateRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId,
+      "WorkspaceState" : TargetWorkspaceState
+    )
+
+    alias ModifyWorkspaceStateResult = NamedTuple(
+      
+    )
+
+    alias NonEmptyString = String
+
+    alias OperatingSystem = NamedTuple(
+      "Type" : (OperatingSystemType)?
+    )
+
+    alias OperatingSystemType = String
+
+    alias OperationInProgressException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias OperationNotSupportedException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias PaginationToken = String
+
+    alias RebootRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId
+    )
+
+    alias RebootWorkspaceRequests = Array(RebootRequest)
+
+    alias RebootWorkspacesRequest = NamedTuple(
+      "RebootWorkspaceRequests" : RebootWorkspaceRequests
+    )
+
+    alias RebootWorkspacesResult = NamedTuple(
+      "FailedRequests" : (FailedRebootWorkspaceRequests)?
+    )
+
+    alias RebuildRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId
+    )
+
+    alias RebuildWorkspaceRequests = Array(RebuildRequest)
+
+    alias RebuildWorkspacesRequest = NamedTuple(
+      "RebuildWorkspaceRequests" : RebuildWorkspaceRequests
+    )
+
+    alias RebuildWorkspacesResult = NamedTuple(
+      "FailedRequests" : (FailedRebuildWorkspaceRequests)?
+    )
+
+    alias ReconnectEnum = String
+
+    alias Region = String
+
+    alias RegisterWorkspaceDirectoryRequest = NamedTuple(
+      "DirectoryId" : DirectoryId,
+      "SubnetIds" : (SubnetIds)?,
+      "EnableWorkDocs" : BooleanObject,
+      "EnableSelfService" : (BooleanObject)?,
+      "Tenancy" : (Tenancy)?,
+      "Tags" : (TagList)?
+    )
+
+    alias RegisterWorkspaceDirectoryResult = NamedTuple(
+      
+    )
+
+    alias RegistrationCode = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias ResourceAssociatedException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias ResourceCreationFailedException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias ResourceIdList = Array(NonEmptyString)
+
+    alias ResourceLimitExceededException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "ResourceId" : (NonEmptyString)?
+    )
+
+    alias ResourceUnavailableException = NamedTuple(
+      "message" : (ExceptionMessage)?,
+      "ResourceId" : (NonEmptyString)?
+    )
+
+    alias RestoreWorkspaceRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId
+    )
+
+    alias RestoreWorkspaceResult = NamedTuple(
+      
+    )
+
+    alias RevokeIpRulesRequest = NamedTuple(
+      "GroupId" : IpGroupId,
+      "UserRules" : IpRevokedRuleList
+    )
+
+    alias RevokeIpRulesResult = NamedTuple(
+      
+    )
+
+    alias RootStorage = NamedTuple(
+      "Capacity" : (NonEmptyString)?
+    )
+
+    alias RootVolumeSizeGib = Int32
+
+    alias RunningMode = String
+
+    alias RunningModeAutoStopTimeoutInMinutes = Int32
+
+    alias SecurityGroupId = String
+
+    alias SelfservicePermissions = NamedTuple(
+      "RestartWorkspace" : (ReconnectEnum)?,
+      "IncreaseVolumeSize" : (ReconnectEnum)?,
+      "ChangeComputeType" : (ReconnectEnum)?,
+      "SwitchRunningMode" : (ReconnectEnum)?,
+      "RebuildWorkspace" : (ReconnectEnum)?
+    )
+
+    alias Snapshot = NamedTuple(
+      "SnapshotTime" : (Timestamp)?
+    )
+
+    alias SnapshotList = Array(Snapshot)
+
+    alias StartRequest = NamedTuple(
+      "WorkspaceId" : (WorkspaceId)?
+    )
+
+    alias StartWorkspaceRequests = Array(StartRequest)
+
+    alias StartWorkspacesRequest = NamedTuple(
+      "StartWorkspaceRequests" : StartWorkspaceRequests
+    )
+
+    alias StartWorkspacesResult = NamedTuple(
+      "FailedRequests" : (FailedStartWorkspaceRequests)?
+    )
+
+    alias StopRequest = NamedTuple(
+      "WorkspaceId" : (WorkspaceId)?
+    )
+
+    alias StopWorkspaceRequests = Array(StopRequest)
+
+    alias StopWorkspacesRequest = NamedTuple(
+      "StopWorkspaceRequests" : StopWorkspaceRequests
+    )
+
+    alias StopWorkspacesResult = NamedTuple(
+      "FailedRequests" : (FailedStopWorkspaceRequests)?
+    )
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(NonEmptyString)
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias TargetWorkspaceState = String
+
+    alias Tenancy = String
+
+    alias TerminateRequest = NamedTuple(
+      "WorkspaceId" : WorkspaceId
+    )
+
+    alias TerminateWorkspaceRequests = Array(TerminateRequest)
+
+    alias TerminateWorkspacesRequest = NamedTuple(
+      "TerminateWorkspaceRequests" : TerminateWorkspaceRequests
+    )
+
+    alias TerminateWorkspacesResult = NamedTuple(
+      "FailedRequests" : (FailedTerminateWorkspaceRequests)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UnsupportedNetworkConfigurationException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias UnsupportedWorkspaceConfigurationException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias UpdateConnectionAliasPermissionRequest = NamedTuple(
+      "AliasId" : ConnectionAliasId,
+      "ConnectionAliasPermission" : ConnectionAliasPermission
+    )
+
+    alias UpdateConnectionAliasPermissionResult = NamedTuple(
+      
+    )
+
+    alias UpdateRulesOfIpGroupRequest = NamedTuple(
+      "GroupId" : IpGroupId,
+      "UserRules" : IpRuleList
+    )
+
+    alias UpdateRulesOfIpGroupResult = NamedTuple(
+      
+    )
+
+    alias UpdateWorkspaceImagePermissionRequest = NamedTuple(
+      "ImageId" : WorkspaceImageId,
+      "AllowCopyImage" : BooleanObject,
+      "SharedAccountId" : AwsAccount
+    )
+
+    alias UpdateWorkspaceImagePermissionResult = NamedTuple(
+      
+    )
+
+    alias UserName = String
+
+    alias UserStorage = NamedTuple(
+      "Capacity" : (NonEmptyString)?
+    )
+
+    alias UserVolumeSizeGib = Int32
+
+    alias VolumeEncryptionKey = String
+
+    alias Workspace = NamedTuple(
+      "WorkspaceId" : (WorkspaceId)?,
+      "DirectoryId" : (DirectoryId)?,
+      "UserName" : (UserName)?,
+      "IpAddress" : (IpAddress)?,
+      "State" : (WorkspaceState)?,
+      "BundleId" : (BundleId)?,
+      "SubnetId" : (SubnetId)?,
+      "ErrorMessage" : (Description)?,
+      "ErrorCode" : (WorkspaceErrorCode)?,
+      "ComputerName" : (ComputerName)?,
+      "VolumeEncryptionKey" : (VolumeEncryptionKey)?,
+      "UserVolumeEncryptionEnabled" : (BooleanObject)?,
+      "RootVolumeEncryptionEnabled" : (BooleanObject)?,
+      "WorkspaceProperties" : (WorkspaceProperties)?,
+      "ModificationStates" : (ModificationStateList)?
+    )
+
+    alias WorkspaceAccessProperties = NamedTuple(
+      "DeviceTypeWindows" : (AccessPropertyValue)?,
+      "DeviceTypeOsx" : (AccessPropertyValue)?,
+      "DeviceTypeWeb" : (AccessPropertyValue)?,
+      "DeviceTypeIos" : (AccessPropertyValue)?,
+      "DeviceTypeAndroid" : (AccessPropertyValue)?,
+      "DeviceTypeChromeOs" : (AccessPropertyValue)?,
+      "DeviceTypeZeroClient" : (AccessPropertyValue)?
+    )
+
+    alias WorkspaceBundle = NamedTuple(
+      "BundleId" : (BundleId)?,
+      "Name" : (NonEmptyString)?,
+      "Owner" : (BundleOwner)?,
+      "Description" : (Description)?,
+      "ImageId" : (WorkspaceImageId)?,
+      "RootStorage" : (RootStorage)?,
+      "UserStorage" : (UserStorage)?,
+      "ComputeType" : (ComputeType)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias WorkspaceConnectionStatus = NamedTuple(
+      "WorkspaceId" : (WorkspaceId)?,
+      "ConnectionState" : (ConnectionState)?,
+      "ConnectionStateCheckTimestamp" : (Timestamp)?,
+      "LastKnownUserConnectionTimestamp" : (Timestamp)?
+    )
+
+    alias WorkspaceConnectionStatusList = Array(WorkspaceConnectionStatus)
+
+    alias WorkspaceCreationProperties = NamedTuple(
+      "EnableWorkDocs" : (BooleanObject)?,
+      "EnableInternetAccess" : (BooleanObject)?,
+      "DefaultOu" : (DefaultOu)?,
+      "CustomSecurityGroupId" : (SecurityGroupId)?,
+      "UserEnabledAsLocalAdministrator" : (BooleanObject)?,
+      "EnableMaintenanceMode" : (BooleanObject)?
+    )
+
+    alias WorkspaceDirectory = NamedTuple(
+      "DirectoryId" : (DirectoryId)?,
+      "Alias" : (Alias)?,
+      "DirectoryName" : (DirectoryName)?,
+      "RegistrationCode" : (RegistrationCode)?,
+      "SubnetIds" : (SubnetIds)?,
+      "DnsIpAddresses" : (DnsIpAddresses)?,
+      "CustomerUserName" : (UserName)?,
+      "IamRoleId" : (ARN)?,
+      "DirectoryType" : (WorkspaceDirectoryType)?,
+      "WorkspaceSecurityGroupId" : (SecurityGroupId)?,
+      "State" : (WorkspaceDirectoryState)?,
+      "WorkspaceCreationProperties" : (DefaultWorkspaceCreationProperties)?,
+      "ipGroupIds" : (IpGroupIdList)?,
+      "WorkspaceAccessProperties" : (WorkspaceAccessProperties)?,
+      "Tenancy" : (Tenancy)?,
+      "SelfservicePermissions" : (SelfservicePermissions)?
+    )
+
+    alias WorkspaceDirectoryState = String
+
+    alias WorkspaceDirectoryType = String
+
+    alias WorkspaceErrorCode = String
+
+    alias WorkspaceId = String
+
+    alias WorkspaceIdList = Array(WorkspaceId)
+
+    alias WorkspaceImage = NamedTuple(
+      "ImageId" : (WorkspaceImageId)?,
+      "Name" : (WorkspaceImageName)?,
+      "Description" : (WorkspaceImageDescription)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "State" : (WorkspaceImageState)?,
+      "RequiredTenancy" : (WorkspaceImageRequiredTenancy)?,
+      "ErrorCode" : (WorkspaceImageErrorCode)?,
+      "ErrorMessage" : (Description)?,
+      "Created" : (Timestamp)?,
+      "OwnerAccountId" : (AwsAccount)?
+    )
+
+    alias WorkspaceImageDescription = String
+
+    alias WorkspaceImageErrorCode = String
+
+    alias WorkspaceImageId = String
+
+    alias WorkspaceImageIdList = Array(WorkspaceImageId)
+
+    alias WorkspaceImageIngestionProcess = String
+
+    alias WorkspaceImageList = Array(WorkspaceImage)
+
+    alias WorkspaceImageName = String
+
+    alias WorkspaceImageRequiredTenancy = String
+
+    alias WorkspaceImageState = String
+
+    alias WorkspaceList = Array(Workspace)
+
+    alias WorkspaceProperties = NamedTuple(
+      "RunningMode" : (RunningMode)?,
+      "RunningModeAutoStopTimeoutInMinutes" : (RunningModeAutoStopTimeoutInMinutes)?,
+      "RootVolumeSizeGib" : (RootVolumeSizeGib)?,
+      "UserVolumeSizeGib" : (UserVolumeSizeGib)?,
+      "ComputeTypeName" : (Compute)?
+    )
+
+    alias WorkspaceRequest = NamedTuple(
+      "DirectoryId" : DirectoryId,
+      "UserName" : UserName,
+      "BundleId" : BundleId,
+      "VolumeEncryptionKey" : (VolumeEncryptionKey)?,
+      "UserVolumeEncryptionEnabled" : (BooleanObject)?,
+      "RootVolumeEncryptionEnabled" : (BooleanObject)?,
+      "WorkspaceProperties" : (WorkspaceProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias WorkspaceRequestList = Array(WorkspaceRequest)
+
+    alias WorkspaceState = String
+
+    alias WorkspacesDefaultRoleNotFoundException = NamedTuple(
+      "message" : (ExceptionMessage)?
+    )
+
+    alias WorkspacesIpGroup = NamedTuple(
+      "groupId" : (IpGroupId)?,
+      "groupName" : (IpGroupName)?,
+      "groupDesc" : (IpGroupDesc)?,
+      "userRules" : (IpRuleList)?
+    )
+
+    alias WorkspacesIpGroupsList = Array(WorkspacesIpGroup)
   end
 end

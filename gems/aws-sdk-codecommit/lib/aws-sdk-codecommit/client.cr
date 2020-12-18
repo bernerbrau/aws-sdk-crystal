@@ -366,8 +366,8 @@ module Aws::CodeCommit
     #
     # @overload associate_approval_rule_template_with_repository(**params)
     # @param [Hash] params ({})
-    def associate_approval_rule_template_with_repository(params = {}, **options)
-      req = build_request(:associate_approval_rule_template_with_repository, params)
+    def associate_approval_rule_template_with_repository(, **options)
+      req = build_request(:associate_approval_rule_template_with_repository, )
       req.send_request(options)
     end
 
@@ -411,8 +411,8 @@ module Aws::CodeCommit
     #
     # @overload batch_associate_approval_rule_template_with_repositories(**params)
     # @param [Hash] params ({})
-    def batch_associate_approval_rule_template_with_repositories(params = {}, **options)
-      req = build_request(:batch_associate_approval_rule_template_with_repositories, params)
+    def batch_associate_approval_rule_template_with_repositories(, **options)
+      req = build_request(:batch_associate_approval_rule_template_with_repositories, )
       req.send_request(options)
     end
 
@@ -532,8 +532,8 @@ module Aws::CodeCommit
     #
     # @overload batch_describe_merge_conflicts(**params)
     # @param [Hash] params ({})
-    def batch_describe_merge_conflicts(params = {}, **options)
-      req = build_request(:batch_describe_merge_conflicts, params)
+    def batch_describe_merge_conflicts(, **options)
+      req = build_request(:batch_describe_merge_conflicts, )
       req.send_request(options)
     end
 
@@ -578,8 +578,8 @@ module Aws::CodeCommit
     #
     # @overload batch_disassociate_approval_rule_template_from_repositories(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_approval_rule_template_from_repositories(params = {}, **options)
-      req = build_request(:batch_disassociate_approval_rule_template_from_repositories, params)
+    def batch_disassociate_approval_rule_template_from_repositories(, **options)
+      req = build_request(:batch_disassociate_approval_rule_template_from_repositories, )
       req.send_request(options)
     end
 
@@ -633,8 +633,8 @@ module Aws::CodeCommit
     #
     # @overload batch_get_commits(**params)
     # @param [Hash] params ({})
-    def batch_get_commits(params = {}, **options)
-      req = build_request(:batch_get_commits, params)
+    def batch_get_commits(, **options)
+      req = build_request(:batch_get_commits, )
       req.send_request(options)
     end
 
@@ -688,8 +688,8 @@ module Aws::CodeCommit
     #
     # @overload batch_get_repositories(**params)
     # @param [Hash] params ({})
-    def batch_get_repositories(params = {}, **options)
-      req = build_request(:batch_get_repositories, params)
+    def batch_get_repositories(, **options)
+      req = build_request(:batch_get_repositories, )
       req.send_request(options)
     end
 
@@ -779,8 +779,8 @@ module Aws::CodeCommit
     #
     # @overload create_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def create_approval_rule_template(params = {}, **options)
-      req = build_request(:create_approval_rule_template, params)
+    def create_approval_rule_template(, **options)
+      req = build_request(:create_approval_rule_template, )
       req.send_request(options)
     end
 
@@ -814,8 +814,8 @@ module Aws::CodeCommit
     #
     # @overload create_branch(**params)
     # @param [Hash] params ({})
-    def create_branch(params = {}, **options)
-      req = build_request(:create_branch, params)
+    def create_branch(, **options)
+      req = build_request(:create_branch, )
       req.send_request(options)
     end
 
@@ -921,8 +921,8 @@ module Aws::CodeCommit
     #
     # @overload create_commit(**params)
     # @param [Hash] params ({})
-    def create_commit(params = {}, **options)
-      req = build_request(:create_commit, params)
+    def create_commit(, **options)
+      req = build_request(:create_commit, )
       req.send_request(options)
     end
 
@@ -1012,8 +1012,8 @@ module Aws::CodeCommit
     #
     # @overload create_pull_request(**params)
     # @param [Hash] params ({})
-    def create_pull_request(params = {}, **options)
-      req = build_request(:create_pull_request, params)
+    def create_pull_request(, **options)
+      req = build_request(:create_pull_request, )
       req.send_request(options)
     end
 
@@ -1095,8 +1095,8 @@ module Aws::CodeCommit
     #
     # @overload create_pull_request_approval_rule(**params)
     # @param [Hash] params ({})
-    def create_pull_request_approval_rule(params = {}, **options)
-      req = build_request(:create_pull_request_approval_rule, params)
+    def create_pull_request_approval_rule(, **options)
+      req = build_request(:create_pull_request_approval_rule, )
       req.send_request(options)
     end
 
@@ -1163,8 +1163,8 @@ module Aws::CodeCommit
     #
     # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, **options)
-      req = build_request(:create_repository, params)
+    def create_repository(, **options)
+      req = build_request(:create_repository, )
       req.send_request(options)
     end
 
@@ -1278,8 +1278,8 @@ module Aws::CodeCommit
     #
     # @overload create_unreferenced_merge_commit(**params)
     # @param [Hash] params ({})
-    def create_unreferenced_merge_commit(params = {}, **options)
-      req = build_request(:create_unreferenced_merge_commit, params)
+    def create_unreferenced_merge_commit(, **options)
+      req = build_request(:create_unreferenced_merge_commit, )
       req.send_request(options)
     end
 
@@ -1308,8 +1308,8 @@ module Aws::CodeCommit
     #
     # @overload delete_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def delete_approval_rule_template(params = {}, **options)
-      req = build_request(:delete_approval_rule_template, params)
+    def delete_approval_rule_template(, **options)
+      req = build_request(:delete_approval_rule_template, )
       req.send_request(options)
     end
 
@@ -1342,8 +1342,8 @@ module Aws::CodeCommit
     #
     # @overload delete_branch(**params)
     # @param [Hash] params ({})
-    def delete_branch(params = {}, **options)
-      req = build_request(:delete_branch, params)
+    def delete_branch(, **options)
+      req = build_request(:delete_branch, )
       req.send_request(options)
     end
 
@@ -1383,8 +1383,8 @@ module Aws::CodeCommit
     #
     # @overload delete_comment_content(**params)
     # @param [Hash] params ({})
-    def delete_comment_content(params = {}, **options)
-      req = build_request(:delete_comment_content, params)
+    def delete_comment_content(, **options)
+      req = build_request(:delete_comment_content, )
       req.send_request(options)
     end
 
@@ -1463,8 +1463,8 @@ module Aws::CodeCommit
     #
     # @overload delete_file(**params)
     # @param [Hash] params ({})
-    def delete_file(params = {}, **options)
-      req = build_request(:delete_file, params)
+    def delete_file(, **options)
+      req = build_request(:delete_file, )
       req.send_request(options)
     end
 
@@ -1501,8 +1501,8 @@ module Aws::CodeCommit
     #
     # @overload delete_pull_request_approval_rule(**params)
     # @param [Hash] params ({})
-    def delete_pull_request_approval_rule(params = {}, **options)
-      req = build_request(:delete_pull_request_approval_rule, params)
+    def delete_pull_request_approval_rule(, **options)
+      req = build_request(:delete_pull_request_approval_rule, )
       req.send_request(options)
     end
 
@@ -1534,8 +1534,8 @@ module Aws::CodeCommit
     #
     # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, **options)
-      req = build_request(:delete_repository, params)
+    def delete_repository(, **options)
+      req = build_request(:delete_repository, )
       req.send_request(options)
     end
 
@@ -1648,8 +1648,8 @@ module Aws::CodeCommit
     #
     # @overload describe_merge_conflicts(**params)
     # @param [Hash] params ({})
-    def describe_merge_conflicts(params = {}, **options)
-      req = build_request(:describe_merge_conflicts, params)
+    def describe_merge_conflicts(, **options)
+      req = build_request(:describe_merge_conflicts, )
       req.send_request(options)
     end
 
@@ -1729,8 +1729,8 @@ module Aws::CodeCommit
     #
     # @overload describe_pull_request_events(**params)
     # @param [Hash] params ({})
-    def describe_pull_request_events(params = {}, **options)
-      req = build_request(:describe_pull_request_events, params)
+    def describe_pull_request_events(, **options)
+      req = build_request(:describe_pull_request_events, )
       req.send_request(options)
     end
 
@@ -1760,8 +1760,8 @@ module Aws::CodeCommit
     #
     # @overload disassociate_approval_rule_template_from_repository(**params)
     # @param [Hash] params ({})
-    def disassociate_approval_rule_template_from_repository(params = {}, **options)
-      req = build_request(:disassociate_approval_rule_template_from_repository, params)
+    def disassociate_approval_rule_template_from_repository(, **options)
+      req = build_request(:disassociate_approval_rule_template_from_repository, )
       req.send_request(options)
     end
 
@@ -1799,8 +1799,8 @@ module Aws::CodeCommit
     #
     # @overload evaluate_pull_request_approval_rules(**params)
     # @param [Hash] params ({})
-    def evaluate_pull_request_approval_rules(params = {}, **options)
-      req = build_request(:evaluate_pull_request_approval_rules, params)
+    def evaluate_pull_request_approval_rules(, **options)
+      req = build_request(:evaluate_pull_request_approval_rules, )
       req.send_request(options)
     end
 
@@ -1835,8 +1835,8 @@ module Aws::CodeCommit
     #
     # @overload get_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def get_approval_rule_template(params = {}, **options)
-      req = build_request(:get_approval_rule_template, params)
+    def get_approval_rule_template(, **options)
+      req = build_request(:get_approval_rule_template, )
       req.send_request(options)
     end
 
@@ -1868,8 +1868,8 @@ module Aws::CodeCommit
     #
     # @overload get_blob(**params)
     # @param [Hash] params ({})
-    def get_blob(params = {}, **options)
-      req = build_request(:get_blob, params)
+    def get_blob(, **options)
+      req = build_request(:get_blob, )
       req.send_request(options)
     end
 
@@ -1903,8 +1903,8 @@ module Aws::CodeCommit
     #
     # @overload get_branch(**params)
     # @param [Hash] params ({})
-    def get_branch(params = {}, **options)
-      req = build_request(:get_branch, params)
+    def get_branch(, **options)
+      req = build_request(:get_branch, )
       req.send_request(options)
     end
 
@@ -1950,8 +1950,8 @@ module Aws::CodeCommit
     #
     # @overload get_comment(**params)
     # @param [Hash] params ({})
-    def get_comment(params = {}, **options)
-      req = build_request(:get_comment, params)
+    def get_comment(, **options)
+      req = build_request(:get_comment, )
       req.send_request(options)
     end
 
@@ -2005,8 +2005,8 @@ module Aws::CodeCommit
     #
     # @overload get_comment_reactions(**params)
     # @param [Hash] params ({})
-    def get_comment_reactions(params = {}, **options)
-      req = build_request(:get_comment_reactions, params)
+    def get_comment_reactions(, **options)
+      req = build_request(:get_comment_reactions, )
       req.send_request(options)
     end
 
@@ -2085,8 +2085,8 @@ module Aws::CodeCommit
     #
     # @overload get_comments_for_compared_commit(**params)
     # @param [Hash] params ({})
-    def get_comments_for_compared_commit(params = {}, **options)
-      req = build_request(:get_comments_for_compared_commit, params)
+    def get_comments_for_compared_commit(, **options)
+      req = build_request(:get_comments_for_compared_commit, )
       req.send_request(options)
     end
 
@@ -2171,8 +2171,8 @@ module Aws::CodeCommit
     #
     # @overload get_comments_for_pull_request(**params)
     # @param [Hash] params ({})
-    def get_comments_for_pull_request(params = {}, **options)
-      req = build_request(:get_comments_for_pull_request, params)
+    def get_comments_for_pull_request(, **options)
+      req = build_request(:get_comments_for_pull_request, )
       req.send_request(options)
     end
 
@@ -2215,8 +2215,8 @@ module Aws::CodeCommit
     #
     # @overload get_commit(**params)
     # @param [Hash] params ({})
-    def get_commit(params = {}, **options)
-      req = build_request(:get_commit, params)
+    def get_commit(, **options)
+      req = build_request(:get_commit, )
       req.send_request(options)
     end
 
@@ -2293,8 +2293,8 @@ module Aws::CodeCommit
     #
     # @overload get_differences(**params)
     # @param [Hash] params ({})
-    def get_differences(params = {}, **options)
-      req = build_request(:get_differences, params)
+    def get_differences(, **options)
+      req = build_request(:get_differences, )
       req.send_request(options)
     end
 
@@ -2345,8 +2345,8 @@ module Aws::CodeCommit
     #
     # @overload get_file(**params)
     # @param [Hash] params ({})
-    def get_file(params = {}, **options)
-      req = build_request(:get_file, params)
+    def get_file(, **options)
+      req = build_request(:get_file, )
       req.send_request(options)
     end
 
@@ -2414,8 +2414,8 @@ module Aws::CodeCommit
     #
     # @overload get_folder(**params)
     # @param [Hash] params ({})
-    def get_folder(params = {}, **options)
-      req = build_request(:get_folder, params)
+    def get_folder(, **options)
+      req = build_request(:get_folder, )
       req.send_request(options)
     end
 
@@ -2474,8 +2474,8 @@ module Aws::CodeCommit
     #
     # @overload get_merge_commit(**params)
     # @param [Hash] params ({})
-    def get_merge_commit(params = {}, **options)
-      req = build_request(:get_merge_commit, params)
+    def get_merge_commit(, **options)
+      req = build_request(:get_merge_commit, )
       req.send_request(options)
     end
 
@@ -2572,8 +2572,8 @@ module Aws::CodeCommit
     #
     # @overload get_merge_conflicts(**params)
     # @param [Hash] params ({})
-    def get_merge_conflicts(params = {}, **options)
-      req = build_request(:get_merge_conflicts, params)
+    def get_merge_conflicts(, **options)
+      req = build_request(:get_merge_conflicts, )
       req.send_request(options)
     end
 
@@ -2635,8 +2635,8 @@ module Aws::CodeCommit
     #
     # @overload get_merge_options(**params)
     # @param [Hash] params ({})
-    def get_merge_options(params = {}, **options)
-      req = build_request(:get_merge_options, params)
+    def get_merge_options(, **options)
+      req = build_request(:get_merge_options, )
       req.send_request(options)
     end
 
@@ -2693,8 +2693,8 @@ module Aws::CodeCommit
     #
     # @overload get_pull_request(**params)
     # @param [Hash] params ({})
-    def get_pull_request(params = {}, **options)
-      req = build_request(:get_pull_request, params)
+    def get_pull_request(, **options)
+      req = build_request(:get_pull_request, )
       req.send_request(options)
     end
 
@@ -2729,8 +2729,8 @@ module Aws::CodeCommit
     #
     # @overload get_pull_request_approval_states(**params)
     # @param [Hash] params ({})
-    def get_pull_request_approval_states(params = {}, **options)
-      req = build_request(:get_pull_request_approval_states, params)
+    def get_pull_request_approval_states(, **options)
+      req = build_request(:get_pull_request_approval_states, )
       req.send_request(options)
     end
 
@@ -2768,8 +2768,8 @@ module Aws::CodeCommit
     #
     # @overload get_pull_request_override_state(**params)
     # @param [Hash] params ({})
-    def get_pull_request_override_state(params = {}, **options)
-      req = build_request(:get_pull_request_override_state, params)
+    def get_pull_request_override_state(, **options)
+      req = build_request(:get_pull_request_override_state, )
       req.send_request(options)
     end
 
@@ -2814,8 +2814,8 @@ module Aws::CodeCommit
     #
     # @overload get_repository(**params)
     # @param [Hash] params ({})
-    def get_repository(params = {}, **options)
-      req = build_request(:get_repository, params)
+    def get_repository(, **options)
+      req = build_request(:get_repository, )
       req.send_request(options)
     end
 
@@ -2851,8 +2851,8 @@ module Aws::CodeCommit
     #
     # @overload get_repository_triggers(**params)
     # @param [Hash] params ({})
-    def get_repository_triggers(params = {}, **options)
-      req = build_request(:get_repository_triggers, params)
+    def get_repository_triggers(, **options)
+      req = build_request(:get_repository_triggers, )
       req.send_request(options)
     end
 
@@ -2892,8 +2892,8 @@ module Aws::CodeCommit
     #
     # @overload list_approval_rule_templates(**params)
     # @param [Hash] params ({})
-    def list_approval_rule_templates(params = {}, **options)
-      req = build_request(:list_approval_rule_templates, params)
+    def list_approval_rule_templates(, **options)
+      req = build_request(:list_approval_rule_templates, )
       req.send_request(options)
     end
 
@@ -2937,8 +2937,8 @@ module Aws::CodeCommit
     #
     # @overload list_associated_approval_rule_templates_for_repository(**params)
     # @param [Hash] params ({})
-    def list_associated_approval_rule_templates_for_repository(params = {}, **options)
-      req = build_request(:list_associated_approval_rule_templates_for_repository, params)
+    def list_associated_approval_rule_templates_for_repository(, **options)
+      req = build_request(:list_associated_approval_rule_templates_for_repository, )
       req.send_request(options)
     end
 
@@ -2974,8 +2974,8 @@ module Aws::CodeCommit
     #
     # @overload list_branches(**params)
     # @param [Hash] params ({})
-    def list_branches(params = {}, **options)
-      req = build_request(:list_branches, params)
+    def list_branches(, **options)
+      req = build_request(:list_branches, )
       req.send_request(options)
     end
 
@@ -3029,8 +3029,8 @@ module Aws::CodeCommit
     #
     # @overload list_pull_requests(**params)
     # @param [Hash] params ({})
-    def list_pull_requests(params = {}, **options)
-      req = build_request(:list_pull_requests, params)
+    def list_pull_requests(, **options)
+      req = build_request(:list_pull_requests, )
       req.send_request(options)
     end
 
@@ -3076,8 +3076,8 @@ module Aws::CodeCommit
     #
     # @overload list_repositories(**params)
     # @param [Hash] params ({})
-    def list_repositories(params = {}, **options)
-      req = build_request(:list_repositories, params)
+    def list_repositories(, **options)
+      req = build_request(:list_repositories, )
       req.send_request(options)
     end
 
@@ -3121,8 +3121,8 @@ module Aws::CodeCommit
     #
     # @overload list_repositories_for_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def list_repositories_for_approval_rule_template(params = {}, **options)
-      req = build_request(:list_repositories_for_approval_rule_template, params)
+    def list_repositories_for_approval_rule_template(, **options)
+      req = build_request(:list_repositories_for_approval_rule_template, )
       req.send_request(options)
     end
 
@@ -3165,8 +3165,8 @@ module Aws::CodeCommit
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3209,8 +3209,8 @@ module Aws::CodeCommit
     #
     # @overload merge_branches_by_fast_forward(**params)
     # @param [Hash] params ({})
-    def merge_branches_by_fast_forward(params = {}, **options)
-      req = build_request(:merge_branches_by_fast_forward, params)
+    def merge_branches_by_fast_forward(, **options)
+      req = build_request(:merge_branches_by_fast_forward, )
       req.send_request(options)
     end
 
@@ -3314,8 +3314,8 @@ module Aws::CodeCommit
     #
     # @overload merge_branches_by_squash(**params)
     # @param [Hash] params ({})
-    def merge_branches_by_squash(params = {}, **options)
-      req = build_request(:merge_branches_by_squash, params)
+    def merge_branches_by_squash(, **options)
+      req = build_request(:merge_branches_by_squash, )
       req.send_request(options)
     end
 
@@ -3418,8 +3418,8 @@ module Aws::CodeCommit
     #
     # @overload merge_branches_by_three_way(**params)
     # @param [Hash] params ({})
-    def merge_branches_by_three_way(params = {}, **options)
-      req = build_request(:merge_branches_by_three_way, params)
+    def merge_branches_by_three_way(, **options)
+      req = build_request(:merge_branches_by_three_way, )
       req.send_request(options)
     end
 
@@ -3490,8 +3490,8 @@ module Aws::CodeCommit
     #
     # @overload merge_pull_request_by_fast_forward(**params)
     # @param [Hash] params ({})
-    def merge_pull_request_by_fast_forward(params = {}, **options)
-      req = build_request(:merge_pull_request_by_fast_forward, params)
+    def merge_pull_request_by_fast_forward(, **options)
+      req = build_request(:merge_pull_request_by_fast_forward, )
       req.send_request(options)
     end
 
@@ -3622,8 +3622,8 @@ module Aws::CodeCommit
     #
     # @overload merge_pull_request_by_squash(**params)
     # @param [Hash] params ({})
-    def merge_pull_request_by_squash(params = {}, **options)
-      req = build_request(:merge_pull_request_by_squash, params)
+    def merge_pull_request_by_squash(, **options)
+      req = build_request(:merge_pull_request_by_squash, )
       req.send_request(options)
     end
 
@@ -3754,8 +3754,8 @@ module Aws::CodeCommit
     #
     # @overload merge_pull_request_by_three_way(**params)
     # @param [Hash] params ({})
-    def merge_pull_request_by_three_way(params = {}, **options)
-      req = build_request(:merge_pull_request_by_three_way, params)
+    def merge_pull_request_by_three_way(, **options)
+      req = build_request(:merge_pull_request_by_three_way, )
       req.send_request(options)
     end
 
@@ -3792,8 +3792,8 @@ module Aws::CodeCommit
     #
     # @overload override_pull_request_approval_rules(**params)
     # @param [Hash] params ({})
-    def override_pull_request_approval_rules(params = {}, **options)
-      req = build_request(:override_pull_request_approval_rules, params)
+    def override_pull_request_approval_rules(, **options)
+      req = build_request(:override_pull_request_approval_rules, )
       req.send_request(options)
     end
 
@@ -3880,8 +3880,8 @@ module Aws::CodeCommit
     #
     # @overload post_comment_for_compared_commit(**params)
     # @param [Hash] params ({})
-    def post_comment_for_compared_commit(params = {}, **options)
-      req = build_request(:post_comment_for_compared_commit, params)
+    def post_comment_for_compared_commit(, **options)
+      req = build_request(:post_comment_for_compared_commit, )
       req.send_request(options)
     end
 
@@ -3978,8 +3978,8 @@ module Aws::CodeCommit
     #
     # @overload post_comment_for_pull_request(**params)
     # @param [Hash] params ({})
-    def post_comment_for_pull_request(params = {}, **options)
-      req = build_request(:post_comment_for_pull_request, params)
+    def post_comment_for_pull_request(, **options)
+      req = build_request(:post_comment_for_pull_request, )
       req.send_request(options)
     end
 
@@ -4035,8 +4035,8 @@ module Aws::CodeCommit
     #
     # @overload post_comment_reply(**params)
     # @param [Hash] params ({})
-    def post_comment_reply(params = {}, **options)
-      req = build_request(:post_comment_reply, params)
+    def post_comment_reply(, **options)
+      req = build_request(:post_comment_reply, )
       req.send_request(options)
     end
 
@@ -4071,8 +4071,8 @@ module Aws::CodeCommit
     #
     # @overload put_comment_reaction(**params)
     # @param [Hash] params ({})
-    def put_comment_reaction(params = {}, **options)
-      req = build_request(:put_comment_reaction, params)
+    def put_comment_reaction(, **options)
+      req = build_request(:put_comment_reaction, )
       req.send_request(options)
     end
 
@@ -4155,8 +4155,8 @@ module Aws::CodeCommit
     #
     # @overload put_file(**params)
     # @param [Hash] params ({})
-    def put_file(params = {}, **options)
-      req = build_request(:put_file, params)
+    def put_file(, **options)
+      req = build_request(:put_file, )
       req.send_request(options)
     end
 
@@ -4197,8 +4197,8 @@ module Aws::CodeCommit
     #
     # @overload put_repository_triggers(**params)
     # @param [Hash] params ({})
-    def put_repository_triggers(params = {}, **options)
-      req = build_request(:put_repository_triggers, params)
+    def put_repository_triggers(, **options)
+      req = build_request(:put_repository_triggers, )
       req.send_request(options)
     end
 
@@ -4232,8 +4232,8 @@ module Aws::CodeCommit
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -4280,8 +4280,8 @@ module Aws::CodeCommit
     #
     # @overload test_repository_triggers(**params)
     # @param [Hash] params ({})
-    def test_repository_triggers(params = {}, **options)
-      req = build_request(:test_repository_triggers, params)
+    def test_repository_triggers(, **options)
+      req = build_request(:test_repository_triggers, )
       req.send_request(options)
     end
 
@@ -4313,8 +4313,8 @@ module Aws::CodeCommit
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -4361,8 +4361,8 @@ module Aws::CodeCommit
     #
     # @overload update_approval_rule_template_content(**params)
     # @param [Hash] params ({})
-    def update_approval_rule_template_content(params = {}, **options)
-      req = build_request(:update_approval_rule_template_content, params)
+    def update_approval_rule_template_content(, **options)
+      req = build_request(:update_approval_rule_template_content, )
       req.send_request(options)
     end
 
@@ -4400,8 +4400,8 @@ module Aws::CodeCommit
     #
     # @overload update_approval_rule_template_description(**params)
     # @param [Hash] params ({})
-    def update_approval_rule_template_description(params = {}, **options)
-      req = build_request(:update_approval_rule_template_description, params)
+    def update_approval_rule_template_description(, **options)
+      req = build_request(:update_approval_rule_template_description, )
       req.send_request(options)
     end
 
@@ -4439,8 +4439,8 @@ module Aws::CodeCommit
     #
     # @overload update_approval_rule_template_name(**params)
     # @param [Hash] params ({})
-    def update_approval_rule_template_name(params = {}, **options)
-      req = build_request(:update_approval_rule_template_name, params)
+    def update_approval_rule_template_name(, **options)
+      req = build_request(:update_approval_rule_template_name, )
       req.send_request(options)
     end
 
@@ -4483,8 +4483,8 @@ module Aws::CodeCommit
     #
     # @overload update_comment(**params)
     # @param [Hash] params ({})
-    def update_comment(params = {}, **options)
-      req = build_request(:update_comment, params)
+    def update_comment(, **options)
+      req = build_request(:update_comment, )
       req.send_request(options)
     end
 
@@ -4515,8 +4515,8 @@ module Aws::CodeCommit
     #
     # @overload update_default_branch(**params)
     # @param [Hash] params ({})
-    def update_default_branch(params = {}, **options)
-      req = build_request(:update_default_branch, params)
+    def update_default_branch(, **options)
+      req = build_request(:update_default_branch, )
       req.send_request(options)
     end
 
@@ -4601,8 +4601,8 @@ module Aws::CodeCommit
     #
     # @overload update_pull_request_approval_rule_content(**params)
     # @param [Hash] params ({})
-    def update_pull_request_approval_rule_content(params = {}, **options)
-      req = build_request(:update_pull_request_approval_rule_content, params)
+    def update_pull_request_approval_rule_content(, **options)
+      req = build_request(:update_pull_request_approval_rule_content, )
       req.send_request(options)
     end
 
@@ -4632,8 +4632,8 @@ module Aws::CodeCommit
     #
     # @overload update_pull_request_approval_state(**params)
     # @param [Hash] params ({})
-    def update_pull_request_approval_state(params = {}, **options)
-      req = build_request(:update_pull_request_approval_state, params)
+    def update_pull_request_approval_state(, **options)
+      req = build_request(:update_pull_request_approval_state, )
       req.send_request(options)
     end
 
@@ -4695,8 +4695,8 @@ module Aws::CodeCommit
     #
     # @overload update_pull_request_description(**params)
     # @param [Hash] params ({})
-    def update_pull_request_description(params = {}, **options)
-      req = build_request(:update_pull_request_description, params)
+    def update_pull_request_description(, **options)
+      req = build_request(:update_pull_request_description, )
       req.send_request(options)
     end
 
@@ -4759,8 +4759,8 @@ module Aws::CodeCommit
     #
     # @overload update_pull_request_status(**params)
     # @param [Hash] params ({})
-    def update_pull_request_status(params = {}, **options)
-      req = build_request(:update_pull_request_status, params)
+    def update_pull_request_status(, **options)
+      req = build_request(:update_pull_request_status, )
       req.send_request(options)
     end
 
@@ -4822,8 +4822,8 @@ module Aws::CodeCommit
     #
     # @overload update_pull_request_title(**params)
     # @param [Hash] params ({})
-    def update_pull_request_title(params = {}, **options)
-      req = build_request(:update_pull_request_title, params)
+    def update_pull_request_title(, **options)
+      req = build_request(:update_pull_request_title, )
       req.send_request(options)
     end
 
@@ -4859,8 +4859,8 @@ module Aws::CodeCommit
     #
     # @overload update_repository_description(**params)
     # @param [Hash] params ({})
-    def update_repository_description(params = {}, **options)
-      req = build_request(:update_repository_description, params)
+    def update_repository_description(, **options)
+      req = build_request(:update_repository_description, )
       req.send_request(options)
     end
 
@@ -4894,8 +4894,8 @@ module Aws::CodeCommit
     #
     # @overload update_repository_name(**params)
     # @param [Hash] params ({})
-    def update_repository_name(params = {}, **options)
-      req = build_request(:update_repository_name, params)
+    def update_repository_name(, **options)
+      req = build_request(:update_repository_name, )
       req.send_request(options)
     end
 

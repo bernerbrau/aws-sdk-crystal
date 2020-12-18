@@ -360,8 +360,8 @@ module Aws::Pinpoint
     #
     # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, **options)
-      req = build_request(:create_app, params)
+    def create_app(, **options)
+      req = build_request(:create_app, )
       req.send_request(options)
     end
 
@@ -926,8 +926,8 @@ module Aws::Pinpoint
     #
     # @overload create_campaign(**params)
     # @param [Hash] params ({})
-    def create_campaign(params = {}, **options)
-      req = build_request(:create_campaign, params)
+    def create_campaign(, **options)
+      req = build_request(:create_campaign, )
       req.send_request(options)
     end
 
@@ -971,8 +971,8 @@ module Aws::Pinpoint
     #
     # @overload create_email_template(**params)
     # @param [Hash] params ({})
-    def create_email_template(params = {}, **options)
-      req = build_request(:create_email_template, params)
+    def create_email_template(, **options)
+      req = build_request(:create_email_template, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::Pinpoint
     #
     # @overload create_export_job(**params)
     # @param [Hash] params ({})
-    def create_export_job(params = {}, **options)
-      req = build_request(:create_export_job, params)
+    def create_export_job(, **options)
+      req = build_request(:create_export_job, )
       req.send_request(options)
     end
 
@@ -1085,8 +1085,8 @@ module Aws::Pinpoint
     #
     # @overload create_import_job(**params)
     # @param [Hash] params ({})
-    def create_import_job(params = {}, **options)
-      req = build_request(:create_import_job, params)
+    def create_import_job(, **options)
+      req = build_request(:create_import_job, )
       req.send_request(options)
     end
 
@@ -1605,8 +1605,8 @@ module Aws::Pinpoint
     #
     # @overload create_journey(**params)
     # @param [Hash] params ({})
-    def create_journey(params = {}, **options)
-      req = build_request(:create_journey, params)
+    def create_journey(, **options)
+      req = build_request(:create_journey, )
       req.send_request(options)
     end
 
@@ -1696,8 +1696,8 @@ module Aws::Pinpoint
     #
     # @overload create_push_template(**params)
     # @param [Hash] params ({})
-    def create_push_template(params = {}, **options)
-      req = build_request(:create_push_template, params)
+    def create_push_template(, **options)
+      req = build_request(:create_push_template, )
       req.send_request(options)
     end
 
@@ -1749,8 +1749,8 @@ module Aws::Pinpoint
     #
     # @overload create_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def create_recommender_configuration(params = {}, **options)
-      req = build_request(:create_recommender_configuration, params)
+    def create_recommender_configuration(, **options)
+      req = build_request(:create_recommender_configuration, )
       req.send_request(options)
     end
 
@@ -2034,8 +2034,8 @@ module Aws::Pinpoint
     #
     # @overload create_segment(**params)
     # @param [Hash] params ({})
-    def create_segment(params = {}, **options)
-      req = build_request(:create_segment, params)
+    def create_segment(, **options)
+      req = build_request(:create_segment, )
       req.send_request(options)
     end
 
@@ -2077,8 +2077,8 @@ module Aws::Pinpoint
     #
     # @overload create_sms_template(**params)
     # @param [Hash] params ({})
-    def create_sms_template(params = {}, **options)
-      req = build_request(:create_sms_template, params)
+    def create_sms_template(, **options)
+      req = build_request(:create_sms_template, )
       req.send_request(options)
     end
 
@@ -2121,8 +2121,8 @@ module Aws::Pinpoint
     #
     # @overload create_voice_template(**params)
     # @param [Hash] params ({})
-    def create_voice_template(params = {}, **options)
-      req = build_request(:create_voice_template, params)
+    def create_voice_template(, **options)
+      req = build_request(:create_voice_template, )
       req.send_request(options)
     end
 
@@ -2158,8 +2158,8 @@ module Aws::Pinpoint
     #
     # @overload delete_adm_channel(**params)
     # @param [Hash] params ({})
-    def delete_adm_channel(params = {}, **options)
-      req = build_request(:delete_adm_channel, params)
+    def delete_adm_channel(, **options)
+      req = build_request(:delete_adm_channel, )
       req.send_request(options)
     end
 
@@ -2197,8 +2197,8 @@ module Aws::Pinpoint
     #
     # @overload delete_apns_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_channel(params = {}, **options)
-      req = build_request(:delete_apns_channel, params)
+    def delete_apns_channel(, **options)
+      req = build_request(:delete_apns_channel, )
       req.send_request(options)
     end
 
@@ -2236,8 +2236,8 @@ module Aws::Pinpoint
     #
     # @overload delete_apns_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_sandbox_channel(params = {}, **options)
-      req = build_request(:delete_apns_sandbox_channel, params)
+    def delete_apns_sandbox_channel(, **options)
+      req = build_request(:delete_apns_sandbox_channel, )
       req.send_request(options)
     end
 
@@ -2275,8 +2275,8 @@ module Aws::Pinpoint
     #
     # @overload delete_apns_voip_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_voip_channel(params = {}, **options)
-      req = build_request(:delete_apns_voip_channel, params)
+    def delete_apns_voip_channel(, **options)
+      req = build_request(:delete_apns_voip_channel, )
       req.send_request(options)
     end
 
@@ -2314,8 +2314,8 @@ module Aws::Pinpoint
     #
     # @overload delete_apns_voip_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_voip_sandbox_channel(params = {}, **options)
-      req = build_request(:delete_apns_voip_sandbox_channel, params)
+    def delete_apns_voip_sandbox_channel(, **options)
+      req = build_request(:delete_apns_voip_sandbox_channel, )
       req.send_request(options)
     end
 
@@ -2345,8 +2345,8 @@ module Aws::Pinpoint
     #
     # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, **options)
-      req = build_request(:delete_app, params)
+    def delete_app(, **options)
+      req = build_request(:delete_app, )
       req.send_request(options)
     end
 
@@ -2383,8 +2383,8 @@ module Aws::Pinpoint
     #
     # @overload delete_baidu_channel(**params)
     # @param [Hash] params ({})
-    def delete_baidu_channel(params = {}, **options)
-      req = build_request(:delete_baidu_channel, params)
+    def delete_baidu_channel(, **options)
+      req = build_request(:delete_baidu_channel, )
       req.send_request(options)
     end
 
@@ -2637,8 +2637,8 @@ module Aws::Pinpoint
     #
     # @overload delete_campaign(**params)
     # @param [Hash] params ({})
-    def delete_campaign(params = {}, **options)
-      req = build_request(:delete_campaign, params)
+    def delete_campaign(, **options)
+      req = build_request(:delete_campaign, )
       req.send_request(options)
     end
 
@@ -2679,8 +2679,8 @@ module Aws::Pinpoint
     #
     # @overload delete_email_channel(**params)
     # @param [Hash] params ({})
-    def delete_email_channel(params = {}, **options)
-      req = build_request(:delete_email_channel, params)
+    def delete_email_channel(, **options)
+      req = build_request(:delete_email_channel, )
       req.send_request(options)
     end
 
@@ -2711,8 +2711,8 @@ module Aws::Pinpoint
     #
     # @overload delete_email_template(**params)
     # @param [Hash] params ({})
-    def delete_email_template(params = {}, **options)
-      req = build_request(:delete_email_template, params)
+    def delete_email_template(, **options)
+      req = build_request(:delete_email_template, )
       req.send_request(options)
     end
 
@@ -2773,8 +2773,8 @@ module Aws::Pinpoint
     #
     # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, **options)
-      req = build_request(:delete_endpoint, params)
+    def delete_endpoint(, **options)
+      req = build_request(:delete_endpoint, )
       req.send_request(options)
     end
 
@@ -2805,8 +2805,8 @@ module Aws::Pinpoint
     #
     # @overload delete_event_stream(**params)
     # @param [Hash] params ({})
-    def delete_event_stream(params = {}, **options)
-      req = build_request(:delete_event_stream, params)
+    def delete_event_stream(, **options)
+      req = build_request(:delete_event_stream, )
       req.send_request(options)
     end
 
@@ -2843,8 +2843,8 @@ module Aws::Pinpoint
     #
     # @overload delete_gcm_channel(**params)
     # @param [Hash] params ({})
-    def delete_gcm_channel(params = {}, **options)
-      req = build_request(:delete_gcm_channel, params)
+    def delete_gcm_channel(, **options)
+      req = build_request(:delete_gcm_channel, )
       req.send_request(options)
     end
 
@@ -3044,8 +3044,8 @@ module Aws::Pinpoint
     #
     # @overload delete_journey(**params)
     # @param [Hash] params ({})
-    def delete_journey(params = {}, **options)
-      req = build_request(:delete_journey, params)
+    def delete_journey(, **options)
+      req = build_request(:delete_journey, )
       req.send_request(options)
     end
 
@@ -3076,8 +3076,8 @@ module Aws::Pinpoint
     #
     # @overload delete_push_template(**params)
     # @param [Hash] params ({})
-    def delete_push_template(params = {}, **options)
-      req = build_request(:delete_push_template, params)
+    def delete_push_template(, **options)
+      req = build_request(:delete_push_template, )
       req.send_request(options)
     end
 
@@ -3115,8 +3115,8 @@ module Aws::Pinpoint
     #
     # @overload delete_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def delete_recommender_configuration(params = {}, **options)
-      req = build_request(:delete_recommender_configuration, params)
+    def delete_recommender_configuration(, **options)
+      req = build_request(:delete_recommender_configuration, )
       req.send_request(options)
     end
 
@@ -3243,8 +3243,8 @@ module Aws::Pinpoint
     #
     # @overload delete_segment(**params)
     # @param [Hash] params ({})
-    def delete_segment(params = {}, **options)
-      req = build_request(:delete_segment, params)
+    def delete_segment(, **options)
+      req = build_request(:delete_segment, )
       req.send_request(options)
     end
 
@@ -3284,8 +3284,8 @@ module Aws::Pinpoint
     #
     # @overload delete_sms_channel(**params)
     # @param [Hash] params ({})
-    def delete_sms_channel(params = {}, **options)
-      req = build_request(:delete_sms_channel, params)
+    def delete_sms_channel(, **options)
+      req = build_request(:delete_sms_channel, )
       req.send_request(options)
     end
 
@@ -3316,8 +3316,8 @@ module Aws::Pinpoint
     #
     # @overload delete_sms_template(**params)
     # @param [Hash] params ({})
-    def delete_sms_template(params = {}, **options)
-      req = build_request(:delete_sms_template, params)
+    def delete_sms_template(, **options)
+      req = build_request(:delete_sms_template, )
       req.send_request(options)
     end
 
@@ -3379,8 +3379,8 @@ module Aws::Pinpoint
     #
     # @overload delete_user_endpoints(**params)
     # @param [Hash] params ({})
-    def delete_user_endpoints(params = {}, **options)
-      req = build_request(:delete_user_endpoints, params)
+    def delete_user_endpoints(, **options)
+      req = build_request(:delete_user_endpoints, )
       req.send_request(options)
     end
 
@@ -3416,8 +3416,8 @@ module Aws::Pinpoint
     #
     # @overload delete_voice_channel(**params)
     # @param [Hash] params ({})
-    def delete_voice_channel(params = {}, **options)
-      req = build_request(:delete_voice_channel, params)
+    def delete_voice_channel(, **options)
+      req = build_request(:delete_voice_channel, )
       req.send_request(options)
     end
 
@@ -3448,8 +3448,8 @@ module Aws::Pinpoint
     #
     # @overload delete_voice_template(**params)
     # @param [Hash] params ({})
-    def delete_voice_template(params = {}, **options)
-      req = build_request(:delete_voice_template, params)
+    def delete_voice_template(, **options)
+      req = build_request(:delete_voice_template, )
       req.send_request(options)
     end
 
@@ -3485,8 +3485,8 @@ module Aws::Pinpoint
     #
     # @overload get_adm_channel(**params)
     # @param [Hash] params ({})
-    def get_adm_channel(params = {}, **options)
-      req = build_request(:get_adm_channel, params)
+    def get_adm_channel(, **options)
+      req = build_request(:get_adm_channel, )
       req.send_request(options)
     end
 
@@ -3524,8 +3524,8 @@ module Aws::Pinpoint
     #
     # @overload get_apns_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_channel(params = {}, **options)
-      req = build_request(:get_apns_channel, params)
+    def get_apns_channel(, **options)
+      req = build_request(:get_apns_channel, )
       req.send_request(options)
     end
 
@@ -3563,8 +3563,8 @@ module Aws::Pinpoint
     #
     # @overload get_apns_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_sandbox_channel(params = {}, **options)
-      req = build_request(:get_apns_sandbox_channel, params)
+    def get_apns_sandbox_channel(, **options)
+      req = build_request(:get_apns_sandbox_channel, )
       req.send_request(options)
     end
 
@@ -3602,8 +3602,8 @@ module Aws::Pinpoint
     #
     # @overload get_apns_voip_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_voip_channel(params = {}, **options)
-      req = build_request(:get_apns_voip_channel, params)
+    def get_apns_voip_channel(, **options)
+      req = build_request(:get_apns_voip_channel, )
       req.send_request(options)
     end
 
@@ -3641,8 +3641,8 @@ module Aws::Pinpoint
     #
     # @overload get_apns_voip_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_voip_sandbox_channel(params = {}, **options)
-      req = build_request(:get_apns_voip_sandbox_channel, params)
+    def get_apns_voip_sandbox_channel(, **options)
+      req = build_request(:get_apns_voip_sandbox_channel, )
       req.send_request(options)
     end
 
@@ -3672,8 +3672,8 @@ module Aws::Pinpoint
     #
     # @overload get_app(**params)
     # @param [Hash] params ({})
-    def get_app(params = {}, **options)
-      req = build_request(:get_app, params)
+    def get_app(, **options)
+      req = build_request(:get_app, )
       req.send_request(options)
     end
 
@@ -3728,8 +3728,8 @@ module Aws::Pinpoint
     #
     # @overload get_application_date_range_kpi(**params)
     # @param [Hash] params ({})
-    def get_application_date_range_kpi(params = {}, **options)
-      req = build_request(:get_application_date_range_kpi, params)
+    def get_application_date_range_kpi(, **options)
+      req = build_request(:get_application_date_range_kpi, )
       req.send_request(options)
     end
 
@@ -3765,8 +3765,8 @@ module Aws::Pinpoint
     #
     # @overload get_application_settings(**params)
     # @param [Hash] params ({})
-    def get_application_settings(params = {}, **options)
-      req = build_request(:get_application_settings, params)
+    def get_application_settings(, **options)
+      req = build_request(:get_application_settings, )
       req.send_request(options)
     end
 
@@ -3802,8 +3802,8 @@ module Aws::Pinpoint
     #
     # @overload get_apps(**params)
     # @param [Hash] params ({})
-    def get_apps(params = {}, **options)
-      req = build_request(:get_apps, params)
+    def get_apps(, **options)
+      req = build_request(:get_apps, )
       req.send_request(options)
     end
 
@@ -3840,8 +3840,8 @@ module Aws::Pinpoint
     #
     # @overload get_baidu_channel(**params)
     # @param [Hash] params ({})
-    def get_baidu_channel(params = {}, **options)
-      req = build_request(:get_baidu_channel, params)
+    def get_baidu_channel(, **options)
+      req = build_request(:get_baidu_channel, )
       req.send_request(options)
     end
 
@@ -4095,8 +4095,8 @@ module Aws::Pinpoint
     #
     # @overload get_campaign(**params)
     # @param [Hash] params ({})
-    def get_campaign(params = {}, **options)
-      req = build_request(:get_campaign, params)
+    def get_campaign(, **options)
+      req = build_request(:get_campaign, )
       req.send_request(options)
     end
 
@@ -4145,8 +4145,8 @@ module Aws::Pinpoint
     #
     # @overload get_campaign_activities(**params)
     # @param [Hash] params ({})
-    def get_campaign_activities(params = {}, **options)
-      req = build_request(:get_campaign_activities, params)
+    def get_campaign_activities(, **options)
+      req = build_request(:get_campaign_activities, )
       req.send_request(options)
     end
 
@@ -4205,8 +4205,8 @@ module Aws::Pinpoint
     #
     # @overload get_campaign_date_range_kpi(**params)
     # @param [Hash] params ({})
-    def get_campaign_date_range_kpi(params = {}, **options)
-      req = build_request(:get_campaign_date_range_kpi, params)
+    def get_campaign_date_range_kpi(, **options)
+      req = build_request(:get_campaign_date_range_kpi, )
       req.send_request(options)
     end
 
@@ -4463,8 +4463,8 @@ module Aws::Pinpoint
     #
     # @overload get_campaign_version(**params)
     # @param [Hash] params ({})
-    def get_campaign_version(params = {}, **options)
-      req = build_request(:get_campaign_version, params)
+    def get_campaign_version(, **options)
+      req = build_request(:get_campaign_version, )
       req.send_request(options)
     end
 
@@ -4726,8 +4726,8 @@ module Aws::Pinpoint
     #
     # @overload get_campaign_versions(**params)
     # @param [Hash] params ({})
-    def get_campaign_versions(params = {}, **options)
-      req = build_request(:get_campaign_versions, params)
+    def get_campaign_versions(, **options)
+      req = build_request(:get_campaign_versions, )
       req.send_request(options)
     end
 
@@ -4987,8 +4987,8 @@ module Aws::Pinpoint
     #
     # @overload get_campaigns(**params)
     # @param [Hash] params ({})
-    def get_campaigns(params = {}, **options)
-      req = build_request(:get_campaigns, params)
+    def get_campaigns(, **options)
+      req = build_request(:get_campaigns, )
       req.send_request(options)
     end
 
@@ -5024,8 +5024,8 @@ module Aws::Pinpoint
     #
     # @overload get_channels(**params)
     # @param [Hash] params ({})
-    def get_channels(params = {}, **options)
-      req = build_request(:get_channels, params)
+    def get_channels(, **options)
+      req = build_request(:get_channels, )
       req.send_request(options)
     end
 
@@ -5066,8 +5066,8 @@ module Aws::Pinpoint
     #
     # @overload get_email_channel(**params)
     # @param [Hash] params ({})
-    def get_email_channel(params = {}, **options)
-      req = build_request(:get_email_channel, params)
+    def get_email_channel(, **options)
+      req = build_request(:get_email_channel, )
       req.send_request(options)
     end
 
@@ -5110,8 +5110,8 @@ module Aws::Pinpoint
     #
     # @overload get_email_template(**params)
     # @param [Hash] params ({})
-    def get_email_template(params = {}, **options)
-      req = build_request(:get_email_template, params)
+    def get_email_template(, **options)
+      req = build_request(:get_email_template, )
       req.send_request(options)
     end
 
@@ -5173,8 +5173,8 @@ module Aws::Pinpoint
     #
     # @overload get_endpoint(**params)
     # @param [Hash] params ({})
-    def get_endpoint(params = {}, **options)
-      req = build_request(:get_endpoint, params)
+    def get_endpoint(, **options)
+      req = build_request(:get_endpoint, )
       req.send_request(options)
     end
 
@@ -5206,8 +5206,8 @@ module Aws::Pinpoint
     #
     # @overload get_event_stream(**params)
     # @param [Hash] params ({})
-    def get_event_stream(params = {}, **options)
-      req = build_request(:get_event_stream, params)
+    def get_event_stream(, **options)
+      req = build_request(:get_event_stream, )
       req.send_request(options)
     end
 
@@ -5253,8 +5253,8 @@ module Aws::Pinpoint
     #
     # @overload get_export_job(**params)
     # @param [Hash] params ({})
-    def get_export_job(params = {}, **options)
-      req = build_request(:get_export_job, params)
+    def get_export_job(, **options)
+      req = build_request(:get_export_job, )
       req.send_request(options)
     end
 
@@ -5305,8 +5305,8 @@ module Aws::Pinpoint
     #
     # @overload get_export_jobs(**params)
     # @param [Hash] params ({})
-    def get_export_jobs(params = {}, **options)
-      req = build_request(:get_export_jobs, params)
+    def get_export_jobs(, **options)
+      req = build_request(:get_export_jobs, )
       req.send_request(options)
     end
 
@@ -5343,8 +5343,8 @@ module Aws::Pinpoint
     #
     # @overload get_gcm_channel(**params)
     # @param [Hash] params ({})
-    def get_gcm_channel(params = {}, **options)
-      req = build_request(:get_gcm_channel, params)
+    def get_gcm_channel(, **options)
+      req = build_request(:get_gcm_channel, )
       req.send_request(options)
     end
 
@@ -5394,8 +5394,8 @@ module Aws::Pinpoint
     #
     # @overload get_import_job(**params)
     # @param [Hash] params ({})
-    def get_import_job(params = {}, **options)
-      req = build_request(:get_import_job, params)
+    def get_import_job(, **options)
+      req = build_request(:get_import_job, )
       req.send_request(options)
     end
 
@@ -5450,8 +5450,8 @@ module Aws::Pinpoint
     #
     # @overload get_import_jobs(**params)
     # @param [Hash] params ({})
-    def get_import_jobs(params = {}, **options)
-      req = build_request(:get_import_jobs, params)
+    def get_import_jobs(, **options)
+      req = build_request(:get_import_jobs, )
       req.send_request(options)
     end
 
@@ -5652,8 +5652,8 @@ module Aws::Pinpoint
     #
     # @overload get_journey(**params)
     # @param [Hash] params ({})
-    def get_journey(params = {}, **options)
-      req = build_request(:get_journey, params)
+    def get_journey(, **options)
+      req = build_request(:get_journey, )
       req.send_request(options)
     end
 
@@ -5712,8 +5712,8 @@ module Aws::Pinpoint
     #
     # @overload get_journey_date_range_kpi(**params)
     # @param [Hash] params ({})
-    def get_journey_date_range_kpi(params = {}, **options)
-      req = build_request(:get_journey_date_range_kpi, params)
+    def get_journey_date_range_kpi(, **options)
+      req = build_request(:get_journey_date_range_kpi, )
       req.send_request(options)
     end
 
@@ -5758,8 +5758,8 @@ module Aws::Pinpoint
     #
     # @overload get_journey_execution_activity_metrics(**params)
     # @param [Hash] params ({})
-    def get_journey_execution_activity_metrics(params = {}, **options)
-      req = build_request(:get_journey_execution_activity_metrics, params)
+    def get_journey_execution_activity_metrics(, **options)
+      req = build_request(:get_journey_execution_activity_metrics, )
       req.send_request(options)
     end
 
@@ -5799,8 +5799,8 @@ module Aws::Pinpoint
     #
     # @overload get_journey_execution_metrics(**params)
     # @param [Hash] params ({})
-    def get_journey_execution_metrics(params = {}, **options)
-      req = build_request(:get_journey_execution_metrics, params)
+    def get_journey_execution_metrics(, **options)
+      req = build_request(:get_journey_execution_metrics, )
       req.send_request(options)
     end
 
@@ -5879,8 +5879,8 @@ module Aws::Pinpoint
     #
     # @overload get_push_template(**params)
     # @param [Hash] params ({})
-    def get_push_template(params = {}, **options)
-      req = build_request(:get_push_template, params)
+    def get_push_template(, **options)
+      req = build_request(:get_push_template, )
       req.send_request(options)
     end
 
@@ -5919,8 +5919,8 @@ module Aws::Pinpoint
     #
     # @overload get_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def get_recommender_configuration(params = {}, **options)
-      req = build_request(:get_recommender_configuration, params)
+    def get_recommender_configuration(, **options)
+      req = build_request(:get_recommender_configuration, )
       req.send_request(options)
     end
 
@@ -5964,8 +5964,8 @@ module Aws::Pinpoint
     #
     # @overload get_recommender_configurations(**params)
     # @param [Hash] params ({})
-    def get_recommender_configurations(params = {}, **options)
-      req = build_request(:get_recommender_configurations, params)
+    def get_recommender_configurations(, **options)
+      req = build_request(:get_recommender_configurations, )
       req.send_request(options)
     end
 
@@ -6094,8 +6094,8 @@ module Aws::Pinpoint
     #
     # @overload get_segment(**params)
     # @param [Hash] params ({})
-    def get_segment(params = {}, **options)
-      req = build_request(:get_segment, params)
+    def get_segment(, **options)
+      req = build_request(:get_segment, )
       req.send_request(options)
     end
 
@@ -6149,8 +6149,8 @@ module Aws::Pinpoint
     #
     # @overload get_segment_export_jobs(**params)
     # @param [Hash] params ({})
-    def get_segment_export_jobs(params = {}, **options)
-      req = build_request(:get_segment_export_jobs, params)
+    def get_segment_export_jobs(, **options)
+      req = build_request(:get_segment_export_jobs, )
       req.send_request(options)
     end
 
@@ -6208,8 +6208,8 @@ module Aws::Pinpoint
     #
     # @overload get_segment_import_jobs(**params)
     # @param [Hash] params ({})
-    def get_segment_import_jobs(params = {}, **options)
-      req = build_request(:get_segment_import_jobs, params)
+    def get_segment_import_jobs(, **options)
+      req = build_request(:get_segment_import_jobs, )
       req.send_request(options)
     end
 
@@ -6341,8 +6341,8 @@ module Aws::Pinpoint
     #
     # @overload get_segment_version(**params)
     # @param [Hash] params ({})
-    def get_segment_version(params = {}, **options)
-      req = build_request(:get_segment_version, params)
+    def get_segment_version(, **options)
+      req = build_request(:get_segment_version, )
       req.send_request(options)
     end
 
@@ -6479,8 +6479,8 @@ module Aws::Pinpoint
     #
     # @overload get_segment_versions(**params)
     # @param [Hash] params ({})
-    def get_segment_versions(params = {}, **options)
-      req = build_request(:get_segment_versions, params)
+    def get_segment_versions(, **options)
+      req = build_request(:get_segment_versions, )
       req.send_request(options)
     end
 
@@ -6613,8 +6613,8 @@ module Aws::Pinpoint
     #
     # @overload get_segments(**params)
     # @param [Hash] params ({})
-    def get_segments(params = {}, **options)
-      req = build_request(:get_segments, params)
+    def get_segments(, **options)
+      req = build_request(:get_segments, )
       req.send_request(options)
     end
 
@@ -6654,8 +6654,8 @@ module Aws::Pinpoint
     #
     # @overload get_sms_channel(**params)
     # @param [Hash] params ({})
-    def get_sms_channel(params = {}, **options)
-      req = build_request(:get_sms_channel, params)
+    def get_sms_channel(, **options)
+      req = build_request(:get_sms_channel, )
       req.send_request(options)
     end
 
@@ -6696,8 +6696,8 @@ module Aws::Pinpoint
     #
     # @overload get_sms_template(**params)
     # @param [Hash] params ({})
-    def get_sms_template(params = {}, **options)
-      req = build_request(:get_sms_template, params)
+    def get_sms_template(, **options)
+      req = build_request(:get_sms_template, )
       req.send_request(options)
     end
 
@@ -6760,8 +6760,8 @@ module Aws::Pinpoint
     #
     # @overload get_user_endpoints(**params)
     # @param [Hash] params ({})
-    def get_user_endpoints(params = {}, **options)
-      req = build_request(:get_user_endpoints, params)
+    def get_user_endpoints(, **options)
+      req = build_request(:get_user_endpoints, )
       req.send_request(options)
     end
 
@@ -6797,8 +6797,8 @@ module Aws::Pinpoint
     #
     # @overload get_voice_channel(**params)
     # @param [Hash] params ({})
-    def get_voice_channel(params = {}, **options)
-      req = build_request(:get_voice_channel, params)
+    def get_voice_channel(, **options)
+      req = build_request(:get_voice_channel, )
       req.send_request(options)
     end
 
@@ -6840,8 +6840,8 @@ module Aws::Pinpoint
     #
     # @overload get_voice_template(**params)
     # @param [Hash] params ({})
-    def get_voice_template(params = {}, **options)
-      req = build_request(:get_voice_template, params)
+    def get_voice_template(, **options)
+      req = build_request(:get_voice_template, )
       req.send_request(options)
     end
 
@@ -7047,8 +7047,8 @@ module Aws::Pinpoint
     #
     # @overload list_journeys(**params)
     # @param [Hash] params ({})
-    def list_journeys(params = {}, **options)
-      req = build_request(:list_journeys, params)
+    def list_journeys(, **options)
+      req = build_request(:list_journeys, )
       req.send_request(options)
     end
 
@@ -7076,8 +7076,8 @@ module Aws::Pinpoint
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -7123,8 +7123,8 @@ module Aws::Pinpoint
     #
     # @overload list_template_versions(**params)
     # @param [Hash] params ({})
-    def list_template_versions(params = {}, **options)
-      req = build_request(:list_template_versions, params)
+    def list_template_versions(, **options)
+      req = build_request(:list_template_versions, )
       req.send_request(options)
     end
 
@@ -7171,8 +7171,8 @@ module Aws::Pinpoint
     #
     # @overload list_templates(**params)
     # @param [Hash] params ({})
-    def list_templates(params = {}, **options)
-      req = build_request(:list_templates, params)
+    def list_templates(, **options)
+      req = build_request(:list_templates, )
       req.send_request(options)
     end
 
@@ -7215,8 +7215,8 @@ module Aws::Pinpoint
     #
     # @overload phone_number_validate(**params)
     # @param [Hash] params ({})
-    def phone_number_validate(params = {}, **options)
-      req = build_request(:phone_number_validate, params)
+    def phone_number_validate(, **options)
+      req = build_request(:phone_number_validate, )
       req.send_request(options)
     end
 
@@ -7257,8 +7257,8 @@ module Aws::Pinpoint
     #
     # @overload put_event_stream(**params)
     # @param [Hash] params ({})
-    def put_event_stream(params = {}, **options)
-      req = build_request(:put_event_stream, params)
+    def put_event_stream(, **options)
+      req = build_request(:put_event_stream, )
       req.send_request(options)
     end
 
@@ -7360,8 +7360,8 @@ module Aws::Pinpoint
     #
     # @overload put_events(**params)
     # @param [Hash] params ({})
-    def put_events(params = {}, **options)
-      req = build_request(:put_events, params)
+    def put_events(, **options)
+      req = build_request(:put_events, )
       req.send_request(options)
     end
 
@@ -7401,8 +7401,8 @@ module Aws::Pinpoint
     #
     # @overload remove_attributes(**params)
     # @param [Hash] params ({})
-    def remove_attributes(params = {}, **options)
-      req = build_request(:remove_attributes, params)
+    def remove_attributes(, **options)
+      req = build_request(:remove_attributes, )
       req.send_request(options)
     end
 
@@ -7652,8 +7652,8 @@ module Aws::Pinpoint
     #
     # @overload send_messages(**params)
     # @param [Hash] params ({})
-    def send_messages(params = {}, **options)
-      req = build_request(:send_messages, params)
+    def send_messages(, **options)
+      req = build_request(:send_messages, )
       req.send_request(options)
     end
 
@@ -7885,8 +7885,8 @@ module Aws::Pinpoint
     #
     # @overload send_users_messages(**params)
     # @param [Hash] params ({})
-    def send_users_messages(params = {}, **options)
-      req = build_request(:send_users_messages, params)
+    def send_users_messages(, **options)
+      req = build_request(:send_users_messages, )
       req.send_request(options)
     end
 
@@ -7916,8 +7916,8 @@ module Aws::Pinpoint
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -7941,8 +7941,8 @@ module Aws::Pinpoint
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -7987,8 +7987,8 @@ module Aws::Pinpoint
     #
     # @overload update_adm_channel(**params)
     # @param [Hash] params ({})
-    def update_adm_channel(params = {}, **options)
-      req = build_request(:update_adm_channel, params)
+    def update_adm_channel(, **options)
+      req = build_request(:update_adm_channel, )
       req.send_request(options)
     end
 
@@ -8040,8 +8040,8 @@ module Aws::Pinpoint
     #
     # @overload update_apns_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_channel(params = {}, **options)
-      req = build_request(:update_apns_channel, params)
+    def update_apns_channel(, **options)
+      req = build_request(:update_apns_channel, )
       req.send_request(options)
     end
 
@@ -8093,8 +8093,8 @@ module Aws::Pinpoint
     #
     # @overload update_apns_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_sandbox_channel(params = {}, **options)
-      req = build_request(:update_apns_sandbox_channel, params)
+    def update_apns_sandbox_channel(, **options)
+      req = build_request(:update_apns_sandbox_channel, )
       req.send_request(options)
     end
 
@@ -8146,8 +8146,8 @@ module Aws::Pinpoint
     #
     # @overload update_apns_voip_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_voip_channel(params = {}, **options)
-      req = build_request(:update_apns_voip_channel, params)
+    def update_apns_voip_channel(, **options)
+      req = build_request(:update_apns_voip_channel, )
       req.send_request(options)
     end
 
@@ -8200,8 +8200,8 @@ module Aws::Pinpoint
     #
     # @overload update_apns_voip_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_voip_sandbox_channel(params = {}, **options)
-      req = build_request(:update_apns_voip_sandbox_channel, params)
+    def update_apns_voip_sandbox_channel(, **options)
+      req = build_request(:update_apns_voip_sandbox_channel, )
       req.send_request(options)
     end
 
@@ -8258,8 +8258,8 @@ module Aws::Pinpoint
     #
     # @overload update_application_settings(**params)
     # @param [Hash] params ({})
-    def update_application_settings(params = {}, **options)
-      req = build_request(:update_application_settings, params)
+    def update_application_settings(, **options)
+      req = build_request(:update_application_settings, )
       req.send_request(options)
     end
 
@@ -8305,8 +8305,8 @@ module Aws::Pinpoint
     #
     # @overload update_baidu_channel(**params)
     # @param [Hash] params ({})
-    def update_baidu_channel(params = {}, **options)
-      req = build_request(:update_baidu_channel, params)
+    def update_baidu_channel(, **options)
+      req = build_request(:update_baidu_channel, )
       req.send_request(options)
     end
 
@@ -8873,8 +8873,8 @@ module Aws::Pinpoint
     #
     # @overload update_campaign(**params)
     # @param [Hash] params ({})
-    def update_campaign(params = {}, **options)
-      req = build_request(:update_campaign, params)
+    def update_campaign(, **options)
+      req = build_request(:update_campaign, )
       req.send_request(options)
     end
 
@@ -8926,8 +8926,8 @@ module Aws::Pinpoint
     #
     # @overload update_email_channel(**params)
     # @param [Hash] params ({})
-    def update_email_channel(params = {}, **options)
-      req = build_request(:update_email_channel, params)
+    def update_email_channel(, **options)
+      req = build_request(:update_email_channel, )
       req.send_request(options)
     end
 
@@ -8976,8 +8976,8 @@ module Aws::Pinpoint
     #
     # @overload update_email_template(**params)
     # @param [Hash] params ({})
-    def update_email_template(params = {}, **options)
-      req = build_request(:update_email_template, params)
+    def update_email_template(, **options)
+      req = build_request(:update_email_template, )
       req.send_request(options)
     end
 
@@ -9053,8 +9053,8 @@ module Aws::Pinpoint
     #
     # @overload update_endpoint(**params)
     # @param [Hash] params ({})
-    def update_endpoint(params = {}, **options)
-      req = build_request(:update_endpoint, params)
+    def update_endpoint(, **options)
+      req = build_request(:update_endpoint, )
       req.send_request(options)
     end
 
@@ -9133,8 +9133,8 @@ module Aws::Pinpoint
     #
     # @overload update_endpoints_batch(**params)
     # @param [Hash] params ({})
-    def update_endpoints_batch(params = {}, **options)
-      req = build_request(:update_endpoints_batch, params)
+    def update_endpoints_batch(, **options)
+      req = build_request(:update_endpoints_batch, )
       req.send_request(options)
     end
 
@@ -9181,8 +9181,8 @@ module Aws::Pinpoint
     #
     # @overload update_gcm_channel(**params)
     # @param [Hash] params ({})
-    def update_gcm_channel(params = {}, **options)
-      req = build_request(:update_gcm_channel, params)
+    def update_gcm_channel(, **options)
+      req = build_request(:update_gcm_channel, )
       req.send_request(options)
     end
 
@@ -9704,8 +9704,8 @@ module Aws::Pinpoint
     #
     # @overload update_journey(**params)
     # @param [Hash] params ({})
-    def update_journey(params = {}, **options)
-      req = build_request(:update_journey, params)
+    def update_journey(, **options)
+      req = build_request(:update_journey, )
       req.send_request(options)
     end
 
@@ -9911,8 +9911,8 @@ module Aws::Pinpoint
     #
     # @overload update_journey_state(**params)
     # @param [Hash] params ({})
-    def update_journey_state(params = {}, **options)
-      req = build_request(:update_journey_state, params)
+    def update_journey_state(, **options)
+      req = build_request(:update_journey_state, )
       req.send_request(options)
     end
 
@@ -10007,8 +10007,8 @@ module Aws::Pinpoint
     #
     # @overload update_push_template(**params)
     # @param [Hash] params ({})
-    def update_push_template(params = {}, **options)
-      req = build_request(:update_push_template, params)
+    def update_push_template(, **options)
+      req = build_request(:update_push_template, )
       req.send_request(options)
     end
 
@@ -10063,8 +10063,8 @@ module Aws::Pinpoint
     #
     # @overload update_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def update_recommender_configuration(params = {}, **options)
-      req = build_request(:update_recommender_configuration, params)
+    def update_recommender_configuration(, **options)
+      req = build_request(:update_recommender_configuration, )
       req.send_request(options)
     end
 
@@ -10351,8 +10351,8 @@ module Aws::Pinpoint
     #
     # @overload update_segment(**params)
     # @param [Hash] params ({})
-    def update_segment(params = {}, **options)
-      req = build_request(:update_segment, params)
+    def update_segment(, **options)
+      req = build_request(:update_segment, )
       req.send_request(options)
     end
 
@@ -10401,8 +10401,8 @@ module Aws::Pinpoint
     #
     # @overload update_sms_channel(**params)
     # @param [Hash] params ({})
-    def update_sms_channel(params = {}, **options)
-      req = build_request(:update_sms_channel, params)
+    def update_sms_channel(, **options)
+      req = build_request(:update_sms_channel, )
       req.send_request(options)
     end
 
@@ -10449,8 +10449,8 @@ module Aws::Pinpoint
     #
     # @overload update_sms_template(**params)
     # @param [Hash] params ({})
-    def update_sms_template(params = {}, **options)
-      req = build_request(:update_sms_template, params)
+    def update_sms_template(, **options)
+      req = build_request(:update_sms_template, )
       req.send_request(options)
     end
 
@@ -10488,8 +10488,8 @@ module Aws::Pinpoint
     #
     # @overload update_template_active_version(**params)
     # @param [Hash] params ({})
-    def update_template_active_version(params = {}, **options)
-      req = build_request(:update_template_active_version, params)
+    def update_template_active_version(, **options)
+      req = build_request(:update_template_active_version, )
       req.send_request(options)
     end
 
@@ -10532,8 +10532,8 @@ module Aws::Pinpoint
     #
     # @overload update_voice_channel(**params)
     # @param [Hash] params ({})
-    def update_voice_channel(params = {}, **options)
-      req = build_request(:update_voice_channel, params)
+    def update_voice_channel(, **options)
+      req = build_request(:update_voice_channel, )
       req.send_request(options)
     end
 
@@ -10581,8 +10581,8 @@ module Aws::Pinpoint
     #
     # @overload update_voice_template(**params)
     # @param [Hash] params ({})
-    def update_voice_template(params = {}, **options)
-      req = build_request(:update_voice_template, params)
+    def update_voice_template(, **options)
+      req = build_request(:update_voice_template, )
       req.send_request(options)
     end
 

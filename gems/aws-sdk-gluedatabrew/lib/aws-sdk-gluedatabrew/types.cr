@@ -3414,5 +3414,838 @@ module Aws::GlueDataBrew
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias AccountId = String
+
+    alias ActionId = Int32
+
+    alias Arn = String
+
+    alias AssumeControl = Bool
+
+    alias Attempt = Int32
+
+    alias BatchDeleteRecipeVersionRequest = NamedTuple(
+      "Name" : RecipeName,
+      "RecipeVersions" : RecipeVersionList
+    )
+
+    alias BatchDeleteRecipeVersionResponse = NamedTuple(
+      "Name" : RecipeName,
+      "Errors" : (RecipeErrorList)?
+    )
+
+    alias Bucket = String
+
+    alias CatalogId = String
+
+    alias ClientSessionId = String
+
+    alias ColumnName = String
+
+    alias ColumnNameList = Array(ColumnName)
+
+    alias ColumnRange = Int32
+
+    alias CompressionFormat = String
+
+    alias Condition = String
+
+    alias ConditionExpression = NamedTuple(
+      "Condition" : Condition,
+      "Value" : (ConditionValue)?,
+      "TargetColumn" : TargetColumn
+    )
+
+    alias ConditionExpressionList = Array(ConditionExpression)
+
+    alias ConditionValue = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias CreateDatasetRequest = NamedTuple(
+      "Name" : DatasetName,
+      "FormatOptions" : (FormatOptions)?,
+      "Input" : Input,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateDatasetResponse = NamedTuple(
+      "Name" : DatasetName
+    )
+
+    alias CreateProfileJobRequest = NamedTuple(
+      "DatasetName" : DatasetName,
+      "EncryptionKeyArn" : (EncryptionKeyArn)?,
+      "EncryptionMode" : (EncryptionMode)?,
+      "Name" : JobName,
+      "LogSubscription" : (LogSubscription)?,
+      "MaxCapacity" : (MaxCapacity)?,
+      "MaxRetries" : (MaxRetries)?,
+      "OutputLocation" : S3Location,
+      "RoleArn" : Arn,
+      "Tags" : (TagMap)?,
+      "Timeout" : (Timeout)?
+    )
+
+    alias CreateProfileJobResponse = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias CreateProjectRequest = NamedTuple(
+      "DatasetName" : DatasetName,
+      "Name" : ProjectName,
+      "RecipeName" : RecipeName,
+      "Sample" : (Sample)?,
+      "RoleArn" : Arn,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateProjectResponse = NamedTuple(
+      "Name" : ProjectName
+    )
+
+    alias CreateRecipeJobRequest = NamedTuple(
+      "DatasetName" : (DatasetName)?,
+      "EncryptionKeyArn" : (EncryptionKeyArn)?,
+      "EncryptionMode" : (EncryptionMode)?,
+      "Name" : JobName,
+      "LogSubscription" : (LogSubscription)?,
+      "MaxCapacity" : (MaxCapacity)?,
+      "MaxRetries" : (MaxRetries)?,
+      "Outputs" : OutputList,
+      "ProjectName" : (ProjectName)?,
+      "RecipeReference" : (RecipeReference)?,
+      "RoleArn" : Arn,
+      "Tags" : (TagMap)?,
+      "Timeout" : (Timeout)?
+    )
+
+    alias CreateRecipeJobResponse = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias CreateRecipeRequest = NamedTuple(
+      "Description" : (RecipeDescription)?,
+      "Name" : RecipeName,
+      "Steps" : RecipeStepList,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateRecipeResponse = NamedTuple(
+      "Name" : RecipeName
+    )
+
+    alias CreateScheduleRequest = NamedTuple(
+      "JobNames" : (JobNameList)?,
+      "CronExpression" : CronExpression,
+      "Tags" : (TagMap)?,
+      "Name" : ScheduleName
+    )
+
+    alias CreateScheduleResponse = NamedTuple(
+      "Name" : ScheduleName
+    )
+
+    alias CreatedBy = String
+
+    alias CronExpression = String
+
+    alias DataCatalogInputDefinition = NamedTuple(
+      "CatalogId" : (CatalogId)?,
+      "DatabaseName" : DatabaseName,
+      "TableName" : TableName,
+      "TempDirectory" : (S3Location)?
+    )
+
+    alias DatabaseName = String
+
+    alias Dataset = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "CreatedBy" : (CreatedBy)?,
+      "CreateDate" : (Date)?,
+      "Name" : DatasetName,
+      "FormatOptions" : (FormatOptions)?,
+      "Input" : Input,
+      "LastModifiedDate" : (Date)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "Source" : (Source)?,
+      "Tags" : (TagMap)?,
+      "ResourceArn" : (Arn)?
+    )
+
+    alias DatasetList = Array(Dataset)
+
+    alias DatasetName = String
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteDatasetRequest = NamedTuple(
+      "Name" : DatasetName
+    )
+
+    alias DeleteDatasetResponse = NamedTuple(
+      "Name" : DatasetName
+    )
+
+    alias DeleteJobRequest = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias DeleteJobResponse = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias DeleteProjectRequest = NamedTuple(
+      "Name" : ProjectName
+    )
+
+    alias DeleteProjectResponse = NamedTuple(
+      "Name" : ProjectName
+    )
+
+    alias DeleteRecipeVersionRequest = NamedTuple(
+      "Name" : RecipeName,
+      "RecipeVersion" : RecipeVersion
+    )
+
+    alias DeleteRecipeVersionResponse = NamedTuple(
+      "Name" : RecipeName,
+      "RecipeVersion" : RecipeVersion
+    )
+
+    alias DeleteScheduleRequest = NamedTuple(
+      "Name" : ScheduleName
+    )
+
+    alias DeleteScheduleResponse = NamedTuple(
+      "Name" : ScheduleName
+    )
+
+    alias DescribeDatasetRequest = NamedTuple(
+      "Name" : DatasetName
+    )
+
+    alias DescribeDatasetResponse = NamedTuple(
+      "CreatedBy" : (CreatedBy)?,
+      "CreateDate" : (Date)?,
+      "Name" : DatasetName,
+      "FormatOptions" : (FormatOptions)?,
+      "Input" : Input,
+      "LastModifiedDate" : (Date)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "Source" : (Source)?,
+      "Tags" : (TagMap)?,
+      "ResourceArn" : (Arn)?
+    )
+
+    alias DescribeJobRequest = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias DescribeJobResponse = NamedTuple(
+      "CreateDate" : (Date)?,
+      "CreatedBy" : (CreatedBy)?,
+      "DatasetName" : (DatasetName)?,
+      "EncryptionKeyArn" : (EncryptionKeyArn)?,
+      "EncryptionMode" : (EncryptionMode)?,
+      "Name" : JobName,
+      "Type" : (JobType)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "LastModifiedDate" : (Date)?,
+      "LogSubscription" : (LogSubscription)?,
+      "MaxCapacity" : (MaxCapacity)?,
+      "MaxRetries" : (MaxRetries)?,
+      "Outputs" : (OutputList)?,
+      "ProjectName" : (ProjectName)?,
+      "RecipeReference" : (RecipeReference)?,
+      "ResourceArn" : (Arn)?,
+      "RoleArn" : (Arn)?,
+      "Tags" : (TagMap)?,
+      "Timeout" : (Timeout)?
+    )
+
+    alias DescribeProjectRequest = NamedTuple(
+      "Name" : ProjectName
+    )
+
+    alias DescribeProjectResponse = NamedTuple(
+      "CreateDate" : (Date)?,
+      "CreatedBy" : (CreatedBy)?,
+      "DatasetName" : (DatasetName)?,
+      "LastModifiedDate" : (Date)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "Name" : ProjectName,
+      "RecipeName" : (RecipeName)?,
+      "ResourceArn" : (Arn)?,
+      "Sample" : (Sample)?,
+      "RoleArn" : (Arn)?,
+      "Tags" : (TagMap)?,
+      "SessionStatus" : (SessionStatus)?,
+      "OpenedBy" : (OpenedBy)?,
+      "OpenDate" : (Date)?
+    )
+
+    alias DescribeRecipeRequest = NamedTuple(
+      "Name" : RecipeName,
+      "RecipeVersion" : (RecipeVersion)?
+    )
+
+    alias DescribeRecipeResponse = NamedTuple(
+      "CreatedBy" : (CreatedBy)?,
+      "CreateDate" : (Date)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "LastModifiedDate" : (Date)?,
+      "ProjectName" : (ProjectName)?,
+      "PublishedBy" : (PublishedBy)?,
+      "PublishedDate" : (Date)?,
+      "Description" : (RecipeDescription)?,
+      "Name" : RecipeName,
+      "Steps" : (RecipeStepList)?,
+      "Tags" : (TagMap)?,
+      "ResourceArn" : (Arn)?,
+      "RecipeVersion" : (RecipeVersion)?
+    )
+
+    alias DescribeScheduleRequest = NamedTuple(
+      "Name" : ScheduleName
+    )
+
+    alias DescribeScheduleResponse = NamedTuple(
+      "CreateDate" : (Date)?,
+      "CreatedBy" : (CreatedBy)?,
+      "JobNames" : (JobNameList)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "LastModifiedDate" : (Date)?,
+      "ResourceArn" : (Arn)?,
+      "CronExpression" : (CronExpression)?,
+      "Tags" : (TagMap)?,
+      "Name" : ScheduleName
+    )
+
+    alias EncryptionKeyArn = String
+
+    alias EncryptionMode = String
+
+    alias ErrorCode = String
+
+    alias ExcelOptions = NamedTuple(
+      "SheetNames" : (SheetNameList)?,
+      "SheetIndexes" : (SheetIndexList)?
+    )
+
+    alias ExecutionTime = Int32
+
+    alias FormatOptions = NamedTuple(
+      "Json" : (JsonOptions)?,
+      "Excel" : (ExcelOptions)?
+    )
+
+    alias HiddenColumnList = Array(ColumnName)
+
+    alias Input = NamedTuple(
+      "S3InputDefinition" : (S3Location)?,
+      "DataCatalogInputDefinition" : (DataCatalogInputDefinition)?
+    )
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias Job = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "CreatedBy" : (CreatedBy)?,
+      "CreateDate" : (Date)?,
+      "DatasetName" : (DatasetName)?,
+      "EncryptionKeyArn" : (EncryptionKeyArn)?,
+      "EncryptionMode" : (EncryptionMode)?,
+      "Name" : JobName,
+      "Type" : (JobType)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "LastModifiedDate" : (Date)?,
+      "LogSubscription" : (LogSubscription)?,
+      "MaxCapacity" : (MaxCapacity)?,
+      "MaxRetries" : (MaxRetries)?,
+      "Outputs" : (OutputList)?,
+      "ProjectName" : (ProjectName)?,
+      "RecipeReference" : (RecipeReference)?,
+      "ResourceArn" : (Arn)?,
+      "RoleArn" : (Arn)?,
+      "Timeout" : (Timeout)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias JobList = Array(Job)
+
+    alias JobName = String
+
+    alias JobNameList = Array(JobName)
+
+    alias JobRun = NamedTuple(
+      "Attempt" : (Attempt)?,
+      "CompletedOn" : (Date)?,
+      "DatasetName" : (DatasetName)?,
+      "ErrorMessage" : (JobRunErrorMessage)?,
+      "ExecutionTime" : (ExecutionTime)?,
+      "JobName" : (JobName)?,
+      "RunId" : (JobRunId)?,
+      "State" : (JobRunState)?,
+      "LogSubscription" : (LogSubscription)?,
+      "LogGroupName" : (LogGroupName)?,
+      "Outputs" : (OutputList)?,
+      "RecipeReference" : (RecipeReference)?,
+      "StartedBy" : (StartedBy)?,
+      "StartedOn" : (Date)?
+    )
+
+    alias JobRunErrorMessage = String
+
+    alias JobRunId = String
+
+    alias JobRunList = Array(JobRun)
+
+    alias JobRunState = String
+
+    alias JobType = String
+
+    alias JsonOptions = NamedTuple(
+      "MultiLine" : (MultiLine)?
+    )
+
+    alias Key = String
+
+    alias LastModifiedBy = String
+
+    alias ListDatasetsRequest = NamedTuple(
+      "MaxResults" : (MaxResults100)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDatasetsResponse = NamedTuple(
+      "Datasets" : DatasetList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJobRunsRequest = NamedTuple(
+      "Name" : JobName,
+      "MaxResults" : (MaxResults100)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJobRunsResponse = NamedTuple(
+      "JobRuns" : JobRunList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "DatasetName" : (DatasetName)?,
+      "MaxResults" : (MaxResults100)?,
+      "NextToken" : (NextToken)?,
+      "ProjectName" : (ProjectName)?
+    )
+
+    alias ListJobsResponse = NamedTuple(
+      "Jobs" : JobList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults100)?
+    )
+
+    alias ListProjectsResponse = NamedTuple(
+      "Projects" : ProjectList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListRecipeVersionsRequest = NamedTuple(
+      "MaxResults" : (MaxResults100)?,
+      "NextToken" : (NextToken)?,
+      "Name" : RecipeName
+    )
+
+    alias ListRecipeVersionsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "Recipes" : RecipeList
+    )
+
+    alias ListRecipesRequest = NamedTuple(
+      "MaxResults" : (MaxResults100)?,
+      "NextToken" : (NextToken)?,
+      "RecipeVersion" : (RecipeVersion)?
+    )
+
+    alias ListRecipesResponse = NamedTuple(
+      "Recipes" : RecipeList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSchedulesRequest = NamedTuple(
+      "JobName" : (JobName)?,
+      "MaxResults" : (MaxResults100)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSchedulesResponse = NamedTuple(
+      "Schedules" : ScheduleList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias LogGroupName = String
+
+    alias LogSubscription = String
+
+    alias MaxCapacity = Int32
+
+    alias MaxResults100 = Int32
+
+    alias MaxRetries = Int32
+
+    alias Message = String
+
+    alias MultiLine = Bool
+
+    alias NextToken = String
+
+    alias OpenedBy = String
+
+    alias Operation = String
+
+    alias Output = NamedTuple(
+      "CompressionFormat" : (CompressionFormat)?,
+      "Format" : (OutputFormat)?,
+      "PartitionColumns" : (ColumnNameList)?,
+      "Location" : S3Location,
+      "Overwrite" : (OverwriteOutput)?
+    )
+
+    alias OutputFormat = String
+
+    alias OutputList = Array(Output)
+
+    alias OverwriteOutput = Bool
+
+    alias ParameterMap = Hash(ParameterName,ParameterValue)
+
+    alias ParameterName = String
+
+    alias ParameterValue = String
+
+    alias Preview = Bool
+
+    alias Project = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "CreateDate" : (Date)?,
+      "CreatedBy" : (CreatedBy)?,
+      "DatasetName" : (DatasetName)?,
+      "LastModifiedDate" : (Date)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "Name" : ProjectName,
+      "RecipeName" : RecipeName,
+      "ResourceArn" : (Arn)?,
+      "Sample" : (Sample)?,
+      "Tags" : (TagMap)?,
+      "RoleArn" : (Arn)?,
+      "OpenedBy" : (OpenedBy)?,
+      "OpenDate" : (Date)?
+    )
+
+    alias ProjectList = Array(Project)
+
+    alias ProjectName = String
+
+    alias PublishRecipeRequest = NamedTuple(
+      "Description" : (RecipeDescription)?,
+      "Name" : RecipeName
+    )
+
+    alias PublishRecipeResponse = NamedTuple(
+      "Name" : RecipeName
+    )
+
+    alias PublishedBy = String
+
+    alias Recipe = NamedTuple(
+      "CreatedBy" : (CreatedBy)?,
+      "CreateDate" : (Date)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "LastModifiedDate" : (Date)?,
+      "ProjectName" : (ProjectName)?,
+      "PublishedBy" : (PublishedBy)?,
+      "PublishedDate" : (Date)?,
+      "Description" : (RecipeDescription)?,
+      "Name" : RecipeName,
+      "ResourceArn" : (Arn)?,
+      "Steps" : (RecipeStepList)?,
+      "Tags" : (TagMap)?,
+      "RecipeVersion" : (RecipeVersion)?
+    )
+
+    alias RecipeAction = NamedTuple(
+      "Operation" : Operation,
+      "Parameters" : (ParameterMap)?
+    )
+
+    alias RecipeDescription = String
+
+    alias RecipeErrorList = Array(RecipeVersionErrorDetail)
+
+    alias RecipeErrorMessage = String
+
+    alias RecipeList = Array(Recipe)
+
+    alias RecipeName = String
+
+    alias RecipeReference = NamedTuple(
+      "Name" : RecipeName,
+      "RecipeVersion" : (RecipeVersion)?
+    )
+
+    alias RecipeStep = NamedTuple(
+      "Action" : RecipeAction,
+      "ConditionExpressions" : (ConditionExpressionList)?
+    )
+
+    alias RecipeStepList = Array(RecipeStep)
+
+    alias RecipeVersion = String
+
+    alias RecipeVersionErrorDetail = NamedTuple(
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (RecipeErrorMessage)?,
+      "RecipeVersion" : (RecipeVersion)?
+    )
+
+    alias RecipeVersionList = Array(RecipeVersion)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias Result = String
+
+    alias S3Location = NamedTuple(
+      "Bucket" : Bucket,
+      "Key" : (Key)?
+    )
+
+    alias Sample = NamedTuple(
+      "Size" : (SampleSize)?,
+      "Type" : SampleType
+    )
+
+    alias SampleSize = Int32
+
+    alias SampleType = String
+
+    alias Schedule = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "CreatedBy" : (CreatedBy)?,
+      "CreateDate" : (Date)?,
+      "JobNames" : (JobNameList)?,
+      "LastModifiedBy" : (LastModifiedBy)?,
+      "LastModifiedDate" : (Date)?,
+      "ResourceArn" : (Arn)?,
+      "CronExpression" : (CronExpression)?,
+      "Tags" : (TagMap)?,
+      "Name" : ScheduleName
+    )
+
+    alias ScheduleList = Array(Schedule)
+
+    alias ScheduleName = String
+
+    alias SendProjectSessionActionRequest = NamedTuple(
+      "Preview" : (Preview)?,
+      "Name" : ProjectName,
+      "RecipeStep" : (RecipeStep)?,
+      "StepIndex" : (StepIndex)?,
+      "ClientSessionId" : (ClientSessionId)?,
+      "ViewFrame" : (ViewFrame)?
+    )
+
+    alias SendProjectSessionActionResponse = NamedTuple(
+      "Result" : (Result)?,
+      "Name" : ProjectName,
+      "ActionId" : (ActionId)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias SessionStatus = String
+
+    alias SheetIndex = Int32
+
+    alias SheetIndexList = Array(SheetIndex)
+
+    alias SheetName = String
+
+    alias SheetNameList = Array(SheetName)
+
+    alias Source = String
+
+    alias StartColumnIndex = Int32
+
+    alias StartJobRunRequest = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias StartJobRunResponse = NamedTuple(
+      "RunId" : JobRunId
+    )
+
+    alias StartProjectSessionRequest = NamedTuple(
+      "Name" : ProjectName,
+      "AssumeControl" : (AssumeControl)?
+    )
+
+    alias StartProjectSessionResponse = NamedTuple(
+      "Name" : ProjectName,
+      "ClientSessionId" : (ClientSessionId)?
+    )
+
+    alias StartedBy = String
+
+    alias StepIndex = Int32
+
+    alias StopJobRunRequest = NamedTuple(
+      "Name" : JobName,
+      "RunId" : JobRunId
+    )
+
+    alias StopJobRunResponse = NamedTuple(
+      "RunId" : JobRunId
+    )
+
+    alias TableName = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TargetColumn = String
+
+    alias Timeout = Int32
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDatasetRequest = NamedTuple(
+      "Name" : DatasetName,
+      "FormatOptions" : (FormatOptions)?,
+      "Input" : Input
+    )
+
+    alias UpdateDatasetResponse = NamedTuple(
+      "Name" : DatasetName
+    )
+
+    alias UpdateProfileJobRequest = NamedTuple(
+      "EncryptionKeyArn" : (EncryptionKeyArn)?,
+      "EncryptionMode" : (EncryptionMode)?,
+      "Name" : JobName,
+      "LogSubscription" : (LogSubscription)?,
+      "MaxCapacity" : (MaxCapacity)?,
+      "MaxRetries" : (MaxRetries)?,
+      "OutputLocation" : S3Location,
+      "RoleArn" : Arn,
+      "Timeout" : (Timeout)?
+    )
+
+    alias UpdateProfileJobResponse = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias UpdateProjectRequest = NamedTuple(
+      "Sample" : (Sample)?,
+      "RoleArn" : Arn,
+      "Name" : ProjectName
+    )
+
+    alias UpdateProjectResponse = NamedTuple(
+      "LastModifiedDate" : (Date)?,
+      "Name" : ProjectName
+    )
+
+    alias UpdateRecipeJobRequest = NamedTuple(
+      "EncryptionKeyArn" : (EncryptionKeyArn)?,
+      "EncryptionMode" : (EncryptionMode)?,
+      "Name" : JobName,
+      "LogSubscription" : (LogSubscription)?,
+      "MaxCapacity" : (MaxCapacity)?,
+      "MaxRetries" : (MaxRetries)?,
+      "Outputs" : OutputList,
+      "RoleArn" : Arn,
+      "Timeout" : (Timeout)?
+    )
+
+    alias UpdateRecipeJobResponse = NamedTuple(
+      "Name" : JobName
+    )
+
+    alias UpdateRecipeRequest = NamedTuple(
+      "Description" : (RecipeDescription)?,
+      "Name" : RecipeName,
+      "Steps" : (RecipeStepList)?
+    )
+
+    alias UpdateRecipeResponse = NamedTuple(
+      "Name" : RecipeName
+    )
+
+    alias UpdateScheduleRequest = NamedTuple(
+      "JobNames" : (JobNameList)?,
+      "CronExpression" : CronExpression,
+      "Name" : ScheduleName
+    )
+
+    alias UpdateScheduleResponse = NamedTuple(
+      "Name" : ScheduleName
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ViewFrame = NamedTuple(
+      "StartColumnIndex" : StartColumnIndex,
+      "ColumnRange" : (ColumnRange)?,
+      "HiddenColumns" : (HiddenColumnList)?
+    )
   end
 end

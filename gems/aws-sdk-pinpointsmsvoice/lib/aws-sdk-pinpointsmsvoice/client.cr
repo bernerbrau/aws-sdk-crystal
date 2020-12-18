@@ -345,8 +345,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, **options)
-      req = build_request(:create_configuration_set, params)
+    def create_configuration_set(, **options)
+      req = build_request(:create_configuration_set, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:create_configuration_set_event_destination, params)
+    def create_configuration_set_event_destination(, **options)
+      req = build_request(:create_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -409,8 +409,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, **options)
-      req = build_request(:delete_configuration_set, params)
+    def delete_configuration_set(, **options)
+      req = build_request(:delete_configuration_set, )
       req.send_request(options)
     end
 
@@ -433,8 +433,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:delete_configuration_set_event_destination, params)
+    def delete_configuration_set_event_destination(, **options)
+      req = build_request(:delete_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -471,8 +471,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload get_configuration_set_event_destinations(**params)
     # @param [Hash] params ({})
-    def get_configuration_set_event_destinations(params = {}, **options)
-      req = build_request(:get_configuration_set_event_destinations, params)
+    def get_configuration_set_event_destinations(, **options)
+      req = build_request(:get_configuration_set_event_destinations, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, **options)
-      req = build_request(:list_configuration_sets, params)
+    def list_configuration_sets(, **options)
+      req = build_request(:list_configuration_sets, )
       req.send_request(options)
     end
 
@@ -569,8 +569,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload send_voice_message(**params)
     # @param [Hash] params ({})
-    def send_voice_message(params = {}, **options)
-      req = build_request(:send_voice_message, params)
+    def send_voice_message(, **options)
+      req = build_request(:send_voice_message, )
       req.send_request(options)
     end
 
@@ -614,8 +614,8 @@ module Aws::PinpointSMSVoice
     #
     # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:update_configuration_set_event_destination, params)
+    def update_configuration_set_event_destination(, **options)
+      req = build_request(:update_configuration_set_event_destination, )
       req.send_request(options)
     end
 

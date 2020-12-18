@@ -4886,5 +4886,1187 @@ module Aws::GuardDuty
       include Aws::Structure
     end
 
+    alias AcceptInvitationRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "MasterId" : String,
+      "InvitationId" : String
+    )
+
+    alias AcceptInvitationResponse = NamedTuple(
+      
+    )
+
+    alias AccessControlList = NamedTuple(
+      "AllowsPublicReadAccess" : (Boolean)?,
+      "AllowsPublicWriteAccess" : (Boolean)?
+    )
+
+    alias AccessKeyDetails = NamedTuple(
+      "AccessKeyId" : (String)?,
+      "PrincipalId" : (String)?,
+      "UserName" : (String)?,
+      "UserType" : (String)?
+    )
+
+    alias AccountDetail = NamedTuple(
+      "AccountId" : AccountId,
+      "Email" : Email
+    )
+
+    alias AccountDetails = Array(AccountDetail)
+
+    alias AccountId = String
+
+    alias AccountIds = Array(AccountId)
+
+    alias AccountLevelPermissions = NamedTuple(
+      "BlockPublicAccess" : (BlockPublicAccess)?
+    )
+
+    alias Action = NamedTuple(
+      "ActionType" : (String)?,
+      "AwsApiCallAction" : (AwsApiCallAction)?,
+      "DnsRequestAction" : (DnsRequestAction)?,
+      "NetworkConnectionAction" : (NetworkConnectionAction)?,
+      "PortProbeAction" : (PortProbeAction)?
+    )
+
+    alias AdminAccount = NamedTuple(
+      "AdminAccountId" : (String)?,
+      "AdminStatus" : (AdminStatus)?
+    )
+
+    alias AdminAccounts = Array(AdminAccount)
+
+    alias AdminStatus = String
+
+    alias ArchiveFindingsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingIds" : FindingIds
+    )
+
+    alias ArchiveFindingsResponse = NamedTuple(
+      
+    )
+
+    alias AwsApiCallAction = NamedTuple(
+      "Api" : (String)?,
+      "CallerType" : (String)?,
+      "DomainDetails" : (DomainDetails)?,
+      "ErrorCode" : (String)?,
+      "RemoteIpDetails" : (RemoteIpDetails)?,
+      "ServiceName" : (String)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (String)?,
+      "Type" : (String)?
+    )
+
+    alias BlockPublicAccess = NamedTuple(
+      "IgnorePublicAcls" : (Boolean)?,
+      "RestrictPublicBuckets" : (Boolean)?,
+      "BlockPublicAcls" : (Boolean)?,
+      "BlockPublicPolicy" : (Boolean)?
+    )
+
+    alias Boolean = Bool
+
+    alias BucketLevelPermissions = NamedTuple(
+      "AccessControlList" : (AccessControlList)?,
+      "BucketPolicy" : (BucketPolicy)?,
+      "BlockPublicAccess" : (BlockPublicAccess)?
+    )
+
+    alias BucketPolicy = NamedTuple(
+      "AllowsPublicReadAccess" : (Boolean)?,
+      "AllowsPublicWriteAccess" : (Boolean)?
+    )
+
+    alias City = NamedTuple(
+      "CityName" : (String)?
+    )
+
+    alias ClientToken = String
+
+    alias CloudTrailConfigurationResult = NamedTuple(
+      "Status" : DataSourceStatus
+    )
+
+    alias Condition = NamedTuple(
+      "Eq" : (Eq)?,
+      "Neq" : (Neq)?,
+      "Gt" : (Integer)?,
+      "Gte" : (Integer)?,
+      "Lt" : (Integer)?,
+      "Lte" : (Integer)?,
+      "Equals" : (Equals)?,
+      "NotEquals" : (NotEquals)?,
+      "GreaterThan" : (Long)?,
+      "GreaterThanOrEqual" : (Long)?,
+      "LessThan" : (Long)?,
+      "LessThanOrEqual" : (Long)?
+    )
+
+    alias CountBySeverity = Hash(String,Integer)
+
+    alias Country = NamedTuple(
+      "CountryCode" : (String)?,
+      "CountryName" : (String)?
+    )
+
+    alias CreateDetectorRequest = NamedTuple(
+      "Enable" : Boolean,
+      "ClientToken" : (ClientToken)?,
+      "FindingPublishingFrequency" : (FindingPublishingFrequency)?,
+      "DataSources" : (DataSourceConfigurations)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateDetectorResponse = NamedTuple(
+      "DetectorId" : (DetectorId)?
+    )
+
+    alias CreateFilterRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "Name" : FilterName,
+      "Description" : (FilterDescription)?,
+      "Action" : (FilterAction)?,
+      "Rank" : (FilterRank)?,
+      "FindingCriteria" : FindingCriteria,
+      "ClientToken" : (ClientToken)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateFilterResponse = NamedTuple(
+      "Name" : FilterName
+    )
+
+    alias CreateIPSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "Name" : Name,
+      "Format" : IpSetFormat,
+      "Location" : Location,
+      "Activate" : Boolean,
+      "ClientToken" : (ClientToken)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateIPSetResponse = NamedTuple(
+      "IpSetId" : String
+    )
+
+    alias CreateMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountDetails" : AccountDetails
+    )
+
+    alias CreateMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias CreatePublishingDestinationRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "DestinationType" : DestinationType,
+      "DestinationProperties" : DestinationProperties,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias CreatePublishingDestinationResponse = NamedTuple(
+      "DestinationId" : String
+    )
+
+    alias CreateSampleFindingsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingTypes" : (FindingTypes)?
+    )
+
+    alias CreateSampleFindingsResponse = NamedTuple(
+      
+    )
+
+    alias CreateThreatIntelSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "Name" : Name,
+      "Format" : ThreatIntelSetFormat,
+      "Location" : Location,
+      "Activate" : Boolean,
+      "ClientToken" : (ClientToken)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateThreatIntelSetResponse = NamedTuple(
+      "ThreatIntelSetId" : String
+    )
+
+    alias Criterion = Hash(String,Condition)
+
+    alias DNSLogsConfigurationResult = NamedTuple(
+      "Status" : DataSourceStatus
+    )
+
+    alias DataSource = String
+
+    alias DataSourceConfigurations = NamedTuple(
+      "S3Logs" : (S3LogsConfiguration)?
+    )
+
+    alias DataSourceConfigurationsResult = NamedTuple(
+      "CloudTrail" : CloudTrailConfigurationResult,
+      "DNSLogs" : DNSLogsConfigurationResult,
+      "FlowLogs" : FlowLogsConfigurationResult,
+      "S3Logs" : S3LogsConfigurationResult
+    )
+
+    alias DataSourceList = Array(DataSource)
+
+    alias DataSourceStatus = String
+
+    alias DeclineInvitationsRequest = NamedTuple(
+      "AccountIds" : AccountIds
+    )
+
+    alias DeclineInvitationsResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias DefaultServerSideEncryption = NamedTuple(
+      "EncryptionType" : (String)?,
+      "KmsMasterKeyArn" : (String)?
+    )
+
+    alias DeleteDetectorRequest = NamedTuple(
+      "DetectorId" : DetectorId
+    )
+
+    alias DeleteDetectorResponse = NamedTuple(
+      
+    )
+
+    alias DeleteFilterRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FilterName" : String
+    )
+
+    alias DeleteFilterResponse = NamedTuple(
+      
+    )
+
+    alias DeleteIPSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "IpSetId" : String
+    )
+
+    alias DeleteIPSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteInvitationsRequest = NamedTuple(
+      "AccountIds" : AccountIds
+    )
+
+    alias DeleteInvitationsResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias DeleteMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds
+    )
+
+    alias DeleteMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias DeletePublishingDestinationRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "DestinationId" : String
+    )
+
+    alias DeletePublishingDestinationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteThreatIntelSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "ThreatIntelSetId" : String
+    )
+
+    alias DeleteThreatIntelSetResponse = NamedTuple(
+      
+    )
+
+    alias DescribeOrganizationConfigurationRequest = NamedTuple(
+      "DetectorId" : DetectorId
+    )
+
+    alias DescribeOrganizationConfigurationResponse = NamedTuple(
+      "AutoEnable" : Boolean,
+      "MemberAccountLimitReached" : Boolean,
+      "DataSources" : (OrganizationDataSourceConfigurationsResult)?
+    )
+
+    alias DescribePublishingDestinationRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "DestinationId" : String
+    )
+
+    alias DescribePublishingDestinationResponse = NamedTuple(
+      "DestinationId" : String,
+      "DestinationType" : DestinationType,
+      "Status" : PublishingStatus,
+      "PublishingFailureStartTimestamp" : Long,
+      "DestinationProperties" : DestinationProperties
+    )
+
+    alias Destination = NamedTuple(
+      "DestinationId" : String,
+      "DestinationType" : DestinationType,
+      "Status" : PublishingStatus
+    )
+
+    alias DestinationProperties = NamedTuple(
+      "DestinationArn" : (String)?,
+      "KmsKeyArn" : (String)?
+    )
+
+    alias DestinationType = String
+
+    alias Destinations = Array(Destination)
+
+    alias DetectorId = String
+
+    alias DetectorIds = Array(DetectorId)
+
+    alias DetectorStatus = String
+
+    alias DisableOrganizationAdminAccountRequest = NamedTuple(
+      "AdminAccountId" : String
+    )
+
+    alias DisableOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateFromMasterAccountRequest = NamedTuple(
+      "DetectorId" : DetectorId
+    )
+
+    alias DisassociateFromMasterAccountResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds
+    )
+
+    alias DisassociateMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias DnsRequestAction = NamedTuple(
+      "Domain" : (String)?
+    )
+
+    alias DomainDetails = NamedTuple(
+      "Domain" : (String)?
+    )
+
+    alias Double = Float64
+
+    alias Email = String
+
+    alias EnableOrganizationAdminAccountRequest = NamedTuple(
+      "AdminAccountId" : String
+    )
+
+    alias EnableOrganizationAdminAccountResponse = NamedTuple(
+      
+    )
+
+    alias Eq = Array(String)
+
+    alias Equals = Array(String)
+
+    alias Evidence = NamedTuple(
+      "ThreatIntelligenceDetails" : (ThreatIntelligenceDetails)?
+    )
+
+    alias Feedback = String
+
+    alias FilterAction = String
+
+    alias FilterDescription = String
+
+    alias FilterName = String
+
+    alias FilterNames = Array(FilterName)
+
+    alias FilterRank = Int32
+
+    alias Finding = NamedTuple(
+      "AccountId" : String,
+      "Arn" : String,
+      "Confidence" : (Double)?,
+      "CreatedAt" : String,
+      "Description" : (String)?,
+      "Id" : String,
+      "Partition" : (String)?,
+      "Region" : String,
+      "Resource" : Resource,
+      "SchemaVersion" : String,
+      "Service" : (Service)?,
+      "Severity" : Double,
+      "Title" : (String)?,
+      "Type" : FindingType,
+      "UpdatedAt" : String
+    )
+
+    alias FindingCriteria = NamedTuple(
+      "Criterion" : (Criterion)?
+    )
+
+    alias FindingId = String
+
+    alias FindingIds = Array(FindingId)
+
+    alias FindingPublishingFrequency = String
+
+    alias FindingStatisticType = String
+
+    alias FindingStatisticTypes = Array(FindingStatisticType)
+
+    alias FindingStatistics = NamedTuple(
+      "CountBySeverity" : (CountBySeverity)?
+    )
+
+    alias FindingType = String
+
+    alias FindingTypes = Array(FindingType)
+
+    alias Findings = Array(Finding)
+
+    alias FlowLogsConfigurationResult = NamedTuple(
+      "Status" : DataSourceStatus
+    )
+
+    alias GeoLocation = NamedTuple(
+      "Lat" : (Double)?,
+      "Lon" : (Double)?
+    )
+
+    alias GetDetectorRequest = NamedTuple(
+      "DetectorId" : DetectorId
+    )
+
+    alias GetDetectorResponse = NamedTuple(
+      "CreatedAt" : (String)?,
+      "FindingPublishingFrequency" : (FindingPublishingFrequency)?,
+      "ServiceRole" : String,
+      "Status" : DetectorStatus,
+      "UpdatedAt" : (String)?,
+      "DataSources" : (DataSourceConfigurationsResult)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetFilterRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FilterName" : String
+    )
+
+    alias GetFilterResponse = NamedTuple(
+      "Name" : FilterName,
+      "Description" : (FilterDescription)?,
+      "Action" : FilterAction,
+      "Rank" : (FilterRank)?,
+      "FindingCriteria" : FindingCriteria,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetFindingsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingIds" : FindingIds,
+      "SortCriteria" : (SortCriteria)?
+    )
+
+    alias GetFindingsResponse = NamedTuple(
+      "Findings" : Findings
+    )
+
+    alias GetFindingsStatisticsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingStatisticTypes" : FindingStatisticTypes,
+      "FindingCriteria" : (FindingCriteria)?
+    )
+
+    alias GetFindingsStatisticsResponse = NamedTuple(
+      "FindingStatistics" : FindingStatistics
+    )
+
+    alias GetIPSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "IpSetId" : String
+    )
+
+    alias GetIPSetResponse = NamedTuple(
+      "Name" : Name,
+      "Format" : IpSetFormat,
+      "Location" : Location,
+      "Status" : IpSetStatus,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetInvitationsCountRequest = NamedTuple(
+      
+    )
+
+    alias GetInvitationsCountResponse = NamedTuple(
+      "InvitationsCount" : (Integer)?
+    )
+
+    alias GetMasterAccountRequest = NamedTuple(
+      "DetectorId" : DetectorId
+    )
+
+    alias GetMasterAccountResponse = NamedTuple(
+      "Master" : Master
+    )
+
+    alias GetMemberDetectorsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds
+    )
+
+    alias GetMemberDetectorsResponse = NamedTuple(
+      "MemberDataSourceConfigurations" : MemberDataSourceConfigurations,
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias GetMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds
+    )
+
+    alias GetMembersResponse = NamedTuple(
+      "Members" : Members,
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias GetThreatIntelSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "ThreatIntelSetId" : String
+    )
+
+    alias GetThreatIntelSetResponse = NamedTuple(
+      "Name" : Name,
+      "Format" : ThreatIntelSetFormat,
+      "Location" : Location,
+      "Status" : ThreatIntelSetStatus,
+      "Tags" : (TagMap)?
+    )
+
+    alias GetUsageStatisticsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "UsageStatisticType" : UsageStatisticType,
+      "UsageCriteria" : UsageCriteria,
+      "Unit" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetUsageStatisticsResponse = NamedTuple(
+      "UsageStatistics" : (UsageStatistics)?,
+      "NextToken" : (String)?
+    )
+
+    alias GuardDutyArn = String
+
+    alias IamInstanceProfile = NamedTuple(
+      "Arn" : (String)?,
+      "Id" : (String)?
+    )
+
+    alias InstanceDetails = NamedTuple(
+      "AvailabilityZone" : (String)?,
+      "IamInstanceProfile" : (IamInstanceProfile)?,
+      "ImageDescription" : (String)?,
+      "ImageId" : (String)?,
+      "InstanceId" : (String)?,
+      "InstanceState" : (String)?,
+      "InstanceType" : (String)?,
+      "OutpostArn" : (String)?,
+      "LaunchTime" : (String)?,
+      "NetworkInterfaces" : (NetworkInterfaces)?,
+      "Platform" : (String)?,
+      "ProductCodes" : (ProductCodes)?,
+      "Tags" : (Tags)?
+    )
+
+    alias Integer = Int32
+
+    alias InternalServerErrorException = NamedTuple(
+      "Message" : (String)?,
+      "Type" : (String)?
+    )
+
+    alias Invitation = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "InvitationId" : (String)?,
+      "RelationshipStatus" : (String)?,
+      "InvitedAt" : (String)?
+    )
+
+    alias Invitations = Array(Invitation)
+
+    alias InviteMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds,
+      "DisableEmailNotification" : (Boolean)?,
+      "Message" : (String)?
+    )
+
+    alias InviteMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias IpSetFormat = String
+
+    alias IpSetIds = Array(String)
+
+    alias IpSetStatus = String
+
+    alias Ipv6Addresses = Array(String)
+
+    alias ListDetectorsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListDetectorsResponse = NamedTuple(
+      "DetectorIds" : DetectorIds,
+      "NextToken" : (String)?
+    )
+
+    alias ListFiltersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListFiltersResponse = NamedTuple(
+      "FilterNames" : FilterNames,
+      "NextToken" : (String)?
+    )
+
+    alias ListFindingsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingCriteria" : (FindingCriteria)?,
+      "SortCriteria" : (SortCriteria)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListFindingsResponse = NamedTuple(
+      "FindingIds" : FindingIds,
+      "NextToken" : (String)?
+    )
+
+    alias ListIPSetsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListIPSetsResponse = NamedTuple(
+      "IpSetIds" : IpSetIds,
+      "NextToken" : (String)?
+    )
+
+    alias ListInvitationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListInvitationsResponse = NamedTuple(
+      "Invitations" : (Invitations)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?,
+      "OnlyAssociated" : (String)?
+    )
+
+    alias ListMembersResponse = NamedTuple(
+      "Members" : (Members)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListOrganizationAdminAccountsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListOrganizationAdminAccountsResponse = NamedTuple(
+      "AdminAccounts" : (AdminAccounts)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListPublishingDestinationsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListPublishingDestinationsResponse = NamedTuple(
+      "Destinations" : Destinations,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : GuardDutyArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias ListThreatIntelSetsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListThreatIntelSetsResponse = NamedTuple(
+      "ThreatIntelSetIds" : ThreatIntelSetIds,
+      "NextToken" : (String)?
+    )
+
+    alias LocalIpDetails = NamedTuple(
+      "IpAddressV4" : (String)?
+    )
+
+    alias LocalPortDetails = NamedTuple(
+      "Port" : (Integer)?,
+      "PortName" : (String)?
+    )
+
+    alias Location = String
+
+    alias Long = Int64
+
+    alias Master = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "InvitationId" : (String)?,
+      "RelationshipStatus" : (String)?,
+      "InvitedAt" : (String)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Member = NamedTuple(
+      "AccountId" : AccountId,
+      "DetectorId" : (DetectorId)?,
+      "MasterId" : String,
+      "Email" : Email,
+      "RelationshipStatus" : String,
+      "InvitedAt" : (String)?,
+      "UpdatedAt" : String
+    )
+
+    alias MemberDataSourceConfiguration = NamedTuple(
+      "AccountId" : AccountId,
+      "DataSources" : DataSourceConfigurationsResult
+    )
+
+    alias MemberDataSourceConfigurations = Array(MemberDataSourceConfiguration)
+
+    alias Members = Array(Member)
+
+    alias Name = String
+
+    alias Neq = Array(String)
+
+    alias NetworkConnectionAction = NamedTuple(
+      "Blocked" : (Boolean)?,
+      "ConnectionDirection" : (String)?,
+      "LocalPortDetails" : (LocalPortDetails)?,
+      "Protocol" : (String)?,
+      "LocalIpDetails" : (LocalIpDetails)?,
+      "RemoteIpDetails" : (RemoteIpDetails)?,
+      "RemotePortDetails" : (RemotePortDetails)?
+    )
+
+    alias NetworkInterface = NamedTuple(
+      "Ipv6Addresses" : (Ipv6Addresses)?,
+      "NetworkInterfaceId" : (String)?,
+      "PrivateDnsName" : (String)?,
+      "PrivateIpAddress" : (String)?,
+      "PrivateIpAddresses" : (PrivateIpAddresses)?,
+      "PublicDnsName" : (String)?,
+      "PublicIp" : (String)?,
+      "SecurityGroups" : (SecurityGroups)?,
+      "SubnetId" : (String)?,
+      "VpcId" : (String)?
+    )
+
+    alias NetworkInterfaces = Array(NetworkInterface)
+
+    alias NotEquals = Array(String)
+
+    alias OrderBy = String
+
+    alias Organization = NamedTuple(
+      "Asn" : (String)?,
+      "AsnOrg" : (String)?,
+      "Isp" : (String)?,
+      "Org" : (String)?
+    )
+
+    alias OrganizationDataSourceConfigurations = NamedTuple(
+      "S3Logs" : (OrganizationS3LogsConfiguration)?
+    )
+
+    alias OrganizationDataSourceConfigurationsResult = NamedTuple(
+      "S3Logs" : OrganizationS3LogsConfigurationResult
+    )
+
+    alias OrganizationS3LogsConfiguration = NamedTuple(
+      "AutoEnable" : Boolean
+    )
+
+    alias OrganizationS3LogsConfigurationResult = NamedTuple(
+      "AutoEnable" : Boolean
+    )
+
+    alias Owner = NamedTuple(
+      "Id" : (String)?
+    )
+
+    alias PermissionConfiguration = NamedTuple(
+      "BucketLevelPermissions" : (BucketLevelPermissions)?,
+      "AccountLevelPermissions" : (AccountLevelPermissions)?
+    )
+
+    alias PortProbeAction = NamedTuple(
+      "Blocked" : (Boolean)?,
+      "PortProbeDetails" : (PortProbeDetails)?
+    )
+
+    alias PortProbeDetail = NamedTuple(
+      "LocalPortDetails" : (LocalPortDetails)?,
+      "LocalIpDetails" : (LocalIpDetails)?,
+      "RemoteIpDetails" : (RemoteIpDetails)?
+    )
+
+    alias PortProbeDetails = Array(PortProbeDetail)
+
+    alias PrivateIpAddressDetails = NamedTuple(
+      "PrivateDnsName" : (String)?,
+      "PrivateIpAddress" : (String)?
+    )
+
+    alias PrivateIpAddresses = Array(PrivateIpAddressDetails)
+
+    alias ProductCode = NamedTuple(
+      "Code" : (String)?,
+      "ProductType" : (String)?
+    )
+
+    alias ProductCodes = Array(ProductCode)
+
+    alias PublicAccess = NamedTuple(
+      "PermissionConfiguration" : (PermissionConfiguration)?,
+      "EffectivePermission" : (String)?
+    )
+
+    alias PublishingStatus = String
+
+    alias RemoteIpDetails = NamedTuple(
+      "City" : (City)?,
+      "Country" : (Country)?,
+      "GeoLocation" : (GeoLocation)?,
+      "IpAddressV4" : (String)?,
+      "Organization" : (Organization)?
+    )
+
+    alias RemotePortDetails = NamedTuple(
+      "Port" : (Integer)?,
+      "PortName" : (String)?
+    )
+
+    alias Resource = NamedTuple(
+      "AccessKeyDetails" : (AccessKeyDetails)?,
+      "S3BucketDetails" : (S3BucketDetails)?,
+      "InstanceDetails" : (InstanceDetails)?,
+      "ResourceType" : (String)?
+    )
+
+    alias ResourceList = Array(String)
+
+    alias S3BucketDetail = NamedTuple(
+      "Arn" : (String)?,
+      "Name" : (String)?,
+      "Type" : (String)?,
+      "CreatedAt" : (Timestamp)?,
+      "Owner" : (Owner)?,
+      "Tags" : (Tags)?,
+      "DefaultServerSideEncryption" : (DefaultServerSideEncryption)?,
+      "PublicAccess" : (PublicAccess)?
+    )
+
+    alias S3BucketDetails = Array(S3BucketDetail)
+
+    alias S3LogsConfiguration = NamedTuple(
+      "Enable" : Boolean
+    )
+
+    alias S3LogsConfigurationResult = NamedTuple(
+      "Status" : DataSourceStatus
+    )
+
+    alias SecurityGroup = NamedTuple(
+      "GroupId" : (String)?,
+      "GroupName" : (String)?
+    )
+
+    alias SecurityGroups = Array(SecurityGroup)
+
+    alias Service = NamedTuple(
+      "Action" : (Action)?,
+      "Evidence" : (Evidence)?,
+      "Archived" : (Boolean)?,
+      "Count" : (Integer)?,
+      "DetectorId" : (DetectorId)?,
+      "EventFirstSeen" : (String)?,
+      "EventLastSeen" : (String)?,
+      "ResourceRole" : (String)?,
+      "ServiceName" : (String)?,
+      "UserFeedback" : (String)?
+    )
+
+    alias SortCriteria = NamedTuple(
+      "AttributeName" : (String)?,
+      "OrderBy" : (OrderBy)?
+    )
+
+    alias StartMonitoringMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds
+    )
+
+    alias StartMonitoringMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias StopMonitoringMembersRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds
+    )
+
+    alias StopMonitoringMembersResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : GuardDutyArn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias ThreatIntelSetFormat = String
+
+    alias ThreatIntelSetIds = Array(String)
+
+    alias ThreatIntelSetStatus = String
+
+    alias ThreatIntelligenceDetail = NamedTuple(
+      "ThreatListName" : (String)?,
+      "ThreatNames" : (ThreatNames)?
+    )
+
+    alias ThreatIntelligenceDetails = Array(ThreatIntelligenceDetail)
+
+    alias ThreatNames = Array(String)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Total = NamedTuple(
+      "Amount" : (String)?,
+      "Unit" : (String)?
+    )
+
+    alias UnarchiveFindingsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingIds" : FindingIds
+    )
+
+    alias UnarchiveFindingsResponse = NamedTuple(
+      
+    )
+
+    alias UnprocessedAccount = NamedTuple(
+      "AccountId" : AccountId,
+      "Result" : String
+    )
+
+    alias UnprocessedAccounts = Array(UnprocessedAccount)
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : GuardDutyArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDetectorRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "Enable" : (Boolean)?,
+      "FindingPublishingFrequency" : (FindingPublishingFrequency)?,
+      "DataSources" : (DataSourceConfigurations)?
+    )
+
+    alias UpdateDetectorResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFilterRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FilterName" : String,
+      "Description" : (FilterDescription)?,
+      "Action" : (FilterAction)?,
+      "Rank" : (FilterRank)?,
+      "FindingCriteria" : (FindingCriteria)?
+    )
+
+    alias UpdateFilterResponse = NamedTuple(
+      "Name" : FilterName
+    )
+
+    alias UpdateFindingsFeedbackRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "FindingIds" : FindingIds,
+      "Feedback" : Feedback,
+      "Comments" : (String)?
+    )
+
+    alias UpdateFindingsFeedbackResponse = NamedTuple(
+      
+    )
+
+    alias UpdateIPSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "IpSetId" : String,
+      "Name" : (Name)?,
+      "Location" : (Location)?,
+      "Activate" : (Boolean)?
+    )
+
+    alias UpdateIPSetResponse = NamedTuple(
+      
+    )
+
+    alias UpdateMemberDetectorsRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AccountIds" : AccountIds,
+      "DataSources" : (DataSourceConfigurations)?
+    )
+
+    alias UpdateMemberDetectorsResponse = NamedTuple(
+      "UnprocessedAccounts" : UnprocessedAccounts
+    )
+
+    alias UpdateOrganizationConfigurationRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "AutoEnable" : Boolean,
+      "DataSources" : (OrganizationDataSourceConfigurations)?
+    )
+
+    alias UpdateOrganizationConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdatePublishingDestinationRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "DestinationId" : String,
+      "DestinationProperties" : (DestinationProperties)?
+    )
+
+    alias UpdatePublishingDestinationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateThreatIntelSetRequest = NamedTuple(
+      "DetectorId" : DetectorId,
+      "ThreatIntelSetId" : String,
+      "Name" : (Name)?,
+      "Location" : (Location)?,
+      "Activate" : (Boolean)?
+    )
+
+    alias UpdateThreatIntelSetResponse = NamedTuple(
+      
+    )
+
+    alias UsageAccountResult = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "Total" : (Total)?
+    )
+
+    alias UsageAccountResultList = Array(UsageAccountResult)
+
+    alias UsageCriteria = NamedTuple(
+      "AccountIds" : (AccountIds)?,
+      "DataSources" : DataSourceList,
+      "Resources" : (ResourceList)?
+    )
+
+    alias UsageDataSourceResult = NamedTuple(
+      "DataSource" : (DataSource)?,
+      "Total" : (Total)?
+    )
+
+    alias UsageDataSourceResultList = Array(UsageDataSourceResult)
+
+    alias UsageResourceResult = NamedTuple(
+      "Resource" : (String)?,
+      "Total" : (Total)?
+    )
+
+    alias UsageResourceResultList = Array(UsageResourceResult)
+
+    alias UsageStatisticType = String
+
+    alias UsageStatistics = NamedTuple(
+      "SumByAccount" : (UsageAccountResultList)?,
+      "SumByDataSource" : (UsageDataSourceResultList)?,
+      "SumByResource" : (UsageResourceResultList)?,
+      "TopResources" : (UsageResourceResultList)?
+    )
   end
 end

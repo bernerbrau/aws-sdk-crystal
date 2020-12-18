@@ -343,8 +343,8 @@ module Aws::MediaTailor
     #
     # @overload delete_playback_configuration(**params)
     # @param [Hash] params ({})
-    def delete_playback_configuration(params = {}, **options)
-      req = build_request(:delete_playback_configuration, params)
+    def delete_playback_configuration(, **options)
+      req = build_request(:delete_playback_configuration, )
       req.send_request(options)
     end
 
@@ -409,8 +409,8 @@ module Aws::MediaTailor
     #
     # @overload get_playback_configuration(**params)
     # @param [Hash] params ({})
-    def get_playback_configuration(params = {}, **options)
-      req = build_request(:get_playback_configuration, params)
+    def get_playback_configuration(, **options)
+      req = build_request(:get_playback_configuration, )
       req.send_request(options)
     end
 
@@ -463,8 +463,8 @@ module Aws::MediaTailor
     #
     # @overload list_playback_configurations(**params)
     # @param [Hash] params ({})
-    def list_playback_configurations(params = {}, **options)
-      req = build_request(:list_playback_configurations, params)
+    def list_playback_configurations(, **options)
+      req = build_request(:list_playback_configurations, )
       req.send_request(options)
     end
 
@@ -492,8 +492,8 @@ module Aws::MediaTailor
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -646,8 +646,8 @@ module Aws::MediaTailor
     #
     # @overload put_playback_configuration(**params)
     # @param [Hash] params ({})
-    def put_playback_configuration(params = {}, **options)
-      req = build_request(:put_playback_configuration, params)
+    def put_playback_configuration(, **options)
+      req = build_request(:put_playback_configuration, )
       req.send_request(options)
     end
 
@@ -673,8 +673,8 @@ module Aws::MediaTailor
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -698,8 +698,8 @@ module Aws::MediaTailor
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

@@ -17147,5 +17147,3548 @@ module Aws::Glue
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias Action = NamedTuple(
+      "JobName" : (NameString)?,
+      "Arguments" : (GenericMap)?,
+      "Timeout" : (Timeout)?,
+      "SecurityConfiguration" : (NameString)?,
+      "NotificationProperty" : (NotificationProperty)?,
+      "CrawlerName" : (NameString)?
+    )
+
+    alias ActionList = Array(Action)
+
+    alias AdditionalPlanOptionsMap = Hash(GenericString,GenericString)
+
+    alias AlreadyExistsException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias AttemptCount = Int32
+
+    alias BackfillError = NamedTuple(
+      "Code" : (BackfillErrorCode)?,
+      "Partitions" : (BackfillErroredPartitionsList)?
+    )
+
+    alias BackfillErrorCode = String
+
+    alias BackfillErroredPartitionsList = Array(PartitionValueList)
+
+    alias BackfillErrors = Array(BackfillError)
+
+    alias BatchCreatePartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionInputList" : PartitionInputList
+    )
+
+    alias BatchCreatePartitionResponse = NamedTuple(
+      "Errors" : (PartitionErrors)?
+    )
+
+    alias BatchDeleteConnectionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "ConnectionNameList" : DeleteConnectionNameList
+    )
+
+    alias BatchDeleteConnectionResponse = NamedTuple(
+      "Succeeded" : (NameStringList)?,
+      "Errors" : (ErrorByName)?
+    )
+
+    alias BatchDeletePartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionsToDelete" : BatchDeletePartitionValueList
+    )
+
+    alias BatchDeletePartitionResponse = NamedTuple(
+      "Errors" : (PartitionErrors)?
+    )
+
+    alias BatchDeletePartitionValueList = Array(PartitionValueList)
+
+    alias BatchDeleteTableNameList = Array(NameString)
+
+    alias BatchDeleteTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TablesToDelete" : BatchDeleteTableNameList
+    )
+
+    alias BatchDeleteTableResponse = NamedTuple(
+      "Errors" : (TableErrors)?
+    )
+
+    alias BatchDeleteTableVersionList = Array(VersionString)
+
+    alias BatchDeleteTableVersionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "VersionIds" : BatchDeleteTableVersionList
+    )
+
+    alias BatchDeleteTableVersionResponse = NamedTuple(
+      "Errors" : (TableVersionErrors)?
+    )
+
+    alias BatchGetCrawlersRequest = NamedTuple(
+      "CrawlerNames" : CrawlerNameList
+    )
+
+    alias BatchGetCrawlersResponse = NamedTuple(
+      "Crawlers" : (CrawlerList)?,
+      "CrawlersNotFound" : (CrawlerNameList)?
+    )
+
+    alias BatchGetDevEndpointsRequest = NamedTuple(
+      "DevEndpointNames" : DevEndpointNames
+    )
+
+    alias BatchGetDevEndpointsResponse = NamedTuple(
+      "DevEndpoints" : (DevEndpointList)?,
+      "DevEndpointsNotFound" : (DevEndpointNames)?
+    )
+
+    alias BatchGetJobsRequest = NamedTuple(
+      "JobNames" : JobNameList
+    )
+
+    alias BatchGetJobsResponse = NamedTuple(
+      "Jobs" : (JobList)?,
+      "JobsNotFound" : (JobNameList)?
+    )
+
+    alias BatchGetPartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionsToGet" : BatchGetPartitionValueList
+    )
+
+    alias BatchGetPartitionResponse = NamedTuple(
+      "Partitions" : (PartitionList)?,
+      "UnprocessedKeys" : (BatchGetPartitionValueList)?
+    )
+
+    alias BatchGetPartitionValueList = Array(PartitionValueList)
+
+    alias BatchGetTriggersRequest = NamedTuple(
+      "TriggerNames" : TriggerNameList
+    )
+
+    alias BatchGetTriggersResponse = NamedTuple(
+      "Triggers" : (TriggerList)?,
+      "TriggersNotFound" : (TriggerNameList)?
+    )
+
+    alias BatchGetWorkflowsRequest = NamedTuple(
+      "Names" : WorkflowNames,
+      "IncludeGraph" : (NullableBoolean)?
+    )
+
+    alias BatchGetWorkflowsResponse = NamedTuple(
+      "Workflows" : (Workflows)?,
+      "MissingWorkflows" : (WorkflowNames)?
+    )
+
+    alias BatchStopJobRunError = NamedTuple(
+      "JobName" : (NameString)?,
+      "JobRunId" : (IdString)?,
+      "ErrorDetail" : (ErrorDetail)?
+    )
+
+    alias BatchStopJobRunErrorList = Array(BatchStopJobRunError)
+
+    alias BatchStopJobRunJobRunIdList = Array(IdString)
+
+    alias BatchStopJobRunRequest = NamedTuple(
+      "JobName" : NameString,
+      "JobRunIds" : BatchStopJobRunJobRunIdList
+    )
+
+    alias BatchStopJobRunResponse = NamedTuple(
+      "SuccessfulSubmissions" : (BatchStopJobRunSuccessfulSubmissionList)?,
+      "Errors" : (BatchStopJobRunErrorList)?
+    )
+
+    alias BatchStopJobRunSuccessfulSubmission = NamedTuple(
+      "JobName" : (NameString)?,
+      "JobRunId" : (IdString)?
+    )
+
+    alias BatchStopJobRunSuccessfulSubmissionList = Array(BatchStopJobRunSuccessfulSubmission)
+
+    alias BatchUpdatePartitionFailureEntry = NamedTuple(
+      "PartitionValueList" : (BoundedPartitionValueList)?,
+      "ErrorDetail" : (ErrorDetail)?
+    )
+
+    alias BatchUpdatePartitionFailureList = Array(BatchUpdatePartitionFailureEntry)
+
+    alias BatchUpdatePartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "Entries" : BatchUpdatePartitionRequestEntryList
+    )
+
+    alias BatchUpdatePartitionRequestEntry = NamedTuple(
+      "PartitionValueList" : BoundedPartitionValueList,
+      "PartitionInput" : PartitionInput
+    )
+
+    alias BatchUpdatePartitionRequestEntryList = Array(BatchUpdatePartitionRequestEntry)
+
+    alias BatchUpdatePartitionResponse = NamedTuple(
+      "Errors" : (BatchUpdatePartitionFailureList)?
+    )
+
+    alias BinaryColumnStatisticsData = NamedTuple(
+      "MaximumLength" : NonNegativeLong,
+      "AverageLength" : NonNegativeDouble,
+      "NumberOfNulls" : NonNegativeLong
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias BooleanColumnStatisticsData = NamedTuple(
+      "NumberOfTrues" : NonNegativeLong,
+      "NumberOfFalses" : NonNegativeLong,
+      "NumberOfNulls" : NonNegativeLong
+    )
+
+    alias BooleanNullable = Bool
+
+    alias BooleanValue = Bool
+
+    alias BoundedPartitionValueList = Array(ValueString)
+
+    alias CancelMLTaskRunRequest = NamedTuple(
+      "TransformId" : HashString,
+      "TaskRunId" : HashString
+    )
+
+    alias CancelMLTaskRunResponse = NamedTuple(
+      "TransformId" : (HashString)?,
+      "TaskRunId" : (HashString)?,
+      "Status" : (TaskStatusType)?
+    )
+
+    alias CatalogEncryptionMode = String
+
+    alias CatalogEntries = Array(CatalogEntry)
+
+    alias CatalogEntry = NamedTuple(
+      "DatabaseName" : NameString,
+      "TableName" : NameString
+    )
+
+    alias CatalogIdString = String
+
+    alias CatalogImportStatus = NamedTuple(
+      "ImportCompleted" : (Boolean)?,
+      "ImportTime" : (Timestamp)?,
+      "ImportedBy" : (NameString)?
+    )
+
+    alias CatalogTablesList = Array(NameString)
+
+    alias CatalogTarget = NamedTuple(
+      "DatabaseName" : NameString,
+      "Tables" : CatalogTablesList
+    )
+
+    alias CatalogTargetList = Array(CatalogTarget)
+
+    alias CheckSchemaVersionValidityInput = NamedTuple(
+      "DataFormat" : DataFormat,
+      "SchemaDefinition" : SchemaDefinitionString
+    )
+
+    alias CheckSchemaVersionValidityResponse = NamedTuple(
+      "Valid" : (IsVersionValid)?,
+      "Error" : (SchemaValidationError)?
+    )
+
+    alias Classification = String
+
+    alias Classifier = NamedTuple(
+      "GrokClassifier" : (GrokClassifier)?,
+      "XMLClassifier" : (XMLClassifier)?,
+      "JsonClassifier" : (JsonClassifier)?,
+      "CsvClassifier" : (CsvClassifier)?
+    )
+
+    alias ClassifierList = Array(Classifier)
+
+    alias ClassifierNameList = Array(NameString)
+
+    alias CloudWatchEncryption = NamedTuple(
+      "CloudWatchEncryptionMode" : (CloudWatchEncryptionMode)?,
+      "KmsKeyArn" : (KmsKeyArn)?
+    )
+
+    alias CloudWatchEncryptionMode = String
+
+    alias CodeGenArgName = String
+
+    alias CodeGenArgValue = String
+
+    alias CodeGenEdge = NamedTuple(
+      "Source" : CodeGenIdentifier,
+      "Target" : CodeGenIdentifier,
+      "TargetParameter" : (CodeGenArgName)?
+    )
+
+    alias CodeGenIdentifier = String
+
+    alias CodeGenNode = NamedTuple(
+      "Id" : CodeGenIdentifier,
+      "NodeType" : CodeGenNodeType,
+      "Args" : CodeGenNodeArgs,
+      "LineNumber" : (Integer)?
+    )
+
+    alias CodeGenNodeArg = NamedTuple(
+      "Name" : CodeGenArgName,
+      "Value" : CodeGenArgValue,
+      "Param" : (Boolean)?
+    )
+
+    alias CodeGenNodeArgs = Array(CodeGenNodeArg)
+
+    alias CodeGenNodeType = String
+
+    alias Column = NamedTuple(
+      "Name" : NameString,
+      "Type" : (ColumnTypeString)?,
+      "Comment" : (CommentString)?,
+      "Parameters" : (ParametersMap)?
+    )
+
+    alias ColumnError = NamedTuple(
+      "ColumnName" : (NameString)?,
+      "Error" : (ErrorDetail)?
+    )
+
+    alias ColumnErrors = Array(ColumnError)
+
+    alias ColumnList = Array(Column)
+
+    alias ColumnNameString = String
+
+    alias ColumnStatistics = NamedTuple(
+      "ColumnName" : NameString,
+      "ColumnType" : TypeString,
+      "AnalyzedTime" : Timestamp,
+      "StatisticsData" : ColumnStatisticsData
+    )
+
+    alias ColumnStatisticsData = NamedTuple(
+      "Type" : ColumnStatisticsType,
+      "BooleanColumnStatisticsData" : (BooleanColumnStatisticsData)?,
+      "DateColumnStatisticsData" : (DateColumnStatisticsData)?,
+      "DecimalColumnStatisticsData" : (DecimalColumnStatisticsData)?,
+      "DoubleColumnStatisticsData" : (DoubleColumnStatisticsData)?,
+      "LongColumnStatisticsData" : (LongColumnStatisticsData)?,
+      "StringColumnStatisticsData" : (StringColumnStatisticsData)?,
+      "BinaryColumnStatisticsData" : (BinaryColumnStatisticsData)?
+    )
+
+    alias ColumnStatisticsError = NamedTuple(
+      "ColumnStatistics" : (ColumnStatistics)?,
+      "Error" : (ErrorDetail)?
+    )
+
+    alias ColumnStatisticsErrors = Array(ColumnStatisticsError)
+
+    alias ColumnStatisticsList = Array(ColumnStatistics)
+
+    alias ColumnStatisticsType = String
+
+    alias ColumnTypeString = String
+
+    alias ColumnValueStringList = Array(ColumnValuesString)
+
+    alias ColumnValuesString = String
+
+    alias CommentString = String
+
+    alias Comparator = String
+
+    alias Compatibility = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ConcurrentRunsExceededException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias Condition = NamedTuple(
+      "LogicalOperator" : (LogicalOperator)?,
+      "JobName" : (NameString)?,
+      "State" : (JobRunState)?,
+      "CrawlerName" : (NameString)?,
+      "CrawlState" : (CrawlState)?
+    )
+
+    alias ConditionCheckFailureException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ConditionList = Array(Condition)
+
+    alias ConflictException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ConfusionMatrix = NamedTuple(
+      "NumTruePositives" : (RecordsCount)?,
+      "NumFalsePositives" : (RecordsCount)?,
+      "NumTrueNegatives" : (RecordsCount)?,
+      "NumFalseNegatives" : (RecordsCount)?
+    )
+
+    alias Connection = NamedTuple(
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "ConnectionType" : (ConnectionType)?,
+      "MatchCriteria" : (MatchCriteria)?,
+      "ConnectionProperties" : (ConnectionProperties)?,
+      "PhysicalConnectionRequirements" : (PhysicalConnectionRequirements)?,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?,
+      "LastUpdatedBy" : (NameString)?
+    )
+
+    alias ConnectionInput = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "ConnectionType" : ConnectionType,
+      "MatchCriteria" : (MatchCriteria)?,
+      "ConnectionProperties" : ConnectionProperties,
+      "PhysicalConnectionRequirements" : (PhysicalConnectionRequirements)?
+    )
+
+    alias ConnectionList = Array(Connection)
+
+    alias ConnectionName = String
+
+    alias ConnectionPasswordEncryption = NamedTuple(
+      "ReturnConnectionPasswordEncrypted" : Boolean,
+      "AwsKmsKeyId" : (NameString)?
+    )
+
+    alias ConnectionProperties = Hash(ConnectionPropertyKey,ValueString)
+
+    alias ConnectionPropertyKey = String
+
+    alias ConnectionType = String
+
+    alias ConnectionsList = NamedTuple(
+      "Connections" : (OrchestrationStringList)?
+    )
+
+    alias Crawl = NamedTuple(
+      "State" : (CrawlState)?,
+      "StartedOn" : (TimestampValue)?,
+      "CompletedOn" : (TimestampValue)?,
+      "ErrorMessage" : (DescriptionString)?,
+      "LogGroup" : (LogGroup)?,
+      "LogStream" : (LogStream)?
+    )
+
+    alias CrawlList = Array(Crawl)
+
+    alias CrawlState = String
+
+    alias Crawler = NamedTuple(
+      "Name" : (NameString)?,
+      "Role" : (Role)?,
+      "Targets" : (CrawlerTargets)?,
+      "DatabaseName" : (DatabaseName)?,
+      "Description" : (DescriptionString)?,
+      "Classifiers" : (ClassifierNameList)?,
+      "RecrawlPolicy" : (RecrawlPolicy)?,
+      "SchemaChangePolicy" : (SchemaChangePolicy)?,
+      "LineageConfiguration" : (LineageConfiguration)?,
+      "State" : (CrawlerState)?,
+      "TablePrefix" : (TablePrefix)?,
+      "Schedule" : (Schedule)?,
+      "CrawlElapsedTime" : (MillisecondsCount)?,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdated" : (Timestamp)?,
+      "LastCrawl" : (LastCrawlInfo)?,
+      "Version" : (VersionId)?,
+      "Configuration" : (CrawlerConfiguration)?,
+      "CrawlerSecurityConfiguration" : (CrawlerSecurityConfiguration)?
+    )
+
+    alias CrawlerConfiguration = String
+
+    alias CrawlerLineageSettings = String
+
+    alias CrawlerList = Array(Crawler)
+
+    alias CrawlerMetrics = NamedTuple(
+      "CrawlerName" : (NameString)?,
+      "TimeLeftSeconds" : (NonNegativeDouble)?,
+      "StillEstimating" : (Boolean)?,
+      "LastRuntimeSeconds" : (NonNegativeDouble)?,
+      "MedianRuntimeSeconds" : (NonNegativeDouble)?,
+      "TablesCreated" : (NonNegativeInteger)?,
+      "TablesUpdated" : (NonNegativeInteger)?,
+      "TablesDeleted" : (NonNegativeInteger)?
+    )
+
+    alias CrawlerMetricsList = Array(CrawlerMetrics)
+
+    alias CrawlerNameList = Array(NameString)
+
+    alias CrawlerNodeDetails = NamedTuple(
+      "Crawls" : (CrawlList)?
+    )
+
+    alias CrawlerNotRunningException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias CrawlerRunningException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias CrawlerSecurityConfiguration = String
+
+    alias CrawlerState = String
+
+    alias CrawlerStoppingException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias CrawlerTargets = NamedTuple(
+      "S3Targets" : (S3TargetList)?,
+      "JdbcTargets" : (JdbcTargetList)?,
+      "MongoDBTargets" : (MongoDBTargetList)?,
+      "DynamoDBTargets" : (DynamoDBTargetList)?,
+      "CatalogTargets" : (CatalogTargetList)?
+    )
+
+    alias CreateClassifierRequest = NamedTuple(
+      "GrokClassifier" : (CreateGrokClassifierRequest)?,
+      "XMLClassifier" : (CreateXMLClassifierRequest)?,
+      "JsonClassifier" : (CreateJsonClassifierRequest)?,
+      "CsvClassifier" : (CreateCsvClassifierRequest)?
+    )
+
+    alias CreateClassifierResponse = NamedTuple(
+      
+    )
+
+    alias CreateConnectionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "ConnectionInput" : ConnectionInput
+    )
+
+    alias CreateConnectionResponse = NamedTuple(
+      
+    )
+
+    alias CreateCrawlerRequest = NamedTuple(
+      "Name" : NameString,
+      "Role" : Role,
+      "DatabaseName" : (DatabaseName)?,
+      "Description" : (DescriptionString)?,
+      "Targets" : CrawlerTargets,
+      "Schedule" : (CronExpression)?,
+      "Classifiers" : (ClassifierNameList)?,
+      "TablePrefix" : (TablePrefix)?,
+      "SchemaChangePolicy" : (SchemaChangePolicy)?,
+      "RecrawlPolicy" : (RecrawlPolicy)?,
+      "LineageConfiguration" : (LineageConfiguration)?,
+      "Configuration" : (CrawlerConfiguration)?,
+      "CrawlerSecurityConfiguration" : (CrawlerSecurityConfiguration)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias CreateCrawlerResponse = NamedTuple(
+      
+    )
+
+    alias CreateCsvClassifierRequest = NamedTuple(
+      "Name" : NameString,
+      "Delimiter" : (CsvColumnDelimiter)?,
+      "QuoteSymbol" : (CsvQuoteSymbol)?,
+      "ContainsHeader" : (CsvHeaderOption)?,
+      "Header" : (CsvHeader)?,
+      "DisableValueTrimming" : (NullableBoolean)?,
+      "AllowSingleColumn" : (NullableBoolean)?
+    )
+
+    alias CreateDatabaseRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseInput" : DatabaseInput
+    )
+
+    alias CreateDatabaseResponse = NamedTuple(
+      
+    )
+
+    alias CreateDevEndpointRequest = NamedTuple(
+      "EndpointName" : GenericString,
+      "RoleArn" : RoleArn,
+      "SecurityGroupIds" : (StringList)?,
+      "SubnetId" : (GenericString)?,
+      "PublicKey" : (GenericString)?,
+      "PublicKeys" : (PublicKeysList)?,
+      "NumberOfNodes" : (IntegerValue)?,
+      "WorkerType" : (WorkerType)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "ExtraPythonLibsS3Path" : (GenericString)?,
+      "ExtraJarsS3Path" : (GenericString)?,
+      "SecurityConfiguration" : (NameString)?,
+      "Tags" : (TagsMap)?,
+      "Arguments" : (MapValue)?
+    )
+
+    alias CreateDevEndpointResponse = NamedTuple(
+      "EndpointName" : (GenericString)?,
+      "Status" : (GenericString)?,
+      "SecurityGroupIds" : (StringList)?,
+      "SubnetId" : (GenericString)?,
+      "RoleArn" : (RoleArn)?,
+      "YarnEndpointAddress" : (GenericString)?,
+      "ZeppelinRemoteSparkInterpreterPort" : (IntegerValue)?,
+      "NumberOfNodes" : (IntegerValue)?,
+      "WorkerType" : (WorkerType)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "AvailabilityZone" : (GenericString)?,
+      "VpcId" : (GenericString)?,
+      "ExtraPythonLibsS3Path" : (GenericString)?,
+      "ExtraJarsS3Path" : (GenericString)?,
+      "FailureReason" : (GenericString)?,
+      "SecurityConfiguration" : (NameString)?,
+      "CreatedTimestamp" : (TimestampValue)?,
+      "Arguments" : (MapValue)?
+    )
+
+    alias CreateGrokClassifierRequest = NamedTuple(
+      "Classification" : Classification,
+      "Name" : NameString,
+      "GrokPattern" : GrokPattern,
+      "CustomPatterns" : (CustomPatterns)?
+    )
+
+    alias CreateJobRequest = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "LogUri" : (UriString)?,
+      "Role" : RoleString,
+      "ExecutionProperty" : (ExecutionProperty)?,
+      "Command" : JobCommand,
+      "DefaultArguments" : (GenericMap)?,
+      "NonOverridableArguments" : (GenericMap)?,
+      "Connections" : (ConnectionsList)?,
+      "MaxRetries" : (MaxRetries)?,
+      "AllocatedCapacity" : (IntegerValue)?,
+      "Timeout" : (Timeout)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "SecurityConfiguration" : (NameString)?,
+      "Tags" : (TagsMap)?,
+      "NotificationProperty" : (NotificationProperty)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "WorkerType" : (WorkerType)?
+    )
+
+    alias CreateJobResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias CreateJsonClassifierRequest = NamedTuple(
+      "Name" : NameString,
+      "JsonPath" : JsonPath
+    )
+
+    alias CreateMLTransformRequest = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "InputRecordTables" : GlueTables,
+      "Parameters" : TransformParameters,
+      "Role" : RoleString,
+      "GlueVersion" : (GlueVersionString)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "Timeout" : (Timeout)?,
+      "MaxRetries" : (NullableInteger)?,
+      "Tags" : (TagsMap)?,
+      "TransformEncryption" : (TransformEncryption)?
+    )
+
+    alias CreateMLTransformResponse = NamedTuple(
+      "TransformId" : (HashString)?
+    )
+
+    alias CreatePartitionIndexRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionIndex" : PartitionIndex
+    )
+
+    alias CreatePartitionIndexResponse = NamedTuple(
+      
+    )
+
+    alias CreatePartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionInput" : PartitionInput
+    )
+
+    alias CreatePartitionResponse = NamedTuple(
+      
+    )
+
+    alias CreateRegistryInput = NamedTuple(
+      "RegistryName" : SchemaRegistryNameString,
+      "Description" : (DescriptionString)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias CreateRegistryResponse = NamedTuple(
+      "RegistryArn" : (GlueResourceArn)?,
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "Description" : (DescriptionString)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias CreateSchemaInput = NamedTuple(
+      "RegistryId" : (RegistryId)?,
+      "SchemaName" : SchemaRegistryNameString,
+      "DataFormat" : DataFormat,
+      "Compatibility" : (Compatibility)?,
+      "Description" : (DescriptionString)?,
+      "Tags" : (TagsMap)?,
+      "SchemaDefinition" : (SchemaDefinitionString)?
+    )
+
+    alias CreateSchemaResponse = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "SchemaArn" : (GlueResourceArn)?,
+      "Description" : (DescriptionString)?,
+      "DataFormat" : (DataFormat)?,
+      "Compatibility" : (Compatibility)?,
+      "SchemaCheckpoint" : (SchemaCheckpointNumber)?,
+      "LatestSchemaVersion" : (VersionLongNumber)?,
+      "NextSchemaVersion" : (VersionLongNumber)?,
+      "SchemaStatus" : (SchemaStatus)?,
+      "Tags" : (TagsMap)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "SchemaVersionStatus" : (SchemaVersionStatus)?
+    )
+
+    alias CreateScriptRequest = NamedTuple(
+      "DagNodes" : (DagNodes)?,
+      "DagEdges" : (DagEdges)?,
+      "Language" : (Language)?
+    )
+
+    alias CreateScriptResponse = NamedTuple(
+      "PythonScript" : (PythonScript)?,
+      "ScalaCode" : (ScalaCode)?
+    )
+
+    alias CreateSecurityConfigurationRequest = NamedTuple(
+      "Name" : NameString,
+      "EncryptionConfiguration" : EncryptionConfiguration
+    )
+
+    alias CreateSecurityConfigurationResponse = NamedTuple(
+      "Name" : (NameString)?,
+      "CreatedTimestamp" : (TimestampValue)?
+    )
+
+    alias CreateTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableInput" : TableInput,
+      "PartitionIndexes" : (PartitionIndexList)?
+    )
+
+    alias CreateTableResponse = NamedTuple(
+      
+    )
+
+    alias CreateTriggerRequest = NamedTuple(
+      "Name" : NameString,
+      "WorkflowName" : (NameString)?,
+      "Type" : TriggerType,
+      "Schedule" : (GenericString)?,
+      "Predicate" : (Predicate)?,
+      "Actions" : ActionList,
+      "Description" : (DescriptionString)?,
+      "StartOnCreation" : (BooleanValue)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias CreateTriggerResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias CreateUserDefinedFunctionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "FunctionInput" : UserDefinedFunctionInput
+    )
+
+    alias CreateUserDefinedFunctionResponse = NamedTuple(
+      
+    )
+
+    alias CreateWorkflowRequest = NamedTuple(
+      "Name" : NameString,
+      "Description" : (GenericString)?,
+      "DefaultRunProperties" : (WorkflowRunProperties)?,
+      "Tags" : (TagsMap)?,
+      "MaxConcurrentRuns" : (NullableInteger)?
+    )
+
+    alias CreateWorkflowResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias CreateXMLClassifierRequest = NamedTuple(
+      "Classification" : Classification,
+      "Name" : NameString,
+      "RowTag" : (RowTag)?
+    )
+
+    alias CreatedTimestamp = String
+
+    alias CronExpression = String
+
+    alias CsvClassifier = NamedTuple(
+      "Name" : NameString,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdated" : (Timestamp)?,
+      "Version" : (VersionId)?,
+      "Delimiter" : (CsvColumnDelimiter)?,
+      "QuoteSymbol" : (CsvQuoteSymbol)?,
+      "ContainsHeader" : (CsvHeaderOption)?,
+      "Header" : (CsvHeader)?,
+      "DisableValueTrimming" : (NullableBoolean)?,
+      "AllowSingleColumn" : (NullableBoolean)?
+    )
+
+    alias CsvColumnDelimiter = String
+
+    alias CsvHeader = Array(NameString)
+
+    alias CsvHeaderOption = String
+
+    alias CsvQuoteSymbol = String
+
+    alias CustomPatterns = String
+
+    alias DagEdges = Array(CodeGenEdge)
+
+    alias DagNodes = Array(CodeGenNode)
+
+    alias DataCatalogEncryptionSettings = NamedTuple(
+      "EncryptionAtRest" : (EncryptionAtRest)?,
+      "ConnectionPasswordEncryption" : (ConnectionPasswordEncryption)?
+    )
+
+    alias DataFormat = String
+
+    alias DataLakePrincipal = NamedTuple(
+      "DataLakePrincipalIdentifier" : (DataLakePrincipalString)?
+    )
+
+    alias DataLakePrincipalString = String
+
+    alias Database = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "LocationUri" : (URI)?,
+      "Parameters" : (ParametersMap)?,
+      "CreateTime" : (Timestamp)?,
+      "CreateTableDefaultPermissions" : (PrincipalPermissionsList)?,
+      "TargetDatabase" : (DatabaseIdentifier)?,
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias DatabaseIdentifier = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : (NameString)?
+    )
+
+    alias DatabaseInput = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "LocationUri" : (URI)?,
+      "Parameters" : (ParametersMap)?,
+      "CreateTableDefaultPermissions" : (PrincipalPermissionsList)?,
+      "TargetDatabase" : (DatabaseIdentifier)?
+    )
+
+    alias DatabaseList = Array(Database)
+
+    alias DatabaseName = String
+
+    alias DateColumnStatisticsData = NamedTuple(
+      "MinimumValue" : (Timestamp)?,
+      "MaximumValue" : (Timestamp)?,
+      "NumberOfNulls" : NonNegativeLong,
+      "NumberOfDistinctValues" : NonNegativeLong
+    )
+
+    alias DecimalColumnStatisticsData = NamedTuple(
+      "MinimumValue" : (DecimalNumber)?,
+      "MaximumValue" : (DecimalNumber)?,
+      "NumberOfNulls" : NonNegativeLong,
+      "NumberOfDistinctValues" : NonNegativeLong
+    )
+
+    alias DecimalNumber = NamedTuple(
+      "UnscaledValue" : Blob,
+      "Scale" : Integer
+    )
+
+    alias DeleteBehavior = String
+
+    alias DeleteClassifierRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias DeleteClassifierResponse = NamedTuple(
+      
+    )
+
+    alias DeleteColumnStatisticsForPartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionValues" : ValueStringList,
+      "ColumnName" : NameString
+    )
+
+    alias DeleteColumnStatisticsForPartitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteColumnStatisticsForTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "ColumnName" : NameString
+    )
+
+    alias DeleteColumnStatisticsForTableResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConnectionNameList = Array(NameString)
+
+    alias DeleteConnectionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "ConnectionName" : NameString
+    )
+
+    alias DeleteConnectionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteCrawlerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias DeleteCrawlerResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDatabaseRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Name" : NameString
+    )
+
+    alias DeleteDatabaseResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDevEndpointRequest = NamedTuple(
+      "EndpointName" : GenericString
+    )
+
+    alias DeleteDevEndpointResponse = NamedTuple(
+      
+    )
+
+    alias DeleteJobRequest = NamedTuple(
+      "JobName" : NameString
+    )
+
+    alias DeleteJobResponse = NamedTuple(
+      "JobName" : (NameString)?
+    )
+
+    alias DeleteMLTransformRequest = NamedTuple(
+      "TransformId" : HashString
+    )
+
+    alias DeleteMLTransformResponse = NamedTuple(
+      "TransformId" : (HashString)?
+    )
+
+    alias DeletePartitionIndexRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "IndexName" : NameString
+    )
+
+    alias DeletePartitionIndexResponse = NamedTuple(
+      
+    )
+
+    alias DeletePartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionValues" : ValueStringList
+    )
+
+    alias DeletePartitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRegistryInput = NamedTuple(
+      "RegistryId" : RegistryId
+    )
+
+    alias DeleteRegistryResponse = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?,
+      "Status" : (RegistryStatus)?
+    )
+
+    alias DeleteResourcePolicyRequest = NamedTuple(
+      "PolicyHashCondition" : (HashString)?,
+      "ResourceArn" : (GlueResourceArn)?
+    )
+
+    alias DeleteResourcePolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteSchemaInput = NamedTuple(
+      "SchemaId" : SchemaId
+    )
+
+    alias DeleteSchemaResponse = NamedTuple(
+      "SchemaArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "Status" : (SchemaStatus)?
+    )
+
+    alias DeleteSchemaVersionsInput = NamedTuple(
+      "SchemaId" : SchemaId,
+      "Versions" : VersionsString
+    )
+
+    alias DeleteSchemaVersionsResponse = NamedTuple(
+      "SchemaVersionErrors" : (SchemaVersionErrorList)?
+    )
+
+    alias DeleteSecurityConfigurationRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias DeleteSecurityConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "Name" : NameString
+    )
+
+    alias DeleteTableResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTableVersionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "VersionId" : VersionString
+    )
+
+    alias DeleteTableVersionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTriggerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias DeleteTriggerResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias DeleteUserDefinedFunctionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "FunctionName" : NameString
+    )
+
+    alias DeleteUserDefinedFunctionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteWorkflowRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias DeleteWorkflowResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias DescriptionString = String
+
+    alias DescriptionStringRemovable = String
+
+    alias DevEndpoint = NamedTuple(
+      "EndpointName" : (GenericString)?,
+      "RoleArn" : (RoleArn)?,
+      "SecurityGroupIds" : (StringList)?,
+      "SubnetId" : (GenericString)?,
+      "YarnEndpointAddress" : (GenericString)?,
+      "PrivateAddress" : (GenericString)?,
+      "ZeppelinRemoteSparkInterpreterPort" : (IntegerValue)?,
+      "PublicAddress" : (GenericString)?,
+      "Status" : (GenericString)?,
+      "WorkerType" : (WorkerType)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "NumberOfNodes" : (IntegerValue)?,
+      "AvailabilityZone" : (GenericString)?,
+      "VpcId" : (GenericString)?,
+      "ExtraPythonLibsS3Path" : (GenericString)?,
+      "ExtraJarsS3Path" : (GenericString)?,
+      "FailureReason" : (GenericString)?,
+      "LastUpdateStatus" : (GenericString)?,
+      "CreatedTimestamp" : (TimestampValue)?,
+      "LastModifiedTimestamp" : (TimestampValue)?,
+      "PublicKey" : (GenericString)?,
+      "PublicKeys" : (PublicKeysList)?,
+      "SecurityConfiguration" : (NameString)?,
+      "Arguments" : (MapValue)?
+    )
+
+    alias DevEndpointCustomLibraries = NamedTuple(
+      "ExtraPythonLibsS3Path" : (GenericString)?,
+      "ExtraJarsS3Path" : (GenericString)?
+    )
+
+    alias DevEndpointList = Array(DevEndpoint)
+
+    alias DevEndpointNameList = Array(NameString)
+
+    alias DevEndpointNames = Array(GenericString)
+
+    alias Double = Float64
+
+    alias DoubleColumnStatisticsData = NamedTuple(
+      "MinimumValue" : (Double)?,
+      "MaximumValue" : (Double)?,
+      "NumberOfNulls" : NonNegativeLong,
+      "NumberOfDistinctValues" : NonNegativeLong
+    )
+
+    alias DynamoDBTarget = NamedTuple(
+      "Path" : (Path)?,
+      "scanAll" : (NullableBoolean)?,
+      "scanRate" : (NullableDouble)?
+    )
+
+    alias DynamoDBTargetList = Array(DynamoDBTarget)
+
+    alias Edge = NamedTuple(
+      "SourceId" : (NameString)?,
+      "DestinationId" : (NameString)?
+    )
+
+    alias EdgeList = Array(Edge)
+
+    alias EnableHybridValues = String
+
+    alias EncryptionAtRest = NamedTuple(
+      "CatalogEncryptionMode" : CatalogEncryptionMode,
+      "SseAwsKmsKeyId" : (NameString)?
+    )
+
+    alias EncryptionConfiguration = NamedTuple(
+      "S3Encryption" : (S3EncryptionList)?,
+      "CloudWatchEncryption" : (CloudWatchEncryption)?,
+      "JobBookmarksEncryption" : (JobBookmarksEncryption)?
+    )
+
+    alias EntityNotFoundException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ErrorByName = Hash(NameString,ErrorDetail)
+
+    alias ErrorCodeString = String
+
+    alias ErrorDetail = NamedTuple(
+      "ErrorCode" : (NameString)?,
+      "ErrorMessage" : (DescriptionString)?
+    )
+
+    alias ErrorDetails = NamedTuple(
+      "ErrorCode" : (ErrorCodeString)?,
+      "ErrorMessage" : (ErrorMessageString)?
+    )
+
+    alias ErrorMessageString = String
+
+    alias ErrorString = String
+
+    alias EvaluationMetrics = NamedTuple(
+      "TransformType" : TransformType,
+      "FindMatchesMetrics" : (FindMatchesMetrics)?
+    )
+
+    alias ExecutionProperty = NamedTuple(
+      "MaxConcurrentRuns" : (MaxConcurrentRuns)?
+    )
+
+    alias ExecutionTime = Int32
+
+    alias ExistCondition = String
+
+    alias ExportLabelsTaskRunProperties = NamedTuple(
+      "OutputS3Path" : (UriString)?
+    )
+
+    alias FieldType = String
+
+    alias FilterString = String
+
+    alias FindMatchesMetrics = NamedTuple(
+      "AreaUnderPRCurve" : (GenericBoundedDouble)?,
+      "Precision" : (GenericBoundedDouble)?,
+      "Recall" : (GenericBoundedDouble)?,
+      "F1" : (GenericBoundedDouble)?,
+      "ConfusionMatrix" : (ConfusionMatrix)?
+    )
+
+    alias FindMatchesParameters = NamedTuple(
+      "PrimaryKeyColumnName" : (ColumnNameString)?,
+      "PrecisionRecallTradeoff" : (GenericBoundedDouble)?,
+      "AccuracyCostTradeoff" : (GenericBoundedDouble)?,
+      "EnforceProvidedLabels" : (NullableBoolean)?
+    )
+
+    alias FindMatchesTaskRunProperties = NamedTuple(
+      "JobId" : (HashString)?,
+      "JobName" : (NameString)?,
+      "JobRunId" : (HashString)?
+    )
+
+    alias FormatString = String
+
+    alias GenericBoundedDouble = Float64
+
+    alias GenericMap = Hash(GenericString,GenericString)
+
+    alias GenericString = String
+
+    alias GetCatalogImportStatusRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias GetCatalogImportStatusResponse = NamedTuple(
+      "ImportStatus" : (CatalogImportStatus)?
+    )
+
+    alias GetClassifierRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias GetClassifierResponse = NamedTuple(
+      "Classifier" : (Classifier)?
+    )
+
+    alias GetClassifiersRequest = NamedTuple(
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetClassifiersResponse = NamedTuple(
+      "Classifiers" : (ClassifierList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetColumnNamesList = Array(NameString)
+
+    alias GetColumnStatisticsForPartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionValues" : ValueStringList,
+      "ColumnNames" : GetColumnNamesList
+    )
+
+    alias GetColumnStatisticsForPartitionResponse = NamedTuple(
+      "ColumnStatisticsList" : (ColumnStatisticsList)?,
+      "Errors" : (ColumnErrors)?
+    )
+
+    alias GetColumnStatisticsForTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "ColumnNames" : GetColumnNamesList
+    )
+
+    alias GetColumnStatisticsForTableResponse = NamedTuple(
+      "ColumnStatisticsList" : (ColumnStatisticsList)?,
+      "Errors" : (ColumnErrors)?
+    )
+
+    alias GetConnectionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Name" : NameString,
+      "HidePassword" : (Boolean)?
+    )
+
+    alias GetConnectionResponse = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias GetConnectionsFilter = NamedTuple(
+      "MatchCriteria" : (MatchCriteria)?,
+      "ConnectionType" : (ConnectionType)?
+    )
+
+    alias GetConnectionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Filter" : (GetConnectionsFilter)?,
+      "HidePassword" : (Boolean)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetConnectionsResponse = NamedTuple(
+      "ConnectionList" : (ConnectionList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetCrawlerMetricsRequest = NamedTuple(
+      "CrawlerNameList" : (CrawlerNameList)?,
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetCrawlerMetricsResponse = NamedTuple(
+      "CrawlerMetricsList" : (CrawlerMetricsList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetCrawlerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias GetCrawlerResponse = NamedTuple(
+      "Crawler" : (Crawler)?
+    )
+
+    alias GetCrawlersRequest = NamedTuple(
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetCrawlersResponse = NamedTuple(
+      "Crawlers" : (CrawlerList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetDataCatalogEncryptionSettingsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias GetDataCatalogEncryptionSettingsResponse = NamedTuple(
+      "DataCatalogEncryptionSettings" : (DataCatalogEncryptionSettings)?
+    )
+
+    alias GetDatabaseRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Name" : NameString
+    )
+
+    alias GetDatabaseResponse = NamedTuple(
+      "Database" : (Database)?
+    )
+
+    alias GetDatabasesRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?,
+      "ResourceShareType" : (ResourceShareType)?
+    )
+
+    alias GetDatabasesResponse = NamedTuple(
+      "DatabaseList" : DatabaseList,
+      "NextToken" : (Token)?
+    )
+
+    alias GetDataflowGraphRequest = NamedTuple(
+      "PythonScript" : (PythonScript)?
+    )
+
+    alias GetDataflowGraphResponse = NamedTuple(
+      "DagNodes" : (DagNodes)?,
+      "DagEdges" : (DagEdges)?
+    )
+
+    alias GetDevEndpointRequest = NamedTuple(
+      "EndpointName" : GenericString
+    )
+
+    alias GetDevEndpointResponse = NamedTuple(
+      "DevEndpoint" : (DevEndpoint)?
+    )
+
+    alias GetDevEndpointsRequest = NamedTuple(
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetDevEndpointsResponse = NamedTuple(
+      "DevEndpoints" : (DevEndpointList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetJobBookmarkRequest = NamedTuple(
+      "JobName" : JobName,
+      "RunId" : (RunId)?
+    )
+
+    alias GetJobBookmarkResponse = NamedTuple(
+      "JobBookmarkEntry" : (JobBookmarkEntry)?
+    )
+
+    alias GetJobRequest = NamedTuple(
+      "JobName" : NameString
+    )
+
+    alias GetJobResponse = NamedTuple(
+      "Job" : (Job)?
+    )
+
+    alias GetJobRunRequest = NamedTuple(
+      "JobName" : NameString,
+      "RunId" : IdString,
+      "PredecessorsIncluded" : (BooleanValue)?
+    )
+
+    alias GetJobRunResponse = NamedTuple(
+      "JobRun" : (JobRun)?
+    )
+
+    alias GetJobRunsRequest = NamedTuple(
+      "JobName" : NameString,
+      "NextToken" : (GenericString)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetJobRunsResponse = NamedTuple(
+      "JobRuns" : (JobRunList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetJobsRequest = NamedTuple(
+      "NextToken" : (GenericString)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetJobsResponse = NamedTuple(
+      "Jobs" : (JobList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetMLTaskRunRequest = NamedTuple(
+      "TransformId" : HashString,
+      "TaskRunId" : HashString
+    )
+
+    alias GetMLTaskRunResponse = NamedTuple(
+      "TransformId" : (HashString)?,
+      "TaskRunId" : (HashString)?,
+      "Status" : (TaskStatusType)?,
+      "LogGroupName" : (GenericString)?,
+      "Properties" : (TaskRunProperties)?,
+      "ErrorString" : (GenericString)?,
+      "StartedOn" : (Timestamp)?,
+      "LastModifiedOn" : (Timestamp)?,
+      "CompletedOn" : (Timestamp)?,
+      "ExecutionTime" : (ExecutionTime)?
+    )
+
+    alias GetMLTaskRunsRequest = NamedTuple(
+      "TransformId" : HashString,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PageSize)?,
+      "Filter" : (TaskRunFilterCriteria)?,
+      "Sort" : (TaskRunSortCriteria)?
+    )
+
+    alias GetMLTaskRunsResponse = NamedTuple(
+      "TaskRuns" : (TaskRunList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias GetMLTransformRequest = NamedTuple(
+      "TransformId" : HashString
+    )
+
+    alias GetMLTransformResponse = NamedTuple(
+      "TransformId" : (HashString)?,
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Status" : (TransformStatusType)?,
+      "CreatedOn" : (Timestamp)?,
+      "LastModifiedOn" : (Timestamp)?,
+      "InputRecordTables" : (GlueTables)?,
+      "Parameters" : (TransformParameters)?,
+      "EvaluationMetrics" : (EvaluationMetrics)?,
+      "LabelCount" : (LabelCount)?,
+      "Schema" : (TransformSchema)?,
+      "Role" : (RoleString)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "Timeout" : (Timeout)?,
+      "MaxRetries" : (NullableInteger)?,
+      "TransformEncryption" : (TransformEncryption)?
+    )
+
+    alias GetMLTransformsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PageSize)?,
+      "Filter" : (TransformFilterCriteria)?,
+      "Sort" : (TransformSortCriteria)?
+    )
+
+    alias GetMLTransformsResponse = NamedTuple(
+      "Transforms" : TransformList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias GetMappingRequest = NamedTuple(
+      "Source" : CatalogEntry,
+      "Sinks" : (CatalogEntries)?,
+      "Location" : (Location)?
+    )
+
+    alias GetMappingResponse = NamedTuple(
+      "Mapping" : MappingList
+    )
+
+    alias GetPartitionIndexesRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "NextToken" : (Token)?
+    )
+
+    alias GetPartitionIndexesResponse = NamedTuple(
+      "PartitionIndexDescriptorList" : (PartitionIndexDescriptorList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetPartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionValues" : ValueStringList
+    )
+
+    alias GetPartitionResponse = NamedTuple(
+      "Partition" : (Partition)?
+    )
+
+    alias GetPartitionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "Expression" : (PredicateString)?,
+      "NextToken" : (Token)?,
+      "Segment" : (Segment)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetPartitionsResponse = NamedTuple(
+      "Partitions" : (PartitionList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetPlanRequest = NamedTuple(
+      "Mapping" : MappingList,
+      "Source" : CatalogEntry,
+      "Sinks" : (CatalogEntries)?,
+      "Location" : (Location)?,
+      "Language" : (Language)?,
+      "AdditionalPlanOptionsMap" : (AdditionalPlanOptionsMap)?
+    )
+
+    alias GetPlanResponse = NamedTuple(
+      "PythonScript" : (PythonScript)?,
+      "ScalaCode" : (ScalaCode)?
+    )
+
+    alias GetRegistryInput = NamedTuple(
+      "RegistryId" : RegistryId
+    )
+
+    alias GetRegistryResponse = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?,
+      "Description" : (DescriptionString)?,
+      "Status" : (RegistryStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?,
+      "UpdatedTime" : (UpdatedTimestamp)?
+    )
+
+    alias GetResourcePoliciesRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetResourcePoliciesResponse = NamedTuple(
+      "GetResourcePoliciesResponseList" : (GetResourcePoliciesResponseList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetResourcePoliciesResponseList = Array(GluePolicy)
+
+    alias GetResourcePolicyRequest = NamedTuple(
+      "ResourceArn" : (GlueResourceArn)?
+    )
+
+    alias GetResourcePolicyResponse = NamedTuple(
+      "PolicyInJson" : (PolicyJsonString)?,
+      "PolicyHash" : (HashString)?,
+      "CreateTime" : (Timestamp)?,
+      "UpdateTime" : (Timestamp)?
+    )
+
+    alias GetSchemaByDefinitionInput = NamedTuple(
+      "SchemaId" : SchemaId,
+      "SchemaDefinition" : SchemaDefinitionString
+    )
+
+    alias GetSchemaByDefinitionResponse = NamedTuple(
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "SchemaArn" : (GlueResourceArn)?,
+      "DataFormat" : (DataFormat)?,
+      "Status" : (SchemaVersionStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?
+    )
+
+    alias GetSchemaInput = NamedTuple(
+      "SchemaId" : SchemaId
+    )
+
+    alias GetSchemaResponse = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "SchemaArn" : (GlueResourceArn)?,
+      "Description" : (DescriptionString)?,
+      "DataFormat" : (DataFormat)?,
+      "Compatibility" : (Compatibility)?,
+      "SchemaCheckpoint" : (SchemaCheckpointNumber)?,
+      "LatestSchemaVersion" : (VersionLongNumber)?,
+      "NextSchemaVersion" : (VersionLongNumber)?,
+      "SchemaStatus" : (SchemaStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?,
+      "UpdatedTime" : (UpdatedTimestamp)?
+    )
+
+    alias GetSchemaVersionInput = NamedTuple(
+      "SchemaId" : (SchemaId)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "SchemaVersionNumber" : (SchemaVersionNumber)?
+    )
+
+    alias GetSchemaVersionResponse = NamedTuple(
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "SchemaDefinition" : (SchemaDefinitionString)?,
+      "DataFormat" : (DataFormat)?,
+      "SchemaArn" : (GlueResourceArn)?,
+      "VersionNumber" : (VersionLongNumber)?,
+      "Status" : (SchemaVersionStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?
+    )
+
+    alias GetSchemaVersionsDiffInput = NamedTuple(
+      "SchemaId" : SchemaId,
+      "FirstSchemaVersionNumber" : SchemaVersionNumber,
+      "SecondSchemaVersionNumber" : SchemaVersionNumber,
+      "SchemaDiffType" : SchemaDiffType
+    )
+
+    alias GetSchemaVersionsDiffResponse = NamedTuple(
+      "Diff" : (SchemaDefinitionDiff)?
+    )
+
+    alias GetSecurityConfigurationRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias GetSecurityConfigurationResponse = NamedTuple(
+      "SecurityConfiguration" : (SecurityConfiguration)?
+    )
+
+    alias GetSecurityConfigurationsRequest = NamedTuple(
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetSecurityConfigurationsResponse = NamedTuple(
+      "SecurityConfigurations" : (SecurityConfigurationList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "Name" : NameString
+    )
+
+    alias GetTableResponse = NamedTuple(
+      "Table" : (Table)?
+    )
+
+    alias GetTableVersionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "VersionId" : (VersionString)?
+    )
+
+    alias GetTableVersionResponse = NamedTuple(
+      "TableVersion" : (TableVersion)?
+    )
+
+    alias GetTableVersionsList = Array(TableVersion)
+
+    alias GetTableVersionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetTableVersionsResponse = NamedTuple(
+      "TableVersions" : (GetTableVersionsList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetTablesRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "Expression" : (FilterString)?,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetTablesResponse = NamedTuple(
+      "TableList" : (TableList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetTagsRequest = NamedTuple(
+      "ResourceArn" : GlueResourceArn
+    )
+
+    alias GetTagsResponse = NamedTuple(
+      "Tags" : (TagsMap)?
+    )
+
+    alias GetTriggerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias GetTriggerResponse = NamedTuple(
+      "Trigger" : (Trigger)?
+    )
+
+    alias GetTriggersRequest = NamedTuple(
+      "NextToken" : (GenericString)?,
+      "DependentJobName" : (NameString)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetTriggersResponse = NamedTuple(
+      "Triggers" : (TriggerList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GetUserDefinedFunctionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "FunctionName" : NameString
+    )
+
+    alias GetUserDefinedFunctionResponse = NamedTuple(
+      "UserDefinedFunction" : (UserDefinedFunction)?
+    )
+
+    alias GetUserDefinedFunctionsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : (NameString)?,
+      "Pattern" : NameString,
+      "NextToken" : (Token)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetUserDefinedFunctionsResponse = NamedTuple(
+      "UserDefinedFunctions" : (UserDefinedFunctionList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias GetWorkflowRequest = NamedTuple(
+      "Name" : NameString,
+      "IncludeGraph" : (NullableBoolean)?
+    )
+
+    alias GetWorkflowResponse = NamedTuple(
+      "Workflow" : (Workflow)?
+    )
+
+    alias GetWorkflowRunPropertiesRequest = NamedTuple(
+      "Name" : NameString,
+      "RunId" : IdString
+    )
+
+    alias GetWorkflowRunPropertiesResponse = NamedTuple(
+      "RunProperties" : (WorkflowRunProperties)?
+    )
+
+    alias GetWorkflowRunRequest = NamedTuple(
+      "Name" : NameString,
+      "RunId" : IdString,
+      "IncludeGraph" : (NullableBoolean)?
+    )
+
+    alias GetWorkflowRunResponse = NamedTuple(
+      "Run" : (WorkflowRun)?
+    )
+
+    alias GetWorkflowRunsRequest = NamedTuple(
+      "Name" : NameString,
+      "IncludeGraph" : (NullableBoolean)?,
+      "NextToken" : (GenericString)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias GetWorkflowRunsResponse = NamedTuple(
+      "Runs" : (WorkflowRuns)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias GlueEncryptionException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias GluePolicy = NamedTuple(
+      "PolicyInJson" : (PolicyJsonString)?,
+      "PolicyHash" : (HashString)?,
+      "CreateTime" : (Timestamp)?,
+      "UpdateTime" : (Timestamp)?
+    )
+
+    alias GlueResourceArn = String
+
+    alias GlueTable = NamedTuple(
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "CatalogId" : (NameString)?,
+      "ConnectionName" : (NameString)?
+    )
+
+    alias GlueTables = Array(GlueTable)
+
+    alias GlueVersionString = String
+
+    alias GrokClassifier = NamedTuple(
+      "Name" : NameString,
+      "Classification" : Classification,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdated" : (Timestamp)?,
+      "Version" : (VersionId)?,
+      "GrokPattern" : GrokPattern,
+      "CustomPatterns" : (CustomPatterns)?
+    )
+
+    alias GrokPattern = String
+
+    alias HashString = String
+
+    alias IdString = String
+
+    alias IdempotentParameterMismatchException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias IllegalWorkflowStateException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ImportCatalogToGlueRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias ImportCatalogToGlueResponse = NamedTuple(
+      
+    )
+
+    alias ImportLabelsTaskRunProperties = NamedTuple(
+      "InputS3Path" : (UriString)?,
+      "Replace" : (ReplaceBoolean)?
+    )
+
+    alias Integer = Int32
+
+    alias IntegerFlag = Int32
+
+    alias IntegerValue = Int32
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias IsVersionValid = Bool
+
+    alias JdbcTarget = NamedTuple(
+      "ConnectionName" : (ConnectionName)?,
+      "Path" : (Path)?,
+      "Exclusions" : (PathList)?
+    )
+
+    alias JdbcTargetList = Array(JdbcTarget)
+
+    alias Job = NamedTuple(
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "LogUri" : (UriString)?,
+      "Role" : (RoleString)?,
+      "CreatedOn" : (TimestampValue)?,
+      "LastModifiedOn" : (TimestampValue)?,
+      "ExecutionProperty" : (ExecutionProperty)?,
+      "Command" : (JobCommand)?,
+      "DefaultArguments" : (GenericMap)?,
+      "NonOverridableArguments" : (GenericMap)?,
+      "Connections" : (ConnectionsList)?,
+      "MaxRetries" : (MaxRetries)?,
+      "AllocatedCapacity" : (IntegerValue)?,
+      "Timeout" : (Timeout)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "SecurityConfiguration" : (NameString)?,
+      "NotificationProperty" : (NotificationProperty)?,
+      "GlueVersion" : (GlueVersionString)?
+    )
+
+    alias JobBookmarkEntry = NamedTuple(
+      "JobName" : (JobName)?,
+      "Version" : (IntegerValue)?,
+      "Run" : (IntegerValue)?,
+      "Attempt" : (IntegerValue)?,
+      "PreviousRunId" : (RunId)?,
+      "RunId" : (RunId)?,
+      "JobBookmark" : (JsonValue)?
+    )
+
+    alias JobBookmarksEncryption = NamedTuple(
+      "JobBookmarksEncryptionMode" : (JobBookmarksEncryptionMode)?,
+      "KmsKeyArn" : (KmsKeyArn)?
+    )
+
+    alias JobBookmarksEncryptionMode = String
+
+    alias JobCommand = NamedTuple(
+      "Name" : (GenericString)?,
+      "ScriptLocation" : (ScriptLocationString)?,
+      "PythonVersion" : (PythonVersionString)?
+    )
+
+    alias JobList = Array(Job)
+
+    alias JobName = String
+
+    alias JobNameList = Array(NameString)
+
+    alias JobNodeDetails = NamedTuple(
+      "JobRuns" : (JobRunList)?
+    )
+
+    alias JobRun = NamedTuple(
+      "Id" : (IdString)?,
+      "Attempt" : (AttemptCount)?,
+      "PreviousRunId" : (IdString)?,
+      "TriggerName" : (NameString)?,
+      "JobName" : (NameString)?,
+      "StartedOn" : (TimestampValue)?,
+      "LastModifiedOn" : (TimestampValue)?,
+      "CompletedOn" : (TimestampValue)?,
+      "JobRunState" : (JobRunState)?,
+      "Arguments" : (GenericMap)?,
+      "ErrorMessage" : (ErrorString)?,
+      "PredecessorRuns" : (PredecessorList)?,
+      "AllocatedCapacity" : (IntegerValue)?,
+      "ExecutionTime" : (ExecutionTime)?,
+      "Timeout" : (Timeout)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "SecurityConfiguration" : (NameString)?,
+      "LogGroupName" : (GenericString)?,
+      "NotificationProperty" : (NotificationProperty)?,
+      "GlueVersion" : (GlueVersionString)?
+    )
+
+    alias JobRunList = Array(JobRun)
+
+    alias JobRunState = String
+
+    alias JobUpdate = NamedTuple(
+      "Description" : (DescriptionString)?,
+      "LogUri" : (UriString)?,
+      "Role" : (RoleString)?,
+      "ExecutionProperty" : (ExecutionProperty)?,
+      "Command" : (JobCommand)?,
+      "DefaultArguments" : (GenericMap)?,
+      "NonOverridableArguments" : (GenericMap)?,
+      "Connections" : (ConnectionsList)?,
+      "MaxRetries" : (MaxRetries)?,
+      "AllocatedCapacity" : (IntegerValue)?,
+      "Timeout" : (Timeout)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "SecurityConfiguration" : (NameString)?,
+      "NotificationProperty" : (NotificationProperty)?,
+      "GlueVersion" : (GlueVersionString)?
+    )
+
+    alias JsonClassifier = NamedTuple(
+      "Name" : NameString,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdated" : (Timestamp)?,
+      "Version" : (VersionId)?,
+      "JsonPath" : JsonPath
+    )
+
+    alias JsonPath = String
+
+    alias JsonValue = String
+
+    alias KeyList = Array(NameString)
+
+    alias KeySchemaElement = NamedTuple(
+      "Name" : NameString,
+      "Type" : ColumnTypeString
+    )
+
+    alias KeySchemaElementList = Array(KeySchemaElement)
+
+    alias KeyString = String
+
+    alias KmsKeyArn = String
+
+    alias LabelCount = Int32
+
+    alias LabelingSetGenerationTaskRunProperties = NamedTuple(
+      "OutputS3Path" : (UriString)?
+    )
+
+    alias Language = String
+
+    alias LastCrawlInfo = NamedTuple(
+      "Status" : (LastCrawlStatus)?,
+      "ErrorMessage" : (DescriptionString)?,
+      "LogGroup" : (LogGroup)?,
+      "LogStream" : (LogStream)?,
+      "MessagePrefix" : (MessagePrefix)?,
+      "StartTime" : (Timestamp)?
+    )
+
+    alias LastCrawlStatus = String
+
+    alias LatestSchemaVersionBoolean = Bool
+
+    alias LineageConfiguration = NamedTuple(
+      "CrawlerLineageSettings" : (CrawlerLineageSettings)?
+    )
+
+    alias ListCrawlersRequest = NamedTuple(
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (Token)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias ListCrawlersResponse = NamedTuple(
+      "CrawlerNames" : (CrawlerNameList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListDevEndpointsRequest = NamedTuple(
+      "NextToken" : (GenericString)?,
+      "MaxResults" : (PageSize)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias ListDevEndpointsResponse = NamedTuple(
+      "DevEndpointNames" : (DevEndpointNameList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "NextToken" : (GenericString)?,
+      "MaxResults" : (PageSize)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias ListJobsResponse = NamedTuple(
+      "JobNames" : (JobNameList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListMLTransformsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PageSize)?,
+      "Filter" : (TransformFilterCriteria)?,
+      "Sort" : (TransformSortCriteria)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias ListMLTransformsResponse = NamedTuple(
+      "TransformIds" : TransformIdList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListRegistriesInput = NamedTuple(
+      "MaxResults" : (MaxResultsNumber)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias ListRegistriesResponse = NamedTuple(
+      "Registries" : (RegistryListDefinition)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias ListSchemaVersionsInput = NamedTuple(
+      "SchemaId" : SchemaId,
+      "MaxResults" : (MaxResultsNumber)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias ListSchemaVersionsResponse = NamedTuple(
+      "Schemas" : (SchemaVersionList)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias ListSchemasInput = NamedTuple(
+      "RegistryId" : (RegistryId)?,
+      "MaxResults" : (MaxResultsNumber)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias ListSchemasResponse = NamedTuple(
+      "Schemas" : (SchemaListDefinition)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias ListTriggersRequest = NamedTuple(
+      "NextToken" : (GenericString)?,
+      "DependentJobName" : (NameString)?,
+      "MaxResults" : (PageSize)?,
+      "Tags" : (TagsMap)?
+    )
+
+    alias ListTriggersResponse = NamedTuple(
+      "TriggerNames" : (TriggerNameList)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias ListWorkflowsRequest = NamedTuple(
+      "NextToken" : (GenericString)?,
+      "MaxResults" : (PageSize)?
+    )
+
+    alias ListWorkflowsResponse = NamedTuple(
+      "Workflows" : (WorkflowNames)?,
+      "NextToken" : (GenericString)?
+    )
+
+    alias Location = NamedTuple(
+      "Jdbc" : (CodeGenNodeArgs)?,
+      "S3" : (CodeGenNodeArgs)?,
+      "DynamoDB" : (CodeGenNodeArgs)?
+    )
+
+    alias LocationMap = Hash(ColumnValuesString,ColumnValuesString)
+
+    alias LocationString = String
+
+    alias LogGroup = String
+
+    alias LogStream = String
+
+    alias Logical = String
+
+    alias LogicalOperator = String
+
+    alias Long = Int64
+
+    alias LongColumnStatisticsData = NamedTuple(
+      "MinimumValue" : (Long)?,
+      "MaximumValue" : (Long)?,
+      "NumberOfNulls" : NonNegativeLong,
+      "NumberOfDistinctValues" : NonNegativeLong
+    )
+
+    alias MLTransform = NamedTuple(
+      "TransformId" : (HashString)?,
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Status" : (TransformStatusType)?,
+      "CreatedOn" : (Timestamp)?,
+      "LastModifiedOn" : (Timestamp)?,
+      "InputRecordTables" : (GlueTables)?,
+      "Parameters" : (TransformParameters)?,
+      "EvaluationMetrics" : (EvaluationMetrics)?,
+      "LabelCount" : (LabelCount)?,
+      "Schema" : (TransformSchema)?,
+      "Role" : (RoleString)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "Timeout" : (Timeout)?,
+      "MaxRetries" : (NullableInteger)?,
+      "TransformEncryption" : (TransformEncryption)?
+    )
+
+    alias MLTransformNotReadyException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias MLUserDataEncryption = NamedTuple(
+      "MlUserDataEncryptionMode" : MLUserDataEncryptionModeString,
+      "KmsKeyId" : (NameString)?
+    )
+
+    alias MLUserDataEncryptionModeString = String
+
+    alias MapValue = Hash(GenericString,GenericString)
+
+    alias MappingEntry = NamedTuple(
+      "SourceTable" : (TableName)?,
+      "SourcePath" : (SchemaPathString)?,
+      "SourceType" : (FieldType)?,
+      "TargetTable" : (TableName)?,
+      "TargetPath" : (SchemaPathString)?,
+      "TargetType" : (FieldType)?
+    )
+
+    alias MappingList = Array(MappingEntry)
+
+    alias MatchCriteria = Array(NameString)
+
+    alias MaxConcurrentRuns = Int32
+
+    alias MaxResultsNumber = Int32
+
+    alias MaxRetries = Int32
+
+    alias MessagePrefix = String
+
+    alias MessageString = String
+
+    alias MetadataInfo = NamedTuple(
+      "MetadataValue" : (MetadataValueString)?,
+      "CreatedTime" : (CreatedTimestamp)?
+    )
+
+    alias MetadataInfoMap = Hash(MetadataKeyString,MetadataInfo)
+
+    alias MetadataKeyString = String
+
+    alias MetadataKeyValuePair = NamedTuple(
+      "MetadataKey" : (MetadataKeyString)?,
+      "MetadataValue" : (MetadataValueString)?
+    )
+
+    alias MetadataList = Array(MetadataKeyValuePair)
+
+    alias MetadataValueString = String
+
+    alias MillisecondsCount = Int64
+
+    alias MongoDBTarget = NamedTuple(
+      "ConnectionName" : (ConnectionName)?,
+      "Path" : (Path)?,
+      "ScanAll" : (NullableBoolean)?
+    )
+
+    alias MongoDBTargetList = Array(MongoDBTarget)
+
+    alias NameString = String
+
+    alias NameStringList = Array(NameString)
+
+    alias NoScheduleException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias Node = NamedTuple(
+      "Type" : (NodeType)?,
+      "Name" : (NameString)?,
+      "UniqueId" : (NameString)?,
+      "TriggerDetails" : (TriggerNodeDetails)?,
+      "JobDetails" : (JobNodeDetails)?,
+      "CrawlerDetails" : (CrawlerNodeDetails)?
+    )
+
+    alias NodeIdList = Array(NameString)
+
+    alias NodeList = Array(Node)
+
+    alias NodeType = String
+
+    alias NonNegativeDouble = Float64
+
+    alias NonNegativeInteger = Int32
+
+    alias NonNegativeLong = Int64
+
+    alias NotificationProperty = NamedTuple(
+      "NotifyDelayAfter" : (NotifyDelayAfter)?
+    )
+
+    alias NotifyDelayAfter = Int32
+
+    alias NullableBoolean = Bool
+
+    alias NullableDouble = Float64
+
+    alias NullableInteger = Int32
+
+    alias OperationTimeoutException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias OrchestrationStringList = Array(GenericString)
+
+    alias Order = NamedTuple(
+      "Column" : NameString,
+      "SortOrder" : IntegerFlag
+    )
+
+    alias OrderList = Array(Order)
+
+    alias PageSize = Int32
+
+    alias PaginationToken = String
+
+    alias ParametersMap = Hash(KeyString,ParametersMapValue)
+
+    alias ParametersMapValue = String
+
+    alias Partition = NamedTuple(
+      "Values" : (ValueStringList)?,
+      "DatabaseName" : (NameString)?,
+      "TableName" : (NameString)?,
+      "CreationTime" : (Timestamp)?,
+      "LastAccessTime" : (Timestamp)?,
+      "StorageDescriptor" : (StorageDescriptor)?,
+      "Parameters" : (ParametersMap)?,
+      "LastAnalyzedTime" : (Timestamp)?,
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias PartitionError = NamedTuple(
+      "PartitionValues" : (ValueStringList)?,
+      "ErrorDetail" : (ErrorDetail)?
+    )
+
+    alias PartitionErrors = Array(PartitionError)
+
+    alias PartitionIndex = NamedTuple(
+      "Keys" : KeyList,
+      "IndexName" : NameString
+    )
+
+    alias PartitionIndexDescriptor = NamedTuple(
+      "IndexName" : NameString,
+      "Keys" : KeySchemaElementList,
+      "IndexStatus" : PartitionIndexStatus,
+      "BackfillErrors" : (BackfillErrors)?
+    )
+
+    alias PartitionIndexDescriptorList = Array(PartitionIndexDescriptor)
+
+    alias PartitionIndexList = Array(PartitionIndex)
+
+    alias PartitionIndexStatus = String
+
+    alias PartitionInput = NamedTuple(
+      "Values" : (ValueStringList)?,
+      "LastAccessTime" : (Timestamp)?,
+      "StorageDescriptor" : (StorageDescriptor)?,
+      "Parameters" : (ParametersMap)?,
+      "LastAnalyzedTime" : (Timestamp)?
+    )
+
+    alias PartitionInputList = Array(PartitionInput)
+
+    alias PartitionList = Array(Partition)
+
+    alias PartitionValueList = NamedTuple(
+      "Values" : ValueStringList
+    )
+
+    alias Path = String
+
+    alias PathList = Array(Path)
+
+    alias Permission = String
+
+    alias PermissionList = Array(Permission)
+
+    alias PhysicalConnectionRequirements = NamedTuple(
+      "SubnetId" : (NameString)?,
+      "SecurityGroupIdList" : (SecurityGroupIdList)?,
+      "AvailabilityZone" : (NameString)?
+    )
+
+    alias PolicyJsonString = String
+
+    alias Predecessor = NamedTuple(
+      "JobName" : (NameString)?,
+      "RunId" : (IdString)?
+    )
+
+    alias PredecessorList = Array(Predecessor)
+
+    alias Predicate = NamedTuple(
+      "Logical" : (Logical)?,
+      "Conditions" : (ConditionList)?
+    )
+
+    alias PredicateString = String
+
+    alias PrincipalPermissions = NamedTuple(
+      "Principal" : (DataLakePrincipal)?,
+      "Permissions" : (PermissionList)?
+    )
+
+    alias PrincipalPermissionsList = Array(PrincipalPermissions)
+
+    alias PrincipalType = String
+
+    alias PropertyPredicate = NamedTuple(
+      "Key" : (ValueString)?,
+      "Value" : (ValueString)?,
+      "Comparator" : (Comparator)?
+    )
+
+    alias PublicKeysList = Array(GenericString)
+
+    alias PutDataCatalogEncryptionSettingsRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DataCatalogEncryptionSettings" : DataCatalogEncryptionSettings
+    )
+
+    alias PutDataCatalogEncryptionSettingsResponse = NamedTuple(
+      
+    )
+
+    alias PutResourcePolicyRequest = NamedTuple(
+      "PolicyInJson" : PolicyJsonString,
+      "ResourceArn" : (GlueResourceArn)?,
+      "PolicyHashCondition" : (HashString)?,
+      "PolicyExistsCondition" : (ExistCondition)?,
+      "EnableHybrid" : (EnableHybridValues)?
+    )
+
+    alias PutResourcePolicyResponse = NamedTuple(
+      "PolicyHash" : (HashString)?
+    )
+
+    alias PutSchemaVersionMetadataInput = NamedTuple(
+      "SchemaId" : (SchemaId)?,
+      "SchemaVersionNumber" : (SchemaVersionNumber)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "MetadataKeyValue" : MetadataKeyValuePair
+    )
+
+    alias PutSchemaVersionMetadataResponse = NamedTuple(
+      "SchemaArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "LatestVersion" : (LatestSchemaVersionBoolean)?,
+      "VersionNumber" : (VersionLongNumber)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "MetadataKey" : (MetadataKeyString)?,
+      "MetadataValue" : (MetadataValueString)?
+    )
+
+    alias PutWorkflowRunPropertiesRequest = NamedTuple(
+      "Name" : NameString,
+      "RunId" : IdString,
+      "RunProperties" : WorkflowRunProperties
+    )
+
+    alias PutWorkflowRunPropertiesResponse = NamedTuple(
+      
+    )
+
+    alias PythonScript = String
+
+    alias PythonVersionString = String
+
+    alias QuerySchemaVersionMetadataInput = NamedTuple(
+      "SchemaId" : (SchemaId)?,
+      "SchemaVersionNumber" : (SchemaVersionNumber)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "MetadataList" : (MetadataList)?,
+      "MaxResults" : (QuerySchemaVersionMetadataMaxResults)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias QuerySchemaVersionMetadataMaxResults = Int32
+
+    alias QuerySchemaVersionMetadataResponse = NamedTuple(
+      "MetadataInfoMap" : (MetadataInfoMap)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "NextToken" : (SchemaRegistryTokenString)?
+    )
+
+    alias RecordsCount = Int64
+
+    alias RecrawlBehavior = String
+
+    alias RecrawlPolicy = NamedTuple(
+      "RecrawlBehavior" : (RecrawlBehavior)?
+    )
+
+    alias RegisterSchemaVersionInput = NamedTuple(
+      "SchemaId" : SchemaId,
+      "SchemaDefinition" : SchemaDefinitionString
+    )
+
+    alias RegisterSchemaVersionResponse = NamedTuple(
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "VersionNumber" : (VersionLongNumber)?,
+      "Status" : (SchemaVersionStatus)?
+    )
+
+    alias RegistryId = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?
+    )
+
+    alias RegistryListDefinition = Array(RegistryListItem)
+
+    alias RegistryListItem = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?,
+      "Description" : (DescriptionString)?,
+      "Status" : (RegistryStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?,
+      "UpdatedTime" : (UpdatedTimestamp)?
+    )
+
+    alias RegistryStatus = String
+
+    alias RemoveSchemaVersionMetadataInput = NamedTuple(
+      "SchemaId" : (SchemaId)?,
+      "SchemaVersionNumber" : (SchemaVersionNumber)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "MetadataKeyValue" : MetadataKeyValuePair
+    )
+
+    alias RemoveSchemaVersionMetadataResponse = NamedTuple(
+      "SchemaArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "LatestVersion" : (LatestSchemaVersionBoolean)?,
+      "VersionNumber" : (VersionLongNumber)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "MetadataKey" : (MetadataKeyString)?,
+      "MetadataValue" : (MetadataValueString)?
+    )
+
+    alias ReplaceBoolean = Bool
+
+    alias ResetJobBookmarkRequest = NamedTuple(
+      "JobName" : JobName,
+      "RunId" : (RunId)?
+    )
+
+    alias ResetJobBookmarkResponse = NamedTuple(
+      "JobBookmarkEntry" : (JobBookmarkEntry)?
+    )
+
+    alias ResourceNumberLimitExceededException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ResourceShareType = String
+
+    alias ResourceType = String
+
+    alias ResourceUri = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "Uri" : (URI)?
+    )
+
+    alias ResourceUriList = Array(ResourceUri)
+
+    alias ResumeWorkflowRunRequest = NamedTuple(
+      "Name" : NameString,
+      "RunId" : IdString,
+      "NodeIds" : NodeIdList
+    )
+
+    alias ResumeWorkflowRunResponse = NamedTuple(
+      "RunId" : (IdString)?,
+      "NodeIds" : (NodeIdList)?
+    )
+
+    alias Role = String
+
+    alias RoleArn = String
+
+    alias RoleString = String
+
+    alias RowTag = String
+
+    alias RunId = String
+
+    alias S3Encryption = NamedTuple(
+      "S3EncryptionMode" : (S3EncryptionMode)?,
+      "KmsKeyArn" : (KmsKeyArn)?
+    )
+
+    alias S3EncryptionList = Array(S3Encryption)
+
+    alias S3EncryptionMode = String
+
+    alias S3Target = NamedTuple(
+      "Path" : (Path)?,
+      "Exclusions" : (PathList)?,
+      "ConnectionName" : (ConnectionName)?
+    )
+
+    alias S3TargetList = Array(S3Target)
+
+    alias ScalaCode = String
+
+    alias Schedule = NamedTuple(
+      "ScheduleExpression" : (CronExpression)?,
+      "State" : (ScheduleState)?
+    )
+
+    alias ScheduleState = String
+
+    alias SchedulerNotRunningException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias SchedulerRunningException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias SchedulerTransitioningException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias SchemaChangePolicy = NamedTuple(
+      "UpdateBehavior" : (UpdateBehavior)?,
+      "DeleteBehavior" : (DeleteBehavior)?
+    )
+
+    alias SchemaCheckpointNumber = Int64
+
+    alias SchemaColumn = NamedTuple(
+      "Name" : (ColumnNameString)?,
+      "DataType" : (ColumnTypeString)?
+    )
+
+    alias SchemaDefinitionDiff = String
+
+    alias SchemaDefinitionString = String
+
+    alias SchemaDiffType = String
+
+    alias SchemaId = NamedTuple(
+      "SchemaArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "RegistryName" : (SchemaRegistryNameString)?
+    )
+
+    alias SchemaListDefinition = Array(SchemaListItem)
+
+    alias SchemaListItem = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "SchemaArn" : (GlueResourceArn)?,
+      "Description" : (DescriptionString)?,
+      "SchemaStatus" : (SchemaStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?,
+      "UpdatedTime" : (UpdatedTimestamp)?
+    )
+
+    alias SchemaPathString = String
+
+    alias SchemaReference = NamedTuple(
+      "SchemaId" : (SchemaId)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "SchemaVersionNumber" : (VersionLongNumber)?
+    )
+
+    alias SchemaRegistryNameString = String
+
+    alias SchemaRegistryTokenString = String
+
+    alias SchemaStatus = String
+
+    alias SchemaValidationError = String
+
+    alias SchemaVersionErrorItem = NamedTuple(
+      "VersionNumber" : (VersionLongNumber)?,
+      "ErrorDetails" : (ErrorDetails)?
+    )
+
+    alias SchemaVersionErrorList = Array(SchemaVersionErrorItem)
+
+    alias SchemaVersionIdString = String
+
+    alias SchemaVersionList = Array(SchemaVersionListItem)
+
+    alias SchemaVersionListItem = NamedTuple(
+      "SchemaArn" : (GlueResourceArn)?,
+      "SchemaVersionId" : (SchemaVersionIdString)?,
+      "VersionNumber" : (VersionLongNumber)?,
+      "Status" : (SchemaVersionStatus)?,
+      "CreatedTime" : (CreatedTimestamp)?
+    )
+
+    alias SchemaVersionNumber = NamedTuple(
+      "LatestVersion" : (LatestSchemaVersionBoolean)?,
+      "VersionNumber" : (VersionLongNumber)?
+    )
+
+    alias SchemaVersionStatus = String
+
+    alias ScriptLocationString = String
+
+    alias SearchPropertyPredicates = Array(PropertyPredicate)
+
+    alias SearchTablesRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "NextToken" : (Token)?,
+      "Filters" : (SearchPropertyPredicates)?,
+      "SearchText" : (ValueString)?,
+      "SortCriteria" : (SortCriteria)?,
+      "MaxResults" : (PageSize)?,
+      "ResourceShareType" : (ResourceShareType)?
+    )
+
+    alias SearchTablesResponse = NamedTuple(
+      "NextToken" : (Token)?,
+      "TableList" : (TableList)?
+    )
+
+    alias SecurityConfiguration = NamedTuple(
+      "Name" : (NameString)?,
+      "CreatedTimeStamp" : (TimestampValue)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?
+    )
+
+    alias SecurityConfigurationList = Array(SecurityConfiguration)
+
+    alias SecurityGroupIdList = Array(NameString)
+
+    alias Segment = NamedTuple(
+      "SegmentNumber" : NonNegativeInteger,
+      "TotalSegments" : TotalSegmentsInteger
+    )
+
+    alias SerDeInfo = NamedTuple(
+      "Name" : (NameString)?,
+      "SerializationLibrary" : (NameString)?,
+      "Parameters" : (ParametersMap)?
+    )
+
+    alias SkewedInfo = NamedTuple(
+      "SkewedColumnNames" : (NameStringList)?,
+      "SkewedColumnValues" : (ColumnValueStringList)?,
+      "SkewedColumnValueLocationMaps" : (LocationMap)?
+    )
+
+    alias Sort = String
+
+    alias SortCriteria = Array(SortCriterion)
+
+    alias SortCriterion = NamedTuple(
+      "FieldName" : (ValueString)?,
+      "Sort" : (Sort)?
+    )
+
+    alias SortDirectionType = String
+
+    alias StartCrawlerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias StartCrawlerResponse = NamedTuple(
+      
+    )
+
+    alias StartCrawlerScheduleRequest = NamedTuple(
+      "CrawlerName" : NameString
+    )
+
+    alias StartCrawlerScheduleResponse = NamedTuple(
+      
+    )
+
+    alias StartExportLabelsTaskRunRequest = NamedTuple(
+      "TransformId" : HashString,
+      "OutputS3Path" : UriString
+    )
+
+    alias StartExportLabelsTaskRunResponse = NamedTuple(
+      "TaskRunId" : (HashString)?
+    )
+
+    alias StartImportLabelsTaskRunRequest = NamedTuple(
+      "TransformId" : HashString,
+      "InputS3Path" : UriString,
+      "ReplaceAllLabels" : (ReplaceBoolean)?
+    )
+
+    alias StartImportLabelsTaskRunResponse = NamedTuple(
+      "TaskRunId" : (HashString)?
+    )
+
+    alias StartJobRunRequest = NamedTuple(
+      "JobName" : NameString,
+      "JobRunId" : (IdString)?,
+      "Arguments" : (GenericMap)?,
+      "AllocatedCapacity" : (IntegerValue)?,
+      "Timeout" : (Timeout)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "SecurityConfiguration" : (NameString)?,
+      "NotificationProperty" : (NotificationProperty)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?
+    )
+
+    alias StartJobRunResponse = NamedTuple(
+      "JobRunId" : (IdString)?
+    )
+
+    alias StartMLEvaluationTaskRunRequest = NamedTuple(
+      "TransformId" : HashString
+    )
+
+    alias StartMLEvaluationTaskRunResponse = NamedTuple(
+      "TaskRunId" : (HashString)?
+    )
+
+    alias StartMLLabelingSetGenerationTaskRunRequest = NamedTuple(
+      "TransformId" : HashString,
+      "OutputS3Path" : UriString
+    )
+
+    alias StartMLLabelingSetGenerationTaskRunResponse = NamedTuple(
+      "TaskRunId" : (HashString)?
+    )
+
+    alias StartTriggerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias StartTriggerResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias StartWorkflowRunRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias StartWorkflowRunResponse = NamedTuple(
+      "RunId" : (IdString)?
+    )
+
+    alias StopCrawlerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias StopCrawlerResponse = NamedTuple(
+      
+    )
+
+    alias StopCrawlerScheduleRequest = NamedTuple(
+      "CrawlerName" : NameString
+    )
+
+    alias StopCrawlerScheduleResponse = NamedTuple(
+      
+    )
+
+    alias StopTriggerRequest = NamedTuple(
+      "Name" : NameString
+    )
+
+    alias StopTriggerResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias StopWorkflowRunRequest = NamedTuple(
+      "Name" : NameString,
+      "RunId" : IdString
+    )
+
+    alias StopWorkflowRunResponse = NamedTuple(
+      
+    )
+
+    alias StorageDescriptor = NamedTuple(
+      "Columns" : (ColumnList)?,
+      "Location" : (LocationString)?,
+      "InputFormat" : (FormatString)?,
+      "OutputFormat" : (FormatString)?,
+      "Compressed" : (Boolean)?,
+      "NumberOfBuckets" : (Integer)?,
+      "SerdeInfo" : (SerDeInfo)?,
+      "BucketColumns" : (NameStringList)?,
+      "SortColumns" : (OrderList)?,
+      "Parameters" : (ParametersMap)?,
+      "SkewedInfo" : (SkewedInfo)?,
+      "StoredAsSubDirectories" : (Boolean)?,
+      "SchemaReference" : (SchemaReference)?
+    )
+
+    alias StringColumnStatisticsData = NamedTuple(
+      "MaximumLength" : NonNegativeLong,
+      "AverageLength" : NonNegativeDouble,
+      "NumberOfNulls" : NonNegativeLong,
+      "NumberOfDistinctValues" : NonNegativeLong
+    )
+
+    alias StringList = Array(GenericString)
+
+    alias Table = NamedTuple(
+      "Name" : NameString,
+      "DatabaseName" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Owner" : (NameString)?,
+      "CreateTime" : (Timestamp)?,
+      "UpdateTime" : (Timestamp)?,
+      "LastAccessTime" : (Timestamp)?,
+      "LastAnalyzedTime" : (Timestamp)?,
+      "Retention" : (NonNegativeInteger)?,
+      "StorageDescriptor" : (StorageDescriptor)?,
+      "PartitionKeys" : (ColumnList)?,
+      "ViewOriginalText" : (ViewTextString)?,
+      "ViewExpandedText" : (ViewTextString)?,
+      "TableType" : (TableTypeString)?,
+      "Parameters" : (ParametersMap)?,
+      "CreatedBy" : (NameString)?,
+      "IsRegisteredWithLakeFormation" : (Boolean)?,
+      "TargetTable" : (TableIdentifier)?,
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias TableError = NamedTuple(
+      "TableName" : (NameString)?,
+      "ErrorDetail" : (ErrorDetail)?
+    )
+
+    alias TableErrors = Array(TableError)
+
+    alias TableIdentifier = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : (NameString)?,
+      "Name" : (NameString)?
+    )
+
+    alias TableInput = NamedTuple(
+      "Name" : NameString,
+      "Description" : (DescriptionString)?,
+      "Owner" : (NameString)?,
+      "LastAccessTime" : (Timestamp)?,
+      "LastAnalyzedTime" : (Timestamp)?,
+      "Retention" : (NonNegativeInteger)?,
+      "StorageDescriptor" : (StorageDescriptor)?,
+      "PartitionKeys" : (ColumnList)?,
+      "ViewOriginalText" : (ViewTextString)?,
+      "ViewExpandedText" : (ViewTextString)?,
+      "TableType" : (TableTypeString)?,
+      "Parameters" : (ParametersMap)?,
+      "TargetTable" : (TableIdentifier)?
+    )
+
+    alias TableList = Array(Table)
+
+    alias TableName = String
+
+    alias TablePrefix = String
+
+    alias TableTypeString = String
+
+    alias TableVersion = NamedTuple(
+      "Table" : (Table)?,
+      "VersionId" : (VersionString)?
+    )
+
+    alias TableVersionError = NamedTuple(
+      "TableName" : (NameString)?,
+      "VersionId" : (VersionString)?,
+      "ErrorDetail" : (ErrorDetail)?
+    )
+
+    alias TableVersionErrors = Array(TableVersionError)
+
+    alias TagKey = String
+
+    alias TagKeysList = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : GlueResourceArn,
+      "TagsToAdd" : TagsMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagsMap = Hash(TagKey,TagValue)
+
+    alias TaskRun = NamedTuple(
+      "TransformId" : (HashString)?,
+      "TaskRunId" : (HashString)?,
+      "Status" : (TaskStatusType)?,
+      "LogGroupName" : (GenericString)?,
+      "Properties" : (TaskRunProperties)?,
+      "ErrorString" : (GenericString)?,
+      "StartedOn" : (Timestamp)?,
+      "LastModifiedOn" : (Timestamp)?,
+      "CompletedOn" : (Timestamp)?,
+      "ExecutionTime" : (ExecutionTime)?
+    )
+
+    alias TaskRunFilterCriteria = NamedTuple(
+      "TaskRunType" : (TaskType)?,
+      "Status" : (TaskStatusType)?,
+      "StartedBefore" : (Timestamp)?,
+      "StartedAfter" : (Timestamp)?
+    )
+
+    alias TaskRunList = Array(TaskRun)
+
+    alias TaskRunProperties = NamedTuple(
+      "TaskType" : (TaskType)?,
+      "ImportLabelsTaskRunProperties" : (ImportLabelsTaskRunProperties)?,
+      "ExportLabelsTaskRunProperties" : (ExportLabelsTaskRunProperties)?,
+      "LabelingSetGenerationTaskRunProperties" : (LabelingSetGenerationTaskRunProperties)?,
+      "FindMatchesTaskRunProperties" : (FindMatchesTaskRunProperties)?
+    )
+
+    alias TaskRunSortColumnType = String
+
+    alias TaskRunSortCriteria = NamedTuple(
+      "Column" : TaskRunSortColumnType,
+      "SortDirection" : SortDirectionType
+    )
+
+    alias TaskStatusType = String
+
+    alias TaskType = String
+
+    alias Timeout = Int32
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TimestampValue = String | UInt64 | Time
+
+    alias Token = String
+
+    alias TotalSegmentsInteger = Int32
+
+    alias TransformEncryption = NamedTuple(
+      "MlUserDataEncryption" : (MLUserDataEncryption)?,
+      "TaskRunSecurityConfigurationName" : (NameString)?
+    )
+
+    alias TransformFilterCriteria = NamedTuple(
+      "Name" : (NameString)?,
+      "TransformType" : (TransformType)?,
+      "Status" : (TransformStatusType)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "CreatedBefore" : (Timestamp)?,
+      "CreatedAfter" : (Timestamp)?,
+      "LastModifiedBefore" : (Timestamp)?,
+      "LastModifiedAfter" : (Timestamp)?,
+      "Schema" : (TransformSchema)?
+    )
+
+    alias TransformIdList = Array(HashString)
+
+    alias TransformList = Array(MLTransform)
+
+    alias TransformParameters = NamedTuple(
+      "TransformType" : TransformType,
+      "FindMatchesParameters" : (FindMatchesParameters)?
+    )
+
+    alias TransformSchema = Array(SchemaColumn)
+
+    alias TransformSortColumnType = String
+
+    alias TransformSortCriteria = NamedTuple(
+      "Column" : TransformSortColumnType,
+      "SortDirection" : SortDirectionType
+    )
+
+    alias TransformStatusType = String
+
+    alias TransformType = String
+
+    alias Trigger = NamedTuple(
+      "Name" : (NameString)?,
+      "WorkflowName" : (NameString)?,
+      "Id" : (IdString)?,
+      "Type" : (TriggerType)?,
+      "State" : (TriggerState)?,
+      "Description" : (DescriptionString)?,
+      "Schedule" : (GenericString)?,
+      "Actions" : (ActionList)?,
+      "Predicate" : (Predicate)?
+    )
+
+    alias TriggerList = Array(Trigger)
+
+    alias TriggerNameList = Array(NameString)
+
+    alias TriggerNodeDetails = NamedTuple(
+      "Trigger" : (Trigger)?
+    )
+
+    alias TriggerState = String
+
+    alias TriggerType = String
+
+    alias TriggerUpdate = NamedTuple(
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Schedule" : (GenericString)?,
+      "Actions" : (ActionList)?,
+      "Predicate" : (Predicate)?
+    )
+
+    alias TypeString = String
+
+    alias URI = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : GlueResourceArn,
+      "TagsToRemove" : TagKeysList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateBehavior = String
+
+    alias UpdateClassifierRequest = NamedTuple(
+      "GrokClassifier" : (UpdateGrokClassifierRequest)?,
+      "XMLClassifier" : (UpdateXMLClassifierRequest)?,
+      "JsonClassifier" : (UpdateJsonClassifierRequest)?,
+      "CsvClassifier" : (UpdateCsvClassifierRequest)?
+    )
+
+    alias UpdateClassifierResponse = NamedTuple(
+      
+    )
+
+    alias UpdateColumnStatisticsForPartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionValues" : ValueStringList,
+      "ColumnStatisticsList" : UpdateColumnStatisticsList
+    )
+
+    alias UpdateColumnStatisticsForPartitionResponse = NamedTuple(
+      "Errors" : (ColumnStatisticsErrors)?
+    )
+
+    alias UpdateColumnStatisticsForTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "ColumnStatisticsList" : UpdateColumnStatisticsList
+    )
+
+    alias UpdateColumnStatisticsForTableResponse = NamedTuple(
+      "Errors" : (ColumnStatisticsErrors)?
+    )
+
+    alias UpdateColumnStatisticsList = Array(ColumnStatistics)
+
+    alias UpdateConnectionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Name" : NameString,
+      "ConnectionInput" : ConnectionInput
+    )
+
+    alias UpdateConnectionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCrawlerRequest = NamedTuple(
+      "Name" : NameString,
+      "Role" : (Role)?,
+      "DatabaseName" : (DatabaseName)?,
+      "Description" : (DescriptionStringRemovable)?,
+      "Targets" : (CrawlerTargets)?,
+      "Schedule" : (CronExpression)?,
+      "Classifiers" : (ClassifierNameList)?,
+      "TablePrefix" : (TablePrefix)?,
+      "SchemaChangePolicy" : (SchemaChangePolicy)?,
+      "RecrawlPolicy" : (RecrawlPolicy)?,
+      "LineageConfiguration" : (LineageConfiguration)?,
+      "Configuration" : (CrawlerConfiguration)?,
+      "CrawlerSecurityConfiguration" : (CrawlerSecurityConfiguration)?
+    )
+
+    alias UpdateCrawlerResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCrawlerScheduleRequest = NamedTuple(
+      "CrawlerName" : NameString,
+      "Schedule" : (CronExpression)?
+    )
+
+    alias UpdateCrawlerScheduleResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCsvClassifierRequest = NamedTuple(
+      "Name" : NameString,
+      "Delimiter" : (CsvColumnDelimiter)?,
+      "QuoteSymbol" : (CsvQuoteSymbol)?,
+      "ContainsHeader" : (CsvHeaderOption)?,
+      "Header" : (CsvHeader)?,
+      "DisableValueTrimming" : (NullableBoolean)?,
+      "AllowSingleColumn" : (NullableBoolean)?
+    )
+
+    alias UpdateDatabaseRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "Name" : NameString,
+      "DatabaseInput" : DatabaseInput
+    )
+
+    alias UpdateDatabaseResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDevEndpointRequest = NamedTuple(
+      "EndpointName" : GenericString,
+      "PublicKey" : (GenericString)?,
+      "AddPublicKeys" : (PublicKeysList)?,
+      "DeletePublicKeys" : (PublicKeysList)?,
+      "CustomLibraries" : (DevEndpointCustomLibraries)?,
+      "UpdateEtlLibraries" : (BooleanValue)?,
+      "DeleteArguments" : (StringList)?,
+      "AddArguments" : (MapValue)?
+    )
+
+    alias UpdateDevEndpointResponse = NamedTuple(
+      
+    )
+
+    alias UpdateGrokClassifierRequest = NamedTuple(
+      "Name" : NameString,
+      "Classification" : (Classification)?,
+      "GrokPattern" : (GrokPattern)?,
+      "CustomPatterns" : (CustomPatterns)?
+    )
+
+    alias UpdateJobRequest = NamedTuple(
+      "JobName" : NameString,
+      "JobUpdate" : JobUpdate
+    )
+
+    alias UpdateJobResponse = NamedTuple(
+      "JobName" : (NameString)?
+    )
+
+    alias UpdateJsonClassifierRequest = NamedTuple(
+      "Name" : NameString,
+      "JsonPath" : (JsonPath)?
+    )
+
+    alias UpdateMLTransformRequest = NamedTuple(
+      "TransformId" : HashString,
+      "Name" : (NameString)?,
+      "Description" : (DescriptionString)?,
+      "Parameters" : (TransformParameters)?,
+      "Role" : (RoleString)?,
+      "GlueVersion" : (GlueVersionString)?,
+      "MaxCapacity" : (NullableDouble)?,
+      "WorkerType" : (WorkerType)?,
+      "NumberOfWorkers" : (NullableInteger)?,
+      "Timeout" : (Timeout)?,
+      "MaxRetries" : (NullableInteger)?
+    )
+
+    alias UpdateMLTransformResponse = NamedTuple(
+      "TransformId" : (HashString)?
+    )
+
+    alias UpdatePartitionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableName" : NameString,
+      "PartitionValueList" : BoundedPartitionValueList,
+      "PartitionInput" : PartitionInput
+    )
+
+    alias UpdatePartitionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateRegistryInput = NamedTuple(
+      "RegistryId" : RegistryId,
+      "Description" : DescriptionString
+    )
+
+    alias UpdateRegistryResponse = NamedTuple(
+      "RegistryName" : (SchemaRegistryNameString)?,
+      "RegistryArn" : (GlueResourceArn)?
+    )
+
+    alias UpdateSchemaInput = NamedTuple(
+      "SchemaId" : SchemaId,
+      "SchemaVersionNumber" : (SchemaVersionNumber)?,
+      "Compatibility" : (Compatibility)?,
+      "Description" : (DescriptionString)?
+    )
+
+    alias UpdateSchemaResponse = NamedTuple(
+      "SchemaArn" : (GlueResourceArn)?,
+      "SchemaName" : (SchemaRegistryNameString)?,
+      "RegistryName" : (SchemaRegistryNameString)?
+    )
+
+    alias UpdateTableRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "TableInput" : TableInput,
+      "SkipArchive" : (BooleanNullable)?
+    )
+
+    alias UpdateTableResponse = NamedTuple(
+      
+    )
+
+    alias UpdateTriggerRequest = NamedTuple(
+      "Name" : NameString,
+      "TriggerUpdate" : TriggerUpdate
+    )
+
+    alias UpdateTriggerResponse = NamedTuple(
+      "Trigger" : (Trigger)?
+    )
+
+    alias UpdateUserDefinedFunctionRequest = NamedTuple(
+      "CatalogId" : (CatalogIdString)?,
+      "DatabaseName" : NameString,
+      "FunctionName" : NameString,
+      "FunctionInput" : UserDefinedFunctionInput
+    )
+
+    alias UpdateUserDefinedFunctionResponse = NamedTuple(
+      
+    )
+
+    alias UpdateWorkflowRequest = NamedTuple(
+      "Name" : NameString,
+      "Description" : (GenericString)?,
+      "DefaultRunProperties" : (WorkflowRunProperties)?,
+      "MaxConcurrentRuns" : (NullableInteger)?
+    )
+
+    alias UpdateWorkflowResponse = NamedTuple(
+      "Name" : (NameString)?
+    )
+
+    alias UpdateXMLClassifierRequest = NamedTuple(
+      "Name" : NameString,
+      "Classification" : (Classification)?,
+      "RowTag" : (RowTag)?
+    )
+
+    alias UpdatedTimestamp = String
+
+    alias UriString = String
+
+    alias UserDefinedFunction = NamedTuple(
+      "FunctionName" : (NameString)?,
+      "DatabaseName" : (NameString)?,
+      "ClassName" : (NameString)?,
+      "OwnerName" : (NameString)?,
+      "OwnerType" : (PrincipalType)?,
+      "CreateTime" : (Timestamp)?,
+      "ResourceUris" : (ResourceUriList)?,
+      "CatalogId" : (CatalogIdString)?
+    )
+
+    alias UserDefinedFunctionInput = NamedTuple(
+      "FunctionName" : (NameString)?,
+      "ClassName" : (NameString)?,
+      "OwnerName" : (NameString)?,
+      "OwnerType" : (PrincipalType)?,
+      "ResourceUris" : (ResourceUriList)?
+    )
+
+    alias UserDefinedFunctionList = Array(UserDefinedFunction)
+
+    alias ValidationException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias ValueString = String
+
+    alias ValueStringList = Array(ValueString)
+
+    alias VersionId = Int64
+
+    alias VersionLongNumber = Int64
+
+    alias VersionMismatchException = NamedTuple(
+      "Message" : (MessageString)?
+    )
+
+    alias VersionString = String
+
+    alias VersionsString = String
+
+    alias ViewTextString = String
+
+    alias WorkerType = String
+
+    alias Workflow = NamedTuple(
+      "Name" : (NameString)?,
+      "Description" : (GenericString)?,
+      "DefaultRunProperties" : (WorkflowRunProperties)?,
+      "CreatedOn" : (TimestampValue)?,
+      "LastModifiedOn" : (TimestampValue)?,
+      "LastRun" : (WorkflowRun)?,
+      "Graph" : (WorkflowGraph)?,
+      "MaxConcurrentRuns" : (NullableInteger)?
+    )
+
+    alias WorkflowGraph = NamedTuple(
+      "Nodes" : (NodeList)?,
+      "Edges" : (EdgeList)?
+    )
+
+    alias WorkflowNames = Array(NameString)
+
+    alias WorkflowRun = NamedTuple(
+      "Name" : (NameString)?,
+      "WorkflowRunId" : (IdString)?,
+      "PreviousRunId" : (IdString)?,
+      "WorkflowRunProperties" : (WorkflowRunProperties)?,
+      "StartedOn" : (TimestampValue)?,
+      "CompletedOn" : (TimestampValue)?,
+      "Status" : (WorkflowRunStatus)?,
+      "ErrorMessage" : (ErrorString)?,
+      "Statistics" : (WorkflowRunStatistics)?,
+      "Graph" : (WorkflowGraph)?
+    )
+
+    alias WorkflowRunProperties = Hash(IdString,GenericString)
+
+    alias WorkflowRunStatistics = NamedTuple(
+      "TotalActions" : (IntegerValue)?,
+      "TimeoutActions" : (IntegerValue)?,
+      "FailedActions" : (IntegerValue)?,
+      "StoppedActions" : (IntegerValue)?,
+      "SucceededActions" : (IntegerValue)?,
+      "RunningActions" : (IntegerValue)?
+    )
+
+    alias WorkflowRunStatus = String
+
+    alias WorkflowRuns = Array(WorkflowRun)
+
+    alias Workflows = Array(Workflow)
+
+    alias XMLClassifier = NamedTuple(
+      "Name" : NameString,
+      "Classification" : Classification,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdated" : (Timestamp)?,
+      "Version" : (VersionId)?,
+      "RowTag" : (RowTag)?
+    )
   end
 end

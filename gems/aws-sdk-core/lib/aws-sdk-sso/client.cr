@@ -369,8 +369,8 @@ module Aws::SSO
     #
     # @overload get_role_credentials(**params)
     # @param [Hash] params ({})
-    def get_role_credentials(params = {}, **options)
-      req = build_request(:get_role_credentials, params)
+    def get_role_credentials(, **options)
+      req = build_request(:get_role_credentials, )
       req.send_request(options)
     end
 
@@ -421,8 +421,8 @@ module Aws::SSO
     #
     # @overload list_account_roles(**params)
     # @param [Hash] params ({})
-    def list_account_roles(params = {}, **options)
-      req = build_request(:list_account_roles, params)
+    def list_account_roles(, **options)
+      req = build_request(:list_account_roles, )
       req.send_request(options)
     end
 
@@ -477,8 +477,8 @@ module Aws::SSO
     #
     # @overload list_accounts(**params)
     # @param [Hash] params ({})
-    def list_accounts(params = {}, **options)
-      req = build_request(:list_accounts, params)
+    def list_accounts(, **options)
+      req = build_request(:list_accounts, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::SSO
     #
     # @overload logout(**params)
     # @param [Hash] params ({})
-    def logout(params = {}, **options)
-      req = build_request(:logout, params)
+    def logout(, **options)
+      req = build_request(:logout, )
       req.send_request(options)
     end
 

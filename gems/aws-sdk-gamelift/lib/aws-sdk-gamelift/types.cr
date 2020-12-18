@@ -9832,5 +9832,1774 @@ module Aws::GameLift
       include Aws::Structure
     end
 
+    alias AcceptMatchInput = NamedTuple(
+      "TicketId" : MatchmakingIdStringModel,
+      "PlayerIds" : StringList,
+      "AcceptanceType" : AcceptanceType
+    )
+
+    alias AcceptMatchOutput = NamedTuple(
+      
+    )
+
+    alias AcceptanceType = String
+
+    alias Alias = NamedTuple(
+      "AliasId" : (AliasId)?,
+      "Name" : (NonBlankAndLengthConstraintString)?,
+      "AliasArn" : (AliasArn)?,
+      "Description" : (FreeText)?,
+      "RoutingStrategy" : (RoutingStrategy)?,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias AliasArn = String
+
+    alias AliasId = String
+
+    alias AliasIdOrArn = String
+
+    alias AliasList = Array(Alias)
+
+    alias AmazonResourceName = String
+
+    alias ArnStringModel = String
+
+    alias AttributeValue = NamedTuple(
+      "S" : (NonZeroAndMaxString)?,
+      "N" : (DoubleObject)?,
+      "SL" : (StringList)?,
+      "SDM" : (StringDoubleMap)?
+    )
+
+    alias AutoScalingGroupArn = String
+
+    alias AwsCredentials = NamedTuple(
+      "AccessKeyId" : (NonEmptyString)?,
+      "SecretAccessKey" : (NonEmptyString)?,
+      "SessionToken" : (NonEmptyString)?
+    )
+
+    alias BackfillMode = String
+
+    alias BalancingStrategy = String
+
+    alias BooleanModel = Bool
+
+    alias Build = NamedTuple(
+      "BuildId" : (BuildId)?,
+      "BuildArn" : (BuildArn)?,
+      "Name" : (FreeText)?,
+      "Version" : (FreeText)?,
+      "Status" : (BuildStatus)?,
+      "SizeOnDisk" : (PositiveLong)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias BuildArn = String
+
+    alias BuildId = String
+
+    alias BuildIdOrArn = String
+
+    alias BuildList = Array(Build)
+
+    alias BuildStatus = String
+
+    alias CertificateConfiguration = NamedTuple(
+      "CertificateType" : CertificateType
+    )
+
+    alias CertificateType = String
+
+    alias ClaimGameServerInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "GameServerId" : (GameServerId)?,
+      "GameServerData" : (GameServerData)?
+    )
+
+    alias ClaimGameServerOutput = NamedTuple(
+      "GameServer" : (GameServer)?
+    )
+
+    alias ComparisonOperatorType = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias CreateAliasInput = NamedTuple(
+      "Name" : NonBlankAndLengthConstraintString,
+      "Description" : (NonZeroAndMaxString)?,
+      "RoutingStrategy" : RoutingStrategy,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateAliasOutput = NamedTuple(
+      "Alias" : (Alias)?
+    )
+
+    alias CreateBuildInput = NamedTuple(
+      "Name" : (NonZeroAndMaxString)?,
+      "Version" : (NonZeroAndMaxString)?,
+      "StorageLocation" : (S3Location)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateBuildOutput = NamedTuple(
+      "Build" : (Build)?,
+      "UploadCredentials" : (AwsCredentials)?,
+      "StorageLocation" : (S3Location)?
+    )
+
+    alias CreateFleetInput = NamedTuple(
+      "Name" : NonZeroAndMaxString,
+      "Description" : (NonZeroAndMaxString)?,
+      "BuildId" : (BuildIdOrArn)?,
+      "ScriptId" : (ScriptIdOrArn)?,
+      "ServerLaunchPath" : (NonZeroAndMaxString)?,
+      "ServerLaunchParameters" : (NonZeroAndMaxString)?,
+      "LogPaths" : (StringList)?,
+      "EC2InstanceType" : EC2InstanceType,
+      "EC2InboundPermissions" : (IpPermissionsList)?,
+      "NewGameSessionProtectionPolicy" : (ProtectionPolicy)?,
+      "RuntimeConfiguration" : (RuntimeConfiguration)?,
+      "ResourceCreationLimitPolicy" : (ResourceCreationLimitPolicy)?,
+      "MetricGroups" : (MetricGroupList)?,
+      "PeerVpcAwsAccountId" : (NonZeroAndMaxString)?,
+      "PeerVpcId" : (NonZeroAndMaxString)?,
+      "FleetType" : (FleetType)?,
+      "InstanceRoleArn" : (NonEmptyString)?,
+      "CertificateConfiguration" : (CertificateConfiguration)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateFleetOutput = NamedTuple(
+      "FleetAttributes" : (FleetAttributes)?
+    )
+
+    alias CreateGameServerGroupInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupName,
+      "RoleArn" : IamRoleArn,
+      "MinSize" : WholeNumber,
+      "MaxSize" : PositiveInteger,
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "InstanceDefinitions" : InstanceDefinitions,
+      "AutoScalingPolicy" : (GameServerGroupAutoScalingPolicy)?,
+      "BalancingStrategy" : (BalancingStrategy)?,
+      "GameServerProtectionPolicy" : (GameServerProtectionPolicy)?,
+      "VpcSubnets" : (VpcSubnets)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateGameServerGroupOutput = NamedTuple(
+      "GameServerGroup" : (GameServerGroup)?
+    )
+
+    alias CreateGameSessionInput = NamedTuple(
+      "FleetId" : (FleetIdOrArn)?,
+      "AliasId" : (AliasIdOrArn)?,
+      "MaximumPlayerSessionCount" : WholeNumber,
+      "Name" : (NonZeroAndMaxString)?,
+      "GameProperties" : (GamePropertyList)?,
+      "CreatorId" : (NonZeroAndMaxString)?,
+      "GameSessionId" : (IdStringModel)?,
+      "IdempotencyToken" : (IdStringModel)?,
+      "GameSessionData" : (GameSessionData)?
+    )
+
+    alias CreateGameSessionOutput = NamedTuple(
+      "GameSession" : (GameSession)?
+    )
+
+    alias CreateGameSessionQueueInput = NamedTuple(
+      "Name" : GameSessionQueueName,
+      "TimeoutInSeconds" : (WholeNumber)?,
+      "PlayerLatencyPolicies" : (PlayerLatencyPolicyList)?,
+      "Destinations" : (GameSessionQueueDestinationList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateGameSessionQueueOutput = NamedTuple(
+      "GameSessionQueue" : (GameSessionQueue)?
+    )
+
+    alias CreateMatchmakingConfigurationInput = NamedTuple(
+      "Name" : MatchmakingIdStringModel,
+      "Description" : (NonZeroAndMaxString)?,
+      "GameSessionQueueArns" : (QueueArnsList)?,
+      "RequestTimeoutSeconds" : MatchmakingRequestTimeoutInteger,
+      "AcceptanceTimeoutSeconds" : (MatchmakingAcceptanceTimeoutInteger)?,
+      "AcceptanceRequired" : BooleanModel,
+      "RuleSetName" : MatchmakingRuleSetName,
+      "NotificationTarget" : (SnsArnStringModel)?,
+      "AdditionalPlayerCount" : (WholeNumber)?,
+      "CustomEventData" : (CustomEventData)?,
+      "GameProperties" : (GamePropertyList)?,
+      "GameSessionData" : (GameSessionData)?,
+      "BackfillMode" : (BackfillMode)?,
+      "FlexMatchMode" : (FlexMatchMode)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateMatchmakingConfigurationOutput = NamedTuple(
+      "Configuration" : (MatchmakingConfiguration)?
+    )
+
+    alias CreateMatchmakingRuleSetInput = NamedTuple(
+      "Name" : MatchmakingIdStringModel,
+      "RuleSetBody" : RuleSetBody,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateMatchmakingRuleSetOutput = NamedTuple(
+      "RuleSet" : MatchmakingRuleSet
+    )
+
+    alias CreatePlayerSessionInput = NamedTuple(
+      "GameSessionId" : ArnStringModel,
+      "PlayerId" : NonZeroAndMaxString,
+      "PlayerData" : (PlayerData)?
+    )
+
+    alias CreatePlayerSessionOutput = NamedTuple(
+      "PlayerSession" : (PlayerSession)?
+    )
+
+    alias CreatePlayerSessionsInput = NamedTuple(
+      "GameSessionId" : ArnStringModel,
+      "PlayerIds" : PlayerIdList,
+      "PlayerDataMap" : (PlayerDataMap)?
+    )
+
+    alias CreatePlayerSessionsOutput = NamedTuple(
+      "PlayerSessions" : (PlayerSessionList)?
+    )
+
+    alias CreateScriptInput = NamedTuple(
+      "Name" : (NonZeroAndMaxString)?,
+      "Version" : (NonZeroAndMaxString)?,
+      "StorageLocation" : (S3Location)?,
+      "ZipFile" : (ZipBlob)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateScriptOutput = NamedTuple(
+      "Script" : (Script)?
+    )
+
+    alias CreateVpcPeeringAuthorizationInput = NamedTuple(
+      "GameLiftAwsAccountId" : NonZeroAndMaxString,
+      "PeerVpcId" : NonZeroAndMaxString
+    )
+
+    alias CreateVpcPeeringAuthorizationOutput = NamedTuple(
+      "VpcPeeringAuthorization" : (VpcPeeringAuthorization)?
+    )
+
+    alias CreateVpcPeeringConnectionInput = NamedTuple(
+      "FleetId" : FleetId,
+      "PeerVpcAwsAccountId" : NonZeroAndMaxString,
+      "PeerVpcId" : NonZeroAndMaxString
+    )
+
+    alias CreateVpcPeeringConnectionOutput = NamedTuple(
+      
+    )
+
+    alias CustomEventData = String
+
+    alias DeleteAliasInput = NamedTuple(
+      "AliasId" : AliasIdOrArn
+    )
+
+    alias DeleteBuildInput = NamedTuple(
+      "BuildId" : BuildIdOrArn
+    )
+
+    alias DeleteFleetInput = NamedTuple(
+      "FleetId" : FleetIdOrArn
+    )
+
+    alias DeleteGameServerGroupInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "DeleteOption" : (GameServerGroupDeleteOption)?
+    )
+
+    alias DeleteGameServerGroupOutput = NamedTuple(
+      "GameServerGroup" : (GameServerGroup)?
+    )
+
+    alias DeleteGameSessionQueueInput = NamedTuple(
+      "Name" : GameSessionQueueNameOrArn
+    )
+
+    alias DeleteGameSessionQueueOutput = NamedTuple(
+      
+    )
+
+    alias DeleteMatchmakingConfigurationInput = NamedTuple(
+      "Name" : MatchmakingConfigurationName
+    )
+
+    alias DeleteMatchmakingConfigurationOutput = NamedTuple(
+      
+    )
+
+    alias DeleteMatchmakingRuleSetInput = NamedTuple(
+      "Name" : MatchmakingRuleSetName
+    )
+
+    alias DeleteMatchmakingRuleSetOutput = NamedTuple(
+      
+    )
+
+    alias DeleteScalingPolicyInput = NamedTuple(
+      "Name" : NonZeroAndMaxString,
+      "FleetId" : FleetIdOrArn
+    )
+
+    alias DeleteScriptInput = NamedTuple(
+      "ScriptId" : ScriptIdOrArn
+    )
+
+    alias DeleteVpcPeeringAuthorizationInput = NamedTuple(
+      "GameLiftAwsAccountId" : NonZeroAndMaxString,
+      "PeerVpcId" : NonZeroAndMaxString
+    )
+
+    alias DeleteVpcPeeringAuthorizationOutput = NamedTuple(
+      
+    )
+
+    alias DeleteVpcPeeringConnectionInput = NamedTuple(
+      "FleetId" : FleetId,
+      "VpcPeeringConnectionId" : NonZeroAndMaxString
+    )
+
+    alias DeleteVpcPeeringConnectionOutput = NamedTuple(
+      
+    )
+
+    alias DeregisterGameServerInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "GameServerId" : GameServerId
+    )
+
+    alias DescribeAliasInput = NamedTuple(
+      "AliasId" : AliasIdOrArn
+    )
+
+    alias DescribeAliasOutput = NamedTuple(
+      "Alias" : (Alias)?
+    )
+
+    alias DescribeBuildInput = NamedTuple(
+      "BuildId" : BuildIdOrArn
+    )
+
+    alias DescribeBuildOutput = NamedTuple(
+      "Build" : (Build)?
+    )
+
+    alias DescribeEC2InstanceLimitsInput = NamedTuple(
+      "EC2InstanceType" : (EC2InstanceType)?
+    )
+
+    alias DescribeEC2InstanceLimitsOutput = NamedTuple(
+      "EC2InstanceLimits" : (EC2InstanceLimitList)?
+    )
+
+    alias DescribeFleetAttributesInput = NamedTuple(
+      "FleetIds" : (FleetIdOrArnList)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetAttributesOutput = NamedTuple(
+      "FleetAttributes" : (FleetAttributesList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetCapacityInput = NamedTuple(
+      "FleetIds" : (FleetIdOrArnList)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetCapacityOutput = NamedTuple(
+      "FleetCapacity" : (FleetCapacityList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetEventsInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetEventsOutput = NamedTuple(
+      "Events" : (EventList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetPortSettingsInput = NamedTuple(
+      "FleetId" : FleetIdOrArn
+    )
+
+    alias DescribeFleetPortSettingsOutput = NamedTuple(
+      "InboundPermissions" : (IpPermissionsList)?
+    )
+
+    alias DescribeFleetUtilizationInput = NamedTuple(
+      "FleetIds" : (FleetIdOrArnList)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeFleetUtilizationOutput = NamedTuple(
+      "FleetUtilization" : (FleetUtilizationList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameServerGroupInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn
+    )
+
+    alias DescribeGameServerGroupOutput = NamedTuple(
+      "GameServerGroup" : (GameServerGroup)?
+    )
+
+    alias DescribeGameServerInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "GameServerId" : GameServerId
+    )
+
+    alias DescribeGameServerInstancesInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "InstanceIds" : (GameServerInstanceIds)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameServerInstancesOutput = NamedTuple(
+      "GameServerInstances" : (GameServerInstances)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameServerOutput = NamedTuple(
+      "GameServer" : (GameServer)?
+    )
+
+    alias DescribeGameSessionDetailsInput = NamedTuple(
+      "FleetId" : (FleetIdOrArn)?,
+      "GameSessionId" : (ArnStringModel)?,
+      "AliasId" : (AliasIdOrArn)?,
+      "StatusFilter" : (NonZeroAndMaxString)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameSessionDetailsOutput = NamedTuple(
+      "GameSessionDetails" : (GameSessionDetailList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameSessionPlacementInput = NamedTuple(
+      "PlacementId" : IdStringModel
+    )
+
+    alias DescribeGameSessionPlacementOutput = NamedTuple(
+      "GameSessionPlacement" : (GameSessionPlacement)?
+    )
+
+    alias DescribeGameSessionQueuesInput = NamedTuple(
+      "Names" : (GameSessionQueueNameOrArnList)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameSessionQueuesOutput = NamedTuple(
+      "GameSessionQueues" : (GameSessionQueueList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameSessionsInput = NamedTuple(
+      "FleetId" : (FleetIdOrArn)?,
+      "GameSessionId" : (ArnStringModel)?,
+      "AliasId" : (AliasIdOrArn)?,
+      "StatusFilter" : (NonZeroAndMaxString)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeGameSessionsOutput = NamedTuple(
+      "GameSessions" : (GameSessionList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeInstancesInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "InstanceId" : (InstanceId)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeInstancesOutput = NamedTuple(
+      "Instances" : (InstanceList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeMatchmakingConfigurationsInput = NamedTuple(
+      "Names" : (MatchmakingConfigurationNameList)?,
+      "RuleSetName" : (MatchmakingRuleSetName)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeMatchmakingConfigurationsOutput = NamedTuple(
+      "Configurations" : (MatchmakingConfigurationList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeMatchmakingInput = NamedTuple(
+      "TicketIds" : MatchmakingIdList
+    )
+
+    alias DescribeMatchmakingOutput = NamedTuple(
+      "TicketList" : (MatchmakingTicketList)?
+    )
+
+    alias DescribeMatchmakingRuleSetsInput = NamedTuple(
+      "Names" : (MatchmakingRuleSetNameList)?,
+      "Limit" : (RuleSetLimit)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeMatchmakingRuleSetsOutput = NamedTuple(
+      "RuleSets" : MatchmakingRuleSetList,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribePlayerSessionsInput = NamedTuple(
+      "GameSessionId" : (ArnStringModel)?,
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "PlayerSessionId" : (PlayerSessionId)?,
+      "PlayerSessionStatusFilter" : (NonZeroAndMaxString)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribePlayerSessionsOutput = NamedTuple(
+      "PlayerSessions" : (PlayerSessionList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeRuntimeConfigurationInput = NamedTuple(
+      "FleetId" : FleetIdOrArn
+    )
+
+    alias DescribeRuntimeConfigurationOutput = NamedTuple(
+      "RuntimeConfiguration" : (RuntimeConfiguration)?
+    )
+
+    alias DescribeScalingPoliciesInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "StatusFilter" : (ScalingStatusType)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeScalingPoliciesOutput = NamedTuple(
+      "ScalingPolicies" : (ScalingPolicyList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias DescribeScriptInput = NamedTuple(
+      "ScriptId" : ScriptIdOrArn
+    )
+
+    alias DescribeScriptOutput = NamedTuple(
+      "Script" : (Script)?
+    )
+
+    alias DescribeVpcPeeringAuthorizationsInput = NamedTuple(
+      
+    )
+
+    alias DescribeVpcPeeringAuthorizationsOutput = NamedTuple(
+      "VpcPeeringAuthorizations" : (VpcPeeringAuthorizationList)?
+    )
+
+    alias DescribeVpcPeeringConnectionsInput = NamedTuple(
+      "FleetId" : (FleetId)?
+    )
+
+    alias DescribeVpcPeeringConnectionsOutput = NamedTuple(
+      "VpcPeeringConnections" : (VpcPeeringConnectionList)?
+    )
+
+    alias DesiredPlayerSession = NamedTuple(
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "PlayerData" : (PlayerData)?
+    )
+
+    alias DesiredPlayerSessionList = Array(DesiredPlayerSession)
+
+    alias DnsName = String
+
+    alias Double = Float64
+
+    alias DoubleObject = Float64
+
+    alias EC2InstanceCounts = NamedTuple(
+      "DESIRED" : (WholeNumber)?,
+      "MINIMUM" : (WholeNumber)?,
+      "MAXIMUM" : (WholeNumber)?,
+      "PENDING" : (WholeNumber)?,
+      "ACTIVE" : (WholeNumber)?,
+      "IDLE" : (WholeNumber)?,
+      "TERMINATING" : (WholeNumber)?
+    )
+
+    alias EC2InstanceLimit = NamedTuple(
+      "EC2InstanceType" : (EC2InstanceType)?,
+      "CurrentInstances" : (WholeNumber)?,
+      "InstanceLimit" : (WholeNumber)?
+    )
+
+    alias EC2InstanceLimitList = Array(EC2InstanceLimit)
+
+    alias EC2InstanceType = String
+
+    alias Event = NamedTuple(
+      "EventId" : (NonZeroAndMaxString)?,
+      "ResourceId" : (NonZeroAndMaxString)?,
+      "EventCode" : (EventCode)?,
+      "Message" : (NonEmptyString)?,
+      "EventTime" : (Timestamp)?,
+      "PreSignedLogUrl" : (NonZeroAndMaxString)?
+    )
+
+    alias EventCode = String
+
+    alias EventList = Array(Event)
+
+    alias FleetAction = String
+
+    alias FleetActionList = Array(FleetAction)
+
+    alias FleetArn = String
+
+    alias FleetAttributes = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "FleetArn" : (FleetArn)?,
+      "FleetType" : (FleetType)?,
+      "InstanceType" : (EC2InstanceType)?,
+      "Description" : (NonZeroAndMaxString)?,
+      "Name" : (NonZeroAndMaxString)?,
+      "CreationTime" : (Timestamp)?,
+      "TerminationTime" : (Timestamp)?,
+      "Status" : (FleetStatus)?,
+      "BuildId" : (BuildId)?,
+      "BuildArn" : (BuildArn)?,
+      "ScriptId" : (ScriptId)?,
+      "ScriptArn" : (ScriptArn)?,
+      "ServerLaunchPath" : (NonZeroAndMaxString)?,
+      "ServerLaunchParameters" : (NonZeroAndMaxString)?,
+      "LogPaths" : (StringList)?,
+      "NewGameSessionProtectionPolicy" : (ProtectionPolicy)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "ResourceCreationLimitPolicy" : (ResourceCreationLimitPolicy)?,
+      "MetricGroups" : (MetricGroupList)?,
+      "StoppedActions" : (FleetActionList)?,
+      "InstanceRoleArn" : (NonEmptyString)?,
+      "CertificateConfiguration" : (CertificateConfiguration)?
+    )
+
+    alias FleetAttributesList = Array(FleetAttributes)
+
+    alias FleetCapacity = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "InstanceType" : (EC2InstanceType)?,
+      "InstanceCounts" : (EC2InstanceCounts)?
+    )
+
+    alias FleetCapacityExceededException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias FleetCapacityList = Array(FleetCapacity)
+
+    alias FleetId = String
+
+    alias FleetIdList = Array(FleetId)
+
+    alias FleetIdOrArn = String
+
+    alias FleetIdOrArnList = Array(FleetIdOrArn)
+
+    alias FleetStatus = String
+
+    alias FleetType = String
+
+    alias FleetUtilization = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "ActiveServerProcessCount" : (WholeNumber)?,
+      "ActiveGameSessionCount" : (WholeNumber)?,
+      "CurrentPlayerSessionCount" : (WholeNumber)?,
+      "MaximumPlayerSessionCount" : (WholeNumber)?
+    )
+
+    alias FleetUtilizationList = Array(FleetUtilization)
+
+    alias FlexMatchMode = String
+
+    alias Float = Float32
+
+    alias FreeText = String
+
+    alias GameProperty = NamedTuple(
+      "Key" : GamePropertyKey,
+      "Value" : GamePropertyValue
+    )
+
+    alias GamePropertyKey = String
+
+    alias GamePropertyList = Array(GameProperty)
+
+    alias GamePropertyValue = String
+
+    alias GameServer = NamedTuple(
+      "GameServerGroupName" : (GameServerGroupName)?,
+      "GameServerGroupArn" : (GameServerGroupArn)?,
+      "GameServerId" : (GameServerId)?,
+      "InstanceId" : (GameServerInstanceId)?,
+      "ConnectionInfo" : (GameServerConnectionInfo)?,
+      "GameServerData" : (GameServerData)?,
+      "ClaimStatus" : (GameServerClaimStatus)?,
+      "UtilizationStatus" : (GameServerUtilizationStatus)?,
+      "RegistrationTime" : (Timestamp)?,
+      "LastClaimTime" : (Timestamp)?,
+      "LastHealthCheckTime" : (Timestamp)?
+    )
+
+    alias GameServerClaimStatus = String
+
+    alias GameServerConnectionInfo = String
+
+    alias GameServerData = String
+
+    alias GameServerGroup = NamedTuple(
+      "GameServerGroupName" : (GameServerGroupName)?,
+      "GameServerGroupArn" : (GameServerGroupArn)?,
+      "RoleArn" : (IamRoleArn)?,
+      "InstanceDefinitions" : (InstanceDefinitions)?,
+      "BalancingStrategy" : (BalancingStrategy)?,
+      "GameServerProtectionPolicy" : (GameServerProtectionPolicy)?,
+      "AutoScalingGroupArn" : (AutoScalingGroupArn)?,
+      "Status" : (GameServerGroupStatus)?,
+      "StatusReason" : (NonZeroAndMaxString)?,
+      "SuspendedActions" : (GameServerGroupActions)?,
+      "CreationTime" : (Timestamp)?,
+      "LastUpdatedTime" : (Timestamp)?
+    )
+
+    alias GameServerGroupAction = String
+
+    alias GameServerGroupActions = Array(GameServerGroupAction)
+
+    alias GameServerGroupArn = String
+
+    alias GameServerGroupAutoScalingPolicy = NamedTuple(
+      "EstimatedInstanceWarmup" : (PositiveInteger)?,
+      "TargetTrackingConfiguration" : TargetTrackingConfiguration
+    )
+
+    alias GameServerGroupDeleteOption = String
+
+    alias GameServerGroupInstanceType = String
+
+    alias GameServerGroupName = String
+
+    alias GameServerGroupNameOrArn = String
+
+    alias GameServerGroupStatus = String
+
+    alias GameServerGroups = Array(GameServerGroup)
+
+    alias GameServerHealthCheck = String
+
+    alias GameServerId = String
+
+    alias GameServerInstance = NamedTuple(
+      "GameServerGroupName" : (GameServerGroupName)?,
+      "GameServerGroupArn" : (GameServerGroupArn)?,
+      "InstanceId" : (GameServerInstanceId)?,
+      "InstanceStatus" : (GameServerInstanceStatus)?
+    )
+
+    alias GameServerInstanceId = String
+
+    alias GameServerInstanceIds = Array(GameServerInstanceId)
+
+    alias GameServerInstanceStatus = String
+
+    alias GameServerInstances = Array(GameServerInstance)
+
+    alias GameServerProtectionPolicy = String
+
+    alias GameServerUtilizationStatus = String
+
+    alias GameServers = Array(GameServer)
+
+    alias GameSession = NamedTuple(
+      "GameSessionId" : (NonZeroAndMaxString)?,
+      "Name" : (NonZeroAndMaxString)?,
+      "FleetId" : (FleetId)?,
+      "FleetArn" : (FleetArn)?,
+      "CreationTime" : (Timestamp)?,
+      "TerminationTime" : (Timestamp)?,
+      "CurrentPlayerSessionCount" : (WholeNumber)?,
+      "MaximumPlayerSessionCount" : (WholeNumber)?,
+      "Status" : (GameSessionStatus)?,
+      "StatusReason" : (GameSessionStatusReason)?,
+      "GameProperties" : (GamePropertyList)?,
+      "IpAddress" : (IpAddress)?,
+      "DnsName" : (DnsName)?,
+      "Port" : (PortNumber)?,
+      "PlayerSessionCreationPolicy" : (PlayerSessionCreationPolicy)?,
+      "CreatorId" : (NonZeroAndMaxString)?,
+      "GameSessionData" : (GameSessionData)?,
+      "MatchmakerData" : (MatchmakerData)?
+    )
+
+    alias GameSessionActivationTimeoutSeconds = Int32
+
+    alias GameSessionConnectionInfo = NamedTuple(
+      "GameSessionArn" : (ArnStringModel)?,
+      "IpAddress" : (StringModel)?,
+      "DnsName" : (DnsName)?,
+      "Port" : (PositiveInteger)?,
+      "MatchedPlayerSessions" : (MatchedPlayerSessionList)?
+    )
+
+    alias GameSessionData = String
+
+    alias GameSessionDetail = NamedTuple(
+      "GameSession" : (GameSession)?,
+      "ProtectionPolicy" : (ProtectionPolicy)?
+    )
+
+    alias GameSessionDetailList = Array(GameSessionDetail)
+
+    alias GameSessionFullException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias GameSessionList = Array(GameSession)
+
+    alias GameSessionPlacement = NamedTuple(
+      "PlacementId" : (IdStringModel)?,
+      "GameSessionQueueName" : (GameSessionQueueName)?,
+      "Status" : (GameSessionPlacementState)?,
+      "GameProperties" : (GamePropertyList)?,
+      "MaximumPlayerSessionCount" : (WholeNumber)?,
+      "GameSessionName" : (NonZeroAndMaxString)?,
+      "GameSessionId" : (NonZeroAndMaxString)?,
+      "GameSessionArn" : (NonZeroAndMaxString)?,
+      "GameSessionRegion" : (NonZeroAndMaxString)?,
+      "PlayerLatencies" : (PlayerLatencyList)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "IpAddress" : (IpAddress)?,
+      "DnsName" : (DnsName)?,
+      "Port" : (PortNumber)?,
+      "PlacedPlayerSessions" : (PlacedPlayerSessionList)?,
+      "GameSessionData" : (GameSessionData)?,
+      "MatchmakerData" : (MatchmakerData)?
+    )
+
+    alias GameSessionPlacementState = String
+
+    alias GameSessionQueue = NamedTuple(
+      "Name" : (GameSessionQueueName)?,
+      "GameSessionQueueArn" : (GameSessionQueueArn)?,
+      "TimeoutInSeconds" : (WholeNumber)?,
+      "PlayerLatencyPolicies" : (PlayerLatencyPolicyList)?,
+      "Destinations" : (GameSessionQueueDestinationList)?
+    )
+
+    alias GameSessionQueueArn = String
+
+    alias GameSessionQueueDestination = NamedTuple(
+      "DestinationArn" : (ArnStringModel)?
+    )
+
+    alias GameSessionQueueDestinationList = Array(GameSessionQueueDestination)
+
+    alias GameSessionQueueList = Array(GameSessionQueue)
+
+    alias GameSessionQueueName = String
+
+    alias GameSessionQueueNameOrArn = String
+
+    alias GameSessionQueueNameOrArnList = Array(GameSessionQueueNameOrArn)
+
+    alias GameSessionStatus = String
+
+    alias GameSessionStatusReason = String
+
+    alias GetGameSessionLogUrlInput = NamedTuple(
+      "GameSessionId" : ArnStringModel
+    )
+
+    alias GetGameSessionLogUrlOutput = NamedTuple(
+      "PreSignedUrl" : (NonZeroAndMaxString)?
+    )
+
+    alias GetInstanceAccessInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "InstanceId" : InstanceId
+    )
+
+    alias GetInstanceAccessOutput = NamedTuple(
+      "InstanceAccess" : (InstanceAccess)?
+    )
+
+    alias IamRoleArn = String
+
+    alias IdStringModel = String
+
+    alias IdempotentParameterMismatchException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias Instance = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "InstanceId" : (InstanceId)?,
+      "IpAddress" : (IpAddress)?,
+      "DnsName" : (DnsName)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "Type" : (EC2InstanceType)?,
+      "Status" : (InstanceStatus)?,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias InstanceAccess = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "InstanceId" : (InstanceId)?,
+      "IpAddress" : (IpAddress)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "Credentials" : (InstanceCredentials)?
+    )
+
+    alias InstanceCredentials = NamedTuple(
+      "UserName" : (NonEmptyString)?,
+      "Secret" : (NonEmptyString)?
+    )
+
+    alias InstanceDefinition = NamedTuple(
+      "InstanceType" : GameServerGroupInstanceType,
+      "WeightedCapacity" : (WeightedCapacity)?
+    )
+
+    alias InstanceDefinitions = Array(InstanceDefinition)
+
+    alias InstanceId = String
+
+    alias InstanceList = Array(Instance)
+
+    alias InstanceStatus = String
+
+    alias Integer = Int32
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias InvalidFleetStatusException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias InvalidGameSessionStatusException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias IpAddress = String
+
+    alias IpPermission = NamedTuple(
+      "FromPort" : PortNumber,
+      "ToPort" : PortNumber,
+      "IpRange" : NonBlankString,
+      "Protocol" : IpProtocol
+    )
+
+    alias IpPermissionsList = Array(IpPermission)
+
+    alias IpProtocol = String
+
+    alias LatencyMap = Hash(NonEmptyString,PositiveInteger)
+
+    alias LaunchTemplateId = String
+
+    alias LaunchTemplateName = String
+
+    alias LaunchTemplateSpecification = NamedTuple(
+      "LaunchTemplateId" : (LaunchTemplateId)?,
+      "LaunchTemplateName" : (LaunchTemplateName)?,
+      "Version" : (LaunchTemplateVersion)?
+    )
+
+    alias LaunchTemplateVersion = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias ListAliasesInput = NamedTuple(
+      "RoutingStrategyType" : (RoutingStrategyType)?,
+      "Name" : (NonEmptyString)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListAliasesOutput = NamedTuple(
+      "Aliases" : (AliasList)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListBuildsInput = NamedTuple(
+      "Status" : (BuildStatus)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListBuildsOutput = NamedTuple(
+      "Builds" : (BuildList)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListFleetsInput = NamedTuple(
+      "BuildId" : (BuildIdOrArn)?,
+      "ScriptId" : (ScriptIdOrArn)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ListFleetsOutput = NamedTuple(
+      "FleetIds" : (FleetIdList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ListGameServerGroupsInput = NamedTuple(
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ListGameServerGroupsOutput = NamedTuple(
+      "GameServerGroups" : (GameServerGroups)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ListGameServersInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "SortOrder" : (SortOrder)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ListGameServersOutput = NamedTuple(
+      "GameServers" : (GameServers)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ListScriptsInput = NamedTuple(
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListScriptsOutput = NamedTuple(
+      "Scripts" : (ScriptList)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias MatchedPlayerSession = NamedTuple(
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "PlayerSessionId" : (PlayerSessionId)?
+    )
+
+    alias MatchedPlayerSessionList = Array(MatchedPlayerSession)
+
+    alias MatchmakerData = String
+
+    alias MatchmakingAcceptanceTimeoutInteger = Int32
+
+    alias MatchmakingConfiguration = NamedTuple(
+      "Name" : (MatchmakingIdStringModel)?,
+      "ConfigurationArn" : (MatchmakingConfigurationArn)?,
+      "Description" : (NonZeroAndMaxString)?,
+      "GameSessionQueueArns" : (QueueArnsList)?,
+      "RequestTimeoutSeconds" : (MatchmakingRequestTimeoutInteger)?,
+      "AcceptanceTimeoutSeconds" : (MatchmakingAcceptanceTimeoutInteger)?,
+      "AcceptanceRequired" : (BooleanModel)?,
+      "RuleSetName" : (MatchmakingIdStringModel)?,
+      "RuleSetArn" : (MatchmakingRuleSetArn)?,
+      "NotificationTarget" : (SnsArnStringModel)?,
+      "AdditionalPlayerCount" : (WholeNumber)?,
+      "CustomEventData" : (CustomEventData)?,
+      "CreationTime" : (Timestamp)?,
+      "GameProperties" : (GamePropertyList)?,
+      "GameSessionData" : (GameSessionData)?,
+      "BackfillMode" : (BackfillMode)?,
+      "FlexMatchMode" : (FlexMatchMode)?
+    )
+
+    alias MatchmakingConfigurationArn = String
+
+    alias MatchmakingConfigurationList = Array(MatchmakingConfiguration)
+
+    alias MatchmakingConfigurationName = String
+
+    alias MatchmakingConfigurationNameList = Array(MatchmakingConfigurationName)
+
+    alias MatchmakingConfigurationStatus = String
+
+    alias MatchmakingIdList = Array(MatchmakingIdStringModel)
+
+    alias MatchmakingIdStringModel = String
+
+    alias MatchmakingRequestTimeoutInteger = Int32
+
+    alias MatchmakingRuleSet = NamedTuple(
+      "RuleSetName" : (MatchmakingIdStringModel)?,
+      "RuleSetArn" : (MatchmakingRuleSetArn)?,
+      "RuleSetBody" : RuleSetBody,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias MatchmakingRuleSetArn = String
+
+    alias MatchmakingRuleSetList = Array(MatchmakingRuleSet)
+
+    alias MatchmakingRuleSetName = String
+
+    alias MatchmakingRuleSetNameList = Array(MatchmakingRuleSetName)
+
+    alias MatchmakingTicket = NamedTuple(
+      "TicketId" : (MatchmakingIdStringModel)?,
+      "ConfigurationName" : (MatchmakingIdStringModel)?,
+      "ConfigurationArn" : (MatchmakingConfigurationArn)?,
+      "Status" : (MatchmakingConfigurationStatus)?,
+      "StatusReason" : (StringModel)?,
+      "StatusMessage" : (StringModel)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Players" : (PlayerList)?,
+      "GameSessionConnectionInfo" : (GameSessionConnectionInfo)?,
+      "EstimatedWaitTime" : (WholeNumber)?
+    )
+
+    alias MatchmakingTicketList = Array(MatchmakingTicket)
+
+    alias MaxConcurrentGameSessionActivations = Int32
+
+    alias MetricGroup = String
+
+    alias MetricGroupList = Array(MetricGroup)
+
+    alias MetricName = String
+
+    alias NonBlankAndLengthConstraintString = String
+
+    alias NonBlankString = String
+
+    alias NonEmptyString = String
+
+    alias NonNegativeDouble = Float64
+
+    alias NonZeroAndMaxString = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias OperatingSystem = String
+
+    alias OutOfCapacityException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias PlacedPlayerSession = NamedTuple(
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "PlayerSessionId" : (PlayerSessionId)?
+    )
+
+    alias PlacedPlayerSessionList = Array(PlacedPlayerSession)
+
+    alias Player = NamedTuple(
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "PlayerAttributes" : (PlayerAttributeMap)?,
+      "Team" : (NonZeroAndMaxString)?,
+      "LatencyInMs" : (LatencyMap)?
+    )
+
+    alias PlayerAttributeMap = Hash(NonZeroAndMaxString,AttributeValue)
+
+    alias PlayerData = String
+
+    alias PlayerDataMap = Hash(NonZeroAndMaxString,PlayerData)
+
+    alias PlayerIdList = Array(NonZeroAndMaxString)
+
+    alias PlayerLatency = NamedTuple(
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "RegionIdentifier" : (NonZeroAndMaxString)?,
+      "LatencyInMilliseconds" : (Float)?
+    )
+
+    alias PlayerLatencyList = Array(PlayerLatency)
+
+    alias PlayerLatencyPolicy = NamedTuple(
+      "MaximumIndividualPlayerLatencyMilliseconds" : (WholeNumber)?,
+      "PolicyDurationSeconds" : (WholeNumber)?
+    )
+
+    alias PlayerLatencyPolicyList = Array(PlayerLatencyPolicy)
+
+    alias PlayerList = Array(Player)
+
+    alias PlayerSession = NamedTuple(
+      "PlayerSessionId" : (PlayerSessionId)?,
+      "PlayerId" : (NonZeroAndMaxString)?,
+      "GameSessionId" : (NonZeroAndMaxString)?,
+      "FleetId" : (FleetId)?,
+      "FleetArn" : (FleetArn)?,
+      "CreationTime" : (Timestamp)?,
+      "TerminationTime" : (Timestamp)?,
+      "Status" : (PlayerSessionStatus)?,
+      "IpAddress" : (IpAddress)?,
+      "DnsName" : (DnsName)?,
+      "Port" : (PortNumber)?,
+      "PlayerData" : (PlayerData)?
+    )
+
+    alias PlayerSessionCreationPolicy = String
+
+    alias PlayerSessionId = String
+
+    alias PlayerSessionList = Array(PlayerSession)
+
+    alias PlayerSessionStatus = String
+
+    alias PolicyType = String
+
+    alias PortNumber = Int32
+
+    alias PositiveInteger = Int32
+
+    alias PositiveLong = Int64
+
+    alias ProtectionPolicy = String
+
+    alias PutScalingPolicyInput = NamedTuple(
+      "Name" : NonZeroAndMaxString,
+      "FleetId" : FleetIdOrArn,
+      "ScalingAdjustment" : (Integer)?,
+      "ScalingAdjustmentType" : (ScalingAdjustmentType)?,
+      "Threshold" : (Double)?,
+      "ComparisonOperator" : (ComparisonOperatorType)?,
+      "EvaluationPeriods" : (PositiveInteger)?,
+      "MetricName" : MetricName,
+      "PolicyType" : (PolicyType)?,
+      "TargetConfiguration" : (TargetConfiguration)?
+    )
+
+    alias PutScalingPolicyOutput = NamedTuple(
+      "Name" : (NonZeroAndMaxString)?
+    )
+
+    alias QueueArnsList = Array(ArnStringModel)
+
+    alias RegisterGameServerInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "GameServerId" : GameServerId,
+      "InstanceId" : GameServerInstanceId,
+      "ConnectionInfo" : (GameServerConnectionInfo)?,
+      "GameServerData" : (GameServerData)?
+    )
+
+    alias RegisterGameServerOutput = NamedTuple(
+      "GameServer" : (GameServer)?
+    )
+
+    alias RequestUploadCredentialsInput = NamedTuple(
+      "BuildId" : BuildIdOrArn
+    )
+
+    alias RequestUploadCredentialsOutput = NamedTuple(
+      "UploadCredentials" : (AwsCredentials)?,
+      "StorageLocation" : (S3Location)?
+    )
+
+    alias ResolveAliasInput = NamedTuple(
+      "AliasId" : AliasIdOrArn
+    )
+
+    alias ResolveAliasOutput = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "FleetArn" : (FleetArn)?
+    )
+
+    alias ResourceCreationLimitPolicy = NamedTuple(
+      "NewGameSessionsPerCreator" : (WholeNumber)?,
+      "PolicyPeriodInMinutes" : (WholeNumber)?
+    )
+
+    alias ResumeGameServerGroupInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "ResumeActions" : GameServerGroupActions
+    )
+
+    alias ResumeGameServerGroupOutput = NamedTuple(
+      "GameServerGroup" : (GameServerGroup)?
+    )
+
+    alias RoutingStrategy = NamedTuple(
+      "Type" : (RoutingStrategyType)?,
+      "FleetId" : (FleetId)?,
+      "Message" : (FreeText)?
+    )
+
+    alias RoutingStrategyType = String
+
+    alias RuleSetBody = String
+
+    alias RuleSetLimit = Int32
+
+    alias RuntimeConfiguration = NamedTuple(
+      "ServerProcesses" : (ServerProcessList)?,
+      "MaxConcurrentGameSessionActivations" : (MaxConcurrentGameSessionActivations)?,
+      "GameSessionActivationTimeoutSeconds" : (GameSessionActivationTimeoutSeconds)?
+    )
+
+    alias S3Location = NamedTuple(
+      "Bucket" : (NonEmptyString)?,
+      "Key" : (NonEmptyString)?,
+      "RoleArn" : (NonEmptyString)?,
+      "ObjectVersion" : (NonEmptyString)?
+    )
+
+    alias ScalingAdjustmentType = String
+
+    alias ScalingPolicy = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "Name" : (NonZeroAndMaxString)?,
+      "Status" : (ScalingStatusType)?,
+      "ScalingAdjustment" : (Integer)?,
+      "ScalingAdjustmentType" : (ScalingAdjustmentType)?,
+      "ComparisonOperator" : (ComparisonOperatorType)?,
+      "Threshold" : (Double)?,
+      "EvaluationPeriods" : (PositiveInteger)?,
+      "MetricName" : (MetricName)?,
+      "PolicyType" : (PolicyType)?,
+      "TargetConfiguration" : (TargetConfiguration)?
+    )
+
+    alias ScalingPolicyList = Array(ScalingPolicy)
+
+    alias ScalingStatusType = String
+
+    alias Script = NamedTuple(
+      "ScriptId" : (ScriptId)?,
+      "ScriptArn" : (ScriptArn)?,
+      "Name" : (NonZeroAndMaxString)?,
+      "Version" : (NonZeroAndMaxString)?,
+      "SizeOnDisk" : (PositiveLong)?,
+      "CreationTime" : (Timestamp)?,
+      "StorageLocation" : (S3Location)?
+    )
+
+    alias ScriptArn = String
+
+    alias ScriptId = String
+
+    alias ScriptIdOrArn = String
+
+    alias ScriptList = Array(Script)
+
+    alias SearchGameSessionsInput = NamedTuple(
+      "FleetId" : (FleetIdOrArn)?,
+      "AliasId" : (AliasIdOrArn)?,
+      "FilterExpression" : (NonZeroAndMaxString)?,
+      "SortExpression" : (NonZeroAndMaxString)?,
+      "Limit" : (PositiveInteger)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias SearchGameSessionsOutput = NamedTuple(
+      "GameSessions" : (GameSessionList)?,
+      "NextToken" : (NonZeroAndMaxString)?
+    )
+
+    alias ServerProcess = NamedTuple(
+      "LaunchPath" : NonZeroAndMaxString,
+      "Parameters" : (NonZeroAndMaxString)?,
+      "ConcurrentExecutions" : PositiveInteger
+    )
+
+    alias ServerProcessList = Array(ServerProcess)
+
+    alias SnsArnStringModel = String
+
+    alias SortOrder = String
+
+    alias StartFleetActionsInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "Actions" : FleetActionList
+    )
+
+    alias StartFleetActionsOutput = NamedTuple(
+      
+    )
+
+    alias StartGameSessionPlacementInput = NamedTuple(
+      "PlacementId" : IdStringModel,
+      "GameSessionQueueName" : GameSessionQueueNameOrArn,
+      "GameProperties" : (GamePropertyList)?,
+      "MaximumPlayerSessionCount" : WholeNumber,
+      "GameSessionName" : (NonZeroAndMaxString)?,
+      "PlayerLatencies" : (PlayerLatencyList)?,
+      "DesiredPlayerSessions" : (DesiredPlayerSessionList)?,
+      "GameSessionData" : (GameSessionData)?
+    )
+
+    alias StartGameSessionPlacementOutput = NamedTuple(
+      "GameSessionPlacement" : (GameSessionPlacement)?
+    )
+
+    alias StartMatchBackfillInput = NamedTuple(
+      "TicketId" : (MatchmakingIdStringModel)?,
+      "ConfigurationName" : MatchmakingConfigurationName,
+      "GameSessionArn" : (ArnStringModel)?,
+      "Players" : PlayerList
+    )
+
+    alias StartMatchBackfillOutput = NamedTuple(
+      "MatchmakingTicket" : (MatchmakingTicket)?
+    )
+
+    alias StartMatchmakingInput = NamedTuple(
+      "TicketId" : (MatchmakingIdStringModel)?,
+      "ConfigurationName" : MatchmakingConfigurationName,
+      "Players" : PlayerList
+    )
+
+    alias StartMatchmakingOutput = NamedTuple(
+      "MatchmakingTicket" : (MatchmakingTicket)?
+    )
+
+    alias StopFleetActionsInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "Actions" : FleetActionList
+    )
+
+    alias StopFleetActionsOutput = NamedTuple(
+      
+    )
+
+    alias StopGameSessionPlacementInput = NamedTuple(
+      "PlacementId" : IdStringModel
+    )
+
+    alias StopGameSessionPlacementOutput = NamedTuple(
+      "GameSessionPlacement" : (GameSessionPlacement)?
+    )
+
+    alias StopMatchmakingInput = NamedTuple(
+      "TicketId" : MatchmakingIdStringModel
+    )
+
+    alias StopMatchmakingOutput = NamedTuple(
+      
+    )
+
+    alias StringDoubleMap = Hash(NonZeroAndMaxString,DoubleObject)
+
+    alias StringList = Array(NonZeroAndMaxString)
+
+    alias StringModel = String
+
+    alias SuspendGameServerGroupInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "SuspendActions" : GameServerGroupActions
+    )
+
+    alias SuspendGameServerGroupOutput = NamedTuple(
+      "GameServerGroup" : (GameServerGroup)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TaggingFailedException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias TargetConfiguration = NamedTuple(
+      "TargetValue" : Double
+    )
+
+    alias TargetTrackingConfiguration = NamedTuple(
+      "TargetValue" : NonNegativeDouble
+    )
+
+    alias TerminalRoutingStrategyException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UnauthorizedException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias UnsupportedRegionException = NamedTuple(
+      "Message" : (NonEmptyString)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAliasInput = NamedTuple(
+      "AliasId" : AliasIdOrArn,
+      "Name" : (NonBlankAndLengthConstraintString)?,
+      "Description" : (NonZeroAndMaxString)?,
+      "RoutingStrategy" : (RoutingStrategy)?
+    )
+
+    alias UpdateAliasOutput = NamedTuple(
+      "Alias" : (Alias)?
+    )
+
+    alias UpdateBuildInput = NamedTuple(
+      "BuildId" : BuildIdOrArn,
+      "Name" : (NonZeroAndMaxString)?,
+      "Version" : (NonZeroAndMaxString)?
+    )
+
+    alias UpdateBuildOutput = NamedTuple(
+      "Build" : (Build)?
+    )
+
+    alias UpdateFleetAttributesInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "Name" : (NonZeroAndMaxString)?,
+      "Description" : (NonZeroAndMaxString)?,
+      "NewGameSessionProtectionPolicy" : (ProtectionPolicy)?,
+      "ResourceCreationLimitPolicy" : (ResourceCreationLimitPolicy)?,
+      "MetricGroups" : (MetricGroupList)?
+    )
+
+    alias UpdateFleetAttributesOutput = NamedTuple(
+      "FleetId" : (FleetId)?
+    )
+
+    alias UpdateFleetCapacityInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "DesiredInstances" : (WholeNumber)?,
+      "MinSize" : (WholeNumber)?,
+      "MaxSize" : (WholeNumber)?
+    )
+
+    alias UpdateFleetCapacityOutput = NamedTuple(
+      "FleetId" : (FleetId)?
+    )
+
+    alias UpdateFleetPortSettingsInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "InboundPermissionAuthorizations" : (IpPermissionsList)?,
+      "InboundPermissionRevocations" : (IpPermissionsList)?
+    )
+
+    alias UpdateFleetPortSettingsOutput = NamedTuple(
+      "FleetId" : (FleetId)?
+    )
+
+    alias UpdateGameServerGroupInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "RoleArn" : (IamRoleArn)?,
+      "InstanceDefinitions" : (InstanceDefinitions)?,
+      "GameServerProtectionPolicy" : (GameServerProtectionPolicy)?,
+      "BalancingStrategy" : (BalancingStrategy)?
+    )
+
+    alias UpdateGameServerGroupOutput = NamedTuple(
+      "GameServerGroup" : (GameServerGroup)?
+    )
+
+    alias UpdateGameServerInput = NamedTuple(
+      "GameServerGroupName" : GameServerGroupNameOrArn,
+      "GameServerId" : GameServerId,
+      "GameServerData" : (GameServerData)?,
+      "UtilizationStatus" : (GameServerUtilizationStatus)?,
+      "HealthCheck" : (GameServerHealthCheck)?
+    )
+
+    alias UpdateGameServerOutput = NamedTuple(
+      "GameServer" : (GameServer)?
+    )
+
+    alias UpdateGameSessionInput = NamedTuple(
+      "GameSessionId" : ArnStringModel,
+      "MaximumPlayerSessionCount" : (WholeNumber)?,
+      "Name" : (NonZeroAndMaxString)?,
+      "PlayerSessionCreationPolicy" : (PlayerSessionCreationPolicy)?,
+      "ProtectionPolicy" : (ProtectionPolicy)?
+    )
+
+    alias UpdateGameSessionOutput = NamedTuple(
+      "GameSession" : (GameSession)?
+    )
+
+    alias UpdateGameSessionQueueInput = NamedTuple(
+      "Name" : GameSessionQueueNameOrArn,
+      "TimeoutInSeconds" : (WholeNumber)?,
+      "PlayerLatencyPolicies" : (PlayerLatencyPolicyList)?,
+      "Destinations" : (GameSessionQueueDestinationList)?
+    )
+
+    alias UpdateGameSessionQueueOutput = NamedTuple(
+      "GameSessionQueue" : (GameSessionQueue)?
+    )
+
+    alias UpdateMatchmakingConfigurationInput = NamedTuple(
+      "Name" : MatchmakingConfigurationName,
+      "Description" : (NonZeroAndMaxString)?,
+      "GameSessionQueueArns" : (QueueArnsList)?,
+      "RequestTimeoutSeconds" : (MatchmakingRequestTimeoutInteger)?,
+      "AcceptanceTimeoutSeconds" : (MatchmakingAcceptanceTimeoutInteger)?,
+      "AcceptanceRequired" : (BooleanModel)?,
+      "RuleSetName" : (MatchmakingRuleSetName)?,
+      "NotificationTarget" : (SnsArnStringModel)?,
+      "AdditionalPlayerCount" : (WholeNumber)?,
+      "CustomEventData" : (CustomEventData)?,
+      "GameProperties" : (GamePropertyList)?,
+      "GameSessionData" : (GameSessionData)?,
+      "BackfillMode" : (BackfillMode)?,
+      "FlexMatchMode" : (FlexMatchMode)?
+    )
+
+    alias UpdateMatchmakingConfigurationOutput = NamedTuple(
+      "Configuration" : (MatchmakingConfiguration)?
+    )
+
+    alias UpdateRuntimeConfigurationInput = NamedTuple(
+      "FleetId" : FleetIdOrArn,
+      "RuntimeConfiguration" : RuntimeConfiguration
+    )
+
+    alias UpdateRuntimeConfigurationOutput = NamedTuple(
+      "RuntimeConfiguration" : (RuntimeConfiguration)?
+    )
+
+    alias UpdateScriptInput = NamedTuple(
+      "ScriptId" : ScriptIdOrArn,
+      "Name" : (NonZeroAndMaxString)?,
+      "Version" : (NonZeroAndMaxString)?,
+      "StorageLocation" : (S3Location)?,
+      "ZipFile" : (ZipBlob)?
+    )
+
+    alias UpdateScriptOutput = NamedTuple(
+      "Script" : (Script)?
+    )
+
+    alias ValidateMatchmakingRuleSetInput = NamedTuple(
+      "RuleSetBody" : RuleSetBody
+    )
+
+    alias ValidateMatchmakingRuleSetOutput = NamedTuple(
+      "Valid" : (BooleanModel)?
+    )
+
+    alias VpcPeeringAuthorization = NamedTuple(
+      "GameLiftAwsAccountId" : (NonZeroAndMaxString)?,
+      "PeerVpcAwsAccountId" : (NonZeroAndMaxString)?,
+      "PeerVpcId" : (NonZeroAndMaxString)?,
+      "CreationTime" : (Timestamp)?,
+      "ExpirationTime" : (Timestamp)?
+    )
+
+    alias VpcPeeringAuthorizationList = Array(VpcPeeringAuthorization)
+
+    alias VpcPeeringConnection = NamedTuple(
+      "FleetId" : (FleetId)?,
+      "FleetArn" : (FleetArn)?,
+      "IpV4CidrBlock" : (NonZeroAndMaxString)?,
+      "VpcPeeringConnectionId" : (NonZeroAndMaxString)?,
+      "Status" : (VpcPeeringConnectionStatus)?,
+      "PeerVpcId" : (NonZeroAndMaxString)?,
+      "GameLiftVpcId" : (NonZeroAndMaxString)?
+    )
+
+    alias VpcPeeringConnectionList = Array(VpcPeeringConnection)
+
+    alias VpcPeeringConnectionStatus = NamedTuple(
+      "Code" : (NonZeroAndMaxString)?,
+      "Message" : (NonZeroAndMaxString)?
+    )
+
+    alias VpcSubnet = String
+
+    alias VpcSubnets = Array(VpcSubnet)
+
+    alias WeightedCapacity = String
+
+    alias WholeNumber = Int32
+
+    alias ZipBlob = String | Array(UInt8) | IO
   end
 end

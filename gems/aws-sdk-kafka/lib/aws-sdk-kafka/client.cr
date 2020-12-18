@@ -358,8 +358,8 @@ module Aws::Kafka
     #
     # @overload batch_associate_scram_secret(**params)
     # @param [Hash] params ({})
-    def batch_associate_scram_secret(params = {}, **options)
-      req = build_request(:batch_associate_scram_secret, params)
+    def batch_associate_scram_secret(, **options)
+      req = build_request(:batch_associate_scram_secret, )
       req.send_request(options)
     end
 
@@ -489,8 +489,8 @@ module Aws::Kafka
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::Kafka
     #
     # @overload create_configuration(**params)
     # @param [Hash] params ({})
-    def create_configuration(params = {}, **options)
-      req = build_request(:create_configuration, params)
+    def create_configuration(, **options)
+      req = build_request(:create_configuration, )
       req.send_request(options)
     end
 
@@ -573,8 +573,8 @@ module Aws::Kafka
     #
     # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, **options)
-      req = build_request(:delete_cluster, params)
+    def delete_cluster(, **options)
+      req = build_request(:delete_cluster, )
       req.send_request(options)
     end
 
@@ -604,8 +604,8 @@ module Aws::Kafka
     #
     # @overload delete_configuration(**params)
     # @param [Hash] params ({})
-    def delete_configuration(params = {}, **options)
-      req = build_request(:delete_configuration, params)
+    def delete_configuration(, **options)
+      req = build_request(:delete_configuration, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::Kafka
     #
     # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, **options)
-      req = build_request(:describe_cluster, params)
+    def describe_cluster(, **options)
+      req = build_request(:describe_cluster, )
       req.send_request(options)
     end
 
@@ -740,8 +740,8 @@ module Aws::Kafka
     #
     # @overload describe_cluster_operation(**params)
     # @param [Hash] params ({})
-    def describe_cluster_operation(params = {}, **options)
-      req = build_request(:describe_cluster_operation, params)
+    def describe_cluster_operation(, **options)
+      req = build_request(:describe_cluster_operation, )
       req.send_request(options)
     end
 
@@ -782,8 +782,8 @@ module Aws::Kafka
     #
     # @overload describe_configuration(**params)
     # @param [Hash] params ({})
-    def describe_configuration(params = {}, **options)
-      req = build_request(:describe_configuration, params)
+    def describe_configuration(, **options)
+      req = build_request(:describe_configuration, )
       req.send_request(options)
     end
 
@@ -820,8 +820,8 @@ module Aws::Kafka
     #
     # @overload describe_configuration_revision(**params)
     # @param [Hash] params ({})
-    def describe_configuration_revision(params = {}, **options)
-      req = build_request(:describe_configuration_revision, params)
+    def describe_configuration_revision(, **options)
+      req = build_request(:describe_configuration_revision, )
       req.send_request(options)
     end
 
@@ -856,8 +856,8 @@ module Aws::Kafka
     #
     # @overload batch_disassociate_scram_secret(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_scram_secret(params = {}, **options)
-      req = build_request(:batch_disassociate_scram_secret, params)
+    def batch_disassociate_scram_secret(, **options)
+      req = build_request(:batch_disassociate_scram_secret, )
       req.send_request(options)
     end
 
@@ -887,8 +887,8 @@ module Aws::Kafka
     #
     # @overload get_bootstrap_brokers(**params)
     # @param [Hash] params ({})
-    def get_bootstrap_brokers(params = {}, **options)
-      req = build_request(:get_bootstrap_brokers, params)
+    def get_bootstrap_brokers(, **options)
+      req = build_request(:get_bootstrap_brokers, )
       req.send_request(options)
     end
 
@@ -918,8 +918,8 @@ module Aws::Kafka
     #
     # @overload get_compatible_kafka_versions(**params)
     # @param [Hash] params ({})
-    def get_compatible_kafka_versions(params = {}, **options)
-      req = build_request(:get_compatible_kafka_versions, params)
+    def get_compatible_kafka_versions(, **options)
+      req = build_request(:get_compatible_kafka_versions, )
       req.send_request(options)
     end
 
@@ -1002,8 +1002,8 @@ module Aws::Kafka
     #
     # @overload list_cluster_operations(**params)
     # @param [Hash] params ({})
-    def list_cluster_operations(params = {}, **options)
-      req = build_request(:list_cluster_operations, params)
+    def list_cluster_operations(, **options)
+      req = build_request(:list_cluster_operations, )
       req.send_request(options)
     end
 
@@ -1076,8 +1076,8 @@ module Aws::Kafka
     #
     # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, **options)
-      req = build_request(:list_clusters, params)
+    def list_clusters(, **options)
+      req = build_request(:list_clusters, )
       req.send_request(options)
     end
 
@@ -1116,8 +1116,8 @@ module Aws::Kafka
     #
     # @overload list_configuration_revisions(**params)
     # @param [Hash] params ({})
-    def list_configuration_revisions(params = {}, **options)
-      req = build_request(:list_configuration_revisions, params)
+    def list_configuration_revisions(, **options)
+      req = build_request(:list_configuration_revisions, )
       req.send_request(options)
     end
 
@@ -1160,8 +1160,8 @@ module Aws::Kafka
     #
     # @overload list_configurations(**params)
     # @param [Hash] params ({})
-    def list_configurations(params = {}, **options)
-      req = build_request(:list_configurations, params)
+    def list_configurations(, **options)
+      req = build_request(:list_configurations, )
       req.send_request(options)
     end
 
@@ -1196,8 +1196,8 @@ module Aws::Kafka
     #
     # @overload list_kafka_versions(**params)
     # @param [Hash] params ({})
-    def list_kafka_versions(params = {}, **options)
-      req = build_request(:list_kafka_versions, params)
+    def list_kafka_versions(, **options)
+      req = build_request(:list_kafka_versions, )
       req.send_request(options)
     end
 
@@ -1252,8 +1252,8 @@ module Aws::Kafka
     #
     # @overload list_nodes(**params)
     # @param [Hash] params ({})
-    def list_nodes(params = {}, **options)
-      req = build_request(:list_nodes, params)
+    def list_nodes(, **options)
+      req = build_request(:list_nodes, )
       req.send_request(options)
     end
 
@@ -1291,8 +1291,8 @@ module Aws::Kafka
     #
     # @overload list_scram_secrets(**params)
     # @param [Hash] params ({})
-    def list_scram_secrets(params = {}, **options)
-      req = build_request(:list_scram_secrets, params)
+    def list_scram_secrets(, **options)
+      req = build_request(:list_scram_secrets, )
       req.send_request(options)
     end
 
@@ -1319,8 +1319,8 @@ module Aws::Kafka
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1352,8 +1352,8 @@ module Aws::Kafka
     #
     # @overload reboot_broker(**params)
     # @param [Hash] params ({})
-    def reboot_broker(params = {}, **options)
-      req = build_request(:reboot_broker, params)
+    def reboot_broker(, **options)
+      req = build_request(:reboot_broker, )
       req.send_request(options)
     end
 
@@ -1379,8 +1379,8 @@ module Aws::Kafka
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1404,8 +1404,8 @@ module Aws::Kafka
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1444,8 +1444,8 @@ module Aws::Kafka
     #
     # @overload update_broker_count(**params)
     # @param [Hash] params ({})
-    def update_broker_count(params = {}, **options)
-      req = build_request(:update_broker_count, params)
+    def update_broker_count(, **options)
+      req = build_request(:update_broker_count, )
       req.send_request(options)
     end
 
@@ -1494,8 +1494,8 @@ module Aws::Kafka
     #
     # @overload update_broker_storage(**params)
     # @param [Hash] params ({})
-    def update_broker_storage(params = {}, **options)
-      req = build_request(:update_broker_storage, params)
+    def update_broker_storage(, **options)
+      req = build_request(:update_broker_storage, )
       req.send_request(options)
     end
 
@@ -1534,8 +1534,8 @@ module Aws::Kafka
     #
     # @overload update_configuration(**params)
     # @param [Hash] params ({})
-    def update_configuration(params = {}, **options)
-      req = build_request(:update_configuration, params)
+    def update_configuration(, **options)
+      req = build_request(:update_configuration, )
       req.send_request(options)
     end
 
@@ -1575,8 +1575,8 @@ module Aws::Kafka
     #
     # @overload update_cluster_configuration(**params)
     # @param [Hash] params ({})
-    def update_cluster_configuration(params = {}, **options)
-      req = build_request(:update_cluster_configuration, params)
+    def update_cluster_configuration(, **options)
+      req = build_request(:update_cluster_configuration, )
       req.send_request(options)
     end
 
@@ -1619,8 +1619,8 @@ module Aws::Kafka
     #
     # @overload update_cluster_kafka_version(**params)
     # @param [Hash] params ({})
-    def update_cluster_kafka_version(params = {}, **options)
-      req = build_request(:update_cluster_kafka_version, params)
+    def update_cluster_kafka_version(, **options)
+      req = build_request(:update_cluster_kafka_version, )
       req.send_request(options)
     end
 
@@ -1694,8 +1694,8 @@ module Aws::Kafka
     #
     # @overload update_monitoring(**params)
     # @param [Hash] params ({})
-    def update_monitoring(params = {}, **options)
-      req = build_request(:update_monitoring, params)
+    def update_monitoring(, **options)
+      req = build_request(:update_monitoring, )
       req.send_request(options)
     end
 

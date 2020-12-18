@@ -3815,5 +3815,921 @@ module Aws::LicenseManager
       include Aws::Structure
     end
 
+    alias AcceptGrantRequest = NamedTuple(
+      "GrantArn" : Arn
+    )
+
+    alias AcceptGrantResponse = NamedTuple(
+      "GrantArn" : (Arn)?,
+      "Status" : (GrantStatus)?,
+      "Version" : (String)?
+    )
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias AllowedOperation = String
+
+    alias AllowedOperationList = Array(AllowedOperation)
+
+    alias Arn = String
+
+    alias ArnList = Array(Arn)
+
+    alias AuthorizationException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias AutomatedDiscoveryInformation = NamedTuple(
+      "LastRunTime" : (DateTime)?
+    )
+
+    alias Boolean = Bool
+
+    alias BorrowConfiguration = NamedTuple(
+      "AllowEarlyCheckIn" : BoxBoolean,
+      "MaxTimeToLiveInMinutes" : BoxInteger
+    )
+
+    alias BoxBoolean = Bool
+
+    alias BoxInteger = Int32
+
+    alias BoxLong = Int64
+
+    alias CheckInLicenseRequest = NamedTuple(
+      "LicenseConsumptionToken" : String,
+      "Beneficiary" : (String)?
+    )
+
+    alias CheckInLicenseResponse = NamedTuple(
+      
+    )
+
+    alias CheckoutBorrowLicenseRequest = NamedTuple(
+      "LicenseArn" : Arn,
+      "Entitlements" : EntitlementDataList,
+      "DigitalSignatureMethod" : DigitalSignatureMethod,
+      "NodeId" : (String)?,
+      "CheckoutMetadata" : (MetadataList)?,
+      "ClientToken" : ClientToken
+    )
+
+    alias CheckoutBorrowLicenseResponse = NamedTuple(
+      "LicenseArn" : (Arn)?,
+      "LicenseConsumptionToken" : (String)?,
+      "EntitlementsAllowed" : (EntitlementDataList)?,
+      "NodeId" : (String)?,
+      "SignedToken" : (SignedToken)?,
+      "IssuedAt" : (ISO8601DateTime)?,
+      "Expiration" : (ISO8601DateTime)?,
+      "CheckoutMetadata" : (MetadataList)?
+    )
+
+    alias CheckoutLicenseRequest = NamedTuple(
+      "ProductSKU" : String,
+      "CheckoutType" : CheckoutType,
+      "KeyFingerprint" : String,
+      "Entitlements" : EntitlementDataList,
+      "ClientToken" : ClientToken,
+      "Beneficiary" : (String)?,
+      "NodeId" : (String)?
+    )
+
+    alias CheckoutLicenseResponse = NamedTuple(
+      "CheckoutType" : (CheckoutType)?,
+      "LicenseConsumptionToken" : (String)?,
+      "EntitlementsAllowed" : (EntitlementDataList)?,
+      "SignedToken" : (SignedToken)?,
+      "NodeId" : (String)?,
+      "IssuedAt" : (ISO8601DateTime)?,
+      "Expiration" : (ISO8601DateTime)?
+    )
+
+    alias CheckoutType = String
+
+    alias ClientToken = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ConsumedLicenseSummary = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "ConsumedLicenses" : (BoxLong)?
+    )
+
+    alias ConsumedLicenseSummaryList = Array(ConsumedLicenseSummary)
+
+    alias ConsumptionConfiguration = NamedTuple(
+      "RenewType" : (RenewType)?,
+      "ProvisionalConfiguration" : (ProvisionalConfiguration)?,
+      "BorrowConfiguration" : (BorrowConfiguration)?
+    )
+
+    alias CreateGrantRequest = NamedTuple(
+      "ClientToken" : String,
+      "GrantName" : String,
+      "LicenseArn" : Arn,
+      "Principals" : PrincipalArnList,
+      "HomeRegion" : String,
+      "AllowedOperations" : AllowedOperationList
+    )
+
+    alias CreateGrantResponse = NamedTuple(
+      "GrantArn" : (Arn)?,
+      "Status" : (GrantStatus)?,
+      "Version" : (String)?
+    )
+
+    alias CreateGrantVersionRequest = NamedTuple(
+      "ClientToken" : String,
+      "GrantArn" : Arn,
+      "GrantName" : (String)?,
+      "AllowedOperations" : (AllowedOperationList)?,
+      "Status" : (GrantStatus)?,
+      "SourceVersion" : (String)?
+    )
+
+    alias CreateGrantVersionResponse = NamedTuple(
+      "GrantArn" : (Arn)?,
+      "Status" : (GrantStatus)?,
+      "Version" : (String)?
+    )
+
+    alias CreateLicenseConfigurationRequest = NamedTuple(
+      "Name" : String,
+      "Description" : (String)?,
+      "LicenseCountingType" : LicenseCountingType,
+      "LicenseCount" : (BoxLong)?,
+      "LicenseCountHardLimit" : (BoxBoolean)?,
+      "LicenseRules" : (StringList)?,
+      "Tags" : (TagList)?,
+      "DisassociateWhenNotFound" : (BoxBoolean)?,
+      "ProductInformationList" : (ProductInformationList)?
+    )
+
+    alias CreateLicenseConfigurationResponse = NamedTuple(
+      "LicenseConfigurationArn" : (String)?
+    )
+
+    alias CreateLicenseRequest = NamedTuple(
+      "LicenseName" : String,
+      "ProductName" : String,
+      "ProductSKU" : String,
+      "Issuer" : Issuer,
+      "HomeRegion" : String,
+      "Validity" : DatetimeRange,
+      "Entitlements" : EntitlementList,
+      "Beneficiary" : String,
+      "ConsumptionConfiguration" : ConsumptionConfiguration,
+      "LicenseMetadata" : (MetadataList)?,
+      "ClientToken" : String
+    )
+
+    alias CreateLicenseResponse = NamedTuple(
+      "LicenseArn" : (Arn)?,
+      "Status" : (LicenseStatus)?,
+      "Version" : (String)?
+    )
+
+    alias CreateLicenseVersionRequest = NamedTuple(
+      "LicenseArn" : Arn,
+      "LicenseName" : String,
+      "ProductName" : String,
+      "Issuer" : Issuer,
+      "HomeRegion" : String,
+      "Validity" : DatetimeRange,
+      "LicenseMetadata" : (MetadataList)?,
+      "Entitlements" : EntitlementList,
+      "ConsumptionConfiguration" : ConsumptionConfiguration,
+      "Status" : LicenseStatus,
+      "ClientToken" : String,
+      "SourceVersion" : (String)?
+    )
+
+    alias CreateLicenseVersionResponse = NamedTuple(
+      "LicenseArn" : (Arn)?,
+      "Version" : (String)?,
+      "Status" : (LicenseStatus)?
+    )
+
+    alias CreateTokenRequest = NamedTuple(
+      "LicenseArn" : Arn,
+      "RoleArns" : (ArnList)?,
+      "ExpirationInDays" : (Integer)?,
+      "TokenProperties" : (MaxSize3StringList)?,
+      "ClientToken" : IdempotencyToken
+    )
+
+    alias CreateTokenResponse = NamedTuple(
+      "TokenId" : (String)?,
+      "TokenType" : (TokenType)?,
+      "Token" : (TokenString)?
+    )
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DatetimeRange = NamedTuple(
+      "Begin" : ISO8601DateTime,
+      "End" : (ISO8601DateTime)?
+    )
+
+    alias DeleteGrantRequest = NamedTuple(
+      "GrantArn" : Arn,
+      "Version" : String
+    )
+
+    alias DeleteGrantResponse = NamedTuple(
+      "GrantArn" : (Arn)?,
+      "Status" : (GrantStatus)?,
+      "Version" : (String)?
+    )
+
+    alias DeleteLicenseConfigurationRequest = NamedTuple(
+      "LicenseConfigurationArn" : String
+    )
+
+    alias DeleteLicenseConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteLicenseRequest = NamedTuple(
+      "LicenseArn" : Arn,
+      "SourceVersion" : String
+    )
+
+    alias DeleteLicenseResponse = NamedTuple(
+      "Status" : (LicenseDeletionStatus)?,
+      "DeletionDate" : (ISO8601DateTime)?
+    )
+
+    alias DeleteTokenRequest = NamedTuple(
+      "TokenId" : String
+    )
+
+    alias DeleteTokenResponse = NamedTuple(
+      
+    )
+
+    alias DigitalSignatureMethod = String
+
+    alias Entitlement = NamedTuple(
+      "Name" : String,
+      "Value" : (String)?,
+      "MaxCount" : (Long)?,
+      "Overage" : (BoxBoolean)?,
+      "Unit" : EntitlementUnit,
+      "AllowCheckIn" : (BoxBoolean)?
+    )
+
+    alias EntitlementData = NamedTuple(
+      "Name" : String,
+      "Value" : (String)?,
+      "Unit" : EntitlementDataUnit
+    )
+
+    alias EntitlementDataList = Array(EntitlementData)
+
+    alias EntitlementDataUnit = String
+
+    alias EntitlementList = Array(Entitlement)
+
+    alias EntitlementNotAllowedException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias EntitlementUnit = String
+
+    alias EntitlementUsage = NamedTuple(
+      "Name" : String,
+      "ConsumedValue" : String,
+      "MaxCount" : (String)?,
+      "Unit" : EntitlementDataUnit
+    )
+
+    alias EntitlementUsageList = Array(EntitlementUsage)
+
+    alias ExtendLicenseConsumptionRequest = NamedTuple(
+      "LicenseConsumptionToken" : String,
+      "DryRun" : (Boolean)?
+    )
+
+    alias ExtendLicenseConsumptionResponse = NamedTuple(
+      "LicenseConsumptionToken" : (String)?,
+      "Expiration" : (ISO8601DateTime)?
+    )
+
+    alias FailedDependencyException = NamedTuple(
+      "Message" : (Message)?,
+      "ErrorCode" : (String)?
+    )
+
+    alias Filter = NamedTuple(
+      "Name" : (FilterName)?,
+      "Values" : (FilterValues)?
+    )
+
+    alias FilterLimitExceededException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias Filters = Array(Filter)
+
+    alias GetAccessTokenRequest = NamedTuple(
+      "Token" : TokenString,
+      "TokenProperties" : (MaxSize3StringList)?
+    )
+
+    alias GetAccessTokenResponse = NamedTuple(
+      "AccessToken" : (TokenString)?
+    )
+
+    alias GetGrantRequest = NamedTuple(
+      "GrantArn" : Arn,
+      "Version" : (String)?
+    )
+
+    alias GetGrantResponse = NamedTuple(
+      "Grant" : (Grant)?
+    )
+
+    alias GetLicenseConfigurationRequest = NamedTuple(
+      "LicenseConfigurationArn" : String
+    )
+
+    alias GetLicenseConfigurationResponse = NamedTuple(
+      "LicenseConfigurationId" : (String)?,
+      "LicenseConfigurationArn" : (String)?,
+      "Name" : (String)?,
+      "Description" : (String)?,
+      "LicenseCountingType" : (LicenseCountingType)?,
+      "LicenseRules" : (StringList)?,
+      "LicenseCount" : (BoxLong)?,
+      "LicenseCountHardLimit" : (BoxBoolean)?,
+      "ConsumedLicenses" : (BoxLong)?,
+      "Status" : (String)?,
+      "OwnerAccountId" : (String)?,
+      "ConsumedLicenseSummaryList" : (ConsumedLicenseSummaryList)?,
+      "ManagedResourceSummaryList" : (ManagedResourceSummaryList)?,
+      "Tags" : (TagList)?,
+      "ProductInformationList" : (ProductInformationList)?,
+      "AutomatedDiscoveryInformation" : (AutomatedDiscoveryInformation)?,
+      "DisassociateWhenNotFound" : (BoxBoolean)?
+    )
+
+    alias GetLicenseRequest = NamedTuple(
+      "LicenseArn" : Arn,
+      "Version" : (String)?
+    )
+
+    alias GetLicenseResponse = NamedTuple(
+      "License" : (License)?
+    )
+
+    alias GetLicenseUsageRequest = NamedTuple(
+      "LicenseArn" : Arn
+    )
+
+    alias GetLicenseUsageResponse = NamedTuple(
+      "LicenseUsage" : (LicenseUsage)?
+    )
+
+    alias GetServiceSettingsRequest = NamedTuple(
+      
+    )
+
+    alias GetServiceSettingsResponse = NamedTuple(
+      "S3BucketArn" : (String)?,
+      "SnsTopicArn" : (String)?,
+      "OrganizationConfiguration" : (OrganizationConfiguration)?,
+      "EnableCrossAccountsDiscovery" : (BoxBoolean)?,
+      "LicenseManagerResourceShareArn" : (String)?
+    )
+
+    alias Grant = NamedTuple(
+      "GrantArn" : Arn,
+      "GrantName" : String,
+      "ParentArn" : Arn,
+      "LicenseArn" : Arn,
+      "GranteePrincipalArn" : Arn,
+      "HomeRegion" : String,
+      "GrantStatus" : GrantStatus,
+      "StatusReason" : (String)?,
+      "Version" : String,
+      "GrantedOperations" : AllowedOperationList
+    )
+
+    alias GrantList = Array(Grant)
+
+    alias GrantStatus = String
+
+    alias GrantedLicense = NamedTuple(
+      "LicenseArn" : (Arn)?,
+      "LicenseName" : (String)?,
+      "ProductName" : (String)?,
+      "ProductSKU" : (String)?,
+      "Issuer" : (IssuerDetails)?,
+      "HomeRegion" : (String)?,
+      "Status" : (LicenseStatus)?,
+      "Validity" : (DatetimeRange)?,
+      "Beneficiary" : (String)?,
+      "Entitlements" : (EntitlementList)?,
+      "ConsumptionConfiguration" : (ConsumptionConfiguration)?,
+      "LicenseMetadata" : (MetadataList)?,
+      "CreateTime" : (ISO8601DateTime)?,
+      "Version" : (String)?,
+      "ReceivedMetadata" : (ReceivedMetadata)?
+    )
+
+    alias GrantedLicenseList = Array(GrantedLicense)
+
+    alias ISO8601DateTime = String
+
+    alias IdempotencyToken = String
+
+    alias Integer = Int32
+
+    alias InvalidParameterValueException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias InvalidResourceStateException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias InventoryFilter = NamedTuple(
+      "Name" : String,
+      "Condition" : InventoryFilterCondition,
+      "Value" : (String)?
+    )
+
+    alias InventoryFilterCondition = String
+
+    alias InventoryFilterList = Array(InventoryFilter)
+
+    alias Issuer = NamedTuple(
+      "Name" : String,
+      "SignKey" : (String)?
+    )
+
+    alias IssuerDetails = NamedTuple(
+      "Name" : (String)?,
+      "SignKey" : (String)?,
+      "KeyFingerprint" : (String)?
+    )
+
+    alias License = NamedTuple(
+      "LicenseArn" : (Arn)?,
+      "LicenseName" : (String)?,
+      "ProductName" : (String)?,
+      "ProductSKU" : (String)?,
+      "Issuer" : (IssuerDetails)?,
+      "HomeRegion" : (String)?,
+      "Status" : (LicenseStatus)?,
+      "Validity" : (DatetimeRange)?,
+      "Beneficiary" : (String)?,
+      "Entitlements" : (EntitlementList)?,
+      "ConsumptionConfiguration" : (ConsumptionConfiguration)?,
+      "LicenseMetadata" : (MetadataList)?,
+      "CreateTime" : (ISO8601DateTime)?,
+      "Version" : (String)?
+    )
+
+    alias LicenseConfiguration = NamedTuple(
+      "LicenseConfigurationId" : (String)?,
+      "LicenseConfigurationArn" : (String)?,
+      "Name" : (String)?,
+      "Description" : (String)?,
+      "LicenseCountingType" : (LicenseCountingType)?,
+      "LicenseRules" : (StringList)?,
+      "LicenseCount" : (BoxLong)?,
+      "LicenseCountHardLimit" : (BoxBoolean)?,
+      "DisassociateWhenNotFound" : (BoxBoolean)?,
+      "ConsumedLicenses" : (BoxLong)?,
+      "Status" : (String)?,
+      "OwnerAccountId" : (String)?,
+      "ConsumedLicenseSummaryList" : (ConsumedLicenseSummaryList)?,
+      "ManagedResourceSummaryList" : (ManagedResourceSummaryList)?,
+      "ProductInformationList" : (ProductInformationList)?,
+      "AutomatedDiscoveryInformation" : (AutomatedDiscoveryInformation)?
+    )
+
+    alias LicenseConfigurationAssociation = NamedTuple(
+      "ResourceArn" : (String)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceOwnerId" : (String)?,
+      "AssociationTime" : (DateTime)?,
+      "AmiAssociationScope" : (String)?
+    )
+
+    alias LicenseConfigurationAssociations = Array(LicenseConfigurationAssociation)
+
+    alias LicenseConfigurationStatus = String
+
+    alias LicenseConfigurationUsage = NamedTuple(
+      "ResourceArn" : (String)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceStatus" : (String)?,
+      "ResourceOwnerId" : (String)?,
+      "AssociationTime" : (DateTime)?,
+      "ConsumedLicenses" : (BoxLong)?
+    )
+
+    alias LicenseConfigurationUsageList = Array(LicenseConfigurationUsage)
+
+    alias LicenseConfigurations = Array(LicenseConfiguration)
+
+    alias LicenseCountingType = String
+
+    alias LicenseDeletionStatus = String
+
+    alias LicenseList = Array(License)
+
+    alias LicenseOperationFailure = NamedTuple(
+      "ResourceArn" : (String)?,
+      "ResourceType" : (ResourceType)?,
+      "ErrorMessage" : (String)?,
+      "FailureTime" : (DateTime)?,
+      "OperationName" : (String)?,
+      "ResourceOwnerId" : (String)?,
+      "OperationRequestedBy" : (String)?,
+      "MetadataList" : (MetadataList)?
+    )
+
+    alias LicenseOperationFailureList = Array(LicenseOperationFailure)
+
+    alias LicenseSpecification = NamedTuple(
+      "LicenseConfigurationArn" : String,
+      "AmiAssociationScope" : (String)?
+    )
+
+    alias LicenseSpecifications = Array(LicenseSpecification)
+
+    alias LicenseStatus = String
+
+    alias LicenseUsage = NamedTuple(
+      "EntitlementUsages" : (EntitlementUsageList)?
+    )
+
+    alias LicenseUsageException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ListAssociationsForLicenseConfigurationRequest = NamedTuple(
+      "LicenseConfigurationArn" : String,
+      "MaxResults" : (BoxInteger)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListAssociationsForLicenseConfigurationResponse = NamedTuple(
+      "LicenseConfigurationAssociations" : (LicenseConfigurationAssociations)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListDistributedGrantsRequest = NamedTuple(
+      "GrantArns" : (ArnList)?,
+      "Filters" : (FilterList)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias ListDistributedGrantsResponse = NamedTuple(
+      "Grants" : (GrantList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListFailuresForLicenseConfigurationOperationsRequest = NamedTuple(
+      "LicenseConfigurationArn" : String,
+      "MaxResults" : (BoxInteger)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListFailuresForLicenseConfigurationOperationsResponse = NamedTuple(
+      "LicenseOperationFailureList" : (LicenseOperationFailureList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListLicenseConfigurationsRequest = NamedTuple(
+      "LicenseConfigurationArns" : (StringList)?,
+      "MaxResults" : (BoxInteger)?,
+      "NextToken" : (String)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListLicenseConfigurationsResponse = NamedTuple(
+      "LicenseConfigurations" : (LicenseConfigurations)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListLicenseSpecificationsForResourceRequest = NamedTuple(
+      "ResourceArn" : String,
+      "MaxResults" : (BoxInteger)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListLicenseSpecificationsForResourceResponse = NamedTuple(
+      "LicenseSpecifications" : (LicenseSpecifications)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListLicenseVersionsRequest = NamedTuple(
+      "LicenseArn" : Arn,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias ListLicenseVersionsResponse = NamedTuple(
+      "Licenses" : (LicenseList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListLicensesRequest = NamedTuple(
+      "LicenseArns" : (ArnList)?,
+      "Filters" : (FilterList)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias ListLicensesResponse = NamedTuple(
+      "Licenses" : (LicenseList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListReceivedGrantsRequest = NamedTuple(
+      "GrantArns" : (ArnList)?,
+      "Filters" : (FilterList)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias ListReceivedGrantsResponse = NamedTuple(
+      "Grants" : (GrantList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListReceivedLicensesRequest = NamedTuple(
+      "LicenseArns" : (ArnList)?,
+      "Filters" : (FilterList)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias ListReceivedLicensesResponse = NamedTuple(
+      "Licenses" : (GrantedLicenseList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListResourceInventoryRequest = NamedTuple(
+      "MaxResults" : (BoxInteger)?,
+      "NextToken" : (String)?,
+      "Filters" : (InventoryFilterList)?
+    )
+
+    alias ListResourceInventoryResponse = NamedTuple(
+      "ResourceInventoryList" : (ResourceInventoryList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : String
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListTokensRequest = NamedTuple(
+      "TokenIds" : (StringList)?,
+      "Filters" : (FilterList)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias ListTokensResponse = NamedTuple(
+      "Tokens" : (TokenList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListUsageForLicenseConfigurationRequest = NamedTuple(
+      "LicenseConfigurationArn" : String,
+      "MaxResults" : (BoxInteger)?,
+      "NextToken" : (String)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListUsageForLicenseConfigurationResponse = NamedTuple(
+      "LicenseConfigurationUsageList" : (LicenseConfigurationUsageList)?,
+      "NextToken" : (String)?
+    )
+
+    alias Location = String
+
+    alias Long = Int64
+
+    alias ManagedResourceSummary = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "AssociationCount" : (BoxLong)?
+    )
+
+    alias ManagedResourceSummaryList = Array(ManagedResourceSummary)
+
+    alias MaxSize100 = Int32
+
+    alias MaxSize3StringList = Array(String)
+
+    alias Message = String
+
+    alias Metadata = NamedTuple(
+      "Name" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias MetadataList = Array(Metadata)
+
+    alias NoEntitlementsAllowedException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias OrganizationConfiguration = NamedTuple(
+      "EnableIntegration" : Boolean
+    )
+
+    alias PrincipalArnList = Array(Arn)
+
+    alias ProductInformation = NamedTuple(
+      "ResourceType" : String,
+      "ProductInformationFilterList" : ProductInformationFilterList
+    )
+
+    alias ProductInformationFilter = NamedTuple(
+      "ProductInformationFilterName" : String,
+      "ProductInformationFilterValue" : StringList,
+      "ProductInformationFilterComparator" : String
+    )
+
+    alias ProductInformationFilterList = Array(ProductInformationFilter)
+
+    alias ProductInformationList = Array(ProductInformation)
+
+    alias ProvisionalConfiguration = NamedTuple(
+      "MaxTimeToLiveInMinutes" : BoxInteger
+    )
+
+    alias RateLimitExceededException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ReceivedMetadata = NamedTuple(
+      "ReceivedStatus" : (ReceivedStatus)?,
+      "AllowedOperations" : (AllowedOperationList)?
+    )
+
+    alias ReceivedStatus = String
+
+    alias RedirectException = NamedTuple(
+      "Location" : (Location)?,
+      "Message" : (Message)?
+    )
+
+    alias RejectGrantRequest = NamedTuple(
+      "GrantArn" : Arn
+    )
+
+    alias RejectGrantResponse = NamedTuple(
+      "GrantArn" : (Arn)?,
+      "Status" : (GrantStatus)?,
+      "Version" : (String)?
+    )
+
+    alias RenewType = String
+
+    alias ResourceInventory = NamedTuple(
+      "ResourceId" : (String)?,
+      "ResourceType" : (ResourceType)?,
+      "ResourceArn" : (String)?,
+      "Platform" : (String)?,
+      "PlatformVersion" : (String)?,
+      "ResourceOwningAccountId" : (String)?
+    )
+
+    alias ResourceInventoryList = Array(ResourceInventory)
+
+    alias ResourceLimitExceededException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ResourceType = String
+
+    alias ServerInternalException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias SignedToken = String
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagKeyList = Array(String)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : String,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TokenData = NamedTuple(
+      "TokenId" : (String)?,
+      "TokenType" : (String)?,
+      "LicenseArn" : (String)?,
+      "ExpirationTime" : (ISO8601DateTime)?,
+      "TokenProperties" : (MaxSize3StringList)?,
+      "RoleArns" : (ArnList)?,
+      "Status" : (String)?
+    )
+
+    alias TokenList = Array(TokenData)
+
+    alias TokenString = String
+
+    alias TokenType = String
+
+    alias UnsupportedDigitalSignatureMethodException = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : String,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateLicenseConfigurationRequest = NamedTuple(
+      "LicenseConfigurationArn" : String,
+      "LicenseConfigurationStatus" : (LicenseConfigurationStatus)?,
+      "LicenseRules" : (StringList)?,
+      "LicenseCount" : (BoxLong)?,
+      "LicenseCountHardLimit" : (BoxBoolean)?,
+      "Name" : (String)?,
+      "Description" : (String)?,
+      "ProductInformationList" : (ProductInformationList)?,
+      "DisassociateWhenNotFound" : (BoxBoolean)?
+    )
+
+    alias UpdateLicenseConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdateLicenseSpecificationsForResourceRequest = NamedTuple(
+      "ResourceArn" : String,
+      "AddLicenseSpecifications" : (LicenseSpecifications)?,
+      "RemoveLicenseSpecifications" : (LicenseSpecifications)?
+    )
+
+    alias UpdateLicenseSpecificationsForResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateServiceSettingsRequest = NamedTuple(
+      "S3BucketArn" : (String)?,
+      "SnsTopicArn" : (String)?,
+      "OrganizationConfiguration" : (OrganizationConfiguration)?,
+      "EnableCrossAccountsDiscovery" : (BoxBoolean)?
+    )
+
+    alias UpdateServiceSettingsResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (Message)?
+    )
   end
 end

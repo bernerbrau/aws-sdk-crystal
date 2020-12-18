@@ -8409,5 +8409,1284 @@ module Aws::AppMesh
       include Aws::Structure
     end
 
+    alias AccessLog = NamedTuple(
+      "file" : (FileAccessLog)?
+    )
+
+    alias AccountId = String
+
+    alias Arn = String
+
+    alias AwsCloudMapInstanceAttribute = NamedTuple(
+      "key" : AwsCloudMapInstanceAttributeKey,
+      "value" : AwsCloudMapInstanceAttributeValue
+    )
+
+    alias AwsCloudMapInstanceAttributeKey = String
+
+    alias AwsCloudMapInstanceAttributeValue = String
+
+    alias AwsCloudMapInstanceAttributes = Array(AwsCloudMapInstanceAttribute)
+
+    alias AwsCloudMapName = String
+
+    alias AwsCloudMapServiceDiscovery = NamedTuple(
+      "attributes" : (AwsCloudMapInstanceAttributes)?,
+      "namespaceName" : AwsCloudMapName,
+      "serviceName" : AwsCloudMapName
+    )
+
+    alias Backend = NamedTuple(
+      "virtualService" : (VirtualServiceBackend)?
+    )
+
+    alias BackendDefaults = NamedTuple(
+      "clientPolicy" : (ClientPolicy)?
+    )
+
+    alias Backends = Array(Backend)
+
+    alias BadRequestException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Boolean = Bool
+
+    alias CertificateAuthorityArns = Array(Arn)
+
+    alias ClientPolicy = NamedTuple(
+      "tls" : (ClientPolicyTls)?
+    )
+
+    alias ClientPolicyTls = NamedTuple(
+      "enforce" : (Boolean)?,
+      "ports" : (PortSet)?,
+      "validation" : TlsValidationContext
+    )
+
+    alias ConflictException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias CreateGatewayRouteInput = NamedTuple(
+      "clientToken" : (String)?,
+      "gatewayRouteName" : ResourceName,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : GatewayRouteSpec,
+      "tags" : (TagList)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias CreateGatewayRouteOutput = NamedTuple(
+      "gatewayRoute" : GatewayRouteData
+    )
+
+    alias CreateMeshInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "spec" : (MeshSpec)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateMeshOutput = NamedTuple(
+      "mesh" : MeshData
+    )
+
+    alias CreateRouteInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "routeName" : ResourceName,
+      "spec" : RouteSpec,
+      "tags" : (TagList)?,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias CreateRouteOutput = NamedTuple(
+      "route" : RouteData
+    )
+
+    alias CreateVirtualGatewayInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualGatewaySpec,
+      "tags" : (TagList)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias CreateVirtualGatewayOutput = NamedTuple(
+      "virtualGateway" : VirtualGatewayData
+    )
+
+    alias CreateVirtualNodeInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualNodeSpec,
+      "tags" : (TagList)?,
+      "virtualNodeName" : ResourceName
+    )
+
+    alias CreateVirtualNodeOutput = NamedTuple(
+      "virtualNode" : VirtualNodeData
+    )
+
+    alias CreateVirtualRouterInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualRouterSpec,
+      "tags" : (TagList)?,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias CreateVirtualRouterOutput = NamedTuple(
+      "virtualRouter" : VirtualRouterData
+    )
+
+    alias CreateVirtualServiceInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualServiceSpec,
+      "tags" : (TagList)?,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias CreateVirtualServiceOutput = NamedTuple(
+      "virtualService" : VirtualServiceData
+    )
+
+    alias DeleteGatewayRouteInput = NamedTuple(
+      "gatewayRouteName" : ResourceName,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias DeleteGatewayRouteOutput = NamedTuple(
+      "gatewayRoute" : GatewayRouteData
+    )
+
+    alias DeleteMeshInput = NamedTuple(
+      "meshName" : ResourceName
+    )
+
+    alias DeleteMeshOutput = NamedTuple(
+      "mesh" : MeshData
+    )
+
+    alias DeleteRouteInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "routeName" : ResourceName,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias DeleteRouteOutput = NamedTuple(
+      "route" : RouteData
+    )
+
+    alias DeleteVirtualGatewayInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias DeleteVirtualGatewayOutput = NamedTuple(
+      "virtualGateway" : VirtualGatewayData
+    )
+
+    alias DeleteVirtualNodeInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualNodeName" : ResourceName
+    )
+
+    alias DeleteVirtualNodeOutput = NamedTuple(
+      "virtualNode" : VirtualNodeData
+    )
+
+    alias DeleteVirtualRouterInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias DeleteVirtualRouterOutput = NamedTuple(
+      "virtualRouter" : VirtualRouterData
+    )
+
+    alias DeleteVirtualServiceInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias DeleteVirtualServiceOutput = NamedTuple(
+      "virtualService" : VirtualServiceData
+    )
+
+    alias DescribeGatewayRouteInput = NamedTuple(
+      "gatewayRouteName" : ResourceName,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias DescribeGatewayRouteOutput = NamedTuple(
+      "gatewayRoute" : GatewayRouteData
+    )
+
+    alias DescribeMeshInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?
+    )
+
+    alias DescribeMeshOutput = NamedTuple(
+      "mesh" : MeshData
+    )
+
+    alias DescribeRouteInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "routeName" : ResourceName,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias DescribeRouteOutput = NamedTuple(
+      "route" : RouteData
+    )
+
+    alias DescribeVirtualGatewayInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias DescribeVirtualGatewayOutput = NamedTuple(
+      "virtualGateway" : VirtualGatewayData
+    )
+
+    alias DescribeVirtualNodeInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualNodeName" : ResourceName
+    )
+
+    alias DescribeVirtualNodeOutput = NamedTuple(
+      "virtualNode" : VirtualNodeData
+    )
+
+    alias DescribeVirtualRouterInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias DescribeVirtualRouterOutput = NamedTuple(
+      "virtualRouter" : VirtualRouterData
+    )
+
+    alias DescribeVirtualServiceInput = NamedTuple(
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias DescribeVirtualServiceOutput = NamedTuple(
+      "virtualService" : VirtualServiceData
+    )
+
+    alias DnsServiceDiscovery = NamedTuple(
+      "hostname" : Hostname
+    )
+
+    alias Duration = NamedTuple(
+      "unit" : (DurationUnit)?,
+      "value" : (DurationValue)?
+    )
+
+    alias DurationUnit = String
+
+    alias DurationValue = Int64
+
+    alias EgressFilter = NamedTuple(
+      "type" : EgressFilterType
+    )
+
+    alias EgressFilterType = String
+
+    alias FileAccessLog = NamedTuple(
+      "path" : FilePath
+    )
+
+    alias FilePath = String
+
+    alias ForbiddenException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias GatewayRouteData = NamedTuple(
+      "gatewayRouteName" : ResourceName,
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "spec" : GatewayRouteSpec,
+      "status" : GatewayRouteStatus,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias GatewayRouteList = Array(GatewayRouteRef)
+
+    alias GatewayRouteRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "gatewayRouteName" : ResourceName,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "version" : Long,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias GatewayRouteSpec = NamedTuple(
+      "grpcRoute" : (GrpcGatewayRoute)?,
+      "http2Route" : (HttpGatewayRoute)?,
+      "httpRoute" : (HttpGatewayRoute)?
+    )
+
+    alias GatewayRouteStatus = NamedTuple(
+      "status" : GatewayRouteStatusCode
+    )
+
+    alias GatewayRouteStatusCode = String
+
+    alias GatewayRouteTarget = NamedTuple(
+      "virtualService" : GatewayRouteVirtualService
+    )
+
+    alias GatewayRouteVirtualService = NamedTuple(
+      "virtualServiceName" : ResourceName
+    )
+
+    alias GrpcGatewayRoute = NamedTuple(
+      "action" : GrpcGatewayRouteAction,
+      "match" : GrpcGatewayRouteMatch
+    )
+
+    alias GrpcGatewayRouteAction = NamedTuple(
+      "target" : GatewayRouteTarget
+    )
+
+    alias GrpcGatewayRouteMatch = NamedTuple(
+      "serviceName" : (ServiceName)?
+    )
+
+    alias GrpcRetryPolicy = NamedTuple(
+      "grpcRetryEvents" : (GrpcRetryPolicyEvents)?,
+      "httpRetryEvents" : (HttpRetryPolicyEvents)?,
+      "maxRetries" : MaxRetries,
+      "perRetryTimeout" : Duration,
+      "tcpRetryEvents" : (TcpRetryPolicyEvents)?
+    )
+
+    alias GrpcRetryPolicyEvent = String
+
+    alias GrpcRetryPolicyEvents = Array(GrpcRetryPolicyEvent)
+
+    alias GrpcRoute = NamedTuple(
+      "action" : GrpcRouteAction,
+      "match" : GrpcRouteMatch,
+      "retryPolicy" : (GrpcRetryPolicy)?,
+      "timeout" : (GrpcTimeout)?
+    )
+
+    alias GrpcRouteAction = NamedTuple(
+      "weightedTargets" : WeightedTargets
+    )
+
+    alias GrpcRouteMatch = NamedTuple(
+      "metadata" : (GrpcRouteMetadataList)?,
+      "methodName" : (MethodName)?,
+      "serviceName" : (ServiceName)?
+    )
+
+    alias GrpcRouteMetadata = NamedTuple(
+      "invert" : (Boolean)?,
+      "match" : (GrpcRouteMetadataMatchMethod)?,
+      "name" : HeaderName
+    )
+
+    alias GrpcRouteMetadataList = Array(GrpcRouteMetadata)
+
+    alias GrpcRouteMetadataMatchMethod = NamedTuple(
+      "exact" : (HeaderMatch)?,
+      "prefix" : (HeaderMatch)?,
+      "range" : (MatchRange)?,
+      "regex" : (HeaderMatch)?,
+      "suffix" : (HeaderMatch)?
+    )
+
+    alias GrpcTimeout = NamedTuple(
+      "idle" : (Duration)?,
+      "perRequest" : (Duration)?
+    )
+
+    alias HeaderMatch = String
+
+    alias HeaderMatchMethod = NamedTuple(
+      "exact" : (HeaderMatch)?,
+      "prefix" : (HeaderMatch)?,
+      "range" : (MatchRange)?,
+      "regex" : (HeaderMatch)?,
+      "suffix" : (HeaderMatch)?
+    )
+
+    alias HeaderName = String
+
+    alias HealthCheckIntervalMillis = Int64
+
+    alias HealthCheckPolicy = NamedTuple(
+      "healthyThreshold" : HealthCheckThreshold,
+      "intervalMillis" : HealthCheckIntervalMillis,
+      "path" : (String)?,
+      "port" : (PortNumber)?,
+      "protocol" : PortProtocol,
+      "timeoutMillis" : HealthCheckTimeoutMillis,
+      "unhealthyThreshold" : HealthCheckThreshold
+    )
+
+    alias HealthCheckThreshold = Int32
+
+    alias HealthCheckTimeoutMillis = Int64
+
+    alias Hostname = String
+
+    alias HttpGatewayRoute = NamedTuple(
+      "action" : HttpGatewayRouteAction,
+      "match" : HttpGatewayRouteMatch
+    )
+
+    alias HttpGatewayRouteAction = NamedTuple(
+      "target" : GatewayRouteTarget
+    )
+
+    alias HttpGatewayRouteMatch = NamedTuple(
+      "prefix" : String
+    )
+
+    alias HttpMethod = String
+
+    alias HttpRetryPolicy = NamedTuple(
+      "httpRetryEvents" : (HttpRetryPolicyEvents)?,
+      "maxRetries" : MaxRetries,
+      "perRetryTimeout" : Duration,
+      "tcpRetryEvents" : (TcpRetryPolicyEvents)?
+    )
+
+    alias HttpRetryPolicyEvent = String
+
+    alias HttpRetryPolicyEvents = Array(HttpRetryPolicyEvent)
+
+    alias HttpRoute = NamedTuple(
+      "action" : HttpRouteAction,
+      "match" : HttpRouteMatch,
+      "retryPolicy" : (HttpRetryPolicy)?,
+      "timeout" : (HttpTimeout)?
+    )
+
+    alias HttpRouteAction = NamedTuple(
+      "weightedTargets" : WeightedTargets
+    )
+
+    alias HttpRouteHeader = NamedTuple(
+      "invert" : (Boolean)?,
+      "match" : (HeaderMatchMethod)?,
+      "name" : HeaderName
+    )
+
+    alias HttpRouteHeaders = Array(HttpRouteHeader)
+
+    alias HttpRouteMatch = NamedTuple(
+      "headers" : (HttpRouteHeaders)?,
+      "method" : (HttpMethod)?,
+      "prefix" : String,
+      "scheme" : (HttpScheme)?
+    )
+
+    alias HttpScheme = String
+
+    alias HttpTimeout = NamedTuple(
+      "idle" : (Duration)?,
+      "perRequest" : (Duration)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ListGatewayRoutesInput = NamedTuple(
+      "limit" : (ListGatewayRoutesLimit)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "nextToken" : (String)?,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias ListGatewayRoutesLimit = Int32
+
+    alias ListGatewayRoutesOutput = NamedTuple(
+      "gatewayRoutes" : GatewayRouteList,
+      "nextToken" : (String)?
+    )
+
+    alias ListMeshesInput = NamedTuple(
+      "limit" : (ListMeshesLimit)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListMeshesLimit = Int32
+
+    alias ListMeshesOutput = NamedTuple(
+      "meshes" : MeshList,
+      "nextToken" : (String)?
+    )
+
+    alias ListRoutesInput = NamedTuple(
+      "limit" : (ListRoutesLimit)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "nextToken" : (String)?,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias ListRoutesLimit = Int32
+
+    alias ListRoutesOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "routes" : RouteList
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "limit" : (TagsLimit)?,
+      "nextToken" : (String)?,
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "tags" : TagList
+    )
+
+    alias ListVirtualGatewaysInput = NamedTuple(
+      "limit" : (ListVirtualGatewaysLimit)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListVirtualGatewaysLimit = Int32
+
+    alias ListVirtualGatewaysOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "virtualGateways" : VirtualGatewayList
+    )
+
+    alias ListVirtualNodesInput = NamedTuple(
+      "limit" : (ListVirtualNodesLimit)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListVirtualNodesLimit = Int32
+
+    alias ListVirtualNodesOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "virtualNodes" : VirtualNodeList
+    )
+
+    alias ListVirtualRoutersInput = NamedTuple(
+      "limit" : (ListVirtualRoutersLimit)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListVirtualRoutersLimit = Int32
+
+    alias ListVirtualRoutersOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "virtualRouters" : VirtualRouterList
+    )
+
+    alias ListVirtualServicesInput = NamedTuple(
+      "limit" : (ListVirtualServicesLimit)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListVirtualServicesLimit = Int32
+
+    alias ListVirtualServicesOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "virtualServices" : VirtualServiceList
+    )
+
+    alias Listener = NamedTuple(
+      "connectionPool" : (VirtualNodeConnectionPool)?,
+      "healthCheck" : (HealthCheckPolicy)?,
+      "outlierDetection" : (OutlierDetection)?,
+      "portMapping" : PortMapping,
+      "timeout" : (ListenerTimeout)?,
+      "tls" : (ListenerTls)?
+    )
+
+    alias ListenerTimeout = NamedTuple(
+      "grpc" : (GrpcTimeout)?,
+      "http" : (HttpTimeout)?,
+      "http2" : (HttpTimeout)?,
+      "tcp" : (TcpTimeout)?
+    )
+
+    alias ListenerTls = NamedTuple(
+      "certificate" : ListenerTlsCertificate,
+      "mode" : ListenerTlsMode
+    )
+
+    alias ListenerTlsAcmCertificate = NamedTuple(
+      "certificateArn" : Arn
+    )
+
+    alias ListenerTlsCertificate = NamedTuple(
+      "acm" : (ListenerTlsAcmCertificate)?,
+      "file" : (ListenerTlsFileCertificate)?
+    )
+
+    alias ListenerTlsFileCertificate = NamedTuple(
+      "certificateChain" : FilePath,
+      "privateKey" : FilePath
+    )
+
+    alias ListenerTlsMode = String
+
+    alias Listeners = Array(Listener)
+
+    alias Logging = NamedTuple(
+      "accessLog" : (AccessLog)?
+    )
+
+    alias Long = Int64
+
+    alias MatchRange = NamedTuple(
+      "end" : Long,
+      "start" : Long
+    )
+
+    alias MaxConnections = Int32
+
+    alias MaxPendingRequests = Int32
+
+    alias MaxRequests = Int32
+
+    alias MaxRetries = Int64
+
+    alias MeshData = NamedTuple(
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "spec" : MeshSpec,
+      "status" : MeshStatus
+    )
+
+    alias MeshList = Array(MeshRef)
+
+    alias MeshRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "version" : Long
+    )
+
+    alias MeshSpec = NamedTuple(
+      "egressFilter" : (EgressFilter)?
+    )
+
+    alias MeshStatus = NamedTuple(
+      "status" : (MeshStatusCode)?
+    )
+
+    alias MeshStatusCode = String
+
+    alias MethodName = String
+
+    alias NotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OutlierDetection = NamedTuple(
+      "baseEjectionDuration" : Duration,
+      "interval" : Duration,
+      "maxEjectionPercent" : OutlierDetectionMaxEjectionPercent,
+      "maxServerErrors" : OutlierDetectionMaxServerErrors
+    )
+
+    alias OutlierDetectionMaxEjectionPercent = Int32
+
+    alias OutlierDetectionMaxServerErrors = Int64
+
+    alias PercentInt = Int32
+
+    alias PortMapping = NamedTuple(
+      "port" : PortNumber,
+      "protocol" : PortProtocol
+    )
+
+    alias PortNumber = Int32
+
+    alias PortProtocol = String
+
+    alias PortSet = Array(PortNumber)
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResourceMetadata = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "uid" : String,
+      "version" : Long
+    )
+
+    alias ResourceName = String
+
+    alias RouteData = NamedTuple(
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "routeName" : ResourceName,
+      "spec" : RouteSpec,
+      "status" : RouteStatus,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias RouteList = Array(RouteRef)
+
+    alias RoutePriority = Int32
+
+    alias RouteRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "routeName" : ResourceName,
+      "version" : Long,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias RouteSpec = NamedTuple(
+      "grpcRoute" : (GrpcRoute)?,
+      "http2Route" : (HttpRoute)?,
+      "httpRoute" : (HttpRoute)?,
+      "priority" : (RoutePriority)?,
+      "tcpRoute" : (TcpRoute)?
+    )
+
+    alias RouteStatus = NamedTuple(
+      "status" : RouteStatusCode
+    )
+
+    alias RouteStatusCode = String
+
+    alias ServiceDiscovery = NamedTuple(
+      "awsCloudMap" : (AwsCloudMapServiceDiscovery)?,
+      "dns" : (DnsServiceDiscovery)?
+    )
+
+    alias ServiceName = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(TagRef)
+
+    alias TagRef = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagResourceInput = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagsLimit = Int32
+
+    alias TcpRetryPolicyEvent = String
+
+    alias TcpRetryPolicyEvents = Array(TcpRetryPolicyEvent)
+
+    alias TcpRoute = NamedTuple(
+      "action" : TcpRouteAction,
+      "timeout" : (TcpTimeout)?
+    )
+
+    alias TcpRouteAction = NamedTuple(
+      "weightedTargets" : WeightedTargets
+    )
+
+    alias TcpTimeout = NamedTuple(
+      "idle" : (Duration)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TlsValidationContext = NamedTuple(
+      "trust" : TlsValidationContextTrust
+    )
+
+    alias TlsValidationContextAcmTrust = NamedTuple(
+      "certificateAuthorityArns" : CertificateAuthorityArns
+    )
+
+    alias TlsValidationContextFileTrust = NamedTuple(
+      "certificateChain" : FilePath
+    )
+
+    alias TlsValidationContextTrust = NamedTuple(
+      "acm" : (TlsValidationContextAcmTrust)?,
+      "file" : (TlsValidationContextFileTrust)?
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UntagResourceInput = NamedTuple(
+      "resourceArn" : Arn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UpdateGatewayRouteInput = NamedTuple(
+      "clientToken" : (String)?,
+      "gatewayRouteName" : ResourceName,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : GatewayRouteSpec,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias UpdateGatewayRouteOutput = NamedTuple(
+      "gatewayRoute" : GatewayRouteData
+    )
+
+    alias UpdateMeshInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "spec" : (MeshSpec)?
+    )
+
+    alias UpdateMeshOutput = NamedTuple(
+      "mesh" : MeshData
+    )
+
+    alias UpdateRouteInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "routeName" : ResourceName,
+      "spec" : RouteSpec,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias UpdateRouteOutput = NamedTuple(
+      "route" : RouteData
+    )
+
+    alias UpdateVirtualGatewayInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualGatewaySpec,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias UpdateVirtualGatewayOutput = NamedTuple(
+      "virtualGateway" : VirtualGatewayData
+    )
+
+    alias UpdateVirtualNodeInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualNodeSpec,
+      "virtualNodeName" : ResourceName
+    )
+
+    alias UpdateVirtualNodeOutput = NamedTuple(
+      "virtualNode" : VirtualNodeData
+    )
+
+    alias UpdateVirtualRouterInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualRouterSpec,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias UpdateVirtualRouterOutput = NamedTuple(
+      "virtualRouter" : VirtualRouterData
+    )
+
+    alias UpdateVirtualServiceInput = NamedTuple(
+      "clientToken" : (String)?,
+      "meshName" : ResourceName,
+      "meshOwner" : (AccountId)?,
+      "spec" : VirtualServiceSpec,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias UpdateVirtualServiceOutput = NamedTuple(
+      "virtualService" : VirtualServiceData
+    )
+
+    alias VirtualGatewayAccessLog = NamedTuple(
+      "file" : (VirtualGatewayFileAccessLog)?
+    )
+
+    alias VirtualGatewayBackendDefaults = NamedTuple(
+      "clientPolicy" : (VirtualGatewayClientPolicy)?
+    )
+
+    alias VirtualGatewayCertificateAuthorityArns = Array(Arn)
+
+    alias VirtualGatewayClientPolicy = NamedTuple(
+      "tls" : (VirtualGatewayClientPolicyTls)?
+    )
+
+    alias VirtualGatewayClientPolicyTls = NamedTuple(
+      "enforce" : (Boolean)?,
+      "ports" : (PortSet)?,
+      "validation" : VirtualGatewayTlsValidationContext
+    )
+
+    alias VirtualGatewayConnectionPool = NamedTuple(
+      "grpc" : (VirtualGatewayGrpcConnectionPool)?,
+      "http" : (VirtualGatewayHttpConnectionPool)?,
+      "http2" : (VirtualGatewayHttp2ConnectionPool)?
+    )
+
+    alias VirtualGatewayData = NamedTuple(
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "spec" : VirtualGatewaySpec,
+      "status" : VirtualGatewayStatus,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias VirtualGatewayFileAccessLog = NamedTuple(
+      "path" : FilePath
+    )
+
+    alias VirtualGatewayGrpcConnectionPool = NamedTuple(
+      "maxRequests" : MaxRequests
+    )
+
+    alias VirtualGatewayHealthCheckIntervalMillis = Int64
+
+    alias VirtualGatewayHealthCheckPolicy = NamedTuple(
+      "healthyThreshold" : VirtualGatewayHealthCheckThreshold,
+      "intervalMillis" : VirtualGatewayHealthCheckIntervalMillis,
+      "path" : (String)?,
+      "port" : (PortNumber)?,
+      "protocol" : VirtualGatewayPortProtocol,
+      "timeoutMillis" : VirtualGatewayHealthCheckTimeoutMillis,
+      "unhealthyThreshold" : VirtualGatewayHealthCheckThreshold
+    )
+
+    alias VirtualGatewayHealthCheckThreshold = Int32
+
+    alias VirtualGatewayHealthCheckTimeoutMillis = Int64
+
+    alias VirtualGatewayHttp2ConnectionPool = NamedTuple(
+      "maxRequests" : MaxRequests
+    )
+
+    alias VirtualGatewayHttpConnectionPool = NamedTuple(
+      "maxConnections" : MaxConnections,
+      "maxPendingRequests" : (MaxPendingRequests)?
+    )
+
+    alias VirtualGatewayList = Array(VirtualGatewayRef)
+
+    alias VirtualGatewayListener = NamedTuple(
+      "connectionPool" : (VirtualGatewayConnectionPool)?,
+      "healthCheck" : (VirtualGatewayHealthCheckPolicy)?,
+      "portMapping" : VirtualGatewayPortMapping,
+      "tls" : (VirtualGatewayListenerTls)?
+    )
+
+    alias VirtualGatewayListenerTls = NamedTuple(
+      "certificate" : VirtualGatewayListenerTlsCertificate,
+      "mode" : VirtualGatewayListenerTlsMode
+    )
+
+    alias VirtualGatewayListenerTlsAcmCertificate = NamedTuple(
+      "certificateArn" : Arn
+    )
+
+    alias VirtualGatewayListenerTlsCertificate = NamedTuple(
+      "acm" : (VirtualGatewayListenerTlsAcmCertificate)?,
+      "file" : (VirtualGatewayListenerTlsFileCertificate)?
+    )
+
+    alias VirtualGatewayListenerTlsFileCertificate = NamedTuple(
+      "certificateChain" : FilePath,
+      "privateKey" : FilePath
+    )
+
+    alias VirtualGatewayListenerTlsMode = String
+
+    alias VirtualGatewayListeners = Array(VirtualGatewayListener)
+
+    alias VirtualGatewayLogging = NamedTuple(
+      "accessLog" : (VirtualGatewayAccessLog)?
+    )
+
+    alias VirtualGatewayPortMapping = NamedTuple(
+      "port" : PortNumber,
+      "protocol" : VirtualGatewayPortProtocol
+    )
+
+    alias VirtualGatewayPortProtocol = String
+
+    alias VirtualGatewayRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "version" : Long,
+      "virtualGatewayName" : ResourceName
+    )
+
+    alias VirtualGatewaySpec = NamedTuple(
+      "backendDefaults" : (VirtualGatewayBackendDefaults)?,
+      "listeners" : VirtualGatewayListeners,
+      "logging" : (VirtualGatewayLogging)?
+    )
+
+    alias VirtualGatewayStatus = NamedTuple(
+      "status" : VirtualGatewayStatusCode
+    )
+
+    alias VirtualGatewayStatusCode = String
+
+    alias VirtualGatewayTlsValidationContext = NamedTuple(
+      "trust" : VirtualGatewayTlsValidationContextTrust
+    )
+
+    alias VirtualGatewayTlsValidationContextAcmTrust = NamedTuple(
+      "certificateAuthorityArns" : VirtualGatewayCertificateAuthorityArns
+    )
+
+    alias VirtualGatewayTlsValidationContextFileTrust = NamedTuple(
+      "certificateChain" : FilePath
+    )
+
+    alias VirtualGatewayTlsValidationContextTrust = NamedTuple(
+      "acm" : (VirtualGatewayTlsValidationContextAcmTrust)?,
+      "file" : (VirtualGatewayTlsValidationContextFileTrust)?
+    )
+
+    alias VirtualNodeConnectionPool = NamedTuple(
+      "grpc" : (VirtualNodeGrpcConnectionPool)?,
+      "http" : (VirtualNodeHttpConnectionPool)?,
+      "http2" : (VirtualNodeHttp2ConnectionPool)?,
+      "tcp" : (VirtualNodeTcpConnectionPool)?
+    )
+
+    alias VirtualNodeData = NamedTuple(
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "spec" : VirtualNodeSpec,
+      "status" : VirtualNodeStatus,
+      "virtualNodeName" : ResourceName
+    )
+
+    alias VirtualNodeGrpcConnectionPool = NamedTuple(
+      "maxRequests" : MaxRequests
+    )
+
+    alias VirtualNodeHttp2ConnectionPool = NamedTuple(
+      "maxRequests" : MaxRequests
+    )
+
+    alias VirtualNodeHttpConnectionPool = NamedTuple(
+      "maxConnections" : MaxConnections,
+      "maxPendingRequests" : (MaxPendingRequests)?
+    )
+
+    alias VirtualNodeList = Array(VirtualNodeRef)
+
+    alias VirtualNodeRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "version" : Long,
+      "virtualNodeName" : ResourceName
+    )
+
+    alias VirtualNodeServiceProvider = NamedTuple(
+      "virtualNodeName" : ResourceName
+    )
+
+    alias VirtualNodeSpec = NamedTuple(
+      "backendDefaults" : (BackendDefaults)?,
+      "backends" : (Backends)?,
+      "listeners" : (Listeners)?,
+      "logging" : (Logging)?,
+      "serviceDiscovery" : (ServiceDiscovery)?
+    )
+
+    alias VirtualNodeStatus = NamedTuple(
+      "status" : VirtualNodeStatusCode
+    )
+
+    alias VirtualNodeStatusCode = String
+
+    alias VirtualNodeTcpConnectionPool = NamedTuple(
+      "maxConnections" : MaxConnections
+    )
+
+    alias VirtualRouterData = NamedTuple(
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "spec" : VirtualRouterSpec,
+      "status" : VirtualRouterStatus,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias VirtualRouterList = Array(VirtualRouterRef)
+
+    alias VirtualRouterListener = NamedTuple(
+      "portMapping" : PortMapping
+    )
+
+    alias VirtualRouterListeners = Array(VirtualRouterListener)
+
+    alias VirtualRouterRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "version" : Long,
+      "virtualRouterName" : ResourceName
+    )
+
+    alias VirtualRouterServiceProvider = NamedTuple(
+      "virtualRouterName" : ResourceName
+    )
+
+    alias VirtualRouterSpec = NamedTuple(
+      "listeners" : (VirtualRouterListeners)?
+    )
+
+    alias VirtualRouterStatus = NamedTuple(
+      "status" : VirtualRouterStatusCode
+    )
+
+    alias VirtualRouterStatusCode = String
+
+    alias VirtualServiceBackend = NamedTuple(
+      "clientPolicy" : (ClientPolicy)?,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias VirtualServiceData = NamedTuple(
+      "meshName" : ResourceName,
+      "metadata" : ResourceMetadata,
+      "spec" : VirtualServiceSpec,
+      "status" : VirtualServiceStatus,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias VirtualServiceList = Array(VirtualServiceRef)
+
+    alias VirtualServiceProvider = NamedTuple(
+      "virtualNode" : (VirtualNodeServiceProvider)?,
+      "virtualRouter" : (VirtualRouterServiceProvider)?
+    )
+
+    alias VirtualServiceRef = NamedTuple(
+      "arn" : Arn,
+      "createdAt" : Timestamp,
+      "lastUpdatedAt" : Timestamp,
+      "meshName" : ResourceName,
+      "meshOwner" : AccountId,
+      "resourceOwner" : AccountId,
+      "version" : Long,
+      "virtualServiceName" : ServiceName
+    )
+
+    alias VirtualServiceSpec = NamedTuple(
+      "provider" : (VirtualServiceProvider)?
+    )
+
+    alias VirtualServiceStatus = NamedTuple(
+      "status" : VirtualServiceStatusCode
+    )
+
+    alias VirtualServiceStatusCode = String
+
+    alias WeightedTarget = NamedTuple(
+      "virtualNode" : ResourceName,
+      "weight" : PercentInt
+    )
+
+    alias WeightedTargets = Array(WeightedTarget)
   end
 end

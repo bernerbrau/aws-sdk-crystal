@@ -3129,5 +3129,869 @@ module Aws::WorkMail
       include Aws::Structure
     end
 
+    alias AccessControlRule = NamedTuple(
+      "Name" : (AccessControlRuleName)?,
+      "Effect" : (AccessControlRuleEffect)?,
+      "Description" : (AccessControlRuleDescription)?,
+      "IpRanges" : (IpRangeList)?,
+      "NotIpRanges" : (IpRangeList)?,
+      "Actions" : (ActionsList)?,
+      "NotActions" : (ActionsList)?,
+      "UserIds" : (UserIdList)?,
+      "NotUserIds" : (UserIdList)?,
+      "DateCreated" : (Timestamp)?,
+      "DateModified" : (Timestamp)?
+    )
+
+    alias AccessControlRuleAction = String
+
+    alias AccessControlRuleDescription = String
+
+    alias AccessControlRuleEffect = String
+
+    alias AccessControlRuleName = String
+
+    alias AccessControlRuleNameList = Array(AccessControlRuleName)
+
+    alias AccessControlRulesList = Array(AccessControlRule)
+
+    alias ActionsList = Array(AccessControlRuleAction)
+
+    alias Aliases = Array(EmailAddress)
+
+    alias AmazonResourceName = String
+
+    alias AssociateDelegateToResourceRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "ResourceId" : ResourceId,
+      "EntityId" : WorkMailIdentifier
+    )
+
+    alias AssociateDelegateToResourceResponse = NamedTuple(
+      
+    )
+
+    alias AssociateMemberToGroupRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "GroupId" : WorkMailIdentifier,
+      "MemberId" : WorkMailIdentifier
+    )
+
+    alias AssociateMemberToGroupResponse = NamedTuple(
+      
+    )
+
+    alias BookingOptions = NamedTuple(
+      "AutoAcceptRequests" : (Boolean)?,
+      "AutoDeclineRecurringRequests" : (Boolean)?,
+      "AutoDeclineConflictingRequests" : (Boolean)?
+    )
+
+    alias Boolean = Bool
+
+    alias CancelMailboxExportJobRequest = NamedTuple(
+      "ClientToken" : IdempotencyClientToken,
+      "JobId" : MailboxExportJobId,
+      "OrganizationId" : OrganizationId
+    )
+
+    alias CancelMailboxExportJobResponse = NamedTuple(
+      
+    )
+
+    alias CreateAliasRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "Alias" : EmailAddress
+    )
+
+    alias CreateAliasResponse = NamedTuple(
+      
+    )
+
+    alias CreateGroupRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "Name" : GroupName
+    )
+
+    alias CreateGroupResponse = NamedTuple(
+      "GroupId" : (WorkMailIdentifier)?
+    )
+
+    alias CreateOrganizationRequest = NamedTuple(
+      "DirectoryId" : (DirectoryId)?,
+      "Alias" : OrganizationName,
+      "ClientToken" : (IdempotencyClientToken)?,
+      "Domains" : (Domains)?,
+      "KmsKeyArn" : (KmsKeyArn)?,
+      "EnableInteroperability" : (Boolean)?
+    )
+
+    alias CreateOrganizationResponse = NamedTuple(
+      "OrganizationId" : (OrganizationId)?
+    )
+
+    alias CreateResourceRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "Name" : ResourceName,
+      "Type" : ResourceType
+    )
+
+    alias CreateResourceResponse = NamedTuple(
+      "ResourceId" : (ResourceId)?
+    )
+
+    alias CreateUserRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "Name" : UserName,
+      "DisplayName" : String,
+      "Password" : Password
+    )
+
+    alias CreateUserResponse = NamedTuple(
+      "UserId" : (WorkMailIdentifier)?
+    )
+
+    alias Delegate = NamedTuple(
+      "Id" : String,
+      "Type" : MemberType
+    )
+
+    alias DeleteAccessControlRuleRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "Name" : AccessControlRuleName
+    )
+
+    alias DeleteAccessControlRuleResponse = NamedTuple(
+      
+    )
+
+    alias DeleteAliasRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "Alias" : EmailAddress
+    )
+
+    alias DeleteAliasResponse = NamedTuple(
+      
+    )
+
+    alias DeleteGroupRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "GroupId" : WorkMailIdentifier
+    )
+
+    alias DeleteGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteMailboxPermissionsRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "GranteeId" : WorkMailIdentifier
+    )
+
+    alias DeleteMailboxPermissionsResponse = NamedTuple(
+      
+    )
+
+    alias DeleteOrganizationRequest = NamedTuple(
+      "ClientToken" : (IdempotencyClientToken)?,
+      "OrganizationId" : OrganizationId,
+      "DeleteDirectory" : Boolean
+    )
+
+    alias DeleteOrganizationResponse = NamedTuple(
+      "OrganizationId" : (OrganizationId)?,
+      "State" : (String)?
+    )
+
+    alias DeleteResourceRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "ResourceId" : ResourceId
+    )
+
+    alias DeleteResourceResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRetentionPolicyRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "Id" : ShortString
+    )
+
+    alias DeleteRetentionPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "UserId" : WorkMailIdentifier
+    )
+
+    alias DeleteUserResponse = NamedTuple(
+      
+    )
+
+    alias DeregisterFromWorkMailRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier
+    )
+
+    alias DeregisterFromWorkMailResponse = NamedTuple(
+      
+    )
+
+    alias DescribeGroupRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "GroupId" : WorkMailIdentifier
+    )
+
+    alias DescribeGroupResponse = NamedTuple(
+      "GroupId" : (WorkMailIdentifier)?,
+      "Name" : (GroupName)?,
+      "Email" : (EmailAddress)?,
+      "State" : (EntityState)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias DescribeMailboxExportJobRequest = NamedTuple(
+      "JobId" : MailboxExportJobId,
+      "OrganizationId" : OrganizationId
+    )
+
+    alias DescribeMailboxExportJobResponse = NamedTuple(
+      "EntityId" : (WorkMailIdentifier)?,
+      "Description" : (Description)?,
+      "RoleArn" : (RoleArn)?,
+      "KmsKeyArn" : (KmsKeyArn)?,
+      "S3BucketName" : (S3BucketName)?,
+      "S3Prefix" : (S3ObjectKey)?,
+      "S3Path" : (S3ObjectKey)?,
+      "EstimatedProgress" : (Percentage)?,
+      "State" : (MailboxExportJobState)?,
+      "ErrorInfo" : (MailboxExportErrorInfo)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?
+    )
+
+    alias DescribeOrganizationRequest = NamedTuple(
+      "OrganizationId" : OrganizationId
+    )
+
+    alias DescribeOrganizationResponse = NamedTuple(
+      "OrganizationId" : (OrganizationId)?,
+      "Alias" : (OrganizationName)?,
+      "State" : (String)?,
+      "DirectoryId" : (String)?,
+      "DirectoryType" : (String)?,
+      "DefaultMailDomain" : (String)?,
+      "CompletedDate" : (Timestamp)?,
+      "ErrorMessage" : (String)?,
+      "ARN" : (AmazonResourceName)?
+    )
+
+    alias DescribeResourceRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "ResourceId" : ResourceId
+    )
+
+    alias DescribeResourceResponse = NamedTuple(
+      "ResourceId" : (ResourceId)?,
+      "Email" : (EmailAddress)?,
+      "Name" : (ResourceName)?,
+      "Type" : (ResourceType)?,
+      "BookingOptions" : (BookingOptions)?,
+      "State" : (EntityState)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias DescribeUserRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "UserId" : WorkMailIdentifier
+    )
+
+    alias DescribeUserResponse = NamedTuple(
+      "UserId" : (WorkMailIdentifier)?,
+      "Name" : (UserName)?,
+      "Email" : (EmailAddress)?,
+      "DisplayName" : (String)?,
+      "State" : (EntityState)?,
+      "UserRole" : (UserRole)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias Description = String
+
+    alias DirectoryId = String
+
+    alias DirectoryInUseException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DirectoryServiceAuthenticationFailedException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DirectoryUnavailableException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DisassociateDelegateFromResourceRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "ResourceId" : ResourceId,
+      "EntityId" : WorkMailIdentifier
+    )
+
+    alias DisassociateDelegateFromResourceResponse = NamedTuple(
+      
+    )
+
+    alias DisassociateMemberFromGroupRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "GroupId" : WorkMailIdentifier,
+      "MemberId" : WorkMailIdentifier
+    )
+
+    alias DisassociateMemberFromGroupResponse = NamedTuple(
+      
+    )
+
+    alias Domain = NamedTuple(
+      "DomainName" : (DomainName)?,
+      "HostedZoneId" : (HostedZoneId)?
+    )
+
+    alias DomainName = String
+
+    alias Domains = Array(Domain)
+
+    alias EmailAddress = String
+
+    alias EmailAddressInUseException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias EntityAlreadyRegisteredException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias EntityNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias EntityState = String
+
+    alias EntityStateException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias FolderConfiguration = NamedTuple(
+      "Name" : FolderName,
+      "Action" : RetentionAction,
+      "Period" : (RetentionPeriod)?
+    )
+
+    alias FolderConfigurations = Array(FolderConfiguration)
+
+    alias FolderName = String
+
+    alias GetAccessControlEffectRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "IpAddress" : IpAddress,
+      "Action" : AccessControlRuleAction,
+      "UserId" : WorkMailIdentifier
+    )
+
+    alias GetAccessControlEffectResponse = NamedTuple(
+      "Effect" : (AccessControlRuleEffect)?,
+      "MatchedRules" : (AccessControlRuleNameList)?
+    )
+
+    alias GetDefaultRetentionPolicyRequest = NamedTuple(
+      "OrganizationId" : OrganizationId
+    )
+
+    alias GetDefaultRetentionPolicyResponse = NamedTuple(
+      "Id" : (ShortString)?,
+      "Name" : (ShortString)?,
+      "Description" : (String)?,
+      "FolderConfigurations" : (FolderConfigurations)?
+    )
+
+    alias GetMailboxDetailsRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "UserId" : WorkMailIdentifier
+    )
+
+    alias GetMailboxDetailsResponse = NamedTuple(
+      "MailboxQuota" : (MailboxQuota)?,
+      "MailboxSize" : (MailboxSize)?
+    )
+
+    alias Group = NamedTuple(
+      "Id" : (WorkMailIdentifier)?,
+      "Email" : (EmailAddress)?,
+      "Name" : (GroupName)?,
+      "State" : (EntityState)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias GroupName = String
+
+    alias Groups = Array(Group)
+
+    alias HostedZoneId = String
+
+    alias IdempotencyClientToken = String
+
+    alias InvalidConfigurationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidPasswordException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias IpAddress = String
+
+    alias IpRange = String
+
+    alias IpRangeList = Array(IpRange)
+
+    alias Jobs = Array(MailboxExportJob)
+
+    alias KmsKeyArn = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ListAccessControlRulesRequest = NamedTuple(
+      "OrganizationId" : OrganizationId
+    )
+
+    alias ListAccessControlRulesResponse = NamedTuple(
+      "Rules" : (AccessControlRulesList)?
+    )
+
+    alias ListAliasesRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAliasesResponse = NamedTuple(
+      "Aliases" : (Aliases)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListGroupMembersRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "GroupId" : WorkMailIdentifier,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListGroupMembersResponse = NamedTuple(
+      "Members" : (Members)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListGroupsRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListGroupsResponse = NamedTuple(
+      "Groups" : (Groups)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListMailboxExportJobsRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListMailboxExportJobsResponse = NamedTuple(
+      "Jobs" : (Jobs)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListMailboxPermissionsRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListMailboxPermissionsResponse = NamedTuple(
+      "Permissions" : (Permissions)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOrganizationsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListOrganizationsResponse = NamedTuple(
+      "OrganizationSummaries" : (OrganizationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListResourceDelegatesRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "ResourceId" : WorkMailIdentifier,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListResourceDelegatesResponse = NamedTuple(
+      "Delegates" : (ResourceDelegates)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListResourcesRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListResourcesResponse = NamedTuple(
+      "Resources" : (Resources)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "Users" : (Users)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MailDomainNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias MailDomainStateException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias MailboxExportErrorInfo = String
+
+    alias MailboxExportJob = NamedTuple(
+      "JobId" : (MailboxExportJobId)?,
+      "EntityId" : (WorkMailIdentifier)?,
+      "Description" : (Description)?,
+      "S3BucketName" : (S3BucketName)?,
+      "S3Path" : (S3ObjectKey)?,
+      "EstimatedProgress" : (Percentage)?,
+      "State" : (MailboxExportJobState)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?
+    )
+
+    alias MailboxExportJobId = String
+
+    alias MailboxExportJobState = String
+
+    alias MailboxQuota = Int32
+
+    alias MailboxSize = Float64
+
+    alias MaxResults = Int32
+
+    alias Member = NamedTuple(
+      "Id" : (String)?,
+      "Name" : (String)?,
+      "Type" : (MemberType)?,
+      "State" : (EntityState)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias MemberType = String
+
+    alias Members = Array(Member)
+
+    alias NameAvailabilityException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias NextToken = String
+
+    alias OrganizationId = String
+
+    alias OrganizationName = String
+
+    alias OrganizationNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias OrganizationStateException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias OrganizationSummaries = Array(OrganizationSummary)
+
+    alias OrganizationSummary = NamedTuple(
+      "OrganizationId" : (OrganizationId)?,
+      "Alias" : (OrganizationName)?,
+      "DefaultMailDomain" : (DomainName)?,
+      "ErrorMessage" : (String)?,
+      "State" : (String)?
+    )
+
+    alias Password = String
+
+    alias Percentage = Int32
+
+    alias Permission = NamedTuple(
+      "GranteeId" : WorkMailIdentifier,
+      "GranteeType" : MemberType,
+      "PermissionValues" : PermissionValues
+    )
+
+    alias PermissionType = String
+
+    alias PermissionValues = Array(PermissionType)
+
+    alias Permissions = Array(Permission)
+
+    alias PolicyDescription = String
+
+    alias PutAccessControlRuleRequest = NamedTuple(
+      "Name" : AccessControlRuleName,
+      "Effect" : AccessControlRuleEffect,
+      "Description" : AccessControlRuleDescription,
+      "IpRanges" : (IpRangeList)?,
+      "NotIpRanges" : (IpRangeList)?,
+      "Actions" : (ActionsList)?,
+      "NotActions" : (ActionsList)?,
+      "UserIds" : (UserIdList)?,
+      "NotUserIds" : (UserIdList)?,
+      "OrganizationId" : OrganizationId
+    )
+
+    alias PutAccessControlRuleResponse = NamedTuple(
+      
+    )
+
+    alias PutMailboxPermissionsRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "GranteeId" : WorkMailIdentifier,
+      "PermissionValues" : PermissionValues
+    )
+
+    alias PutMailboxPermissionsResponse = NamedTuple(
+      
+    )
+
+    alias PutRetentionPolicyRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "Id" : (ShortString)?,
+      "Name" : ShortString,
+      "Description" : (PolicyDescription)?,
+      "FolderConfigurations" : FolderConfigurations
+    )
+
+    alias PutRetentionPolicyResponse = NamedTuple(
+      
+    )
+
+    alias RegisterToWorkMailRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "Email" : EmailAddress
+    )
+
+    alias RegisterToWorkMailResponse = NamedTuple(
+      
+    )
+
+    alias ReservedNameException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResetPasswordRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "UserId" : WorkMailIdentifier,
+      "Password" : Password
+    )
+
+    alias ResetPasswordResponse = NamedTuple(
+      
+    )
+
+    alias Resource = NamedTuple(
+      "Id" : (WorkMailIdentifier)?,
+      "Email" : (EmailAddress)?,
+      "Name" : (ResourceName)?,
+      "Type" : (ResourceType)?,
+      "State" : (EntityState)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias ResourceDelegates = Array(Delegate)
+
+    alias ResourceId = String
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceType = String
+
+    alias Resources = Array(Resource)
+
+    alias RetentionAction = String
+
+    alias RetentionPeriod = Int32
+
+    alias RoleArn = String
+
+    alias S3BucketName = String
+
+    alias S3ObjectKey = String
+
+    alias ShortString = String
+
+    alias StartMailboxExportJobRequest = NamedTuple(
+      "ClientToken" : IdempotencyClientToken,
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "Description" : (Description)?,
+      "RoleArn" : RoleArn,
+      "KmsKeyArn" : KmsKeyArn,
+      "S3BucketName" : S3BucketName,
+      "S3Prefix" : S3ObjectKey
+    )
+
+    alias StartMailboxExportJobResponse = NamedTuple(
+      "JobId" : (MailboxExportJobId)?
+    )
+
+    alias String = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyTagsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UnsupportedOperationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateMailboxQuotaRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "UserId" : WorkMailIdentifier,
+      "MailboxQuota" : MailboxQuota
+    )
+
+    alias UpdateMailboxQuotaResponse = NamedTuple(
+      
+    )
+
+    alias UpdatePrimaryEmailAddressRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "EntityId" : WorkMailIdentifier,
+      "Email" : EmailAddress
+    )
+
+    alias UpdatePrimaryEmailAddressResponse = NamedTuple(
+      
+    )
+
+    alias UpdateResourceRequest = NamedTuple(
+      "OrganizationId" : OrganizationId,
+      "ResourceId" : ResourceId,
+      "Name" : (ResourceName)?,
+      "BookingOptions" : (BookingOptions)?
+    )
+
+    alias UpdateResourceResponse = NamedTuple(
+      
+    )
+
+    alias User = NamedTuple(
+      "Id" : (WorkMailIdentifier)?,
+      "Email" : (EmailAddress)?,
+      "Name" : (UserName)?,
+      "DisplayName" : (String)?,
+      "State" : (EntityState)?,
+      "UserRole" : (UserRole)?,
+      "EnabledDate" : (Timestamp)?,
+      "DisabledDate" : (Timestamp)?
+    )
+
+    alias UserIdList = Array(WorkMailIdentifier)
+
+    alias UserName = String
+
+    alias UserRole = String
+
+    alias Users = Array(User)
+
+    alias WorkMailIdentifier = String
   end
 end

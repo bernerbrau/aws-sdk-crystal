@@ -376,8 +376,8 @@ module Aws::SES
     #
     # @overload clone_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def clone_receipt_rule_set(params = {}, **options)
-      req = build_request(:clone_receipt_rule_set, params)
+    def clone_receipt_rule_set(, **options)
+      req = build_request(:clone_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -410,8 +410,8 @@ module Aws::SES
     #
     # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, **options)
-      req = build_request(:create_configuration_set, params)
+    def create_configuration_set(, **options)
+      req = build_request(:create_configuration_set, )
       req.send_request(options)
     end
 
@@ -475,8 +475,8 @@ module Aws::SES
     #
     # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:create_configuration_set_event_destination, params)
+    def create_configuration_set_event_destination(, **options)
+      req = build_request(:create_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -523,8 +523,8 @@ module Aws::SES
     #
     # @overload create_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_tracking_options(params = {}, **options)
-      req = build_request(:create_configuration_set_tracking_options, params)
+    def create_configuration_set_tracking_options(, **options)
+      req = build_request(:create_configuration_set_tracking_options, )
       req.send_request(options)
     end
 
@@ -584,8 +584,8 @@ module Aws::SES
     #
     # @overload create_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def create_custom_verification_email_template(params = {}, **options)
-      req = build_request(:create_custom_verification_email_template, params)
+    def create_custom_verification_email_template(, **options)
+      req = build_request(:create_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -638,8 +638,8 @@ module Aws::SES
     #
     # @overload create_receipt_filter(**params)
     # @param [Hash] params ({})
-    def create_receipt_filter(params = {}, **options)
-      req = build_request(:create_receipt_filter, params)
+    def create_receipt_filter(, **options)
+      req = build_request(:create_receipt_filter, )
       req.send_request(options)
     end
 
@@ -748,8 +748,8 @@ module Aws::SES
     #
     # @overload create_receipt_rule(**params)
     # @param [Hash] params ({})
-    def create_receipt_rule(params = {}, **options)
-      req = build_request(:create_receipt_rule, params)
+    def create_receipt_rule(, **options)
+      req = build_request(:create_receipt_rule, )
       req.send_request(options)
     end
 
@@ -795,8 +795,8 @@ module Aws::SES
     #
     # @overload create_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def create_receipt_rule_set(params = {}, **options)
-      req = build_request(:create_receipt_rule_set, params)
+    def create_receipt_rule_set(, **options)
+      req = build_request(:create_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -832,8 +832,8 @@ module Aws::SES
     #
     # @overload create_template(**params)
     # @param [Hash] params ({})
-    def create_template(params = {}, **options)
-      req = build_request(:create_template, params)
+    def create_template(, **options)
+      req = build_request(:create_template, )
       req.send_request(options)
     end
 
@@ -862,8 +862,8 @@ module Aws::SES
     #
     # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, **options)
-      req = build_request(:delete_configuration_set, params)
+    def delete_configuration_set(, **options)
+      req = build_request(:delete_configuration_set, )
       req.send_request(options)
     end
 
@@ -898,8 +898,8 @@ module Aws::SES
     #
     # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:delete_configuration_set_event_destination, params)
+    def delete_configuration_set_event_destination(, **options)
+      req = build_request(:delete_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -937,8 +937,8 @@ module Aws::SES
     #
     # @overload delete_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_tracking_options(params = {}, **options)
-      req = build_request(:delete_configuration_set_tracking_options, params)
+    def delete_configuration_set_tracking_options(, **options)
+      req = build_request(:delete_configuration_set_tracking_options, )
       req.send_request(options)
     end
 
@@ -970,8 +970,8 @@ module Aws::SES
     #
     # @overload delete_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def delete_custom_verification_email_template(params = {}, **options)
-      req = build_request(:delete_custom_verification_email_template, params)
+    def delete_custom_verification_email_template(, **options)
+      req = build_request(:delete_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -1006,8 +1006,8 @@ module Aws::SES
     #
     # @overload delete_identity(**params)
     # @param [Hash] params ({})
-    def delete_identity(params = {}, **options)
-      req = build_request(:delete_identity, params)
+    def delete_identity(, **options)
+      req = build_request(:delete_identity, )
       req.send_request(options)
     end
 
@@ -1065,8 +1065,8 @@ module Aws::SES
     #
     # @overload delete_identity_policy(**params)
     # @param [Hash] params ({})
-    def delete_identity_policy(params = {}, **options)
-      req = build_request(:delete_identity_policy, params)
+    def delete_identity_policy(, **options)
+      req = build_request(:delete_identity_policy, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::SES
     #
     # @overload delete_receipt_filter(**params)
     # @param [Hash] params ({})
-    def delete_receipt_filter(params = {}, **options)
-      req = build_request(:delete_receipt_filter, params)
+    def delete_receipt_filter(, **options)
+      req = build_request(:delete_receipt_filter, )
       req.send_request(options)
     end
 
@@ -1151,8 +1151,8 @@ module Aws::SES
     #
     # @overload delete_receipt_rule(**params)
     # @param [Hash] params ({})
-    def delete_receipt_rule(params = {}, **options)
-      req = build_request(:delete_receipt_rule, params)
+    def delete_receipt_rule(, **options)
+      req = build_request(:delete_receipt_rule, )
       req.send_request(options)
     end
 
@@ -1196,8 +1196,8 @@ module Aws::SES
     #
     # @overload delete_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def delete_receipt_rule_set(params = {}, **options)
-      req = build_request(:delete_receipt_rule_set, params)
+    def delete_receipt_rule_set(, **options)
+      req = build_request(:delete_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -1220,8 +1220,8 @@ module Aws::SES
     #
     # @overload delete_template(**params)
     # @param [Hash] params ({})
-    def delete_template(params = {}, **options)
-      req = build_request(:delete_template, params)
+    def delete_template(, **options)
+      req = build_request(:delete_template, )
       req.send_request(options)
     end
 
@@ -1253,8 +1253,8 @@ module Aws::SES
     #
     # @overload delete_verified_email_address(**params)
     # @param [Hash] params ({})
-    def delete_verified_email_address(params = {}, **options)
-      req = build_request(:delete_verified_email_address, params)
+    def delete_verified_email_address(, **options)
+      req = build_request(:delete_verified_email_address, )
       req.send_request(options)
     end
 
@@ -1344,8 +1344,8 @@ module Aws::SES
     #
     # @overload describe_active_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def describe_active_receipt_rule_set(params = {}, **options)
-      req = build_request(:describe_active_receipt_rule_set, params)
+    def describe_active_receipt_rule_set(, **options)
+      req = build_request(:describe_active_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -1405,8 +1405,8 @@ module Aws::SES
     #
     # @overload describe_configuration_set(**params)
     # @param [Hash] params ({})
-    def describe_configuration_set(params = {}, **options)
-      req = build_request(:describe_configuration_set, params)
+    def describe_configuration_set(, **options)
+      req = build_request(:describe_configuration_set, )
       req.send_request(options)
     end
 
@@ -1500,8 +1500,8 @@ module Aws::SES
     #
     # @overload describe_receipt_rule(**params)
     # @param [Hash] params ({})
-    def describe_receipt_rule(params = {}, **options)
-      req = build_request(:describe_receipt_rule, params)
+    def describe_receipt_rule(, **options)
+      req = build_request(:describe_receipt_rule, )
       req.send_request(options)
     end
 
@@ -1600,8 +1600,8 @@ module Aws::SES
     #
     # @overload describe_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def describe_receipt_rule_set(params = {}, **options)
-      req = build_request(:describe_receipt_rule_set, params)
+    def describe_receipt_rule_set(, **options)
+      req = build_request(:describe_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -1635,8 +1635,8 @@ module Aws::SES
     #
     # @overload get_account_sending_enabled(**params)
     # @param [Hash] params ({})
-    def get_account_sending_enabled(params = {}, **options)
-      req = build_request(:get_account_sending_enabled, params)
+    def get_account_sending_enabled(, **options)
+      req = build_request(:get_account_sending_enabled, )
       req.send_request(options)
     end
 
@@ -1685,8 +1685,8 @@ module Aws::SES
     #
     # @overload get_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def get_custom_verification_email_template(params = {}, **options)
-      req = build_request(:get_custom_verification_email_template, params)
+    def get_custom_verification_email_template(, **options)
+      req = build_request(:get_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -1774,8 +1774,8 @@ module Aws::SES
     #
     # @overload get_identity_dkim_attributes(**params)
     # @param [Hash] params ({})
-    def get_identity_dkim_attributes(params = {}, **options)
-      req = build_request(:get_identity_dkim_attributes, params)
+    def get_identity_dkim_attributes(, **options)
+      req = build_request(:get_identity_dkim_attributes, )
       req.send_request(options)
     end
 
@@ -1831,8 +1831,8 @@ module Aws::SES
     #
     # @overload get_identity_mail_from_domain_attributes(**params)
     # @param [Hash] params ({})
-    def get_identity_mail_from_domain_attributes(params = {}, **options)
-      req = build_request(:get_identity_mail_from_domain_attributes, params)
+    def get_identity_mail_from_domain_attributes(, **options)
+      req = build_request(:get_identity_mail_from_domain_attributes, )
       req.send_request(options)
     end
 
@@ -1906,8 +1906,8 @@ module Aws::SES
     #
     # @overload get_identity_notification_attributes(**params)
     # @param [Hash] params ({})
-    def get_identity_notification_attributes(params = {}, **options)
-      req = build_request(:get_identity_notification_attributes, params)
+    def get_identity_notification_attributes(, **options)
+      req = build_request(:get_identity_notification_attributes, )
       req.send_request(options)
     end
 
@@ -1984,8 +1984,8 @@ module Aws::SES
     #
     # @overload get_identity_policies(**params)
     # @param [Hash] params ({})
-    def get_identity_policies(params = {}, **options)
-      req = build_request(:get_identity_policies, params)
+    def get_identity_policies(, **options)
+      req = build_request(:get_identity_policies, )
       req.send_request(options)
     end
 
@@ -2063,8 +2063,8 @@ module Aws::SES
     #
     # @overload get_identity_verification_attributes(**params)
     # @param [Hash] params ({})
-    def get_identity_verification_attributes(params = {}, **options)
-      req = build_request(:get_identity_verification_attributes, params)
+    def get_identity_verification_attributes(, **options)
+      req = build_request(:get_identity_verification_attributes, )
       req.send_request(options)
     end
 
@@ -2103,8 +2103,8 @@ module Aws::SES
     #
     # @overload get_send_quota(**params)
     # @param [Hash] params ({})
-    def get_send_quota(params = {}, **options)
-      req = build_request(:get_send_quota, params)
+    def get_send_quota(, **options)
+      req = build_request(:get_send_quota, )
       req.send_request(options)
     end
 
@@ -2167,8 +2167,8 @@ module Aws::SES
     #
     # @overload get_send_statistics(**params)
     # @param [Hash] params ({})
-    def get_send_statistics(params = {}, **options)
-      req = build_request(:get_send_statistics, params)
+    def get_send_statistics(, **options)
+      req = build_request(:get_send_statistics, )
       req.send_request(options)
     end
 
@@ -2201,8 +2201,8 @@ module Aws::SES
     #
     # @overload get_template(**params)
     # @param [Hash] params ({})
-    def get_template(params = {}, **options)
-      req = build_request(:get_template, params)
+    def get_template(, **options)
+      req = build_request(:get_template, )
       req.send_request(options)
     end
 
@@ -2253,8 +2253,8 @@ module Aws::SES
     #
     # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, **options)
-      req = build_request(:list_configuration_sets, params)
+    def list_configuration_sets(, **options)
+      req = build_request(:list_configuration_sets, )
       req.send_request(options)
     end
 
@@ -2309,8 +2309,8 @@ module Aws::SES
     #
     # @overload list_custom_verification_email_templates(**params)
     # @param [Hash] params ({})
-    def list_custom_verification_email_templates(params = {}, **options)
-      req = build_request(:list_custom_verification_email_templates, params)
+    def list_custom_verification_email_templates(, **options)
+      req = build_request(:list_custom_verification_email_templates, )
       req.send_request(options)
     end
 
@@ -2376,8 +2376,8 @@ module Aws::SES
     #
     # @overload list_identities(**params)
     # @param [Hash] params ({})
-    def list_identities(params = {}, **options)
-      req = build_request(:list_identities, params)
+    def list_identities(, **options)
+      req = build_request(:list_identities, )
       req.send_request(options)
     end
 
@@ -2445,8 +2445,8 @@ module Aws::SES
     #
     # @overload list_identity_policies(**params)
     # @param [Hash] params ({})
-    def list_identity_policies(params = {}, **options)
-      req = build_request(:list_identity_policies, params)
+    def list_identity_policies(, **options)
+      req = build_request(:list_identity_policies, )
       req.send_request(options)
     end
 
@@ -2498,8 +2498,8 @@ module Aws::SES
     #
     # @overload list_receipt_filters(**params)
     # @param [Hash] params ({})
-    def list_receipt_filters(params = {}, **options)
-      req = build_request(:list_receipt_filters, params)
+    def list_receipt_filters(, **options)
+      req = build_request(:list_receipt_filters, )
       req.send_request(options)
     end
 
@@ -2563,8 +2563,8 @@ module Aws::SES
     #
     # @overload list_receipt_rule_sets(**params)
     # @param [Hash] params ({})
-    def list_receipt_rule_sets(params = {}, **options)
-      req = build_request(:list_receipt_rule_sets, params)
+    def list_receipt_rule_sets(, **options)
+      req = build_request(:list_receipt_rule_sets, )
       req.send_request(options)
     end
 
@@ -2606,8 +2606,8 @@ module Aws::SES
     #
     # @overload list_templates(**params)
     # @param [Hash] params ({})
-    def list_templates(params = {}, **options)
-      req = build_request(:list_templates, params)
+    def list_templates(, **options)
+      req = build_request(:list_templates, )
       req.send_request(options)
     end
 
@@ -2643,8 +2643,8 @@ module Aws::SES
     #
     # @overload list_verified_email_addresses(**params)
     # @param [Hash] params ({})
-    def list_verified_email_addresses(params = {}, **options)
-      req = build_request(:list_verified_email_addresses, params)
+    def list_verified_email_addresses(, **options)
+      req = build_request(:list_verified_email_addresses, )
       req.send_request(options)
     end
 
@@ -2673,8 +2673,8 @@ module Aws::SES
     #
     # @overload put_configuration_set_delivery_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_delivery_options(params = {}, **options)
-      req = build_request(:put_configuration_set_delivery_options, params)
+    def put_configuration_set_delivery_options(, **options)
+      req = build_request(:put_configuration_set_delivery_options, )
       req.send_request(options)
     end
 
@@ -2745,8 +2745,8 @@ module Aws::SES
     #
     # @overload put_identity_policy(**params)
     # @param [Hash] params ({})
-    def put_identity_policy(params = {}, **options)
-      req = build_request(:put_identity_policy, params)
+    def put_identity_policy(, **options)
+      req = build_request(:put_identity_policy, )
       req.send_request(options)
     end
 
@@ -2800,8 +2800,8 @@ module Aws::SES
     #
     # @overload reorder_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def reorder_receipt_rule_set(params = {}, **options)
-      req = build_request(:reorder_receipt_rule_set, params)
+    def reorder_receipt_rule_set(, **options)
+      req = build_request(:reorder_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -2908,8 +2908,8 @@ module Aws::SES
     #
     # @overload send_bounce(**params)
     # @param [Hash] params ({})
-    def send_bounce(params = {}, **options)
-      req = build_request(:send_bounce, params)
+    def send_bounce(, **options)
+      req = build_request(:send_bounce, )
       req.send_request(options)
     end
 
@@ -3119,8 +3119,8 @@ module Aws::SES
     #
     # @overload send_bulk_templated_email(**params)
     # @param [Hash] params ({})
-    def send_bulk_templated_email(params = {}, **options)
-      req = build_request(:send_bulk_templated_email, params)
+    def send_bulk_templated_email(, **options)
+      req = build_request(:send_bulk_templated_email, )
       req.send_request(options)
     end
 
@@ -3171,8 +3171,8 @@ module Aws::SES
     #
     # @overload send_custom_verification_email(**params)
     # @param [Hash] params ({})
-    def send_custom_verification_email(params = {}, **options)
-      req = build_request(:send_custom_verification_email, params)
+    def send_custom_verification_email(, **options)
+      req = build_request(:send_custom_verification_email, )
       req.send_request(options)
     end
 
@@ -3417,8 +3417,8 @@ module Aws::SES
     #
     # @overload send_email(**params)
     # @param [Hash] params ({})
-    def send_email(params = {}, **options)
-      req = build_request(:send_email, params)
+    def send_email(, **options)
+      req = build_request(:send_email, )
       req.send_request(options)
     end
 
@@ -3724,8 +3724,8 @@ module Aws::SES
     #
     # @overload send_raw_email(**params)
     # @param [Hash] params ({})
-    def send_raw_email(params = {}, **options)
-      req = build_request(:send_raw_email, params)
+    def send_raw_email(, **options)
+      req = build_request(:send_raw_email, )
       req.send_request(options)
     end
 
@@ -3929,8 +3929,8 @@ module Aws::SES
     #
     # @overload send_templated_email(**params)
     # @param [Hash] params ({})
-    def send_templated_email(params = {}, **options)
-      req = build_request(:send_templated_email, params)
+    def send_templated_email(, **options)
+      req = build_request(:send_templated_email, )
       req.send_request(options)
     end
 
@@ -3975,8 +3975,8 @@ module Aws::SES
     #
     # @overload set_active_receipt_rule_set(**params)
     # @param [Hash] params ({})
-    def set_active_receipt_rule_set(params = {}, **options)
-      req = build_request(:set_active_receipt_rule_set, params)
+    def set_active_receipt_rule_set(, **options)
+      req = build_request(:set_active_receipt_rule_set, )
       req.send_request(options)
     end
 
@@ -4035,8 +4035,8 @@ module Aws::SES
     #
     # @overload set_identity_dkim_enabled(**params)
     # @param [Hash] params ({})
-    def set_identity_dkim_enabled(params = {}, **options)
-      req = build_request(:set_identity_dkim_enabled, params)
+    def set_identity_dkim_enabled(, **options)
+      req = build_request(:set_identity_dkim_enabled, )
       req.send_request(options)
     end
 
@@ -4097,8 +4097,8 @@ module Aws::SES
     #
     # @overload set_identity_feedback_forwarding_enabled(**params)
     # @param [Hash] params ({})
-    def set_identity_feedback_forwarding_enabled(params = {}, **options)
-      req = build_request(:set_identity_feedback_forwarding_enabled, params)
+    def set_identity_feedback_forwarding_enabled(, **options)
+      req = build_request(:set_identity_feedback_forwarding_enabled, )
       req.send_request(options)
     end
 
@@ -4159,8 +4159,8 @@ module Aws::SES
     #
     # @overload set_identity_headers_in_notifications_enabled(**params)
     # @param [Hash] params ({})
-    def set_identity_headers_in_notifications_enabled(params = {}, **options)
-      req = build_request(:set_identity_headers_in_notifications_enabled, params)
+    def set_identity_headers_in_notifications_enabled(, **options)
+      req = build_request(:set_identity_headers_in_notifications_enabled, )
       req.send_request(options)
     end
 
@@ -4233,8 +4233,8 @@ module Aws::SES
     #
     # @overload set_identity_mail_from_domain(**params)
     # @param [Hash] params ({})
-    def set_identity_mail_from_domain(params = {}, **options)
-      req = build_request(:set_identity_mail_from_domain, params)
+    def set_identity_mail_from_domain(, **options)
+      req = build_request(:set_identity_mail_from_domain, )
       req.send_request(options)
     end
 
@@ -4301,8 +4301,8 @@ module Aws::SES
     #
     # @overload set_identity_notification_topic(**params)
     # @param [Hash] params ({})
-    def set_identity_notification_topic(params = {}, **options)
-      req = build_request(:set_identity_notification_topic, params)
+    def set_identity_notification_topic(, **options)
+      req = build_request(:set_identity_notification_topic, )
       req.send_request(options)
     end
 
@@ -4354,8 +4354,8 @@ module Aws::SES
     #
     # @overload set_receipt_rule_position(**params)
     # @param [Hash] params ({})
-    def set_receipt_rule_position(params = {}, **options)
-      req = build_request(:set_receipt_rule_position, params)
+    def set_receipt_rule_position(, **options)
+      req = build_request(:set_receipt_rule_position, )
       req.send_request(options)
     end
 
@@ -4391,8 +4391,8 @@ module Aws::SES
     #
     # @overload test_render_template(**params)
     # @param [Hash] params ({})
-    def test_render_template(params = {}, **options)
-      req = build_request(:test_render_template, params)
+    def test_render_template(, **options)
+      req = build_request(:test_render_template, )
       req.send_request(options)
     end
 
@@ -4430,8 +4430,8 @@ module Aws::SES
     #
     # @overload update_account_sending_enabled(**params)
     # @param [Hash] params ({})
-    def update_account_sending_enabled(params = {}, **options)
-      req = build_request(:update_account_sending_enabled, params)
+    def update_account_sending_enabled(, **options)
+      req = build_request(:update_account_sending_enabled, )
       req.send_request(options)
     end
 
@@ -4496,8 +4496,8 @@ module Aws::SES
     #
     # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:update_configuration_set_event_destination, params)
+    def update_configuration_set_event_destination(, **options)
+      req = build_request(:update_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -4541,8 +4541,8 @@ module Aws::SES
     #
     # @overload update_configuration_set_reputation_metrics_enabled(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_reputation_metrics_enabled(params = {}, **options)
-      req = build_request(:update_configuration_set_reputation_metrics_enabled, params)
+    def update_configuration_set_reputation_metrics_enabled(, **options)
+      req = build_request(:update_configuration_set_reputation_metrics_enabled, )
       req.send_request(options)
     end
 
@@ -4585,8 +4585,8 @@ module Aws::SES
     #
     # @overload update_configuration_set_sending_enabled(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_sending_enabled(params = {}, **options)
-      req = build_request(:update_configuration_set_sending_enabled, params)
+    def update_configuration_set_sending_enabled(, **options)
+      req = build_request(:update_configuration_set_sending_enabled, )
       req.send_request(options)
     end
 
@@ -4633,8 +4633,8 @@ module Aws::SES
     #
     # @overload update_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_tracking_options(params = {}, **options)
-      req = build_request(:update_configuration_set_tracking_options, params)
+    def update_configuration_set_tracking_options(, **options)
+      req = build_request(:update_configuration_set_tracking_options, )
       req.send_request(options)
     end
 
@@ -4695,8 +4695,8 @@ module Aws::SES
     #
     # @overload update_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def update_custom_verification_email_template(params = {}, **options)
-      req = build_request(:update_custom_verification_email_template, params)
+    def update_custom_verification_email_template(, **options)
+      req = build_request(:update_custom_verification_email_template, )
       req.send_request(options)
     end
 
@@ -4797,8 +4797,8 @@ module Aws::SES
     #
     # @overload update_receipt_rule(**params)
     # @param [Hash] params ({})
-    def update_receipt_rule(params = {}, **options)
-      req = build_request(:update_receipt_rule, params)
+    def update_receipt_rule(, **options)
+      req = build_request(:update_receipt_rule, )
       req.send_request(options)
     end
 
@@ -4834,8 +4834,8 @@ module Aws::SES
     #
     # @overload update_template(**params)
     # @param [Hash] params ({})
-    def update_template(params = {}, **options)
-      req = build_request(:update_template, params)
+    def update_template(, **options)
+      req = build_request(:update_template, )
       req.send_request(options)
     end
 
@@ -4918,8 +4918,8 @@ module Aws::SES
     #
     # @overload verify_domain_dkim(**params)
     # @param [Hash] params ({})
-    def verify_domain_dkim(params = {}, **options)
-      req = build_request(:verify_domain_dkim, params)
+    def verify_domain_dkim(, **options)
+      req = build_request(:verify_domain_dkim, )
       req.send_request(options)
     end
 
@@ -4969,8 +4969,8 @@ module Aws::SES
     #
     # @overload verify_domain_identity(**params)
     # @param [Hash] params ({})
-    def verify_domain_identity(params = {}, **options)
-      req = build_request(:verify_domain_identity, params)
+    def verify_domain_identity(, **options)
+      req = build_request(:verify_domain_identity, )
       req.send_request(options)
     end
 
@@ -5001,8 +5001,8 @@ module Aws::SES
     #
     # @overload verify_email_address(**params)
     # @param [Hash] params ({})
-    def verify_email_address(params = {}, **options)
-      req = build_request(:verify_email_address, params)
+    def verify_email_address(, **options)
+      req = build_request(:verify_email_address, )
       req.send_request(options)
     end
 
@@ -5037,8 +5037,8 @@ module Aws::SES
     #
     # @overload verify_email_identity(**params)
     # @param [Hash] params ({})
-    def verify_email_identity(params = {}, **options)
-      req = build_request(:verify_email_identity, params)
+    def verify_email_identity(, **options)
+      req = build_request(:verify_email_identity, )
       req.send_request(options)
     end
 

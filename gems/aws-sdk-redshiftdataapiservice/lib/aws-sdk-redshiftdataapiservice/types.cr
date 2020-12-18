@@ -1076,5 +1076,250 @@ module Aws::RedshiftDataAPIService
       include Aws::Structure
     end
 
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias BoxedBoolean = Bool
+
+    alias BoxedDouble = Float64
+
+    alias BoxedLong = Int64
+
+    alias CancelStatementRequest = NamedTuple(
+      "Id" : UUID
+    )
+
+    alias CancelStatementResponse = NamedTuple(
+      "Status" : (Boolean)?
+    )
+
+    alias ColumnList = Array(ColumnMetadata)
+
+    alias ColumnMetadata = NamedTuple(
+      "columnDefault" : (String)?,
+      "isCaseSensitive" : (bool)?,
+      "isCurrency" : (bool)?,
+      "isSigned" : (bool)?,
+      "label" : (String)?,
+      "length" : (Integer)?,
+      "name" : (String)?,
+      "nullable" : (Integer)?,
+      "precision" : (Integer)?,
+      "scale" : (Integer)?,
+      "schemaName" : (String)?,
+      "tableName" : (String)?,
+      "typeName" : (String)?
+    )
+
+    alias ColumnMetadataList = Array(ColumnMetadata)
+
+    alias DatabaseList = Array(String)
+
+    alias DescribeStatementRequest = NamedTuple(
+      "Id" : UUID
+    )
+
+    alias DescribeStatementResponse = NamedTuple(
+      "ClusterIdentifier" : (String)?,
+      "CreatedAt" : (Timestamp)?,
+      "Database" : (String)?,
+      "DbUser" : (String)?,
+      "Duration" : (Long)?,
+      "Error" : (String)?,
+      "Id" : UUID,
+      "QueryString" : (StatementString)?,
+      "RedshiftPid" : (Long)?,
+      "RedshiftQueryId" : (Long)?,
+      "ResultRows" : (Long)?,
+      "ResultSize" : (Long)?,
+      "SecretArn" : (SecretArn)?,
+      "Status" : (StatusString)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias DescribeTableRequest = NamedTuple(
+      "ClusterIdentifier" : Location,
+      "Database" : (String)?,
+      "DbUser" : (String)?,
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (String)?,
+      "Schema" : (String)?,
+      "SecretArn" : (SecretArn)?,
+      "Table" : (String)?
+    )
+
+    alias DescribeTableResponse = NamedTuple(
+      "ColumnList" : (ColumnList)?,
+      "NextToken" : (String)?,
+      "TableName" : (String)?
+    )
+
+    alias ExecuteStatementException = NamedTuple(
+      "Message" : String,
+      "StatementId" : String
+    )
+
+    alias ExecuteStatementInput = NamedTuple(
+      "ClusterIdentifier" : Location,
+      "Database" : (String)?,
+      "DbUser" : (String)?,
+      "SecretArn" : (SecretArn)?,
+      "Sql" : StatementString,
+      "StatementName" : (StatementNameString)?,
+      "WithEvent" : (Boolean)?
+    )
+
+    alias ExecuteStatementOutput = NamedTuple(
+      "ClusterIdentifier" : (Location)?,
+      "CreatedAt" : (Timestamp)?,
+      "Database" : (String)?,
+      "DbUser" : (String)?,
+      "Id" : (UUID)?,
+      "SecretArn" : (SecretArn)?
+    )
+
+    alias Field = NamedTuple(
+      "blobValue" : (Blob)?,
+      "booleanValue" : (BoxedBoolean)?,
+      "doubleValue" : (BoxedDouble)?,
+      "isNull" : (BoxedBoolean)?,
+      "longValue" : (BoxedLong)?,
+      "stringValue" : (String)?
+    )
+
+    alias FieldList = Array(Field)
+
+    alias GetStatementResultRequest = NamedTuple(
+      "Id" : UUID,
+      "NextToken" : (String)?
+    )
+
+    alias GetStatementResultResponse = NamedTuple(
+      "ColumnMetadata" : (ColumnMetadataList)?,
+      "NextToken" : (String)?,
+      "Records" : SqlRecords,
+      "TotalNumRows" : (Long)?
+    )
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : String
+    )
+
+    alias ListDatabasesRequest = NamedTuple(
+      "ClusterIdentifier" : Location,
+      "Database" : (String)?,
+      "DbUser" : (String)?,
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (String)?,
+      "SecretArn" : (SecretArn)?
+    )
+
+    alias ListDatabasesResponse = NamedTuple(
+      "Databases" : (DatabaseList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListSchemasRequest = NamedTuple(
+      "ClusterIdentifier" : Location,
+      "Database" : String,
+      "DbUser" : (String)?,
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (String)?,
+      "SchemaPattern" : (String)?,
+      "SecretArn" : (SecretArn)?
+    )
+
+    alias ListSchemasResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Schemas" : (SchemaList)?
+    )
+
+    alias ListStatementsLimit = Int32
+
+    alias ListStatementsRequest = NamedTuple(
+      "MaxResults" : (ListStatementsLimit)?,
+      "NextToken" : (String)?,
+      "StatementName" : (StatementNameString)?,
+      "Status" : (StatusString)?
+    )
+
+    alias ListStatementsResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Statements" : StatementList
+    )
+
+    alias ListTablesRequest = NamedTuple(
+      "ClusterIdentifier" : Location,
+      "Database" : String,
+      "DbUser" : (String)?,
+      "MaxResults" : (PageSize)?,
+      "NextToken" : (String)?,
+      "SchemaPattern" : (String)?,
+      "SecretArn" : (SecretArn)?,
+      "TablePattern" : (String)?
+    )
+
+    alias ListTablesResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Tables" : (TableList)?
+    )
+
+    alias Location = String
+
+    alias Long = Int64
+
+    alias PageSize = Int32
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : String,
+      "ResourceId" : String
+    )
+
+    alias SchemaList = Array(String)
+
+    alias SecretArn = String
+
+    alias SqlRecords = Array(FieldList)
+
+    alias StatementData = NamedTuple(
+      "CreatedAt" : (Timestamp)?,
+      "Id" : UUID,
+      "QueryString" : (StatementString)?,
+      "SecretArn" : (SecretArn)?,
+      "StatementName" : (StatementNameString)?,
+      "Status" : (StatusString)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias StatementList = Array(StatementData)
+
+    alias StatementNameString = String
+
+    alias StatementString = String
+
+    alias StatusString = String
+
+    alias String = String
+
+    alias TableList = Array(TableMember)
+
+    alias TableMember = NamedTuple(
+      "name" : (String)?,
+      "schema" : (String)?,
+      "type" : (String)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UUID = String
+
+    alias ValidationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias bool = Bool
   end
 end

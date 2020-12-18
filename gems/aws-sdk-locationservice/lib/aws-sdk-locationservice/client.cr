@@ -358,8 +358,8 @@ module Aws::LocationService
     #
     # @overload associate_tracker_consumer(**params)
     # @param [Hash] params ({})
-    def associate_tracker_consumer(params = {}, **options)
-      req = build_request(:associate_tracker_consumer, params)
+    def associate_tracker_consumer(, **options)
+      req = build_request(:associate_tracker_consumer, )
       req.send_request(options)
     end
 
@@ -398,8 +398,8 @@ module Aws::LocationService
     #
     # @overload batch_delete_geofence(**params)
     # @param [Hash] params ({})
-    def batch_delete_geofence(params = {}, **options)
-      req = build_request(:batch_delete_geofence, params)
+    def batch_delete_geofence(, **options)
+      req = build_request(:batch_delete_geofence, )
       req.send_request(options)
     end
 
@@ -443,8 +443,8 @@ module Aws::LocationService
     #
     # @overload batch_evaluate_geofences(**params)
     # @param [Hash] params ({})
-    def batch_evaluate_geofences(params = {}, **options)
-      req = build_request(:batch_evaluate_geofences, params)
+    def batch_evaluate_geofences(, **options)
+      req = build_request(:batch_evaluate_geofences, )
       req.send_request(options)
     end
 
@@ -494,8 +494,8 @@ module Aws::LocationService
     #
     # @overload batch_get_device_position(**params)
     # @param [Hash] params ({})
-    def batch_get_device_position(params = {}, **options)
-      req = build_request(:batch_get_device_position, params)
+    def batch_get_device_position(, **options)
+      req = build_request(:batch_get_device_position, )
       req.send_request(options)
     end
 
@@ -546,8 +546,8 @@ module Aws::LocationService
     #
     # @overload batch_put_geofence(**params)
     # @param [Hash] params ({})
-    def batch_put_geofence(params = {}, **options)
-      req = build_request(:batch_put_geofence, params)
+    def batch_put_geofence(, **options)
+      req = build_request(:batch_put_geofence, )
       req.send_request(options)
     end
 
@@ -595,8 +595,8 @@ module Aws::LocationService
     #
     # @overload batch_update_device_position(**params)
     # @param [Hash] params ({})
-    def batch_update_device_position(params = {}, **options)
-      req = build_request(:batch_update_device_position, params)
+    def batch_update_device_position(, **options)
+      req = build_request(:batch_update_device_position, )
       req.send_request(options)
     end
 
@@ -661,8 +661,8 @@ module Aws::LocationService
     #
     # @overload create_geofence_collection(**params)
     # @param [Hash] params ({})
-    def create_geofence_collection(params = {}, **options)
-      req = build_request(:create_geofence_collection, params)
+    def create_geofence_collection(, **options)
+      req = build_request(:create_geofence_collection, )
       req.send_request(options)
     end
 
@@ -745,8 +745,8 @@ module Aws::LocationService
     #
     # @overload create_map(**params)
     # @param [Hash] params ({})
-    def create_map(params = {}, **options)
-      req = build_request(:create_map, params)
+    def create_map(, **options)
+      req = build_request(:create_map, )
       req.send_request(options)
     end
 
@@ -837,8 +837,8 @@ module Aws::LocationService
     #
     # @overload create_place_index(**params)
     # @param [Hash] params ({})
-    def create_place_index(params = {}, **options)
-      req = build_request(:create_place_index, params)
+    def create_place_index(, **options)
+      req = build_request(:create_place_index, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::LocationService
     #
     # @overload create_tracker(**params)
     # @param [Hash] params ({})
-    def create_tracker(params = {}, **options)
-      req = build_request(:create_tracker, params)
+    def create_tracker(, **options)
+      req = build_request(:create_tracker, )
       req.send_request(options)
     end
 
@@ -932,8 +932,8 @@ module Aws::LocationService
     #
     # @overload delete_geofence_collection(**params)
     # @param [Hash] params ({})
-    def delete_geofence_collection(params = {}, **options)
-      req = build_request(:delete_geofence_collection, params)
+    def delete_geofence_collection(, **options)
+      req = build_request(:delete_geofence_collection, )
       req.send_request(options)
     end
 
@@ -960,8 +960,8 @@ module Aws::LocationService
     #
     # @overload delete_map(**params)
     # @param [Hash] params ({})
-    def delete_map(params = {}, **options)
-      req = build_request(:delete_map, params)
+    def delete_map(, **options)
+      req = build_request(:delete_map, )
       req.send_request(options)
     end
 
@@ -987,8 +987,8 @@ module Aws::LocationService
     #
     # @overload delete_place_index(**params)
     # @param [Hash] params ({})
-    def delete_place_index(params = {}, **options)
-      req = build_request(:delete_place_index, params)
+    def delete_place_index(, **options)
+      req = build_request(:delete_place_index, )
       req.send_request(options)
     end
 
@@ -1016,8 +1016,8 @@ module Aws::LocationService
     #
     # @overload delete_tracker(**params)
     # @param [Hash] params ({})
-    def delete_tracker(params = {}, **options)
-      req = build_request(:delete_tracker, params)
+    def delete_tracker(, **options)
+      req = build_request(:delete_tracker, )
       req.send_request(options)
     end
 
@@ -1052,8 +1052,8 @@ module Aws::LocationService
     #
     # @overload describe_geofence_collection(**params)
     # @param [Hash] params ({})
-    def describe_geofence_collection(params = {}, **options)
-      req = build_request(:describe_geofence_collection, params)
+    def describe_geofence_collection(, **options)
+      req = build_request(:describe_geofence_collection, )
       req.send_request(options)
     end
 
@@ -1092,8 +1092,8 @@ module Aws::LocationService
     #
     # @overload describe_map(**params)
     # @param [Hash] params ({})
-    def describe_map(params = {}, **options)
-      req = build_request(:describe_map, params)
+    def describe_map(, **options)
+      req = build_request(:describe_map, )
       req.send_request(options)
     end
 
@@ -1132,8 +1132,8 @@ module Aws::LocationService
     #
     # @overload describe_place_index(**params)
     # @param [Hash] params ({})
-    def describe_place_index(params = {}, **options)
-      req = build_request(:describe_place_index, params)
+    def describe_place_index(, **options)
+      req = build_request(:describe_place_index, )
       req.send_request(options)
     end
 
@@ -1168,8 +1168,8 @@ module Aws::LocationService
     #
     # @overload describe_tracker(**params)
     # @param [Hash] params ({})
-    def describe_tracker(params = {}, **options)
-      req = build_request(:describe_tracker, params)
+    def describe_tracker(, **options)
+      req = build_request(:describe_tracker, )
       req.send_request(options)
     end
 
@@ -1208,8 +1208,8 @@ module Aws::LocationService
     #
     # @overload disassociate_tracker_consumer(**params)
     # @param [Hash] params ({})
-    def disassociate_tracker_consumer(params = {}, **options)
-      req = build_request(:disassociate_tracker_consumer, params)
+    def disassociate_tracker_consumer(, **options)
+      req = build_request(:disassociate_tracker_consumer, )
       req.send_request(options)
     end
 
@@ -1251,8 +1251,8 @@ module Aws::LocationService
     #
     # @overload get_device_position(**params)
     # @param [Hash] params ({})
-    def get_device_position(params = {}, **options)
-      req = build_request(:get_device_position, params)
+    def get_device_position(, **options)
+      req = build_request(:get_device_position, )
       req.send_request(options)
     end
 
@@ -1333,8 +1333,8 @@ module Aws::LocationService
     #
     # @overload get_device_position_history(**params)
     # @param [Hash] params ({})
-    def get_device_position_history(params = {}, **options)
-      req = build_request(:get_device_position_history, params)
+    def get_device_position_history(, **options)
+      req = build_request(:get_device_position_history, )
       req.send_request(options)
     end
 
@@ -1376,8 +1376,8 @@ module Aws::LocationService
     #
     # @overload get_geofence(**params)
     # @param [Hash] params ({})
-    def get_geofence(params = {}, **options)
-      req = build_request(:get_geofence, params)
+    def get_geofence(, **options)
+      req = build_request(:get_geofence, )
       req.send_request(options)
     end
 
@@ -1418,8 +1418,8 @@ module Aws::LocationService
     #
     # @overload get_map_glyphs(**params)
     # @param [Hash] params ({})
-    def get_map_glyphs(params = {}, **options, &block)
-      req = build_request(:get_map_glyphs, params)
+    def get_map_glyphs(, **options, &block)
+      req = build_request(:get_map_glyphs, )
       req.send_request(options, &block)
     end
 
@@ -1466,8 +1466,8 @@ module Aws::LocationService
     #
     # @overload get_map_sprites(**params)
     # @param [Hash] params ({})
-    def get_map_sprites(params = {}, **options, &block)
-      req = build_request(:get_map_sprites, params)
+    def get_map_sprites(, **options, &block)
+      req = build_request(:get_map_sprites, )
       req.send_request(options, &block)
     end
 
@@ -1501,8 +1501,8 @@ module Aws::LocationService
     #
     # @overload get_map_style_descriptor(**params)
     # @param [Hash] params ({})
-    def get_map_style_descriptor(params = {}, **options, &block)
-      req = build_request(:get_map_style_descriptor, params)
+    def get_map_style_descriptor(, **options, &block)
+      req = build_request(:get_map_style_descriptor, )
       req.send_request(options, &block)
     end
 
@@ -1550,8 +1550,8 @@ module Aws::LocationService
     #
     # @overload get_map_tile(**params)
     # @param [Hash] params ({})
-    def get_map_tile(params = {}, **options, &block)
-      req = build_request(:get_map_tile, params)
+    def get_map_tile(, **options, &block)
+      req = build_request(:get_map_tile, )
       req.send_request(options, &block)
     end
 
@@ -1596,8 +1596,8 @@ module Aws::LocationService
     #
     # @overload list_geofence_collections(**params)
     # @param [Hash] params ({})
-    def list_geofence_collections(params = {}, **options)
-      req = build_request(:list_geofence_collections, params)
+    def list_geofence_collections(, **options)
+      req = build_request(:list_geofence_collections, )
       req.send_request(options)
     end
 
@@ -1643,8 +1643,8 @@ module Aws::LocationService
     #
     # @overload list_geofences(**params)
     # @param [Hash] params ({})
-    def list_geofences(params = {}, **options)
-      req = build_request(:list_geofences, params)
+    def list_geofences(, **options)
+      req = build_request(:list_geofences, )
       req.send_request(options)
     end
 
@@ -1690,8 +1690,8 @@ module Aws::LocationService
     #
     # @overload list_maps(**params)
     # @param [Hash] params ({})
-    def list_maps(params = {}, **options)
-      req = build_request(:list_maps, params)
+    def list_maps(, **options)
+      req = build_request(:list_maps, )
       req.send_request(options)
     end
 
@@ -1737,8 +1737,8 @@ module Aws::LocationService
     #
     # @overload list_place_indexes(**params)
     # @param [Hash] params ({})
-    def list_place_indexes(params = {}, **options)
-      req = build_request(:list_place_indexes, params)
+    def list_place_indexes(, **options)
+      req = build_request(:list_place_indexes, )
       req.send_request(options)
     end
 
@@ -1786,8 +1786,8 @@ module Aws::LocationService
     #
     # @overload list_tracker_consumers(**params)
     # @param [Hash] params ({})
-    def list_tracker_consumers(params = {}, **options)
-      req = build_request(:list_tracker_consumers, params)
+    def list_tracker_consumers(, **options)
+      req = build_request(:list_tracker_consumers, )
       req.send_request(options)
     end
 
@@ -1832,8 +1832,8 @@ module Aws::LocationService
     #
     # @overload list_trackers(**params)
     # @param [Hash] params ({})
-    def list_trackers(params = {}, **options)
-      req = build_request(:list_trackers, params)
+    def list_trackers(, **options)
+      req = build_request(:list_trackers, )
       req.send_request(options)
     end
 
@@ -1880,8 +1880,8 @@ module Aws::LocationService
     #
     # @overload put_geofence(**params)
     # @param [Hash] params ({})
-    def put_geofence(params = {}, **options)
-      req = build_request(:put_geofence, params)
+    def put_geofence(, **options)
+      req = build_request(:put_geofence, )
       req.send_request(options)
     end
 
@@ -1958,8 +1958,8 @@ module Aws::LocationService
     #
     # @overload search_place_index_for_position(**params)
     # @param [Hash] params ({})
-    def search_place_index_for_position(params = {}, **options)
-      req = build_request(:search_place_index_for_position, params)
+    def search_place_index_for_position(, **options)
+      req = build_request(:search_place_index_for_position, )
       req.send_request(options)
     end
 
@@ -2097,8 +2097,8 @@ module Aws::LocationService
     #
     # @overload search_place_index_for_text(**params)
     # @param [Hash] params ({})
-    def search_place_index_for_text(params = {}, **options)
-      req = build_request(:search_place_index_for_text, params)
+    def search_place_index_for_text(, **options)
+      req = build_request(:search_place_index_for_text, )
       req.send_request(options)
     end
 

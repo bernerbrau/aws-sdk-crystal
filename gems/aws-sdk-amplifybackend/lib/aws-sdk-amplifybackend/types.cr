@@ -3783,5 +3783,799 @@ module Aws::AmplifyBackend
       include Aws::Structure
     end
 
+    alias AuthResources = String
+
+    alias BackendAPIAppSyncAuthSettings = NamedTuple(
+      "CognitoUserPoolId" : (__string)?,
+      "Description" : (__string)?,
+      "ExpirationTime" : (__double)?,
+      "OpenIDAuthTTL" : (__string)?,
+      "OpenIDClientId" : (__string)?,
+      "OpenIDIatTTL" : (__string)?,
+      "OpenIDIssueURL" : (__string)?,
+      "OpenIDProviderName" : (__string)?
+    )
+
+    alias BackendAPIAuthType = NamedTuple(
+      "Mode" : (Mode)?,
+      "Settings" : (BackendAPIAppSyncAuthSettings)?
+    )
+
+    alias BackendAPICodegenReqObj = NamedTuple(
+      "ResourceName" : __string
+    )
+
+    alias BackendAPICodegenRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias BackendAPIConflictResolution = NamedTuple(
+      "ResolutionStrategy" : (ResolutionStrategy)?
+    )
+
+    alias BackendAPIReqObj = NamedTuple(
+      "ResourceConfig" : (BackendAPIResourceConfig)?,
+      "ResourceName" : __string
+    )
+
+    alias BackendAPIResourceConfig = NamedTuple(
+      "AdditionalAuthTypes" : (ListOfBackendAPIAuthType)?,
+      "ApiName" : (__string)?,
+      "ConflictResolution" : (BackendAPIConflictResolution)?,
+      "DefaultAuthType" : (BackendAPIAuthType)?,
+      "Service" : (__string)?,
+      "TransformSchema" : (__string)?
+    )
+
+    alias BackendAPIRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias BackendAuthRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias BackendAuthSocialProviderConfig = NamedTuple(
+      "ClientId" : (__string)?,
+      "ClientSecret" : (__string)?
+    )
+
+    alias BackendConfigRespObj = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendManagerAppId" : (__string)?,
+      "Error" : (__string)?,
+      "LoginAuthConfig" : (LoginAuthConfigReqObj)?
+    )
+
+    alias BackendJobReqObj = NamedTuple(
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias BackendJobRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "CreateTime" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?,
+      "UpdateTime" : (__string)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias CloneBackendReqObj = NamedTuple(
+      "TargetEnvironmentName" : __string
+    )
+
+    alias CloneBackendRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "TargetEnvironmentName" : __string
+    )
+
+    alias CloneBackendRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CloneBackendResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateBackendAPIReqObj = NamedTuple(
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : BackendAPIResourceConfig,
+      "ResourceName" : __string
+    )
+
+    alias CreateBackendAPIRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : BackendAPIResourceConfig,
+      "ResourceName" : __string
+    )
+
+    alias CreateBackendAPIResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateBackendAuthForgotPasswordConfig = NamedTuple(
+      "DeliveryMethod" : DeliveryMethod,
+      "EmailSettings" : (EmailSettings)?,
+      "SmsSettings" : (SmsSettings)?
+    )
+
+    alias CreateBackendAuthIdentityPoolConfig = NamedTuple(
+      "IdentityPoolName" : __string,
+      "UnauthenticatedLogin" : __boolean
+    )
+
+    alias CreateBackendAuthMFAConfig = NamedTuple(
+      "MFAMode" : MFAMode,
+      "Settings" : (Settings)?
+    )
+
+    alias CreateBackendAuthOAuthConfig = NamedTuple(
+      "DomainPrefix" : (__string)?,
+      "OAuthGrantType" : OAuthGrantType,
+      "OAuthScopes" : ListOfOAuthScopesElement,
+      "RedirectSignInURIs" : ListOf__string,
+      "RedirectSignOutURIs" : ListOf__string,
+      "SocialProviderSettings" : (SocialProviderSettings)?
+    )
+
+    alias CreateBackendAuthPasswordPolicyConfig = NamedTuple(
+      "AdditionalConstraints" : (ListOfAdditionalConstraintsElement)?,
+      "MinimumLength" : __double
+    )
+
+    alias CreateBackendAuthReqObj = NamedTuple(
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : CreateBackendAuthResourceConfig,
+      "ResourceName" : __string
+    )
+
+    alias CreateBackendAuthRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : CreateBackendAuthResourceConfig,
+      "ResourceName" : __string
+    )
+
+    alias CreateBackendAuthResourceConfig = NamedTuple(
+      "AuthResources" : AuthResources,
+      "IdentityPoolConfigs" : (CreateBackendAuthIdentityPoolConfig)?,
+      "Service" : Service,
+      "UserPoolConfigs" : CreateBackendAuthUserPoolConfig
+    )
+
+    alias CreateBackendAuthResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateBackendAuthUserPoolConfig = NamedTuple(
+      "ForgotPassword" : (CreateBackendAuthForgotPasswordConfig)?,
+      "Mfa" : (CreateBackendAuthMFAConfig)?,
+      "OAuth" : (CreateBackendAuthOAuthConfig)?,
+      "PasswordPolicy" : (CreateBackendAuthPasswordPolicyConfig)?,
+      "RequiredSignUpAttributes" : ListOfRequiredSignUpAttributesElement,
+      "SignInMethod" : SignInMethod,
+      "UserPoolName" : __string
+    )
+
+    alias CreateBackendConfigReqObj = NamedTuple(
+      "BackendManagerAppId" : (__string)?
+    )
+
+    alias CreateBackendConfigRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendManagerAppId" : (__string)?
+    )
+
+    alias CreateBackendConfigRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : (__string)?,
+      "JobId" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateBackendConfigResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "JobId" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateBackendReqObj = NamedTuple(
+      "AppId" : __string,
+      "AppName" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : (ResourceConfig)?,
+      "ResourceName" : (__string)?
+    )
+
+    alias CreateBackendRequest = NamedTuple(
+      "AppId" : __string,
+      "AppName" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : (ResourceConfig)?,
+      "ResourceName" : (__string)?
+    )
+
+    alias CreateBackendRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateBackendResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias CreateTokenRequest = NamedTuple(
+      "AppId" : __string
+    )
+
+    alias CreateTokenRespObj = NamedTuple(
+      "AppId" : __string,
+      "ChallengeCode" : __string,
+      "SessionId" : __string,
+      "Ttl" : __string
+    )
+
+    alias CreateTokenResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "ChallengeCode" : (__string)?,
+      "SessionId" : (__string)?,
+      "Ttl" : (__string)?
+    )
+
+    alias DeleteBackendAPIRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : (BackendAPIResourceConfig)?,
+      "ResourceName" : __string
+    )
+
+    alias DeleteBackendAPIResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias DeleteBackendAuthRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceName" : __string
+    )
+
+    alias DeleteBackendAuthResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias DeleteBackendRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string
+    )
+
+    alias DeleteBackendRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias DeleteBackendResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias DeleteTokenRequest = NamedTuple(
+      "AppId" : __string,
+      "SessionId" : __string
+    )
+
+    alias DeleteTokenRespObj = NamedTuple(
+      "IsSuccess" : __boolean
+    )
+
+    alias DeleteTokenResponse = NamedTuple(
+      "IsSuccess" : (__boolean)?
+    )
+
+    alias DeliveryMethod = String
+
+    alias EmailSettings = NamedTuple(
+      "EmailMessage" : (__string)?,
+      "EmailSubject" : (__string)?
+    )
+
+    alias GatewayTimeoutException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias GenerateBackendAPIModelsRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceName" : __string
+    )
+
+    alias GenerateBackendAPIModelsResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias GetBackendAPICodegenRespObj = NamedTuple(
+      "Models" : (__string)?,
+      "Status" : (Status)?
+    )
+
+    alias GetBackendAPIModelsRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceName" : __string
+    )
+
+    alias GetBackendAPIModelsResponse = NamedTuple(
+      "Models" : (__string)?,
+      "Status" : (Status)?
+    )
+
+    alias GetBackendAPIRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : (BackendAPIResourceConfig)?,
+      "ResourceName" : __string
+    )
+
+    alias GetBackendAPIRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "ResourceConfig" : (BackendAPIResourceConfig)?,
+      "ResourceName" : (__string)?
+    )
+
+    alias GetBackendAPIResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "ResourceConfig" : (BackendAPIResourceConfig)?,
+      "ResourceName" : (__string)?
+    )
+
+    alias GetBackendAuthReqObj = NamedTuple(
+      "ResourceName" : __string
+    )
+
+    alias GetBackendAuthRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceName" : __string
+    )
+
+    alias GetBackendAuthRespObj = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "Error" : (__string)?,
+      "ResourceConfig" : (CreateBackendAuthResourceConfig)?,
+      "ResourceName" : (__string)?
+    )
+
+    alias GetBackendAuthResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "ResourceConfig" : (CreateBackendAuthResourceConfig)?,
+      "ResourceName" : (__string)?
+    )
+
+    alias GetBackendJobRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "JobId" : __string
+    )
+
+    alias GetBackendJobResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "CreateTime" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?,
+      "UpdateTime" : (__string)?
+    )
+
+    alias GetBackendReqObj = NamedTuple(
+      "BackendEnvironmentName" : (__string)?
+    )
+
+    alias GetBackendRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : (__string)?
+    )
+
+    alias GetBackendRespObj = NamedTuple(
+      "AmplifyMetaConfig" : (__string)?,
+      "AppId" : __string,
+      "AppName" : (__string)?,
+      "BackendEnvironmentList" : (ListOf__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?
+    )
+
+    alias GetBackendResponse = NamedTuple(
+      "AmplifyMetaConfig" : (__string)?,
+      "AppId" : (__string)?,
+      "AppName" : (__string)?,
+      "BackendEnvironmentList" : (ListOf__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?
+    )
+
+    alias GetTokenRequest = NamedTuple(
+      "AppId" : __string,
+      "SessionId" : __string
+    )
+
+    alias GetTokenRespObj = NamedTuple(
+      "AppId" : __string,
+      "ChallengeCode" : __string,
+      "SessionId" : __string,
+      "Ttl" : __string
+    )
+
+    alias GetTokenResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "ChallengeCode" : (__string)?,
+      "SessionId" : (__string)?,
+      "Ttl" : (__string)?
+    )
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "LimitType" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias ListBackendJobReqObj = NamedTuple(
+      "JobId" : (__string)?,
+      "MaxResults" : (__integerMin1Max25)?,
+      "NextToken" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias ListBackendJobRespObj = NamedTuple(
+      "Jobs" : (ListOfBackendJobRespObj)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListBackendJobsRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "JobId" : (__string)?,
+      "MaxResults" : (__integerMin1Max25)?,
+      "NextToken" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias ListBackendJobsResponse = NamedTuple(
+      "Jobs" : (ListOfBackendJobRespObj)?,
+      "NextToken" : (__string)?
+    )
+
+    alias LoginAuthConfigReqObj = NamedTuple(
+      "AwsCognitoIdentityPoolId" : (__string)?,
+      "AwsCognitoRegion" : (__string)?,
+      "AwsUserPoolsId" : (__string)?,
+      "AwsUserPoolsWebClientId" : (__string)?
+    )
+
+    alias MFAMode = String
+
+    alias Mode = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (__string)?,
+      "ResourceType" : (__string)?
+    )
+
+    alias OAuthGrantType = String
+
+    alias RemoveAllBackendsReqObj = NamedTuple(
+      "CleanAmplifyApp" : (__boolean)?
+    )
+
+    alias RemoveAllBackendsRequest = NamedTuple(
+      "AppId" : __string,
+      "CleanAmplifyApp" : (__boolean)?
+    )
+
+    alias RemoveAllBackendsRespObj = NamedTuple(
+      "AppId" : __string,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias RemoveAllBackendsResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias RemoveBackendAuthReqObj = NamedTuple(
+      "ResourceName" : __string
+    )
+
+    alias RemoveBackendConfigRequest = NamedTuple(
+      "AppId" : __string
+    )
+
+    alias RemoveBackendConfigRespObj = NamedTuple(
+      "Error" : (__string)?
+    )
+
+    alias RemoveBackendConfigResponse = NamedTuple(
+      "Error" : (__string)?
+    )
+
+    alias ResolutionStrategy = String
+
+    alias ResourceConfig = NamedTuple(
+      
+    )
+
+    alias Service = String
+
+    alias Settings = NamedTuple(
+      "MfaTypes" : (ListOfMfaTypesElement)?,
+      "SmsMessage" : (__string)?
+    )
+
+    alias SignInMethod = String
+
+    alias SmsSettings = NamedTuple(
+      "SmsMessage" : (__string)?
+    )
+
+    alias SocialProviderSettings = NamedTuple(
+      "Facebook" : (BackendAuthSocialProviderConfig)?,
+      "Google" : (BackendAuthSocialProviderConfig)?,
+      "LoginWithAmazon" : (BackendAuthSocialProviderConfig)?
+    )
+
+    alias Status = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "LimitType" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias UpdateBackendAPIRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : (BackendAPIResourceConfig)?,
+      "ResourceName" : __string
+    )
+
+    alias UpdateBackendAPIResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias UpdateBackendAuthForgotPasswordConfig = NamedTuple(
+      "DeliveryMethod" : (DeliveryMethod)?,
+      "EmailSettings" : (EmailSettings)?,
+      "SmsSettings" : (SmsSettings)?
+    )
+
+    alias UpdateBackendAuthIdentityPoolConfig = NamedTuple(
+      "UnauthenticatedLogin" : (__boolean)?
+    )
+
+    alias UpdateBackendAuthMFAConfig = NamedTuple(
+      "MFAMode" : (MFAMode)?,
+      "Settings" : (Settings)?
+    )
+
+    alias UpdateBackendAuthOAuthConfig = NamedTuple(
+      "DomainPrefix" : (__string)?,
+      "OAuthGrantType" : (OAuthGrantType)?,
+      "OAuthScopes" : (ListOfOAuthScopesElement)?,
+      "RedirectSignInURIs" : (ListOf__string)?,
+      "RedirectSignOutURIs" : (ListOf__string)?,
+      "SocialProviderSettings" : (SocialProviderSettings)?
+    )
+
+    alias UpdateBackendAuthPasswordPolicyConfig = NamedTuple(
+      "AdditionalConstraints" : (ListOfAdditionalConstraintsElement)?,
+      "MinimumLength" : (__double)?
+    )
+
+    alias UpdateBackendAuthReqObj = NamedTuple(
+      "ResourceConfig" : UpdateBackendAuthResourceConfig,
+      "ResourceName" : __string
+    )
+
+    alias UpdateBackendAuthRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "ResourceConfig" : UpdateBackendAuthResourceConfig,
+      "ResourceName" : __string
+    )
+
+    alias UpdateBackendAuthResourceConfig = NamedTuple(
+      "AuthResources" : AuthResources,
+      "IdentityPoolConfigs" : (UpdateBackendAuthIdentityPoolConfig)?,
+      "Service" : Service,
+      "UserPoolConfigs" : UpdateBackendAuthUserPoolConfig
+    )
+
+    alias UpdateBackendAuthResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias UpdateBackendAuthUserPoolConfig = NamedTuple(
+      "ForgotPassword" : (UpdateBackendAuthForgotPasswordConfig)?,
+      "Mfa" : (UpdateBackendAuthMFAConfig)?,
+      "OAuth" : (UpdateBackendAuthOAuthConfig)?,
+      "PasswordPolicy" : (UpdateBackendAuthPasswordPolicyConfig)?
+    )
+
+    alias UpdateBackendConfigReqObj = NamedTuple(
+      "LoginAuthConfig" : (LoginAuthConfigReqObj)?
+    )
+
+    alias UpdateBackendConfigRequest = NamedTuple(
+      "AppId" : __string,
+      "LoginAuthConfig" : (LoginAuthConfigReqObj)?
+    )
+
+    alias UpdateBackendConfigResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendManagerAppId" : (__string)?,
+      "Error" : (__string)?,
+      "LoginAuthConfig" : (LoginAuthConfigReqObj)?
+    )
+
+    alias UpdateBackendJobRequest = NamedTuple(
+      "AppId" : __string,
+      "BackendEnvironmentName" : __string,
+      "JobId" : __string,
+      "Operation" : (__string)?,
+      "Status" : (__string)?
+    )
+
+    alias UpdateBackendJobResponse = NamedTuple(
+      "AppId" : (__string)?,
+      "BackendEnvironmentName" : (__string)?,
+      "CreateTime" : (__string)?,
+      "Error" : (__string)?,
+      "JobId" : (__string)?,
+      "Operation" : (__string)?,
+      "Status" : (__string)?,
+      "UpdateTime" : (__string)?
+    )
+
+    alias AdditionalConstraintsElement = String
+
+    alias MfaTypesElement = String
+
+    alias OAuthScopesElement = String
+
+    alias RequiredSignUpAttributesElement = String
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __integerMin1Max25 = Int32
+
+    alias ListOfBackendAPIAuthType = Array(BackendAPIAuthType)
+
+    alias ListOfBackendJobRespObj = Array(BackendJobRespObj)
+
+    alias ListOfAdditionalConstraintsElement = Array(AdditionalConstraintsElement)
+
+    alias ListOfMfaTypesElement = Array(MfaTypesElement)
+
+    alias ListOfOAuthScopesElement = Array(OAuthScopesElement)
+
+    alias ListOfRequiredSignUpAttributesElement = Array(RequiredSignUpAttributesElement)
+
+    alias ListOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

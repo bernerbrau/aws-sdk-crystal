@@ -835,5 +835,220 @@ module Aws::MarketplaceCatalog
       include Aws::Structure
     end
 
+    alias ARN = String
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias CancelChangeSetRequest = NamedTuple(
+      "Catalog" : Catalog,
+      "ChangeSetId" : ResourceId
+    )
+
+    alias CancelChangeSetResponse = NamedTuple(
+      "ChangeSetId" : (ResourceId)?,
+      "ChangeSetArn" : (ARN)?
+    )
+
+    alias Catalog = String
+
+    alias Change = NamedTuple(
+      "ChangeType" : ChangeType,
+      "Entity" : Entity,
+      "Details" : Json
+    )
+
+    alias ChangeSetDescription = Array(ChangeSummary)
+
+    alias ChangeSetName = String
+
+    alias ChangeSetSummaryList = Array(ChangeSetSummaryListItem)
+
+    alias ChangeSetSummaryListItem = NamedTuple(
+      "ChangeSetId" : (ResourceId)?,
+      "ChangeSetArn" : (ARN)?,
+      "ChangeSetName" : (ChangeSetName)?,
+      "StartTime" : (DateTimeISO8601)?,
+      "EndTime" : (DateTimeISO8601)?,
+      "Status" : (ChangeStatus)?,
+      "EntityIdList" : (ResourceIdList)?,
+      "FailureCode" : (FailureCode)?
+    )
+
+    alias ChangeStatus = String
+
+    alias ChangeSummary = NamedTuple(
+      "ChangeType" : (ChangeType)?,
+      "Entity" : (Entity)?,
+      "Details" : (Json)?,
+      "ErrorDetailList" : (ErrorDetailList)?
+    )
+
+    alias ChangeType = String
+
+    alias ClientRequestToken = String
+
+    alias DateTimeISO8601 = String
+
+    alias DescribeChangeSetRequest = NamedTuple(
+      "Catalog" : Catalog,
+      "ChangeSetId" : ResourceId
+    )
+
+    alias DescribeChangeSetResponse = NamedTuple(
+      "ChangeSetId" : (ResourceId)?,
+      "ChangeSetArn" : (ARN)?,
+      "ChangeSetName" : (ChangeSetName)?,
+      "StartTime" : (DateTimeISO8601)?,
+      "EndTime" : (DateTimeISO8601)?,
+      "Status" : (ChangeStatus)?,
+      "FailureCode" : (FailureCode)?,
+      "FailureDescription" : (StringValue)?,
+      "ChangeSet" : (ChangeSetDescription)?
+    )
+
+    alias DescribeEntityRequest = NamedTuple(
+      "Catalog" : Catalog,
+      "EntityId" : ResourceId
+    )
+
+    alias DescribeEntityResponse = NamedTuple(
+      "EntityType" : (EntityType)?,
+      "EntityIdentifier" : (Identifier)?,
+      "EntityArn" : (ARN)?,
+      "LastModifiedDate" : (StringValue)?,
+      "Details" : (Json)?
+    )
+
+    alias Entity = NamedTuple(
+      "Type" : EntityType,
+      "Identifier" : (Identifier)?
+    )
+
+    alias EntitySummary = NamedTuple(
+      "Name" : (StringValue)?,
+      "EntityType" : (EntityType)?,
+      "EntityId" : (ResourceId)?,
+      "EntityArn" : (ARN)?,
+      "LastModifiedDate" : (StringValue)?,
+      "Visibility" : (StringValue)?
+    )
+
+    alias EntitySummaryList = Array(EntitySummary)
+
+    alias EntityType = String
+
+    alias ErrorDetail = NamedTuple(
+      "ErrorCode" : (StringValue)?,
+      "ErrorMessage" : (StringValue)?
+    )
+
+    alias ErrorDetailList = Array(ErrorDetail)
+
+    alias FailureCode = String
+
+    alias Filter = NamedTuple(
+      "Name" : (FilterName)?,
+      "ValueList" : (ValueList)?
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterName = String
+
+    alias Identifier = String
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias Json = String
+
+    alias ListChangeSetsRequest = NamedTuple(
+      "Catalog" : Catalog,
+      "FilterList" : (FilterList)?,
+      "Sort" : (Sort)?,
+      "MaxResults" : (MaxResultInteger)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListChangeSetsResponse = NamedTuple(
+      "ChangeSetSummaryList" : (ChangeSetSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEntitiesRequest = NamedTuple(
+      "Catalog" : Catalog,
+      "EntityType" : EntityType,
+      "FilterList" : (FilterList)?,
+      "Sort" : (Sort)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResultInteger)?
+    )
+
+    alias ListEntitiesResponse = NamedTuple(
+      "EntitySummaryList" : (EntitySummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResultInteger = Int32
+
+    alias NextToken = String
+
+    alias RequestedChangeList = Array(Change)
+
+    alias ResourceId = String
+
+    alias ResourceIdList = Array(ResourceId)
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias ResourceNotSupportedException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias Sort = NamedTuple(
+      "SortBy" : (SortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias SortBy = String
+
+    alias SortOrder = String
+
+    alias StartChangeSetRequest = NamedTuple(
+      "Catalog" : Catalog,
+      "ChangeSet" : RequestedChangeList,
+      "ChangeSetName" : (ChangeSetName)?,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias StartChangeSetResponse = NamedTuple(
+      "ChangeSetId" : (ResourceId)?,
+      "ChangeSetArn" : (ARN)?
+    )
+
+    alias StringValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (StringValue)?
+    )
+
+    alias ValueList = Array(StringValue)
   end
 end

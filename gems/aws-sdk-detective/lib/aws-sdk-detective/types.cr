@@ -709,5 +709,173 @@ module Aws::Detective
       include Aws::Structure
     end
 
+    alias AcceptInvitationRequest = NamedTuple(
+      "GraphArn" : GraphArn
+    )
+
+    alias Account = NamedTuple(
+      "AccountId" : AccountId,
+      "EmailAddress" : EmailAddress
+    )
+
+    alias AccountId = String
+
+    alias AccountIdList = Array(AccountId)
+
+    alias AccountList = Array(Account)
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CreateGraphResponse = NamedTuple(
+      "GraphArn" : (GraphArn)?
+    )
+
+    alias CreateMembersRequest = NamedTuple(
+      "GraphArn" : GraphArn,
+      "Message" : (EmailMessage)?,
+      "Accounts" : AccountList
+    )
+
+    alias CreateMembersResponse = NamedTuple(
+      "Members" : (MemberDetailList)?,
+      "UnprocessedAccounts" : (UnprocessedAccountList)?
+    )
+
+    alias DeleteGraphRequest = NamedTuple(
+      "GraphArn" : GraphArn
+    )
+
+    alias DeleteMembersRequest = NamedTuple(
+      "GraphArn" : GraphArn,
+      "AccountIds" : AccountIdList
+    )
+
+    alias DeleteMembersResponse = NamedTuple(
+      "AccountIds" : (AccountIdList)?,
+      "UnprocessedAccounts" : (UnprocessedAccountList)?
+    )
+
+    alias DisassociateMembershipRequest = NamedTuple(
+      "GraphArn" : GraphArn
+    )
+
+    alias EmailAddress = String
+
+    alias EmailMessage = String
+
+    alias ErrorMessage = String
+
+    alias GetMembersRequest = NamedTuple(
+      "GraphArn" : GraphArn,
+      "AccountIds" : AccountIdList
+    )
+
+    alias GetMembersResponse = NamedTuple(
+      "MemberDetails" : (MemberDetailList)?,
+      "UnprocessedAccounts" : (UnprocessedAccountList)?
+    )
+
+    alias Graph = NamedTuple(
+      "Arn" : (GraphArn)?,
+      "CreatedTime" : (Timestamp)?
+    )
+
+    alias GraphArn = String
+
+    alias GraphList = Array(Graph)
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListGraphsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MemberResultsLimit)?
+    )
+
+    alias ListGraphsResponse = NamedTuple(
+      "GraphList" : (GraphList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListInvitationsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MemberResultsLimit)?
+    )
+
+    alias ListInvitationsResponse = NamedTuple(
+      "Invitations" : (MemberDetailList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListMembersRequest = NamedTuple(
+      "GraphArn" : GraphArn,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MemberResultsLimit)?
+    )
+
+    alias ListMembersResponse = NamedTuple(
+      "MemberDetails" : (MemberDetailList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias MemberDetail = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "EmailAddress" : (EmailAddress)?,
+      "GraphArn" : (GraphArn)?,
+      "MasterId" : (AccountId)?,
+      "Status" : (MemberStatus)?,
+      "DisabledReason" : (MemberDisabledReason)?,
+      "InvitedTime" : (Timestamp)?,
+      "UpdatedTime" : (Timestamp)?,
+      "PercentOfGraphUtilization" : (Percentage)?,
+      "PercentOfGraphUtilizationUpdatedTime" : (Timestamp)?
+    )
+
+    alias MemberDetailList = Array(MemberDetail)
+
+    alias MemberDisabledReason = String
+
+    alias MemberResultsLimit = Int32
+
+    alias MemberStatus = String
+
+    alias PaginationToken = String
+
+    alias Percentage = Float64
+
+    alias RejectInvitationRequest = NamedTuple(
+      "GraphArn" : GraphArn
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias StartMonitoringMemberRequest = NamedTuple(
+      "GraphArn" : GraphArn,
+      "AccountId" : AccountId
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UnprocessedAccount = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "Reason" : (UnprocessedReason)?
+    )
+
+    alias UnprocessedAccountList = Array(UnprocessedAccount)
+
+    alias UnprocessedReason = String
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

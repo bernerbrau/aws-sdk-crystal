@@ -351,8 +351,8 @@ module Aws::WellArchitected
     #
     # @overload associate_lenses(**params)
     # @param [Hash] params ({})
-    def associate_lenses(params = {}, **options)
-      req = build_request(:associate_lenses, params)
+    def associate_lenses(, **options)
+      req = build_request(:associate_lenses, )
       req.send_request(options)
     end
 
@@ -406,8 +406,8 @@ module Aws::WellArchitected
     #
     # @overload create_milestone(**params)
     # @param [Hash] params ({})
-    def create_milestone(params = {}, **options)
-      req = build_request(:create_milestone, params)
+    def create_milestone(, **options)
+      req = build_request(:create_milestone, )
       req.send_request(options)
     end
 
@@ -578,8 +578,8 @@ module Aws::WellArchitected
     #
     # @overload create_workload(**params)
     # @param [Hash] params ({})
-    def create_workload(params = {}, **options)
-      req = build_request(:create_workload, params)
+    def create_workload(, **options)
+      req = build_request(:create_workload, )
       req.send_request(options)
     end
 
@@ -646,8 +646,8 @@ module Aws::WellArchitected
     #
     # @overload create_workload_share(**params)
     # @param [Hash] params ({})
-    def create_workload_share(params = {}, **options)
-      req = build_request(:create_workload_share, params)
+    def create_workload_share(, **options)
+      req = build_request(:create_workload_share, )
       req.send_request(options)
     end
 
@@ -687,8 +687,8 @@ module Aws::WellArchitected
     #
     # @overload delete_workload(**params)
     # @param [Hash] params ({})
-    def delete_workload(params = {}, **options)
-      req = build_request(:delete_workload, params)
+    def delete_workload(, **options)
+      req = build_request(:delete_workload, )
       req.send_request(options)
     end
 
@@ -732,8 +732,8 @@ module Aws::WellArchitected
     #
     # @overload delete_workload_share(**params)
     # @param [Hash] params ({})
-    def delete_workload_share(params = {}, **options)
-      req = build_request(:delete_workload_share, params)
+    def delete_workload_share(, **options)
+      req = build_request(:delete_workload_share, )
       req.send_request(options)
     end
 
@@ -766,8 +766,8 @@ module Aws::WellArchitected
     #
     # @overload disassociate_lenses(**params)
     # @param [Hash] params ({})
-    def disassociate_lenses(params = {}, **options)
-      req = build_request(:disassociate_lenses, params)
+    def disassociate_lenses(, **options)
+      req = build_request(:disassociate_lenses, )
       req.send_request(options)
     end
 
@@ -831,8 +831,8 @@ module Aws::WellArchitected
     #
     # @overload get_answer(**params)
     # @param [Hash] params ({})
-    def get_answer(params = {}, **options)
-      req = build_request(:get_answer, params)
+    def get_answer(, **options)
+      req = build_request(:get_answer, )
       req.send_request(options)
     end
 
@@ -890,8 +890,8 @@ module Aws::WellArchitected
     #
     # @overload get_lens_review(**params)
     # @param [Hash] params ({})
-    def get_lens_review(params = {}, **options)
-      req = build_request(:get_lens_review, params)
+    def get_lens_review(, **options)
+      req = build_request(:get_lens_review, )
       req.send_request(options)
     end
 
@@ -936,8 +936,8 @@ module Aws::WellArchitected
     #
     # @overload get_lens_review_report(**params)
     # @param [Hash] params ({})
-    def get_lens_review_report(params = {}, **options)
-      req = build_request(:get_lens_review_report, params)
+    def get_lens_review_report(, **options)
+      req = build_request(:get_lens_review_report, )
       req.send_request(options)
     end
 
@@ -982,8 +982,8 @@ module Aws::WellArchitected
     #
     # @overload get_lens_version_difference(**params)
     # @param [Hash] params ({})
-    def get_lens_version_difference(params = {}, **options)
-      req = build_request(:get_lens_version_difference, params)
+    def get_lens_version_difference(, **options)
+      req = build_request(:get_lens_version_difference, )
       req.send_request(options)
     end
 
@@ -1049,8 +1049,8 @@ module Aws::WellArchitected
     #
     # @overload get_milestone(**params)
     # @param [Hash] params ({})
-    def get_milestone(params = {}, **options)
-      req = build_request(:get_milestone, params)
+    def get_milestone(, **options)
+      req = build_request(:get_milestone, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::WellArchitected
     #
     # @overload get_workload(**params)
     # @param [Hash] params ({})
-    def get_workload(params = {}, **options)
-      req = build_request(:get_workload, params)
+    def get_workload(, **options)
+      req = build_request(:get_workload, )
       req.send_request(options)
     end
 
@@ -1181,8 +1181,8 @@ module Aws::WellArchitected
     #
     # @overload list_answers(**params)
     # @param [Hash] params ({})
-    def list_answers(params = {}, **options)
-      req = build_request(:list_answers, params)
+    def list_answers(, **options)
+      req = build_request(:list_answers, )
       req.send_request(options)
     end
 
@@ -1251,8 +1251,8 @@ module Aws::WellArchitected
     #
     # @overload list_lens_review_improvements(**params)
     # @param [Hash] params ({})
-    def list_lens_review_improvements(params = {}, **options)
-      req = build_request(:list_lens_review_improvements, params)
+    def list_lens_review_improvements(, **options)
+      req = build_request(:list_lens_review_improvements, )
       req.send_request(options)
     end
 
@@ -1309,8 +1309,8 @@ module Aws::WellArchitected
     #
     # @overload list_lens_reviews(**params)
     # @param [Hash] params ({})
-    def list_lens_reviews(params = {}, **options)
-      req = build_request(:list_lens_reviews, params)
+    def list_lens_reviews(, **options)
+      req = build_request(:list_lens_reviews, )
       req.send_request(options)
     end
 
@@ -1349,8 +1349,8 @@ module Aws::WellArchitected
     #
     # @overload list_lenses(**params)
     # @param [Hash] params ({})
-    def list_lenses(params = {}, **options)
-      req = build_request(:list_lenses, params)
+    def list_lenses(, **options)
+      req = build_request(:list_lenses, )
       req.send_request(options)
     end
 
@@ -1405,8 +1405,8 @@ module Aws::WellArchitected
     #
     # @overload list_milestones(**params)
     # @param [Hash] params ({})
-    def list_milestones(params = {}, **options)
-      req = build_request(:list_milestones, params)
+    def list_milestones(, **options)
+      req = build_request(:list_milestones, )
       req.send_request(options)
     end
 
@@ -1452,8 +1452,8 @@ module Aws::WellArchitected
     #
     # @overload list_notifications(**params)
     # @param [Hash] params ({})
-    def list_notifications(params = {}, **options)
-      req = build_request(:list_notifications, params)
+    def list_notifications(, **options)
+      req = build_request(:list_notifications, )
       req.send_request(options)
     end
 
@@ -1499,8 +1499,8 @@ module Aws::WellArchitected
     #
     # @overload list_share_invitations(**params)
     # @param [Hash] params ({})
-    def list_share_invitations(params = {}, **options)
-      req = build_request(:list_share_invitations, params)
+    def list_share_invitations(, **options)
+      req = build_request(:list_share_invitations, )
       req.send_request(options)
     end
 
@@ -1550,8 +1550,8 @@ module Aws::WellArchitected
     #
     # @overload list_workload_shares(**params)
     # @param [Hash] params ({})
-    def list_workload_shares(params = {}, **options)
-      req = build_request(:list_workload_shares, params)
+    def list_workload_shares(, **options)
+      req = build_request(:list_workload_shares, )
       req.send_request(options)
     end
 
@@ -1601,8 +1601,8 @@ module Aws::WellArchitected
     #
     # @overload list_workloads(**params)
     # @param [Hash] params ({})
-    def list_workloads(params = {}, **options)
-      req = build_request(:list_workloads, params)
+    def list_workloads(, **options)
+      req = build_request(:list_workloads, )
       req.send_request(options)
     end
 
@@ -1670,8 +1670,8 @@ module Aws::WellArchitected
     #
     # @overload update_answer(**params)
     # @param [Hash] params ({})
-    def update_answer(params = {}, **options)
-      req = build_request(:update_answer, params)
+    def update_answer(, **options)
+      req = build_request(:update_answer, )
       req.send_request(options)
     end
 
@@ -1731,8 +1731,8 @@ module Aws::WellArchitected
     #
     # @overload update_lens_review(**params)
     # @param [Hash] params ({})
-    def update_lens_review(params = {}, **options)
-      req = build_request(:update_lens_review, params)
+    def update_lens_review(, **options)
+      req = build_request(:update_lens_review, )
       req.send_request(options)
     end
 
@@ -1764,8 +1764,8 @@ module Aws::WellArchitected
     #
     # @overload update_share_invitation(**params)
     # @param [Hash] params ({})
-    def update_share_invitation(params = {}, **options)
-      req = build_request(:update_share_invitation, params)
+    def update_share_invitation(, **options)
+      req = build_request(:update_share_invitation, )
       req.send_request(options)
     end
 
@@ -1945,8 +1945,8 @@ module Aws::WellArchitected
     #
     # @overload update_workload(**params)
     # @param [Hash] params ({})
-    def update_workload(params = {}, **options)
-      req = build_request(:update_workload, params)
+    def update_workload(, **options)
+      req = build_request(:update_workload, )
       req.send_request(options)
     end
 
@@ -1990,8 +1990,8 @@ module Aws::WellArchitected
     #
     # @overload update_workload_share(**params)
     # @param [Hash] params ({})
-    def update_workload_share(params = {}, **options)
-      req = build_request(:update_workload_share, params)
+    def update_workload_share(, **options)
+      req = build_request(:update_workload_share, )
       req.send_request(options)
     end
 
@@ -2040,8 +2040,8 @@ module Aws::WellArchitected
     #
     # @overload upgrade_lens_review(**params)
     # @param [Hash] params ({})
-    def upgrade_lens_review(params = {}, **options)
-      req = build_request(:upgrade_lens_review, params)
+    def upgrade_lens_review(, **options)
+      req = build_request(:upgrade_lens_review, )
       req.send_request(options)
     end
 

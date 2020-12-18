@@ -356,8 +356,8 @@ module Aws::Macie
     #
     # @overload associate_member_account(**params)
     # @param [Hash] params ({})
-    def associate_member_account(params = {}, **options)
-      req = build_request(:associate_member_account, params)
+    def associate_member_account(, **options)
+      req = build_request(:associate_member_account, )
       req.send_request(options)
     end
 
@@ -408,8 +408,8 @@ module Aws::Macie
     #
     # @overload associate_s3_resources(**params)
     # @param [Hash] params ({})
-    def associate_s3_resources(params = {}, **options)
-      req = build_request(:associate_s3_resources, params)
+    def associate_s3_resources(, **options)
+      req = build_request(:associate_s3_resources, )
       req.send_request(options)
     end
 
@@ -431,8 +431,8 @@ module Aws::Macie
     #
     # @overload disassociate_member_account(**params)
     # @param [Hash] params ({})
-    def disassociate_member_account(params = {}, **options)
-      req = build_request(:disassociate_member_account, params)
+    def disassociate_member_account(, **options)
+      req = build_request(:disassociate_member_account, )
       req.send_request(options)
     end
 
@@ -478,8 +478,8 @@ module Aws::Macie
     #
     # @overload disassociate_s3_resources(**params)
     # @param [Hash] params ({})
-    def disassociate_s3_resources(params = {}, **options)
-      req = build_request(:disassociate_s3_resources, params)
+    def disassociate_s3_resources(, **options)
+      req = build_request(:disassociate_s3_resources, )
       req.send_request(options)
     end
 
@@ -521,8 +521,8 @@ module Aws::Macie
     #
     # @overload list_member_accounts(**params)
     # @param [Hash] params ({})
-    def list_member_accounts(params = {}, **options)
-      req = build_request(:list_member_accounts, params)
+    def list_member_accounts(, **options)
+      req = build_request(:list_member_accounts, )
       req.send_request(options)
     end
 
@@ -574,8 +574,8 @@ module Aws::Macie
     #
     # @overload list_s3_resources(**params)
     # @param [Hash] params ({})
-    def list_s3_resources(params = {}, **options)
-      req = build_request(:list_s3_resources, params)
+    def list_s3_resources(, **options)
+      req = build_request(:list_s3_resources, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::Macie
     #
     # @overload update_s3_resources(**params)
     # @param [Hash] params ({})
-    def update_s3_resources(params = {}, **options)
-      req = build_request(:update_s3_resources, params)
+    def update_s3_resources(, **options)
+      req = build_request(:update_s3_resources, )
       req.send_request(options)
     end
 

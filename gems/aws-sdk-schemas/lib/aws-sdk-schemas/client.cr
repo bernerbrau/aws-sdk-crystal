@@ -369,8 +369,8 @@ module Aws::Schemas
     #
     # @overload create_discoverer(**params)
     # @param [Hash] params ({})
-    def create_discoverer(params = {}, **options)
-      req = build_request(:create_discoverer, params)
+    def create_discoverer(, **options)
+      req = build_request(:create_discoverer, )
       req.send_request(options)
     end
 
@@ -412,8 +412,8 @@ module Aws::Schemas
     #
     # @overload create_registry(**params)
     # @param [Hash] params ({})
-    def create_registry(params = {}, **options)
-      req = build_request(:create_registry, params)
+    def create_registry(, **options)
+      req = build_request(:create_registry, )
       req.send_request(options)
     end
 
@@ -476,8 +476,8 @@ module Aws::Schemas
     #
     # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, **options)
-      req = build_request(:create_schema, params)
+    def create_schema(, **options)
+      req = build_request(:create_schema, )
       req.send_request(options)
     end
 
@@ -497,8 +497,8 @@ module Aws::Schemas
     #
     # @overload delete_discoverer(**params)
     # @param [Hash] params ({})
-    def delete_discoverer(params = {}, **options)
-      req = build_request(:delete_discoverer, params)
+    def delete_discoverer(, **options)
+      req = build_request(:delete_discoverer, )
       req.send_request(options)
     end
 
@@ -518,8 +518,8 @@ module Aws::Schemas
     #
     # @overload delete_registry(**params)
     # @param [Hash] params ({})
-    def delete_registry(params = {}, **options)
-      req = build_request(:delete_registry, params)
+    def delete_registry(, **options)
+      req = build_request(:delete_registry, )
       req.send_request(options)
     end
 
@@ -539,8 +539,8 @@ module Aws::Schemas
     #
     # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, **options)
-      req = build_request(:delete_resource_policy, params)
+    def delete_resource_policy(, **options)
+      req = build_request(:delete_resource_policy, )
       req.send_request(options)
     end
 
@@ -563,8 +563,8 @@ module Aws::Schemas
     #
     # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, **options)
-      req = build_request(:delete_schema, params)
+    def delete_schema(, **options)
+      req = build_request(:delete_schema, )
       req.send_request(options)
     end
 
@@ -590,8 +590,8 @@ module Aws::Schemas
     #
     # @overload delete_schema_version(**params)
     # @param [Hash] params ({})
-    def delete_schema_version(params = {}, **options)
-      req = build_request(:delete_schema_version, params)
+    def delete_schema_version(, **options)
+      req = build_request(:delete_schema_version, )
       req.send_request(options)
     end
 
@@ -637,8 +637,8 @@ module Aws::Schemas
     #
     # @overload describe_code_binding(**params)
     # @param [Hash] params ({})
-    def describe_code_binding(params = {}, **options)
-      req = build_request(:describe_code_binding, params)
+    def describe_code_binding(, **options)
+      req = build_request(:describe_code_binding, )
       req.send_request(options)
     end
 
@@ -675,8 +675,8 @@ module Aws::Schemas
     #
     # @overload describe_discoverer(**params)
     # @param [Hash] params ({})
-    def describe_discoverer(params = {}, **options)
-      req = build_request(:describe_discoverer, params)
+    def describe_discoverer(, **options)
+      req = build_request(:describe_discoverer, )
       req.send_request(options)
     end
 
@@ -709,8 +709,8 @@ module Aws::Schemas
     #
     # @overload describe_registry(**params)
     # @param [Hash] params ({})
-    def describe_registry(params = {}, **options)
-      req = build_request(:describe_registry, params)
+    def describe_registry(, **options)
+      req = build_request(:describe_registry, )
       req.send_request(options)
     end
 
@@ -759,8 +759,8 @@ module Aws::Schemas
     #
     # @overload describe_schema(**params)
     # @param [Hash] params ({})
-    def describe_schema(params = {}, **options)
-      req = build_request(:describe_schema, params)
+    def describe_schema(, **options)
+      req = build_request(:describe_schema, )
       req.send_request(options)
     end
 
@@ -795,8 +795,8 @@ module Aws::Schemas
     #
     # @overload get_code_binding_source(**params)
     # @param [Hash] params ({})
-    def get_code_binding_source(params = {}, **options, &block)
-      req = build_request(:get_code_binding_source, params)
+    def get_code_binding_source(, **options, &block)
+      req = build_request(:get_code_binding_source, )
       req.send_request(options, &block)
     end
 
@@ -825,8 +825,8 @@ module Aws::Schemas
     #
     # @overload get_discovered_schema(**params)
     # @param [Hash] params ({})
-    def get_discovered_schema(params = {}, **options)
-      req = build_request(:get_discovered_schema, params)
+    def get_discovered_schema(, **options)
+      req = build_request(:get_discovered_schema, )
       req.send_request(options)
     end
 
@@ -854,8 +854,8 @@ module Aws::Schemas
     #
     # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, **options)
-      req = build_request(:get_resource_policy, params)
+    def get_resource_policy(, **options)
+      req = build_request(:get_resource_policy, )
       req.send_request(options)
     end
 
@@ -900,8 +900,8 @@ module Aws::Schemas
     #
     # @overload list_discoverers(**params)
     # @param [Hash] params ({})
-    def list_discoverers(params = {}, **options)
-      req = build_request(:list_discoverers, params)
+    def list_discoverers(, **options)
+      req = build_request(:list_discoverers, )
       req.send_request(options)
     end
 
@@ -944,8 +944,8 @@ module Aws::Schemas
     #
     # @overload list_registries(**params)
     # @param [Hash] params ({})
-    def list_registries(params = {}, **options)
-      req = build_request(:list_registries, params)
+    def list_registries(, **options)
+      req = build_request(:list_registries, )
       req.send_request(options)
     end
 
@@ -988,8 +988,8 @@ module Aws::Schemas
     #
     # @overload list_schema_versions(**params)
     # @param [Hash] params ({})
-    def list_schema_versions(params = {}, **options)
-      req = build_request(:list_schema_versions, params)
+    def list_schema_versions(, **options)
+      req = build_request(:list_schema_versions, )
       req.send_request(options)
     end
 
@@ -1034,8 +1034,8 @@ module Aws::Schemas
     #
     # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, **options)
-      req = build_request(:list_schemas, params)
+    def list_schemas(, **options)
+      req = build_request(:list_schemas, )
       req.send_request(options)
     end
 
@@ -1062,8 +1062,8 @@ module Aws::Schemas
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1104,8 +1104,8 @@ module Aws::Schemas
     #
     # @overload put_code_binding(**params)
     # @param [Hash] params ({})
-    def put_code_binding(params = {}, **options)
-      req = build_request(:put_code_binding, params)
+    def put_code_binding(, **options)
+      req = build_request(:put_code_binding, )
       req.send_request(options)
     end
 
@@ -1142,8 +1142,8 @@ module Aws::Schemas
     #
     # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, **options)
-      req = build_request(:put_resource_policy, params)
+    def put_resource_policy(, **options)
+      req = build_request(:put_resource_policy, )
       req.send_request(options)
     end
 
@@ -1189,8 +1189,8 @@ module Aws::Schemas
     #
     # @overload search_schemas(**params)
     # @param [Hash] params ({})
-    def search_schemas(params = {}, **options)
-      req = build_request(:search_schemas, params)
+    def search_schemas(, **options)
+      req = build_request(:search_schemas, )
       req.send_request(options)
     end
 
@@ -1218,8 +1218,8 @@ module Aws::Schemas
     #
     # @overload start_discoverer(**params)
     # @param [Hash] params ({})
-    def start_discoverer(params = {}, **options)
-      req = build_request(:start_discoverer, params)
+    def start_discoverer(, **options)
+      req = build_request(:start_discoverer, )
       req.send_request(options)
     end
 
@@ -1247,8 +1247,8 @@ module Aws::Schemas
     #
     # @overload stop_discoverer(**params)
     # @param [Hash] params ({})
-    def stop_discoverer(params = {}, **options)
-      req = build_request(:stop_discoverer, params)
+    def stop_discoverer(, **options)
+      req = build_request(:stop_discoverer, )
       req.send_request(options)
     end
 
@@ -1274,8 +1274,8 @@ module Aws::Schemas
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1298,8 +1298,8 @@ module Aws::Schemas
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1339,8 +1339,8 @@ module Aws::Schemas
     #
     # @overload update_discoverer(**params)
     # @param [Hash] params ({})
-    def update_discoverer(params = {}, **options)
-      req = build_request(:update_discoverer, params)
+    def update_discoverer(, **options)
+      req = build_request(:update_discoverer, )
       req.send_request(options)
     end
 
@@ -1376,8 +1376,8 @@ module Aws::Schemas
     #
     # @overload update_registry(**params)
     # @param [Hash] params ({})
-    def update_registry(params = {}, **options)
-      req = build_request(:update_registry, params)
+    def update_registry(, **options)
+      req = build_request(:update_registry, )
       req.send_request(options)
     end
 
@@ -1439,8 +1439,8 @@ module Aws::Schemas
     #
     # @overload update_schema(**params)
     # @param [Hash] params ({})
-    def update_schema(params = {}, **options)
-      req = build_request(:update_schema, params)
+    def update_schema(, **options)
+      req = build_request(:update_schema, )
       req.send_request(options)
     end
 
@@ -1483,8 +1483,8 @@ module Aws::Schemas
     #
     # @overload export_schema(**params)
     # @param [Hash] params ({})
-    def export_schema(params = {}, **options)
-      req = build_request(:export_schema, params)
+    def export_schema(, **options)
+      req = build_request(:export_schema, )
       req.send_request(options)
     end
 

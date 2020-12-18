@@ -402,8 +402,8 @@ module Aws::KMS
     #
     # @overload cancel_key_deletion(**params)
     # @param [Hash] params ({})
-    def cancel_key_deletion(params = {}, **options)
-      req = build_request(:cancel_key_deletion, params)
+    def cancel_key_deletion(, **options)
+      req = build_request(:cancel_key_deletion, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::KMS
     #
     # @overload connect_custom_key_store(**params)
     # @param [Hash] params ({})
-    def connect_custom_key_store(params = {}, **options)
-      req = build_request(:connect_custom_key_store, params)
+    def connect_custom_key_store(, **options)
+      req = build_request(:connect_custom_key_store, )
       req.send_request(options)
     end
 
@@ -592,8 +592,8 @@ module Aws::KMS
     #
     # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, **options)
-      req = build_request(:create_alias, params)
+    def create_alias(, **options)
+      req = build_request(:create_alias, )
       req.send_request(options)
     end
 
@@ -687,8 +687,8 @@ module Aws::KMS
     #
     # @overload create_custom_key_store(**params)
     # @param [Hash] params ({})
-    def create_custom_key_store(params = {}, **options)
-      req = build_request(:create_custom_key_store, params)
+    def create_custom_key_store(, **options)
+      req = build_request(:create_custom_key_store, )
       req.send_request(options)
     end
 
@@ -896,8 +896,8 @@ module Aws::KMS
     #
     # @overload create_grant(**params)
     # @param [Hash] params ({})
-    def create_grant(params = {}, **options)
-      req = build_request(:create_grant, params)
+    def create_grant(, **options)
+      req = build_request(:create_grant, )
       req.send_request(options)
     end
 
@@ -1271,8 +1271,8 @@ module Aws::KMS
     #
     # @overload create_key(**params)
     # @param [Hash] params ({})
-    def create_key(params = {}, **options)
-      req = build_request(:create_key, params)
+    def create_key(, **options)
+      req = build_request(:create_key, )
       req.send_request(options)
     end
 
@@ -1451,8 +1451,8 @@ module Aws::KMS
     #
     # @overload decrypt(**params)
     # @param [Hash] params ({})
-    def decrypt(params = {}, **options)
-      req = build_request(:decrypt, params)
+    def decrypt(, **options)
+      req = build_request(:decrypt, )
       req.send_request(options)
     end
 
@@ -1494,8 +1494,8 @@ module Aws::KMS
     #
     # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, **options)
-      req = build_request(:delete_alias, params)
+    def delete_alias(, **options)
+      req = build_request(:delete_alias, )
       req.send_request(options)
     end
 
@@ -1554,8 +1554,8 @@ module Aws::KMS
     #
     # @overload delete_custom_key_store(**params)
     # @param [Hash] params ({})
-    def delete_custom_key_store(params = {}, **options)
-      req = build_request(:delete_custom_key_store, params)
+    def delete_custom_key_store(, **options)
+      req = build_request(:delete_custom_key_store, )
       req.send_request(options)
     end
 
@@ -1617,8 +1617,8 @@ module Aws::KMS
     #
     # @overload delete_imported_key_material(**params)
     # @param [Hash] params ({})
-    def delete_imported_key_material(params = {}, **options)
-      req = build_request(:delete_imported_key_material, params)
+    def delete_imported_key_material(, **options)
+      req = build_request(:delete_imported_key_material, )
       req.send_request(options)
     end
 
@@ -1717,8 +1717,8 @@ module Aws::KMS
     #
     # @overload describe_custom_key_stores(**params)
     # @param [Hash] params ({})
-    def describe_custom_key_stores(params = {}, **options)
-      req = build_request(:describe_custom_key_stores, params)
+    def describe_custom_key_stores(, **options)
+      req = build_request(:describe_custom_key_stores, )
       req.send_request(options)
     end
 
@@ -1870,8 +1870,8 @@ module Aws::KMS
     #
     # @overload describe_key(**params)
     # @param [Hash] params ({})
-    def describe_key(params = {}, **options)
-      req = build_request(:describe_key, params)
+    def describe_key(, **options)
+      req = build_request(:describe_key, )
       req.send_request(options)
     end
 
@@ -1927,8 +1927,8 @@ module Aws::KMS
     #
     # @overload disable_key(**params)
     # @param [Hash] params ({})
-    def disable_key(params = {}, **options)
-      req = build_request(:disable_key, params)
+    def disable_key(, **options)
+      req = build_request(:disable_key, )
       req.send_request(options)
     end
 
@@ -1992,8 +1992,8 @@ module Aws::KMS
     #
     # @overload disable_key_rotation(**params)
     # @param [Hash] params ({})
-    def disable_key_rotation(params = {}, **options)
-      req = build_request(:disable_key_rotation, params)
+    def disable_key_rotation(, **options)
+      req = build_request(:disable_key_rotation, )
       req.send_request(options)
     end
 
@@ -2045,8 +2045,8 @@ module Aws::KMS
     #
     # @overload disconnect_custom_key_store(**params)
     # @param [Hash] params ({})
-    def disconnect_custom_key_store(params = {}, **options)
-      req = build_request(:disconnect_custom_key_store, params)
+    def disconnect_custom_key_store(, **options)
+      req = build_request(:disconnect_custom_key_store, )
       req.send_request(options)
     end
 
@@ -2098,8 +2098,8 @@ module Aws::KMS
     #
     # @overload enable_key(**params)
     # @param [Hash] params ({})
-    def enable_key(params = {}, **options)
-      req = build_request(:enable_key, params)
+    def enable_key(, **options)
+      req = build_request(:enable_key, )
       req.send_request(options)
     end
 
@@ -2161,8 +2161,8 @@ module Aws::KMS
     #
     # @overload enable_key_rotation(**params)
     # @param [Hash] params ({})
-    def enable_key_rotation(params = {}, **options)
-      req = build_request(:enable_key_rotation, params)
+    def enable_key_rotation(, **options)
+      req = build_request(:enable_key_rotation, )
       req.send_request(options)
     end
 
@@ -2363,8 +2363,8 @@ module Aws::KMS
     #
     # @overload encrypt(**params)
     # @param [Hash] params ({})
-    def encrypt(params = {}, **options)
-      req = build_request(:encrypt, params)
+    def encrypt(, **options)
+      req = build_request(:encrypt, )
       req.send_request(options)
     end
 
@@ -2550,8 +2550,8 @@ module Aws::KMS
     #
     # @overload generate_data_key(**params)
     # @param [Hash] params ({})
-    def generate_data_key(params = {}, **options)
-      req = build_request(:generate_data_key, params)
+    def generate_data_key(, **options)
+      req = build_request(:generate_data_key, )
       req.send_request(options)
     end
 
@@ -2694,8 +2694,8 @@ module Aws::KMS
     #
     # @overload generate_data_key_pair(**params)
     # @param [Hash] params ({})
-    def generate_data_key_pair(params = {}, **options)
-      req = build_request(:generate_data_key_pair, params)
+    def generate_data_key_pair(, **options)
+      req = build_request(:generate_data_key_pair, )
       req.send_request(options)
     end
 
@@ -2827,8 +2827,8 @@ module Aws::KMS
     #
     # @overload generate_data_key_pair_without_plaintext(**params)
     # @param [Hash] params ({})
-    def generate_data_key_pair_without_plaintext(params = {}, **options)
-      req = build_request(:generate_data_key_pair_without_plaintext, params)
+    def generate_data_key_pair_without_plaintext(, **options)
+      req = build_request(:generate_data_key_pair_without_plaintext, )
       req.send_request(options)
     end
 
@@ -2986,8 +2986,8 @@ module Aws::KMS
     #
     # @overload generate_data_key_without_plaintext(**params)
     # @param [Hash] params ({})
-    def generate_data_key_without_plaintext(params = {}, **options)
-      req = build_request(:generate_data_key_without_plaintext, params)
+    def generate_data_key_without_plaintext(, **options)
+      req = build_request(:generate_data_key_without_plaintext, )
       req.send_request(options)
     end
 
@@ -3051,8 +3051,8 @@ module Aws::KMS
     #
     # @overload generate_random(**params)
     # @param [Hash] params ({})
-    def generate_random(params = {}, **options)
-      req = build_request(:generate_random, params)
+    def generate_random(, **options)
+      req = build_request(:generate_random, )
       req.send_request(options)
     end
 
@@ -3111,8 +3111,8 @@ module Aws::KMS
     #
     # @overload get_key_policy(**params)
     # @param [Hash] params ({})
-    def get_key_policy(params = {}, **options)
-      req = build_request(:get_key_policy, params)
+    def get_key_policy(, **options)
+      req = build_request(:get_key_policy, )
       req.send_request(options)
     end
 
@@ -3193,8 +3193,8 @@ module Aws::KMS
     #
     # @overload get_key_rotation_status(**params)
     # @param [Hash] params ({})
-    def get_key_rotation_status(params = {}, **options)
-      req = build_request(:get_key_rotation_status, params)
+    def get_key_rotation_status(, **options)
+      req = build_request(:get_key_rotation_status, )
       req.send_request(options)
     end
 
@@ -3304,8 +3304,8 @@ module Aws::KMS
     #
     # @overload get_parameters_for_import(**params)
     # @param [Hash] params ({})
-    def get_parameters_for_import(params = {}, **options)
-      req = build_request(:get_parameters_for_import, params)
+    def get_parameters_for_import(, **options)
+      req = build_request(:get_parameters_for_import, )
       req.send_request(options)
     end
 
@@ -3424,8 +3424,8 @@ module Aws::KMS
     #
     # @overload get_public_key(**params)
     # @param [Hash] params ({})
-    def get_public_key(params = {}, **options)
-      req = build_request(:get_public_key, params)
+    def get_public_key(, **options)
+      req = build_request(:get_public_key, )
       req.send_request(options)
     end
 
@@ -3558,8 +3558,8 @@ module Aws::KMS
     #
     # @overload import_key_material(**params)
     # @param [Hash] params ({})
-    def import_key_material(params = {}, **options)
-      req = build_request(:import_key_material, params)
+    def import_key_material(, **options)
+      req = build_request(:import_key_material, )
       req.send_request(options)
     end
 
@@ -3693,8 +3693,8 @@ module Aws::KMS
     #
     # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, **options)
-      req = build_request(:list_aliases, params)
+    def list_aliases(, **options)
+      req = build_request(:list_aliases, )
       req.send_request(options)
     end
 
@@ -3850,8 +3850,8 @@ module Aws::KMS
     #
     # @overload list_grants(**params)
     # @param [Hash] params ({})
-    def list_grants(params = {}, **options)
-      req = build_request(:list_grants, params)
+    def list_grants(, **options)
+      req = build_request(:list_grants, )
       req.send_request(options)
     end
 
@@ -3935,8 +3935,8 @@ module Aws::KMS
     #
     # @overload list_key_policies(**params)
     # @param [Hash] params ({})
-    def list_key_policies(params = {}, **options)
-      req = build_request(:list_key_policies, params)
+    def list_key_policies(, **options)
+      req = build_request(:list_key_policies, )
       req.send_request(options)
     end
 
@@ -4027,8 +4027,8 @@ module Aws::KMS
     #
     # @overload list_keys(**params)
     # @param [Hash] params ({})
-    def list_keys(params = {}, **options)
-      req = build_request(:list_keys, params)
+    def list_keys(, **options)
+      req = build_request(:list_keys, )
       req.send_request(options)
     end
 
@@ -4121,8 +4121,8 @@ module Aws::KMS
     #
     # @overload list_resource_tags(**params)
     # @param [Hash] params ({})
-    def list_resource_tags(params = {}, **options)
-      req = build_request(:list_resource_tags, params)
+    def list_resource_tags(, **options)
+      req = build_request(:list_resource_tags, )
       req.send_request(options)
     end
 
@@ -4225,8 +4225,8 @@ module Aws::KMS
     #
     # @overload list_retirable_grants(**params)
     # @param [Hash] params ({})
-    def list_retirable_grants(params = {}, **options)
-      req = build_request(:list_retirable_grants, params)
+    def list_retirable_grants(, **options)
+      req = build_request(:list_retirable_grants, )
       req.send_request(options)
     end
 
@@ -4335,8 +4335,8 @@ module Aws::KMS
     #
     # @overload put_key_policy(**params)
     # @param [Hash] params ({})
-    def put_key_policy(params = {}, **options)
-      req = build_request(:put_key_policy, params)
+    def put_key_policy(, **options)
+      req = build_request(:put_key_policy, )
       req.send_request(options)
     end
 
@@ -4603,8 +4603,8 @@ module Aws::KMS
     #
     # @overload re_encrypt(**params)
     # @param [Hash] params ({})
-    def re_encrypt(params = {}, **options)
-      req = build_request(:re_encrypt, params)
+    def re_encrypt(, **options)
+      req = build_request(:re_encrypt, )
       req.send_request(options)
     end
 
@@ -4668,8 +4668,8 @@ module Aws::KMS
     #
     # @overload retire_grant(**params)
     # @param [Hash] params ({})
-    def retire_grant(params = {}, **options)
-      req = build_request(:retire_grant, params)
+    def retire_grant(, **options)
+      req = build_request(:retire_grant, )
       req.send_request(options)
     end
 
@@ -4722,8 +4722,8 @@ module Aws::KMS
     #
     # @overload revoke_grant(**params)
     # @param [Hash] params ({})
-    def revoke_grant(params = {}, **options)
-      req = build_request(:revoke_grant, params)
+    def revoke_grant(, **options)
+      req = build_request(:revoke_grant, )
       req.send_request(options)
     end
 
@@ -4823,8 +4823,8 @@ module Aws::KMS
     #
     # @overload schedule_key_deletion(**params)
     # @param [Hash] params ({})
-    def schedule_key_deletion(params = {}, **options)
-      req = build_request(:schedule_key_deletion, params)
+    def schedule_key_deletion(, **options)
+      req = build_request(:schedule_key_deletion, )
       req.send_request(options)
     end
 
@@ -4955,8 +4955,8 @@ module Aws::KMS
     #
     # @overload sign(**params)
     # @param [Hash] params ({})
-    def sign(params = {}, **options)
-      req = build_request(:sign, params)
+    def sign(, **options)
+      req = build_request(:sign, )
       req.send_request(options)
     end
 
@@ -5033,8 +5033,8 @@ module Aws::KMS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5096,8 +5096,8 @@ module Aws::KMS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5184,8 +5184,8 @@ module Aws::KMS
     #
     # @overload update_alias(**params)
     # @param [Hash] params ({})
-    def update_alias(params = {}, **options)
-      req = build_request(:update_alias, params)
+    def update_alias(, **options)
+      req = build_request(:update_alias, )
       req.send_request(options)
     end
 
@@ -5286,8 +5286,8 @@ module Aws::KMS
     #
     # @overload update_custom_key_store(**params)
     # @param [Hash] params ({})
-    def update_custom_key_store(params = {}, **options)
-      req = build_request(:update_custom_key_store, params)
+    def update_custom_key_store(, **options)
+      req = build_request(:update_custom_key_store, )
       req.send_request(options)
     end
 
@@ -5344,8 +5344,8 @@ module Aws::KMS
     #
     # @overload update_key_description(**params)
     # @param [Hash] params ({})
-    def update_key_description(params = {}, **options)
-      req = build_request(:update_key_description, params)
+    def update_key_description(, **options)
+      req = build_request(:update_key_description, )
       req.send_request(options)
     end
 
@@ -5476,8 +5476,8 @@ module Aws::KMS
     #
     # @overload verify(**params)
     # @param [Hash] params ({})
-    def verify(params = {}, **options)
-      req = build_request(:verify, params)
+    def verify(, **options)
+      req = build_request(:verify, )
       req.send_request(options)
     end
 

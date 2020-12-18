@@ -2845,5 +2845,547 @@ module Aws::TranscribeService
       include Aws::Structure
     end
 
+    alias BadRequestException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias BaseModelName = String
+
+    alias Boolean = Bool
+
+    alias CLMLanguageCode = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ContentRedaction = NamedTuple(
+      "RedactionType" : RedactionType,
+      "RedactionOutput" : RedactionOutput
+    )
+
+    alias CreateLanguageModelRequest = NamedTuple(
+      "LanguageCode" : CLMLanguageCode,
+      "BaseModelName" : BaseModelName,
+      "ModelName" : ModelName,
+      "InputDataConfig" : InputDataConfig
+    )
+
+    alias CreateLanguageModelResponse = NamedTuple(
+      "LanguageCode" : (CLMLanguageCode)?,
+      "BaseModelName" : (BaseModelName)?,
+      "ModelName" : (ModelName)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "ModelStatus" : (ModelStatus)?
+    )
+
+    alias CreateMedicalVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName,
+      "LanguageCode" : LanguageCode,
+      "VocabularyFileUri" : Uri
+    )
+
+    alias CreateMedicalVocabularyResponse = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "VocabularyState" : (VocabularyState)?,
+      "LastModifiedTime" : (DateTime)?,
+      "FailureReason" : (FailureReason)?
+    )
+
+    alias CreateVocabularyFilterRequest = NamedTuple(
+      "VocabularyFilterName" : VocabularyFilterName,
+      "LanguageCode" : LanguageCode,
+      "Words" : (Words)?,
+      "VocabularyFilterFileUri" : (Uri)?
+    )
+
+    alias CreateVocabularyFilterResponse = NamedTuple(
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?
+    )
+
+    alias CreateVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName,
+      "LanguageCode" : LanguageCode,
+      "Phrases" : (Phrases)?,
+      "VocabularyFileUri" : (Uri)?
+    )
+
+    alias CreateVocabularyResponse = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "VocabularyState" : (VocabularyState)?,
+      "LastModifiedTime" : (DateTime)?,
+      "FailureReason" : (FailureReason)?
+    )
+
+    alias DataAccessRoleArn = String
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteLanguageModelRequest = NamedTuple(
+      "ModelName" : ModelName
+    )
+
+    alias DeleteMedicalTranscriptionJobRequest = NamedTuple(
+      "MedicalTranscriptionJobName" : TranscriptionJobName
+    )
+
+    alias DeleteMedicalVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName
+    )
+
+    alias DeleteTranscriptionJobRequest = NamedTuple(
+      "TranscriptionJobName" : TranscriptionJobName
+    )
+
+    alias DeleteVocabularyFilterRequest = NamedTuple(
+      "VocabularyFilterName" : VocabularyFilterName
+    )
+
+    alias DeleteVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName
+    )
+
+    alias DescribeLanguageModelRequest = NamedTuple(
+      "ModelName" : ModelName
+    )
+
+    alias DescribeLanguageModelResponse = NamedTuple(
+      "LanguageModel" : (LanguageModel)?
+    )
+
+    alias FailureReason = String
+
+    alias GetMedicalTranscriptionJobRequest = NamedTuple(
+      "MedicalTranscriptionJobName" : TranscriptionJobName
+    )
+
+    alias GetMedicalTranscriptionJobResponse = NamedTuple(
+      "MedicalTranscriptionJob" : (MedicalTranscriptionJob)?
+    )
+
+    alias GetMedicalVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName
+    )
+
+    alias GetMedicalVocabularyResponse = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "VocabularyState" : (VocabularyState)?,
+      "LastModifiedTime" : (DateTime)?,
+      "FailureReason" : (FailureReason)?,
+      "DownloadUri" : (Uri)?
+    )
+
+    alias GetTranscriptionJobRequest = NamedTuple(
+      "TranscriptionJobName" : TranscriptionJobName
+    )
+
+    alias GetTranscriptionJobResponse = NamedTuple(
+      "TranscriptionJob" : (TranscriptionJob)?
+    )
+
+    alias GetVocabularyFilterRequest = NamedTuple(
+      "VocabularyFilterName" : VocabularyFilterName
+    )
+
+    alias GetVocabularyFilterResponse = NamedTuple(
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?,
+      "DownloadUri" : (Uri)?
+    )
+
+    alias GetVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName
+    )
+
+    alias GetVocabularyResponse = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "VocabularyState" : (VocabularyState)?,
+      "LastModifiedTime" : (DateTime)?,
+      "FailureReason" : (FailureReason)?,
+      "DownloadUri" : (Uri)?
+    )
+
+    alias IdentifiedLanguageScore = Float32
+
+    alias InputDataConfig = NamedTuple(
+      "S3Uri" : Uri,
+      "TuningDataS3Uri" : (Uri)?,
+      "DataAccessRoleArn" : DataAccessRoleArn
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias JobExecutionSettings = NamedTuple(
+      "AllowDeferredExecution" : (Boolean)?,
+      "DataAccessRoleArn" : (DataAccessRoleArn)?
+    )
+
+    alias KMSKeyId = String
+
+    alias LanguageCode = String
+
+    alias LanguageModel = NamedTuple(
+      "ModelName" : (ModelName)?,
+      "CreateTime" : (DateTime)?,
+      "LastModifiedTime" : (DateTime)?,
+      "LanguageCode" : (CLMLanguageCode)?,
+      "BaseModelName" : (BaseModelName)?,
+      "ModelStatus" : (ModelStatus)?,
+      "UpgradeAvailability" : (Boolean)?,
+      "FailureReason" : (FailureReason)?,
+      "InputDataConfig" : (InputDataConfig)?
+    )
+
+    alias LanguageOptions = Array(LanguageCode)
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ListLanguageModelsRequest = NamedTuple(
+      "StatusEquals" : (ModelStatus)?,
+      "NameContains" : (ModelName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListLanguageModelsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "Models" : (Models)?
+    )
+
+    alias ListMedicalTranscriptionJobsRequest = NamedTuple(
+      "Status" : (TranscriptionJobStatus)?,
+      "JobNameContains" : (TranscriptionJobName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListMedicalTranscriptionJobsResponse = NamedTuple(
+      "Status" : (TranscriptionJobStatus)?,
+      "NextToken" : (NextToken)?,
+      "MedicalTranscriptionJobSummaries" : (MedicalTranscriptionJobSummaries)?
+    )
+
+    alias ListMedicalVocabulariesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "StateEquals" : (VocabularyState)?,
+      "NameContains" : (VocabularyName)?
+    )
+
+    alias ListMedicalVocabulariesResponse = NamedTuple(
+      "Status" : (VocabularyState)?,
+      "NextToken" : (NextToken)?,
+      "Vocabularies" : (Vocabularies)?
+    )
+
+    alias ListTranscriptionJobsRequest = NamedTuple(
+      "Status" : (TranscriptionJobStatus)?,
+      "JobNameContains" : (TranscriptionJobName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTranscriptionJobsResponse = NamedTuple(
+      "Status" : (TranscriptionJobStatus)?,
+      "NextToken" : (NextToken)?,
+      "TranscriptionJobSummaries" : (TranscriptionJobSummaries)?
+    )
+
+    alias ListVocabulariesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "StateEquals" : (VocabularyState)?,
+      "NameContains" : (VocabularyName)?
+    )
+
+    alias ListVocabulariesResponse = NamedTuple(
+      "Status" : (VocabularyState)?,
+      "NextToken" : (NextToken)?,
+      "Vocabularies" : (Vocabularies)?
+    )
+
+    alias ListVocabularyFiltersRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (VocabularyFilterName)?
+    )
+
+    alias ListVocabularyFiltersResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "VocabularyFilters" : (VocabularyFilters)?
+    )
+
+    alias MaxAlternatives = Int32
+
+    alias MaxResults = Int32
+
+    alias MaxSpeakers = Int32
+
+    alias Media = NamedTuple(
+      "MediaFileUri" : (Uri)?
+    )
+
+    alias MediaFormat = String
+
+    alias MediaSampleRateHertz = Int32
+
+    alias MedicalTranscript = NamedTuple(
+      "TranscriptFileUri" : (Uri)?
+    )
+
+    alias MedicalTranscriptionJob = NamedTuple(
+      "MedicalTranscriptionJobName" : (TranscriptionJobName)?,
+      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
+      "LanguageCode" : (LanguageCode)?,
+      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
+      "MediaFormat" : (MediaFormat)?,
+      "Media" : (Media)?,
+      "Transcript" : (MedicalTranscript)?,
+      "StartTime" : (DateTime)?,
+      "CreationTime" : (DateTime)?,
+      "CompletionTime" : (DateTime)?,
+      "FailureReason" : (FailureReason)?,
+      "Settings" : (MedicalTranscriptionSetting)?,
+      "Specialty" : (Specialty)?,
+      "Type" : (Type)?
+    )
+
+    alias MedicalTranscriptionJobSummaries = Array(MedicalTranscriptionJobSummary)
+
+    alias MedicalTranscriptionJobSummary = NamedTuple(
+      "MedicalTranscriptionJobName" : (TranscriptionJobName)?,
+      "CreationTime" : (DateTime)?,
+      "StartTime" : (DateTime)?,
+      "CompletionTime" : (DateTime)?,
+      "LanguageCode" : (LanguageCode)?,
+      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "OutputLocationType" : (OutputLocationType)?,
+      "Specialty" : (Specialty)?,
+      "Type" : (Type)?
+    )
+
+    alias MedicalTranscriptionSetting = NamedTuple(
+      "ShowSpeakerLabels" : (Boolean)?,
+      "MaxSpeakerLabels" : (MaxSpeakers)?,
+      "ChannelIdentification" : (Boolean)?,
+      "ShowAlternatives" : (Boolean)?,
+      "MaxAlternatives" : (MaxAlternatives)?,
+      "VocabularyName" : (VocabularyName)?
+    )
+
+    alias ModelName = String
+
+    alias ModelSettings = NamedTuple(
+      "LanguageModelName" : (ModelName)?
+    )
+
+    alias ModelStatus = String
+
+    alias Models = Array(LanguageModel)
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias OutputBucketName = String
+
+    alias OutputKey = String
+
+    alias OutputLocationType = String
+
+    alias Phrase = String
+
+    alias Phrases = Array(Phrase)
+
+    alias RedactionOutput = String
+
+    alias RedactionType = String
+
+    alias Settings = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "ShowSpeakerLabels" : (Boolean)?,
+      "MaxSpeakerLabels" : (MaxSpeakers)?,
+      "ChannelIdentification" : (Boolean)?,
+      "ShowAlternatives" : (Boolean)?,
+      "MaxAlternatives" : (MaxAlternatives)?,
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "VocabularyFilterMethod" : (VocabularyFilterMethod)?
+    )
+
+    alias Specialty = String
+
+    alias StartMedicalTranscriptionJobRequest = NamedTuple(
+      "MedicalTranscriptionJobName" : TranscriptionJobName,
+      "LanguageCode" : LanguageCode,
+      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
+      "MediaFormat" : (MediaFormat)?,
+      "Media" : Media,
+      "OutputBucketName" : OutputBucketName,
+      "OutputKey" : (OutputKey)?,
+      "OutputEncryptionKMSKeyId" : (KMSKeyId)?,
+      "Settings" : (MedicalTranscriptionSetting)?,
+      "Specialty" : Specialty,
+      "Type" : Type
+    )
+
+    alias StartMedicalTranscriptionJobResponse = NamedTuple(
+      "MedicalTranscriptionJob" : (MedicalTranscriptionJob)?
+    )
+
+    alias StartTranscriptionJobRequest = NamedTuple(
+      "TranscriptionJobName" : TranscriptionJobName,
+      "LanguageCode" : (LanguageCode)?,
+      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
+      "MediaFormat" : (MediaFormat)?,
+      "Media" : Media,
+      "OutputBucketName" : (OutputBucketName)?,
+      "OutputKey" : (OutputKey)?,
+      "OutputEncryptionKMSKeyId" : (KMSKeyId)?,
+      "Settings" : (Settings)?,
+      "ModelSettings" : (ModelSettings)?,
+      "JobExecutionSettings" : (JobExecutionSettings)?,
+      "ContentRedaction" : (ContentRedaction)?,
+      "IdentifyLanguage" : (Boolean)?,
+      "LanguageOptions" : (LanguageOptions)?
+    )
+
+    alias StartTranscriptionJobResponse = NamedTuple(
+      "TranscriptionJob" : (TranscriptionJob)?
+    )
+
+    alias String = String
+
+    alias Transcript = NamedTuple(
+      "TranscriptFileUri" : (Uri)?,
+      "RedactedTranscriptFileUri" : (Uri)?
+    )
+
+    alias TranscriptionJob = NamedTuple(
+      "TranscriptionJobName" : (TranscriptionJobName)?,
+      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
+      "LanguageCode" : (LanguageCode)?,
+      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
+      "MediaFormat" : (MediaFormat)?,
+      "Media" : (Media)?,
+      "Transcript" : (Transcript)?,
+      "StartTime" : (DateTime)?,
+      "CreationTime" : (DateTime)?,
+      "CompletionTime" : (DateTime)?,
+      "FailureReason" : (FailureReason)?,
+      "Settings" : (Settings)?,
+      "ModelSettings" : (ModelSettings)?,
+      "JobExecutionSettings" : (JobExecutionSettings)?,
+      "ContentRedaction" : (ContentRedaction)?,
+      "IdentifyLanguage" : (Boolean)?,
+      "LanguageOptions" : (LanguageOptions)?,
+      "IdentifiedLanguageScore" : (IdentifiedLanguageScore)?
+    )
+
+    alias TranscriptionJobName = String
+
+    alias TranscriptionJobStatus = String
+
+    alias TranscriptionJobSummaries = Array(TranscriptionJobSummary)
+
+    alias TranscriptionJobSummary = NamedTuple(
+      "TranscriptionJobName" : (TranscriptionJobName)?,
+      "CreationTime" : (DateTime)?,
+      "StartTime" : (DateTime)?,
+      "CompletionTime" : (DateTime)?,
+      "LanguageCode" : (LanguageCode)?,
+      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "OutputLocationType" : (OutputLocationType)?,
+      "ContentRedaction" : (ContentRedaction)?,
+      "ModelSettings" : (ModelSettings)?,
+      "IdentifyLanguage" : (Boolean)?,
+      "IdentifiedLanguageScore" : (IdentifiedLanguageScore)?
+    )
+
+    alias Type = String
+
+    alias UpdateMedicalVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName,
+      "LanguageCode" : LanguageCode,
+      "VocabularyFileUri" : (Uri)?
+    )
+
+    alias UpdateMedicalVocabularyResponse = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?,
+      "VocabularyState" : (VocabularyState)?
+    )
+
+    alias UpdateVocabularyFilterRequest = NamedTuple(
+      "VocabularyFilterName" : VocabularyFilterName,
+      "Words" : (Words)?,
+      "VocabularyFilterFileUri" : (Uri)?
+    )
+
+    alias UpdateVocabularyFilterResponse = NamedTuple(
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?
+    )
+
+    alias UpdateVocabularyRequest = NamedTuple(
+      "VocabularyName" : VocabularyName,
+      "LanguageCode" : LanguageCode,
+      "Phrases" : (Phrases)?,
+      "VocabularyFileUri" : (Uri)?
+    )
+
+    alias UpdateVocabularyResponse = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?,
+      "VocabularyState" : (VocabularyState)?
+    )
+
+    alias Uri = String
+
+    alias Vocabularies = Array(VocabularyInfo)
+
+    alias VocabularyFilterInfo = NamedTuple(
+      "VocabularyFilterName" : (VocabularyFilterName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?
+    )
+
+    alias VocabularyFilterMethod = String
+
+    alias VocabularyFilterName = String
+
+    alias VocabularyFilters = Array(VocabularyFilterInfo)
+
+    alias VocabularyInfo = NamedTuple(
+      "VocabularyName" : (VocabularyName)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModifiedTime" : (DateTime)?,
+      "VocabularyState" : (VocabularyState)?
+    )
+
+    alias VocabularyName = String
+
+    alias VocabularyState = String
+
+    alias Word = String
+
+    alias Words = Array(Word)
   end
 end

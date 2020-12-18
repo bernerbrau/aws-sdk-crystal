@@ -367,8 +367,8 @@ module Aws::IAM
     #
     # @overload add_client_id_to_open_id_connect_provider(**params)
     # @param [Hash] params ({})
-    def add_client_id_to_open_id_connect_provider(params = {}, **options)
-      req = build_request(:add_client_id_to_open_id_connect_provider, params)
+    def add_client_id_to_open_id_connect_provider(, **options)
+      req = build_request(:add_client_id_to_open_id_connect_provider, )
       req.send_request(options)
     end
 
@@ -448,8 +448,8 @@ module Aws::IAM
     #
     # @overload add_role_to_instance_profile(**params)
     # @param [Hash] params ({})
-    def add_role_to_instance_profile(params = {}, **options)
-      req = build_request(:add_role_to_instance_profile, params)
+    def add_role_to_instance_profile(, **options)
+      req = build_request(:add_role_to_instance_profile, )
       req.send_request(options)
     end
 
@@ -502,8 +502,8 @@ module Aws::IAM
     #
     # @overload add_user_to_group(**params)
     # @param [Hash] params ({})
-    def add_user_to_group(params = {}, **options)
-      req = build_request(:add_user_to_group, params)
+    def add_user_to_group(, **options)
+      req = build_request(:add_user_to_group, )
       req.send_request(options)
     end
 
@@ -565,8 +565,8 @@ module Aws::IAM
     #
     # @overload attach_group_policy(**params)
     # @param [Hash] params ({})
-    def attach_group_policy(params = {}, **options)
-      req = build_request(:attach_group_policy, params)
+    def attach_group_policy(, **options)
+      req = build_request(:attach_group_policy, )
       req.send_request(options)
     end
 
@@ -635,8 +635,8 @@ module Aws::IAM
     #
     # @overload attach_role_policy(**params)
     # @param [Hash] params ({})
-    def attach_role_policy(params = {}, **options)
-      req = build_request(:attach_role_policy, params)
+    def attach_role_policy(, **options)
+      req = build_request(:attach_role_policy, )
       req.send_request(options)
     end
 
@@ -698,8 +698,8 @@ module Aws::IAM
     #
     # @overload attach_user_policy(**params)
     # @param [Hash] params ({})
-    def attach_user_policy(params = {}, **options)
-      req = build_request(:attach_user_policy, params)
+    def attach_user_policy(, **options)
+      req = build_request(:attach_user_policy, )
       req.send_request(options)
     end
 
@@ -757,8 +757,8 @@ module Aws::IAM
     #
     # @overload change_password(**params)
     # @param [Hash] params ({})
-    def change_password(params = {}, **options)
-      req = build_request(:change_password, params)
+    def change_password(, **options)
+      req = build_request(:change_password, )
       req.send_request(options)
     end
 
@@ -841,8 +841,8 @@ module Aws::IAM
     #
     # @overload create_access_key(**params)
     # @param [Hash] params ({})
-    def create_access_key(params = {}, **options)
-      req = build_request(:create_access_key, params)
+    def create_access_key(, **options)
+      req = build_request(:create_access_key, )
       req.send_request(options)
     end
 
@@ -887,8 +887,8 @@ module Aws::IAM
     #
     # @overload create_account_alias(**params)
     # @param [Hash] params ({})
-    def create_account_alias(params = {}, **options)
-      req = build_request(:create_account_alias, params)
+    def create_account_alias(, **options)
+      req = build_request(:create_account_alias, )
       req.send_request(options)
     end
 
@@ -972,8 +972,8 @@ module Aws::IAM
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -1082,8 +1082,8 @@ module Aws::IAM
     #
     # @overload create_instance_profile(**params)
     # @param [Hash] params ({})
-    def create_instance_profile(params = {}, **options)
-      req = build_request(:create_instance_profile, params)
+    def create_instance_profile(, **options)
+      req = build_request(:create_instance_profile, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::IAM
     #
     # @overload create_login_profile(**params)
     # @param [Hash] params ({})
-    def create_login_profile(params = {}, **options)
-      req = build_request(:create_login_profile, params)
+    def create_login_profile(, **options)
+      req = build_request(:create_login_profile, )
       req.send_request(options)
     end
 
@@ -1301,8 +1301,8 @@ module Aws::IAM
     #
     # @overload create_open_id_connect_provider(**params)
     # @param [Hash] params ({})
-    def create_open_id_connect_provider(params = {}, **options)
-      req = build_request(:create_open_id_connect_provider, params)
+    def create_open_id_connect_provider(, **options)
+      req = build_request(:create_open_id_connect_provider, )
       req.send_request(options)
     end
 
@@ -1415,8 +1415,8 @@ module Aws::IAM
     #
     # @overload create_policy(**params)
     # @param [Hash] params ({})
-    def create_policy(params = {}, **options)
-      req = build_request(:create_policy, params)
+    def create_policy(, **options)
+      req = build_request(:create_policy, )
       req.send_request(options)
     end
 
@@ -1511,8 +1511,8 @@ module Aws::IAM
     #
     # @overload create_policy_version(**params)
     # @param [Hash] params ({})
-    def create_policy_version(params = {}, **options)
-      req = build_request(:create_policy_version, params)
+    def create_policy_version(, **options)
+      req = build_request(:create_policy_version, )
       req.send_request(options)
     end
 
@@ -1692,8 +1692,8 @@ module Aws::IAM
     #
     # @overload create_role(**params)
     # @param [Hash] params ({})
-    def create_role(params = {}, **options)
-      req = build_request(:create_role, params)
+    def create_role(, **options)
+      req = build_request(:create_role, )
       req.send_request(options)
     end
 
@@ -1774,8 +1774,8 @@ module Aws::IAM
     #
     # @overload create_saml_provider(**params)
     # @param [Hash] params ({})
-    def create_saml_provider(params = {}, **options)
-      req = build_request(:create_saml_provider, params)
+    def create_saml_provider(, **options)
+      req = build_request(:create_saml_provider, )
       req.send_request(options)
     end
 
@@ -1859,8 +1859,8 @@ module Aws::IAM
     #
     # @overload create_service_linked_role(**params)
     # @param [Hash] params ({})
-    def create_service_linked_role(params = {}, **options)
-      req = build_request(:create_service_linked_role, params)
+    def create_service_linked_role(, **options)
+      req = build_request(:create_service_linked_role, )
       req.send_request(options)
     end
 
@@ -1930,8 +1930,8 @@ module Aws::IAM
     #
     # @overload create_service_specific_credential(**params)
     # @param [Hash] params ({})
-    def create_service_specific_credential(params = {}, **options)
-      req = build_request(:create_service_specific_credential, params)
+    def create_service_specific_credential(, **options)
+      req = build_request(:create_service_specific_credential, )
       req.send_request(options)
     end
 
@@ -2047,8 +2047,8 @@ module Aws::IAM
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -2138,8 +2138,8 @@ module Aws::IAM
     #
     # @overload create_virtual_mfa_device(**params)
     # @param [Hash] params ({})
-    def create_virtual_mfa_device(params = {}, **options)
-      req = build_request(:create_virtual_mfa_device, params)
+    def create_virtual_mfa_device(, **options)
+      req = build_request(:create_virtual_mfa_device, )
       req.send_request(options)
     end
 
@@ -2192,8 +2192,8 @@ module Aws::IAM
     #
     # @overload deactivate_mfa_device(**params)
     # @param [Hash] params ({})
-    def deactivate_mfa_device(params = {}, **options)
-      req = build_request(:deactivate_mfa_device, params)
+    def deactivate_mfa_device(, **options)
+      req = build_request(:deactivate_mfa_device, )
       req.send_request(options)
     end
 
@@ -2252,8 +2252,8 @@ module Aws::IAM
     #
     # @overload delete_access_key(**params)
     # @param [Hash] params ({})
-    def delete_access_key(params = {}, **options)
-      req = build_request(:delete_access_key, params)
+    def delete_access_key(, **options)
+      req = build_request(:delete_access_key, )
       req.send_request(options)
     end
 
@@ -2298,8 +2298,8 @@ module Aws::IAM
     #
     # @overload delete_account_alias(**params)
     # @param [Hash] params ({})
-    def delete_account_alias(params = {}, **options)
-      req = build_request(:delete_account_alias, params)
+    def delete_account_alias(, **options)
+      req = build_request(:delete_account_alias, )
       req.send_request(options)
     end
 
@@ -2320,8 +2320,8 @@ module Aws::IAM
     #
     # @overload delete_account_password_policy(**params)
     # @param [Hash] params ({})
-    def delete_account_password_policy(params = {}, **options)
-      req = build_request(:delete_account_password_policy, params)
+    def delete_account_password_policy(, **options)
+      req = build_request(:delete_account_password_policy, )
       req.send_request(options)
     end
 
@@ -2352,8 +2352,8 @@ module Aws::IAM
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -2417,8 +2417,8 @@ module Aws::IAM
     #
     # @overload delete_group_policy(**params)
     # @param [Hash] params ({})
-    def delete_group_policy(params = {}, **options)
-      req = build_request(:delete_group_policy, params)
+    def delete_group_policy(, **options)
+      req = build_request(:delete_group_policy, )
       req.send_request(options)
     end
 
@@ -2470,8 +2470,8 @@ module Aws::IAM
     #
     # @overload delete_instance_profile(**params)
     # @param [Hash] params ({})
-    def delete_instance_profile(params = {}, **options)
-      req = build_request(:delete_instance_profile, params)
+    def delete_instance_profile(, **options)
+      req = build_request(:delete_instance_profile, )
       req.send_request(options)
     end
 
@@ -2518,8 +2518,8 @@ module Aws::IAM
     #
     # @overload delete_login_profile(**params)
     # @param [Hash] params ({})
-    def delete_login_profile(params = {}, **options)
-      req = build_request(:delete_login_profile, params)
+    def delete_login_profile(, **options)
+      req = build_request(:delete_login_profile, )
       req.send_request(options)
     end
 
@@ -2551,8 +2551,8 @@ module Aws::IAM
     #
     # @overload delete_open_id_connect_provider(**params)
     # @param [Hash] params ({})
-    def delete_open_id_connect_provider(params = {}, **options)
-      req = build_request(:delete_open_id_connect_provider, params)
+    def delete_open_id_connect_provider(, **options)
+      req = build_request(:delete_open_id_connect_provider, )
       req.send_request(options)
     end
 
@@ -2606,8 +2606,8 @@ module Aws::IAM
     #
     # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, **options)
-      req = build_request(:delete_policy, params)
+    def delete_policy(, **options)
+      req = build_request(:delete_policy, )
       req.send_request(options)
     end
 
@@ -2665,8 +2665,8 @@ module Aws::IAM
     #
     # @overload delete_policy_version(**params)
     # @param [Hash] params ({})
-    def delete_policy_version(params = {}, **options)
-      req = build_request(:delete_policy_version, params)
+    def delete_policy_version(, **options)
+      req = build_request(:delete_policy_version, )
       req.send_request(options)
     end
 
@@ -2716,8 +2716,8 @@ module Aws::IAM
     #
     # @overload delete_role(**params)
     # @param [Hash] params ({})
-    def delete_role(params = {}, **options)
-      req = build_request(:delete_role, params)
+    def delete_role(, **options)
+      req = build_request(:delete_role, )
       req.send_request(options)
     end
 
@@ -2743,8 +2743,8 @@ module Aws::IAM
     #
     # @overload delete_role_permissions_boundary(**params)
     # @param [Hash] params ({})
-    def delete_role_permissions_boundary(params = {}, **options)
-      req = build_request(:delete_role_permissions_boundary, params)
+    def delete_role_permissions_boundary(, **options)
+      req = build_request(:delete_role_permissions_boundary, )
       req.send_request(options)
     end
 
@@ -2808,8 +2808,8 @@ module Aws::IAM
     #
     # @overload delete_role_policy(**params)
     # @param [Hash] params ({})
-    def delete_role_policy(params = {}, **options)
-      req = build_request(:delete_role_policy, params)
+    def delete_role_policy(, **options)
+      req = build_request(:delete_role_policy, )
       req.send_request(options)
     end
 
@@ -2843,8 +2843,8 @@ module Aws::IAM
     #
     # @overload delete_saml_provider(**params)
     # @param [Hash] params ({})
-    def delete_saml_provider(params = {}, **options)
-      req = build_request(:delete_saml_provider, params)
+    def delete_saml_provider(, **options)
+      req = build_request(:delete_saml_provider, )
       req.send_request(options)
     end
 
@@ -2896,8 +2896,8 @@ module Aws::IAM
     #
     # @overload delete_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def delete_ssh_public_key(params = {}, **options)
-      req = build_request(:delete_ssh_public_key, params)
+    def delete_ssh_public_key(, **options)
+      req = build_request(:delete_ssh_public_key, )
       req.send_request(options)
     end
 
@@ -2947,8 +2947,8 @@ module Aws::IAM
     #
     # @overload delete_server_certificate(**params)
     # @param [Hash] params ({})
-    def delete_server_certificate(params = {}, **options)
-      req = build_request(:delete_server_certificate, params)
+    def delete_server_certificate(, **options)
+      req = build_request(:delete_server_certificate, )
       req.send_request(options)
     end
 
@@ -3000,8 +3000,8 @@ module Aws::IAM
     #
     # @overload delete_service_linked_role(**params)
     # @param [Hash] params ({})
-    def delete_service_linked_role(params = {}, **options)
-      req = build_request(:delete_service_linked_role, params)
+    def delete_service_linked_role(, **options)
+      req = build_request(:delete_service_linked_role, )
       req.send_request(options)
     end
 
@@ -3046,8 +3046,8 @@ module Aws::IAM
     #
     # @overload delete_service_specific_credential(**params)
     # @param [Hash] params ({})
-    def delete_service_specific_credential(params = {}, **options)
-      req = build_request(:delete_service_specific_credential, params)
+    def delete_service_specific_credential(, **options)
+      req = build_request(:delete_service_specific_credential, )
       req.send_request(options)
     end
 
@@ -3105,8 +3105,8 @@ module Aws::IAM
     #
     # @overload delete_signing_certificate(**params)
     # @param [Hash] params ({})
-    def delete_signing_certificate(params = {}, **options)
-      req = build_request(:delete_signing_certificate, params)
+    def delete_signing_certificate(, **options)
+      req = build_request(:delete_signing_certificate, )
       req.send_request(options)
     end
 
@@ -3172,8 +3172,8 @@ module Aws::IAM
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -3199,8 +3199,8 @@ module Aws::IAM
     #
     # @overload delete_user_permissions_boundary(**params)
     # @param [Hash] params ({})
-    def delete_user_permissions_boundary(params = {}, **options)
-      req = build_request(:delete_user_permissions_boundary, params)
+    def delete_user_permissions_boundary(, **options)
+      req = build_request(:delete_user_permissions_boundary, )
       req.send_request(options)
     end
 
@@ -3264,8 +3264,8 @@ module Aws::IAM
     #
     # @overload delete_user_policy(**params)
     # @param [Hash] params ({})
-    def delete_user_policy(params = {}, **options)
-      req = build_request(:delete_user_policy, params)
+    def delete_user_policy(, **options)
+      req = build_request(:delete_user_policy, )
       req.send_request(options)
     end
 
@@ -3311,8 +3311,8 @@ module Aws::IAM
     #
     # @overload delete_virtual_mfa_device(**params)
     # @param [Hash] params ({})
-    def delete_virtual_mfa_device(params = {}, **options)
-      req = build_request(:delete_virtual_mfa_device, params)
+    def delete_virtual_mfa_device(, **options)
+      req = build_request(:delete_virtual_mfa_device, )
       req.send_request(options)
     end
 
@@ -3363,8 +3363,8 @@ module Aws::IAM
     #
     # @overload detach_group_policy(**params)
     # @param [Hash] params ({})
-    def detach_group_policy(params = {}, **options)
-      req = build_request(:detach_group_policy, params)
+    def detach_group_policy(, **options)
+      req = build_request(:detach_group_policy, )
       req.send_request(options)
     end
 
@@ -3415,8 +3415,8 @@ module Aws::IAM
     #
     # @overload detach_role_policy(**params)
     # @param [Hash] params ({})
-    def detach_role_policy(params = {}, **options)
-      req = build_request(:detach_role_policy, params)
+    def detach_role_policy(, **options)
+      req = build_request(:detach_role_policy, )
       req.send_request(options)
     end
 
@@ -3467,8 +3467,8 @@ module Aws::IAM
     #
     # @overload detach_user_policy(**params)
     # @param [Hash] params ({})
-    def detach_user_policy(params = {}, **options)
-      req = build_request(:detach_user_policy, params)
+    def detach_user_policy(, **options)
+      req = build_request(:detach_user_policy, )
       req.send_request(options)
     end
 
@@ -3548,8 +3548,8 @@ module Aws::IAM
     #
     # @overload enable_mfa_device(**params)
     # @param [Hash] params ({})
-    def enable_mfa_device(params = {}, **options)
-      req = build_request(:enable_mfa_device, params)
+    def enable_mfa_device(, **options)
+      req = build_request(:enable_mfa_device, )
       req.send_request(options)
     end
 
@@ -3575,8 +3575,8 @@ module Aws::IAM
     #
     # @overload generate_credential_report(**params)
     # @param [Hash] params ({})
-    def generate_credential_report(params = {}, **options)
-      req = build_request(:generate_credential_report, params)
+    def generate_credential_report(, **options)
+      req = build_request(:generate_credential_report, )
       req.send_request(options)
     end
 
@@ -3761,8 +3761,8 @@ module Aws::IAM
     #
     # @overload generate_organizations_access_report(**params)
     # @param [Hash] params ({})
-    def generate_organizations_access_report(params = {}, **options)
-      req = build_request(:generate_organizations_access_report, params)
+    def generate_organizations_access_report(, **options)
+      req = build_request(:generate_organizations_access_report, )
       req.send_request(options)
     end
 
@@ -3878,8 +3878,8 @@ module Aws::IAM
     #
     # @overload generate_service_last_accessed_details(**params)
     # @param [Hash] params ({})
-    def generate_service_last_accessed_details(params = {}, **options)
-      req = build_request(:generate_service_last_accessed_details, params)
+    def generate_service_last_accessed_details(, **options)
+      req = build_request(:generate_service_last_accessed_details, )
       req.send_request(options)
     end
 
@@ -3921,8 +3921,8 @@ module Aws::IAM
     #
     # @overload get_access_key_last_used(**params)
     # @param [Hash] params ({})
-    def get_access_key_last_used(params = {}, **options)
-      req = build_request(:get_access_key_last_used, params)
+    def get_access_key_last_used(, **options)
+      req = build_request(:get_access_key_last_used, )
       req.send_request(options)
     end
 
@@ -4091,8 +4091,8 @@ module Aws::IAM
     #
     # @overload get_account_authorization_details(**params)
     # @param [Hash] params ({})
-    def get_account_authorization_details(params = {}, **options)
-      req = build_request(:get_account_authorization_details, params)
+    def get_account_authorization_details(, **options)
+      req = build_request(:get_account_authorization_details, )
       req.send_request(options)
     end
 
@@ -4149,8 +4149,8 @@ module Aws::IAM
     #
     # @overload get_account_password_policy(**params)
     # @param [Hash] params ({})
-    def get_account_password_policy(params = {}, **options)
-      req = build_request(:get_account_password_policy, params)
+    def get_account_password_policy(, **options)
+      req = build_request(:get_account_password_policy, )
       req.send_request(options)
     end
 
@@ -4218,8 +4218,8 @@ module Aws::IAM
     #
     # @overload get_account_summary(**params)
     # @param [Hash] params ({})
-    def get_account_summary(params = {}, **options)
-      req = build_request(:get_account_summary, params)
+    def get_account_summary(, **options)
+      req = build_request(:get_account_summary, )
       req.send_request(options)
     end
 
@@ -4277,8 +4277,8 @@ module Aws::IAM
     #
     # @overload get_context_keys_for_custom_policy(**params)
     # @param [Hash] params ({})
-    def get_context_keys_for_custom_policy(params = {}, **options)
-      req = build_request(:get_context_keys_for_custom_policy, params)
+    def get_context_keys_for_custom_policy(, **options)
+      req = build_request(:get_context_keys_for_custom_policy, )
       req.send_request(options)
     end
 
@@ -4360,8 +4360,8 @@ module Aws::IAM
     #
     # @overload get_context_keys_for_principal_policy(**params)
     # @param [Hash] params ({})
-    def get_context_keys_for_principal_policy(params = {}, **options)
-      req = build_request(:get_context_keys_for_principal_policy, params)
+    def get_context_keys_for_principal_policy(, **options)
+      req = build_request(:get_context_keys_for_principal_policy, )
       req.send_request(options)
     end
 
@@ -4389,8 +4389,8 @@ module Aws::IAM
     #
     # @overload get_credential_report(**params)
     # @param [Hash] params ({})
-    def get_credential_report(params = {}, **options)
-      req = build_request(:get_credential_report, params)
+    def get_credential_report(, **options)
+      req = build_request(:get_credential_report, )
       req.send_request(options)
     end
 
@@ -4469,8 +4469,8 @@ module Aws::IAM
     #
     # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, **options)
-      req = build_request(:get_group, params)
+    def get_group(, **options)
+      req = build_request(:get_group, )
       req.send_request(options)
     end
 
@@ -4545,8 +4545,8 @@ module Aws::IAM
     #
     # @overload get_group_policy(**params)
     # @param [Hash] params ({})
-    def get_group_policy(params = {}, **options)
-      req = build_request(:get_group_policy, params)
+    def get_group_policy(, **options)
+      req = build_request(:get_group_policy, )
       req.send_request(options)
     end
 
@@ -4644,8 +4644,8 @@ module Aws::IAM
     #
     # @overload get_instance_profile(**params)
     # @param [Hash] params ({})
-    def get_instance_profile(params = {}, **options)
-      req = build_request(:get_instance_profile, params)
+    def get_instance_profile(, **options)
+      req = build_request(:get_instance_profile, )
       req.send_request(options)
     end
 
@@ -4702,8 +4702,8 @@ module Aws::IAM
     #
     # @overload get_login_profile(**params)
     # @param [Hash] params ({})
-    def get_login_profile(params = {}, **options)
-      req = build_request(:get_login_profile, params)
+    def get_login_profile(, **options)
+      req = build_request(:get_login_profile, )
       req.send_request(options)
     end
 
@@ -4748,8 +4748,8 @@ module Aws::IAM
     #
     # @overload get_open_id_connect_provider(**params)
     # @param [Hash] params ({})
-    def get_open_id_connect_provider(params = {}, **options)
-      req = build_request(:get_open_id_connect_provider, params)
+    def get_open_id_connect_provider(, **options)
+      req = build_request(:get_open_id_connect_provider, )
       req.send_request(options)
     end
 
@@ -4893,8 +4893,8 @@ module Aws::IAM
     #
     # @overload get_organizations_access_report(**params)
     # @param [Hash] params ({})
-    def get_organizations_access_report(params = {}, **options)
-      req = build_request(:get_organizations_access_report, params)
+    def get_organizations_access_report(, **options)
+      req = build_request(:get_organizations_access_report, )
       req.send_request(options)
     end
 
@@ -4962,8 +4962,8 @@ module Aws::IAM
     #
     # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, **options)
-      req = build_request(:get_policy, params)
+    def get_policy(, **options)
+      req = build_request(:get_policy, )
       req.send_request(options)
     end
 
@@ -5041,8 +5041,8 @@ module Aws::IAM
     #
     # @overload get_policy_version(**params)
     # @param [Hash] params ({})
-    def get_policy_version(params = {}, **options)
-      req = build_request(:get_policy_version, params)
+    def get_policy_version(, **options)
+      req = build_request(:get_policy_version, )
       req.send_request(options)
     end
 
@@ -5139,8 +5139,8 @@ module Aws::IAM
     #
     # @overload get_role(**params)
     # @param [Hash] params ({})
-    def get_role(params = {}, **options)
-      req = build_request(:get_role, params)
+    def get_role(, **options)
+      req = build_request(:get_role, )
       req.send_request(options)
     end
 
@@ -5219,8 +5219,8 @@ module Aws::IAM
     #
     # @overload get_role_policy(**params)
     # @param [Hash] params ({})
-    def get_role_policy(params = {}, **options)
-      req = build_request(:get_role_policy, params)
+    def get_role_policy(, **options)
+      req = build_request(:get_role_policy, )
       req.send_request(options)
     end
 
@@ -5268,8 +5268,8 @@ module Aws::IAM
     #
     # @overload get_saml_provider(**params)
     # @param [Hash] params ({})
-    def get_saml_provider(params = {}, **options)
-      req = build_request(:get_saml_provider, params)
+    def get_saml_provider(, **options)
+      req = build_request(:get_saml_provider, )
       req.send_request(options)
     end
 
@@ -5339,8 +5339,8 @@ module Aws::IAM
     #
     # @overload get_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def get_ssh_public_key(params = {}, **options)
-      req = build_request(:get_ssh_public_key, params)
+    def get_ssh_public_key(, **options)
+      req = build_request(:get_ssh_public_key, )
       req.send_request(options)
     end
 
@@ -5394,8 +5394,8 @@ module Aws::IAM
     #
     # @overload get_server_certificate(**params)
     # @param [Hash] params ({})
-    def get_server_certificate(params = {}, **options)
-      req = build_request(:get_server_certificate, params)
+    def get_server_certificate(, **options)
+      req = build_request(:get_server_certificate, )
       req.send_request(options)
     end
 
@@ -5557,8 +5557,8 @@ module Aws::IAM
     #
     # @overload get_service_last_accessed_details(**params)
     # @param [Hash] params ({})
-    def get_service_last_accessed_details(params = {}, **options)
-      req = build_request(:get_service_last_accessed_details, params)
+    def get_service_last_accessed_details(, **options)
+      req = build_request(:get_service_last_accessed_details, )
       req.send_request(options)
     end
 
@@ -5705,8 +5705,8 @@ module Aws::IAM
     #
     # @overload get_service_last_accessed_details_with_entities(**params)
     # @param [Hash] params ({})
-    def get_service_last_accessed_details_with_entities(params = {}, **options)
-      req = build_request(:get_service_last_accessed_details_with_entities, params)
+    def get_service_last_accessed_details_with_entities(, **options)
+      req = build_request(:get_service_last_accessed_details_with_entities, )
       req.send_request(options)
     end
 
@@ -5746,8 +5746,8 @@ module Aws::IAM
     #
     # @overload get_service_linked_role_deletion_status(**params)
     # @param [Hash] params ({})
-    def get_service_linked_role_deletion_status(params = {}, **options)
-      req = build_request(:get_service_linked_role_deletion_status, params)
+    def get_service_linked_role_deletion_status(, **options)
+      req = build_request(:get_service_linked_role_deletion_status, )
       req.send_request(options)
     end
 
@@ -5824,8 +5824,8 @@ module Aws::IAM
     #
     # @overload get_user(**params)
     # @param [Hash] params ({})
-    def get_user(params = {}, **options)
-      req = build_request(:get_user, params)
+    def get_user(, **options)
+      req = build_request(:get_user, )
       req.send_request(options)
     end
 
@@ -5900,8 +5900,8 @@ module Aws::IAM
     #
     # @overload get_user_policy(**params)
     # @param [Hash] params ({})
-    def get_user_policy(params = {}, **options)
-      req = build_request(:get_user_policy, params)
+    def get_user_policy(, **options)
+      req = build_request(:get_user_policy, )
       req.send_request(options)
     end
 
@@ -6009,8 +6009,8 @@ module Aws::IAM
     #
     # @overload list_access_keys(**params)
     # @param [Hash] params ({})
-    def list_access_keys(params = {}, **options)
-      req = build_request(:list_access_keys, params)
+    def list_access_keys(, **options)
+      req = build_request(:list_access_keys, )
       req.send_request(options)
     end
 
@@ -6080,8 +6080,8 @@ module Aws::IAM
     #
     # @overload list_account_aliases(**params)
     # @param [Hash] params ({})
-    def list_account_aliases(params = {}, **options)
-      req = build_request(:list_account_aliases, params)
+    def list_account_aliases(, **options)
+      req = build_request(:list_account_aliases, )
       req.send_request(options)
     end
 
@@ -6178,8 +6178,8 @@ module Aws::IAM
     #
     # @overload list_attached_group_policies(**params)
     # @param [Hash] params ({})
-    def list_attached_group_policies(params = {}, **options)
-      req = build_request(:list_attached_group_policies, params)
+    def list_attached_group_policies(, **options)
+      req = build_request(:list_attached_group_policies, )
       req.send_request(options)
     end
 
@@ -6276,8 +6276,8 @@ module Aws::IAM
     #
     # @overload list_attached_role_policies(**params)
     # @param [Hash] params ({})
-    def list_attached_role_policies(params = {}, **options)
-      req = build_request(:list_attached_role_policies, params)
+    def list_attached_role_policies(, **options)
+      req = build_request(:list_attached_role_policies, )
       req.send_request(options)
     end
 
@@ -6374,8 +6374,8 @@ module Aws::IAM
     #
     # @overload list_attached_user_policies(**params)
     # @param [Hash] params ({})
-    def list_attached_user_policies(params = {}, **options)
-      req = build_request(:list_attached_user_policies, params)
+    def list_attached_user_policies(, **options)
+      req = build_request(:list_attached_user_policies, )
       req.send_request(options)
     end
 
@@ -6493,8 +6493,8 @@ module Aws::IAM
     #
     # @overload list_entities_for_policy(**params)
     # @param [Hash] params ({})
-    def list_entities_for_policy(params = {}, **options)
-      req = build_request(:list_entities_for_policy, params)
+    def list_entities_for_policy(, **options)
+      req = build_request(:list_entities_for_policy, )
       req.send_request(options)
     end
 
@@ -6587,8 +6587,8 @@ module Aws::IAM
     #
     # @overload list_group_policies(**params)
     # @param [Hash] params ({})
-    def list_group_policies(params = {}, **options)
-      req = build_request(:list_group_policies, params)
+    def list_group_policies(, **options)
+      req = build_request(:list_group_policies, )
       req.send_request(options)
     end
 
@@ -6697,8 +6697,8 @@ module Aws::IAM
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -6796,8 +6796,8 @@ module Aws::IAM
     #
     # @overload list_groups_for_user(**params)
     # @param [Hash] params ({})
-    def list_groups_for_user(params = {}, **options)
-      req = build_request(:list_groups_for_user, params)
+    def list_groups_for_user(, **options)
+      req = build_request(:list_groups_for_user, )
       req.send_request(options)
     end
 
@@ -6895,8 +6895,8 @@ module Aws::IAM
     #
     # @overload list_instance_profiles(**params)
     # @param [Hash] params ({})
-    def list_instance_profiles(params = {}, **options)
-      req = build_request(:list_instance_profiles, params)
+    def list_instance_profiles(, **options)
+      req = build_request(:list_instance_profiles, )
       req.send_request(options)
     end
 
@@ -6988,8 +6988,8 @@ module Aws::IAM
     #
     # @overload list_instance_profiles_for_role(**params)
     # @param [Hash] params ({})
-    def list_instance_profiles_for_role(params = {}, **options)
-      req = build_request(:list_instance_profiles_for_role, params)
+    def list_instance_profiles_for_role(, **options)
+      req = build_request(:list_instance_profiles_for_role, )
       req.send_request(options)
     end
 
@@ -7060,8 +7060,8 @@ module Aws::IAM
     #
     # @overload list_mfa_devices(**params)
     # @param [Hash] params ({})
-    def list_mfa_devices(params = {}, **options)
-      req = build_request(:list_mfa_devices, params)
+    def list_mfa_devices(, **options)
+      req = build_request(:list_mfa_devices, )
       req.send_request(options)
     end
 
@@ -7081,8 +7081,8 @@ module Aws::IAM
     #
     # @overload list_open_id_connect_providers(**params)
     # @param [Hash] params ({})
-    def list_open_id_connect_providers(params = {}, **options)
-      req = build_request(:list_open_id_connect_providers, params)
+    def list_open_id_connect_providers(, **options)
+      req = build_request(:list_open_id_connect_providers, )
       req.send_request(options)
     end
 
@@ -7206,8 +7206,8 @@ module Aws::IAM
     #
     # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, **options)
-      req = build_request(:list_policies, params)
+    def list_policies(, **options)
+      req = build_request(:list_policies, )
       req.send_request(options)
     end
 
@@ -7359,8 +7359,8 @@ module Aws::IAM
     #
     # @overload list_policies_granting_service_access(**params)
     # @param [Hash] params ({})
-    def list_policies_granting_service_access(params = {}, **options)
-      req = build_request(:list_policies_granting_service_access, params)
+    def list_policies_granting_service_access(, **options)
+      req = build_request(:list_policies_granting_service_access, )
       req.send_request(options)
     end
 
@@ -7433,8 +7433,8 @@ module Aws::IAM
     #
     # @overload list_policy_versions(**params)
     # @param [Hash] params ({})
-    def list_policy_versions(params = {}, **options)
-      req = build_request(:list_policy_versions, params)
+    def list_policy_versions(, **options)
+      req = build_request(:list_policy_versions, )
       req.send_request(options)
     end
 
@@ -7510,8 +7510,8 @@ module Aws::IAM
     #
     # @overload list_role_policies(**params)
     # @param [Hash] params ({})
-    def list_role_policies(params = {}, **options)
-      req = build_request(:list_role_policies, params)
+    def list_role_policies(, **options)
+      req = build_request(:list_role_policies, )
       req.send_request(options)
     end
 
@@ -7603,8 +7603,8 @@ module Aws::IAM
     #
     # @overload list_role_tags(**params)
     # @param [Hash] params ({})
-    def list_role_tags(params = {}, **options)
-      req = build_request(:list_role_tags, params)
+    def list_role_tags(, **options)
+      req = build_request(:list_role_tags, )
       req.send_request(options)
     end
 
@@ -7694,8 +7694,8 @@ module Aws::IAM
     #
     # @overload list_roles(**params)
     # @param [Hash] params ({})
-    def list_roles(params = {}, **options)
-      req = build_request(:list_roles, params)
+    def list_roles(, **options)
+      req = build_request(:list_roles, )
       req.send_request(options)
     end
 
@@ -7725,8 +7725,8 @@ module Aws::IAM
     #
     # @overload list_saml_providers(**params)
     # @param [Hash] params ({})
-    def list_saml_providers(params = {}, **options)
-      req = build_request(:list_saml_providers, params)
+    def list_saml_providers(, **options)
+      req = build_request(:list_saml_providers, )
       req.send_request(options)
     end
 
@@ -7808,8 +7808,8 @@ module Aws::IAM
     #
     # @overload list_ssh_public_keys(**params)
     # @param [Hash] params ({})
-    def list_ssh_public_keys(params = {}, **options)
-      req = build_request(:list_ssh_public_keys, params)
+    def list_ssh_public_keys(, **options)
+      req = build_request(:list_ssh_public_keys, )
       req.send_request(options)
     end
 
@@ -7895,8 +7895,8 @@ module Aws::IAM
     #
     # @overload list_server_certificates(**params)
     # @param [Hash] params ({})
-    def list_server_certificates(params = {}, **options)
-      req = build_request(:list_server_certificates, params)
+    def list_server_certificates(, **options)
+      req = build_request(:list_server_certificates, )
       req.send_request(options)
     end
 
@@ -7956,8 +7956,8 @@ module Aws::IAM
     #
     # @overload list_service_specific_credentials(**params)
     # @param [Hash] params ({})
-    def list_service_specific_credentials(params = {}, **options)
-      req = build_request(:list_service_specific_credentials, params)
+    def list_service_specific_credentials(, **options)
+      req = build_request(:list_service_specific_credentials, )
       req.send_request(options)
     end
 
@@ -8058,8 +8058,8 @@ module Aws::IAM
     #
     # @overload list_signing_certificates(**params)
     # @param [Hash] params ({})
-    def list_signing_certificates(params = {}, **options)
-      req = build_request(:list_signing_certificates, params)
+    def list_signing_certificates(, **options)
+      req = build_request(:list_signing_certificates, )
       req.send_request(options)
     end
 
@@ -8135,8 +8135,8 @@ module Aws::IAM
     #
     # @overload list_user_policies(**params)
     # @param [Hash] params ({})
-    def list_user_policies(params = {}, **options)
-      req = build_request(:list_user_policies, params)
+    def list_user_policies(, **options)
+      req = build_request(:list_user_policies, )
       req.send_request(options)
     end
 
@@ -8228,8 +8228,8 @@ module Aws::IAM
     #
     # @overload list_user_tags(**params)
     # @param [Hash] params ({})
-    def list_user_tags(params = {}, **options)
-      req = build_request(:list_user_tags, params)
+    def list_user_tags(, **options)
+      req = build_request(:list_user_tags, )
       req.send_request(options)
     end
 
@@ -8341,8 +8341,8 @@ module Aws::IAM
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -8437,8 +8437,8 @@ module Aws::IAM
     #
     # @overload list_virtual_mfa_devices(**params)
     # @param [Hash] params ({})
-    def list_virtual_mfa_devices(params = {}, **options)
-      req = build_request(:list_virtual_mfa_devices, params)
+    def list_virtual_mfa_devices(, **options)
+      req = build_request(:list_virtual_mfa_devices, )
       req.send_request(options)
     end
 
@@ -8540,8 +8540,8 @@ module Aws::IAM
     #
     # @overload put_group_policy(**params)
     # @param [Hash] params ({})
-    def put_group_policy(params = {}, **options)
-      req = build_request(:put_group_policy, params)
+    def put_group_policy(, **options)
+      req = build_request(:put_group_policy, )
       req.send_request(options)
     end
 
@@ -8584,8 +8584,8 @@ module Aws::IAM
     #
     # @overload put_role_permissions_boundary(**params)
     # @param [Hash] params ({})
-    def put_role_permissions_boundary(params = {}, **options)
-      req = build_request(:put_role_permissions_boundary, params)
+    def put_role_permissions_boundary(, **options)
+      req = build_request(:put_role_permissions_boundary, )
       req.send_request(options)
     end
 
@@ -8695,8 +8695,8 @@ module Aws::IAM
     #
     # @overload put_role_policy(**params)
     # @param [Hash] params ({})
-    def put_role_policy(params = {}, **options)
-      req = build_request(:put_role_policy, params)
+    def put_role_policy(, **options)
+      req = build_request(:put_role_policy, )
       req.send_request(options)
     end
 
@@ -8737,8 +8737,8 @@ module Aws::IAM
     #
     # @overload put_user_permissions_boundary(**params)
     # @param [Hash] params ({})
-    def put_user_permissions_boundary(params = {}, **options)
-      req = build_request(:put_user_permissions_boundary, params)
+    def put_user_permissions_boundary(, **options)
+      req = build_request(:put_user_permissions_boundary, )
       req.send_request(options)
     end
 
@@ -8840,8 +8840,8 @@ module Aws::IAM
     #
     # @overload put_user_policy(**params)
     # @param [Hash] params ({})
-    def put_user_policy(params = {}, **options)
-      req = build_request(:put_user_policy, params)
+    def put_user_policy(, **options)
+      req = build_request(:put_user_policy, )
       req.send_request(options)
     end
 
@@ -8882,8 +8882,8 @@ module Aws::IAM
     #
     # @overload remove_client_id_from_open_id_connect_provider(**params)
     # @param [Hash] params ({})
-    def remove_client_id_from_open_id_connect_provider(params = {}, **options)
-      req = build_request(:remove_client_id_from_open_id_connect_provider, params)
+    def remove_client_id_from_open_id_connect_provider(, **options)
+      req = build_request(:remove_client_id_from_open_id_connect_provider, )
       req.send_request(options)
     end
 
@@ -8951,8 +8951,8 @@ module Aws::IAM
     #
     # @overload remove_role_from_instance_profile(**params)
     # @param [Hash] params ({})
-    def remove_role_from_instance_profile(params = {}, **options)
-      req = build_request(:remove_role_from_instance_profile, params)
+    def remove_role_from_instance_profile(, **options)
+      req = build_request(:remove_role_from_instance_profile, )
       req.send_request(options)
     end
 
@@ -9005,8 +9005,8 @@ module Aws::IAM
     #
     # @overload remove_user_from_group(**params)
     # @param [Hash] params ({})
-    def remove_user_from_group(params = {}, **options)
-      req = build_request(:remove_user_from_group, params)
+    def remove_user_from_group(, **options)
+      req = build_request(:remove_user_from_group, )
       req.send_request(options)
     end
 
@@ -9065,8 +9065,8 @@ module Aws::IAM
     #
     # @overload reset_service_specific_credential(**params)
     # @param [Hash] params ({})
-    def reset_service_specific_credential(params = {}, **options)
-      req = build_request(:reset_service_specific_credential, params)
+    def reset_service_specific_credential(, **options)
+      req = build_request(:reset_service_specific_credential, )
       req.send_request(options)
     end
 
@@ -9130,8 +9130,8 @@ module Aws::IAM
     #
     # @overload resync_mfa_device(**params)
     # @param [Hash] params ({})
-    def resync_mfa_device(params = {}, **options)
-      req = build_request(:resync_mfa_device, params)
+    def resync_mfa_device(, **options)
+      req = build_request(:resync_mfa_device, )
       req.send_request(options)
     end
 
@@ -9183,8 +9183,8 @@ module Aws::IAM
     #
     # @overload set_default_policy_version(**params)
     # @param [Hash] params ({})
-    def set_default_policy_version(params = {}, **options)
-      req = build_request(:set_default_policy_version, params)
+    def set_default_policy_version(, **options)
+      req = build_request(:set_default_policy_version, )
       req.send_request(options)
     end
 
@@ -9253,8 +9253,8 @@ module Aws::IAM
     #
     # @overload set_security_token_service_preferences(**params)
     # @param [Hash] params ({})
-    def set_security_token_service_preferences(params = {}, **options)
-      req = build_request(:set_security_token_service_preferences, params)
+    def set_security_token_service_preferences(, **options)
+      req = build_request(:set_security_token_service_preferences, )
       req.send_request(options)
     end
 
@@ -9552,8 +9552,8 @@ module Aws::IAM
     #
     # @overload simulate_custom_policy(**params)
     # @param [Hash] params ({})
-    def simulate_custom_policy(params = {}, **options)
-      req = build_request(:simulate_custom_policy, params)
+    def simulate_custom_policy(, **options)
+      req = build_request(:simulate_custom_policy, )
       req.send_request(options)
     end
 
@@ -9880,8 +9880,8 @@ module Aws::IAM
     #
     # @overload simulate_principal_policy(**params)
     # @param [Hash] params ({})
-    def simulate_principal_policy(params = {}, **options)
-      req = build_request(:simulate_principal_policy, params)
+    def simulate_principal_policy(, **options)
+      req = build_request(:simulate_principal_policy, )
       req.send_request(options)
     end
 
@@ -9981,8 +9981,8 @@ module Aws::IAM
     #
     # @overload tag_role(**params)
     # @param [Hash] params ({})
-    def tag_role(params = {}, **options)
-      req = build_request(:tag_role, params)
+    def tag_role(, **options)
+      req = build_request(:tag_role, )
       req.send_request(options)
     end
 
@@ -10080,8 +10080,8 @@ module Aws::IAM
     #
     # @overload tag_user(**params)
     # @param [Hash] params ({})
-    def tag_user(params = {}, **options)
-      req = build_request(:tag_user, params)
+    def tag_user(, **options)
+      req = build_request(:tag_user, )
       req.send_request(options)
     end
 
@@ -10133,8 +10133,8 @@ module Aws::IAM
     #
     # @overload untag_role(**params)
     # @param [Hash] params ({})
-    def untag_role(params = {}, **options)
-      req = build_request(:untag_role, params)
+    def untag_role(, **options)
+      req = build_request(:untag_role, )
       req.send_request(options)
     end
 
@@ -10186,8 +10186,8 @@ module Aws::IAM
     #
     # @overload untag_user(**params)
     # @param [Hash] params ({})
-    def untag_user(params = {}, **options)
-      req = build_request(:untag_user, params)
+    def untag_user(, **options)
+      req = build_request(:untag_user, )
       req.send_request(options)
     end
 
@@ -10262,8 +10262,8 @@ module Aws::IAM
     #
     # @overload update_access_key(**params)
     # @param [Hash] params ({})
-    def update_access_key(params = {}, **options)
-      req = build_request(:update_access_key, params)
+    def update_access_key(, **options)
+      req = build_request(:update_access_key, )
       req.send_request(options)
     end
 
@@ -10398,8 +10398,8 @@ module Aws::IAM
     #
     # @overload update_account_password_policy(**params)
     # @param [Hash] params ({})
-    def update_account_password_policy(params = {}, **options)
-      req = build_request(:update_account_password_policy, params)
+    def update_account_password_policy(, **options)
+      req = build_request(:update_account_password_policy, )
       req.send_request(options)
     end
 
@@ -10471,8 +10471,8 @@ module Aws::IAM
     #
     # @overload update_assume_role_policy(**params)
     # @param [Hash] params ({})
-    def update_assume_role_policy(params = {}, **options)
-      req = build_request(:update_assume_role_policy, params)
+    def update_assume_role_policy(, **options)
+      req = build_request(:update_assume_role_policy, )
       req.send_request(options)
     end
 
@@ -10557,8 +10557,8 @@ module Aws::IAM
     #
     # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, **options)
-      req = build_request(:update_group, params)
+    def update_group(, **options)
+      req = build_request(:update_group, )
       req.send_request(options)
     end
 
@@ -10635,8 +10635,8 @@ module Aws::IAM
     #
     # @overload update_login_profile(**params)
     # @param [Hash] params ({})
-    def update_login_profile(params = {}, **options)
-      req = build_request(:update_login_profile, params)
+    def update_login_profile(, **options)
+      req = build_request(:update_login_profile, )
       req.send_request(options)
     end
 
@@ -10691,8 +10691,8 @@ module Aws::IAM
     #
     # @overload update_open_id_connect_provider_thumbprint(**params)
     # @param [Hash] params ({})
-    def update_open_id_connect_provider_thumbprint(params = {}, **options)
-      req = build_request(:update_open_id_connect_provider_thumbprint, params)
+    def update_open_id_connect_provider_thumbprint(, **options)
+      req = build_request(:update_open_id_connect_provider_thumbprint, )
       req.send_request(options)
     end
 
@@ -10739,8 +10739,8 @@ module Aws::IAM
     #
     # @overload update_role(**params)
     # @param [Hash] params ({})
-    def update_role(params = {}, **options)
-      req = build_request(:update_role, params)
+    def update_role(, **options)
+      req = build_request(:update_role, )
       req.send_request(options)
     end
 
@@ -10789,8 +10789,8 @@ module Aws::IAM
     #
     # @overload update_role_description(**params)
     # @param [Hash] params ({})
-    def update_role_description(params = {}, **options)
-      req = build_request(:update_role_description, params)
+    def update_role_description(, **options)
+      req = build_request(:update_role_description, )
       req.send_request(options)
     end
 
@@ -10842,8 +10842,8 @@ module Aws::IAM
     #
     # @overload update_saml_provider(**params)
     # @param [Hash] params ({})
-    def update_saml_provider(params = {}, **options)
-      req = build_request(:update_saml_provider, params)
+    def update_saml_provider(, **options)
+      req = build_request(:update_saml_provider, )
       req.send_request(options)
     end
 
@@ -10904,8 +10904,8 @@ module Aws::IAM
     #
     # @overload update_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def update_ssh_public_key(params = {}, **options)
-      req = build_request(:update_ssh_public_key, params)
+    def update_ssh_public_key(, **options)
+      req = build_request(:update_ssh_public_key, )
       req.send_request(options)
     end
 
@@ -10993,8 +10993,8 @@ module Aws::IAM
     #
     # @overload update_server_certificate(**params)
     # @param [Hash] params ({})
-    def update_server_certificate(params = {}, **options)
-      req = build_request(:update_server_certificate, params)
+    def update_server_certificate(, **options)
+      req = build_request(:update_server_certificate, )
       req.send_request(options)
     end
 
@@ -11046,8 +11046,8 @@ module Aws::IAM
     #
     # @overload update_service_specific_credential(**params)
     # @param [Hash] params ({})
-    def update_service_specific_credential(params = {}, **options)
-      req = build_request(:update_service_specific_credential, params)
+    def update_service_specific_credential(, **options)
+      req = build_request(:update_service_specific_credential, )
       req.send_request(options)
     end
 
@@ -11115,8 +11115,8 @@ module Aws::IAM
     #
     # @overload update_signing_certificate(**params)
     # @param [Hash] params ({})
-    def update_signing_certificate(params = {}, **options)
-      req = build_request(:update_signing_certificate, params)
+    def update_signing_certificate(, **options)
+      req = build_request(:update_signing_certificate, )
       req.send_request(options)
     end
 
@@ -11200,8 +11200,8 @@ module Aws::IAM
     #
     # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, **options)
-      req = build_request(:update_user, params)
+    def update_user(, **options)
+      req = build_request(:update_user, )
       req.send_request(options)
     end
 
@@ -11276,8 +11276,8 @@ module Aws::IAM
     #
     # @overload upload_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def upload_ssh_public_key(params = {}, **options)
-      req = build_request(:upload_ssh_public_key, params)
+    def upload_ssh_public_key(, **options)
+      req = build_request(:upload_ssh_public_key, )
       req.send_request(options)
     end
 
@@ -11466,8 +11466,8 @@ module Aws::IAM
     #
     # @overload upload_server_certificate(**params)
     # @param [Hash] params ({})
-    def upload_server_certificate(params = {}, **options)
-      req = build_request(:upload_server_certificate, params)
+    def upload_server_certificate(, **options)
+      req = build_request(:upload_server_certificate, )
       req.send_request(options)
     end
 
@@ -11571,8 +11571,8 @@ module Aws::IAM
     #
     # @overload upload_signing_certificate(**params)
     # @param [Hash] params ({})
-    def upload_signing_certificate(params = {}, **options)
-      req = build_request(:upload_signing_certificate, params)
+    def upload_signing_certificate(, **options)
+      req = build_request(:upload_signing_certificate, )
       req.send_request(options)
     end
 

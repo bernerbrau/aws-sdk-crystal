@@ -344,8 +344,8 @@ module Aws::DataExchange
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -413,8 +413,8 @@ module Aws::DataExchange
     #
     # @overload create_data_set(**params)
     # @param [Hash] params ({})
-    def create_data_set(params = {}, **options)
-      req = build_request(:create_data_set, params)
+    def create_data_set(, **options)
+      req = build_request(:create_data_set, )
       req.send_request(options)
     end
 
@@ -529,8 +529,8 @@ module Aws::DataExchange
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::DataExchange
     #
     # @overload create_revision(**params)
     # @param [Hash] params ({})
-    def create_revision(params = {}, **options)
-      req = build_request(:create_revision, params)
+    def create_revision(, **options)
+      req = build_request(:create_revision, )
       req.send_request(options)
     end
 
@@ -614,8 +614,8 @@ module Aws::DataExchange
     #
     # @overload delete_asset(**params)
     # @param [Hash] params ({})
-    def delete_asset(params = {}, **options)
-      req = build_request(:delete_asset, params)
+    def delete_asset(, **options)
+      req = build_request(:delete_asset, )
       req.send_request(options)
     end
 
@@ -635,8 +635,8 @@ module Aws::DataExchange
     #
     # @overload delete_data_set(**params)
     # @param [Hash] params ({})
-    def delete_data_set(params = {}, **options)
-      req = build_request(:delete_data_set, params)
+    def delete_data_set(, **options)
+      req = build_request(:delete_data_set, )
       req.send_request(options)
     end
 
@@ -659,8 +659,8 @@ module Aws::DataExchange
     #
     # @overload delete_revision(**params)
     # @param [Hash] params ({})
-    def delete_revision(params = {}, **options)
-      req = build_request(:delete_revision, params)
+    def delete_revision(, **options)
+      req = build_request(:delete_revision, )
       req.send_request(options)
     end
 
@@ -710,8 +710,8 @@ module Aws::DataExchange
     #
     # @overload get_asset(**params)
     # @param [Hash] params ({})
-    def get_asset(params = {}, **options)
-      req = build_request(:get_asset, params)
+    def get_asset(, **options)
+      req = build_request(:get_asset, )
       req.send_request(options)
     end
 
@@ -758,8 +758,8 @@ module Aws::DataExchange
     #
     # @overload get_data_set(**params)
     # @param [Hash] params ({})
-    def get_data_set(params = {}, **options)
-      req = build_request(:get_data_set, params)
+    def get_data_set(, **options)
+      req = build_request(:get_data_set, )
       req.send_request(options)
     end
 
@@ -832,8 +832,8 @@ module Aws::DataExchange
     #
     # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, **options)
-      req = build_request(:get_job, params)
+    def get_job(, **options)
+      req = build_request(:get_job, )
       req.send_request(options)
     end
 
@@ -879,8 +879,8 @@ module Aws::DataExchange
     #
     # @overload get_revision(**params)
     # @param [Hash] params ({})
-    def get_revision(params = {}, **options)
-      req = build_request(:get_revision, params)
+    def get_revision(, **options)
+      req = build_request(:get_revision, )
       req.send_request(options)
     end
 
@@ -925,8 +925,8 @@ module Aws::DataExchange
     #
     # @overload list_data_set_revisions(**params)
     # @param [Hash] params ({})
-    def list_data_set_revisions(params = {}, **options)
-      req = build_request(:list_data_set_revisions, params)
+    def list_data_set_revisions(, **options)
+      req = build_request(:list_data_set_revisions, )
       req.send_request(options)
     end
 
@@ -975,8 +975,8 @@ module Aws::DataExchange
     #
     # @overload list_data_sets(**params)
     # @param [Hash] params ({})
-    def list_data_sets(params = {}, **options)
-      req = build_request(:list_data_sets, params)
+    def list_data_sets(, **options)
+      req = build_request(:list_data_sets, )
       req.send_request(options)
     end
 
@@ -1057,8 +1057,8 @@ module Aws::DataExchange
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -1108,8 +1108,8 @@ module Aws::DataExchange
     #
     # @overload list_revision_assets(**params)
     # @param [Hash] params ({})
-    def list_revision_assets(params = {}, **options)
-      req = build_request(:list_revision_assets, params)
+    def list_revision_assets(, **options)
+      req = build_request(:list_revision_assets, )
       req.send_request(options)
     end
 
@@ -1136,8 +1136,8 @@ module Aws::DataExchange
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1157,8 +1157,8 @@ module Aws::DataExchange
     #
     # @overload start_job(**params)
     # @param [Hash] params ({})
-    def start_job(params = {}, **options)
-      req = build_request(:start_job, params)
+    def start_job(, **options)
+      req = build_request(:start_job, )
       req.send_request(options)
     end
 
@@ -1183,8 +1183,8 @@ module Aws::DataExchange
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1207,8 +1207,8 @@ module Aws::DataExchange
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1264,8 +1264,8 @@ module Aws::DataExchange
     #
     # @overload update_asset(**params)
     # @param [Hash] params ({})
-    def update_asset(params = {}, **options)
-      req = build_request(:update_asset, params)
+    def update_asset(, **options)
+      req = build_request(:update_asset, )
       req.send_request(options)
     end
 
@@ -1317,8 +1317,8 @@ module Aws::DataExchange
     #
     # @overload update_data_set(**params)
     # @param [Hash] params ({})
-    def update_data_set(params = {}, **options)
-      req = build_request(:update_data_set, params)
+    def update_data_set(, **options)
+      req = build_request(:update_data_set, )
       req.send_request(options)
     end
 
@@ -1371,8 +1371,8 @@ module Aws::DataExchange
     #
     # @overload update_revision(**params)
     # @param [Hash] params ({})
-    def update_revision(params = {}, **options)
-      req = build_request(:update_revision, params)
+    def update_revision(, **options)
+      req = build_request(:update_revision, )
       req.send_request(options)
     end
 

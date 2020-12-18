@@ -364,8 +364,8 @@ module Aws::IVS
     #
     # @overload batch_get_channel(**params)
     # @param [Hash] params ({})
-    def batch_get_channel(params = {}, **options)
-      req = build_request(:batch_get_channel, params)
+    def batch_get_channel(, **options)
+      req = build_request(:batch_get_channel, )
       req.send_request(options)
     end
 
@@ -402,8 +402,8 @@ module Aws::IVS
     #
     # @overload batch_get_stream_key(**params)
     # @param [Hash] params ({})
-    def batch_get_stream_key(params = {}, **options)
-      req = build_request(:batch_get_stream_key, params)
+    def batch_get_stream_key(, **options)
+      req = build_request(:batch_get_stream_key, )
       req.send_request(options)
     end
 
@@ -476,8 +476,8 @@ module Aws::IVS
     #
     # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, **options)
-      req = build_request(:create_channel, params)
+    def create_channel(, **options)
+      req = build_request(:create_channel, )
       req.send_request(options)
     end
 
@@ -521,8 +521,8 @@ module Aws::IVS
     #
     # @overload create_stream_key(**params)
     # @param [Hash] params ({})
-    def create_stream_key(params = {}, **options)
-      req = build_request(:create_stream_key, params)
+    def create_stream_key(, **options)
+      req = build_request(:create_stream_key, )
       req.send_request(options)
     end
 
@@ -543,8 +543,8 @@ module Aws::IVS
     #
     # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, **options)
-      req = build_request(:delete_channel, params)
+    def delete_channel(, **options)
+      req = build_request(:delete_channel, )
       req.send_request(options)
     end
 
@@ -566,8 +566,8 @@ module Aws::IVS
     #
     # @overload delete_playback_key_pair(**params)
     # @param [Hash] params ({})
-    def delete_playback_key_pair(params = {}, **options)
-      req = build_request(:delete_playback_key_pair, params)
+    def delete_playback_key_pair(, **options)
+      req = build_request(:delete_playback_key_pair, )
       req.send_request(options)
     end
 
@@ -589,8 +589,8 @@ module Aws::IVS
     #
     # @overload delete_stream_key(**params)
     # @param [Hash] params ({})
-    def delete_stream_key(params = {}, **options)
-      req = build_request(:delete_stream_key, params)
+    def delete_stream_key(, **options)
+      req = build_request(:delete_stream_key, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::IVS
     #
     # @overload get_channel(**params)
     # @param [Hash] params ({})
-    def get_channel(params = {}, **options)
-      req = build_request(:get_channel, params)
+    def get_channel(, **options)
+      req = build_request(:get_channel, )
       req.send_request(options)
     end
 
@@ -661,8 +661,8 @@ module Aws::IVS
     #
     # @overload get_playback_key_pair(**params)
     # @param [Hash] params ({})
-    def get_playback_key_pair(params = {}, **options)
-      req = build_request(:get_playback_key_pair, params)
+    def get_playback_key_pair(, **options)
+      req = build_request(:get_playback_key_pair, )
       req.send_request(options)
     end
 
@@ -695,8 +695,8 @@ module Aws::IVS
     #
     # @overload get_stream(**params)
     # @param [Hash] params ({})
-    def get_stream(params = {}, **options)
-      req = build_request(:get_stream, params)
+    def get_stream(, **options)
+      req = build_request(:get_stream, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::IVS
     #
     # @overload get_stream_key(**params)
     # @param [Hash] params ({})
-    def get_stream_key(params = {}, **options)
-      req = build_request(:get_stream_key, params)
+    def get_stream_key(, **options)
+      req = build_request(:get_stream_key, )
       req.send_request(options)
     end
 
@@ -774,8 +774,8 @@ module Aws::IVS
     #
     # @overload import_playback_key_pair(**params)
     # @param [Hash] params ({})
-    def import_playback_key_pair(params = {}, **options)
-      req = build_request(:import_playback_key_pair, params)
+    def import_playback_key_pair(, **options)
+      req = build_request(:import_playback_key_pair, )
       req.send_request(options)
     end
 
@@ -823,8 +823,8 @@ module Aws::IVS
     #
     # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, **options)
-      req = build_request(:list_channels, params)
+    def list_channels(, **options)
+      req = build_request(:list_channels, )
       req.send_request(options)
     end
 
@@ -864,8 +864,8 @@ module Aws::IVS
     #
     # @overload list_playback_key_pairs(**params)
     # @param [Hash] params ({})
-    def list_playback_key_pairs(params = {}, **options)
-      req = build_request(:list_playback_key_pairs, params)
+    def list_playback_key_pairs(, **options)
+      req = build_request(:list_playback_key_pairs, )
       req.send_request(options)
     end
 
@@ -909,8 +909,8 @@ module Aws::IVS
     #
     # @overload list_stream_keys(**params)
     # @param [Hash] params ({})
-    def list_stream_keys(params = {}, **options)
-      req = build_request(:list_stream_keys, params)
+    def list_stream_keys(, **options)
+      req = build_request(:list_stream_keys, )
       req.send_request(options)
     end
 
@@ -952,8 +952,8 @@ module Aws::IVS
     #
     # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, **options)
-      req = build_request(:list_streams, params)
+    def list_streams(, **options)
+      req = build_request(:list_streams, )
       req.send_request(options)
     end
 
@@ -994,8 +994,8 @@ module Aws::IVS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::IVS
     #
     # @overload put_metadata(**params)
     # @param [Hash] params ({})
-    def put_metadata(params = {}, **options)
-      req = build_request(:put_metadata, params)
+    def put_metadata(, **options)
+      req = build_request(:put_metadata, )
       req.send_request(options)
     end
 
@@ -1053,8 +1053,8 @@ module Aws::IVS
     #
     # @overload stop_stream(**params)
     # @param [Hash] params ({})
-    def stop_stream(params = {}, **options)
-      req = build_request(:stop_stream, params)
+    def stop_stream(, **options)
+      req = build_request(:stop_stream, )
       req.send_request(options)
     end
 
@@ -1081,8 +1081,8 @@ module Aws::IVS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1107,8 +1107,8 @@ module Aws::IVS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1175,8 +1175,8 @@ module Aws::IVS
     #
     # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, **options)
-      req = build_request(:update_channel, params)
+    def update_channel(, **options)
+      req = build_request(:update_channel, )
       req.send_request(options)
     end
 

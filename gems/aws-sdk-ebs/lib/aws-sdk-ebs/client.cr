@@ -378,8 +378,8 @@ module Aws::EBS
     #
     # @overload complete_snapshot(**params)
     # @param [Hash] params ({})
-    def complete_snapshot(params = {}, **options)
-      req = build_request(:complete_snapshot, params)
+    def complete_snapshot(, **options)
+      req = build_request(:complete_snapshot, )
       req.send_request(options)
     end
 
@@ -426,8 +426,8 @@ module Aws::EBS
     #
     # @overload get_snapshot_block(**params)
     # @param [Hash] params ({})
-    def get_snapshot_block(params = {}, **options, &block)
-      req = build_request(:get_snapshot_block, params)
+    def get_snapshot_block(, **options, &block)
+      req = build_request(:get_snapshot_block, )
       req.send_request(options, &block)
     end
 
@@ -494,8 +494,8 @@ module Aws::EBS
     #
     # @overload list_changed_blocks(**params)
     # @param [Hash] params ({})
-    def list_changed_blocks(params = {}, **options)
-      req = build_request(:list_changed_blocks, params)
+    def list_changed_blocks(, **options)
+      req = build_request(:list_changed_blocks, )
       req.send_request(options)
     end
 
@@ -550,8 +550,8 @@ module Aws::EBS
     #
     # @overload list_snapshot_blocks(**params)
     # @param [Hash] params ({})
-    def list_snapshot_blocks(params = {}, **options)
-      req = build_request(:list_snapshot_blocks, params)
+    def list_snapshot_blocks(, **options)
+      req = build_request(:list_snapshot_blocks, )
       req.send_request(options)
     end
 
@@ -633,8 +633,8 @@ module Aws::EBS
     #
     # @overload put_snapshot_block(**params)
     # @param [Hash] params ({})
-    def put_snapshot_block(params = {}, **options)
-      req = build_request(:put_snapshot_block, params)
+    def put_snapshot_block(, **options)
+      req = build_request(:put_snapshot_block, )
       req.send_request(options)
     end
 
@@ -788,8 +788,8 @@ module Aws::EBS
     #
     # @overload start_snapshot(**params)
     # @param [Hash] params ({})
-    def start_snapshot(params = {}, **options)
-      req = build_request(:start_snapshot, params)
+    def start_snapshot(, **options)
+      req = build_request(:start_snapshot, )
       req.send_request(options)
     end
 

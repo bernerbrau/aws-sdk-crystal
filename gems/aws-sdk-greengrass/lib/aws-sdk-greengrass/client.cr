@@ -356,8 +356,8 @@ module Aws::Greengrass
     #
     # @overload associate_role_to_group(**params)
     # @param [Hash] params ({})
-    def associate_role_to_group(params = {}, **options)
-      req = build_request(:associate_role_to_group, params)
+    def associate_role_to_group(, **options)
+      req = build_request(:associate_role_to_group, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::Greengrass
     #
     # @overload associate_service_role_to_account(**params)
     # @param [Hash] params ({})
-    def associate_service_role_to_account(params = {}, **options)
-      req = build_request(:associate_service_role_to_account, params)
+    def associate_service_role_to_account(, **options)
+      req = build_request(:associate_service_role_to_account, )
       req.send_request(options)
     end
 
@@ -453,8 +453,8 @@ module Aws::Greengrass
     #
     # @overload create_connector_definition(**params)
     # @param [Hash] params ({})
-    def create_connector_definition(params = {}, **options)
-      req = build_request(:create_connector_definition, params)
+    def create_connector_definition(, **options)
+      req = build_request(:create_connector_definition, )
       req.send_request(options)
     end
 
@@ -501,8 +501,8 @@ module Aws::Greengrass
     #
     # @overload create_connector_definition_version(**params)
     # @param [Hash] params ({})
-    def create_connector_definition_version(params = {}, **options)
-      req = build_request(:create_connector_definition_version, params)
+    def create_connector_definition_version(, **options)
+      req = build_request(:create_connector_definition_version, )
       req.send_request(options)
     end
 
@@ -565,8 +565,8 @@ module Aws::Greengrass
     #
     # @overload create_core_definition(**params)
     # @param [Hash] params ({})
-    def create_core_definition(params = {}, **options)
-      req = build_request(:create_core_definition, params)
+    def create_core_definition(, **options)
+      req = build_request(:create_core_definition, )
       req.send_request(options)
     end
 
@@ -612,8 +612,8 @@ module Aws::Greengrass
     #
     # @overload create_core_definition_version(**params)
     # @param [Hash] params ({})
-    def create_core_definition_version(params = {}, **options)
-      req = build_request(:create_core_definition_version, params)
+    def create_core_definition_version(, **options)
+      req = build_request(:create_core_definition_version, )
       req.send_request(options)
     end
 
@@ -660,8 +660,8 @@ module Aws::Greengrass
     #
     # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, **options)
-      req = build_request(:create_deployment, params)
+    def create_deployment(, **options)
+      req = build_request(:create_deployment, )
       req.send_request(options)
     end
 
@@ -723,8 +723,8 @@ module Aws::Greengrass
     #
     # @overload create_device_definition(**params)
     # @param [Hash] params ({})
-    def create_device_definition(params = {}, **options)
-      req = build_request(:create_device_definition, params)
+    def create_device_definition(, **options)
+      req = build_request(:create_device_definition, )
       req.send_request(options)
     end
 
@@ -770,8 +770,8 @@ module Aws::Greengrass
     #
     # @overload create_device_definition_version(**params)
     # @param [Hash] params ({})
-    def create_device_definition_version(params = {}, **options)
-      req = build_request(:create_device_definition_version, params)
+    def create_device_definition_version(, **options)
+      req = build_request(:create_device_definition_version, )
       req.send_request(options)
     end
 
@@ -869,8 +869,8 @@ module Aws::Greengrass
     #
     # @overload create_function_definition(**params)
     # @param [Hash] params ({})
-    def create_function_definition(params = {}, **options)
-      req = build_request(:create_function_definition, params)
+    def create_function_definition(, **options)
+      req = build_request(:create_function_definition, )
       req.send_request(options)
     end
 
@@ -954,8 +954,8 @@ module Aws::Greengrass
     #
     # @overload create_function_definition_version(**params)
     # @param [Hash] params ({})
-    def create_function_definition_version(params = {}, **options)
-      req = build_request(:create_function_definition_version, params)
+    def create_function_definition_version(, **options)
+      req = build_request(:create_function_definition_version, )
       req.send_request(options)
     end
 
@@ -1018,8 +1018,8 @@ module Aws::Greengrass
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -1049,8 +1049,8 @@ module Aws::Greengrass
     #
     # @overload create_group_certificate_authority(**params)
     # @param [Hash] params ({})
-    def create_group_certificate_authority(params = {}, **options)
-      req = build_request(:create_group_certificate_authority, params)
+    def create_group_certificate_authority(, **options)
+      req = build_request(:create_group_certificate_authority, )
       req.send_request(options)
     end
 
@@ -1106,8 +1106,8 @@ module Aws::Greengrass
     #
     # @overload create_group_version(**params)
     # @param [Hash] params ({})
-    def create_group_version(params = {}, **options)
-      req = build_request(:create_group_version, params)
+    def create_group_version(, **options)
+      req = build_request(:create_group_version, )
       req.send_request(options)
     end
 
@@ -1170,8 +1170,8 @@ module Aws::Greengrass
     #
     # @overload create_logger_definition(**params)
     # @param [Hash] params ({})
-    def create_logger_definition(params = {}, **options)
-      req = build_request(:create_logger_definition, params)
+    def create_logger_definition(, **options)
+      req = build_request(:create_logger_definition, )
       req.send_request(options)
     end
 
@@ -1218,8 +1218,8 @@ module Aws::Greengrass
     #
     # @overload create_logger_definition_version(**params)
     # @param [Hash] params ({})
-    def create_logger_definition_version(params = {}, **options)
-      req = build_request(:create_logger_definition_version, params)
+    def create_logger_definition_version(, **options)
+      req = build_request(:create_logger_definition_version, )
       req.send_request(options)
     end
 
@@ -1317,8 +1317,8 @@ module Aws::Greengrass
     #
     # @overload create_resource_definition(**params)
     # @param [Hash] params ({})
-    def create_resource_definition(params = {}, **options)
-      req = build_request(:create_resource_definition, params)
+    def create_resource_definition(, **options)
+      req = build_request(:create_resource_definition, )
       req.send_request(options)
     end
 
@@ -1399,8 +1399,8 @@ module Aws::Greengrass
     #
     # @overload create_resource_definition_version(**params)
     # @param [Hash] params ({})
-    def create_resource_definition_version(params = {}, **options)
-      req = build_request(:create_resource_definition_version, params)
+    def create_resource_definition_version(, **options)
+      req = build_request(:create_resource_definition_version, )
       req.send_request(options)
     end
 
@@ -1461,8 +1461,8 @@ module Aws::Greengrass
     #
     # @overload create_software_update_job(**params)
     # @param [Hash] params ({})
-    def create_software_update_job(params = {}, **options)
-      req = build_request(:create_software_update_job, params)
+    def create_software_update_job(, **options)
+      req = build_request(:create_software_update_job, )
       req.send_request(options)
     end
 
@@ -1524,8 +1524,8 @@ module Aws::Greengrass
     #
     # @overload create_subscription_definition(**params)
     # @param [Hash] params ({})
-    def create_subscription_definition(params = {}, **options)
-      req = build_request(:create_subscription_definition, params)
+    def create_subscription_definition(, **options)
+      req = build_request(:create_subscription_definition, )
       req.send_request(options)
     end
 
@@ -1571,8 +1571,8 @@ module Aws::Greengrass
     #
     # @overload create_subscription_definition_version(**params)
     # @param [Hash] params ({})
-    def create_subscription_definition_version(params = {}, **options)
-      req = build_request(:create_subscription_definition_version, params)
+    def create_subscription_definition_version(, **options)
+      req = build_request(:create_subscription_definition_version, )
       req.send_request(options)
     end
 
@@ -1592,8 +1592,8 @@ module Aws::Greengrass
     #
     # @overload delete_connector_definition(**params)
     # @param [Hash] params ({})
-    def delete_connector_definition(params = {}, **options)
-      req = build_request(:delete_connector_definition, params)
+    def delete_connector_definition(, **options)
+      req = build_request(:delete_connector_definition, )
       req.send_request(options)
     end
 
@@ -1613,8 +1613,8 @@ module Aws::Greengrass
     #
     # @overload delete_core_definition(**params)
     # @param [Hash] params ({})
-    def delete_core_definition(params = {}, **options)
-      req = build_request(:delete_core_definition, params)
+    def delete_core_definition(, **options)
+      req = build_request(:delete_core_definition, )
       req.send_request(options)
     end
 
@@ -1634,8 +1634,8 @@ module Aws::Greengrass
     #
     # @overload delete_device_definition(**params)
     # @param [Hash] params ({})
-    def delete_device_definition(params = {}, **options)
-      req = build_request(:delete_device_definition, params)
+    def delete_device_definition(, **options)
+      req = build_request(:delete_device_definition, )
       req.send_request(options)
     end
 
@@ -1655,8 +1655,8 @@ module Aws::Greengrass
     #
     # @overload delete_function_definition(**params)
     # @param [Hash] params ({})
-    def delete_function_definition(params = {}, **options)
-      req = build_request(:delete_function_definition, params)
+    def delete_function_definition(, **options)
+      req = build_request(:delete_function_definition, )
       req.send_request(options)
     end
 
@@ -1676,8 +1676,8 @@ module Aws::Greengrass
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -1697,8 +1697,8 @@ module Aws::Greengrass
     #
     # @overload delete_logger_definition(**params)
     # @param [Hash] params ({})
-    def delete_logger_definition(params = {}, **options)
-      req = build_request(:delete_logger_definition, params)
+    def delete_logger_definition(, **options)
+      req = build_request(:delete_logger_definition, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::Greengrass
     #
     # @overload delete_resource_definition(**params)
     # @param [Hash] params ({})
-    def delete_resource_definition(params = {}, **options)
-      req = build_request(:delete_resource_definition, params)
+    def delete_resource_definition(, **options)
+      req = build_request(:delete_resource_definition, )
       req.send_request(options)
     end
 
@@ -1739,8 +1739,8 @@ module Aws::Greengrass
     #
     # @overload delete_subscription_definition(**params)
     # @param [Hash] params ({})
-    def delete_subscription_definition(params = {}, **options)
-      req = build_request(:delete_subscription_definition, params)
+    def delete_subscription_definition(, **options)
+      req = build_request(:delete_subscription_definition, )
       req.send_request(options)
     end
 
@@ -1766,8 +1766,8 @@ module Aws::Greengrass
     #
     # @overload disassociate_role_from_group(**params)
     # @param [Hash] params ({})
-    def disassociate_role_from_group(params = {}, **options)
-      req = build_request(:disassociate_role_from_group, params)
+    def disassociate_role_from_group(, **options)
+      req = build_request(:disassociate_role_from_group, )
       req.send_request(options)
     end
 
@@ -1786,8 +1786,8 @@ module Aws::Greengrass
     #
     # @overload disassociate_service_role_from_account(**params)
     # @param [Hash] params ({})
-    def disassociate_service_role_from_account(params = {}, **options)
-      req = build_request(:disassociate_service_role_from_account, params)
+    def disassociate_service_role_from_account(, **options)
+      req = build_request(:disassociate_service_role_from_account, )
       req.send_request(options)
     end
 
@@ -1815,8 +1815,8 @@ module Aws::Greengrass
     #
     # @overload get_associated_role(**params)
     # @param [Hash] params ({})
-    def get_associated_role(params = {}, **options)
-      req = build_request(:get_associated_role, params)
+    def get_associated_role(, **options)
+      req = build_request(:get_associated_role, )
       req.send_request(options)
     end
 
@@ -1857,8 +1857,8 @@ module Aws::Greengrass
     #
     # @overload get_bulk_deployment_status(**params)
     # @param [Hash] params ({})
-    def get_bulk_deployment_status(params = {}, **options)
-      req = build_request(:get_bulk_deployment_status, params)
+    def get_bulk_deployment_status(, **options)
+      req = build_request(:get_bulk_deployment_status, )
       req.send_request(options)
     end
 
@@ -1890,8 +1890,8 @@ module Aws::Greengrass
     #
     # @overload get_connectivity_info(**params)
     # @param [Hash] params ({})
-    def get_connectivity_info(params = {}, **options)
-      req = build_request(:get_connectivity_info, params)
+    def get_connectivity_info(, **options)
+      req = build_request(:get_connectivity_info, )
       req.send_request(options)
     end
 
@@ -1932,8 +1932,8 @@ module Aws::Greengrass
     #
     # @overload get_connector_definition(**params)
     # @param [Hash] params ({})
-    def get_connector_definition(params = {}, **options)
-      req = build_request(:get_connector_definition, params)
+    def get_connector_definition(, **options)
+      req = build_request(:get_connector_definition, )
       req.send_request(options)
     end
 
@@ -1982,8 +1982,8 @@ module Aws::Greengrass
     #
     # @overload get_connector_definition_version(**params)
     # @param [Hash] params ({})
-    def get_connector_definition_version(params = {}, **options)
-      req = build_request(:get_connector_definition_version, params)
+    def get_connector_definition_version(, **options)
+      req = build_request(:get_connector_definition_version, )
       req.send_request(options)
     end
 
@@ -2024,8 +2024,8 @@ module Aws::Greengrass
     #
     # @overload get_core_definition(**params)
     # @param [Hash] params ({})
-    def get_core_definition(params = {}, **options)
-      req = build_request(:get_core_definition, params)
+    def get_core_definition(, **options)
+      req = build_request(:get_core_definition, )
       req.send_request(options)
     end
 
@@ -2068,8 +2068,8 @@ module Aws::Greengrass
     #
     # @overload get_core_definition_version(**params)
     # @param [Hash] params ({})
-    def get_core_definition_version(params = {}, **options)
-      req = build_request(:get_core_definition_version, params)
+    def get_core_definition_version(, **options)
+      req = build_request(:get_core_definition_version, )
       req.send_request(options)
     end
 
@@ -2108,8 +2108,8 @@ module Aws::Greengrass
     #
     # @overload get_deployment_status(**params)
     # @param [Hash] params ({})
-    def get_deployment_status(params = {}, **options)
-      req = build_request(:get_deployment_status, params)
+    def get_deployment_status(, **options)
+      req = build_request(:get_deployment_status, )
       req.send_request(options)
     end
 
@@ -2150,8 +2150,8 @@ module Aws::Greengrass
     #
     # @overload get_device_definition(**params)
     # @param [Hash] params ({})
-    def get_device_definition(params = {}, **options)
-      req = build_request(:get_device_definition, params)
+    def get_device_definition(, **options)
+      req = build_request(:get_device_definition, )
       req.send_request(options)
     end
 
@@ -2197,8 +2197,8 @@ module Aws::Greengrass
     #
     # @overload get_device_definition_version(**params)
     # @param [Hash] params ({})
-    def get_device_definition_version(params = {}, **options)
-      req = build_request(:get_device_definition_version, params)
+    def get_device_definition_version(, **options)
+      req = build_request(:get_device_definition_version, )
       req.send_request(options)
     end
 
@@ -2240,8 +2240,8 @@ module Aws::Greengrass
     #
     # @overload get_function_definition(**params)
     # @param [Hash] params ({})
-    def get_function_definition(params = {}, **options)
-      req = build_request(:get_function_definition, params)
+    def get_function_definition(, **options)
+      req = build_request(:get_function_definition, )
       req.send_request(options)
     end
 
@@ -2305,8 +2305,8 @@ module Aws::Greengrass
     #
     # @overload get_function_definition_version(**params)
     # @param [Hash] params ({})
-    def get_function_definition_version(params = {}, **options)
-      req = build_request(:get_function_definition_version, params)
+    def get_function_definition_version(, **options)
+      req = build_request(:get_function_definition_version, )
       req.send_request(options)
     end
 
@@ -2347,8 +2347,8 @@ module Aws::Greengrass
     #
     # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, **options)
-      req = build_request(:get_group, params)
+    def get_group(, **options)
+      req = build_request(:get_group, )
       req.send_request(options)
     end
 
@@ -2382,8 +2382,8 @@ module Aws::Greengrass
     #
     # @overload get_group_certificate_authority(**params)
     # @param [Hash] params ({})
-    def get_group_certificate_authority(params = {}, **options)
-      req = build_request(:get_group_certificate_authority, params)
+    def get_group_certificate_authority(, **options)
+      req = build_request(:get_group_certificate_authority, )
       req.send_request(options)
     end
 
@@ -2413,8 +2413,8 @@ module Aws::Greengrass
     #
     # @overload get_group_certificate_configuration(**params)
     # @param [Hash] params ({})
-    def get_group_certificate_configuration(params = {}, **options)
-      req = build_request(:get_group_certificate_configuration, params)
+    def get_group_certificate_configuration(, **options)
+      req = build_request(:get_group_certificate_configuration, )
       req.send_request(options)
     end
 
@@ -2457,8 +2457,8 @@ module Aws::Greengrass
     #
     # @overload get_group_version(**params)
     # @param [Hash] params ({})
-    def get_group_version(params = {}, **options)
-      req = build_request(:get_group_version, params)
+    def get_group_version(, **options)
+      req = build_request(:get_group_version, )
       req.send_request(options)
     end
 
@@ -2499,8 +2499,8 @@ module Aws::Greengrass
     #
     # @overload get_logger_definition(**params)
     # @param [Hash] params ({})
-    def get_logger_definition(params = {}, **options)
-      req = build_request(:get_logger_definition, params)
+    def get_logger_definition(, **options)
+      req = build_request(:get_logger_definition, )
       req.send_request(options)
     end
 
@@ -2545,8 +2545,8 @@ module Aws::Greengrass
     #
     # @overload get_logger_definition_version(**params)
     # @param [Hash] params ({})
-    def get_logger_definition_version(params = {}, **options)
-      req = build_request(:get_logger_definition_version, params)
+    def get_logger_definition_version(, **options)
+      req = build_request(:get_logger_definition_version, )
       req.send_request(options)
     end
 
@@ -2588,8 +2588,8 @@ module Aws::Greengrass
     #
     # @overload get_resource_definition(**params)
     # @param [Hash] params ({})
-    def get_resource_definition(params = {}, **options)
-      req = build_request(:get_resource_definition, params)
+    def get_resource_definition(, **options)
+      req = build_request(:get_resource_definition, )
       req.send_request(options)
     end
 
@@ -2647,8 +2647,8 @@ module Aws::Greengrass
     #
     # @overload get_resource_definition_version(**params)
     # @param [Hash] params ({})
-    def get_resource_definition_version(params = {}, **options)
-      req = build_request(:get_resource_definition_version, params)
+    def get_resource_definition_version(, **options)
+      req = build_request(:get_resource_definition_version, )
       req.send_request(options)
     end
 
@@ -2668,8 +2668,8 @@ module Aws::Greengrass
     #
     # @overload get_service_role_for_account(**params)
     # @param [Hash] params ({})
-    def get_service_role_for_account(params = {}, **options)
-      req = build_request(:get_service_role_for_account, params)
+    def get_service_role_for_account(, **options)
+      req = build_request(:get_service_role_for_account, )
       req.send_request(options)
     end
 
@@ -2710,8 +2710,8 @@ module Aws::Greengrass
     #
     # @overload get_subscription_definition(**params)
     # @param [Hash] params ({})
-    def get_subscription_definition(params = {}, **options)
-      req = build_request(:get_subscription_definition, params)
+    def get_subscription_definition(, **options)
+      req = build_request(:get_subscription_definition, )
       req.send_request(options)
     end
 
@@ -2757,8 +2757,8 @@ module Aws::Greengrass
     #
     # @overload get_subscription_definition_version(**params)
     # @param [Hash] params ({})
-    def get_subscription_definition_version(params = {}, **options)
-      req = build_request(:get_subscription_definition_version, params)
+    def get_subscription_definition_version(, **options)
+      req = build_request(:get_subscription_definition_version, )
       req.send_request(options)
     end
 
@@ -2785,8 +2785,8 @@ module Aws::Greengrass
     #
     # @overload get_thing_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def get_thing_runtime_configuration(params = {}, **options)
-      req = build_request(:get_thing_runtime_configuration, params)
+    def get_thing_runtime_configuration(, **options)
+      req = build_request(:get_thing_runtime_configuration, )
       req.send_request(options)
     end
 
@@ -2831,8 +2831,8 @@ module Aws::Greengrass
     #
     # @overload list_bulk_deployment_detailed_reports(**params)
     # @param [Hash] params ({})
-    def list_bulk_deployment_detailed_reports(params = {}, **options)
-      req = build_request(:list_bulk_deployment_detailed_reports, params)
+    def list_bulk_deployment_detailed_reports(, **options)
+      req = build_request(:list_bulk_deployment_detailed_reports, )
       req.send_request(options)
     end
 
@@ -2866,8 +2866,8 @@ module Aws::Greengrass
     #
     # @overload list_bulk_deployments(**params)
     # @param [Hash] params ({})
-    def list_bulk_deployments(params = {}, **options)
-      req = build_request(:list_bulk_deployments, params)
+    def list_bulk_deployments(, **options)
+      req = build_request(:list_bulk_deployments, )
       req.send_request(options)
     end
 
@@ -2908,8 +2908,8 @@ module Aws::Greengrass
     #
     # @overload list_connector_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_connector_definition_versions(params = {}, **options)
-      req = build_request(:list_connector_definition_versions, params)
+    def list_connector_definition_versions(, **options)
+      req = build_request(:list_connector_definition_versions, )
       req.send_request(options)
     end
 
@@ -2949,8 +2949,8 @@ module Aws::Greengrass
     #
     # @overload list_connector_definitions(**params)
     # @param [Hash] params ({})
-    def list_connector_definitions(params = {}, **options)
-      req = build_request(:list_connector_definitions, params)
+    def list_connector_definitions(, **options)
+      req = build_request(:list_connector_definitions, )
       req.send_request(options)
     end
 
@@ -2988,8 +2988,8 @@ module Aws::Greengrass
     #
     # @overload list_core_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_core_definition_versions(params = {}, **options)
-      req = build_request(:list_core_definition_versions, params)
+    def list_core_definition_versions(, **options)
+      req = build_request(:list_core_definition_versions, )
       req.send_request(options)
     end
 
@@ -3029,8 +3029,8 @@ module Aws::Greengrass
     #
     # @overload list_core_definitions(**params)
     # @param [Hash] params ({})
-    def list_core_definitions(params = {}, **options)
-      req = build_request(:list_core_definitions, params)
+    def list_core_definitions(, **options)
+      req = build_request(:list_core_definitions, )
       req.send_request(options)
     end
 
@@ -3069,8 +3069,8 @@ module Aws::Greengrass
     #
     # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, **options)
-      req = build_request(:list_deployments, params)
+    def list_deployments(, **options)
+      req = build_request(:list_deployments, )
       req.send_request(options)
     end
 
@@ -3108,8 +3108,8 @@ module Aws::Greengrass
     #
     # @overload list_device_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_device_definition_versions(params = {}, **options)
-      req = build_request(:list_device_definition_versions, params)
+    def list_device_definition_versions(, **options)
+      req = build_request(:list_device_definition_versions, )
       req.send_request(options)
     end
 
@@ -3149,8 +3149,8 @@ module Aws::Greengrass
     #
     # @overload list_device_definitions(**params)
     # @param [Hash] params ({})
-    def list_device_definitions(params = {}, **options)
-      req = build_request(:list_device_definitions, params)
+    def list_device_definitions(, **options)
+      req = build_request(:list_device_definitions, )
       req.send_request(options)
     end
 
@@ -3188,8 +3188,8 @@ module Aws::Greengrass
     #
     # @overload list_function_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_function_definition_versions(params = {}, **options)
-      req = build_request(:list_function_definition_versions, params)
+    def list_function_definition_versions(, **options)
+      req = build_request(:list_function_definition_versions, )
       req.send_request(options)
     end
 
@@ -3229,8 +3229,8 @@ module Aws::Greengrass
     #
     # @overload list_function_definitions(**params)
     # @param [Hash] params ({})
-    def list_function_definitions(params = {}, **options)
-      req = build_request(:list_function_definitions, params)
+    def list_function_definitions(, **options)
+      req = build_request(:list_function_definitions, )
       req.send_request(options)
     end
 
@@ -3258,8 +3258,8 @@ module Aws::Greengrass
     #
     # @overload list_group_certificate_authorities(**params)
     # @param [Hash] params ({})
-    def list_group_certificate_authorities(params = {}, **options)
-      req = build_request(:list_group_certificate_authorities, params)
+    def list_group_certificate_authorities(, **options)
+      req = build_request(:list_group_certificate_authorities, )
       req.send_request(options)
     end
 
@@ -3297,8 +3297,8 @@ module Aws::Greengrass
     #
     # @overload list_group_versions(**params)
     # @param [Hash] params ({})
-    def list_group_versions(params = {}, **options)
-      req = build_request(:list_group_versions, params)
+    def list_group_versions(, **options)
+      req = build_request(:list_group_versions, )
       req.send_request(options)
     end
 
@@ -3336,8 +3336,8 @@ module Aws::Greengrass
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -3375,8 +3375,8 @@ module Aws::Greengrass
     #
     # @overload list_logger_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_logger_definition_versions(params = {}, **options)
-      req = build_request(:list_logger_definition_versions, params)
+    def list_logger_definition_versions(, **options)
+      req = build_request(:list_logger_definition_versions, )
       req.send_request(options)
     end
 
@@ -3416,8 +3416,8 @@ module Aws::Greengrass
     #
     # @overload list_logger_definitions(**params)
     # @param [Hash] params ({})
-    def list_logger_definitions(params = {}, **options)
-      req = build_request(:list_logger_definitions, params)
+    def list_logger_definitions(, **options)
+      req = build_request(:list_logger_definitions, )
       req.send_request(options)
     end
 
@@ -3455,8 +3455,8 @@ module Aws::Greengrass
     #
     # @overload list_resource_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_resource_definition_versions(params = {}, **options)
-      req = build_request(:list_resource_definition_versions, params)
+    def list_resource_definition_versions(, **options)
+      req = build_request(:list_resource_definition_versions, )
       req.send_request(options)
     end
 
@@ -3496,8 +3496,8 @@ module Aws::Greengrass
     #
     # @overload list_resource_definitions(**params)
     # @param [Hash] params ({})
-    def list_resource_definitions(params = {}, **options)
-      req = build_request(:list_resource_definitions, params)
+    def list_resource_definitions(, **options)
+      req = build_request(:list_resource_definitions, )
       req.send_request(options)
     end
 
@@ -3535,8 +3535,8 @@ module Aws::Greengrass
     #
     # @overload list_subscription_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_subscription_definition_versions(params = {}, **options)
-      req = build_request(:list_subscription_definition_versions, params)
+    def list_subscription_definition_versions(, **options)
+      req = build_request(:list_subscription_definition_versions, )
       req.send_request(options)
     end
 
@@ -3576,8 +3576,8 @@ module Aws::Greengrass
     #
     # @overload list_subscription_definitions(**params)
     # @param [Hash] params ({})
-    def list_subscription_definitions(params = {}, **options)
-      req = build_request(:list_subscription_definitions, params)
+    def list_subscription_definitions(, **options)
+      req = build_request(:list_subscription_definitions, )
       req.send_request(options)
     end
 
@@ -3604,8 +3604,8 @@ module Aws::Greengrass
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3640,8 +3640,8 @@ module Aws::Greengrass
     #
     # @overload reset_deployments(**params)
     # @param [Hash] params ({})
-    def reset_deployments(params = {}, **options)
-      req = build_request(:reset_deployments, params)
+    def reset_deployments(, **options)
+      req = build_request(:reset_deployments, )
       req.send_request(options)
     end
 
@@ -3699,8 +3699,8 @@ module Aws::Greengrass
     #
     # @overload start_bulk_deployment(**params)
     # @param [Hash] params ({})
-    def start_bulk_deployment(params = {}, **options)
-      req = build_request(:start_bulk_deployment, params)
+    def start_bulk_deployment(, **options)
+      req = build_request(:start_bulk_deployment, )
       req.send_request(options)
     end
 
@@ -3724,8 +3724,8 @@ module Aws::Greengrass
     #
     # @overload stop_bulk_deployment(**params)
     # @param [Hash] params ({})
-    def stop_bulk_deployment(params = {}, **options)
-      req = build_request(:stop_bulk_deployment, params)
+    def stop_bulk_deployment(, **options)
+      req = build_request(:stop_bulk_deployment, )
       req.send_request(options)
     end
 
@@ -3755,8 +3755,8 @@ module Aws::Greengrass
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3779,8 +3779,8 @@ module Aws::Greengrass
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3821,8 +3821,8 @@ module Aws::Greengrass
     #
     # @overload update_connectivity_info(**params)
     # @param [Hash] params ({})
-    def update_connectivity_info(params = {}, **options)
-      req = build_request(:update_connectivity_info, params)
+    def update_connectivity_info(, **options)
+      req = build_request(:update_connectivity_info, )
       req.send_request(options)
     end
 
@@ -3845,8 +3845,8 @@ module Aws::Greengrass
     #
     # @overload update_connector_definition(**params)
     # @param [Hash] params ({})
-    def update_connector_definition(params = {}, **options)
-      req = build_request(:update_connector_definition, params)
+    def update_connector_definition(, **options)
+      req = build_request(:update_connector_definition, )
       req.send_request(options)
     end
 
@@ -3869,8 +3869,8 @@ module Aws::Greengrass
     #
     # @overload update_core_definition(**params)
     # @param [Hash] params ({})
-    def update_core_definition(params = {}, **options)
-      req = build_request(:update_core_definition, params)
+    def update_core_definition(, **options)
+      req = build_request(:update_core_definition, )
       req.send_request(options)
     end
 
@@ -3893,8 +3893,8 @@ module Aws::Greengrass
     #
     # @overload update_device_definition(**params)
     # @param [Hash] params ({})
-    def update_device_definition(params = {}, **options)
-      req = build_request(:update_device_definition, params)
+    def update_device_definition(, **options)
+      req = build_request(:update_device_definition, )
       req.send_request(options)
     end
 
@@ -3917,8 +3917,8 @@ module Aws::Greengrass
     #
     # @overload update_function_definition(**params)
     # @param [Hash] params ({})
-    def update_function_definition(params = {}, **options)
-      req = build_request(:update_function_definition, params)
+    def update_function_definition(, **options)
+      req = build_request(:update_function_definition, )
       req.send_request(options)
     end
 
@@ -3941,8 +3941,8 @@ module Aws::Greengrass
     #
     # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, **options)
-      req = build_request(:update_group, params)
+    def update_group(, **options)
+      req = build_request(:update_group, )
       req.send_request(options)
     end
 
@@ -3977,8 +3977,8 @@ module Aws::Greengrass
     #
     # @overload update_group_certificate_configuration(**params)
     # @param [Hash] params ({})
-    def update_group_certificate_configuration(params = {}, **options)
-      req = build_request(:update_group_certificate_configuration, params)
+    def update_group_certificate_configuration(, **options)
+      req = build_request(:update_group_certificate_configuration, )
       req.send_request(options)
     end
 
@@ -4001,8 +4001,8 @@ module Aws::Greengrass
     #
     # @overload update_logger_definition(**params)
     # @param [Hash] params ({})
-    def update_logger_definition(params = {}, **options)
-      req = build_request(:update_logger_definition, params)
+    def update_logger_definition(, **options)
+      req = build_request(:update_logger_definition, )
       req.send_request(options)
     end
 
@@ -4025,8 +4025,8 @@ module Aws::Greengrass
     #
     # @overload update_resource_definition(**params)
     # @param [Hash] params ({})
-    def update_resource_definition(params = {}, **options)
-      req = build_request(:update_resource_definition, params)
+    def update_resource_definition(, **options)
+      req = build_request(:update_resource_definition, )
       req.send_request(options)
     end
 
@@ -4049,8 +4049,8 @@ module Aws::Greengrass
     #
     # @overload update_subscription_definition(**params)
     # @param [Hash] params ({})
-    def update_subscription_definition(params = {}, **options)
-      req = build_request(:update_subscription_definition, params)
+    def update_subscription_definition(, **options)
+      req = build_request(:update_subscription_definition, )
       req.send_request(options)
     end
 
@@ -4076,8 +4076,8 @@ module Aws::Greengrass
     #
     # @overload update_thing_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def update_thing_runtime_configuration(params = {}, **options)
-      req = build_request(:update_thing_runtime_configuration, params)
+    def update_thing_runtime_configuration(, **options)
+      req = build_request(:update_thing_runtime_configuration, )
       req.send_request(options)
     end
 

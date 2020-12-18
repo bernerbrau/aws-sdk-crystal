@@ -495,8 +495,8 @@ module Aws::Amplify
     #
     # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, **options)
-      req = build_request(:create_app, params)
+    def create_app(, **options)
+      req = build_request(:create_app, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::Amplify
     #
     # @overload create_backend_environment(**params)
     # @param [Hash] params ({})
-    def create_backend_environment(params = {}, **options)
-      req = build_request(:create_backend_environment, params)
+    def create_backend_environment(, **options)
+      req = build_request(:create_backend_environment, )
       req.send_request(options)
     end
 
@@ -677,8 +677,8 @@ module Aws::Amplify
     #
     # @overload create_branch(**params)
     # @param [Hash] params ({})
-    def create_branch(params = {}, **options)
-      req = build_request(:create_branch, params)
+    def create_branch(, **options)
+      req = build_request(:create_branch, )
       req.send_request(options)
     end
 
@@ -724,8 +724,8 @@ module Aws::Amplify
     #
     # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, **options)
-      req = build_request(:create_deployment, params)
+    def create_deployment(, **options)
+      req = build_request(:create_deployment, )
       req.send_request(options)
     end
 
@@ -792,8 +792,8 @@ module Aws::Amplify
     #
     # @overload create_domain_association(**params)
     # @param [Hash] params ({})
-    def create_domain_association(params = {}, **options)
-      req = build_request(:create_domain_association, params)
+    def create_domain_association(, **options)
+      req = build_request(:create_domain_association, )
       req.send_request(options)
     end
 
@@ -834,8 +834,8 @@ module Aws::Amplify
     #
     # @overload create_webhook(**params)
     # @param [Hash] params ({})
-    def create_webhook(params = {}, **options)
-      req = build_request(:create_webhook, params)
+    def create_webhook(, **options)
+      req = build_request(:create_webhook, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::Amplify
     #
     # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, **options)
-      req = build_request(:delete_app, params)
+    def delete_app(, **options)
+      req = build_request(:delete_app, )
       req.send_request(options)
     end
 
@@ -941,8 +941,8 @@ module Aws::Amplify
     #
     # @overload delete_backend_environment(**params)
     # @param [Hash] params ({})
-    def delete_backend_environment(params = {}, **options)
-      req = build_request(:delete_backend_environment, params)
+    def delete_backend_environment(, **options)
+      req = build_request(:delete_backend_environment, )
       req.send_request(options)
     end
 
@@ -1003,8 +1003,8 @@ module Aws::Amplify
     #
     # @overload delete_branch(**params)
     # @param [Hash] params ({})
-    def delete_branch(params = {}, **options)
-      req = build_request(:delete_branch, params)
+    def delete_branch(, **options)
+      req = build_request(:delete_branch, )
       req.send_request(options)
     end
 
@@ -1048,8 +1048,8 @@ module Aws::Amplify
     #
     # @overload delete_domain_association(**params)
     # @param [Hash] params ({})
-    def delete_domain_association(params = {}, **options)
-      req = build_request(:delete_domain_association, params)
+    def delete_domain_association(, **options)
+      req = build_request(:delete_domain_association, )
       req.send_request(options)
     end
 
@@ -1092,8 +1092,8 @@ module Aws::Amplify
     #
     # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, **options)
-      req = build_request(:delete_job, params)
+    def delete_job(, **options)
+      req = build_request(:delete_job, )
       req.send_request(options)
     end
 
@@ -1126,8 +1126,8 @@ module Aws::Amplify
     #
     # @overload delete_webhook(**params)
     # @param [Hash] params ({})
-    def delete_webhook(params = {}, **options)
-      req = build_request(:delete_webhook, params)
+    def delete_webhook(, **options)
+      req = build_request(:delete_webhook, )
       req.send_request(options)
     end
 
@@ -1169,8 +1169,8 @@ module Aws::Amplify
     #
     # @overload generate_access_logs(**params)
     # @param [Hash] params ({})
-    def generate_access_logs(params = {}, **options)
-      req = build_request(:generate_access_logs, params)
+    def generate_access_logs(, **options)
+      req = build_request(:generate_access_logs, )
       req.send_request(options)
     end
 
@@ -1239,8 +1239,8 @@ module Aws::Amplify
     #
     # @overload get_app(**params)
     # @param [Hash] params ({})
-    def get_app(params = {}, **options)
-      req = build_request(:get_app, params)
+    def get_app(, **options)
+      req = build_request(:get_app, )
       req.send_request(options)
     end
 
@@ -1269,8 +1269,8 @@ module Aws::Amplify
     #
     # @overload get_artifact_url(**params)
     # @param [Hash] params ({})
-    def get_artifact_url(params = {}, **options)
-      req = build_request(:get_artifact_url, params)
+    def get_artifact_url(, **options)
+      req = build_request(:get_artifact_url, )
       req.send_request(options)
     end
 
@@ -1306,8 +1306,8 @@ module Aws::Amplify
     #
     # @overload get_backend_environment(**params)
     # @param [Hash] params ({})
-    def get_backend_environment(params = {}, **options)
-      req = build_request(:get_backend_environment, params)
+    def get_backend_environment(, **options)
+      req = build_request(:get_backend_environment, )
       req.send_request(options)
     end
 
@@ -1368,8 +1368,8 @@ module Aws::Amplify
     #
     # @overload get_branch(**params)
     # @param [Hash] params ({})
-    def get_branch(params = {}, **options)
-      req = build_request(:get_branch, params)
+    def get_branch(, **options)
+      req = build_request(:get_branch, )
       req.send_request(options)
     end
 
@@ -1413,8 +1413,8 @@ module Aws::Amplify
     #
     # @overload get_domain_association(**params)
     # @param [Hash] params ({})
-    def get_domain_association(params = {}, **options)
-      req = build_request(:get_domain_association, params)
+    def get_domain_association(, **options)
+      req = build_request(:get_domain_association, )
       req.send_request(options)
     end
 
@@ -1470,8 +1470,8 @@ module Aws::Amplify
     #
     # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, **options)
-      req = build_request(:get_job, params)
+    def get_job(, **options)
+      req = build_request(:get_job, )
       req.send_request(options)
     end
 
@@ -1505,8 +1505,8 @@ module Aws::Amplify
     #
     # @overload get_webhook(**params)
     # @param [Hash] params ({})
-    def get_webhook(params = {}, **options)
-      req = build_request(:get_webhook, params)
+    def get_webhook(, **options)
+      req = build_request(:get_webhook, )
       req.send_request(options)
     end
 
@@ -1583,8 +1583,8 @@ module Aws::Amplify
     #
     # @overload list_apps(**params)
     # @param [Hash] params ({})
-    def list_apps(params = {}, **options)
-      req = build_request(:list_apps, params)
+    def list_apps(, **options)
+      req = build_request(:list_apps, )
       req.send_request(options)
     end
 
@@ -1633,8 +1633,8 @@ module Aws::Amplify
     #
     # @overload list_artifacts(**params)
     # @param [Hash] params ({})
-    def list_artifacts(params = {}, **options)
-      req = build_request(:list_artifacts, params)
+    def list_artifacts(, **options)
+      req = build_request(:list_artifacts, )
       req.send_request(options)
     end
 
@@ -1683,8 +1683,8 @@ module Aws::Amplify
     #
     # @overload list_backend_environments(**params)
     # @param [Hash] params ({})
-    def list_backend_environments(params = {}, **options)
-      req = build_request(:list_backend_environments, params)
+    def list_backend_environments(, **options)
+      req = build_request(:list_backend_environments, )
       req.send_request(options)
     end
 
@@ -1754,8 +1754,8 @@ module Aws::Amplify
     #
     # @overload list_branches(**params)
     # @param [Hash] params ({})
-    def list_branches(params = {}, **options)
-      req = build_request(:list_branches, params)
+    def list_branches(, **options)
+      req = build_request(:list_branches, )
       req.send_request(options)
     end
 
@@ -1808,8 +1808,8 @@ module Aws::Amplify
     #
     # @overload list_domain_associations(**params)
     # @param [Hash] params ({})
-    def list_domain_associations(params = {}, **options)
-      req = build_request(:list_domain_associations, params)
+    def list_domain_associations(, **options)
+      req = build_request(:list_domain_associations, )
       req.send_request(options)
     end
 
@@ -1861,8 +1861,8 @@ module Aws::Amplify
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -1890,8 +1890,8 @@ module Aws::Amplify
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1937,8 +1937,8 @@ module Aws::Amplify
     #
     # @overload list_webhooks(**params)
     # @param [Hash] params ({})
-    def list_webhooks(params = {}, **options)
-      req = build_request(:list_webhooks, params)
+    def list_webhooks(, **options)
+      req = build_request(:list_webhooks, )
       req.send_request(options)
     end
 
@@ -1989,8 +1989,8 @@ module Aws::Amplify
     #
     # @overload start_deployment(**params)
     # @param [Hash] params ({})
-    def start_deployment(params = {}, **options)
-      req = build_request(:start_deployment, params)
+    def start_deployment(, **options)
+      req = build_request(:start_deployment, )
       req.send_request(options)
     end
 
@@ -2058,8 +2058,8 @@ module Aws::Amplify
     #
     # @overload start_job(**params)
     # @param [Hash] params ({})
-    def start_job(params = {}, **options)
-      req = build_request(:start_job, params)
+    def start_job(, **options)
+      req = build_request(:start_job, )
       req.send_request(options)
     end
 
@@ -2102,8 +2102,8 @@ module Aws::Amplify
     #
     # @overload stop_job(**params)
     # @param [Hash] params ({})
-    def stop_job(params = {}, **options)
-      req = build_request(:stop_job, params)
+    def stop_job(, **options)
+      req = build_request(:stop_job, )
       req.send_request(options)
     end
 
@@ -2130,8 +2130,8 @@ module Aws::Amplify
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2156,8 +2156,8 @@ module Aws::Amplify
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2327,8 +2327,8 @@ module Aws::Amplify
     #
     # @overload update_app(**params)
     # @param [Hash] params ({})
-    def update_app(params = {}, **options)
-      req = build_request(:update_app, params)
+    def update_app(, **options)
+      req = build_request(:update_app, )
       req.send_request(options)
     end
 
@@ -2458,8 +2458,8 @@ module Aws::Amplify
     #
     # @overload update_branch(**params)
     # @param [Hash] params ({})
-    def update_branch(params = {}, **options)
-      req = build_request(:update_branch, params)
+    def update_branch(, **options)
+      req = build_request(:update_branch, )
       req.send_request(options)
     end
 
@@ -2525,8 +2525,8 @@ module Aws::Amplify
     #
     # @overload update_domain_association(**params)
     # @param [Hash] params ({})
-    def update_domain_association(params = {}, **options)
-      req = build_request(:update_domain_association, params)
+    def update_domain_association(, **options)
+      req = build_request(:update_domain_association, )
       req.send_request(options)
     end
 
@@ -2567,8 +2567,8 @@ module Aws::Amplify
     #
     # @overload update_webhook(**params)
     # @param [Hash] params ({})
-    def update_webhook(params = {}, **options)
-      req = build_request(:update_webhook, params)
+    def update_webhook(, **options)
+      req = build_request(:update_webhook, )
       req.send_request(options)
     end
 

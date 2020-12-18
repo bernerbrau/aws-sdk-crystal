@@ -400,8 +400,8 @@ module Aws::Support
     #
     # @overload add_attachments_to_set(**params)
     # @param [Hash] params ({})
-    def add_attachments_to_set(params = {}, **options)
-      req = build_request(:add_attachments_to_set, params)
+    def add_attachments_to_set(, **options)
+      req = build_request(:add_attachments_to_set, )
       req.send_request(options)
     end
 
@@ -462,8 +462,8 @@ module Aws::Support
     #
     # @overload add_communication_to_case(**params)
     # @param [Hash] params ({})
-    def add_communication_to_case(params = {}, **options)
-      req = build_request(:add_communication_to_case, params)
+    def add_communication_to_case(, **options)
+      req = build_request(:add_communication_to_case, )
       req.send_request(options)
     end
 
@@ -600,8 +600,8 @@ module Aws::Support
     #
     # @overload create_case(**params)
     # @param [Hash] params ({})
-    def create_case(params = {}, **options)
-      req = build_request(:create_case, params)
+    def create_case(, **options)
+      req = build_request(:create_case, )
       req.send_request(options)
     end
 
@@ -649,8 +649,8 @@ module Aws::Support
     #
     # @overload describe_attachment(**params)
     # @param [Hash] params ({})
-    def describe_attachment(params = {}, **options)
-      req = build_request(:describe_attachment, params)
+    def describe_attachment(, **options)
+      req = build_request(:describe_attachment, )
       req.send_request(options)
     end
 
@@ -773,8 +773,8 @@ module Aws::Support
     #
     # @overload describe_cases(**params)
     # @param [Hash] params ({})
-    def describe_cases(params = {}, **options)
-      req = build_request(:describe_cases, params)
+    def describe_cases(, **options)
+      req = build_request(:describe_cases, )
       req.send_request(options)
     end
 
@@ -860,8 +860,8 @@ module Aws::Support
     #
     # @overload describe_communications(**params)
     # @param [Hash] params ({})
-    def describe_communications(params = {}, **options)
-      req = build_request(:describe_communications, params)
+    def describe_communications(, **options)
+      req = build_request(:describe_communications, )
       req.send_request(options)
     end
 
@@ -926,8 +926,8 @@ module Aws::Support
     #
     # @overload describe_services(**params)
     # @param [Hash] params ({})
-    def describe_services(params = {}, **options)
-      req = build_request(:describe_services, params)
+    def describe_services(, **options)
+      req = build_request(:describe_services, )
       req.send_request(options)
     end
 
@@ -975,8 +975,8 @@ module Aws::Support
     #
     # @overload describe_severity_levels(**params)
     # @param [Hash] params ({})
-    def describe_severity_levels(params = {}, **options)
-      req = build_request(:describe_severity_levels, params)
+    def describe_severity_levels(, **options)
+      req = build_request(:describe_severity_levels, )
       req.send_request(options)
     end
 
@@ -1033,8 +1033,8 @@ module Aws::Support
     #
     # @overload describe_trusted_advisor_check_refresh_statuses(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_check_refresh_statuses(params = {}, **options)
-      req = build_request(:describe_trusted_advisor_check_refresh_statuses, params)
+    def describe_trusted_advisor_check_refresh_statuses(, **options)
+      req = build_request(:describe_trusted_advisor_check_refresh_statuses, )
       req.send_request(options)
     end
 
@@ -1117,8 +1117,8 @@ module Aws::Support
     #
     # @overload describe_trusted_advisor_check_result(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_check_result(params = {}, **options)
-      req = build_request(:describe_trusted_advisor_check_result, params)
+    def describe_trusted_advisor_check_result(, **options)
+      req = build_request(:describe_trusted_advisor_check_result, )
       req.send_request(options)
     end
 
@@ -1173,8 +1173,8 @@ module Aws::Support
     #
     # @overload describe_trusted_advisor_check_summaries(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_check_summaries(params = {}, **options)
-      req = build_request(:describe_trusted_advisor_check_summaries, params)
+    def describe_trusted_advisor_check_summaries(, **options)
+      req = build_request(:describe_trusted_advisor_check_summaries, )
       req.send_request(options)
     end
 
@@ -1229,8 +1229,8 @@ module Aws::Support
     #
     # @overload describe_trusted_advisor_checks(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_checks(params = {}, **options)
-      req = build_request(:describe_trusted_advisor_checks, params)
+    def describe_trusted_advisor_checks(, **options)
+      req = build_request(:describe_trusted_advisor_checks, )
       req.send_request(options)
     end
 
@@ -1285,8 +1285,8 @@ module Aws::Support
     #
     # @overload refresh_trusted_advisor_check(**params)
     # @param [Hash] params ({})
-    def refresh_trusted_advisor_check(params = {}, **options)
-      req = build_request(:refresh_trusted_advisor_check, params)
+    def refresh_trusted_advisor_check(, **options)
+      req = build_request(:refresh_trusted_advisor_check, )
       req.send_request(options)
     end
 
@@ -1332,8 +1332,8 @@ module Aws::Support
     #
     # @overload resolve_case(**params)
     # @param [Hash] params ({})
-    def resolve_case(params = {}, **options)
-      req = build_request(:resolve_case, params)
+    def resolve_case(, **options)
+      req = build_request(:resolve_case, )
       req.send_request(options)
     end
 

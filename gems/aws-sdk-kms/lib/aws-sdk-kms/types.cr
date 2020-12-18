@@ -4652,5 +4652,761 @@ module Aws::KMS
       include Aws::Structure
     end
 
+    alias AWSAccountIdType = String
+
+    alias AlgorithmSpec = String
+
+    alias AliasList = Array(AliasListEntry)
+
+    alias AliasListEntry = NamedTuple(
+      "AliasName" : (AliasNameType)?,
+      "AliasArn" : (ArnType)?,
+      "TargetKeyId" : (KeyIdType)?
+    )
+
+    alias AliasNameType = String
+
+    alias AlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias ArnType = String
+
+    alias BooleanType = Bool
+
+    alias CancelKeyDeletionRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias CancelKeyDeletionResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?
+    )
+
+    alias CiphertextType = String | Array(UInt8) | IO
+
+    alias CloudHsmClusterIdType = String
+
+    alias CloudHsmClusterInUseException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CloudHsmClusterInvalidConfigurationException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CloudHsmClusterNotActiveException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CloudHsmClusterNotFoundException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CloudHsmClusterNotRelatedException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias ConnectCustomKeyStoreRequest = NamedTuple(
+      "CustomKeyStoreId" : CustomKeyStoreIdType
+    )
+
+    alias ConnectCustomKeyStoreResponse = NamedTuple(
+      
+    )
+
+    alias ConnectionErrorCodeType = String
+
+    alias ConnectionStateType = String
+
+    alias CreateAliasRequest = NamedTuple(
+      "AliasName" : AliasNameType,
+      "TargetKeyId" : KeyIdType
+    )
+
+    alias CreateCustomKeyStoreRequest = NamedTuple(
+      "CustomKeyStoreName" : CustomKeyStoreNameType,
+      "CloudHsmClusterId" : CloudHsmClusterIdType,
+      "TrustAnchorCertificate" : TrustAnchorCertificateType,
+      "KeyStorePassword" : KeyStorePasswordType
+    )
+
+    alias CreateCustomKeyStoreResponse = NamedTuple(
+      "CustomKeyStoreId" : (CustomKeyStoreIdType)?
+    )
+
+    alias CreateGrantRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "GranteePrincipal" : PrincipalIdType,
+      "RetiringPrincipal" : (PrincipalIdType)?,
+      "Operations" : GrantOperationList,
+      "Constraints" : (GrantConstraints)?,
+      "GrantTokens" : (GrantTokenList)?,
+      "Name" : (GrantNameType)?
+    )
+
+    alias CreateGrantResponse = NamedTuple(
+      "GrantToken" : (GrantTokenType)?,
+      "GrantId" : (GrantIdType)?
+    )
+
+    alias CreateKeyRequest = NamedTuple(
+      "Policy" : (PolicyType)?,
+      "Description" : (DescriptionType)?,
+      "KeyUsage" : (KeyUsageType)?,
+      "CustomerMasterKeySpec" : (CustomerMasterKeySpec)?,
+      "Origin" : (OriginType)?,
+      "CustomKeyStoreId" : (CustomKeyStoreIdType)?,
+      "BypassPolicyLockoutSafetyCheck" : (BooleanType)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateKeyResponse = NamedTuple(
+      "KeyMetadata" : (KeyMetadata)?
+    )
+
+    alias CustomKeyStoreHasCMKsException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CustomKeyStoreIdType = String
+
+    alias CustomKeyStoreInvalidStateException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CustomKeyStoreNameInUseException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CustomKeyStoreNameType = String
+
+    alias CustomKeyStoreNotFoundException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias CustomKeyStoresList = Array(CustomKeyStoresListEntry)
+
+    alias CustomKeyStoresListEntry = NamedTuple(
+      "CustomKeyStoreId" : (CustomKeyStoreIdType)?,
+      "CustomKeyStoreName" : (CustomKeyStoreNameType)?,
+      "CloudHsmClusterId" : (CloudHsmClusterIdType)?,
+      "TrustAnchorCertificate" : (TrustAnchorCertificateType)?,
+      "ConnectionState" : (ConnectionStateType)?,
+      "ConnectionErrorCode" : (ConnectionErrorCodeType)?,
+      "CreationDate" : (DateType)?
+    )
+
+    alias CustomerMasterKeySpec = String
+
+    alias DataKeyPairSpec = String
+
+    alias DataKeySpec = String
+
+    alias DateType = String | UInt64 | Time
+
+    alias DecryptRequest = NamedTuple(
+      "CiphertextBlob" : CiphertextType,
+      "EncryptionContext" : (EncryptionContextType)?,
+      "GrantTokens" : (GrantTokenList)?,
+      "KeyId" : (KeyIdType)?,
+      "EncryptionAlgorithm" : (EncryptionAlgorithmSpec)?
+    )
+
+    alias DecryptResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "Plaintext" : (PlaintextType)?,
+      "EncryptionAlgorithm" : (EncryptionAlgorithmSpec)?
+    )
+
+    alias DeleteAliasRequest = NamedTuple(
+      "AliasName" : AliasNameType
+    )
+
+    alias DeleteCustomKeyStoreRequest = NamedTuple(
+      "CustomKeyStoreId" : CustomKeyStoreIdType
+    )
+
+    alias DeleteCustomKeyStoreResponse = NamedTuple(
+      
+    )
+
+    alias DeleteImportedKeyMaterialRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias DependencyTimeoutException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias DescribeCustomKeyStoresRequest = NamedTuple(
+      "CustomKeyStoreId" : (CustomKeyStoreIdType)?,
+      "CustomKeyStoreName" : (CustomKeyStoreNameType)?,
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias DescribeCustomKeyStoresResponse = NamedTuple(
+      "CustomKeyStores" : (CustomKeyStoresList)?,
+      "NextMarker" : (MarkerType)?,
+      "Truncated" : (BooleanType)?
+    )
+
+    alias DescribeKeyRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias DescribeKeyResponse = NamedTuple(
+      "KeyMetadata" : (KeyMetadata)?
+    )
+
+    alias DescriptionType = String
+
+    alias DisableKeyRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias DisableKeyRotationRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias DisabledException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias DisconnectCustomKeyStoreRequest = NamedTuple(
+      "CustomKeyStoreId" : CustomKeyStoreIdType
+    )
+
+    alias DisconnectCustomKeyStoreResponse = NamedTuple(
+      
+    )
+
+    alias EnableKeyRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias EnableKeyRotationRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias EncryptRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Plaintext" : PlaintextType,
+      "EncryptionContext" : (EncryptionContextType)?,
+      "GrantTokens" : (GrantTokenList)?,
+      "EncryptionAlgorithm" : (EncryptionAlgorithmSpec)?
+    )
+
+    alias EncryptResponse = NamedTuple(
+      "CiphertextBlob" : (CiphertextType)?,
+      "KeyId" : (KeyIdType)?,
+      "EncryptionAlgorithm" : (EncryptionAlgorithmSpec)?
+    )
+
+    alias EncryptionAlgorithmSpec = String
+
+    alias EncryptionAlgorithmSpecList = Array(EncryptionAlgorithmSpec)
+
+    alias EncryptionContextKey = String
+
+    alias EncryptionContextType = Hash(EncryptionContextKey,EncryptionContextValue)
+
+    alias EncryptionContextValue = String
+
+    alias ErrorMessageType = String
+
+    alias ExpirationModelType = String
+
+    alias ExpiredImportTokenException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias GenerateDataKeyPairRequest = NamedTuple(
+      "EncryptionContext" : (EncryptionContextType)?,
+      "KeyId" : KeyIdType,
+      "KeyPairSpec" : DataKeyPairSpec,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias GenerateDataKeyPairResponse = NamedTuple(
+      "PrivateKeyCiphertextBlob" : (CiphertextType)?,
+      "PrivateKeyPlaintext" : (PlaintextType)?,
+      "PublicKey" : (PublicKeyType)?,
+      "KeyId" : (KeyIdType)?,
+      "KeyPairSpec" : (DataKeyPairSpec)?
+    )
+
+    alias GenerateDataKeyPairWithoutPlaintextRequest = NamedTuple(
+      "EncryptionContext" : (EncryptionContextType)?,
+      "KeyId" : KeyIdType,
+      "KeyPairSpec" : DataKeyPairSpec,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias GenerateDataKeyPairWithoutPlaintextResponse = NamedTuple(
+      "PrivateKeyCiphertextBlob" : (CiphertextType)?,
+      "PublicKey" : (PublicKeyType)?,
+      "KeyId" : (KeyIdType)?,
+      "KeyPairSpec" : (DataKeyPairSpec)?
+    )
+
+    alias GenerateDataKeyRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "EncryptionContext" : (EncryptionContextType)?,
+      "NumberOfBytes" : (NumberOfBytesType)?,
+      "KeySpec" : (DataKeySpec)?,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias GenerateDataKeyResponse = NamedTuple(
+      "CiphertextBlob" : (CiphertextType)?,
+      "Plaintext" : (PlaintextType)?,
+      "KeyId" : (KeyIdType)?
+    )
+
+    alias GenerateDataKeyWithoutPlaintextRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "EncryptionContext" : (EncryptionContextType)?,
+      "KeySpec" : (DataKeySpec)?,
+      "NumberOfBytes" : (NumberOfBytesType)?,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias GenerateDataKeyWithoutPlaintextResponse = NamedTuple(
+      "CiphertextBlob" : (CiphertextType)?,
+      "KeyId" : (KeyIdType)?
+    )
+
+    alias GenerateRandomRequest = NamedTuple(
+      "NumberOfBytes" : (NumberOfBytesType)?,
+      "CustomKeyStoreId" : (CustomKeyStoreIdType)?
+    )
+
+    alias GenerateRandomResponse = NamedTuple(
+      "Plaintext" : (PlaintextType)?
+    )
+
+    alias GetKeyPolicyRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "PolicyName" : PolicyNameType
+    )
+
+    alias GetKeyPolicyResponse = NamedTuple(
+      "Policy" : (PolicyType)?
+    )
+
+    alias GetKeyRotationStatusRequest = NamedTuple(
+      "KeyId" : KeyIdType
+    )
+
+    alias GetKeyRotationStatusResponse = NamedTuple(
+      "KeyRotationEnabled" : (BooleanType)?
+    )
+
+    alias GetParametersForImportRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "WrappingAlgorithm" : AlgorithmSpec,
+      "WrappingKeySpec" : WrappingKeySpec
+    )
+
+    alias GetParametersForImportResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "ImportToken" : (CiphertextType)?,
+      "PublicKey" : (PlaintextType)?,
+      "ParametersValidTo" : (DateType)?
+    )
+
+    alias GetPublicKeyRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias GetPublicKeyResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "PublicKey" : (PublicKeyType)?,
+      "CustomerMasterKeySpec" : (CustomerMasterKeySpec)?,
+      "KeyUsage" : (KeyUsageType)?,
+      "EncryptionAlgorithms" : (EncryptionAlgorithmSpecList)?,
+      "SigningAlgorithms" : (SigningAlgorithmSpecList)?
+    )
+
+    alias GrantConstraints = NamedTuple(
+      "EncryptionContextSubset" : (EncryptionContextType)?,
+      "EncryptionContextEquals" : (EncryptionContextType)?
+    )
+
+    alias GrantIdType = String
+
+    alias GrantList = Array(GrantListEntry)
+
+    alias GrantListEntry = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "GrantId" : (GrantIdType)?,
+      "Name" : (GrantNameType)?,
+      "CreationDate" : (DateType)?,
+      "GranteePrincipal" : (PrincipalIdType)?,
+      "RetiringPrincipal" : (PrincipalIdType)?,
+      "IssuingAccount" : (PrincipalIdType)?,
+      "Operations" : (GrantOperationList)?,
+      "Constraints" : (GrantConstraints)?
+    )
+
+    alias GrantNameType = String
+
+    alias GrantOperation = String
+
+    alias GrantOperationList = Array(GrantOperation)
+
+    alias GrantTokenList = Array(GrantTokenType)
+
+    alias GrantTokenType = String
+
+    alias ImportKeyMaterialRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "ImportToken" : CiphertextType,
+      "EncryptedKeyMaterial" : CiphertextType,
+      "ValidTo" : (DateType)?,
+      "ExpirationModel" : (ExpirationModelType)?
+    )
+
+    alias ImportKeyMaterialResponse = NamedTuple(
+      
+    )
+
+    alias IncorrectKeyException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias IncorrectKeyMaterialException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias IncorrectTrustAnchorException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidAliasNameException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidArnException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidCiphertextException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidGrantIdException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidGrantTokenException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidImportTokenException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidKeyUsageException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias InvalidMarkerException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias KMSInternalException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias KMSInvalidSignatureException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias KMSInvalidStateException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias KeyIdType = String
+
+    alias KeyList = Array(KeyListEntry)
+
+    alias KeyListEntry = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "KeyArn" : (ArnType)?
+    )
+
+    alias KeyManagerType = String
+
+    alias KeyMetadata = NamedTuple(
+      "AWSAccountId" : (AWSAccountIdType)?,
+      "KeyId" : KeyIdType,
+      "Arn" : (ArnType)?,
+      "CreationDate" : (DateType)?,
+      "Enabled" : (BooleanType)?,
+      "Description" : (DescriptionType)?,
+      "KeyUsage" : (KeyUsageType)?,
+      "KeyState" : (KeyState)?,
+      "DeletionDate" : (DateType)?,
+      "ValidTo" : (DateType)?,
+      "Origin" : (OriginType)?,
+      "CustomKeyStoreId" : (CustomKeyStoreIdType)?,
+      "CloudHsmClusterId" : (CloudHsmClusterIdType)?,
+      "ExpirationModel" : (ExpirationModelType)?,
+      "KeyManager" : (KeyManagerType)?,
+      "CustomerMasterKeySpec" : (CustomerMasterKeySpec)?,
+      "EncryptionAlgorithms" : (EncryptionAlgorithmSpecList)?,
+      "SigningAlgorithms" : (SigningAlgorithmSpecList)?
+    )
+
+    alias KeyState = String
+
+    alias KeyStorePasswordType = String
+
+    alias KeyUnavailableException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias KeyUsageType = String
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias LimitType = Int32
+
+    alias ListAliasesRequest = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias ListAliasesResponse = NamedTuple(
+      "Aliases" : (AliasList)?,
+      "NextMarker" : (MarkerType)?,
+      "Truncated" : (BooleanType)?
+    )
+
+    alias ListGrantsRequest = NamedTuple(
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?,
+      "KeyId" : KeyIdType
+    )
+
+    alias ListGrantsResponse = NamedTuple(
+      "Grants" : (GrantList)?,
+      "NextMarker" : (MarkerType)?,
+      "Truncated" : (BooleanType)?
+    )
+
+    alias ListKeyPoliciesRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias ListKeyPoliciesResponse = NamedTuple(
+      "PolicyNames" : (PolicyNameList)?,
+      "NextMarker" : (MarkerType)?,
+      "Truncated" : (BooleanType)?
+    )
+
+    alias ListKeysRequest = NamedTuple(
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias ListKeysResponse = NamedTuple(
+      "Keys" : (KeyList)?,
+      "NextMarker" : (MarkerType)?,
+      "Truncated" : (BooleanType)?
+    )
+
+    alias ListResourceTagsRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias ListResourceTagsResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextMarker" : (MarkerType)?,
+      "Truncated" : (BooleanType)?
+    )
+
+    alias ListRetirableGrantsRequest = NamedTuple(
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?,
+      "RetiringPrincipal" : PrincipalIdType
+    )
+
+    alias MalformedPolicyDocumentException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias MarkerType = String
+
+    alias MessageType = String
+
+    alias NotFoundException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias NumberOfBytesType = Int32
+
+    alias OriginType = String
+
+    alias PendingWindowInDaysType = Int32
+
+    alias PlaintextType = String | Array(UInt8) | IO
+
+    alias PolicyNameList = Array(PolicyNameType)
+
+    alias PolicyNameType = String
+
+    alias PolicyType = String
+
+    alias PrincipalIdType = String
+
+    alias PublicKeyType = String | Array(UInt8) | IO
+
+    alias PutKeyPolicyRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "PolicyName" : PolicyNameType,
+      "Policy" : PolicyType,
+      "BypassPolicyLockoutSafetyCheck" : (BooleanType)?
+    )
+
+    alias ReEncryptRequest = NamedTuple(
+      "CiphertextBlob" : CiphertextType,
+      "SourceEncryptionContext" : (EncryptionContextType)?,
+      "SourceKeyId" : (KeyIdType)?,
+      "DestinationKeyId" : KeyIdType,
+      "DestinationEncryptionContext" : (EncryptionContextType)?,
+      "SourceEncryptionAlgorithm" : (EncryptionAlgorithmSpec)?,
+      "DestinationEncryptionAlgorithm" : (EncryptionAlgorithmSpec)?,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias ReEncryptResponse = NamedTuple(
+      "CiphertextBlob" : (CiphertextType)?,
+      "SourceKeyId" : (KeyIdType)?,
+      "KeyId" : (KeyIdType)?,
+      "SourceEncryptionAlgorithm" : (EncryptionAlgorithmSpec)?,
+      "DestinationEncryptionAlgorithm" : (EncryptionAlgorithmSpec)?
+    )
+
+    alias RetireGrantRequest = NamedTuple(
+      "GrantToken" : (GrantTokenType)?,
+      "KeyId" : (KeyIdType)?,
+      "GrantId" : (GrantIdType)?
+    )
+
+    alias RevokeGrantRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "GrantId" : GrantIdType
+    )
+
+    alias ScheduleKeyDeletionRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "PendingWindowInDays" : (PendingWindowInDaysType)?
+    )
+
+    alias ScheduleKeyDeletionResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "DeletionDate" : (DateType)?
+    )
+
+    alias SignRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Message" : PlaintextType,
+      "MessageType" : (MessageType)?,
+      "GrantTokens" : (GrantTokenList)?,
+      "SigningAlgorithm" : SigningAlgorithmSpec
+    )
+
+    alias SignResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "Signature" : (CiphertextType)?,
+      "SigningAlgorithm" : (SigningAlgorithmSpec)?
+    )
+
+    alias SigningAlgorithmSpec = String
+
+    alias SigningAlgorithmSpecList = Array(SigningAlgorithmSpec)
+
+    alias Tag = NamedTuple(
+      "TagKey" : TagKeyType,
+      "TagValue" : TagValueType
+    )
+
+    alias TagException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias TagKeyList = Array(TagKeyType)
+
+    alias TagKeyType = String
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Tags" : TagList
+    )
+
+    alias TagValueType = String
+
+    alias TrustAnchorCertificateType = String
+
+    alias UnsupportedOperationException = NamedTuple(
+      "message" : (ErrorMessageType)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UpdateAliasRequest = NamedTuple(
+      "AliasName" : AliasNameType,
+      "TargetKeyId" : KeyIdType
+    )
+
+    alias UpdateCustomKeyStoreRequest = NamedTuple(
+      "CustomKeyStoreId" : CustomKeyStoreIdType,
+      "NewCustomKeyStoreName" : (CustomKeyStoreNameType)?,
+      "KeyStorePassword" : (KeyStorePasswordType)?,
+      "CloudHsmClusterId" : (CloudHsmClusterIdType)?
+    )
+
+    alias UpdateCustomKeyStoreResponse = NamedTuple(
+      
+    )
+
+    alias UpdateKeyDescriptionRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Description" : DescriptionType
+    )
+
+    alias VerifyRequest = NamedTuple(
+      "KeyId" : KeyIdType,
+      "Message" : PlaintextType,
+      "MessageType" : (MessageType)?,
+      "Signature" : CiphertextType,
+      "SigningAlgorithm" : SigningAlgorithmSpec,
+      "GrantTokens" : (GrantTokenList)?
+    )
+
+    alias VerifyResponse = NamedTuple(
+      "KeyId" : (KeyIdType)?,
+      "SignatureValid" : (BooleanType)?,
+      "SigningAlgorithm" : (SigningAlgorithmSpec)?
+    )
+
+    alias WrappingKeySpec = String
   end
 end

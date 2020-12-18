@@ -356,8 +356,8 @@ module Aws::WorkDocs
     #
     # @overload abort_document_version_upload(**params)
     # @param [Hash] params ({})
-    def abort_document_version_upload(params = {}, **options)
-      req = build_request(:abort_document_version_upload, params)
+    def abort_document_version_upload(, **options)
+      req = build_request(:abort_document_version_upload, )
       req.send_request(options)
     end
 
@@ -406,8 +406,8 @@ module Aws::WorkDocs
     #
     # @overload activate_user(**params)
     # @param [Hash] params ({})
-    def activate_user(params = {}, **options)
-      req = build_request(:activate_user, params)
+    def activate_user(, **options)
+      req = build_request(:activate_user, )
       req.send_request(options)
     end
 
@@ -464,8 +464,8 @@ module Aws::WorkDocs
     #
     # @overload add_resource_permissions(**params)
     # @param [Hash] params ({})
-    def add_resource_permissions(params = {}, **options)
-      req = build_request(:add_resource_permissions, params)
+    def add_resource_permissions(, **options)
+      req = build_request(:add_resource_permissions, )
       req.send_request(options)
     end
 
@@ -549,8 +549,8 @@ module Aws::WorkDocs
     #
     # @overload create_comment(**params)
     # @param [Hash] params ({})
-    def create_comment(params = {}, **options)
-      req = build_request(:create_comment, params)
+    def create_comment(, **options)
+      req = build_request(:create_comment, )
       req.send_request(options)
     end
 
@@ -588,8 +588,8 @@ module Aws::WorkDocs
     #
     # @overload create_custom_metadata(**params)
     # @param [Hash] params ({})
-    def create_custom_metadata(params = {}, **options)
-      req = build_request(:create_custom_metadata, params)
+    def create_custom_metadata(, **options)
+      req = build_request(:create_custom_metadata, )
       req.send_request(options)
     end
 
@@ -636,8 +636,8 @@ module Aws::WorkDocs
     #
     # @overload create_folder(**params)
     # @param [Hash] params ({})
-    def create_folder(params = {}, **options)
-      req = build_request(:create_folder, params)
+    def create_folder(, **options)
+      req = build_request(:create_folder, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::WorkDocs
     #
     # @overload create_labels(**params)
     # @param [Hash] params ({})
-    def create_labels(params = {}, **options)
-      req = build_request(:create_labels, params)
+    def create_labels(, **options)
+      req = build_request(:create_labels, )
       req.send_request(options)
     end
 
@@ -721,8 +721,8 @@ module Aws::WorkDocs
     #
     # @overload create_notification_subscription(**params)
     # @param [Hash] params ({})
-    def create_notification_subscription(params = {}, **options)
-      req = build_request(:create_notification_subscription, params)
+    def create_notification_subscription(, **options)
+      req = build_request(:create_notification_subscription, )
       req.send_request(options)
     end
 
@@ -803,8 +803,8 @@ module Aws::WorkDocs
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -831,8 +831,8 @@ module Aws::WorkDocs
     #
     # @overload deactivate_user(**params)
     # @param [Hash] params ({})
-    def deactivate_user(params = {}, **options)
-      req = build_request(:deactivate_user, params)
+    def deactivate_user(, **options)
+      req = build_request(:deactivate_user, )
       req.send_request(options)
     end
 
@@ -866,8 +866,8 @@ module Aws::WorkDocs
     #
     # @overload delete_comment(**params)
     # @param [Hash] params ({})
-    def delete_comment(params = {}, **options)
-      req = build_request(:delete_comment, params)
+    def delete_comment(, **options)
+      req = build_request(:delete_comment, )
       req.send_request(options)
     end
 
@@ -907,8 +907,8 @@ module Aws::WorkDocs
     #
     # @overload delete_custom_metadata(**params)
     # @param [Hash] params ({})
-    def delete_custom_metadata(params = {}, **options)
-      req = build_request(:delete_custom_metadata, params)
+    def delete_custom_metadata(, **options)
+      req = build_request(:delete_custom_metadata, )
       req.send_request(options)
     end
 
@@ -935,8 +935,8 @@ module Aws::WorkDocs
     #
     # @overload delete_document(**params)
     # @param [Hash] params ({})
-    def delete_document(params = {}, **options)
-      req = build_request(:delete_document, params)
+    def delete_document(, **options)
+      req = build_request(:delete_document, )
       req.send_request(options)
     end
 
@@ -962,8 +962,8 @@ module Aws::WorkDocs
     #
     # @overload delete_folder(**params)
     # @param [Hash] params ({})
-    def delete_folder(params = {}, **options)
-      req = build_request(:delete_folder, params)
+    def delete_folder(, **options)
+      req = build_request(:delete_folder, )
       req.send_request(options)
     end
 
@@ -989,8 +989,8 @@ module Aws::WorkDocs
     #
     # @overload delete_folder_contents(**params)
     # @param [Hash] params ({})
-    def delete_folder_contents(params = {}, **options)
-      req = build_request(:delete_folder_contents, params)
+    def delete_folder_contents(, **options)
+      req = build_request(:delete_folder_contents, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::WorkDocs
     #
     # @overload delete_labels(**params)
     # @param [Hash] params ({})
-    def delete_labels(params = {}, **options)
-      req = build_request(:delete_labels, params)
+    def delete_labels(, **options)
+      req = build_request(:delete_labels, )
       req.send_request(options)
     end
 
@@ -1050,8 +1050,8 @@ module Aws::WorkDocs
     #
     # @overload delete_notification_subscription(**params)
     # @param [Hash] params ({})
-    def delete_notification_subscription(params = {}, **options)
-      req = build_request(:delete_notification_subscription, params)
+    def delete_notification_subscription(, **options)
+      req = build_request(:delete_notification_subscription, )
       req.send_request(options)
     end
 
@@ -1078,8 +1078,8 @@ module Aws::WorkDocs
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -1217,8 +1217,8 @@ module Aws::WorkDocs
     #
     # @overload describe_activities(**params)
     # @param [Hash] params ({})
-    def describe_activities(params = {}, **options)
-      req = build_request(:describe_activities, params)
+    def describe_activities(, **options)
+      req = build_request(:describe_activities, )
       req.send_request(options)
     end
 
@@ -1290,8 +1290,8 @@ module Aws::WorkDocs
     #
     # @overload describe_comments(**params)
     # @param [Hash] params ({})
-    def describe_comments(params = {}, **options)
-      req = build_request(:describe_comments, params)
+    def describe_comments(, **options)
+      req = build_request(:describe_comments, )
       req.send_request(options)
     end
 
@@ -1363,8 +1363,8 @@ module Aws::WorkDocs
     #
     # @overload describe_document_versions(**params)
     # @param [Hash] params ({})
-    def describe_document_versions(params = {}, **options)
-      req = build_request(:describe_document_versions, params)
+    def describe_document_versions(, **options)
+      req = build_request(:describe_document_versions, )
       req.send_request(options)
     end
 
@@ -1469,8 +1469,8 @@ module Aws::WorkDocs
     #
     # @overload describe_folder_contents(**params)
     # @param [Hash] params ({})
-    def describe_folder_contents(params = {}, **options)
-      req = build_request(:describe_folder_contents, params)
+    def describe_folder_contents(, **options)
+      req = build_request(:describe_folder_contents, )
       req.send_request(options)
     end
 
@@ -1520,8 +1520,8 @@ module Aws::WorkDocs
     #
     # @overload describe_groups(**params)
     # @param [Hash] params ({})
-    def describe_groups(params = {}, **options)
-      req = build_request(:describe_groups, params)
+    def describe_groups(, **options)
+      req = build_request(:describe_groups, )
       req.send_request(options)
     end
 
@@ -1562,8 +1562,8 @@ module Aws::WorkDocs
     #
     # @overload describe_notification_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_notification_subscriptions(params = {}, **options)
-      req = build_request(:describe_notification_subscriptions, params)
+    def describe_notification_subscriptions(, **options)
+      req = build_request(:describe_notification_subscriptions, )
       req.send_request(options)
     end
 
@@ -1615,8 +1615,8 @@ module Aws::WorkDocs
     #
     # @overload describe_resource_permissions(**params)
     # @param [Hash] params ({})
-    def describe_resource_permissions(params = {}, **options)
-      req = build_request(:describe_resource_permissions, params)
+    def describe_resource_permissions(, **options)
+      req = build_request(:describe_resource_permissions, )
       req.send_request(options)
     end
 
@@ -1678,8 +1678,8 @@ module Aws::WorkDocs
     #
     # @overload describe_root_folders(**params)
     # @param [Hash] params ({})
-    def describe_root_folders(params = {}, **options)
-      req = build_request(:describe_root_folders, params)
+    def describe_root_folders(, **options)
+      req = build_request(:describe_root_folders, )
       req.send_request(options)
     end
 
@@ -1773,8 +1773,8 @@ module Aws::WorkDocs
     #
     # @overload describe_users(**params)
     # @param [Hash] params ({})
-    def describe_users(params = {}, **options)
-      req = build_request(:describe_users, params)
+    def describe_users(, **options)
+      req = build_request(:describe_users, )
       req.send_request(options)
     end
 
@@ -1828,8 +1828,8 @@ module Aws::WorkDocs
     #
     # @overload get_current_user(**params)
     # @param [Hash] params ({})
-    def get_current_user(params = {}, **options)
-      req = build_request(:get_current_user, params)
+    def get_current_user(, **options)
+      req = build_request(:get_current_user, )
       req.send_request(options)
     end
 
@@ -1890,8 +1890,8 @@ module Aws::WorkDocs
     #
     # @overload get_document(**params)
     # @param [Hash] params ({})
-    def get_document(params = {}, **options)
-      req = build_request(:get_document, params)
+    def get_document(, **options)
+      req = build_request(:get_document, )
       req.send_request(options)
     end
 
@@ -1944,8 +1944,8 @@ module Aws::WorkDocs
     #
     # @overload get_document_path(**params)
     # @param [Hash] params ({})
-    def get_document_path(params = {}, **options)
-      req = build_request(:get_document_path, params)
+    def get_document_path(, **options)
+      req = build_request(:get_document_path, )
       req.send_request(options)
     end
 
@@ -2007,8 +2007,8 @@ module Aws::WorkDocs
     #
     # @overload get_document_version(**params)
     # @param [Hash] params ({})
-    def get_document_version(params = {}, **options)
-      req = build_request(:get_document_version, params)
+    def get_document_version(, **options)
+      req = build_request(:get_document_version, )
       req.send_request(options)
     end
 
@@ -2058,8 +2058,8 @@ module Aws::WorkDocs
     #
     # @overload get_folder(**params)
     # @param [Hash] params ({})
-    def get_folder(params = {}, **options)
-      req = build_request(:get_folder, params)
+    def get_folder(, **options)
+      req = build_request(:get_folder, )
       req.send_request(options)
     end
 
@@ -2112,8 +2112,8 @@ module Aws::WorkDocs
     #
     # @overload get_folder_path(**params)
     # @param [Hash] params ({})
-    def get_folder_path(params = {}, **options)
-      req = build_request(:get_folder_path, params)
+    def get_folder_path(, **options)
+      req = build_request(:get_folder_path, )
       req.send_request(options)
     end
 
@@ -2199,8 +2199,8 @@ module Aws::WorkDocs
     #
     # @overload get_resources(**params)
     # @param [Hash] params ({})
-    def get_resources(params = {}, **options)
-      req = build_request(:get_resources, params)
+    def get_resources(, **options)
+      req = build_request(:get_resources, )
       req.send_request(options)
     end
 
@@ -2290,8 +2290,8 @@ module Aws::WorkDocs
     #
     # @overload initiate_document_version_upload(**params)
     # @param [Hash] params ({})
-    def initiate_document_version_upload(params = {}, **options)
-      req = build_request(:initiate_document_version_upload, params)
+    def initiate_document_version_upload(, **options)
+      req = build_request(:initiate_document_version_upload, )
       req.send_request(options)
     end
 
@@ -2317,8 +2317,8 @@ module Aws::WorkDocs
     #
     # @overload remove_all_resource_permissions(**params)
     # @param [Hash] params ({})
-    def remove_all_resource_permissions(params = {}, **options)
-      req = build_request(:remove_all_resource_permissions, params)
+    def remove_all_resource_permissions(, **options)
+      req = build_request(:remove_all_resource_permissions, )
       req.send_request(options)
     end
 
@@ -2353,8 +2353,8 @@ module Aws::WorkDocs
     #
     # @overload remove_resource_permission(**params)
     # @param [Hash] params ({})
-    def remove_resource_permission(params = {}, **options)
-      req = build_request(:remove_resource_permission, params)
+    def remove_resource_permission(, **options)
+      req = build_request(:remove_resource_permission, )
       req.send_request(options)
     end
 
@@ -2394,8 +2394,8 @@ module Aws::WorkDocs
     #
     # @overload update_document(**params)
     # @param [Hash] params ({})
-    def update_document(params = {}, **options)
-      req = build_request(:update_document, params)
+    def update_document(, **options)
+      req = build_request(:update_document, )
       req.send_request(options)
     end
 
@@ -2434,8 +2434,8 @@ module Aws::WorkDocs
     #
     # @overload update_document_version(**params)
     # @param [Hash] params ({})
-    def update_document_version(params = {}, **options)
-      req = build_request(:update_document_version, params)
+    def update_document_version(, **options)
+      req = build_request(:update_document_version, )
       req.send_request(options)
     end
 
@@ -2476,8 +2476,8 @@ module Aws::WorkDocs
     #
     # @overload update_folder(**params)
     # @param [Hash] params ({})
-    def update_folder(params = {}, **options)
-      req = build_request(:update_folder, params)
+    def update_folder(, **options)
+      req = build_request(:update_folder, )
       req.send_request(options)
     end
 
@@ -2558,8 +2558,8 @@ module Aws::WorkDocs
     #
     # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, **options)
-      req = build_request(:update_user, params)
+    def update_user(, **options)
+      req = build_request(:update_user, )
       req.send_request(options)
     end
 

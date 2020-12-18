@@ -371,8 +371,8 @@ module Aws::IdentityStore
     #
     # @overload describe_group(**params)
     # @param [Hash] params ({})
-    def describe_group(params = {}, **options)
-      req = build_request(:describe_group, params)
+    def describe_group(, **options)
+      req = build_request(:describe_group, )
       req.send_request(options)
     end
 
@@ -410,8 +410,8 @@ module Aws::IdentityStore
     #
     # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, **options)
-      req = build_request(:describe_user, params)
+    def describe_user(, **options)
+      req = build_request(:describe_user, )
       req.send_request(options)
     end
 
@@ -476,8 +476,8 @@ module Aws::IdentityStore
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -541,8 +541,8 @@ module Aws::IdentityStore
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 

@@ -368,8 +368,8 @@ module Aws::CloudWatch
     #
     # @overload delete_alarms(**params)
     # @param [Hash] params ({})
-    def delete_alarms(params = {}, **options)
-      req = build_request(:delete_alarms, params)
+    def delete_alarms(, **options)
+      req = build_request(:delete_alarms, )
       req.send_request(options)
     end
 
@@ -408,8 +408,8 @@ module Aws::CloudWatch
     #
     # @overload delete_anomaly_detector(**params)
     # @param [Hash] params ({})
-    def delete_anomaly_detector(params = {}, **options)
-      req = build_request(:delete_anomaly_detector, params)
+    def delete_anomaly_detector(, **options)
+      req = build_request(:delete_anomaly_detector, )
       req.send_request(options)
     end
 
@@ -432,8 +432,8 @@ module Aws::CloudWatch
     #
     # @overload delete_dashboards(**params)
     # @param [Hash] params ({})
-    def delete_dashboards(params = {}, **options)
-      req = build_request(:delete_dashboards, params)
+    def delete_dashboards(, **options)
+      req = build_request(:delete_dashboards, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::CloudWatch
     #
     # @overload delete_insight_rules(**params)
     # @param [Hash] params ({})
-    def delete_insight_rules(params = {}, **options)
-      req = build_request(:delete_insight_rules, params)
+    def delete_insight_rules(, **options)
+      req = build_request(:delete_insight_rules, )
       req.send_request(options)
     end
 
@@ -551,8 +551,8 @@ module Aws::CloudWatch
     #
     # @overload describe_alarm_history(**params)
     # @param [Hash] params ({})
-    def describe_alarm_history(params = {}, **options)
-      req = build_request(:describe_alarm_history, params)
+    def describe_alarm_history(, **options)
+      req = build_request(:describe_alarm_history, )
       req.send_request(options)
     end
 
@@ -731,8 +731,8 @@ module Aws::CloudWatch
     #
     # @overload describe_alarms(**params)
     # @param [Hash] params ({})
-    def describe_alarms(params = {}, **options)
-      req = build_request(:describe_alarms, params)
+    def describe_alarms(, **options)
+      req = build_request(:describe_alarms, )
       req.send_request(options)
     end
 
@@ -843,8 +843,8 @@ module Aws::CloudWatch
     #
     # @overload describe_alarms_for_metric(**params)
     # @param [Hash] params ({})
-    def describe_alarms_for_metric(params = {}, **options)
-      req = build_request(:describe_alarms_for_metric, params)
+    def describe_alarms_for_metric(, **options)
+      req = build_request(:describe_alarms_for_metric, )
       req.send_request(options)
     end
 
@@ -920,8 +920,8 @@ module Aws::CloudWatch
     #
     # @overload describe_anomaly_detectors(**params)
     # @param [Hash] params ({})
-    def describe_anomaly_detectors(params = {}, **options)
-      req = build_request(:describe_anomaly_detectors, params)
+    def describe_anomaly_detectors(, **options)
+      req = build_request(:describe_anomaly_detectors, )
       req.send_request(options)
     end
 
@@ -969,8 +969,8 @@ module Aws::CloudWatch
     #
     # @overload describe_insight_rules(**params)
     # @param [Hash] params ({})
-    def describe_insight_rules(params = {}, **options)
-      req = build_request(:describe_insight_rules, params)
+    def describe_insight_rules(, **options)
+      req = build_request(:describe_insight_rules, )
       req.send_request(options)
     end
 
@@ -993,8 +993,8 @@ module Aws::CloudWatch
     #
     # @overload disable_alarm_actions(**params)
     # @param [Hash] params ({})
-    def disable_alarm_actions(params = {}, **options)
-      req = build_request(:disable_alarm_actions, params)
+    def disable_alarm_actions(, **options)
+      req = build_request(:disable_alarm_actions, )
       req.send_request(options)
     end
 
@@ -1031,8 +1031,8 @@ module Aws::CloudWatch
     #
     # @overload disable_insight_rules(**params)
     # @param [Hash] params ({})
-    def disable_insight_rules(params = {}, **options)
-      req = build_request(:disable_insight_rules, params)
+    def disable_insight_rules(, **options)
+      req = build_request(:disable_insight_rules, )
       req.send_request(options)
     end
 
@@ -1053,8 +1053,8 @@ module Aws::CloudWatch
     #
     # @overload enable_alarm_actions(**params)
     # @param [Hash] params ({})
-    def enable_alarm_actions(params = {}, **options)
-      req = build_request(:enable_alarm_actions, params)
+    def enable_alarm_actions(, **options)
+      req = build_request(:enable_alarm_actions, )
       req.send_request(options)
     end
 
@@ -1091,8 +1091,8 @@ module Aws::CloudWatch
     #
     # @overload enable_insight_rules(**params)
     # @param [Hash] params ({})
-    def enable_insight_rules(params = {}, **options)
-      req = build_request(:enable_insight_rules, params)
+    def enable_insight_rules(, **options)
+      req = build_request(:enable_insight_rules, )
       req.send_request(options)
     end
 
@@ -1127,8 +1127,8 @@ module Aws::CloudWatch
     #
     # @overload get_dashboard(**params)
     # @param [Hash] params ({})
-    def get_dashboard(params = {}, **options)
-      req = build_request(:get_dashboard, params)
+    def get_dashboard(, **options)
+      req = build_request(:get_dashboard, )
       req.send_request(options)
     end
 
@@ -1271,8 +1271,8 @@ module Aws::CloudWatch
     #
     # @overload get_insight_rule_report(**params)
     # @param [Hash] params ({})
-    def get_insight_rule_report(params = {}, **options)
-      req = build_request(:get_insight_rule_report, params)
+    def get_insight_rule_report(, **options)
+      req = build_request(:get_insight_rule_report, )
       req.send_request(options)
     end
 
@@ -1459,8 +1459,8 @@ module Aws::CloudWatch
     #
     # @overload get_metric_data(**params)
     # @param [Hash] params ({})
-    def get_metric_data(params = {}, **options)
-      req = build_request(:get_metric_data, params)
+    def get_metric_data(, **options)
+      req = build_request(:get_metric_data, )
       req.send_request(options)
     end
 
@@ -1673,8 +1673,8 @@ module Aws::CloudWatch
     #
     # @overload get_metric_statistics(**params)
     # @param [Hash] params ({})
-    def get_metric_statistics(params = {}, **options)
-      req = build_request(:get_metric_statistics, params)
+    def get_metric_statistics(, **options)
+      req = build_request(:get_metric_statistics, )
       req.send_request(options)
     end
 
@@ -1765,8 +1765,8 @@ module Aws::CloudWatch
     #
     # @overload get_metric_widget_image(**params)
     # @param [Hash] params ({})
-    def get_metric_widget_image(params = {}, **options)
-      req = build_request(:get_metric_widget_image, params)
+    def get_metric_widget_image(, **options)
+      req = build_request(:get_metric_widget_image, )
       req.send_request(options)
     end
 
@@ -1816,8 +1816,8 @@ module Aws::CloudWatch
     #
     # @overload list_dashboards(**params)
     # @param [Hash] params ({})
-    def list_dashboards(params = {}, **options)
-      req = build_request(:list_dashboards, params)
+    def list_dashboards(, **options)
+      req = build_request(:list_dashboards, )
       req.send_request(options)
     end
 
@@ -1903,8 +1903,8 @@ module Aws::CloudWatch
     #
     # @overload list_metrics(**params)
     # @param [Hash] params ({})
-    def list_metrics(params = {}, **options)
-      req = build_request(:list_metrics, params)
+    def list_metrics(, **options)
+      req = build_request(:list_metrics, )
       req.send_request(options)
     end
 
@@ -1947,8 +1947,8 @@ module Aws::CloudWatch
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2011,8 +2011,8 @@ module Aws::CloudWatch
     #
     # @overload put_anomaly_detector(**params)
     # @param [Hash] params ({})
-    def put_anomaly_detector(params = {}, **options)
-      req = build_request(:put_anomaly_detector, params)
+    def put_anomaly_detector(, **options)
+      req = build_request(:put_anomaly_detector, )
       req.send_request(options)
     end
 
@@ -2188,8 +2188,8 @@ module Aws::CloudWatch
     #
     # @overload put_composite_alarm(**params)
     # @param [Hash] params ({})
-    def put_composite_alarm(params = {}, **options)
-      req = build_request(:put_composite_alarm, params)
+    def put_composite_alarm(, **options)
+      req = build_request(:put_composite_alarm, )
       req.send_request(options)
     end
 
@@ -2254,8 +2254,8 @@ module Aws::CloudWatch
     #
     # @overload put_dashboard(**params)
     # @param [Hash] params ({})
-    def put_dashboard(params = {}, **options)
-      req = build_request(:put_dashboard, params)
+    def put_dashboard(, **options)
+      req = build_request(:put_dashboard, )
       req.send_request(options)
     end
 
@@ -2326,8 +2326,8 @@ module Aws::CloudWatch
     #
     # @overload put_insight_rule(**params)
     # @param [Hash] params ({})
-    def put_insight_rule(params = {}, **options)
-      req = build_request(:put_insight_rule, params)
+    def put_insight_rule(, **options)
+      req = build_request(:put_insight_rule, )
       req.send_request(options)
     end
 
@@ -2692,8 +2692,8 @@ module Aws::CloudWatch
     #
     # @overload put_metric_alarm(**params)
     # @param [Hash] params ({})
-    def put_metric_alarm(params = {}, **options)
-      req = build_request(:put_metric_alarm, params)
+    def put_metric_alarm(, **options)
+      req = build_request(:put_metric_alarm, )
       req.send_request(options)
     end
 
@@ -2799,8 +2799,8 @@ module Aws::CloudWatch
     #
     # @overload put_metric_data(**params)
     # @param [Hash] params ({})
-    def put_metric_data(params = {}, **options)
-      req = build_request(:put_metric_data, params)
+    def put_metric_data(, **options)
+      req = build_request(:put_metric_data, )
       req.send_request(options)
     end
 
@@ -2863,8 +2863,8 @@ module Aws::CloudWatch
     #
     # @overload set_alarm_state(**params)
     # @param [Hash] params ({})
-    def set_alarm_state(params = {}, **options)
-      req = build_request(:set_alarm_state, params)
+    def set_alarm_state(, **options)
+      req = build_request(:set_alarm_state, )
       req.send_request(options)
     end
 
@@ -2924,8 +2924,8 @@ module Aws::CloudWatch
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2963,8 +2963,8 @@ module Aws::CloudWatch
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

@@ -10686,5 +10686,2044 @@ module Aws::CognitoIdentityProvider
     #
     class VerifyUserAttributeResponse < Aws::EmptyStructure; end
 
+    alias AWSAccountIdType = String
+
+    alias AccessTokenValidityType = Int32
+
+    alias AccountRecoverySettingType = NamedTuple(
+      "RecoveryMechanisms" : (RecoveryMechanismsType)?
+    )
+
+    alias AccountTakeoverActionNotifyType = Bool
+
+    alias AccountTakeoverActionType = NamedTuple(
+      "Notify" : AccountTakeoverActionNotifyType,
+      "EventAction" : AccountTakeoverEventActionType
+    )
+
+    alias AccountTakeoverActionsType = NamedTuple(
+      "LowAction" : (AccountTakeoverActionType)?,
+      "MediumAction" : (AccountTakeoverActionType)?,
+      "HighAction" : (AccountTakeoverActionType)?
+    )
+
+    alias AccountTakeoverEventActionType = String
+
+    alias AccountTakeoverRiskConfigurationType = NamedTuple(
+      "NotifyConfiguration" : (NotifyConfigurationType)?,
+      "Actions" : AccountTakeoverActionsType
+    )
+
+    alias AddCustomAttributesRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "CustomAttributes" : CustomAttributesListType
+    )
+
+    alias AddCustomAttributesResponse = NamedTuple(
+      
+    )
+
+    alias AdminAddUserToGroupRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "GroupName" : GroupNameType
+    )
+
+    alias AdminConfirmSignUpRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias AdminConfirmSignUpResponse = NamedTuple(
+      
+    )
+
+    alias AdminCreateUserConfigType = NamedTuple(
+      "AllowAdminCreateUserOnly" : (BooleanType)?,
+      "UnusedAccountValidityDays" : (AdminCreateUserUnusedAccountValidityDaysType)?,
+      "InviteMessageTemplate" : (MessageTemplateType)?
+    )
+
+    alias AdminCreateUserRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "UserAttributes" : (AttributeListType)?,
+      "ValidationData" : (AttributeListType)?,
+      "TemporaryPassword" : (PasswordType)?,
+      "ForceAliasCreation" : (ForceAliasCreation)?,
+      "MessageAction" : (MessageActionType)?,
+      "DesiredDeliveryMediums" : (DeliveryMediumListType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias AdminCreateUserResponse = NamedTuple(
+      "User" : (UserType)?
+    )
+
+    alias AdminCreateUserUnusedAccountValidityDaysType = Int32
+
+    alias AdminDeleteUserAttributesRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "UserAttributeNames" : AttributeNameListType
+    )
+
+    alias AdminDeleteUserAttributesResponse = NamedTuple(
+      
+    )
+
+    alias AdminDeleteUserRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType
+    )
+
+    alias AdminDisableProviderForUserRequest = NamedTuple(
+      "UserPoolId" : StringType,
+      "User" : ProviderUserIdentifierType
+    )
+
+    alias AdminDisableProviderForUserResponse = NamedTuple(
+      
+    )
+
+    alias AdminDisableUserRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType
+    )
+
+    alias AdminDisableUserResponse = NamedTuple(
+      
+    )
+
+    alias AdminEnableUserRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType
+    )
+
+    alias AdminEnableUserResponse = NamedTuple(
+      
+    )
+
+    alias AdminForgetDeviceRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "DeviceKey" : DeviceKeyType
+    )
+
+    alias AdminGetDeviceRequest = NamedTuple(
+      "DeviceKey" : DeviceKeyType,
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType
+    )
+
+    alias AdminGetDeviceResponse = NamedTuple(
+      "Device" : DeviceType
+    )
+
+    alias AdminGetUserRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType
+    )
+
+    alias AdminGetUserResponse = NamedTuple(
+      "Username" : UsernameType,
+      "UserAttributes" : (AttributeListType)?,
+      "UserCreateDate" : (DateType)?,
+      "UserLastModifiedDate" : (DateType)?,
+      "Enabled" : (BooleanType)?,
+      "UserStatus" : (UserStatusType)?,
+      "MFAOptions" : (MFAOptionListType)?,
+      "PreferredMfaSetting" : (StringType)?,
+      "UserMFASettingList" : (UserMFASettingListType)?
+    )
+
+    alias AdminInitiateAuthRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : ClientIdType,
+      "AuthFlow" : AuthFlowType,
+      "AuthParameters" : (AuthParametersType)?,
+      "ClientMetadata" : (ClientMetadataType)?,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "ContextData" : (ContextDataType)?
+    )
+
+    alias AdminInitiateAuthResponse = NamedTuple(
+      "ChallengeName" : (ChallengeNameType)?,
+      "Session" : (SessionType)?,
+      "ChallengeParameters" : (ChallengeParametersType)?,
+      "AuthenticationResult" : (AuthenticationResultType)?
+    )
+
+    alias AdminLinkProviderForUserRequest = NamedTuple(
+      "UserPoolId" : StringType,
+      "DestinationUser" : ProviderUserIdentifierType,
+      "SourceUser" : ProviderUserIdentifierType
+    )
+
+    alias AdminLinkProviderForUserResponse = NamedTuple(
+      
+    )
+
+    alias AdminListDevicesRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "Limit" : (QueryLimitType)?,
+      "PaginationToken" : (SearchPaginationTokenType)?
+    )
+
+    alias AdminListDevicesResponse = NamedTuple(
+      "Devices" : (DeviceListType)?,
+      "PaginationToken" : (SearchPaginationTokenType)?
+    )
+
+    alias AdminListGroupsForUserRequest = NamedTuple(
+      "Username" : UsernameType,
+      "UserPoolId" : UserPoolIdType,
+      "Limit" : (QueryLimitType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias AdminListGroupsForUserResponse = NamedTuple(
+      "Groups" : (GroupListType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias AdminListUserAuthEventsRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "MaxResults" : (QueryLimitType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias AdminListUserAuthEventsResponse = NamedTuple(
+      "AuthEvents" : (AuthEventsType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias AdminRemoveUserFromGroupRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "GroupName" : GroupNameType
+    )
+
+    alias AdminResetUserPasswordRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias AdminResetUserPasswordResponse = NamedTuple(
+      
+    )
+
+    alias AdminRespondToAuthChallengeRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : ClientIdType,
+      "ChallengeName" : ChallengeNameType,
+      "ChallengeResponses" : (ChallengeResponsesType)?,
+      "Session" : (SessionType)?,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "ContextData" : (ContextDataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias AdminRespondToAuthChallengeResponse = NamedTuple(
+      "ChallengeName" : (ChallengeNameType)?,
+      "Session" : (SessionType)?,
+      "ChallengeParameters" : (ChallengeParametersType)?,
+      "AuthenticationResult" : (AuthenticationResultType)?
+    )
+
+    alias AdminSetUserMFAPreferenceRequest = NamedTuple(
+      "SMSMfaSettings" : (SMSMfaSettingsType)?,
+      "SoftwareTokenMfaSettings" : (SoftwareTokenMfaSettingsType)?,
+      "Username" : UsernameType,
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias AdminSetUserMFAPreferenceResponse = NamedTuple(
+      
+    )
+
+    alias AdminSetUserPasswordRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "Password" : PasswordType,
+      "Permanent" : (BooleanType)?
+    )
+
+    alias AdminSetUserPasswordResponse = NamedTuple(
+      
+    )
+
+    alias AdminSetUserSettingsRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "MFAOptions" : MFAOptionListType
+    )
+
+    alias AdminSetUserSettingsResponse = NamedTuple(
+      
+    )
+
+    alias AdminUpdateAuthEventFeedbackRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "EventId" : EventIdType,
+      "FeedbackValue" : FeedbackValueType
+    )
+
+    alias AdminUpdateAuthEventFeedbackResponse = NamedTuple(
+      
+    )
+
+    alias AdminUpdateDeviceStatusRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "DeviceKey" : DeviceKeyType,
+      "DeviceRememberedStatus" : (DeviceRememberedStatusType)?
+    )
+
+    alias AdminUpdateDeviceStatusResponse = NamedTuple(
+      
+    )
+
+    alias AdminUpdateUserAttributesRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "UserAttributes" : AttributeListType,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias AdminUpdateUserAttributesResponse = NamedTuple(
+      
+    )
+
+    alias AdminUserGlobalSignOutRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType
+    )
+
+    alias AdminUserGlobalSignOutResponse = NamedTuple(
+      
+    )
+
+    alias AdvancedSecurityModeType = String
+
+    alias AliasAttributeType = String
+
+    alias AliasAttributesListType = Array(AliasAttributeType)
+
+    alias AliasExistsException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias AnalyticsConfigurationType = NamedTuple(
+      "ApplicationId" : (HexStringType)?,
+      "ApplicationArn" : (ArnType)?,
+      "RoleArn" : (ArnType)?,
+      "ExternalId" : (StringType)?,
+      "UserDataShared" : (BooleanType)?
+    )
+
+    alias AnalyticsMetadataType = NamedTuple(
+      "AnalyticsEndpointId" : (StringType)?
+    )
+
+    alias ArnType = String
+
+    alias AssociateSoftwareTokenRequest = NamedTuple(
+      "AccessToken" : (TokenModelType)?,
+      "Session" : (SessionType)?
+    )
+
+    alias AssociateSoftwareTokenResponse = NamedTuple(
+      "SecretCode" : (SecretCodeType)?,
+      "Session" : (SessionType)?
+    )
+
+    alias AttributeDataType = String
+
+    alias AttributeListType = Array(AttributeType)
+
+    alias AttributeMappingKeyType = String
+
+    alias AttributeMappingType = Hash(AttributeMappingKeyType,StringType)
+
+    alias AttributeNameListType = Array(AttributeNameType)
+
+    alias AttributeNameType = String
+
+    alias AttributeType = NamedTuple(
+      "Name" : AttributeNameType,
+      "Value" : (AttributeValueType)?
+    )
+
+    alias AttributeValueType = String
+
+    alias AuthEventType = NamedTuple(
+      "EventId" : (StringType)?,
+      "EventType" : (EventType)?,
+      "CreationDate" : (DateType)?,
+      "EventResponse" : (EventResponseType)?,
+      "EventRisk" : (EventRiskType)?,
+      "ChallengeResponses" : (ChallengeResponseListType)?,
+      "EventContextData" : (EventContextDataType)?,
+      "EventFeedback" : (EventFeedbackType)?
+    )
+
+    alias AuthEventsType = Array(AuthEventType)
+
+    alias AuthFlowType = String
+
+    alias AuthParametersType = Hash(StringType,StringType)
+
+    alias AuthenticationResultType = NamedTuple(
+      "AccessToken" : (TokenModelType)?,
+      "ExpiresIn" : (IntegerType)?,
+      "TokenType" : (StringType)?,
+      "RefreshToken" : (TokenModelType)?,
+      "IdToken" : (TokenModelType)?,
+      "NewDeviceMetadata" : (NewDeviceMetadataType)?
+    )
+
+    alias BlockedIPRangeListType = Array(StringType)
+
+    alias BooleanType = Bool
+
+    alias CSSType = String
+
+    alias CSSVersionType = String
+
+    alias CallbackURLsListType = Array(RedirectUrlType)
+
+    alias ChallengeName = String
+
+    alias ChallengeNameType = String
+
+    alias ChallengeParametersType = Hash(StringType,StringType)
+
+    alias ChallengeResponse = String
+
+    alias ChallengeResponseListType = Array(ChallengeResponseType)
+
+    alias ChallengeResponseType = NamedTuple(
+      "ChallengeName" : (ChallengeName)?,
+      "ChallengeResponse" : (ChallengeResponse)?
+    )
+
+    alias ChallengeResponsesType = Hash(StringType,StringType)
+
+    alias ChangePasswordRequest = NamedTuple(
+      "PreviousPassword" : PasswordType,
+      "ProposedPassword" : PasswordType,
+      "AccessToken" : TokenModelType
+    )
+
+    alias ChangePasswordResponse = NamedTuple(
+      
+    )
+
+    alias ClientIdType = String
+
+    alias ClientMetadataType = Hash(StringType,StringType)
+
+    alias ClientNameType = String
+
+    alias ClientPermissionListType = Array(ClientPermissionType)
+
+    alias ClientPermissionType = String
+
+    alias ClientSecretType = String
+
+    alias CodeDeliveryDetailsListType = Array(CodeDeliveryDetailsType)
+
+    alias CodeDeliveryDetailsType = NamedTuple(
+      "Destination" : (StringType)?,
+      "DeliveryMedium" : (DeliveryMediumType)?,
+      "AttributeName" : (AttributeNameType)?
+    )
+
+    alias CodeDeliveryFailureException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias CodeMismatchException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias CompletionMessageType = String
+
+    alias CompromisedCredentialsActionsType = NamedTuple(
+      "EventAction" : CompromisedCredentialsEventActionType
+    )
+
+    alias CompromisedCredentialsEventActionType = String
+
+    alias CompromisedCredentialsRiskConfigurationType = NamedTuple(
+      "EventFilter" : (EventFiltersType)?,
+      "Actions" : CompromisedCredentialsActionsType
+    )
+
+    alias ConcurrentModificationException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias ConfirmDeviceRequest = NamedTuple(
+      "AccessToken" : TokenModelType,
+      "DeviceKey" : DeviceKeyType,
+      "DeviceSecretVerifierConfig" : (DeviceSecretVerifierConfigType)?,
+      "DeviceName" : (DeviceNameType)?
+    )
+
+    alias ConfirmDeviceResponse = NamedTuple(
+      "UserConfirmationNecessary" : (BooleanType)?
+    )
+
+    alias ConfirmForgotPasswordRequest = NamedTuple(
+      "ClientId" : ClientIdType,
+      "SecretHash" : (SecretHashType)?,
+      "Username" : UsernameType,
+      "ConfirmationCode" : ConfirmationCodeType,
+      "Password" : PasswordType,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "UserContextData" : (UserContextDataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias ConfirmForgotPasswordResponse = NamedTuple(
+      
+    )
+
+    alias ConfirmSignUpRequest = NamedTuple(
+      "ClientId" : ClientIdType,
+      "SecretHash" : (SecretHashType)?,
+      "Username" : UsernameType,
+      "ConfirmationCode" : ConfirmationCodeType,
+      "ForceAliasCreation" : (ForceAliasCreation)?,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "UserContextData" : (UserContextDataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias ConfirmSignUpResponse = NamedTuple(
+      
+    )
+
+    alias ConfirmationCodeType = String
+
+    alias ContextDataType = NamedTuple(
+      "IpAddress" : StringType,
+      "ServerName" : StringType,
+      "ServerPath" : StringType,
+      "HttpHeaders" : HttpHeaderList,
+      "EncodedData" : (StringType)?
+    )
+
+    alias CreateGroupRequest = NamedTuple(
+      "GroupName" : GroupNameType,
+      "UserPoolId" : UserPoolIdType,
+      "Description" : (DescriptionType)?,
+      "RoleArn" : (ArnType)?,
+      "Precedence" : (PrecedenceType)?
+    )
+
+    alias CreateGroupResponse = NamedTuple(
+      "Group" : (GroupType)?
+    )
+
+    alias CreateIdentityProviderRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ProviderName" : ProviderNameTypeV1,
+      "ProviderType" : IdentityProviderTypeType,
+      "ProviderDetails" : ProviderDetailsType,
+      "AttributeMapping" : (AttributeMappingType)?,
+      "IdpIdentifiers" : (IdpIdentifiersListType)?
+    )
+
+    alias CreateIdentityProviderResponse = NamedTuple(
+      "IdentityProvider" : IdentityProviderType
+    )
+
+    alias CreateResourceServerRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Identifier" : ResourceServerIdentifierType,
+      "Name" : ResourceServerNameType,
+      "Scopes" : (ResourceServerScopeListType)?
+    )
+
+    alias CreateResourceServerResponse = NamedTuple(
+      "ResourceServer" : ResourceServerType
+    )
+
+    alias CreateUserImportJobRequest = NamedTuple(
+      "JobName" : UserImportJobNameType,
+      "UserPoolId" : UserPoolIdType,
+      "CloudWatchLogsRoleArn" : ArnType
+    )
+
+    alias CreateUserImportJobResponse = NamedTuple(
+      "UserImportJob" : (UserImportJobType)?
+    )
+
+    alias CreateUserPoolClientRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientName" : ClientNameType,
+      "GenerateSecret" : (GenerateSecret)?,
+      "RefreshTokenValidity" : (RefreshTokenValidityType)?,
+      "AccessTokenValidity" : (AccessTokenValidityType)?,
+      "IdTokenValidity" : (IdTokenValidityType)?,
+      "TokenValidityUnits" : (TokenValidityUnitsType)?,
+      "ReadAttributes" : (ClientPermissionListType)?,
+      "WriteAttributes" : (ClientPermissionListType)?,
+      "ExplicitAuthFlows" : (ExplicitAuthFlowsListType)?,
+      "SupportedIdentityProviders" : (SupportedIdentityProvidersListType)?,
+      "CallbackURLs" : (CallbackURLsListType)?,
+      "LogoutURLs" : (LogoutURLsListType)?,
+      "DefaultRedirectURI" : (RedirectUrlType)?,
+      "AllowedOAuthFlows" : (OAuthFlowsType)?,
+      "AllowedOAuthScopes" : (ScopeListType)?,
+      "AllowedOAuthFlowsUserPoolClient" : (BooleanType)?,
+      "AnalyticsConfiguration" : (AnalyticsConfigurationType)?,
+      "PreventUserExistenceErrors" : (PreventUserExistenceErrorTypes)?
+    )
+
+    alias CreateUserPoolClientResponse = NamedTuple(
+      "UserPoolClient" : (UserPoolClientType)?
+    )
+
+    alias CreateUserPoolDomainRequest = NamedTuple(
+      "Domain" : DomainType,
+      "UserPoolId" : UserPoolIdType,
+      "CustomDomainConfig" : (CustomDomainConfigType)?
+    )
+
+    alias CreateUserPoolDomainResponse = NamedTuple(
+      "CloudFrontDomain" : (DomainType)?
+    )
+
+    alias CreateUserPoolRequest = NamedTuple(
+      "PoolName" : UserPoolNameType,
+      "Policies" : (UserPoolPolicyType)?,
+      "LambdaConfig" : (LambdaConfigType)?,
+      "AutoVerifiedAttributes" : (VerifiedAttributesListType)?,
+      "AliasAttributes" : (AliasAttributesListType)?,
+      "UsernameAttributes" : (UsernameAttributesListType)?,
+      "SmsVerificationMessage" : (SmsVerificationMessageType)?,
+      "EmailVerificationMessage" : (EmailVerificationMessageType)?,
+      "EmailVerificationSubject" : (EmailVerificationSubjectType)?,
+      "VerificationMessageTemplate" : (VerificationMessageTemplateType)?,
+      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
+      "MfaConfiguration" : (UserPoolMfaType)?,
+      "DeviceConfiguration" : (DeviceConfigurationType)?,
+      "EmailConfiguration" : (EmailConfigurationType)?,
+      "SmsConfiguration" : (SmsConfigurationType)?,
+      "UserPoolTags" : (UserPoolTagsType)?,
+      "AdminCreateUserConfig" : (AdminCreateUserConfigType)?,
+      "Schema" : (SchemaAttributesListType)?,
+      "UserPoolAddOns" : (UserPoolAddOnsType)?,
+      "UsernameConfiguration" : (UsernameConfigurationType)?,
+      "AccountRecoverySetting" : (AccountRecoverySettingType)?
+    )
+
+    alias CreateUserPoolResponse = NamedTuple(
+      "UserPool" : (UserPoolType)?
+    )
+
+    alias CustomAttributeNameType = String
+
+    alias CustomAttributesListType = Array(SchemaAttributeType)
+
+    alias CustomDomainConfigType = NamedTuple(
+      "CertificateArn" : ArnType
+    )
+
+    alias CustomEmailLambdaVersionConfigType = NamedTuple(
+      "LambdaVersion" : CustomEmailSenderLambdaVersionType,
+      "LambdaArn" : ArnType
+    )
+
+    alias CustomEmailSenderLambdaVersionType = String
+
+    alias CustomSMSLambdaVersionConfigType = NamedTuple(
+      "LambdaVersion" : CustomSMSSenderLambdaVersionType,
+      "LambdaArn" : ArnType
+    )
+
+    alias CustomSMSSenderLambdaVersionType = String
+
+    alias DateType = String | UInt64 | Time
+
+    alias DefaultEmailOptionType = String
+
+    alias DeleteGroupRequest = NamedTuple(
+      "GroupName" : GroupNameType,
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias DeleteIdentityProviderRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ProviderName" : ProviderNameType
+    )
+
+    alias DeleteResourceServerRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Identifier" : ResourceServerIdentifierType
+    )
+
+    alias DeleteUserAttributesRequest = NamedTuple(
+      "UserAttributeNames" : AttributeNameListType,
+      "AccessToken" : TokenModelType
+    )
+
+    alias DeleteUserAttributesResponse = NamedTuple(
+      
+    )
+
+    alias DeleteUserPoolClientRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : ClientIdType
+    )
+
+    alias DeleteUserPoolDomainRequest = NamedTuple(
+      "Domain" : DomainType,
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias DeleteUserPoolDomainResponse = NamedTuple(
+      
+    )
+
+    alias DeleteUserPoolRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "AccessToken" : TokenModelType
+    )
+
+    alias DeliveryMediumListType = Array(DeliveryMediumType)
+
+    alias DeliveryMediumType = String
+
+    alias DescribeIdentityProviderRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ProviderName" : ProviderNameType
+    )
+
+    alias DescribeIdentityProviderResponse = NamedTuple(
+      "IdentityProvider" : IdentityProviderType
+    )
+
+    alias DescribeResourceServerRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Identifier" : ResourceServerIdentifierType
+    )
+
+    alias DescribeResourceServerResponse = NamedTuple(
+      "ResourceServer" : ResourceServerType
+    )
+
+    alias DescribeRiskConfigurationRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : (ClientIdType)?
+    )
+
+    alias DescribeRiskConfigurationResponse = NamedTuple(
+      "RiskConfiguration" : RiskConfigurationType
+    )
+
+    alias DescribeUserImportJobRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "JobId" : UserImportJobIdType
+    )
+
+    alias DescribeUserImportJobResponse = NamedTuple(
+      "UserImportJob" : (UserImportJobType)?
+    )
+
+    alias DescribeUserPoolClientRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : ClientIdType
+    )
+
+    alias DescribeUserPoolClientResponse = NamedTuple(
+      "UserPoolClient" : (UserPoolClientType)?
+    )
+
+    alias DescribeUserPoolDomainRequest = NamedTuple(
+      "Domain" : DomainType
+    )
+
+    alias DescribeUserPoolDomainResponse = NamedTuple(
+      "DomainDescription" : (DomainDescriptionType)?
+    )
+
+    alias DescribeUserPoolRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias DescribeUserPoolResponse = NamedTuple(
+      "UserPool" : (UserPoolType)?
+    )
+
+    alias DescriptionType = String
+
+    alias DeviceConfigurationType = NamedTuple(
+      "ChallengeRequiredOnNewDevice" : (BooleanType)?,
+      "DeviceOnlyRememberedOnUserPrompt" : (BooleanType)?
+    )
+
+    alias DeviceKeyType = String
+
+    alias DeviceListType = Array(DeviceType)
+
+    alias DeviceNameType = String
+
+    alias DeviceRememberedStatusType = String
+
+    alias DeviceSecretVerifierConfigType = NamedTuple(
+      "PasswordVerifier" : (StringType)?,
+      "Salt" : (StringType)?
+    )
+
+    alias DeviceType = NamedTuple(
+      "DeviceKey" : (DeviceKeyType)?,
+      "DeviceAttributes" : (AttributeListType)?,
+      "DeviceCreateDate" : (DateType)?,
+      "DeviceLastModifiedDate" : (DateType)?,
+      "DeviceLastAuthenticatedDate" : (DateType)?
+    )
+
+    alias DomainDescriptionType = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "AWSAccountId" : (AWSAccountIdType)?,
+      "Domain" : (DomainType)?,
+      "S3Bucket" : (S3BucketType)?,
+      "CloudFrontDistribution" : (StringType)?,
+      "Version" : (DomainVersionType)?,
+      "Status" : (DomainStatusType)?,
+      "CustomDomainConfig" : (CustomDomainConfigType)?
+    )
+
+    alias DomainStatusType = String
+
+    alias DomainType = String
+
+    alias DomainVersionType = String
+
+    alias DuplicateProviderException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias EmailAddressType = String
+
+    alias EmailConfigurationType = NamedTuple(
+      "SourceArn" : (ArnType)?,
+      "ReplyToEmailAddress" : (EmailAddressType)?,
+      "EmailSendingAccount" : (EmailSendingAccountType)?,
+      "From" : (StringType)?,
+      "ConfigurationSet" : (SESConfigurationSet)?
+    )
+
+    alias EmailNotificationBodyType = String
+
+    alias EmailNotificationSubjectType = String
+
+    alias EmailSendingAccountType = String
+
+    alias EmailVerificationMessageByLinkType = String
+
+    alias EmailVerificationMessageType = String
+
+    alias EmailVerificationSubjectByLinkType = String
+
+    alias EmailVerificationSubjectType = String
+
+    alias EnableSoftwareTokenMFAException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias EventContextDataType = NamedTuple(
+      "IpAddress" : (StringType)?,
+      "DeviceName" : (StringType)?,
+      "Timezone" : (StringType)?,
+      "City" : (StringType)?,
+      "Country" : (StringType)?
+    )
+
+    alias EventFeedbackType = NamedTuple(
+      "FeedbackValue" : FeedbackValueType,
+      "Provider" : StringType,
+      "FeedbackDate" : (DateType)?
+    )
+
+    alias EventFilterType = String
+
+    alias EventFiltersType = Array(EventFilterType)
+
+    alias EventIdType = String
+
+    alias EventResponseType = String
+
+    alias EventRiskType = NamedTuple(
+      "RiskDecision" : (RiskDecisionType)?,
+      "RiskLevel" : (RiskLevelType)?,
+      "CompromisedCredentialsDetected" : (WrappedBooleanType)?
+    )
+
+    alias EventType = String
+
+    alias ExpiredCodeException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias ExplicitAuthFlowsListType = Array(ExplicitAuthFlowsType)
+
+    alias ExplicitAuthFlowsType = String
+
+    alias FeedbackValueType = String
+
+    alias ForceAliasCreation = Bool
+
+    alias ForgetDeviceRequest = NamedTuple(
+      "AccessToken" : (TokenModelType)?,
+      "DeviceKey" : DeviceKeyType
+    )
+
+    alias ForgotPasswordRequest = NamedTuple(
+      "ClientId" : ClientIdType,
+      "SecretHash" : (SecretHashType)?,
+      "UserContextData" : (UserContextDataType)?,
+      "Username" : UsernameType,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias ForgotPasswordResponse = NamedTuple(
+      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?
+    )
+
+    alias GenerateSecret = Bool
+
+    alias GetCSVHeaderRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias GetCSVHeaderResponse = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "CSVHeader" : (ListOfStringTypes)?
+    )
+
+    alias GetDeviceRequest = NamedTuple(
+      "DeviceKey" : DeviceKeyType,
+      "AccessToken" : (TokenModelType)?
+    )
+
+    alias GetDeviceResponse = NamedTuple(
+      "Device" : DeviceType
+    )
+
+    alias GetGroupRequest = NamedTuple(
+      "GroupName" : GroupNameType,
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias GetGroupResponse = NamedTuple(
+      "Group" : (GroupType)?
+    )
+
+    alias GetIdentityProviderByIdentifierRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "IdpIdentifier" : IdpIdentifierType
+    )
+
+    alias GetIdentityProviderByIdentifierResponse = NamedTuple(
+      "IdentityProvider" : IdentityProviderType
+    )
+
+    alias GetSigningCertificateRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias GetSigningCertificateResponse = NamedTuple(
+      "Certificate" : (StringType)?
+    )
+
+    alias GetUICustomizationRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : (ClientIdType)?
+    )
+
+    alias GetUICustomizationResponse = NamedTuple(
+      "UICustomization" : UICustomizationType
+    )
+
+    alias GetUserAttributeVerificationCodeRequest = NamedTuple(
+      "AccessToken" : TokenModelType,
+      "AttributeName" : AttributeNameType,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias GetUserAttributeVerificationCodeResponse = NamedTuple(
+      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?
+    )
+
+    alias GetUserPoolMfaConfigRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType
+    )
+
+    alias GetUserPoolMfaConfigResponse = NamedTuple(
+      "SmsMfaConfiguration" : (SmsMfaConfigType)?,
+      "SoftwareTokenMfaConfiguration" : (SoftwareTokenMfaConfigType)?,
+      "MfaConfiguration" : (UserPoolMfaType)?
+    )
+
+    alias GetUserRequest = NamedTuple(
+      "AccessToken" : TokenModelType
+    )
+
+    alias GetUserResponse = NamedTuple(
+      "Username" : UsernameType,
+      "UserAttributes" : AttributeListType,
+      "MFAOptions" : (MFAOptionListType)?,
+      "PreferredMfaSetting" : (StringType)?,
+      "UserMFASettingList" : (UserMFASettingListType)?
+    )
+
+    alias GlobalSignOutRequest = NamedTuple(
+      "AccessToken" : TokenModelType
+    )
+
+    alias GlobalSignOutResponse = NamedTuple(
+      
+    )
+
+    alias GroupExistsException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias GroupListType = Array(GroupType)
+
+    alias GroupNameType = String
+
+    alias GroupType = NamedTuple(
+      "GroupName" : (GroupNameType)?,
+      "UserPoolId" : (UserPoolIdType)?,
+      "Description" : (DescriptionType)?,
+      "RoleArn" : (ArnType)?,
+      "Precedence" : (PrecedenceType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?
+    )
+
+    alias HexStringType = String
+
+    alias HttpHeader = NamedTuple(
+      "headerName" : (StringType)?,
+      "headerValue" : (StringType)?
+    )
+
+    alias HttpHeaderList = Array(HttpHeader)
+
+    alias IdTokenValidityType = Int32
+
+    alias IdentityProviderType = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "ProviderName" : (ProviderNameType)?,
+      "ProviderType" : (IdentityProviderTypeType)?,
+      "ProviderDetails" : (ProviderDetailsType)?,
+      "AttributeMapping" : (AttributeMappingType)?,
+      "IdpIdentifiers" : (IdpIdentifiersListType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?
+    )
+
+    alias IdentityProviderTypeType = String
+
+    alias IdpIdentifierType = String
+
+    alias IdpIdentifiersListType = Array(IdpIdentifierType)
+
+    alias ImageFileType = String | Array(UInt8) | IO
+
+    alias ImageUrlType = String
+
+    alias InitiateAuthRequest = NamedTuple(
+      "AuthFlow" : AuthFlowType,
+      "AuthParameters" : (AuthParametersType)?,
+      "ClientMetadata" : (ClientMetadataType)?,
+      "ClientId" : ClientIdType,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "UserContextData" : (UserContextDataType)?
+    )
+
+    alias InitiateAuthResponse = NamedTuple(
+      "ChallengeName" : (ChallengeNameType)?,
+      "Session" : (SessionType)?,
+      "ChallengeParameters" : (ChallengeParametersType)?,
+      "AuthenticationResult" : (AuthenticationResultType)?
+    )
+
+    alias IntegerType = Int32
+
+    alias InternalErrorException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidEmailRoleAccessPolicyException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidLambdaResponseException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidOAuthFlowException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidPasswordException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidSmsRoleAccessPolicyException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidSmsRoleTrustRelationshipException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias InvalidUserPoolConfigurationException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias LambdaConfigType = NamedTuple(
+      "PreSignUp" : (ArnType)?,
+      "CustomMessage" : (ArnType)?,
+      "PostConfirmation" : (ArnType)?,
+      "PreAuthentication" : (ArnType)?,
+      "PostAuthentication" : (ArnType)?,
+      "DefineAuthChallenge" : (ArnType)?,
+      "CreateAuthChallenge" : (ArnType)?,
+      "VerifyAuthChallengeResponse" : (ArnType)?,
+      "PreTokenGeneration" : (ArnType)?,
+      "UserMigration" : (ArnType)?,
+      "CustomSMSSender" : (CustomSMSLambdaVersionConfigType)?,
+      "CustomEmailSender" : (CustomEmailLambdaVersionConfigType)?,
+      "KMSKeyID" : (ArnType)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias ListDevicesRequest = NamedTuple(
+      "AccessToken" : TokenModelType,
+      "Limit" : (QueryLimitType)?,
+      "PaginationToken" : (SearchPaginationTokenType)?
+    )
+
+    alias ListDevicesResponse = NamedTuple(
+      "Devices" : (DeviceListType)?,
+      "PaginationToken" : (SearchPaginationTokenType)?
+    )
+
+    alias ListGroupsRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Limit" : (QueryLimitType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListGroupsResponse = NamedTuple(
+      "Groups" : (GroupListType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListIdentityProvidersRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "MaxResults" : (ListProvidersLimitType)?,
+      "NextToken" : (PaginationKeyType)?
+    )
+
+    alias ListIdentityProvidersResponse = NamedTuple(
+      "Providers" : ProvidersListType,
+      "NextToken" : (PaginationKeyType)?
+    )
+
+    alias ListOfStringTypes = Array(StringType)
+
+    alias ListProvidersLimitType = Int32
+
+    alias ListResourceServersLimitType = Int32
+
+    alias ListResourceServersRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "MaxResults" : (ListResourceServersLimitType)?,
+      "NextToken" : (PaginationKeyType)?
+    )
+
+    alias ListResourceServersResponse = NamedTuple(
+      "ResourceServers" : ResourceServersListType,
+      "NextToken" : (PaginationKeyType)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : ArnType
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (UserPoolTagsType)?
+    )
+
+    alias ListUserImportJobsRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "MaxResults" : PoolQueryLimitType,
+      "PaginationToken" : (PaginationKeyType)?
+    )
+
+    alias ListUserImportJobsResponse = NamedTuple(
+      "UserImportJobs" : (UserImportJobsListType)?,
+      "PaginationToken" : (PaginationKeyType)?
+    )
+
+    alias ListUserPoolClientsRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "MaxResults" : (QueryLimit)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListUserPoolClientsResponse = NamedTuple(
+      "UserPoolClients" : (UserPoolClientListType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListUserPoolsRequest = NamedTuple(
+      "NextToken" : (PaginationKeyType)?,
+      "MaxResults" : PoolQueryLimitType
+    )
+
+    alias ListUserPoolsResponse = NamedTuple(
+      "UserPools" : (UserPoolListType)?,
+      "NextToken" : (PaginationKeyType)?
+    )
+
+    alias ListUsersInGroupRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "GroupName" : GroupNameType,
+      "Limit" : (QueryLimitType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListUsersInGroupResponse = NamedTuple(
+      "Users" : (UsersListType)?,
+      "NextToken" : (PaginationKey)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "AttributesToGet" : (SearchedAttributeNamesListType)?,
+      "Limit" : (QueryLimitType)?,
+      "PaginationToken" : (SearchPaginationTokenType)?,
+      "Filter" : (UserFilterType)?
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "Users" : (UsersListType)?,
+      "PaginationToken" : (SearchPaginationTokenType)?
+    )
+
+    alias LogoutURLsListType = Array(RedirectUrlType)
+
+    alias LongType = Int64
+
+    alias MFAMethodNotFoundException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias MFAOptionListType = Array(MFAOptionType)
+
+    alias MFAOptionType = NamedTuple(
+      "DeliveryMedium" : (DeliveryMediumType)?,
+      "AttributeName" : (AttributeNameType)?
+    )
+
+    alias MessageActionType = String
+
+    alias MessageTemplateType = NamedTuple(
+      "SMSMessage" : (SmsVerificationMessageType)?,
+      "EmailMessage" : (EmailVerificationMessageType)?,
+      "EmailSubject" : (EmailVerificationSubjectType)?
+    )
+
+    alias MessageType = String
+
+    alias NewDeviceMetadataType = NamedTuple(
+      "DeviceKey" : (DeviceKeyType)?,
+      "DeviceGroupKey" : (StringType)?
+    )
+
+    alias NotAuthorizedException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias NotifyConfigurationType = NamedTuple(
+      "From" : (StringType)?,
+      "ReplyTo" : (StringType)?,
+      "SourceArn" : ArnType,
+      "BlockEmail" : (NotifyEmailType)?,
+      "NoActionEmail" : (NotifyEmailType)?,
+      "MfaEmail" : (NotifyEmailType)?
+    )
+
+    alias NotifyEmailType = NamedTuple(
+      "Subject" : EmailNotificationSubjectType,
+      "HtmlBody" : (EmailNotificationBodyType)?,
+      "TextBody" : (EmailNotificationBodyType)?
+    )
+
+    alias NumberAttributeConstraintsType = NamedTuple(
+      "MinValue" : (StringType)?,
+      "MaxValue" : (StringType)?
+    )
+
+    alias OAuthFlowType = String
+
+    alias OAuthFlowsType = Array(OAuthFlowType)
+
+    alias PaginationKey = String
+
+    alias PaginationKeyType = String
+
+    alias PasswordPolicyMinLengthType = Int32
+
+    alias PasswordPolicyType = NamedTuple(
+      "MinimumLength" : (PasswordPolicyMinLengthType)?,
+      "RequireUppercase" : (BooleanType)?,
+      "RequireLowercase" : (BooleanType)?,
+      "RequireNumbers" : (BooleanType)?,
+      "RequireSymbols" : (BooleanType)?,
+      "TemporaryPasswordValidityDays" : (TemporaryPasswordValidityDaysType)?
+    )
+
+    alias PasswordResetRequiredException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias PasswordType = String
+
+    alias PoolQueryLimitType = Int32
+
+    alias PreSignedUrlType = String
+
+    alias PrecedenceType = Int32
+
+    alias PreconditionNotMetException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias PreventUserExistenceErrorTypes = String
+
+    alias PriorityType = Int32
+
+    alias ProviderDescription = NamedTuple(
+      "ProviderName" : (ProviderNameType)?,
+      "ProviderType" : (IdentityProviderTypeType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?
+    )
+
+    alias ProviderDetailsType = Hash(StringType,StringType)
+
+    alias ProviderNameType = String
+
+    alias ProviderNameTypeV1 = String
+
+    alias ProviderUserIdentifierType = NamedTuple(
+      "ProviderName" : (ProviderNameType)?,
+      "ProviderAttributeName" : (StringType)?,
+      "ProviderAttributeValue" : (StringType)?
+    )
+
+    alias ProvidersListType = Array(ProviderDescription)
+
+    alias QueryLimit = Int32
+
+    alias QueryLimitType = Int32
+
+    alias RecoveryMechanismsType = Array(RecoveryOptionType)
+
+    alias RecoveryOptionNameType = String
+
+    alias RecoveryOptionType = NamedTuple(
+      "Priority" : PriorityType,
+      "Name" : RecoveryOptionNameType
+    )
+
+    alias RedirectUrlType = String
+
+    alias RefreshTokenValidityType = Int32
+
+    alias ResendConfirmationCodeRequest = NamedTuple(
+      "ClientId" : ClientIdType,
+      "SecretHash" : (SecretHashType)?,
+      "UserContextData" : (UserContextDataType)?,
+      "Username" : UsernameType,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias ResendConfirmationCodeResponse = NamedTuple(
+      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias ResourceServerIdentifierType = String
+
+    alias ResourceServerNameType = String
+
+    alias ResourceServerScopeDescriptionType = String
+
+    alias ResourceServerScopeListType = Array(ResourceServerScopeType)
+
+    alias ResourceServerScopeNameType = String
+
+    alias ResourceServerScopeType = NamedTuple(
+      "ScopeName" : ResourceServerScopeNameType,
+      "ScopeDescription" : ResourceServerScopeDescriptionType
+    )
+
+    alias ResourceServerType = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "Identifier" : (ResourceServerIdentifierType)?,
+      "Name" : (ResourceServerNameType)?,
+      "Scopes" : (ResourceServerScopeListType)?
+    )
+
+    alias ResourceServersListType = Array(ResourceServerType)
+
+    alias RespondToAuthChallengeRequest = NamedTuple(
+      "ClientId" : ClientIdType,
+      "ChallengeName" : ChallengeNameType,
+      "Session" : (SessionType)?,
+      "ChallengeResponses" : (ChallengeResponsesType)?,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "UserContextData" : (UserContextDataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias RespondToAuthChallengeResponse = NamedTuple(
+      "ChallengeName" : (ChallengeNameType)?,
+      "Session" : (SessionType)?,
+      "ChallengeParameters" : (ChallengeParametersType)?,
+      "AuthenticationResult" : (AuthenticationResultType)?
+    )
+
+    alias RiskConfigurationType = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "ClientId" : (ClientIdType)?,
+      "CompromisedCredentialsRiskConfiguration" : (CompromisedCredentialsRiskConfigurationType)?,
+      "AccountTakeoverRiskConfiguration" : (AccountTakeoverRiskConfigurationType)?,
+      "RiskExceptionConfiguration" : (RiskExceptionConfigurationType)?,
+      "LastModifiedDate" : (DateType)?
+    )
+
+    alias RiskDecisionType = String
+
+    alias RiskExceptionConfigurationType = NamedTuple(
+      "BlockedIPRangeList" : (BlockedIPRangeListType)?,
+      "SkippedIPRangeList" : (SkippedIPRangeListType)?
+    )
+
+    alias RiskLevelType = String
+
+    alias S3BucketType = String
+
+    alias SESConfigurationSet = String
+
+    alias SMSMfaSettingsType = NamedTuple(
+      "Enabled" : (BooleanType)?,
+      "PreferredMfa" : (BooleanType)?
+    )
+
+    alias SchemaAttributeType = NamedTuple(
+      "Name" : (CustomAttributeNameType)?,
+      "AttributeDataType" : (AttributeDataType)?,
+      "DeveloperOnlyAttribute" : (BooleanType)?,
+      "Mutable" : (BooleanType)?,
+      "Required" : (BooleanType)?,
+      "NumberAttributeConstraints" : (NumberAttributeConstraintsType)?,
+      "StringAttributeConstraints" : (StringAttributeConstraintsType)?
+    )
+
+    alias SchemaAttributesListType = Array(SchemaAttributeType)
+
+    alias ScopeDoesNotExistException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias ScopeListType = Array(ScopeType)
+
+    alias ScopeType = String
+
+    alias SearchPaginationTokenType = String
+
+    alias SearchedAttributeNamesListType = Array(AttributeNameType)
+
+    alias SecretCodeType = String
+
+    alias SecretHashType = String
+
+    alias SessionType = String
+
+    alias SetRiskConfigurationRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : (ClientIdType)?,
+      "CompromisedCredentialsRiskConfiguration" : (CompromisedCredentialsRiskConfigurationType)?,
+      "AccountTakeoverRiskConfiguration" : (AccountTakeoverRiskConfigurationType)?,
+      "RiskExceptionConfiguration" : (RiskExceptionConfigurationType)?
+    )
+
+    alias SetRiskConfigurationResponse = NamedTuple(
+      "RiskConfiguration" : RiskConfigurationType
+    )
+
+    alias SetUICustomizationRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : (ClientIdType)?,
+      "CSS" : (CSSType)?,
+      "ImageFile" : (ImageFileType)?
+    )
+
+    alias SetUICustomizationResponse = NamedTuple(
+      "UICustomization" : UICustomizationType
+    )
+
+    alias SetUserMFAPreferenceRequest = NamedTuple(
+      "SMSMfaSettings" : (SMSMfaSettingsType)?,
+      "SoftwareTokenMfaSettings" : (SoftwareTokenMfaSettingsType)?,
+      "AccessToken" : TokenModelType
+    )
+
+    alias SetUserMFAPreferenceResponse = NamedTuple(
+      
+    )
+
+    alias SetUserPoolMfaConfigRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "SmsMfaConfiguration" : (SmsMfaConfigType)?,
+      "SoftwareTokenMfaConfiguration" : (SoftwareTokenMfaConfigType)?,
+      "MfaConfiguration" : (UserPoolMfaType)?
+    )
+
+    alias SetUserPoolMfaConfigResponse = NamedTuple(
+      "SmsMfaConfiguration" : (SmsMfaConfigType)?,
+      "SoftwareTokenMfaConfiguration" : (SoftwareTokenMfaConfigType)?,
+      "MfaConfiguration" : (UserPoolMfaType)?
+    )
+
+    alias SetUserSettingsRequest = NamedTuple(
+      "AccessToken" : TokenModelType,
+      "MFAOptions" : MFAOptionListType
+    )
+
+    alias SetUserSettingsResponse = NamedTuple(
+      
+    )
+
+    alias SignUpRequest = NamedTuple(
+      "ClientId" : ClientIdType,
+      "SecretHash" : (SecretHashType)?,
+      "Username" : UsernameType,
+      "Password" : PasswordType,
+      "UserAttributes" : (AttributeListType)?,
+      "ValidationData" : (AttributeListType)?,
+      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
+      "UserContextData" : (UserContextDataType)?,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias SignUpResponse = NamedTuple(
+      "UserConfirmed" : BooleanType,
+      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?,
+      "UserSub" : StringType
+    )
+
+    alias SkippedIPRangeListType = Array(StringType)
+
+    alias SmsConfigurationType = NamedTuple(
+      "SnsCallerArn" : ArnType,
+      "ExternalId" : (StringType)?
+    )
+
+    alias SmsMfaConfigType = NamedTuple(
+      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
+      "SmsConfiguration" : (SmsConfigurationType)?
+    )
+
+    alias SmsVerificationMessageType = String
+
+    alias SoftwareTokenMFANotFoundException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias SoftwareTokenMFAUserCodeType = String
+
+    alias SoftwareTokenMfaConfigType = NamedTuple(
+      "Enabled" : (BooleanType)?
+    )
+
+    alias SoftwareTokenMfaSettingsType = NamedTuple(
+      "Enabled" : (BooleanType)?,
+      "PreferredMfa" : (BooleanType)?
+    )
+
+    alias StartUserImportJobRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "JobId" : UserImportJobIdType
+    )
+
+    alias StartUserImportJobResponse = NamedTuple(
+      "UserImportJob" : (UserImportJobType)?
+    )
+
+    alias StatusType = String
+
+    alias StopUserImportJobRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "JobId" : UserImportJobIdType
+    )
+
+    alias StopUserImportJobResponse = NamedTuple(
+      "UserImportJob" : (UserImportJobType)?
+    )
+
+    alias StringAttributeConstraintsType = NamedTuple(
+      "MinLength" : (StringType)?,
+      "MaxLength" : (StringType)?
+    )
+
+    alias StringType = String
+
+    alias SupportedIdentityProvidersListType = Array(ProviderNameType)
+
+    alias TagKeysType = String
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ArnType,
+      "Tags" : UserPoolTagsType
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValueType = String
+
+    alias TemporaryPasswordValidityDaysType = Int32
+
+    alias TimeUnitsType = String
+
+    alias TokenModelType = String
+
+    alias TokenValidityUnitsType = NamedTuple(
+      "AccessToken" : (TimeUnitsType)?,
+      "IdToken" : (TimeUnitsType)?,
+      "RefreshToken" : (TimeUnitsType)?
+    )
+
+    alias TooManyFailedAttemptsException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UICustomizationType = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "ClientId" : (ClientIdType)?,
+      "ImageUrl" : (ImageUrlType)?,
+      "CSS" : (CSSType)?,
+      "CSSVersion" : (CSSVersionType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?
+    )
+
+    alias UnexpectedLambdaException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UnsupportedIdentityProviderException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UnsupportedUserStateException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ArnType,
+      "TagKeys" : UserPoolTagsListType
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateAuthEventFeedbackRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Username" : UsernameType,
+      "EventId" : EventIdType,
+      "FeedbackToken" : TokenModelType,
+      "FeedbackValue" : FeedbackValueType
+    )
+
+    alias UpdateAuthEventFeedbackResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDeviceStatusRequest = NamedTuple(
+      "AccessToken" : TokenModelType,
+      "DeviceKey" : DeviceKeyType,
+      "DeviceRememberedStatus" : (DeviceRememberedStatusType)?
+    )
+
+    alias UpdateDeviceStatusResponse = NamedTuple(
+      
+    )
+
+    alias UpdateGroupRequest = NamedTuple(
+      "GroupName" : GroupNameType,
+      "UserPoolId" : UserPoolIdType,
+      "Description" : (DescriptionType)?,
+      "RoleArn" : (ArnType)?,
+      "Precedence" : (PrecedenceType)?
+    )
+
+    alias UpdateGroupResponse = NamedTuple(
+      "Group" : (GroupType)?
+    )
+
+    alias UpdateIdentityProviderRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ProviderName" : ProviderNameType,
+      "ProviderDetails" : (ProviderDetailsType)?,
+      "AttributeMapping" : (AttributeMappingType)?,
+      "IdpIdentifiers" : (IdpIdentifiersListType)?
+    )
+
+    alias UpdateIdentityProviderResponse = NamedTuple(
+      "IdentityProvider" : IdentityProviderType
+    )
+
+    alias UpdateResourceServerRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Identifier" : ResourceServerIdentifierType,
+      "Name" : ResourceServerNameType,
+      "Scopes" : (ResourceServerScopeListType)?
+    )
+
+    alias UpdateResourceServerResponse = NamedTuple(
+      "ResourceServer" : ResourceServerType
+    )
+
+    alias UpdateUserAttributesRequest = NamedTuple(
+      "UserAttributes" : AttributeListType,
+      "AccessToken" : TokenModelType,
+      "ClientMetadata" : (ClientMetadataType)?
+    )
+
+    alias UpdateUserAttributesResponse = NamedTuple(
+      "CodeDeliveryDetailsList" : (CodeDeliveryDetailsListType)?
+    )
+
+    alias UpdateUserPoolClientRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "ClientId" : ClientIdType,
+      "ClientName" : (ClientNameType)?,
+      "RefreshTokenValidity" : (RefreshTokenValidityType)?,
+      "AccessTokenValidity" : (AccessTokenValidityType)?,
+      "IdTokenValidity" : (IdTokenValidityType)?,
+      "TokenValidityUnits" : (TokenValidityUnitsType)?,
+      "ReadAttributes" : (ClientPermissionListType)?,
+      "WriteAttributes" : (ClientPermissionListType)?,
+      "ExplicitAuthFlows" : (ExplicitAuthFlowsListType)?,
+      "SupportedIdentityProviders" : (SupportedIdentityProvidersListType)?,
+      "CallbackURLs" : (CallbackURLsListType)?,
+      "LogoutURLs" : (LogoutURLsListType)?,
+      "DefaultRedirectURI" : (RedirectUrlType)?,
+      "AllowedOAuthFlows" : (OAuthFlowsType)?,
+      "AllowedOAuthScopes" : (ScopeListType)?,
+      "AllowedOAuthFlowsUserPoolClient" : (BooleanType)?,
+      "AnalyticsConfiguration" : (AnalyticsConfigurationType)?,
+      "PreventUserExistenceErrors" : (PreventUserExistenceErrorTypes)?
+    )
+
+    alias UpdateUserPoolClientResponse = NamedTuple(
+      "UserPoolClient" : (UserPoolClientType)?
+    )
+
+    alias UpdateUserPoolDomainRequest = NamedTuple(
+      "Domain" : DomainType,
+      "UserPoolId" : UserPoolIdType,
+      "CustomDomainConfig" : CustomDomainConfigType
+    )
+
+    alias UpdateUserPoolDomainResponse = NamedTuple(
+      "CloudFrontDomain" : (DomainType)?
+    )
+
+    alias UpdateUserPoolRequest = NamedTuple(
+      "UserPoolId" : UserPoolIdType,
+      "Policies" : (UserPoolPolicyType)?,
+      "LambdaConfig" : (LambdaConfigType)?,
+      "AutoVerifiedAttributes" : (VerifiedAttributesListType)?,
+      "SmsVerificationMessage" : (SmsVerificationMessageType)?,
+      "EmailVerificationMessage" : (EmailVerificationMessageType)?,
+      "EmailVerificationSubject" : (EmailVerificationSubjectType)?,
+      "VerificationMessageTemplate" : (VerificationMessageTemplateType)?,
+      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
+      "MfaConfiguration" : (UserPoolMfaType)?,
+      "DeviceConfiguration" : (DeviceConfigurationType)?,
+      "EmailConfiguration" : (EmailConfigurationType)?,
+      "SmsConfiguration" : (SmsConfigurationType)?,
+      "UserPoolTags" : (UserPoolTagsType)?,
+      "AdminCreateUserConfig" : (AdminCreateUserConfigType)?,
+      "UserPoolAddOns" : (UserPoolAddOnsType)?,
+      "AccountRecoverySetting" : (AccountRecoverySettingType)?
+    )
+
+    alias UpdateUserPoolResponse = NamedTuple(
+      
+    )
+
+    alias UserContextDataType = NamedTuple(
+      "EncodedData" : (StringType)?
+    )
+
+    alias UserFilterType = String
+
+    alias UserImportInProgressException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UserImportJobIdType = String
+
+    alias UserImportJobNameType = String
+
+    alias UserImportJobStatusType = String
+
+    alias UserImportJobType = NamedTuple(
+      "JobName" : (UserImportJobNameType)?,
+      "JobId" : (UserImportJobIdType)?,
+      "UserPoolId" : (UserPoolIdType)?,
+      "PreSignedUrl" : (PreSignedUrlType)?,
+      "CreationDate" : (DateType)?,
+      "StartDate" : (DateType)?,
+      "CompletionDate" : (DateType)?,
+      "Status" : (UserImportJobStatusType)?,
+      "CloudWatchLogsRoleArn" : (ArnType)?,
+      "ImportedUsers" : (LongType)?,
+      "SkippedUsers" : (LongType)?,
+      "FailedUsers" : (LongType)?,
+      "CompletionMessage" : (CompletionMessageType)?
+    )
+
+    alias UserImportJobsListType = Array(UserImportJobType)
+
+    alias UserLambdaValidationException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UserMFASettingListType = Array(StringType)
+
+    alias UserNotConfirmedException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UserNotFoundException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UserPoolAddOnNotEnabledException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UserPoolAddOnsType = NamedTuple(
+      "AdvancedSecurityMode" : AdvancedSecurityModeType
+    )
+
+    alias UserPoolClientDescription = NamedTuple(
+      "ClientId" : (ClientIdType)?,
+      "UserPoolId" : (UserPoolIdType)?,
+      "ClientName" : (ClientNameType)?
+    )
+
+    alias UserPoolClientListType = Array(UserPoolClientDescription)
+
+    alias UserPoolClientType = NamedTuple(
+      "UserPoolId" : (UserPoolIdType)?,
+      "ClientName" : (ClientNameType)?,
+      "ClientId" : (ClientIdType)?,
+      "ClientSecret" : (ClientSecretType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?,
+      "RefreshTokenValidity" : (RefreshTokenValidityType)?,
+      "AccessTokenValidity" : (AccessTokenValidityType)?,
+      "IdTokenValidity" : (IdTokenValidityType)?,
+      "TokenValidityUnits" : (TokenValidityUnitsType)?,
+      "ReadAttributes" : (ClientPermissionListType)?,
+      "WriteAttributes" : (ClientPermissionListType)?,
+      "ExplicitAuthFlows" : (ExplicitAuthFlowsListType)?,
+      "SupportedIdentityProviders" : (SupportedIdentityProvidersListType)?,
+      "CallbackURLs" : (CallbackURLsListType)?,
+      "LogoutURLs" : (LogoutURLsListType)?,
+      "DefaultRedirectURI" : (RedirectUrlType)?,
+      "AllowedOAuthFlows" : (OAuthFlowsType)?,
+      "AllowedOAuthScopes" : (ScopeListType)?,
+      "AllowedOAuthFlowsUserPoolClient" : (BooleanType)?,
+      "AnalyticsConfiguration" : (AnalyticsConfigurationType)?,
+      "PreventUserExistenceErrors" : (PreventUserExistenceErrorTypes)?
+    )
+
+    alias UserPoolDescriptionType = NamedTuple(
+      "Id" : (UserPoolIdType)?,
+      "Name" : (UserPoolNameType)?,
+      "LambdaConfig" : (LambdaConfigType)?,
+      "Status" : (StatusType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?
+    )
+
+    alias UserPoolIdType = String
+
+    alias UserPoolListType = Array(UserPoolDescriptionType)
+
+    alias UserPoolMfaType = String
+
+    alias UserPoolNameType = String
+
+    alias UserPoolPolicyType = NamedTuple(
+      "PasswordPolicy" : (PasswordPolicyType)?
+    )
+
+    alias UserPoolTaggingException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UserPoolTagsListType = Array(TagKeysType)
+
+    alias UserPoolTagsType = Hash(TagKeysType,TagValueType)
+
+    alias UserPoolType = NamedTuple(
+      "Id" : (UserPoolIdType)?,
+      "Name" : (UserPoolNameType)?,
+      "Policies" : (UserPoolPolicyType)?,
+      "LambdaConfig" : (LambdaConfigType)?,
+      "Status" : (StatusType)?,
+      "LastModifiedDate" : (DateType)?,
+      "CreationDate" : (DateType)?,
+      "SchemaAttributes" : (SchemaAttributesListType)?,
+      "AutoVerifiedAttributes" : (VerifiedAttributesListType)?,
+      "AliasAttributes" : (AliasAttributesListType)?,
+      "UsernameAttributes" : (UsernameAttributesListType)?,
+      "SmsVerificationMessage" : (SmsVerificationMessageType)?,
+      "EmailVerificationMessage" : (EmailVerificationMessageType)?,
+      "EmailVerificationSubject" : (EmailVerificationSubjectType)?,
+      "VerificationMessageTemplate" : (VerificationMessageTemplateType)?,
+      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
+      "MfaConfiguration" : (UserPoolMfaType)?,
+      "DeviceConfiguration" : (DeviceConfigurationType)?,
+      "EstimatedNumberOfUsers" : (IntegerType)?,
+      "EmailConfiguration" : (EmailConfigurationType)?,
+      "SmsConfiguration" : (SmsConfigurationType)?,
+      "UserPoolTags" : (UserPoolTagsType)?,
+      "SmsConfigurationFailure" : (StringType)?,
+      "EmailConfigurationFailure" : (StringType)?,
+      "Domain" : (DomainType)?,
+      "CustomDomain" : (DomainType)?,
+      "AdminCreateUserConfig" : (AdminCreateUserConfigType)?,
+      "UserPoolAddOns" : (UserPoolAddOnsType)?,
+      "UsernameConfiguration" : (UsernameConfigurationType)?,
+      "Arn" : (ArnType)?,
+      "AccountRecoverySetting" : (AccountRecoverySettingType)?
+    )
+
+    alias UserStatusType = String
+
+    alias UserType = NamedTuple(
+      "Username" : (UsernameType)?,
+      "Attributes" : (AttributeListType)?,
+      "UserCreateDate" : (DateType)?,
+      "UserLastModifiedDate" : (DateType)?,
+      "Enabled" : (BooleanType)?,
+      "UserStatus" : (UserStatusType)?,
+      "MFAOptions" : (MFAOptionListType)?
+    )
+
+    alias UsernameAttributeType = String
+
+    alias UsernameAttributesListType = Array(UsernameAttributeType)
+
+    alias UsernameConfigurationType = NamedTuple(
+      "CaseSensitive" : WrappedBooleanType
+    )
+
+    alias UsernameExistsException = NamedTuple(
+      "message" : (MessageType)?
+    )
+
+    alias UsernameType = String
+
+    alias UsersListType = Array(UserType)
+
+    alias VerificationMessageTemplateType = NamedTuple(
+      "SmsMessage" : (SmsVerificationMessageType)?,
+      "EmailMessage" : (EmailVerificationMessageType)?,
+      "EmailSubject" : (EmailVerificationSubjectType)?,
+      "EmailMessageByLink" : (EmailVerificationMessageByLinkType)?,
+      "EmailSubjectByLink" : (EmailVerificationSubjectByLinkType)?,
+      "DefaultEmailOption" : (DefaultEmailOptionType)?
+    )
+
+    alias VerifiedAttributeType = String
+
+    alias VerifiedAttributesListType = Array(VerifiedAttributeType)
+
+    alias VerifySoftwareTokenRequest = NamedTuple(
+      "AccessToken" : (TokenModelType)?,
+      "Session" : (SessionType)?,
+      "UserCode" : SoftwareTokenMFAUserCodeType,
+      "FriendlyDeviceName" : (StringType)?
+    )
+
+    alias VerifySoftwareTokenResponse = NamedTuple(
+      "Status" : (VerifySoftwareTokenResponseType)?,
+      "Session" : (SessionType)?
+    )
+
+    alias VerifySoftwareTokenResponseType = String
+
+    alias VerifyUserAttributeRequest = NamedTuple(
+      "AccessToken" : TokenModelType,
+      "AttributeName" : AttributeNameType,
+      "Code" : ConfirmationCodeType
+    )
+
+    alias VerifyUserAttributeResponse = NamedTuple(
+      
+    )
+
+    alias WrappedBooleanType = Bool
   end
 end

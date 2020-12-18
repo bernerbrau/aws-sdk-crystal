@@ -357,8 +357,8 @@ module Aws::CloudSearch
     #
     # @overload build_suggesters(**params)
     # @param [Hash] params ({})
-    def build_suggesters(params = {}, **options)
-      req = build_request(:build_suggesters, params)
+    def build_suggesters(, **options)
+      req = build_request(:build_suggesters, )
       req.send_request(options)
     end
 
@@ -404,8 +404,8 @@ module Aws::CloudSearch
     #
     # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, **options)
-      req = build_request(:create_domain, params)
+    def create_domain(, **options)
+      req = build_request(:create_domain, )
       req.send_request(options)
     end
 
@@ -469,8 +469,8 @@ module Aws::CloudSearch
     #
     # @overload define_analysis_scheme(**params)
     # @param [Hash] params ({})
-    def define_analysis_scheme(params = {}, **options)
-      req = build_request(:define_analysis_scheme, params)
+    def define_analysis_scheme(, **options)
+      req = build_request(:define_analysis_scheme, )
       req.send_request(options)
     end
 
@@ -521,8 +521,8 @@ module Aws::CloudSearch
     #
     # @overload define_expression(**params)
     # @param [Hash] params ({})
-    def define_expression(params = {}, **options)
-      req = build_request(:define_expression, params)
+    def define_expression(, **options)
+      req = build_request(:define_expression, )
       req.send_request(options)
     end
 
@@ -719,8 +719,8 @@ module Aws::CloudSearch
     #
     # @overload define_index_field(**params)
     # @param [Hash] params ({})
-    def define_index_field(params = {}, **options)
-      req = build_request(:define_index_field, params)
+    def define_index_field(, **options)
+      req = build_request(:define_index_field, )
       req.send_request(options)
     end
 
@@ -779,8 +779,8 @@ module Aws::CloudSearch
     #
     # @overload define_suggester(**params)
     # @param [Hash] params ({})
-    def define_suggester(params = {}, **options)
-      req = build_request(:define_suggester, params)
+    def define_suggester(, **options)
+      req = build_request(:define_suggester, )
       req.send_request(options)
     end
 
@@ -828,8 +828,8 @@ module Aws::CloudSearch
     #
     # @overload delete_analysis_scheme(**params)
     # @param [Hash] params ({})
-    def delete_analysis_scheme(params = {}, **options)
-      req = build_request(:delete_analysis_scheme, params)
+    def delete_analysis_scheme(, **options)
+      req = build_request(:delete_analysis_scheme, )
       req.send_request(options)
     end
 
@@ -874,8 +874,8 @@ module Aws::CloudSearch
     #
     # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, **options)
-      req = build_request(:delete_domain, params)
+    def delete_domain(, **options)
+      req = build_request(:delete_domain, )
       req.send_request(options)
     end
 
@@ -919,8 +919,8 @@ module Aws::CloudSearch
     #
     # @overload delete_expression(**params)
     # @param [Hash] params ({})
-    def delete_expression(params = {}, **options)
-      req = build_request(:delete_expression, params)
+    def delete_expression(, **options)
+      req = build_request(:delete_expression, )
       req.send_request(options)
     end
 
@@ -1026,8 +1026,8 @@ module Aws::CloudSearch
     #
     # @overload delete_index_field(**params)
     # @param [Hash] params ({})
-    def delete_index_field(params = {}, **options)
-      req = build_request(:delete_index_field, params)
+    def delete_index_field(, **options)
+      req = build_request(:delete_index_field, )
       req.send_request(options)
     end
 
@@ -1072,8 +1072,8 @@ module Aws::CloudSearch
     #
     # @overload delete_suggester(**params)
     # @param [Hash] params ({})
-    def delete_suggester(params = {}, **options)
-      req = build_request(:delete_suggester, params)
+    def delete_suggester(, **options)
+      req = build_request(:delete_suggester, )
       req.send_request(options)
     end
 
@@ -1130,8 +1130,8 @@ module Aws::CloudSearch
     #
     # @overload describe_analysis_schemes(**params)
     # @param [Hash] params ({})
-    def describe_analysis_schemes(params = {}, **options)
-      req = build_request(:describe_analysis_schemes, params)
+    def describe_analysis_schemes(, **options)
+      req = build_request(:describe_analysis_schemes, )
       req.send_request(options)
     end
 
@@ -1174,8 +1174,8 @@ module Aws::CloudSearch
     #
     # @overload describe_availability_options(**params)
     # @param [Hash] params ({})
-    def describe_availability_options(params = {}, **options)
-      req = build_request(:describe_availability_options, params)
+    def describe_availability_options(, **options)
+      req = build_request(:describe_availability_options, )
       req.send_request(options)
     end
 
@@ -1219,8 +1219,8 @@ module Aws::CloudSearch
     #
     # @overload describe_domain_endpoint_options(**params)
     # @param [Hash] params ({})
-    def describe_domain_endpoint_options(params = {}, **options)
-      req = build_request(:describe_domain_endpoint_options, params)
+    def describe_domain_endpoint_options(, **options)
+      req = build_request(:describe_domain_endpoint_options, )
       req.send_request(options)
     end
 
@@ -1269,8 +1269,8 @@ module Aws::CloudSearch
     #
     # @overload describe_domains(**params)
     # @param [Hash] params ({})
-    def describe_domains(params = {}, **options)
-      req = build_request(:describe_domains, params)
+    def describe_domains(, **options)
+      req = build_request(:describe_domains, )
       req.send_request(options)
     end
 
@@ -1321,8 +1321,8 @@ module Aws::CloudSearch
     #
     # @overload describe_expressions(**params)
     # @param [Hash] params ({})
-    def describe_expressions(params = {}, **options)
-      req = build_request(:describe_expressions, params)
+    def describe_expressions(, **options)
+      req = build_request(:describe_expressions, )
       req.send_request(options)
     end
 
@@ -1434,8 +1434,8 @@ module Aws::CloudSearch
     #
     # @overload describe_index_fields(**params)
     # @param [Hash] params ({})
-    def describe_index_fields(params = {}, **options)
-      req = build_request(:describe_index_fields, params)
+    def describe_index_fields(, **options)
+      req = build_request(:describe_index_fields, )
       req.send_request(options)
     end
 
@@ -1477,8 +1477,8 @@ module Aws::CloudSearch
     #
     # @overload describe_scaling_parameters(**params)
     # @param [Hash] params ({})
-    def describe_scaling_parameters(params = {}, **options)
-      req = build_request(:describe_scaling_parameters, params)
+    def describe_scaling_parameters(, **options)
+      req = build_request(:describe_scaling_parameters, )
       req.send_request(options)
     end
 
@@ -1522,8 +1522,8 @@ module Aws::CloudSearch
     #
     # @overload describe_service_access_policies(**params)
     # @param [Hash] params ({})
-    def describe_service_access_policies(params = {}, **options)
-      req = build_request(:describe_service_access_policies, params)
+    def describe_service_access_policies(, **options)
+      req = build_request(:describe_service_access_policies, )
       req.send_request(options)
     end
 
@@ -1576,8 +1576,8 @@ module Aws::CloudSearch
     #
     # @overload describe_suggesters(**params)
     # @param [Hash] params ({})
-    def describe_suggesters(params = {}, **options)
-      req = build_request(:describe_suggesters, params)
+    def describe_suggesters(, **options)
+      req = build_request(:describe_suggesters, )
       req.send_request(options)
     end
 
@@ -1608,8 +1608,8 @@ module Aws::CloudSearch
     #
     # @overload index_documents(**params)
     # @param [Hash] params ({})
-    def index_documents(params = {}, **options)
-      req = build_request(:index_documents, params)
+    def index_documents(, **options)
+      req = build_request(:index_documents, )
       req.send_request(options)
     end
 
@@ -1626,8 +1626,8 @@ module Aws::CloudSearch
     #
     # @overload list_domain_names(**params)
     # @param [Hash] params ({})
-    def list_domain_names(params = {}, **options)
-      req = build_request(:list_domain_names, params)
+    def list_domain_names(, **options)
+      req = build_request(:list_domain_names, )
       req.send_request(options)
     end
 
@@ -1677,8 +1677,8 @@ module Aws::CloudSearch
     #
     # @overload update_availability_options(**params)
     # @param [Hash] params ({})
-    def update_availability_options(params = {}, **options)
-      req = build_request(:update_availability_options, params)
+    def update_availability_options(, **options)
+      req = build_request(:update_availability_options, )
       req.send_request(options)
     end
 
@@ -1726,8 +1726,8 @@ module Aws::CloudSearch
     #
     # @overload update_domain_endpoint_options(**params)
     # @param [Hash] params ({})
-    def update_domain_endpoint_options(params = {}, **options)
-      req = build_request(:update_domain_endpoint_options, params)
+    def update_domain_endpoint_options(, **options)
+      req = build_request(:update_domain_endpoint_options, )
       req.send_request(options)
     end
 
@@ -1782,8 +1782,8 @@ module Aws::CloudSearch
     #
     # @overload update_scaling_parameters(**params)
     # @param [Hash] params ({})
-    def update_scaling_parameters(params = {}, **options)
-      req = build_request(:update_scaling_parameters, params)
+    def update_scaling_parameters(, **options)
+      req = build_request(:update_scaling_parameters, )
       req.send_request(options)
     end
 
@@ -1827,8 +1827,8 @@ module Aws::CloudSearch
     #
     # @overload update_service_access_policies(**params)
     # @param [Hash] params ({})
-    def update_service_access_policies(params = {}, **options)
-      req = build_request(:update_service_access_policies, params)
+    def update_service_access_policies(, **options)
+      req = build_request(:update_service_access_policies, )
       req.send_request(options)
     end
 

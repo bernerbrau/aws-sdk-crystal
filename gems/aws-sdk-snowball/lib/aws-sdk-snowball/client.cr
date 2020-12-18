@@ -366,8 +366,8 @@ module Aws::Snowball
     #
     # @overload cancel_cluster(**params)
     # @param [Hash] params ({})
-    def cancel_cluster(params = {}, **options)
-      req = build_request(:cancel_cluster, params)
+    def cancel_cluster(, **options)
+      req = build_request(:cancel_cluster, )
       req.send_request(options)
     end
 
@@ -401,8 +401,8 @@ module Aws::Snowball
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::Snowball
     #
     # @overload create_address(**params)
     # @param [Hash] params ({})
-    def create_address(params = {}, **options)
-      req = build_request(:create_address, params)
+    def create_address(, **options)
+      req = build_request(:create_address, )
       req.send_request(options)
     end
 
@@ -665,8 +665,8 @@ module Aws::Snowball
     #
     # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, **options)
-      req = build_request(:create_cluster, params)
+    def create_cluster(, **options)
+      req = build_request(:create_cluster, )
       req.send_request(options)
     end
 
@@ -886,8 +886,8 @@ module Aws::Snowball
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -923,8 +923,8 @@ module Aws::Snowball
     #
     # @overload create_return_shipping_label(**params)
     # @param [Hash] params ({})
-    def create_return_shipping_label(params = {}, **options)
-      req = build_request(:create_return_shipping_label, params)
+    def create_return_shipping_label(, **options)
+      req = build_request(:create_return_shipping_label, )
       req.send_request(options)
     end
 
@@ -989,8 +989,8 @@ module Aws::Snowball
     #
     # @overload describe_address(**params)
     # @param [Hash] params ({})
-    def describe_address(params = {}, **options)
-      req = build_request(:describe_address, params)
+    def describe_address(, **options)
+      req = build_request(:describe_address, )
       req.send_request(options)
     end
 
@@ -1070,8 +1070,8 @@ module Aws::Snowball
     #
     # @overload describe_addresses(**params)
     # @param [Hash] params ({})
-    def describe_addresses(params = {}, **options)
-      req = build_request(:describe_addresses, params)
+    def describe_addresses(, **options)
+      req = build_request(:describe_addresses, )
       req.send_request(options)
     end
 
@@ -1164,8 +1164,8 @@ module Aws::Snowball
     #
     # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, **options)
-      req = build_request(:describe_cluster, params)
+    def describe_cluster(, **options)
+      req = build_request(:describe_cluster, )
       req.send_request(options)
     end
 
@@ -1319,8 +1319,8 @@ module Aws::Snowball
     #
     # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, **options)
-      req = build_request(:describe_job, params)
+    def describe_job(, **options)
+      req = build_request(:describe_job, )
       req.send_request(options)
     end
 
@@ -1351,8 +1351,8 @@ module Aws::Snowball
     #
     # @overload describe_return_shipping_label(**params)
     # @param [Hash] params ({})
-    def describe_return_shipping_label(params = {}, **options)
-      req = build_request(:describe_return_shipping_label, params)
+    def describe_return_shipping_label(, **options)
+      req = build_request(:describe_return_shipping_label, )
       req.send_request(options)
     end
 
@@ -1421,8 +1421,8 @@ module Aws::Snowball
     #
     # @overload get_job_manifest(**params)
     # @param [Hash] params ({})
-    def get_job_manifest(params = {}, **options)
-      req = build_request(:get_job_manifest, params)
+    def get_job_manifest(, **options)
+      req = build_request(:get_job_manifest, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::Snowball
     #
     # @overload get_job_unlock_code(**params)
     # @param [Hash] params ({})
-    def get_job_unlock_code(params = {}, **options)
-      req = build_request(:get_job_unlock_code, params)
+    def get_job_unlock_code(, **options)
+      req = build_request(:get_job_unlock_code, )
       req.send_request(options)
     end
 
@@ -1527,8 +1527,8 @@ module Aws::Snowball
     #
     # @overload get_snowball_usage(**params)
     # @param [Hash] params ({})
-    def get_snowball_usage(params = {}, **options)
-      req = build_request(:get_snowball_usage, params)
+    def get_snowball_usage(, **options)
+      req = build_request(:get_snowball_usage, )
       req.send_request(options)
     end
 
@@ -1557,8 +1557,8 @@ module Aws::Snowball
     #
     # @overload get_software_updates(**params)
     # @param [Hash] params ({})
-    def get_software_updates(params = {}, **options)
-      req = build_request(:get_software_updates, params)
+    def get_software_updates(, **options)
+      req = build_request(:get_software_updates, )
       req.send_request(options)
     end
 
@@ -1668,8 +1668,8 @@ module Aws::Snowball
     #
     # @overload list_cluster_jobs(**params)
     # @param [Hash] params ({})
-    def list_cluster_jobs(params = {}, **options)
-      req = build_request(:list_cluster_jobs, params)
+    def list_cluster_jobs(, **options)
+      req = build_request(:list_cluster_jobs, )
       req.send_request(options)
     end
 
@@ -1731,8 +1731,8 @@ module Aws::Snowball
     #
     # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, **options)
-      req = build_request(:list_clusters, params)
+    def list_clusters(, **options)
+      req = build_request(:list_clusters, )
       req.send_request(options)
     end
 
@@ -1775,8 +1775,8 @@ module Aws::Snowball
     #
     # @overload list_compatible_images(**params)
     # @param [Hash] params ({})
-    def list_compatible_images(params = {}, **options)
-      req = build_request(:list_compatible_images, params)
+    def list_compatible_images(, **options)
+      req = build_request(:list_compatible_images, )
       req.send_request(options)
     end
 
@@ -1850,8 +1850,8 @@ module Aws::Snowball
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -1956,8 +1956,8 @@ module Aws::Snowball
     #
     # @overload update_cluster(**params)
     # @param [Hash] params ({})
-    def update_cluster(params = {}, **options)
-      req = build_request(:update_cluster, params)
+    def update_cluster(, **options)
+      req = build_request(:update_cluster, )
       req.send_request(options)
     end
 
@@ -2067,8 +2067,8 @@ module Aws::Snowball
     #
     # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, **options)
-      req = build_request(:update_job, params)
+    def update_job(, **options)
+      req = build_request(:update_job, )
       req.send_request(options)
     end
 
@@ -2099,8 +2099,8 @@ module Aws::Snowball
     #
     # @overload update_job_shipment_state(**params)
     # @param [Hash] params ({})
-    def update_job_shipment_state(params = {}, **options)
-      req = build_request(:update_job_shipment_state, params)
+    def update_job_shipment_state(, **options)
+      req = build_request(:update_job_shipment_state, )
       req.send_request(options)
     end
 

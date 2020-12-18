@@ -1069,5 +1069,372 @@ module Aws::SavingsPlans
       include Aws::Structure
     end
 
+    alias Amount = String
+
+    alias ClientToken = String
+
+    alias CreateSavingsPlanRequest = NamedTuple(
+      "savingsPlanOfferingId" : SavingsPlanOfferingId,
+      "commitment" : Amount,
+      "upfrontPaymentAmount" : (Amount)?,
+      "purchaseTime" : (DateTime)?,
+      "clientToken" : (ClientToken)?,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateSavingsPlanResponse = NamedTuple(
+      "savingsPlanId" : (SavingsPlanId)?
+    )
+
+    alias CurrencyCode = String
+
+    alias CurrencyList = Array(CurrencyCode)
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteQueuedSavingsPlanRequest = NamedTuple(
+      "savingsPlanId" : SavingsPlanId
+    )
+
+    alias DeleteQueuedSavingsPlanResponse = NamedTuple(
+      
+    )
+
+    alias DescribeSavingsPlanRatesRequest = NamedTuple(
+      "savingsPlanId" : SavingsPlanId,
+      "filters" : (SavingsPlanRateFilterList)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias DescribeSavingsPlanRatesResponse = NamedTuple(
+      "savingsPlanId" : (SavingsPlanId)?,
+      "searchResults" : (SavingsPlanRateList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeSavingsPlansOfferingRatesRequest = NamedTuple(
+      "savingsPlanOfferingIds" : (UUIDs)?,
+      "savingsPlanPaymentOptions" : (SavingsPlanPaymentOptionList)?,
+      "savingsPlanTypes" : (SavingsPlanTypeList)?,
+      "products" : (SavingsPlanProductTypeList)?,
+      "serviceCodes" : (SavingsPlanRateServiceCodeList)?,
+      "usageTypes" : (SavingsPlanRateUsageTypeList)?,
+      "operations" : (SavingsPlanRateOperationList)?,
+      "filters" : (SavingsPlanOfferingRateFiltersList)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (PageSize)?
+    )
+
+    alias DescribeSavingsPlansOfferingRatesResponse = NamedTuple(
+      "searchResults" : (SavingsPlanOfferingRatesList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeSavingsPlansOfferingsRequest = NamedTuple(
+      "offeringIds" : (UUIDs)?,
+      "paymentOptions" : (SavingsPlanPaymentOptionList)?,
+      "productType" : (SavingsPlanProductType)?,
+      "planTypes" : (SavingsPlanTypeList)?,
+      "durations" : (DurationsList)?,
+      "currencies" : (CurrencyList)?,
+      "descriptions" : (SavingsPlanDescriptionsList)?,
+      "serviceCodes" : (SavingsPlanServiceCodeList)?,
+      "usageTypes" : (SavingsPlanUsageTypeList)?,
+      "operations" : (SavingsPlanOperationList)?,
+      "filters" : (SavingsPlanOfferingFiltersList)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (PageSize)?
+    )
+
+    alias DescribeSavingsPlansOfferingsResponse = NamedTuple(
+      "searchResults" : (SavingsPlanOfferingsList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DescribeSavingsPlansRequest = NamedTuple(
+      "savingsPlanArns" : (SavingsPlanArnList)?,
+      "savingsPlanIds" : (SavingsPlanIdList)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?,
+      "states" : (SavingsPlanStateList)?,
+      "filters" : (SavingsPlanFilterList)?
+    )
+
+    alias DescribeSavingsPlansResponse = NamedTuple(
+      "savingsPlans" : (SavingsPlanList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias DurationsList = Array(SavingsPlansDuration)
+
+    alias EC2InstanceFamily = String
+
+    alias FilterValuesList = Array(JsonSafeFilterValueString)
+
+    alias InternalServerException = NamedTuple(
+      "message" : String
+    )
+
+    alias JsonSafeFilterValueString = String
+
+    alias ListOfStrings = Array(String)
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : SavingsPlanArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias MaxResults = Int32
+
+    alias PageSize = Int32
+
+    alias PaginationToken = String
+
+    alias ParentSavingsPlanOffering = NamedTuple(
+      "offeringId" : (UUID)?,
+      "paymentOption" : (SavingsPlanPaymentOption)?,
+      "planType" : (SavingsPlanType)?,
+      "durationSeconds" : (SavingsPlansDuration)?,
+      "currency" : (CurrencyCode)?,
+      "planDescription" : (SavingsPlanDescription)?
+    )
+
+    alias Region = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : String
+    )
+
+    alias SavingsPlan = NamedTuple(
+      "offeringId" : (SavingsPlanOfferingId)?,
+      "savingsPlanId" : (SavingsPlanId)?,
+      "savingsPlanArn" : (SavingsPlanArn)?,
+      "description" : (String)?,
+      "start" : (String)?,
+      "end" : (String)?,
+      "state" : (SavingsPlanState)?,
+      "region" : (Region)?,
+      "ec2InstanceFamily" : (EC2InstanceFamily)?,
+      "savingsPlanType" : (SavingsPlanType)?,
+      "paymentOption" : (SavingsPlanPaymentOption)?,
+      "productTypes" : (SavingsPlanProductTypeList)?,
+      "currency" : (CurrencyCode)?,
+      "commitment" : (Amount)?,
+      "upfrontPaymentAmount" : (Amount)?,
+      "recurringPaymentAmount" : (Amount)?,
+      "termDurationInSeconds" : (TermDurationInSeconds)?,
+      "tags" : (TagMap)?
+    )
+
+    alias SavingsPlanArn = String
+
+    alias SavingsPlanArnList = Array(SavingsPlanArn)
+
+    alias SavingsPlanDescription = String
+
+    alias SavingsPlanDescriptionsList = Array(SavingsPlanDescription)
+
+    alias SavingsPlanFilter = NamedTuple(
+      "name" : (SavingsPlansFilterName)?,
+      "values" : (ListOfStrings)?
+    )
+
+    alias SavingsPlanFilterList = Array(SavingsPlanFilter)
+
+    alias SavingsPlanId = String
+
+    alias SavingsPlanIdList = Array(SavingsPlanId)
+
+    alias SavingsPlanList = Array(SavingsPlan)
+
+    alias SavingsPlanOffering = NamedTuple(
+      "offeringId" : (UUID)?,
+      "productTypes" : (SavingsPlanProductTypeList)?,
+      "planType" : (SavingsPlanType)?,
+      "description" : (SavingsPlanDescription)?,
+      "paymentOption" : (SavingsPlanPaymentOption)?,
+      "durationSeconds" : (SavingsPlansDuration)?,
+      "currency" : (CurrencyCode)?,
+      "serviceCode" : (SavingsPlanServiceCode)?,
+      "usageType" : (SavingsPlanUsageType)?,
+      "operation" : (SavingsPlanOperation)?,
+      "properties" : (SavingsPlanOfferingPropertyList)?
+    )
+
+    alias SavingsPlanOfferingFilterAttribute = String
+
+    alias SavingsPlanOfferingFilterElement = NamedTuple(
+      "name" : (SavingsPlanOfferingFilterAttribute)?,
+      "values" : (FilterValuesList)?
+    )
+
+    alias SavingsPlanOfferingFiltersList = Array(SavingsPlanOfferingFilterElement)
+
+    alias SavingsPlanOfferingId = String
+
+    alias SavingsPlanOfferingProperty = NamedTuple(
+      "name" : (SavingsPlanOfferingPropertyKey)?,
+      "value" : (JsonSafeFilterValueString)?
+    )
+
+    alias SavingsPlanOfferingPropertyKey = String
+
+    alias SavingsPlanOfferingPropertyList = Array(SavingsPlanOfferingProperty)
+
+    alias SavingsPlanOfferingRate = NamedTuple(
+      "savingsPlanOffering" : (ParentSavingsPlanOffering)?,
+      "rate" : (SavingsPlanRatePricePerUnit)?,
+      "unit" : (SavingsPlanRateUnit)?,
+      "productType" : (SavingsPlanProductType)?,
+      "serviceCode" : (SavingsPlanRateServiceCode)?,
+      "usageType" : (SavingsPlanRateUsageType)?,
+      "operation" : (SavingsPlanRateOperation)?,
+      "properties" : (SavingsPlanOfferingRatePropertyList)?
+    )
+
+    alias SavingsPlanOfferingRateFilterElement = NamedTuple(
+      "name" : (SavingsPlanRateFilterAttribute)?,
+      "values" : (FilterValuesList)?
+    )
+
+    alias SavingsPlanOfferingRateFiltersList = Array(SavingsPlanOfferingRateFilterElement)
+
+    alias SavingsPlanOfferingRateProperty = NamedTuple(
+      "name" : (JsonSafeFilterValueString)?,
+      "value" : (JsonSafeFilterValueString)?
+    )
+
+    alias SavingsPlanOfferingRatePropertyList = Array(SavingsPlanOfferingRateProperty)
+
+    alias SavingsPlanOfferingRatesList = Array(SavingsPlanOfferingRate)
+
+    alias SavingsPlanOfferingsList = Array(SavingsPlanOffering)
+
+    alias SavingsPlanOperation = String
+
+    alias SavingsPlanOperationList = Array(SavingsPlanOperation)
+
+    alias SavingsPlanPaymentOption = String
+
+    alias SavingsPlanPaymentOptionList = Array(SavingsPlanPaymentOption)
+
+    alias SavingsPlanProductType = String
+
+    alias SavingsPlanProductTypeList = Array(SavingsPlanProductType)
+
+    alias SavingsPlanRate = NamedTuple(
+      "rate" : (Amount)?,
+      "currency" : (CurrencyCode)?,
+      "unit" : (SavingsPlanRateUnit)?,
+      "productType" : (SavingsPlanProductType)?,
+      "serviceCode" : (SavingsPlanRateServiceCode)?,
+      "usageType" : (SavingsPlanRateUsageType)?,
+      "operation" : (SavingsPlanRateOperation)?,
+      "properties" : (SavingsPlanRatePropertyList)?
+    )
+
+    alias SavingsPlanRateFilter = NamedTuple(
+      "name" : (SavingsPlanRateFilterName)?,
+      "values" : (ListOfStrings)?
+    )
+
+    alias SavingsPlanRateFilterAttribute = String
+
+    alias SavingsPlanRateFilterList = Array(SavingsPlanRateFilter)
+
+    alias SavingsPlanRateFilterName = String
+
+    alias SavingsPlanRateList = Array(SavingsPlanRate)
+
+    alias SavingsPlanRateOperation = String
+
+    alias SavingsPlanRateOperationList = Array(SavingsPlanRateOperation)
+
+    alias SavingsPlanRatePricePerUnit = String
+
+    alias SavingsPlanRateProperty = NamedTuple(
+      "name" : (SavingsPlanRatePropertyKey)?,
+      "value" : (JsonSafeFilterValueString)?
+    )
+
+    alias SavingsPlanRatePropertyKey = String
+
+    alias SavingsPlanRatePropertyList = Array(SavingsPlanRateProperty)
+
+    alias SavingsPlanRateServiceCode = String
+
+    alias SavingsPlanRateServiceCodeList = Array(SavingsPlanRateServiceCode)
+
+    alias SavingsPlanRateUnit = String
+
+    alias SavingsPlanRateUsageType = String
+
+    alias SavingsPlanRateUsageTypeList = Array(SavingsPlanRateUsageType)
+
+    alias SavingsPlanServiceCode = String
+
+    alias SavingsPlanServiceCodeList = Array(SavingsPlanServiceCode)
+
+    alias SavingsPlanState = String
+
+    alias SavingsPlanStateList = Array(SavingsPlanState)
+
+    alias SavingsPlanType = String
+
+    alias SavingsPlanTypeList = Array(SavingsPlanType)
+
+    alias SavingsPlanUsageType = String
+
+    alias SavingsPlanUsageTypeList = Array(SavingsPlanUsageType)
+
+    alias SavingsPlansDuration = Int64
+
+    alias SavingsPlansFilterName = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : String
+    )
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : SavingsPlanArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TermDurationInSeconds = Int64
+
+    alias UUID = String
+
+    alias UUIDs = Array(UUID)
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : SavingsPlanArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : String
+    )
   end
 end

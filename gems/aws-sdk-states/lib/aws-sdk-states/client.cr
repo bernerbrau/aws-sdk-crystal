@@ -426,8 +426,8 @@ module Aws::States
     #
     # @overload create_activity(**params)
     # @param [Hash] params ({})
-    def create_activity(params = {}, **options)
-      req = build_request(:create_activity, params)
+    def create_activity(, **options)
+      req = build_request(:create_activity, )
       req.send_request(options)
     end
 
@@ -567,8 +567,8 @@ module Aws::States
     #
     # @overload create_state_machine(**params)
     # @param [Hash] params ({})
-    def create_state_machine(params = {}, **options)
-      req = build_request(:create_state_machine, params)
+    def create_state_machine(, **options)
+      req = build_request(:create_state_machine, )
       req.send_request(options)
     end
 
@@ -589,8 +589,8 @@ module Aws::States
     #
     # @overload delete_activity(**params)
     # @param [Hash] params ({})
-    def delete_activity(params = {}, **options)
-      req = build_request(:delete_activity, params)
+    def delete_activity(, **options)
+      req = build_request(:delete_activity, )
       req.send_request(options)
     end
 
@@ -619,8 +619,8 @@ module Aws::States
     #
     # @overload delete_state_machine(**params)
     # @param [Hash] params ({})
-    def delete_state_machine(params = {}, **options)
-      req = build_request(:delete_state_machine, params)
+    def delete_state_machine(, **options)
+      req = build_request(:delete_state_machine, )
       req.send_request(options)
     end
 
@@ -656,8 +656,8 @@ module Aws::States
     #
     # @overload describe_activity(**params)
     # @param [Hash] params ({})
-    def describe_activity(params = {}, **options)
-      req = build_request(:describe_activity, params)
+    def describe_activity(, **options)
+      req = build_request(:describe_activity, )
       req.send_request(options)
     end
 
@@ -711,8 +711,8 @@ module Aws::States
     #
     # @overload describe_execution(**params)
     # @param [Hash] params ({})
-    def describe_execution(params = {}, **options)
-      req = build_request(:describe_execution, params)
+    def describe_execution(, **options)
+      req = build_request(:describe_execution, )
       req.send_request(options)
     end
 
@@ -763,8 +763,8 @@ module Aws::States
     #
     # @overload describe_state_machine(**params)
     # @param [Hash] params ({})
-    def describe_state_machine(params = {}, **options)
-      req = build_request(:describe_state_machine, params)
+    def describe_state_machine(, **options)
+      req = build_request(:describe_state_machine, )
       req.send_request(options)
     end
 
@@ -814,8 +814,8 @@ module Aws::States
     #
     # @overload describe_state_machine_for_execution(**params)
     # @param [Hash] params ({})
-    def describe_state_machine_for_execution(params = {}, **options)
-      req = build_request(:describe_state_machine_for_execution, params)
+    def describe_state_machine_for_execution(, **options)
+      req = build_request(:describe_state_machine_for_execution, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::States
     #
     # @overload get_activity_task(**params)
     # @param [Hash] params ({})
-    def get_activity_task(params = {}, **options)
-      req = build_request(:get_activity_task, params)
+    def get_activity_task(, **options)
+      req = build_request(:get_activity_task, )
       req.send_request(options)
     end
 
@@ -1031,8 +1031,8 @@ module Aws::States
     #
     # @overload get_execution_history(**params)
     # @param [Hash] params ({})
-    def get_execution_history(params = {}, **options)
-      req = build_request(:get_execution_history, params)
+    def get_execution_history(, **options)
+      req = build_request(:get_execution_history, )
       req.send_request(options)
     end
 
@@ -1092,8 +1092,8 @@ module Aws::States
     #
     # @overload list_activities(**params)
     # @param [Hash] params ({})
-    def list_activities(params = {}, **options)
-      req = build_request(:list_activities, params)
+    def list_activities(, **options)
+      req = build_request(:list_activities, )
       req.send_request(options)
     end
 
@@ -1170,8 +1170,8 @@ module Aws::States
     #
     # @overload list_executions(**params)
     # @param [Hash] params ({})
-    def list_executions(params = {}, **options)
-      req = build_request(:list_executions, params)
+    def list_executions(, **options)
+      req = build_request(:list_executions, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::States
     #
     # @overload list_state_machines(**params)
     # @param [Hash] params ({})
-    def list_state_machines(params = {}, **options)
-      req = build_request(:list_state_machines, params)
+    def list_state_machines(, **options)
+      req = build_request(:list_state_machines, )
       req.send_request(options)
     end
 
@@ -1266,8 +1266,8 @@ module Aws::States
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1308,8 +1308,8 @@ module Aws::States
     #
     # @overload send_task_failure(**params)
     # @param [Hash] params ({})
-    def send_task_failure(params = {}, **options)
-      req = build_request(:send_task_failure, params)
+    def send_task_failure(, **options)
+      req = build_request(:send_task_failure, )
       req.send_request(options)
     end
 
@@ -1358,8 +1358,8 @@ module Aws::States
     #
     # @overload send_task_heartbeat(**params)
     # @param [Hash] params ({})
-    def send_task_heartbeat(params = {}, **options)
-      req = build_request(:send_task_heartbeat, params)
+    def send_task_heartbeat(, **options)
+      req = build_request(:send_task_heartbeat, )
       req.send_request(options)
     end
 
@@ -1398,8 +1398,8 @@ module Aws::States
     #
     # @overload send_task_success(**params)
     # @param [Hash] params ({})
-    def send_task_success(params = {}, **options)
-      req = build_request(:send_task_success, params)
+    def send_task_success(, **options)
+      req = build_request(:send_task_success, )
       req.send_request(options)
     end
 
@@ -1482,8 +1482,8 @@ module Aws::States
     #
     # @overload start_execution(**params)
     # @param [Hash] params ({})
-    def start_execution(params = {}, **options)
-      req = build_request(:start_execution, params)
+    def start_execution(, **options)
+      req = build_request(:start_execution, )
       req.send_request(options)
     end
 
@@ -1561,8 +1561,8 @@ module Aws::States
     #
     # @overload start_sync_execution(**params)
     # @param [Hash] params ({})
-    def start_sync_execution(params = {}, **options)
-      req = build_request(:start_sync_execution, params)
+    def start_sync_execution(, **options)
+      req = build_request(:start_sync_execution, )
       req.send_request(options)
     end
 
@@ -1599,8 +1599,8 @@ module Aws::States
     #
     # @overload stop_execution(**params)
     # @param [Hash] params ({})
-    def stop_execution(params = {}, **options)
-      req = build_request(:stop_execution, params)
+    def stop_execution(, **options)
+      req = build_request(:stop_execution, )
       req.send_request(options)
     end
 
@@ -1646,8 +1646,8 @@ module Aws::States
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1673,8 +1673,8 @@ module Aws::States
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1746,8 +1746,8 @@ module Aws::States
     #
     # @overload update_state_machine(**params)
     # @param [Hash] params ({})
-    def update_state_machine(params = {}, **options)
-      req = build_request(:update_state_machine, params)
+    def update_state_machine(, **options)
+      req = build_request(:update_state_machine, )
       req.send_request(options)
     end
 

@@ -365,8 +365,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload add_notification_channels(**params)
     # @param [Hash] params ({})
-    def add_notification_channels(params = {}, **options)
-      req = build_request(:add_notification_channels, params)
+    def add_notification_channels(, **options)
+      req = build_request(:add_notification_channels, )
       req.send_request(options)
     end
 
@@ -461,8 +461,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload batch_get_frame_metric_data(**params)
     # @param [Hash] params ({})
-    def batch_get_frame_metric_data(params = {}, **options)
-      req = build_request(:batch_get_frame_metric_data, params)
+    def batch_get_frame_metric_data(, **options)
+      req = build_request(:batch_get_frame_metric_data, )
       req.send_request(options)
     end
 
@@ -536,8 +536,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload configure_agent(**params)
     # @param [Hash] params ({})
-    def configure_agent(params = {}, **options)
-      req = build_request(:configure_agent, params)
+    def configure_agent(, **options)
+      req = build_request(:configure_agent, )
       req.send_request(options)
     end
 
@@ -605,8 +605,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload create_profiling_group(**params)
     # @param [Hash] params ({})
-    def create_profiling_group(params = {}, **options)
-      req = build_request(:create_profiling_group, params)
+    def create_profiling_group(, **options)
+      req = build_request(:create_profiling_group, )
       req.send_request(options)
     end
 
@@ -627,8 +627,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload delete_profiling_group(**params)
     # @param [Hash] params ({})
-    def delete_profiling_group(params = {}, **options)
-      req = build_request(:delete_profiling_group, params)
+    def delete_profiling_group(, **options)
+      req = build_request(:delete_profiling_group, )
       req.send_request(options)
     end
 
@@ -671,8 +671,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload describe_profiling_group(**params)
     # @param [Hash] params ({})
-    def describe_profiling_group(params = {}, **options)
-      req = build_request(:describe_profiling_group, params)
+    def describe_profiling_group(, **options)
+      req = build_request(:describe_profiling_group, )
       req.send_request(options)
     end
 
@@ -740,8 +740,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload get_findings_report_account_summary(**params)
     # @param [Hash] params ({})
-    def get_findings_report_account_summary(params = {}, **options)
-      req = build_request(:get_findings_report_account_summary, params)
+    def get_findings_report_account_summary(, **options)
+      req = build_request(:get_findings_report_account_summary, )
       req.send_request(options)
     end
 
@@ -774,8 +774,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload get_notification_configuration(**params)
     # @param [Hash] params ({})
-    def get_notification_configuration(params = {}, **options)
-      req = build_request(:get_notification_configuration, params)
+    def get_notification_configuration(, **options)
+      req = build_request(:get_notification_configuration, )
       req.send_request(options)
     end
 
@@ -804,8 +804,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, **options)
-      req = build_request(:get_policy, params)
+    def get_policy(, **options)
+      req = build_request(:get_policy, )
       req.send_request(options)
     end
 
@@ -882,8 +882,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload get_profile(**params)
     # @param [Hash] params ({})
-    def get_profile(params = {}, **options)
-      req = build_request(:get_profile, params)
+    def get_profile(, **options)
+      req = build_request(:get_profile, )
       req.send_request(options)
     end
 
@@ -996,8 +996,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload get_recommendations(**params)
     # @param [Hash] params ({})
-    def get_recommendations(params = {}, **options)
-      req = build_request(:get_recommendations, params)
+    def get_recommendations(, **options)
+      req = build_request(:get_recommendations, )
       req.send_request(options)
     end
 
@@ -1078,8 +1078,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload list_findings_reports(**params)
     # @param [Hash] params ({})
-    def list_findings_reports(params = {}, **options)
-      req = build_request(:list_findings_reports, params)
+    def list_findings_reports(, **options)
+      req = build_request(:list_findings_reports, )
       req.send_request(options)
     end
 
@@ -1160,8 +1160,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload list_profile_times(**params)
     # @param [Hash] params ({})
-    def list_profile_times(params = {}, **options)
-      req = build_request(:list_profile_times, params)
+    def list_profile_times(, **options)
+      req = build_request(:list_profile_times, )
       req.send_request(options)
     end
 
@@ -1242,8 +1242,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload list_profiling_groups(**params)
     # @param [Hash] params ({})
-    def list_profiling_groups(params = {}, **options)
-      req = build_request(:list_profiling_groups, params)
+    def list_profiling_groups(, **options)
+      req = build_request(:list_profiling_groups, )
       req.send_request(options)
     end
 
@@ -1272,8 +1272,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1322,8 +1322,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload post_agent_profile(**params)
     # @param [Hash] params ({})
-    def post_agent_profile(params = {}, **options)
-      req = build_request(:post_agent_profile, params)
+    def post_agent_profile(, **options)
+      req = build_request(:post_agent_profile, )
       req.send_request(options)
     end
 
@@ -1379,8 +1379,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload put_permission(**params)
     # @param [Hash] params ({})
-    def put_permission(params = {}, **options)
-      req = build_request(:put_permission, params)
+    def put_permission(, **options)
+      req = build_request(:put_permission, )
       req.send_request(options)
     end
 
@@ -1416,8 +1416,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload remove_notification_channel(**params)
     # @param [Hash] params ({})
-    def remove_notification_channel(params = {}, **options)
-      req = build_request(:remove_notification_channel, params)
+    def remove_notification_channel(, **options)
+      req = build_request(:remove_notification_channel, )
       req.send_request(options)
     end
 
@@ -1470,8 +1470,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, **options)
-      req = build_request(:remove_permission, params)
+    def remove_permission(, **options)
+      req = build_request(:remove_permission, )
       req.send_request(options)
     end
 
@@ -1512,8 +1512,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload submit_feedback(**params)
     # @param [Hash] params ({})
-    def submit_feedback(params = {}, **options)
-      req = build_request(:submit_feedback, params)
+    def submit_feedback(, **options)
+      req = build_request(:submit_feedback, )
       req.send_request(options)
     end
 
@@ -1541,8 +1541,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1569,8 +1569,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1615,8 +1615,8 @@ module Aws::CodeGuruProfiler
     #
     # @overload update_profiling_group(**params)
     # @param [Hash] params ({})
-    def update_profiling_group(params = {}, **options)
-      req = build_request(:update_profiling_group, params)
+    def update_profiling_group(, **options)
+      req = build_request(:update_profiling_group, )
       req.send_request(options)
     end
 

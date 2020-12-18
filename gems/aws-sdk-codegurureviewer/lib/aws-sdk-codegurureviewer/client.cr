@@ -429,8 +429,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload associate_repository(**params)
     # @param [Hash] params ({})
-    def associate_repository(params = {}, **options)
-      req = build_request(:associate_repository, params)
+    def associate_repository(, **options)
+      req = build_request(:associate_repository, )
       req.send_request(options)
     end
 
@@ -520,8 +520,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload create_code_review(**params)
     # @param [Hash] params ({})
-    def create_code_review(params = {}, **options)
-      req = build_request(:create_code_review, params)
+    def create_code_review(, **options)
+      req = build_request(:create_code_review, )
       req.send_request(options)
     end
 
@@ -569,8 +569,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload describe_code_review(**params)
     # @param [Hash] params ({})
-    def describe_code_review(params = {}, **options)
-      req = build_request(:describe_code_review, params)
+    def describe_code_review(, **options)
+      req = build_request(:describe_code_review, )
       req.send_request(options)
     end
 
@@ -627,8 +627,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload describe_recommendation_feedback(**params)
     # @param [Hash] params ({})
-    def describe_recommendation_feedback(params = {}, **options)
-      req = build_request(:describe_recommendation_feedback, params)
+    def describe_recommendation_feedback(, **options)
+      req = build_request(:describe_recommendation_feedback, )
       req.send_request(options)
     end
 
@@ -679,8 +679,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload describe_repository_association(**params)
     # @param [Hash] params ({})
-    def describe_repository_association(params = {}, **options)
-      req = build_request(:describe_repository_association, params)
+    def describe_repository_association(, **options)
+      req = build_request(:describe_repository_association, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload disassociate_repository(**params)
     # @param [Hash] params ({})
-    def disassociate_repository(params = {}, **options)
-      req = build_request(:disassociate_repository, params)
+    def disassociate_repository(, **options)
+      req = build_request(:disassociate_repository, )
       req.send_request(options)
     end
 
@@ -811,8 +811,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload list_code_reviews(**params)
     # @param [Hash] params ({})
-    def list_code_reviews(params = {}, **options)
-      req = build_request(:list_code_reviews, params)
+    def list_code_reviews(, **options)
+      req = build_request(:list_code_reviews, )
       req.send_request(options)
     end
 
@@ -887,8 +887,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload list_recommendation_feedback(**params)
     # @param [Hash] params ({})
-    def list_recommendation_feedback(params = {}, **options)
-      req = build_request(:list_recommendation_feedback, params)
+    def list_recommendation_feedback(, **options)
+      req = build_request(:list_recommendation_feedback, )
       req.send_request(options)
     end
 
@@ -937,8 +937,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload list_recommendations(**params)
     # @param [Hash] params ({})
-    def list_recommendations(params = {}, **options)
-      req = build_request(:list_recommendations, params)
+    def list_recommendations(, **options)
+      req = build_request(:list_recommendations, )
       req.send_request(options)
     end
 
@@ -1066,8 +1066,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload list_repository_associations(**params)
     # @param [Hash] params ({})
-    def list_repository_associations(params = {}, **options)
-      req = build_request(:list_repository_associations, params)
+    def list_repository_associations(, **options)
+      req = build_request(:list_repository_associations, )
       req.send_request(options)
     end
 
@@ -1103,8 +1103,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1141,8 +1141,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload put_recommendation_feedback(**params)
     # @param [Hash] params ({})
-    def put_recommendation_feedback(params = {}, **options)
-      req = build_request(:put_recommendation_feedback, params)
+    def put_recommendation_feedback(, **options)
+      req = build_request(:put_recommendation_feedback, )
       req.send_request(options)
     end
 
@@ -1185,8 +1185,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1219,8 +1219,8 @@ module Aws::CodeGuruReviewer
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

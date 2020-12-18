@@ -9050,5 +9050,1715 @@ module Aws::ElastiCache
     #
     class UserQuotaExceededFault < Aws::EmptyStructure; end
 
+    alias APICallRateForCustomerExceededFault = NamedTuple(
+      
+    )
+
+    alias AZMode = String
+
+    alias AccessString = String
+
+    alias AddTagsToResourceMessage = NamedTuple(
+      "ResourceName" : String,
+      "Tags" : TagList
+    )
+
+    alias AllowedNodeGroupId = String
+
+    alias AllowedNodeTypeModificationsMessage = NamedTuple(
+      "ScaleUpModifications" : (NodeTypeList)?,
+      "ScaleDownModifications" : (NodeTypeList)?
+    )
+
+    alias AuthTokenUpdateStatus = String
+
+    alias AuthTokenUpdateStrategyType = String
+
+    alias Authentication = NamedTuple(
+      "Type" : (AuthenticationType)?,
+      "PasswordCount" : (IntegerOptional)?
+    )
+
+    alias AuthenticationType = String
+
+    alias AuthorizationAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias AuthorizationNotFoundFault = NamedTuple(
+      
+    )
+
+    alias AuthorizeCacheSecurityGroupIngressMessage = NamedTuple(
+      "CacheSecurityGroupName" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupOwnerId" : String
+    )
+
+    alias AuthorizeCacheSecurityGroupIngressResult = NamedTuple(
+      "CacheSecurityGroup" : (CacheSecurityGroup)?
+    )
+
+    alias AutomaticFailoverStatus = String
+
+    alias AvailabilityZone = NamedTuple(
+      "Name" : (String)?
+    )
+
+    alias AvailabilityZonesList = Array(String)
+
+    alias AwsQueryErrorMessage = String
+
+    alias BatchApplyUpdateActionMessage = NamedTuple(
+      "ReplicationGroupIds" : (ReplicationGroupIdList)?,
+      "CacheClusterIds" : (CacheClusterIdList)?,
+      "ServiceUpdateName" : String
+    )
+
+    alias BatchStopUpdateActionMessage = NamedTuple(
+      "ReplicationGroupIds" : (ReplicationGroupIdList)?,
+      "CacheClusterIds" : (CacheClusterIdList)?,
+      "ServiceUpdateName" : String
+    )
+
+    alias Boolean = Bool
+
+    alias BooleanOptional = Bool
+
+    alias CacheCluster = NamedTuple(
+      "CacheClusterId" : (String)?,
+      "ConfigurationEndpoint" : (Endpoint)?,
+      "ClientDownloadLandingPage" : (String)?,
+      "CacheNodeType" : (String)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "CacheClusterStatus" : (String)?,
+      "NumCacheNodes" : (IntegerOptional)?,
+      "PreferredAvailabilityZone" : (String)?,
+      "PreferredOutpostArn" : (String)?,
+      "CacheClusterCreateTime" : (TStamp)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "PendingModifiedValues" : (PendingModifiedValues)?,
+      "NotificationConfiguration" : (NotificationConfiguration)?,
+      "CacheSecurityGroups" : (CacheSecurityGroupMembershipList)?,
+      "CacheParameterGroup" : (CacheParameterGroupStatus)?,
+      "CacheSubnetGroupName" : (String)?,
+      "CacheNodes" : (CacheNodeList)?,
+      "AutoMinorVersionUpgrade" : (Boolean)?,
+      "SecurityGroups" : (SecurityGroupMembershipList)?,
+      "ReplicationGroupId" : (String)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "AuthTokenEnabled" : (BooleanOptional)?,
+      "AuthTokenLastModifiedDate" : (TStamp)?,
+      "TransitEncryptionEnabled" : (BooleanOptional)?,
+      "AtRestEncryptionEnabled" : (BooleanOptional)?,
+      "ARN" : (String)?
+    )
+
+    alias CacheClusterAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias CacheClusterIdList = Array(String)
+
+    alias CacheClusterList = Array(CacheCluster)
+
+    alias CacheClusterMessage = NamedTuple(
+      "Marker" : (String)?,
+      "CacheClusters" : (CacheClusterList)?
+    )
+
+    alias CacheClusterNotFoundFault = NamedTuple(
+      
+    )
+
+    alias CacheEngineVersion = NamedTuple(
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "CacheParameterGroupFamily" : (String)?,
+      "CacheEngineDescription" : (String)?,
+      "CacheEngineVersionDescription" : (String)?
+    )
+
+    alias CacheEngineVersionList = Array(CacheEngineVersion)
+
+    alias CacheEngineVersionMessage = NamedTuple(
+      "Marker" : (String)?,
+      "CacheEngineVersions" : (CacheEngineVersionList)?
+    )
+
+    alias CacheNode = NamedTuple(
+      "CacheNodeId" : (String)?,
+      "CacheNodeStatus" : (String)?,
+      "CacheNodeCreateTime" : (TStamp)?,
+      "Endpoint" : (Endpoint)?,
+      "ParameterGroupStatus" : (String)?,
+      "SourceCacheNodeId" : (String)?,
+      "CustomerAvailabilityZone" : (String)?,
+      "CustomerOutpostArn" : (String)?
+    )
+
+    alias CacheNodeIdsList = Array(String)
+
+    alias CacheNodeList = Array(CacheNode)
+
+    alias CacheNodeTypeSpecificParameter = NamedTuple(
+      "ParameterName" : (String)?,
+      "Description" : (String)?,
+      "Source" : (String)?,
+      "DataType" : (String)?,
+      "AllowedValues" : (String)?,
+      "IsModifiable" : (Boolean)?,
+      "MinimumEngineVersion" : (String)?,
+      "CacheNodeTypeSpecificValues" : (CacheNodeTypeSpecificValueList)?,
+      "ChangeType" : (ChangeType)?
+    )
+
+    alias CacheNodeTypeSpecificParametersList = Array(CacheNodeTypeSpecificParameter)
+
+    alias CacheNodeTypeSpecificValue = NamedTuple(
+      "CacheNodeType" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias CacheNodeTypeSpecificValueList = Array(CacheNodeTypeSpecificValue)
+
+    alias CacheNodeUpdateStatus = NamedTuple(
+      "CacheNodeId" : (String)?,
+      "NodeUpdateStatus" : (NodeUpdateStatus)?,
+      "NodeDeletionDate" : (TStamp)?,
+      "NodeUpdateStartDate" : (TStamp)?,
+      "NodeUpdateEndDate" : (TStamp)?,
+      "NodeUpdateInitiatedBy" : (NodeUpdateInitiatedBy)?,
+      "NodeUpdateInitiatedDate" : (TStamp)?,
+      "NodeUpdateStatusModifiedDate" : (TStamp)?
+    )
+
+    alias CacheNodeUpdateStatusList = Array(CacheNodeUpdateStatus)
+
+    alias CacheParameterGroup = NamedTuple(
+      "CacheParameterGroupName" : (String)?,
+      "CacheParameterGroupFamily" : (String)?,
+      "Description" : (String)?,
+      "IsGlobal" : (Boolean)?,
+      "ARN" : (String)?
+    )
+
+    alias CacheParameterGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias CacheParameterGroupDetails = NamedTuple(
+      "Marker" : (String)?,
+      "Parameters" : (ParametersList)?,
+      "CacheNodeTypeSpecificParameters" : (CacheNodeTypeSpecificParametersList)?
+    )
+
+    alias CacheParameterGroupList = Array(CacheParameterGroup)
+
+    alias CacheParameterGroupNameMessage = NamedTuple(
+      "CacheParameterGroupName" : (String)?
+    )
+
+    alias CacheParameterGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias CacheParameterGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias CacheParameterGroupStatus = NamedTuple(
+      "CacheParameterGroupName" : (String)?,
+      "ParameterApplyStatus" : (String)?,
+      "CacheNodeIdsToReboot" : (CacheNodeIdsList)?
+    )
+
+    alias CacheParameterGroupsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "CacheParameterGroups" : (CacheParameterGroupList)?
+    )
+
+    alias CacheSecurityGroup = NamedTuple(
+      "OwnerId" : (String)?,
+      "CacheSecurityGroupName" : (String)?,
+      "Description" : (String)?,
+      "EC2SecurityGroups" : (EC2SecurityGroupList)?,
+      "ARN" : (String)?
+    )
+
+    alias CacheSecurityGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias CacheSecurityGroupMembership = NamedTuple(
+      "CacheSecurityGroupName" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias CacheSecurityGroupMembershipList = Array(CacheSecurityGroupMembership)
+
+    alias CacheSecurityGroupMessage = NamedTuple(
+      "Marker" : (String)?,
+      "CacheSecurityGroups" : (CacheSecurityGroups)?
+    )
+
+    alias CacheSecurityGroupNameList = Array(String)
+
+    alias CacheSecurityGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias CacheSecurityGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias CacheSecurityGroups = Array(CacheSecurityGroup)
+
+    alias CacheSubnetGroup = NamedTuple(
+      "CacheSubnetGroupName" : (String)?,
+      "CacheSubnetGroupDescription" : (String)?,
+      "VpcId" : (String)?,
+      "Subnets" : (SubnetList)?,
+      "ARN" : (String)?
+    )
+
+    alias CacheSubnetGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias CacheSubnetGroupInUse = NamedTuple(
+      
+    )
+
+    alias CacheSubnetGroupMessage = NamedTuple(
+      "Marker" : (String)?,
+      "CacheSubnetGroups" : (CacheSubnetGroups)?
+    )
+
+    alias CacheSubnetGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias CacheSubnetGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias CacheSubnetGroups = Array(CacheSubnetGroup)
+
+    alias CacheSubnetQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ChangeType = String
+
+    alias ClusterIdList = Array(String)
+
+    alias ClusterQuotaForCustomerExceededFault = NamedTuple(
+      
+    )
+
+    alias CompleteMigrationMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "Force" : (Boolean)?
+    )
+
+    alias CompleteMigrationResponse = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias ConfigureShard = NamedTuple(
+      "NodeGroupId" : AllowedNodeGroupId,
+      "NewReplicaCount" : Integer,
+      "PreferredAvailabilityZones" : (PreferredAvailabilityZoneList)?,
+      "PreferredOutpostArns" : (PreferredOutpostArnList)?
+    )
+
+    alias CopySnapshotMessage = NamedTuple(
+      "SourceSnapshotName" : String,
+      "TargetSnapshotName" : String,
+      "TargetBucket" : (String)?,
+      "KmsKeyId" : (String)?
+    )
+
+    alias CopySnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias CreateCacheClusterMessage = NamedTuple(
+      "CacheClusterId" : String,
+      "ReplicationGroupId" : (String)?,
+      "AZMode" : (AZMode)?,
+      "PreferredAvailabilityZone" : (String)?,
+      "PreferredAvailabilityZones" : (PreferredAvailabilityZoneList)?,
+      "NumCacheNodes" : (IntegerOptional)?,
+      "CacheNodeType" : (String)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "CacheParameterGroupName" : (String)?,
+      "CacheSubnetGroupName" : (String)?,
+      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
+      "SecurityGroupIds" : (SecurityGroupIdsList)?,
+      "Tags" : (TagList)?,
+      "SnapshotArns" : (SnapshotArnsList)?,
+      "SnapshotName" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "NotificationTopicArn" : (String)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "AuthToken" : (String)?,
+      "OutpostMode" : (OutpostMode)?,
+      "PreferredOutpostArn" : (String)?,
+      "PreferredOutpostArns" : (PreferredOutpostArnList)?
+    )
+
+    alias CreateCacheClusterResult = NamedTuple(
+      "CacheCluster" : (CacheCluster)?
+    )
+
+    alias CreateCacheParameterGroupMessage = NamedTuple(
+      "CacheParameterGroupName" : String,
+      "CacheParameterGroupFamily" : String,
+      "Description" : String
+    )
+
+    alias CreateCacheParameterGroupResult = NamedTuple(
+      "CacheParameterGroup" : (CacheParameterGroup)?
+    )
+
+    alias CreateCacheSecurityGroupMessage = NamedTuple(
+      "CacheSecurityGroupName" : String,
+      "Description" : String
+    )
+
+    alias CreateCacheSecurityGroupResult = NamedTuple(
+      "CacheSecurityGroup" : (CacheSecurityGroup)?
+    )
+
+    alias CreateCacheSubnetGroupMessage = NamedTuple(
+      "CacheSubnetGroupName" : String,
+      "CacheSubnetGroupDescription" : String,
+      "SubnetIds" : SubnetIdentifierList
+    )
+
+    alias CreateCacheSubnetGroupResult = NamedTuple(
+      "CacheSubnetGroup" : (CacheSubnetGroup)?
+    )
+
+    alias CreateGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupIdSuffix" : String,
+      "GlobalReplicationGroupDescription" : (String)?,
+      "PrimaryReplicationGroupId" : String
+    )
+
+    alias CreateGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias CreateReplicationGroupMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "ReplicationGroupDescription" : String,
+      "GlobalReplicationGroupId" : (String)?,
+      "PrimaryClusterId" : (String)?,
+      "AutomaticFailoverEnabled" : (BooleanOptional)?,
+      "MultiAZEnabled" : (BooleanOptional)?,
+      "NumCacheClusters" : (IntegerOptional)?,
+      "PreferredCacheClusterAZs" : (AvailabilityZonesList)?,
+      "NumNodeGroups" : (IntegerOptional)?,
+      "ReplicasPerNodeGroup" : (IntegerOptional)?,
+      "NodeGroupConfiguration" : (NodeGroupConfigurationList)?,
+      "CacheNodeType" : (String)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "CacheParameterGroupName" : (String)?,
+      "CacheSubnetGroupName" : (String)?,
+      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
+      "SecurityGroupIds" : (SecurityGroupIdsList)?,
+      "Tags" : (TagList)?,
+      "SnapshotArns" : (SnapshotArnsList)?,
+      "SnapshotName" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "NotificationTopicArn" : (String)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "AuthToken" : (String)?,
+      "TransitEncryptionEnabled" : (BooleanOptional)?,
+      "AtRestEncryptionEnabled" : (BooleanOptional)?,
+      "KmsKeyId" : (String)?,
+      "UserGroupIds" : (UserGroupIdListInput)?
+    )
+
+    alias CreateReplicationGroupResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias CreateSnapshotMessage = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "CacheClusterId" : (String)?,
+      "SnapshotName" : String,
+      "KmsKeyId" : (String)?
+    )
+
+    alias CreateSnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias CreateUserGroupMessage = NamedTuple(
+      "UserGroupId" : String,
+      "Engine" : EngineType,
+      "UserIds" : (UserIdListInput)?
+    )
+
+    alias CreateUserMessage = NamedTuple(
+      "UserId" : UserId,
+      "UserName" : UserName,
+      "Engine" : EngineType,
+      "Passwords" : (PasswordListInput)?,
+      "AccessString" : AccessString,
+      "NoPasswordRequired" : (BooleanOptional)?
+    )
+
+    alias CustomerNodeEndpoint = NamedTuple(
+      "Address" : (String)?,
+      "Port" : (IntegerOptional)?
+    )
+
+    alias CustomerNodeEndpointList = Array(CustomerNodeEndpoint)
+
+    alias DecreaseNodeGroupsInGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "NodeGroupCount" : Integer,
+      "GlobalNodeGroupsToRemove" : (GlobalNodeGroupIdList)?,
+      "GlobalNodeGroupsToRetain" : (GlobalNodeGroupIdList)?,
+      "ApplyImmediately" : Boolean
+    )
+
+    alias DecreaseNodeGroupsInGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias DecreaseReplicaCountMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "NewReplicaCount" : (IntegerOptional)?,
+      "ReplicaConfiguration" : (ReplicaConfigurationList)?,
+      "ReplicasToRemove" : (RemoveReplicasList)?,
+      "ApplyImmediately" : Boolean
+    )
+
+    alias DecreaseReplicaCountResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias DefaultUserAssociatedToUserGroupFault = NamedTuple(
+      
+    )
+
+    alias DefaultUserRequired = NamedTuple(
+      
+    )
+
+    alias DeleteCacheClusterMessage = NamedTuple(
+      "CacheClusterId" : String,
+      "FinalSnapshotIdentifier" : (String)?
+    )
+
+    alias DeleteCacheClusterResult = NamedTuple(
+      "CacheCluster" : (CacheCluster)?
+    )
+
+    alias DeleteCacheParameterGroupMessage = NamedTuple(
+      "CacheParameterGroupName" : String
+    )
+
+    alias DeleteCacheSecurityGroupMessage = NamedTuple(
+      "CacheSecurityGroupName" : String
+    )
+
+    alias DeleteCacheSubnetGroupMessage = NamedTuple(
+      "CacheSubnetGroupName" : String
+    )
+
+    alias DeleteGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "RetainPrimaryReplicationGroup" : Boolean
+    )
+
+    alias DeleteGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias DeleteReplicationGroupMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "RetainPrimaryCluster" : (BooleanOptional)?,
+      "FinalSnapshotIdentifier" : (String)?
+    )
+
+    alias DeleteReplicationGroupResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias DeleteSnapshotMessage = NamedTuple(
+      "SnapshotName" : String
+    )
+
+    alias DeleteSnapshotResult = NamedTuple(
+      "Snapshot" : (Snapshot)?
+    )
+
+    alias DeleteUserGroupMessage = NamedTuple(
+      "UserGroupId" : String
+    )
+
+    alias DeleteUserMessage = NamedTuple(
+      "UserId" : UserId
+    )
+
+    alias DescribeCacheClustersMessage = NamedTuple(
+      "CacheClusterId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "ShowCacheNodeInfo" : (BooleanOptional)?,
+      "ShowCacheClustersNotInReplicationGroups" : (BooleanOptional)?
+    )
+
+    alias DescribeCacheEngineVersionsMessage = NamedTuple(
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "CacheParameterGroupFamily" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "DefaultOnly" : (Boolean)?
+    )
+
+    alias DescribeCacheParameterGroupsMessage = NamedTuple(
+      "CacheParameterGroupName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeCacheParametersMessage = NamedTuple(
+      "CacheParameterGroupName" : String,
+      "Source" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeCacheSecurityGroupsMessage = NamedTuple(
+      "CacheSecurityGroupName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeCacheSubnetGroupsMessage = NamedTuple(
+      "CacheSubnetGroupName" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEngineDefaultParametersMessage = NamedTuple(
+      "CacheParameterGroupFamily" : String,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEngineDefaultParametersResult = NamedTuple(
+      "EngineDefaults" : (EngineDefaults)?
+    )
+
+    alias DescribeEventsMessage = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Duration" : (IntegerOptional)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeGlobalReplicationGroupsMessage = NamedTuple(
+      "GlobalReplicationGroupId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "ShowMemberInfo" : (BooleanOptional)?
+    )
+
+    alias DescribeGlobalReplicationGroupsResult = NamedTuple(
+      "Marker" : (String)?,
+      "GlobalReplicationGroups" : (GlobalReplicationGroupList)?
+    )
+
+    alias DescribeReplicationGroupsMessage = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReservedCacheNodesMessage = NamedTuple(
+      "ReservedCacheNodeId" : (String)?,
+      "ReservedCacheNodesOfferingId" : (String)?,
+      "CacheNodeType" : (String)?,
+      "Duration" : (String)?,
+      "ProductDescription" : (String)?,
+      "OfferingType" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeReservedCacheNodesOfferingsMessage = NamedTuple(
+      "ReservedCacheNodesOfferingId" : (String)?,
+      "CacheNodeType" : (String)?,
+      "Duration" : (String)?,
+      "ProductDescription" : (String)?,
+      "OfferingType" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeServiceUpdatesMessage = NamedTuple(
+      "ServiceUpdateName" : (String)?,
+      "ServiceUpdateStatus" : (ServiceUpdateStatusList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeSnapshotsListMessage = NamedTuple(
+      "Marker" : (String)?,
+      "Snapshots" : (SnapshotList)?
+    )
+
+    alias DescribeSnapshotsMessage = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "CacheClusterId" : (String)?,
+      "SnapshotName" : (String)?,
+      "SnapshotSource" : (String)?,
+      "Marker" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "ShowNodeGroupConfig" : (BooleanOptional)?
+    )
+
+    alias DescribeUpdateActionsMessage = NamedTuple(
+      "ServiceUpdateName" : (String)?,
+      "ReplicationGroupIds" : (ReplicationGroupIdList)?,
+      "CacheClusterIds" : (CacheClusterIdList)?,
+      "Engine" : (String)?,
+      "ServiceUpdateStatus" : (ServiceUpdateStatusList)?,
+      "ServiceUpdateTimeRange" : (TimeRangeFilter)?,
+      "UpdateActionStatus" : (UpdateActionStatusList)?,
+      "ShowNodeLevelUpdateStatus" : (BooleanOptional)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeUserGroupsMessage = NamedTuple(
+      "UserGroupId" : (String)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeUserGroupsResult = NamedTuple(
+      "UserGroups" : (UserGroupList)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeUsersMessage = NamedTuple(
+      "Engine" : (EngineType)?,
+      "UserId" : (UserId)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeUsersResult = NamedTuple(
+      "Users" : (UserList)?,
+      "Marker" : (String)?
+    )
+
+    alias DisassociateGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "ReplicationGroupId" : String,
+      "ReplicationGroupRegion" : String
+    )
+
+    alias DisassociateGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias Double = Float64
+
+    alias DuplicateUserNameFault = NamedTuple(
+      
+    )
+
+    alias EC2SecurityGroup = NamedTuple(
+      "Status" : (String)?,
+      "EC2SecurityGroupName" : (String)?,
+      "EC2SecurityGroupOwnerId" : (String)?
+    )
+
+    alias EC2SecurityGroupList = Array(EC2SecurityGroup)
+
+    alias Endpoint = NamedTuple(
+      "Address" : (String)?,
+      "Port" : (Integer)?
+    )
+
+    alias EngineDefaults = NamedTuple(
+      "CacheParameterGroupFamily" : (String)?,
+      "Marker" : (String)?,
+      "Parameters" : (ParametersList)?,
+      "CacheNodeTypeSpecificParameters" : (CacheNodeTypeSpecificParametersList)?
+    )
+
+    alias EngineType = String
+
+    alias Event = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "Message" : (String)?,
+      "Date" : (TStamp)?
+    )
+
+    alias EventList = Array(Event)
+
+    alias EventsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "Events" : (EventList)?
+    )
+
+    alias FailoverGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "PrimaryRegion" : String,
+      "PrimaryReplicationGroupId" : String
+    )
+
+    alias FailoverGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias Filter = NamedTuple(
+      "Name" : FilterName,
+      "Values" : FilterValueList
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValueList = Array(FilterValue)
+
+    alias GlobalNodeGroup = NamedTuple(
+      "GlobalNodeGroupId" : (String)?,
+      "Slots" : (String)?
+    )
+
+    alias GlobalNodeGroupIdList = Array(String)
+
+    alias GlobalNodeGroupList = Array(GlobalNodeGroup)
+
+    alias GlobalReplicationGroup = NamedTuple(
+      "GlobalReplicationGroupId" : (String)?,
+      "GlobalReplicationGroupDescription" : (String)?,
+      "Status" : (String)?,
+      "CacheNodeType" : (String)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "Members" : (GlobalReplicationGroupMemberList)?,
+      "ClusterEnabled" : (BooleanOptional)?,
+      "GlobalNodeGroups" : (GlobalNodeGroupList)?,
+      "AuthTokenEnabled" : (BooleanOptional)?,
+      "TransitEncryptionEnabled" : (BooleanOptional)?,
+      "AtRestEncryptionEnabled" : (BooleanOptional)?,
+      "ARN" : (String)?
+    )
+
+    alias GlobalReplicationGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias GlobalReplicationGroupInfo = NamedTuple(
+      "GlobalReplicationGroupId" : (String)?,
+      "GlobalReplicationGroupMemberRole" : (String)?
+    )
+
+    alias GlobalReplicationGroupList = Array(GlobalReplicationGroup)
+
+    alias GlobalReplicationGroupMember = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "ReplicationGroupRegion" : (String)?,
+      "Role" : (String)?,
+      "AutomaticFailover" : (AutomaticFailoverStatus)?,
+      "Status" : (String)?
+    )
+
+    alias GlobalReplicationGroupMemberList = Array(GlobalReplicationGroupMember)
+
+    alias GlobalReplicationGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias IncreaseNodeGroupsInGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "NodeGroupCount" : Integer,
+      "RegionalConfigurations" : (RegionalConfigurationList)?,
+      "ApplyImmediately" : Boolean
+    )
+
+    alias IncreaseNodeGroupsInGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias IncreaseReplicaCountMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "NewReplicaCount" : (IntegerOptional)?,
+      "ReplicaConfiguration" : (ReplicaConfigurationList)?,
+      "ApplyImmediately" : Boolean
+    )
+
+    alias IncreaseReplicaCountResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias InsufficientCacheClusterCapacityFault = NamedTuple(
+      
+    )
+
+    alias Integer = Int32
+
+    alias IntegerOptional = Int32
+
+    alias InvalidARNFault = NamedTuple(
+      
+    )
+
+    alias InvalidCacheClusterStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidCacheParameterGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidCacheSecurityGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidGlobalReplicationGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidKMSKeyFault = NamedTuple(
+      
+    )
+
+    alias InvalidParameterCombinationException = NamedTuple(
+      "message" : (AwsQueryErrorMessage)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "message" : (AwsQueryErrorMessage)?
+    )
+
+    alias InvalidReplicationGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidSnapshotStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidSubnet = NamedTuple(
+      
+    )
+
+    alias InvalidUserGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidUserStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidVPCNetworkStateFault = NamedTuple(
+      
+    )
+
+    alias KeyList = Array(String)
+
+    alias ListAllowedNodeTypeModificationsMessage = NamedTuple(
+      "CacheClusterId" : (String)?,
+      "ReplicationGroupId" : (String)?
+    )
+
+    alias ListTagsForResourceMessage = NamedTuple(
+      "ResourceName" : String
+    )
+
+    alias ModifyCacheClusterMessage = NamedTuple(
+      "CacheClusterId" : String,
+      "NumCacheNodes" : (IntegerOptional)?,
+      "CacheNodeIdsToRemove" : (CacheNodeIdsList)?,
+      "AZMode" : (AZMode)?,
+      "NewAvailabilityZones" : (PreferredAvailabilityZoneList)?,
+      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
+      "SecurityGroupIds" : (SecurityGroupIdsList)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "NotificationTopicArn" : (String)?,
+      "CacheParameterGroupName" : (String)?,
+      "NotificationTopicStatus" : (String)?,
+      "ApplyImmediately" : (Boolean)?,
+      "EngineVersion" : (String)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "CacheNodeType" : (String)?,
+      "AuthToken" : (String)?,
+      "AuthTokenUpdateStrategy" : (AuthTokenUpdateStrategyType)?
+    )
+
+    alias ModifyCacheClusterResult = NamedTuple(
+      "CacheCluster" : (CacheCluster)?
+    )
+
+    alias ModifyCacheParameterGroupMessage = NamedTuple(
+      "CacheParameterGroupName" : String,
+      "ParameterNameValues" : ParameterNameValueList
+    )
+
+    alias ModifyCacheSubnetGroupMessage = NamedTuple(
+      "CacheSubnetGroupName" : String,
+      "CacheSubnetGroupDescription" : (String)?,
+      "SubnetIds" : (SubnetIdentifierList)?
+    )
+
+    alias ModifyCacheSubnetGroupResult = NamedTuple(
+      "CacheSubnetGroup" : (CacheSubnetGroup)?
+    )
+
+    alias ModifyGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "ApplyImmediately" : Boolean,
+      "CacheNodeType" : (String)?,
+      "EngineVersion" : (String)?,
+      "GlobalReplicationGroupDescription" : (String)?,
+      "AutomaticFailoverEnabled" : (BooleanOptional)?
+    )
+
+    alias ModifyGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias ModifyReplicationGroupMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "ReplicationGroupDescription" : (String)?,
+      "PrimaryClusterId" : (String)?,
+      "SnapshottingClusterId" : (String)?,
+      "AutomaticFailoverEnabled" : (BooleanOptional)?,
+      "MultiAZEnabled" : (BooleanOptional)?,
+      "NodeGroupId" : (String)?,
+      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
+      "SecurityGroupIds" : (SecurityGroupIdsList)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "NotificationTopicArn" : (String)?,
+      "CacheParameterGroupName" : (String)?,
+      "NotificationTopicStatus" : (String)?,
+      "ApplyImmediately" : (Boolean)?,
+      "EngineVersion" : (String)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "CacheNodeType" : (String)?,
+      "AuthToken" : (String)?,
+      "AuthTokenUpdateStrategy" : (AuthTokenUpdateStrategyType)?,
+      "UserGroupIdsToAdd" : (UserGroupIdList)?,
+      "UserGroupIdsToRemove" : (UserGroupIdList)?,
+      "RemoveUserGroups" : (BooleanOptional)?
+    )
+
+    alias ModifyReplicationGroupResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias ModifyReplicationGroupShardConfigurationMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "NodeGroupCount" : Integer,
+      "ApplyImmediately" : Boolean,
+      "ReshardingConfiguration" : (ReshardingConfigurationList)?,
+      "NodeGroupsToRemove" : (NodeGroupsToRemoveList)?,
+      "NodeGroupsToRetain" : (NodeGroupsToRetainList)?
+    )
+
+    alias ModifyReplicationGroupShardConfigurationResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias ModifyUserGroupMessage = NamedTuple(
+      "UserGroupId" : String,
+      "UserIdsToAdd" : (UserIdListInput)?,
+      "UserIdsToRemove" : (UserIdListInput)?
+    )
+
+    alias ModifyUserMessage = NamedTuple(
+      "UserId" : UserId,
+      "AccessString" : (AccessString)?,
+      "AppendAccessString" : (AccessString)?,
+      "Passwords" : (PasswordListInput)?,
+      "NoPasswordRequired" : (BooleanOptional)?
+    )
+
+    alias MultiAZStatus = String
+
+    alias NoOperationFault = NamedTuple(
+      
+    )
+
+    alias NodeGroup = NamedTuple(
+      "NodeGroupId" : (String)?,
+      "Status" : (String)?,
+      "PrimaryEndpoint" : (Endpoint)?,
+      "ReaderEndpoint" : (Endpoint)?,
+      "Slots" : (String)?,
+      "NodeGroupMembers" : (NodeGroupMemberList)?
+    )
+
+    alias NodeGroupConfiguration = NamedTuple(
+      "NodeGroupId" : (AllowedNodeGroupId)?,
+      "Slots" : (String)?,
+      "ReplicaCount" : (IntegerOptional)?,
+      "PrimaryAvailabilityZone" : (String)?,
+      "ReplicaAvailabilityZones" : (AvailabilityZonesList)?,
+      "PrimaryOutpostArn" : (String)?,
+      "ReplicaOutpostArns" : (OutpostArnsList)?
+    )
+
+    alias NodeGroupConfigurationList = Array(NodeGroupConfiguration)
+
+    alias NodeGroupList = Array(NodeGroup)
+
+    alias NodeGroupMember = NamedTuple(
+      "CacheClusterId" : (String)?,
+      "CacheNodeId" : (String)?,
+      "ReadEndpoint" : (Endpoint)?,
+      "PreferredAvailabilityZone" : (String)?,
+      "PreferredOutpostArn" : (String)?,
+      "CurrentRole" : (String)?
+    )
+
+    alias NodeGroupMemberList = Array(NodeGroupMember)
+
+    alias NodeGroupMemberUpdateStatus = NamedTuple(
+      "CacheClusterId" : (String)?,
+      "CacheNodeId" : (String)?,
+      "NodeUpdateStatus" : (NodeUpdateStatus)?,
+      "NodeDeletionDate" : (TStamp)?,
+      "NodeUpdateStartDate" : (TStamp)?,
+      "NodeUpdateEndDate" : (TStamp)?,
+      "NodeUpdateInitiatedBy" : (NodeUpdateInitiatedBy)?,
+      "NodeUpdateInitiatedDate" : (TStamp)?,
+      "NodeUpdateStatusModifiedDate" : (TStamp)?
+    )
+
+    alias NodeGroupMemberUpdateStatusList = Array(NodeGroupMemberUpdateStatus)
+
+    alias NodeGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias NodeGroupUpdateStatus = NamedTuple(
+      "NodeGroupId" : (String)?,
+      "NodeGroupMemberUpdateStatus" : (NodeGroupMemberUpdateStatusList)?
+    )
+
+    alias NodeGroupUpdateStatusList = Array(NodeGroupUpdateStatus)
+
+    alias NodeGroupsPerReplicationGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias NodeGroupsToRemoveList = Array(AllowedNodeGroupId)
+
+    alias NodeGroupsToRetainList = Array(AllowedNodeGroupId)
+
+    alias NodeQuotaForClusterExceededFault = NamedTuple(
+      
+    )
+
+    alias NodeQuotaForCustomerExceededFault = NamedTuple(
+      
+    )
+
+    alias NodeSnapshot = NamedTuple(
+      "CacheClusterId" : (String)?,
+      "NodeGroupId" : (String)?,
+      "CacheNodeId" : (String)?,
+      "NodeGroupConfiguration" : (NodeGroupConfiguration)?,
+      "CacheSize" : (String)?,
+      "CacheNodeCreateTime" : (TStamp)?,
+      "SnapshotCreateTime" : (TStamp)?
+    )
+
+    alias NodeSnapshotList = Array(NodeSnapshot)
+
+    alias NodeTypeList = Array(String)
+
+    alias NodeUpdateInitiatedBy = String
+
+    alias NodeUpdateStatus = String
+
+    alias NotificationConfiguration = NamedTuple(
+      "TopicArn" : (String)?,
+      "TopicStatus" : (String)?
+    )
+
+    alias OutpostArnsList = Array(String)
+
+    alias OutpostMode = String
+
+    alias Parameter = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterValue" : (String)?,
+      "Description" : (String)?,
+      "Source" : (String)?,
+      "DataType" : (String)?,
+      "AllowedValues" : (String)?,
+      "IsModifiable" : (Boolean)?,
+      "MinimumEngineVersion" : (String)?,
+      "ChangeType" : (ChangeType)?
+    )
+
+    alias ParameterNameValue = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterValue" : (String)?
+    )
+
+    alias ParameterNameValueList = Array(ParameterNameValue)
+
+    alias ParametersList = Array(Parameter)
+
+    alias PasswordListInput = Array(String)
+
+    alias PendingAutomaticFailoverStatus = String
+
+    alias PendingModifiedValues = NamedTuple(
+      "NumCacheNodes" : (IntegerOptional)?,
+      "CacheNodeIdsToRemove" : (CacheNodeIdsList)?,
+      "EngineVersion" : (String)?,
+      "CacheNodeType" : (String)?,
+      "AuthTokenStatus" : (AuthTokenUpdateStatus)?
+    )
+
+    alias PreferredAvailabilityZoneList = Array(String)
+
+    alias PreferredOutpostArnList = Array(String)
+
+    alias ProcessedUpdateAction = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "CacheClusterId" : (String)?,
+      "ServiceUpdateName" : (String)?,
+      "UpdateActionStatus" : (UpdateActionStatus)?
+    )
+
+    alias ProcessedUpdateActionList = Array(ProcessedUpdateAction)
+
+    alias PurchaseReservedCacheNodesOfferingMessage = NamedTuple(
+      "ReservedCacheNodesOfferingId" : String,
+      "ReservedCacheNodeId" : (String)?,
+      "CacheNodeCount" : (IntegerOptional)?
+    )
+
+    alias PurchaseReservedCacheNodesOfferingResult = NamedTuple(
+      "ReservedCacheNode" : (ReservedCacheNode)?
+    )
+
+    alias RebalanceSlotsInGlobalReplicationGroupMessage = NamedTuple(
+      "GlobalReplicationGroupId" : String,
+      "ApplyImmediately" : Boolean
+    )
+
+    alias RebalanceSlotsInGlobalReplicationGroupResult = NamedTuple(
+      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+    )
+
+    alias RebootCacheClusterMessage = NamedTuple(
+      "CacheClusterId" : String,
+      "CacheNodeIdsToReboot" : CacheNodeIdsList
+    )
+
+    alias RebootCacheClusterResult = NamedTuple(
+      "CacheCluster" : (CacheCluster)?
+    )
+
+    alias RecurringCharge = NamedTuple(
+      "RecurringChargeAmount" : (Double)?,
+      "RecurringChargeFrequency" : (String)?
+    )
+
+    alias RecurringChargeList = Array(RecurringCharge)
+
+    alias RegionalConfiguration = NamedTuple(
+      "ReplicationGroupId" : String,
+      "ReplicationGroupRegion" : String,
+      "ReshardingConfiguration" : ReshardingConfigurationList
+    )
+
+    alias RegionalConfigurationList = Array(RegionalConfiguration)
+
+    alias RemoveReplicasList = Array(String)
+
+    alias RemoveTagsFromResourceMessage = NamedTuple(
+      "ResourceName" : String,
+      "TagKeys" : KeyList
+    )
+
+    alias ReplicaConfigurationList = Array(ConfigureShard)
+
+    alias ReplicationGroup = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "Description" : (String)?,
+      "GlobalReplicationGroupInfo" : (GlobalReplicationGroupInfo)?,
+      "Status" : (String)?,
+      "PendingModifiedValues" : (ReplicationGroupPendingModifiedValues)?,
+      "MemberClusters" : (ClusterIdList)?,
+      "NodeGroups" : (NodeGroupList)?,
+      "SnapshottingClusterId" : (String)?,
+      "AutomaticFailover" : (AutomaticFailoverStatus)?,
+      "MultiAZ" : (MultiAZStatus)?,
+      "ConfigurationEndpoint" : (Endpoint)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "ClusterEnabled" : (BooleanOptional)?,
+      "CacheNodeType" : (String)?,
+      "AuthTokenEnabled" : (BooleanOptional)?,
+      "AuthTokenLastModifiedDate" : (TStamp)?,
+      "TransitEncryptionEnabled" : (BooleanOptional)?,
+      "AtRestEncryptionEnabled" : (BooleanOptional)?,
+      "MemberClustersOutpostArns" : (ReplicationGroupOutpostArnList)?,
+      "KmsKeyId" : (String)?,
+      "ARN" : (String)?,
+      "UserGroupIds" : (UserGroupIdList)?
+    )
+
+    alias ReplicationGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ReplicationGroupAlreadyUnderMigrationFault = NamedTuple(
+      
+    )
+
+    alias ReplicationGroupIdList = Array(String)
+
+    alias ReplicationGroupList = Array(ReplicationGroup)
+
+    alias ReplicationGroupMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ReplicationGroups" : (ReplicationGroupList)?
+    )
+
+    alias ReplicationGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ReplicationGroupNotUnderMigrationFault = NamedTuple(
+      
+    )
+
+    alias ReplicationGroupOutpostArnList = Array(String)
+
+    alias ReplicationGroupPendingModifiedValues = NamedTuple(
+      "PrimaryClusterId" : (String)?,
+      "AutomaticFailoverStatus" : (PendingAutomaticFailoverStatus)?,
+      "Resharding" : (ReshardingStatus)?,
+      "AuthTokenStatus" : (AuthTokenUpdateStatus)?,
+      "UserGroups" : (UserGroupsUpdateStatus)?
+    )
+
+    alias ReservedCacheNode = NamedTuple(
+      "ReservedCacheNodeId" : (String)?,
+      "ReservedCacheNodesOfferingId" : (String)?,
+      "CacheNodeType" : (String)?,
+      "StartTime" : (TStamp)?,
+      "Duration" : (Integer)?,
+      "FixedPrice" : (Double)?,
+      "UsagePrice" : (Double)?,
+      "CacheNodeCount" : (Integer)?,
+      "ProductDescription" : (String)?,
+      "OfferingType" : (String)?,
+      "State" : (String)?,
+      "RecurringCharges" : (RecurringChargeList)?,
+      "ReservationARN" : (String)?
+    )
+
+    alias ReservedCacheNodeAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias ReservedCacheNodeList = Array(ReservedCacheNode)
+
+    alias ReservedCacheNodeMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ReservedCacheNodes" : (ReservedCacheNodeList)?
+    )
+
+    alias ReservedCacheNodeNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ReservedCacheNodeQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias ReservedCacheNodesOffering = NamedTuple(
+      "ReservedCacheNodesOfferingId" : (String)?,
+      "CacheNodeType" : (String)?,
+      "Duration" : (Integer)?,
+      "FixedPrice" : (Double)?,
+      "UsagePrice" : (Double)?,
+      "ProductDescription" : (String)?,
+      "OfferingType" : (String)?,
+      "RecurringCharges" : (RecurringChargeList)?
+    )
+
+    alias ReservedCacheNodesOfferingList = Array(ReservedCacheNodesOffering)
+
+    alias ReservedCacheNodesOfferingMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ReservedCacheNodesOfferings" : (ReservedCacheNodesOfferingList)?
+    )
+
+    alias ReservedCacheNodesOfferingNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ResetCacheParameterGroupMessage = NamedTuple(
+      "CacheParameterGroupName" : String,
+      "ResetAllParameters" : (Boolean)?,
+      "ParameterNameValues" : (ParameterNameValueList)?
+    )
+
+    alias ReshardingConfiguration = NamedTuple(
+      "NodeGroupId" : (AllowedNodeGroupId)?,
+      "PreferredAvailabilityZones" : (AvailabilityZonesList)?
+    )
+
+    alias ReshardingConfigurationList = Array(ReshardingConfiguration)
+
+    alias ReshardingStatus = NamedTuple(
+      "SlotMigration" : (SlotMigration)?
+    )
+
+    alias RevokeCacheSecurityGroupIngressMessage = NamedTuple(
+      "CacheSecurityGroupName" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupOwnerId" : String
+    )
+
+    alias RevokeCacheSecurityGroupIngressResult = NamedTuple(
+      "CacheSecurityGroup" : (CacheSecurityGroup)?
+    )
+
+    alias SecurityGroupIdsList = Array(String)
+
+    alias SecurityGroupMembership = NamedTuple(
+      "SecurityGroupId" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias SecurityGroupMembershipList = Array(SecurityGroupMembership)
+
+    alias ServiceLinkedRoleNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ServiceUpdate = NamedTuple(
+      "ServiceUpdateName" : (String)?,
+      "ServiceUpdateReleaseDate" : (TStamp)?,
+      "ServiceUpdateEndDate" : (TStamp)?,
+      "ServiceUpdateSeverity" : (ServiceUpdateSeverity)?,
+      "ServiceUpdateRecommendedApplyByDate" : (TStamp)?,
+      "ServiceUpdateStatus" : (ServiceUpdateStatus)?,
+      "ServiceUpdateDescription" : (String)?,
+      "ServiceUpdateType" : (ServiceUpdateType)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "AutoUpdateAfterRecommendedApplyByDate" : (BooleanOptional)?,
+      "EstimatedUpdateTime" : (String)?
+    )
+
+    alias ServiceUpdateList = Array(ServiceUpdate)
+
+    alias ServiceUpdateNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ServiceUpdateSeverity = String
+
+    alias ServiceUpdateStatus = String
+
+    alias ServiceUpdateStatusList = Array(ServiceUpdateStatus)
+
+    alias ServiceUpdateType = String
+
+    alias ServiceUpdatesMessage = NamedTuple(
+      "Marker" : (String)?,
+      "ServiceUpdates" : (ServiceUpdateList)?
+    )
+
+    alias SlaMet = String
+
+    alias SlotMigration = NamedTuple(
+      "ProgressPercentage" : (Double)?
+    )
+
+    alias Snapshot = NamedTuple(
+      "SnapshotName" : (String)?,
+      "ReplicationGroupId" : (String)?,
+      "ReplicationGroupDescription" : (String)?,
+      "CacheClusterId" : (String)?,
+      "SnapshotStatus" : (String)?,
+      "SnapshotSource" : (String)?,
+      "CacheNodeType" : (String)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "NumCacheNodes" : (IntegerOptional)?,
+      "PreferredAvailabilityZone" : (String)?,
+      "PreferredOutpostArn" : (String)?,
+      "CacheClusterCreateTime" : (TStamp)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "TopicArn" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "CacheParameterGroupName" : (String)?,
+      "CacheSubnetGroupName" : (String)?,
+      "VpcId" : (String)?,
+      "AutoMinorVersionUpgrade" : (Boolean)?,
+      "SnapshotRetentionLimit" : (IntegerOptional)?,
+      "SnapshotWindow" : (String)?,
+      "NumNodeGroups" : (IntegerOptional)?,
+      "AutomaticFailover" : (AutomaticFailoverStatus)?,
+      "NodeSnapshots" : (NodeSnapshotList)?,
+      "KmsKeyId" : (String)?,
+      "ARN" : (String)?
+    )
+
+    alias SnapshotAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias SnapshotArnsList = Array(String)
+
+    alias SnapshotFeatureNotSupportedFault = NamedTuple(
+      
+    )
+
+    alias SnapshotList = Array(Snapshot)
+
+    alias SnapshotNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SnapshotQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias SourceType = String
+
+    alias StartMigrationMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "CustomerNodeEndpointList" : CustomerNodeEndpointList
+    )
+
+    alias StartMigrationResponse = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias String = String
+
+    alias Subnet = NamedTuple(
+      "SubnetIdentifier" : (String)?,
+      "SubnetAvailabilityZone" : (AvailabilityZone)?,
+      "SubnetOutpost" : (SubnetOutpost)?
+    )
+
+    alias SubnetIdentifierList = Array(String)
+
+    alias SubnetInUse = NamedTuple(
+      
+    )
+
+    alias SubnetList = Array(Subnet)
+
+    alias SubnetNotAllowedFault = NamedTuple(
+      
+    )
+
+    alias SubnetOutpost = NamedTuple(
+      "SubnetOutpostArn" : (String)?
+    )
+
+    alias TStamp = String | UInt64 | Time
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagListMessage = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias TagNotFoundFault = NamedTuple(
+      
+    )
+
+    alias TagQuotaPerResourceExceeded = NamedTuple(
+      
+    )
+
+    alias TestFailoverMessage = NamedTuple(
+      "ReplicationGroupId" : String,
+      "NodeGroupId" : AllowedNodeGroupId
+    )
+
+    alias TestFailoverNotAvailableFault = NamedTuple(
+      
+    )
+
+    alias TestFailoverResult = NamedTuple(
+      "ReplicationGroup" : (ReplicationGroup)?
+    )
+
+    alias TimeRangeFilter = NamedTuple(
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?
+    )
+
+    alias UGReplicationGroupIdList = Array(String)
+
+    alias UnprocessedUpdateAction = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "CacheClusterId" : (String)?,
+      "ServiceUpdateName" : (String)?,
+      "ErrorType" : (String)?,
+      "ErrorMessage" : (String)?
+    )
+
+    alias UnprocessedUpdateActionList = Array(UnprocessedUpdateAction)
+
+    alias UpdateAction = NamedTuple(
+      "ReplicationGroupId" : (String)?,
+      "CacheClusterId" : (String)?,
+      "ServiceUpdateName" : (String)?,
+      "ServiceUpdateReleaseDate" : (TStamp)?,
+      "ServiceUpdateSeverity" : (ServiceUpdateSeverity)?,
+      "ServiceUpdateStatus" : (ServiceUpdateStatus)?,
+      "ServiceUpdateRecommendedApplyByDate" : (TStamp)?,
+      "ServiceUpdateType" : (ServiceUpdateType)?,
+      "UpdateActionAvailableDate" : (TStamp)?,
+      "UpdateActionStatus" : (UpdateActionStatus)?,
+      "NodesUpdated" : (String)?,
+      "UpdateActionStatusModifiedDate" : (TStamp)?,
+      "SlaMet" : (SlaMet)?,
+      "NodeGroupUpdateStatus" : (NodeGroupUpdateStatusList)?,
+      "CacheNodeUpdateStatus" : (CacheNodeUpdateStatusList)?,
+      "EstimatedUpdateTime" : (String)?,
+      "Engine" : (String)?
+    )
+
+    alias UpdateActionList = Array(UpdateAction)
+
+    alias UpdateActionResultsMessage = NamedTuple(
+      "ProcessedUpdateActions" : (ProcessedUpdateActionList)?,
+      "UnprocessedUpdateActions" : (UnprocessedUpdateActionList)?
+    )
+
+    alias UpdateActionStatus = String
+
+    alias UpdateActionStatusList = Array(UpdateActionStatus)
+
+    alias UpdateActionsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "UpdateActions" : (UpdateActionList)?
+    )
+
+    alias User = NamedTuple(
+      "UserId" : (String)?,
+      "UserName" : (String)?,
+      "Status" : (String)?,
+      "Engine" : (EngineType)?,
+      "AccessString" : (String)?,
+      "UserGroupIds" : (UserGroupIdList)?,
+      "Authentication" : (Authentication)?,
+      "ARN" : (String)?
+    )
+
+    alias UserAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias UserGroup = NamedTuple(
+      "UserGroupId" : (String)?,
+      "Status" : (String)?,
+      "Engine" : (EngineType)?,
+      "UserIds" : (UserIdList)?,
+      "PendingChanges" : (UserGroupPendingChanges)?,
+      "ReplicationGroups" : (UGReplicationGroupIdList)?,
+      "ARN" : (String)?
+    )
+
+    alias UserGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias UserGroupId = String
+
+    alias UserGroupIdList = Array(UserGroupId)
+
+    alias UserGroupIdListInput = Array(UserGroupId)
+
+    alias UserGroupList = Array(UserGroup)
+
+    alias UserGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias UserGroupPendingChanges = NamedTuple(
+      "UserIdsToRemove" : (UserIdList)?,
+      "UserIdsToAdd" : (UserIdList)?
+    )
+
+    alias UserGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias UserGroupsUpdateStatus = NamedTuple(
+      "UserGroupIdsToAdd" : (UserGroupIdList)?,
+      "UserGroupIdsToRemove" : (UserGroupIdList)?
+    )
+
+    alias UserId = String
+
+    alias UserIdList = Array(UserId)
+
+    alias UserIdListInput = Array(UserId)
+
+    alias UserList = Array(User)
+
+    alias UserName = String
+
+    alias UserNotFoundFault = NamedTuple(
+      
+    )
+
+    alias UserQuotaExceededFault = NamedTuple(
+      
+    )
   end
 end

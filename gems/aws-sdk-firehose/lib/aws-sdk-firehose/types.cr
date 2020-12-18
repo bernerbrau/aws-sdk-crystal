@@ -5670,5 +5670,834 @@ module Aws::Firehose
       include Aws::Structure
     end
 
+    alias AWSKMSKeyARN = String
+
+    alias BlockSizeBytes = Int32
+
+    alias BooleanObject = Bool
+
+    alias BucketARN = String
+
+    alias BufferingHints = NamedTuple(
+      "SizeInMBs" : (SizeInMBs)?,
+      "IntervalInSeconds" : (IntervalInSeconds)?
+    )
+
+    alias CloudWatchLoggingOptions = NamedTuple(
+      "Enabled" : (BooleanObject)?,
+      "LogGroupName" : (LogGroupName)?,
+      "LogStreamName" : (LogStreamName)?
+    )
+
+    alias ClusterJDBCURL = String
+
+    alias ColumnToJsonKeyMappings = Hash(NonEmptyStringWithoutWhitespace,NonEmptyString)
+
+    alias CompressionFormat = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ContentEncoding = String
+
+    alias CopyCommand = NamedTuple(
+      "DataTableName" : DataTableName,
+      "DataTableColumns" : (DataTableColumns)?,
+      "CopyOptions" : (CopyOptions)?
+    )
+
+    alias CopyOptions = String
+
+    alias CreateDeliveryStreamInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "DeliveryStreamType" : (DeliveryStreamType)?,
+      "KinesisStreamSourceConfiguration" : (KinesisStreamSourceConfiguration)?,
+      "DeliveryStreamEncryptionConfigurationInput" : (DeliveryStreamEncryptionConfigurationInput)?,
+      "S3DestinationConfiguration" : (S3DestinationConfiguration)?,
+      "ExtendedS3DestinationConfiguration" : (ExtendedS3DestinationConfiguration)?,
+      "RedshiftDestinationConfiguration" : (RedshiftDestinationConfiguration)?,
+      "ElasticsearchDestinationConfiguration" : (ElasticsearchDestinationConfiguration)?,
+      "SplunkDestinationConfiguration" : (SplunkDestinationConfiguration)?,
+      "HttpEndpointDestinationConfiguration" : (HttpEndpointDestinationConfiguration)?,
+      "Tags" : (TagDeliveryStreamInputTagList)?
+    )
+
+    alias CreateDeliveryStreamOutput = NamedTuple(
+      "DeliveryStreamARN" : (DeliveryStreamARN)?
+    )
+
+    alias Data = String | Array(UInt8) | IO
+
+    alias DataFormatConversionConfiguration = NamedTuple(
+      "SchemaConfiguration" : (SchemaConfiguration)?,
+      "InputFormatConfiguration" : (InputFormatConfiguration)?,
+      "OutputFormatConfiguration" : (OutputFormatConfiguration)?,
+      "Enabled" : (BooleanObject)?
+    )
+
+    alias DataTableColumns = String
+
+    alias DataTableName = String
+
+    alias DeleteDeliveryStreamInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "AllowForceDelete" : (BooleanObject)?
+    )
+
+    alias DeleteDeliveryStreamOutput = NamedTuple(
+      
+    )
+
+    alias DeliveryStartTimestamp = String | UInt64 | Time
+
+    alias DeliveryStreamARN = String
+
+    alias DeliveryStreamDescription = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "DeliveryStreamARN" : DeliveryStreamARN,
+      "DeliveryStreamStatus" : DeliveryStreamStatus,
+      "FailureDescription" : (FailureDescription)?,
+      "DeliveryStreamEncryptionConfiguration" : (DeliveryStreamEncryptionConfiguration)?,
+      "DeliveryStreamType" : DeliveryStreamType,
+      "VersionId" : DeliveryStreamVersionId,
+      "CreateTimestamp" : (Timestamp)?,
+      "LastUpdateTimestamp" : (Timestamp)?,
+      "Source" : (SourceDescription)?,
+      "Destinations" : DestinationDescriptionList,
+      "HasMoreDestinations" : BooleanObject
+    )
+
+    alias DeliveryStreamEncryptionConfiguration = NamedTuple(
+      "KeyARN" : (AWSKMSKeyARN)?,
+      "KeyType" : (KeyType)?,
+      "Status" : (DeliveryStreamEncryptionStatus)?,
+      "FailureDescription" : (FailureDescription)?
+    )
+
+    alias DeliveryStreamEncryptionConfigurationInput = NamedTuple(
+      "KeyARN" : (AWSKMSKeyARN)?,
+      "KeyType" : KeyType
+    )
+
+    alias DeliveryStreamEncryptionStatus = String
+
+    alias DeliveryStreamFailureType = String
+
+    alias DeliveryStreamName = String
+
+    alias DeliveryStreamNameList = Array(DeliveryStreamName)
+
+    alias DeliveryStreamStatus = String
+
+    alias DeliveryStreamType = String
+
+    alias DeliveryStreamVersionId = String
+
+    alias DescribeDeliveryStreamInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "Limit" : (DescribeDeliveryStreamInputLimit)?,
+      "ExclusiveStartDestinationId" : (DestinationId)?
+    )
+
+    alias DescribeDeliveryStreamInputLimit = Int32
+
+    alias DescribeDeliveryStreamOutput = NamedTuple(
+      "DeliveryStreamDescription" : DeliveryStreamDescription
+    )
+
+    alias Deserializer = NamedTuple(
+      "OpenXJsonSerDe" : (OpenXJsonSerDe)?,
+      "HiveJsonSerDe" : (HiveJsonSerDe)?
+    )
+
+    alias DestinationDescription = NamedTuple(
+      "DestinationId" : DestinationId,
+      "S3DestinationDescription" : (S3DestinationDescription)?,
+      "ExtendedS3DestinationDescription" : (ExtendedS3DestinationDescription)?,
+      "RedshiftDestinationDescription" : (RedshiftDestinationDescription)?,
+      "ElasticsearchDestinationDescription" : (ElasticsearchDestinationDescription)?,
+      "SplunkDestinationDescription" : (SplunkDestinationDescription)?,
+      "HttpEndpointDestinationDescription" : (HttpEndpointDestinationDescription)?
+    )
+
+    alias DestinationDescriptionList = Array(DestinationDescription)
+
+    alias DestinationId = String
+
+    alias ElasticsearchBufferingHints = NamedTuple(
+      "IntervalInSeconds" : (ElasticsearchBufferingIntervalInSeconds)?,
+      "SizeInMBs" : (ElasticsearchBufferingSizeInMBs)?
+    )
+
+    alias ElasticsearchBufferingIntervalInSeconds = Int32
+
+    alias ElasticsearchBufferingSizeInMBs = Int32
+
+    alias ElasticsearchClusterEndpoint = String
+
+    alias ElasticsearchDestinationConfiguration = NamedTuple(
+      "RoleARN" : RoleARN,
+      "DomainARN" : (ElasticsearchDomainARN)?,
+      "ClusterEndpoint" : (ElasticsearchClusterEndpoint)?,
+      "IndexName" : ElasticsearchIndexName,
+      "TypeName" : (ElasticsearchTypeName)?,
+      "IndexRotationPeriod" : (ElasticsearchIndexRotationPeriod)?,
+      "BufferingHints" : (ElasticsearchBufferingHints)?,
+      "RetryOptions" : (ElasticsearchRetryOptions)?,
+      "S3BackupMode" : (ElasticsearchS3BackupMode)?,
+      "S3Configuration" : S3DestinationConfiguration,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "VpcConfiguration" : (VpcConfiguration)?
+    )
+
+    alias ElasticsearchDestinationDescription = NamedTuple(
+      "RoleARN" : (RoleARN)?,
+      "DomainARN" : (ElasticsearchDomainARN)?,
+      "ClusterEndpoint" : (ElasticsearchClusterEndpoint)?,
+      "IndexName" : (ElasticsearchIndexName)?,
+      "TypeName" : (ElasticsearchTypeName)?,
+      "IndexRotationPeriod" : (ElasticsearchIndexRotationPeriod)?,
+      "BufferingHints" : (ElasticsearchBufferingHints)?,
+      "RetryOptions" : (ElasticsearchRetryOptions)?,
+      "S3BackupMode" : (ElasticsearchS3BackupMode)?,
+      "S3DestinationDescription" : (S3DestinationDescription)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "VpcConfigurationDescription" : (VpcConfigurationDescription)?
+    )
+
+    alias ElasticsearchDestinationUpdate = NamedTuple(
+      "RoleARN" : (RoleARN)?,
+      "DomainARN" : (ElasticsearchDomainARN)?,
+      "ClusterEndpoint" : (ElasticsearchClusterEndpoint)?,
+      "IndexName" : (ElasticsearchIndexName)?,
+      "TypeName" : (ElasticsearchTypeName)?,
+      "IndexRotationPeriod" : (ElasticsearchIndexRotationPeriod)?,
+      "BufferingHints" : (ElasticsearchBufferingHints)?,
+      "RetryOptions" : (ElasticsearchRetryOptions)?,
+      "S3Update" : (S3DestinationUpdate)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias ElasticsearchDomainARN = String
+
+    alias ElasticsearchIndexName = String
+
+    alias ElasticsearchIndexRotationPeriod = String
+
+    alias ElasticsearchRetryDurationInSeconds = Int32
+
+    alias ElasticsearchRetryOptions = NamedTuple(
+      "DurationInSeconds" : (ElasticsearchRetryDurationInSeconds)?
+    )
+
+    alias ElasticsearchS3BackupMode = String
+
+    alias ElasticsearchTypeName = String
+
+    alias EncryptionConfiguration = NamedTuple(
+      "NoEncryptionConfig" : (NoEncryptionConfig)?,
+      "KMSEncryptionConfig" : (KMSEncryptionConfig)?
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ErrorOutputPrefix = String
+
+    alias ExtendedS3DestinationConfiguration = NamedTuple(
+      "RoleARN" : RoleARN,
+      "BucketARN" : BucketARN,
+      "Prefix" : (Prefix)?,
+      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "BufferingHints" : (BufferingHints)?,
+      "CompressionFormat" : (CompressionFormat)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "S3BackupMode" : (S3BackupMode)?,
+      "S3BackupConfiguration" : (S3DestinationConfiguration)?,
+      "DataFormatConversionConfiguration" : (DataFormatConversionConfiguration)?
+    )
+
+    alias ExtendedS3DestinationDescription = NamedTuple(
+      "RoleARN" : RoleARN,
+      "BucketARN" : BucketARN,
+      "Prefix" : (Prefix)?,
+      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "BufferingHints" : BufferingHints,
+      "CompressionFormat" : CompressionFormat,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "S3BackupMode" : (S3BackupMode)?,
+      "S3BackupDescription" : (S3DestinationDescription)?,
+      "DataFormatConversionConfiguration" : (DataFormatConversionConfiguration)?
+    )
+
+    alias ExtendedS3DestinationUpdate = NamedTuple(
+      "RoleARN" : (RoleARN)?,
+      "BucketARN" : (BucketARN)?,
+      "Prefix" : (Prefix)?,
+      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "BufferingHints" : (BufferingHints)?,
+      "CompressionFormat" : (CompressionFormat)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "S3BackupMode" : (S3BackupMode)?,
+      "S3BackupUpdate" : (S3DestinationUpdate)?,
+      "DataFormatConversionConfiguration" : (DataFormatConversionConfiguration)?
+    )
+
+    alias FailureDescription = NamedTuple(
+      "Type" : DeliveryStreamFailureType,
+      "Details" : NonEmptyString
+    )
+
+    alias HECAcknowledgmentTimeoutInSeconds = Int32
+
+    alias HECEndpoint = String
+
+    alias HECEndpointType = String
+
+    alias HECToken = String
+
+    alias HiveJsonSerDe = NamedTuple(
+      "TimestampFormats" : (ListOfNonEmptyStrings)?
+    )
+
+    alias HttpEndpointAccessKey = String
+
+    alias HttpEndpointAttributeName = String
+
+    alias HttpEndpointAttributeValue = String
+
+    alias HttpEndpointBufferingHints = NamedTuple(
+      "SizeInMBs" : (HttpEndpointBufferingSizeInMBs)?,
+      "IntervalInSeconds" : (HttpEndpointBufferingIntervalInSeconds)?
+    )
+
+    alias HttpEndpointBufferingIntervalInSeconds = Int32
+
+    alias HttpEndpointBufferingSizeInMBs = Int32
+
+    alias HttpEndpointCommonAttribute = NamedTuple(
+      "AttributeName" : HttpEndpointAttributeName,
+      "AttributeValue" : HttpEndpointAttributeValue
+    )
+
+    alias HttpEndpointCommonAttributesList = Array(HttpEndpointCommonAttribute)
+
+    alias HttpEndpointConfiguration = NamedTuple(
+      "Url" : HttpEndpointUrl,
+      "Name" : (HttpEndpointName)?,
+      "AccessKey" : (HttpEndpointAccessKey)?
+    )
+
+    alias HttpEndpointDescription = NamedTuple(
+      "Url" : (HttpEndpointUrl)?,
+      "Name" : (HttpEndpointName)?
+    )
+
+    alias HttpEndpointDestinationConfiguration = NamedTuple(
+      "EndpointConfiguration" : HttpEndpointConfiguration,
+      "BufferingHints" : (HttpEndpointBufferingHints)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "RequestConfiguration" : (HttpEndpointRequestConfiguration)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "RoleARN" : (RoleARN)?,
+      "RetryOptions" : (HttpEndpointRetryOptions)?,
+      "S3BackupMode" : (HttpEndpointS3BackupMode)?,
+      "S3Configuration" : S3DestinationConfiguration
+    )
+
+    alias HttpEndpointDestinationDescription = NamedTuple(
+      "EndpointConfiguration" : (HttpEndpointDescription)?,
+      "BufferingHints" : (HttpEndpointBufferingHints)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "RequestConfiguration" : (HttpEndpointRequestConfiguration)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "RoleARN" : (RoleARN)?,
+      "RetryOptions" : (HttpEndpointRetryOptions)?,
+      "S3BackupMode" : (HttpEndpointS3BackupMode)?,
+      "S3DestinationDescription" : (S3DestinationDescription)?
+    )
+
+    alias HttpEndpointDestinationUpdate = NamedTuple(
+      "EndpointConfiguration" : (HttpEndpointConfiguration)?,
+      "BufferingHints" : (HttpEndpointBufferingHints)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "RequestConfiguration" : (HttpEndpointRequestConfiguration)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "RoleARN" : (RoleARN)?,
+      "RetryOptions" : (HttpEndpointRetryOptions)?,
+      "S3BackupMode" : (HttpEndpointS3BackupMode)?,
+      "S3Update" : (S3DestinationUpdate)?
+    )
+
+    alias HttpEndpointName = String
+
+    alias HttpEndpointRequestConfiguration = NamedTuple(
+      "ContentEncoding" : (ContentEncoding)?,
+      "CommonAttributes" : (HttpEndpointCommonAttributesList)?
+    )
+
+    alias HttpEndpointRetryDurationInSeconds = Int32
+
+    alias HttpEndpointRetryOptions = NamedTuple(
+      "DurationInSeconds" : (HttpEndpointRetryDurationInSeconds)?
+    )
+
+    alias HttpEndpointS3BackupMode = String
+
+    alias HttpEndpointUrl = String
+
+    alias InputFormatConfiguration = NamedTuple(
+      "Deserializer" : (Deserializer)?
+    )
+
+    alias IntervalInSeconds = Int32
+
+    alias InvalidArgumentException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidKMSResourceException = NamedTuple(
+      "code" : (ErrorCode)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias KMSEncryptionConfig = NamedTuple(
+      "AWSKMSKeyARN" : AWSKMSKeyARN
+    )
+
+    alias KeyType = String
+
+    alias KinesisStreamARN = String
+
+    alias KinesisStreamSourceConfiguration = NamedTuple(
+      "KinesisStreamARN" : KinesisStreamARN,
+      "RoleARN" : RoleARN
+    )
+
+    alias KinesisStreamSourceDescription = NamedTuple(
+      "KinesisStreamARN" : (KinesisStreamARN)?,
+      "RoleARN" : (RoleARN)?,
+      "DeliveryStartTimestamp" : (DeliveryStartTimestamp)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListDeliveryStreamsInput = NamedTuple(
+      "Limit" : (ListDeliveryStreamsInputLimit)?,
+      "DeliveryStreamType" : (DeliveryStreamType)?,
+      "ExclusiveStartDeliveryStreamName" : (DeliveryStreamName)?
+    )
+
+    alias ListDeliveryStreamsInputLimit = Int32
+
+    alias ListDeliveryStreamsOutput = NamedTuple(
+      "DeliveryStreamNames" : DeliveryStreamNameList,
+      "HasMoreDeliveryStreams" : BooleanObject
+    )
+
+    alias ListOfNonEmptyStrings = Array(NonEmptyString)
+
+    alias ListOfNonEmptyStringsWithoutWhitespace = Array(NonEmptyStringWithoutWhitespace)
+
+    alias ListTagsForDeliveryStreamInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "ExclusiveStartTagKey" : (TagKey)?,
+      "Limit" : (ListTagsForDeliveryStreamInputLimit)?
+    )
+
+    alias ListTagsForDeliveryStreamInputLimit = Int32
+
+    alias ListTagsForDeliveryStreamOutput = NamedTuple(
+      "Tags" : ListTagsForDeliveryStreamOutputTagList,
+      "HasMoreTags" : BooleanObject
+    )
+
+    alias ListTagsForDeliveryStreamOutputTagList = Array(Tag)
+
+    alias LogGroupName = String
+
+    alias LogStreamName = String
+
+    alias NoEncryptionConfig = String
+
+    alias NonEmptyString = String
+
+    alias NonEmptyStringWithoutWhitespace = String
+
+    alias NonNegativeIntegerObject = Int32
+
+    alias OpenXJsonSerDe = NamedTuple(
+      "ConvertDotsInJsonKeysToUnderscores" : (BooleanObject)?,
+      "CaseInsensitive" : (BooleanObject)?,
+      "ColumnToJsonKeyMappings" : (ColumnToJsonKeyMappings)?
+    )
+
+    alias OrcCompression = String
+
+    alias OrcFormatVersion = String
+
+    alias OrcRowIndexStride = Int32
+
+    alias OrcSerDe = NamedTuple(
+      "StripeSizeBytes" : (OrcStripeSizeBytes)?,
+      "BlockSizeBytes" : (BlockSizeBytes)?,
+      "RowIndexStride" : (OrcRowIndexStride)?,
+      "EnablePadding" : (BooleanObject)?,
+      "PaddingTolerance" : (Proportion)?,
+      "Compression" : (OrcCompression)?,
+      "BloomFilterColumns" : (ListOfNonEmptyStringsWithoutWhitespace)?,
+      "BloomFilterFalsePositiveProbability" : (Proportion)?,
+      "DictionaryKeyThreshold" : (Proportion)?,
+      "FormatVersion" : (OrcFormatVersion)?
+    )
+
+    alias OrcStripeSizeBytes = Int32
+
+    alias OutputFormatConfiguration = NamedTuple(
+      "Serializer" : (Serializer)?
+    )
+
+    alias ParquetCompression = String
+
+    alias ParquetPageSizeBytes = Int32
+
+    alias ParquetSerDe = NamedTuple(
+      "BlockSizeBytes" : (BlockSizeBytes)?,
+      "PageSizeBytes" : (ParquetPageSizeBytes)?,
+      "Compression" : (ParquetCompression)?,
+      "EnableDictionaryCompression" : (BooleanObject)?,
+      "MaxPaddingBytes" : (NonNegativeIntegerObject)?,
+      "WriterVersion" : (ParquetWriterVersion)?
+    )
+
+    alias ParquetWriterVersion = String
+
+    alias Password = String
+
+    alias Prefix = String
+
+    alias ProcessingConfiguration = NamedTuple(
+      "Enabled" : (BooleanObject)?,
+      "Processors" : (ProcessorList)?
+    )
+
+    alias Processor = NamedTuple(
+      "Type" : ProcessorType,
+      "Parameters" : (ProcessorParameterList)?
+    )
+
+    alias ProcessorList = Array(Processor)
+
+    alias ProcessorParameter = NamedTuple(
+      "ParameterName" : ProcessorParameterName,
+      "ParameterValue" : ProcessorParameterValue
+    )
+
+    alias ProcessorParameterList = Array(ProcessorParameter)
+
+    alias ProcessorParameterName = String
+
+    alias ProcessorParameterValue = String
+
+    alias ProcessorType = String
+
+    alias Proportion = Float64
+
+    alias PutRecordBatchInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "Records" : PutRecordBatchRequestEntryList
+    )
+
+    alias PutRecordBatchOutput = NamedTuple(
+      "FailedPutCount" : NonNegativeIntegerObject,
+      "Encrypted" : (BooleanObject)?,
+      "RequestResponses" : PutRecordBatchResponseEntryList
+    )
+
+    alias PutRecordBatchRequestEntryList = Array(Record)
+
+    alias PutRecordBatchResponseEntry = NamedTuple(
+      "RecordId" : (PutResponseRecordId)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias PutRecordBatchResponseEntryList = Array(PutRecordBatchResponseEntry)
+
+    alias PutRecordInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "Record" : Record
+    )
+
+    alias PutRecordOutput = NamedTuple(
+      "RecordId" : PutResponseRecordId,
+      "Encrypted" : (BooleanObject)?
+    )
+
+    alias PutResponseRecordId = String
+
+    alias Record = NamedTuple(
+      "Data" : Data
+    )
+
+    alias RedshiftDestinationConfiguration = NamedTuple(
+      "RoleARN" : RoleARN,
+      "ClusterJDBCURL" : ClusterJDBCURL,
+      "CopyCommand" : CopyCommand,
+      "Username" : Username,
+      "Password" : Password,
+      "RetryOptions" : (RedshiftRetryOptions)?,
+      "S3Configuration" : S3DestinationConfiguration,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "S3BackupMode" : (RedshiftS3BackupMode)?,
+      "S3BackupConfiguration" : (S3DestinationConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias RedshiftDestinationDescription = NamedTuple(
+      "RoleARN" : RoleARN,
+      "ClusterJDBCURL" : ClusterJDBCURL,
+      "CopyCommand" : CopyCommand,
+      "Username" : Username,
+      "RetryOptions" : (RedshiftRetryOptions)?,
+      "S3DestinationDescription" : S3DestinationDescription,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "S3BackupMode" : (RedshiftS3BackupMode)?,
+      "S3BackupDescription" : (S3DestinationDescription)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias RedshiftDestinationUpdate = NamedTuple(
+      "RoleARN" : (RoleARN)?,
+      "ClusterJDBCURL" : (ClusterJDBCURL)?,
+      "CopyCommand" : (CopyCommand)?,
+      "Username" : (Username)?,
+      "Password" : (Password)?,
+      "RetryOptions" : (RedshiftRetryOptions)?,
+      "S3Update" : (S3DestinationUpdate)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "S3BackupMode" : (RedshiftS3BackupMode)?,
+      "S3BackupUpdate" : (S3DestinationUpdate)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias RedshiftRetryDurationInSeconds = Int32
+
+    alias RedshiftRetryOptions = NamedTuple(
+      "DurationInSeconds" : (RedshiftRetryDurationInSeconds)?
+    )
+
+    alias RedshiftS3BackupMode = String
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias RoleARN = String
+
+    alias S3BackupMode = String
+
+    alias S3DestinationConfiguration = NamedTuple(
+      "RoleARN" : RoleARN,
+      "BucketARN" : BucketARN,
+      "Prefix" : (Prefix)?,
+      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "BufferingHints" : (BufferingHints)?,
+      "CompressionFormat" : (CompressionFormat)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias S3DestinationDescription = NamedTuple(
+      "RoleARN" : RoleARN,
+      "BucketARN" : BucketARN,
+      "Prefix" : (Prefix)?,
+      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "BufferingHints" : BufferingHints,
+      "CompressionFormat" : CompressionFormat,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias S3DestinationUpdate = NamedTuple(
+      "RoleARN" : (RoleARN)?,
+      "BucketARN" : (BucketARN)?,
+      "Prefix" : (Prefix)?,
+      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "BufferingHints" : (BufferingHints)?,
+      "CompressionFormat" : (CompressionFormat)?,
+      "EncryptionConfiguration" : (EncryptionConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias SchemaConfiguration = NamedTuple(
+      "RoleARN" : (NonEmptyStringWithoutWhitespace)?,
+      "CatalogId" : (NonEmptyStringWithoutWhitespace)?,
+      "DatabaseName" : (NonEmptyStringWithoutWhitespace)?,
+      "TableName" : (NonEmptyStringWithoutWhitespace)?,
+      "Region" : (NonEmptyStringWithoutWhitespace)?,
+      "VersionId" : (NonEmptyStringWithoutWhitespace)?
+    )
+
+    alias SecurityGroupIdList = Array(NonEmptyStringWithoutWhitespace)
+
+    alias Serializer = NamedTuple(
+      "ParquetSerDe" : (ParquetSerDe)?,
+      "OrcSerDe" : (OrcSerDe)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias SizeInMBs = Int32
+
+    alias SourceDescription = NamedTuple(
+      "KinesisStreamSourceDescription" : (KinesisStreamSourceDescription)?
+    )
+
+    alias SplunkDestinationConfiguration = NamedTuple(
+      "HECEndpoint" : HECEndpoint,
+      "HECEndpointType" : HECEndpointType,
+      "HECToken" : HECToken,
+      "HECAcknowledgmentTimeoutInSeconds" : (HECAcknowledgmentTimeoutInSeconds)?,
+      "RetryOptions" : (SplunkRetryOptions)?,
+      "S3BackupMode" : (SplunkS3BackupMode)?,
+      "S3Configuration" : S3DestinationConfiguration,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias SplunkDestinationDescription = NamedTuple(
+      "HECEndpoint" : (HECEndpoint)?,
+      "HECEndpointType" : (HECEndpointType)?,
+      "HECToken" : (HECToken)?,
+      "HECAcknowledgmentTimeoutInSeconds" : (HECAcknowledgmentTimeoutInSeconds)?,
+      "RetryOptions" : (SplunkRetryOptions)?,
+      "S3BackupMode" : (SplunkS3BackupMode)?,
+      "S3DestinationDescription" : (S3DestinationDescription)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias SplunkDestinationUpdate = NamedTuple(
+      "HECEndpoint" : (HECEndpoint)?,
+      "HECEndpointType" : (HECEndpointType)?,
+      "HECToken" : (HECToken)?,
+      "HECAcknowledgmentTimeoutInSeconds" : (HECAcknowledgmentTimeoutInSeconds)?,
+      "RetryOptions" : (SplunkRetryOptions)?,
+      "S3BackupMode" : (SplunkS3BackupMode)?,
+      "S3Update" : (S3DestinationUpdate)?,
+      "ProcessingConfiguration" : (ProcessingConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+    )
+
+    alias SplunkRetryDurationInSeconds = Int32
+
+    alias SplunkRetryOptions = NamedTuple(
+      "DurationInSeconds" : (SplunkRetryDurationInSeconds)?
+    )
+
+    alias SplunkS3BackupMode = String
+
+    alias StartDeliveryStreamEncryptionInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "DeliveryStreamEncryptionConfigurationInput" : (DeliveryStreamEncryptionConfigurationInput)?
+    )
+
+    alias StartDeliveryStreamEncryptionOutput = NamedTuple(
+      
+    )
+
+    alias StopDeliveryStreamEncryptionInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName
+    )
+
+    alias StopDeliveryStreamEncryptionOutput = NamedTuple(
+      
+    )
+
+    alias SubnetIdList = Array(NonEmptyStringWithoutWhitespace)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagDeliveryStreamInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "Tags" : TagDeliveryStreamInputTagList
+    )
+
+    alias TagDeliveryStreamInputTagList = Array(Tag)
+
+    alias TagDeliveryStreamOutput = NamedTuple(
+      
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagDeliveryStreamInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagDeliveryStreamOutput = NamedTuple(
+      
+    )
+
+    alias UpdateDestinationInput = NamedTuple(
+      "DeliveryStreamName" : DeliveryStreamName,
+      "CurrentDeliveryStreamVersionId" : DeliveryStreamVersionId,
+      "DestinationId" : DestinationId,
+      "S3DestinationUpdate" : (S3DestinationUpdate)?,
+      "ExtendedS3DestinationUpdate" : (ExtendedS3DestinationUpdate)?,
+      "RedshiftDestinationUpdate" : (RedshiftDestinationUpdate)?,
+      "ElasticsearchDestinationUpdate" : (ElasticsearchDestinationUpdate)?,
+      "SplunkDestinationUpdate" : (SplunkDestinationUpdate)?,
+      "HttpEndpointDestinationUpdate" : (HttpEndpointDestinationUpdate)?
+    )
+
+    alias UpdateDestinationOutput = NamedTuple(
+      
+    )
+
+    alias Username = String
+
+    alias VpcConfiguration = NamedTuple(
+      "SubnetIds" : SubnetIdList,
+      "RoleARN" : RoleARN,
+      "SecurityGroupIds" : SecurityGroupIdList
+    )
+
+    alias VpcConfigurationDescription = NamedTuple(
+      "SubnetIds" : SubnetIdList,
+      "RoleARN" : RoleARN,
+      "SecurityGroupIds" : SecurityGroupIdList,
+      "VpcId" : NonEmptyStringWithoutWhitespace
+    )
   end
 end

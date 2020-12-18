@@ -364,8 +364,8 @@ module Aws::LicenseManager
     #
     # @overload accept_grant(**params)
     # @param [Hash] params ({})
-    def accept_grant(params = {}, **options)
-      req = build_request(:accept_grant, params)
+    def accept_grant(, **options)
+      req = build_request(:accept_grant, )
       req.send_request(options)
     end
 
@@ -391,8 +391,8 @@ module Aws::LicenseManager
     #
     # @overload check_in_license(**params)
     # @param [Hash] params ({})
-    def check_in_license(params = {}, **options)
-      req = build_request(:check_in_license, params)
+    def check_in_license(, **options)
+      req = build_request(:check_in_license, )
       req.send_request(options)
     end
 
@@ -477,8 +477,8 @@ module Aws::LicenseManager
     #
     # @overload checkout_borrow_license(**params)
     # @param [Hash] params ({})
-    def checkout_borrow_license(params = {}, **options)
-      req = build_request(:checkout_borrow_license, params)
+    def checkout_borrow_license(, **options)
+      req = build_request(:checkout_borrow_license, )
       req.send_request(options)
     end
 
@@ -551,8 +551,8 @@ module Aws::LicenseManager
     #
     # @overload checkout_license(**params)
     # @param [Hash] params ({})
-    def checkout_license(params = {}, **options)
-      req = build_request(:checkout_license, params)
+    def checkout_license(, **options)
+      req = build_request(:checkout_license, )
       req.send_request(options)
     end
 
@@ -605,8 +605,8 @@ module Aws::LicenseManager
     #
     # @overload create_grant(**params)
     # @param [Hash] params ({})
-    def create_grant(params = {}, **options)
-      req = build_request(:create_grant, params)
+    def create_grant(, **options)
+      req = build_request(:create_grant, )
       req.send_request(options)
     end
 
@@ -658,8 +658,8 @@ module Aws::LicenseManager
     #
     # @overload create_grant_version(**params)
     # @param [Hash] params ({})
-    def create_grant_version(params = {}, **options)
-      req = build_request(:create_grant_version, params)
+    def create_grant_version(, **options)
+      req = build_request(:create_grant_version, )
       req.send_request(options)
     end
 
@@ -763,8 +763,8 @@ module Aws::LicenseManager
     #
     # @overload create_license(**params)
     # @param [Hash] params ({})
-    def create_license(params = {}, **options)
-      req = build_request(:create_license, params)
+    def create_license(, **options)
+      req = build_request(:create_license, )
       req.send_request(options)
     end
 
@@ -868,8 +868,8 @@ module Aws::LicenseManager
     #
     # @overload create_license_configuration(**params)
     # @param [Hash] params ({})
-    def create_license_configuration(params = {}, **options)
-      req = build_request(:create_license_configuration, params)
+    def create_license_configuration(, **options)
+      req = build_request(:create_license_configuration, )
       req.send_request(options)
     end
 
@@ -977,8 +977,8 @@ module Aws::LicenseManager
     #
     # @overload create_license_version(**params)
     # @param [Hash] params ({})
-    def create_license_version(params = {}, **options)
-      req = build_request(:create_license_version, params)
+    def create_license_version(, **options)
+      req = build_request(:create_license_version, )
       req.send_request(options)
     end
 
@@ -1034,8 +1034,8 @@ module Aws::LicenseManager
     #
     # @overload create_token(**params)
     # @param [Hash] params ({})
-    def create_token(params = {}, **options)
-      req = build_request(:create_token, params)
+    def create_token(, **options)
+      req = build_request(:create_token, )
       req.send_request(options)
     end
 
@@ -1070,8 +1070,8 @@ module Aws::LicenseManager
     #
     # @overload delete_grant(**params)
     # @param [Hash] params ({})
-    def delete_grant(params = {}, **options)
-      req = build_request(:delete_grant, params)
+    def delete_grant(, **options)
+      req = build_request(:delete_grant, )
       req.send_request(options)
     end
 
@@ -1104,8 +1104,8 @@ module Aws::LicenseManager
     #
     # @overload delete_license(**params)
     # @param [Hash] params ({})
-    def delete_license(params = {}, **options)
-      req = build_request(:delete_license, params)
+    def delete_license(, **options)
+      req = build_request(:delete_license, )
       req.send_request(options)
     end
 
@@ -1128,8 +1128,8 @@ module Aws::LicenseManager
     #
     # @overload delete_license_configuration(**params)
     # @param [Hash] params ({})
-    def delete_license_configuration(params = {}, **options)
-      req = build_request(:delete_license_configuration, params)
+    def delete_license_configuration(, **options)
+      req = build_request(:delete_license_configuration, )
       req.send_request(options)
     end
 
@@ -1151,8 +1151,8 @@ module Aws::LicenseManager
     #
     # @overload delete_token(**params)
     # @param [Hash] params ({})
-    def delete_token(params = {}, **options)
-      req = build_request(:delete_token, params)
+    def delete_token(, **options)
+      req = build_request(:delete_token, )
       req.send_request(options)
     end
 
@@ -1187,8 +1187,8 @@ module Aws::LicenseManager
     #
     # @overload extend_license_consumption(**params)
     # @param [Hash] params ({})
-    def extend_license_consumption(params = {}, **options)
-      req = build_request(:extend_license_consumption, params)
+    def extend_license_consumption(, **options)
+      req = build_request(:extend_license_consumption, )
       req.send_request(options)
     end
 
@@ -1220,8 +1220,8 @@ module Aws::LicenseManager
     #
     # @overload get_access_token(**params)
     # @param [Hash] params ({})
-    def get_access_token(params = {}, **options)
-      req = build_request(:get_access_token, params)
+    def get_access_token(, **options)
+      req = build_request(:get_access_token, )
       req.send_request(options)
     end
 
@@ -1262,8 +1262,8 @@ module Aws::LicenseManager
     #
     # @overload get_grant(**params)
     # @param [Hash] params ({})
-    def get_grant(params = {}, **options)
-      req = build_request(:get_grant, params)
+    def get_grant(, **options)
+      req = build_request(:get_grant, )
       req.send_request(options)
     end
 
@@ -1321,8 +1321,8 @@ module Aws::LicenseManager
     #
     # @overload get_license(**params)
     # @param [Hash] params ({})
-    def get_license(params = {}, **options)
-      req = build_request(:get_license, params)
+    def get_license(, **options)
+      req = build_request(:get_license, )
       req.send_request(options)
     end
 
@@ -1394,8 +1394,8 @@ module Aws::LicenseManager
     #
     # @overload get_license_configuration(**params)
     # @param [Hash] params ({})
-    def get_license_configuration(params = {}, **options)
-      req = build_request(:get_license_configuration, params)
+    def get_license_configuration(, **options)
+      req = build_request(:get_license_configuration, )
       req.send_request(options)
     end
 
@@ -1426,8 +1426,8 @@ module Aws::LicenseManager
     #
     # @overload get_license_usage(**params)
     # @param [Hash] params ({})
-    def get_license_usage(params = {}, **options)
-      req = build_request(:get_license_usage, params)
+    def get_license_usage(, **options)
+      req = build_request(:get_license_usage, )
       req.send_request(options)
     end
 
@@ -1453,8 +1453,8 @@ module Aws::LicenseManager
     #
     # @overload get_service_settings(**params)
     # @param [Hash] params ({})
-    def get_service_settings(params = {}, **options)
-      req = build_request(:get_service_settings, params)
+    def get_service_settings(, **options)
+      req = build_request(:get_service_settings, )
       req.send_request(options)
     end
 
@@ -1501,8 +1501,8 @@ module Aws::LicenseManager
     #
     # @overload list_associations_for_license_configuration(**params)
     # @param [Hash] params ({})
-    def list_associations_for_license_configuration(params = {}, **options)
-      req = build_request(:list_associations_for_license_configuration, params)
+    def list_associations_for_license_configuration(, **options)
+      req = build_request(:list_associations_for_license_configuration, )
       req.send_request(options)
     end
 
@@ -1567,8 +1567,8 @@ module Aws::LicenseManager
     #
     # @overload list_distributed_grants(**params)
     # @param [Hash] params ({})
-    def list_distributed_grants(params = {}, **options)
-      req = build_request(:list_distributed_grants, params)
+    def list_distributed_grants(, **options)
+      req = build_request(:list_distributed_grants, )
       req.send_request(options)
     end
 
@@ -1615,8 +1615,8 @@ module Aws::LicenseManager
     #
     # @overload list_failures_for_license_configuration_operations(**params)
     # @param [Hash] params ({})
-    def list_failures_for_license_configuration_operations(params = {}, **options)
-      req = build_request(:list_failures_for_license_configuration_operations, params)
+    def list_failures_for_license_configuration_operations(, **options)
+      req = build_request(:list_failures_for_license_configuration_operations, )
       req.send_request(options)
     end
 
@@ -1702,8 +1702,8 @@ module Aws::LicenseManager
     #
     # @overload list_license_configurations(**params)
     # @param [Hash] params ({})
-    def list_license_configurations(params = {}, **options)
-      req = build_request(:list_license_configurations, params)
+    def list_license_configurations(, **options)
+      req = build_request(:list_license_configurations, )
       req.send_request(options)
     end
 
@@ -1743,8 +1743,8 @@ module Aws::LicenseManager
     #
     # @overload list_license_specifications_for_resource(**params)
     # @param [Hash] params ({})
-    def list_license_specifications_for_resource(params = {}, **options)
-      req = build_request(:list_license_specifications_for_resource, params)
+    def list_license_specifications_for_resource(, **options)
+      req = build_request(:list_license_specifications_for_resource, )
       req.send_request(options)
     end
 
@@ -1809,8 +1809,8 @@ module Aws::LicenseManager
     #
     # @overload list_license_versions(**params)
     # @param [Hash] params ({})
-    def list_license_versions(params = {}, **options)
-      req = build_request(:list_license_versions, params)
+    def list_license_versions(, **options)
+      req = build_request(:list_license_versions, )
       req.send_request(options)
     end
 
@@ -1892,8 +1892,8 @@ module Aws::LicenseManager
     #
     # @overload list_licenses(**params)
     # @param [Hash] params ({})
-    def list_licenses(params = {}, **options)
-      req = build_request(:list_licenses, params)
+    def list_licenses(, **options)
+      req = build_request(:list_licenses, )
       req.send_request(options)
     end
 
@@ -1954,8 +1954,8 @@ module Aws::LicenseManager
     #
     # @overload list_received_grants(**params)
     # @param [Hash] params ({})
-    def list_received_grants(params = {}, **options)
-      req = build_request(:list_received_grants, params)
+    def list_received_grants(, **options)
+      req = build_request(:list_received_grants, )
       req.send_request(options)
     end
 
@@ -2040,8 +2040,8 @@ module Aws::LicenseManager
     #
     # @overload list_received_licenses(**params)
     # @param [Hash] params ({})
-    def list_received_licenses(params = {}, **options)
-      req = build_request(:list_received_licenses, params)
+    def list_received_licenses(, **options)
+      req = build_request(:list_received_licenses, )
       req.send_request(options)
     end
 
@@ -2112,8 +2112,8 @@ module Aws::LicenseManager
     #
     # @overload list_resource_inventory(**params)
     # @param [Hash] params ({})
-    def list_resource_inventory(params = {}, **options)
-      req = build_request(:list_resource_inventory, params)
+    def list_resource_inventory(, **options)
+      req = build_request(:list_resource_inventory, )
       req.send_request(options)
     end
 
@@ -2142,8 +2142,8 @@ module Aws::LicenseManager
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2202,8 +2202,8 @@ module Aws::LicenseManager
     #
     # @overload list_tokens(**params)
     # @param [Hash] params ({})
-    def list_tokens(params = {}, **options)
-      req = build_request(:list_tokens, params)
+    def list_tokens(, **options)
+      req = build_request(:list_tokens, )
       req.send_request(options)
     end
 
@@ -2269,8 +2269,8 @@ module Aws::LicenseManager
     #
     # @overload list_usage_for_license_configuration(**params)
     # @param [Hash] params ({})
-    def list_usage_for_license_configuration(params = {}, **options)
-      req = build_request(:list_usage_for_license_configuration, params)
+    def list_usage_for_license_configuration(, **options)
+      req = build_request(:list_usage_for_license_configuration, )
       req.send_request(options)
     end
 
@@ -2301,8 +2301,8 @@ module Aws::LicenseManager
     #
     # @overload reject_grant(**params)
     # @param [Hash] params ({})
-    def reject_grant(params = {}, **options)
-      req = build_request(:reject_grant, params)
+    def reject_grant(, **options)
+      req = build_request(:reject_grant, )
       req.send_request(options)
     end
 
@@ -2332,8 +2332,8 @@ module Aws::LicenseManager
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2358,8 +2358,8 @@ module Aws::LicenseManager
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2424,8 +2424,8 @@ module Aws::LicenseManager
     #
     # @overload update_license_configuration(**params)
     # @param [Hash] params ({})
-    def update_license_configuration(params = {}, **options)
-      req = build_request(:update_license_configuration, params)
+    def update_license_configuration(, **options)
+      req = build_request(:update_license_configuration, )
       req.send_request(options)
     end
 
@@ -2470,8 +2470,8 @@ module Aws::LicenseManager
     #
     # @overload update_license_specifications_for_resource(**params)
     # @param [Hash] params ({})
-    def update_license_specifications_for_resource(params = {}, **options)
-      req = build_request(:update_license_specifications_for_resource, params)
+    def update_license_specifications_for_resource(, **options)
+      req = build_request(:update_license_specifications_for_resource, )
       req.send_request(options)
     end
 
@@ -2509,8 +2509,8 @@ module Aws::LicenseManager
     #
     # @overload update_service_settings(**params)
     # @param [Hash] params ({})
-    def update_service_settings(params = {}, **options)
-      req = build_request(:update_service_settings, params)
+    def update_service_settings(, **options)
+      req = build_request(:update_service_settings, )
       req.send_request(options)
     end
 

@@ -397,8 +397,8 @@ module Aws::TranscribeService
     #
     # @overload create_language_model(**params)
     # @param [Hash] params ({})
-    def create_language_model(params = {}, **options)
-      req = build_request(:create_language_model, params)
+    def create_language_model(, **options)
+      req = build_request(:create_language_model, )
       req.send_request(options)
     end
 
@@ -471,8 +471,8 @@ module Aws::TranscribeService
     #
     # @overload create_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def create_medical_vocabulary(params = {}, **options)
-      req = build_request(:create_medical_vocabulary, params)
+    def create_medical_vocabulary(, **options)
+      req = build_request(:create_medical_vocabulary, )
       req.send_request(options)
     end
 
@@ -536,8 +536,8 @@ module Aws::TranscribeService
     #
     # @overload create_vocabulary(**params)
     # @param [Hash] params ({})
-    def create_vocabulary(params = {}, **options)
-      req = build_request(:create_vocabulary, params)
+    def create_vocabulary(, **options)
+      req = build_request(:create_vocabulary, )
       req.send_request(options)
     end
 
@@ -608,8 +608,8 @@ module Aws::TranscribeService
     #
     # @overload create_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def create_vocabulary_filter(params = {}, **options)
-      req = build_request(:create_vocabulary_filter, params)
+    def create_vocabulary_filter(, **options)
+      req = build_request(:create_vocabulary_filter, )
       req.send_request(options)
     end
 
@@ -630,8 +630,8 @@ module Aws::TranscribeService
     #
     # @overload delete_language_model(**params)
     # @param [Hash] params ({})
-    def delete_language_model(params = {}, **options)
-      req = build_request(:delete_language_model, params)
+    def delete_language_model(, **options)
+      req = build_request(:delete_language_model, )
       req.send_request(options)
     end
 
@@ -654,8 +654,8 @@ module Aws::TranscribeService
     #
     # @overload delete_medical_transcription_job(**params)
     # @param [Hash] params ({})
-    def delete_medical_transcription_job(params = {}, **options)
-      req = build_request(:delete_medical_transcription_job, params)
+    def delete_medical_transcription_job(, **options)
+      req = build_request(:delete_medical_transcription_job, )
       req.send_request(options)
     end
 
@@ -676,8 +676,8 @@ module Aws::TranscribeService
     #
     # @overload delete_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def delete_medical_vocabulary(params = {}, **options)
-      req = build_request(:delete_medical_vocabulary, params)
+    def delete_medical_vocabulary(, **options)
+      req = build_request(:delete_medical_vocabulary, )
       req.send_request(options)
     end
 
@@ -699,8 +699,8 @@ module Aws::TranscribeService
     #
     # @overload delete_transcription_job(**params)
     # @param [Hash] params ({})
-    def delete_transcription_job(params = {}, **options)
-      req = build_request(:delete_transcription_job, params)
+    def delete_transcription_job(, **options)
+      req = build_request(:delete_transcription_job, )
       req.send_request(options)
     end
 
@@ -721,8 +721,8 @@ module Aws::TranscribeService
     #
     # @overload delete_vocabulary(**params)
     # @param [Hash] params ({})
-    def delete_vocabulary(params = {}, **options)
-      req = build_request(:delete_vocabulary, params)
+    def delete_vocabulary(, **options)
+      req = build_request(:delete_vocabulary, )
       req.send_request(options)
     end
 
@@ -743,8 +743,8 @@ module Aws::TranscribeService
     #
     # @overload delete_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def delete_vocabulary_filter(params = {}, **options)
-      req = build_request(:delete_vocabulary_filter, params)
+    def delete_vocabulary_filter(, **options)
+      req = build_request(:delete_vocabulary_filter, )
       req.send_request(options)
     end
 
@@ -789,8 +789,8 @@ module Aws::TranscribeService
     #
     # @overload describe_language_model(**params)
     # @param [Hash] params ({})
-    def describe_language_model(params = {}, **options)
-      req = build_request(:describe_language_model, params)
+    def describe_language_model(, **options)
+      req = build_request(:describe_language_model, )
       req.send_request(options)
     end
 
@@ -839,8 +839,8 @@ module Aws::TranscribeService
     #
     # @overload get_medical_transcription_job(**params)
     # @param [Hash] params ({})
-    def get_medical_transcription_job(params = {}, **options)
-      req = build_request(:get_medical_transcription_job, params)
+    def get_medical_transcription_job(, **options)
+      req = build_request(:get_medical_transcription_job, )
       req.send_request(options)
     end
 
@@ -878,8 +878,8 @@ module Aws::TranscribeService
     #
     # @overload get_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def get_medical_vocabulary(params = {}, **options)
-      req = build_request(:get_medical_vocabulary, params)
+    def get_medical_vocabulary(, **options)
+      req = build_request(:get_medical_vocabulary, )
       req.send_request(options)
     end
 
@@ -939,8 +939,8 @@ module Aws::TranscribeService
     #
     # @overload get_transcription_job(**params)
     # @param [Hash] params ({})
-    def get_transcription_job(params = {}, **options)
-      req = build_request(:get_transcription_job, params)
+    def get_transcription_job(, **options)
+      req = build_request(:get_transcription_job, )
       req.send_request(options)
     end
 
@@ -978,8 +978,8 @@ module Aws::TranscribeService
     #
     # @overload get_vocabulary(**params)
     # @param [Hash] params ({})
-    def get_vocabulary(params = {}, **options)
-      req = build_request(:get_vocabulary, params)
+    def get_vocabulary(, **options)
+      req = build_request(:get_vocabulary, )
       req.send_request(options)
     end
 
@@ -1012,8 +1012,8 @@ module Aws::TranscribeService
     #
     # @overload get_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def get_vocabulary_filter(params = {}, **options)
-      req = build_request(:get_vocabulary_filter, params)
+    def get_vocabulary_filter(, **options)
+      req = build_request(:get_vocabulary_filter, )
       req.send_request(options)
     end
 
@@ -1077,8 +1077,8 @@ module Aws::TranscribeService
     #
     # @overload list_language_models(**params)
     # @param [Hash] params ({})
-    def list_language_models(params = {}, **options)
-      req = build_request(:list_language_models, params)
+    def list_language_models(, **options)
+      req = build_request(:list_language_models, )
       req.send_request(options)
     end
 
@@ -1142,8 +1142,8 @@ module Aws::TranscribeService
     #
     # @overload list_medical_transcription_jobs(**params)
     # @param [Hash] params ({})
-    def list_medical_transcription_jobs(params = {}, **options)
-      req = build_request(:list_medical_transcription_jobs, params)
+    def list_medical_transcription_jobs(, **options)
+      req = build_request(:list_medical_transcription_jobs, )
       req.send_request(options)
     end
 
@@ -1200,8 +1200,8 @@ module Aws::TranscribeService
     #
     # @overload list_medical_vocabularies(**params)
     # @param [Hash] params ({})
-    def list_medical_vocabularies(params = {}, **options)
-      req = build_request(:list_medical_vocabularies, params)
+    def list_medical_vocabularies(, **options)
+      req = build_request(:list_medical_vocabularies, )
       req.send_request(options)
     end
 
@@ -1266,8 +1266,8 @@ module Aws::TranscribeService
     #
     # @overload list_transcription_jobs(**params)
     # @param [Hash] params ({})
-    def list_transcription_jobs(params = {}, **options)
-      req = build_request(:list_transcription_jobs, params)
+    def list_transcription_jobs(, **options)
+      req = build_request(:list_transcription_jobs, )
       req.send_request(options)
     end
 
@@ -1324,8 +1324,8 @@ module Aws::TranscribeService
     #
     # @overload list_vocabularies(**params)
     # @param [Hash] params ({})
-    def list_vocabularies(params = {}, **options)
-      req = build_request(:list_vocabularies, params)
+    def list_vocabularies(, **options)
+      req = build_request(:list_vocabularies, )
       req.send_request(options)
     end
 
@@ -1372,8 +1372,8 @@ module Aws::TranscribeService
     #
     # @overload list_vocabulary_filters(**params)
     # @param [Hash] params ({})
-    def list_vocabulary_filters(params = {}, **options)
-      req = build_request(:list_vocabulary_filters, params)
+    def list_vocabulary_filters(, **options)
+      req = build_request(:list_vocabulary_filters, )
       req.send_request(options)
     end
 
@@ -1547,8 +1547,8 @@ module Aws::TranscribeService
     #
     # @overload start_medical_transcription_job(**params)
     # @param [Hash] params ({})
-    def start_medical_transcription_job(params = {}, **options)
-      req = build_request(:start_medical_transcription_job, params)
+    def start_medical_transcription_job(, **options)
+      req = build_request(:start_medical_transcription_job, )
       req.send_request(options)
     end
 
@@ -1765,8 +1765,8 @@ module Aws::TranscribeService
     #
     # @overload start_transcription_job(**params)
     # @param [Hash] params ({})
-    def start_transcription_job(params = {}, **options)
-      req = build_request(:start_transcription_job, params)
+    def start_transcription_job(, **options)
+      req = build_request(:start_transcription_job, )
       req.send_request(options)
     end
 
@@ -1836,8 +1836,8 @@ module Aws::TranscribeService
     #
     # @overload update_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def update_medical_vocabulary(params = {}, **options)
-      req = build_request(:update_medical_vocabulary, params)
+    def update_medical_vocabulary(, **options)
+      req = build_request(:update_medical_vocabulary, )
       req.send_request(options)
     end
 
@@ -1901,8 +1901,8 @@ module Aws::TranscribeService
     #
     # @overload update_vocabulary(**params)
     # @param [Hash] params ({})
-    def update_vocabulary(params = {}, **options)
-      req = build_request(:update_vocabulary, params)
+    def update_vocabulary(, **options)
+      req = build_request(:update_vocabulary, )
       req.send_request(options)
     end
 
@@ -1965,8 +1965,8 @@ module Aws::TranscribeService
     #
     # @overload update_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def update_vocabulary_filter(params = {}, **options)
-      req = build_request(:update_vocabulary_filter, params)
+    def update_vocabulary_filter(, **options)
+      req = build_request(:update_vocabulary_filter, )
       req.send_request(options)
     end
 

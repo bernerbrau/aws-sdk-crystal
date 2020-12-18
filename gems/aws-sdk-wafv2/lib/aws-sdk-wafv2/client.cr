@@ -392,8 +392,8 @@ module Aws::WAFV2
     #
     # @overload associate_web_acl(**params)
     # @param [Hash] params ({})
-    def associate_web_acl(params = {}, **options)
-      req = build_request(:associate_web_acl, params)
+    def associate_web_acl(, **options)
+      req = build_request(:associate_web_acl, )
       req.send_request(options)
     end
 
@@ -681,8 +681,8 @@ module Aws::WAFV2
     #
     # @overload check_capacity(**params)
     # @param [Hash] params ({})
-    def check_capacity(params = {}, **options)
-      req = build_request(:check_capacity, params)
+    def check_capacity(, **options)
+      req = build_request(:check_capacity, )
       req.send_request(options)
     end
 
@@ -795,8 +795,8 @@ module Aws::WAFV2
     #
     # @overload create_ip_set(**params)
     # @param [Hash] params ({})
-    def create_ip_set(params = {}, **options)
-      req = build_request(:create_ip_set, params)
+    def create_ip_set(, **options)
+      req = build_request(:create_ip_set, )
       req.send_request(options)
     end
 
@@ -878,8 +878,8 @@ module Aws::WAFV2
     #
     # @overload create_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def create_regex_pattern_set(params = {}, **options)
-      req = build_request(:create_regex_pattern_set, params)
+    def create_regex_pattern_set(, **options)
+      req = build_request(:create_regex_pattern_set, )
       req.send_request(options)
     end
 
@@ -1214,8 +1214,8 @@ module Aws::WAFV2
     #
     # @overload create_rule_group(**params)
     # @param [Hash] params ({})
-    def create_rule_group(params = {}, **options)
-      req = build_request(:create_rule_group, params)
+    def create_rule_group(, **options)
+      req = build_request(:create_rule_group, )
       req.send_request(options)
     end
 
@@ -1546,8 +1546,8 @@ module Aws::WAFV2
     #
     # @overload create_web_acl(**params)
     # @param [Hash] params ({})
-    def create_web_acl(params = {}, **options)
-      req = build_request(:create_web_acl, params)
+    def create_web_acl(, **options)
+      req = build_request(:create_web_acl, )
       req.send_request(options)
     end
 
@@ -1589,8 +1589,8 @@ module Aws::WAFV2
     #
     # @overload delete_firewall_manager_rule_groups(**params)
     # @param [Hash] params ({})
-    def delete_firewall_manager_rule_groups(params = {}, **options)
-      req = build_request(:delete_firewall_manager_rule_groups, params)
+    def delete_firewall_manager_rule_groups(, **options)
+      req = build_request(:delete_firewall_manager_rule_groups, )
       req.send_request(options)
     end
 
@@ -1655,8 +1655,8 @@ module Aws::WAFV2
     #
     # @overload delete_ip_set(**params)
     # @param [Hash] params ({})
-    def delete_ip_set(params = {}, **options)
-      req = build_request(:delete_ip_set, params)
+    def delete_ip_set(, **options)
+      req = build_request(:delete_ip_set, )
       req.send_request(options)
     end
 
@@ -1689,8 +1689,8 @@ module Aws::WAFV2
     #
     # @overload delete_logging_configuration(**params)
     # @param [Hash] params ({})
-    def delete_logging_configuration(params = {}, **options)
-      req = build_request(:delete_logging_configuration, params)
+    def delete_logging_configuration(, **options)
+      req = build_request(:delete_logging_configuration, )
       req.send_request(options)
     end
 
@@ -1716,8 +1716,8 @@ module Aws::WAFV2
     #
     # @overload delete_permission_policy(**params)
     # @param [Hash] params ({})
-    def delete_permission_policy(params = {}, **options)
-      req = build_request(:delete_permission_policy, params)
+    def delete_permission_policy(, **options)
+      req = build_request(:delete_permission_policy, )
       req.send_request(options)
     end
 
@@ -1782,8 +1782,8 @@ module Aws::WAFV2
     #
     # @overload delete_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def delete_regex_pattern_set(params = {}, **options)
-      req = build_request(:delete_regex_pattern_set, params)
+    def delete_regex_pattern_set(, **options)
+      req = build_request(:delete_regex_pattern_set, )
       req.send_request(options)
     end
 
@@ -1848,8 +1848,8 @@ module Aws::WAFV2
     #
     # @overload delete_rule_group(**params)
     # @param [Hash] params ({})
-    def delete_rule_group(params = {}, **options)
-      req = build_request(:delete_rule_group, params)
+    def delete_rule_group(, **options)
+      req = build_request(:delete_rule_group, )
       req.send_request(options)
     end
 
@@ -1917,8 +1917,8 @@ module Aws::WAFV2
     #
     # @overload delete_web_acl(**params)
     # @param [Hash] params ({})
-    def delete_web_acl(params = {}, **options)
-      req = build_request(:delete_web_acl, params)
+    def delete_web_acl(, **options)
+      req = build_request(:delete_web_acl, )
       req.send_request(options)
     end
 
@@ -1981,8 +1981,8 @@ module Aws::WAFV2
     #
     # @overload describe_managed_rule_group(**params)
     # @param [Hash] params ({})
-    def describe_managed_rule_group(params = {}, **options)
-      req = build_request(:describe_managed_rule_group, params)
+    def describe_managed_rule_group(, **options)
+      req = build_request(:describe_managed_rule_group, )
       req.send_request(options)
     end
 
@@ -2035,8 +2035,8 @@ module Aws::WAFV2
     #
     # @overload disassociate_web_acl(**params)
     # @param [Hash] params ({})
-    def disassociate_web_acl(params = {}, **options)
-      req = build_request(:disassociate_web_acl, params)
+    def disassociate_web_acl(, **options)
+      req = build_request(:disassociate_web_acl, )
       req.send_request(options)
     end
 
@@ -2104,8 +2104,8 @@ module Aws::WAFV2
     #
     # @overload get_ip_set(**params)
     # @param [Hash] params ({})
-    def get_ip_set(params = {}, **options)
-      req = build_request(:get_ip_set, params)
+    def get_ip_set(, **options)
+      req = build_request(:get_ip_set, )
       req.send_request(options)
     end
 
@@ -2150,8 +2150,8 @@ module Aws::WAFV2
     #
     # @overload get_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_logging_configuration(params = {}, **options)
-      req = build_request(:get_logging_configuration, params)
+    def get_logging_configuration(, **options)
+      req = build_request(:get_logging_configuration, )
       req.send_request(options)
     end
 
@@ -2181,8 +2181,8 @@ module Aws::WAFV2
     #
     # @overload get_permission_policy(**params)
     # @param [Hash] params ({})
-    def get_permission_policy(params = {}, **options)
-      req = build_request(:get_permission_policy, params)
+    def get_permission_policy(, **options)
+      req = build_request(:get_permission_policy, )
       req.send_request(options)
     end
 
@@ -2255,8 +2255,8 @@ module Aws::WAFV2
     #
     # @overload get_rate_based_statement_managed_keys(**params)
     # @param [Hash] params ({})
-    def get_rate_based_statement_managed_keys(params = {}, **options)
-      req = build_request(:get_rate_based_statement_managed_keys, params)
+    def get_rate_based_statement_managed_keys(, **options)
+      req = build_request(:get_rate_based_statement_managed_keys, )
       req.send_request(options)
     end
 
@@ -2323,8 +2323,8 @@ module Aws::WAFV2
     #
     # @overload get_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def get_regex_pattern_set(params = {}, **options)
-      req = build_request(:get_regex_pattern_set, params)
+    def get_regex_pattern_set(, **options)
+      req = build_request(:get_regex_pattern_set, )
       req.send_request(options)
     end
 
@@ -2454,8 +2454,8 @@ module Aws::WAFV2
     #
     # @overload get_rule_group(**params)
     # @param [Hash] params ({})
-    def get_rule_group(params = {}, **options)
-      req = build_request(:get_rule_group, params)
+    def get_rule_group(, **options)
+      req = build_request(:get_rule_group, )
       req.send_request(options)
     end
 
@@ -2562,8 +2562,8 @@ module Aws::WAFV2
     #
     # @overload get_sampled_requests(**params)
     # @param [Hash] params ({})
-    def get_sampled_requests(params = {}, **options)
-      req = build_request(:get_sampled_requests, params)
+    def get_sampled_requests(, **options)
+      req = build_request(:get_sampled_requests, )
       req.send_request(options)
     end
 
@@ -2720,8 +2720,8 @@ module Aws::WAFV2
     #
     # @overload get_web_acl(**params)
     # @param [Hash] params ({})
-    def get_web_acl(params = {}, **options)
-      req = build_request(:get_web_acl, params)
+    def get_web_acl(, **options)
+      req = build_request(:get_web_acl, )
       req.send_request(options)
     end
 
@@ -2854,8 +2854,8 @@ module Aws::WAFV2
     #
     # @overload get_web_acl_for_resource(**params)
     # @param [Hash] params ({})
-    def get_web_acl_for_resource(params = {}, **options)
-      req = build_request(:get_web_acl_for_resource, params)
+    def get_web_acl_for_resource(, **options)
+      req = build_request(:get_web_acl_for_resource, )
       req.send_request(options)
     end
 
@@ -2926,8 +2926,8 @@ module Aws::WAFV2
     #
     # @overload list_available_managed_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_available_managed_rule_groups(params = {}, **options)
-      req = build_request(:list_available_managed_rule_groups, params)
+    def list_available_managed_rule_groups(, **options)
+      req = build_request(:list_available_managed_rule_groups, )
       req.send_request(options)
     end
 
@@ -2999,8 +2999,8 @@ module Aws::WAFV2
     #
     # @overload list_ip_sets(**params)
     # @param [Hash] params ({})
-    def list_ip_sets(params = {}, **options)
-      req = build_request(:list_ip_sets, params)
+    def list_ip_sets(, **options)
+      req = build_request(:list_ip_sets, )
       req.send_request(options)
     end
 
@@ -3073,8 +3073,8 @@ module Aws::WAFV2
     #
     # @overload list_logging_configurations(**params)
     # @param [Hash] params ({})
-    def list_logging_configurations(params = {}, **options)
-      req = build_request(:list_logging_configurations, params)
+    def list_logging_configurations(, **options)
+      req = build_request(:list_logging_configurations, )
       req.send_request(options)
     end
 
@@ -3146,8 +3146,8 @@ module Aws::WAFV2
     #
     # @overload list_regex_pattern_sets(**params)
     # @param [Hash] params ({})
-    def list_regex_pattern_sets(params = {}, **options)
-      req = build_request(:list_regex_pattern_sets, params)
+    def list_regex_pattern_sets(, **options)
+      req = build_request(:list_regex_pattern_sets, )
       req.send_request(options)
     end
 
@@ -3195,8 +3195,8 @@ module Aws::WAFV2
     #
     # @overload list_resources_for_web_acl(**params)
     # @param [Hash] params ({})
-    def list_resources_for_web_acl(params = {}, **options)
-      req = build_request(:list_resources_for_web_acl, params)
+    def list_resources_for_web_acl(, **options)
+      req = build_request(:list_resources_for_web_acl, )
       req.send_request(options)
     end
 
@@ -3268,8 +3268,8 @@ module Aws::WAFV2
     #
     # @overload list_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_rule_groups(params = {}, **options)
-      req = build_request(:list_rule_groups, params)
+    def list_rule_groups(, **options)
+      req = build_request(:list_rule_groups, )
       req.send_request(options)
     end
 
@@ -3336,8 +3336,8 @@ module Aws::WAFV2
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3409,8 +3409,8 @@ module Aws::WAFV2
     #
     # @overload list_web_acls(**params)
     # @param [Hash] params ({})
-    def list_web_acls(params = {}, **options)
-      req = build_request(:list_web_acls, params)
+    def list_web_acls(, **options)
+      req = build_request(:list_web_acls, )
       req.send_request(options)
     end
 
@@ -3505,8 +3505,8 @@ module Aws::WAFV2
     #
     # @overload put_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_logging_configuration(params = {}, **options)
-      req = build_request(:put_logging_configuration, params)
+    def put_logging_configuration(, **options)
+      req = build_request(:put_logging_configuration, )
       req.send_request(options)
     end
 
@@ -3567,8 +3567,8 @@ module Aws::WAFV2
     #
     # @overload put_permission_policy(**params)
     # @param [Hash] params ({})
-    def put_permission_policy(params = {}, **options)
-      req = build_request(:put_permission_policy, params)
+    def put_permission_policy(, **options)
+      req = build_request(:put_permission_policy, )
       req.send_request(options)
     end
 
@@ -3618,8 +3618,8 @@ module Aws::WAFV2
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3660,8 +3660,8 @@ module Aws::WAFV2
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3770,8 +3770,8 @@ module Aws::WAFV2
     #
     # @overload update_ip_set(**params)
     # @param [Hash] params ({})
-    def update_ip_set(params = {}, **options)
-      req = build_request(:update_ip_set, params)
+    def update_ip_set(, **options)
+      req = build_request(:update_ip_set, )
       req.send_request(options)
     end
 
@@ -3854,8 +3854,8 @@ module Aws::WAFV2
     #
     # @overload update_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def update_regex_pattern_set(params = {}, **options)
-      req = build_request(:update_regex_pattern_set, params)
+    def update_regex_pattern_set(, **options)
+      req = build_request(:update_regex_pattern_set, )
       req.send_request(options)
     end
 
@@ -4176,8 +4176,8 @@ module Aws::WAFV2
     #
     # @overload update_rule_group(**params)
     # @param [Hash] params ({})
-    def update_rule_group(params = {}, **options)
-      req = build_request(:update_rule_group, params)
+    def update_rule_group(, **options)
+      req = build_request(:update_rule_group, )
       req.send_request(options)
     end
 
@@ -4512,8 +4512,8 @@ module Aws::WAFV2
     #
     # @overload update_web_acl(**params)
     # @param [Hash] params ({})
-    def update_web_acl(params = {}, **options)
-      req = build_request(:update_web_acl, params)
+    def update_web_acl(, **options)
+      req = build_request(:update_web_acl, )
       req.send_request(options)
     end
 

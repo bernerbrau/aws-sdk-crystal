@@ -4936,5 +4936,984 @@ module Aws::LexModelBuildingService
       include Aws::Structure
     end
 
+    alias AliasName = String
+
+    alias AliasNameOrListAll = String
+
+    alias AmazonResourceName = String
+
+    alias BadRequestException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias BotAliasMetadata = NamedTuple(
+      "name" : (AliasName)?,
+      "description" : (Description)?,
+      "botVersion" : (Version)?,
+      "botName" : (BotName)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "checksum" : (String)?,
+      "conversationLogs" : (ConversationLogsResponse)?
+    )
+
+    alias BotAliasMetadataList = Array(BotAliasMetadata)
+
+    alias BotChannelAssociation = NamedTuple(
+      "name" : (BotChannelName)?,
+      "description" : (Description)?,
+      "botAlias" : (AliasName)?,
+      "botName" : (BotName)?,
+      "createdDate" : (Timestamp)?,
+      "type" : (ChannelType)?,
+      "botConfiguration" : (ChannelConfigurationMap)?,
+      "status" : (ChannelStatus)?,
+      "failureReason" : (String)?
+    )
+
+    alias BotChannelAssociationList = Array(BotChannelAssociation)
+
+    alias BotChannelName = String
+
+    alias BotMetadata = NamedTuple(
+      "name" : (BotName)?,
+      "description" : (Description)?,
+      "status" : (Status)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?
+    )
+
+    alias BotMetadataList = Array(BotMetadata)
+
+    alias BotName = String
+
+    alias BotVersions = Array(Version)
+
+    alias BuiltinIntentMetadata = NamedTuple(
+      "signature" : (BuiltinIntentSignature)?,
+      "supportedLocales" : (LocaleList)?
+    )
+
+    alias BuiltinIntentMetadataList = Array(BuiltinIntentMetadata)
+
+    alias BuiltinIntentSignature = String
+
+    alias BuiltinIntentSlot = NamedTuple(
+      "name" : (String)?
+    )
+
+    alias BuiltinIntentSlotList = Array(BuiltinIntentSlot)
+
+    alias BuiltinSlotTypeMetadata = NamedTuple(
+      "signature" : (BuiltinSlotTypeSignature)?,
+      "supportedLocales" : (LocaleList)?
+    )
+
+    alias BuiltinSlotTypeMetadataList = Array(BuiltinSlotTypeMetadata)
+
+    alias BuiltinSlotTypeSignature = String
+
+    alias ChannelConfigurationMap = Hash(String,String)
+
+    alias ChannelStatus = String
+
+    alias ChannelType = String
+
+    alias CodeHook = NamedTuple(
+      "uri" : LambdaARN,
+      "messageVersion" : MessageVersion
+    )
+
+    alias ConfidenceThreshold = Float64
+
+    alias ConflictException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ContentString = String
+
+    alias ContentType = String
+
+    alias ContextTimeToLiveInSeconds = Int32
+
+    alias ContextTurnsToLive = Int32
+
+    alias ConversationLogsRequest = NamedTuple(
+      "logSettings" : LogSettingsRequestList,
+      "iamRoleArn" : IamRoleArn
+    )
+
+    alias ConversationLogsResponse = NamedTuple(
+      "logSettings" : (LogSettingsResponseList)?,
+      "iamRoleArn" : (IamRoleArn)?
+    )
+
+    alias Count = Int32
+
+    alias CreateBotVersionRequest = NamedTuple(
+      "name" : BotName,
+      "checksum" : (String)?
+    )
+
+    alias CreateBotVersionResponse = NamedTuple(
+      "name" : (BotName)?,
+      "description" : (Description)?,
+      "intents" : (IntentList)?,
+      "clarificationPrompt" : (Prompt)?,
+      "abortStatement" : (Statement)?,
+      "status" : (Status)?,
+      "failureReason" : (String)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "idleSessionTTLInSeconds" : (SessionTTL)?,
+      "voiceId" : (String)?,
+      "checksum" : (String)?,
+      "version" : (Version)?,
+      "locale" : (Locale)?,
+      "childDirected" : (Boolean)?,
+      "enableModelImprovements" : (Boolean)?,
+      "detectSentiment" : (Boolean)?
+    )
+
+    alias CreateIntentVersionRequest = NamedTuple(
+      "name" : IntentName,
+      "checksum" : (String)?
+    )
+
+    alias CreateIntentVersionResponse = NamedTuple(
+      "name" : (IntentName)?,
+      "description" : (Description)?,
+      "slots" : (SlotList)?,
+      "sampleUtterances" : (IntentUtteranceList)?,
+      "confirmationPrompt" : (Prompt)?,
+      "rejectionStatement" : (Statement)?,
+      "followUpPrompt" : (FollowUpPrompt)?,
+      "conclusionStatement" : (Statement)?,
+      "dialogCodeHook" : (CodeHook)?,
+      "fulfillmentActivity" : (FulfillmentActivity)?,
+      "parentIntentSignature" : (BuiltinIntentSignature)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?,
+      "checksum" : (String)?,
+      "kendraConfiguration" : (KendraConfiguration)?,
+      "inputContexts" : (InputContextList)?,
+      "outputContexts" : (OutputContextList)?
+    )
+
+    alias CreateSlotTypeVersionRequest = NamedTuple(
+      "name" : SlotTypeName,
+      "checksum" : (String)?
+    )
+
+    alias CreateSlotTypeVersionResponse = NamedTuple(
+      "name" : (SlotTypeName)?,
+      "description" : (Description)?,
+      "enumerationValues" : (EnumerationValues)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?,
+      "checksum" : (String)?,
+      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
+      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
+      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+    )
+
+    alias CustomOrBuiltinSlotTypeName = String
+
+    alias DeleteBotAliasRequest = NamedTuple(
+      "name" : AliasName,
+      "botName" : BotName
+    )
+
+    alias DeleteBotChannelAssociationRequest = NamedTuple(
+      "name" : BotChannelName,
+      "botName" : BotName,
+      "botAlias" : AliasName
+    )
+
+    alias DeleteBotRequest = NamedTuple(
+      "name" : BotName
+    )
+
+    alias DeleteBotVersionRequest = NamedTuple(
+      "name" : BotName,
+      "version" : NumericalVersion
+    )
+
+    alias DeleteIntentRequest = NamedTuple(
+      "name" : IntentName
+    )
+
+    alias DeleteIntentVersionRequest = NamedTuple(
+      "name" : IntentName,
+      "version" : NumericalVersion
+    )
+
+    alias DeleteSlotTypeRequest = NamedTuple(
+      "name" : SlotTypeName
+    )
+
+    alias DeleteSlotTypeVersionRequest = NamedTuple(
+      "name" : SlotTypeName,
+      "version" : NumericalVersion
+    )
+
+    alias DeleteUtterancesRequest = NamedTuple(
+      "botName" : BotName,
+      "userId" : UserId
+    )
+
+    alias Description = String
+
+    alias Destination = String
+
+    alias EnumerationValue = NamedTuple(
+      "value" : Value,
+      "synonyms" : (SynonymList)?
+    )
+
+    alias EnumerationValues = Array(EnumerationValue)
+
+    alias ExportStatus = String
+
+    alias ExportType = String
+
+    alias FollowUpPrompt = NamedTuple(
+      "prompt" : Prompt,
+      "rejectionStatement" : Statement
+    )
+
+    alias FulfillmentActivity = NamedTuple(
+      "type" : FulfillmentActivityType,
+      "codeHook" : (CodeHook)?
+    )
+
+    alias FulfillmentActivityType = String
+
+    alias GetBotAliasRequest = NamedTuple(
+      "name" : AliasName,
+      "botName" : BotName
+    )
+
+    alias GetBotAliasResponse = NamedTuple(
+      "name" : (AliasName)?,
+      "description" : (Description)?,
+      "botVersion" : (Version)?,
+      "botName" : (BotName)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "checksum" : (String)?,
+      "conversationLogs" : (ConversationLogsResponse)?
+    )
+
+    alias GetBotAliasesRequest = NamedTuple(
+      "botName" : BotName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "nameContains" : (AliasName)?
+    )
+
+    alias GetBotAliasesResponse = NamedTuple(
+      "BotAliases" : (BotAliasMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetBotChannelAssociationRequest = NamedTuple(
+      "name" : BotChannelName,
+      "botName" : BotName,
+      "botAlias" : AliasName
+    )
+
+    alias GetBotChannelAssociationResponse = NamedTuple(
+      "name" : (BotChannelName)?,
+      "description" : (Description)?,
+      "botAlias" : (AliasName)?,
+      "botName" : (BotName)?,
+      "createdDate" : (Timestamp)?,
+      "type" : (ChannelType)?,
+      "botConfiguration" : (ChannelConfigurationMap)?,
+      "status" : (ChannelStatus)?,
+      "failureReason" : (String)?
+    )
+
+    alias GetBotChannelAssociationsRequest = NamedTuple(
+      "botName" : BotName,
+      "botAlias" : AliasNameOrListAll,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "nameContains" : (BotChannelName)?
+    )
+
+    alias GetBotChannelAssociationsResponse = NamedTuple(
+      "botChannelAssociations" : (BotChannelAssociationList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetBotRequest = NamedTuple(
+      "name" : BotName,
+      "versionOrAlias" : String
+    )
+
+    alias GetBotResponse = NamedTuple(
+      "name" : (BotName)?,
+      "description" : (Description)?,
+      "intents" : (IntentList)?,
+      "enableModelImprovements" : (Boolean)?,
+      "nluIntentConfidenceThreshold" : (ConfidenceThreshold)?,
+      "clarificationPrompt" : (Prompt)?,
+      "abortStatement" : (Statement)?,
+      "status" : (Status)?,
+      "failureReason" : (String)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "idleSessionTTLInSeconds" : (SessionTTL)?,
+      "voiceId" : (String)?,
+      "checksum" : (String)?,
+      "version" : (Version)?,
+      "locale" : (Locale)?,
+      "childDirected" : (Boolean)?,
+      "detectSentiment" : (Boolean)?
+    )
+
+    alias GetBotVersionsRequest = NamedTuple(
+      "name" : BotName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetBotVersionsResponse = NamedTuple(
+      "bots" : (BotMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetBotsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "nameContains" : (BotName)?
+    )
+
+    alias GetBotsResponse = NamedTuple(
+      "bots" : (BotMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetBuiltinIntentRequest = NamedTuple(
+      "signature" : BuiltinIntentSignature
+    )
+
+    alias GetBuiltinIntentResponse = NamedTuple(
+      "signature" : (BuiltinIntentSignature)?,
+      "supportedLocales" : (LocaleList)?,
+      "slots" : (BuiltinIntentSlotList)?
+    )
+
+    alias GetBuiltinIntentsRequest = NamedTuple(
+      "locale" : (Locale)?,
+      "signatureContains" : (String)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetBuiltinIntentsResponse = NamedTuple(
+      "intents" : (BuiltinIntentMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetBuiltinSlotTypesRequest = NamedTuple(
+      "locale" : (Locale)?,
+      "signatureContains" : (String)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetBuiltinSlotTypesResponse = NamedTuple(
+      "slotTypes" : (BuiltinSlotTypeMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetExportRequest = NamedTuple(
+      "name" : Name,
+      "version" : NumericalVersion,
+      "resourceType" : ResourceType,
+      "exportType" : ExportType
+    )
+
+    alias GetExportResponse = NamedTuple(
+      "name" : (Name)?,
+      "version" : (NumericalVersion)?,
+      "resourceType" : (ResourceType)?,
+      "exportType" : (ExportType)?,
+      "exportStatus" : (ExportStatus)?,
+      "failureReason" : (String)?,
+      "url" : (String)?
+    )
+
+    alias GetImportRequest = NamedTuple(
+      "importId" : String
+    )
+
+    alias GetImportResponse = NamedTuple(
+      "name" : (Name)?,
+      "resourceType" : (ResourceType)?,
+      "mergeStrategy" : (MergeStrategy)?,
+      "importId" : (String)?,
+      "importStatus" : (ImportStatus)?,
+      "failureReason" : (StringList)?,
+      "createdDate" : (Timestamp)?
+    )
+
+    alias GetIntentRequest = NamedTuple(
+      "name" : IntentName,
+      "version" : Version
+    )
+
+    alias GetIntentResponse = NamedTuple(
+      "name" : (IntentName)?,
+      "description" : (Description)?,
+      "slots" : (SlotList)?,
+      "sampleUtterances" : (IntentUtteranceList)?,
+      "confirmationPrompt" : (Prompt)?,
+      "rejectionStatement" : (Statement)?,
+      "followUpPrompt" : (FollowUpPrompt)?,
+      "conclusionStatement" : (Statement)?,
+      "dialogCodeHook" : (CodeHook)?,
+      "fulfillmentActivity" : (FulfillmentActivity)?,
+      "parentIntentSignature" : (BuiltinIntentSignature)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?,
+      "checksum" : (String)?,
+      "kendraConfiguration" : (KendraConfiguration)?,
+      "inputContexts" : (InputContextList)?,
+      "outputContexts" : (OutputContextList)?
+    )
+
+    alias GetIntentVersionsRequest = NamedTuple(
+      "name" : IntentName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetIntentVersionsResponse = NamedTuple(
+      "intents" : (IntentMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetIntentsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "nameContains" : (IntentName)?
+    )
+
+    alias GetIntentsResponse = NamedTuple(
+      "intents" : (IntentMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetSlotTypeRequest = NamedTuple(
+      "name" : SlotTypeName,
+      "version" : Version
+    )
+
+    alias GetSlotTypeResponse = NamedTuple(
+      "name" : (SlotTypeName)?,
+      "description" : (Description)?,
+      "enumerationValues" : (EnumerationValues)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?,
+      "checksum" : (String)?,
+      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
+      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
+      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+    )
+
+    alias GetSlotTypeVersionsRequest = NamedTuple(
+      "name" : SlotTypeName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetSlotTypeVersionsResponse = NamedTuple(
+      "slotTypes" : (SlotTypeMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetSlotTypesRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "nameContains" : (SlotTypeName)?
+    )
+
+    alias GetSlotTypesResponse = NamedTuple(
+      "slotTypes" : (SlotTypeMetadataList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias GetUtterancesViewRequest = NamedTuple(
+      "botName" : BotName,
+      "botVersions" : BotVersions,
+      "statusType" : StatusType
+    )
+
+    alias GetUtterancesViewResponse = NamedTuple(
+      "botName" : (BotName)?,
+      "utterances" : (ListsOfUtterances)?
+    )
+
+    alias GroupNumber = Int32
+
+    alias IamRoleArn = String
+
+    alias ImportStatus = String
+
+    alias InputContext = NamedTuple(
+      "name" : InputContextName
+    )
+
+    alias InputContextList = Array(InputContext)
+
+    alias InputContextName = String
+
+    alias Intent = NamedTuple(
+      "intentName" : IntentName,
+      "intentVersion" : Version
+    )
+
+    alias IntentList = Array(Intent)
+
+    alias IntentMetadata = NamedTuple(
+      "name" : (IntentName)?,
+      "description" : (Description)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?
+    )
+
+    alias IntentMetadataList = Array(IntentMetadata)
+
+    alias IntentName = String
+
+    alias IntentUtteranceList = Array(Utterance)
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias KendraConfiguration = NamedTuple(
+      "kendraIndex" : KendraIndexArn,
+      "queryFilterString" : (QueryFilterString)?,
+      "role" : roleArn
+    )
+
+    alias KendraIndexArn = String
+
+    alias KmsKeyArn = String
+
+    alias LambdaARN = String
+
+    alias LimitExceededException = NamedTuple(
+      "retryAfterSeconds" : (String)?,
+      "message" : (String)?
+    )
+
+    alias ListOfUtterance = Array(UtteranceData)
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagList)?
+    )
+
+    alias ListsOfUtterances = Array(UtteranceList)
+
+    alias Locale = String
+
+    alias LocaleList = Array(Locale)
+
+    alias LogSettingsRequest = NamedTuple(
+      "logType" : LogType,
+      "destination" : Destination,
+      "kmsKeyArn" : (KmsKeyArn)?,
+      "resourceArn" : ResourceArn
+    )
+
+    alias LogSettingsRequestList = Array(LogSettingsRequest)
+
+    alias LogSettingsResponse = NamedTuple(
+      "logType" : (LogType)?,
+      "destination" : (Destination)?,
+      "kmsKeyArn" : (KmsKeyArn)?,
+      "resourceArn" : (ResourceArn)?,
+      "resourcePrefix" : (ResourcePrefix)?
+    )
+
+    alias LogSettingsResponseList = Array(LogSettingsResponse)
+
+    alias LogType = String
+
+    alias MaxResults = Int32
+
+    alias MergeStrategy = String
+
+    alias Message = NamedTuple(
+      "contentType" : ContentType,
+      "content" : ContentString,
+      "groupNumber" : (GroupNumber)?
+    )
+
+    alias MessageList = Array(Message)
+
+    alias MessageVersion = String
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias NumericalVersion = String
+
+    alias ObfuscationSetting = String
+
+    alias OutputContext = NamedTuple(
+      "name" : OutputContextName,
+      "timeToLiveInSeconds" : ContextTimeToLiveInSeconds,
+      "turnsToLive" : ContextTurnsToLive
+    )
+
+    alias OutputContextList = Array(OutputContext)
+
+    alias OutputContextName = String
+
+    alias PreconditionFailedException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Priority = Int32
+
+    alias ProcessBehavior = String
+
+    alias Prompt = NamedTuple(
+      "messages" : MessageList,
+      "maxAttempts" : PromptMaxAttempts,
+      "responseCard" : (ResponseCard)?
+    )
+
+    alias PromptMaxAttempts = Int32
+
+    alias PutBotAliasRequest = NamedTuple(
+      "name" : AliasName,
+      "description" : (Description)?,
+      "botVersion" : Version,
+      "botName" : BotName,
+      "checksum" : (String)?,
+      "conversationLogs" : (ConversationLogsRequest)?,
+      "tags" : (TagList)?
+    )
+
+    alias PutBotAliasResponse = NamedTuple(
+      "name" : (AliasName)?,
+      "description" : (Description)?,
+      "botVersion" : (Version)?,
+      "botName" : (BotName)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "checksum" : (String)?,
+      "conversationLogs" : (ConversationLogsResponse)?,
+      "tags" : (TagList)?
+    )
+
+    alias PutBotRequest = NamedTuple(
+      "name" : BotName,
+      "description" : (Description)?,
+      "intents" : (IntentList)?,
+      "enableModelImprovements" : (Boolean)?,
+      "nluIntentConfidenceThreshold" : (ConfidenceThreshold)?,
+      "clarificationPrompt" : (Prompt)?,
+      "abortStatement" : (Statement)?,
+      "idleSessionTTLInSeconds" : (SessionTTL)?,
+      "voiceId" : (String)?,
+      "checksum" : (String)?,
+      "processBehavior" : (ProcessBehavior)?,
+      "locale" : Locale,
+      "childDirected" : Boolean,
+      "detectSentiment" : (Boolean)?,
+      "createVersion" : (Boolean)?,
+      "tags" : (TagList)?
+    )
+
+    alias PutBotResponse = NamedTuple(
+      "name" : (BotName)?,
+      "description" : (Description)?,
+      "intents" : (IntentList)?,
+      "enableModelImprovements" : (Boolean)?,
+      "nluIntentConfidenceThreshold" : (ConfidenceThreshold)?,
+      "clarificationPrompt" : (Prompt)?,
+      "abortStatement" : (Statement)?,
+      "status" : (Status)?,
+      "failureReason" : (String)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "idleSessionTTLInSeconds" : (SessionTTL)?,
+      "voiceId" : (String)?,
+      "checksum" : (String)?,
+      "version" : (Version)?,
+      "locale" : (Locale)?,
+      "childDirected" : (Boolean)?,
+      "createVersion" : (Boolean)?,
+      "detectSentiment" : (Boolean)?,
+      "tags" : (TagList)?
+    )
+
+    alias PutIntentRequest = NamedTuple(
+      "name" : IntentName,
+      "description" : (Description)?,
+      "slots" : (SlotList)?,
+      "sampleUtterances" : (IntentUtteranceList)?,
+      "confirmationPrompt" : (Prompt)?,
+      "rejectionStatement" : (Statement)?,
+      "followUpPrompt" : (FollowUpPrompt)?,
+      "conclusionStatement" : (Statement)?,
+      "dialogCodeHook" : (CodeHook)?,
+      "fulfillmentActivity" : (FulfillmentActivity)?,
+      "parentIntentSignature" : (BuiltinIntentSignature)?,
+      "checksum" : (String)?,
+      "createVersion" : (Boolean)?,
+      "kendraConfiguration" : (KendraConfiguration)?,
+      "inputContexts" : (InputContextList)?,
+      "outputContexts" : (OutputContextList)?
+    )
+
+    alias PutIntentResponse = NamedTuple(
+      "name" : (IntentName)?,
+      "description" : (Description)?,
+      "slots" : (SlotList)?,
+      "sampleUtterances" : (IntentUtteranceList)?,
+      "confirmationPrompt" : (Prompt)?,
+      "rejectionStatement" : (Statement)?,
+      "followUpPrompt" : (FollowUpPrompt)?,
+      "conclusionStatement" : (Statement)?,
+      "dialogCodeHook" : (CodeHook)?,
+      "fulfillmentActivity" : (FulfillmentActivity)?,
+      "parentIntentSignature" : (BuiltinIntentSignature)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?,
+      "checksum" : (String)?,
+      "createVersion" : (Boolean)?,
+      "kendraConfiguration" : (KendraConfiguration)?,
+      "inputContexts" : (InputContextList)?,
+      "outputContexts" : (OutputContextList)?
+    )
+
+    alias PutSlotTypeRequest = NamedTuple(
+      "name" : SlotTypeName,
+      "description" : (Description)?,
+      "enumerationValues" : (EnumerationValues)?,
+      "checksum" : (String)?,
+      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
+      "createVersion" : (Boolean)?,
+      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
+      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+    )
+
+    alias PutSlotTypeResponse = NamedTuple(
+      "name" : (SlotTypeName)?,
+      "description" : (Description)?,
+      "enumerationValues" : (EnumerationValues)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?,
+      "checksum" : (String)?,
+      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
+      "createVersion" : (Boolean)?,
+      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
+      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+    )
+
+    alias QueryFilterString = String
+
+    alias ReferenceType = String
+
+    alias RegexPattern = String
+
+    alias ResourceArn = String
+
+    alias ResourceInUseException = NamedTuple(
+      "referenceType" : (ReferenceType)?,
+      "exampleReference" : (ResourceReference)?
+    )
+
+    alias ResourcePrefix = String
+
+    alias ResourceReference = NamedTuple(
+      "name" : (Name)?,
+      "version" : (Version)?
+    )
+
+    alias ResourceType = String
+
+    alias ResponseCard = String
+
+    alias SessionTTL = Int32
+
+    alias Slot = NamedTuple(
+      "name" : SlotName,
+      "description" : (Description)?,
+      "slotConstraint" : SlotConstraint,
+      "slotType" : (CustomOrBuiltinSlotTypeName)?,
+      "slotTypeVersion" : (Version)?,
+      "valueElicitationPrompt" : (Prompt)?,
+      "priority" : (Priority)?,
+      "sampleUtterances" : (SlotUtteranceList)?,
+      "responseCard" : (ResponseCard)?,
+      "obfuscationSetting" : (ObfuscationSetting)?,
+      "defaultValueSpec" : (SlotDefaultValueSpec)?
+    )
+
+    alias SlotConstraint = String
+
+    alias SlotDefaultValue = NamedTuple(
+      "defaultValue" : SlotDefaultValueString
+    )
+
+    alias SlotDefaultValueList = Array(SlotDefaultValue)
+
+    alias SlotDefaultValueSpec = NamedTuple(
+      "defaultValueList" : SlotDefaultValueList
+    )
+
+    alias SlotDefaultValueString = String
+
+    alias SlotList = Array(Slot)
+
+    alias SlotName = String
+
+    alias SlotTypeConfiguration = NamedTuple(
+      "regexConfiguration" : (SlotTypeRegexConfiguration)?
+    )
+
+    alias SlotTypeConfigurations = Array(SlotTypeConfiguration)
+
+    alias SlotTypeMetadata = NamedTuple(
+      "name" : (SlotTypeName)?,
+      "description" : (Description)?,
+      "lastUpdatedDate" : (Timestamp)?,
+      "createdDate" : (Timestamp)?,
+      "version" : (Version)?
+    )
+
+    alias SlotTypeMetadataList = Array(SlotTypeMetadata)
+
+    alias SlotTypeName = String
+
+    alias SlotTypeRegexConfiguration = NamedTuple(
+      "pattern" : RegexPattern
+    )
+
+    alias SlotUtteranceList = Array(Utterance)
+
+    alias SlotValueSelectionStrategy = String
+
+    alias StartImportRequest = NamedTuple(
+      "payload" : Blob,
+      "resourceType" : ResourceType,
+      "mergeStrategy" : MergeStrategy,
+      "tags" : (TagList)?
+    )
+
+    alias StartImportResponse = NamedTuple(
+      "name" : (Name)?,
+      "resourceType" : (ResourceType)?,
+      "mergeStrategy" : (MergeStrategy)?,
+      "importId" : (String)?,
+      "importStatus" : (ImportStatus)?,
+      "tags" : (TagList)?,
+      "createdDate" : (Timestamp)?
+    )
+
+    alias Statement = NamedTuple(
+      "messages" : MessageList,
+      "responseCard" : (ResponseCard)?
+    )
+
+    alias Status = String
+
+    alias StatusType = String
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias SynonymList = Array(Value)
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : AmazonResourceName,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UserId = String
+
+    alias Utterance = String
+
+    alias UtteranceData = NamedTuple(
+      "utteranceString" : (UtteranceString)?,
+      "count" : (Count)?,
+      "distinctUsers" : (Count)?,
+      "firstUtteredDate" : (Timestamp)?,
+      "lastUtteredDate" : (Timestamp)?
+    )
+
+    alias UtteranceList = NamedTuple(
+      "botVersion" : (Version)?,
+      "utterances" : (ListOfUtterance)?
+    )
+
+    alias UtteranceString = String
+
+    alias Value = String
+
+    alias Version = String
+
+    alias roleArn = String
   end
 end

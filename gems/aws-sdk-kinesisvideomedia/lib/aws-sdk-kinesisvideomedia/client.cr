@@ -419,8 +419,8 @@ module Aws::KinesisVideoMedia
     #
     # @overload get_media(**params)
     # @param [Hash] params ({})
-    def get_media(params = {}, **options, &block)
-      req = build_request(:get_media, params)
+    def get_media(, **options, &block)
+      req = build_request(:get_media, )
       req.send_request(options, &block)
     end
 

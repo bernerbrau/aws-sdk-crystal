@@ -868,5 +868,186 @@ module Aws::CloudSearchDomain
       include Aws::Structure
     end
 
+    alias Adds = Int64
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Bucket = NamedTuple(
+      "value" : (String)?,
+      "count" : (Long)?
+    )
+
+    alias BucketInfo = NamedTuple(
+      "buckets" : (BucketList)?
+    )
+
+    alias BucketList = Array(Bucket)
+
+    alias ContentType = String
+
+    alias Cursor = String
+
+    alias Deletes = Int64
+
+    alias DocumentServiceException = NamedTuple(
+      "status" : (String)?,
+      "message" : (String)?
+    )
+
+    alias DocumentServiceWarning = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias DocumentServiceWarnings = Array(DocumentServiceWarning)
+
+    alias Double = Float64
+
+    alias Expr = String
+
+    alias Exprs = Hash(String,String)
+
+    alias Facet = String
+
+    alias Facets = Hash(String,BucketInfo)
+
+    alias FieldStats = NamedTuple(
+      "min" : (String)?,
+      "max" : (String)?,
+      "count" : (Long)?,
+      "missing" : (Long)?,
+      "sum" : (Double)?,
+      "sumOfSquares" : (Double)?,
+      "mean" : (String)?,
+      "stddev" : (Double)?
+    )
+
+    alias FieldValue = Array(String)
+
+    alias Fields = Hash(String,FieldValue)
+
+    alias FilterQuery = String
+
+    alias Highlight = String
+
+    alias Highlights = Hash(String,String)
+
+    alias Hit = NamedTuple(
+      "id" : (String)?,
+      "fields" : (Fields)?,
+      "exprs" : (Exprs)?,
+      "highlights" : (Highlights)?
+    )
+
+    alias HitList = Array(Hit)
+
+    alias Hits = NamedTuple(
+      "found" : (Long)?,
+      "start" : (Long)?,
+      "cursor" : (String)?,
+      "hit" : (HitList)?
+    )
+
+    alias Long = Int64
+
+    alias Partial = Bool
+
+    alias Query = String
+
+    alias QueryOptions = String
+
+    alias QueryParser = String
+
+    alias Return = String
+
+    alias SearchException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias SearchRequest = NamedTuple(
+      "cursor" : (Cursor)?,
+      "expr" : (Expr)?,
+      "facet" : (Facet)?,
+      "filterQuery" : (FilterQuery)?,
+      "highlight" : (Highlight)?,
+      "partial" : (Partial)?,
+      "query" : Query,
+      "queryOptions" : (QueryOptions)?,
+      "queryParser" : (QueryParser)?,
+      "return" : (Return)?,
+      "size" : (Size)?,
+      "sort" : (Sort)?,
+      "start" : (Start)?,
+      "stats" : (Stat)?
+    )
+
+    alias SearchResponse = NamedTuple(
+      "status" : (SearchStatus)?,
+      "hits" : (Hits)?,
+      "facets" : (Facets)?,
+      "stats" : (Stats)?
+    )
+
+    alias SearchStatus = NamedTuple(
+      "timems" : (Long)?,
+      "rid" : (String)?
+    )
+
+    alias Size = Int64
+
+    alias Sort = String
+
+    alias Start = Int64
+
+    alias Stat = String
+
+    alias Stats = Hash(String,FieldStats)
+
+    alias String = String
+
+    alias SuggestModel = NamedTuple(
+      "query" : (String)?,
+      "found" : (Long)?,
+      "suggestions" : (Suggestions)?
+    )
+
+    alias SuggestRequest = NamedTuple(
+      "query" : Query,
+      "suggester" : Suggester,
+      "size" : (SuggestionsSize)?
+    )
+
+    alias SuggestResponse = NamedTuple(
+      "status" : (SuggestStatus)?,
+      "suggest" : (SuggestModel)?
+    )
+
+    alias SuggestStatus = NamedTuple(
+      "timems" : (Long)?,
+      "rid" : (String)?
+    )
+
+    alias Suggester = String
+
+    alias SuggestionMatch = NamedTuple(
+      "suggestion" : (String)?,
+      "score" : (Long)?,
+      "id" : (String)?
+    )
+
+    alias Suggestions = Array(SuggestionMatch)
+
+    alias SuggestionsSize = Int64
+
+    alias UploadDocumentsRequest = NamedTuple(
+      "documents" : Blob,
+      "contentType" : ContentType
+    )
+
+    alias UploadDocumentsResponse = NamedTuple(
+      "status" : (String)?,
+      "adds" : (Adds)?,
+      "deletes" : (Deletes)?,
+      "warnings" : (DocumentServiceWarnings)?
+    )
   end
 end

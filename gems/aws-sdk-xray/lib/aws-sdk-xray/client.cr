@@ -369,8 +369,8 @@ module Aws::XRay
     #
     # @overload batch_get_traces(**params)
     # @param [Hash] params ({})
-    def batch_get_traces(params = {}, **options)
-      req = build_request(:batch_get_traces, params)
+    def batch_get_traces(, **options)
+      req = build_request(:batch_get_traces, )
       req.send_request(options)
     end
 
@@ -450,8 +450,8 @@ module Aws::XRay
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -546,8 +546,8 @@ module Aws::XRay
     #
     # @overload create_sampling_rule(**params)
     # @param [Hash] params ({})
-    def create_sampling_rule(params = {}, **options)
-      req = build_request(:create_sampling_rule, params)
+    def create_sampling_rule(, **options)
+      req = build_request(:create_sampling_rule, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::XRay
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -621,8 +621,8 @@ module Aws::XRay
     #
     # @overload delete_sampling_rule(**params)
     # @param [Hash] params ({})
-    def delete_sampling_rule(params = {}, **options)
-      req = build_request(:delete_sampling_rule, params)
+    def delete_sampling_rule(, **options)
+      req = build_request(:delete_sampling_rule, )
       req.send_request(options)
     end
 
@@ -642,8 +642,8 @@ module Aws::XRay
     #
     # @overload get_encryption_config(**params)
     # @param [Hash] params ({})
-    def get_encryption_config(params = {}, **options)
-      req = build_request(:get_encryption_config, params)
+    def get_encryption_config(, **options)
+      req = build_request(:get_encryption_config, )
       req.send_request(options)
     end
 
@@ -678,8 +678,8 @@ module Aws::XRay
     #
     # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, **options)
-      req = build_request(:get_group, params)
+    def get_group(, **options)
+      req = build_request(:get_group, )
       req.send_request(options)
     end
 
@@ -715,8 +715,8 @@ module Aws::XRay
     #
     # @overload get_groups(**params)
     # @param [Hash] params ({})
-    def get_groups(params = {}, **options)
-      req = build_request(:get_groups, params)
+    def get_groups(, **options)
+      req = build_request(:get_groups, )
       req.send_request(options)
     end
 
@@ -772,8 +772,8 @@ module Aws::XRay
     #
     # @overload get_insight(**params)
     # @param [Hash] params ({})
-    def get_insight(params = {}, **options)
-      req = build_request(:get_insight, params)
+    def get_insight(, **options)
+      req = build_request(:get_insight, )
       req.send_request(options)
     end
 
@@ -831,8 +831,8 @@ module Aws::XRay
     #
     # @overload get_insight_events(**params)
     # @param [Hash] params ({})
-    def get_insight_events(params = {}, **options)
-      req = build_request(:get_insight_events, params)
+    def get_insight_events(, **options)
+      req = build_request(:get_insight_events, )
       req.send_request(options)
     end
 
@@ -899,8 +899,8 @@ module Aws::XRay
     #
     # @overload get_insight_impact_graph(**params)
     # @param [Hash] params ({})
-    def get_insight_impact_graph(params = {}, **options)
-      req = build_request(:get_insight_impact_graph, params)
+    def get_insight_impact_graph(, **options)
+      req = build_request(:get_insight_impact_graph, )
       req.send_request(options)
     end
 
@@ -986,8 +986,8 @@ module Aws::XRay
     #
     # @overload get_insight_summaries(**params)
     # @param [Hash] params ({})
-    def get_insight_summaries(params = {}, **options)
-      req = build_request(:get_insight_summaries, params)
+    def get_insight_summaries(, **options)
+      req = build_request(:get_insight_summaries, )
       req.send_request(options)
     end
 
@@ -1034,8 +1034,8 @@ module Aws::XRay
     #
     # @overload get_sampling_rules(**params)
     # @param [Hash] params ({})
-    def get_sampling_rules(params = {}, **options)
-      req = build_request(:get_sampling_rules, params)
+    def get_sampling_rules(, **options)
+      req = build_request(:get_sampling_rules, )
       req.send_request(options)
     end
 
@@ -1072,8 +1072,8 @@ module Aws::XRay
     #
     # @overload get_sampling_statistic_summaries(**params)
     # @param [Hash] params ({})
-    def get_sampling_statistic_summaries(params = {}, **options)
-      req = build_request(:get_sampling_statistic_summaries, params)
+    def get_sampling_statistic_summaries(, **options)
+      req = build_request(:get_sampling_statistic_summaries, )
       req.send_request(options)
     end
 
@@ -1122,8 +1122,8 @@ module Aws::XRay
     #
     # @overload get_sampling_targets(**params)
     # @param [Hash] params ({})
-    def get_sampling_targets(params = {}, **options)
-      req = build_request(:get_sampling_targets, params)
+    def get_sampling_targets(, **options)
+      req = build_request(:get_sampling_targets, )
       req.send_request(options)
     end
 
@@ -1230,8 +1230,8 @@ module Aws::XRay
     #
     # @overload get_service_graph(**params)
     # @param [Hash] params ({})
-    def get_service_graph(params = {}, **options)
-      req = build_request(:get_service_graph, params)
+    def get_service_graph(, **options)
+      req = build_request(:get_service_graph, )
       req.send_request(options)
     end
 
@@ -1320,8 +1320,8 @@ module Aws::XRay
     #
     # @overload get_time_series_service_statistics(**params)
     # @param [Hash] params ({})
-    def get_time_series_service_statistics(params = {}, **options)
-      req = build_request(:get_time_series_service_statistics, params)
+    def get_time_series_service_statistics(, **options)
+      req = build_request(:get_time_series_service_statistics, )
       req.send_request(options)
     end
 
@@ -1400,8 +1400,8 @@ module Aws::XRay
     #
     # @overload get_trace_graph(**params)
     # @param [Hash] params ({})
-    def get_trace_graph(params = {}, **options)
-      req = build_request(:get_trace_graph, params)
+    def get_trace_graph(, **options)
+      req = build_request(:get_trace_graph, )
       req.send_request(options)
     end
 
@@ -1582,8 +1582,8 @@ module Aws::XRay
     #
     # @overload get_trace_summaries(**params)
     # @param [Hash] params ({})
-    def get_trace_summaries(params = {}, **options)
-      req = build_request(:get_trace_summaries, params)
+    def get_trace_summaries(, **options)
+      req = build_request(:get_trace_summaries, )
       req.send_request(options)
     end
 
@@ -1621,8 +1621,8 @@ module Aws::XRay
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1669,8 +1669,8 @@ module Aws::XRay
     #
     # @overload put_encryption_config(**params)
     # @param [Hash] params ({})
-    def put_encryption_config(params = {}, **options)
-      req = build_request(:put_encryption_config, params)
+    def put_encryption_config(, **options)
+      req = build_request(:put_encryption_config, )
       req.send_request(options)
     end
 
@@ -1715,8 +1715,8 @@ module Aws::XRay
     #
     # @overload put_telemetry_records(**params)
     # @param [Hash] params ({})
-    def put_telemetry_records(params = {}, **options)
-      req = build_request(:put_telemetry_records, params)
+    def put_telemetry_records(, **options)
+      req = build_request(:put_telemetry_records, )
       req.send_request(options)
     end
 
@@ -1798,8 +1798,8 @@ module Aws::XRay
     #
     # @overload put_trace_segments(**params)
     # @param [Hash] params ({})
-    def put_trace_segments(params = {}, **options)
-      req = build_request(:put_trace_segments, params)
+    def put_trace_segments(, **options)
+      req = build_request(:put_trace_segments, )
       req.send_request(options)
     end
 
@@ -1852,8 +1852,8 @@ module Aws::XRay
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1880,8 +1880,8 @@ module Aws::XRay
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1935,8 +1935,8 @@ module Aws::XRay
     #
     # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, **options)
-      req = build_request(:update_group, params)
+    def update_group(, **options)
+      req = build_request(:update_group, )
       req.send_request(options)
     end
 
@@ -1993,8 +1993,8 @@ module Aws::XRay
     #
     # @overload update_sampling_rule(**params)
     # @param [Hash] params ({})
-    def update_sampling_rule(params = {}, **options)
-      req = build_request(:update_sampling_rule, params)
+    def update_sampling_rule(, **options)
+      req = build_request(:update_sampling_rule, )
       req.send_request(options)
     end
 

@@ -2522,5 +2522,603 @@ module Aws::FMS
       include Aws::Structure
     end
 
+    alias AWSAccountId = String
+
+    alias AccountRoleStatus = String
+
+    alias App = NamedTuple(
+      "AppName" : ResourceName,
+      "Protocol" : Protocol,
+      "Port" : IPPortNumber
+    )
+
+    alias AppsList = Array(App)
+
+    alias AppsListData = NamedTuple(
+      "ListId" : (ListId)?,
+      "ListName" : ResourceName,
+      "ListUpdateToken" : (UpdateToken)?,
+      "CreateTime" : (TimeStamp)?,
+      "LastUpdateTime" : (TimeStamp)?,
+      "AppsList" : AppsList,
+      "PreviousAppsList" : (PreviousAppsList)?
+    )
+
+    alias AppsListDataSummary = NamedTuple(
+      "ListArn" : (ResourceArn)?,
+      "ListId" : (ListId)?,
+      "ListName" : (ResourceName)?,
+      "AppsList" : (AppsList)?
+    )
+
+    alias AppsListsData = Array(AppsListDataSummary)
+
+    alias AssociateAdminAccountRequest = NamedTuple(
+      "AdminAccount" : AWSAccountId
+    )
+
+    alias AwsEc2InstanceViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "AwsEc2NetworkInterfaceViolations" : (AwsEc2NetworkInterfaceViolations)?
+    )
+
+    alias AwsEc2NetworkInterfaceViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "ViolatingSecurityGroups" : (ResourceIdList)?
+    )
+
+    alias AwsEc2NetworkInterfaceViolations = Array(AwsEc2NetworkInterfaceViolation)
+
+    alias AwsVPCSecurityGroupViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "ViolationTargetDescription" : (LengthBoundedString)?,
+      "PartialMatches" : (PartialMatches)?,
+      "PossibleSecurityGroupRemediationActions" : (SecurityGroupRemediationActions)?
+    )
+
+    alias Boolean = Bool
+
+    alias CIDR = String
+
+    alias ComplianceViolator = NamedTuple(
+      "ResourceId" : (ResourceId)?,
+      "ViolationReason" : (ViolationReason)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ComplianceViolators = Array(ComplianceViolator)
+
+    alias CustomerPolicyScopeId = String
+
+    alias CustomerPolicyScopeIdList = Array(CustomerPolicyScopeId)
+
+    alias CustomerPolicyScopeIdType = String
+
+    alias CustomerPolicyScopeMap = Hash(CustomerPolicyScopeIdType,CustomerPolicyScopeIdList)
+
+    alias DeleteAppsListRequest = NamedTuple(
+      "ListId" : ListId
+    )
+
+    alias DeleteNotificationChannelRequest = NamedTuple(
+      
+    )
+
+    alias DeletePolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "DeleteAllPolicyResources" : (Boolean)?
+    )
+
+    alias DeleteProtocolsListRequest = NamedTuple(
+      "ListId" : ListId
+    )
+
+    alias DependentServiceName = String
+
+    alias DetailedInfo = String
+
+    alias DisassociateAdminAccountRequest = NamedTuple(
+      
+    )
+
+    alias ErrorMessage = String
+
+    alias EvaluationResult = NamedTuple(
+      "ComplianceStatus" : (PolicyComplianceStatusType)?,
+      "ViolatorCount" : (ResourceCount)?,
+      "EvaluationLimitExceeded" : (Boolean)?
+    )
+
+    alias EvaluationResults = Array(EvaluationResult)
+
+    alias GetAdminAccountRequest = NamedTuple(
+      
+    )
+
+    alias GetAdminAccountResponse = NamedTuple(
+      "AdminAccount" : (AWSAccountId)?,
+      "RoleStatus" : (AccountRoleStatus)?
+    )
+
+    alias GetAppsListRequest = NamedTuple(
+      "ListId" : ListId,
+      "DefaultList" : (Boolean)?
+    )
+
+    alias GetAppsListResponse = NamedTuple(
+      "AppsList" : (AppsListData)?,
+      "AppsListArn" : (ResourceArn)?
+    )
+
+    alias GetComplianceDetailRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "MemberAccount" : AWSAccountId
+    )
+
+    alias GetComplianceDetailResponse = NamedTuple(
+      "PolicyComplianceDetail" : (PolicyComplianceDetail)?
+    )
+
+    alias GetNotificationChannelRequest = NamedTuple(
+      
+    )
+
+    alias GetNotificationChannelResponse = NamedTuple(
+      "SnsTopicArn" : (ResourceArn)?,
+      "SnsRoleName" : (ResourceArn)?
+    )
+
+    alias GetPolicyRequest = NamedTuple(
+      "PolicyId" : PolicyId
+    )
+
+    alias GetPolicyResponse = NamedTuple(
+      "Policy" : (Policy)?,
+      "PolicyArn" : (ResourceArn)?
+    )
+
+    alias GetProtectionStatusRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "MemberAccountId" : (AWSAccountId)?,
+      "StartTime" : (TimeStamp)?,
+      "EndTime" : (TimeStamp)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias GetProtectionStatusResponse = NamedTuple(
+      "AdminAccountId" : (AWSAccountId)?,
+      "ServiceType" : (SecurityServiceType)?,
+      "Data" : (ProtectionData)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias GetProtocolsListRequest = NamedTuple(
+      "ListId" : ListId,
+      "DefaultList" : (Boolean)?
+    )
+
+    alias GetProtocolsListResponse = NamedTuple(
+      "ProtocolsList" : (ProtocolsListData)?,
+      "ProtocolsListArn" : (ResourceArn)?
+    )
+
+    alias GetViolationDetailsRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "MemberAccount" : AWSAccountId,
+      "ResourceId" : ResourceId,
+      "ResourceType" : ResourceType
+    )
+
+    alias GetViolationDetailsResponse = NamedTuple(
+      "ViolationDetail" : (ViolationDetail)?
+    )
+
+    alias IPPortNumber = Int64
+
+    alias InternalErrorException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidTypeException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias IssueInfoMap = Hash(DependentServiceName,DetailedInfo)
+
+    alias LengthBoundedString = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListAppsListsRequest = NamedTuple(
+      "DefaultLists" : (Boolean)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : PaginationMaxResults
+    )
+
+    alias ListAppsListsResponse = NamedTuple(
+      "AppsLists" : (AppsListsData)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListComplianceStatusRequest = NamedTuple(
+      "PolicyId" : PolicyId,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias ListComplianceStatusResponse = NamedTuple(
+      "PolicyComplianceStatusList" : (PolicyComplianceStatusList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListId = String
+
+    alias ListMemberAccountsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias ListMemberAccountsResponse = NamedTuple(
+      "MemberAccounts" : (MemberAccounts)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListPoliciesRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias ListPoliciesResponse = NamedTuple(
+      "PolicyList" : (PolicySummaryList)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListProtocolsListsRequest = NamedTuple(
+      "DefaultLists" : (Boolean)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : PaginationMaxResults
+    )
+
+    alias ListProtocolsListsResponse = NamedTuple(
+      "ProtocolsLists" : (ProtocolsListsData)?,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias ManagedServiceData = String
+
+    alias MemberAccounts = Array(AWSAccountId)
+
+    alias NetworkFirewallAction = String
+
+    alias NetworkFirewallActionList = Array(NetworkFirewallAction)
+
+    alias NetworkFirewallMissingExpectedRTViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "VPC" : (ResourceId)?,
+      "AvailabilityZone" : (LengthBoundedString)?,
+      "CurrentRouteTable" : (ResourceId)?,
+      "ExpectedRouteTable" : (ResourceId)?
+    )
+
+    alias NetworkFirewallMissingFirewallViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "VPC" : (ResourceId)?,
+      "AvailabilityZone" : (LengthBoundedString)?,
+      "TargetViolationReason" : (TargetViolationReason)?
+    )
+
+    alias NetworkFirewallMissingSubnetViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "VPC" : (ResourceId)?,
+      "AvailabilityZone" : (LengthBoundedString)?,
+      "TargetViolationReason" : (TargetViolationReason)?
+    )
+
+    alias NetworkFirewallPolicyDescription = NamedTuple(
+      "StatelessRuleGroups" : (StatelessRuleGroupList)?,
+      "StatelessDefaultActions" : (NetworkFirewallActionList)?,
+      "StatelessFragmentDefaultActions" : (NetworkFirewallActionList)?,
+      "StatelessCustomActions" : (NetworkFirewallActionList)?,
+      "StatefulRuleGroups" : (StatefulRuleGroupList)?
+    )
+
+    alias NetworkFirewallPolicyModifiedViolation = NamedTuple(
+      "ViolationTarget" : (ViolationTarget)?,
+      "CurrentPolicyDescription" : (NetworkFirewallPolicyDescription)?,
+      "ExpectedPolicyDescription" : (NetworkFirewallPolicyDescription)?
+    )
+
+    alias NetworkFirewallResourceName = String
+
+    alias PaginationMaxResults = Int32
+
+    alias PaginationToken = String
+
+    alias PartialMatch = NamedTuple(
+      "Reference" : (ReferenceRule)?,
+      "TargetViolationReasons" : (TargetViolationReasons)?
+    )
+
+    alias PartialMatches = Array(PartialMatch)
+
+    alias Policy = NamedTuple(
+      "PolicyId" : (PolicyId)?,
+      "PolicyName" : ResourceName,
+      "PolicyUpdateToken" : (PolicyUpdateToken)?,
+      "SecurityServicePolicyData" : SecurityServicePolicyData,
+      "ResourceType" : ResourceType,
+      "ResourceTypeList" : (ResourceTypeList)?,
+      "ResourceTags" : (ResourceTags)?,
+      "ExcludeResourceTags" : Boolean,
+      "RemediationEnabled" : Boolean,
+      "IncludeMap" : (CustomerPolicyScopeMap)?,
+      "ExcludeMap" : (CustomerPolicyScopeMap)?
+    )
+
+    alias PolicyComplianceDetail = NamedTuple(
+      "PolicyOwner" : (AWSAccountId)?,
+      "PolicyId" : (PolicyId)?,
+      "MemberAccount" : (AWSAccountId)?,
+      "Violators" : (ComplianceViolators)?,
+      "EvaluationLimitExceeded" : (Boolean)?,
+      "ExpiredAt" : (TimeStamp)?,
+      "IssueInfoMap" : (IssueInfoMap)?
+    )
+
+    alias PolicyComplianceStatus = NamedTuple(
+      "PolicyOwner" : (AWSAccountId)?,
+      "PolicyId" : (PolicyId)?,
+      "PolicyName" : (ResourceName)?,
+      "MemberAccount" : (AWSAccountId)?,
+      "EvaluationResults" : (EvaluationResults)?,
+      "LastUpdated" : (TimeStamp)?,
+      "IssueInfoMap" : (IssueInfoMap)?
+    )
+
+    alias PolicyComplianceStatusList = Array(PolicyComplianceStatus)
+
+    alias PolicyComplianceStatusType = String
+
+    alias PolicyId = String
+
+    alias PolicySummary = NamedTuple(
+      "PolicyArn" : (ResourceArn)?,
+      "PolicyId" : (PolicyId)?,
+      "PolicyName" : (ResourceName)?,
+      "ResourceType" : (ResourceType)?,
+      "SecurityServiceType" : (SecurityServiceType)?,
+      "RemediationEnabled" : (Boolean)?
+    )
+
+    alias PolicySummaryList = Array(PolicySummary)
+
+    alias PolicyUpdateToken = String
+
+    alias PreviousAppsList = Hash(PreviousListVersion,AppsList)
+
+    alias PreviousListVersion = String
+
+    alias PreviousProtocolsList = Hash(PreviousListVersion,ProtocolsList)
+
+    alias ProtectionData = String
+
+    alias Protocol = String
+
+    alias ProtocolsList = Array(Protocol)
+
+    alias ProtocolsListData = NamedTuple(
+      "ListId" : (ListId)?,
+      "ListName" : ResourceName,
+      "ListUpdateToken" : (UpdateToken)?,
+      "CreateTime" : (TimeStamp)?,
+      "LastUpdateTime" : (TimeStamp)?,
+      "ProtocolsList" : ProtocolsList,
+      "PreviousProtocolsList" : (PreviousProtocolsList)?
+    )
+
+    alias ProtocolsListDataSummary = NamedTuple(
+      "ListArn" : (ResourceArn)?,
+      "ListId" : (ListId)?,
+      "ListName" : (ResourceName)?,
+      "ProtocolsList" : (ProtocolsList)?
+    )
+
+    alias ProtocolsListsData = Array(ProtocolsListDataSummary)
+
+    alias PutAppsListRequest = NamedTuple(
+      "AppsList" : AppsListData,
+      "TagList" : (TagList)?
+    )
+
+    alias PutAppsListResponse = NamedTuple(
+      "AppsList" : (AppsListData)?,
+      "AppsListArn" : (ResourceArn)?
+    )
+
+    alias PutNotificationChannelRequest = NamedTuple(
+      "SnsTopicArn" : ResourceArn,
+      "SnsRoleName" : ResourceArn
+    )
+
+    alias PutPolicyRequest = NamedTuple(
+      "Policy" : Policy,
+      "TagList" : (TagList)?
+    )
+
+    alias PutPolicyResponse = NamedTuple(
+      "Policy" : (Policy)?,
+      "PolicyArn" : (ResourceArn)?
+    )
+
+    alias PutProtocolsListRequest = NamedTuple(
+      "ProtocolsList" : ProtocolsListData,
+      "TagList" : (TagList)?
+    )
+
+    alias PutProtocolsListResponse = NamedTuple(
+      "ProtocolsList" : (ProtocolsListData)?,
+      "ProtocolsListArn" : (ResourceArn)?
+    )
+
+    alias ReferenceRule = String
+
+    alias RemediationActionDescription = String
+
+    alias RemediationActionType = String
+
+    alias ResourceArn = String
+
+    alias ResourceCount = Int64
+
+    alias ResourceId = String
+
+    alias ResourceIdList = Array(ResourceId)
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceTag = NamedTuple(
+      "Key" : ResourceTagKey,
+      "Value" : (ResourceTagValue)?
+    )
+
+    alias ResourceTagKey = String
+
+    alias ResourceTagValue = String
+
+    alias ResourceTags = Array(ResourceTag)
+
+    alias ResourceType = String
+
+    alias ResourceTypeList = Array(ResourceType)
+
+    alias ResourceViolation = NamedTuple(
+      "AwsVPCSecurityGroupViolation" : (AwsVPCSecurityGroupViolation)?,
+      "AwsEc2NetworkInterfaceViolation" : (AwsEc2NetworkInterfaceViolation)?,
+      "AwsEc2InstanceViolation" : (AwsEc2InstanceViolation)?,
+      "NetworkFirewallMissingFirewallViolation" : (NetworkFirewallMissingFirewallViolation)?,
+      "NetworkFirewallMissingSubnetViolation" : (NetworkFirewallMissingSubnetViolation)?,
+      "NetworkFirewallMissingExpectedRTViolation" : (NetworkFirewallMissingExpectedRTViolation)?,
+      "NetworkFirewallPolicyModifiedViolation" : (NetworkFirewallPolicyModifiedViolation)?
+    )
+
+    alias ResourceViolations = Array(ResourceViolation)
+
+    alias SecurityGroupRemediationAction = NamedTuple(
+      "RemediationActionType" : (RemediationActionType)?,
+      "Description" : (RemediationActionDescription)?,
+      "RemediationResult" : (SecurityGroupRuleDescription)?,
+      "IsDefaultAction" : (Boolean)?
+    )
+
+    alias SecurityGroupRemediationActions = Array(SecurityGroupRemediationAction)
+
+    alias SecurityGroupRuleDescription = NamedTuple(
+      "IPV4Range" : (CIDR)?,
+      "IPV6Range" : (CIDR)?,
+      "PrefixListId" : (ResourceId)?,
+      "Protocol" : (LengthBoundedString)?,
+      "FromPort" : (IPPortNumber)?,
+      "ToPort" : (IPPortNumber)?
+    )
+
+    alias SecurityServicePolicyData = NamedTuple(
+      "Type" : SecurityServiceType,
+      "ManagedServiceData" : (ManagedServiceData)?
+    )
+
+    alias SecurityServiceType = String
+
+    alias StatefulRuleGroup = NamedTuple(
+      "RuleGroupName" : (NetworkFirewallResourceName)?,
+      "ResourceId" : (ResourceId)?
+    )
+
+    alias StatefulRuleGroupList = Array(StatefulRuleGroup)
+
+    alias StatelessRuleGroup = NamedTuple(
+      "RuleGroupName" : (NetworkFirewallResourceName)?,
+      "ResourceId" : (ResourceId)?,
+      "Priority" : (StatelessRuleGroupPriority)?
+    )
+
+    alias StatelessRuleGroupList = Array(StatelessRuleGroup)
+
+    alias StatelessRuleGroupPriority = Int32
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagList" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TargetViolationReason = String
+
+    alias TargetViolationReasons = Array(TargetViolationReason)
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateToken = String
+
+    alias ViolationDetail = NamedTuple(
+      "PolicyId" : PolicyId,
+      "MemberAccount" : AWSAccountId,
+      "ResourceId" : ResourceId,
+      "ResourceType" : ResourceType,
+      "ResourceViolations" : ResourceViolations,
+      "ResourceTags" : (TagList)?,
+      "ResourceDescription" : (LengthBoundedString)?
+    )
+
+    alias ViolationReason = String
+
+    alias ViolationTarget = String
   end
 end

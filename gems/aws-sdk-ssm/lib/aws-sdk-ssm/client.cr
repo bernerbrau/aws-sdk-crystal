@@ -417,8 +417,8 @@ module Aws::SSM
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -447,8 +447,8 @@ module Aws::SSM
     #
     # @overload cancel_command(**params)
     # @param [Hash] params ({})
-    def cancel_command(params = {}, **options)
-      req = build_request(:cancel_command, params)
+    def cancel_command(, **options)
+      req = build_request(:cancel_command, )
       req.send_request(options)
     end
 
@@ -477,8 +477,8 @@ module Aws::SSM
     #
     # @overload cancel_maintenance_window_execution(**params)
     # @param [Hash] params ({})
-    def cancel_maintenance_window_execution(params = {}, **options)
-      req = build_request(:cancel_maintenance_window_execution, params)
+    def cancel_maintenance_window_execution(, **options)
+      req = build_request(:cancel_maintenance_window_execution, )
       req.send_request(options)
     end
 
@@ -591,8 +591,8 @@ module Aws::SSM
     #
     # @overload create_activation(**params)
     # @param [Hash] params ({})
-    def create_activation(params = {}, **options)
-      req = build_request(:create_activation, params)
+    def create_activation(, **options)
+      req = build_request(:create_activation, )
       req.send_request(options)
     end
 
@@ -834,8 +834,8 @@ module Aws::SSM
     #
     # @overload create_association(**params)
     # @param [Hash] params ({})
-    def create_association(params = {}, **options)
-      req = build_request(:create_association, params)
+    def create_association(, **options)
+      req = build_request(:create_association, )
       req.send_request(options)
     end
 
@@ -986,8 +986,8 @@ module Aws::SSM
     #
     # @overload create_association_batch(**params)
     # @param [Hash] params ({})
-    def create_association_batch(params = {}, **options)
-      req = build_request(:create_association_batch, params)
+    def create_association_batch(, **options)
+      req = build_request(:create_association_batch, )
       req.send_request(options)
     end
 
@@ -1173,8 +1173,8 @@ module Aws::SSM
     #
     # @overload create_document(**params)
     # @param [Hash] params ({})
-    def create_document(params = {}, **options)
-      req = build_request(:create_document, params)
+    def create_document(, **options)
+      req = build_request(:create_document, )
       req.send_request(options)
     end
 
@@ -1311,8 +1311,8 @@ module Aws::SSM
     #
     # @overload create_maintenance_window(**params)
     # @param [Hash] params ({})
-    def create_maintenance_window(params = {}, **options)
-      req = build_request(:create_maintenance_window, params)
+    def create_maintenance_window(, **options)
+      req = build_request(:create_maintenance_window, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::SSM
     #
     # @overload create_ops_item(**params)
     # @param [Hash] params ({})
-    def create_ops_item(params = {}, **options)
-      req = build_request(:create_ops_item, params)
+    def create_ops_item(, **options)
+      req = build_request(:create_ops_item, )
       req.send_request(options)
     end
 
@@ -1522,8 +1522,8 @@ module Aws::SSM
     #
     # @overload create_ops_metadata(**params)
     # @param [Hash] params ({})
-    def create_ops_metadata(params = {}, **options)
-      req = build_request(:create_ops_metadata, params)
+    def create_ops_metadata(, **options)
+      req = build_request(:create_ops_metadata, )
       req.send_request(options)
     end
 
@@ -1695,8 +1695,8 @@ module Aws::SSM
     #
     # @overload create_patch_baseline(**params)
     # @param [Hash] params ({})
-    def create_patch_baseline(params = {}, **options)
-      req = build_request(:create_patch_baseline, params)
+    def create_patch_baseline(, **options)
+      req = build_request(:create_patch_baseline, )
       req.send_request(options)
     end
 
@@ -1793,8 +1793,8 @@ module Aws::SSM
     #
     # @overload create_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def create_resource_data_sync(params = {}, **options)
-      req = build_request(:create_resource_data_sync, params)
+    def create_resource_data_sync(, **options)
+      req = build_request(:create_resource_data_sync, )
       req.send_request(options)
     end
 
@@ -1819,8 +1819,8 @@ module Aws::SSM
     #
     # @overload delete_activation(**params)
     # @param [Hash] params ({})
-    def delete_activation(params = {}, **options)
-      req = build_request(:delete_activation, params)
+    def delete_activation(, **options)
+      req = build_request(:delete_activation, )
       req.send_request(options)
     end
 
@@ -1856,8 +1856,8 @@ module Aws::SSM
     #
     # @overload delete_association(**params)
     # @param [Hash] params ({})
-    def delete_association(params = {}, **options)
-      req = build_request(:delete_association, params)
+    def delete_association(, **options)
+      req = build_request(:delete_association, )
       req.send_request(options)
     end
 
@@ -1901,8 +1901,8 @@ module Aws::SSM
     #
     # @overload delete_document(**params)
     # @param [Hash] params ({})
-    def delete_document(params = {}, **options)
-      req = build_request(:delete_document, params)
+    def delete_document(, **options)
+      req = build_request(:delete_document, )
       req.send_request(options)
     end
 
@@ -1971,8 +1971,8 @@ module Aws::SSM
     #
     # @overload delete_inventory(**params)
     # @param [Hash] params ({})
-    def delete_inventory(params = {}, **options)
-      req = build_request(:delete_inventory, params)
+    def delete_inventory(, **options)
+      req = build_request(:delete_inventory, )
       req.send_request(options)
     end
 
@@ -1999,8 +1999,8 @@ module Aws::SSM
     #
     # @overload delete_maintenance_window(**params)
     # @param [Hash] params ({})
-    def delete_maintenance_window(params = {}, **options)
-      req = build_request(:delete_maintenance_window, params)
+    def delete_maintenance_window(, **options)
+      req = build_request(:delete_maintenance_window, )
       req.send_request(options)
     end
 
@@ -2021,8 +2021,8 @@ module Aws::SSM
     #
     # @overload delete_ops_metadata(**params)
     # @param [Hash] params ({})
-    def delete_ops_metadata(params = {}, **options)
-      req = build_request(:delete_ops_metadata, params)
+    def delete_ops_metadata(, **options)
+      req = build_request(:delete_ops_metadata, )
       req.send_request(options)
     end
 
@@ -2043,8 +2043,8 @@ module Aws::SSM
     #
     # @overload delete_parameter(**params)
     # @param [Hash] params ({})
-    def delete_parameter(params = {}, **options)
-      req = build_request(:delete_parameter, params)
+    def delete_parameter(, **options)
+      req = build_request(:delete_parameter, )
       req.send_request(options)
     end
 
@@ -2075,8 +2075,8 @@ module Aws::SSM
     #
     # @overload delete_parameters(**params)
     # @param [Hash] params ({})
-    def delete_parameters(params = {}, **options)
-      req = build_request(:delete_parameters, params)
+    def delete_parameters(, **options)
+      req = build_request(:delete_parameters, )
       req.send_request(options)
     end
 
@@ -2103,8 +2103,8 @@ module Aws::SSM
     #
     # @overload delete_patch_baseline(**params)
     # @param [Hash] params ({})
-    def delete_patch_baseline(params = {}, **options)
-      req = build_request(:delete_patch_baseline, params)
+    def delete_patch_baseline(, **options)
+      req = build_request(:delete_patch_baseline, )
       req.send_request(options)
     end
 
@@ -2132,8 +2132,8 @@ module Aws::SSM
     #
     # @overload delete_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def delete_resource_data_sync(params = {}, **options)
-      req = build_request(:delete_resource_data_sync, params)
+    def delete_resource_data_sync(, **options)
+      req = build_request(:delete_resource_data_sync, )
       req.send_request(options)
     end
 
@@ -2158,8 +2158,8 @@ module Aws::SSM
     #
     # @overload deregister_managed_instance(**params)
     # @param [Hash] params ({})
-    def deregister_managed_instance(params = {}, **options)
-      req = build_request(:deregister_managed_instance, params)
+    def deregister_managed_instance(, **options)
+      req = build_request(:deregister_managed_instance, )
       req.send_request(options)
     end
 
@@ -2193,8 +2193,8 @@ module Aws::SSM
     #
     # @overload deregister_patch_baseline_for_patch_group(**params)
     # @param [Hash] params ({})
-    def deregister_patch_baseline_for_patch_group(params = {}, **options)
-      req = build_request(:deregister_patch_baseline_for_patch_group, params)
+    def deregister_patch_baseline_for_patch_group(, **options)
+      req = build_request(:deregister_patch_baseline_for_patch_group, )
       req.send_request(options)
     end
 
@@ -2233,8 +2233,8 @@ module Aws::SSM
     #
     # @overload deregister_target_from_maintenance_window(**params)
     # @param [Hash] params ({})
-    def deregister_target_from_maintenance_window(params = {}, **options)
-      req = build_request(:deregister_target_from_maintenance_window, params)
+    def deregister_target_from_maintenance_window(, **options)
+      req = build_request(:deregister_target_from_maintenance_window, )
       req.send_request(options)
     end
 
@@ -2267,8 +2267,8 @@ module Aws::SSM
     #
     # @overload deregister_task_from_maintenance_window(**params)
     # @param [Hash] params ({})
-    def deregister_task_from_maintenance_window(params = {}, **options)
-      req = build_request(:deregister_task_from_maintenance_window, params)
+    def deregister_task_from_maintenance_window(, **options)
+      req = build_request(:deregister_task_from_maintenance_window, )
       req.send_request(options)
     end
 
@@ -2330,8 +2330,8 @@ module Aws::SSM
     #
     # @overload describe_activations(**params)
     # @param [Hash] params ({})
-    def describe_activations(params = {}, **options)
-      req = build_request(:describe_activations, params)
+    def describe_activations(, **options)
+      req = build_request(:describe_activations, )
       req.send_request(options)
     end
 
@@ -2421,8 +2421,8 @@ module Aws::SSM
     #
     # @overload describe_association(**params)
     # @param [Hash] params ({})
-    def describe_association(params = {}, **options)
-      req = build_request(:describe_association, params)
+    def describe_association(, **options)
+      req = build_request(:describe_association, )
       req.send_request(options)
     end
 
@@ -2496,8 +2496,8 @@ module Aws::SSM
     #
     # @overload describe_association_execution_targets(**params)
     # @param [Hash] params ({})
-    def describe_association_execution_targets(params = {}, **options)
-      req = build_request(:describe_association_execution_targets, params)
+    def describe_association_execution_targets(, **options)
+      req = build_request(:describe_association_execution_targets, )
       req.send_request(options)
     end
 
@@ -2566,8 +2566,8 @@ module Aws::SSM
     #
     # @overload describe_association_executions(**params)
     # @param [Hash] params ({})
-    def describe_association_executions(params = {}, **options)
-      req = build_request(:describe_association_executions, params)
+    def describe_association_executions(, **options)
+      req = build_request(:describe_association_executions, )
       req.send_request(options)
     end
 
@@ -2673,8 +2673,8 @@ module Aws::SSM
     #
     # @overload describe_automation_executions(**params)
     # @param [Hash] params ({})
-    def describe_automation_executions(params = {}, **options)
-      req = build_request(:describe_automation_executions, params)
+    def describe_automation_executions(, **options)
+      req = build_request(:describe_automation_executions, )
       req.send_request(options)
     end
 
@@ -2774,8 +2774,8 @@ module Aws::SSM
     #
     # @overload describe_automation_step_executions(**params)
     # @param [Hash] params ({})
-    def describe_automation_step_executions(params = {}, **options)
-      req = build_request(:describe_automation_step_executions, params)
+    def describe_automation_step_executions(, **options)
+      req = build_request(:describe_automation_step_executions, )
       req.send_request(options)
     end
 
@@ -2846,8 +2846,8 @@ module Aws::SSM
     #
     # @overload describe_available_patches(**params)
     # @param [Hash] params ({})
-    def describe_available_patches(params = {}, **options)
-      req = build_request(:describe_available_patches, params)
+    def describe_available_patches(, **options)
+      req = build_request(:describe_available_patches, )
       req.send_request(options)
     end
 
@@ -2924,8 +2924,8 @@ module Aws::SSM
     #
     # @overload describe_document(**params)
     # @param [Hash] params ({})
-    def describe_document(params = {}, **options)
-      req = build_request(:describe_document, params)
+    def describe_document(, **options)
+      req = build_request(:describe_document, )
       req.send_request(options)
     end
 
@@ -2965,8 +2965,8 @@ module Aws::SSM
     #
     # @overload describe_document_permission(**params)
     # @param [Hash] params ({})
-    def describe_document_permission(params = {}, **options)
-      req = build_request(:describe_document_permission, params)
+    def describe_document_permission(, **options)
+      req = build_request(:describe_document_permission, )
       req.send_request(options)
     end
 
@@ -3012,8 +3012,8 @@ module Aws::SSM
     #
     # @overload describe_effective_instance_associations(**params)
     # @param [Hash] params ({})
-    def describe_effective_instance_associations(params = {}, **options)
-      req = build_request(:describe_effective_instance_associations, params)
+    def describe_effective_instance_associations(, **options)
+      req = build_request(:describe_effective_instance_associations, )
       req.send_request(options)
     end
 
@@ -3084,8 +3084,8 @@ module Aws::SSM
     #
     # @overload describe_effective_patches_for_patch_baseline(**params)
     # @param [Hash] params ({})
-    def describe_effective_patches_for_patch_baseline(params = {}, **options)
-      req = build_request(:describe_effective_patches_for_patch_baseline, params)
+    def describe_effective_patches_for_patch_baseline(, **options)
+      req = build_request(:describe_effective_patches_for_patch_baseline, )
       req.send_request(options)
     end
 
@@ -3139,8 +3139,8 @@ module Aws::SSM
     #
     # @overload describe_instance_associations_status(**params)
     # @param [Hash] params ({})
-    def describe_instance_associations_status(params = {}, **options)
-      req = build_request(:describe_instance_associations_status, params)
+    def describe_instance_associations_status(, **options)
+      req = build_request(:describe_instance_associations_status, )
       req.send_request(options)
     end
 
@@ -3241,8 +3241,8 @@ module Aws::SSM
     #
     # @overload describe_instance_information(**params)
     # @param [Hash] params ({})
-    def describe_instance_information(params = {}, **options)
-      req = build_request(:describe_instance_information, params)
+    def describe_instance_information(, **options)
+      req = build_request(:describe_instance_information, )
       req.send_request(options)
     end
 
@@ -3302,8 +3302,8 @@ module Aws::SSM
     #
     # @overload describe_instance_patch_states(**params)
     # @param [Hash] params ({})
-    def describe_instance_patch_states(params = {}, **options)
-      req = build_request(:describe_instance_patch_states, params)
+    def describe_instance_patch_states(, **options)
+      req = build_request(:describe_instance_patch_states, )
       req.send_request(options)
     end
 
@@ -3380,8 +3380,8 @@ module Aws::SSM
     #
     # @overload describe_instance_patch_states_for_patch_group(**params)
     # @param [Hash] params ({})
-    def describe_instance_patch_states_for_patch_group(params = {}, **options)
-      req = build_request(:describe_instance_patch_states_for_patch_group, params)
+    def describe_instance_patch_states_for_patch_group(, **options)
+      req = build_request(:describe_instance_patch_states_for_patch_group, )
       req.send_request(options)
     end
 
@@ -3442,8 +3442,8 @@ module Aws::SSM
     #
     # @overload describe_instance_patches(**params)
     # @param [Hash] params ({})
-    def describe_instance_patches(params = {}, **options)
-      req = build_request(:describe_instance_patches, params)
+    def describe_instance_patches(, **options)
+      req = build_request(:describe_instance_patches, )
       req.send_request(options)
     end
 
@@ -3498,8 +3498,8 @@ module Aws::SSM
     #
     # @overload describe_inventory_deletions(**params)
     # @param [Hash] params ({})
-    def describe_inventory_deletions(params = {}, **options)
-      req = build_request(:describe_inventory_deletions, params)
+    def describe_inventory_deletions(, **options)
+      req = build_request(:describe_inventory_deletions, )
       req.send_request(options)
     end
 
@@ -3570,8 +3570,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_window_execution_task_invocations(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_execution_task_invocations(params = {}, **options)
-      req = build_request(:describe_maintenance_window_execution_task_invocations, params)
+    def describe_maintenance_window_execution_task_invocations(, **options)
+      req = build_request(:describe_maintenance_window_execution_task_invocations, )
       req.send_request(options)
     end
 
@@ -3634,8 +3634,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_window_execution_tasks(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_execution_tasks(params = {}, **options)
-      req = build_request(:describe_maintenance_window_execution_tasks, params)
+    def describe_maintenance_window_execution_tasks(, **options)
+      req = build_request(:describe_maintenance_window_execution_tasks, )
       req.send_request(options)
     end
 
@@ -3702,8 +3702,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_window_executions(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_executions(params = {}, **options)
-      req = build_request(:describe_maintenance_window_executions, params)
+    def describe_maintenance_window_executions(, **options)
+      req = build_request(:describe_maintenance_window_executions, )
       req.send_request(options)
     end
 
@@ -3774,8 +3774,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_window_schedule(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_schedule(params = {}, **options)
-      req = build_request(:describe_maintenance_window_schedule, params)
+    def describe_maintenance_window_schedule(, **options)
+      req = build_request(:describe_maintenance_window_schedule, )
       req.send_request(options)
     end
 
@@ -3838,8 +3838,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_window_targets(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_targets(params = {}, **options)
-      req = build_request(:describe_maintenance_window_targets, params)
+    def describe_maintenance_window_targets(, **options)
+      req = build_request(:describe_maintenance_window_targets, )
       req.send_request(options)
     end
 
@@ -3912,8 +3912,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_window_tasks(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_tasks(params = {}, **options)
-      req = build_request(:describe_maintenance_window_tasks, params)
+    def describe_maintenance_window_tasks(, **options)
+      req = build_request(:describe_maintenance_window_tasks, )
       req.send_request(options)
     end
 
@@ -3974,8 +3974,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_windows(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_windows(params = {}, **options)
-      req = build_request(:describe_maintenance_windows, params)
+    def describe_maintenance_windows(, **options)
+      req = build_request(:describe_maintenance_windows, )
       req.send_request(options)
     end
 
@@ -4030,8 +4030,8 @@ module Aws::SSM
     #
     # @overload describe_maintenance_windows_for_target(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_windows_for_target(params = {}, **options)
-      req = build_request(:describe_maintenance_windows_for_target, params)
+    def describe_maintenance_windows_for_target(, **options)
+      req = build_request(:describe_maintenance_windows_for_target, )
       req.send_request(options)
     end
 
@@ -4168,8 +4168,8 @@ module Aws::SSM
     #
     # @overload describe_ops_items(**params)
     # @param [Hash] params ({})
-    def describe_ops_items(params = {}, **options)
-      req = build_request(:describe_ops_items, params)
+    def describe_ops_items(, **options)
+      req = build_request(:describe_ops_items, )
       req.send_request(options)
     end
 
@@ -4251,8 +4251,8 @@ module Aws::SSM
     #
     # @overload describe_parameters(**params)
     # @param [Hash] params ({})
-    def describe_parameters(params = {}, **options)
-      req = build_request(:describe_parameters, params)
+    def describe_parameters(, **options)
+      req = build_request(:describe_parameters, )
       req.send_request(options)
     end
 
@@ -4307,8 +4307,8 @@ module Aws::SSM
     #
     # @overload describe_patch_baselines(**params)
     # @param [Hash] params ({})
-    def describe_patch_baselines(params = {}, **options)
-      req = build_request(:describe_patch_baselines, params)
+    def describe_patch_baselines(, **options)
+      req = build_request(:describe_patch_baselines, )
       req.send_request(options)
     end
 
@@ -4352,8 +4352,8 @@ module Aws::SSM
     #
     # @overload describe_patch_group_state(**params)
     # @param [Hash] params ({})
-    def describe_patch_group_state(params = {}, **options)
-      req = build_request(:describe_patch_group_state, params)
+    def describe_patch_group_state(, **options)
+      req = build_request(:describe_patch_group_state, )
       req.send_request(options)
     end
 
@@ -4421,8 +4421,8 @@ module Aws::SSM
     #
     # @overload describe_patch_groups(**params)
     # @param [Hash] params ({})
-    def describe_patch_groups(params = {}, **options)
-      req = build_request(:describe_patch_groups, params)
+    def describe_patch_groups(, **options)
+      req = build_request(:describe_patch_groups, )
       req.send_request(options)
     end
 
@@ -4525,8 +4525,8 @@ module Aws::SSM
     #
     # @overload describe_patch_properties(**params)
     # @param [Hash] params ({})
-    def describe_patch_properties(params = {}, **options)
-      req = build_request(:describe_patch_properties, params)
+    def describe_patch_properties(, **options)
+      req = build_request(:describe_patch_properties, )
       req.send_request(options)
     end
 
@@ -4590,8 +4590,8 @@ module Aws::SSM
     #
     # @overload describe_sessions(**params)
     # @param [Hash] params ({})
-    def describe_sessions(params = {}, **options)
-      req = build_request(:describe_sessions, params)
+    def describe_sessions(, **options)
+      req = build_request(:describe_sessions, )
       req.send_request(options)
     end
 
@@ -4734,8 +4734,8 @@ module Aws::SSM
     #
     # @overload get_automation_execution(**params)
     # @param [Hash] params ({})
-    def get_automation_execution(params = {}, **options)
-      req = build_request(:get_automation_execution, params)
+    def get_automation_execution(, **options)
+      req = build_request(:get_automation_execution, )
       req.send_request(options)
     end
 
@@ -4796,8 +4796,8 @@ module Aws::SSM
     #
     # @overload get_calendar_state(**params)
     # @param [Hash] params ({})
-    def get_calendar_state(params = {}, **options)
-      req = build_request(:get_calendar_state, params)
+    def get_calendar_state(, **options)
+      req = build_request(:get_calendar_state, )
       req.send_request(options)
     end
 
@@ -4878,8 +4878,8 @@ module Aws::SSM
     #
     # @overload get_command_invocation(**params)
     # @param [Hash] params ({})
-    def get_command_invocation(params = {}, **options)
-      req = build_request(:get_command_invocation, params)
+    def get_command_invocation(, **options)
+      req = build_request(:get_command_invocation, )
       req.send_request(options)
     end
 
@@ -4910,8 +4910,8 @@ module Aws::SSM
     #
     # @overload get_connection_status(**params)
     # @param [Hash] params ({})
-    def get_connection_status(params = {}, **options)
-      req = build_request(:get_connection_status, params)
+    def get_connection_status(, **options)
+      req = build_request(:get_connection_status, )
       req.send_request(options)
     end
 
@@ -4945,8 +4945,8 @@ module Aws::SSM
     #
     # @overload get_default_patch_baseline(**params)
     # @param [Hash] params ({})
-    def get_default_patch_baseline(params = {}, **options)
-      req = build_request(:get_default_patch_baseline, params)
+    def get_default_patch_baseline(, **options)
+      req = build_request(:get_default_patch_baseline, )
       req.send_request(options)
     end
 
@@ -4986,8 +4986,8 @@ module Aws::SSM
     #
     # @overload get_deployable_patch_snapshot_for_instance(**params)
     # @param [Hash] params ({})
-    def get_deployable_patch_snapshot_for_instance(params = {}, **options)
-      req = build_request(:get_deployable_patch_snapshot_for_instance, params)
+    def get_deployable_patch_snapshot_for_instance(, **options)
+      req = build_request(:get_deployable_patch_snapshot_for_instance, )
       req.send_request(options)
     end
 
@@ -5056,8 +5056,8 @@ module Aws::SSM
     #
     # @overload get_document(**params)
     # @param [Hash] params ({})
-    def get_document(params = {}, **options)
-      req = build_request(:get_document, params)
+    def get_document(, **options)
+      req = build_request(:get_document, )
       req.send_request(options)
     end
 
@@ -5149,8 +5149,8 @@ module Aws::SSM
     #
     # @overload get_inventory(**params)
     # @param [Hash] params ({})
-    def get_inventory(params = {}, **options)
-      req = build_request(:get_inventory, params)
+    def get_inventory(, **options)
+      req = build_request(:get_inventory, )
       req.send_request(options)
     end
 
@@ -5210,8 +5210,8 @@ module Aws::SSM
     #
     # @overload get_inventory_schema(**params)
     # @param [Hash] params ({})
-    def get_inventory_schema(params = {}, **options)
-      req = build_request(:get_inventory_schema, params)
+    def get_inventory_schema(, **options)
+      req = build_request(:get_inventory_schema, )
       req.send_request(options)
     end
 
@@ -5267,8 +5267,8 @@ module Aws::SSM
     #
     # @overload get_maintenance_window(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window(params = {}, **options)
-      req = build_request(:get_maintenance_window, params)
+    def get_maintenance_window(, **options)
+      req = build_request(:get_maintenance_window, )
       req.send_request(options)
     end
 
@@ -5306,8 +5306,8 @@ module Aws::SSM
     #
     # @overload get_maintenance_window_execution(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_execution(params = {}, **options)
-      req = build_request(:get_maintenance_window_execution, params)
+    def get_maintenance_window_execution(, **options)
+      req = build_request(:get_maintenance_window_execution, )
       req.send_request(options)
     end
 
@@ -5367,8 +5367,8 @@ module Aws::SSM
     #
     # @overload get_maintenance_window_execution_task(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_execution_task(params = {}, **options)
-      req = build_request(:get_maintenance_window_execution_task, params)
+    def get_maintenance_window_execution_task(, **options)
+      req = build_request(:get_maintenance_window_execution_task, )
       req.send_request(options)
     end
 
@@ -5428,8 +5428,8 @@ module Aws::SSM
     #
     # @overload get_maintenance_window_execution_task_invocation(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_execution_task_invocation(params = {}, **options)
-      req = build_request(:get_maintenance_window_execution_task_invocation, params)
+    def get_maintenance_window_execution_task_invocation(, **options)
+      req = build_request(:get_maintenance_window_execution_task_invocation, )
       req.send_request(options)
     end
 
@@ -5518,8 +5518,8 @@ module Aws::SSM
     #
     # @overload get_maintenance_window_task(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_task(params = {}, **options)
-      req = build_request(:get_maintenance_window_task, params)
+    def get_maintenance_window_task(, **options)
+      req = build_request(:get_maintenance_window_task, )
       req.send_request(options)
     end
 
@@ -5584,8 +5584,8 @@ module Aws::SSM
     #
     # @overload get_ops_item(**params)
     # @param [Hash] params ({})
-    def get_ops_item(params = {}, **options)
-      req = build_request(:get_ops_item, params)
+    def get_ops_item(, **options)
+      req = build_request(:get_ops_item, )
       req.send_request(options)
     end
 
@@ -5629,8 +5629,8 @@ module Aws::SSM
     #
     # @overload get_ops_metadata(**params)
     # @param [Hash] params ({})
-    def get_ops_metadata(params = {}, **options)
-      req = build_request(:get_ops_metadata, params)
+    def get_ops_metadata(, **options)
+      req = build_request(:get_ops_metadata, )
       req.send_request(options)
     end
 
@@ -5720,8 +5720,8 @@ module Aws::SSM
     #
     # @overload get_ops_summary(**params)
     # @param [Hash] params ({})
-    def get_ops_summary(params = {}, **options)
-      req = build_request(:get_ops_summary, params)
+    def get_ops_summary(, **options)
+      req = build_request(:get_ops_summary, )
       req.send_request(options)
     end
 
@@ -5762,8 +5762,8 @@ module Aws::SSM
     #
     # @overload get_parameter(**params)
     # @param [Hash] params ({})
-    def get_parameter(params = {}, **options)
-      req = build_request(:get_parameter, params)
+    def get_parameter(, **options)
+      req = build_request(:get_parameter, )
       req.send_request(options)
     end
 
@@ -5827,8 +5827,8 @@ module Aws::SSM
     #
     # @overload get_parameter_history(**params)
     # @param [Hash] params ({})
-    def get_parameter_history(params = {}, **options)
-      req = build_request(:get_parameter_history, params)
+    def get_parameter_history(, **options)
+      req = build_request(:get_parameter_history, )
       req.send_request(options)
     end
 
@@ -5874,8 +5874,8 @@ module Aws::SSM
     #
     # @overload get_parameters(**params)
     # @param [Hash] params ({})
-    def get_parameters(params = {}, **options)
-      req = build_request(:get_parameters, params)
+    def get_parameters(, **options)
+      req = build_request(:get_parameters, )
       req.send_request(options)
     end
 
@@ -5974,8 +5974,8 @@ module Aws::SSM
     #
     # @overload get_parameters_by_path(**params)
     # @param [Hash] params ({})
-    def get_parameters_by_path(params = {}, **options)
-      req = build_request(:get_parameters_by_path, params)
+    def get_parameters_by_path(, **options)
+      req = build_request(:get_parameters_by_path, )
       req.send_request(options)
     end
 
@@ -6048,8 +6048,8 @@ module Aws::SSM
     #
     # @overload get_patch_baseline(**params)
     # @param [Hash] params ({})
-    def get_patch_baseline(params = {}, **options)
-      req = build_request(:get_patch_baseline, params)
+    def get_patch_baseline(, **options)
+      req = build_request(:get_patch_baseline, )
       req.send_request(options)
     end
 
@@ -6086,8 +6086,8 @@ module Aws::SSM
     #
     # @overload get_patch_baseline_for_patch_group(**params)
     # @param [Hash] params ({})
-    def get_patch_baseline_for_patch_group(params = {}, **options)
-      req = build_request(:get_patch_baseline_for_patch_group, params)
+    def get_patch_baseline_for_patch_group(, **options)
+      req = build_request(:get_patch_baseline_for_patch_group, )
       req.send_request(options)
     end
 
@@ -6138,8 +6138,8 @@ module Aws::SSM
     #
     # @overload get_service_setting(**params)
     # @param [Hash] params ({})
-    def get_service_setting(params = {}, **options)
-      req = build_request(:get_service_setting, params)
+    def get_service_setting(, **options)
+      req = build_request(:get_service_setting, )
       req.send_request(options)
     end
 
@@ -6210,8 +6210,8 @@ module Aws::SSM
     #
     # @overload label_parameter_version(**params)
     # @param [Hash] params ({})
-    def label_parameter_version(params = {}, **options)
-      req = build_request(:label_parameter_version, params)
+    def label_parameter_version(, **options)
+      req = build_request(:label_parameter_version, )
       req.send_request(options)
     end
 
@@ -6284,8 +6284,8 @@ module Aws::SSM
     #
     # @overload list_association_versions(**params)
     # @param [Hash] params ({})
-    def list_association_versions(params = {}, **options)
-      req = build_request(:list_association_versions, params)
+    def list_association_versions(, **options)
+      req = build_request(:list_association_versions, )
       req.send_request(options)
     end
 
@@ -6358,8 +6358,8 @@ module Aws::SSM
     #
     # @overload list_associations(**params)
     # @param [Hash] params ({})
-    def list_associations(params = {}, **options)
-      req = build_request(:list_associations, params)
+    def list_associations(, **options)
+      req = build_request(:list_associations, )
       req.send_request(options)
     end
 
@@ -6457,8 +6457,8 @@ module Aws::SSM
     #
     # @overload list_command_invocations(**params)
     # @param [Hash] params ({})
-    def list_command_invocations(params = {}, **options)
-      req = build_request(:list_command_invocations, params)
+    def list_command_invocations(, **options)
+      req = build_request(:list_command_invocations, )
       req.send_request(options)
     end
 
@@ -6554,8 +6554,8 @@ module Aws::SSM
     #
     # @overload list_commands(**params)
     # @param [Hash] params ({})
-    def list_commands(params = {}, **options)
-      req = build_request(:list_commands, params)
+    def list_commands(, **options)
+      req = build_request(:list_commands, )
       req.send_request(options)
     end
 
@@ -6629,8 +6629,8 @@ module Aws::SSM
     #
     # @overload list_compliance_items(**params)
     # @param [Hash] params ({})
-    def list_compliance_items(params = {}, **options)
-      req = build_request(:list_compliance_items, params)
+    def list_compliance_items(, **options)
+      req = build_request(:list_compliance_items, )
       req.send_request(options)
     end
 
@@ -6697,8 +6697,8 @@ module Aws::SSM
     #
     # @overload list_compliance_summaries(**params)
     # @param [Hash] params ({})
-    def list_compliance_summaries(params = {}, **options)
-      req = build_request(:list_compliance_summaries, params)
+    def list_compliance_summaries(, **options)
+      req = build_request(:list_compliance_summaries, )
       req.send_request(options)
     end
 
@@ -6760,8 +6760,8 @@ module Aws::SSM
     #
     # @overload list_document_metadata_history(**params)
     # @param [Hash] params ({})
-    def list_document_metadata_history(params = {}, **options)
-      req = build_request(:list_document_metadata_history, params)
+    def list_document_metadata_history(, **options)
+      req = build_request(:list_document_metadata_history, )
       req.send_request(options)
     end
 
@@ -6813,8 +6813,8 @@ module Aws::SSM
     #
     # @overload list_document_versions(**params)
     # @param [Hash] params ({})
-    def list_document_versions(params = {}, **options)
-      req = build_request(:list_document_versions, params)
+    def list_document_versions(, **options)
+      req = build_request(:list_document_versions, )
       req.send_request(options)
     end
 
@@ -6896,8 +6896,8 @@ module Aws::SSM
     #
     # @overload list_documents(**params)
     # @param [Hash] params ({})
-    def list_documents(params = {}, **options)
-      req = build_request(:list_documents, params)
+    def list_documents(, **options)
+      req = build_request(:list_documents, )
       req.send_request(options)
     end
 
@@ -6962,8 +6962,8 @@ module Aws::SSM
     #
     # @overload list_inventory_entries(**params)
     # @param [Hash] params ({})
-    def list_inventory_entries(params = {}, **options)
-      req = build_request(:list_inventory_entries, params)
+    def list_inventory_entries(, **options)
+      req = build_request(:list_inventory_entries, )
       req.send_request(options)
     end
 
@@ -7021,8 +7021,8 @@ module Aws::SSM
     #
     # @overload list_ops_item_events(**params)
     # @param [Hash] params ({})
-    def list_ops_item_events(params = {}, **options)
-      req = build_request(:list_ops_item_events, params)
+    def list_ops_item_events(, **options)
+      req = build_request(:list_ops_item_events, )
       req.send_request(options)
     end
 
@@ -7076,8 +7076,8 @@ module Aws::SSM
     #
     # @overload list_ops_metadata(**params)
     # @param [Hash] params ({})
-    def list_ops_metadata(params = {}, **options)
-      req = build_request(:list_ops_metadata, params)
+    def list_ops_metadata(, **options)
+      req = build_request(:list_ops_metadata, )
       req.send_request(options)
     end
 
@@ -7151,8 +7151,8 @@ module Aws::SSM
     #
     # @overload list_resource_compliance_summaries(**params)
     # @param [Hash] params ({})
-    def list_resource_compliance_summaries(params = {}, **options)
-      req = build_request(:list_resource_compliance_summaries, params)
+    def list_resource_compliance_summaries(, **options)
+      req = build_request(:list_resource_compliance_summaries, )
       req.send_request(options)
     end
 
@@ -7230,8 +7230,8 @@ module Aws::SSM
     #
     # @overload list_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def list_resource_data_sync(params = {}, **options)
-      req = build_request(:list_resource_data_sync, params)
+    def list_resource_data_sync(, **options)
+      req = build_request(:list_resource_data_sync, )
       req.send_request(options)
     end
 
@@ -7264,8 +7264,8 @@ module Aws::SSM
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -7312,8 +7312,8 @@ module Aws::SSM
     #
     # @overload modify_document_permission(**params)
     # @param [Hash] params ({})
-    def modify_document_permission(params = {}, **options)
-      req = build_request(:modify_document_permission, params)
+    def modify_document_permission(, **options)
+      req = build_request(:modify_document_permission, )
       req.send_request(options)
     end
 
@@ -7438,8 +7438,8 @@ module Aws::SSM
     #
     # @overload put_compliance_items(**params)
     # @param [Hash] params ({})
-    def put_compliance_items(params = {}, **options)
-      req = build_request(:put_compliance_items, params)
+    def put_compliance_items(, **options)
+      req = build_request(:put_compliance_items, )
       req.send_request(options)
     end
 
@@ -7487,8 +7487,8 @@ module Aws::SSM
     #
     # @overload put_inventory(**params)
     # @param [Hash] params ({})
-    def put_inventory(params = {}, **options)
-      req = build_request(:put_inventory, params)
+    def put_inventory(, **options)
+      req = build_request(:put_inventory, )
       req.send_request(options)
     end
 
@@ -7775,8 +7775,8 @@ module Aws::SSM
     #
     # @overload put_parameter(**params)
     # @param [Hash] params ({})
-    def put_parameter(params = {}, **options)
-      req = build_request(:put_parameter, params)
+    def put_parameter(, **options)
+      req = build_request(:put_parameter, )
       req.send_request(options)
     end
 
@@ -7810,8 +7810,8 @@ module Aws::SSM
     #
     # @overload register_default_patch_baseline(**params)
     # @param [Hash] params ({})
-    def register_default_patch_baseline(params = {}, **options)
-      req = build_request(:register_default_patch_baseline, params)
+    def register_default_patch_baseline(, **options)
+      req = build_request(:register_default_patch_baseline, )
       req.send_request(options)
     end
 
@@ -7845,8 +7845,8 @@ module Aws::SSM
     #
     # @overload register_patch_baseline_for_patch_group(**params)
     # @param [Hash] params ({})
-    def register_patch_baseline_for_patch_group(params = {}, **options)
-      req = build_request(:register_patch_baseline_for_patch_group, params)
+    def register_patch_baseline_for_patch_group(, **options)
+      req = build_request(:register_patch_baseline_for_patch_group, )
       req.send_request(options)
     end
 
@@ -7948,8 +7948,8 @@ module Aws::SSM
     #
     # @overload register_target_with_maintenance_window(**params)
     # @param [Hash] params ({})
-    def register_target_with_maintenance_window(params = {}, **options)
-      req = build_request(:register_target_with_maintenance_window, params)
+    def register_target_with_maintenance_window(, **options)
+      req = build_request(:register_target_with_maintenance_window, )
       req.send_request(options)
     end
 
@@ -8131,8 +8131,8 @@ module Aws::SSM
     #
     # @overload register_task_with_maintenance_window(**params)
     # @param [Hash] params ({})
-    def register_task_with_maintenance_window(params = {}, **options)
-      req = build_request(:register_task_with_maintenance_window, params)
+    def register_task_with_maintenance_window(, **options)
+      req = build_request(:register_task_with_maintenance_window, )
       req.send_request(options)
     end
 
@@ -8182,8 +8182,8 @@ module Aws::SSM
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 
@@ -8235,8 +8235,8 @@ module Aws::SSM
     #
     # @overload reset_service_setting(**params)
     # @param [Hash] params ({})
-    def reset_service_setting(params = {}, **options)
-      req = build_request(:reset_service_setting, params)
+    def reset_service_setting(, **options)
+      req = build_request(:reset_service_setting, )
       req.send_request(options)
     end
 
@@ -8275,8 +8275,8 @@ module Aws::SSM
     #
     # @overload resume_session(**params)
     # @param [Hash] params ({})
-    def resume_session(params = {}, **options)
-      req = build_request(:resume_session, params)
+    def resume_session(, **options)
+      req = build_request(:resume_session, )
       req.send_request(options)
     end
 
@@ -8325,8 +8325,8 @@ module Aws::SSM
     #
     # @overload send_automation_signal(**params)
     # @param [Hash] params ({})
-    def send_automation_signal(params = {}, **options)
-      req = build_request(:send_automation_signal, params)
+    def send_automation_signal(, **options)
+      req = build_request(:send_automation_signal, )
       req.send_request(options)
     end
 
@@ -8542,8 +8542,8 @@ module Aws::SSM
     #
     # @overload send_command(**params)
     # @param [Hash] params ({})
-    def send_command(params = {}, **options)
-      req = build_request(:send_command, params)
+    def send_command(, **options)
+      req = build_request(:send_command, )
       req.send_request(options)
     end
 
@@ -8566,8 +8566,8 @@ module Aws::SSM
     #
     # @overload start_associations_once(**params)
     # @param [Hash] params ({})
-    def start_associations_once(params = {}, **options)
-      req = build_request(:start_associations_once, params)
+    def start_associations_once(, **options)
+      req = build_request(:start_associations_once, )
       req.send_request(options)
     end
 
@@ -8707,8 +8707,8 @@ module Aws::SSM
     #
     # @overload start_automation_execution(**params)
     # @param [Hash] params ({})
-    def start_automation_execution(params = {}, **options)
-      req = build_request(:start_automation_execution, params)
+    def start_automation_execution(, **options)
+      req = build_request(:start_automation_execution, )
       req.send_request(options)
     end
 
@@ -8826,8 +8826,8 @@ module Aws::SSM
     #
     # @overload start_change_request_execution(**params)
     # @param [Hash] params ({})
-    def start_change_request_execution(params = {}, **options)
-      req = build_request(:start_change_request_execution, params)
+    def start_change_request_execution(, **options)
+      req = build_request(:start_change_request_execution, )
       req.send_request(options)
     end
 
@@ -8888,8 +8888,8 @@ module Aws::SSM
     #
     # @overload start_session(**params)
     # @param [Hash] params ({})
-    def start_session(params = {}, **options)
-      req = build_request(:start_session, params)
+    def start_session(, **options)
+      req = build_request(:start_session, )
       req.send_request(options)
     end
 
@@ -8915,8 +8915,8 @@ module Aws::SSM
     #
     # @overload stop_automation_execution(**params)
     # @param [Hash] params ({})
-    def stop_automation_execution(params = {}, **options)
-      req = build_request(:stop_automation_execution, params)
+    def stop_automation_execution(, **options)
+      req = build_request(:stop_automation_execution, )
       req.send_request(options)
     end
 
@@ -8945,8 +8945,8 @@ module Aws::SSM
     #
     # @overload terminate_session(**params)
     # @param [Hash] params ({})
-    def terminate_session(params = {}, **options)
-      req = build_request(:terminate_session, params)
+    def terminate_session(, **options)
+      req = build_request(:terminate_session, )
       req.send_request(options)
     end
 
@@ -9184,8 +9184,8 @@ module Aws::SSM
     #
     # @overload update_association(**params)
     # @param [Hash] params ({})
-    def update_association(params = {}, **options)
-      req = build_request(:update_association, params)
+    def update_association(, **options)
+      req = build_request(:update_association, )
       req.send_request(options)
     end
 
@@ -9268,8 +9268,8 @@ module Aws::SSM
     #
     # @overload update_association_status(**params)
     # @param [Hash] params ({})
-    def update_association_status(params = {}, **options)
-      req = build_request(:update_association_status, params)
+    def update_association_status(, **options)
+      req = build_request(:update_association_status, )
       req.send_request(options)
     end
 
@@ -9373,8 +9373,8 @@ module Aws::SSM
     #
     # @overload update_document(**params)
     # @param [Hash] params ({})
-    def update_document(params = {}, **options)
-      req = build_request(:update_document, params)
+    def update_document(, **options)
+      req = build_request(:update_document, )
       req.send_request(options)
     end
 
@@ -9409,8 +9409,8 @@ module Aws::SSM
     #
     # @overload update_document_default_version(**params)
     # @param [Hash] params ({})
-    def update_document_default_version(params = {}, **options)
-      req = build_request(:update_document_default_version, params)
+    def update_document_default_version(, **options)
+      req = build_request(:update_document_default_version, )
       req.send_request(options)
     end
 
@@ -9448,8 +9448,8 @@ module Aws::SSM
     #
     # @overload update_document_metadata(**params)
     # @param [Hash] params ({})
-    def update_document_metadata(params = {}, **options)
-      req = build_request(:update_document_metadata, params)
+    def update_document_metadata(, **options)
+      req = build_request(:update_document_metadata, )
       req.send_request(options)
     end
 
@@ -9588,8 +9588,8 @@ module Aws::SSM
     #
     # @overload update_maintenance_window(**params)
     # @param [Hash] params ({})
-    def update_maintenance_window(params = {}, **options)
-      req = build_request(:update_maintenance_window, params)
+    def update_maintenance_window(, **options)
+      req = build_request(:update_maintenance_window, )
       req.send_request(options)
     end
 
@@ -9681,8 +9681,8 @@ module Aws::SSM
     #
     # @overload update_maintenance_window_target(**params)
     # @param [Hash] params ({})
-    def update_maintenance_window_target(params = {}, **options)
-      req = build_request(:update_maintenance_window_target, params)
+    def update_maintenance_window_target(, **options)
+      req = build_request(:update_maintenance_window_target, )
       req.send_request(options)
     end
 
@@ -9960,8 +9960,8 @@ module Aws::SSM
     #
     # @overload update_maintenance_window_task(**params)
     # @param [Hash] params ({})
-    def update_maintenance_window_task(params = {}, **options)
-      req = build_request(:update_maintenance_window_task, params)
+    def update_maintenance_window_task(, **options)
+      req = build_request(:update_maintenance_window_task, )
       req.send_request(options)
     end
 
@@ -9989,8 +9989,8 @@ module Aws::SSM
     #
     # @overload update_managed_instance_role(**params)
     # @param [Hash] params ({})
-    def update_managed_instance_role(params = {}, **options)
-      req = build_request(:update_managed_instance_role, params)
+    def update_managed_instance_role(, **options)
+      req = build_request(:update_managed_instance_role, )
       req.send_request(options)
     end
 
@@ -10141,8 +10141,8 @@ module Aws::SSM
     #
     # @overload update_ops_item(**params)
     # @param [Hash] params ({})
-    def update_ops_item(params = {}, **options)
-      req = build_request(:update_ops_item, params)
+    def update_ops_item(, **options)
+      req = build_request(:update_ops_item, )
       req.send_request(options)
     end
 
@@ -10182,8 +10182,8 @@ module Aws::SSM
     #
     # @overload update_ops_metadata(**params)
     # @param [Hash] params ({})
-    def update_ops_metadata(params = {}, **options)
-      req = build_request(:update_ops_metadata, params)
+    def update_ops_metadata(, **options)
+      req = build_request(:update_ops_metadata, )
       req.send_request(options)
     end
 
@@ -10372,8 +10372,8 @@ module Aws::SSM
     #
     # @overload update_patch_baseline(**params)
     # @param [Hash] params ({})
-    def update_patch_baseline(params = {}, **options)
-      req = build_request(:update_patch_baseline, params)
+    def update_patch_baseline(, **options)
+      req = build_request(:update_patch_baseline, )
       req.send_request(options)
     end
 
@@ -10426,8 +10426,8 @@ module Aws::SSM
     #
     # @overload update_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def update_resource_data_sync(params = {}, **options)
-      req = build_request(:update_resource_data_sync, params)
+    def update_resource_data_sync(, **options)
+      req = build_request(:update_resource_data_sync, )
       req.send_request(options)
     end
 
@@ -10489,8 +10489,8 @@ module Aws::SSM
     #
     # @overload update_service_setting(**params)
     # @param [Hash] params ({})
-    def update_service_setting(params = {}, **options)
-      req = build_request(:update_service_setting, params)
+    def update_service_setting(, **options)
+      req = build_request(:update_service_setting, )
       req.send_request(options)
     end
 

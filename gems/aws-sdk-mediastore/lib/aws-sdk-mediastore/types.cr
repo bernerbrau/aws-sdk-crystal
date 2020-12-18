@@ -1047,5 +1047,295 @@ module Aws::MediaStore
     #
     class UntagResourceOutput < Aws::EmptyStructure; end
 
+    alias AllowedHeaders = Array(Header)
+
+    alias AllowedMethods = Array(MethodName)
+
+    alias AllowedOrigins = Array(Origin)
+
+    alias Container = NamedTuple(
+      "Endpoint" : (Endpoint)?,
+      "CreationTime" : (TimeStamp)?,
+      "ARN" : (ContainerARN)?,
+      "Name" : (ContainerName)?,
+      "Status" : (ContainerStatus)?,
+      "AccessLoggingEnabled" : (ContainerAccessLoggingEnabled)?
+    )
+
+    alias ContainerARN = String
+
+    alias ContainerAccessLoggingEnabled = Bool
+
+    alias ContainerInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ContainerLevelMetrics = String
+
+    alias ContainerList = Array(Container)
+
+    alias ContainerListLimit = Int32
+
+    alias ContainerName = String
+
+    alias ContainerNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ContainerPolicy = String
+
+    alias ContainerStatus = String
+
+    alias CorsPolicy = Array(CorsRule)
+
+    alias CorsPolicyNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CorsRule = NamedTuple(
+      "AllowedOrigins" : AllowedOrigins,
+      "AllowedMethods" : (AllowedMethods)?,
+      "AllowedHeaders" : AllowedHeaders,
+      "MaxAgeSeconds" : (MaxAgeSeconds)?,
+      "ExposeHeaders" : (ExposeHeaders)?
+    )
+
+    alias CreateContainerInput = NamedTuple(
+      "ContainerName" : ContainerName,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateContainerOutput = NamedTuple(
+      "Container" : Container
+    )
+
+    alias DeleteContainerInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias DeleteContainerOutput = NamedTuple(
+      
+    )
+
+    alias DeleteContainerPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias DeleteContainerPolicyOutput = NamedTuple(
+      
+    )
+
+    alias DeleteCorsPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias DeleteCorsPolicyOutput = NamedTuple(
+      
+    )
+
+    alias DeleteLifecyclePolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias DeleteLifecyclePolicyOutput = NamedTuple(
+      
+    )
+
+    alias DeleteMetricPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias DeleteMetricPolicyOutput = NamedTuple(
+      
+    )
+
+    alias DescribeContainerInput = NamedTuple(
+      "ContainerName" : (ContainerName)?
+    )
+
+    alias DescribeContainerOutput = NamedTuple(
+      "Container" : (Container)?
+    )
+
+    alias Endpoint = String
+
+    alias ErrorMessage = String
+
+    alias ExposeHeaders = Array(Header)
+
+    alias GetContainerPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias GetContainerPolicyOutput = NamedTuple(
+      "Policy" : ContainerPolicy
+    )
+
+    alias GetCorsPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias GetCorsPolicyOutput = NamedTuple(
+      "CorsPolicy" : CorsPolicy
+    )
+
+    alias GetLifecyclePolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias GetLifecyclePolicyOutput = NamedTuple(
+      "LifecyclePolicy" : LifecyclePolicy
+    )
+
+    alias GetMetricPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias GetMetricPolicyOutput = NamedTuple(
+      "MetricPolicy" : MetricPolicy
+    )
+
+    alias Header = String
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LifecyclePolicy = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListContainersInput = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (ContainerListLimit)?
+    )
+
+    alias ListContainersOutput = NamedTuple(
+      "Containers" : ContainerList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "Resource" : ContainerARN
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias MaxAgeSeconds = Int32
+
+    alias MethodName = String
+
+    alias MetricPolicy = NamedTuple(
+      "ContainerLevelMetrics" : ContainerLevelMetrics,
+      "MetricPolicyRules" : (MetricPolicyRules)?
+    )
+
+    alias MetricPolicyRule = NamedTuple(
+      "ObjectGroup" : ObjectGroup,
+      "ObjectGroupName" : ObjectGroupName
+    )
+
+    alias MetricPolicyRules = Array(MetricPolicyRule)
+
+    alias ObjectGroup = String
+
+    alias ObjectGroupName = String
+
+    alias Origin = String
+
+    alias PaginationToken = String
+
+    alias PolicyNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias PutContainerPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName,
+      "Policy" : ContainerPolicy
+    )
+
+    alias PutContainerPolicyOutput = NamedTuple(
+      
+    )
+
+    alias PutCorsPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName,
+      "CorsPolicy" : CorsPolicy
+    )
+
+    alias PutCorsPolicyOutput = NamedTuple(
+      
+    )
+
+    alias PutLifecyclePolicyInput = NamedTuple(
+      "ContainerName" : ContainerName,
+      "LifecyclePolicy" : LifecyclePolicy
+    )
+
+    alias PutLifecyclePolicyOutput = NamedTuple(
+      
+    )
+
+    alias PutMetricPolicyInput = NamedTuple(
+      "ContainerName" : ContainerName,
+      "MetricPolicy" : MetricPolicy
+    )
+
+    alias PutMetricPolicyOutput = NamedTuple(
+      
+    )
+
+    alias StartAccessLoggingInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias StartAccessLoggingOutput = NamedTuple(
+      
+    )
+
+    alias StopAccessLoggingInput = NamedTuple(
+      "ContainerName" : ContainerName
+    )
+
+    alias StopAccessLoggingOutput = NamedTuple(
+      
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "Resource" : ContainerARN,
+      "Tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias UntagResourceInput = NamedTuple(
+      "Resource" : ContainerARN,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
   end
 end

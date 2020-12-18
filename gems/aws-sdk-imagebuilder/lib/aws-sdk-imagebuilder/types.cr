@@ -4195,5 +4195,984 @@ module Aws::Imagebuilder
       include Aws::Structure
     end
 
+    alias AccountId = String
+
+    alias AccountList = Array(AccountId)
+
+    alias Ami = NamedTuple(
+      "region" : (NonEmptyString)?,
+      "image" : (NonEmptyString)?,
+      "name" : (NonEmptyString)?,
+      "description" : (NonEmptyString)?,
+      "state" : (ImageState)?,
+      "accountId" : (NonEmptyString)?
+    )
+
+    alias AmiDistributionConfiguration = NamedTuple(
+      "name" : (AmiNameString)?,
+      "description" : (NonEmptyString)?,
+      "targetAccountIds" : (AccountList)?,
+      "amiTags" : (TagMap)?,
+      "kmsKeyId" : (NonEmptyString)?,
+      "launchPermission" : (LaunchPermissionConfiguration)?
+    )
+
+    alias AmiList = Array(Ami)
+
+    alias AmiNameString = String
+
+    alias Arn = String
+
+    alias CallRateLimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias CancelImageCreationRequest = NamedTuple(
+      "imageBuildVersionArn" : ImageBuildVersionArn,
+      "clientToken" : ClientToken
+    )
+
+    alias CancelImageCreationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+    )
+
+    alias ClientException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ClientToken = String
+
+    alias Component = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "version" : (VersionNumber)?,
+      "description" : (NonEmptyString)?,
+      "changeDescription" : (NonEmptyString)?,
+      "type" : (ComponentType)?,
+      "platform" : (Platform)?,
+      "supportedOsVersions" : (OsVersionList)?,
+      "owner" : (NonEmptyString)?,
+      "data" : (ComponentData)?,
+      "kmsKeyId" : (NonEmptyString)?,
+      "encrypted" : (NullableBoolean)?,
+      "dateCreated" : (DateTime)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ComponentBuildVersionArn = String
+
+    alias ComponentConfiguration = NamedTuple(
+      "componentArn" : ComponentVersionArnOrBuildVersionArn
+    )
+
+    alias ComponentConfigurationList = Array(ComponentConfiguration)
+
+    alias ComponentData = String
+
+    alias ComponentFormat = String
+
+    alias ComponentSummary = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "version" : (VersionNumber)?,
+      "platform" : (Platform)?,
+      "supportedOsVersions" : (OsVersionList)?,
+      "type" : (ComponentType)?,
+      "owner" : (NonEmptyString)?,
+      "description" : (NonEmptyString)?,
+      "changeDescription" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ComponentSummaryList = Array(ComponentSummary)
+
+    alias ComponentType = String
+
+    alias ComponentVersion = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "version" : (VersionNumber)?,
+      "description" : (NonEmptyString)?,
+      "platform" : (Platform)?,
+      "supportedOsVersions" : (OsVersionList)?,
+      "type" : (ComponentType)?,
+      "owner" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?
+    )
+
+    alias ComponentVersionArn = String
+
+    alias ComponentVersionArnOrBuildVersionArn = String
+
+    alias ComponentVersionList = Array(ComponentVersion)
+
+    alias CreateComponentRequest = NamedTuple(
+      "name" : ResourceName,
+      "semanticVersion" : VersionNumber,
+      "description" : (NonEmptyString)?,
+      "changeDescription" : (NonEmptyString)?,
+      "platform" : Platform,
+      "supportedOsVersions" : (OsVersionList)?,
+      "data" : (InlineComponentData)?,
+      "uri" : (Uri)?,
+      "kmsKeyId" : (NonEmptyString)?,
+      "tags" : (TagMap)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateComponentResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "componentBuildVersionArn" : (ComponentBuildVersionArn)?
+    )
+
+    alias CreateDistributionConfigurationRequest = NamedTuple(
+      "name" : ResourceName,
+      "description" : (NonEmptyString)?,
+      "distributions" : DistributionList,
+      "tags" : (TagMap)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateDistributionConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "distributionConfigurationArn" : (DistributionConfigurationArn)?
+    )
+
+    alias CreateImagePipelineRequest = NamedTuple(
+      "name" : ResourceName,
+      "description" : (NonEmptyString)?,
+      "imageRecipeArn" : ImageRecipeArn,
+      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
+      "distributionConfigurationArn" : (DistributionConfigurationArn)?,
+      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
+      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
+      "schedule" : (Schedule)?,
+      "status" : (PipelineStatus)?,
+      "tags" : (TagMap)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateImagePipelineResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "imagePipelineArn" : (ImagePipelineArn)?
+    )
+
+    alias CreateImageRecipeRequest = NamedTuple(
+      "name" : ResourceName,
+      "description" : (NonEmptyString)?,
+      "semanticVersion" : VersionNumber,
+      "components" : ComponentConfigurationList,
+      "parentImage" : NonEmptyString,
+      "blockDeviceMappings" : (InstanceBlockDeviceMappings)?,
+      "tags" : (TagMap)?,
+      "workingDirectory" : (NonEmptyString)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateImageRecipeResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "imageRecipeArn" : (ImageRecipeArn)?
+    )
+
+    alias CreateImageRequest = NamedTuple(
+      "imageRecipeArn" : ImageRecipeArn,
+      "distributionConfigurationArn" : (DistributionConfigurationArn)?,
+      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
+      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
+      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
+      "tags" : (TagMap)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateImageResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+    )
+
+    alias CreateInfrastructureConfigurationRequest = NamedTuple(
+      "name" : ResourceName,
+      "description" : (NonEmptyString)?,
+      "instanceTypes" : (InstanceTypeList)?,
+      "instanceProfileName" : NonEmptyString,
+      "securityGroupIds" : (SecurityGroupIds)?,
+      "subnetId" : (NonEmptyString)?,
+      "logging" : (Logging)?,
+      "keyPair" : (NonEmptyString)?,
+      "terminateInstanceOnFailure" : (NullableBoolean)?,
+      "snsTopicArn" : (SnsTopicArn)?,
+      "resourceTags" : (ResourceTagMap)?,
+      "tags" : (TagMap)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateInfrastructureConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "infrastructureConfigurationArn" : (InfrastructureConfigurationArn)?
+    )
+
+    alias DateTime = String
+
+    alias DeleteComponentRequest = NamedTuple(
+      "componentBuildVersionArn" : ComponentBuildVersionArn
+    )
+
+    alias DeleteComponentResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "componentBuildVersionArn" : (ComponentBuildVersionArn)?
+    )
+
+    alias DeleteDistributionConfigurationRequest = NamedTuple(
+      "distributionConfigurationArn" : DistributionConfigurationArn
+    )
+
+    alias DeleteDistributionConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "distributionConfigurationArn" : (DistributionConfigurationArn)?
+    )
+
+    alias DeleteImagePipelineRequest = NamedTuple(
+      "imagePipelineArn" : ImagePipelineArn
+    )
+
+    alias DeleteImagePipelineResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imagePipelineArn" : (ImagePipelineArn)?
+    )
+
+    alias DeleteImageRecipeRequest = NamedTuple(
+      "imageRecipeArn" : ImageRecipeArn
+    )
+
+    alias DeleteImageRecipeResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageRecipeArn" : (ImageRecipeArn)?
+    )
+
+    alias DeleteImageRequest = NamedTuple(
+      "imageBuildVersionArn" : ImageBuildVersionArn
+    )
+
+    alias DeleteImageResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+    )
+
+    alias DeleteInfrastructureConfigurationRequest = NamedTuple(
+      "infrastructureConfigurationArn" : InfrastructureConfigurationArn
+    )
+
+    alias DeleteInfrastructureConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "infrastructureConfigurationArn" : (InfrastructureConfigurationArn)?
+    )
+
+    alias Distribution = NamedTuple(
+      "region" : NonEmptyString,
+      "amiDistributionConfiguration" : (AmiDistributionConfiguration)?,
+      "licenseConfigurationArns" : (LicenseConfigurationArnList)?
+    )
+
+    alias DistributionConfiguration = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "description" : (NonEmptyString)?,
+      "distributions" : (DistributionList)?,
+      "timeoutMinutes" : DistributionTimeoutMinutes,
+      "dateCreated" : (DateTime)?,
+      "dateUpdated" : (DateTime)?,
+      "tags" : (TagMap)?
+    )
+
+    alias DistributionConfigurationArn = String
+
+    alias DistributionConfigurationSummary = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "description" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?,
+      "dateUpdated" : (DateTime)?,
+      "tags" : (TagMap)?
+    )
+
+    alias DistributionConfigurationSummaryList = Array(DistributionConfigurationSummary)
+
+    alias DistributionList = Array(Distribution)
+
+    alias DistributionTimeoutMinutes = Int32
+
+    alias EbsInstanceBlockDeviceSpecification = NamedTuple(
+      "encrypted" : (NullableBoolean)?,
+      "deleteOnTermination" : (NullableBoolean)?,
+      "iops" : (EbsIopsInteger)?,
+      "kmsKeyId" : (NonEmptyString)?,
+      "snapshotId" : (NonEmptyString)?,
+      "volumeSize" : (EbsVolumeSizeInteger)?,
+      "volumeType" : (EbsVolumeType)?
+    )
+
+    alias EbsIopsInteger = Int32
+
+    alias EbsVolumeSizeInteger = Int32
+
+    alias EbsVolumeType = String
+
+    alias EmptyString = String
+
+    alias ErrorMessage = String
+
+    alias Filter = NamedTuple(
+      "name" : (FilterName)?,
+      "values" : (FilterValues)?
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias ForbiddenException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias GetComponentPolicyRequest = NamedTuple(
+      "componentArn" : ComponentBuildVersionArn
+    )
+
+    alias GetComponentPolicyResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "policy" : (ResourcePolicyDocument)?
+    )
+
+    alias GetComponentRequest = NamedTuple(
+      "componentBuildVersionArn" : ComponentVersionArnOrBuildVersionArn
+    )
+
+    alias GetComponentResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "component" : (Component)?
+    )
+
+    alias GetDistributionConfigurationRequest = NamedTuple(
+      "distributionConfigurationArn" : DistributionConfigurationArn
+    )
+
+    alias GetDistributionConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "distributionConfiguration" : (DistributionConfiguration)?
+    )
+
+    alias GetImagePipelineRequest = NamedTuple(
+      "imagePipelineArn" : ImagePipelineArn
+    )
+
+    alias GetImagePipelineResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imagePipeline" : (ImagePipeline)?
+    )
+
+    alias GetImagePolicyRequest = NamedTuple(
+      "imageArn" : ImageBuildVersionArn
+    )
+
+    alias GetImagePolicyResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "policy" : (ResourcePolicyDocument)?
+    )
+
+    alias GetImageRecipePolicyRequest = NamedTuple(
+      "imageRecipeArn" : ImageRecipeArn
+    )
+
+    alias GetImageRecipePolicyResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "policy" : (ResourcePolicyDocument)?
+    )
+
+    alias GetImageRecipeRequest = NamedTuple(
+      "imageRecipeArn" : ImageRecipeArn
+    )
+
+    alias GetImageRecipeResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageRecipe" : (ImageRecipe)?
+    )
+
+    alias GetImageRequest = NamedTuple(
+      "imageBuildVersionArn" : ImageVersionArnOrBuildVersionArn
+    )
+
+    alias GetImageResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "image" : (Image)?
+    )
+
+    alias GetInfrastructureConfigurationRequest = NamedTuple(
+      "infrastructureConfigurationArn" : InfrastructureConfigurationArn
+    )
+
+    alias GetInfrastructureConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "infrastructureConfiguration" : (InfrastructureConfiguration)?
+    )
+
+    alias IdempotentParameterMismatchException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Image = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "version" : (VersionNumber)?,
+      "platform" : (Platform)?,
+      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
+      "osVersion" : (OsVersion)?,
+      "state" : (ImageState)?,
+      "imageRecipe" : (ImageRecipe)?,
+      "sourcePipelineName" : (ResourceName)?,
+      "sourcePipelineArn" : (Arn)?,
+      "infrastructureConfiguration" : (InfrastructureConfiguration)?,
+      "distributionConfiguration" : (DistributionConfiguration)?,
+      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
+      "dateCreated" : (DateTime)?,
+      "outputResources" : (OutputResources)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ImageBuildVersionArn = String
+
+    alias ImageBuilderArn = String
+
+    alias ImagePipeline = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "description" : (NonEmptyString)?,
+      "platform" : (Platform)?,
+      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
+      "imageRecipeArn" : (Arn)?,
+      "infrastructureConfigurationArn" : (Arn)?,
+      "distributionConfigurationArn" : (Arn)?,
+      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
+      "schedule" : (Schedule)?,
+      "status" : (PipelineStatus)?,
+      "dateCreated" : (DateTime)?,
+      "dateUpdated" : (DateTime)?,
+      "dateLastRun" : (DateTime)?,
+      "dateNextRun" : (DateTime)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ImagePipelineArn = String
+
+    alias ImagePipelineList = Array(ImagePipeline)
+
+    alias ImageRecipe = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "description" : (NonEmptyString)?,
+      "platform" : (Platform)?,
+      "owner" : (NonEmptyString)?,
+      "version" : (VersionNumber)?,
+      "components" : (ComponentConfigurationList)?,
+      "parentImage" : (NonEmptyString)?,
+      "blockDeviceMappings" : (InstanceBlockDeviceMappings)?,
+      "dateCreated" : (DateTime)?,
+      "tags" : (TagMap)?,
+      "workingDirectory" : (NonEmptyString)?
+    )
+
+    alias ImageRecipeArn = String
+
+    alias ImageRecipeSummary = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "platform" : (Platform)?,
+      "owner" : (NonEmptyString)?,
+      "parentImage" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ImageRecipeSummaryList = Array(ImageRecipeSummary)
+
+    alias ImageState = NamedTuple(
+      "status" : (ImageStatus)?,
+      "reason" : (NonEmptyString)?
+    )
+
+    alias ImageStatus = String
+
+    alias ImageSummary = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "version" : (VersionNumber)?,
+      "platform" : (Platform)?,
+      "osVersion" : (OsVersion)?,
+      "state" : (ImageState)?,
+      "owner" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?,
+      "outputResources" : (OutputResources)?,
+      "tags" : (TagMap)?
+    )
+
+    alias ImageSummaryList = Array(ImageSummary)
+
+    alias ImageTestsConfiguration = NamedTuple(
+      "imageTestsEnabled" : (NullableBoolean)?,
+      "timeoutMinutes" : (ImageTestsTimeoutMinutes)?
+    )
+
+    alias ImageTestsTimeoutMinutes = Int32
+
+    alias ImageVersion = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "version" : (VersionNumber)?,
+      "platform" : (Platform)?,
+      "osVersion" : (OsVersion)?,
+      "owner" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?
+    )
+
+    alias ImageVersionArn = String
+
+    alias ImageVersionArnOrBuildVersionArn = String
+
+    alias ImageVersionList = Array(ImageVersion)
+
+    alias ImportComponentRequest = NamedTuple(
+      "name" : ResourceName,
+      "semanticVersion" : VersionNumber,
+      "description" : (NonEmptyString)?,
+      "changeDescription" : (NonEmptyString)?,
+      "type" : ComponentType,
+      "format" : ComponentFormat,
+      "platform" : Platform,
+      "data" : (NonEmptyString)?,
+      "uri" : (Uri)?,
+      "kmsKeyId" : (NonEmptyString)?,
+      "tags" : (TagMap)?,
+      "clientToken" : ClientToken
+    )
+
+    alias ImportComponentResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "componentBuildVersionArn" : (ComponentBuildVersionArn)?
+    )
+
+    alias InfrastructureConfiguration = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "description" : (NonEmptyString)?,
+      "instanceTypes" : (InstanceTypeList)?,
+      "instanceProfileName" : (NonEmptyString)?,
+      "securityGroupIds" : (SecurityGroupIds)?,
+      "subnetId" : (NonEmptyString)?,
+      "logging" : (Logging)?,
+      "keyPair" : (NonEmptyString)?,
+      "terminateInstanceOnFailure" : (NullableBoolean)?,
+      "snsTopicArn" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?,
+      "dateUpdated" : (DateTime)?,
+      "resourceTags" : (ResourceTagMap)?,
+      "tags" : (TagMap)?
+    )
+
+    alias InfrastructureConfigurationArn = String
+
+    alias InfrastructureConfigurationSummary = NamedTuple(
+      "arn" : (ImageBuilderArn)?,
+      "name" : (ResourceName)?,
+      "description" : (NonEmptyString)?,
+      "dateCreated" : (DateTime)?,
+      "dateUpdated" : (DateTime)?,
+      "resourceTags" : (ResourceTagMap)?,
+      "tags" : (TagMap)?
+    )
+
+    alias InfrastructureConfigurationSummaryList = Array(InfrastructureConfigurationSummary)
+
+    alias InlineComponentData = String
+
+    alias InstanceBlockDeviceMapping = NamedTuple(
+      "deviceName" : (NonEmptyString)?,
+      "ebs" : (EbsInstanceBlockDeviceSpecification)?,
+      "virtualName" : (NonEmptyString)?,
+      "noDevice" : (EmptyString)?
+    )
+
+    alias InstanceBlockDeviceMappings = Array(InstanceBlockDeviceMapping)
+
+    alias InstanceType = String
+
+    alias InstanceTypeList = Array(InstanceType)
+
+    alias InvalidPaginationTokenException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterCombinationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidVersionNumberException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LaunchPermissionConfiguration = NamedTuple(
+      "userIds" : (AccountList)?,
+      "userGroups" : (StringList)?
+    )
+
+    alias LicenseConfigurationArn = String
+
+    alias LicenseConfigurationArnList = Array(LicenseConfigurationArn)
+
+    alias ListComponentBuildVersionsRequest = NamedTuple(
+      "componentVersionArn" : ComponentVersionArn,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListComponentBuildVersionsResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "componentSummaryList" : (ComponentSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListComponentsRequest = NamedTuple(
+      "owner" : (Ownership)?,
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListComponentsResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "componentVersionList" : (ComponentVersionList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDistributionConfigurationsRequest = NamedTuple(
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDistributionConfigurationsResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "distributionConfigurationSummaryList" : (DistributionConfigurationSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImageBuildVersionsRequest = NamedTuple(
+      "imageVersionArn" : ImageVersionArn,
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImageBuildVersionsResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageSummaryList" : (ImageSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImagePipelineImagesRequest = NamedTuple(
+      "imagePipelineArn" : ImagePipelineArn,
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImagePipelineImagesResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageSummaryList" : (ImageSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImagePipelinesRequest = NamedTuple(
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImagePipelinesResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imagePipelineList" : (ImagePipelineList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImageRecipesRequest = NamedTuple(
+      "owner" : (Ownership)?,
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImageRecipesResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageRecipeSummaryList" : (ImageRecipeSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImagesRequest = NamedTuple(
+      "owner" : (Ownership)?,
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListImagesResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageVersionList" : (ImageVersionList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListInfrastructureConfigurationsRequest = NamedTuple(
+      "filters" : (FilterList)?,
+      "maxResults" : (RestrictedInteger)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListInfrastructureConfigurationsResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "infrastructureConfigurationSummaryList" : (InfrastructureConfigurationSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ImageBuilderArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias Logging = NamedTuple(
+      "s3Logs" : (S3Logs)?
+    )
+
+    alias NonEmptyString = String
+
+    alias NullableBoolean = Bool
+
+    alias OsVersion = String
+
+    alias OsVersionList = Array(OsVersion)
+
+    alias OutputResources = NamedTuple(
+      "amis" : (AmiList)?
+    )
+
+    alias Ownership = String
+
+    alias PaginationToken = String
+
+    alias PipelineExecutionStartCondition = String
+
+    alias PipelineStatus = String
+
+    alias Platform = String
+
+    alias PutComponentPolicyRequest = NamedTuple(
+      "componentArn" : ComponentBuildVersionArn,
+      "policy" : ResourcePolicyDocument
+    )
+
+    alias PutComponentPolicyResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "componentArn" : (ComponentBuildVersionArn)?
+    )
+
+    alias PutImagePolicyRequest = NamedTuple(
+      "imageArn" : ImageBuildVersionArn,
+      "policy" : ResourcePolicyDocument
+    )
+
+    alias PutImagePolicyResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageArn" : (ImageBuildVersionArn)?
+    )
+
+    alias PutImageRecipePolicyRequest = NamedTuple(
+      "imageRecipeArn" : ImageRecipeArn,
+      "policy" : ResourcePolicyDocument
+    )
+
+    alias PutImageRecipePolicyResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "imageRecipeArn" : (ImageRecipeArn)?
+    )
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceDependencyException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourcePolicyDocument = String
+
+    alias ResourceTagMap = Hash(TagKey,TagValue)
+
+    alias RestrictedInteger = Int32
+
+    alias S3Logs = NamedTuple(
+      "s3BucketName" : (NonEmptyString)?,
+      "s3KeyPrefix" : (NonEmptyString)?
+    )
+
+    alias Schedule = NamedTuple(
+      "scheduleExpression" : (NonEmptyString)?,
+      "pipelineExecutionStartCondition" : (PipelineExecutionStartCondition)?
+    )
+
+    alias SecurityGroupIds = Array(NonEmptyString)
+
+    alias ServiceException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias SnsTopicArn = String
+
+    alias StartImagePipelineExecutionRequest = NamedTuple(
+      "imagePipelineArn" : ImagePipelineArn,
+      "clientToken" : ClientToken
+    )
+
+    alias StartImagePipelineExecutionResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+    )
+
+    alias StringList = Array(NonEmptyString)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ImageBuilderArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ImageBuilderArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDistributionConfigurationRequest = NamedTuple(
+      "distributionConfigurationArn" : DistributionConfigurationArn,
+      "description" : (NonEmptyString)?,
+      "distributions" : DistributionList,
+      "clientToken" : ClientToken
+    )
+
+    alias UpdateDistributionConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "distributionConfigurationArn" : (DistributionConfigurationArn)?
+    )
+
+    alias UpdateImagePipelineRequest = NamedTuple(
+      "imagePipelineArn" : ImagePipelineArn,
+      "description" : (NonEmptyString)?,
+      "imageRecipeArn" : ImageRecipeArn,
+      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
+      "distributionConfigurationArn" : (DistributionConfigurationArn)?,
+      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
+      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
+      "schedule" : (Schedule)?,
+      "status" : (PipelineStatus)?,
+      "clientToken" : ClientToken
+    )
+
+    alias UpdateImagePipelineResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "imagePipelineArn" : (ImagePipelineArn)?
+    )
+
+    alias UpdateInfrastructureConfigurationRequest = NamedTuple(
+      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
+      "description" : (NonEmptyString)?,
+      "instanceTypes" : (InstanceTypeList)?,
+      "instanceProfileName" : NonEmptyString,
+      "securityGroupIds" : (SecurityGroupIds)?,
+      "subnetId" : (NonEmptyString)?,
+      "logging" : (Logging)?,
+      "keyPair" : (NonEmptyString)?,
+      "terminateInstanceOnFailure" : (NullableBoolean)?,
+      "snsTopicArn" : (SnsTopicArn)?,
+      "clientToken" : ClientToken,
+      "resourceTags" : (ResourceTagMap)?
+    )
+
+    alias UpdateInfrastructureConfigurationResponse = NamedTuple(
+      "requestId" : (NonEmptyString)?,
+      "clientToken" : (ClientToken)?,
+      "infrastructureConfigurationArn" : (InfrastructureConfigurationArn)?
+    )
+
+    alias Uri = String
+
+    alias VersionNumber = String
   end
 end

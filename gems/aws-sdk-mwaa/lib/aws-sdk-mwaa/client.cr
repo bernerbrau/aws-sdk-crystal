@@ -352,8 +352,8 @@ module Aws::MWAA
     #
     # @overload create_cli_token(**params)
     # @param [Hash] params ({})
-    def create_cli_token(params = {}, **options)
-      req = build_request(:create_cli_token, params)
+    def create_cli_token(, **options)
+      req = build_request(:create_cli_token, )
       req.send_request(options)
     end
 
@@ -548,8 +548,8 @@ module Aws::MWAA
     #
     # @overload create_environment(**params)
     # @param [Hash] params ({})
-    def create_environment(params = {}, **options)
-      req = build_request(:create_environment, params)
+    def create_environment(, **options)
+      req = build_request(:create_environment, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::MWAA
     #
     # @overload create_web_login_token(**params)
     # @param [Hash] params ({})
-    def create_web_login_token(params = {}, **options)
-      req = build_request(:create_web_login_token, params)
+    def create_web_login_token(, **options)
+      req = build_request(:create_web_login_token, )
       req.send_request(options)
     end
 
@@ -601,8 +601,8 @@ module Aws::MWAA
     #
     # @overload delete_environment(**params)
     # @param [Hash] params ({})
-    def delete_environment(params = {}, **options)
-      req = build_request(:delete_environment, params)
+    def delete_environment(, **options)
+      req = build_request(:delete_environment, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::MWAA
     #
     # @overload get_environment(**params)
     # @param [Hash] params ({})
-    def get_environment(params = {}, **options)
-      req = build_request(:get_environment, params)
+    def get_environment(, **options)
+      req = build_request(:get_environment, )
       req.send_request(options)
     end
 
@@ -711,8 +711,8 @@ module Aws::MWAA
     #
     # @overload list_environments(**params)
     # @param [Hash] params ({})
-    def list_environments(params = {}, **options)
-      req = build_request(:list_environments, params)
+    def list_environments(, **options)
+      req = build_request(:list_environments, )
       req.send_request(options)
     end
 
@@ -740,8 +740,8 @@ module Aws::MWAA
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -787,8 +787,8 @@ module Aws::MWAA
     #
     # @overload publish_metrics(**params)
     # @param [Hash] params ({})
-    def publish_metrics(params = {}, **options)
-      req = build_request(:publish_metrics, params)
+    def publish_metrics(, **options)
+      req = build_request(:publish_metrics, )
       req.send_request(options)
     end
 
@@ -815,8 +815,8 @@ module Aws::MWAA
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -841,8 +841,8 @@ module Aws::MWAA
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -959,8 +959,8 @@ module Aws::MWAA
     #
     # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, **options)
-      req = build_request(:update_environment, params)
+    def update_environment(, **options)
+      req = build_request(:update_environment, )
       req.send_request(options)
     end
 

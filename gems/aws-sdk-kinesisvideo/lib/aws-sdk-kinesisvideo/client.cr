@@ -375,8 +375,8 @@ module Aws::KinesisVideo
     #
     # @overload create_signaling_channel(**params)
     # @param [Hash] params ({})
-    def create_signaling_channel(params = {}, **options)
-      req = build_request(:create_signaling_channel, params)
+    def create_signaling_channel(, **options)
+      req = build_request(:create_signaling_channel, )
       req.send_request(options)
     end
 
@@ -483,8 +483,8 @@ module Aws::KinesisVideo
     #
     # @overload create_stream(**params)
     # @param [Hash] params ({})
-    def create_stream(params = {}, **options)
-      req = build_request(:create_stream, params)
+    def create_stream(, **options)
+      req = build_request(:create_stream, )
       req.send_request(options)
     end
 
@@ -514,8 +514,8 @@ module Aws::KinesisVideo
     #
     # @overload delete_signaling_channel(**params)
     # @param [Hash] params ({})
-    def delete_signaling_channel(params = {}, **options)
-      req = build_request(:delete_signaling_channel, params)
+    def delete_signaling_channel(, **options)
+      req = build_request(:delete_signaling_channel, )
       req.send_request(options)
     end
 
@@ -561,8 +561,8 @@ module Aws::KinesisVideo
     #
     # @overload delete_stream(**params)
     # @param [Hash] params ({})
-    def delete_stream(params = {}, **options)
-      req = build_request(:delete_stream, params)
+    def delete_stream(, **options)
+      req = build_request(:delete_stream, )
       req.send_request(options)
     end
 
@@ -601,8 +601,8 @@ module Aws::KinesisVideo
     #
     # @overload describe_signaling_channel(**params)
     # @param [Hash] params ({})
-    def describe_signaling_channel(params = {}, **options)
-      req = build_request(:describe_signaling_channel, params)
+    def describe_signaling_channel(, **options)
+      req = build_request(:describe_signaling_channel, )
       req.send_request(options)
     end
 
@@ -642,8 +642,8 @@ module Aws::KinesisVideo
     #
     # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, **options)
-      req = build_request(:describe_stream, params)
+    def describe_stream(, **options)
+      req = build_request(:describe_stream, )
       req.send_request(options)
     end
 
@@ -692,8 +692,8 @@ module Aws::KinesisVideo
     #
     # @overload get_data_endpoint(**params)
     # @param [Hash] params ({})
-    def get_data_endpoint(params = {}, **options)
-      req = build_request(:get_data_endpoint, params)
+    def get_data_endpoint(, **options)
+      req = build_request(:get_data_endpoint, )
       req.send_request(options)
     end
 
@@ -745,8 +745,8 @@ module Aws::KinesisVideo
     #
     # @overload get_signaling_channel_endpoint(**params)
     # @param [Hash] params ({})
-    def get_signaling_channel_endpoint(params = {}, **options)
-      req = build_request(:get_signaling_channel_endpoint, params)
+    def get_signaling_channel_endpoint(, **options)
+      req = build_request(:get_signaling_channel_endpoint, )
       req.send_request(options)
     end
 
@@ -801,8 +801,8 @@ module Aws::KinesisVideo
     #
     # @overload list_signaling_channels(**params)
     # @param [Hash] params ({})
-    def list_signaling_channels(params = {}, **options)
-      req = build_request(:list_signaling_channels, params)
+    def list_signaling_channels(, **options)
+      req = build_request(:list_signaling_channels, )
       req.send_request(options)
     end
 
@@ -861,8 +861,8 @@ module Aws::KinesisVideo
     #
     # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, **options)
-      req = build_request(:list_streams, params)
+    def list_streams(, **options)
+      req = build_request(:list_streams, )
       req.send_request(options)
     end
 
@@ -900,8 +900,8 @@ module Aws::KinesisVideo
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -945,8 +945,8 @@ module Aws::KinesisVideo
     #
     # @overload list_tags_for_stream(**params)
     # @param [Hash] params ({})
-    def list_tags_for_stream(params = {}, **options)
-      req = build_request(:list_tags_for_stream, params)
+    def list_tags_for_stream(, **options)
+      req = build_request(:list_tags_for_stream, )
       req.send_request(options)
     end
 
@@ -987,8 +987,8 @@ module Aws::KinesisVideo
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1037,8 +1037,8 @@ module Aws::KinesisVideo
     #
     # @overload tag_stream(**params)
     # @param [Hash] params ({})
-    def tag_stream(params = {}, **options)
-      req = build_request(:tag_stream, params)
+    def tag_stream(, **options)
+      req = build_request(:tag_stream, )
       req.send_request(options)
     end
 
@@ -1066,8 +1066,8 @@ module Aws::KinesisVideo
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1101,8 +1101,8 @@ module Aws::KinesisVideo
     #
     # @overload untag_stream(**params)
     # @param [Hash] params ({})
-    def untag_stream(params = {}, **options)
-      req = build_request(:untag_stream, params)
+    def untag_stream(, **options)
+      req = build_request(:untag_stream, )
       req.send_request(options)
     end
 
@@ -1170,8 +1170,8 @@ module Aws::KinesisVideo
     #
     # @overload update_data_retention(**params)
     # @param [Hash] params ({})
-    def update_data_retention(params = {}, **options)
-      req = build_request(:update_data_retention, params)
+    def update_data_retention(, **options)
+      req = build_request(:update_data_retention, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::KinesisVideo
     #
     # @overload update_signaling_channel(**params)
     # @param [Hash] params ({})
-    def update_signaling_channel(params = {}, **options)
-      req = build_request(:update_signaling_channel, params)
+    def update_signaling_channel(, **options)
+      req = build_request(:update_signaling_channel, )
       req.send_request(options)
     end
 
@@ -1280,8 +1280,8 @@ module Aws::KinesisVideo
     #
     # @overload update_stream(**params)
     # @param [Hash] params ({})
-    def update_stream(params = {}, **options)
-      req = build_request(:update_stream, params)
+    def update_stream(, **options)
+      req = build_request(:update_stream, )
       req.send_request(options)
     end
 

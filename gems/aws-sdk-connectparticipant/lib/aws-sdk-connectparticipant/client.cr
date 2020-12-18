@@ -379,8 +379,8 @@ module Aws::ConnectParticipant
     #
     # @overload create_participant_connection(**params)
     # @param [Hash] params ({})
-    def create_participant_connection(params = {}, **options)
-      req = build_request(:create_participant_connection, params)
+    def create_participant_connection(, **options)
+      req = build_request(:create_participant_connection, )
       req.send_request(options)
     end
 
@@ -411,8 +411,8 @@ module Aws::ConnectParticipant
     #
     # @overload disconnect_participant(**params)
     # @param [Hash] params ({})
-    def disconnect_participant(params = {}, **options)
-      req = build_request(:disconnect_participant, params)
+    def disconnect_participant(, **options)
+      req = build_request(:disconnect_participant, )
       req.send_request(options)
     end
 
@@ -487,8 +487,8 @@ module Aws::ConnectParticipant
     #
     # @overload get_transcript(**params)
     # @param [Hash] params ({})
-    def get_transcript(params = {}, **options)
-      req = build_request(:get_transcript, params)
+    def get_transcript(, **options)
+      req = build_request(:get_transcript, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::ConnectParticipant
     #
     # @overload send_event(**params)
     # @param [Hash] params ({})
-    def send_event(params = {}, **options)
-      req = build_request(:send_event, params)
+    def send_event(, **options)
+      req = build_request(:send_event, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::ConnectParticipant
     #
     # @overload send_message(**params)
     # @param [Hash] params ({})
-    def send_message(params = {}, **options)
-      req = build_request(:send_message, params)
+    def send_message(, **options)
+      req = build_request(:send_message, )
       req.send_request(options)
     end
 

@@ -432,8 +432,8 @@ module Aws::Cloud9
     #
     # @overload create_environment_ec2(**params)
     # @param [Hash] params ({})
-    def create_environment_ec2(params = {}, **options)
-      req = build_request(:create_environment_ec2, params)
+    def create_environment_ec2(, **options)
+      req = build_request(:create_environment_ec2, )
       req.send_request(options)
     end
 
@@ -498,8 +498,8 @@ module Aws::Cloud9
     #
     # @overload create_environment_membership(**params)
     # @param [Hash] params ({})
-    def create_environment_membership(params = {}, **options)
-      req = build_request(:create_environment_membership, params)
+    def create_environment_membership(, **options)
+      req = build_request(:create_environment_membership, )
       req.send_request(options)
     end
 
@@ -533,8 +533,8 @@ module Aws::Cloud9
     #
     # @overload delete_environment(**params)
     # @param [Hash] params ({})
-    def delete_environment(params = {}, **options)
-      req = build_request(:delete_environment, params)
+    def delete_environment(, **options)
+      req = build_request(:delete_environment, )
       req.send_request(options)
     end
 
@@ -573,8 +573,8 @@ module Aws::Cloud9
     #
     # @overload delete_environment_membership(**params)
     # @param [Hash] params ({})
-    def delete_environment_membership(params = {}, **options)
-      req = build_request(:delete_environment_membership, params)
+    def delete_environment_membership(, **options)
+      req = build_request(:delete_environment_membership, )
       req.send_request(options)
     end
 
@@ -724,8 +724,8 @@ module Aws::Cloud9
     #
     # @overload describe_environment_memberships(**params)
     # @param [Hash] params ({})
-    def describe_environment_memberships(params = {}, **options)
-      req = build_request(:describe_environment_memberships, params)
+    def describe_environment_memberships(, **options)
+      req = build_request(:describe_environment_memberships, )
       req.send_request(options)
     end
 
@@ -767,8 +767,8 @@ module Aws::Cloud9
     #
     # @overload describe_environment_status(**params)
     # @param [Hash] params ({})
-    def describe_environment_status(params = {}, **options)
-      req = build_request(:describe_environment_status, params)
+    def describe_environment_status(, **options)
+      req = build_request(:describe_environment_status, )
       req.send_request(options)
     end
 
@@ -843,8 +843,8 @@ module Aws::Cloud9
     #
     # @overload describe_environments(**params)
     # @param [Hash] params ({})
-    def describe_environments(params = {}, **options)
-      req = build_request(:describe_environments, params)
+    def describe_environments(, **options)
+      req = build_request(:describe_environments, )
       req.send_request(options)
     end
 
@@ -900,8 +900,8 @@ module Aws::Cloud9
     #
     # @overload list_environments(**params)
     # @param [Hash] params ({})
-    def list_environments(params = {}, **options)
-      req = build_request(:list_environments, params)
+    def list_environments(, **options)
+      req = build_request(:list_environments, )
       req.send_request(options)
     end
 
@@ -932,8 +932,8 @@ module Aws::Cloud9
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -968,8 +968,8 @@ module Aws::Cloud9
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -996,8 +996,8 @@ module Aws::Cloud9
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1040,8 +1040,8 @@ module Aws::Cloud9
     #
     # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, **options)
-      req = build_request(:update_environment, params)
+    def update_environment(, **options)
+      req = build_request(:update_environment, )
       req.send_request(options)
     end
 
@@ -1107,8 +1107,8 @@ module Aws::Cloud9
     #
     # @overload update_environment_membership(**params)
     # @param [Hash] params ({})
-    def update_environment_membership(params = {}, **options)
-      req = build_request(:update_environment_membership, params)
+    def update_environment_membership(, **options)
+      req = build_request(:update_environment_membership, )
       req.send_request(options)
     end
 

@@ -461,8 +461,8 @@ module Aws::AppMesh
     #
     # @overload create_gateway_route(**params)
     # @param [Hash] params ({})
-    def create_gateway_route(params = {}, **options)
-      req = build_request(:create_gateway_route, params)
+    def create_gateway_route(, **options)
+      req = build_request(:create_gateway_route, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::AppMesh
     #
     # @overload create_mesh(**params)
     # @param [Hash] params ({})
-    def create_mesh(params = {}, **options)
-      req = build_request(:create_mesh, params)
+    def create_mesh(, **options)
+      req = build_request(:create_mesh, )
       req.send_request(options)
     end
 
@@ -888,8 +888,8 @@ module Aws::AppMesh
     #
     # @overload create_route(**params)
     # @param [Hash] params ({})
-    def create_route(params = {}, **options)
-      req = build_request(:create_route, params)
+    def create_route(, **options)
+      req = build_request(:create_route, )
       req.send_request(options)
     end
 
@@ -1073,8 +1073,8 @@ module Aws::AppMesh
     #
     # @overload create_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def create_virtual_gateway(params = {}, **options)
-      req = build_request(:create_virtual_gateway, params)
+    def create_virtual_gateway(, **options)
+      req = build_request(:create_virtual_gateway, )
       req.send_request(options)
     end
 
@@ -1409,8 +1409,8 @@ module Aws::AppMesh
     #
     # @overload create_virtual_node(**params)
     # @param [Hash] params ({})
-    def create_virtual_node(params = {}, **options)
-      req = build_request(:create_virtual_node, params)
+    def create_virtual_node(, **options)
+      req = build_request(:create_virtual_node, )
       req.send_request(options)
     end
 
@@ -1513,8 +1513,8 @@ module Aws::AppMesh
     #
     # @overload create_virtual_router(**params)
     # @param [Hash] params ({})
-    def create_virtual_router(params = {}, **options)
-      req = build_request(:create_virtual_router, params)
+    def create_virtual_router(, **options)
+      req = build_request(:create_virtual_router, )
       req.send_request(options)
     end
 
@@ -1617,8 +1617,8 @@ module Aws::AppMesh
     #
     # @overload create_virtual_service(**params)
     # @param [Hash] params ({})
-    def create_virtual_service(params = {}, **options)
-      req = build_request(:create_virtual_service, params)
+    def create_virtual_service(, **options)
+      req = build_request(:create_virtual_service, )
       req.send_request(options)
     end
 
@@ -1680,8 +1680,8 @@ module Aws::AppMesh
     #
     # @overload delete_gateway_route(**params)
     # @param [Hash] params ({})
-    def delete_gateway_route(params = {}, **options)
-      req = build_request(:delete_gateway_route, params)
+    def delete_gateway_route(, **options)
+      req = build_request(:delete_gateway_route, )
       req.send_request(options)
     end
 
@@ -1721,8 +1721,8 @@ module Aws::AppMesh
     #
     # @overload delete_mesh(**params)
     # @param [Hash] params ({})
-    def delete_mesh(params = {}, **options)
-      req = build_request(:delete_mesh, params)
+    def delete_mesh(, **options)
+      req = build_request(:delete_mesh, )
       req.send_request(options)
     end
 
@@ -1863,8 +1863,8 @@ module Aws::AppMesh
     #
     # @overload delete_route(**params)
     # @param [Hash] params ({})
-    def delete_route(params = {}, **options)
-      req = build_request(:delete_route, params)
+    def delete_route(, **options)
+      req = build_request(:delete_route, )
       req.send_request(options)
     end
 
@@ -1941,8 +1941,8 @@ module Aws::AppMesh
     #
     # @overload delete_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def delete_virtual_gateway(params = {}, **options)
-      req = build_request(:delete_virtual_gateway, params)
+    def delete_virtual_gateway(, **options)
+      req = build_request(:delete_virtual_gateway, )
       req.send_request(options)
     end
 
@@ -2056,8 +2056,8 @@ module Aws::AppMesh
     #
     # @overload delete_virtual_node(**params)
     # @param [Hash] params ({})
-    def delete_virtual_node(params = {}, **options)
-      req = build_request(:delete_virtual_node, params)
+    def delete_virtual_node(, **options)
+      req = build_request(:delete_virtual_node, )
       req.send_request(options)
     end
 
@@ -2114,8 +2114,8 @@ module Aws::AppMesh
     #
     # @overload delete_virtual_router(**params)
     # @param [Hash] params ({})
-    def delete_virtual_router(params = {}, **options)
-      req = build_request(:delete_virtual_router, params)
+    def delete_virtual_router(, **options)
+      req = build_request(:delete_virtual_router, )
       req.send_request(options)
     end
 
@@ -2168,8 +2168,8 @@ module Aws::AppMesh
     #
     # @overload delete_virtual_service(**params)
     # @param [Hash] params ({})
-    def delete_virtual_service(params = {}, **options)
-      req = build_request(:delete_virtual_service, params)
+    def delete_virtual_service(, **options)
+      req = build_request(:delete_virtual_service, )
       req.send_request(options)
     end
 
@@ -2232,8 +2232,8 @@ module Aws::AppMesh
     #
     # @overload describe_gateway_route(**params)
     # @param [Hash] params ({})
-    def describe_gateway_route(params = {}, **options)
-      req = build_request(:describe_gateway_route, params)
+    def describe_gateway_route(, **options)
+      req = build_request(:describe_gateway_route, )
       req.send_request(options)
     end
 
@@ -2280,8 +2280,8 @@ module Aws::AppMesh
     #
     # @overload describe_mesh(**params)
     # @param [Hash] params ({})
-    def describe_mesh(params = {}, **options)
-      req = build_request(:describe_mesh, params)
+    def describe_mesh(, **options)
+      req = build_request(:describe_mesh, )
       req.send_request(options)
     end
 
@@ -2422,8 +2422,8 @@ module Aws::AppMesh
     #
     # @overload describe_route(**params)
     # @param [Hash] params ({})
-    def describe_route(params = {}, **options)
-      req = build_request(:describe_route, params)
+    def describe_route(, **options)
+      req = build_request(:describe_route, )
       req.send_request(options)
     end
 
@@ -2499,8 +2499,8 @@ module Aws::AppMesh
     #
     # @overload describe_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def describe_virtual_gateway(params = {}, **options)
-      req = build_request(:describe_virtual_gateway, params)
+    def describe_virtual_gateway(, **options)
+      req = build_request(:describe_virtual_gateway, )
       req.send_request(options)
     end
 
@@ -2611,8 +2611,8 @@ module Aws::AppMesh
     #
     # @overload describe_virtual_node(**params)
     # @param [Hash] params ({})
-    def describe_virtual_node(params = {}, **options)
-      req = build_request(:describe_virtual_node, params)
+    def describe_virtual_node(, **options)
+      req = build_request(:describe_virtual_node, )
       req.send_request(options)
     end
 
@@ -2666,8 +2666,8 @@ module Aws::AppMesh
     #
     # @overload describe_virtual_router(**params)
     # @param [Hash] params ({})
-    def describe_virtual_router(params = {}, **options)
-      req = build_request(:describe_virtual_router, params)
+    def describe_virtual_router(, **options)
+      req = build_request(:describe_virtual_router, )
       req.send_request(options)
     end
 
@@ -2720,8 +2720,8 @@ module Aws::AppMesh
     #
     # @overload describe_virtual_service(**params)
     # @param [Hash] params ({})
-    def describe_virtual_service(params = {}, **options)
-      req = build_request(:describe_virtual_service, params)
+    def describe_virtual_service(, **options)
+      req = build_request(:describe_virtual_service, )
       req.send_request(options)
     end
 
@@ -2795,8 +2795,8 @@ module Aws::AppMesh
     #
     # @overload list_gateway_routes(**params)
     # @param [Hash] params ({})
-    def list_gateway_routes(params = {}, **options)
-      req = build_request(:list_gateway_routes, params)
+    def list_gateway_routes(, **options)
+      req = build_request(:list_gateway_routes, )
       req.send_request(options)
     end
 
@@ -2854,8 +2854,8 @@ module Aws::AppMesh
     #
     # @overload list_meshes(**params)
     # @param [Hash] params ({})
-    def list_meshes(params = {}, **options)
-      req = build_request(:list_meshes, params)
+    def list_meshes(, **options)
+      req = build_request(:list_meshes, )
       req.send_request(options)
     end
 
@@ -2928,8 +2928,8 @@ module Aws::AppMesh
     #
     # @overload list_routes(**params)
     # @param [Hash] params ({})
-    def list_routes(params = {}, **options)
-      req = build_request(:list_routes, params)
+    def list_routes(, **options)
+      req = build_request(:list_routes, )
       req.send_request(options)
     end
 
@@ -2981,8 +2981,8 @@ module Aws::AppMesh
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -3050,8 +3050,8 @@ module Aws::AppMesh
     #
     # @overload list_virtual_gateways(**params)
     # @param [Hash] params ({})
-    def list_virtual_gateways(params = {}, **options)
-      req = build_request(:list_virtual_gateways, params)
+    def list_virtual_gateways(, **options)
+      req = build_request(:list_virtual_gateways, )
       req.send_request(options)
     end
 
@@ -3119,8 +3119,8 @@ module Aws::AppMesh
     #
     # @overload list_virtual_nodes(**params)
     # @param [Hash] params ({})
-    def list_virtual_nodes(params = {}, **options)
-      req = build_request(:list_virtual_nodes, params)
+    def list_virtual_nodes(, **options)
+      req = build_request(:list_virtual_nodes, )
       req.send_request(options)
     end
 
@@ -3188,8 +3188,8 @@ module Aws::AppMesh
     #
     # @overload list_virtual_routers(**params)
     # @param [Hash] params ({})
-    def list_virtual_routers(params = {}, **options)
-      req = build_request(:list_virtual_routers, params)
+    def list_virtual_routers(, **options)
+      req = build_request(:list_virtual_routers, )
       req.send_request(options)
     end
 
@@ -3257,8 +3257,8 @@ module Aws::AppMesh
     #
     # @overload list_virtual_services(**params)
     # @param [Hash] params ({})
-    def list_virtual_services(params = {}, **options)
-      req = build_request(:list_virtual_services, params)
+    def list_virtual_services(, **options)
+      req = build_request(:list_virtual_services, )
       req.send_request(options)
     end
 
@@ -3293,8 +3293,8 @@ module Aws::AppMesh
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3319,8 +3319,8 @@ module Aws::AppMesh
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3435,8 +3435,8 @@ module Aws::AppMesh
     #
     # @overload update_gateway_route(**params)
     # @param [Hash] params ({})
-    def update_gateway_route(params = {}, **options)
-      req = build_request(:update_gateway_route, params)
+    def update_gateway_route(, **options)
+      req = build_request(:update_gateway_route, )
       req.send_request(options)
     end
 
@@ -3489,8 +3489,8 @@ module Aws::AppMesh
     #
     # @overload update_mesh(**params)
     # @param [Hash] params ({})
-    def update_mesh(params = {}, **options)
-      req = build_request(:update_mesh, params)
+    def update_mesh(, **options)
+      req = build_request(:update_mesh, )
       req.send_request(options)
     end
 
@@ -3814,8 +3814,8 @@ module Aws::AppMesh
     #
     # @overload update_route(**params)
     # @param [Hash] params ({})
-    def update_route(params = {}, **options)
-      req = build_request(:update_route, params)
+    def update_route(, **options)
+      req = build_request(:update_route, )
       req.send_request(options)
     end
 
@@ -3972,8 +3972,8 @@ module Aws::AppMesh
     #
     # @overload update_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def update_virtual_gateway(params = {}, **options)
-      req = build_request(:update_virtual_gateway, params)
+    def update_virtual_gateway(, **options)
+      req = build_request(:update_virtual_gateway, )
       req.send_request(options)
     end
 
@@ -4256,8 +4256,8 @@ module Aws::AppMesh
     #
     # @overload update_virtual_node(**params)
     # @param [Hash] params ({})
-    def update_virtual_node(params = {}, **options)
-      req = build_request(:update_virtual_node, params)
+    def update_virtual_node(, **options)
+      req = build_request(:update_virtual_node, )
       req.send_request(options)
     end
 
@@ -4334,8 +4334,8 @@ module Aws::AppMesh
     #
     # @overload update_virtual_router(**params)
     # @param [Hash] params ({})
-    def update_virtual_router(params = {}, **options)
-      req = build_request(:update_virtual_router, params)
+    def update_virtual_router(, **options)
+      req = build_request(:update_virtual_router, )
       req.send_request(options)
     end
 
@@ -4411,8 +4411,8 @@ module Aws::AppMesh
     #
     # @overload update_virtual_service(**params)
     # @param [Hash] params ({})
-    def update_virtual_service(params = {}, **options)
-      req = build_request(:update_virtual_service, params)
+    def update_virtual_service(, **options)
+      req = build_request(:update_virtual_service, )
       req.send_request(options)
     end
 

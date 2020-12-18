@@ -419,8 +419,8 @@ module Aws::APIGateway
     #
     # @overload create_api_key(**params)
     # @param [Hash] params ({})
-    def create_api_key(params = {}, **options)
-      req = build_request(:create_api_key, params)
+    def create_api_key(, **options)
+      req = build_request(:create_api_key, )
       req.send_request(options)
     end
 
@@ -559,8 +559,8 @@ module Aws::APIGateway
     #
     # @overload create_authorizer(**params)
     # @param [Hash] params ({})
-    def create_authorizer(params = {}, **options)
-      req = build_request(:create_authorizer, params)
+    def create_authorizer(, **options)
+      req = build_request(:create_authorizer, )
       req.send_request(options)
     end
 
@@ -607,8 +607,8 @@ module Aws::APIGateway
     #
     # @overload create_base_path_mapping(**params)
     # @param [Hash] params ({})
-    def create_base_path_mapping(params = {}, **options)
-      req = build_request(:create_base_path_mapping, params)
+    def create_base_path_mapping(, **options)
+      req = build_request(:create_base_path_mapping, )
       req.send_request(options)
     end
 
@@ -689,8 +689,8 @@ module Aws::APIGateway
     #
     # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, **options)
-      req = build_request(:create_deployment, params)
+    def create_deployment(, **options)
+      req = build_request(:create_deployment, )
       req.send_request(options)
     end
 
@@ -739,8 +739,8 @@ module Aws::APIGateway
     #
     # @overload create_documentation_part(**params)
     # @param [Hash] params ({})
-    def create_documentation_part(params = {}, **options)
-      req = build_request(:create_documentation_part, params)
+    def create_documentation_part(, **options)
+      req = build_request(:create_documentation_part, )
       req.send_request(options)
     end
 
@@ -779,8 +779,8 @@ module Aws::APIGateway
     #
     # @overload create_documentation_version(**params)
     # @param [Hash] params ({})
-    def create_documentation_version(params = {}, **options)
-      req = build_request(:create_documentation_version, params)
+    def create_documentation_version(, **options)
+      req = build_request(:create_documentation_version, )
       req.send_request(options)
     end
 
@@ -915,8 +915,8 @@ module Aws::APIGateway
     #
     # @overload create_domain_name(**params)
     # @param [Hash] params ({})
-    def create_domain_name(params = {}, **options)
-      req = build_request(:create_domain_name, params)
+    def create_domain_name(, **options)
+      req = build_request(:create_domain_name, )
       req.send_request(options)
     end
 
@@ -971,8 +971,8 @@ module Aws::APIGateway
     #
     # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, **options)
-      req = build_request(:create_model, params)
+    def create_model(, **options)
+      req = build_request(:create_model, )
       req.send_request(options)
     end
 
@@ -1018,8 +1018,8 @@ module Aws::APIGateway
     #
     # @overload create_request_validator(**params)
     # @param [Hash] params ({})
-    def create_request_validator(params = {}, **options)
-      req = build_request(:create_request_validator, params)
+    def create_request_validator(, **options)
+      req = build_request(:create_request_validator, )
       req.send_request(options)
     end
 
@@ -1103,8 +1103,8 @@ module Aws::APIGateway
     #
     # @overload create_resource(**params)
     # @param [Hash] params ({})
-    def create_resource(params = {}, **options)
-      req = build_request(:create_resource, params)
+    def create_resource(, **options)
+      req = build_request(:create_resource, )
       req.send_request(options)
     end
 
@@ -1223,8 +1223,8 @@ module Aws::APIGateway
     #
     # @overload create_rest_api(**params)
     # @param [Hash] params ({})
-    def create_rest_api(params = {}, **options)
-      req = build_request(:create_rest_api, params)
+    def create_rest_api(, **options)
+      req = build_request(:create_rest_api, )
       req.send_request(options)
     end
 
@@ -1357,8 +1357,8 @@ module Aws::APIGateway
     #
     # @overload create_stage(**params)
     # @param [Hash] params ({})
-    def create_stage(params = {}, **options)
-      req = build_request(:create_stage, params)
+    def create_stage(, **options)
+      req = build_request(:create_stage, )
       req.send_request(options)
     end
 
@@ -1449,8 +1449,8 @@ module Aws::APIGateway
     #
     # @overload create_usage_plan(**params)
     # @param [Hash] params ({})
-    def create_usage_plan(params = {}, **options)
-      req = build_request(:create_usage_plan, params)
+    def create_usage_plan(, **options)
+      req = build_request(:create_usage_plan, )
       req.send_request(options)
     end
 
@@ -1493,8 +1493,8 @@ module Aws::APIGateway
     #
     # @overload create_usage_plan_key(**params)
     # @param [Hash] params ({})
-    def create_usage_plan_key(params = {}, **options)
-      req = build_request(:create_usage_plan_key, params)
+    def create_usage_plan_key(, **options)
+      req = build_request(:create_usage_plan_key, )
       req.send_request(options)
     end
 
@@ -1554,8 +1554,8 @@ module Aws::APIGateway
     #
     # @overload create_vpc_link(**params)
     # @param [Hash] params ({})
-    def create_vpc_link(params = {}, **options)
-      req = build_request(:create_vpc_link, params)
+    def create_vpc_link(, **options)
+      req = build_request(:create_vpc_link, )
       req.send_request(options)
     end
 
@@ -1574,8 +1574,8 @@ module Aws::APIGateway
     #
     # @overload delete_api_key(**params)
     # @param [Hash] params ({})
-    def delete_api_key(params = {}, **options)
-      req = build_request(:delete_api_key, params)
+    def delete_api_key(, **options)
+      req = build_request(:delete_api_key, )
       req.send_request(options)
     end
 
@@ -1606,8 +1606,8 @@ module Aws::APIGateway
     #
     # @overload delete_authorizer(**params)
     # @param [Hash] params ({})
-    def delete_authorizer(params = {}, **options)
-      req = build_request(:delete_authorizer, params)
+    def delete_authorizer(, **options)
+      req = build_request(:delete_authorizer, )
       req.send_request(options)
     end
 
@@ -1634,8 +1634,8 @@ module Aws::APIGateway
     #
     # @overload delete_base_path_mapping(**params)
     # @param [Hash] params ({})
-    def delete_base_path_mapping(params = {}, **options)
-      req = build_request(:delete_base_path_mapping, params)
+    def delete_base_path_mapping(, **options)
+      req = build_request(:delete_base_path_mapping, )
       req.send_request(options)
     end
 
@@ -1655,8 +1655,8 @@ module Aws::APIGateway
     #
     # @overload delete_client_certificate(**params)
     # @param [Hash] params ({})
-    def delete_client_certificate(params = {}, **options)
-      req = build_request(:delete_client_certificate, params)
+    def delete_client_certificate(, **options)
+      req = build_request(:delete_client_certificate, )
       req.send_request(options)
     end
 
@@ -1680,8 +1680,8 @@ module Aws::APIGateway
     #
     # @overload delete_deployment(**params)
     # @param [Hash] params ({})
-    def delete_deployment(params = {}, **options)
-      req = build_request(:delete_deployment, params)
+    def delete_deployment(, **options)
+      req = build_request(:delete_deployment, )
       req.send_request(options)
     end
 
@@ -1702,8 +1702,8 @@ module Aws::APIGateway
     #
     # @overload delete_documentation_part(**params)
     # @param [Hash] params ({})
-    def delete_documentation_part(params = {}, **options)
-      req = build_request(:delete_documentation_part, params)
+    def delete_documentation_part(, **options)
+      req = build_request(:delete_documentation_part, )
       req.send_request(options)
     end
 
@@ -1725,8 +1725,8 @@ module Aws::APIGateway
     #
     # @overload delete_documentation_version(**params)
     # @param [Hash] params ({})
-    def delete_documentation_version(params = {}, **options)
-      req = build_request(:delete_documentation_version, params)
+    def delete_documentation_version(, **options)
+      req = build_request(:delete_documentation_version, )
       req.send_request(options)
     end
 
@@ -1745,8 +1745,8 @@ module Aws::APIGateway
     #
     # @overload delete_domain_name(**params)
     # @param [Hash] params ({})
-    def delete_domain_name(params = {}, **options)
-      req = build_request(:delete_domain_name, params)
+    def delete_domain_name(, **options)
+      req = build_request(:delete_domain_name, )
       req.send_request(options)
     end
 
@@ -1791,8 +1791,8 @@ module Aws::APIGateway
     #
     # @overload delete_gateway_response(**params)
     # @param [Hash] params ({})
-    def delete_gateway_response(params = {}, **options)
-      req = build_request(:delete_gateway_response, params)
+    def delete_gateway_response(, **options)
+      req = build_request(:delete_gateway_response, )
       req.send_request(options)
     end
 
@@ -1820,8 +1820,8 @@ module Aws::APIGateway
     #
     # @overload delete_integration(**params)
     # @param [Hash] params ({})
-    def delete_integration(params = {}, **options)
-      req = build_request(:delete_integration, params)
+    def delete_integration(, **options)
+      req = build_request(:delete_integration, )
       req.send_request(options)
     end
 
@@ -1855,8 +1855,8 @@ module Aws::APIGateway
     #
     # @overload delete_integration_response(**params)
     # @param [Hash] params ({})
-    def delete_integration_response(params = {}, **options)
-      req = build_request(:delete_integration_response, params)
+    def delete_integration_response(, **options)
+      req = build_request(:delete_integration_response, )
       req.send_request(options)
     end
 
@@ -1883,8 +1883,8 @@ module Aws::APIGateway
     #
     # @overload delete_method(**params)
     # @param [Hash] params ({})
-    def delete_method(params = {}, **options)
-      req = build_request(:delete_method, params)
+    def delete_method(, **options)
+      req = build_request(:delete_method, )
       req.send_request(options)
     end
 
@@ -1916,8 +1916,8 @@ module Aws::APIGateway
     #
     # @overload delete_method_response(**params)
     # @param [Hash] params ({})
-    def delete_method_response(params = {}, **options)
-      req = build_request(:delete_method_response, params)
+    def delete_method_response(, **options)
+      req = build_request(:delete_method_response, )
       req.send_request(options)
     end
 
@@ -1940,8 +1940,8 @@ module Aws::APIGateway
     #
     # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, **options)
-      req = build_request(:delete_model, params)
+    def delete_model(, **options)
+      req = build_request(:delete_model, )
       req.send_request(options)
     end
 
@@ -1964,8 +1964,8 @@ module Aws::APIGateway
     #
     # @overload delete_request_validator(**params)
     # @param [Hash] params ({})
-    def delete_request_validator(params = {}, **options)
-      req = build_request(:delete_request_validator, params)
+    def delete_request_validator(, **options)
+      req = build_request(:delete_request_validator, )
       req.send_request(options)
     end
 
@@ -1988,8 +1988,8 @@ module Aws::APIGateway
     #
     # @overload delete_resource(**params)
     # @param [Hash] params ({})
-    def delete_resource(params = {}, **options)
-      req = build_request(:delete_resource, params)
+    def delete_resource(, **options)
+      req = build_request(:delete_resource, )
       req.send_request(options)
     end
 
@@ -2008,8 +2008,8 @@ module Aws::APIGateway
     #
     # @overload delete_rest_api(**params)
     # @param [Hash] params ({})
-    def delete_rest_api(params = {}, **options)
-      req = build_request(:delete_rest_api, params)
+    def delete_rest_api(, **options)
+      req = build_request(:delete_rest_api, )
       req.send_request(options)
     end
 
@@ -2032,8 +2032,8 @@ module Aws::APIGateway
     #
     # @overload delete_stage(**params)
     # @param [Hash] params ({})
-    def delete_stage(params = {}, **options)
-      req = build_request(:delete_stage, params)
+    def delete_stage(, **options)
+      req = build_request(:delete_stage, )
       req.send_request(options)
     end
 
@@ -2052,8 +2052,8 @@ module Aws::APIGateway
     #
     # @overload delete_usage_plan(**params)
     # @param [Hash] params ({})
-    def delete_usage_plan(params = {}, **options)
-      req = build_request(:delete_usage_plan, params)
+    def delete_usage_plan(, **options)
+      req = build_request(:delete_usage_plan, )
       req.send_request(options)
     end
 
@@ -2079,8 +2079,8 @@ module Aws::APIGateway
     #
     # @overload delete_usage_plan_key(**params)
     # @param [Hash] params ({})
-    def delete_usage_plan_key(params = {}, **options)
-      req = build_request(:delete_usage_plan_key, params)
+    def delete_usage_plan_key(, **options)
+      req = build_request(:delete_usage_plan_key, )
       req.send_request(options)
     end
 
@@ -2100,8 +2100,8 @@ module Aws::APIGateway
     #
     # @overload delete_vpc_link(**params)
     # @param [Hash] params ({})
-    def delete_vpc_link(params = {}, **options)
-      req = build_request(:delete_vpc_link, params)
+    def delete_vpc_link(, **options)
+      req = build_request(:delete_vpc_link, )
       req.send_request(options)
     end
 
@@ -2124,8 +2124,8 @@ module Aws::APIGateway
     #
     # @overload flush_stage_authorizers_cache(**params)
     # @param [Hash] params ({})
-    def flush_stage_authorizers_cache(params = {}, **options)
-      req = build_request(:flush_stage_authorizers_cache, params)
+    def flush_stage_authorizers_cache(, **options)
+      req = build_request(:flush_stage_authorizers_cache, )
       req.send_request(options)
     end
 
@@ -2148,8 +2148,8 @@ module Aws::APIGateway
     #
     # @overload flush_stage_cache(**params)
     # @param [Hash] params ({})
-    def flush_stage_cache(params = {}, **options)
-      req = build_request(:flush_stage_cache, params)
+    def flush_stage_cache(, **options)
+      req = build_request(:flush_stage_cache, )
       req.send_request(options)
     end
 
@@ -2193,8 +2193,8 @@ module Aws::APIGateway
     #
     # @overload generate_client_certificate(**params)
     # @param [Hash] params ({})
-    def generate_client_certificate(params = {}, **options)
-      req = build_request(:generate_client_certificate, params)
+    def generate_client_certificate(, **options)
+      req = build_request(:generate_client_certificate, )
       req.send_request(options)
     end
 
@@ -2218,8 +2218,8 @@ module Aws::APIGateway
     #
     # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, **options)
-      req = build_request(:get_account, params)
+    def get_account(, **options)
+      req = build_request(:get_account, )
       req.send_request(options)
     end
 
@@ -2269,8 +2269,8 @@ module Aws::APIGateway
     #
     # @overload get_api_key(**params)
     # @param [Hash] params ({})
-    def get_api_key(params = {}, **options)
-      req = build_request(:get_api_key, params)
+    def get_api_key(, **options)
+      req = build_request(:get_api_key, )
       req.send_request(options)
     end
 
@@ -2333,8 +2333,8 @@ module Aws::APIGateway
     #
     # @overload get_api_keys(**params)
     # @param [Hash] params ({})
-    def get_api_keys(params = {}, **options)
-      req = build_request(:get_api_keys, params)
+    def get_api_keys(, **options)
+      req = build_request(:get_api_keys, )
       req.send_request(options)
     end
 
@@ -2390,8 +2390,8 @@ module Aws::APIGateway
     #
     # @overload get_authorizer(**params)
     # @param [Hash] params ({})
-    def get_authorizer(params = {}, **options)
-      req = build_request(:get_authorizer, params)
+    def get_authorizer(, **options)
+      req = build_request(:get_authorizer, )
       req.send_request(options)
     end
 
@@ -2446,8 +2446,8 @@ module Aws::APIGateway
     #
     # @overload get_authorizers(**params)
     # @param [Hash] params ({})
-    def get_authorizers(params = {}, **options)
-      req = build_request(:get_authorizers, params)
+    def get_authorizers(, **options)
+      req = build_request(:get_authorizers, )
       req.send_request(options)
     end
 
@@ -2485,8 +2485,8 @@ module Aws::APIGateway
     #
     # @overload get_base_path_mapping(**params)
     # @param [Hash] params ({})
-    def get_base_path_mapping(params = {}, **options)
-      req = build_request(:get_base_path_mapping, params)
+    def get_base_path_mapping(, **options)
+      req = build_request(:get_base_path_mapping, )
       req.send_request(options)
     end
 
@@ -2527,8 +2527,8 @@ module Aws::APIGateway
     #
     # @overload get_base_path_mappings(**params)
     # @param [Hash] params ({})
-    def get_base_path_mappings(params = {}, **options)
-      req = build_request(:get_base_path_mappings, params)
+    def get_base_path_mappings(, **options)
+      req = build_request(:get_base_path_mappings, )
       req.send_request(options)
     end
 
@@ -2565,8 +2565,8 @@ module Aws::APIGateway
     #
     # @overload get_client_certificate(**params)
     # @param [Hash] params ({})
-    def get_client_certificate(params = {}, **options)
-      req = build_request(:get_client_certificate, params)
+    def get_client_certificate(, **options)
+      req = build_request(:get_client_certificate, )
       req.send_request(options)
     end
 
@@ -2607,8 +2607,8 @@ module Aws::APIGateway
     #
     # @overload get_client_certificates(**params)
     # @param [Hash] params ({})
-    def get_client_certificates(params = {}, **options)
-      req = build_request(:get_client_certificates, params)
+    def get_client_certificates(, **options)
+      req = build_request(:get_client_certificates, )
       req.send_request(options)
     end
 
@@ -2661,8 +2661,8 @@ module Aws::APIGateway
     #
     # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, **options)
-      req = build_request(:get_deployment, params)
+    def get_deployment(, **options)
+      req = build_request(:get_deployment, )
       req.send_request(options)
     end
 
@@ -2707,8 +2707,8 @@ module Aws::APIGateway
     #
     # @overload get_deployments(**params)
     # @param [Hash] params ({})
-    def get_deployments(params = {}, **options)
-      req = build_request(:get_deployments, params)
+    def get_deployments(, **options)
+      req = build_request(:get_deployments, )
       req.send_request(options)
     end
 
@@ -2743,8 +2743,8 @@ module Aws::APIGateway
     #
     # @overload get_documentation_part(**params)
     # @param [Hash] params ({})
-    def get_documentation_part(params = {}, **options)
-      req = build_request(:get_documentation_part, params)
+    def get_documentation_part(, **options)
+      req = build_request(:get_documentation_part, )
       req.send_request(options)
     end
 
@@ -2804,8 +2804,8 @@ module Aws::APIGateway
     #
     # @overload get_documentation_parts(**params)
     # @param [Hash] params ({})
-    def get_documentation_parts(params = {}, **options)
-      req = build_request(:get_documentation_parts, params)
+    def get_documentation_parts(, **options)
+      req = build_request(:get_documentation_parts, )
       req.send_request(options)
     end
 
@@ -2837,8 +2837,8 @@ module Aws::APIGateway
     #
     # @overload get_documentation_version(**params)
     # @param [Hash] params ({})
-    def get_documentation_version(params = {}, **options)
-      req = build_request(:get_documentation_version, params)
+    def get_documentation_version(, **options)
+      req = build_request(:get_documentation_version, )
       req.send_request(options)
     end
 
@@ -2875,8 +2875,8 @@ module Aws::APIGateway
     #
     # @overload get_documentation_versions(**params)
     # @param [Hash] params ({})
-    def get_documentation_versions(params = {}, **options)
-      req = build_request(:get_documentation_versions, params)
+    def get_documentation_versions(, **options)
+      req = build_request(:get_documentation_versions, )
       req.send_request(options)
     end
 
@@ -2939,8 +2939,8 @@ module Aws::APIGateway
     #
     # @overload get_domain_name(**params)
     # @param [Hash] params ({})
-    def get_domain_name(params = {}, **options)
-      req = build_request(:get_domain_name, params)
+    def get_domain_name(, **options)
+      req = build_request(:get_domain_name, )
       req.send_request(options)
     end
 
@@ -2997,8 +2997,8 @@ module Aws::APIGateway
     #
     # @overload get_domain_names(**params)
     # @param [Hash] params ({})
-    def get_domain_names(params = {}, **options)
-      req = build_request(:get_domain_names, params)
+    def get_domain_names(, **options)
+      req = build_request(:get_domain_names, )
       req.send_request(options)
     end
 
@@ -3056,8 +3056,8 @@ module Aws::APIGateway
     #
     # @overload get_export(**params)
     # @param [Hash] params ({})
-    def get_export(params = {}, **options)
-      req = build_request(:get_export, params)
+    def get_export(, **options)
+      req = build_request(:get_export, )
       req.send_request(options)
     end
 
@@ -3118,8 +3118,8 @@ module Aws::APIGateway
     #
     # @overload get_gateway_response(**params)
     # @param [Hash] params ({})
-    def get_gateway_response(params = {}, **options)
-      req = build_request(:get_gateway_response, params)
+    def get_gateway_response(, **options)
+      req = build_request(:get_gateway_response, )
       req.send_request(options)
     end
 
@@ -3168,8 +3168,8 @@ module Aws::APIGateway
     #
     # @overload get_gateway_responses(**params)
     # @param [Hash] params ({})
-    def get_gateway_responses(params = {}, **options)
-      req = build_request(:get_gateway_responses, params)
+    def get_gateway_responses(, **options)
+      req = build_request(:get_gateway_responses, )
       req.send_request(options)
     end
 
@@ -3241,8 +3241,8 @@ module Aws::APIGateway
     #
     # @overload get_integration(**params)
     # @param [Hash] params ({})
-    def get_integration(params = {}, **options)
-      req = build_request(:get_integration, params)
+    def get_integration(, **options)
+      req = build_request(:get_integration, )
       req.send_request(options)
     end
 
@@ -3292,8 +3292,8 @@ module Aws::APIGateway
     #
     # @overload get_integration_response(**params)
     # @param [Hash] params ({})
-    def get_integration_response(params = {}, **options)
-      req = build_request(:get_integration_response, params)
+    def get_integration_response(, **options)
+      req = build_request(:get_integration_response, )
       req.send_request(options)
     end
 
@@ -3378,8 +3378,8 @@ module Aws::APIGateway
     #
     # @overload get_method(**params)
     # @param [Hash] params ({})
-    def get_method(params = {}, **options)
-      req = build_request(:get_method, params)
+    def get_method(, **options)
+      req = build_request(:get_method, )
       req.send_request(options)
     end
 
@@ -3422,8 +3422,8 @@ module Aws::APIGateway
     #
     # @overload get_method_response(**params)
     # @param [Hash] params ({})
-    def get_method_response(params = {}, **options)
-      req = build_request(:get_method_response, params)
+    def get_method_response(, **options)
+      req = build_request(:get_method_response, )
       req.send_request(options)
     end
 
@@ -3466,8 +3466,8 @@ module Aws::APIGateway
     #
     # @overload get_model(**params)
     # @param [Hash] params ({})
-    def get_model(params = {}, **options)
-      req = build_request(:get_model, params)
+    def get_model(, **options)
+      req = build_request(:get_model, )
       req.send_request(options)
     end
 
@@ -3497,8 +3497,8 @@ module Aws::APIGateway
     #
     # @overload get_model_template(**params)
     # @param [Hash] params ({})
-    def get_model_template(params = {}, **options)
-      req = build_request(:get_model_template, params)
+    def get_model_template(, **options)
+      req = build_request(:get_model_template, )
       req.send_request(options)
     end
 
@@ -3541,8 +3541,8 @@ module Aws::APIGateway
     #
     # @overload get_models(**params)
     # @param [Hash] params ({})
-    def get_models(params = {}, **options)
-      req = build_request(:get_models, params)
+    def get_models(, **options)
+      req = build_request(:get_models, )
       req.send_request(options)
     end
 
@@ -3577,8 +3577,8 @@ module Aws::APIGateway
     #
     # @overload get_request_validator(**params)
     # @param [Hash] params ({})
-    def get_request_validator(params = {}, **options)
-      req = build_request(:get_request_validator, params)
+    def get_request_validator(, **options)
+      req = build_request(:get_request_validator, )
       req.send_request(options)
     end
 
@@ -3618,8 +3618,8 @@ module Aws::APIGateway
     #
     # @overload get_request_validators(**params)
     # @param [Hash] params ({})
-    def get_request_validators(params = {}, **options)
-      req = build_request(:get_request_validators, params)
+    def get_request_validators(, **options)
+      req = build_request(:get_request_validators, )
       req.send_request(options)
     end
 
@@ -3709,8 +3709,8 @@ module Aws::APIGateway
     #
     # @overload get_resource(**params)
     # @param [Hash] params ({})
-    def get_resource(params = {}, **options)
-      req = build_request(:get_resource, params)
+    def get_resource(, **options)
+      req = build_request(:get_resource, )
       req.send_request(options)
     end
 
@@ -3806,8 +3806,8 @@ module Aws::APIGateway
     #
     # @overload get_resources(**params)
     # @param [Hash] params ({})
-    def get_resources(params = {}, **options)
-      req = build_request(:get_resources, params)
+    def get_resources(, **options)
+      req = build_request(:get_resources, )
       req.send_request(options)
     end
 
@@ -3862,8 +3862,8 @@ module Aws::APIGateway
     #
     # @overload get_rest_api(**params)
     # @param [Hash] params ({})
-    def get_rest_api(params = {}, **options)
-      req = build_request(:get_rest_api, params)
+    def get_rest_api(, **options)
+      req = build_request(:get_rest_api, )
       req.send_request(options)
     end
 
@@ -3916,8 +3916,8 @@ module Aws::APIGateway
     #
     # @overload get_rest_apis(**params)
     # @param [Hash] params ({})
-    def get_rest_apis(params = {}, **options)
-      req = build_request(:get_rest_apis, params)
+    def get_rest_apis(, **options)
+      req = build_request(:get_rest_apis, )
       req.send_request(options)
     end
 
@@ -3968,8 +3968,8 @@ module Aws::APIGateway
     #
     # @overload get_sdk(**params)
     # @param [Hash] params ({})
-    def get_sdk(params = {}, **options)
-      req = build_request(:get_sdk, params)
+    def get_sdk(, **options)
+      req = build_request(:get_sdk, )
       req.send_request(options)
     end
 
@@ -4003,8 +4003,8 @@ module Aws::APIGateway
     #
     # @overload get_sdk_type(**params)
     # @param [Hash] params ({})
-    def get_sdk_type(params = {}, **options)
-      req = build_request(:get_sdk_type, params)
+    def get_sdk_type(, **options)
+      req = build_request(:get_sdk_type, )
       req.send_request(options)
     end
 
@@ -4043,8 +4043,8 @@ module Aws::APIGateway
     #
     # @overload get_sdk_types(**params)
     # @param [Hash] params ({})
-    def get_sdk_types(params = {}, **options)
-      req = build_request(:get_sdk_types, params)
+    def get_sdk_types(, **options)
+      req = build_request(:get_sdk_types, )
       req.send_request(options)
     end
 
@@ -4122,8 +4122,8 @@ module Aws::APIGateway
     #
     # @overload get_stage(**params)
     # @param [Hash] params ({})
-    def get_stage(params = {}, **options)
-      req = build_request(:get_stage, params)
+    def get_stage(, **options)
+      req = build_request(:get_stage, )
       req.send_request(options)
     end
 
@@ -4186,8 +4186,8 @@ module Aws::APIGateway
     #
     # @overload get_stages(**params)
     # @param [Hash] params ({})
-    def get_stages(params = {}, **options)
-      req = build_request(:get_stages, params)
+    def get_stages(, **options)
+      req = build_request(:get_stages, )
       req.send_request(options)
     end
 
@@ -4223,8 +4223,8 @@ module Aws::APIGateway
     #
     # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, **options)
-      req = build_request(:get_tags, params)
+    def get_tags(, **options)
+      req = build_request(:get_tags, )
       req.send_request(options)
     end
 
@@ -4283,8 +4283,8 @@ module Aws::APIGateway
     #
     # @overload get_usage(**params)
     # @param [Hash] params ({})
-    def get_usage(params = {}, **options)
-      req = build_request(:get_usage, params)
+    def get_usage(, **options)
+      req = build_request(:get_usage, )
       req.send_request(options)
     end
 
@@ -4332,8 +4332,8 @@ module Aws::APIGateway
     #
     # @overload get_usage_plan(**params)
     # @param [Hash] params ({})
-    def get_usage_plan(params = {}, **options)
-      req = build_request(:get_usage_plan, params)
+    def get_usage_plan(, **options)
+      req = build_request(:get_usage_plan, )
       req.send_request(options)
     end
 
@@ -4371,8 +4371,8 @@ module Aws::APIGateway
     #
     # @overload get_usage_plan_key(**params)
     # @param [Hash] params ({})
-    def get_usage_plan_key(params = {}, **options)
-      req = build_request(:get_usage_plan_key, params)
+    def get_usage_plan_key(, **options)
+      req = build_request(:get_usage_plan_key, )
       req.send_request(options)
     end
 
@@ -4422,8 +4422,8 @@ module Aws::APIGateway
     #
     # @overload get_usage_plan_keys(**params)
     # @param [Hash] params ({})
-    def get_usage_plan_keys(params = {}, **options)
-      req = build_request(:get_usage_plan_keys, params)
+    def get_usage_plan_keys(, **options)
+      req = build_request(:get_usage_plan_keys, )
       req.send_request(options)
     end
 
@@ -4478,8 +4478,8 @@ module Aws::APIGateway
     #
     # @overload get_usage_plans(**params)
     # @param [Hash] params ({})
-    def get_usage_plans(params = {}, **options)
-      req = build_request(:get_usage_plans, params)
+    def get_usage_plans(, **options)
+      req = build_request(:get_usage_plans, )
       req.send_request(options)
     end
 
@@ -4519,8 +4519,8 @@ module Aws::APIGateway
     #
     # @overload get_vpc_link(**params)
     # @param [Hash] params ({})
-    def get_vpc_link(params = {}, **options)
-      req = build_request(:get_vpc_link, params)
+    def get_vpc_link(, **options)
+      req = build_request(:get_vpc_link, )
       req.send_request(options)
     end
 
@@ -4564,8 +4564,8 @@ module Aws::APIGateway
     #
     # @overload get_vpc_links(**params)
     # @param [Hash] params ({})
-    def get_vpc_links(params = {}, **options)
-      req = build_request(:get_vpc_links, params)
+    def get_vpc_links(, **options)
+      req = build_request(:get_vpc_links, )
       req.send_request(options)
     end
 
@@ -4609,8 +4609,8 @@ module Aws::APIGateway
     #
     # @overload import_api_keys(**params)
     # @param [Hash] params ({})
-    def import_api_keys(params = {}, **options)
-      req = build_request(:import_api_keys, params)
+    def import_api_keys(, **options)
+      req = build_request(:import_api_keys, )
       req.send_request(options)
     end
 
@@ -4655,8 +4655,8 @@ module Aws::APIGateway
     #
     # @overload import_documentation_parts(**params)
     # @param [Hash] params ({})
-    def import_documentation_parts(params = {}, **options)
-      req = build_request(:import_documentation_parts, params)
+    def import_documentation_parts(, **options)
+      req = build_request(:import_documentation_parts, )
       req.send_request(options)
     end
 
@@ -4750,8 +4750,8 @@ module Aws::APIGateway
     #
     # @overload import_rest_api(**params)
     # @param [Hash] params ({})
-    def import_rest_api(params = {}, **options)
-      req = build_request(:import_rest_api, params)
+    def import_rest_api(, **options)
+      req = build_request(:import_rest_api, )
       req.send_request(options)
     end
 
@@ -4830,8 +4830,8 @@ module Aws::APIGateway
     #
     # @overload put_gateway_response(**params)
     # @param [Hash] params ({})
-    def put_gateway_response(params = {}, **options)
-      req = build_request(:put_gateway_response, params)
+    def put_gateway_response(, **options)
+      req = build_request(:put_gateway_response, )
       req.send_request(options)
     end
 
@@ -5046,8 +5046,8 @@ module Aws::APIGateway
     #
     # @overload put_integration(**params)
     # @param [Hash] params ({})
-    def put_integration(params = {}, **options)
-      req = build_request(:put_integration, params)
+    def put_integration(, **options)
+      req = build_request(:put_integration, )
       req.send_request(options)
     end
 
@@ -5139,8 +5139,8 @@ module Aws::APIGateway
     #
     # @overload put_integration_response(**params)
     # @param [Hash] params ({})
-    def put_integration_response(params = {}, **options)
-      req = build_request(:put_integration_response, params)
+    def put_integration_response(, **options)
+      req = build_request(:put_integration_response, )
       req.send_request(options)
     end
 
@@ -5288,8 +5288,8 @@ module Aws::APIGateway
     #
     # @overload put_method(**params)
     # @param [Hash] params ({})
-    def put_method(params = {}, **options)
-      req = build_request(:put_method, params)
+    def put_method(, **options)
+      req = build_request(:put_method, )
       req.send_request(options)
     end
 
@@ -5359,8 +5359,8 @@ module Aws::APIGateway
     #
     # @overload put_method_response(**params)
     # @param [Hash] params ({})
-    def put_method_response(params = {}, **options)
-      req = build_request(:put_method_response, params)
+    def put_method_response(, **options)
+      req = build_request(:put_method_response, )
       req.send_request(options)
     end
 
@@ -5446,8 +5446,8 @@ module Aws::APIGateway
     #
     # @overload put_rest_api(**params)
     # @param [Hash] params ({})
-    def put_rest_api(params = {}, **options)
-      req = build_request(:put_rest_api, params)
+    def put_rest_api(, **options)
+      req = build_request(:put_rest_api, )
       req.send_request(options)
     end
 
@@ -5474,8 +5474,8 @@ module Aws::APIGateway
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5571,8 +5571,8 @@ module Aws::APIGateway
     #
     # @overload test_invoke_authorizer(**params)
     # @param [Hash] params ({})
-    def test_invoke_authorizer(params = {}, **options)
-      req = build_request(:test_invoke_authorizer, params)
+    def test_invoke_authorizer(, **options)
+      req = build_request(:test_invoke_authorizer, )
       req.send_request(options)
     end
 
@@ -5655,8 +5655,8 @@ module Aws::APIGateway
     #
     # @overload test_invoke_method(**params)
     # @param [Hash] params ({})
-    def test_invoke_method(params = {}, **options)
-      req = build_request(:test_invoke_method, params)
+    def test_invoke_method(, **options)
+      req = build_request(:test_invoke_method, )
       req.send_request(options)
     end
 
@@ -5679,8 +5679,8 @@ module Aws::APIGateway
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5721,8 +5721,8 @@ module Aws::APIGateway
     #
     # @overload update_account(**params)
     # @param [Hash] params ({})
-    def update_account(params = {}, **options)
-      req = build_request(:update_account, params)
+    def update_account(, **options)
+      req = build_request(:update_account, )
       req.send_request(options)
     end
 
@@ -5779,8 +5779,8 @@ module Aws::APIGateway
     #
     # @overload update_api_key(**params)
     # @param [Hash] params ({})
-    def update_api_key(params = {}, **options)
-      req = build_request(:update_api_key, params)
+    def update_api_key(, **options)
+      req = build_request(:update_api_key, )
       req.send_request(options)
     end
 
@@ -5848,8 +5848,8 @@ module Aws::APIGateway
     #
     # @overload update_authorizer(**params)
     # @param [Hash] params ({})
-    def update_authorizer(params = {}, **options)
-      req = build_request(:update_authorizer, params)
+    def update_authorizer(, **options)
+      req = build_request(:update_authorizer, )
       req.send_request(options)
     end
 
@@ -5897,8 +5897,8 @@ module Aws::APIGateway
     #
     # @overload update_base_path_mapping(**params)
     # @param [Hash] params ({})
-    def update_base_path_mapping(params = {}, **options)
-      req = build_request(:update_base_path_mapping, params)
+    def update_base_path_mapping(, **options)
+      req = build_request(:update_base_path_mapping, )
       req.send_request(options)
     end
 
@@ -5947,8 +5947,8 @@ module Aws::APIGateway
     #
     # @overload update_client_certificate(**params)
     # @param [Hash] params ({})
-    def update_client_certificate(params = {}, **options)
-      req = build_request(:update_client_certificate, params)
+    def update_client_certificate(, **options)
+      req = build_request(:update_client_certificate, )
       req.send_request(options)
     end
 
@@ -5999,8 +5999,8 @@ module Aws::APIGateway
     #
     # @overload update_deployment(**params)
     # @param [Hash] params ({})
-    def update_deployment(params = {}, **options)
-      req = build_request(:update_deployment, params)
+    def update_deployment(, **options)
+      req = build_request(:update_deployment, )
       req.send_request(options)
     end
 
@@ -6047,8 +6047,8 @@ module Aws::APIGateway
     #
     # @overload update_documentation_part(**params)
     # @param [Hash] params ({})
-    def update_documentation_part(params = {}, **options)
-      req = build_request(:update_documentation_part, params)
+    def update_documentation_part(, **options)
+      req = build_request(:update_documentation_part, )
       req.send_request(options)
     end
 
@@ -6092,8 +6092,8 @@ module Aws::APIGateway
     #
     # @overload update_documentation_version(**params)
     # @param [Hash] params ({})
-    def update_documentation_version(params = {}, **options)
-      req = build_request(:update_documentation_version, params)
+    def update_documentation_version(, **options)
+      req = build_request(:update_documentation_version, )
       req.send_request(options)
     end
 
@@ -6167,8 +6167,8 @@ module Aws::APIGateway
     #
     # @overload update_domain_name(**params)
     # @param [Hash] params ({})
-    def update_domain_name(params = {}, **options)
-      req = build_request(:update_domain_name, params)
+    def update_domain_name(, **options)
+      req = build_request(:update_domain_name, )
       req.send_request(options)
     end
 
@@ -6241,8 +6241,8 @@ module Aws::APIGateway
     #
     # @overload update_gateway_response(**params)
     # @param [Hash] params ({})
-    def update_gateway_response(params = {}, **options)
-      req = build_request(:update_gateway_response, params)
+    def update_gateway_response(, **options)
+      req = build_request(:update_gateway_response, )
       req.send_request(options)
     end
 
@@ -6326,8 +6326,8 @@ module Aws::APIGateway
     #
     # @overload update_integration(**params)
     # @param [Hash] params ({})
-    def update_integration(params = {}, **options)
-      req = build_request(:update_integration, params)
+    def update_integration(, **options)
+      req = build_request(:update_integration, )
       req.send_request(options)
     end
 
@@ -6389,8 +6389,8 @@ module Aws::APIGateway
     #
     # @overload update_integration_response(**params)
     # @param [Hash] params ({})
-    def update_integration_response(params = {}, **options)
-      req = build_request(:update_integration_response, params)
+    def update_integration_response(, **options)
+      req = build_request(:update_integration_response, )
       req.send_request(options)
     end
 
@@ -6487,8 +6487,8 @@ module Aws::APIGateway
     #
     # @overload update_method(**params)
     # @param [Hash] params ({})
-    def update_method(params = {}, **options)
-      req = build_request(:update_method, params)
+    def update_method(, **options)
+      req = build_request(:update_method, )
       req.send_request(options)
     end
 
@@ -6543,8 +6543,8 @@ module Aws::APIGateway
     #
     # @overload update_method_response(**params)
     # @param [Hash] params ({})
-    def update_method_response(params = {}, **options)
-      req = build_request(:update_method_response, params)
+    def update_method_response(, **options)
+      req = build_request(:update_method_response, )
       req.send_request(options)
     end
 
@@ -6593,8 +6593,8 @@ module Aws::APIGateway
     #
     # @overload update_model(**params)
     # @param [Hash] params ({})
-    def update_model(params = {}, **options)
-      req = build_request(:update_model, params)
+    def update_model(, **options)
+      req = build_request(:update_model, )
       req.send_request(options)
     end
 
@@ -6641,8 +6641,8 @@ module Aws::APIGateway
     #
     # @overload update_request_validator(**params)
     # @param [Hash] params ({})
-    def update_request_validator(params = {}, **options)
-      req = build_request(:update_request_validator, params)
+    def update_request_validator(, **options)
+      req = build_request(:update_request_validator, )
       req.send_request(options)
     end
 
@@ -6734,8 +6734,8 @@ module Aws::APIGateway
     #
     # @overload update_resource(**params)
     # @param [Hash] params ({})
-    def update_resource(params = {}, **options)
-      req = build_request(:update_resource, params)
+    def update_resource(, **options)
+      req = build_request(:update_resource, )
       req.send_request(options)
     end
 
@@ -6802,8 +6802,8 @@ module Aws::APIGateway
     #
     # @overload update_rest_api(**params)
     # @param [Hash] params ({})
-    def update_rest_api(params = {}, **options)
-      req = build_request(:update_rest_api, params)
+    def update_rest_api(, **options)
+      req = build_request(:update_rest_api, )
       req.send_request(options)
     end
 
@@ -6894,8 +6894,8 @@ module Aws::APIGateway
     #
     # @overload update_stage(**params)
     # @param [Hash] params ({})
-    def update_stage(params = {}, **options)
-      req = build_request(:update_stage, params)
+    def update_stage(, **options)
+      req = build_request(:update_stage, )
       req.send_request(options)
     end
 
@@ -6949,8 +6949,8 @@ module Aws::APIGateway
     #
     # @overload update_usage(**params)
     # @param [Hash] params ({})
-    def update_usage(params = {}, **options)
-      req = build_request(:update_usage, params)
+    def update_usage(, **options)
+      req = build_request(:update_usage, )
       req.send_request(options)
     end
 
@@ -7010,8 +7010,8 @@ module Aws::APIGateway
     #
     # @overload update_usage_plan(**params)
     # @param [Hash] params ({})
-    def update_usage_plan(params = {}, **options)
-      req = build_request(:update_usage_plan, params)
+    def update_usage_plan(, **options)
+      req = build_request(:update_usage_plan, )
       req.send_request(options)
     end
 
@@ -7063,8 +7063,8 @@ module Aws::APIGateway
     #
     # @overload update_vpc_link(**params)
     # @param [Hash] params ({})
-    def update_vpc_link(params = {}, **options)
-      req = build_request(:update_vpc_link, params)
+    def update_vpc_link(, **options)
+      req = build_request(:update_vpc_link, )
       req.send_request(options)
     end
 

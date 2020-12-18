@@ -385,8 +385,8 @@ module Aws::AppIntegrationsService
     #
     # @overload create_event_integration(**params)
     # @param [Hash] params ({})
-    def create_event_integration(params = {}, **options)
-      req = build_request(:create_event_integration, params)
+    def create_event_integration(, **options)
+      req = build_request(:create_event_integration, )
       req.send_request(options)
     end
 
@@ -411,8 +411,8 @@ module Aws::AppIntegrationsService
     #
     # @overload delete_event_integration(**params)
     # @param [Hash] params ({})
-    def delete_event_integration(params = {}, **options)
-      req = build_request(:delete_event_integration, params)
+    def delete_event_integration(, **options)
+      req = build_request(:delete_event_integration, )
       req.send_request(options)
     end
 
@@ -453,8 +453,8 @@ module Aws::AppIntegrationsService
     #
     # @overload get_event_integration(**params)
     # @param [Hash] params ({})
-    def get_event_integration(params = {}, **options)
-      req = build_request(:get_event_integration, params)
+    def get_event_integration(, **options)
+      req = build_request(:get_event_integration, )
       req.send_request(options)
     end
 
@@ -504,8 +504,8 @@ module Aws::AppIntegrationsService
     #
     # @overload list_event_integration_associations(**params)
     # @param [Hash] params ({})
-    def list_event_integration_associations(params = {}, **options)
-      req = build_request(:list_event_integration_associations, params)
+    def list_event_integration_associations(, **options)
+      req = build_request(:list_event_integration_associations, )
       req.send_request(options)
     end
 
@@ -550,8 +550,8 @@ module Aws::AppIntegrationsService
     #
     # @overload list_event_integrations(**params)
     # @param [Hash] params ({})
-    def list_event_integrations(params = {}, **options)
-      req = build_request(:list_event_integrations, params)
+    def list_event_integrations(, **options)
+      req = build_request(:list_event_integrations, )
       req.send_request(options)
     end
 
@@ -582,8 +582,8 @@ module Aws::AppIntegrationsService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -613,8 +613,8 @@ module Aws::AppIntegrationsService
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -642,8 +642,8 @@ module Aws::AppIntegrationsService
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -671,8 +671,8 @@ module Aws::AppIntegrationsService
     #
     # @overload update_event_integration(**params)
     # @param [Hash] params ({})
-    def update_event_integration(params = {}, **options)
-      req = build_request(:update_event_integration, params)
+    def update_event_integration(, **options)
+      req = build_request(:update_event_integration, )
       req.send_request(options)
     end
 

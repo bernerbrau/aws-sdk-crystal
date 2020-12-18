@@ -720,5 +720,220 @@ module Aws::Mobile
       include Aws::Structure
     end
 
+    alias AccountActionRequiredException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AttributeKey = String
+
+    alias AttributeValue = String
+
+    alias Attributes = Hash(AttributeKey,AttributeValue)
+
+    alias BadRequestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Boolean = Bool
+
+    alias BundleDescription = String
+
+    alias BundleDetails = NamedTuple(
+      "bundleId" : (BundleId)?,
+      "title" : (BundleTitle)?,
+      "version" : (BundleVersion)?,
+      "description" : (BundleDescription)?,
+      "iconUrl" : (IconUrl)?,
+      "availablePlatforms" : (Platforms)?
+    )
+
+    alias BundleId = String
+
+    alias BundleList = Array(BundleDetails)
+
+    alias BundleTitle = String
+
+    alias BundleVersion = String
+
+    alias ConsoleUrl = String
+
+    alias Contents = String | Array(UInt8) | IO
+
+    alias CreateProjectRequest = NamedTuple(
+      "name" : (ProjectName)?,
+      "region" : (ProjectRegion)?,
+      "contents" : (Contents)?,
+      "snapshotId" : (SnapshotId)?
+    )
+
+    alias CreateProjectResult = NamedTuple(
+      "details" : (ProjectDetails)?
+    )
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteProjectRequest = NamedTuple(
+      "projectId" : ProjectId
+    )
+
+    alias DeleteProjectResult = NamedTuple(
+      "deletedResources" : (Resources)?,
+      "orphanedResources" : (Resources)?
+    )
+
+    alias DescribeBundleRequest = NamedTuple(
+      "bundleId" : BundleId
+    )
+
+    alias DescribeBundleResult = NamedTuple(
+      "details" : (BundleDetails)?
+    )
+
+    alias DescribeProjectRequest = NamedTuple(
+      "projectId" : ProjectId,
+      "syncFromResources" : (Boolean)?
+    )
+
+    alias DescribeProjectResult = NamedTuple(
+      "details" : (ProjectDetails)?
+    )
+
+    alias DownloadUrl = String
+
+    alias ErrorMessage = String
+
+    alias ExportBundleRequest = NamedTuple(
+      "bundleId" : BundleId,
+      "projectId" : (ProjectId)?,
+      "platform" : (Platform)?
+    )
+
+    alias ExportBundleResult = NamedTuple(
+      "downloadUrl" : (DownloadUrl)?
+    )
+
+    alias ExportProjectRequest = NamedTuple(
+      "projectId" : ProjectId
+    )
+
+    alias ExportProjectResult = NamedTuple(
+      "downloadUrl" : (DownloadUrl)?,
+      "shareUrl" : (ShareUrl)?,
+      "snapshotId" : (SnapshotId)?
+    )
+
+    alias Feature = String
+
+    alias IconUrl = String
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "retryAfterSeconds" : (ErrorMessage)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListBundlesRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListBundlesResult = NamedTuple(
+      "bundleList" : (BundleList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProjectsRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListProjectsResult = NamedTuple(
+      "projects" : (ProjectSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias NotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Platform = String
+
+    alias Platforms = Array(Platform)
+
+    alias ProjectDetails = NamedTuple(
+      "name" : (ProjectName)?,
+      "projectId" : (ProjectId)?,
+      "region" : (ProjectRegion)?,
+      "state" : (ProjectState)?,
+      "createdDate" : (Date)?,
+      "lastUpdatedDate" : (Date)?,
+      "consoleUrl" : (ConsoleUrl)?,
+      "resources" : (Resources)?
+    )
+
+    alias ProjectId = String
+
+    alias ProjectName = String
+
+    alias ProjectRegion = String
+
+    alias ProjectState = String
+
+    alias ProjectSummaries = Array(ProjectSummary)
+
+    alias ProjectSummary = NamedTuple(
+      "name" : (ProjectName)?,
+      "projectId" : (ProjectId)?
+    )
+
+    alias Resource = NamedTuple(
+      "type" : (ResourceType)?,
+      "name" : (ResourceName)?,
+      "arn" : (ResourceArn)?,
+      "feature" : (Feature)?,
+      "attributes" : (Attributes)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceName = String
+
+    alias ResourceType = String
+
+    alias Resources = Array(Resource)
+
+    alias ServiceUnavailableException = NamedTuple(
+      "retryAfterSeconds" : (ErrorMessage)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias ShareUrl = String
+
+    alias SnapshotId = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "retryAfterSeconds" : (ErrorMessage)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias UnauthorizedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UpdateProjectRequest = NamedTuple(
+      "contents" : (Contents)?,
+      "projectId" : ProjectId
+    )
+
+    alias UpdateProjectResult = NamedTuple(
+      "details" : (ProjectDetails)?
+    )
   end
 end

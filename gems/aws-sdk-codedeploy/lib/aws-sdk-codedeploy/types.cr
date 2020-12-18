@@ -6024,5 +6024,1558 @@ module Aws::CodeDeploy
       include Aws::Structure
     end
 
+    alias AddTagsToOnPremisesInstancesInput = NamedTuple(
+      "tags" : TagList,
+      "instanceNames" : InstanceNameList
+    )
+
+    alias AdditionalDeploymentStatusInfo = String
+
+    alias Alarm = NamedTuple(
+      "name" : (AlarmName)?
+    )
+
+    alias AlarmConfiguration = NamedTuple(
+      "enabled" : (Boolean)?,
+      "ignorePollAlarmFailure" : (Boolean)?,
+      "alarms" : (AlarmList)?
+    )
+
+    alias AlarmList = Array(Alarm)
+
+    alias AlarmName = String
+
+    alias AlarmsLimitExceededException = NamedTuple(
+      
+    )
+
+    alias AppSpecContent = NamedTuple(
+      "content" : (RawStringContent)?,
+      "sha256" : (RawStringSha256)?
+    )
+
+    alias ApplicationAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias ApplicationDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias ApplicationId = String
+
+    alias ApplicationInfo = NamedTuple(
+      "applicationId" : (ApplicationId)?,
+      "applicationName" : (ApplicationName)?,
+      "createTime" : (Timestamp)?,
+      "linkedToGitHub" : (Boolean)?,
+      "gitHubAccountName" : (GitHubAccountTokenName)?,
+      "computePlatform" : (ComputePlatform)?
+    )
+
+    alias ApplicationLimitExceededException = NamedTuple(
+      
+    )
+
+    alias ApplicationName = String
+
+    alias ApplicationNameRequiredException = NamedTuple(
+      
+    )
+
+    alias ApplicationRevisionSortBy = String
+
+    alias ApplicationsInfoList = Array(ApplicationInfo)
+
+    alias ApplicationsList = Array(ApplicationName)
+
+    alias Arn = String
+
+    alias ArnNotSupportedException = NamedTuple(
+      
+    )
+
+    alias AutoRollbackConfiguration = NamedTuple(
+      "enabled" : (Boolean)?,
+      "events" : (AutoRollbackEventsList)?
+    )
+
+    alias AutoRollbackEvent = String
+
+    alias AutoRollbackEventsList = Array(AutoRollbackEvent)
+
+    alias AutoScalingGroup = NamedTuple(
+      "name" : (AutoScalingGroupName)?,
+      "hook" : (AutoScalingGroupHook)?
+    )
+
+    alias AutoScalingGroupHook = String
+
+    alias AutoScalingGroupList = Array(AutoScalingGroup)
+
+    alias AutoScalingGroupName = String
+
+    alias AutoScalingGroupNameList = Array(AutoScalingGroupName)
+
+    alias BatchGetApplicationRevisionsInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "revisions" : RevisionLocationList
+    )
+
+    alias BatchGetApplicationRevisionsOutput = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "errorMessage" : (ErrorMessage)?,
+      "revisions" : (RevisionInfoList)?
+    )
+
+    alias BatchGetApplicationsInput = NamedTuple(
+      "applicationNames" : ApplicationsList
+    )
+
+    alias BatchGetApplicationsOutput = NamedTuple(
+      "applicationsInfo" : (ApplicationsInfoList)?
+    )
+
+    alias BatchGetDeploymentGroupsInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "deploymentGroupNames" : DeploymentGroupsList
+    )
+
+    alias BatchGetDeploymentGroupsOutput = NamedTuple(
+      "deploymentGroupsInfo" : (DeploymentGroupInfoList)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchGetDeploymentInstancesInput = NamedTuple(
+      "deploymentId" : DeploymentId,
+      "instanceIds" : InstancesList
+    )
+
+    alias BatchGetDeploymentInstancesOutput = NamedTuple(
+      "instancesSummary" : (InstanceSummaryList)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchGetDeploymentTargetsInput = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "targetIds" : (TargetIdList)?
+    )
+
+    alias BatchGetDeploymentTargetsOutput = NamedTuple(
+      "deploymentTargets" : (DeploymentTargetList)?
+    )
+
+    alias BatchGetDeploymentsInput = NamedTuple(
+      "deploymentIds" : DeploymentsList
+    )
+
+    alias BatchGetDeploymentsOutput = NamedTuple(
+      "deploymentsInfo" : (DeploymentsInfoList)?
+    )
+
+    alias BatchGetOnPremisesInstancesInput = NamedTuple(
+      "instanceNames" : InstanceNameList
+    )
+
+    alias BatchGetOnPremisesInstancesOutput = NamedTuple(
+      "instanceInfos" : (InstanceInfoList)?
+    )
+
+    alias BatchLimitExceededException = NamedTuple(
+      
+    )
+
+    alias BlueGreenDeploymentConfiguration = NamedTuple(
+      "terminateBlueInstancesOnDeploymentSuccess" : (BlueInstanceTerminationOption)?,
+      "deploymentReadyOption" : (DeploymentReadyOption)?,
+      "greenFleetProvisioningOption" : (GreenFleetProvisioningOption)?
+    )
+
+    alias BlueInstanceTerminationOption = NamedTuple(
+      "action" : (InstanceAction)?,
+      "terminationWaitTimeInMinutes" : (Duration)?
+    )
+
+    alias Boolean = Bool
+
+    alias BucketNameFilterRequiredException = NamedTuple(
+      
+    )
+
+    alias BundleType = String
+
+    alias CloudFormationResourceType = String
+
+    alias CloudFormationTarget = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "targetId" : (TargetId)?,
+      "lastUpdatedAt" : (Time)?,
+      "lifecycleEvents" : (LifecycleEventList)?,
+      "status" : (TargetStatus)?,
+      "resourceType" : (CloudFormationResourceType)?,
+      "targetVersionWeight" : (TrafficWeight)?
+    )
+
+    alias CommitId = String
+
+    alias ComputePlatform = String
+
+    alias ContinueDeploymentInput = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "deploymentWaitType" : (DeploymentWaitType)?
+    )
+
+    alias CreateApplicationInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "computePlatform" : (ComputePlatform)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateApplicationOutput = NamedTuple(
+      "applicationId" : (ApplicationId)?
+    )
+
+    alias CreateDeploymentConfigInput = NamedTuple(
+      "deploymentConfigName" : DeploymentConfigName,
+      "minimumHealthyHosts" : (MinimumHealthyHosts)?,
+      "trafficRoutingConfig" : (TrafficRoutingConfig)?,
+      "computePlatform" : (ComputePlatform)?
+    )
+
+    alias CreateDeploymentConfigOutput = NamedTuple(
+      "deploymentConfigId" : (DeploymentConfigId)?
+    )
+
+    alias CreateDeploymentGroupInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "deploymentGroupName" : DeploymentGroupName,
+      "deploymentConfigName" : (DeploymentConfigName)?,
+      "ec2TagFilters" : (EC2TagFilterList)?,
+      "onPremisesInstanceTagFilters" : (TagFilterList)?,
+      "autoScalingGroups" : (AutoScalingGroupNameList)?,
+      "serviceRoleArn" : Role,
+      "triggerConfigurations" : (TriggerConfigList)?,
+      "alarmConfiguration" : (AlarmConfiguration)?,
+      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
+      "deploymentStyle" : (DeploymentStyle)?,
+      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
+      "loadBalancerInfo" : (LoadBalancerInfo)?,
+      "ec2TagSet" : (EC2TagSet)?,
+      "ecsServices" : (ECSServiceList)?,
+      "onPremisesTagSet" : (OnPremisesTagSet)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDeploymentGroupOutput = NamedTuple(
+      "deploymentGroupId" : (DeploymentGroupId)?
+    )
+
+    alias CreateDeploymentInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "deploymentGroupName" : (DeploymentGroupName)?,
+      "revision" : (RevisionLocation)?,
+      "deploymentConfigName" : (DeploymentConfigName)?,
+      "description" : (Description)?,
+      "ignoreApplicationStopFailures" : (Boolean)?,
+      "targetInstances" : (TargetInstances)?,
+      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
+      "updateOutdatedInstancesOnly" : (Boolean)?,
+      "fileExistsBehavior" : (FileExistsBehavior)?
+    )
+
+    alias CreateDeploymentOutput = NamedTuple(
+      "deploymentId" : (DeploymentId)?
+    )
+
+    alias DeleteApplicationInput = NamedTuple(
+      "applicationName" : ApplicationName
+    )
+
+    alias DeleteDeploymentConfigInput = NamedTuple(
+      "deploymentConfigName" : DeploymentConfigName
+    )
+
+    alias DeleteDeploymentGroupInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "deploymentGroupName" : DeploymentGroupName
+    )
+
+    alias DeleteDeploymentGroupOutput = NamedTuple(
+      "hooksNotCleanedUp" : (AutoScalingGroupList)?
+    )
+
+    alias DeleteGitHubAccountTokenInput = NamedTuple(
+      "tokenName" : (GitHubAccountTokenName)?
+    )
+
+    alias DeleteGitHubAccountTokenOutput = NamedTuple(
+      "tokenName" : (GitHubAccountTokenName)?
+    )
+
+    alias DeleteResourcesByExternalIdInput = NamedTuple(
+      "externalId" : (ExternalId)?
+    )
+
+    alias DeleteResourcesByExternalIdOutput = NamedTuple(
+      
+    )
+
+    alias DeploymentAlreadyCompletedException = NamedTuple(
+      
+    )
+
+    alias DeploymentAlreadyStartedException = NamedTuple(
+      
+    )
+
+    alias DeploymentConfigAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias DeploymentConfigDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias DeploymentConfigId = String
+
+    alias DeploymentConfigInUseException = NamedTuple(
+      
+    )
+
+    alias DeploymentConfigInfo = NamedTuple(
+      "deploymentConfigId" : (DeploymentConfigId)?,
+      "deploymentConfigName" : (DeploymentConfigName)?,
+      "minimumHealthyHosts" : (MinimumHealthyHosts)?,
+      "createTime" : (Timestamp)?,
+      "computePlatform" : (ComputePlatform)?,
+      "trafficRoutingConfig" : (TrafficRoutingConfig)?
+    )
+
+    alias DeploymentConfigLimitExceededException = NamedTuple(
+      
+    )
+
+    alias DeploymentConfigName = String
+
+    alias DeploymentConfigNameRequiredException = NamedTuple(
+      
+    )
+
+    alias DeploymentConfigsList = Array(DeploymentConfigName)
+
+    alias DeploymentCreator = String
+
+    alias DeploymentDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias DeploymentGroupAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias DeploymentGroupDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias DeploymentGroupId = String
+
+    alias DeploymentGroupInfo = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "deploymentGroupId" : (DeploymentGroupId)?,
+      "deploymentGroupName" : (DeploymentGroupName)?,
+      "deploymentConfigName" : (DeploymentConfigName)?,
+      "ec2TagFilters" : (EC2TagFilterList)?,
+      "onPremisesInstanceTagFilters" : (TagFilterList)?,
+      "autoScalingGroups" : (AutoScalingGroupList)?,
+      "serviceRoleArn" : (Role)?,
+      "targetRevision" : (RevisionLocation)?,
+      "triggerConfigurations" : (TriggerConfigList)?,
+      "alarmConfiguration" : (AlarmConfiguration)?,
+      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
+      "deploymentStyle" : (DeploymentStyle)?,
+      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
+      "loadBalancerInfo" : (LoadBalancerInfo)?,
+      "lastSuccessfulDeployment" : (LastDeploymentInfo)?,
+      "lastAttemptedDeployment" : (LastDeploymentInfo)?,
+      "ec2TagSet" : (EC2TagSet)?,
+      "onPremisesTagSet" : (OnPremisesTagSet)?,
+      "computePlatform" : (ComputePlatform)?,
+      "ecsServices" : (ECSServiceList)?
+    )
+
+    alias DeploymentGroupInfoList = Array(DeploymentGroupInfo)
+
+    alias DeploymentGroupLimitExceededException = NamedTuple(
+      
+    )
+
+    alias DeploymentGroupName = String
+
+    alias DeploymentGroupNameRequiredException = NamedTuple(
+      
+    )
+
+    alias DeploymentGroupsList = Array(DeploymentGroupName)
+
+    alias DeploymentId = String
+
+    alias DeploymentIdRequiredException = NamedTuple(
+      
+    )
+
+    alias DeploymentInfo = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "deploymentGroupName" : (DeploymentGroupName)?,
+      "deploymentConfigName" : (DeploymentConfigName)?,
+      "deploymentId" : (DeploymentId)?,
+      "previousRevision" : (RevisionLocation)?,
+      "revision" : (RevisionLocation)?,
+      "status" : (DeploymentStatus)?,
+      "errorInformation" : (ErrorInformation)?,
+      "createTime" : (Timestamp)?,
+      "startTime" : (Timestamp)?,
+      "completeTime" : (Timestamp)?,
+      "deploymentOverview" : (DeploymentOverview)?,
+      "description" : (Description)?,
+      "creator" : (DeploymentCreator)?,
+      "ignoreApplicationStopFailures" : (Boolean)?,
+      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
+      "updateOutdatedInstancesOnly" : (Boolean)?,
+      "rollbackInfo" : (RollbackInfo)?,
+      "deploymentStyle" : (DeploymentStyle)?,
+      "targetInstances" : (TargetInstances)?,
+      "instanceTerminationWaitTimeStarted" : (Boolean)?,
+      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
+      "loadBalancerInfo" : (LoadBalancerInfo)?,
+      "additionalDeploymentStatusInfo" : (AdditionalDeploymentStatusInfo)?,
+      "fileExistsBehavior" : (FileExistsBehavior)?,
+      "deploymentStatusMessages" : (DeploymentStatusMessageList)?,
+      "computePlatform" : (ComputePlatform)?,
+      "externalId" : (ExternalId)?
+    )
+
+    alias DeploymentIsNotInReadyStateException = NamedTuple(
+      
+    )
+
+    alias DeploymentLimitExceededException = NamedTuple(
+      
+    )
+
+    alias DeploymentNotStartedException = NamedTuple(
+      
+    )
+
+    alias DeploymentOption = String
+
+    alias DeploymentOverview = NamedTuple(
+      "Pending" : (InstanceCount)?,
+      "InProgress" : (InstanceCount)?,
+      "Succeeded" : (InstanceCount)?,
+      "Failed" : (InstanceCount)?,
+      "Skipped" : (InstanceCount)?,
+      "Ready" : (InstanceCount)?
+    )
+
+    alias DeploymentReadyAction = String
+
+    alias DeploymentReadyOption = NamedTuple(
+      "actionOnTimeout" : (DeploymentReadyAction)?,
+      "waitTimeInMinutes" : (Duration)?
+    )
+
+    alias DeploymentStatus = String
+
+    alias DeploymentStatusList = Array(DeploymentStatus)
+
+    alias DeploymentStatusMessageList = Array(ErrorMessage)
+
+    alias DeploymentStyle = NamedTuple(
+      "deploymentType" : (DeploymentType)?,
+      "deploymentOption" : (DeploymentOption)?
+    )
+
+    alias DeploymentTarget = NamedTuple(
+      "deploymentTargetType" : (DeploymentTargetType)?,
+      "instanceTarget" : (InstanceTarget)?,
+      "lambdaTarget" : (LambdaTarget)?,
+      "ecsTarget" : (ECSTarget)?,
+      "cloudFormationTarget" : (CloudFormationTarget)?
+    )
+
+    alias DeploymentTargetDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias DeploymentTargetIdRequiredException = NamedTuple(
+      
+    )
+
+    alias DeploymentTargetList = Array(DeploymentTarget)
+
+    alias DeploymentTargetListSizeExceededException = NamedTuple(
+      
+    )
+
+    alias DeploymentTargetType = String
+
+    alias DeploymentType = String
+
+    alias DeploymentWaitType = String
+
+    alias DeploymentsInfoList = Array(DeploymentInfo)
+
+    alias DeploymentsList = Array(DeploymentId)
+
+    alias DeregisterOnPremisesInstanceInput = NamedTuple(
+      "instanceName" : InstanceName
+    )
+
+    alias Description = String
+
+    alias DescriptionTooLongException = NamedTuple(
+      
+    )
+
+    alias Diagnostics = NamedTuple(
+      "errorCode" : (LifecycleErrorCode)?,
+      "scriptName" : (ScriptName)?,
+      "message" : (LifecycleMessage)?,
+      "logTail" : (LogTail)?
+    )
+
+    alias Duration = Int32
+
+    alias EC2TagFilter = NamedTuple(
+      "Key" : (Key)?,
+      "Value" : (Value)?,
+      "Type" : (EC2TagFilterType)?
+    )
+
+    alias EC2TagFilterList = Array(EC2TagFilter)
+
+    alias EC2TagFilterType = String
+
+    alias EC2TagSet = NamedTuple(
+      "ec2TagSetList" : (EC2TagSetList)?
+    )
+
+    alias EC2TagSetList = Array(EC2TagFilterList)
+
+    alias ECSClusterName = String
+
+    alias ECSService = NamedTuple(
+      "serviceName" : (ECSServiceName)?,
+      "clusterName" : (ECSClusterName)?
+    )
+
+    alias ECSServiceList = Array(ECSService)
+
+    alias ECSServiceMappingLimitExceededException = NamedTuple(
+      
+    )
+
+    alias ECSServiceName = String
+
+    alias ECSTarget = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "targetId" : (TargetId)?,
+      "targetArn" : (TargetArn)?,
+      "lastUpdatedAt" : (Time)?,
+      "lifecycleEvents" : (LifecycleEventList)?,
+      "status" : (TargetStatus)?,
+      "taskSetsInfo" : (ECSTaskSetList)?
+    )
+
+    alias ECSTaskSet = NamedTuple(
+      "identifer" : (ECSTaskSetIdentifier)?,
+      "desiredCount" : (ECSTaskSetCount)?,
+      "pendingCount" : (ECSTaskSetCount)?,
+      "runningCount" : (ECSTaskSetCount)?,
+      "status" : (ECSTaskSetStatus)?,
+      "trafficWeight" : (TrafficWeight)?,
+      "targetGroup" : (TargetGroupInfo)?,
+      "taskSetLabel" : (TargetLabel)?
+    )
+
+    alias ECSTaskSetCount = Int64
+
+    alias ECSTaskSetIdentifier = String
+
+    alias ECSTaskSetList = Array(ECSTaskSet)
+
+    alias ECSTaskSetStatus = String
+
+    alias ELBInfo = NamedTuple(
+      "name" : (ELBName)?
+    )
+
+    alias ELBInfoList = Array(ELBInfo)
+
+    alias ELBName = String
+
+    alias ETag = String
+
+    alias ErrorCode = String
+
+    alias ErrorInformation = NamedTuple(
+      "code" : (ErrorCode)?,
+      "message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias ExternalId = String
+
+    alias FileExistsBehavior = String
+
+    alias FilterValue = String
+
+    alias FilterValueList = Array(FilterValue)
+
+    alias GenericRevisionInfo = NamedTuple(
+      "description" : (Description)?,
+      "deploymentGroups" : (DeploymentGroupsList)?,
+      "firstUsedTime" : (Timestamp)?,
+      "lastUsedTime" : (Timestamp)?,
+      "registerTime" : (Timestamp)?
+    )
+
+    alias GetApplicationInput = NamedTuple(
+      "applicationName" : ApplicationName
+    )
+
+    alias GetApplicationOutput = NamedTuple(
+      "application" : (ApplicationInfo)?
+    )
+
+    alias GetApplicationRevisionInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "revision" : RevisionLocation
+    )
+
+    alias GetApplicationRevisionOutput = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "revision" : (RevisionLocation)?,
+      "revisionInfo" : (GenericRevisionInfo)?
+    )
+
+    alias GetDeploymentConfigInput = NamedTuple(
+      "deploymentConfigName" : DeploymentConfigName
+    )
+
+    alias GetDeploymentConfigOutput = NamedTuple(
+      "deploymentConfigInfo" : (DeploymentConfigInfo)?
+    )
+
+    alias GetDeploymentGroupInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "deploymentGroupName" : DeploymentGroupName
+    )
+
+    alias GetDeploymentGroupOutput = NamedTuple(
+      "deploymentGroupInfo" : (DeploymentGroupInfo)?
+    )
+
+    alias GetDeploymentInput = NamedTuple(
+      "deploymentId" : DeploymentId
+    )
+
+    alias GetDeploymentInstanceInput = NamedTuple(
+      "deploymentId" : DeploymentId,
+      "instanceId" : InstanceId
+    )
+
+    alias GetDeploymentInstanceOutput = NamedTuple(
+      "instanceSummary" : (InstanceSummary)?
+    )
+
+    alias GetDeploymentOutput = NamedTuple(
+      "deploymentInfo" : (DeploymentInfo)?
+    )
+
+    alias GetDeploymentTargetInput = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "targetId" : (TargetId)?
+    )
+
+    alias GetDeploymentTargetOutput = NamedTuple(
+      "deploymentTarget" : (DeploymentTarget)?
+    )
+
+    alias GetOnPremisesInstanceInput = NamedTuple(
+      "instanceName" : InstanceName
+    )
+
+    alias GetOnPremisesInstanceOutput = NamedTuple(
+      "instanceInfo" : (InstanceInfo)?
+    )
+
+    alias GitHubAccountTokenDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias GitHubAccountTokenName = String
+
+    alias GitHubAccountTokenNameList = Array(GitHubAccountTokenName)
+
+    alias GitHubAccountTokenNameRequiredException = NamedTuple(
+      
+    )
+
+    alias GitHubLocation = NamedTuple(
+      "repository" : (Repository)?,
+      "commitId" : (CommitId)?
+    )
+
+    alias GreenFleetProvisioningAction = String
+
+    alias GreenFleetProvisioningOption = NamedTuple(
+      "action" : (GreenFleetProvisioningAction)?
+    )
+
+    alias IamArnRequiredException = NamedTuple(
+      
+    )
+
+    alias IamSessionArn = String
+
+    alias IamSessionArnAlreadyRegisteredException = NamedTuple(
+      
+    )
+
+    alias IamUserArn = String
+
+    alias IamUserArnAlreadyRegisteredException = NamedTuple(
+      
+    )
+
+    alias IamUserArnRequiredException = NamedTuple(
+      
+    )
+
+    alias InstanceAction = String
+
+    alias InstanceArn = String
+
+    alias InstanceCount = Int64
+
+    alias InstanceDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias InstanceId = String
+
+    alias InstanceIdRequiredException = NamedTuple(
+      
+    )
+
+    alias InstanceInfo = NamedTuple(
+      "instanceName" : (InstanceName)?,
+      "iamSessionArn" : (IamSessionArn)?,
+      "iamUserArn" : (IamUserArn)?,
+      "instanceArn" : (InstanceArn)?,
+      "registerTime" : (Timestamp)?,
+      "deregisterTime" : (Timestamp)?,
+      "tags" : (TagList)?
+    )
+
+    alias InstanceInfoList = Array(InstanceInfo)
+
+    alias InstanceLimitExceededException = NamedTuple(
+      
+    )
+
+    alias InstanceName = String
+
+    alias InstanceNameAlreadyRegisteredException = NamedTuple(
+      
+    )
+
+    alias InstanceNameList = Array(InstanceName)
+
+    alias InstanceNameRequiredException = NamedTuple(
+      
+    )
+
+    alias InstanceNotRegisteredException = NamedTuple(
+      
+    )
+
+    alias InstanceStatus = String
+
+    alias InstanceStatusList = Array(InstanceStatus)
+
+    alias InstanceSummary = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "instanceId" : (InstanceId)?,
+      "status" : (InstanceStatus)?,
+      "lastUpdatedAt" : (Timestamp)?,
+      "lifecycleEvents" : (LifecycleEventList)?,
+      "instanceType" : (InstanceType)?
+    )
+
+    alias InstanceSummaryList = Array(InstanceSummary)
+
+    alias InstanceTarget = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "targetId" : (TargetId)?,
+      "targetArn" : (TargetArn)?,
+      "status" : (TargetStatus)?,
+      "lastUpdatedAt" : (Time)?,
+      "lifecycleEvents" : (LifecycleEventList)?,
+      "instanceLabel" : (TargetLabel)?
+    )
+
+    alias InstanceType = String
+
+    alias InstanceTypeList = Array(InstanceType)
+
+    alias InstancesList = Array(InstanceId)
+
+    alias InvalidAlarmConfigException = NamedTuple(
+      
+    )
+
+    alias InvalidApplicationNameException = NamedTuple(
+      
+    )
+
+    alias InvalidArnException = NamedTuple(
+      
+    )
+
+    alias InvalidAutoRollbackConfigException = NamedTuple(
+      
+    )
+
+    alias InvalidAutoScalingGroupException = NamedTuple(
+      
+    )
+
+    alias InvalidBlueGreenDeploymentConfigurationException = NamedTuple(
+      
+    )
+
+    alias InvalidBucketNameFilterException = NamedTuple(
+      
+    )
+
+    alias InvalidComputePlatformException = NamedTuple(
+      
+    )
+
+    alias InvalidDeployedStateFilterException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentConfigIdException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentConfigNameException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentGroupNameException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentIdException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentInstanceTypeException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentStyleException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentTargetIdException = NamedTuple(
+      
+    )
+
+    alias InvalidDeploymentWaitTypeException = NamedTuple(
+      
+    )
+
+    alias InvalidEC2TagCombinationException = NamedTuple(
+      
+    )
+
+    alias InvalidEC2TagException = NamedTuple(
+      
+    )
+
+    alias InvalidECSServiceException = NamedTuple(
+      
+    )
+
+    alias InvalidExternalIdException = NamedTuple(
+      
+    )
+
+    alias InvalidFileExistsBehaviorException = NamedTuple(
+      
+    )
+
+    alias InvalidGitHubAccountTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidGitHubAccountTokenNameException = NamedTuple(
+      
+    )
+
+    alias InvalidIamSessionArnException = NamedTuple(
+      
+    )
+
+    alias InvalidIamUserArnException = NamedTuple(
+      
+    )
+
+    alias InvalidIgnoreApplicationStopFailuresValueException = NamedTuple(
+      
+    )
+
+    alias InvalidInputException = NamedTuple(
+      
+    )
+
+    alias InvalidInstanceIdException = NamedTuple(
+      
+    )
+
+    alias InvalidInstanceNameException = NamedTuple(
+      
+    )
+
+    alias InvalidInstanceStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidInstanceTypeException = NamedTuple(
+      
+    )
+
+    alias InvalidKeyPrefixFilterException = NamedTuple(
+      
+    )
+
+    alias InvalidLifecycleEventHookExecutionIdException = NamedTuple(
+      
+    )
+
+    alias InvalidLifecycleEventHookExecutionStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidLoadBalancerInfoException = NamedTuple(
+      
+    )
+
+    alias InvalidMinimumHealthyHostValueException = NamedTuple(
+      
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      
+    )
+
+    alias InvalidOnPremisesTagCombinationException = NamedTuple(
+      
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      
+    )
+
+    alias InvalidRegistrationStatusException = NamedTuple(
+      
+    )
+
+    alias InvalidRevisionException = NamedTuple(
+      
+    )
+
+    alias InvalidRoleException = NamedTuple(
+      
+    )
+
+    alias InvalidSortByException = NamedTuple(
+      
+    )
+
+    alias InvalidSortOrderException = NamedTuple(
+      
+    )
+
+    alias InvalidTagException = NamedTuple(
+      
+    )
+
+    alias InvalidTagFilterException = NamedTuple(
+      
+    )
+
+    alias InvalidTagsToAddException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetFilterNameException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetGroupPairException = NamedTuple(
+      
+    )
+
+    alias InvalidTargetInstancesException = NamedTuple(
+      
+    )
+
+    alias InvalidTimeRangeException = NamedTuple(
+      
+    )
+
+    alias InvalidTrafficRoutingConfigurationException = NamedTuple(
+      
+    )
+
+    alias InvalidTriggerConfigException = NamedTuple(
+      
+    )
+
+    alias InvalidUpdateOutdatedInstancesOnlyValueException = NamedTuple(
+      
+    )
+
+    alias Key = String
+
+    alias LambdaFunctionAlias = String
+
+    alias LambdaFunctionInfo = NamedTuple(
+      "functionName" : (LambdaFunctionName)?,
+      "functionAlias" : (LambdaFunctionAlias)?,
+      "currentVersion" : (Version)?,
+      "targetVersion" : (Version)?,
+      "targetVersionWeight" : (TrafficWeight)?
+    )
+
+    alias LambdaFunctionName = String
+
+    alias LambdaTarget = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "targetId" : (TargetId)?,
+      "targetArn" : (TargetArn)?,
+      "status" : (TargetStatus)?,
+      "lastUpdatedAt" : (Time)?,
+      "lifecycleEvents" : (LifecycleEventList)?,
+      "lambdaFunctionInfo" : (LambdaFunctionInfo)?
+    )
+
+    alias LastDeploymentInfo = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "status" : (DeploymentStatus)?,
+      "endTime" : (Timestamp)?,
+      "createTime" : (Timestamp)?
+    )
+
+    alias LifecycleErrorCode = String
+
+    alias LifecycleEvent = NamedTuple(
+      "lifecycleEventName" : (LifecycleEventName)?,
+      "diagnostics" : (Diagnostics)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "status" : (LifecycleEventStatus)?
+    )
+
+    alias LifecycleEventAlreadyCompletedException = NamedTuple(
+      
+    )
+
+    alias LifecycleEventHookExecutionId = String
+
+    alias LifecycleEventList = Array(LifecycleEvent)
+
+    alias LifecycleEventName = String
+
+    alias LifecycleEventStatus = String
+
+    alias LifecycleHookLimitExceededException = NamedTuple(
+      
+    )
+
+    alias LifecycleMessage = String
+
+    alias ListApplicationRevisionsInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "sortBy" : (ApplicationRevisionSortBy)?,
+      "sortOrder" : (SortOrder)?,
+      "s3Bucket" : (S3Bucket)?,
+      "s3KeyPrefix" : (S3Key)?,
+      "deployed" : (ListStateFilterAction)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListApplicationRevisionsOutput = NamedTuple(
+      "revisions" : (RevisionLocationList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListApplicationsInput = NamedTuple(
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListApplicationsOutput = NamedTuple(
+      "applications" : (ApplicationsList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentConfigsInput = NamedTuple(
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentConfigsOutput = NamedTuple(
+      "deploymentConfigsList" : (DeploymentConfigsList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentGroupsInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentGroupsOutput = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "deploymentGroups" : (DeploymentGroupsList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentInstancesInput = NamedTuple(
+      "deploymentId" : DeploymentId,
+      "nextToken" : (NextToken)?,
+      "instanceStatusFilter" : (InstanceStatusList)?,
+      "instanceTypeFilter" : (InstanceTypeList)?
+    )
+
+    alias ListDeploymentInstancesOutput = NamedTuple(
+      "instancesList" : (InstancesList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentTargetsInput = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "nextToken" : (NextToken)?,
+      "targetFilters" : (TargetFilters)?
+    )
+
+    alias ListDeploymentTargetsOutput = NamedTuple(
+      "targetIds" : (TargetIdList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentsInput = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "deploymentGroupName" : (DeploymentGroupName)?,
+      "externalId" : (ExternalId)?,
+      "includeOnlyStatuses" : (DeploymentStatusList)?,
+      "createTimeRange" : (TimeRange)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDeploymentsOutput = NamedTuple(
+      "deployments" : (DeploymentsList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListGitHubAccountTokenNamesInput = NamedTuple(
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListGitHubAccountTokenNamesOutput = NamedTuple(
+      "tokenNameList" : (GitHubAccountTokenNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListOnPremisesInstancesInput = NamedTuple(
+      "registrationStatus" : (RegistrationStatus)?,
+      "tagFilters" : (TagFilterList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListOnPremisesInstancesOutput = NamedTuple(
+      "instanceNames" : (InstanceNameList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListStateFilterAction = String
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "ResourceArn" : Arn,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListenerArn = String
+
+    alias ListenerArnList = Array(ListenerArn)
+
+    alias LoadBalancerInfo = NamedTuple(
+      "elbInfoList" : (ELBInfoList)?,
+      "targetGroupInfoList" : (TargetGroupInfoList)?,
+      "targetGroupPairInfoList" : (TargetGroupPairInfoList)?
+    )
+
+    alias LogTail = String
+
+    alias Message = String
+
+    alias MinimumHealthyHosts = NamedTuple(
+      "value" : (MinimumHealthyHostsValue)?,
+      "type" : (MinimumHealthyHostsType)?
+    )
+
+    alias MinimumHealthyHostsType = String
+
+    alias MinimumHealthyHostsValue = Int32
+
+    alias MultipleIamArnsProvidedException = NamedTuple(
+      
+    )
+
+    alias NextToken = String
+
+    alias NullableBoolean = Bool
+
+    alias OnPremisesTagSet = NamedTuple(
+      "onPremisesTagSetList" : (OnPremisesTagSetList)?
+    )
+
+    alias OnPremisesTagSetList = Array(TagFilterList)
+
+    alias OperationNotSupportedException = NamedTuple(
+      
+    )
+
+    alias Percentage = Int32
+
+    alias PutLifecycleEventHookExecutionStatusInput = NamedTuple(
+      "deploymentId" : (DeploymentId)?,
+      "lifecycleEventHookExecutionId" : (LifecycleEventHookExecutionId)?,
+      "status" : (LifecycleEventStatus)?
+    )
+
+    alias PutLifecycleEventHookExecutionStatusOutput = NamedTuple(
+      "lifecycleEventHookExecutionId" : (LifecycleEventHookExecutionId)?
+    )
+
+    alias RawString = NamedTuple(
+      "content" : (RawStringContent)?,
+      "sha256" : (RawStringSha256)?
+    )
+
+    alias RawStringContent = String
+
+    alias RawStringSha256 = String
+
+    alias RegisterApplicationRevisionInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "description" : (Description)?,
+      "revision" : RevisionLocation
+    )
+
+    alias RegisterOnPremisesInstanceInput = NamedTuple(
+      "instanceName" : InstanceName,
+      "iamSessionArn" : (IamSessionArn)?,
+      "iamUserArn" : (IamUserArn)?
+    )
+
+    alias RegistrationStatus = String
+
+    alias RemoveTagsFromOnPremisesInstancesInput = NamedTuple(
+      "tags" : TagList,
+      "instanceNames" : InstanceNameList
+    )
+
+    alias Repository = String
+
+    alias ResourceArnRequiredException = NamedTuple(
+      
+    )
+
+    alias ResourceValidationException = NamedTuple(
+      
+    )
+
+    alias RevisionDoesNotExistException = NamedTuple(
+      
+    )
+
+    alias RevisionInfo = NamedTuple(
+      "revisionLocation" : (RevisionLocation)?,
+      "genericRevisionInfo" : (GenericRevisionInfo)?
+    )
+
+    alias RevisionInfoList = Array(RevisionInfo)
+
+    alias RevisionLocation = NamedTuple(
+      "revisionType" : (RevisionLocationType)?,
+      "s3Location" : (S3Location)?,
+      "gitHubLocation" : (GitHubLocation)?,
+      "string" : (RawString)?,
+      "appSpecContent" : (AppSpecContent)?
+    )
+
+    alias RevisionLocationList = Array(RevisionLocation)
+
+    alias RevisionLocationType = String
+
+    alias RevisionRequiredException = NamedTuple(
+      
+    )
+
+    alias Role = String
+
+    alias RoleRequiredException = NamedTuple(
+      
+    )
+
+    alias RollbackInfo = NamedTuple(
+      "rollbackDeploymentId" : (DeploymentId)?,
+      "rollbackTriggeringDeploymentId" : (DeploymentId)?,
+      "rollbackMessage" : (Description)?
+    )
+
+    alias S3Bucket = String
+
+    alias S3Key = String
+
+    alias S3Location = NamedTuple(
+      "bucket" : (S3Bucket)?,
+      "key" : (S3Key)?,
+      "bundleType" : (BundleType)?,
+      "version" : (VersionId)?,
+      "eTag" : (ETag)?
+    )
+
+    alias ScriptName = String
+
+    alias SkipWaitTimeForInstanceTerminationInput = NamedTuple(
+      "deploymentId" : (DeploymentId)?
+    )
+
+    alias SortOrder = String
+
+    alias StopDeploymentInput = NamedTuple(
+      "deploymentId" : DeploymentId,
+      "autoRollbackEnabled" : (NullableBoolean)?
+    )
+
+    alias StopDeploymentOutput = NamedTuple(
+      "status" : (StopStatus)?,
+      "statusMessage" : (Message)?
+    )
+
+    alias StopStatus = String
+
+    alias Tag = NamedTuple(
+      "Key" : (Key)?,
+      "Value" : (Value)?
+    )
+
+    alias TagFilter = NamedTuple(
+      "Key" : (Key)?,
+      "Value" : (Value)?,
+      "Type" : (TagFilterType)?
+    )
+
+    alias TagFilterList = Array(TagFilter)
+
+    alias TagFilterType = String
+
+    alias TagKeyList = Array(Key)
+
+    alias TagLimitExceededException = NamedTuple(
+      
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagRequiredException = NamedTuple(
+      
+    )
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceArn" : Arn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagSetListLimitExceededException = NamedTuple(
+      
+    )
+
+    alias TargetArn = String
+
+    alias TargetFilterName = String
+
+    alias TargetFilters = Hash(TargetFilterName,FilterValueList)
+
+    alias TargetGroupInfo = NamedTuple(
+      "name" : (TargetGroupName)?
+    )
+
+    alias TargetGroupInfoList = Array(TargetGroupInfo)
+
+    alias TargetGroupName = String
+
+    alias TargetGroupPairInfo = NamedTuple(
+      "targetGroups" : (TargetGroupInfoList)?,
+      "prodTrafficRoute" : (TrafficRoute)?,
+      "testTrafficRoute" : (TrafficRoute)?
+    )
+
+    alias TargetGroupPairInfoList = Array(TargetGroupPairInfo)
+
+    alias TargetId = String
+
+    alias TargetIdList = Array(TargetId)
+
+    alias TargetInstances = NamedTuple(
+      "tagFilters" : (EC2TagFilterList)?,
+      "autoScalingGroups" : (AutoScalingGroupNameList)?,
+      "ec2TagSet" : (EC2TagSet)?
+    )
+
+    alias TargetLabel = String
+
+    alias TargetStatus = String
+
+    alias ThrottlingException = NamedTuple(
+      
+    )
+
+    alias Time = String | UInt64 | Time
+
+    alias TimeBasedCanary = NamedTuple(
+      "canaryPercentage" : (Percentage)?,
+      "canaryInterval" : (WaitTimeInMins)?
+    )
+
+    alias TimeBasedLinear = NamedTuple(
+      "linearPercentage" : (Percentage)?,
+      "linearInterval" : (WaitTimeInMins)?
+    )
+
+    alias TimeRange = NamedTuple(
+      "start" : (Timestamp)?,
+      "end" : (Timestamp)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TrafficRoute = NamedTuple(
+      "listenerArns" : (ListenerArnList)?
+    )
+
+    alias TrafficRoutingConfig = NamedTuple(
+      "type" : (TrafficRoutingType)?,
+      "timeBasedCanary" : (TimeBasedCanary)?,
+      "timeBasedLinear" : (TimeBasedLinear)?
+    )
+
+    alias TrafficRoutingType = String
+
+    alias TrafficWeight = Float64
+
+    alias TriggerConfig = NamedTuple(
+      "triggerName" : (TriggerName)?,
+      "triggerTargetArn" : (TriggerTargetArn)?,
+      "triggerEvents" : (TriggerEventTypeList)?
+    )
+
+    alias TriggerConfigList = Array(TriggerConfig)
+
+    alias TriggerEventType = String
+
+    alias TriggerEventTypeList = Array(TriggerEventType)
+
+    alias TriggerName = String
+
+    alias TriggerTargetArn = String
+
+    alias TriggerTargetsLimitExceededException = NamedTuple(
+      
+    )
+
+    alias UnsupportedActionForDeploymentTypeException = NamedTuple(
+      
+    )
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceArn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UpdateApplicationInput = NamedTuple(
+      "applicationName" : (ApplicationName)?,
+      "newApplicationName" : (ApplicationName)?
+    )
+
+    alias UpdateDeploymentGroupInput = NamedTuple(
+      "applicationName" : ApplicationName,
+      "currentDeploymentGroupName" : DeploymentGroupName,
+      "newDeploymentGroupName" : (DeploymentGroupName)?,
+      "deploymentConfigName" : (DeploymentConfigName)?,
+      "ec2TagFilters" : (EC2TagFilterList)?,
+      "onPremisesInstanceTagFilters" : (TagFilterList)?,
+      "autoScalingGroups" : (AutoScalingGroupNameList)?,
+      "serviceRoleArn" : (Role)?,
+      "triggerConfigurations" : (TriggerConfigList)?,
+      "alarmConfiguration" : (AlarmConfiguration)?,
+      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
+      "deploymentStyle" : (DeploymentStyle)?,
+      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
+      "loadBalancerInfo" : (LoadBalancerInfo)?,
+      "ec2TagSet" : (EC2TagSet)?,
+      "ecsServices" : (ECSServiceList)?,
+      "onPremisesTagSet" : (OnPremisesTagSet)?
+    )
+
+    alias UpdateDeploymentGroupOutput = NamedTuple(
+      "hooksNotCleanedUp" : (AutoScalingGroupList)?
+    )
+
+    alias Value = String
+
+    alias Version = String
+
+    alias VersionId = String
+
+    alias WaitTimeInMins = Int32
   end
 end

@@ -2087,5 +2087,539 @@ module Aws::SSOAdmin
       include Aws::Structure
     end
 
+    alias AccessControlAttribute = NamedTuple(
+      "Key" : AccessControlAttributeKey,
+      "Value" : AccessControlAttributeValue
+    )
+
+    alias AccessControlAttributeKey = String
+
+    alias AccessControlAttributeList = Array(AccessControlAttribute)
+
+    alias AccessControlAttributeValue = NamedTuple(
+      "Source" : AccessControlAttributeValueSourceList
+    )
+
+    alias AccessControlAttributeValueSource = String
+
+    alias AccessControlAttributeValueSourceList = Array(AccessControlAttributeValueSource)
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (AccessDeniedExceptionMessage)?
+    )
+
+    alias AccessDeniedExceptionMessage = String
+
+    alias AccountAssignment = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "PermissionSetArn" : (PermissionSetArn)?,
+      "PrincipalType" : (PrincipalType)?,
+      "PrincipalId" : (PrincipalId)?
+    )
+
+    alias AccountAssignmentList = Array(AccountAssignment)
+
+    alias AccountAssignmentOperationStatus = NamedTuple(
+      "Status" : (StatusValues)?,
+      "RequestId" : (UUId)?,
+      "FailureReason" : (Reason)?,
+      "TargetId" : (TargetId)?,
+      "TargetType" : (TargetType)?,
+      "PermissionSetArn" : (PermissionSetArn)?,
+      "PrincipalType" : (PrincipalType)?,
+      "PrincipalId" : (PrincipalId)?,
+      "CreatedDate" : (Date)?
+    )
+
+    alias AccountAssignmentOperationStatusList = Array(AccountAssignmentOperationStatusMetadata)
+
+    alias AccountAssignmentOperationStatusMetadata = NamedTuple(
+      "Status" : (StatusValues)?,
+      "RequestId" : (UUId)?,
+      "CreatedDate" : (Date)?
+    )
+
+    alias AccountId = String
+
+    alias AccountList = Array(AccountId)
+
+    alias AttachManagedPolicyToPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "ManagedPolicyArn" : ManagedPolicyArn
+    )
+
+    alias AttachManagedPolicyToPermissionSetResponse = NamedTuple(
+      
+    )
+
+    alias AttachedManagedPolicy = NamedTuple(
+      "Name" : (Name)?,
+      "Arn" : (ManagedPolicyArn)?
+    )
+
+    alias AttachedManagedPolicyList = Array(AttachedManagedPolicy)
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ConflictExceptionMessage)?
+    )
+
+    alias ConflictExceptionMessage = String
+
+    alias CreateAccountAssignmentRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "TargetId" : TargetId,
+      "TargetType" : TargetType,
+      "PermissionSetArn" : PermissionSetArn,
+      "PrincipalType" : PrincipalType,
+      "PrincipalId" : PrincipalId
+    )
+
+    alias CreateAccountAssignmentResponse = NamedTuple(
+      "AccountAssignmentCreationStatus" : (AccountAssignmentOperationStatus)?
+    )
+
+    alias CreateInstanceAccessControlAttributeConfigurationRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "InstanceAccessControlAttributeConfiguration" : InstanceAccessControlAttributeConfiguration
+    )
+
+    alias CreateInstanceAccessControlAttributeConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias CreatePermissionSetRequest = NamedTuple(
+      "Name" : PermissionSetName,
+      "Description" : (PermissionSetDescription)?,
+      "InstanceArn" : InstanceArn,
+      "SessionDuration" : (Duration)?,
+      "RelayState" : (RelayState)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreatePermissionSetResponse = NamedTuple(
+      "PermissionSet" : (PermissionSet)?
+    )
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteAccountAssignmentRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "TargetId" : TargetId,
+      "TargetType" : TargetType,
+      "PermissionSetArn" : PermissionSetArn,
+      "PrincipalType" : PrincipalType,
+      "PrincipalId" : PrincipalId
+    )
+
+    alias DeleteAccountAssignmentResponse = NamedTuple(
+      "AccountAssignmentDeletionStatus" : (AccountAssignmentOperationStatus)?
+    )
+
+    alias DeleteInlinePolicyFromPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn
+    )
+
+    alias DeleteInlinePolicyFromPermissionSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteInstanceAccessControlAttributeConfigurationRequest = NamedTuple(
+      "InstanceArn" : InstanceArn
+    )
+
+    alias DeleteInstanceAccessControlAttributeConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias DeletePermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn
+    )
+
+    alias DeletePermissionSetResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAccountAssignmentCreationStatusRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "AccountAssignmentCreationRequestId" : UUId
+    )
+
+    alias DescribeAccountAssignmentCreationStatusResponse = NamedTuple(
+      "AccountAssignmentCreationStatus" : (AccountAssignmentOperationStatus)?
+    )
+
+    alias DescribeAccountAssignmentDeletionStatusRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "AccountAssignmentDeletionRequestId" : UUId
+    )
+
+    alias DescribeAccountAssignmentDeletionStatusResponse = NamedTuple(
+      "AccountAssignmentDeletionStatus" : (AccountAssignmentOperationStatus)?
+    )
+
+    alias DescribeInstanceAccessControlAttributeConfigurationRequest = NamedTuple(
+      "InstanceArn" : InstanceArn
+    )
+
+    alias DescribeInstanceAccessControlAttributeConfigurationResponse = NamedTuple(
+      "Status" : (InstanceAccessControlAttributeConfigurationStatus)?,
+      "StatusReason" : (InstanceAccessControlAttributeConfigurationStatusReason)?,
+      "InstanceAccessControlAttributeConfiguration" : (InstanceAccessControlAttributeConfiguration)?
+    )
+
+    alias DescribePermissionSetProvisioningStatusRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "ProvisionPermissionSetRequestId" : UUId
+    )
+
+    alias DescribePermissionSetProvisioningStatusResponse = NamedTuple(
+      "PermissionSetProvisioningStatus" : (PermissionSetProvisioningStatus)?
+    )
+
+    alias DescribePermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn
+    )
+
+    alias DescribePermissionSetResponse = NamedTuple(
+      "PermissionSet" : (PermissionSet)?
+    )
+
+    alias DetachManagedPolicyFromPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "ManagedPolicyArn" : ManagedPolicyArn
+    )
+
+    alias DetachManagedPolicyFromPermissionSetResponse = NamedTuple(
+      
+    )
+
+    alias Duration = String
+
+    alias GeneralArn = String
+
+    alias GetInlinePolicyForPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn
+    )
+
+    alias GetInlinePolicyForPermissionSetResponse = NamedTuple(
+      "InlinePolicy" : (PermissionSetPolicyDocument)?
+    )
+
+    alias Id = String
+
+    alias InstanceAccessControlAttributeConfiguration = NamedTuple(
+      "AccessControlAttributes" : AccessControlAttributeList
+    )
+
+    alias InstanceAccessControlAttributeConfigurationStatus = String
+
+    alias InstanceAccessControlAttributeConfigurationStatusReason = String
+
+    alias InstanceArn = String
+
+    alias InstanceList = Array(InstanceMetadata)
+
+    alias InstanceMetadata = NamedTuple(
+      "InstanceArn" : (InstanceArn)?,
+      "IdentityStoreId" : (Id)?
+    )
+
+    alias InternalFailureMessage = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (InternalFailureMessage)?
+    )
+
+    alias ListAccountAssignmentCreationStatusRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?,
+      "Filter" : (OperationStatusFilter)?
+    )
+
+    alias ListAccountAssignmentCreationStatusResponse = NamedTuple(
+      "AccountAssignmentsCreationStatus" : (AccountAssignmentOperationStatusList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListAccountAssignmentDeletionStatusRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?,
+      "Filter" : (OperationStatusFilter)?
+    )
+
+    alias ListAccountAssignmentDeletionStatusResponse = NamedTuple(
+      "AccountAssignmentsDeletionStatus" : (AccountAssignmentOperationStatusList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListAccountAssignmentsRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "AccountId" : TargetId,
+      "PermissionSetArn" : PermissionSetArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListAccountAssignmentsResponse = NamedTuple(
+      "AccountAssignments" : (AccountAssignmentList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListAccountsForProvisionedPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "ProvisioningStatus" : (ProvisioningStatus)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListAccountsForProvisionedPermissionSetResponse = NamedTuple(
+      "AccountIds" : (AccountList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListInstancesRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListInstancesResponse = NamedTuple(
+      "Instances" : (InstanceList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListManagedPoliciesInPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListManagedPoliciesInPermissionSetResponse = NamedTuple(
+      "AttachedManagedPolicies" : (AttachedManagedPolicyList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPermissionSetProvisioningStatusRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?,
+      "Filter" : (OperationStatusFilter)?
+    )
+
+    alias ListPermissionSetProvisioningStatusResponse = NamedTuple(
+      "PermissionSetsProvisioningStatus" : (PermissionSetProvisioningStatusList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPermissionSetsProvisionedToAccountRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "AccountId" : AccountId,
+      "ProvisioningStatus" : (ProvisioningStatus)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListPermissionSetsProvisionedToAccountResponse = NamedTuple(
+      "NextToken" : (Token)?,
+      "PermissionSets" : (PermissionSetList)?
+    )
+
+    alias ListPermissionSetsRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListPermissionSetsResponse = NamedTuple(
+      "PermissionSets" : (PermissionSetList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "ResourceArn" : GeneralArn,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ManagedPolicyArn = String
+
+    alias MaxResults = Int32
+
+    alias Name = String
+
+    alias OperationStatusFilter = NamedTuple(
+      "Status" : (StatusValues)?
+    )
+
+    alias PermissionSet = NamedTuple(
+      "Name" : (PermissionSetName)?,
+      "PermissionSetArn" : (PermissionSetArn)?,
+      "Description" : (PermissionSetDescription)?,
+      "CreatedDate" : (Date)?,
+      "SessionDuration" : (Duration)?,
+      "RelayState" : (RelayState)?
+    )
+
+    alias PermissionSetArn = String
+
+    alias PermissionSetDescription = String
+
+    alias PermissionSetList = Array(PermissionSetArn)
+
+    alias PermissionSetName = String
+
+    alias PermissionSetPolicyDocument = String
+
+    alias PermissionSetProvisioningStatus = NamedTuple(
+      "Status" : (StatusValues)?,
+      "RequestId" : (UUId)?,
+      "AccountId" : (AccountId)?,
+      "PermissionSetArn" : (PermissionSetArn)?,
+      "FailureReason" : (Reason)?,
+      "CreatedDate" : (Date)?
+    )
+
+    alias PermissionSetProvisioningStatusList = Array(PermissionSetProvisioningStatusMetadata)
+
+    alias PermissionSetProvisioningStatusMetadata = NamedTuple(
+      "Status" : (StatusValues)?,
+      "RequestId" : (UUId)?,
+      "CreatedDate" : (Date)?
+    )
+
+    alias PrincipalId = String
+
+    alias PrincipalType = String
+
+    alias ProvisionPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "TargetId" : (TargetId)?,
+      "TargetType" : ProvisionTargetType
+    )
+
+    alias ProvisionPermissionSetResponse = NamedTuple(
+      "PermissionSetProvisioningStatus" : (PermissionSetProvisioningStatus)?
+    )
+
+    alias ProvisionTargetType = String
+
+    alias ProvisioningStatus = String
+
+    alias PutInlinePolicyToPermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "InlinePolicy" : PermissionSetPolicyDocument
+    )
+
+    alias PutInlinePolicyToPermissionSetResponse = NamedTuple(
+      
+    )
+
+    alias Reason = String
+
+    alias RelayState = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ResourceNotFoundMessage)?
+    )
+
+    alias ResourceNotFoundMessage = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (ServiceQuotaExceededMessage)?
+    )
+
+    alias ServiceQuotaExceededMessage = String
+
+    alias StatusValues = String
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "ResourceArn" : GeneralArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TargetId = String
+
+    alias TargetType = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (ThrottlingExceptionMessage)?
+    )
+
+    alias ThrottlingExceptionMessage = String
+
+    alias Token = String
+
+    alias UUId = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "ResourceArn" : GeneralArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateInstanceAccessControlAttributeConfigurationRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "InstanceAccessControlAttributeConfiguration" : InstanceAccessControlAttributeConfiguration
+    )
+
+    alias UpdateInstanceAccessControlAttributeConfigurationResponse = NamedTuple(
+      
+    )
+
+    alias UpdatePermissionSetRequest = NamedTuple(
+      "InstanceArn" : InstanceArn,
+      "PermissionSetArn" : PermissionSetArn,
+      "Description" : (PermissionSetDescription)?,
+      "SessionDuration" : (Duration)?,
+      "RelayState" : (RelayState)?
+    )
+
+    alias UpdatePermissionSetResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ValidationExceptionMessage)?
+    )
+
+    alias ValidationExceptionMessage = String
   end
 end

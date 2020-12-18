@@ -404,8 +404,8 @@ module Aws::NetworkFirewall
     #
     # @overload associate_firewall_policy(**params)
     # @param [Hash] params ({})
-    def associate_firewall_policy(params = {}, **options)
-      req = build_request(:associate_firewall_policy, params)
+    def associate_firewall_policy(, **options)
+      req = build_request(:associate_firewall_policy, )
       req.send_request(options)
     end
 
@@ -484,8 +484,8 @@ module Aws::NetworkFirewall
     #
     # @overload associate_subnets(**params)
     # @param [Hash] params ({})
-    def associate_subnets(params = {}, **options)
-      req = build_request(:associate_subnets, params)
+    def associate_subnets(, **options)
+      req = build_request(:associate_subnets, )
       req.send_request(options)
     end
 
@@ -615,8 +615,8 @@ module Aws::NetworkFirewall
     #
     # @overload create_firewall(**params)
     # @param [Hash] params ({})
-    def create_firewall(params = {}, **options)
-      req = build_request(:create_firewall, params)
+    def create_firewall(, **options)
+      req = build_request(:create_firewall, )
       req.send_request(options)
     end
 
@@ -720,8 +720,8 @@ module Aws::NetworkFirewall
     #
     # @overload create_firewall_policy(**params)
     # @param [Hash] params ({})
-    def create_firewall_policy(params = {}, **options)
-      req = build_request(:create_firewall_policy, params)
+    def create_firewall_policy(, **options)
+      req = build_request(:create_firewall_policy, )
       req.send_request(options)
     end
 
@@ -973,8 +973,8 @@ module Aws::NetworkFirewall
     #
     # @overload create_rule_group(**params)
     # @param [Hash] params ({})
-    def create_rule_group(params = {}, **options)
-      req = build_request(:create_rule_group, params)
+    def create_rule_group(, **options)
+      req = build_request(:create_rule_group, )
       req.send_request(options)
     end
 
@@ -1046,8 +1046,8 @@ module Aws::NetworkFirewall
     #
     # @overload delete_firewall(**params)
     # @param [Hash] params ({})
-    def delete_firewall(params = {}, **options)
-      req = build_request(:delete_firewall, params)
+    def delete_firewall(, **options)
+      req = build_request(:delete_firewall, )
       req.send_request(options)
     end
 
@@ -1090,8 +1090,8 @@ module Aws::NetworkFirewall
     #
     # @overload delete_firewall_policy(**params)
     # @param [Hash] params ({})
-    def delete_firewall_policy(params = {}, **options)
-      req = build_request(:delete_firewall_policy, params)
+    def delete_firewall_policy(, **options)
+      req = build_request(:delete_firewall_policy, )
       req.send_request(options)
     end
 
@@ -1114,8 +1114,8 @@ module Aws::NetworkFirewall
     #
     # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, **options)
-      req = build_request(:delete_resource_policy, params)
+    def delete_resource_policy(, **options)
+      req = build_request(:delete_resource_policy, )
       req.send_request(options)
     end
 
@@ -1171,8 +1171,8 @@ module Aws::NetworkFirewall
     #
     # @overload delete_rule_group(**params)
     # @param [Hash] params ({})
-    def delete_rule_group(params = {}, **options)
-      req = build_request(:delete_rule_group, params)
+    def delete_rule_group(, **options)
+      req = build_request(:delete_rule_group, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::NetworkFirewall
     #
     # @overload describe_firewall(**params)
     # @param [Hash] params ({})
-    def describe_firewall(params = {}, **options)
-      req = build_request(:describe_firewall, params)
+    def describe_firewall(, **options)
+      req = build_request(:describe_firewall, )
       req.send_request(options)
     end
 
@@ -1292,8 +1292,8 @@ module Aws::NetworkFirewall
     #
     # @overload describe_firewall_policy(**params)
     # @param [Hash] params ({})
-    def describe_firewall_policy(params = {}, **options)
-      req = build_request(:describe_firewall_policy, params)
+    def describe_firewall_policy(, **options)
+      req = build_request(:describe_firewall_policy, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::NetworkFirewall
     #
     # @overload describe_logging_configuration(**params)
     # @param [Hash] params ({})
-    def describe_logging_configuration(params = {}, **options)
-      req = build_request(:describe_logging_configuration, params)
+    def describe_logging_configuration(, **options)
+      req = build_request(:describe_logging_configuration, )
       req.send_request(options)
     end
 
@@ -1365,8 +1365,8 @@ module Aws::NetworkFirewall
     #
     # @overload describe_resource_policy(**params)
     # @param [Hash] params ({})
-    def describe_resource_policy(params = {}, **options)
-      req = build_request(:describe_resource_policy, params)
+    def describe_resource_policy(, **options)
+      req = build_request(:describe_resource_policy, )
       req.send_request(options)
     end
 
@@ -1474,8 +1474,8 @@ module Aws::NetworkFirewall
     #
     # @overload describe_rule_group(**params)
     # @param [Hash] params ({})
-    def describe_rule_group(params = {}, **options)
-      req = build_request(:describe_rule_group, params)
+    def describe_rule_group(, **options)
+      req = build_request(:describe_rule_group, )
       req.send_request(options)
     end
 
@@ -1544,8 +1544,8 @@ module Aws::NetworkFirewall
     #
     # @overload disassociate_subnets(**params)
     # @param [Hash] params ({})
-    def disassociate_subnets(params = {}, **options)
-      req = build_request(:disassociate_subnets, params)
+    def disassociate_subnets(, **options)
+      req = build_request(:disassociate_subnets, )
       req.send_request(options)
     end
 
@@ -1591,8 +1591,8 @@ module Aws::NetworkFirewall
     #
     # @overload list_firewall_policies(**params)
     # @param [Hash] params ({})
-    def list_firewall_policies(params = {}, **options)
-      req = build_request(:list_firewall_policies, params)
+    def list_firewall_policies(, **options)
+      req = build_request(:list_firewall_policies, )
       req.send_request(options)
     end
 
@@ -1647,8 +1647,8 @@ module Aws::NetworkFirewall
     #
     # @overload list_firewalls(**params)
     # @param [Hash] params ({})
-    def list_firewalls(params = {}, **options)
-      req = build_request(:list_firewalls, params)
+    def list_firewalls(, **options)
+      req = build_request(:list_firewalls, )
       req.send_request(options)
     end
 
@@ -1694,8 +1694,8 @@ module Aws::NetworkFirewall
     #
     # @overload list_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_rule_groups(params = {}, **options)
-      req = build_request(:list_rule_groups, params)
+    def list_rule_groups(, **options)
+      req = build_request(:list_rule_groups, )
       req.send_request(options)
     end
 
@@ -1751,8 +1751,8 @@ module Aws::NetworkFirewall
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1833,8 +1833,8 @@ module Aws::NetworkFirewall
     #
     # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, **options)
-      req = build_request(:put_resource_policy, params)
+    def put_resource_policy(, **options)
+      req = build_request(:put_resource_policy, )
       req.send_request(options)
     end
 
@@ -1871,8 +1871,8 @@ module Aws::NetworkFirewall
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1904,8 +1904,8 @@ module Aws::NetworkFirewall
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1978,8 +1978,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_firewall_delete_protection(**params)
     # @param [Hash] params ({})
-    def update_firewall_delete_protection(params = {}, **options)
-      req = build_request(:update_firewall_delete_protection, params)
+    def update_firewall_delete_protection(, **options)
+      req = build_request(:update_firewall_delete_protection, )
       req.send_request(options)
     end
 
@@ -2048,8 +2048,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_firewall_description(**params)
     # @param [Hash] params ({})
-    def update_firewall_description(params = {}, **options)
-      req = build_request(:update_firewall_description, params)
+    def update_firewall_description(, **options)
+      req = build_request(:update_firewall_description, )
       req.send_request(options)
     end
 
@@ -2160,8 +2160,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_firewall_policy(**params)
     # @param [Hash] params ({})
-    def update_firewall_policy(params = {}, **options)
-      req = build_request(:update_firewall_policy, params)
+    def update_firewall_policy(, **options)
+      req = build_request(:update_firewall_policy, )
       req.send_request(options)
     end
 
@@ -2229,8 +2229,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_firewall_policy_change_protection(**params)
     # @param [Hash] params ({})
-    def update_firewall_policy_change_protection(params = {}, **options)
-      req = build_request(:update_firewall_policy_change_protection, params)
+    def update_firewall_policy_change_protection(, **options)
+      req = build_request(:update_firewall_policy_change_protection, )
       req.send_request(options)
     end
 
@@ -2312,8 +2312,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_logging_configuration(**params)
     # @param [Hash] params ({})
-    def update_logging_configuration(params = {}, **options)
-      req = build_request(:update_logging_configuration, params)
+    def update_logging_configuration(, **options)
+      req = build_request(:update_logging_configuration, )
       req.send_request(options)
     end
 
@@ -2535,8 +2535,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_rule_group(**params)
     # @param [Hash] params ({})
-    def update_rule_group(params = {}, **options)
-      req = build_request(:update_rule_group, params)
+    def update_rule_group(, **options)
+      req = build_request(:update_rule_group, )
       req.send_request(options)
     end
 
@@ -2604,8 +2604,8 @@ module Aws::NetworkFirewall
     #
     # @overload update_subnet_change_protection(**params)
     # @param [Hash] params ({})
-    def update_subnet_change_protection(params = {}, **options)
-      req = build_request(:update_subnet_change_protection, params)
+    def update_subnet_change_protection(, **options)
+      req = build_request(:update_subnet_change_protection, )
       req.send_request(options)
     end
 

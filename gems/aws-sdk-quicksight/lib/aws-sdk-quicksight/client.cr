@@ -364,8 +364,8 @@ module Aws::QuickSight
     #
     # @overload cancel_ingestion(**params)
     # @param [Hash] params ({})
-    def cancel_ingestion(params = {}, **options)
-      req = build_request(:cancel_ingestion, params)
+    def cancel_ingestion(, **options)
+      req = build_request(:cancel_ingestion, )
       req.send_request(options)
     end
 
@@ -455,8 +455,8 @@ module Aws::QuickSight
     #
     # @overload create_account_customization(**params)
     # @param [Hash] params ({})
-    def create_account_customization(params = {}, **options)
-      req = build_request(:create_account_customization, params)
+    def create_account_customization(, **options)
+      req = build_request(:create_account_customization, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::QuickSight
     #
     # @overload create_analysis(**params)
     # @param [Hash] params ({})
-    def create_analysis(params = {}, **options)
-      req = build_request(:create_analysis, params)
+    def create_analysis(, **options)
+      req = build_request(:create_analysis, )
       req.send_request(options)
     end
 
@@ -752,8 +752,8 @@ module Aws::QuickSight
     #
     # @overload create_dashboard(**params)
     # @param [Hash] params ({})
-    def create_dashboard(params = {}, **options)
-      req = build_request(:create_dashboard, params)
+    def create_dashboard(, **options)
+      req = build_request(:create_dashboard, )
       req.send_request(options)
     end
 
@@ -963,8 +963,8 @@ module Aws::QuickSight
     #
     # @overload create_data_set(**params)
     # @param [Hash] params ({})
-    def create_data_set(params = {}, **options)
-      req = build_request(:create_data_set, params)
+    def create_data_set(, **options)
+      req = build_request(:create_data_set, )
       req.send_request(options)
     end
 
@@ -1248,8 +1248,8 @@ module Aws::QuickSight
     #
     # @overload create_data_source(**params)
     # @param [Hash] params ({})
-    def create_data_source(params = {}, **options)
-      req = build_request(:create_data_source, params)
+    def create_data_source(, **options)
+      req = build_request(:create_data_source, )
       req.send_request(options)
     end
 
@@ -1303,8 +1303,8 @@ module Aws::QuickSight
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -1350,8 +1350,8 @@ module Aws::QuickSight
     #
     # @overload create_group_membership(**params)
     # @param [Hash] params ({})
-    def create_group_membership(params = {}, **options)
-      req = build_request(:create_group_membership, params)
+    def create_group_membership(, **options)
+      req = build_request(:create_group_membership, )
       req.send_request(options)
     end
 
@@ -1431,8 +1431,8 @@ module Aws::QuickSight
     #
     # @overload create_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def create_iam_policy_assignment(params = {}, **options)
-      req = build_request(:create_iam_policy_assignment, params)
+    def create_iam_policy_assignment(, **options)
+      req = build_request(:create_iam_policy_assignment, )
       req.send_request(options)
     end
 
@@ -1485,8 +1485,8 @@ module Aws::QuickSight
     #
     # @overload create_ingestion(**params)
     # @param [Hash] params ({})
-    def create_ingestion(params = {}, **options)
-      req = build_request(:create_ingestion, params)
+    def create_ingestion(, **options)
+      req = build_request(:create_ingestion, )
       req.send_request(options)
     end
 
@@ -1555,8 +1555,8 @@ module Aws::QuickSight
     #
     # @overload create_namespace(**params)
     # @param [Hash] params ({})
-    def create_namespace(params = {}, **options)
-      req = build_request(:create_namespace, params)
+    def create_namespace(, **options)
+      req = build_request(:create_namespace, )
       req.send_request(options)
     end
 
@@ -1669,8 +1669,8 @@ module Aws::QuickSight
     #
     # @overload create_template(**params)
     # @param [Hash] params ({})
-    def create_template(params = {}, **options)
-      req = build_request(:create_template, params)
+    def create_template(, **options)
+      req = build_request(:create_template, )
       req.send_request(options)
     end
 
@@ -1718,8 +1718,8 @@ module Aws::QuickSight
     #
     # @overload create_template_alias(**params)
     # @param [Hash] params ({})
-    def create_template_alias(params = {}, **options)
-      req = build_request(:create_template_alias, params)
+    def create_template_alias(, **options)
+      req = build_request(:create_template_alias, )
       req.send_request(options)
     end
 
@@ -1849,8 +1849,8 @@ module Aws::QuickSight
     #
     # @overload create_theme(**params)
     # @param [Hash] params ({})
-    def create_theme(params = {}, **options)
-      req = build_request(:create_theme, params)
+    def create_theme(, **options)
+      req = build_request(:create_theme, )
       req.send_request(options)
     end
 
@@ -1898,8 +1898,8 @@ module Aws::QuickSight
     #
     # @overload create_theme_alias(**params)
     # @param [Hash] params ({})
-    def create_theme_alias(params = {}, **options)
-      req = build_request(:create_theme_alias, params)
+    def create_theme_alias(, **options)
+      req = build_request(:create_theme_alias, )
       req.send_request(options)
     end
 
@@ -1935,8 +1935,8 @@ module Aws::QuickSight
     #
     # @overload delete_account_customization(**params)
     # @param [Hash] params ({})
-    def delete_account_customization(params = {}, **options)
-      req = build_request(:delete_account_customization, params)
+    def delete_account_customization(, **options)
+      req = build_request(:delete_account_customization, )
       req.send_request(options)
     end
 
@@ -2003,8 +2003,8 @@ module Aws::QuickSight
     #
     # @overload delete_analysis(**params)
     # @param [Hash] params ({})
-    def delete_analysis(params = {}, **options)
-      req = build_request(:delete_analysis, params)
+    def delete_analysis(, **options)
+      req = build_request(:delete_analysis, )
       req.send_request(options)
     end
 
@@ -2047,8 +2047,8 @@ module Aws::QuickSight
     #
     # @overload delete_dashboard(**params)
     # @param [Hash] params ({})
-    def delete_dashboard(params = {}, **options)
-      req = build_request(:delete_dashboard, params)
+    def delete_dashboard(, **options)
+      req = build_request(:delete_dashboard, )
       req.send_request(options)
     end
 
@@ -2086,8 +2086,8 @@ module Aws::QuickSight
     #
     # @overload delete_data_set(**params)
     # @param [Hash] params ({})
-    def delete_data_set(params = {}, **options)
-      req = build_request(:delete_data_set, params)
+    def delete_data_set(, **options)
+      req = build_request(:delete_data_set, )
       req.send_request(options)
     end
 
@@ -2126,8 +2126,8 @@ module Aws::QuickSight
     #
     # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, **options)
-      req = build_request(:delete_data_source, params)
+    def delete_data_source(, **options)
+      req = build_request(:delete_data_source, )
       req.send_request(options)
     end
 
@@ -2166,8 +2166,8 @@ module Aws::QuickSight
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -2212,8 +2212,8 @@ module Aws::QuickSight
     #
     # @overload delete_group_membership(**params)
     # @param [Hash] params ({})
-    def delete_group_membership(params = {}, **options)
-      req = build_request(:delete_group_membership, params)
+    def delete_group_membership(, **options)
+      req = build_request(:delete_group_membership, )
       req.send_request(options)
     end
 
@@ -2252,8 +2252,8 @@ module Aws::QuickSight
     #
     # @overload delete_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def delete_iam_policy_assignment(params = {}, **options)
-      req = build_request(:delete_iam_policy_assignment, params)
+    def delete_iam_policy_assignment(, **options)
+      req = build_request(:delete_iam_policy_assignment, )
       req.send_request(options)
     end
 
@@ -2291,8 +2291,8 @@ module Aws::QuickSight
     #
     # @overload delete_namespace(**params)
     # @param [Hash] params ({})
-    def delete_namespace(params = {}, **options)
-      req = build_request(:delete_namespace, params)
+    def delete_namespace(, **options)
+      req = build_request(:delete_namespace, )
       req.send_request(options)
     end
 
@@ -2336,8 +2336,8 @@ module Aws::QuickSight
     #
     # @overload delete_template(**params)
     # @param [Hash] params ({})
-    def delete_template(params = {}, **options)
-      req = build_request(:delete_template, params)
+    def delete_template(, **options)
+      req = build_request(:delete_template, )
       req.send_request(options)
     end
 
@@ -2385,8 +2385,8 @@ module Aws::QuickSight
     #
     # @overload delete_template_alias(**params)
     # @param [Hash] params ({})
-    def delete_template_alias(params = {}, **options)
-      req = build_request(:delete_template_alias, params)
+    def delete_template_alias(, **options)
+      req = build_request(:delete_template_alias, )
       req.send_request(options)
     end
 
@@ -2431,8 +2431,8 @@ module Aws::QuickSight
     #
     # @overload delete_theme(**params)
     # @param [Hash] params ({})
-    def delete_theme(params = {}, **options)
-      req = build_request(:delete_theme, params)
+    def delete_theme(, **options)
+      req = build_request(:delete_theme, )
       req.send_request(options)
     end
 
@@ -2477,8 +2477,8 @@ module Aws::QuickSight
     #
     # @overload delete_theme_alias(**params)
     # @param [Hash] params ({})
-    def delete_theme_alias(params = {}, **options)
-      req = build_request(:delete_theme_alias, params)
+    def delete_theme_alias(, **options)
+      req = build_request(:delete_theme_alias, )
       req.send_request(options)
     end
 
@@ -2519,8 +2519,8 @@ module Aws::QuickSight
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -2558,8 +2558,8 @@ module Aws::QuickSight
     #
     # @overload delete_user_by_principal_id(**params)
     # @param [Hash] params ({})
-    def delete_user_by_principal_id(params = {}, **options)
-      req = build_request(:delete_user_by_principal_id, params)
+    def delete_user_by_principal_id(, **options)
+      req = build_request(:delete_user_by_principal_id, )
       req.send_request(options)
     end
 
@@ -2663,8 +2663,8 @@ module Aws::QuickSight
     #
     # @overload describe_account_customization(**params)
     # @param [Hash] params ({})
-    def describe_account_customization(params = {}, **options)
-      req = build_request(:describe_account_customization, params)
+    def describe_account_customization(, **options)
+      req = build_request(:describe_account_customization, )
       req.send_request(options)
     end
 
@@ -2700,8 +2700,8 @@ module Aws::QuickSight
     #
     # @overload describe_account_settings(**params)
     # @param [Hash] params ({})
-    def describe_account_settings(params = {}, **options)
-      req = build_request(:describe_account_settings, params)
+    def describe_account_settings(, **options)
+      req = build_request(:describe_account_settings, )
       req.send_request(options)
     end
 
@@ -2752,8 +2752,8 @@ module Aws::QuickSight
     #
     # @overload describe_analysis(**params)
     # @param [Hash] params ({})
-    def describe_analysis(params = {}, **options)
-      req = build_request(:describe_analysis, params)
+    def describe_analysis(, **options)
+      req = build_request(:describe_analysis, )
       req.send_request(options)
     end
 
@@ -2798,8 +2798,8 @@ module Aws::QuickSight
     #
     # @overload describe_analysis_permissions(**params)
     # @param [Hash] params ({})
-    def describe_analysis_permissions(params = {}, **options)
-      req = build_request(:describe_analysis_permissions, params)
+    def describe_analysis_permissions(, **options)
+      req = build_request(:describe_analysis_permissions, )
       req.send_request(options)
     end
 
@@ -2864,8 +2864,8 @@ module Aws::QuickSight
     #
     # @overload describe_dashboard(**params)
     # @param [Hash] params ({})
-    def describe_dashboard(params = {}, **options)
-      req = build_request(:describe_dashboard, params)
+    def describe_dashboard(, **options)
+      req = build_request(:describe_dashboard, )
       req.send_request(options)
     end
 
@@ -2908,8 +2908,8 @@ module Aws::QuickSight
     #
     # @overload describe_dashboard_permissions(**params)
     # @param [Hash] params ({})
-    def describe_dashboard_permissions(params = {}, **options)
-      req = build_request(:describe_dashboard_permissions, params)
+    def describe_dashboard_permissions(, **options)
+      req = build_request(:describe_dashboard_permissions, )
       req.send_request(options)
     end
 
@@ -3017,8 +3017,8 @@ module Aws::QuickSight
     #
     # @overload describe_data_set(**params)
     # @param [Hash] params ({})
-    def describe_data_set(params = {}, **options)
-      req = build_request(:describe_data_set, params)
+    def describe_data_set(, **options)
+      req = build_request(:describe_data_set, )
       req.send_request(options)
     end
 
@@ -3064,8 +3064,8 @@ module Aws::QuickSight
     #
     # @overload describe_data_set_permissions(**params)
     # @param [Hash] params ({})
-    def describe_data_set_permissions(params = {}, **options)
-      req = build_request(:describe_data_set_permissions, params)
+    def describe_data_set_permissions(, **options)
+      req = build_request(:describe_data_set_permissions, )
       req.send_request(options)
     end
 
@@ -3206,8 +3206,8 @@ module Aws::QuickSight
     #
     # @overload describe_data_source(**params)
     # @param [Hash] params ({})
-    def describe_data_source(params = {}, **options)
-      req = build_request(:describe_data_source, params)
+    def describe_data_source(, **options)
+      req = build_request(:describe_data_source, )
       req.send_request(options)
     end
 
@@ -3250,8 +3250,8 @@ module Aws::QuickSight
     #
     # @overload describe_data_source_permissions(**params)
     # @param [Hash] params ({})
-    def describe_data_source_permissions(params = {}, **options)
-      req = build_request(:describe_data_source_permissions, params)
+    def describe_data_source_permissions(, **options)
+      req = build_request(:describe_data_source_permissions, )
       req.send_request(options)
     end
 
@@ -3296,8 +3296,8 @@ module Aws::QuickSight
     #
     # @overload describe_group(**params)
     # @param [Hash] params ({})
-    def describe_group(params = {}, **options)
-      req = build_request(:describe_group, params)
+    def describe_group(, **options)
+      req = build_request(:describe_group, )
       req.send_request(options)
     end
 
@@ -3345,8 +3345,8 @@ module Aws::QuickSight
     #
     # @overload describe_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def describe_iam_policy_assignment(params = {}, **options)
-      req = build_request(:describe_iam_policy_assignment, params)
+    def describe_iam_policy_assignment(, **options)
+      req = build_request(:describe_iam_policy_assignment, )
       req.send_request(options)
     end
 
@@ -3398,8 +3398,8 @@ module Aws::QuickSight
     #
     # @overload describe_ingestion(**params)
     # @param [Hash] params ({})
-    def describe_ingestion(params = {}, **options)
-      req = build_request(:describe_ingestion, params)
+    def describe_ingestion(, **options)
+      req = build_request(:describe_ingestion, )
       req.send_request(options)
     end
 
@@ -3441,8 +3441,8 @@ module Aws::QuickSight
     #
     # @overload describe_namespace(**params)
     # @param [Hash] params ({})
-    def describe_namespace(params = {}, **options)
-      req = build_request(:describe_namespace, params)
+    def describe_namespace(, **options)
+      req = build_request(:describe_namespace, )
       req.send_request(options)
     end
 
@@ -3518,8 +3518,8 @@ module Aws::QuickSight
     #
     # @overload describe_template(**params)
     # @param [Hash] params ({})
-    def describe_template(params = {}, **options)
-      req = build_request(:describe_template, params)
+    def describe_template(, **options)
+      req = build_request(:describe_template, )
       req.send_request(options)
     end
 
@@ -3565,8 +3565,8 @@ module Aws::QuickSight
     #
     # @overload describe_template_alias(**params)
     # @param [Hash] params ({})
-    def describe_template_alias(params = {}, **options)
-      req = build_request(:describe_template_alias, params)
+    def describe_template_alias(, **options)
+      req = build_request(:describe_template_alias, )
       req.send_request(options)
     end
 
@@ -3609,8 +3609,8 @@ module Aws::QuickSight
     #
     # @overload describe_template_permissions(**params)
     # @param [Hash] params ({})
-    def describe_template_permissions(params = {}, **options)
-      req = build_request(:describe_template_permissions, params)
+    def describe_template_permissions(, **options)
+      req = build_request(:describe_template_permissions, )
       req.send_request(options)
     end
 
@@ -3698,8 +3698,8 @@ module Aws::QuickSight
     #
     # @overload describe_theme(**params)
     # @param [Hash] params ({})
-    def describe_theme(params = {}, **options)
-      req = build_request(:describe_theme, params)
+    def describe_theme(, **options)
+      req = build_request(:describe_theme, )
       req.send_request(options)
     end
 
@@ -3741,8 +3741,8 @@ module Aws::QuickSight
     #
     # @overload describe_theme_alias(**params)
     # @param [Hash] params ({})
-    def describe_theme_alias(params = {}, **options)
-      req = build_request(:describe_theme_alias, params)
+    def describe_theme_alias(, **options)
+      req = build_request(:describe_theme_alias, )
       req.send_request(options)
     end
 
@@ -3785,8 +3785,8 @@ module Aws::QuickSight
     #
     # @overload describe_theme_permissions(**params)
     # @param [Hash] params ({})
-    def describe_theme_permissions(params = {}, **options)
-      req = build_request(:describe_theme_permissions, params)
+    def describe_theme_permissions(, **options)
+      req = build_request(:describe_theme_permissions, )
       req.send_request(options)
     end
 
@@ -3833,8 +3833,8 @@ module Aws::QuickSight
     #
     # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, **options)
-      req = build_request(:describe_user, params)
+    def describe_user(, **options)
+      req = build_request(:describe_user, )
       req.send_request(options)
     end
 
@@ -3957,8 +3957,8 @@ module Aws::QuickSight
     #
     # @overload get_dashboard_embed_url(**params)
     # @param [Hash] params ({})
-    def get_dashboard_embed_url(params = {}, **options)
-      req = build_request(:get_dashboard_embed_url, params)
+    def get_dashboard_embed_url(, **options)
+      req = build_request(:get_dashboard_embed_url, )
       req.send_request(options)
     end
 
@@ -4051,8 +4051,8 @@ module Aws::QuickSight
     #
     # @overload get_session_embed_url(**params)
     # @param [Hash] params ({})
-    def get_session_embed_url(params = {}, **options)
-      req = build_request(:get_session_embed_url, params)
+    def get_session_embed_url(, **options)
+      req = build_request(:get_session_embed_url, )
       req.send_request(options)
     end
 
@@ -4102,8 +4102,8 @@ module Aws::QuickSight
     #
     # @overload list_analyses(**params)
     # @param [Hash] params ({})
-    def list_analyses(params = {}, **options)
-      req = build_request(:list_analyses, params)
+    def list_analyses(, **options)
+      req = build_request(:list_analyses, )
       req.send_request(options)
     end
 
@@ -4159,8 +4159,8 @@ module Aws::QuickSight
     #
     # @overload list_dashboard_versions(**params)
     # @param [Hash] params ({})
-    def list_dashboard_versions(params = {}, **options)
-      req = build_request(:list_dashboard_versions, params)
+    def list_dashboard_versions(, **options)
+      req = build_request(:list_dashboard_versions, )
       req.send_request(options)
     end
 
@@ -4212,8 +4212,8 @@ module Aws::QuickSight
     #
     # @overload list_dashboards(**params)
     # @param [Hash] params ({})
-    def list_dashboards(params = {}, **options)
-      req = build_request(:list_dashboards, params)
+    def list_dashboards(, **options)
+      req = build_request(:list_dashboards, )
       req.send_request(options)
     end
 
@@ -4271,8 +4271,8 @@ module Aws::QuickSight
     #
     # @overload list_data_sets(**params)
     # @param [Hash] params ({})
-    def list_data_sets(params = {}, **options)
-      req = build_request(:list_data_sets, params)
+    def list_data_sets(, **options)
+      req = build_request(:list_data_sets, )
       req.send_request(options)
     end
 
@@ -4423,8 +4423,8 @@ module Aws::QuickSight
     #
     # @overload list_data_sources(**params)
     # @param [Hash] params ({})
-    def list_data_sources(params = {}, **options)
-      req = build_request(:list_data_sources, params)
+    def list_data_sources(, **options)
+      req = build_request(:list_data_sources, )
       req.send_request(options)
     end
 
@@ -4477,8 +4477,8 @@ module Aws::QuickSight
     #
     # @overload list_group_memberships(**params)
     # @param [Hash] params ({})
-    def list_group_memberships(params = {}, **options)
-      req = build_request(:list_group_memberships, params)
+    def list_group_memberships(, **options)
+      req = build_request(:list_group_memberships, )
       req.send_request(options)
     end
 
@@ -4529,8 +4529,8 @@ module Aws::QuickSight
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -4582,8 +4582,8 @@ module Aws::QuickSight
     #
     # @overload list_iam_policy_assignments(**params)
     # @param [Hash] params ({})
-    def list_iam_policy_assignments(params = {}, **options)
-      req = build_request(:list_iam_policy_assignments, params)
+    def list_iam_policy_assignments(, **options)
+      req = build_request(:list_iam_policy_assignments, )
       req.send_request(options)
     end
 
@@ -4637,8 +4637,8 @@ module Aws::QuickSight
     #
     # @overload list_iam_policy_assignments_for_user(**params)
     # @param [Hash] params ({})
-    def list_iam_policy_assignments_for_user(params = {}, **options)
-      req = build_request(:list_iam_policy_assignments_for_user, params)
+    def list_iam_policy_assignments_for_user(, **options)
+      req = build_request(:list_iam_policy_assignments_for_user, )
       req.send_request(options)
     end
 
@@ -4700,8 +4700,8 @@ module Aws::QuickSight
     #
     # @overload list_ingestions(**params)
     # @param [Hash] params ({})
-    def list_ingestions(params = {}, **options)
-      req = build_request(:list_ingestions, params)
+    def list_ingestions(, **options)
+      req = build_request(:list_ingestions, )
       req.send_request(options)
     end
 
@@ -4752,8 +4752,8 @@ module Aws::QuickSight
     #
     # @overload list_namespaces(**params)
     # @param [Hash] params ({})
-    def list_namespaces(params = {}, **options)
-      req = build_request(:list_namespaces, params)
+    def list_namespaces(, **options)
+      req = build_request(:list_namespaces, )
       req.send_request(options)
     end
 
@@ -4787,8 +4787,8 @@ module Aws::QuickSight
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -4840,8 +4840,8 @@ module Aws::QuickSight
     #
     # @overload list_template_aliases(**params)
     # @param [Hash] params ({})
-    def list_template_aliases(params = {}, **options)
-      req = build_request(:list_template_aliases, params)
+    def list_template_aliases(, **options)
+      req = build_request(:list_template_aliases, )
       req.send_request(options)
     end
 
@@ -4896,8 +4896,8 @@ module Aws::QuickSight
     #
     # @overload list_template_versions(**params)
     # @param [Hash] params ({})
-    def list_template_versions(params = {}, **options)
-      req = build_request(:list_template_versions, params)
+    def list_template_versions(, **options)
+      req = build_request(:list_template_versions, )
       req.send_request(options)
     end
 
@@ -4948,8 +4948,8 @@ module Aws::QuickSight
     #
     # @overload list_templates(**params)
     # @param [Hash] params ({})
-    def list_templates(params = {}, **options)
-      req = build_request(:list_templates, params)
+    def list_templates(, **options)
+      req = build_request(:list_templates, )
       req.send_request(options)
     end
 
@@ -4999,8 +4999,8 @@ module Aws::QuickSight
     #
     # @overload list_theme_aliases(**params)
     # @param [Hash] params ({})
-    def list_theme_aliases(params = {}, **options)
-      req = build_request(:list_theme_aliases, params)
+    def list_theme_aliases(, **options)
+      req = build_request(:list_theme_aliases, )
       req.send_request(options)
     end
 
@@ -5052,8 +5052,8 @@ module Aws::QuickSight
     #
     # @overload list_theme_versions(**params)
     # @param [Hash] params ({})
-    def list_theme_versions(params = {}, **options)
-      req = build_request(:list_theme_versions, params)
+    def list_theme_versions(, **options)
+      req = build_request(:list_theme_versions, )
       req.send_request(options)
     end
 
@@ -5115,8 +5115,8 @@ module Aws::QuickSight
     #
     # @overload list_themes(**params)
     # @param [Hash] params ({})
-    def list_themes(params = {}, **options)
-      req = build_request(:list_themes, params)
+    def list_themes(, **options)
+      req = build_request(:list_themes, )
       req.send_request(options)
     end
 
@@ -5172,8 +5172,8 @@ module Aws::QuickSight
     #
     # @overload list_user_groups(**params)
     # @param [Hash] params ({})
-    def list_user_groups(params = {}, **options)
-      req = build_request(:list_user_groups, params)
+    def list_user_groups(, **options)
+      req = build_request(:list_user_groups, )
       req.send_request(options)
     end
 
@@ -5228,8 +5228,8 @@ module Aws::QuickSight
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -5364,8 +5364,8 @@ module Aws::QuickSight
     #
     # @overload register_user(**params)
     # @param [Hash] params ({})
-    def register_user(params = {}, **options)
-      req = build_request(:register_user, params)
+    def register_user(, **options)
+      req = build_request(:register_user, )
       req.send_request(options)
     end
 
@@ -5402,8 +5402,8 @@ module Aws::QuickSight
     #
     # @overload restore_analysis(**params)
     # @param [Hash] params ({})
-    def restore_analysis(params = {}, **options)
-      req = build_request(:restore_analysis, params)
+    def restore_analysis(, **options)
+      req = build_request(:restore_analysis, )
       req.send_request(options)
     end
 
@@ -5464,8 +5464,8 @@ module Aws::QuickSight
     #
     # @overload search_analyses(**params)
     # @param [Hash] params ({})
-    def search_analyses(params = {}, **options)
-      req = build_request(:search_analyses, params)
+    def search_analyses(, **options)
+      req = build_request(:search_analyses, )
       req.send_request(options)
     end
 
@@ -5530,8 +5530,8 @@ module Aws::QuickSight
     #
     # @overload search_dashboards(**params)
     # @param [Hash] params ({})
-    def search_dashboards(params = {}, **options)
-      req = build_request(:search_dashboards, params)
+    def search_dashboards(, **options)
+      req = build_request(:search_dashboards, )
       req.send_request(options)
     end
 
@@ -5593,8 +5593,8 @@ module Aws::QuickSight
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5628,8 +5628,8 @@ module Aws::QuickSight
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5685,8 +5685,8 @@ module Aws::QuickSight
     #
     # @overload update_account_customization(**params)
     # @param [Hash] params ({})
-    def update_account_customization(params = {}, **options)
-      req = build_request(:update_account_customization, params)
+    def update_account_customization(, **options)
+      req = build_request(:update_account_customization, )
       req.send_request(options)
     end
 
@@ -5728,8 +5728,8 @@ module Aws::QuickSight
     #
     # @overload update_account_settings(**params)
     # @param [Hash] params ({})
-    def update_account_settings(params = {}, **options)
-      req = build_request(:update_account_settings, params)
+    def update_account_settings(, **options)
+      req = build_request(:update_account_settings, )
       req.send_request(options)
     end
 
@@ -5828,8 +5828,8 @@ module Aws::QuickSight
     #
     # @overload update_analysis(**params)
     # @param [Hash] params ({})
-    def update_analysis(params = {}, **options)
-      req = build_request(:update_analysis, params)
+    def update_analysis(, **options)
+      req = build_request(:update_analysis, )
       req.send_request(options)
     end
 
@@ -5894,8 +5894,8 @@ module Aws::QuickSight
     #
     # @overload update_analysis_permissions(**params)
     # @param [Hash] params ({})
-    def update_analysis_permissions(params = {}, **options)
-      req = build_request(:update_analysis_permissions, params)
+    def update_analysis_permissions(, **options)
+      req = build_request(:update_analysis_permissions, )
       req.send_request(options)
     end
 
@@ -6038,8 +6038,8 @@ module Aws::QuickSight
     #
     # @overload update_dashboard(**params)
     # @param [Hash] params ({})
-    def update_dashboard(params = {}, **options)
-      req = build_request(:update_dashboard, params)
+    def update_dashboard(, **options)
+      req = build_request(:update_dashboard, )
       req.send_request(options)
     end
 
@@ -6100,8 +6100,8 @@ module Aws::QuickSight
     #
     # @overload update_dashboard_permissions(**params)
     # @param [Hash] params ({})
-    def update_dashboard_permissions(params = {}, **options)
-      req = build_request(:update_dashboard_permissions, params)
+    def update_dashboard_permissions(, **options)
+      req = build_request(:update_dashboard_permissions, )
       req.send_request(options)
     end
 
@@ -6143,8 +6143,8 @@ module Aws::QuickSight
     #
     # @overload update_dashboard_published_version(**params)
     # @param [Hash] params ({})
-    def update_dashboard_published_version(params = {}, **options)
-      req = build_request(:update_dashboard_published_version, params)
+    def update_dashboard_published_version(, **options)
+      req = build_request(:update_dashboard_published_version, )
       req.send_request(options)
     end
 
@@ -6334,8 +6334,8 @@ module Aws::QuickSight
     #
     # @overload update_data_set(**params)
     # @param [Hash] params ({})
-    def update_data_set(params = {}, **options)
-      req = build_request(:update_data_set, params)
+    def update_data_set(, **options)
+      req = build_request(:update_data_set, )
       req.send_request(options)
     end
 
@@ -6394,8 +6394,8 @@ module Aws::QuickSight
     #
     # @overload update_data_set_permissions(**params)
     # @param [Hash] params ({})
-    def update_data_set_permissions(params = {}, **options)
-      req = build_request(:update_data_set_permissions, params)
+    def update_data_set_permissions(, **options)
+      req = build_request(:update_data_set_permissions, )
       req.send_request(options)
     end
 
@@ -6653,8 +6653,8 @@ module Aws::QuickSight
     #
     # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, **options)
-      req = build_request(:update_data_source, params)
+    def update_data_source(, **options)
+      req = build_request(:update_data_source, )
       req.send_request(options)
     end
 
@@ -6712,8 +6712,8 @@ module Aws::QuickSight
     #
     # @overload update_data_source_permissions(**params)
     # @param [Hash] params ({})
-    def update_data_source_permissions(params = {}, **options)
-      req = build_request(:update_data_source_permissions, params)
+    def update_data_source_permissions(, **options)
+      req = build_request(:update_data_source_permissions, )
       req.send_request(options)
     end
 
@@ -6761,8 +6761,8 @@ module Aws::QuickSight
     #
     # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, **options)
-      req = build_request(:update_group, params)
+    def update_group(, **options)
+      req = build_request(:update_group, )
       req.send_request(options)
     end
 
@@ -6839,8 +6839,8 @@ module Aws::QuickSight
     #
     # @overload update_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def update_iam_policy_assignment(params = {}, **options)
-      req = build_request(:update_iam_policy_assignment, params)
+    def update_iam_policy_assignment(, **options)
+      req = build_request(:update_iam_policy_assignment, )
       req.send_request(options)
     end
 
@@ -6923,8 +6923,8 @@ module Aws::QuickSight
     #
     # @overload update_template(**params)
     # @param [Hash] params ({})
-    def update_template(params = {}, **options)
-      req = build_request(:update_template, params)
+    def update_template(, **options)
+      req = build_request(:update_template, )
       req.send_request(options)
     end
 
@@ -6974,8 +6974,8 @@ module Aws::QuickSight
     #
     # @overload update_template_alias(**params)
     # @param [Hash] params ({})
-    def update_template_alias(params = {}, **options)
-      req = build_request(:update_template_alias, params)
+    def update_template_alias(, **options)
+      req = build_request(:update_template_alias, )
       req.send_request(options)
     end
 
@@ -7035,8 +7035,8 @@ module Aws::QuickSight
     #
     # @overload update_template_permissions(**params)
     # @param [Hash] params ({})
-    def update_template_permissions(params = {}, **options)
-      req = build_request(:update_template_permissions, params)
+    def update_template_permissions(, **options)
+      req = build_request(:update_template_permissions, )
       req.send_request(options)
     end
 
@@ -7138,8 +7138,8 @@ module Aws::QuickSight
     #
     # @overload update_theme(**params)
     # @param [Hash] params ({})
-    def update_theme(params = {}, **options)
-      req = build_request(:update_theme, params)
+    def update_theme(, **options)
+      req = build_request(:update_theme, )
       req.send_request(options)
     end
 
@@ -7185,8 +7185,8 @@ module Aws::QuickSight
     #
     # @overload update_theme_alias(**params)
     # @param [Hash] params ({})
-    def update_theme_alias(params = {}, **options)
-      req = build_request(:update_theme_alias, params)
+    def update_theme_alias(, **options)
+      req = build_request(:update_theme_alias, )
       req.send_request(options)
     end
 
@@ -7288,8 +7288,8 @@ module Aws::QuickSight
     #
     # @overload update_theme_permissions(**params)
     # @param [Hash] params ({})
-    def update_theme_permissions(params = {}, **options)
-      req = build_request(:update_theme_permissions, params)
+    def update_theme_permissions(, **options)
+      req = build_request(:update_theme_permissions, )
       req.send_request(options)
     end
 
@@ -7394,8 +7394,8 @@ module Aws::QuickSight
     #
     # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, **options)
-      req = build_request(:update_user, params)
+    def update_user(, **options)
+      req = build_request(:update_user, )
       req.send_request(options)
     end
 

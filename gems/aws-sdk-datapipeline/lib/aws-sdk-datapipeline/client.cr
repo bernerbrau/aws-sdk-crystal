@@ -375,8 +375,8 @@ module Aws::DataPipeline
     #
     # @overload activate_pipeline(**params)
     # @param [Hash] params ({})
-    def activate_pipeline(params = {}, **options)
-      req = build_request(:activate_pipeline, params)
+    def activate_pipeline(, **options)
+      req = build_request(:activate_pipeline, )
       req.send_request(options)
     end
 
@@ -406,8 +406,8 @@ module Aws::DataPipeline
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -472,8 +472,8 @@ module Aws::DataPipeline
     #
     # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, **options)
-      req = build_request(:create_pipeline, params)
+    def create_pipeline(, **options)
+      req = build_request(:create_pipeline, )
       req.send_request(options)
     end
 
@@ -506,8 +506,8 @@ module Aws::DataPipeline
     #
     # @overload deactivate_pipeline(**params)
     # @param [Hash] params ({})
-    def deactivate_pipeline(params = {}, **options)
-      req = build_request(:deactivate_pipeline, params)
+    def deactivate_pipeline(, **options)
+      req = build_request(:deactivate_pipeline, )
       req.send_request(options)
     end
 
@@ -535,8 +535,8 @@ module Aws::DataPipeline
     #
     # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, **options)
-      req = build_request(:delete_pipeline, params)
+    def delete_pipeline(, **options)
+      req = build_request(:delete_pipeline, )
       req.send_request(options)
     end
 
@@ -595,8 +595,8 @@ module Aws::DataPipeline
     #
     # @overload describe_objects(**params)
     # @param [Hash] params ({})
-    def describe_objects(params = {}, **options)
-      req = build_request(:describe_objects, params)
+    def describe_objects(, **options)
+      req = build_request(:describe_objects, )
       req.send_request(options)
     end
 
@@ -644,8 +644,8 @@ module Aws::DataPipeline
     #
     # @overload describe_pipelines(**params)
     # @param [Hash] params ({})
-    def describe_pipelines(params = {}, **options)
-      req = build_request(:describe_pipelines, params)
+    def describe_pipelines(, **options)
+      req = build_request(:describe_pipelines, )
       req.send_request(options)
     end
 
@@ -682,8 +682,8 @@ module Aws::DataPipeline
     #
     # @overload evaluate_expression(**params)
     # @param [Hash] params ({})
-    def evaluate_expression(params = {}, **options)
-      req = build_request(:evaluate_expression, params)
+    def evaluate_expression(, **options)
+      req = build_request(:evaluate_expression, )
       req.send_request(options)
     end
 
@@ -734,8 +734,8 @@ module Aws::DataPipeline
     #
     # @overload get_pipeline_definition(**params)
     # @param [Hash] params ({})
-    def get_pipeline_definition(params = {}, **options)
-      req = build_request(:get_pipeline_definition, params)
+    def get_pipeline_definition(, **options)
+      req = build_request(:get_pipeline_definition, )
       req.send_request(options)
     end
 
@@ -774,8 +774,8 @@ module Aws::DataPipeline
     #
     # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, **options)
-      req = build_request(:list_pipelines, params)
+    def list_pipelines(, **options)
+      req = build_request(:list_pipelines, )
       req.send_request(options)
     end
 
@@ -851,8 +851,8 @@ module Aws::DataPipeline
     #
     # @overload poll_for_task(**params)
     # @param [Hash] params ({})
-    def poll_for_task(params = {}, **options)
-      req = build_request(:poll_for_task, params)
+    def poll_for_task(, **options)
+      req = build_request(:poll_for_task, )
       req.send_request(options)
     end
 
@@ -943,8 +943,8 @@ module Aws::DataPipeline
     #
     # @overload put_pipeline_definition(**params)
     # @param [Hash] params ({})
-    def put_pipeline_definition(params = {}, **options)
-      req = build_request(:put_pipeline_definition, params)
+    def put_pipeline_definition(, **options)
+      req = build_request(:put_pipeline_definition, )
       req.send_request(options)
     end
 
@@ -1013,8 +1013,8 @@ module Aws::DataPipeline
     #
     # @overload query_objects(**params)
     # @param [Hash] params ({})
-    def query_objects(params = {}, **options)
-      req = build_request(:query_objects, params)
+    def query_objects(, **options)
+      req = build_request(:query_objects, )
       req.send_request(options)
     end
 
@@ -1039,8 +1039,8 @@ module Aws::DataPipeline
     #
     # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, **options)
-      req = build_request(:remove_tags, params)
+    def remove_tags(, **options)
+      req = build_request(:remove_tags, )
       req.send_request(options)
     end
 
@@ -1091,8 +1091,8 @@ module Aws::DataPipeline
     #
     # @overload report_task_progress(**params)
     # @param [Hash] params ({})
-    def report_task_progress(params = {}, **options)
-      req = build_request(:report_task_progress, params)
+    def report_task_progress(, **options)
+      req = build_request(:report_task_progress, )
       req.send_request(options)
     end
 
@@ -1140,8 +1140,8 @@ module Aws::DataPipeline
     #
     # @overload report_task_runner_heartbeat(**params)
     # @param [Hash] params ({})
-    def report_task_runner_heartbeat(params = {}, **options)
-      req = build_request(:report_task_runner_heartbeat, params)
+    def report_task_runner_heartbeat(, **options)
+      req = build_request(:report_task_runner_heartbeat, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::DataPipeline
     #
     # @overload set_status(**params)
     # @param [Hash] params ({})
-    def set_status(params = {}, **options)
-      req = build_request(:set_status, params)
+    def set_status(, **options)
+      req = build_request(:set_status, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::DataPipeline
     #
     # @overload set_task_status(**params)
     # @param [Hash] params ({})
-    def set_task_status(params = {}, **options)
-      req = build_request(:set_task_status, params)
+    def set_task_status(, **options)
+      req = build_request(:set_task_status, )
       req.send_request(options)
     end
 
@@ -1311,8 +1311,8 @@ module Aws::DataPipeline
     #
     # @overload validate_pipeline_definition(**params)
     # @param [Hash] params ({})
-    def validate_pipeline_definition(params = {}, **options)
-      req = build_request(:validate_pipeline_definition, params)
+    def validate_pipeline_definition(, **options)
+      req = build_request(:validate_pipeline_definition, )
       req.send_request(options)
     end
 

@@ -249,5 +249,61 @@ module Aws::SageMakerRuntime
       include Aws::Structure
     end
 
+    alias BodyBlob = String | Array(UInt8) | IO
+
+    alias CustomAttributesHeader = String
+
+    alias EndpointName = String
+
+    alias Header = String
+
+    alias InferenceId = String
+
+    alias InternalFailure = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias InvokeEndpointInput = NamedTuple(
+      "EndpointName" : EndpointName,
+      "Body" : BodyBlob,
+      "ContentType" : (Header)?,
+      "Accept" : (Header)?,
+      "CustomAttributes" : (CustomAttributesHeader)?,
+      "TargetModel" : (TargetModelHeader)?,
+      "TargetVariant" : (TargetVariantHeader)?,
+      "InferenceId" : (InferenceId)?
+    )
+
+    alias InvokeEndpointOutput = NamedTuple(
+      "Body" : BodyBlob,
+      "ContentType" : (Header)?,
+      "InvokedProductionVariant" : (Header)?,
+      "CustomAttributes" : (CustomAttributesHeader)?
+    )
+
+    alias LogStreamArn = String
+
+    alias Message = String
+
+    alias ModelError = NamedTuple(
+      "Message" : (Message)?,
+      "OriginalStatusCode" : (StatusCode)?,
+      "OriginalMessage" : (Message)?,
+      "LogStreamArn" : (LogStreamArn)?
+    )
+
+    alias ServiceUnavailable = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias StatusCode = Int32
+
+    alias TargetModelHeader = String
+
+    alias TargetVariantHeader = String
+
+    alias ValidationError = NamedTuple(
+      "Message" : (Message)?
+    )
   end
 end

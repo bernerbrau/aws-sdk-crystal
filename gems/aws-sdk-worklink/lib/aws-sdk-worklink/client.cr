@@ -357,8 +357,8 @@ module Aws::WorkLink
     #
     # @overload associate_domain(**params)
     # @param [Hash] params ({})
-    def associate_domain(params = {}, **options)
-      req = build_request(:associate_domain, params)
+    def associate_domain(, **options)
+      req = build_request(:associate_domain, )
       req.send_request(options)
     end
 
@@ -396,8 +396,8 @@ module Aws::WorkLink
     #
     # @overload associate_website_authorization_provider(**params)
     # @param [Hash] params ({})
-    def associate_website_authorization_provider(params = {}, **options)
-      req = build_request(:associate_website_authorization_provider, params)
+    def associate_website_authorization_provider(, **options)
+      req = build_request(:associate_website_authorization_provider, )
       req.send_request(options)
     end
 
@@ -434,8 +434,8 @@ module Aws::WorkLink
     #
     # @overload associate_website_certificate_authority(**params)
     # @param [Hash] params ({})
-    def associate_website_certificate_authority(params = {}, **options)
-      req = build_request(:associate_website_certificate_authority, params)
+    def associate_website_certificate_authority(, **options)
+      req = build_request(:associate_website_certificate_authority, )
       req.send_request(options)
     end
 
@@ -480,8 +480,8 @@ module Aws::WorkLink
     #
     # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, **options)
-      req = build_request(:create_fleet, params)
+    def create_fleet(, **options)
+      req = build_request(:create_fleet, )
       req.send_request(options)
     end
 
@@ -503,8 +503,8 @@ module Aws::WorkLink
     #
     # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, **options)
-      req = build_request(:delete_fleet, params)
+    def delete_fleet(, **options)
+      req = build_request(:delete_fleet, )
       req.send_request(options)
     end
 
@@ -532,8 +532,8 @@ module Aws::WorkLink
     #
     # @overload describe_audit_stream_configuration(**params)
     # @param [Hash] params ({})
-    def describe_audit_stream_configuration(params = {}, **options)
-      req = build_request(:describe_audit_stream_configuration, params)
+    def describe_audit_stream_configuration(, **options)
+      req = build_request(:describe_audit_stream_configuration, )
       req.send_request(options)
     end
 
@@ -567,8 +567,8 @@ module Aws::WorkLink
     #
     # @overload describe_company_network_configuration(**params)
     # @param [Hash] params ({})
-    def describe_company_network_configuration(params = {}, **options)
-      req = build_request(:describe_company_network_configuration, params)
+    def describe_company_network_configuration(, **options)
+      req = build_request(:describe_company_network_configuration, )
       req.send_request(options)
     end
 
@@ -615,8 +615,8 @@ module Aws::WorkLink
     #
     # @overload describe_device(**params)
     # @param [Hash] params ({})
-    def describe_device(params = {}, **options)
-      req = build_request(:describe_device, params)
+    def describe_device(, **options)
+      req = build_request(:describe_device, )
       req.send_request(options)
     end
 
@@ -643,8 +643,8 @@ module Aws::WorkLink
     #
     # @overload describe_device_policy_configuration(**params)
     # @param [Hash] params ({})
-    def describe_device_policy_configuration(params = {}, **options)
-      req = build_request(:describe_device_policy_configuration, params)
+    def describe_device_policy_configuration(, **options)
+      req = build_request(:describe_device_policy_configuration, )
       req.send_request(options)
     end
 
@@ -683,8 +683,8 @@ module Aws::WorkLink
     #
     # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, **options)
-      req = build_request(:describe_domain, params)
+    def describe_domain(, **options)
+      req = build_request(:describe_domain, )
       req.send_request(options)
     end
 
@@ -727,8 +727,8 @@ module Aws::WorkLink
     #
     # @overload describe_fleet_metadata(**params)
     # @param [Hash] params ({})
-    def describe_fleet_metadata(params = {}, **options)
-      req = build_request(:describe_fleet_metadata, params)
+    def describe_fleet_metadata(, **options)
+      req = build_request(:describe_fleet_metadata, )
       req.send_request(options)
     end
 
@@ -759,8 +759,8 @@ module Aws::WorkLink
     #
     # @overload describe_identity_provider_configuration(**params)
     # @param [Hash] params ({})
-    def describe_identity_provider_configuration(params = {}, **options)
-      req = build_request(:describe_identity_provider_configuration, params)
+    def describe_identity_provider_configuration(, **options)
+      req = build_request(:describe_identity_provider_configuration, )
       req.send_request(options)
     end
 
@@ -795,8 +795,8 @@ module Aws::WorkLink
     #
     # @overload describe_website_certificate_authority(**params)
     # @param [Hash] params ({})
-    def describe_website_certificate_authority(params = {}, **options)
-      req = build_request(:describe_website_certificate_authority, params)
+    def describe_website_certificate_authority(, **options)
+      req = build_request(:describe_website_certificate_authority, )
       req.send_request(options)
     end
 
@@ -822,8 +822,8 @@ module Aws::WorkLink
     #
     # @overload disassociate_domain(**params)
     # @param [Hash] params ({})
-    def disassociate_domain(params = {}, **options)
-      req = build_request(:disassociate_domain, params)
+    def disassociate_domain(, **options)
+      req = build_request(:disassociate_domain, )
       req.send_request(options)
     end
 
@@ -850,8 +850,8 @@ module Aws::WorkLink
     #
     # @overload disassociate_website_authorization_provider(**params)
     # @param [Hash] params ({})
-    def disassociate_website_authorization_provider(params = {}, **options)
-      req = build_request(:disassociate_website_authorization_provider, params)
+    def disassociate_website_authorization_provider(, **options)
+      req = build_request(:disassociate_website_authorization_provider, )
       req.send_request(options)
     end
 
@@ -876,8 +876,8 @@ module Aws::WorkLink
     #
     # @overload disassociate_website_certificate_authority(**params)
     # @param [Hash] params ({})
-    def disassociate_website_certificate_authority(params = {}, **options)
-      req = build_request(:disassociate_website_certificate_authority, params)
+    def disassociate_website_certificate_authority(, **options)
+      req = build_request(:disassociate_website_certificate_authority, )
       req.send_request(options)
     end
 
@@ -919,8 +919,8 @@ module Aws::WorkLink
     #
     # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, **options)
-      req = build_request(:list_devices, params)
+    def list_devices(, **options)
+      req = build_request(:list_devices, )
       req.send_request(options)
     end
 
@@ -964,8 +964,8 @@ module Aws::WorkLink
     #
     # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, **options)
-      req = build_request(:list_domains, params)
+    def list_domains(, **options)
+      req = build_request(:list_domains, )
       req.send_request(options)
     end
 
@@ -1010,8 +1010,8 @@ module Aws::WorkLink
     #
     # @overload list_fleets(**params)
     # @param [Hash] params ({})
-    def list_fleets(params = {}, **options)
-      req = build_request(:list_fleets, params)
+    def list_fleets(, **options)
+      req = build_request(:list_fleets, )
       req.send_request(options)
     end
 
@@ -1039,8 +1039,8 @@ module Aws::WorkLink
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1085,8 +1085,8 @@ module Aws::WorkLink
     #
     # @overload list_website_authorization_providers(**params)
     # @param [Hash] params ({})
-    def list_website_authorization_providers(params = {}, **options)
-      req = build_request(:list_website_authorization_providers, params)
+    def list_website_authorization_providers(, **options)
+      req = build_request(:list_website_authorization_providers, )
       req.send_request(options)
     end
 
@@ -1130,8 +1130,8 @@ module Aws::WorkLink
     #
     # @overload list_website_certificate_authorities(**params)
     # @param [Hash] params ({})
-    def list_website_certificate_authorities(params = {}, **options)
-      req = build_request(:list_website_certificate_authorities, params)
+    def list_website_certificate_authorities(, **options)
+      req = build_request(:list_website_certificate_authorities, )
       req.send_request(options)
     end
 
@@ -1156,8 +1156,8 @@ module Aws::WorkLink
     #
     # @overload restore_domain_access(**params)
     # @param [Hash] params ({})
-    def restore_domain_access(params = {}, **options)
-      req = build_request(:restore_domain_access, params)
+    def restore_domain_access(, **options)
+      req = build_request(:restore_domain_access, )
       req.send_request(options)
     end
 
@@ -1182,8 +1182,8 @@ module Aws::WorkLink
     #
     # @overload revoke_domain_access(**params)
     # @param [Hash] params ({})
-    def revoke_domain_access(params = {}, **options)
-      req = build_request(:revoke_domain_access, params)
+    def revoke_domain_access(, **options)
+      req = build_request(:revoke_domain_access, )
       req.send_request(options)
     end
 
@@ -1209,8 +1209,8 @@ module Aws::WorkLink
     #
     # @overload sign_out_user(**params)
     # @param [Hash] params ({})
-    def sign_out_user(params = {}, **options)
-      req = build_request(:sign_out_user, params)
+    def sign_out_user(, **options)
+      req = build_request(:sign_out_user, )
       req.send_request(options)
     end
 
@@ -1240,8 +1240,8 @@ module Aws::WorkLink
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1266,8 +1266,8 @@ module Aws::WorkLink
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1293,8 +1293,8 @@ module Aws::WorkLink
     #
     # @overload update_audit_stream_configuration(**params)
     # @param [Hash] params ({})
-    def update_audit_stream_configuration(params = {}, **options)
-      req = build_request(:update_audit_stream_configuration, params)
+    def update_audit_stream_configuration(, **options)
+      req = build_request(:update_audit_stream_configuration, )
       req.send_request(options)
     end
 
@@ -1328,8 +1328,8 @@ module Aws::WorkLink
     #
     # @overload update_company_network_configuration(**params)
     # @param [Hash] params ({})
-    def update_company_network_configuration(params = {}, **options)
-      req = build_request(:update_company_network_configuration, params)
+    def update_company_network_configuration(, **options)
+      req = build_request(:update_company_network_configuration, )
       req.send_request(options)
     end
 
@@ -1356,8 +1356,8 @@ module Aws::WorkLink
     #
     # @overload update_device_policy_configuration(**params)
     # @param [Hash] params ({})
-    def update_device_policy_configuration(params = {}, **options)
-      req = build_request(:update_device_policy_configuration, params)
+    def update_device_policy_configuration(, **options)
+      req = build_request(:update_device_policy_configuration, )
       req.send_request(options)
     end
 
@@ -1386,8 +1386,8 @@ module Aws::WorkLink
     #
     # @overload update_domain_metadata(**params)
     # @param [Hash] params ({})
-    def update_domain_metadata(params = {}, **options)
-      req = build_request(:update_domain_metadata, params)
+    def update_domain_metadata(, **options)
+      req = build_request(:update_domain_metadata, )
       req.send_request(options)
     end
 
@@ -1419,8 +1419,8 @@ module Aws::WorkLink
     #
     # @overload update_fleet_metadata(**params)
     # @param [Hash] params ({})
-    def update_fleet_metadata(params = {}, **options)
-      req = build_request(:update_fleet_metadata, params)
+    def update_fleet_metadata(, **options)
+      req = build_request(:update_fleet_metadata, )
       req.send_request(options)
     end
 
@@ -1451,8 +1451,8 @@ module Aws::WorkLink
     #
     # @overload update_identity_provider_configuration(**params)
     # @param [Hash] params ({})
-    def update_identity_provider_configuration(params = {}, **options)
-      req = build_request(:update_identity_provider_configuration, params)
+    def update_identity_provider_configuration(, **options)
+      req = build_request(:update_identity_provider_configuration, )
       req.send_request(options)
     end
 

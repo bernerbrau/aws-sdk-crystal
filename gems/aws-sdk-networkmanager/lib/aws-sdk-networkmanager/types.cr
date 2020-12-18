@@ -2585,5 +2585,619 @@ module Aws::NetworkManager
       include Aws::Structure
     end
 
+    alias AWSLocation = NamedTuple(
+      "Zone" : (String)?,
+      "SubnetArn" : (String)?
+    )
+
+    alias AccessDeniedException = NamedTuple(
+      "Message" : String
+    )
+
+    alias AssociateCustomerGatewayRequest = NamedTuple(
+      "CustomerGatewayArn" : String,
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "LinkId" : (String)?
+    )
+
+    alias AssociateCustomerGatewayResponse = NamedTuple(
+      "CustomerGatewayAssociation" : (CustomerGatewayAssociation)?
+    )
+
+    alias AssociateLinkRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "LinkId" : String
+    )
+
+    alias AssociateLinkResponse = NamedTuple(
+      "LinkAssociation" : (LinkAssociation)?
+    )
+
+    alias AssociateTransitGatewayConnectPeerRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "TransitGatewayConnectPeerArn" : String,
+      "DeviceId" : String,
+      "LinkId" : (String)?
+    )
+
+    alias AssociateTransitGatewayConnectPeerResponse = NamedTuple(
+      "TransitGatewayConnectPeerAssociation" : (TransitGatewayConnectPeerAssociation)?
+    )
+
+    alias Bandwidth = NamedTuple(
+      "UploadSpeed" : (Integer)?,
+      "DownloadSpeed" : (Integer)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : String,
+      "ResourceId" : String,
+      "ResourceType" : String
+    )
+
+    alias Connection = NamedTuple(
+      "ConnectionId" : (String)?,
+      "ConnectionArn" : (String)?,
+      "GlobalNetworkId" : (String)?,
+      "DeviceId" : (String)?,
+      "ConnectedDeviceId" : (String)?,
+      "LinkId" : (String)?,
+      "ConnectedLinkId" : (String)?,
+      "Description" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "State" : (ConnectionState)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ConnectionList = Array(Connection)
+
+    alias ConnectionState = String
+
+    alias CreateConnectionRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "ConnectedDeviceId" : String,
+      "LinkId" : (String)?,
+      "ConnectedLinkId" : (String)?,
+      "Description" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateConnectionResponse = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias CreateDeviceRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "AWSLocation" : (AWSLocation)?,
+      "Description" : (String)?,
+      "Type" : (String)?,
+      "Vendor" : (String)?,
+      "Model" : (String)?,
+      "SerialNumber" : (String)?,
+      "Location" : (Location)?,
+      "SiteId" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDeviceResponse = NamedTuple(
+      "Device" : (Device)?
+    )
+
+    alias CreateGlobalNetworkRequest = NamedTuple(
+      "Description" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateGlobalNetworkResponse = NamedTuple(
+      "GlobalNetwork" : (GlobalNetwork)?
+    )
+
+    alias CreateLinkRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "Description" : (String)?,
+      "Type" : (String)?,
+      "Bandwidth" : Bandwidth,
+      "Provider" : (String)?,
+      "SiteId" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateLinkResponse = NamedTuple(
+      "Link" : (Link)?
+    )
+
+    alias CreateSiteRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "Description" : (String)?,
+      "Location" : (Location)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateSiteResponse = NamedTuple(
+      "Site" : (Site)?
+    )
+
+    alias CustomerGatewayAssociation = NamedTuple(
+      "CustomerGatewayArn" : (String)?,
+      "GlobalNetworkId" : (String)?,
+      "DeviceId" : (String)?,
+      "LinkId" : (String)?,
+      "State" : (CustomerGatewayAssociationState)?
+    )
+
+    alias CustomerGatewayAssociationList = Array(CustomerGatewayAssociation)
+
+    alias CustomerGatewayAssociationState = String
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteConnectionRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "ConnectionId" : String
+    )
+
+    alias DeleteConnectionResponse = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias DeleteDeviceRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceId" : String
+    )
+
+    alias DeleteDeviceResponse = NamedTuple(
+      "Device" : (Device)?
+    )
+
+    alias DeleteGlobalNetworkRequest = NamedTuple(
+      "GlobalNetworkId" : String
+    )
+
+    alias DeleteGlobalNetworkResponse = NamedTuple(
+      "GlobalNetwork" : (GlobalNetwork)?
+    )
+
+    alias DeleteLinkRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "LinkId" : String
+    )
+
+    alias DeleteLinkResponse = NamedTuple(
+      "Link" : (Link)?
+    )
+
+    alias DeleteSiteRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "SiteId" : String
+    )
+
+    alias DeleteSiteResponse = NamedTuple(
+      "Site" : (Site)?
+    )
+
+    alias DeregisterTransitGatewayRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "TransitGatewayArn" : String
+    )
+
+    alias DeregisterTransitGatewayResponse = NamedTuple(
+      "TransitGatewayRegistration" : (TransitGatewayRegistration)?
+    )
+
+    alias DescribeGlobalNetworksRequest = NamedTuple(
+      "GlobalNetworkIds" : (StringList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeGlobalNetworksResponse = NamedTuple(
+      "GlobalNetworks" : (GlobalNetworkList)?,
+      "NextToken" : (String)?
+    )
+
+    alias Device = NamedTuple(
+      "DeviceId" : (String)?,
+      "DeviceArn" : (String)?,
+      "GlobalNetworkId" : (String)?,
+      "AWSLocation" : (AWSLocation)?,
+      "Description" : (String)?,
+      "Type" : (String)?,
+      "Vendor" : (String)?,
+      "Model" : (String)?,
+      "SerialNumber" : (String)?,
+      "Location" : (Location)?,
+      "SiteId" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "State" : (DeviceState)?,
+      "Tags" : (TagList)?
+    )
+
+    alias DeviceList = Array(Device)
+
+    alias DeviceState = String
+
+    alias DisassociateCustomerGatewayRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "CustomerGatewayArn" : String
+    )
+
+    alias DisassociateCustomerGatewayResponse = NamedTuple(
+      "CustomerGatewayAssociation" : (CustomerGatewayAssociation)?
+    )
+
+    alias DisassociateLinkRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "LinkId" : String
+    )
+
+    alias DisassociateLinkResponse = NamedTuple(
+      "LinkAssociation" : (LinkAssociation)?
+    )
+
+    alias DisassociateTransitGatewayConnectPeerRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "TransitGatewayConnectPeerArn" : String
+    )
+
+    alias DisassociateTransitGatewayConnectPeerResponse = NamedTuple(
+      "TransitGatewayConnectPeerAssociation" : (TransitGatewayConnectPeerAssociation)?
+    )
+
+    alias GetConnectionsRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "ConnectionIds" : (StringList)?,
+      "DeviceId" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetConnectionsResponse = NamedTuple(
+      "Connections" : (ConnectionList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetCustomerGatewayAssociationsRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "CustomerGatewayArns" : (StringList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetCustomerGatewayAssociationsResponse = NamedTuple(
+      "CustomerGatewayAssociations" : (CustomerGatewayAssociationList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetDevicesRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceIds" : (StringList)?,
+      "SiteId" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetDevicesResponse = NamedTuple(
+      "Devices" : (DeviceList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetLinkAssociationsRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceId" : (String)?,
+      "LinkId" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetLinkAssociationsResponse = NamedTuple(
+      "LinkAssociations" : (LinkAssociationList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetLinksRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "LinkIds" : (StringList)?,
+      "SiteId" : (String)?,
+      "Type" : (String)?,
+      "Provider" : (String)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetLinksResponse = NamedTuple(
+      "Links" : (LinkList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetSitesRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "SiteIds" : (StringList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetSitesResponse = NamedTuple(
+      "Sites" : (SiteList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTransitGatewayConnectPeerAssociationsRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "TransitGatewayConnectPeerArns" : (StringList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTransitGatewayConnectPeerAssociationsResponse = NamedTuple(
+      "TransitGatewayConnectPeerAssociations" : (TransitGatewayConnectPeerAssociationList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTransitGatewayRegistrationsRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "TransitGatewayArns" : (StringList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias GetTransitGatewayRegistrationsResponse = NamedTuple(
+      "TransitGatewayRegistrations" : (TransitGatewayRegistrationList)?,
+      "NextToken" : (String)?
+    )
+
+    alias GlobalNetwork = NamedTuple(
+      "GlobalNetworkId" : (String)?,
+      "GlobalNetworkArn" : (String)?,
+      "Description" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "State" : (GlobalNetworkState)?,
+      "Tags" : (TagList)?
+    )
+
+    alias GlobalNetworkList = Array(GlobalNetwork)
+
+    alias GlobalNetworkState = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : String,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias Link = NamedTuple(
+      "LinkId" : (String)?,
+      "LinkArn" : (String)?,
+      "GlobalNetworkId" : (String)?,
+      "SiteId" : (String)?,
+      "Description" : (String)?,
+      "Type" : (String)?,
+      "Bandwidth" : (Bandwidth)?,
+      "Provider" : (String)?,
+      "CreatedAt" : (DateTime)?,
+      "State" : (LinkState)?,
+      "Tags" : (TagList)?
+    )
+
+    alias LinkAssociation = NamedTuple(
+      "GlobalNetworkId" : (String)?,
+      "DeviceId" : (String)?,
+      "LinkId" : (String)?,
+      "LinkAssociationState" : (LinkAssociationState)?
+    )
+
+    alias LinkAssociationList = Array(LinkAssociation)
+
+    alias LinkAssociationState = String
+
+    alias LinkList = Array(Link)
+
+    alias LinkState = String
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceARN
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias Location = NamedTuple(
+      "Address" : (String)?,
+      "Latitude" : (String)?,
+      "Longitude" : (String)?
+    )
+
+    alias MaxResults = Int32
+
+    alias RegisterTransitGatewayRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "TransitGatewayArn" : String
+    )
+
+    alias RegisterTransitGatewayResponse = NamedTuple(
+      "TransitGatewayRegistration" : (TransitGatewayRegistration)?
+    )
+
+    alias ResourceARN = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : String,
+      "ResourceId" : String,
+      "ResourceType" : String
+    )
+
+    alias RetryAfterSeconds = Int32
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : String,
+      "ResourceId" : (String)?,
+      "ResourceType" : (String)?,
+      "LimitCode" : String,
+      "ServiceCode" : String
+    )
+
+    alias Site = NamedTuple(
+      "SiteId" : (String)?,
+      "SiteArn" : (String)?,
+      "GlobalNetworkId" : (String)?,
+      "Description" : (String)?,
+      "Location" : (Location)?,
+      "CreatedAt" : (DateTime)?,
+      "State" : (SiteState)?,
+      "Tags" : (TagList)?
+    )
+
+    alias SiteList = Array(Site)
+
+    alias SiteState = String
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceARN,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : String,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias TransitGatewayConnectPeerAssociation = NamedTuple(
+      "TransitGatewayConnectPeerArn" : (String)?,
+      "GlobalNetworkId" : (String)?,
+      "DeviceId" : (String)?,
+      "LinkId" : (String)?,
+      "State" : (TransitGatewayConnectPeerAssociationState)?
+    )
+
+    alias TransitGatewayConnectPeerAssociationList = Array(TransitGatewayConnectPeerAssociation)
+
+    alias TransitGatewayConnectPeerAssociationState = String
+
+    alias TransitGatewayRegistration = NamedTuple(
+      "GlobalNetworkId" : (String)?,
+      "TransitGatewayArn" : (String)?,
+      "State" : (TransitGatewayRegistrationStateReason)?
+    )
+
+    alias TransitGatewayRegistrationList = Array(TransitGatewayRegistration)
+
+    alias TransitGatewayRegistrationState = String
+
+    alias TransitGatewayRegistrationStateReason = NamedTuple(
+      "Code" : (TransitGatewayRegistrationState)?,
+      "Message" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceARN,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateConnectionRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "ConnectionId" : String,
+      "LinkId" : (String)?,
+      "ConnectedLinkId" : (String)?,
+      "Description" : (String)?
+    )
+
+    alias UpdateConnectionResponse = NamedTuple(
+      "Connection" : (Connection)?
+    )
+
+    alias UpdateDeviceRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "AWSLocation" : (AWSLocation)?,
+      "Description" : (String)?,
+      "Type" : (String)?,
+      "Vendor" : (String)?,
+      "Model" : (String)?,
+      "SerialNumber" : (String)?,
+      "Location" : (Location)?,
+      "SiteId" : (String)?
+    )
+
+    alias UpdateDeviceResponse = NamedTuple(
+      "Device" : (Device)?
+    )
+
+    alias UpdateGlobalNetworkRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "Description" : (String)?
+    )
+
+    alias UpdateGlobalNetworkResponse = NamedTuple(
+      "GlobalNetwork" : (GlobalNetwork)?
+    )
+
+    alias UpdateLinkRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "LinkId" : String,
+      "Description" : (String)?,
+      "Type" : (String)?,
+      "Bandwidth" : (Bandwidth)?,
+      "Provider" : (String)?
+    )
+
+    alias UpdateLinkResponse = NamedTuple(
+      "Link" : (Link)?
+    )
+
+    alias UpdateSiteRequest = NamedTuple(
+      "GlobalNetworkId" : String,
+      "SiteId" : String,
+      "Description" : (String)?,
+      "Location" : (Location)?
+    )
+
+    alias UpdateSiteResponse = NamedTuple(
+      "Site" : (Site)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : String,
+      "Reason" : (ValidationExceptionReason)?,
+      "Fields" : (ValidationExceptionFieldList)?
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "Name" : String,
+      "Message" : String
+    )
+
+    alias ValidationExceptionFieldList = Array(ValidationExceptionField)
+
+    alias ValidationExceptionReason = String
   end
 end

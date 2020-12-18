@@ -4262,5 +4262,953 @@ module Aws::IoTAnalytics
       include Aws::Structure
     end
 
+    alias ActivityBatchSize = Int32
+
+    alias ActivityName = String
+
+    alias AddAttributesActivity = NamedTuple(
+      "name" : ActivityName,
+      "attributes" : AttributeNameMapping,
+      "next" : (ActivityName)?
+    )
+
+    alias AttributeName = String
+
+    alias AttributeNameMapping = Hash(AttributeName,AttributeName)
+
+    alias AttributeNames = Array(AttributeName)
+
+    alias BatchPutMessageErrorEntries = Array(BatchPutMessageErrorEntry)
+
+    alias BatchPutMessageErrorEntry = NamedTuple(
+      "messageId" : (MessageId)?,
+      "errorCode" : (ErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias BatchPutMessageRequest = NamedTuple(
+      "channelName" : ChannelName,
+      "messages" : Messages
+    )
+
+    alias BatchPutMessageResponse = NamedTuple(
+      "batchPutMessageErrorEntries" : (BatchPutMessageErrorEntries)?
+    )
+
+    alias BucketKeyExpression = String
+
+    alias BucketName = String
+
+    alias CancelPipelineReprocessingRequest = NamedTuple(
+      "pipelineName" : PipelineName,
+      "reprocessingId" : ReprocessingId
+    )
+
+    alias CancelPipelineReprocessingResponse = NamedTuple(
+      
+    )
+
+    alias Channel = NamedTuple(
+      "name" : (ChannelName)?,
+      "storage" : (ChannelStorage)?,
+      "arn" : (ChannelArn)?,
+      "status" : (ChannelStatus)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "lastMessageArrivalTime" : (Timestamp)?
+    )
+
+    alias ChannelActivity = NamedTuple(
+      "name" : ActivityName,
+      "channelName" : ChannelName,
+      "next" : (ActivityName)?
+    )
+
+    alias ChannelArn = String
+
+    alias ChannelMessages = NamedTuple(
+      "s3Paths" : (S3PathChannelMessages)?
+    )
+
+    alias ChannelName = String
+
+    alias ChannelStatistics = NamedTuple(
+      "size" : (EstimatedResourceSize)?
+    )
+
+    alias ChannelStatus = String
+
+    alias ChannelStorage = NamedTuple(
+      "serviceManagedS3" : (ServiceManagedChannelS3Storage)?,
+      "customerManagedS3" : (CustomerManagedChannelS3Storage)?
+    )
+
+    alias ChannelStorageSummary = NamedTuple(
+      "serviceManagedS3" : (ServiceManagedChannelS3StorageSummary)?,
+      "customerManagedS3" : (CustomerManagedChannelS3StorageSummary)?
+    )
+
+    alias ChannelSummaries = Array(ChannelSummary)
+
+    alias ChannelSummary = NamedTuple(
+      "channelName" : (ChannelName)?,
+      "channelStorage" : (ChannelStorageSummary)?,
+      "status" : (ChannelStatus)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "lastMessageArrivalTime" : (Timestamp)?
+    )
+
+    alias Column = NamedTuple(
+      "name" : ColumnName,
+      "type" : ColumnDataType
+    )
+
+    alias ColumnDataType = String
+
+    alias ColumnName = String
+
+    alias Columns = Array(Column)
+
+    alias ComputeType = String
+
+    alias ContainerDatasetAction = NamedTuple(
+      "image" : Image,
+      "executionRoleArn" : RoleArn,
+      "resourceConfiguration" : ResourceConfiguration,
+      "variables" : (Variables)?
+    )
+
+    alias CreateChannelRequest = NamedTuple(
+      "channelName" : ChannelName,
+      "channelStorage" : (ChannelStorage)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateChannelResponse = NamedTuple(
+      "channelName" : (ChannelName)?,
+      "channelArn" : (ChannelArn)?,
+      "retentionPeriod" : (RetentionPeriod)?
+    )
+
+    alias CreateDatasetContentRequest = NamedTuple(
+      "datasetName" : DatasetName,
+      "versionId" : (DatasetContentVersion)?
+    )
+
+    alias CreateDatasetContentResponse = NamedTuple(
+      "versionId" : (DatasetContentVersion)?
+    )
+
+    alias CreateDatasetRequest = NamedTuple(
+      "datasetName" : DatasetName,
+      "actions" : DatasetActions,
+      "triggers" : (DatasetTriggers)?,
+      "contentDeliveryRules" : (DatasetContentDeliveryRules)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "versioningConfiguration" : (VersioningConfiguration)?,
+      "tags" : (TagList)?,
+      "lateDataRules" : (LateDataRules)?
+    )
+
+    alias CreateDatasetResponse = NamedTuple(
+      "datasetName" : (DatasetName)?,
+      "datasetArn" : (DatasetArn)?,
+      "retentionPeriod" : (RetentionPeriod)?
+    )
+
+    alias CreateDatastoreRequest = NamedTuple(
+      "datastoreName" : DatastoreName,
+      "datastoreStorage" : (DatastoreStorage)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "tags" : (TagList)?,
+      "fileFormatConfiguration" : (FileFormatConfiguration)?
+    )
+
+    alias CreateDatastoreResponse = NamedTuple(
+      "datastoreName" : (DatastoreName)?,
+      "datastoreArn" : (DatastoreArn)?,
+      "retentionPeriod" : (RetentionPeriod)?
+    )
+
+    alias CreatePipelineRequest = NamedTuple(
+      "pipelineName" : PipelineName,
+      "pipelineActivities" : PipelineActivities,
+      "tags" : (TagList)?
+    )
+
+    alias CreatePipelineResponse = NamedTuple(
+      "pipelineName" : (PipelineName)?,
+      "pipelineArn" : (PipelineArn)?
+    )
+
+    alias CustomerManagedChannelS3Storage = NamedTuple(
+      "bucket" : BucketName,
+      "keyPrefix" : (S3KeyPrefix)?,
+      "roleArn" : RoleArn
+    )
+
+    alias CustomerManagedChannelS3StorageSummary = NamedTuple(
+      "bucket" : (BucketName)?,
+      "keyPrefix" : (S3KeyPrefix)?,
+      "roleArn" : (RoleArn)?
+    )
+
+    alias CustomerManagedDatastoreS3Storage = NamedTuple(
+      "bucket" : BucketName,
+      "keyPrefix" : (S3KeyPrefix)?,
+      "roleArn" : RoleArn
+    )
+
+    alias CustomerManagedDatastoreS3StorageSummary = NamedTuple(
+      "bucket" : (BucketName)?,
+      "keyPrefix" : (S3KeyPrefix)?,
+      "roleArn" : (RoleArn)?
+    )
+
+    alias Dataset = NamedTuple(
+      "name" : (DatasetName)?,
+      "arn" : (DatasetArn)?,
+      "actions" : (DatasetActions)?,
+      "triggers" : (DatasetTriggers)?,
+      "contentDeliveryRules" : (DatasetContentDeliveryRules)?,
+      "status" : (DatasetStatus)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "versioningConfiguration" : (VersioningConfiguration)?,
+      "lateDataRules" : (LateDataRules)?
+    )
+
+    alias DatasetAction = NamedTuple(
+      "actionName" : (DatasetActionName)?,
+      "queryAction" : (SqlQueryDatasetAction)?,
+      "containerAction" : (ContainerDatasetAction)?
+    )
+
+    alias DatasetActionName = String
+
+    alias DatasetActionSummaries = Array(DatasetActionSummary)
+
+    alias DatasetActionSummary = NamedTuple(
+      "actionName" : (DatasetActionName)?,
+      "actionType" : (DatasetActionType)?
+    )
+
+    alias DatasetActionType = String
+
+    alias DatasetActions = Array(DatasetAction)
+
+    alias DatasetArn = String
+
+    alias DatasetContentDeliveryDestination = NamedTuple(
+      "iotEventsDestinationConfiguration" : (IotEventsDestinationConfiguration)?,
+      "s3DestinationConfiguration" : (S3DestinationConfiguration)?
+    )
+
+    alias DatasetContentDeliveryRule = NamedTuple(
+      "entryName" : (EntryName)?,
+      "destination" : DatasetContentDeliveryDestination
+    )
+
+    alias DatasetContentDeliveryRules = Array(DatasetContentDeliveryRule)
+
+    alias DatasetContentState = String
+
+    alias DatasetContentStatus = NamedTuple(
+      "state" : (DatasetContentState)?,
+      "reason" : (Reason)?
+    )
+
+    alias DatasetContentSummaries = Array(DatasetContentSummary)
+
+    alias DatasetContentSummary = NamedTuple(
+      "version" : (DatasetContentVersion)?,
+      "status" : (DatasetContentStatus)?,
+      "creationTime" : (Timestamp)?,
+      "scheduleTime" : (Timestamp)?,
+      "completionTime" : (Timestamp)?
+    )
+
+    alias DatasetContentVersion = String
+
+    alias DatasetContentVersionValue = NamedTuple(
+      "datasetName" : DatasetName
+    )
+
+    alias DatasetEntries = Array(DatasetEntry)
+
+    alias DatasetEntry = NamedTuple(
+      "entryName" : (EntryName)?,
+      "dataURI" : (PresignedURI)?
+    )
+
+    alias DatasetName = String
+
+    alias DatasetStatus = String
+
+    alias DatasetSummaries = Array(DatasetSummary)
+
+    alias DatasetSummary = NamedTuple(
+      "datasetName" : (DatasetName)?,
+      "status" : (DatasetStatus)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "triggers" : (DatasetTriggers)?,
+      "actions" : (DatasetActionSummaries)?
+    )
+
+    alias DatasetTrigger = NamedTuple(
+      "schedule" : (Schedule)?,
+      "dataset" : (TriggeringDataset)?
+    )
+
+    alias DatasetTriggers = Array(DatasetTrigger)
+
+    alias Datastore = NamedTuple(
+      "name" : (DatastoreName)?,
+      "storage" : (DatastoreStorage)?,
+      "arn" : (DatastoreArn)?,
+      "status" : (DatastoreStatus)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "lastMessageArrivalTime" : (Timestamp)?,
+      "fileFormatConfiguration" : (FileFormatConfiguration)?
+    )
+
+    alias DatastoreActivity = NamedTuple(
+      "name" : ActivityName,
+      "datastoreName" : DatastoreName
+    )
+
+    alias DatastoreArn = String
+
+    alias DatastoreName = String
+
+    alias DatastoreStatistics = NamedTuple(
+      "size" : (EstimatedResourceSize)?
+    )
+
+    alias DatastoreStatus = String
+
+    alias DatastoreStorage = NamedTuple(
+      "serviceManagedS3" : (ServiceManagedDatastoreS3Storage)?,
+      "customerManagedS3" : (CustomerManagedDatastoreS3Storage)?
+    )
+
+    alias DatastoreStorageSummary = NamedTuple(
+      "serviceManagedS3" : (ServiceManagedDatastoreS3StorageSummary)?,
+      "customerManagedS3" : (CustomerManagedDatastoreS3StorageSummary)?
+    )
+
+    alias DatastoreSummaries = Array(DatastoreSummary)
+
+    alias DatastoreSummary = NamedTuple(
+      "datastoreName" : (DatastoreName)?,
+      "datastoreStorage" : (DatastoreStorageSummary)?,
+      "status" : (DatastoreStatus)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "lastMessageArrivalTime" : (Timestamp)?,
+      "fileFormatType" : (FileFormatType)?
+    )
+
+    alias DeleteChannelRequest = NamedTuple(
+      "channelName" : ChannelName
+    )
+
+    alias DeleteDatasetContentRequest = NamedTuple(
+      "datasetName" : DatasetName,
+      "versionId" : (DatasetContentVersion)?
+    )
+
+    alias DeleteDatasetRequest = NamedTuple(
+      "datasetName" : DatasetName
+    )
+
+    alias DeleteDatastoreRequest = NamedTuple(
+      "datastoreName" : DatastoreName
+    )
+
+    alias DeletePipelineRequest = NamedTuple(
+      "pipelineName" : PipelineName
+    )
+
+    alias DeltaTime = NamedTuple(
+      "offsetSeconds" : OffsetSeconds,
+      "timeExpression" : TimeExpression
+    )
+
+    alias DeltaTimeSessionWindowConfiguration = NamedTuple(
+      "timeoutInMinutes" : SessionTimeoutInMinutes
+    )
+
+    alias DescribeChannelRequest = NamedTuple(
+      "channelName" : ChannelName,
+      "includeStatistics" : (IncludeStatisticsFlag)?
+    )
+
+    alias DescribeChannelResponse = NamedTuple(
+      "channel" : (Channel)?,
+      "statistics" : (ChannelStatistics)?
+    )
+
+    alias DescribeDatasetRequest = NamedTuple(
+      "datasetName" : DatasetName
+    )
+
+    alias DescribeDatasetResponse = NamedTuple(
+      "dataset" : (Dataset)?
+    )
+
+    alias DescribeDatastoreRequest = NamedTuple(
+      "datastoreName" : DatastoreName,
+      "includeStatistics" : (IncludeStatisticsFlag)?
+    )
+
+    alias DescribeDatastoreResponse = NamedTuple(
+      "datastore" : (Datastore)?,
+      "statistics" : (DatastoreStatistics)?
+    )
+
+    alias DescribeLoggingOptionsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeLoggingOptionsResponse = NamedTuple(
+      "loggingOptions" : (LoggingOptions)?
+    )
+
+    alias DescribePipelineRequest = NamedTuple(
+      "pipelineName" : PipelineName
+    )
+
+    alias DescribePipelineResponse = NamedTuple(
+      "pipeline" : (Pipeline)?
+    )
+
+    alias DeviceRegistryEnrichActivity = NamedTuple(
+      "name" : ActivityName,
+      "attribute" : AttributeName,
+      "thingName" : AttributeName,
+      "roleArn" : RoleArn,
+      "next" : (ActivityName)?
+    )
+
+    alias DeviceShadowEnrichActivity = NamedTuple(
+      "name" : ActivityName,
+      "attribute" : AttributeName,
+      "thingName" : AttributeName,
+      "roleArn" : RoleArn,
+      "next" : (ActivityName)?
+    )
+
+    alias DoubleValue = Float64
+
+    alias EndTime = String | UInt64 | Time
+
+    alias EntryName = String
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias EstimatedResourceSize = NamedTuple(
+      "estimatedSizeInBytes" : (SizeInBytes)?,
+      "estimatedOn" : (Timestamp)?
+    )
+
+    alias FileFormatConfiguration = NamedTuple(
+      "jsonConfiguration" : (JsonConfiguration)?,
+      "parquetConfiguration" : (ParquetConfiguration)?
+    )
+
+    alias FileFormatType = String
+
+    alias FilterActivity = NamedTuple(
+      "name" : ActivityName,
+      "filter" : FilterExpression,
+      "next" : (ActivityName)?
+    )
+
+    alias FilterExpression = String
+
+    alias GetDatasetContentRequest = NamedTuple(
+      "datasetName" : DatasetName,
+      "versionId" : (DatasetContentVersion)?
+    )
+
+    alias GetDatasetContentResponse = NamedTuple(
+      "entries" : (DatasetEntries)?,
+      "timestamp" : (Timestamp)?,
+      "status" : (DatasetContentStatus)?
+    )
+
+    alias GlueConfiguration = NamedTuple(
+      "tableName" : GlueTableName,
+      "databaseName" : GlueDatabaseName
+    )
+
+    alias GlueDatabaseName = String
+
+    alias GlueTableName = String
+
+    alias Image = String
+
+    alias IncludeStatisticsFlag = Bool
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias IotEventsDestinationConfiguration = NamedTuple(
+      "inputName" : IotEventsInputName,
+      "roleArn" : RoleArn
+    )
+
+    alias IotEventsInputName = String
+
+    alias JsonConfiguration = NamedTuple(
+      
+    )
+
+    alias LambdaActivity = NamedTuple(
+      "name" : ActivityName,
+      "lambdaName" : LambdaName,
+      "batchSize" : ActivityBatchSize,
+      "next" : (ActivityName)?
+    )
+
+    alias LambdaName = String
+
+    alias LateDataRule = NamedTuple(
+      "ruleName" : (LateDataRuleName)?,
+      "ruleConfiguration" : LateDataRuleConfiguration
+    )
+
+    alias LateDataRuleConfiguration = NamedTuple(
+      "deltaTimeSessionWindowConfiguration" : (DeltaTimeSessionWindowConfiguration)?
+    )
+
+    alias LateDataRuleName = String
+
+    alias LateDataRules = Array(LateDataRule)
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias ListChannelsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListChannelsResponse = NamedTuple(
+      "channelSummaries" : (ChannelSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDatasetContentsRequest = NamedTuple(
+      "datasetName" : DatasetName,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "scheduledOnOrAfter" : (Timestamp)?,
+      "scheduledBefore" : (Timestamp)?
+    )
+
+    alias ListDatasetContentsResponse = NamedTuple(
+      "datasetContentSummaries" : (DatasetContentSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDatasetsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDatasetsResponse = NamedTuple(
+      "datasetSummaries" : (DatasetSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListDatastoresRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDatastoresResponse = NamedTuple(
+      "datastoreSummaries" : (DatastoreSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListPipelinesRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListPipelinesResponse = NamedTuple(
+      "pipelineSummaries" : (PipelineSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagList)?
+    )
+
+    alias LogResult = String
+
+    alias LoggingEnabled = Bool
+
+    alias LoggingLevel = String
+
+    alias LoggingOptions = NamedTuple(
+      "roleArn" : RoleArn,
+      "level" : LoggingLevel,
+      "enabled" : LoggingEnabled
+    )
+
+    alias MathActivity = NamedTuple(
+      "name" : ActivityName,
+      "attribute" : AttributeName,
+      "math" : MathExpression,
+      "next" : (ActivityName)?
+    )
+
+    alias MathExpression = String
+
+    alias MaxMessages = Int32
+
+    alias MaxResults = Int32
+
+    alias MaxVersions = Int32
+
+    alias Message = NamedTuple(
+      "messageId" : MessageId,
+      "payload" : MessagePayload
+    )
+
+    alias MessageId = String
+
+    alias MessagePayload = String | Array(UInt8) | IO
+
+    alias MessagePayloads = Array(MessagePayload)
+
+    alias Messages = Array(Message)
+
+    alias NextToken = String
+
+    alias OffsetSeconds = Int32
+
+    alias OutputFileName = String
+
+    alias OutputFileUriValue = NamedTuple(
+      "fileName" : OutputFileName
+    )
+
+    alias ParquetConfiguration = NamedTuple(
+      "schemaDefinition" : (SchemaDefinition)?
+    )
+
+    alias Pipeline = NamedTuple(
+      "name" : (PipelineName)?,
+      "arn" : (PipelineArn)?,
+      "activities" : (PipelineActivities)?,
+      "reprocessingSummaries" : (ReprocessingSummaries)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?
+    )
+
+    alias PipelineActivities = Array(PipelineActivity)
+
+    alias PipelineActivity = NamedTuple(
+      "channel" : (ChannelActivity)?,
+      "lambda" : (LambdaActivity)?,
+      "datastore" : (DatastoreActivity)?,
+      "addAttributes" : (AddAttributesActivity)?,
+      "removeAttributes" : (RemoveAttributesActivity)?,
+      "selectAttributes" : (SelectAttributesActivity)?,
+      "filter" : (FilterActivity)?,
+      "math" : (MathActivity)?,
+      "deviceRegistryEnrich" : (DeviceRegistryEnrichActivity)?,
+      "deviceShadowEnrich" : (DeviceShadowEnrichActivity)?
+    )
+
+    alias PipelineArn = String
+
+    alias PipelineName = String
+
+    alias PipelineSummaries = Array(PipelineSummary)
+
+    alias PipelineSummary = NamedTuple(
+      "pipelineName" : (PipelineName)?,
+      "reprocessingSummaries" : (ReprocessingSummaries)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?
+    )
+
+    alias PresignedURI = String
+
+    alias PutLoggingOptionsRequest = NamedTuple(
+      "loggingOptions" : LoggingOptions
+    )
+
+    alias QueryFilter = NamedTuple(
+      "deltaTime" : (DeltaTime)?
+    )
+
+    alias QueryFilters = Array(QueryFilter)
+
+    alias Reason = String
+
+    alias RemoveAttributesActivity = NamedTuple(
+      "name" : ActivityName,
+      "attributes" : AttributeNames,
+      "next" : (ActivityName)?
+    )
+
+    alias ReprocessingId = String
+
+    alias ReprocessingStatus = String
+
+    alias ReprocessingSummaries = Array(ReprocessingSummary)
+
+    alias ReprocessingSummary = NamedTuple(
+      "id" : (ReprocessingId)?,
+      "status" : (ReprocessingStatus)?,
+      "creationTime" : (Timestamp)?
+    )
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "message" : (errorMessage)?,
+      "resourceId" : (resourceId)?,
+      "resourceArn" : (resourceArn)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceConfiguration = NamedTuple(
+      "computeType" : ComputeType,
+      "volumeSizeInGB" : VolumeSizeInGB
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias RetentionPeriod = NamedTuple(
+      "unlimited" : (UnlimitedRetentionPeriod)?,
+      "numberOfDays" : (RetentionPeriodInDays)?
+    )
+
+    alias RetentionPeriodInDays = Int32
+
+    alias RoleArn = String
+
+    alias RunPipelineActivityRequest = NamedTuple(
+      "pipelineActivity" : PipelineActivity,
+      "payloads" : MessagePayloads
+    )
+
+    alias RunPipelineActivityResponse = NamedTuple(
+      "payloads" : (MessagePayloads)?,
+      "logResult" : (LogResult)?
+    )
+
+    alias S3DestinationConfiguration = NamedTuple(
+      "bucket" : BucketName,
+      "key" : BucketKeyExpression,
+      "glueConfiguration" : (GlueConfiguration)?,
+      "roleArn" : RoleArn
+    )
+
+    alias S3KeyPrefix = String
+
+    alias S3PathChannelMessage = String
+
+    alias S3PathChannelMessages = Array(S3PathChannelMessage)
+
+    alias SampleChannelDataRequest = NamedTuple(
+      "channelName" : ChannelName,
+      "maxMessages" : (MaxMessages)?,
+      "startTime" : (StartTime)?,
+      "endTime" : (EndTime)?
+    )
+
+    alias SampleChannelDataResponse = NamedTuple(
+      "payloads" : (MessagePayloads)?
+    )
+
+    alias Schedule = NamedTuple(
+      "expression" : (ScheduleExpression)?
+    )
+
+    alias ScheduleExpression = String
+
+    alias SchemaDefinition = NamedTuple(
+      "columns" : (Columns)?
+    )
+
+    alias SelectAttributesActivity = NamedTuple(
+      "name" : ActivityName,
+      "attributes" : AttributeNames,
+      "next" : (ActivityName)?
+    )
+
+    alias ServiceManagedChannelS3Storage = NamedTuple(
+      
+    )
+
+    alias ServiceManagedChannelS3StorageSummary = NamedTuple(
+      
+    )
+
+    alias ServiceManagedDatastoreS3Storage = NamedTuple(
+      
+    )
+
+    alias ServiceManagedDatastoreS3StorageSummary = NamedTuple(
+      
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias SessionTimeoutInMinutes = Int32
+
+    alias SizeInBytes = Float64
+
+    alias SqlQuery = String
+
+    alias SqlQueryDatasetAction = NamedTuple(
+      "sqlQuery" : SqlQuery,
+      "filters" : (QueryFilters)?
+    )
+
+    alias StartPipelineReprocessingRequest = NamedTuple(
+      "pipelineName" : PipelineName,
+      "startTime" : (StartTime)?,
+      "endTime" : (EndTime)?,
+      "channelMessages" : (ChannelMessages)?
+    )
+
+    alias StartPipelineReprocessingResponse = NamedTuple(
+      "reprocessingId" : (ReprocessingId)?
+    )
+
+    alias StartTime = String | UInt64 | Time
+
+    alias StringValue = String
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias TimeExpression = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TriggeringDataset = NamedTuple(
+      "name" : DatasetName
+    )
+
+    alias UnlimitedRetentionPeriod = Bool
+
+    alias UnlimitedVersioning = Bool
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateChannelRequest = NamedTuple(
+      "channelName" : ChannelName,
+      "channelStorage" : (ChannelStorage)?,
+      "retentionPeriod" : (RetentionPeriod)?
+    )
+
+    alias UpdateDatasetRequest = NamedTuple(
+      "datasetName" : DatasetName,
+      "actions" : DatasetActions,
+      "triggers" : (DatasetTriggers)?,
+      "contentDeliveryRules" : (DatasetContentDeliveryRules)?,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "versioningConfiguration" : (VersioningConfiguration)?,
+      "lateDataRules" : (LateDataRules)?
+    )
+
+    alias UpdateDatastoreRequest = NamedTuple(
+      "datastoreName" : DatastoreName,
+      "retentionPeriod" : (RetentionPeriod)?,
+      "datastoreStorage" : (DatastoreStorage)?,
+      "fileFormatConfiguration" : (FileFormatConfiguration)?
+    )
+
+    alias UpdatePipelineRequest = NamedTuple(
+      "pipelineName" : PipelineName,
+      "pipelineActivities" : PipelineActivities
+    )
+
+    alias Variable = NamedTuple(
+      "name" : VariableName,
+      "stringValue" : (StringValue)?,
+      "doubleValue" : (DoubleValue)?,
+      "datasetContentVersionValue" : (DatasetContentVersionValue)?,
+      "outputFileUriValue" : (OutputFileUriValue)?
+    )
+
+    alias VariableName = String
+
+    alias Variables = Array(Variable)
+
+    alias VersioningConfiguration = NamedTuple(
+      "unlimited" : (UnlimitedVersioning)?,
+      "maxVersions" : (MaxVersions)?
+    )
+
+    alias VolumeSizeInGB = Int32
+
+    alias errorMessage = String
+
+    alias resourceArn = String
+
+    alias resourceId = String
   end
 end

@@ -389,8 +389,8 @@ module Aws::MediaStore
     #
     # @overload create_container(**params)
     # @param [Hash] params ({})
-    def create_container(params = {}, **options)
-      req = build_request(:create_container, params)
+    def create_container(, **options)
+      req = build_request(:create_container, )
       req.send_request(options)
     end
 
@@ -413,8 +413,8 @@ module Aws::MediaStore
     #
     # @overload delete_container(**params)
     # @param [Hash] params ({})
-    def delete_container(params = {}, **options)
-      req = build_request(:delete_container, params)
+    def delete_container(, **options)
+      req = build_request(:delete_container, )
       req.send_request(options)
     end
 
@@ -436,8 +436,8 @@ module Aws::MediaStore
     #
     # @overload delete_container_policy(**params)
     # @param [Hash] params ({})
-    def delete_container_policy(params = {}, **options)
-      req = build_request(:delete_container_policy, params)
+    def delete_container_policy(, **options)
+      req = build_request(:delete_container_policy, )
       req.send_request(options)
     end
 
@@ -463,8 +463,8 @@ module Aws::MediaStore
     #
     # @overload delete_cors_policy(**params)
     # @param [Hash] params ({})
-    def delete_cors_policy(params = {}, **options)
-      req = build_request(:delete_cors_policy, params)
+    def delete_cors_policy(, **options)
+      req = build_request(:delete_cors_policy, )
       req.send_request(options)
     end
 
@@ -486,8 +486,8 @@ module Aws::MediaStore
     #
     # @overload delete_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_policy(params = {}, **options)
-      req = build_request(:delete_lifecycle_policy, params)
+    def delete_lifecycle_policy(, **options)
+      req = build_request(:delete_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::MediaStore
     #
     # @overload delete_metric_policy(**params)
     # @param [Hash] params ({})
-    def delete_metric_policy(params = {}, **options)
-      req = build_request(:delete_metric_policy, params)
+    def delete_metric_policy(, **options)
+      req = build_request(:delete_metric_policy, )
       req.send_request(options)
     end
 
@@ -550,8 +550,8 @@ module Aws::MediaStore
     #
     # @overload describe_container(**params)
     # @param [Hash] params ({})
-    def describe_container(params = {}, **options)
-      req = build_request(:describe_container, params)
+    def describe_container(, **options)
+      req = build_request(:describe_container, )
       req.send_request(options)
     end
 
@@ -584,8 +584,8 @@ module Aws::MediaStore
     #
     # @overload get_container_policy(**params)
     # @param [Hash] params ({})
-    def get_container_policy(params = {}, **options)
-      req = build_request(:get_container_policy, params)
+    def get_container_policy(, **options)
+      req = build_request(:get_container_policy, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::MediaStore
     #
     # @overload get_cors_policy(**params)
     # @param [Hash] params ({})
-    def get_cors_policy(params = {}, **options)
-      req = build_request(:get_cors_policy, params)
+    def get_cors_policy(, **options)
+      req = build_request(:get_cors_policy, )
       req.send_request(options)
     end
 
@@ -655,8 +655,8 @@ module Aws::MediaStore
     #
     # @overload get_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy(params = {}, **options)
-      req = build_request(:get_lifecycle_policy, params)
+    def get_lifecycle_policy(, **options)
+      req = build_request(:get_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -686,8 +686,8 @@ module Aws::MediaStore
     #
     # @overload get_metric_policy(**params)
     # @param [Hash] params ({})
-    def get_metric_policy(params = {}, **options)
-      req = build_request(:get_metric_policy, params)
+    def get_metric_policy(, **options)
+      req = build_request(:get_metric_policy, )
       req.send_request(options)
     end
 
@@ -743,8 +743,8 @@ module Aws::MediaStore
     #
     # @overload list_containers(**params)
     # @param [Hash] params ({})
-    def list_containers(params = {}, **options)
-      req = build_request(:list_containers, params)
+    def list_containers(, **options)
+      req = build_request(:list_containers, )
       req.send_request(options)
     end
 
@@ -773,8 +773,8 @@ module Aws::MediaStore
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -814,8 +814,8 @@ module Aws::MediaStore
     #
     # @overload put_container_policy(**params)
     # @param [Hash] params ({})
-    def put_container_policy(params = {}, **options)
-      req = build_request(:put_container_policy, params)
+    def put_container_policy(, **options)
+      req = build_request(:put_container_policy, )
       req.send_request(options)
     end
 
@@ -867,8 +867,8 @@ module Aws::MediaStore
     #
     # @overload put_cors_policy(**params)
     # @param [Hash] params ({})
-    def put_cors_policy(params = {}, **options)
-      req = build_request(:put_cors_policy, params)
+    def put_cors_policy(, **options)
+      req = build_request(:put_cors_policy, )
       req.send_request(options)
     end
 
@@ -904,8 +904,8 @@ module Aws::MediaStore
     #
     # @overload put_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_policy(params = {}, **options)
-      req = build_request(:put_lifecycle_policy, params)
+    def put_lifecycle_policy(, **options)
+      req = build_request(:put_lifecycle_policy, )
       req.send_request(options)
     end
 
@@ -957,8 +957,8 @@ module Aws::MediaStore
     #
     # @overload put_metric_policy(**params)
     # @param [Hash] params ({})
-    def put_metric_policy(params = {}, **options)
-      req = build_request(:put_metric_policy, params)
+    def put_metric_policy(, **options)
+      req = build_request(:put_metric_policy, )
       req.send_request(options)
     end
 
@@ -981,8 +981,8 @@ module Aws::MediaStore
     #
     # @overload start_access_logging(**params)
     # @param [Hash] params ({})
-    def start_access_logging(params = {}, **options)
-      req = build_request(:start_access_logging, params)
+    def start_access_logging(, **options)
+      req = build_request(:start_access_logging, )
       req.send_request(options)
     end
 
@@ -1006,8 +1006,8 @@ module Aws::MediaStore
     #
     # @overload stop_access_logging(**params)
     # @param [Hash] params ({})
-    def stop_access_logging(params = {}, **options)
-      req = build_request(:stop_access_logging, params)
+    def stop_access_logging(, **options)
+      req = build_request(:stop_access_logging, )
       req.send_request(options)
     end
 
@@ -1054,8 +1054,8 @@ module Aws::MediaStore
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1085,8 +1085,8 @@ module Aws::MediaStore
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

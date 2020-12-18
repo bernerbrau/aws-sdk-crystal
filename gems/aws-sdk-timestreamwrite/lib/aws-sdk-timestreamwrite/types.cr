@@ -1121,5 +1121,279 @@ module Aws::TimestreamWrite
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : ErrorMessage
+    )
+
+    alias AmazonResourceName = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : ErrorMessage
+    )
+
+    alias CreateDatabaseRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "KmsKeyId" : (StringValue2048)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDatabaseResponse = NamedTuple(
+      "Database" : (Database)?
+    )
+
+    alias CreateTableRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "TableName" : ResourceName,
+      "RetentionProperties" : (RetentionProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateTableResponse = NamedTuple(
+      "Table" : (Table)?
+    )
+
+    alias Database = NamedTuple(
+      "Arn" : (String)?,
+      "DatabaseName" : (ResourceName)?,
+      "TableCount" : (Long)?,
+      "KmsKeyId" : (StringValue2048)?,
+      "CreationTime" : (Date)?,
+      "LastUpdatedTime" : (Date)?
+    )
+
+    alias DatabaseList = Array(Database)
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteDatabaseRequest = NamedTuple(
+      "DatabaseName" : ResourceName
+    )
+
+    alias DeleteTableRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "TableName" : ResourceName
+    )
+
+    alias DescribeDatabaseRequest = NamedTuple(
+      "DatabaseName" : ResourceName
+    )
+
+    alias DescribeDatabaseResponse = NamedTuple(
+      "Database" : (Database)?
+    )
+
+    alias DescribeEndpointsRequest = NamedTuple(
+      
+    )
+
+    alias DescribeEndpointsResponse = NamedTuple(
+      "Endpoints" : Endpoints
+    )
+
+    alias DescribeTableRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "TableName" : ResourceName
+    )
+
+    alias DescribeTableResponse = NamedTuple(
+      "Table" : (Table)?
+    )
+
+    alias Dimension = NamedTuple(
+      "Name" : StringValue256,
+      "Value" : StringValue2048,
+      "DimensionValueType" : (DimensionValueType)?
+    )
+
+    alias DimensionValueType = String
+
+    alias Dimensions = Array(Dimension)
+
+    alias Endpoint = NamedTuple(
+      "Address" : String,
+      "CachePeriodInMinutes" : Long
+    )
+
+    alias Endpoints = Array(Endpoint)
+
+    alias ErrorMessage = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : ErrorMessage
+    )
+
+    alias InvalidEndpointException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListDatabasesRequest = NamedTuple(
+      "NextToken" : (String)?,
+      "MaxResults" : (PaginationLimit)?
+    )
+
+    alias ListDatabasesResponse = NamedTuple(
+      "Databases" : (DatabaseList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTablesRequest = NamedTuple(
+      "DatabaseName" : (ResourceName)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (PaginationLimit)?
+    )
+
+    alias ListTablesResponse = NamedTuple(
+      "Tables" : (TableList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias Long = Int64
+
+    alias MagneticStoreRetentionPeriodInDays = Int64
+
+    alias MeasureValueType = String
+
+    alias MemoryStoreRetentionPeriodInHours = Int64
+
+    alias PaginationLimit = Int32
+
+    alias Record = NamedTuple(
+      "Dimensions" : (Dimensions)?,
+      "MeasureName" : (StringValue256)?,
+      "MeasureValue" : (StringValue2048)?,
+      "MeasureValueType" : (MeasureValueType)?,
+      "Time" : (StringValue256)?,
+      "TimeUnit" : (TimeUnit)?,
+      "Version" : (RecordVersion)?
+    )
+
+    alias RecordIndex = Int32
+
+    alias RecordVersion = Int64
+
+    alias Records = Array(Record)
+
+    alias RejectedRecord = NamedTuple(
+      "RecordIndex" : (RecordIndex)?,
+      "Reason" : (ErrorMessage)?,
+      "ExistingVersion" : (RecordVersion)?
+    )
+
+    alias RejectedRecords = Array(RejectedRecord)
+
+    alias RejectedRecordsException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "RejectedRecords" : (RejectedRecords)?
+    )
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias RetentionProperties = NamedTuple(
+      "MemoryStoreRetentionPeriodInHours" : MemoryStoreRetentionPeriodInHours,
+      "MagneticStoreRetentionPeriodInDays" : MagneticStoreRetentionPeriodInDays
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias String = String
+
+    alias StringValue2048 = String
+
+    alias StringValue256 = String
+
+    alias Table = NamedTuple(
+      "Arn" : (String)?,
+      "TableName" : (ResourceName)?,
+      "DatabaseName" : (ResourceName)?,
+      "TableStatus" : (TableStatus)?,
+      "RetentionProperties" : (RetentionProperties)?,
+      "CreationTime" : (Date)?,
+      "LastUpdatedTime" : (Date)?
+    )
+
+    alias TableList = Array(Table)
+
+    alias TableStatus = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : ErrorMessage
+    )
+
+    alias TimeUnit = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : AmazonResourceName,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDatabaseRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "KmsKeyId" : StringValue2048
+    )
+
+    alias UpdateDatabaseResponse = NamedTuple(
+      "Database" : (Database)?
+    )
+
+    alias UpdateTableRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "TableName" : ResourceName,
+      "RetentionProperties" : RetentionProperties
+    )
+
+    alias UpdateTableResponse = NamedTuple(
+      "Table" : (Table)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : ErrorMessage
+    )
+
+    alias WriteRecordsRequest = NamedTuple(
+      "DatabaseName" : ResourceName,
+      "TableName" : ResourceName,
+      "CommonAttributes" : (Record)?,
+      "Records" : Records
+    )
   end
 end

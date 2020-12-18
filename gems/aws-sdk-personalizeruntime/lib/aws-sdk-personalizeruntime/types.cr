@@ -270,5 +270,76 @@ module Aws::PersonalizeRuntime
       include Aws::Structure
     end
 
+    alias Arn = String
+
+    alias AttributeName = String
+
+    alias AttributeValue = String
+
+    alias Context = Hash(AttributeName,AttributeValue)
+
+    alias ErrorMessage = String
+
+    alias FilterAttributeName = String
+
+    alias FilterAttributeValue = String
+
+    alias FilterValues = Hash(FilterAttributeName,FilterAttributeValue)
+
+    alias GetPersonalizedRankingRequest = NamedTuple(
+      "campaignArn" : Arn,
+      "inputList" : InputList,
+      "userId" : UserID,
+      "context" : (Context)?,
+      "filterArn" : (Arn)?,
+      "filterValues" : (FilterValues)?
+    )
+
+    alias GetPersonalizedRankingResponse = NamedTuple(
+      "personalizedRanking" : (ItemList)?,
+      "recommendationId" : (RecommendationID)?
+    )
+
+    alias GetRecommendationsRequest = NamedTuple(
+      "campaignArn" : Arn,
+      "itemId" : (ItemID)?,
+      "userId" : (UserID)?,
+      "numResults" : (NumResults)?,
+      "context" : (Context)?,
+      "filterArn" : (Arn)?,
+      "filterValues" : (FilterValues)?
+    )
+
+    alias GetRecommendationsResponse = NamedTuple(
+      "itemList" : (ItemList)?,
+      "recommendationId" : (RecommendationID)?
+    )
+
+    alias InputList = Array(ItemID)
+
+    alias InvalidInputException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ItemID = String
+
+    alias ItemList = Array(PredictedItem)
+
+    alias NumResults = Int32
+
+    alias PredictedItem = NamedTuple(
+      "itemId" : (ItemID)?,
+      "score" : (Score)?
+    )
+
+    alias RecommendationID = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Score = Float64
+
+    alias UserID = String
   end
 end

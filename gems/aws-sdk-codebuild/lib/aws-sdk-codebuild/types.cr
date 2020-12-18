@@ -6843,5 +6843,1190 @@ module Aws::CodeBuild
       include Aws::Structure
     end
 
+    alias AccountLimitExceededException = NamedTuple(
+      
+    )
+
+    alias ArtifactNamespace = String
+
+    alias ArtifactPackaging = String
+
+    alias ArtifactsType = String
+
+    alias AuthType = String
+
+    alias BatchDeleteBuildsInput = NamedTuple(
+      "ids" : BuildIds
+    )
+
+    alias BatchDeleteBuildsOutput = NamedTuple(
+      "buildsDeleted" : (BuildIds)?,
+      "buildsNotDeleted" : (BuildsNotDeleted)?
+    )
+
+    alias BatchGetBuildBatchesInput = NamedTuple(
+      "ids" : BuildBatchIds
+    )
+
+    alias BatchGetBuildBatchesOutput = NamedTuple(
+      "buildBatches" : (BuildBatches)?,
+      "buildBatchesNotFound" : (BuildBatchIds)?
+    )
+
+    alias BatchGetBuildsInput = NamedTuple(
+      "ids" : BuildIds
+    )
+
+    alias BatchGetBuildsOutput = NamedTuple(
+      "builds" : (Builds)?,
+      "buildsNotFound" : (BuildIds)?
+    )
+
+    alias BatchGetProjectsInput = NamedTuple(
+      "names" : ProjectNames
+    )
+
+    alias BatchGetProjectsOutput = NamedTuple(
+      "projects" : (Projects)?,
+      "projectsNotFound" : (ProjectNames)?
+    )
+
+    alias BatchGetReportGroupsInput = NamedTuple(
+      "reportGroupArns" : ReportGroupArns
+    )
+
+    alias BatchGetReportGroupsOutput = NamedTuple(
+      "reportGroups" : (ReportGroups)?,
+      "reportGroupsNotFound" : (ReportGroupArns)?
+    )
+
+    alias BatchGetReportsInput = NamedTuple(
+      "reportArns" : ReportArns
+    )
+
+    alias BatchGetReportsOutput = NamedTuple(
+      "reports" : (Reports)?,
+      "reportsNotFound" : (ReportArns)?
+    )
+
+    alias BatchRestrictions = NamedTuple(
+      "maximumBuildsAllowed" : (WrapperInt)?,
+      "computeTypesAllowed" : (ComputeTypesAllowed)?
+    )
+
+    alias Boolean = Bool
+
+    alias Build = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "arn" : (NonEmptyString)?,
+      "buildNumber" : (WrapperLong)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "currentPhase" : (String)?,
+      "buildStatus" : (StatusType)?,
+      "sourceVersion" : (NonEmptyString)?,
+      "resolvedSourceVersion" : (NonEmptyString)?,
+      "projectName" : (NonEmptyString)?,
+      "phases" : (BuildPhases)?,
+      "source" : (ProjectSource)?,
+      "secondarySources" : (ProjectSources)?,
+      "secondarySourceVersions" : (ProjectSecondarySourceVersions)?,
+      "artifacts" : (BuildArtifacts)?,
+      "secondaryArtifacts" : (BuildArtifactsList)?,
+      "cache" : (ProjectCache)?,
+      "environment" : (ProjectEnvironment)?,
+      "serviceRole" : (NonEmptyString)?,
+      "logs" : (LogsLocation)?,
+      "timeoutInMinutes" : (WrapperInt)?,
+      "queuedTimeoutInMinutes" : (WrapperInt)?,
+      "buildComplete" : (Boolean)?,
+      "initiator" : (String)?,
+      "vpcConfig" : (VpcConfig)?,
+      "networkInterface" : (NetworkInterface)?,
+      "encryptionKey" : (NonEmptyString)?,
+      "exportedEnvironmentVariables" : (ExportedEnvironmentVariables)?,
+      "reportArns" : (BuildReportArns)?,
+      "fileSystemLocations" : (ProjectFileSystemLocations)?,
+      "debugSession" : (DebugSession)?,
+      "buildBatchArn" : (String)?
+    )
+
+    alias BuildArtifacts = NamedTuple(
+      "location" : (String)?,
+      "sha256sum" : (String)?,
+      "md5sum" : (String)?,
+      "overrideArtifactName" : (WrapperBoolean)?,
+      "encryptionDisabled" : (WrapperBoolean)?,
+      "artifactIdentifier" : (String)?
+    )
+
+    alias BuildArtifactsList = Array(BuildArtifacts)
+
+    alias BuildBatch = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "arn" : (NonEmptyString)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "currentPhase" : (String)?,
+      "buildBatchStatus" : (StatusType)?,
+      "sourceVersion" : (NonEmptyString)?,
+      "resolvedSourceVersion" : (NonEmptyString)?,
+      "projectName" : (NonEmptyString)?,
+      "phases" : (BuildBatchPhases)?,
+      "source" : (ProjectSource)?,
+      "secondarySources" : (ProjectSources)?,
+      "secondarySourceVersions" : (ProjectSecondarySourceVersions)?,
+      "artifacts" : (BuildArtifacts)?,
+      "secondaryArtifacts" : (BuildArtifactsList)?,
+      "cache" : (ProjectCache)?,
+      "environment" : (ProjectEnvironment)?,
+      "serviceRole" : (NonEmptyString)?,
+      "logConfig" : (LogsConfig)?,
+      "buildTimeoutInMinutes" : (WrapperInt)?,
+      "queuedTimeoutInMinutes" : (WrapperInt)?,
+      "complete" : (Boolean)?,
+      "initiator" : (String)?,
+      "vpcConfig" : (VpcConfig)?,
+      "encryptionKey" : (NonEmptyString)?,
+      "buildBatchNumber" : (WrapperLong)?,
+      "fileSystemLocations" : (ProjectFileSystemLocations)?,
+      "buildBatchConfig" : (ProjectBuildBatchConfig)?,
+      "buildGroups" : (BuildGroups)?
+    )
+
+    alias BuildBatchFilter = NamedTuple(
+      "status" : (StatusType)?
+    )
+
+    alias BuildBatchIds = Array(NonEmptyString)
+
+    alias BuildBatchPhase = NamedTuple(
+      "phaseType" : (BuildBatchPhaseType)?,
+      "phaseStatus" : (StatusType)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "durationInSeconds" : (WrapperLong)?,
+      "contexts" : (PhaseContexts)?
+    )
+
+    alias BuildBatchPhaseType = String
+
+    alias BuildBatchPhases = Array(BuildBatchPhase)
+
+    alias BuildBatches = Array(BuildBatch)
+
+    alias BuildGroup = NamedTuple(
+      "identifier" : (String)?,
+      "dependsOn" : (Identifiers)?,
+      "ignoreFailure" : (Boolean)?,
+      "currentBuildSummary" : (BuildSummary)?,
+      "priorBuildSummaryList" : (BuildSummaries)?
+    )
+
+    alias BuildGroups = Array(BuildGroup)
+
+    alias BuildIds = Array(NonEmptyString)
+
+    alias BuildNotDeleted = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "statusCode" : (String)?
+    )
+
+    alias BuildPhase = NamedTuple(
+      "phaseType" : (BuildPhaseType)?,
+      "phaseStatus" : (StatusType)?,
+      "startTime" : (Timestamp)?,
+      "endTime" : (Timestamp)?,
+      "durationInSeconds" : (WrapperLong)?,
+      "contexts" : (PhaseContexts)?
+    )
+
+    alias BuildPhaseType = String
+
+    alias BuildPhases = Array(BuildPhase)
+
+    alias BuildReportArns = Array(String)
+
+    alias BuildStatusConfig = NamedTuple(
+      "context" : (String)?,
+      "targetUrl" : (String)?
+    )
+
+    alias BuildSummaries = Array(BuildSummary)
+
+    alias BuildSummary = NamedTuple(
+      "arn" : (String)?,
+      "requestedOn" : (Timestamp)?,
+      "buildStatus" : (StatusType)?,
+      "primaryArtifact" : (ResolvedArtifact)?,
+      "secondaryArtifacts" : (ResolvedSecondaryArtifacts)?
+    )
+
+    alias Builds = Array(Build)
+
+    alias BuildsNotDeleted = Array(BuildNotDeleted)
+
+    alias CacheMode = String
+
+    alias CacheType = String
+
+    alias CloudWatchLogsConfig = NamedTuple(
+      "status" : LogsConfigStatusType,
+      "groupName" : (String)?,
+      "streamName" : (String)?
+    )
+
+    alias CodeCoverage = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "reportARN" : (NonEmptyString)?,
+      "filePath" : (NonEmptyString)?,
+      "lineCoveragePercentage" : (Percentage)?,
+      "linesCovered" : (NonNegativeInt)?,
+      "linesMissed" : (NonNegativeInt)?,
+      "branchCoveragePercentage" : (Percentage)?,
+      "branchesCovered" : (NonNegativeInt)?,
+      "branchesMissed" : (NonNegativeInt)?,
+      "expired" : (Timestamp)?
+    )
+
+    alias CodeCoverageReportSummary = NamedTuple(
+      "lineCoveragePercentage" : (Percentage)?,
+      "linesCovered" : (NonNegativeInt)?,
+      "linesMissed" : (NonNegativeInt)?,
+      "branchCoveragePercentage" : (Percentage)?,
+      "branchesCovered" : (NonNegativeInt)?,
+      "branchesMissed" : (NonNegativeInt)?
+    )
+
+    alias CodeCoverages = Array(CodeCoverage)
+
+    alias ComputeType = String
+
+    alias ComputeTypesAllowed = Array(NonEmptyString)
+
+    alias CreateProjectInput = NamedTuple(
+      "name" : ProjectName,
+      "description" : (ProjectDescription)?,
+      "source" : ProjectSource,
+      "secondarySources" : (ProjectSources)?,
+      "sourceVersion" : (String)?,
+      "secondarySourceVersions" : (ProjectSecondarySourceVersions)?,
+      "artifacts" : ProjectArtifacts,
+      "secondaryArtifacts" : (ProjectArtifactsList)?,
+      "cache" : (ProjectCache)?,
+      "environment" : ProjectEnvironment,
+      "serviceRole" : NonEmptyString,
+      "timeoutInMinutes" : (TimeOut)?,
+      "queuedTimeoutInMinutes" : (TimeOut)?,
+      "encryptionKey" : (NonEmptyString)?,
+      "tags" : (TagList)?,
+      "vpcConfig" : (VpcConfig)?,
+      "badgeEnabled" : (WrapperBoolean)?,
+      "logsConfig" : (LogsConfig)?,
+      "fileSystemLocations" : (ProjectFileSystemLocations)?,
+      "buildBatchConfig" : (ProjectBuildBatchConfig)?
+    )
+
+    alias CreateProjectOutput = NamedTuple(
+      "project" : (Project)?
+    )
+
+    alias CreateReportGroupInput = NamedTuple(
+      "name" : ReportGroupName,
+      "type" : ReportType,
+      "exportConfig" : ReportExportConfig,
+      "tags" : (TagList)?
+    )
+
+    alias CreateReportGroupOutput = NamedTuple(
+      "reportGroup" : (ReportGroup)?
+    )
+
+    alias CreateWebhookInput = NamedTuple(
+      "projectName" : ProjectName,
+      "branchFilter" : (String)?,
+      "filterGroups" : (FilterGroups)?,
+      "buildType" : (WebhookBuildType)?
+    )
+
+    alias CreateWebhookOutput = NamedTuple(
+      "webhook" : (Webhook)?
+    )
+
+    alias CredentialProviderType = String
+
+    alias DebugSession = NamedTuple(
+      "sessionEnabled" : (WrapperBoolean)?,
+      "sessionTarget" : (NonEmptyString)?
+    )
+
+    alias DeleteBuildBatchInput = NamedTuple(
+      "id" : NonEmptyString
+    )
+
+    alias DeleteBuildBatchOutput = NamedTuple(
+      "statusCode" : (String)?,
+      "buildsDeleted" : (BuildIds)?,
+      "buildsNotDeleted" : (BuildsNotDeleted)?
+    )
+
+    alias DeleteProjectInput = NamedTuple(
+      "name" : NonEmptyString
+    )
+
+    alias DeleteProjectOutput = NamedTuple(
+      
+    )
+
+    alias DeleteReportGroupInput = NamedTuple(
+      "arn" : NonEmptyString,
+      "deleteReports" : (Boolean)?
+    )
+
+    alias DeleteReportGroupOutput = NamedTuple(
+      
+    )
+
+    alias DeleteReportInput = NamedTuple(
+      "arn" : NonEmptyString
+    )
+
+    alias DeleteReportOutput = NamedTuple(
+      
+    )
+
+    alias DeleteResourcePolicyInput = NamedTuple(
+      "resourceArn" : NonEmptyString
+    )
+
+    alias DeleteResourcePolicyOutput = NamedTuple(
+      
+    )
+
+    alias DeleteSourceCredentialsInput = NamedTuple(
+      "arn" : NonEmptyString
+    )
+
+    alias DeleteSourceCredentialsOutput = NamedTuple(
+      "arn" : (NonEmptyString)?
+    )
+
+    alias DeleteWebhookInput = NamedTuple(
+      "projectName" : ProjectName
+    )
+
+    alias DeleteWebhookOutput = NamedTuple(
+      
+    )
+
+    alias DescribeCodeCoveragesInput = NamedTuple(
+      "reportArn" : NonEmptyString,
+      "nextToken" : (String)?,
+      "maxResults" : (PageSize)?,
+      "sortOrder" : (SortOrderType)?,
+      "sortBy" : (ReportCodeCoverageSortByType)?,
+      "minLineCoveragePercentage" : (Percentage)?,
+      "maxLineCoveragePercentage" : (Percentage)?
+    )
+
+    alias DescribeCodeCoveragesOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "codeCoverages" : (CodeCoverages)?
+    )
+
+    alias DescribeTestCasesInput = NamedTuple(
+      "reportArn" : String,
+      "nextToken" : (String)?,
+      "maxResults" : (PageSize)?,
+      "filter" : (TestCaseFilter)?
+    )
+
+    alias DescribeTestCasesOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "testCases" : (TestCases)?
+    )
+
+    alias EnvironmentImage = NamedTuple(
+      "name" : (String)?,
+      "description" : (String)?,
+      "versions" : (ImageVersions)?
+    )
+
+    alias EnvironmentImages = Array(EnvironmentImage)
+
+    alias EnvironmentLanguage = NamedTuple(
+      "language" : (LanguageType)?,
+      "images" : (EnvironmentImages)?
+    )
+
+    alias EnvironmentLanguages = Array(EnvironmentLanguage)
+
+    alias EnvironmentPlatform = NamedTuple(
+      "platform" : (PlatformType)?,
+      "languages" : (EnvironmentLanguages)?
+    )
+
+    alias EnvironmentPlatforms = Array(EnvironmentPlatform)
+
+    alias EnvironmentType = String
+
+    alias EnvironmentVariable = NamedTuple(
+      "name" : NonEmptyString,
+      "value" : String,
+      "type" : (EnvironmentVariableType)?
+    )
+
+    alias EnvironmentVariableType = String
+
+    alias EnvironmentVariables = Array(EnvironmentVariable)
+
+    alias ExportedEnvironmentVariable = NamedTuple(
+      "name" : (NonEmptyString)?,
+      "value" : (String)?
+    )
+
+    alias ExportedEnvironmentVariables = Array(ExportedEnvironmentVariable)
+
+    alias FileSystemType = String
+
+    alias FilterGroup = Array(WebhookFilter)
+
+    alias FilterGroups = Array(FilterGroup)
+
+    alias GetReportGroupTrendInput = NamedTuple(
+      "reportGroupArn" : NonEmptyString,
+      "numOfReports" : (PageSize)?,
+      "trendField" : ReportGroupTrendFieldType
+    )
+
+    alias GetReportGroupTrendOutput = NamedTuple(
+      "stats" : (ReportGroupTrendStats)?,
+      "rawData" : (ReportGroupTrendRawDataList)?
+    )
+
+    alias GetResourcePolicyInput = NamedTuple(
+      "resourceArn" : NonEmptyString
+    )
+
+    alias GetResourcePolicyOutput = NamedTuple(
+      "policy" : (NonEmptyString)?
+    )
+
+    alias GitCloneDepth = Int32
+
+    alias GitSubmodulesConfig = NamedTuple(
+      "fetchSubmodules" : WrapperBoolean
+    )
+
+    alias Identifiers = Array(NonEmptyString)
+
+    alias ImagePullCredentialsType = String
+
+    alias ImageVersions = Array(String)
+
+    alias ImportSourceCredentialsInput = NamedTuple(
+      "username" : (NonEmptyString)?,
+      "token" : SensitiveNonEmptyString,
+      "serverType" : ServerType,
+      "authType" : AuthType,
+      "shouldOverwrite" : (WrapperBoolean)?
+    )
+
+    alias ImportSourceCredentialsOutput = NamedTuple(
+      "arn" : (NonEmptyString)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      
+    )
+
+    alias InvalidateProjectCacheInput = NamedTuple(
+      "projectName" : NonEmptyString
+    )
+
+    alias InvalidateProjectCacheOutput = NamedTuple(
+      
+    )
+
+    alias KeyInput = String
+
+    alias LanguageType = String
+
+    alias ListBuildBatchesForProjectInput = NamedTuple(
+      "projectName" : (NonEmptyString)?,
+      "filter" : (BuildBatchFilter)?,
+      "maxResults" : (PageSize)?,
+      "sortOrder" : (SortOrderType)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildBatchesForProjectOutput = NamedTuple(
+      "ids" : (BuildBatchIds)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildBatchesInput = NamedTuple(
+      "filter" : (BuildBatchFilter)?,
+      "maxResults" : (PageSize)?,
+      "sortOrder" : (SortOrderType)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildBatchesOutput = NamedTuple(
+      "ids" : (BuildBatchIds)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildsForProjectInput = NamedTuple(
+      "projectName" : NonEmptyString,
+      "sortOrder" : (SortOrderType)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildsForProjectOutput = NamedTuple(
+      "ids" : (BuildIds)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildsInput = NamedTuple(
+      "sortOrder" : (SortOrderType)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListBuildsOutput = NamedTuple(
+      "ids" : (BuildIds)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListCuratedEnvironmentImagesInput = NamedTuple(
+      
+    )
+
+    alias ListCuratedEnvironmentImagesOutput = NamedTuple(
+      "platforms" : (EnvironmentPlatforms)?
+    )
+
+    alias ListProjectsInput = NamedTuple(
+      "sortBy" : (ProjectSortByType)?,
+      "sortOrder" : (SortOrderType)?,
+      "nextToken" : (NonEmptyString)?
+    )
+
+    alias ListProjectsOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "projects" : (ProjectNames)?
+    )
+
+    alias ListReportGroupsInput = NamedTuple(
+      "sortOrder" : (SortOrderType)?,
+      "sortBy" : (ReportGroupSortByType)?,
+      "nextToken" : (String)?,
+      "maxResults" : (PageSize)?
+    )
+
+    alias ListReportGroupsOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "reportGroups" : (ReportGroupArns)?
+    )
+
+    alias ListReportsForReportGroupInput = NamedTuple(
+      "reportGroupArn" : String,
+      "nextToken" : (String)?,
+      "sortOrder" : (SortOrderType)?,
+      "maxResults" : (PageSize)?,
+      "filter" : (ReportFilter)?
+    )
+
+    alias ListReportsForReportGroupOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "reports" : (ReportArns)?
+    )
+
+    alias ListReportsInput = NamedTuple(
+      "sortOrder" : (SortOrderType)?,
+      "nextToken" : (String)?,
+      "maxResults" : (PageSize)?,
+      "filter" : (ReportFilter)?
+    )
+
+    alias ListReportsOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "reports" : (ReportArns)?
+    )
+
+    alias ListSharedProjectsInput = NamedTuple(
+      "sortBy" : (SharedResourceSortByType)?,
+      "sortOrder" : (SortOrderType)?,
+      "maxResults" : (PageSize)?,
+      "nextToken" : (NonEmptyString)?
+    )
+
+    alias ListSharedProjectsOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "projects" : (ProjectArns)?
+    )
+
+    alias ListSharedReportGroupsInput = NamedTuple(
+      "sortOrder" : (SortOrderType)?,
+      "sortBy" : (SharedResourceSortByType)?,
+      "nextToken" : (String)?,
+      "maxResults" : (PageSize)?
+    )
+
+    alias ListSharedReportGroupsOutput = NamedTuple(
+      "nextToken" : (String)?,
+      "reportGroups" : (ReportGroupArns)?
+    )
+
+    alias ListSourceCredentialsInput = NamedTuple(
+      
+    )
+
+    alias ListSourceCredentialsOutput = NamedTuple(
+      "sourceCredentialsInfos" : (SourceCredentialsInfos)?
+    )
+
+    alias LogsConfig = NamedTuple(
+      "cloudWatchLogs" : (CloudWatchLogsConfig)?,
+      "s3Logs" : (S3LogsConfig)?
+    )
+
+    alias LogsConfigStatusType = String
+
+    alias LogsLocation = NamedTuple(
+      "groupName" : (String)?,
+      "streamName" : (String)?,
+      "deepLink" : (String)?,
+      "s3DeepLink" : (String)?,
+      "cloudWatchLogsArn" : (String)?,
+      "s3LogsArn" : (String)?,
+      "cloudWatchLogs" : (CloudWatchLogsConfig)?,
+      "s3Logs" : (S3LogsConfig)?
+    )
+
+    alias NetworkInterface = NamedTuple(
+      "subnetId" : (NonEmptyString)?,
+      "networkInterfaceId" : (NonEmptyString)?
+    )
+
+    alias NonEmptyString = String
+
+    alias NonNegativeInt = Int32
+
+    alias OAuthProviderException = NamedTuple(
+      
+    )
+
+    alias PageSize = Int32
+
+    alias Percentage = Float64
+
+    alias PhaseContext = NamedTuple(
+      "statusCode" : (String)?,
+      "message" : (String)?
+    )
+
+    alias PhaseContexts = Array(PhaseContext)
+
+    alias PlatformType = String
+
+    alias Project = NamedTuple(
+      "name" : (ProjectName)?,
+      "arn" : (String)?,
+      "description" : (ProjectDescription)?,
+      "source" : (ProjectSource)?,
+      "secondarySources" : (ProjectSources)?,
+      "sourceVersion" : (String)?,
+      "secondarySourceVersions" : (ProjectSecondarySourceVersions)?,
+      "artifacts" : (ProjectArtifacts)?,
+      "secondaryArtifacts" : (ProjectArtifactsList)?,
+      "cache" : (ProjectCache)?,
+      "environment" : (ProjectEnvironment)?,
+      "serviceRole" : (NonEmptyString)?,
+      "timeoutInMinutes" : (TimeOut)?,
+      "queuedTimeoutInMinutes" : (TimeOut)?,
+      "encryptionKey" : (NonEmptyString)?,
+      "tags" : (TagList)?,
+      "created" : (Timestamp)?,
+      "lastModified" : (Timestamp)?,
+      "webhook" : (Webhook)?,
+      "vpcConfig" : (VpcConfig)?,
+      "badge" : (ProjectBadge)?,
+      "logsConfig" : (LogsConfig)?,
+      "fileSystemLocations" : (ProjectFileSystemLocations)?,
+      "buildBatchConfig" : (ProjectBuildBatchConfig)?
+    )
+
+    alias ProjectArns = Array(NonEmptyString)
+
+    alias ProjectArtifacts = NamedTuple(
+      "type" : ArtifactsType,
+      "location" : (String)?,
+      "path" : (String)?,
+      "namespaceType" : (ArtifactNamespace)?,
+      "name" : (String)?,
+      "packaging" : (ArtifactPackaging)?,
+      "overrideArtifactName" : (WrapperBoolean)?,
+      "encryptionDisabled" : (WrapperBoolean)?,
+      "artifactIdentifier" : (String)?
+    )
+
+    alias ProjectArtifactsList = Array(ProjectArtifacts)
+
+    alias ProjectBadge = NamedTuple(
+      "badgeEnabled" : (Boolean)?,
+      "badgeRequestUrl" : (String)?
+    )
+
+    alias ProjectBuildBatchConfig = NamedTuple(
+      "serviceRole" : (NonEmptyString)?,
+      "combineArtifacts" : (WrapperBoolean)?,
+      "restrictions" : (BatchRestrictions)?,
+      "timeoutInMins" : (WrapperInt)?
+    )
+
+    alias ProjectCache = NamedTuple(
+      "type" : CacheType,
+      "location" : (String)?,
+      "modes" : (ProjectCacheModes)?
+    )
+
+    alias ProjectCacheModes = Array(CacheMode)
+
+    alias ProjectDescription = String
+
+    alias ProjectEnvironment = NamedTuple(
+      "type" : EnvironmentType,
+      "image" : NonEmptyString,
+      "computeType" : ComputeType,
+      "environmentVariables" : (EnvironmentVariables)?,
+      "privilegedMode" : (WrapperBoolean)?,
+      "certificate" : (String)?,
+      "registryCredential" : (RegistryCredential)?,
+      "imagePullCredentialsType" : (ImagePullCredentialsType)?
+    )
+
+    alias ProjectFileSystemLocation = NamedTuple(
+      "type" : (FileSystemType)?,
+      "location" : (String)?,
+      "mountPoint" : (String)?,
+      "identifier" : (String)?,
+      "mountOptions" : (String)?
+    )
+
+    alias ProjectFileSystemLocations = Array(ProjectFileSystemLocation)
+
+    alias ProjectName = String
+
+    alias ProjectNames = Array(NonEmptyString)
+
+    alias ProjectSecondarySourceVersions = Array(ProjectSourceVersion)
+
+    alias ProjectSortByType = String
+
+    alias ProjectSource = NamedTuple(
+      "type" : SourceType,
+      "location" : (String)?,
+      "gitCloneDepth" : (GitCloneDepth)?,
+      "gitSubmodulesConfig" : (GitSubmodulesConfig)?,
+      "buildspec" : (String)?,
+      "auth" : (SourceAuth)?,
+      "reportBuildStatus" : (WrapperBoolean)?,
+      "buildStatusConfig" : (BuildStatusConfig)?,
+      "insecureSsl" : (WrapperBoolean)?,
+      "sourceIdentifier" : (String)?
+    )
+
+    alias ProjectSourceVersion = NamedTuple(
+      "sourceIdentifier" : String,
+      "sourceVersion" : String
+    )
+
+    alias ProjectSources = Array(ProjectSource)
+
+    alias Projects = Array(Project)
+
+    alias PutResourcePolicyInput = NamedTuple(
+      "policy" : NonEmptyString,
+      "resourceArn" : NonEmptyString
+    )
+
+    alias PutResourcePolicyOutput = NamedTuple(
+      "resourceArn" : (NonEmptyString)?
+    )
+
+    alias RegistryCredential = NamedTuple(
+      "credential" : NonEmptyString,
+      "credentialProvider" : CredentialProviderType
+    )
+
+    alias Report = NamedTuple(
+      "arn" : (NonEmptyString)?,
+      "type" : (ReportType)?,
+      "name" : (String)?,
+      "reportGroupArn" : (NonEmptyString)?,
+      "executionId" : (String)?,
+      "status" : (ReportStatusType)?,
+      "created" : (Timestamp)?,
+      "expired" : (Timestamp)?,
+      "exportConfig" : (ReportExportConfig)?,
+      "truncated" : (WrapperBoolean)?,
+      "testSummary" : (TestReportSummary)?,
+      "codeCoverageSummary" : (CodeCoverageReportSummary)?
+    )
+
+    alias ReportArns = Array(NonEmptyString)
+
+    alias ReportCodeCoverageSortByType = String
+
+    alias ReportExportConfig = NamedTuple(
+      "exportConfigType" : (ReportExportConfigType)?,
+      "s3Destination" : (S3ReportExportConfig)?
+    )
+
+    alias ReportExportConfigType = String
+
+    alias ReportFilter = NamedTuple(
+      "status" : (ReportStatusType)?
+    )
+
+    alias ReportGroup = NamedTuple(
+      "arn" : (NonEmptyString)?,
+      "name" : (ReportGroupName)?,
+      "type" : (ReportType)?,
+      "exportConfig" : (ReportExportConfig)?,
+      "created" : (Timestamp)?,
+      "lastModified" : (Timestamp)?,
+      "tags" : (TagList)?,
+      "status" : (ReportGroupStatusType)?
+    )
+
+    alias ReportGroupArns = Array(NonEmptyString)
+
+    alias ReportGroupName = String
+
+    alias ReportGroupSortByType = String
+
+    alias ReportGroupStatusType = String
+
+    alias ReportGroupTrendFieldType = String
+
+    alias ReportGroupTrendRawDataList = Array(ReportWithRawData)
+
+    alias ReportGroupTrendStats = NamedTuple(
+      "average" : (String)?,
+      "max" : (String)?,
+      "min" : (String)?
+    )
+
+    alias ReportGroups = Array(ReportGroup)
+
+    alias ReportPackagingType = String
+
+    alias ReportStatusCounts = Hash(String,WrapperInt)
+
+    alias ReportStatusType = String
+
+    alias ReportType = String
+
+    alias ReportWithRawData = NamedTuple(
+      "reportArn" : (NonEmptyString)?,
+      "data" : (String)?
+    )
+
+    alias Reports = Array(Report)
+
+    alias ResolvedArtifact = NamedTuple(
+      "type" : (ArtifactsType)?,
+      "location" : (String)?,
+      "identifier" : (String)?
+    )
+
+    alias ResolvedSecondaryArtifacts = Array(ResolvedArtifact)
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias RetryBuildBatchInput = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "idempotencyToken" : (String)?,
+      "retryType" : (RetryBuildBatchType)?
+    )
+
+    alias RetryBuildBatchOutput = NamedTuple(
+      "buildBatch" : (BuildBatch)?
+    )
+
+    alias RetryBuildBatchType = String
+
+    alias RetryBuildInput = NamedTuple(
+      "id" : (NonEmptyString)?,
+      "idempotencyToken" : (String)?
+    )
+
+    alias RetryBuildOutput = NamedTuple(
+      "build" : (Build)?
+    )
+
+    alias S3LogsConfig = NamedTuple(
+      "status" : LogsConfigStatusType,
+      "location" : (String)?,
+      "encryptionDisabled" : (WrapperBoolean)?
+    )
+
+    alias S3ReportExportConfig = NamedTuple(
+      "bucket" : (NonEmptyString)?,
+      "path" : (String)?,
+      "packaging" : (ReportPackagingType)?,
+      "encryptionKey" : (NonEmptyString)?,
+      "encryptionDisabled" : (WrapperBoolean)?
+    )
+
+    alias SecurityGroupIds = Array(NonEmptyString)
+
+    alias SensitiveNonEmptyString = String
+
+    alias ServerType = String
+
+    alias SharedResourceSortByType = String
+
+    alias SortOrderType = String
+
+    alias SourceAuth = NamedTuple(
+      "type" : SourceAuthType,
+      "resource" : (String)?
+    )
+
+    alias SourceAuthType = String
+
+    alias SourceCredentialsInfo = NamedTuple(
+      "arn" : (NonEmptyString)?,
+      "serverType" : (ServerType)?,
+      "authType" : (AuthType)?
+    )
+
+    alias SourceCredentialsInfos = Array(SourceCredentialsInfo)
+
+    alias SourceType = String
+
+    alias StartBuildBatchInput = NamedTuple(
+      "projectName" : NonEmptyString,
+      "secondarySourcesOverride" : (ProjectSources)?,
+      "secondarySourcesVersionOverride" : (ProjectSecondarySourceVersions)?,
+      "sourceVersion" : (String)?,
+      "artifactsOverride" : (ProjectArtifacts)?,
+      "secondaryArtifactsOverride" : (ProjectArtifactsList)?,
+      "environmentVariablesOverride" : (EnvironmentVariables)?,
+      "sourceTypeOverride" : (SourceType)?,
+      "sourceLocationOverride" : (String)?,
+      "sourceAuthOverride" : (SourceAuth)?,
+      "gitCloneDepthOverride" : (GitCloneDepth)?,
+      "gitSubmodulesConfigOverride" : (GitSubmodulesConfig)?,
+      "buildspecOverride" : (String)?,
+      "insecureSslOverride" : (WrapperBoolean)?,
+      "reportBuildBatchStatusOverride" : (WrapperBoolean)?,
+      "environmentTypeOverride" : (EnvironmentType)?,
+      "imageOverride" : (NonEmptyString)?,
+      "computeTypeOverride" : (ComputeType)?,
+      "certificateOverride" : (String)?,
+      "cacheOverride" : (ProjectCache)?,
+      "serviceRoleOverride" : (NonEmptyString)?,
+      "privilegedModeOverride" : (WrapperBoolean)?,
+      "buildTimeoutInMinutesOverride" : (TimeOut)?,
+      "queuedTimeoutInMinutesOverride" : (TimeOut)?,
+      "encryptionKeyOverride" : (NonEmptyString)?,
+      "idempotencyToken" : (String)?,
+      "logsConfigOverride" : (LogsConfig)?,
+      "registryCredentialOverride" : (RegistryCredential)?,
+      "imagePullCredentialsTypeOverride" : (ImagePullCredentialsType)?,
+      "buildBatchConfigOverride" : (ProjectBuildBatchConfig)?
+    )
+
+    alias StartBuildBatchOutput = NamedTuple(
+      "buildBatch" : (BuildBatch)?
+    )
+
+    alias StartBuildInput = NamedTuple(
+      "projectName" : NonEmptyString,
+      "secondarySourcesOverride" : (ProjectSources)?,
+      "secondarySourcesVersionOverride" : (ProjectSecondarySourceVersions)?,
+      "sourceVersion" : (String)?,
+      "artifactsOverride" : (ProjectArtifacts)?,
+      "secondaryArtifactsOverride" : (ProjectArtifactsList)?,
+      "environmentVariablesOverride" : (EnvironmentVariables)?,
+      "sourceTypeOverride" : (SourceType)?,
+      "sourceLocationOverride" : (String)?,
+      "sourceAuthOverride" : (SourceAuth)?,
+      "gitCloneDepthOverride" : (GitCloneDepth)?,
+      "gitSubmodulesConfigOverride" : (GitSubmodulesConfig)?,
+      "buildspecOverride" : (String)?,
+      "insecureSslOverride" : (WrapperBoolean)?,
+      "reportBuildStatusOverride" : (WrapperBoolean)?,
+      "buildStatusConfigOverride" : (BuildStatusConfig)?,
+      "environmentTypeOverride" : (EnvironmentType)?,
+      "imageOverride" : (NonEmptyString)?,
+      "computeTypeOverride" : (ComputeType)?,
+      "certificateOverride" : (String)?,
+      "cacheOverride" : (ProjectCache)?,
+      "serviceRoleOverride" : (NonEmptyString)?,
+      "privilegedModeOverride" : (WrapperBoolean)?,
+      "timeoutInMinutesOverride" : (TimeOut)?,
+      "queuedTimeoutInMinutesOverride" : (TimeOut)?,
+      "encryptionKeyOverride" : (NonEmptyString)?,
+      "idempotencyToken" : (String)?,
+      "logsConfigOverride" : (LogsConfig)?,
+      "registryCredentialOverride" : (RegistryCredential)?,
+      "imagePullCredentialsTypeOverride" : (ImagePullCredentialsType)?,
+      "debugSessionEnabled" : (WrapperBoolean)?
+    )
+
+    alias StartBuildOutput = NamedTuple(
+      "build" : (Build)?
+    )
+
+    alias StatusType = String
+
+    alias StopBuildBatchInput = NamedTuple(
+      "id" : NonEmptyString
+    )
+
+    alias StopBuildBatchOutput = NamedTuple(
+      "buildBatch" : (BuildBatch)?
+    )
+
+    alias StopBuildInput = NamedTuple(
+      "id" : NonEmptyString
+    )
+
+    alias StopBuildOutput = NamedTuple(
+      "build" : (Build)?
+    )
+
+    alias String = String
+
+    alias Subnets = Array(NonEmptyString)
+
+    alias Tag = NamedTuple(
+      "key" : (KeyInput)?,
+      "value" : (ValueInput)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TestCase = NamedTuple(
+      "reportArn" : (NonEmptyString)?,
+      "testRawDataPath" : (String)?,
+      "prefix" : (String)?,
+      "name" : (String)?,
+      "status" : (String)?,
+      "durationInNanoSeconds" : (WrapperLong)?,
+      "message" : (String)?,
+      "expired" : (Timestamp)?
+    )
+
+    alias TestCaseFilter = NamedTuple(
+      "status" : (String)?,
+      "keyword" : (String)?
+    )
+
+    alias TestCases = Array(TestCase)
+
+    alias TestReportSummary = NamedTuple(
+      "total" : WrapperInt,
+      "statusCounts" : ReportStatusCounts,
+      "durationInNanoSeconds" : WrapperLong
+    )
+
+    alias TimeOut = Int32
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UpdateProjectInput = NamedTuple(
+      "name" : NonEmptyString,
+      "description" : (ProjectDescription)?,
+      "source" : (ProjectSource)?,
+      "secondarySources" : (ProjectSources)?,
+      "sourceVersion" : (String)?,
+      "secondarySourceVersions" : (ProjectSecondarySourceVersions)?,
+      "artifacts" : (ProjectArtifacts)?,
+      "secondaryArtifacts" : (ProjectArtifactsList)?,
+      "cache" : (ProjectCache)?,
+      "environment" : (ProjectEnvironment)?,
+      "serviceRole" : (NonEmptyString)?,
+      "timeoutInMinutes" : (TimeOut)?,
+      "queuedTimeoutInMinutes" : (TimeOut)?,
+      "encryptionKey" : (NonEmptyString)?,
+      "tags" : (TagList)?,
+      "vpcConfig" : (VpcConfig)?,
+      "badgeEnabled" : (WrapperBoolean)?,
+      "logsConfig" : (LogsConfig)?,
+      "fileSystemLocations" : (ProjectFileSystemLocations)?,
+      "buildBatchConfig" : (ProjectBuildBatchConfig)?
+    )
+
+    alias UpdateProjectOutput = NamedTuple(
+      "project" : (Project)?
+    )
+
+    alias UpdateReportGroupInput = NamedTuple(
+      "arn" : NonEmptyString,
+      "exportConfig" : (ReportExportConfig)?,
+      "tags" : (TagList)?
+    )
+
+    alias UpdateReportGroupOutput = NamedTuple(
+      "reportGroup" : (ReportGroup)?
+    )
+
+    alias UpdateWebhookInput = NamedTuple(
+      "projectName" : ProjectName,
+      "branchFilter" : (String)?,
+      "rotateSecret" : (Boolean)?,
+      "filterGroups" : (FilterGroups)?,
+      "buildType" : (WebhookBuildType)?
+    )
+
+    alias UpdateWebhookOutput = NamedTuple(
+      "webhook" : (Webhook)?
+    )
+
+    alias ValueInput = String
+
+    alias VpcConfig = NamedTuple(
+      "vpcId" : (NonEmptyString)?,
+      "subnets" : (Subnets)?,
+      "securityGroupIds" : (SecurityGroupIds)?
+    )
+
+    alias Webhook = NamedTuple(
+      "url" : (NonEmptyString)?,
+      "payloadUrl" : (NonEmptyString)?,
+      "secret" : (NonEmptyString)?,
+      "branchFilter" : (String)?,
+      "filterGroups" : (FilterGroups)?,
+      "buildType" : (WebhookBuildType)?,
+      "lastModifiedSecret" : (Timestamp)?
+    )
+
+    alias WebhookBuildType = String
+
+    alias WebhookFilter = NamedTuple(
+      "type" : WebhookFilterType,
+      "pattern" : String,
+      "excludeMatchedPattern" : (WrapperBoolean)?
+    )
+
+    alias WebhookFilterType = String
+
+    alias WrapperBoolean = Bool
+
+    alias WrapperInt = Int32
+
+    alias WrapperLong = Int64
   end
 end

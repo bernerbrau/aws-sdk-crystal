@@ -6151,5 +6151,1076 @@ module Aws::KinesisAnalyticsV2
       include Aws::Structure
     end
 
+    alias AddApplicationCloudWatchLoggingOptionRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "CloudWatchLoggingOption" : CloudWatchLoggingOption
+    )
+
+    alias AddApplicationCloudWatchLoggingOptionResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "CloudWatchLoggingOptionDescriptions" : (CloudWatchLoggingOptionDescriptions)?
+    )
+
+    alias AddApplicationInputProcessingConfigurationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "InputId" : Id,
+      "InputProcessingConfiguration" : InputProcessingConfiguration
+    )
+
+    alias AddApplicationInputProcessingConfigurationResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "InputId" : (Id)?,
+      "InputProcessingConfigurationDescription" : (InputProcessingConfigurationDescription)?
+    )
+
+    alias AddApplicationInputRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "Input" : Input
+    )
+
+    alias AddApplicationInputResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "InputDescriptions" : (InputDescriptions)?
+    )
+
+    alias AddApplicationOutputRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "Output" : Output
+    )
+
+    alias AddApplicationOutputResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "OutputDescriptions" : (OutputDescriptions)?
+    )
+
+    alias AddApplicationReferenceDataSourceRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "ReferenceDataSource" : ReferenceDataSource
+    )
+
+    alias AddApplicationReferenceDataSourceResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "ReferenceDataSourceDescriptions" : (ReferenceDataSourceDescriptions)?
+    )
+
+    alias AddApplicationVpcConfigurationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "VpcConfiguration" : VpcConfiguration
+    )
+
+    alias AddApplicationVpcConfigurationResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "VpcConfigurationDescription" : (VpcConfigurationDescription)?
+    )
+
+    alias ApplicationCodeConfiguration = NamedTuple(
+      "CodeContent" : (CodeContent)?,
+      "CodeContentType" : CodeContentType
+    )
+
+    alias ApplicationCodeConfigurationDescription = NamedTuple(
+      "CodeContentType" : CodeContentType,
+      "CodeContentDescription" : (CodeContentDescription)?
+    )
+
+    alias ApplicationCodeConfigurationUpdate = NamedTuple(
+      "CodeContentTypeUpdate" : (CodeContentType)?,
+      "CodeContentUpdate" : (CodeContentUpdate)?
+    )
+
+    alias ApplicationConfiguration = NamedTuple(
+      "SqlApplicationConfiguration" : (SqlApplicationConfiguration)?,
+      "FlinkApplicationConfiguration" : (FlinkApplicationConfiguration)?,
+      "EnvironmentProperties" : (EnvironmentProperties)?,
+      "ApplicationCodeConfiguration" : ApplicationCodeConfiguration,
+      "ApplicationSnapshotConfiguration" : (ApplicationSnapshotConfiguration)?,
+      "VpcConfigurations" : (VpcConfigurations)?
+    )
+
+    alias ApplicationConfigurationDescription = NamedTuple(
+      "SqlApplicationConfigurationDescription" : (SqlApplicationConfigurationDescription)?,
+      "ApplicationCodeConfigurationDescription" : (ApplicationCodeConfigurationDescription)?,
+      "RunConfigurationDescription" : (RunConfigurationDescription)?,
+      "FlinkApplicationConfigurationDescription" : (FlinkApplicationConfigurationDescription)?,
+      "EnvironmentPropertyDescriptions" : (EnvironmentPropertyDescriptions)?,
+      "ApplicationSnapshotConfigurationDescription" : (ApplicationSnapshotConfigurationDescription)?,
+      "VpcConfigurationDescriptions" : (VpcConfigurationDescriptions)?
+    )
+
+    alias ApplicationConfigurationUpdate = NamedTuple(
+      "SqlApplicationConfigurationUpdate" : (SqlApplicationConfigurationUpdate)?,
+      "ApplicationCodeConfigurationUpdate" : (ApplicationCodeConfigurationUpdate)?,
+      "FlinkApplicationConfigurationUpdate" : (FlinkApplicationConfigurationUpdate)?,
+      "EnvironmentPropertyUpdates" : (EnvironmentPropertyUpdates)?,
+      "ApplicationSnapshotConfigurationUpdate" : (ApplicationSnapshotConfigurationUpdate)?,
+      "VpcConfigurationUpdates" : (VpcConfigurationUpdates)?
+    )
+
+    alias ApplicationDescription = String
+
+    alias ApplicationDetail = NamedTuple(
+      "ApplicationARN" : ResourceARN,
+      "ApplicationDescription" : (ApplicationDescription)?,
+      "ApplicationName" : ApplicationName,
+      "RuntimeEnvironment" : RuntimeEnvironment,
+      "ServiceExecutionRole" : (RoleARN)?,
+      "ApplicationStatus" : ApplicationStatus,
+      "ApplicationVersionId" : ApplicationVersionId,
+      "CreateTimestamp" : (Timestamp)?,
+      "LastUpdateTimestamp" : (Timestamp)?,
+      "ApplicationConfigurationDescription" : (ApplicationConfigurationDescription)?,
+      "CloudWatchLoggingOptionDescriptions" : (CloudWatchLoggingOptionDescriptions)?
+    )
+
+    alias ApplicationName = String
+
+    alias ApplicationRestoreConfiguration = NamedTuple(
+      "ApplicationRestoreType" : ApplicationRestoreType,
+      "SnapshotName" : (SnapshotName)?
+    )
+
+    alias ApplicationRestoreType = String
+
+    alias ApplicationSnapshotConfiguration = NamedTuple(
+      "SnapshotsEnabled" : BooleanObject
+    )
+
+    alias ApplicationSnapshotConfigurationDescription = NamedTuple(
+      "SnapshotsEnabled" : BooleanObject
+    )
+
+    alias ApplicationSnapshotConfigurationUpdate = NamedTuple(
+      "SnapshotsEnabledUpdate" : BooleanObject
+    )
+
+    alias ApplicationStatus = String
+
+    alias ApplicationSummaries = Array(ApplicationSummary)
+
+    alias ApplicationSummary = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "ApplicationARN" : ResourceARN,
+      "ApplicationStatus" : ApplicationStatus,
+      "ApplicationVersionId" : ApplicationVersionId,
+      "RuntimeEnvironment" : RuntimeEnvironment
+    )
+
+    alias ApplicationVersionId = Int64
+
+    alias AuthorizedUrl = String
+
+    alias BooleanObject = Bool
+
+    alias BucketARN = String
+
+    alias CSVMappingParameters = NamedTuple(
+      "RecordRowDelimiter" : RecordRowDelimiter,
+      "RecordColumnDelimiter" : RecordColumnDelimiter
+    )
+
+    alias CheckpointConfiguration = NamedTuple(
+      "ConfigurationType" : ConfigurationType,
+      "CheckpointingEnabled" : (BooleanObject)?,
+      "CheckpointInterval" : (CheckpointInterval)?,
+      "MinPauseBetweenCheckpoints" : (MinPauseBetweenCheckpoints)?
+    )
+
+    alias CheckpointConfigurationDescription = NamedTuple(
+      "ConfigurationType" : (ConfigurationType)?,
+      "CheckpointingEnabled" : (BooleanObject)?,
+      "CheckpointInterval" : (CheckpointInterval)?,
+      "MinPauseBetweenCheckpoints" : (MinPauseBetweenCheckpoints)?
+    )
+
+    alias CheckpointConfigurationUpdate = NamedTuple(
+      "ConfigurationTypeUpdate" : (ConfigurationType)?,
+      "CheckpointingEnabledUpdate" : (BooleanObject)?,
+      "CheckpointIntervalUpdate" : (CheckpointInterval)?,
+      "MinPauseBetweenCheckpointsUpdate" : (MinPauseBetweenCheckpoints)?
+    )
+
+    alias CheckpointInterval = Int64
+
+    alias CloudWatchLoggingOption = NamedTuple(
+      "LogStreamARN" : LogStreamARN
+    )
+
+    alias CloudWatchLoggingOptionDescription = NamedTuple(
+      "CloudWatchLoggingOptionId" : (Id)?,
+      "LogStreamARN" : LogStreamARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias CloudWatchLoggingOptionDescriptions = Array(CloudWatchLoggingOptionDescription)
+
+    alias CloudWatchLoggingOptionUpdate = NamedTuple(
+      "CloudWatchLoggingOptionId" : Id,
+      "LogStreamARNUpdate" : (LogStreamARN)?
+    )
+
+    alias CloudWatchLoggingOptionUpdates = Array(CloudWatchLoggingOptionUpdate)
+
+    alias CloudWatchLoggingOptions = Array(CloudWatchLoggingOption)
+
+    alias CodeContent = NamedTuple(
+      "TextContent" : (TextContent)?,
+      "ZipFileContent" : (ZipFileContent)?,
+      "S3ContentLocation" : (S3ContentLocation)?
+    )
+
+    alias CodeContentDescription = NamedTuple(
+      "TextContent" : (TextContent)?,
+      "CodeMD5" : (CodeMD5)?,
+      "CodeSize" : (CodeSize)?,
+      "S3ApplicationCodeLocationDescription" : (S3ApplicationCodeLocationDescription)?
+    )
+
+    alias CodeContentType = String
+
+    alias CodeContentUpdate = NamedTuple(
+      "TextContentUpdate" : (TextContent)?,
+      "ZipFileContentUpdate" : (ZipFileContent)?,
+      "S3ContentLocationUpdate" : (S3ContentLocationUpdate)?
+    )
+
+    alias CodeMD5 = String
+
+    alias CodeSize = Int64
+
+    alias CodeValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConfigurationType = String
+
+    alias CreateApplicationPresignedUrlRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "UrlType" : UrlType,
+      "SessionExpirationDurationInSeconds" : (SessionExpirationDurationInSeconds)?
+    )
+
+    alias CreateApplicationPresignedUrlResponse = NamedTuple(
+      "AuthorizedUrl" : (AuthorizedUrl)?
+    )
+
+    alias CreateApplicationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "ApplicationDescription" : (ApplicationDescription)?,
+      "RuntimeEnvironment" : RuntimeEnvironment,
+      "ServiceExecutionRole" : RoleARN,
+      "ApplicationConfiguration" : (ApplicationConfiguration)?,
+      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateApplicationResponse = NamedTuple(
+      "ApplicationDetail" : ApplicationDetail
+    )
+
+    alias CreateApplicationSnapshotRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "SnapshotName" : SnapshotName
+    )
+
+    alias CreateApplicationSnapshotResponse = NamedTuple(
+      
+    )
+
+    alias DeleteApplicationCloudWatchLoggingOptionRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "CloudWatchLoggingOptionId" : Id
+    )
+
+    alias DeleteApplicationCloudWatchLoggingOptionResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?,
+      "CloudWatchLoggingOptionDescriptions" : (CloudWatchLoggingOptionDescriptions)?
+    )
+
+    alias DeleteApplicationInputProcessingConfigurationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "InputId" : Id
+    )
+
+    alias DeleteApplicationInputProcessingConfigurationResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?
+    )
+
+    alias DeleteApplicationOutputRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "OutputId" : Id
+    )
+
+    alias DeleteApplicationOutputResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?
+    )
+
+    alias DeleteApplicationReferenceDataSourceRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "ReferenceId" : Id
+    )
+
+    alias DeleteApplicationReferenceDataSourceResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?
+    )
+
+    alias DeleteApplicationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CreateTimestamp" : Timestamp
+    )
+
+    alias DeleteApplicationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteApplicationSnapshotRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "SnapshotName" : SnapshotName,
+      "SnapshotCreationTimestamp" : Timestamp
+    )
+
+    alias DeleteApplicationSnapshotResponse = NamedTuple(
+      
+    )
+
+    alias DeleteApplicationVpcConfigurationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "VpcConfigurationId" : Id
+    )
+
+    alias DeleteApplicationVpcConfigurationResponse = NamedTuple(
+      "ApplicationARN" : (ResourceARN)?,
+      "ApplicationVersionId" : (ApplicationVersionId)?
+    )
+
+    alias DescribeApplicationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "IncludeAdditionalDetails" : (BooleanObject)?
+    )
+
+    alias DescribeApplicationResponse = NamedTuple(
+      "ApplicationDetail" : ApplicationDetail
+    )
+
+    alias DescribeApplicationSnapshotRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "SnapshotName" : SnapshotName
+    )
+
+    alias DescribeApplicationSnapshotResponse = NamedTuple(
+      "SnapshotDetails" : SnapshotDetails
+    )
+
+    alias DestinationSchema = NamedTuple(
+      "RecordFormatType" : RecordFormatType
+    )
+
+    alias DiscoverInputSchemaRequest = NamedTuple(
+      "ResourceARN" : (ResourceARN)?,
+      "ServiceExecutionRole" : RoleARN,
+      "InputStartingPositionConfiguration" : (InputStartingPositionConfiguration)?,
+      "S3Configuration" : (S3Configuration)?,
+      "InputProcessingConfiguration" : (InputProcessingConfiguration)?
+    )
+
+    alias DiscoverInputSchemaResponse = NamedTuple(
+      "InputSchema" : (SourceSchema)?,
+      "ParsedInputRecords" : (ParsedInputRecords)?,
+      "ProcessedInputRecords" : (ProcessedInputRecords)?,
+      "RawInputRecords" : (RawInputRecords)?
+    )
+
+    alias EnvironmentProperties = NamedTuple(
+      "PropertyGroups" : PropertyGroups
+    )
+
+    alias EnvironmentPropertyDescriptions = NamedTuple(
+      "PropertyGroupDescriptions" : (PropertyGroups)?
+    )
+
+    alias EnvironmentPropertyUpdates = NamedTuple(
+      "PropertyGroups" : PropertyGroups
+    )
+
+    alias ErrorMessage = String
+
+    alias FileKey = String
+
+    alias FlinkApplicationConfiguration = NamedTuple(
+      "CheckpointConfiguration" : (CheckpointConfiguration)?,
+      "MonitoringConfiguration" : (MonitoringConfiguration)?,
+      "ParallelismConfiguration" : (ParallelismConfiguration)?
+    )
+
+    alias FlinkApplicationConfigurationDescription = NamedTuple(
+      "CheckpointConfigurationDescription" : (CheckpointConfigurationDescription)?,
+      "MonitoringConfigurationDescription" : (MonitoringConfigurationDescription)?,
+      "ParallelismConfigurationDescription" : (ParallelismConfigurationDescription)?,
+      "JobPlanDescription" : (JobPlanDescription)?
+    )
+
+    alias FlinkApplicationConfigurationUpdate = NamedTuple(
+      "CheckpointConfigurationUpdate" : (CheckpointConfigurationUpdate)?,
+      "MonitoringConfigurationUpdate" : (MonitoringConfigurationUpdate)?,
+      "ParallelismConfigurationUpdate" : (ParallelismConfigurationUpdate)?
+    )
+
+    alias FlinkRunConfiguration = NamedTuple(
+      "AllowNonRestoredState" : (BooleanObject)?
+    )
+
+    alias Id = String
+
+    alias InAppStreamName = String
+
+    alias InAppStreamNames = Array(InAppStreamName)
+
+    alias InAppTableName = String
+
+    alias Input = NamedTuple(
+      "NamePrefix" : InAppStreamName,
+      "InputProcessingConfiguration" : (InputProcessingConfiguration)?,
+      "KinesisStreamsInput" : (KinesisStreamsInput)?,
+      "KinesisFirehoseInput" : (KinesisFirehoseInput)?,
+      "InputParallelism" : (InputParallelism)?,
+      "InputSchema" : SourceSchema
+    )
+
+    alias InputDescription = NamedTuple(
+      "InputId" : (Id)?,
+      "NamePrefix" : (InAppStreamName)?,
+      "InAppStreamNames" : (InAppStreamNames)?,
+      "InputProcessingConfigurationDescription" : (InputProcessingConfigurationDescription)?,
+      "KinesisStreamsInputDescription" : (KinesisStreamsInputDescription)?,
+      "KinesisFirehoseInputDescription" : (KinesisFirehoseInputDescription)?,
+      "InputSchema" : (SourceSchema)?,
+      "InputParallelism" : (InputParallelism)?,
+      "InputStartingPositionConfiguration" : (InputStartingPositionConfiguration)?
+    )
+
+    alias InputDescriptions = Array(InputDescription)
+
+    alias InputLambdaProcessor = NamedTuple(
+      "ResourceARN" : ResourceARN
+    )
+
+    alias InputLambdaProcessorDescription = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias InputLambdaProcessorUpdate = NamedTuple(
+      "ResourceARNUpdate" : ResourceARN
+    )
+
+    alias InputParallelism = NamedTuple(
+      "Count" : (InputParallelismCount)?
+    )
+
+    alias InputParallelismCount = Int32
+
+    alias InputParallelismUpdate = NamedTuple(
+      "CountUpdate" : InputParallelismCount
+    )
+
+    alias InputProcessingConfiguration = NamedTuple(
+      "InputLambdaProcessor" : InputLambdaProcessor
+    )
+
+    alias InputProcessingConfigurationDescription = NamedTuple(
+      "InputLambdaProcessorDescription" : (InputLambdaProcessorDescription)?
+    )
+
+    alias InputProcessingConfigurationUpdate = NamedTuple(
+      "InputLambdaProcessorUpdate" : InputLambdaProcessorUpdate
+    )
+
+    alias InputSchemaUpdate = NamedTuple(
+      "RecordFormatUpdate" : (RecordFormat)?,
+      "RecordEncodingUpdate" : (RecordEncoding)?,
+      "RecordColumnUpdates" : (RecordColumns)?
+    )
+
+    alias InputStartingPosition = String
+
+    alias InputStartingPositionConfiguration = NamedTuple(
+      "InputStartingPosition" : (InputStartingPosition)?
+    )
+
+    alias InputUpdate = NamedTuple(
+      "InputId" : Id,
+      "NamePrefixUpdate" : (InAppStreamName)?,
+      "InputProcessingConfigurationUpdate" : (InputProcessingConfigurationUpdate)?,
+      "KinesisStreamsInputUpdate" : (KinesisStreamsInputUpdate)?,
+      "KinesisFirehoseInputUpdate" : (KinesisFirehoseInputUpdate)?,
+      "InputSchemaUpdate" : (InputSchemaUpdate)?,
+      "InputParallelismUpdate" : (InputParallelismUpdate)?
+    )
+
+    alias InputUpdates = Array(InputUpdate)
+
+    alias Inputs = Array(Input)
+
+    alias InvalidApplicationConfigurationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias JSONMappingParameters = NamedTuple(
+      "RecordRowPath" : RecordRowPath
+    )
+
+    alias JobPlanDescription = String
+
+    alias KinesisAnalyticsARN = String
+
+    alias KinesisFirehoseInput = NamedTuple(
+      "ResourceARN" : ResourceARN
+    )
+
+    alias KinesisFirehoseInputDescription = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias KinesisFirehoseInputUpdate = NamedTuple(
+      "ResourceARNUpdate" : ResourceARN
+    )
+
+    alias KinesisFirehoseOutput = NamedTuple(
+      "ResourceARN" : ResourceARN
+    )
+
+    alias KinesisFirehoseOutputDescription = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias KinesisFirehoseOutputUpdate = NamedTuple(
+      "ResourceARNUpdate" : ResourceARN
+    )
+
+    alias KinesisStreamsInput = NamedTuple(
+      "ResourceARN" : ResourceARN
+    )
+
+    alias KinesisStreamsInputDescription = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias KinesisStreamsInputUpdate = NamedTuple(
+      "ResourceARNUpdate" : ResourceARN
+    )
+
+    alias KinesisStreamsOutput = NamedTuple(
+      "ResourceARN" : ResourceARN
+    )
+
+    alias KinesisStreamsOutputDescription = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias KinesisStreamsOutputUpdate = NamedTuple(
+      "ResourceARNUpdate" : ResourceARN
+    )
+
+    alias LambdaOutput = NamedTuple(
+      "ResourceARN" : ResourceARN
+    )
+
+    alias LambdaOutputDescription = NamedTuple(
+      "ResourceARN" : ResourceARN,
+      "RoleARN" : (RoleARN)?
+    )
+
+    alias LambdaOutputUpdate = NamedTuple(
+      "ResourceARNUpdate" : ResourceARN
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListApplicationSnapshotsRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "Limit" : (ListSnapshotsInputLimit)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListApplicationSnapshotsResponse = NamedTuple(
+      "SnapshotSummaries" : (SnapshotSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListApplicationsInputLimit = Int32
+
+    alias ListApplicationsRequest = NamedTuple(
+      "Limit" : (ListApplicationsInputLimit)?,
+      "NextToken" : (ApplicationName)?
+    )
+
+    alias ListApplicationsResponse = NamedTuple(
+      "ApplicationSummaries" : ApplicationSummaries,
+      "NextToken" : (ApplicationName)?
+    )
+
+    alias ListSnapshotsInputLimit = Int32
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceARN" : KinesisAnalyticsARN
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias LogLevel = String
+
+    alias LogStreamARN = String
+
+    alias MappingParameters = NamedTuple(
+      "JSONMappingParameters" : (JSONMappingParameters)?,
+      "CSVMappingParameters" : (CSVMappingParameters)?
+    )
+
+    alias MetricsLevel = String
+
+    alias MinPauseBetweenCheckpoints = Int64
+
+    alias MonitoringConfiguration = NamedTuple(
+      "ConfigurationType" : ConfigurationType,
+      "MetricsLevel" : (MetricsLevel)?,
+      "LogLevel" : (LogLevel)?
+    )
+
+    alias MonitoringConfigurationDescription = NamedTuple(
+      "ConfigurationType" : (ConfigurationType)?,
+      "MetricsLevel" : (MetricsLevel)?,
+      "LogLevel" : (LogLevel)?
+    )
+
+    alias MonitoringConfigurationUpdate = NamedTuple(
+      "ConfigurationTypeUpdate" : (ConfigurationType)?,
+      "MetricsLevelUpdate" : (MetricsLevel)?,
+      "LogLevelUpdate" : (LogLevel)?
+    )
+
+    alias NextToken = String
+
+    alias ObjectVersion = String
+
+    alias Output = NamedTuple(
+      "Name" : InAppStreamName,
+      "KinesisStreamsOutput" : (KinesisStreamsOutput)?,
+      "KinesisFirehoseOutput" : (KinesisFirehoseOutput)?,
+      "LambdaOutput" : (LambdaOutput)?,
+      "DestinationSchema" : DestinationSchema
+    )
+
+    alias OutputDescription = NamedTuple(
+      "OutputId" : (Id)?,
+      "Name" : (InAppStreamName)?,
+      "KinesisStreamsOutputDescription" : (KinesisStreamsOutputDescription)?,
+      "KinesisFirehoseOutputDescription" : (KinesisFirehoseOutputDescription)?,
+      "LambdaOutputDescription" : (LambdaOutputDescription)?,
+      "DestinationSchema" : (DestinationSchema)?
+    )
+
+    alias OutputDescriptions = Array(OutputDescription)
+
+    alias OutputUpdate = NamedTuple(
+      "OutputId" : Id,
+      "NameUpdate" : (InAppStreamName)?,
+      "KinesisStreamsOutputUpdate" : (KinesisStreamsOutputUpdate)?,
+      "KinesisFirehoseOutputUpdate" : (KinesisFirehoseOutputUpdate)?,
+      "LambdaOutputUpdate" : (LambdaOutputUpdate)?,
+      "DestinationSchemaUpdate" : (DestinationSchema)?
+    )
+
+    alias OutputUpdates = Array(OutputUpdate)
+
+    alias Outputs = Array(Output)
+
+    alias Parallelism = Int32
+
+    alias ParallelismConfiguration = NamedTuple(
+      "ConfigurationType" : ConfigurationType,
+      "Parallelism" : (Parallelism)?,
+      "ParallelismPerKPU" : (ParallelismPerKPU)?,
+      "AutoScalingEnabled" : (BooleanObject)?
+    )
+
+    alias ParallelismConfigurationDescription = NamedTuple(
+      "ConfigurationType" : (ConfigurationType)?,
+      "Parallelism" : (Parallelism)?,
+      "ParallelismPerKPU" : (ParallelismPerKPU)?,
+      "CurrentParallelism" : (Parallelism)?,
+      "AutoScalingEnabled" : (BooleanObject)?
+    )
+
+    alias ParallelismConfigurationUpdate = NamedTuple(
+      "ConfigurationTypeUpdate" : (ConfigurationType)?,
+      "ParallelismUpdate" : (Parallelism)?,
+      "ParallelismPerKPUUpdate" : (ParallelismPerKPU)?,
+      "AutoScalingEnabledUpdate" : (BooleanObject)?
+    )
+
+    alias ParallelismPerKPU = Int32
+
+    alias ParsedInputRecord = Array(ParsedInputRecordField)
+
+    alias ParsedInputRecordField = String
+
+    alias ParsedInputRecords = Array(ParsedInputRecord)
+
+    alias ProcessedInputRecord = String
+
+    alias ProcessedInputRecords = Array(ProcessedInputRecord)
+
+    alias PropertyGroup = NamedTuple(
+      "PropertyGroupId" : Id,
+      "PropertyMap" : PropertyMap
+    )
+
+    alias PropertyGroups = Array(PropertyGroup)
+
+    alias PropertyKey = String
+
+    alias PropertyMap = Hash(PropertyKey,PropertyValue)
+
+    alias PropertyValue = String
+
+    alias RawInputRecord = String
+
+    alias RawInputRecords = Array(RawInputRecord)
+
+    alias RecordColumn = NamedTuple(
+      "Name" : RecordColumnName,
+      "Mapping" : (RecordColumnMapping)?,
+      "SqlType" : RecordColumnSqlType
+    )
+
+    alias RecordColumnDelimiter = String
+
+    alias RecordColumnMapping = String
+
+    alias RecordColumnName = String
+
+    alias RecordColumnSqlType = String
+
+    alias RecordColumns = Array(RecordColumn)
+
+    alias RecordEncoding = String
+
+    alias RecordFormat = NamedTuple(
+      "RecordFormatType" : RecordFormatType,
+      "MappingParameters" : (MappingParameters)?
+    )
+
+    alias RecordFormatType = String
+
+    alias RecordRowDelimiter = String
+
+    alias RecordRowPath = String
+
+    alias ReferenceDataSource = NamedTuple(
+      "TableName" : InAppTableName,
+      "S3ReferenceDataSource" : (S3ReferenceDataSource)?,
+      "ReferenceSchema" : SourceSchema
+    )
+
+    alias ReferenceDataSourceDescription = NamedTuple(
+      "ReferenceId" : Id,
+      "TableName" : InAppTableName,
+      "S3ReferenceDataSourceDescription" : S3ReferenceDataSourceDescription,
+      "ReferenceSchema" : (SourceSchema)?
+    )
+
+    alias ReferenceDataSourceDescriptions = Array(ReferenceDataSourceDescription)
+
+    alias ReferenceDataSourceUpdate = NamedTuple(
+      "ReferenceId" : Id,
+      "TableNameUpdate" : (InAppTableName)?,
+      "S3ReferenceDataSourceUpdate" : (S3ReferenceDataSourceUpdate)?,
+      "ReferenceSchemaUpdate" : (SourceSchema)?
+    )
+
+    alias ReferenceDataSourceUpdates = Array(ReferenceDataSourceUpdate)
+
+    alias ReferenceDataSources = Array(ReferenceDataSource)
+
+    alias ResourceARN = String
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceProvisionedThroughputExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias RoleARN = String
+
+    alias RunConfiguration = NamedTuple(
+      "FlinkRunConfiguration" : (FlinkRunConfiguration)?,
+      "SqlRunConfigurations" : (SqlRunConfigurations)?,
+      "ApplicationRestoreConfiguration" : (ApplicationRestoreConfiguration)?
+    )
+
+    alias RunConfigurationDescription = NamedTuple(
+      "ApplicationRestoreConfigurationDescription" : (ApplicationRestoreConfiguration)?,
+      "FlinkRunConfigurationDescription" : (FlinkRunConfiguration)?
+    )
+
+    alias RunConfigurationUpdate = NamedTuple(
+      "FlinkRunConfiguration" : (FlinkRunConfiguration)?,
+      "ApplicationRestoreConfiguration" : (ApplicationRestoreConfiguration)?
+    )
+
+    alias RuntimeEnvironment = String
+
+    alias S3ApplicationCodeLocationDescription = NamedTuple(
+      "BucketARN" : BucketARN,
+      "FileKey" : FileKey,
+      "ObjectVersion" : (ObjectVersion)?
+    )
+
+    alias S3Configuration = NamedTuple(
+      "BucketARN" : BucketARN,
+      "FileKey" : FileKey
+    )
+
+    alias S3ContentLocation = NamedTuple(
+      "BucketARN" : BucketARN,
+      "FileKey" : FileKey,
+      "ObjectVersion" : (ObjectVersion)?
+    )
+
+    alias S3ContentLocationUpdate = NamedTuple(
+      "BucketARNUpdate" : (BucketARN)?,
+      "FileKeyUpdate" : (FileKey)?,
+      "ObjectVersionUpdate" : (ObjectVersion)?
+    )
+
+    alias S3ReferenceDataSource = NamedTuple(
+      "BucketARN" : (BucketARN)?,
+      "FileKey" : (FileKey)?
+    )
+
+    alias S3ReferenceDataSourceDescription = NamedTuple(
+      "BucketARN" : BucketARN,
+      "FileKey" : FileKey,
+      "ReferenceRoleARN" : (RoleARN)?
+    )
+
+    alias S3ReferenceDataSourceUpdate = NamedTuple(
+      "BucketARNUpdate" : (BucketARN)?,
+      "FileKeyUpdate" : (FileKey)?
+    )
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SessionExpirationDurationInSeconds = Int64
+
+    alias SnapshotDetails = NamedTuple(
+      "SnapshotName" : SnapshotName,
+      "SnapshotStatus" : SnapshotStatus,
+      "ApplicationVersionId" : ApplicationVersionId,
+      "SnapshotCreationTimestamp" : (Timestamp)?
+    )
+
+    alias SnapshotName = String
+
+    alias SnapshotStatus = String
+
+    alias SnapshotSummaries = Array(SnapshotDetails)
+
+    alias SourceSchema = NamedTuple(
+      "RecordFormat" : RecordFormat,
+      "RecordEncoding" : (RecordEncoding)?,
+      "RecordColumns" : RecordColumns
+    )
+
+    alias SqlApplicationConfiguration = NamedTuple(
+      "Inputs" : (Inputs)?,
+      "Outputs" : (Outputs)?,
+      "ReferenceDataSources" : (ReferenceDataSources)?
+    )
+
+    alias SqlApplicationConfigurationDescription = NamedTuple(
+      "InputDescriptions" : (InputDescriptions)?,
+      "OutputDescriptions" : (OutputDescriptions)?,
+      "ReferenceDataSourceDescriptions" : (ReferenceDataSourceDescriptions)?
+    )
+
+    alias SqlApplicationConfigurationUpdate = NamedTuple(
+      "InputUpdates" : (InputUpdates)?,
+      "OutputUpdates" : (OutputUpdates)?,
+      "ReferenceDataSourceUpdates" : (ReferenceDataSourceUpdates)?
+    )
+
+    alias SqlRunConfiguration = NamedTuple(
+      "InputId" : Id,
+      "InputStartingPositionConfiguration" : InputStartingPositionConfiguration
+    )
+
+    alias SqlRunConfigurations = Array(SqlRunConfiguration)
+
+    alias StartApplicationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "RunConfiguration" : RunConfiguration
+    )
+
+    alias StartApplicationResponse = NamedTuple(
+      
+    )
+
+    alias StopApplicationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "Force" : (BooleanObject)?
+    )
+
+    alias StopApplicationResponse = NamedTuple(
+      
+    )
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceARN" : KinesisAnalyticsARN,
+      "Tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TextContent = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyTagsException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UnableToDetectSchemaException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "RawInputRecords" : (RawInputRecords)?,
+      "ProcessedInputRecords" : (ProcessedInputRecords)?
+    )
+
+    alias UnsupportedOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceARN" : KinesisAnalyticsARN,
+      "TagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateApplicationRequest = NamedTuple(
+      "ApplicationName" : ApplicationName,
+      "CurrentApplicationVersionId" : ApplicationVersionId,
+      "ApplicationConfigurationUpdate" : (ApplicationConfigurationUpdate)?,
+      "ServiceExecutionRoleUpdate" : (RoleARN)?,
+      "RunConfigurationUpdate" : (RunConfigurationUpdate)?,
+      "CloudWatchLoggingOptionUpdates" : (CloudWatchLoggingOptionUpdates)?
+    )
+
+    alias UpdateApplicationResponse = NamedTuple(
+      "ApplicationDetail" : ApplicationDetail
+    )
+
+    alias UrlType = String
+
+    alias VpcConfiguration = NamedTuple(
+      "SubnetIds" : SubnetIds,
+      "SecurityGroupIds" : SecurityGroupIds
+    )
+
+    alias VpcConfigurationDescription = NamedTuple(
+      "VpcConfigurationId" : Id,
+      "VpcId" : VpcId,
+      "SubnetIds" : SubnetIds,
+      "SecurityGroupIds" : SecurityGroupIds
+    )
+
+    alias VpcConfigurationDescriptions = Array(VpcConfigurationDescription)
+
+    alias VpcConfigurationUpdate = NamedTuple(
+      "VpcConfigurationId" : Id,
+      "SubnetIdUpdates" : (SubnetIds)?,
+      "SecurityGroupIdUpdates" : (SecurityGroupIds)?
+    )
+
+    alias VpcConfigurationUpdates = Array(VpcConfigurationUpdate)
+
+    alias VpcConfigurations = Array(VpcConfiguration)
+
+    alias VpcId = String
+
+    alias ZipFileContent = String | Array(UInt8) | IO
   end
 end

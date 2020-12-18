@@ -2293,5 +2293,541 @@ module Aws::DataExchange
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : __string
+    )
+
+    alias Arn = String
+
+    alias AssetDestinationEntry = NamedTuple(
+      "AssetId" : Id,
+      "Bucket" : __string,
+      "Key" : (__string)?
+    )
+
+    alias AssetDetails = NamedTuple(
+      "S3SnapshotAsset" : (S3SnapshotAsset)?
+    )
+
+    alias AssetEntry = NamedTuple(
+      "Arn" : Arn,
+      "AssetDetails" : AssetDetails,
+      "AssetType" : AssetType,
+      "CreatedAt" : Timestamp,
+      "DataSetId" : Id,
+      "Id" : Id,
+      "Name" : AssetName,
+      "RevisionId" : Id,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : Timestamp
+    )
+
+    alias AssetName = String
+
+    alias AssetSourceEntry = NamedTuple(
+      "Bucket" : __string,
+      "Key" : __string
+    )
+
+    alias AssetType = String
+
+    alias CancelJobRequest = NamedTuple(
+      "JobId" : __string
+    )
+
+    alias Code = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : __string,
+      "ResourceId" : (__string)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias CreateDataSetRequest = NamedTuple(
+      "AssetType" : AssetType,
+      "Description" : Description,
+      "Name" : Name,
+      "Tags" : (MapOf__string)?
+    )
+
+    alias CreateDataSetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AssetType" : (AssetType)?,
+      "CreatedAt" : (Timestamp)?,
+      "Description" : (Description)?,
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Origin" : (Origin)?,
+      "OriginDetails" : (OriginDetails)?,
+      "SourceId" : (Id)?,
+      "Tags" : (MapOf__string)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias CreateJobRequest = NamedTuple(
+      "Details" : RequestDetails,
+      "Type" : Type
+    )
+
+    alias CreateJobResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "CreatedAt" : (Timestamp)?,
+      "Details" : (ResponseDetails)?,
+      "Errors" : (ListOfJobError)?,
+      "Id" : (Id)?,
+      "State" : (State)?,
+      "Type" : (Type)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias CreateRevisionRequest = NamedTuple(
+      "Comment" : (__stringMin0Max16384)?,
+      "DataSetId" : __string,
+      "Tags" : (MapOf__string)?
+    )
+
+    alias CreateRevisionResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "Comment" : (__stringMin0Max16384)?,
+      "CreatedAt" : (Timestamp)?,
+      "DataSetId" : (Id)?,
+      "Finalized" : (__boolean)?,
+      "Id" : (Id)?,
+      "SourceId" : (Id)?,
+      "Tags" : (MapOf__string)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias DataSetEntry = NamedTuple(
+      "Arn" : Arn,
+      "AssetType" : AssetType,
+      "CreatedAt" : Timestamp,
+      "Description" : Description,
+      "Id" : Id,
+      "Name" : Name,
+      "Origin" : Origin,
+      "OriginDetails" : (OriginDetails)?,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : Timestamp
+    )
+
+    alias DeleteAssetRequest = NamedTuple(
+      "AssetId" : __string,
+      "DataSetId" : __string,
+      "RevisionId" : __string
+    )
+
+    alias DeleteDataSetRequest = NamedTuple(
+      "DataSetId" : __string
+    )
+
+    alias DeleteRevisionRequest = NamedTuple(
+      "DataSetId" : __string,
+      "RevisionId" : __string
+    )
+
+    alias Description = String
+
+    alias Details = NamedTuple(
+      "ImportAssetFromSignedUrlJobErrorDetails" : (ImportAssetFromSignedUrlJobErrorDetails)?,
+      "ImportAssetsFromS3JobErrorDetails" : (ListOfAssetSourceEntry)?
+    )
+
+    alias ExportAssetToSignedUrlRequestDetails = NamedTuple(
+      "AssetId" : Id,
+      "DataSetId" : Id,
+      "RevisionId" : Id
+    )
+
+    alias ExportAssetToSignedUrlResponseDetails = NamedTuple(
+      "AssetId" : Id,
+      "DataSetId" : Id,
+      "RevisionId" : Id,
+      "SignedUrl" : (__string)?,
+      "SignedUrlExpiresAt" : (Timestamp)?
+    )
+
+    alias ExportAssetsToS3RequestDetails = NamedTuple(
+      "AssetDestinations" : ListOfAssetDestinationEntry,
+      "DataSetId" : Id,
+      "Encryption" : (ExportServerSideEncryption)?,
+      "RevisionId" : Id
+    )
+
+    alias ExportAssetsToS3ResponseDetails = NamedTuple(
+      "AssetDestinations" : ListOfAssetDestinationEntry,
+      "DataSetId" : Id,
+      "Encryption" : (ExportServerSideEncryption)?,
+      "RevisionId" : Id
+    )
+
+    alias ExportServerSideEncryption = NamedTuple(
+      "KmsKeyArn" : (__string)?,
+      "Type" : ServerSideEncryptionTypes
+    )
+
+    alias GetAssetRequest = NamedTuple(
+      "AssetId" : __string,
+      "DataSetId" : __string,
+      "RevisionId" : __string
+    )
+
+    alias GetAssetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AssetDetails" : (AssetDetails)?,
+      "AssetType" : (AssetType)?,
+      "CreatedAt" : (Timestamp)?,
+      "DataSetId" : (Id)?,
+      "Id" : (Id)?,
+      "Name" : (AssetName)?,
+      "RevisionId" : (Id)?,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias GetDataSetRequest = NamedTuple(
+      "DataSetId" : __string
+    )
+
+    alias GetDataSetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AssetType" : (AssetType)?,
+      "CreatedAt" : (Timestamp)?,
+      "Description" : (Description)?,
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Origin" : (Origin)?,
+      "OriginDetails" : (OriginDetails)?,
+      "SourceId" : (Id)?,
+      "Tags" : (MapOf__string)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias GetJobRequest = NamedTuple(
+      "JobId" : __string
+    )
+
+    alias GetJobResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "CreatedAt" : (Timestamp)?,
+      "Details" : (ResponseDetails)?,
+      "Errors" : (ListOfJobError)?,
+      "Id" : (Id)?,
+      "State" : (State)?,
+      "Type" : (Type)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias GetRevisionRequest = NamedTuple(
+      "DataSetId" : __string,
+      "RevisionId" : __string
+    )
+
+    alias GetRevisionResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "Comment" : (__stringMin0Max16384)?,
+      "CreatedAt" : (Timestamp)?,
+      "DataSetId" : (Id)?,
+      "Finalized" : (__boolean)?,
+      "Id" : (Id)?,
+      "SourceId" : (Id)?,
+      "Tags" : (MapOf__string)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias Id = String
+
+    alias ImportAssetFromSignedUrlJobErrorDetails = NamedTuple(
+      "AssetName" : AssetName
+    )
+
+    alias ImportAssetFromSignedUrlRequestDetails = NamedTuple(
+      "AssetName" : AssetName,
+      "DataSetId" : Id,
+      "Md5Hash" : __stringMin24Max24PatternAZaZ094AZaZ092AZaZ093,
+      "RevisionId" : Id
+    )
+
+    alias ImportAssetFromSignedUrlResponseDetails = NamedTuple(
+      "AssetName" : AssetName,
+      "DataSetId" : Id,
+      "Md5Hash" : (__stringMin24Max24PatternAZaZ094AZaZ092AZaZ093)?,
+      "RevisionId" : Id,
+      "SignedUrl" : (__string)?,
+      "SignedUrlExpiresAt" : (Timestamp)?
+    )
+
+    alias ImportAssetsFromS3RequestDetails = NamedTuple(
+      "AssetSources" : ListOfAssetSourceEntry,
+      "DataSetId" : Id,
+      "RevisionId" : Id
+    )
+
+    alias ImportAssetsFromS3ResponseDetails = NamedTuple(
+      "AssetSources" : ListOfAssetSourceEntry,
+      "DataSetId" : Id,
+      "RevisionId" : Id
+    )
+
+    alias InternalServerException = NamedTuple(
+      "Message" : __string
+    )
+
+    alias JobEntry = NamedTuple(
+      "Arn" : Arn,
+      "CreatedAt" : Timestamp,
+      "Details" : ResponseDetails,
+      "Errors" : (ListOfJobError)?,
+      "Id" : Id,
+      "State" : State,
+      "Type" : Type,
+      "UpdatedAt" : Timestamp
+    )
+
+    alias JobError = NamedTuple(
+      "Code" : Code,
+      "Details" : (Details)?,
+      "LimitName" : (JobErrorLimitName)?,
+      "LimitValue" : (__double)?,
+      "Message" : __string,
+      "ResourceId" : (__string)?,
+      "ResourceType" : (JobErrorResourceTypes)?
+    )
+
+    alias JobErrorLimitName = String
+
+    alias JobErrorResourceTypes = String
+
+    alias LimitName = String
+
+    alias ListDataSetRevisionsRequest = NamedTuple(
+      "DataSetId" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListDataSetRevisionsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "Revisions" : (ListOfRevisionEntry)?
+    )
+
+    alias ListDataSetsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "Origin" : (__string)?
+    )
+
+    alias ListDataSetsResponse = NamedTuple(
+      "DataSets" : (ListOfDataSetEntry)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListJobsRequest = NamedTuple(
+      "DataSetId" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "RevisionId" : (__string)?
+    )
+
+    alias ListJobsResponse = NamedTuple(
+      "Jobs" : (ListOfJobEntry)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOfAssetDestinationEntry = Array(AssetDestinationEntry)
+
+    alias ListOfAssetSourceEntry = Array(AssetSourceEntry)
+
+    alias ListRevisionAssetsRequest = NamedTuple(
+      "DataSetId" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "RevisionId" : __string
+    )
+
+    alias ListRevisionAssetsResponse = NamedTuple(
+      "Assets" : (ListOfAssetEntry)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (MapOf__string)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias Origin = String
+
+    alias OriginDetails = NamedTuple(
+      "ProductId" : __string
+    )
+
+    alias RequestDetails = NamedTuple(
+      "ExportAssetToSignedUrl" : (ExportAssetToSignedUrlRequestDetails)?,
+      "ExportAssetsToS3" : (ExportAssetsToS3RequestDetails)?,
+      "ImportAssetFromSignedUrl" : (ImportAssetFromSignedUrlRequestDetails)?,
+      "ImportAssetsFromS3" : (ImportAssetsFromS3RequestDetails)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : __string,
+      "ResourceId" : (__string)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ResourceType = String
+
+    alias ResponseDetails = NamedTuple(
+      "ExportAssetToSignedUrl" : (ExportAssetToSignedUrlResponseDetails)?,
+      "ExportAssetsToS3" : (ExportAssetsToS3ResponseDetails)?,
+      "ImportAssetFromSignedUrl" : (ImportAssetFromSignedUrlResponseDetails)?,
+      "ImportAssetsFromS3" : (ImportAssetsFromS3ResponseDetails)?
+    )
+
+    alias RevisionEntry = NamedTuple(
+      "Arn" : Arn,
+      "Comment" : (__stringMin0Max16384)?,
+      "CreatedAt" : Timestamp,
+      "DataSetId" : Id,
+      "Finalized" : (__boolean)?,
+      "Id" : Id,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : Timestamp
+    )
+
+    alias S3SnapshotAsset = NamedTuple(
+      "Size" : __doubleMin0
+    )
+
+    alias ServerSideEncryptionTypes = String
+
+    alias ServiceLimitExceededException = NamedTuple(
+      "LimitName" : (LimitName)?,
+      "LimitValue" : (__double)?,
+      "Message" : __string
+    )
+
+    alias StartJobRequest = NamedTuple(
+      "JobId" : __string
+    )
+
+    alias StartJobResponse = NamedTuple(
+      
+    )
+
+    alias State = String
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : MapOf__string
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : __string
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Type = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : ListOf__string
+    )
+
+    alias UpdateAssetRequest = NamedTuple(
+      "AssetId" : __string,
+      "DataSetId" : __string,
+      "Name" : AssetName,
+      "RevisionId" : __string
+    )
+
+    alias UpdateAssetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AssetDetails" : (AssetDetails)?,
+      "AssetType" : (AssetType)?,
+      "CreatedAt" : (Timestamp)?,
+      "DataSetId" : (Id)?,
+      "Id" : (Id)?,
+      "Name" : (AssetName)?,
+      "RevisionId" : (Id)?,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias UpdateDataSetRequest = NamedTuple(
+      "DataSetId" : __string,
+      "Description" : (Description)?,
+      "Name" : (Name)?
+    )
+
+    alias UpdateDataSetResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "AssetType" : (AssetType)?,
+      "CreatedAt" : (Timestamp)?,
+      "Description" : (Description)?,
+      "Id" : (Id)?,
+      "Name" : (Name)?,
+      "Origin" : (Origin)?,
+      "OriginDetails" : (OriginDetails)?,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias UpdateRevisionRequest = NamedTuple(
+      "Comment" : (__stringMin0Max16384)?,
+      "DataSetId" : __string,
+      "Finalized" : (__boolean)?,
+      "RevisionId" : __string
+    )
+
+    alias UpdateRevisionResponse = NamedTuple(
+      "Arn" : (Arn)?,
+      "Comment" : (__stringMin0Max16384)?,
+      "CreatedAt" : (Timestamp)?,
+      "DataSetId" : (Id)?,
+      "Finalized" : (__boolean)?,
+      "Id" : (Id)?,
+      "SourceId" : (Id)?,
+      "UpdatedAt" : (Timestamp)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : __string
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __doubleMin0 = Float64
+
+    alias ListOfAssetEntry = Array(AssetEntry)
+
+    alias ListOfDataSetEntry = Array(DataSetEntry)
+
+    alias ListOfJobEntry = Array(JobEntry)
+
+    alias ListOfJobError = Array(JobError)
+
+    alias ListOfRevisionEntry = Array(RevisionEntry)
+
+    alias ListOf__string = Array(__string)
+
+    alias MapOf__string = Hash(__string,__string)
+
+    alias __string = String
+
+    alias __stringMin0Max16384 = String
+
+    alias __stringMin24Max24PatternAZaZ094AZaZ092AZaZ093 = String
   end
 end

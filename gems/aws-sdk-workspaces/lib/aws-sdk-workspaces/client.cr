@@ -378,8 +378,8 @@ module Aws::WorkSpaces
     #
     # @overload associate_connection_alias(**params)
     # @param [Hash] params ({})
-    def associate_connection_alias(params = {}, **options)
-      req = build_request(:associate_connection_alias, params)
+    def associate_connection_alias(, **options)
+      req = build_request(:associate_connection_alias, )
       req.send_request(options)
     end
 
@@ -405,8 +405,8 @@ module Aws::WorkSpaces
     #
     # @overload associate_ip_groups(**params)
     # @param [Hash] params ({})
-    def associate_ip_groups(params = {}, **options)
-      req = build_request(:associate_ip_groups, params)
+    def associate_ip_groups(, **options)
+      req = build_request(:associate_ip_groups, )
       req.send_request(options)
     end
 
@@ -439,8 +439,8 @@ module Aws::WorkSpaces
     #
     # @overload authorize_ip_rules(**params)
     # @param [Hash] params ({})
-    def authorize_ip_rules(params = {}, **options)
-      req = build_request(:authorize_ip_rules, params)
+    def authorize_ip_rules(, **options)
+      req = build_request(:authorize_ip_rules, )
       req.send_request(options)
     end
 
@@ -510,8 +510,8 @@ module Aws::WorkSpaces
     #
     # @overload copy_workspace_image(**params)
     # @param [Hash] params ({})
-    def copy_workspace_image(params = {}, **options)
-      req = build_request(:copy_workspace_image, params)
+    def copy_workspace_image(, **options)
+      req = build_request(:copy_workspace_image, )
       req.send_request(options)
     end
 
@@ -560,8 +560,8 @@ module Aws::WorkSpaces
     #
     # @overload create_connection_alias(**params)
     # @param [Hash] params ({})
-    def create_connection_alias(params = {}, **options)
-      req = build_request(:create_connection_alias, params)
+    def create_connection_alias(, **options)
+      req = build_request(:create_connection_alias, )
       req.send_request(options)
     end
 
@@ -624,8 +624,8 @@ module Aws::WorkSpaces
     #
     # @overload create_ip_group(**params)
     # @param [Hash] params ({})
-    def create_ip_group(params = {}, **options)
-      req = build_request(:create_ip_group, params)
+    def create_ip_group(, **options)
+      req = build_request(:create_ip_group, )
       req.send_request(options)
     end
 
@@ -657,8 +657,8 @@ module Aws::WorkSpaces
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -749,8 +749,8 @@ module Aws::WorkSpaces
     #
     # @overload create_workspaces(**params)
     # @param [Hash] params ({})
-    def create_workspaces(params = {}, **options)
-      req = build_request(:create_workspaces, params)
+    def create_workspaces(, **options)
+      req = build_request(:create_workspaces, )
       req.send_request(options)
     end
 
@@ -792,8 +792,8 @@ module Aws::WorkSpaces
     #
     # @overload delete_connection_alias(**params)
     # @param [Hash] params ({})
-    def delete_connection_alias(params = {}, **options)
-      req = build_request(:delete_connection_alias, params)
+    def delete_connection_alias(, **options)
+      req = build_request(:delete_connection_alias, )
       req.send_request(options)
     end
 
@@ -817,8 +817,8 @@ module Aws::WorkSpaces
     #
     # @overload delete_ip_group(**params)
     # @param [Hash] params ({})
-    def delete_ip_group(params = {}, **options)
-      req = build_request(:delete_ip_group, params)
+    def delete_ip_group(, **options)
+      req = build_request(:delete_ip_group, )
       req.send_request(options)
     end
 
@@ -845,8 +845,8 @@ module Aws::WorkSpaces
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -869,8 +869,8 @@ module Aws::WorkSpaces
     #
     # @overload delete_workspace_image(**params)
     # @param [Hash] params ({})
-    def delete_workspace_image(params = {}, **options)
-      req = build_request(:delete_workspace_image, params)
+    def delete_workspace_image(, **options)
+      req = build_request(:delete_workspace_image, )
       req.send_request(options)
     end
 
@@ -916,8 +916,8 @@ module Aws::WorkSpaces
     #
     # @overload deregister_workspace_directory(**params)
     # @param [Hash] params ({})
-    def deregister_workspace_directory(params = {}, **options)
-      req = build_request(:deregister_workspace_directory, params)
+    def deregister_workspace_directory(, **options)
+      req = build_request(:deregister_workspace_directory, )
       req.send_request(options)
     end
 
@@ -938,8 +938,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_account(**params)
     # @param [Hash] params ({})
-    def describe_account(params = {}, **options)
-      req = build_request(:describe_account, params)
+    def describe_account(, **options)
+      req = build_request(:describe_account, )
       req.send_request(options)
     end
 
@@ -976,8 +976,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_account_modifications(**params)
     # @param [Hash] params ({})
-    def describe_account_modifications(params = {}, **options)
-      req = build_request(:describe_account_modifications, params)
+    def describe_account_modifications(, **options)
+      req = build_request(:describe_account_modifications, )
       req.send_request(options)
     end
 
@@ -1007,8 +1007,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_client_properties(**params)
     # @param [Hash] params ({})
-    def describe_client_properties(params = {}, **options)
-      req = build_request(:describe_client_properties, params)
+    def describe_client_properties(, **options)
+      req = build_request(:describe_client_properties, )
       req.send_request(options)
     end
 
@@ -1057,8 +1057,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_connection_alias_permissions(**params)
     # @param [Hash] params ({})
-    def describe_connection_alias_permissions(params = {}, **options)
-      req = build_request(:describe_connection_alias_permissions, params)
+    def describe_connection_alias_permissions(, **options)
+      req = build_request(:describe_connection_alias_permissions, )
       req.send_request(options)
     end
 
@@ -1115,8 +1115,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_connection_aliases(**params)
     # @param [Hash] params ({})
-    def describe_connection_aliases(params = {}, **options)
-      req = build_request(:describe_connection_aliases, params)
+    def describe_connection_aliases(, **options)
+      req = build_request(:describe_connection_aliases, )
       req.send_request(options)
     end
 
@@ -1160,8 +1160,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_ip_groups(**params)
     # @param [Hash] params ({})
-    def describe_ip_groups(params = {}, **options)
-      req = build_request(:describe_ip_groups, params)
+    def describe_ip_groups(, **options)
+      req = build_request(:describe_ip_groups, )
       req.send_request(options)
     end
 
@@ -1192,8 +1192,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -1250,8 +1250,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspace_bundles(**params)
     # @param [Hash] params ({})
-    def describe_workspace_bundles(params = {}, **options)
-      req = build_request(:describe_workspace_bundles, params)
+    def describe_workspace_bundles(, **options)
+      req = build_request(:describe_workspace_bundles, )
       req.send_request(options)
     end
 
@@ -1327,8 +1327,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspace_directories(**params)
     # @param [Hash] params ({})
-    def describe_workspace_directories(params = {}, **options)
-      req = build_request(:describe_workspace_directories, params)
+    def describe_workspace_directories(, **options)
+      req = build_request(:describe_workspace_directories, )
       req.send_request(options)
     end
 
@@ -1370,8 +1370,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspace_image_permissions(**params)
     # @param [Hash] params ({})
-    def describe_workspace_image_permissions(params = {}, **options)
-      req = build_request(:describe_workspace_image_permissions, params)
+    def describe_workspace_image_permissions(, **options)
+      req = build_request(:describe_workspace_image_permissions, )
       req.send_request(options)
     end
 
@@ -1425,8 +1425,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspace_images(**params)
     # @param [Hash] params ({})
-    def describe_workspace_images(params = {}, **options)
-      req = build_request(:describe_workspace_images, params)
+    def describe_workspace_images(, **options)
+      req = build_request(:describe_workspace_images, )
       req.send_request(options)
     end
 
@@ -1457,8 +1457,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspace_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_workspace_snapshots(params = {}, **options)
-      req = build_request(:describe_workspace_snapshots, params)
+    def describe_workspace_snapshots(, **options)
+      req = build_request(:describe_workspace_snapshots, )
       req.send_request(options)
     end
 
@@ -1544,8 +1544,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspaces(**params)
     # @param [Hash] params ({})
-    def describe_workspaces(params = {}, **options)
-      req = build_request(:describe_workspaces, params)
+    def describe_workspaces(, **options)
+      req = build_request(:describe_workspaces, )
       req.send_request(options)
     end
 
@@ -1584,8 +1584,8 @@ module Aws::WorkSpaces
     #
     # @overload describe_workspaces_connection_status(**params)
     # @param [Hash] params ({})
-    def describe_workspaces_connection_status(params = {}, **options)
-      req = build_request(:describe_workspaces_connection_status, params)
+    def describe_workspaces_connection_status(, **options)
+      req = build_request(:describe_workspaces_connection_status, )
       req.send_request(options)
     end
 
@@ -1620,8 +1620,8 @@ module Aws::WorkSpaces
     #
     # @overload disassociate_connection_alias(**params)
     # @param [Hash] params ({})
-    def disassociate_connection_alias(params = {}, **options)
-      req = build_request(:disassociate_connection_alias, params)
+    def disassociate_connection_alias(, **options)
+      req = build_request(:disassociate_connection_alias, )
       req.send_request(options)
     end
 
@@ -1647,8 +1647,8 @@ module Aws::WorkSpaces
     #
     # @overload disassociate_ip_groups(**params)
     # @param [Hash] params ({})
-    def disassociate_ip_groups(params = {}, **options)
-      req = build_request(:disassociate_ip_groups, params)
+    def disassociate_ip_groups(, **options)
+      req = build_request(:disassociate_ip_groups, )
       req.send_request(options)
     end
 
@@ -1728,8 +1728,8 @@ module Aws::WorkSpaces
     #
     # @overload import_workspace_image(**params)
     # @param [Hash] params ({})
-    def import_workspace_image(params = {}, **options)
-      req = build_request(:import_workspace_image, params)
+    def import_workspace_image(, **options)
+      req = build_request(:import_workspace_image, )
       req.send_request(options)
     end
 
@@ -1781,8 +1781,8 @@ module Aws::WorkSpaces
     #
     # @overload list_available_management_cidr_ranges(**params)
     # @param [Hash] params ({})
-    def list_available_management_cidr_ranges(params = {}, **options)
-      req = build_request(:list_available_management_cidr_ranges, params)
+    def list_available_management_cidr_ranges(, **options)
+      req = build_request(:list_available_management_cidr_ranges, )
       req.send_request(options)
     end
 
@@ -1831,8 +1831,8 @@ module Aws::WorkSpaces
     #
     # @overload migrate_workspace(**params)
     # @param [Hash] params ({})
-    def migrate_workspace(params = {}, **options)
-      req = build_request(:migrate_workspace, params)
+    def migrate_workspace(, **options)
+      req = build_request(:migrate_workspace, )
       req.send_request(options)
     end
 
@@ -1863,8 +1863,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_account(**params)
     # @param [Hash] params ({})
-    def modify_account(params = {}, **options)
-      req = build_request(:modify_account, params)
+    def modify_account(, **options)
+      req = build_request(:modify_account, )
       req.send_request(options)
     end
 
@@ -1891,8 +1891,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_client_properties(**params)
     # @param [Hash] params ({})
-    def modify_client_properties(params = {}, **options)
-      req = build_request(:modify_client_properties, params)
+    def modify_client_properties(, **options)
+      req = build_request(:modify_client_properties, )
       req.send_request(options)
     end
 
@@ -1929,8 +1929,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_selfservice_permissions(**params)
     # @param [Hash] params ({})
-    def modify_selfservice_permissions(params = {}, **options)
-      req = build_request(:modify_selfservice_permissions, params)
+    def modify_selfservice_permissions(, **options)
+      req = build_request(:modify_selfservice_permissions, )
       req.send_request(options)
     end
 
@@ -1970,8 +1970,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_workspace_access_properties(**params)
     # @param [Hash] params ({})
-    def modify_workspace_access_properties(params = {}, **options)
-      req = build_request(:modify_workspace_access_properties, params)
+    def modify_workspace_access_properties(, **options)
+      req = build_request(:modify_workspace_access_properties, )
       req.send_request(options)
     end
 
@@ -2003,8 +2003,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_workspace_creation_properties(**params)
     # @param [Hash] params ({})
-    def modify_workspace_creation_properties(params = {}, **options)
-      req = build_request(:modify_workspace_creation_properties, params)
+    def modify_workspace_creation_properties(, **options)
+      req = build_request(:modify_workspace_creation_properties, )
       req.send_request(options)
     end
 
@@ -2041,8 +2041,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_workspace_properties(**params)
     # @param [Hash] params ({})
-    def modify_workspace_properties(params = {}, **options)
-      req = build_request(:modify_workspace_properties, params)
+    def modify_workspace_properties(, **options)
+      req = build_request(:modify_workspace_properties, )
       req.send_request(options)
     end
 
@@ -2073,8 +2073,8 @@ module Aws::WorkSpaces
     #
     # @overload modify_workspace_state(**params)
     # @param [Hash] params ({})
-    def modify_workspace_state(params = {}, **options)
-      req = build_request(:modify_workspace_state, params)
+    def modify_workspace_state(, **options)
+      req = build_request(:modify_workspace_state, )
       req.send_request(options)
     end
 
@@ -2114,8 +2114,8 @@ module Aws::WorkSpaces
     #
     # @overload reboot_workspaces(**params)
     # @param [Hash] params ({})
-    def reboot_workspaces(params = {}, **options)
-      req = build_request(:reboot_workspaces, params)
+    def reboot_workspaces(, **options)
+      req = build_request(:reboot_workspaces, )
       req.send_request(options)
     end
 
@@ -2163,8 +2163,8 @@ module Aws::WorkSpaces
     #
     # @overload rebuild_workspaces(**params)
     # @param [Hash] params ({})
-    def rebuild_workspaces(params = {}, **options)
-      req = build_request(:rebuild_workspaces, params)
+    def rebuild_workspaces(, **options)
+      req = build_request(:rebuild_workspaces, )
       req.send_request(options)
     end
 
@@ -2241,8 +2241,8 @@ module Aws::WorkSpaces
     #
     # @overload register_workspace_directory(**params)
     # @param [Hash] params ({})
-    def register_workspace_directory(params = {}, **options)
-      req = build_request(:register_workspace_directory, params)
+    def register_workspace_directory(, **options)
+      req = build_request(:register_workspace_directory, )
       req.send_request(options)
     end
 
@@ -2277,8 +2277,8 @@ module Aws::WorkSpaces
     #
     # @overload restore_workspace(**params)
     # @param [Hash] params ({})
-    def restore_workspace(params = {}, **options)
-      req = build_request(:restore_workspace, params)
+    def restore_workspace(, **options)
+      req = build_request(:restore_workspace, )
       req.send_request(options)
     end
 
@@ -2303,8 +2303,8 @@ module Aws::WorkSpaces
     #
     # @overload revoke_ip_rules(**params)
     # @param [Hash] params ({})
-    def revoke_ip_rules(params = {}, **options)
-      req = build_request(:revoke_ip_rules, params)
+    def revoke_ip_rules(, **options)
+      req = build_request(:revoke_ip_rules, )
       req.send_request(options)
     end
 
@@ -2341,8 +2341,8 @@ module Aws::WorkSpaces
     #
     # @overload start_workspaces(**params)
     # @param [Hash] params ({})
-    def start_workspaces(params = {}, **options)
-      req = build_request(:start_workspaces, params)
+    def start_workspaces(, **options)
+      req = build_request(:start_workspaces, )
       req.send_request(options)
     end
 
@@ -2379,8 +2379,8 @@ module Aws::WorkSpaces
     #
     # @overload stop_workspaces(**params)
     # @param [Hash] params ({})
-    def stop_workspaces(params = {}, **options)
-      req = build_request(:stop_workspaces, params)
+    def stop_workspaces(, **options)
+      req = build_request(:stop_workspaces, )
       req.send_request(options)
     end
 
@@ -2448,8 +2448,8 @@ module Aws::WorkSpaces
     #
     # @overload terminate_workspaces(**params)
     # @param [Hash] params ({})
-    def terminate_workspaces(params = {}, **options)
-      req = build_request(:terminate_workspaces, params)
+    def terminate_workspaces(, **options)
+      req = build_request(:terminate_workspaces, )
       req.send_request(options)
     end
 
@@ -2503,8 +2503,8 @@ module Aws::WorkSpaces
     #
     # @overload update_connection_alias_permission(**params)
     # @param [Hash] params ({})
-    def update_connection_alias_permission(params = {}, **options)
-      req = build_request(:update_connection_alias_permission, params)
+    def update_connection_alias_permission(, **options)
+      req = build_request(:update_connection_alias_permission, )
       req.send_request(options)
     end
 
@@ -2535,8 +2535,8 @@ module Aws::WorkSpaces
     #
     # @overload update_rules_of_ip_group(**params)
     # @param [Hash] params ({})
-    def update_rules_of_ip_group(params = {}, **options)
-      req = build_request(:update_rules_of_ip_group, params)
+    def update_rules_of_ip_group(, **options)
+      req = build_request(:update_rules_of_ip_group, )
       req.send_request(options)
     end
 
@@ -2601,8 +2601,8 @@ module Aws::WorkSpaces
     #
     # @overload update_workspace_image_permission(**params)
     # @param [Hash] params ({})
-    def update_workspace_image_permission(params = {}, **options)
-      req = build_request(:update_workspace_image_permission, params)
+    def update_workspace_image_permission(, **options)
+      req = build_request(:update_workspace_image_permission, )
       req.send_request(options)
     end
 

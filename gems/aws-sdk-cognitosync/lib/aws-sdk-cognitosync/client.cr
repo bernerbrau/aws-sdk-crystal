@@ -360,8 +360,8 @@ module Aws::CognitoSync
     #
     # @overload bulk_publish(**params)
     # @param [Hash] params ({})
-    def bulk_publish(params = {}, **options)
-      req = build_request(:bulk_publish, params)
+    def bulk_publish(, **options)
+      req = build_request(:bulk_publish, )
       req.send_request(options)
     end
 
@@ -413,8 +413,8 @@ module Aws::CognitoSync
     #
     # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, **options)
-      req = build_request(:delete_dataset, params)
+    def delete_dataset(, **options)
+      req = build_request(:delete_dataset, )
       req.send_request(options)
     end
 
@@ -467,8 +467,8 @@ module Aws::CognitoSync
     #
     # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, **options)
-      req = build_request(:describe_dataset, params)
+    def describe_dataset(, **options)
+      req = build_request(:describe_dataset, )
       req.send_request(options)
     end
 
@@ -505,8 +505,8 @@ module Aws::CognitoSync
     #
     # @overload describe_identity_pool_usage(**params)
     # @param [Hash] params ({})
-    def describe_identity_pool_usage(params = {}, **options)
-      req = build_request(:describe_identity_pool_usage, params)
+    def describe_identity_pool_usage(, **options)
+      req = build_request(:describe_identity_pool_usage, )
       req.send_request(options)
     end
 
@@ -549,8 +549,8 @@ module Aws::CognitoSync
     #
     # @overload describe_identity_usage(**params)
     # @param [Hash] params ({})
-    def describe_identity_usage(params = {}, **options)
-      req = build_request(:describe_identity_usage, params)
+    def describe_identity_usage(, **options)
+      req = build_request(:describe_identity_usage, )
       req.send_request(options)
     end
 
@@ -591,8 +591,8 @@ module Aws::CognitoSync
     #
     # @overload get_bulk_publish_details(**params)
     # @param [Hash] params ({})
-    def get_bulk_publish_details(params = {}, **options)
-      req = build_request(:get_bulk_publish_details, params)
+    def get_bulk_publish_details(, **options)
+      req = build_request(:get_bulk_publish_details, )
       req.send_request(options)
     end
 
@@ -625,8 +625,8 @@ module Aws::CognitoSync
     #
     # @overload get_cognito_events(**params)
     # @param [Hash] params ({})
-    def get_cognito_events(params = {}, **options)
-      req = build_request(:get_cognito_events, params)
+    def get_cognito_events(, **options)
+      req = build_request(:get_cognito_events, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::CognitoSync
     #
     # @overload get_identity_pool_configuration(**params)
     # @param [Hash] params ({})
-    def get_identity_pool_configuration(params = {}, **options)
-      req = build_request(:get_identity_pool_configuration, params)
+    def get_identity_pool_configuration(, **options)
+      req = build_request(:get_identity_pool_configuration, )
       req.send_request(options)
     end
 
@@ -729,8 +729,8 @@ module Aws::CognitoSync
     #
     # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, **options)
-      req = build_request(:list_datasets, params)
+    def list_datasets(, **options)
+      req = build_request(:list_datasets, )
       req.send_request(options)
     end
 
@@ -775,8 +775,8 @@ module Aws::CognitoSync
     #
     # @overload list_identity_pool_usage(**params)
     # @param [Hash] params ({})
-    def list_identity_pool_usage(params = {}, **options)
-      req = build_request(:list_identity_pool_usage, params)
+    def list_identity_pool_usage(, **options)
+      req = build_request(:list_identity_pool_usage, )
       req.send_request(options)
     end
 
@@ -862,8 +862,8 @@ module Aws::CognitoSync
     #
     # @overload list_records(**params)
     # @param [Hash] params ({})
-    def list_records(params = {}, **options)
-      req = build_request(:list_records, params)
+    def list_records(, **options)
+      req = build_request(:list_records, )
       req.send_request(options)
     end
 
@@ -907,8 +907,8 @@ module Aws::CognitoSync
     #
     # @overload register_device(**params)
     # @param [Hash] params ({})
-    def register_device(params = {}, **options)
-      req = build_request(:register_device, params)
+    def register_device(, **options)
+      req = build_request(:register_device, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::CognitoSync
     #
     # @overload set_cognito_events(**params)
     # @param [Hash] params ({})
-    def set_cognito_events(params = {}, **options)
-      req = build_request(:set_cognito_events, params)
+    def set_cognito_events(, **options)
+      req = build_request(:set_cognito_events, )
       req.send_request(options)
     end
 
@@ -999,8 +999,8 @@ module Aws::CognitoSync
     #
     # @overload set_identity_pool_configuration(**params)
     # @param [Hash] params ({})
-    def set_identity_pool_configuration(params = {}, **options)
-      req = build_request(:set_identity_pool_configuration, params)
+    def set_identity_pool_configuration(, **options)
+      req = build_request(:set_identity_pool_configuration, )
       req.send_request(options)
     end
 
@@ -1039,8 +1039,8 @@ module Aws::CognitoSync
     #
     # @overload subscribe_to_dataset(**params)
     # @param [Hash] params ({})
-    def subscribe_to_dataset(params = {}, **options)
-      req = build_request(:subscribe_to_dataset, params)
+    def subscribe_to_dataset(, **options)
+      req = build_request(:subscribe_to_dataset, )
       req.send_request(options)
     end
 
@@ -1079,8 +1079,8 @@ module Aws::CognitoSync
     #
     # @overload unsubscribe_from_dataset(**params)
     # @param [Hash] params ({})
-    def unsubscribe_from_dataset(params = {}, **options)
-      req = build_request(:unsubscribe_from_dataset, params)
+    def unsubscribe_from_dataset(, **options)
+      req = build_request(:unsubscribe_from_dataset, )
       req.send_request(options)
     end
 
@@ -1170,8 +1170,8 @@ module Aws::CognitoSync
     #
     # @overload update_records(**params)
     # @param [Hash] params ({})
-    def update_records(params = {}, **options)
-      req = build_request(:update_records, params)
+    def update_records(, **options)
+      req = build_request(:update_records, )
       req.send_request(options)
     end
 

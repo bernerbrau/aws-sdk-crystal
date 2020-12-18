@@ -440,8 +440,8 @@ module Aws::Glue
     #
     # @overload batch_create_partition(**params)
     # @param [Hash] params ({})
-    def batch_create_partition(params = {}, **options)
-      req = build_request(:batch_create_partition, params)
+    def batch_create_partition(, **options)
+      req = build_request(:batch_create_partition, )
       req.send_request(options)
     end
 
@@ -478,8 +478,8 @@ module Aws::Glue
     #
     # @overload batch_delete_connection(**params)
     # @param [Hash] params ({})
-    def batch_delete_connection(params = {}, **options)
-      req = build_request(:batch_delete_connection, params)
+    def batch_delete_connection(, **options)
+      req = build_request(:batch_delete_connection, )
       req.send_request(options)
     end
 
@@ -529,8 +529,8 @@ module Aws::Glue
     #
     # @overload batch_delete_partition(**params)
     # @param [Hash] params ({})
-    def batch_delete_partition(params = {}, **options)
-      req = build_request(:batch_delete_partition, params)
+    def batch_delete_partition(, **options)
+      req = build_request(:batch_delete_partition, )
       req.send_request(options)
     end
 
@@ -583,8 +583,8 @@ module Aws::Glue
     #
     # @overload batch_delete_table(**params)
     # @param [Hash] params ({})
-    def batch_delete_table(params = {}, **options)
-      req = build_request(:batch_delete_table, params)
+    def batch_delete_table(, **options)
+      req = build_request(:batch_delete_table, )
       req.send_request(options)
     end
 
@@ -631,8 +631,8 @@ module Aws::Glue
     #
     # @overload batch_delete_table_version(**params)
     # @param [Hash] params ({})
-    def batch_delete_table_version(params = {}, **options)
-      req = build_request(:batch_delete_table_version, params)
+    def batch_delete_table_version(, **options)
+      req = build_request(:batch_delete_table_version, )
       req.send_request(options)
     end
 
@@ -715,8 +715,8 @@ module Aws::Glue
     #
     # @overload batch_get_crawlers(**params)
     # @param [Hash] params ({})
-    def batch_get_crawlers(params = {}, **options)
-      req = build_request(:batch_get_crawlers, params)
+    def batch_get_crawlers(, **options)
+      req = build_request(:batch_get_crawlers, )
       req.send_request(options)
     end
 
@@ -779,8 +779,8 @@ module Aws::Glue
     #
     # @overload batch_get_dev_endpoints(**params)
     # @param [Hash] params ({})
-    def batch_get_dev_endpoints(params = {}, **options)
-      req = build_request(:batch_get_dev_endpoints, params)
+    def batch_get_dev_endpoints(, **options)
+      req = build_request(:batch_get_dev_endpoints, )
       req.send_request(options)
     end
 
@@ -840,8 +840,8 @@ module Aws::Glue
     #
     # @overload batch_get_jobs(**params)
     # @param [Hash] params ({})
-    def batch_get_jobs(params = {}, **options)
-      req = build_request(:batch_get_jobs, params)
+    def batch_get_jobs(, **options)
+      req = build_request(:batch_get_jobs, )
       req.send_request(options)
     end
 
@@ -933,8 +933,8 @@ module Aws::Glue
     #
     # @overload batch_get_partition(**params)
     # @param [Hash] params ({})
-    def batch_get_partition(params = {}, **options)
-      req = build_request(:batch_get_partition, params)
+    def batch_get_partition(, **options)
+      req = build_request(:batch_get_partition, )
       req.send_request(options)
     end
 
@@ -991,8 +991,8 @@ module Aws::Glue
     #
     # @overload batch_get_triggers(**params)
     # @param [Hash] params ({})
-    def batch_get_triggers(params = {}, **options)
-      req = build_request(:batch_get_triggers, params)
+    def batch_get_triggers(, **options)
+      req = build_request(:batch_get_triggers, )
       req.send_request(options)
     end
 
@@ -1178,8 +1178,8 @@ module Aws::Glue
     #
     # @overload batch_get_workflows(**params)
     # @param [Hash] params ({})
-    def batch_get_workflows(params = {}, **options)
-      req = build_request(:batch_get_workflows, params)
+    def batch_get_workflows(, **options)
+      req = build_request(:batch_get_workflows, )
       req.send_request(options)
     end
 
@@ -1219,8 +1219,8 @@ module Aws::Glue
     #
     # @overload batch_stop_job_run(**params)
     # @param [Hash] params ({})
-    def batch_stop_job_run(params = {}, **options)
-      req = build_request(:batch_stop_job_run, params)
+    def batch_stop_job_run(, **options)
+      req = build_request(:batch_stop_job_run, )
       req.send_request(options)
     end
 
@@ -1330,8 +1330,8 @@ module Aws::Glue
     #
     # @overload batch_update_partition(**params)
     # @param [Hash] params ({})
-    def batch_update_partition(params = {}, **options)
-      req = build_request(:batch_update_partition, params)
+    def batch_update_partition(, **options)
+      req = build_request(:batch_update_partition, )
       req.send_request(options)
     end
 
@@ -1370,8 +1370,8 @@ module Aws::Glue
     #
     # @overload cancel_ml_task_run(**params)
     # @param [Hash] params ({})
-    def cancel_ml_task_run(params = {}, **options)
-      req = build_request(:cancel_ml_task_run, params)
+    def cancel_ml_task_run(, **options)
+      req = build_request(:cancel_ml_task_run, )
       req.send_request(options)
     end
 
@@ -1408,8 +1408,8 @@ module Aws::Glue
     #
     # @overload check_schema_version_validity(**params)
     # @param [Hash] params ({})
-    def check_schema_version_validity(params = {}, **options)
-      req = build_request(:check_schema_version_validity, params)
+    def check_schema_version_validity(, **options)
+      req = build_request(:check_schema_version_validity, )
       req.send_request(options)
     end
 
@@ -1464,8 +1464,8 @@ module Aws::Glue
     #
     # @overload create_classifier(**params)
     # @param [Hash] params ({})
-    def create_classifier(params = {}, **options)
-      req = build_request(:create_classifier, params)
+    def create_classifier(, **options)
+      req = build_request(:create_classifier, )
       req.send_request(options)
     end
 
@@ -1504,8 +1504,8 @@ module Aws::Glue
     #
     # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, **options)
-      req = build_request(:create_connection, params)
+    def create_connection(, **options)
+      req = build_request(:create_connection, )
       req.send_request(options)
     end
 
@@ -1650,8 +1650,8 @@ module Aws::Glue
     #
     # @overload create_crawler(**params)
     # @param [Hash] params ({})
-    def create_crawler(params = {}, **options)
-      req = build_request(:create_crawler, params)
+    def create_crawler(, **options)
+      req = build_request(:create_crawler, )
       req.send_request(options)
     end
 
@@ -1696,8 +1696,8 @@ module Aws::Glue
     #
     # @overload create_database(**params)
     # @param [Hash] params ({})
-    def create_database(params = {}, **options)
-      req = build_request(:create_database, params)
+    def create_database(, **options)
+      req = build_request(:create_database, )
       req.send_request(options)
     end
 
@@ -1895,8 +1895,8 @@ module Aws::Glue
     #
     # @overload create_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def create_dev_endpoint(params = {}, **options)
-      req = build_request(:create_dev_endpoint, params)
+    def create_dev_endpoint(, **options)
+      req = build_request(:create_dev_endpoint, )
       req.send_request(options)
     end
 
@@ -2101,8 +2101,8 @@ module Aws::Glue
     #
     # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, **options)
-      req = build_request(:create_job, params)
+    def create_job(, **options)
+      req = build_request(:create_job, )
       req.send_request(options)
     end
 
@@ -2310,8 +2310,8 @@ module Aws::Glue
     #
     # @overload create_ml_transform(**params)
     # @param [Hash] params ({})
-    def create_ml_transform(params = {}, **options)
-      req = build_request(:create_ml_transform, params)
+    def create_ml_transform(, **options)
+      req = build_request(:create_ml_transform, )
       req.send_request(options)
     end
 
@@ -2405,8 +2405,8 @@ module Aws::Glue
     #
     # @overload create_partition(**params)
     # @param [Hash] params ({})
-    def create_partition(params = {}, **options)
-      req = build_request(:create_partition, params)
+    def create_partition(, **options)
+      req = build_request(:create_partition, )
       req.send_request(options)
     end
 
@@ -2445,8 +2445,8 @@ module Aws::Glue
     #
     # @overload create_partition_index(**params)
     # @param [Hash] params ({})
-    def create_partition_index(params = {}, **options)
-      req = build_request(:create_partition_index, params)
+    def create_partition_index(, **options)
+      req = build_request(:create_partition_index, )
       req.send_request(options)
     end
 
@@ -2495,8 +2495,8 @@ module Aws::Glue
     #
     # @overload create_registry(**params)
     # @param [Hash] params ({})
-    def create_registry(params = {}, **options)
-      req = build_request(:create_registry, params)
+    def create_registry(, **options)
+      req = build_request(:create_registry, )
       req.send_request(options)
     end
 
@@ -2644,8 +2644,8 @@ module Aws::Glue
     #
     # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, **options)
-      req = build_request(:create_schema, params)
+    def create_schema(, **options)
+      req = build_request(:create_schema, )
       req.send_request(options)
     end
 
@@ -2701,8 +2701,8 @@ module Aws::Glue
     #
     # @overload create_script(**params)
     # @param [Hash] params ({})
-    def create_script(params = {}, **options)
-      req = build_request(:create_script, params)
+    def create_script(, **options)
+      req = build_request(:create_script, )
       req.send_request(options)
     end
 
@@ -2758,8 +2758,8 @@ module Aws::Glue
     #
     # @overload create_security_configuration(**params)
     # @param [Hash] params ({})
-    def create_security_configuration(params = {}, **options)
-      req = build_request(:create_security_configuration, params)
+    def create_security_configuration(, **options)
+      req = build_request(:create_security_configuration, )
       req.send_request(options)
     end
 
@@ -2880,8 +2880,8 @@ module Aws::Glue
     #
     # @overload create_table(**params)
     # @param [Hash] params ({})
-    def create_table(params = {}, **options)
-      req = build_request(:create_table, params)
+    def create_table(, **options)
+      req = build_request(:create_table, )
       req.send_request(options)
     end
 
@@ -2983,8 +2983,8 @@ module Aws::Glue
     #
     # @overload create_trigger(**params)
     # @param [Hash] params ({})
-    def create_trigger(params = {}, **options)
-      req = build_request(:create_trigger, params)
+    def create_trigger(, **options)
+      req = build_request(:create_trigger, )
       req.send_request(options)
     end
 
@@ -3026,8 +3026,8 @@ module Aws::Glue
     #
     # @overload create_user_defined_function(**params)
     # @param [Hash] params ({})
-    def create_user_defined_function(params = {}, **options)
-      req = build_request(:create_user_defined_function, params)
+    def create_user_defined_function(, **options)
+      req = build_request(:create_user_defined_function, )
       req.send_request(options)
     end
 
@@ -3080,8 +3080,8 @@ module Aws::Glue
     #
     # @overload create_workflow(**params)
     # @param [Hash] params ({})
-    def create_workflow(params = {}, **options)
-      req = build_request(:create_workflow, params)
+    def create_workflow(, **options)
+      req = build_request(:create_workflow, )
       req.send_request(options)
     end
 
@@ -3102,8 +3102,8 @@ module Aws::Glue
     #
     # @overload delete_classifier(**params)
     # @param [Hash] params ({})
-    def delete_classifier(params = {}, **options)
-      req = build_request(:delete_classifier, params)
+    def delete_classifier(, **options)
+      req = build_request(:delete_classifier, )
       req.send_request(options)
     end
 
@@ -3144,8 +3144,8 @@ module Aws::Glue
     #
     # @overload delete_column_statistics_for_partition(**params)
     # @param [Hash] params ({})
-    def delete_column_statistics_for_partition(params = {}, **options)
-      req = build_request(:delete_column_statistics_for_partition, params)
+    def delete_column_statistics_for_partition(, **options)
+      req = build_request(:delete_column_statistics_for_partition, )
       req.send_request(options)
     end
 
@@ -3182,8 +3182,8 @@ module Aws::Glue
     #
     # @overload delete_column_statistics_for_table(**params)
     # @param [Hash] params ({})
-    def delete_column_statistics_for_table(params = {}, **options)
-      req = build_request(:delete_column_statistics_for_table, params)
+    def delete_column_statistics_for_table(, **options)
+      req = build_request(:delete_column_statistics_for_table, )
       req.send_request(options)
     end
 
@@ -3209,8 +3209,8 @@ module Aws::Glue
     #
     # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, **options)
-      req = build_request(:delete_connection, params)
+    def delete_connection(, **options)
+      req = build_request(:delete_connection, )
       req.send_request(options)
     end
 
@@ -3232,8 +3232,8 @@ module Aws::Glue
     #
     # @overload delete_crawler(**params)
     # @param [Hash] params ({})
-    def delete_crawler(params = {}, **options)
-      req = build_request(:delete_crawler, params)
+    def delete_crawler(, **options)
+      req = build_request(:delete_crawler, )
       req.send_request(options)
     end
 
@@ -3275,8 +3275,8 @@ module Aws::Glue
     #
     # @overload delete_database(**params)
     # @param [Hash] params ({})
-    def delete_database(params = {}, **options)
-      req = build_request(:delete_database, params)
+    def delete_database(, **options)
+      req = build_request(:delete_database, )
       req.send_request(options)
     end
 
@@ -3297,8 +3297,8 @@ module Aws::Glue
     #
     # @overload delete_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_dev_endpoint(params = {}, **options)
-      req = build_request(:delete_dev_endpoint, params)
+    def delete_dev_endpoint(, **options)
+      req = build_request(:delete_dev_endpoint, )
       req.send_request(options)
     end
 
@@ -3326,8 +3326,8 @@ module Aws::Glue
     #
     # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, **options)
-      req = build_request(:delete_job, params)
+    def delete_job(, **options)
+      req = build_request(:delete_job, )
       req.send_request(options)
     end
 
@@ -3360,8 +3360,8 @@ module Aws::Glue
     #
     # @overload delete_ml_transform(**params)
     # @param [Hash] params ({})
-    def delete_ml_transform(params = {}, **options)
-      req = build_request(:delete_ml_transform, params)
+    def delete_ml_transform(, **options)
+      req = build_request(:delete_ml_transform, )
       req.send_request(options)
     end
 
@@ -3396,8 +3396,8 @@ module Aws::Glue
     #
     # @overload delete_partition(**params)
     # @param [Hash] params ({})
-    def delete_partition(params = {}, **options)
-      req = build_request(:delete_partition, params)
+    def delete_partition(, **options)
+      req = build_request(:delete_partition, )
       req.send_request(options)
     end
 
@@ -3432,8 +3432,8 @@ module Aws::Glue
     #
     # @overload delete_partition_index(**params)
     # @param [Hash] params ({})
-    def delete_partition_index(params = {}, **options)
-      req = build_request(:delete_partition_index, params)
+    def delete_partition_index(, **options)
+      req = build_request(:delete_partition_index, )
       req.send_request(options)
     end
 
@@ -3473,8 +3473,8 @@ module Aws::Glue
     #
     # @overload delete_registry(**params)
     # @param [Hash] params ({})
-    def delete_registry(params = {}, **options)
-      req = build_request(:delete_registry, params)
+    def delete_registry(, **options)
+      req = build_request(:delete_registry, )
       req.send_request(options)
     end
 
@@ -3500,8 +3500,8 @@ module Aws::Glue
     #
     # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, **options)
-      req = build_request(:delete_resource_policy, params)
+    def delete_resource_policy(, **options)
+      req = build_request(:delete_resource_policy, )
       req.send_request(options)
     end
 
@@ -3541,8 +3541,8 @@ module Aws::Glue
     #
     # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, **options)
-      req = build_request(:delete_schema, params)
+    def delete_schema(, **options)
+      req = build_request(:delete_schema, )
       req.send_request(options)
     end
 
@@ -3603,8 +3603,8 @@ module Aws::Glue
     #
     # @overload delete_schema_versions(**params)
     # @param [Hash] params ({})
-    def delete_schema_versions(params = {}, **options)
-      req = build_request(:delete_schema_versions, params)
+    def delete_schema_versions(, **options)
+      req = build_request(:delete_schema_versions, )
       req.send_request(options)
     end
 
@@ -3625,8 +3625,8 @@ module Aws::Glue
     #
     # @overload delete_security_configuration(**params)
     # @param [Hash] params ({})
-    def delete_security_configuration(params = {}, **options)
-      req = build_request(:delete_security_configuration, params)
+    def delete_security_configuration(, **options)
+      req = build_request(:delete_security_configuration, )
       req.send_request(options)
     end
 
@@ -3671,8 +3671,8 @@ module Aws::Glue
     #
     # @overload delete_table(**params)
     # @param [Hash] params ({})
-    def delete_table(params = {}, **options)
-      req = build_request(:delete_table, params)
+    def delete_table(, **options)
+      req = build_request(:delete_table, )
       req.send_request(options)
     end
 
@@ -3709,8 +3709,8 @@ module Aws::Glue
     #
     # @overload delete_table_version(**params)
     # @param [Hash] params ({})
-    def delete_table_version(params = {}, **options)
-      req = build_request(:delete_table_version, params)
+    def delete_table_version(, **options)
+      req = build_request(:delete_table_version, )
       req.send_request(options)
     end
 
@@ -3738,8 +3738,8 @@ module Aws::Glue
     #
     # @overload delete_trigger(**params)
     # @param [Hash] params ({})
-    def delete_trigger(params = {}, **options)
-      req = build_request(:delete_trigger, params)
+    def delete_trigger(, **options)
+      req = build_request(:delete_trigger, )
       req.send_request(options)
     end
 
@@ -3769,8 +3769,8 @@ module Aws::Glue
     #
     # @overload delete_user_defined_function(**params)
     # @param [Hash] params ({})
-    def delete_user_defined_function(params = {}, **options)
-      req = build_request(:delete_user_defined_function, params)
+    def delete_user_defined_function(, **options)
+      req = build_request(:delete_user_defined_function, )
       req.send_request(options)
     end
 
@@ -3797,8 +3797,8 @@ module Aws::Glue
     #
     # @overload delete_workflow(**params)
     # @param [Hash] params ({})
-    def delete_workflow(params = {}, **options)
-      req = build_request(:delete_workflow, params)
+    def delete_workflow(, **options)
+      req = build_request(:delete_workflow, )
       req.send_request(options)
     end
 
@@ -3828,8 +3828,8 @@ module Aws::Glue
     #
     # @overload get_catalog_import_status(**params)
     # @param [Hash] params ({})
-    def get_catalog_import_status(params = {}, **options)
-      req = build_request(:get_catalog_import_status, params)
+    def get_catalog_import_status(, **options)
+      req = build_request(:get_catalog_import_status, )
       req.send_request(options)
     end
 
@@ -3884,8 +3884,8 @@ module Aws::Glue
     #
     # @overload get_classifier(**params)
     # @param [Hash] params ({})
-    def get_classifier(params = {}, **options)
-      req = build_request(:get_classifier, params)
+    def get_classifier(, **options)
+      req = build_request(:get_classifier, )
       req.send_request(options)
     end
 
@@ -3949,8 +3949,8 @@ module Aws::Glue
     #
     # @overload get_classifiers(**params)
     # @param [Hash] params ({})
-    def get_classifiers(params = {}, **options)
-      req = build_request(:get_classifiers, params)
+    def get_classifiers(, **options)
+      req = build_request(:get_classifiers, )
       req.send_request(options)
     end
 
@@ -4034,8 +4034,8 @@ module Aws::Glue
     #
     # @overload get_column_statistics_for_partition(**params)
     # @param [Hash] params ({})
-    def get_column_statistics_for_partition(params = {}, **options)
-      req = build_request(:get_column_statistics_for_partition, params)
+    def get_column_statistics_for_partition(, **options)
+      req = build_request(:get_column_statistics_for_partition, )
       req.send_request(options)
     end
 
@@ -4115,8 +4115,8 @@ module Aws::Glue
     #
     # @overload get_column_statistics_for_table(**params)
     # @param [Hash] params ({})
-    def get_column_statistics_for_table(params = {}, **options)
-      req = build_request(:get_column_statistics_for_table, params)
+    def get_column_statistics_for_table(, **options)
+      req = build_request(:get_column_statistics_for_table, )
       req.send_request(options)
     end
 
@@ -4170,8 +4170,8 @@ module Aws::Glue
     #
     # @overload get_connection(**params)
     # @param [Hash] params ({})
-    def get_connection(params = {}, **options)
-      req = build_request(:get_connection, params)
+    def get_connection(, **options)
+      req = build_request(:get_connection, )
       req.send_request(options)
     end
 
@@ -4241,8 +4241,8 @@ module Aws::Glue
     #
     # @overload get_connections(**params)
     # @param [Hash] params ({})
-    def get_connections(params = {}, **options)
-      req = build_request(:get_connections, params)
+    def get_connections(, **options)
+      req = build_request(:get_connections, )
       req.send_request(options)
     end
 
@@ -4316,8 +4316,8 @@ module Aws::Glue
     #
     # @overload get_crawler(**params)
     # @param [Hash] params ({})
-    def get_crawler(params = {}, **options)
-      req = build_request(:get_crawler, params)
+    def get_crawler(, **options)
+      req = build_request(:get_crawler, )
       req.send_request(options)
     end
 
@@ -4364,8 +4364,8 @@ module Aws::Glue
     #
     # @overload get_crawler_metrics(**params)
     # @param [Hash] params ({})
-    def get_crawler_metrics(params = {}, **options)
-      req = build_request(:get_crawler_metrics, params)
+    def get_crawler_metrics(, **options)
+      req = build_request(:get_crawler_metrics, )
       req.send_request(options)
     end
 
@@ -4448,8 +4448,8 @@ module Aws::Glue
     #
     # @overload get_crawlers(**params)
     # @param [Hash] params ({})
-    def get_crawlers(params = {}, **options)
-      req = build_request(:get_crawlers, params)
+    def get_crawlers(, **options)
+      req = build_request(:get_crawlers, )
       req.send_request(options)
     end
 
@@ -4480,8 +4480,8 @@ module Aws::Glue
     #
     # @overload get_data_catalog_encryption_settings(**params)
     # @param [Hash] params ({})
-    def get_data_catalog_encryption_settings(params = {}, **options)
-      req = build_request(:get_data_catalog_encryption_settings, params)
+    def get_data_catalog_encryption_settings(, **options)
+      req = build_request(:get_data_catalog_encryption_settings, )
       req.send_request(options)
     end
 
@@ -4526,8 +4526,8 @@ module Aws::Glue
     #
     # @overload get_database(**params)
     # @param [Hash] params ({})
-    def get_database(params = {}, **options)
-      req = build_request(:get_database, params)
+    def get_database(, **options)
+      req = build_request(:get_database, )
       req.send_request(options)
     end
 
@@ -4591,8 +4591,8 @@ module Aws::Glue
     #
     # @overload get_databases(**params)
     # @param [Hash] params ({})
-    def get_databases(params = {}, **options)
-      req = build_request(:get_databases, params)
+    def get_databases(, **options)
+      req = build_request(:get_databases, )
       req.send_request(options)
     end
 
@@ -4631,8 +4631,8 @@ module Aws::Glue
     #
     # @overload get_dataflow_graph(**params)
     # @param [Hash] params ({})
-    def get_dataflow_graph(params = {}, **options)
-      req = build_request(:get_dataflow_graph, params)
+    def get_dataflow_graph(, **options)
+      req = build_request(:get_dataflow_graph, )
       req.send_request(options)
     end
 
@@ -4693,8 +4693,8 @@ module Aws::Glue
     #
     # @overload get_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def get_dev_endpoint(params = {}, **options)
-      req = build_request(:get_dev_endpoint, params)
+    def get_dev_endpoint(, **options)
+      req = build_request(:get_dev_endpoint, )
       req.send_request(options)
     end
 
@@ -4764,8 +4764,8 @@ module Aws::Glue
     #
     # @overload get_dev_endpoints(**params)
     # @param [Hash] params ({})
-    def get_dev_endpoints(params = {}, **options)
-      req = build_request(:get_dev_endpoints, params)
+    def get_dev_endpoints(, **options)
+      req = build_request(:get_dev_endpoints, )
       req.send_request(options)
     end
 
@@ -4816,8 +4816,8 @@ module Aws::Glue
     #
     # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, **options)
-      req = build_request(:get_job, params)
+    def get_job(, **options)
+      req = build_request(:get_job, )
       req.send_request(options)
     end
 
@@ -4854,8 +4854,8 @@ module Aws::Glue
     #
     # @overload get_job_bookmark(**params)
     # @param [Hash] params ({})
-    def get_job_bookmark(params = {}, **options)
-      req = build_request(:get_job_bookmark, params)
+    def get_job_bookmark(, **options)
+      req = build_request(:get_job_bookmark, )
       req.send_request(options)
     end
 
@@ -4914,8 +4914,8 @@ module Aws::Glue
     #
     # @overload get_job_run(**params)
     # @param [Hash] params ({})
-    def get_job_run(params = {}, **options)
-      req = build_request(:get_job_run, params)
+    def get_job_run(, **options)
+      req = build_request(:get_job_run, )
       req.send_request(options)
     end
 
@@ -4979,8 +4979,8 @@ module Aws::Glue
     #
     # @overload get_job_runs(**params)
     # @param [Hash] params ({})
-    def get_job_runs(params = {}, **options)
-      req = build_request(:get_job_runs, params)
+    def get_job_runs(, **options)
+      req = build_request(:get_job_runs, )
       req.send_request(options)
     end
 
@@ -5040,8 +5040,8 @@ module Aws::Glue
     #
     # @overload get_jobs(**params)
     # @param [Hash] params ({})
-    def get_jobs(params = {}, **options)
-      req = build_request(:get_jobs, params)
+    def get_jobs(, **options)
+      req = build_request(:get_jobs, )
       req.send_request(options)
     end
 
@@ -5101,8 +5101,8 @@ module Aws::Glue
     #
     # @overload get_ml_task_run(**params)
     # @param [Hash] params ({})
-    def get_ml_task_run(params = {}, **options)
-      req = build_request(:get_ml_task_run, params)
+    def get_ml_task_run(, **options)
+      req = build_request(:get_ml_task_run, )
       req.send_request(options)
     end
 
@@ -5183,8 +5183,8 @@ module Aws::Glue
     #
     # @overload get_ml_task_runs(**params)
     # @param [Hash] params ({})
-    def get_ml_task_runs(params = {}, **options)
-      req = build_request(:get_ml_task_runs, params)
+    def get_ml_task_runs(, **options)
+      req = build_request(:get_ml_task_runs, )
       req.send_request(options)
     end
 
@@ -5273,8 +5273,8 @@ module Aws::Glue
     #
     # @overload get_ml_transform(**params)
     # @param [Hash] params ({})
-    def get_ml_transform(params = {}, **options)
-      req = build_request(:get_ml_transform, params)
+    def get_ml_transform(, **options)
+      req = build_request(:get_ml_transform, )
       req.send_request(options)
     end
 
@@ -5379,8 +5379,8 @@ module Aws::Glue
     #
     # @overload get_ml_transforms(**params)
     # @param [Hash] params ({})
-    def get_ml_transforms(params = {}, **options)
-      req = build_request(:get_ml_transforms, params)
+    def get_ml_transforms(, **options)
+      req = build_request(:get_ml_transforms, )
       req.send_request(options)
     end
 
@@ -5451,8 +5451,8 @@ module Aws::Glue
     #
     # @overload get_mapping(**params)
     # @param [Hash] params ({})
-    def get_mapping(params = {}, **options)
-      req = build_request(:get_mapping, params)
+    def get_mapping(, **options)
+      req = build_request(:get_mapping, )
       req.send_request(options)
     end
 
@@ -5535,8 +5535,8 @@ module Aws::Glue
     #
     # @overload get_partition(**params)
     # @param [Hash] params ({})
-    def get_partition(params = {}, **options)
-      req = build_request(:get_partition, params)
+    def get_partition(, **options)
+      req = build_request(:get_partition, )
       req.send_request(options)
     end
 
@@ -5591,8 +5591,8 @@ module Aws::Glue
     #
     # @overload get_partition_indexes(**params)
     # @param [Hash] params ({})
-    def get_partition_indexes(params = {}, **options)
-      req = build_request(:get_partition_indexes, params)
+    def get_partition_indexes(, **options)
+      req = build_request(:get_partition_indexes, )
       req.send_request(options)
     end
 
@@ -5786,8 +5786,8 @@ module Aws::Glue
     #
     # @overload get_partitions(**params)
     # @param [Hash] params ({})
-    def get_partitions(params = {}, **options)
-      req = build_request(:get_partitions, params)
+    def get_partitions(, **options)
+      req = build_request(:get_partitions, )
       req.send_request(options)
     end
 
@@ -5886,8 +5886,8 @@ module Aws::Glue
     #
     # @overload get_plan(**params)
     # @param [Hash] params ({})
-    def get_plan(params = {}, **options)
-      req = build_request(:get_plan, params)
+    def get_plan(, **options)
+      req = build_request(:get_plan, )
       req.send_request(options)
     end
 
@@ -5928,8 +5928,8 @@ module Aws::Glue
     #
     # @overload get_registry(**params)
     # @param [Hash] params ({})
-    def get_registry(params = {}, **options)
-      req = build_request(:get_registry, params)
+    def get_registry(, **options)
+      req = build_request(:get_registry, )
       req.send_request(options)
     end
 
@@ -5974,8 +5974,8 @@ module Aws::Glue
     #
     # @overload get_resource_policies(**params)
     # @param [Hash] params ({})
-    def get_resource_policies(params = {}, **options)
-      req = build_request(:get_resource_policies, params)
+    def get_resource_policies(, **options)
+      req = build_request(:get_resource_policies, )
       req.send_request(options)
     end
 
@@ -6014,8 +6014,8 @@ module Aws::Glue
     #
     # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, **options)
-      req = build_request(:get_resource_policy, params)
+    def get_resource_policy(, **options)
+      req = build_request(:get_resource_policy, )
       req.send_request(options)
     end
 
@@ -6078,8 +6078,8 @@ module Aws::Glue
     #
     # @overload get_schema(**params)
     # @param [Hash] params ({})
-    def get_schema(params = {}, **options)
-      req = build_request(:get_schema, params)
+    def get_schema(, **options)
+      req = build_request(:get_schema, )
       req.send_request(options)
     end
 
@@ -6134,8 +6134,8 @@ module Aws::Glue
     #
     # @overload get_schema_by_definition(**params)
     # @param [Hash] params ({})
-    def get_schema_by_definition(params = {}, **options)
-      req = build_request(:get_schema_by_definition, params)
+    def get_schema_by_definition(, **options)
+      req = build_request(:get_schema_by_definition, )
       req.send_request(options)
     end
 
@@ -6201,8 +6201,8 @@ module Aws::Glue
     #
     # @overload get_schema_version(**params)
     # @param [Hash] params ({})
-    def get_schema_version(params = {}, **options)
-      req = build_request(:get_schema_version, params)
+    def get_schema_version(, **options)
+      req = build_request(:get_schema_version, )
       req.send_request(options)
     end
 
@@ -6262,8 +6262,8 @@ module Aws::Glue
     #
     # @overload get_schema_versions_diff(**params)
     # @param [Hash] params ({})
-    def get_schema_versions_diff(params = {}, **options)
-      req = build_request(:get_schema_versions_diff, params)
+    def get_schema_versions_diff(, **options)
+      req = build_request(:get_schema_versions_diff, )
       req.send_request(options)
     end
 
@@ -6298,8 +6298,8 @@ module Aws::Glue
     #
     # @overload get_security_configuration(**params)
     # @param [Hash] params ({})
-    def get_security_configuration(params = {}, **options)
-      req = build_request(:get_security_configuration, params)
+    def get_security_configuration(, **options)
+      req = build_request(:get_security_configuration, )
       req.send_request(options)
     end
 
@@ -6343,8 +6343,8 @@ module Aws::Glue
     #
     # @overload get_security_configurations(**params)
     # @param [Hash] params ({})
-    def get_security_configurations(params = {}, **options)
-      req = build_request(:get_security_configurations, params)
+    def get_security_configurations(, **options)
+      req = build_request(:get_security_configurations, )
       req.send_request(options)
     end
 
@@ -6442,8 +6442,8 @@ module Aws::Glue
     #
     # @overload get_table(**params)
     # @param [Hash] params ({})
-    def get_table(params = {}, **options)
-      req = build_request(:get_table, params)
+    def get_table(, **options)
+      req = build_request(:get_table, )
       req.send_request(options)
     end
 
@@ -6546,8 +6546,8 @@ module Aws::Glue
     #
     # @overload get_table_version(**params)
     # @param [Hash] params ({})
-    def get_table_version(params = {}, **options)
-      req = build_request(:get_table_version, params)
+    def get_table_version(, **options)
+      req = build_request(:get_table_version, )
       req.send_request(options)
     end
 
@@ -6659,8 +6659,8 @@ module Aws::Glue
     #
     # @overload get_table_versions(**params)
     # @param [Hash] params ({})
-    def get_table_versions(params = {}, **options)
-      req = build_request(:get_table_versions, params)
+    def get_table_versions(, **options)
+      req = build_request(:get_table_versions, )
       req.send_request(options)
     end
 
@@ -6771,8 +6771,8 @@ module Aws::Glue
     #
     # @overload get_tables(**params)
     # @param [Hash] params ({})
-    def get_tables(params = {}, **options)
-      req = build_request(:get_tables, params)
+    def get_tables(, **options)
+      req = build_request(:get_tables, )
       req.send_request(options)
     end
 
@@ -6801,8 +6801,8 @@ module Aws::Glue
     #
     # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, **options)
-      req = build_request(:get_tags, params)
+    def get_tags(, **options)
+      req = build_request(:get_tags, )
       req.send_request(options)
     end
 
@@ -6850,8 +6850,8 @@ module Aws::Glue
     #
     # @overload get_trigger(**params)
     # @param [Hash] params ({})
-    def get_trigger(params = {}, **options)
-      req = build_request(:get_trigger, params)
+    def get_trigger(, **options)
+      req = build_request(:get_trigger, )
       req.send_request(options)
     end
 
@@ -6914,8 +6914,8 @@ module Aws::Glue
     #
     # @overload get_triggers(**params)
     # @param [Hash] params ({})
-    def get_triggers(params = {}, **options)
-      req = build_request(:get_triggers, params)
+    def get_triggers(, **options)
+      req = build_request(:get_triggers, )
       req.send_request(options)
     end
 
@@ -6960,8 +6960,8 @@ module Aws::Glue
     #
     # @overload get_user_defined_function(**params)
     # @param [Hash] params ({})
-    def get_user_defined_function(params = {}, **options)
-      req = build_request(:get_user_defined_function, params)
+    def get_user_defined_function(, **options)
+      req = build_request(:get_user_defined_function, )
       req.send_request(options)
     end
 
@@ -7022,8 +7022,8 @@ module Aws::Glue
     #
     # @overload get_user_defined_functions(**params)
     # @param [Hash] params ({})
-    def get_user_defined_functions(params = {}, **options)
-      req = build_request(:get_user_defined_functions, params)
+    def get_user_defined_functions(, **options)
+      req = build_request(:get_user_defined_functions, )
       req.send_request(options)
     end
 
@@ -7200,8 +7200,8 @@ module Aws::Glue
     #
     # @overload get_workflow(**params)
     # @param [Hash] params ({})
-    def get_workflow(params = {}, **options)
-      req = build_request(:get_workflow, params)
+    def get_workflow(, **options)
+      req = build_request(:get_workflow, )
       req.send_request(options)
     end
 
@@ -7312,8 +7312,8 @@ module Aws::Glue
     #
     # @overload get_workflow_run(**params)
     # @param [Hash] params ({})
-    def get_workflow_run(params = {}, **options)
-      req = build_request(:get_workflow_run, params)
+    def get_workflow_run(, **options)
+      req = build_request(:get_workflow_run, )
       req.send_request(options)
     end
 
@@ -7345,8 +7345,8 @@ module Aws::Glue
     #
     # @overload get_workflow_run_properties(**params)
     # @param [Hash] params ({})
-    def get_workflow_run_properties(params = {}, **options)
-      req = build_request(:get_workflow_run_properties, params)
+    def get_workflow_run_properties(, **options)
+      req = build_request(:get_workflow_run_properties, )
       req.send_request(options)
     end
 
@@ -7466,8 +7466,8 @@ module Aws::Glue
     #
     # @overload get_workflow_runs(**params)
     # @param [Hash] params ({})
-    def get_workflow_runs(params = {}, **options)
-      req = build_request(:get_workflow_runs, params)
+    def get_workflow_runs(, **options)
+      req = build_request(:get_workflow_runs, )
       req.send_request(options)
     end
 
@@ -7489,8 +7489,8 @@ module Aws::Glue
     #
     # @overload import_catalog_to_glue(**params)
     # @param [Hash] params ({})
-    def import_catalog_to_glue(params = {}, **options)
-      req = build_request(:import_catalog_to_glue, params)
+    def import_catalog_to_glue(, **options)
+      req = build_request(:import_catalog_to_glue, )
       req.send_request(options)
     end
 
@@ -7539,8 +7539,8 @@ module Aws::Glue
     #
     # @overload list_crawlers(**params)
     # @param [Hash] params ({})
-    def list_crawlers(params = {}, **options)
-      req = build_request(:list_crawlers, params)
+    def list_crawlers(, **options)
+      req = build_request(:list_crawlers, )
       req.send_request(options)
     end
 
@@ -7590,8 +7590,8 @@ module Aws::Glue
     #
     # @overload list_dev_endpoints(**params)
     # @param [Hash] params ({})
-    def list_dev_endpoints(params = {}, **options)
-      req = build_request(:list_dev_endpoints, params)
+    def list_dev_endpoints(, **options)
+      req = build_request(:list_dev_endpoints, )
       req.send_request(options)
     end
 
@@ -7640,8 +7640,8 @@ module Aws::Glue
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -7716,8 +7716,8 @@ module Aws::Glue
     #
     # @overload list_ml_transforms(**params)
     # @param [Hash] params ({})
-    def list_ml_transforms(params = {}, **options)
-      req = build_request(:list_ml_transforms, params)
+    def list_ml_transforms(, **options)
+      req = build_request(:list_ml_transforms, )
       req.send_request(options)
     end
 
@@ -7762,8 +7762,8 @@ module Aws::Glue
     #
     # @overload list_registries(**params)
     # @param [Hash] params ({})
-    def list_registries(params = {}, **options)
-      req = build_request(:list_registries, params)
+    def list_registries(, **options)
+      req = build_request(:list_registries, )
       req.send_request(options)
     end
 
@@ -7823,8 +7823,8 @@ module Aws::Glue
     #
     # @overload list_schema_versions(**params)
     # @param [Hash] params ({})
-    def list_schema_versions(params = {}, **options)
-      req = build_request(:list_schema_versions, params)
+    def list_schema_versions(, **options)
+      req = build_request(:list_schema_versions, )
       req.send_request(options)
     end
 
@@ -7880,8 +7880,8 @@ module Aws::Glue
     #
     # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, **options)
-      req = build_request(:list_schemas, params)
+    def list_schemas(, **options)
+      req = build_request(:list_schemas, )
       req.send_request(options)
     end
 
@@ -7936,8 +7936,8 @@ module Aws::Glue
     #
     # @overload list_triggers(**params)
     # @param [Hash] params ({})
-    def list_triggers(params = {}, **options)
-      req = build_request(:list_triggers, params)
+    def list_triggers(, **options)
+      req = build_request(:list_triggers, )
       req.send_request(options)
     end
 
@@ -7973,8 +7973,8 @@ module Aws::Glue
     #
     # @overload list_workflows(**params)
     # @param [Hash] params ({})
-    def list_workflows(params = {}, **options)
-      req = build_request(:list_workflows, params)
+    def list_workflows(, **options)
+      req = build_request(:list_workflows, )
       req.send_request(options)
     end
 
@@ -8011,8 +8011,8 @@ module Aws::Glue
     #
     # @overload put_data_catalog_encryption_settings(**params)
     # @param [Hash] params ({})
-    def put_data_catalog_encryption_settings(params = {}, **options)
-      req = build_request(:put_data_catalog_encryption_settings, params)
+    def put_data_catalog_encryption_settings(, **options)
+      req = build_request(:put_data_catalog_encryption_settings, )
       req.send_request(options)
     end
 
@@ -8075,8 +8075,8 @@ module Aws::Glue
     #
     # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, **options)
-      req = build_request(:put_resource_policy, params)
+    def put_resource_policy(, **options)
+      req = build_request(:put_resource_policy, )
       req.send_request(options)
     end
 
@@ -8141,8 +8141,8 @@ module Aws::Glue
     #
     # @overload put_schema_version_metadata(**params)
     # @param [Hash] params ({})
-    def put_schema_version_metadata(params = {}, **options)
-      req = build_request(:put_schema_version_metadata, params)
+    def put_schema_version_metadata(, **options)
+      req = build_request(:put_schema_version_metadata, )
       req.send_request(options)
     end
 
@@ -8176,8 +8176,8 @@ module Aws::Glue
     #
     # @overload put_workflow_run_properties(**params)
     # @param [Hash] params ({})
-    def put_workflow_run_properties(params = {}, **options)
-      req = build_request(:put_workflow_run_properties, params)
+    def put_workflow_run_properties(, **options)
+      req = build_request(:put_workflow_run_properties, )
       req.send_request(options)
     end
 
@@ -8245,8 +8245,8 @@ module Aws::Glue
     #
     # @overload query_schema_version_metadata(**params)
     # @param [Hash] params ({})
-    def query_schema_version_metadata(params = {}, **options)
-      req = build_request(:query_schema_version_metadata, params)
+    def query_schema_version_metadata(, **options)
+      req = build_request(:query_schema_version_metadata, )
       req.send_request(options)
     end
 
@@ -8309,8 +8309,8 @@ module Aws::Glue
     #
     # @overload register_schema_version(**params)
     # @param [Hash] params ({})
-    def register_schema_version(params = {}, **options)
-      req = build_request(:register_schema_version, params)
+    def register_schema_version(, **options)
+      req = build_request(:register_schema_version, )
       req.send_request(options)
     end
 
@@ -8375,8 +8375,8 @@ module Aws::Glue
     #
     # @overload remove_schema_version_metadata(**params)
     # @param [Hash] params ({})
-    def remove_schema_version_metadata(params = {}, **options)
-      req = build_request(:remove_schema_version_metadata, params)
+    def remove_schema_version_metadata(, **options)
+      req = build_request(:remove_schema_version_metadata, )
       req.send_request(options)
     end
 
@@ -8413,8 +8413,8 @@ module Aws::Glue
     #
     # @overload reset_job_bookmark(**params)
     # @param [Hash] params ({})
-    def reset_job_bookmark(params = {}, **options)
-      req = build_request(:reset_job_bookmark, params)
+    def reset_job_bookmark(, **options)
+      req = build_request(:reset_job_bookmark, )
       req.send_request(options)
     end
 
@@ -8455,8 +8455,8 @@ module Aws::Glue
     #
     # @overload resume_workflow_run(**params)
     # @param [Hash] params ({})
-    def resume_workflow_run(params = {}, **options)
-      req = build_request(:resume_workflow_run, params)
+    def resume_workflow_run(, **options)
+      req = build_request(:resume_workflow_run, )
       req.send_request(options)
     end
 
@@ -8615,8 +8615,8 @@ module Aws::Glue
     #
     # @overload search_tables(**params)
     # @param [Hash] params ({})
-    def search_tables(params = {}, **options)
-      req = build_request(:search_tables, params)
+    def search_tables(, **options)
+      req = build_request(:search_tables, )
       req.send_request(options)
     end
 
@@ -8643,8 +8643,8 @@ module Aws::Glue
     #
     # @overload start_crawler(**params)
     # @param [Hash] params ({})
-    def start_crawler(params = {}, **options)
-      req = build_request(:start_crawler, params)
+    def start_crawler(, **options)
+      req = build_request(:start_crawler, )
       req.send_request(options)
     end
 
@@ -8667,8 +8667,8 @@ module Aws::Glue
     #
     # @overload start_crawler_schedule(**params)
     # @param [Hash] params ({})
-    def start_crawler_schedule(params = {}, **options)
-      req = build_request(:start_crawler_schedule, params)
+    def start_crawler_schedule(, **options)
+      req = build_request(:start_crawler_schedule, )
       req.send_request(options)
     end
 
@@ -8708,8 +8708,8 @@ module Aws::Glue
     #
     # @overload start_export_labels_task_run(**params)
     # @param [Hash] params ({})
-    def start_export_labels_task_run(params = {}, **options)
-      req = build_request(:start_export_labels_task_run, params)
+    def start_export_labels_task_run(, **options)
+      req = build_request(:start_export_labels_task_run, )
       req.send_request(options)
     end
 
@@ -8774,8 +8774,8 @@ module Aws::Glue
     #
     # @overload start_import_labels_task_run(**params)
     # @param [Hash] params ({})
-    def start_import_labels_task_run(params = {}, **options)
-      req = build_request(:start_import_labels_task_run, params)
+    def start_import_labels_task_run(, **options)
+      req = build_request(:start_import_labels_task_run, )
       req.send_request(options)
     end
 
@@ -8909,8 +8909,8 @@ module Aws::Glue
     #
     # @overload start_job_run(**params)
     # @param [Hash] params ({})
-    def start_job_run(params = {}, **options)
-      req = build_request(:start_job_run, params)
+    def start_job_run(, **options)
+      req = build_request(:start_job_run, )
       req.send_request(options)
     end
 
@@ -8944,8 +8944,8 @@ module Aws::Glue
     #
     # @overload start_ml_evaluation_task_run(**params)
     # @param [Hash] params ({})
-    def start_ml_evaluation_task_run(params = {}, **options)
-      req = build_request(:start_ml_evaluation_task_run, params)
+    def start_ml_evaluation_task_run(, **options)
+      req = build_request(:start_ml_evaluation_task_run, )
       req.send_request(options)
     end
 
@@ -8993,8 +8993,8 @@ module Aws::Glue
     #
     # @overload start_ml_labeling_set_generation_task_run(**params)
     # @param [Hash] params ({})
-    def start_ml_labeling_set_generation_task_run(params = {}, **options)
-      req = build_request(:start_ml_labeling_set_generation_task_run, params)
+    def start_ml_labeling_set_generation_task_run(, **options)
+      req = build_request(:start_ml_labeling_set_generation_task_run, )
       req.send_request(options)
     end
 
@@ -9026,8 +9026,8 @@ module Aws::Glue
     #
     # @overload start_trigger(**params)
     # @param [Hash] params ({})
-    def start_trigger(params = {}, **options)
-      req = build_request(:start_trigger, params)
+    def start_trigger(, **options)
+      req = build_request(:start_trigger, )
       req.send_request(options)
     end
 
@@ -9054,8 +9054,8 @@ module Aws::Glue
     #
     # @overload start_workflow_run(**params)
     # @param [Hash] params ({})
-    def start_workflow_run(params = {}, **options)
-      req = build_request(:start_workflow_run, params)
+    def start_workflow_run(, **options)
+      req = build_request(:start_workflow_run, )
       req.send_request(options)
     end
 
@@ -9076,8 +9076,8 @@ module Aws::Glue
     #
     # @overload stop_crawler(**params)
     # @param [Hash] params ({})
-    def stop_crawler(params = {}, **options)
-      req = build_request(:stop_crawler, params)
+    def stop_crawler(, **options)
+      req = build_request(:stop_crawler, )
       req.send_request(options)
     end
 
@@ -9099,8 +9099,8 @@ module Aws::Glue
     #
     # @overload stop_crawler_schedule(**params)
     # @param [Hash] params ({})
-    def stop_crawler_schedule(params = {}, **options)
-      req = build_request(:stop_crawler_schedule, params)
+    def stop_crawler_schedule(, **options)
+      req = build_request(:stop_crawler_schedule, )
       req.send_request(options)
     end
 
@@ -9127,8 +9127,8 @@ module Aws::Glue
     #
     # @overload stop_trigger(**params)
     # @param [Hash] params ({})
-    def stop_trigger(params = {}, **options)
-      req = build_request(:stop_trigger, params)
+    def stop_trigger(, **options)
+      req = build_request(:stop_trigger, )
       req.send_request(options)
     end
 
@@ -9153,8 +9153,8 @@ module Aws::Glue
     #
     # @overload stop_workflow_run(**params)
     # @param [Hash] params ({})
-    def stop_workflow_run(params = {}, **options)
-      req = build_request(:stop_workflow_run, params)
+    def stop_workflow_run(, **options)
+      req = build_request(:stop_workflow_run, )
       req.send_request(options)
     end
 
@@ -9194,8 +9194,8 @@ module Aws::Glue
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -9221,8 +9221,8 @@ module Aws::Glue
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -9277,8 +9277,8 @@ module Aws::Glue
     #
     # @overload update_classifier(**params)
     # @param [Hash] params ({})
-    def update_classifier(params = {}, **options)
-      req = build_request(:update_classifier, params)
+    def update_classifier(, **options)
+      req = build_request(:update_classifier, )
       req.send_request(options)
     end
 
@@ -9414,8 +9414,8 @@ module Aws::Glue
     #
     # @overload update_column_statistics_for_partition(**params)
     # @param [Hash] params ({})
-    def update_column_statistics_for_partition(params = {}, **options)
-      req = build_request(:update_column_statistics_for_partition, params)
+    def update_column_statistics_for_partition(, **options)
+      req = build_request(:update_column_statistics_for_partition, )
       req.send_request(options)
     end
 
@@ -9547,8 +9547,8 @@ module Aws::Glue
     #
     # @overload update_column_statistics_for_table(**params)
     # @param [Hash] params ({})
-    def update_column_statistics_for_table(params = {}, **options)
-      req = build_request(:update_column_statistics_for_table, params)
+    def update_column_statistics_for_table(, **options)
+      req = build_request(:update_column_statistics_for_table, )
       req.send_request(options)
     end
 
@@ -9591,8 +9591,8 @@ module Aws::Glue
     #
     # @overload update_connection(**params)
     # @param [Hash] params ({})
-    def update_connection(params = {}, **options)
-      req = build_request(:update_connection, params)
+    def update_connection(, **options)
+      req = build_request(:update_connection, )
       req.send_request(options)
     end
 
@@ -9723,8 +9723,8 @@ module Aws::Glue
     #
     # @overload update_crawler(**params)
     # @param [Hash] params ({})
-    def update_crawler(params = {}, **options)
-      req = build_request(:update_crawler, params)
+    def update_crawler(, **options)
+      req = build_request(:update_crawler, )
       req.send_request(options)
     end
 
@@ -9756,8 +9756,8 @@ module Aws::Glue
     #
     # @overload update_crawler_schedule(**params)
     # @param [Hash] params ({})
-    def update_crawler_schedule(params = {}, **options)
-      req = build_request(:update_crawler_schedule, params)
+    def update_crawler_schedule(, **options)
+      req = build_request(:update_crawler_schedule, )
       req.send_request(options)
     end
 
@@ -9808,8 +9808,8 @@ module Aws::Glue
     #
     # @overload update_database(**params)
     # @param [Hash] params ({})
-    def update_database(params = {}, **options)
-      req = build_request(:update_database, params)
+    def update_database(, **options)
+      req = build_request(:update_database, )
       req.send_request(options)
     end
 
@@ -9879,8 +9879,8 @@ module Aws::Glue
     #
     # @overload update_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def update_dev_endpoint(params = {}, **options)
-      req = build_request(:update_dev_endpoint, params)
+    def update_dev_endpoint(, **options)
+      req = build_request(:update_dev_endpoint, )
       req.send_request(options)
     end
 
@@ -9943,8 +9943,8 @@ module Aws::Glue
     #
     # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, **options)
-      req = build_request(:update_job, params)
+    def update_job(, **options)
+      req = build_request(:update_job, )
       req.send_request(options)
     end
 
@@ -10061,8 +10061,8 @@ module Aws::Glue
     #
     # @overload update_ml_transform(**params)
     # @param [Hash] params ({})
-    def update_ml_transform(params = {}, **options)
-      req = build_request(:update_ml_transform, params)
+    def update_ml_transform(, **options)
+      req = build_request(:update_ml_transform, )
       req.send_request(options)
     end
 
@@ -10163,8 +10163,8 @@ module Aws::Glue
     #
     # @overload update_partition(**params)
     # @param [Hash] params ({})
-    def update_partition(params = {}, **options)
-      req = build_request(:update_partition, params)
+    def update_partition(, **options)
+      req = build_request(:update_partition, )
       req.send_request(options)
     end
 
@@ -10204,8 +10204,8 @@ module Aws::Glue
     #
     # @overload update_registry(**params)
     # @param [Hash] params ({})
-    def update_registry(params = {}, **options)
-      req = build_request(:update_registry, params)
+    def update_registry(, **options)
+      req = build_request(:update_registry, )
       req.send_request(options)
     end
 
@@ -10276,8 +10276,8 @@ module Aws::Glue
     #
     # @overload update_schema(**params)
     # @param [Hash] params ({})
-    def update_schema(params = {}, **options)
-      req = build_request(:update_schema, params)
+    def update_schema(, **options)
+      req = build_request(:update_schema, )
       req.send_request(options)
     end
 
@@ -10394,8 +10394,8 @@ module Aws::Glue
     #
     # @overload update_table(**params)
     # @param [Hash] params ({})
-    def update_table(params = {}, **options)
-      req = build_request(:update_table, params)
+    def update_table(, **options)
+      req = build_request(:update_table, )
       req.send_request(options)
     end
 
@@ -10477,8 +10477,8 @@ module Aws::Glue
     #
     # @overload update_trigger(**params)
     # @param [Hash] params ({})
-    def update_trigger(params = {}, **options)
-      req = build_request(:update_trigger, params)
+    def update_trigger(, **options)
+      req = build_request(:update_trigger, )
       req.send_request(options)
     end
 
@@ -10525,8 +10525,8 @@ module Aws::Glue
     #
     # @overload update_user_defined_function(**params)
     # @param [Hash] params ({})
-    def update_user_defined_function(params = {}, **options)
-      req = build_request(:update_user_defined_function, params)
+    def update_user_defined_function(, **options)
+      req = build_request(:update_user_defined_function, )
       req.send_request(options)
     end
 
@@ -10572,8 +10572,8 @@ module Aws::Glue
     #
     # @overload update_workflow(**params)
     # @param [Hash] params ({})
-    def update_workflow(params = {}, **options)
-      req = build_request(:update_workflow, params)
+    def update_workflow(, **options)
+      req = build_request(:update_workflow, )
       req.send_request(options)
     end
 

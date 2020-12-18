@@ -395,8 +395,8 @@ module Aws::ACM
     #
     # @overload add_tags_to_certificate(**params)
     # @param [Hash] params ({})
-    def add_tags_to_certificate(params = {}, **options)
-      req = build_request(:add_tags_to_certificate, params)
+    def add_tags_to_certificate(, **options)
+      req = build_request(:add_tags_to_certificate, )
       req.send_request(options)
     end
 
@@ -437,8 +437,8 @@ module Aws::ACM
     #
     # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, **options)
-      req = build_request(:delete_certificate, params)
+    def delete_certificate(, **options)
+      req = build_request(:delete_certificate, )
       req.send_request(options)
     end
 
@@ -531,8 +531,8 @@ module Aws::ACM
     #
     # @overload describe_certificate(**params)
     # @param [Hash] params ({})
-    def describe_certificate(params = {}, **options)
-      req = build_request(:describe_certificate, params)
+    def describe_certificate(, **options)
+      req = build_request(:describe_certificate, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::ACM
     #
     # @overload export_certificate(**params)
     # @param [Hash] params ({})
-    def export_certificate(params = {}, **options)
-      req = build_request(:export_certificate, params)
+    def export_certificate(, **options)
+      req = build_request(:export_certificate, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::ACM
     #
     # @overload get_certificate(**params)
     # @param [Hash] params ({})
-    def get_certificate(params = {}, **options)
-      req = build_request(:get_certificate, params)
+    def get_certificate(, **options)
+      req = build_request(:get_certificate, )
       req.send_request(options)
     end
 
@@ -755,8 +755,8 @@ module Aws::ACM
     #
     # @overload import_certificate(**params)
     # @param [Hash] params ({})
-    def import_certificate(params = {}, **options)
-      req = build_request(:import_certificate, params)
+    def import_certificate(, **options)
+      req = build_request(:import_certificate, )
       req.send_request(options)
     end
 
@@ -817,8 +817,8 @@ module Aws::ACM
     #
     # @overload list_certificates(**params)
     # @param [Hash] params ({})
-    def list_certificates(params = {}, **options)
-      req = build_request(:list_certificates, params)
+    def list_certificates(, **options)
+      req = build_request(:list_certificates, )
       req.send_request(options)
     end
 
@@ -860,8 +860,8 @@ module Aws::ACM
     #
     # @overload list_tags_for_certificate(**params)
     # @param [Hash] params ({})
-    def list_tags_for_certificate(params = {}, **options)
-      req = build_request(:list_tags_for_certificate, params)
+    def list_tags_for_certificate(, **options)
+      req = build_request(:list_tags_for_certificate, )
       req.send_request(options)
     end
 
@@ -909,8 +909,8 @@ module Aws::ACM
     #
     # @overload remove_tags_from_certificate(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_certificate(params = {}, **options)
-      req = build_request(:remove_tags_from_certificate, params)
+    def remove_tags_from_certificate(, **options)
+      req = build_request(:remove_tags_from_certificate, )
       req.send_request(options)
     end
 
@@ -950,8 +950,8 @@ module Aws::ACM
     #
     # @overload renew_certificate(**params)
     # @param [Hash] params ({})
-    def renew_certificate(params = {}, **options)
-      req = build_request(:renew_certificate, params)
+    def renew_certificate(, **options)
+      req = build_request(:renew_certificate, )
       req.send_request(options)
     end
 
@@ -1103,8 +1103,8 @@ module Aws::ACM
     #
     # @overload request_certificate(**params)
     # @param [Hash] params ({})
-    def request_certificate(params = {}, **options)
-      req = build_request(:request_certificate, params)
+    def request_certificate(, **options)
+      req = build_request(:request_certificate, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::ACM
     #
     # @overload resend_validation_email(**params)
     # @param [Hash] params ({})
-    def resend_validation_email(params = {}, **options)
-      req = build_request(:resend_validation_email, params)
+    def resend_validation_email(, **options)
+      req = build_request(:resend_validation_email, )
       req.send_request(options)
     end
 
@@ -1215,8 +1215,8 @@ module Aws::ACM
     #
     # @overload update_certificate_options(**params)
     # @param [Hash] params ({})
-    def update_certificate_options(params = {}, **options)
-      req = build_request(:update_certificate_options, params)
+    def update_certificate_options(, **options)
+      req = build_request(:update_certificate_options, )
       req.send_request(options)
     end
 

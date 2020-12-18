@@ -3081,5 +3081,592 @@ module Aws::Route53Resolver
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias AccountId = String
+
+    alias Arn = String
+
+    alias AssociateResolverEndpointIpAddressRequest = NamedTuple(
+      "ResolverEndpointId" : ResourceId,
+      "IpAddress" : IpAddressUpdate
+    )
+
+    alias AssociateResolverEndpointIpAddressResponse = NamedTuple(
+      "ResolverEndpoint" : (ResolverEndpoint)?
+    )
+
+    alias AssociateResolverQueryLogConfigRequest = NamedTuple(
+      "ResolverQueryLogConfigId" : ResourceId,
+      "ResourceId" : ResourceId
+    )
+
+    alias AssociateResolverQueryLogConfigResponse = NamedTuple(
+      "ResolverQueryLogConfigAssociation" : (ResolverQueryLogConfigAssociation)?
+    )
+
+    alias AssociateResolverRuleRequest = NamedTuple(
+      "ResolverRuleId" : ResourceId,
+      "Name" : (Name)?,
+      "VPCId" : ResourceId
+    )
+
+    alias AssociateResolverRuleResponse = NamedTuple(
+      "ResolverRuleAssociation" : (ResolverRuleAssociation)?
+    )
+
+    alias Boolean = Bool
+
+    alias Count = Int32
+
+    alias CreateResolverEndpointRequest = NamedTuple(
+      "CreatorRequestId" : CreatorRequestId,
+      "Name" : (Name)?,
+      "SecurityGroupIds" : SecurityGroupIds,
+      "Direction" : ResolverEndpointDirection,
+      "IpAddresses" : IpAddressesRequest,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateResolverEndpointResponse = NamedTuple(
+      "ResolverEndpoint" : (ResolverEndpoint)?
+    )
+
+    alias CreateResolverQueryLogConfigRequest = NamedTuple(
+      "Name" : ResolverQueryLogConfigName,
+      "DestinationArn" : DestinationArn,
+      "CreatorRequestId" : CreatorRequestId,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateResolverQueryLogConfigResponse = NamedTuple(
+      "ResolverQueryLogConfig" : (ResolverQueryLogConfig)?
+    )
+
+    alias CreateResolverRuleRequest = NamedTuple(
+      "CreatorRequestId" : CreatorRequestId,
+      "Name" : (Name)?,
+      "RuleType" : RuleTypeOption,
+      "DomainName" : DomainName,
+      "TargetIps" : (TargetList)?,
+      "ResolverEndpointId" : (ResourceId)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateResolverRuleResponse = NamedTuple(
+      "ResolverRule" : (ResolverRule)?
+    )
+
+    alias CreatorRequestId = String
+
+    alias DeleteResolverEndpointRequest = NamedTuple(
+      "ResolverEndpointId" : ResourceId
+    )
+
+    alias DeleteResolverEndpointResponse = NamedTuple(
+      "ResolverEndpoint" : (ResolverEndpoint)?
+    )
+
+    alias DeleteResolverQueryLogConfigRequest = NamedTuple(
+      "ResolverQueryLogConfigId" : ResourceId
+    )
+
+    alias DeleteResolverQueryLogConfigResponse = NamedTuple(
+      "ResolverQueryLogConfig" : (ResolverQueryLogConfig)?
+    )
+
+    alias DeleteResolverRuleRequest = NamedTuple(
+      "ResolverRuleId" : ResourceId
+    )
+
+    alias DeleteResolverRuleResponse = NamedTuple(
+      "ResolverRule" : (ResolverRule)?
+    )
+
+    alias DestinationArn = String
+
+    alias DisassociateResolverEndpointIpAddressRequest = NamedTuple(
+      "ResolverEndpointId" : ResourceId,
+      "IpAddress" : IpAddressUpdate
+    )
+
+    alias DisassociateResolverEndpointIpAddressResponse = NamedTuple(
+      "ResolverEndpoint" : (ResolverEndpoint)?
+    )
+
+    alias DisassociateResolverQueryLogConfigRequest = NamedTuple(
+      "ResolverQueryLogConfigId" : ResourceId,
+      "ResourceId" : ResourceId
+    )
+
+    alias DisassociateResolverQueryLogConfigResponse = NamedTuple(
+      "ResolverQueryLogConfigAssociation" : (ResolverQueryLogConfigAssociation)?
+    )
+
+    alias DisassociateResolverRuleRequest = NamedTuple(
+      "VPCId" : ResourceId,
+      "ResolverRuleId" : ResourceId
+    )
+
+    alias DisassociateResolverRuleResponse = NamedTuple(
+      "ResolverRuleAssociation" : (ResolverRuleAssociation)?
+    )
+
+    alias DomainName = String
+
+    alias ExceptionMessage = String
+
+    alias Filter = NamedTuple(
+      "Name" : (FilterName)?,
+      "Values" : (FilterValues)?
+    )
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias Filters = Array(Filter)
+
+    alias GetResolverEndpointRequest = NamedTuple(
+      "ResolverEndpointId" : ResourceId
+    )
+
+    alias GetResolverEndpointResponse = NamedTuple(
+      "ResolverEndpoint" : (ResolverEndpoint)?
+    )
+
+    alias GetResolverQueryLogConfigAssociationRequest = NamedTuple(
+      "ResolverQueryLogConfigAssociationId" : ResourceId
+    )
+
+    alias GetResolverQueryLogConfigAssociationResponse = NamedTuple(
+      "ResolverQueryLogConfigAssociation" : (ResolverQueryLogConfigAssociation)?
+    )
+
+    alias GetResolverQueryLogConfigPolicyRequest = NamedTuple(
+      "Arn" : Arn
+    )
+
+    alias GetResolverQueryLogConfigPolicyResponse = NamedTuple(
+      "ResolverQueryLogConfigPolicy" : (ResolverQueryLogConfigPolicy)?
+    )
+
+    alias GetResolverQueryLogConfigRequest = NamedTuple(
+      "ResolverQueryLogConfigId" : ResourceId
+    )
+
+    alias GetResolverQueryLogConfigResponse = NamedTuple(
+      "ResolverQueryLogConfig" : (ResolverQueryLogConfig)?
+    )
+
+    alias GetResolverRuleAssociationRequest = NamedTuple(
+      "ResolverRuleAssociationId" : ResourceId
+    )
+
+    alias GetResolverRuleAssociationResponse = NamedTuple(
+      "ResolverRuleAssociation" : (ResolverRuleAssociation)?
+    )
+
+    alias GetResolverRulePolicyRequest = NamedTuple(
+      "Arn" : Arn
+    )
+
+    alias GetResolverRulePolicyResponse = NamedTuple(
+      "ResolverRulePolicy" : (ResolverRulePolicy)?
+    )
+
+    alias GetResolverRuleRequest = NamedTuple(
+      "ResolverRuleId" : ResourceId
+    )
+
+    alias GetResolverRuleResponse = NamedTuple(
+      "ResolverRule" : (ResolverRule)?
+    )
+
+    alias InternalServiceErrorException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "Message" : ExceptionMessage,
+      "FieldName" : (String)?
+    )
+
+    alias InvalidPolicyDocument = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidTagException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Ip = String
+
+    alias IpAddressCount = Int32
+
+    alias IpAddressRequest = NamedTuple(
+      "SubnetId" : SubnetId,
+      "Ip" : (Ip)?
+    )
+
+    alias IpAddressResponse = NamedTuple(
+      "IpId" : (ResourceId)?,
+      "SubnetId" : (SubnetId)?,
+      "Ip" : (Ip)?,
+      "Status" : (IpAddressStatus)?,
+      "StatusMessage" : (StatusMessage)?,
+      "CreationTime" : (Rfc3339TimeString)?,
+      "ModificationTime" : (Rfc3339TimeString)?
+    )
+
+    alias IpAddressStatus = String
+
+    alias IpAddressUpdate = NamedTuple(
+      "IpId" : (ResourceId)?,
+      "SubnetId" : (SubnetId)?,
+      "Ip" : (Ip)?
+    )
+
+    alias IpAddressesRequest = Array(IpAddressRequest)
+
+    alias IpAddressesResponse = Array(IpAddressResponse)
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias ListResolverEndpointIpAddressesRequest = NamedTuple(
+      "ResolverEndpointId" : ResourceId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListResolverEndpointIpAddressesResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "IpAddresses" : (IpAddressesResponse)?
+    )
+
+    alias ListResolverEndpointsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListResolverEndpointsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "ResolverEndpoints" : (ResolverEndpoints)?
+    )
+
+    alias ListResolverQueryLogConfigAssociationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?,
+      "SortBy" : (SortByKey)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListResolverQueryLogConfigAssociationsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (Count)?,
+      "TotalFilteredCount" : (Count)?,
+      "ResolverQueryLogConfigAssociations" : (ResolverQueryLogConfigAssociationList)?
+    )
+
+    alias ListResolverQueryLogConfigsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?,
+      "SortBy" : (SortByKey)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListResolverQueryLogConfigsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "TotalCount" : (Count)?,
+      "TotalFilteredCount" : (Count)?,
+      "ResolverQueryLogConfigs" : (ResolverQueryLogConfigList)?
+    )
+
+    alias ListResolverRuleAssociationsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListResolverRuleAssociationsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "ResolverRuleAssociations" : (ResolverRuleAssociations)?
+    )
+
+    alias ListResolverRulesRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (Filters)?
+    )
+
+    alias ListResolverRulesResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "ResolverRules" : (ResolverRules)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias Port = Int32
+
+    alias PutResolverQueryLogConfigPolicyRequest = NamedTuple(
+      "Arn" : Arn,
+      "ResolverQueryLogConfigPolicy" : ResolverQueryLogConfigPolicy
+    )
+
+    alias PutResolverQueryLogConfigPolicyResponse = NamedTuple(
+      "ReturnValue" : (Boolean)?
+    )
+
+    alias PutResolverRulePolicyRequest = NamedTuple(
+      "Arn" : Arn,
+      "ResolverRulePolicy" : ResolverRulePolicy
+    )
+
+    alias PutResolverRulePolicyResponse = NamedTuple(
+      "ReturnValue" : (Boolean)?
+    )
+
+    alias ResolverEndpoint = NamedTuple(
+      "Id" : (ResourceId)?,
+      "CreatorRequestId" : (CreatorRequestId)?,
+      "Arn" : (Arn)?,
+      "Name" : (Name)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?,
+      "Direction" : (ResolverEndpointDirection)?,
+      "IpAddressCount" : (IpAddressCount)?,
+      "HostVPCId" : (ResourceId)?,
+      "Status" : (ResolverEndpointStatus)?,
+      "StatusMessage" : (StatusMessage)?,
+      "CreationTime" : (Rfc3339TimeString)?,
+      "ModificationTime" : (Rfc3339TimeString)?
+    )
+
+    alias ResolverEndpointDirection = String
+
+    alias ResolverEndpointStatus = String
+
+    alias ResolverEndpoints = Array(ResolverEndpoint)
+
+    alias ResolverQueryLogConfig = NamedTuple(
+      "Id" : (ResourceId)?,
+      "OwnerId" : (AccountId)?,
+      "Status" : (ResolverQueryLogConfigStatus)?,
+      "ShareStatus" : (ShareStatus)?,
+      "AssociationCount" : (Count)?,
+      "Arn" : (Arn)?,
+      "Name" : (ResolverQueryLogConfigName)?,
+      "DestinationArn" : (DestinationArn)?,
+      "CreatorRequestId" : (CreatorRequestId)?,
+      "CreationTime" : (Rfc3339TimeString)?
+    )
+
+    alias ResolverQueryLogConfigAssociation = NamedTuple(
+      "Id" : (ResourceId)?,
+      "ResolverQueryLogConfigId" : (ResourceId)?,
+      "ResourceId" : (ResourceId)?,
+      "Status" : (ResolverQueryLogConfigAssociationStatus)?,
+      "Error" : (ResolverQueryLogConfigAssociationError)?,
+      "ErrorMessage" : (ResolverQueryLogConfigAssociationErrorMessage)?,
+      "CreationTime" : (Rfc3339TimeString)?
+    )
+
+    alias ResolverQueryLogConfigAssociationError = String
+
+    alias ResolverQueryLogConfigAssociationErrorMessage = String
+
+    alias ResolverQueryLogConfigAssociationList = Array(ResolverQueryLogConfigAssociation)
+
+    alias ResolverQueryLogConfigAssociationStatus = String
+
+    alias ResolverQueryLogConfigList = Array(ResolverQueryLogConfig)
+
+    alias ResolverQueryLogConfigName = String
+
+    alias ResolverQueryLogConfigPolicy = String
+
+    alias ResolverQueryLogConfigStatus = String
+
+    alias ResolverRule = NamedTuple(
+      "Id" : (ResourceId)?,
+      "CreatorRequestId" : (CreatorRequestId)?,
+      "Arn" : (Arn)?,
+      "DomainName" : (DomainName)?,
+      "Status" : (ResolverRuleStatus)?,
+      "StatusMessage" : (StatusMessage)?,
+      "RuleType" : (RuleTypeOption)?,
+      "Name" : (Name)?,
+      "TargetIps" : (TargetList)?,
+      "ResolverEndpointId" : (ResourceId)?,
+      "OwnerId" : (AccountId)?,
+      "ShareStatus" : (ShareStatus)?,
+      "CreationTime" : (Rfc3339TimeString)?,
+      "ModificationTime" : (Rfc3339TimeString)?
+    )
+
+    alias ResolverRuleAssociation = NamedTuple(
+      "Id" : (ResourceId)?,
+      "ResolverRuleId" : (ResourceId)?,
+      "Name" : (Name)?,
+      "VPCId" : (ResourceId)?,
+      "Status" : (ResolverRuleAssociationStatus)?,
+      "StatusMessage" : (StatusMessage)?
+    )
+
+    alias ResolverRuleAssociationStatus = String
+
+    alias ResolverRuleAssociations = Array(ResolverRuleAssociation)
+
+    alias ResolverRuleConfig = NamedTuple(
+      "Name" : (Name)?,
+      "TargetIps" : (TargetList)?,
+      "ResolverEndpointId" : (ResourceId)?
+    )
+
+    alias ResolverRulePolicy = String
+
+    alias ResolverRuleStatus = String
+
+    alias ResolverRules = Array(ResolverRule)
+
+    alias ResourceExistsException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias ResourceId = String
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias ResourceUnavailableException = NamedTuple(
+      "Message" : (String)?,
+      "ResourceType" : (String)?
+    )
+
+    alias Rfc3339TimeString = String
+
+    alias RuleTypeOption = String
+
+    alias SecurityGroupIds = Array(ResourceId)
+
+    alias ShareStatus = String
+
+    alias SortByKey = String
+
+    alias SortOrder = String
+
+    alias StatusMessage = String
+
+    alias String = String
+
+    alias SubnetId = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TargetAddress = NamedTuple(
+      "Ip" : Ip,
+      "Port" : (Port)?
+    )
+
+    alias TargetList = Array(TargetAddress)
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UnknownResourceException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : Arn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateResolverEndpointRequest = NamedTuple(
+      "ResolverEndpointId" : ResourceId,
+      "Name" : (Name)?
+    )
+
+    alias UpdateResolverEndpointResponse = NamedTuple(
+      "ResolverEndpoint" : (ResolverEndpoint)?
+    )
+
+    alias UpdateResolverRuleRequest = NamedTuple(
+      "ResolverRuleId" : ResourceId,
+      "Config" : ResolverRuleConfig
+    )
+
+    alias UpdateResolverRuleResponse = NamedTuple(
+      "ResolverRule" : (ResolverRule)?
+    )
   end
 end

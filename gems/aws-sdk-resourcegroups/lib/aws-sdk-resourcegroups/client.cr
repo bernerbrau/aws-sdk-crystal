@@ -424,8 +424,8 @@ module Aws::ResourceGroups
     #
     # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, **options)
-      req = build_request(:create_group, params)
+    def create_group(, **options)
+      req = build_request(:create_group, )
       req.send_request(options)
     end
 
@@ -460,8 +460,8 @@ module Aws::ResourceGroups
     #
     # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, **options)
-      req = build_request(:delete_group, params)
+    def delete_group(, **options)
+      req = build_request(:delete_group, )
       req.send_request(options)
     end
 
@@ -494,8 +494,8 @@ module Aws::ResourceGroups
     #
     # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, **options)
-      req = build_request(:get_group, params)
+    def get_group(, **options)
+      req = build_request(:get_group, )
       req.send_request(options)
     end
 
@@ -547,8 +547,8 @@ module Aws::ResourceGroups
     #
     # @overload get_group_configuration(**params)
     # @param [Hash] params ({})
-    def get_group_configuration(params = {}, **options)
-      req = build_request(:get_group_configuration, params)
+    def get_group_configuration(, **options)
+      req = build_request(:get_group_configuration, )
       req.send_request(options)
     end
 
@@ -582,8 +582,8 @@ module Aws::ResourceGroups
     #
     # @overload get_group_query(**params)
     # @param [Hash] params ({})
-    def get_group_query(params = {}, **options)
-      req = build_request(:get_group_query, params)
+    def get_group_query(, **options)
+      req = build_request(:get_group_query, )
       req.send_request(options)
     end
 
@@ -614,8 +614,8 @@ module Aws::ResourceGroups
     #
     # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, **options)
-      req = build_request(:get_tags, params)
+    def get_tags(, **options)
+      req = build_request(:get_tags, )
       req.send_request(options)
     end
 
@@ -652,8 +652,8 @@ module Aws::ResourceGroups
     #
     # @overload group_resources(**params)
     # @param [Hash] params ({})
-    def group_resources(params = {}, **options)
-      req = build_request(:group_resources, params)
+    def group_resources(, **options)
+      req = build_request(:group_resources, )
       req.send_request(options)
     end
 
@@ -752,8 +752,8 @@ module Aws::ResourceGroups
     #
     # @overload list_group_resources(**params)
     # @param [Hash] params ({})
-    def list_group_resources(params = {}, **options)
-      req = build_request(:list_group_resources, params)
+    def list_group_resources(, **options)
+      req = build_request(:list_group_resources, )
       req.send_request(options)
     end
 
@@ -831,8 +831,8 @@ module Aws::ResourceGroups
     #
     # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, **options)
-      req = build_request(:list_groups, params)
+    def list_groups(, **options)
+      req = build_request(:list_groups, )
       req.send_request(options)
     end
 
@@ -896,8 +896,8 @@ module Aws::ResourceGroups
     #
     # @overload search_resources(**params)
     # @param [Hash] params ({})
-    def search_resources(params = {}, **options)
-      req = build_request(:search_resources, params)
+    def search_resources(, **options)
+      req = build_request(:search_resources, )
       req.send_request(options)
     end
 
@@ -941,8 +941,8 @@ module Aws::ResourceGroups
     #
     # @overload tag(**params)
     # @param [Hash] params ({})
-    def tag(params = {}, **options)
-      req = build_request(:tag, params)
+    def tag(, **options)
+      req = build_request(:tag, )
       req.send_request(options)
     end
 
@@ -980,8 +980,8 @@ module Aws::ResourceGroups
     #
     # @overload ungroup_resources(**params)
     # @param [Hash] params ({})
-    def ungroup_resources(params = {}, **options)
-      req = build_request(:ungroup_resources, params)
+    def ungroup_resources(, **options)
+      req = build_request(:ungroup_resources, )
       req.send_request(options)
     end
 
@@ -1017,8 +1017,8 @@ module Aws::ResourceGroups
     #
     # @overload untag(**params)
     # @param [Hash] params ({})
-    def untag(params = {}, **options)
-      req = build_request(:untag, params)
+    def untag(, **options)
+      req = build_request(:untag, )
       req.send_request(options)
     end
 
@@ -1058,8 +1058,8 @@ module Aws::ResourceGroups
     #
     # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, **options)
-      req = build_request(:update_group, params)
+    def update_group(, **options)
+      req = build_request(:update_group, )
       req.send_request(options)
     end
 
@@ -1100,8 +1100,8 @@ module Aws::ResourceGroups
     #
     # @overload update_group_query(**params)
     # @param [Hash] params ({})
-    def update_group_query(params = {}, **options)
-      req = build_request(:update_group_query, params)
+    def update_group_query(, **options)
+      req = build_request(:update_group_query, )
       req.send_request(options)
     end
 

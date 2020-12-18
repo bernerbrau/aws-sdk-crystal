@@ -434,8 +434,8 @@ module Aws::Budgets
     #
     # @overload create_budget(**params)
     # @param [Hash] params ({})
-    def create_budget(params = {}, **options)
-      req = build_request(:create_budget, params)
+    def create_budget(, **options)
+      req = build_request(:create_budget, )
       req.send_request(options)
     end
 
@@ -524,8 +524,8 @@ module Aws::Budgets
     #
     # @overload create_budget_action(**params)
     # @param [Hash] params ({})
-    def create_budget_action(params = {}, **options)
-      req = build_request(:create_budget_action, params)
+    def create_budget_action(, **options)
+      req = build_request(:create_budget_action, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::Budgets
     #
     # @overload create_notification(**params)
     # @param [Hash] params ({})
-    def create_notification(params = {}, **options)
-      req = build_request(:create_notification, params)
+    def create_notification(, **options)
+      req = build_request(:create_notification, )
       req.send_request(options)
     end
 
@@ -616,8 +616,8 @@ module Aws::Budgets
     #
     # @overload create_subscriber(**params)
     # @param [Hash] params ({})
-    def create_subscriber(params = {}, **options)
-      req = build_request(:create_subscriber, params)
+    def create_subscriber(, **options)
+      req = build_request(:create_subscriber, )
       req.send_request(options)
     end
 
@@ -644,8 +644,8 @@ module Aws::Budgets
     #
     # @overload delete_budget(**params)
     # @param [Hash] params ({})
-    def delete_budget(params = {}, **options)
-      req = build_request(:delete_budget, params)
+    def delete_budget(, **options)
+      req = build_request(:delete_budget, )
       req.send_request(options)
     end
 
@@ -709,8 +709,8 @@ module Aws::Budgets
     #
     # @overload delete_budget_action(**params)
     # @param [Hash] params ({})
-    def delete_budget_action(params = {}, **options)
-      req = build_request(:delete_budget_action, params)
+    def delete_budget_action(, **options)
+      req = build_request(:delete_budget_action, )
       req.send_request(options)
     end
 
@@ -747,8 +747,8 @@ module Aws::Budgets
     #
     # @overload delete_notification(**params)
     # @param [Hash] params ({})
-    def delete_notification(params = {}, **options)
-      req = build_request(:delete_notification, params)
+    def delete_notification(, **options)
+      req = build_request(:delete_notification, )
       req.send_request(options)
     end
 
@@ -792,8 +792,8 @@ module Aws::Budgets
     #
     # @overload delete_subscriber(**params)
     # @param [Hash] params ({})
-    def delete_subscriber(params = {}, **options)
-      req = build_request(:delete_subscriber, params)
+    def delete_subscriber(, **options)
+      req = build_request(:delete_subscriber, )
       req.send_request(options)
     end
 
@@ -858,8 +858,8 @@ module Aws::Budgets
     #
     # @overload describe_budget(**params)
     # @param [Hash] params ({})
-    def describe_budget(params = {}, **options)
-      req = build_request(:describe_budget, params)
+    def describe_budget(, **options)
+      req = build_request(:describe_budget, )
       req.send_request(options)
     end
 
@@ -923,8 +923,8 @@ module Aws::Budgets
     #
     # @overload describe_budget_action(**params)
     # @param [Hash] params ({})
-    def describe_budget_action(params = {}, **options)
-      req = build_request(:describe_budget_action, params)
+    def describe_budget_action(, **options)
+      req = build_request(:describe_budget_action, )
       req.send_request(options)
     end
 
@@ -1011,8 +1011,8 @@ module Aws::Budgets
     #
     # @overload describe_budget_action_histories(**params)
     # @param [Hash] params ({})
-    def describe_budget_action_histories(params = {}, **options)
-      req = build_request(:describe_budget_action_histories, params)
+    def describe_budget_action_histories(, **options)
+      req = build_request(:describe_budget_action_histories, )
       req.send_request(options)
     end
 
@@ -1076,8 +1076,8 @@ module Aws::Budgets
     #
     # @overload describe_budget_actions_for_account(**params)
     # @param [Hash] params ({})
-    def describe_budget_actions_for_account(params = {}, **options)
-      req = build_request(:describe_budget_actions_for_account, params)
+    def describe_budget_actions_for_account(, **options)
+      req = build_request(:describe_budget_actions_for_account, )
       req.send_request(options)
     end
 
@@ -1146,8 +1146,8 @@ module Aws::Budgets
     #
     # @overload describe_budget_actions_for_budget(**params)
     # @param [Hash] params ({})
-    def describe_budget_actions_for_budget(params = {}, **options)
-      req = build_request(:describe_budget_actions_for_budget, params)
+    def describe_budget_actions_for_budget(, **options)
+      req = build_request(:describe_budget_actions_for_budget, )
       req.send_request(options)
     end
 
@@ -1222,8 +1222,8 @@ module Aws::Budgets
     #
     # @overload describe_budget_performance_history(**params)
     # @param [Hash] params ({})
-    def describe_budget_performance_history(params = {}, **options)
-      req = build_request(:describe_budget_performance_history, params)
+    def describe_budget_performance_history(, **options)
+      req = build_request(:describe_budget_performance_history, )
       req.send_request(options)
     end
 
@@ -1299,8 +1299,8 @@ module Aws::Budgets
     #
     # @overload describe_budgets(**params)
     # @param [Hash] params ({})
-    def describe_budgets(params = {}, **options)
-      req = build_request(:describe_budgets, params)
+    def describe_budgets(, **options)
+      req = build_request(:describe_budgets, )
       req.send_request(options)
     end
 
@@ -1349,8 +1349,8 @@ module Aws::Budgets
     #
     # @overload describe_notifications_for_budget(**params)
     # @param [Hash] params ({})
-    def describe_notifications_for_budget(params = {}, **options)
-      req = build_request(:describe_notifications_for_budget, params)
+    def describe_notifications_for_budget(, **options)
+      req = build_request(:describe_notifications_for_budget, )
       req.send_request(options)
     end
 
@@ -1406,8 +1406,8 @@ module Aws::Budgets
     #
     # @overload describe_subscribers_for_notification(**params)
     # @param [Hash] params ({})
-    def describe_subscribers_for_notification(params = {}, **options)
-      req = build_request(:describe_subscribers_for_notification, params)
+    def describe_subscribers_for_notification(, **options)
+      req = build_request(:describe_subscribers_for_notification, )
       req.send_request(options)
     end
 
@@ -1452,8 +1452,8 @@ module Aws::Budgets
     #
     # @overload execute_budget_action(**params)
     # @param [Hash] params ({})
-    def execute_budget_action(params = {}, **options)
-      req = build_request(:execute_budget_action, params)
+    def execute_budget_action(, **options)
+      req = build_request(:execute_budget_action, )
       req.send_request(options)
     end
 
@@ -1534,8 +1534,8 @@ module Aws::Budgets
     #
     # @overload update_budget(**params)
     # @param [Hash] params ({})
-    def update_budget(params = {}, **options)
-      req = build_request(:update_budget, params)
+    def update_budget(, **options)
+      req = build_request(:update_budget, )
       req.send_request(options)
     end
 
@@ -1675,8 +1675,8 @@ module Aws::Budgets
     #
     # @overload update_budget_action(**params)
     # @param [Hash] params ({})
-    def update_budget_action(params = {}, **options)
-      req = build_request(:update_budget_action, params)
+    def update_budget_action(, **options)
+      req = build_request(:update_budget_action, )
       req.send_request(options)
     end
 
@@ -1720,8 +1720,8 @@ module Aws::Budgets
     #
     # @overload update_notification(**params)
     # @param [Hash] params ({})
-    def update_notification(params = {}, **options)
-      req = build_request(:update_notification, params)
+    def update_notification(, **options)
+      req = build_request(:update_notification, )
       req.send_request(options)
     end
 
@@ -1769,8 +1769,8 @@ module Aws::Budgets
     #
     # @overload update_subscriber(**params)
     # @param [Hash] params ({})
-    def update_subscriber(params = {}, **options)
-      req = build_request(:update_subscriber, params)
+    def update_subscriber(, **options)
+      req = build_request(:update_subscriber, )
       req.send_request(options)
     end
 

@@ -2389,5 +2389,674 @@ module Aws::ElasticLoadBalancing
     #
     class UnsupportedProtocolException < Aws::EmptyStructure; end
 
+    alias AccessLog = NamedTuple(
+      "Enabled" : AccessLogEnabled,
+      "S3BucketName" : (S3BucketName)?,
+      "EmitInterval" : (AccessLogInterval)?,
+      "S3BucketPrefix" : (AccessLogPrefix)?
+    )
+
+    alias AccessLogEnabled = Bool
+
+    alias AccessLogInterval = Int32
+
+    alias AccessLogPrefix = String
+
+    alias AccessPointName = String
+
+    alias AccessPointNotFoundException = NamedTuple(
+      
+    )
+
+    alias AccessPointPort = Int32
+
+    alias AddAvailabilityZonesInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "AvailabilityZones" : AvailabilityZones
+    )
+
+    alias AddAvailabilityZonesOutput = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?
+    )
+
+    alias AddTagsInput = NamedTuple(
+      "LoadBalancerNames" : LoadBalancerNames,
+      "Tags" : TagList
+    )
+
+    alias AddTagsOutput = NamedTuple(
+      
+    )
+
+    alias AdditionalAttribute = NamedTuple(
+      "Key" : (AdditionalAttributeKey)?,
+      "Value" : (AdditionalAttributeValue)?
+    )
+
+    alias AdditionalAttributeKey = String
+
+    alias AdditionalAttributeValue = String
+
+    alias AdditionalAttributes = Array(AdditionalAttribute)
+
+    alias AppCookieStickinessPolicies = Array(AppCookieStickinessPolicy)
+
+    alias AppCookieStickinessPolicy = NamedTuple(
+      "PolicyName" : (PolicyName)?,
+      "CookieName" : (CookieName)?
+    )
+
+    alias ApplySecurityGroupsToLoadBalancerInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "SecurityGroups" : SecurityGroups
+    )
+
+    alias ApplySecurityGroupsToLoadBalancerOutput = NamedTuple(
+      "SecurityGroups" : (SecurityGroups)?
+    )
+
+    alias AttachLoadBalancerToSubnetsInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Subnets" : Subnets
+    )
+
+    alias AttachLoadBalancerToSubnetsOutput = NamedTuple(
+      "Subnets" : (Subnets)?
+    )
+
+    alias AttributeName = String
+
+    alias AttributeType = String
+
+    alias AttributeValue = String
+
+    alias AvailabilityZone = String
+
+    alias AvailabilityZones = Array(AvailabilityZone)
+
+    alias BackendServerDescription = NamedTuple(
+      "InstancePort" : (InstancePort)?,
+      "PolicyNames" : (PolicyNames)?
+    )
+
+    alias BackendServerDescriptions = Array(BackendServerDescription)
+
+    alias Cardinality = String
+
+    alias CertificateNotFoundException = NamedTuple(
+      
+    )
+
+    alias ConfigureHealthCheckInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "HealthCheck" : HealthCheck
+    )
+
+    alias ConfigureHealthCheckOutput = NamedTuple(
+      "HealthCheck" : (HealthCheck)?
+    )
+
+    alias ConnectionDraining = NamedTuple(
+      "Enabled" : ConnectionDrainingEnabled,
+      "Timeout" : (ConnectionDrainingTimeout)?
+    )
+
+    alias ConnectionDrainingEnabled = Bool
+
+    alias ConnectionDrainingTimeout = Int32
+
+    alias ConnectionSettings = NamedTuple(
+      "IdleTimeout" : IdleTimeout
+    )
+
+    alias CookieExpirationPeriod = Int64
+
+    alias CookieName = String
+
+    alias CreateAccessPointInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Listeners" : Listeners,
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "Subnets" : (Subnets)?,
+      "SecurityGroups" : (SecurityGroups)?,
+      "Scheme" : (LoadBalancerScheme)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateAccessPointOutput = NamedTuple(
+      "DNSName" : (DNSName)?
+    )
+
+    alias CreateAppCookieStickinessPolicyInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "PolicyName" : PolicyName,
+      "CookieName" : CookieName
+    )
+
+    alias CreateAppCookieStickinessPolicyOutput = NamedTuple(
+      
+    )
+
+    alias CreateLBCookieStickinessPolicyInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "PolicyName" : PolicyName,
+      "CookieExpirationPeriod" : (CookieExpirationPeriod)?
+    )
+
+    alias CreateLBCookieStickinessPolicyOutput = NamedTuple(
+      
+    )
+
+    alias CreateLoadBalancerListenerInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Listeners" : Listeners
+    )
+
+    alias CreateLoadBalancerListenerOutput = NamedTuple(
+      
+    )
+
+    alias CreateLoadBalancerPolicyInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "PolicyName" : PolicyName,
+      "PolicyTypeName" : PolicyTypeName,
+      "PolicyAttributes" : (PolicyAttributes)?
+    )
+
+    alias CreateLoadBalancerPolicyOutput = NamedTuple(
+      
+    )
+
+    alias CreatedTime = String | UInt64 | Time
+
+    alias CrossZoneLoadBalancing = NamedTuple(
+      "Enabled" : CrossZoneLoadBalancingEnabled
+    )
+
+    alias CrossZoneLoadBalancingEnabled = Bool
+
+    alias DNSName = String
+
+    alias DefaultValue = String
+
+    alias DeleteAccessPointInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName
+    )
+
+    alias DeleteAccessPointOutput = NamedTuple(
+      
+    )
+
+    alias DeleteLoadBalancerListenerInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "LoadBalancerPorts" : Ports
+    )
+
+    alias DeleteLoadBalancerListenerOutput = NamedTuple(
+      
+    )
+
+    alias DeleteLoadBalancerPolicyInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "PolicyName" : PolicyName
+    )
+
+    alias DeleteLoadBalancerPolicyOutput = NamedTuple(
+      
+    )
+
+    alias DependencyThrottleException = NamedTuple(
+      
+    )
+
+    alias DeregisterEndPointsInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Instances" : Instances
+    )
+
+    alias DeregisterEndPointsOutput = NamedTuple(
+      "Instances" : (Instances)?
+    )
+
+    alias DescribeAccessPointsInput = NamedTuple(
+      "LoadBalancerNames" : (LoadBalancerNames)?,
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeAccessPointsOutput = NamedTuple(
+      "LoadBalancerDescriptions" : (LoadBalancerDescriptions)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeAccountLimitsInput = NamedTuple(
+      "Marker" : (Marker)?,
+      "PageSize" : (PageSize)?
+    )
+
+    alias DescribeAccountLimitsOutput = NamedTuple(
+      "Limits" : (Limits)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeEndPointStateInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Instances" : (Instances)?
+    )
+
+    alias DescribeEndPointStateOutput = NamedTuple(
+      "InstanceStates" : (InstanceStates)?
+    )
+
+    alias DescribeLoadBalancerAttributesInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName
+    )
+
+    alias DescribeLoadBalancerAttributesOutput = NamedTuple(
+      "LoadBalancerAttributes" : (LoadBalancerAttributes)?
+    )
+
+    alias DescribeLoadBalancerPoliciesInput = NamedTuple(
+      "LoadBalancerName" : (AccessPointName)?,
+      "PolicyNames" : (PolicyNames)?
+    )
+
+    alias DescribeLoadBalancerPoliciesOutput = NamedTuple(
+      "PolicyDescriptions" : (PolicyDescriptions)?
+    )
+
+    alias DescribeLoadBalancerPolicyTypesInput = NamedTuple(
+      "PolicyTypeNames" : (PolicyTypeNames)?
+    )
+
+    alias DescribeLoadBalancerPolicyTypesOutput = NamedTuple(
+      "PolicyTypeDescriptions" : (PolicyTypeDescriptions)?
+    )
+
+    alias DescribeTagsInput = NamedTuple(
+      "LoadBalancerNames" : LoadBalancerNamesMax20
+    )
+
+    alias DescribeTagsOutput = NamedTuple(
+      "TagDescriptions" : (TagDescriptions)?
+    )
+
+    alias Description = String
+
+    alias DetachLoadBalancerFromSubnetsInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Subnets" : Subnets
+    )
+
+    alias DetachLoadBalancerFromSubnetsOutput = NamedTuple(
+      "Subnets" : (Subnets)?
+    )
+
+    alias DuplicateAccessPointNameException = NamedTuple(
+      
+    )
+
+    alias DuplicateListenerException = NamedTuple(
+      
+    )
+
+    alias DuplicatePolicyNameException = NamedTuple(
+      
+    )
+
+    alias DuplicateTagKeysException = NamedTuple(
+      
+    )
+
+    alias EndPointPort = Int32
+
+    alias HealthCheck = NamedTuple(
+      "Target" : HealthCheckTarget,
+      "Interval" : HealthCheckInterval,
+      "Timeout" : HealthCheckTimeout,
+      "UnhealthyThreshold" : UnhealthyThreshold,
+      "HealthyThreshold" : HealthyThreshold
+    )
+
+    alias HealthCheckInterval = Int32
+
+    alias HealthCheckTarget = String
+
+    alias HealthCheckTimeout = Int32
+
+    alias HealthyThreshold = Int32
+
+    alias IdleTimeout = Int32
+
+    alias Instance = NamedTuple(
+      "InstanceId" : (InstanceId)?
+    )
+
+    alias InstanceId = String
+
+    alias InstancePort = Int32
+
+    alias InstanceState = NamedTuple(
+      "InstanceId" : (InstanceId)?,
+      "State" : (State)?,
+      "ReasonCode" : (ReasonCode)?,
+      "Description" : (Description)?
+    )
+
+    alias InstanceStates = Array(InstanceState)
+
+    alias Instances = Array(Instance)
+
+    alias InvalidConfigurationRequestException = NamedTuple(
+      
+    )
+
+    alias InvalidEndPointException = NamedTuple(
+      
+    )
+
+    alias InvalidSchemeException = NamedTuple(
+      
+    )
+
+    alias InvalidSecurityGroupException = NamedTuple(
+      
+    )
+
+    alias InvalidSubnetException = NamedTuple(
+      
+    )
+
+    alias LBCookieStickinessPolicies = Array(LBCookieStickinessPolicy)
+
+    alias LBCookieStickinessPolicy = NamedTuple(
+      "PolicyName" : (PolicyName)?,
+      "CookieExpirationPeriod" : (CookieExpirationPeriod)?
+    )
+
+    alias Limit = NamedTuple(
+      "Name" : (Name)?,
+      "Max" : (Max)?
+    )
+
+    alias Limits = Array(Limit)
+
+    alias Listener = NamedTuple(
+      "Protocol" : Protocol,
+      "LoadBalancerPort" : AccessPointPort,
+      "InstanceProtocol" : (Protocol)?,
+      "InstancePort" : InstancePort,
+      "SSLCertificateId" : (SSLCertificateId)?
+    )
+
+    alias ListenerDescription = NamedTuple(
+      "Listener" : (Listener)?,
+      "PolicyNames" : (PolicyNames)?
+    )
+
+    alias ListenerDescriptions = Array(ListenerDescription)
+
+    alias ListenerNotFoundException = NamedTuple(
+      
+    )
+
+    alias Listeners = Array(Listener)
+
+    alias LoadBalancerAttributeNotFoundException = NamedTuple(
+      
+    )
+
+    alias LoadBalancerAttributes = NamedTuple(
+      "CrossZoneLoadBalancing" : (CrossZoneLoadBalancing)?,
+      "AccessLog" : (AccessLog)?,
+      "ConnectionDraining" : (ConnectionDraining)?,
+      "ConnectionSettings" : (ConnectionSettings)?,
+      "AdditionalAttributes" : (AdditionalAttributes)?
+    )
+
+    alias LoadBalancerDescription = NamedTuple(
+      "LoadBalancerName" : (AccessPointName)?,
+      "DNSName" : (DNSName)?,
+      "CanonicalHostedZoneName" : (DNSName)?,
+      "CanonicalHostedZoneNameID" : (DNSName)?,
+      "ListenerDescriptions" : (ListenerDescriptions)?,
+      "Policies" : (Policies)?,
+      "BackendServerDescriptions" : (BackendServerDescriptions)?,
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "Subnets" : (Subnets)?,
+      "VPCId" : (VPCId)?,
+      "Instances" : (Instances)?,
+      "HealthCheck" : (HealthCheck)?,
+      "SourceSecurityGroup" : (SourceSecurityGroup)?,
+      "SecurityGroups" : (SecurityGroups)?,
+      "CreatedTime" : (CreatedTime)?,
+      "Scheme" : (LoadBalancerScheme)?
+    )
+
+    alias LoadBalancerDescriptions = Array(LoadBalancerDescription)
+
+    alias LoadBalancerNames = Array(AccessPointName)
+
+    alias LoadBalancerNamesMax20 = Array(AccessPointName)
+
+    alias LoadBalancerScheme = String
+
+    alias Marker = String
+
+    alias Max = String
+
+    alias ModifyLoadBalancerAttributesInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "LoadBalancerAttributes" : LoadBalancerAttributes
+    )
+
+    alias ModifyLoadBalancerAttributesOutput = NamedTuple(
+      "LoadBalancerName" : (AccessPointName)?,
+      "LoadBalancerAttributes" : (LoadBalancerAttributes)?
+    )
+
+    alias Name = String
+
+    alias OperationNotPermittedException = NamedTuple(
+      
+    )
+
+    alias PageSize = Int32
+
+    alias Policies = NamedTuple(
+      "AppCookieStickinessPolicies" : (AppCookieStickinessPolicies)?,
+      "LBCookieStickinessPolicies" : (LBCookieStickinessPolicies)?,
+      "OtherPolicies" : (PolicyNames)?
+    )
+
+    alias PolicyAttribute = NamedTuple(
+      "AttributeName" : (AttributeName)?,
+      "AttributeValue" : (AttributeValue)?
+    )
+
+    alias PolicyAttributeDescription = NamedTuple(
+      "AttributeName" : (AttributeName)?,
+      "AttributeValue" : (AttributeValue)?
+    )
+
+    alias PolicyAttributeDescriptions = Array(PolicyAttributeDescription)
+
+    alias PolicyAttributeTypeDescription = NamedTuple(
+      "AttributeName" : (AttributeName)?,
+      "AttributeType" : (AttributeType)?,
+      "Description" : (Description)?,
+      "DefaultValue" : (DefaultValue)?,
+      "Cardinality" : (Cardinality)?
+    )
+
+    alias PolicyAttributeTypeDescriptions = Array(PolicyAttributeTypeDescription)
+
+    alias PolicyAttributes = Array(PolicyAttribute)
+
+    alias PolicyDescription = NamedTuple(
+      "PolicyName" : (PolicyName)?,
+      "PolicyTypeName" : (PolicyTypeName)?,
+      "PolicyAttributeDescriptions" : (PolicyAttributeDescriptions)?
+    )
+
+    alias PolicyDescriptions = Array(PolicyDescription)
+
+    alias PolicyName = String
+
+    alias PolicyNames = Array(PolicyName)
+
+    alias PolicyNotFoundException = NamedTuple(
+      
+    )
+
+    alias PolicyTypeDescription = NamedTuple(
+      "PolicyTypeName" : (PolicyTypeName)?,
+      "Description" : (Description)?,
+      "PolicyAttributeTypeDescriptions" : (PolicyAttributeTypeDescriptions)?
+    )
+
+    alias PolicyTypeDescriptions = Array(PolicyTypeDescription)
+
+    alias PolicyTypeName = String
+
+    alias PolicyTypeNames = Array(PolicyTypeName)
+
+    alias PolicyTypeNotFoundException = NamedTuple(
+      
+    )
+
+    alias Ports = Array(AccessPointPort)
+
+    alias Protocol = String
+
+    alias ReasonCode = String
+
+    alias RegisterEndPointsInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "Instances" : Instances
+    )
+
+    alias RegisterEndPointsOutput = NamedTuple(
+      "Instances" : (Instances)?
+    )
+
+    alias RemoveAvailabilityZonesInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "AvailabilityZones" : AvailabilityZones
+    )
+
+    alias RemoveAvailabilityZonesOutput = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?
+    )
+
+    alias RemoveTagsInput = NamedTuple(
+      "LoadBalancerNames" : LoadBalancerNames,
+      "Tags" : TagKeyList
+    )
+
+    alias RemoveTagsOutput = NamedTuple(
+      
+    )
+
+    alias S3BucketName = String
+
+    alias SSLCertificateId = String
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupName = String
+
+    alias SecurityGroupOwnerAlias = String
+
+    alias SecurityGroups = Array(SecurityGroupId)
+
+    alias SetLoadBalancerListenerSSLCertificateInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "LoadBalancerPort" : AccessPointPort,
+      "SSLCertificateId" : SSLCertificateId
+    )
+
+    alias SetLoadBalancerListenerSSLCertificateOutput = NamedTuple(
+      
+    )
+
+    alias SetLoadBalancerPoliciesForBackendServerInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "InstancePort" : EndPointPort,
+      "PolicyNames" : PolicyNames
+    )
+
+    alias SetLoadBalancerPoliciesForBackendServerOutput = NamedTuple(
+      
+    )
+
+    alias SetLoadBalancerPoliciesOfListenerInput = NamedTuple(
+      "LoadBalancerName" : AccessPointName,
+      "LoadBalancerPort" : AccessPointPort,
+      "PolicyNames" : PolicyNames
+    )
+
+    alias SetLoadBalancerPoliciesOfListenerOutput = NamedTuple(
+      
+    )
+
+    alias SourceSecurityGroup = NamedTuple(
+      "OwnerAlias" : (SecurityGroupOwnerAlias)?,
+      "GroupName" : (SecurityGroupName)?
+    )
+
+    alias State = String
+
+    alias SubnetId = String
+
+    alias SubnetNotFoundException = NamedTuple(
+      
+    )
+
+    alias Subnets = Array(SubnetId)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagDescription = NamedTuple(
+      "LoadBalancerName" : (AccessPointName)?,
+      "Tags" : (TagList)?
+    )
+
+    alias TagDescriptions = Array(TagDescription)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKeyOnly)
+
+    alias TagKeyOnly = NamedTuple(
+      "Key" : (TagKey)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias TooManyAccessPointsException = NamedTuple(
+      
+    )
+
+    alias TooManyPoliciesException = NamedTuple(
+      
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      
+    )
+
+    alias UnhealthyThreshold = Int32
+
+    alias UnsupportedProtocolException = NamedTuple(
+      
+    )
+
+    alias VPCId = String
   end
 end

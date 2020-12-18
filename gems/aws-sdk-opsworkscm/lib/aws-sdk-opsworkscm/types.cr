@@ -1793,5 +1793,389 @@ module Aws::OpsWorksCM
       include Aws::Structure
     end
 
+    alias AWSOpsWorksCMResourceArn = String
+
+    alias AccountAttribute = NamedTuple(
+      "Name" : (String)?,
+      "Maximum" : (Integer)?,
+      "Used" : (Integer)?
+    )
+
+    alias AccountAttributes = Array(AccountAttribute)
+
+    alias AssociateNodeRequest = NamedTuple(
+      "ServerName" : ServerName,
+      "NodeName" : NodeName,
+      "EngineAttributes" : EngineAttributes
+    )
+
+    alias AssociateNodeResponse = NamedTuple(
+      "NodeAssociationStatusToken" : (NodeAssociationStatusToken)?
+    )
+
+    alias AttributeName = String
+
+    alias AttributeValue = String
+
+    alias Backup = NamedTuple(
+      "BackupArn" : (String)?,
+      "BackupId" : (BackupId)?,
+      "BackupType" : (BackupType)?,
+      "CreatedAt" : (Timestamp)?,
+      "Description" : (String)?,
+      "Engine" : (String)?,
+      "EngineModel" : (String)?,
+      "EngineVersion" : (String)?,
+      "InstanceProfileArn" : (String)?,
+      "InstanceType" : (String)?,
+      "KeyPair" : (String)?,
+      "PreferredBackupWindow" : (TimeWindowDefinition)?,
+      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
+      "S3DataSize" : (Integer)?,
+      "S3DataUrl" : (String)?,
+      "S3LogUrl" : (String)?,
+      "SecurityGroupIds" : (Strings)?,
+      "ServerName" : (ServerName)?,
+      "ServiceRoleArn" : (String)?,
+      "Status" : (BackupStatus)?,
+      "StatusDescription" : (String)?,
+      "SubnetIds" : (Strings)?,
+      "ToolsVersion" : (String)?,
+      "UserArn" : (String)?
+    )
+
+    alias BackupId = String
+
+    alias BackupRetentionCountDefinition = Int32
+
+    alias BackupStatus = String
+
+    alias BackupType = String
+
+    alias Backups = Array(Backup)
+
+    alias Boolean = Bool
+
+    alias CreateBackupRequest = NamedTuple(
+      "ServerName" : ServerName,
+      "Description" : (String)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateBackupResponse = NamedTuple(
+      "Backup" : (Backup)?
+    )
+
+    alias CreateServerRequest = NamedTuple(
+      "AssociatePublicIpAddress" : (Boolean)?,
+      "CustomDomain" : (CustomDomain)?,
+      "CustomCertificate" : (CustomCertificate)?,
+      "CustomPrivateKey" : (CustomPrivateKey)?,
+      "DisableAutomatedBackup" : (Boolean)?,
+      "Engine" : String,
+      "EngineModel" : (String)?,
+      "EngineVersion" : (String)?,
+      "EngineAttributes" : (EngineAttributes)?,
+      "BackupRetentionCount" : (BackupRetentionCountDefinition)?,
+      "ServerName" : ServerName,
+      "InstanceProfileArn" : InstanceProfileArn,
+      "InstanceType" : String,
+      "KeyPair" : (KeyPair)?,
+      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
+      "PreferredBackupWindow" : (TimeWindowDefinition)?,
+      "SecurityGroupIds" : (Strings)?,
+      "ServiceRoleArn" : ServiceRoleArn,
+      "SubnetIds" : (Strings)?,
+      "Tags" : (TagList)?,
+      "BackupId" : (BackupId)?
+    )
+
+    alias CreateServerResponse = NamedTuple(
+      "Server" : (Server)?
+    )
+
+    alias CustomCertificate = String
+
+    alias CustomDomain = String
+
+    alias CustomPrivateKey = String
+
+    alias DeleteBackupRequest = NamedTuple(
+      "BackupId" : BackupId
+    )
+
+    alias DeleteBackupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteServerRequest = NamedTuple(
+      "ServerName" : ServerName
+    )
+
+    alias DeleteServerResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAccountAttributesRequest = NamedTuple(
+      
+    )
+
+    alias DescribeAccountAttributesResponse = NamedTuple(
+      "Attributes" : (AccountAttributes)?
+    )
+
+    alias DescribeBackupsRequest = NamedTuple(
+      "BackupId" : (BackupId)?,
+      "ServerName" : (ServerName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeBackupsResponse = NamedTuple(
+      "Backups" : (Backups)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeEventsRequest = NamedTuple(
+      "ServerName" : ServerName,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeEventsResponse = NamedTuple(
+      "ServerEvents" : (ServerEvents)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeNodeAssociationStatusRequest = NamedTuple(
+      "NodeAssociationStatusToken" : NodeAssociationStatusToken,
+      "ServerName" : ServerName
+    )
+
+    alias DescribeNodeAssociationStatusResponse = NamedTuple(
+      "NodeAssociationStatus" : (NodeAssociationStatus)?,
+      "EngineAttributes" : (EngineAttributes)?
+    )
+
+    alias DescribeServersRequest = NamedTuple(
+      "ServerName" : (ServerName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeServersResponse = NamedTuple(
+      "Servers" : (Servers)?,
+      "NextToken" : (String)?
+    )
+
+    alias DisassociateNodeRequest = NamedTuple(
+      "ServerName" : ServerName,
+      "NodeName" : NodeName,
+      "EngineAttributes" : (EngineAttributes)?
+    )
+
+    alias DisassociateNodeResponse = NamedTuple(
+      "NodeAssociationStatusToken" : (NodeAssociationStatusToken)?
+    )
+
+    alias EngineAttribute = NamedTuple(
+      "Name" : (EngineAttributeName)?,
+      "Value" : (EngineAttributeValue)?
+    )
+
+    alias EngineAttributeName = String
+
+    alias EngineAttributeValue = String
+
+    alias EngineAttributes = Array(EngineAttribute)
+
+    alias ExportServerEngineAttributeRequest = NamedTuple(
+      "ExportAttributeName" : String,
+      "ServerName" : ServerName,
+      "InputAttributes" : (EngineAttributes)?
+    )
+
+    alias ExportServerEngineAttributeResponse = NamedTuple(
+      "EngineAttribute" : (EngineAttribute)?,
+      "ServerName" : (ServerName)?
+    )
+
+    alias InstanceProfileArn = String
+
+    alias Integer = Int32
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidStateException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias KeyPair = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : AWSOpsWorksCMResourceArn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaintenanceStatus = String
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias NodeAssociationStatus = String
+
+    alias NodeAssociationStatusToken = String
+
+    alias NodeName = String
+
+    alias ResourceAlreadyExistsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias RestoreServerRequest = NamedTuple(
+      "BackupId" : BackupId,
+      "ServerName" : ServerName,
+      "InstanceType" : (String)?,
+      "KeyPair" : (KeyPair)?
+    )
+
+    alias RestoreServerResponse = NamedTuple(
+      
+    )
+
+    alias Server = NamedTuple(
+      "AssociatePublicIpAddress" : (Boolean)?,
+      "BackupRetentionCount" : (Integer)?,
+      "ServerName" : (String)?,
+      "CreatedAt" : (Timestamp)?,
+      "CloudFormationStackArn" : (String)?,
+      "CustomDomain" : (CustomDomain)?,
+      "DisableAutomatedBackup" : (Boolean)?,
+      "Endpoint" : (String)?,
+      "Engine" : (String)?,
+      "EngineModel" : (String)?,
+      "EngineAttributes" : (EngineAttributes)?,
+      "EngineVersion" : (String)?,
+      "InstanceProfileArn" : (String)?,
+      "InstanceType" : (String)?,
+      "KeyPair" : (String)?,
+      "MaintenanceStatus" : (MaintenanceStatus)?,
+      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
+      "PreferredBackupWindow" : (TimeWindowDefinition)?,
+      "SecurityGroupIds" : (Strings)?,
+      "ServiceRoleArn" : (String)?,
+      "Status" : (ServerStatus)?,
+      "StatusReason" : (String)?,
+      "SubnetIds" : (Strings)?,
+      "ServerArn" : (String)?
+    )
+
+    alias ServerEvent = NamedTuple(
+      "CreatedAt" : (Timestamp)?,
+      "ServerName" : (String)?,
+      "Message" : (String)?,
+      "LogUrl" : (String)?
+    )
+
+    alias ServerEvents = Array(ServerEvent)
+
+    alias ServerName = String
+
+    alias ServerStatus = String
+
+    alias Servers = Array(Server)
+
+    alias ServiceRoleArn = String
+
+    alias StartMaintenanceRequest = NamedTuple(
+      "ServerName" : ServerName,
+      "EngineAttributes" : (EngineAttributes)?
+    )
+
+    alias StartMaintenanceResponse = NamedTuple(
+      "Server" : (Server)?
+    )
+
+    alias String = String
+
+    alias Strings = Array(String)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : AWSOpsWorksCMResourceArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TimeWindowDefinition = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : AWSOpsWorksCMResourceArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateServerEngineAttributesRequest = NamedTuple(
+      "ServerName" : ServerName,
+      "AttributeName" : AttributeName,
+      "AttributeValue" : (AttributeValue)?
+    )
+
+    alias UpdateServerEngineAttributesResponse = NamedTuple(
+      "Server" : (Server)?
+    )
+
+    alias UpdateServerRequest = NamedTuple(
+      "DisableAutomatedBackup" : (Boolean)?,
+      "BackupRetentionCount" : (Integer)?,
+      "ServerName" : ServerName,
+      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
+      "PreferredBackupWindow" : (TimeWindowDefinition)?
+    )
+
+    alias UpdateServerResponse = NamedTuple(
+      "Server" : (Server)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (String)?
+    )
   end
 end

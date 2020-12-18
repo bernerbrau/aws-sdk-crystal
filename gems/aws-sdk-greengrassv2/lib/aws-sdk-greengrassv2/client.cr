@@ -353,8 +353,8 @@ module Aws::GreengrassV2
     #
     # @overload cancel_deployment(**params)
     # @param [Hash] params ({})
-    def cancel_deployment(params = {}, **options)
-      req = build_request(:cancel_deployment, params)
+    def cancel_deployment(, **options)
+      req = build_request(:cancel_deployment, )
       req.send_request(options)
     end
 
@@ -520,8 +520,8 @@ module Aws::GreengrassV2
     #
     # @overload create_component_version(**params)
     # @param [Hash] params ({})
-    def create_component_version(params = {}, **options)
-      req = build_request(:create_component_version, params)
+    def create_component_version(, **options)
+      req = build_request(:create_component_version, )
       req.send_request(options)
     end
 
@@ -659,8 +659,8 @@ module Aws::GreengrassV2
     #
     # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, **options)
-      req = build_request(:create_deployment, params)
+    def create_deployment(, **options)
+      req = build_request(:create_deployment, )
       req.send_request(options)
     end
 
@@ -693,8 +693,8 @@ module Aws::GreengrassV2
     #
     # @overload delete_component(**params)
     # @param [Hash] params ({})
-    def delete_component(params = {}, **options)
-      req = build_request(:delete_component, params)
+    def delete_component(, **options)
+      req = build_request(:delete_component, )
       req.send_request(options)
     end
 
@@ -724,8 +724,8 @@ module Aws::GreengrassV2
     #
     # @overload delete_core_device(**params)
     # @param [Hash] params ({})
-    def delete_core_device(params = {}, **options)
-      req = build_request(:delete_core_device, params)
+    def delete_core_device(, **options)
+      req = build_request(:delete_core_device, )
       req.send_request(options)
     end
 
@@ -779,8 +779,8 @@ module Aws::GreengrassV2
     #
     # @overload describe_component(**params)
     # @param [Hash] params ({})
-    def describe_component(params = {}, **options)
-      req = build_request(:describe_component, params)
+    def describe_component(, **options)
+      req = build_request(:describe_component, )
       req.send_request(options)
     end
 
@@ -822,8 +822,8 @@ module Aws::GreengrassV2
     #
     # @overload get_component(**params)
     # @param [Hash] params ({})
-    def get_component(params = {}, **options)
-      req = build_request(:get_component, params)
+    def get_component(, **options)
+      req = build_request(:get_component, )
       req.send_request(options)
     end
 
@@ -860,8 +860,8 @@ module Aws::GreengrassV2
     #
     # @overload get_component_version_artifact(**params)
     # @param [Hash] params ({})
-    def get_component_version_artifact(params = {}, **options)
-      req = build_request(:get_component_version_artifact, params)
+    def get_component_version_artifact(, **options)
+      req = build_request(:get_component_version_artifact, )
       req.send_request(options)
     end
 
@@ -902,8 +902,8 @@ module Aws::GreengrassV2
     #
     # @overload get_core_device(**params)
     # @param [Hash] params ({})
-    def get_core_device(params = {}, **options)
-      req = build_request(:get_core_device, params)
+    def get_core_device(, **options)
+      req = build_request(:get_core_device, )
       req.send_request(options)
     end
 
@@ -974,8 +974,8 @@ module Aws::GreengrassV2
     #
     # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, **options)
-      req = build_request(:get_deployment, params)
+    def get_deployment(, **options)
+      req = build_request(:get_deployment, )
       req.send_request(options)
     end
 
@@ -1021,8 +1021,8 @@ module Aws::GreengrassV2
     #
     # @overload list_component_versions(**params)
     # @param [Hash] params ({})
-    def list_component_versions(params = {}, **options)
-      req = build_request(:list_component_versions, params)
+    def list_component_versions(, **options)
+      req = build_request(:list_component_versions, )
       req.send_request(options)
     end
 
@@ -1075,8 +1075,8 @@ module Aws::GreengrassV2
     #
     # @overload list_components(**params)
     # @param [Hash] params ({})
-    def list_components(params = {}, **options)
-      req = build_request(:list_components, params)
+    def list_components(, **options)
+      req = build_request(:list_components, )
       req.send_request(options)
     end
 
@@ -1136,8 +1136,8 @@ module Aws::GreengrassV2
     #
     # @overload list_core_devices(**params)
     # @param [Hash] params ({})
-    def list_core_devices(params = {}, **options)
-      req = build_request(:list_core_devices, params)
+    def list_core_devices(, **options)
+      req = build_request(:list_core_devices, )
       req.send_request(options)
     end
 
@@ -1199,8 +1199,8 @@ module Aws::GreengrassV2
     #
     # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, **options)
-      req = build_request(:list_deployments, params)
+    def list_deployments(, **options)
+      req = build_request(:list_deployments, )
       req.send_request(options)
     end
 
@@ -1251,8 +1251,8 @@ module Aws::GreengrassV2
     #
     # @overload list_effective_deployments(**params)
     # @param [Hash] params ({})
-    def list_effective_deployments(params = {}, **options)
-      req = build_request(:list_effective_deployments, params)
+    def list_effective_deployments(, **options)
+      req = build_request(:list_effective_deployments, )
       req.send_request(options)
     end
 
@@ -1298,8 +1298,8 @@ module Aws::GreengrassV2
     #
     # @overload list_installed_components(**params)
     # @param [Hash] params ({})
-    def list_installed_components(params = {}, **options)
-      req = build_request(:list_installed_components, params)
+    def list_installed_components(, **options)
+      req = build_request(:list_installed_components, )
       req.send_request(options)
     end
 
@@ -1331,8 +1331,8 @@ module Aws::GreengrassV2
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1403,8 +1403,8 @@ module Aws::GreengrassV2
     #
     # @overload resolve_component_candidates(**params)
     # @param [Hash] params ({})
-    def resolve_component_candidates(params = {}, **options)
-      req = build_request(:resolve_component_candidates, params)
+    def resolve_component_candidates(, **options)
+      req = build_request(:resolve_component_candidates, )
       req.send_request(options)
     end
 
@@ -1442,8 +1442,8 @@ module Aws::GreengrassV2
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1472,8 +1472,8 @@ module Aws::GreengrassV2
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 

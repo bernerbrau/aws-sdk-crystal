@@ -1162,5 +1162,318 @@ module Aws::Polly
       include Aws::Structure
     end
 
+    alias Alphabet = String
+
+    alias AudioStream = String | Array(UInt8) | IO
+
+    alias ContentType = String
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DeleteLexiconInput = NamedTuple(
+      "Name" : LexiconName
+    )
+
+    alias DeleteLexiconOutput = NamedTuple(
+      
+    )
+
+    alias DescribeVoicesInput = NamedTuple(
+      "Engine" : (Engine)?,
+      "LanguageCode" : (LanguageCode)?,
+      "IncludeAdditionalLanguageCodes" : (IncludeAdditionalLanguageCodes)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeVoicesOutput = NamedTuple(
+      "Voices" : (VoiceList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias Engine = String
+
+    alias EngineList = Array(Engine)
+
+    alias EngineNotSupportedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias Gender = String
+
+    alias GetLexiconInput = NamedTuple(
+      "Name" : LexiconName
+    )
+
+    alias GetLexiconOutput = NamedTuple(
+      "Lexicon" : (Lexicon)?,
+      "LexiconAttributes" : (LexiconAttributes)?
+    )
+
+    alias GetSpeechSynthesisTaskInput = NamedTuple(
+      "TaskId" : TaskId
+    )
+
+    alias GetSpeechSynthesisTaskOutput = NamedTuple(
+      "SynthesisTask" : (SynthesisTask)?
+    )
+
+    alias IncludeAdditionalLanguageCodes = Bool
+
+    alias InvalidLexiconException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidS3BucketException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidS3KeyException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidSampleRateException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidSnsTopicArnException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidSsmlException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidTaskIdException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LanguageCode = String
+
+    alias LanguageCodeList = Array(LanguageCode)
+
+    alias LanguageName = String
+
+    alias LanguageNotSupportedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LastModified = String | UInt64 | Time
+
+    alias LexemesCount = Int32
+
+    alias Lexicon = NamedTuple(
+      "Content" : (LexiconContent)?,
+      "Name" : (LexiconName)?
+    )
+
+    alias LexiconArn = String
+
+    alias LexiconAttributes = NamedTuple(
+      "Alphabet" : (Alphabet)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LastModified" : (LastModified)?,
+      "LexiconArn" : (LexiconArn)?,
+      "LexemesCount" : (LexemesCount)?,
+      "Size" : (Size)?
+    )
+
+    alias LexiconContent = String
+
+    alias LexiconDescription = NamedTuple(
+      "Name" : (LexiconName)?,
+      "Attributes" : (LexiconAttributes)?
+    )
+
+    alias LexiconDescriptionList = Array(LexiconDescription)
+
+    alias LexiconName = String
+
+    alias LexiconNameList = Array(LexiconName)
+
+    alias LexiconNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LexiconSizeExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ListLexiconsInput = NamedTuple(
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLexiconsOutput = NamedTuple(
+      "Lexicons" : (LexiconDescriptionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSpeechSynthesisTasksInput = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Status" : (TaskStatus)?
+    )
+
+    alias ListSpeechSynthesisTasksOutput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "SynthesisTasks" : (SynthesisTasks)?
+    )
+
+    alias MarksNotSupportedForFormatException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias MaxLexemeLengthExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias MaxLexiconsNumberExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias OutputFormat = String
+
+    alias OutputS3BucketName = String
+
+    alias OutputS3KeyPrefix = String
+
+    alias OutputUri = String
+
+    alias PutLexiconInput = NamedTuple(
+      "Name" : LexiconName,
+      "Content" : LexiconContent
+    )
+
+    alias PutLexiconOutput = NamedTuple(
+      
+    )
+
+    alias RequestCharacters = Int32
+
+    alias SampleRate = String
+
+    alias ServiceFailureException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Size = Int32
+
+    alias SnsTopicArn = String
+
+    alias SpeechMarkType = String
+
+    alias SpeechMarkTypeList = Array(SpeechMarkType)
+
+    alias SsmlMarksNotSupportedForTextTypeException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StartSpeechSynthesisTaskInput = NamedTuple(
+      "Engine" : (Engine)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LexiconNames" : (LexiconNameList)?,
+      "OutputFormat" : OutputFormat,
+      "OutputS3BucketName" : OutputS3BucketName,
+      "OutputS3KeyPrefix" : (OutputS3KeyPrefix)?,
+      "SampleRate" : (SampleRate)?,
+      "SnsTopicArn" : (SnsTopicArn)?,
+      "SpeechMarkTypes" : (SpeechMarkTypeList)?,
+      "Text" : Text,
+      "TextType" : (TextType)?,
+      "VoiceId" : VoiceId
+    )
+
+    alias StartSpeechSynthesisTaskOutput = NamedTuple(
+      "SynthesisTask" : (SynthesisTask)?
+    )
+
+    alias SynthesisTask = NamedTuple(
+      "Engine" : (Engine)?,
+      "TaskId" : (TaskId)?,
+      "TaskStatus" : (TaskStatus)?,
+      "TaskStatusReason" : (TaskStatusReason)?,
+      "OutputUri" : (OutputUri)?,
+      "CreationTime" : (DateTime)?,
+      "RequestCharacters" : (RequestCharacters)?,
+      "SnsTopicArn" : (SnsTopicArn)?,
+      "LexiconNames" : (LexiconNameList)?,
+      "OutputFormat" : (OutputFormat)?,
+      "SampleRate" : (SampleRate)?,
+      "SpeechMarkTypes" : (SpeechMarkTypeList)?,
+      "TextType" : (TextType)?,
+      "VoiceId" : (VoiceId)?,
+      "LanguageCode" : (LanguageCode)?
+    )
+
+    alias SynthesisTaskNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias SynthesisTasks = Array(SynthesisTask)
+
+    alias SynthesizeSpeechInput = NamedTuple(
+      "Engine" : (Engine)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LexiconNames" : (LexiconNameList)?,
+      "OutputFormat" : OutputFormat,
+      "SampleRate" : (SampleRate)?,
+      "SpeechMarkTypes" : (SpeechMarkTypeList)?,
+      "Text" : Text,
+      "TextType" : (TextType)?,
+      "VoiceId" : VoiceId
+    )
+
+    alias SynthesizeSpeechOutput = NamedTuple(
+      "AudioStream" : (AudioStream)?,
+      "ContentType" : (ContentType)?,
+      "RequestCharacters" : (RequestCharacters)?
+    )
+
+    alias TaskId = String
+
+    alias TaskStatus = String
+
+    alias TaskStatusReason = String
+
+    alias Text = String
+
+    alias TextLengthExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TextType = String
+
+    alias UnsupportedPlsAlphabetException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UnsupportedPlsLanguageException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Voice = NamedTuple(
+      "Gender" : (Gender)?,
+      "Id" : (VoiceId)?,
+      "LanguageCode" : (LanguageCode)?,
+      "LanguageName" : (LanguageName)?,
+      "Name" : (VoiceName)?,
+      "AdditionalLanguageCodes" : (LanguageCodeList)?,
+      "SupportedEngines" : (EngineList)?
+    )
+
+    alias VoiceId = String
+
+    alias VoiceList = Array(Voice)
+
+    alias VoiceName = String
   end
 end

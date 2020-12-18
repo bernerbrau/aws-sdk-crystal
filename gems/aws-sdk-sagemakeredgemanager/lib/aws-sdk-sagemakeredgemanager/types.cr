@@ -227,5 +227,67 @@ module Aws::SagemakerEdgeManager
       include Aws::Structure
     end
 
+    alias CacheTTLSeconds = String
+
+    alias DeviceFleetName = String
+
+    alias DeviceName = String
+
+    alias DeviceRegistration = String
+
+    alias Dimension = String
+
+    alias EdgeMetric = NamedTuple(
+      "Dimension" : (Dimension)?,
+      "MetricName" : (Metric)?,
+      "Value" : (Value)?,
+      "Timestamp" : (Timestamp)?
+    )
+
+    alias EdgeMetrics = Array(EdgeMetric)
+
+    alias ErrorMessage = String
+
+    alias GetDeviceRegistrationRequest = NamedTuple(
+      "DeviceName" : DeviceName,
+      "DeviceFleetName" : DeviceFleetName
+    )
+
+    alias GetDeviceRegistrationResult = NamedTuple(
+      "DeviceRegistration" : (DeviceRegistration)?,
+      "CacheTTL" : (CacheTTLSeconds)?
+    )
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Metric = String
+
+    alias Model = NamedTuple(
+      "ModelName" : (ModelName)?,
+      "ModelVersion" : (Version)?,
+      "LatestSampleTime" : (Timestamp)?,
+      "LatestInference" : (Timestamp)?,
+      "ModelMetrics" : (EdgeMetrics)?
+    )
+
+    alias ModelName = String
+
+    alias Models = Array(Model)
+
+    alias SendHeartbeatRequest = NamedTuple(
+      "AgentMetrics" : (EdgeMetrics)?,
+      "Models" : (Models)?,
+      "AgentVersion" : Version,
+      "DeviceName" : DeviceName,
+      "DeviceFleetName" : DeviceFleetName
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Value = Float64
+
+    alias Version = String
   end
 end

@@ -516,8 +516,8 @@ module Aws::Transfer
     #
     # @overload create_server(**params)
     # @param [Hash] params ({})
-    def create_server(params = {}, **options)
-      req = build_request(:create_server, params)
+    def create_server(, **options)
+      req = build_request(:create_server, )
       req.send_request(options)
     end
 
@@ -665,8 +665,8 @@ module Aws::Transfer
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -689,8 +689,8 @@ module Aws::Transfer
     #
     # @overload delete_server(**params)
     # @param [Hash] params ({})
-    def delete_server(params = {}, **options)
-      req = build_request(:delete_server, params)
+    def delete_server(, **options)
+      req = build_request(:delete_server, )
       req.send_request(options)
     end
 
@@ -723,8 +723,8 @@ module Aws::Transfer
     #
     # @overload delete_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def delete_ssh_public_key(params = {}, **options)
-      req = build_request(:delete_ssh_public_key, params)
+    def delete_ssh_public_key(, **options)
+      req = build_request(:delete_ssh_public_key, )
       req.send_request(options)
     end
 
@@ -758,8 +758,8 @@ module Aws::Transfer
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -803,8 +803,8 @@ module Aws::Transfer
     #
     # @overload describe_security_policy(**params)
     # @param [Hash] params ({})
-    def describe_security_policy(params = {}, **options)
-      req = build_request(:describe_security_policy, params)
+    def describe_security_policy(, **options)
+      req = build_request(:describe_security_policy, )
       req.send_request(options)
     end
 
@@ -860,8 +860,8 @@ module Aws::Transfer
     #
     # @overload describe_server(**params)
     # @param [Hash] params ({})
-    def describe_server(params = {}, **options)
-      req = build_request(:describe_server, params)
+    def describe_server(, **options)
+      req = build_request(:describe_server, )
       req.send_request(options)
     end
 
@@ -916,8 +916,8 @@ module Aws::Transfer
     #
     # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, **options)
-      req = build_request(:describe_user, params)
+    def describe_user(, **options)
+      req = build_request(:describe_user, )
       req.send_request(options)
     end
 
@@ -961,8 +961,8 @@ module Aws::Transfer
     #
     # @overload import_ssh_public_key(**params)
     # @param [Hash] params ({})
-    def import_ssh_public_key(params = {}, **options)
-      req = build_request(:import_ssh_public_key, params)
+    def import_ssh_public_key(, **options)
+      req = build_request(:import_ssh_public_key, )
       req.send_request(options)
     end
 
@@ -1003,8 +1003,8 @@ module Aws::Transfer
     #
     # @overload list_security_policies(**params)
     # @param [Hash] params ({})
-    def list_security_policies(params = {}, **options)
-      req = build_request(:list_security_policies, params)
+    def list_security_policies(, **options)
+      req = build_request(:list_security_policies, )
       req.send_request(options)
     end
 
@@ -1051,8 +1051,8 @@ module Aws::Transfer
     #
     # @overload list_servers(**params)
     # @param [Hash] params ({})
-    def list_servers(params = {}, **options)
-      req = build_request(:list_servers, params)
+    def list_servers(, **options)
+      req = build_request(:list_servers, )
       req.send_request(options)
     end
 
@@ -1102,8 +1102,8 @@ module Aws::Transfer
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1156,8 +1156,8 @@ module Aws::Transfer
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -1187,8 +1187,8 @@ module Aws::Transfer
     #
     # @overload start_server(**params)
     # @param [Hash] params ({})
-    def start_server(params = {}, **options)
-      req = build_request(:start_server, params)
+    def start_server(, **options)
+      req = build_request(:start_server, )
       req.send_request(options)
     end
 
@@ -1224,8 +1224,8 @@ module Aws::Transfer
     #
     # @overload stop_server(**params)
     # @param [Hash] params ({})
-    def stop_server(params = {}, **options)
-      req = build_request(:stop_server, params)
+    def stop_server(, **options)
+      req = build_request(:stop_server, )
       req.send_request(options)
     end
 
@@ -1262,8 +1262,8 @@ module Aws::Transfer
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1326,8 +1326,8 @@ module Aws::Transfer
     #
     # @overload test_identity_provider(**params)
     # @param [Hash] params ({})
-    def test_identity_provider(params = {}, **options)
-      req = build_request(:test_identity_provider, params)
+    def test_identity_provider(, **options)
+      req = build_request(:test_identity_provider, )
       req.send_request(options)
     end
 
@@ -1360,8 +1360,8 @@ module Aws::Transfer
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1528,8 +1528,8 @@ module Aws::Transfer
     #
     # @overload update_server(**params)
     # @param [Hash] params ({})
-    def update_server(params = {}, **options)
-      req = build_request(:update_server, params)
+    def update_server(, **options)
+      req = build_request(:update_server, )
       req.send_request(options)
     end
 
@@ -1659,8 +1659,8 @@ module Aws::Transfer
     #
     # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, **options)
-      req = build_request(:update_user, params)
+    def update_user(, **options)
+      req = build_request(:update_user, )
       req.send_request(options)
     end
 

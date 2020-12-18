@@ -2004,5 +2004,501 @@ module Aws::ComputeOptimizer
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AccountId = String
+
+    alias AccountIds = Array(AccountId)
+
+    alias AutoScalingGroupArn = String
+
+    alias AutoScalingGroupArns = Array(AutoScalingGroupArn)
+
+    alias AutoScalingGroupConfiguration = NamedTuple(
+      "desiredCapacity" : (DesiredCapacity)?,
+      "minSize" : (MinSize)?,
+      "maxSize" : (MaxSize)?,
+      "instanceType" : (InstanceType)?
+    )
+
+    alias AutoScalingGroupName = String
+
+    alias AutoScalingGroupRecommendation = NamedTuple(
+      "accountId" : (AccountId)?,
+      "autoScalingGroupArn" : (AutoScalingGroupArn)?,
+      "autoScalingGroupName" : (AutoScalingGroupName)?,
+      "finding" : (Finding)?,
+      "utilizationMetrics" : (UtilizationMetrics)?,
+      "lookBackPeriodInDays" : (LookBackPeriodInDays)?,
+      "currentConfiguration" : (AutoScalingGroupConfiguration)?,
+      "recommendationOptions" : (AutoScalingGroupRecommendationOptions)?,
+      "lastRefreshTimestamp" : (LastRefreshTimestamp)?
+    )
+
+    alias AutoScalingGroupRecommendationOption = NamedTuple(
+      "configuration" : (AutoScalingGroupConfiguration)?,
+      "projectedUtilizationMetrics" : (ProjectedUtilizationMetrics)?,
+      "performanceRisk" : (PerformanceRisk)?,
+      "rank" : (Rank)?
+    )
+
+    alias AutoScalingGroupRecommendationOptions = Array(AutoScalingGroupRecommendationOption)
+
+    alias AutoScalingGroupRecommendations = Array(AutoScalingGroupRecommendation)
+
+    alias Code = String
+
+    alias CreationTimestamp = String | UInt64 | Time
+
+    alias CurrentInstanceType = String
+
+    alias DescribeRecommendationExportJobsRequest = NamedTuple(
+      "jobIds" : (JobIds)?,
+      "filters" : (JobFilters)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias DescribeRecommendationExportJobsResponse = NamedTuple(
+      "recommendationExportJobs" : (RecommendationExportJobs)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DesiredCapacity = Int32
+
+    alias DestinationBucket = String
+
+    alias DestinationKey = String
+
+    alias DestinationKeyPrefix = String
+
+    alias EBSFilter = NamedTuple(
+      "name" : (EBSFilterName)?,
+      "values" : (FilterValues)?
+    )
+
+    alias EBSFilterName = String
+
+    alias EBSFilters = Array(EBSFilter)
+
+    alias EBSFinding = String
+
+    alias EBSMetricName = String
+
+    alias EBSUtilizationMetric = NamedTuple(
+      "name" : (EBSMetricName)?,
+      "statistic" : (MetricStatistic)?,
+      "value" : (MetricValue)?
+    )
+
+    alias EBSUtilizationMetrics = Array(EBSUtilizationMetric)
+
+    alias ErrorMessage = String
+
+    alias ExportAutoScalingGroupRecommendationsRequest = NamedTuple(
+      "accountIds" : (AccountIds)?,
+      "filters" : (Filters)?,
+      "fieldsToExport" : (ExportableAutoScalingGroupFields)?,
+      "s3DestinationConfig" : S3DestinationConfig,
+      "fileFormat" : (FileFormat)?,
+      "includeMemberAccounts" : (IncludeMemberAccounts)?
+    )
+
+    alias ExportAutoScalingGroupRecommendationsResponse = NamedTuple(
+      "jobId" : (JobId)?,
+      "s3Destination" : (S3Destination)?
+    )
+
+    alias ExportDestination = NamedTuple(
+      "s3" : (S3Destination)?
+    )
+
+    alias ExportEC2InstanceRecommendationsRequest = NamedTuple(
+      "accountIds" : (AccountIds)?,
+      "filters" : (Filters)?,
+      "fieldsToExport" : (ExportableInstanceFields)?,
+      "s3DestinationConfig" : S3DestinationConfig,
+      "fileFormat" : (FileFormat)?,
+      "includeMemberAccounts" : (IncludeMemberAccounts)?
+    )
+
+    alias ExportEC2InstanceRecommendationsResponse = NamedTuple(
+      "jobId" : (JobId)?,
+      "s3Destination" : (S3Destination)?
+    )
+
+    alias ExportableAutoScalingGroupField = String
+
+    alias ExportableAutoScalingGroupFields = Array(ExportableAutoScalingGroupField)
+
+    alias ExportableInstanceField = String
+
+    alias ExportableInstanceFields = Array(ExportableInstanceField)
+
+    alias FailureReason = String
+
+    alias FileFormat = String
+
+    alias Filter = NamedTuple(
+      "name" : (FilterName)?,
+      "values" : (FilterValues)?
+    )
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias Filters = Array(Filter)
+
+    alias Finding = String
+
+    alias GetAutoScalingGroupRecommendationsRequest = NamedTuple(
+      "accountIds" : (AccountIds)?,
+      "autoScalingGroupArns" : (AutoScalingGroupArns)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "filters" : (Filters)?
+    )
+
+    alias GetAutoScalingGroupRecommendationsResponse = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "autoScalingGroupRecommendations" : (AutoScalingGroupRecommendations)?,
+      "errors" : (GetRecommendationErrors)?
+    )
+
+    alias GetEBSVolumeRecommendationsRequest = NamedTuple(
+      "volumeArns" : (VolumeArns)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "filters" : (EBSFilters)?,
+      "accountIds" : (AccountIds)?
+    )
+
+    alias GetEBSVolumeRecommendationsResponse = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "volumeRecommendations" : (VolumeRecommendations)?,
+      "errors" : (GetRecommendationErrors)?
+    )
+
+    alias GetEC2InstanceRecommendationsRequest = NamedTuple(
+      "instanceArns" : (InstanceArns)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "filters" : (Filters)?,
+      "accountIds" : (AccountIds)?
+    )
+
+    alias GetEC2InstanceRecommendationsResponse = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "instanceRecommendations" : (InstanceRecommendations)?,
+      "errors" : (GetRecommendationErrors)?
+    )
+
+    alias GetEC2RecommendationProjectedMetricsRequest = NamedTuple(
+      "instanceArn" : InstanceArn,
+      "stat" : MetricStatistic,
+      "period" : Period,
+      "startTime" : Timestamp,
+      "endTime" : Timestamp
+    )
+
+    alias GetEC2RecommendationProjectedMetricsResponse = NamedTuple(
+      "recommendedOptionProjectedMetrics" : (RecommendedOptionProjectedMetrics)?
+    )
+
+    alias GetEnrollmentStatusRequest = NamedTuple(
+      
+    )
+
+    alias GetEnrollmentStatusResponse = NamedTuple(
+      "status" : (Status)?,
+      "statusReason" : (StatusReason)?,
+      "memberAccountsEnrolled" : (MemberAccountsEnrolled)?
+    )
+
+    alias GetRecommendationError = NamedTuple(
+      "identifier" : (Identifier)?,
+      "code" : (Code)?,
+      "message" : (Message)?
+    )
+
+    alias GetRecommendationErrors = Array(GetRecommendationError)
+
+    alias GetRecommendationSummariesRequest = NamedTuple(
+      "accountIds" : (AccountIds)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias GetRecommendationSummariesResponse = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "recommendationSummaries" : (RecommendationSummaries)?
+    )
+
+    alias Identifier = String
+
+    alias IncludeMemberAccounts = Bool
+
+    alias InstanceArn = String
+
+    alias InstanceArns = Array(InstanceArn)
+
+    alias InstanceName = String
+
+    alias InstanceRecommendation = NamedTuple(
+      "instanceArn" : (InstanceArn)?,
+      "accountId" : (AccountId)?,
+      "instanceName" : (InstanceName)?,
+      "currentInstanceType" : (CurrentInstanceType)?,
+      "finding" : (Finding)?,
+      "utilizationMetrics" : (UtilizationMetrics)?,
+      "lookBackPeriodInDays" : (LookBackPeriodInDays)?,
+      "recommendationOptions" : (RecommendationOptions)?,
+      "recommendationSources" : (RecommendationSources)?,
+      "lastRefreshTimestamp" : (LastRefreshTimestamp)?
+    )
+
+    alias InstanceRecommendationOption = NamedTuple(
+      "instanceType" : (InstanceType)?,
+      "projectedUtilizationMetrics" : (ProjectedUtilizationMetrics)?,
+      "performanceRisk" : (PerformanceRisk)?,
+      "rank" : (Rank)?
+    )
+
+    alias InstanceRecommendations = Array(InstanceRecommendation)
+
+    alias InstanceType = String
+
+    alias InternalServerException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias JobFilter = NamedTuple(
+      "name" : (JobFilterName)?,
+      "values" : (FilterValues)?
+    )
+
+    alias JobFilterName = String
+
+    alias JobFilters = Array(JobFilter)
+
+    alias JobId = String
+
+    alias JobIds = Array(JobId)
+
+    alias JobStatus = String
+
+    alias LastRefreshTimestamp = String | UInt64 | Time
+
+    alias LastUpdatedTimestamp = String | UInt64 | Time
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LookBackPeriodInDays = Float64
+
+    alias MaxResults = Int32
+
+    alias MaxSize = Int32
+
+    alias MemberAccountsEnrolled = Bool
+
+    alias Message = String
+
+    alias MetadataKey = String
+
+    alias MetricName = String
+
+    alias MetricStatistic = String
+
+    alias MetricValue = Float64
+
+    alias MetricValues = Array(MetricValue)
+
+    alias MinSize = Int32
+
+    alias MissingAuthenticationToken = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NextToken = String
+
+    alias OptInRequiredException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias PerformanceRisk = Float64
+
+    alias Period = Int32
+
+    alias ProjectedMetric = NamedTuple(
+      "name" : (MetricName)?,
+      "timestamps" : (Timestamps)?,
+      "values" : (MetricValues)?
+    )
+
+    alias ProjectedMetrics = Array(ProjectedMetric)
+
+    alias ProjectedUtilizationMetrics = Array(UtilizationMetric)
+
+    alias Rank = Int32
+
+    alias RecommendationExportJob = NamedTuple(
+      "jobId" : (JobId)?,
+      "destination" : (ExportDestination)?,
+      "resourceType" : (ResourceType)?,
+      "status" : (JobStatus)?,
+      "creationTimestamp" : (CreationTimestamp)?,
+      "lastUpdatedTimestamp" : (LastUpdatedTimestamp)?,
+      "failureReason" : (FailureReason)?
+    )
+
+    alias RecommendationExportJobs = Array(RecommendationExportJob)
+
+    alias RecommendationOptions = Array(InstanceRecommendationOption)
+
+    alias RecommendationSource = NamedTuple(
+      "recommendationSourceArn" : (RecommendationSourceArn)?,
+      "recommendationSourceType" : (RecommendationSourceType)?
+    )
+
+    alias RecommendationSourceArn = String
+
+    alias RecommendationSourceType = String
+
+    alias RecommendationSources = Array(RecommendationSource)
+
+    alias RecommendationSummaries = Array(RecommendationSummary)
+
+    alias RecommendationSummary = NamedTuple(
+      "summaries" : (Summaries)?,
+      "recommendationResourceType" : (RecommendationSourceType)?,
+      "accountId" : (AccountId)?
+    )
+
+    alias RecommendedInstanceType = String
+
+    alias RecommendedOptionProjectedMetric = NamedTuple(
+      "recommendedInstanceType" : (RecommendedInstanceType)?,
+      "rank" : (Rank)?,
+      "projectedMetrics" : (ProjectedMetrics)?
+    )
+
+    alias RecommendedOptionProjectedMetrics = Array(RecommendedOptionProjectedMetric)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ResourceType = String
+
+    alias S3Destination = NamedTuple(
+      "bucket" : (DestinationBucket)?,
+      "key" : (DestinationKey)?,
+      "metadataKey" : (MetadataKey)?
+    )
+
+    alias S3DestinationConfig = NamedTuple(
+      "bucket" : (DestinationBucket)?,
+      "keyPrefix" : (DestinationKeyPrefix)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Status = String
+
+    alias StatusReason = String
+
+    alias Summaries = Array(Summary)
+
+    alias Summary = NamedTuple(
+      "name" : (Finding)?,
+      "value" : (SummaryValue)?
+    )
+
+    alias SummaryValue = Float64
+
+    alias ThrottlingException = NamedTuple(
+      "message" : ErrorMessage
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Timestamps = Array(Timestamp)
+
+    alias UpdateEnrollmentStatusRequest = NamedTuple(
+      "status" : Status,
+      "includeMemberAccounts" : (IncludeMemberAccounts)?
+    )
+
+    alias UpdateEnrollmentStatusResponse = NamedTuple(
+      "status" : (Status)?,
+      "statusReason" : (StatusReason)?
+    )
+
+    alias UtilizationMetric = NamedTuple(
+      "name" : (MetricName)?,
+      "statistic" : (MetricStatistic)?,
+      "value" : (MetricValue)?
+    )
+
+    alias UtilizationMetrics = Array(UtilizationMetric)
+
+    alias VolumeArn = String
+
+    alias VolumeArns = Array(VolumeArn)
+
+    alias VolumeBaselineIOPS = Int32
+
+    alias VolumeBaselineThroughput = Int32
+
+    alias VolumeBurstIOPS = Int32
+
+    alias VolumeBurstThroughput = Int32
+
+    alias VolumeConfiguration = NamedTuple(
+      "volumeType" : (VolumeType)?,
+      "volumeSize" : (VolumeSize)?,
+      "volumeBaselineIOPS" : (VolumeBaselineIOPS)?,
+      "volumeBurstIOPS" : (VolumeBurstIOPS)?,
+      "volumeBaselineThroughput" : (VolumeBaselineThroughput)?,
+      "volumeBurstThroughput" : (VolumeBurstThroughput)?
+    )
+
+    alias VolumeRecommendation = NamedTuple(
+      "volumeArn" : (VolumeArn)?,
+      "accountId" : (AccountId)?,
+      "currentConfiguration" : (VolumeConfiguration)?,
+      "finding" : (EBSFinding)?,
+      "utilizationMetrics" : (EBSUtilizationMetrics)?,
+      "lookBackPeriodInDays" : (LookBackPeriodInDays)?,
+      "volumeRecommendationOptions" : (VolumeRecommendationOptions)?,
+      "lastRefreshTimestamp" : (LastRefreshTimestamp)?
+    )
+
+    alias VolumeRecommendationOption = NamedTuple(
+      "configuration" : (VolumeConfiguration)?,
+      "performanceRisk" : (PerformanceRisk)?,
+      "rank" : (Rank)?
+    )
+
+    alias VolumeRecommendationOptions = Array(VolumeRecommendationOption)
+
+    alias VolumeRecommendations = Array(VolumeRecommendation)
+
+    alias VolumeSize = Int32
+
+    alias VolumeType = String
   end
 end

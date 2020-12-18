@@ -517,8 +517,8 @@ module Aws::Appflow
     #
     # @overload create_connector_profile(**params)
     # @param [Hash] params ({})
-    def create_connector_profile(params = {}, **options)
-      req = build_request(:create_connector_profile, params)
+    def create_connector_profile(, **options)
+      req = build_request(:create_connector_profile, )
       req.send_request(options)
     end
 
@@ -751,8 +751,8 @@ module Aws::Appflow
     #
     # @overload create_flow(**params)
     # @param [Hash] params ({})
-    def create_flow(params = {}, **options)
-      req = build_request(:create_flow, params)
+    def create_flow(, **options)
+      req = build_request(:create_flow, )
       req.send_request(options)
     end
 
@@ -779,8 +779,8 @@ module Aws::Appflow
     #
     # @overload delete_connector_profile(**params)
     # @param [Hash] params ({})
-    def delete_connector_profile(params = {}, **options)
-      req = build_request(:delete_connector_profile, params)
+    def delete_connector_profile(, **options)
+      req = build_request(:delete_connector_profile, )
       req.send_request(options)
     end
 
@@ -809,8 +809,8 @@ module Aws::Appflow
     #
     # @overload delete_flow(**params)
     # @param [Hash] params ({})
-    def delete_flow(params = {}, **options)
-      req = build_request(:delete_flow, params)
+    def delete_flow(, **options)
+      req = build_request(:delete_flow, )
       req.send_request(options)
     end
 
@@ -864,8 +864,8 @@ module Aws::Appflow
     #
     # @overload describe_connector_entity(**params)
     # @param [Hash] params ({})
-    def describe_connector_entity(params = {}, **options)
-      req = build_request(:describe_connector_entity, params)
+    def describe_connector_entity(, **options)
+      req = build_request(:describe_connector_entity, )
       req.send_request(options)
     end
 
@@ -945,8 +945,8 @@ module Aws::Appflow
     #
     # @overload describe_connector_profiles(**params)
     # @param [Hash] params ({})
-    def describe_connector_profiles(params = {}, **options)
-      req = build_request(:describe_connector_profiles, params)
+    def describe_connector_profiles(, **options)
+      req = build_request(:describe_connector_profiles, )
       req.send_request(options)
     end
 
@@ -1007,8 +1007,8 @@ module Aws::Appflow
     #
     # @overload describe_connectors(**params)
     # @param [Hash] params ({})
-    def describe_connectors(params = {}, **options)
-      req = build_request(:describe_connectors, params)
+    def describe_connectors(, **options)
+      req = build_request(:describe_connectors, )
       req.send_request(options)
     end
 
@@ -1150,8 +1150,8 @@ module Aws::Appflow
     #
     # @overload describe_flow(**params)
     # @param [Hash] params ({})
-    def describe_flow(params = {}, **options)
-      req = build_request(:describe_flow, params)
+    def describe_flow(, **options)
+      req = build_request(:describe_flow, )
       req.send_request(options)
     end
 
@@ -1202,8 +1202,8 @@ module Aws::Appflow
     #
     # @overload describe_flow_execution_records(**params)
     # @param [Hash] params ({})
-    def describe_flow_execution_records(params = {}, **options)
-      req = build_request(:describe_flow_execution_records, params)
+    def describe_flow_execution_records(, **options)
+      req = build_request(:describe_flow_execution_records, )
       req.send_request(options)
     end
 
@@ -1252,8 +1252,8 @@ module Aws::Appflow
     #
     # @overload list_connector_entities(**params)
     # @param [Hash] params ({})
-    def list_connector_entities(params = {}, **options)
-      req = build_request(:list_connector_entities, params)
+    def list_connector_entities(, **options)
+      req = build_request(:list_connector_entities, )
       req.send_request(options)
     end
 
@@ -1305,8 +1305,8 @@ module Aws::Appflow
     #
     # @overload list_flows(**params)
     # @param [Hash] params ({})
-    def list_flows(params = {}, **options)
-      req = build_request(:list_flows, params)
+    def list_flows(, **options)
+      req = build_request(:list_flows, )
       req.send_request(options)
     end
 
@@ -1334,8 +1334,8 @@ module Aws::Appflow
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1369,8 +1369,8 @@ module Aws::Appflow
     #
     # @overload start_flow(**params)
     # @param [Hash] params ({})
-    def start_flow(params = {}, **options)
-      req = build_request(:start_flow, params)
+    def start_flow(, **options)
+      req = build_request(:start_flow, )
       req.send_request(options)
     end
 
@@ -1402,8 +1402,8 @@ module Aws::Appflow
     #
     # @overload stop_flow(**params)
     # @param [Hash] params ({})
-    def stop_flow(params = {}, **options)
-      req = build_request(:stop_flow, params)
+    def stop_flow(, **options)
+      req = build_request(:stop_flow, )
       req.send_request(options)
     end
 
@@ -1430,8 +1430,8 @@ module Aws::Appflow
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1457,8 +1457,8 @@ module Aws::Appflow
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1635,8 +1635,8 @@ module Aws::Appflow
     #
     # @overload update_connector_profile(**params)
     # @param [Hash] params ({})
-    def update_connector_profile(params = {}, **options)
-      req = build_request(:update_connector_profile, params)
+    def update_connector_profile(, **options)
+      req = build_request(:update_connector_profile, )
       req.send_request(options)
     end
 
@@ -1849,8 +1849,8 @@ module Aws::Appflow
     #
     # @overload update_flow(**params)
     # @param [Hash] params ({})
-    def update_flow(params = {}, **options)
-      req = build_request(:update_flow, params)
+    def update_flow(, **options)
+      req = build_request(:update_flow, )
       req.send_request(options)
     end
 

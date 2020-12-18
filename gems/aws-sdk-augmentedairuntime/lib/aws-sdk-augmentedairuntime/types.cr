@@ -435,5 +435,132 @@ module Aws::AugmentedAIRuntime
       include Aws::Structure
     end
 
+    alias ConflictException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ContentClassifier = String
+
+    alias ContentClassifiers = Array(ContentClassifier)
+
+    alias DeleteHumanLoopRequest = NamedTuple(
+      "HumanLoopName" : HumanLoopName
+    )
+
+    alias DeleteHumanLoopResponse = NamedTuple(
+      
+    )
+
+    alias DescribeHumanLoopRequest = NamedTuple(
+      "HumanLoopName" : HumanLoopName
+    )
+
+    alias DescribeHumanLoopResponse = NamedTuple(
+      "CreationTime" : Timestamp,
+      "FailureReason" : (String)?,
+      "FailureCode" : (String)?,
+      "HumanLoopStatus" : HumanLoopStatus,
+      "HumanLoopName" : HumanLoopName,
+      "HumanLoopArn" : HumanLoopArn,
+      "FlowDefinitionArn" : FlowDefinitionArn,
+      "HumanLoopOutput" : (HumanLoopOutput)?
+    )
+
+    alias FailureReason = String
+
+    alias FlowDefinitionArn = String
+
+    alias HumanLoopArn = String
+
+    alias HumanLoopDataAttributes = NamedTuple(
+      "ContentClassifiers" : ContentClassifiers
+    )
+
+    alias HumanLoopInput = NamedTuple(
+      "InputContent" : InputContent
+    )
+
+    alias HumanLoopName = String
+
+    alias HumanLoopOutput = NamedTuple(
+      "OutputS3Uri" : String
+    )
+
+    alias HumanLoopStatus = String
+
+    alias HumanLoopSummaries = Array(HumanLoopSummary)
+
+    alias HumanLoopSummary = NamedTuple(
+      "HumanLoopName" : (HumanLoopName)?,
+      "HumanLoopStatus" : (HumanLoopStatus)?,
+      "CreationTime" : (Timestamp)?,
+      "FailureReason" : (FailureReason)?,
+      "FlowDefinitionArn" : (FlowDefinitionArn)?
+    )
+
+    alias InputContent = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ListHumanLoopsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "FlowDefinitionArn" : FlowDefinitionArn,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListHumanLoopsResponse = NamedTuple(
+      "HumanLoopSummaries" : HumanLoopSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias SortOrder = String
+
+    alias StartHumanLoopRequest = NamedTuple(
+      "HumanLoopName" : HumanLoopName,
+      "FlowDefinitionArn" : FlowDefinitionArn,
+      "HumanLoopInput" : HumanLoopInput,
+      "DataAttributes" : (HumanLoopDataAttributes)?
+    )
+
+    alias StartHumanLoopResponse = NamedTuple(
+      "HumanLoopArn" : (HumanLoopArn)?
+    )
+
+    alias StopHumanLoopRequest = NamedTuple(
+      "HumanLoopName" : HumanLoopName
+    )
+
+    alias StopHumanLoopResponse = NamedTuple(
+      
+    )
+
+    alias String = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias ValidationException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
   end
 end

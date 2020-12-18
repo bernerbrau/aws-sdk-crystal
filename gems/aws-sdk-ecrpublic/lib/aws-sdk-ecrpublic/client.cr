@@ -390,8 +390,8 @@ module Aws::ECRPublic
     #
     # @overload batch_check_layer_availability(**params)
     # @param [Hash] params ({})
-    def batch_check_layer_availability(params = {}, **options)
-      req = build_request(:batch_check_layer_availability, params)
+    def batch_check_layer_availability(, **options)
+      req = build_request(:batch_check_layer_availability, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::ECRPublic
     #
     # @overload batch_delete_image(**params)
     # @param [Hash] params ({})
-    def batch_delete_image(params = {}, **options)
-      req = build_request(:batch_delete_image, params)
+    def batch_delete_image(, **options)
+      req = build_request(:batch_delete_image, )
       req.send_request(options)
     end
 
@@ -514,8 +514,8 @@ module Aws::ECRPublic
     #
     # @overload complete_layer_upload(**params)
     # @param [Hash] params ({})
-    def complete_layer_upload(params = {}, **options)
-      req = build_request(:complete_layer_upload, params)
+    def complete_layer_upload(, **options)
+      req = build_request(:complete_layer_upload, )
       req.send_request(options)
     end
 
@@ -578,8 +578,8 @@ module Aws::ECRPublic
     #
     # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, **options)
-      req = build_request(:create_repository, params)
+    def create_repository(, **options)
+      req = build_request(:create_repository, )
       req.send_request(options)
     end
 
@@ -623,8 +623,8 @@ module Aws::ECRPublic
     #
     # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, **options)
-      req = build_request(:delete_repository, params)
+    def delete_repository(, **options)
+      req = build_request(:delete_repository, )
       req.send_request(options)
     end
 
@@ -663,8 +663,8 @@ module Aws::ECRPublic
     #
     # @overload delete_repository_policy(**params)
     # @param [Hash] params ({})
-    def delete_repository_policy(params = {}, **options)
-      req = build_request(:delete_repository_policy, params)
+    def delete_repository_policy(, **options)
+      req = build_request(:delete_repository_policy, )
       req.send_request(options)
     end
 
@@ -730,8 +730,8 @@ module Aws::ECRPublic
     #
     # @overload describe_image_tags(**params)
     # @param [Hash] params ({})
-    def describe_image_tags(params = {}, **options)
-      req = build_request(:describe_image_tags, params)
+    def describe_image_tags(, **options)
+      req = build_request(:describe_image_tags, )
       req.send_request(options)
     end
 
@@ -816,8 +816,8 @@ module Aws::ECRPublic
     #
     # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, **options)
-      req = build_request(:describe_images, params)
+    def describe_images(, **options)
+      req = build_request(:describe_images, )
       req.send_request(options)
     end
 
@@ -879,8 +879,8 @@ module Aws::ECRPublic
     #
     # @overload describe_registries(**params)
     # @param [Hash] params ({})
-    def describe_registries(params = {}, **options)
-      req = build_request(:describe_registries, params)
+    def describe_registries(, **options)
+      req = build_request(:describe_registries, )
       req.send_request(options)
     end
 
@@ -952,8 +952,8 @@ module Aws::ECRPublic
     #
     # @overload describe_repositories(**params)
     # @param [Hash] params ({})
-    def describe_repositories(params = {}, **options)
-      req = build_request(:describe_repositories, params)
+    def describe_repositories(, **options)
+      req = build_request(:describe_repositories, )
       req.send_request(options)
     end
 
@@ -977,8 +977,8 @@ module Aws::ECRPublic
     #
     # @overload get_authorization_token(**params)
     # @param [Hash] params ({})
-    def get_authorization_token(params = {}, **options)
-      req = build_request(:get_authorization_token, params)
+    def get_authorization_token(, **options)
+      req = build_request(:get_authorization_token, )
       req.send_request(options)
     end
 
@@ -996,8 +996,8 @@ module Aws::ECRPublic
     #
     # @overload get_registry_catalog_data(**params)
     # @param [Hash] params ({})
-    def get_registry_catalog_data(params = {}, **options)
-      req = build_request(:get_registry_catalog_data, params)
+    def get_registry_catalog_data(, **options)
+      req = build_request(:get_registry_catalog_data, )
       req.send_request(options)
     end
 
@@ -1039,8 +1039,8 @@ module Aws::ECRPublic
     #
     # @overload get_repository_catalog_data(**params)
     # @param [Hash] params ({})
-    def get_repository_catalog_data(params = {}, **options)
-      req = build_request(:get_repository_catalog_data, params)
+    def get_repository_catalog_data(, **options)
+      req = build_request(:get_repository_catalog_data, )
       req.send_request(options)
     end
 
@@ -1077,8 +1077,8 @@ module Aws::ECRPublic
     #
     # @overload get_repository_policy(**params)
     # @param [Hash] params ({})
-    def get_repository_policy(params = {}, **options)
-      req = build_request(:get_repository_policy, params)
+    def get_repository_policy(, **options)
+      req = build_request(:get_repository_policy, )
       req.send_request(options)
     end
 
@@ -1124,8 +1124,8 @@ module Aws::ECRPublic
     #
     # @overload initiate_layer_upload(**params)
     # @param [Hash] params ({})
-    def initiate_layer_upload(params = {}, **options)
-      req = build_request(:initiate_layer_upload, params)
+    def initiate_layer_upload(, **options)
+      req = build_request(:initiate_layer_upload, )
       req.send_request(options)
     end
 
@@ -1194,8 +1194,8 @@ module Aws::ECRPublic
     #
     # @overload put_image(**params)
     # @param [Hash] params ({})
-    def put_image(params = {}, **options)
-      req = build_request(:put_image, params)
+    def put_image(, **options)
+      req = build_request(:put_image, )
       req.send_request(options)
     end
 
@@ -1228,8 +1228,8 @@ module Aws::ECRPublic
     #
     # @overload put_registry_catalog_data(**params)
     # @param [Hash] params ({})
-    def put_registry_catalog_data(params = {}, **options)
-      req = build_request(:put_registry_catalog_data, params)
+    def put_registry_catalog_data(, **options)
+      req = build_request(:put_registry_catalog_data, )
       req.send_request(options)
     end
 
@@ -1283,8 +1283,8 @@ module Aws::ECRPublic
     #
     # @overload put_repository_catalog_data(**params)
     # @param [Hash] params ({})
-    def put_repository_catalog_data(params = {}, **options)
-      req = build_request(:put_repository_catalog_data, params)
+    def put_repository_catalog_data(, **options)
+      req = build_request(:put_repository_catalog_data, )
       req.send_request(options)
     end
 
@@ -1345,8 +1345,8 @@ module Aws::ECRPublic
     #
     # @overload set_repository_policy(**params)
     # @param [Hash] params ({})
-    def set_repository_policy(params = {}, **options)
-      req = build_request(:set_repository_policy, params)
+    def set_repository_policy(, **options)
+      req = build_request(:set_repository_policy, )
       req.send_request(options)
     end
 
@@ -1415,8 +1415,8 @@ module Aws::ECRPublic
     #
     # @overload upload_layer_part(**params)
     # @param [Hash] params ({})
-    def upload_layer_part(params = {}, **options)
-      req = build_request(:upload_layer_part, params)
+    def upload_layer_part(, **options)
+      req = build_request(:upload_layer_part, )
       req.send_request(options)
     end
 

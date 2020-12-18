@@ -847,8 +847,8 @@ module Aws::IoTEvents
     #
     # @overload create_detector_model(**params)
     # @param [Hash] params ({})
-    def create_detector_model(params = {}, **options)
-      req = build_request(:create_detector_model, params)
+    def create_detector_model(, **options)
+      req = build_request(:create_detector_model, )
       req.send_request(options)
     end
 
@@ -901,8 +901,8 @@ module Aws::IoTEvents
     #
     # @overload create_input(**params)
     # @param [Hash] params ({})
-    def create_input(params = {}, **options)
-      req = build_request(:create_input, params)
+    def create_input(, **options)
+      req = build_request(:create_input, )
       req.send_request(options)
     end
 
@@ -922,8 +922,8 @@ module Aws::IoTEvents
     #
     # @overload delete_detector_model(**params)
     # @param [Hash] params ({})
-    def delete_detector_model(params = {}, **options)
-      req = build_request(:delete_detector_model, params)
+    def delete_detector_model(, **options)
+      req = build_request(:delete_detector_model, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::IoTEvents
     #
     # @overload delete_input(**params)
     # @param [Hash] params ({})
-    def delete_input(params = {}, **options)
-      req = build_request(:delete_input, params)
+    def delete_input(, **options)
+      req = build_request(:delete_input, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::IoTEvents
     #
     # @overload describe_detector_model(**params)
     # @param [Hash] params ({})
-    def describe_detector_model(params = {}, **options)
-      req = build_request(:describe_detector_model, params)
+    def describe_detector_model(, **options)
+      req = build_request(:describe_detector_model, )
       req.send_request(options)
     end
 
@@ -1243,8 +1243,8 @@ module Aws::IoTEvents
     #
     # @overload describe_input(**params)
     # @param [Hash] params ({})
-    def describe_input(params = {}, **options)
-      req = build_request(:describe_input, params)
+    def describe_input(, **options)
+      req = build_request(:describe_input, )
       req.send_request(options)
     end
 
@@ -1265,8 +1265,8 @@ module Aws::IoTEvents
     #
     # @overload describe_logging_options(**params)
     # @param [Hash] params ({})
-    def describe_logging_options(params = {}, **options)
-      req = build_request(:describe_logging_options, params)
+    def describe_logging_options(, **options)
+      req = build_request(:describe_logging_options, )
       req.send_request(options)
     end
 
@@ -1310,8 +1310,8 @@ module Aws::IoTEvents
     #
     # @overload list_detector_model_versions(**params)
     # @param [Hash] params ({})
-    def list_detector_model_versions(params = {}, **options)
-      req = build_request(:list_detector_model_versions, params)
+    def list_detector_model_versions(, **options)
+      req = build_request(:list_detector_model_versions, )
       req.send_request(options)
     end
 
@@ -1346,8 +1346,8 @@ module Aws::IoTEvents
     #
     # @overload list_detector_models(**params)
     # @param [Hash] params ({})
-    def list_detector_models(params = {}, **options)
-      req = build_request(:list_detector_models, params)
+    def list_detector_models(, **options)
+      req = build_request(:list_detector_models, )
       req.send_request(options)
     end
 
@@ -1384,8 +1384,8 @@ module Aws::IoTEvents
     #
     # @overload list_inputs(**params)
     # @param [Hash] params ({})
-    def list_inputs(params = {}, **options)
-      req = build_request(:list_inputs, params)
+    def list_inputs(, **options)
+      req = build_request(:list_inputs, )
       req.send_request(options)
     end
 
@@ -1412,8 +1412,8 @@ module Aws::IoTEvents
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1448,8 +1448,8 @@ module Aws::IoTEvents
     #
     # @overload put_logging_options(**params)
     # @param [Hash] params ({})
-    def put_logging_options(params = {}, **options)
-      req = build_request(:put_logging_options, params)
+    def put_logging_options(, **options)
+      req = build_request(:put_logging_options, )
       req.send_request(options)
     end
 
@@ -1478,8 +1478,8 @@ module Aws::IoTEvents
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1502,8 +1502,8 @@ module Aws::IoTEvents
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2010,8 +2010,8 @@ module Aws::IoTEvents
     #
     # @overload update_detector_model(**params)
     # @param [Hash] params ({})
-    def update_detector_model(params = {}, **options)
-      req = build_request(:update_detector_model, params)
+    def update_detector_model(, **options)
+      req = build_request(:update_detector_model, )
       req.send_request(options)
     end
 
@@ -2055,8 +2055,8 @@ module Aws::IoTEvents
     #
     # @overload update_input(**params)
     # @param [Hash] params ({})
-    def update_input(params = {}, **options)
-      req = build_request(:update_input, params)
+    def update_input(, **options)
+      req = build_request(:update_input, )
       req.send_request(options)
     end
 

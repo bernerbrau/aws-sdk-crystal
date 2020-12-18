@@ -364,8 +364,8 @@ module Aws::IoTEventsData
     #
     # @overload batch_put_message(**params)
     # @param [Hash] params ({})
-    def batch_put_message(params = {}, **options)
-      req = build_request(:batch_put_message, params)
+    def batch_put_message(, **options)
+      req = build_request(:batch_put_message, )
       req.send_request(options)
     end
 
@@ -416,8 +416,8 @@ module Aws::IoTEventsData
     #
     # @overload batch_update_detector(**params)
     # @param [Hash] params ({})
-    def batch_update_detector(params = {}, **options)
-      req = build_request(:batch_update_detector, params)
+    def batch_update_detector(, **options)
+      req = build_request(:batch_update_detector, )
       req.send_request(options)
     end
 
@@ -459,8 +459,8 @@ module Aws::IoTEventsData
     #
     # @overload describe_detector(**params)
     # @param [Hash] params ({})
-    def describe_detector(params = {}, **options)
-      req = build_request(:describe_detector, params)
+    def describe_detector(, **options)
+      req = build_request(:describe_detector, )
       req.send_request(options)
     end
 
@@ -506,8 +506,8 @@ module Aws::IoTEventsData
     #
     # @overload list_detectors(**params)
     # @param [Hash] params ({})
-    def list_detectors(params = {}, **options)
-      req = build_request(:list_detectors, params)
+    def list_detectors(, **options)
+      req = build_request(:list_detectors, )
       req.send_request(options)
     end
 

@@ -25,6 +25,68 @@ module AwsSdkCodeGenerator
         @service.module_name
       end
 
+      def describe_shape(shapes, name) 
+        @shape_stack ||= []
+        if @shape_stack.include?(name)
+          return name
+        end
+        @shape_stack << name
+        begin
+          shape = shapes.fetch(name)
+          case shape.fetch("type")
+          when "structure" 
+            begin
+              type = shape.fetch("members").entries.map { |k, v|
+                desc = v["shape"]
+                if !(shape.fetch("required", []).include? k)
+                  while m = desc.match(/^\((.*)\)$/) do
+                    desc = m[1]
+                  end
+                  desc = "(#{desc})?"
+                end
+                "\"#{k}\" : #{desc}"
+              }
+              "NamedTuple(\n      " + type.join(",\n      ") + "\n    )"
+            end
+          when "list"
+            "Array(#{shape.fetch("member").fetch("shape")})"
+          when "string"
+            "String"
+          when "blob"
+            "String | Array(UInt8) | IO"
+          when "integer"
+            "Int32"
+          when "long"
+            "Int64"
+          when "boolean"
+            "Bool"
+          when "float"
+            "Float32"
+          when "double"
+            "Float64"
+          when "timestamp"
+            "String | UInt64 | Time"
+          when "map"
+            "Hash(#{shape.fetch("key").fetch("shape")},#{shape.fetch("value").fetch("shape")})"
+          else
+            raise "Unknown shape type #{shape.fetch("type")}"
+          end
+        ensure
+          @shape_stack.pop
+        end
+      end
+
+      # @return [Array<ShapeAlias>]
+      def aliases
+        p @api.fetch("shapes").keys
+        @api.fetch("shapes").keys.map{|name| 
+          ShapeAlias.new(
+            shape_alias: name,
+            shape_type: describe_shape(@api.fetch("shapes"), name)
+          )
+        }
+      end
+
       # @return [Array<StructClass>]
       def structures
         unless @service.protocol_settings.empty?
@@ -235,6 +297,21 @@ module AwsSdkCodeGenerator
         def empty?
           @empty
         end
+
+      end
+
+      class ShapeAlias
+
+        def initialize(options)
+          @shape_alias = options.fetch(:shape_alias)
+          @shape_type = options.fetch(:shape_type)
+        end
+
+        # @return [String]
+        attr_accessor :shape_alias
+
+        # @return [String]
+        attr_accessor :shape_type
 
       end
 

@@ -427,8 +427,8 @@ module Aws::LambdaPreview
     #
     # @overload add_event_source(**params)
     # @param [Hash] params ({})
-    def add_event_source(params = {}, **options)
-      req = build_request(:add_event_source, params)
+    def add_event_source(, **options)
+      req = build_request(:add_event_source, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::LambdaPreview
     #
     # @overload delete_function(**params)
     # @param [Hash] params ({})
-    def delete_function(params = {}, **options)
-      req = build_request(:delete_function, params)
+    def delete_function(, **options)
+      req = build_request(:delete_function, )
       req.send_request(options)
     end
 
@@ -501,8 +501,8 @@ module Aws::LambdaPreview
     #
     # @overload get_event_source(**params)
     # @param [Hash] params ({})
-    def get_event_source(params = {}, **options)
-      req = build_request(:get_event_source, params)
+    def get_event_source(, **options)
+      req = build_request(:get_event_source, )
       req.send_request(options)
     end
 
@@ -550,8 +550,8 @@ module Aws::LambdaPreview
     #
     # @overload get_function(**params)
     # @param [Hash] params ({})
-    def get_function(params = {}, **options)
-      req = build_request(:get_function, params)
+    def get_function(, **options)
+      req = build_request(:get_function, )
       req.send_request(options)
     end
 
@@ -606,8 +606,8 @@ module Aws::LambdaPreview
     #
     # @overload get_function_configuration(**params)
     # @param [Hash] params ({})
-    def get_function_configuration(params = {}, **options)
-      req = build_request(:get_function_configuration, params)
+    def get_function_configuration(, **options)
+      req = build_request(:get_function_configuration, )
       req.send_request(options)
     end
 
@@ -644,8 +644,8 @@ module Aws::LambdaPreview
     #
     # @overload invoke_async(**params)
     # @param [Hash] params ({})
-    def invoke_async(params = {}, **options)
-      req = build_request(:invoke_async, params)
+    def invoke_async(, **options)
+      req = build_request(:invoke_async, )
       req.send_request(options)
     end
 
@@ -709,8 +709,8 @@ module Aws::LambdaPreview
     #
     # @overload list_event_sources(**params)
     # @param [Hash] params ({})
-    def list_event_sources(params = {}, **options)
-      req = build_request(:list_event_sources, params)
+    def list_event_sources(, **options)
+      req = build_request(:list_event_sources, )
       req.send_request(options)
     end
 
@@ -765,8 +765,8 @@ module Aws::LambdaPreview
     #
     # @overload list_functions(**params)
     # @param [Hash] params ({})
-    def list_functions(params = {}, **options)
-      req = build_request(:list_functions, params)
+    def list_functions(, **options)
+      req = build_request(:list_functions, )
       req.send_request(options)
     end
 
@@ -791,8 +791,8 @@ module Aws::LambdaPreview
     #
     # @overload remove_event_source(**params)
     # @param [Hash] params ({})
-    def remove_event_source(params = {}, **options)
-      req = build_request(:remove_event_source, params)
+    def remove_event_source(, **options)
+      req = build_request(:remove_event_source, )
       req.send_request(options)
     end
 
@@ -879,8 +879,8 @@ module Aws::LambdaPreview
     #
     # @overload update_function_configuration(**params)
     # @param [Hash] params ({})
-    def update_function_configuration(params = {}, **options)
-      req = build_request(:update_function_configuration, params)
+    def update_function_configuration(, **options)
+      req = build_request(:update_function_configuration, )
       req.send_request(options)
     end
 
@@ -991,8 +991,8 @@ module Aws::LambdaPreview
     #
     # @overload upload_function(**params)
     # @param [Hash] params ({})
-    def upload_function(params = {}, **options)
-      req = build_request(:upload_function, params)
+    def upload_function(, **options)
+      req = build_request(:upload_function, )
       req.send_request(options)
     end
 

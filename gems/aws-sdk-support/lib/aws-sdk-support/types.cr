@@ -1556,5 +1556,392 @@ module Aws::Support
       include Aws::Structure
     end
 
+    alias AddAttachmentsToSetRequest = NamedTuple(
+      "attachmentSetId" : (AttachmentSetId)?,
+      "attachments" : Attachments
+    )
+
+    alias AddAttachmentsToSetResponse = NamedTuple(
+      "attachmentSetId" : (AttachmentSetId)?,
+      "expiryTime" : (ExpiryTime)?
+    )
+
+    alias AddCommunicationToCaseRequest = NamedTuple(
+      "caseId" : (CaseId)?,
+      "communicationBody" : CommunicationBody,
+      "ccEmailAddresses" : (CcEmailAddressList)?,
+      "attachmentSetId" : (AttachmentSetId)?
+    )
+
+    alias AddCommunicationToCaseResponse = NamedTuple(
+      "result" : (Result)?
+    )
+
+    alias AfterTime = String
+
+    alias Attachment = NamedTuple(
+      "fileName" : (FileName)?,
+      "data" : (Data)?
+    )
+
+    alias AttachmentDetails = NamedTuple(
+      "attachmentId" : (AttachmentId)?,
+      "fileName" : (FileName)?
+    )
+
+    alias AttachmentId = String
+
+    alias AttachmentIdNotFound = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AttachmentLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AttachmentSet = Array(AttachmentDetails)
+
+    alias AttachmentSetExpired = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AttachmentSetId = String
+
+    alias AttachmentSetIdNotFound = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias AttachmentSetSizeLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Attachments = Array(Attachment)
+
+    alias BeforeTime = String
+
+    alias Boolean = Bool
+
+    alias CaseCreationLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias CaseDetails = NamedTuple(
+      "caseId" : (CaseId)?,
+      "displayId" : (DisplayId)?,
+      "subject" : (Subject)?,
+      "status" : (Status)?,
+      "serviceCode" : (ServiceCode)?,
+      "categoryCode" : (CategoryCode)?,
+      "severityCode" : (SeverityCode)?,
+      "submittedBy" : (SubmittedBy)?,
+      "timeCreated" : (TimeCreated)?,
+      "recentCommunications" : (RecentCaseCommunications)?,
+      "ccEmailAddresses" : (CcEmailAddressList)?,
+      "language" : (Language)?
+    )
+
+    alias CaseId = String
+
+    alias CaseIdList = Array(CaseId)
+
+    alias CaseIdNotFound = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias CaseList = Array(CaseDetails)
+
+    alias CaseStatus = String
+
+    alias Category = NamedTuple(
+      "code" : (CategoryCode)?,
+      "name" : (CategoryName)?
+    )
+
+    alias CategoryCode = String
+
+    alias CategoryList = Array(Category)
+
+    alias CategoryName = String
+
+    alias CcEmailAddress = String
+
+    alias CcEmailAddressList = Array(CcEmailAddress)
+
+    alias Communication = NamedTuple(
+      "caseId" : (CaseId)?,
+      "body" : (CommunicationBody)?,
+      "submittedBy" : (SubmittedBy)?,
+      "timeCreated" : (TimeCreated)?,
+      "attachmentSet" : (AttachmentSet)?
+    )
+
+    alias CommunicationBody = String
+
+    alias CommunicationList = Array(Communication)
+
+    alias CreateCaseRequest = NamedTuple(
+      "subject" : Subject,
+      "serviceCode" : (ServiceCode)?,
+      "severityCode" : (SeverityCode)?,
+      "categoryCode" : (CategoryCode)?,
+      "communicationBody" : CommunicationBody,
+      "ccEmailAddresses" : (CcEmailAddressList)?,
+      "language" : (Language)?,
+      "issueType" : (IssueType)?,
+      "attachmentSetId" : (AttachmentSetId)?
+    )
+
+    alias CreateCaseResponse = NamedTuple(
+      "caseId" : (CaseId)?
+    )
+
+    alias Data = String | Array(UInt8) | IO
+
+    alias DescribeAttachmentLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DescribeAttachmentRequest = NamedTuple(
+      "attachmentId" : AttachmentId
+    )
+
+    alias DescribeAttachmentResponse = NamedTuple(
+      "attachment" : (Attachment)?
+    )
+
+    alias DescribeCasesRequest = NamedTuple(
+      "caseIdList" : (CaseIdList)?,
+      "displayId" : (DisplayId)?,
+      "afterTime" : (AfterTime)?,
+      "beforeTime" : (BeforeTime)?,
+      "includeResolvedCases" : (IncludeResolvedCases)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?,
+      "language" : (Language)?,
+      "includeCommunications" : (IncludeCommunications)?
+    )
+
+    alias DescribeCasesResponse = NamedTuple(
+      "cases" : (CaseList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeCommunicationsRequest = NamedTuple(
+      "caseId" : CaseId,
+      "beforeTime" : (BeforeTime)?,
+      "afterTime" : (AfterTime)?,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias DescribeCommunicationsResponse = NamedTuple(
+      "communications" : (CommunicationList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeServicesRequest = NamedTuple(
+      "serviceCodeList" : (ServiceCodeList)?,
+      "language" : (Language)?
+    )
+
+    alias DescribeServicesResponse = NamedTuple(
+      "services" : (ServiceList)?
+    )
+
+    alias DescribeSeverityLevelsRequest = NamedTuple(
+      "language" : (Language)?
+    )
+
+    alias DescribeSeverityLevelsResponse = NamedTuple(
+      "severityLevels" : (SeverityLevelsList)?
+    )
+
+    alias DescribeTrustedAdvisorCheckRefreshStatusesRequest = NamedTuple(
+      "checkIds" : StringList
+    )
+
+    alias DescribeTrustedAdvisorCheckRefreshStatusesResponse = NamedTuple(
+      "statuses" : TrustedAdvisorCheckRefreshStatusList
+    )
+
+    alias DescribeTrustedAdvisorCheckResultRequest = NamedTuple(
+      "checkId" : String,
+      "language" : (String)?
+    )
+
+    alias DescribeTrustedAdvisorCheckResultResponse = NamedTuple(
+      "result" : (TrustedAdvisorCheckResult)?
+    )
+
+    alias DescribeTrustedAdvisorCheckSummariesRequest = NamedTuple(
+      "checkIds" : StringList
+    )
+
+    alias DescribeTrustedAdvisorCheckSummariesResponse = NamedTuple(
+      "summaries" : TrustedAdvisorCheckSummaryList
+    )
+
+    alias DescribeTrustedAdvisorChecksRequest = NamedTuple(
+      "language" : String
+    )
+
+    alias DescribeTrustedAdvisorChecksResponse = NamedTuple(
+      "checks" : TrustedAdvisorCheckList
+    )
+
+    alias DisplayId = String
+
+    alias Double = Float64
+
+    alias ErrorMessage = String
+
+    alias ExpiryTime = String
+
+    alias FileName = String
+
+    alias IncludeCommunications = Bool
+
+    alias IncludeResolvedCases = Bool
+
+    alias InternalServerError = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias IssueType = String
+
+    alias Language = String
+
+    alias Long = Int64
+
+    alias MaxResults = Int32
+
+    alias NextToken = String
+
+    alias RecentCaseCommunications = NamedTuple(
+      "communications" : (CommunicationList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias RefreshTrustedAdvisorCheckRequest = NamedTuple(
+      "checkId" : String
+    )
+
+    alias RefreshTrustedAdvisorCheckResponse = NamedTuple(
+      "status" : TrustedAdvisorCheckRefreshStatus
+    )
+
+    alias ResolveCaseRequest = NamedTuple(
+      "caseId" : (CaseId)?
+    )
+
+    alias ResolveCaseResponse = NamedTuple(
+      "initialCaseStatus" : (CaseStatus)?,
+      "finalCaseStatus" : (CaseStatus)?
+    )
+
+    alias Result = Bool
+
+    alias Service = NamedTuple(
+      "code" : (ServiceCode)?,
+      "name" : (ServiceName)?,
+      "categories" : (CategoryList)?
+    )
+
+    alias ServiceCode = String
+
+    alias ServiceCodeList = Array(ServiceCode)
+
+    alias ServiceList = Array(Service)
+
+    alias ServiceName = String
+
+    alias SeverityCode = String
+
+    alias SeverityLevel = NamedTuple(
+      "code" : (SeverityLevelCode)?,
+      "name" : (SeverityLevelName)?
+    )
+
+    alias SeverityLevelCode = String
+
+    alias SeverityLevelName = String
+
+    alias SeverityLevelsList = Array(SeverityLevel)
+
+    alias Status = String
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias Subject = String
+
+    alias SubmittedBy = String
+
+    alias TimeCreated = String
+
+    alias TrustedAdvisorCategorySpecificSummary = NamedTuple(
+      "costOptimizing" : (TrustedAdvisorCostOptimizingSummary)?
+    )
+
+    alias TrustedAdvisorCheckDescription = NamedTuple(
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "category" : String,
+      "metadata" : StringList
+    )
+
+    alias TrustedAdvisorCheckList = Array(TrustedAdvisorCheckDescription)
+
+    alias TrustedAdvisorCheckRefreshStatus = NamedTuple(
+      "checkId" : String,
+      "status" : String,
+      "millisUntilNextRefreshable" : Long
+    )
+
+    alias TrustedAdvisorCheckRefreshStatusList = Array(TrustedAdvisorCheckRefreshStatus)
+
+    alias TrustedAdvisorCheckResult = NamedTuple(
+      "checkId" : String,
+      "timestamp" : String,
+      "status" : String,
+      "resourcesSummary" : TrustedAdvisorResourcesSummary,
+      "categorySpecificSummary" : TrustedAdvisorCategorySpecificSummary,
+      "flaggedResources" : TrustedAdvisorResourceDetailList
+    )
+
+    alias TrustedAdvisorCheckSummary = NamedTuple(
+      "checkId" : String,
+      "timestamp" : String,
+      "status" : String,
+      "hasFlaggedResources" : (Boolean)?,
+      "resourcesSummary" : TrustedAdvisorResourcesSummary,
+      "categorySpecificSummary" : TrustedAdvisorCategorySpecificSummary
+    )
+
+    alias TrustedAdvisorCheckSummaryList = Array(TrustedAdvisorCheckSummary)
+
+    alias TrustedAdvisorCostOptimizingSummary = NamedTuple(
+      "estimatedMonthlySavings" : Double,
+      "estimatedPercentMonthlySavings" : Double
+    )
+
+    alias TrustedAdvisorResourceDetail = NamedTuple(
+      "status" : String,
+      "region" : (String)?,
+      "resourceId" : String,
+      "isSuppressed" : (Boolean)?,
+      "metadata" : StringList
+    )
+
+    alias TrustedAdvisorResourceDetailList = Array(TrustedAdvisorResourceDetail)
+
+    alias TrustedAdvisorResourcesSummary = NamedTuple(
+      "resourcesProcessed" : Long,
+      "resourcesFlagged" : Long,
+      "resourcesIgnored" : Long,
+      "resourcesSuppressed" : Long
+    )
   end
 end

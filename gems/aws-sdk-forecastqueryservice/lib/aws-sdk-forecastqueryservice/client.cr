@@ -419,8 +419,8 @@ module Aws::ForecastQueryService
     #
     # @overload query_forecast(**params)
     # @param [Hash] params ({})
-    def query_forecast(params = {}, **options)
-      req = build_request(:query_forecast, params)
+    def query_forecast(, **options)
+      req = build_request(:query_forecast, )
       req.send_request(options)
     end
 

@@ -377,8 +377,8 @@ module Aws::OpsWorks
     #
     # @overload assign_instance(**params)
     # @param [Hash] params ({})
-    def assign_instance(params = {}, **options)
-      req = build_request(:assign_instance, params)
+    def assign_instance(, **options)
+      req = build_request(:assign_instance, )
       req.send_request(options)
     end
 
@@ -417,8 +417,8 @@ module Aws::OpsWorks
     #
     # @overload assign_volume(**params)
     # @param [Hash] params ({})
-    def assign_volume(params = {}, **options)
-      req = build_request(:assign_volume, params)
+    def assign_volume(, **options)
+      req = build_request(:assign_volume, )
       req.send_request(options)
     end
 
@@ -456,8 +456,8 @@ module Aws::OpsWorks
     #
     # @overload associate_elastic_ip(**params)
     # @param [Hash] params ({})
-    def associate_elastic_ip(params = {}, **options)
-      req = build_request(:associate_elastic_ip, params)
+    def associate_elastic_ip(, **options)
+      req = build_request(:associate_elastic_ip, )
       req.send_request(options)
     end
 
@@ -503,8 +503,8 @@ module Aws::OpsWorks
     #
     # @overload attach_elastic_load_balancer(**params)
     # @param [Hash] params ({})
-    def attach_elastic_load_balancer(params = {}, **options)
-      req = build_request(:attach_elastic_load_balancer, params)
+    def attach_elastic_load_balancer(, **options)
+      req = build_request(:attach_elastic_load_balancer, )
       req.send_request(options)
     end
 
@@ -875,8 +875,8 @@ module Aws::OpsWorks
     #
     # @overload clone_stack(**params)
     # @param [Hash] params ({})
-    def clone_stack(params = {}, **options)
-      req = build_request(:clone_stack, params)
+    def clone_stack(, **options)
+      req = build_request(:clone_stack, )
       req.send_request(options)
     end
 
@@ -1009,8 +1009,8 @@ module Aws::OpsWorks
     #
     # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, **options)
-      req = build_request(:create_app, params)
+    def create_app(, **options)
+      req = build_request(:create_app, )
       req.send_request(options)
     end
 
@@ -1093,8 +1093,8 @@ module Aws::OpsWorks
     #
     # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, **options)
-      req = build_request(:create_deployment, params)
+    def create_deployment(, **options)
+      req = build_request(:create_deployment, )
       req.send_request(options)
     end
 
@@ -1335,8 +1335,8 @@ module Aws::OpsWorks
     #
     # @overload create_instance(**params)
     # @param [Hash] params ({})
-    def create_instance(params = {}, **options)
-      req = build_request(:create_instance, params)
+    def create_instance(, **options)
+      req = build_request(:create_instance, )
       req.send_request(options)
     end
 
@@ -1547,8 +1547,8 @@ module Aws::OpsWorks
     #
     # @overload create_layer(**params)
     # @param [Hash] params ({})
-    def create_layer(params = {}, **options)
-      req = build_request(:create_layer, params)
+    def create_layer(, **options)
+      req = build_request(:create_layer, )
       req.send_request(options)
     end
 
@@ -1913,8 +1913,8 @@ module Aws::OpsWorks
     #
     # @overload create_stack(**params)
     # @param [Hash] params ({})
-    def create_stack(params = {}, **options)
-      req = build_request(:create_stack, params)
+    def create_stack(, **options)
+      req = build_request(:create_stack, )
       req.send_request(options)
     end
 
@@ -1973,8 +1973,8 @@ module Aws::OpsWorks
     #
     # @overload create_user_profile(**params)
     # @param [Hash] params ({})
-    def create_user_profile(params = {}, **options)
-      req = build_request(:create_user_profile, params)
+    def create_user_profile(, **options)
+      req = build_request(:create_user_profile, )
       req.send_request(options)
     end
 
@@ -2004,8 +2004,8 @@ module Aws::OpsWorks
     #
     # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, **options)
-      req = build_request(:delete_app, params)
+    def delete_app(, **options)
+      req = build_request(:delete_app, )
       req.send_request(options)
     end
 
@@ -2047,8 +2047,8 @@ module Aws::OpsWorks
     #
     # @overload delete_instance(**params)
     # @param [Hash] params ({})
-    def delete_instance(params = {}, **options)
-      req = build_request(:delete_instance, params)
+    def delete_instance(, **options)
+      req = build_request(:delete_instance, )
       req.send_request(options)
     end
 
@@ -2081,8 +2081,8 @@ module Aws::OpsWorks
     #
     # @overload delete_layer(**params)
     # @param [Hash] params ({})
-    def delete_layer(params = {}, **options)
-      req = build_request(:delete_layer, params)
+    def delete_layer(, **options)
+      req = build_request(:delete_layer, )
       req.send_request(options)
     end
 
@@ -2115,8 +2115,8 @@ module Aws::OpsWorks
     #
     # @overload delete_stack(**params)
     # @param [Hash] params ({})
-    def delete_stack(params = {}, **options)
-      req = build_request(:delete_stack, params)
+    def delete_stack(, **options)
+      req = build_request(:delete_stack, )
       req.send_request(options)
     end
 
@@ -2146,8 +2146,8 @@ module Aws::OpsWorks
     #
     # @overload delete_user_profile(**params)
     # @param [Hash] params ({})
-    def delete_user_profile(params = {}, **options)
-      req = build_request(:delete_user_profile, params)
+    def delete_user_profile(, **options)
+      req = build_request(:delete_user_profile, )
       req.send_request(options)
     end
 
@@ -2180,8 +2180,8 @@ module Aws::OpsWorks
     #
     # @overload deregister_ecs_cluster(**params)
     # @param [Hash] params ({})
-    def deregister_ecs_cluster(params = {}, **options)
-      req = build_request(:deregister_ecs_cluster, params)
+    def deregister_ecs_cluster(, **options)
+      req = build_request(:deregister_ecs_cluster, )
       req.send_request(options)
     end
 
@@ -2214,8 +2214,8 @@ module Aws::OpsWorks
     #
     # @overload deregister_elastic_ip(**params)
     # @param [Hash] params ({})
-    def deregister_elastic_ip(params = {}, **options)
-      req = build_request(:deregister_elastic_ip, params)
+    def deregister_elastic_ip(, **options)
+      req = build_request(:deregister_elastic_ip, )
       req.send_request(options)
     end
 
@@ -2248,8 +2248,8 @@ module Aws::OpsWorks
     #
     # @overload deregister_instance(**params)
     # @param [Hash] params ({})
-    def deregister_instance(params = {}, **options)
-      req = build_request(:deregister_instance, params)
+    def deregister_instance(, **options)
+      req = build_request(:deregister_instance, )
       req.send_request(options)
     end
 
@@ -2279,8 +2279,8 @@ module Aws::OpsWorks
     #
     # @overload deregister_rds_db_instance(**params)
     # @param [Hash] params ({})
-    def deregister_rds_db_instance(params = {}, **options)
-      req = build_request(:deregister_rds_db_instance, params)
+    def deregister_rds_db_instance(, **options)
+      req = build_request(:deregister_rds_db_instance, )
       req.send_request(options)
     end
 
@@ -2314,8 +2314,8 @@ module Aws::OpsWorks
     #
     # @overload deregister_volume(**params)
     # @param [Hash] params ({})
-    def deregister_volume(params = {}, **options)
-      req = build_request(:deregister_volume, params)
+    def deregister_volume(, **options)
+      req = build_request(:deregister_volume, )
       req.send_request(options)
     end
 
@@ -2355,8 +2355,8 @@ module Aws::OpsWorks
     #
     # @overload describe_agent_versions(**params)
     # @param [Hash] params ({})
-    def describe_agent_versions(params = {}, **options)
-      req = build_request(:describe_agent_versions, params)
+    def describe_agent_versions(, **options)
+      req = build_request(:describe_agent_versions, )
       req.send_request(options)
     end
 
@@ -2438,8 +2438,8 @@ module Aws::OpsWorks
     #
     # @overload describe_apps(**params)
     # @param [Hash] params ({})
-    def describe_apps(params = {}, **options)
-      req = build_request(:describe_apps, params)
+    def describe_apps(, **options)
+      req = build_request(:describe_apps, )
       req.send_request(options)
     end
 
@@ -2504,8 +2504,8 @@ module Aws::OpsWorks
     #
     # @overload describe_commands(**params)
     # @param [Hash] params ({})
-    def describe_commands(params = {}, **options)
-      req = build_request(:describe_commands, params)
+    def describe_commands(, **options)
+      req = build_request(:describe_commands, )
       req.send_request(options)
     end
 
@@ -2579,8 +2579,8 @@ module Aws::OpsWorks
     #
     # @overload describe_deployments(**params)
     # @param [Hash] params ({})
-    def describe_deployments(params = {}, **options)
-      req = build_request(:describe_deployments, params)
+    def describe_deployments(, **options)
+      req = build_request(:describe_deployments, )
       req.send_request(options)
     end
 
@@ -2652,8 +2652,8 @@ module Aws::OpsWorks
     #
     # @overload describe_ecs_clusters(**params)
     # @param [Hash] params ({})
-    def describe_ecs_clusters(params = {}, **options)
-      req = build_request(:describe_ecs_clusters, params)
+    def describe_ecs_clusters(, **options)
+      req = build_request(:describe_ecs_clusters, )
       req.send_request(options)
     end
 
@@ -2715,8 +2715,8 @@ module Aws::OpsWorks
     #
     # @overload describe_elastic_ips(**params)
     # @param [Hash] params ({})
-    def describe_elastic_ips(params = {}, **options)
-      req = build_request(:describe_elastic_ips, params)
+    def describe_elastic_ips(, **options)
+      req = build_request(:describe_elastic_ips, )
       req.send_request(options)
     end
 
@@ -2775,8 +2775,8 @@ module Aws::OpsWorks
     #
     # @overload describe_elastic_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_elastic_load_balancers(params = {}, **options)
-      req = build_request(:describe_elastic_load_balancers, params)
+    def describe_elastic_load_balancers(, **options)
+      req = build_request(:describe_elastic_load_balancers, )
       req.send_request(options)
     end
 
@@ -2890,8 +2890,8 @@ module Aws::OpsWorks
     #
     # @overload describe_instances(**params)
     # @param [Hash] params ({})
-    def describe_instances(params = {}, **options)
-      req = build_request(:describe_instances, params)
+    def describe_instances(, **options)
+      req = build_request(:describe_instances, )
       req.send_request(options)
     end
 
@@ -3003,8 +3003,8 @@ module Aws::OpsWorks
     #
     # @overload describe_layers(**params)
     # @param [Hash] params ({})
-    def describe_layers(params = {}, **options)
-      req = build_request(:describe_layers, params)
+    def describe_layers(, **options)
+      req = build_request(:describe_layers, )
       req.send_request(options)
     end
 
@@ -3063,8 +3063,8 @@ module Aws::OpsWorks
     #
     # @overload describe_load_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def describe_load_based_auto_scaling(params = {}, **options)
-      req = build_request(:describe_load_based_auto_scaling, params)
+    def describe_load_based_auto_scaling(, **options)
+      req = build_request(:describe_load_based_auto_scaling, )
       req.send_request(options)
     end
 
@@ -3094,8 +3094,8 @@ module Aws::OpsWorks
     #
     # @overload describe_my_user_profile(**params)
     # @param [Hash] params ({})
-    def describe_my_user_profile(params = {}, **options)
-      req = build_request(:describe_my_user_profile, params)
+    def describe_my_user_profile(, **options)
+      req = build_request(:describe_my_user_profile, )
       req.send_request(options)
     end
 
@@ -3123,8 +3123,8 @@ module Aws::OpsWorks
     #
     # @overload describe_operating_systems(**params)
     # @param [Hash] params ({})
-    def describe_operating_systems(params = {}, **options)
-      req = build_request(:describe_operating_systems, params)
+    def describe_operating_systems(, **options)
+      req = build_request(:describe_operating_systems, )
       req.send_request(options)
     end
 
@@ -3174,8 +3174,8 @@ module Aws::OpsWorks
     #
     # @overload describe_permissions(**params)
     # @param [Hash] params ({})
-    def describe_permissions(params = {}, **options)
-      req = build_request(:describe_permissions, params)
+    def describe_permissions(, **options)
+      req = build_request(:describe_permissions, )
       req.send_request(options)
     end
 
@@ -3241,8 +3241,8 @@ module Aws::OpsWorks
     #
     # @overload describe_raid_arrays(**params)
     # @param [Hash] params ({})
-    def describe_raid_arrays(params = {}, **options)
-      req = build_request(:describe_raid_arrays, params)
+    def describe_raid_arrays(, **options)
+      req = build_request(:describe_raid_arrays, )
       req.send_request(options)
     end
 
@@ -3295,8 +3295,8 @@ module Aws::OpsWorks
     #
     # @overload describe_rds_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_rds_db_instances(params = {}, **options)
-      req = build_request(:describe_rds_db_instances, params)
+    def describe_rds_db_instances(, **options)
+      req = build_request(:describe_rds_db_instances, )
       req.send_request(options)
     end
 
@@ -3355,8 +3355,8 @@ module Aws::OpsWorks
     #
     # @overload describe_service_errors(**params)
     # @param [Hash] params ({})
-    def describe_service_errors(params = {}, **options)
-      req = build_request(:describe_service_errors, params)
+    def describe_service_errors(, **options)
+      req = build_request(:describe_service_errors, )
       req.send_request(options)
     end
 
@@ -3395,8 +3395,8 @@ module Aws::OpsWorks
     #
     # @overload describe_stack_provisioning_parameters(**params)
     # @param [Hash] params ({})
-    def describe_stack_provisioning_parameters(params = {}, **options)
-      req = build_request(:describe_stack_provisioning_parameters, params)
+    def describe_stack_provisioning_parameters(, **options)
+      req = build_request(:describe_stack_provisioning_parameters, )
       req.send_request(options)
     end
 
@@ -3459,8 +3459,8 @@ module Aws::OpsWorks
     #
     # @overload describe_stack_summary(**params)
     # @param [Hash] params ({})
-    def describe_stack_summary(params = {}, **options)
-      req = build_request(:describe_stack_summary, params)
+    def describe_stack_summary(, **options)
+      req = build_request(:describe_stack_summary, )
       req.send_request(options)
     end
 
@@ -3529,8 +3529,8 @@ module Aws::OpsWorks
     #
     # @overload describe_stacks(**params)
     # @param [Hash] params ({})
-    def describe_stacks(params = {}, **options)
-      req = build_request(:describe_stacks, params)
+    def describe_stacks(, **options)
+      req = build_request(:describe_stacks, )
       req.send_request(options)
     end
 
@@ -3587,8 +3587,8 @@ module Aws::OpsWorks
     #
     # @overload describe_time_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def describe_time_based_auto_scaling(params = {}, **options)
-      req = build_request(:describe_time_based_auto_scaling, params)
+    def describe_time_based_auto_scaling(, **options)
+      req = build_request(:describe_time_based_auto_scaling, )
       req.send_request(options)
     end
 
@@ -3630,8 +3630,8 @@ module Aws::OpsWorks
     #
     # @overload describe_user_profiles(**params)
     # @param [Hash] params ({})
-    def describe_user_profiles(params = {}, **options)
-      req = build_request(:describe_user_profiles, params)
+    def describe_user_profiles(, **options)
+      req = build_request(:describe_user_profiles, )
       req.send_request(options)
     end
 
@@ -3704,8 +3704,8 @@ module Aws::OpsWorks
     #
     # @overload describe_volumes(**params)
     # @param [Hash] params ({})
-    def describe_volumes(params = {}, **options)
-      req = build_request(:describe_volumes, params)
+    def describe_volumes(, **options)
+      req = build_request(:describe_volumes, )
       req.send_request(options)
     end
 
@@ -3740,8 +3740,8 @@ module Aws::OpsWorks
     #
     # @overload detach_elastic_load_balancer(**params)
     # @param [Hash] params ({})
-    def detach_elastic_load_balancer(params = {}, **options)
-      req = build_request(:detach_elastic_load_balancer, params)
+    def detach_elastic_load_balancer(, **options)
+      req = build_request(:detach_elastic_load_balancer, )
       req.send_request(options)
     end
 
@@ -3774,8 +3774,8 @@ module Aws::OpsWorks
     #
     # @overload disassociate_elastic_ip(**params)
     # @param [Hash] params ({})
-    def disassociate_elastic_ip(params = {}, **options)
-      req = build_request(:disassociate_elastic_ip, params)
+    def disassociate_elastic_ip(, **options)
+      req = build_request(:disassociate_elastic_ip, )
       req.send_request(options)
     end
 
@@ -3814,8 +3814,8 @@ module Aws::OpsWorks
     #
     # @overload get_hostname_suggestion(**params)
     # @param [Hash] params ({})
-    def get_hostname_suggestion(params = {}, **options)
-      req = build_request(:get_hostname_suggestion, params)
+    def get_hostname_suggestion(, **options)
+      req = build_request(:get_hostname_suggestion, )
       req.send_request(options)
     end
 
@@ -3856,8 +3856,8 @@ module Aws::OpsWorks
     #
     # @overload grant_access(**params)
     # @param [Hash] params ({})
-    def grant_access(params = {}, **options)
-      req = build_request(:grant_access, params)
+    def grant_access(, **options)
+      req = build_request(:grant_access, )
       req.send_request(options)
     end
 
@@ -3898,8 +3898,8 @@ module Aws::OpsWorks
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -3931,8 +3931,8 @@ module Aws::OpsWorks
     #
     # @overload reboot_instance(**params)
     # @param [Hash] params ({})
-    def reboot_instance(params = {}, **options)
-      req = build_request(:reboot_instance, params)
+    def reboot_instance(, **options)
+      req = build_request(:reboot_instance, )
       req.send_request(options)
     end
 
@@ -3976,8 +3976,8 @@ module Aws::OpsWorks
     #
     # @overload register_ecs_cluster(**params)
     # @param [Hash] params ({})
-    def register_ecs_cluster(params = {}, **options)
-      req = build_request(:register_ecs_cluster, params)
+    def register_ecs_cluster(, **options)
+      req = build_request(:register_ecs_cluster, )
       req.send_request(options)
     end
 
@@ -4022,8 +4022,8 @@ module Aws::OpsWorks
     #
     # @overload register_elastic_ip(**params)
     # @param [Hash] params ({})
-    def register_elastic_ip(params = {}, **options)
-      req = build_request(:register_elastic_ip, params)
+    def register_elastic_ip(, **options)
+      req = build_request(:register_elastic_ip, )
       req.send_request(options)
     end
 
@@ -4107,8 +4107,8 @@ module Aws::OpsWorks
     #
     # @overload register_instance(**params)
     # @param [Hash] params ({})
-    def register_instance(params = {}, **options)
-      req = build_request(:register_instance, params)
+    def register_instance(, **options)
+      req = build_request(:register_instance, )
       req.send_request(options)
     end
 
@@ -4150,8 +4150,8 @@ module Aws::OpsWorks
     #
     # @overload register_rds_db_instance(**params)
     # @param [Hash] params ({})
-    def register_rds_db_instance(params = {}, **options)
-      req = build_request(:register_rds_db_instance, params)
+    def register_rds_db_instance(, **options)
+      req = build_request(:register_rds_db_instance, )
       req.send_request(options)
     end
 
@@ -4195,8 +4195,8 @@ module Aws::OpsWorks
     #
     # @overload register_volume(**params)
     # @param [Hash] params ({})
-    def register_volume(params = {}, **options)
-      req = build_request(:register_volume, params)
+    def register_volume(, **options)
+      req = build_request(:register_volume, )
       req.send_request(options)
     end
 
@@ -4270,8 +4270,8 @@ module Aws::OpsWorks
     #
     # @overload set_load_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def set_load_based_auto_scaling(params = {}, **options)
-      req = build_request(:set_load_based_auto_scaling, params)
+    def set_load_based_auto_scaling(, **options)
+      req = build_request(:set_load_based_auto_scaling, )
       req.send_request(options)
     end
 
@@ -4337,8 +4337,8 @@ module Aws::OpsWorks
     #
     # @overload set_permission(**params)
     # @param [Hash] params ({})
-    def set_permission(params = {}, **options)
-      req = build_request(:set_permission, params)
+    def set_permission(, **options)
+      req = build_request(:set_permission, )
       req.send_request(options)
     end
 
@@ -4397,8 +4397,8 @@ module Aws::OpsWorks
     #
     # @overload set_time_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def set_time_based_auto_scaling(params = {}, **options)
-      req = build_request(:set_time_based_auto_scaling, params)
+    def set_time_based_auto_scaling(, **options)
+      req = build_request(:set_time_based_auto_scaling, )
       req.send_request(options)
     end
 
@@ -4430,8 +4430,8 @@ module Aws::OpsWorks
     #
     # @overload start_instance(**params)
     # @param [Hash] params ({})
-    def start_instance(params = {}, **options)
-      req = build_request(:start_instance, params)
+    def start_instance(, **options)
+      req = build_request(:start_instance, )
       req.send_request(options)
     end
 
@@ -4461,8 +4461,8 @@ module Aws::OpsWorks
     #
     # @overload start_stack(**params)
     # @param [Hash] params ({})
-    def start_stack(params = {}, **options)
-      req = build_request(:start_stack, params)
+    def start_stack(, **options)
+      req = build_request(:start_stack, )
       req.send_request(options)
     end
 
@@ -4507,8 +4507,8 @@ module Aws::OpsWorks
     #
     # @overload stop_instance(**params)
     # @param [Hash] params ({})
-    def stop_instance(params = {}, **options)
-      req = build_request(:stop_instance, params)
+    def stop_instance(, **options)
+      req = build_request(:stop_instance, )
       req.send_request(options)
     end
 
@@ -4538,8 +4538,8 @@ module Aws::OpsWorks
     #
     # @overload stop_stack(**params)
     # @param [Hash] params ({})
-    def stop_stack(params = {}, **options)
-      req = build_request(:stop_stack, params)
+    def stop_stack(, **options)
+      req = build_request(:stop_stack, )
       req.send_request(options)
     end
 
@@ -4588,8 +4588,8 @@ module Aws::OpsWorks
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -4622,8 +4622,8 @@ module Aws::OpsWorks
     #
     # @overload unassign_instance(**params)
     # @param [Hash] params ({})
-    def unassign_instance(params = {}, **options)
-      req = build_request(:unassign_instance, params)
+    def unassign_instance(, **options)
+      req = build_request(:unassign_instance, )
       req.send_request(options)
     end
 
@@ -4655,8 +4655,8 @@ module Aws::OpsWorks
     #
     # @overload unassign_volume(**params)
     # @param [Hash] params ({})
-    def unassign_volume(params = {}, **options)
-      req = build_request(:unassign_volume, params)
+    def unassign_volume(, **options)
+      req = build_request(:unassign_volume, )
       req.send_request(options)
     end
 
@@ -4681,8 +4681,8 @@ module Aws::OpsWorks
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -4798,8 +4798,8 @@ module Aws::OpsWorks
     #
     # @overload update_app(**params)
     # @param [Hash] params ({})
-    def update_app(params = {}, **options)
-      req = build_request(:update_app, params)
+    def update_app(, **options)
+      req = build_request(:update_app, )
       req.send_request(options)
     end
 
@@ -4835,8 +4835,8 @@ module Aws::OpsWorks
     #
     # @overload update_elastic_ip(**params)
     # @param [Hash] params ({})
-    def update_elastic_ip(params = {}, **options)
-      req = build_request(:update_elastic_ip, params)
+    def update_elastic_ip(, **options)
+      req = build_request(:update_elastic_ip, )
       req.send_request(options)
     end
 
@@ -4997,8 +4997,8 @@ module Aws::OpsWorks
     #
     # @overload update_instance(**params)
     # @param [Hash] params ({})
-    def update_instance(params = {}, **options)
-      req = build_request(:update_instance, params)
+    def update_instance(, **options)
+      req = build_request(:update_instance, )
       req.send_request(options)
     end
 
@@ -5181,8 +5181,8 @@ module Aws::OpsWorks
     #
     # @overload update_layer(**params)
     # @param [Hash] params ({})
-    def update_layer(params = {}, **options)
-      req = build_request(:update_layer, params)
+    def update_layer(, **options)
+      req = build_request(:update_layer, )
       req.send_request(options)
     end
 
@@ -5212,8 +5212,8 @@ module Aws::OpsWorks
     #
     # @overload update_my_user_profile(**params)
     # @param [Hash] params ({})
-    def update_my_user_profile(params = {}, **options)
-      req = build_request(:update_my_user_profile, params)
+    def update_my_user_profile(, **options)
+      req = build_request(:update_my_user_profile, )
       req.send_request(options)
     end
 
@@ -5251,8 +5251,8 @@ module Aws::OpsWorks
     #
     # @overload update_rds_db_instance(**params)
     # @param [Hash] params ({})
-    def update_rds_db_instance(params = {}, **options)
-      req = build_request(:update_rds_db_instance, params)
+    def update_rds_db_instance(, **options)
+      req = build_request(:update_rds_db_instance, )
       req.send_request(options)
     end
 
@@ -5536,8 +5536,8 @@ module Aws::OpsWorks
     #
     # @overload update_stack(**params)
     # @param [Hash] params ({})
-    def update_stack(params = {}, **options)
-      req = build_request(:update_stack, params)
+    def update_stack(, **options)
+      req = build_request(:update_stack, )
       req.send_request(options)
     end
 
@@ -5590,8 +5590,8 @@ module Aws::OpsWorks
     #
     # @overload update_user_profile(**params)
     # @param [Hash] params ({})
-    def update_user_profile(params = {}, **options)
-      req = build_request(:update_user_profile, params)
+    def update_user_profile(, **options)
+      req = build_request(:update_user_profile, )
       req.send_request(options)
     end
 
@@ -5631,8 +5631,8 @@ module Aws::OpsWorks
     #
     # @overload update_volume(**params)
     # @param [Hash] params ({})
-    def update_volume(params = {}, **options)
-      req = build_request(:update_volume, params)
+    def update_volume(, **options)
+      req = build_request(:update_volume, )
       req.send_request(options)
     end
 

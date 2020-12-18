@@ -3037,5 +3037,735 @@ module Aws::WellArchitected
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : ExceptionMessage
+    )
+
+    alias Answer = NamedTuple(
+      "QuestionId" : (QuestionId)?,
+      "PillarId" : (PillarId)?,
+      "QuestionTitle" : (QuestionTitle)?,
+      "QuestionDescription" : (QuestionDescription)?,
+      "ImprovementPlanUrl" : (ImprovementPlanUrl)?,
+      "HelpfulResourceUrl" : (HelpfulResourceUrl)?,
+      "Choices" : (Choices)?,
+      "SelectedChoices" : (SelectedChoices)?,
+      "IsApplicable" : (IsApplicable)?,
+      "Risk" : (Risk)?,
+      "Notes" : (Notes)?
+    )
+
+    alias AnswerSummaries = Array(AnswerSummary)
+
+    alias AnswerSummary = NamedTuple(
+      "QuestionId" : (QuestionId)?,
+      "PillarId" : (PillarId)?,
+      "QuestionTitle" : (QuestionTitle)?,
+      "Choices" : (Choices)?,
+      "SelectedChoices" : (SelectedChoices)?,
+      "IsApplicable" : (IsApplicable)?,
+      "Risk" : (Risk)?
+    )
+
+    alias AssociateLensesInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAliases" : LensAliases
+    )
+
+    alias AwsAccountId = String
+
+    alias AwsRegion = String
+
+    alias Base64String = String
+
+    alias Choice = NamedTuple(
+      "ChoiceId" : (ChoiceId)?,
+      "Title" : (ChoiceTitle)?,
+      "Description" : (ChoiceDescription)?
+    )
+
+    alias ChoiceDescription = String
+
+    alias ChoiceId = String
+
+    alias ChoiceTitle = String
+
+    alias Choices = Array(Choice)
+
+    alias ClientRequestToken = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : ExceptionMessage,
+      "ResourceId" : ExceptionResourceId,
+      "ResourceType" : ExceptionResourceType
+    )
+
+    alias Count = Int32
+
+    alias CreateMilestoneInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "MilestoneName" : MilestoneName,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateMilestoneOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?
+    )
+
+    alias CreateWorkloadInput = NamedTuple(
+      "WorkloadName" : WorkloadName,
+      "Description" : WorkloadDescription,
+      "Environment" : WorkloadEnvironment,
+      "AccountIds" : (WorkloadAccountIds)?,
+      "AwsRegions" : (WorkloadAwsRegions)?,
+      "NonAwsRegions" : (WorkloadNonAwsRegions)?,
+      "PillarPriorities" : (WorkloadPillarPriorities)?,
+      "ArchitecturalDesign" : (WorkloadArchitecturalDesign)?,
+      "ReviewOwner" : WorkloadReviewOwner,
+      "IndustryType" : (WorkloadIndustryType)?,
+      "Industry" : (WorkloadIndustry)?,
+      "Lenses" : WorkloadLenses,
+      "Notes" : (Notes)?,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateWorkloadOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "WorkloadArn" : (WorkloadArn)?
+    )
+
+    alias CreateWorkloadShareInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "SharedWith" : SharedWith,
+      "PermissionType" : PermissionType,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias CreateWorkloadShareOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "ShareId" : (ShareId)?
+    )
+
+    alias DeleteWorkloadInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias DeleteWorkloadShareInput = NamedTuple(
+      "ShareId" : ShareId,
+      "WorkloadId" : WorkloadId,
+      "ClientRequestToken" : ClientRequestToken
+    )
+
+    alias DifferenceStatus = String
+
+    alias DisassociateLensesInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAliases" : LensAliases
+    )
+
+    alias ExceptionMessage = String
+
+    alias ExceptionResourceId = String
+
+    alias ExceptionResourceType = String
+
+    alias GetAnswerInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "QuestionId" : QuestionId,
+      "MilestoneNumber" : (MilestoneNumber)?
+    )
+
+    alias GetAnswerOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "LensAlias" : (LensAlias)?,
+      "Answer" : (Answer)?
+    )
+
+    alias GetLensReviewInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "MilestoneNumber" : (MilestoneNumber)?
+    )
+
+    alias GetLensReviewOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "LensReview" : (LensReview)?
+    )
+
+    alias GetLensReviewReportInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "MilestoneNumber" : (MilestoneNumber)?
+    )
+
+    alias GetLensReviewReportOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "LensReviewReport" : (LensReviewReport)?
+    )
+
+    alias GetLensVersionDifferenceInput = NamedTuple(
+      "LensAlias" : LensAlias,
+      "BaseLensVersion" : LensVersion
+    )
+
+    alias GetLensVersionDifferenceOutput = NamedTuple(
+      "LensAlias" : (LensAlias)?,
+      "BaseLensVersion" : (LensVersion)?,
+      "LatestLensVersion" : (LensVersion)?,
+      "VersionDifferences" : (VersionDifferences)?
+    )
+
+    alias GetMilestoneInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "MilestoneNumber" : MilestoneNumber
+    )
+
+    alias GetMilestoneOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "Milestone" : (Milestone)?
+    )
+
+    alias GetWorkloadInput = NamedTuple(
+      "WorkloadId" : WorkloadId
+    )
+
+    alias GetWorkloadOutput = NamedTuple(
+      "Workload" : (Workload)?
+    )
+
+    alias HelpfulResourceUrl = String
+
+    alias ImprovementPlanUrl = String
+
+    alias ImprovementSummaries = Array(ImprovementSummary)
+
+    alias ImprovementSummary = NamedTuple(
+      "QuestionId" : (QuestionId)?,
+      "PillarId" : (PillarId)?,
+      "QuestionTitle" : (QuestionTitle)?,
+      "Risk" : (Risk)?,
+      "ImprovementPlanUrl" : (ImprovementPlanUrl)?
+    )
+
+    alias InternalServerException = NamedTuple(
+      "Message" : ExceptionMessage
+    )
+
+    alias IsApplicable = Bool
+
+    alias IsReviewOwnerUpdateAcknowledged = Bool
+
+    alias LensAlias = String
+
+    alias LensAliases = Array(LensAlias)
+
+    alias LensDescription = String
+
+    alias LensName = String
+
+    alias LensReview = NamedTuple(
+      "LensAlias" : (LensAlias)?,
+      "LensVersion" : (LensVersion)?,
+      "LensName" : (LensName)?,
+      "LensStatus" : (LensStatus)?,
+      "PillarReviewSummaries" : (PillarReviewSummaries)?,
+      "UpdatedAt" : (Timestamp)?,
+      "Notes" : (Notes)?,
+      "RiskCounts" : (RiskCounts)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias LensReviewReport = NamedTuple(
+      "LensAlias" : (LensAlias)?,
+      "Base64String" : (Base64String)?
+    )
+
+    alias LensReviewSummaries = Array(LensReviewSummary)
+
+    alias LensReviewSummary = NamedTuple(
+      "LensAlias" : (LensAlias)?,
+      "LensVersion" : (LensVersion)?,
+      "LensName" : (LensName)?,
+      "LensStatus" : (LensStatus)?,
+      "UpdatedAt" : (Timestamp)?,
+      "RiskCounts" : (RiskCounts)?
+    )
+
+    alias LensStatus = String
+
+    alias LensSummaries = Array(LensSummary)
+
+    alias LensSummary = NamedTuple(
+      "LensAlias" : (LensAlias)?,
+      "LensVersion" : (LensVersion)?,
+      "LensName" : (LensName)?,
+      "Description" : (LensDescription)?
+    )
+
+    alias LensUpgradeSummary = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "WorkloadName" : (WorkloadName)?,
+      "LensAlias" : (LensAlias)?,
+      "CurrentLensVersion" : (LensVersion)?,
+      "LatestLensVersion" : (LensVersion)?
+    )
+
+    alias LensVersion = String
+
+    alias ListAnswersInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "PillarId" : (PillarId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListAnswersMaxResults)?
+    )
+
+    alias ListAnswersMaxResults = Int32
+
+    alias ListAnswersOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "LensAlias" : (LensAlias)?,
+      "AnswerSummaries" : (AnswerSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLensReviewImprovementsInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "PillarId" : (PillarId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListLensReviewImprovementsMaxResults)?
+    )
+
+    alias ListLensReviewImprovementsMaxResults = Int32
+
+    alias ListLensReviewImprovementsOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "LensAlias" : (LensAlias)?,
+      "ImprovementSummaries" : (ImprovementSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLensReviewsInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListLensReviewsOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "LensReviewSummaries" : (LensReviewSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLensesInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListLensesOutput = NamedTuple(
+      "LensSummaries" : (LensSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListMilestonesInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListMilestonesOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "MilestoneSummaries" : (MilestoneSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListNotificationsInput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListNotificationsMaxResults)?
+    )
+
+    alias ListNotificationsMaxResults = Int32
+
+    alias ListNotificationsOutput = NamedTuple(
+      "NotificationSummaries" : (NotificationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListShareInvitationsInput = NamedTuple(
+      "WorkloadNamePrefix" : (WorkloadNamePrefix)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListShareInvitationsMaxResults)?
+    )
+
+    alias ListShareInvitationsMaxResults = Int32
+
+    alias ListShareInvitationsOutput = NamedTuple(
+      "ShareInvitationSummaries" : (ShareInvitationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWorkloadSharesInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "SharedWithPrefix" : (SharedWithPrefix)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListWorkloadSharesMaxResults)?
+    )
+
+    alias ListWorkloadSharesMaxResults = Int32
+
+    alias ListWorkloadSharesOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "WorkloadShareSummaries" : (WorkloadShareSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWorkloadsInput = NamedTuple(
+      "WorkloadNamePrefix" : (WorkloadNamePrefix)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListWorkloadsMaxResults)?
+    )
+
+    alias ListWorkloadsMaxResults = Int32
+
+    alias ListWorkloadsOutput = NamedTuple(
+      "WorkloadSummaries" : (WorkloadSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Milestone = NamedTuple(
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "MilestoneName" : (MilestoneName)?,
+      "RecordedAt" : (Timestamp)?,
+      "Workload" : (Workload)?
+    )
+
+    alias MilestoneName = String
+
+    alias MilestoneNumber = Int32
+
+    alias MilestoneSummaries = Array(MilestoneSummary)
+
+    alias MilestoneSummary = NamedTuple(
+      "MilestoneNumber" : (MilestoneNumber)?,
+      "MilestoneName" : (MilestoneName)?,
+      "RecordedAt" : (Timestamp)?,
+      "WorkloadSummary" : (WorkloadSummary)?
+    )
+
+    alias NextToken = String
+
+    alias Notes = String
+
+    alias NotificationSummaries = Array(NotificationSummary)
+
+    alias NotificationSummary = NamedTuple(
+      "Type" : (NotificationType)?,
+      "LensUpgradeSummary" : (LensUpgradeSummary)?
+    )
+
+    alias NotificationType = String
+
+    alias PermissionType = String
+
+    alias PillarDifference = NamedTuple(
+      "PillarId" : (PillarId)?,
+      "DifferenceStatus" : (DifferenceStatus)?,
+      "QuestionDifferences" : (QuestionDifferences)?
+    )
+
+    alias PillarDifferences = Array(PillarDifference)
+
+    alias PillarId = String
+
+    alias PillarName = String
+
+    alias PillarNotes = Hash(PillarId,Notes)
+
+    alias PillarReviewSummaries = Array(PillarReviewSummary)
+
+    alias PillarReviewSummary = NamedTuple(
+      "PillarId" : (PillarId)?,
+      "PillarName" : (PillarName)?,
+      "Notes" : (Notes)?,
+      "RiskCounts" : (RiskCounts)?
+    )
+
+    alias QuestionDescription = String
+
+    alias QuestionDifference = NamedTuple(
+      "QuestionId" : (QuestionId)?,
+      "QuestionTitle" : (QuestionTitle)?,
+      "DifferenceStatus" : (DifferenceStatus)?
+    )
+
+    alias QuestionDifferences = Array(QuestionDifference)
+
+    alias QuestionId = String
+
+    alias QuestionTitle = String
+
+    alias QuotaCode = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : ExceptionMessage,
+      "ResourceId" : ExceptionResourceId,
+      "ResourceType" : ExceptionResourceType
+    )
+
+    alias Risk = String
+
+    alias RiskCounts = Hash(Risk,Count)
+
+    alias SelectedChoices = Array(ChoiceId)
+
+    alias ServiceCode = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : ExceptionMessage,
+      "ResourceId" : (ExceptionResourceId)?,
+      "ResourceType" : (ExceptionResourceType)?,
+      "QuotaCode" : QuotaCode,
+      "ServiceCode" : ServiceCode
+    )
+
+    alias ShareId = String
+
+    alias ShareInvitation = NamedTuple(
+      "ShareInvitationId" : (ShareInvitationId)?,
+      "WorkloadId" : (WorkloadId)?
+    )
+
+    alias ShareInvitationAction = String
+
+    alias ShareInvitationId = String
+
+    alias ShareInvitationSummaries = Array(ShareInvitationSummary)
+
+    alias ShareInvitationSummary = NamedTuple(
+      "ShareInvitationId" : (ShareInvitationId)?,
+      "SharedBy" : (AwsAccountId)?,
+      "SharedWith" : (SharedWith)?,
+      "PermissionType" : (PermissionType)?,
+      "WorkloadName" : (WorkloadName)?,
+      "WorkloadId" : (WorkloadId)?
+    )
+
+    alias ShareStatus = String
+
+    alias SharedWith = String
+
+    alias SharedWithPrefix = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : ExceptionMessage,
+      "QuotaCode" : (QuotaCode)?,
+      "ServiceCode" : (ServiceCode)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UpdateAnswerInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "QuestionId" : QuestionId,
+      "SelectedChoices" : (SelectedChoices)?,
+      "Notes" : (Notes)?,
+      "IsApplicable" : (IsApplicable)?
+    )
+
+    alias UpdateAnswerOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "LensAlias" : (LensAlias)?,
+      "Answer" : (Answer)?
+    )
+
+    alias UpdateLensReviewInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "LensNotes" : (Notes)?,
+      "PillarNotes" : (PillarNotes)?
+    )
+
+    alias UpdateLensReviewOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "LensReview" : (LensReview)?
+    )
+
+    alias UpdateShareInvitationInput = NamedTuple(
+      "ShareInvitationId" : ShareInvitationId,
+      "ShareInvitationAction" : ShareInvitationAction
+    )
+
+    alias UpdateShareInvitationOutput = NamedTuple(
+      "ShareInvitation" : (ShareInvitation)?
+    )
+
+    alias UpdateWorkloadInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "WorkloadName" : (WorkloadName)?,
+      "Description" : (WorkloadDescription)?,
+      "Environment" : (WorkloadEnvironment)?,
+      "AccountIds" : (WorkloadAccountIds)?,
+      "AwsRegions" : (WorkloadAwsRegions)?,
+      "NonAwsRegions" : (WorkloadNonAwsRegions)?,
+      "PillarPriorities" : (WorkloadPillarPriorities)?,
+      "ArchitecturalDesign" : (WorkloadArchitecturalDesign)?,
+      "ReviewOwner" : (WorkloadReviewOwner)?,
+      "IsReviewOwnerUpdateAcknowledged" : (IsReviewOwnerUpdateAcknowledged)?,
+      "IndustryType" : (WorkloadIndustryType)?,
+      "Industry" : (WorkloadIndustry)?,
+      "Notes" : (Notes)?,
+      "ImprovementStatus" : (WorkloadImprovementStatus)?
+    )
+
+    alias UpdateWorkloadOutput = NamedTuple(
+      "Workload" : (Workload)?
+    )
+
+    alias UpdateWorkloadShareInput = NamedTuple(
+      "ShareId" : ShareId,
+      "WorkloadId" : WorkloadId,
+      "PermissionType" : PermissionType
+    )
+
+    alias UpdateWorkloadShareOutput = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "WorkloadShare" : (WorkloadShare)?
+    )
+
+    alias UpgradeLensReviewInput = NamedTuple(
+      "WorkloadId" : WorkloadId,
+      "LensAlias" : LensAlias,
+      "MilestoneName" : MilestoneName,
+      "ClientRequestToken" : (ClientRequestToken)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : ExceptionMessage,
+      "Reason" : (ValidationExceptionReason)?,
+      "Fields" : (ValidationExceptionFieldList)?
+    )
+
+    alias ValidationExceptionField = NamedTuple(
+      "Name" : ValidationExceptionFieldName,
+      "Message" : ExceptionMessage
+    )
+
+    alias ValidationExceptionFieldList = Array(ValidationExceptionField)
+
+    alias ValidationExceptionFieldName = String
+
+    alias ValidationExceptionReason = String
+
+    alias VersionDifferences = NamedTuple(
+      "PillarDifferences" : (PillarDifferences)?
+    )
+
+    alias Workload = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "WorkloadArn" : (WorkloadArn)?,
+      "WorkloadName" : (WorkloadName)?,
+      "Description" : (WorkloadDescription)?,
+      "Environment" : (WorkloadEnvironment)?,
+      "UpdatedAt" : (Timestamp)?,
+      "AccountIds" : (WorkloadAccountIds)?,
+      "AwsRegions" : (WorkloadAwsRegions)?,
+      "NonAwsRegions" : (WorkloadNonAwsRegions)?,
+      "ArchitecturalDesign" : (WorkloadArchitecturalDesign)?,
+      "ReviewOwner" : (WorkloadReviewOwner)?,
+      "ReviewRestrictionDate" : (Timestamp)?,
+      "IsReviewOwnerUpdateAcknowledged" : (IsReviewOwnerUpdateAcknowledged)?,
+      "IndustryType" : (WorkloadIndustryType)?,
+      "Industry" : (WorkloadIndustry)?,
+      "Notes" : (Notes)?,
+      "ImprovementStatus" : (WorkloadImprovementStatus)?,
+      "RiskCounts" : (RiskCounts)?,
+      "PillarPriorities" : (WorkloadPillarPriorities)?,
+      "Lenses" : (WorkloadLenses)?,
+      "Owner" : (AwsAccountId)?,
+      "ShareInvitationId" : (ShareInvitationId)?
+    )
+
+    alias WorkloadAccountIds = Array(AwsAccountId)
+
+    alias WorkloadArchitecturalDesign = String
+
+    alias WorkloadArn = String
+
+    alias WorkloadAwsRegions = Array(AwsRegion)
+
+    alias WorkloadDescription = String
+
+    alias WorkloadEnvironment = String
+
+    alias WorkloadId = String
+
+    alias WorkloadImprovementStatus = String
+
+    alias WorkloadIndustry = String
+
+    alias WorkloadIndustryType = String
+
+    alias WorkloadLenses = Array(LensAlias)
+
+    alias WorkloadName = String
+
+    alias WorkloadNamePrefix = String
+
+    alias WorkloadNonAwsRegion = String
+
+    alias WorkloadNonAwsRegions = Array(WorkloadNonAwsRegion)
+
+    alias WorkloadPillarPriorities = Array(PillarId)
+
+    alias WorkloadReviewOwner = String
+
+    alias WorkloadShare = NamedTuple(
+      "ShareId" : (ShareId)?,
+      "SharedBy" : (AwsAccountId)?,
+      "SharedWith" : (SharedWith)?,
+      "PermissionType" : (PermissionType)?,
+      "Status" : (ShareStatus)?,
+      "WorkloadName" : (WorkloadName)?,
+      "WorkloadId" : (WorkloadId)?
+    )
+
+    alias WorkloadShareSummaries = Array(WorkloadShareSummary)
+
+    alias WorkloadShareSummary = NamedTuple(
+      "ShareId" : (ShareId)?,
+      "SharedWith" : (SharedWith)?,
+      "PermissionType" : (PermissionType)?,
+      "Status" : (ShareStatus)?
+    )
+
+    alias WorkloadSummaries = Array(WorkloadSummary)
+
+    alias WorkloadSummary = NamedTuple(
+      "WorkloadId" : (WorkloadId)?,
+      "WorkloadArn" : (WorkloadArn)?,
+      "WorkloadName" : (WorkloadName)?,
+      "Owner" : (AwsAccountId)?,
+      "UpdatedAt" : (Timestamp)?,
+      "Lenses" : (WorkloadLenses)?,
+      "RiskCounts" : (RiskCounts)?,
+      "ImprovementStatus" : (WorkloadImprovementStatus)?
+    )
   end
 end

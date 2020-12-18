@@ -19903,5 +19903,4628 @@ module Aws::SSM
     #
     class UpdateServiceSettingResult < Aws::EmptyStructure; end
 
+    alias Account = String
+
+    alias AccountId = String
+
+    alias AccountIdList = Array(AccountId)
+
+    alias AccountSharingInfo = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "SharedDocumentVersion" : (SharedDocumentVersion)?
+    )
+
+    alias AccountSharingInfoList = Array(AccountSharingInfo)
+
+    alias Accounts = Array(Account)
+
+    alias Activation = NamedTuple(
+      "ActivationId" : (ActivationId)?,
+      "Description" : (ActivationDescription)?,
+      "DefaultInstanceName" : (DefaultInstanceName)?,
+      "IamRole" : (IamRole)?,
+      "RegistrationLimit" : (RegistrationLimit)?,
+      "RegistrationsCount" : (RegistrationsCount)?,
+      "ExpirationDate" : (ExpirationDate)?,
+      "Expired" : (Boolean)?,
+      "CreatedDate" : (CreatedDate)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ActivationCode = String
+
+    alias ActivationDescription = String
+
+    alias ActivationId = String
+
+    alias ActivationList = Array(Activation)
+
+    alias AddTagsToResourceRequest = NamedTuple(
+      "ResourceType" : ResourceTypeForTagging,
+      "ResourceId" : ResourceId,
+      "Tags" : TagList
+    )
+
+    alias AddTagsToResourceResult = NamedTuple(
+      
+    )
+
+    alias AgentErrorCode = String
+
+    alias AggregatorSchemaOnly = Bool
+
+    alias AllowedPattern = String
+
+    alias AlreadyExistsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ApplyOnlyAtCronInterval = Bool
+
+    alias ApproveAfterDays = Int32
+
+    alias AssociatedInstances = NamedTuple(
+      
+    )
+
+    alias Association = NamedTuple(
+      "Name" : (DocumentARN)?,
+      "InstanceId" : (InstanceId)?,
+      "AssociationId" : (AssociationId)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Targets" : (Targets)?,
+      "LastExecutionDate" : (DateTime)?,
+      "Overview" : (AssociationOverview)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "AssociationName" : (AssociationName)?
+    )
+
+    alias AssociationAlreadyExists = NamedTuple(
+      
+    )
+
+    alias AssociationComplianceSeverity = String
+
+    alias AssociationDescription = NamedTuple(
+      "Name" : (DocumentARN)?,
+      "InstanceId" : (InstanceId)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "Date" : (DateTime)?,
+      "LastUpdateAssociationDate" : (DateTime)?,
+      "Status" : (AssociationStatus)?,
+      "Overview" : (AssociationOverview)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "AutomationTargetParameterName" : (AutomationTargetParameterName)?,
+      "Parameters" : (Parameters)?,
+      "AssociationId" : (AssociationId)?,
+      "Targets" : (Targets)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "OutputLocation" : (InstanceAssociationOutputLocation)?,
+      "LastExecutionDate" : (DateTime)?,
+      "LastSuccessfulExecutionDate" : (DateTime)?,
+      "AssociationName" : (AssociationName)?,
+      "MaxErrors" : (MaxErrors)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "ComplianceSeverity" : (AssociationComplianceSeverity)?,
+      "SyncCompliance" : (AssociationSyncCompliance)?,
+      "ApplyOnlyAtCronInterval" : (ApplyOnlyAtCronInterval)?,
+      "TargetLocations" : (TargetLocations)?
+    )
+
+    alias AssociationDescriptionList = Array(AssociationDescription)
+
+    alias AssociationDoesNotExist = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AssociationExecution = NamedTuple(
+      "AssociationId" : (AssociationId)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "ExecutionId" : (AssociationExecutionId)?,
+      "Status" : (StatusName)?,
+      "DetailedStatus" : (StatusName)?,
+      "CreatedTime" : (DateTime)?,
+      "LastExecutionDate" : (DateTime)?,
+      "ResourceCountByStatus" : (ResourceCountByStatus)?
+    )
+
+    alias AssociationExecutionDoesNotExist = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AssociationExecutionFilter = NamedTuple(
+      "Key" : AssociationExecutionFilterKey,
+      "Value" : AssociationExecutionFilterValue,
+      "Type" : AssociationFilterOperatorType
+    )
+
+    alias AssociationExecutionFilterKey = String
+
+    alias AssociationExecutionFilterList = Array(AssociationExecutionFilter)
+
+    alias AssociationExecutionFilterValue = String
+
+    alias AssociationExecutionId = String
+
+    alias AssociationExecutionTarget = NamedTuple(
+      "AssociationId" : (AssociationId)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "ExecutionId" : (AssociationExecutionId)?,
+      "ResourceId" : (AssociationResourceId)?,
+      "ResourceType" : (AssociationResourceType)?,
+      "Status" : (StatusName)?,
+      "DetailedStatus" : (StatusName)?,
+      "LastExecutionDate" : (DateTime)?,
+      "OutputSource" : (OutputSource)?
+    )
+
+    alias AssociationExecutionTargetsFilter = NamedTuple(
+      "Key" : AssociationExecutionTargetsFilterKey,
+      "Value" : AssociationExecutionTargetsFilterValue
+    )
+
+    alias AssociationExecutionTargetsFilterKey = String
+
+    alias AssociationExecutionTargetsFilterList = Array(AssociationExecutionTargetsFilter)
+
+    alias AssociationExecutionTargetsFilterValue = String
+
+    alias AssociationExecutionTargetsList = Array(AssociationExecutionTarget)
+
+    alias AssociationExecutionsList = Array(AssociationExecution)
+
+    alias AssociationFilter = NamedTuple(
+      "key" : AssociationFilterKey,
+      "value" : AssociationFilterValue
+    )
+
+    alias AssociationFilterKey = String
+
+    alias AssociationFilterList = Array(AssociationFilter)
+
+    alias AssociationFilterOperatorType = String
+
+    alias AssociationFilterValue = String
+
+    alias AssociationId = String
+
+    alias AssociationIdList = Array(AssociationId)
+
+    alias AssociationLimitExceeded = NamedTuple(
+      
+    )
+
+    alias AssociationList = Array(Association)
+
+    alias AssociationName = String
+
+    alias AssociationOverview = NamedTuple(
+      "Status" : (StatusName)?,
+      "DetailedStatus" : (StatusName)?,
+      "AssociationStatusAggregatedCount" : (AssociationStatusAggregatedCount)?
+    )
+
+    alias AssociationResourceId = String
+
+    alias AssociationResourceType = String
+
+    alias AssociationStatus = NamedTuple(
+      "Date" : DateTime,
+      "Name" : AssociationStatusName,
+      "Message" : StatusMessage,
+      "AdditionalInfo" : (StatusAdditionalInfo)?
+    )
+
+    alias AssociationStatusAggregatedCount = Hash(StatusName,InstanceCount)
+
+    alias AssociationStatusName = String
+
+    alias AssociationSyncCompliance = String
+
+    alias AssociationVersion = String
+
+    alias AssociationVersionInfo = NamedTuple(
+      "AssociationId" : (AssociationId)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "CreatedDate" : (DateTime)?,
+      "Name" : (DocumentARN)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Parameters" : (Parameters)?,
+      "Targets" : (Targets)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "OutputLocation" : (InstanceAssociationOutputLocation)?,
+      "AssociationName" : (AssociationName)?,
+      "MaxErrors" : (MaxErrors)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "ComplianceSeverity" : (AssociationComplianceSeverity)?,
+      "SyncCompliance" : (AssociationSyncCompliance)?,
+      "ApplyOnlyAtCronInterval" : (ApplyOnlyAtCronInterval)?,
+      "TargetLocations" : (TargetLocations)?
+    )
+
+    alias AssociationVersionLimitExceeded = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AssociationVersionList = Array(AssociationVersionInfo)
+
+    alias AttachmentContent = NamedTuple(
+      "Name" : (AttachmentName)?,
+      "Size" : (ContentLength)?,
+      "Hash" : (AttachmentHash)?,
+      "HashType" : (AttachmentHashType)?,
+      "Url" : (AttachmentUrl)?
+    )
+
+    alias AttachmentContentList = Array(AttachmentContent)
+
+    alias AttachmentHash = String
+
+    alias AttachmentHashType = String
+
+    alias AttachmentIdentifier = String
+
+    alias AttachmentInformation = NamedTuple(
+      "Name" : (AttachmentName)?
+    )
+
+    alias AttachmentInformationList = Array(AttachmentInformation)
+
+    alias AttachmentName = String
+
+    alias AttachmentUrl = String
+
+    alias AttachmentsSource = NamedTuple(
+      "Key" : (AttachmentsSourceKey)?,
+      "Values" : (AttachmentsSourceValues)?,
+      "Name" : (AttachmentIdentifier)?
+    )
+
+    alias AttachmentsSourceKey = String
+
+    alias AttachmentsSourceList = Array(AttachmentsSource)
+
+    alias AttachmentsSourceValue = String
+
+    alias AttachmentsSourceValues = Array(AttachmentsSourceValue)
+
+    alias AttributeName = String
+
+    alias AttributeValue = String
+
+    alias AutomationActionName = String
+
+    alias AutomationDefinitionNotApprovedException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AutomationDefinitionNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AutomationDefinitionVersionNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AutomationExecution = NamedTuple(
+      "AutomationExecutionId" : (AutomationExecutionId)?,
+      "DocumentName" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "ExecutionStartTime" : (DateTime)?,
+      "ExecutionEndTime" : (DateTime)?,
+      "AutomationExecutionStatus" : (AutomationExecutionStatus)?,
+      "StepExecutions" : (StepExecutionList)?,
+      "StepExecutionsTruncated" : (Boolean)?,
+      "Parameters" : (AutomationParameterMap)?,
+      "Outputs" : (AutomationParameterMap)?,
+      "FailureMessage" : (String)?,
+      "Mode" : (ExecutionMode)?,
+      "ParentAutomationExecutionId" : (AutomationExecutionId)?,
+      "ExecutedBy" : (String)?,
+      "CurrentStepName" : (String)?,
+      "CurrentAction" : (String)?,
+      "TargetParameterName" : (AutomationParameterKey)?,
+      "Targets" : (Targets)?,
+      "TargetMaps" : (TargetMaps)?,
+      "ResolvedTargets" : (ResolvedTargets)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "Target" : (String)?,
+      "TargetLocations" : (TargetLocations)?,
+      "ProgressCounters" : (ProgressCounters)?,
+      "AutomationSubtype" : (AutomationSubtype)?,
+      "ScheduledTime" : (DateTime)?,
+      "Runbooks" : (Runbooks)?,
+      "OpsItemId" : (String)?,
+      "AssociationId" : (String)?,
+      "ChangeRequestName" : (ChangeRequestName)?
+    )
+
+    alias AutomationExecutionFilter = NamedTuple(
+      "Key" : AutomationExecutionFilterKey,
+      "Values" : AutomationExecutionFilterValueList
+    )
+
+    alias AutomationExecutionFilterKey = String
+
+    alias AutomationExecutionFilterList = Array(AutomationExecutionFilter)
+
+    alias AutomationExecutionFilterValue = String
+
+    alias AutomationExecutionFilterValueList = Array(AutomationExecutionFilterValue)
+
+    alias AutomationExecutionId = String
+
+    alias AutomationExecutionLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AutomationExecutionMetadata = NamedTuple(
+      "AutomationExecutionId" : (AutomationExecutionId)?,
+      "DocumentName" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "AutomationExecutionStatus" : (AutomationExecutionStatus)?,
+      "ExecutionStartTime" : (DateTime)?,
+      "ExecutionEndTime" : (DateTime)?,
+      "ExecutedBy" : (String)?,
+      "LogFile" : (String)?,
+      "Outputs" : (AutomationParameterMap)?,
+      "Mode" : (ExecutionMode)?,
+      "ParentAutomationExecutionId" : (AutomationExecutionId)?,
+      "CurrentStepName" : (String)?,
+      "CurrentAction" : (String)?,
+      "FailureMessage" : (String)?,
+      "TargetParameterName" : (AutomationParameterKey)?,
+      "Targets" : (Targets)?,
+      "TargetMaps" : (TargetMaps)?,
+      "ResolvedTargets" : (ResolvedTargets)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "Target" : (String)?,
+      "AutomationType" : (AutomationType)?,
+      "AutomationSubtype" : (AutomationSubtype)?,
+      "ScheduledTime" : (DateTime)?,
+      "Runbooks" : (Runbooks)?,
+      "OpsItemId" : (String)?,
+      "AssociationId" : (String)?,
+      "ChangeRequestName" : (ChangeRequestName)?
+    )
+
+    alias AutomationExecutionMetadataList = Array(AutomationExecutionMetadata)
+
+    alias AutomationExecutionNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AutomationExecutionStatus = String
+
+    alias AutomationParameterKey = String
+
+    alias AutomationParameterMap = Hash(AutomationParameterKey,AutomationParameterValueList)
+
+    alias AutomationParameterValue = String
+
+    alias AutomationParameterValueList = Array(AutomationParameterValue)
+
+    alias AutomationStepNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias AutomationSubtype = String
+
+    alias AutomationTargetParameterName = String
+
+    alias AutomationType = String
+
+    alias BaselineDescription = String
+
+    alias BaselineId = String
+
+    alias BaselineName = String
+
+    alias BatchErrorMessage = String
+
+    alias Boolean = Bool
+
+    alias CalendarNameOrARN = String
+
+    alias CalendarNameOrARNList = Array(CalendarNameOrARN)
+
+    alias CalendarState = String
+
+    alias CancelCommandRequest = NamedTuple(
+      "CommandId" : CommandId,
+      "InstanceIds" : (InstanceIdList)?
+    )
+
+    alias CancelCommandResult = NamedTuple(
+      
+    )
+
+    alias CancelMaintenanceWindowExecutionRequest = NamedTuple(
+      "WindowExecutionId" : MaintenanceWindowExecutionId
+    )
+
+    alias CancelMaintenanceWindowExecutionResult = NamedTuple(
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?
+    )
+
+    alias ChangeRequestName = String
+
+    alias ClientToken = String
+
+    alias CloudWatchLogGroupName = String
+
+    alias CloudWatchOutputConfig = NamedTuple(
+      "CloudWatchLogGroupName" : (CloudWatchLogGroupName)?,
+      "CloudWatchOutputEnabled" : (CloudWatchOutputEnabled)?
+    )
+
+    alias CloudWatchOutputEnabled = Bool
+
+    alias Command = NamedTuple(
+      "CommandId" : (CommandId)?,
+      "DocumentName" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Comment" : (Comment)?,
+      "ExpiresAfter" : (DateTime)?,
+      "Parameters" : (Parameters)?,
+      "InstanceIds" : (InstanceIdList)?,
+      "Targets" : (Targets)?,
+      "RequestedDateTime" : (DateTime)?,
+      "Status" : (CommandStatus)?,
+      "StatusDetails" : (StatusDetails)?,
+      "OutputS3Region" : (S3Region)?,
+      "OutputS3BucketName" : (S3BucketName)?,
+      "OutputS3KeyPrefix" : (S3KeyPrefix)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "TargetCount" : (TargetCount)?,
+      "CompletedCount" : (CompletedCount)?,
+      "ErrorCount" : (ErrorCount)?,
+      "DeliveryTimedOutCount" : (DeliveryTimedOutCount)?,
+      "ServiceRole" : (ServiceRole)?,
+      "NotificationConfig" : (NotificationConfig)?,
+      "CloudWatchOutputConfig" : (CloudWatchOutputConfig)?,
+      "TimeoutSeconds" : (TimeoutSeconds)?
+    )
+
+    alias CommandFilter = NamedTuple(
+      "key" : CommandFilterKey,
+      "value" : CommandFilterValue
+    )
+
+    alias CommandFilterKey = String
+
+    alias CommandFilterList = Array(CommandFilter)
+
+    alias CommandFilterValue = String
+
+    alias CommandId = String
+
+    alias CommandInvocation = NamedTuple(
+      "CommandId" : (CommandId)?,
+      "InstanceId" : (InstanceId)?,
+      "InstanceName" : (InstanceTagName)?,
+      "Comment" : (Comment)?,
+      "DocumentName" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "RequestedDateTime" : (DateTime)?,
+      "Status" : (CommandInvocationStatus)?,
+      "StatusDetails" : (StatusDetails)?,
+      "TraceOutput" : (InvocationTraceOutput)?,
+      "StandardOutputUrl" : (Url)?,
+      "StandardErrorUrl" : (Url)?,
+      "CommandPlugins" : (CommandPluginList)?,
+      "ServiceRole" : (ServiceRole)?,
+      "NotificationConfig" : (NotificationConfig)?,
+      "CloudWatchOutputConfig" : (CloudWatchOutputConfig)?
+    )
+
+    alias CommandInvocationList = Array(CommandInvocation)
+
+    alias CommandInvocationStatus = String
+
+    alias CommandList = Array(Command)
+
+    alias CommandMaxResults = Int32
+
+    alias CommandPlugin = NamedTuple(
+      "Name" : (CommandPluginName)?,
+      "Status" : (CommandPluginStatus)?,
+      "StatusDetails" : (StatusDetails)?,
+      "ResponseCode" : (ResponseCode)?,
+      "ResponseStartDateTime" : (DateTime)?,
+      "ResponseFinishDateTime" : (DateTime)?,
+      "Output" : (CommandPluginOutput)?,
+      "StandardOutputUrl" : (Url)?,
+      "StandardErrorUrl" : (Url)?,
+      "OutputS3Region" : (S3Region)?,
+      "OutputS3BucketName" : (S3BucketName)?,
+      "OutputS3KeyPrefix" : (S3KeyPrefix)?
+    )
+
+    alias CommandPluginList = Array(CommandPlugin)
+
+    alias CommandPluginName = String
+
+    alias CommandPluginOutput = String
+
+    alias CommandPluginStatus = String
+
+    alias CommandStatus = String
+
+    alias Comment = String
+
+    alias CompletedCount = Int32
+
+    alias ComplianceExecutionId = String
+
+    alias ComplianceExecutionSummary = NamedTuple(
+      "ExecutionTime" : DateTime,
+      "ExecutionId" : (ComplianceExecutionId)?,
+      "ExecutionType" : (ComplianceExecutionType)?
+    )
+
+    alias ComplianceExecutionType = String
+
+    alias ComplianceFilterValue = String
+
+    alias ComplianceItem = NamedTuple(
+      "ComplianceType" : (ComplianceTypeName)?,
+      "ResourceType" : (ComplianceResourceType)?,
+      "ResourceId" : (ComplianceResourceId)?,
+      "Id" : (ComplianceItemId)?,
+      "Title" : (ComplianceItemTitle)?,
+      "Status" : (ComplianceStatus)?,
+      "Severity" : (ComplianceSeverity)?,
+      "ExecutionSummary" : (ComplianceExecutionSummary)?,
+      "Details" : (ComplianceItemDetails)?
+    )
+
+    alias ComplianceItemContentHash = String
+
+    alias ComplianceItemDetails = Hash(AttributeName,AttributeValue)
+
+    alias ComplianceItemEntry = NamedTuple(
+      "Id" : (ComplianceItemId)?,
+      "Title" : (ComplianceItemTitle)?,
+      "Severity" : ComplianceSeverity,
+      "Status" : ComplianceStatus,
+      "Details" : (ComplianceItemDetails)?
+    )
+
+    alias ComplianceItemEntryList = Array(ComplianceItemEntry)
+
+    alias ComplianceItemId = String
+
+    alias ComplianceItemList = Array(ComplianceItem)
+
+    alias ComplianceItemTitle = String
+
+    alias ComplianceQueryOperatorType = String
+
+    alias ComplianceResourceId = String
+
+    alias ComplianceResourceIdList = Array(ComplianceResourceId)
+
+    alias ComplianceResourceType = String
+
+    alias ComplianceResourceTypeList = Array(ComplianceResourceType)
+
+    alias ComplianceSeverity = String
+
+    alias ComplianceStatus = String
+
+    alias ComplianceStringFilter = NamedTuple(
+      "Key" : (ComplianceStringFilterKey)?,
+      "Values" : (ComplianceStringFilterValueList)?,
+      "Type" : (ComplianceQueryOperatorType)?
+    )
+
+    alias ComplianceStringFilterKey = String
+
+    alias ComplianceStringFilterList = Array(ComplianceStringFilter)
+
+    alias ComplianceStringFilterValueList = Array(ComplianceFilterValue)
+
+    alias ComplianceSummaryCount = Int32
+
+    alias ComplianceSummaryItem = NamedTuple(
+      "ComplianceType" : (ComplianceTypeName)?,
+      "CompliantSummary" : (CompliantSummary)?,
+      "NonCompliantSummary" : (NonCompliantSummary)?
+    )
+
+    alias ComplianceSummaryItemList = Array(ComplianceSummaryItem)
+
+    alias ComplianceTypeCountLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ComplianceTypeName = String
+
+    alias ComplianceUploadType = String
+
+    alias CompliantSummary = NamedTuple(
+      "CompliantCount" : (ComplianceSummaryCount)?,
+      "SeveritySummary" : (SeveritySummary)?
+    )
+
+    alias ComputerName = String
+
+    alias ConnectionStatus = String
+
+    alias ContentLength = Int64
+
+    alias CreateActivationRequest = NamedTuple(
+      "Description" : (ActivationDescription)?,
+      "DefaultInstanceName" : (DefaultInstanceName)?,
+      "IamRole" : IamRole,
+      "RegistrationLimit" : (RegistrationLimit)?,
+      "ExpirationDate" : (ExpirationDate)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateActivationResult = NamedTuple(
+      "ActivationId" : (ActivationId)?,
+      "ActivationCode" : (ActivationCode)?
+    )
+
+    alias CreateAssociationBatchRequest = NamedTuple(
+      "Entries" : CreateAssociationBatchRequestEntries
+    )
+
+    alias CreateAssociationBatchRequestEntries = Array(CreateAssociationBatchRequestEntry)
+
+    alias CreateAssociationBatchRequestEntry = NamedTuple(
+      "Name" : DocumentARN,
+      "InstanceId" : (InstanceId)?,
+      "Parameters" : (Parameters)?,
+      "AutomationTargetParameterName" : (AutomationTargetParameterName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Targets" : (Targets)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "OutputLocation" : (InstanceAssociationOutputLocation)?,
+      "AssociationName" : (AssociationName)?,
+      "MaxErrors" : (MaxErrors)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "ComplianceSeverity" : (AssociationComplianceSeverity)?,
+      "SyncCompliance" : (AssociationSyncCompliance)?,
+      "ApplyOnlyAtCronInterval" : (ApplyOnlyAtCronInterval)?,
+      "TargetLocations" : (TargetLocations)?
+    )
+
+    alias CreateAssociationBatchResult = NamedTuple(
+      "Successful" : (AssociationDescriptionList)?,
+      "Failed" : (FailedCreateAssociationList)?
+    )
+
+    alias CreateAssociationRequest = NamedTuple(
+      "Name" : DocumentARN,
+      "DocumentVersion" : (DocumentVersion)?,
+      "InstanceId" : (InstanceId)?,
+      "Parameters" : (Parameters)?,
+      "Targets" : (Targets)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "OutputLocation" : (InstanceAssociationOutputLocation)?,
+      "AssociationName" : (AssociationName)?,
+      "AutomationTargetParameterName" : (AutomationTargetParameterName)?,
+      "MaxErrors" : (MaxErrors)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "ComplianceSeverity" : (AssociationComplianceSeverity)?,
+      "SyncCompliance" : (AssociationSyncCompliance)?,
+      "ApplyOnlyAtCronInterval" : (ApplyOnlyAtCronInterval)?,
+      "TargetLocations" : (TargetLocations)?
+    )
+
+    alias CreateAssociationResult = NamedTuple(
+      "AssociationDescription" : (AssociationDescription)?
+    )
+
+    alias CreateDocumentRequest = NamedTuple(
+      "Content" : DocumentContent,
+      "Requires" : (DocumentRequiresList)?,
+      "Attachments" : (AttachmentsSourceList)?,
+      "Name" : DocumentName,
+      "VersionName" : (DocumentVersionName)?,
+      "DocumentType" : (DocumentType)?,
+      "DocumentFormat" : (DocumentFormat)?,
+      "TargetType" : (TargetType)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDocumentResult = NamedTuple(
+      "DocumentDescription" : (DocumentDescription)?
+    )
+
+    alias CreateMaintenanceWindowRequest = NamedTuple(
+      "Name" : MaintenanceWindowName,
+      "Description" : (MaintenanceWindowDescription)?,
+      "StartDate" : (MaintenanceWindowStringDateTime)?,
+      "EndDate" : (MaintenanceWindowStringDateTime)?,
+      "Schedule" : MaintenanceWindowSchedule,
+      "ScheduleTimezone" : (MaintenanceWindowTimezone)?,
+      "ScheduleOffset" : (MaintenanceWindowOffset)?,
+      "Duration" : MaintenanceWindowDurationHours,
+      "Cutoff" : MaintenanceWindowCutoff,
+      "AllowUnassociatedTargets" : MaintenanceWindowAllowUnassociatedTargets,
+      "ClientToken" : (ClientToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateMaintenanceWindowResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?
+    )
+
+    alias CreateOpsItemRequest = NamedTuple(
+      "Description" : OpsItemDescription,
+      "OpsItemType" : (OpsItemType)?,
+      "OperationalData" : (OpsItemOperationalData)?,
+      "Notifications" : (OpsItemNotifications)?,
+      "Priority" : (OpsItemPriority)?,
+      "RelatedOpsItems" : (RelatedOpsItems)?,
+      "Source" : OpsItemSource,
+      "Title" : OpsItemTitle,
+      "Tags" : (TagList)?,
+      "Category" : (OpsItemCategory)?,
+      "Severity" : (OpsItemSeverity)?,
+      "ActualStartTime" : (DateTime)?,
+      "ActualEndTime" : (DateTime)?,
+      "PlannedStartTime" : (DateTime)?,
+      "PlannedEndTime" : (DateTime)?
+    )
+
+    alias CreateOpsItemResponse = NamedTuple(
+      "OpsItemId" : (String)?
+    )
+
+    alias CreateOpsMetadataRequest = NamedTuple(
+      "ResourceId" : OpsMetadataResourceId,
+      "Metadata" : (MetadataMap)?
+    )
+
+    alias CreateOpsMetadataResult = NamedTuple(
+      "OpsMetadataArn" : (OpsMetadataArn)?
+    )
+
+    alias CreatePatchBaselineRequest = NamedTuple(
+      "OperatingSystem" : (OperatingSystem)?,
+      "Name" : BaselineName,
+      "GlobalFilters" : (PatchFilterGroup)?,
+      "ApprovalRules" : (PatchRuleGroup)?,
+      "ApprovedPatches" : (PatchIdList)?,
+      "ApprovedPatchesComplianceLevel" : (PatchComplianceLevel)?,
+      "ApprovedPatchesEnableNonSecurity" : (Boolean)?,
+      "RejectedPatches" : (PatchIdList)?,
+      "RejectedPatchesAction" : (PatchAction)?,
+      "Description" : (BaselineDescription)?,
+      "Sources" : (PatchSourceList)?,
+      "ClientToken" : (ClientToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreatePatchBaselineResult = NamedTuple(
+      "BaselineId" : (BaselineId)?
+    )
+
+    alias CreateResourceDataSyncRequest = NamedTuple(
+      "SyncName" : ResourceDataSyncName,
+      "S3Destination" : (ResourceDataSyncS3Destination)?,
+      "SyncType" : (ResourceDataSyncType)?,
+      "SyncSource" : (ResourceDataSyncSource)?
+    )
+
+    alias CreateResourceDataSyncResult = NamedTuple(
+      
+    )
+
+    alias CreatedDate = String | UInt64 | Time
+
+    alias CustomSchemaCountLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DateTime = String | UInt64 | Time
+
+    alias DefaultBaseline = Bool
+
+    alias DefaultInstanceName = String
+
+    alias DeleteActivationRequest = NamedTuple(
+      "ActivationId" : ActivationId
+    )
+
+    alias DeleteActivationResult = NamedTuple(
+      
+    )
+
+    alias DeleteAssociationRequest = NamedTuple(
+      "Name" : (DocumentARN)?,
+      "InstanceId" : (InstanceId)?,
+      "AssociationId" : (AssociationId)?
+    )
+
+    alias DeleteAssociationResult = NamedTuple(
+      
+    )
+
+    alias DeleteDocumentRequest = NamedTuple(
+      "Name" : DocumentName,
+      "DocumentVersion" : (DocumentVersion)?,
+      "VersionName" : (DocumentVersionName)?,
+      "Force" : (Boolean)?
+    )
+
+    alias DeleteDocumentResult = NamedTuple(
+      
+    )
+
+    alias DeleteInventoryRequest = NamedTuple(
+      "TypeName" : InventoryItemTypeName,
+      "SchemaDeleteOption" : (InventorySchemaDeleteOption)?,
+      "DryRun" : (DryRun)?,
+      "ClientToken" : (UUID)?
+    )
+
+    alias DeleteInventoryResult = NamedTuple(
+      "DeletionId" : (UUID)?,
+      "TypeName" : (InventoryItemTypeName)?,
+      "DeletionSummary" : (InventoryDeletionSummary)?
+    )
+
+    alias DeleteMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId
+    )
+
+    alias DeleteMaintenanceWindowResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?
+    )
+
+    alias DeleteOpsMetadataRequest = NamedTuple(
+      "OpsMetadataArn" : OpsMetadataArn
+    )
+
+    alias DeleteOpsMetadataResult = NamedTuple(
+      
+    )
+
+    alias DeleteParameterRequest = NamedTuple(
+      "Name" : PSParameterName
+    )
+
+    alias DeleteParameterResult = NamedTuple(
+      
+    )
+
+    alias DeleteParametersRequest = NamedTuple(
+      "Names" : ParameterNameList
+    )
+
+    alias DeleteParametersResult = NamedTuple(
+      "DeletedParameters" : (ParameterNameList)?,
+      "InvalidParameters" : (ParameterNameList)?
+    )
+
+    alias DeletePatchBaselineRequest = NamedTuple(
+      "BaselineId" : BaselineId
+    )
+
+    alias DeletePatchBaselineResult = NamedTuple(
+      "BaselineId" : (BaselineId)?
+    )
+
+    alias DeleteResourceDataSyncRequest = NamedTuple(
+      "SyncName" : ResourceDataSyncName,
+      "SyncType" : (ResourceDataSyncType)?
+    )
+
+    alias DeleteResourceDataSyncResult = NamedTuple(
+      
+    )
+
+    alias DeliveryTimedOutCount = Int32
+
+    alias DeregisterManagedInstanceRequest = NamedTuple(
+      "InstanceId" : ManagedInstanceId
+    )
+
+    alias DeregisterManagedInstanceResult = NamedTuple(
+      
+    )
+
+    alias DeregisterPatchBaselineForPatchGroupRequest = NamedTuple(
+      "BaselineId" : BaselineId,
+      "PatchGroup" : PatchGroup
+    )
+
+    alias DeregisterPatchBaselineForPatchGroupResult = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "PatchGroup" : (PatchGroup)?
+    )
+
+    alias DeregisterTargetFromMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "WindowTargetId" : MaintenanceWindowTargetId,
+      "Safe" : (Boolean)?
+    )
+
+    alias DeregisterTargetFromMaintenanceWindowResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTargetId" : (MaintenanceWindowTargetId)?
+    )
+
+    alias DeregisterTaskFromMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "WindowTaskId" : MaintenanceWindowTaskId
+    )
+
+    alias DeregisterTaskFromMaintenanceWindowResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTaskId" : (MaintenanceWindowTaskId)?
+    )
+
+    alias DescribeActivationsFilter = NamedTuple(
+      "FilterKey" : (DescribeActivationsFilterKeys)?,
+      "FilterValues" : (StringList)?
+    )
+
+    alias DescribeActivationsFilterKeys = String
+
+    alias DescribeActivationsFilterList = Array(DescribeActivationsFilter)
+
+    alias DescribeActivationsRequest = NamedTuple(
+      "Filters" : (DescribeActivationsFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeActivationsResult = NamedTuple(
+      "ActivationList" : (ActivationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAssociationExecutionTargetsRequest = NamedTuple(
+      "AssociationId" : AssociationId,
+      "ExecutionId" : AssociationExecutionId,
+      "Filters" : (AssociationExecutionTargetsFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAssociationExecutionTargetsResult = NamedTuple(
+      "AssociationExecutionTargets" : (AssociationExecutionTargetsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAssociationExecutionsRequest = NamedTuple(
+      "AssociationId" : AssociationId,
+      "Filters" : (AssociationExecutionFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAssociationExecutionsResult = NamedTuple(
+      "AssociationExecutions" : (AssociationExecutionsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAssociationRequest = NamedTuple(
+      "Name" : (DocumentARN)?,
+      "InstanceId" : (InstanceId)?,
+      "AssociationId" : (AssociationId)?,
+      "AssociationVersion" : (AssociationVersion)?
+    )
+
+    alias DescribeAssociationResult = NamedTuple(
+      "AssociationDescription" : (AssociationDescription)?
+    )
+
+    alias DescribeAutomationExecutionsRequest = NamedTuple(
+      "Filters" : (AutomationExecutionFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAutomationExecutionsResult = NamedTuple(
+      "AutomationExecutionMetadataList" : (AutomationExecutionMetadataList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAutomationStepExecutionsRequest = NamedTuple(
+      "AutomationExecutionId" : AutomationExecutionId,
+      "Filters" : (StepExecutionFilterList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "ReverseOrder" : (Boolean)?
+    )
+
+    alias DescribeAutomationStepExecutionsResult = NamedTuple(
+      "StepExecutions" : (StepExecutionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAvailablePatchesRequest = NamedTuple(
+      "Filters" : (PatchOrchestratorFilterList)?,
+      "MaxResults" : (PatchBaselineMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeAvailablePatchesResult = NamedTuple(
+      "Patches" : (PatchList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeDocumentPermissionRequest = NamedTuple(
+      "Name" : DocumentName,
+      "PermissionType" : DocumentPermissionType
+    )
+
+    alias DescribeDocumentPermissionResponse = NamedTuple(
+      "AccountIds" : (AccountIdList)?,
+      "AccountSharingInfoList" : (AccountSharingInfoList)?
+    )
+
+    alias DescribeDocumentRequest = NamedTuple(
+      "Name" : DocumentARN,
+      "DocumentVersion" : (DocumentVersion)?,
+      "VersionName" : (DocumentVersionName)?
+    )
+
+    alias DescribeDocumentResult = NamedTuple(
+      "Document" : (DocumentDescription)?
+    )
+
+    alias DescribeEffectiveInstanceAssociationsRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "MaxResults" : (EffectiveInstanceAssociationMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeEffectiveInstanceAssociationsResult = NamedTuple(
+      "Associations" : (InstanceAssociationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeEffectivePatchesForPatchBaselineRequest = NamedTuple(
+      "BaselineId" : BaselineId,
+      "MaxResults" : (PatchBaselineMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeEffectivePatchesForPatchBaselineResult = NamedTuple(
+      "EffectivePatches" : (EffectivePatchList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstanceAssociationsStatusRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstanceAssociationsStatusResult = NamedTuple(
+      "InstanceAssociationStatusInfos" : (InstanceAssociationStatusInfos)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstanceInformationRequest = NamedTuple(
+      "InstanceInformationFilterList" : (InstanceInformationFilterList)?,
+      "Filters" : (InstanceInformationStringFilterList)?,
+      "MaxResults" : (MaxResultsEC2Compatible)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstanceInformationResult = NamedTuple(
+      "InstanceInformationList" : (InstanceInformationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstancePatchStatesForPatchGroupRequest = NamedTuple(
+      "PatchGroup" : PatchGroup,
+      "Filters" : (InstancePatchStateFilterList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (PatchComplianceMaxResults)?
+    )
+
+    alias DescribeInstancePatchStatesForPatchGroupResult = NamedTuple(
+      "InstancePatchStates" : (InstancePatchStatesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstancePatchStatesRequest = NamedTuple(
+      "InstanceIds" : InstanceIdList,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (PatchComplianceMaxResults)?
+    )
+
+    alias DescribeInstancePatchStatesResult = NamedTuple(
+      "InstancePatchStates" : (InstancePatchStateList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInstancePatchesRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "Filters" : (PatchOrchestratorFilterList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (PatchComplianceMaxResults)?
+    )
+
+    alias DescribeInstancePatchesResult = NamedTuple(
+      "Patches" : (PatchComplianceDataList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeInventoryDeletionsRequest = NamedTuple(
+      "DeletionId" : (UUID)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias DescribeInventoryDeletionsResult = NamedTuple(
+      "InventoryDeletions" : (InventoryDeletionsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowExecutionTaskInvocationsRequest = NamedTuple(
+      "WindowExecutionId" : MaintenanceWindowExecutionId,
+      "TaskId" : MaintenanceWindowExecutionTaskId,
+      "Filters" : (MaintenanceWindowFilterList)?,
+      "MaxResults" : (MaintenanceWindowMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowExecutionTaskInvocationsResult = NamedTuple(
+      "WindowExecutionTaskInvocationIdentities" : (MaintenanceWindowExecutionTaskInvocationIdentityList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowExecutionTasksRequest = NamedTuple(
+      "WindowExecutionId" : MaintenanceWindowExecutionId,
+      "Filters" : (MaintenanceWindowFilterList)?,
+      "MaxResults" : (MaintenanceWindowMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowExecutionTasksResult = NamedTuple(
+      "WindowExecutionTaskIdentities" : (MaintenanceWindowExecutionTaskIdentityList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowExecutionsRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "Filters" : (MaintenanceWindowFilterList)?,
+      "MaxResults" : (MaintenanceWindowMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowExecutionsResult = NamedTuple(
+      "WindowExecutions" : (MaintenanceWindowExecutionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowScheduleRequest = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "Targets" : (Targets)?,
+      "ResourceType" : (MaintenanceWindowResourceType)?,
+      "Filters" : (PatchOrchestratorFilterList)?,
+      "MaxResults" : (MaintenanceWindowSearchMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowScheduleResult = NamedTuple(
+      "ScheduledWindowExecutions" : (ScheduledWindowExecutionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowTargetsRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "Filters" : (MaintenanceWindowFilterList)?,
+      "MaxResults" : (MaintenanceWindowMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowTargetsResult = NamedTuple(
+      "Targets" : (MaintenanceWindowTargetList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowTasksRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "Filters" : (MaintenanceWindowFilterList)?,
+      "MaxResults" : (MaintenanceWindowMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowTasksResult = NamedTuple(
+      "Tasks" : (MaintenanceWindowTaskList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowsForTargetRequest = NamedTuple(
+      "Targets" : Targets,
+      "ResourceType" : MaintenanceWindowResourceType,
+      "MaxResults" : (MaintenanceWindowSearchMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowsForTargetResult = NamedTuple(
+      "WindowIdentities" : (MaintenanceWindowsForTargetList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowsRequest = NamedTuple(
+      "Filters" : (MaintenanceWindowFilterList)?,
+      "MaxResults" : (MaintenanceWindowMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeMaintenanceWindowsResult = NamedTuple(
+      "WindowIdentities" : (MaintenanceWindowIdentityList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeOpsItemsRequest = NamedTuple(
+      "OpsItemFilters" : (OpsItemFilters)?,
+      "MaxResults" : (OpsItemMaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias DescribeOpsItemsResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "OpsItemSummaries" : (OpsItemSummaries)?
+    )
+
+    alias DescribeParametersRequest = NamedTuple(
+      "Filters" : (ParametersFilterList)?,
+      "ParameterFilters" : (ParameterStringFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeParametersResult = NamedTuple(
+      "Parameters" : (ParameterMetadataList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePatchBaselinesRequest = NamedTuple(
+      "Filters" : (PatchOrchestratorFilterList)?,
+      "MaxResults" : (PatchBaselineMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePatchBaselinesResult = NamedTuple(
+      "BaselineIdentities" : (PatchBaselineIdentityList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePatchGroupStateRequest = NamedTuple(
+      "PatchGroup" : PatchGroup
+    )
+
+    alias DescribePatchGroupStateResult = NamedTuple(
+      "Instances" : (Integer)?,
+      "InstancesWithInstalledPatches" : (Integer)?,
+      "InstancesWithInstalledOtherPatches" : (Integer)?,
+      "InstancesWithInstalledPendingRebootPatches" : (InstancesCount)?,
+      "InstancesWithInstalledRejectedPatches" : (InstancesCount)?,
+      "InstancesWithMissingPatches" : (Integer)?,
+      "InstancesWithFailedPatches" : (Integer)?,
+      "InstancesWithNotApplicablePatches" : (Integer)?,
+      "InstancesWithUnreportedNotApplicablePatches" : (Integer)?
+    )
+
+    alias DescribePatchGroupsRequest = NamedTuple(
+      "MaxResults" : (PatchBaselineMaxResults)?,
+      "Filters" : (PatchOrchestratorFilterList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePatchGroupsResult = NamedTuple(
+      "Mappings" : (PatchGroupPatchBaselineMappingList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePatchPropertiesRequest = NamedTuple(
+      "OperatingSystem" : OperatingSystem,
+      "Property" : PatchProperty,
+      "PatchSet" : (PatchSet)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribePatchPropertiesResult = NamedTuple(
+      "Properties" : (PatchPropertiesList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeSessionsRequest = NamedTuple(
+      "State" : SessionState,
+      "MaxResults" : (SessionMaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (SessionFilterList)?
+    )
+
+    alias DescribeSessionsResponse = NamedTuple(
+      "Sessions" : (SessionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescriptionInDocument = String
+
+    alias DocumentARN = String
+
+    alias DocumentAlreadyExists = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DocumentAuthor = String
+
+    alias DocumentContent = String
+
+    alias DocumentDefaultVersionDescription = NamedTuple(
+      "Name" : (DocumentName)?,
+      "DefaultVersion" : (DocumentVersion)?,
+      "DefaultVersionName" : (DocumentVersionName)?
+    )
+
+    alias DocumentDescription = NamedTuple(
+      "Sha1" : (DocumentSha1)?,
+      "Hash" : (DocumentHash)?,
+      "HashType" : (DocumentHashType)?,
+      "Name" : (DocumentARN)?,
+      "VersionName" : (DocumentVersionName)?,
+      "Owner" : (DocumentOwner)?,
+      "CreatedDate" : (DateTime)?,
+      "Status" : (DocumentStatus)?,
+      "StatusInformation" : (DocumentStatusInformation)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Description" : (DescriptionInDocument)?,
+      "Parameters" : (DocumentParameterList)?,
+      "PlatformTypes" : (PlatformTypeList)?,
+      "DocumentType" : (DocumentType)?,
+      "SchemaVersion" : (DocumentSchemaVersion)?,
+      "LatestVersion" : (DocumentVersion)?,
+      "DefaultVersion" : (DocumentVersion)?,
+      "DocumentFormat" : (DocumentFormat)?,
+      "TargetType" : (TargetType)?,
+      "Tags" : (TagList)?,
+      "AttachmentsInformation" : (AttachmentInformationList)?,
+      "Requires" : (DocumentRequiresList)?,
+      "Author" : (DocumentAuthor)?,
+      "ReviewInformation" : (ReviewInformationList)?,
+      "ApprovedVersion" : (DocumentVersion)?,
+      "PendingReviewVersion" : (DocumentVersion)?,
+      "ReviewStatus" : (ReviewStatus)?
+    )
+
+    alias DocumentFilter = NamedTuple(
+      "key" : DocumentFilterKey,
+      "value" : DocumentFilterValue
+    )
+
+    alias DocumentFilterKey = String
+
+    alias DocumentFilterList = Array(DocumentFilter)
+
+    alias DocumentFilterValue = String
+
+    alias DocumentFormat = String
+
+    alias DocumentHash = String
+
+    alias DocumentHashType = String
+
+    alias DocumentIdentifier = NamedTuple(
+      "Name" : (DocumentARN)?,
+      "Owner" : (DocumentOwner)?,
+      "VersionName" : (DocumentVersionName)?,
+      "PlatformTypes" : (PlatformTypeList)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "DocumentType" : (DocumentType)?,
+      "SchemaVersion" : (DocumentSchemaVersion)?,
+      "DocumentFormat" : (DocumentFormat)?,
+      "TargetType" : (TargetType)?,
+      "Tags" : (TagList)?,
+      "Requires" : (DocumentRequiresList)?,
+      "ReviewStatus" : (ReviewStatus)?,
+      "Author" : (DocumentAuthor)?
+    )
+
+    alias DocumentIdentifierList = Array(DocumentIdentifier)
+
+    alias DocumentKeyValuesFilter = NamedTuple(
+      "Key" : (DocumentKeyValuesFilterKey)?,
+      "Values" : (DocumentKeyValuesFilterValues)?
+    )
+
+    alias DocumentKeyValuesFilterKey = String
+
+    alias DocumentKeyValuesFilterList = Array(DocumentKeyValuesFilter)
+
+    alias DocumentKeyValuesFilterValue = String
+
+    alias DocumentKeyValuesFilterValues = Array(DocumentKeyValuesFilterValue)
+
+    alias DocumentLimitExceeded = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DocumentMetadataEnum = String
+
+    alias DocumentMetadataResponseInfo = NamedTuple(
+      "ReviewerResponse" : (DocumentReviewerResponseList)?
+    )
+
+    alias DocumentName = String
+
+    alias DocumentOwner = String
+
+    alias DocumentParameter = NamedTuple(
+      "Name" : (DocumentParameterName)?,
+      "Type" : (DocumentParameterType)?,
+      "Description" : (DocumentParameterDescrption)?,
+      "DefaultValue" : (DocumentParameterDefaultValue)?
+    )
+
+    alias DocumentParameterDefaultValue = String
+
+    alias DocumentParameterDescrption = String
+
+    alias DocumentParameterList = Array(DocumentParameter)
+
+    alias DocumentParameterName = String
+
+    alias DocumentParameterType = String
+
+    alias DocumentPermissionLimit = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DocumentPermissionType = String
+
+    alias DocumentRequires = NamedTuple(
+      "Name" : DocumentARN,
+      "Version" : (DocumentVersion)?
+    )
+
+    alias DocumentRequiresList = Array(DocumentRequires)
+
+    alias DocumentReviewAction = String
+
+    alias DocumentReviewComment = String
+
+    alias DocumentReviewCommentList = Array(DocumentReviewCommentSource)
+
+    alias DocumentReviewCommentSource = NamedTuple(
+      "Type" : (DocumentReviewCommentType)?,
+      "Content" : (DocumentReviewComment)?
+    )
+
+    alias DocumentReviewCommentType = String
+
+    alias DocumentReviewerResponseList = Array(DocumentReviewerResponseSource)
+
+    alias DocumentReviewerResponseSource = NamedTuple(
+      "CreateTime" : (DateTime)?,
+      "UpdatedTime" : (DateTime)?,
+      "ReviewStatus" : (ReviewStatus)?,
+      "Comment" : (DocumentReviewCommentList)?,
+      "Reviewer" : (Reviewer)?
+    )
+
+    alias DocumentReviews = NamedTuple(
+      "Action" : DocumentReviewAction,
+      "Comment" : (DocumentReviewCommentList)?
+    )
+
+    alias DocumentSchemaVersion = String
+
+    alias DocumentSha1 = String
+
+    alias DocumentStatus = String
+
+    alias DocumentStatusInformation = String
+
+    alias DocumentType = String
+
+    alias DocumentVersion = String
+
+    alias DocumentVersionInfo = NamedTuple(
+      "Name" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "VersionName" : (DocumentVersionName)?,
+      "CreatedDate" : (DateTime)?,
+      "IsDefaultVersion" : (Boolean)?,
+      "DocumentFormat" : (DocumentFormat)?,
+      "Status" : (DocumentStatus)?,
+      "StatusInformation" : (DocumentStatusInformation)?,
+      "ReviewStatus" : (ReviewStatus)?
+    )
+
+    alias DocumentVersionLimitExceeded = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DocumentVersionList = Array(DocumentVersionInfo)
+
+    alias DocumentVersionName = String
+
+    alias DocumentVersionNumber = String
+
+    alias DoesNotExistException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DryRun = Bool
+
+    alias DuplicateDocumentContent = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DuplicateDocumentVersionName = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias DuplicateInstanceId = NamedTuple(
+      
+    )
+
+    alias EffectiveInstanceAssociationMaxResults = Int32
+
+    alias EffectivePatch = NamedTuple(
+      "Patch" : (Patch)?,
+      "PatchStatus" : (PatchStatus)?
+    )
+
+    alias EffectivePatchList = Array(EffectivePatch)
+
+    alias ErrorCount = Int32
+
+    alias ExecutionMode = String
+
+    alias ExecutionRoleName = String
+
+    alias ExpirationDate = String | UInt64 | Time
+
+    alias FailedCreateAssociation = NamedTuple(
+      "Entry" : (CreateAssociationBatchRequestEntry)?,
+      "Message" : (BatchErrorMessage)?,
+      "Fault" : (Fault)?
+    )
+
+    alias FailedCreateAssociationList = Array(FailedCreateAssociation)
+
+    alias FailureDetails = NamedTuple(
+      "FailureStage" : (String)?,
+      "FailureType" : (String)?,
+      "Details" : (AutomationParameterMap)?
+    )
+
+    alias Fault = String
+
+    alias FeatureNotAvailableException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias GetAutomationExecutionRequest = NamedTuple(
+      "AutomationExecutionId" : AutomationExecutionId
+    )
+
+    alias GetAutomationExecutionResult = NamedTuple(
+      "AutomationExecution" : (AutomationExecution)?
+    )
+
+    alias GetCalendarStateRequest = NamedTuple(
+      "CalendarNames" : CalendarNameOrARNList,
+      "AtTime" : (ISO8601String)?
+    )
+
+    alias GetCalendarStateResponse = NamedTuple(
+      "State" : (CalendarState)?,
+      "AtTime" : (ISO8601String)?,
+      "NextTransitionTime" : (ISO8601String)?
+    )
+
+    alias GetCommandInvocationRequest = NamedTuple(
+      "CommandId" : CommandId,
+      "InstanceId" : InstanceId,
+      "PluginName" : (CommandPluginName)?
+    )
+
+    alias GetCommandInvocationResult = NamedTuple(
+      "CommandId" : (CommandId)?,
+      "InstanceId" : (InstanceId)?,
+      "Comment" : (Comment)?,
+      "DocumentName" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "PluginName" : (CommandPluginName)?,
+      "ResponseCode" : (ResponseCode)?,
+      "ExecutionStartDateTime" : (StringDateTime)?,
+      "ExecutionElapsedTime" : (StringDateTime)?,
+      "ExecutionEndDateTime" : (StringDateTime)?,
+      "Status" : (CommandInvocationStatus)?,
+      "StatusDetails" : (StatusDetails)?,
+      "StandardOutputContent" : (StandardOutputContent)?,
+      "StandardOutputUrl" : (Url)?,
+      "StandardErrorContent" : (StandardErrorContent)?,
+      "StandardErrorUrl" : (Url)?,
+      "CloudWatchOutputConfig" : (CloudWatchOutputConfig)?
+    )
+
+    alias GetConnectionStatusRequest = NamedTuple(
+      "Target" : SessionTarget
+    )
+
+    alias GetConnectionStatusResponse = NamedTuple(
+      "Target" : (SessionTarget)?,
+      "Status" : (ConnectionStatus)?
+    )
+
+    alias GetDefaultPatchBaselineRequest = NamedTuple(
+      "OperatingSystem" : (OperatingSystem)?
+    )
+
+    alias GetDefaultPatchBaselineResult = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "OperatingSystem" : (OperatingSystem)?
+    )
+
+    alias GetDeployablePatchSnapshotForInstanceRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "SnapshotId" : SnapshotId
+    )
+
+    alias GetDeployablePatchSnapshotForInstanceResult = NamedTuple(
+      "InstanceId" : (InstanceId)?,
+      "SnapshotId" : (SnapshotId)?,
+      "SnapshotDownloadUrl" : (SnapshotDownloadUrl)?,
+      "Product" : (Product)?
+    )
+
+    alias GetDocumentRequest = NamedTuple(
+      "Name" : DocumentARN,
+      "VersionName" : (DocumentVersionName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "DocumentFormat" : (DocumentFormat)?
+    )
+
+    alias GetDocumentResult = NamedTuple(
+      "Name" : (DocumentARN)?,
+      "VersionName" : (DocumentVersionName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Status" : (DocumentStatus)?,
+      "StatusInformation" : (DocumentStatusInformation)?,
+      "Content" : (DocumentContent)?,
+      "DocumentType" : (DocumentType)?,
+      "DocumentFormat" : (DocumentFormat)?,
+      "Requires" : (DocumentRequiresList)?,
+      "AttachmentsContent" : (AttachmentContentList)?,
+      "ReviewStatus" : (ReviewStatus)?
+    )
+
+    alias GetInventoryRequest = NamedTuple(
+      "Filters" : (InventoryFilterList)?,
+      "Aggregators" : (InventoryAggregatorList)?,
+      "ResultAttributes" : (ResultAttributeList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias GetInventoryResult = NamedTuple(
+      "Entities" : (InventoryResultEntityList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetInventorySchemaMaxResults = Int32
+
+    alias GetInventorySchemaRequest = NamedTuple(
+      "TypeName" : (InventoryItemTypeNameFilter)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (GetInventorySchemaMaxResults)?,
+      "Aggregator" : (AggregatorSchemaOnly)?,
+      "SubType" : (IsSubTypeSchema)?
+    )
+
+    alias GetInventorySchemaResult = NamedTuple(
+      "Schemas" : (InventoryItemSchemaResultList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetMaintenanceWindowExecutionRequest = NamedTuple(
+      "WindowExecutionId" : MaintenanceWindowExecutionId
+    )
+
+    alias GetMaintenanceWindowExecutionResult = NamedTuple(
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?,
+      "TaskIds" : (MaintenanceWindowExecutionTaskIdList)?,
+      "Status" : (MaintenanceWindowExecutionStatus)?,
+      "StatusDetails" : (MaintenanceWindowExecutionStatusDetails)?,
+      "StartTime" : (DateTime)?,
+      "EndTime" : (DateTime)?
+    )
+
+    alias GetMaintenanceWindowExecutionTaskInvocationRequest = NamedTuple(
+      "WindowExecutionId" : MaintenanceWindowExecutionId,
+      "TaskId" : MaintenanceWindowExecutionTaskId,
+      "InvocationId" : MaintenanceWindowExecutionTaskInvocationId
+    )
+
+    alias GetMaintenanceWindowExecutionTaskInvocationResult = NamedTuple(
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?,
+      "TaskExecutionId" : (MaintenanceWindowExecutionTaskId)?,
+      "InvocationId" : (MaintenanceWindowExecutionTaskInvocationId)?,
+      "ExecutionId" : (MaintenanceWindowExecutionTaskExecutionId)?,
+      "TaskType" : (MaintenanceWindowTaskType)?,
+      "Parameters" : (MaintenanceWindowExecutionTaskInvocationParameters)?,
+      "Status" : (MaintenanceWindowExecutionStatus)?,
+      "StatusDetails" : (MaintenanceWindowExecutionStatusDetails)?,
+      "StartTime" : (DateTime)?,
+      "EndTime" : (DateTime)?,
+      "OwnerInformation" : (OwnerInformation)?,
+      "WindowTargetId" : (MaintenanceWindowTaskTargetId)?
+    )
+
+    alias GetMaintenanceWindowExecutionTaskRequest = NamedTuple(
+      "WindowExecutionId" : MaintenanceWindowExecutionId,
+      "TaskId" : MaintenanceWindowExecutionTaskId
+    )
+
+    alias GetMaintenanceWindowExecutionTaskResult = NamedTuple(
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?,
+      "TaskExecutionId" : (MaintenanceWindowExecutionTaskId)?,
+      "TaskArn" : (MaintenanceWindowTaskArn)?,
+      "ServiceRole" : (ServiceRole)?,
+      "Type" : (MaintenanceWindowTaskType)?,
+      "TaskParameters" : (MaintenanceWindowTaskParametersList)?,
+      "Priority" : (MaintenanceWindowTaskPriority)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "Status" : (MaintenanceWindowExecutionStatus)?,
+      "StatusDetails" : (MaintenanceWindowExecutionStatusDetails)?,
+      "StartTime" : (DateTime)?,
+      "EndTime" : (DateTime)?
+    )
+
+    alias GetMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId
+    )
+
+    alias GetMaintenanceWindowResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "StartDate" : (MaintenanceWindowStringDateTime)?,
+      "EndDate" : (MaintenanceWindowStringDateTime)?,
+      "Schedule" : (MaintenanceWindowSchedule)?,
+      "ScheduleTimezone" : (MaintenanceWindowTimezone)?,
+      "ScheduleOffset" : (MaintenanceWindowOffset)?,
+      "NextExecutionTime" : (MaintenanceWindowStringDateTime)?,
+      "Duration" : (MaintenanceWindowDurationHours)?,
+      "Cutoff" : (MaintenanceWindowCutoff)?,
+      "AllowUnassociatedTargets" : (MaintenanceWindowAllowUnassociatedTargets)?,
+      "Enabled" : (MaintenanceWindowEnabled)?,
+      "CreatedDate" : (DateTime)?,
+      "ModifiedDate" : (DateTime)?
+    )
+
+    alias GetMaintenanceWindowTaskRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "WindowTaskId" : MaintenanceWindowTaskId
+    )
+
+    alias GetMaintenanceWindowTaskResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTaskId" : (MaintenanceWindowTaskId)?,
+      "Targets" : (Targets)?,
+      "TaskArn" : (MaintenanceWindowTaskArn)?,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "TaskType" : (MaintenanceWindowTaskType)?,
+      "TaskParameters" : (MaintenanceWindowTaskParameters)?,
+      "TaskInvocationParameters" : (MaintenanceWindowTaskInvocationParameters)?,
+      "Priority" : (MaintenanceWindowTaskPriority)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "LoggingInfo" : (LoggingInfo)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?
+    )
+
+    alias GetOpsItemRequest = NamedTuple(
+      "OpsItemId" : OpsItemId
+    )
+
+    alias GetOpsItemResponse = NamedTuple(
+      "OpsItem" : (OpsItem)?
+    )
+
+    alias GetOpsMetadataMaxResults = Int32
+
+    alias GetOpsMetadataRequest = NamedTuple(
+      "OpsMetadataArn" : OpsMetadataArn,
+      "MaxResults" : (GetOpsMetadataMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetOpsMetadataResult = NamedTuple(
+      "ResourceId" : (OpsMetadataResourceId)?,
+      "Metadata" : (MetadataMap)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetOpsSummaryRequest = NamedTuple(
+      "SyncName" : (ResourceDataSyncName)?,
+      "Filters" : (OpsFilterList)?,
+      "Aggregators" : (OpsAggregatorList)?,
+      "ResultAttributes" : (OpsResultAttributeList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias GetOpsSummaryResult = NamedTuple(
+      "Entities" : (OpsEntityList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetParameterHistoryRequest = NamedTuple(
+      "Name" : PSParameterName,
+      "WithDecryption" : (Boolean)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetParameterHistoryResult = NamedTuple(
+      "Parameters" : (ParameterHistoryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetParameterRequest = NamedTuple(
+      "Name" : PSParameterName,
+      "WithDecryption" : (Boolean)?
+    )
+
+    alias GetParameterResult = NamedTuple(
+      "Parameter" : (Parameter)?
+    )
+
+    alias GetParametersByPathMaxResults = Int32
+
+    alias GetParametersByPathRequest = NamedTuple(
+      "Path" : PSParameterName,
+      "Recursive" : (Boolean)?,
+      "ParameterFilters" : (ParameterStringFilterList)?,
+      "WithDecryption" : (Boolean)?,
+      "MaxResults" : (GetParametersByPathMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetParametersByPathResult = NamedTuple(
+      "Parameters" : (ParameterList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias GetParametersRequest = NamedTuple(
+      "Names" : ParameterNameList,
+      "WithDecryption" : (Boolean)?
+    )
+
+    alias GetParametersResult = NamedTuple(
+      "Parameters" : (ParameterList)?,
+      "InvalidParameters" : (ParameterNameList)?
+    )
+
+    alias GetPatchBaselineForPatchGroupRequest = NamedTuple(
+      "PatchGroup" : PatchGroup,
+      "OperatingSystem" : (OperatingSystem)?
+    )
+
+    alias GetPatchBaselineForPatchGroupResult = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "PatchGroup" : (PatchGroup)?,
+      "OperatingSystem" : (OperatingSystem)?
+    )
+
+    alias GetPatchBaselineRequest = NamedTuple(
+      "BaselineId" : BaselineId
+    )
+
+    alias GetPatchBaselineResult = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "Name" : (BaselineName)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "GlobalFilters" : (PatchFilterGroup)?,
+      "ApprovalRules" : (PatchRuleGroup)?,
+      "ApprovedPatches" : (PatchIdList)?,
+      "ApprovedPatchesComplianceLevel" : (PatchComplianceLevel)?,
+      "ApprovedPatchesEnableNonSecurity" : (Boolean)?,
+      "RejectedPatches" : (PatchIdList)?,
+      "RejectedPatchesAction" : (PatchAction)?,
+      "PatchGroups" : (PatchGroupList)?,
+      "CreatedDate" : (DateTime)?,
+      "ModifiedDate" : (DateTime)?,
+      "Description" : (BaselineDescription)?,
+      "Sources" : (PatchSourceList)?
+    )
+
+    alias GetServiceSettingRequest = NamedTuple(
+      "SettingId" : ServiceSettingId
+    )
+
+    alias GetServiceSettingResult = NamedTuple(
+      "ServiceSetting" : (ServiceSetting)?
+    )
+
+    alias HierarchyLevelLimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias HierarchyTypeMismatchException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias IPAddress = String
+
+    alias ISO8601String = String
+
+    alias IamRole = String
+
+    alias IdempotencyToken = String
+
+    alias IdempotentParameterMismatch = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias IncompatiblePolicyException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InstallOverrideList = String
+
+    alias InstanceAggregatedAssociationOverview = NamedTuple(
+      "DetailedStatus" : (StatusName)?,
+      "InstanceAssociationStatusAggregatedCount" : (InstanceAssociationStatusAggregatedCount)?
+    )
+
+    alias InstanceAssociation = NamedTuple(
+      "AssociationId" : (AssociationId)?,
+      "InstanceId" : (InstanceId)?,
+      "Content" : (DocumentContent)?,
+      "AssociationVersion" : (AssociationVersion)?
+    )
+
+    alias InstanceAssociationExecutionSummary = String
+
+    alias InstanceAssociationList = Array(InstanceAssociation)
+
+    alias InstanceAssociationOutputLocation = NamedTuple(
+      "S3Location" : (S3OutputLocation)?
+    )
+
+    alias InstanceAssociationOutputUrl = NamedTuple(
+      "S3OutputUrl" : (S3OutputUrl)?
+    )
+
+    alias InstanceAssociationStatusAggregatedCount = Hash(StatusName,InstanceCount)
+
+    alias InstanceAssociationStatusInfo = NamedTuple(
+      "AssociationId" : (AssociationId)?,
+      "Name" : (DocumentARN)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "InstanceId" : (InstanceId)?,
+      "ExecutionDate" : (DateTime)?,
+      "Status" : (StatusName)?,
+      "DetailedStatus" : (StatusName)?,
+      "ExecutionSummary" : (InstanceAssociationExecutionSummary)?,
+      "ErrorCode" : (AgentErrorCode)?,
+      "OutputUrl" : (InstanceAssociationOutputUrl)?,
+      "AssociationName" : (AssociationName)?
+    )
+
+    alias InstanceAssociationStatusInfos = Array(InstanceAssociationStatusInfo)
+
+    alias InstanceCount = Int32
+
+    alias InstanceId = String
+
+    alias InstanceIdList = Array(InstanceId)
+
+    alias InstanceInformation = NamedTuple(
+      "InstanceId" : (InstanceId)?,
+      "PingStatus" : (PingStatus)?,
+      "LastPingDateTime" : (DateTime)?,
+      "AgentVersion" : (Version)?,
+      "IsLatestVersion" : (Boolean)?,
+      "PlatformType" : (PlatformType)?,
+      "PlatformName" : (String)?,
+      "PlatformVersion" : (String)?,
+      "ActivationId" : (ActivationId)?,
+      "IamRole" : (IamRole)?,
+      "RegistrationDate" : (DateTime)?,
+      "ResourceType" : (ResourceType)?,
+      "Name" : (String)?,
+      "IPAddress" : (IPAddress)?,
+      "ComputerName" : (ComputerName)?,
+      "AssociationStatus" : (StatusName)?,
+      "LastAssociationExecutionDate" : (DateTime)?,
+      "LastSuccessfulAssociationExecutionDate" : (DateTime)?,
+      "AssociationOverview" : (InstanceAggregatedAssociationOverview)?
+    )
+
+    alias InstanceInformationFilter = NamedTuple(
+      "key" : InstanceInformationFilterKey,
+      "valueSet" : InstanceInformationFilterValueSet
+    )
+
+    alias InstanceInformationFilterKey = String
+
+    alias InstanceInformationFilterList = Array(InstanceInformationFilter)
+
+    alias InstanceInformationFilterValue = String
+
+    alias InstanceInformationFilterValueSet = Array(InstanceInformationFilterValue)
+
+    alias InstanceInformationList = Array(InstanceInformation)
+
+    alias InstanceInformationStringFilter = NamedTuple(
+      "Key" : InstanceInformationStringFilterKey,
+      "Values" : InstanceInformationFilterValueSet
+    )
+
+    alias InstanceInformationStringFilterKey = String
+
+    alias InstanceInformationStringFilterList = Array(InstanceInformationStringFilter)
+
+    alias InstancePatchState = NamedTuple(
+      "InstanceId" : InstanceId,
+      "PatchGroup" : PatchGroup,
+      "BaselineId" : BaselineId,
+      "SnapshotId" : (SnapshotId)?,
+      "InstallOverrideList" : (InstallOverrideList)?,
+      "OwnerInformation" : (OwnerInformation)?,
+      "InstalledCount" : (PatchInstalledCount)?,
+      "InstalledOtherCount" : (PatchInstalledOtherCount)?,
+      "InstalledPendingRebootCount" : (PatchInstalledPendingRebootCount)?,
+      "InstalledRejectedCount" : (PatchInstalledRejectedCount)?,
+      "MissingCount" : (PatchMissingCount)?,
+      "FailedCount" : (PatchFailedCount)?,
+      "UnreportedNotApplicableCount" : (PatchUnreportedNotApplicableCount)?,
+      "NotApplicableCount" : (PatchNotApplicableCount)?,
+      "OperationStartTime" : DateTime,
+      "OperationEndTime" : DateTime,
+      "Operation" : PatchOperationType,
+      "LastNoRebootInstallOperationTime" : (DateTime)?,
+      "RebootOption" : (RebootOption)?
+    )
+
+    alias InstancePatchStateFilter = NamedTuple(
+      "Key" : InstancePatchStateFilterKey,
+      "Values" : InstancePatchStateFilterValues,
+      "Type" : InstancePatchStateOperatorType
+    )
+
+    alias InstancePatchStateFilterKey = String
+
+    alias InstancePatchStateFilterList = Array(InstancePatchStateFilter)
+
+    alias InstancePatchStateFilterValue = String
+
+    alias InstancePatchStateFilterValues = Array(InstancePatchStateFilterValue)
+
+    alias InstancePatchStateList = Array(InstancePatchState)
+
+    alias InstancePatchStateOperatorType = String
+
+    alias InstancePatchStatesList = Array(InstancePatchState)
+
+    alias InstanceTagName = String
+
+    alias InstancesCount = Int32
+
+    alias Integer = Int32
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidActivation = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidActivationId = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidAggregatorException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidAllowedPatternException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidAssociation = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidAssociationVersion = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidAutomationExecutionParametersException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidAutomationSignalException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidAutomationStatusUpdateException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidCommandId = NamedTuple(
+      
+    )
+
+    alias InvalidDeleteInventoryParametersException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDeletionIdException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDocument = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDocumentContent = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDocumentOperation = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDocumentSchemaVersion = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDocumentType = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidDocumentVersion = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidFilter = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidFilterKey = NamedTuple(
+      
+    )
+
+    alias InvalidFilterOption = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidFilterValue = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidInstanceId = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidInstanceInformationFilterValue = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidInventoryGroupException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidInventoryItemContextException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidInventoryRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidItemContentException = NamedTuple(
+      "TypeName" : (InventoryItemTypeName)?,
+      "Message" : (String)?
+    )
+
+    alias InvalidKeyId = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidNextToken = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidNotificationConfig = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidOptionException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidOutputFolder = NamedTuple(
+      
+    )
+
+    alias InvalidOutputLocation = NamedTuple(
+      
+    )
+
+    alias InvalidParameters = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidPermissionType = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidPluginName = NamedTuple(
+      
+    )
+
+    alias InvalidPolicyAttributeException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidPolicyTypeException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias InvalidResourceId = NamedTuple(
+      
+    )
+
+    alias InvalidResourceType = NamedTuple(
+      
+    )
+
+    alias InvalidResultAttributeException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidRole = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidSchedule = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidTarget = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidTypeNameException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidUpdate = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InventoryAggregator = NamedTuple(
+      "Expression" : (InventoryAggregatorExpression)?,
+      "Aggregators" : (InventoryAggregatorList)?,
+      "Groups" : (InventoryGroupList)?
+    )
+
+    alias InventoryAggregatorExpression = String
+
+    alias InventoryAggregatorList = Array(InventoryAggregator)
+
+    alias InventoryAttributeDataType = String
+
+    alias InventoryDeletionLastStatusMessage = String
+
+    alias InventoryDeletionLastStatusUpdateTime = String | UInt64 | Time
+
+    alias InventoryDeletionStartTime = String | UInt64 | Time
+
+    alias InventoryDeletionStatus = String
+
+    alias InventoryDeletionStatusItem = NamedTuple(
+      "DeletionId" : (UUID)?,
+      "TypeName" : (InventoryItemTypeName)?,
+      "DeletionStartTime" : (InventoryDeletionStartTime)?,
+      "LastStatus" : (InventoryDeletionStatus)?,
+      "LastStatusMessage" : (InventoryDeletionLastStatusMessage)?,
+      "DeletionSummary" : (InventoryDeletionSummary)?,
+      "LastStatusUpdateTime" : (InventoryDeletionLastStatusUpdateTime)?
+    )
+
+    alias InventoryDeletionSummary = NamedTuple(
+      "TotalCount" : (TotalCount)?,
+      "RemainingCount" : (RemainingCount)?,
+      "SummaryItems" : (InventoryDeletionSummaryItems)?
+    )
+
+    alias InventoryDeletionSummaryItem = NamedTuple(
+      "Version" : (InventoryItemSchemaVersion)?,
+      "Count" : (ResourceCount)?,
+      "RemainingCount" : (RemainingCount)?
+    )
+
+    alias InventoryDeletionSummaryItems = Array(InventoryDeletionSummaryItem)
+
+    alias InventoryDeletionsList = Array(InventoryDeletionStatusItem)
+
+    alias InventoryFilter = NamedTuple(
+      "Key" : InventoryFilterKey,
+      "Values" : InventoryFilterValueList,
+      "Type" : (InventoryQueryOperatorType)?
+    )
+
+    alias InventoryFilterKey = String
+
+    alias InventoryFilterList = Array(InventoryFilter)
+
+    alias InventoryFilterValue = String
+
+    alias InventoryFilterValueList = Array(InventoryFilterValue)
+
+    alias InventoryGroup = NamedTuple(
+      "Name" : InventoryGroupName,
+      "Filters" : InventoryFilterList
+    )
+
+    alias InventoryGroupList = Array(InventoryGroup)
+
+    alias InventoryGroupName = String
+
+    alias InventoryItem = NamedTuple(
+      "TypeName" : InventoryItemTypeName,
+      "SchemaVersion" : InventoryItemSchemaVersion,
+      "CaptureTime" : InventoryItemCaptureTime,
+      "ContentHash" : (InventoryItemContentHash)?,
+      "Content" : (InventoryItemEntryList)?,
+      "Context" : (InventoryItemContentContext)?
+    )
+
+    alias InventoryItemAttribute = NamedTuple(
+      "Name" : InventoryItemAttributeName,
+      "DataType" : InventoryAttributeDataType
+    )
+
+    alias InventoryItemAttributeList = Array(InventoryItemAttribute)
+
+    alias InventoryItemAttributeName = String
+
+    alias InventoryItemCaptureTime = String
+
+    alias InventoryItemContentContext = Hash(AttributeName,AttributeValue)
+
+    alias InventoryItemContentHash = String
+
+    alias InventoryItemEntry = Hash(AttributeName,AttributeValue)
+
+    alias InventoryItemEntryList = Array(InventoryItemEntry)
+
+    alias InventoryItemList = Array(InventoryItem)
+
+    alias InventoryItemSchema = NamedTuple(
+      "TypeName" : InventoryItemTypeName,
+      "Version" : (InventoryItemSchemaVersion)?,
+      "Attributes" : InventoryItemAttributeList,
+      "DisplayName" : (InventoryTypeDisplayName)?
+    )
+
+    alias InventoryItemSchemaResultList = Array(InventoryItemSchema)
+
+    alias InventoryItemSchemaVersion = String
+
+    alias InventoryItemTypeName = String
+
+    alias InventoryItemTypeNameFilter = String
+
+    alias InventoryQueryOperatorType = String
+
+    alias InventoryResultEntity = NamedTuple(
+      "Id" : (InventoryResultEntityId)?,
+      "Data" : (InventoryResultItemMap)?
+    )
+
+    alias InventoryResultEntityId = String
+
+    alias InventoryResultEntityList = Array(InventoryResultEntity)
+
+    alias InventoryResultItem = NamedTuple(
+      "TypeName" : InventoryItemTypeName,
+      "SchemaVersion" : InventoryItemSchemaVersion,
+      "CaptureTime" : (InventoryItemCaptureTime)?,
+      "ContentHash" : (InventoryItemContentHash)?,
+      "Content" : InventoryItemEntryList
+    )
+
+    alias InventoryResultItemKey = String
+
+    alias InventoryResultItemMap = Hash(InventoryResultItemKey,InventoryResultItem)
+
+    alias InventorySchemaDeleteOption = String
+
+    alias InventoryTypeDisplayName = String
+
+    alias InvocationDoesNotExist = NamedTuple(
+      
+    )
+
+    alias InvocationTraceOutput = String
+
+    alias IsSubTypeSchema = Bool
+
+    alias ItemContentMismatchException = NamedTuple(
+      "TypeName" : (InventoryItemTypeName)?,
+      "Message" : (String)?
+    )
+
+    alias ItemSizeLimitExceededException = NamedTuple(
+      "TypeName" : (InventoryItemTypeName)?,
+      "Message" : (String)?
+    )
+
+    alias KeyList = Array(TagKey)
+
+    alias LabelParameterVersionRequest = NamedTuple(
+      "Name" : PSParameterName,
+      "ParameterVersion" : (PSParameterVersion)?,
+      "Labels" : ParameterLabelList
+    )
+
+    alias LabelParameterVersionResult = NamedTuple(
+      "InvalidLabels" : (ParameterLabelList)?,
+      "ParameterVersion" : (PSParameterVersion)?
+    )
+
+    alias LastResourceDataSyncMessage = String
+
+    alias LastResourceDataSyncStatus = String
+
+    alias LastResourceDataSyncTime = String | UInt64 | Time
+
+    alias LastSuccessfulResourceDataSyncTime = String | UInt64 | Time
+
+    alias ListAssociationVersionsRequest = NamedTuple(
+      "AssociationId" : AssociationId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAssociationVersionsResult = NamedTuple(
+      "AssociationVersions" : (AssociationVersionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAssociationsRequest = NamedTuple(
+      "AssociationFilterList" : (AssociationFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAssociationsResult = NamedTuple(
+      "Associations" : (AssociationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCommandInvocationsRequest = NamedTuple(
+      "CommandId" : (CommandId)?,
+      "InstanceId" : (InstanceId)?,
+      "MaxResults" : (CommandMaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (CommandFilterList)?,
+      "Details" : (Boolean)?
+    )
+
+    alias ListCommandInvocationsResult = NamedTuple(
+      "CommandInvocations" : (CommandInvocationList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCommandsRequest = NamedTuple(
+      "CommandId" : (CommandId)?,
+      "InstanceId" : (InstanceId)?,
+      "MaxResults" : (CommandMaxResults)?,
+      "NextToken" : (NextToken)?,
+      "Filters" : (CommandFilterList)?
+    )
+
+    alias ListCommandsResult = NamedTuple(
+      "Commands" : (CommandList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListComplianceItemsRequest = NamedTuple(
+      "Filters" : (ComplianceStringFilterList)?,
+      "ResourceIds" : (ComplianceResourceIdList)?,
+      "ResourceTypes" : (ComplianceResourceTypeList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListComplianceItemsResult = NamedTuple(
+      "ComplianceItems" : (ComplianceItemList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListComplianceSummariesRequest = NamedTuple(
+      "Filters" : (ComplianceStringFilterList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListComplianceSummariesResult = NamedTuple(
+      "ComplianceSummaryItems" : (ComplianceSummaryItemList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDocumentMetadataHistoryRequest = NamedTuple(
+      "Name" : DocumentName,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Metadata" : DocumentMetadataEnum,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDocumentMetadataHistoryResponse = NamedTuple(
+      "Name" : (DocumentName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Author" : (DocumentAuthor)?,
+      "Metadata" : (DocumentMetadataResponseInfo)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDocumentVersionsRequest = NamedTuple(
+      "Name" : DocumentARN,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDocumentVersionsResult = NamedTuple(
+      "DocumentVersions" : (DocumentVersionList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDocumentsRequest = NamedTuple(
+      "DocumentFilterList" : (DocumentFilterList)?,
+      "Filters" : (DocumentKeyValuesFilterList)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDocumentsResult = NamedTuple(
+      "DocumentIdentifiers" : (DocumentIdentifierList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListInventoryEntriesRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "TypeName" : InventoryItemTypeName,
+      "Filters" : (InventoryFilterList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListInventoryEntriesResult = NamedTuple(
+      "TypeName" : (InventoryItemTypeName)?,
+      "InstanceId" : (InstanceId)?,
+      "SchemaVersion" : (InventoryItemSchemaVersion)?,
+      "CaptureTime" : (InventoryItemCaptureTime)?,
+      "Entries" : (InventoryItemEntryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOpsItemEventsRequest = NamedTuple(
+      "Filters" : (OpsItemEventFilters)?,
+      "MaxResults" : (OpsItemEventMaxResults)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListOpsItemEventsResponse = NamedTuple(
+      "NextToken" : (String)?,
+      "Summaries" : (OpsItemEventSummaries)?
+    )
+
+    alias ListOpsMetadataMaxResults = Int32
+
+    alias ListOpsMetadataRequest = NamedTuple(
+      "Filters" : (OpsMetadataFilterList)?,
+      "MaxResults" : (ListOpsMetadataMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListOpsMetadataResult = NamedTuple(
+      "OpsMetadataList" : (OpsMetadataList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListResourceComplianceSummariesRequest = NamedTuple(
+      "Filters" : (ComplianceStringFilterList)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListResourceComplianceSummariesResult = NamedTuple(
+      "ResourceComplianceSummaryItems" : (ResourceComplianceSummaryItemList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListResourceDataSyncRequest = NamedTuple(
+      "SyncType" : (ResourceDataSyncType)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListResourceDataSyncResult = NamedTuple(
+      "ResourceDataSyncItems" : (ResourceDataSyncItemList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceType" : ResourceTypeForTagging,
+      "ResourceId" : ResourceId
+    )
+
+    alias ListTagsForResourceResult = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias LoggingInfo = NamedTuple(
+      "S3BucketName" : S3BucketName,
+      "S3KeyPrefix" : (S3KeyPrefix)?,
+      "S3Region" : S3Region
+    )
+
+    alias Long = Int64
+
+    alias MaintenanceWindowAllowUnassociatedTargets = Bool
+
+    alias MaintenanceWindowAutomationParameters = NamedTuple(
+      "DocumentVersion" : (DocumentVersion)?,
+      "Parameters" : (AutomationParameterMap)?
+    )
+
+    alias MaintenanceWindowCutoff = Int32
+
+    alias MaintenanceWindowDescription = String
+
+    alias MaintenanceWindowDurationHours = Int32
+
+    alias MaintenanceWindowEnabled = Bool
+
+    alias MaintenanceWindowExecution = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?,
+      "Status" : (MaintenanceWindowExecutionStatus)?,
+      "StatusDetails" : (MaintenanceWindowExecutionStatusDetails)?,
+      "StartTime" : (DateTime)?,
+      "EndTime" : (DateTime)?
+    )
+
+    alias MaintenanceWindowExecutionId = String
+
+    alias MaintenanceWindowExecutionList = Array(MaintenanceWindowExecution)
+
+    alias MaintenanceWindowExecutionStatus = String
+
+    alias MaintenanceWindowExecutionStatusDetails = String
+
+    alias MaintenanceWindowExecutionTaskExecutionId = String
+
+    alias MaintenanceWindowExecutionTaskId = String
+
+    alias MaintenanceWindowExecutionTaskIdList = Array(MaintenanceWindowExecutionTaskId)
+
+    alias MaintenanceWindowExecutionTaskIdentity = NamedTuple(
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?,
+      "TaskExecutionId" : (MaintenanceWindowExecutionTaskId)?,
+      "Status" : (MaintenanceWindowExecutionStatus)?,
+      "StatusDetails" : (MaintenanceWindowExecutionStatusDetails)?,
+      "StartTime" : (DateTime)?,
+      "EndTime" : (DateTime)?,
+      "TaskArn" : (MaintenanceWindowTaskArn)?,
+      "TaskType" : (MaintenanceWindowTaskType)?
+    )
+
+    alias MaintenanceWindowExecutionTaskIdentityList = Array(MaintenanceWindowExecutionTaskIdentity)
+
+    alias MaintenanceWindowExecutionTaskInvocationId = String
+
+    alias MaintenanceWindowExecutionTaskInvocationIdentity = NamedTuple(
+      "WindowExecutionId" : (MaintenanceWindowExecutionId)?,
+      "TaskExecutionId" : (MaintenanceWindowExecutionTaskId)?,
+      "InvocationId" : (MaintenanceWindowExecutionTaskInvocationId)?,
+      "ExecutionId" : (MaintenanceWindowExecutionTaskExecutionId)?,
+      "TaskType" : (MaintenanceWindowTaskType)?,
+      "Parameters" : (MaintenanceWindowExecutionTaskInvocationParameters)?,
+      "Status" : (MaintenanceWindowExecutionStatus)?,
+      "StatusDetails" : (MaintenanceWindowExecutionStatusDetails)?,
+      "StartTime" : (DateTime)?,
+      "EndTime" : (DateTime)?,
+      "OwnerInformation" : (OwnerInformation)?,
+      "WindowTargetId" : (MaintenanceWindowTaskTargetId)?
+    )
+
+    alias MaintenanceWindowExecutionTaskInvocationIdentityList = Array(MaintenanceWindowExecutionTaskInvocationIdentity)
+
+    alias MaintenanceWindowExecutionTaskInvocationParameters = String
+
+    alias MaintenanceWindowFilter = NamedTuple(
+      "Key" : (MaintenanceWindowFilterKey)?,
+      "Values" : (MaintenanceWindowFilterValues)?
+    )
+
+    alias MaintenanceWindowFilterKey = String
+
+    alias MaintenanceWindowFilterList = Array(MaintenanceWindowFilter)
+
+    alias MaintenanceWindowFilterValue = String
+
+    alias MaintenanceWindowFilterValues = Array(MaintenanceWindowFilterValue)
+
+    alias MaintenanceWindowId = String
+
+    alias MaintenanceWindowIdentity = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "Enabled" : (MaintenanceWindowEnabled)?,
+      "Duration" : (MaintenanceWindowDurationHours)?,
+      "Cutoff" : (MaintenanceWindowCutoff)?,
+      "Schedule" : (MaintenanceWindowSchedule)?,
+      "ScheduleTimezone" : (MaintenanceWindowTimezone)?,
+      "ScheduleOffset" : (MaintenanceWindowOffset)?,
+      "EndDate" : (MaintenanceWindowStringDateTime)?,
+      "StartDate" : (MaintenanceWindowStringDateTime)?,
+      "NextExecutionTime" : (MaintenanceWindowStringDateTime)?
+    )
+
+    alias MaintenanceWindowIdentityForTarget = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "Name" : (MaintenanceWindowName)?
+    )
+
+    alias MaintenanceWindowIdentityList = Array(MaintenanceWindowIdentity)
+
+    alias MaintenanceWindowLambdaClientContext = String
+
+    alias MaintenanceWindowLambdaParameters = NamedTuple(
+      "ClientContext" : (MaintenanceWindowLambdaClientContext)?,
+      "Qualifier" : (MaintenanceWindowLambdaQualifier)?,
+      "Payload" : (MaintenanceWindowLambdaPayload)?
+    )
+
+    alias MaintenanceWindowLambdaPayload = String | Array(UInt8) | IO
+
+    alias MaintenanceWindowLambdaQualifier = String
+
+    alias MaintenanceWindowMaxResults = Int32
+
+    alias MaintenanceWindowName = String
+
+    alias MaintenanceWindowOffset = Int32
+
+    alias MaintenanceWindowResourceType = String
+
+    alias MaintenanceWindowRunCommandParameters = NamedTuple(
+      "Comment" : (Comment)?,
+      "CloudWatchOutputConfig" : (CloudWatchOutputConfig)?,
+      "DocumentHash" : (DocumentHash)?,
+      "DocumentHashType" : (DocumentHashType)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "NotificationConfig" : (NotificationConfig)?,
+      "OutputS3BucketName" : (S3BucketName)?,
+      "OutputS3KeyPrefix" : (S3KeyPrefix)?,
+      "Parameters" : (Parameters)?,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "TimeoutSeconds" : (TimeoutSeconds)?
+    )
+
+    alias MaintenanceWindowSchedule = String
+
+    alias MaintenanceWindowSearchMaxResults = Int32
+
+    alias MaintenanceWindowStepFunctionsInput = String
+
+    alias MaintenanceWindowStepFunctionsName = String
+
+    alias MaintenanceWindowStepFunctionsParameters = NamedTuple(
+      "Input" : (MaintenanceWindowStepFunctionsInput)?,
+      "Name" : (MaintenanceWindowStepFunctionsName)?
+    )
+
+    alias MaintenanceWindowStringDateTime = String
+
+    alias MaintenanceWindowTarget = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTargetId" : (MaintenanceWindowTargetId)?,
+      "ResourceType" : (MaintenanceWindowResourceType)?,
+      "Targets" : (Targets)?,
+      "OwnerInformation" : (OwnerInformation)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?
+    )
+
+    alias MaintenanceWindowTargetId = String
+
+    alias MaintenanceWindowTargetList = Array(MaintenanceWindowTarget)
+
+    alias MaintenanceWindowTask = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTaskId" : (MaintenanceWindowTaskId)?,
+      "TaskArn" : (MaintenanceWindowTaskArn)?,
+      "Type" : (MaintenanceWindowTaskType)?,
+      "Targets" : (Targets)?,
+      "TaskParameters" : (MaintenanceWindowTaskParameters)?,
+      "Priority" : (MaintenanceWindowTaskPriority)?,
+      "LoggingInfo" : (LoggingInfo)?,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?
+    )
+
+    alias MaintenanceWindowTaskArn = String
+
+    alias MaintenanceWindowTaskId = String
+
+    alias MaintenanceWindowTaskInvocationParameters = NamedTuple(
+      "RunCommand" : (MaintenanceWindowRunCommandParameters)?,
+      "Automation" : (MaintenanceWindowAutomationParameters)?,
+      "StepFunctions" : (MaintenanceWindowStepFunctionsParameters)?,
+      "Lambda" : (MaintenanceWindowLambdaParameters)?
+    )
+
+    alias MaintenanceWindowTaskList = Array(MaintenanceWindowTask)
+
+    alias MaintenanceWindowTaskParameterName = String
+
+    alias MaintenanceWindowTaskParameterValue = String
+
+    alias MaintenanceWindowTaskParameterValueExpression = NamedTuple(
+      "Values" : (MaintenanceWindowTaskParameterValueList)?
+    )
+
+    alias MaintenanceWindowTaskParameterValueList = Array(MaintenanceWindowTaskParameterValue)
+
+    alias MaintenanceWindowTaskParameters = Hash(MaintenanceWindowTaskParameterName,MaintenanceWindowTaskParameterValueExpression)
+
+    alias MaintenanceWindowTaskParametersList = Array(MaintenanceWindowTaskParameters)
+
+    alias MaintenanceWindowTaskPriority = Int32
+
+    alias MaintenanceWindowTaskTargetId = String
+
+    alias MaintenanceWindowTaskType = String
+
+    alias MaintenanceWindowTimezone = String
+
+    alias MaintenanceWindowsForTargetList = Array(MaintenanceWindowIdentityForTarget)
+
+    alias ManagedInstanceId = String
+
+    alias MaxConcurrency = String
+
+    alias MaxDocumentSizeExceeded = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias MaxErrors = String
+
+    alias MaxResults = Int32
+
+    alias MaxResultsEC2Compatible = Int32
+
+    alias MetadataKey = String
+
+    alias MetadataKeysToDeleteList = Array(MetadataKey)
+
+    alias MetadataMap = Hash(MetadataKey,MetadataValue)
+
+    alias MetadataValue = NamedTuple(
+      "Value" : (MetadataValueString)?
+    )
+
+    alias MetadataValueString = String
+
+    alias ModifyDocumentPermissionRequest = NamedTuple(
+      "Name" : DocumentName,
+      "PermissionType" : DocumentPermissionType,
+      "AccountIdsToAdd" : (AccountIdList)?,
+      "AccountIdsToRemove" : (AccountIdList)?,
+      "SharedDocumentVersion" : (SharedDocumentVersion)?
+    )
+
+    alias ModifyDocumentPermissionResponse = NamedTuple(
+      
+    )
+
+    alias NextToken = String
+
+    alias NonCompliantSummary = NamedTuple(
+      "NonCompliantCount" : (ComplianceSummaryCount)?,
+      "SeveritySummary" : (SeveritySummary)?
+    )
+
+    alias NormalStringMap = Hash(String,String)
+
+    alias NotificationArn = String
+
+    alias NotificationConfig = NamedTuple(
+      "NotificationArn" : (NotificationArn)?,
+      "NotificationEvents" : (NotificationEventList)?,
+      "NotificationType" : (NotificationType)?
+    )
+
+    alias NotificationEvent = String
+
+    alias NotificationEventList = Array(NotificationEvent)
+
+    alias NotificationType = String
+
+    alias OperatingSystem = String
+
+    alias OpsAggregator = NamedTuple(
+      "AggregatorType" : (OpsAggregatorType)?,
+      "TypeName" : (OpsDataTypeName)?,
+      "AttributeName" : (OpsDataAttributeName)?,
+      "Values" : (OpsAggregatorValueMap)?,
+      "Filters" : (OpsFilterList)?,
+      "Aggregators" : (OpsAggregatorList)?
+    )
+
+    alias OpsAggregatorList = Array(OpsAggregator)
+
+    alias OpsAggregatorType = String
+
+    alias OpsAggregatorValue = String
+
+    alias OpsAggregatorValueKey = String
+
+    alias OpsAggregatorValueMap = Hash(OpsAggregatorValueKey,OpsAggregatorValue)
+
+    alias OpsDataAttributeName = String
+
+    alias OpsDataTypeName = String
+
+    alias OpsEntity = NamedTuple(
+      "Id" : (OpsEntityId)?,
+      "Data" : (OpsEntityItemMap)?
+    )
+
+    alias OpsEntityId = String
+
+    alias OpsEntityItem = NamedTuple(
+      "CaptureTime" : (OpsEntityItemCaptureTime)?,
+      "Content" : (OpsEntityItemEntryList)?
+    )
+
+    alias OpsEntityItemCaptureTime = String
+
+    alias OpsEntityItemEntry = Hash(AttributeName,AttributeValue)
+
+    alias OpsEntityItemEntryList = Array(OpsEntityItemEntry)
+
+    alias OpsEntityItemKey = String
+
+    alias OpsEntityItemMap = Hash(OpsEntityItemKey,OpsEntityItem)
+
+    alias OpsEntityList = Array(OpsEntity)
+
+    alias OpsFilter = NamedTuple(
+      "Key" : OpsFilterKey,
+      "Values" : OpsFilterValueList,
+      "Type" : (OpsFilterOperatorType)?
+    )
+
+    alias OpsFilterKey = String
+
+    alias OpsFilterList = Array(OpsFilter)
+
+    alias OpsFilterOperatorType = String
+
+    alias OpsFilterValue = String
+
+    alias OpsFilterValueList = Array(OpsFilterValue)
+
+    alias OpsItem = NamedTuple(
+      "CreatedBy" : (String)?,
+      "OpsItemType" : (OpsItemType)?,
+      "CreatedTime" : (DateTime)?,
+      "Description" : (OpsItemDescription)?,
+      "LastModifiedBy" : (String)?,
+      "LastModifiedTime" : (DateTime)?,
+      "Notifications" : (OpsItemNotifications)?,
+      "Priority" : (OpsItemPriority)?,
+      "RelatedOpsItems" : (RelatedOpsItems)?,
+      "Status" : (OpsItemStatus)?,
+      "OpsItemId" : (OpsItemId)?,
+      "Version" : (String)?,
+      "Title" : (OpsItemTitle)?,
+      "Source" : (OpsItemSource)?,
+      "OperationalData" : (OpsItemOperationalData)?,
+      "Category" : (OpsItemCategory)?,
+      "Severity" : (OpsItemSeverity)?,
+      "ActualStartTime" : (DateTime)?,
+      "ActualEndTime" : (DateTime)?,
+      "PlannedStartTime" : (DateTime)?,
+      "PlannedEndTime" : (DateTime)?
+    )
+
+    alias OpsItemAlreadyExistsException = NamedTuple(
+      "Message" : (String)?,
+      "OpsItemId" : (String)?
+    )
+
+    alias OpsItemCategory = String
+
+    alias OpsItemDataKey = String
+
+    alias OpsItemDataType = String
+
+    alias OpsItemDataValue = NamedTuple(
+      "Value" : (OpsItemDataValueString)?,
+      "Type" : (OpsItemDataType)?
+    )
+
+    alias OpsItemDataValueString = String
+
+    alias OpsItemDescription = String
+
+    alias OpsItemEventFilter = NamedTuple(
+      "Key" : OpsItemEventFilterKey,
+      "Values" : OpsItemEventFilterValues,
+      "Operator" : OpsItemEventFilterOperator
+    )
+
+    alias OpsItemEventFilterKey = String
+
+    alias OpsItemEventFilterOperator = String
+
+    alias OpsItemEventFilterValue = String
+
+    alias OpsItemEventFilterValues = Array(OpsItemEventFilterValue)
+
+    alias OpsItemEventFilters = Array(OpsItemEventFilter)
+
+    alias OpsItemEventMaxResults = Int32
+
+    alias OpsItemEventSummaries = Array(OpsItemEventSummary)
+
+    alias OpsItemEventSummary = NamedTuple(
+      "OpsItemId" : (String)?,
+      "EventId" : (String)?,
+      "Source" : (String)?,
+      "DetailType" : (String)?,
+      "Detail" : (String)?,
+      "CreatedBy" : (OpsItemIdentity)?,
+      "CreatedTime" : (DateTime)?
+    )
+
+    alias OpsItemFilter = NamedTuple(
+      "Key" : OpsItemFilterKey,
+      "Values" : OpsItemFilterValues,
+      "Operator" : OpsItemFilterOperator
+    )
+
+    alias OpsItemFilterKey = String
+
+    alias OpsItemFilterOperator = String
+
+    alias OpsItemFilterValue = String
+
+    alias OpsItemFilterValues = Array(OpsItemFilterValue)
+
+    alias OpsItemFilters = Array(OpsItemFilter)
+
+    alias OpsItemId = String
+
+    alias OpsItemIdentity = NamedTuple(
+      "Arn" : (String)?
+    )
+
+    alias OpsItemInvalidParameterException = NamedTuple(
+      "ParameterNames" : (OpsItemParameterNamesList)?,
+      "Message" : (String)?
+    )
+
+    alias OpsItemLimitExceededException = NamedTuple(
+      "ResourceTypes" : (OpsItemParameterNamesList)?,
+      "Limit" : (Integer)?,
+      "LimitType" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias OpsItemMaxResults = Int32
+
+    alias OpsItemNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias OpsItemNotification = NamedTuple(
+      "Arn" : (String)?
+    )
+
+    alias OpsItemNotifications = Array(OpsItemNotification)
+
+    alias OpsItemOperationalData = Hash(OpsItemDataKey,OpsItemDataValue)
+
+    alias OpsItemOpsDataKeysList = Array(String)
+
+    alias OpsItemParameterNamesList = Array(String)
+
+    alias OpsItemPriority = Int32
+
+    alias OpsItemSeverity = String
+
+    alias OpsItemSource = String
+
+    alias OpsItemStatus = String
+
+    alias OpsItemSummaries = Array(OpsItemSummary)
+
+    alias OpsItemSummary = NamedTuple(
+      "CreatedBy" : (String)?,
+      "CreatedTime" : (DateTime)?,
+      "LastModifiedBy" : (String)?,
+      "LastModifiedTime" : (DateTime)?,
+      "Priority" : (OpsItemPriority)?,
+      "Source" : (OpsItemSource)?,
+      "Status" : (OpsItemStatus)?,
+      "OpsItemId" : (OpsItemId)?,
+      "Title" : (OpsItemTitle)?,
+      "OperationalData" : (OpsItemOperationalData)?,
+      "Category" : (OpsItemCategory)?,
+      "Severity" : (OpsItemSeverity)?,
+      "OpsItemType" : (OpsItemType)?,
+      "ActualStartTime" : (DateTime)?,
+      "ActualEndTime" : (DateTime)?,
+      "PlannedStartTime" : (DateTime)?,
+      "PlannedEndTime" : (DateTime)?
+    )
+
+    alias OpsItemTitle = String
+
+    alias OpsItemType = String
+
+    alias OpsMetadata = NamedTuple(
+      "ResourceId" : (OpsMetadataResourceId)?,
+      "OpsMetadataArn" : (OpsMetadataArn)?,
+      "LastModifiedDate" : (DateTime)?,
+      "LastModifiedUser" : (String)?,
+      "CreationDate" : (DateTime)?
+    )
+
+    alias OpsMetadataAlreadyExistsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpsMetadataArn = String
+
+    alias OpsMetadataFilter = NamedTuple(
+      "Key" : OpsMetadataFilterKey,
+      "Values" : OpsMetadataFilterValueList
+    )
+
+    alias OpsMetadataFilterKey = String
+
+    alias OpsMetadataFilterList = Array(OpsMetadataFilter)
+
+    alias OpsMetadataFilterValue = String
+
+    alias OpsMetadataFilterValueList = Array(OpsMetadataFilterValue)
+
+    alias OpsMetadataInvalidArgumentException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpsMetadataKeyLimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpsMetadataLimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpsMetadataList = Array(OpsMetadata)
+
+    alias OpsMetadataNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpsMetadataResourceId = String
+
+    alias OpsMetadataTooManyUpdatesException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpsResultAttribute = NamedTuple(
+      "TypeName" : OpsDataTypeName
+    )
+
+    alias OpsResultAttributeList = Array(OpsResultAttribute)
+
+    alias OutputSource = NamedTuple(
+      "OutputSourceId" : (OutputSourceId)?,
+      "OutputSourceType" : (OutputSourceType)?
+    )
+
+    alias OutputSourceId = String
+
+    alias OutputSourceType = String
+
+    alias OwnerInformation = String
+
+    alias PSParameterName = String
+
+    alias PSParameterSelector = String
+
+    alias PSParameterValue = String
+
+    alias PSParameterVersion = Int64
+
+    alias Parameter = NamedTuple(
+      "Name" : (PSParameterName)?,
+      "Type" : (ParameterType)?,
+      "Value" : (PSParameterValue)?,
+      "Version" : (PSParameterVersion)?,
+      "Selector" : (PSParameterSelector)?,
+      "SourceResult" : (String)?,
+      "LastModifiedDate" : (DateTime)?,
+      "ARN" : (String)?,
+      "DataType" : (ParameterDataType)?
+    )
+
+    alias ParameterAlreadyExists = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterDataType = String
+
+    alias ParameterDescription = String
+
+    alias ParameterHistory = NamedTuple(
+      "Name" : (PSParameterName)?,
+      "Type" : (ParameterType)?,
+      "KeyId" : (ParameterKeyId)?,
+      "LastModifiedDate" : (DateTime)?,
+      "LastModifiedUser" : (String)?,
+      "Description" : (ParameterDescription)?,
+      "Value" : (PSParameterValue)?,
+      "AllowedPattern" : (AllowedPattern)?,
+      "Version" : (PSParameterVersion)?,
+      "Labels" : (ParameterLabelList)?,
+      "Tier" : (ParameterTier)?,
+      "Policies" : (ParameterPolicyList)?,
+      "DataType" : (ParameterDataType)?
+    )
+
+    alias ParameterHistoryList = Array(ParameterHistory)
+
+    alias ParameterInlinePolicy = NamedTuple(
+      "PolicyText" : (String)?,
+      "PolicyType" : (String)?,
+      "PolicyStatus" : (String)?
+    )
+
+    alias ParameterKeyId = String
+
+    alias ParameterLabel = String
+
+    alias ParameterLabelList = Array(ParameterLabel)
+
+    alias ParameterLimitExceeded = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterList = Array(Parameter)
+
+    alias ParameterMaxVersionLimitExceeded = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterMetadata = NamedTuple(
+      "Name" : (PSParameterName)?,
+      "Type" : (ParameterType)?,
+      "KeyId" : (ParameterKeyId)?,
+      "LastModifiedDate" : (DateTime)?,
+      "LastModifiedUser" : (String)?,
+      "Description" : (ParameterDescription)?,
+      "AllowedPattern" : (AllowedPattern)?,
+      "Version" : (PSParameterVersion)?,
+      "Tier" : (ParameterTier)?,
+      "Policies" : (ParameterPolicyList)?,
+      "DataType" : (ParameterDataType)?
+    )
+
+    alias ParameterMetadataList = Array(ParameterMetadata)
+
+    alias ParameterName = String
+
+    alias ParameterNameList = Array(PSParameterName)
+
+    alias ParameterNotFound = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterPatternMismatchException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterPolicies = String
+
+    alias ParameterPolicyList = Array(ParameterInlinePolicy)
+
+    alias ParameterStringFilter = NamedTuple(
+      "Key" : ParameterStringFilterKey,
+      "Option" : (ParameterStringQueryOption)?,
+      "Values" : (ParameterStringFilterValueList)?
+    )
+
+    alias ParameterStringFilterKey = String
+
+    alias ParameterStringFilterList = Array(ParameterStringFilter)
+
+    alias ParameterStringFilterValue = String
+
+    alias ParameterStringFilterValueList = Array(ParameterStringFilterValue)
+
+    alias ParameterStringQueryOption = String
+
+    alias ParameterTier = String
+
+    alias ParameterType = String
+
+    alias ParameterValue = String
+
+    alias ParameterValueList = Array(ParameterValue)
+
+    alias ParameterVersionLabelLimitExceeded = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ParameterVersionNotFound = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Parameters = Hash(ParameterName,ParameterValueList)
+
+    alias ParametersFilter = NamedTuple(
+      "Key" : ParametersFilterKey,
+      "Values" : ParametersFilterValueList
+    )
+
+    alias ParametersFilterKey = String
+
+    alias ParametersFilterList = Array(ParametersFilter)
+
+    alias ParametersFilterValue = String
+
+    alias ParametersFilterValueList = Array(ParametersFilterValue)
+
+    alias Patch = NamedTuple(
+      "Id" : (PatchId)?,
+      "ReleaseDate" : (DateTime)?,
+      "Title" : (PatchTitle)?,
+      "Description" : (PatchDescription)?,
+      "ContentUrl" : (PatchContentUrl)?,
+      "Vendor" : (PatchVendor)?,
+      "ProductFamily" : (PatchProductFamily)?,
+      "Product" : (PatchProduct)?,
+      "Classification" : (PatchClassification)?,
+      "MsrcSeverity" : (PatchMsrcSeverity)?,
+      "KbNumber" : (PatchKbNumber)?,
+      "MsrcNumber" : (PatchMsrcNumber)?,
+      "Language" : (PatchLanguage)?,
+      "AdvisoryIds" : (PatchAdvisoryIdList)?,
+      "BugzillaIds" : (PatchBugzillaIdList)?,
+      "CVEIds" : (PatchCVEIdList)?,
+      "Name" : (PatchName)?,
+      "Epoch" : (PatchEpoch)?,
+      "Version" : (PatchVersion)?,
+      "Release" : (PatchRelease)?,
+      "Arch" : (PatchArch)?,
+      "Severity" : (PatchSeverity)?,
+      "Repository" : (PatchRepository)?
+    )
+
+    alias PatchAction = String
+
+    alias PatchAdvisoryId = String
+
+    alias PatchAdvisoryIdList = Array(PatchAdvisoryId)
+
+    alias PatchArch = String
+
+    alias PatchBaselineIdentity = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "BaselineName" : (BaselineName)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "BaselineDescription" : (BaselineDescription)?,
+      "DefaultBaseline" : (DefaultBaseline)?
+    )
+
+    alias PatchBaselineIdentityList = Array(PatchBaselineIdentity)
+
+    alias PatchBaselineMaxResults = Int32
+
+    alias PatchBugzillaId = String
+
+    alias PatchBugzillaIdList = Array(PatchBugzillaId)
+
+    alias PatchCVEId = String
+
+    alias PatchCVEIdList = Array(PatchCVEId)
+
+    alias PatchCVEIds = String
+
+    alias PatchClassification = String
+
+    alias PatchComplianceData = NamedTuple(
+      "Title" : PatchTitle,
+      "KBId" : PatchKbNumber,
+      "Classification" : PatchClassification,
+      "Severity" : PatchSeverity,
+      "State" : PatchComplianceDataState,
+      "InstalledTime" : DateTime,
+      "CVEIds" : (PatchCVEIds)?
+    )
+
+    alias PatchComplianceDataList = Array(PatchComplianceData)
+
+    alias PatchComplianceDataState = String
+
+    alias PatchComplianceLevel = String
+
+    alias PatchComplianceMaxResults = Int32
+
+    alias PatchContentUrl = String
+
+    alias PatchDeploymentStatus = String
+
+    alias PatchDescription = String
+
+    alias PatchEpoch = Int32
+
+    alias PatchFailedCount = Int32
+
+    alias PatchFilter = NamedTuple(
+      "Key" : PatchFilterKey,
+      "Values" : PatchFilterValueList
+    )
+
+    alias PatchFilterGroup = NamedTuple(
+      "PatchFilters" : PatchFilterList
+    )
+
+    alias PatchFilterKey = String
+
+    alias PatchFilterList = Array(PatchFilter)
+
+    alias PatchFilterValue = String
+
+    alias PatchFilterValueList = Array(PatchFilterValue)
+
+    alias PatchGroup = String
+
+    alias PatchGroupList = Array(PatchGroup)
+
+    alias PatchGroupPatchBaselineMapping = NamedTuple(
+      "PatchGroup" : (PatchGroup)?,
+      "BaselineIdentity" : (PatchBaselineIdentity)?
+    )
+
+    alias PatchGroupPatchBaselineMappingList = Array(PatchGroupPatchBaselineMapping)
+
+    alias PatchId = String
+
+    alias PatchIdList = Array(PatchId)
+
+    alias PatchInstalledCount = Int32
+
+    alias PatchInstalledOtherCount = Int32
+
+    alias PatchInstalledPendingRebootCount = Int32
+
+    alias PatchInstalledRejectedCount = Int32
+
+    alias PatchKbNumber = String
+
+    alias PatchLanguage = String
+
+    alias PatchList = Array(Patch)
+
+    alias PatchMissingCount = Int32
+
+    alias PatchMsrcNumber = String
+
+    alias PatchMsrcSeverity = String
+
+    alias PatchName = String
+
+    alias PatchNotApplicableCount = Int32
+
+    alias PatchOperationType = String
+
+    alias PatchOrchestratorFilter = NamedTuple(
+      "Key" : (PatchOrchestratorFilterKey)?,
+      "Values" : (PatchOrchestratorFilterValues)?
+    )
+
+    alias PatchOrchestratorFilterKey = String
+
+    alias PatchOrchestratorFilterList = Array(PatchOrchestratorFilter)
+
+    alias PatchOrchestratorFilterValue = String
+
+    alias PatchOrchestratorFilterValues = Array(PatchOrchestratorFilterValue)
+
+    alias PatchProduct = String
+
+    alias PatchProductFamily = String
+
+    alias PatchPropertiesList = Array(PatchPropertyEntry)
+
+    alias PatchProperty = String
+
+    alias PatchPropertyEntry = Hash(AttributeName,AttributeValue)
+
+    alias PatchRelease = String
+
+    alias PatchRepository = String
+
+    alias PatchRule = NamedTuple(
+      "PatchFilterGroup" : PatchFilterGroup,
+      "ComplianceLevel" : (PatchComplianceLevel)?,
+      "ApproveAfterDays" : (ApproveAfterDays)?,
+      "ApproveUntilDate" : (PatchStringDateTime)?,
+      "EnableNonSecurity" : (Boolean)?
+    )
+
+    alias PatchRuleGroup = NamedTuple(
+      "PatchRules" : PatchRuleList
+    )
+
+    alias PatchRuleList = Array(PatchRule)
+
+    alias PatchSet = String
+
+    alias PatchSeverity = String
+
+    alias PatchSource = NamedTuple(
+      "Name" : PatchSourceName,
+      "Products" : PatchSourceProductList,
+      "Configuration" : PatchSourceConfiguration
+    )
+
+    alias PatchSourceConfiguration = String
+
+    alias PatchSourceList = Array(PatchSource)
+
+    alias PatchSourceName = String
+
+    alias PatchSourceProduct = String
+
+    alias PatchSourceProductList = Array(PatchSourceProduct)
+
+    alias PatchStatus = NamedTuple(
+      "DeploymentStatus" : (PatchDeploymentStatus)?,
+      "ComplianceLevel" : (PatchComplianceLevel)?,
+      "ApprovalDate" : (DateTime)?
+    )
+
+    alias PatchStringDateTime = String
+
+    alias PatchTitle = String
+
+    alias PatchUnreportedNotApplicableCount = Int32
+
+    alias PatchVendor = String
+
+    alias PatchVersion = String
+
+    alias PingStatus = String
+
+    alias PlatformType = String
+
+    alias PlatformTypeList = Array(PlatformType)
+
+    alias PoliciesLimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias Product = String
+
+    alias ProgressCounters = NamedTuple(
+      "TotalSteps" : (Integer)?,
+      "SuccessSteps" : (Integer)?,
+      "FailedSteps" : (Integer)?,
+      "CancelledSteps" : (Integer)?,
+      "TimedOutSteps" : (Integer)?
+    )
+
+    alias PutComplianceItemsRequest = NamedTuple(
+      "ResourceId" : ComplianceResourceId,
+      "ResourceType" : ComplianceResourceType,
+      "ComplianceType" : ComplianceTypeName,
+      "ExecutionSummary" : ComplianceExecutionSummary,
+      "Items" : ComplianceItemEntryList,
+      "ItemContentHash" : (ComplianceItemContentHash)?,
+      "UploadType" : (ComplianceUploadType)?
+    )
+
+    alias PutComplianceItemsResult = NamedTuple(
+      
+    )
+
+    alias PutInventoryMessage = String
+
+    alias PutInventoryRequest = NamedTuple(
+      "InstanceId" : InstanceId,
+      "Items" : InventoryItemList
+    )
+
+    alias PutInventoryResult = NamedTuple(
+      "Message" : (PutInventoryMessage)?
+    )
+
+    alias PutParameterRequest = NamedTuple(
+      "Name" : PSParameterName,
+      "Description" : (ParameterDescription)?,
+      "Value" : PSParameterValue,
+      "Type" : (ParameterType)?,
+      "KeyId" : (ParameterKeyId)?,
+      "Overwrite" : (Boolean)?,
+      "AllowedPattern" : (AllowedPattern)?,
+      "Tags" : (TagList)?,
+      "Tier" : (ParameterTier)?,
+      "Policies" : (ParameterPolicies)?,
+      "DataType" : (ParameterDataType)?
+    )
+
+    alias PutParameterResult = NamedTuple(
+      "Version" : (PSParameterVersion)?,
+      "Tier" : (ParameterTier)?
+    )
+
+    alias RebootOption = String
+
+    alias Region = String
+
+    alias Regions = Array(Region)
+
+    alias RegisterDefaultPatchBaselineRequest = NamedTuple(
+      "BaselineId" : BaselineId
+    )
+
+    alias RegisterDefaultPatchBaselineResult = NamedTuple(
+      "BaselineId" : (BaselineId)?
+    )
+
+    alias RegisterPatchBaselineForPatchGroupRequest = NamedTuple(
+      "BaselineId" : BaselineId,
+      "PatchGroup" : PatchGroup
+    )
+
+    alias RegisterPatchBaselineForPatchGroupResult = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "PatchGroup" : (PatchGroup)?
+    )
+
+    alias RegisterTargetWithMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "ResourceType" : MaintenanceWindowResourceType,
+      "Targets" : Targets,
+      "OwnerInformation" : (OwnerInformation)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias RegisterTargetWithMaintenanceWindowResult = NamedTuple(
+      "WindowTargetId" : (MaintenanceWindowTargetId)?
+    )
+
+    alias RegisterTaskWithMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "Targets" : Targets,
+      "TaskArn" : MaintenanceWindowTaskArn,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "TaskType" : MaintenanceWindowTaskType,
+      "TaskParameters" : (MaintenanceWindowTaskParameters)?,
+      "TaskInvocationParameters" : (MaintenanceWindowTaskInvocationParameters)?,
+      "Priority" : (MaintenanceWindowTaskPriority)?,
+      "MaxConcurrency" : MaxConcurrency,
+      "MaxErrors" : MaxErrors,
+      "LoggingInfo" : (LoggingInfo)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias RegisterTaskWithMaintenanceWindowResult = NamedTuple(
+      "WindowTaskId" : (MaintenanceWindowTaskId)?
+    )
+
+    alias RegistrationLimit = Int32
+
+    alias RegistrationsCount = Int32
+
+    alias RelatedOpsItem = NamedTuple(
+      "OpsItemId" : String
+    )
+
+    alias RelatedOpsItems = Array(RelatedOpsItem)
+
+    alias RemainingCount = Int32
+
+    alias RemoveTagsFromResourceRequest = NamedTuple(
+      "ResourceType" : ResourceTypeForTagging,
+      "ResourceId" : ResourceId,
+      "TagKeys" : KeyList
+    )
+
+    alias RemoveTagsFromResourceResult = NamedTuple(
+      
+    )
+
+    alias ResetServiceSettingRequest = NamedTuple(
+      "SettingId" : ServiceSettingId
+    )
+
+    alias ResetServiceSettingResult = NamedTuple(
+      "ServiceSetting" : (ServiceSetting)?
+    )
+
+    alias ResolvedTargets = NamedTuple(
+      "ParameterValues" : (TargetParameterList)?,
+      "Truncated" : (Boolean)?
+    )
+
+    alias ResourceComplianceSummaryItem = NamedTuple(
+      "ComplianceType" : (ComplianceTypeName)?,
+      "ResourceType" : (ComplianceResourceType)?,
+      "ResourceId" : (ComplianceResourceId)?,
+      "Status" : (ComplianceStatus)?,
+      "OverallSeverity" : (ComplianceSeverity)?,
+      "ExecutionSummary" : (ComplianceExecutionSummary)?,
+      "CompliantSummary" : (CompliantSummary)?,
+      "NonCompliantSummary" : (NonCompliantSummary)?
+    )
+
+    alias ResourceComplianceSummaryItemList = Array(ResourceComplianceSummaryItem)
+
+    alias ResourceCount = Int32
+
+    alias ResourceCountByStatus = String
+
+    alias ResourceDataSyncAWSKMSKeyARN = String
+
+    alias ResourceDataSyncAlreadyExistsException = NamedTuple(
+      "SyncName" : (ResourceDataSyncName)?
+    )
+
+    alias ResourceDataSyncAwsOrganizationsSource = NamedTuple(
+      "OrganizationSourceType" : ResourceDataSyncOrganizationSourceType,
+      "OrganizationalUnits" : (ResourceDataSyncOrganizationalUnitList)?
+    )
+
+    alias ResourceDataSyncConflictException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceDataSyncCountExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceDataSyncCreatedTime = String | UInt64 | Time
+
+    alias ResourceDataSyncDestinationDataSharing = NamedTuple(
+      "DestinationDataSharingType" : (ResourceDataSyncDestinationDataSharingType)?
+    )
+
+    alias ResourceDataSyncDestinationDataSharingType = String
+
+    alias ResourceDataSyncIncludeFutureRegions = Bool
+
+    alias ResourceDataSyncInvalidConfigurationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceDataSyncItem = NamedTuple(
+      "SyncName" : (ResourceDataSyncName)?,
+      "SyncType" : (ResourceDataSyncType)?,
+      "SyncSource" : (ResourceDataSyncSourceWithState)?,
+      "S3Destination" : (ResourceDataSyncS3Destination)?,
+      "LastSyncTime" : (LastResourceDataSyncTime)?,
+      "LastSuccessfulSyncTime" : (LastSuccessfulResourceDataSyncTime)?,
+      "SyncLastModifiedTime" : (ResourceDataSyncLastModifiedTime)?,
+      "LastStatus" : (LastResourceDataSyncStatus)?,
+      "SyncCreatedTime" : (ResourceDataSyncCreatedTime)?,
+      "LastSyncStatusMessage" : (LastResourceDataSyncMessage)?
+    )
+
+    alias ResourceDataSyncItemList = Array(ResourceDataSyncItem)
+
+    alias ResourceDataSyncLastModifiedTime = String | UInt64 | Time
+
+    alias ResourceDataSyncName = String
+
+    alias ResourceDataSyncNotFoundException = NamedTuple(
+      "SyncName" : (ResourceDataSyncName)?,
+      "SyncType" : (ResourceDataSyncType)?,
+      "Message" : (String)?
+    )
+
+    alias ResourceDataSyncOrganizationSourceType = String
+
+    alias ResourceDataSyncOrganizationalUnit = NamedTuple(
+      "OrganizationalUnitId" : (ResourceDataSyncOrganizationalUnitId)?
+    )
+
+    alias ResourceDataSyncOrganizationalUnitId = String
+
+    alias ResourceDataSyncOrganizationalUnitList = Array(ResourceDataSyncOrganizationalUnit)
+
+    alias ResourceDataSyncS3BucketName = String
+
+    alias ResourceDataSyncS3Destination = NamedTuple(
+      "BucketName" : ResourceDataSyncS3BucketName,
+      "Prefix" : (ResourceDataSyncS3Prefix)?,
+      "SyncFormat" : ResourceDataSyncS3Format,
+      "Region" : ResourceDataSyncS3Region,
+      "AWSKMSKeyARN" : (ResourceDataSyncAWSKMSKeyARN)?,
+      "DestinationDataSharing" : (ResourceDataSyncDestinationDataSharing)?
+    )
+
+    alias ResourceDataSyncS3Format = String
+
+    alias ResourceDataSyncS3Prefix = String
+
+    alias ResourceDataSyncS3Region = String
+
+    alias ResourceDataSyncSource = NamedTuple(
+      "SourceType" : ResourceDataSyncSourceType,
+      "AwsOrganizationsSource" : (ResourceDataSyncAwsOrganizationsSource)?,
+      "SourceRegions" : ResourceDataSyncSourceRegionList,
+      "IncludeFutureRegions" : (ResourceDataSyncIncludeFutureRegions)?
+    )
+
+    alias ResourceDataSyncSourceRegion = String
+
+    alias ResourceDataSyncSourceRegionList = Array(ResourceDataSyncSourceRegion)
+
+    alias ResourceDataSyncSourceType = String
+
+    alias ResourceDataSyncSourceWithState = NamedTuple(
+      "SourceType" : (ResourceDataSyncSourceType)?,
+      "AwsOrganizationsSource" : (ResourceDataSyncAwsOrganizationsSource)?,
+      "SourceRegions" : (ResourceDataSyncSourceRegionList)?,
+      "IncludeFutureRegions" : (ResourceDataSyncIncludeFutureRegions)?,
+      "State" : (ResourceDataSyncState)?
+    )
+
+    alias ResourceDataSyncState = String
+
+    alias ResourceDataSyncType = String
+
+    alias ResourceId = String
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceType = String
+
+    alias ResourceTypeForTagging = String
+
+    alias ResponseCode = Int32
+
+    alias ResultAttribute = NamedTuple(
+      "TypeName" : InventoryItemTypeName
+    )
+
+    alias ResultAttributeList = Array(ResultAttribute)
+
+    alias ResumeSessionRequest = NamedTuple(
+      "SessionId" : SessionId
+    )
+
+    alias ResumeSessionResponse = NamedTuple(
+      "SessionId" : (SessionId)?,
+      "TokenValue" : (TokenValue)?,
+      "StreamUrl" : (StreamUrl)?
+    )
+
+    alias ReviewInformation = NamedTuple(
+      "ReviewedTime" : (DateTime)?,
+      "Status" : (ReviewStatus)?,
+      "Reviewer" : (Reviewer)?
+    )
+
+    alias ReviewInformationList = Array(ReviewInformation)
+
+    alias ReviewStatus = String
+
+    alias Reviewer = String
+
+    alias Runbook = NamedTuple(
+      "DocumentName" : DocumentARN,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Parameters" : (AutomationParameterMap)?,
+      "TargetParameterName" : (AutomationParameterKey)?,
+      "Targets" : (Targets)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "TargetLocations" : (TargetLocations)?
+    )
+
+    alias Runbooks = Array(Runbook)
+
+    alias S3BucketName = String
+
+    alias S3KeyPrefix = String
+
+    alias S3OutputLocation = NamedTuple(
+      "OutputS3Region" : (S3Region)?,
+      "OutputS3BucketName" : (S3BucketName)?,
+      "OutputS3KeyPrefix" : (S3KeyPrefix)?
+    )
+
+    alias S3OutputUrl = NamedTuple(
+      "OutputUrl" : (Url)?
+    )
+
+    alias S3Region = String
+
+    alias ScheduleExpression = String
+
+    alias ScheduledWindowExecution = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "Name" : (MaintenanceWindowName)?,
+      "ExecutionTime" : (MaintenanceWindowStringDateTime)?
+    )
+
+    alias ScheduledWindowExecutionList = Array(ScheduledWindowExecution)
+
+    alias SendAutomationSignalRequest = NamedTuple(
+      "AutomationExecutionId" : AutomationExecutionId,
+      "SignalType" : SignalType,
+      "Payload" : (AutomationParameterMap)?
+    )
+
+    alias SendAutomationSignalResult = NamedTuple(
+      
+    )
+
+    alias SendCommandRequest = NamedTuple(
+      "InstanceIds" : (InstanceIdList)?,
+      "Targets" : (Targets)?,
+      "DocumentName" : DocumentARN,
+      "DocumentVersion" : (DocumentVersion)?,
+      "DocumentHash" : (DocumentHash)?,
+      "DocumentHashType" : (DocumentHashType)?,
+      "TimeoutSeconds" : (TimeoutSeconds)?,
+      "Comment" : (Comment)?,
+      "Parameters" : (Parameters)?,
+      "OutputS3Region" : (S3Region)?,
+      "OutputS3BucketName" : (S3BucketName)?,
+      "OutputS3KeyPrefix" : (S3KeyPrefix)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "NotificationConfig" : (NotificationConfig)?,
+      "CloudWatchOutputConfig" : (CloudWatchOutputConfig)?
+    )
+
+    alias SendCommandResult = NamedTuple(
+      "Command" : (Command)?
+    )
+
+    alias ServiceRole = String
+
+    alias ServiceSetting = NamedTuple(
+      "SettingId" : (ServiceSettingId)?,
+      "SettingValue" : (ServiceSettingValue)?,
+      "LastModifiedDate" : (DateTime)?,
+      "LastModifiedUser" : (String)?,
+      "ARN" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias ServiceSettingId = String
+
+    alias ServiceSettingNotFound = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ServiceSettingValue = String
+
+    alias Session = NamedTuple(
+      "SessionId" : (SessionId)?,
+      "Target" : (SessionTarget)?,
+      "Status" : (SessionStatus)?,
+      "StartDate" : (DateTime)?,
+      "EndDate" : (DateTime)?,
+      "DocumentName" : (DocumentName)?,
+      "Owner" : (SessionOwner)?,
+      "Details" : (SessionDetails)?,
+      "OutputUrl" : (SessionManagerOutputUrl)?
+    )
+
+    alias SessionDetails = String
+
+    alias SessionFilter = NamedTuple(
+      "key" : SessionFilterKey,
+      "value" : SessionFilterValue
+    )
+
+    alias SessionFilterKey = String
+
+    alias SessionFilterList = Array(SessionFilter)
+
+    alias SessionFilterValue = String
+
+    alias SessionId = String
+
+    alias SessionList = Array(Session)
+
+    alias SessionManagerCloudWatchOutputUrl = String
+
+    alias SessionManagerOutputUrl = NamedTuple(
+      "S3OutputUrl" : (SessionManagerS3OutputUrl)?,
+      "CloudWatchOutputUrl" : (SessionManagerCloudWatchOutputUrl)?
+    )
+
+    alias SessionManagerParameterName = String
+
+    alias SessionManagerParameterValue = String
+
+    alias SessionManagerParameterValueList = Array(SessionManagerParameterValue)
+
+    alias SessionManagerParameters = Hash(SessionManagerParameterName,SessionManagerParameterValueList)
+
+    alias SessionManagerS3OutputUrl = String
+
+    alias SessionMaxResults = Int32
+
+    alias SessionOwner = String
+
+    alias SessionState = String
+
+    alias SessionStatus = String
+
+    alias SessionTarget = String
+
+    alias SeveritySummary = NamedTuple(
+      "CriticalCount" : (ComplianceSummaryCount)?,
+      "HighCount" : (ComplianceSummaryCount)?,
+      "MediumCount" : (ComplianceSummaryCount)?,
+      "LowCount" : (ComplianceSummaryCount)?,
+      "InformationalCount" : (ComplianceSummaryCount)?,
+      "UnspecifiedCount" : (ComplianceSummaryCount)?
+    )
+
+    alias SharedDocumentVersion = String
+
+    alias SignalType = String
+
+    alias SnapshotDownloadUrl = String
+
+    alias SnapshotId = String
+
+    alias StandardErrorContent = String
+
+    alias StandardOutputContent = String
+
+    alias StartAssociationsOnceRequest = NamedTuple(
+      "AssociationIds" : AssociationIdList
+    )
+
+    alias StartAssociationsOnceResult = NamedTuple(
+      
+    )
+
+    alias StartAutomationExecutionRequest = NamedTuple(
+      "DocumentName" : DocumentARN,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Parameters" : (AutomationParameterMap)?,
+      "ClientToken" : (IdempotencyToken)?,
+      "Mode" : (ExecutionMode)?,
+      "TargetParameterName" : (AutomationParameterKey)?,
+      "Targets" : (Targets)?,
+      "TargetMaps" : (TargetMaps)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "TargetLocations" : (TargetLocations)?,
+      "Tags" : (TagList)?
+    )
+
+    alias StartAutomationExecutionResult = NamedTuple(
+      "AutomationExecutionId" : (AutomationExecutionId)?
+    )
+
+    alias StartChangeRequestExecutionRequest = NamedTuple(
+      "ScheduledTime" : (DateTime)?,
+      "DocumentName" : DocumentARN,
+      "DocumentVersion" : (DocumentVersion)?,
+      "Parameters" : (AutomationParameterMap)?,
+      "ChangeRequestName" : (ChangeRequestName)?,
+      "ClientToken" : (IdempotencyToken)?,
+      "Runbooks" : Runbooks,
+      "Tags" : (TagList)?
+    )
+
+    alias StartChangeRequestExecutionResult = NamedTuple(
+      "AutomationExecutionId" : (AutomationExecutionId)?
+    )
+
+    alias StartSessionRequest = NamedTuple(
+      "Target" : SessionTarget,
+      "DocumentName" : (DocumentARN)?,
+      "Parameters" : (SessionManagerParameters)?
+    )
+
+    alias StartSessionResponse = NamedTuple(
+      "SessionId" : (SessionId)?,
+      "TokenValue" : (TokenValue)?,
+      "StreamUrl" : (StreamUrl)?
+    )
+
+    alias StatusAdditionalInfo = String
+
+    alias StatusDetails = String
+
+    alias StatusMessage = String
+
+    alias StatusName = String
+
+    alias StatusUnchanged = NamedTuple(
+      
+    )
+
+    alias StepExecution = NamedTuple(
+      "StepName" : (String)?,
+      "Action" : (AutomationActionName)?,
+      "TimeoutSeconds" : (Long)?,
+      "OnFailure" : (String)?,
+      "MaxAttempts" : (Integer)?,
+      "ExecutionStartTime" : (DateTime)?,
+      "ExecutionEndTime" : (DateTime)?,
+      "StepStatus" : (AutomationExecutionStatus)?,
+      "ResponseCode" : (String)?,
+      "Inputs" : (NormalStringMap)?,
+      "Outputs" : (AutomationParameterMap)?,
+      "Response" : (String)?,
+      "FailureMessage" : (String)?,
+      "FailureDetails" : (FailureDetails)?,
+      "StepExecutionId" : (String)?,
+      "OverriddenParameters" : (AutomationParameterMap)?,
+      "IsEnd" : (Boolean)?,
+      "NextStep" : (String)?,
+      "IsCritical" : (Boolean)?,
+      "ValidNextSteps" : (ValidNextStepList)?,
+      "Targets" : (Targets)?,
+      "TargetLocation" : (TargetLocation)?
+    )
+
+    alias StepExecutionFilter = NamedTuple(
+      "Key" : StepExecutionFilterKey,
+      "Values" : StepExecutionFilterValueList
+    )
+
+    alias StepExecutionFilterKey = String
+
+    alias StepExecutionFilterList = Array(StepExecutionFilter)
+
+    alias StepExecutionFilterValue = String
+
+    alias StepExecutionFilterValueList = Array(StepExecutionFilterValue)
+
+    alias StepExecutionList = Array(StepExecution)
+
+    alias StopAutomationExecutionRequest = NamedTuple(
+      "AutomationExecutionId" : AutomationExecutionId,
+      "Type" : (StopType)?
+    )
+
+    alias StopAutomationExecutionResult = NamedTuple(
+      
+    )
+
+    alias StopType = String
+
+    alias StreamUrl = String
+
+    alias String = String
+
+    alias StringDateTime = String
+
+    alias StringList = Array(String)
+
+    alias SubTypeCountLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias Target = NamedTuple(
+      "Key" : (TargetKey)?,
+      "Values" : (TargetValues)?
+    )
+
+    alias TargetCount = Int32
+
+    alias TargetInUseException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TargetKey = String
+
+    alias TargetLocation = NamedTuple(
+      "Accounts" : (Accounts)?,
+      "Regions" : (Regions)?,
+      "TargetLocationMaxConcurrency" : (MaxConcurrency)?,
+      "TargetLocationMaxErrors" : (MaxErrors)?,
+      "ExecutionRoleName" : (ExecutionRoleName)?
+    )
+
+    alias TargetLocations = Array(TargetLocation)
+
+    alias TargetMap = Hash(TargetMapKey,TargetMapValueList)
+
+    alias TargetMapKey = String
+
+    alias TargetMapValue = String
+
+    alias TargetMapValueList = Array(TargetMapValue)
+
+    alias TargetMaps = Array(TargetMap)
+
+    alias TargetNotConnected = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TargetParameterList = Array(ParameterValue)
+
+    alias TargetType = String
+
+    alias TargetValue = String
+
+    alias TargetValues = Array(TargetValue)
+
+    alias Targets = Array(Target)
+
+    alias TerminateSessionRequest = NamedTuple(
+      "SessionId" : SessionId
+    )
+
+    alias TerminateSessionResponse = NamedTuple(
+      "SessionId" : (SessionId)?
+    )
+
+    alias TimeoutSeconds = Int32
+
+    alias TokenValue = String
+
+    alias TooManyTagsError = NamedTuple(
+      
+    )
+
+    alias TooManyUpdates = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TotalCount = Int32
+
+    alias TotalSizeLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UUID = String
+
+    alias UnsupportedCalendarException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UnsupportedFeatureRequiredException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UnsupportedInventoryItemContextException = NamedTuple(
+      "TypeName" : (InventoryItemTypeName)?,
+      "Message" : (String)?
+    )
+
+    alias UnsupportedInventorySchemaVersionException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UnsupportedOperatingSystem = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UnsupportedParameterType = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UnsupportedPlatformType = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UpdateAssociationRequest = NamedTuple(
+      "AssociationId" : AssociationId,
+      "Parameters" : (Parameters)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "ScheduleExpression" : (ScheduleExpression)?,
+      "OutputLocation" : (InstanceAssociationOutputLocation)?,
+      "Name" : (DocumentARN)?,
+      "Targets" : (Targets)?,
+      "AssociationName" : (AssociationName)?,
+      "AssociationVersion" : (AssociationVersion)?,
+      "AutomationTargetParameterName" : (AutomationTargetParameterName)?,
+      "MaxErrors" : (MaxErrors)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "ComplianceSeverity" : (AssociationComplianceSeverity)?,
+      "SyncCompliance" : (AssociationSyncCompliance)?,
+      "ApplyOnlyAtCronInterval" : (ApplyOnlyAtCronInterval)?,
+      "TargetLocations" : (TargetLocations)?
+    )
+
+    alias UpdateAssociationResult = NamedTuple(
+      "AssociationDescription" : (AssociationDescription)?
+    )
+
+    alias UpdateAssociationStatusRequest = NamedTuple(
+      "Name" : DocumentARN,
+      "InstanceId" : InstanceId,
+      "AssociationStatus" : AssociationStatus
+    )
+
+    alias UpdateAssociationStatusResult = NamedTuple(
+      "AssociationDescription" : (AssociationDescription)?
+    )
+
+    alias UpdateDocumentDefaultVersionRequest = NamedTuple(
+      "Name" : DocumentName,
+      "DocumentVersion" : DocumentVersionNumber
+    )
+
+    alias UpdateDocumentDefaultVersionResult = NamedTuple(
+      "Description" : (DocumentDefaultVersionDescription)?
+    )
+
+    alias UpdateDocumentMetadataRequest = NamedTuple(
+      "Name" : DocumentName,
+      "DocumentVersion" : (DocumentVersion)?,
+      "DocumentReviews" : DocumentReviews
+    )
+
+    alias UpdateDocumentMetadataResponse = NamedTuple(
+      
+    )
+
+    alias UpdateDocumentRequest = NamedTuple(
+      "Content" : DocumentContent,
+      "Attachments" : (AttachmentsSourceList)?,
+      "Name" : DocumentName,
+      "VersionName" : (DocumentVersionName)?,
+      "DocumentVersion" : (DocumentVersion)?,
+      "DocumentFormat" : (DocumentFormat)?,
+      "TargetType" : (TargetType)?
+    )
+
+    alias UpdateDocumentResult = NamedTuple(
+      "DocumentDescription" : (DocumentDescription)?
+    )
+
+    alias UpdateMaintenanceWindowRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "StartDate" : (MaintenanceWindowStringDateTime)?,
+      "EndDate" : (MaintenanceWindowStringDateTime)?,
+      "Schedule" : (MaintenanceWindowSchedule)?,
+      "ScheduleTimezone" : (MaintenanceWindowTimezone)?,
+      "ScheduleOffset" : (MaintenanceWindowOffset)?,
+      "Duration" : (MaintenanceWindowDurationHours)?,
+      "Cutoff" : (MaintenanceWindowCutoff)?,
+      "AllowUnassociatedTargets" : (MaintenanceWindowAllowUnassociatedTargets)?,
+      "Enabled" : (MaintenanceWindowEnabled)?,
+      "Replace" : (Boolean)?
+    )
+
+    alias UpdateMaintenanceWindowResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "StartDate" : (MaintenanceWindowStringDateTime)?,
+      "EndDate" : (MaintenanceWindowStringDateTime)?,
+      "Schedule" : (MaintenanceWindowSchedule)?,
+      "ScheduleTimezone" : (MaintenanceWindowTimezone)?,
+      "ScheduleOffset" : (MaintenanceWindowOffset)?,
+      "Duration" : (MaintenanceWindowDurationHours)?,
+      "Cutoff" : (MaintenanceWindowCutoff)?,
+      "AllowUnassociatedTargets" : (MaintenanceWindowAllowUnassociatedTargets)?,
+      "Enabled" : (MaintenanceWindowEnabled)?
+    )
+
+    alias UpdateMaintenanceWindowTargetRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "WindowTargetId" : MaintenanceWindowTargetId,
+      "Targets" : (Targets)?,
+      "OwnerInformation" : (OwnerInformation)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "Replace" : (Boolean)?
+    )
+
+    alias UpdateMaintenanceWindowTargetResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTargetId" : (MaintenanceWindowTargetId)?,
+      "Targets" : (Targets)?,
+      "OwnerInformation" : (OwnerInformation)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?
+    )
+
+    alias UpdateMaintenanceWindowTaskRequest = NamedTuple(
+      "WindowId" : MaintenanceWindowId,
+      "WindowTaskId" : MaintenanceWindowTaskId,
+      "Targets" : (Targets)?,
+      "TaskArn" : (MaintenanceWindowTaskArn)?,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "TaskParameters" : (MaintenanceWindowTaskParameters)?,
+      "TaskInvocationParameters" : (MaintenanceWindowTaskInvocationParameters)?,
+      "Priority" : (MaintenanceWindowTaskPriority)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "LoggingInfo" : (LoggingInfo)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?,
+      "Replace" : (Boolean)?
+    )
+
+    alias UpdateMaintenanceWindowTaskResult = NamedTuple(
+      "WindowId" : (MaintenanceWindowId)?,
+      "WindowTaskId" : (MaintenanceWindowTaskId)?,
+      "Targets" : (Targets)?,
+      "TaskArn" : (MaintenanceWindowTaskArn)?,
+      "ServiceRoleArn" : (ServiceRole)?,
+      "TaskParameters" : (MaintenanceWindowTaskParameters)?,
+      "TaskInvocationParameters" : (MaintenanceWindowTaskInvocationParameters)?,
+      "Priority" : (MaintenanceWindowTaskPriority)?,
+      "MaxConcurrency" : (MaxConcurrency)?,
+      "MaxErrors" : (MaxErrors)?,
+      "LoggingInfo" : (LoggingInfo)?,
+      "Name" : (MaintenanceWindowName)?,
+      "Description" : (MaintenanceWindowDescription)?
+    )
+
+    alias UpdateManagedInstanceRoleRequest = NamedTuple(
+      "InstanceId" : ManagedInstanceId,
+      "IamRole" : IamRole
+    )
+
+    alias UpdateManagedInstanceRoleResult = NamedTuple(
+      
+    )
+
+    alias UpdateOpsItemRequest = NamedTuple(
+      "Description" : (OpsItemDescription)?,
+      "OperationalData" : (OpsItemOperationalData)?,
+      "OperationalDataToDelete" : (OpsItemOpsDataKeysList)?,
+      "Notifications" : (OpsItemNotifications)?,
+      "Priority" : (OpsItemPriority)?,
+      "RelatedOpsItems" : (RelatedOpsItems)?,
+      "Status" : (OpsItemStatus)?,
+      "OpsItemId" : OpsItemId,
+      "Title" : (OpsItemTitle)?,
+      "Category" : (OpsItemCategory)?,
+      "Severity" : (OpsItemSeverity)?,
+      "ActualStartTime" : (DateTime)?,
+      "ActualEndTime" : (DateTime)?,
+      "PlannedStartTime" : (DateTime)?,
+      "PlannedEndTime" : (DateTime)?
+    )
+
+    alias UpdateOpsItemResponse = NamedTuple(
+      
+    )
+
+    alias UpdateOpsMetadataRequest = NamedTuple(
+      "OpsMetadataArn" : OpsMetadataArn,
+      "MetadataToUpdate" : (MetadataMap)?,
+      "KeysToDelete" : (MetadataKeysToDeleteList)?
+    )
+
+    alias UpdateOpsMetadataResult = NamedTuple(
+      "OpsMetadataArn" : (OpsMetadataArn)?
+    )
+
+    alias UpdatePatchBaselineRequest = NamedTuple(
+      "BaselineId" : BaselineId,
+      "Name" : (BaselineName)?,
+      "GlobalFilters" : (PatchFilterGroup)?,
+      "ApprovalRules" : (PatchRuleGroup)?,
+      "ApprovedPatches" : (PatchIdList)?,
+      "ApprovedPatchesComplianceLevel" : (PatchComplianceLevel)?,
+      "ApprovedPatchesEnableNonSecurity" : (Boolean)?,
+      "RejectedPatches" : (PatchIdList)?,
+      "RejectedPatchesAction" : (PatchAction)?,
+      "Description" : (BaselineDescription)?,
+      "Sources" : (PatchSourceList)?,
+      "Replace" : (Boolean)?
+    )
+
+    alias UpdatePatchBaselineResult = NamedTuple(
+      "BaselineId" : (BaselineId)?,
+      "Name" : (BaselineName)?,
+      "OperatingSystem" : (OperatingSystem)?,
+      "GlobalFilters" : (PatchFilterGroup)?,
+      "ApprovalRules" : (PatchRuleGroup)?,
+      "ApprovedPatches" : (PatchIdList)?,
+      "ApprovedPatchesComplianceLevel" : (PatchComplianceLevel)?,
+      "ApprovedPatchesEnableNonSecurity" : (Boolean)?,
+      "RejectedPatches" : (PatchIdList)?,
+      "RejectedPatchesAction" : (PatchAction)?,
+      "CreatedDate" : (DateTime)?,
+      "ModifiedDate" : (DateTime)?,
+      "Description" : (BaselineDescription)?,
+      "Sources" : (PatchSourceList)?
+    )
+
+    alias UpdateResourceDataSyncRequest = NamedTuple(
+      "SyncName" : ResourceDataSyncName,
+      "SyncType" : ResourceDataSyncType,
+      "SyncSource" : ResourceDataSyncSource
+    )
+
+    alias UpdateResourceDataSyncResult = NamedTuple(
+      
+    )
+
+    alias UpdateServiceSettingRequest = NamedTuple(
+      "SettingId" : ServiceSettingId,
+      "SettingValue" : ServiceSettingValue
+    )
+
+    alias UpdateServiceSettingResult = NamedTuple(
+      
+    )
+
+    alias Url = String
+
+    alias ValidNextStep = String
+
+    alias ValidNextStepList = Array(ValidNextStep)
+
+    alias Version = String
   end
 end

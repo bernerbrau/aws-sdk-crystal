@@ -427,8 +427,8 @@ module Aws::LakeFormation
     #
     # @overload batch_grant_permissions(**params)
     # @param [Hash] params ({})
-    def batch_grant_permissions(params = {}, **options)
-      req = build_request(:batch_grant_permissions, params)
+    def batch_grant_permissions(, **options)
+      req = build_request(:batch_grant_permissions, )
       req.send_request(options)
     end
 
@@ -522,8 +522,8 @@ module Aws::LakeFormation
     #
     # @overload batch_revoke_permissions(**params)
     # @param [Hash] params ({})
-    def batch_revoke_permissions(params = {}, **options)
-      req = build_request(:batch_revoke_permissions, params)
+    def batch_revoke_permissions(, **options)
+      req = build_request(:batch_revoke_permissions, )
       req.send_request(options)
     end
 
@@ -548,8 +548,8 @@ module Aws::LakeFormation
     #
     # @overload deregister_resource(**params)
     # @param [Hash] params ({})
-    def deregister_resource(params = {}, **options)
-      req = build_request(:deregister_resource, params)
+    def deregister_resource(, **options)
+      req = build_request(:deregister_resource, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::LakeFormation
     #
     # @overload describe_resource(**params)
     # @param [Hash] params ({})
-    def describe_resource(params = {}, **options)
-      req = build_request(:describe_resource, params)
+    def describe_resource(, **options)
+      req = build_request(:describe_resource, )
       req.send_request(options)
     end
 
@@ -622,8 +622,8 @@ module Aws::LakeFormation
     #
     # @overload get_data_lake_settings(**params)
     # @param [Hash] params ({})
-    def get_data_lake_settings(params = {}, **options)
-      req = build_request(:get_data_lake_settings, params)
+    def get_data_lake_settings(, **options)
+      req = build_request(:get_data_lake_settings, )
       req.send_request(options)
     end
 
@@ -695,8 +695,8 @@ module Aws::LakeFormation
     #
     # @overload get_effective_permissions_for_path(**params)
     # @param [Hash] params ({})
-    def get_effective_permissions_for_path(params = {}, **options)
-      req = build_request(:get_effective_permissions_for_path, params)
+    def get_effective_permissions_for_path(, **options)
+      req = build_request(:get_effective_permissions_for_path, )
       req.send_request(options)
     end
 
@@ -787,8 +787,8 @@ module Aws::LakeFormation
     #
     # @overload grant_permissions(**params)
     # @param [Hash] params ({})
-    def grant_permissions(params = {}, **options)
-      req = build_request(:grant_permissions, params)
+    def grant_permissions(, **options)
+      req = build_request(:grant_permissions, )
       req.send_request(options)
     end
 
@@ -910,8 +910,8 @@ module Aws::LakeFormation
     #
     # @overload list_permissions(**params)
     # @param [Hash] params ({})
-    def list_permissions(params = {}, **options)
-      req = build_request(:list_permissions, params)
+    def list_permissions(, **options)
+      req = build_request(:list_permissions, )
       req.send_request(options)
     end
 
@@ -961,8 +961,8 @@ module Aws::LakeFormation
     #
     # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, **options)
-      req = build_request(:list_resources, params)
+    def list_resources(, **options)
+      req = build_request(:list_resources, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::LakeFormation
     #
     # @overload put_data_lake_settings(**params)
     # @param [Hash] params ({})
-    def put_data_lake_settings(params = {}, **options)
-      req = build_request(:put_data_lake_settings, params)
+    def put_data_lake_settings(, **options)
+      req = build_request(:put_data_lake_settings, )
       req.send_request(options)
     end
 
@@ -1085,8 +1085,8 @@ module Aws::LakeFormation
     #
     # @overload register_resource(**params)
     # @param [Hash] params ({})
-    def register_resource(params = {}, **options)
-      req = build_request(:register_resource, params)
+    def register_resource(, **options)
+      req = build_request(:register_resource, )
       req.send_request(options)
     end
 
@@ -1164,8 +1164,8 @@ module Aws::LakeFormation
     #
     # @overload revoke_permissions(**params)
     # @param [Hash] params ({})
-    def revoke_permissions(params = {}, **options)
-      req = build_request(:revoke_permissions, params)
+    def revoke_permissions(, **options)
+      req = build_request(:revoke_permissions, )
       req.send_request(options)
     end
 
@@ -1192,8 +1192,8 @@ module Aws::LakeFormation
     #
     # @overload update_resource(**params)
     # @param [Hash] params ({})
-    def update_resource(params = {}, **options)
-      req = build_request(:update_resource, params)
+    def update_resource(, **options)
+      req = build_request(:update_resource, )
       req.send_request(options)
     end
 

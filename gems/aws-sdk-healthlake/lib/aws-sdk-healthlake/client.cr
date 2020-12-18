@@ -385,8 +385,8 @@ module Aws::HealthLake
     #
     # @overload create_fhir_datastore(**params)
     # @param [Hash] params ({})
-    def create_fhir_datastore(params = {}, **options)
-      req = build_request(:create_fhir_datastore, params)
+    def create_fhir_datastore(, **options)
+      req = build_request(:create_fhir_datastore, )
       req.send_request(options)
     end
 
@@ -419,8 +419,8 @@ module Aws::HealthLake
     #
     # @overload delete_fhir_datastore(**params)
     # @param [Hash] params ({})
-    def delete_fhir_datastore(params = {}, **options)
-      req = build_request(:delete_fhir_datastore, params)
+    def delete_fhir_datastore(, **options)
+      req = build_request(:delete_fhir_datastore, )
       req.send_request(options)
     end
 
@@ -457,8 +457,8 @@ module Aws::HealthLake
     #
     # @overload describe_fhir_datastore(**params)
     # @param [Hash] params ({})
-    def describe_fhir_datastore(params = {}, **options)
-      req = build_request(:describe_fhir_datastore, params)
+    def describe_fhir_datastore(, **options)
+      req = build_request(:describe_fhir_datastore, )
       req.send_request(options)
     end
 
@@ -498,8 +498,8 @@ module Aws::HealthLake
     #
     # @overload describe_fhir_import_job(**params)
     # @param [Hash] params ({})
-    def describe_fhir_import_job(params = {}, **options)
-      req = build_request(:describe_fhir_import_job, params)
+    def describe_fhir_import_job(, **options)
+      req = build_request(:describe_fhir_import_job, )
       req.send_request(options)
     end
 
@@ -553,8 +553,8 @@ module Aws::HealthLake
     #
     # @overload list_fhir_datastores(**params)
     # @param [Hash] params ({})
-    def list_fhir_datastores(params = {}, **options)
-      req = build_request(:list_fhir_datastores, params)
+    def list_fhir_datastores(, **options)
+      req = build_request(:list_fhir_datastores, )
       req.send_request(options)
     end
 
@@ -608,8 +608,8 @@ module Aws::HealthLake
     #
     # @overload start_fhir_import_job(**params)
     # @param [Hash] params ({})
-    def start_fhir_import_job(params = {}, **options)
-      req = build_request(:start_fhir_import_job, params)
+    def start_fhir_import_job(, **options)
+      req = build_request(:start_fhir_import_job, )
       req.send_request(options)
     end
 

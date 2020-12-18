@@ -391,8 +391,8 @@ module Aws::DynamoDB
     #
     # @overload batch_execute_statement(**params)
     # @param [Hash] params ({})
-    def batch_execute_statement(params = {}, **options)
-      req = build_request(:batch_execute_statement, params)
+    def batch_execute_statement(, **options)
+      req = build_request(:batch_execute_statement, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::DynamoDB
     #
     # @overload batch_get_item(**params)
     # @param [Hash] params ({})
-    def batch_get_item(params = {}, **options)
-      req = build_request(:batch_get_item, params)
+    def batch_get_item(, **options)
+      req = build_request(:batch_get_item, )
       req.send_request(options)
     end
 
@@ -925,8 +925,8 @@ module Aws::DynamoDB
     #
     # @overload batch_write_item(**params)
     # @param [Hash] params ({})
-    def batch_write_item(params = {}, **options)
-      req = build_request(:batch_write_item, params)
+    def batch_write_item(, **options)
+      req = build_request(:batch_write_item, )
       req.send_request(options)
     end
 
@@ -994,8 +994,8 @@ module Aws::DynamoDB
     #
     # @overload create_backup(**params)
     # @param [Hash] params ({})
-    def create_backup(params = {}, **options)
-      req = build_request(:create_backup, params)
+    def create_backup(, **options)
+      req = build_request(:create_backup, )
       req.send_request(options)
     end
 
@@ -1094,8 +1094,8 @@ module Aws::DynamoDB
     #
     # @overload create_global_table(**params)
     # @param [Hash] params ({})
-    def create_global_table(params = {}, **options)
-      req = build_request(:create_global_table, params)
+    def create_global_table(, **options)
+      req = build_request(:create_global_table, )
       req.send_request(options)
     end
 
@@ -1546,8 +1546,8 @@ module Aws::DynamoDB
     #
     # @overload create_table(**params)
     # @param [Hash] params ({})
-    def create_table(params = {}, **options)
-      req = build_request(:create_table, params)
+    def create_table(, **options)
+      req = build_request(:create_table, )
       req.send_request(options)
     end
 
@@ -1620,8 +1620,8 @@ module Aws::DynamoDB
     #
     # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, **options)
-      req = build_request(:delete_backup, params)
+    def delete_backup(, **options)
+      req = build_request(:delete_backup, )
       req.send_request(options)
     end
 
@@ -1893,8 +1893,8 @@ module Aws::DynamoDB
     #
     # @overload delete_item(**params)
     # @param [Hash] params ({})
-    def delete_item(params = {}, **options)
-      req = build_request(:delete_item, params)
+    def delete_item(, **options)
+      req = build_request(:delete_item, )
       req.send_request(options)
     end
 
@@ -2041,8 +2041,8 @@ module Aws::DynamoDB
     #
     # @overload delete_table(**params)
     # @param [Hash] params ({})
-    def delete_table(params = {}, **options)
-      req = build_request(:delete_table, params)
+    def delete_table(, **options)
+      req = build_request(:delete_table, )
       req.send_request(options)
     end
 
@@ -2116,8 +2116,8 @@ module Aws::DynamoDB
     #
     # @overload describe_backup(**params)
     # @param [Hash] params ({})
-    def describe_backup(params = {}, **options)
-      req = build_request(:describe_backup, params)
+    def describe_backup(, **options)
+      req = build_request(:describe_backup, )
       req.send_request(options)
     end
 
@@ -2162,8 +2162,8 @@ module Aws::DynamoDB
     #
     # @overload describe_continuous_backups(**params)
     # @param [Hash] params ({})
-    def describe_continuous_backups(params = {}, **options)
-      req = build_request(:describe_continuous_backups, params)
+    def describe_continuous_backups(, **options)
+      req = build_request(:describe_continuous_backups, )
       req.send_request(options)
     end
 
@@ -2207,8 +2207,8 @@ module Aws::DynamoDB
     #
     # @overload describe_contributor_insights(**params)
     # @param [Hash] params ({})
-    def describe_contributor_insights(params = {}, **options)
-      req = build_request(:describe_contributor_insights, params)
+    def describe_contributor_insights(, **options)
+      req = build_request(:describe_contributor_insights, )
       req.send_request(options)
     end
 
@@ -2228,8 +2228,8 @@ module Aws::DynamoDB
     #
     # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, **options)
-      req = build_request(:describe_endpoints, params)
+    def describe_endpoints(, **options)
+      req = build_request(:describe_endpoints, )
       req.send_request(options)
     end
 
@@ -2274,8 +2274,8 @@ module Aws::DynamoDB
     #
     # @overload describe_export(**params)
     # @param [Hash] params ({})
-    def describe_export(params = {}, **options)
-      req = build_request(:describe_export, params)
+    def describe_export(, **options)
+      req = build_request(:describe_export, )
       req.send_request(options)
     end
 
@@ -2328,8 +2328,8 @@ module Aws::DynamoDB
     #
     # @overload describe_global_table(**params)
     # @param [Hash] params ({})
-    def describe_global_table(params = {}, **options)
-      req = build_request(:describe_global_table, params)
+    def describe_global_table(, **options)
+      req = build_request(:describe_global_table, )
       req.send_request(options)
     end
 
@@ -2418,8 +2418,8 @@ module Aws::DynamoDB
     #
     # @overload describe_global_table_settings(**params)
     # @param [Hash] params ({})
-    def describe_global_table_settings(params = {}, **options)
-      req = build_request(:describe_global_table_settings, params)
+    def describe_global_table_settings(, **options)
+      req = build_request(:describe_global_table_settings, )
       req.send_request(options)
     end
 
@@ -2451,8 +2451,8 @@ module Aws::DynamoDB
     #
     # @overload describe_kinesis_streaming_destination(**params)
     # @param [Hash] params ({})
-    def describe_kinesis_streaming_destination(params = {}, **options)
-      req = build_request(:describe_kinesis_streaming_destination, params)
+    def describe_kinesis_streaming_destination(, **options)
+      req = build_request(:describe_kinesis_streaming_destination, )
       req.send_request(options)
     end
 
@@ -2560,8 +2560,8 @@ module Aws::DynamoDB
     #
     # @overload describe_limits(**params)
     # @param [Hash] params ({})
-    def describe_limits(params = {}, **options)
-      req = build_request(:describe_limits, params)
+    def describe_limits(, **options)
+      req = build_request(:describe_limits, )
       req.send_request(options)
     end
 
@@ -2725,8 +2725,8 @@ module Aws::DynamoDB
     #
     # @overload describe_table(**params)
     # @param [Hash] params ({})
-    def describe_table(params = {}, **options)
-      req = build_request(:describe_table, params)
+    def describe_table(, **options)
+      req = build_request(:describe_table, )
       req.send_request(options)
     end
 
@@ -2810,8 +2810,8 @@ module Aws::DynamoDB
     #
     # @overload describe_table_replica_auto_scaling(**params)
     # @param [Hash] params ({})
-    def describe_table_replica_auto_scaling(params = {}, **options)
-      req = build_request(:describe_table_replica_auto_scaling, params)
+    def describe_table_replica_auto_scaling(, **options)
+      req = build_request(:describe_table_replica_auto_scaling, )
       req.send_request(options)
     end
 
@@ -2840,8 +2840,8 @@ module Aws::DynamoDB
     #
     # @overload describe_time_to_live(**params)
     # @param [Hash] params ({})
-    def describe_time_to_live(params = {}, **options)
-      req = build_request(:describe_time_to_live, params)
+    def describe_time_to_live(, **options)
+      req = build_request(:describe_time_to_live, )
       req.send_request(options)
     end
 
@@ -2877,8 +2877,8 @@ module Aws::DynamoDB
     #
     # @overload disable_kinesis_streaming_destination(**params)
     # @param [Hash] params ({})
-    def disable_kinesis_streaming_destination(params = {}, **options)
-      req = build_request(:disable_kinesis_streaming_destination, params)
+    def disable_kinesis_streaming_destination(, **options)
+      req = build_request(:disable_kinesis_streaming_destination, )
       req.send_request(options)
     end
 
@@ -2917,8 +2917,8 @@ module Aws::DynamoDB
     #
     # @overload enable_kinesis_streaming_destination(**params)
     # @param [Hash] params ({})
-    def enable_kinesis_streaming_destination(params = {}, **options)
-      req = build_request(:enable_kinesis_streaming_destination, params)
+    def enable_kinesis_streaming_destination(, **options)
+      req = build_request(:enable_kinesis_streaming_destination, )
       req.send_request(options)
     end
 
@@ -2965,8 +2965,8 @@ module Aws::DynamoDB
     #
     # @overload execute_statement(**params)
     # @param [Hash] params ({})
-    def execute_statement(params = {}, **options)
-      req = build_request(:execute_statement, params)
+    def execute_statement(, **options)
+      req = build_request(:execute_statement, )
       req.send_request(options)
     end
 
@@ -3009,8 +3009,8 @@ module Aws::DynamoDB
     #
     # @overload execute_transaction(**params)
     # @param [Hash] params ({})
-    def execute_transaction(params = {}, **options)
-      req = build_request(:execute_transaction, params)
+    def execute_transaction(, **options)
+      req = build_request(:execute_transaction, )
       req.send_request(options)
     end
 
@@ -3114,8 +3114,8 @@ module Aws::DynamoDB
     #
     # @overload export_table_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def export_table_to_point_in_time(params = {}, **options)
-      req = build_request(:export_table_to_point_in_time, params)
+    def export_table_to_point_in_time(, **options)
+      req = build_request(:export_table_to_point_in_time, )
       req.send_request(options)
     end
 
@@ -3309,8 +3309,8 @@ module Aws::DynamoDB
     #
     # @overload get_item(**params)
     # @param [Hash] params ({})
-    def get_item(params = {}, **options)
-      req = build_request(:get_item, params)
+    def get_item(, **options)
+      req = build_request(:get_item, )
       req.send_request(options)
     end
 
@@ -3392,8 +3392,8 @@ module Aws::DynamoDB
     #
     # @overload list_backups(**params)
     # @param [Hash] params ({})
-    def list_backups(params = {}, **options)
-      req = build_request(:list_backups, params)
+    def list_backups(, **options)
+      req = build_request(:list_backups, )
       req.send_request(options)
     end
 
@@ -3436,8 +3436,8 @@ module Aws::DynamoDB
     #
     # @overload list_contributor_insights(**params)
     # @param [Hash] params ({})
-    def list_contributor_insights(params = {}, **options)
-      req = build_request(:list_contributor_insights, params)
+    def list_contributor_insights(, **options)
+      req = build_request(:list_contributor_insights, )
       req.send_request(options)
     end
 
@@ -3480,8 +3480,8 @@ module Aws::DynamoDB
     #
     # @overload list_exports(**params)
     # @param [Hash] params ({})
-    def list_exports(params = {}, **options)
-      req = build_request(:list_exports, params)
+    def list_exports(, **options)
+      req = build_request(:list_exports, )
       req.send_request(options)
     end
 
@@ -3537,8 +3537,8 @@ module Aws::DynamoDB
     #
     # @overload list_global_tables(**params)
     # @param [Hash] params ({})
-    def list_global_tables(params = {}, **options)
-      req = build_request(:list_global_tables, params)
+    def list_global_tables(, **options)
+      req = build_request(:list_global_tables, )
       req.send_request(options)
     end
 
@@ -3597,8 +3597,8 @@ module Aws::DynamoDB
     #
     # @overload list_tables(**params)
     # @param [Hash] params ({})
-    def list_tables(params = {}, **options)
-      req = build_request(:list_tables, params)
+    def list_tables(, **options)
+      req = build_request(:list_tables, )
       req.send_request(options)
     end
 
@@ -3644,8 +3644,8 @@ module Aws::DynamoDB
     #
     # @overload list_tags_of_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_of_resource(params = {}, **options)
-      req = build_request(:list_tags_of_resource, params)
+    def list_tags_of_resource(, **options)
+      req = build_request(:list_tags_of_resource, )
       req.send_request(options)
     end
 
@@ -3990,8 +3990,8 @@ module Aws::DynamoDB
     #
     # @overload put_item(**params)
     # @param [Hash] params ({})
-    def put_item(params = {}, **options)
-      req = build_request(:put_item, params)
+    def put_item(, **options)
+      req = build_request(:put_item, )
       req.send_request(options)
     end
 
@@ -4524,8 +4524,8 @@ module Aws::DynamoDB
     #
     # @overload query(**params)
     # @param [Hash] params ({})
-    def query(params = {}, **options)
-      req = build_request(:query, params)
+    def query(, **options)
+      req = build_request(:query, )
       req.send_request(options)
     end
 
@@ -4713,8 +4713,8 @@ module Aws::DynamoDB
     #
     # @overload restore_table_from_backup(**params)
     # @param [Hash] params ({})
-    def restore_table_from_backup(params = {}, **options)
-      req = build_request(:restore_table_from_backup, params)
+    def restore_table_from_backup(, **options)
+      req = build_request(:restore_table_from_backup, )
       req.send_request(options)
     end
 
@@ -4936,8 +4936,8 @@ module Aws::DynamoDB
     #
     # @overload restore_table_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_table_to_point_in_time(params = {}, **options)
-      req = build_request(:restore_table_to_point_in_time, params)
+    def restore_table_to_point_in_time(, **options)
+      req = build_request(:restore_table_to_point_in_time, )
       req.send_request(options)
     end
 
@@ -5378,8 +5378,8 @@ module Aws::DynamoDB
     #
     # @overload scan(**params)
     # @param [Hash] params ({})
-    def scan(params = {}, **options)
-      req = build_request(:scan, params)
+    def scan(, **options)
+      req = build_request(:scan, )
       req.send_request(options)
     end
 
@@ -5420,8 +5420,8 @@ module Aws::DynamoDB
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -5508,8 +5508,8 @@ module Aws::DynamoDB
     #
     # @overload transact_get_items(**params)
     # @param [Hash] params ({})
-    def transact_get_items(params = {}, **options)
-      req = build_request(:transact_get_items, params)
+    def transact_get_items(, **options)
+      req = build_request(:transact_get_items, )
       req.send_request(options)
     end
 
@@ -5730,8 +5730,8 @@ module Aws::DynamoDB
     #
     # @overload transact_write_items(**params)
     # @param [Hash] params ({})
-    def transact_write_items(params = {}, **options)
-      req = build_request(:transact_write_items, params)
+    def transact_write_items(, **options)
+      req = build_request(:transact_write_items, )
       req.send_request(options)
     end
 
@@ -5766,8 +5766,8 @@ module Aws::DynamoDB
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -5816,8 +5816,8 @@ module Aws::DynamoDB
     #
     # @overload update_continuous_backups(**params)
     # @param [Hash] params ({})
-    def update_continuous_backups(params = {}, **options)
-      req = build_request(:update_continuous_backups, params)
+    def update_continuous_backups(, **options)
+      req = build_request(:update_continuous_backups, )
       req.send_request(options)
     end
 
@@ -5857,8 +5857,8 @@ module Aws::DynamoDB
     #
     # @overload update_contributor_insights(**params)
     # @param [Hash] params ({})
-    def update_contributor_insights(params = {}, **options)
-      req = build_request(:update_contributor_insights, params)
+    def update_contributor_insights(, **options)
+      req = build_request(:update_contributor_insights, )
       req.send_request(options)
     end
 
@@ -5934,8 +5934,8 @@ module Aws::DynamoDB
     #
     # @overload update_global_table(**params)
     # @param [Hash] params ({})
-    def update_global_table(params = {}, **options)
-      req = build_request(:update_global_table, params)
+    def update_global_table(, **options)
+      req = build_request(:update_global_table, )
       req.send_request(options)
     end
 
@@ -6129,8 +6129,8 @@ module Aws::DynamoDB
     #
     # @overload update_global_table_settings(**params)
     # @param [Hash] params ({})
-    def update_global_table_settings(params = {}, **options)
-      req = build_request(:update_global_table_settings, params)
+    def update_global_table_settings(, **options)
+      req = build_request(:update_global_table_settings, )
       req.send_request(options)
     end
 
@@ -6523,8 +6523,8 @@ module Aws::DynamoDB
     #
     # @overload update_item(**params)
     # @param [Hash] params ({})
-    def update_item(params = {}, **options)
-      req = build_request(:update_item, params)
+    def update_item(, **options)
+      req = build_request(:update_item, )
       req.send_request(options)
     end
 
@@ -6860,8 +6860,8 @@ module Aws::DynamoDB
     #
     # @overload update_table(**params)
     # @param [Hash] params ({})
-    def update_table(params = {}, **options)
-      req = build_request(:update_table, params)
+    def update_table(, **options)
+      req = build_request(:update_table, )
       req.send_request(options)
     end
 
@@ -7031,8 +7031,8 @@ module Aws::DynamoDB
     #
     # @overload update_table_replica_auto_scaling(**params)
     # @param [Hash] params ({})
-    def update_table_replica_auto_scaling(params = {}, **options)
-      req = build_request(:update_table_replica_auto_scaling, params)
+    def update_table_replica_auto_scaling(, **options)
+      req = build_request(:update_table_replica_auto_scaling, )
       req.send_request(options)
     end
 
@@ -7103,8 +7103,8 @@ module Aws::DynamoDB
     #
     # @overload update_time_to_live(**params)
     # @param [Hash] params ({})
-    def update_time_to_live(params = {}, **options)
-      req = build_request(:update_time_to_live, params)
+    def update_time_to_live(, **options)
+      req = build_request(:update_time_to_live, )
       req.send_request(options)
     end
 

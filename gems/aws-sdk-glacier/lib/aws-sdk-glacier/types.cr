@@ -3055,5 +3055,575 @@ module Aws::Glacier
       include Aws::Structure
     end
 
+    alias AbortMultipartUploadInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "uploadId" : string
+    )
+
+    alias AbortVaultLockInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias AccessControlPolicyList = Array(Grant)
+
+    alias ActionCode = String
+
+    alias AddTagsToVaultInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "Tags" : (TagMap)?
+    )
+
+    alias ArchiveCreationOutput = NamedTuple(
+      "location" : (string)?,
+      "checksum" : (string)?,
+      "archiveId" : (string)?
+    )
+
+    alias CSVInput = NamedTuple(
+      "FileHeaderInfo" : (FileHeaderInfo)?,
+      "Comments" : (string)?,
+      "QuoteEscapeCharacter" : (string)?,
+      "RecordDelimiter" : (string)?,
+      "FieldDelimiter" : (string)?,
+      "QuoteCharacter" : (string)?
+    )
+
+    alias CSVOutput = NamedTuple(
+      "QuoteFields" : (QuoteFields)?,
+      "QuoteEscapeCharacter" : (string)?,
+      "RecordDelimiter" : (string)?,
+      "FieldDelimiter" : (string)?,
+      "QuoteCharacter" : (string)?
+    )
+
+    alias CannedACL = String
+
+    alias CompleteMultipartUploadInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "uploadId" : string,
+      "archiveSize" : (Size)?,
+      "checksum" : (string)?
+    )
+
+    alias CompleteVaultLockInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "lockId" : string
+    )
+
+    alias CreateVaultInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias CreateVaultOutput = NamedTuple(
+      "location" : (string)?
+    )
+
+    alias DataRetrievalPolicy = NamedTuple(
+      "Rules" : (DataRetrievalRulesList)?
+    )
+
+    alias DataRetrievalRule = NamedTuple(
+      "Strategy" : (string)?,
+      "BytesPerHour" : (NullableLong)?
+    )
+
+    alias DataRetrievalRulesList = Array(DataRetrievalRule)
+
+    alias DateTime = String
+
+    alias DeleteArchiveInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "archiveId" : string
+    )
+
+    alias DeleteVaultAccessPolicyInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias DeleteVaultInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias DeleteVaultNotificationsInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias DescribeJobInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "jobId" : string
+    )
+
+    alias DescribeVaultInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias DescribeVaultOutput = NamedTuple(
+      "VaultARN" : (string)?,
+      "VaultName" : (string)?,
+      "CreationDate" : (Timestamp)?,
+      "LastInventoryDate" : (Timestamp)?,
+      "NumberOfArchives" : (long)?,
+      "SizeInBytes" : (long)?
+    )
+
+    alias Encryption = NamedTuple(
+      "EncryptionType" : (EncryptionType)?,
+      "KMSKeyId" : (string)?,
+      "KMSContext" : (string)?
+    )
+
+    alias EncryptionType = String
+
+    alias ExpressionType = String
+
+    alias FileHeaderInfo = String
+
+    alias GetDataRetrievalPolicyInput = NamedTuple(
+      "accountId" : string
+    )
+
+    alias GetDataRetrievalPolicyOutput = NamedTuple(
+      "Policy" : (DataRetrievalPolicy)?
+    )
+
+    alias GetJobOutputInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "jobId" : string,
+      "range" : (string)?
+    )
+
+    alias GetJobOutputOutput = NamedTuple(
+      "body" : (Stream)?,
+      "checksum" : (string)?,
+      "status" : (httpstatus)?,
+      "contentRange" : (string)?,
+      "acceptRanges" : (string)?,
+      "contentType" : (string)?,
+      "archiveDescription" : (string)?
+    )
+
+    alias GetVaultAccessPolicyInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias GetVaultAccessPolicyOutput = NamedTuple(
+      "policy" : (VaultAccessPolicy)?
+    )
+
+    alias GetVaultLockInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias GetVaultLockOutput = NamedTuple(
+      "Policy" : (string)?,
+      "State" : (string)?,
+      "ExpirationDate" : (Timestamp)?,
+      "CreationDate" : (Timestamp)?
+    )
+
+    alias GetVaultNotificationsInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias GetVaultNotificationsOutput = NamedTuple(
+      "vaultNotificationConfig" : (VaultNotificationConfig)?
+    )
+
+    alias GlacierJobDescription = NamedTuple(
+      "JobId" : (string)?,
+      "JobDescription" : (string)?,
+      "Action" : (ActionCode)?,
+      "ArchiveId" : (string)?,
+      "VaultARN" : (string)?,
+      "CreationDate" : (Timestamp)?,
+      "Completed" : (boolean)?,
+      "StatusCode" : (StatusCode)?,
+      "StatusMessage" : (string)?,
+      "ArchiveSizeInBytes" : (Size)?,
+      "InventorySizeInBytes" : (Size)?,
+      "SNSTopic" : (string)?,
+      "CompletionDate" : (Timestamp)?,
+      "SHA256TreeHash" : (string)?,
+      "ArchiveSHA256TreeHash" : (string)?,
+      "RetrievalByteRange" : (string)?,
+      "Tier" : (string)?,
+      "InventoryRetrievalParameters" : (InventoryRetrievalJobDescription)?,
+      "JobOutputPath" : (string)?,
+      "SelectParameters" : (SelectParameters)?,
+      "OutputLocation" : (OutputLocation)?
+    )
+
+    alias Grant = NamedTuple(
+      "Grantee" : (Grantee)?,
+      "Permission" : (Permission)?
+    )
+
+    alias Grantee = NamedTuple(
+      "Type" : Type,
+      "DisplayName" : (string)?,
+      "URI" : (string)?,
+      "ID" : (string)?,
+      "EmailAddress" : (string)?
+    )
+
+    alias InitiateJobInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "jobParameters" : (JobParameters)?
+    )
+
+    alias InitiateJobOutput = NamedTuple(
+      "location" : (string)?,
+      "jobId" : (string)?,
+      "jobOutputPath" : (string)?
+    )
+
+    alias InitiateMultipartUploadInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "archiveDescription" : (string)?,
+      "partSize" : (Size)?
+    )
+
+    alias InitiateMultipartUploadOutput = NamedTuple(
+      "location" : (string)?,
+      "uploadId" : (string)?
+    )
+
+    alias InitiateVaultLockInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "policy" : (VaultLockPolicy)?
+    )
+
+    alias InitiateVaultLockOutput = NamedTuple(
+      "lockId" : (string)?
+    )
+
+    alias InputSerialization = NamedTuple(
+      "csv" : (CSVInput)?
+    )
+
+    alias InsufficientCapacityException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias InventoryRetrievalJobDescription = NamedTuple(
+      "Format" : (string)?,
+      "StartDate" : (Timestamp)?,
+      "EndDate" : (Timestamp)?,
+      "Limit" : (string)?,
+      "Marker" : (string)?
+    )
+
+    alias InventoryRetrievalJobInput = NamedTuple(
+      "StartDate" : (Timestamp)?,
+      "EndDate" : (Timestamp)?,
+      "Limit" : (string)?,
+      "Marker" : (string)?
+    )
+
+    alias JobList = Array(GlacierJobDescription)
+
+    alias JobParameters = NamedTuple(
+      "Format" : (string)?,
+      "Type" : (string)?,
+      "ArchiveId" : (string)?,
+      "Description" : (string)?,
+      "SNSTopic" : (string)?,
+      "RetrievalByteRange" : (string)?,
+      "Tier" : (string)?,
+      "InventoryRetrievalParameters" : (InventoryRetrievalJobInput)?,
+      "SelectParameters" : (SelectParameters)?,
+      "OutputLocation" : (OutputLocation)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias ListJobsInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "limit" : (Size)?,
+      "marker" : (string)?,
+      "statuscode" : (string)?,
+      "completed" : (string)?
+    )
+
+    alias ListJobsOutput = NamedTuple(
+      "JobList" : (JobList)?,
+      "Marker" : (string)?
+    )
+
+    alias ListMultipartUploadsInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "marker" : (string)?,
+      "limit" : (Size)?
+    )
+
+    alias ListMultipartUploadsOutput = NamedTuple(
+      "UploadsList" : (UploadsList)?,
+      "Marker" : (string)?
+    )
+
+    alias ListPartsInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "uploadId" : string,
+      "marker" : (string)?,
+      "limit" : (Size)?
+    )
+
+    alias ListPartsOutput = NamedTuple(
+      "MultipartUploadId" : (string)?,
+      "VaultARN" : (string)?,
+      "ArchiveDescription" : (string)?,
+      "PartSizeInBytes" : (long)?,
+      "CreationDate" : (Timestamp)?,
+      "Parts" : (PartList)?,
+      "Marker" : (string)?
+    )
+
+    alias ListProvisionedCapacityInput = NamedTuple(
+      "accountId" : string
+    )
+
+    alias ListProvisionedCapacityOutput = NamedTuple(
+      "ProvisionedCapacityList" : (ProvisionedCapacityList)?
+    )
+
+    alias ListTagsForVaultInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string
+    )
+
+    alias ListTagsForVaultOutput = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias ListVaultsInput = NamedTuple(
+      "accountId" : string,
+      "marker" : (string)?,
+      "limit" : (Size)?
+    )
+
+    alias ListVaultsOutput = NamedTuple(
+      "VaultList" : (VaultList)?,
+      "Marker" : (string)?
+    )
+
+    alias MissingParameterValueException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias NotificationEventList = Array(string)
+
+    alias NullableLong = Int64
+
+    alias OutputLocation = NamedTuple(
+      "S3" : (S3Location)?
+    )
+
+    alias OutputSerialization = NamedTuple(
+      "csv" : (CSVOutput)?
+    )
+
+    alias PartList = Array(PartListElement)
+
+    alias PartListElement = NamedTuple(
+      "RangeInBytes" : (string)?,
+      "SHA256TreeHash" : (string)?
+    )
+
+    alias Permission = String
+
+    alias PolicyEnforcedException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias ProvisionedCapacityDescription = NamedTuple(
+      "CapacityId" : (string)?,
+      "StartDate" : (Timestamp)?,
+      "ExpirationDate" : (Timestamp)?
+    )
+
+    alias ProvisionedCapacityList = Array(ProvisionedCapacityDescription)
+
+    alias PurchaseProvisionedCapacityInput = NamedTuple(
+      "accountId" : string
+    )
+
+    alias PurchaseProvisionedCapacityOutput = NamedTuple(
+      "capacityId" : (string)?
+    )
+
+    alias QuoteFields = String
+
+    alias RemoveTagsFromVaultInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "TagKeys" : (TagKeyList)?
+    )
+
+    alias RequestTimeoutException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias S3Location = NamedTuple(
+      "BucketName" : (string)?,
+      "Prefix" : (string)?,
+      "Encryption" : (Encryption)?,
+      "CannedACL" : (CannedACL)?,
+      "AccessControlList" : (AccessControlPolicyList)?,
+      "Tagging" : (hashmap)?,
+      "UserMetadata" : (hashmap)?,
+      "StorageClass" : (StorageClass)?
+    )
+
+    alias SelectParameters = NamedTuple(
+      "InputSerialization" : (InputSerialization)?,
+      "ExpressionType" : (ExpressionType)?,
+      "Expression" : (string)?,
+      "OutputSerialization" : (OutputSerialization)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "type" : (string)?,
+      "code" : (string)?,
+      "message" : (string)?
+    )
+
+    alias SetDataRetrievalPolicyInput = NamedTuple(
+      "accountId" : string,
+      "Policy" : (DataRetrievalPolicy)?
+    )
+
+    alias SetVaultAccessPolicyInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "policy" : (VaultAccessPolicy)?
+    )
+
+    alias SetVaultNotificationsInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "vaultNotificationConfig" : (VaultNotificationConfig)?
+    )
+
+    alias Size = Int64
+
+    alias StatusCode = String
+
+    alias StorageClass = String
+
+    alias Stream = String | Array(UInt8) | IO
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(string)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagValue = String
+
+    alias Type = String
+
+    alias UploadArchiveInput = NamedTuple(
+      "vaultName" : string,
+      "accountId" : string,
+      "archiveDescription" : (string)?,
+      "checksum" : (string)?,
+      "body" : (Stream)?
+    )
+
+    alias UploadListElement = NamedTuple(
+      "MultipartUploadId" : (string)?,
+      "VaultARN" : (string)?,
+      "ArchiveDescription" : (string)?,
+      "PartSizeInBytes" : (long)?,
+      "CreationDate" : (Timestamp)?
+    )
+
+    alias UploadMultipartPartInput = NamedTuple(
+      "accountId" : string,
+      "vaultName" : string,
+      "uploadId" : string,
+      "checksum" : (string)?,
+      "range" : (string)?,
+      "body" : (Stream)?
+    )
+
+    alias UploadMultipartPartOutput = NamedTuple(
+      "checksum" : (string)?
+    )
+
+    alias UploadsList = Array(UploadListElement)
+
+    alias VaultAccessPolicy = NamedTuple(
+      "Policy" : (string)?
+    )
+
+    alias VaultList = Array(DescribeVaultOutput)
+
+    alias VaultLockPolicy = NamedTuple(
+      "Policy" : (string)?
+    )
+
+    alias VaultNotificationConfig = NamedTuple(
+      "SNSTopic" : (string)?,
+      "Events" : (NotificationEventList)?
+    )
+
+    alias boolean = Bool
+
+    alias hashmap = Hash(string,string)
+
+    alias httpstatus = Int32
+
+    alias long = Int64
+
+    alias string = String
+
+    alias Timestamp = String | UInt64 | Time
   end
 end

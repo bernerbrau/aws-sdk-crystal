@@ -344,8 +344,8 @@ module Aws::AugmentedAIRuntime
     #
     # @overload delete_human_loop(**params)
     # @param [Hash] params ({})
-    def delete_human_loop(params = {}, **options)
-      req = build_request(:delete_human_loop, params)
+    def delete_human_loop(, **options)
+      req = build_request(:delete_human_loop, )
       req.send_request(options)
     end
 
@@ -386,8 +386,8 @@ module Aws::AugmentedAIRuntime
     #
     # @overload describe_human_loop(**params)
     # @param [Hash] params ({})
-    def describe_human_loop(params = {}, **options)
-      req = build_request(:describe_human_loop, params)
+    def describe_human_loop(, **options)
+      req = build_request(:describe_human_loop, )
       req.send_request(options)
     end
 
@@ -450,8 +450,8 @@ module Aws::AugmentedAIRuntime
     #
     # @overload list_human_loops(**params)
     # @param [Hash] params ({})
-    def list_human_loops(params = {}, **options)
-      req = build_request(:list_human_loops, params)
+    def list_human_loops(, **options)
+      req = build_request(:list_human_loops, )
       req.send_request(options)
     end
 
@@ -498,8 +498,8 @@ module Aws::AugmentedAIRuntime
     #
     # @overload start_human_loop(**params)
     # @param [Hash] params ({})
-    def start_human_loop(params = {}, **options)
-      req = build_request(:start_human_loop, params)
+    def start_human_loop(, **options)
+      req = build_request(:start_human_loop, )
       req.send_request(options)
     end
 
@@ -520,8 +520,8 @@ module Aws::AugmentedAIRuntime
     #
     # @overload stop_human_loop(**params)
     # @param [Hash] params ({})
-    def stop_human_loop(params = {}, **options)
-      req = build_request(:stop_human_loop, params)
+    def stop_human_loop(, **options)
+      req = build_request(:stop_human_loop, )
       req.send_request(options)
     end
 

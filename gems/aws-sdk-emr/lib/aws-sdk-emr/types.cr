@@ -7425,5 +7425,1365 @@ module Aws::EMR
       include Aws::Structure
     end
 
+    alias ActionOnFailure = String
+
+    alias AddInstanceFleetInput = NamedTuple(
+      "ClusterId" : XmlStringMaxLen256,
+      "InstanceFleet" : InstanceFleetConfig
+    )
+
+    alias AddInstanceFleetOutput = NamedTuple(
+      "ClusterId" : (XmlStringMaxLen256)?,
+      "InstanceFleetId" : (InstanceFleetId)?,
+      "ClusterArn" : (ArnType)?
+    )
+
+    alias AddInstanceGroupsInput = NamedTuple(
+      "InstanceGroups" : InstanceGroupConfigList,
+      "JobFlowId" : XmlStringMaxLen256
+    )
+
+    alias AddInstanceGroupsOutput = NamedTuple(
+      "JobFlowId" : (XmlStringMaxLen256)?,
+      "InstanceGroupIds" : (InstanceGroupIdsList)?,
+      "ClusterArn" : (ArnType)?
+    )
+
+    alias AddJobFlowStepsInput = NamedTuple(
+      "JobFlowId" : XmlStringMaxLen256,
+      "Steps" : StepConfigList
+    )
+
+    alias AddJobFlowStepsOutput = NamedTuple(
+      "StepIds" : (StepIdsList)?
+    )
+
+    alias AddTagsInput = NamedTuple(
+      "ResourceId" : ResourceId,
+      "Tags" : TagList
+    )
+
+    alias AddTagsOutput = NamedTuple(
+      
+    )
+
+    alias AdjustmentType = String
+
+    alias Application = NamedTuple(
+      "Name" : (String)?,
+      "Version" : (String)?,
+      "Args" : (StringList)?,
+      "AdditionalInfo" : (StringMap)?
+    )
+
+    alias ApplicationList = Array(Application)
+
+    alias ArnType = String
+
+    alias AuthMode = String
+
+    alias AutoScalingPolicy = NamedTuple(
+      "Constraints" : ScalingConstraints,
+      "Rules" : ScalingRuleList
+    )
+
+    alias AutoScalingPolicyDescription = NamedTuple(
+      "Status" : (AutoScalingPolicyStatus)?,
+      "Constraints" : (ScalingConstraints)?,
+      "Rules" : (ScalingRuleList)?
+    )
+
+    alias AutoScalingPolicyState = String
+
+    alias AutoScalingPolicyStateChangeReason = NamedTuple(
+      "Code" : (AutoScalingPolicyStateChangeReasonCode)?,
+      "Message" : (String)?
+    )
+
+    alias AutoScalingPolicyStateChangeReasonCode = String
+
+    alias AutoScalingPolicyStatus = NamedTuple(
+      "State" : (AutoScalingPolicyState)?,
+      "StateChangeReason" : (AutoScalingPolicyStateChangeReason)?
+    )
+
+    alias BlockPublicAccessConfiguration = NamedTuple(
+      "BlockPublicSecurityGroupRules" : Boolean,
+      "PermittedPublicSecurityGroupRuleRanges" : (PortRanges)?
+    )
+
+    alias BlockPublicAccessConfigurationMetadata = NamedTuple(
+      "CreationDateTime" : Date,
+      "CreatedByArn" : ArnType
+    )
+
+    alias Boolean = Bool
+
+    alias BooleanObject = Bool
+
+    alias BootstrapActionConfig = NamedTuple(
+      "Name" : XmlStringMaxLen256,
+      "ScriptBootstrapAction" : ScriptBootstrapActionConfig
+    )
+
+    alias BootstrapActionConfigList = Array(BootstrapActionConfig)
+
+    alias BootstrapActionDetail = NamedTuple(
+      "BootstrapActionConfig" : (BootstrapActionConfig)?
+    )
+
+    alias BootstrapActionDetailList = Array(BootstrapActionDetail)
+
+    alias CancelStepsInfo = NamedTuple(
+      "StepId" : (StepId)?,
+      "Status" : (CancelStepsRequestStatus)?,
+      "Reason" : (String)?
+    )
+
+    alias CancelStepsInfoList = Array(CancelStepsInfo)
+
+    alias CancelStepsInput = NamedTuple(
+      "ClusterId" : XmlStringMaxLen256,
+      "StepIds" : StepIdsList,
+      "StepCancellationOption" : (StepCancellationOption)?
+    )
+
+    alias CancelStepsOutput = NamedTuple(
+      "CancelStepsInfoList" : (CancelStepsInfoList)?
+    )
+
+    alias CancelStepsRequestStatus = String
+
+    alias CloudWatchAlarmDefinition = NamedTuple(
+      "ComparisonOperator" : ComparisonOperator,
+      "EvaluationPeriods" : (Integer)?,
+      "MetricName" : String,
+      "Namespace" : (String)?,
+      "Period" : Integer,
+      "Statistic" : (Statistic)?,
+      "Threshold" : NonNegativeDouble,
+      "Unit" : (Unit)?,
+      "Dimensions" : (MetricDimensionList)?
+    )
+
+    alias Cluster = NamedTuple(
+      "Id" : (ClusterId)?,
+      "Name" : (String)?,
+      "Status" : (ClusterStatus)?,
+      "Ec2InstanceAttributes" : (Ec2InstanceAttributes)?,
+      "InstanceCollectionType" : (InstanceCollectionType)?,
+      "LogUri" : (String)?,
+      "LogEncryptionKmsKeyId" : (String)?,
+      "RequestedAmiVersion" : (String)?,
+      "RunningAmiVersion" : (String)?,
+      "ReleaseLabel" : (String)?,
+      "AutoTerminate" : (Boolean)?,
+      "TerminationProtected" : (Boolean)?,
+      "VisibleToAllUsers" : (Boolean)?,
+      "Applications" : (ApplicationList)?,
+      "Tags" : (TagList)?,
+      "ServiceRole" : (String)?,
+      "NormalizedInstanceHours" : (Integer)?,
+      "MasterPublicDnsName" : (String)?,
+      "Configurations" : (ConfigurationList)?,
+      "SecurityConfiguration" : (XmlString)?,
+      "AutoScalingRole" : (XmlString)?,
+      "ScaleDownBehavior" : (ScaleDownBehavior)?,
+      "CustomAmiId" : (XmlStringMaxLen256)?,
+      "EbsRootVolumeSize" : (Integer)?,
+      "RepoUpgradeOnBoot" : (RepoUpgradeOnBoot)?,
+      "KerberosAttributes" : (KerberosAttributes)?,
+      "ClusterArn" : (ArnType)?,
+      "OutpostArn" : (OptionalArnType)?,
+      "StepConcurrencyLevel" : (Integer)?,
+      "PlacementGroups" : (PlacementGroupConfigList)?
+    )
+
+    alias ClusterId = String
+
+    alias ClusterState = String
+
+    alias ClusterStateChangeReason = NamedTuple(
+      "Code" : (ClusterStateChangeReasonCode)?,
+      "Message" : (String)?
+    )
+
+    alias ClusterStateChangeReasonCode = String
+
+    alias ClusterStateList = Array(ClusterState)
+
+    alias ClusterStatus = NamedTuple(
+      "State" : (ClusterState)?,
+      "StateChangeReason" : (ClusterStateChangeReason)?,
+      "Timeline" : (ClusterTimeline)?
+    )
+
+    alias ClusterSummary = NamedTuple(
+      "Id" : (ClusterId)?,
+      "Name" : (String)?,
+      "Status" : (ClusterStatus)?,
+      "NormalizedInstanceHours" : (Integer)?,
+      "ClusterArn" : (ArnType)?,
+      "OutpostArn" : (OptionalArnType)?
+    )
+
+    alias ClusterSummaryList = Array(ClusterSummary)
+
+    alias ClusterTimeline = NamedTuple(
+      "CreationDateTime" : (Date)?,
+      "ReadyDateTime" : (Date)?,
+      "EndDateTime" : (Date)?
+    )
+
+    alias Command = NamedTuple(
+      "Name" : (String)?,
+      "ScriptPath" : (String)?,
+      "Args" : (StringList)?
+    )
+
+    alias CommandList = Array(Command)
+
+    alias ComparisonOperator = String
+
+    alias ComputeLimits = NamedTuple(
+      "UnitType" : ComputeLimitsUnitType,
+      "MinimumCapacityUnits" : Integer,
+      "MaximumCapacityUnits" : Integer,
+      "MaximumOnDemandCapacityUnits" : (Integer)?,
+      "MaximumCoreCapacityUnits" : (Integer)?
+    )
+
+    alias ComputeLimitsUnitType = String
+
+    alias Configuration = NamedTuple(
+      "Classification" : (String)?,
+      "Configurations" : (ConfigurationList)?,
+      "Properties" : (StringMap)?
+    )
+
+    alias ConfigurationList = Array(Configuration)
+
+    alias CreateSecurityConfigurationInput = NamedTuple(
+      "Name" : XmlString,
+      "SecurityConfiguration" : String
+    )
+
+    alias CreateSecurityConfigurationOutput = NamedTuple(
+      "Name" : XmlString,
+      "CreationDateTime" : Date
+    )
+
+    alias CreateStudioInput = NamedTuple(
+      "Name" : XmlStringMaxLen256,
+      "Description" : (XmlStringMaxLen256)?,
+      "AuthMode" : AuthMode,
+      "VpcId" : XmlStringMaxLen256,
+      "SubnetIds" : SubnetIdList,
+      "ServiceRole" : XmlString,
+      "UserRole" : XmlString,
+      "WorkspaceSecurityGroupId" : XmlStringMaxLen256,
+      "EngineSecurityGroupId" : XmlStringMaxLen256,
+      "DefaultS3Location" : (XmlString)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateStudioOutput = NamedTuple(
+      "StudioId" : (XmlStringMaxLen256)?,
+      "Url" : (XmlString)?
+    )
+
+    alias CreateStudioSessionMappingInput = NamedTuple(
+      "StudioId" : XmlStringMaxLen256,
+      "IdentityId" : (XmlStringMaxLen256)?,
+      "IdentityName" : (XmlStringMaxLen256)?,
+      "IdentityType" : IdentityType,
+      "SessionPolicyArn" : XmlStringMaxLen256
+    )
+
+    alias Date = String | UInt64 | Time
+
+    alias DeleteSecurityConfigurationInput = NamedTuple(
+      "Name" : XmlString
+    )
+
+    alias DeleteSecurityConfigurationOutput = NamedTuple(
+      
+    )
+
+    alias DeleteStudioInput = NamedTuple(
+      "StudioId" : XmlStringMaxLen256
+    )
+
+    alias DeleteStudioSessionMappingInput = NamedTuple(
+      "StudioId" : XmlStringMaxLen256,
+      "IdentityId" : (XmlStringMaxLen256)?,
+      "IdentityName" : (XmlStringMaxLen256)?,
+      "IdentityType" : IdentityType
+    )
+
+    alias DescribeClusterInput = NamedTuple(
+      "ClusterId" : ClusterId
+    )
+
+    alias DescribeClusterOutput = NamedTuple(
+      "Cluster" : (Cluster)?
+    )
+
+    alias DescribeJobFlowsInput = NamedTuple(
+      "CreatedAfter" : (Date)?,
+      "CreatedBefore" : (Date)?,
+      "JobFlowIds" : (XmlStringList)?,
+      "JobFlowStates" : (JobFlowExecutionStateList)?
+    )
+
+    alias DescribeJobFlowsOutput = NamedTuple(
+      "JobFlows" : (JobFlowDetailList)?
+    )
+
+    alias DescribeNotebookExecutionInput = NamedTuple(
+      "NotebookExecutionId" : XmlStringMaxLen256
+    )
+
+    alias DescribeNotebookExecutionOutput = NamedTuple(
+      "NotebookExecution" : (NotebookExecution)?
+    )
+
+    alias DescribeSecurityConfigurationInput = NamedTuple(
+      "Name" : XmlString
+    )
+
+    alias DescribeSecurityConfigurationOutput = NamedTuple(
+      "Name" : (XmlString)?,
+      "SecurityConfiguration" : (String)?,
+      "CreationDateTime" : (Date)?
+    )
+
+    alias DescribeStepInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "StepId" : StepId
+    )
+
+    alias DescribeStepOutput = NamedTuple(
+      "Step" : (Step)?
+    )
+
+    alias DescribeStudioInput = NamedTuple(
+      "StudioId" : XmlStringMaxLen256
+    )
+
+    alias DescribeStudioOutput = NamedTuple(
+      "Studio" : (Studio)?
+    )
+
+    alias EC2InstanceIdsList = Array(InstanceId)
+
+    alias EC2InstanceIdsToTerminateList = Array(InstanceId)
+
+    alias EbsBlockDevice = NamedTuple(
+      "VolumeSpecification" : (VolumeSpecification)?,
+      "Device" : (String)?
+    )
+
+    alias EbsBlockDeviceConfig = NamedTuple(
+      "VolumeSpecification" : VolumeSpecification,
+      "VolumesPerInstance" : (Integer)?
+    )
+
+    alias EbsBlockDeviceConfigList = Array(EbsBlockDeviceConfig)
+
+    alias EbsBlockDeviceList = Array(EbsBlockDevice)
+
+    alias EbsConfiguration = NamedTuple(
+      "EbsBlockDeviceConfigs" : (EbsBlockDeviceConfigList)?,
+      "EbsOptimized" : (BooleanObject)?
+    )
+
+    alias EbsVolume = NamedTuple(
+      "Device" : (String)?,
+      "VolumeId" : (String)?
+    )
+
+    alias EbsVolumeList = Array(EbsVolume)
+
+    alias Ec2InstanceAttributes = NamedTuple(
+      "Ec2KeyName" : (String)?,
+      "Ec2SubnetId" : (String)?,
+      "RequestedEc2SubnetIds" : (XmlStringMaxLen256List)?,
+      "Ec2AvailabilityZone" : (String)?,
+      "RequestedEc2AvailabilityZones" : (XmlStringMaxLen256List)?,
+      "IamInstanceProfile" : (String)?,
+      "EmrManagedMasterSecurityGroup" : (String)?,
+      "EmrManagedSlaveSecurityGroup" : (String)?,
+      "ServiceAccessSecurityGroup" : (String)?,
+      "AdditionalMasterSecurityGroups" : (StringList)?,
+      "AdditionalSlaveSecurityGroups" : (StringList)?
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ExecutionEngineConfig = NamedTuple(
+      "Id" : XmlStringMaxLen256,
+      "Type" : (ExecutionEngineType)?,
+      "MasterInstanceSecurityGroupId" : (XmlStringMaxLen256)?
+    )
+
+    alias ExecutionEngineType = String
+
+    alias FailureDetails = NamedTuple(
+      "Reason" : (String)?,
+      "Message" : (String)?,
+      "LogFile" : (String)?
+    )
+
+    alias GetBlockPublicAccessConfigurationInput = NamedTuple(
+      
+    )
+
+    alias GetBlockPublicAccessConfigurationOutput = NamedTuple(
+      "BlockPublicAccessConfiguration" : BlockPublicAccessConfiguration,
+      "BlockPublicAccessConfigurationMetadata" : BlockPublicAccessConfigurationMetadata
+    )
+
+    alias GetManagedScalingPolicyInput = NamedTuple(
+      "ClusterId" : ClusterId
+    )
+
+    alias GetManagedScalingPolicyOutput = NamedTuple(
+      "ManagedScalingPolicy" : (ManagedScalingPolicy)?
+    )
+
+    alias GetStudioSessionMappingInput = NamedTuple(
+      "StudioId" : XmlStringMaxLen256,
+      "IdentityId" : (XmlStringMaxLen256)?,
+      "IdentityName" : (XmlStringMaxLen256)?,
+      "IdentityType" : IdentityType
+    )
+
+    alias GetStudioSessionMappingOutput = NamedTuple(
+      "SessionMapping" : (SessionMappingDetail)?
+    )
+
+    alias HadoopJarStepConfig = NamedTuple(
+      "Properties" : (KeyValueList)?,
+      "Jar" : XmlString,
+      "MainClass" : (XmlString)?,
+      "Args" : (XmlStringList)?
+    )
+
+    alias HadoopStepConfig = NamedTuple(
+      "Jar" : (String)?,
+      "Properties" : (StringMap)?,
+      "MainClass" : (String)?,
+      "Args" : (StringList)?
+    )
+
+    alias IdentityType = String
+
+    alias Instance = NamedTuple(
+      "Id" : (InstanceId)?,
+      "Ec2InstanceId" : (InstanceId)?,
+      "PublicDnsName" : (String)?,
+      "PublicIpAddress" : (String)?,
+      "PrivateDnsName" : (String)?,
+      "PrivateIpAddress" : (String)?,
+      "Status" : (InstanceStatus)?,
+      "InstanceGroupId" : (String)?,
+      "InstanceFleetId" : (InstanceFleetId)?,
+      "Market" : (MarketType)?,
+      "InstanceType" : (InstanceType)?,
+      "EbsVolumes" : (EbsVolumeList)?
+    )
+
+    alias InstanceCollectionType = String
+
+    alias InstanceFleet = NamedTuple(
+      "Id" : (InstanceFleetId)?,
+      "Name" : (XmlStringMaxLen256)?,
+      "Status" : (InstanceFleetStatus)?,
+      "InstanceFleetType" : (InstanceFleetType)?,
+      "TargetOnDemandCapacity" : (WholeNumber)?,
+      "TargetSpotCapacity" : (WholeNumber)?,
+      "ProvisionedOnDemandCapacity" : (WholeNumber)?,
+      "ProvisionedSpotCapacity" : (WholeNumber)?,
+      "InstanceTypeSpecifications" : (InstanceTypeSpecificationList)?,
+      "LaunchSpecifications" : (InstanceFleetProvisioningSpecifications)?
+    )
+
+    alias InstanceFleetConfig = NamedTuple(
+      "Name" : (XmlStringMaxLen256)?,
+      "InstanceFleetType" : InstanceFleetType,
+      "TargetOnDemandCapacity" : (WholeNumber)?,
+      "TargetSpotCapacity" : (WholeNumber)?,
+      "InstanceTypeConfigs" : (InstanceTypeConfigList)?,
+      "LaunchSpecifications" : (InstanceFleetProvisioningSpecifications)?
+    )
+
+    alias InstanceFleetConfigList = Array(InstanceFleetConfig)
+
+    alias InstanceFleetId = String
+
+    alias InstanceFleetList = Array(InstanceFleet)
+
+    alias InstanceFleetModifyConfig = NamedTuple(
+      "InstanceFleetId" : InstanceFleetId,
+      "TargetOnDemandCapacity" : (WholeNumber)?,
+      "TargetSpotCapacity" : (WholeNumber)?
+    )
+
+    alias InstanceFleetProvisioningSpecifications = NamedTuple(
+      "SpotSpecification" : (SpotProvisioningSpecification)?,
+      "OnDemandSpecification" : (OnDemandProvisioningSpecification)?
+    )
+
+    alias InstanceFleetState = String
+
+    alias InstanceFleetStateChangeReason = NamedTuple(
+      "Code" : (InstanceFleetStateChangeReasonCode)?,
+      "Message" : (String)?
+    )
+
+    alias InstanceFleetStateChangeReasonCode = String
+
+    alias InstanceFleetStatus = NamedTuple(
+      "State" : (InstanceFleetState)?,
+      "StateChangeReason" : (InstanceFleetStateChangeReason)?,
+      "Timeline" : (InstanceFleetTimeline)?
+    )
+
+    alias InstanceFleetTimeline = NamedTuple(
+      "CreationDateTime" : (Date)?,
+      "ReadyDateTime" : (Date)?,
+      "EndDateTime" : (Date)?
+    )
+
+    alias InstanceFleetType = String
+
+    alias InstanceGroup = NamedTuple(
+      "Id" : (InstanceGroupId)?,
+      "Name" : (String)?,
+      "Market" : (MarketType)?,
+      "InstanceGroupType" : (InstanceGroupType)?,
+      "BidPrice" : (String)?,
+      "InstanceType" : (InstanceType)?,
+      "RequestedInstanceCount" : (Integer)?,
+      "RunningInstanceCount" : (Integer)?,
+      "Status" : (InstanceGroupStatus)?,
+      "Configurations" : (ConfigurationList)?,
+      "ConfigurationsVersion" : (Long)?,
+      "LastSuccessfullyAppliedConfigurations" : (ConfigurationList)?,
+      "LastSuccessfullyAppliedConfigurationsVersion" : (Long)?,
+      "EbsBlockDevices" : (EbsBlockDeviceList)?,
+      "EbsOptimized" : (BooleanObject)?,
+      "ShrinkPolicy" : (ShrinkPolicy)?,
+      "AutoScalingPolicy" : (AutoScalingPolicyDescription)?
+    )
+
+    alias InstanceGroupConfig = NamedTuple(
+      "Name" : (XmlStringMaxLen256)?,
+      "Market" : (MarketType)?,
+      "InstanceRole" : InstanceRoleType,
+      "BidPrice" : (XmlStringMaxLen256)?,
+      "InstanceType" : InstanceType,
+      "InstanceCount" : Integer,
+      "Configurations" : (ConfigurationList)?,
+      "EbsConfiguration" : (EbsConfiguration)?,
+      "AutoScalingPolicy" : (AutoScalingPolicy)?
+    )
+
+    alias InstanceGroupConfigList = Array(InstanceGroupConfig)
+
+    alias InstanceGroupDetail = NamedTuple(
+      "InstanceGroupId" : (XmlStringMaxLen256)?,
+      "Name" : (XmlStringMaxLen256)?,
+      "Market" : MarketType,
+      "InstanceRole" : InstanceRoleType,
+      "BidPrice" : (XmlStringMaxLen256)?,
+      "InstanceType" : InstanceType,
+      "InstanceRequestCount" : Integer,
+      "InstanceRunningCount" : Integer,
+      "State" : InstanceGroupState,
+      "LastStateChangeReason" : (XmlString)?,
+      "CreationDateTime" : Date,
+      "StartDateTime" : (Date)?,
+      "ReadyDateTime" : (Date)?,
+      "EndDateTime" : (Date)?
+    )
+
+    alias InstanceGroupDetailList = Array(InstanceGroupDetail)
+
+    alias InstanceGroupId = String
+
+    alias InstanceGroupIdsList = Array(XmlStringMaxLen256)
+
+    alias InstanceGroupList = Array(InstanceGroup)
+
+    alias InstanceGroupModifyConfig = NamedTuple(
+      "InstanceGroupId" : XmlStringMaxLen256,
+      "InstanceCount" : (Integer)?,
+      "EC2InstanceIdsToTerminate" : (EC2InstanceIdsToTerminateList)?,
+      "ShrinkPolicy" : (ShrinkPolicy)?,
+      "Configurations" : (ConfigurationList)?
+    )
+
+    alias InstanceGroupModifyConfigList = Array(InstanceGroupModifyConfig)
+
+    alias InstanceGroupState = String
+
+    alias InstanceGroupStateChangeReason = NamedTuple(
+      "Code" : (InstanceGroupStateChangeReasonCode)?,
+      "Message" : (String)?
+    )
+
+    alias InstanceGroupStateChangeReasonCode = String
+
+    alias InstanceGroupStatus = NamedTuple(
+      "State" : (InstanceGroupState)?,
+      "StateChangeReason" : (InstanceGroupStateChangeReason)?,
+      "Timeline" : (InstanceGroupTimeline)?
+    )
+
+    alias InstanceGroupTimeline = NamedTuple(
+      "CreationDateTime" : (Date)?,
+      "ReadyDateTime" : (Date)?,
+      "EndDateTime" : (Date)?
+    )
+
+    alias InstanceGroupType = String
+
+    alias InstanceGroupTypeList = Array(InstanceGroupType)
+
+    alias InstanceId = String
+
+    alias InstanceList = Array(Instance)
+
+    alias InstanceResizePolicy = NamedTuple(
+      "InstancesToTerminate" : (EC2InstanceIdsList)?,
+      "InstancesToProtect" : (EC2InstanceIdsList)?,
+      "InstanceTerminationTimeout" : (Integer)?
+    )
+
+    alias InstanceRoleType = String
+
+    alias InstanceState = String
+
+    alias InstanceStateChangeReason = NamedTuple(
+      "Code" : (InstanceStateChangeReasonCode)?,
+      "Message" : (String)?
+    )
+
+    alias InstanceStateChangeReasonCode = String
+
+    alias InstanceStateList = Array(InstanceState)
+
+    alias InstanceStatus = NamedTuple(
+      "State" : (InstanceState)?,
+      "StateChangeReason" : (InstanceStateChangeReason)?,
+      "Timeline" : (InstanceTimeline)?
+    )
+
+    alias InstanceTimeline = NamedTuple(
+      "CreationDateTime" : (Date)?,
+      "ReadyDateTime" : (Date)?,
+      "EndDateTime" : (Date)?
+    )
+
+    alias InstanceType = String
+
+    alias InstanceTypeConfig = NamedTuple(
+      "InstanceType" : InstanceType,
+      "WeightedCapacity" : (WholeNumber)?,
+      "BidPrice" : (XmlStringMaxLen256)?,
+      "BidPriceAsPercentageOfOnDemandPrice" : (NonNegativeDouble)?,
+      "EbsConfiguration" : (EbsConfiguration)?,
+      "Configurations" : (ConfigurationList)?
+    )
+
+    alias InstanceTypeConfigList = Array(InstanceTypeConfig)
+
+    alias InstanceTypeSpecification = NamedTuple(
+      "InstanceType" : (InstanceType)?,
+      "WeightedCapacity" : (WholeNumber)?,
+      "BidPrice" : (XmlStringMaxLen256)?,
+      "BidPriceAsPercentageOfOnDemandPrice" : (NonNegativeDouble)?,
+      "Configurations" : (ConfigurationList)?,
+      "EbsBlockDevices" : (EbsBlockDeviceList)?,
+      "EbsOptimized" : (BooleanObject)?
+    )
+
+    alias InstanceTypeSpecificationList = Array(InstanceTypeSpecification)
+
+    alias Integer = Int32
+
+    alias InternalServerError = NamedTuple(
+      
+    )
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "ErrorCode" : (ErrorCode)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias JobFlowDetail = NamedTuple(
+      "JobFlowId" : XmlStringMaxLen256,
+      "Name" : XmlStringMaxLen256,
+      "LogUri" : (XmlString)?,
+      "LogEncryptionKmsKeyId" : (XmlString)?,
+      "AmiVersion" : (XmlStringMaxLen256)?,
+      "ExecutionStatusDetail" : JobFlowExecutionStatusDetail,
+      "Instances" : JobFlowInstancesDetail,
+      "Steps" : (StepDetailList)?,
+      "BootstrapActions" : (BootstrapActionDetailList)?,
+      "SupportedProducts" : (SupportedProductsList)?,
+      "VisibleToAllUsers" : (Boolean)?,
+      "JobFlowRole" : (XmlString)?,
+      "ServiceRole" : (XmlString)?,
+      "AutoScalingRole" : (XmlString)?,
+      "ScaleDownBehavior" : (ScaleDownBehavior)?
+    )
+
+    alias JobFlowDetailList = Array(JobFlowDetail)
+
+    alias JobFlowExecutionState = String
+
+    alias JobFlowExecutionStateList = Array(JobFlowExecutionState)
+
+    alias JobFlowExecutionStatusDetail = NamedTuple(
+      "State" : JobFlowExecutionState,
+      "CreationDateTime" : Date,
+      "StartDateTime" : (Date)?,
+      "ReadyDateTime" : (Date)?,
+      "EndDateTime" : (Date)?,
+      "LastStateChangeReason" : (XmlString)?
+    )
+
+    alias JobFlowInstancesConfig = NamedTuple(
+      "MasterInstanceType" : (InstanceType)?,
+      "SlaveInstanceType" : (InstanceType)?,
+      "InstanceCount" : (Integer)?,
+      "InstanceGroups" : (InstanceGroupConfigList)?,
+      "InstanceFleets" : (InstanceFleetConfigList)?,
+      "Ec2KeyName" : (XmlStringMaxLen256)?,
+      "Placement" : (PlacementType)?,
+      "KeepJobFlowAliveWhenNoSteps" : (Boolean)?,
+      "TerminationProtected" : (Boolean)?,
+      "HadoopVersion" : (XmlStringMaxLen256)?,
+      "Ec2SubnetId" : (XmlStringMaxLen256)?,
+      "Ec2SubnetIds" : (XmlStringMaxLen256List)?,
+      "EmrManagedMasterSecurityGroup" : (XmlStringMaxLen256)?,
+      "EmrManagedSlaveSecurityGroup" : (XmlStringMaxLen256)?,
+      "ServiceAccessSecurityGroup" : (XmlStringMaxLen256)?,
+      "AdditionalMasterSecurityGroups" : (SecurityGroupsList)?,
+      "AdditionalSlaveSecurityGroups" : (SecurityGroupsList)?
+    )
+
+    alias JobFlowInstancesDetail = NamedTuple(
+      "MasterInstanceType" : InstanceType,
+      "MasterPublicDnsName" : (XmlString)?,
+      "MasterInstanceId" : (XmlString)?,
+      "SlaveInstanceType" : InstanceType,
+      "InstanceCount" : Integer,
+      "InstanceGroups" : (InstanceGroupDetailList)?,
+      "NormalizedInstanceHours" : (Integer)?,
+      "Ec2KeyName" : (XmlStringMaxLen256)?,
+      "Ec2SubnetId" : (XmlStringMaxLen256)?,
+      "Placement" : (PlacementType)?,
+      "KeepJobFlowAliveWhenNoSteps" : (Boolean)?,
+      "TerminationProtected" : (Boolean)?,
+      "HadoopVersion" : (XmlStringMaxLen256)?
+    )
+
+    alias KerberosAttributes = NamedTuple(
+      "Realm" : XmlStringMaxLen256,
+      "KdcAdminPassword" : XmlStringMaxLen256,
+      "CrossRealmTrustPrincipalPassword" : (XmlStringMaxLen256)?,
+      "ADDomainJoinUser" : (XmlStringMaxLen256)?,
+      "ADDomainJoinPassword" : (XmlStringMaxLen256)?
+    )
+
+    alias KeyValue = NamedTuple(
+      "Key" : (XmlString)?,
+      "Value" : (XmlString)?
+    )
+
+    alias KeyValueList = Array(KeyValue)
+
+    alias ListBootstrapActionsInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "Marker" : (Marker)?
+    )
+
+    alias ListBootstrapActionsOutput = NamedTuple(
+      "BootstrapActions" : (CommandList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListClustersInput = NamedTuple(
+      "CreatedAfter" : (Date)?,
+      "CreatedBefore" : (Date)?,
+      "ClusterStates" : (ClusterStateList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListClustersOutput = NamedTuple(
+      "Clusters" : (ClusterSummaryList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListInstanceFleetsInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "Marker" : (Marker)?
+    )
+
+    alias ListInstanceFleetsOutput = NamedTuple(
+      "InstanceFleets" : (InstanceFleetList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListInstanceGroupsInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "Marker" : (Marker)?
+    )
+
+    alias ListInstanceGroupsOutput = NamedTuple(
+      "InstanceGroups" : (InstanceGroupList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListInstancesInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "InstanceGroupId" : (InstanceGroupId)?,
+      "InstanceGroupTypes" : (InstanceGroupTypeList)?,
+      "InstanceFleetId" : (InstanceFleetId)?,
+      "InstanceFleetType" : (InstanceFleetType)?,
+      "InstanceStates" : (InstanceStateList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListInstancesOutput = NamedTuple(
+      "Instances" : (InstanceList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListNotebookExecutionsInput = NamedTuple(
+      "EditorId" : (XmlStringMaxLen256)?,
+      "Status" : (NotebookExecutionStatus)?,
+      "From" : (Date)?,
+      "To" : (Date)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListNotebookExecutionsOutput = NamedTuple(
+      "NotebookExecutions" : (NotebookExecutionSummaryList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListSecurityConfigurationsInput = NamedTuple(
+      "Marker" : (Marker)?
+    )
+
+    alias ListSecurityConfigurationsOutput = NamedTuple(
+      "SecurityConfigurations" : (SecurityConfigurationList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListStepsInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "StepStates" : (StepStateList)?,
+      "StepIds" : (XmlStringList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListStepsOutput = NamedTuple(
+      "Steps" : (StepSummaryList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListStudioSessionMappingsInput = NamedTuple(
+      "StudioId" : (XmlStringMaxLen256)?,
+      "IdentityType" : (IdentityType)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListStudioSessionMappingsOutput = NamedTuple(
+      "SessionMappings" : (SessionMappingSummaryList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias ListStudiosInput = NamedTuple(
+      "Marker" : (Marker)?
+    )
+
+    alias ListStudiosOutput = NamedTuple(
+      "Studios" : (StudioSummaryList)?,
+      "Marker" : (Marker)?
+    )
+
+    alias Long = Int64
+
+    alias ManagedScalingPolicy = NamedTuple(
+      "ComputeLimits" : (ComputeLimits)?
+    )
+
+    alias Marker = String
+
+    alias MarketType = String
+
+    alias MetricDimension = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias MetricDimensionList = Array(MetricDimension)
+
+    alias ModifyClusterInput = NamedTuple(
+      "ClusterId" : String,
+      "StepConcurrencyLevel" : (Integer)?
+    )
+
+    alias ModifyClusterOutput = NamedTuple(
+      "StepConcurrencyLevel" : (Integer)?
+    )
+
+    alias ModifyInstanceFleetInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "InstanceFleet" : InstanceFleetModifyConfig
+    )
+
+    alias ModifyInstanceGroupsInput = NamedTuple(
+      "ClusterId" : (ClusterId)?,
+      "InstanceGroups" : (InstanceGroupModifyConfigList)?
+    )
+
+    alias NewSupportedProductsList = Array(SupportedProductConfig)
+
+    alias NonNegativeDouble = Float64
+
+    alias NotebookExecution = NamedTuple(
+      "NotebookExecutionId" : (XmlStringMaxLen256)?,
+      "EditorId" : (XmlStringMaxLen256)?,
+      "ExecutionEngine" : (ExecutionEngineConfig)?,
+      "NotebookExecutionName" : (XmlStringMaxLen256)?,
+      "NotebookParams" : (XmlString)?,
+      "Status" : (NotebookExecutionStatus)?,
+      "StartTime" : (Date)?,
+      "EndTime" : (Date)?,
+      "Arn" : (XmlStringMaxLen256)?,
+      "OutputNotebookURI" : (XmlString)?,
+      "LastStateChangeReason" : (XmlString)?,
+      "NotebookInstanceSecurityGroupId" : (XmlStringMaxLen256)?,
+      "Tags" : (TagList)?
+    )
+
+    alias NotebookExecutionStatus = String
+
+    alias NotebookExecutionSummary = NamedTuple(
+      "NotebookExecutionId" : (XmlStringMaxLen256)?,
+      "EditorId" : (XmlStringMaxLen256)?,
+      "NotebookExecutionName" : (XmlStringMaxLen256)?,
+      "Status" : (NotebookExecutionStatus)?,
+      "StartTime" : (Date)?,
+      "EndTime" : (Date)?
+    )
+
+    alias NotebookExecutionSummaryList = Array(NotebookExecutionSummary)
+
+    alias OnDemandProvisioningAllocationStrategy = String
+
+    alias OnDemandProvisioningSpecification = NamedTuple(
+      "AllocationStrategy" : OnDemandProvisioningAllocationStrategy
+    )
+
+    alias OptionalArnType = String
+
+    alias PlacementGroupConfig = NamedTuple(
+      "InstanceRole" : InstanceRoleType,
+      "PlacementStrategy" : (PlacementGroupStrategy)?
+    )
+
+    alias PlacementGroupConfigList = Array(PlacementGroupConfig)
+
+    alias PlacementGroupStrategy = String
+
+    alias PlacementType = NamedTuple(
+      "AvailabilityZone" : (XmlString)?,
+      "AvailabilityZones" : (XmlStringMaxLen256List)?
+    )
+
+    alias Port = Int32
+
+    alias PortRange = NamedTuple(
+      "MinRange" : Port,
+      "MaxRange" : (Port)?
+    )
+
+    alias PortRanges = Array(PortRange)
+
+    alias PutAutoScalingPolicyInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "InstanceGroupId" : InstanceGroupId,
+      "AutoScalingPolicy" : AutoScalingPolicy
+    )
+
+    alias PutAutoScalingPolicyOutput = NamedTuple(
+      "ClusterId" : (ClusterId)?,
+      "InstanceGroupId" : (InstanceGroupId)?,
+      "AutoScalingPolicy" : (AutoScalingPolicyDescription)?,
+      "ClusterArn" : (ArnType)?
+    )
+
+    alias PutBlockPublicAccessConfigurationInput = NamedTuple(
+      "BlockPublicAccessConfiguration" : BlockPublicAccessConfiguration
+    )
+
+    alias PutBlockPublicAccessConfigurationOutput = NamedTuple(
+      
+    )
+
+    alias PutManagedScalingPolicyInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "ManagedScalingPolicy" : ManagedScalingPolicy
+    )
+
+    alias PutManagedScalingPolicyOutput = NamedTuple(
+      
+    )
+
+    alias RemoveAutoScalingPolicyInput = NamedTuple(
+      "ClusterId" : ClusterId,
+      "InstanceGroupId" : InstanceGroupId
+    )
+
+    alias RemoveAutoScalingPolicyOutput = NamedTuple(
+      
+    )
+
+    alias RemoveManagedScalingPolicyInput = NamedTuple(
+      "ClusterId" : ClusterId
+    )
+
+    alias RemoveManagedScalingPolicyOutput = NamedTuple(
+      
+    )
+
+    alias RemoveTagsInput = NamedTuple(
+      "ResourceId" : ResourceId,
+      "TagKeys" : StringList
+    )
+
+    alias RemoveTagsOutput = NamedTuple(
+      
+    )
+
+    alias RepoUpgradeOnBoot = String
+
+    alias ResourceId = String
+
+    alias RunJobFlowInput = NamedTuple(
+      "Name" : XmlStringMaxLen256,
+      "LogUri" : (XmlString)?,
+      "LogEncryptionKmsKeyId" : (XmlString)?,
+      "AdditionalInfo" : (XmlString)?,
+      "AmiVersion" : (XmlStringMaxLen256)?,
+      "ReleaseLabel" : (XmlStringMaxLen256)?,
+      "Instances" : JobFlowInstancesConfig,
+      "Steps" : (StepConfigList)?,
+      "BootstrapActions" : (BootstrapActionConfigList)?,
+      "SupportedProducts" : (SupportedProductsList)?,
+      "NewSupportedProducts" : (NewSupportedProductsList)?,
+      "Applications" : (ApplicationList)?,
+      "Configurations" : (ConfigurationList)?,
+      "VisibleToAllUsers" : (Boolean)?,
+      "JobFlowRole" : (XmlString)?,
+      "ServiceRole" : (XmlString)?,
+      "Tags" : (TagList)?,
+      "SecurityConfiguration" : (XmlString)?,
+      "AutoScalingRole" : (XmlString)?,
+      "ScaleDownBehavior" : (ScaleDownBehavior)?,
+      "CustomAmiId" : (XmlStringMaxLen256)?,
+      "EbsRootVolumeSize" : (Integer)?,
+      "RepoUpgradeOnBoot" : (RepoUpgradeOnBoot)?,
+      "KerberosAttributes" : (KerberosAttributes)?,
+      "StepConcurrencyLevel" : (Integer)?,
+      "ManagedScalingPolicy" : (ManagedScalingPolicy)?,
+      "PlacementGroupConfigs" : (PlacementGroupConfigList)?
+    )
+
+    alias RunJobFlowOutput = NamedTuple(
+      "JobFlowId" : (XmlStringMaxLen256)?,
+      "ClusterArn" : (ArnType)?
+    )
+
+    alias ScaleDownBehavior = String
+
+    alias ScalingAction = NamedTuple(
+      "Market" : (MarketType)?,
+      "SimpleScalingPolicyConfiguration" : SimpleScalingPolicyConfiguration
+    )
+
+    alias ScalingConstraints = NamedTuple(
+      "MinCapacity" : Integer,
+      "MaxCapacity" : Integer
+    )
+
+    alias ScalingRule = NamedTuple(
+      "Name" : String,
+      "Description" : (String)?,
+      "Action" : ScalingAction,
+      "Trigger" : ScalingTrigger
+    )
+
+    alias ScalingRuleList = Array(ScalingRule)
+
+    alias ScalingTrigger = NamedTuple(
+      "CloudWatchAlarmDefinition" : CloudWatchAlarmDefinition
+    )
+
+    alias ScriptBootstrapActionConfig = NamedTuple(
+      "Path" : XmlString,
+      "Args" : (XmlStringList)?
+    )
+
+    alias SecurityConfigurationList = Array(SecurityConfigurationSummary)
+
+    alias SecurityConfigurationSummary = NamedTuple(
+      "Name" : (XmlString)?,
+      "CreationDateTime" : (Date)?
+    )
+
+    alias SecurityGroupsList = Array(XmlStringMaxLen256)
+
+    alias SessionMappingDetail = NamedTuple(
+      "StudioId" : (XmlStringMaxLen256)?,
+      "IdentityId" : (XmlStringMaxLen256)?,
+      "IdentityName" : (XmlStringMaxLen256)?,
+      "IdentityType" : (IdentityType)?,
+      "SessionPolicyArn" : (XmlStringMaxLen256)?,
+      "CreationTime" : (Date)?,
+      "LastModifiedTime" : (Date)?
+    )
+
+    alias SessionMappingSummary = NamedTuple(
+      "StudioId" : (XmlStringMaxLen256)?,
+      "IdentityId" : (XmlStringMaxLen256)?,
+      "IdentityName" : (XmlStringMaxLen256)?,
+      "IdentityType" : (IdentityType)?,
+      "SessionPolicyArn" : (XmlStringMaxLen256)?,
+      "CreationTime" : (Date)?
+    )
+
+    alias SessionMappingSummaryList = Array(SessionMappingSummary)
+
+    alias SetTerminationProtectionInput = NamedTuple(
+      "JobFlowIds" : XmlStringList,
+      "TerminationProtected" : Boolean
+    )
+
+    alias SetVisibleToAllUsersInput = NamedTuple(
+      "JobFlowIds" : XmlStringList,
+      "VisibleToAllUsers" : Boolean
+    )
+
+    alias ShrinkPolicy = NamedTuple(
+      "DecommissionTimeout" : (Integer)?,
+      "InstanceResizePolicy" : (InstanceResizePolicy)?
+    )
+
+    alias SimpleScalingPolicyConfiguration = NamedTuple(
+      "AdjustmentType" : (AdjustmentType)?,
+      "ScalingAdjustment" : Integer,
+      "CoolDown" : (Integer)?
+    )
+
+    alias SpotProvisioningAllocationStrategy = String
+
+    alias SpotProvisioningSpecification = NamedTuple(
+      "TimeoutDurationMinutes" : WholeNumber,
+      "TimeoutAction" : SpotProvisioningTimeoutAction,
+      "BlockDurationMinutes" : (WholeNumber)?,
+      "AllocationStrategy" : (SpotProvisioningAllocationStrategy)?
+    )
+
+    alias SpotProvisioningTimeoutAction = String
+
+    alias StartNotebookExecutionInput = NamedTuple(
+      "EditorId" : XmlStringMaxLen256,
+      "RelativePath" : XmlString,
+      "NotebookExecutionName" : (XmlStringMaxLen256)?,
+      "NotebookParams" : (XmlString)?,
+      "ExecutionEngine" : ExecutionEngineConfig,
+      "ServiceRole" : XmlString,
+      "NotebookInstanceSecurityGroupId" : (XmlStringMaxLen256)?,
+      "Tags" : (TagList)?
+    )
+
+    alias StartNotebookExecutionOutput = NamedTuple(
+      "NotebookExecutionId" : (XmlStringMaxLen256)?
+    )
+
+    alias Statistic = String
+
+    alias Step = NamedTuple(
+      "Id" : (StepId)?,
+      "Name" : (String)?,
+      "Config" : (HadoopStepConfig)?,
+      "ActionOnFailure" : (ActionOnFailure)?,
+      "Status" : (StepStatus)?
+    )
+
+    alias StepCancellationOption = String
+
+    alias StepConfig = NamedTuple(
+      "Name" : XmlStringMaxLen256,
+      "ActionOnFailure" : (ActionOnFailure)?,
+      "HadoopJarStep" : HadoopJarStepConfig
+    )
+
+    alias StepConfigList = Array(StepConfig)
+
+    alias StepDetail = NamedTuple(
+      "StepConfig" : StepConfig,
+      "ExecutionStatusDetail" : StepExecutionStatusDetail
+    )
+
+    alias StepDetailList = Array(StepDetail)
+
+    alias StepExecutionState = String
+
+    alias StepExecutionStatusDetail = NamedTuple(
+      "State" : StepExecutionState,
+      "CreationDateTime" : Date,
+      "StartDateTime" : (Date)?,
+      "EndDateTime" : (Date)?,
+      "LastStateChangeReason" : (XmlString)?
+    )
+
+    alias StepId = String
+
+    alias StepIdsList = Array(XmlStringMaxLen256)
+
+    alias StepState = String
+
+    alias StepStateChangeReason = NamedTuple(
+      "Code" : (StepStateChangeReasonCode)?,
+      "Message" : (String)?
+    )
+
+    alias StepStateChangeReasonCode = String
+
+    alias StepStateList = Array(StepState)
+
+    alias StepStatus = NamedTuple(
+      "State" : (StepState)?,
+      "StateChangeReason" : (StepStateChangeReason)?,
+      "FailureDetails" : (FailureDetails)?,
+      "Timeline" : (StepTimeline)?
+    )
+
+    alias StepSummary = NamedTuple(
+      "Id" : (StepId)?,
+      "Name" : (String)?,
+      "Config" : (HadoopStepConfig)?,
+      "ActionOnFailure" : (ActionOnFailure)?,
+      "Status" : (StepStatus)?
+    )
+
+    alias StepSummaryList = Array(StepSummary)
+
+    alias StepTimeline = NamedTuple(
+      "CreationDateTime" : (Date)?,
+      "StartDateTime" : (Date)?,
+      "EndDateTime" : (Date)?
+    )
+
+    alias StopNotebookExecutionInput = NamedTuple(
+      "NotebookExecutionId" : XmlStringMaxLen256
+    )
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias StringMap = Hash(String,String)
+
+    alias Studio = NamedTuple(
+      "StudioId" : (XmlStringMaxLen256)?,
+      "StudioArn" : (XmlStringMaxLen256)?,
+      "Name" : (XmlStringMaxLen256)?,
+      "Description" : (XmlStringMaxLen256)?,
+      "AuthMode" : (AuthMode)?,
+      "VpcId" : (XmlStringMaxLen256)?,
+      "SubnetIds" : (SubnetIdList)?,
+      "ServiceRole" : (XmlString)?,
+      "UserRole" : (XmlString)?,
+      "WorkspaceSecurityGroupId" : (XmlStringMaxLen256)?,
+      "EngineSecurityGroupId" : (XmlStringMaxLen256)?,
+      "Url" : (XmlString)?,
+      "CreationTime" : (Date)?,
+      "DefaultS3Location" : (XmlString)?,
+      "Tags" : (TagList)?
+    )
+
+    alias StudioSummary = NamedTuple(
+      "StudioId" : (XmlStringMaxLen256)?,
+      "Name" : (XmlStringMaxLen256)?,
+      "VpcId" : (XmlStringMaxLen256)?,
+      "Description" : (XmlStringMaxLen256)?,
+      "Url" : (XmlStringMaxLen256)?,
+      "CreationTime" : (Date)?
+    )
+
+    alias StudioSummaryList = Array(StudioSummary)
+
+    alias SubnetIdList = Array(String)
+
+    alias SupportedProductConfig = NamedTuple(
+      "Name" : (XmlStringMaxLen256)?,
+      "Args" : (XmlStringList)?
+    )
+
+    alias SupportedProductsList = Array(XmlStringMaxLen256)
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TerminateJobFlowsInput = NamedTuple(
+      "JobFlowIds" : XmlStringList
+    )
+
+    alias Unit = String
+
+    alias UpdateStudioSessionMappingInput = NamedTuple(
+      "StudioId" : XmlStringMaxLen256,
+      "IdentityId" : (XmlStringMaxLen256)?,
+      "IdentityName" : (XmlStringMaxLen256)?,
+      "IdentityType" : IdentityType,
+      "SessionPolicyArn" : XmlStringMaxLen256
+    )
+
+    alias VolumeSpecification = NamedTuple(
+      "VolumeType" : String,
+      "Iops" : (Integer)?,
+      "SizeInGB" : Integer
+    )
+
+    alias WholeNumber = Int32
+
+    alias XmlString = String
+
+    alias XmlStringList = Array(XmlString)
+
+    alias XmlStringMaxLen256 = String
+
+    alias XmlStringMaxLen256List = Array(XmlStringMaxLen256)
   end
 end

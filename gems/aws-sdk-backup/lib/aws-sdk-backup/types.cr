@@ -4547,5 +4547,923 @@ module Aws::Backup
       include Aws::Structure
     end
 
+    alias ARN = String
+
+    alias AccountId = String
+
+    alias AdvancedBackupSetting = NamedTuple(
+      "ResourceType" : (ResourceType)?,
+      "BackupOptions" : (BackupOptions)?
+    )
+
+    alias AdvancedBackupSettings = Array(AdvancedBackupSetting)
+
+    alias AlreadyExistsException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "CreatorRequestId" : (string)?,
+      "Arn" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias BackupJob = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "BackupJobId" : (string)?,
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "RecoveryPointArn" : (ARN)?,
+      "ResourceArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "State" : (BackupJobState)?,
+      "StatusMessage" : (string)?,
+      "PercentDone" : (string)?,
+      "BackupSizeInBytes" : (Long)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "CreatedBy" : (RecoveryPointCreator)?,
+      "ExpectedCompletionDate" : (timestamp)?,
+      "StartBy" : (timestamp)?,
+      "ResourceType" : (ResourceType)?,
+      "BytesTransferred" : (Long)?,
+      "BackupOptions" : (BackupOptions)?,
+      "BackupType" : (string)?
+    )
+
+    alias BackupJobState = String
+
+    alias BackupJobsList = Array(BackupJob)
+
+    alias BackupOptionKey = String
+
+    alias BackupOptionValue = String
+
+    alias BackupOptions = Hash(BackupOptionKey,BackupOptionValue)
+
+    alias BackupPlan = NamedTuple(
+      "BackupPlanName" : BackupPlanName,
+      "Rules" : BackupRules,
+      "AdvancedBackupSettings" : (AdvancedBackupSettings)?
+    )
+
+    alias BackupPlanInput = NamedTuple(
+      "BackupPlanName" : BackupPlanName,
+      "Rules" : BackupRulesInput,
+      "AdvancedBackupSettings" : (AdvancedBackupSettings)?
+    )
+
+    alias BackupPlanName = String
+
+    alias BackupPlanTemplatesList = Array(BackupPlanTemplatesListMember)
+
+    alias BackupPlanTemplatesListMember = NamedTuple(
+      "BackupPlanTemplateId" : (string)?,
+      "BackupPlanTemplateName" : (string)?
+    )
+
+    alias BackupPlanVersionsList = Array(BackupPlansListMember)
+
+    alias BackupPlansList = Array(BackupPlansListMember)
+
+    alias BackupPlansListMember = NamedTuple(
+      "BackupPlanArn" : (ARN)?,
+      "BackupPlanId" : (string)?,
+      "CreationDate" : (timestamp)?,
+      "DeletionDate" : (timestamp)?,
+      "VersionId" : (string)?,
+      "BackupPlanName" : (BackupPlanName)?,
+      "CreatorRequestId" : (string)?,
+      "LastExecutionDate" : (timestamp)?,
+      "AdvancedBackupSettings" : (AdvancedBackupSettings)?
+    )
+
+    alias BackupRule = NamedTuple(
+      "RuleName" : BackupRuleName,
+      "TargetBackupVaultName" : BackupVaultName,
+      "ScheduleExpression" : (CronExpression)?,
+      "StartWindowMinutes" : (WindowMinutes)?,
+      "CompletionWindowMinutes" : (WindowMinutes)?,
+      "Lifecycle" : (Lifecycle)?,
+      "RecoveryPointTags" : (Tags)?,
+      "RuleId" : (string)?,
+      "CopyActions" : (CopyActions)?
+    )
+
+    alias BackupRuleInput = NamedTuple(
+      "RuleName" : BackupRuleName,
+      "TargetBackupVaultName" : BackupVaultName,
+      "ScheduleExpression" : (CronExpression)?,
+      "StartWindowMinutes" : (WindowMinutes)?,
+      "CompletionWindowMinutes" : (WindowMinutes)?,
+      "Lifecycle" : (Lifecycle)?,
+      "RecoveryPointTags" : (Tags)?,
+      "CopyActions" : (CopyActions)?
+    )
+
+    alias BackupRuleName = String
+
+    alias BackupRules = Array(BackupRule)
+
+    alias BackupRulesInput = Array(BackupRuleInput)
+
+    alias BackupSelection = NamedTuple(
+      "SelectionName" : BackupSelectionName,
+      "IamRoleArn" : IAMRoleArn,
+      "Resources" : (ResourceArns)?,
+      "ListOfTags" : (ListOfTags)?
+    )
+
+    alias BackupSelectionName = String
+
+    alias BackupSelectionsList = Array(BackupSelectionsListMember)
+
+    alias BackupSelectionsListMember = NamedTuple(
+      "SelectionId" : (string)?,
+      "SelectionName" : (BackupSelectionName)?,
+      "BackupPlanId" : (string)?,
+      "CreationDate" : (timestamp)?,
+      "CreatorRequestId" : (string)?,
+      "IamRoleArn" : (IAMRoleArn)?
+    )
+
+    alias BackupVaultEvent = String
+
+    alias BackupVaultEvents = Array(BackupVaultEvent)
+
+    alias BackupVaultList = Array(BackupVaultListMember)
+
+    alias BackupVaultListMember = NamedTuple(
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "EncryptionKeyArn" : (ARN)?,
+      "CreatorRequestId" : (string)?,
+      "NumberOfRecoveryPoints" : (long)?
+    )
+
+    alias BackupVaultName = String
+
+    alias Boolean = Bool
+
+    alias CalculatedLifecycle = NamedTuple(
+      "MoveToColdStorageAt" : (timestamp)?,
+      "DeleteAt" : (timestamp)?
+    )
+
+    alias Condition = NamedTuple(
+      "ConditionType" : ConditionType,
+      "ConditionKey" : ConditionKey,
+      "ConditionValue" : ConditionValue
+    )
+
+    alias ConditionKey = String
+
+    alias ConditionType = String
+
+    alias ConditionValue = String
+
+    alias CopyAction = NamedTuple(
+      "Lifecycle" : (Lifecycle)?,
+      "DestinationBackupVaultArn" : ARN
+    )
+
+    alias CopyActions = Array(CopyAction)
+
+    alias CopyJob = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "CopyJobId" : (string)?,
+      "SourceBackupVaultArn" : (ARN)?,
+      "SourceRecoveryPointArn" : (ARN)?,
+      "DestinationBackupVaultArn" : (ARN)?,
+      "DestinationRecoveryPointArn" : (ARN)?,
+      "ResourceArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "State" : (CopyJobState)?,
+      "StatusMessage" : (string)?,
+      "BackupSizeInBytes" : (Long)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "CreatedBy" : (RecoveryPointCreator)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias CopyJobState = String
+
+    alias CopyJobsList = Array(CopyJob)
+
+    alias CreateBackupPlanInput = NamedTuple(
+      "BackupPlan" : BackupPlanInput,
+      "BackupPlanTags" : (Tags)?,
+      "CreatorRequestId" : (string)?
+    )
+
+    alias CreateBackupPlanOutput = NamedTuple(
+      "BackupPlanId" : (string)?,
+      "BackupPlanArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "VersionId" : (string)?,
+      "AdvancedBackupSettings" : (AdvancedBackupSettings)?
+    )
+
+    alias CreateBackupSelectionInput = NamedTuple(
+      "BackupPlanId" : string,
+      "BackupSelection" : BackupSelection,
+      "CreatorRequestId" : (string)?
+    )
+
+    alias CreateBackupSelectionOutput = NamedTuple(
+      "SelectionId" : (string)?,
+      "BackupPlanId" : (string)?,
+      "CreationDate" : (timestamp)?
+    )
+
+    alias CreateBackupVaultInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "BackupVaultTags" : (Tags)?,
+      "EncryptionKeyArn" : (ARN)?,
+      "CreatorRequestId" : (string)?
+    )
+
+    alias CreateBackupVaultOutput = NamedTuple(
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "CreationDate" : (timestamp)?
+    )
+
+    alias CronExpression = String
+
+    alias DeleteBackupPlanInput = NamedTuple(
+      "BackupPlanId" : string
+    )
+
+    alias DeleteBackupPlanOutput = NamedTuple(
+      "BackupPlanId" : (string)?,
+      "BackupPlanArn" : (ARN)?,
+      "DeletionDate" : (timestamp)?,
+      "VersionId" : (string)?
+    )
+
+    alias DeleteBackupSelectionInput = NamedTuple(
+      "BackupPlanId" : string,
+      "SelectionId" : string
+    )
+
+    alias DeleteBackupVaultAccessPolicyInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName
+    )
+
+    alias DeleteBackupVaultInput = NamedTuple(
+      "BackupVaultName" : string
+    )
+
+    alias DeleteBackupVaultNotificationsInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName
+    )
+
+    alias DeleteRecoveryPointInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "RecoveryPointArn" : ARN
+    )
+
+    alias DependencyFailureException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias DescribeBackupJobInput = NamedTuple(
+      "BackupJobId" : string
+    )
+
+    alias DescribeBackupJobOutput = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "BackupJobId" : (string)?,
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "RecoveryPointArn" : (ARN)?,
+      "ResourceArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "State" : (BackupJobState)?,
+      "StatusMessage" : (string)?,
+      "PercentDone" : (string)?,
+      "BackupSizeInBytes" : (Long)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "CreatedBy" : (RecoveryPointCreator)?,
+      "ResourceType" : (ResourceType)?,
+      "BytesTransferred" : (Long)?,
+      "ExpectedCompletionDate" : (timestamp)?,
+      "StartBy" : (timestamp)?,
+      "BackupOptions" : (BackupOptions)?,
+      "BackupType" : (string)?
+    )
+
+    alias DescribeBackupVaultInput = NamedTuple(
+      "BackupVaultName" : string
+    )
+
+    alias DescribeBackupVaultOutput = NamedTuple(
+      "BackupVaultName" : (string)?,
+      "BackupVaultArn" : (ARN)?,
+      "EncryptionKeyArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "CreatorRequestId" : (string)?,
+      "NumberOfRecoveryPoints" : (long)?
+    )
+
+    alias DescribeCopyJobInput = NamedTuple(
+      "CopyJobId" : string
+    )
+
+    alias DescribeCopyJobOutput = NamedTuple(
+      "CopyJob" : (CopyJob)?
+    )
+
+    alias DescribeGlobalSettingsInput = NamedTuple(
+      
+    )
+
+    alias DescribeGlobalSettingsOutput = NamedTuple(
+      "GlobalSettings" : (GlobalSettings)?,
+      "LastUpdateTime" : (timestamp)?
+    )
+
+    alias DescribeProtectedResourceInput = NamedTuple(
+      "ResourceArn" : ARN
+    )
+
+    alias DescribeProtectedResourceOutput = NamedTuple(
+      "ResourceArn" : (ARN)?,
+      "ResourceType" : (ResourceType)?,
+      "LastBackupTime" : (timestamp)?
+    )
+
+    alias DescribeRecoveryPointInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "RecoveryPointArn" : ARN
+    )
+
+    alias DescribeRecoveryPointOutput = NamedTuple(
+      "RecoveryPointArn" : (ARN)?,
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "SourceBackupVaultArn" : (ARN)?,
+      "ResourceArn" : (ARN)?,
+      "ResourceType" : (ResourceType)?,
+      "CreatedBy" : (RecoveryPointCreator)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "Status" : (RecoveryPointStatus)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "BackupSizeInBytes" : (Long)?,
+      "CalculatedLifecycle" : (CalculatedLifecycle)?,
+      "Lifecycle" : (Lifecycle)?,
+      "EncryptionKeyArn" : (ARN)?,
+      "IsEncrypted" : (boolean)?,
+      "StorageClass" : (StorageClass)?,
+      "LastRestoreTime" : (timestamp)?
+    )
+
+    alias DescribeRegionSettingsInput = NamedTuple(
+      
+    )
+
+    alias DescribeRegionSettingsOutput = NamedTuple(
+      "ResourceTypeOptInPreference" : (ResourceTypeOptInPreference)?
+    )
+
+    alias DescribeRestoreJobInput = NamedTuple(
+      "RestoreJobId" : RestoreJobId
+    )
+
+    alias DescribeRestoreJobOutput = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "RestoreJobId" : (string)?,
+      "RecoveryPointArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "Status" : (RestoreJobStatus)?,
+      "StatusMessage" : (string)?,
+      "PercentDone" : (string)?,
+      "BackupSizeInBytes" : (Long)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "ExpectedCompletionTimeMinutes" : (Long)?,
+      "CreatedResourceArn" : (ARN)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ExportBackupPlanTemplateInput = NamedTuple(
+      "BackupPlanId" : string
+    )
+
+    alias ExportBackupPlanTemplateOutput = NamedTuple(
+      "BackupPlanTemplateJson" : (string)?
+    )
+
+    alias GetBackupPlanFromJSONInput = NamedTuple(
+      "BackupPlanTemplateJson" : string
+    )
+
+    alias GetBackupPlanFromJSONOutput = NamedTuple(
+      "BackupPlan" : (BackupPlan)?
+    )
+
+    alias GetBackupPlanFromTemplateInput = NamedTuple(
+      "BackupPlanTemplateId" : string
+    )
+
+    alias GetBackupPlanFromTemplateOutput = NamedTuple(
+      "BackupPlanDocument" : (BackupPlan)?
+    )
+
+    alias GetBackupPlanInput = NamedTuple(
+      "BackupPlanId" : string,
+      "VersionId" : (string)?
+    )
+
+    alias GetBackupPlanOutput = NamedTuple(
+      "BackupPlan" : (BackupPlan)?,
+      "BackupPlanId" : (string)?,
+      "BackupPlanArn" : (ARN)?,
+      "VersionId" : (string)?,
+      "CreatorRequestId" : (string)?,
+      "CreationDate" : (timestamp)?,
+      "DeletionDate" : (timestamp)?,
+      "LastExecutionDate" : (timestamp)?,
+      "AdvancedBackupSettings" : (AdvancedBackupSettings)?
+    )
+
+    alias GetBackupSelectionInput = NamedTuple(
+      "BackupPlanId" : string,
+      "SelectionId" : string
+    )
+
+    alias GetBackupSelectionOutput = NamedTuple(
+      "BackupSelection" : (BackupSelection)?,
+      "SelectionId" : (string)?,
+      "BackupPlanId" : (string)?,
+      "CreationDate" : (timestamp)?,
+      "CreatorRequestId" : (string)?
+    )
+
+    alias GetBackupVaultAccessPolicyInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName
+    )
+
+    alias GetBackupVaultAccessPolicyOutput = NamedTuple(
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "Policy" : (IAMPolicy)?
+    )
+
+    alias GetBackupVaultNotificationsInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName
+    )
+
+    alias GetBackupVaultNotificationsOutput = NamedTuple(
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "SNSTopicArn" : (ARN)?,
+      "BackupVaultEvents" : (BackupVaultEvents)?
+    )
+
+    alias GetRecoveryPointRestoreMetadataInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "RecoveryPointArn" : ARN
+    )
+
+    alias GetRecoveryPointRestoreMetadataOutput = NamedTuple(
+      "BackupVaultArn" : (ARN)?,
+      "RecoveryPointArn" : (ARN)?,
+      "RestoreMetadata" : (Metadata)?
+    )
+
+    alias GetSupportedResourceTypesOutput = NamedTuple(
+      "ResourceTypes" : (ResourceTypes)?
+    )
+
+    alias GlobalSettings = Hash(GlobalSettingsName,GlobalSettingsValue)
+
+    alias GlobalSettingsName = String
+
+    alias GlobalSettingsValue = String
+
+    alias IAMPolicy = String
+
+    alias IAMRoleArn = String
+
+    alias InvalidParameterValueException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias IsEnabled = Bool
+
+    alias Lifecycle = NamedTuple(
+      "MoveToColdStorageAfterDays" : (Long)?,
+      "DeleteAfterDays" : (Long)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias ListBackupJobsInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?,
+      "ByResourceArn" : (ARN)?,
+      "ByState" : (BackupJobState)?,
+      "ByBackupVaultName" : (BackupVaultName)?,
+      "ByCreatedBefore" : (timestamp)?,
+      "ByCreatedAfter" : (timestamp)?,
+      "ByResourceType" : (ResourceType)?,
+      "ByAccountId" : (AccountId)?
+    )
+
+    alias ListBackupJobsOutput = NamedTuple(
+      "BackupJobs" : (BackupJobsList)?,
+      "NextToken" : (string)?
+    )
+
+    alias ListBackupPlanTemplatesInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListBackupPlanTemplatesOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "BackupPlanTemplatesList" : (BackupPlanTemplatesList)?
+    )
+
+    alias ListBackupPlanVersionsInput = NamedTuple(
+      "BackupPlanId" : string,
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListBackupPlanVersionsOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "BackupPlanVersionsList" : (BackupPlanVersionsList)?
+    )
+
+    alias ListBackupPlansInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?,
+      "IncludeDeleted" : (Boolean)?
+    )
+
+    alias ListBackupPlansOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "BackupPlansList" : (BackupPlansList)?
+    )
+
+    alias ListBackupSelectionsInput = NamedTuple(
+      "BackupPlanId" : string,
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListBackupSelectionsOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "BackupSelectionsList" : (BackupSelectionsList)?
+    )
+
+    alias ListBackupVaultsInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListBackupVaultsOutput = NamedTuple(
+      "BackupVaultList" : (BackupVaultList)?,
+      "NextToken" : (string)?
+    )
+
+    alias ListCopyJobsInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?,
+      "ByResourceArn" : (ARN)?,
+      "ByState" : (CopyJobState)?,
+      "ByCreatedBefore" : (timestamp)?,
+      "ByCreatedAfter" : (timestamp)?,
+      "ByResourceType" : (ResourceType)?,
+      "ByDestinationVaultArn" : (string)?,
+      "ByAccountId" : (AccountId)?
+    )
+
+    alias ListCopyJobsOutput = NamedTuple(
+      "CopyJobs" : (CopyJobsList)?,
+      "NextToken" : (string)?
+    )
+
+    alias ListOfTags = Array(Condition)
+
+    alias ListProtectedResourcesInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListProtectedResourcesOutput = NamedTuple(
+      "Results" : (ProtectedResourcesList)?,
+      "NextToken" : (string)?
+    )
+
+    alias ListRecoveryPointsByBackupVaultInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?,
+      "ByResourceArn" : (ARN)?,
+      "ByResourceType" : (ResourceType)?,
+      "ByBackupPlanId" : (string)?,
+      "ByCreatedBefore" : (timestamp)?,
+      "ByCreatedAfter" : (timestamp)?
+    )
+
+    alias ListRecoveryPointsByBackupVaultOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "RecoveryPoints" : (RecoveryPointByBackupVaultList)?
+    )
+
+    alias ListRecoveryPointsByResourceInput = NamedTuple(
+      "ResourceArn" : ARN,
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListRecoveryPointsByResourceOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "RecoveryPoints" : (RecoveryPointByResourceList)?
+    )
+
+    alias ListRestoreJobsInput = NamedTuple(
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?,
+      "ByAccountId" : (AccountId)?,
+      "ByCreatedBefore" : (timestamp)?,
+      "ByCreatedAfter" : (timestamp)?,
+      "ByStatus" : (RestoreJobStatus)?
+    )
+
+    alias ListRestoreJobsOutput = NamedTuple(
+      "RestoreJobs" : (RestoreJobsList)?,
+      "NextToken" : (string)?
+    )
+
+    alias ListTagsInput = NamedTuple(
+      "ResourceArn" : ARN,
+      "NextToken" : (string)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTagsOutput = NamedTuple(
+      "NextToken" : (string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias Long = Int64
+
+    alias MaxResults = Int32
+
+    alias Metadata = Hash(MetadataKey,MetadataValue)
+
+    alias MetadataKey = String
+
+    alias MetadataValue = String
+
+    alias MissingParameterValueException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias ProtectedResource = NamedTuple(
+      "ResourceArn" : (ARN)?,
+      "ResourceType" : (ResourceType)?,
+      "LastBackupTime" : (timestamp)?
+    )
+
+    alias ProtectedResourcesList = Array(ProtectedResource)
+
+    alias PutBackupVaultAccessPolicyInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "Policy" : (IAMPolicy)?
+    )
+
+    alias PutBackupVaultNotificationsInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "SNSTopicArn" : ARN,
+      "BackupVaultEvents" : BackupVaultEvents
+    )
+
+    alias RecoveryPointByBackupVault = NamedTuple(
+      "RecoveryPointArn" : (ARN)?,
+      "BackupVaultName" : (BackupVaultName)?,
+      "BackupVaultArn" : (ARN)?,
+      "SourceBackupVaultArn" : (ARN)?,
+      "ResourceArn" : (ARN)?,
+      "ResourceType" : (ResourceType)?,
+      "CreatedBy" : (RecoveryPointCreator)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "Status" : (RecoveryPointStatus)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "BackupSizeInBytes" : (Long)?,
+      "CalculatedLifecycle" : (CalculatedLifecycle)?,
+      "Lifecycle" : (Lifecycle)?,
+      "EncryptionKeyArn" : (ARN)?,
+      "IsEncrypted" : (boolean)?,
+      "LastRestoreTime" : (timestamp)?
+    )
+
+    alias RecoveryPointByBackupVaultList = Array(RecoveryPointByBackupVault)
+
+    alias RecoveryPointByResource = NamedTuple(
+      "RecoveryPointArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "Status" : (RecoveryPointStatus)?,
+      "EncryptionKeyArn" : (ARN)?,
+      "BackupSizeBytes" : (Long)?,
+      "BackupVaultName" : (BackupVaultName)?
+    )
+
+    alias RecoveryPointByResourceList = Array(RecoveryPointByResource)
+
+    alias RecoveryPointCreator = NamedTuple(
+      "BackupPlanId" : (string)?,
+      "BackupPlanArn" : (ARN)?,
+      "BackupPlanVersion" : (string)?,
+      "BackupRuleId" : (string)?
+    )
+
+    alias RecoveryPointStatus = String
+
+    alias ResourceArns = Array(ARN)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias ResourceType = String
+
+    alias ResourceTypeOptInPreference = Hash(ResourceType,IsEnabled)
+
+    alias ResourceTypes = Array(ResourceType)
+
+    alias RestoreJobId = String
+
+    alias RestoreJobStatus = String
+
+    alias RestoreJobsList = Array(RestoreJobsListMember)
+
+    alias RestoreJobsListMember = NamedTuple(
+      "AccountId" : (AccountId)?,
+      "RestoreJobId" : (string)?,
+      "RecoveryPointArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "CompletionDate" : (timestamp)?,
+      "Status" : (RestoreJobStatus)?,
+      "StatusMessage" : (string)?,
+      "PercentDone" : (string)?,
+      "BackupSizeInBytes" : (Long)?,
+      "IamRoleArn" : (IAMRoleArn)?,
+      "ExpectedCompletionTimeMinutes" : (Long)?,
+      "CreatedResourceArn" : (ARN)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Code" : (string)?,
+      "Message" : (string)?,
+      "Type" : (string)?,
+      "Context" : (string)?
+    )
+
+    alias StartBackupJobInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "ResourceArn" : ARN,
+      "IamRoleArn" : IAMRoleArn,
+      "IdempotencyToken" : (string)?,
+      "StartWindowMinutes" : (WindowMinutes)?,
+      "CompleteWindowMinutes" : (WindowMinutes)?,
+      "Lifecycle" : (Lifecycle)?,
+      "RecoveryPointTags" : (Tags)?,
+      "BackupOptions" : (BackupOptions)?
+    )
+
+    alias StartBackupJobOutput = NamedTuple(
+      "BackupJobId" : (string)?,
+      "RecoveryPointArn" : (ARN)?,
+      "CreationDate" : (timestamp)?
+    )
+
+    alias StartCopyJobInput = NamedTuple(
+      "RecoveryPointArn" : ARN,
+      "SourceBackupVaultName" : BackupVaultName,
+      "DestinationBackupVaultArn" : ARN,
+      "IamRoleArn" : IAMRoleArn,
+      "IdempotencyToken" : (string)?,
+      "Lifecycle" : (Lifecycle)?
+    )
+
+    alias StartCopyJobOutput = NamedTuple(
+      "CopyJobId" : (string)?,
+      "CreationDate" : (timestamp)?
+    )
+
+    alias StartRestoreJobInput = NamedTuple(
+      "RecoveryPointArn" : ARN,
+      "Metadata" : Metadata,
+      "IamRoleArn" : IAMRoleArn,
+      "IdempotencyToken" : (string)?,
+      "ResourceType" : (ResourceType)?
+    )
+
+    alias StartRestoreJobOutput = NamedTuple(
+      "RestoreJobId" : (RestoreJobId)?
+    )
+
+    alias StopBackupJobInput = NamedTuple(
+      "BackupJobId" : string
+    )
+
+    alias StorageClass = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(string)
+
+    alias TagResourceInput = NamedTuple(
+      "ResourceArn" : ARN,
+      "Tags" : Tags
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias UntagResourceInput = NamedTuple(
+      "ResourceArn" : ARN,
+      "TagKeyList" : TagKeyList
+    )
+
+    alias UpdateBackupPlanInput = NamedTuple(
+      "BackupPlanId" : string,
+      "BackupPlan" : BackupPlanInput
+    )
+
+    alias UpdateBackupPlanOutput = NamedTuple(
+      "BackupPlanId" : (string)?,
+      "BackupPlanArn" : (ARN)?,
+      "CreationDate" : (timestamp)?,
+      "VersionId" : (string)?,
+      "AdvancedBackupSettings" : (AdvancedBackupSettings)?
+    )
+
+    alias UpdateGlobalSettingsInput = NamedTuple(
+      "GlobalSettings" : (GlobalSettings)?
+    )
+
+    alias UpdateRecoveryPointLifecycleInput = NamedTuple(
+      "BackupVaultName" : BackupVaultName,
+      "RecoveryPointArn" : ARN,
+      "Lifecycle" : (Lifecycle)?
+    )
+
+    alias UpdateRecoveryPointLifecycleOutput = NamedTuple(
+      "BackupVaultArn" : (ARN)?,
+      "RecoveryPointArn" : (ARN)?,
+      "Lifecycle" : (Lifecycle)?,
+      "CalculatedLifecycle" : (CalculatedLifecycle)?
+    )
+
+    alias UpdateRegionSettingsInput = NamedTuple(
+      "ResourceTypeOptInPreference" : (ResourceTypeOptInPreference)?
+    )
+
+    alias WindowMinutes = Int64
+
+    alias boolean = Bool
+
+    alias long = Int64
+
+    alias string = String
+
+    alias timestamp = String | UInt64 | Time
   end
 end

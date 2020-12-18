@@ -341,8 +341,8 @@ module Aws::ApiGatewayManagementApi
     #
     # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, **options)
-      req = build_request(:delete_connection, params)
+    def delete_connection(, **options)
+      req = build_request(:delete_connection, )
       req.send_request(options)
     end
 
@@ -371,8 +371,8 @@ module Aws::ApiGatewayManagementApi
     #
     # @overload get_connection(**params)
     # @param [Hash] params ({})
-    def get_connection(params = {}, **options)
-      req = build_request(:get_connection, params)
+    def get_connection(, **options)
+      req = build_request(:get_connection, )
       req.send_request(options)
     end
 
@@ -394,8 +394,8 @@ module Aws::ApiGatewayManagementApi
     #
     # @overload post_to_connection(**params)
     # @param [Hash] params ({})
-    def post_to_connection(params = {}, **options)
-      req = build_request(:post_to_connection, params)
+    def post_to_connection(, **options)
+      req = build_request(:post_to_connection, )
       req.send_request(options)
     end
 

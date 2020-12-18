@@ -450,8 +450,8 @@ module Aws::SMS
     #
     # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, **options)
-      req = build_request(:create_app, params)
+    def create_app(, **options)
+      req = build_request(:create_app, )
       req.send_request(options)
     end
 
@@ -530,8 +530,8 @@ module Aws::SMS
     #
     # @overload create_replication_job(**params)
     # @param [Hash] params ({})
-    def create_replication_job(params = {}, **options)
-      req = build_request(:create_replication_job, params)
+    def create_replication_job(, **options)
+      req = build_request(:create_replication_job, )
       req.send_request(options)
     end
 
@@ -564,8 +564,8 @@ module Aws::SMS
     #
     # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, **options)
-      req = build_request(:delete_app, params)
+    def delete_app(, **options)
+      req = build_request(:delete_app, )
       req.send_request(options)
     end
 
@@ -586,8 +586,8 @@ module Aws::SMS
     #
     # @overload delete_app_launch_configuration(**params)
     # @param [Hash] params ({})
-    def delete_app_launch_configuration(params = {}, **options)
-      req = build_request(:delete_app_launch_configuration, params)
+    def delete_app_launch_configuration(, **options)
+      req = build_request(:delete_app_launch_configuration, )
       req.send_request(options)
     end
 
@@ -608,8 +608,8 @@ module Aws::SMS
     #
     # @overload delete_app_replication_configuration(**params)
     # @param [Hash] params ({})
-    def delete_app_replication_configuration(params = {}, **options)
-      req = build_request(:delete_app_replication_configuration, params)
+    def delete_app_replication_configuration(, **options)
+      req = build_request(:delete_app_replication_configuration, )
       req.send_request(options)
     end
 
@@ -630,8 +630,8 @@ module Aws::SMS
     #
     # @overload delete_app_validation_configuration(**params)
     # @param [Hash] params ({})
-    def delete_app_validation_configuration(params = {}, **options)
-      req = build_request(:delete_app_validation_configuration, params)
+    def delete_app_validation_configuration(, **options)
+      req = build_request(:delete_app_validation_configuration, )
       req.send_request(options)
     end
 
@@ -657,8 +657,8 @@ module Aws::SMS
     #
     # @overload delete_replication_job(**params)
     # @param [Hash] params ({})
-    def delete_replication_job(params = {}, **options)
-      req = build_request(:delete_replication_job, params)
+    def delete_replication_job(, **options)
+      req = build_request(:delete_replication_job, )
       req.send_request(options)
     end
 
@@ -670,8 +670,8 @@ module Aws::SMS
     #
     # @overload delete_server_catalog(**params)
     # @param [Hash] params ({})
-    def delete_server_catalog(params = {}, **options)
-      req = build_request(:delete_server_catalog, params)
+    def delete_server_catalog(, **options)
+      req = build_request(:delete_server_catalog, )
       req.send_request(options)
     end
 
@@ -695,8 +695,8 @@ module Aws::SMS
     #
     # @overload disassociate_connector(**params)
     # @param [Hash] params ({})
-    def disassociate_connector(params = {}, **options)
-      req = build_request(:disassociate_connector, params)
+    def disassociate_connector(, **options)
+      req = build_request(:disassociate_connector, )
       req.send_request(options)
     end
 
@@ -729,8 +729,8 @@ module Aws::SMS
     #
     # @overload generate_change_set(**params)
     # @param [Hash] params ({})
-    def generate_change_set(params = {}, **options)
-      req = build_request(:generate_change_set, params)
+    def generate_change_set(, **options)
+      req = build_request(:generate_change_set, )
       req.send_request(options)
     end
 
@@ -765,8 +765,8 @@ module Aws::SMS
     #
     # @overload generate_template(**params)
     # @param [Hash] params ({})
-    def generate_template(params = {}, **options)
-      req = build_request(:generate_template, params)
+    def generate_template(, **options)
+      req = build_request(:generate_template, )
       req.send_request(options)
     end
 
@@ -832,8 +832,8 @@ module Aws::SMS
     #
     # @overload get_app(**params)
     # @param [Hash] params ({})
-    def get_app(params = {}, **options)
-      req = build_request(:get_app, params)
+    def get_app(, **options)
+      req = build_request(:get_app, )
       req.send_request(options)
     end
 
@@ -893,8 +893,8 @@ module Aws::SMS
     #
     # @overload get_app_launch_configuration(**params)
     # @param [Hash] params ({})
-    def get_app_launch_configuration(params = {}, **options)
-      req = build_request(:get_app_launch_configuration, params)
+    def get_app_launch_configuration(, **options)
+      req = build_request(:get_app_launch_configuration, )
       req.send_request(options)
     end
 
@@ -941,8 +941,8 @@ module Aws::SMS
     #
     # @overload get_app_replication_configuration(**params)
     # @param [Hash] params ({})
-    def get_app_replication_configuration(params = {}, **options)
-      req = build_request(:get_app_replication_configuration, params)
+    def get_app_replication_configuration(, **options)
+      req = build_request(:get_app_replication_configuration, )
       req.send_request(options)
     end
 
@@ -1000,8 +1000,8 @@ module Aws::SMS
     #
     # @overload get_app_validation_configuration(**params)
     # @param [Hash] params ({})
-    def get_app_validation_configuration(params = {}, **options)
-      req = build_request(:get_app_validation_configuration, params)
+    def get_app_validation_configuration(, **options)
+      req = build_request(:get_app_validation_configuration, )
       req.send_request(options)
     end
 
@@ -1045,8 +1045,8 @@ module Aws::SMS
     #
     # @overload get_app_validation_output(**params)
     # @param [Hash] params ({})
-    def get_app_validation_output(params = {}, **options)
-      req = build_request(:get_app_validation_output, params)
+    def get_app_validation_output(, **options)
+      req = build_request(:get_app_validation_output, )
       req.send_request(options)
     end
 
@@ -1094,8 +1094,8 @@ module Aws::SMS
     #
     # @overload get_connectors(**params)
     # @param [Hash] params ({})
-    def get_connectors(params = {}, **options)
-      req = build_request(:get_connectors, params)
+    def get_connectors(, **options)
+      req = build_request(:get_connectors, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::SMS
     #
     # @overload get_replication_jobs(**params)
     # @param [Hash] params ({})
-    def get_replication_jobs(params = {}, **options)
-      req = build_request(:get_replication_jobs, params)
+    def get_replication_jobs(, **options)
+      req = build_request(:get_replication_jobs, )
       req.send_request(options)
     end
 
@@ -1262,8 +1262,8 @@ module Aws::SMS
     #
     # @overload get_replication_runs(**params)
     # @param [Hash] params ({})
-    def get_replication_runs(params = {}, **options)
-      req = build_request(:get_replication_runs, params)
+    def get_replication_runs(, **options)
+      req = build_request(:get_replication_runs, )
       req.send_request(options)
     end
 
@@ -1326,8 +1326,8 @@ module Aws::SMS
     #
     # @overload get_servers(**params)
     # @param [Hash] params ({})
-    def get_servers(params = {}, **options)
-      req = build_request(:get_servers, params)
+    def get_servers(, **options)
+      req = build_request(:get_servers, )
       req.send_request(options)
     end
 
@@ -1355,8 +1355,8 @@ module Aws::SMS
     #
     # @overload import_app_catalog(**params)
     # @param [Hash] params ({})
-    def import_app_catalog(params = {}, **options)
-      req = build_request(:import_app_catalog, params)
+    def import_app_catalog(, **options)
+      req = build_request(:import_app_catalog, )
       req.send_request(options)
     end
 
@@ -1372,8 +1372,8 @@ module Aws::SMS
     #
     # @overload import_server_catalog(**params)
     # @param [Hash] params ({})
-    def import_server_catalog(params = {}, **options)
-      req = build_request(:import_server_catalog, params)
+    def import_server_catalog(, **options)
+      req = build_request(:import_server_catalog, )
       req.send_request(options)
     end
 
@@ -1394,8 +1394,8 @@ module Aws::SMS
     #
     # @overload launch_app(**params)
     # @param [Hash] params ({})
-    def launch_app(params = {}, **options)
-      req = build_request(:launch_app, params)
+    def launch_app(, **options)
+      req = build_request(:launch_app, )
       req.send_request(options)
     end
 
@@ -1455,8 +1455,8 @@ module Aws::SMS
     #
     # @overload list_apps(**params)
     # @param [Hash] params ({})
-    def list_apps(params = {}, **options)
-      req = build_request(:list_apps, params)
+    def list_apps(, **options)
+      req = build_request(:list_apps, )
       req.send_request(options)
     end
 
@@ -1486,8 +1486,8 @@ module Aws::SMS
     #
     # @overload notify_app_validation_output(**params)
     # @param [Hash] params ({})
-    def notify_app_validation_output(params = {}, **options)
-      req = build_request(:notify_app_validation_output, params)
+    def notify_app_validation_output(, **options)
+      req = build_request(:notify_app_validation_output, )
       req.send_request(options)
     end
 
@@ -1568,8 +1568,8 @@ module Aws::SMS
     #
     # @overload put_app_launch_configuration(**params)
     # @param [Hash] params ({})
-    def put_app_launch_configuration(params = {}, **options)
-      req = build_request(:put_app_launch_configuration, params)
+    def put_app_launch_configuration(, **options)
+      req = build_request(:put_app_launch_configuration, )
       req.send_request(options)
     end
 
@@ -1629,8 +1629,8 @@ module Aws::SMS
     #
     # @overload put_app_replication_configuration(**params)
     # @param [Hash] params ({})
-    def put_app_replication_configuration(params = {}, **options)
-      req = build_request(:put_app_replication_configuration, params)
+    def put_app_replication_configuration(, **options)
+      req = build_request(:put_app_replication_configuration, )
       req.send_request(options)
     end
 
@@ -1715,8 +1715,8 @@ module Aws::SMS
     #
     # @overload put_app_validation_configuration(**params)
     # @param [Hash] params ({})
-    def put_app_validation_configuration(params = {}, **options)
-      req = build_request(:put_app_validation_configuration, params)
+    def put_app_validation_configuration(, **options)
+      req = build_request(:put_app_validation_configuration, )
       req.send_request(options)
     end
 
@@ -1738,8 +1738,8 @@ module Aws::SMS
     #
     # @overload start_app_replication(**params)
     # @param [Hash] params ({})
-    def start_app_replication(params = {}, **options)
-      req = build_request(:start_app_replication, params)
+    def start_app_replication(, **options)
+      req = build_request(:start_app_replication, )
       req.send_request(options)
     end
 
@@ -1764,8 +1764,8 @@ module Aws::SMS
     #
     # @overload start_on_demand_app_replication(**params)
     # @param [Hash] params ({})
-    def start_on_demand_app_replication(params = {}, **options)
-      req = build_request(:start_on_demand_app_replication, params)
+    def start_on_demand_app_replication(, **options)
+      req = build_request(:start_on_demand_app_replication, )
       req.send_request(options)
     end
 
@@ -1801,8 +1801,8 @@ module Aws::SMS
     #
     # @overload start_on_demand_replication_run(**params)
     # @param [Hash] params ({})
-    def start_on_demand_replication_run(params = {}, **options)
-      req = build_request(:start_on_demand_replication_run, params)
+    def start_on_demand_replication_run(, **options)
+      req = build_request(:start_on_demand_replication_run, )
       req.send_request(options)
     end
 
@@ -1824,8 +1824,8 @@ module Aws::SMS
     #
     # @overload stop_app_replication(**params)
     # @param [Hash] params ({})
-    def stop_app_replication(params = {}, **options)
-      req = build_request(:stop_app_replication, params)
+    def stop_app_replication(, **options)
+      req = build_request(:stop_app_replication, )
       req.send_request(options)
     end
 
@@ -1846,8 +1846,8 @@ module Aws::SMS
     #
     # @overload terminate_app(**params)
     # @param [Hash] params ({})
-    def terminate_app(params = {}, **options)
-      req = build_request(:terminate_app, params)
+    def terminate_app(, **options)
+      req = build_request(:terminate_app, )
       req.send_request(options)
     end
 
@@ -1962,8 +1962,8 @@ module Aws::SMS
     #
     # @overload update_app(**params)
     # @param [Hash] params ({})
-    def update_app(params = {}, **options)
-      req = build_request(:update_app, params)
+    def update_app(, **options)
+      req = build_request(:update_app, )
       req.send_request(options)
     end
 
@@ -2031,8 +2031,8 @@ module Aws::SMS
     #
     # @overload update_replication_job(**params)
     # @param [Hash] params ({})
-    def update_replication_job(params = {}, **options)
-      req = build_request(:update_replication_job, params)
+    def update_replication_job(, **options)
+      req = build_request(:update_replication_job, )
       req.send_request(options)
     end
 

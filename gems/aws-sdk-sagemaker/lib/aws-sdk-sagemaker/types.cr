@@ -34825,5 +34825,6499 @@ module Aws::SageMaker
       include Aws::Structure
     end
 
+    alias Accept = String
+
+    alias AccountId = String
+
+    alias ActionArn = String
+
+    alias ActionSource = NamedTuple(
+      "SourceUri" : String2048,
+      "SourceType" : (String256)?,
+      "SourceId" : (String256)?
+    )
+
+    alias ActionStatus = String
+
+    alias ActionSummaries = Array(ActionSummary)
+
+    alias ActionSummary = NamedTuple(
+      "ActionArn" : (ActionArn)?,
+      "ActionName" : (ExperimentEntityName)?,
+      "Source" : (ActionSource)?,
+      "ActionType" : (String64)?,
+      "Status" : (ActionStatus)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias AddAssociationRequest = NamedTuple(
+      "SourceArn" : AssociationEntityArn,
+      "DestinationArn" : AssociationEntityArn,
+      "AssociationType" : (AssociationEdgeType)?
+    )
+
+    alias AddAssociationResponse = NamedTuple(
+      "SourceArn" : (AssociationEntityArn)?,
+      "DestinationArn" : (AssociationEntityArn)?
+    )
+
+    alias AddTagsInput = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Tags" : TagList
+    )
+
+    alias AddTagsOutput = NamedTuple(
+      "Tags" : (TagList)?
+    )
+
+    alias AdditionalCodeRepositoryNamesOrUrls = Array(CodeRepositoryNameOrUrl)
+
+    alias AgentVersion = NamedTuple(
+      "Version" : EdgeVersion,
+      "AgentCount" : Long
+    )
+
+    alias AgentVersions = Array(AgentVersion)
+
+    alias Alarm = NamedTuple(
+      "AlarmName" : (AlarmName)?
+    )
+
+    alias AlarmList = Array(Alarm)
+
+    alias AlarmName = String
+
+    alias AlgorithmArn = String
+
+    alias AlgorithmImage = String
+
+    alias AlgorithmSortBy = String
+
+    alias AlgorithmSpecification = NamedTuple(
+      "TrainingImage" : (AlgorithmImage)?,
+      "AlgorithmName" : (ArnOrName)?,
+      "TrainingInputMode" : TrainingInputMode,
+      "MetricDefinitions" : (MetricDefinitionList)?,
+      "EnableSageMakerMetricsTimeSeries" : (Boolean)?
+    )
+
+    alias AlgorithmStatus = String
+
+    alias AlgorithmStatusDetails = NamedTuple(
+      "ValidationStatuses" : (AlgorithmStatusItemList)?,
+      "ImageScanStatuses" : (AlgorithmStatusItemList)?
+    )
+
+    alias AlgorithmStatusItem = NamedTuple(
+      "Name" : EntityName,
+      "Status" : DetailedAlgorithmStatus,
+      "FailureReason" : (String)?
+    )
+
+    alias AlgorithmStatusItemList = Array(AlgorithmStatusItem)
+
+    alias AlgorithmSummary = NamedTuple(
+      "AlgorithmName" : EntityName,
+      "AlgorithmArn" : AlgorithmArn,
+      "AlgorithmDescription" : (EntityDescription)?,
+      "CreationTime" : CreationTime,
+      "AlgorithmStatus" : AlgorithmStatus
+    )
+
+    alias AlgorithmSummaryList = Array(AlgorithmSummary)
+
+    alias AlgorithmValidationProfile = NamedTuple(
+      "ProfileName" : EntityName,
+      "TrainingJobDefinition" : TrainingJobDefinition,
+      "TransformJobDefinition" : (TransformJobDefinition)?
+    )
+
+    alias AlgorithmValidationProfiles = Array(AlgorithmValidationProfile)
+
+    alias AlgorithmValidationSpecification = NamedTuple(
+      "ValidationRole" : RoleArn,
+      "ValidationProfiles" : AlgorithmValidationProfiles
+    )
+
+    alias AnnotationConsolidationConfig = NamedTuple(
+      "AnnotationConsolidationLambdaArn" : LambdaFunctionArn
+    )
+
+    alias AppArn = String
+
+    alias AppDetails = NamedTuple(
+      "DomainId" : (DomainId)?,
+      "UserProfileName" : (UserProfileName)?,
+      "AppType" : (AppType)?,
+      "AppName" : (AppName)?,
+      "Status" : (AppStatus)?,
+      "CreationTime" : (CreationTime)?
+    )
+
+    alias AppImageConfigArn = String
+
+    alias AppImageConfigDetails = NamedTuple(
+      "AppImageConfigArn" : (AppImageConfigArn)?,
+      "AppImageConfigName" : (AppImageConfigName)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+    )
+
+    alias AppImageConfigList = Array(AppImageConfigDetails)
+
+    alias AppImageConfigName = String
+
+    alias AppImageConfigSortKey = String
+
+    alias AppInstanceType = String
+
+    alias AppList = Array(AppDetails)
+
+    alias AppManaged = Bool
+
+    alias AppName = String
+
+    alias AppNetworkAccessType = String
+
+    alias AppSortKey = String
+
+    alias AppSpecification = NamedTuple(
+      "ImageUri" : ImageUri,
+      "ContainerEntrypoint" : (ContainerEntrypoint)?,
+      "ContainerArguments" : (ContainerArguments)?
+    )
+
+    alias AppStatus = String
+
+    alias AppType = String
+
+    alias ApprovalDescription = String
+
+    alias ArnOrName = String
+
+    alias ArtifactArn = String
+
+    alias ArtifactDigest = String
+
+    alias ArtifactSource = NamedTuple(
+      "SourceUri" : String2048,
+      "SourceTypes" : (ArtifactSourceTypes)?
+    )
+
+    alias ArtifactSourceIdType = String
+
+    alias ArtifactSourceType = NamedTuple(
+      "SourceIdType" : ArtifactSourceIdType,
+      "Value" : String256
+    )
+
+    alias ArtifactSourceTypes = Array(ArtifactSourceType)
+
+    alias ArtifactSummaries = Array(ArtifactSummary)
+
+    alias ArtifactSummary = NamedTuple(
+      "ArtifactArn" : (ArtifactArn)?,
+      "ArtifactName" : (ExperimentEntityName)?,
+      "Source" : (ArtifactSource)?,
+      "ArtifactType" : (String256)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias AssemblyType = String
+
+    alias AssociateTrialComponentRequest = NamedTuple(
+      "TrialComponentName" : ExperimentEntityName,
+      "TrialName" : ExperimentEntityName
+    )
+
+    alias AssociateTrialComponentResponse = NamedTuple(
+      "TrialComponentArn" : (TrialComponentArn)?,
+      "TrialArn" : (TrialArn)?
+    )
+
+    alias AssociationEdgeType = String
+
+    alias AssociationEntityArn = String
+
+    alias AssociationSummaries = Array(AssociationSummary)
+
+    alias AssociationSummary = NamedTuple(
+      "SourceArn" : (AssociationEntityArn)?,
+      "DestinationArn" : (AssociationEntityArn)?,
+      "SourceType" : (String256)?,
+      "DestinationType" : (String256)?,
+      "AssociationType" : (AssociationEdgeType)?,
+      "SourceName" : (ExperimentEntityName)?,
+      "DestinationName" : (ExperimentEntityName)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?
+    )
+
+    alias AthenaCatalog = String
+
+    alias AthenaDatabase = String
+
+    alias AthenaDatasetDefinition = NamedTuple(
+      "Catalog" : AthenaCatalog,
+      "Database" : AthenaDatabase,
+      "QueryString" : AthenaQueryString,
+      "WorkGroup" : (AthenaWorkGroup)?,
+      "OutputS3Uri" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?,
+      "OutputFormat" : AthenaResultFormat,
+      "OutputCompression" : (AthenaResultCompressionType)?
+    )
+
+    alias AthenaQueryString = String
+
+    alias AthenaResultCompressionType = String
+
+    alias AthenaResultFormat = String
+
+    alias AthenaWorkGroup = String
+
+    alias AttributeName = String
+
+    alias AttributeNames = Array(AttributeName)
+
+    alias AuthMode = String
+
+    alias AutoMLCandidate = NamedTuple(
+      "CandidateName" : CandidateName,
+      "FinalAutoMLJobObjectiveMetric" : (FinalAutoMLJobObjectiveMetric)?,
+      "ObjectiveStatus" : ObjectiveStatus,
+      "CandidateSteps" : CandidateSteps,
+      "CandidateStatus" : CandidateStatus,
+      "InferenceContainers" : (AutoMLContainerDefinitions)?,
+      "CreationTime" : Timestamp,
+      "EndTime" : (Timestamp)?,
+      "LastModifiedTime" : Timestamp,
+      "FailureReason" : (AutoMLFailureReason)?
+    )
+
+    alias AutoMLCandidateStep = NamedTuple(
+      "CandidateStepType" : CandidateStepType,
+      "CandidateStepArn" : CandidateStepArn,
+      "CandidateStepName" : CandidateStepName
+    )
+
+    alias AutoMLCandidates = Array(AutoMLCandidate)
+
+    alias AutoMLChannel = NamedTuple(
+      "DataSource" : AutoMLDataSource,
+      "CompressionType" : (CompressionType)?,
+      "TargetAttributeName" : TargetAttributeName
+    )
+
+    alias AutoMLContainerDefinition = NamedTuple(
+      "Image" : ContainerImage,
+      "ModelDataUrl" : Url,
+      "Environment" : (EnvironmentMap)?
+    )
+
+    alias AutoMLContainerDefinitions = Array(AutoMLContainerDefinition)
+
+    alias AutoMLDataSource = NamedTuple(
+      "S3DataSource" : AutoMLS3DataSource
+    )
+
+    alias AutoMLFailureReason = String
+
+    alias AutoMLInputDataConfig = Array(AutoMLChannel)
+
+    alias AutoMLJobArn = String
+
+    alias AutoMLJobArtifacts = NamedTuple(
+      "CandidateDefinitionNotebookLocation" : (CandidateDefinitionNotebookLocation)?,
+      "DataExplorationNotebookLocation" : (DataExplorationNotebookLocation)?
+    )
+
+    alias AutoMLJobCompletionCriteria = NamedTuple(
+      "MaxCandidates" : (MaxCandidates)?,
+      "MaxRuntimePerTrainingJobInSeconds" : (MaxRuntimePerTrainingJobInSeconds)?,
+      "MaxAutoMLJobRuntimeInSeconds" : (MaxAutoMLJobRuntimeInSeconds)?
+    )
+
+    alias AutoMLJobConfig = NamedTuple(
+      "CompletionCriteria" : (AutoMLJobCompletionCriteria)?,
+      "SecurityConfig" : (AutoMLSecurityConfig)?
+    )
+
+    alias AutoMLJobName = String
+
+    alias AutoMLJobObjective = NamedTuple(
+      "MetricName" : AutoMLMetricEnum
+    )
+
+    alias AutoMLJobObjectiveType = String
+
+    alias AutoMLJobSecondaryStatus = String
+
+    alias AutoMLJobStatus = String
+
+    alias AutoMLJobSummaries = Array(AutoMLJobSummary)
+
+    alias AutoMLJobSummary = NamedTuple(
+      "AutoMLJobName" : AutoMLJobName,
+      "AutoMLJobArn" : AutoMLJobArn,
+      "AutoMLJobStatus" : AutoMLJobStatus,
+      "AutoMLJobSecondaryStatus" : AutoMLJobSecondaryStatus,
+      "CreationTime" : Timestamp,
+      "EndTime" : (Timestamp)?,
+      "LastModifiedTime" : Timestamp,
+      "FailureReason" : (AutoMLFailureReason)?
+    )
+
+    alias AutoMLMaxResults = Int32
+
+    alias AutoMLMetricEnum = String
+
+    alias AutoMLNameContains = String
+
+    alias AutoMLOutputDataConfig = NamedTuple(
+      "KmsKeyId" : (KmsKeyId)?,
+      "S3OutputPath" : S3Uri
+    )
+
+    alias AutoMLS3DataSource = NamedTuple(
+      "S3DataType" : AutoMLS3DataType,
+      "S3Uri" : S3Uri
+    )
+
+    alias AutoMLS3DataType = String
+
+    alias AutoMLSecurityConfig = NamedTuple(
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias AutoMLSortBy = String
+
+    alias AutoMLSortOrder = String
+
+    alias AutoRollbackConfig = NamedTuple(
+      "Alarms" : (AlarmList)?
+    )
+
+    alias AwsManagedHumanLoopRequestSource = String
+
+    alias BatchStrategy = String
+
+    alias Bias = NamedTuple(
+      "Report" : (MetricsSource)?
+    )
+
+    alias BillableTimeInSeconds = Int32
+
+    alias BlockedReason = String
+
+    alias BlueGreenUpdatePolicy = NamedTuple(
+      "TrafficRoutingConfiguration" : TrafficRoutingConfig,
+      "TerminationWaitInSeconds" : (TerminationWaitInSeconds)?,
+      "MaximumExecutionTimeoutInSeconds" : (MaximumExecutionTimeoutInSeconds)?
+    )
+
+    alias Boolean = Bool
+
+    alias BooleanOperator = String
+
+    alias Branch = String
+
+    alias CacheHitResult = NamedTuple(
+      "SourcePipelineExecutionArn" : (PipelineExecutionArn)?
+    )
+
+    alias CandidateDefinitionNotebookLocation = String
+
+    alias CandidateName = String
+
+    alias CandidateSortBy = String
+
+    alias CandidateStatus = String
+
+    alias CandidateStepArn = String
+
+    alias CandidateStepName = String
+
+    alias CandidateStepType = String
+
+    alias CandidateSteps = Array(AutoMLCandidateStep)
+
+    alias CapacitySize = NamedTuple(
+      "Type" : CapacitySizeType,
+      "Value" : CapacitySizeValue
+    )
+
+    alias CapacitySizeType = String
+
+    alias CapacitySizeValue = Int32
+
+    alias CaptureContentTypeHeader = NamedTuple(
+      "CsvContentTypes" : (CsvContentTypes)?,
+      "JsonContentTypes" : (JsonContentTypes)?
+    )
+
+    alias CaptureMode = String
+
+    alias CaptureOption = NamedTuple(
+      "CaptureMode" : CaptureMode
+    )
+
+    alias CaptureOptionList = Array(CaptureOption)
+
+    alias CaptureStatus = String
+
+    alias Catalog = String
+
+    alias CategoricalParameterRange = NamedTuple(
+      "Name" : ParameterKey,
+      "Values" : ParameterValues
+    )
+
+    alias CategoricalParameterRangeSpecification = NamedTuple(
+      "Values" : ParameterValues
+    )
+
+    alias CategoricalParameterRanges = Array(CategoricalParameterRange)
+
+    alias Cents = Int32
+
+    alias CertifyForMarketplace = Bool
+
+    alias Channel = NamedTuple(
+      "ChannelName" : ChannelName,
+      "DataSource" : DataSource,
+      "ContentType" : (ContentType)?,
+      "CompressionType" : (CompressionType)?,
+      "RecordWrapperType" : (RecordWrapper)?,
+      "InputMode" : (TrainingInputMode)?,
+      "ShuffleConfig" : (ShuffleConfig)?
+    )
+
+    alias ChannelName = String
+
+    alias ChannelSpecification = NamedTuple(
+      "Name" : ChannelName,
+      "Description" : (EntityDescription)?,
+      "IsRequired" : (Boolean)?,
+      "SupportedContentTypes" : ContentTypes,
+      "SupportedCompressionTypes" : (CompressionTypes)?,
+      "SupportedInputModes" : InputModes
+    )
+
+    alias ChannelSpecifications = Array(ChannelSpecification)
+
+    alias CheckpointConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "LocalPath" : (DirectoryPath)?
+    )
+
+    alias Cidr = String
+
+    alias Cidrs = Array(Cidr)
+
+    alias ClientId = String
+
+    alias ClientSecret = String
+
+    alias ClientToken = String
+
+    alias CodeRepositoryArn = String
+
+    alias CodeRepositoryContains = String
+
+    alias CodeRepositoryNameContains = String
+
+    alias CodeRepositoryNameOrUrl = String
+
+    alias CodeRepositorySortBy = String
+
+    alias CodeRepositorySortOrder = String
+
+    alias CodeRepositorySummary = NamedTuple(
+      "CodeRepositoryName" : EntityName,
+      "CodeRepositoryArn" : CodeRepositoryArn,
+      "CreationTime" : CreationTime,
+      "LastModifiedTime" : LastModifiedTime,
+      "GitConfig" : (GitConfig)?
+    )
+
+    alias CodeRepositorySummaryList = Array(CodeRepositorySummary)
+
+    alias CognitoConfig = NamedTuple(
+      "UserPool" : CognitoUserPool,
+      "ClientId" : ClientId
+    )
+
+    alias CognitoMemberDefinition = NamedTuple(
+      "UserPool" : CognitoUserPool,
+      "UserGroup" : CognitoUserGroup,
+      "ClientId" : ClientId
+    )
+
+    alias CognitoUserGroup = String
+
+    alias CognitoUserPool = String
+
+    alias CollectionConfiguration = NamedTuple(
+      "CollectionName" : (CollectionName)?,
+      "CollectionParameters" : (CollectionParameters)?
+    )
+
+    alias CollectionConfigurations = Array(CollectionConfiguration)
+
+    alias CollectionName = String
+
+    alias CollectionParameters = Hash(ConfigKey,ConfigValue)
+
+    alias CompilationJobArn = String
+
+    alias CompilationJobStatus = String
+
+    alias CompilationJobSummaries = Array(CompilationJobSummary)
+
+    alias CompilationJobSummary = NamedTuple(
+      "CompilationJobName" : EntityName,
+      "CompilationJobArn" : CompilationJobArn,
+      "CreationTime" : CreationTime,
+      "CompilationStartTime" : (Timestamp)?,
+      "CompilationEndTime" : (Timestamp)?,
+      "CompilationTargetDevice" : (TargetDevice)?,
+      "CompilationTargetPlatformOs" : (TargetPlatformOs)?,
+      "CompilationTargetPlatformArch" : (TargetPlatformArch)?,
+      "CompilationTargetPlatformAccelerator" : (TargetPlatformAccelerator)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "CompilationJobStatus" : CompilationJobStatus
+    )
+
+    alias CompilerOptions = String
+
+    alias CompressionType = String
+
+    alias CompressionTypes = Array(CompressionType)
+
+    alias ConditionOutcome = String
+
+    alias ConditionStepMetadata = NamedTuple(
+      "Outcome" : (ConditionOutcome)?
+    )
+
+    alias ConfigKey = String
+
+    alias ConfigValue = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ContainerArgument = String
+
+    alias ContainerArguments = Array(ContainerArgument)
+
+    alias ContainerDefinition = NamedTuple(
+      "ContainerHostname" : (ContainerHostname)?,
+      "Image" : (ContainerImage)?,
+      "ImageConfig" : (ImageConfig)?,
+      "Mode" : (ContainerMode)?,
+      "ModelDataUrl" : (Url)?,
+      "Environment" : (EnvironmentMap)?,
+      "ModelPackageName" : (VersionedArnOrName)?
+    )
+
+    alias ContainerDefinitionList = Array(ContainerDefinition)
+
+    alias ContainerEntrypoint = Array(ContainerEntrypointString)
+
+    alias ContainerEntrypointString = String
+
+    alias ContainerHostname = String
+
+    alias ContainerImage = String
+
+    alias ContainerMode = String
+
+    alias ContentClassifier = String
+
+    alias ContentClassifiers = Array(ContentClassifier)
+
+    alias ContentDigest = String
+
+    alias ContentType = String
+
+    alias ContentTypes = Array(ContentType)
+
+    alias ContextArn = String
+
+    alias ContextSource = NamedTuple(
+      "SourceUri" : String2048,
+      "SourceType" : (String256)?,
+      "SourceId" : (String256)?
+    )
+
+    alias ContextSummaries = Array(ContextSummary)
+
+    alias ContextSummary = NamedTuple(
+      "ContextArn" : (ContextArn)?,
+      "ContextName" : (ExperimentEntityName)?,
+      "Source" : (ContextSource)?,
+      "ContextType" : (String256)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias ContinuousParameterRange = NamedTuple(
+      "Name" : ParameterKey,
+      "MinValue" : ParameterValue,
+      "MaxValue" : ParameterValue,
+      "ScalingType" : (HyperParameterScalingType)?
+    )
+
+    alias ContinuousParameterRangeSpecification = NamedTuple(
+      "MinValue" : ParameterValue,
+      "MaxValue" : ParameterValue
+    )
+
+    alias ContinuousParameterRanges = Array(ContinuousParameterRange)
+
+    alias CreateActionRequest = NamedTuple(
+      "ActionName" : ExperimentEntityName,
+      "Source" : ActionSource,
+      "ActionType" : String256,
+      "Description" : (ExperimentDescription)?,
+      "Status" : (ActionStatus)?,
+      "Properties" : (LineageEntityParameters)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateActionResponse = NamedTuple(
+      "ActionArn" : (ActionArn)?
+    )
+
+    alias CreateAlgorithmInput = NamedTuple(
+      "AlgorithmName" : EntityName,
+      "AlgorithmDescription" : (EntityDescription)?,
+      "TrainingSpecification" : TrainingSpecification,
+      "InferenceSpecification" : (InferenceSpecification)?,
+      "ValidationSpecification" : (AlgorithmValidationSpecification)?,
+      "CertifyForMarketplace" : (CertifyForMarketplace)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateAlgorithmOutput = NamedTuple(
+      "AlgorithmArn" : AlgorithmArn
+    )
+
+    alias CreateAppImageConfigRequest = NamedTuple(
+      "AppImageConfigName" : AppImageConfigName,
+      "Tags" : (TagList)?,
+      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+    )
+
+    alias CreateAppImageConfigResponse = NamedTuple(
+      "AppImageConfigArn" : (AppImageConfigArn)?
+    )
+
+    alias CreateAppRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName,
+      "AppType" : AppType,
+      "AppName" : AppName,
+      "Tags" : (TagList)?,
+      "ResourceSpec" : (ResourceSpec)?
+    )
+
+    alias CreateAppResponse = NamedTuple(
+      "AppArn" : (AppArn)?
+    )
+
+    alias CreateArtifactRequest = NamedTuple(
+      "ArtifactName" : (ExperimentEntityName)?,
+      "Source" : ArtifactSource,
+      "ArtifactType" : String256,
+      "Properties" : (LineageEntityParameters)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateArtifactResponse = NamedTuple(
+      "ArtifactArn" : (ArtifactArn)?
+    )
+
+    alias CreateAutoMLJobRequest = NamedTuple(
+      "AutoMLJobName" : AutoMLJobName,
+      "InputDataConfig" : AutoMLInputDataConfig,
+      "OutputDataConfig" : AutoMLOutputDataConfig,
+      "ProblemType" : (ProblemType)?,
+      "AutoMLJobObjective" : (AutoMLJobObjective)?,
+      "AutoMLJobConfig" : (AutoMLJobConfig)?,
+      "RoleArn" : RoleArn,
+      "GenerateCandidateDefinitionsOnly" : (GenerateCandidateDefinitionsOnly)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateAutoMLJobResponse = NamedTuple(
+      "AutoMLJobArn" : AutoMLJobArn
+    )
+
+    alias CreateCodeRepositoryInput = NamedTuple(
+      "CodeRepositoryName" : EntityName,
+      "GitConfig" : GitConfig,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateCodeRepositoryOutput = NamedTuple(
+      "CodeRepositoryArn" : CodeRepositoryArn
+    )
+
+    alias CreateCompilationJobRequest = NamedTuple(
+      "CompilationJobName" : EntityName,
+      "RoleArn" : RoleArn,
+      "InputConfig" : InputConfig,
+      "OutputConfig" : OutputConfig,
+      "StoppingCondition" : StoppingCondition,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateCompilationJobResponse = NamedTuple(
+      "CompilationJobArn" : CompilationJobArn
+    )
+
+    alias CreateContextRequest = NamedTuple(
+      "ContextName" : ExperimentEntityName,
+      "Source" : ContextSource,
+      "ContextType" : String256,
+      "Description" : (ExperimentDescription)?,
+      "Properties" : (LineageEntityParameters)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateContextResponse = NamedTuple(
+      "ContextArn" : (ContextArn)?
+    )
+
+    alias CreateDataQualityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "DataQualityBaselineConfig" : (DataQualityBaselineConfig)?,
+      "DataQualityAppSpecification" : DataQualityAppSpecification,
+      "DataQualityJobInput" : DataQualityJobInput,
+      "DataQualityJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDataQualityJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn
+    )
+
+    alias CreateDeviceFleetRequest = NamedTuple(
+      "DeviceFleetName" : EntityName,
+      "RoleArn" : (RoleArn)?,
+      "Description" : (DeviceFleetDescription)?,
+      "OutputConfig" : EdgeOutputConfig,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDomainRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AuthMode" : AuthMode,
+      "DefaultUserSettings" : UserSettings,
+      "SubnetIds" : Subnets,
+      "VpcId" : VpcId,
+      "Tags" : (TagList)?,
+      "AppNetworkAccessType" : (AppNetworkAccessType)?,
+      "HomeEfsFileSystemKmsKeyId" : (KmsKeyId)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias CreateDomainResponse = NamedTuple(
+      "DomainArn" : (DomainArn)?,
+      "Url" : (String1024)?
+    )
+
+    alias CreateEdgePackagingJobRequest = NamedTuple(
+      "EdgePackagingJobName" : EntityName,
+      "CompilationJobName" : EntityName,
+      "ModelName" : EntityName,
+      "ModelVersion" : EdgeVersion,
+      "RoleArn" : RoleArn,
+      "OutputConfig" : EdgeOutputConfig,
+      "ResourceKey" : (KmsKeyId)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEndpointConfigInput = NamedTuple(
+      "EndpointConfigName" : EndpointConfigName,
+      "ProductionVariants" : ProductionVariantList,
+      "DataCaptureConfig" : (DataCaptureConfig)?,
+      "Tags" : (TagList)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias CreateEndpointConfigOutput = NamedTuple(
+      "EndpointConfigArn" : EndpointConfigArn
+    )
+
+    alias CreateEndpointInput = NamedTuple(
+      "EndpointName" : EndpointName,
+      "EndpointConfigName" : EndpointConfigName,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEndpointOutput = NamedTuple(
+      "EndpointArn" : EndpointArn
+    )
+
+    alias CreateExperimentRequest = NamedTuple(
+      "ExperimentName" : ExperimentEntityName,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Description" : (ExperimentDescription)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateExperimentResponse = NamedTuple(
+      "ExperimentArn" : (ExperimentArn)?
+    )
+
+    alias CreateFeatureGroupRequest = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName,
+      "RecordIdentifierFeatureName" : FeatureName,
+      "EventTimeFeatureName" : FeatureName,
+      "FeatureDefinitions" : FeatureDefinitions,
+      "OnlineStoreConfig" : (OnlineStoreConfig)?,
+      "OfflineStoreConfig" : (OfflineStoreConfig)?,
+      "RoleArn" : (RoleArn)?,
+      "Description" : (Description)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateFeatureGroupResponse = NamedTuple(
+      "FeatureGroupArn" : FeatureGroupArn
+    )
+
+    alias CreateFlowDefinitionRequest = NamedTuple(
+      "FlowDefinitionName" : FlowDefinitionName,
+      "HumanLoopRequestSource" : (HumanLoopRequestSource)?,
+      "HumanLoopActivationConfig" : (HumanLoopActivationConfig)?,
+      "HumanLoopConfig" : HumanLoopConfig,
+      "OutputConfig" : FlowDefinitionOutputConfig,
+      "RoleArn" : RoleArn,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateFlowDefinitionResponse = NamedTuple(
+      "FlowDefinitionArn" : FlowDefinitionArn
+    )
+
+    alias CreateHumanTaskUiRequest = NamedTuple(
+      "HumanTaskUiName" : HumanTaskUiName,
+      "UiTemplate" : UiTemplate,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateHumanTaskUiResponse = NamedTuple(
+      "HumanTaskUiArn" : HumanTaskUiArn
+    )
+
+    alias CreateHyperParameterTuningJobRequest = NamedTuple(
+      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
+      "HyperParameterTuningJobConfig" : HyperParameterTuningJobConfig,
+      "TrainingJobDefinition" : (HyperParameterTrainingJobDefinition)?,
+      "TrainingJobDefinitions" : (HyperParameterTrainingJobDefinitions)?,
+      "WarmStartConfig" : (HyperParameterTuningJobWarmStartConfig)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateHyperParameterTuningJobResponse = NamedTuple(
+      "HyperParameterTuningJobArn" : HyperParameterTuningJobArn
+    )
+
+    alias CreateImageRequest = NamedTuple(
+      "Description" : (ImageDescription)?,
+      "DisplayName" : (ImageDisplayName)?,
+      "ImageName" : ImageName,
+      "RoleArn" : RoleArn,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateImageResponse = NamedTuple(
+      "ImageArn" : (ImageArn)?
+    )
+
+    alias CreateImageVersionRequest = NamedTuple(
+      "BaseImage" : ImageBaseImage,
+      "ClientToken" : ClientToken,
+      "ImageName" : ImageName
+    )
+
+    alias CreateImageVersionResponse = NamedTuple(
+      "ImageVersionArn" : (ImageVersionArn)?
+    )
+
+    alias CreateLabelingJobRequest = NamedTuple(
+      "LabelingJobName" : LabelingJobName,
+      "LabelAttributeName" : LabelAttributeName,
+      "InputConfig" : LabelingJobInputConfig,
+      "OutputConfig" : LabelingJobOutputConfig,
+      "RoleArn" : RoleArn,
+      "LabelCategoryConfigS3Uri" : (S3Uri)?,
+      "StoppingConditions" : (LabelingJobStoppingConditions)?,
+      "LabelingJobAlgorithmsConfig" : (LabelingJobAlgorithmsConfig)?,
+      "HumanTaskConfig" : HumanTaskConfig,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateLabelingJobResponse = NamedTuple(
+      "LabelingJobArn" : LabelingJobArn
+    )
+
+    alias CreateModelBiasJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "ModelBiasBaselineConfig" : (ModelBiasBaselineConfig)?,
+      "ModelBiasAppSpecification" : ModelBiasAppSpecification,
+      "ModelBiasJobInput" : ModelBiasJobInput,
+      "ModelBiasJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateModelBiasJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn
+    )
+
+    alias CreateModelExplainabilityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "ModelExplainabilityBaselineConfig" : (ModelExplainabilityBaselineConfig)?,
+      "ModelExplainabilityAppSpecification" : ModelExplainabilityAppSpecification,
+      "ModelExplainabilityJobInput" : ModelExplainabilityJobInput,
+      "ModelExplainabilityJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateModelExplainabilityJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn
+    )
+
+    alias CreateModelInput = NamedTuple(
+      "ModelName" : ModelName,
+      "PrimaryContainer" : (ContainerDefinition)?,
+      "Containers" : (ContainerDefinitionList)?,
+      "ExecutionRoleArn" : RoleArn,
+      "Tags" : (TagList)?,
+      "VpcConfig" : (VpcConfig)?,
+      "EnableNetworkIsolation" : (Boolean)?
+    )
+
+    alias CreateModelOutput = NamedTuple(
+      "ModelArn" : ModelArn
+    )
+
+    alias CreateModelPackageGroupInput = NamedTuple(
+      "ModelPackageGroupName" : EntityName,
+      "ModelPackageGroupDescription" : (EntityDescription)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateModelPackageGroupOutput = NamedTuple(
+      "ModelPackageGroupArn" : ModelPackageGroupArn
+    )
+
+    alias CreateModelPackageInput = NamedTuple(
+      "ModelPackageName" : (EntityName)?,
+      "ModelPackageGroupName" : (EntityName)?,
+      "ModelPackageDescription" : (EntityDescription)?,
+      "InferenceSpecification" : (InferenceSpecification)?,
+      "ValidationSpecification" : (ModelPackageValidationSpecification)?,
+      "SourceAlgorithmSpecification" : (SourceAlgorithmSpecification)?,
+      "CertifyForMarketplace" : (CertifyForMarketplace)?,
+      "Tags" : (TagList)?,
+      "ModelApprovalStatus" : (ModelApprovalStatus)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "ModelMetrics" : (ModelMetrics)?,
+      "ClientToken" : (ClientToken)?
+    )
+
+    alias CreateModelPackageOutput = NamedTuple(
+      "ModelPackageArn" : ModelPackageArn
+    )
+
+    alias CreateModelQualityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "ModelQualityBaselineConfig" : (ModelQualityBaselineConfig)?,
+      "ModelQualityAppSpecification" : ModelQualityAppSpecification,
+      "ModelQualityJobInput" : ModelQualityJobInput,
+      "ModelQualityJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateModelQualityJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn
+    )
+
+    alias CreateMonitoringScheduleRequest = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName,
+      "MonitoringScheduleConfig" : MonitoringScheduleConfig,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateMonitoringScheduleResponse = NamedTuple(
+      "MonitoringScheduleArn" : MonitoringScheduleArn
+    )
+
+    alias CreateNotebookInstanceInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName,
+      "InstanceType" : InstanceType,
+      "SubnetId" : (SubnetId)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?,
+      "RoleArn" : RoleArn,
+      "KmsKeyId" : (KmsKeyId)?,
+      "Tags" : (TagList)?,
+      "LifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
+      "DirectInternetAccess" : (DirectInternetAccess)?,
+      "VolumeSizeInGB" : (NotebookInstanceVolumeSizeInGB)?,
+      "AcceleratorTypes" : (NotebookInstanceAcceleratorTypes)?,
+      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
+      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?,
+      "RootAccess" : (RootAccess)?
+    )
+
+    alias CreateNotebookInstanceLifecycleConfigInput = NamedTuple(
+      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName,
+      "OnCreate" : (NotebookInstanceLifecycleConfigList)?,
+      "OnStart" : (NotebookInstanceLifecycleConfigList)?
+    )
+
+    alias CreateNotebookInstanceLifecycleConfigOutput = NamedTuple(
+      "NotebookInstanceLifecycleConfigArn" : (NotebookInstanceLifecycleConfigArn)?
+    )
+
+    alias CreateNotebookInstanceOutput = NamedTuple(
+      "NotebookInstanceArn" : (NotebookInstanceArn)?
+    )
+
+    alias CreatePipelineRequest = NamedTuple(
+      "PipelineName" : PipelineName,
+      "PipelineDisplayName" : (PipelineName)?,
+      "PipelineDefinition" : PipelineDefinition,
+      "PipelineDescription" : (PipelineDescription)?,
+      "ClientRequestToken" : IdempotencyToken,
+      "RoleArn" : RoleArn,
+      "Tags" : (TagList)?
+    )
+
+    alias CreatePipelineResponse = NamedTuple(
+      "PipelineArn" : (PipelineArn)?
+    )
+
+    alias CreatePresignedDomainUrlRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName,
+      "SessionExpirationDurationInSeconds" : (SessionExpirationDurationInSeconds)?
+    )
+
+    alias CreatePresignedDomainUrlResponse = NamedTuple(
+      "AuthorizedUrl" : (PresignedDomainUrl)?
+    )
+
+    alias CreatePresignedNotebookInstanceUrlInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName,
+      "SessionExpirationDurationInSeconds" : (SessionExpirationDurationInSeconds)?
+    )
+
+    alias CreatePresignedNotebookInstanceUrlOutput = NamedTuple(
+      "AuthorizedUrl" : (NotebookInstanceUrl)?
+    )
+
+    alias CreateProcessingJobRequest = NamedTuple(
+      "ProcessingInputs" : (ProcessingInputs)?,
+      "ProcessingOutputConfig" : (ProcessingOutputConfig)?,
+      "ProcessingJobName" : ProcessingJobName,
+      "ProcessingResources" : ProcessingResources,
+      "StoppingCondition" : (ProcessingStoppingCondition)?,
+      "AppSpecification" : AppSpecification,
+      "Environment" : (ProcessingEnvironmentMap)?,
+      "NetworkConfig" : (NetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "Tags" : (TagList)?,
+      "ExperimentConfig" : (ExperimentConfig)?
+    )
+
+    alias CreateProcessingJobResponse = NamedTuple(
+      "ProcessingJobArn" : ProcessingJobArn
+    )
+
+    alias CreateProjectInput = NamedTuple(
+      "ProjectName" : ProjectEntityName,
+      "ProjectDescription" : (EntityDescription)?,
+      "ServiceCatalogProvisioningDetails" : ServiceCatalogProvisioningDetails,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateProjectOutput = NamedTuple(
+      "ProjectArn" : ProjectArn,
+      "ProjectId" : ProjectId
+    )
+
+    alias CreateTrainingJobRequest = NamedTuple(
+      "TrainingJobName" : TrainingJobName,
+      "HyperParameters" : (HyperParameters)?,
+      "AlgorithmSpecification" : AlgorithmSpecification,
+      "RoleArn" : RoleArn,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : OutputDataConfig,
+      "ResourceConfig" : ResourceConfig,
+      "VpcConfig" : (VpcConfig)?,
+      "StoppingCondition" : StoppingCondition,
+      "Tags" : (TagList)?,
+      "EnableNetworkIsolation" : (Boolean)?,
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "EnableManagedSpotTraining" : (Boolean)?,
+      "CheckpointConfig" : (CheckpointConfig)?,
+      "DebugHookConfig" : (DebugHookConfig)?,
+      "DebugRuleConfigurations" : (DebugRuleConfigurations)?,
+      "TensorBoardOutputConfig" : (TensorBoardOutputConfig)?,
+      "ExperimentConfig" : (ExperimentConfig)?,
+      "ProfilerConfig" : (ProfilerConfig)?,
+      "ProfilerRuleConfigurations" : (ProfilerRuleConfigurations)?
+    )
+
+    alias CreateTrainingJobResponse = NamedTuple(
+      "TrainingJobArn" : TrainingJobArn
+    )
+
+    alias CreateTransformJobRequest = NamedTuple(
+      "TransformJobName" : TransformJobName,
+      "ModelName" : ModelName,
+      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
+      "ModelClientConfig" : (ModelClientConfig)?,
+      "MaxPayloadInMB" : (MaxPayloadInMB)?,
+      "BatchStrategy" : (BatchStrategy)?,
+      "Environment" : (TransformEnvironmentMap)?,
+      "TransformInput" : TransformInput,
+      "TransformOutput" : TransformOutput,
+      "TransformResources" : TransformResources,
+      "DataProcessing" : (DataProcessing)?,
+      "Tags" : (TagList)?,
+      "ExperimentConfig" : (ExperimentConfig)?
+    )
+
+    alias CreateTransformJobResponse = NamedTuple(
+      "TransformJobArn" : TransformJobArn
+    )
+
+    alias CreateTrialComponentRequest = NamedTuple(
+      "TrialComponentName" : ExperimentEntityName,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Status" : (TrialComponentStatus)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Parameters" : (TrialComponentParameters)?,
+      "InputArtifacts" : (TrialComponentArtifacts)?,
+      "OutputArtifacts" : (TrialComponentArtifacts)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateTrialComponentResponse = NamedTuple(
+      "TrialComponentArn" : (TrialComponentArn)?
+    )
+
+    alias CreateTrialRequest = NamedTuple(
+      "TrialName" : ExperimentEntityName,
+      "DisplayName" : (ExperimentEntityName)?,
+      "ExperimentName" : ExperimentEntityName,
+      "MetadataProperties" : (MetadataProperties)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateTrialResponse = NamedTuple(
+      "TrialArn" : (TrialArn)?
+    )
+
+    alias CreateUserProfileRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName,
+      "SingleSignOnUserIdentifier" : (SingleSignOnUserIdentifier)?,
+      "SingleSignOnUserValue" : (String256)?,
+      "Tags" : (TagList)?,
+      "UserSettings" : (UserSettings)?
+    )
+
+    alias CreateUserProfileResponse = NamedTuple(
+      "UserProfileArn" : (UserProfileArn)?
+    )
+
+    alias CreateWorkforceRequest = NamedTuple(
+      "CognitoConfig" : (CognitoConfig)?,
+      "OidcConfig" : (OidcConfig)?,
+      "SourceIpConfig" : (SourceIpConfig)?,
+      "WorkforceName" : WorkforceName,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateWorkforceResponse = NamedTuple(
+      "WorkforceArn" : WorkforceArn
+    )
+
+    alias CreateWorkteamRequest = NamedTuple(
+      "WorkteamName" : WorkteamName,
+      "WorkforceName" : (WorkforceName)?,
+      "MemberDefinitions" : MemberDefinitions,
+      "Description" : String200,
+      "NotificationConfiguration" : (NotificationConfiguration)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateWorkteamResponse = NamedTuple(
+      "WorkteamArn" : (WorkteamArn)?
+    )
+
+    alias CreationTime = String | UInt64 | Time
+
+    alias CsvContentType = String
+
+    alias CsvContentTypes = Array(CsvContentType)
+
+    alias CustomImage = NamedTuple(
+      "ImageName" : ImageName,
+      "ImageVersionNumber" : (ImageVersionNumber)?,
+      "AppImageConfigName" : AppImageConfigName
+    )
+
+    alias CustomImages = Array(CustomImage)
+
+    alias DataCaptureConfig = NamedTuple(
+      "EnableCapture" : (EnableCapture)?,
+      "InitialSamplingPercentage" : SamplingPercentage,
+      "DestinationS3Uri" : DestinationS3Uri,
+      "KmsKeyId" : (KmsKeyId)?,
+      "CaptureOptions" : CaptureOptionList,
+      "CaptureContentTypeHeader" : (CaptureContentTypeHeader)?
+    )
+
+    alias DataCaptureConfigSummary = NamedTuple(
+      "EnableCapture" : EnableCapture,
+      "CaptureStatus" : CaptureStatus,
+      "CurrentSamplingPercentage" : SamplingPercentage,
+      "DestinationS3Uri" : DestinationS3Uri,
+      "KmsKeyId" : KmsKeyId
+    )
+
+    alias DataCatalogConfig = NamedTuple(
+      "TableName" : TableName,
+      "Catalog" : Catalog,
+      "Database" : Database
+    )
+
+    alias DataDistributionType = String
+
+    alias DataExplorationNotebookLocation = String
+
+    alias DataInputConfig = String
+
+    alias DataProcessing = NamedTuple(
+      "InputFilter" : (JsonPath)?,
+      "OutputFilter" : (JsonPath)?,
+      "JoinSource" : (JoinSource)?
+    )
+
+    alias DataQualityAppSpecification = NamedTuple(
+      "ImageUri" : ImageUri,
+      "ContainerEntrypoint" : (ContainerEntrypoint)?,
+      "ContainerArguments" : (MonitoringContainerArguments)?,
+      "RecordPreprocessorSourceUri" : (S3Uri)?,
+      "PostAnalyticsProcessorSourceUri" : (S3Uri)?,
+      "Environment" : (MonitoringEnvironmentMap)?
+    )
+
+    alias DataQualityBaselineConfig = NamedTuple(
+      "BaseliningJobName" : (ProcessingJobName)?,
+      "ConstraintsResource" : (MonitoringConstraintsResource)?,
+      "StatisticsResource" : (MonitoringStatisticsResource)?
+    )
+
+    alias DataQualityJobInput = NamedTuple(
+      "EndpointInput" : EndpointInput
+    )
+
+    alias DataSource = NamedTuple(
+      "S3DataSource" : (S3DataSource)?,
+      "FileSystemDataSource" : (FileSystemDataSource)?
+    )
+
+    alias Database = String
+
+    alias DatasetDefinition = NamedTuple(
+      "AthenaDatasetDefinition" : (AthenaDatasetDefinition)?,
+      "RedshiftDatasetDefinition" : (RedshiftDatasetDefinition)?,
+      "LocalPath" : (ProcessingLocalPath)?,
+      "DataDistributionType" : (DataDistributionType)?,
+      "InputMode" : (InputMode)?
+    )
+
+    alias DebugHookConfig = NamedTuple(
+      "LocalPath" : (DirectoryPath)?,
+      "S3OutputPath" : S3Uri,
+      "HookParameters" : (HookParameters)?,
+      "CollectionConfigurations" : (CollectionConfigurations)?
+    )
+
+    alias DebugRuleConfiguration = NamedTuple(
+      "RuleConfigurationName" : RuleConfigurationName,
+      "LocalPath" : (DirectoryPath)?,
+      "S3OutputPath" : (S3Uri)?,
+      "RuleEvaluatorImage" : AlgorithmImage,
+      "InstanceType" : (ProcessingInstanceType)?,
+      "VolumeSizeInGB" : (OptionalVolumeSizeInGB)?,
+      "RuleParameters" : (RuleParameters)?
+    )
+
+    alias DebugRuleConfigurations = Array(DebugRuleConfiguration)
+
+    alias DebugRuleEvaluationStatus = NamedTuple(
+      "RuleConfigurationName" : (RuleConfigurationName)?,
+      "RuleEvaluationJobArn" : (ProcessingJobArn)?,
+      "RuleEvaluationStatus" : (RuleEvaluationStatus)?,
+      "StatusDetails" : (StatusDetails)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias DebugRuleEvaluationStatuses = Array(DebugRuleEvaluationStatus)
+
+    alias DefaultGid = Int32
+
+    alias DefaultUid = Int32
+
+    alias DeleteActionRequest = NamedTuple(
+      "ActionName" : ExperimentEntityName
+    )
+
+    alias DeleteActionResponse = NamedTuple(
+      "ActionArn" : (ActionArn)?
+    )
+
+    alias DeleteAlgorithmInput = NamedTuple(
+      "AlgorithmName" : EntityName
+    )
+
+    alias DeleteAppImageConfigRequest = NamedTuple(
+      "AppImageConfigName" : AppImageConfigName
+    )
+
+    alias DeleteAppRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName,
+      "AppType" : AppType,
+      "AppName" : AppName
+    )
+
+    alias DeleteArtifactRequest = NamedTuple(
+      "ArtifactArn" : (ArtifactArn)?,
+      "Source" : (ArtifactSource)?
+    )
+
+    alias DeleteArtifactResponse = NamedTuple(
+      "ArtifactArn" : (ArtifactArn)?
+    )
+
+    alias DeleteAssociationRequest = NamedTuple(
+      "SourceArn" : AssociationEntityArn,
+      "DestinationArn" : AssociationEntityArn
+    )
+
+    alias DeleteAssociationResponse = NamedTuple(
+      "SourceArn" : (AssociationEntityArn)?,
+      "DestinationArn" : (AssociationEntityArn)?
+    )
+
+    alias DeleteCodeRepositoryInput = NamedTuple(
+      "CodeRepositoryName" : EntityName
+    )
+
+    alias DeleteContextRequest = NamedTuple(
+      "ContextName" : ExperimentEntityName
+    )
+
+    alias DeleteContextResponse = NamedTuple(
+      "ContextArn" : (ContextArn)?
+    )
+
+    alias DeleteDataQualityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DeleteDeviceFleetRequest = NamedTuple(
+      "DeviceFleetName" : EntityName
+    )
+
+    alias DeleteDomainRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "RetentionPolicy" : (RetentionPolicy)?
+    )
+
+    alias DeleteEndpointConfigInput = NamedTuple(
+      "EndpointConfigName" : EndpointConfigName
+    )
+
+    alias DeleteEndpointInput = NamedTuple(
+      "EndpointName" : EndpointName
+    )
+
+    alias DeleteExperimentRequest = NamedTuple(
+      "ExperimentName" : ExperimentEntityName
+    )
+
+    alias DeleteExperimentResponse = NamedTuple(
+      "ExperimentArn" : (ExperimentArn)?
+    )
+
+    alias DeleteFeatureGroupRequest = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName
+    )
+
+    alias DeleteFlowDefinitionRequest = NamedTuple(
+      "FlowDefinitionName" : FlowDefinitionName
+    )
+
+    alias DeleteFlowDefinitionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteHumanTaskUiRequest = NamedTuple(
+      "HumanTaskUiName" : HumanTaskUiName
+    )
+
+    alias DeleteHumanTaskUiResponse = NamedTuple(
+      
+    )
+
+    alias DeleteImageRequest = NamedTuple(
+      "ImageName" : ImageName
+    )
+
+    alias DeleteImageResponse = NamedTuple(
+      
+    )
+
+    alias DeleteImageVersionRequest = NamedTuple(
+      "ImageName" : ImageName,
+      "Version" : ImageVersionNumber
+    )
+
+    alias DeleteImageVersionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteModelBiasJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DeleteModelExplainabilityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DeleteModelInput = NamedTuple(
+      "ModelName" : ModelName
+    )
+
+    alias DeleteModelPackageGroupInput = NamedTuple(
+      "ModelPackageGroupName" : ArnOrName
+    )
+
+    alias DeleteModelPackageGroupPolicyInput = NamedTuple(
+      "ModelPackageGroupName" : EntityName
+    )
+
+    alias DeleteModelPackageInput = NamedTuple(
+      "ModelPackageName" : VersionedArnOrName
+    )
+
+    alias DeleteModelQualityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DeleteMonitoringScheduleRequest = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName
+    )
+
+    alias DeleteNotebookInstanceInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName
+    )
+
+    alias DeleteNotebookInstanceLifecycleConfigInput = NamedTuple(
+      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName
+    )
+
+    alias DeletePipelineRequest = NamedTuple(
+      "PipelineName" : PipelineName,
+      "ClientRequestToken" : IdempotencyToken
+    )
+
+    alias DeletePipelineResponse = NamedTuple(
+      "PipelineArn" : (PipelineArn)?
+    )
+
+    alias DeleteProjectInput = NamedTuple(
+      "ProjectName" : ProjectEntityName
+    )
+
+    alias DeleteTagsInput = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias DeleteTagsOutput = NamedTuple(
+      
+    )
+
+    alias DeleteTrialComponentRequest = NamedTuple(
+      "TrialComponentName" : ExperimentEntityName
+    )
+
+    alias DeleteTrialComponentResponse = NamedTuple(
+      "TrialComponentArn" : (TrialComponentArn)?
+    )
+
+    alias DeleteTrialRequest = NamedTuple(
+      "TrialName" : ExperimentEntityName
+    )
+
+    alias DeleteTrialResponse = NamedTuple(
+      "TrialArn" : (TrialArn)?
+    )
+
+    alias DeleteUserProfileRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName
+    )
+
+    alias DeleteWorkforceRequest = NamedTuple(
+      "WorkforceName" : WorkforceName
+    )
+
+    alias DeleteWorkforceResponse = NamedTuple(
+      
+    )
+
+    alias DeleteWorkteamRequest = NamedTuple(
+      "WorkteamName" : WorkteamName
+    )
+
+    alias DeleteWorkteamResponse = NamedTuple(
+      "Success" : Success
+    )
+
+    alias DeployedImage = NamedTuple(
+      "SpecifiedImage" : (ContainerImage)?,
+      "ResolvedImage" : (ContainerImage)?,
+      "ResolutionTime" : (Timestamp)?
+    )
+
+    alias DeployedImages = Array(DeployedImage)
+
+    alias DeploymentConfig = NamedTuple(
+      "BlueGreenUpdatePolicy" : BlueGreenUpdatePolicy,
+      "AutoRollbackConfiguration" : (AutoRollbackConfig)?
+    )
+
+    alias DeregisterDevicesRequest = NamedTuple(
+      "DeviceFleetName" : EntityName,
+      "DeviceNames" : DeviceNames
+    )
+
+    alias DescribeActionRequest = NamedTuple(
+      "ActionName" : ExperimentEntityName
+    )
+
+    alias DescribeActionResponse = NamedTuple(
+      "ActionName" : (ExperimentEntityName)?,
+      "ActionArn" : (ActionArn)?,
+      "Source" : (ActionSource)?,
+      "ActionType" : (String256)?,
+      "Description" : (ExperimentDescription)?,
+      "Status" : (ActionStatus)?,
+      "Properties" : (LineageEntityParameters)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "MetadataProperties" : (MetadataProperties)?
+    )
+
+    alias DescribeAlgorithmInput = NamedTuple(
+      "AlgorithmName" : ArnOrName
+    )
+
+    alias DescribeAlgorithmOutput = NamedTuple(
+      "AlgorithmName" : EntityName,
+      "AlgorithmArn" : AlgorithmArn,
+      "AlgorithmDescription" : (EntityDescription)?,
+      "CreationTime" : CreationTime,
+      "TrainingSpecification" : TrainingSpecification,
+      "InferenceSpecification" : (InferenceSpecification)?,
+      "ValidationSpecification" : (AlgorithmValidationSpecification)?,
+      "AlgorithmStatus" : AlgorithmStatus,
+      "AlgorithmStatusDetails" : AlgorithmStatusDetails,
+      "ProductId" : (ProductId)?,
+      "CertifyForMarketplace" : (CertifyForMarketplace)?
+    )
+
+    alias DescribeAppImageConfigRequest = NamedTuple(
+      "AppImageConfigName" : AppImageConfigName
+    )
+
+    alias DescribeAppImageConfigResponse = NamedTuple(
+      "AppImageConfigArn" : (AppImageConfigArn)?,
+      "AppImageConfigName" : (AppImageConfigName)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+    )
+
+    alias DescribeAppRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName,
+      "AppType" : AppType,
+      "AppName" : AppName
+    )
+
+    alias DescribeAppResponse = NamedTuple(
+      "AppArn" : (AppArn)?,
+      "AppType" : (AppType)?,
+      "AppName" : (AppName)?,
+      "DomainId" : (DomainId)?,
+      "UserProfileName" : (UserProfileName)?,
+      "Status" : (AppStatus)?,
+      "LastHealthCheckTimestamp" : (Timestamp)?,
+      "LastUserActivityTimestamp" : (Timestamp)?,
+      "CreationTime" : (CreationTime)?,
+      "FailureReason" : (FailureReason)?,
+      "ResourceSpec" : (ResourceSpec)?
+    )
+
+    alias DescribeArtifactRequest = NamedTuple(
+      "ArtifactArn" : ArtifactArn
+    )
+
+    alias DescribeArtifactResponse = NamedTuple(
+      "ArtifactName" : (ExperimentEntityName)?,
+      "ArtifactArn" : (ArtifactArn)?,
+      "Source" : (ArtifactSource)?,
+      "ArtifactType" : (String256)?,
+      "Properties" : (LineageEntityParameters)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "MetadataProperties" : (MetadataProperties)?
+    )
+
+    alias DescribeAutoMLJobRequest = NamedTuple(
+      "AutoMLJobName" : AutoMLJobName
+    )
+
+    alias DescribeAutoMLJobResponse = NamedTuple(
+      "AutoMLJobName" : AutoMLJobName,
+      "AutoMLJobArn" : AutoMLJobArn,
+      "InputDataConfig" : AutoMLInputDataConfig,
+      "OutputDataConfig" : AutoMLOutputDataConfig,
+      "RoleArn" : RoleArn,
+      "AutoMLJobObjective" : (AutoMLJobObjective)?,
+      "ProblemType" : (ProblemType)?,
+      "AutoMLJobConfig" : (AutoMLJobConfig)?,
+      "CreationTime" : Timestamp,
+      "EndTime" : (Timestamp)?,
+      "LastModifiedTime" : Timestamp,
+      "FailureReason" : (AutoMLFailureReason)?,
+      "BestCandidate" : (AutoMLCandidate)?,
+      "AutoMLJobStatus" : AutoMLJobStatus,
+      "AutoMLJobSecondaryStatus" : AutoMLJobSecondaryStatus,
+      "GenerateCandidateDefinitionsOnly" : (GenerateCandidateDefinitionsOnly)?,
+      "AutoMLJobArtifacts" : (AutoMLJobArtifacts)?,
+      "ResolvedAttributes" : (ResolvedAttributes)?
+    )
+
+    alias DescribeCodeRepositoryInput = NamedTuple(
+      "CodeRepositoryName" : EntityName
+    )
+
+    alias DescribeCodeRepositoryOutput = NamedTuple(
+      "CodeRepositoryName" : EntityName,
+      "CodeRepositoryArn" : CodeRepositoryArn,
+      "CreationTime" : CreationTime,
+      "LastModifiedTime" : LastModifiedTime,
+      "GitConfig" : (GitConfig)?
+    )
+
+    alias DescribeCompilationJobRequest = NamedTuple(
+      "CompilationJobName" : EntityName
+    )
+
+    alias DescribeCompilationJobResponse = NamedTuple(
+      "CompilationJobName" : EntityName,
+      "CompilationJobArn" : CompilationJobArn,
+      "CompilationJobStatus" : CompilationJobStatus,
+      "CompilationStartTime" : (Timestamp)?,
+      "CompilationEndTime" : (Timestamp)?,
+      "StoppingCondition" : StoppingCondition,
+      "CreationTime" : CreationTime,
+      "LastModifiedTime" : LastModifiedTime,
+      "FailureReason" : FailureReason,
+      "ModelArtifacts" : ModelArtifacts,
+      "ModelDigests" : (ModelDigests)?,
+      "RoleArn" : RoleArn,
+      "InputConfig" : InputConfig,
+      "OutputConfig" : OutputConfig
+    )
+
+    alias DescribeContextRequest = NamedTuple(
+      "ContextName" : ExperimentEntityName
+    )
+
+    alias DescribeContextResponse = NamedTuple(
+      "ContextName" : (ExperimentEntityName)?,
+      "ContextArn" : (ContextArn)?,
+      "Source" : (ContextSource)?,
+      "ContextType" : (String256)?,
+      "Description" : (ExperimentDescription)?,
+      "Properties" : (LineageEntityParameters)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?
+    )
+
+    alias DescribeDataQualityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DescribeDataQualityJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn,
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "CreationTime" : Timestamp,
+      "DataQualityBaselineConfig" : (DataQualityBaselineConfig)?,
+      "DataQualityAppSpecification" : DataQualityAppSpecification,
+      "DataQualityJobInput" : DataQualityJobInput,
+      "DataQualityJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?
+    )
+
+    alias DescribeDeviceFleetRequest = NamedTuple(
+      "DeviceFleetName" : EntityName
+    )
+
+    alias DescribeDeviceFleetResponse = NamedTuple(
+      "DeviceFleetName" : EntityName,
+      "DeviceFleetArn" : DeviceFleetArn,
+      "OutputConfig" : EdgeOutputConfig,
+      "Description" : (DeviceFleetDescription)?,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "RoleArn" : (RoleArn)?,
+      "IotRoleAlias" : (IotRoleAlias)?
+    )
+
+    alias DescribeDeviceRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "DeviceName" : EntityName,
+      "DeviceFleetName" : EntityName
+    )
+
+    alias DescribeDeviceResponse = NamedTuple(
+      "DeviceArn" : (DeviceArn)?,
+      "DeviceName" : EntityName,
+      "Description" : (DeviceDescription)?,
+      "DeviceFleetName" : EntityName,
+      "IotThingName" : (ThingName)?,
+      "RegistrationTime" : Timestamp,
+      "LatestHeartbeat" : (Timestamp)?,
+      "Models" : (EdgeModels)?,
+      "MaxModels" : (Integer)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeDomainRequest = NamedTuple(
+      "DomainId" : DomainId
+    )
+
+    alias DescribeDomainResponse = NamedTuple(
+      "DomainArn" : (DomainArn)?,
+      "DomainId" : (DomainId)?,
+      "DomainName" : (DomainName)?,
+      "HomeEfsFileSystemId" : (ResourceId)?,
+      "SingleSignOnManagedApplicationInstanceId" : (String256)?,
+      "Status" : (DomainStatus)?,
+      "CreationTime" : (CreationTime)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "FailureReason" : (FailureReason)?,
+      "AuthMode" : (AuthMode)?,
+      "DefaultUserSettings" : (UserSettings)?,
+      "AppNetworkAccessType" : (AppNetworkAccessType)?,
+      "HomeEfsFileSystemKmsKeyId" : (KmsKeyId)?,
+      "SubnetIds" : (Subnets)?,
+      "Url" : (String1024)?,
+      "VpcId" : (VpcId)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias DescribeEdgePackagingJobRequest = NamedTuple(
+      "EdgePackagingJobName" : EntityName
+    )
+
+    alias DescribeEdgePackagingJobResponse = NamedTuple(
+      "EdgePackagingJobArn" : EdgePackagingJobArn,
+      "EdgePackagingJobName" : EntityName,
+      "CompilationJobName" : (EntityName)?,
+      "ModelName" : (EntityName)?,
+      "ModelVersion" : (EdgeVersion)?,
+      "RoleArn" : (RoleArn)?,
+      "OutputConfig" : (EdgeOutputConfig)?,
+      "ResourceKey" : (KmsKeyId)?,
+      "EdgePackagingJobStatus" : EdgePackagingJobStatus,
+      "EdgePackagingJobStatusMessage" : (String)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "ModelArtifact" : (S3Uri)?,
+      "ModelSignature" : (String)?
+    )
+
+    alias DescribeEndpointConfigInput = NamedTuple(
+      "EndpointConfigName" : EndpointConfigName
+    )
+
+    alias DescribeEndpointConfigOutput = NamedTuple(
+      "EndpointConfigName" : EndpointConfigName,
+      "EndpointConfigArn" : EndpointConfigArn,
+      "ProductionVariants" : ProductionVariantList,
+      "DataCaptureConfig" : (DataCaptureConfig)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "CreationTime" : Timestamp
+    )
+
+    alias DescribeEndpointInput = NamedTuple(
+      "EndpointName" : EndpointName
+    )
+
+    alias DescribeEndpointOutput = NamedTuple(
+      "EndpointName" : EndpointName,
+      "EndpointArn" : EndpointArn,
+      "EndpointConfigName" : EndpointConfigName,
+      "ProductionVariants" : (ProductionVariantSummaryList)?,
+      "DataCaptureConfig" : (DataCaptureConfigSummary)?,
+      "EndpointStatus" : EndpointStatus,
+      "FailureReason" : (FailureReason)?,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "LastDeploymentConfig" : (DeploymentConfig)?
+    )
+
+    alias DescribeExperimentRequest = NamedTuple(
+      "ExperimentName" : ExperimentEntityName
+    )
+
+    alias DescribeExperimentResponse = NamedTuple(
+      "ExperimentName" : (ExperimentEntityName)?,
+      "ExperimentArn" : (ExperimentArn)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Source" : (ExperimentSource)?,
+      "Description" : (ExperimentDescription)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?
+    )
+
+    alias DescribeFeatureGroupRequest = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName,
+      "NextToken" : (NextToken)?
+    )
+
+    alias DescribeFeatureGroupResponse = NamedTuple(
+      "FeatureGroupArn" : FeatureGroupArn,
+      "FeatureGroupName" : FeatureGroupName,
+      "RecordIdentifierFeatureName" : FeatureName,
+      "EventTimeFeatureName" : FeatureName,
+      "FeatureDefinitions" : FeatureDefinitions,
+      "CreationTime" : CreationTime,
+      "OnlineStoreConfig" : (OnlineStoreConfig)?,
+      "OfflineStoreConfig" : (OfflineStoreConfig)?,
+      "RoleArn" : (RoleArn)?,
+      "FeatureGroupStatus" : (FeatureGroupStatus)?,
+      "OfflineStoreStatus" : (OfflineStoreStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "Description" : (Description)?,
+      "NextToken" : NextToken
+    )
+
+    alias DescribeFlowDefinitionRequest = NamedTuple(
+      "FlowDefinitionName" : FlowDefinitionName
+    )
+
+    alias DescribeFlowDefinitionResponse = NamedTuple(
+      "FlowDefinitionArn" : FlowDefinitionArn,
+      "FlowDefinitionName" : FlowDefinitionName,
+      "FlowDefinitionStatus" : FlowDefinitionStatus,
+      "CreationTime" : Timestamp,
+      "HumanLoopRequestSource" : (HumanLoopRequestSource)?,
+      "HumanLoopActivationConfig" : (HumanLoopActivationConfig)?,
+      "HumanLoopConfig" : HumanLoopConfig,
+      "OutputConfig" : FlowDefinitionOutputConfig,
+      "RoleArn" : RoleArn,
+      "FailureReason" : (FailureReason)?
+    )
+
+    alias DescribeHumanTaskUiRequest = NamedTuple(
+      "HumanTaskUiName" : HumanTaskUiName
+    )
+
+    alias DescribeHumanTaskUiResponse = NamedTuple(
+      "HumanTaskUiArn" : HumanTaskUiArn,
+      "HumanTaskUiName" : HumanTaskUiName,
+      "HumanTaskUiStatus" : (HumanTaskUiStatus)?,
+      "CreationTime" : Timestamp,
+      "UiTemplate" : UiTemplateInfo
+    )
+
+    alias DescribeHyperParameterTuningJobRequest = NamedTuple(
+      "HyperParameterTuningJobName" : HyperParameterTuningJobName
+    )
+
+    alias DescribeHyperParameterTuningJobResponse = NamedTuple(
+      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
+      "HyperParameterTuningJobArn" : HyperParameterTuningJobArn,
+      "HyperParameterTuningJobConfig" : HyperParameterTuningJobConfig,
+      "TrainingJobDefinition" : (HyperParameterTrainingJobDefinition)?,
+      "TrainingJobDefinitions" : (HyperParameterTrainingJobDefinitions)?,
+      "HyperParameterTuningJobStatus" : HyperParameterTuningJobStatus,
+      "CreationTime" : Timestamp,
+      "HyperParameterTuningEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "TrainingJobStatusCounters" : TrainingJobStatusCounters,
+      "ObjectiveStatusCounters" : ObjectiveStatusCounters,
+      "BestTrainingJob" : (HyperParameterTrainingJobSummary)?,
+      "OverallBestTrainingJob" : (HyperParameterTrainingJobSummary)?,
+      "WarmStartConfig" : (HyperParameterTuningJobWarmStartConfig)?,
+      "FailureReason" : (FailureReason)?
+    )
+
+    alias DescribeImageRequest = NamedTuple(
+      "ImageName" : ImageName
+    )
+
+    alias DescribeImageResponse = NamedTuple(
+      "CreationTime" : (Timestamp)?,
+      "Description" : (ImageDescription)?,
+      "DisplayName" : (ImageDisplayName)?,
+      "FailureReason" : (FailureReason)?,
+      "ImageArn" : (ImageArn)?,
+      "ImageName" : (ImageName)?,
+      "ImageStatus" : (ImageStatus)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "RoleArn" : (RoleArn)?
+    )
+
+    alias DescribeImageVersionRequest = NamedTuple(
+      "ImageName" : ImageName,
+      "Version" : (ImageVersionNumber)?
+    )
+
+    alias DescribeImageVersionResponse = NamedTuple(
+      "BaseImage" : (ImageBaseImage)?,
+      "ContainerImage" : (ImageContainerImage)?,
+      "CreationTime" : (Timestamp)?,
+      "FailureReason" : (FailureReason)?,
+      "ImageArn" : (ImageArn)?,
+      "ImageVersionArn" : (ImageVersionArn)?,
+      "ImageVersionStatus" : (ImageVersionStatus)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "Version" : (ImageVersionNumber)?
+    )
+
+    alias DescribeLabelingJobRequest = NamedTuple(
+      "LabelingJobName" : LabelingJobName
+    )
+
+    alias DescribeLabelingJobResponse = NamedTuple(
+      "LabelingJobStatus" : LabelingJobStatus,
+      "LabelCounters" : LabelCounters,
+      "FailureReason" : (FailureReason)?,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "JobReferenceCode" : JobReferenceCode,
+      "LabelingJobName" : LabelingJobName,
+      "LabelingJobArn" : LabelingJobArn,
+      "LabelAttributeName" : (LabelAttributeName)?,
+      "InputConfig" : LabelingJobInputConfig,
+      "OutputConfig" : LabelingJobOutputConfig,
+      "RoleArn" : RoleArn,
+      "LabelCategoryConfigS3Uri" : (S3Uri)?,
+      "StoppingConditions" : (LabelingJobStoppingConditions)?,
+      "LabelingJobAlgorithmsConfig" : (LabelingJobAlgorithmsConfig)?,
+      "HumanTaskConfig" : HumanTaskConfig,
+      "Tags" : (TagList)?,
+      "LabelingJobOutput" : (LabelingJobOutput)?
+    )
+
+    alias DescribeModelBiasJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DescribeModelBiasJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn,
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "CreationTime" : Timestamp,
+      "ModelBiasBaselineConfig" : (ModelBiasBaselineConfig)?,
+      "ModelBiasAppSpecification" : ModelBiasAppSpecification,
+      "ModelBiasJobInput" : ModelBiasJobInput,
+      "ModelBiasJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?
+    )
+
+    alias DescribeModelExplainabilityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DescribeModelExplainabilityJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn,
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "CreationTime" : Timestamp,
+      "ModelExplainabilityBaselineConfig" : (ModelExplainabilityBaselineConfig)?,
+      "ModelExplainabilityAppSpecification" : ModelExplainabilityAppSpecification,
+      "ModelExplainabilityJobInput" : ModelExplainabilityJobInput,
+      "ModelExplainabilityJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?
+    )
+
+    alias DescribeModelInput = NamedTuple(
+      "ModelName" : ModelName
+    )
+
+    alias DescribeModelOutput = NamedTuple(
+      "ModelName" : ModelName,
+      "PrimaryContainer" : (ContainerDefinition)?,
+      "Containers" : (ContainerDefinitionList)?,
+      "ExecutionRoleArn" : RoleArn,
+      "VpcConfig" : (VpcConfig)?,
+      "CreationTime" : Timestamp,
+      "ModelArn" : ModelArn,
+      "EnableNetworkIsolation" : (Boolean)?
+    )
+
+    alias DescribeModelPackageGroupInput = NamedTuple(
+      "ModelPackageGroupName" : ArnOrName
+    )
+
+    alias DescribeModelPackageGroupOutput = NamedTuple(
+      "ModelPackageGroupName" : EntityName,
+      "ModelPackageGroupArn" : ModelPackageGroupArn,
+      "ModelPackageGroupDescription" : (EntityDescription)?,
+      "CreationTime" : CreationTime,
+      "CreatedBy" : UserContext,
+      "ModelPackageGroupStatus" : ModelPackageGroupStatus
+    )
+
+    alias DescribeModelPackageInput = NamedTuple(
+      "ModelPackageName" : VersionedArnOrName
+    )
+
+    alias DescribeModelPackageOutput = NamedTuple(
+      "ModelPackageName" : EntityName,
+      "ModelPackageGroupName" : (EntityName)?,
+      "ModelPackageVersion" : (ModelPackageVersion)?,
+      "ModelPackageArn" : ModelPackageArn,
+      "ModelPackageDescription" : (EntityDescription)?,
+      "CreationTime" : CreationTime,
+      "InferenceSpecification" : (InferenceSpecification)?,
+      "SourceAlgorithmSpecification" : (SourceAlgorithmSpecification)?,
+      "ValidationSpecification" : (ModelPackageValidationSpecification)?,
+      "ModelPackageStatus" : ModelPackageStatus,
+      "ModelPackageStatusDetails" : ModelPackageStatusDetails,
+      "CertifyForMarketplace" : (CertifyForMarketplace)?,
+      "ModelApprovalStatus" : (ModelApprovalStatus)?,
+      "CreatedBy" : (UserContext)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "ModelMetrics" : (ModelMetrics)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "ApprovalDescription" : (ApprovalDescription)?
+    )
+
+    alias DescribeModelQualityJobDefinitionRequest = NamedTuple(
+      "JobDefinitionName" : MonitoringJobDefinitionName
+    )
+
+    alias DescribeModelQualityJobDefinitionResponse = NamedTuple(
+      "JobDefinitionArn" : MonitoringJobDefinitionArn,
+      "JobDefinitionName" : MonitoringJobDefinitionName,
+      "CreationTime" : Timestamp,
+      "ModelQualityBaselineConfig" : (ModelQualityBaselineConfig)?,
+      "ModelQualityAppSpecification" : ModelQualityAppSpecification,
+      "ModelQualityJobInput" : ModelQualityJobInput,
+      "ModelQualityJobOutputConfig" : MonitoringOutputConfig,
+      "JobResources" : MonitoringResources,
+      "NetworkConfig" : (MonitoringNetworkConfig)?,
+      "RoleArn" : RoleArn,
+      "StoppingCondition" : (MonitoringStoppingCondition)?
+    )
+
+    alias DescribeMonitoringScheduleRequest = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName
+    )
+
+    alias DescribeMonitoringScheduleResponse = NamedTuple(
+      "MonitoringScheduleArn" : MonitoringScheduleArn,
+      "MonitoringScheduleName" : MonitoringScheduleName,
+      "MonitoringScheduleStatus" : ScheduleStatus,
+      "MonitoringType" : (MonitoringType)?,
+      "FailureReason" : (FailureReason)?,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "MonitoringScheduleConfig" : MonitoringScheduleConfig,
+      "EndpointName" : (EndpointName)?,
+      "LastMonitoringExecutionSummary" : (MonitoringExecutionSummary)?
+    )
+
+    alias DescribeNotebookInstanceInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName
+    )
+
+    alias DescribeNotebookInstanceLifecycleConfigInput = NamedTuple(
+      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName
+    )
+
+    alias DescribeNotebookInstanceLifecycleConfigOutput = NamedTuple(
+      "NotebookInstanceLifecycleConfigArn" : (NotebookInstanceLifecycleConfigArn)?,
+      "NotebookInstanceLifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
+      "OnCreate" : (NotebookInstanceLifecycleConfigList)?,
+      "OnStart" : (NotebookInstanceLifecycleConfigList)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "CreationTime" : (CreationTime)?
+    )
+
+    alias DescribeNotebookInstanceOutput = NamedTuple(
+      "NotebookInstanceArn" : (NotebookInstanceArn)?,
+      "NotebookInstanceName" : (NotebookInstanceName)?,
+      "NotebookInstanceStatus" : (NotebookInstanceStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "Url" : (NotebookInstanceUrl)?,
+      "InstanceType" : (InstanceType)?,
+      "SubnetId" : (SubnetId)?,
+      "SecurityGroups" : (SecurityGroupIds)?,
+      "RoleArn" : (RoleArn)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "NetworkInterfaceId" : (NetworkInterfaceId)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "CreationTime" : (CreationTime)?,
+      "NotebookInstanceLifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
+      "DirectInternetAccess" : (DirectInternetAccess)?,
+      "VolumeSizeInGB" : (NotebookInstanceVolumeSizeInGB)?,
+      "AcceleratorTypes" : (NotebookInstanceAcceleratorTypes)?,
+      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
+      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?,
+      "RootAccess" : (RootAccess)?
+    )
+
+    alias DescribePipelineDefinitionForExecutionRequest = NamedTuple(
+      "PipelineExecutionArn" : PipelineExecutionArn
+    )
+
+    alias DescribePipelineDefinitionForExecutionResponse = NamedTuple(
+      "PipelineDefinition" : (PipelineDefinition)?,
+      "CreationTime" : (Timestamp)?
+    )
+
+    alias DescribePipelineExecutionRequest = NamedTuple(
+      "PipelineExecutionArn" : PipelineExecutionArn
+    )
+
+    alias DescribePipelineExecutionResponse = NamedTuple(
+      "PipelineArn" : (PipelineArn)?,
+      "PipelineExecutionArn" : (PipelineExecutionArn)?,
+      "PipelineExecutionDisplayName" : (PipelineExecutionName)?,
+      "PipelineExecutionStatus" : (PipelineExecutionStatus)?,
+      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedBy" : (UserContext)?
+    )
+
+    alias DescribePipelineRequest = NamedTuple(
+      "PipelineName" : PipelineName
+    )
+
+    alias DescribePipelineResponse = NamedTuple(
+      "PipelineArn" : (PipelineArn)?,
+      "PipelineName" : (PipelineName)?,
+      "PipelineDisplayName" : (PipelineName)?,
+      "PipelineDefinition" : (PipelineDefinition)?,
+      "PipelineDescription" : (PipelineDescription)?,
+      "RoleArn" : (RoleArn)?,
+      "PipelineStatus" : (PipelineStatus)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastRunTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedBy" : (UserContext)?
+    )
+
+    alias DescribeProcessingJobRequest = NamedTuple(
+      "ProcessingJobName" : ProcessingJobName
+    )
+
+    alias DescribeProcessingJobResponse = NamedTuple(
+      "ProcessingInputs" : (ProcessingInputs)?,
+      "ProcessingOutputConfig" : (ProcessingOutputConfig)?,
+      "ProcessingJobName" : ProcessingJobName,
+      "ProcessingResources" : ProcessingResources,
+      "StoppingCondition" : (ProcessingStoppingCondition)?,
+      "AppSpecification" : AppSpecification,
+      "Environment" : (ProcessingEnvironmentMap)?,
+      "NetworkConfig" : (NetworkConfig)?,
+      "RoleArn" : (RoleArn)?,
+      "ExperimentConfig" : (ExperimentConfig)?,
+      "ProcessingJobArn" : ProcessingJobArn,
+      "ProcessingJobStatus" : ProcessingJobStatus,
+      "ExitMessage" : (ExitMessage)?,
+      "FailureReason" : (FailureReason)?,
+      "ProcessingEndTime" : (Timestamp)?,
+      "ProcessingStartTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "CreationTime" : Timestamp,
+      "MonitoringScheduleArn" : (MonitoringScheduleArn)?,
+      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "TrainingJobArn" : (TrainingJobArn)?
+    )
+
+    alias DescribeProjectInput = NamedTuple(
+      "ProjectName" : ProjectEntityName
+    )
+
+    alias DescribeProjectOutput = NamedTuple(
+      "ProjectArn" : ProjectArn,
+      "ProjectName" : ProjectEntityName,
+      "ProjectId" : ProjectId,
+      "ProjectDescription" : (EntityDescription)?,
+      "ServiceCatalogProvisioningDetails" : ServiceCatalogProvisioningDetails,
+      "ServiceCatalogProvisionedProductDetails" : (ServiceCatalogProvisionedProductDetails)?,
+      "ProjectStatus" : ProjectStatus,
+      "CreatedBy" : (UserContext)?,
+      "CreationTime" : Timestamp
+    )
+
+    alias DescribeSubscribedWorkteamRequest = NamedTuple(
+      "WorkteamArn" : WorkteamArn
+    )
+
+    alias DescribeSubscribedWorkteamResponse = NamedTuple(
+      "SubscribedWorkteam" : SubscribedWorkteam
+    )
+
+    alias DescribeTrainingJobRequest = NamedTuple(
+      "TrainingJobName" : TrainingJobName
+    )
+
+    alias DescribeTrainingJobResponse = NamedTuple(
+      "TrainingJobName" : TrainingJobName,
+      "TrainingJobArn" : TrainingJobArn,
+      "TuningJobArn" : (HyperParameterTuningJobArn)?,
+      "LabelingJobArn" : (LabelingJobArn)?,
+      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "ModelArtifacts" : ModelArtifacts,
+      "TrainingJobStatus" : TrainingJobStatus,
+      "SecondaryStatus" : SecondaryStatus,
+      "FailureReason" : (FailureReason)?,
+      "HyperParameters" : (HyperParameters)?,
+      "AlgorithmSpecification" : AlgorithmSpecification,
+      "RoleArn" : (RoleArn)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "ResourceConfig" : ResourceConfig,
+      "VpcConfig" : (VpcConfig)?,
+      "StoppingCondition" : StoppingCondition,
+      "CreationTime" : Timestamp,
+      "TrainingStartTime" : (Timestamp)?,
+      "TrainingEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "SecondaryStatusTransitions" : (SecondaryStatusTransitions)?,
+      "FinalMetricDataList" : (FinalMetricDataList)?,
+      "EnableNetworkIsolation" : (Boolean)?,
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "EnableManagedSpotTraining" : (Boolean)?,
+      "CheckpointConfig" : (CheckpointConfig)?,
+      "TrainingTimeInSeconds" : (TrainingTimeInSeconds)?,
+      "BillableTimeInSeconds" : (BillableTimeInSeconds)?,
+      "DebugHookConfig" : (DebugHookConfig)?,
+      "ExperimentConfig" : (ExperimentConfig)?,
+      "DebugRuleConfigurations" : (DebugRuleConfigurations)?,
+      "TensorBoardOutputConfig" : (TensorBoardOutputConfig)?,
+      "DebugRuleEvaluationStatuses" : (DebugRuleEvaluationStatuses)?,
+      "ProfilerConfig" : (ProfilerConfig)?,
+      "ProfilerRuleConfigurations" : (ProfilerRuleConfigurations)?,
+      "ProfilerRuleEvaluationStatuses" : (ProfilerRuleEvaluationStatuses)?,
+      "ProfilingStatus" : (ProfilingStatus)?
+    )
+
+    alias DescribeTransformJobRequest = NamedTuple(
+      "TransformJobName" : TransformJobName
+    )
+
+    alias DescribeTransformJobResponse = NamedTuple(
+      "TransformJobName" : TransformJobName,
+      "TransformJobArn" : TransformJobArn,
+      "TransformJobStatus" : TransformJobStatus,
+      "FailureReason" : (FailureReason)?,
+      "ModelName" : ModelName,
+      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
+      "ModelClientConfig" : (ModelClientConfig)?,
+      "MaxPayloadInMB" : (MaxPayloadInMB)?,
+      "BatchStrategy" : (BatchStrategy)?,
+      "Environment" : (TransformEnvironmentMap)?,
+      "TransformInput" : TransformInput,
+      "TransformOutput" : (TransformOutput)?,
+      "TransformResources" : TransformResources,
+      "CreationTime" : Timestamp,
+      "TransformStartTime" : (Timestamp)?,
+      "TransformEndTime" : (Timestamp)?,
+      "LabelingJobArn" : (LabelingJobArn)?,
+      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "DataProcessing" : (DataProcessing)?,
+      "ExperimentConfig" : (ExperimentConfig)?
+    )
+
+    alias DescribeTrialComponentRequest = NamedTuple(
+      "TrialComponentName" : ExperimentEntityName
+    )
+
+    alias DescribeTrialComponentResponse = NamedTuple(
+      "TrialComponentName" : (ExperimentEntityName)?,
+      "TrialComponentArn" : (TrialComponentArn)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Source" : (TrialComponentSource)?,
+      "Status" : (TrialComponentStatus)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "Parameters" : (TrialComponentParameters)?,
+      "InputArtifacts" : (TrialComponentArtifacts)?,
+      "OutputArtifacts" : (TrialComponentArtifacts)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "Metrics" : (TrialComponentMetricSummaries)?
+    )
+
+    alias DescribeTrialRequest = NamedTuple(
+      "TrialName" : ExperimentEntityName
+    )
+
+    alias DescribeTrialResponse = NamedTuple(
+      "TrialName" : (ExperimentEntityName)?,
+      "TrialArn" : (TrialArn)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "ExperimentName" : (ExperimentEntityName)?,
+      "Source" : (TrialSource)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "MetadataProperties" : (MetadataProperties)?
+    )
+
+    alias DescribeUserProfileRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName
+    )
+
+    alias DescribeUserProfileResponse = NamedTuple(
+      "DomainId" : (DomainId)?,
+      "UserProfileArn" : (UserProfileArn)?,
+      "UserProfileName" : (UserProfileName)?,
+      "HomeEfsFileSystemUid" : (EfsUid)?,
+      "Status" : (UserProfileStatus)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "CreationTime" : (CreationTime)?,
+      "FailureReason" : (FailureReason)?,
+      "SingleSignOnUserIdentifier" : (SingleSignOnUserIdentifier)?,
+      "SingleSignOnUserValue" : (String256)?,
+      "UserSettings" : (UserSettings)?
+    )
+
+    alias DescribeWorkforceRequest = NamedTuple(
+      "WorkforceName" : WorkforceName
+    )
+
+    alias DescribeWorkforceResponse = NamedTuple(
+      "Workforce" : Workforce
+    )
+
+    alias DescribeWorkteamRequest = NamedTuple(
+      "WorkteamName" : WorkteamName
+    )
+
+    alias DescribeWorkteamResponse = NamedTuple(
+      "Workteam" : Workteam
+    )
+
+    alias Description = String
+
+    alias DesiredWeightAndCapacity = NamedTuple(
+      "VariantName" : VariantName,
+      "DesiredWeight" : (VariantWeight)?,
+      "DesiredInstanceCount" : (TaskCount)?
+    )
+
+    alias DesiredWeightAndCapacityList = Array(DesiredWeightAndCapacity)
+
+    alias DestinationS3Uri = String
+
+    alias DetailedAlgorithmStatus = String
+
+    alias DetailedModelPackageStatus = String
+
+    alias Device = NamedTuple(
+      "DeviceName" : DeviceName,
+      "Description" : (DeviceDescription)?,
+      "IotThingName" : (ThingName)?
+    )
+
+    alias DeviceArn = String
+
+    alias DeviceDescription = String
+
+    alias DeviceFleetArn = String
+
+    alias DeviceFleetDescription = String
+
+    alias DeviceFleetSummaries = Array(DeviceFleetSummary)
+
+    alias DeviceFleetSummary = NamedTuple(
+      "DeviceFleetArn" : DeviceFleetArn,
+      "DeviceFleetName" : EntityName,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias DeviceName = String
+
+    alias DeviceNames = Array(DeviceName)
+
+    alias DeviceStats = NamedTuple(
+      "ConnectedDeviceCount" : Long,
+      "RegisteredDeviceCount" : Long
+    )
+
+    alias DeviceSummaries = Array(DeviceSummary)
+
+    alias DeviceSummary = NamedTuple(
+      "DeviceName" : EntityName,
+      "DeviceArn" : DeviceArn,
+      "Description" : (DeviceDescription)?,
+      "DeviceFleetName" : (EntityName)?,
+      "IotThingName" : (ThingName)?,
+      "RegistrationTime" : (Timestamp)?,
+      "LatestHeartbeat" : (Timestamp)?,
+      "Models" : (EdgeModelSummaries)?
+    )
+
+    alias Devices = Array(Device)
+
+    alias DirectInternetAccess = String
+
+    alias DirectoryPath = String
+
+    alias DisableProfiler = Bool
+
+    alias DisableSagemakerServicecatalogPortfolioInput = NamedTuple(
+      
+    )
+
+    alias DisableSagemakerServicecatalogPortfolioOutput = NamedTuple(
+      
+    )
+
+    alias DisassociateAdditionalCodeRepositories = Bool
+
+    alias DisassociateDefaultCodeRepository = Bool
+
+    alias DisassociateNotebookInstanceAcceleratorTypes = Bool
+
+    alias DisassociateNotebookInstanceLifecycleConfig = Bool
+
+    alias DisassociateTrialComponentRequest = NamedTuple(
+      "TrialComponentName" : ExperimentEntityName,
+      "TrialName" : ExperimentEntityName
+    )
+
+    alias DisassociateTrialComponentResponse = NamedTuple(
+      "TrialComponentArn" : (TrialComponentArn)?,
+      "TrialArn" : (TrialArn)?
+    )
+
+    alias Dollars = Int32
+
+    alias DomainArn = String
+
+    alias DomainDetails = NamedTuple(
+      "DomainArn" : (DomainArn)?,
+      "DomainId" : (DomainId)?,
+      "DomainName" : (DomainName)?,
+      "Status" : (DomainStatus)?,
+      "CreationTime" : (CreationTime)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "Url" : (String1024)?
+    )
+
+    alias DomainId = String
+
+    alias DomainList = Array(DomainDetails)
+
+    alias DomainName = String
+
+    alias DomainStatus = String
+
+    alias DoubleParameterValue = Float64
+
+    alias EdgeModel = NamedTuple(
+      "ModelName" : EntityName,
+      "ModelVersion" : EdgeVersion,
+      "LatestSampleTime" : (Timestamp)?,
+      "LatestInference" : (Timestamp)?
+    )
+
+    alias EdgeModelStat = NamedTuple(
+      "ModelName" : EntityName,
+      "ModelVersion" : EdgeVersion,
+      "OfflineDeviceCount" : Long,
+      "ConnectedDeviceCount" : Long,
+      "ActiveDeviceCount" : Long,
+      "SamplingDeviceCount" : Long
+    )
+
+    alias EdgeModelStats = Array(EdgeModelStat)
+
+    alias EdgeModelSummaries = Array(EdgeModelSummary)
+
+    alias EdgeModelSummary = NamedTuple(
+      "ModelName" : EntityName,
+      "ModelVersion" : EdgeVersion
+    )
+
+    alias EdgeModels = Array(EdgeModel)
+
+    alias EdgeOutputConfig = NamedTuple(
+      "S3OutputLocation" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias EdgePackagingJobArn = String
+
+    alias EdgePackagingJobStatus = String
+
+    alias EdgePackagingJobSummaries = Array(EdgePackagingJobSummary)
+
+    alias EdgePackagingJobSummary = NamedTuple(
+      "EdgePackagingJobArn" : EdgePackagingJobArn,
+      "EdgePackagingJobName" : EntityName,
+      "EdgePackagingJobStatus" : EdgePackagingJobStatus,
+      "CompilationJobName" : (EntityName)?,
+      "ModelName" : (EntityName)?,
+      "ModelVersion" : (EdgeVersion)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias EdgeVersion = String
+
+    alias EfsUid = String
+
+    alias EnableCapture = Bool
+
+    alias EnableSagemakerServicecatalogPortfolioInput = NamedTuple(
+      
+    )
+
+    alias EnableSagemakerServicecatalogPortfolioOutput = NamedTuple(
+      
+    )
+
+    alias Endpoint = NamedTuple(
+      "EndpointName" : EndpointName,
+      "EndpointArn" : EndpointArn,
+      "EndpointConfigName" : EndpointConfigName,
+      "ProductionVariants" : (ProductionVariantSummaryList)?,
+      "DataCaptureConfig" : (DataCaptureConfigSummary)?,
+      "EndpointStatus" : EndpointStatus,
+      "FailureReason" : (FailureReason)?,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "MonitoringSchedules" : (MonitoringScheduleList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias EndpointArn = String
+
+    alias EndpointConfigArn = String
+
+    alias EndpointConfigName = String
+
+    alias EndpointConfigNameContains = String
+
+    alias EndpointConfigSortKey = String
+
+    alias EndpointConfigSummary = NamedTuple(
+      "EndpointConfigName" : EndpointConfigName,
+      "EndpointConfigArn" : EndpointConfigArn,
+      "CreationTime" : Timestamp
+    )
+
+    alias EndpointConfigSummaryList = Array(EndpointConfigSummary)
+
+    alias EndpointInput = NamedTuple(
+      "EndpointName" : EndpointName,
+      "LocalPath" : ProcessingLocalPath,
+      "S3InputMode" : (ProcessingS3InputMode)?,
+      "S3DataDistributionType" : (ProcessingS3DataDistributionType)?,
+      "FeaturesAttribute" : (String)?,
+      "InferenceAttribute" : (String)?,
+      "ProbabilityAttribute" : (String)?,
+      "ProbabilityThresholdAttribute" : (ProbabilityThresholdAttribute)?,
+      "StartTimeOffset" : (MonitoringTimeOffsetString)?,
+      "EndTimeOffset" : (MonitoringTimeOffsetString)?
+    )
+
+    alias EndpointName = String
+
+    alias EndpointNameContains = String
+
+    alias EndpointSortKey = String
+
+    alias EndpointStatus = String
+
+    alias EndpointSummary = NamedTuple(
+      "EndpointName" : EndpointName,
+      "EndpointArn" : EndpointArn,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "EndpointStatus" : EndpointStatus
+    )
+
+    alias EndpointSummaryList = Array(EndpointSummary)
+
+    alias EntityDescription = String
+
+    alias EntityName = String
+
+    alias EnvironmentKey = String
+
+    alias EnvironmentMap = Hash(EnvironmentKey,EnvironmentValue)
+
+    alias EnvironmentValue = String
+
+    alias ExecutionStatus = String
+
+    alias ExitMessage = String
+
+    alias Experiment = NamedTuple(
+      "ExperimentName" : (ExperimentEntityName)?,
+      "ExperimentArn" : (ExperimentArn)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Source" : (ExperimentSource)?,
+      "Description" : (ExperimentDescription)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ExperimentArn = String
+
+    alias ExperimentConfig = NamedTuple(
+      "ExperimentName" : (ExperimentEntityName)?,
+      "TrialName" : (ExperimentEntityName)?,
+      "TrialComponentDisplayName" : (ExperimentEntityName)?
+    )
+
+    alias ExperimentDescription = String
+
+    alias ExperimentEntityName = String
+
+    alias ExperimentSource = NamedTuple(
+      "SourceArn" : ExperimentSourceArn,
+      "SourceType" : (SourceType)?
+    )
+
+    alias ExperimentSourceArn = String
+
+    alias ExperimentSummaries = Array(ExperimentSummary)
+
+    alias ExperimentSummary = NamedTuple(
+      "ExperimentArn" : (ExperimentArn)?,
+      "ExperimentName" : (ExperimentEntityName)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "ExperimentSource" : (ExperimentSource)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias Explainability = NamedTuple(
+      "Report" : (MetricsSource)?
+    )
+
+    alias FailureReason = String
+
+    alias FeatureDefinition = NamedTuple(
+      "FeatureName" : (FeatureName)?,
+      "FeatureType" : (FeatureType)?
+    )
+
+    alias FeatureDefinitions = Array(FeatureDefinition)
+
+    alias FeatureGroup = NamedTuple(
+      "FeatureGroupArn" : (FeatureGroupArn)?,
+      "FeatureGroupName" : (FeatureGroupName)?,
+      "RecordIdentifierFeatureName" : (FeatureName)?,
+      "EventTimeFeatureName" : (FeatureName)?,
+      "FeatureDefinitions" : (FeatureDefinitions)?,
+      "CreationTime" : (CreationTime)?,
+      "OnlineStoreConfig" : (OnlineStoreConfig)?,
+      "OfflineStoreConfig" : (OfflineStoreConfig)?,
+      "RoleArn" : (RoleArn)?,
+      "FeatureGroupStatus" : (FeatureGroupStatus)?,
+      "OfflineStoreStatus" : (OfflineStoreStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "Description" : (Description)?,
+      "Tags" : (TagList)?
+    )
+
+    alias FeatureGroupArn = String
+
+    alias FeatureGroupMaxResults = Int32
+
+    alias FeatureGroupName = String
+
+    alias FeatureGroupNameContains = String
+
+    alias FeatureGroupSortBy = String
+
+    alias FeatureGroupSortOrder = String
+
+    alias FeatureGroupStatus = String
+
+    alias FeatureGroupSummaries = Array(FeatureGroupSummary)
+
+    alias FeatureGroupSummary = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName,
+      "FeatureGroupArn" : FeatureGroupArn,
+      "CreationTime" : Timestamp,
+      "FeatureGroupStatus" : (FeatureGroupStatus)?,
+      "OfflineStoreStatus" : (OfflineStoreStatus)?
+    )
+
+    alias FeatureName = String
+
+    alias FeatureType = String
+
+    alias FileSystemAccessMode = String
+
+    alias FileSystemConfig = NamedTuple(
+      "MountPath" : (MountPath)?,
+      "DefaultUid" : (DefaultUid)?,
+      "DefaultGid" : (DefaultGid)?
+    )
+
+    alias FileSystemDataSource = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "FileSystemAccessMode" : FileSystemAccessMode,
+      "FileSystemType" : FileSystemType,
+      "DirectoryPath" : DirectoryPath
+    )
+
+    alias FileSystemId = String
+
+    alias FileSystemType = String
+
+    alias Filter = NamedTuple(
+      "Name" : ResourcePropertyName,
+      "Operator" : (Operator)?,
+      "Value" : (FilterValue)?
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterValue = String
+
+    alias FinalAutoMLJobObjectiveMetric = NamedTuple(
+      "Type" : (AutoMLJobObjectiveType)?,
+      "MetricName" : AutoMLMetricEnum,
+      "Value" : MetricValue
+    )
+
+    alias FinalHyperParameterTuningJobObjectiveMetric = NamedTuple(
+      "Type" : (HyperParameterTuningJobObjectiveType)?,
+      "MetricName" : MetricName,
+      "Value" : MetricValue
+    )
+
+    alias FinalMetricDataList = Array(MetricData)
+
+    alias Float = Float32
+
+    alias FlowDefinitionArn = String
+
+    alias FlowDefinitionName = String
+
+    alias FlowDefinitionOutputConfig = NamedTuple(
+      "S3OutputPath" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias FlowDefinitionStatus = String
+
+    alias FlowDefinitionSummaries = Array(FlowDefinitionSummary)
+
+    alias FlowDefinitionSummary = NamedTuple(
+      "FlowDefinitionName" : FlowDefinitionName,
+      "FlowDefinitionArn" : FlowDefinitionArn,
+      "FlowDefinitionStatus" : FlowDefinitionStatus,
+      "CreationTime" : Timestamp,
+      "FailureReason" : (FailureReason)?
+    )
+
+    alias FlowDefinitionTaskAvailabilityLifetimeInSeconds = Int32
+
+    alias FlowDefinitionTaskCount = Int32
+
+    alias FlowDefinitionTaskDescription = String
+
+    alias FlowDefinitionTaskKeyword = String
+
+    alias FlowDefinitionTaskKeywords = Array(FlowDefinitionTaskKeyword)
+
+    alias FlowDefinitionTaskTimeLimitInSeconds = Int32
+
+    alias FlowDefinitionTaskTitle = String
+
+    alias Framework = String
+
+    alias GenerateCandidateDefinitionsOnly = Bool
+
+    alias GetDeviceFleetReportRequest = NamedTuple(
+      "DeviceFleetName" : EntityName
+    )
+
+    alias GetDeviceFleetReportResponse = NamedTuple(
+      "DeviceFleetArn" : DeviceFleetArn,
+      "DeviceFleetName" : EntityName,
+      "OutputConfig" : (EdgeOutputConfig)?,
+      "Description" : (DeviceFleetDescription)?,
+      "ReportGenerated" : (Timestamp)?,
+      "DeviceStats" : (DeviceStats)?,
+      "AgentVersions" : (AgentVersions)?,
+      "ModelStats" : (EdgeModelStats)?
+    )
+
+    alias GetModelPackageGroupPolicyInput = NamedTuple(
+      "ModelPackageGroupName" : EntityName
+    )
+
+    alias GetModelPackageGroupPolicyOutput = NamedTuple(
+      "ResourcePolicy" : PolicyString
+    )
+
+    alias GetSagemakerServicecatalogPortfolioStatusInput = NamedTuple(
+      
+    )
+
+    alias GetSagemakerServicecatalogPortfolioStatusOutput = NamedTuple(
+      "Status" : (SagemakerServicecatalogStatus)?
+    )
+
+    alias GetSearchSuggestionsRequest = NamedTuple(
+      "Resource" : ResourceType,
+      "SuggestionQuery" : (SuggestionQuery)?
+    )
+
+    alias GetSearchSuggestionsResponse = NamedTuple(
+      "PropertyNameSuggestions" : (PropertyNameSuggestionList)?
+    )
+
+    alias GitConfig = NamedTuple(
+      "RepositoryUrl" : GitConfigUrl,
+      "Branch" : (Branch)?,
+      "SecretArn" : (SecretArn)?
+    )
+
+    alias GitConfigForUpdate = NamedTuple(
+      "SecretArn" : (SecretArn)?
+    )
+
+    alias GitConfigUrl = String
+
+    alias Group = String
+
+    alias Groups = Array(Group)
+
+    alias HookParameters = Hash(ConfigKey,ConfigValue)
+
+    alias HumanLoopActivationConditions = String
+
+    alias HumanLoopActivationConditionsConfig = NamedTuple(
+      "HumanLoopActivationConditions" : HumanLoopActivationConditions
+    )
+
+    alias HumanLoopActivationConfig = NamedTuple(
+      "HumanLoopActivationConditionsConfig" : HumanLoopActivationConditionsConfig
+    )
+
+    alias HumanLoopConfig = NamedTuple(
+      "WorkteamArn" : WorkteamArn,
+      "HumanTaskUiArn" : HumanTaskUiArn,
+      "TaskTitle" : FlowDefinitionTaskTitle,
+      "TaskDescription" : FlowDefinitionTaskDescription,
+      "TaskCount" : FlowDefinitionTaskCount,
+      "TaskAvailabilityLifetimeInSeconds" : (FlowDefinitionTaskAvailabilityLifetimeInSeconds)?,
+      "TaskTimeLimitInSeconds" : (FlowDefinitionTaskTimeLimitInSeconds)?,
+      "TaskKeywords" : (FlowDefinitionTaskKeywords)?,
+      "PublicWorkforceTaskPrice" : (PublicWorkforceTaskPrice)?
+    )
+
+    alias HumanLoopRequestSource = NamedTuple(
+      "AwsManagedHumanLoopRequestSource" : AwsManagedHumanLoopRequestSource
+    )
+
+    alias HumanTaskConfig = NamedTuple(
+      "WorkteamArn" : WorkteamArn,
+      "UiConfig" : UiConfig,
+      "PreHumanTaskLambdaArn" : LambdaFunctionArn,
+      "TaskKeywords" : (TaskKeywords)?,
+      "TaskTitle" : TaskTitle,
+      "TaskDescription" : TaskDescription,
+      "NumberOfHumanWorkersPerDataObject" : NumberOfHumanWorkersPerDataObject,
+      "TaskTimeLimitInSeconds" : TaskTimeLimitInSeconds,
+      "TaskAvailabilityLifetimeInSeconds" : (TaskAvailabilityLifetimeInSeconds)?,
+      "MaxConcurrentTaskCount" : (MaxConcurrentTaskCount)?,
+      "AnnotationConsolidationConfig" : AnnotationConsolidationConfig,
+      "PublicWorkforceTaskPrice" : (PublicWorkforceTaskPrice)?
+    )
+
+    alias HumanTaskUiArn = String
+
+    alias HumanTaskUiName = String
+
+    alias HumanTaskUiStatus = String
+
+    alias HumanTaskUiSummaries = Array(HumanTaskUiSummary)
+
+    alias HumanTaskUiSummary = NamedTuple(
+      "HumanTaskUiName" : HumanTaskUiName,
+      "HumanTaskUiArn" : HumanTaskUiArn,
+      "CreationTime" : Timestamp
+    )
+
+    alias HyperParameterAlgorithmSpecification = NamedTuple(
+      "TrainingImage" : (AlgorithmImage)?,
+      "TrainingInputMode" : TrainingInputMode,
+      "AlgorithmName" : (ArnOrName)?,
+      "MetricDefinitions" : (MetricDefinitionList)?
+    )
+
+    alias HyperParameterKey = String
+
+    alias HyperParameterScalingType = String
+
+    alias HyperParameterSpecification = NamedTuple(
+      "Name" : ParameterName,
+      "Description" : (EntityDescription)?,
+      "Type" : ParameterType,
+      "Range" : (ParameterRange)?,
+      "IsTunable" : (Boolean)?,
+      "IsRequired" : (Boolean)?,
+      "DefaultValue" : (HyperParameterValue)?
+    )
+
+    alias HyperParameterSpecifications = Array(HyperParameterSpecification)
+
+    alias HyperParameterTrainingJobDefinition = NamedTuple(
+      "DefinitionName" : (HyperParameterTrainingJobDefinitionName)?,
+      "TuningObjective" : (HyperParameterTuningJobObjective)?,
+      "HyperParameterRanges" : (ParameterRanges)?,
+      "StaticHyperParameters" : (HyperParameters)?,
+      "AlgorithmSpecification" : HyperParameterAlgorithmSpecification,
+      "RoleArn" : RoleArn,
+      "InputDataConfig" : (InputDataConfig)?,
+      "VpcConfig" : (VpcConfig)?,
+      "OutputDataConfig" : OutputDataConfig,
+      "ResourceConfig" : ResourceConfig,
+      "StoppingCondition" : StoppingCondition,
+      "EnableNetworkIsolation" : (Boolean)?,
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "EnableManagedSpotTraining" : (Boolean)?,
+      "CheckpointConfig" : (CheckpointConfig)?
+    )
+
+    alias HyperParameterTrainingJobDefinitionName = String
+
+    alias HyperParameterTrainingJobDefinitions = Array(HyperParameterTrainingJobDefinition)
+
+    alias HyperParameterTrainingJobSummaries = Array(HyperParameterTrainingJobSummary)
+
+    alias HyperParameterTrainingJobSummary = NamedTuple(
+      "TrainingJobDefinitionName" : (HyperParameterTrainingJobDefinitionName)?,
+      "TrainingJobName" : TrainingJobName,
+      "TrainingJobArn" : TrainingJobArn,
+      "TuningJobName" : (HyperParameterTuningJobName)?,
+      "CreationTime" : Timestamp,
+      "TrainingStartTime" : (Timestamp)?,
+      "TrainingEndTime" : (Timestamp)?,
+      "TrainingJobStatus" : TrainingJobStatus,
+      "TunedHyperParameters" : HyperParameters,
+      "FailureReason" : (FailureReason)?,
+      "FinalHyperParameterTuningJobObjectiveMetric" : (FinalHyperParameterTuningJobObjectiveMetric)?,
+      "ObjectiveStatus" : (ObjectiveStatus)?
+    )
+
+    alias HyperParameterTuningJobArn = String
+
+    alias HyperParameterTuningJobConfig = NamedTuple(
+      "Strategy" : HyperParameterTuningJobStrategyType,
+      "HyperParameterTuningJobObjective" : (HyperParameterTuningJobObjective)?,
+      "ResourceLimits" : ResourceLimits,
+      "ParameterRanges" : (ParameterRanges)?,
+      "TrainingJobEarlyStoppingType" : (TrainingJobEarlyStoppingType)?,
+      "TuningJobCompletionCriteria" : (TuningJobCompletionCriteria)?
+    )
+
+    alias HyperParameterTuningJobName = String
+
+    alias HyperParameterTuningJobObjective = NamedTuple(
+      "Type" : HyperParameterTuningJobObjectiveType,
+      "MetricName" : MetricName
+    )
+
+    alias HyperParameterTuningJobObjectiveType = String
+
+    alias HyperParameterTuningJobObjectives = Array(HyperParameterTuningJobObjective)
+
+    alias HyperParameterTuningJobSortByOptions = String
+
+    alias HyperParameterTuningJobStatus = String
+
+    alias HyperParameterTuningJobStrategyType = String
+
+    alias HyperParameterTuningJobSummaries = Array(HyperParameterTuningJobSummary)
+
+    alias HyperParameterTuningJobSummary = NamedTuple(
+      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
+      "HyperParameterTuningJobArn" : HyperParameterTuningJobArn,
+      "HyperParameterTuningJobStatus" : HyperParameterTuningJobStatus,
+      "Strategy" : HyperParameterTuningJobStrategyType,
+      "CreationTime" : Timestamp,
+      "HyperParameterTuningEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "TrainingJobStatusCounters" : TrainingJobStatusCounters,
+      "ObjectiveStatusCounters" : ObjectiveStatusCounters,
+      "ResourceLimits" : (ResourceLimits)?
+    )
+
+    alias HyperParameterTuningJobWarmStartConfig = NamedTuple(
+      "ParentHyperParameterTuningJobs" : ParentHyperParameterTuningJobs,
+      "WarmStartType" : HyperParameterTuningJobWarmStartType
+    )
+
+    alias HyperParameterTuningJobWarmStartType = String
+
+    alias HyperParameterValue = String
+
+    alias HyperParameters = Hash(HyperParameterKey,HyperParameterValue)
+
+    alias IdempotencyToken = String
+
+    alias Image = NamedTuple(
+      "CreationTime" : Timestamp,
+      "Description" : (ImageDescription)?,
+      "DisplayName" : (ImageDisplayName)?,
+      "FailureReason" : (FailureReason)?,
+      "ImageArn" : ImageArn,
+      "ImageName" : ImageName,
+      "ImageStatus" : ImageStatus,
+      "LastModifiedTime" : Timestamp
+    )
+
+    alias ImageArn = String
+
+    alias ImageBaseImage = String
+
+    alias ImageConfig = NamedTuple(
+      "RepositoryAccessMode" : RepositoryAccessMode
+    )
+
+    alias ImageContainerImage = String
+
+    alias ImageDeleteProperty = String
+
+    alias ImageDeletePropertyList = Array(ImageDeleteProperty)
+
+    alias ImageDescription = String
+
+    alias ImageDigest = String
+
+    alias ImageDisplayName = String
+
+    alias ImageName = String
+
+    alias ImageNameContains = String
+
+    alias ImageSortBy = String
+
+    alias ImageSortOrder = String
+
+    alias ImageStatus = String
+
+    alias ImageUri = String
+
+    alias ImageVersion = NamedTuple(
+      "CreationTime" : Timestamp,
+      "FailureReason" : (FailureReason)?,
+      "ImageArn" : ImageArn,
+      "ImageVersionArn" : ImageVersionArn,
+      "ImageVersionStatus" : ImageVersionStatus,
+      "LastModifiedTime" : Timestamp,
+      "Version" : ImageVersionNumber
+    )
+
+    alias ImageVersionArn = String
+
+    alias ImageVersionNumber = Int32
+
+    alias ImageVersionSortBy = String
+
+    alias ImageVersionSortOrder = String
+
+    alias ImageVersionStatus = String
+
+    alias ImageVersions = Array(ImageVersion)
+
+    alias Images = Array(Image)
+
+    alias InferenceSpecification = NamedTuple(
+      "Containers" : ModelPackageContainerDefinitionList,
+      "SupportedTransformInstanceTypes" : (TransformInstanceTypes)?,
+      "SupportedRealtimeInferenceInstanceTypes" : (RealtimeInferenceInstanceTypes)?,
+      "SupportedContentTypes" : ContentTypes,
+      "SupportedResponseMIMETypes" : ResponseMIMETypes
+    )
+
+    alias InputConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "DataInputConfig" : DataInputConfig,
+      "Framework" : Framework
+    )
+
+    alias InputDataConfig = Array(Channel)
+
+    alias InputMode = String
+
+    alias InputModes = Array(TrainingInputMode)
+
+    alias InstanceType = String
+
+    alias Integer = Int32
+
+    alias IntegerParameterRange = NamedTuple(
+      "Name" : ParameterKey,
+      "MinValue" : ParameterValue,
+      "MaxValue" : ParameterValue,
+      "ScalingType" : (HyperParameterScalingType)?
+    )
+
+    alias IntegerParameterRangeSpecification = NamedTuple(
+      "MinValue" : ParameterValue,
+      "MaxValue" : ParameterValue
+    )
+
+    alias IntegerParameterRanges = Array(IntegerParameterRange)
+
+    alias InvocationsMaxRetries = Int32
+
+    alias InvocationsTimeoutInSeconds = Int32
+
+    alias IotRoleAlias = String
+
+    alias JobReferenceCode = String
+
+    alias JobReferenceCodeContains = String
+
+    alias JoinSource = String
+
+    alias JsonContentType = String
+
+    alias JsonContentTypes = Array(JsonContentType)
+
+    alias JsonPath = String
+
+    alias JupyterServerAppSettings = NamedTuple(
+      "DefaultResourceSpec" : (ResourceSpec)?
+    )
+
+    alias KernelDisplayName = String
+
+    alias KernelGatewayAppSettings = NamedTuple(
+      "DefaultResourceSpec" : (ResourceSpec)?,
+      "CustomImages" : (CustomImages)?
+    )
+
+    alias KernelGatewayImageConfig = NamedTuple(
+      "KernelSpecs" : KernelSpecs,
+      "FileSystemConfig" : (FileSystemConfig)?
+    )
+
+    alias KernelName = String
+
+    alias KernelSpec = NamedTuple(
+      "Name" : KernelName,
+      "DisplayName" : (KernelDisplayName)?
+    )
+
+    alias KernelSpecs = Array(KernelSpec)
+
+    alias KmsKeyId = String
+
+    alias LabelAttributeName = String
+
+    alias LabelCounter = Int32
+
+    alias LabelCounters = NamedTuple(
+      "TotalLabeled" : (LabelCounter)?,
+      "HumanLabeled" : (LabelCounter)?,
+      "MachineLabeled" : (LabelCounter)?,
+      "FailedNonRetryableError" : (LabelCounter)?,
+      "Unlabeled" : (LabelCounter)?
+    )
+
+    alias LabelCountersForWorkteam = NamedTuple(
+      "HumanLabeled" : (LabelCounter)?,
+      "PendingHuman" : (LabelCounter)?,
+      "Total" : (LabelCounter)?
+    )
+
+    alias LabelingJobAlgorithmSpecificationArn = String
+
+    alias LabelingJobAlgorithmsConfig = NamedTuple(
+      "LabelingJobAlgorithmSpecificationArn" : LabelingJobAlgorithmSpecificationArn,
+      "InitialActiveLearningModelArn" : (ModelArn)?,
+      "LabelingJobResourceConfig" : (LabelingJobResourceConfig)?
+    )
+
+    alias LabelingJobArn = String
+
+    alias LabelingJobDataAttributes = NamedTuple(
+      "ContentClassifiers" : (ContentClassifiers)?
+    )
+
+    alias LabelingJobDataSource = NamedTuple(
+      "S3DataSource" : (LabelingJobS3DataSource)?,
+      "SnsDataSource" : (LabelingJobSnsDataSource)?
+    )
+
+    alias LabelingJobForWorkteamSummary = NamedTuple(
+      "LabelingJobName" : (LabelingJobName)?,
+      "JobReferenceCode" : JobReferenceCode,
+      "WorkRequesterAccountId" : AccountId,
+      "CreationTime" : Timestamp,
+      "LabelCounters" : (LabelCountersForWorkteam)?,
+      "NumberOfHumanWorkersPerDataObject" : (NumberOfHumanWorkersPerDataObject)?
+    )
+
+    alias LabelingJobForWorkteamSummaryList = Array(LabelingJobForWorkteamSummary)
+
+    alias LabelingJobInputConfig = NamedTuple(
+      "DataSource" : LabelingJobDataSource,
+      "DataAttributes" : (LabelingJobDataAttributes)?
+    )
+
+    alias LabelingJobName = String
+
+    alias LabelingJobOutput = NamedTuple(
+      "OutputDatasetS3Uri" : S3Uri,
+      "FinalActiveLearningModelArn" : (ModelArn)?
+    )
+
+    alias LabelingJobOutputConfig = NamedTuple(
+      "S3OutputPath" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?,
+      "SnsTopicArn" : (SnsTopicArn)?
+    )
+
+    alias LabelingJobResourceConfig = NamedTuple(
+      "VolumeKmsKeyId" : (KmsKeyId)?
+    )
+
+    alias LabelingJobS3DataSource = NamedTuple(
+      "ManifestS3Uri" : S3Uri
+    )
+
+    alias LabelingJobSnsDataSource = NamedTuple(
+      "SnsTopicArn" : SnsTopicArn
+    )
+
+    alias LabelingJobStatus = String
+
+    alias LabelingJobStoppingConditions = NamedTuple(
+      "MaxHumanLabeledObjectCount" : (MaxHumanLabeledObjectCount)?,
+      "MaxPercentageOfInputDatasetLabeled" : (MaxPercentageOfInputDatasetLabeled)?
+    )
+
+    alias LabelingJobSummary = NamedTuple(
+      "LabelingJobName" : LabelingJobName,
+      "LabelingJobArn" : LabelingJobArn,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "LabelingJobStatus" : LabelingJobStatus,
+      "LabelCounters" : LabelCounters,
+      "WorkteamArn" : WorkteamArn,
+      "PreHumanTaskLambdaArn" : LambdaFunctionArn,
+      "AnnotationConsolidationLambdaArn" : (LambdaFunctionArn)?,
+      "FailureReason" : (FailureReason)?,
+      "LabelingJobOutput" : (LabelingJobOutput)?,
+      "InputConfig" : (LabelingJobInputConfig)?
+    )
+
+    alias LabelingJobSummaryList = Array(LabelingJobSummary)
+
+    alias LambdaFunctionArn = String
+
+    alias LastModifiedTime = String | UInt64 | Time
+
+    alias LineageEntityParameters = Hash(StringParameterValue,StringParameterValue)
+
+    alias ListActionsRequest = NamedTuple(
+      "SourceUri" : (SourceUri)?,
+      "ActionType" : (String256)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortActionsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListActionsResponse = NamedTuple(
+      "ActionSummaries" : (ActionSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAlgorithmsInput = NamedTuple(
+      "CreationTimeAfter" : (CreationTime)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (AlgorithmSortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListAlgorithmsOutput = NamedTuple(
+      "AlgorithmSummaryList" : AlgorithmSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAppImageConfigsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "NameContains" : (AppImageConfigName)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "ModifiedTimeBefore" : (Timestamp)?,
+      "ModifiedTimeAfter" : (Timestamp)?,
+      "SortBy" : (AppImageConfigSortKey)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListAppImageConfigsResponse = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "AppImageConfigs" : (AppImageConfigList)?
+    )
+
+    alias ListAppsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "SortOrder" : (SortOrder)?,
+      "SortBy" : (AppSortKey)?,
+      "DomainIdEquals" : (DomainId)?,
+      "UserProfileNameEquals" : (UserProfileName)?
+    )
+
+    alias ListAppsResponse = NamedTuple(
+      "Apps" : (AppList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListArtifactsRequest = NamedTuple(
+      "SourceUri" : (SourceUri)?,
+      "ArtifactType" : (String256)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortArtifactsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListArtifactsResponse = NamedTuple(
+      "ArtifactSummaries" : (ArtifactSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAssociationsRequest = NamedTuple(
+      "SourceArn" : (AssociationEntityArn)?,
+      "DestinationArn" : (AssociationEntityArn)?,
+      "SourceType" : (String256)?,
+      "DestinationType" : (String256)?,
+      "AssociationType" : (AssociationEdgeType)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortAssociationsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListAssociationsResponse = NamedTuple(
+      "AssociationSummaries" : (AssociationSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAutoMLJobsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "NameContains" : (AutoMLNameContains)?,
+      "StatusEquals" : (AutoMLJobStatus)?,
+      "SortOrder" : (AutoMLSortOrder)?,
+      "SortBy" : (AutoMLSortBy)?,
+      "MaxResults" : (AutoMLMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListAutoMLJobsResponse = NamedTuple(
+      "AutoMLJobSummaries" : AutoMLJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCandidatesForAutoMLJobRequest = NamedTuple(
+      "AutoMLJobName" : AutoMLJobName,
+      "StatusEquals" : (CandidateStatus)?,
+      "CandidateNameEquals" : (CandidateName)?,
+      "SortOrder" : (AutoMLSortOrder)?,
+      "SortBy" : (CandidateSortBy)?,
+      "MaxResults" : (AutoMLMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCandidatesForAutoMLJobResponse = NamedTuple(
+      "Candidates" : AutoMLCandidates,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCodeRepositoriesInput = NamedTuple(
+      "CreationTimeAfter" : (CreationTime)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (CodeRepositoryNameContains)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (CodeRepositorySortBy)?,
+      "SortOrder" : (CodeRepositorySortOrder)?
+    )
+
+    alias ListCodeRepositoriesOutput = NamedTuple(
+      "CodeRepositorySummaryList" : CodeRepositorySummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCompilationJobsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "CreationTimeAfter" : (CreationTime)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "LastModifiedTimeAfter" : (LastModifiedTime)?,
+      "LastModifiedTimeBefore" : (LastModifiedTime)?,
+      "NameContains" : (NameContains)?,
+      "StatusEquals" : (CompilationJobStatus)?,
+      "SortBy" : (ListCompilationJobsSortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListCompilationJobsResponse = NamedTuple(
+      "CompilationJobSummaries" : CompilationJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListCompilationJobsSortBy = String
+
+    alias ListContextsRequest = NamedTuple(
+      "SourceUri" : (SourceUri)?,
+      "ContextType" : (String256)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortContextsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListContextsResponse = NamedTuple(
+      "ContextSummaries" : (ContextSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDataQualityJobDefinitionsRequest = NamedTuple(
+      "EndpointName" : (EndpointName)?,
+      "SortBy" : (MonitoringJobDefinitionSortKey)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias ListDataQualityJobDefinitionsResponse = NamedTuple(
+      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDeviceFleetsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListMaxResults)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "NameContains" : (NameContains)?,
+      "SortBy" : (ListDeviceFleetsSortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListDeviceFleetsResponse = NamedTuple(
+      "DeviceFleetSummaries" : DeviceFleetSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDeviceFleetsSortBy = String
+
+    alias ListDevicesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListMaxResults)?,
+      "LatestHeartbeatAfter" : (Timestamp)?,
+      "ModelName" : (EntityName)?,
+      "DeviceFleetName" : (EntityName)?
+    )
+
+    alias ListDevicesResponse = NamedTuple(
+      "DeviceSummaries" : DeviceSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListDomainsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListDomainsResponse = NamedTuple(
+      "Domains" : (DomainList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEdgePackagingJobsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListMaxResults)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "NameContains" : (NameContains)?,
+      "ModelNameContains" : (NameContains)?,
+      "StatusEquals" : (EdgePackagingJobStatus)?,
+      "SortBy" : (ListEdgePackagingJobsSortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListEdgePackagingJobsResponse = NamedTuple(
+      "EdgePackagingJobSummaries" : EdgePackagingJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListEdgePackagingJobsSortBy = String
+
+    alias ListEndpointConfigsInput = NamedTuple(
+      "SortBy" : (EndpointConfigSortKey)?,
+      "SortOrder" : (OrderKey)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (EndpointConfigNameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias ListEndpointConfigsOutput = NamedTuple(
+      "EndpointConfigs" : EndpointConfigSummaryList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListEndpointsInput = NamedTuple(
+      "SortBy" : (EndpointSortKey)?,
+      "SortOrder" : (OrderKey)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (EndpointNameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "StatusEquals" : (EndpointStatus)?
+    )
+
+    alias ListEndpointsOutput = NamedTuple(
+      "Endpoints" : EndpointSummaryList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListExperimentsRequest = NamedTuple(
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortExperimentsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListExperimentsResponse = NamedTuple(
+      "ExperimentSummaries" : (ExperimentSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListFeatureGroupsRequest = NamedTuple(
+      "NameContains" : (FeatureGroupNameContains)?,
+      "FeatureGroupStatusEquals" : (FeatureGroupStatus)?,
+      "OfflineStoreStatusEquals" : (OfflineStoreStatusValue)?,
+      "CreationTimeAfter" : (CreationTime)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "SortOrder" : (FeatureGroupSortOrder)?,
+      "SortBy" : (FeatureGroupSortBy)?,
+      "MaxResults" : (FeatureGroupMaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListFeatureGroupsResponse = NamedTuple(
+      "FeatureGroupSummaries" : FeatureGroupSummaries,
+      "NextToken" : NextToken
+    )
+
+    alias ListFlowDefinitionsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListFlowDefinitionsResponse = NamedTuple(
+      "FlowDefinitionSummaries" : FlowDefinitionSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHumanTaskUisRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListHumanTaskUisResponse = NamedTuple(
+      "HumanTaskUiSummaries" : HumanTaskUiSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListHyperParameterTuningJobsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "SortBy" : (HyperParameterTuningJobSortByOptions)?,
+      "SortOrder" : (SortOrder)?,
+      "NameContains" : (NameContains)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "StatusEquals" : (HyperParameterTuningJobStatus)?
+    )
+
+    alias ListHyperParameterTuningJobsResponse = NamedTuple(
+      "HyperParameterTuningJobSummaries" : HyperParameterTuningJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListImageVersionsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "ImageName" : ImageName,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (ImageVersionSortBy)?,
+      "SortOrder" : (ImageVersionSortOrder)?
+    )
+
+    alias ListImageVersionsResponse = NamedTuple(
+      "ImageVersions" : (ImageVersions)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListImagesRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (ImageNameContains)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (ImageSortBy)?,
+      "SortOrder" : (ImageSortOrder)?
+    )
+
+    alias ListImagesResponse = NamedTuple(
+      "Images" : (Images)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLabelingJobsForWorkteamRequest = NamedTuple(
+      "WorkteamArn" : WorkteamArn,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "JobReferenceCodeContains" : (JobReferenceCodeContains)?,
+      "SortBy" : (ListLabelingJobsForWorkteamSortByOptions)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListLabelingJobsForWorkteamResponse = NamedTuple(
+      "LabelingJobSummaryList" : LabelingJobForWorkteamSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLabelingJobsForWorkteamSortByOptions = String
+
+    alias ListLabelingJobsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "NameContains" : (NameContains)?,
+      "SortBy" : (SortBy)?,
+      "SortOrder" : (SortOrder)?,
+      "StatusEquals" : (LabelingJobStatus)?
+    )
+
+    alias ListLabelingJobsResponse = NamedTuple(
+      "LabelingJobSummaryList" : (LabelingJobSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListLineageEntityParameterKey = Array(StringParameterValue)
+
+    alias ListMaxResults = Int32
+
+    alias ListModelBiasJobDefinitionsRequest = NamedTuple(
+      "EndpointName" : (EndpointName)?,
+      "SortBy" : (MonitoringJobDefinitionSortKey)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias ListModelBiasJobDefinitionsResponse = NamedTuple(
+      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListModelExplainabilityJobDefinitionsRequest = NamedTuple(
+      "EndpointName" : (EndpointName)?,
+      "SortBy" : (MonitoringJobDefinitionSortKey)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias ListModelExplainabilityJobDefinitionsResponse = NamedTuple(
+      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListModelPackageGroupsInput = NamedTuple(
+      "CreationTimeAfter" : (CreationTime)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (ModelPackageGroupSortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListModelPackageGroupsOutput = NamedTuple(
+      "ModelPackageGroupSummaryList" : ModelPackageGroupSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListModelPackagesInput = NamedTuple(
+      "CreationTimeAfter" : (CreationTime)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "ModelApprovalStatus" : (ModelApprovalStatus)?,
+      "ModelPackageGroupName" : (ArnOrName)?,
+      "ModelPackageType" : (ModelPackageType)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (ModelPackageSortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListModelPackagesOutput = NamedTuple(
+      "ModelPackageSummaryList" : ModelPackageSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListModelQualityJobDefinitionsRequest = NamedTuple(
+      "EndpointName" : (EndpointName)?,
+      "SortBy" : (MonitoringJobDefinitionSortKey)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias ListModelQualityJobDefinitionsResponse = NamedTuple(
+      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListModelsInput = NamedTuple(
+      "SortBy" : (ModelSortKey)?,
+      "SortOrder" : (OrderKey)?,
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (ModelNameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias ListModelsOutput = NamedTuple(
+      "Models" : ModelSummaryList,
+      "NextToken" : (PaginationToken)?
+    )
+
+    alias ListMonitoringExecutionsRequest = NamedTuple(
+      "MonitoringScheduleName" : (MonitoringScheduleName)?,
+      "EndpointName" : (EndpointName)?,
+      "SortBy" : (MonitoringExecutionSortKey)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "ScheduledTimeBefore" : (Timestamp)?,
+      "ScheduledTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "StatusEquals" : (ExecutionStatus)?,
+      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
+      "MonitoringTypeEquals" : (MonitoringType)?
+    )
+
+    alias ListMonitoringExecutionsResponse = NamedTuple(
+      "MonitoringExecutionSummaries" : MonitoringExecutionSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListMonitoringSchedulesRequest = NamedTuple(
+      "EndpointName" : (EndpointName)?,
+      "SortBy" : (MonitoringScheduleSortKey)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (NameContains)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "StatusEquals" : (ScheduleStatus)?,
+      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
+      "MonitoringTypeEquals" : (MonitoringType)?
+    )
+
+    alias ListMonitoringSchedulesResponse = NamedTuple(
+      "MonitoringScheduleSummaries" : MonitoringScheduleSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListNotebookInstanceLifecycleConfigsInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "SortBy" : (NotebookInstanceLifecycleConfigSortKey)?,
+      "SortOrder" : (NotebookInstanceLifecycleConfigSortOrder)?,
+      "NameContains" : (NotebookInstanceLifecycleConfigNameContains)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "CreationTimeAfter" : (CreationTime)?,
+      "LastModifiedTimeBefore" : (LastModifiedTime)?,
+      "LastModifiedTimeAfter" : (LastModifiedTime)?
+    )
+
+    alias ListNotebookInstanceLifecycleConfigsOutput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "NotebookInstanceLifecycleConfigs" : (NotebookInstanceLifecycleConfigSummaryList)?
+    )
+
+    alias ListNotebookInstancesInput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "SortBy" : (NotebookInstanceSortKey)?,
+      "SortOrder" : (NotebookInstanceSortOrder)?,
+      "NameContains" : (NotebookInstanceNameContains)?,
+      "CreationTimeBefore" : (CreationTime)?,
+      "CreationTimeAfter" : (CreationTime)?,
+      "LastModifiedTimeBefore" : (LastModifiedTime)?,
+      "LastModifiedTimeAfter" : (LastModifiedTime)?,
+      "StatusEquals" : (NotebookInstanceStatus)?,
+      "NotebookInstanceLifecycleConfigNameContains" : (NotebookInstanceLifecycleConfigName)?,
+      "DefaultCodeRepositoryContains" : (CodeRepositoryContains)?,
+      "AdditionalCodeRepositoryEquals" : (CodeRepositoryNameOrUrl)?
+    )
+
+    alias ListNotebookInstancesOutput = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "NotebookInstances" : (NotebookInstanceSummaryList)?
+    )
+
+    alias ListPipelineExecutionStepsRequest = NamedTuple(
+      "PipelineExecutionArn" : (PipelineExecutionArn)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListPipelineExecutionStepsResponse = NamedTuple(
+      "PipelineExecutionSteps" : (PipelineExecutionStepList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPipelineExecutionsRequest = NamedTuple(
+      "PipelineName" : PipelineName,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortPipelineExecutionsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListPipelineExecutionsResponse = NamedTuple(
+      "PipelineExecutionSummaries" : (PipelineExecutionSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPipelineParametersForExecutionRequest = NamedTuple(
+      "PipelineExecutionArn" : PipelineExecutionArn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListPipelineParametersForExecutionResponse = NamedTuple(
+      "PipelineParameters" : (ParameterList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListPipelinesRequest = NamedTuple(
+      "PipelineNamePrefix" : (PipelineName)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortPipelinesBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListPipelinesResponse = NamedTuple(
+      "PipelineSummaries" : (PipelineSummaryList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListProcessingJobsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "NameContains" : (String)?,
+      "StatusEquals" : (ProcessingJobStatus)?,
+      "SortBy" : (SortBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListProcessingJobsResponse = NamedTuple(
+      "ProcessingJobSummaries" : ProcessingJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListProjectsInput = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "MaxResults" : (MaxResults)?,
+      "NameContains" : (ProjectEntityName)?,
+      "NextToken" : (NextToken)?,
+      "SortBy" : (ProjectSortBy)?,
+      "SortOrder" : (ProjectSortOrder)?
+    )
+
+    alias ListProjectsOutput = NamedTuple(
+      "ProjectSummaryList" : ProjectSummaryList,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListSubscribedWorkteamsRequest = NamedTuple(
+      "NameContains" : (WorkteamName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListSubscribedWorkteamsResponse = NamedTuple(
+      "SubscribedWorkteams" : SubscribedWorkteams,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTagsInput = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (ListTagsMaxResults)?
+    )
+
+    alias ListTagsMaxResults = Int32
+
+    alias ListTagsOutput = NamedTuple(
+      "Tags" : (TagList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTrainingJobsForHyperParameterTuningJobRequest = NamedTuple(
+      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "StatusEquals" : (TrainingJobStatus)?,
+      "SortBy" : (TrainingJobSortByOptions)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListTrainingJobsForHyperParameterTuningJobResponse = NamedTuple(
+      "TrainingJobSummaries" : HyperParameterTrainingJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTrainingJobsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "NameContains" : (NameContains)?,
+      "StatusEquals" : (TrainingJobStatus)?,
+      "SortBy" : (SortBy)?,
+      "SortOrder" : (SortOrder)?
+    )
+
+    alias ListTrainingJobsResponse = NamedTuple(
+      "TrainingJobSummaries" : TrainingJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTransformJobsRequest = NamedTuple(
+      "CreationTimeAfter" : (Timestamp)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "LastModifiedTimeAfter" : (Timestamp)?,
+      "LastModifiedTimeBefore" : (Timestamp)?,
+      "NameContains" : (NameContains)?,
+      "StatusEquals" : (TransformJobStatus)?,
+      "SortBy" : (SortBy)?,
+      "SortOrder" : (SortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListTransformJobsResponse = NamedTuple(
+      "TransformJobSummaries" : TransformJobSummaries,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTrialComponentKey256 = Array(TrialComponentKey256)
+
+    alias ListTrialComponentsRequest = NamedTuple(
+      "ExperimentName" : (ExperimentEntityName)?,
+      "TrialName" : (ExperimentEntityName)?,
+      "SourceArn" : (String256)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortTrialComponentsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTrialComponentsResponse = NamedTuple(
+      "TrialComponentSummaries" : (TrialComponentSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTrialsRequest = NamedTuple(
+      "ExperimentName" : (ExperimentEntityName)?,
+      "TrialComponentName" : (ExperimentEntityName)?,
+      "CreatedAfter" : (Timestamp)?,
+      "CreatedBefore" : (Timestamp)?,
+      "SortBy" : (SortTrialsBy)?,
+      "SortOrder" : (SortOrder)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListTrialsResponse = NamedTuple(
+      "TrialSummaries" : (TrialSummaries)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListUserProfilesRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?,
+      "SortOrder" : (SortOrder)?,
+      "SortBy" : (UserProfileSortKey)?,
+      "DomainIdEquals" : (DomainId)?,
+      "UserProfileNameContains" : (UserProfileName)?
+    )
+
+    alias ListUserProfilesResponse = NamedTuple(
+      "UserProfiles" : (UserProfileList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWorkforcesRequest = NamedTuple(
+      "SortBy" : (ListWorkforcesSortByOptions)?,
+      "SortOrder" : (SortOrder)?,
+      "NameContains" : (WorkforceName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListWorkforcesResponse = NamedTuple(
+      "Workforces" : Workforces,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWorkforcesSortByOptions = String
+
+    alias ListWorkteamsRequest = NamedTuple(
+      "SortBy" : (ListWorkteamsSortByOptions)?,
+      "SortOrder" : (SortOrder)?,
+      "NameContains" : (WorkteamName)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListWorkteamsResponse = NamedTuple(
+      "Workteams" : Workteams,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ListWorkteamsSortByOptions = String
+
+    alias Long = Int64
+
+    alias MaxAutoMLJobRuntimeInSeconds = Int32
+
+    alias MaxCandidates = Int32
+
+    alias MaxConcurrentTaskCount = Int32
+
+    alias MaxConcurrentTransforms = Int32
+
+    alias MaxHumanLabeledObjectCount = Int32
+
+    alias MaxNumberOfTrainingJobs = Int32
+
+    alias MaxParallelTrainingJobs = Int32
+
+    alias MaxPayloadInMB = Int32
+
+    alias MaxPercentageOfInputDatasetLabeled = Int32
+
+    alias MaxResults = Int32
+
+    alias MaxRuntimeInSeconds = Int32
+
+    alias MaxRuntimePerTrainingJobInSeconds = Int32
+
+    alias MaxWaitTimeInSeconds = Int32
+
+    alias MaximumExecutionTimeoutInSeconds = Int32
+
+    alias MediaType = String
+
+    alias MemberDefinition = NamedTuple(
+      "CognitoMemberDefinition" : (CognitoMemberDefinition)?,
+      "OidcMemberDefinition" : (OidcMemberDefinition)?
+    )
+
+    alias MemberDefinitions = Array(MemberDefinition)
+
+    alias MetadataProperties = NamedTuple(
+      "CommitId" : (MetadataPropertyValue)?,
+      "Repository" : (MetadataPropertyValue)?,
+      "GeneratedBy" : (MetadataPropertyValue)?,
+      "ProjectId" : (MetadataPropertyValue)?
+    )
+
+    alias MetadataPropertyValue = String
+
+    alias MetricData = NamedTuple(
+      "MetricName" : (MetricName)?,
+      "Value" : (Float)?,
+      "Timestamp" : (Timestamp)?
+    )
+
+    alias MetricDefinition = NamedTuple(
+      "Name" : MetricName,
+      "Regex" : MetricRegex
+    )
+
+    alias MetricDefinitionList = Array(MetricDefinition)
+
+    alias MetricName = String
+
+    alias MetricRegex = String
+
+    alias MetricValue = Float32
+
+    alias MetricsSource = NamedTuple(
+      "ContentType" : ContentType,
+      "ContentDigest" : (ContentDigest)?,
+      "S3Uri" : S3Uri
+    )
+
+    alias ModelApprovalStatus = String
+
+    alias ModelArn = String
+
+    alias ModelArtifacts = NamedTuple(
+      "S3ModelArtifacts" : S3Uri
+    )
+
+    alias ModelBiasAppSpecification = NamedTuple(
+      "ImageUri" : ImageUri,
+      "ConfigUri" : S3Uri,
+      "Environment" : (MonitoringEnvironmentMap)?
+    )
+
+    alias ModelBiasBaselineConfig = NamedTuple(
+      "BaseliningJobName" : (ProcessingJobName)?,
+      "ConstraintsResource" : (MonitoringConstraintsResource)?
+    )
+
+    alias ModelBiasJobInput = NamedTuple(
+      "EndpointInput" : EndpointInput,
+      "GroundTruthS3Input" : MonitoringGroundTruthS3Input
+    )
+
+    alias ModelClientConfig = NamedTuple(
+      "InvocationsTimeoutInSeconds" : (InvocationsTimeoutInSeconds)?,
+      "InvocationsMaxRetries" : (InvocationsMaxRetries)?
+    )
+
+    alias ModelDataQuality = NamedTuple(
+      "Statistics" : (MetricsSource)?,
+      "Constraints" : (MetricsSource)?
+    )
+
+    alias ModelDigests = NamedTuple(
+      "ArtifactDigest" : (ArtifactDigest)?
+    )
+
+    alias ModelExplainabilityAppSpecification = NamedTuple(
+      "ImageUri" : ImageUri,
+      "ConfigUri" : S3Uri,
+      "Environment" : (MonitoringEnvironmentMap)?
+    )
+
+    alias ModelExplainabilityBaselineConfig = NamedTuple(
+      "BaseliningJobName" : (ProcessingJobName)?,
+      "ConstraintsResource" : (MonitoringConstraintsResource)?
+    )
+
+    alias ModelExplainabilityJobInput = NamedTuple(
+      "EndpointInput" : EndpointInput
+    )
+
+    alias ModelMetrics = NamedTuple(
+      "ModelQuality" : (ModelQuality)?,
+      "ModelDataQuality" : (ModelDataQuality)?,
+      "Bias" : (Bias)?,
+      "Explainability" : (Explainability)?
+    )
+
+    alias ModelName = String
+
+    alias ModelNameContains = String
+
+    alias ModelPackage = NamedTuple(
+      "ModelPackageName" : (EntityName)?,
+      "ModelPackageGroupName" : (EntityName)?,
+      "ModelPackageVersion" : (ModelPackageVersion)?,
+      "ModelPackageArn" : (ModelPackageArn)?,
+      "ModelPackageDescription" : (EntityDescription)?,
+      "CreationTime" : (CreationTime)?,
+      "InferenceSpecification" : (InferenceSpecification)?,
+      "SourceAlgorithmSpecification" : (SourceAlgorithmSpecification)?,
+      "ValidationSpecification" : (ModelPackageValidationSpecification)?,
+      "ModelPackageStatus" : (ModelPackageStatus)?,
+      "ModelPackageStatusDetails" : (ModelPackageStatusDetails)?,
+      "CertifyForMarketplace" : (CertifyForMarketplace)?,
+      "ModelApprovalStatus" : (ModelApprovalStatus)?,
+      "CreatedBy" : (UserContext)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "ModelMetrics" : (ModelMetrics)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "ApprovalDescription" : (ApprovalDescription)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ModelPackageArn = String
+
+    alias ModelPackageContainerDefinition = NamedTuple(
+      "ContainerHostname" : (ContainerHostname)?,
+      "Image" : ContainerImage,
+      "ImageDigest" : (ImageDigest)?,
+      "ModelDataUrl" : (Url)?,
+      "ProductId" : (ProductId)?
+    )
+
+    alias ModelPackageContainerDefinitionList = Array(ModelPackageContainerDefinition)
+
+    alias ModelPackageGroup = NamedTuple(
+      "ModelPackageGroupName" : (EntityName)?,
+      "ModelPackageGroupArn" : (ModelPackageGroupArn)?,
+      "ModelPackageGroupDescription" : (EntityDescription)?,
+      "CreationTime" : (CreationTime)?,
+      "CreatedBy" : (UserContext)?,
+      "ModelPackageGroupStatus" : (ModelPackageGroupStatus)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ModelPackageGroupArn = String
+
+    alias ModelPackageGroupSortBy = String
+
+    alias ModelPackageGroupStatus = String
+
+    alias ModelPackageGroupSummary = NamedTuple(
+      "ModelPackageGroupName" : EntityName,
+      "ModelPackageGroupArn" : ModelPackageGroupArn,
+      "ModelPackageGroupDescription" : (EntityDescription)?,
+      "CreationTime" : CreationTime,
+      "ModelPackageGroupStatus" : ModelPackageGroupStatus
+    )
+
+    alias ModelPackageGroupSummaryList = Array(ModelPackageGroupSummary)
+
+    alias ModelPackageSortBy = String
+
+    alias ModelPackageStatus = String
+
+    alias ModelPackageStatusDetails = NamedTuple(
+      "ValidationStatuses" : ModelPackageStatusItemList,
+      "ImageScanStatuses" : (ModelPackageStatusItemList)?
+    )
+
+    alias ModelPackageStatusItem = NamedTuple(
+      "Name" : EntityName,
+      "Status" : DetailedModelPackageStatus,
+      "FailureReason" : (String)?
+    )
+
+    alias ModelPackageStatusItemList = Array(ModelPackageStatusItem)
+
+    alias ModelPackageSummary = NamedTuple(
+      "ModelPackageName" : EntityName,
+      "ModelPackageGroupName" : (EntityName)?,
+      "ModelPackageVersion" : (ModelPackageVersion)?,
+      "ModelPackageArn" : ModelPackageArn,
+      "ModelPackageDescription" : (EntityDescription)?,
+      "CreationTime" : CreationTime,
+      "ModelPackageStatus" : ModelPackageStatus,
+      "ModelApprovalStatus" : (ModelApprovalStatus)?
+    )
+
+    alias ModelPackageSummaryList = Array(ModelPackageSummary)
+
+    alias ModelPackageType = String
+
+    alias ModelPackageValidationProfile = NamedTuple(
+      "ProfileName" : EntityName,
+      "TransformJobDefinition" : TransformJobDefinition
+    )
+
+    alias ModelPackageValidationProfiles = Array(ModelPackageValidationProfile)
+
+    alias ModelPackageValidationSpecification = NamedTuple(
+      "ValidationRole" : RoleArn,
+      "ValidationProfiles" : ModelPackageValidationProfiles
+    )
+
+    alias ModelPackageVersion = Int32
+
+    alias ModelQuality = NamedTuple(
+      "Statistics" : (MetricsSource)?,
+      "Constraints" : (MetricsSource)?
+    )
+
+    alias ModelQualityAppSpecification = NamedTuple(
+      "ImageUri" : ImageUri,
+      "ContainerEntrypoint" : (ContainerEntrypoint)?,
+      "ContainerArguments" : (MonitoringContainerArguments)?,
+      "RecordPreprocessorSourceUri" : (S3Uri)?,
+      "PostAnalyticsProcessorSourceUri" : (S3Uri)?,
+      "ProblemType" : (MonitoringProblemType)?,
+      "Environment" : (MonitoringEnvironmentMap)?
+    )
+
+    alias ModelQualityBaselineConfig = NamedTuple(
+      "BaseliningJobName" : (ProcessingJobName)?,
+      "ConstraintsResource" : (MonitoringConstraintsResource)?
+    )
+
+    alias ModelQualityJobInput = NamedTuple(
+      "EndpointInput" : EndpointInput,
+      "GroundTruthS3Input" : MonitoringGroundTruthS3Input
+    )
+
+    alias ModelSortKey = String
+
+    alias ModelStepMetadata = NamedTuple(
+      "Arn" : (String256)?
+    )
+
+    alias ModelSummary = NamedTuple(
+      "ModelName" : ModelName,
+      "ModelArn" : ModelArn,
+      "CreationTime" : Timestamp
+    )
+
+    alias ModelSummaryList = Array(ModelSummary)
+
+    alias MonitoringAppSpecification = NamedTuple(
+      "ImageUri" : ImageUri,
+      "ContainerEntrypoint" : (ContainerEntrypoint)?,
+      "ContainerArguments" : (MonitoringContainerArguments)?,
+      "RecordPreprocessorSourceUri" : (S3Uri)?,
+      "PostAnalyticsProcessorSourceUri" : (S3Uri)?
+    )
+
+    alias MonitoringBaselineConfig = NamedTuple(
+      "BaseliningJobName" : (ProcessingJobName)?,
+      "ConstraintsResource" : (MonitoringConstraintsResource)?,
+      "StatisticsResource" : (MonitoringStatisticsResource)?
+    )
+
+    alias MonitoringClusterConfig = NamedTuple(
+      "InstanceCount" : ProcessingInstanceCount,
+      "InstanceType" : ProcessingInstanceType,
+      "VolumeSizeInGB" : ProcessingVolumeSizeInGB,
+      "VolumeKmsKeyId" : (KmsKeyId)?
+    )
+
+    alias MonitoringConstraintsResource = NamedTuple(
+      "S3Uri" : (S3Uri)?
+    )
+
+    alias MonitoringContainerArguments = Array(ContainerArgument)
+
+    alias MonitoringEnvironmentMap = Hash(ProcessingEnvironmentKey,ProcessingEnvironmentValue)
+
+    alias MonitoringExecutionSortKey = String
+
+    alias MonitoringExecutionSummary = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName,
+      "ScheduledTime" : Timestamp,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "MonitoringExecutionStatus" : ExecutionStatus,
+      "ProcessingJobArn" : (ProcessingJobArn)?,
+      "EndpointName" : (EndpointName)?,
+      "FailureReason" : (FailureReason)?,
+      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
+      "MonitoringType" : (MonitoringType)?
+    )
+
+    alias MonitoringExecutionSummaryList = Array(MonitoringExecutionSummary)
+
+    alias MonitoringGroundTruthS3Input = NamedTuple(
+      "S3Uri" : (MonitoringS3Uri)?
+    )
+
+    alias MonitoringInput = NamedTuple(
+      "EndpointInput" : EndpointInput
+    )
+
+    alias MonitoringInputs = Array(MonitoringInput)
+
+    alias MonitoringJobDefinition = NamedTuple(
+      "BaselineConfig" : (MonitoringBaselineConfig)?,
+      "MonitoringInputs" : MonitoringInputs,
+      "MonitoringOutputConfig" : MonitoringOutputConfig,
+      "MonitoringResources" : MonitoringResources,
+      "MonitoringAppSpecification" : MonitoringAppSpecification,
+      "StoppingCondition" : (MonitoringStoppingCondition)?,
+      "Environment" : (MonitoringEnvironmentMap)?,
+      "NetworkConfig" : (NetworkConfig)?,
+      "RoleArn" : RoleArn
+    )
+
+    alias MonitoringJobDefinitionArn = String
+
+    alias MonitoringJobDefinitionName = String
+
+    alias MonitoringJobDefinitionSortKey = String
+
+    alias MonitoringJobDefinitionSummary = NamedTuple(
+      "MonitoringJobDefinitionName" : MonitoringJobDefinitionName,
+      "MonitoringJobDefinitionArn" : MonitoringJobDefinitionArn,
+      "CreationTime" : Timestamp,
+      "EndpointName" : EndpointName
+    )
+
+    alias MonitoringJobDefinitionSummaryList = Array(MonitoringJobDefinitionSummary)
+
+    alias MonitoringMaxRuntimeInSeconds = Int32
+
+    alias MonitoringNetworkConfig = NamedTuple(
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "EnableNetworkIsolation" : (Boolean)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias MonitoringOutput = NamedTuple(
+      "S3Output" : MonitoringS3Output
+    )
+
+    alias MonitoringOutputConfig = NamedTuple(
+      "MonitoringOutputs" : MonitoringOutputs,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias MonitoringOutputs = Array(MonitoringOutput)
+
+    alias MonitoringProblemType = String
+
+    alias MonitoringResources = NamedTuple(
+      "ClusterConfig" : MonitoringClusterConfig
+    )
+
+    alias MonitoringS3Output = NamedTuple(
+      "S3Uri" : MonitoringS3Uri,
+      "LocalPath" : ProcessingLocalPath,
+      "S3UploadMode" : (ProcessingS3UploadMode)?
+    )
+
+    alias MonitoringS3Uri = String
+
+    alias MonitoringSchedule = NamedTuple(
+      "MonitoringScheduleArn" : (MonitoringScheduleArn)?,
+      "MonitoringScheduleName" : (MonitoringScheduleName)?,
+      "MonitoringScheduleStatus" : (ScheduleStatus)?,
+      "MonitoringType" : (MonitoringType)?,
+      "FailureReason" : (FailureReason)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "MonitoringScheduleConfig" : (MonitoringScheduleConfig)?,
+      "EndpointName" : (EndpointName)?,
+      "LastMonitoringExecutionSummary" : (MonitoringExecutionSummary)?,
+      "Tags" : (TagList)?
+    )
+
+    alias MonitoringScheduleArn = String
+
+    alias MonitoringScheduleConfig = NamedTuple(
+      "ScheduleConfig" : (ScheduleConfig)?,
+      "MonitoringJobDefinition" : (MonitoringJobDefinition)?,
+      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
+      "MonitoringType" : (MonitoringType)?
+    )
+
+    alias MonitoringScheduleList = Array(MonitoringSchedule)
+
+    alias MonitoringScheduleName = String
+
+    alias MonitoringScheduleSortKey = String
+
+    alias MonitoringScheduleSummary = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName,
+      "MonitoringScheduleArn" : MonitoringScheduleArn,
+      "CreationTime" : Timestamp,
+      "LastModifiedTime" : Timestamp,
+      "MonitoringScheduleStatus" : ScheduleStatus,
+      "EndpointName" : (EndpointName)?,
+      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
+      "MonitoringType" : (MonitoringType)?
+    )
+
+    alias MonitoringScheduleSummaryList = Array(MonitoringScheduleSummary)
+
+    alias MonitoringStatisticsResource = NamedTuple(
+      "S3Uri" : (S3Uri)?
+    )
+
+    alias MonitoringStoppingCondition = NamedTuple(
+      "MaxRuntimeInSeconds" : MonitoringMaxRuntimeInSeconds
+    )
+
+    alias MonitoringTimeOffsetString = String
+
+    alias MonitoringType = String
+
+    alias MountPath = String
+
+    alias NameContains = String
+
+    alias NestedFilters = NamedTuple(
+      "NestedPropertyName" : ResourcePropertyName,
+      "Filters" : FilterList
+    )
+
+    alias NestedFiltersList = Array(NestedFilters)
+
+    alias NetworkConfig = NamedTuple(
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "EnableNetworkIsolation" : (Boolean)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias NetworkInterfaceId = String
+
+    alias NextToken = String
+
+    alias NotebookInstanceAcceleratorType = String
+
+    alias NotebookInstanceAcceleratorTypes = Array(NotebookInstanceAcceleratorType)
+
+    alias NotebookInstanceArn = String
+
+    alias NotebookInstanceLifecycleConfigArn = String
+
+    alias NotebookInstanceLifecycleConfigContent = String
+
+    alias NotebookInstanceLifecycleConfigList = Array(NotebookInstanceLifecycleHook)
+
+    alias NotebookInstanceLifecycleConfigName = String
+
+    alias NotebookInstanceLifecycleConfigNameContains = String
+
+    alias NotebookInstanceLifecycleConfigSortKey = String
+
+    alias NotebookInstanceLifecycleConfigSortOrder = String
+
+    alias NotebookInstanceLifecycleConfigSummary = NamedTuple(
+      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName,
+      "NotebookInstanceLifecycleConfigArn" : NotebookInstanceLifecycleConfigArn,
+      "CreationTime" : (CreationTime)?,
+      "LastModifiedTime" : (LastModifiedTime)?
+    )
+
+    alias NotebookInstanceLifecycleConfigSummaryList = Array(NotebookInstanceLifecycleConfigSummary)
+
+    alias NotebookInstanceLifecycleHook = NamedTuple(
+      "Content" : (NotebookInstanceLifecycleConfigContent)?
+    )
+
+    alias NotebookInstanceName = String
+
+    alias NotebookInstanceNameContains = String
+
+    alias NotebookInstanceSortKey = String
+
+    alias NotebookInstanceSortOrder = String
+
+    alias NotebookInstanceStatus = String
+
+    alias NotebookInstanceSummary = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName,
+      "NotebookInstanceArn" : NotebookInstanceArn,
+      "NotebookInstanceStatus" : (NotebookInstanceStatus)?,
+      "Url" : (NotebookInstanceUrl)?,
+      "InstanceType" : (InstanceType)?,
+      "CreationTime" : (CreationTime)?,
+      "LastModifiedTime" : (LastModifiedTime)?,
+      "NotebookInstanceLifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
+      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
+      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?
+    )
+
+    alias NotebookInstanceSummaryList = Array(NotebookInstanceSummary)
+
+    alias NotebookInstanceUrl = String
+
+    alias NotebookInstanceVolumeSizeInGB = Int32
+
+    alias NotebookOutputOption = String
+
+    alias NotificationConfiguration = NamedTuple(
+      "NotificationTopicArn" : (NotificationTopicArn)?
+    )
+
+    alias NotificationTopicArn = String
+
+    alias NumberOfHumanWorkersPerDataObject = Int32
+
+    alias ObjectiveStatus = String
+
+    alias ObjectiveStatusCounter = Int32
+
+    alias ObjectiveStatusCounters = NamedTuple(
+      "Succeeded" : (ObjectiveStatusCounter)?,
+      "Pending" : (ObjectiveStatusCounter)?,
+      "Failed" : (ObjectiveStatusCounter)?
+    )
+
+    alias OfflineStoreConfig = NamedTuple(
+      "S3StorageConfig" : S3StorageConfig,
+      "DisableGlueTableCreation" : (Boolean)?,
+      "DataCatalogConfig" : (DataCatalogConfig)?
+    )
+
+    alias OfflineStoreStatus = NamedTuple(
+      "Status" : OfflineStoreStatusValue,
+      "BlockedReason" : (BlockedReason)?
+    )
+
+    alias OfflineStoreStatusValue = String
+
+    alias OidcConfig = NamedTuple(
+      "ClientId" : ClientId,
+      "ClientSecret" : ClientSecret,
+      "Issuer" : OidcEndpoint,
+      "AuthorizationEndpoint" : OidcEndpoint,
+      "TokenEndpoint" : OidcEndpoint,
+      "UserInfoEndpoint" : OidcEndpoint,
+      "LogoutEndpoint" : OidcEndpoint,
+      "JwksUri" : OidcEndpoint
+    )
+
+    alias OidcConfigForResponse = NamedTuple(
+      "ClientId" : (ClientId)?,
+      "Issuer" : (OidcEndpoint)?,
+      "AuthorizationEndpoint" : (OidcEndpoint)?,
+      "TokenEndpoint" : (OidcEndpoint)?,
+      "UserInfoEndpoint" : (OidcEndpoint)?,
+      "LogoutEndpoint" : (OidcEndpoint)?,
+      "JwksUri" : (OidcEndpoint)?
+    )
+
+    alias OidcEndpoint = String
+
+    alias OidcMemberDefinition = NamedTuple(
+      "Groups" : Groups
+    )
+
+    alias OnlineStoreConfig = NamedTuple(
+      "SecurityConfig" : (OnlineStoreSecurityConfig)?,
+      "EnableOnlineStore" : (Boolean)?
+    )
+
+    alias OnlineStoreSecurityConfig = NamedTuple(
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias Operator = String
+
+    alias OptionalDouble = Float64
+
+    alias OptionalInteger = Int32
+
+    alias OptionalVolumeSizeInGB = Int32
+
+    alias OrderKey = String
+
+    alias OutputConfig = NamedTuple(
+      "S3OutputLocation" : S3Uri,
+      "TargetDevice" : (TargetDevice)?,
+      "TargetPlatform" : (TargetPlatform)?,
+      "CompilerOptions" : (CompilerOptions)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias OutputDataConfig = NamedTuple(
+      "KmsKeyId" : (KmsKeyId)?,
+      "S3OutputPath" : S3Uri
+    )
+
+    alias PaginationToken = String
+
+    alias Parameter = NamedTuple(
+      "Name" : PipelineParameterName,
+      "Value" : String1024
+    )
+
+    alias ParameterKey = String
+
+    alias ParameterList = Array(Parameter)
+
+    alias ParameterName = String
+
+    alias ParameterRange = NamedTuple(
+      "IntegerParameterRangeSpecification" : (IntegerParameterRangeSpecification)?,
+      "ContinuousParameterRangeSpecification" : (ContinuousParameterRangeSpecification)?,
+      "CategoricalParameterRangeSpecification" : (CategoricalParameterRangeSpecification)?
+    )
+
+    alias ParameterRanges = NamedTuple(
+      "IntegerParameterRanges" : (IntegerParameterRanges)?,
+      "ContinuousParameterRanges" : (ContinuousParameterRanges)?,
+      "CategoricalParameterRanges" : (CategoricalParameterRanges)?
+    )
+
+    alias ParameterType = String
+
+    alias ParameterValue = String
+
+    alias ParameterValues = Array(ParameterValue)
+
+    alias Parent = NamedTuple(
+      "TrialName" : (ExperimentEntityName)?,
+      "ExperimentName" : (ExperimentEntityName)?
+    )
+
+    alias ParentHyperParameterTuningJob = NamedTuple(
+      "HyperParameterTuningJobName" : (HyperParameterTuningJobName)?
+    )
+
+    alias ParentHyperParameterTuningJobs = Array(ParentHyperParameterTuningJob)
+
+    alias Parents = Array(Parent)
+
+    alias Pipeline = NamedTuple(
+      "PipelineArn" : (PipelineArn)?,
+      "PipelineName" : (PipelineName)?,
+      "PipelineDisplayName" : (PipelineName)?,
+      "PipelineDescription" : (PipelineDescription)?,
+      "RoleArn" : (RoleArn)?,
+      "PipelineStatus" : (PipelineStatus)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastRunTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedBy" : (UserContext)?,
+      "Tags" : (TagList)?
+    )
+
+    alias PipelineArn = String
+
+    alias PipelineDefinition = String
+
+    alias PipelineDescription = String
+
+    alias PipelineExecution = NamedTuple(
+      "PipelineArn" : (PipelineArn)?,
+      "PipelineExecutionArn" : (PipelineExecutionArn)?,
+      "PipelineExecutionDisplayName" : (PipelineExecutionName)?,
+      "PipelineExecutionStatus" : (PipelineExecutionStatus)?,
+      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedBy" : (UserContext)?,
+      "PipelineParameters" : (ParameterList)?
+    )
+
+    alias PipelineExecutionArn = String
+
+    alias PipelineExecutionDescription = String
+
+    alias PipelineExecutionName = String
+
+    alias PipelineExecutionStatus = String
+
+    alias PipelineExecutionStep = NamedTuple(
+      "StepName" : (StepName)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "StepStatus" : (StepStatus)?,
+      "CacheHitResult" : (CacheHitResult)?,
+      "FailureReason" : (FailureReason)?,
+      "Metadata" : (PipelineExecutionStepMetadata)?
+    )
+
+    alias PipelineExecutionStepList = Array(PipelineExecutionStep)
+
+    alias PipelineExecutionStepMetadata = NamedTuple(
+      "TrainingJob" : (TrainingJobStepMetadata)?,
+      "ProcessingJob" : (ProcessingJobStepMetadata)?,
+      "TransformJob" : (TransformJobStepMetadata)?,
+      "Model" : (ModelStepMetadata)?,
+      "RegisterModel" : (RegisterModelStepMetadata)?,
+      "Condition" : (ConditionStepMetadata)?
+    )
+
+    alias PipelineExecutionSummary = NamedTuple(
+      "PipelineExecutionArn" : (PipelineExecutionArn)?,
+      "StartTime" : (Timestamp)?,
+      "PipelineExecutionStatus" : (PipelineExecutionStatus)?,
+      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
+      "PipelineExecutionDisplayName" : (PipelineExecutionName)?
+    )
+
+    alias PipelineExecutionSummaryList = Array(PipelineExecutionSummary)
+
+    alias PipelineName = String
+
+    alias PipelineParameterName = String
+
+    alias PipelineStatus = String
+
+    alias PipelineSummary = NamedTuple(
+      "PipelineArn" : (PipelineArn)?,
+      "PipelineName" : (PipelineName)?,
+      "PipelineDisplayName" : (PipelineName)?,
+      "PipelineDescription" : (PipelineDescription)?,
+      "RoleArn" : (RoleArn)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastExecutionTime" : (Timestamp)?
+    )
+
+    alias PipelineSummaryList = Array(PipelineSummary)
+
+    alias PolicyString = String
+
+    alias PresignedDomainUrl = String
+
+    alias ProbabilityThresholdAttribute = Float64
+
+    alias ProblemType = String
+
+    alias ProcessingClusterConfig = NamedTuple(
+      "InstanceCount" : ProcessingInstanceCount,
+      "InstanceType" : ProcessingInstanceType,
+      "VolumeSizeInGB" : ProcessingVolumeSizeInGB,
+      "VolumeKmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ProcessingEnvironmentKey = String
+
+    alias ProcessingEnvironmentMap = Hash(ProcessingEnvironmentKey,ProcessingEnvironmentValue)
+
+    alias ProcessingEnvironmentValue = String
+
+    alias ProcessingFeatureStoreOutput = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName
+    )
+
+    alias ProcessingInput = NamedTuple(
+      "InputName" : String,
+      "AppManaged" : (AppManaged)?,
+      "S3Input" : (ProcessingS3Input)?,
+      "DatasetDefinition" : (DatasetDefinition)?
+    )
+
+    alias ProcessingInputs = Array(ProcessingInput)
+
+    alias ProcessingInstanceCount = Int32
+
+    alias ProcessingInstanceType = String
+
+    alias ProcessingJob = NamedTuple(
+      "ProcessingInputs" : (ProcessingInputs)?,
+      "ProcessingOutputConfig" : (ProcessingOutputConfig)?,
+      "ProcessingJobName" : (ProcessingJobName)?,
+      "ProcessingResources" : (ProcessingResources)?,
+      "StoppingCondition" : (ProcessingStoppingCondition)?,
+      "AppSpecification" : (AppSpecification)?,
+      "Environment" : (ProcessingEnvironmentMap)?,
+      "NetworkConfig" : (NetworkConfig)?,
+      "RoleArn" : (RoleArn)?,
+      "ExperimentConfig" : (ExperimentConfig)?,
+      "ProcessingJobArn" : (ProcessingJobArn)?,
+      "ProcessingJobStatus" : (ProcessingJobStatus)?,
+      "ExitMessage" : (ExitMessage)?,
+      "FailureReason" : (FailureReason)?,
+      "ProcessingEndTime" : (Timestamp)?,
+      "ProcessingStartTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "CreationTime" : (Timestamp)?,
+      "MonitoringScheduleArn" : (MonitoringScheduleArn)?,
+      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "TrainingJobArn" : (TrainingJobArn)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ProcessingJobArn = String
+
+    alias ProcessingJobName = String
+
+    alias ProcessingJobStatus = String
+
+    alias ProcessingJobStepMetadata = NamedTuple(
+      "Arn" : (ProcessingJobArn)?
+    )
+
+    alias ProcessingJobSummaries = Array(ProcessingJobSummary)
+
+    alias ProcessingJobSummary = NamedTuple(
+      "ProcessingJobName" : ProcessingJobName,
+      "ProcessingJobArn" : ProcessingJobArn,
+      "CreationTime" : Timestamp,
+      "ProcessingEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "ProcessingJobStatus" : ProcessingJobStatus,
+      "FailureReason" : (FailureReason)?,
+      "ExitMessage" : (ExitMessage)?
+    )
+
+    alias ProcessingLocalPath = String
+
+    alias ProcessingMaxRuntimeInSeconds = Int32
+
+    alias ProcessingOutput = NamedTuple(
+      "OutputName" : String,
+      "S3Output" : (ProcessingS3Output)?,
+      "FeatureStoreOutput" : (ProcessingFeatureStoreOutput)?,
+      "AppManaged" : (AppManaged)?
+    )
+
+    alias ProcessingOutputConfig = NamedTuple(
+      "Outputs" : ProcessingOutputs,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ProcessingOutputs = Array(ProcessingOutput)
+
+    alias ProcessingResources = NamedTuple(
+      "ClusterConfig" : ProcessingClusterConfig
+    )
+
+    alias ProcessingS3CompressionType = String
+
+    alias ProcessingS3DataDistributionType = String
+
+    alias ProcessingS3DataType = String
+
+    alias ProcessingS3Input = NamedTuple(
+      "S3Uri" : S3Uri,
+      "LocalPath" : (ProcessingLocalPath)?,
+      "S3DataType" : ProcessingS3DataType,
+      "S3InputMode" : (ProcessingS3InputMode)?,
+      "S3DataDistributionType" : (ProcessingS3DataDistributionType)?,
+      "S3CompressionType" : (ProcessingS3CompressionType)?
+    )
+
+    alias ProcessingS3InputMode = String
+
+    alias ProcessingS3Output = NamedTuple(
+      "S3Uri" : S3Uri,
+      "LocalPath" : ProcessingLocalPath,
+      "S3UploadMode" : ProcessingS3UploadMode
+    )
+
+    alias ProcessingS3UploadMode = String
+
+    alias ProcessingStoppingCondition = NamedTuple(
+      "MaxRuntimeInSeconds" : ProcessingMaxRuntimeInSeconds
+    )
+
+    alias ProcessingVolumeSizeInGB = Int32
+
+    alias ProductId = String
+
+    alias ProductListings = Array(String)
+
+    alias ProductionVariant = NamedTuple(
+      "VariantName" : VariantName,
+      "ModelName" : ModelName,
+      "InitialInstanceCount" : TaskCount,
+      "InstanceType" : ProductionVariantInstanceType,
+      "InitialVariantWeight" : (VariantWeight)?,
+      "AcceleratorType" : (ProductionVariantAcceleratorType)?
+    )
+
+    alias ProductionVariantAcceleratorType = String
+
+    alias ProductionVariantInstanceType = String
+
+    alias ProductionVariantList = Array(ProductionVariant)
+
+    alias ProductionVariantSummary = NamedTuple(
+      "VariantName" : VariantName,
+      "DeployedImages" : (DeployedImages)?,
+      "CurrentWeight" : (VariantWeight)?,
+      "DesiredWeight" : (VariantWeight)?,
+      "CurrentInstanceCount" : (TaskCount)?,
+      "DesiredInstanceCount" : (TaskCount)?
+    )
+
+    alias ProductionVariantSummaryList = Array(ProductionVariantSummary)
+
+    alias ProfilerConfig = NamedTuple(
+      "S3OutputPath" : S3Uri,
+      "ProfilingIntervalInMilliseconds" : (ProfilingIntervalInMilliseconds)?,
+      "ProfilingParameters" : (ProfilingParameters)?
+    )
+
+    alias ProfilerConfigForUpdate = NamedTuple(
+      "S3OutputPath" : (S3Uri)?,
+      "ProfilingIntervalInMilliseconds" : (ProfilingIntervalInMilliseconds)?,
+      "ProfilingParameters" : (ProfilingParameters)?,
+      "DisableProfiler" : (DisableProfiler)?
+    )
+
+    alias ProfilerRuleConfiguration = NamedTuple(
+      "RuleConfigurationName" : RuleConfigurationName,
+      "LocalPath" : (DirectoryPath)?,
+      "S3OutputPath" : (S3Uri)?,
+      "RuleEvaluatorImage" : AlgorithmImage,
+      "InstanceType" : (ProcessingInstanceType)?,
+      "VolumeSizeInGB" : (OptionalVolumeSizeInGB)?,
+      "RuleParameters" : (RuleParameters)?
+    )
+
+    alias ProfilerRuleConfigurations = Array(ProfilerRuleConfiguration)
+
+    alias ProfilerRuleEvaluationStatus = NamedTuple(
+      "RuleConfigurationName" : (RuleConfigurationName)?,
+      "RuleEvaluationJobArn" : (ProcessingJobArn)?,
+      "RuleEvaluationStatus" : (RuleEvaluationStatus)?,
+      "StatusDetails" : (StatusDetails)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias ProfilerRuleEvaluationStatuses = Array(ProfilerRuleEvaluationStatus)
+
+    alias ProfilingIntervalInMilliseconds = Int64
+
+    alias ProfilingParameters = Hash(ConfigKey,ConfigValue)
+
+    alias ProfilingStatus = String
+
+    alias ProjectArn = String
+
+    alias ProjectEntityName = String
+
+    alias ProjectId = String
+
+    alias ProjectSortBy = String
+
+    alias ProjectSortOrder = String
+
+    alias ProjectStatus = String
+
+    alias ProjectSummary = NamedTuple(
+      "ProjectName" : ProjectEntityName,
+      "ProjectDescription" : (EntityDescription)?,
+      "ProjectArn" : ProjectArn,
+      "ProjectId" : ProjectId,
+      "CreationTime" : Timestamp,
+      "ProjectStatus" : ProjectStatus
+    )
+
+    alias ProjectSummaryList = Array(ProjectSummary)
+
+    alias PropertyNameHint = String
+
+    alias PropertyNameQuery = NamedTuple(
+      "PropertyNameHint" : PropertyNameHint
+    )
+
+    alias PropertyNameSuggestion = NamedTuple(
+      "PropertyName" : (ResourcePropertyName)?
+    )
+
+    alias PropertyNameSuggestionList = Array(PropertyNameSuggestion)
+
+    alias ProvisionedProductStatusMessage = String
+
+    alias ProvisioningParameter = NamedTuple(
+      "Key" : (ProvisioningParameterKey)?,
+      "Value" : (ProvisioningParameterValue)?
+    )
+
+    alias ProvisioningParameterKey = String
+
+    alias ProvisioningParameterValue = String
+
+    alias ProvisioningParameters = Array(ProvisioningParameter)
+
+    alias PublicWorkforceTaskPrice = NamedTuple(
+      "AmountInUsd" : (USD)?
+    )
+
+    alias PutModelPackageGroupPolicyInput = NamedTuple(
+      "ModelPackageGroupName" : EntityName,
+      "ResourcePolicy" : PolicyString
+    )
+
+    alias PutModelPackageGroupPolicyOutput = NamedTuple(
+      "ModelPackageGroupArn" : ModelPackageGroupArn
+    )
+
+    alias RealtimeInferenceInstanceTypes = Array(ProductionVariantInstanceType)
+
+    alias RecordWrapper = String
+
+    alias RedshiftClusterId = String
+
+    alias RedshiftDatabase = String
+
+    alias RedshiftDatasetDefinition = NamedTuple(
+      "ClusterId" : RedshiftClusterId,
+      "Database" : RedshiftDatabase,
+      "DbUser" : RedshiftUserName,
+      "QueryString" : RedshiftQueryString,
+      "ClusterRoleArn" : RoleArn,
+      "OutputS3Uri" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?,
+      "OutputFormat" : RedshiftResultFormat,
+      "OutputCompression" : (RedshiftResultCompressionType)?
+    )
+
+    alias RedshiftQueryString = String
+
+    alias RedshiftResultCompressionType = String
+
+    alias RedshiftResultFormat = String
+
+    alias RedshiftUserName = String
+
+    alias RegisterDevicesRequest = NamedTuple(
+      "DeviceFleetName" : EntityName,
+      "Devices" : Devices,
+      "Tags" : (TagList)?
+    )
+
+    alias RegisterModelStepMetadata = NamedTuple(
+      "Arn" : (String256)?
+    )
+
+    alias RenderUiTemplateRequest = NamedTuple(
+      "UiTemplate" : (UiTemplate)?,
+      "Task" : RenderableTask,
+      "RoleArn" : RoleArn,
+      "HumanTaskUiArn" : (HumanTaskUiArn)?
+    )
+
+    alias RenderUiTemplateResponse = NamedTuple(
+      "RenderedContent" : String,
+      "Errors" : RenderingErrorList
+    )
+
+    alias RenderableTask = NamedTuple(
+      "Input" : TaskInput
+    )
+
+    alias RenderingError = NamedTuple(
+      "Code" : String,
+      "Message" : String
+    )
+
+    alias RenderingErrorList = Array(RenderingError)
+
+    alias RepositoryAccessMode = String
+
+    alias ResolvedAttributes = NamedTuple(
+      "AutoMLJobObjective" : (AutoMLJobObjective)?,
+      "ProblemType" : (ProblemType)?,
+      "CompletionCriteria" : (AutoMLJobCompletionCriteria)?
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceConfig = NamedTuple(
+      "InstanceType" : TrainingInstanceType,
+      "InstanceCount" : TrainingInstanceCount,
+      "VolumeSizeInGB" : VolumeSizeInGB,
+      "VolumeKmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ResourceId = String
+
+    alias ResourceInUse = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ResourceLimitExceeded = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ResourceLimits = NamedTuple(
+      "MaxNumberOfTrainingJobs" : MaxNumberOfTrainingJobs,
+      "MaxParallelTrainingJobs" : MaxParallelTrainingJobs
+    )
+
+    alias ResourceNotFound = NamedTuple(
+      "Message" : (FailureReason)?
+    )
+
+    alias ResourcePropertyName = String
+
+    alias ResourceSpec = NamedTuple(
+      "SageMakerImageArn" : (ImageArn)?,
+      "SageMakerImageVersionArn" : (ImageVersionArn)?,
+      "InstanceType" : (AppInstanceType)?
+    )
+
+    alias ResourceType = String
+
+    alias ResponseMIMEType = String
+
+    alias ResponseMIMETypes = Array(ResponseMIMEType)
+
+    alias RetentionPolicy = NamedTuple(
+      "HomeEfsFileSystem" : (RetentionType)?
+    )
+
+    alias RetentionType = String
+
+    alias RoleArn = String
+
+    alias RootAccess = String
+
+    alias RuleConfigurationName = String
+
+    alias RuleEvaluationStatus = String
+
+    alias RuleParameters = Hash(ConfigKey,ConfigValue)
+
+    alias S3DataDistribution = String
+
+    alias S3DataSource = NamedTuple(
+      "S3DataType" : S3DataType,
+      "S3Uri" : S3Uri,
+      "S3DataDistributionType" : (S3DataDistribution)?,
+      "AttributeNames" : (AttributeNames)?
+    )
+
+    alias S3DataType = String
+
+    alias S3StorageConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias S3Uri = String
+
+    alias SagemakerServicecatalogStatus = String
+
+    alias SamplingPercentage = Int32
+
+    alias ScheduleConfig = NamedTuple(
+      "ScheduleExpression" : ScheduleExpression
+    )
+
+    alias ScheduleExpression = String
+
+    alias ScheduleStatus = String
+
+    alias SearchExpression = NamedTuple(
+      "Filters" : (FilterList)?,
+      "NestedFilters" : (NestedFiltersList)?,
+      "SubExpressions" : (SearchExpressionList)?,
+      "Operator" : (BooleanOperator)?
+    )
+
+    alias SearchExpressionList = Array(SearchExpression)
+
+    alias SearchRecord = NamedTuple(
+      "TrainingJob" : (TrainingJob)?,
+      "Experiment" : (Experiment)?,
+      "Trial" : (Trial)?,
+      "TrialComponent" : (TrialComponent)?,
+      "Endpoint" : (Endpoint)?,
+      "ModelPackage" : (ModelPackage)?,
+      "ModelPackageGroup" : (ModelPackageGroup)?,
+      "Pipeline" : (Pipeline)?,
+      "PipelineExecution" : (PipelineExecution)?,
+      "FeatureGroup" : (FeatureGroup)?
+    )
+
+    alias SearchRequest = NamedTuple(
+      "Resource" : ResourceType,
+      "SearchExpression" : (SearchExpression)?,
+      "SortBy" : (ResourcePropertyName)?,
+      "SortOrder" : (SearchSortOrder)?,
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias SearchResponse = NamedTuple(
+      "Results" : (SearchResultsList)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias SearchResultsList = Array(SearchRecord)
+
+    alias SearchSortOrder = String
+
+    alias SecondaryStatus = String
+
+    alias SecondaryStatusTransition = NamedTuple(
+      "Status" : SecondaryStatus,
+      "StartTime" : Timestamp,
+      "EndTime" : (Timestamp)?,
+      "StatusMessage" : (StatusMessage)?
+    )
+
+    alias SecondaryStatusTransitions = Array(SecondaryStatusTransition)
+
+    alias SecretArn = String
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias Seed = Int64
+
+    alias ServiceCatalogEntityId = String
+
+    alias ServiceCatalogProvisionedProductDetails = NamedTuple(
+      "ProvisionedProductId" : (ServiceCatalogEntityId)?,
+      "ProvisionedProductStatusMessage" : (ProvisionedProductStatusMessage)?
+    )
+
+    alias ServiceCatalogProvisioningDetails = NamedTuple(
+      "ProductId" : ServiceCatalogEntityId,
+      "ProvisioningArtifactId" : ServiceCatalogEntityId,
+      "PathId" : (ServiceCatalogEntityId)?,
+      "ProvisioningParameters" : (ProvisioningParameters)?
+    )
+
+    alias SessionExpirationDurationInSeconds = Int32
+
+    alias SharingSettings = NamedTuple(
+      "NotebookOutputOption" : (NotebookOutputOption)?,
+      "S3OutputPath" : (S3Uri)?,
+      "S3KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias ShuffleConfig = NamedTuple(
+      "Seed" : Seed
+    )
+
+    alias SingleSignOnUserIdentifier = String
+
+    alias SnsTopicArn = String
+
+    alias SortActionsBy = String
+
+    alias SortArtifactsBy = String
+
+    alias SortAssociationsBy = String
+
+    alias SortBy = String
+
+    alias SortContextsBy = String
+
+    alias SortExperimentsBy = String
+
+    alias SortOrder = String
+
+    alias SortPipelineExecutionsBy = String
+
+    alias SortPipelinesBy = String
+
+    alias SortTrialComponentsBy = String
+
+    alias SortTrialsBy = String
+
+    alias SourceAlgorithm = NamedTuple(
+      "ModelDataUrl" : (Url)?,
+      "AlgorithmName" : ArnOrName
+    )
+
+    alias SourceAlgorithmList = Array(SourceAlgorithm)
+
+    alias SourceAlgorithmSpecification = NamedTuple(
+      "SourceAlgorithms" : SourceAlgorithmList
+    )
+
+    alias SourceIpConfig = NamedTuple(
+      "Cidrs" : Cidrs
+    )
+
+    alias SourceType = String
+
+    alias SourceUri = String
+
+    alias SplitType = String
+
+    alias StartMonitoringScheduleRequest = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName
+    )
+
+    alias StartNotebookInstanceInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName
+    )
+
+    alias StartPipelineExecutionRequest = NamedTuple(
+      "PipelineName" : PipelineName,
+      "PipelineExecutionDisplayName" : (PipelineExecutionName)?,
+      "PipelineParameters" : (ParameterList)?,
+      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
+      "ClientRequestToken" : IdempotencyToken
+    )
+
+    alias StartPipelineExecutionResponse = NamedTuple(
+      "PipelineExecutionArn" : (PipelineExecutionArn)?
+    )
+
+    alias StatusDetails = String
+
+    alias StatusMessage = String
+
+    alias StepName = String
+
+    alias StepStatus = String
+
+    alias StopAutoMLJobRequest = NamedTuple(
+      "AutoMLJobName" : AutoMLJobName
+    )
+
+    alias StopCompilationJobRequest = NamedTuple(
+      "CompilationJobName" : EntityName
+    )
+
+    alias StopEdgePackagingJobRequest = NamedTuple(
+      "EdgePackagingJobName" : EntityName
+    )
+
+    alias StopHyperParameterTuningJobRequest = NamedTuple(
+      "HyperParameterTuningJobName" : HyperParameterTuningJobName
+    )
+
+    alias StopLabelingJobRequest = NamedTuple(
+      "LabelingJobName" : LabelingJobName
+    )
+
+    alias StopMonitoringScheduleRequest = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName
+    )
+
+    alias StopNotebookInstanceInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName
+    )
+
+    alias StopPipelineExecutionRequest = NamedTuple(
+      "PipelineExecutionArn" : PipelineExecutionArn,
+      "ClientRequestToken" : IdempotencyToken
+    )
+
+    alias StopPipelineExecutionResponse = NamedTuple(
+      "PipelineExecutionArn" : (PipelineExecutionArn)?
+    )
+
+    alias StopProcessingJobRequest = NamedTuple(
+      "ProcessingJobName" : ProcessingJobName
+    )
+
+    alias StopTrainingJobRequest = NamedTuple(
+      "TrainingJobName" : TrainingJobName
+    )
+
+    alias StopTransformJobRequest = NamedTuple(
+      "TransformJobName" : TransformJobName
+    )
+
+    alias StoppingCondition = NamedTuple(
+      "MaxRuntimeInSeconds" : (MaxRuntimeInSeconds)?,
+      "MaxWaitTimeInSeconds" : (MaxWaitTimeInSeconds)?
+    )
+
+    alias String = String
+
+    alias String1024 = String
+
+    alias String200 = String
+
+    alias String2048 = String
+
+    alias String256 = String
+
+    alias String64 = String
+
+    alias StringParameterValue = String
+
+    alias SubnetId = String
+
+    alias Subnets = Array(SubnetId)
+
+    alias SubscribedWorkteam = NamedTuple(
+      "WorkteamArn" : WorkteamArn,
+      "MarketplaceTitle" : (String200)?,
+      "SellerName" : (String)?,
+      "MarketplaceDescription" : (String200)?,
+      "ListingId" : (String)?
+    )
+
+    alias SubscribedWorkteams = Array(SubscribedWorkteam)
+
+    alias Success = Bool
+
+    alias SuggestionQuery = NamedTuple(
+      "PropertyNameQuery" : (PropertyNameQuery)?
+    )
+
+    alias TableName = String
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias TargetAttributeName = String
+
+    alias TargetDevice = String
+
+    alias TargetObjectiveMetricValue = Float32
+
+    alias TargetPlatform = NamedTuple(
+      "Os" : TargetPlatformOs,
+      "Arch" : TargetPlatformArch,
+      "Accelerator" : (TargetPlatformAccelerator)?
+    )
+
+    alias TargetPlatformAccelerator = String
+
+    alias TargetPlatformArch = String
+
+    alias TargetPlatformOs = String
+
+    alias TaskAvailabilityLifetimeInSeconds = Int32
+
+    alias TaskCount = Int32
+
+    alias TaskDescription = String
+
+    alias TaskInput = String
+
+    alias TaskKeyword = String
+
+    alias TaskKeywords = Array(TaskKeyword)
+
+    alias TaskTimeLimitInSeconds = Int32
+
+    alias TaskTitle = String
+
+    alias TemplateContent = String
+
+    alias TemplateContentSha256 = String
+
+    alias TemplateUrl = String
+
+    alias TensorBoardAppSettings = NamedTuple(
+      "DefaultResourceSpec" : (ResourceSpec)?
+    )
+
+    alias TensorBoardOutputConfig = NamedTuple(
+      "LocalPath" : (DirectoryPath)?,
+      "S3OutputPath" : S3Uri
+    )
+
+    alias TenthFractionsOfACent = Int32
+
+    alias TerminationWaitInSeconds = Int32
+
+    alias ThingName = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TrafficRoutingConfig = NamedTuple(
+      "Type" : TrafficRoutingConfigType,
+      "WaitIntervalInSeconds" : WaitIntervalInSeconds,
+      "CanarySize" : (CapacitySize)?
+    )
+
+    alias TrafficRoutingConfigType = String
+
+    alias TrainingInputMode = String
+
+    alias TrainingInstanceCount = Int32
+
+    alias TrainingInstanceType = String
+
+    alias TrainingInstanceTypes = Array(TrainingInstanceType)
+
+    alias TrainingJob = NamedTuple(
+      "TrainingJobName" : (TrainingJobName)?,
+      "TrainingJobArn" : (TrainingJobArn)?,
+      "TuningJobArn" : (HyperParameterTuningJobArn)?,
+      "LabelingJobArn" : (LabelingJobArn)?,
+      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "ModelArtifacts" : (ModelArtifacts)?,
+      "TrainingJobStatus" : (TrainingJobStatus)?,
+      "SecondaryStatus" : (SecondaryStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "HyperParameters" : (HyperParameters)?,
+      "AlgorithmSpecification" : (AlgorithmSpecification)?,
+      "RoleArn" : (RoleArn)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "ResourceConfig" : (ResourceConfig)?,
+      "VpcConfig" : (VpcConfig)?,
+      "StoppingCondition" : (StoppingCondition)?,
+      "CreationTime" : (Timestamp)?,
+      "TrainingStartTime" : (Timestamp)?,
+      "TrainingEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "SecondaryStatusTransitions" : (SecondaryStatusTransitions)?,
+      "FinalMetricDataList" : (FinalMetricDataList)?,
+      "EnableNetworkIsolation" : (Boolean)?,
+      "EnableInterContainerTrafficEncryption" : (Boolean)?,
+      "EnableManagedSpotTraining" : (Boolean)?,
+      "CheckpointConfig" : (CheckpointConfig)?,
+      "TrainingTimeInSeconds" : (TrainingTimeInSeconds)?,
+      "BillableTimeInSeconds" : (BillableTimeInSeconds)?,
+      "DebugHookConfig" : (DebugHookConfig)?,
+      "ExperimentConfig" : (ExperimentConfig)?,
+      "DebugRuleConfigurations" : (DebugRuleConfigurations)?,
+      "TensorBoardOutputConfig" : (TensorBoardOutputConfig)?,
+      "DebugRuleEvaluationStatuses" : (DebugRuleEvaluationStatuses)?,
+      "Tags" : (TagList)?
+    )
+
+    alias TrainingJobArn = String
+
+    alias TrainingJobDefinition = NamedTuple(
+      "TrainingInputMode" : TrainingInputMode,
+      "HyperParameters" : (HyperParameters)?,
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "ResourceConfig" : ResourceConfig,
+      "StoppingCondition" : StoppingCondition
+    )
+
+    alias TrainingJobEarlyStoppingType = String
+
+    alias TrainingJobName = String
+
+    alias TrainingJobSortByOptions = String
+
+    alias TrainingJobStatus = String
+
+    alias TrainingJobStatusCounter = Int32
+
+    alias TrainingJobStatusCounters = NamedTuple(
+      "Completed" : (TrainingJobStatusCounter)?,
+      "InProgress" : (TrainingJobStatusCounter)?,
+      "RetryableError" : (TrainingJobStatusCounter)?,
+      "NonRetryableError" : (TrainingJobStatusCounter)?,
+      "Stopped" : (TrainingJobStatusCounter)?
+    )
+
+    alias TrainingJobStepMetadata = NamedTuple(
+      "Arn" : (TrainingJobArn)?
+    )
+
+    alias TrainingJobSummaries = Array(TrainingJobSummary)
+
+    alias TrainingJobSummary = NamedTuple(
+      "TrainingJobName" : TrainingJobName,
+      "TrainingJobArn" : TrainingJobArn,
+      "CreationTime" : Timestamp,
+      "TrainingEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "TrainingJobStatus" : TrainingJobStatus
+    )
+
+    alias TrainingSpecification = NamedTuple(
+      "TrainingImage" : ContainerImage,
+      "TrainingImageDigest" : (ImageDigest)?,
+      "SupportedHyperParameters" : (HyperParameterSpecifications)?,
+      "SupportedTrainingInstanceTypes" : TrainingInstanceTypes,
+      "SupportsDistributedTraining" : (Boolean)?,
+      "MetricDefinitions" : (MetricDefinitionList)?,
+      "TrainingChannels" : ChannelSpecifications,
+      "SupportedTuningJobObjectiveMetrics" : (HyperParameterTuningJobObjectives)?
+    )
+
+    alias TrainingTimeInSeconds = Int32
+
+    alias TransformDataSource = NamedTuple(
+      "S3DataSource" : TransformS3DataSource
+    )
+
+    alias TransformEnvironmentKey = String
+
+    alias TransformEnvironmentMap = Hash(TransformEnvironmentKey,TransformEnvironmentValue)
+
+    alias TransformEnvironmentValue = String
+
+    alias TransformInput = NamedTuple(
+      "DataSource" : TransformDataSource,
+      "ContentType" : (ContentType)?,
+      "CompressionType" : (CompressionType)?,
+      "SplitType" : (SplitType)?
+    )
+
+    alias TransformInstanceCount = Int32
+
+    alias TransformInstanceType = String
+
+    alias TransformInstanceTypes = Array(TransformInstanceType)
+
+    alias TransformJob = NamedTuple(
+      "TransformJobName" : (TransformJobName)?,
+      "TransformJobArn" : (TransformJobArn)?,
+      "TransformJobStatus" : (TransformJobStatus)?,
+      "FailureReason" : (FailureReason)?,
+      "ModelName" : (ModelName)?,
+      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
+      "ModelClientConfig" : (ModelClientConfig)?,
+      "MaxPayloadInMB" : (MaxPayloadInMB)?,
+      "BatchStrategy" : (BatchStrategy)?,
+      "Environment" : (TransformEnvironmentMap)?,
+      "TransformInput" : (TransformInput)?,
+      "TransformOutput" : (TransformOutput)?,
+      "TransformResources" : (TransformResources)?,
+      "CreationTime" : (Timestamp)?,
+      "TransformStartTime" : (Timestamp)?,
+      "TransformEndTime" : (Timestamp)?,
+      "LabelingJobArn" : (LabelingJobArn)?,
+      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "DataProcessing" : (DataProcessing)?,
+      "ExperimentConfig" : (ExperimentConfig)?,
+      "Tags" : (TagList)?
+    )
+
+    alias TransformJobArn = String
+
+    alias TransformJobDefinition = NamedTuple(
+      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
+      "MaxPayloadInMB" : (MaxPayloadInMB)?,
+      "BatchStrategy" : (BatchStrategy)?,
+      "Environment" : (TransformEnvironmentMap)?,
+      "TransformInput" : TransformInput,
+      "TransformOutput" : TransformOutput,
+      "TransformResources" : TransformResources
+    )
+
+    alias TransformJobName = String
+
+    alias TransformJobStatus = String
+
+    alias TransformJobStepMetadata = NamedTuple(
+      "Arn" : (TransformJobArn)?
+    )
+
+    alias TransformJobSummaries = Array(TransformJobSummary)
+
+    alias TransformJobSummary = NamedTuple(
+      "TransformJobName" : TransformJobName,
+      "TransformJobArn" : TransformJobArn,
+      "CreationTime" : Timestamp,
+      "TransformEndTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "TransformJobStatus" : TransformJobStatus,
+      "FailureReason" : (FailureReason)?
+    )
+
+    alias TransformOutput = NamedTuple(
+      "S3OutputPath" : S3Uri,
+      "Accept" : (Accept)?,
+      "AssembleWith" : (AssemblyType)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias TransformResources = NamedTuple(
+      "InstanceType" : TransformInstanceType,
+      "InstanceCount" : TransformInstanceCount,
+      "VolumeKmsKeyId" : (KmsKeyId)?
+    )
+
+    alias TransformS3DataSource = NamedTuple(
+      "S3DataType" : S3DataType,
+      "S3Uri" : S3Uri
+    )
+
+    alias Trial = NamedTuple(
+      "TrialName" : (ExperimentEntityName)?,
+      "TrialArn" : (TrialArn)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "ExperimentName" : (ExperimentEntityName)?,
+      "Source" : (TrialSource)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "Tags" : (TagList)?,
+      "TrialComponentSummaries" : (TrialComponentSimpleSummaries)?
+    )
+
+    alias TrialArn = String
+
+    alias TrialComponent = NamedTuple(
+      "TrialComponentName" : (ExperimentEntityName)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "TrialComponentArn" : (TrialComponentArn)?,
+      "Source" : (TrialComponentSource)?,
+      "Status" : (TrialComponentStatus)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?,
+      "Parameters" : (TrialComponentParameters)?,
+      "InputArtifacts" : (TrialComponentArtifacts)?,
+      "OutputArtifacts" : (TrialComponentArtifacts)?,
+      "Metrics" : (TrialComponentMetricSummaries)?,
+      "MetadataProperties" : (MetadataProperties)?,
+      "SourceDetail" : (TrialComponentSourceDetail)?,
+      "Tags" : (TagList)?,
+      "Parents" : (Parents)?
+    )
+
+    alias TrialComponentArn = String
+
+    alias TrialComponentArtifact = NamedTuple(
+      "MediaType" : (MediaType)?,
+      "Value" : TrialComponentArtifactValue
+    )
+
+    alias TrialComponentArtifactValue = String
+
+    alias TrialComponentArtifacts = Hash(TrialComponentKey64,TrialComponentArtifact)
+
+    alias TrialComponentKey256 = String
+
+    alias TrialComponentKey64 = String
+
+    alias TrialComponentMetricSummaries = Array(TrialComponentMetricSummary)
+
+    alias TrialComponentMetricSummary = NamedTuple(
+      "MetricName" : (MetricName)?,
+      "SourceArn" : (TrialComponentSourceArn)?,
+      "TimeStamp" : (Timestamp)?,
+      "Max" : (OptionalDouble)?,
+      "Min" : (OptionalDouble)?,
+      "Last" : (OptionalDouble)?,
+      "Count" : (OptionalInteger)?,
+      "Avg" : (OptionalDouble)?,
+      "StdDev" : (OptionalDouble)?
+    )
+
+    alias TrialComponentParameterValue = NamedTuple(
+      "StringValue" : (StringParameterValue)?,
+      "NumberValue" : (DoubleParameterValue)?
+    )
+
+    alias TrialComponentParameters = Hash(TrialComponentKey256,TrialComponentParameterValue)
+
+    alias TrialComponentPrimaryStatus = String
+
+    alias TrialComponentSimpleSummaries = Array(TrialComponentSimpleSummary)
+
+    alias TrialComponentSimpleSummary = NamedTuple(
+      "TrialComponentName" : (ExperimentEntityName)?,
+      "TrialComponentArn" : (TrialComponentArn)?,
+      "TrialComponentSource" : (TrialComponentSource)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?
+    )
+
+    alias TrialComponentSource = NamedTuple(
+      "SourceArn" : TrialComponentSourceArn,
+      "SourceType" : (SourceType)?
+    )
+
+    alias TrialComponentSourceArn = String
+
+    alias TrialComponentSourceDetail = NamedTuple(
+      "SourceArn" : (TrialComponentSourceArn)?,
+      "TrainingJob" : (TrainingJob)?,
+      "ProcessingJob" : (ProcessingJob)?,
+      "TransformJob" : (TransformJob)?
+    )
+
+    alias TrialComponentStatus = NamedTuple(
+      "PrimaryStatus" : (TrialComponentPrimaryStatus)?,
+      "Message" : (TrialComponentStatusMessage)?
+    )
+
+    alias TrialComponentStatusMessage = String
+
+    alias TrialComponentSummaries = Array(TrialComponentSummary)
+
+    alias TrialComponentSummary = NamedTuple(
+      "TrialComponentName" : (ExperimentEntityName)?,
+      "TrialComponentArn" : (TrialComponentArn)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "TrialComponentSource" : (TrialComponentSource)?,
+      "Status" : (TrialComponentStatus)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "CreationTime" : (Timestamp)?,
+      "CreatedBy" : (UserContext)?,
+      "LastModifiedTime" : (Timestamp)?,
+      "LastModifiedBy" : (UserContext)?
+    )
+
+    alias TrialSource = NamedTuple(
+      "SourceArn" : TrialSourceArn,
+      "SourceType" : (SourceType)?
+    )
+
+    alias TrialSourceArn = String
+
+    alias TrialSummaries = Array(TrialSummary)
+
+    alias TrialSummary = NamedTuple(
+      "TrialArn" : (TrialArn)?,
+      "TrialName" : (ExperimentEntityName)?,
+      "DisplayName" : (ExperimentEntityName)?,
+      "TrialSource" : (TrialSource)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias TuningJobCompletionCriteria = NamedTuple(
+      "TargetObjectiveMetricValue" : TargetObjectiveMetricValue
+    )
+
+    alias USD = NamedTuple(
+      "Dollars" : (Dollars)?,
+      "Cents" : (Cents)?,
+      "TenthFractionsOfACent" : (TenthFractionsOfACent)?
+    )
+
+    alias UiConfig = NamedTuple(
+      "UiTemplateS3Uri" : (S3Uri)?,
+      "HumanTaskUiArn" : (HumanTaskUiArn)?
+    )
+
+    alias UiTemplate = NamedTuple(
+      "Content" : TemplateContent
+    )
+
+    alias UiTemplateInfo = NamedTuple(
+      "Url" : (TemplateUrl)?,
+      "ContentSha256" : (TemplateContentSha256)?
+    )
+
+    alias UpdateActionRequest = NamedTuple(
+      "ActionName" : ExperimentEntityName,
+      "Description" : (ExperimentDescription)?,
+      "Status" : (ActionStatus)?,
+      "Properties" : (LineageEntityParameters)?,
+      "PropertiesToRemove" : (ListLineageEntityParameterKey)?
+    )
+
+    alias UpdateActionResponse = NamedTuple(
+      "ActionArn" : (ActionArn)?
+    )
+
+    alias UpdateAppImageConfigRequest = NamedTuple(
+      "AppImageConfigName" : AppImageConfigName,
+      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+    )
+
+    alias UpdateAppImageConfigResponse = NamedTuple(
+      "AppImageConfigArn" : (AppImageConfigArn)?
+    )
+
+    alias UpdateArtifactRequest = NamedTuple(
+      "ArtifactArn" : ArtifactArn,
+      "ArtifactName" : (ExperimentEntityName)?,
+      "Properties" : (LineageEntityParameters)?,
+      "PropertiesToRemove" : (ListLineageEntityParameterKey)?
+    )
+
+    alias UpdateArtifactResponse = NamedTuple(
+      "ArtifactArn" : (ArtifactArn)?
+    )
+
+    alias UpdateCodeRepositoryInput = NamedTuple(
+      "CodeRepositoryName" : EntityName,
+      "GitConfig" : (GitConfigForUpdate)?
+    )
+
+    alias UpdateCodeRepositoryOutput = NamedTuple(
+      "CodeRepositoryArn" : CodeRepositoryArn
+    )
+
+    alias UpdateContextRequest = NamedTuple(
+      "ContextName" : ExperimentEntityName,
+      "Description" : (ExperimentDescription)?,
+      "Properties" : (LineageEntityParameters)?,
+      "PropertiesToRemove" : (ListLineageEntityParameterKey)?
+    )
+
+    alias UpdateContextResponse = NamedTuple(
+      "ContextArn" : (ContextArn)?
+    )
+
+    alias UpdateDeviceFleetRequest = NamedTuple(
+      "DeviceFleetName" : EntityName,
+      "RoleArn" : (RoleArn)?,
+      "Description" : (DeviceFleetDescription)?,
+      "OutputConfig" : EdgeOutputConfig
+    )
+
+    alias UpdateDevicesRequest = NamedTuple(
+      "DeviceFleetName" : EntityName,
+      "Devices" : Devices
+    )
+
+    alias UpdateDomainRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "DefaultUserSettings" : (UserSettings)?
+    )
+
+    alias UpdateDomainResponse = NamedTuple(
+      "DomainArn" : (DomainArn)?
+    )
+
+    alias UpdateEndpointInput = NamedTuple(
+      "EndpointName" : EndpointName,
+      "EndpointConfigName" : EndpointConfigName,
+      "RetainAllVariantProperties" : (Boolean)?,
+      "ExcludeRetainedVariantProperties" : (VariantPropertyList)?,
+      "DeploymentConfig" : (DeploymentConfig)?
+    )
+
+    alias UpdateEndpointOutput = NamedTuple(
+      "EndpointArn" : EndpointArn
+    )
+
+    alias UpdateEndpointWeightsAndCapacitiesInput = NamedTuple(
+      "EndpointName" : EndpointName,
+      "DesiredWeightsAndCapacities" : DesiredWeightAndCapacityList
+    )
+
+    alias UpdateEndpointWeightsAndCapacitiesOutput = NamedTuple(
+      "EndpointArn" : EndpointArn
+    )
+
+    alias UpdateExperimentRequest = NamedTuple(
+      "ExperimentName" : ExperimentEntityName,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Description" : (ExperimentDescription)?
+    )
+
+    alias UpdateExperimentResponse = NamedTuple(
+      "ExperimentArn" : (ExperimentArn)?
+    )
+
+    alias UpdateImageRequest = NamedTuple(
+      "DeleteProperties" : (ImageDeletePropertyList)?,
+      "Description" : (ImageDescription)?,
+      "DisplayName" : (ImageDisplayName)?,
+      "ImageName" : ImageName,
+      "RoleArn" : (RoleArn)?
+    )
+
+    alias UpdateImageResponse = NamedTuple(
+      "ImageArn" : (ImageArn)?
+    )
+
+    alias UpdateModelPackageInput = NamedTuple(
+      "ModelPackageArn" : ModelPackageArn,
+      "ModelApprovalStatus" : ModelApprovalStatus,
+      "ApprovalDescription" : (ApprovalDescription)?
+    )
+
+    alias UpdateModelPackageOutput = NamedTuple(
+      "ModelPackageArn" : ModelPackageArn
+    )
+
+    alias UpdateMonitoringScheduleRequest = NamedTuple(
+      "MonitoringScheduleName" : MonitoringScheduleName,
+      "MonitoringScheduleConfig" : MonitoringScheduleConfig
+    )
+
+    alias UpdateMonitoringScheduleResponse = NamedTuple(
+      "MonitoringScheduleArn" : MonitoringScheduleArn
+    )
+
+    alias UpdateNotebookInstanceInput = NamedTuple(
+      "NotebookInstanceName" : NotebookInstanceName,
+      "InstanceType" : (InstanceType)?,
+      "RoleArn" : (RoleArn)?,
+      "LifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
+      "DisassociateLifecycleConfig" : (DisassociateNotebookInstanceLifecycleConfig)?,
+      "VolumeSizeInGB" : (NotebookInstanceVolumeSizeInGB)?,
+      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
+      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?,
+      "AcceleratorTypes" : (NotebookInstanceAcceleratorTypes)?,
+      "DisassociateAcceleratorTypes" : (DisassociateNotebookInstanceAcceleratorTypes)?,
+      "DisassociateDefaultCodeRepository" : (DisassociateDefaultCodeRepository)?,
+      "DisassociateAdditionalCodeRepositories" : (DisassociateAdditionalCodeRepositories)?,
+      "RootAccess" : (RootAccess)?
+    )
+
+    alias UpdateNotebookInstanceLifecycleConfigInput = NamedTuple(
+      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName,
+      "OnCreate" : (NotebookInstanceLifecycleConfigList)?,
+      "OnStart" : (NotebookInstanceLifecycleConfigList)?
+    )
+
+    alias UpdateNotebookInstanceLifecycleConfigOutput = NamedTuple(
+      
+    )
+
+    alias UpdateNotebookInstanceOutput = NamedTuple(
+      
+    )
+
+    alias UpdatePipelineExecutionRequest = NamedTuple(
+      "PipelineExecutionArn" : PipelineExecutionArn,
+      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
+      "PipelineExecutionDisplayName" : (PipelineExecutionName)?
+    )
+
+    alias UpdatePipelineExecutionResponse = NamedTuple(
+      "PipelineExecutionArn" : (PipelineExecutionArn)?
+    )
+
+    alias UpdatePipelineRequest = NamedTuple(
+      "PipelineName" : PipelineName,
+      "PipelineDisplayName" : (PipelineName)?,
+      "PipelineDefinition" : (PipelineDefinition)?,
+      "PipelineDescription" : (PipelineDescription)?,
+      "RoleArn" : (RoleArn)?
+    )
+
+    alias UpdatePipelineResponse = NamedTuple(
+      "PipelineArn" : (PipelineArn)?
+    )
+
+    alias UpdateTrainingJobRequest = NamedTuple(
+      "TrainingJobName" : TrainingJobName,
+      "ProfilerConfig" : (ProfilerConfigForUpdate)?,
+      "ProfilerRuleConfigurations" : (ProfilerRuleConfigurations)?
+    )
+
+    alias UpdateTrainingJobResponse = NamedTuple(
+      "TrainingJobArn" : TrainingJobArn
+    )
+
+    alias UpdateTrialComponentRequest = NamedTuple(
+      "TrialComponentName" : ExperimentEntityName,
+      "DisplayName" : (ExperimentEntityName)?,
+      "Status" : (TrialComponentStatus)?,
+      "StartTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "Parameters" : (TrialComponentParameters)?,
+      "ParametersToRemove" : (ListTrialComponentKey256)?,
+      "InputArtifacts" : (TrialComponentArtifacts)?,
+      "InputArtifactsToRemove" : (ListTrialComponentKey256)?,
+      "OutputArtifacts" : (TrialComponentArtifacts)?,
+      "OutputArtifactsToRemove" : (ListTrialComponentKey256)?
+    )
+
+    alias UpdateTrialComponentResponse = NamedTuple(
+      "TrialComponentArn" : (TrialComponentArn)?
+    )
+
+    alias UpdateTrialRequest = NamedTuple(
+      "TrialName" : ExperimentEntityName,
+      "DisplayName" : (ExperimentEntityName)?
+    )
+
+    alias UpdateTrialResponse = NamedTuple(
+      "TrialArn" : (TrialArn)?
+    )
+
+    alias UpdateUserProfileRequest = NamedTuple(
+      "DomainId" : DomainId,
+      "UserProfileName" : UserProfileName,
+      "UserSettings" : (UserSettings)?
+    )
+
+    alias UpdateUserProfileResponse = NamedTuple(
+      "UserProfileArn" : (UserProfileArn)?
+    )
+
+    alias UpdateWorkforceRequest = NamedTuple(
+      "WorkforceName" : WorkforceName,
+      "SourceIpConfig" : (SourceIpConfig)?,
+      "OidcConfig" : (OidcConfig)?
+    )
+
+    alias UpdateWorkforceResponse = NamedTuple(
+      "Workforce" : Workforce
+    )
+
+    alias UpdateWorkteamRequest = NamedTuple(
+      "WorkteamName" : WorkteamName,
+      "MemberDefinitions" : (MemberDefinitions)?,
+      "Description" : (String200)?,
+      "NotificationConfiguration" : (NotificationConfiguration)?
+    )
+
+    alias UpdateWorkteamResponse = NamedTuple(
+      "Workteam" : Workteam
+    )
+
+    alias Url = String
+
+    alias UserContext = NamedTuple(
+      "UserProfileArn" : (String)?,
+      "UserProfileName" : (String)?,
+      "DomainId" : (String)?
+    )
+
+    alias UserProfileArn = String
+
+    alias UserProfileDetails = NamedTuple(
+      "DomainId" : (DomainId)?,
+      "UserProfileName" : (UserProfileName)?,
+      "Status" : (UserProfileStatus)?,
+      "CreationTime" : (CreationTime)?,
+      "LastModifiedTime" : (LastModifiedTime)?
+    )
+
+    alias UserProfileList = Array(UserProfileDetails)
+
+    alias UserProfileName = String
+
+    alias UserProfileSortKey = String
+
+    alias UserProfileStatus = String
+
+    alias UserSettings = NamedTuple(
+      "ExecutionRole" : (RoleArn)?,
+      "SecurityGroups" : (SecurityGroupIds)?,
+      "SharingSettings" : (SharingSettings)?,
+      "JupyterServerAppSettings" : (JupyterServerAppSettings)?,
+      "KernelGatewayAppSettings" : (KernelGatewayAppSettings)?,
+      "TensorBoardAppSettings" : (TensorBoardAppSettings)?
+    )
+
+    alias VariantName = String
+
+    alias VariantProperty = NamedTuple(
+      "VariantPropertyType" : VariantPropertyType
+    )
+
+    alias VariantPropertyList = Array(VariantProperty)
+
+    alias VariantPropertyType = String
+
+    alias VariantWeight = Float32
+
+    alias VersionedArnOrName = String
+
+    alias VolumeSizeInGB = Int32
+
+    alias VpcConfig = NamedTuple(
+      "SecurityGroupIds" : VpcSecurityGroupIds,
+      "Subnets" : Subnets
+    )
+
+    alias VpcId = String
+
+    alias VpcSecurityGroupIds = Array(SecurityGroupId)
+
+    alias WaitIntervalInSeconds = Int32
+
+    alias Workforce = NamedTuple(
+      "WorkforceName" : WorkforceName,
+      "WorkforceArn" : WorkforceArn,
+      "LastUpdatedDate" : (Timestamp)?,
+      "SourceIpConfig" : (SourceIpConfig)?,
+      "SubDomain" : (String)?,
+      "CognitoConfig" : (CognitoConfig)?,
+      "OidcConfig" : (OidcConfigForResponse)?,
+      "CreateDate" : (Timestamp)?
+    )
+
+    alias WorkforceArn = String
+
+    alias WorkforceName = String
+
+    alias Workforces = Array(Workforce)
+
+    alias Workteam = NamedTuple(
+      "WorkteamName" : WorkteamName,
+      "MemberDefinitions" : MemberDefinitions,
+      "WorkteamArn" : WorkteamArn,
+      "WorkforceArn" : (WorkforceArn)?,
+      "ProductListingIds" : (ProductListings)?,
+      "Description" : String200,
+      "SubDomain" : (String)?,
+      "CreateDate" : (Timestamp)?,
+      "LastUpdatedDate" : (Timestamp)?,
+      "NotificationConfiguration" : (NotificationConfiguration)?
+    )
+
+    alias WorkteamArn = String
+
+    alias WorkteamName = String
+
+    alias Workteams = Array(Workteam)
   end
 end

@@ -2093,5 +2093,511 @@ module Aws::EFS
       include Aws::Structure
     end
 
+    alias AccessPointAlreadyExists = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?,
+      "AccessPointId" : AccessPointId
+    )
+
+    alias AccessPointArn = String
+
+    alias AccessPointDescription = NamedTuple(
+      "ClientToken" : (ClientToken)?,
+      "Name" : (Name)?,
+      "Tags" : (Tags)?,
+      "AccessPointId" : (AccessPointId)?,
+      "AccessPointArn" : (AccessPointArn)?,
+      "FileSystemId" : (FileSystemId)?,
+      "PosixUser" : (PosixUser)?,
+      "RootDirectory" : (RootDirectory)?,
+      "OwnerId" : (AwsAccountId)?,
+      "LifeCycleState" : (LifeCycleState)?
+    )
+
+    alias AccessPointDescriptions = Array(AccessPointDescription)
+
+    alias AccessPointId = String
+
+    alias AccessPointLimitExceeded = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AccessPointNotFound = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias AvailabilityZoneId = String
+
+    alias AvailabilityZoneName = String
+
+    alias AwsAccountId = String
+
+    alias BackupPolicy = NamedTuple(
+      "Status" : Status
+    )
+
+    alias BackupPolicyDescription = NamedTuple(
+      "BackupPolicy" : (BackupPolicy)?
+    )
+
+    alias BadRequest = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias BypassPolicyLockoutSafetyCheck = Bool
+
+    alias ClientToken = String
+
+    alias CreateAccessPointRequest = NamedTuple(
+      "ClientToken" : ClientToken,
+      "Tags" : (Tags)?,
+      "FileSystemId" : FileSystemId,
+      "PosixUser" : (PosixUser)?,
+      "RootDirectory" : (RootDirectory)?
+    )
+
+    alias CreateFileSystemRequest = NamedTuple(
+      "CreationToken" : CreationToken,
+      "PerformanceMode" : (PerformanceMode)?,
+      "Encrypted" : (Encrypted)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "ThroughputMode" : (ThroughputMode)?,
+      "ProvisionedThroughputInMibps" : (ProvisionedThroughputInMibps)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateMountTargetRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "SubnetId" : SubnetId,
+      "IpAddress" : (IpAddress)?,
+      "SecurityGroups" : (SecurityGroups)?
+    )
+
+    alias CreateTagsRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "Tags" : Tags
+    )
+
+    alias CreationInfo = NamedTuple(
+      "OwnerUid" : OwnerUid,
+      "OwnerGid" : OwnerGid,
+      "Permissions" : Permissions
+    )
+
+    alias CreationToken = String
+
+    alias DeleteAccessPointRequest = NamedTuple(
+      "AccessPointId" : AccessPointId
+    )
+
+    alias DeleteFileSystemPolicyRequest = NamedTuple(
+      "FileSystemId" : FileSystemId
+    )
+
+    alias DeleteFileSystemRequest = NamedTuple(
+      "FileSystemId" : FileSystemId
+    )
+
+    alias DeleteMountTargetRequest = NamedTuple(
+      "MountTargetId" : MountTargetId
+    )
+
+    alias DeleteTagsRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "TagKeys" : TagKeys
+    )
+
+    alias DependencyTimeout = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DescribeAccessPointsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?,
+      "AccessPointId" : (AccessPointId)?,
+      "FileSystemId" : (FileSystemId)?
+    )
+
+    alias DescribeAccessPointsResponse = NamedTuple(
+      "AccessPoints" : (AccessPointDescriptions)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeBackupPolicyRequest = NamedTuple(
+      "FileSystemId" : FileSystemId
+    )
+
+    alias DescribeFileSystemPolicyRequest = NamedTuple(
+      "FileSystemId" : FileSystemId
+    )
+
+    alias DescribeFileSystemsRequest = NamedTuple(
+      "MaxItems" : (MaxItems)?,
+      "Marker" : (Marker)?,
+      "CreationToken" : (CreationToken)?,
+      "FileSystemId" : (FileSystemId)?
+    )
+
+    alias DescribeFileSystemsResponse = NamedTuple(
+      "Marker" : (Marker)?,
+      "FileSystems" : (FileSystemDescriptions)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeLifecycleConfigurationRequest = NamedTuple(
+      "FileSystemId" : FileSystemId
+    )
+
+    alias DescribeMountTargetSecurityGroupsRequest = NamedTuple(
+      "MountTargetId" : MountTargetId
+    )
+
+    alias DescribeMountTargetSecurityGroupsResponse = NamedTuple(
+      "SecurityGroups" : SecurityGroups
+    )
+
+    alias DescribeMountTargetsRequest = NamedTuple(
+      "MaxItems" : (MaxItems)?,
+      "Marker" : (Marker)?,
+      "FileSystemId" : (FileSystemId)?,
+      "MountTargetId" : (MountTargetId)?,
+      "AccessPointId" : (AccessPointId)?
+    )
+
+    alias DescribeMountTargetsResponse = NamedTuple(
+      "Marker" : (Marker)?,
+      "MountTargets" : (MountTargetDescriptions)?,
+      "NextMarker" : (Marker)?
+    )
+
+    alias DescribeTagsRequest = NamedTuple(
+      "MaxItems" : (MaxItems)?,
+      "Marker" : (Marker)?,
+      "FileSystemId" : FileSystemId
+    )
+
+    alias DescribeTagsResponse = NamedTuple(
+      "Marker" : (Marker)?,
+      "Tags" : Tags,
+      "NextMarker" : (Marker)?
+    )
+
+    alias Encrypted = Bool
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias FileSystemAlreadyExists = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?,
+      "FileSystemId" : FileSystemId
+    )
+
+    alias FileSystemArn = String
+
+    alias FileSystemDescription = NamedTuple(
+      "OwnerId" : AwsAccountId,
+      "CreationToken" : CreationToken,
+      "FileSystemId" : FileSystemId,
+      "FileSystemArn" : (FileSystemArn)?,
+      "CreationTime" : Timestamp,
+      "LifeCycleState" : LifeCycleState,
+      "Name" : (TagValue)?,
+      "NumberOfMountTargets" : MountTargetCount,
+      "SizeInBytes" : FileSystemSize,
+      "PerformanceMode" : PerformanceMode,
+      "Encrypted" : (Encrypted)?,
+      "KmsKeyId" : (KmsKeyId)?,
+      "ThroughputMode" : (ThroughputMode)?,
+      "ProvisionedThroughputInMibps" : (ProvisionedThroughputInMibps)?,
+      "Tags" : Tags
+    )
+
+    alias FileSystemDescriptions = Array(FileSystemDescription)
+
+    alias FileSystemId = String
+
+    alias FileSystemInUse = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias FileSystemLimitExceeded = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias FileSystemNotFound = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias FileSystemNullableSizeValue = Int64
+
+    alias FileSystemPolicyDescription = NamedTuple(
+      "FileSystemId" : (FileSystemId)?,
+      "Policy" : (Policy)?
+    )
+
+    alias FileSystemSize = NamedTuple(
+      "Value" : FileSystemSizeValue,
+      "Timestamp" : (Timestamp)?,
+      "ValueInIA" : (FileSystemNullableSizeValue)?,
+      "ValueInStandard" : (FileSystemNullableSizeValue)?
+    )
+
+    alias FileSystemSizeValue = Int64
+
+    alias Gid = Int64
+
+    alias IncorrectFileSystemLifeCycleState = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias IncorrectMountTargetState = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InsufficientThroughputCapacity = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InternalServerError = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidPolicyException = NamedTuple(
+      "ErrorCode" : (ErrorCode)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias IpAddress = String
+
+    alias IpAddressInUse = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias KmsKeyId = String
+
+    alias LifeCycleState = String
+
+    alias LifecycleConfigurationDescription = NamedTuple(
+      "LifecyclePolicies" : (LifecyclePolicies)?
+    )
+
+    alias LifecyclePolicies = Array(LifecyclePolicy)
+
+    alias LifecyclePolicy = NamedTuple(
+      "TransitionToIA" : (TransitionToIARules)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceId" : ResourceId,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?,
+      "NextToken" : (Token)?
+    )
+
+    alias Marker = String
+
+    alias MaxItems = Int32
+
+    alias MaxResults = Int32
+
+    alias ModifyMountTargetSecurityGroupsRequest = NamedTuple(
+      "MountTargetId" : MountTargetId,
+      "SecurityGroups" : (SecurityGroups)?
+    )
+
+    alias MountTargetConflict = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias MountTargetCount = Int32
+
+    alias MountTargetDescription = NamedTuple(
+      "OwnerId" : (AwsAccountId)?,
+      "MountTargetId" : MountTargetId,
+      "FileSystemId" : FileSystemId,
+      "SubnetId" : SubnetId,
+      "LifeCycleState" : LifeCycleState,
+      "IpAddress" : (IpAddress)?,
+      "NetworkInterfaceId" : (NetworkInterfaceId)?,
+      "AvailabilityZoneId" : (AvailabilityZoneId)?,
+      "AvailabilityZoneName" : (AvailabilityZoneName)?,
+      "VpcId" : (VpcId)?
+    )
+
+    alias MountTargetDescriptions = Array(MountTargetDescription)
+
+    alias MountTargetId = String
+
+    alias MountTargetNotFound = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Name = String
+
+    alias NetworkInterfaceId = String
+
+    alias NetworkInterfaceLimitExceeded = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias NoFreeAddressesInSubnet = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias OwnerGid = Int64
+
+    alias OwnerUid = Int64
+
+    alias Path = String
+
+    alias PerformanceMode = String
+
+    alias Permissions = String
+
+    alias Policy = String
+
+    alias PolicyNotFound = NamedTuple(
+      "ErrorCode" : (ErrorCode)?,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias PosixUser = NamedTuple(
+      "Uid" : Uid,
+      "Gid" : Gid,
+      "SecondaryGids" : (SecondaryGids)?
+    )
+
+    alias ProvisionedThroughputInMibps = Float64
+
+    alias PutBackupPolicyRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "BackupPolicy" : BackupPolicy
+    )
+
+    alias PutFileSystemPolicyRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "Policy" : Policy,
+      "BypassPolicyLockoutSafetyCheck" : (BypassPolicyLockoutSafetyCheck)?
+    )
+
+    alias PutLifecycleConfigurationRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "LifecyclePolicies" : LifecyclePolicies
+    )
+
+    alias ResourceId = String
+
+    alias RootDirectory = NamedTuple(
+      "Path" : (Path)?,
+      "CreationInfo" : (CreationInfo)?
+    )
+
+    alias SecondaryGids = Array(Gid)
+
+    alias SecurityGroup = String
+
+    alias SecurityGroupLimitExceeded = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SecurityGroupNotFound = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SecurityGroups = Array(SecurityGroup)
+
+    alias Status = String
+
+    alias SubnetId = String
+
+    alias SubnetNotFound = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceId" : ResourceId,
+      "Tags" : Tags
+    )
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias ThroughputLimitExceeded = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ThroughputMode = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias TooManyRequests = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias TransitionToIARules = String
+
+    alias Uid = Int64
+
+    alias UnsupportedAvailabilityZone = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceId" : ResourceId,
+      "TagKeys" : TagKeys
+    )
+
+    alias UpdateFileSystemRequest = NamedTuple(
+      "FileSystemId" : FileSystemId,
+      "ThroughputMode" : (ThroughputMode)?,
+      "ProvisionedThroughputInMibps" : (ProvisionedThroughputInMibps)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "ErrorCode" : ErrorCode,
+      "Message" : (ErrorMessage)?
+    )
+
+    alias VpcId = String
   end
 end

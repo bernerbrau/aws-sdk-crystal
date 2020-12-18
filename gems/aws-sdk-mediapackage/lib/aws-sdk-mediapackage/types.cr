@@ -3037,5 +3037,632 @@ module Aws::MediaPackage
       include Aws::Structure
     end
 
+    alias AdMarkers = String
+
+    alias AdTriggers = Array(__AdTriggersElement)
+
+    alias AdsOnDeliveryRestrictions = String
+
+    alias Authorization = NamedTuple(
+      "CdnIdentifierSecret" : __string,
+      "SecretsRoleArn" : __string
+    )
+
+    alias Channel = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias ChannelCreateParameters = NamedTuple(
+      "Description" : (__string)?,
+      "Id" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias ChannelList = NamedTuple(
+      "Channels" : (__listOfChannel)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ChannelUpdateParameters = NamedTuple(
+      "Description" : (__string)?
+    )
+
+    alias CmafEncryption = NamedTuple(
+      "KeyRotationIntervalSeconds" : (__integer)?,
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias CmafPackage = NamedTuple(
+      "Encryption" : (CmafEncryption)?,
+      "HlsManifests" : (__listOfHlsManifest)?,
+      "SegmentDurationSeconds" : (__integer)?,
+      "SegmentPrefix" : (__string)?,
+      "StreamSelection" : (StreamSelection)?
+    )
+
+    alias CmafPackageCreateOrUpdateParameters = NamedTuple(
+      "Encryption" : (CmafEncryption)?,
+      "HlsManifests" : (__listOfHlsManifestCreateOrUpdateParameters)?,
+      "SegmentDurationSeconds" : (__integer)?,
+      "SegmentPrefix" : (__string)?,
+      "StreamSelection" : (StreamSelection)?
+    )
+
+    alias ConfigureLogsParameters = NamedTuple(
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?
+    )
+
+    alias ConfigureLogsRequest = NamedTuple(
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "Id" : __string,
+      "IngressAccessLogs" : (IngressAccessLogs)?
+    )
+
+    alias ConfigureLogsResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateChannelRequest = NamedTuple(
+      "Description" : (__string)?,
+      "Id" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateHarvestJobRequest = NamedTuple(
+      "EndTime" : __string,
+      "Id" : __string,
+      "OriginEndpointId" : __string,
+      "S3Destination" : S3Destination,
+      "StartTime" : __string
+    )
+
+    alias CreateHarvestJobResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "ChannelId" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "EndTime" : (__string)?,
+      "Id" : (__string)?,
+      "OriginEndpointId" : (__string)?,
+      "S3Destination" : (S3Destination)?,
+      "StartTime" : (__string)?,
+      "Status" : (Status)?
+    )
+
+    alias CreateOriginEndpointRequest = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "ChannelId" : __string,
+      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : __string,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "Tags" : (Tags)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias CreateOriginEndpointResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "ChannelId" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "Tags" : (Tags)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Url" : (__string)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias DashEncryption = NamedTuple(
+      "KeyRotationIntervalSeconds" : (__integer)?,
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias DashPackage = NamedTuple(
+      "AdTriggers" : (AdTriggers)?,
+      "AdsOnDeliveryRestrictions" : (AdsOnDeliveryRestrictions)?,
+      "Encryption" : (DashEncryption)?,
+      "ManifestLayout" : (ManifestLayout)?,
+      "ManifestWindowSeconds" : (__integer)?,
+      "MinBufferTimeSeconds" : (__integer)?,
+      "MinUpdatePeriodSeconds" : (__integer)?,
+      "PeriodTriggers" : (__listOf__PeriodTriggersElement)?,
+      "Profile" : (Profile)?,
+      "SegmentDurationSeconds" : (__integer)?,
+      "SegmentTemplateFormat" : (SegmentTemplateFormat)?,
+      "StreamSelection" : (StreamSelection)?,
+      "SuggestedPresentationDelaySeconds" : (__integer)?,
+      "UtcTiming" : (UtcTiming)?,
+      "UtcTimingUri" : (__string)?
+    )
+
+    alias DeleteChannelRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DeleteChannelResponse = NamedTuple(
+      
+    )
+
+    alias DeleteOriginEndpointRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DeleteOriginEndpointResponse = NamedTuple(
+      
+    )
+
+    alias DescribeChannelRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DescribeChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DescribeHarvestJobRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DescribeHarvestJobResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "ChannelId" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "EndTime" : (__string)?,
+      "Id" : (__string)?,
+      "OriginEndpointId" : (__string)?,
+      "S3Destination" : (S3Destination)?,
+      "StartTime" : (__string)?,
+      "Status" : (Status)?
+    )
+
+    alias DescribeOriginEndpointRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias DescribeOriginEndpointResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "ChannelId" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "Tags" : (Tags)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Url" : (__string)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias EgressAccessLogs = NamedTuple(
+      "LogGroupName" : (__string)?
+    )
+
+    alias EncryptionMethod = String
+
+    alias ForbiddenException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias HarvestJob = NamedTuple(
+      "Arn" : (__string)?,
+      "ChannelId" : (__string)?,
+      "CreatedAt" : (__string)?,
+      "EndTime" : (__string)?,
+      "Id" : (__string)?,
+      "OriginEndpointId" : (__string)?,
+      "S3Destination" : (S3Destination)?,
+      "StartTime" : (__string)?,
+      "Status" : (Status)?
+    )
+
+    alias HarvestJobCreateParameters = NamedTuple(
+      "EndTime" : __string,
+      "Id" : __string,
+      "OriginEndpointId" : __string,
+      "S3Destination" : S3Destination,
+      "StartTime" : __string
+    )
+
+    alias HarvestJobList = NamedTuple(
+      "HarvestJobs" : (__listOfHarvestJob)?,
+      "NextToken" : (__string)?
+    )
+
+    alias HlsEncryption = NamedTuple(
+      "ConstantInitializationVector" : (__string)?,
+      "EncryptionMethod" : (EncryptionMethod)?,
+      "KeyRotationIntervalSeconds" : (__integer)?,
+      "RepeatExtXKey" : (__boolean)?,
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias HlsIngest = NamedTuple(
+      "IngestEndpoints" : (__listOfIngestEndpoint)?
+    )
+
+    alias HlsManifest = NamedTuple(
+      "AdMarkers" : (AdMarkers)?,
+      "Id" : __string,
+      "IncludeIframeOnlyStream" : (__boolean)?,
+      "ManifestName" : (__string)?,
+      "PlaylistType" : (PlaylistType)?,
+      "PlaylistWindowSeconds" : (__integer)?,
+      "ProgramDateTimeIntervalSeconds" : (__integer)?,
+      "Url" : (__string)?
+    )
+
+    alias HlsManifestCreateOrUpdateParameters = NamedTuple(
+      "AdMarkers" : (AdMarkers)?,
+      "AdTriggers" : (AdTriggers)?,
+      "AdsOnDeliveryRestrictions" : (AdsOnDeliveryRestrictions)?,
+      "Id" : __string,
+      "IncludeIframeOnlyStream" : (__boolean)?,
+      "ManifestName" : (__string)?,
+      "PlaylistType" : (PlaylistType)?,
+      "PlaylistWindowSeconds" : (__integer)?,
+      "ProgramDateTimeIntervalSeconds" : (__integer)?
+    )
+
+    alias HlsPackage = NamedTuple(
+      "AdMarkers" : (AdMarkers)?,
+      "AdTriggers" : (AdTriggers)?,
+      "AdsOnDeliveryRestrictions" : (AdsOnDeliveryRestrictions)?,
+      "Encryption" : (HlsEncryption)?,
+      "IncludeIframeOnlyStream" : (__boolean)?,
+      "PlaylistType" : (PlaylistType)?,
+      "PlaylistWindowSeconds" : (__integer)?,
+      "ProgramDateTimeIntervalSeconds" : (__integer)?,
+      "SegmentDurationSeconds" : (__integer)?,
+      "StreamSelection" : (StreamSelection)?,
+      "UseAudioRenditionGroup" : (__boolean)?
+    )
+
+    alias IngestEndpoint = NamedTuple(
+      "Id" : (__string)?,
+      "Password" : (__string)?,
+      "Url" : (__string)?,
+      "Username" : (__string)?
+    )
+
+    alias IngressAccessLogs = NamedTuple(
+      "LogGroupName" : (__string)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias ListChannelsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListChannelsResponse = NamedTuple(
+      "Channels" : (__listOfChannel)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListHarvestJobsRequest = NamedTuple(
+      "IncludeChannelId" : (__string)?,
+      "IncludeStatus" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListHarvestJobsResponse = NamedTuple(
+      "HarvestJobs" : (__listOfHarvestJob)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListOriginEndpointsRequest = NamedTuple(
+      "ChannelId" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListOriginEndpointsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "OriginEndpoints" : (__listOfOriginEndpoint)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (__mapOf__string)?
+    )
+
+    alias ManifestLayout = String
+
+    alias MaxResults = Int32
+
+    alias MssEncryption = NamedTuple(
+      "SpekeKeyProvider" : SpekeKeyProvider
+    )
+
+    alias MssPackage = NamedTuple(
+      "Encryption" : (MssEncryption)?,
+      "ManifestWindowSeconds" : (__integer)?,
+      "SegmentDurationSeconds" : (__integer)?,
+      "StreamSelection" : (StreamSelection)?
+    )
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias OriginEndpoint = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "ChannelId" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "Tags" : (Tags)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Url" : (__string)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias OriginEndpointCreateParameters = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "ChannelId" : __string,
+      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : __string,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "Tags" : (Tags)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias OriginEndpointList = NamedTuple(
+      "NextToken" : (__string)?,
+      "OriginEndpoints" : (__listOfOriginEndpoint)?
+    )
+
+    alias OriginEndpointUpdateParameters = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias Origination = String
+
+    alias PlaylistType = String
+
+    alias Profile = String
+
+    alias RotateChannelCredentialsRequest = NamedTuple(
+      "Id" : __string
+    )
+
+    alias RotateChannelCredentialsResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias RotateIngestEndpointCredentialsRequest = NamedTuple(
+      "Id" : __string,
+      "IngestEndpointId" : __string
+    )
+
+    alias RotateIngestEndpointCredentialsResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias S3Destination = NamedTuple(
+      "BucketName" : __string,
+      "ManifestKey" : __string,
+      "RoleArn" : __string
+    )
+
+    alias SegmentTemplateFormat = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias SpekeKeyProvider = NamedTuple(
+      "CertificateArn" : (__string)?,
+      "ResourceId" : __string,
+      "RoleArn" : __string,
+      "SystemIds" : __listOf__string,
+      "Url" : __string
+    )
+
+    alias Status = String
+
+    alias StreamOrder = String
+
+    alias StreamSelection = NamedTuple(
+      "MaxVideoBitsPerSecond" : (__integer)?,
+      "MinVideoBitsPerSecond" : (__integer)?,
+      "StreamOrder" : (StreamOrder)?
+    )
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : __mapOf__string
+    )
+
+    alias Tags = Hash(__string,__string)
+
+    alias TagsModel = NamedTuple(
+      "Tags" : __mapOf__string
+    )
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias UnprocessableEntityException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias UpdateChannelRequest = NamedTuple(
+      "Description" : (__string)?,
+      "Id" : __string
+    )
+
+    alias UpdateChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Description" : (__string)?,
+      "EgressAccessLogs" : (EgressAccessLogs)?,
+      "HlsIngest" : (HlsIngest)?,
+      "Id" : (__string)?,
+      "IngressAccessLogs" : (IngressAccessLogs)?,
+      "Tags" : (Tags)?
+    )
+
+    alias UpdateOriginEndpointRequest = NamedTuple(
+      "Authorization" : (Authorization)?,
+      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : __string,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias UpdateOriginEndpointResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Authorization" : (Authorization)?,
+      "ChannelId" : (__string)?,
+      "CmafPackage" : (CmafPackage)?,
+      "DashPackage" : (DashPackage)?,
+      "Description" : (__string)?,
+      "HlsPackage" : (HlsPackage)?,
+      "Id" : (__string)?,
+      "ManifestName" : (__string)?,
+      "MssPackage" : (MssPackage)?,
+      "Origination" : (Origination)?,
+      "StartoverWindowSeconds" : (__integer)?,
+      "Tags" : (Tags)?,
+      "TimeDelaySeconds" : (__integer)?,
+      "Url" : (__string)?,
+      "Whitelist" : (__listOf__string)?
+    )
+
+    alias UtcTiming = String
+
+    alias __AdTriggersElement = String
+
+    alias __PeriodTriggersElement = String
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __listOfChannel = Array(Channel)
+
+    alias __listOfHarvestJob = Array(HarvestJob)
+
+    alias __listOfHlsManifest = Array(HlsManifest)
+
+    alias __listOfHlsManifestCreateOrUpdateParameters = Array(HlsManifestCreateOrUpdateParameters)
+
+    alias __listOfIngestEndpoint = Array(IngestEndpoint)
+
+    alias __listOfOriginEndpoint = Array(OriginEndpoint)
+
+    alias __listOf__PeriodTriggersElement = Array(__PeriodTriggersElement)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __mapOf__string = Hash(__string,__string)
+
+    alias __string = String
   end
 end

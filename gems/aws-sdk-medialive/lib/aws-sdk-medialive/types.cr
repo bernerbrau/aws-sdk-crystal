@@ -18829,5 +18829,3372 @@ module Aws::MediaLive
     #
     class WebvttDestinationSettings < Aws::EmptyStructure; end
 
+    alias AacCodingMode = String
+
+    alias AacInputType = String
+
+    alias AacProfile = String
+
+    alias AacRateControlMode = String
+
+    alias AacRawFormat = String
+
+    alias AacSettings = NamedTuple(
+      "Bitrate" : (__double)?,
+      "CodingMode" : (AacCodingMode)?,
+      "InputType" : (AacInputType)?,
+      "Profile" : (AacProfile)?,
+      "RateControlMode" : (AacRateControlMode)?,
+      "RawFormat" : (AacRawFormat)?,
+      "SampleRate" : (__double)?,
+      "Spec" : (AacSpec)?,
+      "VbrQuality" : (AacVbrQuality)?
+    )
+
+    alias AacSpec = String
+
+    alias AacVbrQuality = String
+
+    alias Ac3BitstreamMode = String
+
+    alias Ac3CodingMode = String
+
+    alias Ac3DrcProfile = String
+
+    alias Ac3LfeFilter = String
+
+    alias Ac3MetadataControl = String
+
+    alias Ac3Settings = NamedTuple(
+      "Bitrate" : (__double)?,
+      "BitstreamMode" : (Ac3BitstreamMode)?,
+      "CodingMode" : (Ac3CodingMode)?,
+      "Dialnorm" : (__integerMin1Max31)?,
+      "DrcProfile" : (Ac3DrcProfile)?,
+      "LfeFilter" : (Ac3LfeFilter)?,
+      "MetadataControl" : (Ac3MetadataControl)?
+    )
+
+    alias AcceptInputDeviceTransferRequest = NamedTuple(
+      "InputDeviceId" : __string
+    )
+
+    alias AcceptInputDeviceTransferResponse = NamedTuple(
+      
+    )
+
+    alias AccessDenied = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias AfdSignaling = String
+
+    alias AncillarySourceSettings = NamedTuple(
+      "SourceAncillaryChannelNumber" : (__integerMin1Max4)?
+    )
+
+    alias ArchiveContainerSettings = NamedTuple(
+      "M2tsSettings" : (M2tsSettings)?,
+      "RawSettings" : (RawSettings)?
+    )
+
+    alias ArchiveGroupSettings = NamedTuple(
+      "Destination" : OutputLocationRef,
+      "RolloverInterval" : (__integerMin1)?
+    )
+
+    alias ArchiveOutputSettings = NamedTuple(
+      "ContainerSettings" : ArchiveContainerSettings,
+      "Extension" : (__string)?,
+      "NameModifier" : (__string)?
+    )
+
+    alias AribDestinationSettings = NamedTuple(
+      
+    )
+
+    alias AribSourceSettings = NamedTuple(
+      
+    )
+
+    alias AudioChannelMapping = NamedTuple(
+      "InputChannelLevels" : __listOfInputChannelLevel,
+      "OutputChannel" : __integerMin0Max7
+    )
+
+    alias AudioCodecSettings = NamedTuple(
+      "AacSettings" : (AacSettings)?,
+      "Ac3Settings" : (Ac3Settings)?,
+      "Eac3Settings" : (Eac3Settings)?,
+      "Mp2Settings" : (Mp2Settings)?,
+      "PassThroughSettings" : (PassThroughSettings)?,
+      "WavSettings" : (WavSettings)?
+    )
+
+    alias AudioDescription = NamedTuple(
+      "AudioNormalizationSettings" : (AudioNormalizationSettings)?,
+      "AudioSelectorName" : __string,
+      "AudioType" : (AudioType)?,
+      "AudioTypeControl" : (AudioDescriptionAudioTypeControl)?,
+      "CodecSettings" : (AudioCodecSettings)?,
+      "LanguageCode" : (__stringMin1Max35)?,
+      "LanguageCodeControl" : (AudioDescriptionLanguageCodeControl)?,
+      "Name" : __string,
+      "RemixSettings" : (RemixSettings)?,
+      "StreamName" : (__string)?
+    )
+
+    alias AudioDescriptionAudioTypeControl = String
+
+    alias AudioDescriptionLanguageCodeControl = String
+
+    alias AudioLanguageSelection = NamedTuple(
+      "LanguageCode" : __string,
+      "LanguageSelectionPolicy" : (AudioLanguageSelectionPolicy)?
+    )
+
+    alias AudioLanguageSelectionPolicy = String
+
+    alias AudioNormalizationAlgorithm = String
+
+    alias AudioNormalizationAlgorithmControl = String
+
+    alias AudioNormalizationSettings = NamedTuple(
+      "Algorithm" : (AudioNormalizationAlgorithm)?,
+      "AlgorithmControl" : (AudioNormalizationAlgorithmControl)?,
+      "TargetLkfs" : (__doubleMinNegative59Max0)?
+    )
+
+    alias AudioOnlyHlsSegmentType = String
+
+    alias AudioOnlyHlsSettings = NamedTuple(
+      "AudioGroupId" : (__string)?,
+      "AudioOnlyImage" : (InputLocation)?,
+      "AudioTrackType" : (AudioOnlyHlsTrackType)?,
+      "SegmentType" : (AudioOnlyHlsSegmentType)?
+    )
+
+    alias AudioOnlyHlsTrackType = String
+
+    alias AudioPidSelection = NamedTuple(
+      "Pid" : __integerMin0Max8191
+    )
+
+    alias AudioSelector = NamedTuple(
+      "Name" : __stringMin1,
+      "SelectorSettings" : (AudioSelectorSettings)?
+    )
+
+    alias AudioSelectorSettings = NamedTuple(
+      "AudioLanguageSelection" : (AudioLanguageSelection)?,
+      "AudioPidSelection" : (AudioPidSelection)?,
+      "AudioTrackSelection" : (AudioTrackSelection)?
+    )
+
+    alias AudioSilenceFailoverSettings = NamedTuple(
+      "AudioSelectorName" : __string,
+      "AudioSilenceThresholdMsec" : (__integerMin1000)?
+    )
+
+    alias AudioTrack = NamedTuple(
+      "Track" : __integerMin1
+    )
+
+    alias AudioTrackSelection = NamedTuple(
+      "Tracks" : __listOfAudioTrack
+    )
+
+    alias AudioType = String
+
+    alias AuthenticationScheme = String
+
+    alias AutomaticInputFailoverSettings = NamedTuple(
+      "ErrorClearTimeMsec" : (__integerMin1)?,
+      "FailoverConditions" : (__listOfFailoverCondition)?,
+      "InputPreference" : (InputPreference)?,
+      "SecondaryInputId" : __string
+    )
+
+    alias AvailBlanking = NamedTuple(
+      "AvailBlankingImage" : (InputLocation)?,
+      "State" : (AvailBlankingState)?
+    )
+
+    alias AvailBlankingState = String
+
+    alias AvailConfiguration = NamedTuple(
+      "AvailSettings" : (AvailSettings)?
+    )
+
+    alias AvailSettings = NamedTuple(
+      "Scte35SpliceInsert" : (Scte35SpliceInsert)?,
+      "Scte35TimeSignalApos" : (Scte35TimeSignalApos)?
+    )
+
+    alias BadGatewayException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias BatchDelete = NamedTuple(
+      "ChannelIds" : (__listOf__string)?,
+      "InputIds" : (__listOf__string)?,
+      "InputSecurityGroupIds" : (__listOf__string)?,
+      "MultiplexIds" : (__listOf__string)?
+    )
+
+    alias BatchDeleteRequest = NamedTuple(
+      "ChannelIds" : (__listOf__string)?,
+      "InputIds" : (__listOf__string)?,
+      "InputSecurityGroupIds" : (__listOf__string)?,
+      "MultiplexIds" : (__listOf__string)?
+    )
+
+    alias BatchDeleteResponse = NamedTuple(
+      "Failed" : (__listOfBatchFailedResultModel)?,
+      "Successful" : (__listOfBatchSuccessfulResultModel)?
+    )
+
+    alias BatchDeleteResultModel = NamedTuple(
+      "Failed" : (__listOfBatchFailedResultModel)?,
+      "Successful" : (__listOfBatchSuccessfulResultModel)?
+    )
+
+    alias BatchFailedResultModel = NamedTuple(
+      "Arn" : (__string)?,
+      "Code" : (__string)?,
+      "Id" : (__string)?,
+      "Message" : (__string)?
+    )
+
+    alias BatchScheduleActionCreateRequest = NamedTuple(
+      "ScheduleActions" : __listOfScheduleAction
+    )
+
+    alias BatchScheduleActionCreateResult = NamedTuple(
+      "ScheduleActions" : __listOfScheduleAction
+    )
+
+    alias BatchScheduleActionDeleteRequest = NamedTuple(
+      "ActionNames" : __listOf__string
+    )
+
+    alias BatchScheduleActionDeleteResult = NamedTuple(
+      "ScheduleActions" : __listOfScheduleAction
+    )
+
+    alias BatchStart = NamedTuple(
+      "ChannelIds" : (__listOf__string)?,
+      "MultiplexIds" : (__listOf__string)?
+    )
+
+    alias BatchStartRequest = NamedTuple(
+      "ChannelIds" : (__listOf__string)?,
+      "MultiplexIds" : (__listOf__string)?
+    )
+
+    alias BatchStartResponse = NamedTuple(
+      "Failed" : (__listOfBatchFailedResultModel)?,
+      "Successful" : (__listOfBatchSuccessfulResultModel)?
+    )
+
+    alias BatchStartResultModel = NamedTuple(
+      "Failed" : (__listOfBatchFailedResultModel)?,
+      "Successful" : (__listOfBatchSuccessfulResultModel)?
+    )
+
+    alias BatchStop = NamedTuple(
+      "ChannelIds" : (__listOf__string)?,
+      "MultiplexIds" : (__listOf__string)?
+    )
+
+    alias BatchStopRequest = NamedTuple(
+      "ChannelIds" : (__listOf__string)?,
+      "MultiplexIds" : (__listOf__string)?
+    )
+
+    alias BatchStopResponse = NamedTuple(
+      "Failed" : (__listOfBatchFailedResultModel)?,
+      "Successful" : (__listOfBatchSuccessfulResultModel)?
+    )
+
+    alias BatchStopResultModel = NamedTuple(
+      "Failed" : (__listOfBatchFailedResultModel)?,
+      "Successful" : (__listOfBatchSuccessfulResultModel)?
+    )
+
+    alias BatchSuccessfulResultModel = NamedTuple(
+      "Arn" : (__string)?,
+      "Id" : (__string)?,
+      "State" : (__string)?
+    )
+
+    alias BatchUpdateScheduleRequest = NamedTuple(
+      "ChannelId" : __string,
+      "Creates" : (BatchScheduleActionCreateRequest)?,
+      "Deletes" : (BatchScheduleActionDeleteRequest)?
+    )
+
+    alias BatchUpdateScheduleResponse = NamedTuple(
+      "Creates" : (BatchScheduleActionCreateResult)?,
+      "Deletes" : (BatchScheduleActionDeleteResult)?
+    )
+
+    alias BatchUpdateScheduleResult = NamedTuple(
+      "Creates" : (BatchScheduleActionCreateResult)?,
+      "Deletes" : (BatchScheduleActionDeleteResult)?
+    )
+
+    alias BlackoutSlate = NamedTuple(
+      "BlackoutSlateImage" : (InputLocation)?,
+      "NetworkEndBlackout" : (BlackoutSlateNetworkEndBlackout)?,
+      "NetworkEndBlackoutImage" : (InputLocation)?,
+      "NetworkId" : (__stringMin34Max34)?,
+      "State" : (BlackoutSlateState)?
+    )
+
+    alias BlackoutSlateNetworkEndBlackout = String
+
+    alias BlackoutSlateState = String
+
+    alias BurnInAlignment = String
+
+    alias BurnInBackgroundColor = String
+
+    alias BurnInDestinationSettings = NamedTuple(
+      "Alignment" : (BurnInAlignment)?,
+      "BackgroundColor" : (BurnInBackgroundColor)?,
+      "BackgroundOpacity" : (__integerMin0Max255)?,
+      "Font" : (InputLocation)?,
+      "FontColor" : (BurnInFontColor)?,
+      "FontOpacity" : (__integerMin0Max255)?,
+      "FontResolution" : (__integerMin96Max600)?,
+      "FontSize" : (__string)?,
+      "OutlineColor" : (BurnInOutlineColor)?,
+      "OutlineSize" : (__integerMin0Max10)?,
+      "ShadowColor" : (BurnInShadowColor)?,
+      "ShadowOpacity" : (__integerMin0Max255)?,
+      "ShadowXOffset" : (__integer)?,
+      "ShadowYOffset" : (__integer)?,
+      "TeletextGridControl" : (BurnInTeletextGridControl)?,
+      "XPosition" : (__integerMin0)?,
+      "YPosition" : (__integerMin0)?
+    )
+
+    alias BurnInFontColor = String
+
+    alias BurnInOutlineColor = String
+
+    alias BurnInShadowColor = String
+
+    alias BurnInTeletextGridControl = String
+
+    alias CancelInputDeviceTransferRequest = NamedTuple(
+      "InputDeviceId" : __string
+    )
+
+    alias CancelInputDeviceTransferResponse = NamedTuple(
+      
+    )
+
+    alias CaptionDescription = NamedTuple(
+      "CaptionSelectorName" : __string,
+      "DestinationSettings" : (CaptionDestinationSettings)?,
+      "LanguageCode" : (__string)?,
+      "LanguageDescription" : (__string)?,
+      "Name" : __string
+    )
+
+    alias CaptionDestinationSettings = NamedTuple(
+      "AribDestinationSettings" : (AribDestinationSettings)?,
+      "BurnInDestinationSettings" : (BurnInDestinationSettings)?,
+      "DvbSubDestinationSettings" : (DvbSubDestinationSettings)?,
+      "EbuTtDDestinationSettings" : (EbuTtDDestinationSettings)?,
+      "EmbeddedDestinationSettings" : (EmbeddedDestinationSettings)?,
+      "EmbeddedPlusScte20DestinationSettings" : (EmbeddedPlusScte20DestinationSettings)?,
+      "RtmpCaptionInfoDestinationSettings" : (RtmpCaptionInfoDestinationSettings)?,
+      "Scte20PlusEmbeddedDestinationSettings" : (Scte20PlusEmbeddedDestinationSettings)?,
+      "Scte27DestinationSettings" : (Scte27DestinationSettings)?,
+      "SmpteTtDestinationSettings" : (SmpteTtDestinationSettings)?,
+      "TeletextDestinationSettings" : (TeletextDestinationSettings)?,
+      "TtmlDestinationSettings" : (TtmlDestinationSettings)?,
+      "WebvttDestinationSettings" : (WebvttDestinationSettings)?
+    )
+
+    alias CaptionLanguageMapping = NamedTuple(
+      "CaptionChannel" : __integerMin1Max4,
+      "LanguageCode" : __stringMin3Max3,
+      "LanguageDescription" : __stringMin1
+    )
+
+    alias CaptionSelector = NamedTuple(
+      "LanguageCode" : (__string)?,
+      "Name" : __stringMin1,
+      "SelectorSettings" : (CaptionSelectorSettings)?
+    )
+
+    alias CaptionSelectorSettings = NamedTuple(
+      "AncillarySourceSettings" : (AncillarySourceSettings)?,
+      "AribSourceSettings" : (AribSourceSettings)?,
+      "DvbSubSourceSettings" : (DvbSubSourceSettings)?,
+      "EmbeddedSourceSettings" : (EmbeddedSourceSettings)?,
+      "Scte20SourceSettings" : (Scte20SourceSettings)?,
+      "Scte27SourceSettings" : (Scte27SourceSettings)?,
+      "TeletextSourceSettings" : (TeletextSourceSettings)?
+    )
+
+    alias CdiInputResolution = String
+
+    alias CdiInputSpecification = NamedTuple(
+      "Resolution" : (CdiInputResolution)?
+    )
+
+    alias Channel = NamedTuple(
+      "Arn" : (__string)?,
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EgressEndpoints" : (__listOfChannelEgressEndpoint)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "Id" : (__string)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "PipelineDetails" : (__listOfPipelineDetail)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "RoleArn" : (__string)?,
+      "State" : (ChannelState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias ChannelClass = String
+
+    alias ChannelConfigurationValidationError = NamedTuple(
+      "Message" : (__string)?,
+      "ValidationErrors" : (__listOfValidationError)?
+    )
+
+    alias ChannelEgressEndpoint = NamedTuple(
+      "SourceIp" : (__string)?
+    )
+
+    alias ChannelState = String
+
+    alias ChannelSummary = NamedTuple(
+      "Arn" : (__string)?,
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EgressEndpoints" : (__listOfChannelEgressEndpoint)?,
+      "Id" : (__string)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "RoleArn" : (__string)?,
+      "State" : (ChannelState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias ColorSpacePassthroughSettings = NamedTuple(
+      
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias CreateChannel = NamedTuple(
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "RequestId" : (__string)?,
+      "Reserved" : (__string)?,
+      "RoleArn" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateChannelRequest = NamedTuple(
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "RequestId" : (__string)?,
+      "Reserved" : (__string)?,
+      "RoleArn" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateChannelResponse = NamedTuple(
+      "Channel" : (Channel)?
+    )
+
+    alias CreateChannelResultModel = NamedTuple(
+      "Channel" : (Channel)?
+    )
+
+    alias CreateInput = NamedTuple(
+      "Destinations" : (__listOfInputDestinationRequest)?,
+      "InputDevices" : (__listOfInputDeviceSettings)?,
+      "InputSecurityGroups" : (__listOf__string)?,
+      "MediaConnectFlows" : (__listOfMediaConnectFlowRequest)?,
+      "Name" : (__string)?,
+      "RequestId" : (__string)?,
+      "RoleArn" : (__string)?,
+      "Sources" : (__listOfInputSourceRequest)?,
+      "Tags" : (Tags)?,
+      "Type" : (InputType)?,
+      "Vpc" : (InputVpcRequest)?
+    )
+
+    alias CreateInputRequest = NamedTuple(
+      "Destinations" : (__listOfInputDestinationRequest)?,
+      "InputDevices" : (__listOfInputDeviceSettings)?,
+      "InputSecurityGroups" : (__listOf__string)?,
+      "MediaConnectFlows" : (__listOfMediaConnectFlowRequest)?,
+      "Name" : (__string)?,
+      "RequestId" : (__string)?,
+      "RoleArn" : (__string)?,
+      "Sources" : (__listOfInputSourceRequest)?,
+      "Tags" : (Tags)?,
+      "Type" : (InputType)?,
+      "Vpc" : (InputVpcRequest)?
+    )
+
+    alias CreateInputResponse = NamedTuple(
+      "Input" : (Input)?
+    )
+
+    alias CreateInputResultModel = NamedTuple(
+      "Input" : (Input)?
+    )
+
+    alias CreateInputSecurityGroupRequest = NamedTuple(
+      "Tags" : (Tags)?,
+      "WhitelistRules" : (__listOfInputWhitelistRuleCidr)?
+    )
+
+    alias CreateInputSecurityGroupResponse = NamedTuple(
+      "SecurityGroup" : (InputSecurityGroup)?
+    )
+
+    alias CreateInputSecurityGroupResultModel = NamedTuple(
+      "SecurityGroup" : (InputSecurityGroup)?
+    )
+
+    alias CreateMultiplex = NamedTuple(
+      "AvailabilityZones" : __listOf__string,
+      "MultiplexSettings" : MultiplexSettings,
+      "Name" : __string,
+      "RequestId" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateMultiplexProgram = NamedTuple(
+      "MultiplexProgramSettings" : MultiplexProgramSettings,
+      "ProgramName" : __string,
+      "RequestId" : __string
+    )
+
+    alias CreateMultiplexProgramRequest = NamedTuple(
+      "MultiplexId" : __string,
+      "MultiplexProgramSettings" : MultiplexProgramSettings,
+      "ProgramName" : __string,
+      "RequestId" : __string
+    )
+
+    alias CreateMultiplexProgramResponse = NamedTuple(
+      "MultiplexProgram" : (MultiplexProgram)?
+    )
+
+    alias CreateMultiplexProgramResultModel = NamedTuple(
+      "MultiplexProgram" : (MultiplexProgram)?
+    )
+
+    alias CreateMultiplexRequest = NamedTuple(
+      "AvailabilityZones" : __listOf__string,
+      "MultiplexSettings" : MultiplexSettings,
+      "Name" : __string,
+      "RequestId" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias CreateMultiplexResponse = NamedTuple(
+      "Multiplex" : (Multiplex)?
+    )
+
+    alias CreateMultiplexResultModel = NamedTuple(
+      "Multiplex" : (Multiplex)?
+    )
+
+    alias CreateTagsRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "Tags" : (Tags)?
+    )
+
+    alias DeleteChannelRequest = NamedTuple(
+      "ChannelId" : __string
+    )
+
+    alias DeleteChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EgressEndpoints" : (__listOfChannelEgressEndpoint)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "Id" : (__string)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "PipelineDetails" : (__listOfPipelineDetail)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "RoleArn" : (__string)?,
+      "State" : (ChannelState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DeleteInputRequest = NamedTuple(
+      "InputId" : __string
+    )
+
+    alias DeleteInputResponse = NamedTuple(
+      
+    )
+
+    alias DeleteInputSecurityGroupRequest = NamedTuple(
+      "InputSecurityGroupId" : __string
+    )
+
+    alias DeleteInputSecurityGroupResponse = NamedTuple(
+      
+    )
+
+    alias DeleteMultiplexProgramRequest = NamedTuple(
+      "MultiplexId" : __string,
+      "ProgramName" : __string
+    )
+
+    alias DeleteMultiplexProgramResponse = NamedTuple(
+      "ChannelId" : (__string)?,
+      "MultiplexProgramSettings" : (MultiplexProgramSettings)?,
+      "PacketIdentifiersMap" : (MultiplexProgramPacketIdentifiersMap)?,
+      "PipelineDetails" : (__listOfMultiplexProgramPipelineDetail)?,
+      "ProgramName" : (__string)?
+    )
+
+    alias DeleteMultiplexRequest = NamedTuple(
+      "MultiplexId" : __string
+    )
+
+    alias DeleteMultiplexResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AvailabilityZones" : (__listOf__string)?,
+      "Destinations" : (__listOfMultiplexOutputDestination)?,
+      "Id" : (__string)?,
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "ProgramCount" : (__integer)?,
+      "State" : (MultiplexState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DeleteReservationRequest = NamedTuple(
+      "ReservationId" : __string
+    )
+
+    alias DeleteReservationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Count" : (__integer)?,
+      "CurrencyCode" : (__string)?,
+      "Duration" : (__integer)?,
+      "DurationUnits" : (OfferingDurationUnits)?,
+      "End" : (__string)?,
+      "FixedPrice" : (__double)?,
+      "Name" : (__string)?,
+      "OfferingDescription" : (__string)?,
+      "OfferingId" : (__string)?,
+      "OfferingType" : (OfferingType)?,
+      "Region" : (__string)?,
+      "ReservationId" : (__string)?,
+      "ResourceSpecification" : (ReservationResourceSpecification)?,
+      "Start" : (__string)?,
+      "State" : (ReservationState)?,
+      "Tags" : (Tags)?,
+      "UsagePrice" : (__double)?
+    )
+
+    alias DeleteScheduleRequest = NamedTuple(
+      "ChannelId" : __string
+    )
+
+    alias DeleteScheduleResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTagsRequest = NamedTuple(
+      "ResourceArn" : __string,
+      "TagKeys" : __listOf__string
+    )
+
+    alias DescribeChannelRequest = NamedTuple(
+      "ChannelId" : __string
+    )
+
+    alias DescribeChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EgressEndpoints" : (__listOfChannelEgressEndpoint)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "Id" : (__string)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "PipelineDetails" : (__listOfPipelineDetail)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "RoleArn" : (__string)?,
+      "State" : (ChannelState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DescribeInputDeviceRequest = NamedTuple(
+      "InputDeviceId" : __string
+    )
+
+    alias DescribeInputDeviceResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "ConnectionState" : (InputDeviceConnectionState)?,
+      "DeviceSettingsSyncState" : (DeviceSettingsSyncState)?,
+      "DeviceUpdateStatus" : (DeviceUpdateStatus)?,
+      "HdDeviceSettings" : (InputDeviceHdSettings)?,
+      "Id" : (__string)?,
+      "MacAddress" : (__string)?,
+      "Name" : (__string)?,
+      "NetworkSettings" : (InputDeviceNetworkSettings)?,
+      "SerialNumber" : (__string)?,
+      "Type" : (InputDeviceType)?,
+      "UhdDeviceSettings" : (InputDeviceUhdSettings)?
+    )
+
+    alias DescribeInputDeviceThumbnailRequest = NamedTuple(
+      "InputDeviceId" : __string,
+      "Accept" : AcceptHeader
+    )
+
+    alias DescribeInputDeviceThumbnailResponse = NamedTuple(
+      "Body" : (InputDeviceThumbnail)?,
+      "ContentType" : (ContentType)?,
+      "ContentLength" : (__long)?,
+      "ETag" : (__string)?,
+      "LastModified" : (__timestamp)?
+    )
+
+    alias DescribeInputRequest = NamedTuple(
+      "InputId" : __string
+    )
+
+    alias DescribeInputResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AttachedChannels" : (__listOf__string)?,
+      "Destinations" : (__listOfInputDestination)?,
+      "Id" : (__string)?,
+      "InputClass" : (InputClass)?,
+      "InputDevices" : (__listOfInputDeviceSettings)?,
+      "InputSourceType" : (InputSourceType)?,
+      "MediaConnectFlows" : (__listOfMediaConnectFlow)?,
+      "Name" : (__string)?,
+      "RoleArn" : (__string)?,
+      "SecurityGroups" : (__listOf__string)?,
+      "Sources" : (__listOfInputSource)?,
+      "State" : (InputState)?,
+      "Tags" : (Tags)?,
+      "Type" : (InputType)?
+    )
+
+    alias DescribeInputSecurityGroupRequest = NamedTuple(
+      "InputSecurityGroupId" : __string
+    )
+
+    alias DescribeInputSecurityGroupResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Id" : (__string)?,
+      "Inputs" : (__listOf__string)?,
+      "State" : (InputSecurityGroupState)?,
+      "Tags" : (Tags)?,
+      "WhitelistRules" : (__listOfInputWhitelistRule)?
+    )
+
+    alias DescribeMultiplexProgramRequest = NamedTuple(
+      "MultiplexId" : __string,
+      "ProgramName" : __string
+    )
+
+    alias DescribeMultiplexProgramResponse = NamedTuple(
+      "ChannelId" : (__string)?,
+      "MultiplexProgramSettings" : (MultiplexProgramSettings)?,
+      "PacketIdentifiersMap" : (MultiplexProgramPacketIdentifiersMap)?,
+      "PipelineDetails" : (__listOfMultiplexProgramPipelineDetail)?,
+      "ProgramName" : (__string)?
+    )
+
+    alias DescribeMultiplexRequest = NamedTuple(
+      "MultiplexId" : __string
+    )
+
+    alias DescribeMultiplexResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AvailabilityZones" : (__listOf__string)?,
+      "Destinations" : (__listOfMultiplexOutputDestination)?,
+      "Id" : (__string)?,
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "ProgramCount" : (__integer)?,
+      "State" : (MultiplexState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias DescribeOfferingRequest = NamedTuple(
+      "OfferingId" : __string
+    )
+
+    alias DescribeOfferingResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CurrencyCode" : (__string)?,
+      "Duration" : (__integer)?,
+      "DurationUnits" : (OfferingDurationUnits)?,
+      "FixedPrice" : (__double)?,
+      "OfferingDescription" : (__string)?,
+      "OfferingId" : (__string)?,
+      "OfferingType" : (OfferingType)?,
+      "Region" : (__string)?,
+      "ResourceSpecification" : (ReservationResourceSpecification)?,
+      "UsagePrice" : (__double)?
+    )
+
+    alias DescribeReservationRequest = NamedTuple(
+      "ReservationId" : __string
+    )
+
+    alias DescribeReservationResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "Count" : (__integer)?,
+      "CurrencyCode" : (__string)?,
+      "Duration" : (__integer)?,
+      "DurationUnits" : (OfferingDurationUnits)?,
+      "End" : (__string)?,
+      "FixedPrice" : (__double)?,
+      "Name" : (__string)?,
+      "OfferingDescription" : (__string)?,
+      "OfferingId" : (__string)?,
+      "OfferingType" : (OfferingType)?,
+      "Region" : (__string)?,
+      "ReservationId" : (__string)?,
+      "ResourceSpecification" : (ReservationResourceSpecification)?,
+      "Start" : (__string)?,
+      "State" : (ReservationState)?,
+      "Tags" : (Tags)?,
+      "UsagePrice" : (__double)?
+    )
+
+    alias DescribeScheduleRequest = NamedTuple(
+      "ChannelId" : __string,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias DescribeScheduleResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "ScheduleActions" : (__listOfScheduleAction)?
+    )
+
+    alias DeviceSettingsSyncState = String
+
+    alias DeviceUpdateStatus = String
+
+    alias DvbNitSettings = NamedTuple(
+      "NetworkId" : __integerMin0Max65536,
+      "NetworkName" : __stringMin1Max256,
+      "RepInterval" : (__integerMin25Max10000)?
+    )
+
+    alias DvbSdtOutputSdt = String
+
+    alias DvbSdtSettings = NamedTuple(
+      "OutputSdt" : (DvbSdtOutputSdt)?,
+      "RepInterval" : (__integerMin25Max2000)?,
+      "ServiceName" : (__stringMin1Max256)?,
+      "ServiceProviderName" : (__stringMin1Max256)?
+    )
+
+    alias DvbSubDestinationAlignment = String
+
+    alias DvbSubDestinationBackgroundColor = String
+
+    alias DvbSubDestinationFontColor = String
+
+    alias DvbSubDestinationOutlineColor = String
+
+    alias DvbSubDestinationSettings = NamedTuple(
+      "Alignment" : (DvbSubDestinationAlignment)?,
+      "BackgroundColor" : (DvbSubDestinationBackgroundColor)?,
+      "BackgroundOpacity" : (__integerMin0Max255)?,
+      "Font" : (InputLocation)?,
+      "FontColor" : (DvbSubDestinationFontColor)?,
+      "FontOpacity" : (__integerMin0Max255)?,
+      "FontResolution" : (__integerMin96Max600)?,
+      "FontSize" : (__string)?,
+      "OutlineColor" : (DvbSubDestinationOutlineColor)?,
+      "OutlineSize" : (__integerMin0Max10)?,
+      "ShadowColor" : (DvbSubDestinationShadowColor)?,
+      "ShadowOpacity" : (__integerMin0Max255)?,
+      "ShadowXOffset" : (__integer)?,
+      "ShadowYOffset" : (__integer)?,
+      "TeletextGridControl" : (DvbSubDestinationTeletextGridControl)?,
+      "XPosition" : (__integerMin0)?,
+      "YPosition" : (__integerMin0)?
+    )
+
+    alias DvbSubDestinationShadowColor = String
+
+    alias DvbSubDestinationTeletextGridControl = String
+
+    alias DvbSubSourceSettings = NamedTuple(
+      "Pid" : (__integerMin1)?
+    )
+
+    alias DvbTdtSettings = NamedTuple(
+      "RepInterval" : (__integerMin1000Max30000)?
+    )
+
+    alias Eac3AttenuationControl = String
+
+    alias Eac3BitstreamMode = String
+
+    alias Eac3CodingMode = String
+
+    alias Eac3DcFilter = String
+
+    alias Eac3DrcLine = String
+
+    alias Eac3DrcRf = String
+
+    alias Eac3LfeControl = String
+
+    alias Eac3LfeFilter = String
+
+    alias Eac3MetadataControl = String
+
+    alias Eac3PassthroughControl = String
+
+    alias Eac3PhaseControl = String
+
+    alias Eac3Settings = NamedTuple(
+      "AttenuationControl" : (Eac3AttenuationControl)?,
+      "Bitrate" : (__double)?,
+      "BitstreamMode" : (Eac3BitstreamMode)?,
+      "CodingMode" : (Eac3CodingMode)?,
+      "DcFilter" : (Eac3DcFilter)?,
+      "Dialnorm" : (__integerMin1Max31)?,
+      "DrcLine" : (Eac3DrcLine)?,
+      "DrcRf" : (Eac3DrcRf)?,
+      "LfeControl" : (Eac3LfeControl)?,
+      "LfeFilter" : (Eac3LfeFilter)?,
+      "LoRoCenterMixLevel" : (__double)?,
+      "LoRoSurroundMixLevel" : (__double)?,
+      "LtRtCenterMixLevel" : (__double)?,
+      "LtRtSurroundMixLevel" : (__double)?,
+      "MetadataControl" : (Eac3MetadataControl)?,
+      "PassthroughControl" : (Eac3PassthroughControl)?,
+      "PhaseControl" : (Eac3PhaseControl)?,
+      "StereoDownmix" : (Eac3StereoDownmix)?,
+      "SurroundExMode" : (Eac3SurroundExMode)?,
+      "SurroundMode" : (Eac3SurroundMode)?
+    )
+
+    alias Eac3StereoDownmix = String
+
+    alias Eac3SurroundExMode = String
+
+    alias Eac3SurroundMode = String
+
+    alias EbuTtDDestinationSettings = NamedTuple(
+      "FillLineGap" : (EbuTtDFillLineGapControl)?,
+      "FontFamily" : (__string)?,
+      "StyleControl" : (EbuTtDDestinationStyleControl)?
+    )
+
+    alias EbuTtDDestinationStyleControl = String
+
+    alias EbuTtDFillLineGapControl = String
+
+    alias EmbeddedConvert608To708 = String
+
+    alias EmbeddedDestinationSettings = NamedTuple(
+      
+    )
+
+    alias EmbeddedPlusScte20DestinationSettings = NamedTuple(
+      
+    )
+
+    alias EmbeddedScte20Detection = String
+
+    alias EmbeddedSourceSettings = NamedTuple(
+      "Convert608To708" : (EmbeddedConvert608To708)?,
+      "Scte20Detection" : (EmbeddedScte20Detection)?,
+      "Source608ChannelNumber" : (__integerMin1Max4)?,
+      "Source608TrackNumber" : (__integerMin1Max5)?
+    )
+
+    alias Empty = NamedTuple(
+      
+    )
+
+    alias EncoderSettings = NamedTuple(
+      "AudioDescriptions" : __listOfAudioDescription,
+      "AvailBlanking" : (AvailBlanking)?,
+      "AvailConfiguration" : (AvailConfiguration)?,
+      "BlackoutSlate" : (BlackoutSlate)?,
+      "CaptionDescriptions" : (__listOfCaptionDescription)?,
+      "FeatureActivations" : (FeatureActivations)?,
+      "GlobalConfiguration" : (GlobalConfiguration)?,
+      "NielsenConfiguration" : (NielsenConfiguration)?,
+      "OutputGroups" : __listOfOutputGroup,
+      "TimecodeConfig" : TimecodeConfig,
+      "VideoDescriptions" : __listOfVideoDescription
+    )
+
+    alias FailoverCondition = NamedTuple(
+      "FailoverConditionSettings" : (FailoverConditionSettings)?
+    )
+
+    alias FailoverConditionSettings = NamedTuple(
+      "AudioSilenceSettings" : (AudioSilenceFailoverSettings)?,
+      "InputLossSettings" : (InputLossFailoverSettings)?,
+      "VideoBlackSettings" : (VideoBlackFailoverSettings)?
+    )
+
+    alias FeatureActivations = NamedTuple(
+      "InputPrepareScheduleActions" : (FeatureActivationsInputPrepareScheduleActions)?
+    )
+
+    alias FeatureActivationsInputPrepareScheduleActions = String
+
+    alias FecOutputIncludeFec = String
+
+    alias FecOutputSettings = NamedTuple(
+      "ColumnDepth" : (__integerMin4Max20)?,
+      "IncludeFec" : (FecOutputIncludeFec)?,
+      "RowLength" : (__integerMin1Max20)?
+    )
+
+    alias FixedAfd = String
+
+    alias FixedModeScheduleActionStartSettings = NamedTuple(
+      "Time" : __string
+    )
+
+    alias Fmp4HlsSettings = NamedTuple(
+      "AudioRenditionSets" : (__string)?,
+      "NielsenId3Behavior" : (Fmp4NielsenId3Behavior)?,
+      "TimedMetadataBehavior" : (Fmp4TimedMetadataBehavior)?
+    )
+
+    alias Fmp4NielsenId3Behavior = String
+
+    alias Fmp4TimedMetadataBehavior = String
+
+    alias FollowModeScheduleActionStartSettings = NamedTuple(
+      "FollowPoint" : FollowPoint,
+      "ReferenceActionName" : __string
+    )
+
+    alias FollowPoint = String
+
+    alias ForbiddenException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias FrameCaptureGroupSettings = NamedTuple(
+      "Destination" : OutputLocationRef
+    )
+
+    alias FrameCaptureIntervalUnit = String
+
+    alias FrameCaptureOutputSettings = NamedTuple(
+      "NameModifier" : (__string)?
+    )
+
+    alias FrameCaptureSettings = NamedTuple(
+      "CaptureInterval" : __integerMin1Max3600000,
+      "CaptureIntervalUnits" : (FrameCaptureIntervalUnit)?
+    )
+
+    alias GatewayTimeoutException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias GlobalConfiguration = NamedTuple(
+      "InitialAudioGain" : (__integerMinNegative60Max60)?,
+      "InputEndAction" : (GlobalConfigurationInputEndAction)?,
+      "InputLossBehavior" : (InputLossBehavior)?,
+      "OutputLockingMode" : (GlobalConfigurationOutputLockingMode)?,
+      "OutputTimingSource" : (GlobalConfigurationOutputTimingSource)?,
+      "SupportLowFramerateInputs" : (GlobalConfigurationLowFramerateInputs)?
+    )
+
+    alias GlobalConfigurationInputEndAction = String
+
+    alias GlobalConfigurationLowFramerateInputs = String
+
+    alias GlobalConfigurationOutputLockingMode = String
+
+    alias GlobalConfigurationOutputTimingSource = String
+
+    alias H264AdaptiveQuantization = String
+
+    alias H264ColorMetadata = String
+
+    alias H264ColorSpaceSettings = NamedTuple(
+      "ColorSpacePassthroughSettings" : (ColorSpacePassthroughSettings)?,
+      "Rec601Settings" : (Rec601Settings)?,
+      "Rec709Settings" : (Rec709Settings)?
+    )
+
+    alias H264EntropyEncoding = String
+
+    alias H264FilterSettings = NamedTuple(
+      "TemporalFilterSettings" : (TemporalFilterSettings)?
+    )
+
+    alias H264FlickerAq = String
+
+    alias H264ForceFieldPictures = String
+
+    alias H264FramerateControl = String
+
+    alias H264GopBReference = String
+
+    alias H264GopSizeUnits = String
+
+    alias H264Level = String
+
+    alias H264LookAheadRateControl = String
+
+    alias H264ParControl = String
+
+    alias H264Profile = String
+
+    alias H264QualityLevel = String
+
+    alias H264RateControlMode = String
+
+    alias H264ScanType = String
+
+    alias H264SceneChangeDetect = String
+
+    alias H264Settings = NamedTuple(
+      "AdaptiveQuantization" : (H264AdaptiveQuantization)?,
+      "AfdSignaling" : (AfdSignaling)?,
+      "Bitrate" : (__integerMin1000)?,
+      "BufFillPct" : (__integerMin0Max100)?,
+      "BufSize" : (__integerMin0)?,
+      "ColorMetadata" : (H264ColorMetadata)?,
+      "ColorSpaceSettings" : (H264ColorSpaceSettings)?,
+      "EntropyEncoding" : (H264EntropyEncoding)?,
+      "FilterSettings" : (H264FilterSettings)?,
+      "FixedAfd" : (FixedAfd)?,
+      "FlickerAq" : (H264FlickerAq)?,
+      "ForceFieldPictures" : (H264ForceFieldPictures)?,
+      "FramerateControl" : (H264FramerateControl)?,
+      "FramerateDenominator" : (__integerMin1)?,
+      "FramerateNumerator" : (__integerMin1)?,
+      "GopBReference" : (H264GopBReference)?,
+      "GopClosedCadence" : (__integerMin0)?,
+      "GopNumBFrames" : (__integerMin0Max7)?,
+      "GopSize" : (__double)?,
+      "GopSizeUnits" : (H264GopSizeUnits)?,
+      "Level" : (H264Level)?,
+      "LookAheadRateControl" : (H264LookAheadRateControl)?,
+      "MaxBitrate" : (__integerMin1000)?,
+      "MinIInterval" : (__integerMin0Max30)?,
+      "NumRefFrames" : (__integerMin1Max6)?,
+      "ParControl" : (H264ParControl)?,
+      "ParDenominator" : (__integerMin1)?,
+      "ParNumerator" : (__integerMin1)?,
+      "Profile" : (H264Profile)?,
+      "QualityLevel" : (H264QualityLevel)?,
+      "QvbrQualityLevel" : (__integerMin1Max10)?,
+      "RateControlMode" : (H264RateControlMode)?,
+      "ScanType" : (H264ScanType)?,
+      "SceneChangeDetect" : (H264SceneChangeDetect)?,
+      "Slices" : (__integerMin1Max32)?,
+      "Softness" : (__integerMin0Max128)?,
+      "SpatialAq" : (H264SpatialAq)?,
+      "SubgopLength" : (H264SubGopLength)?,
+      "Syntax" : (H264Syntax)?,
+      "TemporalAq" : (H264TemporalAq)?,
+      "TimecodeInsertion" : (H264TimecodeInsertionBehavior)?
+    )
+
+    alias H264SpatialAq = String
+
+    alias H264SubGopLength = String
+
+    alias H264Syntax = String
+
+    alias H264TemporalAq = String
+
+    alias H264TimecodeInsertionBehavior = String
+
+    alias H265AdaptiveQuantization = String
+
+    alias H265AlternativeTransferFunction = String
+
+    alias H265ColorMetadata = String
+
+    alias H265ColorSpaceSettings = NamedTuple(
+      "ColorSpacePassthroughSettings" : (ColorSpacePassthroughSettings)?,
+      "Hdr10Settings" : (Hdr10Settings)?,
+      "Rec601Settings" : (Rec601Settings)?,
+      "Rec709Settings" : (Rec709Settings)?
+    )
+
+    alias H265FilterSettings = NamedTuple(
+      "TemporalFilterSettings" : (TemporalFilterSettings)?
+    )
+
+    alias H265FlickerAq = String
+
+    alias H265GopSizeUnits = String
+
+    alias H265Level = String
+
+    alias H265LookAheadRateControl = String
+
+    alias H265Profile = String
+
+    alias H265RateControlMode = String
+
+    alias H265ScanType = String
+
+    alias H265SceneChangeDetect = String
+
+    alias H265Settings = NamedTuple(
+      "AdaptiveQuantization" : (H265AdaptiveQuantization)?,
+      "AfdSignaling" : (AfdSignaling)?,
+      "AlternativeTransferFunction" : (H265AlternativeTransferFunction)?,
+      "Bitrate" : (__integerMin100000Max40000000)?,
+      "BufSize" : (__integerMin100000Max80000000)?,
+      "ColorMetadata" : (H265ColorMetadata)?,
+      "ColorSpaceSettings" : (H265ColorSpaceSettings)?,
+      "FilterSettings" : (H265FilterSettings)?,
+      "FixedAfd" : (FixedAfd)?,
+      "FlickerAq" : (H265FlickerAq)?,
+      "FramerateDenominator" : __integerMin1Max3003,
+      "FramerateNumerator" : __integerMin1,
+      "GopClosedCadence" : (__integerMin0)?,
+      "GopSize" : (__double)?,
+      "GopSizeUnits" : (H265GopSizeUnits)?,
+      "Level" : (H265Level)?,
+      "LookAheadRateControl" : (H265LookAheadRateControl)?,
+      "MaxBitrate" : (__integerMin100000Max40000000)?,
+      "MinIInterval" : (__integerMin0Max30)?,
+      "ParDenominator" : (__integerMin1)?,
+      "ParNumerator" : (__integerMin1)?,
+      "Profile" : (H265Profile)?,
+      "QvbrQualityLevel" : (__integerMin1Max10)?,
+      "RateControlMode" : (H265RateControlMode)?,
+      "ScanType" : (H265ScanType)?,
+      "SceneChangeDetect" : (H265SceneChangeDetect)?,
+      "Slices" : (__integerMin1Max16)?,
+      "Tier" : (H265Tier)?,
+      "TimecodeInsertion" : (H265TimecodeInsertionBehavior)?
+    )
+
+    alias H265Tier = String
+
+    alias H265TimecodeInsertionBehavior = String
+
+    alias Hdr10Settings = NamedTuple(
+      "MaxCll" : (__integerMin0Max32768)?,
+      "MaxFall" : (__integerMin0Max32768)?
+    )
+
+    alias HlsAdMarkers = String
+
+    alias HlsAkamaiHttpTransferMode = String
+
+    alias HlsAkamaiSettings = NamedTuple(
+      "ConnectionRetryInterval" : (__integerMin0)?,
+      "FilecacheDuration" : (__integerMin0Max600)?,
+      "HttpTransferMode" : (HlsAkamaiHttpTransferMode)?,
+      "NumRetries" : (__integerMin0)?,
+      "RestartDelay" : (__integerMin0Max15)?,
+      "Salt" : (__string)?,
+      "Token" : (__string)?
+    )
+
+    alias HlsBasicPutSettings = NamedTuple(
+      "ConnectionRetryInterval" : (__integerMin0)?,
+      "FilecacheDuration" : (__integerMin0Max600)?,
+      "NumRetries" : (__integerMin0)?,
+      "RestartDelay" : (__integerMin0Max15)?
+    )
+
+    alias HlsCaptionLanguageSetting = String
+
+    alias HlsCdnSettings = NamedTuple(
+      "HlsAkamaiSettings" : (HlsAkamaiSettings)?,
+      "HlsBasicPutSettings" : (HlsBasicPutSettings)?,
+      "HlsMediaStoreSettings" : (HlsMediaStoreSettings)?,
+      "HlsWebdavSettings" : (HlsWebdavSettings)?
+    )
+
+    alias HlsClientCache = String
+
+    alias HlsCodecSpecification = String
+
+    alias HlsDirectoryStructure = String
+
+    alias HlsDiscontinuityTags = String
+
+    alias HlsEncryptionType = String
+
+    alias HlsGroupSettings = NamedTuple(
+      "AdMarkers" : (__listOfHlsAdMarkers)?,
+      "BaseUrlContent" : (__string)?,
+      "BaseUrlContent1" : (__string)?,
+      "BaseUrlManifest" : (__string)?,
+      "BaseUrlManifest1" : (__string)?,
+      "CaptionLanguageMappings" : (__listOfCaptionLanguageMapping)?,
+      "CaptionLanguageSetting" : (HlsCaptionLanguageSetting)?,
+      "ClientCache" : (HlsClientCache)?,
+      "CodecSpecification" : (HlsCodecSpecification)?,
+      "ConstantIv" : (__stringMin32Max32)?,
+      "Destination" : OutputLocationRef,
+      "DirectoryStructure" : (HlsDirectoryStructure)?,
+      "DiscontinuityTags" : (HlsDiscontinuityTags)?,
+      "EncryptionType" : (HlsEncryptionType)?,
+      "HlsCdnSettings" : (HlsCdnSettings)?,
+      "HlsId3SegmentTagging" : (HlsId3SegmentTaggingState)?,
+      "IFrameOnlyPlaylists" : (IFrameOnlyPlaylistType)?,
+      "IncompleteSegmentBehavior" : (HlsIncompleteSegmentBehavior)?,
+      "IndexNSegments" : (__integerMin3)?,
+      "InputLossAction" : (InputLossActionForHlsOut)?,
+      "IvInManifest" : (HlsIvInManifest)?,
+      "IvSource" : (HlsIvSource)?,
+      "KeepSegments" : (__integerMin1)?,
+      "KeyFormat" : (__string)?,
+      "KeyFormatVersions" : (__string)?,
+      "KeyProviderSettings" : (KeyProviderSettings)?,
+      "ManifestCompression" : (HlsManifestCompression)?,
+      "ManifestDurationFormat" : (HlsManifestDurationFormat)?,
+      "MinSegmentLength" : (__integerMin0)?,
+      "Mode" : (HlsMode)?,
+      "OutputSelection" : (HlsOutputSelection)?,
+      "ProgramDateTime" : (HlsProgramDateTime)?,
+      "ProgramDateTimePeriod" : (__integerMin0Max3600)?,
+      "RedundantManifest" : (HlsRedundantManifest)?,
+      "SegmentLength" : (__integerMin1)?,
+      "SegmentationMode" : (HlsSegmentationMode)?,
+      "SegmentsPerSubdirectory" : (__integerMin1)?,
+      "StreamInfResolution" : (HlsStreamInfResolution)?,
+      "TimedMetadataId3Frame" : (HlsTimedMetadataId3Frame)?,
+      "TimedMetadataId3Period" : (__integerMin0)?,
+      "TimestampDeltaMilliseconds" : (__integerMin0)?,
+      "TsFileMode" : (HlsTsFileMode)?
+    )
+
+    alias HlsH265PackagingType = String
+
+    alias HlsId3SegmentTaggingScheduleActionSettings = NamedTuple(
+      "Tag" : __string
+    )
+
+    alias HlsId3SegmentTaggingState = String
+
+    alias HlsIncompleteSegmentBehavior = String
+
+    alias HlsInputSettings = NamedTuple(
+      "Bandwidth" : (__integerMin0)?,
+      "BufferSegments" : (__integerMin0)?,
+      "Retries" : (__integerMin0)?,
+      "RetryInterval" : (__integerMin0)?
+    )
+
+    alias HlsIvInManifest = String
+
+    alias HlsIvSource = String
+
+    alias HlsManifestCompression = String
+
+    alias HlsManifestDurationFormat = String
+
+    alias HlsMediaStoreSettings = NamedTuple(
+      "ConnectionRetryInterval" : (__integerMin0)?,
+      "FilecacheDuration" : (__integerMin0Max600)?,
+      "MediaStoreStorageClass" : (HlsMediaStoreStorageClass)?,
+      "NumRetries" : (__integerMin0)?,
+      "RestartDelay" : (__integerMin0Max15)?
+    )
+
+    alias HlsMediaStoreStorageClass = String
+
+    alias HlsMode = String
+
+    alias HlsOutputSelection = String
+
+    alias HlsOutputSettings = NamedTuple(
+      "H265PackagingType" : (HlsH265PackagingType)?,
+      "HlsSettings" : HlsSettings,
+      "NameModifier" : (__stringMin1)?,
+      "SegmentModifier" : (__string)?
+    )
+
+    alias HlsProgramDateTime = String
+
+    alias HlsRedundantManifest = String
+
+    alias HlsSegmentationMode = String
+
+    alias HlsSettings = NamedTuple(
+      "AudioOnlyHlsSettings" : (AudioOnlyHlsSettings)?,
+      "Fmp4HlsSettings" : (Fmp4HlsSettings)?,
+      "StandardHlsSettings" : (StandardHlsSettings)?
+    )
+
+    alias HlsStreamInfResolution = String
+
+    alias HlsTimedMetadataId3Frame = String
+
+    alias HlsTimedMetadataScheduleActionSettings = NamedTuple(
+      "Id3" : __string
+    )
+
+    alias HlsTsFileMode = String
+
+    alias HlsWebdavHttpTransferMode = String
+
+    alias HlsWebdavSettings = NamedTuple(
+      "ConnectionRetryInterval" : (__integerMin0)?,
+      "FilecacheDuration" : (__integerMin0Max600)?,
+      "HttpTransferMode" : (HlsWebdavHttpTransferMode)?,
+      "NumRetries" : (__integerMin0)?,
+      "RestartDelay" : (__integerMin0Max15)?
+    )
+
+    alias IFrameOnlyPlaylistType = String
+
+    alias ImmediateModeScheduleActionStartSettings = NamedTuple(
+      
+    )
+
+    alias Input = NamedTuple(
+      "Arn" : (__string)?,
+      "AttachedChannels" : (__listOf__string)?,
+      "Destinations" : (__listOfInputDestination)?,
+      "Id" : (__string)?,
+      "InputClass" : (InputClass)?,
+      "InputDevices" : (__listOfInputDeviceSettings)?,
+      "InputSourceType" : (InputSourceType)?,
+      "MediaConnectFlows" : (__listOfMediaConnectFlow)?,
+      "Name" : (__string)?,
+      "RoleArn" : (__string)?,
+      "SecurityGroups" : (__listOf__string)?,
+      "Sources" : (__listOfInputSource)?,
+      "State" : (InputState)?,
+      "Tags" : (Tags)?,
+      "Type" : (InputType)?
+    )
+
+    alias InputAttachment = NamedTuple(
+      "AutomaticInputFailoverSettings" : (AutomaticInputFailoverSettings)?,
+      "InputAttachmentName" : (__string)?,
+      "InputId" : (__string)?,
+      "InputSettings" : (InputSettings)?
+    )
+
+    alias InputChannelLevel = NamedTuple(
+      "Gain" : __integerMinNegative60Max6,
+      "InputChannel" : __integerMin0Max15
+    )
+
+    alias InputClass = String
+
+    alias InputClippingSettings = NamedTuple(
+      "InputTimecodeSource" : InputTimecodeSource,
+      "StartTimecode" : (StartTimecode)?,
+      "StopTimecode" : (StopTimecode)?
+    )
+
+    alias InputCodec = String
+
+    alias InputDeblockFilter = String
+
+    alias InputDenoiseFilter = String
+
+    alias InputDestination = NamedTuple(
+      "Ip" : (__string)?,
+      "Port" : (__string)?,
+      "Url" : (__string)?,
+      "Vpc" : (InputDestinationVpc)?
+    )
+
+    alias InputDestinationRequest = NamedTuple(
+      "StreamName" : (__string)?
+    )
+
+    alias InputDestinationVpc = NamedTuple(
+      "AvailabilityZone" : (__string)?,
+      "NetworkInterfaceId" : (__string)?
+    )
+
+    alias InputDevice = NamedTuple(
+      "Arn" : (__string)?,
+      "ConnectionState" : (InputDeviceConnectionState)?,
+      "DeviceSettingsSyncState" : (DeviceSettingsSyncState)?,
+      "DeviceUpdateStatus" : (DeviceUpdateStatus)?,
+      "HdDeviceSettings" : (InputDeviceHdSettings)?,
+      "Id" : (__string)?,
+      "MacAddress" : (__string)?,
+      "Name" : (__string)?,
+      "NetworkSettings" : (InputDeviceNetworkSettings)?,
+      "SerialNumber" : (__string)?,
+      "Type" : (InputDeviceType)?,
+      "UhdDeviceSettings" : (InputDeviceUhdSettings)?
+    )
+
+    alias InputDeviceActiveInput = String
+
+    alias InputDeviceConfigurableSettings = NamedTuple(
+      "ConfiguredInput" : (InputDeviceConfiguredInput)?,
+      "MaxBitrate" : (__integer)?
+    )
+
+    alias InputDeviceConfigurationValidationError = NamedTuple(
+      "Message" : (__string)?,
+      "ValidationErrors" : (__listOfValidationError)?
+    )
+
+    alias InputDeviceConfiguredInput = String
+
+    alias InputDeviceConnectionState = String
+
+    alias InputDeviceHdSettings = NamedTuple(
+      "ActiveInput" : (InputDeviceActiveInput)?,
+      "ConfiguredInput" : (InputDeviceConfiguredInput)?,
+      "DeviceState" : (InputDeviceState)?,
+      "Framerate" : (__double)?,
+      "Height" : (__integer)?,
+      "MaxBitrate" : (__integer)?,
+      "ScanType" : (InputDeviceScanType)?,
+      "Width" : (__integer)?
+    )
+
+    alias InputDeviceIpScheme = String
+
+    alias InputDeviceNetworkSettings = NamedTuple(
+      "DnsAddresses" : (__listOf__string)?,
+      "Gateway" : (__string)?,
+      "IpAddress" : (__string)?,
+      "IpScheme" : (InputDeviceIpScheme)?,
+      "SubnetMask" : (__string)?
+    )
+
+    alias InputDeviceRequest = NamedTuple(
+      "Id" : (__string)?
+    )
+
+    alias InputDeviceScanType = String
+
+    alias InputDeviceSettings = NamedTuple(
+      "Id" : (__string)?
+    )
+
+    alias InputDeviceState = String
+
+    alias InputDeviceSummary = NamedTuple(
+      "Arn" : (__string)?,
+      "ConnectionState" : (InputDeviceConnectionState)?,
+      "DeviceSettingsSyncState" : (DeviceSettingsSyncState)?,
+      "DeviceUpdateStatus" : (DeviceUpdateStatus)?,
+      "HdDeviceSettings" : (InputDeviceHdSettings)?,
+      "Id" : (__string)?,
+      "MacAddress" : (__string)?,
+      "Name" : (__string)?,
+      "NetworkSettings" : (InputDeviceNetworkSettings)?,
+      "SerialNumber" : (__string)?,
+      "Type" : (InputDeviceType)?,
+      "UhdDeviceSettings" : (InputDeviceUhdSettings)?
+    )
+
+    alias InputDeviceTransferType = String
+
+    alias InputDeviceType = String
+
+    alias InputDeviceUhdSettings = NamedTuple(
+      "ActiveInput" : (InputDeviceActiveInput)?,
+      "ConfiguredInput" : (InputDeviceConfiguredInput)?,
+      "DeviceState" : (InputDeviceState)?,
+      "Framerate" : (__double)?,
+      "Height" : (__integer)?,
+      "MaxBitrate" : (__integer)?,
+      "ScanType" : (InputDeviceScanType)?,
+      "Width" : (__integer)?
+    )
+
+    alias InputFilter = String
+
+    alias InputLocation = NamedTuple(
+      "PasswordParam" : (__string)?,
+      "Uri" : __string,
+      "Username" : (__string)?
+    )
+
+    alias InputLossActionForHlsOut = String
+
+    alias InputLossActionForMsSmoothOut = String
+
+    alias InputLossActionForRtmpOut = String
+
+    alias InputLossActionForUdpOut = String
+
+    alias InputLossBehavior = NamedTuple(
+      "BlackFrameMsec" : (__integerMin0Max1000000)?,
+      "InputLossImageColor" : (__stringMin6Max6)?,
+      "InputLossImageSlate" : (InputLocation)?,
+      "InputLossImageType" : (InputLossImageType)?,
+      "RepeatFrameMsec" : (__integerMin0Max1000000)?
+    )
+
+    alias InputLossFailoverSettings = NamedTuple(
+      "InputLossThresholdMsec" : (__integerMin100)?
+    )
+
+    alias InputLossImageType = String
+
+    alias InputMaximumBitrate = String
+
+    alias InputPreference = String
+
+    alias InputPrepareScheduleActionSettings = NamedTuple(
+      "InputAttachmentNameReference" : (__string)?,
+      "InputClippingSettings" : (InputClippingSettings)?,
+      "UrlPath" : (__listOf__string)?
+    )
+
+    alias InputResolution = String
+
+    alias InputSecurityGroup = NamedTuple(
+      "Arn" : (__string)?,
+      "Id" : (__string)?,
+      "Inputs" : (__listOf__string)?,
+      "State" : (InputSecurityGroupState)?,
+      "Tags" : (Tags)?,
+      "WhitelistRules" : (__listOfInputWhitelistRule)?
+    )
+
+    alias InputSecurityGroupState = String
+
+    alias InputSecurityGroupWhitelistRequest = NamedTuple(
+      "Tags" : (Tags)?,
+      "WhitelistRules" : (__listOfInputWhitelistRuleCidr)?
+    )
+
+    alias InputSettings = NamedTuple(
+      "AudioSelectors" : (__listOfAudioSelector)?,
+      "CaptionSelectors" : (__listOfCaptionSelector)?,
+      "DeblockFilter" : (InputDeblockFilter)?,
+      "DenoiseFilter" : (InputDenoiseFilter)?,
+      "FilterStrength" : (__integerMin1Max5)?,
+      "InputFilter" : (InputFilter)?,
+      "NetworkInputSettings" : (NetworkInputSettings)?,
+      "Smpte2038DataPreference" : (Smpte2038DataPreference)?,
+      "SourceEndBehavior" : (InputSourceEndBehavior)?,
+      "VideoSelector" : (VideoSelector)?
+    )
+
+    alias InputSource = NamedTuple(
+      "PasswordParam" : (__string)?,
+      "Url" : (__string)?,
+      "Username" : (__string)?
+    )
+
+    alias InputSourceEndBehavior = String
+
+    alias InputSourceRequest = NamedTuple(
+      "PasswordParam" : (__string)?,
+      "Url" : (__string)?,
+      "Username" : (__string)?
+    )
+
+    alias InputSourceType = String
+
+    alias InputSpecification = NamedTuple(
+      "Codec" : (InputCodec)?,
+      "MaximumBitrate" : (InputMaximumBitrate)?,
+      "Resolution" : (InputResolution)?
+    )
+
+    alias InputState = String
+
+    alias InputSwitchScheduleActionSettings = NamedTuple(
+      "InputAttachmentNameReference" : __string,
+      "InputClippingSettings" : (InputClippingSettings)?,
+      "UrlPath" : (__listOf__string)?
+    )
+
+    alias InputTimecodeSource = String
+
+    alias InputType = String
+
+    alias InputVpcRequest = NamedTuple(
+      "SecurityGroupIds" : (__listOf__string)?,
+      "SubnetIds" : __listOf__string
+    )
+
+    alias InputWhitelistRule = NamedTuple(
+      "Cidr" : (__string)?
+    )
+
+    alias InputWhitelistRuleCidr = NamedTuple(
+      "Cidr" : (__string)?
+    )
+
+    alias InternalServerErrorException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias InternalServiceError = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias InvalidRequest = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias KeyProviderSettings = NamedTuple(
+      "StaticKeySettings" : (StaticKeySettings)?
+    )
+
+    alias LastFrameClippingBehavior = String
+
+    alias LimitExceeded = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias ListChannelsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListChannelsResponse = NamedTuple(
+      "Channels" : (__listOfChannelSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListChannelsResultModel = NamedTuple(
+      "Channels" : (__listOfChannelSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputDeviceTransfersRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?,
+      "TransferType" : __string
+    )
+
+    alias ListInputDeviceTransfersResponse = NamedTuple(
+      "InputDeviceTransfers" : (__listOfTransferringInputDeviceSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputDeviceTransfersResultModel = NamedTuple(
+      "InputDeviceTransfers" : (__listOfTransferringInputDeviceSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputDevicesRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputDevicesResponse = NamedTuple(
+      "InputDevices" : (__listOfInputDeviceSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputDevicesResultModel = NamedTuple(
+      "InputDevices" : (__listOfInputDeviceSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputSecurityGroupsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputSecurityGroupsResponse = NamedTuple(
+      "InputSecurityGroups" : (__listOfInputSecurityGroup)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputSecurityGroupsResultModel = NamedTuple(
+      "InputSecurityGroups" : (__listOfInputSecurityGroup)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputsResponse = NamedTuple(
+      "Inputs" : (__listOfInput)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListInputsResultModel = NamedTuple(
+      "Inputs" : (__listOfInput)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListMultiplexProgramsRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "MultiplexId" : __string,
+      "NextToken" : (__string)?
+    )
+
+    alias ListMultiplexProgramsResponse = NamedTuple(
+      "MultiplexPrograms" : (__listOfMultiplexProgramSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListMultiplexProgramsResultModel = NamedTuple(
+      "MultiplexPrograms" : (__listOfMultiplexProgramSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListMultiplexesRequest = NamedTuple(
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListMultiplexesResponse = NamedTuple(
+      "Multiplexes" : (__listOfMultiplexSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListMultiplexesResultModel = NamedTuple(
+      "Multiplexes" : (__listOfMultiplexSummary)?,
+      "NextToken" : (__string)?
+    )
+
+    alias ListOfferingsRequest = NamedTuple(
+      "ChannelClass" : (__string)?,
+      "ChannelConfiguration" : (__string)?,
+      "Codec" : (__string)?,
+      "Duration" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "MaximumBitrate" : (__string)?,
+      "MaximumFramerate" : (__string)?,
+      "NextToken" : (__string)?,
+      "Resolution" : (__string)?,
+      "ResourceType" : (__string)?,
+      "SpecialFeature" : (__string)?,
+      "VideoQuality" : (__string)?
+    )
+
+    alias ListOfferingsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Offerings" : (__listOfOffering)?
+    )
+
+    alias ListOfferingsResultModel = NamedTuple(
+      "NextToken" : (__string)?,
+      "Offerings" : (__listOfOffering)?
+    )
+
+    alias ListReservationsRequest = NamedTuple(
+      "ChannelClass" : (__string)?,
+      "Codec" : (__string)?,
+      "MaxResults" : (MaxResults)?,
+      "MaximumBitrate" : (__string)?,
+      "MaximumFramerate" : (__string)?,
+      "NextToken" : (__string)?,
+      "Resolution" : (__string)?,
+      "ResourceType" : (__string)?,
+      "SpecialFeature" : (__string)?,
+      "VideoQuality" : (__string)?
+    )
+
+    alias ListReservationsResponse = NamedTuple(
+      "NextToken" : (__string)?,
+      "Reservations" : (__listOfReservation)?
+    )
+
+    alias ListReservationsResultModel = NamedTuple(
+      "NextToken" : (__string)?,
+      "Reservations" : (__listOfReservation)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : __string
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias LogLevel = String
+
+    alias M2tsAbsentInputAudioBehavior = String
+
+    alias M2tsArib = String
+
+    alias M2tsAribCaptionsPidControl = String
+
+    alias M2tsAudioBufferModel = String
+
+    alias M2tsAudioInterval = String
+
+    alias M2tsAudioStreamType = String
+
+    alias M2tsBufferModel = String
+
+    alias M2tsCcDescriptor = String
+
+    alias M2tsEbifControl = String
+
+    alias M2tsEbpPlacement = String
+
+    alias M2tsEsRateInPes = String
+
+    alias M2tsKlv = String
+
+    alias M2tsNielsenId3Behavior = String
+
+    alias M2tsPcrControl = String
+
+    alias M2tsRateMode = String
+
+    alias M2tsScte35Control = String
+
+    alias M2tsSegmentationMarkers = String
+
+    alias M2tsSegmentationStyle = String
+
+    alias M2tsSettings = NamedTuple(
+      "AbsentInputAudioBehavior" : (M2tsAbsentInputAudioBehavior)?,
+      "Arib" : (M2tsArib)?,
+      "AribCaptionsPid" : (__string)?,
+      "AribCaptionsPidControl" : (M2tsAribCaptionsPidControl)?,
+      "AudioBufferModel" : (M2tsAudioBufferModel)?,
+      "AudioFramesPerPes" : (__integerMin0)?,
+      "AudioPids" : (__string)?,
+      "AudioStreamType" : (M2tsAudioStreamType)?,
+      "Bitrate" : (__integerMin0)?,
+      "BufferModel" : (M2tsBufferModel)?,
+      "CcDescriptor" : (M2tsCcDescriptor)?,
+      "DvbNitSettings" : (DvbNitSettings)?,
+      "DvbSdtSettings" : (DvbSdtSettings)?,
+      "DvbSubPids" : (__string)?,
+      "DvbTdtSettings" : (DvbTdtSettings)?,
+      "DvbTeletextPid" : (__string)?,
+      "Ebif" : (M2tsEbifControl)?,
+      "EbpAudioInterval" : (M2tsAudioInterval)?,
+      "EbpLookaheadMs" : (__integerMin0Max10000)?,
+      "EbpPlacement" : (M2tsEbpPlacement)?,
+      "EcmPid" : (__string)?,
+      "EsRateInPes" : (M2tsEsRateInPes)?,
+      "EtvPlatformPid" : (__string)?,
+      "EtvSignalPid" : (__string)?,
+      "FragmentTime" : (__doubleMin0)?,
+      "Klv" : (M2tsKlv)?,
+      "KlvDataPids" : (__string)?,
+      "NielsenId3Behavior" : (M2tsNielsenId3Behavior)?,
+      "NullPacketBitrate" : (__doubleMin0)?,
+      "PatInterval" : (__integerMin0Max1000)?,
+      "PcrControl" : (M2tsPcrControl)?,
+      "PcrPeriod" : (__integerMin0Max500)?,
+      "PcrPid" : (__string)?,
+      "PmtInterval" : (__integerMin0Max1000)?,
+      "PmtPid" : (__string)?,
+      "ProgramNum" : (__integerMin0Max65535)?,
+      "RateMode" : (M2tsRateMode)?,
+      "Scte27Pids" : (__string)?,
+      "Scte35Control" : (M2tsScte35Control)?,
+      "Scte35Pid" : (__string)?,
+      "SegmentationMarkers" : (M2tsSegmentationMarkers)?,
+      "SegmentationStyle" : (M2tsSegmentationStyle)?,
+      "SegmentationTime" : (__doubleMin1)?,
+      "TimedMetadataBehavior" : (M2tsTimedMetadataBehavior)?,
+      "TimedMetadataPid" : (__string)?,
+      "TransportStreamId" : (__integerMin0Max65535)?,
+      "VideoPid" : (__string)?
+    )
+
+    alias M2tsTimedMetadataBehavior = String
+
+    alias M3u8NielsenId3Behavior = String
+
+    alias M3u8PcrControl = String
+
+    alias M3u8Scte35Behavior = String
+
+    alias M3u8Settings = NamedTuple(
+      "AudioFramesPerPes" : (__integerMin0)?,
+      "AudioPids" : (__string)?,
+      "EcmPid" : (__string)?,
+      "NielsenId3Behavior" : (M3u8NielsenId3Behavior)?,
+      "PatInterval" : (__integerMin0Max1000)?,
+      "PcrControl" : (M3u8PcrControl)?,
+      "PcrPeriod" : (__integerMin0Max500)?,
+      "PcrPid" : (__string)?,
+      "PmtInterval" : (__integerMin0Max1000)?,
+      "PmtPid" : (__string)?,
+      "ProgramNum" : (__integerMin0Max65535)?,
+      "Scte35Behavior" : (M3u8Scte35Behavior)?,
+      "Scte35Pid" : (__string)?,
+      "TimedMetadataBehavior" : (M3u8TimedMetadataBehavior)?,
+      "TimedMetadataPid" : (__string)?,
+      "TransportStreamId" : (__integerMin0Max65535)?,
+      "VideoPid" : (__string)?
+    )
+
+    alias M3u8TimedMetadataBehavior = String
+
+    alias MaxResults = Int32
+
+    alias MediaConnectFlow = NamedTuple(
+      "FlowArn" : (__string)?
+    )
+
+    alias MediaConnectFlowRequest = NamedTuple(
+      "FlowArn" : (__string)?
+    )
+
+    alias MediaPackageGroupSettings = NamedTuple(
+      "Destination" : OutputLocationRef
+    )
+
+    alias MediaPackageOutputDestinationSettings = NamedTuple(
+      "ChannelId" : (__stringMin1)?
+    )
+
+    alias MediaPackageOutputSettings = NamedTuple(
+      
+    )
+
+    alias Mp2CodingMode = String
+
+    alias Mp2Settings = NamedTuple(
+      "Bitrate" : (__double)?,
+      "CodingMode" : (Mp2CodingMode)?,
+      "SampleRate" : (__double)?
+    )
+
+    alias Mpeg2AdaptiveQuantization = String
+
+    alias Mpeg2ColorMetadata = String
+
+    alias Mpeg2ColorSpace = String
+
+    alias Mpeg2DisplayRatio = String
+
+    alias Mpeg2FilterSettings = NamedTuple(
+      "TemporalFilterSettings" : (TemporalFilterSettings)?
+    )
+
+    alias Mpeg2GopSizeUnits = String
+
+    alias Mpeg2ScanType = String
+
+    alias Mpeg2Settings = NamedTuple(
+      "AdaptiveQuantization" : (Mpeg2AdaptiveQuantization)?,
+      "AfdSignaling" : (AfdSignaling)?,
+      "ColorMetadata" : (Mpeg2ColorMetadata)?,
+      "ColorSpace" : (Mpeg2ColorSpace)?,
+      "DisplayAspectRatio" : (Mpeg2DisplayRatio)?,
+      "FilterSettings" : (Mpeg2FilterSettings)?,
+      "FixedAfd" : (FixedAfd)?,
+      "FramerateDenominator" : __integerMin1,
+      "FramerateNumerator" : __integerMin1,
+      "GopClosedCadence" : (__integerMin0)?,
+      "GopNumBFrames" : (__integerMin0Max7)?,
+      "GopSize" : (__double)?,
+      "GopSizeUnits" : (Mpeg2GopSizeUnits)?,
+      "ScanType" : (Mpeg2ScanType)?,
+      "SubgopLength" : (Mpeg2SubGopLength)?,
+      "TimecodeInsertion" : (Mpeg2TimecodeInsertionBehavior)?
+    )
+
+    alias Mpeg2SubGopLength = String
+
+    alias Mpeg2TimecodeInsertionBehavior = String
+
+    alias MsSmoothGroupSettings = NamedTuple(
+      "AcquisitionPointId" : (__string)?,
+      "AudioOnlyTimecodeControl" : (SmoothGroupAudioOnlyTimecodeControl)?,
+      "CertificateMode" : (SmoothGroupCertificateMode)?,
+      "ConnectionRetryInterval" : (__integerMin0)?,
+      "Destination" : OutputLocationRef,
+      "EventId" : (__string)?,
+      "EventIdMode" : (SmoothGroupEventIdMode)?,
+      "EventStopBehavior" : (SmoothGroupEventStopBehavior)?,
+      "FilecacheDuration" : (__integerMin0)?,
+      "FragmentLength" : (__integerMin1)?,
+      "InputLossAction" : (InputLossActionForMsSmoothOut)?,
+      "NumRetries" : (__integerMin0)?,
+      "RestartDelay" : (__integerMin0)?,
+      "SegmentationMode" : (SmoothGroupSegmentationMode)?,
+      "SendDelayMs" : (__integerMin0Max10000)?,
+      "SparseTrackType" : (SmoothGroupSparseTrackType)?,
+      "StreamManifestBehavior" : (SmoothGroupStreamManifestBehavior)?,
+      "TimestampOffset" : (__string)?,
+      "TimestampOffsetMode" : (SmoothGroupTimestampOffsetMode)?
+    )
+
+    alias MsSmoothH265PackagingType = String
+
+    alias MsSmoothOutputSettings = NamedTuple(
+      "H265PackagingType" : (MsSmoothH265PackagingType)?,
+      "NameModifier" : (__string)?
+    )
+
+    alias Multiplex = NamedTuple(
+      "Arn" : (__string)?,
+      "AvailabilityZones" : (__listOf__string)?,
+      "Destinations" : (__listOfMultiplexOutputDestination)?,
+      "Id" : (__string)?,
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "ProgramCount" : (__integer)?,
+      "State" : (MultiplexState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias MultiplexConfigurationValidationError = NamedTuple(
+      "Message" : (__string)?,
+      "ValidationErrors" : (__listOfValidationError)?
+    )
+
+    alias MultiplexGroupSettings = NamedTuple(
+      
+    )
+
+    alias MultiplexMediaConnectOutputDestinationSettings = NamedTuple(
+      "EntitlementArn" : (__stringMin1)?
+    )
+
+    alias MultiplexOutputDestination = NamedTuple(
+      "MediaConnectSettings" : (MultiplexMediaConnectOutputDestinationSettings)?
+    )
+
+    alias MultiplexOutputSettings = NamedTuple(
+      "Destination" : OutputLocationRef
+    )
+
+    alias MultiplexProgram = NamedTuple(
+      "ChannelId" : (__string)?,
+      "MultiplexProgramSettings" : (MultiplexProgramSettings)?,
+      "PacketIdentifiersMap" : (MultiplexProgramPacketIdentifiersMap)?,
+      "PipelineDetails" : (__listOfMultiplexProgramPipelineDetail)?,
+      "ProgramName" : (__string)?
+    )
+
+    alias MultiplexProgramChannelDestinationSettings = NamedTuple(
+      "MultiplexId" : (__stringMin1)?,
+      "ProgramName" : (__stringMin1)?
+    )
+
+    alias MultiplexProgramPacketIdentifiersMap = NamedTuple(
+      "AudioPids" : (__listOf__integer)?,
+      "DvbSubPids" : (__listOf__integer)?,
+      "DvbTeletextPid" : (__integer)?,
+      "EtvPlatformPid" : (__integer)?,
+      "EtvSignalPid" : (__integer)?,
+      "KlvDataPids" : (__listOf__integer)?,
+      "PcrPid" : (__integer)?,
+      "PmtPid" : (__integer)?,
+      "PrivateMetadataPid" : (__integer)?,
+      "Scte27Pids" : (__listOf__integer)?,
+      "Scte35Pid" : (__integer)?,
+      "TimedMetadataPid" : (__integer)?,
+      "VideoPid" : (__integer)?
+    )
+
+    alias MultiplexProgramPipelineDetail = NamedTuple(
+      "ActiveChannelPipeline" : (__string)?,
+      "PipelineId" : (__string)?
+    )
+
+    alias MultiplexProgramServiceDescriptor = NamedTuple(
+      "ProviderName" : __stringMax256,
+      "ServiceName" : __stringMax256
+    )
+
+    alias MultiplexProgramSettings = NamedTuple(
+      "PreferredChannelPipeline" : (PreferredChannelPipeline)?,
+      "ProgramNumber" : __integerMin0Max65535,
+      "ServiceDescriptor" : (MultiplexProgramServiceDescriptor)?,
+      "VideoSettings" : (MultiplexVideoSettings)?
+    )
+
+    alias MultiplexProgramSummary = NamedTuple(
+      "ChannelId" : (__string)?,
+      "ProgramName" : (__string)?
+    )
+
+    alias MultiplexSettings = NamedTuple(
+      "MaximumVideoBufferDelayMilliseconds" : (__integerMin800Max3000)?,
+      "TransportStreamBitrate" : __integerMin1000000Max100000000,
+      "TransportStreamId" : __integerMin0Max65535,
+      "TransportStreamReservedBitrate" : (__integerMin0Max100000000)?
+    )
+
+    alias MultiplexSettingsSummary = NamedTuple(
+      "TransportStreamBitrate" : (__integerMin1000000Max100000000)?
+    )
+
+    alias MultiplexState = String
+
+    alias MultiplexStatmuxVideoSettings = NamedTuple(
+      "MaximumBitrate" : (__integerMin100000Max100000000)?,
+      "MinimumBitrate" : (__integerMin100000Max100000000)?,
+      "Priority" : (__integerMinNegative5Max5)?
+    )
+
+    alias MultiplexSummary = NamedTuple(
+      "Arn" : (__string)?,
+      "AvailabilityZones" : (__listOf__string)?,
+      "Id" : (__string)?,
+      "MultiplexSettings" : (MultiplexSettingsSummary)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "ProgramCount" : (__integer)?,
+      "State" : (MultiplexState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias MultiplexVideoSettings = NamedTuple(
+      "ConstantBitrate" : (__integerMin100000Max100000000)?,
+      "StatmuxSettings" : (MultiplexStatmuxVideoSettings)?
+    )
+
+    alias NetworkInputServerValidation = String
+
+    alias NetworkInputSettings = NamedTuple(
+      "HlsInputSettings" : (HlsInputSettings)?,
+      "ServerValidation" : (NetworkInputServerValidation)?
+    )
+
+    alias NielsenConfiguration = NamedTuple(
+      "DistributorId" : (__string)?,
+      "NielsenPcmToId3Tagging" : (NielsenPcmToId3TaggingState)?
+    )
+
+    alias NielsenPcmToId3TaggingState = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias Offering = NamedTuple(
+      "Arn" : (__string)?,
+      "CurrencyCode" : (__string)?,
+      "Duration" : (__integer)?,
+      "DurationUnits" : (OfferingDurationUnits)?,
+      "FixedPrice" : (__double)?,
+      "OfferingDescription" : (__string)?,
+      "OfferingId" : (__string)?,
+      "OfferingType" : (OfferingType)?,
+      "Region" : (__string)?,
+      "ResourceSpecification" : (ReservationResourceSpecification)?,
+      "UsagePrice" : (__double)?
+    )
+
+    alias OfferingDurationUnits = String
+
+    alias OfferingType = String
+
+    alias Output = NamedTuple(
+      "AudioDescriptionNames" : (__listOf__string)?,
+      "CaptionDescriptionNames" : (__listOf__string)?,
+      "OutputName" : (__stringMin1Max255)?,
+      "OutputSettings" : OutputSettings,
+      "VideoDescriptionName" : (__string)?
+    )
+
+    alias OutputDestination = NamedTuple(
+      "Id" : (__string)?,
+      "MediaPackageSettings" : (__listOfMediaPackageOutputDestinationSettings)?,
+      "MultiplexSettings" : (MultiplexProgramChannelDestinationSettings)?,
+      "Settings" : (__listOfOutputDestinationSettings)?
+    )
+
+    alias OutputDestinationSettings = NamedTuple(
+      "PasswordParam" : (__string)?,
+      "StreamName" : (__string)?,
+      "Url" : (__string)?,
+      "Username" : (__string)?
+    )
+
+    alias OutputGroup = NamedTuple(
+      "Name" : (__stringMax32)?,
+      "OutputGroupSettings" : OutputGroupSettings,
+      "Outputs" : __listOfOutput
+    )
+
+    alias OutputGroupSettings = NamedTuple(
+      "ArchiveGroupSettings" : (ArchiveGroupSettings)?,
+      "FrameCaptureGroupSettings" : (FrameCaptureGroupSettings)?,
+      "HlsGroupSettings" : (HlsGroupSettings)?,
+      "MediaPackageGroupSettings" : (MediaPackageGroupSettings)?,
+      "MsSmoothGroupSettings" : (MsSmoothGroupSettings)?,
+      "MultiplexGroupSettings" : (MultiplexGroupSettings)?,
+      "RtmpGroupSettings" : (RtmpGroupSettings)?,
+      "UdpGroupSettings" : (UdpGroupSettings)?
+    )
+
+    alias OutputLocationRef = NamedTuple(
+      "DestinationRefId" : (__string)?
+    )
+
+    alias OutputSettings = NamedTuple(
+      "ArchiveOutputSettings" : (ArchiveOutputSettings)?,
+      "FrameCaptureOutputSettings" : (FrameCaptureOutputSettings)?,
+      "HlsOutputSettings" : (HlsOutputSettings)?,
+      "MediaPackageOutputSettings" : (MediaPackageOutputSettings)?,
+      "MsSmoothOutputSettings" : (MsSmoothOutputSettings)?,
+      "MultiplexOutputSettings" : (MultiplexOutputSettings)?,
+      "RtmpOutputSettings" : (RtmpOutputSettings)?,
+      "UdpOutputSettings" : (UdpOutputSettings)?
+    )
+
+    alias PassThroughSettings = NamedTuple(
+      
+    )
+
+    alias PauseStateScheduleActionSettings = NamedTuple(
+      "Pipelines" : (__listOfPipelinePauseStateSettings)?
+    )
+
+    alias PipelineDetail = NamedTuple(
+      "ActiveInputAttachmentName" : (__string)?,
+      "ActiveInputSwitchActionName" : (__string)?,
+      "PipelineId" : (__string)?
+    )
+
+    alias PipelineId = String
+
+    alias PipelinePauseStateSettings = NamedTuple(
+      "PipelineId" : PipelineId
+    )
+
+    alias PreferredChannelPipeline = String
+
+    alias PurchaseOffering = NamedTuple(
+      "Count" : __integerMin1,
+      "Name" : (__string)?,
+      "RequestId" : (__string)?,
+      "Start" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias PurchaseOfferingRequest = NamedTuple(
+      "Count" : __integerMin1,
+      "Name" : (__string)?,
+      "OfferingId" : __string,
+      "RequestId" : (__string)?,
+      "Start" : (__string)?,
+      "Tags" : (Tags)?
+    )
+
+    alias PurchaseOfferingResponse = NamedTuple(
+      "Reservation" : (Reservation)?
+    )
+
+    alias PurchaseOfferingResultModel = NamedTuple(
+      "Reservation" : (Reservation)?
+    )
+
+    alias RawSettings = NamedTuple(
+      
+    )
+
+    alias Rec601Settings = NamedTuple(
+      
+    )
+
+    alias Rec709Settings = NamedTuple(
+      
+    )
+
+    alias RejectInputDeviceTransferRequest = NamedTuple(
+      "InputDeviceId" : __string
+    )
+
+    alias RejectInputDeviceTransferResponse = NamedTuple(
+      
+    )
+
+    alias RemixSettings = NamedTuple(
+      "ChannelMappings" : __listOfAudioChannelMapping,
+      "ChannelsIn" : (__integerMin1Max16)?,
+      "ChannelsOut" : (__integerMin1Max8)?
+    )
+
+    alias Reservation = NamedTuple(
+      "Arn" : (__string)?,
+      "Count" : (__integer)?,
+      "CurrencyCode" : (__string)?,
+      "Duration" : (__integer)?,
+      "DurationUnits" : (OfferingDurationUnits)?,
+      "End" : (__string)?,
+      "FixedPrice" : (__double)?,
+      "Name" : (__string)?,
+      "OfferingDescription" : (__string)?,
+      "OfferingId" : (__string)?,
+      "OfferingType" : (OfferingType)?,
+      "Region" : (__string)?,
+      "ReservationId" : (__string)?,
+      "ResourceSpecification" : (ReservationResourceSpecification)?,
+      "Start" : (__string)?,
+      "State" : (ReservationState)?,
+      "Tags" : (Tags)?,
+      "UsagePrice" : (__double)?
+    )
+
+    alias ReservationCodec = String
+
+    alias ReservationMaximumBitrate = String
+
+    alias ReservationMaximumFramerate = String
+
+    alias ReservationResolution = String
+
+    alias ReservationResourceSpecification = NamedTuple(
+      "ChannelClass" : (ChannelClass)?,
+      "Codec" : (ReservationCodec)?,
+      "MaximumBitrate" : (ReservationMaximumBitrate)?,
+      "MaximumFramerate" : (ReservationMaximumFramerate)?,
+      "Resolution" : (ReservationResolution)?,
+      "ResourceType" : (ReservationResourceType)?,
+      "SpecialFeature" : (ReservationSpecialFeature)?,
+      "VideoQuality" : (ReservationVideoQuality)?
+    )
+
+    alias ReservationResourceType = String
+
+    alias ReservationSpecialFeature = String
+
+    alias ReservationState = String
+
+    alias ReservationVideoQuality = String
+
+    alias ResourceConflict = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias ResourceNotFound = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias RtmpAdMarkers = String
+
+    alias RtmpCacheFullBehavior = String
+
+    alias RtmpCaptionData = String
+
+    alias RtmpCaptionInfoDestinationSettings = NamedTuple(
+      
+    )
+
+    alias RtmpGroupSettings = NamedTuple(
+      "AdMarkers" : (__listOfRtmpAdMarkers)?,
+      "AuthenticationScheme" : (AuthenticationScheme)?,
+      "CacheFullBehavior" : (RtmpCacheFullBehavior)?,
+      "CacheLength" : (__integerMin30)?,
+      "CaptionData" : (RtmpCaptionData)?,
+      "InputLossAction" : (InputLossActionForRtmpOut)?,
+      "RestartDelay" : (__integerMin0)?
+    )
+
+    alias RtmpOutputCertificateMode = String
+
+    alias RtmpOutputSettings = NamedTuple(
+      "CertificateMode" : (RtmpOutputCertificateMode)?,
+      "ConnectionRetryInterval" : (__integerMin1)?,
+      "Destination" : OutputLocationRef,
+      "NumRetries" : (__integerMin0)?
+    )
+
+    alias ScheduleAction = NamedTuple(
+      "ActionName" : __string,
+      "ScheduleActionSettings" : ScheduleActionSettings,
+      "ScheduleActionStartSettings" : ScheduleActionStartSettings
+    )
+
+    alias ScheduleActionSettings = NamedTuple(
+      "HlsId3SegmentTaggingSettings" : (HlsId3SegmentTaggingScheduleActionSettings)?,
+      "HlsTimedMetadataSettings" : (HlsTimedMetadataScheduleActionSettings)?,
+      "InputPrepareSettings" : (InputPrepareScheduleActionSettings)?,
+      "InputSwitchSettings" : (InputSwitchScheduleActionSettings)?,
+      "PauseStateSettings" : (PauseStateScheduleActionSettings)?,
+      "Scte35ReturnToNetworkSettings" : (Scte35ReturnToNetworkScheduleActionSettings)?,
+      "Scte35SpliceInsertSettings" : (Scte35SpliceInsertScheduleActionSettings)?,
+      "Scte35TimeSignalSettings" : (Scte35TimeSignalScheduleActionSettings)?,
+      "StaticImageActivateSettings" : (StaticImageActivateScheduleActionSettings)?,
+      "StaticImageDeactivateSettings" : (StaticImageDeactivateScheduleActionSettings)?
+    )
+
+    alias ScheduleActionStartSettings = NamedTuple(
+      "FixedModeScheduleActionStartSettings" : (FixedModeScheduleActionStartSettings)?,
+      "FollowModeScheduleActionStartSettings" : (FollowModeScheduleActionStartSettings)?,
+      "ImmediateModeScheduleActionStartSettings" : (ImmediateModeScheduleActionStartSettings)?
+    )
+
+    alias ScheduleDeleteResultModel = NamedTuple(
+      
+    )
+
+    alias ScheduleDescribeResultModel = NamedTuple(
+      "NextToken" : (__string)?,
+      "ScheduleActions" : __listOfScheduleAction
+    )
+
+    alias Scte20Convert608To708 = String
+
+    alias Scte20PlusEmbeddedDestinationSettings = NamedTuple(
+      
+    )
+
+    alias Scte20SourceSettings = NamedTuple(
+      "Convert608To708" : (Scte20Convert608To708)?,
+      "Source608ChannelNumber" : (__integerMin1Max4)?
+    )
+
+    alias Scte27DestinationSettings = NamedTuple(
+      
+    )
+
+    alias Scte27SourceSettings = NamedTuple(
+      "Pid" : (__integerMin1)?
+    )
+
+    alias Scte35AposNoRegionalBlackoutBehavior = String
+
+    alias Scte35AposWebDeliveryAllowedBehavior = String
+
+    alias Scte35ArchiveAllowedFlag = String
+
+    alias Scte35DeliveryRestrictions = NamedTuple(
+      "ArchiveAllowedFlag" : Scte35ArchiveAllowedFlag,
+      "DeviceRestrictions" : Scte35DeviceRestrictions,
+      "NoRegionalBlackoutFlag" : Scte35NoRegionalBlackoutFlag,
+      "WebDeliveryAllowedFlag" : Scte35WebDeliveryAllowedFlag
+    )
+
+    alias Scte35Descriptor = NamedTuple(
+      "Scte35DescriptorSettings" : Scte35DescriptorSettings
+    )
+
+    alias Scte35DescriptorSettings = NamedTuple(
+      "SegmentationDescriptorScte35DescriptorSettings" : Scte35SegmentationDescriptor
+    )
+
+    alias Scte35DeviceRestrictions = String
+
+    alias Scte35NoRegionalBlackoutFlag = String
+
+    alias Scte35ReturnToNetworkScheduleActionSettings = NamedTuple(
+      "SpliceEventId" : __longMin0Max4294967295
+    )
+
+    alias Scte35SegmentationCancelIndicator = String
+
+    alias Scte35SegmentationDescriptor = NamedTuple(
+      "DeliveryRestrictions" : (Scte35DeliveryRestrictions)?,
+      "SegmentNum" : (__integerMin0Max255)?,
+      "SegmentationCancelIndicator" : Scte35SegmentationCancelIndicator,
+      "SegmentationDuration" : (__longMin0Max1099511627775)?,
+      "SegmentationEventId" : __longMin0Max4294967295,
+      "SegmentationTypeId" : (__integerMin0Max255)?,
+      "SegmentationUpid" : (__string)?,
+      "SegmentationUpidType" : (__integerMin0Max255)?,
+      "SegmentsExpected" : (__integerMin0Max255)?,
+      "SubSegmentNum" : (__integerMin0Max255)?,
+      "SubSegmentsExpected" : (__integerMin0Max255)?
+    )
+
+    alias Scte35SpliceInsert = NamedTuple(
+      "AdAvailOffset" : (__integerMinNegative1000Max1000)?,
+      "NoRegionalBlackoutFlag" : (Scte35SpliceInsertNoRegionalBlackoutBehavior)?,
+      "WebDeliveryAllowedFlag" : (Scte35SpliceInsertWebDeliveryAllowedBehavior)?
+    )
+
+    alias Scte35SpliceInsertNoRegionalBlackoutBehavior = String
+
+    alias Scte35SpliceInsertScheduleActionSettings = NamedTuple(
+      "Duration" : (__longMin0Max8589934591)?,
+      "SpliceEventId" : __longMin0Max4294967295
+    )
+
+    alias Scte35SpliceInsertWebDeliveryAllowedBehavior = String
+
+    alias Scte35TimeSignalApos = NamedTuple(
+      "AdAvailOffset" : (__integerMinNegative1000Max1000)?,
+      "NoRegionalBlackoutFlag" : (Scte35AposNoRegionalBlackoutBehavior)?,
+      "WebDeliveryAllowedFlag" : (Scte35AposWebDeliveryAllowedBehavior)?
+    )
+
+    alias Scte35TimeSignalScheduleActionSettings = NamedTuple(
+      "Scte35Descriptors" : __listOfScte35Descriptor
+    )
+
+    alias Scte35WebDeliveryAllowedFlag = String
+
+    alias SmoothGroupAudioOnlyTimecodeControl = String
+
+    alias SmoothGroupCertificateMode = String
+
+    alias SmoothGroupEventIdMode = String
+
+    alias SmoothGroupEventStopBehavior = String
+
+    alias SmoothGroupSegmentationMode = String
+
+    alias SmoothGroupSparseTrackType = String
+
+    alias SmoothGroupStreamManifestBehavior = String
+
+    alias SmoothGroupTimestampOffsetMode = String
+
+    alias Smpte2038DataPreference = String
+
+    alias SmpteTtDestinationSettings = NamedTuple(
+      
+    )
+
+    alias StandardHlsSettings = NamedTuple(
+      "AudioRenditionSets" : (__string)?,
+      "M3u8Settings" : M3u8Settings
+    )
+
+    alias StartChannelRequest = NamedTuple(
+      "ChannelId" : __string
+    )
+
+    alias StartChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EgressEndpoints" : (__listOfChannelEgressEndpoint)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "Id" : (__string)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "PipelineDetails" : (__listOfPipelineDetail)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "RoleArn" : (__string)?,
+      "State" : (ChannelState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias StartMultiplexRequest = NamedTuple(
+      "MultiplexId" : __string
+    )
+
+    alias StartMultiplexResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AvailabilityZones" : (__listOf__string)?,
+      "Destinations" : (__listOfMultiplexOutputDestination)?,
+      "Id" : (__string)?,
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "ProgramCount" : (__integer)?,
+      "State" : (MultiplexState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias StartTimecode = NamedTuple(
+      "Timecode" : (__string)?
+    )
+
+    alias StaticImageActivateScheduleActionSettings = NamedTuple(
+      "Duration" : (__integerMin0)?,
+      "FadeIn" : (__integerMin0)?,
+      "FadeOut" : (__integerMin0)?,
+      "Height" : (__integerMin1)?,
+      "Image" : InputLocation,
+      "ImageX" : (__integerMin0)?,
+      "ImageY" : (__integerMin0)?,
+      "Layer" : (__integerMin0Max7)?,
+      "Opacity" : (__integerMin0Max100)?,
+      "Width" : (__integerMin1)?
+    )
+
+    alias StaticImageDeactivateScheduleActionSettings = NamedTuple(
+      "FadeOut" : (__integerMin0)?,
+      "Layer" : (__integerMin0Max7)?
+    )
+
+    alias StaticKeySettings = NamedTuple(
+      "KeyProviderServer" : (InputLocation)?,
+      "StaticKeyValue" : __stringMin32Max32
+    )
+
+    alias StopChannelRequest = NamedTuple(
+      "ChannelId" : __string
+    )
+
+    alias StopChannelResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelClass" : (ChannelClass)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EgressEndpoints" : (__listOfChannelEgressEndpoint)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "Id" : (__string)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "PipelineDetails" : (__listOfPipelineDetail)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "RoleArn" : (__string)?,
+      "State" : (ChannelState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias StopMultiplexRequest = NamedTuple(
+      "MultiplexId" : __string
+    )
+
+    alias StopMultiplexResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "AvailabilityZones" : (__listOf__string)?,
+      "Destinations" : (__listOfMultiplexOutputDestination)?,
+      "Id" : (__string)?,
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?,
+      "PipelinesRunningCount" : (__integer)?,
+      "ProgramCount" : (__integer)?,
+      "State" : (MultiplexState)?,
+      "Tags" : (Tags)?
+    )
+
+    alias StopTimecode = NamedTuple(
+      "LastFrameClippingBehavior" : (LastFrameClippingBehavior)?,
+      "Timecode" : (__string)?
+    )
+
+    alias Tags = Hash(__string,__string)
+
+    alias TagsModel = NamedTuple(
+      "Tags" : (Tags)?
+    )
+
+    alias TeletextDestinationSettings = NamedTuple(
+      
+    )
+
+    alias TeletextSourceSettings = NamedTuple(
+      "PageNumber" : (__string)?
+    )
+
+    alias TemporalFilterPostFilterSharpening = String
+
+    alias TemporalFilterSettings = NamedTuple(
+      "PostFilterSharpening" : (TemporalFilterPostFilterSharpening)?,
+      "Strength" : (TemporalFilterStrength)?
+    )
+
+    alias TemporalFilterStrength = String
+
+    alias ThumbnailData = NamedTuple(
+      "Body" : (__string)?
+    )
+
+    alias TimecodeConfig = NamedTuple(
+      "Source" : TimecodeConfigSource,
+      "SyncThreshold" : (__integerMin1Max1000000)?
+    )
+
+    alias TimecodeConfigSource = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (__string)?
+    )
+
+    alias TransferInputDevice = NamedTuple(
+      "TargetCustomerId" : (__string)?,
+      "TransferMessage" : (__string)?
+    )
+
+    alias TransferInputDeviceRequest = NamedTuple(
+      "InputDeviceId" : __string,
+      "TargetCustomerId" : (__string)?,
+      "TransferMessage" : (__string)?
+    )
+
+    alias TransferInputDeviceResponse = NamedTuple(
+      
+    )
+
+    alias TransferringInputDeviceSummary = NamedTuple(
+      "Id" : (__string)?,
+      "Message" : (__string)?,
+      "TargetCustomerId" : (__string)?,
+      "TransferType" : (InputDeviceTransferType)?
+    )
+
+    alias TtmlDestinationSettings = NamedTuple(
+      "StyleControl" : (TtmlDestinationStyleControl)?
+    )
+
+    alias TtmlDestinationStyleControl = String
+
+    alias UdpContainerSettings = NamedTuple(
+      "M2tsSettings" : (M2tsSettings)?
+    )
+
+    alias UdpGroupSettings = NamedTuple(
+      "InputLossAction" : (InputLossActionForUdpOut)?,
+      "TimedMetadataId3Frame" : (UdpTimedMetadataId3Frame)?,
+      "TimedMetadataId3Period" : (__integerMin0)?
+    )
+
+    alias UdpOutputSettings = NamedTuple(
+      "BufferMsec" : (__integerMin0Max10000)?,
+      "ContainerSettings" : UdpContainerSettings,
+      "Destination" : OutputLocationRef,
+      "FecOutputSettings" : (FecOutputSettings)?
+    )
+
+    alias UdpTimedMetadataId3Frame = String
+
+    alias UnprocessableEntityException = NamedTuple(
+      "Message" : (__string)?,
+      "ValidationErrors" : (__listOfValidationError)?
+    )
+
+    alias UpdateChannel = NamedTuple(
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "RoleArn" : (__string)?
+    )
+
+    alias UpdateChannelClass = NamedTuple(
+      "ChannelClass" : ChannelClass,
+      "Destinations" : (__listOfOutputDestination)?
+    )
+
+    alias UpdateChannelClassRequest = NamedTuple(
+      "ChannelClass" : ChannelClass,
+      "ChannelId" : __string,
+      "Destinations" : (__listOfOutputDestination)?
+    )
+
+    alias UpdateChannelClassResponse = NamedTuple(
+      "Channel" : (Channel)?
+    )
+
+    alias UpdateChannelRequest = NamedTuple(
+      "CdiInputSpecification" : (CdiInputSpecification)?,
+      "ChannelId" : __string,
+      "Destinations" : (__listOfOutputDestination)?,
+      "EncoderSettings" : (EncoderSettings)?,
+      "InputAttachments" : (__listOfInputAttachment)?,
+      "InputSpecification" : (InputSpecification)?,
+      "LogLevel" : (LogLevel)?,
+      "Name" : (__string)?,
+      "RoleArn" : (__string)?
+    )
+
+    alias UpdateChannelResponse = NamedTuple(
+      "Channel" : (Channel)?
+    )
+
+    alias UpdateChannelResultModel = NamedTuple(
+      "Channel" : (Channel)?
+    )
+
+    alias UpdateInput = NamedTuple(
+      "Destinations" : (__listOfInputDestinationRequest)?,
+      "InputDevices" : (__listOfInputDeviceRequest)?,
+      "InputSecurityGroups" : (__listOf__string)?,
+      "MediaConnectFlows" : (__listOfMediaConnectFlowRequest)?,
+      "Name" : (__string)?,
+      "RoleArn" : (__string)?,
+      "Sources" : (__listOfInputSourceRequest)?
+    )
+
+    alias UpdateInputDevice = NamedTuple(
+      "HdDeviceSettings" : (InputDeviceConfigurableSettings)?,
+      "Name" : (__string)?,
+      "UhdDeviceSettings" : (InputDeviceConfigurableSettings)?
+    )
+
+    alias UpdateInputDeviceRequest = NamedTuple(
+      "HdDeviceSettings" : (InputDeviceConfigurableSettings)?,
+      "InputDeviceId" : __string,
+      "Name" : (__string)?,
+      "UhdDeviceSettings" : (InputDeviceConfigurableSettings)?
+    )
+
+    alias UpdateInputDeviceResponse = NamedTuple(
+      "Arn" : (__string)?,
+      "ConnectionState" : (InputDeviceConnectionState)?,
+      "DeviceSettingsSyncState" : (DeviceSettingsSyncState)?,
+      "DeviceUpdateStatus" : (DeviceUpdateStatus)?,
+      "HdDeviceSettings" : (InputDeviceHdSettings)?,
+      "Id" : (__string)?,
+      "MacAddress" : (__string)?,
+      "Name" : (__string)?,
+      "NetworkSettings" : (InputDeviceNetworkSettings)?,
+      "SerialNumber" : (__string)?,
+      "Type" : (InputDeviceType)?,
+      "UhdDeviceSettings" : (InputDeviceUhdSettings)?
+    )
+
+    alias UpdateInputRequest = NamedTuple(
+      "Destinations" : (__listOfInputDestinationRequest)?,
+      "InputDevices" : (__listOfInputDeviceRequest)?,
+      "InputId" : __string,
+      "InputSecurityGroups" : (__listOf__string)?,
+      "MediaConnectFlows" : (__listOfMediaConnectFlowRequest)?,
+      "Name" : (__string)?,
+      "RoleArn" : (__string)?,
+      "Sources" : (__listOfInputSourceRequest)?
+    )
+
+    alias UpdateInputResponse = NamedTuple(
+      "Input" : (Input)?
+    )
+
+    alias UpdateInputResultModel = NamedTuple(
+      "Input" : (Input)?
+    )
+
+    alias UpdateInputSecurityGroupRequest = NamedTuple(
+      "InputSecurityGroupId" : __string,
+      "Tags" : (Tags)?,
+      "WhitelistRules" : (__listOfInputWhitelistRuleCidr)?
+    )
+
+    alias UpdateInputSecurityGroupResponse = NamedTuple(
+      "SecurityGroup" : (InputSecurityGroup)?
+    )
+
+    alias UpdateInputSecurityGroupResultModel = NamedTuple(
+      "SecurityGroup" : (InputSecurityGroup)?
+    )
+
+    alias UpdateMultiplex = NamedTuple(
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?
+    )
+
+    alias UpdateMultiplexProgram = NamedTuple(
+      "MultiplexProgramSettings" : (MultiplexProgramSettings)?
+    )
+
+    alias UpdateMultiplexProgramRequest = NamedTuple(
+      "MultiplexId" : __string,
+      "MultiplexProgramSettings" : (MultiplexProgramSettings)?,
+      "ProgramName" : __string
+    )
+
+    alias UpdateMultiplexProgramResponse = NamedTuple(
+      "MultiplexProgram" : (MultiplexProgram)?
+    )
+
+    alias UpdateMultiplexProgramResultModel = NamedTuple(
+      "MultiplexProgram" : (MultiplexProgram)?
+    )
+
+    alias UpdateMultiplexRequest = NamedTuple(
+      "MultiplexId" : __string,
+      "MultiplexSettings" : (MultiplexSettings)?,
+      "Name" : (__string)?
+    )
+
+    alias UpdateMultiplexResponse = NamedTuple(
+      "Multiplex" : (Multiplex)?
+    )
+
+    alias UpdateMultiplexResultModel = NamedTuple(
+      "Multiplex" : (Multiplex)?
+    )
+
+    alias UpdateReservation = NamedTuple(
+      "Name" : (__string)?
+    )
+
+    alias UpdateReservationRequest = NamedTuple(
+      "Name" : (__string)?,
+      "ReservationId" : __string
+    )
+
+    alias UpdateReservationResponse = NamedTuple(
+      "Reservation" : (Reservation)?
+    )
+
+    alias UpdateReservationResultModel = NamedTuple(
+      "Reservation" : (Reservation)?
+    )
+
+    alias ValidationError = NamedTuple(
+      "ElementPath" : (__string)?,
+      "ErrorMessage" : (__string)?
+    )
+
+    alias VideoBlackFailoverSettings = NamedTuple(
+      "BlackDetectThreshold" : (__doubleMin0Max1)?,
+      "VideoBlackThresholdMsec" : (__integerMin1000)?
+    )
+
+    alias VideoCodecSettings = NamedTuple(
+      "FrameCaptureSettings" : (FrameCaptureSettings)?,
+      "H264Settings" : (H264Settings)?,
+      "H265Settings" : (H265Settings)?,
+      "Mpeg2Settings" : (Mpeg2Settings)?
+    )
+
+    alias VideoDescription = NamedTuple(
+      "CodecSettings" : (VideoCodecSettings)?,
+      "Height" : (__integer)?,
+      "Name" : __string,
+      "RespondToAfd" : (VideoDescriptionRespondToAfd)?,
+      "ScalingBehavior" : (VideoDescriptionScalingBehavior)?,
+      "Sharpness" : (__integerMin0Max100)?,
+      "Width" : (__integer)?
+    )
+
+    alias VideoDescriptionRespondToAfd = String
+
+    alias VideoDescriptionScalingBehavior = String
+
+    alias VideoSelector = NamedTuple(
+      "ColorSpace" : (VideoSelectorColorSpace)?,
+      "ColorSpaceUsage" : (VideoSelectorColorSpaceUsage)?,
+      "SelectorSettings" : (VideoSelectorSettings)?
+    )
+
+    alias VideoSelectorColorSpace = String
+
+    alias VideoSelectorColorSpaceUsage = String
+
+    alias VideoSelectorPid = NamedTuple(
+      "Pid" : (__integerMin0Max8191)?
+    )
+
+    alias VideoSelectorProgramId = NamedTuple(
+      "ProgramId" : (__integerMin0Max65536)?
+    )
+
+    alias VideoSelectorSettings = NamedTuple(
+      "VideoSelectorPid" : (VideoSelectorPid)?,
+      "VideoSelectorProgramId" : (VideoSelectorProgramId)?
+    )
+
+    alias WavCodingMode = String
+
+    alias WavSettings = NamedTuple(
+      "BitDepth" : (__double)?,
+      "CodingMode" : (WavCodingMode)?,
+      "SampleRate" : (__double)?
+    )
+
+    alias WebvttDestinationSettings = NamedTuple(
+      
+    )
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __doubleMin0 = Float64
+
+    alias __doubleMin0Max1 = Float64
+
+    alias __doubleMin1 = Float64
+
+    alias __doubleMinNegative59Max0 = Float64
+
+    alias __integer = Int32
+
+    alias __integerMin0 = Int32
+
+    alias __integerMin0Max10 = Int32
+
+    alias __integerMin0Max100 = Int32
+
+    alias __integerMin0Max1000 = Int32
+
+    alias __integerMin0Max10000 = Int32
+
+    alias __integerMin0Max1000000 = Int32
+
+    alias __integerMin0Max100000000 = Int32
+
+    alias __integerMin0Max128 = Int32
+
+    alias __integerMin0Max15 = Int32
+
+    alias __integerMin0Max255 = Int32
+
+    alias __integerMin0Max30 = Int32
+
+    alias __integerMin0Max32768 = Int32
+
+    alias __integerMin0Max3600 = Int32
+
+    alias __integerMin0Max500 = Int32
+
+    alias __integerMin0Max600 = Int32
+
+    alias __integerMin0Max65535 = Int32
+
+    alias __integerMin0Max65536 = Int32
+
+    alias __integerMin0Max7 = Int32
+
+    alias __integerMin0Max8191 = Int32
+
+    alias __integerMin1 = Int32
+
+    alias __integerMin100 = Int32
+
+    alias __integerMin1000 = Int32
+
+    alias __integerMin1000000Max100000000 = Int32
+
+    alias __integerMin100000Max100000000 = Int32
+
+    alias __integerMin100000Max40000000 = Int32
+
+    alias __integerMin100000Max80000000 = Int32
+
+    alias __integerMin1000Max30000 = Int32
+
+    alias __integerMin1Max10 = Int32
+
+    alias __integerMin1Max1000000 = Int32
+
+    alias __integerMin1Max16 = Int32
+
+    alias __integerMin1Max20 = Int32
+
+    alias __integerMin1Max3003 = Int32
+
+    alias __integerMin1Max31 = Int32
+
+    alias __integerMin1Max32 = Int32
+
+    alias __integerMin1Max3600000 = Int32
+
+    alias __integerMin1Max4 = Int32
+
+    alias __integerMin1Max5 = Int32
+
+    alias __integerMin1Max6 = Int32
+
+    alias __integerMin1Max8 = Int32
+
+    alias __integerMin25Max10000 = Int32
+
+    alias __integerMin25Max2000 = Int32
+
+    alias __integerMin3 = Int32
+
+    alias __integerMin30 = Int32
+
+    alias __integerMin4Max20 = Int32
+
+    alias __integerMin800Max3000 = Int32
+
+    alias __integerMin96Max600 = Int32
+
+    alias __integerMinNegative1000Max1000 = Int32
+
+    alias __integerMinNegative5Max5 = Int32
+
+    alias __integerMinNegative60Max6 = Int32
+
+    alias __integerMinNegative60Max60 = Int32
+
+    alias __listOfAudioChannelMapping = Array(AudioChannelMapping)
+
+    alias __listOfAudioDescription = Array(AudioDescription)
+
+    alias __listOfAudioSelector = Array(AudioSelector)
+
+    alias __listOfAudioTrack = Array(AudioTrack)
+
+    alias __listOfBatchFailedResultModel = Array(BatchFailedResultModel)
+
+    alias __listOfBatchSuccessfulResultModel = Array(BatchSuccessfulResultModel)
+
+    alias __listOfCaptionDescription = Array(CaptionDescription)
+
+    alias __listOfCaptionLanguageMapping = Array(CaptionLanguageMapping)
+
+    alias __listOfCaptionSelector = Array(CaptionSelector)
+
+    alias __listOfChannelEgressEndpoint = Array(ChannelEgressEndpoint)
+
+    alias __listOfChannelSummary = Array(ChannelSummary)
+
+    alias __listOfFailoverCondition = Array(FailoverCondition)
+
+    alias __listOfHlsAdMarkers = Array(HlsAdMarkers)
+
+    alias __listOfInput = Array(Input)
+
+    alias __listOfInputAttachment = Array(InputAttachment)
+
+    alias __listOfInputChannelLevel = Array(InputChannelLevel)
+
+    alias __listOfInputDestination = Array(InputDestination)
+
+    alias __listOfInputDestinationRequest = Array(InputDestinationRequest)
+
+    alias __listOfInputDeviceRequest = Array(InputDeviceRequest)
+
+    alias __listOfInputDeviceSettings = Array(InputDeviceSettings)
+
+    alias __listOfInputDeviceSummary = Array(InputDeviceSummary)
+
+    alias __listOfInputSecurityGroup = Array(InputSecurityGroup)
+
+    alias __listOfInputSource = Array(InputSource)
+
+    alias __listOfInputSourceRequest = Array(InputSourceRequest)
+
+    alias __listOfInputWhitelistRule = Array(InputWhitelistRule)
+
+    alias __listOfInputWhitelistRuleCidr = Array(InputWhitelistRuleCidr)
+
+    alias __listOfMediaConnectFlow = Array(MediaConnectFlow)
+
+    alias __listOfMediaConnectFlowRequest = Array(MediaConnectFlowRequest)
+
+    alias __listOfMediaPackageOutputDestinationSettings = Array(MediaPackageOutputDestinationSettings)
+
+    alias __listOfMultiplexOutputDestination = Array(MultiplexOutputDestination)
+
+    alias __listOfMultiplexProgramPipelineDetail = Array(MultiplexProgramPipelineDetail)
+
+    alias __listOfMultiplexProgramSummary = Array(MultiplexProgramSummary)
+
+    alias __listOfMultiplexSummary = Array(MultiplexSummary)
+
+    alias __listOfOffering = Array(Offering)
+
+    alias __listOfOutput = Array(Output)
+
+    alias __listOfOutputDestination = Array(OutputDestination)
+
+    alias __listOfOutputDestinationSettings = Array(OutputDestinationSettings)
+
+    alias __listOfOutputGroup = Array(OutputGroup)
+
+    alias __listOfPipelineDetail = Array(PipelineDetail)
+
+    alias __listOfPipelinePauseStateSettings = Array(PipelinePauseStateSettings)
+
+    alias __listOfReservation = Array(Reservation)
+
+    alias __listOfRtmpAdMarkers = Array(RtmpAdMarkers)
+
+    alias __listOfScheduleAction = Array(ScheduleAction)
+
+    alias __listOfScte35Descriptor = Array(Scte35Descriptor)
+
+    alias __listOfTransferringInputDeviceSummary = Array(TransferringInputDeviceSummary)
+
+    alias __listOfValidationError = Array(ValidationError)
+
+    alias __listOfVideoDescription = Array(VideoDescription)
+
+    alias __listOf__integer = Array(__integer)
+
+    alias __listOf__string = Array(__string)
+
+    alias __long = Int64
+
+    alias __longMin0Max1099511627775 = Int64
+
+    alias __longMin0Max4294967295 = Int64
+
+    alias __longMin0Max8589934591 = Int64
+
+    alias __string = String
+
+    alias __stringMax256 = String
+
+    alias __stringMax32 = String
+
+    alias __stringMin1 = String
+
+    alias __stringMin1Max255 = String
+
+    alias __stringMin1Max256 = String
+
+    alias __stringMin1Max35 = String
+
+    alias __stringMin32Max32 = String
+
+    alias __stringMin34Max34 = String
+
+    alias __stringMin3Max3 = String
+
+    alias __stringMin6Max6 = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
+
+    alias InputDeviceThumbnail = String | Array(UInt8) | IO
+
+    alias AcceptHeader = String
+
+    alias ContentType = String
+
+    alias __timestamp = String | UInt64 | Time
   end
 end

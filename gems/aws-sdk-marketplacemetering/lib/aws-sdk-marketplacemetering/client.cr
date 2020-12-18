@@ -423,8 +423,8 @@ module Aws::MarketplaceMetering
     #
     # @overload batch_meter_usage(**params)
     # @param [Hash] params ({})
-    def batch_meter_usage(params = {}, **options)
-      req = build_request(:batch_meter_usage, params)
+    def batch_meter_usage(, **options)
+      req = build_request(:batch_meter_usage, )
       req.send_request(options)
     end
 
@@ -501,8 +501,8 @@ module Aws::MarketplaceMetering
     #
     # @overload meter_usage(**params)
     # @param [Hash] params ({})
-    def meter_usage(params = {}, **options)
-      req = build_request(:meter_usage, params)
+    def meter_usage(, **options)
+      req = build_request(:meter_usage, )
       req.send_request(options)
     end
 
@@ -577,8 +577,8 @@ module Aws::MarketplaceMetering
     #
     # @overload register_usage(**params)
     # @param [Hash] params ({})
-    def register_usage(params = {}, **options)
-      req = build_request(:register_usage, params)
+    def register_usage(, **options)
+      req = build_request(:register_usage, )
       req.send_request(options)
     end
 
@@ -614,8 +614,8 @@ module Aws::MarketplaceMetering
     #
     # @overload resolve_customer(**params)
     # @param [Hash] params ({})
-    def resolve_customer(params = {}, **options)
-      req = build_request(:resolve_customer, params)
+    def resolve_customer(, **options)
+      req = build_request(:resolve_customer, )
       req.send_request(options)
     end
 

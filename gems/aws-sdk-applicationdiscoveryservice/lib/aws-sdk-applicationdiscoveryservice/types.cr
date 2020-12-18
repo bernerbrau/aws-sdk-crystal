@@ -1966,5 +1966,567 @@ module Aws::ApplicationDiscoveryService
 
     class UpdateApplicationResponse < Aws::EmptyStructure; end
 
+    alias AgentConfigurationStatus = NamedTuple(
+      "agentId" : (String)?,
+      "operationSucceeded" : (Boolean)?,
+      "description" : (String)?
+    )
+
+    alias AgentConfigurationStatusList = Array(AgentConfigurationStatus)
+
+    alias AgentId = String
+
+    alias AgentIds = Array(AgentId)
+
+    alias AgentInfo = NamedTuple(
+      "agentId" : (AgentId)?,
+      "hostName" : (String)?,
+      "agentNetworkInfoList" : (AgentNetworkInfoList)?,
+      "connectorId" : (String)?,
+      "version" : (String)?,
+      "health" : (AgentStatus)?,
+      "lastHealthPingTime" : (String)?,
+      "collectionStatus" : (String)?,
+      "agentType" : (String)?,
+      "registeredTime" : (String)?
+    )
+
+    alias AgentNetworkInfo = NamedTuple(
+      "ipAddress" : (String)?,
+      "macAddress" : (String)?
+    )
+
+    alias AgentNetworkInfoList = Array(AgentNetworkInfo)
+
+    alias AgentStatus = String
+
+    alias AgentsInfo = Array(AgentInfo)
+
+    alias ApplicationId = String
+
+    alias ApplicationIdsList = Array(ApplicationId)
+
+    alias AssociateConfigurationItemsToApplicationRequest = NamedTuple(
+      "applicationConfigurationId" : ApplicationId,
+      "configurationIds" : ConfigurationIdList
+    )
+
+    alias AssociateConfigurationItemsToApplicationResponse = NamedTuple(
+      
+    )
+
+    alias AuthorizationErrorException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias BatchDeleteImportDataError = NamedTuple(
+      "importTaskId" : (ImportTaskIdentifier)?,
+      "errorCode" : (BatchDeleteImportDataErrorCode)?,
+      "errorDescription" : (BatchDeleteImportDataErrorDescription)?
+    )
+
+    alias BatchDeleteImportDataErrorCode = String
+
+    alias BatchDeleteImportDataErrorDescription = String
+
+    alias BatchDeleteImportDataErrorList = Array(BatchDeleteImportDataError)
+
+    alias BatchDeleteImportDataRequest = NamedTuple(
+      "importTaskIds" : ToDeleteIdentifierList
+    )
+
+    alias BatchDeleteImportDataResponse = NamedTuple(
+      "errors" : (BatchDeleteImportDataErrorList)?
+    )
+
+    alias Boolean = Bool
+
+    alias BoxedInteger = Int32
+
+    alias ClientRequestToken = String
+
+    alias Condition = String
+
+    alias Configuration = Hash(String,String)
+
+    alias ConfigurationId = String
+
+    alias ConfigurationIdList = Array(ConfigurationId)
+
+    alias ConfigurationItemType = String
+
+    alias ConfigurationTag = NamedTuple(
+      "configurationType" : (ConfigurationItemType)?,
+      "configurationId" : (ConfigurationId)?,
+      "key" : (TagKey)?,
+      "value" : (TagValue)?,
+      "timeOfCreation" : (TimeStamp)?
+    )
+
+    alias ConfigurationTagSet = Array(ConfigurationTag)
+
+    alias Configurations = Array(Configuration)
+
+    alias ConfigurationsDownloadUrl = String
+
+    alias ConfigurationsExportId = String
+
+    alias ConflictErrorException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ContinuousExportDescription = NamedTuple(
+      "exportId" : (ConfigurationsExportId)?,
+      "status" : (ContinuousExportStatus)?,
+      "statusDetail" : (StringMax255)?,
+      "s3Bucket" : (S3Bucket)?,
+      "startTime" : (TimeStamp)?,
+      "stopTime" : (TimeStamp)?,
+      "dataSource" : (DataSource)?,
+      "schemaStorageConfig" : (SchemaStorageConfig)?
+    )
+
+    alias ContinuousExportDescriptions = Array(ContinuousExportDescription)
+
+    alias ContinuousExportIds = Array(ConfigurationsExportId)
+
+    alias ContinuousExportStatus = String
+
+    alias CreateApplicationRequest = NamedTuple(
+      "name" : String,
+      "description" : (String)?
+    )
+
+    alias CreateApplicationResponse = NamedTuple(
+      "configurationId" : (String)?
+    )
+
+    alias CreateTagsRequest = NamedTuple(
+      "configurationIds" : ConfigurationIdList,
+      "tags" : TagSet
+    )
+
+    alias CreateTagsResponse = NamedTuple(
+      
+    )
+
+    alias CustomerAgentInfo = NamedTuple(
+      "activeAgents" : Integer,
+      "healthyAgents" : Integer,
+      "blackListedAgents" : Integer,
+      "shutdownAgents" : Integer,
+      "unhealthyAgents" : Integer,
+      "totalAgents" : Integer,
+      "unknownAgents" : Integer
+    )
+
+    alias CustomerConnectorInfo = NamedTuple(
+      "activeConnectors" : Integer,
+      "healthyConnectors" : Integer,
+      "blackListedConnectors" : Integer,
+      "shutdownConnectors" : Integer,
+      "unhealthyConnectors" : Integer,
+      "totalConnectors" : Integer,
+      "unknownConnectors" : Integer
+    )
+
+    alias DataSource = String
+
+    alias DatabaseName = String
+
+    alias DeleteApplicationsRequest = NamedTuple(
+      "configurationIds" : ApplicationIdsList
+    )
+
+    alias DeleteApplicationsResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTagsRequest = NamedTuple(
+      "configurationIds" : ConfigurationIdList,
+      "tags" : (TagSet)?
+    )
+
+    alias DeleteTagsResponse = NamedTuple(
+      
+    )
+
+    alias DescribeAgentsRequest = NamedTuple(
+      "agentIds" : (AgentIds)?,
+      "filters" : (Filters)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeAgentsResponse = NamedTuple(
+      "agentsInfo" : (AgentsInfo)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeConfigurationsAttribute = Hash(String,String)
+
+    alias DescribeConfigurationsAttributes = Array(DescribeConfigurationsAttribute)
+
+    alias DescribeConfigurationsRequest = NamedTuple(
+      "configurationIds" : ConfigurationIdList
+    )
+
+    alias DescribeConfigurationsResponse = NamedTuple(
+      "configurations" : (DescribeConfigurationsAttributes)?
+    )
+
+    alias DescribeContinuousExportsMaxResults = Int32
+
+    alias DescribeContinuousExportsRequest = NamedTuple(
+      "exportIds" : (ContinuousExportIds)?,
+      "maxResults" : (DescribeContinuousExportsMaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeContinuousExportsResponse = NamedTuple(
+      "descriptions" : (ContinuousExportDescriptions)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeExportConfigurationsRequest = NamedTuple(
+      "exportIds" : (ExportIds)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeExportConfigurationsResponse = NamedTuple(
+      "exportsInfo" : (ExportsInfo)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeExportTasksRequest = NamedTuple(
+      "exportIds" : (ExportIds)?,
+      "filters" : (ExportFilters)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeExportTasksResponse = NamedTuple(
+      "exportsInfo" : (ExportsInfo)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeImportTasksFilterList = Array(ImportTaskFilter)
+
+    alias DescribeImportTasksMaxResults = Int32
+
+    alias DescribeImportTasksRequest = NamedTuple(
+      "filters" : (DescribeImportTasksFilterList)?,
+      "maxResults" : (DescribeImportTasksMaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeImportTasksResponse = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "tasks" : (ImportTaskList)?
+    )
+
+    alias DescribeTagsRequest = NamedTuple(
+      "filters" : (TagFilters)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeTagsResponse = NamedTuple(
+      "tags" : (ConfigurationTagSet)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DisassociateConfigurationItemsFromApplicationRequest = NamedTuple(
+      "applicationConfigurationId" : ApplicationId,
+      "configurationIds" : ConfigurationIdList
+    )
+
+    alias DisassociateConfigurationItemsFromApplicationResponse = NamedTuple(
+      
+    )
+
+    alias ExportConfigurationsResponse = NamedTuple(
+      "exportId" : (ConfigurationsExportId)?
+    )
+
+    alias ExportDataFormat = String
+
+    alias ExportDataFormats = Array(ExportDataFormat)
+
+    alias ExportFilter = NamedTuple(
+      "name" : FilterName,
+      "values" : FilterValues,
+      "condition" : Condition
+    )
+
+    alias ExportFilters = Array(ExportFilter)
+
+    alias ExportIds = Array(ConfigurationsExportId)
+
+    alias ExportInfo = NamedTuple(
+      "exportId" : ConfigurationsExportId,
+      "exportStatus" : ExportStatus,
+      "statusMessage" : ExportStatusMessage,
+      "configurationsDownloadUrl" : (ConfigurationsDownloadUrl)?,
+      "exportRequestTime" : ExportRequestTime,
+      "isTruncated" : (Boolean)?,
+      "requestedStartTime" : (TimeStamp)?,
+      "requestedEndTime" : (TimeStamp)?
+    )
+
+    alias ExportRequestTime = String | UInt64 | Time
+
+    alias ExportStatus = String
+
+    alias ExportStatusMessage = String
+
+    alias ExportsInfo = Array(ExportInfo)
+
+    alias Filter = NamedTuple(
+      "name" : String,
+      "values" : FilterValues,
+      "condition" : Condition
+    )
+
+    alias FilterName = String
+
+    alias FilterValue = String
+
+    alias FilterValues = Array(FilterValue)
+
+    alias Filters = Array(Filter)
+
+    alias GetDiscoverySummaryRequest = NamedTuple(
+      
+    )
+
+    alias GetDiscoverySummaryResponse = NamedTuple(
+      "servers" : (Long)?,
+      "applications" : (Long)?,
+      "serversMappedToApplications" : (Long)?,
+      "serversMappedtoTags" : (Long)?,
+      "agentSummary" : (CustomerAgentInfo)?,
+      "connectorSummary" : (CustomerConnectorInfo)?
+    )
+
+    alias HomeRegionNotSetException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ImportStatus = String
+
+    alias ImportTask = NamedTuple(
+      "importTaskId" : (ImportTaskIdentifier)?,
+      "clientRequestToken" : (ClientRequestToken)?,
+      "name" : (ImportTaskName)?,
+      "importUrl" : (ImportURL)?,
+      "status" : (ImportStatus)?,
+      "importRequestTime" : (TimeStamp)?,
+      "importCompletionTime" : (TimeStamp)?,
+      "importDeletedTime" : (TimeStamp)?,
+      "serverImportSuccess" : (Integer)?,
+      "serverImportFailure" : (Integer)?,
+      "applicationImportSuccess" : (Integer)?,
+      "applicationImportFailure" : (Integer)?,
+      "errorsAndFailedEntriesZip" : (S3PresignedUrl)?
+    )
+
+    alias ImportTaskFilter = NamedTuple(
+      "name" : (ImportTaskFilterName)?,
+      "values" : (ImportTaskFilterValueList)?
+    )
+
+    alias ImportTaskFilterName = String
+
+    alias ImportTaskFilterValue = String
+
+    alias ImportTaskFilterValueList = Array(ImportTaskFilterValue)
+
+    alias ImportTaskIdentifier = String
+
+    alias ImportTaskList = Array(ImportTask)
+
+    alias ImportTaskName = String
+
+    alias ImportURL = String
+
+    alias Integer = Int32
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias InvalidParameterValueException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ListConfigurationsRequest = NamedTuple(
+      "configurationType" : ConfigurationItemType,
+      "filters" : (Filters)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (NextToken)?,
+      "orderBy" : (OrderByList)?
+    )
+
+    alias ListConfigurationsResponse = NamedTuple(
+      "configurations" : (Configurations)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListServerNeighborsRequest = NamedTuple(
+      "configurationId" : ConfigurationId,
+      "portInformationNeeded" : (Boolean)?,
+      "neighborConfigurationIds" : (ConfigurationIdList)?,
+      "maxResults" : (Integer)?,
+      "nextToken" : (String)?
+    )
+
+    alias ListServerNeighborsResponse = NamedTuple(
+      "neighbors" : NeighborDetailsList,
+      "nextToken" : (String)?,
+      "knownDependencyCount" : (Long)?
+    )
+
+    alias Long = Int64
+
+    alias Message = String
+
+    alias NeighborConnectionDetail = NamedTuple(
+      "sourceServerId" : ConfigurationId,
+      "destinationServerId" : ConfigurationId,
+      "destinationPort" : (BoxedInteger)?,
+      "transportProtocol" : (String)?,
+      "connectionsCount" : Long
+    )
+
+    alias NeighborDetailsList = Array(NeighborConnectionDetail)
+
+    alias NextToken = String
+
+    alias OperationNotPermittedException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias OrderByElement = NamedTuple(
+      "fieldName" : String,
+      "sortOrder" : (orderString)?
+    )
+
+    alias OrderByList = Array(OrderByElement)
+
+    alias ResourceInUseException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias S3Bucket = String
+
+    alias S3PresignedUrl = String
+
+    alias SchemaStorageConfig = Hash(DatabaseName,String)
+
+    alias ServerInternalErrorException = NamedTuple(
+      "message" : (Message)?
+    )
+
+    alias StartContinuousExportRequest = NamedTuple(
+      
+    )
+
+    alias StartContinuousExportResponse = NamedTuple(
+      "exportId" : (ConfigurationsExportId)?,
+      "s3Bucket" : (S3Bucket)?,
+      "startTime" : (TimeStamp)?,
+      "dataSource" : (DataSource)?,
+      "schemaStorageConfig" : (SchemaStorageConfig)?
+    )
+
+    alias StartDataCollectionByAgentIdsRequest = NamedTuple(
+      "agentIds" : AgentIds
+    )
+
+    alias StartDataCollectionByAgentIdsResponse = NamedTuple(
+      "agentsConfigurationStatus" : (AgentConfigurationStatusList)?
+    )
+
+    alias StartExportTaskRequest = NamedTuple(
+      "exportDataFormat" : (ExportDataFormats)?,
+      "filters" : (ExportFilters)?,
+      "startTime" : (TimeStamp)?,
+      "endTime" : (TimeStamp)?
+    )
+
+    alias StartExportTaskResponse = NamedTuple(
+      "exportId" : (ConfigurationsExportId)?
+    )
+
+    alias StartImportTaskRequest = NamedTuple(
+      "clientRequestToken" : (ClientRequestToken)?,
+      "name" : ImportTaskName,
+      "importUrl" : ImportURL
+    )
+
+    alias StartImportTaskResponse = NamedTuple(
+      "task" : (ImportTask)?
+    )
+
+    alias StopContinuousExportRequest = NamedTuple(
+      "exportId" : ConfigurationsExportId
+    )
+
+    alias StopContinuousExportResponse = NamedTuple(
+      "startTime" : (TimeStamp)?,
+      "stopTime" : (TimeStamp)?
+    )
+
+    alias StopDataCollectionByAgentIdsRequest = NamedTuple(
+      "agentIds" : AgentIds
+    )
+
+    alias StopDataCollectionByAgentIdsResponse = NamedTuple(
+      "agentsConfigurationStatus" : (AgentConfigurationStatusList)?
+    )
+
+    alias String = String
+
+    alias StringMax255 = String
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagFilter = NamedTuple(
+      "name" : FilterName,
+      "values" : FilterValues
+    )
+
+    alias TagFilters = Array(TagFilter)
+
+    alias TagKey = String
+
+    alias TagSet = Array(Tag)
+
+    alias TagValue = String
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias ToDeleteIdentifierList = Array(ImportTaskIdentifier)
+
+    alias UpdateApplicationRequest = NamedTuple(
+      "configurationId" : ApplicationId,
+      "name" : (String)?,
+      "description" : (String)?
+    )
+
+    alias UpdateApplicationResponse = NamedTuple(
+      
+    )
+
+    alias orderString = String
   end
 end

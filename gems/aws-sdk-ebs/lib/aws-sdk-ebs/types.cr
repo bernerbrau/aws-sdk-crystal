@@ -806,5 +806,218 @@ module Aws::EBS
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Reason" : AccessDeniedExceptionReason
+    )
+
+    alias AccessDeniedExceptionReason = String
+
+    alias Block = NamedTuple(
+      "BlockIndex" : (BlockIndex)?,
+      "BlockToken" : (BlockToken)?
+    )
+
+    alias BlockData = String | Array(UInt8) | IO
+
+    alias BlockIndex = Int32
+
+    alias BlockSize = Int32
+
+    alias BlockToken = String
+
+    alias Blocks = Array(Block)
+
+    alias Boolean = Bool
+
+    alias ChangedBlock = NamedTuple(
+      "BlockIndex" : (BlockIndex)?,
+      "FirstBlockToken" : (BlockToken)?,
+      "SecondBlockToken" : (BlockToken)?
+    )
+
+    alias ChangedBlocks = Array(ChangedBlock)
+
+    alias ChangedBlocksCount = Int32
+
+    alias Checksum = String
+
+    alias ChecksumAggregationMethod = String
+
+    alias ChecksumAlgorithm = String
+
+    alias CompleteSnapshotRequest = NamedTuple(
+      "SnapshotId" : SnapshotId,
+      "ChangedBlocksCount" : ChangedBlocksCount,
+      "Checksum" : (Checksum)?,
+      "ChecksumAlgorithm" : (ChecksumAlgorithm)?,
+      "ChecksumAggregationMethod" : (ChecksumAggregationMethod)?
+    )
+
+    alias CompleteSnapshotResponse = NamedTuple(
+      "Status" : (Status)?
+    )
+
+    alias ConcurrentLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias DataLength = Int32
+
+    alias Description = String
+
+    alias ErrorMessage = String
+
+    alias GetSnapshotBlockRequest = NamedTuple(
+      "SnapshotId" : SnapshotId,
+      "BlockIndex" : BlockIndex,
+      "BlockToken" : BlockToken
+    )
+
+    alias GetSnapshotBlockResponse = NamedTuple(
+      "DataLength" : (DataLength)?,
+      "BlockData" : (BlockData)?,
+      "Checksum" : (Checksum)?,
+      "ChecksumAlgorithm" : (ChecksumAlgorithm)?
+    )
+
+    alias IdempotencyToken = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias KmsKeyArn = String
+
+    alias ListChangedBlocksRequest = NamedTuple(
+      "FirstSnapshotId" : (SnapshotId)?,
+      "SecondSnapshotId" : SnapshotId,
+      "NextToken" : (PageToken)?,
+      "MaxResults" : (MaxResults)?,
+      "StartingBlockIndex" : (BlockIndex)?
+    )
+
+    alias ListChangedBlocksResponse = NamedTuple(
+      "ChangedBlocks" : (ChangedBlocks)?,
+      "ExpiryTime" : (TimeStamp)?,
+      "VolumeSize" : (VolumeSize)?,
+      "BlockSize" : (BlockSize)?,
+      "NextToken" : (PageToken)?
+    )
+
+    alias ListSnapshotBlocksRequest = NamedTuple(
+      "SnapshotId" : SnapshotId,
+      "NextToken" : (PageToken)?,
+      "MaxResults" : (MaxResults)?,
+      "StartingBlockIndex" : (BlockIndex)?
+    )
+
+    alias ListSnapshotBlocksResponse = NamedTuple(
+      "Blocks" : (Blocks)?,
+      "ExpiryTime" : (TimeStamp)?,
+      "VolumeSize" : (VolumeSize)?,
+      "BlockSize" : (BlockSize)?,
+      "NextToken" : (PageToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias OwnerId = String
+
+    alias PageToken = String
+
+    alias Progress = Int32
+
+    alias PutSnapshotBlockRequest = NamedTuple(
+      "SnapshotId" : SnapshotId,
+      "BlockIndex" : BlockIndex,
+      "BlockData" : BlockData,
+      "DataLength" : DataLength,
+      "Progress" : (Progress)?,
+      "Checksum" : Checksum,
+      "ChecksumAlgorithm" : ChecksumAlgorithm
+    )
+
+    alias PutSnapshotBlockResponse = NamedTuple(
+      "Checksum" : (Checksum)?,
+      "ChecksumAlgorithm" : (ChecksumAlgorithm)?
+    )
+
+    alias RequestThrottledException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Reason" : (RequestThrottledExceptionReason)?
+    )
+
+    alias RequestThrottledExceptionReason = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Reason" : (ResourceNotFoundExceptionReason)?
+    )
+
+    alias ResourceNotFoundExceptionReason = String
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Reason" : (ServiceQuotaExceededExceptionReason)?
+    )
+
+    alias ServiceQuotaExceededExceptionReason = String
+
+    alias SnapshotId = String
+
+    alias StartSnapshotRequest = NamedTuple(
+      "VolumeSize" : VolumeSize,
+      "ParentSnapshotId" : (SnapshotId)?,
+      "Tags" : (Tags)?,
+      "Description" : (Description)?,
+      "ClientToken" : (IdempotencyToken)?,
+      "Encrypted" : (Boolean)?,
+      "KmsKeyArn" : (KmsKeyArn)?,
+      "Timeout" : (Timeout)?
+    )
+
+    alias StartSnapshotResponse = NamedTuple(
+      "Description" : (Description)?,
+      "SnapshotId" : (SnapshotId)?,
+      "OwnerId" : (OwnerId)?,
+      "Status" : (Status)?,
+      "StartTime" : (TimeStamp)?,
+      "VolumeSize" : (VolumeSize)?,
+      "BlockSize" : (BlockSize)?,
+      "Tags" : (Tags)?,
+      "ParentSnapshotId" : (SnapshotId)?,
+      "KmsKeyArn" : (KmsKeyArn)?
+    )
+
+    alias Status = String
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagValue = String
+
+    alias Tags = Array(Tag)
+
+    alias TimeStamp = String | UInt64 | Time
+
+    alias Timeout = Int32
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?,
+      "Reason" : (ValidationExceptionReason)?
+    )
+
+    alias ValidationExceptionReason = String
+
+    alias VolumeSize = Int64
   end
 end

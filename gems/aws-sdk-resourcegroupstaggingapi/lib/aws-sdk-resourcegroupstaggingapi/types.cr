@@ -893,5 +893,230 @@ module Aws::ResourceGroupsTaggingAPI
       include Aws::Structure
     end
 
+    alias AmazonResourceType = String
+
+    alias ComplianceDetails = NamedTuple(
+      "NoncompliantKeys" : (TagKeyList)?,
+      "KeysWithNoncompliantValues" : (TagKeyList)?,
+      "ComplianceStatus" : (ComplianceStatus)?
+    )
+
+    alias ComplianceStatus = Bool
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias ConstraintViolationException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias DescribeReportCreationInput = NamedTuple(
+      
+    )
+
+    alias DescribeReportCreationOutput = NamedTuple(
+      "Status" : (Status)?,
+      "S3Location" : (S3Location)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias ErrorCode = String
+
+    alias ErrorMessage = String
+
+    alias ExceptionMessage = String
+
+    alias ExcludeCompliantResources = Bool
+
+    alias FailedResourcesMap = Hash(ResourceARN,FailureInfo)
+
+    alias FailureInfo = NamedTuple(
+      "StatusCode" : (StatusCode)?,
+      "ErrorCode" : (ErrorCode)?,
+      "ErrorMessage" : (ErrorMessage)?
+    )
+
+    alias GetComplianceSummaryInput = NamedTuple(
+      "TargetIdFilters" : (TargetIdFilterList)?,
+      "RegionFilters" : (RegionFilterList)?,
+      "ResourceTypeFilters" : (ResourceTypeFilterList)?,
+      "TagKeyFilters" : (TagKeyFilterList)?,
+      "GroupBy" : (GroupBy)?,
+      "MaxResults" : (MaxResultsGetComplianceSummary)?,
+      "PaginationToken" : (PaginationToken)?
+    )
+
+    alias GetComplianceSummaryOutput = NamedTuple(
+      "SummaryList" : (SummaryList)?,
+      "PaginationToken" : (PaginationToken)?
+    )
+
+    alias GetResourcesInput = NamedTuple(
+      "PaginationToken" : (PaginationToken)?,
+      "TagFilters" : (TagFilterList)?,
+      "ResourcesPerPage" : (ResourcesPerPage)?,
+      "TagsPerPage" : (TagsPerPage)?,
+      "ResourceTypeFilters" : (ResourceTypeFilterList)?,
+      "IncludeComplianceDetails" : (IncludeComplianceDetails)?,
+      "ExcludeCompliantResources" : (ExcludeCompliantResources)?
+    )
+
+    alias GetResourcesOutput = NamedTuple(
+      "PaginationToken" : (PaginationToken)?,
+      "ResourceTagMappingList" : (ResourceTagMappingList)?
+    )
+
+    alias GetTagKeysInput = NamedTuple(
+      "PaginationToken" : (PaginationToken)?
+    )
+
+    alias GetTagKeysOutput = NamedTuple(
+      "PaginationToken" : (PaginationToken)?,
+      "TagKeys" : (TagKeyList)?
+    )
+
+    alias GetTagValuesInput = NamedTuple(
+      "PaginationToken" : (PaginationToken)?,
+      "Key" : TagKey
+    )
+
+    alias GetTagValuesOutput = NamedTuple(
+      "PaginationToken" : (PaginationToken)?,
+      "TagValues" : (TagValuesOutputList)?
+    )
+
+    alias GroupBy = Array(GroupByAttribute)
+
+    alias GroupByAttribute = String
+
+    alias IncludeComplianceDetails = Bool
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias LastUpdated = String
+
+    alias MaxResultsGetComplianceSummary = Int32
+
+    alias NonCompliantResources = Int64
+
+    alias PaginationToken = String
+
+    alias PaginationTokenExpiredException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias Region = String
+
+    alias RegionFilterList = Array(Region)
+
+    alias ResourceARN = String
+
+    alias ResourceARNList = Array(ResourceARN)
+
+    alias ResourceTagMapping = NamedTuple(
+      "ResourceARN" : (ResourceARN)?,
+      "Tags" : (TagList)?,
+      "ComplianceDetails" : (ComplianceDetails)?
+    )
+
+    alias ResourceTagMappingList = Array(ResourceTagMapping)
+
+    alias ResourceTypeFilterList = Array(AmazonResourceType)
+
+    alias ResourcesPerPage = Int32
+
+    alias S3Bucket = String
+
+    alias S3Location = String
+
+    alias StartReportCreationInput = NamedTuple(
+      "S3Bucket" : S3Bucket
+    )
+
+    alias StartReportCreationOutput = NamedTuple(
+      
+    )
+
+    alias Status = String
+
+    alias StatusCode = Int32
+
+    alias Summary = NamedTuple(
+      "LastUpdated" : (LastUpdated)?,
+      "TargetId" : (TargetId)?,
+      "TargetIdType" : (TargetIdType)?,
+      "Region" : (Region)?,
+      "ResourceType" : (AmazonResourceType)?,
+      "NonCompliantResources" : (NonCompliantResources)?
+    )
+
+    alias SummaryList = Array(Summary)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagFilter = NamedTuple(
+      "Key" : (TagKey)?,
+      "Values" : (TagValueList)?
+    )
+
+    alias TagFilterList = Array(TagFilter)
+
+    alias TagKey = String
+
+    alias TagKeyFilterList = Array(TagKey)
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagKeyListForUntag = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourcesInput = NamedTuple(
+      "ResourceARNList" : ResourceARNList,
+      "Tags" : TagMap
+    )
+
+    alias TagResourcesOutput = NamedTuple(
+      "FailedResourcesMap" : (FailedResourcesMap)?
+    )
+
+    alias TagValue = String
+
+    alias TagValueList = Array(TagValue)
+
+    alias TagValuesOutputList = Array(TagValue)
+
+    alias TagsPerPage = Int32
+
+    alias TargetId = String
+
+    alias TargetIdFilterList = Array(TargetId)
+
+    alias TargetIdType = String
+
+    alias ThrottledException = NamedTuple(
+      "Message" : (ExceptionMessage)?
+    )
+
+    alias UntagResourcesInput = NamedTuple(
+      "ResourceARNList" : ResourceARNList,
+      "TagKeys" : TagKeyListForUntag
+    )
+
+    alias UntagResourcesOutput = NamedTuple(
+      "FailedResourcesMap" : (FailedResourcesMap)?
+    )
   end
 end

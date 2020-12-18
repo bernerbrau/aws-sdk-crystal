@@ -421,8 +421,8 @@ module Aws::ElastiCache
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -486,8 +486,8 @@ module Aws::ElastiCache
     #
     # @overload authorize_cache_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_cache_security_group_ingress(params = {}, **options)
-      req = build_request(:authorize_cache_security_group_ingress, params)
+    def authorize_cache_security_group_ingress(, **options)
+      req = build_request(:authorize_cache_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -538,8 +538,8 @@ module Aws::ElastiCache
     #
     # @overload batch_apply_update_action(**params)
     # @param [Hash] params ({})
-    def batch_apply_update_action(params = {}, **options)
-      req = build_request(:batch_apply_update_action, params)
+    def batch_apply_update_action(, **options)
+      req = build_request(:batch_apply_update_action, )
       req.send_request(options)
     end
 
@@ -590,8 +590,8 @@ module Aws::ElastiCache
     #
     # @overload batch_stop_update_action(**params)
     # @param [Hash] params ({})
-    def batch_stop_update_action(params = {}, **options)
-      req = build_request(:batch_stop_update_action, params)
+    def batch_stop_update_action(, **options)
+      req = build_request(:batch_stop_update_action, )
       req.send_request(options)
     end
 
@@ -674,8 +674,8 @@ module Aws::ElastiCache
     #
     # @overload complete_migration(**params)
     # @param [Hash] params ({})
-    def complete_migration(params = {}, **options)
-      req = build_request(:complete_migration, params)
+    def complete_migration(, **options)
+      req = build_request(:complete_migration, )
       req.send_request(options)
     end
 
@@ -890,8 +890,8 @@ module Aws::ElastiCache
     #
     # @overload copy_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_snapshot(params = {}, **options)
-      req = build_request(:copy_snapshot, params)
+    def copy_snapshot(, **options)
+      req = build_request(:copy_snapshot, )
       req.send_request(options)
     end
 
@@ -1448,8 +1448,8 @@ module Aws::ElastiCache
     #
     # @overload create_cache_cluster(**params)
     # @param [Hash] params ({})
-    def create_cache_cluster(params = {}, **options)
-      req = build_request(:create_cache_cluster, params)
+    def create_cache_cluster(, **options)
+      req = build_request(:create_cache_cluster, )
       req.send_request(options)
     end
 
@@ -1530,8 +1530,8 @@ module Aws::ElastiCache
     #
     # @overload create_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_cache_parameter_group(params = {}, **options)
-      req = build_request(:create_cache_parameter_group, params)
+    def create_cache_parameter_group(, **options)
+      req = build_request(:create_cache_parameter_group, )
       req.send_request(options)
     end
 
@@ -1595,8 +1595,8 @@ module Aws::ElastiCache
     #
     # @overload create_cache_security_group(**params)
     # @param [Hash] params ({})
-    def create_cache_security_group(params = {}, **options)
-      req = build_request(:create_cache_security_group, params)
+    def create_cache_security_group(, **options)
+      req = build_request(:create_cache_security_group, )
       req.send_request(options)
     end
 
@@ -1691,8 +1691,8 @@ module Aws::ElastiCache
     #
     # @overload create_cache_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_cache_subnet_group(params = {}, **options)
-      req = build_request(:create_cache_subnet_group, params)
+    def create_cache_subnet_group(, **options)
+      req = build_request(:create_cache_subnet_group, )
       req.send_request(options)
     end
 
@@ -1773,8 +1773,8 @@ module Aws::ElastiCache
     #
     # @overload create_global_replication_group(**params)
     # @param [Hash] params ({})
-    def create_global_replication_group(params = {}, **options)
-      req = build_request(:create_global_replication_group, params)
+    def create_global_replication_group(, **options)
+      req = build_request(:create_global_replication_group, )
       req.send_request(options)
     end
 
@@ -2439,8 +2439,8 @@ module Aws::ElastiCache
     #
     # @overload create_replication_group(**params)
     # @param [Hash] params ({})
-    def create_replication_group(params = {}, **options)
-      req = build_request(:create_replication_group, params)
+    def create_replication_group(, **options)
+      req = build_request(:create_replication_group, )
       req.send_request(options)
     end
 
@@ -2652,8 +2652,8 @@ module Aws::ElastiCache
     #
     # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, **options)
-      req = build_request(:create_snapshot, params)
+    def create_snapshot(, **options)
+      req = build_request(:create_snapshot, )
       req.send_request(options)
     end
 
@@ -2722,8 +2722,8 @@ module Aws::ElastiCache
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -2780,8 +2780,8 @@ module Aws::ElastiCache
     #
     # @overload create_user_group(**params)
     # @param [Hash] params ({})
-    def create_user_group(params = {}, **options)
-      req = build_request(:create_user_group, params)
+    def create_user_group(, **options)
+      req = build_request(:create_user_group, )
       req.send_request(options)
     end
 
@@ -2853,8 +2853,8 @@ module Aws::ElastiCache
     #
     # @overload decrease_node_groups_in_global_replication_group(**params)
     # @param [Hash] params ({})
-    def decrease_node_groups_in_global_replication_group(params = {}, **options)
-      req = build_request(:decrease_node_groups_in_global_replication_group, params)
+    def decrease_node_groups_in_global_replication_group(, **options)
+      req = build_request(:decrease_node_groups_in_global_replication_group, )
       req.send_request(options)
     end
 
@@ -2978,8 +2978,8 @@ module Aws::ElastiCache
     #
     # @overload decrease_replica_count(**params)
     # @param [Hash] params ({})
-    def decrease_replica_count(params = {}, **options)
-      req = build_request(:decrease_replica_count, params)
+    def decrease_replica_count(, **options)
+      req = build_request(:decrease_replica_count, )
       req.send_request(options)
     end
 
@@ -3120,8 +3120,8 @@ module Aws::ElastiCache
     #
     # @overload delete_cache_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cache_cluster(params = {}, **options)
-      req = build_request(:delete_cache_cluster, params)
+    def delete_cache_cluster(, **options)
+      req = build_request(:delete_cache_cluster, )
       req.send_request(options)
     end
 
@@ -3157,8 +3157,8 @@ module Aws::ElastiCache
     #
     # @overload delete_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_cache_parameter_group(params = {}, **options)
-      req = build_request(:delete_cache_parameter_group, params)
+    def delete_cache_parameter_group(, **options)
+      req = build_request(:delete_cache_parameter_group, )
       req.send_request(options)
     end
 
@@ -3197,8 +3197,8 @@ module Aws::ElastiCache
     #
     # @overload delete_cache_security_group(**params)
     # @param [Hash] params ({})
-    def delete_cache_security_group(params = {}, **options)
-      req = build_request(:delete_cache_security_group, params)
+    def delete_cache_security_group(, **options)
+      req = build_request(:delete_cache_security_group, )
       req.send_request(options)
     end
 
@@ -3236,8 +3236,8 @@ module Aws::ElastiCache
     #
     # @overload delete_cache_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_cache_subnet_group(params = {}, **options)
-      req = build_request(:delete_cache_subnet_group, params)
+    def delete_cache_subnet_group(, **options)
+      req = build_request(:delete_cache_subnet_group, )
       req.send_request(options)
     end
 
@@ -3303,8 +3303,8 @@ module Aws::ElastiCache
     #
     # @overload delete_global_replication_group(**params)
     # @param [Hash] params ({})
-    def delete_global_replication_group(params = {}, **options)
-      req = build_request(:delete_global_replication_group, params)
+    def delete_global_replication_group(, **options)
+      req = build_request(:delete_global_replication_group, )
       req.send_request(options)
     end
 
@@ -3428,8 +3428,8 @@ module Aws::ElastiCache
     #
     # @overload delete_replication_group(**params)
     # @param [Hash] params ({})
-    def delete_replication_group(params = {}, **options)
-      req = build_request(:delete_replication_group, params)
+    def delete_replication_group(, **options)
+      req = build_request(:delete_replication_group, )
       req.send_request(options)
     end
 
@@ -3544,8 +3544,8 @@ module Aws::ElastiCache
     #
     # @overload delete_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_snapshot(params = {}, **options)
-      req = build_request(:delete_snapshot, params)
+    def delete_snapshot(, **options)
+      req = build_request(:delete_snapshot, )
       req.send_request(options)
     end
 
@@ -3595,8 +3595,8 @@ module Aws::ElastiCache
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -3647,8 +3647,8 @@ module Aws::ElastiCache
     #
     # @overload delete_user_group(**params)
     # @param [Hash] params ({})
-    def delete_user_group(params = {}, **options)
-      req = build_request(:delete_user_group, params)
+    def delete_user_group(, **options)
+      req = build_request(:delete_user_group, )
       req.send_request(options)
     end
 
@@ -3900,8 +3900,8 @@ module Aws::ElastiCache
     #
     # @overload describe_cache_clusters(**params)
     # @param [Hash] params ({})
-    def describe_cache_clusters(params = {}, **options)
-      req = build_request(:describe_cache_clusters, params)
+    def describe_cache_clusters(, **options)
+      req = build_request(:describe_cache_clusters, )
       req.send_request(options)
     end
 
@@ -4154,8 +4154,8 @@ module Aws::ElastiCache
     #
     # @overload describe_cache_engine_versions(**params)
     # @param [Hash] params ({})
-    def describe_cache_engine_versions(params = {}, **options)
-      req = build_request(:describe_cache_engine_versions, params)
+    def describe_cache_engine_versions(, **options)
+      req = build_request(:describe_cache_engine_versions, )
       req.send_request(options)
     end
 
@@ -4232,8 +4232,8 @@ module Aws::ElastiCache
     #
     # @overload describe_cache_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_cache_parameter_groups(params = {}, **options)
-      req = build_request(:describe_cache_parameter_groups, params)
+    def describe_cache_parameter_groups(, **options)
+      req = build_request(:describe_cache_parameter_groups, )
       req.send_request(options)
     end
 
@@ -4712,8 +4712,8 @@ module Aws::ElastiCache
     #
     # @overload describe_cache_parameters(**params)
     # @param [Hash] params ({})
-    def describe_cache_parameters(params = {}, **options)
-      req = build_request(:describe_cache_parameters, params)
+    def describe_cache_parameters(, **options)
+      req = build_request(:describe_cache_parameters, )
       req.send_request(options)
     end
 
@@ -4783,8 +4783,8 @@ module Aws::ElastiCache
     #
     # @overload describe_cache_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_cache_security_groups(params = {}, **options)
-      req = build_request(:describe_cache_security_groups, params)
+    def describe_cache_security_groups(, **options)
+      req = build_request(:describe_cache_security_groups, )
       req.send_request(options)
     end
 
@@ -4891,8 +4891,8 @@ module Aws::ElastiCache
     #
     # @overload describe_cache_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_cache_subnet_groups(params = {}, **options)
-      req = build_request(:describe_cache_subnet_groups, params)
+    def describe_cache_subnet_groups(, **options)
+      req = build_request(:describe_cache_subnet_groups, )
       req.send_request(options)
     end
 
@@ -5579,8 +5579,8 @@ module Aws::ElastiCache
     #
     # @overload describe_engine_default_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_parameters(params = {}, **options)
-      req = build_request(:describe_engine_default_parameters, params)
+    def describe_engine_default_parameters(, **options)
+      req = build_request(:describe_engine_default_parameters, )
       req.send_request(options)
     end
 
@@ -5762,8 +5762,8 @@ module Aws::ElastiCache
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -5834,8 +5834,8 @@ module Aws::ElastiCache
     #
     # @overload describe_global_replication_groups(**params)
     # @param [Hash] params ({})
-    def describe_global_replication_groups(params = {}, **options)
-      req = build_request(:describe_global_replication_groups, params)
+    def describe_global_replication_groups(, **options)
+      req = build_request(:describe_global_replication_groups, )
       req.send_request(options)
     end
 
@@ -6013,8 +6013,8 @@ module Aws::ElastiCache
     #
     # @overload describe_replication_groups(**params)
     # @param [Hash] params ({})
-    def describe_replication_groups(params = {}, **options)
-      req = build_request(:describe_replication_groups, params)
+    def describe_replication_groups(, **options)
+      req = build_request(:describe_replication_groups, )
       req.send_request(options)
     end
 
@@ -6218,8 +6218,8 @@ module Aws::ElastiCache
     #
     # @overload describe_reserved_cache_nodes(**params)
     # @param [Hash] params ({})
-    def describe_reserved_cache_nodes(params = {}, **options)
-      req = build_request(:describe_reserved_cache_nodes, params)
+    def describe_reserved_cache_nodes(, **options)
+      req = build_request(:describe_reserved_cache_nodes, )
       req.send_request(options)
     end
 
@@ -6725,8 +6725,8 @@ module Aws::ElastiCache
     #
     # @overload describe_reserved_cache_nodes_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_cache_nodes_offerings(params = {}, **options)
-      req = build_request(:describe_reserved_cache_nodes_offerings, params)
+    def describe_reserved_cache_nodes_offerings(, **options)
+      req = build_request(:describe_reserved_cache_nodes_offerings, )
       req.send_request(options)
     end
 
@@ -6784,8 +6784,8 @@ module Aws::ElastiCache
     #
     # @overload describe_service_updates(**params)
     # @param [Hash] params ({})
-    def describe_service_updates(params = {}, **options)
-      req = build_request(:describe_service_updates, params)
+    def describe_service_updates(, **options)
+      req = build_request(:describe_service_updates, )
       req.send_request(options)
     end
 
@@ -6951,8 +6951,8 @@ module Aws::ElastiCache
     #
     # @overload describe_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_snapshots(params = {}, **options)
-      req = build_request(:describe_snapshots, params)
+    def describe_snapshots(, **options)
+      req = build_request(:describe_snapshots, )
       req.send_request(options)
     end
 
@@ -7063,8 +7063,8 @@ module Aws::ElastiCache
     #
     # @overload describe_update_actions(**params)
     # @param [Hash] params ({})
-    def describe_update_actions(params = {}, **options)
-      req = build_request(:describe_update_actions, params)
+    def describe_update_actions(, **options)
+      req = build_request(:describe_update_actions, )
       req.send_request(options)
     end
 
@@ -7121,8 +7121,8 @@ module Aws::ElastiCache
     #
     # @overload describe_user_groups(**params)
     # @param [Hash] params ({})
-    def describe_user_groups(params = {}, **options)
-      req = build_request(:describe_user_groups, params)
+    def describe_user_groups(, **options)
+      req = build_request(:describe_user_groups, )
       req.send_request(options)
     end
 
@@ -7190,8 +7190,8 @@ module Aws::ElastiCache
     #
     # @overload describe_users(**params)
     # @param [Hash] params ({})
-    def describe_users(params = {}, **options)
-      req = build_request(:describe_users, params)
+    def describe_users(, **options)
+      req = build_request(:describe_users, )
       req.send_request(options)
     end
 
@@ -7250,8 +7250,8 @@ module Aws::ElastiCache
     #
     # @overload disassociate_global_replication_group(**params)
     # @param [Hash] params ({})
-    def disassociate_global_replication_group(params = {}, **options)
-      req = build_request(:disassociate_global_replication_group, params)
+    def disassociate_global_replication_group(, **options)
+      req = build_request(:disassociate_global_replication_group, )
       req.send_request(options)
     end
 
@@ -7307,8 +7307,8 @@ module Aws::ElastiCache
     #
     # @overload failover_global_replication_group(**params)
     # @param [Hash] params ({})
-    def failover_global_replication_group(params = {}, **options)
-      req = build_request(:failover_global_replication_group, params)
+    def failover_global_replication_group(, **options)
+      req = build_request(:failover_global_replication_group, )
       req.send_request(options)
     end
 
@@ -7380,8 +7380,8 @@ module Aws::ElastiCache
     #
     # @overload increase_node_groups_in_global_replication_group(**params)
     # @param [Hash] params ({})
-    def increase_node_groups_in_global_replication_group(params = {}, **options)
-      req = build_request(:increase_node_groups_in_global_replication_group, params)
+    def increase_node_groups_in_global_replication_group(, **options)
+      req = build_request(:increase_node_groups_in_global_replication_group, )
       req.send_request(options)
     end
 
@@ -7489,8 +7489,8 @@ module Aws::ElastiCache
     #
     # @overload increase_replica_count(**params)
     # @param [Hash] params ({})
-    def increase_replica_count(params = {}, **options)
-      req = build_request(:increase_replica_count, params)
+    def increase_replica_count(, **options)
+      req = build_request(:increase_replica_count, )
       req.send_request(options)
     end
 
@@ -7580,8 +7580,8 @@ module Aws::ElastiCache
     #
     # @overload list_allowed_node_type_modifications(**params)
     # @param [Hash] params ({})
-    def list_allowed_node_type_modifications(params = {}, **options)
-      req = build_request(:list_allowed_node_type_modifications, params)
+    def list_allowed_node_type_modifications(, **options)
+      req = build_request(:list_allowed_node_type_modifications, )
       req.send_request(options)
     end
 
@@ -7657,8 +7657,8 @@ module Aws::ElastiCache
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -8092,8 +8092,8 @@ module Aws::ElastiCache
     #
     # @overload modify_cache_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cache_cluster(params = {}, **options)
-      req = build_request(:modify_cache_cluster, params)
+    def modify_cache_cluster(, **options)
+      req = build_request(:modify_cache_cluster, )
       req.send_request(options)
     end
 
@@ -8158,8 +8158,8 @@ module Aws::ElastiCache
     #
     # @overload modify_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_cache_parameter_group(params = {}, **options)
-      req = build_request(:modify_cache_parameter_group, params)
+    def modify_cache_parameter_group(, **options)
+      req = build_request(:modify_cache_parameter_group, )
       req.send_request(options)
     end
 
@@ -8260,8 +8260,8 @@ module Aws::ElastiCache
     #
     # @overload modify_cache_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_cache_subnet_group(params = {}, **options)
-      req = build_request(:modify_cache_subnet_group, params)
+    def modify_cache_subnet_group(, **options)
+      req = build_request(:modify_cache_subnet_group, )
       req.send_request(options)
     end
 
@@ -8333,8 +8333,8 @@ module Aws::ElastiCache
     #
     # @overload modify_global_replication_group(**params)
     # @param [Hash] params ({})
-    def modify_global_replication_group(params = {}, **options)
-      req = build_request(:modify_global_replication_group, params)
+    def modify_global_replication_group(, **options)
+      req = build_request(:modify_global_replication_group, )
       req.send_request(options)
     end
 
@@ -8713,8 +8713,8 @@ module Aws::ElastiCache
     #
     # @overload modify_replication_group(**params)
     # @param [Hash] params ({})
-    def modify_replication_group(params = {}, **options)
-      req = build_request(:modify_replication_group, params)
+    def modify_replication_group(, **options)
+      req = build_request(:modify_replication_group, )
       req.send_request(options)
     end
 
@@ -8841,8 +8841,8 @@ module Aws::ElastiCache
     #
     # @overload modify_replication_group_shard_configuration(**params)
     # @param [Hash] params ({})
-    def modify_replication_group_shard_configuration(params = {}, **options)
-      req = build_request(:modify_replication_group_shard_configuration, params)
+    def modify_replication_group_shard_configuration(, **options)
+      req = build_request(:modify_replication_group_shard_configuration, )
       req.send_request(options)
     end
 
@@ -8902,8 +8902,8 @@ module Aws::ElastiCache
     #
     # @overload modify_user(**params)
     # @param [Hash] params ({})
-    def modify_user(params = {}, **options)
-      req = build_request(:modify_user, params)
+    def modify_user(, **options)
+      req = build_request(:modify_user, )
       req.send_request(options)
     end
 
@@ -8955,8 +8955,8 @@ module Aws::ElastiCache
     #
     # @overload modify_user_group(**params)
     # @param [Hash] params ({})
-    def modify_user_group(params = {}, **options)
-      req = build_request(:modify_user_group, params)
+    def modify_user_group(, **options)
+      req = build_request(:modify_user_group, )
       req.send_request(options)
     end
 
@@ -9026,8 +9026,8 @@ module Aws::ElastiCache
     #
     # @overload purchase_reserved_cache_nodes_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_cache_nodes_offering(params = {}, **options)
-      req = build_request(:purchase_reserved_cache_nodes_offering, params)
+    def purchase_reserved_cache_nodes_offering(, **options)
+      req = build_request(:purchase_reserved_cache_nodes_offering, )
       req.send_request(options)
     end
 
@@ -9078,8 +9078,8 @@ module Aws::ElastiCache
     #
     # @overload rebalance_slots_in_global_replication_group(**params)
     # @param [Hash] params ({})
-    def rebalance_slots_in_global_replication_group(params = {}, **options)
-      req = build_request(:rebalance_slots_in_global_replication_group, params)
+    def rebalance_slots_in_global_replication_group(, **options)
+      req = build_request(:rebalance_slots_in_global_replication_group, )
       req.send_request(options)
     end
 
@@ -9229,8 +9229,8 @@ module Aws::ElastiCache
     #
     # @overload reboot_cache_cluster(**params)
     # @param [Hash] params ({})
-    def reboot_cache_cluster(params = {}, **options)
-      req = build_request(:reboot_cache_cluster, params)
+    def reboot_cache_cluster(, **options)
+      req = build_request(:reboot_cache_cluster, )
       req.send_request(options)
     end
 
@@ -9315,8 +9315,8 @@ module Aws::ElastiCache
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 
@@ -9382,8 +9382,8 @@ module Aws::ElastiCache
     #
     # @overload reset_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_cache_parameter_group(params = {}, **options)
-      req = build_request(:reset_cache_parameter_group, params)
+    def reset_cache_parameter_group(, **options)
+      req = build_request(:reset_cache_parameter_group, )
       req.send_request(options)
     end
 
@@ -9441,8 +9441,8 @@ module Aws::ElastiCache
     #
     # @overload revoke_cache_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_cache_security_group_ingress(params = {}, **options)
-      req = build_request(:revoke_cache_security_group_ingress, params)
+    def revoke_cache_security_group_ingress(, **options)
+      req = build_request(:revoke_cache_security_group_ingress, )
       req.send_request(options)
     end
 
@@ -9528,8 +9528,8 @@ module Aws::ElastiCache
     #
     # @overload start_migration(**params)
     # @param [Hash] params ({})
-    def start_migration(params = {}, **options)
-      req = build_request(:start_migration, params)
+    def start_migration(, **options)
+      req = build_request(:start_migration, )
       req.send_request(options)
     end
 
@@ -9664,8 +9664,8 @@ module Aws::ElastiCache
     #
     # @overload test_failover(**params)
     # @param [Hash] params ({})
-    def test_failover(params = {}, **options)
-      req = build_request(:test_failover, params)
+    def test_failover(, **options)
+      req = build_request(:test_failover, )
       req.send_request(options)
     end
 

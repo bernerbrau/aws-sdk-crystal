@@ -452,8 +452,8 @@ module Aws::SecretsManager
     #
     # @overload cancel_rotate_secret(**params)
     # @param [Hash] params ({})
-    def cancel_rotate_secret(params = {}, **options)
-      req = build_request(:cancel_rotate_secret, params)
+    def cancel_rotate_secret(, **options)
+      req = build_request(:cancel_rotate_secret, )
       req.send_request(options)
     end
 
@@ -767,8 +767,8 @@ module Aws::SecretsManager
     #
     # @overload create_secret(**params)
     # @param [Hash] params ({})
-    def create_secret(params = {}, **options)
-      req = build_request(:create_secret, params)
+    def create_secret(, **options)
+      req = build_request(:create_secret, )
       req.send_request(options)
     end
 
@@ -852,8 +852,8 @@ module Aws::SecretsManager
     #
     # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, **options)
-      req = build_request(:delete_resource_policy, params)
+    def delete_resource_policy(, **options)
+      req = build_request(:delete_resource_policy, )
       req.send_request(options)
     end
 
@@ -994,8 +994,8 @@ module Aws::SecretsManager
     #
     # @overload delete_secret(**params)
     # @param [Hash] params ({})
-    def delete_secret(params = {}, **options)
-      req = build_request(:delete_secret, params)
+    def delete_secret(, **options)
+      req = build_request(:delete_secret, )
       req.send_request(options)
     end
 
@@ -1141,8 +1141,8 @@ module Aws::SecretsManager
     #
     # @overload describe_secret(**params)
     # @param [Hash] params ({})
-    def describe_secret(params = {}, **options)
-      req = build_request(:describe_secret, params)
+    def describe_secret(, **options)
+      req = build_request(:describe_secret, )
       req.send_request(options)
     end
 
@@ -1249,8 +1249,8 @@ module Aws::SecretsManager
     #
     # @overload get_random_password(**params)
     # @param [Hash] params ({})
-    def get_random_password(params = {}, **options)
-      req = build_request(:get_random_password, params)
+    def get_random_password(, **options)
+      req = build_request(:get_random_password, )
       req.send_request(options)
     end
 
@@ -1340,8 +1340,8 @@ module Aws::SecretsManager
     #
     # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, **options)
-      req = build_request(:get_resource_policy, params)
+    def get_resource_policy(, **options)
+      req = build_request(:get_resource_policy, )
       req.send_request(options)
     end
 
@@ -1474,8 +1474,8 @@ module Aws::SecretsManager
     #
     # @overload get_secret_value(**params)
     # @param [Hash] params ({})
-    def get_secret_value(params = {}, **options)
-      req = build_request(:get_secret_value, params)
+    def get_secret_value(, **options)
+      req = build_request(:get_secret_value, )
       req.send_request(options)
     end
 
@@ -1629,8 +1629,8 @@ module Aws::SecretsManager
     #
     # @overload list_secret_version_ids(**params)
     # @param [Hash] params ({})
-    def list_secret_version_ids(params = {}, **options)
-      req = build_request(:list_secret_version_ids, params)
+    def list_secret_version_ids(, **options)
+      req = build_request(:list_secret_version_ids, )
       req.send_request(options)
     end
 
@@ -1773,8 +1773,8 @@ module Aws::SecretsManager
     #
     # @overload list_secrets(**params)
     # @param [Hash] params ({})
-    def list_secrets(params = {}, **options)
-      req = build_request(:list_secrets, params)
+    def list_secrets(, **options)
+      req = build_request(:list_secrets, )
       req.send_request(options)
     end
 
@@ -1892,8 +1892,8 @@ module Aws::SecretsManager
     #
     # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, **options)
-      req = build_request(:put_resource_policy, params)
+    def put_resource_policy(, **options)
+      req = build_request(:put_resource_policy, )
       req.send_request(options)
     end
 
@@ -2153,8 +2153,8 @@ module Aws::SecretsManager
     #
     # @overload put_secret_value(**params)
     # @param [Hash] params ({})
-    def put_secret_value(params = {}, **options)
-      req = build_request(:put_secret_value, params)
+    def put_secret_value(, **options)
+      req = build_request(:put_secret_value, )
       req.send_request(options)
     end
 
@@ -2237,8 +2237,8 @@ module Aws::SecretsManager
     #
     # @overload restore_secret(**params)
     # @param [Hash] params ({})
-    def restore_secret(params = {}, **options)
-      req = build_request(:restore_secret, params)
+    def restore_secret(, **options)
+      req = build_request(:restore_secret, )
       req.send_request(options)
     end
 
@@ -2395,8 +2395,8 @@ module Aws::SecretsManager
     #
     # @overload rotate_secret(**params)
     # @param [Hash] params ({})
-    def rotate_secret(params = {}, **options)
-      req = build_request(:rotate_secret, params)
+    def rotate_secret(, **options)
+      req = build_request(:rotate_secret, )
       req.send_request(options)
     end
 
@@ -2525,8 +2525,8 @@ module Aws::SecretsManager
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2621,8 +2621,8 @@ module Aws::SecretsManager
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2907,8 +2907,8 @@ module Aws::SecretsManager
     #
     # @overload update_secret(**params)
     # @param [Hash] params ({})
-    def update_secret(params = {}, **options)
-      req = build_request(:update_secret, params)
+    def update_secret(, **options)
+      req = build_request(:update_secret, )
       req.send_request(options)
     end
 
@@ -3083,8 +3083,8 @@ module Aws::SecretsManager
     #
     # @overload update_secret_version_stage(**params)
     # @param [Hash] params ({})
-    def update_secret_version_stage(params = {}, **options)
-      req = build_request(:update_secret_version_stage, params)
+    def update_secret_version_stage(, **options)
+      req = build_request(:update_secret_version_stage, )
       req.send_request(options)
     end
 
@@ -3163,8 +3163,8 @@ module Aws::SecretsManager
     #
     # @overload validate_resource_policy(**params)
     # @param [Hash] params ({})
-    def validate_resource_policy(params = {}, **options)
-      req = build_request(:validate_resource_policy, params)
+    def validate_resource_policy(, **options)
+      req = build_request(:validate_resource_policy, )
       req.send_request(options)
     end
 

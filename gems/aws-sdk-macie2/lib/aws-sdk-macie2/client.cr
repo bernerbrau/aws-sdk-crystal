@@ -347,8 +347,8 @@ module Aws::Macie2
     #
     # @overload accept_invitation(**params)
     # @param [Hash] params ({})
-    def accept_invitation(params = {}, **options)
-      req = build_request(:accept_invitation, params)
+    def accept_invitation(, **options)
+      req = build_request(:accept_invitation, )
       req.send_request(options)
     end
 
@@ -383,8 +383,8 @@ module Aws::Macie2
     #
     # @overload batch_get_custom_data_identifiers(**params)
     # @param [Hash] params ({})
-    def batch_get_custom_data_identifiers(params = {}, **options)
-      req = build_request(:batch_get_custom_data_identifiers, params)
+    def batch_get_custom_data_identifiers(, **options)
+      req = build_request(:batch_get_custom_data_identifiers, )
       req.send_request(options)
     end
 
@@ -512,8 +512,8 @@ module Aws::Macie2
     #
     # @overload create_classification_job(**params)
     # @param [Hash] params ({})
-    def create_classification_job(params = {}, **options)
-      req = build_request(:create_classification_job, params)
+    def create_classification_job(, **options)
+      req = build_request(:create_classification_job, )
       req.send_request(options)
     end
 
@@ -568,8 +568,8 @@ module Aws::Macie2
     #
     # @overload create_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def create_custom_data_identifier(params = {}, **options)
-      req = build_request(:create_custom_data_identifier, params)
+    def create_custom_data_identifier(, **options)
+      req = build_request(:create_custom_data_identifier, )
       req.send_request(options)
     end
 
@@ -640,8 +640,8 @@ module Aws::Macie2
     #
     # @overload create_findings_filter(**params)
     # @param [Hash] params ({})
-    def create_findings_filter(params = {}, **options)
-      req = build_request(:create_findings_filter, params)
+    def create_findings_filter(, **options)
+      req = build_request(:create_findings_filter, )
       req.send_request(options)
     end
 
@@ -676,8 +676,8 @@ module Aws::Macie2
     #
     # @overload create_invitations(**params)
     # @param [Hash] params ({})
-    def create_invitations(params = {}, **options)
-      req = build_request(:create_invitations, params)
+    def create_invitations(, **options)
+      req = build_request(:create_invitations, )
       req.send_request(options)
     end
 
@@ -716,8 +716,8 @@ module Aws::Macie2
     #
     # @overload create_member(**params)
     # @param [Hash] params ({})
-    def create_member(params = {}, **options)
-      req = build_request(:create_member, params)
+    def create_member(, **options)
+      req = build_request(:create_member, )
       req.send_request(options)
     end
 
@@ -737,8 +737,8 @@ module Aws::Macie2
     #
     # @overload create_sample_findings(**params)
     # @param [Hash] params ({})
-    def create_sample_findings(params = {}, **options)
-      req = build_request(:create_sample_findings, params)
+    def create_sample_findings(, **options)
+      req = build_request(:create_sample_findings, )
       req.send_request(options)
     end
 
@@ -768,8 +768,8 @@ module Aws::Macie2
     #
     # @overload decline_invitations(**params)
     # @param [Hash] params ({})
-    def decline_invitations(params = {}, **options)
-      req = build_request(:decline_invitations, params)
+    def decline_invitations(, **options)
+      req = build_request(:decline_invitations, )
       req.send_request(options)
     end
 
@@ -789,8 +789,8 @@ module Aws::Macie2
     #
     # @overload delete_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def delete_custom_data_identifier(params = {}, **options)
-      req = build_request(:delete_custom_data_identifier, params)
+    def delete_custom_data_identifier(, **options)
+      req = build_request(:delete_custom_data_identifier, )
       req.send_request(options)
     end
 
@@ -810,8 +810,8 @@ module Aws::Macie2
     #
     # @overload delete_findings_filter(**params)
     # @param [Hash] params ({})
-    def delete_findings_filter(params = {}, **options)
-      req = build_request(:delete_findings_filter, params)
+    def delete_findings_filter(, **options)
+      req = build_request(:delete_findings_filter, )
       req.send_request(options)
     end
 
@@ -841,8 +841,8 @@ module Aws::Macie2
     #
     # @overload delete_invitations(**params)
     # @param [Hash] params ({})
-    def delete_invitations(params = {}, **options)
-      req = build_request(:delete_invitations, params)
+    def delete_invitations(, **options)
+      req = build_request(:delete_invitations, )
       req.send_request(options)
     end
 
@@ -863,8 +863,8 @@ module Aws::Macie2
     #
     # @overload delete_member(**params)
     # @param [Hash] params ({})
-    def delete_member(params = {}, **options)
-      req = build_request(:delete_member, params)
+    def delete_member(, **options)
+      req = build_request(:delete_member, )
       req.send_request(options)
     end
 
@@ -968,8 +968,8 @@ module Aws::Macie2
     #
     # @overload describe_buckets(**params)
     # @param [Hash] params ({})
-    def describe_buckets(params = {}, **options)
-      req = build_request(:describe_buckets, params)
+    def describe_buckets(, **options)
+      req = build_request(:describe_buckets, )
       req.send_request(options)
     end
 
@@ -1060,8 +1060,8 @@ module Aws::Macie2
     #
     # @overload describe_classification_job(**params)
     # @param [Hash] params ({})
-    def describe_classification_job(params = {}, **options)
-      req = build_request(:describe_classification_job, params)
+    def describe_classification_job(, **options)
+      req = build_request(:describe_classification_job, )
       req.send_request(options)
     end
 
@@ -1082,8 +1082,8 @@ module Aws::Macie2
     #
     # @overload describe_organization_configuration(**params)
     # @param [Hash] params ({})
-    def describe_organization_configuration(params = {}, **options)
-      req = build_request(:describe_organization_configuration, params)
+    def describe_organization_configuration(, **options)
+      req = build_request(:describe_organization_configuration, )
       req.send_request(options)
     end
 
@@ -1096,8 +1096,8 @@ module Aws::Macie2
     #
     # @overload disable_macie(**params)
     # @param [Hash] params ({})
-    def disable_macie(params = {}, **options)
-      req = build_request(:disable_macie, params)
+    def disable_macie(, **options)
+      req = build_request(:disable_macie, )
       req.send_request(options)
     end
 
@@ -1118,8 +1118,8 @@ module Aws::Macie2
     #
     # @overload disable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def disable_organization_admin_account(params = {}, **options)
-      req = build_request(:disable_organization_admin_account, params)
+    def disable_organization_admin_account(, **options)
+      req = build_request(:disable_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -1131,8 +1131,8 @@ module Aws::Macie2
     #
     # @overload disassociate_from_master_account(**params)
     # @param [Hash] params ({})
-    def disassociate_from_master_account(params = {}, **options)
-      req = build_request(:disassociate_from_master_account, params)
+    def disassociate_from_master_account(, **options)
+      req = build_request(:disassociate_from_master_account, )
       req.send_request(options)
     end
 
@@ -1152,8 +1152,8 @@ module Aws::Macie2
     #
     # @overload disassociate_member(**params)
     # @param [Hash] params ({})
-    def disassociate_member(params = {}, **options)
-      req = build_request(:disassociate_member, params)
+    def disassociate_member(, **options)
+      req = build_request(:disassociate_member, )
       req.send_request(options)
     end
 
@@ -1187,8 +1187,8 @@ module Aws::Macie2
     #
     # @overload enable_macie(**params)
     # @param [Hash] params ({})
-    def enable_macie(params = {}, **options)
-      req = build_request(:enable_macie, params)
+    def enable_macie(, **options)
+      req = build_request(:enable_macie, )
       req.send_request(options)
     end
 
@@ -1214,8 +1214,8 @@ module Aws::Macie2
     #
     # @overload enable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def enable_organization_admin_account(params = {}, **options)
-      req = build_request(:enable_organization_admin_account, params)
+    def enable_organization_admin_account(, **options)
+      req = build_request(:enable_organization_admin_account, )
       req.send_request(options)
     end
 
@@ -1276,8 +1276,8 @@ module Aws::Macie2
     #
     # @overload get_bucket_statistics(**params)
     # @param [Hash] params ({})
-    def get_bucket_statistics(params = {}, **options)
-      req = build_request(:get_bucket_statistics, params)
+    def get_bucket_statistics(, **options)
+      req = build_request(:get_bucket_statistics, )
       req.send_request(options)
     end
 
@@ -1298,8 +1298,8 @@ module Aws::Macie2
     #
     # @overload get_classification_export_configuration(**params)
     # @param [Hash] params ({})
-    def get_classification_export_configuration(params = {}, **options)
-      req = build_request(:get_classification_export_configuration, params)
+    def get_classification_export_configuration(, **options)
+      req = build_request(:get_classification_export_configuration, )
       req.send_request(options)
     end
 
@@ -1349,8 +1349,8 @@ module Aws::Macie2
     #
     # @overload get_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def get_custom_data_identifier(params = {}, **options)
-      req = build_request(:get_custom_data_identifier, params)
+    def get_custom_data_identifier(, **options)
+      req = build_request(:get_custom_data_identifier, )
       req.send_request(options)
     end
 
@@ -1406,8 +1406,8 @@ module Aws::Macie2
     #
     # @overload get_finding_statistics(**params)
     # @param [Hash] params ({})
-    def get_finding_statistics(params = {}, **options)
-      req = build_request(:get_finding_statistics, params)
+    def get_finding_statistics(, **options)
+      req = build_request(:get_finding_statistics, )
       req.send_request(options)
     end
 
@@ -1610,8 +1610,8 @@ module Aws::Macie2
     #
     # @overload get_findings(**params)
     # @param [Hash] params ({})
-    def get_findings(params = {}, **options)
-      req = build_request(:get_findings, params)
+    def get_findings(, **options)
+      req = build_request(:get_findings, )
       req.send_request(options)
     end
 
@@ -1662,8 +1662,8 @@ module Aws::Macie2
     #
     # @overload get_findings_filter(**params)
     # @param [Hash] params ({})
-    def get_findings_filter(params = {}, **options)
-      req = build_request(:get_findings_filter, params)
+    def get_findings_filter(, **options)
+      req = build_request(:get_findings_filter, )
       req.send_request(options)
     end
 
@@ -1682,8 +1682,8 @@ module Aws::Macie2
     #
     # @overload get_invitations_count(**params)
     # @param [Hash] params ({})
-    def get_invitations_count(params = {}, **options)
-      req = build_request(:get_invitations_count, params)
+    def get_invitations_count(, **options)
+      req = build_request(:get_invitations_count, )
       req.send_request(options)
     end
 
@@ -1710,8 +1710,8 @@ module Aws::Macie2
     #
     # @overload get_macie_session(**params)
     # @param [Hash] params ({})
-    def get_macie_session(params = {}, **options)
-      req = build_request(:get_macie_session, params)
+    def get_macie_session(, **options)
+      req = build_request(:get_macie_session, )
       req.send_request(options)
     end
 
@@ -1733,8 +1733,8 @@ module Aws::Macie2
     #
     # @overload get_master_account(**params)
     # @param [Hash] params ({})
-    def get_master_account(params = {}, **options)
-      req = build_request(:get_master_account, params)
+    def get_master_account(, **options)
+      req = build_request(:get_master_account, )
       req.send_request(options)
     end
 
@@ -1776,8 +1776,8 @@ module Aws::Macie2
     #
     # @overload get_member(**params)
     # @param [Hash] params ({})
-    def get_member(params = {}, **options)
-      req = build_request(:get_member, params)
+    def get_member(, **options)
+      req = build_request(:get_member, )
       req.send_request(options)
     end
 
@@ -1837,8 +1837,8 @@ module Aws::Macie2
     #
     # @overload get_usage_statistics(**params)
     # @param [Hash] params ({})
-    def get_usage_statistics(params = {}, **options)
-      req = build_request(:get_usage_statistics, params)
+    def get_usage_statistics(, **options)
+      req = build_request(:get_usage_statistics, )
       req.send_request(options)
     end
 
@@ -1859,8 +1859,8 @@ module Aws::Macie2
     #
     # @overload get_usage_totals(**params)
     # @param [Hash] params ({})
-    def get_usage_totals(params = {}, **options)
-      req = build_request(:get_usage_totals, params)
+    def get_usage_totals(, **options)
+      req = build_request(:get_usage_totals, )
       req.send_request(options)
     end
 
@@ -1935,8 +1935,8 @@ module Aws::Macie2
     #
     # @overload list_classification_jobs(**params)
     # @param [Hash] params ({})
-    def list_classification_jobs(params = {}, **options)
-      req = build_request(:list_classification_jobs, params)
+    def list_classification_jobs(, **options)
+      req = build_request(:list_classification_jobs, )
       req.send_request(options)
     end
 
@@ -1975,8 +1975,8 @@ module Aws::Macie2
     #
     # @overload list_custom_data_identifiers(**params)
     # @param [Hash] params ({})
-    def list_custom_data_identifiers(params = {}, **options)
-      req = build_request(:list_custom_data_identifiers, params)
+    def list_custom_data_identifiers(, **options)
+      req = build_request(:list_custom_data_identifiers, )
       req.send_request(options)
     end
 
@@ -2034,8 +2034,8 @@ module Aws::Macie2
     #
     # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, **options)
-      req = build_request(:list_findings, params)
+    def list_findings(, **options)
+      req = build_request(:list_findings, )
       req.send_request(options)
     end
 
@@ -2075,8 +2075,8 @@ module Aws::Macie2
     #
     # @overload list_findings_filters(**params)
     # @param [Hash] params ({})
-    def list_findings_filters(params = {}, **options)
-      req = build_request(:list_findings_filters, params)
+    def list_findings_filters(, **options)
+      req = build_request(:list_findings_filters, )
       req.send_request(options)
     end
 
@@ -2114,8 +2114,8 @@ module Aws::Macie2
     #
     # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, **options)
-      req = build_request(:list_invitations, params)
+    def list_invitations(, **options)
+      req = build_request(:list_invitations, )
       req.send_request(options)
     end
 
@@ -2161,8 +2161,8 @@ module Aws::Macie2
     #
     # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, **options)
-      req = build_request(:list_members, params)
+    def list_members(, **options)
+      req = build_request(:list_members, )
       req.send_request(options)
     end
 
@@ -2198,8 +2198,8 @@ module Aws::Macie2
     #
     # @overload list_organization_admin_accounts(**params)
     # @param [Hash] params ({})
-    def list_organization_admin_accounts(params = {}, **options)
-      req = build_request(:list_organization_admin_accounts, params)
+    def list_organization_admin_accounts(, **options)
+      req = build_request(:list_organization_admin_accounts, )
       req.send_request(options)
     end
 
@@ -2228,8 +2228,8 @@ module Aws::Macie2
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2267,8 +2267,8 @@ module Aws::Macie2
     #
     # @overload put_classification_export_configuration(**params)
     # @param [Hash] params ({})
-    def put_classification_export_configuration(params = {}, **options)
-      req = build_request(:put_classification_export_configuration, params)
+    def put_classification_export_configuration(, **options)
+      req = build_request(:put_classification_export_configuration, )
       req.send_request(options)
     end
 
@@ -2298,8 +2298,8 @@ module Aws::Macie2
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2337,8 +2337,8 @@ module Aws::Macie2
     #
     # @overload test_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def test_custom_data_identifier(params = {}, **options)
-      req = build_request(:test_custom_data_identifier, params)
+    def test_custom_data_identifier(, **options)
+      req = build_request(:test_custom_data_identifier, )
       req.send_request(options)
     end
 
@@ -2362,8 +2362,8 @@ module Aws::Macie2
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2387,8 +2387,8 @@ module Aws::Macie2
     #
     # @overload update_classification_job(**params)
     # @param [Hash] params ({})
-    def update_classification_job(params = {}, **options)
-      req = build_request(:update_classification_job, params)
+    def update_classification_job(, **options)
+      req = build_request(:update_classification_job, )
       req.send_request(options)
     end
 
@@ -2448,8 +2448,8 @@ module Aws::Macie2
     #
     # @overload update_findings_filter(**params)
     # @param [Hash] params ({})
-    def update_findings_filter(params = {}, **options)
-      req = build_request(:update_findings_filter, params)
+    def update_findings_filter(, **options)
+      req = build_request(:update_findings_filter, )
       req.send_request(options)
     end
 
@@ -2478,8 +2478,8 @@ module Aws::Macie2
     #
     # @overload update_macie_session(**params)
     # @param [Hash] params ({})
-    def update_macie_session(params = {}, **options)
-      req = build_request(:update_macie_session, params)
+    def update_macie_session(, **options)
+      req = build_request(:update_macie_session, )
       req.send_request(options)
     end
 
@@ -2504,8 +2504,8 @@ module Aws::Macie2
     #
     # @overload update_member_session(**params)
     # @param [Hash] params ({})
-    def update_member_session(params = {}, **options)
-      req = build_request(:update_member_session, params)
+    def update_member_session(, **options)
+      req = build_request(:update_member_session, )
       req.send_request(options)
     end
 
@@ -2526,8 +2526,8 @@ module Aws::Macie2
     #
     # @overload update_organization_configuration(**params)
     # @param [Hash] params ({})
-    def update_organization_configuration(params = {}, **options)
-      req = build_request(:update_organization_configuration, params)
+    def update_organization_configuration(, **options)
+      req = build_request(:update_organization_configuration, )
       req.send_request(options)
     end
 

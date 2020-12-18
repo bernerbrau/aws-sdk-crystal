@@ -375,8 +375,8 @@ module Aws::IoTJobsDataPlane
     #
     # @overload describe_job_execution(**params)
     # @param [Hash] params ({})
-    def describe_job_execution(params = {}, **options)
-      req = build_request(:describe_job_execution, params)
+    def describe_job_execution(, **options)
+      req = build_request(:describe_job_execution, )
       req.send_request(options)
     end
 
@@ -416,8 +416,8 @@ module Aws::IoTJobsDataPlane
     #
     # @overload get_pending_job_executions(**params)
     # @param [Hash] params ({})
-    def get_pending_job_executions(params = {}, **options)
-      req = build_request(:get_pending_job_executions, params)
+    def get_pending_job_executions(, **options)
+      req = build_request(:get_pending_job_executions, )
       req.send_request(options)
     end
 
@@ -473,8 +473,8 @@ module Aws::IoTJobsDataPlane
     #
     # @overload start_next_pending_job_execution(**params)
     # @param [Hash] params ({})
-    def start_next_pending_job_execution(params = {}, **options)
-      req = build_request(:start_next_pending_job_execution, params)
+    def start_next_pending_job_execution(, **options)
+      req = build_request(:start_next_pending_job_execution, )
       req.send_request(options)
     end
 
@@ -557,8 +557,8 @@ module Aws::IoTJobsDataPlane
     #
     # @overload update_job_execution(**params)
     # @param [Hash] params ({})
-    def update_job_execution(params = {}, **options)
-      req = build_request(:update_job_execution, params)
+    def update_job_execution(, **options)
+      req = build_request(:update_job_execution, )
       req.send_request(options)
     end
 

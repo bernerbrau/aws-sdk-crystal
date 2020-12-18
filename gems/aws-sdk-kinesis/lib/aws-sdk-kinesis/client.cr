@@ -381,8 +381,8 @@ module Aws::Kinesis
     #
     # @overload add_tags_to_stream(**params)
     # @param [Hash] params ({})
-    def add_tags_to_stream(params = {}, **options)
-      req = build_request(:add_tags_to_stream, params)
+    def add_tags_to_stream(, **options)
+      req = build_request(:add_tags_to_stream, )
       req.send_request(options)
     end
 
@@ -458,8 +458,8 @@ module Aws::Kinesis
     #
     # @overload create_stream(**params)
     # @param [Hash] params ({})
-    def create_stream(params = {}, **options)
-      req = build_request(:create_stream, params)
+    def create_stream(, **options)
+      req = build_request(:create_stream, )
       req.send_request(options)
     end
 
@@ -491,8 +491,8 @@ module Aws::Kinesis
     #
     # @overload decrease_stream_retention_period(**params)
     # @param [Hash] params ({})
-    def decrease_stream_retention_period(params = {}, **options)
-      req = build_request(:decrease_stream_retention_period, params)
+    def decrease_stream_retention_period(, **options)
+      req = build_request(:decrease_stream_retention_period, )
       req.send_request(options)
     end
 
@@ -538,8 +538,8 @@ module Aws::Kinesis
     #
     # @overload delete_stream(**params)
     # @param [Hash] params ({})
-    def delete_stream(params = {}, **options)
-      req = build_request(:delete_stream, params)
+    def delete_stream(, **options)
+      req = build_request(:delete_stream, )
       req.send_request(options)
     end
 
@@ -588,8 +588,8 @@ module Aws::Kinesis
     #
     # @overload deregister_stream_consumer(**params)
     # @param [Hash] params ({})
-    def deregister_stream_consumer(params = {}, **options)
-      req = build_request(:deregister_stream_consumer, params)
+    def deregister_stream_consumer(, **options)
+      req = build_request(:deregister_stream_consumer, )
       req.send_request(options)
     end
 
@@ -614,8 +614,8 @@ module Aws::Kinesis
     #
     # @overload describe_limits(**params)
     # @param [Hash] params ({})
-    def describe_limits(params = {}, **options)
-      req = build_request(:describe_limits, params)
+    def describe_limits(, **options)
+      req = build_request(:describe_limits, )
       req.send_request(options)
     end
 
@@ -701,8 +701,8 @@ module Aws::Kinesis
     #
     # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, **options)
-      req = build_request(:describe_stream, params)
+    def describe_stream(, **options)
+      req = build_request(:describe_stream, )
       req.send_request(options)
     end
 
@@ -757,8 +757,8 @@ module Aws::Kinesis
     #
     # @overload describe_stream_consumer(**params)
     # @param [Hash] params ({})
-    def describe_stream_consumer(params = {}, **options)
-      req = build_request(:describe_stream_consumer, params)
+    def describe_stream_consumer(, **options)
+      req = build_request(:describe_stream_consumer, )
       req.send_request(options)
     end
 
@@ -804,8 +804,8 @@ module Aws::Kinesis
     #
     # @overload describe_stream_summary(**params)
     # @param [Hash] params ({})
-    def describe_stream_summary(params = {}, **options)
-      req = build_request(:describe_stream_summary, params)
+    def describe_stream_summary(, **options)
+      req = build_request(:describe_stream_summary, )
       req.send_request(options)
     end
 
@@ -870,8 +870,8 @@ module Aws::Kinesis
     #
     # @overload disable_enhanced_monitoring(**params)
     # @param [Hash] params ({})
-    def disable_enhanced_monitoring(params = {}, **options)
-      req = build_request(:disable_enhanced_monitoring, params)
+    def disable_enhanced_monitoring(, **options)
+      req = build_request(:disable_enhanced_monitoring, )
       req.send_request(options)
     end
 
@@ -936,8 +936,8 @@ module Aws::Kinesis
     #
     # @overload enable_enhanced_monitoring(**params)
     # @param [Hash] params ({})
-    def enable_enhanced_monitoring(params = {}, **options)
-      req = build_request(:enable_enhanced_monitoring, params)
+    def enable_enhanced_monitoring(, **options)
+      req = build_request(:enable_enhanced_monitoring, )
       req.send_request(options)
     end
 
@@ -1052,8 +1052,8 @@ module Aws::Kinesis
     #
     # @overload get_records(**params)
     # @param [Hash] params ({})
-    def get_records(params = {}, **options)
-      req = build_request(:get_records, params)
+    def get_records(, **options)
+      req = build_request(:get_records, )
       req.send_request(options)
     end
 
@@ -1171,8 +1171,8 @@ module Aws::Kinesis
     #
     # @overload get_shard_iterator(**params)
     # @param [Hash] params ({})
-    def get_shard_iterator(params = {}, **options)
-      req = build_request(:get_shard_iterator, params)
+    def get_shard_iterator(, **options)
+      req = build_request(:get_shard_iterator, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::Kinesis
     #
     # @overload increase_stream_retention_period(**params)
     # @param [Hash] params ({})
-    def increase_stream_retention_period(params = {}, **options)
-      req = build_request(:increase_stream_retention_period, params)
+    def increase_stream_retention_period(, **options)
+      req = build_request(:increase_stream_retention_period, )
       req.send_request(options)
     end
 
@@ -1328,8 +1328,8 @@ module Aws::Kinesis
     #
     # @overload list_shards(**params)
     # @param [Hash] params ({})
-    def list_shards(params = {}, **options)
-      req = build_request(:list_shards, params)
+    def list_shards(, **options)
+      req = build_request(:list_shards, )
       req.send_request(options)
     end
 
@@ -1416,8 +1416,8 @@ module Aws::Kinesis
     #
     # @overload list_stream_consumers(**params)
     # @param [Hash] params ({})
-    def list_stream_consumers(params = {}, **options)
-      req = build_request(:list_stream_consumers, params)
+    def list_stream_consumers(, **options)
+      req = build_request(:list_stream_consumers, )
       req.send_request(options)
     end
 
@@ -1470,8 +1470,8 @@ module Aws::Kinesis
     #
     # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, **options)
-      req = build_request(:list_streams, params)
+    def list_streams(, **options)
+      req = build_request(:list_streams, )
       req.send_request(options)
     end
 
@@ -1516,8 +1516,8 @@ module Aws::Kinesis
     #
     # @overload list_tags_for_stream(**params)
     # @param [Hash] params ({})
-    def list_tags_for_stream(params = {}, **options)
-      req = build_request(:list_tags_for_stream, params)
+    def list_tags_for_stream(, **options)
+      req = build_request(:list_tags_for_stream, )
       req.send_request(options)
     end
 
@@ -1591,8 +1591,8 @@ module Aws::Kinesis
     #
     # @overload merge_shards(**params)
     # @param [Hash] params ({})
-    def merge_shards(params = {}, **options)
-      req = build_request(:merge_shards, params)
+    def merge_shards(, **options)
+      req = build_request(:merge_shards, )
       req.send_request(options)
     end
 
@@ -1708,8 +1708,8 @@ module Aws::Kinesis
     #
     # @overload put_record(**params)
     # @param [Hash] params ({})
-    def put_record(params = {}, **options)
-      req = build_request(:put_record, params)
+    def put_record(, **options)
+      req = build_request(:put_record, )
       req.send_request(options)
     end
 
@@ -1833,8 +1833,8 @@ module Aws::Kinesis
     #
     # @overload put_records(**params)
     # @param [Hash] params ({})
-    def put_records(params = {}, **options)
-      req = build_request(:put_records, params)
+    def put_records(, **options)
+      req = build_request(:put_records, )
       req.send_request(options)
     end
 
@@ -1894,8 +1894,8 @@ module Aws::Kinesis
     #
     # @overload register_stream_consumer(**params)
     # @param [Hash] params ({})
-    def register_stream_consumer(params = {}, **options)
-      req = build_request(:register_stream_consumer, params)
+    def register_stream_consumer(, **options)
+      req = build_request(:register_stream_consumer, )
       req.send_request(options)
     end
 
@@ -1927,8 +1927,8 @@ module Aws::Kinesis
     #
     # @overload remove_tags_from_stream(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_stream(params = {}, **options)
-      req = build_request(:remove_tags_from_stream, params)
+    def remove_tags_from_stream(, **options)
+      req = build_request(:remove_tags_from_stream, )
       req.send_request(options)
     end
 
@@ -2019,8 +2019,8 @@ module Aws::Kinesis
     #
     # @overload split_shard(**params)
     # @param [Hash] params ({})
-    def split_shard(params = {}, **options)
-      req = build_request(:split_shard, params)
+    def split_shard(, **options)
+      req = build_request(:split_shard, )
       req.send_request(options)
     end
 
@@ -2084,8 +2084,8 @@ module Aws::Kinesis
     #
     # @overload start_stream_encryption(**params)
     # @param [Hash] params ({})
-    def start_stream_encryption(params = {}, **options)
-      req = build_request(:start_stream_encryption, params)
+    def start_stream_encryption(, **options)
+      req = build_request(:start_stream_encryption, )
       req.send_request(options)
     end
 
@@ -2150,8 +2150,8 @@ module Aws::Kinesis
     #
     # @overload stop_stream_encryption(**params)
     # @param [Hash] params ({})
-    def stop_stream_encryption(params = {}, **options)
-      req = build_request(:stop_stream_encryption, params)
+    def stop_stream_encryption(, **options)
+      req = build_request(:stop_stream_encryption, )
       req.send_request(options)
     end
 
@@ -2249,8 +2249,8 @@ module Aws::Kinesis
     #
     # @overload update_shard_count(**params)
     # @param [Hash] params ({})
-    def update_shard_count(params = {}, **options)
-      req = build_request(:update_shard_count, params)
+    def update_shard_count(, **options)
+      req = build_request(:update_shard_count, )
       req.send_request(options)
     end
 

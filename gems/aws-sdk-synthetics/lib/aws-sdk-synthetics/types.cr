@@ -1403,5 +1403,336 @@ module Aws::Synthetics
       include Aws::Structure
     end
 
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Canaries = Array(Canary)
+
+    alias CanariesLastRun = Array(CanaryLastRun)
+
+    alias Canary = NamedTuple(
+      "Id" : (UUID)?,
+      "Name" : (CanaryName)?,
+      "Code" : (CanaryCodeOutput)?,
+      "ExecutionRoleArn" : (RoleArn)?,
+      "Schedule" : (CanaryScheduleOutput)?,
+      "RunConfig" : (CanaryRunConfigOutput)?,
+      "SuccessRetentionPeriodInDays" : (MaxSize1024)?,
+      "FailureRetentionPeriodInDays" : (MaxSize1024)?,
+      "Status" : (CanaryStatus)?,
+      "Timeline" : (CanaryTimeline)?,
+      "ArtifactS3Location" : (String)?,
+      "EngineArn" : (FunctionArn)?,
+      "RuntimeVersion" : (String)?,
+      "VpcConfig" : (VpcConfigOutput)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CanaryArn = String
+
+    alias CanaryCodeInput = NamedTuple(
+      "S3Bucket" : (String)?,
+      "S3Key" : (String)?,
+      "S3Version" : (String)?,
+      "ZipFile" : (Blob)?,
+      "Handler" : String
+    )
+
+    alias CanaryCodeOutput = NamedTuple(
+      "SourceLocationArn" : (String)?,
+      "Handler" : (String)?
+    )
+
+    alias CanaryLastRun = NamedTuple(
+      "CanaryName" : (CanaryName)?,
+      "LastRun" : (CanaryRun)?
+    )
+
+    alias CanaryName = String
+
+    alias CanaryRun = NamedTuple(
+      "Id" : (UUID)?,
+      "Name" : (CanaryName)?,
+      "Status" : (CanaryRunStatus)?,
+      "Timeline" : (CanaryRunTimeline)?,
+      "ArtifactS3Location" : (String)?
+    )
+
+    alias CanaryRunConfigInput = NamedTuple(
+      "TimeoutInSeconds" : (MaxFifteenMinutesInSeconds)?,
+      "MemoryInMB" : (MaxSize3008)?,
+      "ActiveTracing" : (NullableBoolean)?,
+      "EnvironmentVariables" : (EnvironmentVariablesMap)?
+    )
+
+    alias CanaryRunConfigOutput = NamedTuple(
+      "TimeoutInSeconds" : (MaxFifteenMinutesInSeconds)?,
+      "MemoryInMB" : (MaxSize3008)?,
+      "ActiveTracing" : (NullableBoolean)?
+    )
+
+    alias CanaryRunState = String
+
+    alias CanaryRunStateReasonCode = String
+
+    alias CanaryRunStatus = NamedTuple(
+      "State" : (CanaryRunState)?,
+      "StateReason" : (String)?,
+      "StateReasonCode" : (CanaryRunStateReasonCode)?
+    )
+
+    alias CanaryRunTimeline = NamedTuple(
+      "Started" : (Timestamp)?,
+      "Completed" : (Timestamp)?
+    )
+
+    alias CanaryRuns = Array(CanaryRun)
+
+    alias CanaryScheduleInput = NamedTuple(
+      "Expression" : String,
+      "DurationInSeconds" : (MaxOneYearInSeconds)?
+    )
+
+    alias CanaryScheduleOutput = NamedTuple(
+      "Expression" : (String)?,
+      "DurationInSeconds" : (MaxOneYearInSeconds)?
+    )
+
+    alias CanaryState = String
+
+    alias CanaryStateReasonCode = String
+
+    alias CanaryStatus = NamedTuple(
+      "State" : (CanaryState)?,
+      "StateReason" : (String)?,
+      "StateReasonCode" : (CanaryStateReasonCode)?
+    )
+
+    alias CanaryTimeline = NamedTuple(
+      "Created" : (Timestamp)?,
+      "LastModified" : (Timestamp)?,
+      "LastStarted" : (Timestamp)?,
+      "LastStopped" : (Timestamp)?
+    )
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CreateCanaryRequest = NamedTuple(
+      "Name" : CanaryName,
+      "Code" : CanaryCodeInput,
+      "ArtifactS3Location" : String,
+      "ExecutionRoleArn" : RoleArn,
+      "Schedule" : CanaryScheduleInput,
+      "RunConfig" : (CanaryRunConfigInput)?,
+      "SuccessRetentionPeriodInDays" : (MaxSize1024)?,
+      "FailureRetentionPeriodInDays" : (MaxSize1024)?,
+      "RuntimeVersion" : String,
+      "VpcConfig" : (VpcConfigInput)?,
+      "Tags" : (TagMap)?
+    )
+
+    alias CreateCanaryResponse = NamedTuple(
+      "Canary" : (Canary)?
+    )
+
+    alias DeleteCanaryRequest = NamedTuple(
+      "Name" : CanaryName
+    )
+
+    alias DeleteCanaryResponse = NamedTuple(
+      
+    )
+
+    alias DescribeCanariesLastRunRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias DescribeCanariesLastRunResponse = NamedTuple(
+      "CanariesLastRun" : (CanariesLastRun)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeCanariesRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxCanaryResults)?
+    )
+
+    alias DescribeCanariesResponse = NamedTuple(
+      "Canaries" : (Canaries)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeRuntimeVersionsRequest = NamedTuple(
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias DescribeRuntimeVersionsResponse = NamedTuple(
+      "RuntimeVersions" : (RuntimeVersionList)?,
+      "NextToken" : (Token)?
+    )
+
+    alias EnvironmentVariableName = String
+
+    alias EnvironmentVariableValue = String
+
+    alias EnvironmentVariablesMap = Hash(EnvironmentVariableName,EnvironmentVariableValue)
+
+    alias ErrorMessage = String
+
+    alias FunctionArn = String
+
+    alias GetCanaryRequest = NamedTuple(
+      "Name" : CanaryName
+    )
+
+    alias GetCanaryResponse = NamedTuple(
+      "Canary" : (Canary)?
+    )
+
+    alias GetCanaryRunsRequest = NamedTuple(
+      "Name" : CanaryName,
+      "NextToken" : (Token)?,
+      "MaxResults" : (MaxSize100)?
+    )
+
+    alias GetCanaryRunsResponse = NamedTuple(
+      "CanaryRuns" : (CanaryRuns)?,
+      "NextToken" : (Token)?
+    )
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : CanaryArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "Tags" : (TagMap)?
+    )
+
+    alias MaxCanaryResults = Int32
+
+    alias MaxFifteenMinutesInSeconds = Int32
+
+    alias MaxOneYearInSeconds = Int64
+
+    alias MaxSize100 = Int32
+
+    alias MaxSize1024 = Int32
+
+    alias MaxSize3008 = Int32
+
+    alias NullableBoolean = Bool
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias RoleArn = String
+
+    alias RuntimeVersion = NamedTuple(
+      "VersionName" : (String)?,
+      "Description" : (String)?,
+      "ReleaseDate" : (Timestamp)?,
+      "DeprecationDate" : (Timestamp)?
+    )
+
+    alias RuntimeVersionList = Array(RuntimeVersion)
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias StartCanaryRequest = NamedTuple(
+      "Name" : CanaryName
+    )
+
+    alias StartCanaryResponse = NamedTuple(
+      
+    )
+
+    alias StopCanaryRequest = NamedTuple(
+      "Name" : CanaryName
+    )
+
+    alias StopCanaryResponse = NamedTuple(
+      
+    )
+
+    alias String = String
+
+    alias SubnetId = String
+
+    alias SubnetIds = Array(SubnetId)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : CanaryArn,
+      "Tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias Token = String
+
+    alias UUID = String
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : CanaryArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateCanaryRequest = NamedTuple(
+      "Name" : CanaryName,
+      "Code" : (CanaryCodeInput)?,
+      "ExecutionRoleArn" : (RoleArn)?,
+      "RuntimeVersion" : (String)?,
+      "Schedule" : (CanaryScheduleInput)?,
+      "RunConfig" : (CanaryRunConfigInput)?,
+      "SuccessRetentionPeriodInDays" : (MaxSize1024)?,
+      "FailureRetentionPeriodInDays" : (MaxSize1024)?,
+      "VpcConfig" : (VpcConfigInput)?
+    )
+
+    alias UpdateCanaryResponse = NamedTuple(
+      
+    )
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias VpcConfigInput = NamedTuple(
+      "SubnetIds" : (SubnetIds)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?
+    )
+
+    alias VpcConfigOutput = NamedTuple(
+      "VpcId" : (VpcId)?,
+      "SubnetIds" : (SubnetIds)?,
+      "SecurityGroupIds" : (SecurityGroupIds)?
+    )
+
+    alias VpcId = String
   end
 end

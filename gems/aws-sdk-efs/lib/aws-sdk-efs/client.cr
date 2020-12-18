@@ -437,8 +437,8 @@ module Aws::EFS
     #
     # @overload create_access_point(**params)
     # @param [Hash] params ({})
-    def create_access_point(params = {}, **options)
-      req = build_request(:create_access_point, params)
+    def create_access_point(, **options)
+      req = build_request(:create_access_point, )
       req.send_request(options)
     end
 
@@ -681,8 +681,8 @@ module Aws::EFS
     #
     # @overload create_file_system(**params)
     # @param [Hash] params ({})
-    def create_file_system(params = {}, **options)
-      req = build_request(:create_file_system, params)
+    def create_file_system(, **options)
+      req = build_request(:create_file_system, )
       req.send_request(options)
     end
 
@@ -874,8 +874,8 @@ module Aws::EFS
     #
     # @overload create_mount_target(**params)
     # @param [Hash] params ({})
-    def create_mount_target(params = {}, **options)
-      req = build_request(:create_mount_target, params)
+    def create_mount_target(, **options)
+      req = build_request(:create_mount_target, )
       req.send_request(options)
     end
 
@@ -930,8 +930,8 @@ module Aws::EFS
     #
     # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, **options)
-      req = build_request(:create_tags, params)
+    def create_tags(, **options)
+      req = build_request(:create_tags, )
       req.send_request(options)
     end
 
@@ -958,8 +958,8 @@ module Aws::EFS
     #
     # @overload delete_access_point(**params)
     # @param [Hash] params ({})
-    def delete_access_point(params = {}, **options)
-      req = build_request(:delete_access_point, params)
+    def delete_access_point(, **options)
+      req = build_request(:delete_access_point, )
       req.send_request(options)
     end
 
@@ -1007,8 +1007,8 @@ module Aws::EFS
     #
     # @overload delete_file_system(**params)
     # @param [Hash] params ({})
-    def delete_file_system(params = {}, **options)
-      req = build_request(:delete_file_system, params)
+    def delete_file_system(, **options)
+      req = build_request(:delete_file_system, )
       req.send_request(options)
     end
 
@@ -1040,8 +1040,8 @@ module Aws::EFS
     #
     # @overload delete_file_system_policy(**params)
     # @param [Hash] params ({})
-    def delete_file_system_policy(params = {}, **options)
-      req = build_request(:delete_file_system_policy, params)
+    def delete_file_system_policy(, **options)
+      req = build_request(:delete_file_system_policy, )
       req.send_request(options)
     end
 
@@ -1102,8 +1102,8 @@ module Aws::EFS
     #
     # @overload delete_mount_target(**params)
     # @param [Hash] params ({})
-    def delete_mount_target(params = {}, **options)
-      req = build_request(:delete_mount_target, params)
+    def delete_mount_target(, **options)
+      req = build_request(:delete_mount_target, )
       req.send_request(options)
     end
 
@@ -1151,8 +1151,8 @@ module Aws::EFS
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -1226,8 +1226,8 @@ module Aws::EFS
     #
     # @overload describe_access_points(**params)
     # @param [Hash] params ({})
-    def describe_access_points(params = {}, **options)
-      req = build_request(:describe_access_points, params)
+    def describe_access_points(, **options)
+      req = build_request(:describe_access_points, )
       req.send_request(options)
     end
 
@@ -1254,8 +1254,8 @@ module Aws::EFS
     #
     # @overload describe_backup_policy(**params)
     # @param [Hash] params ({})
-    def describe_backup_policy(params = {}, **options)
-      req = build_request(:describe_backup_policy, params)
+    def describe_backup_policy(, **options)
+      req = build_request(:describe_backup_policy, )
       req.send_request(options)
     end
 
@@ -1288,8 +1288,8 @@ module Aws::EFS
     #
     # @overload describe_file_system_policy(**params)
     # @param [Hash] params ({})
-    def describe_file_system_policy(params = {}, **options)
-      req = build_request(:describe_file_system_policy, params)
+    def describe_file_system_policy(, **options)
+      req = build_request(:describe_file_system_policy, )
       req.send_request(options)
     end
 
@@ -1420,8 +1420,8 @@ module Aws::EFS
     #
     # @overload describe_file_systems(**params)
     # @param [Hash] params ({})
-    def describe_file_systems(params = {}, **options)
-      req = build_request(:describe_file_systems, params)
+    def describe_file_systems(, **options)
+      req = build_request(:describe_file_systems, )
       req.send_request(options)
     end
 
@@ -1477,8 +1477,8 @@ module Aws::EFS
     #
     # @overload describe_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def describe_lifecycle_configuration(params = {}, **options)
-      req = build_request(:describe_lifecycle_configuration, params)
+    def describe_lifecycle_configuration(, **options)
+      req = build_request(:describe_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -1533,8 +1533,8 @@ module Aws::EFS
     #
     # @overload describe_mount_target_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_mount_target_security_groups(params = {}, **options)
-      req = build_request(:describe_mount_target_security_groups, params)
+    def describe_mount_target_security_groups(, **options)
+      req = build_request(:describe_mount_target_security_groups, )
       req.send_request(options)
     end
 
@@ -1636,8 +1636,8 @@ module Aws::EFS
     #
     # @overload describe_mount_targets(**params)
     # @param [Hash] params ({})
-    def describe_mount_targets(params = {}, **options)
-      req = build_request(:describe_mount_targets, params)
+    def describe_mount_targets(, **options)
+      req = build_request(:describe_mount_targets, )
       req.send_request(options)
     end
 
@@ -1710,8 +1710,8 @@ module Aws::EFS
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -1760,8 +1760,8 @@ module Aws::EFS
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1814,8 +1814,8 @@ module Aws::EFS
     #
     # @overload modify_mount_target_security_groups(**params)
     # @param [Hash] params ({})
-    def modify_mount_target_security_groups(params = {}, **options)
-      req = build_request(:modify_mount_target_security_groups, params)
+    def modify_mount_target_security_groups(, **options)
+      req = build_request(:modify_mount_target_security_groups, )
       req.send_request(options)
     end
 
@@ -1849,8 +1849,8 @@ module Aws::EFS
     #
     # @overload put_backup_policy(**params)
     # @param [Hash] params ({})
-    def put_backup_policy(params = {}, **options)
-      req = build_request(:put_backup_policy, params)
+    def put_backup_policy(, **options)
+      req = build_request(:put_backup_policy, )
       req.send_request(options)
     end
 
@@ -1915,8 +1915,8 @@ module Aws::EFS
     #
     # @overload put_file_system_policy(**params)
     # @param [Hash] params ({})
-    def put_file_system_policy(params = {}, **options)
-      req = build_request(:put_file_system_policy, params)
+    def put_file_system_policy(, **options)
+      req = build_request(:put_file_system_policy, )
       req.send_request(options)
     end
 
@@ -2010,8 +2010,8 @@ module Aws::EFS
     #
     # @overload put_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_configuration(params = {}, **options)
-      req = build_request(:put_lifecycle_configuration, params)
+    def put_lifecycle_configuration(, **options)
+      req = build_request(:put_lifecycle_configuration, )
       req.send_request(options)
     end
 
@@ -2044,8 +2044,8 @@ module Aws::EFS
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2075,8 +2075,8 @@ module Aws::EFS
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2153,8 +2153,8 @@ module Aws::EFS
     #
     # @overload update_file_system(**params)
     # @param [Hash] params ({})
-    def update_file_system(params = {}, **options)
-      req = build_request(:update_file_system, params)
+    def update_file_system(, **options)
+      req = build_request(:update_file_system, )
       req.send_request(options)
     end
 

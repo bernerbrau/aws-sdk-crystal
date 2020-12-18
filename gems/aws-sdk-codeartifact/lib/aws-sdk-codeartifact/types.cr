@@ -3524,5 +3524,725 @@ module Aws::CodeArtifact
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : String
+    )
+
+    alias AccountId = String
+
+    alias Arn = String
+
+    alias Asset = String | Array(UInt8) | IO
+
+    alias AssetHashes = Hash(HashAlgorithm,HashValue)
+
+    alias AssetName = String
+
+    alias AssetSummary = NamedTuple(
+      "name" : AssetName,
+      "size" : (LongOptional)?,
+      "hashes" : (AssetHashes)?
+    )
+
+    alias AssetSummaryList = Array(AssetSummary)
+
+    alias AssociateExternalConnectionRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "externalConnection" : ExternalConnectionName
+    )
+
+    alias AssociateExternalConnectionResult = NamedTuple(
+      "repository" : (RepositoryDescription)?
+    )
+
+    alias AuthorizationTokenDurationSeconds = Int64
+
+    alias BooleanOptional = Bool
+
+    alias ConflictException = NamedTuple(
+      "message" : String,
+      "resourceId" : (String)?,
+      "resourceType" : (ResourceType)?
+    )
+
+    alias CopyPackageVersionsRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "sourceRepository" : RepositoryName,
+      "destinationRepository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "versions" : (PackageVersionList)?,
+      "versionRevisions" : (PackageVersionRevisionMap)?,
+      "allowOverwrite" : (BooleanOptional)?,
+      "includeFromUpstream" : (BooleanOptional)?
+    )
+
+    alias CopyPackageVersionsResult = NamedTuple(
+      "successfulVersions" : (SuccessfulPackageVersionInfoMap)?,
+      "failedVersions" : (PackageVersionErrorMap)?
+    )
+
+    alias CreateDomainRequest = NamedTuple(
+      "domain" : DomainName,
+      "encryptionKey" : (Arn)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateDomainResult = NamedTuple(
+      "domain" : (DomainDescription)?
+    )
+
+    alias CreateRepositoryRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "description" : (Description)?,
+      "upstreams" : (UpstreamRepositoryList)?,
+      "tags" : (TagList)?
+    )
+
+    alias CreateRepositoryResult = NamedTuple(
+      "repository" : (RepositoryDescription)?
+    )
+
+    alias DeleteDomainPermissionsPolicyRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "policyRevision" : (PolicyRevision)?
+    )
+
+    alias DeleteDomainPermissionsPolicyResult = NamedTuple(
+      "policy" : (ResourcePolicy)?
+    )
+
+    alias DeleteDomainRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?
+    )
+
+    alias DeleteDomainResult = NamedTuple(
+      "domain" : (DomainDescription)?
+    )
+
+    alias DeletePackageVersionsRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "versions" : PackageVersionList,
+      "expectedStatus" : (PackageVersionStatus)?
+    )
+
+    alias DeletePackageVersionsResult = NamedTuple(
+      "successfulVersions" : (SuccessfulPackageVersionInfoMap)?,
+      "failedVersions" : (PackageVersionErrorMap)?
+    )
+
+    alias DeleteRepositoryPermissionsPolicyRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "policyRevision" : (PolicyRevision)?
+    )
+
+    alias DeleteRepositoryPermissionsPolicyResult = NamedTuple(
+      "policy" : (ResourcePolicy)?
+    )
+
+    alias DeleteRepositoryRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName
+    )
+
+    alias DeleteRepositoryResult = NamedTuple(
+      "repository" : (RepositoryDescription)?
+    )
+
+    alias DescribeDomainRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?
+    )
+
+    alias DescribeDomainResult = NamedTuple(
+      "domain" : (DomainDescription)?
+    )
+
+    alias DescribePackageVersionRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "packageVersion" : PackageVersion
+    )
+
+    alias DescribePackageVersionResult = NamedTuple(
+      "packageVersion" : PackageVersionDescription
+    )
+
+    alias DescribeRepositoryRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName
+    )
+
+    alias DescribeRepositoryResult = NamedTuple(
+      "repository" : (RepositoryDescription)?
+    )
+
+    alias Description = String
+
+    alias DisassociateExternalConnectionRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "externalConnection" : ExternalConnectionName
+    )
+
+    alias DisassociateExternalConnectionResult = NamedTuple(
+      "repository" : (RepositoryDescription)?
+    )
+
+    alias DisposePackageVersionsRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "versions" : PackageVersionList,
+      "versionRevisions" : (PackageVersionRevisionMap)?,
+      "expectedStatus" : (PackageVersionStatus)?
+    )
+
+    alias DisposePackageVersionsResult = NamedTuple(
+      "successfulVersions" : (SuccessfulPackageVersionInfoMap)?,
+      "failedVersions" : (PackageVersionErrorMap)?
+    )
+
+    alias DomainDescription = NamedTuple(
+      "name" : (DomainName)?,
+      "owner" : (AccountId)?,
+      "arn" : (Arn)?,
+      "status" : (DomainStatus)?,
+      "createdTime" : (Timestamp)?,
+      "encryptionKey" : (Arn)?,
+      "repositoryCount" : (Integer)?,
+      "assetSizeBytes" : (Long)?,
+      "s3BucketArn" : (Arn)?
+    )
+
+    alias DomainName = String
+
+    alias DomainStatus = String
+
+    alias DomainSummary = NamedTuple(
+      "name" : (DomainName)?,
+      "owner" : (AccountId)?,
+      "arn" : (Arn)?,
+      "status" : (DomainStatus)?,
+      "createdTime" : (Timestamp)?,
+      "encryptionKey" : (Arn)?
+    )
+
+    alias DomainSummaryList = Array(DomainSummary)
+
+    alias ErrorMessage = String
+
+    alias ExternalConnectionName = String
+
+    alias ExternalConnectionStatus = String
+
+    alias GetAuthorizationTokenRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "durationSeconds" : (AuthorizationTokenDurationSeconds)?
+    )
+
+    alias GetAuthorizationTokenResult = NamedTuple(
+      "authorizationToken" : (String)?,
+      "expiration" : (Timestamp)?
+    )
+
+    alias GetDomainPermissionsPolicyRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?
+    )
+
+    alias GetDomainPermissionsPolicyResult = NamedTuple(
+      "policy" : (ResourcePolicy)?
+    )
+
+    alias GetPackageVersionAssetRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "packageVersion" : PackageVersion,
+      "asset" : AssetName,
+      "packageVersionRevision" : (PackageVersionRevision)?
+    )
+
+    alias GetPackageVersionAssetResult = NamedTuple(
+      "asset" : (Asset)?,
+      "assetName" : (AssetName)?,
+      "packageVersion" : (PackageVersion)?,
+      "packageVersionRevision" : (PackageVersionRevision)?
+    )
+
+    alias GetPackageVersionReadmeRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "packageVersion" : PackageVersion
+    )
+
+    alias GetPackageVersionReadmeResult = NamedTuple(
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "package" : (PackageName)?,
+      "version" : (PackageVersion)?,
+      "versionRevision" : (PackageVersionRevision)?,
+      "readme" : (String)?
+    )
+
+    alias GetRepositoryEndpointRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat
+    )
+
+    alias GetRepositoryEndpointResult = NamedTuple(
+      "repositoryEndpoint" : (String)?
+    )
+
+    alias GetRepositoryPermissionsPolicyRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName
+    )
+
+    alias GetRepositoryPermissionsPolicyResult = NamedTuple(
+      "policy" : (ResourcePolicy)?
+    )
+
+    alias HashAlgorithm = String
+
+    alias HashValue = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "message" : String
+    )
+
+    alias LicenseInfo = NamedTuple(
+      "name" : (String)?,
+      "url" : (String)?
+    )
+
+    alias LicenseInfoList = Array(LicenseInfo)
+
+    alias ListDomainsMaxResults = Int32
+
+    alias ListDomainsRequest = NamedTuple(
+      "maxResults" : (ListDomainsMaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDomainsResult = NamedTuple(
+      "domains" : (DomainSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPackageVersionAssetsMaxResults = Int32
+
+    alias ListPackageVersionAssetsRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "packageVersion" : PackageVersion,
+      "maxResults" : (ListPackageVersionAssetsMaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPackageVersionAssetsResult = NamedTuple(
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "package" : (PackageName)?,
+      "version" : (PackageVersion)?,
+      "versionRevision" : (PackageVersionRevision)?,
+      "nextToken" : (PaginationToken)?,
+      "assets" : (AssetSummaryList)?
+    )
+
+    alias ListPackageVersionDependenciesRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "packageVersion" : PackageVersion,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPackageVersionDependenciesResult = NamedTuple(
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "package" : (PackageName)?,
+      "version" : (PackageVersion)?,
+      "versionRevision" : (PackageVersionRevision)?,
+      "nextToken" : (PaginationToken)?,
+      "dependencies" : (PackageDependencyList)?
+    )
+
+    alias ListPackageVersionsMaxResults = Int32
+
+    alias ListPackageVersionsRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "status" : (PackageVersionStatus)?,
+      "sortBy" : (PackageVersionSortType)?,
+      "maxResults" : (ListPackageVersionsMaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPackageVersionsResult = NamedTuple(
+      "defaultDisplayVersion" : (PackageVersion)?,
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "package" : (PackageName)?,
+      "versions" : (PackageVersionSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPackagesMaxResults = Int32
+
+    alias ListPackagesRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "packagePrefix" : (PackageName)?,
+      "maxResults" : (ListPackagesMaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPackagesResult = NamedTuple(
+      "packages" : (PackageSummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRepositoriesInDomainMaxResults = Int32
+
+    alias ListRepositoriesInDomainRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "administratorAccount" : (AccountId)?,
+      "repositoryPrefix" : (RepositoryName)?,
+      "maxResults" : (ListRepositoriesInDomainMaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRepositoriesInDomainResult = NamedTuple(
+      "repositories" : (RepositorySummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRepositoriesMaxResults = Int32
+
+    alias ListRepositoriesRequest = NamedTuple(
+      "repositoryPrefix" : (RepositoryName)?,
+      "maxResults" : (ListRepositoriesMaxResults)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListRepositoriesResult = NamedTuple(
+      "repositories" : (RepositorySummaryList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResult = NamedTuple(
+      "tags" : (TagList)?
+    )
+
+    alias Long = Int64
+
+    alias LongOptional = Int64
+
+    alias PackageDependency = NamedTuple(
+      "namespace" : (PackageNamespace)?,
+      "package" : (PackageName)?,
+      "dependencyType" : (String)?,
+      "versionRequirement" : (String)?
+    )
+
+    alias PackageDependencyList = Array(PackageDependency)
+
+    alias PackageFormat = String
+
+    alias PackageName = String
+
+    alias PackageNamespace = String
+
+    alias PackageSummary = NamedTuple(
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "package" : (PackageName)?
+    )
+
+    alias PackageSummaryList = Array(PackageSummary)
+
+    alias PackageVersion = String
+
+    alias PackageVersionDescription = NamedTuple(
+      "format" : (PackageFormat)?,
+      "namespace" : (PackageNamespace)?,
+      "packageName" : (PackageName)?,
+      "displayName" : (String255)?,
+      "version" : (PackageVersion)?,
+      "summary" : (String)?,
+      "homePage" : (String)?,
+      "sourceCodeRepository" : (String)?,
+      "publishedTime" : (Timestamp)?,
+      "licenses" : (LicenseInfoList)?,
+      "revision" : (PackageVersionRevision)?,
+      "status" : (PackageVersionStatus)?
+    )
+
+    alias PackageVersionError = NamedTuple(
+      "errorCode" : (PackageVersionErrorCode)?,
+      "errorMessage" : (ErrorMessage)?
+    )
+
+    alias PackageVersionErrorCode = String
+
+    alias PackageVersionErrorMap = Hash(PackageVersion,PackageVersionError)
+
+    alias PackageVersionList = Array(PackageVersion)
+
+    alias PackageVersionRevision = String
+
+    alias PackageVersionRevisionMap = Hash(PackageVersion,PackageVersionRevision)
+
+    alias PackageVersionSortType = String
+
+    alias PackageVersionStatus = String
+
+    alias PackageVersionSummary = NamedTuple(
+      "version" : PackageVersion,
+      "revision" : (PackageVersionRevision)?,
+      "status" : PackageVersionStatus
+    )
+
+    alias PackageVersionSummaryList = Array(PackageVersionSummary)
+
+    alias PaginationToken = String
+
+    alias PolicyDocument = String
+
+    alias PolicyRevision = String
+
+    alias PutDomainPermissionsPolicyRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "policyRevision" : (PolicyRevision)?,
+      "policyDocument" : PolicyDocument
+    )
+
+    alias PutDomainPermissionsPolicyResult = NamedTuple(
+      "policy" : (ResourcePolicy)?
+    )
+
+    alias PutRepositoryPermissionsPolicyRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "policyRevision" : (PolicyRevision)?,
+      "policyDocument" : PolicyDocument
+    )
+
+    alias PutRepositoryPermissionsPolicyResult = NamedTuple(
+      "policy" : (ResourcePolicy)?
+    )
+
+    alias RepositoryDescription = NamedTuple(
+      "name" : (RepositoryName)?,
+      "administratorAccount" : (AccountId)?,
+      "domainName" : (DomainName)?,
+      "domainOwner" : (AccountId)?,
+      "arn" : (Arn)?,
+      "description" : (Description)?,
+      "upstreams" : (UpstreamRepositoryInfoList)?,
+      "externalConnections" : (RepositoryExternalConnectionInfoList)?
+    )
+
+    alias RepositoryExternalConnectionInfo = NamedTuple(
+      "externalConnectionName" : (ExternalConnectionName)?,
+      "packageFormat" : (PackageFormat)?,
+      "status" : (ExternalConnectionStatus)?
+    )
+
+    alias RepositoryExternalConnectionInfoList = Array(RepositoryExternalConnectionInfo)
+
+    alias RepositoryName = String
+
+    alias RepositorySummary = NamedTuple(
+      "name" : (RepositoryName)?,
+      "administratorAccount" : (AccountId)?,
+      "domainName" : (DomainName)?,
+      "domainOwner" : (AccountId)?,
+      "arn" : (Arn)?,
+      "description" : (Description)?
+    )
+
+    alias RepositorySummaryList = Array(RepositorySummary)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : String,
+      "resourceId" : (String)?,
+      "resourceType" : (ResourceType)?
+    )
+
+    alias ResourcePolicy = NamedTuple(
+      "resourceArn" : (Arn)?,
+      "revision" : (PolicyRevision)?,
+      "document" : (PolicyDocument)?
+    )
+
+    alias ResourceType = String
+
+    alias RetryAfterSeconds = Int32
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : String,
+      "resourceId" : (String)?,
+      "resourceType" : (ResourceType)?
+    )
+
+    alias String = String
+
+    alias String255 = String
+
+    alias SuccessfulPackageVersionInfo = NamedTuple(
+      "revision" : (String)?,
+      "status" : (PackageVersionStatus)?
+    )
+
+    alias SuccessfulPackageVersionInfoMap = Hash(PackageVersion,SuccessfulPackageVersionInfo)
+
+    alias Tag = NamedTuple(
+      "key" : TagKey,
+      "value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : TagList
+    )
+
+    alias TagResourceResult = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : String,
+      "retryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResult = NamedTuple(
+      
+    )
+
+    alias UpdatePackageVersionsStatusRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "format" : PackageFormat,
+      "namespace" : (PackageNamespace)?,
+      "package" : PackageName,
+      "versions" : PackageVersionList,
+      "versionRevisions" : (PackageVersionRevisionMap)?,
+      "expectedStatus" : (PackageVersionStatus)?,
+      "targetStatus" : PackageVersionStatus
+    )
+
+    alias UpdatePackageVersionsStatusResult = NamedTuple(
+      "successfulVersions" : (SuccessfulPackageVersionInfoMap)?,
+      "failedVersions" : (PackageVersionErrorMap)?
+    )
+
+    alias UpdateRepositoryRequest = NamedTuple(
+      "domain" : DomainName,
+      "domainOwner" : (AccountId)?,
+      "repository" : RepositoryName,
+      "description" : (Description)?,
+      "upstreams" : (UpstreamRepositoryList)?
+    )
+
+    alias UpdateRepositoryResult = NamedTuple(
+      "repository" : (RepositoryDescription)?
+    )
+
+    alias UpstreamRepository = NamedTuple(
+      "repositoryName" : RepositoryName
+    )
+
+    alias UpstreamRepositoryInfo = NamedTuple(
+      "repositoryName" : (RepositoryName)?
+    )
+
+    alias UpstreamRepositoryInfoList = Array(UpstreamRepositoryInfo)
+
+    alias UpstreamRepositoryList = Array(UpstreamRepository)
+
+    alias ValidationException = NamedTuple(
+      "message" : String,
+      "reason" : (ValidationExceptionReason)?
+    )
+
+    alias ValidationExceptionReason = String
   end
 end

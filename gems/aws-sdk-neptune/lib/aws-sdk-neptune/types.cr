@@ -8335,5 +8335,1574 @@ module Aws::Neptune
       include Aws::Structure
     end
 
+    alias AddRoleToDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String,
+      "RoleArn" : String,
+      "FeatureName" : (String)?
+    )
+
+    alias AddSourceIdentifierToSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SourceIdentifier" : String
+    )
+
+    alias AddSourceIdentifierToSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias AddTagsToResourceMessage = NamedTuple(
+      "ResourceName" : String,
+      "Tags" : TagList
+    )
+
+    alias ApplyMethod = String
+
+    alias ApplyPendingMaintenanceActionMessage = NamedTuple(
+      "ResourceIdentifier" : String,
+      "ApplyAction" : String,
+      "OptInType" : String
+    )
+
+    alias ApplyPendingMaintenanceActionResult = NamedTuple(
+      "ResourcePendingMaintenanceActions" : (ResourcePendingMaintenanceActions)?
+    )
+
+    alias AttributeValueList = Array(String)
+
+    alias AuthorizationNotFoundFault = NamedTuple(
+      
+    )
+
+    alias AvailabilityZone = NamedTuple(
+      "Name" : (String)?
+    )
+
+    alias AvailabilityZoneList = Array(AvailabilityZone)
+
+    alias AvailabilityZones = Array(String)
+
+    alias Boolean = Bool
+
+    alias BooleanOptional = Bool
+
+    alias CertificateNotFoundFault = NamedTuple(
+      
+    )
+
+    alias CharacterSet = NamedTuple(
+      "CharacterSetName" : (String)?,
+      "CharacterSetDescription" : (String)?
+    )
+
+    alias CloudwatchLogsExportConfiguration = NamedTuple(
+      "EnableLogTypes" : (LogTypeList)?,
+      "DisableLogTypes" : (LogTypeList)?
+    )
+
+    alias CopyDBClusterParameterGroupMessage = NamedTuple(
+      "SourceDBClusterParameterGroupIdentifier" : String,
+      "TargetDBClusterParameterGroupIdentifier" : String,
+      "TargetDBClusterParameterGroupDescription" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CopyDBClusterParameterGroupResult = NamedTuple(
+      "DBClusterParameterGroup" : (DBClusterParameterGroup)?
+    )
+
+    alias CopyDBClusterSnapshotMessage = NamedTuple(
+      "SourceDBClusterSnapshotIdentifier" : String,
+      "TargetDBClusterSnapshotIdentifier" : String,
+      "KmsKeyId" : (String)?,
+      "PreSignedUrl" : (String)?,
+      "CopyTags" : (BooleanOptional)?,
+      "Tags" : (TagList)?,
+      "SourceRegion" : (String)?
+    )
+
+    alias CopyDBClusterSnapshotResult = NamedTuple(
+      "DBClusterSnapshot" : (DBClusterSnapshot)?
+    )
+
+    alias CopyDBParameterGroupMessage = NamedTuple(
+      "SourceDBParameterGroupIdentifier" : String,
+      "TargetDBParameterGroupIdentifier" : String,
+      "TargetDBParameterGroupDescription" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CopyDBParameterGroupResult = NamedTuple(
+      "DBParameterGroup" : (DBParameterGroup)?
+    )
+
+    alias CreateDBClusterEndpointMessage = NamedTuple(
+      "DBClusterIdentifier" : String,
+      "DBClusterEndpointIdentifier" : String,
+      "EndpointType" : String,
+      "StaticMembers" : (StringList)?,
+      "ExcludedMembers" : (StringList)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDBClusterEndpointOutput = NamedTuple(
+      "DBClusterEndpointIdentifier" : (String)?,
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterEndpointResourceIdentifier" : (String)?,
+      "Endpoint" : (String)?,
+      "Status" : (String)?,
+      "EndpointType" : (String)?,
+      "CustomEndpointType" : (String)?,
+      "StaticMembers" : (StringList)?,
+      "ExcludedMembers" : (StringList)?,
+      "DBClusterEndpointArn" : (String)?
+    )
+
+    alias CreateDBClusterMessage = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "BackupRetentionPeriod" : (IntegerOptional)?,
+      "CharacterSetName" : (String)?,
+      "DatabaseName" : (String)?,
+      "DBClusterIdentifier" : String,
+      "DBClusterParameterGroupName" : (String)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "DBSubnetGroupName" : (String)?,
+      "Engine" : String,
+      "EngineVersion" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "MasterUsername" : (String)?,
+      "MasterUserPassword" : (String)?,
+      "OptionGroupName" : (String)?,
+      "PreferredBackupWindow" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "ReplicationSourceIdentifier" : (String)?,
+      "Tags" : (TagList)?,
+      "StorageEncrypted" : (BooleanOptional)?,
+      "KmsKeyId" : (String)?,
+      "PreSignedUrl" : (String)?,
+      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "EnableCloudwatchLogsExports" : (LogTypeList)?,
+      "DeletionProtection" : (BooleanOptional)?,
+      "SourceRegion" : (String)?
+    )
+
+    alias CreateDBClusterParameterGroupMessage = NamedTuple(
+      "DBClusterParameterGroupName" : String,
+      "DBParameterGroupFamily" : String,
+      "Description" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDBClusterParameterGroupResult = NamedTuple(
+      "DBClusterParameterGroup" : (DBClusterParameterGroup)?
+    )
+
+    alias CreateDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias CreateDBClusterSnapshotMessage = NamedTuple(
+      "DBClusterSnapshotIdentifier" : String,
+      "DBClusterIdentifier" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDBClusterSnapshotResult = NamedTuple(
+      "DBClusterSnapshot" : (DBClusterSnapshot)?
+    )
+
+    alias CreateDBInstanceMessage = NamedTuple(
+      "DBName" : (String)?,
+      "DBInstanceIdentifier" : String,
+      "AllocatedStorage" : (IntegerOptional)?,
+      "DBInstanceClass" : String,
+      "Engine" : String,
+      "MasterUsername" : (String)?,
+      "MasterUserPassword" : (String)?,
+      "DBSecurityGroups" : (DBSecurityGroupNameList)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "AvailabilityZone" : (String)?,
+      "DBSubnetGroupName" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "DBParameterGroupName" : (String)?,
+      "BackupRetentionPeriod" : (IntegerOptional)?,
+      "PreferredBackupWindow" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "MultiAZ" : (BooleanOptional)?,
+      "EngineVersion" : (String)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "LicenseModel" : (String)?,
+      "Iops" : (IntegerOptional)?,
+      "OptionGroupName" : (String)?,
+      "CharacterSetName" : (String)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "Tags" : (TagList)?,
+      "DBClusterIdentifier" : (String)?,
+      "StorageType" : (String)?,
+      "TdeCredentialArn" : (String)?,
+      "TdeCredentialPassword" : (String)?,
+      "StorageEncrypted" : (BooleanOptional)?,
+      "KmsKeyId" : (String)?,
+      "Domain" : (String)?,
+      "CopyTagsToSnapshot" : (BooleanOptional)?,
+      "MonitoringInterval" : (IntegerOptional)?,
+      "MonitoringRoleArn" : (String)?,
+      "DomainIAMRoleName" : (String)?,
+      "PromotionTier" : (IntegerOptional)?,
+      "Timezone" : (String)?,
+      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "EnablePerformanceInsights" : (BooleanOptional)?,
+      "PerformanceInsightsKMSKeyId" : (String)?,
+      "EnableCloudwatchLogsExports" : (LogTypeList)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias CreateDBInstanceResult = NamedTuple(
+      "DBInstance" : (DBInstance)?
+    )
+
+    alias CreateDBParameterGroupMessage = NamedTuple(
+      "DBParameterGroupName" : String,
+      "DBParameterGroupFamily" : String,
+      "Description" : String,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDBParameterGroupResult = NamedTuple(
+      "DBParameterGroup" : (DBParameterGroup)?
+    )
+
+    alias CreateDBSubnetGroupMessage = NamedTuple(
+      "DBSubnetGroupName" : String,
+      "DBSubnetGroupDescription" : String,
+      "SubnetIds" : SubnetIdentifierList,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateDBSubnetGroupResult = NamedTuple(
+      "DBSubnetGroup" : (DBSubnetGroup)?
+    )
+
+    alias CreateEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SnsTopicArn" : String,
+      "SourceType" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "SourceIds" : (SourceIdsList)?,
+      "Enabled" : (BooleanOptional)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEventSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias DBCluster = NamedTuple(
+      "AllocatedStorage" : (IntegerOptional)?,
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "BackupRetentionPeriod" : (IntegerOptional)?,
+      "CharacterSetName" : (String)?,
+      "DatabaseName" : (String)?,
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterParameterGroup" : (String)?,
+      "DBSubnetGroup" : (String)?,
+      "Status" : (String)?,
+      "PercentProgress" : (String)?,
+      "EarliestRestorableTime" : (TStamp)?,
+      "Endpoint" : (String)?,
+      "ReaderEndpoint" : (String)?,
+      "MultiAZ" : (Boolean)?,
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "LatestRestorableTime" : (TStamp)?,
+      "Port" : (IntegerOptional)?,
+      "MasterUsername" : (String)?,
+      "DBClusterOptionGroupMemberships" : (DBClusterOptionGroupMemberships)?,
+      "PreferredBackupWindow" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "ReplicationSourceIdentifier" : (String)?,
+      "ReadReplicaIdentifiers" : (ReadReplicaIdentifierList)?,
+      "DBClusterMembers" : (DBClusterMemberList)?,
+      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
+      "HostedZoneId" : (String)?,
+      "StorageEncrypted" : (Boolean)?,
+      "KmsKeyId" : (String)?,
+      "DbClusterResourceId" : (String)?,
+      "DBClusterArn" : (String)?,
+      "AssociatedRoles" : (DBClusterRoles)?,
+      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
+      "CloneGroupId" : (String)?,
+      "ClusterCreateTime" : (TStamp)?,
+      "EnabledCloudwatchLogsExports" : (LogTypeList)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias DBClusterAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBClusterEndpoint = NamedTuple(
+      "DBClusterEndpointIdentifier" : (String)?,
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterEndpointResourceIdentifier" : (String)?,
+      "Endpoint" : (String)?,
+      "Status" : (String)?,
+      "EndpointType" : (String)?,
+      "CustomEndpointType" : (String)?,
+      "StaticMembers" : (StringList)?,
+      "ExcludedMembers" : (StringList)?,
+      "DBClusterEndpointArn" : (String)?
+    )
+
+    alias DBClusterEndpointAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBClusterEndpointList = Array(DBClusterEndpoint)
+
+    alias DBClusterEndpointMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBClusterEndpoints" : (DBClusterEndpointList)?
+    )
+
+    alias DBClusterEndpointNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBClusterEndpointQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias DBClusterList = Array(DBCluster)
+
+    alias DBClusterMember = NamedTuple(
+      "DBInstanceIdentifier" : (String)?,
+      "IsClusterWriter" : (Boolean)?,
+      "DBClusterParameterGroupStatus" : (String)?,
+      "PromotionTier" : (IntegerOptional)?
+    )
+
+    alias DBClusterMemberList = Array(DBClusterMember)
+
+    alias DBClusterMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBClusters" : (DBClusterList)?
+    )
+
+    alias DBClusterNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBClusterOptionGroupMemberships = Array(DBClusterOptionGroupStatus)
+
+    alias DBClusterOptionGroupStatus = NamedTuple(
+      "DBClusterOptionGroupName" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias DBClusterParameterGroup = NamedTuple(
+      "DBClusterParameterGroupName" : (String)?,
+      "DBParameterGroupFamily" : (String)?,
+      "Description" : (String)?,
+      "DBClusterParameterGroupArn" : (String)?
+    )
+
+    alias DBClusterParameterGroupDetails = NamedTuple(
+      "Parameters" : (ParametersList)?,
+      "Marker" : (String)?
+    )
+
+    alias DBClusterParameterGroupList = Array(DBClusterParameterGroup)
+
+    alias DBClusterParameterGroupNameMessage = NamedTuple(
+      "DBClusterParameterGroupName" : (String)?
+    )
+
+    alias DBClusterParameterGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBClusterParameterGroupsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBClusterParameterGroups" : (DBClusterParameterGroupList)?
+    )
+
+    alias DBClusterQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias DBClusterRole = NamedTuple(
+      "RoleArn" : (String)?,
+      "Status" : (String)?,
+      "FeatureName" : (String)?
+    )
+
+    alias DBClusterRoleAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBClusterRoleNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBClusterRoleQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias DBClusterRoles = Array(DBClusterRole)
+
+    alias DBClusterSnapshot = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "DBClusterSnapshotIdentifier" : (String)?,
+      "DBClusterIdentifier" : (String)?,
+      "SnapshotCreateTime" : (TStamp)?,
+      "Engine" : (String)?,
+      "AllocatedStorage" : (Integer)?,
+      "Status" : (String)?,
+      "Port" : (Integer)?,
+      "VpcId" : (String)?,
+      "ClusterCreateTime" : (TStamp)?,
+      "MasterUsername" : (String)?,
+      "EngineVersion" : (String)?,
+      "LicenseModel" : (String)?,
+      "SnapshotType" : (String)?,
+      "PercentProgress" : (Integer)?,
+      "StorageEncrypted" : (Boolean)?,
+      "KmsKeyId" : (String)?,
+      "DBClusterSnapshotArn" : (String)?,
+      "SourceDBClusterSnapshotArn" : (String)?,
+      "IAMDatabaseAuthenticationEnabled" : (Boolean)?
+    )
+
+    alias DBClusterSnapshotAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBClusterSnapshotAttribute = NamedTuple(
+      "AttributeName" : (String)?,
+      "AttributeValues" : (AttributeValueList)?
+    )
+
+    alias DBClusterSnapshotAttributeList = Array(DBClusterSnapshotAttribute)
+
+    alias DBClusterSnapshotAttributesResult = NamedTuple(
+      "DBClusterSnapshotIdentifier" : (String)?,
+      "DBClusterSnapshotAttributes" : (DBClusterSnapshotAttributeList)?
+    )
+
+    alias DBClusterSnapshotList = Array(DBClusterSnapshot)
+
+    alias DBClusterSnapshotMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBClusterSnapshots" : (DBClusterSnapshotList)?
+    )
+
+    alias DBClusterSnapshotNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBEngineVersion = NamedTuple(
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "DBParameterGroupFamily" : (String)?,
+      "DBEngineDescription" : (String)?,
+      "DBEngineVersionDescription" : (String)?,
+      "DefaultCharacterSet" : (CharacterSet)?,
+      "SupportedCharacterSets" : (SupportedCharacterSetsList)?,
+      "ValidUpgradeTarget" : (ValidUpgradeTargetList)?,
+      "SupportedTimezones" : (SupportedTimezonesList)?,
+      "ExportableLogTypes" : (LogTypeList)?,
+      "SupportsLogExportsToCloudwatchLogs" : (Boolean)?,
+      "SupportsReadReplica" : (Boolean)?
+    )
+
+    alias DBEngineVersionList = Array(DBEngineVersion)
+
+    alias DBEngineVersionMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBEngineVersions" : (DBEngineVersionList)?
+    )
+
+    alias DBInstance = NamedTuple(
+      "DBInstanceIdentifier" : (String)?,
+      "DBInstanceClass" : (String)?,
+      "Engine" : (String)?,
+      "DBInstanceStatus" : (String)?,
+      "MasterUsername" : (String)?,
+      "DBName" : (String)?,
+      "Endpoint" : (Endpoint)?,
+      "AllocatedStorage" : (Integer)?,
+      "InstanceCreateTime" : (TStamp)?,
+      "PreferredBackupWindow" : (String)?,
+      "BackupRetentionPeriod" : (Integer)?,
+      "DBSecurityGroups" : (DBSecurityGroupMembershipList)?,
+      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
+      "DBParameterGroups" : (DBParameterGroupStatusList)?,
+      "AvailabilityZone" : (String)?,
+      "DBSubnetGroup" : (DBSubnetGroup)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "PendingModifiedValues" : (PendingModifiedValues)?,
+      "LatestRestorableTime" : (TStamp)?,
+      "MultiAZ" : (Boolean)?,
+      "EngineVersion" : (String)?,
+      "AutoMinorVersionUpgrade" : (Boolean)?,
+      "ReadReplicaSourceDBInstanceIdentifier" : (String)?,
+      "ReadReplicaDBInstanceIdentifiers" : (ReadReplicaDBInstanceIdentifierList)?,
+      "ReadReplicaDBClusterIdentifiers" : (ReadReplicaDBClusterIdentifierList)?,
+      "LicenseModel" : (String)?,
+      "Iops" : (IntegerOptional)?,
+      "OptionGroupMemberships" : (OptionGroupMembershipList)?,
+      "CharacterSetName" : (String)?,
+      "SecondaryAvailabilityZone" : (String)?,
+      "PubliclyAccessible" : (Boolean)?,
+      "StatusInfos" : (DBInstanceStatusInfoList)?,
+      "StorageType" : (String)?,
+      "TdeCredentialArn" : (String)?,
+      "DbInstancePort" : (Integer)?,
+      "DBClusterIdentifier" : (String)?,
+      "StorageEncrypted" : (Boolean)?,
+      "KmsKeyId" : (String)?,
+      "DbiResourceId" : (String)?,
+      "CACertificateIdentifier" : (String)?,
+      "DomainMemberships" : (DomainMembershipList)?,
+      "CopyTagsToSnapshot" : (Boolean)?,
+      "MonitoringInterval" : (IntegerOptional)?,
+      "EnhancedMonitoringResourceArn" : (String)?,
+      "MonitoringRoleArn" : (String)?,
+      "PromotionTier" : (IntegerOptional)?,
+      "DBInstanceArn" : (String)?,
+      "Timezone" : (String)?,
+      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
+      "PerformanceInsightsEnabled" : (BooleanOptional)?,
+      "PerformanceInsightsKMSKeyId" : (String)?,
+      "EnabledCloudwatchLogsExports" : (LogTypeList)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias DBInstanceAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBInstanceList = Array(DBInstance)
+
+    alias DBInstanceMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBInstances" : (DBInstanceList)?
+    )
+
+    alias DBInstanceNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBInstanceStatusInfo = NamedTuple(
+      "StatusType" : (String)?,
+      "Normal" : (Boolean)?,
+      "Status" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias DBInstanceStatusInfoList = Array(DBInstanceStatusInfo)
+
+    alias DBParameterGroup = NamedTuple(
+      "DBParameterGroupName" : (String)?,
+      "DBParameterGroupFamily" : (String)?,
+      "Description" : (String)?,
+      "DBParameterGroupArn" : (String)?
+    )
+
+    alias DBParameterGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBParameterGroupDetails = NamedTuple(
+      "Parameters" : (ParametersList)?,
+      "Marker" : (String)?
+    )
+
+    alias DBParameterGroupList = Array(DBParameterGroup)
+
+    alias DBParameterGroupNameMessage = NamedTuple(
+      "DBParameterGroupName" : (String)?
+    )
+
+    alias DBParameterGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBParameterGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias DBParameterGroupStatus = NamedTuple(
+      "DBParameterGroupName" : (String)?,
+      "ParameterApplyStatus" : (String)?
+    )
+
+    alias DBParameterGroupStatusList = Array(DBParameterGroupStatus)
+
+    alias DBParameterGroupsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBParameterGroups" : (DBParameterGroupList)?
+    )
+
+    alias DBSecurityGroupMembership = NamedTuple(
+      "DBSecurityGroupName" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias DBSecurityGroupMembershipList = Array(DBSecurityGroupMembership)
+
+    alias DBSecurityGroupNameList = Array(String)
+
+    alias DBSecurityGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBSnapshotAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBSnapshotNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBSubnetGroup = NamedTuple(
+      "DBSubnetGroupName" : (String)?,
+      "DBSubnetGroupDescription" : (String)?,
+      "VpcId" : (String)?,
+      "SubnetGroupStatus" : (String)?,
+      "Subnets" : (SubnetList)?,
+      "DBSubnetGroupArn" : (String)?
+    )
+
+    alias DBSubnetGroupAlreadyExistsFault = NamedTuple(
+      
+    )
+
+    alias DBSubnetGroupDoesNotCoverEnoughAZs = NamedTuple(
+      
+    )
+
+    alias DBSubnetGroupMessage = NamedTuple(
+      "Marker" : (String)?,
+      "DBSubnetGroups" : (DBSubnetGroups)?
+    )
+
+    alias DBSubnetGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias DBSubnetGroupQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias DBSubnetGroups = Array(DBSubnetGroup)
+
+    alias DBSubnetQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias DBUpgradeDependencyFailureFault = NamedTuple(
+      
+    )
+
+    alias DeleteDBClusterEndpointMessage = NamedTuple(
+      "DBClusterEndpointIdentifier" : String
+    )
+
+    alias DeleteDBClusterEndpointOutput = NamedTuple(
+      "DBClusterEndpointIdentifier" : (String)?,
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterEndpointResourceIdentifier" : (String)?,
+      "Endpoint" : (String)?,
+      "Status" : (String)?,
+      "EndpointType" : (String)?,
+      "CustomEndpointType" : (String)?,
+      "StaticMembers" : (StringList)?,
+      "ExcludedMembers" : (StringList)?,
+      "DBClusterEndpointArn" : (String)?
+    )
+
+    alias DeleteDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String,
+      "SkipFinalSnapshot" : (Boolean)?,
+      "FinalDBSnapshotIdentifier" : (String)?
+    )
+
+    alias DeleteDBClusterParameterGroupMessage = NamedTuple(
+      "DBClusterParameterGroupName" : String
+    )
+
+    alias DeleteDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias DeleteDBClusterSnapshotMessage = NamedTuple(
+      "DBClusterSnapshotIdentifier" : String
+    )
+
+    alias DeleteDBClusterSnapshotResult = NamedTuple(
+      "DBClusterSnapshot" : (DBClusterSnapshot)?
+    )
+
+    alias DeleteDBInstanceMessage = NamedTuple(
+      "DBInstanceIdentifier" : String,
+      "SkipFinalSnapshot" : (Boolean)?,
+      "FinalDBSnapshotIdentifier" : (String)?
+    )
+
+    alias DeleteDBInstanceResult = NamedTuple(
+      "DBInstance" : (DBInstance)?
+    )
+
+    alias DeleteDBParameterGroupMessage = NamedTuple(
+      "DBParameterGroupName" : String
+    )
+
+    alias DeleteDBSubnetGroupMessage = NamedTuple(
+      "DBSubnetGroupName" : String
+    )
+
+    alias DeleteEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String
+    )
+
+    alias DeleteEventSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias DescribeDBClusterEndpointsMessage = NamedTuple(
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterEndpointIdentifier" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBClusterParameterGroupsMessage = NamedTuple(
+      "DBClusterParameterGroupName" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBClusterParametersMessage = NamedTuple(
+      "DBClusterParameterGroupName" : String,
+      "Source" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBClusterSnapshotAttributesMessage = NamedTuple(
+      "DBClusterSnapshotIdentifier" : String
+    )
+
+    alias DescribeDBClusterSnapshotAttributesResult = NamedTuple(
+      "DBClusterSnapshotAttributesResult" : (DBClusterSnapshotAttributesResult)?
+    )
+
+    alias DescribeDBClusterSnapshotsMessage = NamedTuple(
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterSnapshotIdentifier" : (String)?,
+      "SnapshotType" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "IncludeShared" : (Boolean)?,
+      "IncludePublic" : (Boolean)?
+    )
+
+    alias DescribeDBClustersMessage = NamedTuple(
+      "DBClusterIdentifier" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBEngineVersionsMessage = NamedTuple(
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "DBParameterGroupFamily" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?,
+      "DefaultOnly" : (Boolean)?,
+      "ListSupportedCharacterSets" : (BooleanOptional)?,
+      "ListSupportedTimezones" : (BooleanOptional)?
+    )
+
+    alias DescribeDBInstancesMessage = NamedTuple(
+      "DBInstanceIdentifier" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBParameterGroupsMessage = NamedTuple(
+      "DBParameterGroupName" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBParametersMessage = NamedTuple(
+      "DBParameterGroupName" : String,
+      "Source" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeDBSubnetGroupsMessage = NamedTuple(
+      "DBSubnetGroupName" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEngineDefaultClusterParametersMessage = NamedTuple(
+      "DBParameterGroupFamily" : String,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEngineDefaultClusterParametersResult = NamedTuple(
+      "EngineDefaults" : (EngineDefaults)?
+    )
+
+    alias DescribeEngineDefaultParametersMessage = NamedTuple(
+      "DBParameterGroupFamily" : String,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEngineDefaultParametersResult = NamedTuple(
+      "EngineDefaults" : (EngineDefaults)?
+    )
+
+    alias DescribeEventCategoriesMessage = NamedTuple(
+      "SourceType" : (String)?,
+      "Filters" : (FilterList)?
+    )
+
+    alias DescribeEventSubscriptionsMessage = NamedTuple(
+      "SubscriptionName" : (String)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeEventsMessage = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "StartTime" : (TStamp)?,
+      "EndTime" : (TStamp)?,
+      "Duration" : (IntegerOptional)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribeOrderableDBInstanceOptionsMessage = NamedTuple(
+      "Engine" : String,
+      "EngineVersion" : (String)?,
+      "DBInstanceClass" : (String)?,
+      "LicenseModel" : (String)?,
+      "Vpc" : (BooleanOptional)?,
+      "Filters" : (FilterList)?,
+      "MaxRecords" : (IntegerOptional)?,
+      "Marker" : (String)?
+    )
+
+    alias DescribePendingMaintenanceActionsMessage = NamedTuple(
+      "ResourceIdentifier" : (String)?,
+      "Filters" : (FilterList)?,
+      "Marker" : (String)?,
+      "MaxRecords" : (IntegerOptional)?
+    )
+
+    alias DescribeValidDBInstanceModificationsMessage = NamedTuple(
+      "DBInstanceIdentifier" : String
+    )
+
+    alias DescribeValidDBInstanceModificationsResult = NamedTuple(
+      "ValidDBInstanceModificationsMessage" : (ValidDBInstanceModificationsMessage)?
+    )
+
+    alias DomainMembership = NamedTuple(
+      "Domain" : (String)?,
+      "Status" : (String)?,
+      "FQDN" : (String)?,
+      "IAMRoleName" : (String)?
+    )
+
+    alias DomainMembershipList = Array(DomainMembership)
+
+    alias DomainNotFoundFault = NamedTuple(
+      
+    )
+
+    alias Double = Float64
+
+    alias DoubleOptional = Float64
+
+    alias DoubleRange = NamedTuple(
+      "From" : (Double)?,
+      "To" : (Double)?
+    )
+
+    alias DoubleRangeList = Array(DoubleRange)
+
+    alias Endpoint = NamedTuple(
+      "Address" : (String)?,
+      "Port" : (Integer)?,
+      "HostedZoneId" : (String)?
+    )
+
+    alias EngineDefaults = NamedTuple(
+      "DBParameterGroupFamily" : (String)?,
+      "Marker" : (String)?,
+      "Parameters" : (ParametersList)?
+    )
+
+    alias Event = NamedTuple(
+      "SourceIdentifier" : (String)?,
+      "SourceType" : (SourceType)?,
+      "Message" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Date" : (TStamp)?,
+      "SourceArn" : (String)?
+    )
+
+    alias EventCategoriesList = Array(String)
+
+    alias EventCategoriesMap = NamedTuple(
+      "SourceType" : (String)?,
+      "EventCategories" : (EventCategoriesList)?
+    )
+
+    alias EventCategoriesMapList = Array(EventCategoriesMap)
+
+    alias EventCategoriesMessage = NamedTuple(
+      "EventCategoriesMapList" : (EventCategoriesMapList)?
+    )
+
+    alias EventList = Array(Event)
+
+    alias EventSubscription = NamedTuple(
+      "CustomerAwsId" : (String)?,
+      "CustSubscriptionId" : (String)?,
+      "SnsTopicArn" : (String)?,
+      "Status" : (String)?,
+      "SubscriptionCreationTime" : (String)?,
+      "SourceType" : (String)?,
+      "SourceIdsList" : (SourceIdsList)?,
+      "EventCategoriesList" : (EventCategoriesList)?,
+      "Enabled" : (Boolean)?,
+      "EventSubscriptionArn" : (String)?
+    )
+
+    alias EventSubscriptionQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias EventSubscriptionsList = Array(EventSubscription)
+
+    alias EventSubscriptionsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "EventSubscriptionsList" : (EventSubscriptionsList)?
+    )
+
+    alias EventsMessage = NamedTuple(
+      "Marker" : (String)?,
+      "Events" : (EventList)?
+    )
+
+    alias FailoverDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : (String)?,
+      "TargetDBInstanceIdentifier" : (String)?
+    )
+
+    alias FailoverDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias Filter = NamedTuple(
+      "Name" : String,
+      "Values" : FilterValueList
+    )
+
+    alias FilterList = Array(Filter)
+
+    alias FilterValueList = Array(String)
+
+    alias InstanceQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias InsufficientDBClusterCapacityFault = NamedTuple(
+      
+    )
+
+    alias InsufficientDBInstanceCapacityFault = NamedTuple(
+      
+    )
+
+    alias InsufficientStorageClusterCapacityFault = NamedTuple(
+      
+    )
+
+    alias Integer = Int32
+
+    alias IntegerOptional = Int32
+
+    alias InvalidDBClusterEndpointStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBClusterSnapshotStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBClusterStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBInstanceStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBParameterGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBSecurityGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBSnapshotStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBSubnetGroupStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidDBSubnetStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidEventSubscriptionStateFault = NamedTuple(
+      
+    )
+
+    alias InvalidRestoreFault = NamedTuple(
+      
+    )
+
+    alias InvalidSubnet = NamedTuple(
+      
+    )
+
+    alias InvalidVPCNetworkStateFault = NamedTuple(
+      
+    )
+
+    alias KMSKeyNotAccessibleFault = NamedTuple(
+      
+    )
+
+    alias KeyList = Array(String)
+
+    alias ListTagsForResourceMessage = NamedTuple(
+      "ResourceName" : String,
+      "Filters" : (FilterList)?
+    )
+
+    alias LogTypeList = Array(String)
+
+    alias ModifyDBClusterEndpointMessage = NamedTuple(
+      "DBClusterEndpointIdentifier" : String,
+      "EndpointType" : (String)?,
+      "StaticMembers" : (StringList)?,
+      "ExcludedMembers" : (StringList)?
+    )
+
+    alias ModifyDBClusterEndpointOutput = NamedTuple(
+      "DBClusterEndpointIdentifier" : (String)?,
+      "DBClusterIdentifier" : (String)?,
+      "DBClusterEndpointResourceIdentifier" : (String)?,
+      "Endpoint" : (String)?,
+      "Status" : (String)?,
+      "EndpointType" : (String)?,
+      "CustomEndpointType" : (String)?,
+      "StaticMembers" : (StringList)?,
+      "ExcludedMembers" : (StringList)?,
+      "DBClusterEndpointArn" : (String)?
+    )
+
+    alias ModifyDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String,
+      "NewDBClusterIdentifier" : (String)?,
+      "ApplyImmediately" : (Boolean)?,
+      "BackupRetentionPeriod" : (IntegerOptional)?,
+      "DBClusterParameterGroupName" : (String)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "Port" : (IntegerOptional)?,
+      "MasterUserPassword" : (String)?,
+      "OptionGroupName" : (String)?,
+      "PreferredBackupWindow" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "CloudwatchLogsExportConfiguration" : (CloudwatchLogsExportConfiguration)?,
+      "EngineVersion" : (String)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias ModifyDBClusterParameterGroupMessage = NamedTuple(
+      "DBClusterParameterGroupName" : String,
+      "Parameters" : ParametersList
+    )
+
+    alias ModifyDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias ModifyDBClusterSnapshotAttributeMessage = NamedTuple(
+      "DBClusterSnapshotIdentifier" : String,
+      "AttributeName" : String,
+      "ValuesToAdd" : (AttributeValueList)?,
+      "ValuesToRemove" : (AttributeValueList)?
+    )
+
+    alias ModifyDBClusterSnapshotAttributeResult = NamedTuple(
+      "DBClusterSnapshotAttributesResult" : (DBClusterSnapshotAttributesResult)?
+    )
+
+    alias ModifyDBInstanceMessage = NamedTuple(
+      "DBInstanceIdentifier" : String,
+      "AllocatedStorage" : (IntegerOptional)?,
+      "DBInstanceClass" : (String)?,
+      "DBSubnetGroupName" : (String)?,
+      "DBSecurityGroups" : (DBSecurityGroupNameList)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "ApplyImmediately" : (Boolean)?,
+      "MasterUserPassword" : (String)?,
+      "DBParameterGroupName" : (String)?,
+      "BackupRetentionPeriod" : (IntegerOptional)?,
+      "PreferredBackupWindow" : (String)?,
+      "PreferredMaintenanceWindow" : (String)?,
+      "MultiAZ" : (BooleanOptional)?,
+      "EngineVersion" : (String)?,
+      "AllowMajorVersionUpgrade" : (Boolean)?,
+      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
+      "LicenseModel" : (String)?,
+      "Iops" : (IntegerOptional)?,
+      "OptionGroupName" : (String)?,
+      "NewDBInstanceIdentifier" : (String)?,
+      "StorageType" : (String)?,
+      "TdeCredentialArn" : (String)?,
+      "TdeCredentialPassword" : (String)?,
+      "CACertificateIdentifier" : (String)?,
+      "Domain" : (String)?,
+      "CopyTagsToSnapshot" : (BooleanOptional)?,
+      "MonitoringInterval" : (IntegerOptional)?,
+      "DBPortNumber" : (IntegerOptional)?,
+      "PubliclyAccessible" : (BooleanOptional)?,
+      "MonitoringRoleArn" : (String)?,
+      "DomainIAMRoleName" : (String)?,
+      "PromotionTier" : (IntegerOptional)?,
+      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "EnablePerformanceInsights" : (BooleanOptional)?,
+      "PerformanceInsightsKMSKeyId" : (String)?,
+      "CloudwatchLogsExportConfiguration" : (CloudwatchLogsExportConfiguration)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias ModifyDBInstanceResult = NamedTuple(
+      "DBInstance" : (DBInstance)?
+    )
+
+    alias ModifyDBParameterGroupMessage = NamedTuple(
+      "DBParameterGroupName" : String,
+      "Parameters" : ParametersList
+    )
+
+    alias ModifyDBSubnetGroupMessage = NamedTuple(
+      "DBSubnetGroupName" : String,
+      "DBSubnetGroupDescription" : (String)?,
+      "SubnetIds" : SubnetIdentifierList
+    )
+
+    alias ModifyDBSubnetGroupResult = NamedTuple(
+      "DBSubnetGroup" : (DBSubnetGroup)?
+    )
+
+    alias ModifyEventSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SnsTopicArn" : (String)?,
+      "SourceType" : (String)?,
+      "EventCategories" : (EventCategoriesList)?,
+      "Enabled" : (BooleanOptional)?
+    )
+
+    alias ModifyEventSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias OptionGroupMembership = NamedTuple(
+      "OptionGroupName" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias OptionGroupMembershipList = Array(OptionGroupMembership)
+
+    alias OptionGroupNotFoundFault = NamedTuple(
+      
+    )
+
+    alias OrderableDBInstanceOption = NamedTuple(
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "DBInstanceClass" : (String)?,
+      "LicenseModel" : (String)?,
+      "AvailabilityZones" : (AvailabilityZoneList)?,
+      "MultiAZCapable" : (Boolean)?,
+      "ReadReplicaCapable" : (Boolean)?,
+      "Vpc" : (Boolean)?,
+      "SupportsStorageEncryption" : (Boolean)?,
+      "StorageType" : (String)?,
+      "SupportsIops" : (Boolean)?,
+      "SupportsEnhancedMonitoring" : (Boolean)?,
+      "SupportsIAMDatabaseAuthentication" : (Boolean)?,
+      "SupportsPerformanceInsights" : (Boolean)?,
+      "MinStorageSize" : (IntegerOptional)?,
+      "MaxStorageSize" : (IntegerOptional)?,
+      "MinIopsPerDbInstance" : (IntegerOptional)?,
+      "MaxIopsPerDbInstance" : (IntegerOptional)?,
+      "MinIopsPerGib" : (DoubleOptional)?,
+      "MaxIopsPerGib" : (DoubleOptional)?
+    )
+
+    alias OrderableDBInstanceOptionsList = Array(OrderableDBInstanceOption)
+
+    alias OrderableDBInstanceOptionsMessage = NamedTuple(
+      "OrderableDBInstanceOptions" : (OrderableDBInstanceOptionsList)?,
+      "Marker" : (String)?
+    )
+
+    alias Parameter = NamedTuple(
+      "ParameterName" : (String)?,
+      "ParameterValue" : (String)?,
+      "Description" : (String)?,
+      "Source" : (String)?,
+      "ApplyType" : (String)?,
+      "DataType" : (String)?,
+      "AllowedValues" : (String)?,
+      "IsModifiable" : (Boolean)?,
+      "MinimumEngineVersion" : (String)?,
+      "ApplyMethod" : (ApplyMethod)?
+    )
+
+    alias ParametersList = Array(Parameter)
+
+    alias PendingCloudwatchLogsExports = NamedTuple(
+      "LogTypesToEnable" : (LogTypeList)?,
+      "LogTypesToDisable" : (LogTypeList)?
+    )
+
+    alias PendingMaintenanceAction = NamedTuple(
+      "Action" : (String)?,
+      "AutoAppliedAfterDate" : (TStamp)?,
+      "ForcedApplyDate" : (TStamp)?,
+      "OptInStatus" : (String)?,
+      "CurrentApplyDate" : (TStamp)?,
+      "Description" : (String)?
+    )
+
+    alias PendingMaintenanceActionDetails = Array(PendingMaintenanceAction)
+
+    alias PendingMaintenanceActions = Array(ResourcePendingMaintenanceActions)
+
+    alias PendingMaintenanceActionsMessage = NamedTuple(
+      "PendingMaintenanceActions" : (PendingMaintenanceActions)?,
+      "Marker" : (String)?
+    )
+
+    alias PendingModifiedValues = NamedTuple(
+      "DBInstanceClass" : (String)?,
+      "AllocatedStorage" : (IntegerOptional)?,
+      "MasterUserPassword" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "BackupRetentionPeriod" : (IntegerOptional)?,
+      "MultiAZ" : (BooleanOptional)?,
+      "EngineVersion" : (String)?,
+      "LicenseModel" : (String)?,
+      "Iops" : (IntegerOptional)?,
+      "DBInstanceIdentifier" : (String)?,
+      "StorageType" : (String)?,
+      "CACertificateIdentifier" : (String)?,
+      "DBSubnetGroupName" : (String)?,
+      "PendingCloudwatchLogsExports" : (PendingCloudwatchLogsExports)?
+    )
+
+    alias PromoteReadReplicaDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String
+    )
+
+    alias PromoteReadReplicaDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias ProvisionedIopsNotAvailableInAZFault = NamedTuple(
+      
+    )
+
+    alias Range = NamedTuple(
+      "From" : (Integer)?,
+      "To" : (Integer)?,
+      "Step" : (IntegerOptional)?
+    )
+
+    alias RangeList = Array(Range)
+
+    alias ReadReplicaDBClusterIdentifierList = Array(String)
+
+    alias ReadReplicaDBInstanceIdentifierList = Array(String)
+
+    alias ReadReplicaIdentifierList = Array(String)
+
+    alias RebootDBInstanceMessage = NamedTuple(
+      "DBInstanceIdentifier" : String,
+      "ForceFailover" : (BooleanOptional)?
+    )
+
+    alias RebootDBInstanceResult = NamedTuple(
+      "DBInstance" : (DBInstance)?
+    )
+
+    alias RemoveRoleFromDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String,
+      "RoleArn" : String,
+      "FeatureName" : (String)?
+    )
+
+    alias RemoveSourceIdentifierFromSubscriptionMessage = NamedTuple(
+      "SubscriptionName" : String,
+      "SourceIdentifier" : String
+    )
+
+    alias RemoveSourceIdentifierFromSubscriptionResult = NamedTuple(
+      "EventSubscription" : (EventSubscription)?
+    )
+
+    alias RemoveTagsFromResourceMessage = NamedTuple(
+      "ResourceName" : String,
+      "TagKeys" : KeyList
+    )
+
+    alias ResetDBClusterParameterGroupMessage = NamedTuple(
+      "DBClusterParameterGroupName" : String,
+      "ResetAllParameters" : (Boolean)?,
+      "Parameters" : (ParametersList)?
+    )
+
+    alias ResetDBParameterGroupMessage = NamedTuple(
+      "DBParameterGroupName" : String,
+      "ResetAllParameters" : (Boolean)?,
+      "Parameters" : (ParametersList)?
+    )
+
+    alias ResourceNotFoundFault = NamedTuple(
+      
+    )
+
+    alias ResourcePendingMaintenanceActions = NamedTuple(
+      "ResourceIdentifier" : (String)?,
+      "PendingMaintenanceActionDetails" : (PendingMaintenanceActionDetails)?
+    )
+
+    alias RestoreDBClusterFromSnapshotMessage = NamedTuple(
+      "AvailabilityZones" : (AvailabilityZones)?,
+      "DBClusterIdentifier" : String,
+      "SnapshotIdentifier" : String,
+      "Engine" : String,
+      "EngineVersion" : (String)?,
+      "Port" : (IntegerOptional)?,
+      "DBSubnetGroupName" : (String)?,
+      "DatabaseName" : (String)?,
+      "OptionGroupName" : (String)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "Tags" : (TagList)?,
+      "KmsKeyId" : (String)?,
+      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "EnableCloudwatchLogsExports" : (LogTypeList)?,
+      "DBClusterParameterGroupName" : (String)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias RestoreDBClusterFromSnapshotResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias RestoreDBClusterToPointInTimeMessage = NamedTuple(
+      "DBClusterIdentifier" : String,
+      "RestoreType" : (String)?,
+      "SourceDBClusterIdentifier" : String,
+      "RestoreToTime" : (TStamp)?,
+      "UseLatestRestorableTime" : (Boolean)?,
+      "Port" : (IntegerOptional)?,
+      "DBSubnetGroupName" : (String)?,
+      "OptionGroupName" : (String)?,
+      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
+      "Tags" : (TagList)?,
+      "KmsKeyId" : (String)?,
+      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "EnableCloudwatchLogsExports" : (LogTypeList)?,
+      "DBClusterParameterGroupName" : (String)?,
+      "DeletionProtection" : (BooleanOptional)?
+    )
+
+    alias RestoreDBClusterToPointInTimeResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias SNSInvalidTopicFault = NamedTuple(
+      
+    )
+
+    alias SNSNoAuthorizationFault = NamedTuple(
+      
+    )
+
+    alias SNSTopicArnNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SharedSnapshotQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias SnapshotQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias SourceIdsList = Array(String)
+
+    alias SourceNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SourceType = String
+
+    alias StartDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String
+    )
+
+    alias StartDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias StopDBClusterMessage = NamedTuple(
+      "DBClusterIdentifier" : String
+    )
+
+    alias StopDBClusterResult = NamedTuple(
+      "DBCluster" : (DBCluster)?
+    )
+
+    alias StorageQuotaExceededFault = NamedTuple(
+      
+    )
+
+    alias StorageTypeNotSupportedFault = NamedTuple(
+      
+    )
+
+    alias String = String
+
+    alias StringList = Array(String)
+
+    alias Subnet = NamedTuple(
+      "SubnetIdentifier" : (String)?,
+      "SubnetAvailabilityZone" : (AvailabilityZone)?,
+      "SubnetStatus" : (String)?
+    )
+
+    alias SubnetAlreadyInUse = NamedTuple(
+      
+    )
+
+    alias SubnetIdentifierList = Array(String)
+
+    alias SubnetList = Array(Subnet)
+
+    alias SubscriptionAlreadyExistFault = NamedTuple(
+      
+    )
+
+    alias SubscriptionCategoryNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SubscriptionNotFoundFault = NamedTuple(
+      
+    )
+
+    alias SupportedCharacterSetsList = Array(CharacterSet)
+
+    alias SupportedTimezonesList = Array(Timezone)
+
+    alias TStamp = String | UInt64 | Time
+
+    alias Tag = NamedTuple(
+      "Key" : (String)?,
+      "Value" : (String)?
+    )
+
+    alias TagList = Array(Tag)
+
+    alias TagListMessage = NamedTuple(
+      "TagList" : (TagList)?
+    )
+
+    alias Timezone = NamedTuple(
+      "TimezoneName" : (String)?
+    )
+
+    alias UpgradeTarget = NamedTuple(
+      "Engine" : (String)?,
+      "EngineVersion" : (String)?,
+      "Description" : (String)?,
+      "AutoUpgrade" : (Boolean)?,
+      "IsMajorVersionUpgrade" : (Boolean)?
+    )
+
+    alias ValidDBInstanceModificationsMessage = NamedTuple(
+      "Storage" : (ValidStorageOptionsList)?
+    )
+
+    alias ValidStorageOptions = NamedTuple(
+      "StorageType" : (String)?,
+      "StorageSize" : (RangeList)?,
+      "ProvisionedIops" : (RangeList)?,
+      "IopsToStorageRatio" : (DoubleRangeList)?
+    )
+
+    alias ValidStorageOptionsList = Array(ValidStorageOptions)
+
+    alias ValidUpgradeTargetList = Array(UpgradeTarget)
+
+    alias VpcSecurityGroupIdList = Array(String)
+
+    alias VpcSecurityGroupMembership = NamedTuple(
+      "VpcSecurityGroupId" : (String)?,
+      "Status" : (String)?
+    )
+
+    alias VpcSecurityGroupMembershipList = Array(VpcSecurityGroupMembership)
   end
 end

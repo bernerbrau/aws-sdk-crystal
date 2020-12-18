@@ -396,8 +396,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, **options)
-      req = build_request(:add_tags_to_resource, params)
+    def add_tags_to_resource(, **options)
+      req = build_request(:add_tags_to_resource, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload apply_pending_maintenance_action(**params)
     # @param [Hash] params ({})
-    def apply_pending_maintenance_action(params = {}, **options)
-      req = build_request(:apply_pending_maintenance_action, params)
+    def apply_pending_maintenance_action(, **options)
+      req = build_request(:apply_pending_maintenance_action, )
       req.send_request(options)
     end
 
@@ -497,8 +497,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload cancel_replication_task_assessment_run(**params)
     # @param [Hash] params ({})
-    def cancel_replication_task_assessment_run(params = {}, **options)
-      req = build_request(:cancel_replication_task_assessment_run, params)
+    def cancel_replication_task_assessment_run(, **options)
+      req = build_request(:cancel_replication_task_assessment_run, )
       req.send_request(options)
     end
 
@@ -1257,8 +1257,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, **options)
-      req = build_request(:create_endpoint, params)
+    def create_endpoint(, **options)
+      req = build_request(:create_endpoint, )
       req.send_request(options)
     end
 
@@ -1367,8 +1367,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload create_event_subscription(**params)
     # @param [Hash] params ({})
-    def create_event_subscription(params = {}, **options)
-      req = build_request(:create_event_subscription, params)
+    def create_event_subscription(, **options)
+      req = build_request(:create_event_subscription, )
       req.send_request(options)
     end
 
@@ -1656,8 +1656,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload create_replication_instance(**params)
     # @param [Hash] params ({})
-    def create_replication_instance(params = {}, **options)
-      req = build_request(:create_replication_instance, params)
+    def create_replication_instance(, **options)
+      req = build_request(:create_replication_instance, )
       req.send_request(options)
     end
 
@@ -1741,8 +1741,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload create_replication_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_replication_subnet_group(params = {}, **options)
-      req = build_request(:create_replication_subnet_group, params)
+    def create_replication_subnet_group(, **options)
+      req = build_request(:create_replication_subnet_group, )
       req.send_request(options)
     end
 
@@ -1963,8 +1963,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload create_replication_task(**params)
     # @param [Hash] params ({})
-    def create_replication_task(params = {}, **options)
-      req = build_request(:create_replication_task, params)
+    def create_replication_task(, **options)
+      req = build_request(:create_replication_task, )
       req.send_request(options)
     end
 
@@ -2015,8 +2015,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, **options)
-      req = build_request(:delete_certificate, params)
+    def delete_certificate(, **options)
+      req = build_request(:delete_certificate, )
       req.send_request(options)
     end
 
@@ -2069,8 +2069,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, **options)
-      req = build_request(:delete_connection, params)
+    def delete_connection(, **options)
+      req = build_request(:delete_connection, )
       req.send_request(options)
     end
 
@@ -2330,8 +2330,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, **options)
-      req = build_request(:delete_endpoint, params)
+    def delete_endpoint(, **options)
+      req = build_request(:delete_endpoint, )
       req.send_request(options)
     end
 
@@ -2368,8 +2368,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_event_subscription(**params)
     # @param [Hash] params ({})
-    def delete_event_subscription(params = {}, **options)
-      req = build_request(:delete_event_subscription, params)
+    def delete_event_subscription(, **options)
+      req = build_request(:delete_event_subscription, )
       req.send_request(options)
     end
 
@@ -2502,8 +2502,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_replication_instance(**params)
     # @param [Hash] params ({})
-    def delete_replication_instance(params = {}, **options)
-      req = build_request(:delete_replication_instance, params)
+    def delete_replication_instance(, **options)
+      req = build_request(:delete_replication_instance, )
       req.send_request(options)
     end
 
@@ -2537,8 +2537,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_replication_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_replication_subnet_group(params = {}, **options)
-      req = build_request(:delete_replication_subnet_group, params)
+    def delete_replication_subnet_group(, **options)
+      req = build_request(:delete_replication_subnet_group, )
       req.send_request(options)
     end
 
@@ -2618,8 +2618,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_replication_task(**params)
     # @param [Hash] params ({})
-    def delete_replication_task(params = {}, **options)
-      req = build_request(:delete_replication_task, params)
+    def delete_replication_task(, **options)
+      req = build_request(:delete_replication_task, )
       req.send_request(options)
     end
 
@@ -2664,8 +2664,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload delete_replication_task_assessment_run(**params)
     # @param [Hash] params ({})
-    def delete_replication_task_assessment_run(params = {}, **options)
-      req = build_request(:delete_replication_task_assessment_run, params)
+    def delete_replication_task_assessment_run(, **options)
+      req = build_request(:delete_replication_task_assessment_run, )
       req.send_request(options)
     end
 
@@ -2728,8 +2728,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, **options)
-      req = build_request(:describe_account_attributes, params)
+    def describe_account_attributes(, **options)
+      req = build_request(:describe_account_attributes, )
       req.send_request(options)
     end
 
@@ -2816,8 +2816,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_applicable_individual_assessments(**params)
     # @param [Hash] params ({})
-    def describe_applicable_individual_assessments(params = {}, **options)
-      req = build_request(:describe_applicable_individual_assessments, params)
+    def describe_applicable_individual_assessments(, **options)
+      req = build_request(:describe_applicable_individual_assessments, )
       req.send_request(options)
     end
 
@@ -2905,8 +2905,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_certificates(**params)
     # @param [Hash] params ({})
-    def describe_certificates(params = {}, **options)
-      req = build_request(:describe_certificates, params)
+    def describe_certificates(, **options)
+      req = build_request(:describe_certificates, )
       req.send_request(options)
     end
 
@@ -3008,8 +3008,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_connections(**params)
     # @param [Hash] params ({})
-    def describe_connections(params = {}, **options)
-      req = build_request(:describe_connections, params)
+    def describe_connections(, **options)
+      req = build_request(:describe_connections, )
       req.send_request(options)
     end
 
@@ -3095,8 +3095,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_endpoint_types(**params)
     # @param [Hash] params ({})
-    def describe_endpoint_types(params = {}, **options)
-      req = build_request(:describe_endpoint_types, params)
+    def describe_endpoint_types(, **options)
+      req = build_request(:describe_endpoint_types, )
       req.send_request(options)
     end
 
@@ -3387,8 +3387,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, **options)
-      req = build_request(:describe_endpoints, params)
+    def describe_endpoints(, **options)
+      req = build_request(:describe_endpoints, )
       req.send_request(options)
     end
 
@@ -3436,8 +3436,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, **options)
-      req = build_request(:describe_event_categories, params)
+    def describe_event_categories(, **options)
+      req = build_request(:describe_event_categories, )
       req.send_request(options)
     end
 
@@ -3511,8 +3511,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_event_subscriptions(params = {}, **options)
-      req = build_request(:describe_event_subscriptions, params)
+    def describe_event_subscriptions(, **options)
+      req = build_request(:describe_event_subscriptions, )
       req.send_request(options)
     end
 
@@ -3604,8 +3604,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, **options)
-      req = build_request(:describe_events, params)
+    def describe_events(, **options)
+      req = build_request(:describe_events, )
       req.send_request(options)
     end
 
@@ -3677,8 +3677,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_orderable_replication_instances(**params)
     # @param [Hash] params ({})
-    def describe_orderable_replication_instances(params = {}, **options)
-      req = build_request(:describe_orderable_replication_instances, params)
+    def describe_orderable_replication_instances(, **options)
+      req = build_request(:describe_orderable_replication_instances, )
       req.send_request(options)
     end
 
@@ -3742,8 +3742,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_pending_maintenance_actions(**params)
     # @param [Hash] params ({})
-    def describe_pending_maintenance_actions(params = {}, **options)
-      req = build_request(:describe_pending_maintenance_actions, params)
+    def describe_pending_maintenance_actions(, **options)
+      req = build_request(:describe_pending_maintenance_actions, )
       req.send_request(options)
     end
 
@@ -3790,8 +3790,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_refresh_schemas_status(**params)
     # @param [Hash] params ({})
-    def describe_refresh_schemas_status(params = {}, **options)
-      req = build_request(:describe_refresh_schemas_status, params)
+    def describe_refresh_schemas_status(, **options)
+      req = build_request(:describe_refresh_schemas_status, )
       req.send_request(options)
     end
 
@@ -3844,8 +3844,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_instance_task_logs(**params)
     # @param [Hash] params ({})
-    def describe_replication_instance_task_logs(params = {}, **options)
-      req = build_request(:describe_replication_instance_task_logs, params)
+    def describe_replication_instance_task_logs(, **options)
+      req = build_request(:describe_replication_instance_task_logs, )
       req.send_request(options)
     end
 
@@ -3972,8 +3972,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_instances(**params)
     # @param [Hash] params ({})
-    def describe_replication_instances(params = {}, **options)
-      req = build_request(:describe_replication_instances, params)
+    def describe_replication_instances(, **options)
+      req = build_request(:describe_replication_instances, )
       req.send_request(options)
     end
 
@@ -4062,8 +4062,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_replication_subnet_groups(params = {}, **options)
-      req = build_request(:describe_replication_subnet_groups, params)
+    def describe_replication_subnet_groups(, **options)
+      req = build_request(:describe_replication_subnet_groups, )
       req.send_request(options)
     end
 
@@ -4124,8 +4124,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_task_assessment_results(**params)
     # @param [Hash] params ({})
-    def describe_replication_task_assessment_results(params = {}, **options)
-      req = build_request(:describe_replication_task_assessment_results, params)
+    def describe_replication_task_assessment_results(, **options)
+      req = build_request(:describe_replication_task_assessment_results, )
       req.send_request(options)
     end
 
@@ -4202,8 +4202,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_task_assessment_runs(**params)
     # @param [Hash] params ({})
-    def describe_replication_task_assessment_runs(params = {}, **options)
-      req = build_request(:describe_replication_task_assessment_runs, params)
+    def describe_replication_task_assessment_runs(, **options)
+      req = build_request(:describe_replication_task_assessment_runs, )
       req.send_request(options)
     end
 
@@ -4265,8 +4265,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_task_individual_assessments(**params)
     # @param [Hash] params ({})
-    def describe_replication_task_individual_assessments(params = {}, **options)
-      req = build_request(:describe_replication_task_individual_assessments, params)
+    def describe_replication_task_individual_assessments(, **options)
+      req = build_request(:describe_replication_task_individual_assessments, )
       req.send_request(options)
     end
 
@@ -4392,8 +4392,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_replication_tasks(**params)
     # @param [Hash] params ({})
-    def describe_replication_tasks(params = {}, **options)
-      req = build_request(:describe_replication_tasks, params)
+    def describe_replication_tasks(, **options)
+      req = build_request(:describe_replication_tasks, )
       req.send_request(options)
     end
 
@@ -4461,8 +4461,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_schemas(**params)
     # @param [Hash] params ({})
-    def describe_schemas(params = {}, **options)
-      req = build_request(:describe_schemas, params)
+    def describe_schemas(, **options)
+      req = build_request(:describe_schemas, )
       req.send_request(options)
     end
 
@@ -4570,8 +4570,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload describe_table_statistics(**params)
     # @param [Hash] params ({})
-    def describe_table_statistics(params = {}, **options)
-      req = build_request(:describe_table_statistics, params)
+    def describe_table_statistics(, **options)
+      req = build_request(:describe_table_statistics, )
       req.send_request(options)
     end
 
@@ -4644,8 +4644,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload import_certificate(**params)
     # @param [Hash] params ({})
-    def import_certificate(params = {}, **options)
-      req = build_request(:import_certificate, params)
+    def import_certificate(, **options)
+      req = build_request(:import_certificate, )
       req.send_request(options)
     end
 
@@ -4696,8 +4696,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -5415,8 +5415,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload modify_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_endpoint(params = {}, **options)
-      req = build_request(:modify_endpoint, params)
+    def modify_endpoint(, **options)
+      req = build_request(:modify_endpoint, )
       req.send_request(options)
     end
 
@@ -5477,8 +5477,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload modify_event_subscription(**params)
     # @param [Hash] params ({})
-    def modify_event_subscription(params = {}, **options)
-      req = build_request(:modify_event_subscription, params)
+    def modify_event_subscription(, **options)
+      req = build_request(:modify_event_subscription, )
       req.send_request(options)
     end
 
@@ -5713,8 +5713,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload modify_replication_instance(**params)
     # @param [Hash] params ({})
-    def modify_replication_instance(params = {}, **options)
-      req = build_request(:modify_replication_instance, params)
+    def modify_replication_instance(, **options)
+      req = build_request(:modify_replication_instance, )
       req.send_request(options)
     end
 
@@ -5774,8 +5774,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload modify_replication_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_replication_subnet_group(params = {}, **options)
-      req = build_request(:modify_replication_subnet_group, params)
+    def modify_replication_subnet_group(, **options)
+      req = build_request(:modify_replication_subnet_group, )
       req.send_request(options)
     end
 
@@ -5928,8 +5928,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload modify_replication_task(**params)
     # @param [Hash] params ({})
-    def modify_replication_task(params = {}, **options)
-      req = build_request(:modify_replication_task, params)
+    def modify_replication_task(, **options)
+      req = build_request(:modify_replication_task, )
       req.send_request(options)
     end
 
@@ -5992,8 +5992,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload move_replication_task(**params)
     # @param [Hash] params ({})
-    def move_replication_task(params = {}, **options)
-      req = build_request(:move_replication_task, params)
+    def move_replication_task(, **options)
+      req = build_request(:move_replication_task, )
       req.send_request(options)
     end
 
@@ -6063,8 +6063,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload reboot_replication_instance(**params)
     # @param [Hash] params ({})
-    def reboot_replication_instance(params = {}, **options)
-      req = build_request(:reboot_replication_instance, params)
+    def reboot_replication_instance(, **options)
+      req = build_request(:reboot_replication_instance, )
       req.send_request(options)
     end
 
@@ -6120,8 +6120,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload refresh_schemas(**params)
     # @param [Hash] params ({})
-    def refresh_schemas(params = {}, **options)
-      req = build_request(:refresh_schemas, params)
+    def refresh_schemas(, **options)
+      req = build_request(:refresh_schemas, )
       req.send_request(options)
     end
 
@@ -6168,8 +6168,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload reload_tables(**params)
     # @param [Hash] params ({})
-    def reload_tables(params = {}, **options)
-      req = build_request(:reload_tables, params)
+    def reload_tables(, **options)
+      req = build_request(:reload_tables, )
       req.send_request(options)
     end
 
@@ -6216,8 +6216,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, **options)
-      req = build_request(:remove_tags_from_resource, params)
+    def remove_tags_from_resource(, **options)
+      req = build_request(:remove_tags_from_resource, )
       req.send_request(options)
     end
 
@@ -6358,8 +6358,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload start_replication_task(**params)
     # @param [Hash] params ({})
-    def start_replication_task(params = {}, **options)
-      req = build_request(:start_replication_task, params)
+    def start_replication_task(, **options)
+      req = build_request(:start_replication_task, )
       req.send_request(options)
     end
 
@@ -6415,8 +6415,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload start_replication_task_assessment(**params)
     # @param [Hash] params ({})
-    def start_replication_task_assessment(params = {}, **options)
-      req = build_request(:start_replication_task_assessment, params)
+    def start_replication_task_assessment(, **options)
+      req = build_request(:start_replication_task_assessment, )
       req.send_request(options)
     end
 
@@ -6535,8 +6535,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload start_replication_task_assessment_run(**params)
     # @param [Hash] params ({})
-    def start_replication_task_assessment_run(params = {}, **options)
-      req = build_request(:start_replication_task_assessment_run, params)
+    def start_replication_task_assessment_run(, **options)
+      req = build_request(:start_replication_task_assessment_run, )
       req.send_request(options)
     end
 
@@ -6616,8 +6616,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload stop_replication_task(**params)
     # @param [Hash] params ({})
-    def stop_replication_task(params = {}, **options)
-      req = build_request(:stop_replication_task, params)
+    def stop_replication_task(, **options)
+      req = build_request(:stop_replication_task, )
       req.send_request(options)
     end
 
@@ -6671,8 +6671,8 @@ module Aws::DatabaseMigrationService
     #
     # @overload test_connection(**params)
     # @param [Hash] params ({})
-    def test_connection(params = {}, **options)
-      req = build_request(:test_connection, params)
+    def test_connection(, **options)
+      req = build_request(:test_connection, )
       req.send_request(options)
     end
 

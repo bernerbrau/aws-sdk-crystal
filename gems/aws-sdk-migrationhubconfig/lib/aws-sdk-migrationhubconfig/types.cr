@@ -302,5 +302,94 @@ module Aws::MigrationHubConfig
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ControlId = String
+
+    alias CreateHomeRegionControlRequest = NamedTuple(
+      "HomeRegion" : HomeRegion,
+      "Target" : Target,
+      "DryRun" : (DryRun)?
+    )
+
+    alias CreateHomeRegionControlResult = NamedTuple(
+      "HomeRegionControl" : (HomeRegionControl)?
+    )
+
+    alias DescribeHomeRegionControlsMaxResults = Int32
+
+    alias DescribeHomeRegionControlsRequest = NamedTuple(
+      "ControlId" : (ControlId)?,
+      "HomeRegion" : (HomeRegion)?,
+      "Target" : (Target)?,
+      "MaxResults" : (DescribeHomeRegionControlsMaxResults)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DescribeHomeRegionControlsResult = NamedTuple(
+      "HomeRegionControls" : (HomeRegionControls)?,
+      "NextToken" : (Token)?
+    )
+
+    alias DryRun = Bool
+
+    alias DryRunOperation = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias GetHomeRegionRequest = NamedTuple(
+      
+    )
+
+    alias GetHomeRegionResult = NamedTuple(
+      "HomeRegion" : (HomeRegion)?
+    )
+
+    alias HomeRegion = String
+
+    alias HomeRegionControl = NamedTuple(
+      "ControlId" : (ControlId)?,
+      "HomeRegion" : (HomeRegion)?,
+      "Target" : (Target)?,
+      "RequestedTime" : (RequestedTime)?
+    )
+
+    alias HomeRegionControls = Array(HomeRegionControl)
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias RequestedTime = String | UInt64 | Time
+
+    alias RetryAfterSeconds = Int32
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Target = NamedTuple(
+      "Type" : TargetType,
+      "Id" : (TargetId)?
+    )
+
+    alias TargetId = String
+
+    alias TargetType = String
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : ErrorMessage,
+      "RetryAfterSeconds" : (RetryAfterSeconds)?
+    )
+
+    alias Token = String
   end
 end

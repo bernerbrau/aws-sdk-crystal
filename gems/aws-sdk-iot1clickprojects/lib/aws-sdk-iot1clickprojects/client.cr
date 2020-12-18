@@ -357,8 +357,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload associate_device_with_placement(**params)
     # @param [Hash] params ({})
-    def associate_device_with_placement(params = {}, **options)
-      req = build_request(:associate_device_with_placement, params)
+    def associate_device_with_placement(, **options)
+      req = build_request(:associate_device_with_placement, )
       req.send_request(options)
     end
 
@@ -388,8 +388,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload create_placement(**params)
     # @param [Hash] params ({})
-    def create_placement(params = {}, **options)
-      req = build_request(:create_placement, params)
+    def create_placement(, **options)
+      req = build_request(:create_placement, )
       req.send_request(options)
     end
 
@@ -446,8 +446,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, **options)
-      req = build_request(:create_project, params)
+    def create_project(, **options)
+      req = build_request(:create_project, )
       req.send_request(options)
     end
 
@@ -476,8 +476,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload delete_placement(**params)
     # @param [Hash] params ({})
-    def delete_placement(params = {}, **options)
-      req = build_request(:delete_placement, params)
+    def delete_placement(, **options)
+      req = build_request(:delete_placement, )
       req.send_request(options)
     end
 
@@ -501,8 +501,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, **options)
-      req = build_request(:delete_project, params)
+    def delete_project(, **options)
+      req = build_request(:delete_project, )
       req.send_request(options)
     end
 
@@ -536,8 +536,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload describe_placement(**params)
     # @param [Hash] params ({})
-    def describe_placement(params = {}, **options)
-      req = build_request(:describe_placement, params)
+    def describe_placement(, **options)
+      req = build_request(:describe_placement, )
       req.send_request(options)
     end
 
@@ -574,8 +574,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, **options)
-      req = build_request(:describe_project, params)
+    def describe_project(, **options)
+      req = build_request(:describe_project, )
       req.send_request(options)
     end
 
@@ -602,8 +602,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload disassociate_device_from_placement(**params)
     # @param [Hash] params ({})
-    def disassociate_device_from_placement(params = {}, **options)
-      req = build_request(:disassociate_device_from_placement, params)
+    def disassociate_device_from_placement(, **options)
+      req = build_request(:disassociate_device_from_placement, )
       req.send_request(options)
     end
 
@@ -633,8 +633,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload get_devices_in_placement(**params)
     # @param [Hash] params ({})
-    def get_devices_in_placement(params = {}, **options)
-      req = build_request(:get_devices_in_placement, params)
+    def get_devices_in_placement(, **options)
+      req = build_request(:get_devices_in_placement, )
       req.send_request(options)
     end
 
@@ -676,8 +676,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload list_placements(**params)
     # @param [Hash] params ({})
-    def list_placements(params = {}, **options)
-      req = build_request(:list_placements, params)
+    def list_placements(, **options)
+      req = build_request(:list_placements, )
       req.send_request(options)
     end
 
@@ -718,8 +718,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, **options)
-      req = build_request(:list_projects, params)
+    def list_projects(, **options)
+      req = build_request(:list_projects, )
       req.send_request(options)
     end
 
@@ -746,8 +746,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -784,8 +784,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -808,8 +808,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -840,8 +840,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload update_placement(**params)
     # @param [Hash] params ({})
-    def update_placement(params = {}, **options)
-      req = build_request(:update_placement, params)
+    def update_placement(, **options)
+      req = build_request(:update_placement, )
       req.send_request(options)
     end
 
@@ -887,8 +887,8 @@ module Aws::IoT1ClickProjects
     #
     # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, **options)
-      req = build_request(:update_project, params)
+    def update_project(, **options)
+      req = build_request(:update_project, )
       req.send_request(options)
     end
 

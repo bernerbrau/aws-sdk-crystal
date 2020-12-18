@@ -11882,5 +11882,2007 @@ module Aws::IAM
       include Aws::Structure
     end
 
+    alias AccessAdvisorUsageGranularityType = String
+
+    alias AccessDetail = NamedTuple(
+      "ServiceName" : serviceNameType,
+      "ServiceNamespace" : serviceNamespaceType,
+      "Region" : (stringType)?,
+      "EntityPath" : (organizationsEntityPathType)?,
+      "LastAuthenticatedTime" : (dateType)?,
+      "TotalAuthenticatedEntities" : (integerType)?
+    )
+
+    alias AccessDetails = Array(AccessDetail)
+
+    alias AccessKey = NamedTuple(
+      "UserName" : userNameType,
+      "AccessKeyId" : accessKeyIdType,
+      "Status" : statusType,
+      "SecretAccessKey" : accessKeySecretType,
+      "CreateDate" : (dateType)?
+    )
+
+    alias AccessKeyLastUsed = NamedTuple(
+      "LastUsedDate" : dateType,
+      "ServiceName" : stringType,
+      "Region" : stringType
+    )
+
+    alias AccessKeyMetadata = NamedTuple(
+      "UserName" : (userNameType)?,
+      "AccessKeyId" : (accessKeyIdType)?,
+      "Status" : (statusType)?,
+      "CreateDate" : (dateType)?
+    )
+
+    alias ActionNameListType = Array(ActionNameType)
+
+    alias ActionNameType = String
+
+    alias AddClientIDToOpenIDConnectProviderRequest = NamedTuple(
+      "OpenIDConnectProviderArn" : arnType,
+      "ClientID" : clientIDType
+    )
+
+    alias AddRoleToInstanceProfileRequest = NamedTuple(
+      "InstanceProfileName" : instanceProfileNameType,
+      "RoleName" : roleNameType
+    )
+
+    alias AddUserToGroupRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "UserName" : existingUserNameType
+    )
+
+    alias ArnListType = Array(arnType)
+
+    alias AttachGroupPolicyRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "PolicyArn" : arnType
+    )
+
+    alias AttachRolePolicyRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyArn" : arnType
+    )
+
+    alias AttachUserPolicyRequest = NamedTuple(
+      "UserName" : userNameType,
+      "PolicyArn" : arnType
+    )
+
+    alias AttachedPermissionsBoundary = NamedTuple(
+      "PermissionsBoundaryType" : (PermissionsBoundaryAttachmentType)?,
+      "PermissionsBoundaryArn" : (arnType)?
+    )
+
+    alias AttachedPolicy = NamedTuple(
+      "PolicyName" : (policyNameType)?,
+      "PolicyArn" : (arnType)?
+    )
+
+    alias BootstrapDatum = String | Array(UInt8) | IO
+
+    alias ChangePasswordRequest = NamedTuple(
+      "OldPassword" : passwordType,
+      "NewPassword" : passwordType
+    )
+
+    alias ColumnNumber = Int32
+
+    alias ConcurrentModificationException = NamedTuple(
+      "message" : (ConcurrentModificationMessage)?
+    )
+
+    alias ConcurrentModificationMessage = String
+
+    alias ContextEntry = NamedTuple(
+      "ContextKeyName" : (ContextKeyNameType)?,
+      "ContextKeyValues" : (ContextKeyValueListType)?,
+      "ContextKeyType" : (ContextKeyTypeEnum)?
+    )
+
+    alias ContextEntryListType = Array(ContextEntry)
+
+    alias ContextKeyNameType = String
+
+    alias ContextKeyNamesResultListType = Array(ContextKeyNameType)
+
+    alias ContextKeyTypeEnum = String
+
+    alias ContextKeyValueListType = Array(ContextKeyValueType)
+
+    alias ContextKeyValueType = String
+
+    alias CreateAccessKeyRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?
+    )
+
+    alias CreateAccessKeyResponse = NamedTuple(
+      "AccessKey" : AccessKey
+    )
+
+    alias CreateAccountAliasRequest = NamedTuple(
+      "AccountAlias" : accountAliasType
+    )
+
+    alias CreateGroupRequest = NamedTuple(
+      "Path" : (pathType)?,
+      "GroupName" : groupNameType
+    )
+
+    alias CreateGroupResponse = NamedTuple(
+      "Group" : Group
+    )
+
+    alias CreateInstanceProfileRequest = NamedTuple(
+      "InstanceProfileName" : instanceProfileNameType,
+      "Path" : (pathType)?
+    )
+
+    alias CreateInstanceProfileResponse = NamedTuple(
+      "InstanceProfile" : InstanceProfile
+    )
+
+    alias CreateLoginProfileRequest = NamedTuple(
+      "UserName" : userNameType,
+      "Password" : passwordType,
+      "PasswordResetRequired" : (booleanType)?
+    )
+
+    alias CreateLoginProfileResponse = NamedTuple(
+      "LoginProfile" : LoginProfile
+    )
+
+    alias CreateOpenIDConnectProviderRequest = NamedTuple(
+      "Url" : OpenIDConnectProviderUrlType,
+      "ClientIDList" : (clientIDListType)?,
+      "ThumbprintList" : thumbprintListType
+    )
+
+    alias CreateOpenIDConnectProviderResponse = NamedTuple(
+      "OpenIDConnectProviderArn" : (arnType)?
+    )
+
+    alias CreatePolicyRequest = NamedTuple(
+      "PolicyName" : policyNameType,
+      "Path" : (policyPathType)?,
+      "PolicyDocument" : policyDocumentType,
+      "Description" : (policyDescriptionType)?
+    )
+
+    alias CreatePolicyResponse = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias CreatePolicyVersionRequest = NamedTuple(
+      "PolicyArn" : arnType,
+      "PolicyDocument" : policyDocumentType,
+      "SetAsDefault" : (booleanType)?
+    )
+
+    alias CreatePolicyVersionResponse = NamedTuple(
+      "PolicyVersion" : (PolicyVersion)?
+    )
+
+    alias CreateRoleRequest = NamedTuple(
+      "Path" : (pathType)?,
+      "RoleName" : roleNameType,
+      "AssumeRolePolicyDocument" : policyDocumentType,
+      "Description" : (roleDescriptionType)?,
+      "MaxSessionDuration" : (roleMaxSessionDurationType)?,
+      "PermissionsBoundary" : (arnType)?,
+      "Tags" : (tagListType)?
+    )
+
+    alias CreateRoleResponse = NamedTuple(
+      "Role" : Role
+    )
+
+    alias CreateSAMLProviderRequest = NamedTuple(
+      "SAMLMetadataDocument" : SAMLMetadataDocumentType,
+      "Name" : SAMLProviderNameType
+    )
+
+    alias CreateSAMLProviderResponse = NamedTuple(
+      "SAMLProviderArn" : (arnType)?
+    )
+
+    alias CreateServiceLinkedRoleRequest = NamedTuple(
+      "AWSServiceName" : groupNameType,
+      "Description" : (roleDescriptionType)?,
+      "CustomSuffix" : (customSuffixType)?
+    )
+
+    alias CreateServiceLinkedRoleResponse = NamedTuple(
+      "Role" : (Role)?
+    )
+
+    alias CreateServiceSpecificCredentialRequest = NamedTuple(
+      "UserName" : userNameType,
+      "ServiceName" : serviceName
+    )
+
+    alias CreateServiceSpecificCredentialResponse = NamedTuple(
+      "ServiceSpecificCredential" : (ServiceSpecificCredential)?
+    )
+
+    alias CreateUserRequest = NamedTuple(
+      "Path" : (pathType)?,
+      "UserName" : userNameType,
+      "PermissionsBoundary" : (arnType)?,
+      "Tags" : (tagListType)?
+    )
+
+    alias CreateUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias CreateVirtualMFADeviceRequest = NamedTuple(
+      "Path" : (pathType)?,
+      "VirtualMFADeviceName" : virtualMFADeviceName
+    )
+
+    alias CreateVirtualMFADeviceResponse = NamedTuple(
+      "VirtualMFADevice" : VirtualMFADevice
+    )
+
+    alias CredentialReportExpiredException = NamedTuple(
+      "message" : (credentialReportExpiredExceptionMessage)?
+    )
+
+    alias CredentialReportNotPresentException = NamedTuple(
+      "message" : (credentialReportNotPresentExceptionMessage)?
+    )
+
+    alias CredentialReportNotReadyException = NamedTuple(
+      "message" : (credentialReportNotReadyExceptionMessage)?
+    )
+
+    alias DeactivateMFADeviceRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "SerialNumber" : serialNumberType
+    )
+
+    alias DeleteAccessKeyRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "AccessKeyId" : accessKeyIdType
+    )
+
+    alias DeleteAccountAliasRequest = NamedTuple(
+      "AccountAlias" : accountAliasType
+    )
+
+    alias DeleteConflictException = NamedTuple(
+      "message" : (deleteConflictMessage)?
+    )
+
+    alias DeleteGroupPolicyRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "PolicyName" : policyNameType
+    )
+
+    alias DeleteGroupRequest = NamedTuple(
+      "GroupName" : groupNameType
+    )
+
+    alias DeleteInstanceProfileRequest = NamedTuple(
+      "InstanceProfileName" : instanceProfileNameType
+    )
+
+    alias DeleteLoginProfileRequest = NamedTuple(
+      "UserName" : userNameType
+    )
+
+    alias DeleteOpenIDConnectProviderRequest = NamedTuple(
+      "OpenIDConnectProviderArn" : arnType
+    )
+
+    alias DeletePolicyRequest = NamedTuple(
+      "PolicyArn" : arnType
+    )
+
+    alias DeletePolicyVersionRequest = NamedTuple(
+      "PolicyArn" : arnType,
+      "VersionId" : policyVersionIdType
+    )
+
+    alias DeleteRolePermissionsBoundaryRequest = NamedTuple(
+      "RoleName" : roleNameType
+    )
+
+    alias DeleteRolePolicyRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyName" : policyNameType
+    )
+
+    alias DeleteRoleRequest = NamedTuple(
+      "RoleName" : roleNameType
+    )
+
+    alias DeleteSAMLProviderRequest = NamedTuple(
+      "SAMLProviderArn" : arnType
+    )
+
+    alias DeleteSSHPublicKeyRequest = NamedTuple(
+      "UserName" : userNameType,
+      "SSHPublicKeyId" : publicKeyIdType
+    )
+
+    alias DeleteServerCertificateRequest = NamedTuple(
+      "ServerCertificateName" : serverCertificateNameType
+    )
+
+    alias DeleteServiceLinkedRoleRequest = NamedTuple(
+      "RoleName" : roleNameType
+    )
+
+    alias DeleteServiceLinkedRoleResponse = NamedTuple(
+      "DeletionTaskId" : DeletionTaskIdType
+    )
+
+    alias DeleteServiceSpecificCredentialRequest = NamedTuple(
+      "UserName" : (userNameType)?,
+      "ServiceSpecificCredentialId" : serviceSpecificCredentialId
+    )
+
+    alias DeleteSigningCertificateRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "CertificateId" : certificateIdType
+    )
+
+    alias DeleteUserPermissionsBoundaryRequest = NamedTuple(
+      "UserName" : userNameType
+    )
+
+    alias DeleteUserPolicyRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "PolicyName" : policyNameType
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "UserName" : existingUserNameType
+    )
+
+    alias DeleteVirtualMFADeviceRequest = NamedTuple(
+      "SerialNumber" : serialNumberType
+    )
+
+    alias DeletionTaskFailureReasonType = NamedTuple(
+      "Reason" : (ReasonType)?,
+      "RoleUsageList" : (RoleUsageListType)?
+    )
+
+    alias DeletionTaskIdType = String
+
+    alias DeletionTaskStatusType = String
+
+    alias DetachGroupPolicyRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "PolicyArn" : arnType
+    )
+
+    alias DetachRolePolicyRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyArn" : arnType
+    )
+
+    alias DetachUserPolicyRequest = NamedTuple(
+      "UserName" : userNameType,
+      "PolicyArn" : arnType
+    )
+
+    alias DuplicateCertificateException = NamedTuple(
+      "message" : (duplicateCertificateMessage)?
+    )
+
+    alias DuplicateSSHPublicKeyException = NamedTuple(
+      "message" : (duplicateSSHPublicKeyMessage)?
+    )
+
+    alias EnableMFADeviceRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "SerialNumber" : serialNumberType,
+      "AuthenticationCode1" : authenticationCodeType,
+      "AuthenticationCode2" : authenticationCodeType
+    )
+
+    alias EntityAlreadyExistsException = NamedTuple(
+      "message" : (entityAlreadyExistsMessage)?
+    )
+
+    alias EntityDetails = NamedTuple(
+      "EntityInfo" : EntityInfo,
+      "LastAuthenticated" : (dateType)?
+    )
+
+    alias EntityInfo = NamedTuple(
+      "Arn" : arnType,
+      "Name" : userNameType,
+      "Type" : policyOwnerEntityType,
+      "Id" : idType,
+      "Path" : (pathType)?
+    )
+
+    alias EntityTemporarilyUnmodifiableException = NamedTuple(
+      "message" : (entityTemporarilyUnmodifiableMessage)?
+    )
+
+    alias EntityType = String
+
+    alias ErrorDetails = NamedTuple(
+      "Message" : stringType,
+      "Code" : stringType
+    )
+
+    alias EvalDecisionDetailsType = Hash(EvalDecisionSourceType,PolicyEvaluationDecisionType)
+
+    alias EvalDecisionSourceType = String
+
+    alias EvaluationResult = NamedTuple(
+      "EvalActionName" : ActionNameType,
+      "EvalResourceName" : (ResourceNameType)?,
+      "EvalDecision" : PolicyEvaluationDecisionType,
+      "MatchedStatements" : (StatementListType)?,
+      "MissingContextValues" : (ContextKeyNamesResultListType)?,
+      "OrganizationsDecisionDetail" : (OrganizationsDecisionDetail)?,
+      "PermissionsBoundaryDecisionDetail" : (PermissionsBoundaryDecisionDetail)?,
+      "EvalDecisionDetails" : (EvalDecisionDetailsType)?,
+      "ResourceSpecificResults" : (ResourceSpecificResultListType)?
+    )
+
+    alias EvaluationResultsListType = Array(EvaluationResult)
+
+    alias GenerateCredentialReportResponse = NamedTuple(
+      "State" : (ReportStateType)?,
+      "Description" : (ReportStateDescriptionType)?
+    )
+
+    alias GenerateOrganizationsAccessReportRequest = NamedTuple(
+      "EntityPath" : organizationsEntityPathType,
+      "OrganizationsPolicyId" : (organizationsPolicyIdType)?
+    )
+
+    alias GenerateOrganizationsAccessReportResponse = NamedTuple(
+      "JobId" : (jobIDType)?
+    )
+
+    alias GenerateServiceLastAccessedDetailsRequest = NamedTuple(
+      "Arn" : arnType,
+      "Granularity" : (AccessAdvisorUsageGranularityType)?
+    )
+
+    alias GenerateServiceLastAccessedDetailsResponse = NamedTuple(
+      "JobId" : (jobIDType)?
+    )
+
+    alias GetAccessKeyLastUsedRequest = NamedTuple(
+      "AccessKeyId" : accessKeyIdType
+    )
+
+    alias GetAccessKeyLastUsedResponse = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "AccessKeyLastUsed" : (AccessKeyLastUsed)?
+    )
+
+    alias GetAccountAuthorizationDetailsRequest = NamedTuple(
+      "Filter" : (entityListType)?,
+      "MaxItems" : (maxItemsType)?,
+      "Marker" : (markerType)?
+    )
+
+    alias GetAccountAuthorizationDetailsResponse = NamedTuple(
+      "UserDetailList" : (userDetailListType)?,
+      "GroupDetailList" : (groupDetailListType)?,
+      "RoleDetailList" : (roleDetailListType)?,
+      "Policies" : (ManagedPolicyDetailListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias GetAccountPasswordPolicyResponse = NamedTuple(
+      "PasswordPolicy" : PasswordPolicy
+    )
+
+    alias GetAccountSummaryResponse = NamedTuple(
+      "SummaryMap" : (summaryMapType)?
+    )
+
+    alias GetContextKeysForCustomPolicyRequest = NamedTuple(
+      "PolicyInputList" : SimulationPolicyListType
+    )
+
+    alias GetContextKeysForPolicyResponse = NamedTuple(
+      "ContextKeyNames" : (ContextKeyNamesResultListType)?
+    )
+
+    alias GetContextKeysForPrincipalPolicyRequest = NamedTuple(
+      "PolicySourceArn" : arnType,
+      "PolicyInputList" : (SimulationPolicyListType)?
+    )
+
+    alias GetCredentialReportResponse = NamedTuple(
+      "Content" : (ReportContentType)?,
+      "ReportFormat" : (ReportFormatType)?,
+      "GeneratedTime" : (dateType)?
+    )
+
+    alias GetGroupPolicyRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "PolicyName" : policyNameType
+    )
+
+    alias GetGroupPolicyResponse = NamedTuple(
+      "GroupName" : groupNameType,
+      "PolicyName" : policyNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias GetGroupRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias GetGroupResponse = NamedTuple(
+      "Group" : Group,
+      "Users" : userListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias GetInstanceProfileRequest = NamedTuple(
+      "InstanceProfileName" : instanceProfileNameType
+    )
+
+    alias GetInstanceProfileResponse = NamedTuple(
+      "InstanceProfile" : InstanceProfile
+    )
+
+    alias GetLoginProfileRequest = NamedTuple(
+      "UserName" : userNameType
+    )
+
+    alias GetLoginProfileResponse = NamedTuple(
+      "LoginProfile" : LoginProfile
+    )
+
+    alias GetOpenIDConnectProviderRequest = NamedTuple(
+      "OpenIDConnectProviderArn" : arnType
+    )
+
+    alias GetOpenIDConnectProviderResponse = NamedTuple(
+      "Url" : (OpenIDConnectProviderUrlType)?,
+      "ClientIDList" : (clientIDListType)?,
+      "ThumbprintList" : (thumbprintListType)?,
+      "CreateDate" : (dateType)?
+    )
+
+    alias GetOrganizationsAccessReportRequest = NamedTuple(
+      "JobId" : jobIDType,
+      "MaxItems" : (maxItemsType)?,
+      "Marker" : (markerType)?,
+      "SortKey" : (sortKeyType)?
+    )
+
+    alias GetOrganizationsAccessReportResponse = NamedTuple(
+      "JobStatus" : jobStatusType,
+      "JobCreationDate" : dateType,
+      "JobCompletionDate" : (dateType)?,
+      "NumberOfServicesAccessible" : (integerType)?,
+      "NumberOfServicesNotAccessed" : (integerType)?,
+      "AccessDetails" : (AccessDetails)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (markerType)?,
+      "ErrorDetails" : (ErrorDetails)?
+    )
+
+    alias GetPolicyRequest = NamedTuple(
+      "PolicyArn" : arnType
+    )
+
+    alias GetPolicyResponse = NamedTuple(
+      "Policy" : (Policy)?
+    )
+
+    alias GetPolicyVersionRequest = NamedTuple(
+      "PolicyArn" : arnType,
+      "VersionId" : policyVersionIdType
+    )
+
+    alias GetPolicyVersionResponse = NamedTuple(
+      "PolicyVersion" : (PolicyVersion)?
+    )
+
+    alias GetRolePolicyRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyName" : policyNameType
+    )
+
+    alias GetRolePolicyResponse = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyName" : policyNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias GetRoleRequest = NamedTuple(
+      "RoleName" : roleNameType
+    )
+
+    alias GetRoleResponse = NamedTuple(
+      "Role" : Role
+    )
+
+    alias GetSAMLProviderRequest = NamedTuple(
+      "SAMLProviderArn" : arnType
+    )
+
+    alias GetSAMLProviderResponse = NamedTuple(
+      "SAMLMetadataDocument" : (SAMLMetadataDocumentType)?,
+      "CreateDate" : (dateType)?,
+      "ValidUntil" : (dateType)?
+    )
+
+    alias GetSSHPublicKeyRequest = NamedTuple(
+      "UserName" : userNameType,
+      "SSHPublicKeyId" : publicKeyIdType,
+      "Encoding" : encodingType
+    )
+
+    alias GetSSHPublicKeyResponse = NamedTuple(
+      "SSHPublicKey" : (SSHPublicKey)?
+    )
+
+    alias GetServerCertificateRequest = NamedTuple(
+      "ServerCertificateName" : serverCertificateNameType
+    )
+
+    alias GetServerCertificateResponse = NamedTuple(
+      "ServerCertificate" : ServerCertificate
+    )
+
+    alias GetServiceLastAccessedDetailsRequest = NamedTuple(
+      "JobId" : jobIDType,
+      "MaxItems" : (maxItemsType)?,
+      "Marker" : (markerType)?
+    )
+
+    alias GetServiceLastAccessedDetailsResponse = NamedTuple(
+      "JobStatus" : jobStatusType,
+      "JobType" : (AccessAdvisorUsageGranularityType)?,
+      "JobCreationDate" : dateType,
+      "ServicesLastAccessed" : ServicesLastAccessed,
+      "JobCompletionDate" : dateType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?,
+      "Error" : (ErrorDetails)?
+    )
+
+    alias GetServiceLastAccessedDetailsWithEntitiesRequest = NamedTuple(
+      "JobId" : jobIDType,
+      "ServiceNamespace" : serviceNamespaceType,
+      "MaxItems" : (maxItemsType)?,
+      "Marker" : (markerType)?
+    )
+
+    alias GetServiceLastAccessedDetailsWithEntitiesResponse = NamedTuple(
+      "JobStatus" : jobStatusType,
+      "JobCreationDate" : dateType,
+      "JobCompletionDate" : dateType,
+      "EntityDetailsList" : entityDetailsListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?,
+      "Error" : (ErrorDetails)?
+    )
+
+    alias GetServiceLinkedRoleDeletionStatusRequest = NamedTuple(
+      "DeletionTaskId" : DeletionTaskIdType
+    )
+
+    alias GetServiceLinkedRoleDeletionStatusResponse = NamedTuple(
+      "Status" : DeletionTaskStatusType,
+      "Reason" : (DeletionTaskFailureReasonType)?
+    )
+
+    alias GetUserPolicyRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "PolicyName" : policyNameType
+    )
+
+    alias GetUserPolicyResponse = NamedTuple(
+      "UserName" : existingUserNameType,
+      "PolicyName" : policyNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias GetUserRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?
+    )
+
+    alias GetUserResponse = NamedTuple(
+      "User" : User
+    )
+
+    alias Group = NamedTuple(
+      "Path" : pathType,
+      "GroupName" : groupNameType,
+      "GroupId" : idType,
+      "Arn" : arnType,
+      "CreateDate" : dateType
+    )
+
+    alias GroupDetail = NamedTuple(
+      "Path" : (pathType)?,
+      "GroupName" : (groupNameType)?,
+      "GroupId" : (idType)?,
+      "Arn" : (arnType)?,
+      "CreateDate" : (dateType)?,
+      "GroupPolicyList" : (policyDetailListType)?,
+      "AttachedManagedPolicies" : (attachedPoliciesListType)?
+    )
+
+    alias InstanceProfile = NamedTuple(
+      "Path" : pathType,
+      "InstanceProfileName" : instanceProfileNameType,
+      "InstanceProfileId" : idType,
+      "Arn" : arnType,
+      "CreateDate" : dateType,
+      "Roles" : roleListType
+    )
+
+    alias InvalidAuthenticationCodeException = NamedTuple(
+      "message" : (invalidAuthenticationCodeMessage)?
+    )
+
+    alias InvalidCertificateException = NamedTuple(
+      "message" : (invalidCertificateMessage)?
+    )
+
+    alias InvalidInputException = NamedTuple(
+      "message" : (invalidInputMessage)?
+    )
+
+    alias InvalidPublicKeyException = NamedTuple(
+      "message" : (invalidPublicKeyMessage)?
+    )
+
+    alias InvalidUserTypeException = NamedTuple(
+      "message" : (invalidUserTypeMessage)?
+    )
+
+    alias KeyPairMismatchException = NamedTuple(
+      "message" : (keyPairMismatchMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (limitExceededMessage)?
+    )
+
+    alias LineNumber = Int32
+
+    alias ListAccessKeysRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListAccessKeysResponse = NamedTuple(
+      "AccessKeyMetadata" : accessKeyMetadataListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListAccountAliasesRequest = NamedTuple(
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListAccountAliasesResponse = NamedTuple(
+      "AccountAliases" : accountAliasListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListAttachedGroupPoliciesRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "PathPrefix" : (policyPathType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListAttachedGroupPoliciesResponse = NamedTuple(
+      "AttachedPolicies" : (attachedPoliciesListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListAttachedRolePoliciesRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PathPrefix" : (policyPathType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListAttachedRolePoliciesResponse = NamedTuple(
+      "AttachedPolicies" : (attachedPoliciesListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListAttachedUserPoliciesRequest = NamedTuple(
+      "UserName" : userNameType,
+      "PathPrefix" : (policyPathType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListAttachedUserPoliciesResponse = NamedTuple(
+      "AttachedPolicies" : (attachedPoliciesListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListEntitiesForPolicyRequest = NamedTuple(
+      "PolicyArn" : arnType,
+      "EntityFilter" : (EntityType)?,
+      "PathPrefix" : (pathType)?,
+      "PolicyUsageFilter" : (PolicyUsageType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListEntitiesForPolicyResponse = NamedTuple(
+      "PolicyGroups" : (PolicyGroupListType)?,
+      "PolicyUsers" : (PolicyUserListType)?,
+      "PolicyRoles" : (PolicyRoleListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListGroupPoliciesRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListGroupPoliciesResponse = NamedTuple(
+      "PolicyNames" : policyNameListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListGroupsForUserRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListGroupsForUserResponse = NamedTuple(
+      "Groups" : groupListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListGroupsRequest = NamedTuple(
+      "PathPrefix" : (pathPrefixType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListGroupsResponse = NamedTuple(
+      "Groups" : groupListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListInstanceProfilesForRoleRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListInstanceProfilesForRoleResponse = NamedTuple(
+      "InstanceProfiles" : instanceProfileListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListInstanceProfilesRequest = NamedTuple(
+      "PathPrefix" : (pathPrefixType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListInstanceProfilesResponse = NamedTuple(
+      "InstanceProfiles" : instanceProfileListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListMFADevicesRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListMFADevicesResponse = NamedTuple(
+      "MFADevices" : mfaDeviceListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListOpenIDConnectProvidersRequest = NamedTuple(
+      
+    )
+
+    alias ListOpenIDConnectProvidersResponse = NamedTuple(
+      "OpenIDConnectProviderList" : (OpenIDConnectProviderListType)?
+    )
+
+    alias ListPoliciesGrantingServiceAccessEntry = NamedTuple(
+      "ServiceNamespace" : (serviceNamespaceType)?,
+      "Policies" : (policyGrantingServiceAccessListType)?
+    )
+
+    alias ListPoliciesGrantingServiceAccessRequest = NamedTuple(
+      "Marker" : (markerType)?,
+      "Arn" : arnType,
+      "ServiceNamespaces" : serviceNamespaceListType
+    )
+
+    alias ListPoliciesGrantingServiceAccessResponse = NamedTuple(
+      "PoliciesGrantingServiceAccess" : listPolicyGrantingServiceAccessResponseListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListPoliciesRequest = NamedTuple(
+      "Scope" : (policyScopeType)?,
+      "OnlyAttached" : (booleanType)?,
+      "PathPrefix" : (policyPathType)?,
+      "PolicyUsageFilter" : (PolicyUsageType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListPoliciesResponse = NamedTuple(
+      "Policies" : (policyListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListPolicyVersionsRequest = NamedTuple(
+      "PolicyArn" : arnType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListPolicyVersionsResponse = NamedTuple(
+      "Versions" : (policyDocumentVersionListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListRolePoliciesRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListRolePoliciesResponse = NamedTuple(
+      "PolicyNames" : policyNameListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListRoleTagsRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListRoleTagsResponse = NamedTuple(
+      "Tags" : tagListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListRolesRequest = NamedTuple(
+      "PathPrefix" : (pathPrefixType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListRolesResponse = NamedTuple(
+      "Roles" : roleListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListSAMLProvidersRequest = NamedTuple(
+      
+    )
+
+    alias ListSAMLProvidersResponse = NamedTuple(
+      "SAMLProviderList" : (SAMLProviderListType)?
+    )
+
+    alias ListSSHPublicKeysRequest = NamedTuple(
+      "UserName" : (userNameType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListSSHPublicKeysResponse = NamedTuple(
+      "SSHPublicKeys" : (SSHPublicKeyListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListServerCertificatesRequest = NamedTuple(
+      "PathPrefix" : (pathPrefixType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListServerCertificatesResponse = NamedTuple(
+      "ServerCertificateMetadataList" : serverCertificateMetadataListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListServiceSpecificCredentialsRequest = NamedTuple(
+      "UserName" : (userNameType)?,
+      "ServiceName" : (serviceName)?
+    )
+
+    alias ListServiceSpecificCredentialsResponse = NamedTuple(
+      "ServiceSpecificCredentials" : (ServiceSpecificCredentialsListType)?
+    )
+
+    alias ListSigningCertificatesRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListSigningCertificatesResponse = NamedTuple(
+      "Certificates" : certificateListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListUserPoliciesRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListUserPoliciesResponse = NamedTuple(
+      "PolicyNames" : policyNameListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListUserTagsRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListUserTagsResponse = NamedTuple(
+      "Tags" : tagListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListUsersRequest = NamedTuple(
+      "PathPrefix" : (pathPrefixType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListUsersResponse = NamedTuple(
+      "Users" : userListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias ListVirtualMFADevicesRequest = NamedTuple(
+      "AssignmentStatus" : (assignmentStatusType)?,
+      "Marker" : (markerType)?,
+      "MaxItems" : (maxItemsType)?
+    )
+
+    alias ListVirtualMFADevicesResponse = NamedTuple(
+      "VirtualMFADevices" : virtualMFADeviceListType,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias LoginProfile = NamedTuple(
+      "UserName" : userNameType,
+      "CreateDate" : dateType,
+      "PasswordResetRequired" : (booleanType)?
+    )
+
+    alias MFADevice = NamedTuple(
+      "UserName" : userNameType,
+      "SerialNumber" : serialNumberType,
+      "EnableDate" : dateType
+    )
+
+    alias MalformedCertificateException = NamedTuple(
+      "message" : (malformedCertificateMessage)?
+    )
+
+    alias MalformedPolicyDocumentException = NamedTuple(
+      "message" : (malformedPolicyDocumentMessage)?
+    )
+
+    alias ManagedPolicyDetail = NamedTuple(
+      "PolicyName" : (policyNameType)?,
+      "PolicyId" : (idType)?,
+      "Arn" : (arnType)?,
+      "Path" : (policyPathType)?,
+      "DefaultVersionId" : (policyVersionIdType)?,
+      "AttachmentCount" : (attachmentCountType)?,
+      "PermissionsBoundaryUsageCount" : (attachmentCountType)?,
+      "IsAttachable" : (booleanType)?,
+      "Description" : (policyDescriptionType)?,
+      "CreateDate" : (dateType)?,
+      "UpdateDate" : (dateType)?,
+      "PolicyVersionList" : (policyDocumentVersionListType)?
+    )
+
+    alias ManagedPolicyDetailListType = Array(ManagedPolicyDetail)
+
+    alias NoSuchEntityException = NamedTuple(
+      "message" : (noSuchEntityMessage)?
+    )
+
+    alias OpenIDConnectProviderListEntry = NamedTuple(
+      "Arn" : (arnType)?
+    )
+
+    alias OpenIDConnectProviderListType = Array(OpenIDConnectProviderListEntry)
+
+    alias OpenIDConnectProviderUrlType = String
+
+    alias OrganizationsDecisionDetail = NamedTuple(
+      "AllowedByOrganizations" : (booleanType)?
+    )
+
+    alias PasswordPolicy = NamedTuple(
+      "MinimumPasswordLength" : (minimumPasswordLengthType)?,
+      "RequireSymbols" : (booleanType)?,
+      "RequireNumbers" : (booleanType)?,
+      "RequireUppercaseCharacters" : (booleanType)?,
+      "RequireLowercaseCharacters" : (booleanType)?,
+      "AllowUsersToChangePassword" : (booleanType)?,
+      "ExpirePasswords" : (booleanType)?,
+      "MaxPasswordAge" : (maxPasswordAgeType)?,
+      "PasswordReusePrevention" : (passwordReusePreventionType)?,
+      "HardExpiry" : (booleanObjectType)?
+    )
+
+    alias PasswordPolicyViolationException = NamedTuple(
+      "message" : (passwordPolicyViolationMessage)?
+    )
+
+    alias PermissionsBoundaryAttachmentType = String
+
+    alias PermissionsBoundaryDecisionDetail = NamedTuple(
+      "AllowedByPermissionsBoundary" : (booleanType)?
+    )
+
+    alias Policy = NamedTuple(
+      "PolicyName" : (policyNameType)?,
+      "PolicyId" : (idType)?,
+      "Arn" : (arnType)?,
+      "Path" : (policyPathType)?,
+      "DefaultVersionId" : (policyVersionIdType)?,
+      "AttachmentCount" : (attachmentCountType)?,
+      "PermissionsBoundaryUsageCount" : (attachmentCountType)?,
+      "IsAttachable" : (booleanType)?,
+      "Description" : (policyDescriptionType)?,
+      "CreateDate" : (dateType)?,
+      "UpdateDate" : (dateType)?
+    )
+
+    alias PolicyDetail = NamedTuple(
+      "PolicyName" : (policyNameType)?,
+      "PolicyDocument" : (policyDocumentType)?
+    )
+
+    alias PolicyEvaluationDecisionType = String
+
+    alias PolicyEvaluationException = NamedTuple(
+      "message" : (policyEvaluationErrorMessage)?
+    )
+
+    alias PolicyGrantingServiceAccess = NamedTuple(
+      "PolicyName" : policyNameType,
+      "PolicyType" : policyType,
+      "PolicyArn" : (arnType)?,
+      "EntityType" : (policyOwnerEntityType)?,
+      "EntityName" : (entityNameType)?
+    )
+
+    alias PolicyGroup = NamedTuple(
+      "GroupName" : (groupNameType)?,
+      "GroupId" : (idType)?
+    )
+
+    alias PolicyGroupListType = Array(PolicyGroup)
+
+    alias PolicyIdentifierType = String
+
+    alias PolicyNotAttachableException = NamedTuple(
+      "message" : (policyNotAttachableMessage)?
+    )
+
+    alias PolicyRole = NamedTuple(
+      "RoleName" : (roleNameType)?,
+      "RoleId" : (idType)?
+    )
+
+    alias PolicyRoleListType = Array(PolicyRole)
+
+    alias PolicySourceType = String
+
+    alias PolicyUsageType = String
+
+    alias PolicyUser = NamedTuple(
+      "UserName" : (userNameType)?,
+      "UserId" : (idType)?
+    )
+
+    alias PolicyUserListType = Array(PolicyUser)
+
+    alias PolicyVersion = NamedTuple(
+      "Document" : (policyDocumentType)?,
+      "VersionId" : (policyVersionIdType)?,
+      "IsDefaultVersion" : (booleanType)?,
+      "CreateDate" : (dateType)?
+    )
+
+    alias Position = NamedTuple(
+      "Line" : (LineNumber)?,
+      "Column" : (ColumnNumber)?
+    )
+
+    alias PutGroupPolicyRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "PolicyName" : policyNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias PutRolePermissionsBoundaryRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PermissionsBoundary" : arnType
+    )
+
+    alias PutRolePolicyRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyName" : policyNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias PutUserPermissionsBoundaryRequest = NamedTuple(
+      "UserName" : userNameType,
+      "PermissionsBoundary" : arnType
+    )
+
+    alias PutUserPolicyRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "PolicyName" : policyNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias ReasonType = String
+
+    alias RegionNameType = String
+
+    alias RemoveClientIDFromOpenIDConnectProviderRequest = NamedTuple(
+      "OpenIDConnectProviderArn" : arnType,
+      "ClientID" : clientIDType
+    )
+
+    alias RemoveRoleFromInstanceProfileRequest = NamedTuple(
+      "InstanceProfileName" : instanceProfileNameType,
+      "RoleName" : roleNameType
+    )
+
+    alias RemoveUserFromGroupRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "UserName" : existingUserNameType
+    )
+
+    alias ReportContentType = String | Array(UInt8) | IO
+
+    alias ReportFormatType = String
+
+    alias ReportGenerationLimitExceededException = NamedTuple(
+      "message" : (reportGenerationLimitExceededMessage)?
+    )
+
+    alias ReportStateDescriptionType = String
+
+    alias ReportStateType = String
+
+    alias ResetServiceSpecificCredentialRequest = NamedTuple(
+      "UserName" : (userNameType)?,
+      "ServiceSpecificCredentialId" : serviceSpecificCredentialId
+    )
+
+    alias ResetServiceSpecificCredentialResponse = NamedTuple(
+      "ServiceSpecificCredential" : (ServiceSpecificCredential)?
+    )
+
+    alias ResourceHandlingOptionType = String
+
+    alias ResourceNameListType = Array(ResourceNameType)
+
+    alias ResourceNameType = String
+
+    alias ResourceSpecificResult = NamedTuple(
+      "EvalResourceName" : ResourceNameType,
+      "EvalResourceDecision" : PolicyEvaluationDecisionType,
+      "MatchedStatements" : (StatementListType)?,
+      "MissingContextValues" : (ContextKeyNamesResultListType)?,
+      "EvalDecisionDetails" : (EvalDecisionDetailsType)?,
+      "PermissionsBoundaryDecisionDetail" : (PermissionsBoundaryDecisionDetail)?
+    )
+
+    alias ResourceSpecificResultListType = Array(ResourceSpecificResult)
+
+    alias ResyncMFADeviceRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "SerialNumber" : serialNumberType,
+      "AuthenticationCode1" : authenticationCodeType,
+      "AuthenticationCode2" : authenticationCodeType
+    )
+
+    alias Role = NamedTuple(
+      "Path" : pathType,
+      "RoleName" : roleNameType,
+      "RoleId" : idType,
+      "Arn" : arnType,
+      "CreateDate" : dateType,
+      "AssumeRolePolicyDocument" : (policyDocumentType)?,
+      "Description" : (roleDescriptionType)?,
+      "MaxSessionDuration" : (roleMaxSessionDurationType)?,
+      "PermissionsBoundary" : (AttachedPermissionsBoundary)?,
+      "Tags" : (tagListType)?,
+      "RoleLastUsed" : (RoleLastUsed)?
+    )
+
+    alias RoleDetail = NamedTuple(
+      "Path" : (pathType)?,
+      "RoleName" : (roleNameType)?,
+      "RoleId" : (idType)?,
+      "Arn" : (arnType)?,
+      "CreateDate" : (dateType)?,
+      "AssumeRolePolicyDocument" : (policyDocumentType)?,
+      "InstanceProfileList" : (instanceProfileListType)?,
+      "RolePolicyList" : (policyDetailListType)?,
+      "AttachedManagedPolicies" : (attachedPoliciesListType)?,
+      "PermissionsBoundary" : (AttachedPermissionsBoundary)?,
+      "Tags" : (tagListType)?,
+      "RoleLastUsed" : (RoleLastUsed)?
+    )
+
+    alias RoleLastUsed = NamedTuple(
+      "LastUsedDate" : (dateType)?,
+      "Region" : (stringType)?
+    )
+
+    alias RoleUsageListType = Array(RoleUsageType)
+
+    alias RoleUsageType = NamedTuple(
+      "Region" : (RegionNameType)?,
+      "Resources" : (ArnListType)?
+    )
+
+    alias SAMLMetadataDocumentType = String
+
+    alias SAMLProviderListEntry = NamedTuple(
+      "Arn" : (arnType)?,
+      "ValidUntil" : (dateType)?,
+      "CreateDate" : (dateType)?
+    )
+
+    alias SAMLProviderListType = Array(SAMLProviderListEntry)
+
+    alias SAMLProviderNameType = String
+
+    alias SSHPublicKey = NamedTuple(
+      "UserName" : userNameType,
+      "SSHPublicKeyId" : publicKeyIdType,
+      "Fingerprint" : publicKeyFingerprintType,
+      "SSHPublicKeyBody" : publicKeyMaterialType,
+      "Status" : statusType,
+      "UploadDate" : (dateType)?
+    )
+
+    alias SSHPublicKeyListType = Array(SSHPublicKeyMetadata)
+
+    alias SSHPublicKeyMetadata = NamedTuple(
+      "UserName" : userNameType,
+      "SSHPublicKeyId" : publicKeyIdType,
+      "Status" : statusType,
+      "UploadDate" : dateType
+    )
+
+    alias ServerCertificate = NamedTuple(
+      "ServerCertificateMetadata" : ServerCertificateMetadata,
+      "CertificateBody" : certificateBodyType,
+      "CertificateChain" : (certificateChainType)?
+    )
+
+    alias ServerCertificateMetadata = NamedTuple(
+      "Path" : pathType,
+      "ServerCertificateName" : serverCertificateNameType,
+      "ServerCertificateId" : idType,
+      "Arn" : arnType,
+      "UploadDate" : (dateType)?,
+      "Expiration" : (dateType)?
+    )
+
+    alias ServiceFailureException = NamedTuple(
+      "message" : (serviceFailureExceptionMessage)?
+    )
+
+    alias ServiceLastAccessed = NamedTuple(
+      "ServiceName" : serviceNameType,
+      "LastAuthenticated" : (dateType)?,
+      "ServiceNamespace" : serviceNamespaceType,
+      "LastAuthenticatedEntity" : (arnType)?,
+      "LastAuthenticatedRegion" : (stringType)?,
+      "TotalAuthenticatedEntities" : (integerType)?,
+      "TrackedActionsLastAccessed" : (TrackedActionsLastAccessed)?
+    )
+
+    alias ServiceNotSupportedException = NamedTuple(
+      "message" : (serviceNotSupportedMessage)?
+    )
+
+    alias ServiceSpecificCredential = NamedTuple(
+      "CreateDate" : dateType,
+      "ServiceName" : serviceName,
+      "ServiceUserName" : serviceUserName,
+      "ServicePassword" : servicePassword,
+      "ServiceSpecificCredentialId" : serviceSpecificCredentialId,
+      "UserName" : userNameType,
+      "Status" : statusType
+    )
+
+    alias ServiceSpecificCredentialMetadata = NamedTuple(
+      "UserName" : userNameType,
+      "Status" : statusType,
+      "ServiceUserName" : serviceUserName,
+      "CreateDate" : dateType,
+      "ServiceSpecificCredentialId" : serviceSpecificCredentialId,
+      "ServiceName" : serviceName
+    )
+
+    alias ServiceSpecificCredentialsListType = Array(ServiceSpecificCredentialMetadata)
+
+    alias ServicesLastAccessed = Array(ServiceLastAccessed)
+
+    alias SetDefaultPolicyVersionRequest = NamedTuple(
+      "PolicyArn" : arnType,
+      "VersionId" : policyVersionIdType
+    )
+
+    alias SetSecurityTokenServicePreferencesRequest = NamedTuple(
+      "GlobalEndpointTokenVersion" : globalEndpointTokenVersion
+    )
+
+    alias SigningCertificate = NamedTuple(
+      "UserName" : userNameType,
+      "CertificateId" : certificateIdType,
+      "CertificateBody" : certificateBodyType,
+      "Status" : statusType,
+      "UploadDate" : (dateType)?
+    )
+
+    alias SimulateCustomPolicyRequest = NamedTuple(
+      "PolicyInputList" : SimulationPolicyListType,
+      "PermissionsBoundaryPolicyInputList" : (SimulationPolicyListType)?,
+      "ActionNames" : ActionNameListType,
+      "ResourceArns" : (ResourceNameListType)?,
+      "ResourcePolicy" : (policyDocumentType)?,
+      "ResourceOwner" : (ResourceNameType)?,
+      "CallerArn" : (ResourceNameType)?,
+      "ContextEntries" : (ContextEntryListType)?,
+      "ResourceHandlingOption" : (ResourceHandlingOptionType)?,
+      "MaxItems" : (maxItemsType)?,
+      "Marker" : (markerType)?
+    )
+
+    alias SimulatePolicyResponse = NamedTuple(
+      "EvaluationResults" : (EvaluationResultsListType)?,
+      "IsTruncated" : (booleanType)?,
+      "Marker" : (responseMarkerType)?
+    )
+
+    alias SimulatePrincipalPolicyRequest = NamedTuple(
+      "PolicySourceArn" : arnType,
+      "PolicyInputList" : (SimulationPolicyListType)?,
+      "PermissionsBoundaryPolicyInputList" : (SimulationPolicyListType)?,
+      "ActionNames" : ActionNameListType,
+      "ResourceArns" : (ResourceNameListType)?,
+      "ResourcePolicy" : (policyDocumentType)?,
+      "ResourceOwner" : (ResourceNameType)?,
+      "CallerArn" : (ResourceNameType)?,
+      "ContextEntries" : (ContextEntryListType)?,
+      "ResourceHandlingOption" : (ResourceHandlingOptionType)?,
+      "MaxItems" : (maxItemsType)?,
+      "Marker" : (markerType)?
+    )
+
+    alias SimulationPolicyListType = Array(policyDocumentType)
+
+    alias Statement = NamedTuple(
+      "SourcePolicyId" : (PolicyIdentifierType)?,
+      "SourcePolicyType" : (PolicySourceType)?,
+      "StartPosition" : (Position)?,
+      "EndPosition" : (Position)?
+    )
+
+    alias StatementListType = Array(Statement)
+
+    alias Tag = NamedTuple(
+      "Key" : tagKeyType,
+      "Value" : tagValueType
+    )
+
+    alias TagRoleRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "Tags" : tagListType
+    )
+
+    alias TagUserRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "Tags" : tagListType
+    )
+
+    alias TrackedActionLastAccessed = NamedTuple(
+      "ActionName" : (stringType)?,
+      "LastAccessedEntity" : (arnType)?,
+      "LastAccessedTime" : (dateType)?,
+      "LastAccessedRegion" : (stringType)?
+    )
+
+    alias TrackedActionsLastAccessed = Array(TrackedActionLastAccessed)
+
+    alias UnmodifiableEntityException = NamedTuple(
+      "message" : (unmodifiableEntityMessage)?
+    )
+
+    alias UnrecognizedPublicKeyEncodingException = NamedTuple(
+      "message" : (unrecognizedPublicKeyEncodingMessage)?
+    )
+
+    alias UntagRoleRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "TagKeys" : tagKeyListType
+    )
+
+    alias UntagUserRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "TagKeys" : tagKeyListType
+    )
+
+    alias UpdateAccessKeyRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "AccessKeyId" : accessKeyIdType,
+      "Status" : statusType
+    )
+
+    alias UpdateAccountPasswordPolicyRequest = NamedTuple(
+      "MinimumPasswordLength" : (minimumPasswordLengthType)?,
+      "RequireSymbols" : (booleanType)?,
+      "RequireNumbers" : (booleanType)?,
+      "RequireUppercaseCharacters" : (booleanType)?,
+      "RequireLowercaseCharacters" : (booleanType)?,
+      "AllowUsersToChangePassword" : (booleanType)?,
+      "MaxPasswordAge" : (maxPasswordAgeType)?,
+      "PasswordReusePrevention" : (passwordReusePreventionType)?,
+      "HardExpiry" : (booleanObjectType)?
+    )
+
+    alias UpdateAssumeRolePolicyRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "PolicyDocument" : policyDocumentType
+    )
+
+    alias UpdateGroupRequest = NamedTuple(
+      "GroupName" : groupNameType,
+      "NewPath" : (pathType)?,
+      "NewGroupName" : (groupNameType)?
+    )
+
+    alias UpdateLoginProfileRequest = NamedTuple(
+      "UserName" : userNameType,
+      "Password" : (passwordType)?,
+      "PasswordResetRequired" : (booleanObjectType)?
+    )
+
+    alias UpdateOpenIDConnectProviderThumbprintRequest = NamedTuple(
+      "OpenIDConnectProviderArn" : arnType,
+      "ThumbprintList" : thumbprintListType
+    )
+
+    alias UpdateRoleDescriptionRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "Description" : roleDescriptionType
+    )
+
+    alias UpdateRoleDescriptionResponse = NamedTuple(
+      "Role" : (Role)?
+    )
+
+    alias UpdateRoleRequest = NamedTuple(
+      "RoleName" : roleNameType,
+      "Description" : (roleDescriptionType)?,
+      "MaxSessionDuration" : (roleMaxSessionDurationType)?
+    )
+
+    alias UpdateRoleResponse = NamedTuple(
+      
+    )
+
+    alias UpdateSAMLProviderRequest = NamedTuple(
+      "SAMLMetadataDocument" : SAMLMetadataDocumentType,
+      "SAMLProviderArn" : arnType
+    )
+
+    alias UpdateSAMLProviderResponse = NamedTuple(
+      "SAMLProviderArn" : (arnType)?
+    )
+
+    alias UpdateSSHPublicKeyRequest = NamedTuple(
+      "UserName" : userNameType,
+      "SSHPublicKeyId" : publicKeyIdType,
+      "Status" : statusType
+    )
+
+    alias UpdateServerCertificateRequest = NamedTuple(
+      "ServerCertificateName" : serverCertificateNameType,
+      "NewPath" : (pathType)?,
+      "NewServerCertificateName" : (serverCertificateNameType)?
+    )
+
+    alias UpdateServiceSpecificCredentialRequest = NamedTuple(
+      "UserName" : (userNameType)?,
+      "ServiceSpecificCredentialId" : serviceSpecificCredentialId,
+      "Status" : statusType
+    )
+
+    alias UpdateSigningCertificateRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "CertificateId" : certificateIdType,
+      "Status" : statusType
+    )
+
+    alias UpdateUserRequest = NamedTuple(
+      "UserName" : existingUserNameType,
+      "NewPath" : (pathType)?,
+      "NewUserName" : (userNameType)?
+    )
+
+    alias UploadSSHPublicKeyRequest = NamedTuple(
+      "UserName" : userNameType,
+      "SSHPublicKeyBody" : publicKeyMaterialType
+    )
+
+    alias UploadSSHPublicKeyResponse = NamedTuple(
+      "SSHPublicKey" : (SSHPublicKey)?
+    )
+
+    alias UploadServerCertificateRequest = NamedTuple(
+      "Path" : (pathType)?,
+      "ServerCertificateName" : serverCertificateNameType,
+      "CertificateBody" : certificateBodyType,
+      "PrivateKey" : privateKeyType,
+      "CertificateChain" : (certificateChainType)?
+    )
+
+    alias UploadServerCertificateResponse = NamedTuple(
+      "ServerCertificateMetadata" : (ServerCertificateMetadata)?
+    )
+
+    alias UploadSigningCertificateRequest = NamedTuple(
+      "UserName" : (existingUserNameType)?,
+      "CertificateBody" : certificateBodyType
+    )
+
+    alias UploadSigningCertificateResponse = NamedTuple(
+      "Certificate" : SigningCertificate
+    )
+
+    alias User = NamedTuple(
+      "Path" : pathType,
+      "UserName" : userNameType,
+      "UserId" : idType,
+      "Arn" : arnType,
+      "CreateDate" : dateType,
+      "PasswordLastUsed" : (dateType)?,
+      "PermissionsBoundary" : (AttachedPermissionsBoundary)?,
+      "Tags" : (tagListType)?
+    )
+
+    alias UserDetail = NamedTuple(
+      "Path" : (pathType)?,
+      "UserName" : (userNameType)?,
+      "UserId" : (idType)?,
+      "Arn" : (arnType)?,
+      "CreateDate" : (dateType)?,
+      "UserPolicyList" : (policyDetailListType)?,
+      "GroupList" : (groupNameListType)?,
+      "AttachedManagedPolicies" : (attachedPoliciesListType)?,
+      "PermissionsBoundary" : (AttachedPermissionsBoundary)?,
+      "Tags" : (tagListType)?
+    )
+
+    alias VirtualMFADevice = NamedTuple(
+      "SerialNumber" : serialNumberType,
+      "Base32StringSeed" : (BootstrapDatum)?,
+      "QRCodePNG" : (BootstrapDatum)?,
+      "User" : (User)?,
+      "EnableDate" : (dateType)?
+    )
+
+    alias accessKeyIdType = String
+
+    alias accessKeyMetadataListType = Array(AccessKeyMetadata)
+
+    alias accessKeySecretType = String
+
+    alias accountAliasListType = Array(accountAliasType)
+
+    alias accountAliasType = String
+
+    alias arnType = String
+
+    alias assignmentStatusType = String
+
+    alias attachedPoliciesListType = Array(AttachedPolicy)
+
+    alias attachmentCountType = Int32
+
+    alias authenticationCodeType = String
+
+    alias booleanObjectType = Bool
+
+    alias booleanType = Bool
+
+    alias certificateBodyType = String
+
+    alias certificateChainType = String
+
+    alias certificateIdType = String
+
+    alias certificateListType = Array(SigningCertificate)
+
+    alias clientIDListType = Array(clientIDType)
+
+    alias clientIDType = String
+
+    alias credentialReportExpiredExceptionMessage = String
+
+    alias credentialReportNotPresentExceptionMessage = String
+
+    alias credentialReportNotReadyExceptionMessage = String
+
+    alias customSuffixType = String
+
+    alias dateType = String | UInt64 | Time
+
+    alias deleteConflictMessage = String
+
+    alias duplicateCertificateMessage = String
+
+    alias duplicateSSHPublicKeyMessage = String
+
+    alias encodingType = String
+
+    alias entityAlreadyExistsMessage = String
+
+    alias entityDetailsListType = Array(EntityDetails)
+
+    alias entityListType = Array(EntityType)
+
+    alias entityNameType = String
+
+    alias entityTemporarilyUnmodifiableMessage = String
+
+    alias existingUserNameType = String
+
+    alias globalEndpointTokenVersion = String
+
+    alias groupDetailListType = Array(GroupDetail)
+
+    alias groupListType = Array(Group)
+
+    alias groupNameListType = Array(groupNameType)
+
+    alias groupNameType = String
+
+    alias idType = String
+
+    alias instanceProfileListType = Array(InstanceProfile)
+
+    alias instanceProfileNameType = String
+
+    alias integerType = Int32
+
+    alias invalidAuthenticationCodeMessage = String
+
+    alias invalidCertificateMessage = String
+
+    alias invalidInputMessage = String
+
+    alias invalidPublicKeyMessage = String
+
+    alias invalidUserTypeMessage = String
+
+    alias jobIDType = String
+
+    alias jobStatusType = String
+
+    alias keyPairMismatchMessage = String
+
+    alias limitExceededMessage = String
+
+    alias listPolicyGrantingServiceAccessResponseListType = Array(ListPoliciesGrantingServiceAccessEntry)
+
+    alias malformedCertificateMessage = String
+
+    alias malformedPolicyDocumentMessage = String
+
+    alias markerType = String
+
+    alias maxItemsType = Int32
+
+    alias maxPasswordAgeType = Int32
+
+    alias mfaDeviceListType = Array(MFADevice)
+
+    alias minimumPasswordLengthType = Int32
+
+    alias noSuchEntityMessage = String
+
+    alias organizationsEntityPathType = String
+
+    alias organizationsPolicyIdType = String
+
+    alias passwordPolicyViolationMessage = String
+
+    alias passwordReusePreventionType = Int32
+
+    alias passwordType = String
+
+    alias pathPrefixType = String
+
+    alias pathType = String
+
+    alias policyDescriptionType = String
+
+    alias policyDetailListType = Array(PolicyDetail)
+
+    alias policyDocumentType = String
+
+    alias policyDocumentVersionListType = Array(PolicyVersion)
+
+    alias policyEvaluationErrorMessage = String
+
+    alias policyGrantingServiceAccessListType = Array(PolicyGrantingServiceAccess)
+
+    alias policyListType = Array(Policy)
+
+    alias policyNameListType = Array(policyNameType)
+
+    alias policyNameType = String
+
+    alias policyNotAttachableMessage = String
+
+    alias policyOwnerEntityType = String
+
+    alias policyPathType = String
+
+    alias policyScopeType = String
+
+    alias policyType = String
+
+    alias policyVersionIdType = String
+
+    alias privateKeyType = String
+
+    alias publicKeyFingerprintType = String
+
+    alias publicKeyIdType = String
+
+    alias publicKeyMaterialType = String
+
+    alias reportGenerationLimitExceededMessage = String
+
+    alias responseMarkerType = String
+
+    alias roleDescriptionType = String
+
+    alias roleDetailListType = Array(RoleDetail)
+
+    alias roleListType = Array(Role)
+
+    alias roleMaxSessionDurationType = Int32
+
+    alias roleNameType = String
+
+    alias serialNumberType = String
+
+    alias serverCertificateMetadataListType = Array(ServerCertificateMetadata)
+
+    alias serverCertificateNameType = String
+
+    alias serviceFailureExceptionMessage = String
+
+    alias serviceName = String
+
+    alias serviceNameType = String
+
+    alias serviceNamespaceListType = Array(serviceNamespaceType)
+
+    alias serviceNamespaceType = String
+
+    alias serviceNotSupportedMessage = String
+
+    alias servicePassword = String
+
+    alias serviceSpecificCredentialId = String
+
+    alias serviceUserName = String
+
+    alias sortKeyType = String
+
+    alias statusType = String
+
+    alias stringType = String
+
+    alias summaryKeyType = String
+
+    alias summaryMapType = Hash(summaryKeyType,summaryValueType)
+
+    alias summaryValueType = Int32
+
+    alias tagKeyListType = Array(tagKeyType)
+
+    alias tagKeyType = String
+
+    alias tagListType = Array(Tag)
+
+    alias tagValueType = String
+
+    alias thumbprintListType = Array(thumbprintType)
+
+    alias thumbprintType = String
+
+    alias unmodifiableEntityMessage = String
+
+    alias unrecognizedPublicKeyEncodingMessage = String
+
+    alias userDetailListType = Array(UserDetail)
+
+    alias userListType = Array(User)
+
+    alias userNameType = String
+
+    alias virtualMFADeviceListType = Array(VirtualMFADevice)
+
+    alias virtualMFADeviceName = String
   end
 end

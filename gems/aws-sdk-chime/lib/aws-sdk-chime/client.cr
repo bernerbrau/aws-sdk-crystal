@@ -352,8 +352,8 @@ module Aws::Chime
     #
     # @overload associate_phone_number_with_user(**params)
     # @param [Hash] params ({})
-    def associate_phone_number_with_user(params = {}, **options)
-      req = build_request(:associate_phone_number_with_user, params)
+    def associate_phone_number_with_user(, **options)
+      req = build_request(:associate_phone_number_with_user, )
       req.send_request(options)
     end
 
@@ -395,8 +395,8 @@ module Aws::Chime
     #
     # @overload associate_phone_numbers_with_voice_connector(**params)
     # @param [Hash] params ({})
-    def associate_phone_numbers_with_voice_connector(params = {}, **options)
-      req = build_request(:associate_phone_numbers_with_voice_connector, params)
+    def associate_phone_numbers_with_voice_connector(, **options)
+      req = build_request(:associate_phone_numbers_with_voice_connector, )
       req.send_request(options)
     end
 
@@ -438,8 +438,8 @@ module Aws::Chime
     #
     # @overload associate_phone_numbers_with_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def associate_phone_numbers_with_voice_connector_group(params = {}, **options)
-      req = build_request(:associate_phone_numbers_with_voice_connector_group, params)
+    def associate_phone_numbers_with_voice_connector_group(, **options)
+      req = build_request(:associate_phone_numbers_with_voice_connector_group, )
       req.send_request(options)
     end
 
@@ -469,8 +469,8 @@ module Aws::Chime
     #
     # @overload associate_signin_delegate_groups_with_account(**params)
     # @param [Hash] params ({})
-    def associate_signin_delegate_groups_with_account(params = {}, **options)
-      req = build_request(:associate_signin_delegate_groups_with_account, params)
+    def associate_signin_delegate_groups_with_account(, **options)
+      req = build_request(:associate_signin_delegate_groups_with_account, )
       req.send_request(options)
     end
 
@@ -525,8 +525,8 @@ module Aws::Chime
     #
     # @overload batch_create_attendee(**params)
     # @param [Hash] params ({})
-    def batch_create_attendee(params = {}, **options)
-      req = build_request(:batch_create_attendee, params)
+    def batch_create_attendee(, **options)
+      req = build_request(:batch_create_attendee, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::Chime
     #
     # @overload batch_create_room_membership(**params)
     # @param [Hash] params ({})
-    def batch_create_room_membership(params = {}, **options)
-      req = build_request(:batch_create_room_membership, params)
+    def batch_create_room_membership(, **options)
+      req = build_request(:batch_create_room_membership, )
       req.send_request(options)
     end
 
@@ -608,8 +608,8 @@ module Aws::Chime
     #
     # @overload batch_delete_phone_number(**params)
     # @param [Hash] params ({})
-    def batch_delete_phone_number(params = {}, **options)
-      req = build_request(:batch_delete_phone_number, params)
+    def batch_delete_phone_number(, **options)
+      req = build_request(:batch_delete_phone_number, )
       req.send_request(options)
     end
 
@@ -663,8 +663,8 @@ module Aws::Chime
     #
     # @overload batch_suspend_user(**params)
     # @param [Hash] params ({})
-    def batch_suspend_user(params = {}, **options)
-      req = build_request(:batch_suspend_user, params)
+    def batch_suspend_user(, **options)
+      req = build_request(:batch_suspend_user, )
       req.send_request(options)
     end
 
@@ -710,8 +710,8 @@ module Aws::Chime
     #
     # @overload batch_unsuspend_user(**params)
     # @param [Hash] params ({})
-    def batch_unsuspend_user(params = {}, **options)
-      req = build_request(:batch_unsuspend_user, params)
+    def batch_unsuspend_user(, **options)
+      req = build_request(:batch_unsuspend_user, )
       req.send_request(options)
     end
 
@@ -758,8 +758,8 @@ module Aws::Chime
     #
     # @overload batch_update_phone_number(**params)
     # @param [Hash] params ({})
-    def batch_update_phone_number(params = {}, **options)
-      req = build_request(:batch_update_phone_number, params)
+    def batch_update_phone_number(, **options)
+      req = build_request(:batch_update_phone_number, )
       req.send_request(options)
     end
 
@@ -805,8 +805,8 @@ module Aws::Chime
     #
     # @overload batch_update_user(**params)
     # @param [Hash] params ({})
-    def batch_update_user(params = {}, **options)
-      req = build_request(:batch_update_user, params)
+    def batch_update_user(, **options)
+      req = build_request(:batch_update_user, )
       req.send_request(options)
     end
 
@@ -850,8 +850,8 @@ module Aws::Chime
     #
     # @overload create_account(**params)
     # @param [Hash] params ({})
-    def create_account(params = {}, **options)
-      req = build_request(:create_account, params)
+    def create_account(, **options)
+      req = build_request(:create_account, )
       req.send_request(options)
     end
 
@@ -892,8 +892,8 @@ module Aws::Chime
     #
     # @overload create_app_instance(**params)
     # @param [Hash] params ({})
-    def create_app_instance(params = {}, **options)
-      req = build_request(:create_app_instance, params)
+    def create_app_instance(, **options)
+      req = build_request(:create_app_instance, )
       req.send_request(options)
     end
 
@@ -935,8 +935,8 @@ module Aws::Chime
     #
     # @overload create_app_instance_admin(**params)
     # @param [Hash] params ({})
-    def create_app_instance_admin(params = {}, **options)
-      req = build_request(:create_app_instance_admin, params)
+    def create_app_instance_admin(, **options)
+      req = build_request(:create_app_instance_admin, )
       req.send_request(options)
     end
 
@@ -983,8 +983,8 @@ module Aws::Chime
     #
     # @overload create_app_instance_user(**params)
     # @param [Hash] params ({})
-    def create_app_instance_user(params = {}, **options)
-      req = build_request(:create_app_instance_user, params)
+    def create_app_instance_user(, **options)
+      req = build_request(:create_app_instance_user, )
       req.send_request(options)
     end
 
@@ -1035,8 +1035,8 @@ module Aws::Chime
     #
     # @overload create_attendee(**params)
     # @param [Hash] params ({})
-    def create_attendee(params = {}, **options)
-      req = build_request(:create_attendee, params)
+    def create_attendee(, **options)
+      req = build_request(:create_attendee, )
       req.send_request(options)
     end
 
@@ -1079,8 +1079,8 @@ module Aws::Chime
     #
     # @overload create_bot(**params)
     # @param [Hash] params ({})
-    def create_bot(params = {}, **options)
-      req = build_request(:create_bot, params)
+    def create_bot(, **options)
+      req = build_request(:create_bot, )
       req.send_request(options)
     end
 
@@ -1145,8 +1145,8 @@ module Aws::Chime
     #
     # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, **options)
-      req = build_request(:create_channel, params)
+    def create_channel(, **options)
+      req = build_request(:create_channel, )
       req.send_request(options)
     end
 
@@ -1186,8 +1186,8 @@ module Aws::Chime
     #
     # @overload create_channel_ban(**params)
     # @param [Hash] params ({})
-    def create_channel_ban(params = {}, **options)
-      req = build_request(:create_channel_ban, params)
+    def create_channel_ban(, **options)
+      req = build_request(:create_channel_ban, )
       req.send_request(options)
     end
 
@@ -1247,8 +1247,8 @@ module Aws::Chime
     #
     # @overload create_channel_membership(**params)
     # @param [Hash] params ({})
-    def create_channel_membership(params = {}, **options)
-      req = build_request(:create_channel_membership, params)
+    def create_channel_membership(, **options)
+      req = build_request(:create_channel_membership, )
       req.send_request(options)
     end
 
@@ -1292,8 +1292,8 @@ module Aws::Chime
     #
     # @overload create_channel_moderator(**params)
     # @param [Hash] params ({})
-    def create_channel_moderator(params = {}, **options)
-      req = build_request(:create_channel_moderator, params)
+    def create_channel_moderator(, **options)
+      req = build_request(:create_channel_moderator, )
       req.send_request(options)
     end
 
@@ -1377,8 +1377,8 @@ module Aws::Chime
     #
     # @overload create_meeting(**params)
     # @param [Hash] params ({})
-    def create_meeting(params = {}, **options)
-      req = build_request(:create_meeting, params)
+    def create_meeting(, **options)
+      req = build_request(:create_meeting, )
       req.send_request(options)
     end
 
@@ -1437,8 +1437,8 @@ module Aws::Chime
     #
     # @overload create_meeting_dial_out(**params)
     # @param [Hash] params ({})
-    def create_meeting_dial_out(params = {}, **options)
-      req = build_request(:create_meeting_dial_out, params)
+    def create_meeting_dial_out(, **options)
+      req = build_request(:create_meeting_dial_out, )
       req.send_request(options)
     end
 
@@ -1548,8 +1548,8 @@ module Aws::Chime
     #
     # @overload create_meeting_with_attendees(**params)
     # @param [Hash] params ({})
-    def create_meeting_with_attendees(params = {}, **options)
-      req = build_request(:create_meeting_with_attendees, params)
+    def create_meeting_with_attendees(, **options)
+      req = build_request(:create_meeting_with_attendees, )
       req.send_request(options)
     end
 
@@ -1590,8 +1590,8 @@ module Aws::Chime
     #
     # @overload create_phone_number_order(**params)
     # @param [Hash] params ({})
-    def create_phone_number_order(params = {}, **options)
-      req = build_request(:create_phone_number_order, params)
+    def create_phone_number_order(, **options)
+      req = build_request(:create_phone_number_order, )
       req.send_request(options)
     end
 
@@ -1668,8 +1668,8 @@ module Aws::Chime
     #
     # @overload create_proxy_session(**params)
     # @param [Hash] params ({})
-    def create_proxy_session(params = {}, **options)
-      req = build_request(:create_proxy_session, params)
+    def create_proxy_session(, **options)
+      req = build_request(:create_proxy_session, )
       req.send_request(options)
     end
 
@@ -1712,8 +1712,8 @@ module Aws::Chime
     #
     # @overload create_room(**params)
     # @param [Hash] params ({})
-    def create_room(params = {}, **options)
-      req = build_request(:create_room, params)
+    def create_room(, **options)
+      req = build_request(:create_room, )
       req.send_request(options)
     end
 
@@ -1763,8 +1763,8 @@ module Aws::Chime
     #
     # @overload create_room_membership(**params)
     # @param [Hash] params ({})
-    def create_room_membership(params = {}, **options)
-      req = build_request(:create_room_membership, params)
+    def create_room_membership(, **options)
+      req = build_request(:create_room_membership, )
       req.send_request(options)
     end
 
@@ -1810,8 +1810,8 @@ module Aws::Chime
     #
     # @overload create_sip_media_application(**params)
     # @param [Hash] params ({})
-    def create_sip_media_application(params = {}, **options)
-      req = build_request(:create_sip_media_application, params)
+    def create_sip_media_application(, **options)
+      req = build_request(:create_sip_media_application, )
       req.send_request(options)
     end
 
@@ -1848,8 +1848,8 @@ module Aws::Chime
     #
     # @overload create_sip_media_application_call(**params)
     # @param [Hash] params ({})
-    def create_sip_media_application_call(params = {}, **options)
-      req = build_request(:create_sip_media_application_call, params)
+    def create_sip_media_application_call(, **options)
+      req = build_request(:create_sip_media_application_call, )
       req.send_request(options)
     end
 
@@ -1922,8 +1922,8 @@ module Aws::Chime
     #
     # @overload create_sip_rule(**params)
     # @param [Hash] params ({})
-    def create_sip_rule(params = {}, **options)
-      req = build_request(:create_sip_rule, params)
+    def create_sip_rule(, **options)
+      req = build_request(:create_sip_rule, )
       req.send_request(options)
     end
 
@@ -1975,8 +1975,8 @@ module Aws::Chime
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -2026,8 +2026,8 @@ module Aws::Chime
     #
     # @overload create_voice_connector(**params)
     # @param [Hash] params ({})
-    def create_voice_connector(params = {}, **options)
-      req = build_request(:create_voice_connector, params)
+    def create_voice_connector(, **options)
+      req = build_request(:create_voice_connector, )
       req.send_request(options)
     end
 
@@ -2076,8 +2076,8 @@ module Aws::Chime
     #
     # @overload create_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def create_voice_connector_group(params = {}, **options)
-      req = build_request(:create_voice_connector_group, params)
+    def create_voice_connector_group(, **options)
+      req = build_request(:create_voice_connector_group, )
       req.send_request(options)
     end
 
@@ -2111,8 +2111,8 @@ module Aws::Chime
     #
     # @overload delete_account(**params)
     # @param [Hash] params ({})
-    def delete_account(params = {}, **options)
-      req = build_request(:delete_account, params)
+    def delete_account(, **options)
+      req = build_request(:delete_account, )
       req.send_request(options)
     end
 
@@ -2133,8 +2133,8 @@ module Aws::Chime
     #
     # @overload delete_app_instance(**params)
     # @param [Hash] params ({})
-    def delete_app_instance(params = {}, **options)
-      req = build_request(:delete_app_instance, params)
+    def delete_app_instance(, **options)
+      req = build_request(:delete_app_instance, )
       req.send_request(options)
     end
 
@@ -2160,8 +2160,8 @@ module Aws::Chime
     #
     # @overload delete_app_instance_admin(**params)
     # @param [Hash] params ({})
-    def delete_app_instance_admin(params = {}, **options)
-      req = build_request(:delete_app_instance_admin, params)
+    def delete_app_instance_admin(, **options)
+      req = build_request(:delete_app_instance_admin, )
       req.send_request(options)
     end
 
@@ -2182,8 +2182,8 @@ module Aws::Chime
     #
     # @overload delete_app_instance_streaming_configurations(**params)
     # @param [Hash] params ({})
-    def delete_app_instance_streaming_configurations(params = {}, **options)
-      req = build_request(:delete_app_instance_streaming_configurations, params)
+    def delete_app_instance_streaming_configurations(, **options)
+      req = build_request(:delete_app_instance_streaming_configurations, )
       req.send_request(options)
     end
 
@@ -2204,8 +2204,8 @@ module Aws::Chime
     #
     # @overload delete_app_instance_user(**params)
     # @param [Hash] params ({})
-    def delete_app_instance_user(params = {}, **options)
-      req = build_request(:delete_app_instance_user, params)
+    def delete_app_instance_user(, **options)
+      req = build_request(:delete_app_instance_user, )
       req.send_request(options)
     end
 
@@ -2238,8 +2238,8 @@ module Aws::Chime
     #
     # @overload delete_attendee(**params)
     # @param [Hash] params ({})
-    def delete_attendee(params = {}, **options)
-      req = build_request(:delete_attendee, params)
+    def delete_attendee(, **options)
+      req = build_request(:delete_attendee, )
       req.send_request(options)
     end
 
@@ -2261,8 +2261,8 @@ module Aws::Chime
     #
     # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, **options)
-      req = build_request(:delete_channel, params)
+    def delete_channel(, **options)
+      req = build_request(:delete_channel, )
       req.send_request(options)
     end
 
@@ -2287,8 +2287,8 @@ module Aws::Chime
     #
     # @overload delete_channel_ban(**params)
     # @param [Hash] params ({})
-    def delete_channel_ban(params = {}, **options)
-      req = build_request(:delete_channel_ban, params)
+    def delete_channel_ban(, **options)
+      req = build_request(:delete_channel_ban, )
       req.send_request(options)
     end
 
@@ -2313,8 +2313,8 @@ module Aws::Chime
     #
     # @overload delete_channel_membership(**params)
     # @param [Hash] params ({})
-    def delete_channel_membership(params = {}, **options)
-      req = build_request(:delete_channel_membership, params)
+    def delete_channel_membership(, **options)
+      req = build_request(:delete_channel_membership, )
       req.send_request(options)
     end
 
@@ -2341,8 +2341,8 @@ module Aws::Chime
     #
     # @overload delete_channel_message(**params)
     # @param [Hash] params ({})
-    def delete_channel_message(params = {}, **options)
-      req = build_request(:delete_channel_message, params)
+    def delete_channel_message(, **options)
+      req = build_request(:delete_channel_message, )
       req.send_request(options)
     end
 
@@ -2367,8 +2367,8 @@ module Aws::Chime
     #
     # @overload delete_channel_moderator(**params)
     # @param [Hash] params ({})
-    def delete_channel_moderator(params = {}, **options)
-      req = build_request(:delete_channel_moderator, params)
+    def delete_channel_moderator(, **options)
+      req = build_request(:delete_channel_moderator, )
       req.send_request(options)
     end
 
@@ -2394,8 +2394,8 @@ module Aws::Chime
     #
     # @overload delete_events_configuration(**params)
     # @param [Hash] params ({})
-    def delete_events_configuration(params = {}, **options)
-      req = build_request(:delete_events_configuration, params)
+    def delete_events_configuration(, **options)
+      req = build_request(:delete_events_configuration, )
       req.send_request(options)
     end
 
@@ -2423,8 +2423,8 @@ module Aws::Chime
     #
     # @overload delete_meeting(**params)
     # @param [Hash] params ({})
-    def delete_meeting(params = {}, **options)
-      req = build_request(:delete_meeting, params)
+    def delete_meeting(, **options)
+      req = build_request(:delete_meeting, )
       req.send_request(options)
     end
 
@@ -2450,8 +2450,8 @@ module Aws::Chime
     #
     # @overload delete_phone_number(**params)
     # @param [Hash] params ({})
-    def delete_phone_number(params = {}, **options)
-      req = build_request(:delete_phone_number, params)
+    def delete_phone_number(, **options)
+      req = build_request(:delete_phone_number, )
       req.send_request(options)
     end
 
@@ -2477,8 +2477,8 @@ module Aws::Chime
     #
     # @overload delete_proxy_session(**params)
     # @param [Hash] params ({})
-    def delete_proxy_session(params = {}, **options)
-      req = build_request(:delete_proxy_session, params)
+    def delete_proxy_session(, **options)
+      req = build_request(:delete_proxy_session, )
       req.send_request(options)
     end
 
@@ -2503,8 +2503,8 @@ module Aws::Chime
     #
     # @overload delete_room(**params)
     # @param [Hash] params ({})
-    def delete_room(params = {}, **options)
-      req = build_request(:delete_room, params)
+    def delete_room(, **options)
+      req = build_request(:delete_room, )
       req.send_request(options)
     end
 
@@ -2534,8 +2534,8 @@ module Aws::Chime
     #
     # @overload delete_room_membership(**params)
     # @param [Hash] params ({})
-    def delete_room_membership(params = {}, **options)
-      req = build_request(:delete_room_membership, params)
+    def delete_room_membership(, **options)
+      req = build_request(:delete_room_membership, )
       req.send_request(options)
     end
 
@@ -2556,8 +2556,8 @@ module Aws::Chime
     #
     # @overload delete_sip_media_application(**params)
     # @param [Hash] params ({})
-    def delete_sip_media_application(params = {}, **options)
-      req = build_request(:delete_sip_media_application, params)
+    def delete_sip_media_application(, **options)
+      req = build_request(:delete_sip_media_application, )
       req.send_request(options)
     end
 
@@ -2579,8 +2579,8 @@ module Aws::Chime
     #
     # @overload delete_sip_rule(**params)
     # @param [Hash] params ({})
-    def delete_sip_rule(params = {}, **options)
-      req = build_request(:delete_sip_rule, params)
+    def delete_sip_rule(, **options)
+      req = build_request(:delete_sip_rule, )
       req.send_request(options)
     end
 
@@ -2603,8 +2603,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector(params = {}, **options)
-      req = build_request(:delete_voice_connector, params)
+    def delete_voice_connector(, **options)
+      req = build_request(:delete_voice_connector, )
       req.send_request(options)
     end
 
@@ -2626,8 +2626,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_emergency_calling_configuration(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_emergency_calling_configuration(params = {}, **options)
-      req = build_request(:delete_voice_connector_emergency_calling_configuration, params)
+    def delete_voice_connector_emergency_calling_configuration(, **options)
+      req = build_request(:delete_voice_connector_emergency_calling_configuration, )
       req.send_request(options)
     end
 
@@ -2650,8 +2650,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_group(params = {}, **options)
-      req = build_request(:delete_voice_connector_group, params)
+    def delete_voice_connector_group(, **options)
+      req = build_request(:delete_voice_connector_group, )
       req.send_request(options)
     end
 
@@ -2679,8 +2679,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_origination(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_origination(params = {}, **options)
-      req = build_request(:delete_voice_connector_origination, params)
+    def delete_voice_connector_origination(, **options)
+      req = build_request(:delete_voice_connector_origination, )
       req.send_request(options)
     end
 
@@ -2702,8 +2702,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_proxy(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_proxy(params = {}, **options)
-      req = build_request(:delete_voice_connector_proxy, params)
+    def delete_voice_connector_proxy(, **options)
+      req = build_request(:delete_voice_connector_proxy, )
       req.send_request(options)
     end
 
@@ -2725,8 +2725,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_streaming_configuration(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_streaming_configuration(params = {}, **options)
-      req = build_request(:delete_voice_connector_streaming_configuration, params)
+    def delete_voice_connector_streaming_configuration(, **options)
+      req = build_request(:delete_voice_connector_streaming_configuration, )
       req.send_request(options)
     end
 
@@ -2754,8 +2754,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_termination(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_termination(params = {}, **options)
-      req = build_request(:delete_voice_connector_termination, params)
+    def delete_voice_connector_termination(, **options)
+      req = build_request(:delete_voice_connector_termination, )
       req.send_request(options)
     end
 
@@ -2782,8 +2782,8 @@ module Aws::Chime
     #
     # @overload delete_voice_connector_termination_credentials(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_termination_credentials(params = {}, **options)
-      req = build_request(:delete_voice_connector_termination_credentials, params)
+    def delete_voice_connector_termination_credentials(, **options)
+      req = build_request(:delete_voice_connector_termination_credentials, )
       req.send_request(options)
     end
 
@@ -2814,8 +2814,8 @@ module Aws::Chime
     #
     # @overload describe_app_instance(**params)
     # @param [Hash] params ({})
-    def describe_app_instance(params = {}, **options)
-      req = build_request(:describe_app_instance, params)
+    def describe_app_instance(, **options)
+      req = build_request(:describe_app_instance, )
       req.send_request(options)
     end
 
@@ -2849,8 +2849,8 @@ module Aws::Chime
     #
     # @overload describe_app_instance_admin(**params)
     # @param [Hash] params ({})
-    def describe_app_instance_admin(params = {}, **options)
-      req = build_request(:describe_app_instance_admin, params)
+    def describe_app_instance_admin(, **options)
+      req = build_request(:describe_app_instance_admin, )
       req.send_request(options)
     end
 
@@ -2881,8 +2881,8 @@ module Aws::Chime
     #
     # @overload describe_app_instance_user(**params)
     # @param [Hash] params ({})
-    def describe_app_instance_user(params = {}, **options)
-      req = build_request(:describe_app_instance_user, params)
+    def describe_app_instance_user(, **options)
+      req = build_request(:describe_app_instance_user, )
       req.send_request(options)
     end
 
@@ -2918,8 +2918,8 @@ module Aws::Chime
     #
     # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, **options)
-      req = build_request(:describe_channel, params)
+    def describe_channel(, **options)
+      req = build_request(:describe_channel, )
       req.send_request(options)
     end
 
@@ -2955,8 +2955,8 @@ module Aws::Chime
     #
     # @overload describe_channel_ban(**params)
     # @param [Hash] params ({})
-    def describe_channel_ban(params = {}, **options)
-      req = build_request(:describe_channel_ban, params)
+    def describe_channel_ban(, **options)
+      req = build_request(:describe_channel_ban, )
       req.send_request(options)
     end
 
@@ -2994,8 +2994,8 @@ module Aws::Chime
     #
     # @overload describe_channel_membership(**params)
     # @param [Hash] params ({})
-    def describe_channel_membership(params = {}, **options)
-      req = build_request(:describe_channel_membership, params)
+    def describe_channel_membership(, **options)
+      req = build_request(:describe_channel_membership, )
       req.send_request(options)
     end
 
@@ -3034,8 +3034,8 @@ module Aws::Chime
     #
     # @overload describe_channel_membership_for_app_instance_user(**params)
     # @param [Hash] params ({})
-    def describe_channel_membership_for_app_instance_user(params = {}, **options)
-      req = build_request(:describe_channel_membership_for_app_instance_user, params)
+    def describe_channel_membership_for_app_instance_user(, **options)
+      req = build_request(:describe_channel_membership_for_app_instance_user, )
       req.send_request(options)
     end
 
@@ -3072,8 +3072,8 @@ module Aws::Chime
     #
     # @overload describe_channel_moderated_by_app_instance_user(**params)
     # @param [Hash] params ({})
-    def describe_channel_moderated_by_app_instance_user(params = {}, **options)
-      req = build_request(:describe_channel_moderated_by_app_instance_user, params)
+    def describe_channel_moderated_by_app_instance_user(, **options)
+      req = build_request(:describe_channel_moderated_by_app_instance_user, )
       req.send_request(options)
     end
 
@@ -3109,8 +3109,8 @@ module Aws::Chime
     #
     # @overload describe_channel_moderator(**params)
     # @param [Hash] params ({})
-    def describe_channel_moderator(params = {}, **options)
-      req = build_request(:describe_channel_moderator, params)
+    def describe_channel_moderator(, **options)
+      req = build_request(:describe_channel_moderator, )
       req.send_request(options)
     end
 
@@ -3136,8 +3136,8 @@ module Aws::Chime
     #
     # @overload disassociate_phone_number_from_user(**params)
     # @param [Hash] params ({})
-    def disassociate_phone_number_from_user(params = {}, **options)
-      req = build_request(:disassociate_phone_number_from_user, params)
+    def disassociate_phone_number_from_user(, **options)
+      req = build_request(:disassociate_phone_number_from_user, )
       req.send_request(options)
     end
 
@@ -3172,8 +3172,8 @@ module Aws::Chime
     #
     # @overload disassociate_phone_numbers_from_voice_connector(**params)
     # @param [Hash] params ({})
-    def disassociate_phone_numbers_from_voice_connector(params = {}, **options)
-      req = build_request(:disassociate_phone_numbers_from_voice_connector, params)
+    def disassociate_phone_numbers_from_voice_connector(, **options)
+      req = build_request(:disassociate_phone_numbers_from_voice_connector, )
       req.send_request(options)
     end
 
@@ -3208,8 +3208,8 @@ module Aws::Chime
     #
     # @overload disassociate_phone_numbers_from_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def disassociate_phone_numbers_from_voice_connector_group(params = {}, **options)
-      req = build_request(:disassociate_phone_numbers_from_voice_connector_group, params)
+    def disassociate_phone_numbers_from_voice_connector_group(, **options)
+      req = build_request(:disassociate_phone_numbers_from_voice_connector_group, )
       req.send_request(options)
     end
 
@@ -3235,8 +3235,8 @@ module Aws::Chime
     #
     # @overload disassociate_signin_delegate_groups_from_account(**params)
     # @param [Hash] params ({})
-    def disassociate_signin_delegate_groups_from_account(params = {}, **options)
-      req = build_request(:disassociate_signin_delegate_groups_from_account, params)
+    def disassociate_signin_delegate_groups_from_account(, **options)
+      req = build_request(:disassociate_signin_delegate_groups_from_account, )
       req.send_request(options)
     end
 
@@ -3273,8 +3273,8 @@ module Aws::Chime
     #
     # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, **options)
-      req = build_request(:get_account, params)
+    def get_account(, **options)
+      req = build_request(:get_account, )
       req.send_request(options)
     end
 
@@ -3309,8 +3309,8 @@ module Aws::Chime
     #
     # @overload get_account_settings(**params)
     # @param [Hash] params ({})
-    def get_account_settings(params = {}, **options)
-      req = build_request(:get_account_settings, params)
+    def get_account_settings(, **options)
+      req = build_request(:get_account_settings, )
       req.send_request(options)
     end
 
@@ -3339,8 +3339,8 @@ module Aws::Chime
     #
     # @overload get_app_instance_retention_settings(**params)
     # @param [Hash] params ({})
-    def get_app_instance_retention_settings(params = {}, **options)
-      req = build_request(:get_app_instance_retention_settings, params)
+    def get_app_instance_retention_settings(, **options)
+      req = build_request(:get_app_instance_retention_settings, )
       req.send_request(options)
     end
 
@@ -3369,8 +3369,8 @@ module Aws::Chime
     #
     # @overload get_app_instance_streaming_configurations(**params)
     # @param [Hash] params ({})
-    def get_app_instance_streaming_configurations(params = {}, **options)
-      req = build_request(:get_app_instance_streaming_configurations, params)
+    def get_app_instance_streaming_configurations(, **options)
+      req = build_request(:get_app_instance_streaming_configurations, )
       req.send_request(options)
     end
 
@@ -3409,8 +3409,8 @@ module Aws::Chime
     #
     # @overload get_attendee(**params)
     # @param [Hash] params ({})
-    def get_attendee(params = {}, **options)
-      req = build_request(:get_attendee, params)
+    def get_attendee(, **options)
+      req = build_request(:get_attendee, )
       req.send_request(options)
     end
 
@@ -3450,8 +3450,8 @@ module Aws::Chime
     #
     # @overload get_bot(**params)
     # @param [Hash] params ({})
-    def get_bot(params = {}, **options)
-      req = build_request(:get_bot, params)
+    def get_bot(, **options)
+      req = build_request(:get_bot, )
       req.send_request(options)
     end
 
@@ -3493,8 +3493,8 @@ module Aws::Chime
     #
     # @overload get_channel_message(**params)
     # @param [Hash] params ({})
-    def get_channel_message(params = {}, **options)
-      req = build_request(:get_channel_message, params)
+    def get_channel_message(, **options)
+      req = build_request(:get_channel_message, )
       req.send_request(options)
     end
 
@@ -3528,8 +3528,8 @@ module Aws::Chime
     #
     # @overload get_events_configuration(**params)
     # @param [Hash] params ({})
-    def get_events_configuration(params = {}, **options)
-      req = build_request(:get_events_configuration, params)
+    def get_events_configuration(, **options)
+      req = build_request(:get_events_configuration, )
       req.send_request(options)
     end
 
@@ -3551,8 +3551,8 @@ module Aws::Chime
     #
     # @overload get_global_settings(**params)
     # @param [Hash] params ({})
-    def get_global_settings(params = {}, **options)
-      req = build_request(:get_global_settings, params)
+    def get_global_settings(, **options)
+      req = build_request(:get_global_settings, )
       req.send_request(options)
     end
 
@@ -3594,8 +3594,8 @@ module Aws::Chime
     #
     # @overload get_meeting(**params)
     # @param [Hash] params ({})
-    def get_meeting(params = {}, **options)
-      req = build_request(:get_meeting, params)
+    def get_meeting(, **options)
+      req = build_request(:get_meeting, )
       req.send_request(options)
     end
 
@@ -3613,8 +3613,8 @@ module Aws::Chime
     #
     # @overload get_messaging_session_endpoint(**params)
     # @param [Hash] params ({})
-    def get_messaging_session_endpoint(params = {}, **options)
-      req = build_request(:get_messaging_session_endpoint, params)
+    def get_messaging_session_endpoint(, **options)
+      req = build_request(:get_messaging_session_endpoint, )
       req.send_request(options)
     end
 
@@ -3661,8 +3661,8 @@ module Aws::Chime
     #
     # @overload get_phone_number(**params)
     # @param [Hash] params ({})
-    def get_phone_number(params = {}, **options)
-      req = build_request(:get_phone_number, params)
+    def get_phone_number(, **options)
+      req = build_request(:get_phone_number, )
       req.send_request(options)
     end
 
@@ -3698,8 +3698,8 @@ module Aws::Chime
     #
     # @overload get_phone_number_order(**params)
     # @param [Hash] params ({})
-    def get_phone_number_order(params = {}, **options)
-      req = build_request(:get_phone_number_order, params)
+    def get_phone_number_order(, **options)
+      req = build_request(:get_phone_number_order, )
       req.send_request(options)
     end
 
@@ -3720,8 +3720,8 @@ module Aws::Chime
     #
     # @overload get_phone_number_settings(**params)
     # @param [Hash] params ({})
-    def get_phone_number_settings(params = {}, **options)
-      req = build_request(:get_phone_number_settings, params)
+    def get_phone_number_settings(, **options)
+      req = build_request(:get_phone_number_settings, )
       req.send_request(options)
     end
 
@@ -3769,8 +3769,8 @@ module Aws::Chime
     #
     # @overload get_proxy_session(**params)
     # @param [Hash] params ({})
-    def get_proxy_session(params = {}, **options)
-      req = build_request(:get_proxy_session, params)
+    def get_proxy_session(, **options)
+      req = build_request(:get_proxy_session, )
       req.send_request(options)
     end
 
@@ -3807,8 +3807,8 @@ module Aws::Chime
     #
     # @overload get_retention_settings(**params)
     # @param [Hash] params ({})
-    def get_retention_settings(params = {}, **options)
-      req = build_request(:get_retention_settings, params)
+    def get_retention_settings(, **options)
+      req = build_request(:get_retention_settings, )
       req.send_request(options)
     end
 
@@ -3845,8 +3845,8 @@ module Aws::Chime
     #
     # @overload get_room(**params)
     # @param [Hash] params ({})
-    def get_room(params = {}, **options)
-      req = build_request(:get_room, params)
+    def get_room(, **options)
+      req = build_request(:get_room, )
       req.send_request(options)
     end
 
@@ -3880,8 +3880,8 @@ module Aws::Chime
     #
     # @overload get_sip_media_application(**params)
     # @param [Hash] params ({})
-    def get_sip_media_application(params = {}, **options)
-      req = build_request(:get_sip_media_application, params)
+    def get_sip_media_application(, **options)
+      req = build_request(:get_sip_media_application, )
       req.send_request(options)
     end
 
@@ -3909,8 +3909,8 @@ module Aws::Chime
     #
     # @overload get_sip_media_application_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_sip_media_application_logging_configuration(params = {}, **options)
-      req = build_request(:get_sip_media_application_logging_configuration, params)
+    def get_sip_media_application_logging_configuration(, **options)
+      req = build_request(:get_sip_media_application_logging_configuration, )
       req.send_request(options)
     end
 
@@ -3948,8 +3948,8 @@ module Aws::Chime
     #
     # @overload get_sip_rule(**params)
     # @param [Hash] params ({})
-    def get_sip_rule(params = {}, **options)
-      req = build_request(:get_sip_rule, params)
+    def get_sip_rule(, **options)
+      req = build_request(:get_sip_rule, )
       req.send_request(options)
     end
 
@@ -3997,8 +3997,8 @@ module Aws::Chime
     #
     # @overload get_user(**params)
     # @param [Hash] params ({})
-    def get_user(params = {}, **options)
-      req = build_request(:get_user, params)
+    def get_user(, **options)
+      req = build_request(:get_user, )
       req.send_request(options)
     end
 
@@ -4032,8 +4032,8 @@ module Aws::Chime
     #
     # @overload get_user_settings(**params)
     # @param [Hash] params ({})
-    def get_user_settings(params = {}, **options)
-      req = build_request(:get_user_settings, params)
+    def get_user_settings(, **options)
+      req = build_request(:get_user_settings, )
       req.send_request(options)
     end
 
@@ -4067,8 +4067,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector(**params)
     # @param [Hash] params ({})
-    def get_voice_connector(params = {}, **options)
-      req = build_request(:get_voice_connector, params)
+    def get_voice_connector(, **options)
+      req = build_request(:get_voice_connector, )
       req.send_request(options)
     end
 
@@ -4099,8 +4099,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_emergency_calling_configuration(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_emergency_calling_configuration(params = {}, **options)
-      req = build_request(:get_voice_connector_emergency_calling_configuration, params)
+    def get_voice_connector_emergency_calling_configuration(, **options)
+      req = build_request(:get_voice_connector_emergency_calling_configuration, )
       req.send_request(options)
     end
 
@@ -4134,8 +4134,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_group(params = {}, **options)
-      req = build_request(:get_voice_connector_group, params)
+    def get_voice_connector_group(, **options)
+      req = build_request(:get_voice_connector_group, )
       req.send_request(options)
     end
 
@@ -4164,8 +4164,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_logging_configuration(params = {}, **options)
-      req = build_request(:get_voice_connector_logging_configuration, params)
+    def get_voice_connector_logging_configuration(, **options)
+      req = build_request(:get_voice_connector_logging_configuration, )
       req.send_request(options)
     end
 
@@ -4199,8 +4199,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_origination(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_origination(params = {}, **options)
-      req = build_request(:get_voice_connector_origination, params)
+    def get_voice_connector_origination(, **options)
+      req = build_request(:get_voice_connector_origination, )
       req.send_request(options)
     end
 
@@ -4232,8 +4232,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_proxy(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_proxy(params = {}, **options)
-      req = build_request(:get_voice_connector_proxy, params)
+    def get_voice_connector_proxy(, **options)
+      req = build_request(:get_voice_connector_proxy, )
       req.send_request(options)
     end
 
@@ -4266,8 +4266,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_streaming_configuration(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_streaming_configuration(params = {}, **options)
-      req = build_request(:get_voice_connector_streaming_configuration, params)
+    def get_voice_connector_streaming_configuration(, **options)
+      req = build_request(:get_voice_connector_streaming_configuration, )
       req.send_request(options)
     end
 
@@ -4301,8 +4301,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_termination(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_termination(params = {}, **options)
-      req = build_request(:get_voice_connector_termination, params)
+    def get_voice_connector_termination(, **options)
+      req = build_request(:get_voice_connector_termination, )
       req.send_request(options)
     end
 
@@ -4332,8 +4332,8 @@ module Aws::Chime
     #
     # @overload get_voice_connector_termination_health(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_termination_health(params = {}, **options)
-      req = build_request(:get_voice_connector_termination_health, params)
+    def get_voice_connector_termination_health(, **options)
+      req = build_request(:get_voice_connector_termination_health, )
       req.send_request(options)
     end
 
@@ -4374,8 +4374,8 @@ module Aws::Chime
     #
     # @overload invite_users(**params)
     # @param [Hash] params ({})
-    def invite_users(params = {}, **options)
-      req = build_request(:invite_users, params)
+    def invite_users(, **options)
+      req = build_request(:invite_users, )
       req.send_request(options)
     end
 
@@ -4432,8 +4432,8 @@ module Aws::Chime
     #
     # @overload list_accounts(**params)
     # @param [Hash] params ({})
-    def list_accounts(params = {}, **options)
-      req = build_request(:list_accounts, params)
+    def list_accounts(, **options)
+      req = build_request(:list_accounts, )
       req.send_request(options)
     end
 
@@ -4477,8 +4477,8 @@ module Aws::Chime
     #
     # @overload list_app_instance_admins(**params)
     # @param [Hash] params ({})
-    def list_app_instance_admins(params = {}, **options)
-      req = build_request(:list_app_instance_admins, params)
+    def list_app_instance_admins(, **options)
+      req = build_request(:list_app_instance_admins, )
       req.send_request(options)
     end
 
@@ -4523,8 +4523,8 @@ module Aws::Chime
     #
     # @overload list_app_instance_users(**params)
     # @param [Hash] params ({})
-    def list_app_instance_users(params = {}, **options)
-      req = build_request(:list_app_instance_users, params)
+    def list_app_instance_users(, **options)
+      req = build_request(:list_app_instance_users, )
       req.send_request(options)
     end
 
@@ -4564,8 +4564,8 @@ module Aws::Chime
     #
     # @overload list_app_instances(**params)
     # @param [Hash] params ({})
-    def list_app_instances(params = {}, **options)
-      req = build_request(:list_app_instances, params)
+    def list_app_instances(, **options)
+      req = build_request(:list_app_instances, )
       req.send_request(options)
     end
 
@@ -4598,8 +4598,8 @@ module Aws::Chime
     #
     # @overload list_attendee_tags(**params)
     # @param [Hash] params ({})
-    def list_attendee_tags(params = {}, **options)
-      req = build_request(:list_attendee_tags, params)
+    def list_attendee_tags(, **options)
+      req = build_request(:list_attendee_tags, )
       req.send_request(options)
     end
 
@@ -4647,8 +4647,8 @@ module Aws::Chime
     #
     # @overload list_attendees(**params)
     # @param [Hash] params ({})
-    def list_attendees(params = {}, **options)
-      req = build_request(:list_attendees, params)
+    def list_attendees(, **options)
+      req = build_request(:list_attendees, )
       req.send_request(options)
     end
 
@@ -4698,8 +4698,8 @@ module Aws::Chime
     #
     # @overload list_bots(**params)
     # @param [Hash] params ({})
-    def list_bots(params = {}, **options)
-      req = build_request(:list_bots, params)
+    def list_bots(, **options)
+      req = build_request(:list_bots, )
       req.send_request(options)
     end
 
@@ -4743,8 +4743,8 @@ module Aws::Chime
     #
     # @overload list_channel_bans(**params)
     # @param [Hash] params ({})
-    def list_channel_bans(params = {}, **options)
-      req = build_request(:list_channel_bans, params)
+    def list_channel_bans(, **options)
+      req = build_request(:list_channel_bans, )
       req.send_request(options)
     end
 
@@ -4796,8 +4796,8 @@ module Aws::Chime
     #
     # @overload list_channel_memberships(**params)
     # @param [Hash] params ({})
-    def list_channel_memberships(params = {}, **options)
-      req = build_request(:list_channel_memberships, params)
+    def list_channel_memberships(, **options)
+      req = build_request(:list_channel_memberships, )
       req.send_request(options)
     end
 
@@ -4847,8 +4847,8 @@ module Aws::Chime
     #
     # @overload list_channel_memberships_for_app_instance_user(**params)
     # @param [Hash] params ({})
-    def list_channel_memberships_for_app_instance_user(params = {}, **options)
-      req = build_request(:list_channel_memberships_for_app_instance_user, params)
+    def list_channel_memberships_for_app_instance_user(, **options)
+      req = build_request(:list_channel_memberships_for_app_instance_user, )
       req.send_request(options)
     end
 
@@ -4921,8 +4921,8 @@ module Aws::Chime
     #
     # @overload list_channel_messages(**params)
     # @param [Hash] params ({})
-    def list_channel_messages(params = {}, **options)
-      req = build_request(:list_channel_messages, params)
+    def list_channel_messages(, **options)
+      req = build_request(:list_channel_messages, )
       req.send_request(options)
     end
 
@@ -4966,8 +4966,8 @@ module Aws::Chime
     #
     # @overload list_channel_moderators(**params)
     # @param [Hash] params ({})
-    def list_channel_moderators(params = {}, **options)
-      req = build_request(:list_channel_moderators, params)
+    def list_channel_moderators(, **options)
+      req = build_request(:list_channel_moderators, )
       req.send_request(options)
     end
 
@@ -5028,8 +5028,8 @@ module Aws::Chime
     #
     # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, **options)
-      req = build_request(:list_channels, params)
+    def list_channels(, **options)
+      req = build_request(:list_channels, )
       req.send_request(options)
     end
 
@@ -5075,8 +5075,8 @@ module Aws::Chime
     #
     # @overload list_channels_moderated_by_app_instance_user(**params)
     # @param [Hash] params ({})
-    def list_channels_moderated_by_app_instance_user(params = {}, **options)
-      req = build_request(:list_channels_moderated_by_app_instance_user, params)
+    def list_channels_moderated_by_app_instance_user(, **options)
+      req = build_request(:list_channels_moderated_by_app_instance_user, )
       req.send_request(options)
     end
 
@@ -5105,8 +5105,8 @@ module Aws::Chime
     #
     # @overload list_meeting_tags(**params)
     # @param [Hash] params ({})
-    def list_meeting_tags(params = {}, **options)
-      req = build_request(:list_meeting_tags, params)
+    def list_meeting_tags(, **options)
+      req = build_request(:list_meeting_tags, )
       req.send_request(options)
     end
 
@@ -5157,8 +5157,8 @@ module Aws::Chime
     #
     # @overload list_meetings(**params)
     # @param [Hash] params ({})
-    def list_meetings(params = {}, **options)
-      req = build_request(:list_meetings, params)
+    def list_meetings(, **options)
+      req = build_request(:list_meetings, )
       req.send_request(options)
     end
 
@@ -5202,8 +5202,8 @@ module Aws::Chime
     #
     # @overload list_phone_number_orders(**params)
     # @param [Hash] params ({})
-    def list_phone_number_orders(params = {}, **options)
-      req = build_request(:list_phone_number_orders, params)
+    def list_phone_number_orders(, **options)
+      req = build_request(:list_phone_number_orders, )
       req.send_request(options)
     end
 
@@ -5276,8 +5276,8 @@ module Aws::Chime
     #
     # @overload list_phone_numbers(**params)
     # @param [Hash] params ({})
-    def list_phone_numbers(params = {}, **options)
-      req = build_request(:list_phone_numbers, params)
+    def list_phone_numbers(, **options)
+      req = build_request(:list_phone_numbers, )
       req.send_request(options)
     end
 
@@ -5338,8 +5338,8 @@ module Aws::Chime
     #
     # @overload list_proxy_sessions(**params)
     # @param [Hash] params ({})
-    def list_proxy_sessions(params = {}, **options)
-      req = build_request(:list_proxy_sessions, params)
+    def list_proxy_sessions(, **options)
+      req = build_request(:list_proxy_sessions, )
       req.send_request(options)
     end
 
@@ -5393,8 +5393,8 @@ module Aws::Chime
     #
     # @overload list_room_memberships(**params)
     # @param [Hash] params ({})
-    def list_room_memberships(params = {}, **options)
-      req = build_request(:list_room_memberships, params)
+    def list_room_memberships(, **options)
+      req = build_request(:list_room_memberships, )
       req.send_request(options)
     end
 
@@ -5445,8 +5445,8 @@ module Aws::Chime
     #
     # @overload list_rooms(**params)
     # @param [Hash] params ({})
-    def list_rooms(params = {}, **options)
-      req = build_request(:list_rooms, params)
+    def list_rooms(, **options)
+      req = build_request(:list_rooms, )
       req.send_request(options)
     end
 
@@ -5490,8 +5490,8 @@ module Aws::Chime
     #
     # @overload list_sip_media_applications(**params)
     # @param [Hash] params ({})
-    def list_sip_media_applications(params = {}, **options)
-      req = build_request(:list_sip_media_applications, params)
+    def list_sip_media_applications(, **options)
+      req = build_request(:list_sip_media_applications, )
       req.send_request(options)
     end
 
@@ -5542,8 +5542,8 @@ module Aws::Chime
     #
     # @overload list_sip_rules(**params)
     # @param [Hash] params ({})
-    def list_sip_rules(params = {}, **options)
-      req = build_request(:list_sip_rules, params)
+    def list_sip_rules(, **options)
+      req = build_request(:list_sip_rules, )
       req.send_request(options)
     end
 
@@ -5572,8 +5572,8 @@ module Aws::Chime
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -5637,8 +5637,8 @@ module Aws::Chime
     #
     # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, **options)
-      req = build_request(:list_users, params)
+    def list_users(, **options)
+      req = build_request(:list_users, )
       req.send_request(options)
     end
 
@@ -5681,8 +5681,8 @@ module Aws::Chime
     #
     # @overload list_voice_connector_groups(**params)
     # @param [Hash] params ({})
-    def list_voice_connector_groups(params = {}, **options)
-      req = build_request(:list_voice_connector_groups, params)
+    def list_voice_connector_groups(, **options)
+      req = build_request(:list_voice_connector_groups, )
       req.send_request(options)
     end
 
@@ -5711,8 +5711,8 @@ module Aws::Chime
     #
     # @overload list_voice_connector_termination_credentials(**params)
     # @param [Hash] params ({})
-    def list_voice_connector_termination_credentials(params = {}, **options)
-      req = build_request(:list_voice_connector_termination_credentials, params)
+    def list_voice_connector_termination_credentials(, **options)
+      req = build_request(:list_voice_connector_termination_credentials, )
       req.send_request(options)
     end
 
@@ -5755,8 +5755,8 @@ module Aws::Chime
     #
     # @overload list_voice_connectors(**params)
     # @param [Hash] params ({})
-    def list_voice_connectors(params = {}, **options)
-      req = build_request(:list_voice_connectors, params)
+    def list_voice_connectors(, **options)
+      req = build_request(:list_voice_connectors, )
       req.send_request(options)
     end
 
@@ -5782,8 +5782,8 @@ module Aws::Chime
     #
     # @overload logout_user(**params)
     # @param [Hash] params ({})
-    def logout_user(params = {}, **options)
-      req = build_request(:logout_user, params)
+    def logout_user(, **options)
+      req = build_request(:logout_user, )
       req.send_request(options)
     end
 
@@ -5821,8 +5821,8 @@ module Aws::Chime
     #
     # @overload put_app_instance_retention_settings(**params)
     # @param [Hash] params ({})
-    def put_app_instance_retention_settings(params = {}, **options)
-      req = build_request(:put_app_instance_retention_settings, params)
+    def put_app_instance_retention_settings(, **options)
+      req = build_request(:put_app_instance_retention_settings, )
       req.send_request(options)
     end
 
@@ -5860,8 +5860,8 @@ module Aws::Chime
     #
     # @overload put_app_instance_streaming_configurations(**params)
     # @param [Hash] params ({})
-    def put_app_instance_streaming_configurations(params = {}, **options)
-      req = build_request(:put_app_instance_streaming_configurations, params)
+    def put_app_instance_streaming_configurations(, **options)
+      req = build_request(:put_app_instance_streaming_configurations, )
       req.send_request(options)
     end
 
@@ -5904,8 +5904,8 @@ module Aws::Chime
     #
     # @overload put_events_configuration(**params)
     # @param [Hash] params ({})
-    def put_events_configuration(params = {}, **options)
-      req = build_request(:put_events_configuration, params)
+    def put_events_configuration(, **options)
+      req = build_request(:put_events_configuration, )
       req.send_request(options)
     end
 
@@ -5961,8 +5961,8 @@ module Aws::Chime
     #
     # @overload put_retention_settings(**params)
     # @param [Hash] params ({})
-    def put_retention_settings(params = {}, **options)
-      req = build_request(:put_retention_settings, params)
+    def put_retention_settings(, **options)
+      req = build_request(:put_retention_settings, )
       req.send_request(options)
     end
 
@@ -5996,8 +5996,8 @@ module Aws::Chime
     #
     # @overload put_sip_media_application_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_sip_media_application_logging_configuration(params = {}, **options)
-      req = build_request(:put_sip_media_application_logging_configuration, params)
+    def put_sip_media_application_logging_configuration(, **options)
+      req = build_request(:put_sip_media_application_logging_configuration, )
       req.send_request(options)
     end
 
@@ -6043,8 +6043,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_emergency_calling_configuration(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_emergency_calling_configuration(params = {}, **options)
-      req = build_request(:put_voice_connector_emergency_calling_configuration, params)
+    def put_voice_connector_emergency_calling_configuration(, **options)
+      req = build_request(:put_voice_connector_emergency_calling_configuration, )
       req.send_request(options)
     end
 
@@ -6079,8 +6079,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_logging_configuration(params = {}, **options)
-      req = build_request(:put_voice_connector_logging_configuration, params)
+    def put_voice_connector_logging_configuration(, **options)
+      req = build_request(:put_voice_connector_logging_configuration, )
       req.send_request(options)
     end
 
@@ -6135,8 +6135,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_origination(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_origination(params = {}, **options)
-      req = build_request(:put_voice_connector_origination, params)
+    def put_voice_connector_origination(, **options)
+      req = build_request(:put_voice_connector_origination, )
       req.send_request(options)
     end
 
@@ -6185,8 +6185,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_proxy(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_proxy(params = {}, **options)
-      req = build_request(:put_voice_connector_proxy, params)
+    def put_voice_connector_proxy(, **options)
+      req = build_request(:put_voice_connector_proxy, )
       req.send_request(options)
     end
 
@@ -6231,8 +6231,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_streaming_configuration(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_streaming_configuration(params = {}, **options)
-      req = build_request(:put_voice_connector_streaming_configuration, params)
+    def put_voice_connector_streaming_configuration(, **options)
+      req = build_request(:put_voice_connector_streaming_configuration, )
       req.send_request(options)
     end
 
@@ -6282,8 +6282,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_termination(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_termination(params = {}, **options)
-      req = build_request(:put_voice_connector_termination, params)
+    def put_voice_connector_termination(, **options)
+      req = build_request(:put_voice_connector_termination, )
       req.send_request(options)
     end
 
@@ -6314,8 +6314,8 @@ module Aws::Chime
     #
     # @overload put_voice_connector_termination_credentials(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_termination_credentials(params = {}, **options)
-      req = build_request(:put_voice_connector_termination_credentials, params)
+    def put_voice_connector_termination_credentials(, **options)
+      req = build_request(:put_voice_connector_termination_credentials, )
       req.send_request(options)
     end
 
@@ -6351,8 +6351,8 @@ module Aws::Chime
     #
     # @overload redact_channel_message(**params)
     # @param [Hash] params ({})
-    def redact_channel_message(params = {}, **options)
-      req = build_request(:redact_channel_message, params)
+    def redact_channel_message(, **options)
+      req = build_request(:redact_channel_message, )
       req.send_request(options)
     end
 
@@ -6382,8 +6382,8 @@ module Aws::Chime
     #
     # @overload redact_conversation_message(**params)
     # @param [Hash] params ({})
-    def redact_conversation_message(params = {}, **options)
-      req = build_request(:redact_conversation_message, params)
+    def redact_conversation_message(, **options)
+      req = build_request(:redact_conversation_message, )
       req.send_request(options)
     end
 
@@ -6412,8 +6412,8 @@ module Aws::Chime
     #
     # @overload redact_room_message(**params)
     # @param [Hash] params ({})
-    def redact_room_message(params = {}, **options)
-      req = build_request(:redact_room_message, params)
+    def redact_room_message(, **options)
+      req = build_request(:redact_room_message, )
       req.send_request(options)
     end
 
@@ -6452,8 +6452,8 @@ module Aws::Chime
     #
     # @overload regenerate_security_token(**params)
     # @param [Hash] params ({})
-    def regenerate_security_token(params = {}, **options)
-      req = build_request(:regenerate_security_token, params)
+    def regenerate_security_token(, **options)
+      req = build_request(:regenerate_security_token, )
       req.send_request(options)
     end
 
@@ -6499,8 +6499,8 @@ module Aws::Chime
     #
     # @overload reset_personal_pin(**params)
     # @param [Hash] params ({})
-    def reset_personal_pin(params = {}, **options)
-      req = build_request(:reset_personal_pin, params)
+    def reset_personal_pin(, **options)
+      req = build_request(:reset_personal_pin, )
       req.send_request(options)
     end
 
@@ -6547,8 +6547,8 @@ module Aws::Chime
     #
     # @overload restore_phone_number(**params)
     # @param [Hash] params ({})
-    def restore_phone_number(params = {}, **options)
-      req = build_request(:restore_phone_number, params)
+    def restore_phone_number(, **options)
+      req = build_request(:restore_phone_number, )
       req.send_request(options)
     end
 
@@ -6600,8 +6600,8 @@ module Aws::Chime
     #
     # @overload search_available_phone_numbers(**params)
     # @param [Hash] params ({})
-    def search_available_phone_numbers(params = {}, **options)
-      req = build_request(:search_available_phone_numbers, params)
+    def search_available_phone_numbers(, **options)
+      req = build_request(:search_available_phone_numbers, )
       req.send_request(options)
     end
 
@@ -6659,8 +6659,8 @@ module Aws::Chime
     #
     # @overload send_channel_message(**params)
     # @param [Hash] params ({})
-    def send_channel_message(params = {}, **options)
-      req = build_request(:send_channel_message, params)
+    def send_channel_message(, **options)
+      req = build_request(:send_channel_message, )
       req.send_request(options)
     end
 
@@ -6694,8 +6694,8 @@ module Aws::Chime
     #
     # @overload tag_attendee(**params)
     # @param [Hash] params ({})
-    def tag_attendee(params = {}, **options)
-      req = build_request(:tag_attendee, params)
+    def tag_attendee(, **options)
+      req = build_request(:tag_attendee, )
       req.send_request(options)
     end
 
@@ -6725,8 +6725,8 @@ module Aws::Chime
     #
     # @overload tag_meeting(**params)
     # @param [Hash] params ({})
-    def tag_meeting(params = {}, **options)
-      req = build_request(:tag_meeting, params)
+    def tag_meeting(, **options)
+      req = build_request(:tag_meeting, )
       req.send_request(options)
     end
 
@@ -6757,8 +6757,8 @@ module Aws::Chime
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -6788,8 +6788,8 @@ module Aws::Chime
     #
     # @overload untag_attendee(**params)
     # @param [Hash] params ({})
-    def untag_attendee(params = {}, **options)
-      req = build_request(:untag_attendee, params)
+    def untag_attendee(, **options)
+      req = build_request(:untag_attendee, )
       req.send_request(options)
     end
 
@@ -6814,8 +6814,8 @@ module Aws::Chime
     #
     # @overload untag_meeting(**params)
     # @param [Hash] params ({})
-    def untag_meeting(params = {}, **options)
-      req = build_request(:untag_meeting, params)
+    def untag_meeting(, **options)
+      req = build_request(:untag_meeting, )
       req.send_request(options)
     end
 
@@ -6841,8 +6841,8 @@ module Aws::Chime
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -6883,8 +6883,8 @@ module Aws::Chime
     #
     # @overload update_account(**params)
     # @param [Hash] params ({})
-    def update_account(params = {}, **options)
-      req = build_request(:update_account, params)
+    def update_account(, **options)
+      req = build_request(:update_account, )
       req.send_request(options)
     end
 
@@ -6919,8 +6919,8 @@ module Aws::Chime
     #
     # @overload update_account_settings(**params)
     # @param [Hash] params ({})
-    def update_account_settings(params = {}, **options)
-      req = build_request(:update_account_settings, params)
+    def update_account_settings(, **options)
+      req = build_request(:update_account_settings, )
       req.send_request(options)
     end
 
@@ -6955,8 +6955,8 @@ module Aws::Chime
     #
     # @overload update_app_instance(**params)
     # @param [Hash] params ({})
-    def update_app_instance(params = {}, **options)
-      req = build_request(:update_app_instance, params)
+    def update_app_instance(, **options)
+      req = build_request(:update_app_instance, )
       req.send_request(options)
     end
 
@@ -6992,8 +6992,8 @@ module Aws::Chime
     #
     # @overload update_app_instance_user(**params)
     # @param [Hash] params ({})
-    def update_app_instance_user(params = {}, **options)
-      req = build_request(:update_app_instance_user, params)
+    def update_app_instance_user(, **options)
+      req = build_request(:update_app_instance_user, )
       req.send_request(options)
     end
 
@@ -7037,8 +7037,8 @@ module Aws::Chime
     #
     # @overload update_bot(**params)
     # @param [Hash] params ({})
-    def update_bot(params = {}, **options)
-      req = build_request(:update_bot, params)
+    def update_bot(, **options)
+      req = build_request(:update_bot, )
       req.send_request(options)
     end
 
@@ -7079,8 +7079,8 @@ module Aws::Chime
     #
     # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, **options)
-      req = build_request(:update_channel, params)
+    def update_channel(, **options)
+      req = build_request(:update_channel, )
       req.send_request(options)
     end
 
@@ -7121,8 +7121,8 @@ module Aws::Chime
     #
     # @overload update_channel_message(**params)
     # @param [Hash] params ({})
-    def update_channel_message(params = {}, **options)
-      req = build_request(:update_channel_message, params)
+    def update_channel_message(, **options)
+      req = build_request(:update_channel_message, )
       req.send_request(options)
     end
 
@@ -7150,8 +7150,8 @@ module Aws::Chime
     #
     # @overload update_channel_read_marker(**params)
     # @param [Hash] params ({})
-    def update_channel_read_marker(params = {}, **options)
-      req = build_request(:update_channel_read_marker, params)
+    def update_channel_read_marker(, **options)
+      req = build_request(:update_channel_read_marker, )
       req.send_request(options)
     end
 
@@ -7182,8 +7182,8 @@ module Aws::Chime
     #
     # @overload update_global_settings(**params)
     # @param [Hash] params ({})
-    def update_global_settings(params = {}, **options)
-      req = build_request(:update_global_settings, params)
+    def update_global_settings(, **options)
+      req = build_request(:update_global_settings, )
       req.send_request(options)
     end
 
@@ -7247,8 +7247,8 @@ module Aws::Chime
     #
     # @overload update_phone_number(**params)
     # @param [Hash] params ({})
-    def update_phone_number(params = {}, **options)
-      req = build_request(:update_phone_number, params)
+    def update_phone_number(, **options)
+      req = build_request(:update_phone_number, )
       req.send_request(options)
     end
 
@@ -7272,8 +7272,8 @@ module Aws::Chime
     #
     # @overload update_phone_number_settings(**params)
     # @param [Hash] params ({})
-    def update_phone_number_settings(params = {}, **options)
-      req = build_request(:update_phone_number_settings, params)
+    def update_phone_number_settings(, **options)
+      req = build_request(:update_phone_number_settings, )
       req.send_request(options)
     end
 
@@ -7329,8 +7329,8 @@ module Aws::Chime
     #
     # @overload update_proxy_session(**params)
     # @param [Hash] params ({})
-    def update_proxy_session(params = {}, **options)
-      req = build_request(:update_proxy_session, params)
+    def update_proxy_session(, **options)
+      req = build_request(:update_proxy_session, )
       req.send_request(options)
     end
 
@@ -7371,8 +7371,8 @@ module Aws::Chime
     #
     # @overload update_room(**params)
     # @param [Hash] params ({})
-    def update_room(params = {}, **options)
-      req = build_request(:update_room, params)
+    def update_room(, **options)
+      req = build_request(:update_room, )
       req.send_request(options)
     end
 
@@ -7422,8 +7422,8 @@ module Aws::Chime
     #
     # @overload update_room_membership(**params)
     # @param [Hash] params ({})
-    def update_room_membership(params = {}, **options)
-      req = build_request(:update_room_membership, params)
+    def update_room_membership(, **options)
+      req = build_request(:update_room_membership, )
       req.send_request(options)
     end
 
@@ -7468,8 +7468,8 @@ module Aws::Chime
     #
     # @overload update_sip_media_application(**params)
     # @param [Hash] params ({})
-    def update_sip_media_application(params = {}, **options)
-      req = build_request(:update_sip_media_application, params)
+    def update_sip_media_application(, **options)
+      req = build_request(:update_sip_media_application, )
       req.send_request(options)
     end
 
@@ -7524,8 +7524,8 @@ module Aws::Chime
     #
     # @overload update_sip_rule(**params)
     # @param [Hash] params ({})
-    def update_sip_rule(params = {}, **options)
-      req = build_request(:update_sip_rule, params)
+    def update_sip_rule(, **options)
+      req = build_request(:update_sip_rule, )
       req.send_request(options)
     end
 
@@ -7586,8 +7586,8 @@ module Aws::Chime
     #
     # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, **options)
-      req = build_request(:update_user, params)
+    def update_user(, **options)
+      req = build_request(:update_user, )
       req.send_request(options)
     end
 
@@ -7623,8 +7623,8 @@ module Aws::Chime
     #
     # @overload update_user_settings(**params)
     # @param [Hash] params ({})
-    def update_user_settings(params = {}, **options)
-      req = build_request(:update_user_settings, params)
+    def update_user_settings(, **options)
+      req = build_request(:update_user_settings, )
       req.send_request(options)
     end
 
@@ -7666,8 +7666,8 @@ module Aws::Chime
     #
     # @overload update_voice_connector(**params)
     # @param [Hash] params ({})
-    def update_voice_connector(params = {}, **options)
-      req = build_request(:update_voice_connector, params)
+    def update_voice_connector(, **options)
+      req = build_request(:update_voice_connector, )
       req.send_request(options)
     end
 
@@ -7714,8 +7714,8 @@ module Aws::Chime
     #
     # @overload update_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def update_voice_connector_group(params = {}, **options)
-      req = build_request(:update_voice_connector_group, params)
+    def update_voice_connector_group(, **options)
+      req = build_request(:update_voice_connector_group, )
       req.send_request(options)
     end
 

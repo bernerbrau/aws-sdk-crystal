@@ -373,8 +373,8 @@ module Aws::Lightsail
     #
     # @overload allocate_static_ip(**params)
     # @param [Hash] params ({})
-    def allocate_static_ip(params = {}, **options)
-      req = build_request(:allocate_static_ip, params)
+    def allocate_static_ip(, **options)
+      req = build_request(:allocate_static_ip, )
       req.send_request(options)
     end
 
@@ -448,8 +448,8 @@ module Aws::Lightsail
     #
     # @overload attach_certificate_to_distribution(**params)
     # @param [Hash] params ({})
-    def attach_certificate_to_distribution(params = {}, **options)
-      req = build_request(:attach_certificate_to_distribution, params)
+    def attach_certificate_to_distribution(, **options)
+      req = build_request(:attach_certificate_to_distribution, )
       req.send_request(options)
     end
 
@@ -507,8 +507,8 @@ module Aws::Lightsail
     #
     # @overload attach_disk(**params)
     # @param [Hash] params ({})
-    def attach_disk(params = {}, **options)
-      req = build_request(:attach_disk, params)
+    def attach_disk(, **options)
+      req = build_request(:attach_disk, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::Lightsail
     #
     # @overload attach_instances_to_load_balancer(**params)
     # @param [Hash] params ({})
-    def attach_instances_to_load_balancer(params = {}, **options)
-      req = build_request(:attach_instances_to_load_balancer, params)
+    def attach_instances_to_load_balancer(, **options)
+      req = build_request(:attach_instances_to_load_balancer, )
       req.send_request(options)
     end
 
@@ -636,8 +636,8 @@ module Aws::Lightsail
     #
     # @overload attach_load_balancer_tls_certificate(**params)
     # @param [Hash] params ({})
-    def attach_load_balancer_tls_certificate(params = {}, **options)
-      req = build_request(:attach_load_balancer_tls_certificate, params)
+    def attach_load_balancer_tls_certificate(, **options)
+      req = build_request(:attach_load_balancer_tls_certificate, )
       req.send_request(options)
     end
 
@@ -681,8 +681,8 @@ module Aws::Lightsail
     #
     # @overload attach_static_ip(**params)
     # @param [Hash] params ({})
-    def attach_static_ip(params = {}, **options)
-      req = build_request(:attach_static_ip, params)
+    def attach_static_ip(, **options)
+      req = build_request(:attach_static_ip, )
       req.send_request(options)
     end
 
@@ -740,8 +740,8 @@ module Aws::Lightsail
     #
     # @overload close_instance_public_ports(**params)
     # @param [Hash] params ({})
-    def close_instance_public_ports(params = {}, **options)
-      req = build_request(:close_instance_public_ports, params)
+    def close_instance_public_ports(, **options)
+      req = build_request(:close_instance_public_ports, )
       req.send_request(options)
     end
 
@@ -868,8 +868,8 @@ module Aws::Lightsail
     #
     # @overload copy_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_snapshot(params = {}, **options)
-      req = build_request(:copy_snapshot, params)
+    def copy_snapshot(, **options)
+      req = build_request(:copy_snapshot, )
       req.send_request(options)
     end
 
@@ -989,8 +989,8 @@ module Aws::Lightsail
     #
     # @overload create_certificate(**params)
     # @param [Hash] params ({})
-    def create_certificate(params = {}, **options)
-      req = build_request(:create_certificate, params)
+    def create_certificate(, **options)
+      req = build_request(:create_certificate, )
       req.send_request(options)
     end
 
@@ -1049,8 +1049,8 @@ module Aws::Lightsail
     #
     # @overload create_cloud_formation_stack(**params)
     # @param [Hash] params ({})
-    def create_cloud_formation_stack(params = {}, **options)
-      req = build_request(:create_cloud_formation_stack, params)
+    def create_cloud_formation_stack(, **options)
+      req = build_request(:create_cloud_formation_stack, )
       req.send_request(options)
     end
 
@@ -1146,8 +1146,8 @@ module Aws::Lightsail
     #
     # @overload create_contact_method(**params)
     # @param [Hash] params ({})
-    def create_contact_method(params = {}, **options)
-      req = build_request(:create_contact_method, params)
+    def create_contact_method(, **options)
+      req = build_request(:create_contact_method, )
       req.send_request(options)
     end
 
@@ -1358,8 +1358,8 @@ module Aws::Lightsail
     #
     # @overload create_container_service(**params)
     # @param [Hash] params ({})
-    def create_container_service(params = {}, **options)
-      req = build_request(:create_container_service, params)
+    def create_container_service(, **options)
+      req = build_request(:create_container_service, )
       req.send_request(options)
     end
 
@@ -1491,8 +1491,8 @@ module Aws::Lightsail
     #
     # @overload create_container_service_deployment(**params)
     # @param [Hash] params ({})
-    def create_container_service_deployment(params = {}, **options)
-      req = build_request(:create_container_service_deployment, params)
+    def create_container_service_deployment(, **options)
+      req = build_request(:create_container_service_deployment, )
       req.send_request(options)
     end
 
@@ -1540,8 +1540,8 @@ module Aws::Lightsail
     #
     # @overload create_container_service_registry_login(**params)
     # @param [Hash] params ({})
-    def create_container_service_registry_login(params = {}, **options)
-      req = build_request(:create_container_service_registry_login, params)
+    def create_container_service_registry_login(, **options)
+      req = build_request(:create_container_service_registry_login, )
       req.send_request(options)
     end
 
@@ -1625,8 +1625,8 @@ module Aws::Lightsail
     #
     # @overload create_disk(**params)
     # @param [Hash] params ({})
-    def create_disk(params = {}, **options)
-      req = build_request(:create_disk, params)
+    def create_disk(, **options)
+      req = build_request(:create_disk, )
       req.send_request(options)
     end
 
@@ -1786,8 +1786,8 @@ module Aws::Lightsail
     #
     # @overload create_disk_from_snapshot(**params)
     # @param [Hash] params ({})
-    def create_disk_from_snapshot(params = {}, **options)
-      req = build_request(:create_disk_from_snapshot, params)
+    def create_disk_from_snapshot(, **options)
+      req = build_request(:create_disk_from_snapshot, )
       req.send_request(options)
     end
 
@@ -1893,8 +1893,8 @@ module Aws::Lightsail
     #
     # @overload create_disk_snapshot(**params)
     # @param [Hash] params ({})
-    def create_disk_snapshot(params = {}, **options)
-      req = build_request(:create_disk_snapshot, params)
+    def create_disk_snapshot(, **options)
+      req = build_request(:create_disk_snapshot, )
       req.send_request(options)
     end
 
@@ -2059,8 +2059,8 @@ module Aws::Lightsail
     #
     # @overload create_distribution(**params)
     # @param [Hash] params ({})
-    def create_distribution(params = {}, **options)
-      req = build_request(:create_distribution, params)
+    def create_distribution(, **options)
+      req = build_request(:create_distribution, )
       req.send_request(options)
     end
 
@@ -2125,8 +2125,8 @@ module Aws::Lightsail
     #
     # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, **options)
-      req = build_request(:create_domain, params)
+    def create_domain(, **options)
+      req = build_request(:create_domain, )
       req.send_request(options)
     end
 
@@ -2191,8 +2191,8 @@ module Aws::Lightsail
     #
     # @overload create_domain_entry(**params)
     # @param [Hash] params ({})
-    def create_domain_entry(params = {}, **options)
-      req = build_request(:create_domain_entry, params)
+    def create_domain_entry(, **options)
+      req = build_request(:create_domain_entry, )
       req.send_request(options)
     end
 
@@ -2257,8 +2257,8 @@ module Aws::Lightsail
     #
     # @overload create_instance_snapshot(**params)
     # @param [Hash] params ({})
-    def create_instance_snapshot(params = {}, **options)
-      req = build_request(:create_instance_snapshot, params)
+    def create_instance_snapshot(, **options)
+      req = build_request(:create_instance_snapshot, )
       req.send_request(options)
     end
 
@@ -2391,8 +2391,8 @@ module Aws::Lightsail
     #
     # @overload create_instances(**params)
     # @param [Hash] params ({})
-    def create_instances(params = {}, **options)
-      req = build_request(:create_instances, params)
+    def create_instances(, **options)
+      req = build_request(:create_instances, )
       req.send_request(options)
     end
 
@@ -2588,8 +2588,8 @@ module Aws::Lightsail
     #
     # @overload create_instances_from_snapshot(**params)
     # @param [Hash] params ({})
-    def create_instances_from_snapshot(params = {}, **options)
-      req = build_request(:create_instances_from_snapshot, params)
+    def create_instances_from_snapshot(, **options)
+      req = build_request(:create_instances_from_snapshot, )
       req.send_request(options)
     end
 
@@ -2662,8 +2662,8 @@ module Aws::Lightsail
     #
     # @overload create_key_pair(**params)
     # @param [Hash] params ({})
-    def create_key_pair(params = {}, **options)
-      req = build_request(:create_key_pair, params)
+    def create_key_pair(, **options)
+      req = build_request(:create_key_pair, )
       req.send_request(options)
     end
 
@@ -2765,8 +2765,8 @@ module Aws::Lightsail
     #
     # @overload create_load_balancer(**params)
     # @param [Hash] params ({})
-    def create_load_balancer(params = {}, **options)
-      req = build_request(:create_load_balancer, params)
+    def create_load_balancer(, **options)
+      req = build_request(:create_load_balancer, )
       req.send_request(options)
     end
 
@@ -2855,8 +2855,8 @@ module Aws::Lightsail
     #
     # @overload create_load_balancer_tls_certificate(**params)
     # @param [Hash] params ({})
-    def create_load_balancer_tls_certificate(params = {}, **options)
-      req = build_request(:create_load_balancer_tls_certificate, params)
+    def create_load_balancer_tls_certificate(, **options)
+      req = build_request(:create_load_balancer_tls_certificate, )
       req.send_request(options)
     end
 
@@ -3044,8 +3044,8 @@ module Aws::Lightsail
     #
     # @overload create_relational_database(**params)
     # @param [Hash] params ({})
-    def create_relational_database(params = {}, **options)
-      req = build_request(:create_relational_database, params)
+    def create_relational_database(, **options)
+      req = build_request(:create_relational_database, )
       req.send_request(options)
     end
 
@@ -3181,8 +3181,8 @@ module Aws::Lightsail
     #
     # @overload create_relational_database_from_snapshot(**params)
     # @param [Hash] params ({})
-    def create_relational_database_from_snapshot(params = {}, **options)
-      req = build_request(:create_relational_database_from_snapshot, params)
+    def create_relational_database_from_snapshot(, **options)
+      req = build_request(:create_relational_database_from_snapshot, )
       req.send_request(options)
     end
 
@@ -3253,8 +3253,8 @@ module Aws::Lightsail
     #
     # @overload create_relational_database_snapshot(**params)
     # @param [Hash] params ({})
-    def create_relational_database_snapshot(params = {}, **options)
-      req = build_request(:create_relational_database_snapshot, params)
+    def create_relational_database_snapshot(, **options)
+      req = build_request(:create_relational_database_snapshot, )
       req.send_request(options)
     end
 
@@ -3303,8 +3303,8 @@ module Aws::Lightsail
     #
     # @overload delete_alarm(**params)
     # @param [Hash] params ({})
-    def delete_alarm(params = {}, **options)
-      req = build_request(:delete_alarm, params)
+    def delete_alarm(, **options)
+      req = build_request(:delete_alarm, )
       req.send_request(options)
     end
 
@@ -3356,8 +3356,8 @@ module Aws::Lightsail
     #
     # @overload delete_auto_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_auto_snapshot(params = {}, **options)
-      req = build_request(:delete_auto_snapshot, params)
+    def delete_auto_snapshot(, **options)
+      req = build_request(:delete_auto_snapshot, )
       req.send_request(options)
     end
 
@@ -3405,8 +3405,8 @@ module Aws::Lightsail
     #
     # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, **options)
-      req = build_request(:delete_certificate, params)
+    def delete_certificate(, **options)
+      req = build_request(:delete_certificate, )
       req.send_request(options)
     end
 
@@ -3464,8 +3464,8 @@ module Aws::Lightsail
     #
     # @overload delete_contact_method(**params)
     # @param [Hash] params ({})
-    def delete_contact_method(params = {}, **options)
-      req = build_request(:delete_contact_method, params)
+    def delete_contact_method(, **options)
+      req = build_request(:delete_contact_method, )
       req.send_request(options)
     end
 
@@ -3503,8 +3503,8 @@ module Aws::Lightsail
     #
     # @overload delete_container_image(**params)
     # @param [Hash] params ({})
-    def delete_container_image(params = {}, **options)
-      req = build_request(:delete_container_image, params)
+    def delete_container_image(, **options)
+      req = build_request(:delete_container_image, )
       req.send_request(options)
     end
 
@@ -3525,8 +3525,8 @@ module Aws::Lightsail
     #
     # @overload delete_container_service(**params)
     # @param [Hash] params ({})
-    def delete_container_service(params = {}, **options)
-      req = build_request(:delete_container_service, params)
+    def delete_container_service(, **options)
+      req = build_request(:delete_container_service, )
       req.send_request(options)
     end
 
@@ -3584,8 +3584,8 @@ module Aws::Lightsail
     #
     # @overload delete_disk(**params)
     # @param [Hash] params ({})
-    def delete_disk(params = {}, **options)
-      req = build_request(:delete_disk, params)
+    def delete_disk(, **options)
+      req = build_request(:delete_disk, )
       req.send_request(options)
     end
 
@@ -3642,8 +3642,8 @@ module Aws::Lightsail
     #
     # @overload delete_disk_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_disk_snapshot(params = {}, **options)
-      req = build_request(:delete_disk_snapshot, params)
+    def delete_disk_snapshot(, **options)
+      req = build_request(:delete_disk_snapshot, )
       req.send_request(options)
     end
 
@@ -3686,8 +3686,8 @@ module Aws::Lightsail
     #
     # @overload delete_distribution(**params)
     # @param [Hash] params ({})
-    def delete_distribution(params = {}, **options)
-      req = build_request(:delete_distribution, params)
+    def delete_distribution(, **options)
+      req = build_request(:delete_distribution, )
       req.send_request(options)
     end
 
@@ -3734,8 +3734,8 @@ module Aws::Lightsail
     #
     # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, **options)
-      req = build_request(:delete_domain, params)
+    def delete_domain(, **options)
+      req = build_request(:delete_domain, )
       req.send_request(options)
     end
 
@@ -3796,8 +3796,8 @@ module Aws::Lightsail
     #
     # @overload delete_domain_entry(**params)
     # @param [Hash] params ({})
-    def delete_domain_entry(params = {}, **options)
-      req = build_request(:delete_domain_entry, params)
+    def delete_domain_entry(, **options)
+      req = build_request(:delete_domain_entry, )
       req.send_request(options)
     end
 
@@ -3850,8 +3850,8 @@ module Aws::Lightsail
     #
     # @overload delete_instance(**params)
     # @param [Hash] params ({})
-    def delete_instance(params = {}, **options)
-      req = build_request(:delete_instance, params)
+    def delete_instance(, **options)
+      req = build_request(:delete_instance, )
       req.send_request(options)
     end
 
@@ -3901,8 +3901,8 @@ module Aws::Lightsail
     #
     # @overload delete_instance_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_instance_snapshot(params = {}, **options)
-      req = build_request(:delete_instance_snapshot, params)
+    def delete_instance_snapshot(, **options)
+      req = build_request(:delete_instance_snapshot, )
       req.send_request(options)
     end
 
@@ -3949,8 +3949,8 @@ module Aws::Lightsail
     #
     # @overload delete_key_pair(**params)
     # @param [Hash] params ({})
-    def delete_key_pair(params = {}, **options)
-      req = build_request(:delete_key_pair, params)
+    def delete_key_pair(, **options)
+      req = build_request(:delete_key_pair, )
       req.send_request(options)
     end
 
@@ -4004,8 +4004,8 @@ module Aws::Lightsail
     #
     # @overload delete_known_host_keys(**params)
     # @param [Hash] params ({})
-    def delete_known_host_keys(params = {}, **options)
-      req = build_request(:delete_known_host_keys, params)
+    def delete_known_host_keys(, **options)
+      req = build_request(:delete_known_host_keys, )
       req.send_request(options)
     end
 
@@ -4056,8 +4056,8 @@ module Aws::Lightsail
     #
     # @overload delete_load_balancer(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer(params = {}, **options)
-      req = build_request(:delete_load_balancer, params)
+    def delete_load_balancer(, **options)
+      req = build_request(:delete_load_balancer, )
       req.send_request(options)
     end
 
@@ -4120,8 +4120,8 @@ module Aws::Lightsail
     #
     # @overload delete_load_balancer_tls_certificate(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer_tls_certificate(params = {}, **options)
-      req = build_request(:delete_load_balancer_tls_certificate, params)
+    def delete_load_balancer_tls_certificate(, **options)
+      req = build_request(:delete_load_balancer_tls_certificate, )
       req.send_request(options)
     end
 
@@ -4198,8 +4198,8 @@ module Aws::Lightsail
     #
     # @overload delete_relational_database(**params)
     # @param [Hash] params ({})
-    def delete_relational_database(params = {}, **options)
-      req = build_request(:delete_relational_database, params)
+    def delete_relational_database(, **options)
+      req = build_request(:delete_relational_database, )
       req.send_request(options)
     end
 
@@ -4248,8 +4248,8 @@ module Aws::Lightsail
     #
     # @overload delete_relational_database_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_relational_database_snapshot(params = {}, **options)
-      req = build_request(:delete_relational_database_snapshot, params)
+    def delete_relational_database_snapshot(, **options)
+      req = build_request(:delete_relational_database_snapshot, )
       req.send_request(options)
     end
 
@@ -4296,8 +4296,8 @@ module Aws::Lightsail
     #
     # @overload detach_certificate_from_distribution(**params)
     # @param [Hash] params ({})
-    def detach_certificate_from_distribution(params = {}, **options)
-      req = build_request(:detach_certificate_from_distribution, params)
+    def detach_certificate_from_distribution(, **options)
+      req = build_request(:detach_certificate_from_distribution, )
       req.send_request(options)
     end
 
@@ -4348,8 +4348,8 @@ module Aws::Lightsail
     #
     # @overload detach_disk(**params)
     # @param [Hash] params ({})
-    def detach_disk(params = {}, **options)
-      req = build_request(:detach_disk, params)
+    def detach_disk(, **options)
+      req = build_request(:detach_disk, )
       req.send_request(options)
     end
 
@@ -4406,8 +4406,8 @@ module Aws::Lightsail
     #
     # @overload detach_instances_from_load_balancer(**params)
     # @param [Hash] params ({})
-    def detach_instances_from_load_balancer(params = {}, **options)
-      req = build_request(:detach_instances_from_load_balancer, params)
+    def detach_instances_from_load_balancer(, **options)
+      req = build_request(:detach_instances_from_load_balancer, )
       req.send_request(options)
     end
 
@@ -4448,8 +4448,8 @@ module Aws::Lightsail
     #
     # @overload detach_static_ip(**params)
     # @param [Hash] params ({})
-    def detach_static_ip(params = {}, **options)
-      req = build_request(:detach_static_ip, params)
+    def detach_static_ip(, **options)
+      req = build_request(:detach_static_ip, )
       req.send_request(options)
     end
 
@@ -4498,8 +4498,8 @@ module Aws::Lightsail
     #
     # @overload disable_add_on(**params)
     # @param [Hash] params ({})
-    def disable_add_on(params = {}, **options)
-      req = build_request(:disable_add_on, params)
+    def disable_add_on(, **options)
+      req = build_request(:disable_add_on, )
       req.send_request(options)
     end
 
@@ -4519,8 +4519,8 @@ module Aws::Lightsail
     #
     # @overload download_default_key_pair(**params)
     # @param [Hash] params ({})
-    def download_default_key_pair(params = {}, **options)
-      req = build_request(:download_default_key_pair, params)
+    def download_default_key_pair(, **options)
+      req = build_request(:download_default_key_pair, )
       req.send_request(options)
     end
 
@@ -4575,8 +4575,8 @@ module Aws::Lightsail
     #
     # @overload enable_add_on(**params)
     # @param [Hash] params ({})
-    def enable_add_on(params = {}, **options)
-      req = build_request(:enable_add_on, params)
+    def enable_add_on(, **options)
+      req = build_request(:enable_add_on, )
       req.send_request(options)
     end
 
@@ -4642,8 +4642,8 @@ module Aws::Lightsail
     #
     # @overload export_snapshot(**params)
     # @param [Hash] params ({})
-    def export_snapshot(params = {}, **options)
-      req = build_request(:export_snapshot, params)
+    def export_snapshot(, **options)
+      req = build_request(:export_snapshot, )
       req.send_request(options)
     end
 
@@ -4677,8 +4677,8 @@ module Aws::Lightsail
     #
     # @overload get_active_names(**params)
     # @param [Hash] params ({})
-    def get_active_names(params = {}, **options)
-      req = build_request(:get_active_names, params)
+    def get_active_names(, **options)
+      req = build_request(:get_active_names, )
       req.send_request(options)
     end
 
@@ -4761,8 +4761,8 @@ module Aws::Lightsail
     #
     # @overload get_alarms(**params)
     # @param [Hash] params ({})
-    def get_alarms(params = {}, **options)
-      req = build_request(:get_alarms, params)
+    def get_alarms(, **options)
+      req = build_request(:get_alarms, )
       req.send_request(options)
     end
 
@@ -4805,8 +4805,8 @@ module Aws::Lightsail
     #
     # @overload get_auto_snapshots(**params)
     # @param [Hash] params ({})
-    def get_auto_snapshots(params = {}, **options)
-      req = build_request(:get_auto_snapshots, params)
+    def get_auto_snapshots(, **options)
+      req = build_request(:get_auto_snapshots, )
       req.send_request(options)
     end
 
@@ -4868,8 +4868,8 @@ module Aws::Lightsail
     #
     # @overload get_blueprints(**params)
     # @param [Hash] params ({})
-    def get_blueprints(params = {}, **options)
-      req = build_request(:get_blueprints, params)
+    def get_blueprints(, **options)
+      req = build_request(:get_blueprints, )
       req.send_request(options)
     end
 
@@ -4920,8 +4920,8 @@ module Aws::Lightsail
     #
     # @overload get_bundles(**params)
     # @param [Hash] params ({})
-    def get_bundles(params = {}, **options)
-      req = build_request(:get_bundles, params)
+    def get_bundles(, **options)
+      req = build_request(:get_bundles, )
       req.send_request(options)
     end
 
@@ -5018,8 +5018,8 @@ module Aws::Lightsail
     #
     # @overload get_certificates(**params)
     # @param [Hash] params ({})
-    def get_certificates(params = {}, **options)
-      req = build_request(:get_certificates, params)
+    def get_certificates(, **options)
+      req = build_request(:get_certificates, )
       req.send_request(options)
     end
 
@@ -5070,8 +5070,8 @@ module Aws::Lightsail
     #
     # @overload get_cloud_formation_stack_records(**params)
     # @param [Hash] params ({})
-    def get_cloud_formation_stack_records(params = {}, **options)
-      req = build_request(:get_cloud_formation_stack_records, params)
+    def get_cloud_formation_stack_records(, **options)
+      req = build_request(:get_cloud_formation_stack_records, )
       req.send_request(options)
     end
 
@@ -5125,8 +5125,8 @@ module Aws::Lightsail
     #
     # @overload get_contact_methods(**params)
     # @param [Hash] params ({})
-    def get_contact_methods(params = {}, **options)
-      req = build_request(:get_contact_methods, params)
+    def get_contact_methods(, **options)
+      req = build_request(:get_contact_methods, )
       req.send_request(options)
     end
 
@@ -5147,8 +5147,8 @@ module Aws::Lightsail
     #
     # @overload get_container_api_metadata(**params)
     # @param [Hash] params ({})
-    def get_container_api_metadata(params = {}, **options)
-      req = build_request(:get_container_api_metadata, params)
+    def get_container_api_metadata(, **options)
+      req = build_request(:get_container_api_metadata, )
       req.send_request(options)
     end
 
@@ -5187,8 +5187,8 @@ module Aws::Lightsail
     #
     # @overload get_container_images(**params)
     # @param [Hash] params ({})
-    def get_container_images(params = {}, **options)
-      req = build_request(:get_container_images, params)
+    def get_container_images(, **options)
+      req = build_request(:get_container_images, )
       req.send_request(options)
     end
 
@@ -5310,8 +5310,8 @@ module Aws::Lightsail
     #
     # @overload get_container_log(**params)
     # @param [Hash] params ({})
-    def get_container_log(params = {}, **options)
-      req = build_request(:get_container_log, params)
+    def get_container_log(, **options)
+      req = build_request(:get_container_log, )
       req.send_request(options)
     end
 
@@ -5373,8 +5373,8 @@ module Aws::Lightsail
     #
     # @overload get_container_service_deployments(**params)
     # @param [Hash] params ({})
-    def get_container_service_deployments(params = {}, **options)
-      req = build_request(:get_container_service_deployments, params)
+    def get_container_service_deployments(, **options)
+      req = build_request(:get_container_service_deployments, )
       req.send_request(options)
     end
 
@@ -5484,8 +5484,8 @@ module Aws::Lightsail
     #
     # @overload get_container_service_metric_data(**params)
     # @param [Hash] params ({})
-    def get_container_service_metric_data(params = {}, **options)
-      req = build_request(:get_container_service_metric_data, params)
+    def get_container_service_metric_data(, **options)
+      req = build_request(:get_container_service_metric_data, )
       req.send_request(options)
     end
 
@@ -5513,8 +5513,8 @@ module Aws::Lightsail
     #
     # @overload get_container_service_powers(**params)
     # @param [Hash] params ({})
-    def get_container_service_powers(params = {}, **options)
-      req = build_request(:get_container_service_powers, params)
+    def get_container_service_powers(, **options)
+      req = build_request(:get_container_service_powers, )
       req.send_request(options)
     end
 
@@ -5603,8 +5603,8 @@ module Aws::Lightsail
     #
     # @overload get_container_services(**params)
     # @param [Hash] params ({})
-    def get_container_services(params = {}, **options)
-      req = build_request(:get_container_services, params)
+    def get_container_services(, **options)
+      req = build_request(:get_container_services, )
       req.send_request(options)
     end
 
@@ -5654,8 +5654,8 @@ module Aws::Lightsail
     #
     # @overload get_disk(**params)
     # @param [Hash] params ({})
-    def get_disk(params = {}, **options)
-      req = build_request(:get_disk, params)
+    def get_disk(, **options)
+      req = build_request(:get_disk, )
       req.send_request(options)
     end
 
@@ -5699,8 +5699,8 @@ module Aws::Lightsail
     #
     # @overload get_disk_snapshot(**params)
     # @param [Hash] params ({})
-    def get_disk_snapshot(params = {}, **options)
-      req = build_request(:get_disk_snapshot, params)
+    def get_disk_snapshot(, **options)
+      req = build_request(:get_disk_snapshot, )
       req.send_request(options)
     end
 
@@ -5752,8 +5752,8 @@ module Aws::Lightsail
     #
     # @overload get_disk_snapshots(**params)
     # @param [Hash] params ({})
-    def get_disk_snapshots(params = {}, **options)
-      req = build_request(:get_disk_snapshots, params)
+    def get_disk_snapshots(, **options)
+      req = build_request(:get_disk_snapshots, )
       req.send_request(options)
     end
 
@@ -5811,8 +5811,8 @@ module Aws::Lightsail
     #
     # @overload get_disks(**params)
     # @param [Hash] params ({})
-    def get_disks(params = {}, **options)
-      req = build_request(:get_disks, params)
+    def get_disks(, **options)
+      req = build_request(:get_disks, )
       req.send_request(options)
     end
 
@@ -5839,8 +5839,8 @@ module Aws::Lightsail
     #
     # @overload get_distribution_bundles(**params)
     # @param [Hash] params ({})
-    def get_distribution_bundles(params = {}, **options)
-      req = build_request(:get_distribution_bundles, params)
+    def get_distribution_bundles(, **options)
+      req = build_request(:get_distribution_bundles, )
       req.send_request(options)
     end
 
@@ -5877,8 +5877,8 @@ module Aws::Lightsail
     #
     # @overload get_distribution_latest_cache_reset(**params)
     # @param [Hash] params ({})
-    def get_distribution_latest_cache_reset(params = {}, **options)
-      req = build_request(:get_distribution_latest_cache_reset, params)
+    def get_distribution_latest_cache_reset(, **options)
+      req = build_request(:get_distribution_latest_cache_reset, )
       req.send_request(options)
     end
 
@@ -6061,8 +6061,8 @@ module Aws::Lightsail
     #
     # @overload get_distribution_metric_data(**params)
     # @param [Hash] params ({})
-    def get_distribution_metric_data(params = {}, **options)
-      req = build_request(:get_distribution_metric_data, params)
+    def get_distribution_metric_data(, **options)
+      req = build_request(:get_distribution_metric_data, )
       req.send_request(options)
     end
 
@@ -6147,8 +6147,8 @@ module Aws::Lightsail
     #
     # @overload get_distributions(**params)
     # @param [Hash] params ({})
-    def get_distributions(params = {}, **options)
-      req = build_request(:get_distributions, params)
+    def get_distributions(, **options)
+      req = build_request(:get_distributions, )
       req.send_request(options)
     end
 
@@ -6192,8 +6192,8 @@ module Aws::Lightsail
     #
     # @overload get_domain(**params)
     # @param [Hash] params ({})
-    def get_domain(params = {}, **options)
-      req = build_request(:get_domain, params)
+    def get_domain(, **options)
+      req = build_request(:get_domain, )
       req.send_request(options)
     end
 
@@ -6244,8 +6244,8 @@ module Aws::Lightsail
     #
     # @overload get_domains(**params)
     # @param [Hash] params ({})
-    def get_domains(params = {}, **options)
-      req = build_request(:get_domains, params)
+    def get_domains(, **options)
+      req = build_request(:get_domains, )
       req.send_request(options)
     end
 
@@ -6307,8 +6307,8 @@ module Aws::Lightsail
     #
     # @overload get_export_snapshot_records(**params)
     # @param [Hash] params ({})
-    def get_export_snapshot_records(params = {}, **options)
-      req = build_request(:get_export_snapshot_records, params)
+    def get_export_snapshot_records(, **options)
+      req = build_request(:get_export_snapshot_records, )
       req.send_request(options)
     end
 
@@ -6401,8 +6401,8 @@ module Aws::Lightsail
     #
     # @overload get_instance(**params)
     # @param [Hash] params ({})
-    def get_instance(params = {}, **options)
-      req = build_request(:get_instance, params)
+    def get_instance(, **options)
+      req = build_request(:get_instance, )
       req.send_request(options)
     end
 
@@ -6460,8 +6460,8 @@ module Aws::Lightsail
     #
     # @overload get_instance_access_details(**params)
     # @param [Hash] params ({})
-    def get_instance_access_details(params = {}, **options)
-      req = build_request(:get_instance_access_details, params)
+    def get_instance_access_details(, **options)
+      req = build_request(:get_instance_access_details, )
       req.send_request(options)
     end
 
@@ -6660,8 +6660,8 @@ module Aws::Lightsail
     #
     # @overload get_instance_metric_data(**params)
     # @param [Hash] params ({})
-    def get_instance_metric_data(params = {}, **options)
-      req = build_request(:get_instance_metric_data, params)
+    def get_instance_metric_data(, **options)
+      req = build_request(:get_instance_metric_data, )
       req.send_request(options)
     end
 
@@ -6698,8 +6698,8 @@ module Aws::Lightsail
     #
     # @overload get_instance_port_states(**params)
     # @param [Hash] params ({})
-    def get_instance_port_states(params = {}, **options)
-      req = build_request(:get_instance_port_states, params)
+    def get_instance_port_states(, **options)
+      req = build_request(:get_instance_port_states, )
       req.send_request(options)
     end
 
@@ -6768,8 +6768,8 @@ module Aws::Lightsail
     #
     # @overload get_instance_snapshot(**params)
     # @param [Hash] params ({})
-    def get_instance_snapshot(params = {}, **options)
-      req = build_request(:get_instance_snapshot, params)
+    def get_instance_snapshot(, **options)
+      req = build_request(:get_instance_snapshot, )
       req.send_request(options)
     end
 
@@ -6846,8 +6846,8 @@ module Aws::Lightsail
     #
     # @overload get_instance_snapshots(**params)
     # @param [Hash] params ({})
-    def get_instance_snapshots(params = {}, **options)
-      req = build_request(:get_instance_snapshots, params)
+    def get_instance_snapshots(, **options)
+      req = build_request(:get_instance_snapshots, )
       req.send_request(options)
     end
 
@@ -6876,8 +6876,8 @@ module Aws::Lightsail
     #
     # @overload get_instance_state(**params)
     # @param [Hash] params ({})
-    def get_instance_state(params = {}, **options)
-      req = build_request(:get_instance_state, params)
+    def get_instance_state(, **options)
+      req = build_request(:get_instance_state, )
       req.send_request(options)
     end
 
@@ -6977,8 +6977,8 @@ module Aws::Lightsail
     #
     # @overload get_instances(**params)
     # @param [Hash] params ({})
-    def get_instances(params = {}, **options)
-      req = build_request(:get_instances, params)
+    def get_instances(, **options)
+      req = build_request(:get_instances, )
       req.send_request(options)
     end
 
@@ -7015,8 +7015,8 @@ module Aws::Lightsail
     #
     # @overload get_key_pair(**params)
     # @param [Hash] params ({})
-    def get_key_pair(params = {}, **options)
-      req = build_request(:get_key_pair, params)
+    def get_key_pair(, **options)
+      req = build_request(:get_key_pair, )
       req.send_request(options)
     end
 
@@ -7060,8 +7060,8 @@ module Aws::Lightsail
     #
     # @overload get_key_pairs(**params)
     # @param [Hash] params ({})
-    def get_key_pairs(params = {}, **options)
-      req = build_request(:get_key_pairs, params)
+    def get_key_pairs(, **options)
+      req = build_request(:get_key_pairs, )
       req.send_request(options)
     end
 
@@ -7113,8 +7113,8 @@ module Aws::Lightsail
     #
     # @overload get_load_balancer(**params)
     # @param [Hash] params ({})
-    def get_load_balancer(params = {}, **options)
-      req = build_request(:get_load_balancer, params)
+    def get_load_balancer(, **options)
+      req = build_request(:get_load_balancer, )
       req.send_request(options)
     end
 
@@ -7320,8 +7320,8 @@ module Aws::Lightsail
     #
     # @overload get_load_balancer_metric_data(**params)
     # @param [Hash] params ({})
-    def get_load_balancer_metric_data(params = {}, **options)
-      req = build_request(:get_load_balancer_metric_data, params)
+    def get_load_balancer_metric_data(, **options)
+      req = build_request(:get_load_balancer_metric_data, )
       req.send_request(options)
     end
 
@@ -7393,8 +7393,8 @@ module Aws::Lightsail
     #
     # @overload get_load_balancer_tls_certificates(**params)
     # @param [Hash] params ({})
-    def get_load_balancer_tls_certificates(params = {}, **options)
-      req = build_request(:get_load_balancer_tls_certificates, params)
+    def get_load_balancer_tls_certificates(, **options)
+      req = build_request(:get_load_balancer_tls_certificates, )
       req.send_request(options)
     end
 
@@ -7453,8 +7453,8 @@ module Aws::Lightsail
     #
     # @overload get_load_balancers(**params)
     # @param [Hash] params ({})
-    def get_load_balancers(params = {}, **options)
-      req = build_request(:get_load_balancers, params)
+    def get_load_balancers(, **options)
+      req = build_request(:get_load_balancers, )
       req.send_request(options)
     end
 
@@ -7495,8 +7495,8 @@ module Aws::Lightsail
     #
     # @overload get_operation(**params)
     # @param [Hash] params ({})
-    def get_operation(params = {}, **options)
-      req = build_request(:get_operation, params)
+    def get_operation(, **options)
+      req = build_request(:get_operation, )
       req.send_request(options)
     end
 
@@ -7547,8 +7547,8 @@ module Aws::Lightsail
     #
     # @overload get_operations(**params)
     # @param [Hash] params ({})
-    def get_operations(params = {}, **options)
-      req = build_request(:get_operations, params)
+    def get_operations(, **options)
+      req = build_request(:get_operations, )
       req.send_request(options)
     end
 
@@ -7602,8 +7602,8 @@ module Aws::Lightsail
     #
     # @overload get_operations_for_resource(**params)
     # @param [Hash] params ({})
-    def get_operations_for_resource(params = {}, **options)
-      req = build_request(:get_operations_for_resource, params)
+    def get_operations_for_resource(, **options)
+      req = build_request(:get_operations_for_resource, )
       req.send_request(options)
     end
 
@@ -7650,8 +7650,8 @@ module Aws::Lightsail
     #
     # @overload get_regions(**params)
     # @param [Hash] params ({})
-    def get_regions(params = {}, **options)
-      req = build_request(:get_regions, params)
+    def get_regions(, **options)
+      req = build_request(:get_regions, )
       req.send_request(options)
     end
 
@@ -7714,8 +7714,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database(**params)
     # @param [Hash] params ({})
-    def get_relational_database(params = {}, **options)
-      req = build_request(:get_relational_database, params)
+    def get_relational_database(, **options)
+      req = build_request(:get_relational_database, )
       req.send_request(options)
     end
 
@@ -7759,8 +7759,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_blueprints(**params)
     # @param [Hash] params ({})
-    def get_relational_database_blueprints(params = {}, **options)
-      req = build_request(:get_relational_database_blueprints, params)
+    def get_relational_database_blueprints(, **options)
+      req = build_request(:get_relational_database_blueprints, )
       req.send_request(options)
     end
 
@@ -7807,8 +7807,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_bundles(**params)
     # @param [Hash] params ({})
-    def get_relational_database_bundles(params = {}, **options)
-      req = build_request(:get_relational_database_bundles, params)
+    def get_relational_database_bundles(, **options)
+      req = build_request(:get_relational_database_bundles, )
       req.send_request(options)
     end
 
@@ -7860,8 +7860,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_events(**params)
     # @param [Hash] params ({})
-    def get_relational_database_events(params = {}, **options)
-      req = build_request(:get_relational_database_events, params)
+    def get_relational_database_events(, **options)
+      req = build_request(:get_relational_database_events, )
       req.send_request(options)
     end
 
@@ -7949,8 +7949,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_log_events(**params)
     # @param [Hash] params ({})
-    def get_relational_database_log_events(params = {}, **options)
-      req = build_request(:get_relational_database_log_events, params)
+    def get_relational_database_log_events(, **options)
+      req = build_request(:get_relational_database_log_events, )
       req.send_request(options)
     end
 
@@ -7979,8 +7979,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_log_streams(**params)
     # @param [Hash] params ({})
-    def get_relational_database_log_streams(params = {}, **options)
-      req = build_request(:get_relational_database_log_streams, params)
+    def get_relational_database_log_streams(, **options)
+      req = build_request(:get_relational_database_log_streams, )
       req.send_request(options)
     end
 
@@ -8026,8 +8026,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_master_user_password(**params)
     # @param [Hash] params ({})
-    def get_relational_database_master_user_password(params = {}, **options)
-      req = build_request(:get_relational_database_master_user_password, params)
+    def get_relational_database_master_user_password(, **options)
+      req = build_request(:get_relational_database_master_user_password, )
       req.send_request(options)
     end
 
@@ -8192,8 +8192,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_metric_data(**params)
     # @param [Hash] params ({})
-    def get_relational_database_metric_data(params = {}, **options)
-      req = build_request(:get_relational_database_metric_data, params)
+    def get_relational_database_metric_data(, **options)
+      req = build_request(:get_relational_database_metric_data, )
       req.send_request(options)
     end
 
@@ -8246,8 +8246,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_parameters(**params)
     # @param [Hash] params ({})
-    def get_relational_database_parameters(params = {}, **options)
-      req = build_request(:get_relational_database_parameters, params)
+    def get_relational_database_parameters(, **options)
+      req = build_request(:get_relational_database_parameters, )
       req.send_request(options)
     end
 
@@ -8292,8 +8292,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_snapshot(**params)
     # @param [Hash] params ({})
-    def get_relational_database_snapshot(params = {}, **options)
-      req = build_request(:get_relational_database_snapshot, params)
+    def get_relational_database_snapshot(, **options)
+      req = build_request(:get_relational_database_snapshot, )
       req.send_request(options)
     end
 
@@ -8346,8 +8346,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_database_snapshots(**params)
     # @param [Hash] params ({})
-    def get_relational_database_snapshots(params = {}, **options)
-      req = build_request(:get_relational_database_snapshots, params)
+    def get_relational_database_snapshots(, **options)
+      req = build_request(:get_relational_database_snapshots, )
       req.send_request(options)
     end
 
@@ -8418,8 +8418,8 @@ module Aws::Lightsail
     #
     # @overload get_relational_databases(**params)
     # @param [Hash] params ({})
-    def get_relational_databases(params = {}, **options)
-      req = build_request(:get_relational_databases, params)
+    def get_relational_databases(, **options)
+      req = build_request(:get_relational_databases, )
       req.send_request(options)
     end
 
@@ -8455,8 +8455,8 @@ module Aws::Lightsail
     #
     # @overload get_static_ip(**params)
     # @param [Hash] params ({})
-    def get_static_ip(params = {}, **options)
-      req = build_request(:get_static_ip, params)
+    def get_static_ip(, **options)
+      req = build_request(:get_static_ip, )
       req.send_request(options)
     end
 
@@ -8499,8 +8499,8 @@ module Aws::Lightsail
     #
     # @overload get_static_ips(**params)
     # @param [Hash] params ({})
-    def get_static_ips(params = {}, **options)
-      req = build_request(:get_static_ips, params)
+    def get_static_ips(, **options)
+      req = build_request(:get_static_ips, )
       req.send_request(options)
     end
 
@@ -8543,8 +8543,8 @@ module Aws::Lightsail
     #
     # @overload import_key_pair(**params)
     # @param [Hash] params ({})
-    def import_key_pair(params = {}, **options)
-      req = build_request(:import_key_pair, params)
+    def import_key_pair(, **options)
+      req = build_request(:import_key_pair, )
       req.send_request(options)
     end
 
@@ -8563,8 +8563,8 @@ module Aws::Lightsail
     #
     # @overload is_vpc_peered(**params)
     # @param [Hash] params ({})
-    def is_vpc_peered(params = {}, **options)
-      req = build_request(:is_vpc_peered, params)
+    def is_vpc_peered(, **options)
+      req = build_request(:is_vpc_peered, )
       req.send_request(options)
     end
 
@@ -8624,8 +8624,8 @@ module Aws::Lightsail
     #
     # @overload open_instance_public_ports(**params)
     # @param [Hash] params ({})
-    def open_instance_public_ports(params = {}, **options)
-      req = build_request(:open_instance_public_ports, params)
+    def open_instance_public_ports(, **options)
+      req = build_request(:open_instance_public_ports, )
       req.send_request(options)
     end
 
@@ -8655,8 +8655,8 @@ module Aws::Lightsail
     #
     # @overload peer_vpc(**params)
     # @param [Hash] params ({})
-    def peer_vpc(params = {}, **options)
-      req = build_request(:peer_vpc, params)
+    def peer_vpc(, **options)
+      req = build_request(:peer_vpc, )
       req.send_request(options)
     end
 
@@ -8862,8 +8862,8 @@ module Aws::Lightsail
     #
     # @overload put_alarm(**params)
     # @param [Hash] params ({})
-    def put_alarm(params = {}, **options)
-      req = build_request(:put_alarm, params)
+    def put_alarm(, **options)
+      req = build_request(:put_alarm, )
       req.send_request(options)
     end
 
@@ -8930,8 +8930,8 @@ module Aws::Lightsail
     #
     # @overload put_instance_public_ports(**params)
     # @param [Hash] params ({})
-    def put_instance_public_ports(params = {}, **options)
-      req = build_request(:put_instance_public_ports, params)
+    def put_instance_public_ports(, **options)
+      req = build_request(:put_instance_public_ports, )
       req.send_request(options)
     end
 
@@ -8979,8 +8979,8 @@ module Aws::Lightsail
     #
     # @overload reboot_instance(**params)
     # @param [Hash] params ({})
-    def reboot_instance(params = {}, **options)
-      req = build_request(:reboot_instance, params)
+    def reboot_instance(, **options)
+      req = build_request(:reboot_instance, )
       req.send_request(options)
     end
 
@@ -9029,8 +9029,8 @@ module Aws::Lightsail
     #
     # @overload reboot_relational_database(**params)
     # @param [Hash] params ({})
-    def reboot_relational_database(params = {}, **options)
-      req = build_request(:reboot_relational_database, params)
+    def reboot_relational_database(, **options)
+      req = build_request(:reboot_relational_database, )
       req.send_request(options)
     end
 
@@ -9102,8 +9102,8 @@ module Aws::Lightsail
     #
     # @overload register_container_image(**params)
     # @param [Hash] params ({})
-    def register_container_image(params = {}, **options)
-      req = build_request(:register_container_image, params)
+    def register_container_image(, **options)
+      req = build_request(:register_container_image, )
       req.send_request(options)
     end
 
@@ -9143,8 +9143,8 @@ module Aws::Lightsail
     #
     # @overload release_static_ip(**params)
     # @param [Hash] params ({})
-    def release_static_ip(params = {}, **options)
-      req = build_request(:release_static_ip, params)
+    def release_static_ip(, **options)
+      req = build_request(:release_static_ip, )
       req.send_request(options)
     end
 
@@ -9194,8 +9194,8 @@ module Aws::Lightsail
     #
     # @overload reset_distribution_cache(**params)
     # @param [Hash] params ({})
-    def reset_distribution_cache(params = {}, **options)
-      req = build_request(:reset_distribution_cache, params)
+    def reset_distribution_cache(, **options)
+      req = build_request(:reset_distribution_cache, )
       req.send_request(options)
     end
 
@@ -9256,8 +9256,8 @@ module Aws::Lightsail
     #
     # @overload send_contact_method_verification(**params)
     # @param [Hash] params ({})
-    def send_contact_method_verification(params = {}, **options)
-      req = build_request(:send_contact_method_verification, params)
+    def send_contact_method_verification(, **options)
+      req = build_request(:send_contact_method_verification, )
       req.send_request(options)
     end
 
@@ -9314,8 +9314,8 @@ module Aws::Lightsail
     #
     # @overload start_instance(**params)
     # @param [Hash] params ({})
-    def start_instance(params = {}, **options)
-      req = build_request(:start_instance, params)
+    def start_instance(, **options)
+      req = build_request(:start_instance, )
       req.send_request(options)
     end
 
@@ -9365,8 +9365,8 @@ module Aws::Lightsail
     #
     # @overload start_relational_database(**params)
     # @param [Hash] params ({})
-    def start_relational_database(params = {}, **options)
-      req = build_request(:start_relational_database, params)
+    def start_relational_database(, **options)
+      req = build_request(:start_relational_database, )
       req.send_request(options)
     end
 
@@ -9431,8 +9431,8 @@ module Aws::Lightsail
     #
     # @overload stop_instance(**params)
     # @param [Hash] params ({})
-    def stop_instance(params = {}, **options)
-      req = build_request(:stop_instance, params)
+    def stop_instance(, **options)
+      req = build_request(:stop_instance, )
       req.send_request(options)
     end
 
@@ -9487,8 +9487,8 @@ module Aws::Lightsail
     #
     # @overload stop_relational_database(**params)
     # @param [Hash] params ({})
-    def stop_relational_database(params = {}, **options)
-      req = build_request(:stop_relational_database, params)
+    def stop_relational_database(, **options)
+      req = build_request(:stop_relational_database, )
       req.send_request(options)
     end
 
@@ -9555,8 +9555,8 @@ module Aws::Lightsail
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -9622,8 +9622,8 @@ module Aws::Lightsail
     #
     # @overload test_alarm(**params)
     # @param [Hash] params ({})
-    def test_alarm(params = {}, **options)
-      req = build_request(:test_alarm, params)
+    def test_alarm(, **options)
+      req = build_request(:test_alarm, )
       req.send_request(options)
     end
 
@@ -9653,8 +9653,8 @@ module Aws::Lightsail
     #
     # @overload unpeer_vpc(**params)
     # @param [Hash] params ({})
-    def unpeer_vpc(params = {}, **options)
-      req = build_request(:unpeer_vpc, params)
+    def unpeer_vpc(, **options)
+      req = build_request(:unpeer_vpc, )
       req.send_request(options)
     end
 
@@ -9713,8 +9713,8 @@ module Aws::Lightsail
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -9849,8 +9849,8 @@ module Aws::Lightsail
     #
     # @overload update_container_service(**params)
     # @param [Hash] params ({})
-    def update_container_service(params = {}, **options)
-      req = build_request(:update_container_service, params)
+    def update_container_service(, **options)
+      req = build_request(:update_container_service, )
       req.send_request(options)
     end
 
@@ -9957,8 +9957,8 @@ module Aws::Lightsail
     #
     # @overload update_distribution(**params)
     # @param [Hash] params ({})
-    def update_distribution(params = {}, **options)
-      req = build_request(:update_distribution, params)
+    def update_distribution(, **options)
+      req = build_request(:update_distribution, )
       req.send_request(options)
     end
 
@@ -10020,8 +10020,8 @@ module Aws::Lightsail
     #
     # @overload update_distribution_bundle(**params)
     # @param [Hash] params ({})
-    def update_distribution_bundle(params = {}, **options)
-      req = build_request(:update_distribution_bundle, params)
+    def update_distribution_bundle(, **options)
+      req = build_request(:update_distribution_bundle, )
       req.send_request(options)
     end
 
@@ -10083,8 +10083,8 @@ module Aws::Lightsail
     #
     # @overload update_domain_entry(**params)
     # @param [Hash] params ({})
-    def update_domain_entry(params = {}, **options)
-      req = build_request(:update_domain_entry, params)
+    def update_domain_entry(, **options)
+      req = build_request(:update_domain_entry, )
       req.send_request(options)
     end
 
@@ -10143,8 +10143,8 @@ module Aws::Lightsail
     #
     # @overload update_load_balancer_attribute(**params)
     # @param [Hash] params ({})
-    def update_load_balancer_attribute(params = {}, **options)
-      req = build_request(:update_load_balancer_attribute, params)
+    def update_load_balancer_attribute(, **options)
+      req = build_request(:update_load_balancer_attribute, )
       req.send_request(options)
     end
 
@@ -10290,8 +10290,8 @@ module Aws::Lightsail
     #
     # @overload update_relational_database(**params)
     # @param [Hash] params ({})
-    def update_relational_database(params = {}, **options)
-      req = build_request(:update_relational_database, params)
+    def update_relational_database(, **options)
+      req = build_request(:update_relational_database, )
       req.send_request(options)
     end
 
@@ -10364,8 +10364,8 @@ module Aws::Lightsail
     #
     # @overload update_relational_database_parameters(**params)
     # @param [Hash] params ({})
-    def update_relational_database_parameters(params = {}, **options)
-      req = build_request(:update_relational_database_parameters, params)
+    def update_relational_database_parameters(, **options)
+      req = build_request(:update_relational_database_parameters, )
       req.send_request(options)
     end
 

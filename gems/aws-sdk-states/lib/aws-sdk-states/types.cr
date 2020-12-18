@@ -3036,5 +3036,715 @@ module Aws::States
       include Aws::Structure
     end
 
+    alias ActivityDoesNotExist = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ActivityFailedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias ActivityLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ActivityList = Array(ActivityListItem)
+
+    alias ActivityListItem = NamedTuple(
+      "activityArn" : Arn,
+      "name" : Name,
+      "creationDate" : Timestamp
+    )
+
+    alias ActivityScheduleFailedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias ActivityScheduledEventDetails = NamedTuple(
+      "resource" : Arn,
+      "input" : (SensitiveData)?,
+      "inputDetails" : (HistoryEventExecutionDataDetails)?,
+      "timeoutInSeconds" : (TimeoutInSeconds)?,
+      "heartbeatInSeconds" : (TimeoutInSeconds)?
+    )
+
+    alias ActivityStartedEventDetails = NamedTuple(
+      "workerName" : (Identity)?
+    )
+
+    alias ActivitySucceededEventDetails = NamedTuple(
+      "output" : (SensitiveData)?,
+      "outputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias ActivityTimedOutEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias ActivityWorkerLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Arn = String
+
+    alias BilledDuration = Int64
+
+    alias BilledMemoryUsed = Int64
+
+    alias BillingDetails = NamedTuple(
+      "billedMemoryUsedInMB" : (BilledMemoryUsed)?,
+      "billedDurationInMilliseconds" : (BilledDuration)?
+    )
+
+    alias CloudWatchEventsExecutionDataDetails = NamedTuple(
+      "included" : (includedDetails)?
+    )
+
+    alias CloudWatchLogsLogGroup = NamedTuple(
+      "logGroupArn" : (Arn)?
+    )
+
+    alias ConnectorParameters = String
+
+    alias CreateActivityInput = NamedTuple(
+      "name" : Name,
+      "tags" : (TagList)?
+    )
+
+    alias CreateActivityOutput = NamedTuple(
+      "activityArn" : Arn,
+      "creationDate" : Timestamp
+    )
+
+    alias CreateStateMachineInput = NamedTuple(
+      "name" : Name,
+      "definition" : Definition,
+      "roleArn" : Arn,
+      "type" : (StateMachineType)?,
+      "loggingConfiguration" : (LoggingConfiguration)?,
+      "tags" : (TagList)?,
+      "tracingConfiguration" : (TracingConfiguration)?
+    )
+
+    alias CreateStateMachineOutput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "creationDate" : Timestamp
+    )
+
+    alias Definition = String
+
+    alias DeleteActivityInput = NamedTuple(
+      "activityArn" : Arn
+    )
+
+    alias DeleteActivityOutput = NamedTuple(
+      
+    )
+
+    alias DeleteStateMachineInput = NamedTuple(
+      "stateMachineArn" : Arn
+    )
+
+    alias DeleteStateMachineOutput = NamedTuple(
+      
+    )
+
+    alias DescribeActivityInput = NamedTuple(
+      "activityArn" : Arn
+    )
+
+    alias DescribeActivityOutput = NamedTuple(
+      "activityArn" : Arn,
+      "name" : Name,
+      "creationDate" : Timestamp
+    )
+
+    alias DescribeExecutionInput = NamedTuple(
+      "executionArn" : Arn
+    )
+
+    alias DescribeExecutionOutput = NamedTuple(
+      "executionArn" : Arn,
+      "stateMachineArn" : Arn,
+      "name" : (Name)?,
+      "status" : ExecutionStatus,
+      "startDate" : Timestamp,
+      "stopDate" : (Timestamp)?,
+      "input" : (SensitiveData)?,
+      "inputDetails" : (CloudWatchEventsExecutionDataDetails)?,
+      "output" : (SensitiveData)?,
+      "outputDetails" : (CloudWatchEventsExecutionDataDetails)?,
+      "traceHeader" : (TraceHeader)?
+    )
+
+    alias DescribeStateMachineForExecutionInput = NamedTuple(
+      "executionArn" : Arn
+    )
+
+    alias DescribeStateMachineForExecutionOutput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "name" : Name,
+      "definition" : Definition,
+      "roleArn" : Arn,
+      "updateDate" : Timestamp,
+      "loggingConfiguration" : (LoggingConfiguration)?,
+      "tracingConfiguration" : (TracingConfiguration)?
+    )
+
+    alias DescribeStateMachineInput = NamedTuple(
+      "stateMachineArn" : Arn
+    )
+
+    alias DescribeStateMachineOutput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "name" : Name,
+      "status" : (StateMachineStatus)?,
+      "definition" : Definition,
+      "roleArn" : Arn,
+      "type" : StateMachineType,
+      "creationDate" : Timestamp,
+      "loggingConfiguration" : (LoggingConfiguration)?,
+      "tracingConfiguration" : (TracingConfiguration)?
+    )
+
+    alias Enabled = Bool
+
+    alias ErrorMessage = String
+
+    alias EventId = Int64
+
+    alias ExecutionAbortedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias ExecutionAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ExecutionDoesNotExist = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ExecutionFailedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias ExecutionLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ExecutionList = Array(ExecutionListItem)
+
+    alias ExecutionListItem = NamedTuple(
+      "executionArn" : Arn,
+      "stateMachineArn" : Arn,
+      "name" : Name,
+      "status" : ExecutionStatus,
+      "startDate" : Timestamp,
+      "stopDate" : (Timestamp)?
+    )
+
+    alias ExecutionStartedEventDetails = NamedTuple(
+      "input" : (SensitiveData)?,
+      "inputDetails" : (HistoryEventExecutionDataDetails)?,
+      "roleArn" : (Arn)?
+    )
+
+    alias ExecutionStatus = String
+
+    alias ExecutionSucceededEventDetails = NamedTuple(
+      "output" : (SensitiveData)?,
+      "outputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias ExecutionTimedOutEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias GetActivityTaskInput = NamedTuple(
+      "activityArn" : Arn,
+      "workerName" : (Name)?
+    )
+
+    alias GetActivityTaskOutput = NamedTuple(
+      "taskToken" : (TaskToken)?,
+      "input" : (SensitiveDataJobInput)?
+    )
+
+    alias GetExecutionHistoryInput = NamedTuple(
+      "executionArn" : Arn,
+      "maxResults" : (PageSize)?,
+      "reverseOrder" : (ReverseOrder)?,
+      "nextToken" : (PageToken)?,
+      "includeExecutionData" : (IncludeExecutionDataGetExecutionHistory)?
+    )
+
+    alias GetExecutionHistoryOutput = NamedTuple(
+      "events" : HistoryEventList,
+      "nextToken" : (PageToken)?
+    )
+
+    alias HistoryEvent = NamedTuple(
+      "timestamp" : Timestamp,
+      "type" : HistoryEventType,
+      "id" : EventId,
+      "previousEventId" : (EventId)?,
+      "activityFailedEventDetails" : (ActivityFailedEventDetails)?,
+      "activityScheduleFailedEventDetails" : (ActivityScheduleFailedEventDetails)?,
+      "activityScheduledEventDetails" : (ActivityScheduledEventDetails)?,
+      "activityStartedEventDetails" : (ActivityStartedEventDetails)?,
+      "activitySucceededEventDetails" : (ActivitySucceededEventDetails)?,
+      "activityTimedOutEventDetails" : (ActivityTimedOutEventDetails)?,
+      "taskFailedEventDetails" : (TaskFailedEventDetails)?,
+      "taskScheduledEventDetails" : (TaskScheduledEventDetails)?,
+      "taskStartFailedEventDetails" : (TaskStartFailedEventDetails)?,
+      "taskStartedEventDetails" : (TaskStartedEventDetails)?,
+      "taskSubmitFailedEventDetails" : (TaskSubmitFailedEventDetails)?,
+      "taskSubmittedEventDetails" : (TaskSubmittedEventDetails)?,
+      "taskSucceededEventDetails" : (TaskSucceededEventDetails)?,
+      "taskTimedOutEventDetails" : (TaskTimedOutEventDetails)?,
+      "executionFailedEventDetails" : (ExecutionFailedEventDetails)?,
+      "executionStartedEventDetails" : (ExecutionStartedEventDetails)?,
+      "executionSucceededEventDetails" : (ExecutionSucceededEventDetails)?,
+      "executionAbortedEventDetails" : (ExecutionAbortedEventDetails)?,
+      "executionTimedOutEventDetails" : (ExecutionTimedOutEventDetails)?,
+      "mapStateStartedEventDetails" : (MapStateStartedEventDetails)?,
+      "mapIterationStartedEventDetails" : (MapIterationEventDetails)?,
+      "mapIterationSucceededEventDetails" : (MapIterationEventDetails)?,
+      "mapIterationFailedEventDetails" : (MapIterationEventDetails)?,
+      "mapIterationAbortedEventDetails" : (MapIterationEventDetails)?,
+      "lambdaFunctionFailedEventDetails" : (LambdaFunctionFailedEventDetails)?,
+      "lambdaFunctionScheduleFailedEventDetails" : (LambdaFunctionScheduleFailedEventDetails)?,
+      "lambdaFunctionScheduledEventDetails" : (LambdaFunctionScheduledEventDetails)?,
+      "lambdaFunctionStartFailedEventDetails" : (LambdaFunctionStartFailedEventDetails)?,
+      "lambdaFunctionSucceededEventDetails" : (LambdaFunctionSucceededEventDetails)?,
+      "lambdaFunctionTimedOutEventDetails" : (LambdaFunctionTimedOutEventDetails)?,
+      "stateEnteredEventDetails" : (StateEnteredEventDetails)?,
+      "stateExitedEventDetails" : (StateExitedEventDetails)?
+    )
+
+    alias HistoryEventExecutionDataDetails = NamedTuple(
+      "truncated" : (truncated)?
+    )
+
+    alias HistoryEventList = Array(HistoryEvent)
+
+    alias HistoryEventType = String
+
+    alias Identity = String
+
+    alias IncludeExecutionData = Bool
+
+    alias IncludeExecutionDataGetExecutionHistory = Bool
+
+    alias InvalidArn = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidDefinition = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidExecutionInput = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidLoggingConfiguration = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidName = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidOutput = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidToken = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidTracingConfiguration = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias LambdaFunctionFailedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias LambdaFunctionScheduleFailedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias LambdaFunctionScheduledEventDetails = NamedTuple(
+      "resource" : Arn,
+      "input" : (SensitiveData)?,
+      "inputDetails" : (HistoryEventExecutionDataDetails)?,
+      "timeoutInSeconds" : (TimeoutInSeconds)?
+    )
+
+    alias LambdaFunctionStartFailedEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias LambdaFunctionSucceededEventDetails = NamedTuple(
+      "output" : (SensitiveData)?,
+      "outputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias LambdaFunctionTimedOutEventDetails = NamedTuple(
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias ListActivitiesInput = NamedTuple(
+      "maxResults" : (PageSize)?,
+      "nextToken" : (PageToken)?
+    )
+
+    alias ListActivitiesOutput = NamedTuple(
+      "activities" : ActivityList,
+      "nextToken" : (PageToken)?
+    )
+
+    alias ListExecutionsInput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "statusFilter" : (ExecutionStatus)?,
+      "maxResults" : (PageSize)?,
+      "nextToken" : (ListExecutionsPageToken)?
+    )
+
+    alias ListExecutionsOutput = NamedTuple(
+      "executions" : ExecutionList,
+      "nextToken" : (ListExecutionsPageToken)?
+    )
+
+    alias ListExecutionsPageToken = String
+
+    alias ListStateMachinesInput = NamedTuple(
+      "maxResults" : (PageSize)?,
+      "nextToken" : (PageToken)?
+    )
+
+    alias ListStateMachinesOutput = NamedTuple(
+      "stateMachines" : StateMachineList,
+      "nextToken" : (PageToken)?
+    )
+
+    alias ListTagsForResourceInput = NamedTuple(
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceOutput = NamedTuple(
+      "tags" : (TagList)?
+    )
+
+    alias LogDestination = NamedTuple(
+      "cloudWatchLogsLogGroup" : (CloudWatchLogsLogGroup)?
+    )
+
+    alias LogDestinationList = Array(LogDestination)
+
+    alias LogLevel = String
+
+    alias LoggingConfiguration = NamedTuple(
+      "level" : (LogLevel)?,
+      "includeExecutionData" : (IncludeExecutionData)?,
+      "destinations" : (LogDestinationList)?
+    )
+
+    alias MapIterationEventDetails = NamedTuple(
+      "name" : (Name)?,
+      "index" : (UnsignedInteger)?
+    )
+
+    alias MapStateStartedEventDetails = NamedTuple(
+      "length" : (UnsignedInteger)?
+    )
+
+    alias MissingRequiredParameter = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Name = String
+
+    alias PageSize = Int32
+
+    alias PageToken = String
+
+    alias ResourceNotFound = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "resourceName" : (Arn)?
+    )
+
+    alias ReverseOrder = Bool
+
+    alias SendTaskFailureInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias SendTaskFailureOutput = NamedTuple(
+      
+    )
+
+    alias SendTaskHeartbeatInput = NamedTuple(
+      "taskToken" : TaskToken
+    )
+
+    alias SendTaskHeartbeatOutput = NamedTuple(
+      
+    )
+
+    alias SendTaskSuccessInput = NamedTuple(
+      "taskToken" : TaskToken,
+      "output" : SensitiveData
+    )
+
+    alias SendTaskSuccessOutput = NamedTuple(
+      
+    )
+
+    alias SensitiveCause = String
+
+    alias SensitiveData = String
+
+    alias SensitiveDataJobInput = String
+
+    alias SensitiveError = String
+
+    alias StartExecutionInput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "name" : (Name)?,
+      "input" : (SensitiveData)?,
+      "traceHeader" : (TraceHeader)?
+    )
+
+    alias StartExecutionOutput = NamedTuple(
+      "executionArn" : Arn,
+      "startDate" : Timestamp
+    )
+
+    alias StartSyncExecutionInput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "name" : (Name)?,
+      "input" : (SensitiveData)?,
+      "traceHeader" : (TraceHeader)?
+    )
+
+    alias StartSyncExecutionOutput = NamedTuple(
+      "executionArn" : Arn,
+      "stateMachineArn" : (Arn)?,
+      "name" : (Name)?,
+      "startDate" : Timestamp,
+      "stopDate" : Timestamp,
+      "status" : SyncExecutionStatus,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?,
+      "input" : (SensitiveData)?,
+      "inputDetails" : (CloudWatchEventsExecutionDataDetails)?,
+      "output" : (SensitiveData)?,
+      "outputDetails" : (CloudWatchEventsExecutionDataDetails)?,
+      "traceHeader" : (TraceHeader)?,
+      "billingDetails" : (BillingDetails)?
+    )
+
+    alias StateEnteredEventDetails = NamedTuple(
+      "name" : Name,
+      "input" : (SensitiveData)?,
+      "inputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias StateExitedEventDetails = NamedTuple(
+      "name" : Name,
+      "output" : (SensitiveData)?,
+      "outputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias StateMachineAlreadyExists = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StateMachineDeleting = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StateMachineDoesNotExist = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StateMachineLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StateMachineList = Array(StateMachineListItem)
+
+    alias StateMachineListItem = NamedTuple(
+      "stateMachineArn" : Arn,
+      "name" : Name,
+      "type" : StateMachineType,
+      "creationDate" : Timestamp
+    )
+
+    alias StateMachineStatus = String
+
+    alias StateMachineType = String
+
+    alias StateMachineTypeNotSupported = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias StopExecutionInput = NamedTuple(
+      "executionArn" : Arn,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias StopExecutionOutput = NamedTuple(
+      "stopDate" : Timestamp
+    )
+
+    alias SyncExecutionStatus = String
+
+    alias Tag = NamedTuple(
+      "key" : (TagKey)?,
+      "value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceInput = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : TagList
+    )
+
+    alias TagResourceOutput = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TaskDoesNotExist = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TaskFailedEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias TaskScheduledEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "region" : Name,
+      "parameters" : ConnectorParameters,
+      "timeoutInSeconds" : (TimeoutInSeconds)?,
+      "heartbeatInSeconds" : (TimeoutInSeconds)?
+    )
+
+    alias TaskStartFailedEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias TaskStartedEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name
+    )
+
+    alias TaskSubmitFailedEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias TaskSubmittedEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "output" : (SensitiveData)?,
+      "outputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias TaskSucceededEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "output" : (SensitiveData)?,
+      "outputDetails" : (HistoryEventExecutionDataDetails)?
+    )
+
+    alias TaskTimedOut = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias TaskTimedOutEventDetails = NamedTuple(
+      "resourceType" : Name,
+      "resource" : Name,
+      "error" : (SensitiveError)?,
+      "cause" : (SensitiveCause)?
+    )
+
+    alias TaskToken = String
+
+    alias TimeoutInSeconds = Int64
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyTags = NamedTuple(
+      "message" : (ErrorMessage)?,
+      "resourceName" : (Arn)?
+    )
+
+    alias TraceHeader = String
+
+    alias TracingConfiguration = NamedTuple(
+      "enabled" : (Enabled)?
+    )
+
+    alias UnsignedInteger = Int32
+
+    alias UntagResourceInput = NamedTuple(
+      "resourceArn" : Arn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceOutput = NamedTuple(
+      
+    )
+
+    alias UpdateStateMachineInput = NamedTuple(
+      "stateMachineArn" : Arn,
+      "definition" : (Definition)?,
+      "roleArn" : (Arn)?,
+      "loggingConfiguration" : (LoggingConfiguration)?,
+      "tracingConfiguration" : (TracingConfiguration)?
+    )
+
+    alias UpdateStateMachineOutput = NamedTuple(
+      "updateDate" : Timestamp
+    )
+
+    alias includedDetails = Bool
+
+    alias truncated = Bool
   end
 end

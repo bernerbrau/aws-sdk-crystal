@@ -379,8 +379,8 @@ module Aws::AutoScaling
     #
     # @overload attach_instances(**params)
     # @param [Hash] params ({})
-    def attach_instances(params = {}, **options)
-      req = build_request(:attach_instances, params)
+    def attach_instances(, **options)
+      req = build_request(:attach_instances, )
       req.send_request(options)
     end
 
@@ -445,8 +445,8 @@ module Aws::AutoScaling
     #
     # @overload attach_load_balancer_target_groups(**params)
     # @param [Hash] params ({})
-    def attach_load_balancer_target_groups(params = {}, **options)
-      req = build_request(:attach_load_balancer_target_groups, params)
+    def attach_load_balancer_target_groups(, **options)
+      req = build_request(:attach_load_balancer_target_groups, )
       req.send_request(options)
     end
 
@@ -503,8 +503,8 @@ module Aws::AutoScaling
     #
     # @overload attach_load_balancers(**params)
     # @param [Hash] params ({})
-    def attach_load_balancers(params = {}, **options)
-      req = build_request(:attach_load_balancers, params)
+    def attach_load_balancers(, **options)
+      req = build_request(:attach_load_balancers, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::AutoScaling
     #
     # @overload batch_delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def batch_delete_scheduled_action(params = {}, **options)
-      req = build_request(:batch_delete_scheduled_action, params)
+    def batch_delete_scheduled_action(, **options)
+      req = build_request(:batch_delete_scheduled_action, )
       req.send_request(options)
     end
 
@@ -587,8 +587,8 @@ module Aws::AutoScaling
     #
     # @overload batch_put_scheduled_update_group_action(**params)
     # @param [Hash] params ({})
-    def batch_put_scheduled_update_group_action(params = {}, **options)
-      req = build_request(:batch_put_scheduled_update_group_action, params)
+    def batch_put_scheduled_update_group_action(, **options)
+      req = build_request(:batch_put_scheduled_update_group_action, )
       req.send_request(options)
     end
 
@@ -638,8 +638,8 @@ module Aws::AutoScaling
     #
     # @overload cancel_instance_refresh(**params)
     # @param [Hash] params ({})
-    def cancel_instance_refresh(params = {}, **options)
-      req = build_request(:cancel_instance_refresh, params)
+    def cancel_instance_refresh(, **options)
+      req = build_request(:cancel_instance_refresh, )
       req.send_request(options)
     end
 
@@ -722,8 +722,8 @@ module Aws::AutoScaling
     #
     # @overload complete_lifecycle_action(**params)
     # @param [Hash] params ({})
-    def complete_lifecycle_action(params = {}, **options)
-      req = build_request(:complete_lifecycle_action, params)
+    def complete_lifecycle_action(, **options)
+      req = build_request(:complete_lifecycle_action, )
       req.send_request(options)
     end
 
@@ -1140,8 +1140,8 @@ module Aws::AutoScaling
     #
     # @overload create_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def create_auto_scaling_group(params = {}, **options)
-      req = build_request(:create_auto_scaling_group, params)
+    def create_auto_scaling_group(, **options)
+      req = build_request(:create_auto_scaling_group, )
       req.send_request(options)
     end
 
@@ -1466,8 +1466,8 @@ module Aws::AutoScaling
     #
     # @overload create_launch_configuration(**params)
     # @param [Hash] params ({})
-    def create_launch_configuration(params = {}, **options)
-      req = build_request(:create_launch_configuration, params)
+    def create_launch_configuration(, **options)
+      req = build_request(:create_launch_configuration, )
       req.send_request(options)
     end
 
@@ -1531,8 +1531,8 @@ module Aws::AutoScaling
     #
     # @overload create_or_update_tags(**params)
     # @param [Hash] params ({})
-    def create_or_update_tags(params = {}, **options)
-      req = build_request(:create_or_update_tags, params)
+    def create_or_update_tags(, **options)
+      req = build_request(:create_or_update_tags, )
       req.send_request(options)
     end
 
@@ -1594,8 +1594,8 @@ module Aws::AutoScaling
     #
     # @overload delete_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def delete_auto_scaling_group(params = {}, **options)
-      req = build_request(:delete_auto_scaling_group, params)
+    def delete_auto_scaling_group(, **options)
+      req = build_request(:delete_auto_scaling_group, )
       req.send_request(options)
     end
 
@@ -1629,8 +1629,8 @@ module Aws::AutoScaling
     #
     # @overload delete_launch_configuration(**params)
     # @param [Hash] params ({})
-    def delete_launch_configuration(params = {}, **options)
-      req = build_request(:delete_launch_configuration, params)
+    def delete_launch_configuration(, **options)
+      req = build_request(:delete_launch_configuration, )
       req.send_request(options)
     end
 
@@ -1669,8 +1669,8 @@ module Aws::AutoScaling
     #
     # @overload delete_lifecycle_hook(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_hook(params = {}, **options)
-      req = build_request(:delete_lifecycle_hook, params)
+    def delete_lifecycle_hook(, **options)
+      req = build_request(:delete_lifecycle_hook, )
       req.send_request(options)
     end
 
@@ -1706,8 +1706,8 @@ module Aws::AutoScaling
     #
     # @overload delete_notification_configuration(**params)
     # @param [Hash] params ({})
-    def delete_notification_configuration(params = {}, **options)
-      req = build_request(:delete_notification_configuration, params)
+    def delete_notification_configuration(, **options)
+      req = build_request(:delete_notification_configuration, )
       req.send_request(options)
     end
 
@@ -1753,8 +1753,8 @@ module Aws::AutoScaling
     #
     # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, **options)
-      req = build_request(:delete_policy, params)
+    def delete_policy(, **options)
+      req = build_request(:delete_policy, )
       req.send_request(options)
     end
 
@@ -1789,8 +1789,8 @@ module Aws::AutoScaling
     #
     # @overload delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_action(params = {}, **options)
-      req = build_request(:delete_scheduled_action, params)
+    def delete_scheduled_action(, **options)
+      req = build_request(:delete_scheduled_action, )
       req.send_request(options)
     end
 
@@ -1835,8 +1835,8 @@ module Aws::AutoScaling
     #
     # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, **options)
-      req = build_request(:delete_tags, params)
+    def delete_tags(, **options)
+      req = build_request(:delete_tags, )
       req.send_request(options)
     end
 
@@ -1885,8 +1885,8 @@ module Aws::AutoScaling
     #
     # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, **options)
-      req = build_request(:describe_account_limits, params)
+    def describe_account_limits(, **options)
+      req = build_request(:describe_account_limits, )
       req.send_request(options)
     end
 
@@ -1939,8 +1939,8 @@ module Aws::AutoScaling
     #
     # @overload describe_adjustment_types(**params)
     # @param [Hash] params ({})
-    def describe_adjustment_types(params = {}, **options)
-      req = build_request(:describe_adjustment_types, params)
+    def describe_adjustment_types(, **options)
+      req = build_request(:describe_adjustment_types, )
       req.send_request(options)
     end
 
@@ -2114,8 +2114,8 @@ module Aws::AutoScaling
     #
     # @overload describe_auto_scaling_groups(**params)
     # @param [Hash] params ({})
-    def describe_auto_scaling_groups(params = {}, **options)
-      req = build_request(:describe_auto_scaling_groups, params)
+    def describe_auto_scaling_groups(, **options)
+      req = build_request(:describe_auto_scaling_groups, )
       req.send_request(options)
     end
 
@@ -2196,8 +2196,8 @@ module Aws::AutoScaling
     #
     # @overload describe_auto_scaling_instances(**params)
     # @param [Hash] params ({})
-    def describe_auto_scaling_instances(params = {}, **options)
-      req = build_request(:describe_auto_scaling_instances, params)
+    def describe_auto_scaling_instances(, **options)
+      req = build_request(:describe_auto_scaling_instances, )
       req.send_request(options)
     end
 
@@ -2236,8 +2236,8 @@ module Aws::AutoScaling
     #
     # @overload describe_auto_scaling_notification_types(**params)
     # @param [Hash] params ({})
-    def describe_auto_scaling_notification_types(params = {}, **options)
-      req = build_request(:describe_auto_scaling_notification_types, params)
+    def describe_auto_scaling_notification_types(, **options)
+      req = build_request(:describe_auto_scaling_notification_types, )
       req.send_request(options)
     end
 
@@ -2346,8 +2346,8 @@ module Aws::AutoScaling
     #
     # @overload describe_instance_refreshes(**params)
     # @param [Hash] params ({})
-    def describe_instance_refreshes(params = {}, **options)
-      req = build_request(:describe_instance_refreshes, params)
+    def describe_instance_refreshes(, **options)
+      req = build_request(:describe_instance_refreshes, )
       req.send_request(options)
     end
 
@@ -2456,8 +2456,8 @@ module Aws::AutoScaling
     #
     # @overload describe_launch_configurations(**params)
     # @param [Hash] params ({})
-    def describe_launch_configurations(params = {}, **options)
-      req = build_request(:describe_launch_configurations, params)
+    def describe_launch_configurations(, **options)
+      req = build_request(:describe_launch_configurations, )
       req.send_request(options)
     end
 
@@ -2498,8 +2498,8 @@ module Aws::AutoScaling
     #
     # @overload describe_lifecycle_hook_types(**params)
     # @param [Hash] params ({})
-    def describe_lifecycle_hook_types(params = {}, **options)
-      req = build_request(:describe_lifecycle_hook_types, params)
+    def describe_lifecycle_hook_types(, **options)
+      req = build_request(:describe_lifecycle_hook_types, )
       req.send_request(options)
     end
 
@@ -2565,8 +2565,8 @@ module Aws::AutoScaling
     #
     # @overload describe_lifecycle_hooks(**params)
     # @param [Hash] params ({})
-    def describe_lifecycle_hooks(params = {}, **options)
-      req = build_request(:describe_lifecycle_hooks, params)
+    def describe_lifecycle_hooks(, **options)
+      req = build_request(:describe_lifecycle_hooks, )
       req.send_request(options)
     end
 
@@ -2626,8 +2626,8 @@ module Aws::AutoScaling
     #
     # @overload describe_load_balancer_target_groups(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_target_groups(params = {}, **options)
-      req = build_request(:describe_load_balancer_target_groups, params)
+    def describe_load_balancer_target_groups(, **options)
+      req = build_request(:describe_load_balancer_target_groups, )
       req.send_request(options)
     end
 
@@ -2691,8 +2691,8 @@ module Aws::AutoScaling
     #
     # @overload describe_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_load_balancers(params = {}, **options)
-      req = build_request(:describe_load_balancers, params)
+    def describe_load_balancers(, **options)
+      req = build_request(:describe_load_balancers, )
       req.send_request(options)
     end
 
@@ -2762,8 +2762,8 @@ module Aws::AutoScaling
     #
     # @overload describe_metric_collection_types(**params)
     # @param [Hash] params ({})
-    def describe_metric_collection_types(params = {}, **options)
-      req = build_request(:describe_metric_collection_types, params)
+    def describe_metric_collection_types(, **options)
+      req = build_request(:describe_metric_collection_types, )
       req.send_request(options)
     end
 
@@ -2835,8 +2835,8 @@ module Aws::AutoScaling
     #
     # @overload describe_notification_configurations(**params)
     # @param [Hash] params ({})
-    def describe_notification_configurations(params = {}, **options)
-      req = build_request(:describe_notification_configurations, params)
+    def describe_notification_configurations(, **options)
+      req = build_request(:describe_notification_configurations, )
       req.send_request(options)
     end
 
@@ -2954,8 +2954,8 @@ module Aws::AutoScaling
     #
     # @overload describe_policies(**params)
     # @param [Hash] params ({})
-    def describe_policies(params = {}, **options)
-      req = build_request(:describe_policies, params)
+    def describe_policies(, **options)
+      req = build_request(:describe_policies, )
       req.send_request(options)
     end
 
@@ -3041,8 +3041,8 @@ module Aws::AutoScaling
     #
     # @overload describe_scaling_activities(**params)
     # @param [Hash] params ({})
-    def describe_scaling_activities(params = {}, **options)
-      req = build_request(:describe_scaling_activities, params)
+    def describe_scaling_activities(, **options)
+      req = build_request(:describe_scaling_activities, )
       req.send_request(options)
     end
 
@@ -3100,8 +3100,8 @@ module Aws::AutoScaling
     #
     # @overload describe_scaling_process_types(**params)
     # @param [Hash] params ({})
-    def describe_scaling_process_types(params = {}, **options)
-      req = build_request(:describe_scaling_process_types, params)
+    def describe_scaling_process_types(, **options)
+      req = build_request(:describe_scaling_process_types, )
       req.send_request(options)
     end
 
@@ -3197,8 +3197,8 @@ module Aws::AutoScaling
     #
     # @overload describe_scheduled_actions(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_actions(params = {}, **options)
-      req = build_request(:describe_scheduled_actions, params)
+    def describe_scheduled_actions(, **options)
+      req = build_request(:describe_scheduled_actions, )
       req.send_request(options)
     end
 
@@ -3302,8 +3302,8 @@ module Aws::AutoScaling
     #
     # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, **options)
-      req = build_request(:describe_tags, params)
+    def describe_tags(, **options)
+      req = build_request(:describe_tags, )
       req.send_request(options)
     end
 
@@ -3350,8 +3350,8 @@ module Aws::AutoScaling
     #
     # @overload describe_termination_policy_types(**params)
     # @param [Hash] params ({})
-    def describe_termination_policy_types(params = {}, **options)
-      req = build_request(:describe_termination_policy_types, params)
+    def describe_termination_policy_types(, **options)
+      req = build_request(:describe_termination_policy_types, )
       req.send_request(options)
     end
 
@@ -3445,8 +3445,8 @@ module Aws::AutoScaling
     #
     # @overload detach_instances(**params)
     # @param [Hash] params ({})
-    def detach_instances(params = {}, **options)
-      req = build_request(:detach_instances, params)
+    def detach_instances(, **options)
+      req = build_request(:detach_instances, )
       req.send_request(options)
     end
 
@@ -3485,8 +3485,8 @@ module Aws::AutoScaling
     #
     # @overload detach_load_balancer_target_groups(**params)
     # @param [Hash] params ({})
-    def detach_load_balancer_target_groups(params = {}, **options)
-      req = build_request(:detach_load_balancer_target_groups, params)
+    def detach_load_balancer_target_groups(, **options)
+      req = build_request(:detach_load_balancer_target_groups, )
       req.send_request(options)
     end
 
@@ -3534,8 +3534,8 @@ module Aws::AutoScaling
     #
     # @overload detach_load_balancers(**params)
     # @param [Hash] params ({})
-    def detach_load_balancers(params = {}, **options)
-      req = build_request(:detach_load_balancers, params)
+    def detach_load_balancers(, **options)
+      req = build_request(:detach_load_balancers, )
       req.send_request(options)
     end
 
@@ -3600,8 +3600,8 @@ module Aws::AutoScaling
     #
     # @overload disable_metrics_collection(**params)
     # @param [Hash] params ({})
-    def disable_metrics_collection(params = {}, **options)
-      req = build_request(:disable_metrics_collection, params)
+    def disable_metrics_collection(, **options)
+      req = build_request(:disable_metrics_collection, )
       req.send_request(options)
     end
 
@@ -3679,8 +3679,8 @@ module Aws::AutoScaling
     #
     # @overload enable_metrics_collection(**params)
     # @param [Hash] params ({})
-    def enable_metrics_collection(params = {}, **options)
-      req = build_request(:enable_metrics_collection, params)
+    def enable_metrics_collection(, **options)
+      req = build_request(:enable_metrics_collection, )
       req.send_request(options)
     end
 
@@ -3771,8 +3771,8 @@ module Aws::AutoScaling
     #
     # @overload enter_standby(**params)
     # @param [Hash] params ({})
-    def enter_standby(params = {}, **options)
-      req = build_request(:enter_standby, params)
+    def enter_standby(, **options)
+      req = build_request(:enter_standby, )
       req.send_request(options)
     end
 
@@ -3844,8 +3844,8 @@ module Aws::AutoScaling
     #
     # @overload execute_policy(**params)
     # @param [Hash] params ({})
-    def execute_policy(params = {}, **options)
-      req = build_request(:execute_policy, params)
+    def execute_policy(, **options)
+      req = build_request(:execute_policy, )
       req.send_request(options)
     end
 
@@ -3924,8 +3924,8 @@ module Aws::AutoScaling
     #
     # @overload exit_standby(**params)
     # @param [Hash] params ({})
-    def exit_standby(params = {}, **options)
-      req = build_request(:exit_standby, params)
+    def exit_standby(, **options)
+      req = build_request(:exit_standby, )
       req.send_request(options)
     end
 
@@ -4066,8 +4066,8 @@ module Aws::AutoScaling
     #
     # @overload put_lifecycle_hook(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_hook(params = {}, **options)
-      req = build_request(:put_lifecycle_hook, params)
+    def put_lifecycle_hook(, **options)
+      req = build_request(:put_lifecycle_hook, )
       req.send_request(options)
     end
 
@@ -4128,8 +4128,8 @@ module Aws::AutoScaling
     #
     # @overload put_notification_configuration(**params)
     # @param [Hash] params ({})
-    def put_notification_configuration(params = {}, **options)
-      req = build_request(:put_notification_configuration, params)
+    def put_notification_configuration(, **options)
+      req = build_request(:put_notification_configuration, )
       req.send_request(options)
     end
 
@@ -4374,8 +4374,8 @@ module Aws::AutoScaling
     #
     # @overload put_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_scaling_policy(params = {}, **options)
-      req = build_request(:put_scaling_policy, params)
+    def put_scaling_policy(, **options)
+      req = build_request(:put_scaling_policy, )
       req.send_request(options)
     end
 
@@ -4476,8 +4476,8 @@ module Aws::AutoScaling
     #
     # @overload put_scheduled_update_group_action(**params)
     # @param [Hash] params ({})
-    def put_scheduled_update_group_action(params = {}, **options)
-      req = build_request(:put_scheduled_update_group_action, params)
+    def put_scheduled_update_group_action(, **options)
+      req = build_request(:put_scheduled_update_group_action, )
       req.send_request(options)
     end
 
@@ -4554,8 +4554,8 @@ module Aws::AutoScaling
     #
     # @overload record_lifecycle_action_heartbeat(**params)
     # @param [Hash] params ({})
-    def record_lifecycle_action_heartbeat(params = {}, **options)
-      req = build_request(:record_lifecycle_action_heartbeat, params)
+    def record_lifecycle_action_heartbeat(, **options)
+      req = build_request(:record_lifecycle_action_heartbeat, )
       req.send_request(options)
     end
 
@@ -4620,8 +4620,8 @@ module Aws::AutoScaling
     #
     # @overload resume_processes(**params)
     # @param [Hash] params ({})
-    def resume_processes(params = {}, **options)
-      req = build_request(:resume_processes, params)
+    def resume_processes(, **options)
+      req = build_request(:resume_processes, )
       req.send_request(options)
     end
 
@@ -4679,8 +4679,8 @@ module Aws::AutoScaling
     #
     # @overload set_desired_capacity(**params)
     # @param [Hash] params ({})
-    def set_desired_capacity(params = {}, **options)
-      req = build_request(:set_desired_capacity, params)
+    def set_desired_capacity(, **options)
+      req = build_request(:set_desired_capacity, )
       req.send_request(options)
     end
 
@@ -4740,8 +4740,8 @@ module Aws::AutoScaling
     #
     # @overload set_instance_health(**params)
     # @param [Hash] params ({})
-    def set_instance_health(params = {}, **options)
-      req = build_request(:set_instance_health, params)
+    def set_instance_health(, **options)
+      req = build_request(:set_instance_health, )
       req.send_request(options)
     end
 
@@ -4807,8 +4807,8 @@ module Aws::AutoScaling
     #
     # @overload set_instance_protection(**params)
     # @param [Hash] params ({})
-    def set_instance_protection(params = {}, **options)
-      req = build_request(:set_instance_protection, params)
+    def set_instance_protection(, **options)
+      req = build_request(:set_instance_protection, )
       req.send_request(options)
     end
 
@@ -4900,8 +4900,8 @@ module Aws::AutoScaling
     #
     # @overload start_instance_refresh(**params)
     # @param [Hash] params ({})
-    def start_instance_refresh(params = {}, **options)
-      req = build_request(:start_instance_refresh, params)
+    def start_instance_refresh(, **options)
+      req = build_request(:start_instance_refresh, )
       req.send_request(options)
     end
 
@@ -4971,8 +4971,8 @@ module Aws::AutoScaling
     #
     # @overload suspend_processes(**params)
     # @param [Hash] params ({})
-    def suspend_processes(params = {}, **options)
-      req = build_request(:suspend_processes, params)
+    def suspend_processes(, **options)
+      req = build_request(:suspend_processes, )
       req.send_request(options)
     end
 
@@ -5046,8 +5046,8 @@ module Aws::AutoScaling
     #
     # @overload terminate_instance_in_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def terminate_instance_in_auto_scaling_group(params = {}, **options)
-      req = build_request(:terminate_instance_in_auto_scaling_group, params)
+    def terminate_instance_in_auto_scaling_group(, **options)
+      req = build_request(:terminate_instance_in_auto_scaling_group, )
       req.send_request(options)
     end
 
@@ -5336,8 +5336,8 @@ module Aws::AutoScaling
     #
     # @overload update_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def update_auto_scaling_group(params = {}, **options)
-      req = build_request(:update_auto_scaling_group, params)
+    def update_auto_scaling_group(, **options)
+      req = build_request(:update_auto_scaling_group, )
       req.send_request(options)
     end
 

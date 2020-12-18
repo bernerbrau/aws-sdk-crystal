@@ -364,8 +364,8 @@ module Aws::Lex
     #
     # @overload delete_session(**params)
     # @param [Hash] params ({})
-    def delete_session(params = {}, **options)
-      req = build_request(:delete_session, params)
+    def delete_session(, **options)
+      req = build_request(:delete_session, )
       req.send_request(options)
     end
 
@@ -438,8 +438,8 @@ module Aws::Lex
     #
     # @overload get_session(**params)
     # @param [Hash] params ({})
-    def get_session(params = {}, **options)
-      req = build_request(:get_session, params)
+    def get_session(, **options)
+      req = build_request(:get_session, )
       req.send_request(options)
     end
 
@@ -715,8 +715,8 @@ module Aws::Lex
     #
     # @overload post_content(**params)
     # @param [Hash] params ({})
-    def post_content(params = {}, **options, &block)
-      req = build_request(:post_content, params)
+    def post_content(, **options, &block)
+      req = build_request(:post_content, )
       req.send_request(options, &block)
     end
 
@@ -930,8 +930,8 @@ module Aws::Lex
     #
     # @overload post_text(**params)
     # @param [Hash] params ({})
-    def post_text(params = {}, **options)
-      req = build_request(:post_text, params)
+    def post_text(, **options)
+      req = build_request(:post_text, )
       req.send_request(options)
     end
 
@@ -1104,8 +1104,8 @@ module Aws::Lex
     #
     # @overload put_session(**params)
     # @param [Hash] params ({})
-    def put_session(params = {}, **options, &block)
-      req = build_request(:put_session, params)
+    def put_session(, **options, &block)
+      req = build_request(:put_session, )
       req.send_request(options, &block)
     end
 

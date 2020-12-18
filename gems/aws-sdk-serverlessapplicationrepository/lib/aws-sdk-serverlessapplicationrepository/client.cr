@@ -441,8 +441,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, **options)
-      req = build_request(:create_application, params)
+    def create_application(, **options)
+      req = build_request(:create_application, )
       req.send_request(options)
     end
 
@@ -515,8 +515,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload create_application_version(**params)
     # @param [Hash] params ({})
-    def create_application_version(params = {}, **options)
-      req = build_request(:create_application_version, params)
+    def create_application_version(, **options)
+      req = build_request(:create_application_version, )
       req.send_request(options)
     end
 
@@ -605,8 +605,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload create_cloud_formation_change_set(**params)
     # @param [Hash] params ({})
-    def create_cloud_formation_change_set(params = {}, **options)
-      req = build_request(:create_cloud_formation_change_set, params)
+    def create_cloud_formation_change_set(, **options)
+      req = build_request(:create_cloud_formation_change_set, )
       req.send_request(options)
     end
 
@@ -647,8 +647,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload create_cloud_formation_template(**params)
     # @param [Hash] params ({})
-    def create_cloud_formation_template(params = {}, **options)
-      req = build_request(:create_cloud_formation_template, params)
+    def create_cloud_formation_template(, **options)
+      req = build_request(:create_cloud_formation_template, )
       req.send_request(options)
     end
 
@@ -668,8 +668,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, **options)
-      req = build_request(:delete_application, params)
+    def delete_application(, **options)
+      req = build_request(:delete_application, )
       req.send_request(options)
     end
 
@@ -747,8 +747,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload get_application(**params)
     # @param [Hash] params ({})
-    def get_application(params = {}, **options)
-      req = build_request(:get_application, params)
+    def get_application(, **options)
+      req = build_request(:get_application, )
       req.send_request(options)
     end
 
@@ -781,8 +781,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload get_application_policy(**params)
     # @param [Hash] params ({})
-    def get_application_policy(params = {}, **options)
-      req = build_request(:get_application_policy, params)
+    def get_application_policy(, **options)
+      req = build_request(:get_application_policy, )
       req.send_request(options)
     end
 
@@ -823,8 +823,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload get_cloud_formation_template(**params)
     # @param [Hash] params ({})
-    def get_cloud_formation_template(params = {}, **options)
-      req = build_request(:get_cloud_formation_template, params)
+    def get_cloud_formation_template(, **options)
+      req = build_request(:get_cloud_formation_template, )
       req.send_request(options)
     end
 
@@ -866,8 +866,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload list_application_dependencies(**params)
     # @param [Hash] params ({})
-    def list_application_dependencies(params = {}, **options)
-      req = build_request(:list_application_dependencies, params)
+    def list_application_dependencies(, **options)
+      req = build_request(:list_application_dependencies, )
       req.send_request(options)
     end
 
@@ -907,8 +907,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload list_application_versions(**params)
     # @param [Hash] params ({})
-    def list_application_versions(params = {}, **options)
-      req = build_request(:list_application_versions, params)
+    def list_application_versions(, **options)
+      req = build_request(:list_application_versions, )
       req.send_request(options)
     end
 
@@ -950,8 +950,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, **options)
-      req = build_request(:list_applications, params)
+    def list_applications(, **options)
+      req = build_request(:list_applications, )
       req.send_request(options)
     end
 
@@ -999,8 +999,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload put_application_policy(**params)
     # @param [Hash] params ({})
-    def put_application_policy(params = {}, **options)
-      req = build_request(:put_application_policy, params)
+    def put_application_policy(, **options)
+      req = build_request(:put_application_policy, )
       req.send_request(options)
     end
 
@@ -1026,8 +1026,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload unshare_application(**params)
     # @param [Hash] params ({})
-    def unshare_application(params = {}, **options)
-      req = build_request(:unshare_application, params)
+    def unshare_application(, **options)
+      req = build_request(:unshare_application, )
       req.send_request(options)
     end
 
@@ -1120,8 +1120,8 @@ module Aws::ServerlessApplicationRepository
     #
     # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, **options)
-      req = build_request(:update_application, params)
+    def update_application(, **options)
+      req = build_request(:update_application, )
       req.send_request(options)
     end
 

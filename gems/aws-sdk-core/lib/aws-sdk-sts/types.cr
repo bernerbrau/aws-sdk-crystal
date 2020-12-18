@@ -1530,5 +1530,254 @@ module Aws::STS
       include Aws::Structure
     end
 
+    alias AssumeRoleRequest = NamedTuple(
+      "RoleArn" : arnType,
+      "RoleSessionName" : roleSessionNameType,
+      "PolicyArns" : (policyDescriptorListType)?,
+      "Policy" : (sessionPolicyDocumentType)?,
+      "DurationSeconds" : (roleDurationSecondsType)?,
+      "Tags" : (tagListType)?,
+      "TransitiveTagKeys" : (tagKeyListType)?,
+      "ExternalId" : (externalIdType)?,
+      "SerialNumber" : (serialNumberType)?,
+      "TokenCode" : (tokenCodeType)?
+    )
+
+    alias AssumeRoleResponse = NamedTuple(
+      "Credentials" : (Credentials)?,
+      "AssumedRoleUser" : (AssumedRoleUser)?,
+      "PackedPolicySize" : (nonNegativeIntegerType)?
+    )
+
+    alias AssumeRoleWithSAMLRequest = NamedTuple(
+      "RoleArn" : arnType,
+      "PrincipalArn" : arnType,
+      "SAMLAssertion" : SAMLAssertionType,
+      "PolicyArns" : (policyDescriptorListType)?,
+      "Policy" : (sessionPolicyDocumentType)?,
+      "DurationSeconds" : (roleDurationSecondsType)?
+    )
+
+    alias AssumeRoleWithSAMLResponse = NamedTuple(
+      "Credentials" : (Credentials)?,
+      "AssumedRoleUser" : (AssumedRoleUser)?,
+      "PackedPolicySize" : (nonNegativeIntegerType)?,
+      "Subject" : (Subject)?,
+      "SubjectType" : (SubjectType)?,
+      "Issuer" : (Issuer)?,
+      "Audience" : (Audience)?,
+      "NameQualifier" : (NameQualifier)?
+    )
+
+    alias AssumeRoleWithWebIdentityRequest = NamedTuple(
+      "RoleArn" : arnType,
+      "RoleSessionName" : roleSessionNameType,
+      "WebIdentityToken" : clientTokenType,
+      "ProviderId" : (urlType)?,
+      "PolicyArns" : (policyDescriptorListType)?,
+      "Policy" : (sessionPolicyDocumentType)?,
+      "DurationSeconds" : (roleDurationSecondsType)?
+    )
+
+    alias AssumeRoleWithWebIdentityResponse = NamedTuple(
+      "Credentials" : (Credentials)?,
+      "SubjectFromWebIdentityToken" : (webIdentitySubjectType)?,
+      "AssumedRoleUser" : (AssumedRoleUser)?,
+      "PackedPolicySize" : (nonNegativeIntegerType)?,
+      "Provider" : (Issuer)?,
+      "Audience" : (Audience)?
+    )
+
+    alias AssumedRoleUser = NamedTuple(
+      "AssumedRoleId" : assumedRoleIdType,
+      "Arn" : arnType
+    )
+
+    alias Audience = String
+
+    alias Credentials = NamedTuple(
+      "AccessKeyId" : accessKeyIdType,
+      "SecretAccessKey" : accessKeySecretType,
+      "SessionToken" : tokenType,
+      "Expiration" : dateType
+    )
+
+    alias DecodeAuthorizationMessageRequest = NamedTuple(
+      "EncodedMessage" : encodedMessageType
+    )
+
+    alias DecodeAuthorizationMessageResponse = NamedTuple(
+      "DecodedMessage" : (decodedMessageType)?
+    )
+
+    alias ExpiredTokenException = NamedTuple(
+      "message" : (expiredIdentityTokenMessage)?
+    )
+
+    alias FederatedUser = NamedTuple(
+      "FederatedUserId" : federatedIdType,
+      "Arn" : arnType
+    )
+
+    alias GetAccessKeyInfoRequest = NamedTuple(
+      "AccessKeyId" : accessKeyIdType
+    )
+
+    alias GetAccessKeyInfoResponse = NamedTuple(
+      "Account" : (accountType)?
+    )
+
+    alias GetCallerIdentityRequest = NamedTuple(
+      
+    )
+
+    alias GetCallerIdentityResponse = NamedTuple(
+      "UserId" : (userIdType)?,
+      "Account" : (accountType)?,
+      "Arn" : (arnType)?
+    )
+
+    alias GetFederationTokenRequest = NamedTuple(
+      "Name" : userNameType,
+      "Policy" : (sessionPolicyDocumentType)?,
+      "PolicyArns" : (policyDescriptorListType)?,
+      "DurationSeconds" : (durationSecondsType)?,
+      "Tags" : (tagListType)?
+    )
+
+    alias GetFederationTokenResponse = NamedTuple(
+      "Credentials" : (Credentials)?,
+      "FederatedUser" : (FederatedUser)?,
+      "PackedPolicySize" : (nonNegativeIntegerType)?
+    )
+
+    alias GetSessionTokenRequest = NamedTuple(
+      "DurationSeconds" : (durationSecondsType)?,
+      "SerialNumber" : (serialNumberType)?,
+      "TokenCode" : (tokenCodeType)?
+    )
+
+    alias GetSessionTokenResponse = NamedTuple(
+      "Credentials" : (Credentials)?
+    )
+
+    alias IDPCommunicationErrorException = NamedTuple(
+      "message" : (idpCommunicationErrorMessage)?
+    )
+
+    alias IDPRejectedClaimException = NamedTuple(
+      "message" : (idpRejectedClaimMessage)?
+    )
+
+    alias InvalidAuthorizationMessageException = NamedTuple(
+      "message" : (invalidAuthorizationMessage)?
+    )
+
+    alias InvalidIdentityTokenException = NamedTuple(
+      "message" : (invalidIdentityTokenMessage)?
+    )
+
+    alias Issuer = String
+
+    alias MalformedPolicyDocumentException = NamedTuple(
+      "message" : (malformedPolicyDocumentMessage)?
+    )
+
+    alias NameQualifier = String
+
+    alias PackedPolicyTooLargeException = NamedTuple(
+      "message" : (packedPolicyTooLargeMessage)?
+    )
+
+    alias PolicyDescriptorType = NamedTuple(
+      "arn" : (arnType)?
+    )
+
+    alias RegionDisabledException = NamedTuple(
+      "message" : (regionDisabledMessage)?
+    )
+
+    alias SAMLAssertionType = String
+
+    alias Subject = String
+
+    alias SubjectType = String
+
+    alias Tag = NamedTuple(
+      "Key" : tagKeyType,
+      "Value" : tagValueType
+    )
+
+    alias accessKeyIdType = String
+
+    alias accessKeySecretType = String
+
+    alias accountType = String
+
+    alias arnType = String
+
+    alias assumedRoleIdType = String
+
+    alias clientTokenType = String
+
+    alias dateType = String | UInt64 | Time
+
+    alias decodedMessageType = String
+
+    alias durationSecondsType = Int32
+
+    alias encodedMessageType = String
+
+    alias expiredIdentityTokenMessage = String
+
+    alias externalIdType = String
+
+    alias federatedIdType = String
+
+    alias idpCommunicationErrorMessage = String
+
+    alias idpRejectedClaimMessage = String
+
+    alias invalidAuthorizationMessage = String
+
+    alias invalidIdentityTokenMessage = String
+
+    alias malformedPolicyDocumentMessage = String
+
+    alias nonNegativeIntegerType = Int32
+
+    alias packedPolicyTooLargeMessage = String
+
+    alias policyDescriptorListType = Array(PolicyDescriptorType)
+
+    alias regionDisabledMessage = String
+
+    alias roleDurationSecondsType = Int32
+
+    alias roleSessionNameType = String
+
+    alias serialNumberType = String
+
+    alias sessionPolicyDocumentType = String
+
+    alias tagKeyListType = Array(tagKeyType)
+
+    alias tagKeyType = String
+
+    alias tagListType = Array(Tag)
+
+    alias tagValueType = String
+
+    alias tokenCodeType = String
+
+    alias tokenType = String
+
+    alias urlType = String
+
+    alias userIdType = String
+
+    alias userNameType = String
+
+    alias webIdentitySubjectType = String
   end
 end

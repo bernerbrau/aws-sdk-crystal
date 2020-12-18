@@ -3489,5 +3489,344 @@ module Aws::ApplicationAutoScaling
       include Aws::Structure
     end
 
+    alias AdjustmentType = String
+
+    alias Alarm = NamedTuple(
+      "AlarmName" : ResourceId,
+      "AlarmARN" : ResourceId
+    )
+
+    alias Alarms = Array(Alarm)
+
+    alias ConcurrentUpdateException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Cooldown = Int32
+
+    alias CustomizedMetricSpecification = NamedTuple(
+      "MetricName" : MetricName,
+      "Namespace" : MetricNamespace,
+      "Dimensions" : (MetricDimensions)?,
+      "Statistic" : MetricStatistic,
+      "Unit" : (MetricUnit)?
+    )
+
+    alias DeleteScalingPolicyRequest = NamedTuple(
+      "PolicyName" : ResourceIdMaxLen1600,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension
+    )
+
+    alias DeleteScalingPolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteScheduledActionRequest = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ScheduledActionName" : ResourceIdMaxLen1600,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension
+    )
+
+    alias DeleteScheduledActionResponse = NamedTuple(
+      
+    )
+
+    alias DeregisterScalableTargetRequest = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension
+    )
+
+    alias DeregisterScalableTargetResponse = NamedTuple(
+      
+    )
+
+    alias DescribeScalableTargetsRequest = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceIds" : (ResourceIdsMaxLen1600)?,
+      "ScalableDimension" : (ScalableDimension)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScalableTargetsResponse = NamedTuple(
+      "ScalableTargets" : (ScalableTargets)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScalingActivitiesRequest = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : (ResourceIdMaxLen1600)?,
+      "ScalableDimension" : (ScalableDimension)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScalingActivitiesResponse = NamedTuple(
+      "ScalingActivities" : (ScalingActivities)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScalingPoliciesRequest = NamedTuple(
+      "PolicyNames" : (ResourceIdsMaxLen1600)?,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : (ResourceIdMaxLen1600)?,
+      "ScalableDimension" : (ScalableDimension)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScalingPoliciesResponse = NamedTuple(
+      "ScalingPolicies" : (ScalingPolicies)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScheduledActionsRequest = NamedTuple(
+      "ScheduledActionNames" : (ResourceIdsMaxLen1600)?,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : (ResourceIdMaxLen1600)?,
+      "ScalableDimension" : (ScalableDimension)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DescribeScheduledActionsResponse = NamedTuple(
+      "ScheduledActions" : (ScheduledActions)?,
+      "NextToken" : (XmlString)?
+    )
+
+    alias DisableScaleIn = Bool
+
+    alias ErrorMessage = String
+
+    alias FailedResourceAccessException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InternalServiceException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidNextTokenException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias MaxResults = Int32
+
+    alias MetricAggregationType = String
+
+    alias MetricDimension = NamedTuple(
+      "Name" : MetricDimensionName,
+      "Value" : MetricDimensionValue
+    )
+
+    alias MetricDimensionName = String
+
+    alias MetricDimensionValue = String
+
+    alias MetricDimensions = Array(MetricDimension)
+
+    alias MetricName = String
+
+    alias MetricNamespace = String
+
+    alias MetricScale = Float64
+
+    alias MetricStatistic = String
+
+    alias MetricType = String
+
+    alias MetricUnit = String
+
+    alias MinAdjustmentMagnitude = Int32
+
+    alias ObjectNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias PolicyName = String
+
+    alias PolicyType = String
+
+    alias PredefinedMetricSpecification = NamedTuple(
+      "PredefinedMetricType" : MetricType,
+      "ResourceLabel" : (ResourceLabel)?
+    )
+
+    alias PutScalingPolicyRequest = NamedTuple(
+      "PolicyName" : PolicyName,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "PolicyType" : (PolicyType)?,
+      "StepScalingPolicyConfiguration" : (StepScalingPolicyConfiguration)?,
+      "TargetTrackingScalingPolicyConfiguration" : (TargetTrackingScalingPolicyConfiguration)?
+    )
+
+    alias PutScalingPolicyResponse = NamedTuple(
+      "PolicyARN" : ResourceIdMaxLen1600,
+      "Alarms" : (Alarms)?
+    )
+
+    alias PutScheduledActionRequest = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "Schedule" : (ResourceIdMaxLen1600)?,
+      "ScheduledActionName" : ScheduledActionName,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "StartTime" : (TimestampType)?,
+      "EndTime" : (TimestampType)?,
+      "ScalableTargetAction" : (ScalableTargetAction)?
+    )
+
+    alias PutScheduledActionResponse = NamedTuple(
+      
+    )
+
+    alias RegisterScalableTargetRequest = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "MinCapacity" : (ResourceCapacity)?,
+      "MaxCapacity" : (ResourceCapacity)?,
+      "RoleARN" : (ResourceIdMaxLen1600)?,
+      "SuspendedState" : (SuspendedState)?
+    )
+
+    alias RegisterScalableTargetResponse = NamedTuple(
+      
+    )
+
+    alias ResourceCapacity = Int32
+
+    alias ResourceId = String
+
+    alias ResourceIdMaxLen1600 = String
+
+    alias ResourceIdsMaxLen1600 = Array(ResourceIdMaxLen1600)
+
+    alias ResourceLabel = String
+
+    alias ScalableDimension = String
+
+    alias ScalableTarget = NamedTuple(
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "MinCapacity" : ResourceCapacity,
+      "MaxCapacity" : ResourceCapacity,
+      "RoleARN" : ResourceIdMaxLen1600,
+      "CreationTime" : TimestampType,
+      "SuspendedState" : (SuspendedState)?
+    )
+
+    alias ScalableTargetAction = NamedTuple(
+      "MinCapacity" : (ResourceCapacity)?,
+      "MaxCapacity" : (ResourceCapacity)?
+    )
+
+    alias ScalableTargets = Array(ScalableTarget)
+
+    alias ScalingActivities = Array(ScalingActivity)
+
+    alias ScalingActivity = NamedTuple(
+      "ActivityId" : ResourceId,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "Description" : XmlString,
+      "Cause" : XmlString,
+      "StartTime" : TimestampType,
+      "EndTime" : (TimestampType)?,
+      "StatusCode" : ScalingActivityStatusCode,
+      "StatusMessage" : (XmlString)?,
+      "Details" : (XmlString)?
+    )
+
+    alias ScalingActivityStatusCode = String
+
+    alias ScalingAdjustment = Int32
+
+    alias ScalingPolicies = Array(ScalingPolicy)
+
+    alias ScalingPolicy = NamedTuple(
+      "PolicyARN" : ResourceIdMaxLen1600,
+      "PolicyName" : PolicyName,
+      "ServiceNamespace" : ServiceNamespace,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : ScalableDimension,
+      "PolicyType" : PolicyType,
+      "StepScalingPolicyConfiguration" : (StepScalingPolicyConfiguration)?,
+      "TargetTrackingScalingPolicyConfiguration" : (TargetTrackingScalingPolicyConfiguration)?,
+      "Alarms" : (Alarms)?,
+      "CreationTime" : TimestampType
+    )
+
+    alias ScalingSuspended = Bool
+
+    alias ScheduledAction = NamedTuple(
+      "ScheduledActionName" : ScheduledActionName,
+      "ScheduledActionARN" : ResourceIdMaxLen1600,
+      "ServiceNamespace" : ServiceNamespace,
+      "Schedule" : ResourceIdMaxLen1600,
+      "ResourceId" : ResourceIdMaxLen1600,
+      "ScalableDimension" : (ScalableDimension)?,
+      "StartTime" : (TimestampType)?,
+      "EndTime" : (TimestampType)?,
+      "ScalableTargetAction" : (ScalableTargetAction)?,
+      "CreationTime" : TimestampType
+    )
+
+    alias ScheduledActionName = String
+
+    alias ScheduledActions = Array(ScheduledAction)
+
+    alias ServiceNamespace = String
+
+    alias StepAdjustment = NamedTuple(
+      "MetricIntervalLowerBound" : (MetricScale)?,
+      "MetricIntervalUpperBound" : (MetricScale)?,
+      "ScalingAdjustment" : ScalingAdjustment
+    )
+
+    alias StepAdjustments = Array(StepAdjustment)
+
+    alias StepScalingPolicyConfiguration = NamedTuple(
+      "AdjustmentType" : (AdjustmentType)?,
+      "StepAdjustments" : (StepAdjustments)?,
+      "MinAdjustmentMagnitude" : (MinAdjustmentMagnitude)?,
+      "Cooldown" : (Cooldown)?,
+      "MetricAggregationType" : (MetricAggregationType)?
+    )
+
+    alias SuspendedState = NamedTuple(
+      "DynamicScalingInSuspended" : (ScalingSuspended)?,
+      "DynamicScalingOutSuspended" : (ScalingSuspended)?,
+      "ScheduledScalingSuspended" : (ScalingSuspended)?
+    )
+
+    alias TargetTrackingScalingPolicyConfiguration = NamedTuple(
+      "TargetValue" : MetricScale,
+      "PredefinedMetricSpecification" : (PredefinedMetricSpecification)?,
+      "CustomizedMetricSpecification" : (CustomizedMetricSpecification)?,
+      "ScaleOutCooldown" : (Cooldown)?,
+      "ScaleInCooldown" : (Cooldown)?,
+      "DisableScaleIn" : (DisableScaleIn)?
+    )
+
+    alias TimestampType = String | UInt64 | Time
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias XmlString = String
   end
 end

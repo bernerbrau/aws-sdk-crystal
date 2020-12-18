@@ -370,8 +370,8 @@ module Aws::IoTThingsGraph
     #
     # @overload associate_entity_to_thing(**params)
     # @param [Hash] params ({})
-    def associate_entity_to_thing(params = {}, **options)
-      req = build_request(:associate_entity_to_thing, params)
+    def associate_entity_to_thing(, **options)
+      req = build_request(:associate_entity_to_thing, )
       req.send_request(options)
     end
 
@@ -413,8 +413,8 @@ module Aws::IoTThingsGraph
     #
     # @overload create_flow_template(**params)
     # @param [Hash] params ({})
-    def create_flow_template(params = {}, **options)
-      req = build_request(:create_flow_template, params)
+    def create_flow_template(, **options)
+      req = build_request(:create_flow_template, )
       req.send_request(options)
     end
 
@@ -514,8 +514,8 @@ module Aws::IoTThingsGraph
     #
     # @overload create_system_instance(**params)
     # @param [Hash] params ({})
-    def create_system_instance(params = {}, **options)
-      req = build_request(:create_system_instance, params)
+    def create_system_instance(, **options)
+      req = build_request(:create_system_instance, )
       req.send_request(options)
     end
 
@@ -554,8 +554,8 @@ module Aws::IoTThingsGraph
     #
     # @overload create_system_template(**params)
     # @param [Hash] params ({})
-    def create_system_template(params = {}, **options)
-      req = build_request(:create_system_template, params)
+    def create_system_template(, **options)
+      req = build_request(:create_system_template, )
       req.send_request(options)
     end
 
@@ -581,8 +581,8 @@ module Aws::IoTThingsGraph
     #
     # @overload delete_flow_template(**params)
     # @param [Hash] params ({})
-    def delete_flow_template(params = {}, **options)
-      req = build_request(:delete_flow_template, params)
+    def delete_flow_template(, **options)
+      req = build_request(:delete_flow_template, )
       req.send_request(options)
     end
 
@@ -602,8 +602,8 @@ module Aws::IoTThingsGraph
     #
     # @overload delete_namespace(**params)
     # @param [Hash] params ({})
-    def delete_namespace(params = {}, **options)
-      req = build_request(:delete_namespace, params)
+    def delete_namespace(, **options)
+      req = build_request(:delete_namespace, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::IoTThingsGraph
     #
     # @overload delete_system_instance(**params)
     # @param [Hash] params ({})
-    def delete_system_instance(params = {}, **options)
-      req = build_request(:delete_system_instance, params)
+    def delete_system_instance(, **options)
+      req = build_request(:delete_system_instance, )
       req.send_request(options)
     end
 
@@ -653,8 +653,8 @@ module Aws::IoTThingsGraph
     #
     # @overload delete_system_template(**params)
     # @param [Hash] params ({})
-    def delete_system_template(params = {}, **options)
-      req = build_request(:delete_system_template, params)
+    def delete_system_template(, **options)
+      req = build_request(:delete_system_template, )
       req.send_request(options)
     end
 
@@ -716,8 +716,8 @@ module Aws::IoTThingsGraph
     #
     # @overload deploy_system_instance(**params)
     # @param [Hash] params ({})
-    def deploy_system_instance(params = {}, **options)
-      req = build_request(:deploy_system_instance, params)
+    def deploy_system_instance(, **options)
+      req = build_request(:deploy_system_instance, )
       req.send_request(options)
     end
 
@@ -742,8 +742,8 @@ module Aws::IoTThingsGraph
     #
     # @overload deprecate_flow_template(**params)
     # @param [Hash] params ({})
-    def deprecate_flow_template(params = {}, **options)
-      req = build_request(:deprecate_flow_template, params)
+    def deprecate_flow_template(, **options)
+      req = build_request(:deprecate_flow_template, )
       req.send_request(options)
     end
 
@@ -766,8 +766,8 @@ module Aws::IoTThingsGraph
     #
     # @overload deprecate_system_template(**params)
     # @param [Hash] params ({})
-    def deprecate_system_template(params = {}, **options)
-      req = build_request(:deprecate_system_template, params)
+    def deprecate_system_template(, **options)
+      req = build_request(:deprecate_system_template, )
       req.send_request(options)
     end
 
@@ -802,8 +802,8 @@ module Aws::IoTThingsGraph
     #
     # @overload describe_namespace(**params)
     # @param [Hash] params ({})
-    def describe_namespace(params = {}, **options)
-      req = build_request(:describe_namespace, params)
+    def describe_namespace(, **options)
+      req = build_request(:describe_namespace, )
       req.send_request(options)
     end
 
@@ -828,8 +828,8 @@ module Aws::IoTThingsGraph
     #
     # @overload dissociate_entity_from_thing(**params)
     # @param [Hash] params ({})
-    def dissociate_entity_from_thing(params = {}, **options)
-      req = build_request(:dissociate_entity_from_thing, params)
+    def dissociate_entity_from_thing(, **options)
+      req = build_request(:dissociate_entity_from_thing, )
       req.send_request(options)
     end
 
@@ -892,8 +892,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_entities(**params)
     # @param [Hash] params ({})
-    def get_entities(params = {}, **options)
-      req = build_request(:get_entities, params)
+    def get_entities(, **options)
+      req = build_request(:get_entities, )
       req.send_request(options)
     end
 
@@ -933,8 +933,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_flow_template(**params)
     # @param [Hash] params ({})
-    def get_flow_template(params = {}, **options)
-      req = build_request(:get_flow_template, params)
+    def get_flow_template(, **options)
+      req = build_request(:get_flow_template, )
       req.send_request(options)
     end
 
@@ -983,8 +983,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_flow_template_revisions(**params)
     # @param [Hash] params ({})
-    def get_flow_template_revisions(params = {}, **options)
-      req = build_request(:get_flow_template_revisions, params)
+    def get_flow_template_revisions(, **options)
+      req = build_request(:get_flow_template_revisions, )
       req.send_request(options)
     end
 
@@ -1008,8 +1008,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_namespace_deletion_status(**params)
     # @param [Hash] params ({})
-    def get_namespace_deletion_status(params = {}, **options)
-      req = build_request(:get_namespace_deletion_status, params)
+    def get_namespace_deletion_status(, **options)
+      req = build_request(:get_namespace_deletion_status, )
       req.send_request(options)
     end
 
@@ -1057,8 +1057,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_system_instance(**params)
     # @param [Hash] params ({})
-    def get_system_instance(params = {}, **options)
-      req = build_request(:get_system_instance, params)
+    def get_system_instance(, **options)
+      req = build_request(:get_system_instance, )
       req.send_request(options)
     end
 
@@ -1097,8 +1097,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_system_template(**params)
     # @param [Hash] params ({})
-    def get_system_template(params = {}, **options)
-      req = build_request(:get_system_template, params)
+    def get_system_template(, **options)
+      req = build_request(:get_system_template, )
       req.send_request(options)
     end
 
@@ -1148,8 +1148,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_system_template_revisions(**params)
     # @param [Hash] params ({})
-    def get_system_template_revisions(params = {}, **options)
-      req = build_request(:get_system_template_revisions, params)
+    def get_system_template_revisions(, **options)
+      req = build_request(:get_system_template_revisions, )
       req.send_request(options)
     end
 
@@ -1188,8 +1188,8 @@ module Aws::IoTThingsGraph
     #
     # @overload get_upload_status(**params)
     # @param [Hash] params ({})
-    def get_upload_status(params = {}, **options)
-      req = build_request(:get_upload_status, params)
+    def get_upload_status(, **options)
+      req = build_request(:get_upload_status, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::IoTThingsGraph
     #
     # @overload list_flow_execution_messages(**params)
     # @param [Hash] params ({})
-    def list_flow_execution_messages(params = {}, **options)
-      req = build_request(:list_flow_execution_messages, params)
+    def list_flow_execution_messages(, **options)
+      req = build_request(:list_flow_execution_messages, )
       req.send_request(options)
     end
 
@@ -1273,8 +1273,8 @@ module Aws::IoTThingsGraph
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1341,8 +1341,8 @@ module Aws::IoTThingsGraph
     #
     # @overload search_entities(**params)
     # @param [Hash] params ({})
-    def search_entities(params = {}, **options)
-      req = build_request(:search_entities, params)
+    def search_entities(, **options)
+      req = build_request(:search_entities, )
       req.send_request(options)
     end
 
@@ -1398,8 +1398,8 @@ module Aws::IoTThingsGraph
     #
     # @overload search_flow_executions(**params)
     # @param [Hash] params ({})
-    def search_flow_executions(params = {}, **options)
-      req = build_request(:search_flow_executions, params)
+    def search_flow_executions(, **options)
+      req = build_request(:search_flow_executions, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::IoTThingsGraph
     #
     # @overload search_flow_templates(**params)
     # @param [Hash] params ({})
-    def search_flow_templates(params = {}, **options)
-      req = build_request(:search_flow_templates, params)
+    def search_flow_templates(, **options)
+      req = build_request(:search_flow_templates, )
       req.send_request(options)
     end
 
@@ -1504,8 +1504,8 @@ module Aws::IoTThingsGraph
     #
     # @overload search_system_instances(**params)
     # @param [Hash] params ({})
-    def search_system_instances(params = {}, **options)
-      req = build_request(:search_system_instances, params)
+    def search_system_instances(, **options)
+      req = build_request(:search_system_instances, )
       req.send_request(options)
     end
 
@@ -1555,8 +1555,8 @@ module Aws::IoTThingsGraph
     #
     # @overload search_system_templates(**params)
     # @param [Hash] params ({})
-    def search_system_templates(params = {}, **options)
-      req = build_request(:search_system_templates, params)
+    def search_system_templates(, **options)
+      req = build_request(:search_system_templates, )
       req.send_request(options)
     end
 
@@ -1614,8 +1614,8 @@ module Aws::IoTThingsGraph
     #
     # @overload search_things(**params)
     # @param [Hash] params ({})
-    def search_things(params = {}, **options)
-      req = build_request(:search_things, params)
+    def search_things(, **options)
+      req = build_request(:search_things, )
       req.send_request(options)
     end
 
@@ -1644,8 +1644,8 @@ module Aws::IoTThingsGraph
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1678,8 +1678,8 @@ module Aws::IoTThingsGraph
     #
     # @overload undeploy_system_instance(**params)
     # @param [Hash] params ({})
-    def undeploy_system_instance(params = {}, **options)
-      req = build_request(:undeploy_system_instance, params)
+    def undeploy_system_instance(, **options)
+      req = build_request(:undeploy_system_instance, )
       req.send_request(options)
     end
 
@@ -1713,8 +1713,8 @@ module Aws::IoTThingsGraph
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1766,8 +1766,8 @@ module Aws::IoTThingsGraph
     #
     # @overload update_flow_template(**params)
     # @param [Hash] params ({})
-    def update_flow_template(params = {}, **options)
-      req = build_request(:update_flow_template, params)
+    def update_flow_template(, **options)
+      req = build_request(:update_flow_template, )
       req.send_request(options)
     end
 
@@ -1815,8 +1815,8 @@ module Aws::IoTThingsGraph
     #
     # @overload update_system_template(**params)
     # @param [Hash] params ({})
-    def update_system_template(params = {}, **options)
-      req = build_request(:update_system_template, params)
+    def update_system_template(, **options)
+      req = build_request(:update_system_template, )
       req.send_request(options)
     end
 
@@ -1879,8 +1879,8 @@ module Aws::IoTThingsGraph
     #
     # @overload upload_entity_definitions(**params)
     # @param [Hash] params ({})
-    def upload_entity_definitions(params = {}, **options)
-      req = build_request(:upload_entity_definitions, params)
+    def upload_entity_definitions(, **options)
+      req = build_request(:upload_entity_definitions, )
       req.send_request(options)
     end
 

@@ -363,8 +363,8 @@ module Aws::Imagebuilder
     #
     # @overload cancel_image_creation(**params)
     # @param [Hash] params ({})
-    def cancel_image_creation(params = {}, **options)
-      req = build_request(:cancel_image_creation, params)
+    def cancel_image_creation(, **options)
+      req = build_request(:cancel_image_creation, )
       req.send_request(options)
     end
 
@@ -452,8 +452,8 @@ module Aws::Imagebuilder
     #
     # @overload create_component(**params)
     # @param [Hash] params ({})
-    def create_component(params = {}, **options)
-      req = build_request(:create_component, params)
+    def create_component(, **options)
+      req = build_request(:create_component, )
       req.send_request(options)
     end
 
@@ -524,8 +524,8 @@ module Aws::Imagebuilder
     #
     # @overload create_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def create_distribution_configuration(params = {}, **options)
-      req = build_request(:create_distribution_configuration, params)
+    def create_distribution_configuration(, **options)
+      req = build_request(:create_distribution_configuration, )
       req.send_request(options)
     end
 
@@ -597,8 +597,8 @@ module Aws::Imagebuilder
     #
     # @overload create_image(**params)
     # @param [Hash] params ({})
-    def create_image(params = {}, **options)
-      req = build_request(:create_image, params)
+    def create_image(, **options)
+      req = build_request(:create_image, )
       req.send_request(options)
     end
 
@@ -688,8 +688,8 @@ module Aws::Imagebuilder
     #
     # @overload create_image_pipeline(**params)
     # @param [Hash] params ({})
-    def create_image_pipeline(params = {}, **options)
-      req = build_request(:create_image_pipeline, params)
+    def create_image_pipeline(, **options)
+      req = build_request(:create_image_pipeline, )
       req.send_request(options)
     end
 
@@ -784,8 +784,8 @@ module Aws::Imagebuilder
     #
     # @overload create_image_recipe(**params)
     # @param [Hash] params ({})
-    def create_image_recipe(params = {}, **options)
-      req = build_request(:create_image_recipe, params)
+    def create_image_recipe(, **options)
+      req = build_request(:create_image_recipe, )
       req.send_request(options)
     end
 
@@ -887,8 +887,8 @@ module Aws::Imagebuilder
     #
     # @overload create_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def create_infrastructure_configuration(params = {}, **options)
-      req = build_request(:create_infrastructure_configuration, params)
+    def create_infrastructure_configuration(, **options)
+      req = build_request(:create_infrastructure_configuration, )
       req.send_request(options)
     end
 
@@ -918,8 +918,8 @@ module Aws::Imagebuilder
     #
     # @overload delete_component(**params)
     # @param [Hash] params ({})
-    def delete_component(params = {}, **options)
-      req = build_request(:delete_component, params)
+    def delete_component(, **options)
+      req = build_request(:delete_component, )
       req.send_request(options)
     end
 
@@ -949,8 +949,8 @@ module Aws::Imagebuilder
     #
     # @overload delete_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def delete_distribution_configuration(params = {}, **options)
-      req = build_request(:delete_distribution_configuration, params)
+    def delete_distribution_configuration(, **options)
+      req = build_request(:delete_distribution_configuration, )
       req.send_request(options)
     end
 
@@ -979,8 +979,8 @@ module Aws::Imagebuilder
     #
     # @overload delete_image(**params)
     # @param [Hash] params ({})
-    def delete_image(params = {}, **options)
-      req = build_request(:delete_image, params)
+    def delete_image(, **options)
+      req = build_request(:delete_image, )
       req.send_request(options)
     end
 
@@ -1009,8 +1009,8 @@ module Aws::Imagebuilder
     #
     # @overload delete_image_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_image_pipeline(params = {}, **options)
-      req = build_request(:delete_image_pipeline, params)
+    def delete_image_pipeline(, **options)
+      req = build_request(:delete_image_pipeline, )
       req.send_request(options)
     end
 
@@ -1039,8 +1039,8 @@ module Aws::Imagebuilder
     #
     # @overload delete_image_recipe(**params)
     # @param [Hash] params ({})
-    def delete_image_recipe(params = {}, **options)
-      req = build_request(:delete_image_recipe, params)
+    def delete_image_recipe(, **options)
+      req = build_request(:delete_image_recipe, )
       req.send_request(options)
     end
 
@@ -1070,8 +1070,8 @@ module Aws::Imagebuilder
     #
     # @overload delete_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def delete_infrastructure_configuration(params = {}, **options)
-      req = build_request(:delete_infrastructure_configuration, params)
+    def delete_infrastructure_configuration(, **options)
+      req = build_request(:delete_infrastructure_configuration, )
       req.send_request(options)
     end
 
@@ -1116,8 +1116,8 @@ module Aws::Imagebuilder
     #
     # @overload get_component(**params)
     # @param [Hash] params ({})
-    def get_component(params = {}, **options)
-      req = build_request(:get_component, params)
+    def get_component(, **options)
+      req = build_request(:get_component, )
       req.send_request(options)
     end
 
@@ -1147,8 +1147,8 @@ module Aws::Imagebuilder
     #
     # @overload get_component_policy(**params)
     # @param [Hash] params ({})
-    def get_component_policy(params = {}, **options)
-      req = build_request(:get_component_policy, params)
+    def get_component_policy(, **options)
+      req = build_request(:get_component_policy, )
       req.send_request(options)
     end
 
@@ -1200,8 +1200,8 @@ module Aws::Imagebuilder
     #
     # @overload get_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def get_distribution_configuration(params = {}, **options)
-      req = build_request(:get_distribution_configuration, params)
+    def get_distribution_configuration(, **options)
+      req = build_request(:get_distribution_configuration, )
       req.send_request(options)
     end
 
@@ -1319,8 +1319,8 @@ module Aws::Imagebuilder
     #
     # @overload get_image(**params)
     # @param [Hash] params ({})
-    def get_image(params = {}, **options)
-      req = build_request(:get_image, params)
+    def get_image(, **options)
+      req = build_request(:get_image, )
       req.send_request(options)
     end
 
@@ -1368,8 +1368,8 @@ module Aws::Imagebuilder
     #
     # @overload get_image_pipeline(**params)
     # @param [Hash] params ({})
-    def get_image_pipeline(params = {}, **options)
-      req = build_request(:get_image_pipeline, params)
+    def get_image_pipeline(, **options)
+      req = build_request(:get_image_pipeline, )
       req.send_request(options)
     end
 
@@ -1399,8 +1399,8 @@ module Aws::Imagebuilder
     #
     # @overload get_image_policy(**params)
     # @param [Hash] params ({})
-    def get_image_policy(params = {}, **options)
-      req = build_request(:get_image_policy, params)
+    def get_image_policy(, **options)
+      req = build_request(:get_image_policy, )
       req.send_request(options)
     end
 
@@ -1453,8 +1453,8 @@ module Aws::Imagebuilder
     #
     # @overload get_image_recipe(**params)
     # @param [Hash] params ({})
-    def get_image_recipe(params = {}, **options)
-      req = build_request(:get_image_recipe, params)
+    def get_image_recipe(, **options)
+      req = build_request(:get_image_recipe, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::Imagebuilder
     #
     # @overload get_image_recipe_policy(**params)
     # @param [Hash] params ({})
-    def get_image_recipe_policy(params = {}, **options)
-      req = build_request(:get_image_recipe_policy, params)
+    def get_image_recipe_policy(, **options)
+      req = build_request(:get_image_recipe_policy, )
       req.send_request(options)
     end
 
@@ -1534,8 +1534,8 @@ module Aws::Imagebuilder
     #
     # @overload get_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def get_infrastructure_configuration(params = {}, **options)
-      req = build_request(:get_infrastructure_configuration, params)
+    def get_infrastructure_configuration(, **options)
+      req = build_request(:get_infrastructure_configuration, )
       req.send_request(options)
     end
 
@@ -1625,8 +1625,8 @@ module Aws::Imagebuilder
     #
     # @overload import_component(**params)
     # @param [Hash] params ({})
-    def import_component(params = {}, **options)
-      req = build_request(:import_component, params)
+    def import_component(, **options)
+      req = build_request(:import_component, )
       req.send_request(options)
     end
 
@@ -1683,8 +1683,8 @@ module Aws::Imagebuilder
     #
     # @overload list_component_build_versions(**params)
     # @param [Hash] params ({})
-    def list_component_build_versions(params = {}, **options)
-      req = build_request(:list_component_build_versions, params)
+    def list_component_build_versions(, **options)
+      req = build_request(:list_component_build_versions, )
       req.send_request(options)
     end
 
@@ -1750,8 +1750,8 @@ module Aws::Imagebuilder
     #
     # @overload list_components(**params)
     # @param [Hash] params ({})
-    def list_components(params = {}, **options)
-      req = build_request(:list_components, params)
+    def list_components(, **options)
+      req = build_request(:list_components, )
       req.send_request(options)
     end
 
@@ -1809,8 +1809,8 @@ module Aws::Imagebuilder
     #
     # @overload list_distribution_configurations(**params)
     # @param [Hash] params ({})
-    def list_distribution_configurations(params = {}, **options)
-      req = build_request(:list_distribution_configurations, params)
+    def list_distribution_configurations(, **options)
+      req = build_request(:list_distribution_configurations, )
       req.send_request(options)
     end
 
@@ -1881,8 +1881,8 @@ module Aws::Imagebuilder
     #
     # @overload list_image_build_versions(**params)
     # @param [Hash] params ({})
-    def list_image_build_versions(params = {}, **options)
-      req = build_request(:list_image_build_versions, params)
+    def list_image_build_versions(, **options)
+      req = build_request(:list_image_build_versions, )
       req.send_request(options)
     end
 
@@ -1953,8 +1953,8 @@ module Aws::Imagebuilder
     #
     # @overload list_image_pipeline_images(**params)
     # @param [Hash] params ({})
-    def list_image_pipeline_images(params = {}, **options)
-      req = build_request(:list_image_pipeline_images, params)
+    def list_image_pipeline_images(, **options)
+      req = build_request(:list_image_pipeline_images, )
       req.send_request(options)
     end
 
@@ -2020,8 +2020,8 @@ module Aws::Imagebuilder
     #
     # @overload list_image_pipelines(**params)
     # @param [Hash] params ({})
-    def list_image_pipelines(params = {}, **options)
-      req = build_request(:list_image_pipelines, params)
+    def list_image_pipelines(, **options)
+      req = build_request(:list_image_pipelines, )
       req.send_request(options)
     end
 
@@ -2084,8 +2084,8 @@ module Aws::Imagebuilder
     #
     # @overload list_image_recipes(**params)
     # @param [Hash] params ({})
-    def list_image_recipes(params = {}, **options)
-      req = build_request(:list_image_recipes, params)
+    def list_image_recipes(, **options)
+      req = build_request(:list_image_recipes, )
       req.send_request(options)
     end
 
@@ -2147,8 +2147,8 @@ module Aws::Imagebuilder
     #
     # @overload list_images(**params)
     # @param [Hash] params ({})
-    def list_images(params = {}, **options)
-      req = build_request(:list_images, params)
+    def list_images(, **options)
+      req = build_request(:list_images, )
       req.send_request(options)
     end
 
@@ -2204,8 +2204,8 @@ module Aws::Imagebuilder
     #
     # @overload list_infrastructure_configurations(**params)
     # @param [Hash] params ({})
-    def list_infrastructure_configurations(params = {}, **options)
-      req = build_request(:list_infrastructure_configurations, params)
+    def list_infrastructure_configurations(, **options)
+      req = build_request(:list_infrastructure_configurations, )
       req.send_request(options)
     end
 
@@ -2234,8 +2234,8 @@ module Aws::Imagebuilder
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2278,8 +2278,8 @@ module Aws::Imagebuilder
     #
     # @overload put_component_policy(**params)
     # @param [Hash] params ({})
-    def put_component_policy(params = {}, **options)
-      req = build_request(:put_component_policy, params)
+    def put_component_policy(, **options)
+      req = build_request(:put_component_policy, )
       req.send_request(options)
     end
 
@@ -2322,8 +2322,8 @@ module Aws::Imagebuilder
     #
     # @overload put_image_policy(**params)
     # @param [Hash] params ({})
-    def put_image_policy(params = {}, **options)
-      req = build_request(:put_image_policy, params)
+    def put_image_policy(, **options)
+      req = build_request(:put_image_policy, )
       req.send_request(options)
     end
 
@@ -2367,8 +2367,8 @@ module Aws::Imagebuilder
     #
     # @overload put_image_recipe_policy(**params)
     # @param [Hash] params ({})
-    def put_image_recipe_policy(params = {}, **options)
-      req = build_request(:put_image_recipe_policy, params)
+    def put_image_recipe_policy(, **options)
+      req = build_request(:put_image_recipe_policy, )
       req.send_request(options)
     end
 
@@ -2407,8 +2407,8 @@ module Aws::Imagebuilder
     #
     # @overload start_image_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def start_image_pipeline_execution(params = {}, **options)
-      req = build_request(:start_image_pipeline_execution, params)
+    def start_image_pipeline_execution(, **options)
+      req = build_request(:start_image_pipeline_execution, )
       req.send_request(options)
     end
 
@@ -2435,8 +2435,8 @@ module Aws::Imagebuilder
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2461,8 +2461,8 @@ module Aws::Imagebuilder
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2528,8 +2528,8 @@ module Aws::Imagebuilder
     #
     # @overload update_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def update_distribution_configuration(params = {}, **options)
-      req = build_request(:update_distribution_configuration, params)
+    def update_distribution_configuration(, **options)
+      req = build_request(:update_distribution_configuration, )
       req.send_request(options)
     end
 
@@ -2614,8 +2614,8 @@ module Aws::Imagebuilder
     #
     # @overload update_image_pipeline(**params)
     # @param [Hash] params ({})
-    def update_image_pipeline(params = {}, **options)
-      req = build_request(:update_image_pipeline, params)
+    def update_image_pipeline(, **options)
+      req = build_request(:update_image_pipeline, )
       req.send_request(options)
     end
 
@@ -2711,8 +2711,8 @@ module Aws::Imagebuilder
     #
     # @overload update_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def update_infrastructure_configuration(params = {}, **options)
-      req = build_request(:update_infrastructure_configuration, params)
+    def update_infrastructure_configuration(, **options)
+      req = build_request(:update_infrastructure_configuration, )
       req.send_request(options)
     end
 

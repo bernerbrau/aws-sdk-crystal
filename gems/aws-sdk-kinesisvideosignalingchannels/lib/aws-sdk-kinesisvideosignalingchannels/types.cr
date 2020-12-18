@@ -224,5 +224,82 @@ module Aws::KinesisVideoSignalingChannels
       include Aws::Structure
     end
 
+    alias Answer = String
+
+    alias ClientId = String
+
+    alias ClientLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias GetIceServerConfigRequest = NamedTuple(
+      "ChannelARN" : ResourceARN,
+      "ClientId" : (ClientId)?,
+      "Service" : (Service)?,
+      "Username" : (Username)?
+    )
+
+    alias GetIceServerConfigResponse = NamedTuple(
+      "IceServerList" : (IceServerList)?
+    )
+
+    alias IceServer = NamedTuple(
+      "Uris" : (Uris)?,
+      "Username" : (Username)?,
+      "Password" : (Password)?,
+      "Ttl" : (Ttl)?
+    )
+
+    alias IceServerList = Array(IceServer)
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidClientException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias MessagePayload = String
+
+    alias NotAuthorizedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Password = String
+
+    alias ResourceARN = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SendAlexaOfferToMasterRequest = NamedTuple(
+      "ChannelARN" : ResourceARN,
+      "SenderClientId" : ClientId,
+      "MessagePayload" : MessagePayload
+    )
+
+    alias SendAlexaOfferToMasterResponse = NamedTuple(
+      "Answer" : (Answer)?
+    )
+
+    alias Service = String
+
+    alias SessionExpiredException = NamedTuple(
+      "message" : (errorMessage)?
+    )
+
+    alias Ttl = Int32
+
+    alias Uri = String
+
+    alias Uris = Array(Uri)
+
+    alias Username = String
+
+    alias errorMessage = String
   end
 end

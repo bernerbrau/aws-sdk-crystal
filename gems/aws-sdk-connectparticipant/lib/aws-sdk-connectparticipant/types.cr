@@ -496,5 +496,152 @@ module Aws::ConnectParticipant
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : Message
+    )
+
+    alias ChatContent = String
+
+    alias ChatContentType = String
+
+    alias ChatItemId = String
+
+    alias ChatItemType = String
+
+    alias ClientToken = String
+
+    alias ConnectionCredentials = NamedTuple(
+      "ConnectionToken" : (ParticipantToken)?,
+      "Expiry" : (ISO8601Datetime)?
+    )
+
+    alias ConnectionType = String
+
+    alias ConnectionTypeList = Array(ConnectionType)
+
+    alias ContactId = String
+
+    alias CreateParticipantConnectionRequest = NamedTuple(
+      "Type" : ConnectionTypeList,
+      "ParticipantToken" : ParticipantToken
+    )
+
+    alias CreateParticipantConnectionResponse = NamedTuple(
+      "Websocket" : (Websocket)?,
+      "ConnectionCredentials" : (ConnectionCredentials)?
+    )
+
+    alias DisconnectParticipantRequest = NamedTuple(
+      "ClientToken" : (ClientToken)?,
+      "ConnectionToken" : ParticipantToken
+    )
+
+    alias DisconnectParticipantResponse = NamedTuple(
+      
+    )
+
+    alias DisplayName = String
+
+    alias GetTranscriptRequest = NamedTuple(
+      "ContactId" : (ContactId)?,
+      "MaxResults" : (MaxResults)?,
+      "NextToken" : (NextToken)?,
+      "ScanDirection" : (ScanDirection)?,
+      "SortOrder" : (SortKey)?,
+      "StartPosition" : (StartPosition)?,
+      "ConnectionToken" : ParticipantToken
+    )
+
+    alias GetTranscriptResponse = NamedTuple(
+      "InitialContactId" : (ContactId)?,
+      "Transcript" : (Transcript)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias ISO8601Datetime = String
+
+    alias Instant = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : Message
+    )
+
+    alias Item = NamedTuple(
+      "AbsoluteTime" : (Instant)?,
+      "Content" : (ChatContent)?,
+      "ContentType" : (ChatContentType)?,
+      "Id" : (ChatItemId)?,
+      "Type" : (ChatItemType)?,
+      "ParticipantId" : (ParticipantId)?,
+      "DisplayName" : (DisplayName)?,
+      "ParticipantRole" : (ParticipantRole)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Message = String
+
+    alias MostRecent = Int32
+
+    alias NextToken = String
+
+    alias ParticipantId = String
+
+    alias ParticipantRole = String
+
+    alias ParticipantToken = String
+
+    alias PreSignedConnectionUrl = String
+
+    alias Reason = String
+
+    alias ScanDirection = String
+
+    alias SendEventRequest = NamedTuple(
+      "ContentType" : ChatContentType,
+      "Content" : (ChatContent)?,
+      "ClientToken" : (ClientToken)?,
+      "ConnectionToken" : ParticipantToken
+    )
+
+    alias SendEventResponse = NamedTuple(
+      "Id" : (ChatItemId)?,
+      "AbsoluteTime" : (Instant)?
+    )
+
+    alias SendMessageRequest = NamedTuple(
+      "ContentType" : ChatContentType,
+      "Content" : ChatContent,
+      "ClientToken" : (ClientToken)?,
+      "ConnectionToken" : ParticipantToken
+    )
+
+    alias SendMessageResponse = NamedTuple(
+      "Id" : (ChatItemId)?,
+      "AbsoluteTime" : (Instant)?
+    )
+
+    alias SortKey = String
+
+    alias StartPosition = NamedTuple(
+      "Id" : (ChatItemId)?,
+      "AbsoluteTime" : (Instant)?,
+      "MostRecent" : (MostRecent)?
+    )
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : Message
+    )
+
+    alias Transcript = Array(Item)
+
+    alias ValidationException = NamedTuple(
+      "Message" : Reason
+    )
+
+    alias Websocket = NamedTuple(
+      "Url" : (PreSignedConnectionUrl)?,
+      "ConnectionExpiry" : (ISO8601Datetime)?
+    )
   end
 end

@@ -2938,5 +2938,499 @@ module Aws::Route53Domains
       include Aws::Structure
     end
 
+    alias AcceptDomainTransferFromAnotherAwsAccountRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "Password" : String
+    )
+
+    alias AcceptDomainTransferFromAnotherAwsAccountResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias AccountId = String
+
+    alias AddressLine = String
+
+    alias BillingRecord = NamedTuple(
+      "DomainName" : (DomainName)?,
+      "Operation" : (OperationType)?,
+      "InvoiceId" : (InvoiceId)?,
+      "BillDate" : (Timestamp)?,
+      "Price" : (Price)?
+    )
+
+    alias BillingRecords = Array(BillingRecord)
+
+    alias Boolean = Bool
+
+    alias CancelDomainTransferToAnotherAwsAccountRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias CancelDomainTransferToAnotherAwsAccountResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias CheckDomainAvailabilityRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "IdnLangCode" : (LangCode)?
+    )
+
+    alias CheckDomainAvailabilityResponse = NamedTuple(
+      "Availability" : DomainAvailability
+    )
+
+    alias CheckDomainTransferabilityRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AuthCode" : (DomainAuthCode)?
+    )
+
+    alias CheckDomainTransferabilityResponse = NamedTuple(
+      "Transferability" : DomainTransferability
+    )
+
+    alias City = String
+
+    alias ContactDetail = NamedTuple(
+      "FirstName" : (ContactName)?,
+      "LastName" : (ContactName)?,
+      "ContactType" : (ContactType)?,
+      "OrganizationName" : (ContactName)?,
+      "AddressLine1" : (AddressLine)?,
+      "AddressLine2" : (AddressLine)?,
+      "City" : (City)?,
+      "State" : (State)?,
+      "CountryCode" : (CountryCode)?,
+      "ZipCode" : (ZipCode)?,
+      "PhoneNumber" : (ContactNumber)?,
+      "Email" : (Email)?,
+      "Fax" : (ContactNumber)?,
+      "ExtraParams" : (ExtraParamList)?
+    )
+
+    alias ContactName = String
+
+    alias ContactNumber = String
+
+    alias ContactType = String
+
+    alias CountryCode = String
+
+    alias CurrentExpiryYear = Int32
+
+    alias DNSSec = String
+
+    alias DeleteTagsForDomainRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "TagsToDelete" : TagKeyList
+    )
+
+    alias DeleteTagsForDomainResponse = NamedTuple(
+      
+    )
+
+    alias DisableDomainAutoRenewRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias DisableDomainAutoRenewResponse = NamedTuple(
+      
+    )
+
+    alias DisableDomainTransferLockRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias DisableDomainTransferLockResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias DomainAuthCode = String
+
+    alias DomainAvailability = String
+
+    alias DomainLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DomainName = String
+
+    alias DomainStatus = String
+
+    alias DomainStatusList = Array(DomainStatus)
+
+    alias DomainSuggestion = NamedTuple(
+      "DomainName" : (DomainName)?,
+      "Availability" : (String)?
+    )
+
+    alias DomainSuggestionsList = Array(DomainSuggestion)
+
+    alias DomainSummary = NamedTuple(
+      "DomainName" : DomainName,
+      "AutoRenew" : (Boolean)?,
+      "TransferLock" : (Boolean)?,
+      "Expiry" : (Timestamp)?
+    )
+
+    alias DomainSummaryList = Array(DomainSummary)
+
+    alias DomainTransferability = NamedTuple(
+      "Transferable" : (Transferable)?
+    )
+
+    alias DuplicateRequest = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias DurationInYears = Int32
+
+    alias Email = String
+
+    alias EnableDomainAutoRenewRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias EnableDomainAutoRenewResponse = NamedTuple(
+      
+    )
+
+    alias EnableDomainTransferLockRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias EnableDomainTransferLockResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias ErrorMessage = String
+
+    alias ExtraParam = NamedTuple(
+      "Name" : ExtraParamName,
+      "Value" : ExtraParamValue
+    )
+
+    alias ExtraParamList = Array(ExtraParam)
+
+    alias ExtraParamName = String
+
+    alias ExtraParamValue = String
+
+    alias FIAuthKey = String
+
+    alias GetContactReachabilityStatusRequest = NamedTuple(
+      "domainName" : (DomainName)?
+    )
+
+    alias GetContactReachabilityStatusResponse = NamedTuple(
+      "domainName" : (DomainName)?,
+      "status" : (ReachabilityStatus)?
+    )
+
+    alias GetDomainDetailRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias GetDomainDetailResponse = NamedTuple(
+      "DomainName" : DomainName,
+      "Nameservers" : NameserverList,
+      "AutoRenew" : (Boolean)?,
+      "AdminContact" : ContactDetail,
+      "RegistrantContact" : ContactDetail,
+      "TechContact" : ContactDetail,
+      "AdminPrivacy" : (Boolean)?,
+      "RegistrantPrivacy" : (Boolean)?,
+      "TechPrivacy" : (Boolean)?,
+      "RegistrarName" : (RegistrarName)?,
+      "WhoIsServer" : (RegistrarWhoIsServer)?,
+      "RegistrarUrl" : (RegistrarUrl)?,
+      "AbuseContactEmail" : (Email)?,
+      "AbuseContactPhone" : (ContactNumber)?,
+      "RegistryDomainId" : (RegistryDomainId)?,
+      "CreationDate" : (Timestamp)?,
+      "UpdatedDate" : (Timestamp)?,
+      "ExpirationDate" : (Timestamp)?,
+      "Reseller" : (Reseller)?,
+      "DnsSec" : (DNSSec)?,
+      "StatusList" : (DomainStatusList)?
+    )
+
+    alias GetDomainSuggestionsRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "SuggestionCount" : Integer,
+      "OnlyAvailable" : Boolean
+    )
+
+    alias GetDomainSuggestionsResponse = NamedTuple(
+      "SuggestionsList" : (DomainSuggestionsList)?
+    )
+
+    alias GetOperationDetailRequest = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias GetOperationDetailResponse = NamedTuple(
+      "OperationId" : (OperationId)?,
+      "Status" : (OperationStatus)?,
+      "Message" : (ErrorMessage)?,
+      "DomainName" : (DomainName)?,
+      "Type" : (OperationType)?,
+      "SubmittedDate" : (Timestamp)?
+    )
+
+    alias GlueIp = String
+
+    alias GlueIpList = Array(GlueIp)
+
+    alias HostName = String
+
+    alias Integer = Int32
+
+    alias InvalidInput = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvoiceId = String
+
+    alias LangCode = String
+
+    alias ListDomainsRequest = NamedTuple(
+      "Marker" : (PageMarker)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListDomainsResponse = NamedTuple(
+      "Domains" : DomainSummaryList,
+      "NextPageMarker" : (PageMarker)?
+    )
+
+    alias ListOperationsRequest = NamedTuple(
+      "SubmittedSince" : (Timestamp)?,
+      "Marker" : (PageMarker)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ListOperationsResponse = NamedTuple(
+      "Operations" : OperationSummaryList,
+      "NextPageMarker" : (PageMarker)?
+    )
+
+    alias ListTagsForDomainRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias ListTagsForDomainResponse = NamedTuple(
+      "TagList" : TagList
+    )
+
+    alias Nameserver = NamedTuple(
+      "Name" : HostName,
+      "GlueIps" : (GlueIpList)?
+    )
+
+    alias NameserverList = Array(Nameserver)
+
+    alias OperationId = String
+
+    alias OperationLimitExceeded = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias OperationStatus = String
+
+    alias OperationSummary = NamedTuple(
+      "OperationId" : OperationId,
+      "Status" : OperationStatus,
+      "Type" : OperationType,
+      "SubmittedDate" : Timestamp
+    )
+
+    alias OperationSummaryList = Array(OperationSummary)
+
+    alias OperationType = String
+
+    alias PageMarker = String
+
+    alias PageMaxItems = Int32
+
+    alias Price = Float64
+
+    alias ReachabilityStatus = String
+
+    alias RegisterDomainRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "IdnLangCode" : (LangCode)?,
+      "DurationInYears" : DurationInYears,
+      "AutoRenew" : (Boolean)?,
+      "AdminContact" : ContactDetail,
+      "RegistrantContact" : ContactDetail,
+      "TechContact" : ContactDetail,
+      "PrivacyProtectAdminContact" : (Boolean)?,
+      "PrivacyProtectRegistrantContact" : (Boolean)?,
+      "PrivacyProtectTechContact" : (Boolean)?
+    )
+
+    alias RegisterDomainResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias RegistrarName = String
+
+    alias RegistrarUrl = String
+
+    alias RegistrarWhoIsServer = String
+
+    alias RegistryDomainId = String
+
+    alias RejectDomainTransferFromAnotherAwsAccountRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias RejectDomainTransferFromAnotherAwsAccountResponse = NamedTuple(
+      "OperationId" : (OperationId)?
+    )
+
+    alias RenewDomainRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "DurationInYears" : (DurationInYears)?,
+      "CurrentExpiryYear" : CurrentExpiryYear
+    )
+
+    alias RenewDomainResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias Reseller = String
+
+    alias ResendContactReachabilityEmailRequest = NamedTuple(
+      "domainName" : (DomainName)?
+    )
+
+    alias ResendContactReachabilityEmailResponse = NamedTuple(
+      "domainName" : (DomainName)?,
+      "emailAddress" : (Email)?,
+      "isAlreadyVerified" : (Boolean)?
+    )
+
+    alias RetrieveDomainAuthCodeRequest = NamedTuple(
+      "DomainName" : DomainName
+    )
+
+    alias RetrieveDomainAuthCodeResponse = NamedTuple(
+      "AuthCode" : DomainAuthCode
+    )
+
+    alias State = String
+
+    alias String = String
+
+    alias TLDRulesViolation = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : (TagKey)?,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagValue = String
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TransferDomainRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "IdnLangCode" : (LangCode)?,
+      "DurationInYears" : DurationInYears,
+      "Nameservers" : (NameserverList)?,
+      "AuthCode" : (DomainAuthCode)?,
+      "AutoRenew" : (Boolean)?,
+      "AdminContact" : ContactDetail,
+      "RegistrantContact" : ContactDetail,
+      "TechContact" : ContactDetail,
+      "PrivacyProtectAdminContact" : (Boolean)?,
+      "PrivacyProtectRegistrantContact" : (Boolean)?,
+      "PrivacyProtectTechContact" : (Boolean)?
+    )
+
+    alias TransferDomainResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias TransferDomainToAnotherAwsAccountRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AccountId" : AccountId
+    )
+
+    alias TransferDomainToAnotherAwsAccountResponse = NamedTuple(
+      "OperationId" : (OperationId)?,
+      "Password" : (String)?
+    )
+
+    alias Transferable = String
+
+    alias UnsupportedTLD = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UpdateDomainContactPrivacyRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AdminPrivacy" : (Boolean)?,
+      "RegistrantPrivacy" : (Boolean)?,
+      "TechPrivacy" : (Boolean)?
+    )
+
+    alias UpdateDomainContactPrivacyResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias UpdateDomainContactRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "AdminContact" : (ContactDetail)?,
+      "RegistrantContact" : (ContactDetail)?,
+      "TechContact" : (ContactDetail)?
+    )
+
+    alias UpdateDomainContactResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias UpdateDomainNameserversRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "FIAuthKey" : (FIAuthKey)?,
+      "Nameservers" : NameserverList
+    )
+
+    alias UpdateDomainNameserversResponse = NamedTuple(
+      "OperationId" : OperationId
+    )
+
+    alias UpdateTagsForDomainRequest = NamedTuple(
+      "DomainName" : DomainName,
+      "TagsToUpdate" : (TagList)?
+    )
+
+    alias UpdateTagsForDomainResponse = NamedTuple(
+      
+    )
+
+    alias ViewBillingRequest = NamedTuple(
+      "Start" : (Timestamp)?,
+      "End" : (Timestamp)?,
+      "Marker" : (PageMarker)?,
+      "MaxItems" : (PageMaxItems)?
+    )
+
+    alias ViewBillingResponse = NamedTuple(
+      "NextPageMarker" : (PageMarker)?,
+      "BillingRecords" : (BillingRecords)?
+    )
+
+    alias ZipCode = String
   end
 end

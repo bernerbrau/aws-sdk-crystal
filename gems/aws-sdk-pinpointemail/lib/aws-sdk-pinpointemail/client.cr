@@ -390,8 +390,8 @@ module Aws::PinpointEmail
     #
     # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, **options)
-      req = build_request(:create_configuration_set, params)
+    def create_configuration_set(, **options)
+      req = build_request(:create_configuration_set, )
       req.send_request(options)
     end
 
@@ -453,8 +453,8 @@ module Aws::PinpointEmail
     #
     # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:create_configuration_set_event_destination, params)
+    def create_configuration_set_event_destination(, **options)
+      req = build_request(:create_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -489,8 +489,8 @@ module Aws::PinpointEmail
     #
     # @overload create_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def create_dedicated_ip_pool(params = {}, **options)
-      req = build_request(:create_dedicated_ip_pool, params)
+    def create_dedicated_ip_pool(, **options)
+      req = build_request(:create_dedicated_ip_pool, )
       req.send_request(options)
     end
 
@@ -572,8 +572,8 @@ module Aws::PinpointEmail
     #
     # @overload create_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def create_deliverability_test_report(params = {}, **options)
-      req = build_request(:create_deliverability_test_report, params)
+    def create_deliverability_test_report(, **options)
+      req = build_request(:create_deliverability_test_report, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::PinpointEmail
     #
     # @overload create_email_identity(**params)
     # @param [Hash] params ({})
-    def create_email_identity(params = {}, **options)
-      req = build_request(:create_email_identity, params)
+    def create_email_identity(, **options)
+      req = build_request(:create_email_identity, )
       req.send_request(options)
     end
 
@@ -662,8 +662,8 @@ module Aws::PinpointEmail
     #
     # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, **options)
-      req = build_request(:delete_configuration_set, params)
+    def delete_configuration_set(, **options)
+      req = build_request(:delete_configuration_set, )
       req.send_request(options)
     end
 
@@ -696,8 +696,8 @@ module Aws::PinpointEmail
     #
     # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:delete_configuration_set_event_destination, params)
+    def delete_configuration_set_event_destination(, **options)
+      req = build_request(:delete_configuration_set_event_destination, )
       req.send_request(options)
     end
 
@@ -718,8 +718,8 @@ module Aws::PinpointEmail
     #
     # @overload delete_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def delete_dedicated_ip_pool(params = {}, **options)
-      req = build_request(:delete_dedicated_ip_pool, params)
+    def delete_dedicated_ip_pool(, **options)
+      req = build_request(:delete_dedicated_ip_pool, )
       req.send_request(options)
     end
 
@@ -743,8 +743,8 @@ module Aws::PinpointEmail
     #
     # @overload delete_email_identity(**params)
     # @param [Hash] params ({})
-    def delete_email_identity(params = {}, **options)
-      req = build_request(:delete_email_identity, params)
+    def delete_email_identity(, **options)
+      req = build_request(:delete_email_identity, )
       req.send_request(options)
     end
 
@@ -773,8 +773,8 @@ module Aws::PinpointEmail
     #
     # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, **options)
-      req = build_request(:get_account, params)
+    def get_account(, **options)
+      req = build_request(:get_account, )
       req.send_request(options)
     end
 
@@ -808,8 +808,8 @@ module Aws::PinpointEmail
     #
     # @overload get_blacklist_reports(**params)
     # @param [Hash] params ({})
-    def get_blacklist_reports(params = {}, **options)
-      req = build_request(:get_blacklist_reports, params)
+    def get_blacklist_reports(, **options)
+      req = build_request(:get_blacklist_reports, )
       req.send_request(options)
     end
 
@@ -859,8 +859,8 @@ module Aws::PinpointEmail
     #
     # @overload get_configuration_set(**params)
     # @param [Hash] params ({})
-    def get_configuration_set(params = {}, **options)
-      req = build_request(:get_configuration_set, params)
+    def get_configuration_set(, **options)
+      req = build_request(:get_configuration_set, )
       req.send_request(options)
     end
 
@@ -907,8 +907,8 @@ module Aws::PinpointEmail
     #
     # @overload get_configuration_set_event_destinations(**params)
     # @param [Hash] params ({})
-    def get_configuration_set_event_destinations(params = {}, **options)
-      req = build_request(:get_configuration_set_event_destinations, params)
+    def get_configuration_set_event_destinations(, **options)
+      req = build_request(:get_configuration_set_event_destinations, )
       req.send_request(options)
     end
 
@@ -942,8 +942,8 @@ module Aws::PinpointEmail
     #
     # @overload get_dedicated_ip(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ip(params = {}, **options)
-      req = build_request(:get_dedicated_ip, params)
+    def get_dedicated_ip(, **options)
+      req = build_request(:get_dedicated_ip, )
       req.send_request(options)
     end
 
@@ -992,8 +992,8 @@ module Aws::PinpointEmail
     #
     # @overload get_dedicated_ips(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ips(params = {}, **options)
-      req = build_request(:get_dedicated_ips, params)
+    def get_dedicated_ips(, **options)
+      req = build_request(:get_dedicated_ips, )
       req.send_request(options)
     end
 
@@ -1044,8 +1044,8 @@ module Aws::PinpointEmail
     #
     # @overload get_deliverability_dashboard_options(**params)
     # @param [Hash] params ({})
-    def get_deliverability_dashboard_options(params = {}, **options)
-      req = build_request(:get_deliverability_dashboard_options, params)
+    def get_deliverability_dashboard_options(, **options)
+      req = build_request(:get_deliverability_dashboard_options, )
       req.send_request(options)
     end
 
@@ -1097,8 +1097,8 @@ module Aws::PinpointEmail
     #
     # @overload get_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def get_deliverability_test_report(params = {}, **options)
-      req = build_request(:get_deliverability_test_report, params)
+    def get_deliverability_test_report(, **options)
+      req = build_request(:get_deliverability_test_report, )
       req.send_request(options)
     end
 
@@ -1147,8 +1147,8 @@ module Aws::PinpointEmail
     #
     # @overload get_domain_deliverability_campaign(**params)
     # @param [Hash] params ({})
-    def get_domain_deliverability_campaign(params = {}, **options)
-      req = build_request(:get_domain_deliverability_campaign, params)
+    def get_domain_deliverability_campaign(, **options)
+      req = build_request(:get_domain_deliverability_campaign, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::PinpointEmail
     #
     # @overload get_domain_statistics_report(**params)
     # @param [Hash] params ({})
-    def get_domain_statistics_report(params = {}, **options)
-      req = build_request(:get_domain_statistics_report, params)
+    def get_domain_statistics_report(, **options)
+      req = build_request(:get_domain_statistics_report, )
       req.send_request(options)
     end
 
@@ -1258,8 +1258,8 @@ module Aws::PinpointEmail
     #
     # @overload get_email_identity(**params)
     # @param [Hash] params ({})
-    def get_email_identity(params = {}, **options)
-      req = build_request(:get_email_identity, params)
+    def get_email_identity(, **options)
+      req = build_request(:get_email_identity, )
       req.send_request(options)
     end
 
@@ -1306,8 +1306,8 @@ module Aws::PinpointEmail
     #
     # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, **options)
-      req = build_request(:list_configuration_sets, params)
+    def list_configuration_sets(, **options)
+      req = build_request(:list_configuration_sets, )
       req.send_request(options)
     end
 
@@ -1348,8 +1348,8 @@ module Aws::PinpointEmail
     #
     # @overload list_dedicated_ip_pools(**params)
     # @param [Hash] params ({})
-    def list_dedicated_ip_pools(params = {}, **options)
-      req = build_request(:list_dedicated_ip_pools, params)
+    def list_dedicated_ip_pools(, **options)
+      req = build_request(:list_dedicated_ip_pools, )
       req.send_request(options)
     end
 
@@ -1402,8 +1402,8 @@ module Aws::PinpointEmail
     #
     # @overload list_deliverability_test_reports(**params)
     # @param [Hash] params ({})
-    def list_deliverability_test_reports(params = {}, **options)
-      req = build_request(:list_deliverability_test_reports, params)
+    def list_deliverability_test_reports(, **options)
+      req = build_request(:list_deliverability_test_reports, )
       req.send_request(options)
     end
 
@@ -1479,8 +1479,8 @@ module Aws::PinpointEmail
     #
     # @overload list_domain_deliverability_campaigns(**params)
     # @param [Hash] params ({})
-    def list_domain_deliverability_campaigns(params = {}, **options)
-      req = build_request(:list_domain_deliverability_campaigns, params)
+    def list_domain_deliverability_campaigns(, **options)
+      req = build_request(:list_domain_deliverability_campaigns, )
       req.send_request(options)
     end
 
@@ -1528,8 +1528,8 @@ module Aws::PinpointEmail
     #
     # @overload list_email_identities(**params)
     # @param [Hash] params ({})
-    def list_email_identities(params = {}, **options)
-      req = build_request(:list_email_identities, params)
+    def list_email_identities(, **options)
+      req = build_request(:list_email_identities, )
       req.send_request(options)
     end
 
@@ -1564,8 +1564,8 @@ module Aws::PinpointEmail
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1590,8 +1590,8 @@ module Aws::PinpointEmail
     #
     # @overload put_account_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_dedicated_ip_warmup_attributes(params = {}, **options)
-      req = build_request(:put_account_dedicated_ip_warmup_attributes, params)
+    def put_account_dedicated_ip_warmup_attributes(, **options)
+      req = build_request(:put_account_dedicated_ip_warmup_attributes, )
       req.send_request(options)
     end
 
@@ -1619,8 +1619,8 @@ module Aws::PinpointEmail
     #
     # @overload put_account_sending_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_sending_attributes(params = {}, **options)
-      req = build_request(:put_account_sending_attributes, params)
+    def put_account_sending_attributes(, **options)
+      req = build_request(:put_account_sending_attributes, )
       req.send_request(options)
     end
 
@@ -1657,8 +1657,8 @@ module Aws::PinpointEmail
     #
     # @overload put_configuration_set_delivery_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_delivery_options(params = {}, **options)
-      req = build_request(:put_configuration_set_delivery_options, params)
+    def put_configuration_set_delivery_options(, **options)
+      req = build_request(:put_configuration_set_delivery_options, )
       req.send_request(options)
     end
 
@@ -1687,8 +1687,8 @@ module Aws::PinpointEmail
     #
     # @overload put_configuration_set_reputation_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_reputation_options(params = {}, **options)
-      req = build_request(:put_configuration_set_reputation_options, params)
+    def put_configuration_set_reputation_options(, **options)
+      req = build_request(:put_configuration_set_reputation_options, )
       req.send_request(options)
     end
 
@@ -1716,8 +1716,8 @@ module Aws::PinpointEmail
     #
     # @overload put_configuration_set_sending_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_sending_options(params = {}, **options)
-      req = build_request(:put_configuration_set_sending_options, params)
+    def put_configuration_set_sending_options(, **options)
+      req = build_request(:put_configuration_set_sending_options, )
       req.send_request(options)
     end
 
@@ -1744,8 +1744,8 @@ module Aws::PinpointEmail
     #
     # @overload put_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_tracking_options(params = {}, **options)
-      req = build_request(:put_configuration_set_tracking_options, params)
+    def put_configuration_set_tracking_options(, **options)
+      req = build_request(:put_configuration_set_tracking_options, )
       req.send_request(options)
     end
 
@@ -1781,8 +1781,8 @@ module Aws::PinpointEmail
     #
     # @overload put_dedicated_ip_in_pool(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_in_pool(params = {}, **options)
-      req = build_request(:put_dedicated_ip_in_pool, params)
+    def put_dedicated_ip_in_pool(, **options)
+      req = build_request(:put_dedicated_ip_in_pool, )
       req.send_request(options)
     end
 
@@ -1807,8 +1807,8 @@ module Aws::PinpointEmail
     #
     # @overload put_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_warmup_attributes(params = {}, **options)
-      req = build_request(:put_dedicated_ip_warmup_attributes, params)
+    def put_dedicated_ip_warmup_attributes(, **options)
+      req = build_request(:put_dedicated_ip_warmup_attributes, )
       req.send_request(options)
     end
 
@@ -1859,8 +1859,8 @@ module Aws::PinpointEmail
     #
     # @overload put_deliverability_dashboard_option(**params)
     # @param [Hash] params ({})
-    def put_deliverability_dashboard_option(params = {}, **options)
-      req = build_request(:put_deliverability_dashboard_option, params)
+    def put_deliverability_dashboard_option(, **options)
+      req = build_request(:put_deliverability_dashboard_option, )
       req.send_request(options)
     end
 
@@ -1890,8 +1890,8 @@ module Aws::PinpointEmail
     #
     # @overload put_email_identity_dkim_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_dkim_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_dkim_attributes, params)
+    def put_email_identity_dkim_attributes(, **options)
+      req = build_request(:put_email_identity_dkim_attributes, )
       req.send_request(options)
     end
 
@@ -1945,8 +1945,8 @@ module Aws::PinpointEmail
     #
     # @overload put_email_identity_feedback_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_feedback_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_feedback_attributes, params)
+    def put_email_identity_feedback_attributes(, **options)
+      req = build_request(:put_email_identity_feedback_attributes, )
       req.send_request(options)
     end
 
@@ -1994,8 +1994,8 @@ module Aws::PinpointEmail
     #
     # @overload put_email_identity_mail_from_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_mail_from_attributes(params = {}, **options)
-      req = build_request(:put_email_identity_mail_from_attributes, params)
+    def put_email_identity_mail_from_attributes(, **options)
+      req = build_request(:put_email_identity_mail_from_attributes, )
       req.send_request(options)
     end
 
@@ -2098,8 +2098,8 @@ module Aws::PinpointEmail
     #
     # @overload send_email(**params)
     # @param [Hash] params ({})
-    def send_email(params = {}, **options)
-      req = build_request(:send_email, params)
+    def send_email(, **options)
+      req = build_request(:send_email, )
       req.send_request(options)
     end
 
@@ -2142,8 +2142,8 @@ module Aws::PinpointEmail
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2176,8 +2176,8 @@ module Aws::PinpointEmail
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2237,8 +2237,8 @@ module Aws::PinpointEmail
     #
     # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, **options)
-      req = build_request(:update_configuration_set_event_destination, params)
+    def update_configuration_set_event_destination(, **options)
+      req = build_request(:update_configuration_set_event_destination, )
       req.send_request(options)
     end
 

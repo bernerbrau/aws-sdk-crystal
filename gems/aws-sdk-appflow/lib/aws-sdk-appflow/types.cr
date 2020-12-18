@@ -5254,5 +5254,1073 @@ module Aws::Appflow
       include Aws::Structure
     end
 
+    alias ARN = String
+
+    alias AccessKeyId = String
+
+    alias AccessToken = String
+
+    alias AccountName = String
+
+    alias AggregationConfig = NamedTuple(
+      "aggregationType" : (AggregationType)?
+    )
+
+    alias AggregationType = String
+
+    alias AmplitudeConnectorOperator = String
+
+    alias AmplitudeConnectorProfileCredentials = NamedTuple(
+      "apiKey" : ApiKey,
+      "secretKey" : SecretKey
+    )
+
+    alias AmplitudeConnectorProfileProperties = NamedTuple(
+      
+    )
+
+    alias AmplitudeMetadata = NamedTuple(
+      
+    )
+
+    alias AmplitudeSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias ApiKey = String
+
+    alias ApiSecretKey = String
+
+    alias ApiToken = String
+
+    alias ApplicationKey = String
+
+    alias AuthCode = String
+
+    alias Boolean = Bool
+
+    alias BucketName = String
+
+    alias BucketPrefix = String
+
+    alias ClientCredentialsArn = String
+
+    alias ClientId = String
+
+    alias ClientSecret = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConnectionMode = String
+
+    alias ConnectorAuthenticationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConnectorConfiguration = NamedTuple(
+      "canUseAsSource" : (Boolean)?,
+      "canUseAsDestination" : (Boolean)?,
+      "supportedDestinationConnectors" : (ConnectorTypeList)?,
+      "supportedSchedulingFrequencies" : (SchedulingFrequencyTypeList)?,
+      "isPrivateLinkEnabled" : (Boolean)?,
+      "isPrivateLinkEndpointUrlRequired" : (Boolean)?,
+      "supportedTriggerTypes" : (TriggerTypeList)?,
+      "connectorMetadata" : (ConnectorMetadata)?
+    )
+
+    alias ConnectorConfigurationsMap = Hash(ConnectorType,ConnectorConfiguration)
+
+    alias ConnectorEntity = NamedTuple(
+      "name" : Name,
+      "label" : (Label)?,
+      "hasNestedEntities" : (Boolean)?
+    )
+
+    alias ConnectorEntityField = NamedTuple(
+      "identifier" : Identifier,
+      "label" : (Label)?,
+      "supportedFieldTypeDetails" : (SupportedFieldTypeDetails)?,
+      "description" : (Description)?,
+      "sourceProperties" : (SourceFieldProperties)?,
+      "destinationProperties" : (DestinationFieldProperties)?
+    )
+
+    alias ConnectorEntityFieldList = Array(ConnectorEntityField)
+
+    alias ConnectorEntityList = Array(ConnectorEntity)
+
+    alias ConnectorEntityMap = Hash(Group,ConnectorEntityList)
+
+    alias ConnectorMetadata = NamedTuple(
+      "Amplitude" : (AmplitudeMetadata)?,
+      "Datadog" : (DatadogMetadata)?,
+      "Dynatrace" : (DynatraceMetadata)?,
+      "GoogleAnalytics" : (GoogleAnalyticsMetadata)?,
+      "InforNexus" : (InforNexusMetadata)?,
+      "Marketo" : (MarketoMetadata)?,
+      "Redshift" : (RedshiftMetadata)?,
+      "S3" : (S3Metadata)?,
+      "Salesforce" : (SalesforceMetadata)?,
+      "ServiceNow" : (ServiceNowMetadata)?,
+      "Singular" : (SingularMetadata)?,
+      "Slack" : (SlackMetadata)?,
+      "Snowflake" : (SnowflakeMetadata)?,
+      "Trendmicro" : (TrendmicroMetadata)?,
+      "Veeva" : (VeevaMetadata)?,
+      "Zendesk" : (ZendeskMetadata)?,
+      "EventBridge" : (EventBridgeMetadata)?,
+      "Upsolver" : (UpsolverMetadata)?
+    )
+
+    alias ConnectorOAuthRequest = NamedTuple(
+      "authCode" : (AuthCode)?,
+      "redirectUri" : (RedirectUri)?
+    )
+
+    alias ConnectorOperator = NamedTuple(
+      "Amplitude" : (AmplitudeConnectorOperator)?,
+      "Datadog" : (DatadogConnectorOperator)?,
+      "Dynatrace" : (DynatraceConnectorOperator)?,
+      "GoogleAnalytics" : (GoogleAnalyticsConnectorOperator)?,
+      "InforNexus" : (InforNexusConnectorOperator)?,
+      "Marketo" : (MarketoConnectorOperator)?,
+      "S3" : (S3ConnectorOperator)?,
+      "Salesforce" : (SalesforceConnectorOperator)?,
+      "ServiceNow" : (ServiceNowConnectorOperator)?,
+      "Singular" : (SingularConnectorOperator)?,
+      "Slack" : (SlackConnectorOperator)?,
+      "Trendmicro" : (TrendmicroConnectorOperator)?,
+      "Veeva" : (VeevaConnectorOperator)?,
+      "Zendesk" : (ZendeskConnectorOperator)?
+    )
+
+    alias ConnectorProfile = NamedTuple(
+      "connectorProfileArn" : (ConnectorProfileArn)?,
+      "connectorProfileName" : (ConnectorProfileName)?,
+      "connectorType" : (ConnectorType)?,
+      "connectionMode" : (ConnectionMode)?,
+      "credentialsArn" : (ARN)?,
+      "connectorProfileProperties" : (ConnectorProfileProperties)?,
+      "createdAt" : (Date)?,
+      "lastUpdatedAt" : (Date)?
+    )
+
+    alias ConnectorProfileArn = String
+
+    alias ConnectorProfileConfig = NamedTuple(
+      "connectorProfileProperties" : ConnectorProfileProperties,
+      "connectorProfileCredentials" : ConnectorProfileCredentials
+    )
+
+    alias ConnectorProfileCredentials = NamedTuple(
+      "Amplitude" : (AmplitudeConnectorProfileCredentials)?,
+      "Datadog" : (DatadogConnectorProfileCredentials)?,
+      "Dynatrace" : (DynatraceConnectorProfileCredentials)?,
+      "GoogleAnalytics" : (GoogleAnalyticsConnectorProfileCredentials)?,
+      "InforNexus" : (InforNexusConnectorProfileCredentials)?,
+      "Marketo" : (MarketoConnectorProfileCredentials)?,
+      "Redshift" : (RedshiftConnectorProfileCredentials)?,
+      "Salesforce" : (SalesforceConnectorProfileCredentials)?,
+      "ServiceNow" : (ServiceNowConnectorProfileCredentials)?,
+      "Singular" : (SingularConnectorProfileCredentials)?,
+      "Slack" : (SlackConnectorProfileCredentials)?,
+      "Snowflake" : (SnowflakeConnectorProfileCredentials)?,
+      "Trendmicro" : (TrendmicroConnectorProfileCredentials)?,
+      "Veeva" : (VeevaConnectorProfileCredentials)?,
+      "Zendesk" : (ZendeskConnectorProfileCredentials)?
+    )
+
+    alias ConnectorProfileDetailList = Array(ConnectorProfile)
+
+    alias ConnectorProfileName = String
+
+    alias ConnectorProfileNameList = Array(ConnectorProfileName)
+
+    alias ConnectorProfileProperties = NamedTuple(
+      "Amplitude" : (AmplitudeConnectorProfileProperties)?,
+      "Datadog" : (DatadogConnectorProfileProperties)?,
+      "Dynatrace" : (DynatraceConnectorProfileProperties)?,
+      "GoogleAnalytics" : (GoogleAnalyticsConnectorProfileProperties)?,
+      "InforNexus" : (InforNexusConnectorProfileProperties)?,
+      "Marketo" : (MarketoConnectorProfileProperties)?,
+      "Redshift" : (RedshiftConnectorProfileProperties)?,
+      "Salesforce" : (SalesforceConnectorProfileProperties)?,
+      "ServiceNow" : (ServiceNowConnectorProfileProperties)?,
+      "Singular" : (SingularConnectorProfileProperties)?,
+      "Slack" : (SlackConnectorProfileProperties)?,
+      "Snowflake" : (SnowflakeConnectorProfileProperties)?,
+      "Trendmicro" : (TrendmicroConnectorProfileProperties)?,
+      "Veeva" : (VeevaConnectorProfileProperties)?,
+      "Zendesk" : (ZendeskConnectorProfileProperties)?
+    )
+
+    alias ConnectorServerException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConnectorType = String
+
+    alias ConnectorTypeList = Array(ConnectorType)
+
+    alias CreateConnectorProfileRequest = NamedTuple(
+      "connectorProfileName" : ConnectorProfileName,
+      "kmsArn" : (KMSArn)?,
+      "connectorType" : ConnectorType,
+      "connectionMode" : ConnectionMode,
+      "connectorProfileConfig" : ConnectorProfileConfig
+    )
+
+    alias CreateConnectorProfileResponse = NamedTuple(
+      "connectorProfileArn" : (ConnectorProfileArn)?
+    )
+
+    alias CreateFlowRequest = NamedTuple(
+      "flowName" : FlowName,
+      "description" : (FlowDescription)?,
+      "kmsArn" : (KMSArn)?,
+      "triggerConfig" : TriggerConfig,
+      "sourceFlowConfig" : SourceFlowConfig,
+      "destinationFlowConfigList" : DestinationFlowConfigList,
+      "tasks" : Tasks,
+      "tags" : (TagMap)?
+    )
+
+    alias CreateFlowResponse = NamedTuple(
+      "flowArn" : (FlowArn)?,
+      "flowStatus" : (FlowStatus)?
+    )
+
+    alias CreatedBy = String
+
+    alias DataPullMode = String
+
+    alias DatabaseUrl = String
+
+    alias DatadogConnectorOperator = String
+
+    alias DatadogConnectorProfileCredentials = NamedTuple(
+      "apiKey" : ApiKey,
+      "applicationKey" : ApplicationKey
+    )
+
+    alias DatadogConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias DatadogMetadata = NamedTuple(
+      
+    )
+
+    alias DatadogSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias Date = String | UInt64 | Time
+
+    alias DatetimeTypeFieldName = String
+
+    alias DeleteConnectorProfileRequest = NamedTuple(
+      "connectorProfileName" : ConnectorProfileName,
+      "forceDelete" : (Boolean)?
+    )
+
+    alias DeleteConnectorProfileResponse = NamedTuple(
+      
+    )
+
+    alias DeleteFlowRequest = NamedTuple(
+      "flowName" : FlowName,
+      "forceDelete" : (Boolean)?
+    )
+
+    alias DeleteFlowResponse = NamedTuple(
+      
+    )
+
+    alias DescribeConnectorEntityRequest = NamedTuple(
+      "connectorEntityName" : Name,
+      "connectorType" : (ConnectorType)?,
+      "connectorProfileName" : (ConnectorProfileName)?
+    )
+
+    alias DescribeConnectorEntityResponse = NamedTuple(
+      "connectorEntityFields" : ConnectorEntityFieldList
+    )
+
+    alias DescribeConnectorProfilesRequest = NamedTuple(
+      "connectorProfileNames" : (ConnectorProfileNameList)?,
+      "connectorType" : (ConnectorType)?,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeConnectorProfilesResponse = NamedTuple(
+      "connectorProfileDetails" : (ConnectorProfileDetailList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeConnectorsRequest = NamedTuple(
+      "connectorTypes" : (ConnectorTypeList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeConnectorsResponse = NamedTuple(
+      "connectorConfigurations" : (ConnectorConfigurationsMap)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeFlowExecutionRecordsRequest = NamedTuple(
+      "flowName" : FlowName,
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeFlowExecutionRecordsResponse = NamedTuple(
+      "flowExecutions" : (FlowExecutionList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias DescribeFlowRequest = NamedTuple(
+      "flowName" : FlowName
+    )
+
+    alias DescribeFlowResponse = NamedTuple(
+      "flowArn" : (FlowArn)?,
+      "description" : (FlowDescription)?,
+      "flowName" : (FlowName)?,
+      "kmsArn" : (KMSArn)?,
+      "flowStatus" : (FlowStatus)?,
+      "flowStatusMessage" : (FlowStatusMessage)?,
+      "sourceFlowConfig" : (SourceFlowConfig)?,
+      "destinationFlowConfigList" : (DestinationFlowConfigList)?,
+      "lastRunExecutionDetails" : (ExecutionDetails)?,
+      "triggerConfig" : (TriggerConfig)?,
+      "tasks" : (Tasks)?,
+      "createdAt" : (Date)?,
+      "lastUpdatedAt" : (Date)?,
+      "createdBy" : (CreatedBy)?,
+      "lastUpdatedBy" : (UpdatedBy)?,
+      "tags" : (TagMap)?
+    )
+
+    alias Description = String
+
+    alias DestinationConnectorProperties = NamedTuple(
+      "Redshift" : (RedshiftDestinationProperties)?,
+      "S3" : (S3DestinationProperties)?,
+      "Salesforce" : (SalesforceDestinationProperties)?,
+      "Snowflake" : (SnowflakeDestinationProperties)?,
+      "EventBridge" : (EventBridgeDestinationProperties)?,
+      "Upsolver" : (UpsolverDestinationProperties)?
+    )
+
+    alias DestinationField = String
+
+    alias DestinationFieldProperties = NamedTuple(
+      "isCreatable" : (Boolean)?,
+      "isNullable" : (Boolean)?,
+      "isUpsertable" : (Boolean)?,
+      "isUpdatable" : (Boolean)?,
+      "supportedWriteOperations" : (SupportedWriteOperationList)?
+    )
+
+    alias DestinationFlowConfig = NamedTuple(
+      "connectorType" : ConnectorType,
+      "connectorProfileName" : (ConnectorProfileName)?,
+      "destinationConnectorProperties" : DestinationConnectorProperties
+    )
+
+    alias DestinationFlowConfigList = Array(DestinationFlowConfig)
+
+    alias DynatraceConnectorOperator = String
+
+    alias DynatraceConnectorProfileCredentials = NamedTuple(
+      "apiToken" : ApiToken
+    )
+
+    alias DynatraceConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias DynatraceMetadata = NamedTuple(
+      
+    )
+
+    alias DynatraceSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias EntitiesPath = String
+
+    alias ErrorHandlingConfig = NamedTuple(
+      "failOnFirstDestinationError" : (Boolean)?,
+      "bucketPrefix" : (BucketPrefix)?,
+      "bucketName" : (BucketName)?
+    )
+
+    alias ErrorInfo = NamedTuple(
+      "putFailuresCount" : (Long)?,
+      "executionMessage" : (ExecutionMessage)?
+    )
+
+    alias ErrorMessage = String
+
+    alias EventBridgeDestinationProperties = NamedTuple(
+      "object" : Object,
+      "errorHandlingConfig" : (ErrorHandlingConfig)?
+    )
+
+    alias EventBridgeMetadata = NamedTuple(
+      
+    )
+
+    alias ExecutionDetails = NamedTuple(
+      "mostRecentExecutionMessage" : (MostRecentExecutionMessage)?,
+      "mostRecentExecutionTime" : (Date)?,
+      "mostRecentExecutionStatus" : (ExecutionStatus)?
+    )
+
+    alias ExecutionId = String
+
+    alias ExecutionMessage = String
+
+    alias ExecutionRecord = NamedTuple(
+      "executionId" : (ExecutionId)?,
+      "executionStatus" : (ExecutionStatus)?,
+      "executionResult" : (ExecutionResult)?,
+      "startedAt" : (Date)?,
+      "lastUpdatedAt" : (Date)?
+    )
+
+    alias ExecutionResult = NamedTuple(
+      "errorInfo" : (ErrorInfo)?,
+      "bytesProcessed" : (Long)?,
+      "bytesWritten" : (Long)?,
+      "recordsProcessed" : (Long)?
+    )
+
+    alias ExecutionStatus = String
+
+    alias FieldType = String
+
+    alias FieldTypeDetails = NamedTuple(
+      "fieldType" : FieldType,
+      "filterOperators" : FilterOperatorList,
+      "supportedValues" : (SupportedValueList)?
+    )
+
+    alias FileType = String
+
+    alias FilterOperatorList = Array(Operator)
+
+    alias FlowArn = String
+
+    alias FlowDefinition = NamedTuple(
+      "flowArn" : (FlowArn)?,
+      "description" : (FlowDescription)?,
+      "flowName" : (FlowName)?,
+      "flowStatus" : (FlowStatus)?,
+      "sourceConnectorType" : (ConnectorType)?,
+      "destinationConnectorType" : (ConnectorType)?,
+      "triggerType" : (TriggerType)?,
+      "createdAt" : (Date)?,
+      "lastUpdatedAt" : (Date)?,
+      "createdBy" : (CreatedBy)?,
+      "lastUpdatedBy" : (UpdatedBy)?,
+      "tags" : (TagMap)?,
+      "lastRunExecutionDetails" : (ExecutionDetails)?
+    )
+
+    alias FlowDescription = String
+
+    alias FlowExecutionList = Array(ExecutionRecord)
+
+    alias FlowList = Array(FlowDefinition)
+
+    alias FlowName = String
+
+    alias FlowStatus = String
+
+    alias FlowStatusMessage = String
+
+    alias GoogleAnalyticsConnectorOperator = String
+
+    alias GoogleAnalyticsConnectorProfileCredentials = NamedTuple(
+      "clientId" : ClientId,
+      "clientSecret" : ClientSecret,
+      "accessToken" : (AccessToken)?,
+      "refreshToken" : (RefreshToken)?,
+      "oAuthRequest" : (ConnectorOAuthRequest)?
+    )
+
+    alias GoogleAnalyticsConnectorProfileProperties = NamedTuple(
+      
+    )
+
+    alias GoogleAnalyticsMetadata = NamedTuple(
+      "oAuthScopes" : (OAuthScopeList)?
+    )
+
+    alias GoogleAnalyticsSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias Group = String
+
+    alias IdFieldNameList = Array(Name)
+
+    alias Identifier = String
+
+    alias IncrementalPullConfig = NamedTuple(
+      "datetimeTypeFieldName" : (DatetimeTypeFieldName)?
+    )
+
+    alias InforNexusConnectorOperator = String
+
+    alias InforNexusConnectorProfileCredentials = NamedTuple(
+      "accessKeyId" : AccessKeyId,
+      "userId" : Username,
+      "secretAccessKey" : Key,
+      "datakey" : Key
+    )
+
+    alias InforNexusConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias InforNexusMetadata = NamedTuple(
+      
+    )
+
+    alias InforNexusSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias InstanceUrl = String
+
+    alias InternalServerException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias KMSArn = String
+
+    alias Key = String
+
+    alias Label = String
+
+    alias ListConnectorEntitiesRequest = NamedTuple(
+      "connectorProfileName" : (ConnectorProfileName)?,
+      "connectorType" : (ConnectorType)?,
+      "entitiesPath" : (EntitiesPath)?
+    )
+
+    alias ListConnectorEntitiesResponse = NamedTuple(
+      "connectorEntityMap" : ConnectorEntityMap
+    )
+
+    alias ListFlowsRequest = NamedTuple(
+      "maxResults" : (MaxResults)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListFlowsResponse = NamedTuple(
+      "flows" : (FlowList)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ARN
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias Long = Int64
+
+    alias MarketoConnectorOperator = String
+
+    alias MarketoConnectorProfileCredentials = NamedTuple(
+      "clientId" : ClientId,
+      "clientSecret" : ClientSecret,
+      "accessToken" : (AccessToken)?,
+      "oAuthRequest" : (ConnectorOAuthRequest)?
+    )
+
+    alias MarketoConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias MarketoMetadata = NamedTuple(
+      
+    )
+
+    alias MarketoSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias MaxResults = Int32
+
+    alias MostRecentExecutionMessage = String
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias OAuthScope = String
+
+    alias OAuthScopeList = Array(OAuthScope)
+
+    alias Object = String
+
+    alias Operator = String
+
+    alias OperatorPropertiesKeys = String
+
+    alias Password = String
+
+    alias PrefixConfig = NamedTuple(
+      "prefixType" : (PrefixType)?,
+      "prefixFormat" : (PrefixFormat)?
+    )
+
+    alias PrefixFormat = String
+
+    alias PrefixType = String
+
+    alias PrivateLinkServiceName = String
+
+    alias Property = String
+
+    alias RedirectUri = String
+
+    alias RedshiftConnectorProfileCredentials = NamedTuple(
+      "username" : Username,
+      "password" : Password
+    )
+
+    alias RedshiftConnectorProfileProperties = NamedTuple(
+      "databaseUrl" : DatabaseUrl,
+      "bucketName" : BucketName,
+      "bucketPrefix" : (BucketPrefix)?,
+      "roleArn" : RoleArn
+    )
+
+    alias RedshiftDestinationProperties = NamedTuple(
+      "object" : Object,
+      "intermediateBucketName" : BucketName,
+      "bucketPrefix" : (BucketPrefix)?,
+      "errorHandlingConfig" : (ErrorHandlingConfig)?
+    )
+
+    alias RedshiftMetadata = NamedTuple(
+      
+    )
+
+    alias RefreshToken = String
+
+    alias Region = String
+
+    alias RegionList = Array(Region)
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias RoleArn = String
+
+    alias S3ConnectorOperator = String
+
+    alias S3DestinationProperties = NamedTuple(
+      "bucketName" : BucketName,
+      "bucketPrefix" : (BucketPrefix)?,
+      "s3OutputFormatConfig" : (S3OutputFormatConfig)?
+    )
+
+    alias S3Metadata = NamedTuple(
+      
+    )
+
+    alias S3OutputFormatConfig = NamedTuple(
+      "fileType" : (FileType)?,
+      "prefixConfig" : (PrefixConfig)?,
+      "aggregationConfig" : (AggregationConfig)?
+    )
+
+    alias S3SourceProperties = NamedTuple(
+      "bucketName" : BucketName,
+      "bucketPrefix" : (BucketPrefix)?
+    )
+
+    alias SalesforceConnectorOperator = String
+
+    alias SalesforceConnectorProfileCredentials = NamedTuple(
+      "accessToken" : (AccessToken)?,
+      "refreshToken" : (RefreshToken)?,
+      "oAuthRequest" : (ConnectorOAuthRequest)?,
+      "clientCredentialsArn" : (ClientCredentialsArn)?
+    )
+
+    alias SalesforceConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : (InstanceUrl)?,
+      "isSandboxEnvironment" : (Boolean)?
+    )
+
+    alias SalesforceDestinationProperties = NamedTuple(
+      "object" : Object,
+      "idFieldNames" : (IdFieldNameList)?,
+      "errorHandlingConfig" : (ErrorHandlingConfig)?,
+      "writeOperationType" : (WriteOperationType)?
+    )
+
+    alias SalesforceMetadata = NamedTuple(
+      "oAuthScopes" : (OAuthScopeList)?
+    )
+
+    alias SalesforceSourceProperties = NamedTuple(
+      "object" : Object,
+      "enableDynamicFieldUpdate" : (Boolean)?,
+      "includeDeletedRecords" : (Boolean)?
+    )
+
+    alias ScheduleExpression = String
+
+    alias ScheduleFrequencyType = String
+
+    alias ScheduledTriggerProperties = NamedTuple(
+      "scheduleExpression" : ScheduleExpression,
+      "dataPullMode" : (DataPullMode)?,
+      "scheduleStartTime" : (Date)?,
+      "scheduleEndTime" : (Date)?,
+      "timezone" : (Timezone)?
+    )
+
+    alias SchedulingFrequencyTypeList = Array(ScheduleFrequencyType)
+
+    alias SecretKey = String
+
+    alias ServiceNowConnectorOperator = String
+
+    alias ServiceNowConnectorProfileCredentials = NamedTuple(
+      "username" : Username,
+      "password" : Password
+    )
+
+    alias ServiceNowConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias ServiceNowMetadata = NamedTuple(
+      
+    )
+
+    alias ServiceNowSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias SingularConnectorOperator = String
+
+    alias SingularConnectorProfileCredentials = NamedTuple(
+      "apiKey" : ApiKey
+    )
+
+    alias SingularConnectorProfileProperties = NamedTuple(
+      
+    )
+
+    alias SingularMetadata = NamedTuple(
+      
+    )
+
+    alias SingularSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias SlackConnectorOperator = String
+
+    alias SlackConnectorProfileCredentials = NamedTuple(
+      "clientId" : ClientId,
+      "clientSecret" : ClientSecret,
+      "accessToken" : (AccessToken)?,
+      "oAuthRequest" : (ConnectorOAuthRequest)?
+    )
+
+    alias SlackConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias SlackMetadata = NamedTuple(
+      "oAuthScopes" : (OAuthScopeList)?
+    )
+
+    alias SlackSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias SnowflakeConnectorProfileCredentials = NamedTuple(
+      "username" : Username,
+      "password" : Password
+    )
+
+    alias SnowflakeConnectorProfileProperties = NamedTuple(
+      "warehouse" : Warehouse,
+      "stage" : Stage,
+      "bucketName" : BucketName,
+      "bucketPrefix" : (BucketPrefix)?,
+      "privateLinkServiceName" : (PrivateLinkServiceName)?,
+      "accountName" : (AccountName)?,
+      "region" : (Region)?
+    )
+
+    alias SnowflakeDestinationProperties = NamedTuple(
+      "object" : Object,
+      "intermediateBucketName" : BucketName,
+      "bucketPrefix" : (BucketPrefix)?,
+      "errorHandlingConfig" : (ErrorHandlingConfig)?
+    )
+
+    alias SnowflakeMetadata = NamedTuple(
+      "supportedRegions" : (RegionList)?
+    )
+
+    alias SourceConnectorProperties = NamedTuple(
+      "Amplitude" : (AmplitudeSourceProperties)?,
+      "Datadog" : (DatadogSourceProperties)?,
+      "Dynatrace" : (DynatraceSourceProperties)?,
+      "GoogleAnalytics" : (GoogleAnalyticsSourceProperties)?,
+      "InforNexus" : (InforNexusSourceProperties)?,
+      "Marketo" : (MarketoSourceProperties)?,
+      "S3" : (S3SourceProperties)?,
+      "Salesforce" : (SalesforceSourceProperties)?,
+      "ServiceNow" : (ServiceNowSourceProperties)?,
+      "Singular" : (SingularSourceProperties)?,
+      "Slack" : (SlackSourceProperties)?,
+      "Trendmicro" : (TrendmicroSourceProperties)?,
+      "Veeva" : (VeevaSourceProperties)?,
+      "Zendesk" : (ZendeskSourceProperties)?
+    )
+
+    alias SourceFieldProperties = NamedTuple(
+      "isRetrievable" : (Boolean)?,
+      "isQueryable" : (Boolean)?
+    )
+
+    alias SourceFields = Array(String)
+
+    alias SourceFlowConfig = NamedTuple(
+      "connectorType" : ConnectorType,
+      "connectorProfileName" : (ConnectorProfileName)?,
+      "sourceConnectorProperties" : SourceConnectorProperties,
+      "incrementalPullConfig" : (IncrementalPullConfig)?
+    )
+
+    alias Stage = String
+
+    alias StartFlowRequest = NamedTuple(
+      "flowName" : FlowName
+    )
+
+    alias StartFlowResponse = NamedTuple(
+      "flowArn" : (FlowArn)?,
+      "flowStatus" : (FlowStatus)?,
+      "executionId" : (ExecutionId)?
+    )
+
+    alias StopFlowRequest = NamedTuple(
+      "flowName" : FlowName
+    )
+
+    alias StopFlowResponse = NamedTuple(
+      "flowArn" : (FlowArn)?,
+      "flowStatus" : (FlowStatus)?
+    )
+
+    alias String = String
+
+    alias SupportedFieldTypeDetails = NamedTuple(
+      "v1" : FieldTypeDetails
+    )
+
+    alias SupportedValueList = Array(Value)
+
+    alias SupportedWriteOperationList = Array(WriteOperationType)
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ARN,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Task = NamedTuple(
+      "sourceFields" : SourceFields,
+      "connectorOperator" : (ConnectorOperator)?,
+      "destinationField" : (DestinationField)?,
+      "taskType" : TaskType,
+      "taskProperties" : (TaskPropertiesMap)?
+    )
+
+    alias TaskPropertiesMap = Hash(OperatorPropertiesKeys,Property)
+
+    alias TaskType = String
+
+    alias Tasks = Array(Task)
+
+    alias Timezone = String
+
+    alias TrendmicroConnectorOperator = String
+
+    alias TrendmicroConnectorProfileCredentials = NamedTuple(
+      "apiSecretKey" : ApiSecretKey
+    )
+
+    alias TrendmicroConnectorProfileProperties = NamedTuple(
+      
+    )
+
+    alias TrendmicroMetadata = NamedTuple(
+      
+    )
+
+    alias TrendmicroSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias TriggerConfig = NamedTuple(
+      "triggerType" : TriggerType,
+      "triggerProperties" : (TriggerProperties)?
+    )
+
+    alias TriggerProperties = NamedTuple(
+      "Scheduled" : (ScheduledTriggerProperties)?
+    )
+
+    alias TriggerType = String
+
+    alias TriggerTypeList = Array(TriggerType)
+
+    alias UnsupportedOperationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ARN,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateConnectorProfileRequest = NamedTuple(
+      "connectorProfileName" : ConnectorProfileName,
+      "connectionMode" : ConnectionMode,
+      "connectorProfileConfig" : ConnectorProfileConfig
+    )
+
+    alias UpdateConnectorProfileResponse = NamedTuple(
+      "connectorProfileArn" : (ConnectorProfileArn)?
+    )
+
+    alias UpdateFlowRequest = NamedTuple(
+      "flowName" : FlowName,
+      "description" : (FlowDescription)?,
+      "triggerConfig" : TriggerConfig,
+      "sourceFlowConfig" : (SourceFlowConfig)?,
+      "destinationFlowConfigList" : DestinationFlowConfigList,
+      "tasks" : Tasks
+    )
+
+    alias UpdateFlowResponse = NamedTuple(
+      "flowStatus" : (FlowStatus)?
+    )
+
+    alias UpdatedBy = String
+
+    alias UpsolverBucketName = String
+
+    alias UpsolverDestinationProperties = NamedTuple(
+      "bucketName" : UpsolverBucketName,
+      "bucketPrefix" : (BucketPrefix)?,
+      "s3OutputFormatConfig" : UpsolverS3OutputFormatConfig
+    )
+
+    alias UpsolverMetadata = NamedTuple(
+      
+    )
+
+    alias UpsolverS3OutputFormatConfig = NamedTuple(
+      "fileType" : (FileType)?,
+      "prefixConfig" : PrefixConfig,
+      "aggregationConfig" : (AggregationConfig)?
+    )
+
+    alias Username = String
+
+    alias ValidationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Value = String
+
+    alias VeevaConnectorOperator = String
+
+    alias VeevaConnectorProfileCredentials = NamedTuple(
+      "username" : Username,
+      "password" : Password
+    )
+
+    alias VeevaConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias VeevaMetadata = NamedTuple(
+      
+    )
+
+    alias VeevaSourceProperties = NamedTuple(
+      "object" : Object
+    )
+
+    alias Warehouse = String
+
+    alias WriteOperationType = String
+
+    alias ZendeskConnectorOperator = String
+
+    alias ZendeskConnectorProfileCredentials = NamedTuple(
+      "clientId" : ClientId,
+      "clientSecret" : ClientSecret,
+      "accessToken" : (AccessToken)?,
+      "oAuthRequest" : (ConnectorOAuthRequest)?
+    )
+
+    alias ZendeskConnectorProfileProperties = NamedTuple(
+      "instanceUrl" : InstanceUrl
+    )
+
+    alias ZendeskMetadata = NamedTuple(
+      "oAuthScopes" : (OAuthScopeList)?
+    )
+
+    alias ZendeskSourceProperties = NamedTuple(
+      "object" : Object
+    )
   end
 end

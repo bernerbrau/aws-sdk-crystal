@@ -778,8 +778,8 @@ module Aws::STS
     #
     # @overload assume_role(**params)
     # @param [Hash] params ({})
-    def assume_role(params = {}, **options)
-      req = build_request(:assume_role, params)
+    def assume_role(, **options)
+      req = build_request(:assume_role, )
       req.send_request(options)
     end
 
@@ -1112,8 +1112,8 @@ module Aws::STS
     #
     # @overload assume_role_with_saml(**params)
     # @param [Hash] params ({})
-    def assume_role_with_saml(params = {}, **options)
-      req = build_request(:assume_role_with_saml, params)
+    def assume_role_with_saml(, **options)
+      req = build_request(:assume_role_with_saml, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::STS
     #
     # @overload assume_role_with_web_identity(**params)
     # @param [Hash] params ({})
-    def assume_role_with_web_identity(params = {}, **options)
-      req = build_request(:assume_role_with_web_identity, params)
+    def assume_role_with_web_identity(, **options)
+      req = build_request(:assume_role_with_web_identity, )
       req.send_request(options)
     end
 
@@ -1564,8 +1564,8 @@ module Aws::STS
     #
     # @overload decode_authorization_message(**params)
     # @param [Hash] params ({})
-    def decode_authorization_message(params = {}, **options)
-      req = build_request(:decode_authorization_message, params)
+    def decode_authorization_message(, **options)
+      req = build_request(:decode_authorization_message, )
       req.send_request(options)
     end
 
@@ -1624,8 +1624,8 @@ module Aws::STS
     #
     # @overload get_access_key_info(**params)
     # @param [Hash] params ({})
-    def get_access_key_info(params = {}, **options)
-      req = build_request(:get_access_key_info, params)
+    def get_access_key_info(, **options)
+      req = build_request(:get_access_key_info, )
       req.send_request(options)
     end
 
@@ -1708,8 +1708,8 @@ module Aws::STS
     #
     # @overload get_caller_identity(**params)
     # @param [Hash] params ({})
-    def get_caller_identity(params = {}, **options)
-      req = build_request(:get_caller_identity, params)
+    def get_caller_identity(, **options)
+      req = build_request(:get_caller_identity, )
       req.send_request(options)
     end
 
@@ -2041,8 +2041,8 @@ module Aws::STS
     #
     # @overload get_federation_token(**params)
     # @param [Hash] params ({})
-    def get_federation_token(params = {}, **options)
-      req = build_request(:get_federation_token, params)
+    def get_federation_token(, **options)
+      req = build_request(:get_federation_token, )
       req.send_request(options)
     end
 
@@ -2186,8 +2186,8 @@ module Aws::STS
     #
     # @overload get_session_token(**params)
     # @param [Hash] params ({})
-    def get_session_token(params = {}, **options)
-      req = build_request(:get_session_token, params)
+    def get_session_token(, **options)
+      req = build_request(:get_session_token, )
       req.send_request(options)
     end
 

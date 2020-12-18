@@ -385,8 +385,8 @@ module Aws::MigrationHub
     #
     # @overload associate_created_artifact(**params)
     # @param [Hash] params ({})
-    def associate_created_artifact(params = {}, **options)
-      req = build_request(:associate_created_artifact, params)
+    def associate_created_artifact(, **options)
+      req = build_request(:associate_created_artifact, )
       req.send_request(options)
     end
 
@@ -425,8 +425,8 @@ module Aws::MigrationHub
     #
     # @overload associate_discovered_resource(**params)
     # @param [Hash] params ({})
-    def associate_discovered_resource(params = {}, **options)
-      req = build_request(:associate_discovered_resource, params)
+    def associate_discovered_resource(, **options)
+      req = build_request(:associate_discovered_resource, )
       req.send_request(options)
     end
 
@@ -458,8 +458,8 @@ module Aws::MigrationHub
     #
     # @overload create_progress_update_stream(**params)
     # @param [Hash] params ({})
-    def create_progress_update_stream(params = {}, **options)
-      req = build_request(:create_progress_update_stream, params)
+    def create_progress_update_stream(, **options)
+      req = build_request(:create_progress_update_stream, )
       req.send_request(options)
     end
 
@@ -509,8 +509,8 @@ module Aws::MigrationHub
     #
     # @overload delete_progress_update_stream(**params)
     # @param [Hash] params ({})
-    def delete_progress_update_stream(params = {}, **options)
-      req = build_request(:delete_progress_update_stream, params)
+    def delete_progress_update_stream(, **options)
+      req = build_request(:delete_progress_update_stream, )
       req.send_request(options)
     end
 
@@ -540,8 +540,8 @@ module Aws::MigrationHub
     #
     # @overload describe_application_state(**params)
     # @param [Hash] params ({})
-    def describe_application_state(params = {}, **options)
-      req = build_request(:describe_application_state, params)
+    def describe_application_state(, **options)
+      req = build_request(:describe_application_state, )
       req.send_request(options)
     end
 
@@ -582,8 +582,8 @@ module Aws::MigrationHub
     #
     # @overload describe_migration_task(**params)
     # @param [Hash] params ({})
-    def describe_migration_task(params = {}, **options)
-      req = build_request(:describe_migration_task, params)
+    def describe_migration_task(, **options)
+      req = build_request(:describe_migration_task, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::MigrationHub
     #
     # @overload disassociate_created_artifact(**params)
     # @param [Hash] params ({})
-    def disassociate_created_artifact(params = {}, **options)
-      req = build_request(:disassociate_created_artifact, params)
+    def disassociate_created_artifact(, **options)
+      req = build_request(:disassociate_created_artifact, )
       req.send_request(options)
     end
 
@@ -672,8 +672,8 @@ module Aws::MigrationHub
     #
     # @overload disassociate_discovered_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_discovered_resource(params = {}, **options)
-      req = build_request(:disassociate_discovered_resource, params)
+    def disassociate_discovered_resource(, **options)
+      req = build_request(:disassociate_discovered_resource, )
       req.send_request(options)
     end
 
@@ -709,8 +709,8 @@ module Aws::MigrationHub
     #
     # @overload import_migration_task(**params)
     # @param [Hash] params ({})
-    def import_migration_task(params = {}, **options)
-      req = build_request(:import_migration_task, params)
+    def import_migration_task(, **options)
+      req = build_request(:import_migration_task, )
       req.send_request(options)
     end
 
@@ -757,8 +757,8 @@ module Aws::MigrationHub
     #
     # @overload list_application_states(**params)
     # @param [Hash] params ({})
-    def list_application_states(params = {}, **options)
-      req = build_request(:list_application_states, params)
+    def list_application_states(, **options)
+      req = build_request(:list_application_states, )
       req.send_request(options)
     end
 
@@ -815,8 +815,8 @@ module Aws::MigrationHub
     #
     # @overload list_created_artifacts(**params)
     # @param [Hash] params ({})
-    def list_created_artifacts(params = {}, **options)
-      req = build_request(:list_created_artifacts, params)
+    def list_created_artifacts(, **options)
+      req = build_request(:list_created_artifacts, )
       req.send_request(options)
     end
 
@@ -864,8 +864,8 @@ module Aws::MigrationHub
     #
     # @overload list_discovered_resources(**params)
     # @param [Hash] params ({})
-    def list_discovered_resources(params = {}, **options)
-      req = build_request(:list_discovered_resources, params)
+    def list_discovered_resources(, **options)
+      req = build_request(:list_discovered_resources, )
       req.send_request(options)
     end
 
@@ -921,8 +921,8 @@ module Aws::MigrationHub
     #
     # @overload list_migration_tasks(**params)
     # @param [Hash] params ({})
-    def list_migration_tasks(params = {}, **options)
-      req = build_request(:list_migration_tasks, params)
+    def list_migration_tasks(, **options)
+      req = build_request(:list_migration_tasks, )
       req.send_request(options)
     end
 
@@ -961,8 +961,8 @@ module Aws::MigrationHub
     #
     # @overload list_progress_update_streams(**params)
     # @param [Hash] params ({})
-    def list_progress_update_streams(params = {}, **options)
-      req = build_request(:list_progress_update_streams, params)
+    def list_progress_update_streams(, **options)
+      req = build_request(:list_progress_update_streams, )
       req.send_request(options)
     end
 
@@ -1000,8 +1000,8 @@ module Aws::MigrationHub
     #
     # @overload notify_application_state(**params)
     # @param [Hash] params ({})
-    def notify_application_state(params = {}, **options)
-      req = build_request(:notify_application_state, params)
+    def notify_application_state(, **options)
+      req = build_request(:notify_application_state, )
       req.send_request(options)
     end
 
@@ -1061,8 +1061,8 @@ module Aws::MigrationHub
     #
     # @overload notify_migration_task_state(**params)
     # @param [Hash] params ({})
-    def notify_migration_task_state(params = {}, **options)
-      req = build_request(:notify_migration_task_state, params)
+    def notify_migration_task_state(, **options)
+      req = build_request(:notify_migration_task_state, )
       req.send_request(options)
     end
 
@@ -1152,8 +1152,8 @@ module Aws::MigrationHub
     #
     # @overload put_resource_attributes(**params)
     # @param [Hash] params ({})
-    def put_resource_attributes(params = {}, **options)
-      req = build_request(:put_resource_attributes, params)
+    def put_resource_attributes(, **options)
+      req = build_request(:put_resource_attributes, )
       req.send_request(options)
     end
 

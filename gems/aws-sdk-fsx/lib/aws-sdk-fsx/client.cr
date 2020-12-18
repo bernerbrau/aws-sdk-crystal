@@ -412,8 +412,8 @@ module Aws::FSx
     #
     # @overload associate_file_system_aliases(**params)
     # @param [Hash] params ({})
-    def associate_file_system_aliases(params = {}, **options)
-      req = build_request(:associate_file_system_aliases, params)
+    def associate_file_system_aliases(, **options)
+      req = build_request(:associate_file_system_aliases, )
       req.send_request(options)
     end
 
@@ -451,8 +451,8 @@ module Aws::FSx
     #
     # @overload cancel_data_repository_task(**params)
     # @param [Hash] params ({})
-    def cancel_data_repository_task(params = {}, **options)
-      req = build_request(:cancel_data_repository_task, params)
+    def cancel_data_repository_task(, **options)
+      req = build_request(:cancel_data_repository_task, )
       req.send_request(options)
     end
 
@@ -664,8 +664,8 @@ module Aws::FSx
     #
     # @overload create_backup(**params)
     # @param [Hash] params ({})
-    def create_backup(params = {}, **options)
-      req = build_request(:create_backup, params)
+    def create_backup(, **options)
+      req = build_request(:create_backup, )
       req.send_request(options)
     end
 
@@ -778,8 +778,8 @@ module Aws::FSx
     #
     # @overload create_data_repository_task(**params)
     # @param [Hash] params ({})
-    def create_data_repository_task(params = {}, **options)
-      req = build_request(:create_data_repository_task, params)
+    def create_data_repository_task(, **options)
+      req = build_request(:create_data_repository_task, )
       req.send_request(options)
     end
 
@@ -1108,8 +1108,8 @@ module Aws::FSx
     #
     # @overload create_file_system(**params)
     # @param [Hash] params ({})
-    def create_file_system(params = {}, **options)
-      req = build_request(:create_file_system, params)
+    def create_file_system(, **options)
+      req = build_request(:create_file_system, )
       req.send_request(options)
     end
 
@@ -1389,8 +1389,8 @@ module Aws::FSx
     #
     # @overload create_file_system_from_backup(**params)
     # @param [Hash] params ({})
-    def create_file_system_from_backup(params = {}, **options)
-      req = build_request(:create_file_system_from_backup, params)
+    def create_file_system_from_backup(, **options)
+      req = build_request(:create_file_system_from_backup, )
       req.send_request(options)
     end
 
@@ -1450,8 +1450,8 @@ module Aws::FSx
     #
     # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, **options)
-      req = build_request(:delete_backup, params)
+    def delete_backup(, **options)
+      req = build_request(:delete_backup, )
       req.send_request(options)
     end
 
@@ -1563,8 +1563,8 @@ module Aws::FSx
     #
     # @overload delete_file_system(**params)
     # @param [Hash] params ({})
-    def delete_file_system(params = {}, **options)
-      req = build_request(:delete_file_system, params)
+    def delete_file_system(, **options)
+      req = build_request(:delete_file_system, )
       req.send_request(options)
     end
 
@@ -1756,8 +1756,8 @@ module Aws::FSx
     #
     # @overload describe_backups(**params)
     # @param [Hash] params ({})
-    def describe_backups(params = {}, **options)
-      req = build_request(:describe_backups, params)
+    def describe_backups(, **options)
+      req = build_request(:describe_backups, )
       req.send_request(options)
     end
 
@@ -1847,8 +1847,8 @@ module Aws::FSx
     #
     # @overload describe_data_repository_tasks(**params)
     # @param [Hash] params ({})
-    def describe_data_repository_tasks(params = {}, **options)
-      req = build_request(:describe_data_repository_tasks, params)
+    def describe_data_repository_tasks(, **options)
+      req = build_request(:describe_data_repository_tasks, )
       req.send_request(options)
     end
 
@@ -1911,8 +1911,8 @@ module Aws::FSx
     #
     # @overload describe_file_system_aliases(**params)
     # @param [Hash] params ({})
-    def describe_file_system_aliases(params = {}, **options)
-      req = build_request(:describe_file_system_aliases, params)
+    def describe_file_system_aliases(, **options)
+      req = build_request(:describe_file_system_aliases, )
       req.send_request(options)
     end
 
@@ -2088,8 +2088,8 @@ module Aws::FSx
     #
     # @overload describe_file_systems(**params)
     # @param [Hash] params ({})
-    def describe_file_systems(params = {}, **options)
-      req = build_request(:describe_file_systems, params)
+    def describe_file_systems(, **options)
+      req = build_request(:describe_file_systems, )
       req.send_request(options)
     end
 
@@ -2146,8 +2146,8 @@ module Aws::FSx
     #
     # @overload disassociate_file_system_aliases(**params)
     # @param [Hash] params ({})
-    def disassociate_file_system_aliases(params = {}, **options)
-      req = build_request(:disassociate_file_system_aliases, params)
+    def disassociate_file_system_aliases(, **options)
+      req = build_request(:disassociate_file_system_aliases, )
       req.send_request(options)
     end
 
@@ -2233,8 +2233,8 @@ module Aws::FSx
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2281,8 +2281,8 @@ module Aws::FSx
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2320,8 +2320,8 @@ module Aws::FSx
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2553,8 +2553,8 @@ module Aws::FSx
     #
     # @overload update_file_system(**params)
     # @param [Hash] params ({})
-    def update_file_system(params = {}, **options)
-      req = build_request(:update_file_system, params)
+    def update_file_system(, **options)
+      req = build_request(:update_file_system, )
       req.send_request(options)
     end
 

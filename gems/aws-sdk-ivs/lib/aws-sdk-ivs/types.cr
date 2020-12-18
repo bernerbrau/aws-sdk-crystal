@@ -1266,5 +1266,390 @@ module Aws::IVS
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias BatchError = NamedTuple(
+      "arn" : (ResourceArn)?,
+      "code" : (errorCode)?,
+      "message" : (errorMessage)?
+    )
+
+    alias BatchErrors = Array(BatchError)
+
+    alias BatchGetChannelRequest = NamedTuple(
+      "arns" : ChannelArnList
+    )
+
+    alias BatchGetChannelResponse = NamedTuple(
+      "channels" : (Channels)?,
+      "errors" : (BatchErrors)?
+    )
+
+    alias BatchGetStreamKeyRequest = NamedTuple(
+      "arns" : StreamKeyArnList
+    )
+
+    alias BatchGetStreamKeyResponse = NamedTuple(
+      "streamKeys" : (StreamKeys)?,
+      "errors" : (BatchErrors)?
+    )
+
+    alias Boolean = Bool
+
+    alias Channel = NamedTuple(
+      "arn" : (ChannelArn)?,
+      "name" : (ChannelName)?,
+      "latencyMode" : (ChannelLatencyMode)?,
+      "type" : (ChannelType)?,
+      "ingestEndpoint" : (IngestEndpoint)?,
+      "playbackUrl" : (PlaybackURL)?,
+      "authorized" : (IsAuthorized)?,
+      "tags" : (Tags)?
+    )
+
+    alias ChannelArn = String
+
+    alias ChannelArnList = Array(ChannelArn)
+
+    alias ChannelLatencyMode = String
+
+    alias ChannelList = Array(ChannelSummary)
+
+    alias ChannelName = String
+
+    alias ChannelNotBroadcasting = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias ChannelSummary = NamedTuple(
+      "arn" : (ChannelArn)?,
+      "name" : (ChannelName)?,
+      "latencyMode" : (ChannelLatencyMode)?,
+      "authorized" : (IsAuthorized)?,
+      "tags" : (Tags)?
+    )
+
+    alias ChannelType = String
+
+    alias Channels = Array(Channel)
+
+    alias ConflictException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias CreateChannelRequest = NamedTuple(
+      "name" : (ChannelName)?,
+      "latencyMode" : (ChannelLatencyMode)?,
+      "type" : (ChannelType)?,
+      "authorized" : (Boolean)?,
+      "tags" : (Tags)?
+    )
+
+    alias CreateChannelResponse = NamedTuple(
+      "channel" : (Channel)?,
+      "streamKey" : (StreamKey)?
+    )
+
+    alias CreateStreamKeyRequest = NamedTuple(
+      "channelArn" : ChannelArn,
+      "tags" : (Tags)?
+    )
+
+    alias CreateStreamKeyResponse = NamedTuple(
+      "streamKey" : (StreamKey)?
+    )
+
+    alias DeleteChannelRequest = NamedTuple(
+      "arn" : ChannelArn
+    )
+
+    alias DeletePlaybackKeyPairRequest = NamedTuple(
+      "arn" : PlaybackKeyPairArn
+    )
+
+    alias DeletePlaybackKeyPairResponse = NamedTuple(
+      
+    )
+
+    alias DeleteStreamKeyRequest = NamedTuple(
+      "arn" : StreamKeyArn
+    )
+
+    alias GetChannelRequest = NamedTuple(
+      "arn" : ChannelArn
+    )
+
+    alias GetChannelResponse = NamedTuple(
+      "channel" : (Channel)?
+    )
+
+    alias GetPlaybackKeyPairRequest = NamedTuple(
+      "arn" : PlaybackKeyPairArn
+    )
+
+    alias GetPlaybackKeyPairResponse = NamedTuple(
+      "keyPair" : (PlaybackKeyPair)?
+    )
+
+    alias GetStreamKeyRequest = NamedTuple(
+      "arn" : StreamKeyArn
+    )
+
+    alias GetStreamKeyResponse = NamedTuple(
+      "streamKey" : (StreamKey)?
+    )
+
+    alias GetStreamRequest = NamedTuple(
+      "channelArn" : ChannelArn
+    )
+
+    alias GetStreamResponse = NamedTuple(
+      "stream" : (Stream)?
+    )
+
+    alias ImportPlaybackKeyPairRequest = NamedTuple(
+      "publicKeyMaterial" : PlaybackPublicKeyMaterial,
+      "name" : (PlaybackKeyPairName)?,
+      "tags" : (Tags)?
+    )
+
+    alias ImportPlaybackKeyPairResponse = NamedTuple(
+      "keyPair" : (PlaybackKeyPair)?
+    )
+
+    alias IngestEndpoint = String
+
+    alias InternalServerException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias IsAuthorized = Bool
+
+    alias ListChannelsRequest = NamedTuple(
+      "filterByName" : (ChannelName)?,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxChannelResults)?
+    )
+
+    alias ListChannelsResponse = NamedTuple(
+      "channels" : ChannelList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListPlaybackKeyPairsRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxPlaybackKeyPairResults)?
+    )
+
+    alias ListPlaybackKeyPairsResponse = NamedTuple(
+      "keyPairs" : PlaybackKeyPairList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListStreamKeysRequest = NamedTuple(
+      "channelArn" : ChannelArn,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxStreamKeyResults)?
+    )
+
+    alias ListStreamKeysResponse = NamedTuple(
+      "streamKeys" : StreamKeyList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListStreamsRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxStreamResults)?
+    )
+
+    alias ListStreamsResponse = NamedTuple(
+      "streams" : StreamList,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "nextToken" : (String)?,
+      "maxResults" : (MaxTagResults)?
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : Tags,
+      "nextToken" : (String)?
+    )
+
+    alias MaxChannelResults = Int32
+
+    alias MaxPlaybackKeyPairResults = Int32
+
+    alias MaxStreamKeyResults = Int32
+
+    alias MaxStreamResults = Int32
+
+    alias MaxTagResults = Int32
+
+    alias PaginationToken = String
+
+    alias PendingVerification = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias PlaybackKeyPair = NamedTuple(
+      "arn" : (PlaybackKeyPairArn)?,
+      "name" : (PlaybackKeyPairName)?,
+      "fingerprint" : (PlaybackKeyPairFingerprint)?,
+      "tags" : (Tags)?
+    )
+
+    alias PlaybackKeyPairArn = String
+
+    alias PlaybackKeyPairFingerprint = String
+
+    alias PlaybackKeyPairList = Array(PlaybackKeyPairSummary)
+
+    alias PlaybackKeyPairName = String
+
+    alias PlaybackKeyPairSummary = NamedTuple(
+      "arn" : (PlaybackKeyPairArn)?,
+      "name" : (PlaybackKeyPairName)?,
+      "tags" : (Tags)?
+    )
+
+    alias PlaybackPublicKeyMaterial = String
+
+    alias PlaybackURL = String
+
+    alias PutMetadataRequest = NamedTuple(
+      "channelArn" : ChannelArn,
+      "metadata" : StreamMetadata
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias StopStreamRequest = NamedTuple(
+      "channelArn" : ChannelArn
+    )
+
+    alias StopStreamResponse = NamedTuple(
+      
+    )
+
+    alias Stream = NamedTuple(
+      "channelArn" : (ChannelArn)?,
+      "playbackUrl" : (PlaybackURL)?,
+      "startTime" : (StreamStartTime)?,
+      "state" : (StreamState)?,
+      "health" : (StreamHealth)?,
+      "viewerCount" : (StreamViewerCount)?
+    )
+
+    alias StreamHealth = String
+
+    alias StreamKey = NamedTuple(
+      "arn" : (StreamKeyArn)?,
+      "value" : (StreamKeyValue)?,
+      "channelArn" : (ChannelArn)?,
+      "tags" : (Tags)?
+    )
+
+    alias StreamKeyArn = String
+
+    alias StreamKeyArnList = Array(StreamKeyArn)
+
+    alias StreamKeyList = Array(StreamKeySummary)
+
+    alias StreamKeySummary = NamedTuple(
+      "arn" : (StreamKeyArn)?,
+      "channelArn" : (ChannelArn)?,
+      "tags" : (Tags)?
+    )
+
+    alias StreamKeyValue = String
+
+    alias StreamKeys = Array(StreamKey)
+
+    alias StreamList = Array(StreamSummary)
+
+    alias StreamMetadata = String
+
+    alias StreamStartTime = String | UInt64 | Time
+
+    alias StreamState = String
+
+    alias StreamSummary = NamedTuple(
+      "channelArn" : (ChannelArn)?,
+      "state" : (StreamState)?,
+      "health" : (StreamHealth)?,
+      "viewerCount" : (StreamViewerCount)?,
+      "startTime" : (StreamStartTime)?
+    )
+
+    alias StreamUnavailable = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias StreamViewerCount = Int64
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias ThrottlingException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateChannelRequest = NamedTuple(
+      "arn" : ChannelArn,
+      "name" : (ChannelName)?,
+      "latencyMode" : (ChannelLatencyMode)?,
+      "type" : (ChannelType)?,
+      "authorized" : (Boolean)?
+    )
+
+    alias UpdateChannelResponse = NamedTuple(
+      "channel" : (Channel)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "exceptionMessage" : (errorMessage)?
+    )
+
+    alias errorCode = String
+
+    alias errorMessage = String
   end
 end

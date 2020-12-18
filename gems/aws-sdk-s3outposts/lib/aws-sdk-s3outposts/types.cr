@@ -241,5 +241,90 @@ module Aws::S3Outposts
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CidrBlock = String
+
+    alias ConflictException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias CreateEndpointRequest = NamedTuple(
+      "OutpostId" : OutpostId,
+      "SubnetId" : SubnetId,
+      "SecurityGroupId" : SecurityGroupId
+    )
+
+    alias CreateEndpointResult = NamedTuple(
+      "EndpointArn" : (EndpointArn)?
+    )
+
+    alias CreationTime = String | UInt64 | Time
+
+    alias DeleteEndpointRequest = NamedTuple(
+      "EndpointId" : EndpointId,
+      "OutpostId" : OutpostId
+    )
+
+    alias Endpoint = NamedTuple(
+      "EndpointArn" : (EndpointArn)?,
+      "OutpostsId" : (OutpostId)?,
+      "CidrBlock" : (CidrBlock)?,
+      "Status" : (EndpointStatus)?,
+      "CreationTime" : (CreationTime)?,
+      "NetworkInterfaces" : (NetworkInterfaces)?
+    )
+
+    alias EndpointArn = String
+
+    alias EndpointId = String
+
+    alias EndpointStatus = String
+
+    alias Endpoints = Array(Endpoint)
+
+    alias ErrorMessage = String
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListEndpointsRequest = NamedTuple(
+      "NextToken" : (NextToken)?,
+      "MaxResults" : (MaxResults)?
+    )
+
+    alias ListEndpointsResult = NamedTuple(
+      "Endpoints" : (Endpoints)?,
+      "NextToken" : (NextToken)?
+    )
+
+    alias MaxResults = Int32
+
+    alias NetworkInterface = NamedTuple(
+      "NetworkInterfaceId" : (NetworkInterfaceId)?
+    )
+
+    alias NetworkInterfaceId = String
+
+    alias NetworkInterfaces = Array(NetworkInterface)
+
+    alias NextToken = String
+
+    alias OutpostId = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias SecurityGroupId = String
+
+    alias SubnetId = String
+
+    alias ValidationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
   end
 end

@@ -4616,5 +4616,768 @@ module Aws::NetworkFirewall
       include Aws::Structure
     end
 
+    alias ActionDefinition = NamedTuple(
+      "PublishMetricAction" : (PublishMetricAction)?
+    )
+
+    alias ActionName = String
+
+    alias Address = NamedTuple(
+      "AddressDefinition" : AddressDefinition
+    )
+
+    alias AddressDefinition = String
+
+    alias Addresses = Array(Address)
+
+    alias AssociateFirewallPolicyRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "FirewallPolicyArn" : ResourceArn
+    )
+
+    alias AssociateFirewallPolicyResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "FirewallPolicyArn" : (ResourceArn)?,
+      "UpdateToken" : (UpdateToken)?
+    )
+
+    alias AssociateSubnetsRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "SubnetMappings" : SubnetMappings
+    )
+
+    alias AssociateSubnetsResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "SubnetMappings" : (SubnetMappings)?,
+      "UpdateToken" : (UpdateToken)?
+    )
+
+    alias Attachment = NamedTuple(
+      "SubnetId" : (AzSubnet)?,
+      "EndpointId" : (EndpointId)?,
+      "Status" : (AttachmentStatus)?
+    )
+
+    alias AttachmentStatus = String
+
+    alias AvailabilityZone = String
+
+    alias AzSubnet = String
+
+    alias AzSubnets = Array(AzSubnet)
+
+    alias Boolean = Bool
+
+    alias CollectionMember_String = String
+
+    alias ConfigurationSyncState = String
+
+    alias CreateFirewallPolicyRequest = NamedTuple(
+      "FirewallPolicyName" : ResourceName,
+      "FirewallPolicy" : FirewallPolicy,
+      "Description" : (Description)?,
+      "Tags" : (TagList)?,
+      "DryRun" : (Boolean)?
+    )
+
+    alias CreateFirewallPolicyResponse = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "FirewallPolicyResponse" : FirewallPolicyResponse
+    )
+
+    alias CreateFirewallRequest = NamedTuple(
+      "FirewallName" : ResourceName,
+      "FirewallPolicyArn" : ResourceArn,
+      "VpcId" : VpcId,
+      "SubnetMappings" : SubnetMappings,
+      "DeleteProtection" : (Boolean)?,
+      "SubnetChangeProtection" : (Boolean)?,
+      "FirewallPolicyChangeProtection" : (Boolean)?,
+      "Description" : (Description)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateFirewallResponse = NamedTuple(
+      "Firewall" : (Firewall)?,
+      "FirewallStatus" : (FirewallStatus)?
+    )
+
+    alias CreateRuleGroupRequest = NamedTuple(
+      "RuleGroupName" : ResourceName,
+      "RuleGroup" : (RuleGroup)?,
+      "Rules" : (RulesString)?,
+      "Type" : RuleGroupType,
+      "Description" : (Description)?,
+      "Capacity" : RuleCapacity,
+      "Tags" : (TagList)?,
+      "DryRun" : (Boolean)?
+    )
+
+    alias CreateRuleGroupResponse = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "RuleGroupResponse" : RuleGroupResponse
+    )
+
+    alias CustomAction = NamedTuple(
+      "ActionName" : ActionName,
+      "ActionDefinition" : ActionDefinition
+    )
+
+    alias CustomActions = Array(CustomAction)
+
+    alias DeleteFirewallPolicyRequest = NamedTuple(
+      "FirewallPolicyName" : (ResourceName)?,
+      "FirewallPolicyArn" : (ResourceArn)?
+    )
+
+    alias DeleteFirewallPolicyResponse = NamedTuple(
+      "FirewallPolicyResponse" : FirewallPolicyResponse
+    )
+
+    alias DeleteFirewallRequest = NamedTuple(
+      "FirewallName" : (ResourceName)?,
+      "FirewallArn" : (ResourceArn)?
+    )
+
+    alias DeleteFirewallResponse = NamedTuple(
+      "Firewall" : (Firewall)?,
+      "FirewallStatus" : (FirewallStatus)?
+    )
+
+    alias DeleteResourcePolicyRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias DeleteResourcePolicyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteRuleGroupRequest = NamedTuple(
+      "RuleGroupName" : (ResourceName)?,
+      "RuleGroupArn" : (ResourceArn)?,
+      "Type" : (RuleGroupType)?
+    )
+
+    alias DeleteRuleGroupResponse = NamedTuple(
+      "RuleGroupResponse" : RuleGroupResponse
+    )
+
+    alias DescribeFirewallPolicyRequest = NamedTuple(
+      "FirewallPolicyName" : (ResourceName)?,
+      "FirewallPolicyArn" : (ResourceArn)?
+    )
+
+    alias DescribeFirewallPolicyResponse = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "FirewallPolicyResponse" : FirewallPolicyResponse,
+      "FirewallPolicy" : (FirewallPolicy)?
+    )
+
+    alias DescribeFirewallRequest = NamedTuple(
+      "FirewallName" : (ResourceName)?,
+      "FirewallArn" : (ResourceArn)?
+    )
+
+    alias DescribeFirewallResponse = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "Firewall" : (Firewall)?,
+      "FirewallStatus" : (FirewallStatus)?
+    )
+
+    alias DescribeLoggingConfigurationRequest = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?
+    )
+
+    alias DescribeLoggingConfigurationResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias DescribeResourcePolicyRequest = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias DescribeResourcePolicyResponse = NamedTuple(
+      "Policy" : (PolicyString)?
+    )
+
+    alias DescribeRuleGroupRequest = NamedTuple(
+      "RuleGroupName" : (ResourceName)?,
+      "RuleGroupArn" : (ResourceArn)?,
+      "Type" : (RuleGroupType)?
+    )
+
+    alias DescribeRuleGroupResponse = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "RuleGroup" : (RuleGroup)?,
+      "RuleGroupResponse" : RuleGroupResponse
+    )
+
+    alias Description = String
+
+    alias Destination = String
+
+    alias Dimension = NamedTuple(
+      "Value" : DimensionValue
+    )
+
+    alias DimensionValue = String
+
+    alias Dimensions = Array(Dimension)
+
+    alias DisassociateSubnetsRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "SubnetIds" : AzSubnets
+    )
+
+    alias DisassociateSubnetsResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "SubnetMappings" : (SubnetMappings)?,
+      "UpdateToken" : (UpdateToken)?
+    )
+
+    alias EndpointId = String
+
+    alias ErrorMessage = String
+
+    alias Firewall = NamedTuple(
+      "FirewallName" : (ResourceName)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallPolicyArn" : ResourceArn,
+      "VpcId" : VpcId,
+      "SubnetMappings" : SubnetMappings,
+      "DeleteProtection" : (Boolean)?,
+      "SubnetChangeProtection" : (Boolean)?,
+      "FirewallPolicyChangeProtection" : (Boolean)?,
+      "Description" : (Description)?,
+      "FirewallId" : ResourceId,
+      "Tags" : (TagList)?
+    )
+
+    alias FirewallMetadata = NamedTuple(
+      "FirewallName" : (ResourceName)?,
+      "FirewallArn" : (ResourceArn)?
+    )
+
+    alias FirewallPolicies = Array(FirewallPolicyMetadata)
+
+    alias FirewallPolicy = NamedTuple(
+      "StatelessRuleGroupReferences" : (StatelessRuleGroupReferences)?,
+      "StatelessDefaultActions" : StatelessActions,
+      "StatelessFragmentDefaultActions" : StatelessActions,
+      "StatelessCustomActions" : (CustomActions)?,
+      "StatefulRuleGroupReferences" : (StatefulRuleGroupReferences)?
+    )
+
+    alias FirewallPolicyMetadata = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Arn" : (ResourceArn)?
+    )
+
+    alias FirewallPolicyResponse = NamedTuple(
+      "FirewallPolicyName" : ResourceName,
+      "FirewallPolicyArn" : ResourceArn,
+      "FirewallPolicyId" : ResourceId,
+      "Description" : (Description)?,
+      "FirewallPolicyStatus" : (ResourceStatus)?,
+      "Tags" : (TagList)?
+    )
+
+    alias FirewallStatus = NamedTuple(
+      "Status" : FirewallStatusValue,
+      "ConfigurationSyncStateSummary" : ConfigurationSyncState,
+      "SyncStates" : (SyncStates)?
+    )
+
+    alias FirewallStatusValue = String
+
+    alias Firewalls = Array(FirewallMetadata)
+
+    alias Flags = Array(TCPFlag)
+
+    alias GeneratedRulesType = String
+
+    alias HashMapKey = String
+
+    alias HashMapValue = String
+
+    alias Header = NamedTuple(
+      "Protocol" : StatefulRuleProtocol,
+      "Source" : Source,
+      "SourcePort" : Port,
+      "Direction" : StatefulRuleDirection,
+      "Destination" : Destination,
+      "DestinationPort" : Port
+    )
+
+    alias IPSet = NamedTuple(
+      "Definition" : VariableDefinitionList
+    )
+
+    alias IPSets = Hash(RuleVariableName,IPSet)
+
+    alias InsufficientCapacityException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InternalServerError = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidResourcePolicyException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias InvalidTokenException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias Keyword = String
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ListFirewallPoliciesRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias ListFirewallPoliciesResponse = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "FirewallPolicies" : (FirewallPolicies)?
+    )
+
+    alias ListFirewallsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "VpcIds" : (VpcIds)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias ListFirewallsResponse = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "Firewalls" : (Firewalls)?
+    )
+
+    alias ListRuleGroupsRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (PaginationMaxResults)?
+    )
+
+    alias ListRuleGroupsResponse = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "RuleGroups" : (RuleGroups)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "MaxResults" : (TagsPaginationMaxResults)?,
+      "ResourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "NextToken" : (PaginationToken)?,
+      "Tags" : (TagList)?
+    )
+
+    alias LogDestinationConfig = NamedTuple(
+      "LogType" : LogType,
+      "LogDestinationType" : LogDestinationType,
+      "LogDestination" : LogDestinationMap
+    )
+
+    alias LogDestinationConfigs = Array(LogDestinationConfig)
+
+    alias LogDestinationMap = Hash(HashMapKey,HashMapValue)
+
+    alias LogDestinationPermissionException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias LogDestinationType = String
+
+    alias LogType = String
+
+    alias LoggingConfiguration = NamedTuple(
+      "LogDestinationConfigs" : LogDestinationConfigs
+    )
+
+    alias MatchAttributes = NamedTuple(
+      "Sources" : (Addresses)?,
+      "Destinations" : (Addresses)?,
+      "SourcePorts" : (PortRanges)?,
+      "DestinationPorts" : (PortRanges)?,
+      "Protocols" : (ProtocolNumbers)?,
+      "TCPFlags" : (TCPFlags)?
+    )
+
+    alias PaginationMaxResults = Int32
+
+    alias PaginationToken = String
+
+    alias PerObjectStatus = NamedTuple(
+      "SyncStatus" : (PerObjectSyncStatus)?
+    )
+
+    alias PerObjectSyncStatus = String
+
+    alias PolicyString = String
+
+    alias Port = String
+
+    alias PortRange = NamedTuple(
+      "FromPort" : PortRangeBound,
+      "ToPort" : PortRangeBound
+    )
+
+    alias PortRangeBound = Int32
+
+    alias PortRanges = Array(PortRange)
+
+    alias PortSet = NamedTuple(
+      "Definition" : (VariableDefinitionList)?
+    )
+
+    alias PortSets = Hash(RuleVariableName,PortSet)
+
+    alias Priority = Int32
+
+    alias ProtocolNumber = Int32
+
+    alias ProtocolNumbers = Array(ProtocolNumber)
+
+    alias PublishMetricAction = NamedTuple(
+      "Dimensions" : Dimensions
+    )
+
+    alias PutResourcePolicyRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Policy" : PolicyString
+    )
+
+    alias PutResourcePolicyResponse = NamedTuple(
+      
+    )
+
+    alias ResourceArn = String
+
+    alias ResourceId = String
+
+    alias ResourceName = String
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceOwnerCheckException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias ResourceStatus = String
+
+    alias RuleCapacity = Int32
+
+    alias RuleDefinition = NamedTuple(
+      "MatchAttributes" : MatchAttributes,
+      "Actions" : StatelessActions
+    )
+
+    alias RuleGroup = NamedTuple(
+      "RuleVariables" : (RuleVariables)?,
+      "RulesSource" : RulesSource
+    )
+
+    alias RuleGroupMetadata = NamedTuple(
+      "Name" : (ResourceName)?,
+      "Arn" : (ResourceArn)?
+    )
+
+    alias RuleGroupResponse = NamedTuple(
+      "RuleGroupArn" : ResourceArn,
+      "RuleGroupName" : ResourceName,
+      "RuleGroupId" : ResourceId,
+      "Description" : (Description)?,
+      "Type" : (RuleGroupType)?,
+      "Capacity" : (RuleCapacity)?,
+      "RuleGroupStatus" : (ResourceStatus)?,
+      "Tags" : (TagList)?
+    )
+
+    alias RuleGroupType = String
+
+    alias RuleGroups = Array(RuleGroupMetadata)
+
+    alias RuleOption = NamedTuple(
+      "Keyword" : Keyword,
+      "Settings" : (Settings)?
+    )
+
+    alias RuleOptions = Array(RuleOption)
+
+    alias RuleTargets = Array(CollectionMember_String)
+
+    alias RuleVariableName = String
+
+    alias RuleVariables = NamedTuple(
+      "IPSets" : (IPSets)?,
+      "PortSets" : (PortSets)?
+    )
+
+    alias RulesSource = NamedTuple(
+      "RulesString" : (RulesString)?,
+      "RulesSourceList" : (RulesSourceList)?,
+      "StatefulRules" : (StatefulRules)?,
+      "StatelessRulesAndCustomActions" : (StatelessRulesAndCustomActions)?
+    )
+
+    alias RulesSourceList = NamedTuple(
+      "Targets" : RuleTargets,
+      "TargetTypes" : TargetTypes,
+      "GeneratedRulesType" : GeneratedRulesType
+    )
+
+    alias RulesString = String
+
+    alias Setting = String
+
+    alias Settings = Array(Setting)
+
+    alias Source = String
+
+    alias StatefulAction = String
+
+    alias StatefulRule = NamedTuple(
+      "Action" : StatefulAction,
+      "Header" : Header,
+      "RuleOptions" : RuleOptions
+    )
+
+    alias StatefulRuleDirection = String
+
+    alias StatefulRuleGroupReference = NamedTuple(
+      "ResourceArn" : ResourceArn
+    )
+
+    alias StatefulRuleGroupReferences = Array(StatefulRuleGroupReference)
+
+    alias StatefulRuleProtocol = String
+
+    alias StatefulRules = Array(StatefulRule)
+
+    alias StatelessActions = Array(CollectionMember_String)
+
+    alias StatelessRule = NamedTuple(
+      "RuleDefinition" : RuleDefinition,
+      "Priority" : Priority
+    )
+
+    alias StatelessRuleGroupReference = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Priority" : Priority
+    )
+
+    alias StatelessRuleGroupReferences = Array(StatelessRuleGroupReference)
+
+    alias StatelessRules = Array(StatelessRule)
+
+    alias StatelessRulesAndCustomActions = NamedTuple(
+      "StatelessRules" : StatelessRules,
+      "CustomActions" : (CustomActions)?
+    )
+
+    alias SubnetMapping = NamedTuple(
+      "SubnetId" : CollectionMember_String
+    )
+
+    alias SubnetMappings = Array(SubnetMapping)
+
+    alias SyncState = NamedTuple(
+      "Attachment" : (Attachment)?,
+      "Config" : (SyncStateConfig)?
+    )
+
+    alias SyncStateConfig = Hash(ResourceName,PerObjectStatus)
+
+    alias SyncStates = Hash(AvailabilityZone,SyncState)
+
+    alias TCPFlag = String
+
+    alias TCPFlagField = NamedTuple(
+      "Flags" : Flags,
+      "Masks" : (Flags)?
+    )
+
+    alias TCPFlags = Array(TCPFlagField)
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : TagValue
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TagsPaginationMaxResults = Int32
+
+    alias TargetType = String
+
+    alias TargetTypes = Array(TargetType)
+
+    alias ThrottlingException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UnsupportedOperationException = NamedTuple(
+      "Message" : (ErrorMessage)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ResourceArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateFirewallDeleteProtectionRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "DeleteProtection" : Boolean
+    )
+
+    alias UpdateFirewallDeleteProtectionResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "DeleteProtection" : (Boolean)?,
+      "UpdateToken" : (UpdateToken)?
+    )
+
+    alias UpdateFirewallDescriptionRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "Description" : (Description)?
+    )
+
+    alias UpdateFirewallDescriptionResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "Description" : (Description)?,
+      "UpdateToken" : (UpdateToken)?
+    )
+
+    alias UpdateFirewallPolicyChangeProtectionRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "FirewallPolicyChangeProtection" : Boolean
+    )
+
+    alias UpdateFirewallPolicyChangeProtectionResponse = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "FirewallPolicyChangeProtection" : (Boolean)?
+    )
+
+    alias UpdateFirewallPolicyRequest = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "FirewallPolicyArn" : (ResourceArn)?,
+      "FirewallPolicyName" : (ResourceName)?,
+      "FirewallPolicy" : FirewallPolicy,
+      "Description" : (Description)?,
+      "DryRun" : (Boolean)?
+    )
+
+    alias UpdateFirewallPolicyResponse = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "FirewallPolicyResponse" : FirewallPolicyResponse
+    )
+
+    alias UpdateLoggingConfigurationRequest = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias UpdateLoggingConfigurationResponse = NamedTuple(
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "LoggingConfiguration" : (LoggingConfiguration)?
+    )
+
+    alias UpdateRuleGroupRequest = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "RuleGroupArn" : (ResourceArn)?,
+      "RuleGroupName" : (ResourceName)?,
+      "RuleGroup" : (RuleGroup)?,
+      "Rules" : (RulesString)?,
+      "Type" : (RuleGroupType)?,
+      "Description" : (Description)?,
+      "DryRun" : (Boolean)?
+    )
+
+    alias UpdateRuleGroupResponse = NamedTuple(
+      "UpdateToken" : UpdateToken,
+      "RuleGroupResponse" : RuleGroupResponse
+    )
+
+    alias UpdateSubnetChangeProtectionRequest = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "SubnetChangeProtection" : Boolean
+    )
+
+    alias UpdateSubnetChangeProtectionResponse = NamedTuple(
+      "UpdateToken" : (UpdateToken)?,
+      "FirewallArn" : (ResourceArn)?,
+      "FirewallName" : (ResourceName)?,
+      "SubnetChangeProtection" : (Boolean)?
+    )
+
+    alias UpdateToken = String
+
+    alias VariableDefinition = String
+
+    alias VariableDefinitionList = Array(VariableDefinition)
+
+    alias VpcId = String
+
+    alias VpcIds = Array(VpcId)
   end
 end

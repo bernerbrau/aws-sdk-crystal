@@ -1186,5 +1186,321 @@ module Aws::AppRegistry
       include Aws::Structure
     end
 
+    alias Application = NamedTuple(
+      "id" : (ApplicationId)?,
+      "arn" : (ApplicationArn)?,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "tags" : (Tags)?
+    )
+
+    alias ApplicationArn = String
+
+    alias ApplicationId = String
+
+    alias ApplicationSpecifier = String
+
+    alias ApplicationSummaries = Array(ApplicationSummary)
+
+    alias ApplicationSummary = NamedTuple(
+      "id" : (ApplicationId)?,
+      "arn" : (ApplicationArn)?,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?
+    )
+
+    alias Arn = String
+
+    alias AssociateAttributeGroupRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "attributeGroup" : AttributeGroupSpecifier
+    )
+
+    alias AssociateAttributeGroupResponse = NamedTuple(
+      "applicationArn" : (ApplicationArn)?,
+      "attributeGroupArn" : (AttributeGroupArn)?
+    )
+
+    alias AssociateResourceRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "resourceType" : ResourceType,
+      "resource" : ResourceSpecifier
+    )
+
+    alias AssociateResourceResponse = NamedTuple(
+      "applicationArn" : (ApplicationArn)?,
+      "resourceArn" : (Arn)?
+    )
+
+    alias AssociationCount = Int32
+
+    alias AttributeGroup = NamedTuple(
+      "id" : (AttributeGroupId)?,
+      "arn" : (AttributeGroupArn)?,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "tags" : (Tags)?
+    )
+
+    alias AttributeGroupArn = String
+
+    alias AttributeGroupId = String
+
+    alias AttributeGroupIds = Array(AttributeGroupId)
+
+    alias AttributeGroupSpecifier = String
+
+    alias AttributeGroupSummaries = Array(AttributeGroupSummary)
+
+    alias AttributeGroupSummary = NamedTuple(
+      "id" : (AttributeGroupId)?,
+      "arn" : (AttributeGroupArn)?,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?
+    )
+
+    alias Attributes = String
+
+    alias ClientToken = String
+
+    alias ConflictException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias CreateApplicationRequest = NamedTuple(
+      "name" : Name,
+      "description" : (Description)?,
+      "tags" : (Tags)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateApplicationResponse = NamedTuple(
+      "application" : (Application)?
+    )
+
+    alias CreateAttributeGroupRequest = NamedTuple(
+      "name" : Name,
+      "description" : (Description)?,
+      "attributes" : Attributes,
+      "tags" : (Tags)?,
+      "clientToken" : ClientToken
+    )
+
+    alias CreateAttributeGroupResponse = NamedTuple(
+      "attributeGroup" : (AttributeGroup)?
+    )
+
+    alias DeleteApplicationRequest = NamedTuple(
+      "application" : ApplicationSpecifier
+    )
+
+    alias DeleteApplicationResponse = NamedTuple(
+      "application" : (ApplicationSummary)?
+    )
+
+    alias DeleteAttributeGroupRequest = NamedTuple(
+      "attributeGroup" : AttributeGroupSpecifier
+    )
+
+    alias DeleteAttributeGroupResponse = NamedTuple(
+      "attributeGroup" : (AttributeGroupSummary)?
+    )
+
+    alias Description = String
+
+    alias DisassociateAttributeGroupRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "attributeGroup" : AttributeGroupSpecifier
+    )
+
+    alias DisassociateAttributeGroupResponse = NamedTuple(
+      "applicationArn" : (ApplicationArn)?,
+      "attributeGroupArn" : (AttributeGroupArn)?
+    )
+
+    alias DisassociateResourceRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "resourceType" : ResourceType,
+      "resource" : ResourceSpecifier
+    )
+
+    alias DisassociateResourceResponse = NamedTuple(
+      "applicationArn" : (ApplicationArn)?,
+      "resourceArn" : (Arn)?
+    )
+
+    alias GetApplicationRequest = NamedTuple(
+      "application" : ApplicationSpecifier
+    )
+
+    alias GetApplicationResponse = NamedTuple(
+      "id" : (ApplicationId)?,
+      "arn" : (ApplicationArn)?,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "associatedResourceCount" : (AssociationCount)?,
+      "tags" : (Tags)?
+    )
+
+    alias GetAttributeGroupRequest = NamedTuple(
+      "attributeGroup" : AttributeGroupSpecifier
+    )
+
+    alias GetAttributeGroupResponse = NamedTuple(
+      "id" : (AttributeGroupId)?,
+      "arn" : (AttributeGroupArn)?,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "attributes" : (Attributes)?,
+      "creationTime" : (Timestamp)?,
+      "lastUpdateTime" : (Timestamp)?,
+      "tags" : (Tags)?
+    )
+
+    alias InternalServerException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ListApplicationsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListApplicationsResponse = NamedTuple(
+      "applications" : (ApplicationSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssociatedAttributeGroupsRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssociatedAttributeGroupsResponse = NamedTuple(
+      "attributeGroups" : (AttributeGroupIds)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAssociatedResourcesRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAssociatedResourcesResponse = NamedTuple(
+      "resources" : (Resources)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListAttributeGroupsRequest = NamedTuple(
+      "nextToken" : (NextToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListAttributeGroupsResponse = NamedTuple(
+      "attributeGroups" : (AttributeGroupSummaries)?,
+      "nextToken" : (NextToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : Arn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (Tags)?
+    )
+
+    alias MaxResults = Int32
+
+    alias Name = String
+
+    alias NextToken = String
+
+    alias ResourceInfo = NamedTuple(
+      "name" : (ResourceSpecifier)?,
+      "arn" : (StackArn)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ResourceSpecifier = String
+
+    alias ResourceType = String
+
+    alias Resources = Array(ResourceInfo)
+
+    alias ServiceQuotaExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias StackArn = String
+
+    alias String = String
+
+    alias TagKey = String
+
+    alias TagKeys = Array(TagKey)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tags" : Tags
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Tags = Hash(TagKey,TagValue)
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : Arn,
+      "tagKeys" : TagKeys
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateApplicationRequest = NamedTuple(
+      "application" : ApplicationSpecifier,
+      "name" : (Name)?,
+      "description" : (Description)?
+    )
+
+    alias UpdateApplicationResponse = NamedTuple(
+      "application" : (Application)?
+    )
+
+    alias UpdateAttributeGroupRequest = NamedTuple(
+      "attributeGroup" : AttributeGroupSpecifier,
+      "name" : (Name)?,
+      "description" : (Description)?,
+      "attributes" : (Attributes)?
+    )
+
+    alias UpdateAttributeGroupResponse = NamedTuple(
+      "attributeGroup" : (AttributeGroup)?
+    )
+
+    alias ValidationException = NamedTuple(
+      "message" : (String)?
+    )
   end
 end

@@ -5326,5 +5326,698 @@ module Aws::ElasticTranscoder
       include Aws::Structure
     end
 
+    alias AccessControl = String
+
+    alias AccessControls = Array(AccessControl)
+
+    alias AccessDeniedException = NamedTuple(
+      
+    )
+
+    alias Artwork = NamedTuple(
+      "InputKey" : (WatermarkKey)?,
+      "MaxWidth" : (DigitsOrAuto)?,
+      "MaxHeight" : (DigitsOrAuto)?,
+      "SizingPolicy" : (SizingPolicy)?,
+      "PaddingPolicy" : (PaddingPolicy)?,
+      "AlbumArtFormat" : (JpgOrPng)?,
+      "Encryption" : (Encryption)?
+    )
+
+    alias Artworks = Array(Artwork)
+
+    alias Ascending = String
+
+    alias AspectRatio = String
+
+    alias AudioBitDepth = String
+
+    alias AudioBitOrder = String
+
+    alias AudioBitRate = String
+
+    alias AudioChannels = String
+
+    alias AudioCodec = String
+
+    alias AudioCodecOptions = NamedTuple(
+      "Profile" : (AudioCodecProfile)?,
+      "BitDepth" : (AudioBitDepth)?,
+      "BitOrder" : (AudioBitOrder)?,
+      "Signed" : (AudioSigned)?
+    )
+
+    alias AudioCodecProfile = String
+
+    alias AudioPackingMode = String
+
+    alias AudioParameters = NamedTuple(
+      "Codec" : (AudioCodec)?,
+      "SampleRate" : (AudioSampleRate)?,
+      "BitRate" : (AudioBitRate)?,
+      "Channels" : (AudioChannels)?,
+      "AudioPackingMode" : (AudioPackingMode)?,
+      "CodecOptions" : (AudioCodecOptions)?
+    )
+
+    alias AudioSampleRate = String
+
+    alias AudioSigned = String
+
+    alias Base64EncodedString = String
+
+    alias BucketName = String
+
+    alias CancelJobRequest = NamedTuple(
+      "Id" : Id
+    )
+
+    alias CancelJobResponse = NamedTuple(
+      
+    )
+
+    alias CaptionFormat = NamedTuple(
+      "Format" : (CaptionFormatFormat)?,
+      "Pattern" : (CaptionFormatPattern)?,
+      "Encryption" : (Encryption)?
+    )
+
+    alias CaptionFormatFormat = String
+
+    alias CaptionFormatPattern = String
+
+    alias CaptionFormats = Array(CaptionFormat)
+
+    alias CaptionMergePolicy = String
+
+    alias CaptionSource = NamedTuple(
+      "Key" : (LongKey)?,
+      "Language" : (Key)?,
+      "TimeOffset" : (TimeOffset)?,
+      "Label" : (Name)?,
+      "Encryption" : (Encryption)?
+    )
+
+    alias CaptionSources = Array(CaptionSource)
+
+    alias Captions = NamedTuple(
+      "MergePolicy" : (CaptionMergePolicy)?,
+      "CaptionSources" : (CaptionSources)?,
+      "CaptionFormats" : (CaptionFormats)?
+    )
+
+    alias Clip = NamedTuple(
+      "TimeSpan" : (TimeSpan)?
+    )
+
+    alias CodecOption = String
+
+    alias CodecOptions = Hash(CodecOption,CodecOption)
+
+    alias Composition = Array(Clip)
+
+    alias CreateJobOutput = NamedTuple(
+      "Key" : (Key)?,
+      "ThumbnailPattern" : (ThumbnailPattern)?,
+      "ThumbnailEncryption" : (Encryption)?,
+      "Rotate" : (Rotate)?,
+      "PresetId" : (Id)?,
+      "SegmentDuration" : (FloatString)?,
+      "Watermarks" : (JobWatermarks)?,
+      "AlbumArt" : (JobAlbumArt)?,
+      "Composition" : (Composition)?,
+      "Captions" : (Captions)?,
+      "Encryption" : (Encryption)?
+    )
+
+    alias CreateJobOutputs = Array(CreateJobOutput)
+
+    alias CreateJobPlaylist = NamedTuple(
+      "Name" : (Filename)?,
+      "Format" : (PlaylistFormat)?,
+      "OutputKeys" : (OutputKeys)?,
+      "HlsContentProtection" : (HlsContentProtection)?,
+      "PlayReadyDrm" : (PlayReadyDrm)?
+    )
+
+    alias CreateJobPlaylists = Array(CreateJobPlaylist)
+
+    alias CreateJobRequest = NamedTuple(
+      "PipelineId" : Id,
+      "Input" : (JobInput)?,
+      "Inputs" : (JobInputs)?,
+      "Output" : (CreateJobOutput)?,
+      "Outputs" : (CreateJobOutputs)?,
+      "OutputKeyPrefix" : (Key)?,
+      "Playlists" : (CreateJobPlaylists)?,
+      "UserMetadata" : (UserMetadata)?
+    )
+
+    alias CreateJobResponse = NamedTuple(
+      "Job" : (Job)?
+    )
+
+    alias CreatePipelineRequest = NamedTuple(
+      "Name" : Name,
+      "InputBucket" : BucketName,
+      "OutputBucket" : (BucketName)?,
+      "Role" : Role,
+      "AwsKmsKeyArn" : (KeyArn)?,
+      "Notifications" : (Notifications)?,
+      "ContentConfig" : (PipelineOutputConfig)?,
+      "ThumbnailConfig" : (PipelineOutputConfig)?
+    )
+
+    alias CreatePipelineResponse = NamedTuple(
+      "Pipeline" : (Pipeline)?,
+      "Warnings" : (Warnings)?
+    )
+
+    alias CreatePresetRequest = NamedTuple(
+      "Name" : Name,
+      "Description" : (Description)?,
+      "Container" : PresetContainer,
+      "Video" : (VideoParameters)?,
+      "Audio" : (AudioParameters)?,
+      "Thumbnails" : (Thumbnails)?
+    )
+
+    alias CreatePresetResponse = NamedTuple(
+      "Preset" : (Preset)?,
+      "Warning" : (String)?
+    )
+
+    alias DeletePipelineRequest = NamedTuple(
+      "Id" : Id
+    )
+
+    alias DeletePipelineResponse = NamedTuple(
+      
+    )
+
+    alias DeletePresetRequest = NamedTuple(
+      "Id" : Id
+    )
+
+    alias DeletePresetResponse = NamedTuple(
+      
+    )
+
+    alias Description = String
+
+    alias DetectedProperties = NamedTuple(
+      "Width" : (NullableInteger)?,
+      "Height" : (NullableInteger)?,
+      "FrameRate" : (FloatString)?,
+      "FileSize" : (NullableLong)?,
+      "DurationMillis" : (NullableLong)?
+    )
+
+    alias Digits = String
+
+    alias DigitsOrAuto = String
+
+    alias Encryption = NamedTuple(
+      "Mode" : (EncryptionMode)?,
+      "Key" : (Base64EncodedString)?,
+      "KeyMd5" : (Base64EncodedString)?,
+      "InitializationVector" : (ZeroTo255String)?
+    )
+
+    alias EncryptionMode = String
+
+    alias ExceptionMessages = Array(String)
+
+    alias Filename = String
+
+    alias FixedGOP = String
+
+    alias FloatString = String
+
+    alias FrameRate = String
+
+    alias Grantee = String
+
+    alias GranteeType = String
+
+    alias HlsContentProtection = NamedTuple(
+      "Method" : (HlsContentProtectionMethod)?,
+      "Key" : (Base64EncodedString)?,
+      "KeyMd5" : (Base64EncodedString)?,
+      "InitializationVector" : (ZeroTo255String)?,
+      "LicenseAcquisitionUrl" : (ZeroTo512String)?,
+      "KeyStoragePolicy" : (KeyStoragePolicy)?
+    )
+
+    alias HlsContentProtectionMethod = String
+
+    alias HorizontalAlign = String
+
+    alias Id = String
+
+    alias IncompatibleVersionException = NamedTuple(
+      
+    )
+
+    alias InputCaptions = NamedTuple(
+      "MergePolicy" : (CaptionMergePolicy)?,
+      "CaptionSources" : (CaptionSources)?
+    )
+
+    alias Interlaced = String
+
+    alias InternalServiceException = NamedTuple(
+      
+    )
+
+    alias Job = NamedTuple(
+      "Id" : (Id)?,
+      "Arn" : (String)?,
+      "PipelineId" : (Id)?,
+      "Input" : (JobInput)?,
+      "Inputs" : (JobInputs)?,
+      "Output" : (JobOutput)?,
+      "Outputs" : (JobOutputs)?,
+      "OutputKeyPrefix" : (Key)?,
+      "Playlists" : (Playlists)?,
+      "Status" : (JobStatus)?,
+      "UserMetadata" : (UserMetadata)?,
+      "Timing" : (Timing)?
+    )
+
+    alias JobAlbumArt = NamedTuple(
+      "MergePolicy" : (MergePolicy)?,
+      "Artwork" : (Artworks)?
+    )
+
+    alias JobContainer = String
+
+    alias JobInput = NamedTuple(
+      "Key" : (LongKey)?,
+      "FrameRate" : (FrameRate)?,
+      "Resolution" : (Resolution)?,
+      "AspectRatio" : (AspectRatio)?,
+      "Interlaced" : (Interlaced)?,
+      "Container" : (JobContainer)?,
+      "Encryption" : (Encryption)?,
+      "TimeSpan" : (TimeSpan)?,
+      "InputCaptions" : (InputCaptions)?,
+      "DetectedProperties" : (DetectedProperties)?
+    )
+
+    alias JobInputs = Array(JobInput)
+
+    alias JobOutput = NamedTuple(
+      "Id" : (String)?,
+      "Key" : (Key)?,
+      "ThumbnailPattern" : (ThumbnailPattern)?,
+      "ThumbnailEncryption" : (Encryption)?,
+      "Rotate" : (Rotate)?,
+      "PresetId" : (Id)?,
+      "SegmentDuration" : (FloatString)?,
+      "Status" : (JobStatus)?,
+      "StatusDetail" : (Description)?,
+      "Duration" : (NullableLong)?,
+      "Width" : (NullableInteger)?,
+      "Height" : (NullableInteger)?,
+      "FrameRate" : (FloatString)?,
+      "FileSize" : (NullableLong)?,
+      "DurationMillis" : (NullableLong)?,
+      "Watermarks" : (JobWatermarks)?,
+      "AlbumArt" : (JobAlbumArt)?,
+      "Composition" : (Composition)?,
+      "Captions" : (Captions)?,
+      "Encryption" : (Encryption)?,
+      "AppliedColorSpaceConversion" : (String)?
+    )
+
+    alias JobOutputs = Array(JobOutput)
+
+    alias JobStatus = String
+
+    alias JobWatermark = NamedTuple(
+      "PresetWatermarkId" : (PresetWatermarkId)?,
+      "InputKey" : (WatermarkKey)?,
+      "Encryption" : (Encryption)?
+    )
+
+    alias JobWatermarks = Array(JobWatermark)
+
+    alias Jobs = Array(Job)
+
+    alias JpgOrPng = String
+
+    alias Key = String
+
+    alias KeyArn = String
+
+    alias KeyIdGuid = String
+
+    alias KeyStoragePolicy = String
+
+    alias KeyframesMaxDist = String
+
+    alias LimitExceededException = NamedTuple(
+      
+    )
+
+    alias ListJobsByPipelineRequest = NamedTuple(
+      "PipelineId" : Id,
+      "Ascending" : (Ascending)?,
+      "PageToken" : (Id)?
+    )
+
+    alias ListJobsByPipelineResponse = NamedTuple(
+      "Jobs" : (Jobs)?,
+      "NextPageToken" : (Id)?
+    )
+
+    alias ListJobsByStatusRequest = NamedTuple(
+      "Status" : JobStatus,
+      "Ascending" : (Ascending)?,
+      "PageToken" : (Id)?
+    )
+
+    alias ListJobsByStatusResponse = NamedTuple(
+      "Jobs" : (Jobs)?,
+      "NextPageToken" : (Id)?
+    )
+
+    alias ListPipelinesRequest = NamedTuple(
+      "Ascending" : (Ascending)?,
+      "PageToken" : (Id)?
+    )
+
+    alias ListPipelinesResponse = NamedTuple(
+      "Pipelines" : (Pipelines)?,
+      "NextPageToken" : (Id)?
+    )
+
+    alias ListPresetsRequest = NamedTuple(
+      "Ascending" : (Ascending)?,
+      "PageToken" : (Id)?
+    )
+
+    alias ListPresetsResponse = NamedTuple(
+      "Presets" : (Presets)?,
+      "NextPageToken" : (Id)?
+    )
+
+    alias LongKey = String
+
+    alias MaxFrameRate = String
+
+    alias MergePolicy = String
+
+    alias Name = String
+
+    alias NonEmptyBase64EncodedString = String
+
+    alias Notifications = NamedTuple(
+      "Progressing" : (SnsTopic)?,
+      "Completed" : (SnsTopic)?,
+      "Warning" : (SnsTopic)?,
+      "Error" : (SnsTopic)?
+    )
+
+    alias NullableInteger = Int32
+
+    alias NullableLong = Int64
+
+    alias OneTo512String = String
+
+    alias Opacity = String
+
+    alias OutputKeys = Array(Key)
+
+    alias PaddingPolicy = String
+
+    alias Permission = NamedTuple(
+      "GranteeType" : (GranteeType)?,
+      "Grantee" : (Grantee)?,
+      "Access" : (AccessControls)?
+    )
+
+    alias Permissions = Array(Permission)
+
+    alias Pipeline = NamedTuple(
+      "Id" : (Id)?,
+      "Arn" : (String)?,
+      "Name" : (Name)?,
+      "Status" : (PipelineStatus)?,
+      "InputBucket" : (BucketName)?,
+      "OutputBucket" : (BucketName)?,
+      "Role" : (Role)?,
+      "AwsKmsKeyArn" : (KeyArn)?,
+      "Notifications" : (Notifications)?,
+      "ContentConfig" : (PipelineOutputConfig)?,
+      "ThumbnailConfig" : (PipelineOutputConfig)?
+    )
+
+    alias PipelineOutputConfig = NamedTuple(
+      "Bucket" : (BucketName)?,
+      "StorageClass" : (StorageClass)?,
+      "Permissions" : (Permissions)?
+    )
+
+    alias PipelineStatus = String
+
+    alias Pipelines = Array(Pipeline)
+
+    alias PixelsOrPercent = String
+
+    alias PlayReadyDrm = NamedTuple(
+      "Format" : (PlayReadyDrmFormatString)?,
+      "Key" : (NonEmptyBase64EncodedString)?,
+      "KeyMd5" : (NonEmptyBase64EncodedString)?,
+      "KeyId" : (KeyIdGuid)?,
+      "InitializationVector" : (ZeroTo255String)?,
+      "LicenseAcquisitionUrl" : (OneTo512String)?
+    )
+
+    alias PlayReadyDrmFormatString = String
+
+    alias Playlist = NamedTuple(
+      "Name" : (Filename)?,
+      "Format" : (PlaylistFormat)?,
+      "OutputKeys" : (OutputKeys)?,
+      "HlsContentProtection" : (HlsContentProtection)?,
+      "PlayReadyDrm" : (PlayReadyDrm)?,
+      "Status" : (JobStatus)?,
+      "StatusDetail" : (Description)?
+    )
+
+    alias PlaylistFormat = String
+
+    alias Playlists = Array(Playlist)
+
+    alias Preset = NamedTuple(
+      "Id" : (Id)?,
+      "Arn" : (String)?,
+      "Name" : (Name)?,
+      "Description" : (Description)?,
+      "Container" : (PresetContainer)?,
+      "Audio" : (AudioParameters)?,
+      "Video" : (VideoParameters)?,
+      "Thumbnails" : (Thumbnails)?,
+      "Type" : (PresetType)?
+    )
+
+    alias PresetContainer = String
+
+    alias PresetType = String
+
+    alias PresetWatermark = NamedTuple(
+      "Id" : (PresetWatermarkId)?,
+      "MaxWidth" : (PixelsOrPercent)?,
+      "MaxHeight" : (PixelsOrPercent)?,
+      "SizingPolicy" : (WatermarkSizingPolicy)?,
+      "HorizontalAlign" : (HorizontalAlign)?,
+      "HorizontalOffset" : (PixelsOrPercent)?,
+      "VerticalAlign" : (VerticalAlign)?,
+      "VerticalOffset" : (PixelsOrPercent)?,
+      "Opacity" : (Opacity)?,
+      "Target" : (Target)?
+    )
+
+    alias PresetWatermarkId = String
+
+    alias PresetWatermarks = Array(PresetWatermark)
+
+    alias Presets = Array(Preset)
+
+    alias ReadJobRequest = NamedTuple(
+      "Id" : Id
+    )
+
+    alias ReadJobResponse = NamedTuple(
+      "Job" : (Job)?
+    )
+
+    alias ReadPipelineRequest = NamedTuple(
+      "Id" : Id
+    )
+
+    alias ReadPipelineResponse = NamedTuple(
+      "Pipeline" : (Pipeline)?,
+      "Warnings" : (Warnings)?
+    )
+
+    alias ReadPresetRequest = NamedTuple(
+      "Id" : Id
+    )
+
+    alias ReadPresetResponse = NamedTuple(
+      "Preset" : (Preset)?
+    )
+
+    alias Resolution = String
+
+    alias ResourceInUseException = NamedTuple(
+      
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      
+    )
+
+    alias Role = String
+
+    alias Rotate = String
+
+    alias SizingPolicy = String
+
+    alias SnsTopic = String
+
+    alias SnsTopics = Array(SnsTopic)
+
+    alias StorageClass = String
+
+    alias String = String
+
+    alias Success = String
+
+    alias Target = String
+
+    alias TestRoleRequest = NamedTuple(
+      "Role" : Role,
+      "InputBucket" : BucketName,
+      "OutputBucket" : BucketName,
+      "Topics" : SnsTopics
+    )
+
+    alias TestRoleResponse = NamedTuple(
+      "Success" : (Success)?,
+      "Messages" : (ExceptionMessages)?
+    )
+
+    alias ThumbnailPattern = String
+
+    alias ThumbnailResolution = String
+
+    alias Thumbnails = NamedTuple(
+      "Format" : (JpgOrPng)?,
+      "Interval" : (Digits)?,
+      "Resolution" : (ThumbnailResolution)?,
+      "AspectRatio" : (AspectRatio)?,
+      "MaxWidth" : (DigitsOrAuto)?,
+      "MaxHeight" : (DigitsOrAuto)?,
+      "SizingPolicy" : (SizingPolicy)?,
+      "PaddingPolicy" : (PaddingPolicy)?
+    )
+
+    alias Time = String
+
+    alias TimeOffset = String
+
+    alias TimeSpan = NamedTuple(
+      "StartTime" : (Time)?,
+      "Duration" : (Time)?
+    )
+
+    alias Timing = NamedTuple(
+      "SubmitTimeMillis" : (NullableLong)?,
+      "StartTimeMillis" : (NullableLong)?,
+      "FinishTimeMillis" : (NullableLong)?
+    )
+
+    alias UpdatePipelineNotificationsRequest = NamedTuple(
+      "Id" : Id,
+      "Notifications" : Notifications
+    )
+
+    alias UpdatePipelineNotificationsResponse = NamedTuple(
+      "Pipeline" : (Pipeline)?
+    )
+
+    alias UpdatePipelineRequest = NamedTuple(
+      "Id" : Id,
+      "Name" : (Name)?,
+      "InputBucket" : (BucketName)?,
+      "Role" : (Role)?,
+      "AwsKmsKeyArn" : (KeyArn)?,
+      "Notifications" : (Notifications)?,
+      "ContentConfig" : (PipelineOutputConfig)?,
+      "ThumbnailConfig" : (PipelineOutputConfig)?
+    )
+
+    alias UpdatePipelineResponse = NamedTuple(
+      "Pipeline" : (Pipeline)?,
+      "Warnings" : (Warnings)?
+    )
+
+    alias UpdatePipelineStatusRequest = NamedTuple(
+      "Id" : Id,
+      "Status" : PipelineStatus
+    )
+
+    alias UpdatePipelineStatusResponse = NamedTuple(
+      "Pipeline" : (Pipeline)?
+    )
+
+    alias UserMetadata = Hash(String,String)
+
+    alias ValidationException = NamedTuple(
+      
+    )
+
+    alias VerticalAlign = String
+
+    alias VideoBitRate = String
+
+    alias VideoCodec = String
+
+    alias VideoParameters = NamedTuple(
+      "Codec" : (VideoCodec)?,
+      "CodecOptions" : (CodecOptions)?,
+      "KeyframesMaxDist" : (KeyframesMaxDist)?,
+      "FixedGOP" : (FixedGOP)?,
+      "BitRate" : (VideoBitRate)?,
+      "FrameRate" : (FrameRate)?,
+      "MaxFrameRate" : (MaxFrameRate)?,
+      "Resolution" : (Resolution)?,
+      "AspectRatio" : (AspectRatio)?,
+      "MaxWidth" : (DigitsOrAuto)?,
+      "MaxHeight" : (DigitsOrAuto)?,
+      "DisplayAspectRatio" : (AspectRatio)?,
+      "SizingPolicy" : (SizingPolicy)?,
+      "PaddingPolicy" : (PaddingPolicy)?,
+      "Watermarks" : (PresetWatermarks)?
+    )
+
+    alias Warning = NamedTuple(
+      "Code" : (String)?,
+      "Message" : (String)?
+    )
+
+    alias Warnings = Array(Warning)
+
+    alias WatermarkKey = String
+
+    alias WatermarkSizingPolicy = String
+
+    alias ZeroTo255String = String
+
+    alias ZeroTo512String = String
   end
 end

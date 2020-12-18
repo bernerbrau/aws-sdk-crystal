@@ -365,8 +365,8 @@ module Aws::TimestreamQuery
     #
     # @overload cancel_query(**params)
     # @param [Hash] params ({})
-    def cancel_query(params = {}, **options)
-      req = build_request(:cancel_query, params)
+    def cancel_query(, **options)
+      req = build_request(:cancel_query, )
       req.send_request(options)
     end
 
@@ -405,8 +405,8 @@ module Aws::TimestreamQuery
     #
     # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, **options)
-      req = build_request(:describe_endpoints, params)
+    def describe_endpoints(, **options)
+      req = build_request(:describe_endpoints, )
       req.send_request(options)
     end
 
@@ -495,8 +495,8 @@ module Aws::TimestreamQuery
     #
     # @overload query(**params)
     # @param [Hash] params ({})
-    def query(params = {}, **options)
-      req = build_request(:query, params)
+    def query(, **options)
+      req = build_request(:query, )
       req.send_request(options)
     end
 

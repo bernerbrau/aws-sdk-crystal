@@ -769,5 +769,188 @@ module Aws::PinpointSMSVoice
       include Aws::Structure
     end
 
+    alias AlreadyExistsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Boolean = Bool
+
+    alias CallInstructionsMessageType = NamedTuple(
+      "Text" : (NonEmptyString)?
+    )
+
+    alias CloudWatchLogsDestination = NamedTuple(
+      "IamRoleArn" : (String)?,
+      "LogGroupArn" : (String)?
+    )
+
+    alias ConfigurationSets = Array(WordCharactersWithDelimiters)
+
+    alias CreateConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : __string,
+      "EventDestination" : (EventDestinationDefinition)?,
+      "EventDestinationName" : (NonEmptyString)?
+    )
+
+    alias CreateConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias CreateConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : (WordCharactersWithDelimiters)?
+    )
+
+    alias CreateConfigurationSetResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : __string,
+      "EventDestinationName" : __string
+    )
+
+    alias DeleteConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias DeleteConfigurationSetRequest = NamedTuple(
+      "ConfigurationSetName" : __string
+    )
+
+    alias DeleteConfigurationSetResponse = NamedTuple(
+      
+    )
+
+    alias EventDestination = NamedTuple(
+      "CloudWatchLogsDestination" : (CloudWatchLogsDestination)?,
+      "Enabled" : (Boolean)?,
+      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
+      "MatchingEventTypes" : (EventTypes)?,
+      "Name" : (String)?,
+      "SnsDestination" : (SnsDestination)?
+    )
+
+    alias EventDestinationDefinition = NamedTuple(
+      "CloudWatchLogsDestination" : (CloudWatchLogsDestination)?,
+      "Enabled" : (Boolean)?,
+      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
+      "MatchingEventTypes" : (EventTypes)?,
+      "SnsDestination" : (SnsDestination)?
+    )
+
+    alias EventDestinations = Array(EventDestination)
+
+    alias EventType = String
+
+    alias EventTypes = Array(EventType)
+
+    alias GetConfigurationSetEventDestinationsRequest = NamedTuple(
+      "ConfigurationSetName" : __string
+    )
+
+    alias GetConfigurationSetEventDestinationsResponse = NamedTuple(
+      "EventDestinations" : (EventDestinations)?
+    )
+
+    alias InternalServiceErrorException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias KinesisFirehoseDestination = NamedTuple(
+      "DeliveryStreamArn" : (String)?,
+      "IamRoleArn" : (String)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ListConfigurationSetsRequest = NamedTuple(
+      "NextToken" : (__string)?,
+      "PageSize" : (__string)?
+    )
+
+    alias ListConfigurationSetsResponse = NamedTuple(
+      "ConfigurationSets" : (ConfigurationSets)?,
+      "NextToken" : (NextTokenString)?
+    )
+
+    alias NextTokenString = String
+
+    alias NonEmptyString = String
+
+    alias NotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias PlainTextMessageType = NamedTuple(
+      "LanguageCode" : (String)?,
+      "Text" : (NonEmptyString)?,
+      "VoiceId" : (String)?
+    )
+
+    alias SSMLMessageType = NamedTuple(
+      "LanguageCode" : (String)?,
+      "Text" : (NonEmptyString)?,
+      "VoiceId" : (String)?
+    )
+
+    alias SendVoiceMessageRequest = NamedTuple(
+      "CallerId" : (String)?,
+      "ConfigurationSetName" : (WordCharactersWithDelimiters)?,
+      "Content" : (VoiceMessageContent)?,
+      "DestinationPhoneNumber" : (NonEmptyString)?,
+      "OriginationPhoneNumber" : (NonEmptyString)?
+    )
+
+    alias SendVoiceMessageResponse = NamedTuple(
+      "MessageId" : (String)?
+    )
+
+    alias SnsDestination = NamedTuple(
+      "TopicArn" : (String)?
+    )
+
+    alias String = String
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UpdateConfigurationSetEventDestinationRequest = NamedTuple(
+      "ConfigurationSetName" : __string,
+      "EventDestination" : (EventDestinationDefinition)?,
+      "EventDestinationName" : __string
+    )
+
+    alias UpdateConfigurationSetEventDestinationResponse = NamedTuple(
+      
+    )
+
+    alias VoiceMessageContent = NamedTuple(
+      "CallInstructionsMessage" : (CallInstructionsMessageType)?,
+      "PlainTextMessage" : (PlainTextMessageType)?,
+      "SSMLMessage" : (SSMLMessageType)?
+    )
+
+    alias WordCharactersWithDelimiters = String
+
+    alias __boolean = Bool
+
+    alias __double = Float64
+
+    alias __integer = Int32
+
+    alias __long = Int64
+
+    alias __string = String
+
+    alias __timestampIso8601 = String | UInt64 | Time
+
+    alias __timestampUnix = String | UInt64 | Time
   end
 end

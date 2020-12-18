@@ -417,8 +417,8 @@ module Aws::Backup
     #
     # @overload create_backup_plan(**params)
     # @param [Hash] params ({})
-    def create_backup_plan(params = {}, **options)
-      req = build_request(:create_backup_plan, params)
+    def create_backup_plan(, **options)
+      req = build_request(:create_backup_plan, )
       req.send_request(options)
     end
 
@@ -500,8 +500,8 @@ module Aws::Backup
     #
     # @overload create_backup_selection(**params)
     # @param [Hash] params ({})
-    def create_backup_selection(params = {}, **options)
-      req = build_request(:create_backup_selection, params)
+    def create_backup_selection(, **options)
+      req = build_request(:create_backup_selection, )
       req.send_request(options)
     end
 
@@ -560,8 +560,8 @@ module Aws::Backup
     #
     # @overload create_backup_vault(**params)
     # @param [Hash] params ({})
-    def create_backup_vault(params = {}, **options)
-      req = build_request(:create_backup_vault, params)
+    def create_backup_vault(, **options)
+      req = build_request(:create_backup_vault, )
       req.send_request(options)
     end
 
@@ -597,8 +597,8 @@ module Aws::Backup
     #
     # @overload delete_backup_plan(**params)
     # @param [Hash] params ({})
-    def delete_backup_plan(params = {}, **options)
-      req = build_request(:delete_backup_plan, params)
+    def delete_backup_plan(, **options)
+      req = build_request(:delete_backup_plan, )
       req.send_request(options)
     end
 
@@ -625,8 +625,8 @@ module Aws::Backup
     #
     # @overload delete_backup_selection(**params)
     # @param [Hash] params ({})
-    def delete_backup_selection(params = {}, **options)
-      req = build_request(:delete_backup_selection, params)
+    def delete_backup_selection(, **options)
+      req = build_request(:delete_backup_selection, )
       req.send_request(options)
     end
 
@@ -651,8 +651,8 @@ module Aws::Backup
     #
     # @overload delete_backup_vault(**params)
     # @param [Hash] params ({})
-    def delete_backup_vault(params = {}, **options)
-      req = build_request(:delete_backup_vault, params)
+    def delete_backup_vault(, **options)
+      req = build_request(:delete_backup_vault, )
       req.send_request(options)
     end
 
@@ -677,8 +677,8 @@ module Aws::Backup
     #
     # @overload delete_backup_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def delete_backup_vault_access_policy(params = {}, **options)
-      req = build_request(:delete_backup_vault_access_policy, params)
+    def delete_backup_vault_access_policy(, **options)
+      req = build_request(:delete_backup_vault_access_policy, )
       req.send_request(options)
     end
 
@@ -702,8 +702,8 @@ module Aws::Backup
     #
     # @overload delete_backup_vault_notifications(**params)
     # @param [Hash] params ({})
-    def delete_backup_vault_notifications(params = {}, **options)
-      req = build_request(:delete_backup_vault_notifications, params)
+    def delete_backup_vault_notifications(, **options)
+      req = build_request(:delete_backup_vault_notifications, )
       req.send_request(options)
     end
 
@@ -733,8 +733,8 @@ module Aws::Backup
     #
     # @overload delete_recovery_point(**params)
     # @param [Hash] params ({})
-    def delete_recovery_point(params = {}, **options)
-      req = build_request(:delete_recovery_point, params)
+    def delete_recovery_point(, **options)
+      req = build_request(:delete_recovery_point, )
       req.send_request(options)
     end
 
@@ -803,8 +803,8 @@ module Aws::Backup
     #
     # @overload describe_backup_job(**params)
     # @param [Hash] params ({})
-    def describe_backup_job(params = {}, **options)
-      req = build_request(:describe_backup_job, params)
+    def describe_backup_job(, **options)
+      req = build_request(:describe_backup_job, )
       req.send_request(options)
     end
 
@@ -844,8 +844,8 @@ module Aws::Backup
     #
     # @overload describe_backup_vault(**params)
     # @param [Hash] params ({})
-    def describe_backup_vault(params = {}, **options)
-      req = build_request(:describe_backup_vault, params)
+    def describe_backup_vault(, **options)
+      req = build_request(:describe_backup_vault, )
       req.send_request(options)
     end
 
@@ -889,8 +889,8 @@ module Aws::Backup
     #
     # @overload describe_copy_job(**params)
     # @param [Hash] params ({})
-    def describe_copy_job(params = {}, **options)
-      req = build_request(:describe_copy_job, params)
+    def describe_copy_job(, **options)
+      req = build_request(:describe_copy_job, )
       req.send_request(options)
     end
 
@@ -911,8 +911,8 @@ module Aws::Backup
     #
     # @overload describe_global_settings(**params)
     # @param [Hash] params ({})
-    def describe_global_settings(params = {}, **options)
-      req = build_request(:describe_global_settings, params)
+    def describe_global_settings(, **options)
+      req = build_request(:describe_global_settings, )
       req.send_request(options)
     end
 
@@ -946,8 +946,8 @@ module Aws::Backup
     #
     # @overload describe_protected_resource(**params)
     # @param [Hash] params ({})
-    def describe_protected_resource(params = {}, **options)
-      req = build_request(:describe_protected_resource, params)
+    def describe_protected_resource(, **options)
+      req = build_request(:describe_protected_resource, )
       req.send_request(options)
     end
 
@@ -1023,8 +1023,8 @@ module Aws::Backup
     #
     # @overload describe_recovery_point(**params)
     # @param [Hash] params ({})
-    def describe_recovery_point(params = {}, **options)
-      req = build_request(:describe_recovery_point, params)
+    def describe_recovery_point(, **options)
+      req = build_request(:describe_recovery_point, )
       req.send_request(options)
     end
 
@@ -1049,8 +1049,8 @@ module Aws::Backup
     #
     # @overload describe_region_settings(**params)
     # @param [Hash] params ({})
-    def describe_region_settings(params = {}, **options)
-      req = build_request(:describe_region_settings, params)
+    def describe_region_settings(, **options)
+      req = build_request(:describe_region_settings, )
       req.send_request(options)
     end
 
@@ -1102,8 +1102,8 @@ module Aws::Backup
     #
     # @overload describe_restore_job(**params)
     # @param [Hash] params ({})
-    def describe_restore_job(params = {}, **options)
-      req = build_request(:describe_restore_job, params)
+    def describe_restore_job(, **options)
+      req = build_request(:describe_restore_job, )
       req.send_request(options)
     end
 
@@ -1131,8 +1131,8 @@ module Aws::Backup
     #
     # @overload export_backup_plan_template(**params)
     # @param [Hash] params ({})
-    def export_backup_plan_template(params = {}, **options)
-      req = build_request(:export_backup_plan_template, params)
+    def export_backup_plan_template(, **options)
+      req = build_request(:export_backup_plan_template, )
       req.send_request(options)
     end
 
@@ -1204,8 +1204,8 @@ module Aws::Backup
     #
     # @overload get_backup_plan(**params)
     # @param [Hash] params ({})
-    def get_backup_plan(params = {}, **options)
-      req = build_request(:get_backup_plan, params)
+    def get_backup_plan(, **options)
+      req = build_request(:get_backup_plan, )
       req.send_request(options)
     end
 
@@ -1251,8 +1251,8 @@ module Aws::Backup
     #
     # @overload get_backup_plan_from_json(**params)
     # @param [Hash] params ({})
-    def get_backup_plan_from_json(params = {}, **options)
-      req = build_request(:get_backup_plan_from_json, params)
+    def get_backup_plan_from_json(, **options)
+      req = build_request(:get_backup_plan_from_json, )
       req.send_request(options)
     end
 
@@ -1298,8 +1298,8 @@ module Aws::Backup
     #
     # @overload get_backup_plan_from_template(**params)
     # @param [Hash] params ({})
-    def get_backup_plan_from_template(params = {}, **options)
-      req = build_request(:get_backup_plan_from_template, params)
+    def get_backup_plan_from_template(, **options)
+      req = build_request(:get_backup_plan_from_template, )
       req.send_request(options)
     end
 
@@ -1347,8 +1347,8 @@ module Aws::Backup
     #
     # @overload get_backup_selection(**params)
     # @param [Hash] params ({})
-    def get_backup_selection(params = {}, **options)
-      req = build_request(:get_backup_selection, params)
+    def get_backup_selection(, **options)
+      req = build_request(:get_backup_selection, )
       req.send_request(options)
     end
 
@@ -1383,8 +1383,8 @@ module Aws::Backup
     #
     # @overload get_backup_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def get_backup_vault_access_policy(params = {}, **options)
-      req = build_request(:get_backup_vault_access_policy, params)
+    def get_backup_vault_access_policy(, **options)
+      req = build_request(:get_backup_vault_access_policy, )
       req.send_request(options)
     end
 
@@ -1421,8 +1421,8 @@ module Aws::Backup
     #
     # @overload get_backup_vault_notifications(**params)
     # @param [Hash] params ({})
-    def get_backup_vault_notifications(params = {}, **options)
-      req = build_request(:get_backup_vault_notifications, params)
+    def get_backup_vault_notifications(, **options)
+      req = build_request(:get_backup_vault_notifications, )
       req.send_request(options)
     end
 
@@ -1464,8 +1464,8 @@ module Aws::Backup
     #
     # @overload get_recovery_point_restore_metadata(**params)
     # @param [Hash] params ({})
-    def get_recovery_point_restore_metadata(params = {}, **options)
-      req = build_request(:get_recovery_point_restore_metadata, params)
+    def get_recovery_point_restore_metadata(, **options)
+      req = build_request(:get_recovery_point_restore_metadata, )
       req.send_request(options)
     end
 
@@ -1484,8 +1484,8 @@ module Aws::Backup
     #
     # @overload get_supported_resource_types(**params)
     # @param [Hash] params ({})
-    def get_supported_resource_types(params = {}, **options)
-      req = build_request(:get_supported_resource_types, params)
+    def get_supported_resource_types(, **options)
+      req = build_request(:get_supported_resource_types, )
       req.send_request(options)
     end
 
@@ -1592,8 +1592,8 @@ module Aws::Backup
     #
     # @overload list_backup_jobs(**params)
     # @param [Hash] params ({})
-    def list_backup_jobs(params = {}, **options)
-      req = build_request(:list_backup_jobs, params)
+    def list_backup_jobs(, **options)
+      req = build_request(:list_backup_jobs, )
       req.send_request(options)
     end
 
@@ -1634,8 +1634,8 @@ module Aws::Backup
     #
     # @overload list_backup_plan_templates(**params)
     # @param [Hash] params ({})
-    def list_backup_plan_templates(params = {}, **options)
-      req = build_request(:list_backup_plan_templates, params)
+    def list_backup_plan_templates(, **options)
+      req = build_request(:list_backup_plan_templates, )
       req.send_request(options)
     end
 
@@ -1691,8 +1691,8 @@ module Aws::Backup
     #
     # @overload list_backup_plan_versions(**params)
     # @param [Hash] params ({})
-    def list_backup_plan_versions(params = {}, **options)
-      req = build_request(:list_backup_plan_versions, params)
+    def list_backup_plan_versions(, **options)
+      req = build_request(:list_backup_plan_versions, )
       req.send_request(options)
     end
 
@@ -1751,8 +1751,8 @@ module Aws::Backup
     #
     # @overload list_backup_plans(**params)
     # @param [Hash] params ({})
-    def list_backup_plans(params = {}, **options)
-      req = build_request(:list_backup_plans, params)
+    def list_backup_plans(, **options)
+      req = build_request(:list_backup_plans, )
       req.send_request(options)
     end
 
@@ -1801,8 +1801,8 @@ module Aws::Backup
     #
     # @overload list_backup_selections(**params)
     # @param [Hash] params ({})
-    def list_backup_selections(params = {}, **options)
-      req = build_request(:list_backup_selections, params)
+    def list_backup_selections(, **options)
+      req = build_request(:list_backup_selections, )
       req.send_request(options)
     end
 
@@ -1847,8 +1847,8 @@ module Aws::Backup
     #
     # @overload list_backup_vaults(**params)
     # @param [Hash] params ({})
-    def list_backup_vaults(params = {}, **options)
-      req = build_request(:list_backup_vaults, params)
+    def list_backup_vaults(, **options)
+      req = build_request(:list_backup_vaults, )
       req.send_request(options)
     end
 
@@ -1948,8 +1948,8 @@ module Aws::Backup
     #
     # @overload list_copy_jobs(**params)
     # @param [Hash] params ({})
-    def list_copy_jobs(params = {}, **options)
-      req = build_request(:list_copy_jobs, params)
+    def list_copy_jobs(, **options)
+      req = build_request(:list_copy_jobs, )
       req.send_request(options)
     end
 
@@ -1992,8 +1992,8 @@ module Aws::Backup
     #
     # @overload list_protected_resources(**params)
     # @param [Hash] params ({})
-    def list_protected_resources(params = {}, **options)
-      req = build_request(:list_protected_resources, params)
+    def list_protected_resources(, **options)
+      req = build_request(:list_protected_resources, )
       req.send_request(options)
     end
 
@@ -2084,8 +2084,8 @@ module Aws::Backup
     #
     # @overload list_recovery_points_by_backup_vault(**params)
     # @param [Hash] params ({})
-    def list_recovery_points_by_backup_vault(params = {}, **options)
-      req = build_request(:list_recovery_points_by_backup_vault, params)
+    def list_recovery_points_by_backup_vault(, **options)
+      req = build_request(:list_recovery_points_by_backup_vault, )
       req.send_request(options)
     end
 
@@ -2135,8 +2135,8 @@ module Aws::Backup
     #
     # @overload list_recovery_points_by_resource(**params)
     # @param [Hash] params ({})
-    def list_recovery_points_by_resource(params = {}, **options)
-      req = build_request(:list_recovery_points_by_resource, params)
+    def list_recovery_points_by_resource(, **options)
+      req = build_request(:list_recovery_points_by_resource, )
       req.send_request(options)
     end
 
@@ -2205,8 +2205,8 @@ module Aws::Backup
     #
     # @overload list_restore_jobs(**params)
     # @param [Hash] params ({})
-    def list_restore_jobs(params = {}, **options)
-      req = build_request(:list_restore_jobs, params)
+    def list_restore_jobs(, **options)
+      req = build_request(:list_restore_jobs, )
       req.send_request(options)
     end
 
@@ -2256,8 +2256,8 @@ module Aws::Backup
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -2287,8 +2287,8 @@ module Aws::Backup
     #
     # @overload put_backup_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def put_backup_vault_access_policy(params = {}, **options)
-      req = build_request(:put_backup_vault_access_policy, params)
+    def put_backup_vault_access_policy(, **options)
+      req = build_request(:put_backup_vault_access_policy, )
       req.send_request(options)
     end
 
@@ -2324,8 +2324,8 @@ module Aws::Backup
     #
     # @overload put_backup_vault_notifications(**params)
     # @param [Hash] params ({})
-    def put_backup_vault_notifications(params = {}, **options)
-      req = build_request(:put_backup_vault_notifications, params)
+    def put_backup_vault_notifications(, **options)
+      req = build_request(:put_backup_vault_notifications, )
       req.send_request(options)
     end
 
@@ -2420,8 +2420,8 @@ module Aws::Backup
     #
     # @overload start_backup_job(**params)
     # @param [Hash] params ({})
-    def start_backup_job(params = {}, **options)
-      req = build_request(:start_backup_job, params)
+    def start_backup_job(, **options)
+      req = build_request(:start_backup_job, )
       req.send_request(options)
     end
 
@@ -2489,8 +2489,8 @@ module Aws::Backup
     #
     # @overload start_copy_job(**params)
     # @param [Hash] params ({})
-    def start_copy_job(params = {}, **options)
-      req = build_request(:start_copy_job, params)
+    def start_copy_job(, **options)
+      req = build_request(:start_copy_job, )
       req.send_request(options)
     end
 
@@ -2591,8 +2591,8 @@ module Aws::Backup
     #
     # @overload start_restore_job(**params)
     # @param [Hash] params ({})
-    def start_restore_job(params = {}, **options)
-      req = build_request(:start_restore_job, params)
+    def start_restore_job(, **options)
+      req = build_request(:start_restore_job, )
       req.send_request(options)
     end
 
@@ -2613,8 +2613,8 @@ module Aws::Backup
     #
     # @overload stop_backup_job(**params)
     # @param [Hash] params ({})
-    def stop_backup_job(params = {}, **options)
-      req = build_request(:stop_backup_job, params)
+    def stop_backup_job(, **options)
+      req = build_request(:stop_backup_job, )
       req.send_request(options)
     end
 
@@ -2644,8 +2644,8 @@ module Aws::Backup
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2673,8 +2673,8 @@ module Aws::Backup
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2754,8 +2754,8 @@ module Aws::Backup
     #
     # @overload update_backup_plan(**params)
     # @param [Hash] params ({})
-    def update_backup_plan(params = {}, **options)
-      req = build_request(:update_backup_plan, params)
+    def update_backup_plan(, **options)
+      req = build_request(:update_backup_plan, )
       req.send_request(options)
     end
 
@@ -2779,8 +2779,8 @@ module Aws::Backup
     #
     # @overload update_global_settings(**params)
     # @param [Hash] params ({})
-    def update_global_settings(params = {}, **options)
-      req = build_request(:update_global_settings, params)
+    def update_global_settings(, **options)
+      req = build_request(:update_global_settings, )
       req.send_request(options)
     end
 
@@ -2849,8 +2849,8 @@ module Aws::Backup
     #
     # @overload update_recovery_point_lifecycle(**params)
     # @param [Hash] params ({})
-    def update_recovery_point_lifecycle(params = {}, **options)
-      req = build_request(:update_recovery_point_lifecycle, params)
+    def update_recovery_point_lifecycle(, **options)
+      req = build_request(:update_recovery_point_lifecycle, )
       req.send_request(options)
     end
 
@@ -2880,8 +2880,8 @@ module Aws::Backup
     #
     # @overload update_region_settings(**params)
     # @param [Hash] params ({})
-    def update_region_settings(params = {}, **options)
-      req = build_request(:update_region_settings, params)
+    def update_region_settings(, **options)
+      req = build_request(:update_region_settings, )
       req.send_request(options)
     end
 

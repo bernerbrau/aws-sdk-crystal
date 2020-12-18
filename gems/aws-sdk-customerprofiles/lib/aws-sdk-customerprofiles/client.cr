@@ -370,8 +370,8 @@ module Aws::CustomerProfiles
     #
     # @overload add_profile_key(**params)
     # @param [Hash] params ({})
-    def add_profile_key(params = {}, **options)
-      req = build_request(:add_profile_key, params)
+    def add_profile_key(, **options)
+      req = build_request(:add_profile_key, )
       req.send_request(options)
     end
 
@@ -441,8 +441,8 @@ module Aws::CustomerProfiles
     #
     # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, **options)
-      req = build_request(:create_domain, params)
+    def create_domain(, **options)
+      req = build_request(:create_domain, )
       req.send_request(options)
     end
 
@@ -605,8 +605,8 @@ module Aws::CustomerProfiles
     #
     # @overload create_profile(**params)
     # @param [Hash] params ({})
-    def create_profile(params = {}, **options)
-      req = build_request(:create_profile, params)
+    def create_profile(, **options)
+      req = build_request(:create_profile, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::CustomerProfiles
     #
     # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, **options)
-      req = build_request(:delete_domain, params)
+    def delete_domain(, **options)
+      req = build_request(:delete_domain, )
       req.send_request(options)
     end
 
@@ -666,8 +666,8 @@ module Aws::CustomerProfiles
     #
     # @overload delete_integration(**params)
     # @param [Hash] params ({})
-    def delete_integration(params = {}, **options)
-      req = build_request(:delete_integration, params)
+    def delete_integration(, **options)
+      req = build_request(:delete_integration, )
       req.send_request(options)
     end
 
@@ -699,8 +699,8 @@ module Aws::CustomerProfiles
     #
     # @overload delete_profile(**params)
     # @param [Hash] params ({})
-    def delete_profile(params = {}, **options)
-      req = build_request(:delete_profile, params)
+    def delete_profile(, **options)
+      req = build_request(:delete_profile, )
       req.send_request(options)
     end
 
@@ -739,8 +739,8 @@ module Aws::CustomerProfiles
     #
     # @overload delete_profile_key(**params)
     # @param [Hash] params ({})
-    def delete_profile_key(params = {}, **options)
-      req = build_request(:delete_profile_key, params)
+    def delete_profile_key(, **options)
+      req = build_request(:delete_profile_key, )
       req.send_request(options)
     end
 
@@ -780,8 +780,8 @@ module Aws::CustomerProfiles
     #
     # @overload delete_profile_object(**params)
     # @param [Hash] params ({})
-    def delete_profile_object(params = {}, **options)
-      req = build_request(:delete_profile_object, params)
+    def delete_profile_object(, **options)
+      req = build_request(:delete_profile_object, )
       req.send_request(options)
     end
 
@@ -816,8 +816,8 @@ module Aws::CustomerProfiles
     #
     # @overload delete_profile_object_type(**params)
     # @param [Hash] params ({})
-    def delete_profile_object_type(params = {}, **options)
-      req = build_request(:delete_profile_object_type, params)
+    def delete_profile_object_type(, **options)
+      req = build_request(:delete_profile_object_type, )
       req.send_request(options)
     end
 
@@ -862,8 +862,8 @@ module Aws::CustomerProfiles
     #
     # @overload get_domain(**params)
     # @param [Hash] params ({})
-    def get_domain(params = {}, **options)
-      req = build_request(:get_domain, params)
+    def get_domain(, **options)
+      req = build_request(:get_domain, )
       req.send_request(options)
     end
 
@@ -905,8 +905,8 @@ module Aws::CustomerProfiles
     #
     # @overload get_integration(**params)
     # @param [Hash] params ({})
-    def get_integration(params = {}, **options)
-      req = build_request(:get_integration, params)
+    def get_integration(, **options)
+      req = build_request(:get_integration, )
       req.send_request(options)
     end
 
@@ -966,8 +966,8 @@ module Aws::CustomerProfiles
     #
     # @overload get_profile_object_type(**params)
     # @param [Hash] params ({})
-    def get_profile_object_type(params = {}, **options)
-      req = build_request(:get_profile_object_type, params)
+    def get_profile_object_type(, **options)
+      req = build_request(:get_profile_object_type, )
       req.send_request(options)
     end
 
@@ -1018,8 +1018,8 @@ module Aws::CustomerProfiles
     #
     # @overload get_profile_object_type_template(**params)
     # @param [Hash] params ({})
-    def get_profile_object_type_template(params = {}, **options)
-      req = build_request(:get_profile_object_type_template, params)
+    def get_profile_object_type_template(, **options)
+      req = build_request(:get_profile_object_type_template, )
       req.send_request(options)
     end
 
@@ -1065,8 +1065,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_account_integrations(**params)
     # @param [Hash] params ({})
-    def list_account_integrations(params = {}, **options)
-      req = build_request(:list_account_integrations, params)
+    def list_account_integrations(, **options)
+      req = build_request(:list_account_integrations, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, **options)
-      req = build_request(:list_domains, params)
+    def list_domains(, **options)
+      req = build_request(:list_domains, )
       req.send_request(options)
     end
 
@@ -1150,8 +1150,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_integrations(**params)
     # @param [Hash] params ({})
-    def list_integrations(params = {}, **options)
-      req = build_request(:list_integrations, params)
+    def list_integrations(, **options)
+      req = build_request(:list_integrations, )
       req.send_request(options)
     end
 
@@ -1188,8 +1188,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_profile_object_type_templates(**params)
     # @param [Hash] params ({})
-    def list_profile_object_type_templates(params = {}, **options)
-      req = build_request(:list_profile_object_type_templates, params)
+    def list_profile_object_type_templates(, **options)
+      req = build_request(:list_profile_object_type_templates, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_profile_object_types(**params)
     # @param [Hash] params ({})
-    def list_profile_object_types(params = {}, **options)
-      req = build_request(:list_profile_object_types, params)
+    def list_profile_object_types(, **options)
+      req = build_request(:list_profile_object_types, )
       req.send_request(options)
     end
 
@@ -1282,8 +1282,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_profile_objects(**params)
     # @param [Hash] params ({})
-    def list_profile_objects(params = {}, **options)
-      req = build_request(:list_profile_objects, params)
+    def list_profile_objects(, **options)
+      req = build_request(:list_profile_objects, )
       req.send_request(options)
     end
 
@@ -1313,8 +1313,8 @@ module Aws::CustomerProfiles
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -1369,8 +1369,8 @@ module Aws::CustomerProfiles
     #
     # @overload put_integration(**params)
     # @param [Hash] params ({})
-    def put_integration(params = {}, **options)
-      req = build_request(:put_integration, params)
+    def put_integration(, **options)
+      req = build_request(:put_integration, )
       req.send_request(options)
     end
 
@@ -1418,8 +1418,8 @@ module Aws::CustomerProfiles
     #
     # @overload put_profile_object(**params)
     # @param [Hash] params ({})
-    def put_profile_object(params = {}, **options)
-      req = build_request(:put_profile_object, params)
+    def put_profile_object(, **options)
+      req = build_request(:put_profile_object, )
       req.send_request(options)
     end
 
@@ -1532,8 +1532,8 @@ module Aws::CustomerProfiles
     #
     # @overload put_profile_object_type(**params)
     # @param [Hash] params ({})
-    def put_profile_object_type(params = {}, **options)
-      req = build_request(:put_profile_object_type, params)
+    def put_profile_object_type(, **options)
+      req = build_request(:put_profile_object_type, )
       req.send_request(options)
     end
 
@@ -1642,8 +1642,8 @@ module Aws::CustomerProfiles
     #
     # @overload search_profiles(**params)
     # @param [Hash] params ({})
-    def search_profiles(params = {}, **options)
-      req = build_request(:search_profiles, params)
+    def search_profiles(, **options)
+      req = build_request(:search_profiles, )
       req.send_request(options)
     end
 
@@ -1686,8 +1686,8 @@ module Aws::CustomerProfiles
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -1714,8 +1714,8 @@ module Aws::CustomerProfiles
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -1784,8 +1784,8 @@ module Aws::CustomerProfiles
     #
     # @overload update_domain(**params)
     # @param [Hash] params ({})
-    def update_domain(params = {}, **options)
-      req = build_request(:update_domain, params)
+    def update_domain(, **options)
+      req = build_request(:update_domain, )
       req.send_request(options)
     end
 
@@ -1954,8 +1954,8 @@ module Aws::CustomerProfiles
     #
     # @overload update_profile(**params)
     # @param [Hash] params ({})
-    def update_profile(params = {}, **options)
-      req = build_request(:update_profile, params)
+    def update_profile(, **options)
+      req = build_request(:update_profile, )
       req.send_request(options)
     end
 

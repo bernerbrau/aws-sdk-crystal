@@ -356,8 +356,8 @@ module Aws::AlexaForBusiness
     #
     # @overload approve_skill(**params)
     # @param [Hash] params ({})
-    def approve_skill(params = {}, **options)
-      req = build_request(:approve_skill, params)
+    def approve_skill(, **options)
+      req = build_request(:approve_skill, )
       req.send_request(options)
     end
 
@@ -382,8 +382,8 @@ module Aws::AlexaForBusiness
     #
     # @overload associate_contact_with_address_book(**params)
     # @param [Hash] params ({})
-    def associate_contact_with_address_book(params = {}, **options)
-      req = build_request(:associate_contact_with_address_book, params)
+    def associate_contact_with_address_book(, **options)
+      req = build_request(:associate_contact_with_address_book, )
       req.send_request(options)
     end
 
@@ -408,8 +408,8 @@ module Aws::AlexaForBusiness
     #
     # @overload associate_device_with_network_profile(**params)
     # @param [Hash] params ({})
-    def associate_device_with_network_profile(params = {}, **options)
-      req = build_request(:associate_device_with_network_profile, params)
+    def associate_device_with_network_profile(, **options)
+      req = build_request(:associate_device_with_network_profile, )
       req.send_request(options)
     end
 
@@ -437,8 +437,8 @@ module Aws::AlexaForBusiness
     #
     # @overload associate_device_with_room(**params)
     # @param [Hash] params ({})
-    def associate_device_with_room(params = {}, **options)
-      req = build_request(:associate_device_with_room, params)
+    def associate_device_with_room(, **options)
+      req = build_request(:associate_device_with_room, )
       req.send_request(options)
     end
 
@@ -464,8 +464,8 @@ module Aws::AlexaForBusiness
     #
     # @overload associate_skill_group_with_room(**params)
     # @param [Hash] params ({})
-    def associate_skill_group_with_room(params = {}, **options)
-      req = build_request(:associate_skill_group_with_room, params)
+    def associate_skill_group_with_room(, **options)
+      req = build_request(:associate_skill_group_with_room, )
       req.send_request(options)
     end
 
@@ -490,8 +490,8 @@ module Aws::AlexaForBusiness
     #
     # @overload associate_skill_with_skill_group(**params)
     # @param [Hash] params ({})
-    def associate_skill_with_skill_group(params = {}, **options)
-      req = build_request(:associate_skill_with_skill_group, params)
+    def associate_skill_with_skill_group(, **options)
+      req = build_request(:associate_skill_with_skill_group, )
       req.send_request(options)
     end
 
@@ -513,8 +513,8 @@ module Aws::AlexaForBusiness
     #
     # @overload associate_skill_with_users(**params)
     # @param [Hash] params ({})
-    def associate_skill_with_users(params = {}, **options)
-      req = build_request(:associate_skill_with_users, params)
+    def associate_skill_with_users(, **options)
+      req = build_request(:associate_skill_with_users, )
       req.send_request(options)
     end
 
@@ -553,8 +553,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_address_book(**params)
     # @param [Hash] params ({})
-    def create_address_book(params = {}, **options)
-      req = build_request(:create_address_book, params)
+    def create_address_book(, **options)
+      req = build_request(:create_address_book, )
       req.send_request(options)
     end
 
@@ -626,8 +626,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_business_report_schedule(**params)
     # @param [Hash] params ({})
-    def create_business_report_schedule(params = {}, **options)
-      req = build_request(:create_business_report_schedule, params)
+    def create_business_report_schedule(, **options)
+      req = build_request(:create_business_report_schedule, )
       req.send_request(options)
     end
 
@@ -687,8 +687,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_conference_provider(**params)
     # @param [Hash] params ({})
-    def create_conference_provider(params = {}, **options)
-      req = build_request(:create_conference_provider, params)
+    def create_conference_provider(, **options)
+      req = build_request(:create_conference_provider, )
       req.send_request(options)
     end
 
@@ -758,8 +758,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_contact(**params)
     # @param [Hash] params ({})
-    def create_contact(params = {}, **options)
-      req = build_request(:create_contact, params)
+    def create_contact(, **options)
+      req = build_request(:create_contact, )
       req.send_request(options)
     end
 
@@ -798,8 +798,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_gateway_group(**params)
     # @param [Hash] params ({})
-    def create_gateway_group(params = {}, **options)
-      req = build_request(:create_gateway_group, params)
+    def create_gateway_group(, **options)
+      req = build_request(:create_gateway_group, )
       req.send_request(options)
     end
 
@@ -874,8 +874,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_network_profile(**params)
     # @param [Hash] params ({})
-    def create_network_profile(params = {}, **options)
-      req = build_request(:create_network_profile, params)
+    def create_network_profile(, **options)
+      req = build_request(:create_network_profile, )
       req.send_request(options)
     end
 
@@ -975,8 +975,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_profile(**params)
     # @param [Hash] params ({})
-    def create_profile(params = {}, **options)
-      req = build_request(:create_profile, params)
+    def create_profile(, **options)
+      req = build_request(:create_profile, )
       req.send_request(options)
     end
 
@@ -1032,8 +1032,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_room(**params)
     # @param [Hash] params ({})
-    def create_room(params = {}, **options)
-      req = build_request(:create_room, params)
+    def create_room(, **options)
+      req = build_request(:create_room, )
       req.send_request(options)
     end
 
@@ -1081,8 +1081,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_skill_group(**params)
     # @param [Hash] params ({})
-    def create_skill_group(params = {}, **options)
-      req = build_request(:create_skill_group, params)
+    def create_skill_group(, **options)
+      req = build_request(:create_skill_group, )
       req.send_request(options)
     end
 
@@ -1138,8 +1138,8 @@ module Aws::AlexaForBusiness
     #
     # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, **options)
-      req = build_request(:create_user, params)
+    def create_user(, **options)
+      req = build_request(:create_user, )
       req.send_request(options)
     end
 
@@ -1160,8 +1160,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_address_book(**params)
     # @param [Hash] params ({})
-    def delete_address_book(params = {}, **options)
-      req = build_request(:delete_address_book, params)
+    def delete_address_book(, **options)
+      req = build_request(:delete_address_book, )
       req.send_request(options)
     end
 
@@ -1183,8 +1183,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_business_report_schedule(**params)
     # @param [Hash] params ({})
-    def delete_business_report_schedule(params = {}, **options)
-      req = build_request(:delete_business_report_schedule, params)
+    def delete_business_report_schedule(, **options)
+      req = build_request(:delete_business_report_schedule, )
       req.send_request(options)
     end
 
@@ -1205,8 +1205,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_conference_provider(**params)
     # @param [Hash] params ({})
-    def delete_conference_provider(params = {}, **options)
-      req = build_request(:delete_conference_provider, params)
+    def delete_conference_provider(, **options)
+      req = build_request(:delete_conference_provider, )
       req.send_request(options)
     end
 
@@ -1227,8 +1227,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_contact(**params)
     # @param [Hash] params ({})
-    def delete_contact(params = {}, **options)
-      req = build_request(:delete_contact, params)
+    def delete_contact(, **options)
+      req = build_request(:delete_contact, )
       req.send_request(options)
     end
 
@@ -1249,8 +1249,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_device(**params)
     # @param [Hash] params ({})
-    def delete_device(params = {}, **options)
-      req = build_request(:delete_device, params)
+    def delete_device(, **options)
+      req = build_request(:delete_device, )
       req.send_request(options)
     end
 
@@ -1278,8 +1278,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_device_usage_data(**params)
     # @param [Hash] params ({})
-    def delete_device_usage_data(params = {}, **options)
-      req = build_request(:delete_device_usage_data, params)
+    def delete_device_usage_data(, **options)
+      req = build_request(:delete_device_usage_data, )
       req.send_request(options)
     end
 
@@ -1300,8 +1300,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_gateway_group(**params)
     # @param [Hash] params ({})
-    def delete_gateway_group(params = {}, **options)
-      req = build_request(:delete_gateway_group, params)
+    def delete_gateway_group(, **options)
+      req = build_request(:delete_gateway_group, )
       req.send_request(options)
     end
 
@@ -1322,8 +1322,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_network_profile(**params)
     # @param [Hash] params ({})
-    def delete_network_profile(params = {}, **options)
-      req = build_request(:delete_network_profile, params)
+    def delete_network_profile(, **options)
+      req = build_request(:delete_network_profile, )
       req.send_request(options)
     end
 
@@ -1344,8 +1344,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_profile(**params)
     # @param [Hash] params ({})
-    def delete_profile(params = {}, **options)
-      req = build_request(:delete_profile, params)
+    def delete_profile(, **options)
+      req = build_request(:delete_profile, )
       req.send_request(options)
     end
 
@@ -1366,8 +1366,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_room(**params)
     # @param [Hash] params ({})
-    def delete_room(params = {}, **options)
-      req = build_request(:delete_room, params)
+    def delete_room(, **options)
+      req = build_request(:delete_room, )
       req.send_request(options)
     end
 
@@ -1399,8 +1399,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_room_skill_parameter(**params)
     # @param [Hash] params ({})
-    def delete_room_skill_parameter(params = {}, **options)
-      req = build_request(:delete_room_skill_parameter, params)
+    def delete_room_skill_parameter(, **options)
+      req = build_request(:delete_room_skill_parameter, )
       req.send_request(options)
     end
 
@@ -1425,8 +1425,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_skill_authorization(**params)
     # @param [Hash] params ({})
-    def delete_skill_authorization(params = {}, **options)
-      req = build_request(:delete_skill_authorization, params)
+    def delete_skill_authorization(, **options)
+      req = build_request(:delete_skill_authorization, )
       req.send_request(options)
     end
 
@@ -1447,8 +1447,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_skill_group(**params)
     # @param [Hash] params ({})
-    def delete_skill_group(params = {}, **options)
-      req = build_request(:delete_skill_group, params)
+    def delete_skill_group(, **options)
+      req = build_request(:delete_skill_group, )
       req.send_request(options)
     end
 
@@ -1473,8 +1473,8 @@ module Aws::AlexaForBusiness
     #
     # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, **options)
-      req = build_request(:delete_user, params)
+    def delete_user(, **options)
+      req = build_request(:delete_user, )
       req.send_request(options)
     end
 
@@ -1499,8 +1499,8 @@ module Aws::AlexaForBusiness
     #
     # @overload disassociate_contact_from_address_book(**params)
     # @param [Hash] params ({})
-    def disassociate_contact_from_address_book(params = {}, **options)
-      req = build_request(:disassociate_contact_from_address_book, params)
+    def disassociate_contact_from_address_book(, **options)
+      req = build_request(:disassociate_contact_from_address_book, )
       req.send_request(options)
     end
 
@@ -1523,8 +1523,8 @@ module Aws::AlexaForBusiness
     #
     # @overload disassociate_device_from_room(**params)
     # @param [Hash] params ({})
-    def disassociate_device_from_room(params = {}, **options)
-      req = build_request(:disassociate_device_from_room, params)
+    def disassociate_device_from_room(, **options)
+      req = build_request(:disassociate_device_from_room, )
       req.send_request(options)
     end
 
@@ -1549,8 +1549,8 @@ module Aws::AlexaForBusiness
     #
     # @overload disassociate_skill_from_skill_group(**params)
     # @param [Hash] params ({})
-    def disassociate_skill_from_skill_group(params = {}, **options)
-      req = build_request(:disassociate_skill_from_skill_group, params)
+    def disassociate_skill_from_skill_group(, **options)
+      req = build_request(:disassociate_skill_from_skill_group, )
       req.send_request(options)
     end
 
@@ -1572,8 +1572,8 @@ module Aws::AlexaForBusiness
     #
     # @overload disassociate_skill_from_users(**params)
     # @param [Hash] params ({})
-    def disassociate_skill_from_users(params = {}, **options)
-      req = build_request(:disassociate_skill_from_users, params)
+    def disassociate_skill_from_users(, **options)
+      req = build_request(:disassociate_skill_from_users, )
       req.send_request(options)
     end
 
@@ -1600,8 +1600,8 @@ module Aws::AlexaForBusiness
     #
     # @overload disassociate_skill_group_from_room(**params)
     # @param [Hash] params ({})
-    def disassociate_skill_group_from_room(params = {}, **options)
-      req = build_request(:disassociate_skill_group_from_room, params)
+    def disassociate_skill_group_from_room(, **options)
+      req = build_request(:disassociate_skill_group_from_room, )
       req.send_request(options)
     end
 
@@ -1622,8 +1622,8 @@ module Aws::AlexaForBusiness
     #
     # @overload forget_smart_home_appliances(**params)
     # @param [Hash] params ({})
-    def forget_smart_home_appliances(params = {}, **options)
-      req = build_request(:forget_smart_home_appliances, params)
+    def forget_smart_home_appliances(, **options)
+      req = build_request(:forget_smart_home_appliances, )
       req.send_request(options)
     end
 
@@ -1652,8 +1652,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_address_book(**params)
     # @param [Hash] params ({})
-    def get_address_book(params = {}, **options)
-      req = build_request(:get_address_book, params)
+    def get_address_book(, **options)
+      req = build_request(:get_address_book, )
       req.send_request(options)
     end
 
@@ -1671,8 +1671,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_conference_preference(**params)
     # @param [Hash] params ({})
-    def get_conference_preference(params = {}, **options)
-      req = build_request(:get_conference_preference, params)
+    def get_conference_preference(, **options)
+      req = build_request(:get_conference_preference, )
       req.send_request(options)
     end
 
@@ -1708,8 +1708,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_conference_provider(**params)
     # @param [Hash] params ({})
-    def get_conference_provider(params = {}, **options)
-      req = build_request(:get_conference_provider, params)
+    def get_conference_provider(, **options)
+      req = build_request(:get_conference_provider, )
       req.send_request(options)
     end
 
@@ -1746,8 +1746,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_contact(**params)
     # @param [Hash] params ({})
-    def get_contact(params = {}, **options)
-      req = build_request(:get_contact, params)
+    def get_contact(, **options)
+      req = build_request(:get_contact, )
       req.send_request(options)
     end
 
@@ -1789,8 +1789,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, **options)
-      req = build_request(:get_device, params)
+    def get_device(, **options)
+      req = build_request(:get_device, )
       req.send_request(options)
     end
 
@@ -1821,8 +1821,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_gateway(**params)
     # @param [Hash] params ({})
-    def get_gateway(params = {}, **options)
-      req = build_request(:get_gateway, params)
+    def get_gateway(, **options)
+      req = build_request(:get_gateway, )
       req.send_request(options)
     end
 
@@ -1851,8 +1851,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_gateway_group(**params)
     # @param [Hash] params ({})
-    def get_gateway_group(params = {}, **options)
-      req = build_request(:get_gateway_group, params)
+    def get_gateway_group(, **options)
+      req = build_request(:get_gateway_group, )
       req.send_request(options)
     end
 
@@ -1876,8 +1876,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_invitation_configuration(**params)
     # @param [Hash] params ({})
-    def get_invitation_configuration(params = {}, **options)
-      req = build_request(:get_invitation_configuration, params)
+    def get_invitation_configuration(, **options)
+      req = build_request(:get_invitation_configuration, )
       req.send_request(options)
     end
 
@@ -1914,8 +1914,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_network_profile(**params)
     # @param [Hash] params ({})
-    def get_network_profile(params = {}, **options)
-      req = build_request(:get_network_profile, params)
+    def get_network_profile(, **options)
+      req = build_request(:get_network_profile, )
       req.send_request(options)
     end
 
@@ -1963,8 +1963,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_profile(**params)
     # @param [Hash] params ({})
-    def get_profile(params = {}, **options)
-      req = build_request(:get_profile, params)
+    def get_profile(, **options)
+      req = build_request(:get_profile, )
       req.send_request(options)
     end
 
@@ -1995,8 +1995,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_room(**params)
     # @param [Hash] params ({})
-    def get_room(params = {}, **options)
-      req = build_request(:get_room, params)
+    def get_room(, **options)
+      req = build_request(:get_room, )
       req.send_request(options)
     end
 
@@ -2035,8 +2035,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_room_skill_parameter(**params)
     # @param [Hash] params ({})
-    def get_room_skill_parameter(params = {}, **options)
-      req = build_request(:get_room_skill_parameter, params)
+    def get_room_skill_parameter(, **options)
+      req = build_request(:get_room_skill_parameter, )
       req.send_request(options)
     end
 
@@ -2065,8 +2065,8 @@ module Aws::AlexaForBusiness
     #
     # @overload get_skill_group(**params)
     # @param [Hash] params ({})
-    def get_skill_group(params = {}, **options)
-      req = build_request(:get_skill_group, params)
+    def get_skill_group(, **options)
+      req = build_request(:get_skill_group, )
       req.send_request(options)
     end
 
@@ -2118,8 +2118,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_business_report_schedules(**params)
     # @param [Hash] params ({})
-    def list_business_report_schedules(params = {}, **options)
-      req = build_request(:list_business_report_schedules, params)
+    def list_business_report_schedules(, **options)
+      req = build_request(:list_business_report_schedules, )
       req.send_request(options)
     end
 
@@ -2165,8 +2165,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_conference_providers(**params)
     # @param [Hash] params ({})
-    def list_conference_providers(params = {}, **options)
-      req = build_request(:list_conference_providers, params)
+    def list_conference_providers(, **options)
+      req = build_request(:list_conference_providers, )
       req.send_request(options)
     end
 
@@ -2223,8 +2223,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_device_events(**params)
     # @param [Hash] params ({})
-    def list_device_events(params = {}, **options)
-      req = build_request(:list_device_events, params)
+    def list_device_events(, **options)
+      req = build_request(:list_device_events, )
       req.send_request(options)
     end
 
@@ -2265,8 +2265,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_gateway_groups(**params)
     # @param [Hash] params ({})
-    def list_gateway_groups(params = {}, **options)
-      req = build_request(:list_gateway_groups, params)
+    def list_gateway_groups(, **options)
+      req = build_request(:list_gateway_groups, )
       req.send_request(options)
     end
 
@@ -2313,8 +2313,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_gateways(**params)
     # @param [Hash] params ({})
-    def list_gateways(params = {}, **options)
-      req = build_request(:list_gateways, params)
+    def list_gateways(, **options)
+      req = build_request(:list_gateways, )
       req.send_request(options)
     end
 
@@ -2372,8 +2372,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_skills(**params)
     # @param [Hash] params ({})
-    def list_skills(params = {}, **options)
-      req = build_request(:list_skills, params)
+    def list_skills(, **options)
+      req = build_request(:list_skills, )
       req.send_request(options)
     end
 
@@ -2410,8 +2410,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_skills_store_categories(**params)
     # @param [Hash] params ({})
-    def list_skills_store_categories(params = {}, **options)
-      req = build_request(:list_skills_store_categories, params)
+    def list_skills_store_categories(, **options)
+      req = build_request(:list_skills_store_categories, )
       req.send_request(options)
     end
 
@@ -2476,8 +2476,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_skills_store_skills_by_category(**params)
     # @param [Hash] params ({})
-    def list_skills_store_skills_by_category(params = {}, **options)
-      req = build_request(:list_skills_store_skills_by_category, params)
+    def list_skills_store_skills_by_category(, **options)
+      req = build_request(:list_skills_store_skills_by_category, )
       req.send_request(options)
     end
 
@@ -2519,8 +2519,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_smart_home_appliances(**params)
     # @param [Hash] params ({})
-    def list_smart_home_appliances(params = {}, **options)
-      req = build_request(:list_smart_home_appliances, params)
+    def list_smart_home_appliances(, **options)
+      req = build_request(:list_smart_home_appliances, )
       req.send_request(options)
     end
 
@@ -2567,8 +2567,8 @@ module Aws::AlexaForBusiness
     #
     # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, **options)
-      req = build_request(:list_tags, params)
+    def list_tags(, **options)
+      req = build_request(:list_tags, )
       req.send_request(options)
     end
 
@@ -2592,8 +2592,8 @@ module Aws::AlexaForBusiness
     #
     # @overload put_conference_preference(**params)
     # @param [Hash] params ({})
-    def put_conference_preference(params = {}, **options)
-      req = build_request(:put_conference_preference, params)
+    def put_conference_preference(, **options)
+      req = build_request(:put_conference_preference, )
       req.send_request(options)
     end
 
@@ -2625,8 +2625,8 @@ module Aws::AlexaForBusiness
     #
     # @overload put_invitation_configuration(**params)
     # @param [Hash] params ({})
-    def put_invitation_configuration(params = {}, **options)
-      req = build_request(:put_invitation_configuration, params)
+    def put_invitation_configuration(, **options)
+      req = build_request(:put_invitation_configuration, )
       req.send_request(options)
     end
 
@@ -2661,8 +2661,8 @@ module Aws::AlexaForBusiness
     #
     # @overload put_room_skill_parameter(**params)
     # @param [Hash] params ({})
-    def put_room_skill_parameter(params = {}, **options)
-      req = build_request(:put_room_skill_parameter, params)
+    def put_room_skill_parameter(, **options)
+      req = build_request(:put_room_skill_parameter, )
       req.send_request(options)
     end
 
@@ -2698,8 +2698,8 @@ module Aws::AlexaForBusiness
     #
     # @overload put_skill_authorization(**params)
     # @param [Hash] params ({})
-    def put_skill_authorization(params = {}, **options)
-      req = build_request(:put_skill_authorization, params)
+    def put_skill_authorization(, **options)
+      req = build_request(:put_skill_authorization, )
       req.send_request(options)
     end
 
@@ -2752,8 +2752,8 @@ module Aws::AlexaForBusiness
     #
     # @overload register_avs_device(**params)
     # @param [Hash] params ({})
-    def register_avs_device(params = {}, **options)
-      req = build_request(:register_avs_device, params)
+    def register_avs_device(, **options)
+      req = build_request(:register_avs_device, )
       req.send_request(options)
     end
 
@@ -2777,8 +2777,8 @@ module Aws::AlexaForBusiness
     #
     # @overload reject_skill(**params)
     # @param [Hash] params ({})
-    def reject_skill(params = {}, **options)
-      req = build_request(:reject_skill, params)
+    def reject_skill(, **options)
+      req = build_request(:reject_skill, )
       req.send_request(options)
     end
 
@@ -2816,8 +2816,8 @@ module Aws::AlexaForBusiness
     #
     # @overload resolve_room(**params)
     # @param [Hash] params ({})
-    def resolve_room(params = {}, **options)
-      req = build_request(:resolve_room, params)
+    def resolve_room(, **options)
+      req = build_request(:resolve_room, )
       req.send_request(options)
     end
 
@@ -2843,8 +2843,8 @@ module Aws::AlexaForBusiness
     #
     # @overload revoke_invitation(**params)
     # @param [Hash] params ({})
-    def revoke_invitation(params = {}, **options)
-      req = build_request(:revoke_invitation, params)
+    def revoke_invitation(, **options)
+      req = build_request(:revoke_invitation, )
       req.send_request(options)
     end
 
@@ -2910,8 +2910,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_address_books(**params)
     # @param [Hash] params ({})
-    def search_address_books(params = {}, **options)
-      req = build_request(:search_address_books, params)
+    def search_address_books(, **options)
+      req = build_request(:search_address_books, )
       req.send_request(options)
     end
 
@@ -2986,8 +2986,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_contacts(**params)
     # @param [Hash] params ({})
-    def search_contacts(params = {}, **options)
-      req = build_request(:search_contacts, params)
+    def search_contacts(, **options)
+      req = build_request(:search_contacts, )
       req.send_request(options)
     end
 
@@ -3073,8 +3073,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_devices(**params)
     # @param [Hash] params ({})
-    def search_devices(params = {}, **options)
-      req = build_request(:search_devices, params)
+    def search_devices(, **options)
+      req = build_request(:search_devices, )
       req.send_request(options)
     end
 
@@ -3145,8 +3145,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_network_profiles(**params)
     # @param [Hash] params ({})
-    def search_network_profiles(params = {}, **options)
-      req = build_request(:search_network_profiles, params)
+    def search_network_profiles(, **options)
+      req = build_request(:search_network_profiles, )
       req.send_request(options)
     end
 
@@ -3219,8 +3219,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_profiles(**params)
     # @param [Hash] params ({})
-    def search_profiles(params = {}, **options)
-      req = build_request(:search_profiles, params)
+    def search_profiles(, **options)
+      req = build_request(:search_profiles, )
       req.send_request(options)
     end
 
@@ -3290,8 +3290,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_rooms(**params)
     # @param [Hash] params ({})
-    def search_rooms(params = {}, **options)
-      req = build_request(:search_rooms, params)
+    def search_rooms(, **options)
+      req = build_request(:search_rooms, )
       req.send_request(options)
     end
 
@@ -3358,8 +3358,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_skill_groups(**params)
     # @param [Hash] params ({})
-    def search_skill_groups(params = {}, **options)
-      req = build_request(:search_skill_groups, params)
+    def search_skill_groups(, **options)
+      req = build_request(:search_skill_groups, )
       req.send_request(options)
     end
 
@@ -3431,8 +3431,8 @@ module Aws::AlexaForBusiness
     #
     # @overload search_users(**params)
     # @param [Hash] params ({})
-    def search_users(params = {}, **options)
-      req = build_request(:search_users, params)
+    def search_users(, **options)
+      req = build_request(:search_users, )
       req.send_request(options)
     end
 
@@ -3505,8 +3505,8 @@ module Aws::AlexaForBusiness
     #
     # @overload send_announcement(**params)
     # @param [Hash] params ({})
-    def send_announcement(params = {}, **options)
-      req = build_request(:send_announcement, params)
+    def send_announcement(, **options)
+      req = build_request(:send_announcement, )
       req.send_request(options)
     end
 
@@ -3529,8 +3529,8 @@ module Aws::AlexaForBusiness
     #
     # @overload send_invitation(**params)
     # @param [Hash] params ({})
-    def send_invitation(params = {}, **options)
-      req = build_request(:send_invitation, params)
+    def send_invitation(, **options)
+      req = build_request(:send_invitation, )
       req.send_request(options)
     end
 
@@ -3576,8 +3576,8 @@ module Aws::AlexaForBusiness
     #
     # @overload start_device_sync(**params)
     # @param [Hash] params ({})
-    def start_device_sync(params = {}, **options)
-      req = build_request(:start_device_sync, params)
+    def start_device_sync(, **options)
+      req = build_request(:start_device_sync, )
       req.send_request(options)
     end
 
@@ -3599,8 +3599,8 @@ module Aws::AlexaForBusiness
     #
     # @overload start_smart_home_appliance_discovery(**params)
     # @param [Hash] params ({})
-    def start_smart_home_appliance_discovery(params = {}, **options)
-      req = build_request(:start_smart_home_appliance_discovery, params)
+    def start_smart_home_appliance_discovery(, **options)
+      req = build_request(:start_smart_home_appliance_discovery, )
       req.send_request(options)
     end
 
@@ -3631,8 +3631,8 @@ module Aws::AlexaForBusiness
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -3658,8 +3658,8 @@ module Aws::AlexaForBusiness
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -3688,8 +3688,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_address_book(**params)
     # @param [Hash] params ({})
-    def update_address_book(params = {}, **options)
-      req = build_request(:update_address_book, params)
+    def update_address_book(, **options)
+      req = build_request(:update_address_book, )
       req.send_request(options)
     end
 
@@ -3734,8 +3734,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_business_report_schedule(**params)
     # @param [Hash] params ({})
-    def update_business_report_schedule(params = {}, **options)
-      req = build_request(:update_business_report_schedule, params)
+    def update_business_report_schedule(, **options)
+      req = build_request(:update_business_report_schedule, )
       req.send_request(options)
     end
 
@@ -3782,8 +3782,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_conference_provider(**params)
     # @param [Hash] params ({})
-    def update_conference_provider(params = {}, **options)
-      req = build_request(:update_conference_provider, params)
+    def update_conference_provider(, **options)
+      req = build_request(:update_conference_provider, )
       req.send_request(options)
     end
 
@@ -3841,8 +3841,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_contact(**params)
     # @param [Hash] params ({})
-    def update_contact(params = {}, **options)
-      req = build_request(:update_contact, params)
+    def update_contact(, **options)
+      req = build_request(:update_contact, )
       req.send_request(options)
     end
 
@@ -3867,8 +3867,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_device(**params)
     # @param [Hash] params ({})
-    def update_device(params = {}, **options)
-      req = build_request(:update_device, params)
+    def update_device(, **options)
+      req = build_request(:update_device, )
       req.send_request(options)
     end
 
@@ -3903,8 +3903,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_gateway(**params)
     # @param [Hash] params ({})
-    def update_gateway(params = {}, **options)
-      req = build_request(:update_gateway, params)
+    def update_gateway(, **options)
+      req = build_request(:update_gateway, )
       req.send_request(options)
     end
 
@@ -3934,8 +3934,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_gateway_group(**params)
     # @param [Hash] params ({})
-    def update_gateway_group(params = {}, **options)
-      req = build_request(:update_gateway_group, params)
+    def update_gateway_group(, **options)
+      req = build_request(:update_gateway_group, )
       req.send_request(options)
     end
 
@@ -3986,8 +3986,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_network_profile(**params)
     # @param [Hash] params ({})
-    def update_network_profile(params = {}, **options)
-      req = build_request(:update_network_profile, params)
+    def update_network_profile(, **options)
+      req = build_request(:update_network_profile, )
       req.send_request(options)
     end
 
@@ -4073,8 +4073,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_profile(**params)
     # @param [Hash] params ({})
-    def update_profile(params = {}, **options)
-      req = build_request(:update_profile, params)
+    def update_profile(, **options)
+      req = build_request(:update_profile, )
       req.send_request(options)
     end
 
@@ -4111,8 +4111,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_room(**params)
     # @param [Hash] params ({})
-    def update_room(params = {}, **options)
-      req = build_request(:update_room, params)
+    def update_room(, **options)
+      req = build_request(:update_room, )
       req.send_request(options)
     end
 
@@ -4141,8 +4141,8 @@ module Aws::AlexaForBusiness
     #
     # @overload update_skill_group(**params)
     # @param [Hash] params ({})
-    def update_skill_group(params = {}, **options)
-      req = build_request(:update_skill_group, params)
+    def update_skill_group(, **options)
+      req = build_request(:update_skill_group, )
       req.send_request(options)
     end
 

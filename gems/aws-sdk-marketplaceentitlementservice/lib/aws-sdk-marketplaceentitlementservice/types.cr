@@ -209,5 +209,69 @@ module Aws::MarketplaceEntitlementService
       include Aws::Structure
     end
 
+    alias Boolean = Bool
+
+    alias Double = Float64
+
+    alias Entitlement = NamedTuple(
+      "ProductCode" : (ProductCode)?,
+      "Dimension" : (NonEmptyString)?,
+      "CustomerIdentifier" : (NonEmptyString)?,
+      "Value" : (EntitlementValue)?,
+      "ExpirationDate" : (Timestamp)?
+    )
+
+    alias EntitlementList = Array(Entitlement)
+
+    alias EntitlementValue = NamedTuple(
+      "IntegerValue" : (Integer)?,
+      "DoubleValue" : (Double)?,
+      "BooleanValue" : (Boolean)?,
+      "StringValue" : (String)?
+    )
+
+    alias ErrorMessage = String
+
+    alias FilterValue = String
+
+    alias FilterValueList = Array(FilterValue)
+
+    alias GetEntitlementFilterName = String
+
+    alias GetEntitlementFilters = Hash(GetEntitlementFilterName,FilterValueList)
+
+    alias GetEntitlementsRequest = NamedTuple(
+      "ProductCode" : ProductCode,
+      "Filter" : (GetEntitlementFilters)?,
+      "NextToken" : (NonEmptyString)?,
+      "MaxResults" : (Integer)?
+    )
+
+    alias GetEntitlementsResult = NamedTuple(
+      "Entitlements" : (EntitlementList)?,
+      "NextToken" : (NonEmptyString)?
+    )
+
+    alias Integer = Int32
+
+    alias InternalServiceErrorException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias InvalidParameterException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias NonEmptyString = String
+
+    alias ProductCode = String
+
+    alias String = String
+
+    alias ThrottlingException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
   end
 end

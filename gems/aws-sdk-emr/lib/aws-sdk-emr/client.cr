@@ -421,8 +421,8 @@ module Aws::EMR
     #
     # @overload add_instance_fleet(**params)
     # @param [Hash] params ({})
-    def add_instance_fleet(params = {}, **options)
-      req = build_request(:add_instance_fleet, params)
+    def add_instance_fleet(, **options)
+      req = build_request(:add_instance_fleet, )
       req.send_request(options)
     end
 
@@ -529,8 +529,8 @@ module Aws::EMR
     #
     # @overload add_instance_groups(**params)
     # @param [Hash] params ({})
-    def add_instance_groups(params = {}, **options)
-      req = build_request(:add_instance_groups, params)
+    def add_instance_groups(, **options)
+      req = build_request(:add_instance_groups, )
       req.send_request(options)
     end
 
@@ -606,8 +606,8 @@ module Aws::EMR
     #
     # @overload add_job_flow_steps(**params)
     # @param [Hash] params ({})
-    def add_job_flow_steps(params = {}, **options)
-      req = build_request(:add_job_flow_steps, params)
+    def add_job_flow_steps(, **options)
+      req = build_request(:add_job_flow_steps, )
       req.send_request(options)
     end
 
@@ -648,8 +648,8 @@ module Aws::EMR
     #
     # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, **options)
-      req = build_request(:add_tags, params)
+    def add_tags(, **options)
+      req = build_request(:add_tags, )
       req.send_request(options)
     end
 
@@ -695,8 +695,8 @@ module Aws::EMR
     #
     # @overload cancel_steps(**params)
     # @param [Hash] params ({})
-    def cancel_steps(params = {}, **options)
-      req = build_request(:cancel_steps, params)
+    def cancel_steps(, **options)
+      req = build_request(:cancel_steps, )
       req.send_request(options)
     end
 
@@ -736,8 +736,8 @@ module Aws::EMR
     #
     # @overload create_security_configuration(**params)
     # @param [Hash] params ({})
-    def create_security_configuration(params = {}, **options)
-      req = build_request(:create_security_configuration, params)
+    def create_security_configuration(, **options)
+      req = build_request(:create_security_configuration, )
       req.send_request(options)
     end
 
@@ -835,8 +835,8 @@ module Aws::EMR
     #
     # @overload create_studio(**params)
     # @param [Hash] params ({})
-    def create_studio(params = {}, **options)
-      req = build_request(:create_studio, params)
+    def create_studio(, **options)
+      req = build_request(:create_studio, )
       req.send_request(options)
     end
 
@@ -899,8 +899,8 @@ module Aws::EMR
     #
     # @overload create_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def create_studio_session_mapping(params = {}, **options)
-      req = build_request(:create_studio_session_mapping, params)
+    def create_studio_session_mapping(, **options)
+      req = build_request(:create_studio_session_mapping, )
       req.send_request(options)
     end
 
@@ -921,8 +921,8 @@ module Aws::EMR
     #
     # @overload delete_security_configuration(**params)
     # @param [Hash] params ({})
-    def delete_security_configuration(params = {}, **options)
-      req = build_request(:delete_security_configuration, params)
+    def delete_security_configuration(, **options)
+      req = build_request(:delete_security_configuration, )
       req.send_request(options)
     end
 
@@ -948,8 +948,8 @@ module Aws::EMR
     #
     # @overload delete_studio(**params)
     # @param [Hash] params ({})
-    def delete_studio(params = {}, **options)
-      req = build_request(:delete_studio, params)
+    def delete_studio(, **options)
+      req = build_request(:delete_studio, )
       req.send_request(options)
     end
 
@@ -1004,8 +1004,8 @@ module Aws::EMR
     #
     # @overload delete_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def delete_studio_session_mapping(params = {}, **options)
-      req = build_request(:delete_studio_session_mapping, params)
+    def delete_studio_session_mapping(, **options)
+      req = build_request(:delete_studio_session_mapping, )
       req.send_request(options)
     end
 
@@ -1105,8 +1105,8 @@ module Aws::EMR
     #
     # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, **options)
-      req = build_request(:describe_cluster, params)
+    def describe_cluster(, **options)
+      req = build_request(:describe_cluster, )
       req.send_request(options)
     end
 
@@ -1232,8 +1232,8 @@ module Aws::EMR
     #
     # @overload describe_job_flows(**params)
     # @param [Hash] params ({})
-    def describe_job_flows(params = {}, **options)
-      req = build_request(:describe_job_flows, params)
+    def describe_job_flows(, **options)
+      req = build_request(:describe_job_flows, )
       req.send_request(options)
     end
 
@@ -1276,8 +1276,8 @@ module Aws::EMR
     #
     # @overload describe_notebook_execution(**params)
     # @param [Hash] params ({})
-    def describe_notebook_execution(params = {}, **options)
-      req = build_request(:describe_notebook_execution, params)
+    def describe_notebook_execution(, **options)
+      req = build_request(:describe_notebook_execution, )
       req.send_request(options)
     end
 
@@ -1309,8 +1309,8 @@ module Aws::EMR
     #
     # @overload describe_security_configuration(**params)
     # @param [Hash] params ({})
-    def describe_security_configuration(params = {}, **options)
-      req = build_request(:describe_security_configuration, params)
+    def describe_security_configuration(, **options)
+      req = build_request(:describe_security_configuration, )
       req.send_request(options)
     end
 
@@ -1363,8 +1363,8 @@ module Aws::EMR
     #
     # @overload describe_step(**params)
     # @param [Hash] params ({})
-    def describe_step(params = {}, **options)
-      req = build_request(:describe_step, params)
+    def describe_step(, **options)
+      req = build_request(:describe_step, )
       req.send_request(options)
     end
 
@@ -1414,8 +1414,8 @@ module Aws::EMR
     #
     # @overload describe_studio(**params)
     # @param [Hash] params ({})
-    def describe_studio(params = {}, **options)
-      req = build_request(:describe_studio, params)
+    def describe_studio(, **options)
+      req = build_request(:describe_studio, )
       req.send_request(options)
     end
 
@@ -1446,8 +1446,8 @@ module Aws::EMR
     #
     # @overload get_block_public_access_configuration(**params)
     # @param [Hash] params ({})
-    def get_block_public_access_configuration(params = {}, **options)
-      req = build_request(:get_block_public_access_configuration, params)
+    def get_block_public_access_configuration(, **options)
+      req = build_request(:get_block_public_access_configuration, )
       req.send_request(options)
     end
 
@@ -1479,8 +1479,8 @@ module Aws::EMR
     #
     # @overload get_managed_scaling_policy(**params)
     # @param [Hash] params ({})
-    def get_managed_scaling_policy(params = {}, **options)
-      req = build_request(:get_managed_scaling_policy, params)
+    def get_managed_scaling_policy(, **options)
+      req = build_request(:get_managed_scaling_policy, )
       req.send_request(options)
     end
 
@@ -1546,8 +1546,8 @@ module Aws::EMR
     #
     # @overload get_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def get_studio_session_mapping(params = {}, **options)
-      req = build_request(:get_studio_session_mapping, params)
+    def get_studio_session_mapping(, **options)
+      req = build_request(:get_studio_session_mapping, )
       req.send_request(options)
     end
 
@@ -1588,8 +1588,8 @@ module Aws::EMR
     #
     # @overload list_bootstrap_actions(**params)
     # @param [Hash] params ({})
-    def list_bootstrap_actions(params = {}, **options)
-      req = build_request(:list_bootstrap_actions, params)
+    def list_bootstrap_actions(, **options)
+      req = build_request(:list_bootstrap_actions, )
       req.send_request(options)
     end
 
@@ -1650,8 +1650,8 @@ module Aws::EMR
     #
     # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, **options)
-      req = build_request(:list_clusters, params)
+    def list_clusters(, **options)
+      req = build_request(:list_clusters, )
       req.send_request(options)
     end
 
@@ -1726,8 +1726,8 @@ module Aws::EMR
     #
     # @overload list_instance_fleets(**params)
     # @param [Hash] params ({})
-    def list_instance_fleets(params = {}, **options)
-      req = build_request(:list_instance_fleets, params)
+    def list_instance_fleets(, **options)
+      req = build_request(:list_instance_fleets, )
       req.send_request(options)
     end
 
@@ -1824,8 +1824,8 @@ module Aws::EMR
     #
     # @overload list_instance_groups(**params)
     # @param [Hash] params ({})
-    def list_instance_groups(params = {}, **options)
-      req = build_request(:list_instance_groups, params)
+    def list_instance_groups(, **options)
+      req = build_request(:list_instance_groups, )
       req.send_request(options)
     end
 
@@ -1905,8 +1905,8 @@ module Aws::EMR
     #
     # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, **options)
-      req = build_request(:list_instances, params)
+    def list_instances(, **options)
+      req = build_request(:list_instances, )
       req.send_request(options)
     end
 
@@ -1994,8 +1994,8 @@ module Aws::EMR
     #
     # @overload list_notebook_executions(**params)
     # @param [Hash] params ({})
-    def list_notebook_executions(params = {}, **options)
-      req = build_request(:list_notebook_executions, params)
+    def list_notebook_executions(, **options)
+      req = build_request(:list_notebook_executions, )
       req.send_request(options)
     end
 
@@ -2032,8 +2032,8 @@ module Aws::EMR
     #
     # @overload list_security_configurations(**params)
     # @param [Hash] params ({})
-    def list_security_configurations(params = {}, **options)
-      req = build_request(:list_security_configurations, params)
+    def list_security_configurations(, **options)
+      req = build_request(:list_security_configurations, )
       req.send_request(options)
     end
 
@@ -2099,8 +2099,8 @@ module Aws::EMR
     #
     # @overload list_steps(**params)
     # @param [Hash] params ({})
-    def list_steps(params = {}, **options)
-      req = build_request(:list_steps, params)
+    def list_steps(, **options)
+      req = build_request(:list_steps, )
       req.send_request(options)
     end
 
@@ -2153,8 +2153,8 @@ module Aws::EMR
     #
     # @overload list_studio_session_mappings(**params)
     # @param [Hash] params ({})
-    def list_studio_session_mappings(params = {}, **options)
-      req = build_request(:list_studio_session_mappings, params)
+    def list_studio_session_mappings(, **options)
+      req = build_request(:list_studio_session_mappings, )
       req.send_request(options)
     end
 
@@ -2198,8 +2198,8 @@ module Aws::EMR
     #
     # @overload list_studios(**params)
     # @param [Hash] params ({})
-    def list_studios(params = {}, **options)
-      req = build_request(:list_studios, params)
+    def list_studios(, **options)
+      req = build_request(:list_studios, )
       req.send_request(options)
     end
 
@@ -2232,8 +2232,8 @@ module Aws::EMR
     #
     # @overload modify_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cluster(params = {}, **options)
-      req = build_request(:modify_cluster, params)
+    def modify_cluster(, **options)
+      req = build_request(:modify_cluster, )
       req.send_request(options)
     end
 
@@ -2270,8 +2270,8 @@ module Aws::EMR
     #
     # @overload modify_instance_fleet(**params)
     # @param [Hash] params ({})
-    def modify_instance_fleet(params = {}, **options)
-      req = build_request(:modify_instance_fleet, params)
+    def modify_instance_fleet(, **options)
+      req = build_request(:modify_instance_fleet, )
       req.send_request(options)
     end
 
@@ -2324,8 +2324,8 @@ module Aws::EMR
     #
     # @overload modify_instance_groups(**params)
     # @param [Hash] params ({})
-    def modify_instance_groups(params = {}, **options)
-      req = build_request(:modify_instance_groups, params)
+    def modify_instance_groups(, **options)
+      req = build_request(:modify_instance_groups, )
       req.send_request(options)
     end
 
@@ -2431,8 +2431,8 @@ module Aws::EMR
     #
     # @overload put_auto_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_auto_scaling_policy(params = {}, **options)
-      req = build_request(:put_auto_scaling_policy, params)
+    def put_auto_scaling_policy(, **options)
+      req = build_request(:put_auto_scaling_policy, )
       req.send_request(options)
     end
 
@@ -2486,8 +2486,8 @@ module Aws::EMR
     #
     # @overload put_block_public_access_configuration(**params)
     # @param [Hash] params ({})
-    def put_block_public_access_configuration(params = {}, **options)
-      req = build_request(:put_block_public_access_configuration, params)
+    def put_block_public_access_configuration(, **options)
+      req = build_request(:put_block_public_access_configuration, )
       req.send_request(options)
     end
 
@@ -2525,8 +2525,8 @@ module Aws::EMR
     #
     # @overload put_managed_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_managed_scaling_policy(params = {}, **options)
-      req = build_request(:put_managed_scaling_policy, params)
+    def put_managed_scaling_policy(, **options)
+      req = build_request(:put_managed_scaling_policy, )
       req.send_request(options)
     end
 
@@ -2554,8 +2554,8 @@ module Aws::EMR
     #
     # @overload remove_auto_scaling_policy(**params)
     # @param [Hash] params ({})
-    def remove_auto_scaling_policy(params = {}, **options)
-      req = build_request(:remove_auto_scaling_policy, params)
+    def remove_auto_scaling_policy(, **options)
+      req = build_request(:remove_auto_scaling_policy, )
       req.send_request(options)
     end
 
@@ -2577,8 +2577,8 @@ module Aws::EMR
     #
     # @overload remove_managed_scaling_policy(**params)
     # @param [Hash] params ({})
-    def remove_managed_scaling_policy(params = {}, **options)
-      req = build_request(:remove_managed_scaling_policy, params)
+    def remove_managed_scaling_policy(, **options)
+      req = build_request(:remove_managed_scaling_policy, )
       req.send_request(options)
     end
 
@@ -2614,8 +2614,8 @@ module Aws::EMR
     #
     # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, **options)
-      req = build_request(:remove_tags, params)
+    def remove_tags(, **options)
+      req = build_request(:remove_tags, )
       req.send_request(options)
     end
 
@@ -3128,8 +3128,8 @@ module Aws::EMR
     #
     # @overload run_job_flow(**params)
     # @param [Hash] params ({})
-    def run_job_flow(params = {}, **options)
-      req = build_request(:run_job_flow, params)
+    def run_job_flow(, **options)
+      req = build_request(:run_job_flow, )
       req.send_request(options)
     end
 
@@ -3181,8 +3181,8 @@ module Aws::EMR
     #
     # @overload set_termination_protection(**params)
     # @param [Hash] params ({})
-    def set_termination_protection(params = {}, **options)
-      req = build_request(:set_termination_protection, params)
+    def set_termination_protection(, **options)
+      req = build_request(:set_termination_protection, )
       req.send_request(options)
     end
 
@@ -3219,8 +3219,8 @@ module Aws::EMR
     #
     # @overload set_visible_to_all_users(**params)
     # @param [Hash] params ({})
-    def set_visible_to_all_users(params = {}, **options)
-      req = build_request(:set_visible_to_all_users, params)
+    def set_visible_to_all_users(, **options)
+      req = build_request(:set_visible_to_all_users, )
       req.send_request(options)
     end
 
@@ -3300,8 +3300,8 @@ module Aws::EMR
     #
     # @overload start_notebook_execution(**params)
     # @param [Hash] params ({})
-    def start_notebook_execution(params = {}, **options)
-      req = build_request(:start_notebook_execution, params)
+    def start_notebook_execution(, **options)
+      req = build_request(:start_notebook_execution, )
       req.send_request(options)
     end
 
@@ -3322,8 +3322,8 @@ module Aws::EMR
     #
     # @overload stop_notebook_execution(**params)
     # @param [Hash] params ({})
-    def stop_notebook_execution(params = {}, **options)
-      req = build_request(:stop_notebook_execution, params)
+    def stop_notebook_execution(, **options)
+      req = build_request(:stop_notebook_execution, )
       req.send_request(options)
     end
 
@@ -3354,8 +3354,8 @@ module Aws::EMR
     #
     # @overload terminate_job_flows(**params)
     # @param [Hash] params ({})
-    def terminate_job_flows(params = {}, **options)
-      req = build_request(:terminate_job_flows, params)
+    def terminate_job_flows(, **options)
+      req = build_request(:terminate_job_flows, )
       req.send_request(options)
     end
 
@@ -3414,8 +3414,8 @@ module Aws::EMR
     #
     # @overload update_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def update_studio_session_mapping(params = {}, **options)
-      req = build_request(:update_studio_session_mapping, params)
+    def update_studio_session_mapping(, **options)
+      req = build_request(:update_studio_session_mapping, )
       req.send_request(options)
     end
 

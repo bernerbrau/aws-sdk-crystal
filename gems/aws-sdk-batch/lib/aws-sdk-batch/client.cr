@@ -368,8 +368,8 @@ module Aws::Batch
     #
     # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, **options)
-      req = build_request(:cancel_job, params)
+    def cancel_job(, **options)
+      req = build_request(:cancel_job, )
       req.send_request(options)
     end
 
@@ -634,8 +634,8 @@ module Aws::Batch
     #
     # @overload create_compute_environment(**params)
     # @param [Hash] params ({})
-    def create_compute_environment(params = {}, **options)
-      req = build_request(:create_compute_environment, params)
+    def create_compute_environment(, **options)
+      req = build_request(:create_compute_environment, )
       req.send_request(options)
     end
 
@@ -767,8 +767,8 @@ module Aws::Batch
     #
     # @overload create_job_queue(**params)
     # @param [Hash] params ({})
-    def create_job_queue(params = {}, **options)
-      req = build_request(:create_job_queue, params)
+    def create_job_queue(, **options)
+      req = build_request(:create_job_queue, )
       req.send_request(options)
     end
 
@@ -811,8 +811,8 @@ module Aws::Batch
     #
     # @overload delete_compute_environment(**params)
     # @param [Hash] params ({})
-    def delete_compute_environment(params = {}, **options)
-      req = build_request(:delete_compute_environment, params)
+    def delete_compute_environment(, **options)
+      req = build_request(:delete_compute_environment, )
       req.send_request(options)
     end
 
@@ -852,8 +852,8 @@ module Aws::Batch
     #
     # @overload delete_job_queue(**params)
     # @param [Hash] params ({})
-    def delete_job_queue(params = {}, **options)
-      req = build_request(:delete_job_queue, params)
+    def delete_job_queue(, **options)
+      req = build_request(:delete_job_queue, )
       req.send_request(options)
     end
 
@@ -889,8 +889,8 @@ module Aws::Batch
     #
     # @overload deregister_job_definition(**params)
     # @param [Hash] params ({})
-    def deregister_job_definition(params = {}, **options)
-      req = build_request(:deregister_job_definition, params)
+    def deregister_job_definition(, **options)
+      req = build_request(:deregister_job_definition, )
       req.send_request(options)
     end
 
@@ -1037,8 +1037,8 @@ module Aws::Batch
     #
     # @overload describe_compute_environments(**params)
     # @param [Hash] params ({})
-    def describe_compute_environments(params = {}, **options)
-      req = build_request(:describe_compute_environments, params)
+    def describe_compute_environments(, **options)
+      req = build_request(:describe_compute_environments, )
       req.send_request(options)
     end
 
@@ -1273,8 +1273,8 @@ module Aws::Batch
     #
     # @overload describe_job_definitions(**params)
     # @param [Hash] params ({})
-    def describe_job_definitions(params = {}, **options)
-      req = build_request(:describe_job_definitions, params)
+    def describe_job_definitions(, **options)
+      req = build_request(:describe_job_definitions, )
       req.send_request(options)
     end
 
@@ -1373,8 +1373,8 @@ module Aws::Batch
     #
     # @overload describe_job_queues(**params)
     # @param [Hash] params ({})
-    def describe_job_queues(params = {}, **options)
-      req = build_request(:describe_job_queues, params)
+    def describe_job_queues(, **options)
+      req = build_request(:describe_job_queues, )
       req.send_request(options)
     end
 
@@ -1616,8 +1616,8 @@ module Aws::Batch
     #
     # @overload describe_jobs(**params)
     # @param [Hash] params ({})
-    def describe_jobs(params = {}, **options)
-      req = build_request(:describe_jobs, params)
+    def describe_jobs(, **options)
+      req = build_request(:describe_jobs, )
       req.send_request(options)
     end
 
@@ -1755,8 +1755,8 @@ module Aws::Batch
     #
     # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, **options)
-      req = build_request(:list_jobs, params)
+    def list_jobs(, **options)
+      req = build_request(:list_jobs, )
       req.send_request(options)
     end
 
@@ -1808,8 +1808,8 @@ module Aws::Batch
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2200,8 +2200,8 @@ module Aws::Batch
     #
     # @overload register_job_definition(**params)
     # @param [Hash] params ({})
-    def register_job_definition(params = {}, **options)
-      req = build_request(:register_job_definition, params)
+    def register_job_definition(, **options)
+      req = build_request(:register_job_definition, )
       req.send_request(options)
     end
 
@@ -2427,8 +2427,8 @@ module Aws::Batch
     #
     # @overload submit_job(**params)
     # @param [Hash] params ({})
-    def submit_job(params = {}, **options)
-      req = build_request(:submit_job, params)
+    def submit_job(, **options)
+      req = build_request(:submit_job, )
       req.send_request(options)
     end
 
@@ -2487,8 +2487,8 @@ module Aws::Batch
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2532,8 +2532,8 @@ module Aws::Batch
     #
     # @overload terminate_job(**params)
     # @param [Hash] params ({})
-    def terminate_job(params = {}, **options)
-      req = build_request(:terminate_job, params)
+    def terminate_job(, **options)
+      req = build_request(:terminate_job, )
       req.send_request(options)
     end
 
@@ -2577,8 +2577,8 @@ module Aws::Batch
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2659,8 +2659,8 @@ module Aws::Batch
     #
     # @overload update_compute_environment(**params)
     # @param [Hash] params ({})
-    def update_compute_environment(params = {}, **options)
-      req = build_request(:update_compute_environment, params)
+    def update_compute_environment(, **options)
+      req = build_request(:update_compute_environment, )
       req.send_request(options)
     end
 
@@ -2735,8 +2735,8 @@ module Aws::Batch
     #
     # @overload update_job_queue(**params)
     # @param [Hash] params ({})
-    def update_job_queue(params = {}, **options)
-      req = build_request(:update_job_queue, params)
+    def update_job_queue(, **options)
+      req = build_request(:update_job_queue, )
       req.send_request(options)
     end
 

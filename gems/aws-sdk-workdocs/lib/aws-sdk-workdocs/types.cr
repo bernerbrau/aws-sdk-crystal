@@ -3276,5 +3276,887 @@ module Aws::WorkDocs
       include Aws::Structure
     end
 
+    alias AbortDocumentVersionUploadRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "VersionId" : DocumentVersionIdType
+    )
+
+    alias ActivateUserRequest = NamedTuple(
+      "UserId" : IdType,
+      "AuthenticationToken" : (AuthenticationHeaderType)?
+    )
+
+    alias ActivateUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias Activity = NamedTuple(
+      "Type" : (ActivityType)?,
+      "TimeStamp" : (TimestampType)?,
+      "IsIndirectActivity" : (BooleanType)?,
+      "OrganizationId" : (IdType)?,
+      "Initiator" : (UserMetadata)?,
+      "Participants" : (Participants)?,
+      "ResourceMetadata" : (ResourceMetadata)?,
+      "OriginalParent" : (ResourceMetadata)?,
+      "CommentMetadata" : (CommentMetadata)?
+    )
+
+    alias ActivityNamesFilterType = String
+
+    alias ActivityType = String
+
+    alias AddResourcePermissionsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "ResourceId" : ResourceIdType,
+      "Principals" : SharePrincipalList,
+      "NotificationOptions" : (NotificationOptions)?
+    )
+
+    alias AddResourcePermissionsResponse = NamedTuple(
+      "ShareResults" : (ShareResultsList)?
+    )
+
+    alias AuthenticationHeaderType = String
+
+    alias BooleanEnumType = String
+
+    alias BooleanType = Bool
+
+    alias Comment = NamedTuple(
+      "CommentId" : CommentIdType,
+      "ParentId" : (CommentIdType)?,
+      "ThreadId" : (CommentIdType)?,
+      "Text" : (CommentTextType)?,
+      "Contributor" : (User)?,
+      "CreatedTimestamp" : (TimestampType)?,
+      "Status" : (CommentStatusType)?,
+      "Visibility" : (CommentVisibilityType)?,
+      "RecipientId" : (IdType)?
+    )
+
+    alias CommentIdType = String
+
+    alias CommentList = Array(Comment)
+
+    alias CommentMetadata = NamedTuple(
+      "CommentId" : (CommentIdType)?,
+      "Contributor" : (User)?,
+      "CreatedTimestamp" : (TimestampType)?,
+      "CommentStatus" : (CommentStatusType)?,
+      "RecipientId" : (IdType)?
+    )
+
+    alias CommentStatusType = String
+
+    alias CommentTextType = String
+
+    alias CommentVisibilityType = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias ConflictingOperationException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias CreateCommentRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "VersionId" : DocumentVersionIdType,
+      "ParentId" : (CommentIdType)?,
+      "ThreadId" : (CommentIdType)?,
+      "Text" : CommentTextType,
+      "Visibility" : (CommentVisibilityType)?,
+      "NotifyCollaborators" : (BooleanType)?
+    )
+
+    alias CreateCommentResponse = NamedTuple(
+      "Comment" : (Comment)?
+    )
+
+    alias CreateCustomMetadataRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "ResourceId" : ResourceIdType,
+      "VersionId" : (DocumentVersionIdType)?,
+      "CustomMetadata" : CustomMetadataMap
+    )
+
+    alias CreateCustomMetadataResponse = NamedTuple(
+      
+    )
+
+    alias CreateFolderRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "Name" : (ResourceNameType)?,
+      "ParentFolderId" : ResourceIdType
+    )
+
+    alias CreateFolderResponse = NamedTuple(
+      "Metadata" : (FolderMetadata)?
+    )
+
+    alias CreateLabelsRequest = NamedTuple(
+      "ResourceId" : ResourceIdType,
+      "Labels" : SharedLabels,
+      "AuthenticationToken" : (AuthenticationHeaderType)?
+    )
+
+    alias CreateLabelsResponse = NamedTuple(
+      
+    )
+
+    alias CreateNotificationSubscriptionRequest = NamedTuple(
+      "OrganizationId" : IdType,
+      "Endpoint" : SubscriptionEndPointType,
+      "Protocol" : SubscriptionProtocolType,
+      "SubscriptionType" : SubscriptionType
+    )
+
+    alias CreateNotificationSubscriptionResponse = NamedTuple(
+      "Subscription" : (Subscription)?
+    )
+
+    alias CreateUserRequest = NamedTuple(
+      "OrganizationId" : (IdType)?,
+      "Username" : UsernameType,
+      "EmailAddress" : (EmailAddressType)?,
+      "GivenName" : UserAttributeValueType,
+      "Surname" : UserAttributeValueType,
+      "Password" : PasswordType,
+      "TimeZoneId" : (TimeZoneIdType)?,
+      "StorageRule" : (StorageRuleType)?,
+      "AuthenticationToken" : (AuthenticationHeaderType)?
+    )
+
+    alias CreateUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias CustomMetadataKeyList = Array(CustomMetadataKeyType)
+
+    alias CustomMetadataKeyType = String
+
+    alias CustomMetadataLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias CustomMetadataMap = Hash(CustomMetadataKeyType,CustomMetadataValueType)
+
+    alias CustomMetadataValueType = String
+
+    alias DeactivateUserRequest = NamedTuple(
+      "UserId" : IdType,
+      "AuthenticationToken" : (AuthenticationHeaderType)?
+    )
+
+    alias DeactivatingLastSystemUserException = NamedTuple(
+      
+    )
+
+    alias DeleteCommentRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "VersionId" : DocumentVersionIdType,
+      "CommentId" : CommentIdType
+    )
+
+    alias DeleteCustomMetadataRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "ResourceId" : ResourceIdType,
+      "VersionId" : (DocumentVersionIdType)?,
+      "Keys" : (CustomMetadataKeyList)?,
+      "DeleteAll" : (BooleanType)?
+    )
+
+    alias DeleteCustomMetadataResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDocumentRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType
+    )
+
+    alias DeleteFolderContentsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "FolderId" : ResourceIdType
+    )
+
+    alias DeleteFolderRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "FolderId" : ResourceIdType
+    )
+
+    alias DeleteLabelsRequest = NamedTuple(
+      "ResourceId" : ResourceIdType,
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "Labels" : (SharedLabels)?,
+      "DeleteAll" : (BooleanType)?
+    )
+
+    alias DeleteLabelsResponse = NamedTuple(
+      
+    )
+
+    alias DeleteNotificationSubscriptionRequest = NamedTuple(
+      "SubscriptionId" : IdType,
+      "OrganizationId" : IdType
+    )
+
+    alias DeleteUserRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "UserId" : IdType
+    )
+
+    alias DescribeActivitiesRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "StartTime" : (TimestampType)?,
+      "EndTime" : (TimestampType)?,
+      "OrganizationId" : (IdType)?,
+      "ActivityTypes" : (ActivityNamesFilterType)?,
+      "ResourceId" : (IdType)?,
+      "UserId" : (IdType)?,
+      "IncludeIndirectActivities" : (BooleanType)?,
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias DescribeActivitiesResponse = NamedTuple(
+      "UserActivities" : (UserActivities)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias DescribeCommentsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "VersionId" : DocumentVersionIdType,
+      "Limit" : (LimitType)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias DescribeCommentsResponse = NamedTuple(
+      "Comments" : (CommentList)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias DescribeDocumentVersionsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "Marker" : (PageMarkerType)?,
+      "Limit" : (LimitType)?,
+      "Include" : (FieldNamesType)?,
+      "Fields" : (FieldNamesType)?
+    )
+
+    alias DescribeDocumentVersionsResponse = NamedTuple(
+      "DocumentVersions" : (DocumentVersionMetadataList)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeFolderContentsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "FolderId" : ResourceIdType,
+      "Sort" : (ResourceSortType)?,
+      "Order" : (OrderType)?,
+      "Limit" : (LimitType)?,
+      "Marker" : (PageMarkerType)?,
+      "Type" : (FolderContentType)?,
+      "Include" : (FieldNamesType)?
+    )
+
+    alias DescribeFolderContentsResponse = NamedTuple(
+      "Folders" : (FolderMetadataList)?,
+      "Documents" : (DocumentMetadataList)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeGroupsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "SearchQuery" : SearchQueryType,
+      "OrganizationId" : (IdType)?,
+      "Marker" : (MarkerType)?,
+      "Limit" : (PositiveIntegerType)?
+    )
+
+    alias DescribeGroupsResponse = NamedTuple(
+      "Groups" : (GroupMetadataList)?,
+      "Marker" : (MarkerType)?
+    )
+
+    alias DescribeNotificationSubscriptionsRequest = NamedTuple(
+      "OrganizationId" : IdType,
+      "Marker" : (PageMarkerType)?,
+      "Limit" : (LimitType)?
+    )
+
+    alias DescribeNotificationSubscriptionsResponse = NamedTuple(
+      "Subscriptions" : (SubscriptionList)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeResourcePermissionsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "ResourceId" : ResourceIdType,
+      "PrincipalId" : (IdType)?,
+      "Limit" : (LimitType)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeResourcePermissionsResponse = NamedTuple(
+      "Principals" : (PrincipalList)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeRootFoldersRequest = NamedTuple(
+      "AuthenticationToken" : AuthenticationHeaderType,
+      "Limit" : (LimitType)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeRootFoldersResponse = NamedTuple(
+      "Folders" : (FolderMetadataList)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DescribeUsersRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "OrganizationId" : (IdType)?,
+      "UserIds" : (UserIdsType)?,
+      "Query" : (SearchQueryType)?,
+      "Include" : (UserFilterType)?,
+      "Order" : (OrderType)?,
+      "Sort" : (UserSortType)?,
+      "Marker" : (PageMarkerType)?,
+      "Limit" : (LimitType)?,
+      "Fields" : (FieldNamesType)?
+    )
+
+    alias DescribeUsersResponse = NamedTuple(
+      "Users" : (OrganizationUserList)?,
+      "TotalNumberOfUsers" : (SizeType)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias DocumentContentType = String
+
+    alias DocumentLockedForCommentsException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias DocumentMetadata = NamedTuple(
+      "Id" : (ResourceIdType)?,
+      "CreatorId" : (IdType)?,
+      "ParentFolderId" : (ResourceIdType)?,
+      "CreatedTimestamp" : (TimestampType)?,
+      "ModifiedTimestamp" : (TimestampType)?,
+      "LatestVersionMetadata" : (DocumentVersionMetadata)?,
+      "ResourceState" : (ResourceStateType)?,
+      "Labels" : (SharedLabels)?
+    )
+
+    alias DocumentMetadataList = Array(DocumentMetadata)
+
+    alias DocumentSourceType = String
+
+    alias DocumentSourceUrlMap = Hash(DocumentSourceType,UrlType)
+
+    alias DocumentStatusType = String
+
+    alias DocumentThumbnailType = String
+
+    alias DocumentThumbnailUrlMap = Hash(DocumentThumbnailType,UrlType)
+
+    alias DocumentVersionIdType = String
+
+    alias DocumentVersionMetadata = NamedTuple(
+      "Id" : (DocumentVersionIdType)?,
+      "Name" : (ResourceNameType)?,
+      "ContentType" : (DocumentContentType)?,
+      "Size" : (SizeType)?,
+      "Signature" : (HashType)?,
+      "Status" : (DocumentStatusType)?,
+      "CreatedTimestamp" : (TimestampType)?,
+      "ModifiedTimestamp" : (TimestampType)?,
+      "ContentCreatedTimestamp" : (TimestampType)?,
+      "ContentModifiedTimestamp" : (TimestampType)?,
+      "CreatorId" : (IdType)?,
+      "Thumbnail" : (DocumentThumbnailUrlMap)?,
+      "Source" : (DocumentSourceUrlMap)?
+    )
+
+    alias DocumentVersionMetadataList = Array(DocumentVersionMetadata)
+
+    alias DocumentVersionStatus = String
+
+    alias DraftUploadOutOfSyncException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias EmailAddressType = String
+
+    alias EntityAlreadyExistsException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias EntityIdList = Array(IdType)
+
+    alias EntityNotExistsException = NamedTuple(
+      "Message" : (ErrorMessageType)?,
+      "EntityIds" : (EntityIdList)?
+    )
+
+    alias ErrorMessageType = String
+
+    alias FailedDependencyException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias FieldNamesType = String
+
+    alias FolderContentType = String
+
+    alias FolderMetadata = NamedTuple(
+      "Id" : (ResourceIdType)?,
+      "Name" : (ResourceNameType)?,
+      "CreatorId" : (IdType)?,
+      "ParentFolderId" : (ResourceIdType)?,
+      "CreatedTimestamp" : (TimestampType)?,
+      "ModifiedTimestamp" : (TimestampType)?,
+      "ResourceState" : (ResourceStateType)?,
+      "Signature" : (HashType)?,
+      "Labels" : (SharedLabels)?,
+      "Size" : (SizeType)?,
+      "LatestVersionSize" : (SizeType)?
+    )
+
+    alias FolderMetadataList = Array(FolderMetadata)
+
+    alias GetCurrentUserRequest = NamedTuple(
+      "AuthenticationToken" : AuthenticationHeaderType
+    )
+
+    alias GetCurrentUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias GetDocumentPathRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : IdType,
+      "Limit" : (LimitType)?,
+      "Fields" : (FieldNamesType)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias GetDocumentPathResponse = NamedTuple(
+      "Path" : (ResourcePath)?
+    )
+
+    alias GetDocumentRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "IncludeCustomMetadata" : (BooleanType)?
+    )
+
+    alias GetDocumentResponse = NamedTuple(
+      "Metadata" : (DocumentMetadata)?,
+      "CustomMetadata" : (CustomMetadataMap)?
+    )
+
+    alias GetDocumentVersionRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "VersionId" : DocumentVersionIdType,
+      "Fields" : (FieldNamesType)?,
+      "IncludeCustomMetadata" : (BooleanType)?
+    )
+
+    alias GetDocumentVersionResponse = NamedTuple(
+      "Metadata" : (DocumentVersionMetadata)?,
+      "CustomMetadata" : (CustomMetadataMap)?
+    )
+
+    alias GetFolderPathRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "FolderId" : IdType,
+      "Limit" : (LimitType)?,
+      "Fields" : (FieldNamesType)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias GetFolderPathResponse = NamedTuple(
+      "Path" : (ResourcePath)?
+    )
+
+    alias GetFolderRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "FolderId" : ResourceIdType,
+      "IncludeCustomMetadata" : (BooleanType)?
+    )
+
+    alias GetFolderResponse = NamedTuple(
+      "Metadata" : (FolderMetadata)?,
+      "CustomMetadata" : (CustomMetadataMap)?
+    )
+
+    alias GetResourcesRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "UserId" : (IdType)?,
+      "CollectionType" : (ResourceCollectionType)?,
+      "Limit" : (LimitType)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias GetResourcesResponse = NamedTuple(
+      "Folders" : (FolderMetadataList)?,
+      "Documents" : (DocumentMetadataList)?,
+      "Marker" : (PageMarkerType)?
+    )
+
+    alias GroupMetadata = NamedTuple(
+      "Id" : (IdType)?,
+      "Name" : (GroupNameType)?
+    )
+
+    alias GroupMetadataList = Array(GroupMetadata)
+
+    alias GroupNameType = String
+
+    alias HashType = String
+
+    alias HeaderNameType = String
+
+    alias HeaderValueType = String
+
+    alias IdType = String
+
+    alias IllegalUserStateException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias InitiateDocumentVersionUploadRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "Id" : (ResourceIdType)?,
+      "Name" : (ResourceNameType)?,
+      "ContentCreatedTimestamp" : (TimestampType)?,
+      "ContentModifiedTimestamp" : (TimestampType)?,
+      "ContentType" : (DocumentContentType)?,
+      "DocumentSizeInBytes" : (SizeType)?,
+      "ParentFolderId" : ResourceIdType
+    )
+
+    alias InitiateDocumentVersionUploadResponse = NamedTuple(
+      "Metadata" : (DocumentMetadata)?,
+      "UploadMetadata" : (UploadMetadata)?
+    )
+
+    alias InvalidArgumentException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias InvalidCommentOperationException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias InvalidOperationException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias InvalidPasswordException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias LimitType = Int32
+
+    alias LocaleType = String
+
+    alias MarkerType = String
+
+    alias MessageType = String
+
+    alias NotificationOptions = NamedTuple(
+      "SendEmail" : (BooleanType)?,
+      "EmailMessage" : (MessageType)?
+    )
+
+    alias OrderType = String
+
+    alias OrganizationUserList = Array(User)
+
+    alias PageMarkerType = String
+
+    alias Participants = NamedTuple(
+      "Users" : (UserMetadataList)?,
+      "Groups" : (GroupMetadataList)?
+    )
+
+    alias PasswordType = String
+
+    alias PermissionInfo = NamedTuple(
+      "Role" : (RoleType)?,
+      "Type" : (RolePermissionType)?
+    )
+
+    alias PermissionInfoList = Array(PermissionInfo)
+
+    alias PositiveIntegerType = Int32
+
+    alias PositiveSizeType = Int64
+
+    alias Principal = NamedTuple(
+      "Id" : (IdType)?,
+      "Type" : (PrincipalType)?,
+      "Roles" : (PermissionInfoList)?
+    )
+
+    alias PrincipalList = Array(Principal)
+
+    alias PrincipalType = String
+
+    alias ProhibitedStateException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias RemoveAllResourcePermissionsRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "ResourceId" : ResourceIdType
+    )
+
+    alias RemoveResourcePermissionRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "ResourceId" : ResourceIdType,
+      "PrincipalId" : IdType,
+      "PrincipalType" : (PrincipalType)?
+    )
+
+    alias RequestedEntityTooLargeException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias ResourceAlreadyCheckedOutException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias ResourceCollectionType = String
+
+    alias ResourceIdType = String
+
+    alias ResourceMetadata = NamedTuple(
+      "Type" : (ResourceType)?,
+      "Name" : (ResourceNameType)?,
+      "OriginalName" : (ResourceNameType)?,
+      "Id" : (ResourceIdType)?,
+      "VersionId" : (DocumentVersionIdType)?,
+      "Owner" : (UserMetadata)?,
+      "ParentId" : (ResourceIdType)?
+    )
+
+    alias ResourceNameType = String
+
+    alias ResourcePath = NamedTuple(
+      "Components" : (ResourcePathComponentList)?
+    )
+
+    alias ResourcePathComponent = NamedTuple(
+      "Id" : (IdType)?,
+      "Name" : (ResourceNameType)?
+    )
+
+    alias ResourcePathComponentList = Array(ResourcePathComponent)
+
+    alias ResourceSortType = String
+
+    alias ResourceStateType = String
+
+    alias ResourceType = String
+
+    alias RolePermissionType = String
+
+    alias RoleType = String
+
+    alias SearchQueryType = String
+
+    alias ServiceUnavailableException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias SharePrincipal = NamedTuple(
+      "Id" : IdType,
+      "Type" : PrincipalType,
+      "Role" : RoleType
+    )
+
+    alias SharePrincipalList = Array(SharePrincipal)
+
+    alias ShareResult = NamedTuple(
+      "PrincipalId" : (IdType)?,
+      "InviteePrincipalId" : (IdType)?,
+      "Role" : (RoleType)?,
+      "Status" : (ShareStatusType)?,
+      "ShareId" : (ResourceIdType)?,
+      "StatusMessage" : (MessageType)?
+    )
+
+    alias ShareResultsList = Array(ShareResult)
+
+    alias ShareStatusType = String
+
+    alias SharedLabel = String
+
+    alias SharedLabels = Array(SharedLabel)
+
+    alias SignedHeaderMap = Hash(HeaderNameType,HeaderValueType)
+
+    alias SizeType = Int64
+
+    alias StorageLimitExceededException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias StorageLimitWillExceedException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias StorageRuleType = NamedTuple(
+      "StorageAllocatedInBytes" : (PositiveSizeType)?,
+      "StorageType" : (StorageType)?
+    )
+
+    alias StorageType = String
+
+    alias Subscription = NamedTuple(
+      "SubscriptionId" : (IdType)?,
+      "EndPoint" : (SubscriptionEndPointType)?,
+      "Protocol" : (SubscriptionProtocolType)?
+    )
+
+    alias SubscriptionEndPointType = String
+
+    alias SubscriptionList = Array(Subscription)
+
+    alias SubscriptionProtocolType = String
+
+    alias SubscriptionType = String
+
+    alias TimeZoneIdType = String
+
+    alias TimestampType = String | UInt64 | Time
+
+    alias TooManyLabelsException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias TooManySubscriptionsException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias UnauthorizedOperationException = NamedTuple(
+      
+    )
+
+    alias UnauthorizedResourceAccessException = NamedTuple(
+      "Message" : (ErrorMessageType)?
+    )
+
+    alias UpdateDocumentRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "Name" : (ResourceNameType)?,
+      "ParentFolderId" : (ResourceIdType)?,
+      "ResourceState" : (ResourceStateType)?
+    )
+
+    alias UpdateDocumentVersionRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "DocumentId" : ResourceIdType,
+      "VersionId" : DocumentVersionIdType,
+      "VersionStatus" : (DocumentVersionStatus)?
+    )
+
+    alias UpdateFolderRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "FolderId" : ResourceIdType,
+      "Name" : (ResourceNameType)?,
+      "ParentFolderId" : (ResourceIdType)?,
+      "ResourceState" : (ResourceStateType)?
+    )
+
+    alias UpdateUserRequest = NamedTuple(
+      "AuthenticationToken" : (AuthenticationHeaderType)?,
+      "UserId" : IdType,
+      "GivenName" : (UserAttributeValueType)?,
+      "Surname" : (UserAttributeValueType)?,
+      "Type" : (UserType)?,
+      "StorageRule" : (StorageRuleType)?,
+      "TimeZoneId" : (TimeZoneIdType)?,
+      "Locale" : (LocaleType)?,
+      "GrantPoweruserPrivileges" : (BooleanEnumType)?
+    )
+
+    alias UpdateUserResponse = NamedTuple(
+      "User" : (User)?
+    )
+
+    alias UploadMetadata = NamedTuple(
+      "UploadUrl" : (UrlType)?,
+      "SignedHeaders" : (SignedHeaderMap)?
+    )
+
+    alias UrlType = String
+
+    alias User = NamedTuple(
+      "Id" : (IdType)?,
+      "Username" : (UsernameType)?,
+      "EmailAddress" : (EmailAddressType)?,
+      "GivenName" : (UserAttributeValueType)?,
+      "Surname" : (UserAttributeValueType)?,
+      "OrganizationId" : (IdType)?,
+      "RootFolderId" : (ResourceIdType)?,
+      "RecycleBinFolderId" : (ResourceIdType)?,
+      "Status" : (UserStatusType)?,
+      "Type" : (UserType)?,
+      "CreatedTimestamp" : (TimestampType)?,
+      "ModifiedTimestamp" : (TimestampType)?,
+      "TimeZoneId" : (TimeZoneIdType)?,
+      "Locale" : (LocaleType)?,
+      "Storage" : (UserStorageMetadata)?
+    )
+
+    alias UserActivities = Array(Activity)
+
+    alias UserAttributeValueType = String
+
+    alias UserFilterType = String
+
+    alias UserIdsType = String
+
+    alias UserMetadata = NamedTuple(
+      "Id" : (IdType)?,
+      "Username" : (UsernameType)?,
+      "GivenName" : (UserAttributeValueType)?,
+      "Surname" : (UserAttributeValueType)?,
+      "EmailAddress" : (EmailAddressType)?
+    )
+
+    alias UserMetadataList = Array(UserMetadata)
+
+    alias UserSortType = String
+
+    alias UserStatusType = String
+
+    alias UserStorageMetadata = NamedTuple(
+      "StorageUtilizedInBytes" : (SizeType)?,
+      "StorageRule" : (StorageRuleType)?
+    )
+
+    alias UserType = String
+
+    alias UsernameType = String
   end
 end

@@ -3565,5 +3565,756 @@ module Aws::AppSync
       include Aws::Structure
     end
 
+    alias AccessDeniedException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias AdditionalAuthenticationProvider = NamedTuple(
+      "authenticationType" : (AuthenticationType)?,
+      "openIDConnectConfig" : (OpenIDConnectConfig)?,
+      "userPoolConfig" : (CognitoUserPoolConfig)?
+    )
+
+    alias AdditionalAuthenticationProviders = Array(AdditionalAuthenticationProvider)
+
+    alias ApiCache = NamedTuple(
+      "ttl" : (Long)?,
+      "apiCachingBehavior" : (ApiCachingBehavior)?,
+      "transitEncryptionEnabled" : (Boolean)?,
+      "atRestEncryptionEnabled" : (Boolean)?,
+      "type" : (ApiCacheType)?,
+      "status" : (ApiCacheStatus)?
+    )
+
+    alias ApiCacheStatus = String
+
+    alias ApiCacheType = String
+
+    alias ApiCachingBehavior = String
+
+    alias ApiKey = NamedTuple(
+      "id" : (String)?,
+      "description" : (String)?,
+      "expires" : (Long)?,
+      "deletes" : (Long)?
+    )
+
+    alias ApiKeyLimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ApiKeyValidityOutOfBoundsException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ApiKeys = Array(ApiKey)
+
+    alias ApiLimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias AuthenticationType = String
+
+    alias AuthorizationConfig = NamedTuple(
+      "authorizationType" : AuthorizationType,
+      "awsIamConfig" : (AwsIamConfig)?
+    )
+
+    alias AuthorizationType = String
+
+    alias AwsIamConfig = NamedTuple(
+      "signingRegion" : (String)?,
+      "signingServiceName" : (String)?
+    )
+
+    alias BadRequestException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias Blob = String | Array(UInt8) | IO
+
+    alias Boolean = Bool
+
+    alias BooleanValue = Bool
+
+    alias CachingConfig = NamedTuple(
+      "ttl" : (Long)?,
+      "cachingKeys" : (CachingKeys)?
+    )
+
+    alias CachingKeys = Array(String)
+
+    alias CognitoUserPoolConfig = NamedTuple(
+      "userPoolId" : String,
+      "awsRegion" : String,
+      "appIdClientRegex" : (String)?
+    )
+
+    alias ConcurrentModificationException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias ConflictDetectionType = String
+
+    alias ConflictHandlerType = String
+
+    alias CreateApiCacheRequest = NamedTuple(
+      "apiId" : String,
+      "ttl" : Long,
+      "transitEncryptionEnabled" : (Boolean)?,
+      "atRestEncryptionEnabled" : (Boolean)?,
+      "apiCachingBehavior" : ApiCachingBehavior,
+      "type" : ApiCacheType
+    )
+
+    alias CreateApiCacheResponse = NamedTuple(
+      "apiCache" : (ApiCache)?
+    )
+
+    alias CreateApiKeyRequest = NamedTuple(
+      "apiId" : String,
+      "description" : (String)?,
+      "expires" : (Long)?
+    )
+
+    alias CreateApiKeyResponse = NamedTuple(
+      "apiKey" : (ApiKey)?
+    )
+
+    alias CreateDataSourceRequest = NamedTuple(
+      "apiId" : String,
+      "name" : ResourceName,
+      "description" : (String)?,
+      "type" : DataSourceType,
+      "serviceRoleArn" : (String)?,
+      "dynamodbConfig" : (DynamodbDataSourceConfig)?,
+      "lambdaConfig" : (LambdaDataSourceConfig)?,
+      "elasticsearchConfig" : (ElasticsearchDataSourceConfig)?,
+      "httpConfig" : (HttpDataSourceConfig)?,
+      "relationalDatabaseConfig" : (RelationalDatabaseDataSourceConfig)?
+    )
+
+    alias CreateDataSourceResponse = NamedTuple(
+      "dataSource" : (DataSource)?
+    )
+
+    alias CreateFunctionRequest = NamedTuple(
+      "apiId" : String,
+      "name" : ResourceName,
+      "description" : (String)?,
+      "dataSourceName" : ResourceName,
+      "requestMappingTemplate" : (MappingTemplate)?,
+      "responseMappingTemplate" : (MappingTemplate)?,
+      "functionVersion" : String
+    )
+
+    alias CreateFunctionResponse = NamedTuple(
+      "functionConfiguration" : (FunctionConfiguration)?
+    )
+
+    alias CreateGraphqlApiRequest = NamedTuple(
+      "name" : String,
+      "logConfig" : (LogConfig)?,
+      "authenticationType" : AuthenticationType,
+      "userPoolConfig" : (UserPoolConfig)?,
+      "openIDConnectConfig" : (OpenIDConnectConfig)?,
+      "tags" : (TagMap)?,
+      "additionalAuthenticationProviders" : (AdditionalAuthenticationProviders)?,
+      "xrayEnabled" : (Boolean)?
+    )
+
+    alias CreateGraphqlApiResponse = NamedTuple(
+      "graphqlApi" : (GraphqlApi)?
+    )
+
+    alias CreateResolverRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName,
+      "fieldName" : ResourceName,
+      "dataSourceName" : (ResourceName)?,
+      "requestMappingTemplate" : (MappingTemplate)?,
+      "responseMappingTemplate" : (MappingTemplate)?,
+      "kind" : (ResolverKind)?,
+      "pipelineConfig" : (PipelineConfig)?,
+      "syncConfig" : (SyncConfig)?,
+      "cachingConfig" : (CachingConfig)?
+    )
+
+    alias CreateResolverResponse = NamedTuple(
+      "resolver" : (Resolver)?
+    )
+
+    alias CreateTypeRequest = NamedTuple(
+      "apiId" : String,
+      "definition" : String,
+      "format" : TypeDefinitionFormat
+    )
+
+    alias CreateTypeResponse = NamedTuple(
+      "type" : (Type)?
+    )
+
+    alias DataSource = NamedTuple(
+      "dataSourceArn" : (String)?,
+      "name" : (ResourceName)?,
+      "description" : (String)?,
+      "type" : (DataSourceType)?,
+      "serviceRoleArn" : (String)?,
+      "dynamodbConfig" : (DynamodbDataSourceConfig)?,
+      "lambdaConfig" : (LambdaDataSourceConfig)?,
+      "elasticsearchConfig" : (ElasticsearchDataSourceConfig)?,
+      "httpConfig" : (HttpDataSourceConfig)?,
+      "relationalDatabaseConfig" : (RelationalDatabaseDataSourceConfig)?
+    )
+
+    alias DataSourceType = String
+
+    alias DataSources = Array(DataSource)
+
+    alias DefaultAction = String
+
+    alias DeleteApiCacheRequest = NamedTuple(
+      "apiId" : String
+    )
+
+    alias DeleteApiCacheResponse = NamedTuple(
+      
+    )
+
+    alias DeleteApiKeyRequest = NamedTuple(
+      "apiId" : String,
+      "id" : String
+    )
+
+    alias DeleteApiKeyResponse = NamedTuple(
+      
+    )
+
+    alias DeleteDataSourceRequest = NamedTuple(
+      "apiId" : String,
+      "name" : ResourceName
+    )
+
+    alias DeleteDataSourceResponse = NamedTuple(
+      
+    )
+
+    alias DeleteFunctionRequest = NamedTuple(
+      "apiId" : String,
+      "functionId" : ResourceName
+    )
+
+    alias DeleteFunctionResponse = NamedTuple(
+      
+    )
+
+    alias DeleteGraphqlApiRequest = NamedTuple(
+      "apiId" : String
+    )
+
+    alias DeleteGraphqlApiResponse = NamedTuple(
+      
+    )
+
+    alias DeleteResolverRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName,
+      "fieldName" : ResourceName
+    )
+
+    alias DeleteResolverResponse = NamedTuple(
+      
+    )
+
+    alias DeleteTypeRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName
+    )
+
+    alias DeleteTypeResponse = NamedTuple(
+      
+    )
+
+    alias DeltaSyncConfig = NamedTuple(
+      "baseTableTTL" : (Long)?,
+      "deltaSyncTableName" : (String)?,
+      "deltaSyncTableTTL" : (Long)?
+    )
+
+    alias DynamodbDataSourceConfig = NamedTuple(
+      "tableName" : String,
+      "awsRegion" : String,
+      "useCallerCredentials" : (Boolean)?,
+      "deltaSyncConfig" : (DeltaSyncConfig)?,
+      "versioned" : (Boolean)?
+    )
+
+    alias ElasticsearchDataSourceConfig = NamedTuple(
+      "endpoint" : String,
+      "awsRegion" : String
+    )
+
+    alias ErrorMessage = String
+
+    alias FieldLogLevel = String
+
+    alias FlushApiCacheRequest = NamedTuple(
+      "apiId" : String
+    )
+
+    alias FlushApiCacheResponse = NamedTuple(
+      
+    )
+
+    alias FunctionConfiguration = NamedTuple(
+      "functionId" : (String)?,
+      "functionArn" : (String)?,
+      "name" : (ResourceName)?,
+      "description" : (String)?,
+      "dataSourceName" : (ResourceName)?,
+      "requestMappingTemplate" : (MappingTemplate)?,
+      "responseMappingTemplate" : (MappingTemplate)?,
+      "functionVersion" : (String)?
+    )
+
+    alias Functions = Array(FunctionConfiguration)
+
+    alias FunctionsIds = Array(String)
+
+    alias GetApiCacheRequest = NamedTuple(
+      "apiId" : String
+    )
+
+    alias GetApiCacheResponse = NamedTuple(
+      "apiCache" : (ApiCache)?
+    )
+
+    alias GetDataSourceRequest = NamedTuple(
+      "apiId" : String,
+      "name" : ResourceName
+    )
+
+    alias GetDataSourceResponse = NamedTuple(
+      "dataSource" : (DataSource)?
+    )
+
+    alias GetFunctionRequest = NamedTuple(
+      "apiId" : String,
+      "functionId" : ResourceName
+    )
+
+    alias GetFunctionResponse = NamedTuple(
+      "functionConfiguration" : (FunctionConfiguration)?
+    )
+
+    alias GetGraphqlApiRequest = NamedTuple(
+      "apiId" : String
+    )
+
+    alias GetGraphqlApiResponse = NamedTuple(
+      "graphqlApi" : (GraphqlApi)?
+    )
+
+    alias GetIntrospectionSchemaRequest = NamedTuple(
+      "apiId" : String,
+      "format" : OutputType,
+      "includeDirectives" : (BooleanValue)?
+    )
+
+    alias GetIntrospectionSchemaResponse = NamedTuple(
+      "schema" : (Blob)?
+    )
+
+    alias GetResolverRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName,
+      "fieldName" : ResourceName
+    )
+
+    alias GetResolverResponse = NamedTuple(
+      "resolver" : (Resolver)?
+    )
+
+    alias GetSchemaCreationStatusRequest = NamedTuple(
+      "apiId" : String
+    )
+
+    alias GetSchemaCreationStatusResponse = NamedTuple(
+      "status" : (SchemaStatus)?,
+      "details" : (String)?
+    )
+
+    alias GetTypeRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName,
+      "format" : TypeDefinitionFormat
+    )
+
+    alias GetTypeResponse = NamedTuple(
+      "type" : (Type)?
+    )
+
+    alias GraphQLSchemaException = NamedTuple(
+      "message" : (ErrorMessage)?
+    )
+
+    alias GraphqlApi = NamedTuple(
+      "name" : (ResourceName)?,
+      "apiId" : (String)?,
+      "authenticationType" : (AuthenticationType)?,
+      "logConfig" : (LogConfig)?,
+      "userPoolConfig" : (UserPoolConfig)?,
+      "openIDConnectConfig" : (OpenIDConnectConfig)?,
+      "arn" : (String)?,
+      "uris" : (MapOfStringToString)?,
+      "tags" : (TagMap)?,
+      "additionalAuthenticationProviders" : (AdditionalAuthenticationProviders)?,
+      "xrayEnabled" : (Boolean)?,
+      "wafWebAclArn" : (String)?
+    )
+
+    alias GraphqlApis = Array(GraphqlApi)
+
+    alias HttpDataSourceConfig = NamedTuple(
+      "endpoint" : (String)?,
+      "authorizationConfig" : (AuthorizationConfig)?
+    )
+
+    alias InternalFailureException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias LambdaConflictHandlerConfig = NamedTuple(
+      "lambdaConflictHandlerArn" : (String)?
+    )
+
+    alias LambdaDataSourceConfig = NamedTuple(
+      "lambdaFunctionArn" : String
+    )
+
+    alias LimitExceededException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias ListApiKeysRequest = NamedTuple(
+      "apiId" : String,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListApiKeysResponse = NamedTuple(
+      "apiKeys" : (ApiKeys)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListDataSourcesRequest = NamedTuple(
+      "apiId" : String,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListDataSourcesResponse = NamedTuple(
+      "dataSources" : (DataSources)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListFunctionsRequest = NamedTuple(
+      "apiId" : String,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListFunctionsResponse = NamedTuple(
+      "functions" : (Functions)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListGraphqlApisRequest = NamedTuple(
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListGraphqlApisResponse = NamedTuple(
+      "graphqlApis" : (GraphqlApis)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListResolversByFunctionRequest = NamedTuple(
+      "apiId" : String,
+      "functionId" : String,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListResolversByFunctionResponse = NamedTuple(
+      "resolvers" : (Resolvers)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListResolversRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : String,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListResolversResponse = NamedTuple(
+      "resolvers" : (Resolvers)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "tags" : (TagMap)?
+    )
+
+    alias ListTypesRequest = NamedTuple(
+      "apiId" : String,
+      "format" : TypeDefinitionFormat,
+      "nextToken" : (PaginationToken)?,
+      "maxResults" : (MaxResults)?
+    )
+
+    alias ListTypesResponse = NamedTuple(
+      "types" : (TypeList)?,
+      "nextToken" : (PaginationToken)?
+    )
+
+    alias LogConfig = NamedTuple(
+      "fieldLogLevel" : FieldLogLevel,
+      "cloudWatchLogsRoleArn" : String,
+      "excludeVerboseContent" : (Boolean)?
+    )
+
+    alias Long = Int64
+
+    alias MapOfStringToString = Hash(String,String)
+
+    alias MappingTemplate = String
+
+    alias MaxResults = Int32
+
+    alias NotFoundException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias OpenIDConnectConfig = NamedTuple(
+      "issuer" : String,
+      "clientId" : (String)?,
+      "iatTTL" : (Long)?,
+      "authTTL" : (Long)?
+    )
+
+    alias OutputType = String
+
+    alias PaginationToken = String
+
+    alias PipelineConfig = NamedTuple(
+      "functions" : (FunctionsIds)?
+    )
+
+    alias RdsHttpEndpointConfig = NamedTuple(
+      "awsRegion" : (String)?,
+      "dbClusterIdentifier" : (String)?,
+      "databaseName" : (String)?,
+      "schema" : (String)?,
+      "awsSecretStoreArn" : (String)?
+    )
+
+    alias RelationalDatabaseDataSourceConfig = NamedTuple(
+      "relationalDatabaseSourceType" : (RelationalDatabaseSourceType)?,
+      "rdsHttpEndpointConfig" : (RdsHttpEndpointConfig)?
+    )
+
+    alias RelationalDatabaseSourceType = String
+
+    alias Resolver = NamedTuple(
+      "typeName" : (ResourceName)?,
+      "fieldName" : (ResourceName)?,
+      "dataSourceName" : (ResourceName)?,
+      "resolverArn" : (String)?,
+      "requestMappingTemplate" : (MappingTemplate)?,
+      "responseMappingTemplate" : (MappingTemplate)?,
+      "kind" : (ResolverKind)?,
+      "pipelineConfig" : (PipelineConfig)?,
+      "syncConfig" : (SyncConfig)?,
+      "cachingConfig" : (CachingConfig)?
+    )
+
+    alias ResolverKind = String
+
+    alias Resolvers = Array(Resolver)
+
+    alias ResourceArn = String
+
+    alias ResourceName = String
+
+    alias SchemaStatus = String
+
+    alias StartSchemaCreationRequest = NamedTuple(
+      "apiId" : String,
+      "definition" : Blob
+    )
+
+    alias StartSchemaCreationResponse = NamedTuple(
+      "status" : (SchemaStatus)?
+    )
+
+    alias String = String
+
+    alias SyncConfig = NamedTuple(
+      "conflictHandler" : (ConflictHandlerType)?,
+      "conflictDetection" : (ConflictDetectionType)?,
+      "lambdaConflictHandlerConfig" : (LambdaConflictHandlerConfig)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagMap = Hash(TagKey,TagValue)
+
+    alias TagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tags" : TagMap
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias Type = NamedTuple(
+      "name" : (ResourceName)?,
+      "description" : (String)?,
+      "arn" : (String)?,
+      "definition" : (String)?,
+      "format" : (TypeDefinitionFormat)?
+    )
+
+    alias TypeDefinitionFormat = String
+
+    alias TypeList = Array(Type)
+
+    alias UnauthorizedException = NamedTuple(
+      "message" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "resourceArn" : ResourceArn,
+      "tagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateApiCacheRequest = NamedTuple(
+      "apiId" : String,
+      "ttl" : Long,
+      "apiCachingBehavior" : ApiCachingBehavior,
+      "type" : ApiCacheType
+    )
+
+    alias UpdateApiCacheResponse = NamedTuple(
+      "apiCache" : (ApiCache)?
+    )
+
+    alias UpdateApiKeyRequest = NamedTuple(
+      "apiId" : String,
+      "id" : String,
+      "description" : (String)?,
+      "expires" : (Long)?
+    )
+
+    alias UpdateApiKeyResponse = NamedTuple(
+      "apiKey" : (ApiKey)?
+    )
+
+    alias UpdateDataSourceRequest = NamedTuple(
+      "apiId" : String,
+      "name" : ResourceName,
+      "description" : (String)?,
+      "type" : DataSourceType,
+      "serviceRoleArn" : (String)?,
+      "dynamodbConfig" : (DynamodbDataSourceConfig)?,
+      "lambdaConfig" : (LambdaDataSourceConfig)?,
+      "elasticsearchConfig" : (ElasticsearchDataSourceConfig)?,
+      "httpConfig" : (HttpDataSourceConfig)?,
+      "relationalDatabaseConfig" : (RelationalDatabaseDataSourceConfig)?
+    )
+
+    alias UpdateDataSourceResponse = NamedTuple(
+      "dataSource" : (DataSource)?
+    )
+
+    alias UpdateFunctionRequest = NamedTuple(
+      "apiId" : String,
+      "name" : ResourceName,
+      "description" : (String)?,
+      "functionId" : ResourceName,
+      "dataSourceName" : ResourceName,
+      "requestMappingTemplate" : (MappingTemplate)?,
+      "responseMappingTemplate" : (MappingTemplate)?,
+      "functionVersion" : String
+    )
+
+    alias UpdateFunctionResponse = NamedTuple(
+      "functionConfiguration" : (FunctionConfiguration)?
+    )
+
+    alias UpdateGraphqlApiRequest = NamedTuple(
+      "apiId" : String,
+      "name" : String,
+      "logConfig" : (LogConfig)?,
+      "authenticationType" : (AuthenticationType)?,
+      "userPoolConfig" : (UserPoolConfig)?,
+      "openIDConnectConfig" : (OpenIDConnectConfig)?,
+      "additionalAuthenticationProviders" : (AdditionalAuthenticationProviders)?,
+      "xrayEnabled" : (Boolean)?
+    )
+
+    alias UpdateGraphqlApiResponse = NamedTuple(
+      "graphqlApi" : (GraphqlApi)?
+    )
+
+    alias UpdateResolverRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName,
+      "fieldName" : ResourceName,
+      "dataSourceName" : (ResourceName)?,
+      "requestMappingTemplate" : (MappingTemplate)?,
+      "responseMappingTemplate" : (MappingTemplate)?,
+      "kind" : (ResolverKind)?,
+      "pipelineConfig" : (PipelineConfig)?,
+      "syncConfig" : (SyncConfig)?,
+      "cachingConfig" : (CachingConfig)?
+    )
+
+    alias UpdateResolverResponse = NamedTuple(
+      "resolver" : (Resolver)?
+    )
+
+    alias UpdateTypeRequest = NamedTuple(
+      "apiId" : String,
+      "typeName" : ResourceName,
+      "definition" : (String)?,
+      "format" : TypeDefinitionFormat
+    )
+
+    alias UpdateTypeResponse = NamedTuple(
+      "type" : (Type)?
+    )
+
+    alias UserPoolConfig = NamedTuple(
+      "userPoolId" : String,
+      "awsRegion" : String,
+      "defaultAction" : DefaultAction,
+      "appIdClientRegex" : (String)?
+    )
   end
 end

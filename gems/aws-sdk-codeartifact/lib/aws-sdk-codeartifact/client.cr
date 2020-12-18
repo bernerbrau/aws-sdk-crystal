@@ -395,8 +395,8 @@ module Aws::CodeArtifact
     #
     # @overload associate_external_connection(**params)
     # @param [Hash] params ({})
-    def associate_external_connection(params = {}, **options)
-      req = build_request(:associate_external_connection, params)
+    def associate_external_connection(, **options)
+      req = build_request(:associate_external_connection, )
       req.send_request(options)
     end
 
@@ -523,8 +523,8 @@ module Aws::CodeArtifact
     #
     # @overload copy_package_versions(**params)
     # @param [Hash] params ({})
-    def copy_package_versions(params = {}, **options)
-      req = build_request(:copy_package_versions, params)
+    def copy_package_versions(, **options)
+      req = build_request(:copy_package_versions, )
       req.send_request(options)
     end
 
@@ -603,8 +603,8 @@ module Aws::CodeArtifact
     #
     # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, **options)
-      req = build_request(:create_domain, params)
+    def create_domain(, **options)
+      req = build_request(:create_domain, )
       req.send_request(options)
     end
 
@@ -680,8 +680,8 @@ module Aws::CodeArtifact
     #
     # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, **options)
-      req = build_request(:create_repository, params)
+    def create_repository(, **options)
+      req = build_request(:create_repository, )
       req.send_request(options)
     end
 
@@ -723,8 +723,8 @@ module Aws::CodeArtifact
     #
     # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, **options)
-      req = build_request(:delete_domain, params)
+    def delete_domain(, **options)
+      req = build_request(:delete_domain, )
       req.send_request(options)
     end
 
@@ -765,8 +765,8 @@ module Aws::CodeArtifact
     #
     # @overload delete_domain_permissions_policy(**params)
     # @param [Hash] params ({})
-    def delete_domain_permissions_policy(params = {}, **options)
-      req = build_request(:delete_domain_permissions_policy, params)
+    def delete_domain_permissions_policy(, **options)
+      req = build_request(:delete_domain_permissions_policy, )
       req.send_request(options)
     end
 
@@ -866,8 +866,8 @@ module Aws::CodeArtifact
     #
     # @overload delete_package_versions(**params)
     # @param [Hash] params ({})
-    def delete_package_versions(params = {}, **options)
-      req = build_request(:delete_package_versions, params)
+    def delete_package_versions(, **options)
+      req = build_request(:delete_package_versions, )
       req.send_request(options)
     end
 
@@ -914,8 +914,8 @@ module Aws::CodeArtifact
     #
     # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, **options)
-      req = build_request(:delete_repository, params)
+    def delete_repository(, **options)
+      req = build_request(:delete_repository, )
       req.send_request(options)
     end
 
@@ -969,8 +969,8 @@ module Aws::CodeArtifact
     #
     # @overload delete_repository_permissions_policy(**params)
     # @param [Hash] params ({})
-    def delete_repository_permissions_policy(params = {}, **options)
-      req = build_request(:delete_repository_permissions_policy, params)
+    def delete_repository_permissions_policy(, **options)
+      req = build_request(:delete_repository_permissions_policy, )
       req.send_request(options)
     end
 
@@ -1015,8 +1015,8 @@ module Aws::CodeArtifact
     #
     # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, **options)
-      req = build_request(:describe_domain, params)
+    def describe_domain(, **options)
+      req = build_request(:describe_domain, )
       req.send_request(options)
     end
 
@@ -1107,8 +1107,8 @@ module Aws::CodeArtifact
     #
     # @overload describe_package_version(**params)
     # @param [Hash] params ({})
-    def describe_package_version(params = {}, **options)
-      req = build_request(:describe_package_version, params)
+    def describe_package_version(, **options)
+      req = build_request(:describe_package_version, )
       req.send_request(options)
     end
 
@@ -1156,8 +1156,8 @@ module Aws::CodeArtifact
     #
     # @overload describe_repository(**params)
     # @param [Hash] params ({})
-    def describe_repository(params = {}, **options)
-      req = build_request(:describe_repository, params)
+    def describe_repository(, **options)
+      req = build_request(:describe_repository, )
       req.send_request(options)
     end
 
@@ -1210,8 +1210,8 @@ module Aws::CodeArtifact
     #
     # @overload disassociate_external_connection(**params)
     # @param [Hash] params ({})
-    def disassociate_external_connection(params = {}, **options)
-      req = build_request(:disassociate_external_connection, params)
+    def disassociate_external_connection(, **options)
+      req = build_request(:disassociate_external_connection, )
       req.send_request(options)
     end
 
@@ -1327,8 +1327,8 @@ module Aws::CodeArtifact
     #
     # @overload dispose_package_versions(**params)
     # @param [Hash] params ({})
-    def dispose_package_versions(params = {}, **options)
-      req = build_request(:dispose_package_versions, params)
+    def dispose_package_versions(, **options)
+      req = build_request(:dispose_package_versions, )
       req.send_request(options)
     end
 
@@ -1401,8 +1401,8 @@ module Aws::CodeArtifact
     #
     # @overload get_authorization_token(**params)
     # @param [Hash] params ({})
-    def get_authorization_token(params = {}, **options)
-      req = build_request(:get_authorization_token, params)
+    def get_authorization_token(, **options)
+      req = build_request(:get_authorization_token, )
       req.send_request(options)
     end
 
@@ -1446,8 +1446,8 @@ module Aws::CodeArtifact
     #
     # @overload get_domain_permissions_policy(**params)
     # @param [Hash] params ({})
-    def get_domain_permissions_policy(params = {}, **options)
-      req = build_request(:get_domain_permissions_policy, params)
+    def get_domain_permissions_policy(, **options)
+      req = build_request(:get_domain_permissions_policy, )
       req.send_request(options)
     end
 
@@ -1538,8 +1538,8 @@ module Aws::CodeArtifact
     #
     # @overload get_package_version_asset(**params)
     # @param [Hash] params ({})
-    def get_package_version_asset(params = {}, **options, &block)
-      req = build_request(:get_package_version_asset, params)
+    def get_package_version_asset(, **options, &block)
+      req = build_request(:get_package_version_asset, )
       req.send_request(options, &block)
     end
 
@@ -1630,8 +1630,8 @@ module Aws::CodeArtifact
     #
     # @overload get_package_version_readme(**params)
     # @param [Hash] params ({})
-    def get_package_version_readme(params = {}, **options)
-      req = build_request(:get_package_version_readme, params)
+    def get_package_version_readme(, **options)
+      req = build_request(:get_package_version_readme, )
       req.send_request(options)
     end
 
@@ -1689,8 +1689,8 @@ module Aws::CodeArtifact
     #
     # @overload get_repository_endpoint(**params)
     # @param [Hash] params ({})
-    def get_repository_endpoint(params = {}, **options)
-      req = build_request(:get_repository_endpoint, params)
+    def get_repository_endpoint(, **options)
+      req = build_request(:get_repository_endpoint, )
       req.send_request(options)
     end
 
@@ -1730,8 +1730,8 @@ module Aws::CodeArtifact
     #
     # @overload get_repository_permissions_policy(**params)
     # @param [Hash] params ({})
-    def get_repository_permissions_policy(params = {}, **options)
-      req = build_request(:get_repository_permissions_policy, params)
+    def get_repository_permissions_policy(, **options)
+      req = build_request(:get_repository_permissions_policy, )
       req.send_request(options)
     end
 
@@ -1776,8 +1776,8 @@ module Aws::CodeArtifact
     #
     # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, **options)
-      req = build_request(:list_domains, params)
+    def list_domains(, **options)
+      req = build_request(:list_domains, )
       req.send_request(options)
     end
 
@@ -1886,8 +1886,8 @@ module Aws::CodeArtifact
     #
     # @overload list_package_version_assets(**params)
     # @param [Hash] params ({})
-    def list_package_version_assets(params = {}, **options)
-      req = build_request(:list_package_version_assets, params)
+    def list_package_version_assets(, **options)
+      req = build_request(:list_package_version_assets, )
       req.send_request(options)
     end
 
@@ -1994,8 +1994,8 @@ module Aws::CodeArtifact
     #
     # @overload list_package_version_dependencies(**params)
     # @param [Hash] params ({})
-    def list_package_version_dependencies(params = {}, **options)
-      req = build_request(:list_package_version_dependencies, params)
+    def list_package_version_dependencies(, **options)
+      req = build_request(:list_package_version_dependencies, )
       req.send_request(options)
     end
 
@@ -2114,8 +2114,8 @@ module Aws::CodeArtifact
     #
     # @overload list_package_versions(**params)
     # @param [Hash] params ({})
-    def list_package_versions(params = {}, **options)
-      req = build_request(:list_package_versions, params)
+    def list_package_versions(, **options)
+      req = build_request(:list_package_versions, )
       req.send_request(options)
     end
 
@@ -2207,8 +2207,8 @@ module Aws::CodeArtifact
     #
     # @overload list_packages(**params)
     # @param [Hash] params ({})
-    def list_packages(params = {}, **options)
-      req = build_request(:list_packages, params)
+    def list_packages(, **options)
+      req = build_request(:list_packages, )
       req.send_request(options)
     end
 
@@ -2262,8 +2262,8 @@ module Aws::CodeArtifact
     #
     # @overload list_repositories(**params)
     # @param [Hash] params ({})
-    def list_repositories(params = {}, **options)
-      req = build_request(:list_repositories, params)
+    def list_repositories(, **options)
+      req = build_request(:list_repositories, )
       req.send_request(options)
     end
 
@@ -2332,8 +2332,8 @@ module Aws::CodeArtifact
     #
     # @overload list_repositories_in_domain(**params)
     # @param [Hash] params ({})
-    def list_repositories_in_domain(params = {}, **options)
-      req = build_request(:list_repositories_in_domain, params)
+    def list_repositories_in_domain(, **options)
+      req = build_request(:list_repositories_in_domain, )
       req.send_request(options)
     end
 
@@ -2363,8 +2363,8 @@ module Aws::CodeArtifact
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2415,8 +2415,8 @@ module Aws::CodeArtifact
     #
     # @overload put_domain_permissions_policy(**params)
     # @param [Hash] params ({})
-    def put_domain_permissions_policy(params = {}, **options)
-      req = build_request(:put_domain_permissions_policy, params)
+    def put_domain_permissions_policy(, **options)
+      req = build_request(:put_domain_permissions_policy, )
       req.send_request(options)
     end
 
@@ -2474,8 +2474,8 @@ module Aws::CodeArtifact
     #
     # @overload put_repository_permissions_policy(**params)
     # @param [Hash] params ({})
-    def put_repository_permissions_policy(params = {}, **options)
-      req = build_request(:put_repository_permissions_policy, params)
+    def put_repository_permissions_policy(, **options)
+      req = build_request(:put_repository_permissions_policy, )
       req.send_request(options)
     end
 
@@ -2506,8 +2506,8 @@ module Aws::CodeArtifact
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2533,8 +2533,8 @@ module Aws::CodeArtifact
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2634,8 +2634,8 @@ module Aws::CodeArtifact
     #
     # @overload update_package_versions_status(**params)
     # @param [Hash] params ({})
-    def update_package_versions_status(params = {}, **options)
-      req = build_request(:update_package_versions_status, params)
+    def update_package_versions_status(, **options)
+      req = build_request(:update_package_versions_status, )
       req.send_request(options)
     end
 
@@ -2702,8 +2702,8 @@ module Aws::CodeArtifact
     #
     # @overload update_repository(**params)
     # @param [Hash] params ({})
-    def update_repository(params = {}, **options)
-      req = build_request(:update_repository, params)
+    def update_repository(, **options)
+      req = build_request(:update_repository, )
       req.send_request(options)
     end
 

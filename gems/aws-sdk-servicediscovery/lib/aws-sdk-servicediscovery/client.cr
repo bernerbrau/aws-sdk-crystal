@@ -412,8 +412,8 @@ module Aws::ServiceDiscovery
     #
     # @overload create_http_namespace(**params)
     # @param [Hash] params ({})
-    def create_http_namespace(params = {}, **options)
-      req = build_request(:create_http_namespace, params)
+    def create_http_namespace(, **options)
+      req = build_request(:create_http_namespace, )
       req.send_request(options)
     end
 
@@ -499,8 +499,8 @@ module Aws::ServiceDiscovery
     #
     # @overload create_private_dns_namespace(**params)
     # @param [Hash] params ({})
-    def create_private_dns_namespace(params = {}, **options)
-      req = build_request(:create_private_dns_namespace, params)
+    def create_private_dns_namespace(, **options)
+      req = build_request(:create_private_dns_namespace, )
       req.send_request(options)
     end
 
@@ -579,8 +579,8 @@ module Aws::ServiceDiscovery
     #
     # @overload create_public_dns_namespace(**params)
     # @param [Hash] params ({})
-    def create_public_dns_namespace(params = {}, **options)
-      req = build_request(:create_public_dns_namespace, params)
+    def create_public_dns_namespace(, **options)
+      req = build_request(:create_public_dns_namespace, )
       req.send_request(options)
     end
 
@@ -792,8 +792,8 @@ module Aws::ServiceDiscovery
     #
     # @overload create_service(**params)
     # @param [Hash] params ({})
-    def create_service(params = {}, **options)
-      req = build_request(:create_service, params)
+    def create_service(, **options)
+      req = build_request(:create_service, )
       req.send_request(options)
     end
 
@@ -835,8 +835,8 @@ module Aws::ServiceDiscovery
     #
     # @overload delete_namespace(**params)
     # @param [Hash] params ({})
-    def delete_namespace(params = {}, **options)
-      req = build_request(:delete_namespace, params)
+    def delete_namespace(, **options)
+      req = build_request(:delete_namespace, )
       req.send_request(options)
     end
 
@@ -871,8 +871,8 @@ module Aws::ServiceDiscovery
     #
     # @overload delete_service(**params)
     # @param [Hash] params ({})
-    def delete_service(params = {}, **options)
-      req = build_request(:delete_service, params)
+    def delete_service(, **options)
+      req = build_request(:delete_service, )
       req.send_request(options)
     end
 
@@ -924,8 +924,8 @@ module Aws::ServiceDiscovery
     #
     # @overload deregister_instance(**params)
     # @param [Hash] params ({})
-    def deregister_instance(params = {}, **options)
-      req = build_request(:deregister_instance, params)
+    def deregister_instance(, **options)
+      req = build_request(:deregister_instance, )
       req.send_request(options)
     end
 
@@ -1024,8 +1024,8 @@ module Aws::ServiceDiscovery
     #
     # @overload discover_instances(**params)
     # @param [Hash] params ({})
-    def discover_instances(params = {}, **options)
-      req = build_request(:discover_instances, params)
+    def discover_instances(, **options)
+      req = build_request(:discover_instances, )
       req.send_request(options)
     end
 
@@ -1083,8 +1083,8 @@ module Aws::ServiceDiscovery
     #
     # @overload get_instance(**params)
     # @param [Hash] params ({})
-    def get_instance(params = {}, **options)
-      req = build_request(:get_instance, params)
+    def get_instance(, **options)
+      req = build_request(:get_instance, )
       req.send_request(options)
     end
 
@@ -1172,8 +1172,8 @@ module Aws::ServiceDiscovery
     #
     # @overload get_instances_health_status(**params)
     # @param [Hash] params ({})
-    def get_instances_health_status(params = {}, **options)
-      req = build_request(:get_instances_health_status, params)
+    def get_instances_health_status(, **options)
+      req = build_request(:get_instances_health_status, )
       req.send_request(options)
     end
 
@@ -1238,8 +1238,8 @@ module Aws::ServiceDiscovery
     #
     # @overload get_namespace(**params)
     # @param [Hash] params ({})
-    def get_namespace(params = {}, **options)
-      req = build_request(:get_namespace, params)
+    def get_namespace(, **options)
+      req = build_request(:get_namespace, )
       req.send_request(options)
     end
 
@@ -1307,8 +1307,8 @@ module Aws::ServiceDiscovery
     #
     # @overload get_operation(**params)
     # @param [Hash] params ({})
-    def get_operation(params = {}, **options)
-      req = build_request(:get_operation, params)
+    def get_operation(, **options)
+      req = build_request(:get_operation, )
       req.send_request(options)
     end
 
@@ -1378,8 +1378,8 @@ module Aws::ServiceDiscovery
     #
     # @overload get_service(**params)
     # @param [Hash] params ({})
-    def get_service(params = {}, **options)
-      req = build_request(:get_service, params)
+    def get_service(, **options)
+      req = build_request(:get_service, )
       req.send_request(options)
     end
 
@@ -1451,8 +1451,8 @@ module Aws::ServiceDiscovery
     #
     # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, **options)
-      req = build_request(:list_instances, params)
+    def list_instances(, **options)
+      req = build_request(:list_instances, )
       req.send_request(options)
     end
 
@@ -1584,8 +1584,8 @@ module Aws::ServiceDiscovery
     #
     # @overload list_namespaces(**params)
     # @param [Hash] params ({})
-    def list_namespaces(params = {}, **options)
-      req = build_request(:list_namespaces, params)
+    def list_namespaces(, **options)
+      req = build_request(:list_namespaces, )
       req.send_request(options)
     end
 
@@ -1687,8 +1687,8 @@ module Aws::ServiceDiscovery
     #
     # @overload list_operations(**params)
     # @param [Hash] params ({})
-    def list_operations(params = {}, **options)
-      req = build_request(:list_operations, params)
+    def list_operations(, **options)
+      req = build_request(:list_operations, )
       req.send_request(options)
     end
 
@@ -1796,8 +1796,8 @@ module Aws::ServiceDiscovery
     #
     # @overload list_services(**params)
     # @param [Hash] params ({})
-    def list_services(params = {}, **options)
-      req = build_request(:list_services, params)
+    def list_services(, **options)
+      req = build_request(:list_services, )
       req.send_request(options)
     end
 
@@ -1850,8 +1850,8 @@ module Aws::ServiceDiscovery
     #
     # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, **options)
-      req = build_request(:list_tags_for_resource, params)
+    def list_tags_for_resource(, **options)
+      req = build_request(:list_tags_for_resource, )
       req.send_request(options)
     end
 
@@ -2091,8 +2091,8 @@ module Aws::ServiceDiscovery
     #
     # @overload register_instance(**params)
     # @param [Hash] params ({})
-    def register_instance(params = {}, **options)
-      req = build_request(:register_instance, params)
+    def register_instance(, **options)
+      req = build_request(:register_instance, )
       req.send_request(options)
     end
 
@@ -2148,8 +2148,8 @@ module Aws::ServiceDiscovery
     #
     # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, **options)
-      req = build_request(:tag_resource, params)
+    def tag_resource(, **options)
+      req = build_request(:tag_resource, )
       req.send_request(options)
     end
 
@@ -2192,8 +2192,8 @@ module Aws::ServiceDiscovery
     #
     # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, **options)
-      req = build_request(:untag_resource, params)
+    def untag_resource(, **options)
+      req = build_request(:untag_resource, )
       req.send_request(options)
     end
 
@@ -2248,8 +2248,8 @@ module Aws::ServiceDiscovery
     #
     # @overload update_instance_custom_health_status(**params)
     # @param [Hash] params ({})
-    def update_instance_custom_health_status(params = {}, **options)
-      req = build_request(:update_instance_custom_health_status, params)
+    def update_instance_custom_health_status(, **options)
+      req = build_request(:update_instance_custom_health_status, )
       req.send_request(options)
     end
 
@@ -2347,8 +2347,8 @@ module Aws::ServiceDiscovery
     #
     # @overload update_service(**params)
     # @param [Hash] params ({})
-    def update_service(params = {}, **options)
-      req = build_request(:update_service, params)
+    def update_service(, **options)
+      req = build_request(:update_service, )
       req.send_request(options)
     end
 

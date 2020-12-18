@@ -359,8 +359,8 @@ module Aws::IoTDataPlane
     #
     # @overload delete_thing_shadow(**params)
     # @param [Hash] params ({})
-    def delete_thing_shadow(params = {}, **options)
-      req = build_request(:delete_thing_shadow, params)
+    def delete_thing_shadow(, **options)
+      req = build_request(:delete_thing_shadow, )
       req.send_request(options)
     end
 
@@ -396,8 +396,8 @@ module Aws::IoTDataPlane
     #
     # @overload get_thing_shadow(**params)
     # @param [Hash] params ({})
-    def get_thing_shadow(params = {}, **options)
-      req = build_request(:get_thing_shadow, params)
+    def get_thing_shadow(, **options)
+      req = build_request(:get_thing_shadow, )
       req.send_request(options)
     end
 
@@ -435,8 +435,8 @@ module Aws::IoTDataPlane
     #
     # @overload list_named_shadows_for_thing(**params)
     # @param [Hash] params ({})
-    def list_named_shadows_for_thing(params = {}, **options)
-      req = build_request(:list_named_shadows_for_thing, params)
+    def list_named_shadows_for_thing(, **options)
+      req = build_request(:list_named_shadows_for_thing, )
       req.send_request(options)
     end
 
@@ -470,8 +470,8 @@ module Aws::IoTDataPlane
     #
     # @overload publish(**params)
     # @param [Hash] params ({})
-    def publish(params = {}, **options)
-      req = build_request(:publish, params)
+    def publish(, **options)
+      req = build_request(:publish, )
       req.send_request(options)
     end
 
@@ -511,8 +511,8 @@ module Aws::IoTDataPlane
     #
     # @overload update_thing_shadow(**params)
     # @param [Hash] params ({})
-    def update_thing_shadow(params = {}, **options)
-      req = build_request(:update_thing_shadow, params)
+    def update_thing_shadow(, **options)
+      req = build_request(:update_thing_shadow, )
       req.send_request(options)
     end
 

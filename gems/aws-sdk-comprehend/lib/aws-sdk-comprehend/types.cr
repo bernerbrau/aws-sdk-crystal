@@ -6301,5 +6301,1306 @@ module Aws::Comprehend
       include Aws::Structure
     end
 
+    alias AnyLengthString = String
+
+    alias AttributeNamesList = Array(AttributeNamesListItem)
+
+    alias AttributeNamesListItem = String
+
+    alias AugmentedManifestsListItem = NamedTuple(
+      "S3Uri" : S3Uri,
+      "AttributeNames" : AttributeNamesList
+    )
+
+    alias BatchDetectDominantLanguageItemResult = NamedTuple(
+      "Index" : (Integer)?,
+      "Languages" : (ListOfDominantLanguages)?
+    )
+
+    alias BatchDetectDominantLanguageRequest = NamedTuple(
+      "TextList" : CustomerInputStringList
+    )
+
+    alias BatchDetectDominantLanguageResponse = NamedTuple(
+      "ResultList" : ListOfDetectDominantLanguageResult,
+      "ErrorList" : BatchItemErrorList
+    )
+
+    alias BatchDetectEntitiesItemResult = NamedTuple(
+      "Index" : (Integer)?,
+      "Entities" : (ListOfEntities)?
+    )
+
+    alias BatchDetectEntitiesRequest = NamedTuple(
+      "TextList" : CustomerInputStringList,
+      "LanguageCode" : LanguageCode
+    )
+
+    alias BatchDetectEntitiesResponse = NamedTuple(
+      "ResultList" : ListOfDetectEntitiesResult,
+      "ErrorList" : BatchItemErrorList
+    )
+
+    alias BatchDetectKeyPhrasesItemResult = NamedTuple(
+      "Index" : (Integer)?,
+      "KeyPhrases" : (ListOfKeyPhrases)?
+    )
+
+    alias BatchDetectKeyPhrasesRequest = NamedTuple(
+      "TextList" : CustomerInputStringList,
+      "LanguageCode" : LanguageCode
+    )
+
+    alias BatchDetectKeyPhrasesResponse = NamedTuple(
+      "ResultList" : ListOfDetectKeyPhrasesResult,
+      "ErrorList" : BatchItemErrorList
+    )
+
+    alias BatchDetectSentimentItemResult = NamedTuple(
+      "Index" : (Integer)?,
+      "Sentiment" : (SentimentType)?,
+      "SentimentScore" : (SentimentScore)?
+    )
+
+    alias BatchDetectSentimentRequest = NamedTuple(
+      "TextList" : CustomerInputStringList,
+      "LanguageCode" : LanguageCode
+    )
+
+    alias BatchDetectSentimentResponse = NamedTuple(
+      "ResultList" : ListOfDetectSentimentResult,
+      "ErrorList" : BatchItemErrorList
+    )
+
+    alias BatchDetectSyntaxItemResult = NamedTuple(
+      "Index" : (Integer)?,
+      "SyntaxTokens" : (ListOfSyntaxTokens)?
+    )
+
+    alias BatchDetectSyntaxRequest = NamedTuple(
+      "TextList" : CustomerInputStringList,
+      "LanguageCode" : SyntaxLanguageCode
+    )
+
+    alias BatchDetectSyntaxResponse = NamedTuple(
+      "ResultList" : ListOfDetectSyntaxResult,
+      "ErrorList" : BatchItemErrorList
+    )
+
+    alias BatchItemError = NamedTuple(
+      "Index" : (Integer)?,
+      "ErrorCode" : (String)?,
+      "ErrorMessage" : (String)?
+    )
+
+    alias BatchItemErrorList = Array(BatchItemError)
+
+    alias BatchSizeLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ClassifierEvaluationMetrics = NamedTuple(
+      "Accuracy" : (Double)?,
+      "Precision" : (Double)?,
+      "Recall" : (Double)?,
+      "F1Score" : (Double)?,
+      "MicroPrecision" : (Double)?,
+      "MicroRecall" : (Double)?,
+      "MicroF1Score" : (Double)?,
+      "HammingLoss" : (Double)?
+    )
+
+    alias ClassifierMetadata = NamedTuple(
+      "NumberOfLabels" : (Integer)?,
+      "NumberOfTrainedDocuments" : (Integer)?,
+      "NumberOfTestDocuments" : (Integer)?,
+      "EvaluationMetrics" : (ClassifierEvaluationMetrics)?
+    )
+
+    alias ClassifyDocumentRequest = NamedTuple(
+      "Text" : CustomerInputString,
+      "EndpointArn" : DocumentClassifierEndpointArn
+    )
+
+    alias ClassifyDocumentResponse = NamedTuple(
+      "Classes" : (ListOfClasses)?,
+      "Labels" : (ListOfLabels)?
+    )
+
+    alias ClientRequestTokenString = String
+
+    alias ComprehendArn = String
+
+    alias ComprehendArnName = String
+
+    alias ComprehendEndpointArn = String
+
+    alias ComprehendEndpointName = String
+
+    alias ComprehendModelArn = String
+
+    alias ConcurrentModificationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias CreateDocumentClassifierRequest = NamedTuple(
+      "DocumentClassifierName" : ComprehendArnName,
+      "DataAccessRoleArn" : IamRoleArn,
+      "Tags" : (TagList)?,
+      "InputDataConfig" : DocumentClassifierInputDataConfig,
+      "OutputDataConfig" : (DocumentClassifierOutputDataConfig)?,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "LanguageCode" : LanguageCode,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?,
+      "Mode" : (DocumentClassifierMode)?
+    )
+
+    alias CreateDocumentClassifierResponse = NamedTuple(
+      "DocumentClassifierArn" : (DocumentClassifierArn)?
+    )
+
+    alias CreateEndpointRequest = NamedTuple(
+      "EndpointName" : ComprehendEndpointName,
+      "ModelArn" : ComprehendModelArn,
+      "DesiredInferenceUnits" : InferenceUnitsInteger,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "Tags" : (TagList)?
+    )
+
+    alias CreateEndpointResponse = NamedTuple(
+      "EndpointArn" : (ComprehendEndpointArn)?
+    )
+
+    alias CreateEntityRecognizerRequest = NamedTuple(
+      "RecognizerName" : ComprehendArnName,
+      "DataAccessRoleArn" : IamRoleArn,
+      "Tags" : (TagList)?,
+      "InputDataConfig" : EntityRecognizerInputDataConfig,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "LanguageCode" : LanguageCode,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias CreateEntityRecognizerResponse = NamedTuple(
+      "EntityRecognizerArn" : (EntityRecognizerArn)?
+    )
+
+    alias CustomerInputString = String
+
+    alias CustomerInputStringList = Array(CustomerInputString)
+
+    alias DeleteDocumentClassifierRequest = NamedTuple(
+      "DocumentClassifierArn" : DocumentClassifierArn
+    )
+
+    alias DeleteDocumentClassifierResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEndpointRequest = NamedTuple(
+      "EndpointArn" : ComprehendEndpointArn
+    )
+
+    alias DeleteEndpointResponse = NamedTuple(
+      
+    )
+
+    alias DeleteEntityRecognizerRequest = NamedTuple(
+      "EntityRecognizerArn" : EntityRecognizerArn
+    )
+
+    alias DeleteEntityRecognizerResponse = NamedTuple(
+      
+    )
+
+    alias DescribeDocumentClassificationJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeDocumentClassificationJobResponse = NamedTuple(
+      "DocumentClassificationJobProperties" : (DocumentClassificationJobProperties)?
+    )
+
+    alias DescribeDocumentClassifierRequest = NamedTuple(
+      "DocumentClassifierArn" : DocumentClassifierArn
+    )
+
+    alias DescribeDocumentClassifierResponse = NamedTuple(
+      "DocumentClassifierProperties" : (DocumentClassifierProperties)?
+    )
+
+    alias DescribeDominantLanguageDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeDominantLanguageDetectionJobResponse = NamedTuple(
+      "DominantLanguageDetectionJobProperties" : (DominantLanguageDetectionJobProperties)?
+    )
+
+    alias DescribeEndpointRequest = NamedTuple(
+      "EndpointArn" : ComprehendEndpointArn
+    )
+
+    alias DescribeEndpointResponse = NamedTuple(
+      "EndpointProperties" : (EndpointProperties)?
+    )
+
+    alias DescribeEntitiesDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeEntitiesDetectionJobResponse = NamedTuple(
+      "EntitiesDetectionJobProperties" : (EntitiesDetectionJobProperties)?
+    )
+
+    alias DescribeEntityRecognizerRequest = NamedTuple(
+      "EntityRecognizerArn" : EntityRecognizerArn
+    )
+
+    alias DescribeEntityRecognizerResponse = NamedTuple(
+      "EntityRecognizerProperties" : (EntityRecognizerProperties)?
+    )
+
+    alias DescribeEventsDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeEventsDetectionJobResponse = NamedTuple(
+      "EventsDetectionJobProperties" : (EventsDetectionJobProperties)?
+    )
+
+    alias DescribeKeyPhrasesDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeKeyPhrasesDetectionJobResponse = NamedTuple(
+      "KeyPhrasesDetectionJobProperties" : (KeyPhrasesDetectionJobProperties)?
+    )
+
+    alias DescribePiiEntitiesDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribePiiEntitiesDetectionJobResponse = NamedTuple(
+      "PiiEntitiesDetectionJobProperties" : (PiiEntitiesDetectionJobProperties)?
+    )
+
+    alias DescribeSentimentDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeSentimentDetectionJobResponse = NamedTuple(
+      "SentimentDetectionJobProperties" : (SentimentDetectionJobProperties)?
+    )
+
+    alias DescribeTopicsDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias DescribeTopicsDetectionJobResponse = NamedTuple(
+      "TopicsDetectionJobProperties" : (TopicsDetectionJobProperties)?
+    )
+
+    alias DetectDominantLanguageRequest = NamedTuple(
+      "Text" : CustomerInputString
+    )
+
+    alias DetectDominantLanguageResponse = NamedTuple(
+      "Languages" : (ListOfDominantLanguages)?
+    )
+
+    alias DetectEntitiesRequest = NamedTuple(
+      "Text" : CustomerInputString,
+      "LanguageCode" : (LanguageCode)?,
+      "EndpointArn" : (EntityRecognizerEndpointArn)?
+    )
+
+    alias DetectEntitiesResponse = NamedTuple(
+      "Entities" : (ListOfEntities)?
+    )
+
+    alias DetectKeyPhrasesRequest = NamedTuple(
+      "Text" : CustomerInputString,
+      "LanguageCode" : LanguageCode
+    )
+
+    alias DetectKeyPhrasesResponse = NamedTuple(
+      "KeyPhrases" : (ListOfKeyPhrases)?
+    )
+
+    alias DetectPiiEntitiesRequest = NamedTuple(
+      "Text" : String,
+      "LanguageCode" : LanguageCode
+    )
+
+    alias DetectPiiEntitiesResponse = NamedTuple(
+      "Entities" : (ListOfPiiEntities)?
+    )
+
+    alias DetectSentimentRequest = NamedTuple(
+      "Text" : CustomerInputString,
+      "LanguageCode" : LanguageCode
+    )
+
+    alias DetectSentimentResponse = NamedTuple(
+      "Sentiment" : (SentimentType)?,
+      "SentimentScore" : (SentimentScore)?
+    )
+
+    alias DetectSyntaxRequest = NamedTuple(
+      "Text" : CustomerInputString,
+      "LanguageCode" : SyntaxLanguageCode
+    )
+
+    alias DetectSyntaxResponse = NamedTuple(
+      "SyntaxTokens" : (ListOfSyntaxTokens)?
+    )
+
+    alias DocumentClass = NamedTuple(
+      "Name" : (String)?,
+      "Score" : (Float)?
+    )
+
+    alias DocumentClassificationJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias DocumentClassificationJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "DocumentClassifierArn" : (DocumentClassifierArn)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias DocumentClassificationJobPropertiesList = Array(DocumentClassificationJobProperties)
+
+    alias DocumentClassifierArn = String
+
+    alias DocumentClassifierAugmentedManifestsList = Array(AugmentedManifestsListItem)
+
+    alias DocumentClassifierDataFormat = String
+
+    alias DocumentClassifierEndpointArn = String
+
+    alias DocumentClassifierFilter = NamedTuple(
+      "Status" : (ModelStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias DocumentClassifierInputDataConfig = NamedTuple(
+      "DataFormat" : (DocumentClassifierDataFormat)?,
+      "S3Uri" : (S3Uri)?,
+      "LabelDelimiter" : (LabelDelimiter)?,
+      "AugmentedManifests" : (DocumentClassifierAugmentedManifestsList)?
+    )
+
+    alias DocumentClassifierMode = String
+
+    alias DocumentClassifierOutputDataConfig = NamedTuple(
+      "S3Uri" : (S3Uri)?,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias DocumentClassifierProperties = NamedTuple(
+      "DocumentClassifierArn" : (DocumentClassifierArn)?,
+      "LanguageCode" : (LanguageCode)?,
+      "Status" : (ModelStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "TrainingStartTime" : (Timestamp)?,
+      "TrainingEndTime" : (Timestamp)?,
+      "InputDataConfig" : (DocumentClassifierInputDataConfig)?,
+      "OutputDataConfig" : (DocumentClassifierOutputDataConfig)?,
+      "ClassifierMetadata" : (ClassifierMetadata)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?,
+      "Mode" : (DocumentClassifierMode)?
+    )
+
+    alias DocumentClassifierPropertiesList = Array(DocumentClassifierProperties)
+
+    alias DocumentLabel = NamedTuple(
+      "Name" : (String)?,
+      "Score" : (Float)?
+    )
+
+    alias DominantLanguage = NamedTuple(
+      "LanguageCode" : (String)?,
+      "Score" : (Float)?
+    )
+
+    alias DominantLanguageDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias DominantLanguageDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias DominantLanguageDetectionJobPropertiesList = Array(DominantLanguageDetectionJobProperties)
+
+    alias Double = Float64
+
+    alias EndpointFilter = NamedTuple(
+      "ModelArn" : (ComprehendModelArn)?,
+      "Status" : (EndpointStatus)?,
+      "CreationTimeBefore" : (Timestamp)?,
+      "CreationTimeAfter" : (Timestamp)?
+    )
+
+    alias EndpointProperties = NamedTuple(
+      "EndpointArn" : (ComprehendEndpointArn)?,
+      "Status" : (EndpointStatus)?,
+      "Message" : (AnyLengthString)?,
+      "ModelArn" : (ComprehendModelArn)?,
+      "DesiredInferenceUnits" : (InferenceUnitsInteger)?,
+      "CurrentInferenceUnits" : (InferenceUnitsInteger)?,
+      "CreationTime" : (Timestamp)?,
+      "LastModifiedTime" : (Timestamp)?
+    )
+
+    alias EndpointPropertiesList = Array(EndpointProperties)
+
+    alias EndpointStatus = String
+
+    alias EntitiesDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias EntitiesDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "EntityRecognizerArn" : (EntityRecognizerArn)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "LanguageCode" : (LanguageCode)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias EntitiesDetectionJobPropertiesList = Array(EntitiesDetectionJobProperties)
+
+    alias Entity = NamedTuple(
+      "Score" : (Float)?,
+      "Type" : (EntityType)?,
+      "Text" : (String)?,
+      "BeginOffset" : (Integer)?,
+      "EndOffset" : (Integer)?
+    )
+
+    alias EntityRecognizerAnnotations = NamedTuple(
+      "S3Uri" : S3Uri
+    )
+
+    alias EntityRecognizerArn = String
+
+    alias EntityRecognizerAugmentedManifestsList = Array(AugmentedManifestsListItem)
+
+    alias EntityRecognizerDataFormat = String
+
+    alias EntityRecognizerDocuments = NamedTuple(
+      "S3Uri" : S3Uri
+    )
+
+    alias EntityRecognizerEndpointArn = String
+
+    alias EntityRecognizerEntityList = NamedTuple(
+      "S3Uri" : S3Uri
+    )
+
+    alias EntityRecognizerEvaluationMetrics = NamedTuple(
+      "Precision" : (Double)?,
+      "Recall" : (Double)?,
+      "F1Score" : (Double)?
+    )
+
+    alias EntityRecognizerFilter = NamedTuple(
+      "Status" : (ModelStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias EntityRecognizerInputDataConfig = NamedTuple(
+      "DataFormat" : (EntityRecognizerDataFormat)?,
+      "EntityTypes" : EntityTypesList,
+      "Documents" : (EntityRecognizerDocuments)?,
+      "Annotations" : (EntityRecognizerAnnotations)?,
+      "EntityList" : (EntityRecognizerEntityList)?,
+      "AugmentedManifests" : (EntityRecognizerAugmentedManifestsList)?
+    )
+
+    alias EntityRecognizerMetadata = NamedTuple(
+      "NumberOfTrainedDocuments" : (Integer)?,
+      "NumberOfTestDocuments" : (Integer)?,
+      "EvaluationMetrics" : (EntityRecognizerEvaluationMetrics)?,
+      "EntityTypes" : (EntityRecognizerMetadataEntityTypesList)?
+    )
+
+    alias EntityRecognizerMetadataEntityTypesList = Array(EntityRecognizerMetadataEntityTypesListItem)
+
+    alias EntityRecognizerMetadataEntityTypesListItem = NamedTuple(
+      "Type" : (AnyLengthString)?,
+      "EvaluationMetrics" : (EntityTypesEvaluationMetrics)?,
+      "NumberOfTrainMentions" : (Integer)?
+    )
+
+    alias EntityRecognizerProperties = NamedTuple(
+      "EntityRecognizerArn" : (EntityRecognizerArn)?,
+      "LanguageCode" : (LanguageCode)?,
+      "Status" : (ModelStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "TrainingStartTime" : (Timestamp)?,
+      "TrainingEndTime" : (Timestamp)?,
+      "InputDataConfig" : (EntityRecognizerInputDataConfig)?,
+      "RecognizerMetadata" : (EntityRecognizerMetadata)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias EntityRecognizerPropertiesList = Array(EntityRecognizerProperties)
+
+    alias EntityType = String
+
+    alias EntityTypeName = String
+
+    alias EntityTypesEvaluationMetrics = NamedTuple(
+      "Precision" : (Double)?,
+      "Recall" : (Double)?,
+      "F1Score" : (Double)?
+    )
+
+    alias EntityTypesList = Array(EntityTypesListItem)
+
+    alias EntityTypesListItem = NamedTuple(
+      "Type" : EntityTypeName
+    )
+
+    alias EventTypeString = String
+
+    alias EventsDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias EventsDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "LanguageCode" : (LanguageCode)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "TargetEventTypes" : (TargetEventTypes)?
+    )
+
+    alias EventsDetectionJobPropertiesList = Array(EventsDetectionJobProperties)
+
+    alias Float = Float32
+
+    alias IamRoleArn = String
+
+    alias InferenceUnitsInteger = Int32
+
+    alias InputDataConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "InputFormat" : (InputFormat)?
+    )
+
+    alias InputFormat = String
+
+    alias Integer = Int32
+
+    alias InternalServerException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidFilterException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias InvalidRequestException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias JobId = String
+
+    alias JobName = String
+
+    alias JobNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias JobStatus = String
+
+    alias KeyPhrase = NamedTuple(
+      "Score" : (Float)?,
+      "Text" : (String)?,
+      "BeginOffset" : (Integer)?,
+      "EndOffset" : (Integer)?
+    )
+
+    alias KeyPhrasesDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias KeyPhrasesDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "LanguageCode" : (LanguageCode)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias KeyPhrasesDetectionJobPropertiesList = Array(KeyPhrasesDetectionJobProperties)
+
+    alias KmsKeyId = String
+
+    alias KmsKeyValidationException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias LabelDelimiter = String
+
+    alias LanguageCode = String
+
+    alias ListDocumentClassificationJobsRequest = NamedTuple(
+      "Filter" : (DocumentClassificationJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListDocumentClassificationJobsResponse = NamedTuple(
+      "DocumentClassificationJobPropertiesList" : (DocumentClassificationJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListDocumentClassifiersRequest = NamedTuple(
+      "Filter" : (DocumentClassifierFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListDocumentClassifiersResponse = NamedTuple(
+      "DocumentClassifierPropertiesList" : (DocumentClassifierPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListDominantLanguageDetectionJobsRequest = NamedTuple(
+      "Filter" : (DominantLanguageDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListDominantLanguageDetectionJobsResponse = NamedTuple(
+      "DominantLanguageDetectionJobPropertiesList" : (DominantLanguageDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListEndpointsRequest = NamedTuple(
+      "Filter" : (EndpointFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListEndpointsResponse = NamedTuple(
+      "EndpointPropertiesList" : (EndpointPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListEntitiesDetectionJobsRequest = NamedTuple(
+      "Filter" : (EntitiesDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListEntitiesDetectionJobsResponse = NamedTuple(
+      "EntitiesDetectionJobPropertiesList" : (EntitiesDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListEntityRecognizersRequest = NamedTuple(
+      "Filter" : (EntityRecognizerFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListEntityRecognizersResponse = NamedTuple(
+      "EntityRecognizerPropertiesList" : (EntityRecognizerPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListEventsDetectionJobsRequest = NamedTuple(
+      "Filter" : (EventsDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListEventsDetectionJobsResponse = NamedTuple(
+      "EventsDetectionJobPropertiesList" : (EventsDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListKeyPhrasesDetectionJobsRequest = NamedTuple(
+      "Filter" : (KeyPhrasesDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListKeyPhrasesDetectionJobsResponse = NamedTuple(
+      "KeyPhrasesDetectionJobPropertiesList" : (KeyPhrasesDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListOfClasses = Array(DocumentClass)
+
+    alias ListOfDetectDominantLanguageResult = Array(BatchDetectDominantLanguageItemResult)
+
+    alias ListOfDetectEntitiesResult = Array(BatchDetectEntitiesItemResult)
+
+    alias ListOfDetectKeyPhrasesResult = Array(BatchDetectKeyPhrasesItemResult)
+
+    alias ListOfDetectSentimentResult = Array(BatchDetectSentimentItemResult)
+
+    alias ListOfDetectSyntaxResult = Array(BatchDetectSyntaxItemResult)
+
+    alias ListOfDominantLanguages = Array(DominantLanguage)
+
+    alias ListOfEntities = Array(Entity)
+
+    alias ListOfKeyPhrases = Array(KeyPhrase)
+
+    alias ListOfLabels = Array(DocumentLabel)
+
+    alias ListOfPiiEntities = Array(PiiEntity)
+
+    alias ListOfPiiEntityTypes = Array(PiiEntityType)
+
+    alias ListOfSyntaxTokens = Array(SyntaxToken)
+
+    alias ListPiiEntitiesDetectionJobsRequest = NamedTuple(
+      "Filter" : (PiiEntitiesDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListPiiEntitiesDetectionJobsResponse = NamedTuple(
+      "PiiEntitiesDetectionJobPropertiesList" : (PiiEntitiesDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListSentimentDetectionJobsRequest = NamedTuple(
+      "Filter" : (SentimentDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListSentimentDetectionJobsResponse = NamedTuple(
+      "SentimentDetectionJobPropertiesList" : (SentimentDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias ListTagsForResourceRequest = NamedTuple(
+      "ResourceArn" : ComprehendArn
+    )
+
+    alias ListTagsForResourceResponse = NamedTuple(
+      "ResourceArn" : (ComprehendArn)?,
+      "Tags" : (TagList)?
+    )
+
+    alias ListTopicsDetectionJobsRequest = NamedTuple(
+      "Filter" : (TopicsDetectionJobFilter)?,
+      "NextToken" : (String)?,
+      "MaxResults" : (MaxResultsInteger)?
+    )
+
+    alias ListTopicsDetectionJobsResponse = NamedTuple(
+      "TopicsDetectionJobPropertiesList" : (TopicsDetectionJobPropertiesList)?,
+      "NextToken" : (String)?
+    )
+
+    alias MaskCharacter = String
+
+    alias MaxResultsInteger = Int32
+
+    alias ModelStatus = String
+
+    alias NumberOfTopicsInteger = Int32
+
+    alias OutputDataConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias PartOfSpeechTag = NamedTuple(
+      "Tag" : (PartOfSpeechTagType)?,
+      "Score" : (Float)?
+    )
+
+    alias PartOfSpeechTagType = String
+
+    alias PiiEntitiesDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias PiiEntitiesDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (PiiOutputDataConfig)?,
+      "RedactionConfig" : (RedactionConfig)?,
+      "LanguageCode" : (LanguageCode)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "Mode" : (PiiEntitiesDetectionMode)?
+    )
+
+    alias PiiEntitiesDetectionJobPropertiesList = Array(PiiEntitiesDetectionJobProperties)
+
+    alias PiiEntitiesDetectionMaskMode = String
+
+    alias PiiEntitiesDetectionMode = String
+
+    alias PiiEntity = NamedTuple(
+      "Score" : (Float)?,
+      "Type" : (PiiEntityType)?,
+      "BeginOffset" : (Integer)?,
+      "EndOffset" : (Integer)?
+    )
+
+    alias PiiEntityType = String
+
+    alias PiiOutputDataConfig = NamedTuple(
+      "S3Uri" : S3Uri,
+      "KmsKeyId" : (KmsKeyId)?
+    )
+
+    alias RedactionConfig = NamedTuple(
+      "PiiEntityTypes" : (ListOfPiiEntityTypes)?,
+      "MaskMode" : (PiiEntitiesDetectionMaskMode)?,
+      "MaskCharacter" : (MaskCharacter)?
+    )
+
+    alias ResourceInUseException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceNotFoundException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias ResourceUnavailableException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias S3Uri = String
+
+    alias SecurityGroupId = String
+
+    alias SecurityGroupIds = Array(SecurityGroupId)
+
+    alias SentimentDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias SentimentDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "LanguageCode" : (LanguageCode)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias SentimentDetectionJobPropertiesList = Array(SentimentDetectionJobProperties)
+
+    alias SentimentScore = NamedTuple(
+      "Positive" : (Float)?,
+      "Negative" : (Float)?,
+      "Neutral" : (Float)?,
+      "Mixed" : (Float)?
+    )
+
+    alias SentimentType = String
+
+    alias StartDocumentClassificationJobRequest = NamedTuple(
+      "JobName" : (JobName)?,
+      "DocumentClassifierArn" : DocumentClassifierArn,
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias StartDocumentClassificationJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartDominantLanguageDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias StartDominantLanguageDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartEntitiesDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "EntityRecognizerArn" : (EntityRecognizerArn)?,
+      "LanguageCode" : LanguageCode,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias StartEntitiesDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartEventsDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "LanguageCode" : LanguageCode,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "TargetEventTypes" : TargetEventTypes
+    )
+
+    alias StartEventsDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartKeyPhrasesDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "LanguageCode" : LanguageCode,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias StartKeyPhrasesDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartPiiEntitiesDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "Mode" : PiiEntitiesDetectionMode,
+      "RedactionConfig" : (RedactionConfig)?,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "LanguageCode" : LanguageCode,
+      "ClientRequestToken" : (ClientRequestTokenString)?
+    )
+
+    alias StartPiiEntitiesDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartSentimentDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "LanguageCode" : LanguageCode,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias StartSentimentDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StartTopicsDetectionJobRequest = NamedTuple(
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : IamRoleArn,
+      "JobName" : (JobName)?,
+      "NumberOfTopics" : (NumberOfTopicsInteger)?,
+      "ClientRequestToken" : (ClientRequestTokenString)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias StartTopicsDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopDominantLanguageDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopDominantLanguageDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopEntitiesDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopEntitiesDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopEventsDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopEventsDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopKeyPhrasesDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopKeyPhrasesDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopPiiEntitiesDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopPiiEntitiesDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopSentimentDetectionJobRequest = NamedTuple(
+      "JobId" : JobId
+    )
+
+    alias StopSentimentDetectionJobResponse = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobStatus" : (JobStatus)?
+    )
+
+    alias StopTrainingDocumentClassifierRequest = NamedTuple(
+      "DocumentClassifierArn" : DocumentClassifierArn
+    )
+
+    alias StopTrainingDocumentClassifierResponse = NamedTuple(
+      
+    )
+
+    alias StopTrainingEntityRecognizerRequest = NamedTuple(
+      "EntityRecognizerArn" : EntityRecognizerArn
+    )
+
+    alias StopTrainingEntityRecognizerResponse = NamedTuple(
+      
+    )
+
+    alias String = String
+
+    alias SubnetId = String
+
+    alias Subnets = Array(SubnetId)
+
+    alias SyntaxLanguageCode = String
+
+    alias SyntaxToken = NamedTuple(
+      "TokenId" : (Integer)?,
+      "Text" : (String)?,
+      "BeginOffset" : (Integer)?,
+      "EndOffset" : (Integer)?,
+      "PartOfSpeech" : (PartOfSpeechTag)?
+    )
+
+    alias Tag = NamedTuple(
+      "Key" : TagKey,
+      "Value" : (TagValue)?
+    )
+
+    alias TagKey = String
+
+    alias TagKeyList = Array(TagKey)
+
+    alias TagList = Array(Tag)
+
+    alias TagResourceRequest = NamedTuple(
+      "ResourceArn" : ComprehendArn,
+      "Tags" : TagList
+    )
+
+    alias TagResourceResponse = NamedTuple(
+      
+    )
+
+    alias TagValue = String
+
+    alias TargetEventTypes = Array(EventTypeString)
+
+    alias TextSizeLimitExceededException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias Timestamp = String | UInt64 | Time
+
+    alias TooManyRequestsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TooManyTagKeysException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TooManyTagsException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias TopicsDetectionJobFilter = NamedTuple(
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "SubmitTimeBefore" : (Timestamp)?,
+      "SubmitTimeAfter" : (Timestamp)?
+    )
+
+    alias TopicsDetectionJobProperties = NamedTuple(
+      "JobId" : (JobId)?,
+      "JobName" : (JobName)?,
+      "JobStatus" : (JobStatus)?,
+      "Message" : (AnyLengthString)?,
+      "SubmitTime" : (Timestamp)?,
+      "EndTime" : (Timestamp)?,
+      "InputDataConfig" : (InputDataConfig)?,
+      "OutputDataConfig" : (OutputDataConfig)?,
+      "NumberOfTopics" : (Integer)?,
+      "DataAccessRoleArn" : (IamRoleArn)?,
+      "VolumeKmsKeyId" : (KmsKeyId)?,
+      "VpcConfig" : (VpcConfig)?
+    )
+
+    alias TopicsDetectionJobPropertiesList = Array(TopicsDetectionJobProperties)
+
+    alias UnsupportedLanguageException = NamedTuple(
+      "Message" : (String)?
+    )
+
+    alias UntagResourceRequest = NamedTuple(
+      "ResourceArn" : ComprehendArn,
+      "TagKeys" : TagKeyList
+    )
+
+    alias UntagResourceResponse = NamedTuple(
+      
+    )
+
+    alias UpdateEndpointRequest = NamedTuple(
+      "EndpointArn" : ComprehendEndpointArn,
+      "DesiredInferenceUnits" : InferenceUnitsInteger
+    )
+
+    alias UpdateEndpointResponse = NamedTuple(
+      
+    )
+
+    alias VpcConfig = NamedTuple(
+      "SecurityGroupIds" : SecurityGroupIds,
+      "Subnets" : Subnets
+    )
   end
 end

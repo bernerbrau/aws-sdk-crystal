@@ -222,5 +222,62 @@ module Aws::SageMakerFeatureStoreRuntime
       include Aws::Structure
     end
 
+    alias AccessForbidden = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias DeleteRecordRequest = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName,
+      "RecordIdentifierValueAsString" : ValueAsString,
+      "EventTime" : ValueAsString
+    )
+
+    alias FeatureGroupName = String
+
+    alias FeatureName = String
+
+    alias FeatureNames = Array(FeatureName)
+
+    alias FeatureValue = NamedTuple(
+      "FeatureName" : FeatureName,
+      "ValueAsString" : ValueAsString
+    )
+
+    alias GetRecordRequest = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName,
+      "RecordIdentifierValueAsString" : ValueAsString,
+      "FeatureNames" : (FeatureNames)?
+    )
+
+    alias GetRecordResponse = NamedTuple(
+      "Record" : (Record)?
+    )
+
+    alias InternalFailure = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias Message = String
+
+    alias PutRecordRequest = NamedTuple(
+      "FeatureGroupName" : FeatureGroupName,
+      "Record" : Record
+    )
+
+    alias Record = Array(FeatureValue)
+
+    alias ResourceNotFound = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ServiceUnavailable = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ValidationError = NamedTuple(
+      "Message" : (Message)?
+    )
+
+    alias ValueAsString = String
   end
 end
