@@ -8230,7 +8230,7 @@ module Aws::ServiceCatalog
     alias DescribeProvisionedProductPlanInput = NamedTuple(
       "AcceptLanguage" : String,
       "PlanId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8278,7 +8278,7 @@ module Aws::ServiceCatalog
       "AcceptLanguage" : String,
       "Id" : String,
       "PageToken" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt8
     )
 
     alias DescribeRecordOutput = NamedTuple(
@@ -8458,7 +8458,7 @@ module Aws::ServiceCatalog
       "ProvisionedProductId" : String,
       "ProvisionedProductName" : String,
       "OutputKeys" : Array(String),
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8525,7 +8525,7 @@ module Aws::ServiceCatalog
     alias ListAcceptedPortfolioSharesInput = NamedTuple(
       "AcceptLanguage" : String,
       "PageToken" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PortfolioShareType" : String
     )
 
@@ -8537,7 +8537,7 @@ module Aws::ServiceCatalog
     alias ListBudgetsForResourceInput = NamedTuple(
       "AcceptLanguage" : String,
       "ResourceId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8550,7 +8550,7 @@ module Aws::ServiceCatalog
       "AcceptLanguage" : String,
       "PortfolioId" : String,
       "ProductId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8562,7 +8562,7 @@ module Aws::ServiceCatalog
     alias ListLaunchPathsInput = NamedTuple(
       "AcceptLanguage" : String,
       "ProductId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8576,7 +8576,7 @@ module Aws::ServiceCatalog
       "PortfolioId" : String,
       "OrganizationNodeType" : String,
       "PageToken" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt8
     )
 
     alias ListOrganizationPortfolioAccessOutput = NamedTuple(
@@ -8589,7 +8589,7 @@ module Aws::ServiceCatalog
       "PortfolioId" : String,
       "OrganizationParentId" : String,
       "PageToken" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt8
     )
 
     alias ListPortfolioAccessOutput = NamedTuple(
@@ -8601,7 +8601,7 @@ module Aws::ServiceCatalog
       "AcceptLanguage" : String,
       "ProductId" : String,
       "PageToken" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt8
     )
 
     alias ListPortfoliosForProductOutput = NamedTuple(
@@ -8612,7 +8612,7 @@ module Aws::ServiceCatalog
     alias ListPortfoliosInput = NamedTuple(
       "AcceptLanguage" : String,
       "PageToken" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt8
     )
 
     alias ListPortfoliosOutput = NamedTuple(
@@ -8623,7 +8623,7 @@ module Aws::ServiceCatalog
     alias ListPrincipalsForPortfolioInput = NamedTuple(
       "AcceptLanguage" : String,
       "PortfolioId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8635,7 +8635,7 @@ module Aws::ServiceCatalog
     alias ListProvisionedProductPlansInput = NamedTuple(
       "AcceptLanguage" : String,
       "ProvisionProductId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String,
       "AccessLevelFilter" : AccessLevelFilter
     )
@@ -8647,7 +8647,7 @@ module Aws::ServiceCatalog
 
     alias ListProvisioningArtifactsForServiceActionInput = NamedTuple(
       "ServiceActionId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String,
       "AcceptLanguage" : String
     )
@@ -8671,7 +8671,7 @@ module Aws::ServiceCatalog
       "AcceptLanguage" : String,
       "AccessLevelFilter" : AccessLevelFilter,
       "SearchFilter" : ListRecordHistorySearchFilter,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8688,7 +8688,7 @@ module Aws::ServiceCatalog
     alias ListResourcesForTagOptionInput = NamedTuple(
       "TagOptionId" : String,
       "ResourceType" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8700,7 +8700,7 @@ module Aws::ServiceCatalog
     alias ListServiceActionsForProvisioningArtifactInput = NamedTuple(
       "ProductId" : String,
       "ProvisioningArtifactId" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String,
       "AcceptLanguage" : String
     )
@@ -8712,7 +8712,7 @@ module Aws::ServiceCatalog
 
     alias ListServiceActionsInput = NamedTuple(
       "AcceptLanguage" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8725,7 +8725,7 @@ module Aws::ServiceCatalog
       "AcceptLanguage" : String,
       "ProvisionedProductId" : String,
       "PageToken" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt8
     )
 
     alias ListStackInstancesForProvisionedProductOutput = NamedTuple(
@@ -8741,7 +8741,7 @@ module Aws::ServiceCatalog
 
     alias ListTagOptionsInput = NamedTuple(
       "Filters" : ListTagOptionsFilters,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -8785,9 +8785,9 @@ module Aws::ServiceCatalog
 
     alias OutputValue = String
 
-    alias PageSize = Int32
+    alias PageSize = UInt8
 
-    alias PageSizeMax100 = Int32
+    alias PageSizeMax100 = UInt8
 
     alias PageToken = String
 
@@ -9129,10 +9129,10 @@ module Aws::ServiceCatalog
     alias ProvisioningPreferences = NamedTuple(
       "StackSetAccounts" : Array(String),
       "StackSetRegions" : Array(String),
-      "StackSetFailureToleranceCount" : Int32,
-      "StackSetFailureTolerancePercentage" : Int32,
-      "StackSetMaxConcurrencyCount" : Int32,
-      "StackSetMaxConcurrencyPercentage" : Int32
+      "StackSetFailureToleranceCount" : UInt32,
+      "StackSetFailureTolerancePercentage" : UInt8,
+      "StackSetMaxConcurrencyCount" : UInt32,
+      "StackSetMaxConcurrencyPercentage" : UInt8
     )
 
     alias RecordDetail = NamedTuple(
@@ -9269,7 +9269,7 @@ module Aws::ServiceCatalog
     alias ScanProvisionedProductsInput = NamedTuple(
       "AcceptLanguage" : String,
       "AccessLevelFilter" : AccessLevelFilter,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -9291,7 +9291,7 @@ module Aws::ServiceCatalog
       "SortBy" : String,
       "SortOrder" : String,
       "PageToken" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "ProductSource" : String
     )
 
@@ -9303,7 +9303,7 @@ module Aws::ServiceCatalog
     alias SearchProductsInput = NamedTuple(
       "AcceptLanguage" : String,
       "Filters" : Hash(String,Array(String)),
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "SortBy" : String,
       "SortOrder" : String,
       "PageToken" : String
@@ -9321,7 +9321,7 @@ module Aws::ServiceCatalog
       "Filters" : Hash(String,Array(String)),
       "SortBy" : String,
       "SortOrder" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt8,
       "PageToken" : String
     )
 
@@ -9331,7 +9331,7 @@ module Aws::ServiceCatalog
       "NextPageToken" : String
     )
 
-    alias SearchProvisionedProductsPageSize = Int32
+    alias SearchProvisionedProductsPageSize = UInt8
 
     alias ServiceActionAssociation = NamedTuple(
       "ServiceActionId" : String,
@@ -9406,13 +9406,13 @@ module Aws::ServiceCatalog
 
     alias StackSetAccounts = Array(String)
 
-    alias StackSetFailureToleranceCount = Int32
+    alias StackSetFailureToleranceCount = UInt32
 
-    alias StackSetFailureTolerancePercentage = Int32
+    alias StackSetFailureTolerancePercentage = UInt8
 
-    alias StackSetMaxConcurrencyCount = Int32
+    alias StackSetMaxConcurrencyCount = UInt32
 
-    alias StackSetMaxConcurrencyPercentage = Int32
+    alias StackSetMaxConcurrencyPercentage = UInt8
 
     alias StackSetOperationType = String
 
@@ -9598,10 +9598,10 @@ module Aws::ServiceCatalog
     alias UpdateProvisioningPreferences = NamedTuple(
       "StackSetAccounts" : Array(String),
       "StackSetRegions" : Array(String),
-      "StackSetFailureToleranceCount" : Int32,
-      "StackSetFailureTolerancePercentage" : Int32,
-      "StackSetMaxConcurrencyCount" : Int32,
-      "StackSetMaxConcurrencyPercentage" : Int32,
+      "StackSetFailureToleranceCount" : UInt32,
+      "StackSetFailureTolerancePercentage" : UInt8,
+      "StackSetMaxConcurrencyCount" : UInt32,
+      "StackSetMaxConcurrencyPercentage" : UInt8,
       "StackSetOperationType" : String
     )
 

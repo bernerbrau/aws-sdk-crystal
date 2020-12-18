@@ -1716,7 +1716,7 @@ module Aws::Support
       "beforeTime" : String,
       "includeResolvedCases" : Bool,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "language" : String,
       "includeCommunications" : Bool
     )
@@ -1731,7 +1731,7 @@ module Aws::Support
       "beforeTime" : String,
       "afterTime" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeCommunicationsResponse = NamedTuple(
@@ -1813,7 +1813,7 @@ module Aws::Support
 
     alias Long = Int64
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 

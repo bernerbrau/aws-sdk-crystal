@@ -1707,7 +1707,7 @@ module Aws::AutoScalingPlans
       "TargetTrackingConfigurations" : Array(TargetTrackingConfiguration),
       "PredefinedLoadMetricSpecification" : PredefinedLoadMetricSpecification,
       "CustomizedLoadMetricSpecification" : CustomizedLoadMetricSpecification,
-      "ScheduledActionBufferTime" : Int32,
+      "ScheduledActionBufferTime" : UInt32,
       "PredictiveScalingMaxCapacityBehavior" : String,
       "PredictiveScalingMaxCapacityBuffer" : Int32,
       "PredictiveScalingMode" : String,
@@ -1765,7 +1765,7 @@ module Aws::AutoScalingPlans
 
     alias ScalingStatusCode = String
 
-    alias ScheduledActionBufferTime = Int32
+    alias ScheduledActionBufferTime = UInt32
 
     alias ServiceNamespace = String
 

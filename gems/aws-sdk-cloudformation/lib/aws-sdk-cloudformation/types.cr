@@ -8532,7 +8532,7 @@ module Aws::CloudFormation
 
     alias BoxedInteger = Int32
 
-    alias BoxedMaxResults = Int32
+    alias BoxedMaxResults = UInt8
 
     alias CFNRegistryException = NamedTuple(
       "Message" : String
@@ -8644,7 +8644,7 @@ module Aws::CloudFormation
       "Parameters" : Array(Parameter),
       "DisableRollback" : Bool,
       "RollbackConfiguration" : RollbackConfiguration,
-      "TimeoutInMinutes" : Int32,
+      "TimeoutInMinutes" : UInt32,
       "NotificationARNs" : Array(String),
       "Capabilities" : Array(String),
       "ResourceTypes" : Array(String),
@@ -8833,7 +8833,7 @@ module Aws::CloudFormation
       "StackName" : String,
       "StackResourceDriftStatusFilters" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeStackResourceDriftsOutput = NamedTuple(
@@ -8958,7 +8958,7 @@ module Aws::CloudFormation
 
     alias DisableRollback = Bool
 
-    alias DriftedStackInstancesCount = Int32
+    alias DriftedStackInstancesCount = UInt32
 
     alias EnableTerminationProtection = Bool
 
@@ -9004,11 +9004,11 @@ module Aws::CloudFormation
 
     alias Exports = Array(Export)
 
-    alias FailedStackInstancesCount = Int32
+    alias FailedStackInstancesCount = UInt32
 
-    alias FailureToleranceCount = Int32
+    alias FailureToleranceCount = UInt32
 
-    alias FailureTolerancePercentage = Int32
+    alias FailureTolerancePercentage = UInt8
 
     alias GetStackPolicyInput = NamedTuple(
       "StackName" : String
@@ -9052,9 +9052,9 @@ module Aws::CloudFormation
 
     alias Imports = Array(String)
 
-    alias InProgressStackInstancesCount = Int32
+    alias InProgressStackInstancesCount = UInt32
 
-    alias InSyncStackInstancesCount = Int32
+    alias InSyncStackInstancesCount = UInt32
 
     alias IncludeNestedStacks = Bool
 
@@ -9120,7 +9120,7 @@ module Aws::CloudFormation
     alias ListStackInstancesInput = NamedTuple(
       "StackSetName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(StackInstanceFilter),
       "StackInstanceAccount" : String,
       "StackInstanceRegion" : String
@@ -9145,7 +9145,7 @@ module Aws::CloudFormation
       "StackSetName" : String,
       "OperationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListStackSetOperationResultsOutput = NamedTuple(
@@ -9156,7 +9156,7 @@ module Aws::CloudFormation
     alias ListStackSetOperationsInput = NamedTuple(
       "StackSetName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListStackSetOperationsOutput = NamedTuple(
@@ -9166,7 +9166,7 @@ module Aws::CloudFormation
 
     alias ListStackSetsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Status" : String
     )
 
@@ -9190,7 +9190,7 @@ module Aws::CloudFormation
       "TypeName" : String,
       "TypeArn" : String,
       "RegistrationStatusFilter" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -9203,7 +9203,7 @@ module Aws::CloudFormation
       "Type" : String,
       "TypeName" : String,
       "Arn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "DeprecatedStatus" : String
     )
@@ -9218,7 +9218,7 @@ module Aws::CloudFormation
       "ProvisioningType" : String,
       "DeprecatedStatus" : String,
       "Type" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -9240,11 +9240,11 @@ module Aws::CloudFormation
 
     alias LogicalResourceIds = Array(String)
 
-    alias MaxConcurrentCount = Int32
+    alias MaxConcurrentCount = UInt32
 
-    alias MaxConcurrentPercentage = Int32
+    alias MaxConcurrentPercentage = UInt8
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Metadata = String
 
@@ -9253,7 +9253,7 @@ module Aws::CloudFormation
       "LogicalIdHierarchy" : String
     )
 
-    alias MonitoringTimeInMinutes = Int32
+    alias MonitoringTimeInMinutes = UInt8
 
     alias NameAlreadyExistsException = NamedTuple(
       
@@ -9502,7 +9502,7 @@ module Aws::CloudFormation
 
     alias RollbackConfiguration = NamedTuple(
       "RollbackTriggers" : Array(RollbackTrigger),
-      "MonitoringTimeInMinutes" : Int32
+      "MonitoringTimeInMinutes" : UInt8
     )
 
     alias RollbackTrigger = NamedTuple(
@@ -9554,7 +9554,7 @@ module Aws::CloudFormation
       "StackStatusReason" : String,
       "DisableRollback" : Bool,
       "NotificationARNs" : Array(String),
-      "TimeoutInMinutes" : Int32,
+      "TimeoutInMinutes" : UInt32,
       "Capabilities" : Array(String),
       "Outputs" : Array(Output),
       "RoleARN" : String,
@@ -9763,11 +9763,11 @@ module Aws::CloudFormation
       "DriftStatus" : String,
       "DriftDetectionStatus" : String,
       "LastDriftCheckTimestamp" : (String | UInt64 | Time)?,
-      "TotalStackInstancesCount" : Int32,
-      "DriftedStackInstancesCount" : Int32,
-      "InSyncStackInstancesCount" : Int32,
-      "InProgressStackInstancesCount" : Int32,
-      "FailedStackInstancesCount" : Int32
+      "TotalStackInstancesCount" : UInt32,
+      "DriftedStackInstancesCount" : UInt32,
+      "InSyncStackInstancesCount" : UInt32,
+      "InProgressStackInstancesCount" : UInt32,
+      "FailedStackInstancesCount" : UInt32
     )
 
     alias StackSetDriftDetectionStatus = String
@@ -9807,10 +9807,10 @@ module Aws::CloudFormation
 
     alias StackSetOperationPreferences = NamedTuple(
       "RegionOrder" : Array(String),
-      "FailureToleranceCount" : Int32,
-      "FailureTolerancePercentage" : Int32,
-      "MaxConcurrentCount" : Int32,
-      "MaxConcurrentPercentage" : Int32
+      "FailureToleranceCount" : UInt32,
+      "FailureTolerancePercentage" : UInt8,
+      "MaxConcurrentCount" : UInt32,
+      "MaxConcurrentPercentage" : UInt8
     )
 
     alias StackSetOperationResultStatus = String
@@ -9922,7 +9922,7 @@ module Aws::CloudFormation
 
     alias TemplateURL = String
 
-    alias TimeoutMinutes = Int32
+    alias TimeoutMinutes = UInt32
 
     alias Timestamp = String | UInt64 | Time
 
@@ -9930,7 +9930,7 @@ module Aws::CloudFormation
       
     )
 
-    alias TotalStackInstancesCount = Int32
+    alias TotalStackInstancesCount = UInt32
 
     alias TransformName = String
 

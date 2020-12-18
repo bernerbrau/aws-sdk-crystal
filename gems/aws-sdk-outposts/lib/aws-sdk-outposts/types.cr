@@ -520,7 +520,7 @@ module Aws::Outposts
     alias GetOutpostInstanceTypesInput = NamedTuple(
       "OutpostId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetOutpostInstanceTypesOutput = NamedTuple(
@@ -550,7 +550,7 @@ module Aws::Outposts
 
     alias ListOutpostsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListOutpostsOutput = NamedTuple(
@@ -560,7 +560,7 @@ module Aws::Outposts
 
     alias ListSitesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListSitesOutput = NamedTuple(
@@ -568,7 +568,7 @@ module Aws::Outposts
       "NextToken" : String
     )
 
-    alias MaxResults1000 = Int32
+    alias MaxResults1000 = UInt16
 
     alias NotFoundException = NamedTuple(
       "Message" : String

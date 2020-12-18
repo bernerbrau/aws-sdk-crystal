@@ -21811,7 +21811,7 @@ module Aws::RDS
       "DBProxyName" : String,
       "Filters" : Array(Filter),
       "Marker" : String,
-      "MaxRecords" : Int32
+      "MaxRecords" : UInt8
     )
 
     alias DescribeDBProxiesResponse = NamedTuple(
@@ -21824,7 +21824,7 @@ module Aws::RDS
       "TargetGroupName" : String,
       "Filters" : Array(Filter),
       "Marker" : String,
-      "MaxRecords" : Int32
+      "MaxRecords" : UInt8
     )
 
     alias DescribeDBProxyTargetGroupsResponse = NamedTuple(
@@ -21837,7 +21837,7 @@ module Aws::RDS
       "TargetGroupName" : String,
       "Filters" : Array(Filter),
       "Marker" : String,
-      "MaxRecords" : Int32
+      "MaxRecords" : UInt8
     )
 
     alias DescribeDBProxyTargetsResponse = NamedTuple(
@@ -21930,7 +21930,7 @@ module Aws::RDS
       "SourceArn" : String,
       "Filters" : Array(Filter),
       "Marker" : String,
-      "MaxRecords" : Int32
+      "MaxRecords" : UInt8
     )
 
     alias DescribeGlobalClustersMessage = NamedTuple(
@@ -22421,7 +22421,7 @@ module Aws::RDS
 
     alias LongOptional = Int64
 
-    alias MaxRecords = Int32
+    alias MaxRecords = UInt8
 
     alias MinimumEngineVersionPerAllowedValue = NamedTuple(
       "AllowedValue" : String,

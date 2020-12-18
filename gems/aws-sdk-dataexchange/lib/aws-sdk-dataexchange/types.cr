@@ -2602,7 +2602,7 @@ module Aws::DataExchange
 
     alias ListDataSetRevisionsRequest = NamedTuple(
       "DataSetId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2612,7 +2612,7 @@ module Aws::DataExchange
     )
 
     alias ListDataSetsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Origin" : String
     )
@@ -2624,7 +2624,7 @@ module Aws::DataExchange
 
     alias ListJobsRequest = NamedTuple(
       "DataSetId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "RevisionId" : String
     )
@@ -2640,7 +2640,7 @@ module Aws::DataExchange
 
     alias ListRevisionAssetsRequest = NamedTuple(
       "DataSetId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "RevisionId" : String
     )
@@ -2658,7 +2658,7 @@ module Aws::DataExchange
       "Tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Name = String
 

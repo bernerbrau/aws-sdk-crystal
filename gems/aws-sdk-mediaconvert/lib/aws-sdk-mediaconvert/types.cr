@@ -22865,12 +22865,12 @@ module Aws::MediaConvert
 
     alias AacSettings = NamedTuple(
       "AudioDescriptionBroadcasterMix" : String,
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "CodecProfile" : String,
       "CodingMode" : String,
       "RateControlMode" : String,
       "RawFormat" : String,
-      "SampleRate" : Int32,
+      "SampleRate" : UInt32,
       "Specification" : String,
       "VbrQuality" : String
     )
@@ -22890,14 +22890,14 @@ module Aws::MediaConvert
     alias Ac3MetadataControl = String
 
     alias Ac3Settings = NamedTuple(
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "BitstreamMode" : String,
       "CodingMode" : String,
-      "Dialnorm" : Int32,
+      "Dialnorm" : UInt8,
       "DynamicRangeCompressionProfile" : String,
       "LfeFilter" : String,
       "MetadataControl" : String,
-      "SampleRate" : Int32
+      "SampleRate" : UInt16
     )
 
     alias AccelerationMode = String
@@ -22911,9 +22911,9 @@ module Aws::MediaConvert
     alias AfdSignaling = String
 
     alias AiffSettings = NamedTuple(
-      "BitDepth" : Int32,
-      "Channels" : Int32,
-      "SampleRate" : Int32
+      "BitDepth" : UInt8,
+      "Channels" : UInt8,
+      "SampleRate" : UInt32
     )
 
     alias AlphaBehavior = String
@@ -22922,7 +22922,7 @@ module Aws::MediaConvert
 
     alias AncillarySourceSettings = NamedTuple(
       "Convert608To708" : String,
-      "SourceAncillaryChannelNumber" : Int32,
+      "SourceAncillaryChannelNumber" : UInt8,
       "TerminateCaptions" : String
     )
 
@@ -22966,7 +22966,7 @@ module Aws::MediaConvert
       "AudioChannelTaggingSettings" : AudioChannelTaggingSettings,
       "AudioNormalizationSettings" : AudioNormalizationSettings,
       "AudioSourceName" : String,
-      "AudioType" : Int32,
+      "AudioType" : UInt8,
       "AudioTypeControl" : String,
       "CodecSettings" : AudioCodecSettings,
       "CustomLanguageCode" : String,
@@ -22989,7 +22989,7 @@ module Aws::MediaConvert
     alias AudioNormalizationSettings = NamedTuple(
       "Algorithm" : String,
       "AlgorithmControl" : String,
-      "CorrectionGateLevel" : Int32,
+      "CorrectionGateLevel" : Int8,
       "LoudnessLogging" : String,
       "PeakCalculation" : String,
       "TargetLkfs" : Float64
@@ -23001,11 +23001,11 @@ module Aws::MediaConvert
       "ExternalAudioFileInput" : String,
       "LanguageCode" : String,
       "Offset" : Int32,
-      "Pids" : Array(Int32),
-      "ProgramSelection" : Int32,
+      "Pids" : Array(UInt32),
+      "ProgramSelection" : UInt8,
       "RemixSettings" : RemixSettings,
       "SelectorType" : String,
-      "Tracks" : Array(Int32)
+      "Tracks" : Array(UInt32)
     )
 
     alias AudioSelectorGroup = NamedTuple(
@@ -23017,9 +23017,9 @@ module Aws::MediaConvert
     alias AudioTypeControl = String
 
     alias AutomatedAbrSettings = NamedTuple(
-      "MaxAbrBitrate" : Int32,
-      "MaxRenditions" : Int32,
-      "MinAbrBitrate" : Int32
+      "MaxAbrBitrate" : UInt32,
+      "MaxRenditions" : UInt8,
+      "MinAbrBitrate" : UInt32
     )
 
     alias AutomatedEncodingSettings = NamedTuple(
@@ -23033,7 +23033,7 @@ module Aws::MediaConvert
     alias Av1FramerateConversionAlgorithm = String
 
     alias Av1QvbrSettings = NamedTuple(
-      "QvbrQualityLevel" : Int32,
+      "QvbrQualityLevel" : UInt8,
       "QvbrQualityLevelFineTune" : Float64
     )
 
@@ -23043,14 +23043,14 @@ module Aws::MediaConvert
       "AdaptiveQuantization" : String,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "GopSize" : Float64,
-      "MaxBitrate" : Int32,
-      "NumberBFramesBetweenReferenceFrames" : Int32,
+      "MaxBitrate" : UInt32,
+      "NumberBFramesBetweenReferenceFrames" : UInt8,
       "QvbrSettings" : Av1QvbrSettings,
       "RateControlMode" : String,
-      "Slices" : Int32,
+      "Slices" : UInt8,
       "SpatialAdaptiveQuantization" : String
     )
 
@@ -23072,8 +23072,8 @@ module Aws::MediaConvert
       "AvcIntraClass" : String,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt16,
+      "FramerateNumerator" : UInt16,
       "InterlaceMode" : String,
       "SlowPal" : String,
       "Telecine" : String
@@ -23092,21 +23092,21 @@ module Aws::MediaConvert
     alias BurninDestinationSettings = NamedTuple(
       "Alignment" : String,
       "BackgroundColor" : String,
-      "BackgroundOpacity" : Int32,
+      "BackgroundOpacity" : UInt8,
       "FontColor" : String,
-      "FontOpacity" : Int32,
-      "FontResolution" : Int32,
+      "FontOpacity" : UInt8,
+      "FontResolution" : UInt16,
       "FontScript" : String,
-      "FontSize" : Int32,
+      "FontSize" : UInt8,
       "OutlineColor" : String,
-      "OutlineSize" : Int32,
+      "OutlineSize" : UInt8,
       "ShadowColor" : String,
-      "ShadowOpacity" : Int32,
+      "ShadowOpacity" : UInt8,
       "ShadowXOffset" : Int32,
       "ShadowYOffset" : Int32,
       "TeletextSpacing" : String,
-      "XPosition" : Int32,
-      "YPosition" : Int32
+      "XPosition" : UInt32,
+      "YPosition" : UInt32
     )
 
     alias BurninSubtitleAlignment = String
@@ -23164,8 +23164,8 @@ module Aws::MediaConvert
     )
 
     alias CaptionSourceFramerate = NamedTuple(
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32
+      "FramerateDenominator" : UInt16,
+      "FramerateNumerator" : UInt16
     )
 
     alias CaptionSourceSettings = NamedTuple(
@@ -23212,14 +23212,14 @@ module Aws::MediaConvert
       "Destination" : String,
       "DestinationSettings" : DestinationSettings,
       "Encryption" : CmafEncryptionSettings,
-      "FragmentLength" : Int32,
+      "FragmentLength" : UInt32,
       "ManifestCompression" : String,
       "ManifestDurationFormat" : String,
-      "MinBufferTime" : Int32,
+      "MinBufferTime" : UInt32,
       "MinFinalSegmentLength" : Float64,
       "MpdProfile" : String,
       "SegmentControl" : String,
-      "SegmentLength" : Int32,
+      "SegmentLength" : UInt32,
       "StreamInfResolution" : String,
       "WriteDashManifest" : String,
       "WriteHlsManifest" : String,
@@ -23259,12 +23259,12 @@ module Aws::MediaConvert
     )
 
     alias ColorCorrector = NamedTuple(
-      "Brightness" : Int32,
+      "Brightness" : UInt8,
       "ColorSpaceConversion" : String,
-      "Contrast" : Int32,
+      "Contrast" : UInt8,
       "Hdr10Metadata" : Hdr10Metadata,
-      "Hue" : Int32,
-      "Saturation" : Int32
+      "Hue" : Int16,
+      "Saturation" : UInt8
     )
 
     alias ColorMetadata = String
@@ -23301,7 +23301,7 @@ module Aws::MediaConvert
       "ClientRequestToken" : String,
       "HopDestinations" : Array(HopDestination),
       "JobTemplate" : String,
-      "Priority" : Int32,
+      "Priority" : Int8,
       "Queue" : String,
       "Role" : String,
       "Settings" : JobSettings,
@@ -23321,7 +23321,7 @@ module Aws::MediaConvert
       "Description" : String,
       "HopDestinations" : Array(HopDestination),
       "Name" : String,
-      "Priority" : Int32,
+      "Priority" : Int8,
       "Queue" : String,
       "Settings" : JobTemplateSettings,
       "StatusUpdateInterval" : String,
@@ -23373,13 +23373,13 @@ module Aws::MediaConvert
       "Destination" : String,
       "DestinationSettings" : DestinationSettings,
       "Encryption" : DashIsoEncryptionSettings,
-      "FragmentLength" : Int32,
+      "FragmentLength" : UInt32,
       "HbbtvCompliance" : String,
-      "MinBufferTime" : Int32,
+      "MinBufferTime" : UInt32,
       "MinFinalSegmentLength" : Float64,
       "MpdProfile" : String,
       "SegmentControl" : String,
-      "SegmentLength" : Int32,
+      "SegmentLength" : UInt32,
       "WriteSegmentTimelineInRepresentation" : String
     )
 
@@ -23463,8 +23463,8 @@ module Aws::MediaConvert
     )
 
     alias DolbyVisionLevel6Metadata = NamedTuple(
-      "MaxCll" : Int32,
-      "MaxFall" : Int32
+      "MaxCll" : UInt16,
+      "MaxFall" : UInt16
     )
 
     alias DolbyVisionLevel6Mode = String
@@ -23474,14 +23474,14 @@ module Aws::MediaConvert
     alias DropFrameTimecode = String
 
     alias DvbNitSettings = NamedTuple(
-      "NetworkId" : Int32,
+      "NetworkId" : UInt16,
       "NetworkName" : String,
-      "NitInterval" : Int32
+      "NitInterval" : UInt16
     )
 
     alias DvbSdtSettings = NamedTuple(
       "OutputSdt" : String,
-      "SdtInterval" : Int32,
+      "SdtInterval" : UInt16,
       "ServiceName" : String,
       "ServiceProviderName" : String
     )
@@ -23489,26 +23489,26 @@ module Aws::MediaConvert
     alias DvbSubDestinationSettings = NamedTuple(
       "Alignment" : String,
       "BackgroundColor" : String,
-      "BackgroundOpacity" : Int32,
+      "BackgroundOpacity" : UInt8,
       "FontColor" : String,
-      "FontOpacity" : Int32,
-      "FontResolution" : Int32,
+      "FontOpacity" : UInt8,
+      "FontResolution" : UInt16,
       "FontScript" : String,
-      "FontSize" : Int32,
+      "FontSize" : UInt8,
       "OutlineColor" : String,
-      "OutlineSize" : Int32,
+      "OutlineSize" : UInt8,
       "ShadowColor" : String,
-      "ShadowOpacity" : Int32,
+      "ShadowOpacity" : UInt8,
       "ShadowXOffset" : Int32,
       "ShadowYOffset" : Int32,
       "SubtitlingType" : String,
       "TeletextSpacing" : String,
-      "XPosition" : Int32,
-      "YPosition" : Int32
+      "XPosition" : UInt32,
+      "YPosition" : UInt32
     )
 
     alias DvbSubSourceSettings = NamedTuple(
-      "Pid" : Int32
+      "Pid" : UInt32
     )
 
     alias DvbSubtitleAlignment = String
@@ -23526,7 +23526,7 @@ module Aws::MediaConvert
     alias DvbSubtitlingType = String
 
     alias DvbTdtSettings = NamedTuple(
-      "TdtInterval" : Int32
+      "TdtInterval" : UInt16
     )
 
     alias Eac3AtmosBitstreamMode = String
@@ -23542,7 +23542,7 @@ module Aws::MediaConvert
     alias Eac3AtmosMeteringMode = String
 
     alias Eac3AtmosSettings = NamedTuple(
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "BitstreamMode" : String,
       "CodingMode" : String,
       "DialogueIntelligence" : String,
@@ -23553,8 +23553,8 @@ module Aws::MediaConvert
       "LtRtCenterMixLevel" : Float64,
       "LtRtSurroundMixLevel" : Float64,
       "MeteringMode" : String,
-      "SampleRate" : Int32,
-      "SpeechThreshold" : Int32,
+      "SampleRate" : UInt16,
+      "SpeechThreshold" : UInt8,
       "StereoDownmix" : String,
       "SurroundExMode" : String
     )
@@ -23587,11 +23587,11 @@ module Aws::MediaConvert
 
     alias Eac3Settings = NamedTuple(
       "AttenuationControl" : String,
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "BitstreamMode" : String,
       "CodingMode" : String,
       "DcFilter" : String,
-      "Dialnorm" : Int32,
+      "Dialnorm" : UInt8,
       "DynamicRangeCompressionLine" : String,
       "DynamicRangeCompressionRf" : String,
       "LfeControl" : String,
@@ -23603,7 +23603,7 @@ module Aws::MediaConvert
       "MetadataControl" : String,
       "PassthroughControl" : String,
       "PhaseControl" : String,
-      "SampleRate" : Int32,
+      "SampleRate" : UInt16,
       "StereoDownmix" : String,
       "SurroundExMode" : String,
       "SurroundMode" : String
@@ -23618,14 +23618,14 @@ module Aws::MediaConvert
     alias EmbeddedConvert608To708 = String
 
     alias EmbeddedDestinationSettings = NamedTuple(
-      "Destination608ChannelNumber" : Int32,
-      "Destination708ServiceNumber" : Int32
+      "Destination608ChannelNumber" : UInt8,
+      "Destination708ServiceNumber" : UInt8
     )
 
     alias EmbeddedSourceSettings = NamedTuple(
       "Convert608To708" : String,
-      "Source608ChannelNumber" : Int32,
-      "Source608TrackNumber" : Int32,
+      "Source608ChannelNumber" : UInt8,
+      "Source608TrackNumber" : UInt8,
       "TerminateCaptions" : String
     )
 
@@ -23641,7 +23641,7 @@ module Aws::MediaConvert
 
     alias EsamSettings = NamedTuple(
       "ManifestConfirmConditionNotification" : EsamManifestConfirmConditionNotification,
-      "ResponseSignalPreroll" : Int32,
+      "ResponseSignalPreroll" : UInt16,
       "SignalProcessingNotification" : EsamSignalProcessingNotification
     )
 
@@ -23680,10 +23680,10 @@ module Aws::MediaConvert
     )
 
     alias FrameCaptureSettings = NamedTuple(
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
-      "MaxCaptures" : Int32,
-      "Quality" : Int32
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
+      "MaxCaptures" : UInt32,
+      "Quality" : UInt8
     )
 
     alias GetJobRequest = NamedTuple(
@@ -23747,8 +23747,8 @@ module Aws::MediaConvert
     alias H264QualityTuningLevel = String
 
     alias H264QvbrSettings = NamedTuple(
-      "MaxAverageBitrate" : Int32,
-      "QvbrQualityLevel" : Int32,
+      "MaxAverageBitrate" : UInt32,
+      "QvbrQualityLevel" : UInt8,
       "QvbrQualityLevelFineTune" : Float64
     )
 
@@ -23760,7 +23760,7 @@ module Aws::MediaConvert
 
     alias H264Settings = NamedTuple(
       "AdaptiveQuantization" : String,
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "CodecLevel" : String,
       "CodecProfile" : String,
       "DynamicSubGop" : String,
@@ -23769,30 +23769,30 @@ module Aws::MediaConvert
       "FlickerAdaptiveQuantization" : String,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "GopBReference" : String,
-      "GopClosedCadence" : Int32,
+      "GopClosedCadence" : UInt32,
       "GopSize" : Float64,
       "GopSizeUnits" : String,
-      "HrdBufferInitialFillPercentage" : Int32,
-      "HrdBufferSize" : Int32,
+      "HrdBufferInitialFillPercentage" : UInt8,
+      "HrdBufferSize" : UInt32,
       "InterlaceMode" : String,
-      "MaxBitrate" : Int32,
-      "MinIInterval" : Int32,
-      "NumberBFramesBetweenReferenceFrames" : Int32,
-      "NumberReferenceFrames" : Int32,
+      "MaxBitrate" : UInt32,
+      "MinIInterval" : UInt8,
+      "NumberBFramesBetweenReferenceFrames" : UInt8,
+      "NumberReferenceFrames" : UInt8,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "QualityTuningLevel" : String,
       "QvbrSettings" : H264QvbrSettings,
       "RateControlMode" : String,
       "RepeatPps" : String,
       "SceneChangeDetect" : String,
-      "Slices" : Int32,
+      "Slices" : UInt8,
       "SlowPal" : String,
-      "Softness" : Int32,
+      "Softness" : UInt8,
       "SpatialAdaptiveQuantization" : String,
       "Syntax" : String,
       "Telecine" : String,
@@ -23839,8 +23839,8 @@ module Aws::MediaConvert
     alias H265QualityTuningLevel = String
 
     alias H265QvbrSettings = NamedTuple(
-      "MaxAverageBitrate" : Int32,
-      "QvbrQualityLevel" : Int32,
+      "MaxAverageBitrate" : UInt32,
+      "QvbrQualityLevel" : UInt8,
       "QvbrQualityLevelFineTune" : Float64
     )
 
@@ -23853,35 +23853,35 @@ module Aws::MediaConvert
     alias H265Settings = NamedTuple(
       "AdaptiveQuantization" : String,
       "AlternateTransferFunctionSei" : String,
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "CodecLevel" : String,
       "CodecProfile" : String,
       "DynamicSubGop" : String,
       "FlickerAdaptiveQuantization" : String,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "GopBReference" : String,
-      "GopClosedCadence" : Int32,
+      "GopClosedCadence" : UInt32,
       "GopSize" : Float64,
       "GopSizeUnits" : String,
-      "HrdBufferInitialFillPercentage" : Int32,
-      "HrdBufferSize" : Int32,
+      "HrdBufferInitialFillPercentage" : UInt8,
+      "HrdBufferSize" : UInt32,
       "InterlaceMode" : String,
-      "MaxBitrate" : Int32,
-      "MinIInterval" : Int32,
-      "NumberBFramesBetweenReferenceFrames" : Int32,
-      "NumberReferenceFrames" : Int32,
+      "MaxBitrate" : UInt32,
+      "MinIInterval" : UInt8,
+      "NumberBFramesBetweenReferenceFrames" : UInt8,
+      "NumberReferenceFrames" : UInt8,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "QualityTuningLevel" : String,
       "QvbrSettings" : H265QvbrSettings,
       "RateControlMode" : String,
       "SampleAdaptiveOffsetFilterMode" : String,
       "SceneChangeDetect" : String,
-      "Slices" : Int32,
+      "Slices" : UInt8,
       "SlowPal" : String,
       "SpatialAdaptiveQuantization" : String,
       "Telecine" : String,
@@ -23909,18 +23909,18 @@ module Aws::MediaConvert
     alias H265WriteMp4PackagingType = String
 
     alias Hdr10Metadata = NamedTuple(
-      "BluePrimaryX" : Int32,
-      "BluePrimaryY" : Int32,
-      "GreenPrimaryX" : Int32,
-      "GreenPrimaryY" : Int32,
-      "MaxContentLightLevel" : Int32,
-      "MaxFrameAverageLightLevel" : Int32,
-      "MaxLuminance" : Int32,
-      "MinLuminance" : Int32,
-      "RedPrimaryX" : Int32,
-      "RedPrimaryY" : Int32,
-      "WhitePointX" : Int32,
-      "WhitePointY" : Int32
+      "BluePrimaryX" : UInt16,
+      "BluePrimaryY" : UInt16,
+      "GreenPrimaryX" : UInt16,
+      "GreenPrimaryY" : UInt16,
+      "MaxContentLightLevel" : UInt16,
+      "MaxFrameAverageLightLevel" : UInt16,
+      "MaxLuminance" : UInt32,
+      "MinLuminance" : UInt32,
+      "RedPrimaryX" : UInt16,
+      "RedPrimaryY" : UInt16,
+      "WhitePointX" : UInt16,
+      "WhitePointY" : UInt16
     )
 
     alias HlsAdMarkers = String
@@ -23979,13 +23979,13 @@ module Aws::MediaConvert
       "ManifestCompression" : String,
       "ManifestDurationFormat" : String,
       "MinFinalSegmentLength" : Float64,
-      "MinSegmentLength" : Int32,
+      "MinSegmentLength" : UInt32,
       "OutputSelection" : String,
       "ProgramDateTime" : String,
-      "ProgramDateTimePeriod" : Int32,
+      "ProgramDateTimePeriod" : UInt16,
       "SegmentControl" : String,
-      "SegmentLength" : Int32,
-      "SegmentsPerSubdirectory" : Int32,
+      "SegmentLength" : UInt32,
+      "SegmentsPerSubdirectory" : UInt32,
       "StreamInfResolution" : String,
       "TimedMetadataId3Frame" : String,
       "TimedMetadataId3Period" : Int32,
@@ -24024,7 +24024,7 @@ module Aws::MediaConvert
     alias HlsTimedMetadataId3Frame = String
 
     alias HopDestination = NamedTuple(
-      "Priority" : Int32,
+      "Priority" : Int8,
       "Queue" : String,
       "WaitMinutes" : Int32
     )
@@ -24054,12 +24054,12 @@ module Aws::MediaConvert
       "DenoiseFilter" : String,
       "FileInput" : String,
       "FilterEnable" : String,
-      "FilterStrength" : Int32,
+      "FilterStrength" : Int8,
       "ImageInserter" : ImageInserter,
       "InputClippings" : Array(InputClipping),
       "InputScanType" : String,
       "Position" : Rectangle,
-      "ProgramNumber" : Int32,
+      "ProgramNumber" : UInt32,
       "PsiControl" : String,
       "SupplementalImps" : Array(String),
       "TimecodeSource" : String,
@@ -24099,12 +24099,12 @@ module Aws::MediaConvert
       "DeblockFilter" : String,
       "DenoiseFilter" : String,
       "FilterEnable" : String,
-      "FilterStrength" : Int32,
+      "FilterStrength" : Int8,
       "ImageInserter" : ImageInserter,
       "InputClippings" : Array(InputClipping),
       "InputScanType" : String,
       "Position" : Rectangle,
-      "ProgramNumber" : Int32,
+      "ProgramNumber" : UInt32,
       "PsiControl" : String,
       "TimecodeSource" : String,
       "TimecodeStart" : String,
@@ -24114,17 +24114,17 @@ module Aws::MediaConvert
     alias InputTimecodeSource = String
 
     alias InsertableImage = NamedTuple(
-      "Duration" : Int32,
-      "FadeIn" : Int32,
-      "FadeOut" : Int32,
-      "Height" : Int32,
+      "Duration" : UInt32,
+      "FadeIn" : UInt32,
+      "FadeOut" : UInt32,
+      "Height" : UInt32,
       "ImageInserterInput" : String,
-      "ImageX" : Int32,
-      "ImageY" : Int32,
-      "Layer" : Int32,
-      "Opacity" : Int32,
+      "ImageX" : UInt32,
+      "ImageY" : UInt32,
+      "Layer" : UInt8,
+      "Opacity" : UInt8,
       "StartTime" : String,
-      "Width" : Int32
+      "Width" : UInt32
     )
 
     alias InternalServerErrorException = NamedTuple(
@@ -24146,7 +24146,7 @@ module Aws::MediaConvert
       "JobTemplate" : String,
       "Messages" : JobMessages,
       "OutputGroupDetails" : Array(OutputGroupDetail),
-      "Priority" : Int32,
+      "Priority" : Int8,
       "Queue" : String,
       "QueueTransitions" : Array(QueueTransition),
       "RetryCount" : Int32,
@@ -24167,7 +24167,7 @@ module Aws::MediaConvert
     alias JobPhase = String
 
     alias JobSettings = NamedTuple(
-      "AdAvailOffset" : Int32,
+      "AdAvailOffset" : Int16,
       "AvailBlanking" : AvailBlanking,
       "Esam" : EsamSettings,
       "Inputs" : Array(Input),
@@ -24190,7 +24190,7 @@ module Aws::MediaConvert
       "HopDestinations" : Array(HopDestination),
       "LastUpdated" : (String | UInt64 | Time)?,
       "Name" : String,
-      "Priority" : Int32,
+      "Priority" : Int8,
       "Queue" : String,
       "Settings" : JobTemplateSettings,
       "StatusUpdateInterval" : String,
@@ -24200,7 +24200,7 @@ module Aws::MediaConvert
     alias JobTemplateListBy = String
 
     alias JobTemplateSettings = NamedTuple(
-      "AdAvailOffset" : Int32,
+      "AdAvailOffset" : Int16,
       "AvailBlanking" : AvailBlanking,
       "Esam" : EsamSettings,
       "Inputs" : Array(InputTemplate),
@@ -24217,7 +24217,7 @@ module Aws::MediaConvert
     alias ListJobTemplatesRequest = NamedTuple(
       "Category" : String,
       "ListBy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Order" : String
     )
@@ -24228,7 +24228,7 @@ module Aws::MediaConvert
     )
 
     alias ListJobsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Order" : String,
       "Queue" : String,
@@ -24243,7 +24243,7 @@ module Aws::MediaConvert
     alias ListPresetsRequest = NamedTuple(
       "Category" : String,
       "ListBy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Order" : String
     )
@@ -24255,7 +24255,7 @@ module Aws::MediaConvert
 
     alias ListQueuesRequest = NamedTuple(
       "ListBy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Order" : String
     )
@@ -24294,7 +24294,7 @@ module Aws::MediaConvert
     alias M2tsRateMode = String
 
     alias M2tsScte35Esam = NamedTuple(
-      "Scte35EsamPid" : Int32
+      "Scte35EsamPid" : UInt16
     )
 
     alias M2tsScte35Source = String
@@ -24306,41 +24306,41 @@ module Aws::MediaConvert
     alias M2tsSettings = NamedTuple(
       "AudioBufferModel" : String,
       "AudioDuration" : String,
-      "AudioFramesPerPes" : Int32,
-      "AudioPids" : Array(Int32),
-      "Bitrate" : Int32,
+      "AudioFramesPerPes" : UInt32,
+      "AudioPids" : Array(UInt16),
+      "Bitrate" : UInt32,
       "BufferModel" : String,
       "DvbNitSettings" : DvbNitSettings,
       "DvbSdtSettings" : DvbSdtSettings,
-      "DvbSubPids" : Array(Int32),
+      "DvbSubPids" : Array(UInt16),
       "DvbTdtSettings" : DvbTdtSettings,
-      "DvbTeletextPid" : Int32,
+      "DvbTeletextPid" : UInt16,
       "EbpAudioInterval" : String,
       "EbpPlacement" : String,
       "EsRateInPes" : String,
       "ForceTsVideoEbpOrder" : String,
       "FragmentTime" : Float64,
-      "MaxPcrInterval" : Int32,
-      "MinEbpInterval" : Int32,
+      "MaxPcrInterval" : UInt16,
+      "MinEbpInterval" : UInt16,
       "NielsenId3" : String,
       "NullPacketBitrate" : Float64,
-      "PatInterval" : Int32,
+      "PatInterval" : UInt16,
       "PcrControl" : String,
-      "PcrPid" : Int32,
-      "PmtInterval" : Int32,
-      "PmtPid" : Int32,
-      "PrivateMetadataPid" : Int32,
-      "ProgramNumber" : Int32,
+      "PcrPid" : UInt16,
+      "PmtInterval" : UInt16,
+      "PmtPid" : UInt16,
+      "PrivateMetadataPid" : UInt16,
+      "ProgramNumber" : UInt16,
       "RateMode" : String,
       "Scte35Esam" : M2tsScte35Esam,
-      "Scte35Pid" : Int32,
+      "Scte35Pid" : UInt16,
       "Scte35Source" : String,
       "SegmentationMarkers" : String,
       "SegmentationStyle" : String,
       "SegmentationTime" : Float64,
-      "TimedMetadataPid" : Int32,
-      "TransportStreamId" : Int32,
-      "VideoPid" : Int32
+      "TimedMetadataPid" : UInt16,
+      "TransportStreamId" : UInt16,
+      "VideoPid" : UInt16
     )
 
     alias M3u8AudioDuration = String
@@ -24353,22 +24353,22 @@ module Aws::MediaConvert
 
     alias M3u8Settings = NamedTuple(
       "AudioDuration" : String,
-      "AudioFramesPerPes" : Int32,
-      "AudioPids" : Array(Int32),
+      "AudioFramesPerPes" : UInt32,
+      "AudioPids" : Array(UInt16),
       "NielsenId3" : String,
-      "PatInterval" : Int32,
+      "PatInterval" : UInt16,
       "PcrControl" : String,
-      "PcrPid" : Int32,
-      "PmtInterval" : Int32,
-      "PmtPid" : Int32,
-      "PrivateMetadataPid" : Int32,
-      "ProgramNumber" : Int32,
-      "Scte35Pid" : Int32,
+      "PcrPid" : UInt16,
+      "PmtInterval" : UInt16,
+      "PmtPid" : UInt16,
+      "PrivateMetadataPid" : UInt16,
+      "ProgramNumber" : UInt16,
+      "Scte35Pid" : UInt16,
       "Scte35Source" : String,
       "TimedMetadata" : String,
-      "TimedMetadataPid" : Int32,
-      "TransportStreamId" : Int32,
-      "VideoPid" : Int32
+      "TimedMetadataPid" : UInt16,
+      "TransportStreamId" : UInt16,
+      "VideoPid" : UInt16
     )
 
     alias MotionImageInserter = NamedTuple(
@@ -24381,15 +24381,15 @@ module Aws::MediaConvert
     )
 
     alias MotionImageInsertionFramerate = NamedTuple(
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32
     )
 
     alias MotionImageInsertionMode = String
 
     alias MotionImageInsertionOffset = NamedTuple(
-      "ImageX" : Int32,
-      "ImageY" : Int32
+      "ImageX" : UInt32,
+      "ImageY" : UInt32
     )
 
     alias MotionImagePlayback = String
@@ -24413,19 +24413,19 @@ module Aws::MediaConvert
     )
 
     alias Mp2Settings = NamedTuple(
-      "Bitrate" : Int32,
-      "Channels" : Int32,
-      "SampleRate" : Int32
+      "Bitrate" : UInt32,
+      "Channels" : UInt8,
+      "SampleRate" : UInt16
     )
 
     alias Mp3RateControlMode = String
 
     alias Mp3Settings = NamedTuple(
-      "Bitrate" : Int32,
-      "Channels" : Int32,
+      "Bitrate" : UInt32,
+      "Channels" : UInt8,
       "RateControlMode" : String,
-      "SampleRate" : Int32,
-      "VbrQuality" : Int32
+      "SampleRate" : UInt16,
+      "VbrQuality" : UInt8
     )
 
     alias Mp4CslgAtom = String
@@ -24437,7 +24437,7 @@ module Aws::MediaConvert
     alias Mp4Settings = NamedTuple(
       "AudioDuration" : String,
       "CslgAtom" : String,
-      "CttsVersion" : Int32,
+      "CttsVersion" : UInt8,
       "FreeSpaceBox" : String,
       "MoovPlacement" : String,
       "Mp4MajorBrand" : String
@@ -24489,32 +24489,32 @@ module Aws::MediaConvert
 
     alias Mpeg2Settings = NamedTuple(
       "AdaptiveQuantization" : String,
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "CodecLevel" : String,
       "CodecProfile" : String,
       "DynamicSubGop" : String,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
-      "GopClosedCadence" : Int32,
+      "FramerateDenominator" : UInt16,
+      "FramerateNumerator" : UInt16,
+      "GopClosedCadence" : UInt32,
       "GopSize" : Float64,
       "GopSizeUnits" : String,
-      "HrdBufferInitialFillPercentage" : Int32,
-      "HrdBufferSize" : Int32,
+      "HrdBufferInitialFillPercentage" : UInt8,
+      "HrdBufferSize" : UInt32,
       "InterlaceMode" : String,
       "IntraDcPrecision" : String,
-      "MaxBitrate" : Int32,
-      "MinIInterval" : Int32,
-      "NumberBFramesBetweenReferenceFrames" : Int32,
+      "MaxBitrate" : UInt32,
+      "MinIInterval" : UInt8,
+      "NumberBFramesBetweenReferenceFrames" : UInt8,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "QualityTuningLevel" : String,
       "RateControlMode" : String,
       "SceneChangeDetect" : String,
       "SlowPal" : String,
-      "Softness" : Int32,
+      "Softness" : UInt8,
       "SpatialAdaptiveQuantization" : String,
       "Syntax" : String,
       "Telecine" : String,
@@ -24548,7 +24548,7 @@ module Aws::MediaConvert
       "Destination" : String,
       "DestinationSettings" : DestinationSettings,
       "Encryption" : MsSmoothEncryptionSettings,
-      "FragmentLength" : Int32,
+      "FragmentLength" : UInt32,
       "ManifestEncoding" : String
     )
 
@@ -24565,7 +24565,7 @@ module Aws::MediaConvert
 
     alias NexGuardFileMarkerSettings = NamedTuple(
       "License" : String,
-      "Payload" : Int32,
+      "Payload" : UInt32,
       "Preset" : String,
       "Strength" : String
     )
@@ -24573,7 +24573,7 @@ module Aws::MediaConvert
     alias NielsenActiveWatermarkProcessType = String
 
     alias NielsenConfiguration = NamedTuple(
-      "BreakoutCode" : Int32,
+      "BreakoutCode" : UInt8,
       "DistributorId" : String
     )
 
@@ -24585,7 +24585,7 @@ module Aws::MediaConvert
       "CbetSourceId" : String,
       "EpisodeId" : String,
       "MetadataDestination" : String,
-      "SourceId" : Int32,
+      "SourceId" : UInt16,
       "SourceWatermarkStatus" : String,
       "TicServerUrl" : String,
       "UniqueTicPerAudioTrack" : String
@@ -24607,20 +24607,20 @@ module Aws::MediaConvert
     alias NoiseReducerFilter = String
 
     alias NoiseReducerFilterSettings = NamedTuple(
-      "Strength" : Int32
+      "Strength" : UInt8
     )
 
     alias NoiseReducerSpatialFilterSettings = NamedTuple(
-      "PostFilterSharpenStrength" : Int32,
-      "Speed" : Int32,
-      "Strength" : Int32
+      "PostFilterSharpenStrength" : UInt8,
+      "Speed" : Int8,
+      "Strength" : UInt8
     )
 
     alias NoiseReducerTemporalFilterSettings = NamedTuple(
-      "AggressiveMode" : Int32,
+      "AggressiveMode" : UInt8,
       "PostTemporalSharpening" : String,
-      "Speed" : Int32,
-      "Strength" : Int32
+      "Speed" : Int8,
+      "Strength" : UInt8
     )
 
     alias NotFoundException = NamedTuple(
@@ -24628,9 +24628,9 @@ module Aws::MediaConvert
     )
 
     alias OpusSettings = NamedTuple(
-      "Bitrate" : Int32,
-      "Channels" : Int32,
-      "SampleRate" : Int32
+      "Bitrate" : UInt32,
+      "Channels" : UInt8,
+      "SampleRate" : UInt16
     )
 
     alias Order = String
@@ -24647,7 +24647,7 @@ module Aws::MediaConvert
     )
 
     alias OutputChannelMapping = NamedTuple(
-      "InputChannels" : Array(Int32)
+      "InputChannels" : Array(Int8)
     )
 
     alias OutputDetail = NamedTuple(
@@ -24724,12 +24724,12 @@ module Aws::MediaConvert
       "CodecProfile" : String,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "InterlaceMode" : String,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "SlowPal" : String,
       "Telecine" : String
     )
@@ -24763,16 +24763,16 @@ module Aws::MediaConvert
     )
 
     alias Rectangle = NamedTuple(
-      "Height" : Int32,
-      "Width" : Int32,
-      "X" : Int32,
-      "Y" : Int32
+      "Height" : UInt32,
+      "Width" : UInt32,
+      "X" : UInt32,
+      "Y" : UInt32
     )
 
     alias RemixSettings = NamedTuple(
       "ChannelMapping" : ChannelMapping,
-      "ChannelsIn" : Int32,
-      "ChannelsOut" : Int32
+      "ChannelsIn" : UInt8,
+      "ChannelsOut" : UInt8
     )
 
     alias RenewalType = String
@@ -24874,7 +24874,7 @@ module Aws::MediaConvert
     )
 
     alias TimecodeBurnin = NamedTuple(
-      "FontSize" : Int32,
+      "FontSize" : UInt8,
       "Position" : String,
       "Prefix" : String
     )
@@ -24907,7 +24907,7 @@ module Aws::MediaConvert
     )
 
     alias TrackSourceSettings = NamedTuple(
-      "TrackNumber" : Int32
+      "TrackNumber" : UInt32
     )
 
     alias TtmlDestinationSettings = NamedTuple(
@@ -24933,7 +24933,7 @@ module Aws::MediaConvert
       "Description" : String,
       "HopDestinations" : Array(HopDestination),
       "Name" : String,
-      "Priority" : Int32,
+      "Priority" : Int8,
       "Queue" : String,
       "Settings" : JobTemplateSettings,
       "StatusUpdateInterval" : String
@@ -24976,8 +24976,8 @@ module Aws::MediaConvert
     alias Vc3Settings = NamedTuple(
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt16,
+      "FramerateNumerator" : UInt16,
       "InterlaceMode" : String,
       "SlowPal" : String,
       "Telecine" : String,
@@ -25011,15 +25011,15 @@ module Aws::MediaConvert
       "ColorMetadata" : String,
       "Crop" : Rectangle,
       "DropFrameTimecode" : String,
-      "FixedAfd" : Int32,
-      "Height" : Int32,
+      "FixedAfd" : UInt8,
+      "Height" : UInt16,
       "Position" : Rectangle,
       "RespondToAfd" : String,
       "ScalingBehavior" : String,
-      "Sharpness" : Int32,
+      "Sharpness" : UInt8,
       "TimecodeInsertion" : String,
       "VideoPreprocessors" : VideoPreprocessor,
-      "Width" : Int32
+      "Width" : UInt16
     )
 
     alias VideoDetail = NamedTuple(
@@ -25042,7 +25042,7 @@ module Aws::MediaConvert
       "ColorSpace" : String,
       "ColorSpaceUsage" : String,
       "Hdr10Metadata" : Hdr10Metadata,
-      "Pid" : Int32,
+      "Pid" : UInt32,
       "ProgramNumber" : Int32,
       "Rotate" : String
     )
@@ -25050,9 +25050,9 @@ module Aws::MediaConvert
     alias VideoTimecodeInsertion = String
 
     alias VorbisSettings = NamedTuple(
-      "Channels" : Int32,
-      "SampleRate" : Int32,
-      "VbrQuality" : Int32
+      "Channels" : UInt8,
+      "SampleRate" : UInt16,
+      "VbrQuality" : Int8
     )
 
     alias Vp8FramerateControl = String
@@ -25066,17 +25066,17 @@ module Aws::MediaConvert
     alias Vp8RateControlMode = String
 
     alias Vp8Settings = NamedTuple(
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "GopSize" : Float64,
-      "HrdBufferSize" : Int32,
-      "MaxBitrate" : Int32,
+      "HrdBufferSize" : UInt32,
+      "MaxBitrate" : UInt32,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "QualityTuningLevel" : String,
       "RateControlMode" : String
     )
@@ -25092,17 +25092,17 @@ module Aws::MediaConvert
     alias Vp9RateControlMode = String
 
     alias Vp9Settings = NamedTuple(
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "FramerateControl" : String,
       "FramerateConversionAlgorithm" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "GopSize" : Float64,
-      "HrdBufferSize" : Int32,
-      "MaxBitrate" : Int32,
+      "HrdBufferSize" : UInt32,
+      "MaxBitrate" : UInt32,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "QualityTuningLevel" : String,
       "RateControlMode" : String
     )
@@ -25112,10 +25112,10 @@ module Aws::MediaConvert
     alias WavFormat = String
 
     alias WavSettings = NamedTuple(
-      "BitDepth" : Int32,
-      "Channels" : Int32,
+      "BitDepth" : UInt8,
+      "Channels" : UInt8,
       "Format" : String,
-      "SampleRate" : Int32
+      "SampleRate" : UInt32
     )
 
     alias __boolean = Bool
@@ -25138,175 +25138,175 @@ module Aws::MediaConvert
 
     alias __integer = Int32
 
-    alias __integerMin0Max0 = Int32
+    alias __integerMin0Max0 = UInt8
 
-    alias __integerMin0Max1 = Int32
+    alias __integerMin0Max1 = UInt8
 
-    alias __integerMin0Max10 = Int32
+    alias __integerMin0Max10 = UInt8
 
-    alias __integerMin0Max100 = Int32
+    alias __integerMin0Max100 = UInt8
 
-    alias __integerMin0Max1000 = Int32
+    alias __integerMin0Max1000 = UInt16
 
-    alias __integerMin0Max10000 = Int32
+    alias __integerMin0Max10000 = UInt16
 
-    alias __integerMin0Max1152000000 = Int32
+    alias __integerMin0Max1152000000 = UInt32
 
-    alias __integerMin0Max128 = Int32
+    alias __integerMin0Max128 = UInt8
 
-    alias __integerMin0Max1466400000 = Int32
+    alias __integerMin0Max1466400000 = UInt32
 
-    alias __integerMin0Max15 = Int32
+    alias __integerMin0Max15 = UInt8
 
-    alias __integerMin0Max16 = Int32
+    alias __integerMin0Max16 = UInt8
 
-    alias __integerMin0Max2147483647 = Int32
+    alias __integerMin0Max2147483647 = UInt32
 
-    alias __integerMin0Max255 = Int32
+    alias __integerMin0Max255 = UInt8
 
-    alias __integerMin0Max3 = Int32
+    alias __integerMin0Max3 = UInt8
 
-    alias __integerMin0Max30 = Int32
+    alias __integerMin0Max30 = UInt8
 
-    alias __integerMin0Max30000 = Int32
+    alias __integerMin0Max30000 = UInt16
 
-    alias __integerMin0Max3600 = Int32
+    alias __integerMin0Max3600 = UInt16
 
-    alias __integerMin0Max4 = Int32
+    alias __integerMin0Max4 = UInt8
 
-    alias __integerMin0Max4194303 = Int32
+    alias __integerMin0Max4194303 = UInt32
 
-    alias __integerMin0Max47185920 = Int32
+    alias __integerMin0Max47185920 = UInt32
 
-    alias __integerMin0Max500 = Int32
+    alias __integerMin0Max500 = UInt16
 
-    alias __integerMin0Max50000 = Int32
+    alias __integerMin0Max50000 = UInt16
 
-    alias __integerMin0Max65534 = Int32
+    alias __integerMin0Max65534 = UInt16
 
-    alias __integerMin0Max65535 = Int32
+    alias __integerMin0Max65535 = UInt16
 
-    alias __integerMin0Max7 = Int32
+    alias __integerMin0Max7 = UInt8
 
-    alias __integerMin0Max8 = Int32
+    alias __integerMin0Max8 = UInt8
 
-    alias __integerMin0Max9 = Int32
+    alias __integerMin0Max9 = UInt8
 
-    alias __integerMin0Max96 = Int32
+    alias __integerMin0Max96 = UInt8
 
-    alias __integerMin0Max99 = Int32
+    alias __integerMin0Max99 = UInt8
 
-    alias __integerMin100000Max100000000 = Int32
+    alias __integerMin100000Max100000000 = UInt32
 
-    alias __integerMin1000Max1152000000 = Int32
+    alias __integerMin1000Max1152000000 = UInt32
 
-    alias __integerMin1000Max1466400000 = Int32
+    alias __integerMin1000Max1466400000 = UInt32
 
-    alias __integerMin1000Max288000000 = Int32
+    alias __integerMin1000Max288000000 = UInt32
 
-    alias __integerMin1000Max30000 = Int32
+    alias __integerMin1000Max30000 = UInt16
 
-    alias __integerMin1000Max300000000 = Int32
+    alias __integerMin1000Max300000000 = UInt32
 
-    alias __integerMin1000Max480000000 = Int32
+    alias __integerMin1000Max480000000 = UInt32
 
-    alias __integerMin10Max48 = Int32
+    alias __integerMin10Max48 = UInt8
 
-    alias __integerMin16000Max320000 = Int32
+    alias __integerMin16000Max320000 = UInt32
 
-    alias __integerMin16000Max48000 = Int32
+    alias __integerMin16000Max48000 = UInt16
 
-    alias __integerMin16Max24 = Int32
+    alias __integerMin16Max24 = UInt8
 
-    alias __integerMin1Max1 = Int32
+    alias __integerMin1Max1 = UInt8
 
-    alias __integerMin1Max10 = Int32
+    alias __integerMin1Max10 = UInt8
 
-    alias __integerMin1Max100 = Int32
+    alias __integerMin1Max100 = UInt8
 
-    alias __integerMin1Max10000000 = Int32
+    alias __integerMin1Max10000000 = UInt32
 
-    alias __integerMin1Max1001 = Int32
+    alias __integerMin1Max1001 = UInt16
 
-    alias __integerMin1Max17895697 = Int32
+    alias __integerMin1Max17895697 = UInt32
 
-    alias __integerMin1Max2 = Int32
+    alias __integerMin1Max2 = UInt8
 
-    alias __integerMin1Max20 = Int32
+    alias __integerMin1Max20 = UInt8
 
-    alias __integerMin1Max2147483640 = Int32
+    alias __integerMin1Max2147483640 = UInt32
 
-    alias __integerMin1Max2147483647 = Int32
+    alias __integerMin1Max2147483647 = UInt32
 
-    alias __integerMin1Max31 = Int32
+    alias __integerMin1Max31 = UInt8
 
-    alias __integerMin1Max32 = Int32
+    alias __integerMin1Max32 = UInt8
 
-    alias __integerMin1Max4 = Int32
+    alias __integerMin1Max4 = UInt8
 
-    alias __integerMin1Max6 = Int32
+    alias __integerMin1Max6 = UInt8
 
-    alias __integerMin1Max60000 = Int32
+    alias __integerMin1Max60000 = UInt16
 
-    alias __integerMin1Max64 = Int32
+    alias __integerMin1Max64 = UInt8
 
-    alias __integerMin22050Max48000 = Int32
+    alias __integerMin22050Max48000 = UInt16
 
-    alias __integerMin24Max60000 = Int32
+    alias __integerMin24Max60000 = UInt16
 
-    alias __integerMin25Max10000 = Int32
+    alias __integerMin25Max10000 = UInt16
 
-    alias __integerMin25Max2000 = Int32
+    alias __integerMin25Max2000 = UInt16
 
-    alias __integerMin2Max2147483647 = Int32
+    alias __integerMin2Max2147483647 = UInt32
 
-    alias __integerMin32000Max192000 = Int32
+    alias __integerMin32000Max192000 = UInt32
 
-    alias __integerMin32000Max384000 = Int32
+    alias __integerMin32000Max384000 = UInt32
 
-    alias __integerMin32000Max48000 = Int32
+    alias __integerMin32000Max48000 = UInt16
 
-    alias __integerMin32Max8182 = Int32
+    alias __integerMin32Max8182 = UInt16
 
-    alias __integerMin32Max8192 = Int32
+    alias __integerMin32Max8192 = UInt16
 
-    alias __integerMin384000Max768000 = Int32
+    alias __integerMin384000Max768000 = UInt32
 
-    alias __integerMin3Max15 = Int32
+    alias __integerMin3Max15 = UInt8
 
-    alias __integerMin48000Max48000 = Int32
+    alias __integerMin48000Max48000 = UInt16
 
-    alias __integerMin6000Max1024000 = Int32
+    alias __integerMin6000Max1024000 = UInt32
 
-    alias __integerMin64000Max640000 = Int32
+    alias __integerMin64000Max640000 = UInt32
 
-    alias __integerMin7Max15 = Int32
+    alias __integerMin7Max15 = UInt8
 
-    alias __integerMin8000Max192000 = Int32
+    alias __integerMin8000Max192000 = UInt32
 
-    alias __integerMin8000Max96000 = Int32
+    alias __integerMin8000Max96000 = UInt32
 
-    alias __integerMin96Max600 = Int32
+    alias __integerMin96Max600 = UInt16
 
-    alias __integerMinNegative1000Max1000 = Int32
+    alias __integerMinNegative1000Max1000 = Int16
 
-    alias __integerMinNegative180Max180 = Int32
+    alias __integerMinNegative180Max180 = Int16
 
-    alias __integerMinNegative1Max10 = Int32
+    alias __integerMinNegative1Max10 = Int8
 
-    alias __integerMinNegative1Max3 = Int32
+    alias __integerMinNegative1Max3 = Int8
 
     alias __integerMinNegative2147483648Max2147483647 = Int32
 
-    alias __integerMinNegative2Max3 = Int32
+    alias __integerMinNegative2Max3 = Int8
 
-    alias __integerMinNegative50Max50 = Int32
+    alias __integerMinNegative50Max50 = Int8
 
-    alias __integerMinNegative5Max5 = Int32
+    alias __integerMinNegative5Max5 = Int8
 
-    alias __integerMinNegative60Max6 = Int32
+    alias __integerMinNegative60Max6 = Int8
 
-    alias __integerMinNegative70Max0 = Int32
+    alias __integerMinNegative70Max0 = Int8
 
     alias __listOfAudioDescription = Array(AudioDescription)
 
@@ -25362,11 +25362,11 @@ module Aws::MediaConvert
 
     alias __listOfTeletextPageType = Array(String)
 
-    alias __listOf__integerMin1Max2147483647 = Array(Int32)
+    alias __listOf__integerMin1Max2147483647 = Array(UInt32)
 
-    alias __listOf__integerMin32Max8182 = Array(Int32)
+    alias __listOf__integerMin32Max8182 = Array(UInt16)
 
-    alias __listOf__integerMinNegative60Max6 = Array(Int32)
+    alias __listOf__integerMinNegative60Max6 = Array(Int8)
 
     alias __listOf__string = Array(String)
 

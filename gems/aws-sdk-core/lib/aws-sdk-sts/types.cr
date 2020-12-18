@@ -1535,7 +1535,7 @@ module Aws::STS
       "RoleSessionName" : String,
       "PolicyArns" : Array(PolicyDescriptorType),
       "Policy" : String,
-      "DurationSeconds" : Int32,
+      "DurationSeconds" : UInt16,
       "Tags" : Array(Tag),
       "TransitiveTagKeys" : Array(String),
       "ExternalId" : String,
@@ -1546,7 +1546,7 @@ module Aws::STS
     alias AssumeRoleResponse = NamedTuple(
       "Credentials" : Credentials,
       "AssumedRoleUser" : AssumedRoleUser,
-      "PackedPolicySize" : Int32
+      "PackedPolicySize" : UInt32
     )
 
     alias AssumeRoleWithSAMLRequest = NamedTuple(
@@ -1555,13 +1555,13 @@ module Aws::STS
       "SAMLAssertion" : String,
       "PolicyArns" : Array(PolicyDescriptorType),
       "Policy" : String,
-      "DurationSeconds" : Int32
+      "DurationSeconds" : UInt16
     )
 
     alias AssumeRoleWithSAMLResponse = NamedTuple(
       "Credentials" : Credentials,
       "AssumedRoleUser" : AssumedRoleUser,
-      "PackedPolicySize" : Int32,
+      "PackedPolicySize" : UInt32,
       "Subject" : String,
       "SubjectType" : String,
       "Issuer" : String,
@@ -1576,14 +1576,14 @@ module Aws::STS
       "ProviderId" : String,
       "PolicyArns" : Array(PolicyDescriptorType),
       "Policy" : String,
-      "DurationSeconds" : Int32
+      "DurationSeconds" : UInt16
     )
 
     alias AssumeRoleWithWebIdentityResponse = NamedTuple(
       "Credentials" : Credentials,
       "SubjectFromWebIdentityToken" : String,
       "AssumedRoleUser" : AssumedRoleUser,
-      "PackedPolicySize" : Int32,
+      "PackedPolicySize" : UInt32,
       "Provider" : String,
       "Audience" : String
     )
@@ -1641,18 +1641,18 @@ module Aws::STS
       "Name" : String,
       "Policy" : String,
       "PolicyArns" : Array(PolicyDescriptorType),
-      "DurationSeconds" : Int32,
+      "DurationSeconds" : UInt32,
       "Tags" : Array(Tag)
     )
 
     alias GetFederationTokenResponse = NamedTuple(
       "Credentials" : Credentials,
       "FederatedUser" : FederatedUser,
-      "PackedPolicySize" : Int32
+      "PackedPolicySize" : UInt32
     )
 
     alias GetSessionTokenRequest = NamedTuple(
-      "DurationSeconds" : Int32,
+      "DurationSeconds" : UInt32,
       "SerialNumber" : String,
       "TokenCode" : String
     )
@@ -1724,7 +1724,7 @@ module Aws::STS
 
     alias decodedMessageType = String
 
-    alias durationSecondsType = Int32
+    alias durationSecondsType = UInt32
 
     alias encodedMessageType = String
 
@@ -1744,7 +1744,7 @@ module Aws::STS
 
     alias malformedPolicyDocumentMessage = String
 
-    alias nonNegativeIntegerType = Int32
+    alias nonNegativeIntegerType = UInt32
 
     alias packedPolicyTooLargeMessage = String
 
@@ -1752,7 +1752,7 @@ module Aws::STS
 
     alias regionDisabledMessage = String
 
-    alias roleDurationSecondsType = Int32
+    alias roleDurationSecondsType = UInt16
 
     alias roleSessionNameType = String
 

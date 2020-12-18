@@ -1387,7 +1387,7 @@ module Aws::MigrationHub
     alias ListApplicationStatesRequest = NamedTuple(
       "ApplicationIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListApplicationStatesResult = NamedTuple(
@@ -1399,7 +1399,7 @@ module Aws::MigrationHub
       "ProgressUpdateStream" : String,
       "MigrationTaskName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListCreatedArtifactsResult = NamedTuple(
@@ -1411,7 +1411,7 @@ module Aws::MigrationHub
       "ProgressUpdateStream" : String,
       "MigrationTaskName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDiscoveredResourcesResult = NamedTuple(
@@ -1421,7 +1421,7 @@ module Aws::MigrationHub
 
     alias ListMigrationTasksRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ResourceName" : String
     )
 
@@ -1432,7 +1432,7 @@ module Aws::MigrationHub
 
     alias ListProgressUpdateStreamsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProgressUpdateStreamsResult = NamedTuple(
@@ -1440,11 +1440,11 @@ module Aws::MigrationHub
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MaxResultsCreatedArtifacts = Int32
+    alias MaxResultsCreatedArtifacts = UInt8
 
-    alias MaxResultsResources = Int32
+    alias MaxResultsResources = UInt8
 
     alias MigrationTask = NamedTuple(
       "ProgressUpdateStream" : String,
@@ -1460,14 +1460,14 @@ module Aws::MigrationHub
       "ProgressUpdateStream" : String,
       "MigrationTaskName" : String,
       "Status" : String,
-      "ProgressPercent" : Int32,
+      "ProgressPercent" : UInt8,
       "StatusDetail" : String,
       "UpdateDateTime" : (String | UInt64 | Time)?
     )
 
     alias MigrationTaskSummaryList = Array(MigrationTaskSummary)
 
-    alias NextUpdateSeconds = Int32
+    alias NextUpdateSeconds = UInt32
 
     alias NotifyApplicationStateRequest = NamedTuple(
       "ApplicationId" : String,
@@ -1485,7 +1485,7 @@ module Aws::MigrationHub
       "MigrationTaskName" : String,
       "Task" : Task,
       "UpdateDateTime" : String | UInt64 | Time,
-      "NextUpdateSeconds" : Int32,
+      "NextUpdateSeconds" : UInt32,
       "DryRun" : Bool
     )
 
@@ -1497,7 +1497,7 @@ module Aws::MigrationHub
       "Message" : String
     )
 
-    alias ProgressPercent = Int32
+    alias ProgressPercent = UInt8
 
     alias ProgressUpdateStream = String
 
@@ -1548,7 +1548,7 @@ module Aws::MigrationHub
     alias Task = NamedTuple(
       "Status" : String,
       "StatusDetail" : String,
-      "ProgressPercent" : Int32
+      "ProgressPercent" : UInt8
     )
 
     alias ThrottlingException = NamedTuple(

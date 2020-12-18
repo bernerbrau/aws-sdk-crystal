@@ -17154,7 +17154,7 @@ module Aws::Glue
     alias Action = NamedTuple(
       "JobName" : String,
       "Arguments" : Hash(String,String),
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "SecurityConfiguration" : String,
       "NotificationProperty" : NotificationProperty,
       "CrawlerName" : String
@@ -17353,9 +17353,9 @@ module Aws::Glue
     )
 
     alias BinaryColumnStatisticsData = NamedTuple(
-      "MaximumLength" : Int64,
+      "MaximumLength" : UInt64,
       "AverageLength" : Float64,
-      "NumberOfNulls" : Int64
+      "NumberOfNulls" : UInt64
     )
 
     alias Blob = String | Array(UInt8) | IO
@@ -17363,9 +17363,9 @@ module Aws::Glue
     alias Boolean = Bool
 
     alias BooleanColumnStatisticsData = NamedTuple(
-      "NumberOfTrues" : Int64,
-      "NumberOfFalses" : Int64,
-      "NumberOfNulls" : Int64
+      "NumberOfTrues" : UInt64,
+      "NumberOfFalses" : UInt64,
+      "NumberOfNulls" : UInt64
     )
 
     alias BooleanNullable = Bool
@@ -17649,9 +17649,9 @@ module Aws::Glue
       "StillEstimating" : Bool,
       "LastRuntimeSeconds" : Float64,
       "MedianRuntimeSeconds" : Float64,
-      "TablesCreated" : Int32,
-      "TablesUpdated" : Int32,
-      "TablesDeleted" : Int32
+      "TablesCreated" : UInt32,
+      "TablesUpdated" : UInt32,
+      "TablesDeleted" : UInt32
     )
 
     alias CrawlerMetricsList = Array(CrawlerMetrics)
@@ -17805,7 +17805,7 @@ module Aws::Glue
       "Connections" : ConnectionsList,
       "MaxRetries" : Int32,
       "AllocatedCapacity" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxCapacity" : Float64,
       "SecurityConfiguration" : String,
       "Tags" : Hash(String,String),
@@ -17834,7 +17834,7 @@ module Aws::Glue
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxRetries" : Int32,
       "Tags" : Hash(String,String),
       "TransformEncryption" : TransformEncryption
@@ -17897,9 +17897,9 @@ module Aws::Glue
       "Description" : String,
       "DataFormat" : String,
       "Compatibility" : String,
-      "SchemaCheckpoint" : Int64,
-      "LatestSchemaVersion" : Int64,
-      "NextSchemaVersion" : Int64,
+      "SchemaCheckpoint" : UInt32,
+      "LatestSchemaVersion" : UInt32,
+      "NextSchemaVersion" : UInt32,
       "SchemaStatus" : String,
       "Tags" : Hash(String,String),
       "SchemaVersionId" : String,
@@ -18058,15 +18058,15 @@ module Aws::Glue
     alias DateColumnStatisticsData = NamedTuple(
       "MinimumValue" : (String | UInt64 | Time)?,
       "MaximumValue" : (String | UInt64 | Time)?,
-      "NumberOfNulls" : Int64,
-      "NumberOfDistinctValues" : Int64
+      "NumberOfNulls" : UInt64,
+      "NumberOfDistinctValues" : UInt64
     )
 
     alias DecimalColumnStatisticsData = NamedTuple(
       "MinimumValue" : DecimalNumber,
       "MaximumValue" : DecimalNumber,
-      "NumberOfNulls" : Int64,
-      "NumberOfDistinctValues" : Int64
+      "NumberOfNulls" : UInt64,
+      "NumberOfDistinctValues" : UInt64
     )
 
     alias DecimalNumber = NamedTuple(
@@ -18322,8 +18322,8 @@ module Aws::Glue
     alias DoubleColumnStatisticsData = NamedTuple(
       "MinimumValue" : Float64,
       "MaximumValue" : Float64,
-      "NumberOfNulls" : Int64,
-      "NumberOfDistinctValues" : Int64
+      "NumberOfNulls" : UInt64,
+      "NumberOfDistinctValues" : UInt64
     )
 
     alias DynamoDBTarget = NamedTuple(
@@ -18443,7 +18443,7 @@ module Aws::Glue
     )
 
     alias GetClassifiersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -18499,7 +18499,7 @@ module Aws::Glue
       "Filter" : GetConnectionsFilter,
       "HidePassword" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetConnectionsResponse = NamedTuple(
@@ -18509,7 +18509,7 @@ module Aws::Glue
 
     alias GetCrawlerMetricsRequest = NamedTuple(
       "CrawlerNameList" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -18527,7 +18527,7 @@ module Aws::Glue
     )
 
     alias GetCrawlersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -18556,7 +18556,7 @@ module Aws::Glue
     alias GetDatabasesRequest = NamedTuple(
       "CatalogId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ResourceShareType" : String
     )
 
@@ -18583,7 +18583,7 @@ module Aws::Glue
     )
 
     alias GetDevEndpointsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -18622,7 +18622,7 @@ module Aws::Glue
     alias GetJobRunsRequest = NamedTuple(
       "JobName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetJobRunsResponse = NamedTuple(
@@ -18632,7 +18632,7 @@ module Aws::Glue
 
     alias GetJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetJobsResponse = NamedTuple(
@@ -18661,7 +18661,7 @@ module Aws::Glue
     alias GetMLTaskRunsRequest = NamedTuple(
       "TransformId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Filter" : TaskRunFilterCriteria,
       "Sort" : TaskRunSortCriteria
     )
@@ -18692,14 +18692,14 @@ module Aws::Glue
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxRetries" : Int32,
       "TransformEncryption" : TransformEncryption
     )
 
     alias GetMLTransformsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Filter" : TransformFilterCriteria,
       "Sort" : TransformSortCriteria
     )
@@ -18749,7 +18749,7 @@ module Aws::Glue
       "Expression" : String,
       "NextToken" : String,
       "Segment" : Segment,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetPartitionsResponse = NamedTuple(
@@ -18786,7 +18786,7 @@ module Aws::Glue
 
     alias GetResourcePoliciesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetResourcePoliciesResponse = NamedTuple(
@@ -18832,9 +18832,9 @@ module Aws::Glue
       "Description" : String,
       "DataFormat" : String,
       "Compatibility" : String,
-      "SchemaCheckpoint" : Int64,
-      "LatestSchemaVersion" : Int64,
-      "NextSchemaVersion" : Int64,
+      "SchemaCheckpoint" : UInt32,
+      "LatestSchemaVersion" : UInt32,
+      "NextSchemaVersion" : UInt32,
       "SchemaStatus" : String,
       "CreatedTime" : String,
       "UpdatedTime" : String
@@ -18851,7 +18851,7 @@ module Aws::Glue
       "SchemaDefinition" : String,
       "DataFormat" : String,
       "SchemaArn" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt32,
       "Status" : String,
       "CreatedTime" : String
     )
@@ -18876,7 +18876,7 @@ module Aws::Glue
     )
 
     alias GetSecurityConfigurationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -18913,7 +18913,7 @@ module Aws::Glue
       "DatabaseName" : String,
       "TableName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetTableVersionsResponse = NamedTuple(
@@ -18926,7 +18926,7 @@ module Aws::Glue
       "DatabaseName" : String,
       "Expression" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetTablesResponse = NamedTuple(
@@ -18953,7 +18953,7 @@ module Aws::Glue
     alias GetTriggersRequest = NamedTuple(
       "NextToken" : String,
       "DependentJobName" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetTriggersResponse = NamedTuple(
@@ -18976,7 +18976,7 @@ module Aws::Glue
       "DatabaseName" : String,
       "Pattern" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetUserDefinedFunctionsResponse = NamedTuple(
@@ -19016,7 +19016,7 @@ module Aws::Glue
       "Name" : String,
       "IncludeGraph" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetWorkflowRunsResponse = NamedTuple(
@@ -19087,7 +19087,7 @@ module Aws::Glue
 
     alias Integer = Int32
 
-    alias IntegerFlag = Int32
+    alias IntegerFlag = UInt8
 
     alias IntegerValue = Int32
 
@@ -19123,7 +19123,7 @@ module Aws::Glue
       "Connections" : ConnectionsList,
       "MaxRetries" : Int32,
       "AllocatedCapacity" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
@@ -19180,7 +19180,7 @@ module Aws::Glue
       "PredecessorRuns" : Array(Predecessor),
       "AllocatedCapacity" : Int32,
       "ExecutionTime" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
@@ -19205,7 +19205,7 @@ module Aws::Glue
       "Connections" : ConnectionsList,
       "MaxRetries" : Int32,
       "AllocatedCapacity" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
@@ -19265,7 +19265,7 @@ module Aws::Glue
     )
 
     alias ListCrawlersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "Tags" : Hash(String,String)
     )
@@ -19277,7 +19277,7 @@ module Aws::Glue
 
     alias ListDevEndpointsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Tags" : Hash(String,String)
     )
 
@@ -19288,7 +19288,7 @@ module Aws::Glue
 
     alias ListJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Tags" : Hash(String,String)
     )
 
@@ -19299,7 +19299,7 @@ module Aws::Glue
 
     alias ListMLTransformsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Filter" : TransformFilterCriteria,
       "Sort" : TransformSortCriteria,
       "Tags" : Hash(String,String)
@@ -19311,7 +19311,7 @@ module Aws::Glue
     )
 
     alias ListRegistriesInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -19322,7 +19322,7 @@ module Aws::Glue
 
     alias ListSchemaVersionsInput = NamedTuple(
       "SchemaId" : SchemaId,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -19333,7 +19333,7 @@ module Aws::Glue
 
     alias ListSchemasInput = NamedTuple(
       "RegistryId" : RegistryId,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -19345,7 +19345,7 @@ module Aws::Glue
     alias ListTriggersRequest = NamedTuple(
       "NextToken" : String,
       "DependentJobName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Tags" : Hash(String,String)
     )
 
@@ -19356,7 +19356,7 @@ module Aws::Glue
 
     alias ListWorkflowsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListWorkflowsResponse = NamedTuple(
@@ -19387,8 +19387,8 @@ module Aws::Glue
     alias LongColumnStatisticsData = NamedTuple(
       "MinimumValue" : Int64,
       "MaximumValue" : Int64,
-      "NumberOfNulls" : Int64,
-      "NumberOfDistinctValues" : Int64
+      "NumberOfNulls" : UInt64,
+      "NumberOfDistinctValues" : UInt64
     )
 
     alias MLTransform = NamedTuple(
@@ -19408,7 +19408,7 @@ module Aws::Glue
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxRetries" : Int32,
       "TransformEncryption" : TransformEncryption
     )
@@ -19441,7 +19441,7 @@ module Aws::Glue
 
     alias MaxConcurrentRuns = Int32
 
-    alias MaxResultsNumber = Int32
+    alias MaxResultsNumber = UInt8
 
     alias MaxRetries = Int32
 
@@ -19502,15 +19502,15 @@ module Aws::Glue
 
     alias NonNegativeDouble = Float64
 
-    alias NonNegativeInteger = Int32
+    alias NonNegativeInteger = UInt32
 
-    alias NonNegativeLong = Int64
+    alias NonNegativeLong = UInt64
 
     alias NotificationProperty = NamedTuple(
-      "NotifyDelayAfter" : Int32
+      "NotifyDelayAfter" : UInt32
     )
 
-    alias NotifyDelayAfter = Int32
+    alias NotifyDelayAfter = UInt32
 
     alias NullableBoolean = Bool
 
@@ -19526,12 +19526,12 @@ module Aws::Glue
 
     alias Order = NamedTuple(
       "Column" : String,
-      "SortOrder" : Int32
+      "SortOrder" : UInt8
     )
 
     alias OrderList = Array(Order)
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias PaginationToken = String
 
@@ -19672,7 +19672,7 @@ module Aws::Glue
       "SchemaName" : String,
       "RegistryName" : String,
       "LatestVersion" : Bool,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt32,
       "SchemaVersionId" : String,
       "MetadataKey" : String,
       "MetadataValue" : String
@@ -19697,11 +19697,11 @@ module Aws::Glue
       "SchemaVersionNumber" : SchemaVersionNumber,
       "SchemaVersionId" : String,
       "MetadataList" : Array(MetadataKeyValuePair),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias QuerySchemaVersionMetadataMaxResults = Int32
+    alias QuerySchemaVersionMetadataMaxResults = UInt8
 
     alias QuerySchemaVersionMetadataResponse = NamedTuple(
       "MetadataInfoMap" : Hash(String,MetadataInfo),
@@ -19724,7 +19724,7 @@ module Aws::Glue
 
     alias RegisterSchemaVersionResponse = NamedTuple(
       "SchemaVersionId" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt32,
       "Status" : String
     )
 
@@ -19758,7 +19758,7 @@ module Aws::Glue
       "SchemaName" : String,
       "RegistryName" : String,
       "LatestVersion" : Bool,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt32,
       "SchemaVersionId" : String,
       "MetadataKey" : String,
       "MetadataValue" : String
@@ -19854,7 +19854,7 @@ module Aws::Glue
       "DeleteBehavior" : String
     )
 
-    alias SchemaCheckpointNumber = Int64
+    alias SchemaCheckpointNumber = UInt32
 
     alias SchemaColumn = NamedTuple(
       "Name" : String,
@@ -19890,7 +19890,7 @@ module Aws::Glue
     alias SchemaReference = NamedTuple(
       "SchemaId" : SchemaId,
       "SchemaVersionId" : String,
-      "SchemaVersionNumber" : Int64
+      "SchemaVersionNumber" : UInt32
     )
 
     alias SchemaRegistryNameString = String
@@ -19902,7 +19902,7 @@ module Aws::Glue
     alias SchemaValidationError = String
 
     alias SchemaVersionErrorItem = NamedTuple(
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt32,
       "ErrorDetails" : ErrorDetails
     )
 
@@ -19915,14 +19915,14 @@ module Aws::Glue
     alias SchemaVersionListItem = NamedTuple(
       "SchemaArn" : String,
       "SchemaVersionId" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt32,
       "Status" : String,
       "CreatedTime" : String
     )
 
     alias SchemaVersionNumber = NamedTuple(
       "LatestVersion" : Bool,
-      "VersionNumber" : Int64
+      "VersionNumber" : UInt32
     )
 
     alias SchemaVersionStatus = String
@@ -19937,7 +19937,7 @@ module Aws::Glue
       "Filters" : Array(PropertyPredicate),
       "SearchText" : String,
       "SortCriteria" : Array(SortCriterion),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ResourceShareType" : String
     )
 
@@ -19957,8 +19957,8 @@ module Aws::Glue
     alias SecurityGroupIdList = Array(String)
 
     alias Segment = NamedTuple(
-      "SegmentNumber" : Int32,
-      "TotalSegments" : Int32
+      "SegmentNumber" : UInt32,
+      "TotalSegments" : UInt8
     )
 
     alias SerDeInfo = NamedTuple(
@@ -20024,7 +20024,7 @@ module Aws::Glue
       "JobRunId" : String,
       "Arguments" : Hash(String,String),
       "AllocatedCapacity" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxCapacity" : Float64,
       "SecurityConfiguration" : String,
       "NotificationProperty" : NotificationProperty,
@@ -20119,10 +20119,10 @@ module Aws::Glue
     )
 
     alias StringColumnStatisticsData = NamedTuple(
-      "MaximumLength" : Int64,
+      "MaximumLength" : UInt64,
       "AverageLength" : Float64,
-      "NumberOfNulls" : Int64,
-      "NumberOfDistinctValues" : Int64
+      "NumberOfNulls" : UInt64,
+      "NumberOfDistinctValues" : UInt64
     )
 
     alias StringList = Array(String)
@@ -20136,7 +20136,7 @@ module Aws::Glue
       "UpdateTime" : (String | UInt64 | Time)?,
       "LastAccessTime" : (String | UInt64 | Time)?,
       "LastAnalyzedTime" : (String | UInt64 | Time)?,
-      "Retention" : Int32,
+      "Retention" : UInt32,
       "StorageDescriptor" : StorageDescriptor,
       "PartitionKeys" : Array(Column),
       "ViewOriginalText" : String,
@@ -20168,7 +20168,7 @@ module Aws::Glue
       "Owner" : String,
       "LastAccessTime" : (String | UInt64 | Time)?,
       "LastAnalyzedTime" : (String | UInt64 | Time)?,
-      "Retention" : Int32,
+      "Retention" : UInt32,
       "StorageDescriptor" : StorageDescriptor,
       "PartitionKeys" : Array(Column),
       "ViewOriginalText" : String,
@@ -20257,7 +20257,7 @@ module Aws::Glue
 
     alias TaskType = String
 
-    alias Timeout = Int32
+    alias Timeout = UInt32
 
     alias Timestamp = String | UInt64 | Time
 
@@ -20265,7 +20265,7 @@ module Aws::Glue
 
     alias Token = String
 
-    alias TotalSegmentsInteger = Int32
+    alias TotalSegmentsInteger = UInt8
 
     alias TransformEncryption = NamedTuple(
       "MlUserDataEncryption" : MLUserDataEncryption,
@@ -20494,7 +20494,7 @@ module Aws::Glue
       "MaxCapacity" : Float64,
       "WorkerType" : String,
       "NumberOfWorkers" : Int32,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "MaxRetries" : Int32
     )
 
@@ -20620,7 +20620,7 @@ module Aws::Glue
 
     alias VersionId = Int64
 
-    alias VersionLongNumber = Int64
+    alias VersionLongNumber = UInt32
 
     alias VersionMismatchException = NamedTuple(
       "Message" : String

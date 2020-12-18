@@ -3349,9 +3349,9 @@ module Aws::IoTWireless
 
     alias ChannelMask = String
 
-    alias ClassBTimeout = Int32
+    alias ClassBTimeout = UInt16
 
-    alias ClassCTimeout = Int32
+    alias ClassCTimeout = UInt16
 
     alias ClientRequestToken = String
 
@@ -3361,7 +3361,7 @@ module Aws::IoTWireless
       "ResourceType" : String
     )
 
-    alias Crc = Int64
+    alias Crc = UInt32
 
     alias CreateDestinationRequest = NamedTuple(
       "Name" : String,
@@ -3527,7 +3527,7 @@ module Aws::IoTWireless
 
     alias DevEui = String
 
-    alias DevStatusReqFreq = Int32
+    alias DevStatusReqFreq = UInt32
 
     alias DeviceProfile = NamedTuple(
       "Arn" : String,
@@ -3576,17 +3576,17 @@ module Aws::IoTWireless
       
     )
 
-    alias DlBucketSize = Int32
+    alias DlBucketSize = UInt32
 
-    alias DlRate = Int32
+    alias DlRate = UInt32
 
     alias DlRatePolicy = String
 
     alias Double = Float64
 
-    alias DrMax = Int32
+    alias DrMax = UInt8
 
-    alias DrMin = Int32
+    alias DrMin = UInt8
 
     alias EndPoint = String
 
@@ -3596,9 +3596,9 @@ module Aws::IoTWireless
 
     alias FNwkSIntKey = String
 
-    alias FPort = Int32
+    alias FPort = UInt8
 
-    alias FactoryPresetFreqsList = Array(Int32)
+    alias FactoryPresetFreqsList = Array(UInt32)
 
     alias GatewayEui = String
 
@@ -3763,7 +3763,7 @@ module Aws::IoTWireless
     alias JoinEui = String
 
     alias ListDestinationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3774,7 +3774,7 @@ module Aws::IoTWireless
 
     alias ListDeviceProfilesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDeviceProfilesResponse = NamedTuple(
@@ -3784,7 +3784,7 @@ module Aws::IoTWireless
 
     alias ListPartnerAccountsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPartnerAccountsResponse = NamedTuple(
@@ -3794,7 +3794,7 @@ module Aws::IoTWireless
 
     alias ListServiceProfilesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListServiceProfilesResponse = NamedTuple(
@@ -3811,7 +3811,7 @@ module Aws::IoTWireless
     )
 
     alias ListWirelessDevicesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "DestinationName" : String,
       "DeviceProfileId" : String,
@@ -3825,7 +3825,7 @@ module Aws::IoTWireless
     )
 
     alias ListWirelessGatewayTaskDefinitionsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "TaskDefinitionType" : String
     )
@@ -3837,7 +3837,7 @@ module Aws::IoTWireless
 
     alias ListWirelessGatewaysRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWirelessGatewaysResponse = NamedTuple(
@@ -3866,21 +3866,21 @@ module Aws::IoTWireless
 
     alias LoRaWANDeviceProfile = NamedTuple(
       "SupportsClassB" : Bool,
-      "ClassBTimeout" : Int32,
-      "PingSlotPeriod" : Int32,
-      "PingSlotDr" : Int32,
-      "PingSlotFreq" : Int32,
+      "ClassBTimeout" : UInt16,
+      "PingSlotPeriod" : UInt16,
+      "PingSlotDr" : UInt8,
+      "PingSlotFreq" : UInt32,
       "SupportsClassC" : Bool,
-      "ClassCTimeout" : Int32,
+      "ClassCTimeout" : UInt16,
       "MacVersion" : String,
       "RegParamsRevision" : String,
-      "RxDelay1" : Int32,
-      "RxDrOffset1" : Int32,
-      "RxDataRate2" : Int32,
-      "RxFreq2" : Int32,
-      "FactoryPresetFreqsList" : Array(Int32),
-      "MaxEirp" : Int32,
-      "MaxDutyCycle" : Int32,
+      "RxDelay1" : UInt8,
+      "RxDrOffset1" : UInt8,
+      "RxDataRate2" : UInt8,
+      "RxFreq2" : UInt32,
+      "FactoryPresetFreqsList" : Array(UInt32),
+      "MaxEirp" : UInt8,
+      "MaxDutyCycle" : UInt8,
       "RfRegion" : String,
       "SupportsJoin" : Bool,
       "Supports32BitFCnt" : Bool
@@ -3910,25 +3910,25 @@ module Aws::IoTWireless
     )
 
     alias LoRaWANGetServiceProfileInfo = NamedTuple(
-      "UlRate" : Int32,
-      "UlBucketSize" : Int32,
+      "UlRate" : UInt32,
+      "UlBucketSize" : UInt32,
       "UlRatePolicy" : String,
-      "DlRate" : Int32,
-      "DlBucketSize" : Int32,
+      "DlRate" : UInt32,
+      "DlBucketSize" : UInt32,
       "DlRatePolicy" : String,
       "AddGwMetadata" : Bool,
-      "DevStatusReqFreq" : Int32,
+      "DevStatusReqFreq" : UInt32,
       "ReportDevStatusBattery" : Bool,
       "ReportDevStatusMargin" : Bool,
-      "DrMin" : Int32,
-      "DrMax" : Int32,
+      "DrMin" : UInt8,
+      "DrMax" : UInt8,
       "ChannelMask" : String,
       "PrAllowed" : Bool,
       "HrAllowed" : Bool,
       "RaAllowed" : Bool,
       "NwkGeoLoc" : Bool,
-      "TargetPer" : Int32,
-      "MinGwDiversity" : Int32
+      "TargetPer" : UInt8,
+      "MinGwDiversity" : UInt8
     )
 
     alias LoRaWANListDevice = NamedTuple(
@@ -3936,7 +3936,7 @@ module Aws::IoTWireless
     )
 
     alias LoRaWANSendDataToDevice = NamedTuple(
-      "FPort" : Int32
+      "FPort" : UInt8
     )
 
     alias LoRaWANServiceProfile = NamedTuple(
@@ -3950,7 +3950,7 @@ module Aws::IoTWireless
 
     alias LoRaWANUpdateGatewayTaskCreate = NamedTuple(
       "UpdateSignature" : String,
-      "SigKeyCrc" : Int64,
+      "SigKeyCrc" : UInt32,
       "CurrentVersion" : LoRaWANGatewayVersion,
       "UpdateVersion" : LoRaWANGatewayVersion
     )
@@ -3962,17 +3962,17 @@ module Aws::IoTWireless
 
     alias MacVersion = String
 
-    alias MaxDutyCycle = Int32
+    alias MaxDutyCycle = UInt8
 
-    alias MaxEirp = Int32
+    alias MaxEirp = UInt8
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 
     alias MessageId = String
 
-    alias MinGwDiversity = Int32
+    alias MinGwDiversity = UInt8
 
     alias Model = String
 
@@ -4005,15 +4005,15 @@ module Aws::IoTWireless
 
     alias PayloadData = String
 
-    alias PingSlotDr = Int32
+    alias PingSlotDr = UInt8
 
-    alias PingSlotFreq = Int32
+    alias PingSlotFreq = UInt32
 
-    alias PingSlotPeriod = Int32
+    alias PingSlotPeriod = UInt16
 
     alias PrAllowed = Bool
 
-    alias PresetFreq = Int32
+    alias PresetFreq = UInt32
 
     alias RaAllowed = Bool
 
@@ -4039,19 +4039,19 @@ module Aws::IoTWireless
 
     alias RoleArn = String
 
-    alias RxDataRate2 = Int32
+    alias RxDataRate2 = UInt8
 
-    alias RxDelay1 = Int32
+    alias RxDelay1 = UInt8
 
-    alias RxDrOffset1 = Int32
+    alias RxDrOffset1 = UInt8
 
-    alias RxFreq2 = Int32
+    alias RxFreq2 = UInt32
 
     alias SNwkSIntKey = String
 
     alias SendDataToWirelessDeviceRequest = NamedTuple(
       "Id" : String,
-      "TransmitMode" : Int32,
+      "TransmitMode" : UInt8,
       "PayloadData" : String,
       "WirelessMetadata" : WirelessMetadata
     )
@@ -4060,7 +4060,7 @@ module Aws::IoTWireless
       "MessageId" : String
     )
 
-    alias Seq = Int32
+    alias Seq = UInt32
 
     alias ServiceProfile = NamedTuple(
       "Arn" : String,
@@ -4105,7 +4105,7 @@ module Aws::IoTWireless
     )
 
     alias SidewalkSendDataToDevice = NamedTuple(
-      "Seq" : Int32
+      "Seq" : UInt32
     )
 
     alias SidewalkUpdateAccount = NamedTuple(
@@ -4144,7 +4144,7 @@ module Aws::IoTWireless
 
     alias TagValue = String
 
-    alias TargetPer = Int32
+    alias TargetPer = UInt8
 
     alias TestWirelessDeviceRequest = NamedTuple(
       "Id" : String
@@ -4167,11 +4167,11 @@ module Aws::IoTWireless
       "ResourceName" : String
     )
 
-    alias TransmitMode = Int32
+    alias TransmitMode = UInt8
 
-    alias UlBucketSize = Int32
+    alias UlBucketSize = UInt32
 
-    alias UlRate = Int32
+    alias UlRate = UInt32
 
     alias UlRatePolicy = String
 

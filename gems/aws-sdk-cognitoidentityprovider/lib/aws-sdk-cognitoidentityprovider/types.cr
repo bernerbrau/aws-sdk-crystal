@@ -10688,7 +10688,7 @@ module Aws::CognitoIdentityProvider
 
     alias AWSAccountIdType = String
 
-    alias AccessTokenValidityType = Int32
+    alias AccessTokenValidityType = UInt32
 
     alias AccountRecoverySettingType = NamedTuple(
       "RecoveryMechanisms" : Array(RecoveryOptionType)
@@ -10741,7 +10741,7 @@ module Aws::CognitoIdentityProvider
 
     alias AdminCreateUserConfigType = NamedTuple(
       "AllowAdminCreateUserOnly" : Bool,
-      "UnusedAccountValidityDays" : Int32,
+      "UnusedAccountValidityDays" : UInt16,
       "InviteMessageTemplate" : MessageTemplateType
     )
 
@@ -10761,7 +10761,7 @@ module Aws::CognitoIdentityProvider
       "User" : UserType
     )
 
-    alias AdminCreateUserUnusedAccountValidityDaysType = Int32
+    alias AdminCreateUserUnusedAccountValidityDaysType = UInt16
 
     alias AdminDeleteUserAttributesRequest = NamedTuple(
       "UserPoolId" : String,
@@ -10868,7 +10868,7 @@ module Aws::CognitoIdentityProvider
     alias AdminListDevicesRequest = NamedTuple(
       "UserPoolId" : String,
       "Username" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "PaginationToken" : String
     )
 
@@ -10880,7 +10880,7 @@ module Aws::CognitoIdentityProvider
     alias AdminListGroupsForUserRequest = NamedTuple(
       "Username" : String,
       "UserPoolId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -10892,7 +10892,7 @@ module Aws::CognitoIdentityProvider
     alias AdminListUserAuthEventsRequest = NamedTuple(
       "UserPoolId" : String,
       "Username" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11226,7 +11226,7 @@ module Aws::CognitoIdentityProvider
       "UserPoolId" : String,
       "Description" : String,
       "RoleArn" : String,
-      "Precedence" : Int32
+      "Precedence" : UInt32
     )
 
     alias CreateGroupResponse = NamedTuple(
@@ -11271,9 +11271,9 @@ module Aws::CognitoIdentityProvider
       "UserPoolId" : String,
       "ClientName" : String,
       "GenerateSecret" : Bool,
-      "RefreshTokenValidity" : Int32,
-      "AccessTokenValidity" : Int32,
-      "IdTokenValidity" : Int32,
+      "RefreshTokenValidity" : UInt32,
+      "AccessTokenValidity" : UInt32,
+      "IdTokenValidity" : UInt32,
       "TokenValidityUnits" : TokenValidityUnitsType,
       "ReadAttributes" : Array(String),
       "WriteAttributes" : Array(String),
@@ -11713,7 +11713,7 @@ module Aws::CognitoIdentityProvider
       "UserPoolId" : String,
       "Description" : String,
       "RoleArn" : String,
-      "Precedence" : Int32,
+      "Precedence" : UInt32,
       "LastModifiedDate" : (String | UInt64 | Time)?,
       "CreationDate" : (String | UInt64 | Time)?
     )
@@ -11727,7 +11727,7 @@ module Aws::CognitoIdentityProvider
 
     alias HttpHeaderList = Array(HttpHeader)
 
-    alias IdTokenValidityType = Int32
+    alias IdTokenValidityType = UInt32
 
     alias IdentityProviderType = NamedTuple(
       "UserPoolId" : String,
@@ -11826,7 +11826,7 @@ module Aws::CognitoIdentityProvider
 
     alias ListDevicesRequest = NamedTuple(
       "AccessToken" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "PaginationToken" : String
     )
 
@@ -11837,7 +11837,7 @@ module Aws::CognitoIdentityProvider
 
     alias ListGroupsRequest = NamedTuple(
       "UserPoolId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -11848,7 +11848,7 @@ module Aws::CognitoIdentityProvider
 
     alias ListIdentityProvidersRequest = NamedTuple(
       "UserPoolId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11859,13 +11859,13 @@ module Aws::CognitoIdentityProvider
 
     alias ListOfStringTypes = Array(String)
 
-    alias ListProvidersLimitType = Int32
+    alias ListProvidersLimitType = UInt8
 
-    alias ListResourceServersLimitType = Int32
+    alias ListResourceServersLimitType = UInt8
 
     alias ListResourceServersRequest = NamedTuple(
       "UserPoolId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11884,7 +11884,7 @@ module Aws::CognitoIdentityProvider
 
     alias ListUserImportJobsRequest = NamedTuple(
       "UserPoolId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "PaginationToken" : String
     )
 
@@ -11895,7 +11895,7 @@ module Aws::CognitoIdentityProvider
 
     alias ListUserPoolClientsRequest = NamedTuple(
       "UserPoolId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11906,7 +11906,7 @@ module Aws::CognitoIdentityProvider
 
     alias ListUserPoolsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListUserPoolsResponse = NamedTuple(
@@ -11917,7 +11917,7 @@ module Aws::CognitoIdentityProvider
     alias ListUsersInGroupRequest = NamedTuple(
       "UserPoolId" : String,
       "GroupName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -11929,7 +11929,7 @@ module Aws::CognitoIdentityProvider
     alias ListUsersRequest = NamedTuple(
       "UserPoolId" : String,
       "AttributesToGet" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "PaginationToken" : String,
       "Filter" : String
     )
@@ -12001,15 +12001,15 @@ module Aws::CognitoIdentityProvider
 
     alias PaginationKeyType = String
 
-    alias PasswordPolicyMinLengthType = Int32
+    alias PasswordPolicyMinLengthType = UInt8
 
     alias PasswordPolicyType = NamedTuple(
-      "MinimumLength" : Int32,
+      "MinimumLength" : UInt8,
       "RequireUppercase" : Bool,
       "RequireLowercase" : Bool,
       "RequireNumbers" : Bool,
       "RequireSymbols" : Bool,
-      "TemporaryPasswordValidityDays" : Int32
+      "TemporaryPasswordValidityDays" : UInt16
     )
 
     alias PasswordResetRequiredException = NamedTuple(
@@ -12018,11 +12018,11 @@ module Aws::CognitoIdentityProvider
 
     alias PasswordType = String
 
-    alias PoolQueryLimitType = Int32
+    alias PoolQueryLimitType = UInt8
 
     alias PreSignedUrlType = String
 
-    alias PrecedenceType = Int32
+    alias PrecedenceType = UInt32
 
     alias PreconditionNotMetException = NamedTuple(
       "message" : String
@@ -12030,7 +12030,7 @@ module Aws::CognitoIdentityProvider
 
     alias PreventUserExistenceErrorTypes = String
 
-    alias PriorityType = Int32
+    alias PriorityType = UInt8
 
     alias ProviderDescription = NamedTuple(
       "ProviderName" : String,
@@ -12053,22 +12053,22 @@ module Aws::CognitoIdentityProvider
 
     alias ProvidersListType = Array(ProviderDescription)
 
-    alias QueryLimit = Int32
+    alias QueryLimit = UInt8
 
-    alias QueryLimitType = Int32
+    alias QueryLimitType = UInt8
 
     alias RecoveryMechanismsType = Array(RecoveryOptionType)
 
     alias RecoveryOptionNameType = String
 
     alias RecoveryOptionType = NamedTuple(
-      "Priority" : Int32,
+      "Priority" : UInt8,
       "Name" : String
     )
 
     alias RedirectUrlType = String
 
-    alias RefreshTokenValidityType = Int32
+    alias RefreshTokenValidityType = UInt32
 
     alias ResendConfirmationCodeRequest = NamedTuple(
       "ClientId" : String,
@@ -12329,7 +12329,7 @@ module Aws::CognitoIdentityProvider
 
     alias TagValueType = String
 
-    alias TemporaryPasswordValidityDaysType = Int32
+    alias TemporaryPasswordValidityDaysType = UInt16
 
     alias TimeUnitsType = String
 
@@ -12407,7 +12407,7 @@ module Aws::CognitoIdentityProvider
       "UserPoolId" : String,
       "Description" : String,
       "RoleArn" : String,
-      "Precedence" : Int32
+      "Precedence" : UInt32
     )
 
     alias UpdateGroupResponse = NamedTuple(
@@ -12451,9 +12451,9 @@ module Aws::CognitoIdentityProvider
       "UserPoolId" : String,
       "ClientId" : String,
       "ClientName" : String,
-      "RefreshTokenValidity" : Int32,
-      "AccessTokenValidity" : Int32,
-      "IdTokenValidity" : Int32,
+      "RefreshTokenValidity" : UInt32,
+      "AccessTokenValidity" : UInt32,
+      "IdTokenValidity" : UInt32,
       "TokenValidityUnits" : TokenValidityUnitsType,
       "ReadAttributes" : Array(String),
       "WriteAttributes" : Array(String),
@@ -12578,9 +12578,9 @@ module Aws::CognitoIdentityProvider
       "ClientSecret" : String,
       "LastModifiedDate" : (String | UInt64 | Time)?,
       "CreationDate" : (String | UInt64 | Time)?,
-      "RefreshTokenValidity" : Int32,
-      "AccessTokenValidity" : Int32,
-      "IdTokenValidity" : Int32,
+      "RefreshTokenValidity" : UInt32,
+      "AccessTokenValidity" : UInt32,
+      "IdTokenValidity" : UInt32,
       "TokenValidityUnits" : TokenValidityUnitsType,
       "ReadAttributes" : Array(String),
       "WriteAttributes" : Array(String),

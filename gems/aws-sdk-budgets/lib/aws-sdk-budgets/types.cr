@@ -2615,7 +2615,7 @@ module Aws::Budgets
       "BudgetName" : String,
       "ActionId" : String,
       "TimePeriod" : TimePeriod,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2638,7 +2638,7 @@ module Aws::Budgets
 
     alias DescribeBudgetActionsForAccountRequest = NamedTuple(
       "AccountId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2650,7 +2650,7 @@ module Aws::Budgets
     alias DescribeBudgetActionsForBudgetRequest = NamedTuple(
       "AccountId" : String,
       "BudgetName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2663,7 +2663,7 @@ module Aws::Budgets
       "AccountId" : String,
       "BudgetName" : String,
       "TimePeriod" : TimePeriod,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2683,7 +2683,7 @@ module Aws::Budgets
 
     alias DescribeBudgetsRequest = NamedTuple(
       "AccountId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2695,7 +2695,7 @@ module Aws::Budgets
     alias DescribeNotificationsForBudgetRequest = NamedTuple(
       "AccountId" : String,
       "BudgetName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2708,7 +2708,7 @@ module Aws::Budgets
       "AccountId" : String,
       "BudgetName" : String,
       "Notification" : Notification,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2776,7 +2776,7 @@ module Aws::Budgets
       "Message" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NotFoundException = NamedTuple(
       "Message" : String

@@ -544,7 +544,7 @@ module Aws::ConnectParticipant
 
     alias GetTranscriptRequest = NamedTuple(
       "ContactId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "ScanDirection" : String,
       "SortOrder" : String,
@@ -577,11 +577,11 @@ module Aws::ConnectParticipant
       "ParticipantRole" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 
-    alias MostRecent = Int32
+    alias MostRecent = UInt8
 
     alias NextToken = String
 
@@ -626,7 +626,7 @@ module Aws::ConnectParticipant
     alias StartPosition = NamedTuple(
       "Id" : String,
       "AbsoluteTime" : String,
-      "MostRecent" : Int32
+      "MostRecent" : UInt8
     )
 
     alias ThrottlingException = NamedTuple(

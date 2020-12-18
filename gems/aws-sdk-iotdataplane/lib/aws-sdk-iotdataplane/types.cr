@@ -363,7 +363,7 @@ module Aws::IoTDataPlane
     alias ListNamedShadowsForThingRequest = NamedTuple(
       "thingName" : String,
       "nextToken" : String,
-      "pageSize" : Int32
+      "pageSize" : UInt8
     )
 
     alias ListNamedShadowsForThingResponse = NamedTuple(
@@ -380,17 +380,17 @@ module Aws::IoTDataPlane
 
     alias NextToken = String
 
-    alias PageSize = Int32
+    alias PageSize = UInt8
 
     alias Payload = String | Array(UInt8) | IO
 
     alias PublishRequest = NamedTuple(
       "topic" : String,
-      "qos" : Int32,
+      "qos" : UInt8,
       "payload" : (String | Array(UInt8) | IO)?
     )
 
-    alias Qos = Int32
+    alias Qos = UInt8
 
     alias RequestEntityTooLargeException = NamedTuple(
       "message" : String

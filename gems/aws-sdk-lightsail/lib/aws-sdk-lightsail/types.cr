@@ -13718,7 +13718,7 @@ module Aws::Lightsail
       "monitoredResourceInfo" : MonitoredResourceInfo,
       "comparisonOperator" : String,
       "evaluationPeriods" : Int32,
-      "period" : Int32,
+      "period" : UInt32,
       "threshold" : Float64,
       "datapointsToAlarm" : Int32,
       "treatMissingData" : String,
@@ -14010,7 +14010,7 @@ module Aws::Lightsail
       "power" : String,
       "powerId" : String,
       "state" : String,
-      "scale" : Int32,
+      "scale" : UInt8,
       "currentDeployment" : ContainerServiceDeployment,
       "nextDeployment" : ContainerServiceDeployment,
       "isDisabled" : Bool,
@@ -14095,7 +14095,7 @@ module Aws::Lightsail
       "registry" : String
     )
 
-    alias ContainerServiceScale = Int32
+    alias ContainerServiceScale = UInt8
 
     alias ContainerServiceState = String
 
@@ -14171,7 +14171,7 @@ module Aws::Lightsail
     alias CreateContainerServiceRequest = NamedTuple(
       "serviceName" : String,
       "power" : String,
-      "scale" : Int32,
+      "scale" : UInt8,
       "tags" : Array(Tag),
       "publicDomainNames" : Hash(String,Array(String)),
       "deployment" : ContainerServiceDeploymentRequest
@@ -14893,7 +14893,7 @@ module Aws::Lightsail
       "metricName" : String,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time,
-      "period" : Int32,
+      "period" : UInt32,
       "statistics" : Array(String)
     )
 
@@ -14970,7 +14970,7 @@ module Aws::Lightsail
       "metricName" : String,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time,
-      "period" : Int32,
+      "period" : UInt32,
       "unit" : String,
       "statistics" : Array(String)
     )
@@ -15028,7 +15028,7 @@ module Aws::Lightsail
     alias GetInstanceMetricDataRequest = NamedTuple(
       "instanceName" : String,
       "metricName" : String,
-      "period" : Int32,
+      "period" : UInt32,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time,
       "unit" : String,
@@ -15110,7 +15110,7 @@ module Aws::Lightsail
     alias GetLoadBalancerMetricDataRequest = NamedTuple(
       "loadBalancerName" : String,
       "metricName" : String,
-      "period" : Int32,
+      "period" : UInt32,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time,
       "unit" : String,
@@ -15249,7 +15249,7 @@ module Aws::Lightsail
     alias GetRelationalDatabaseMetricDataRequest = NamedTuple(
       "relationalDatabaseName" : String,
       "metricName" : String,
-      "period" : Int32,
+      "period" : UInt32,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time,
       "unit" : String,
@@ -15681,7 +15681,7 @@ module Aws::Lightsail
 
     alias MetricName = String
 
-    alias MetricPeriod = Int32
+    alias MetricPeriod = UInt32
 
     alias MetricStatistic = String
 
@@ -16184,7 +16184,7 @@ module Aws::Lightsail
     alias UpdateContainerServiceRequest = NamedTuple(
       "serviceName" : String,
       "power" : String,
-      "scale" : Int32,
+      "scale" : UInt8,
       "isDisabled" : Bool,
       "publicDomainNames" : Hash(String,Array(String))
     )

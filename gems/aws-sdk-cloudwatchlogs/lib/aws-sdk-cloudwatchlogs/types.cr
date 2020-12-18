@@ -2849,8 +2849,8 @@ module Aws::CloudWatchLogs
       "taskName" : String,
       "logGroupName" : String,
       "logStreamNamePrefix" : String,
-      "from" : Int64,
-      "to" : Int64,
+      "from" : UInt64,
+      "to" : UInt64,
       "destination" : String,
       "destinationPrefix" : String
     )
@@ -2922,7 +2922,7 @@ module Aws::CloudWatchLogs
     alias DescribeDestinationsRequest = NamedTuple(
       "DestinationNamePrefix" : String,
       "nextToken" : String,
-      "limit" : Int32
+      "limit" : UInt8
     )
 
     alias DescribeDestinationsResponse = NamedTuple(
@@ -2934,7 +2934,7 @@ module Aws::CloudWatchLogs
       "taskId" : String,
       "statusCode" : String,
       "nextToken" : String,
-      "limit" : Int32
+      "limit" : UInt8
     )
 
     alias DescribeExportTasksResponse = NamedTuple(
@@ -2942,12 +2942,12 @@ module Aws::CloudWatchLogs
       "nextToken" : String
     )
 
-    alias DescribeLimit = Int32
+    alias DescribeLimit = UInt8
 
     alias DescribeLogGroupsRequest = NamedTuple(
       "logGroupNamePrefix" : String,
       "nextToken" : String,
-      "limit" : Int32
+      "limit" : UInt8
     )
 
     alias DescribeLogGroupsResponse = NamedTuple(
@@ -2961,7 +2961,7 @@ module Aws::CloudWatchLogs
       "orderBy" : String,
       "descending" : Bool,
       "nextToken" : String,
-      "limit" : Int32
+      "limit" : UInt8
     )
 
     alias DescribeLogStreamsResponse = NamedTuple(
@@ -2973,7 +2973,7 @@ module Aws::CloudWatchLogs
       "logGroupName" : String,
       "filterNamePrefix" : String,
       "nextToken" : String,
-      "limit" : Int32,
+      "limit" : UInt8,
       "metricName" : String,
       "metricNamespace" : String
     )
@@ -2983,12 +2983,12 @@ module Aws::CloudWatchLogs
       "nextToken" : String
     )
 
-    alias DescribeQueriesMaxResults = Int32
+    alias DescribeQueriesMaxResults = UInt16
 
     alias DescribeQueriesRequest = NamedTuple(
       "logGroupName" : String,
       "status" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -2999,7 +2999,7 @@ module Aws::CloudWatchLogs
 
     alias DescribeQueryDefinitionsRequest = NamedTuple(
       "queryDefinitionNamePrefix" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3010,7 +3010,7 @@ module Aws::CloudWatchLogs
 
     alias DescribeResourcePoliciesRequest = NamedTuple(
       "nextToken" : String,
-      "limit" : Int32
+      "limit" : UInt8
     )
 
     alias DescribeResourcePoliciesResponse = NamedTuple(
@@ -3022,7 +3022,7 @@ module Aws::CloudWatchLogs
       "logGroupName" : String,
       "filterNamePrefix" : String,
       "nextToken" : String,
-      "limit" : Int32
+      "limit" : UInt8
     )
 
     alias DescribeSubscriptionFiltersResponse = NamedTuple(
@@ -3036,7 +3036,7 @@ module Aws::CloudWatchLogs
       "roleArn" : String,
       "accessPolicy" : String,
       "arn" : String,
-      "creationTime" : Int64
+      "creationTime" : UInt64
     )
 
     alias DestinationArn = String
@@ -3057,7 +3057,7 @@ module Aws::CloudWatchLogs
 
     alias EventNumber = Int64
 
-    alias EventsLimit = Int32
+    alias EventsLimit = UInt16
 
     alias ExportDestinationBucket = String
 
@@ -3067,8 +3067,8 @@ module Aws::CloudWatchLogs
       "taskId" : String,
       "taskName" : String,
       "logGroupName" : String,
-      "from" : Int64,
-      "to" : Int64,
+      "from" : UInt64,
+      "to" : UInt64,
       "destination" : String,
       "destinationPrefix" : String,
       "status" : ExportTaskStatus,
@@ -3076,8 +3076,8 @@ module Aws::CloudWatchLogs
     )
 
     alias ExportTaskExecutionInfo = NamedTuple(
-      "creationTime" : Int64,
-      "completionTime" : Int64
+      "creationTime" : UInt64,
+      "completionTime" : UInt64
     )
 
     alias ExportTaskId = String
@@ -3105,11 +3105,11 @@ module Aws::CloudWatchLogs
       "logGroupName" : String,
       "logStreamNames" : Array(String),
       "logStreamNamePrefix" : String,
-      "startTime" : Int64,
-      "endTime" : Int64,
+      "startTime" : UInt64,
+      "endTime" : UInt64,
       "filterPattern" : String,
       "nextToken" : String,
-      "limit" : Int32,
+      "limit" : UInt16,
       "interleaved" : Bool
     )
 
@@ -3125,9 +3125,9 @@ module Aws::CloudWatchLogs
 
     alias FilteredLogEvent = NamedTuple(
       "logStreamName" : String,
-      "timestamp" : Int64,
+      "timestamp" : UInt64,
       "message" : String,
-      "ingestionTime" : Int64,
+      "ingestionTime" : UInt64,
       "eventId" : String
     )
 
@@ -3136,10 +3136,10 @@ module Aws::CloudWatchLogs
     alias GetLogEventsRequest = NamedTuple(
       "logGroupName" : String,
       "logStreamName" : String,
-      "startTime" : Int64,
-      "endTime" : Int64,
+      "startTime" : UInt64,
+      "endTime" : UInt64,
       "nextToken" : String,
-      "limit" : Int32,
+      "limit" : UInt16,
       "startFromHead" : Bool
     )
 
@@ -3151,7 +3151,7 @@ module Aws::CloudWatchLogs
 
     alias GetLogGroupFieldsRequest = NamedTuple(
       "logGroupName" : String,
-      "time" : Int64
+      "time" : UInt64
     )
 
     alias GetLogGroupFieldsResponse = NamedTuple(
@@ -3177,7 +3177,7 @@ module Aws::CloudWatchLogs
     )
 
     alias InputLogEvent = NamedTuple(
-      "timestamp" : Int64,
+      "timestamp" : UInt64,
       "message" : String
     )
 
@@ -3217,17 +3217,17 @@ module Aws::CloudWatchLogs
 
     alias LogGroup = NamedTuple(
       "logGroupName" : String,
-      "creationTime" : Int64,
+      "creationTime" : UInt64,
       "retentionInDays" : Int32,
       "metricFilterCount" : Int32,
       "arn" : String,
-      "storedBytes" : Int64,
+      "storedBytes" : UInt64,
       "kmsKeyId" : String
     )
 
     alias LogGroupField = NamedTuple(
       "name" : String,
-      "percent" : Int32
+      "percent" : UInt8
     )
 
     alias LogGroupFieldList = Array(LogGroupField)
@@ -3244,13 +3244,13 @@ module Aws::CloudWatchLogs
 
     alias LogStream = NamedTuple(
       "logStreamName" : String,
-      "creationTime" : Int64,
-      "firstEventTimestamp" : Int64,
-      "lastEventTimestamp" : Int64,
-      "lastIngestionTime" : Int64,
+      "creationTime" : UInt64,
+      "firstEventTimestamp" : UInt64,
+      "lastEventTimestamp" : UInt64,
+      "lastIngestionTime" : UInt64,
       "uploadSequenceToken" : String,
       "arn" : String,
-      "storedBytes" : Int64
+      "storedBytes" : UInt64
     )
 
     alias LogStreamName = String
@@ -3269,7 +3269,7 @@ module Aws::CloudWatchLogs
       "filterName" : String,
       "filterPattern" : String,
       "metricTransformations" : Array(MetricTransformation),
-      "creationTime" : Int64,
+      "creationTime" : UInt64,
       "logGroupName" : String
     )
 
@@ -3307,14 +3307,14 @@ module Aws::CloudWatchLogs
     alias OrderBy = String
 
     alias OutputLogEvent = NamedTuple(
-      "timestamp" : Int64,
+      "timestamp" : UInt64,
       "message" : String,
-      "ingestionTime" : Int64
+      "ingestionTime" : UInt64
     )
 
     alias OutputLogEvents = Array(OutputLogEvent)
 
-    alias Percentage = Int32
+    alias Percentage = UInt8
 
     alias PolicyDocument = String
 
@@ -3404,7 +3404,7 @@ module Aws::CloudWatchLogs
       "queryDefinitionId" : String,
       "name" : String,
       "queryString" : String,
-      "lastModified" : Int64,
+      "lastModified" : UInt64,
       "logGroupNames" : Array(String)
     )
 
@@ -3420,13 +3420,13 @@ module Aws::CloudWatchLogs
       "queryId" : String,
       "queryString" : String,
       "status" : String,
-      "createTime" : Int64,
+      "createTime" : UInt64,
       "logGroupName" : String
     )
 
     alias QueryInfoList = Array(QueryInfo)
 
-    alias QueryListMaxResults = Int32
+    alias QueryListMaxResults = UInt16
 
     alias QueryResults = Array(Array(ResultField))
 
@@ -3459,7 +3459,7 @@ module Aws::CloudWatchLogs
     alias ResourcePolicy = NamedTuple(
       "policyName" : String,
       "policyDocument" : String,
-      "lastUpdatedTime" : Int64
+      "lastUpdatedTime" : UInt64
     )
 
     alias ResultField = NamedTuple(
@@ -3489,10 +3489,10 @@ module Aws::CloudWatchLogs
     alias StartQueryRequest = NamedTuple(
       "logGroupName" : String,
       "logGroupNames" : Array(String),
-      "startTime" : Int64,
-      "endTime" : Int64,
+      "startTime" : UInt64,
+      "endTime" : UInt64,
       "queryString" : String,
-      "limit" : Int32
+      "limit" : UInt16
     )
 
     alias StartQueryResponse = NamedTuple(
@@ -3509,7 +3509,7 @@ module Aws::CloudWatchLogs
       "success" : Bool
     )
 
-    alias StoredBytes = Int64
+    alias StoredBytes = UInt64
 
     alias SubscriptionFilter = NamedTuple(
       "filterName" : String,
@@ -3518,7 +3518,7 @@ module Aws::CloudWatchLogs
       "destinationArn" : String,
       "roleArn" : String,
       "distribution" : String,
-      "creationTime" : Int64
+      "creationTime" : UInt64
     )
 
     alias SubscriptionFilters = Array(SubscriptionFilter)
@@ -3551,7 +3551,7 @@ module Aws::CloudWatchLogs
       "matches" : Array(MetricFilterMatchRecord)
     )
 
-    alias Timestamp = Int64
+    alias Timestamp = UInt64
 
     alias Token = String
 

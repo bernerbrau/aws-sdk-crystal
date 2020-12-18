@@ -2217,7 +2217,7 @@ module Aws::ApplicationInsights
     alias LineTime = String | UInt64 | Time
 
     alias ListApplicationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2228,7 +2228,7 @@ module Aws::ApplicationInsights
 
     alias ListComponentsRequest = NamedTuple(
       "ResourceGroupName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2242,7 +2242,7 @@ module Aws::ApplicationInsights
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
       "EventStatus" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2253,7 +2253,7 @@ module Aws::ApplicationInsights
 
     alias ListLogPatternSetsRequest = NamedTuple(
       "ResourceGroupName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2266,7 +2266,7 @@ module Aws::ApplicationInsights
     alias ListLogPatternsRequest = NamedTuple(
       "ResourceGroupName" : String,
       "PatternSetName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2280,7 +2280,7 @@ module Aws::ApplicationInsights
       "ResourceGroupName" : String,
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2322,7 +2322,7 @@ module Aws::ApplicationInsights
 
     alias LogText = String
 
-    alias MaxEntities = Int32
+    alias MaxEntities = UInt8
 
     alias MetaDataKey = String
 

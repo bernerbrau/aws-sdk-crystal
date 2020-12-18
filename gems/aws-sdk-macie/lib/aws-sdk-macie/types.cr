@@ -682,7 +682,7 @@ module Aws::Macie
 
     alias ListMemberAccountsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : Int16
     )
 
     alias ListMemberAccountsResult = NamedTuple(
@@ -693,7 +693,7 @@ module Aws::Macie
     alias ListS3ResourcesRequest = NamedTuple(
       "memberAccountId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : Int16
     )
 
     alias ListS3ResourcesResult = NamedTuple(
@@ -701,7 +701,7 @@ module Aws::Macie
       "nextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = Int16
 
     alias MemberAccount = NamedTuple(
       "accountId" : String

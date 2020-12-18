@@ -4755,7 +4755,7 @@ module Aws::ForecastService
 
     alias ListDatasetGroupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDatasetGroupsResponse = NamedTuple(
@@ -4765,7 +4765,7 @@ module Aws::ForecastService
 
     alias ListDatasetImportJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter)
     )
 
@@ -4776,7 +4776,7 @@ module Aws::ForecastService
 
     alias ListDatasetsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDatasetsResponse = NamedTuple(
@@ -4786,7 +4786,7 @@ module Aws::ForecastService
 
     alias ListForecastExportJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter)
     )
 
@@ -4797,7 +4797,7 @@ module Aws::ForecastService
 
     alias ListForecastsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter)
     )
 
@@ -4808,7 +4808,7 @@ module Aws::ForecastService
 
     alias ListPredictorBacktestExportJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter)
     )
 
@@ -4819,7 +4819,7 @@ module Aws::ForecastService
 
     alias ListPredictorsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter)
     )
 
@@ -4836,7 +4836,7 @@ module Aws::ForecastService
       "Tags" : Array(Tag)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 

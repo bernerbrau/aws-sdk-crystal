@@ -3658,7 +3658,7 @@ module Aws::GlobalAccelerator
       "EndpointGroupArn" : String,
       "EndpointId" : String,
       "DestinationAddresses" : Array(String),
-      "DestinationPorts" : Array(Int32),
+      "DestinationPorts" : Array(UInt16),
       "AllowAllTrafficToEndpoint" : Bool
     )
 
@@ -3753,11 +3753,11 @@ module Aws::GlobalAccelerator
       "EndpointGroupRegion" : String,
       "EndpointConfigurations" : Array(EndpointConfiguration),
       "TrafficDialPercentage" : Float32,
-      "HealthCheckPort" : Int32,
+      "HealthCheckPort" : UInt16,
       "HealthCheckProtocol" : String,
       "HealthCheckPath" : String,
-      "HealthCheckIntervalSeconds" : Int32,
-      "ThresholdCount" : Int32,
+      "HealthCheckIntervalSeconds" : UInt8,
+      "ThresholdCount" : UInt8,
       "IdempotencyToken" : String,
       "PortOverrides" : Array(PortOverride)
     )
@@ -3801,16 +3801,16 @@ module Aws::GlobalAccelerator
     alias CustomRoutingAccelerators = Array(CustomRoutingAccelerator)
 
     alias CustomRoutingDestinationConfiguration = NamedTuple(
-      "FromPort" : Int32,
-      "ToPort" : Int32,
+      "FromPort" : UInt16,
+      "ToPort" : UInt16,
       "Protocols" : Array(String)
     )
 
     alias CustomRoutingDestinationConfigurations = Array(CustomRoutingDestinationConfiguration)
 
     alias CustomRoutingDestinationDescription = NamedTuple(
-      "FromPort" : Int32,
-      "ToPort" : Int32,
+      "FromPort" : UInt16,
+      "ToPort" : UInt16,
       "Protocols" : Array(String)
     )
 
@@ -3878,7 +3878,7 @@ module Aws::GlobalAccelerator
       "EndpointGroupArn" : String,
       "EndpointId" : String,
       "DestinationAddresses" : Array(String),
-      "DestinationPorts" : Array(Int32),
+      "DestinationPorts" : Array(UInt16),
       "DenyAllTrafficToEndpoint" : Bool
     )
 
@@ -3969,7 +3969,7 @@ module Aws::GlobalAccelerator
 
     alias DestinationPortMappings = Array(DestinationPortMapping)
 
-    alias DestinationPorts = Array(Int32)
+    alias DestinationPorts = Array(UInt16)
 
     alias EndpointAlreadyExistsException = NamedTuple(
       "Message" : String
@@ -3977,7 +3977,7 @@ module Aws::GlobalAccelerator
 
     alias EndpointConfiguration = NamedTuple(
       "EndpointId" : String,
-      "Weight" : Int32,
+      "Weight" : UInt8,
       "ClientIPPreservationEnabled" : Bool
     )
 
@@ -3985,7 +3985,7 @@ module Aws::GlobalAccelerator
 
     alias EndpointDescription = NamedTuple(
       "EndpointId" : String,
-      "Weight" : Int32,
+      "Weight" : UInt8,
       "HealthState" : String,
       "HealthReason" : String,
       "ClientIPPreservationEnabled" : Bool
@@ -3998,11 +3998,11 @@ module Aws::GlobalAccelerator
       "EndpointGroupRegion" : String,
       "EndpointDescriptions" : Array(EndpointDescription),
       "TrafficDialPercentage" : Float32,
-      "HealthCheckPort" : Int32,
+      "HealthCheckPort" : UInt16,
       "HealthCheckProtocol" : String,
       "HealthCheckPath" : String,
-      "HealthCheckIntervalSeconds" : Int32,
-      "ThresholdCount" : Int32,
+      "HealthCheckIntervalSeconds" : UInt8,
+      "ThresholdCount" : UInt8,
       "PortOverrides" : Array(PortOverride)
     )
 
@@ -4022,7 +4022,7 @@ module Aws::GlobalAccelerator
       "Message" : String
     )
 
-    alias EndpointWeight = Int32
+    alias EndpointWeight = UInt8
 
     alias ErrorMessage = String
 
@@ -4030,11 +4030,11 @@ module Aws::GlobalAccelerator
 
     alias GenericString = String
 
-    alias HealthCheckIntervalSeconds = Int32
+    alias HealthCheckIntervalSeconds = UInt8
 
     alias HealthCheckPath = String
 
-    alias HealthCheckPort = Int32
+    alias HealthCheckPort = UInt16
 
     alias HealthCheckProtocol = String
 
@@ -4080,7 +4080,7 @@ module Aws::GlobalAccelerator
     )
 
     alias ListAcceleratorsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4090,7 +4090,7 @@ module Aws::GlobalAccelerator
     )
 
     alias ListByoipCidrsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4100,7 +4100,7 @@ module Aws::GlobalAccelerator
     )
 
     alias ListCustomRoutingAcceleratorsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4111,7 +4111,7 @@ module Aws::GlobalAccelerator
 
     alias ListCustomRoutingEndpointGroupsRequest = NamedTuple(
       "ListenerArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4122,7 +4122,7 @@ module Aws::GlobalAccelerator
 
     alias ListCustomRoutingListenersRequest = NamedTuple(
       "AcceleratorArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4134,7 +4134,7 @@ module Aws::GlobalAccelerator
     alias ListCustomRoutingPortMappingsByDestinationRequest = NamedTuple(
       "EndpointId" : String,
       "DestinationAddress" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -4146,7 +4146,7 @@ module Aws::GlobalAccelerator
     alias ListCustomRoutingPortMappingsRequest = NamedTuple(
       "AcceleratorArn" : String,
       "EndpointGroupArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -4157,7 +4157,7 @@ module Aws::GlobalAccelerator
 
     alias ListEndpointGroupsRequest = NamedTuple(
       "ListenerArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4168,7 +4168,7 @@ module Aws::GlobalAccelerator
 
     alias ListListenersRequest = NamedTuple(
       "AcceleratorArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4198,10 +4198,10 @@ module Aws::GlobalAccelerator
 
     alias Listeners = Array(Listener)
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias PortMapping = NamedTuple(
-      "AcceleratorPort" : Int32,
+      "AcceleratorPort" : UInt16,
       "EndpointGroupArn" : String,
       "EndpointId" : String,
       "DestinationSocketAddress" : SocketAddress,
@@ -4211,20 +4211,20 @@ module Aws::GlobalAccelerator
 
     alias PortMappings = Array(PortMapping)
 
-    alias PortMappingsMaxResults = Int32
+    alias PortMappingsMaxResults = UInt16
 
-    alias PortNumber = Int32
+    alias PortNumber = UInt16
 
     alias PortOverride = NamedTuple(
-      "ListenerPort" : Int32,
-      "EndpointPort" : Int32
+      "ListenerPort" : UInt16,
+      "EndpointPort" : UInt16
     )
 
     alias PortOverrides = Array(PortOverride)
 
     alias PortRange = NamedTuple(
-      "FromPort" : Int32,
-      "ToPort" : Int32
+      "FromPort" : UInt16,
+      "ToPort" : UInt16
     )
 
     alias PortRanges = Array(PortRange)
@@ -4251,7 +4251,7 @@ module Aws::GlobalAccelerator
 
     alias SocketAddress = NamedTuple(
       "IpAddress" : String,
-      "Port" : Int32
+      "Port" : UInt16
     )
 
     alias SocketAddresses = Array(SocketAddress)
@@ -4278,7 +4278,7 @@ module Aws::GlobalAccelerator
 
     alias Tags = Array(Tag)
 
-    alias ThresholdCount = Int32
+    alias ThresholdCount = UInt8
 
     alias Timestamp = String | UInt64 | Time
 
@@ -4350,11 +4350,11 @@ module Aws::GlobalAccelerator
       "EndpointGroupArn" : String,
       "EndpointConfigurations" : Array(EndpointConfiguration),
       "TrafficDialPercentage" : Float32,
-      "HealthCheckPort" : Int32,
+      "HealthCheckPort" : UInt16,
       "HealthCheckProtocol" : String,
       "HealthCheckPath" : String,
-      "HealthCheckIntervalSeconds" : Int32,
-      "ThresholdCount" : Int32,
+      "HealthCheckIntervalSeconds" : UInt8,
+      "ThresholdCount" : UInt8,
       "PortOverrides" : Array(PortOverride)
     )
 

@@ -3569,7 +3569,7 @@ module Aws::MTurk
     alias ListAssignmentsForHITRequest = NamedTuple(
       "HITId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "AssignmentStatuses" : Array(String)
     )
 
@@ -3583,7 +3583,7 @@ module Aws::MTurk
       "HITId" : String,
       "AssignmentId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListBonusPaymentsResponse = NamedTuple(
@@ -3595,7 +3595,7 @@ module Aws::MTurk
     alias ListHITsForQualificationTypeRequest = NamedTuple(
       "QualificationTypeId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListHITsForQualificationTypeResponse = NamedTuple(
@@ -3606,7 +3606,7 @@ module Aws::MTurk
 
     alias ListHITsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListHITsResponse = NamedTuple(
@@ -3618,7 +3618,7 @@ module Aws::MTurk
     alias ListQualificationRequestsRequest = NamedTuple(
       "QualificationTypeId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListQualificationRequestsResponse = NamedTuple(
@@ -3632,7 +3632,7 @@ module Aws::MTurk
       "MustBeRequestable" : Bool,
       "MustBeOwnedByCaller" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListQualificationTypesResponse = NamedTuple(
@@ -3647,7 +3647,7 @@ module Aws::MTurk
       "RetrieveActions" : Bool,
       "RetrieveResults" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListReviewPolicyResultsForHITResponse = NamedTuple(
@@ -3663,7 +3663,7 @@ module Aws::MTurk
       "HITTypeId" : String,
       "Status" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListReviewableHITsResponse = NamedTuple(
@@ -3674,7 +3674,7 @@ module Aws::MTurk
 
     alias ListWorkerBlocksRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWorkerBlocksResponse = NamedTuple(
@@ -3687,7 +3687,7 @@ module Aws::MTurk
       "QualificationTypeId" : String,
       "Status" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWorkersWithQualificationTypeResponse = NamedTuple(
@@ -3829,7 +3829,7 @@ module Aws::MTurk
       "TurkErrorCode" : String
     )
 
-    alias ResultSize = Int32
+    alias ResultSize = UInt8
 
     alias ReviewActionDetail = NamedTuple(
       "ActionId" : String,

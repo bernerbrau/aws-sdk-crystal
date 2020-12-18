@@ -3350,30 +3350,30 @@ module Aws::Route53Resolver
 
     alias ListResolverEndpointIpAddressesRequest = NamedTuple(
       "ResolverEndpointId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListResolverEndpointIpAddressesResponse = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "IpAddresses" : Array(IpAddressResponse)
     )
 
     alias ListResolverEndpointsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter)
     )
 
     alias ListResolverEndpointsResponse = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ResolverEndpoints" : Array(ResolverEndpoint)
     )
 
     alias ListResolverQueryLogConfigAssociationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter),
       "SortBy" : String,
@@ -3388,7 +3388,7 @@ module Aws::Route53Resolver
     )
 
     alias ListResolverQueryLogConfigsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter),
       "SortBy" : String,
@@ -3403,32 +3403,32 @@ module Aws::Route53Resolver
     )
 
     alias ListResolverRuleAssociationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter)
     )
 
     alias ListResolverRuleAssociationsResponse = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ResolverRuleAssociations" : Array(ResolverRuleAssociation)
     )
 
     alias ListResolverRulesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter)
     )
 
     alias ListResolverRulesResponse = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ResolverRules" : Array(ResolverRule)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3437,13 +3437,13 @@ module Aws::Route53Resolver
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Name = String
 
     alias NextToken = String
 
-    alias Port = Int32
+    alias Port = UInt16
 
     alias PutResolverQueryLogConfigPolicyRequest = NamedTuple(
       "Arn" : String,
@@ -3629,7 +3629,7 @@ module Aws::Route53Resolver
 
     alias TargetAddress = NamedTuple(
       "Ip" : String,
-      "Port" : Int32
+      "Port" : UInt16
     )
 
     alias TargetList = Array(TargetAddress)

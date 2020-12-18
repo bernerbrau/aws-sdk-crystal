@@ -2170,7 +2170,7 @@ module Aws::MediaPackageVod
     )
 
     alias ListAssetsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "PackagingGroupId" : String
     )
@@ -2181,7 +2181,7 @@ module Aws::MediaPackageVod
     )
 
     alias ListPackagingConfigurationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "PackagingGroupId" : String
     )
@@ -2192,7 +2192,7 @@ module Aws::MediaPackageVod
     )
 
     alias ListPackagingGroupsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2211,7 +2211,7 @@ module Aws::MediaPackageVod
 
     alias ManifestLayout = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MssEncryption = NamedTuple(
       "SpekeKeyProvider" : SpekeKeyProvider

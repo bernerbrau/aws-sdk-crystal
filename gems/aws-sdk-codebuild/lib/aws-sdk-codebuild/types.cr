@@ -7081,21 +7081,21 @@ module Aws::CodeBuild
       "reportARN" : String,
       "filePath" : String,
       "lineCoveragePercentage" : Float64,
-      "linesCovered" : Int32,
-      "linesMissed" : Int32,
+      "linesCovered" : UInt32,
+      "linesMissed" : UInt32,
       "branchCoveragePercentage" : Float64,
-      "branchesCovered" : Int32,
-      "branchesMissed" : Int32,
+      "branchesCovered" : UInt32,
+      "branchesMissed" : UInt32,
       "expired" : (String | UInt64 | Time)?
     )
 
     alias CodeCoverageReportSummary = NamedTuple(
       "lineCoveragePercentage" : Float64,
-      "linesCovered" : Int32,
-      "linesMissed" : Int32,
+      "linesCovered" : UInt32,
+      "linesMissed" : UInt32,
       "branchCoveragePercentage" : Float64,
-      "branchesCovered" : Int32,
-      "branchesMissed" : Int32
+      "branchesCovered" : UInt32,
+      "branchesMissed" : UInt32
     )
 
     alias CodeCoverages = Array(CodeCoverage)
@@ -7116,8 +7116,8 @@ module Aws::CodeBuild
       "cache" : ProjectCache,
       "environment" : ProjectEnvironment,
       "serviceRole" : String,
-      "timeoutInMinutes" : Int32,
-      "queuedTimeoutInMinutes" : Int32,
+      "timeoutInMinutes" : UInt16,
+      "queuedTimeoutInMinutes" : UInt16,
       "encryptionKey" : String,
       "tags" : Array(Tag),
       "vpcConfig" : VpcConfig,
@@ -7222,7 +7222,7 @@ module Aws::CodeBuild
     alias DescribeCodeCoveragesInput = NamedTuple(
       "reportArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "sortOrder" : String,
       "sortBy" : String,
       "minLineCoveragePercentage" : Float64,
@@ -7237,7 +7237,7 @@ module Aws::CodeBuild
     alias DescribeTestCasesInput = NamedTuple(
       "reportArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "filter" : TestCaseFilter
     )
 
@@ -7295,7 +7295,7 @@ module Aws::CodeBuild
 
     alias GetReportGroupTrendInput = NamedTuple(
       "reportGroupArn" : String,
-      "numOfReports" : Int32,
+      "numOfReports" : UInt8,
       "trendField" : String
     )
 
@@ -7312,7 +7312,7 @@ module Aws::CodeBuild
       "policy" : String
     )
 
-    alias GitCloneDepth = Int32
+    alias GitCloneDepth = UInt32
 
     alias GitSubmodulesConfig = NamedTuple(
       "fetchSubmodules" : Bool
@@ -7355,7 +7355,7 @@ module Aws::CodeBuild
     alias ListBuildBatchesForProjectInput = NamedTuple(
       "projectName" : String,
       "filter" : BuildBatchFilter,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "sortOrder" : String,
       "nextToken" : String
     )
@@ -7367,7 +7367,7 @@ module Aws::CodeBuild
 
     alias ListBuildBatchesInput = NamedTuple(
       "filter" : BuildBatchFilter,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "sortOrder" : String,
       "nextToken" : String
     )
@@ -7421,7 +7421,7 @@ module Aws::CodeBuild
       "sortOrder" : String,
       "sortBy" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListReportGroupsOutput = NamedTuple(
@@ -7433,7 +7433,7 @@ module Aws::CodeBuild
       "reportGroupArn" : String,
       "nextToken" : String,
       "sortOrder" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "filter" : ReportFilter
     )
 
@@ -7445,7 +7445,7 @@ module Aws::CodeBuild
     alias ListReportsInput = NamedTuple(
       "sortOrder" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "filter" : ReportFilter
     )
 
@@ -7457,7 +7457,7 @@ module Aws::CodeBuild
     alias ListSharedProjectsInput = NamedTuple(
       "sortBy" : String,
       "sortOrder" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -7470,7 +7470,7 @@ module Aws::CodeBuild
       "sortOrder" : String,
       "sortBy" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListSharedReportGroupsOutput = NamedTuple(
@@ -7511,13 +7511,13 @@ module Aws::CodeBuild
 
     alias NonEmptyString = String
 
-    alias NonNegativeInt = Int32
+    alias NonNegativeInt = UInt32
 
     alias OAuthProviderException = NamedTuple(
       
     )
 
-    alias PageSize = Int32
+    alias PageSize = UInt8
 
     alias Percentage = Float64
 
@@ -7543,8 +7543,8 @@ module Aws::CodeBuild
       "cache" : ProjectCache,
       "environment" : ProjectEnvironment,
       "serviceRole" : String,
-      "timeoutInMinutes" : Int32,
-      "queuedTimeoutInMinutes" : Int32,
+      "timeoutInMinutes" : UInt16,
+      "queuedTimeoutInMinutes" : UInt16,
       "encryptionKey" : String,
       "tags" : Array(Tag),
       "created" : (String | UInt64 | Time)?,
@@ -7627,7 +7627,7 @@ module Aws::CodeBuild
     alias ProjectSource = NamedTuple(
       "type" : String,
       "location" : String,
-      "gitCloneDepth" : Int32,
+      "gitCloneDepth" : UInt32,
       "gitSubmodulesConfig" : GitSubmodulesConfig,
       "buildspec" : String,
       "auth" : SourceAuth,
@@ -7825,7 +7825,7 @@ module Aws::CodeBuild
       "sourceTypeOverride" : String,
       "sourceLocationOverride" : String,
       "sourceAuthOverride" : SourceAuth,
-      "gitCloneDepthOverride" : Int32,
+      "gitCloneDepthOverride" : UInt32,
       "gitSubmodulesConfigOverride" : GitSubmodulesConfig,
       "buildspecOverride" : String,
       "insecureSslOverride" : Bool,
@@ -7837,8 +7837,8 @@ module Aws::CodeBuild
       "cacheOverride" : ProjectCache,
       "serviceRoleOverride" : String,
       "privilegedModeOverride" : Bool,
-      "buildTimeoutInMinutesOverride" : Int32,
-      "queuedTimeoutInMinutesOverride" : Int32,
+      "buildTimeoutInMinutesOverride" : UInt16,
+      "queuedTimeoutInMinutesOverride" : UInt16,
       "encryptionKeyOverride" : String,
       "idempotencyToken" : String,
       "logsConfigOverride" : LogsConfig,
@@ -7862,7 +7862,7 @@ module Aws::CodeBuild
       "sourceTypeOverride" : String,
       "sourceLocationOverride" : String,
       "sourceAuthOverride" : SourceAuth,
-      "gitCloneDepthOverride" : Int32,
+      "gitCloneDepthOverride" : UInt32,
       "gitSubmodulesConfigOverride" : GitSubmodulesConfig,
       "buildspecOverride" : String,
       "insecureSslOverride" : Bool,
@@ -7875,8 +7875,8 @@ module Aws::CodeBuild
       "cacheOverride" : ProjectCache,
       "serviceRoleOverride" : String,
       "privilegedModeOverride" : Bool,
-      "timeoutInMinutesOverride" : Int32,
-      "queuedTimeoutInMinutesOverride" : Int32,
+      "timeoutInMinutesOverride" : UInt16,
+      "queuedTimeoutInMinutesOverride" : UInt16,
       "encryptionKeyOverride" : String,
       "idempotencyToken" : String,
       "logsConfigOverride" : LogsConfig,
@@ -7942,7 +7942,7 @@ module Aws::CodeBuild
       "durationInNanoSeconds" : Int64
     )
 
-    alias TimeOut = Int32
+    alias TimeOut = UInt16
 
     alias Timestamp = String | UInt64 | Time
 
@@ -7958,8 +7958,8 @@ module Aws::CodeBuild
       "cache" : ProjectCache,
       "environment" : ProjectEnvironment,
       "serviceRole" : String,
-      "timeoutInMinutes" : Int32,
-      "queuedTimeoutInMinutes" : Int32,
+      "timeoutInMinutes" : UInt16,
+      "queuedTimeoutInMinutes" : UInt16,
       "encryptionKey" : String,
       "tags" : Array(Tag),
       "vpcConfig" : VpcConfig,

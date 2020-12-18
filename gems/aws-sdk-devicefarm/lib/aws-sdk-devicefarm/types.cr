@@ -7567,8 +7567,8 @@ module Aws::DeviceFarm
       "downlinkDelayMs" : Int64,
       "uplinkJitterMs" : Int64,
       "downlinkJitterMs" : Int64,
-      "uplinkLossPercent" : Int32,
-      "downlinkLossPercent" : Int32
+      "uplinkLossPercent" : UInt8,
+      "downlinkLossPercent" : UInt8
     )
 
     alias CreateNetworkProfileResult = NamedTuple(
@@ -7619,7 +7619,7 @@ module Aws::DeviceFarm
 
     alias CreateTestGridUrlRequest = NamedTuple(
       "projectArn" : String,
-      "expiresInSeconds" : Int32
+      "expiresInSeconds" : UInt32
     )
 
     alias CreateTestGridUrlResult = NamedTuple(
@@ -8240,7 +8240,7 @@ module Aws::DeviceFarm
     )
 
     alias ListTestGridProjectsRequest = NamedTuple(
-      "maxResult" : Int32,
+      "maxResult" : UInt16,
       "nextToken" : String
     )
 
@@ -8251,7 +8251,7 @@ module Aws::DeviceFarm
 
     alias ListTestGridSessionActionsRequest = NamedTuple(
       "sessionArn" : String,
-      "maxResult" : Int32,
+      "maxResult" : UInt16,
       "nextToken" : String
     )
 
@@ -8263,7 +8263,7 @@ module Aws::DeviceFarm
     alias ListTestGridSessionArtifactsRequest = NamedTuple(
       "sessionArn" : String,
       "type" : String,
-      "maxResult" : Int32,
+      "maxResult" : UInt16,
       "nextToken" : String
     )
 
@@ -8279,7 +8279,7 @@ module Aws::DeviceFarm
       "creationTimeBefore" : (String | UInt64 | Time)?,
       "endTimeAfter" : (String | UInt64 | Time)?,
       "endTimeBefore" : (String | UInt64 | Time)?,
-      "maxResult" : Int32,
+      "maxResult" : UInt16,
       "nextToken" : String
     )
 
@@ -8336,7 +8336,7 @@ module Aws::DeviceFarm
 
     alias Long = Int64
 
-    alias MaxPageSize = Int32
+    alias MaxPageSize = UInt16
 
     alias MaxSlotMap = Hash(String,Int32)
 
@@ -8362,8 +8362,8 @@ module Aws::DeviceFarm
       "downlinkDelayMs" : Int64,
       "uplinkJitterMs" : Int64,
       "downlinkJitterMs" : Int64,
-      "uplinkLossPercent" : Int32,
-      "downlinkLossPercent" : Int32
+      "uplinkLossPercent" : UInt8,
+      "downlinkLossPercent" : UInt8
     )
 
     alias NetworkProfileType = String
@@ -8426,7 +8426,7 @@ module Aws::DeviceFarm
 
     alias PaginationToken = String
 
-    alias PercentInteger = Int32
+    alias PercentInteger = UInt8
 
     alias Problem = NamedTuple(
       "run" : ProblemDetail,
@@ -8761,7 +8761,7 @@ module Aws::DeviceFarm
 
     alias TestGridSessions = Array(TestGridSession)
 
-    alias TestGridUrlExpiresInSecondsInput = Int32
+    alias TestGridUrlExpiresInSecondsInput = UInt32
 
     alias TestParameters = Hash(String,String)
 
@@ -8848,8 +8848,8 @@ module Aws::DeviceFarm
       "downlinkDelayMs" : Int64,
       "uplinkJitterMs" : Int64,
       "downlinkJitterMs" : Int64,
-      "uplinkLossPercent" : Int32,
-      "downlinkLossPercent" : Int32
+      "uplinkLossPercent" : UInt8,
+      "downlinkLossPercent" : UInt8
     )
 
     alias UpdateNetworkProfileResult = NamedTuple(

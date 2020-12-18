@@ -3756,7 +3756,7 @@ module Aws::FSx
 
     alias AdministrativeAction = NamedTuple(
       "AdministrativeActionType" : String,
-      "ProgressPercent" : Int32,
+      "ProgressPercent" : UInt8,
       "RequestTime" : (String | UInt64 | Time)?,
       "Status" : String,
       "TargetFileSystemValues" : FileSystem,
@@ -3798,14 +3798,14 @@ module Aws::FSx
 
     alias AutoImportPolicyType = String
 
-    alias AutomaticBackupRetentionDays = Int32
+    alias AutomaticBackupRetentionDays = UInt8
 
     alias Backup = NamedTuple(
       "BackupId" : String,
       "Lifecycle" : String,
       "FailureDetails" : BackupFailureDetails,
       "Type" : String,
-      "ProgressPercent" : Int32,
+      "ProgressPercent" : UInt8,
       "CreationTime" : String | UInt64 | Time,
       "KmsKeyId" : String,
       "ResourceARN" : String,
@@ -3905,12 +3905,12 @@ module Aws::FSx
       "WeeklyMaintenanceStartTime" : String,
       "ImportPath" : String,
       "ExportPath" : String,
-      "ImportedFileChunkSize" : Int32,
+      "ImportedFileChunkSize" : UInt32,
       "DeploymentType" : String,
       "AutoImportPolicy" : String,
-      "PerUnitStorageThroughput" : Int32,
+      "PerUnitStorageThroughput" : UInt8,
       "DailyAutomaticBackupStartTime" : String,
-      "AutomaticBackupRetentionDays" : Int32,
+      "AutomaticBackupRetentionDays" : UInt8,
       "CopyTagsToBackups" : Bool,
       "DriveCacheType" : String
     )
@@ -3918,7 +3918,7 @@ module Aws::FSx
     alias CreateFileSystemRequest = NamedTuple(
       "ClientRequestToken" : String,
       "FileSystemType" : String,
-      "StorageCapacity" : Int32,
+      "StorageCapacity" : UInt32,
       "StorageType" : String,
       "SubnetIds" : Array(String),
       "SecurityGroupIds" : Array(String),
@@ -3937,10 +3937,10 @@ module Aws::FSx
       "SelfManagedActiveDirectoryConfiguration" : SelfManagedActiveDirectoryConfiguration,
       "DeploymentType" : String,
       "PreferredSubnetId" : String,
-      "ThroughputCapacity" : Int32,
+      "ThroughputCapacity" : UInt16,
       "WeeklyMaintenanceStartTime" : String,
       "DailyAutomaticBackupStartTime" : String,
-      "AutomaticBackupRetentionDays" : Int32,
+      "AutomaticBackupRetentionDays" : UInt8,
       "CopyTagsToBackups" : Bool,
       "Aliases" : Array(String)
     )
@@ -3955,7 +3955,7 @@ module Aws::FSx
       "Lifecycle" : String,
       "ImportPath" : String,
       "ExportPath" : String,
-      "ImportedFileChunkSize" : Int32,
+      "ImportedFileChunkSize" : UInt32,
       "AutoImportPolicy" : String,
       "FailureDetails" : DataRepositoryFailureDetails
     )
@@ -4075,7 +4075,7 @@ module Aws::FSx
     alias DescribeBackupsRequest = NamedTuple(
       "BackupIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -4087,7 +4087,7 @@ module Aws::FSx
     alias DescribeDataRepositoryTasksRequest = NamedTuple(
       "TaskIds" : Array(String),
       "Filters" : Array(DataRepositoryTaskFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -4099,7 +4099,7 @@ module Aws::FSx
     alias DescribeFileSystemAliasesRequest = NamedTuple(
       "ClientRequestToken" : String,
       "FileSystemId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -4110,7 +4110,7 @@ module Aws::FSx
 
     alias DescribeFileSystemsRequest = NamedTuple(
       "FileSystemIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -4152,7 +4152,7 @@ module Aws::FSx
       "FileSystemType" : String,
       "Lifecycle" : String,
       "FailureDetails" : FileSystemFailureDetails,
-      "StorageCapacity" : Int32,
+      "StorageCapacity" : UInt32,
       "StorageType" : String,
       "VpcId" : String,
       "SubnetIds" : Array(String),
@@ -4240,7 +4240,7 @@ module Aws::FSx
 
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceARN" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -4255,21 +4255,21 @@ module Aws::FSx
       "WeeklyMaintenanceStartTime" : String,
       "DataRepositoryConfiguration" : DataRepositoryConfiguration,
       "DeploymentType" : String,
-      "PerUnitStorageThroughput" : Int32,
+      "PerUnitStorageThroughput" : UInt8,
       "MountName" : String,
       "DailyAutomaticBackupStartTime" : String,
-      "AutomaticBackupRetentionDays" : Int32,
+      "AutomaticBackupRetentionDays" : UInt8,
       "CopyTagsToBackups" : Bool,
       "DriveCacheType" : String
     )
 
     alias LustreFileSystemMountName = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
-    alias Megabytes = Int32
+    alias Megabytes = UInt32
 
-    alias MegabytesPerSecond = Int32
+    alias MegabytesPerSecond = UInt16
 
     alias MissingFileSystemConfiguration = NamedTuple(
       "Message" : String
@@ -4290,9 +4290,9 @@ module Aws::FSx
 
     alias Parameter = String
 
-    alias PerUnitStorageThroughput = Int32
+    alias PerUnitStorageThroughput = UInt8
 
-    alias ProgressPercent = Int32
+    alias ProgressPercent = UInt8
 
     alias ReportFormat = String
 
@@ -4350,7 +4350,7 @@ module Aws::FSx
 
     alias Status = String
 
-    alias StorageCapacity = Int32
+    alias StorageCapacity = UInt32
 
     alias StorageType = String
 
@@ -4404,14 +4404,14 @@ module Aws::FSx
     alias UpdateFileSystemLustreConfiguration = NamedTuple(
       "WeeklyMaintenanceStartTime" : String,
       "DailyAutomaticBackupStartTime" : String,
-      "AutomaticBackupRetentionDays" : Int32,
+      "AutomaticBackupRetentionDays" : UInt8,
       "AutoImportPolicy" : String
     )
 
     alias UpdateFileSystemRequest = NamedTuple(
       "FileSystemId" : String,
       "ClientRequestToken" : String,
-      "StorageCapacity" : Int32,
+      "StorageCapacity" : UInt32,
       "WindowsConfiguration" : UpdateFileSystemWindowsConfiguration,
       "LustreConfiguration" : UpdateFileSystemLustreConfiguration
     )
@@ -4423,8 +4423,8 @@ module Aws::FSx
     alias UpdateFileSystemWindowsConfiguration = NamedTuple(
       "WeeklyMaintenanceStartTime" : String,
       "DailyAutomaticBackupStartTime" : String,
-      "AutomaticBackupRetentionDays" : Int32,
-      "ThroughputCapacity" : Int32,
+      "AutomaticBackupRetentionDays" : UInt8,
+      "ThroughputCapacity" : UInt16,
       "SelfManagedActiveDirectoryConfiguration" : SelfManagedActiveDirectoryConfigurationUpdates
     )
 
@@ -4441,11 +4441,11 @@ module Aws::FSx
       "RemoteAdministrationEndpoint" : String,
       "PreferredSubnetId" : String,
       "PreferredFileServerIp" : String,
-      "ThroughputCapacity" : Int32,
+      "ThroughputCapacity" : UInt16,
       "MaintenanceOperationsInProgress" : Array(String),
       "WeeklyMaintenanceStartTime" : String,
       "DailyAutomaticBackupStartTime" : String,
-      "AutomaticBackupRetentionDays" : Int32,
+      "AutomaticBackupRetentionDays" : UInt8,
       "CopyTagsToBackups" : Bool,
       "Aliases" : Array(Alias)
     )

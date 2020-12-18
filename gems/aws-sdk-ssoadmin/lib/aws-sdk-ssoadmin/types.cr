@@ -2338,7 +2338,7 @@ module Aws::SSOAdmin
 
     alias ListAccountAssignmentCreationStatusRequest = NamedTuple(
       "InstanceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filter" : OperationStatusFilter
     )
@@ -2350,7 +2350,7 @@ module Aws::SSOAdmin
 
     alias ListAccountAssignmentDeletionStatusRequest = NamedTuple(
       "InstanceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filter" : OperationStatusFilter
     )
@@ -2364,7 +2364,7 @@ module Aws::SSOAdmin
       "InstanceArn" : String,
       "AccountId" : String,
       "PermissionSetArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2377,7 +2377,7 @@ module Aws::SSOAdmin
       "InstanceArn" : String,
       "PermissionSetArn" : String,
       "ProvisioningStatus" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2387,7 +2387,7 @@ module Aws::SSOAdmin
     )
 
     alias ListInstancesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2399,7 +2399,7 @@ module Aws::SSOAdmin
     alias ListManagedPoliciesInPermissionSetRequest = NamedTuple(
       "InstanceArn" : String,
       "PermissionSetArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2410,7 +2410,7 @@ module Aws::SSOAdmin
 
     alias ListPermissionSetProvisioningStatusRequest = NamedTuple(
       "InstanceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filter" : OperationStatusFilter
     )
@@ -2424,7 +2424,7 @@ module Aws::SSOAdmin
       "InstanceArn" : String,
       "AccountId" : String,
       "ProvisioningStatus" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2436,7 +2436,7 @@ module Aws::SSOAdmin
     alias ListPermissionSetsRequest = NamedTuple(
       "InstanceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPermissionSetsResponse = NamedTuple(
@@ -2457,7 +2457,7 @@ module Aws::SSOAdmin
 
     alias ManagedPolicyArn = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Name = String
 

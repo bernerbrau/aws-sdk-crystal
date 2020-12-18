@@ -11471,13 +11471,13 @@ module Aws::ECS
 
     alias CapacityProviderStrategyItem = NamedTuple(
       "capacityProvider" : String,
-      "weight" : Int32,
-      "base" : Int32
+      "weight" : UInt16,
+      "base" : UInt32
     )
 
-    alias CapacityProviderStrategyItemBase = Int32
+    alias CapacityProviderStrategyItemBase = UInt32
 
-    alias CapacityProviderStrategyItemWeight = Int32
+    alias CapacityProviderStrategyItemWeight = UInt16
 
     alias CapacityProviderUpdateStatus = String
 
@@ -12228,19 +12228,19 @@ module Aws::ECS
 
     alias ManagedScaling = NamedTuple(
       "status" : String,
-      "targetCapacity" : Int32,
-      "minimumScalingStepSize" : Int32,
-      "maximumScalingStepSize" : Int32,
-      "instanceWarmupPeriod" : Int32
+      "targetCapacity" : UInt8,
+      "minimumScalingStepSize" : UInt16,
+      "maximumScalingStepSize" : UInt16,
+      "instanceWarmupPeriod" : UInt16
     )
 
-    alias ManagedScalingInstanceWarmupPeriod = Int32
+    alias ManagedScalingInstanceWarmupPeriod = UInt16
 
     alias ManagedScalingStatus = String
 
-    alias ManagedScalingStepSize = Int32
+    alias ManagedScalingStepSize = UInt16
 
-    alias ManagedScalingTargetCapacity = Int32
+    alias ManagedScalingTargetCapacity = UInt8
 
     alias ManagedTerminationProtection = String
 

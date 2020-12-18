@@ -2514,7 +2514,7 @@ module Aws::SecretsManager
       include Aws::Structure
     end
 
-    alias AutomaticallyRotateAfterDaysType = Int64
+    alias AutomaticallyRotateAfterDaysType = UInt16
 
     alias BooleanType = Bool
 
@@ -2631,7 +2631,7 @@ module Aws::SecretsManager
     alias FiltersListType = Array(Filter)
 
     alias GetRandomPasswordRequest = NamedTuple(
-      "PasswordLength" : Int64,
+      "PasswordLength" : UInt16,
       "ExcludeCharacters" : String,
       "ExcludeNumbers" : Bool,
       "ExcludePunctuation" : Bool,
@@ -2703,7 +2703,7 @@ module Aws::SecretsManager
 
     alias ListSecretVersionIdsRequest = NamedTuple(
       "SecretId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "IncludeDeprecated" : Bool
     )
@@ -2716,7 +2716,7 @@ module Aws::SecretsManager
     )
 
     alias ListSecretsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter),
       "SortOrder" : String
@@ -2731,7 +2731,7 @@ module Aws::SecretsManager
       "Message" : String
     )
 
-    alias MaxResultsType = Int32
+    alias MaxResultsType = UInt8
 
     alias NameType = String
 
@@ -2741,7 +2741,7 @@ module Aws::SecretsManager
 
     alias OwningServiceType = String
 
-    alias PasswordLengthType = Int64
+    alias PasswordLengthType = UInt16
 
     alias PreconditionNotMetException = NamedTuple(
       "Message" : String
@@ -2818,7 +2818,7 @@ module Aws::SecretsManager
     alias RotationLambdaARNType = String
 
     alias RotationRulesType = NamedTuple(
-      "AutomaticallyAfterDays" : Int64
+      "AutomaticallyAfterDays" : UInt16
     )
 
     alias SecretARNType = String

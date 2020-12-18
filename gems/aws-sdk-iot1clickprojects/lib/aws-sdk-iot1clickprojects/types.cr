@@ -975,7 +975,7 @@ module Aws::IoT1ClickProjects
     alias ListPlacementsRequest = NamedTuple(
       "projectName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListPlacementsResponse = NamedTuple(
@@ -985,7 +985,7 @@ module Aws::IoT1ClickProjects
 
     alias ListProjectsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListProjectsResponse = NamedTuple(
@@ -1001,7 +1001,7 @@ module Aws::IoT1ClickProjects
       "tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 

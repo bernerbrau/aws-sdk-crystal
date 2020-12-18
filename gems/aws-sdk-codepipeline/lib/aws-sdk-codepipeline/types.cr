@@ -4594,7 +4594,7 @@ module Aws::CodePipeline
     alias ActionDeclaration = NamedTuple(
       "name" : String,
       "actionTypeId" : ActionTypeId,
-      "runOrder" : Int32,
+      "runOrder" : UInt16,
       "configuration" : Hash(String,String),
       "outputArtifacts" : Array(OutputArtifact),
       "inputArtifacts" : Array(InputArtifact),
@@ -4612,14 +4612,14 @@ module Aws::CodePipeline
       "lastUpdatedBy" : String,
       "externalExecutionId" : String,
       "externalExecutionUrl" : String,
-      "percentComplete" : Int32,
+      "percentComplete" : UInt8,
       "errorDetails" : ErrorDetails
     )
 
     alias ActionExecutionDetail = NamedTuple(
       "pipelineExecutionId" : String,
       "actionExecutionId" : String,
-      "pipelineVersion" : Int32,
+      "pipelineVersion" : UInt32,
       "stageName" : String,
       "actionName" : String,
       "startTime" : (String | UInt64 | Time)?,
@@ -4681,7 +4681,7 @@ module Aws::CodePipeline
       "created" : String | UInt64 | Time
     )
 
-    alias ActionRunOrder = Int32
+    alias ActionRunOrder = UInt16
 
     alias ActionState = NamedTuple(
       "actionName" : String,
@@ -4750,8 +4750,8 @@ module Aws::CodePipeline
     alias ArtifactDetailList = Array(ArtifactDetail)
 
     alias ArtifactDetails = NamedTuple(
-      "minimumCount" : Int32,
-      "maximumCount" : Int32
+      "minimumCount" : UInt8,
+      "maximumCount" : UInt8
     )
 
     alias ArtifactList = Array(Artifact)
@@ -4916,7 +4916,7 @@ module Aws::CodePipeline
     alias ExecutionDetails = NamedTuple(
       "summary" : String,
       "externalExecutionId" : String,
-      "percentComplete" : Int32
+      "percentComplete" : UInt8
     )
 
     alias ExecutionId = String
@@ -4959,7 +4959,7 @@ module Aws::CodePipeline
 
     alias GetPipelineInput = NamedTuple(
       "name" : String,
-      "version" : Int32
+      "version" : UInt32
     )
 
     alias GetPipelineOutput = NamedTuple(
@@ -4973,7 +4973,7 @@ module Aws::CodePipeline
 
     alias GetPipelineStateOutput = NamedTuple(
       "pipelineName" : String,
-      "pipelineVersion" : Int32,
+      "pipelineVersion" : UInt32,
       "stageStates" : Array(StageState),
       "created" : (String | UInt64 | Time)?,
       "updated" : (String | UInt64 | Time)?
@@ -5099,7 +5099,7 @@ module Aws::CodePipeline
     alias ListActionExecutionsInput = NamedTuple(
       "pipelineName" : String,
       "filter" : ActionExecutionFilter,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -5120,7 +5120,7 @@ module Aws::CodePipeline
 
     alias ListPipelineExecutionsInput = NamedTuple(
       "pipelineName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -5141,7 +5141,7 @@ module Aws::CodePipeline
     alias ListTagsForResourceInput = NamedTuple(
       "resourceArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
@@ -5161,7 +5161,7 @@ module Aws::CodePipeline
 
     alias ListWebhooksInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWebhooksOutput = NamedTuple(
@@ -5171,15 +5171,15 @@ module Aws::CodePipeline
 
     alias MatchEquals = String
 
-    alias MaxBatchSize = Int32
+    alias MaxBatchSize = UInt32
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MaximumArtifactCount = Int32
+    alias MaximumArtifactCount = UInt8
 
     alias Message = String
 
-    alias MinimumArtifactCount = Int32
+    alias MinimumArtifactCount = UInt8
 
     alias NextToken = String
 
@@ -5205,7 +5205,7 @@ module Aws::CodePipeline
 
     alias OutputVariablesValue = String
 
-    alias Percentage = Int32
+    alias Percentage = UInt8
 
     alias PipelineArn = String
 
@@ -5223,12 +5223,12 @@ module Aws::CodePipeline
       "artifactStore" : ArtifactStore,
       "artifactStores" : Hash(String,ArtifactStore),
       "stages" : Array(StageDeclaration),
-      "version" : Int32
+      "version" : UInt32
     )
 
     alias PipelineExecution = NamedTuple(
       "pipelineName" : String,
-      "pipelineVersion" : Int32,
+      "pipelineVersion" : UInt32,
       "pipelineExecutionId" : String,
       "status" : String,
       "artifactRevisions" : Array(ArtifactRevision)
@@ -5280,12 +5280,12 @@ module Aws::CodePipeline
 
     alias PipelineSummary = NamedTuple(
       "name" : String,
-      "version" : Int32,
+      "version" : UInt32,
       "created" : (String | UInt64 | Time)?,
       "updated" : (String | UInt64 | Time)?
     )
 
-    alias PipelineVersion = Int32
+    alias PipelineVersion = UInt32
 
     alias PipelineVersionNotFoundException = NamedTuple(
       
@@ -5293,7 +5293,7 @@ module Aws::CodePipeline
 
     alias PollForJobsInput = NamedTuple(
       "actionTypeId" : ActionTypeId,
-      "maxBatchSize" : Int32,
+      "maxBatchSize" : UInt32,
       "queryParam" : Hash(String,String)
     )
 
@@ -5303,7 +5303,7 @@ module Aws::CodePipeline
 
     alias PollForThirdPartyJobsInput = NamedTuple(
       "actionTypeId" : ActionTypeId,
-      "maxBatchSize" : Int32
+      "maxBatchSize" : UInt32
     )
 
     alias PollForThirdPartyJobsOutput = NamedTuple(

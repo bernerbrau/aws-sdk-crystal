@@ -2333,7 +2333,7 @@ module Aws::IoTThingsGraph
     alias GetFlowTemplateRevisionsRequest = NamedTuple(
       "id" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetFlowTemplateRevisionsResponse = NamedTuple(
@@ -2373,7 +2373,7 @@ module Aws::IoTThingsGraph
     alias GetSystemTemplateRevisionsRequest = NamedTuple(
       "id" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetSystemTemplateRevisionsResponse = NamedTuple(
@@ -2418,7 +2418,7 @@ module Aws::IoTThingsGraph
     alias ListFlowExecutionMessagesRequest = NamedTuple(
       "flowExecutionId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListFlowExecutionMessagesResponse = NamedTuple(
@@ -2427,7 +2427,7 @@ module Aws::IoTThingsGraph
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "resourceArn" : String,
       "nextToken" : String
     )
@@ -2437,7 +2437,7 @@ module Aws::IoTThingsGraph
       "nextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MetricsConfiguration = NamedTuple(
       "cloudMetricEnabled" : Bool,
@@ -2474,7 +2474,7 @@ module Aws::IoTThingsGraph
       "entityTypes" : Array(String),
       "filters" : Array(EntityFilter),
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "namespaceVersion" : Int64
     )
 
@@ -2489,7 +2489,7 @@ module Aws::IoTThingsGraph
       "startTime" : (String | UInt64 | Time)?,
       "endTime" : (String | UInt64 | Time)?,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias SearchFlowExecutionsResponse = NamedTuple(
@@ -2500,7 +2500,7 @@ module Aws::IoTThingsGraph
     alias SearchFlowTemplatesRequest = NamedTuple(
       "filters" : Array(FlowTemplateFilter),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias SearchFlowTemplatesResponse = NamedTuple(
@@ -2511,7 +2511,7 @@ module Aws::IoTThingsGraph
     alias SearchSystemInstancesRequest = NamedTuple(
       "filters" : Array(SystemInstanceFilter),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias SearchSystemInstancesResponse = NamedTuple(
@@ -2522,7 +2522,7 @@ module Aws::IoTThingsGraph
     alias SearchSystemTemplatesRequest = NamedTuple(
       "filters" : Array(SystemTemplateFilter),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias SearchSystemTemplatesResponse = NamedTuple(
@@ -2533,7 +2533,7 @@ module Aws::IoTThingsGraph
     alias SearchThingsRequest = NamedTuple(
       "entityId" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "namespaceVersion" : Int64
     )
 

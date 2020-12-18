@@ -2825,12 +2825,12 @@ module Aws::DevOpsGuru
       "RetryAfterSeconds" : Int32
     )
 
-    alias ListAnomaliesForInsightMaxResults = Int32
+    alias ListAnomaliesForInsightMaxResults = UInt16
 
     alias ListAnomaliesForInsightRequest = NamedTuple(
       "InsightId" : String,
       "StartTimeRange" : StartTimeRange,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2849,11 +2849,11 @@ module Aws::DevOpsGuru
       "ResourceCollection" : ResourceCollection
     )
 
-    alias ListEventsMaxResults = Int32
+    alias ListEventsMaxResults = UInt8
 
     alias ListEventsRequest = NamedTuple(
       "Filters" : ListEventsFilters,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2872,7 +2872,7 @@ module Aws::DevOpsGuru
       "EndTimeRange" : EndTimeRange
     )
 
-    alias ListInsightsMaxResults = Int32
+    alias ListInsightsMaxResults = UInt8
 
     alias ListInsightsOngoingStatusFilter = NamedTuple(
       "Type" : String
@@ -2880,7 +2880,7 @@ module Aws::DevOpsGuru
 
     alias ListInsightsRequest = NamedTuple(
       "StatusFilter" : ListInsightsStatusFilter,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3165,12 +3165,12 @@ module Aws::DevOpsGuru
       "ResourceCollection" : ResourceCollection
     )
 
-    alias SearchInsightsMaxResults = Int32
+    alias SearchInsightsMaxResults = UInt8
 
     alias SearchInsightsRequest = NamedTuple(
       "StartTimeRange" : StartTimeRange,
       "Filters" : SearchInsightsFilters,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Type" : String
     )

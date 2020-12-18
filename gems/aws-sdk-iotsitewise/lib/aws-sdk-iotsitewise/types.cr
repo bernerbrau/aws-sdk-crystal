@@ -6621,7 +6621,7 @@ module Aws::IoTSiteWise
       "endDate" : String | UInt64 | Time,
       "timeOrdering" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetAssetPropertyAggregatesResponse = NamedTuple(
@@ -6638,7 +6638,7 @@ module Aws::IoTSiteWise
       "qualities" : Array(String),
       "timeOrdering" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetAssetPropertyValueHistoryResponse = NamedTuple(
@@ -6724,7 +6724,7 @@ module Aws::IoTSiteWise
       "resourceId" : String,
       "iamArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAccessPoliciesResponse = NamedTuple(
@@ -6734,7 +6734,7 @@ module Aws::IoTSiteWise
 
     alias ListAssetModelsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAssetModelsResponse = NamedTuple(
@@ -6746,7 +6746,7 @@ module Aws::IoTSiteWise
       "assetId" : String,
       "traversalType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAssetRelationshipsResponse = NamedTuple(
@@ -6758,7 +6758,7 @@ module Aws::IoTSiteWise
 
     alias ListAssetsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "assetModelId" : String,
       "filter" : String
     )
@@ -6773,7 +6773,7 @@ module Aws::IoTSiteWise
       "hierarchyId" : String,
       "traversalDirection" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAssociatedAssetsResponse = NamedTuple(
@@ -6784,7 +6784,7 @@ module Aws::IoTSiteWise
     alias ListDashboardsRequest = NamedTuple(
       "projectId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDashboardsResponse = NamedTuple(
@@ -6794,7 +6794,7 @@ module Aws::IoTSiteWise
 
     alias ListGatewaysRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListGatewaysResponse = NamedTuple(
@@ -6804,7 +6804,7 @@ module Aws::IoTSiteWise
 
     alias ListPortalsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListPortalsResponse = NamedTuple(
@@ -6815,7 +6815,7 @@ module Aws::IoTSiteWise
     alias ListProjectAssetsRequest = NamedTuple(
       "projectId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListProjectAssetsResponse = NamedTuple(
@@ -6826,7 +6826,7 @@ module Aws::IoTSiteWise
     alias ListProjectsRequest = NamedTuple(
       "portalId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListProjectsResponse = NamedTuple(
@@ -6850,7 +6850,7 @@ module Aws::IoTSiteWise
 
     alias Macro = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Measurement = NamedTuple(
       
@@ -6879,7 +6879,7 @@ module Aws::IoTSiteWise
 
     alias NextToken = String
 
-    alias OffsetInNanos = Int32
+    alias OffsetInNanos = UInt32
 
     alias Permission = String
 
@@ -7047,11 +7047,11 @@ module Aws::IoTSiteWise
     )
 
     alias TimeInNanos = NamedTuple(
-      "timeInSeconds" : Int64,
-      "offsetInNanos" : Int32
+      "timeInSeconds" : UInt64,
+      "offsetInNanos" : UInt32
     )
 
-    alias TimeInSeconds = Int64
+    alias TimeInSeconds = UInt64
 
     alias TimeOrdering = String
 

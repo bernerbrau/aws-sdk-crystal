@@ -1662,7 +1662,7 @@ module Aws::ACM
       "CertificateStatuses" : Array(String),
       "Includes" : Filters,
       "NextToken" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListCertificatesResponse = NamedTuple(
@@ -1678,7 +1678,7 @@ module Aws::ACM
       "Tags" : Array(Tag)
     )
 
-    alias MaxItems = Int32
+    alias MaxItems = UInt16
 
     alias NextToken = String
 

@@ -1846,7 +1846,7 @@ module Aws::OpsWorksCM
 
     alias BackupId = String
 
-    alias BackupRetentionCountDefinition = Int32
+    alias BackupRetentionCountDefinition = UInt32
 
     alias BackupStatus = String
 
@@ -1876,7 +1876,7 @@ module Aws::OpsWorksCM
       "EngineModel" : String,
       "EngineVersion" : String,
       "EngineAttributes" : Array(EngineAttribute),
-      "BackupRetentionCount" : Int32,
+      "BackupRetentionCount" : UInt32,
       "ServerName" : String,
       "InstanceProfileArn" : String,
       "InstanceType" : String,
@@ -1928,7 +1928,7 @@ module Aws::OpsWorksCM
       "BackupId" : String,
       "ServerName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias DescribeBackupsResponse = NamedTuple(
@@ -1939,7 +1939,7 @@ module Aws::OpsWorksCM
     alias DescribeEventsRequest = NamedTuple(
       "ServerName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias DescribeEventsResponse = NamedTuple(
@@ -1960,7 +1960,7 @@ module Aws::OpsWorksCM
     alias DescribeServersRequest = NamedTuple(
       "ServerName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias DescribeServersResponse = NamedTuple(
@@ -2021,7 +2021,7 @@ module Aws::OpsWorksCM
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
@@ -2031,7 +2031,7 @@ module Aws::OpsWorksCM
 
     alias MaintenanceStatus = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
     alias NextToken = String
 

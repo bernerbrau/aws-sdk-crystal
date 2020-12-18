@@ -1237,10 +1237,10 @@ module Aws::RedshiftDataAPIService
       "Schemas" : Array(String)
     )
 
-    alias ListStatementsLimit = Int32
+    alias ListStatementsLimit = UInt8
 
     alias ListStatementsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "StatementName" : String,
       "Status" : String

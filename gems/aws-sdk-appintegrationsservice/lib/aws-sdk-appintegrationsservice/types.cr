@@ -668,7 +668,7 @@ module Aws::AppIntegrationsService
     alias ListEventIntegrationAssociationsRequest = NamedTuple(
       "EventIntegrationName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListEventIntegrationAssociationsResponse = NamedTuple(
@@ -678,7 +678,7 @@ module Aws::AppIntegrationsService
 
     alias ListEventIntegrationsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListEventIntegrationsResponse = NamedTuple(
@@ -694,7 +694,7 @@ module Aws::AppIntegrationsService
       "tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 

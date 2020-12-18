@@ -4400,7 +4400,7 @@ module Aws::LicenseManager
       "GrantArns" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDistributedGrantsResponse = NamedTuple(
@@ -4445,7 +4445,7 @@ module Aws::LicenseManager
     alias ListLicenseVersionsRequest = NamedTuple(
       "LicenseArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLicenseVersionsResponse = NamedTuple(
@@ -4457,7 +4457,7 @@ module Aws::LicenseManager
       "LicenseArns" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLicensesResponse = NamedTuple(
@@ -4469,7 +4469,7 @@ module Aws::LicenseManager
       "GrantArns" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListReceivedGrantsResponse = NamedTuple(
@@ -4481,7 +4481,7 @@ module Aws::LicenseManager
       "LicenseArns" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListReceivedLicensesResponse = NamedTuple(
@@ -4512,7 +4512,7 @@ module Aws::LicenseManager
       "TokenIds" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTokensResponse = NamedTuple(
@@ -4543,7 +4543,7 @@ module Aws::LicenseManager
 
     alias ManagedResourceSummaryList = Array(ManagedResourceSummary)
 
-    alias MaxSize100 = Int32
+    alias MaxSize100 = UInt8
 
     alias MaxSize3StringList = Array(String)
 

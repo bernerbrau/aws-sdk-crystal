@@ -3520,7 +3520,7 @@ module Aws::WorkDocs
       "ResourceId" : String,
       "UserId" : String,
       "IncludeIndirectActivities" : Bool,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -3533,7 +3533,7 @@ module Aws::WorkDocs
       "AuthenticationToken" : String,
       "DocumentId" : String,
       "VersionId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -3546,7 +3546,7 @@ module Aws::WorkDocs
       "AuthenticationToken" : String,
       "DocumentId" : String,
       "Marker" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Include" : String,
       "Fields" : String
     )
@@ -3561,7 +3561,7 @@ module Aws::WorkDocs
       "FolderId" : String,
       "Sort" : String,
       "Order" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String,
       "Type" : String,
       "Include" : String
@@ -3578,7 +3578,7 @@ module Aws::WorkDocs
       "SearchQuery" : String,
       "OrganizationId" : String,
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeGroupsResponse = NamedTuple(
@@ -3589,7 +3589,7 @@ module Aws::WorkDocs
     alias DescribeNotificationSubscriptionsRequest = NamedTuple(
       "OrganizationId" : String,
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt16
     )
 
     alias DescribeNotificationSubscriptionsResponse = NamedTuple(
@@ -3601,7 +3601,7 @@ module Aws::WorkDocs
       "AuthenticationToken" : String,
       "ResourceId" : String,
       "PrincipalId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -3612,7 +3612,7 @@ module Aws::WorkDocs
 
     alias DescribeRootFoldersRequest = NamedTuple(
       "AuthenticationToken" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -3630,7 +3630,7 @@ module Aws::WorkDocs
       "Order" : String,
       "Sort" : String,
       "Marker" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Fields" : String
     )
 
@@ -3745,7 +3745,7 @@ module Aws::WorkDocs
     alias GetDocumentPathRequest = NamedTuple(
       "AuthenticationToken" : String,
       "DocumentId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Fields" : String,
       "Marker" : String
     )
@@ -3781,7 +3781,7 @@ module Aws::WorkDocs
     alias GetFolderPathRequest = NamedTuple(
       "AuthenticationToken" : String,
       "FolderId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Fields" : String,
       "Marker" : String
     )
@@ -3805,7 +3805,7 @@ module Aws::WorkDocs
       "AuthenticationToken" : String,
       "UserId" : String,
       "CollectionType" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -3872,7 +3872,7 @@ module Aws::WorkDocs
       "Message" : String
     )
 
-    alias LimitType = Int32
+    alias LimitType = UInt16
 
     alias LocaleType = String
 
@@ -3905,9 +3905,9 @@ module Aws::WorkDocs
 
     alias PermissionInfoList = Array(PermissionInfo)
 
-    alias PositiveIntegerType = Int32
+    alias PositiveIntegerType = UInt32
 
-    alias PositiveSizeType = Int64
+    alias PositiveSizeType = UInt64
 
     alias Principal = NamedTuple(
       "Id" : String,
@@ -4024,7 +4024,7 @@ module Aws::WorkDocs
     )
 
     alias StorageRuleType = NamedTuple(
-      "StorageAllocatedInBytes" : Int64,
+      "StorageAllocatedInBytes" : UInt64,
       "StorageType" : String
     )
 

@@ -19923,8 +19923,8 @@ module Aws::SSM
       "Description" : String,
       "DefaultInstanceName" : String,
       "IamRole" : String,
-      "RegistrationLimit" : Int32,
-      "RegistrationsCount" : Int32,
+      "RegistrationLimit" : UInt16,
+      "RegistrationsCount" : UInt16,
       "ExpirationDate" : (String | UInt64 | Time)?,
       "Expired" : Bool,
       "CreatedDate" : (String | UInt64 | Time)?,
@@ -19961,7 +19961,7 @@ module Aws::SSM
 
     alias ApplyOnlyAtCronInterval = Bool
 
-    alias ApproveAfterDays = Int32
+    alias ApproveAfterDays = UInt8
 
     alias AssociatedInstances = NamedTuple(
       
@@ -20387,7 +20387,7 @@ module Aws::SSM
       "ServiceRole" : String,
       "NotificationConfig" : NotificationConfig,
       "CloudWatchOutputConfig" : CloudWatchOutputConfig,
-      "TimeoutSeconds" : Int32
+      "TimeoutSeconds" : UInt32
     )
 
     alias CommandFilter = NamedTuple(
@@ -20428,7 +20428,7 @@ module Aws::SSM
 
     alias CommandList = Array(Command)
 
-    alias CommandMaxResults = Int32
+    alias CommandMaxResults = UInt8
 
     alias CommandPlugin = NamedTuple(
       "Name" : String,
@@ -20562,7 +20562,7 @@ module Aws::SSM
       "Description" : String,
       "DefaultInstanceName" : String,
       "IamRole" : String,
-      "RegistrationLimit" : Int32,
+      "RegistrationLimit" : UInt16,
       "ExpirationDate" : (String | UInt64 | Time)?,
       "Tags" : Array(Tag)
     )
@@ -20646,9 +20646,9 @@ module Aws::SSM
       "EndDate" : String,
       "Schedule" : String,
       "ScheduleTimezone" : String,
-      "ScheduleOffset" : Int32,
-      "Duration" : Int32,
-      "Cutoff" : Int32,
+      "ScheduleOffset" : UInt8,
+      "Duration" : UInt8,
+      "Cutoff" : UInt8,
       "AllowUnassociatedTargets" : Bool,
       "ClientToken" : String,
       "Tags" : Array(Tag)
@@ -20663,7 +20663,7 @@ module Aws::SSM
       "OpsItemType" : String,
       "OperationalData" : Hash(String,OpsItemDataValue),
       "Notifications" : Array(OpsItemNotification),
-      "Priority" : Int32,
+      "Priority" : UInt8,
       "RelatedOpsItems" : Array(RelatedOpsItem),
       "Source" : String,
       "Title" : String,
@@ -20876,7 +20876,7 @@ module Aws::SSM
 
     alias DescribeActivationsRequest = NamedTuple(
       "Filters" : Array(DescribeActivationsFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -20889,7 +20889,7 @@ module Aws::SSM
       "AssociationId" : String,
       "ExecutionId" : String,
       "Filters" : Array(AssociationExecutionTargetsFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -20901,7 +20901,7 @@ module Aws::SSM
     alias DescribeAssociationExecutionsRequest = NamedTuple(
       "AssociationId" : String,
       "Filters" : Array(AssociationExecutionFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -20923,7 +20923,7 @@ module Aws::SSM
 
     alias DescribeAutomationExecutionsRequest = NamedTuple(
       "Filters" : Array(AutomationExecutionFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -20936,7 +20936,7 @@ module Aws::SSM
       "AutomationExecutionId" : String,
       "Filters" : Array(StepExecutionFilter),
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ReverseOrder" : Bool
     )
 
@@ -20947,7 +20947,7 @@ module Aws::SSM
 
     alias DescribeAvailablePatchesRequest = NamedTuple(
       "Filters" : Array(PatchOrchestratorFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -20978,7 +20978,7 @@ module Aws::SSM
 
     alias DescribeEffectiveInstanceAssociationsRequest = NamedTuple(
       "InstanceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -20989,7 +20989,7 @@ module Aws::SSM
 
     alias DescribeEffectivePatchesForPatchBaselineRequest = NamedTuple(
       "BaselineId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21000,7 +21000,7 @@ module Aws::SSM
 
     alias DescribeInstanceAssociationsStatusRequest = NamedTuple(
       "InstanceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21012,7 +21012,7 @@ module Aws::SSM
     alias DescribeInstanceInformationRequest = NamedTuple(
       "InstanceInformationFilterList" : Array(InstanceInformationFilter),
       "Filters" : Array(InstanceInformationStringFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21025,7 +21025,7 @@ module Aws::SSM
       "PatchGroup" : String,
       "Filters" : Array(InstancePatchStateFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeInstancePatchStatesForPatchGroupResult = NamedTuple(
@@ -21036,7 +21036,7 @@ module Aws::SSM
     alias DescribeInstancePatchStatesRequest = NamedTuple(
       "InstanceIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeInstancePatchStatesResult = NamedTuple(
@@ -21048,7 +21048,7 @@ module Aws::SSM
       "InstanceId" : String,
       "Filters" : Array(PatchOrchestratorFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeInstancePatchesResult = NamedTuple(
@@ -21059,7 +21059,7 @@ module Aws::SSM
     alias DescribeInventoryDeletionsRequest = NamedTuple(
       "DeletionId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeInventoryDeletionsResult = NamedTuple(
@@ -21071,7 +21071,7 @@ module Aws::SSM
       "WindowExecutionId" : String,
       "TaskId" : String,
       "Filters" : Array(MaintenanceWindowFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21083,7 +21083,7 @@ module Aws::SSM
     alias DescribeMaintenanceWindowExecutionTasksRequest = NamedTuple(
       "WindowExecutionId" : String,
       "Filters" : Array(MaintenanceWindowFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21095,7 +21095,7 @@ module Aws::SSM
     alias DescribeMaintenanceWindowExecutionsRequest = NamedTuple(
       "WindowId" : String,
       "Filters" : Array(MaintenanceWindowFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21109,7 +21109,7 @@ module Aws::SSM
       "Targets" : Array(Target),
       "ResourceType" : String,
       "Filters" : Array(PatchOrchestratorFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -21121,7 +21121,7 @@ module Aws::SSM
     alias DescribeMaintenanceWindowTargetsRequest = NamedTuple(
       "WindowId" : String,
       "Filters" : Array(MaintenanceWindowFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21133,7 +21133,7 @@ module Aws::SSM
     alias DescribeMaintenanceWindowTasksRequest = NamedTuple(
       "WindowId" : String,
       "Filters" : Array(MaintenanceWindowFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21145,7 +21145,7 @@ module Aws::SSM
     alias DescribeMaintenanceWindowsForTargetRequest = NamedTuple(
       "Targets" : Array(Target),
       "ResourceType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -21156,7 +21156,7 @@ module Aws::SSM
 
     alias DescribeMaintenanceWindowsRequest = NamedTuple(
       "Filters" : Array(MaintenanceWindowFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21167,7 +21167,7 @@ module Aws::SSM
 
     alias DescribeOpsItemsRequest = NamedTuple(
       "OpsItemFilters" : Array(OpsItemFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21179,7 +21179,7 @@ module Aws::SSM
     alias DescribeParametersRequest = NamedTuple(
       "Filters" : Array(ParametersFilter),
       "ParameterFilters" : Array(ParameterStringFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21190,7 +21190,7 @@ module Aws::SSM
 
     alias DescribePatchBaselinesRequest = NamedTuple(
       "Filters" : Array(PatchOrchestratorFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21216,7 +21216,7 @@ module Aws::SSM
     )
 
     alias DescribePatchGroupsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(PatchOrchestratorFilter),
       "NextToken" : String
     )
@@ -21230,7 +21230,7 @@ module Aws::SSM
       "OperatingSystem" : String,
       "Property" : String,
       "PatchSet" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21241,7 +21241,7 @@ module Aws::SSM
 
     alias DescribeSessionsRequest = NamedTuple(
       "State" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(SessionFilter)
     )
@@ -21471,7 +21471,7 @@ module Aws::SSM
       
     )
 
-    alias EffectiveInstanceAssociationMaxResults = Int32
+    alias EffectiveInstanceAssociationMaxResults = UInt8
 
     alias EffectivePatch = NamedTuple(
       "Patch" : Patch,
@@ -21609,7 +21609,7 @@ module Aws::SSM
       "Aggregators" : Array(InventoryAggregator),
       "ResultAttributes" : Array(ResultAttribute),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetInventoryResult = NamedTuple(
@@ -21617,12 +21617,12 @@ module Aws::SSM
       "NextToken" : String
     )
 
-    alias GetInventorySchemaMaxResults = Int32
+    alias GetInventorySchemaMaxResults = UInt8
 
     alias GetInventorySchemaRequest = NamedTuple(
       "TypeName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Aggregator" : Bool,
       "SubType" : Bool
     )
@@ -21678,7 +21678,7 @@ module Aws::SSM
       "ServiceRole" : String,
       "Type" : String,
       "TaskParameters" : Array(Hash(String,MaintenanceWindowTaskParameterValueExpression)),
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "MaxConcurrency" : String,
       "MaxErrors" : String,
       "Status" : String,
@@ -21699,10 +21699,10 @@ module Aws::SSM
       "EndDate" : String,
       "Schedule" : String,
       "ScheduleTimezone" : String,
-      "ScheduleOffset" : Int32,
+      "ScheduleOffset" : UInt8,
       "NextExecutionTime" : String,
-      "Duration" : Int32,
-      "Cutoff" : Int32,
+      "Duration" : UInt8,
+      "Cutoff" : UInt8,
       "AllowUnassociatedTargets" : Bool,
       "Enabled" : Bool,
       "CreatedDate" : (String | UInt64 | Time)?,
@@ -21723,7 +21723,7 @@ module Aws::SSM
       "TaskType" : String,
       "TaskParameters" : Hash(String,MaintenanceWindowTaskParameterValueExpression),
       "TaskInvocationParameters" : MaintenanceWindowTaskInvocationParameters,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "MaxConcurrency" : String,
       "MaxErrors" : String,
       "LoggingInfo" : LoggingInfo,
@@ -21739,11 +21739,11 @@ module Aws::SSM
       "OpsItem" : OpsItem
     )
 
-    alias GetOpsMetadataMaxResults = Int32
+    alias GetOpsMetadataMaxResults = UInt8
 
     alias GetOpsMetadataRequest = NamedTuple(
       "OpsMetadataArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21759,7 +21759,7 @@ module Aws::SSM
       "Aggregators" : Array(OpsAggregator),
       "ResultAttributes" : Array(OpsResultAttribute),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetOpsSummaryResult = NamedTuple(
@@ -21770,7 +21770,7 @@ module Aws::SSM
     alias GetParameterHistoryRequest = NamedTuple(
       "Name" : String,
       "WithDecryption" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -21788,14 +21788,14 @@ module Aws::SSM
       "Parameter" : Parameter
     )
 
-    alias GetParametersByPathMaxResults = Int32
+    alias GetParametersByPathMaxResults = UInt8
 
     alias GetParametersByPathRequest = NamedTuple(
       "Path" : String,
       "Recursive" : Bool,
       "ParameterFilters" : Array(ParameterStringFilter),
       "WithDecryption" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22399,7 +22399,7 @@ module Aws::SSM
 
     alias ListAssociationVersionsRequest = NamedTuple(
       "AssociationId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22410,7 +22410,7 @@ module Aws::SSM
 
     alias ListAssociationsRequest = NamedTuple(
       "AssociationFilterList" : Array(AssociationFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22422,7 +22422,7 @@ module Aws::SSM
     alias ListCommandInvocationsRequest = NamedTuple(
       "CommandId" : String,
       "InstanceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(CommandFilter),
       "Details" : Bool
@@ -22436,7 +22436,7 @@ module Aws::SSM
     alias ListCommandsRequest = NamedTuple(
       "CommandId" : String,
       "InstanceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(CommandFilter)
     )
@@ -22451,7 +22451,7 @@ module Aws::SSM
       "ResourceIds" : Array(String),
       "ResourceTypes" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListComplianceItemsResult = NamedTuple(
@@ -22462,7 +22462,7 @@ module Aws::SSM
     alias ListComplianceSummariesRequest = NamedTuple(
       "Filters" : Array(ComplianceStringFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListComplianceSummariesResult = NamedTuple(
@@ -22475,7 +22475,7 @@ module Aws::SSM
       "DocumentVersion" : String,
       "Metadata" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDocumentMetadataHistoryResponse = NamedTuple(
@@ -22488,7 +22488,7 @@ module Aws::SSM
 
     alias ListDocumentVersionsRequest = NamedTuple(
       "Name" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22500,7 +22500,7 @@ module Aws::SSM
     alias ListDocumentsRequest = NamedTuple(
       "DocumentFilterList" : Array(DocumentFilter),
       "Filters" : Array(DocumentKeyValuesFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22514,7 +22514,7 @@ module Aws::SSM
       "TypeName" : String,
       "Filters" : Array(InventoryFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListInventoryEntriesResult = NamedTuple(
@@ -22528,7 +22528,7 @@ module Aws::SSM
 
     alias ListOpsItemEventsRequest = NamedTuple(
       "Filters" : Array(OpsItemEventFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22537,11 +22537,11 @@ module Aws::SSM
       "Summaries" : Array(OpsItemEventSummary)
     )
 
-    alias ListOpsMetadataMaxResults = Int32
+    alias ListOpsMetadataMaxResults = UInt8
 
     alias ListOpsMetadataRequest = NamedTuple(
       "Filters" : Array(OpsMetadataFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -22553,7 +22553,7 @@ module Aws::SSM
     alias ListResourceComplianceSummariesRequest = NamedTuple(
       "Filters" : Array(ComplianceStringFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListResourceComplianceSummariesResult = NamedTuple(
@@ -22564,7 +22564,7 @@ module Aws::SSM
     alias ListResourceDataSyncRequest = NamedTuple(
       "SyncType" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListResourceDataSyncResult = NamedTuple(
@@ -22596,11 +22596,11 @@ module Aws::SSM
       "Parameters" : Hash(String,Array(String))
     )
 
-    alias MaintenanceWindowCutoff = Int32
+    alias MaintenanceWindowCutoff = UInt8
 
     alias MaintenanceWindowDescription = String
 
-    alias MaintenanceWindowDurationHours = Int32
+    alias MaintenanceWindowDurationHours = UInt8
 
     alias MaintenanceWindowEnabled = Bool
 
@@ -22681,11 +22681,11 @@ module Aws::SSM
       "Name" : String,
       "Description" : String,
       "Enabled" : Bool,
-      "Duration" : Int32,
-      "Cutoff" : Int32,
+      "Duration" : UInt8,
+      "Cutoff" : UInt8,
       "Schedule" : String,
       "ScheduleTimezone" : String,
-      "ScheduleOffset" : Int32,
+      "ScheduleOffset" : UInt8,
       "EndDate" : String,
       "StartDate" : String,
       "NextExecutionTime" : String
@@ -22710,11 +22710,11 @@ module Aws::SSM
 
     alias MaintenanceWindowLambdaQualifier = String
 
-    alias MaintenanceWindowMaxResults = Int32
+    alias MaintenanceWindowMaxResults = UInt8
 
     alias MaintenanceWindowName = String
 
-    alias MaintenanceWindowOffset = Int32
+    alias MaintenanceWindowOffset = UInt8
 
     alias MaintenanceWindowResourceType = String
 
@@ -22729,12 +22729,12 @@ module Aws::SSM
       "OutputS3KeyPrefix" : String,
       "Parameters" : Hash(String,Array(String)),
       "ServiceRoleArn" : String,
-      "TimeoutSeconds" : Int32
+      "TimeoutSeconds" : UInt32
     )
 
     alias MaintenanceWindowSchedule = String
 
-    alias MaintenanceWindowSearchMaxResults = Int32
+    alias MaintenanceWindowSearchMaxResults = UInt32
 
     alias MaintenanceWindowStepFunctionsInput = String
 
@@ -22768,7 +22768,7 @@ module Aws::SSM
       "Type" : String,
       "Targets" : Array(Target),
       "TaskParameters" : Hash(String,MaintenanceWindowTaskParameterValueExpression),
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "LoggingInfo" : LoggingInfo,
       "ServiceRoleArn" : String,
       "MaxConcurrency" : String,
@@ -22804,7 +22804,7 @@ module Aws::SSM
 
     alias MaintenanceWindowTaskParametersList = Array(Hash(String,MaintenanceWindowTaskParameterValueExpression))
 
-    alias MaintenanceWindowTaskPriority = Int32
+    alias MaintenanceWindowTaskPriority = UInt32
 
     alias MaintenanceWindowTaskTargetId = String
 
@@ -22824,9 +22824,9 @@ module Aws::SSM
 
     alias MaxErrors = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MaxResultsEC2Compatible = Int32
+    alias MaxResultsEC2Compatible = UInt8
 
     alias MetadataKey = String
 
@@ -22948,7 +22948,7 @@ module Aws::SSM
       "LastModifiedBy" : String,
       "LastModifiedTime" : (String | UInt64 | Time)?,
       "Notifications" : Array(OpsItemNotification),
-      "Priority" : Int32,
+      "Priority" : UInt8,
       "RelatedOpsItems" : Array(RelatedOpsItem),
       "Status" : String,
       "OpsItemId" : String,
@@ -23000,7 +23000,7 @@ module Aws::SSM
 
     alias OpsItemEventFilters = Array(OpsItemEventFilter)
 
-    alias OpsItemEventMaxResults = Int32
+    alias OpsItemEventMaxResults = UInt8
 
     alias OpsItemEventSummaries = Array(OpsItemEventSummary)
 
@@ -23048,7 +23048,7 @@ module Aws::SSM
       "Message" : String
     )
 
-    alias OpsItemMaxResults = Int32
+    alias OpsItemMaxResults = UInt8
 
     alias OpsItemNotFoundException = NamedTuple(
       "Message" : String
@@ -23066,7 +23066,7 @@ module Aws::SSM
 
     alias OpsItemParameterNamesList = Array(String)
 
-    alias OpsItemPriority = Int32
+    alias OpsItemPriority = UInt8
 
     alias OpsItemSeverity = String
 
@@ -23081,7 +23081,7 @@ module Aws::SSM
       "CreatedTime" : (String | UInt64 | Time)?,
       "LastModifiedBy" : String,
       "LastModifiedTime" : (String | UInt64 | Time)?,
-      "Priority" : Int32,
+      "Priority" : UInt8,
       "Source" : String,
       "Status" : String,
       "OpsItemId" : String,
@@ -23359,7 +23359,7 @@ module Aws::SSM
 
     alias PatchBaselineIdentityList = Array(PatchBaselineIdentity)
 
-    alias PatchBaselineMaxResults = Int32
+    alias PatchBaselineMaxResults = UInt8
 
     alias PatchBugzillaId = String
 
@@ -23389,7 +23389,7 @@ module Aws::SSM
 
     alias PatchComplianceLevel = String
 
-    alias PatchComplianceMaxResults = Int32
+    alias PatchComplianceMaxResults = UInt8
 
     alias PatchContentUrl = String
 
@@ -23489,7 +23489,7 @@ module Aws::SSM
     alias PatchRule = NamedTuple(
       "PatchFilterGroup" : PatchFilterGroup,
       "ComplianceLevel" : String,
-      "ApproveAfterDays" : Int32,
+      "ApproveAfterDays" : UInt8,
       "ApproveUntilDate" : String,
       "EnableNonSecurity" : Bool
     )
@@ -23646,7 +23646,7 @@ module Aws::SSM
       "TaskType" : String,
       "TaskParameters" : Hash(String,MaintenanceWindowTaskParameterValueExpression),
       "TaskInvocationParameters" : MaintenanceWindowTaskInvocationParameters,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "MaxConcurrency" : String,
       "MaxErrors" : String,
       "LoggingInfo" : LoggingInfo,
@@ -23659,9 +23659,9 @@ module Aws::SSM
       "WindowTaskId" : String
     )
 
-    alias RegistrationLimit = Int32
+    alias RegistrationLimit = UInt16
 
-    alias RegistrationsCount = Int32
+    alias RegistrationsCount = UInt16
 
     alias RelatedOpsItem = NamedTuple(
       "OpsItemId" : String
@@ -23921,7 +23921,7 @@ module Aws::SSM
       "DocumentVersion" : String,
       "DocumentHash" : String,
       "DocumentHashType" : String,
-      "TimeoutSeconds" : Int32,
+      "TimeoutSeconds" : UInt32,
       "Comment" : String,
       "Parameters" : Hash(String,Array(String)),
       "OutputS3Region" : String,
@@ -24003,7 +24003,7 @@ module Aws::SSM
 
     alias SessionManagerS3OutputUrl = String
 
-    alias SessionMaxResults = Int32
+    alias SessionMaxResults = UInt8
 
     alias SessionOwner = String
 
@@ -24229,7 +24229,7 @@ module Aws::SSM
       "SessionId" : String
     )
 
-    alias TimeoutSeconds = Int32
+    alias TimeoutSeconds = UInt32
 
     alias TokenValue = String
 
@@ -24352,9 +24352,9 @@ module Aws::SSM
       "EndDate" : String,
       "Schedule" : String,
       "ScheduleTimezone" : String,
-      "ScheduleOffset" : Int32,
-      "Duration" : Int32,
-      "Cutoff" : Int32,
+      "ScheduleOffset" : UInt8,
+      "Duration" : UInt8,
+      "Cutoff" : UInt8,
       "AllowUnassociatedTargets" : Bool,
       "Enabled" : Bool,
       "Replace" : Bool
@@ -24368,9 +24368,9 @@ module Aws::SSM
       "EndDate" : String,
       "Schedule" : String,
       "ScheduleTimezone" : String,
-      "ScheduleOffset" : Int32,
-      "Duration" : Int32,
-      "Cutoff" : Int32,
+      "ScheduleOffset" : UInt8,
+      "Duration" : UInt8,
+      "Cutoff" : UInt8,
       "AllowUnassociatedTargets" : Bool,
       "Enabled" : Bool
     )
@@ -24402,7 +24402,7 @@ module Aws::SSM
       "ServiceRoleArn" : String,
       "TaskParameters" : Hash(String,MaintenanceWindowTaskParameterValueExpression),
       "TaskInvocationParameters" : MaintenanceWindowTaskInvocationParameters,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "MaxConcurrency" : String,
       "MaxErrors" : String,
       "LoggingInfo" : LoggingInfo,
@@ -24419,7 +24419,7 @@ module Aws::SSM
       "ServiceRoleArn" : String,
       "TaskParameters" : Hash(String,MaintenanceWindowTaskParameterValueExpression),
       "TaskInvocationParameters" : MaintenanceWindowTaskInvocationParameters,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "MaxConcurrency" : String,
       "MaxErrors" : String,
       "LoggingInfo" : LoggingInfo,
@@ -24441,7 +24441,7 @@ module Aws::SSM
       "OperationalData" : Hash(String,OpsItemDataValue),
       "OperationalDataToDelete" : Array(String),
       "Notifications" : Array(OpsItemNotification),
-      "Priority" : Int32,
+      "Priority" : UInt8,
       "RelatedOpsItems" : Array(RelatedOpsItem),
       "Status" : String,
       "OpsItemId" : String,

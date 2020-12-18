@@ -1392,7 +1392,7 @@ module Aws::ServiceQuotas
     alias ListAWSDefaultServiceQuotasRequest = NamedTuple(
       "ServiceCode" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAWSDefaultServiceQuotasResponse = NamedTuple(
@@ -1405,7 +1405,7 @@ module Aws::ServiceQuotas
       "QuotaCode" : String,
       "Status" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListRequestedServiceQuotaChangeHistoryByQuotaResponse = NamedTuple(
@@ -1417,7 +1417,7 @@ module Aws::ServiceQuotas
       "ServiceCode" : String,
       "Status" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListRequestedServiceQuotaChangeHistoryResponse = NamedTuple(
@@ -1429,7 +1429,7 @@ module Aws::ServiceQuotas
       "ServiceCode" : String,
       "AwsRegion" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListServiceQuotaIncreaseRequestsInTemplateResponse = NamedTuple(
@@ -1440,7 +1440,7 @@ module Aws::ServiceQuotas
     alias ListServiceQuotasRequest = NamedTuple(
       "ServiceCode" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListServiceQuotasResponse = NamedTuple(
@@ -1450,7 +1450,7 @@ module Aws::ServiceQuotas
 
     alias ListServicesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListServicesResponse = NamedTuple(
@@ -1458,7 +1458,7 @@ module Aws::ServiceQuotas
       "Services" : Array(ServiceInfo)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MetricDimensionName = String
 

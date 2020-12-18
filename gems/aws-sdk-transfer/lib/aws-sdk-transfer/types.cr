@@ -2269,7 +2269,7 @@ module Aws::Transfer
     )
 
     alias ListSecurityPoliciesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2279,7 +2279,7 @@ module Aws::Transfer
     )
 
     alias ListServersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2290,7 +2290,7 @@ module Aws::Transfer
 
     alias ListTagsForResourceRequest = NamedTuple(
       "Arn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2301,7 +2301,7 @@ module Aws::Transfer
     )
 
     alias ListUsersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "ServerId" : String
     )
@@ -2339,7 +2339,7 @@ module Aws::Transfer
 
     alias MapTarget = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias Message = String
 

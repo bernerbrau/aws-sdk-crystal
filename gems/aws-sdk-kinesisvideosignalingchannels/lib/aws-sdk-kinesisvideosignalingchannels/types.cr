@@ -249,7 +249,7 @@ module Aws::KinesisVideoSignalingChannels
       "Uris" : Array(String),
       "Username" : String,
       "Password" : String,
-      "Ttl" : Int32
+      "Ttl" : UInt32
     )
 
     alias IceServerList = Array(IceServer)
@@ -292,7 +292,7 @@ module Aws::KinesisVideoSignalingChannels
       "message" : String
     )
 
-    alias Ttl = Int32
+    alias Ttl = UInt32
 
     alias Uri = String
 

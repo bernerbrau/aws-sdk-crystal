@@ -5376,7 +5376,7 @@ module Aws::Organizations
 
     alias ListAWSServiceAccessForOrganizationRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAWSServiceAccessForOrganizationResponse = NamedTuple(
@@ -5387,7 +5387,7 @@ module Aws::Organizations
     alias ListAccountsForParentRequest = NamedTuple(
       "ParentId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAccountsForParentResponse = NamedTuple(
@@ -5397,7 +5397,7 @@ module Aws::Organizations
 
     alias ListAccountsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAccountsResponse = NamedTuple(
@@ -5409,7 +5409,7 @@ module Aws::Organizations
       "ParentId" : String,
       "ChildType" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListChildrenResponse = NamedTuple(
@@ -5420,7 +5420,7 @@ module Aws::Organizations
     alias ListCreateAccountStatusRequest = NamedTuple(
       "States" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListCreateAccountStatusResponse = NamedTuple(
@@ -5431,7 +5431,7 @@ module Aws::Organizations
     alias ListDelegatedAdministratorsRequest = NamedTuple(
       "ServicePrincipal" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDelegatedAdministratorsResponse = NamedTuple(
@@ -5442,7 +5442,7 @@ module Aws::Organizations
     alias ListDelegatedServicesForAccountRequest = NamedTuple(
       "AccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDelegatedServicesForAccountResponse = NamedTuple(
@@ -5453,7 +5453,7 @@ module Aws::Organizations
     alias ListHandshakesForAccountRequest = NamedTuple(
       "Filter" : HandshakeFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListHandshakesForAccountResponse = NamedTuple(
@@ -5464,7 +5464,7 @@ module Aws::Organizations
     alias ListHandshakesForOrganizationRequest = NamedTuple(
       "Filter" : HandshakeFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListHandshakesForOrganizationResponse = NamedTuple(
@@ -5475,7 +5475,7 @@ module Aws::Organizations
     alias ListOrganizationalUnitsForParentRequest = NamedTuple(
       "ParentId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListOrganizationalUnitsForParentResponse = NamedTuple(
@@ -5486,7 +5486,7 @@ module Aws::Organizations
     alias ListParentsRequest = NamedTuple(
       "ChildId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListParentsResponse = NamedTuple(
@@ -5498,7 +5498,7 @@ module Aws::Organizations
       "TargetId" : String,
       "Filter" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPoliciesForTargetResponse = NamedTuple(
@@ -5509,7 +5509,7 @@ module Aws::Organizations
     alias ListPoliciesRequest = NamedTuple(
       "Filter" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPoliciesResponse = NamedTuple(
@@ -5519,7 +5519,7 @@ module Aws::Organizations
 
     alias ListRootsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListRootsResponse = NamedTuple(
@@ -5540,7 +5540,7 @@ module Aws::Organizations
     alias ListTargetsForPolicyRequest = NamedTuple(
       "PolicyId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTargetsForPolicyResponse = NamedTuple(
@@ -5556,7 +5556,7 @@ module Aws::Organizations
       "Message" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MoveAccountRequest = NamedTuple(
       "AccountId" : String,

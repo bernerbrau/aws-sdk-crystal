@@ -1416,8 +1416,8 @@ module Aws::Synthetics
       "ExecutionRoleArn" : String,
       "Schedule" : CanaryScheduleOutput,
       "RunConfig" : CanaryRunConfigOutput,
-      "SuccessRetentionPeriodInDays" : Int32,
-      "FailureRetentionPeriodInDays" : Int32,
+      "SuccessRetentionPeriodInDays" : UInt16,
+      "FailureRetentionPeriodInDays" : UInt16,
       "Status" : CanaryStatus,
       "Timeline" : CanaryTimeline,
       "ArtifactS3Location" : String,
@@ -1458,15 +1458,15 @@ module Aws::Synthetics
     )
 
     alias CanaryRunConfigInput = NamedTuple(
-      "TimeoutInSeconds" : Int32,
-      "MemoryInMB" : Int32,
+      "TimeoutInSeconds" : UInt16,
+      "MemoryInMB" : UInt16,
       "ActiveTracing" : Bool,
       "EnvironmentVariables" : Hash(String,String)
     )
 
     alias CanaryRunConfigOutput = NamedTuple(
-      "TimeoutInSeconds" : Int32,
-      "MemoryInMB" : Int32,
+      "TimeoutInSeconds" : UInt16,
+      "MemoryInMB" : UInt16,
       "ActiveTracing" : Bool
     )
 
@@ -1489,12 +1489,12 @@ module Aws::Synthetics
 
     alias CanaryScheduleInput = NamedTuple(
       "Expression" : String,
-      "DurationInSeconds" : Int64
+      "DurationInSeconds" : UInt32
     )
 
     alias CanaryScheduleOutput = NamedTuple(
       "Expression" : String,
-      "DurationInSeconds" : Int64
+      "DurationInSeconds" : UInt32
     )
 
     alias CanaryState = String
@@ -1525,8 +1525,8 @@ module Aws::Synthetics
       "ExecutionRoleArn" : String,
       "Schedule" : CanaryScheduleInput,
       "RunConfig" : CanaryRunConfigInput,
-      "SuccessRetentionPeriodInDays" : Int32,
-      "FailureRetentionPeriodInDays" : Int32,
+      "SuccessRetentionPeriodInDays" : UInt16,
+      "FailureRetentionPeriodInDays" : UInt16,
       "RuntimeVersion" : String,
       "VpcConfig" : VpcConfigInput,
       "Tags" : Hash(String,String)
@@ -1546,7 +1546,7 @@ module Aws::Synthetics
 
     alias DescribeCanariesLastRunRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeCanariesLastRunResponse = NamedTuple(
@@ -1556,7 +1556,7 @@ module Aws::Synthetics
 
     alias DescribeCanariesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeCanariesResponse = NamedTuple(
@@ -1566,7 +1566,7 @@ module Aws::Synthetics
 
     alias DescribeRuntimeVersionsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeRuntimeVersionsResponse = NamedTuple(
@@ -1595,7 +1595,7 @@ module Aws::Synthetics
     alias GetCanaryRunsRequest = NamedTuple(
       "Name" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetCanaryRunsResponse = NamedTuple(
@@ -1615,17 +1615,17 @@ module Aws::Synthetics
       "Tags" : Hash(String,String)
     )
 
-    alias MaxCanaryResults = Int32
+    alias MaxCanaryResults = UInt8
 
-    alias MaxFifteenMinutesInSeconds = Int32
+    alias MaxFifteenMinutesInSeconds = UInt16
 
-    alias MaxOneYearInSeconds = Int64
+    alias MaxOneYearInSeconds = UInt32
 
-    alias MaxSize100 = Int32
+    alias MaxSize100 = UInt8
 
-    alias MaxSize1024 = Int32
+    alias MaxSize1024 = UInt16
 
-    alias MaxSize3008 = Int32
+    alias MaxSize3008 = UInt16
 
     alias NullableBoolean = Bool
 
@@ -1709,8 +1709,8 @@ module Aws::Synthetics
       "RuntimeVersion" : String,
       "Schedule" : CanaryScheduleInput,
       "RunConfig" : CanaryRunConfigInput,
-      "SuccessRetentionPeriodInDays" : Int32,
-      "FailureRetentionPeriodInDays" : Int32,
+      "SuccessRetentionPeriodInDays" : UInt16,
+      "FailureRetentionPeriodInDays" : UInt16,
       "VpcConfig" : VpcConfigInput
     )
 

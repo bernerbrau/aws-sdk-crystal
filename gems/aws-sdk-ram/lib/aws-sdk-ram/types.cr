@@ -2128,7 +2128,7 @@ module Aws::RAM
       "resourceArns" : Array(String),
       "principal" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetResourcePoliciesResponse = NamedTuple(
@@ -2143,7 +2143,7 @@ module Aws::RAM
       "principal" : String,
       "associationStatus" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetResourceShareAssociationsResponse = NamedTuple(
@@ -2155,7 +2155,7 @@ module Aws::RAM
       "resourceShareInvitationArns" : Array(String),
       "resourceShareArns" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetResourceShareInvitationsResponse = NamedTuple(
@@ -2170,7 +2170,7 @@ module Aws::RAM
       "name" : String,
       "tagFilters" : Array(TagFilter),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetResourceSharesResponse = NamedTuple(
@@ -2211,7 +2211,7 @@ module Aws::RAM
     alias ListPendingInvitationResourcesRequest = NamedTuple(
       "resourceShareInvitationArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListPendingInvitationResourcesResponse = NamedTuple(
@@ -2222,7 +2222,7 @@ module Aws::RAM
     alias ListPermissionsRequest = NamedTuple(
       "resourceType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListPermissionsResponse = NamedTuple(
@@ -2237,7 +2237,7 @@ module Aws::RAM
       "resourceType" : String,
       "resourceShareArns" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListPrincipalsResponse = NamedTuple(
@@ -2248,7 +2248,7 @@ module Aws::RAM
     alias ListResourceSharePermissionsRequest = NamedTuple(
       "resourceShareArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListResourceSharePermissionsResponse = NamedTuple(
@@ -2258,7 +2258,7 @@ module Aws::RAM
 
     alias ListResourceTypesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListResourceTypesResponse = NamedTuple(
@@ -2273,7 +2273,7 @@ module Aws::RAM
       "resourceArns" : Array(String),
       "resourceShareArns" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListResourcesResponse = NamedTuple(
@@ -2285,7 +2285,7 @@ module Aws::RAM
       "message" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MissingRequiredParameterException = NamedTuple(
       "message" : String

@@ -6824,11 +6824,11 @@ module Aws::RoboMaker
     alias Command = String
 
     alias Compute = NamedTuple(
-      "simulationUnitLimit" : Int32
+      "simulationUnitLimit" : UInt8
     )
 
     alias ComputeResponse = NamedTuple(
-      "simulationUnitLimit" : Int32
+      "simulationUnitLimit" : UInt8
     )
 
     alias ConcurrentDeploymentException = NamedTuple(
@@ -7119,8 +7119,8 @@ module Aws::RoboMaker
     alias DeploymentApplicationConfigs = Array(DeploymentApplicationConfig)
 
     alias DeploymentConfig = NamedTuple(
-      "concurrentDeploymentPercentage" : Int32,
-      "failureThresholdPercentage" : Int32,
+      "concurrentDeploymentPercentage" : UInt8,
+      "failureThresholdPercentage" : UInt8,
       "robotDeploymentTimeoutInSeconds" : Int64,
       "downloadConditionFile" : S3Object
     )
@@ -7607,7 +7607,7 @@ module Aws::RoboMaker
 
     alias NonEmptyString = String
 
-    alias NonSystemPort = Int32
+    alias NonSystemPort = UInt16
 
     alias OutputLocation = NamedTuple(
       "s3Bucket" : String,
@@ -7620,17 +7620,17 @@ module Aws::RoboMaker
 
     alias PercentDone = Float32
 
-    alias Percentage = Int32
+    alias Percentage = UInt8
 
-    alias Port = Int32
+    alias Port = UInt16
 
     alias PortForwardingConfig = NamedTuple(
       "portMappings" : Array(PortMapping)
     )
 
     alias PortMapping = NamedTuple(
-      "jobPort" : Int32,
-      "applicationPort" : Int32,
+      "jobPort" : UInt16,
+      "applicationPort" : UInt16,
       "enableOnPublicIp" : Bool
     )
 
@@ -7872,7 +7872,7 @@ module Aws::RoboMaker
 
     alias SimulationTimeMillis = Int64
 
-    alias SimulationUnit = Int32
+    alias SimulationUnit = UInt8
 
     alias Source = NamedTuple(
       "s3Bucket" : String,

@@ -4486,7 +4486,7 @@ module Aws::Imagebuilder
       "name" : String,
       "description" : String,
       "distributions" : Array(Distribution),
-      "timeoutMinutes" : Int32,
+      "timeoutMinutes" : UInt16,
       "dateCreated" : String,
       "dateUpdated" : String,
       "tags" : Hash(String,String)
@@ -4507,21 +4507,21 @@ module Aws::Imagebuilder
 
     alias DistributionList = Array(Distribution)
 
-    alias DistributionTimeoutMinutes = Int32
+    alias DistributionTimeoutMinutes = UInt16
 
     alias EbsInstanceBlockDeviceSpecification = NamedTuple(
       "encrypted" : Bool,
       "deleteOnTermination" : Bool,
-      "iops" : Int32,
+      "iops" : UInt16,
       "kmsKeyId" : String,
       "snapshotId" : String,
-      "volumeSize" : Int32,
+      "volumeSize" : UInt16,
       "volumeType" : String
     )
 
-    alias EbsIopsInteger = Int32
+    alias EbsIopsInteger = UInt16
 
-    alias EbsVolumeSizeInteger = Int32
+    alias EbsVolumeSizeInteger = UInt16
 
     alias EbsVolumeType = String
 
@@ -4730,10 +4730,10 @@ module Aws::Imagebuilder
 
     alias ImageTestsConfiguration = NamedTuple(
       "imageTestsEnabled" : Bool,
-      "timeoutMinutes" : Int32
+      "timeoutMinutes" : UInt16
     )
 
-    alias ImageTestsTimeoutMinutes = Int32
+    alias ImageTestsTimeoutMinutes = UInt16
 
     alias ImageVersion = NamedTuple(
       "arn" : String,
@@ -4854,7 +4854,7 @@ module Aws::Imagebuilder
 
     alias ListComponentBuildVersionsRequest = NamedTuple(
       "componentVersionArn" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4867,7 +4867,7 @@ module Aws::Imagebuilder
     alias ListComponentsRequest = NamedTuple(
       "owner" : String,
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4879,7 +4879,7 @@ module Aws::Imagebuilder
 
     alias ListDistributionConfigurationsRequest = NamedTuple(
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4892,7 +4892,7 @@ module Aws::Imagebuilder
     alias ListImageBuildVersionsRequest = NamedTuple(
       "imageVersionArn" : String,
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4905,7 +4905,7 @@ module Aws::Imagebuilder
     alias ListImagePipelineImagesRequest = NamedTuple(
       "imagePipelineArn" : String,
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4917,7 +4917,7 @@ module Aws::Imagebuilder
 
     alias ListImagePipelinesRequest = NamedTuple(
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4930,7 +4930,7 @@ module Aws::Imagebuilder
     alias ListImageRecipesRequest = NamedTuple(
       "owner" : String,
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4943,7 +4943,7 @@ module Aws::Imagebuilder
     alias ListImagesRequest = NamedTuple(
       "owner" : String,
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -4955,7 +4955,7 @@ module Aws::Imagebuilder
 
     alias ListInfrastructureConfigurationsRequest = NamedTuple(
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -5051,7 +5051,7 @@ module Aws::Imagebuilder
 
     alias ResourceTagMap = Hash(String,String)
 
-    alias RestrictedInteger = Int32
+    alias RestrictedInteger = UInt8
 
     alias S3Logs = NamedTuple(
       "s3BucketName" : String,

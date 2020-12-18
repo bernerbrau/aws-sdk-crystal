@@ -4308,7 +4308,7 @@ module Aws::AmplifyBackend
 
     alias ListBackendJobReqObj = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Operation" : String,
       "Status" : String
@@ -4323,7 +4323,7 @@ module Aws::AmplifyBackend
       "AppId" : String,
       "BackendEnvironmentName" : String,
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Operation" : String,
       "Status" : String
@@ -4554,7 +4554,7 @@ module Aws::AmplifyBackend
 
     alias __integer = Int32
 
-    alias __integerMin1Max25 = Int32
+    alias __integerMin1Max25 = UInt8
 
     alias ListOfBackendAPIAuthType = Array(BackendAPIAuthType)
 

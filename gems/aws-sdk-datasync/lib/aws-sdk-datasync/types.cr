@@ -3208,7 +3208,7 @@ module Aws::DataSync
 
     alias CreateLocationObjectStorageRequest = NamedTuple(
       "ServerHostname" : String,
-      "ServerPort" : Int32,
+      "ServerPort" : UInt32,
       "ServerProtocol" : String,
       "Subdirectory" : String,
       "BucketName" : String,
@@ -3347,7 +3347,7 @@ module Aws::DataSync
       "LocationArn" : String,
       "LocationUri" : String,
       "AccessKey" : String,
-      "ServerPort" : Int32,
+      "ServerPort" : UInt32,
       "ServerProtocol" : String,
       "AgentArns" : Array(String),
       "CreationTime" : (String | UInt64 | Time)?
@@ -3423,7 +3423,7 @@ module Aws::DataSync
 
     alias DestinationNetworkInterfaceArns = Array(String)
 
-    alias Duration = Int64
+    alias Duration = UInt64
 
     alias Ec2Config = NamedTuple(
       "SubnetArn" : String,
@@ -3480,7 +3480,7 @@ module Aws::DataSync
     )
 
     alias ListAgentsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3490,7 +3490,7 @@ module Aws::DataSync
     )
 
     alias ListLocationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(LocationFilter)
     )
@@ -3502,7 +3502,7 @@ module Aws::DataSync
 
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3513,7 +3513,7 @@ module Aws::DataSync
 
     alias ListTaskExecutionsRequest = NamedTuple(
       "TaskArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3523,7 +3523,7 @@ module Aws::DataSync
     )
 
     alias ListTasksRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(TaskFilter)
     )
@@ -3558,7 +3558,7 @@ module Aws::DataSync
 
     alias LogLevel = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Mtime = String
 
@@ -3580,7 +3580,7 @@ module Aws::DataSync
 
     alias ObjectStorageSecretKey = String
 
-    alias ObjectStorageServerPort = Int32
+    alias ObjectStorageServerPort = UInt32
 
     alias ObjectStorageServerProtocol = String
 
@@ -3703,12 +3703,12 @@ module Aws::DataSync
     )
 
     alias TaskExecutionResultDetail = NamedTuple(
-      "PrepareDuration" : Int64,
+      "PrepareDuration" : UInt64,
       "PrepareStatus" : String,
-      "TotalDuration" : Int64,
-      "TransferDuration" : Int64,
+      "TotalDuration" : UInt64,
+      "TransferDuration" : UInt64,
       "TransferStatus" : String,
-      "VerifyDuration" : Int64,
+      "VerifyDuration" : UInt64,
       "VerifyStatus" : String,
       "ErrorCode" : String,
       "ErrorDetail" : String

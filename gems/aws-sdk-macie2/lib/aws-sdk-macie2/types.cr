@@ -6292,7 +6292,7 @@ module Aws::Macie2
     )
 
     alias ListFindingsFiltersRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -6314,7 +6314,7 @@ module Aws::Macie2
     )
 
     alias ListInvitationsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -6344,7 +6344,7 @@ module Aws::Macie2
     )
 
     alias ListMembersRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "onlyAssociated" : String
     )
@@ -6355,7 +6355,7 @@ module Aws::Macie2
     )
 
     alias ListOrganizationAdminAccountsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -6374,7 +6374,7 @@ module Aws::Macie2
 
     alias MacieStatus = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Member = NamedTuple(
       "accountId" : String,

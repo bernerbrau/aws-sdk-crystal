@@ -2133,7 +2133,7 @@ module Aws::ECRPublic
       "registryId" : String,
       "repositoryName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeImageTagsResponse = NamedTuple(
@@ -2146,7 +2146,7 @@ module Aws::ECRPublic
       "repositoryName" : String,
       "imageIds" : Array(ImageIdentifier),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeImagesResponse = NamedTuple(
@@ -2156,7 +2156,7 @@ module Aws::ECRPublic
 
     alias DescribeRegistriesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeRegistriesResponse = NamedTuple(
@@ -2168,7 +2168,7 @@ module Aws::ECRPublic
       "registryId" : String,
       "repositoryNames" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeRepositoriesResponse = NamedTuple(
@@ -2303,7 +2303,7 @@ module Aws::ECRPublic
 
     alias InitiateLayerUploadResponse = NamedTuple(
       "uploadId" : String,
-      "partSize" : Int64
+      "partSize" : UInt64
     )
 
     alias InvalidLayerException = NamedTuple(
@@ -2314,7 +2314,7 @@ module Aws::ECRPublic
       "registryId" : String,
       "repositoryName" : String,
       "uploadId" : String,
-      "lastValidByteReceived" : Int64,
+      "lastValidByteReceived" : UInt64,
       "message" : String
     )
 
@@ -2373,7 +2373,7 @@ module Aws::ECRPublic
 
     alias MarketplaceCertified = Bool
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MediaType = String
 
@@ -2383,7 +2383,7 @@ module Aws::ECRPublic
 
     alias OperatingSystemList = Array(String)
 
-    alias PartSize = Int64
+    alias PartSize = UInt64
 
     alias PrimaryRegistryAliasFlag = Bool
 
@@ -2553,8 +2553,8 @@ module Aws::ECRPublic
       "registryId" : String,
       "repositoryName" : String,
       "uploadId" : String,
-      "partFirstByte" : Int64,
-      "partLastByte" : Int64,
+      "partFirstByte" : UInt64,
+      "partLastByte" : UInt64,
       "layerPartBlob" : String | Array(UInt8) | IO
     )
 
@@ -2562,7 +2562,7 @@ module Aws::ECRPublic
       "registryId" : String,
       "repositoryName" : String,
       "uploadId" : String,
-      "lastByteReceived" : Int64
+      "lastByteReceived" : UInt64
     )
 
     alias UploadNotFoundException = NamedTuple(

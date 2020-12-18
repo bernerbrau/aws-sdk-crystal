@@ -523,7 +523,7 @@ module Aws::MediaStoreData
     alias DescribeObjectResponse = NamedTuple(
       "ETag" : String,
       "ContentType" : String,
-      "ContentLength" : Int64,
+      "ContentLength" : UInt64,
       "CacheControl" : String,
       "LastModified" : (String | UInt64 | Time)?
     )
@@ -541,7 +541,7 @@ module Aws::MediaStoreData
       "Body" : (String | Array(UInt8) | IO)?,
       "CacheControl" : String,
       "ContentRange" : String,
-      "ContentLength" : Int64,
+      "ContentLength" : UInt64,
       "ContentType" : String,
       "ETag" : String,
       "LastModified" : (String | UInt64 | Time)?,
@@ -558,7 +558,7 @@ module Aws::MediaStoreData
       "ETag" : String,
       "LastModified" : (String | UInt64 | Time)?,
       "ContentType" : String,
-      "ContentLength" : Int64
+      "ContentLength" : UInt64
     )
 
     alias ItemList = Array(Item)
@@ -569,7 +569,7 @@ module Aws::MediaStoreData
 
     alias ListItemsRequest = NamedTuple(
       "Path" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -578,11 +578,11 @@ module Aws::MediaStoreData
       "NextToken" : String
     )
 
-    alias ListLimit = Int32
+    alias ListLimit = UInt16
 
     alias ListPathNaming = String
 
-    alias NonNegativeLong = Int64
+    alias NonNegativeLong = UInt64
 
     alias ObjectNotFoundException = NamedTuple(
       "Message" : String

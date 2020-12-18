@@ -8460,7 +8460,7 @@ module Aws::AppMesh
 
     alias ClientPolicyTls = NamedTuple(
       "enforce" : Bool,
-      "ports" : Array(Int32),
+      "ports" : Array(UInt16),
       "validation" : TlsValidationContext
     )
 
@@ -8706,12 +8706,12 @@ module Aws::AppMesh
 
     alias Duration = NamedTuple(
       "unit" : String,
-      "value" : Int64
+      "value" : UInt64
     )
 
     alias DurationUnit = String
 
-    alias DurationValue = Int64
+    alias DurationValue = UInt64
 
     alias EgressFilter = NamedTuple(
       "type" : String
@@ -8788,7 +8788,7 @@ module Aws::AppMesh
     alias GrpcRetryPolicy = NamedTuple(
       "grpcRetryEvents" : Array(String),
       "httpRetryEvents" : Array(String),
-      "maxRetries" : Int64,
+      "maxRetries" : UInt64,
       "perRetryTimeout" : Duration,
       "tcpRetryEvents" : Array(String)
     )
@@ -8847,21 +8847,21 @@ module Aws::AppMesh
 
     alias HeaderName = String
 
-    alias HealthCheckIntervalMillis = Int64
+    alias HealthCheckIntervalMillis = UInt32
 
     alias HealthCheckPolicy = NamedTuple(
-      "healthyThreshold" : Int32,
-      "intervalMillis" : Int64,
+      "healthyThreshold" : UInt8,
+      "intervalMillis" : UInt32,
       "path" : String,
-      "port" : Int32,
+      "port" : UInt16,
       "protocol" : String,
-      "timeoutMillis" : Int64,
-      "unhealthyThreshold" : Int32
+      "timeoutMillis" : UInt16,
+      "unhealthyThreshold" : UInt8
     )
 
-    alias HealthCheckThreshold = Int32
+    alias HealthCheckThreshold = UInt8
 
-    alias HealthCheckTimeoutMillis = Int64
+    alias HealthCheckTimeoutMillis = UInt16
 
     alias Hostname = String
 
@@ -8882,7 +8882,7 @@ module Aws::AppMesh
 
     alias HttpRetryPolicy = NamedTuple(
       "httpRetryEvents" : Array(String),
-      "maxRetries" : Int64,
+      "maxRetries" : UInt64,
       "perRetryTimeout" : Duration,
       "tcpRetryEvents" : Array(String)
     )
@@ -8933,14 +8933,14 @@ module Aws::AppMesh
     )
 
     alias ListGatewayRoutesInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "meshName" : String,
       "meshOwner" : String,
       "nextToken" : String,
       "virtualGatewayName" : String
     )
 
-    alias ListGatewayRoutesLimit = Int32
+    alias ListGatewayRoutesLimit = UInt8
 
     alias ListGatewayRoutesOutput = NamedTuple(
       "gatewayRoutes" : Array(GatewayRouteRef),
@@ -8948,11 +8948,11 @@ module Aws::AppMesh
     )
 
     alias ListMeshesInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "nextToken" : String
     )
 
-    alias ListMeshesLimit = Int32
+    alias ListMeshesLimit = UInt8
 
     alias ListMeshesOutput = NamedTuple(
       "meshes" : Array(MeshRef),
@@ -8960,14 +8960,14 @@ module Aws::AppMesh
     )
 
     alias ListRoutesInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "meshName" : String,
       "meshOwner" : String,
       "nextToken" : String,
       "virtualRouterName" : String
     )
 
-    alias ListRoutesLimit = Int32
+    alias ListRoutesLimit = UInt8
 
     alias ListRoutesOutput = NamedTuple(
       "nextToken" : String,
@@ -8975,7 +8975,7 @@ module Aws::AppMesh
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "nextToken" : String,
       "resourceArn" : String
     )
@@ -8986,13 +8986,13 @@ module Aws::AppMesh
     )
 
     alias ListVirtualGatewaysInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "meshName" : String,
       "meshOwner" : String,
       "nextToken" : String
     )
 
-    alias ListVirtualGatewaysLimit = Int32
+    alias ListVirtualGatewaysLimit = UInt8
 
     alias ListVirtualGatewaysOutput = NamedTuple(
       "nextToken" : String,
@@ -9000,13 +9000,13 @@ module Aws::AppMesh
     )
 
     alias ListVirtualNodesInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "meshName" : String,
       "meshOwner" : String,
       "nextToken" : String
     )
 
-    alias ListVirtualNodesLimit = Int32
+    alias ListVirtualNodesLimit = UInt8
 
     alias ListVirtualNodesOutput = NamedTuple(
       "nextToken" : String,
@@ -9014,13 +9014,13 @@ module Aws::AppMesh
     )
 
     alias ListVirtualRoutersInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "meshName" : String,
       "meshOwner" : String,
       "nextToken" : String
     )
 
-    alias ListVirtualRoutersLimit = Int32
+    alias ListVirtualRoutersLimit = UInt8
 
     alias ListVirtualRoutersOutput = NamedTuple(
       "nextToken" : String,
@@ -9028,13 +9028,13 @@ module Aws::AppMesh
     )
 
     alias ListVirtualServicesInput = NamedTuple(
-      "limit" : Int32,
+      "limit" : UInt8,
       "meshName" : String,
       "meshOwner" : String,
       "nextToken" : String
     )
 
-    alias ListVirtualServicesLimit = Int32
+    alias ListVirtualServicesLimit = UInt8
 
     alias ListVirtualServicesOutput = NamedTuple(
       "nextToken" : String,
@@ -9091,13 +9091,13 @@ module Aws::AppMesh
       "start" : Int64
     )
 
-    alias MaxConnections = Int32
+    alias MaxConnections = UInt32
 
-    alias MaxPendingRequests = Int32
+    alias MaxPendingRequests = UInt32
 
-    alias MaxRequests = Int32
+    alias MaxRequests = UInt32
 
-    alias MaxRetries = Int64
+    alias MaxRetries = UInt64
 
     alias MeshData = NamedTuple(
       "meshName" : String,
@@ -9137,26 +9137,26 @@ module Aws::AppMesh
     alias OutlierDetection = NamedTuple(
       "baseEjectionDuration" : Duration,
       "interval" : Duration,
-      "maxEjectionPercent" : Int32,
-      "maxServerErrors" : Int64
+      "maxEjectionPercent" : UInt8,
+      "maxServerErrors" : UInt64
     )
 
-    alias OutlierDetectionMaxEjectionPercent = Int32
+    alias OutlierDetectionMaxEjectionPercent = UInt8
 
-    alias OutlierDetectionMaxServerErrors = Int64
+    alias OutlierDetectionMaxServerErrors = UInt64
 
-    alias PercentInt = Int32
+    alias PercentInt = UInt8
 
     alias PortMapping = NamedTuple(
-      "port" : Int32,
+      "port" : UInt16,
       "protocol" : String
     )
 
-    alias PortNumber = Int32
+    alias PortNumber = UInt16
 
     alias PortProtocol = String
 
-    alias PortSet = Array(Int32)
+    alias PortSet = Array(UInt16)
 
     alias ResourceInUseException = NamedTuple(
       "message" : String
@@ -9185,7 +9185,7 @@ module Aws::AppMesh
 
     alias RouteList = Array(RouteRef)
 
-    alias RoutePriority = Int32
+    alias RoutePriority = UInt16
 
     alias RouteRef = NamedTuple(
       "arn" : String,
@@ -9203,7 +9203,7 @@ module Aws::AppMesh
       "grpcRoute" : GrpcRoute,
       "http2Route" : HttpRoute,
       "httpRoute" : HttpRoute,
-      "priority" : Int32,
+      "priority" : UInt16,
       "tcpRoute" : TcpRoute
     )
 
@@ -9248,7 +9248,7 @@ module Aws::AppMesh
 
     alias TagValue = String
 
-    alias TagsLimit = Int32
+    alias TagsLimit = UInt8
 
     alias TcpRetryPolicyEvent = String
 
@@ -9403,7 +9403,7 @@ module Aws::AppMesh
 
     alias VirtualGatewayClientPolicyTls = NamedTuple(
       "enforce" : Bool,
-      "ports" : Array(Int32),
+      "ports" : Array(UInt16),
       "validation" : VirtualGatewayTlsValidationContext
     )
 
@@ -9426,32 +9426,32 @@ module Aws::AppMesh
     )
 
     alias VirtualGatewayGrpcConnectionPool = NamedTuple(
-      "maxRequests" : Int32
+      "maxRequests" : UInt32
     )
 
-    alias VirtualGatewayHealthCheckIntervalMillis = Int64
+    alias VirtualGatewayHealthCheckIntervalMillis = UInt32
 
     alias VirtualGatewayHealthCheckPolicy = NamedTuple(
-      "healthyThreshold" : Int32,
-      "intervalMillis" : Int64,
+      "healthyThreshold" : UInt8,
+      "intervalMillis" : UInt32,
       "path" : String,
-      "port" : Int32,
+      "port" : UInt16,
       "protocol" : String,
-      "timeoutMillis" : Int64,
-      "unhealthyThreshold" : Int32
+      "timeoutMillis" : UInt16,
+      "unhealthyThreshold" : UInt8
     )
 
-    alias VirtualGatewayHealthCheckThreshold = Int32
+    alias VirtualGatewayHealthCheckThreshold = UInt8
 
-    alias VirtualGatewayHealthCheckTimeoutMillis = Int64
+    alias VirtualGatewayHealthCheckTimeoutMillis = UInt16
 
     alias VirtualGatewayHttp2ConnectionPool = NamedTuple(
-      "maxRequests" : Int32
+      "maxRequests" : UInt32
     )
 
     alias VirtualGatewayHttpConnectionPool = NamedTuple(
-      "maxConnections" : Int32,
-      "maxPendingRequests" : Int32
+      "maxConnections" : UInt32,
+      "maxPendingRequests" : UInt32
     )
 
     alias VirtualGatewayList = Array(VirtualGatewayRef)
@@ -9491,7 +9491,7 @@ module Aws::AppMesh
     )
 
     alias VirtualGatewayPortMapping = NamedTuple(
-      "port" : Int32,
+      "port" : UInt16,
       "protocol" : String
     )
 
@@ -9553,16 +9553,16 @@ module Aws::AppMesh
     )
 
     alias VirtualNodeGrpcConnectionPool = NamedTuple(
-      "maxRequests" : Int32
+      "maxRequests" : UInt32
     )
 
     alias VirtualNodeHttp2ConnectionPool = NamedTuple(
-      "maxRequests" : Int32
+      "maxRequests" : UInt32
     )
 
     alias VirtualNodeHttpConnectionPool = NamedTuple(
-      "maxConnections" : Int32,
-      "maxPendingRequests" : Int32
+      "maxConnections" : UInt32,
+      "maxPendingRequests" : UInt32
     )
 
     alias VirtualNodeList = Array(VirtualNodeRef)
@@ -9597,7 +9597,7 @@ module Aws::AppMesh
     alias VirtualNodeStatusCode = String
 
     alias VirtualNodeTcpConnectionPool = NamedTuple(
-      "maxConnections" : Int32
+      "maxConnections" : UInt32
     )
 
     alias VirtualRouterData = NamedTuple(
@@ -9684,7 +9684,7 @@ module Aws::AppMesh
 
     alias WeightedTarget = NamedTuple(
       "virtualNode" : String,
-      "weight" : Int32
+      "weight" : UInt8
     )
 
     alias WeightedTargets = Array(WeightedTarget)

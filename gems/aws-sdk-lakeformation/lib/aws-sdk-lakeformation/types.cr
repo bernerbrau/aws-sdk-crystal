@@ -1643,7 +1643,7 @@ module Aws::LakeFormation
       "CatalogId" : String,
       "ResourceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetEffectivePermissionsForPathResponse = NamedTuple(
@@ -1683,7 +1683,7 @@ module Aws::LakeFormation
       "ResourceType" : String,
       "Resource" : Resource,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListPermissionsResponse = NamedTuple(
@@ -1693,7 +1693,7 @@ module Aws::LakeFormation
 
     alias ListResourcesRequest = NamedTuple(
       "FilterConditionList" : Array(FilterCondition),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -1712,7 +1712,7 @@ module Aws::LakeFormation
       "Message" : String
     )
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias Permission = String
 

@@ -9893,7 +9893,7 @@ module Aws::GameLift
       "Name" : String,
       "Version" : String,
       "Status" : String,
-      "SizeOnDisk" : Int64,
+      "SizeOnDisk" : UInt64,
       "OperatingSystem" : String,
       "CreationTime" : (String | UInt64 | Time)?
     )
@@ -9984,8 +9984,8 @@ module Aws::GameLift
     alias CreateGameServerGroupInput = NamedTuple(
       "GameServerGroupName" : String,
       "RoleArn" : String,
-      "MinSize" : Int32,
-      "MaxSize" : Int32,
+      "MinSize" : UInt32,
+      "MaxSize" : UInt32,
       "LaunchTemplate" : LaunchTemplateSpecification,
       "InstanceDefinitions" : Array(InstanceDefinition),
       "AutoScalingPolicy" : GameServerGroupAutoScalingPolicy,
@@ -10002,7 +10002,7 @@ module Aws::GameLift
     alias CreateGameSessionInput = NamedTuple(
       "FleetId" : String,
       "AliasId" : String,
-      "MaximumPlayerSessionCount" : Int32,
+      "MaximumPlayerSessionCount" : UInt32,
       "Name" : String,
       "GameProperties" : Array(GameProperty),
       "CreatorId" : String,
@@ -10017,7 +10017,7 @@ module Aws::GameLift
 
     alias CreateGameSessionQueueInput = NamedTuple(
       "Name" : String,
-      "TimeoutInSeconds" : Int32,
+      "TimeoutInSeconds" : UInt32,
       "PlayerLatencyPolicies" : Array(PlayerLatencyPolicy),
       "Destinations" : Array(GameSessionQueueDestination),
       "Tags" : Array(Tag)
@@ -10031,12 +10031,12 @@ module Aws::GameLift
       "Name" : String,
       "Description" : String,
       "GameSessionQueueArns" : Array(String),
-      "RequestTimeoutSeconds" : Int32,
-      "AcceptanceTimeoutSeconds" : Int32,
+      "RequestTimeoutSeconds" : UInt16,
+      "AcceptanceTimeoutSeconds" : UInt16,
       "AcceptanceRequired" : Bool,
       "RuleSetName" : String,
       "NotificationTarget" : String,
-      "AdditionalPlayerCount" : Int32,
+      "AdditionalPlayerCount" : UInt32,
       "CustomEventData" : String,
       "GameProperties" : Array(GameProperty),
       "GameSessionData" : String,
@@ -10215,7 +10215,7 @@ module Aws::GameLift
 
     alias DescribeFleetAttributesInput = NamedTuple(
       "FleetIds" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10226,7 +10226,7 @@ module Aws::GameLift
 
     alias DescribeFleetCapacityInput = NamedTuple(
       "FleetIds" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10239,7 +10239,7 @@ module Aws::GameLift
       "FleetId" : String,
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10258,7 +10258,7 @@ module Aws::GameLift
 
     alias DescribeFleetUtilizationInput = NamedTuple(
       "FleetIds" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10283,7 +10283,7 @@ module Aws::GameLift
     alias DescribeGameServerInstancesInput = NamedTuple(
       "GameServerGroupName" : String,
       "InstanceIds" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10301,7 +10301,7 @@ module Aws::GameLift
       "GameSessionId" : String,
       "AliasId" : String,
       "StatusFilter" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10320,7 +10320,7 @@ module Aws::GameLift
 
     alias DescribeGameSessionQueuesInput = NamedTuple(
       "Names" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10334,7 +10334,7 @@ module Aws::GameLift
       "GameSessionId" : String,
       "AliasId" : String,
       "StatusFilter" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10346,7 +10346,7 @@ module Aws::GameLift
     alias DescribeInstancesInput = NamedTuple(
       "FleetId" : String,
       "InstanceId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10358,7 +10358,7 @@ module Aws::GameLift
     alias DescribeMatchmakingConfigurationsInput = NamedTuple(
       "Names" : Array(String),
       "RuleSetName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10377,7 +10377,7 @@ module Aws::GameLift
 
     alias DescribeMatchmakingRuleSetsInput = NamedTuple(
       "Names" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -10391,7 +10391,7 @@ module Aws::GameLift
       "PlayerId" : String,
       "PlayerSessionId" : String,
       "PlayerSessionStatusFilter" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10411,7 +10411,7 @@ module Aws::GameLift
     alias DescribeScalingPoliciesInput = NamedTuple(
       "FleetId" : String,
       "StatusFilter" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10458,19 +10458,19 @@ module Aws::GameLift
     alias DoubleObject = Float64
 
     alias EC2InstanceCounts = NamedTuple(
-      "DESIRED" : Int32,
-      "MINIMUM" : Int32,
-      "MAXIMUM" : Int32,
-      "PENDING" : Int32,
-      "ACTIVE" : Int32,
-      "IDLE" : Int32,
-      "TERMINATING" : Int32
+      "DESIRED" : UInt32,
+      "MINIMUM" : UInt32,
+      "MAXIMUM" : UInt32,
+      "PENDING" : UInt32,
+      "ACTIVE" : UInt32,
+      "IDLE" : UInt32,
+      "TERMINATING" : UInt32
     )
 
     alias EC2InstanceLimit = NamedTuple(
       "EC2InstanceType" : String,
-      "CurrentInstances" : Int32,
-      "InstanceLimit" : Int32
+      "CurrentInstances" : UInt32,
+      "InstanceLimit" : UInt32
     )
 
     alias EC2InstanceLimitList = Array(EC2InstanceLimit)
@@ -10550,10 +10550,10 @@ module Aws::GameLift
 
     alias FleetUtilization = NamedTuple(
       "FleetId" : String,
-      "ActiveServerProcessCount" : Int32,
-      "ActiveGameSessionCount" : Int32,
-      "CurrentPlayerSessionCount" : Int32,
-      "MaximumPlayerSessionCount" : Int32
+      "ActiveServerProcessCount" : UInt32,
+      "ActiveGameSessionCount" : UInt32,
+      "CurrentPlayerSessionCount" : UInt32,
+      "MaximumPlayerSessionCount" : UInt32
     )
 
     alias FleetUtilizationList = Array(FleetUtilization)
@@ -10617,7 +10617,7 @@ module Aws::GameLift
     alias GameServerGroupArn = String
 
     alias GameServerGroupAutoScalingPolicy = NamedTuple(
-      "EstimatedInstanceWarmup" : Int32,
+      "EstimatedInstanceWarmup" : UInt32,
       "TargetTrackingConfiguration" : TargetTrackingConfiguration
     )
 
@@ -10665,27 +10665,27 @@ module Aws::GameLift
       "FleetArn" : String,
       "CreationTime" : (String | UInt64 | Time)?,
       "TerminationTime" : (String | UInt64 | Time)?,
-      "CurrentPlayerSessionCount" : Int32,
-      "MaximumPlayerSessionCount" : Int32,
+      "CurrentPlayerSessionCount" : UInt32,
+      "MaximumPlayerSessionCount" : UInt32,
       "Status" : String,
       "StatusReason" : String,
       "GameProperties" : Array(GameProperty),
       "IpAddress" : String,
       "DnsName" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "PlayerSessionCreationPolicy" : String,
       "CreatorId" : String,
       "GameSessionData" : String,
       "MatchmakerData" : String
     )
 
-    alias GameSessionActivationTimeoutSeconds = Int32
+    alias GameSessionActivationTimeoutSeconds = UInt16
 
     alias GameSessionConnectionInfo = NamedTuple(
       "GameSessionArn" : String,
       "IpAddress" : String,
       "DnsName" : String,
-      "Port" : Int32,
+      "Port" : UInt32,
       "MatchedPlayerSessions" : Array(MatchedPlayerSession)
     )
 
@@ -10709,7 +10709,7 @@ module Aws::GameLift
       "GameSessionQueueName" : String,
       "Status" : String,
       "GameProperties" : Array(GameProperty),
-      "MaximumPlayerSessionCount" : Int32,
+      "MaximumPlayerSessionCount" : UInt32,
       "GameSessionName" : String,
       "GameSessionId" : String,
       "GameSessionArn" : String,
@@ -10719,7 +10719,7 @@ module Aws::GameLift
       "EndTime" : (String | UInt64 | Time)?,
       "IpAddress" : String,
       "DnsName" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "PlacedPlayerSessions" : Array(PlacedPlayerSession),
       "GameSessionData" : String,
       "MatchmakerData" : String
@@ -10730,7 +10730,7 @@ module Aws::GameLift
     alias GameSessionQueue = NamedTuple(
       "Name" : String,
       "GameSessionQueueArn" : String,
-      "TimeoutInSeconds" : Int32,
+      "TimeoutInSeconds" : UInt32,
       "PlayerLatencyPolicies" : Array(PlayerLatencyPolicy),
       "Destinations" : Array(GameSessionQueueDestination)
     )
@@ -10838,8 +10838,8 @@ module Aws::GameLift
     alias IpAddress = String
 
     alias IpPermission = NamedTuple(
-      "FromPort" : Int32,
-      "ToPort" : Int32,
+      "FromPort" : UInt16,
+      "ToPort" : UInt16,
       "IpRange" : String,
       "Protocol" : String
     )
@@ -10848,7 +10848,7 @@ module Aws::GameLift
 
     alias IpProtocol = String
 
-    alias LatencyMap = Hash(String,Int32)
+    alias LatencyMap = Hash(String,UInt32)
 
     alias LaunchTemplateId = String
 
@@ -10869,7 +10869,7 @@ module Aws::GameLift
     alias ListAliasesInput = NamedTuple(
       "RoutingStrategyType" : String,
       "Name" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10880,7 +10880,7 @@ module Aws::GameLift
 
     alias ListBuildsInput = NamedTuple(
       "Status" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10892,7 +10892,7 @@ module Aws::GameLift
     alias ListFleetsInput = NamedTuple(
       "BuildId" : String,
       "ScriptId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10902,7 +10902,7 @@ module Aws::GameLift
     )
 
     alias ListGameServerGroupsInput = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10914,7 +10914,7 @@ module Aws::GameLift
     alias ListGameServersInput = NamedTuple(
       "GameServerGroupName" : String,
       "SortOrder" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10924,7 +10924,7 @@ module Aws::GameLift
     )
 
     alias ListScriptsInput = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -10950,20 +10950,20 @@ module Aws::GameLift
 
     alias MatchmakerData = String
 
-    alias MatchmakingAcceptanceTimeoutInteger = Int32
+    alias MatchmakingAcceptanceTimeoutInteger = UInt16
 
     alias MatchmakingConfiguration = NamedTuple(
       "Name" : String,
       "ConfigurationArn" : String,
       "Description" : String,
       "GameSessionQueueArns" : Array(String),
-      "RequestTimeoutSeconds" : Int32,
-      "AcceptanceTimeoutSeconds" : Int32,
+      "RequestTimeoutSeconds" : UInt16,
+      "AcceptanceTimeoutSeconds" : UInt16,
       "AcceptanceRequired" : Bool,
       "RuleSetName" : String,
       "RuleSetArn" : String,
       "NotificationTarget" : String,
-      "AdditionalPlayerCount" : Int32,
+      "AdditionalPlayerCount" : UInt32,
       "CustomEventData" : String,
       "CreationTime" : (String | UInt64 | Time)?,
       "GameProperties" : Array(GameProperty),
@@ -10986,7 +10986,7 @@ module Aws::GameLift
 
     alias MatchmakingIdStringModel = String
 
-    alias MatchmakingRequestTimeoutInteger = Int32
+    alias MatchmakingRequestTimeoutInteger = UInt16
 
     alias MatchmakingRuleSet = NamedTuple(
       "RuleSetName" : String,
@@ -11014,12 +11014,12 @@ module Aws::GameLift
       "EndTime" : (String | UInt64 | Time)?,
       "Players" : Array(Player),
       "GameSessionConnectionInfo" : GameSessionConnectionInfo,
-      "EstimatedWaitTime" : Int32
+      "EstimatedWaitTime" : UInt32
     )
 
     alias MatchmakingTicketList = Array(MatchmakingTicket)
 
-    alias MaxConcurrentGameSessionActivations = Int32
+    alias MaxConcurrentGameSessionActivations = UInt32
 
     alias MetricGroup = String
 
@@ -11058,7 +11058,7 @@ module Aws::GameLift
       "PlayerId" : String,
       "PlayerAttributes" : Hash(String,AttributeValue),
       "Team" : String,
-      "LatencyInMs" : Hash(String,Int32)
+      "LatencyInMs" : Hash(String,UInt32)
     )
 
     alias PlayerAttributeMap = Hash(String,AttributeValue)
@@ -11078,8 +11078,8 @@ module Aws::GameLift
     alias PlayerLatencyList = Array(PlayerLatency)
 
     alias PlayerLatencyPolicy = NamedTuple(
-      "MaximumIndividualPlayerLatencyMilliseconds" : Int32,
-      "PolicyDurationSeconds" : Int32
+      "MaximumIndividualPlayerLatencyMilliseconds" : UInt32,
+      "PolicyDurationSeconds" : UInt32
     )
 
     alias PlayerLatencyPolicyList = Array(PlayerLatencyPolicy)
@@ -11097,7 +11097,7 @@ module Aws::GameLift
       "Status" : String,
       "IpAddress" : String,
       "DnsName" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "PlayerData" : String
     )
 
@@ -11111,11 +11111,11 @@ module Aws::GameLift
 
     alias PolicyType = String
 
-    alias PortNumber = Int32
+    alias PortNumber = UInt16
 
-    alias PositiveInteger = Int32
+    alias PositiveInteger = UInt32
 
-    alias PositiveLong = Int64
+    alias PositiveLong = UInt64
 
     alias ProtectionPolicy = String
 
@@ -11126,7 +11126,7 @@ module Aws::GameLift
       "ScalingAdjustmentType" : String,
       "Threshold" : Float64,
       "ComparisonOperator" : String,
-      "EvaluationPeriods" : Int32,
+      "EvaluationPeriods" : UInt32,
       "MetricName" : String,
       "PolicyType" : String,
       "TargetConfiguration" : TargetConfiguration
@@ -11169,8 +11169,8 @@ module Aws::GameLift
     )
 
     alias ResourceCreationLimitPolicy = NamedTuple(
-      "NewGameSessionsPerCreator" : Int32,
-      "PolicyPeriodInMinutes" : Int32
+      "NewGameSessionsPerCreator" : UInt32,
+      "PolicyPeriodInMinutes" : UInt32
     )
 
     alias ResumeGameServerGroupInput = NamedTuple(
@@ -11192,12 +11192,12 @@ module Aws::GameLift
 
     alias RuleSetBody = String
 
-    alias RuleSetLimit = Int32
+    alias RuleSetLimit = UInt8
 
     alias RuntimeConfiguration = NamedTuple(
       "ServerProcesses" : Array(ServerProcess),
-      "MaxConcurrentGameSessionActivations" : Int32,
-      "GameSessionActivationTimeoutSeconds" : Int32
+      "MaxConcurrentGameSessionActivations" : UInt32,
+      "GameSessionActivationTimeoutSeconds" : UInt16
     )
 
     alias S3Location = NamedTuple(
@@ -11217,7 +11217,7 @@ module Aws::GameLift
       "ScalingAdjustmentType" : String,
       "ComparisonOperator" : String,
       "Threshold" : Float64,
-      "EvaluationPeriods" : Int32,
+      "EvaluationPeriods" : UInt32,
       "MetricName" : String,
       "PolicyType" : String,
       "TargetConfiguration" : TargetConfiguration
@@ -11232,7 +11232,7 @@ module Aws::GameLift
       "ScriptArn" : String,
       "Name" : String,
       "Version" : String,
-      "SizeOnDisk" : Int64,
+      "SizeOnDisk" : UInt64,
       "CreationTime" : (String | UInt64 | Time)?,
       "StorageLocation" : S3Location
     )
@@ -11250,7 +11250,7 @@ module Aws::GameLift
       "AliasId" : String,
       "FilterExpression" : String,
       "SortExpression" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "NextToken" : String
     )
 
@@ -11262,7 +11262,7 @@ module Aws::GameLift
     alias ServerProcess = NamedTuple(
       "LaunchPath" : String,
       "Parameters" : String,
-      "ConcurrentExecutions" : Int32
+      "ConcurrentExecutions" : UInt32
     )
 
     alias ServerProcessList = Array(ServerProcess)
@@ -11284,7 +11284,7 @@ module Aws::GameLift
       "PlacementId" : String,
       "GameSessionQueueName" : String,
       "GameProperties" : Array(GameProperty),
-      "MaximumPlayerSessionCount" : Int32,
+      "MaximumPlayerSessionCount" : UInt32,
       "GameSessionName" : String,
       "PlayerLatencies" : Array(PlayerLatency),
       "DesiredPlayerSessions" : Array(DesiredPlayerSession),
@@ -11449,9 +11449,9 @@ module Aws::GameLift
 
     alias UpdateFleetCapacityInput = NamedTuple(
       "FleetId" : String,
-      "DesiredInstances" : Int32,
-      "MinSize" : Int32,
-      "MaxSize" : Int32
+      "DesiredInstances" : UInt32,
+      "MinSize" : UInt32,
+      "MaxSize" : UInt32
     )
 
     alias UpdateFleetCapacityOutput = NamedTuple(
@@ -11494,7 +11494,7 @@ module Aws::GameLift
 
     alias UpdateGameSessionInput = NamedTuple(
       "GameSessionId" : String,
-      "MaximumPlayerSessionCount" : Int32,
+      "MaximumPlayerSessionCount" : UInt32,
       "Name" : String,
       "PlayerSessionCreationPolicy" : String,
       "ProtectionPolicy" : String
@@ -11506,7 +11506,7 @@ module Aws::GameLift
 
     alias UpdateGameSessionQueueInput = NamedTuple(
       "Name" : String,
-      "TimeoutInSeconds" : Int32,
+      "TimeoutInSeconds" : UInt32,
       "PlayerLatencyPolicies" : Array(PlayerLatencyPolicy),
       "Destinations" : Array(GameSessionQueueDestination)
     )
@@ -11519,12 +11519,12 @@ module Aws::GameLift
       "Name" : String,
       "Description" : String,
       "GameSessionQueueArns" : Array(String),
-      "RequestTimeoutSeconds" : Int32,
-      "AcceptanceTimeoutSeconds" : Int32,
+      "RequestTimeoutSeconds" : UInt16,
+      "AcceptanceTimeoutSeconds" : UInt16,
       "AcceptanceRequired" : Bool,
       "RuleSetName" : String,
       "NotificationTarget" : String,
-      "AdditionalPlayerCount" : Int32,
+      "AdditionalPlayerCount" : UInt32,
       "CustomEventData" : String,
       "GameProperties" : Array(GameProperty),
       "GameSessionData" : String,
@@ -11598,7 +11598,7 @@ module Aws::GameLift
 
     alias WeightedCapacity = String
 
-    alias WholeNumber = Int32
+    alias WholeNumber = UInt32
 
     alias ZipBlob = String | Array(UInt8) | IO
   end

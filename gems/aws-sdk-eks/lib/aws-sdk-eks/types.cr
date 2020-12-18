@@ -3572,7 +3572,7 @@ module Aws::EKS
 
     alias BoxedInteger = Int32
 
-    alias Capacity = Int32
+    alias Capacity = UInt32
 
     alias CapacityTypes = String
 
@@ -3731,12 +3731,12 @@ module Aws::EKS
 
     alias DescribeAddonVersionsRequest = NamedTuple(
       "kubernetesVersion" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "addonName" : String
     )
 
-    alias DescribeAddonVersionsRequestMaxResults = Int32
+    alias DescribeAddonVersionsRequestMaxResults = UInt8
 
     alias DescribeAddonVersionsResponse = NamedTuple(
       "addons" : Array(AddonInfo),
@@ -3820,7 +3820,7 @@ module Aws::EKS
 
     alias FargateProfileStatus = String
 
-    alias FargateProfilesRequestMaxResults = Int32
+    alias FargateProfilesRequestMaxResults = UInt8
 
     alias Identity = NamedTuple(
       "oidc" : OIDC
@@ -3865,11 +3865,11 @@ module Aws::EKS
 
     alias ListAddonsRequest = NamedTuple(
       "clusterName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
-    alias ListAddonsRequestMaxResults = Int32
+    alias ListAddonsRequestMaxResults = UInt8
 
     alias ListAddonsResponse = NamedTuple(
       "addons" : Array(String),
@@ -3877,11 +3877,11 @@ module Aws::EKS
     )
 
     alias ListClustersRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
-    alias ListClustersRequestMaxResults = Int32
+    alias ListClustersRequestMaxResults = UInt8
 
     alias ListClustersResponse = NamedTuple(
       "clusters" : Array(String),
@@ -3890,7 +3890,7 @@ module Aws::EKS
 
     alias ListFargateProfilesRequest = NamedTuple(
       "clusterName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -3901,11 +3901,11 @@ module Aws::EKS
 
     alias ListNodegroupsRequest = NamedTuple(
       "clusterName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
-    alias ListNodegroupsRequestMaxResults = Int32
+    alias ListNodegroupsRequestMaxResults = UInt8
 
     alias ListNodegroupsResponse = NamedTuple(
       "nodegroups" : Array(String),
@@ -3925,10 +3925,10 @@ module Aws::EKS
       "nodegroupName" : String,
       "addonName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
-    alias ListUpdatesRequestMaxResults = Int32
+    alias ListUpdatesRequestMaxResults = UInt8
 
     alias ListUpdatesResponse = NamedTuple(
       "updateIds" : Array(String),
@@ -3986,9 +3986,9 @@ module Aws::EKS
     )
 
     alias NodegroupScalingConfig = NamedTuple(
-      "minSize" : Int32,
-      "maxSize" : Int32,
-      "desiredSize" : Int32
+      "minSize" : UInt32,
+      "maxSize" : UInt32,
+      "desiredSize" : UInt32
     )
 
     alias NodegroupStatus = String

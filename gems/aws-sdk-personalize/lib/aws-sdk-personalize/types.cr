@@ -4124,7 +4124,7 @@ module Aws::Personalize
       "name" : String,
       "campaignArn" : String,
       "solutionVersionArn" : String,
-      "minProvisionedTPS" : Int32,
+      "minProvisionedTPS" : UInt32,
       "campaignConfig" : CampaignConfig,
       "status" : String,
       "failureReason" : String,
@@ -4148,7 +4148,7 @@ module Aws::Personalize
 
     alias CampaignUpdateSummary = NamedTuple(
       "solutionVersionArn" : String,
-      "minProvisionedTPS" : Int32,
+      "minProvisionedTPS" : UInt32,
       "campaignConfig" : CampaignConfig,
       "status" : String,
       "failureReason" : String,
@@ -4199,7 +4199,7 @@ module Aws::Personalize
     alias CreateCampaignRequest = NamedTuple(
       "name" : String,
       "solutionVersionArn" : String,
-      "minProvisionedTPS" : Int32,
+      "minProvisionedTPS" : UInt32,
       "campaignConfig" : CampaignConfig
     )
 
@@ -4683,7 +4683,7 @@ module Aws::Personalize
     alias ListBatchInferenceJobsRequest = NamedTuple(
       "solutionVersionArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListBatchInferenceJobsResponse = NamedTuple(
@@ -4694,7 +4694,7 @@ module Aws::Personalize
     alias ListCampaignsRequest = NamedTuple(
       "solutionArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListCampaignsResponse = NamedTuple(
@@ -4704,7 +4704,7 @@ module Aws::Personalize
 
     alias ListDatasetGroupsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDatasetGroupsResponse = NamedTuple(
@@ -4715,7 +4715,7 @@ module Aws::Personalize
     alias ListDatasetImportJobsRequest = NamedTuple(
       "datasetArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDatasetImportJobsResponse = NamedTuple(
@@ -4726,7 +4726,7 @@ module Aws::Personalize
     alias ListDatasetsRequest = NamedTuple(
       "datasetGroupArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDatasetsResponse = NamedTuple(
@@ -4737,7 +4737,7 @@ module Aws::Personalize
     alias ListEventTrackersRequest = NamedTuple(
       "datasetGroupArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListEventTrackersResponse = NamedTuple(
@@ -4748,7 +4748,7 @@ module Aws::Personalize
     alias ListFiltersRequest = NamedTuple(
       "datasetGroupArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListFiltersResponse = NamedTuple(
@@ -4759,7 +4759,7 @@ module Aws::Personalize
     alias ListRecipesRequest = NamedTuple(
       "recipeProvider" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListRecipesResponse = NamedTuple(
@@ -4769,7 +4769,7 @@ module Aws::Personalize
 
     alias ListSchemasRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListSchemasResponse = NamedTuple(
@@ -4780,7 +4780,7 @@ module Aws::Personalize
     alias ListSolutionVersionsRequest = NamedTuple(
       "solutionArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListSolutionVersionsResponse = NamedTuple(
@@ -4791,7 +4791,7 @@ module Aws::Personalize
     alias ListSolutionsRequest = NamedTuple(
       "datasetGroupArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListSolutionsResponse = NamedTuple(
@@ -4799,7 +4799,7 @@ module Aws::Personalize
       "nextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MetricName = String
 
@@ -4946,7 +4946,7 @@ module Aws::Personalize
 
     alias TrainingMode = String
 
-    alias TransactionsPerSecond = Int32
+    alias TransactionsPerSecond = UInt32
 
     alias Tunable = Bool
 
@@ -4957,7 +4957,7 @@ module Aws::Personalize
     alias UpdateCampaignRequest = NamedTuple(
       "campaignArn" : String,
       "solutionVersionArn" : String,
-      "minProvisionedTPS" : Int32,
+      "minProvisionedTPS" : UInt32,
       "campaignConfig" : CampaignConfig
     )
 

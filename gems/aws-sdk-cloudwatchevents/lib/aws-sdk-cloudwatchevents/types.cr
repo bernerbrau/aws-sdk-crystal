@@ -3640,7 +3640,7 @@ module Aws::CloudWatchEvents
       "EventSourceArn" : String,
       "State" : String,
       "StateReason" : String,
-      "RetentionDays" : Int32,
+      "RetentionDays" : UInt32,
       "SizeBytes" : Int64,
       "EventCount" : Int64,
       "CreationTime" : (String | UInt64 | Time)?
@@ -3710,7 +3710,7 @@ module Aws::CloudWatchEvents
       "EventSourceArn" : String,
       "Description" : String,
       "EventPattern" : String,
-      "RetentionDays" : Int32
+      "RetentionDays" : UInt32
     )
 
     alias CreateArchiveResponse = NamedTuple(
@@ -3788,7 +3788,7 @@ module Aws::CloudWatchEvents
       "EventPattern" : String,
       "State" : String,
       "StateReason" : String,
-      "RetentionDays" : Int32,
+      "RetentionDays" : UInt32,
       "SizeBytes" : Int64,
       "EventCount" : Int64,
       "CreationTime" : (String | UInt64 | Time)?
@@ -3870,7 +3870,7 @@ module Aws::CloudWatchEvents
 
     alias EcsParameters = NamedTuple(
       "TaskDefinitionArn" : String,
-      "TaskCount" : Int32,
+      "TaskCount" : UInt32,
       "LaunchType" : String,
       "NetworkConfiguration" : NetworkConfiguration,
       "PlatformVersion" : String,
@@ -3972,16 +3972,16 @@ module Aws::CloudWatchEvents
       
     )
 
-    alias LimitMax100 = Int32
+    alias LimitMax100 = UInt8
 
-    alias LimitMin1 = Int32
+    alias LimitMin1 = UInt32
 
     alias ListArchivesRequest = NamedTuple(
       "NamePrefix" : String,
       "EventSourceArn" : String,
       "State" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListArchivesResponse = NamedTuple(
@@ -3992,7 +3992,7 @@ module Aws::CloudWatchEvents
     alias ListEventBusesRequest = NamedTuple(
       "NamePrefix" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListEventBusesResponse = NamedTuple(
@@ -4003,7 +4003,7 @@ module Aws::CloudWatchEvents
     alias ListEventSourcesRequest = NamedTuple(
       "NamePrefix" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListEventSourcesResponse = NamedTuple(
@@ -4014,7 +4014,7 @@ module Aws::CloudWatchEvents
     alias ListPartnerEventSourceAccountsRequest = NamedTuple(
       "EventSourceName" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListPartnerEventSourceAccountsResponse = NamedTuple(
@@ -4025,7 +4025,7 @@ module Aws::CloudWatchEvents
     alias ListPartnerEventSourcesRequest = NamedTuple(
       "NamePrefix" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListPartnerEventSourcesResponse = NamedTuple(
@@ -4038,7 +4038,7 @@ module Aws::CloudWatchEvents
       "State" : String,
       "EventSourceArn" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListReplaysResponse = NamedTuple(
@@ -4050,7 +4050,7 @@ module Aws::CloudWatchEvents
       "TargetArn" : String,
       "EventBusName" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRuleNamesByTargetResponse = NamedTuple(
@@ -4062,7 +4062,7 @@ module Aws::CloudWatchEvents
       "NamePrefix" : String,
       "EventBusName" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRulesResponse = NamedTuple(
@@ -4082,7 +4082,7 @@ module Aws::CloudWatchEvents
       "Rule" : String,
       "EventBusName" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListTargetsByRuleResponse = NamedTuple(
@@ -4098,9 +4098,9 @@ module Aws::CloudWatchEvents
       
     )
 
-    alias MaximumEventAgeInSeconds = Int32
+    alias MaximumEventAgeInSeconds = UInt32
 
-    alias MaximumRetryAttempts = Int32
+    alias MaximumRetryAttempts = UInt8
 
     alias MessageGroupId = String
 
@@ -4328,11 +4328,11 @@ module Aws::CloudWatchEvents
       
     )
 
-    alias RetentionDays = Int32
+    alias RetentionDays = UInt32
 
     alias RetryPolicy = NamedTuple(
-      "MaximumRetryAttempts" : Int32,
-      "MaximumEventAgeInSeconds" : Int32
+      "MaximumRetryAttempts" : UInt8,
+      "MaximumEventAgeInSeconds" : UInt32
     )
 
     alias RoleArn = String
@@ -4492,7 +4492,7 @@ module Aws::CloudWatchEvents
       "ArchiveName" : String,
       "Description" : String,
       "EventPattern" : String,
-      "RetentionDays" : Int32
+      "RetentionDays" : UInt32
     )
 
     alias UpdateArchiveResponse = NamedTuple(

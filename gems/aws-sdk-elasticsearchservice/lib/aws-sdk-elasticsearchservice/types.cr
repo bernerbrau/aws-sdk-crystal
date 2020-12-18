@@ -4380,7 +4380,7 @@ module Aws::ElasticsearchService
 
     alias DescribeInboundCrossClusterSearchConnectionsRequest = NamedTuple(
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4391,7 +4391,7 @@ module Aws::ElasticsearchService
 
     alias DescribeOutboundCrossClusterSearchConnectionsRequest = NamedTuple(
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4415,7 +4415,7 @@ module Aws::ElasticsearchService
 
     alias DescribePackagesRequest = NamedTuple(
       "Filters" : Array(DescribePackagesFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4426,7 +4426,7 @@ module Aws::ElasticsearchService
 
     alias DescribeReservedElasticsearchInstanceOfferingsRequest = NamedTuple(
       "ReservedElasticsearchInstanceOfferingId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4437,7 +4437,7 @@ module Aws::ElasticsearchService
 
     alias DescribeReservedElasticsearchInstancesRequest = NamedTuple(
       "ReservedElasticsearchInstanceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4639,7 +4639,7 @@ module Aws::ElasticsearchService
 
     alias GetPackageVersionHistoryRequest = NamedTuple(
       "PackageID" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4651,7 +4651,7 @@ module Aws::ElasticsearchService
 
     alias GetUpgradeHistoryRequest = NamedTuple(
       "DomainName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4688,7 +4688,7 @@ module Aws::ElasticsearchService
 
     alias InboundCrossClusterSearchConnections = Array(InboundCrossClusterSearchConnection)
 
-    alias InstanceCount = Int32
+    alias InstanceCount = UInt32
 
     alias InstanceCountLimits = NamedTuple(
       "MinimumInstanceCount" : Int32,
@@ -4749,7 +4749,7 @@ module Aws::ElasticsearchService
 
     alias ListDomainsForPackageRequest = NamedTuple(
       "PackageID" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4761,7 +4761,7 @@ module Aws::ElasticsearchService
     alias ListElasticsearchInstanceTypesRequest = NamedTuple(
       "ElasticsearchVersion" : String,
       "DomainName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4771,7 +4771,7 @@ module Aws::ElasticsearchService
     )
 
     alias ListElasticsearchVersionsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4782,7 +4782,7 @@ module Aws::ElasticsearchService
 
     alias ListPackagesForDomainRequest = NamedTuple(
       "DomainName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "NextToken" : String
     )
 
@@ -4819,7 +4819,7 @@ module Aws::ElasticsearchService
       "MasterUserPassword" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = Int8
 
     alias MaximumInstanceCount = Int32
 
@@ -4843,7 +4843,7 @@ module Aws::ElasticsearchService
     alias OptionStatus = NamedTuple(
       "CreationDate" : String | UInt64 | Time,
       "UpdateDate" : String | UInt64 | Time,
-      "UpdateVersion" : Int32,
+      "UpdateVersion" : UInt32,
       "State" : String,
       "PendingDeletion" : Bool
     )
@@ -4913,7 +4913,7 @@ module Aws::ElasticsearchService
     alias PurchaseReservedElasticsearchInstanceOfferingRequest = NamedTuple(
       "ReservedElasticsearchInstanceOfferingId" : String,
       "ReservationName" : String,
-      "InstanceCount" : Int32
+      "InstanceCount" : UInt32
     )
 
     alias PurchaseReservedElasticsearchInstanceOfferingResponse = NamedTuple(
@@ -5089,7 +5089,7 @@ module Aws::ElasticsearchService
 
     alias TagValue = String
 
-    alias UIntValue = Int32
+    alias UIntValue = UInt32
 
     alias UpdateElasticsearchDomainConfigRequest = NamedTuple(
       "DomainName" : String,

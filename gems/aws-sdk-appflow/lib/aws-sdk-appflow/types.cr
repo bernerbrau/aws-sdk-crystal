@@ -5552,7 +5552,7 @@ module Aws::Appflow
     alias DescribeConnectorProfilesRequest = NamedTuple(
       "connectorProfileNames" : Array(String),
       "connectorType" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -5573,7 +5573,7 @@ module Aws::Appflow
 
     alias DescribeFlowExecutionRecordsRequest = NamedTuple(
       "flowName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -5821,7 +5821,7 @@ module Aws::Appflow
     )
 
     alias ListFlowsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -5861,7 +5861,7 @@ module Aws::Appflow
       "object" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MostRecentExecutionMessage = String
 

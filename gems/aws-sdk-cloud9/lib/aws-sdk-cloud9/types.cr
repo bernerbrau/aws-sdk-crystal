@@ -830,7 +830,7 @@ module Aws::Cloud9
     #
     class UpdateEnvironmentResult < Aws::EmptyStructure; end
 
-    alias AutomaticStopTimeMinutes = Int32
+    alias AutomaticStopTimeMinutes = Int16
 
     alias BadRequestException = NamedTuple(
       
@@ -856,7 +856,7 @@ module Aws::Cloud9
       "clientRequestToken" : String,
       "instanceType" : String,
       "subnetId" : String,
-      "automaticStopTimeMinutes" : Int32,
+      "automaticStopTimeMinutes" : Int16,
       "ownerArn" : String,
       "tags" : Array(Tag),
       "connectionType" : String
@@ -898,7 +898,7 @@ module Aws::Cloud9
       "environmentId" : String,
       "permissions" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeEnvironmentMembershipsResult = NamedTuple(
@@ -984,7 +984,7 @@ module Aws::Cloud9
 
     alias ListEnvironmentsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListEnvironmentsResult = NamedTuple(
@@ -1000,7 +1000,7 @@ module Aws::Cloud9
       "Tags" : Array(Tag)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MemberPermissions = String
 

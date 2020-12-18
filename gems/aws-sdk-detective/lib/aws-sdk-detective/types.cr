@@ -792,7 +792,7 @@ module Aws::Detective
 
     alias ListGraphsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListGraphsResponse = NamedTuple(
@@ -802,7 +802,7 @@ module Aws::Detective
 
     alias ListInvitationsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListInvitationsResponse = NamedTuple(
@@ -813,7 +813,7 @@ module Aws::Detective
     alias ListMembersRequest = NamedTuple(
       "GraphArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMembersResponse = NamedTuple(
@@ -838,7 +838,7 @@ module Aws::Detective
 
     alias MemberDisabledReason = String
 
-    alias MemberResultsLimit = Int32
+    alias MemberResultsLimit = UInt8
 
     alias MemberStatus = String
 

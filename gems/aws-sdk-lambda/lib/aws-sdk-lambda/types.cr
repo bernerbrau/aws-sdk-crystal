@@ -5638,7 +5638,7 @@ module Aws::Lambda
       "CodeSizeUnzipped" : Int64,
       "CodeSizeZipped" : Int64,
       "ConcurrentExecutions" : Int32,
-      "UnreservedConcurrentExecutions" : Int32
+      "UnreservedConcurrentExecutions" : UInt32
     )
 
     alias AccountUsage = NamedTuple(
@@ -5706,7 +5706,7 @@ module Aws::Lambda
 
     alias Arn = String
 
-    alias BatchSize = Int32
+    alias BatchSize = UInt16
 
     alias BisectBatchOnFunctionError = Bool
 
@@ -5755,7 +5755,7 @@ module Aws::Lambda
     alias CompatibleRuntimes = Array(String)
 
     alias Concurrency = NamedTuple(
-      "ReservedConcurrentExecutions" : Int32
+      "ReservedConcurrentExecutions" : UInt32
     )
 
     alias CreateAliasRequest = NamedTuple(
@@ -5780,16 +5780,16 @@ module Aws::Lambda
       "EventSourceArn" : String,
       "FunctionName" : String,
       "Enabled" : Bool,
-      "BatchSize" : Int32,
-      "MaximumBatchingWindowInSeconds" : Int32,
-      "ParallelizationFactor" : Int32,
+      "BatchSize" : UInt16,
+      "MaximumBatchingWindowInSeconds" : UInt16,
+      "ParallelizationFactor" : UInt8,
       "StartingPosition" : String,
       "StartingPositionTimestamp" : (String | UInt64 | Time)?,
       "DestinationConfig" : DestinationConfig,
       "MaximumRecordAgeInSeconds" : Int32,
       "BisectBatchOnFunctionError" : Bool,
-      "MaximumRetryAttempts" : Int32,
-      "TumblingWindowInSeconds" : Int32,
+      "MaximumRetryAttempts" : Int16,
+      "TumblingWindowInSeconds" : UInt16,
       "Topics" : Array(String),
       "Queues" : Array(String),
       "SourceAccessConfigurations" : Array(SourceAccessConfiguration),
@@ -5804,8 +5804,8 @@ module Aws::Lambda
       "Handler" : String,
       "Code" : FunctionCode,
       "Description" : String,
-      "Timeout" : Int32,
-      "MemorySize" : Int32,
+      "Timeout" : UInt32,
+      "MemorySize" : UInt16,
       "Publish" : Bool,
       "VpcConfig" : VpcConfig,
       "PackageType" : String,
@@ -5955,9 +5955,9 @@ module Aws::Lambda
       "UUID" : String,
       "StartingPosition" : String,
       "StartingPositionTimestamp" : (String | UInt64 | Time)?,
-      "BatchSize" : Int32,
-      "MaximumBatchingWindowInSeconds" : Int32,
-      "ParallelizationFactor" : Int32,
+      "BatchSize" : UInt16,
+      "MaximumBatchingWindowInSeconds" : UInt16,
+      "ParallelizationFactor" : UInt8,
       "EventSourceArn" : String,
       "FunctionArn" : String,
       "LastModified" : (String | UInt64 | Time)?,
@@ -5971,8 +5971,8 @@ module Aws::Lambda
       "SelfManagedEventSource" : SelfManagedEventSource,
       "MaximumRecordAgeInSeconds" : Int32,
       "BisectBatchOnFunctionError" : Bool,
-      "MaximumRetryAttempts" : Int32,
-      "TumblingWindowInSeconds" : Int32,
+      "MaximumRetryAttempts" : Int16,
+      "TumblingWindowInSeconds" : UInt16,
       "FunctionResponseTypes" : Array(String)
     )
 
@@ -6018,8 +6018,8 @@ module Aws::Lambda
       "Handler" : String,
       "CodeSize" : Int64,
       "Description" : String,
-      "Timeout" : Int32,
-      "MemorySize" : Int32,
+      "Timeout" : UInt32,
+      "MemorySize" : UInt16,
       "LastModified" : (String | UInt64 | Time)?,
       "CodeSha256" : String,
       "Version" : String,
@@ -6047,8 +6047,8 @@ module Aws::Lambda
     alias FunctionEventInvokeConfig = NamedTuple(
       "LastModified" : (String | UInt64 | Time)?,
       "FunctionArn" : String,
-      "MaximumRetryAttempts" : Int32,
-      "MaximumEventAgeInSeconds" : Int32,
+      "MaximumRetryAttempts" : UInt8,
+      "MaximumEventAgeInSeconds" : UInt16,
       "DestinationConfig" : DestinationConfig
     )
 
@@ -6104,7 +6104,7 @@ module Aws::Lambda
     )
 
     alias GetFunctionConcurrencyResponse = NamedTuple(
-      "ReservedConcurrentExecutions" : Int32
+      "ReservedConcurrentExecutions" : UInt32
     )
 
     alias GetFunctionConfigurationRequest = NamedTuple(
@@ -6175,9 +6175,9 @@ module Aws::Lambda
     )
 
     alias GetProvisionedConcurrencyConfigResponse = NamedTuple(
-      "RequestedProvisionedConcurrentExecutions" : Int32,
-      "AvailableProvisionedConcurrentExecutions" : Int32,
-      "AllocatedProvisionedConcurrentExecutions" : Int32,
+      "RequestedProvisionedConcurrentExecutions" : UInt32,
+      "AvailableProvisionedConcurrentExecutions" : UInt32,
+      "AllocatedProvisionedConcurrentExecutions" : UInt32,
       "Status" : String,
       "StatusReason" : String,
       "LastModified" : (String | UInt64 | Time)?
@@ -6359,7 +6359,7 @@ module Aws::Lambda
       "FunctionName" : String,
       "FunctionVersion" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListAliasesResponse = NamedTuple(
@@ -6369,7 +6369,7 @@ module Aws::Lambda
 
     alias ListCodeSigningConfigsRequest = NamedTuple(
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListCodeSigningConfigsResponse = NamedTuple(
@@ -6381,7 +6381,7 @@ module Aws::Lambda
       "EventSourceArn" : String,
       "FunctionName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListEventSourceMappingsResponse = NamedTuple(
@@ -6392,7 +6392,7 @@ module Aws::Lambda
     alias ListFunctionEventInvokeConfigsRequest = NamedTuple(
       "FunctionName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt8
     )
 
     alias ListFunctionEventInvokeConfigsResponse = NamedTuple(
@@ -6403,7 +6403,7 @@ module Aws::Lambda
     alias ListFunctionsByCodeSigningConfigRequest = NamedTuple(
       "CodeSigningConfigArn" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListFunctionsByCodeSigningConfigResponse = NamedTuple(
@@ -6415,7 +6415,7 @@ module Aws::Lambda
       "MasterRegion" : String,
       "FunctionVersion" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListFunctionsResponse = NamedTuple(
@@ -6427,7 +6427,7 @@ module Aws::Lambda
       "CompatibleRuntime" : String,
       "LayerName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt8
     )
 
     alias ListLayerVersionsResponse = NamedTuple(
@@ -6438,7 +6438,7 @@ module Aws::Lambda
     alias ListLayersRequest = NamedTuple(
       "CompatibleRuntime" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt8
     )
 
     alias ListLayersResponse = NamedTuple(
@@ -6449,7 +6449,7 @@ module Aws::Lambda
     alias ListProvisionedConcurrencyConfigsRequest = NamedTuple(
       "FunctionName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt8
     )
 
     alias ListProvisionedConcurrencyConfigsResponse = NamedTuple(
@@ -6468,7 +6468,7 @@ module Aws::Lambda
     alias ListVersionsByFunctionRequest = NamedTuple(
       "FunctionName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListVersionsByFunctionResponse = NamedTuple(
@@ -6484,25 +6484,25 @@ module Aws::Lambda
 
     alias MasterRegion = String
 
-    alias MaxFunctionEventInvokeConfigListItems = Int32
+    alias MaxFunctionEventInvokeConfigListItems = UInt8
 
-    alias MaxLayerListItems = Int32
+    alias MaxLayerListItems = UInt8
 
-    alias MaxListItems = Int32
+    alias MaxListItems = UInt16
 
-    alias MaxProvisionedConcurrencyConfigListItems = Int32
+    alias MaxProvisionedConcurrencyConfigListItems = UInt8
 
-    alias MaximumBatchingWindowInSeconds = Int32
+    alias MaximumBatchingWindowInSeconds = UInt16
 
-    alias MaximumEventAgeInSeconds = Int32
+    alias MaximumEventAgeInSeconds = UInt16
 
     alias MaximumRecordAgeInSeconds = Int32
 
-    alias MaximumRetryAttempts = Int32
+    alias MaximumRetryAttempts = UInt8
 
-    alias MaximumRetryAttemptsEventSourceMapping = Int32
+    alias MaximumRetryAttemptsEventSourceMapping = Int16
 
-    alias MemorySize = Int32
+    alias MemorySize = UInt16
 
     alias NameSpacedFunctionArn = String
 
@@ -6510,7 +6510,7 @@ module Aws::Lambda
 
     alias NamespacedStatementId = String
 
-    alias NonNegativeInteger = Int32
+    alias NonNegativeInteger = UInt32
 
     alias OnFailure = NamedTuple(
       "Destination" : String
@@ -6524,14 +6524,14 @@ module Aws::Lambda
 
     alias PackageType = String
 
-    alias ParallelizationFactor = Int32
+    alias ParallelizationFactor = UInt8
 
     alias PolicyLengthExceededException = NamedTuple(
       "Type" : String,
       "message" : String
     )
 
-    alias PositiveInteger = Int32
+    alias PositiveInteger = UInt32
 
     alias PreconditionFailedException = NamedTuple(
       "Type" : String,
@@ -6544,9 +6544,9 @@ module Aws::Lambda
 
     alias ProvisionedConcurrencyConfigListItem = NamedTuple(
       "FunctionArn" : String,
-      "RequestedProvisionedConcurrentExecutions" : Int32,
-      "AvailableProvisionedConcurrentExecutions" : Int32,
-      "AllocatedProvisionedConcurrentExecutions" : Int32,
+      "RequestedProvisionedConcurrentExecutions" : UInt32,
+      "AvailableProvisionedConcurrentExecutions" : UInt32,
+      "AllocatedProvisionedConcurrentExecutions" : UInt32,
       "Status" : String,
       "StatusReason" : String,
       "LastModified" : (String | UInt64 | Time)?
@@ -6597,27 +6597,27 @@ module Aws::Lambda
 
     alias PutFunctionConcurrencyRequest = NamedTuple(
       "FunctionName" : String,
-      "ReservedConcurrentExecutions" : Int32
+      "ReservedConcurrentExecutions" : UInt32
     )
 
     alias PutFunctionEventInvokeConfigRequest = NamedTuple(
       "FunctionName" : String,
       "Qualifier" : String,
-      "MaximumRetryAttempts" : Int32,
-      "MaximumEventAgeInSeconds" : Int32,
+      "MaximumRetryAttempts" : UInt8,
+      "MaximumEventAgeInSeconds" : UInt16,
       "DestinationConfig" : DestinationConfig
     )
 
     alias PutProvisionedConcurrencyConfigRequest = NamedTuple(
       "FunctionName" : String,
       "Qualifier" : String,
-      "ProvisionedConcurrentExecutions" : Int32
+      "ProvisionedConcurrentExecutions" : UInt32
     )
 
     alias PutProvisionedConcurrencyConfigResponse = NamedTuple(
-      "RequestedProvisionedConcurrentExecutions" : Int32,
-      "AvailableProvisionedConcurrentExecutions" : Int32,
-      "AllocatedProvisionedConcurrentExecutions" : Int32,
+      "RequestedProvisionedConcurrentExecutions" : UInt32,
+      "AvailableProvisionedConcurrentExecutions" : UInt32,
+      "AllocatedProvisionedConcurrentExecutions" : UInt32,
       "Status" : String,
       "StatusReason" : String,
       "LastModified" : (String | UInt64 | Time)?
@@ -6648,7 +6648,7 @@ module Aws::Lambda
       "message" : String
     )
 
-    alias ReservedConcurrentExecutions = Int32
+    alias ReservedConcurrentExecutions = UInt32
 
     alias ResourceArn = String
 
@@ -6746,7 +6746,7 @@ module Aws::Lambda
 
     alias ThrottleReason = String
 
-    alias Timeout = Int32
+    alias Timeout = UInt32
 
     alias Timestamp = String | UInt64 | Time
 
@@ -6771,11 +6771,11 @@ module Aws::Lambda
 
     alias TracingMode = String
 
-    alias TumblingWindowInSeconds = Int32
+    alias TumblingWindowInSeconds = UInt16
 
     alias URI = String
 
-    alias UnreservedConcurrentExecutions = Int32
+    alias UnreservedConcurrentExecutions = UInt32
 
     alias UnsupportedMediaTypeException = NamedTuple(
       "Type" : String,
@@ -6811,15 +6811,15 @@ module Aws::Lambda
       "UUID" : String,
       "FunctionName" : String,
       "Enabled" : Bool,
-      "BatchSize" : Int32,
-      "MaximumBatchingWindowInSeconds" : Int32,
+      "BatchSize" : UInt16,
+      "MaximumBatchingWindowInSeconds" : UInt16,
       "DestinationConfig" : DestinationConfig,
       "MaximumRecordAgeInSeconds" : Int32,
       "BisectBatchOnFunctionError" : Bool,
-      "MaximumRetryAttempts" : Int32,
-      "ParallelizationFactor" : Int32,
+      "MaximumRetryAttempts" : Int16,
+      "ParallelizationFactor" : UInt8,
       "SourceAccessConfigurations" : Array(SourceAccessConfiguration),
-      "TumblingWindowInSeconds" : Int32,
+      "TumblingWindowInSeconds" : UInt16,
       "FunctionResponseTypes" : Array(String)
     )
 
@@ -6840,8 +6840,8 @@ module Aws::Lambda
       "Role" : String,
       "Handler" : String,
       "Description" : String,
-      "Timeout" : Int32,
-      "MemorySize" : Int32,
+      "Timeout" : UInt32,
+      "MemorySize" : UInt16,
       "VpcConfig" : VpcConfig,
       "Environment" : Environment,
       "Runtime" : String,
@@ -6857,8 +6857,8 @@ module Aws::Lambda
     alias UpdateFunctionEventInvokeConfigRequest = NamedTuple(
       "FunctionName" : String,
       "Qualifier" : String,
-      "MaximumRetryAttempts" : Int32,
-      "MaximumEventAgeInSeconds" : Int32,
+      "MaximumRetryAttempts" : UInt8,
+      "MaximumEventAgeInSeconds" : UInt16,
       "DestinationConfig" : DestinationConfig
     )
 

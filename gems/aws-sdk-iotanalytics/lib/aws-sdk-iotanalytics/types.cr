@@ -4262,7 +4262,7 @@ module Aws::IoTAnalytics
       include Aws::Structure
     end
 
-    alias ActivityBatchSize = Int32
+    alias ActivityBatchSize = UInt16
 
     alias ActivityName = String
 
@@ -4643,7 +4643,7 @@ module Aws::IoTAnalytics
     )
 
     alias DeltaTimeSessionWindowConfiguration = NamedTuple(
-      "timeoutInMinutes" : Int32
+      "timeoutInMinutes" : UInt8
     )
 
     alias DescribeChannelRequest = NamedTuple(
@@ -4782,7 +4782,7 @@ module Aws::IoTAnalytics
     alias LambdaActivity = NamedTuple(
       "name" : String,
       "lambdaName" : String,
-      "batchSize" : Int32,
+      "batchSize" : UInt16,
       "next" : String
     )
 
@@ -4807,7 +4807,7 @@ module Aws::IoTAnalytics
 
     alias ListChannelsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListChannelsResponse = NamedTuple(
@@ -4818,7 +4818,7 @@ module Aws::IoTAnalytics
     alias ListDatasetContentsRequest = NamedTuple(
       "datasetName" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "scheduledOnOrAfter" : (String | UInt64 | Time)?,
       "scheduledBefore" : (String | UInt64 | Time)?
     )
@@ -4830,7 +4830,7 @@ module Aws::IoTAnalytics
 
     alias ListDatasetsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDatasetsResponse = NamedTuple(
@@ -4840,7 +4840,7 @@ module Aws::IoTAnalytics
 
     alias ListDatastoresRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDatastoresResponse = NamedTuple(
@@ -4850,7 +4850,7 @@ module Aws::IoTAnalytics
 
     alias ListPipelinesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListPipelinesResponse = NamedTuple(
@@ -4887,11 +4887,11 @@ module Aws::IoTAnalytics
 
     alias MathExpression = String
 
-    alias MaxMessages = Int32
+    alias MaxMessages = UInt8
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MaxVersions = Int32
+    alias MaxVersions = UInt16
 
     alias Message = NamedTuple(
       "messageId" : String,
@@ -4999,7 +4999,7 @@ module Aws::IoTAnalytics
 
     alias ResourceConfiguration = NamedTuple(
       "computeType" : String,
-      "volumeSizeInGB" : Int32
+      "volumeSizeInGB" : UInt8
     )
 
     alias ResourceNotFoundException = NamedTuple(
@@ -5008,10 +5008,10 @@ module Aws::IoTAnalytics
 
     alias RetentionPeriod = NamedTuple(
       "unlimited" : Bool,
-      "numberOfDays" : Int32
+      "numberOfDays" : UInt32
     )
 
-    alias RetentionPeriodInDays = Int32
+    alias RetentionPeriodInDays = UInt32
 
     alias RoleArn = String
 
@@ -5040,7 +5040,7 @@ module Aws::IoTAnalytics
 
     alias SampleChannelDataRequest = NamedTuple(
       "channelName" : String,
-      "maxMessages" : Int32,
+      "maxMessages" : UInt8,
       "startTime" : (String | UInt64 | Time)?,
       "endTime" : (String | UInt64 | Time)?
     )
@@ -5085,7 +5085,7 @@ module Aws::IoTAnalytics
       "message" : String
     )
 
-    alias SessionTimeoutInMinutes = Int32
+    alias SessionTimeoutInMinutes = UInt8
 
     alias SizeInBytes = Float64
 
@@ -5200,10 +5200,10 @@ module Aws::IoTAnalytics
 
     alias VersioningConfiguration = NamedTuple(
       "unlimited" : Bool,
-      "maxVersions" : Int32
+      "maxVersions" : UInt16
     )
 
-    alias VolumeSizeInGB = Int32
+    alias VolumeSizeInGB = UInt8
 
     alias errorMessage = String
 

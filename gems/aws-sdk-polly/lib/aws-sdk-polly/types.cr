@@ -1314,7 +1314,7 @@ module Aws::Polly
     )
 
     alias ListSpeechSynthesisTasksInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Status" : String
     )
@@ -1336,7 +1336,7 @@ module Aws::Polly
       "message" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 

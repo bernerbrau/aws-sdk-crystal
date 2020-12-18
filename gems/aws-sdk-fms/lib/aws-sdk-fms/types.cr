@@ -2529,7 +2529,7 @@ module Aws::FMS
     alias App = NamedTuple(
       "AppName" : String,
       "Protocol" : String,
-      "Port" : Int64
+      "Port" : UInt16
     )
 
     alias AppsList = Array(App)
@@ -2625,7 +2625,7 @@ module Aws::FMS
 
     alias EvaluationResult = NamedTuple(
       "ComplianceStatus" : String,
-      "ViolatorCount" : Int64,
+      "ViolatorCount" : UInt64,
       "EvaluationLimitExceeded" : Bool
     )
 
@@ -2683,7 +2683,7 @@ module Aws::FMS
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetProtectionStatusResponse = NamedTuple(
@@ -2714,7 +2714,7 @@ module Aws::FMS
       "ViolationDetail" : ViolationDetail
     )
 
-    alias IPPortNumber = Int64
+    alias IPPortNumber = UInt16
 
     alias InternalErrorException = NamedTuple(
       "Message" : String
@@ -2743,7 +2743,7 @@ module Aws::FMS
     alias ListAppsListsRequest = NamedTuple(
       "DefaultLists" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAppsListsResponse = NamedTuple(
@@ -2754,7 +2754,7 @@ module Aws::FMS
     alias ListComplianceStatusRequest = NamedTuple(
       "PolicyId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListComplianceStatusResponse = NamedTuple(
@@ -2766,7 +2766,7 @@ module Aws::FMS
 
     alias ListMemberAccountsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMemberAccountsResponse = NamedTuple(
@@ -2776,7 +2776,7 @@ module Aws::FMS
 
     alias ListPoliciesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPoliciesResponse = NamedTuple(
@@ -2787,7 +2787,7 @@ module Aws::FMS
     alias ListProtocolsListsRequest = NamedTuple(
       "DefaultLists" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProtocolsListsResponse = NamedTuple(
@@ -2849,7 +2849,7 @@ module Aws::FMS
 
     alias NetworkFirewallResourceName = String
 
-    alias PaginationMaxResults = Int32
+    alias PaginationMaxResults = UInt8
 
     alias PaginationToken = String
 
@@ -2987,7 +2987,7 @@ module Aws::FMS
 
     alias ResourceArn = String
 
-    alias ResourceCount = Int64
+    alias ResourceCount = UInt64
 
     alias ResourceId = String
 
@@ -3040,8 +3040,8 @@ module Aws::FMS
       "IPV6Range" : String,
       "PrefixListId" : String,
       "Protocol" : String,
-      "FromPort" : Int64,
-      "ToPort" : Int64
+      "FromPort" : UInt16,
+      "ToPort" : UInt16
     )
 
     alias SecurityServicePolicyData = NamedTuple(
@@ -3061,12 +3061,12 @@ module Aws::FMS
     alias StatelessRuleGroup = NamedTuple(
       "RuleGroupName" : String,
       "ResourceId" : String,
-      "Priority" : Int32
+      "Priority" : UInt16
     )
 
     alias StatelessRuleGroupList = Array(StatelessRuleGroup)
 
-    alias StatelessRuleGroupPriority = Int32
+    alias StatelessRuleGroupPriority = UInt16
 
     alias Tag = NamedTuple(
       "Key" : String,

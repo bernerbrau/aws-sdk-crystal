@@ -5091,7 +5091,7 @@ module Aws::IoTEvents
     alias ListDetectorModelVersionsRequest = NamedTuple(
       "detectorModelName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDetectorModelVersionsResponse = NamedTuple(
@@ -5101,7 +5101,7 @@ module Aws::IoTEvents
 
     alias ListDetectorModelsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDetectorModelsResponse = NamedTuple(
@@ -5111,7 +5111,7 @@ module Aws::IoTEvents
 
     alias ListInputsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListInputsResponse = NamedTuple(
@@ -5140,7 +5140,7 @@ module Aws::IoTEvents
 
     alias MQTTTopic = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 
@@ -5193,7 +5193,7 @@ module Aws::IoTEvents
       "payload" : Payload
     )
 
-    alias Seconds = Int32
+    alias Seconds = UInt32
 
     alias ServiceUnavailableException = NamedTuple(
       "message" : String
@@ -5201,7 +5201,7 @@ module Aws::IoTEvents
 
     alias SetTimerAction = NamedTuple(
       "timerName" : String,
-      "seconds" : Int32,
+      "seconds" : UInt32,
       "durationExpression" : String
     )
 

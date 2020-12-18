@@ -1128,7 +1128,7 @@ module Aws::CodeStarNotifications
     alias ListEventTypesRequest = NamedTuple(
       "Filters" : Array(ListEventTypesFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListEventTypesResult = NamedTuple(
@@ -1150,7 +1150,7 @@ module Aws::CodeStarNotifications
     alias ListNotificationRulesRequest = NamedTuple(
       "Filters" : Array(ListNotificationRulesFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListNotificationRulesResult = NamedTuple(
@@ -1180,7 +1180,7 @@ module Aws::CodeStarNotifications
     alias ListTargetsRequest = NamedTuple(
       "Filters" : Array(ListTargetsFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTargetsResult = NamedTuple(
@@ -1188,7 +1188,7 @@ module Aws::CodeStarNotifications
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 

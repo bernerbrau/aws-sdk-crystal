@@ -2076,7 +2076,7 @@ module Aws::Honeycode
       "appId" : String,
       "screenId" : String,
       "variables" : Hash(String,VariableValue),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -2150,7 +2150,7 @@ module Aws::Honeycode
       "workbookId" : String,
       "tableId" : String,
       "rowIds" : Array(String),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -2164,7 +2164,7 @@ module Aws::Honeycode
 
     alias ListTablesRequest = NamedTuple(
       "workbookId" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -2174,7 +2174,7 @@ module Aws::Honeycode
       "workbookCursor" : Int64
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Name = String
 
@@ -2184,7 +2184,7 @@ module Aws::Honeycode
       "workbookId" : String,
       "tableId" : String,
       "filterFormula" : Filter,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -2241,10 +2241,10 @@ module Aws::Honeycode
       "message" : String
     )
 
-    alias SourceDataColumnIndex = Int32
+    alias SourceDataColumnIndex = UInt32
 
     alias SourceDataColumnProperties = NamedTuple(
-      "columnIndex" : Int32
+      "columnIndex" : UInt32
     )
 
     alias StartTableDataImportJobRequest = NamedTuple(

@@ -2211,7 +2211,7 @@ module Aws::ComprehendMedical
     alias ListEntitiesDetectionV2JobsRequest = NamedTuple(
       "Filter" : ComprehendMedicalAsyncJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListEntitiesDetectionV2JobsResponse = NamedTuple(
@@ -2222,7 +2222,7 @@ module Aws::ComprehendMedical
     alias ListICD10CMInferenceJobsRequest = NamedTuple(
       "Filter" : ComprehendMedicalAsyncJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListICD10CMInferenceJobsResponse = NamedTuple(
@@ -2233,7 +2233,7 @@ module Aws::ComprehendMedical
     alias ListPHIDetectionJobsRequest = NamedTuple(
       "Filter" : ComprehendMedicalAsyncJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListPHIDetectionJobsResponse = NamedTuple(
@@ -2244,7 +2244,7 @@ module Aws::ComprehendMedical
     alias ListRxNormInferenceJobsRequest = NamedTuple(
       "Filter" : ComprehendMedicalAsyncJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListRxNormInferenceJobsResponse = NamedTuple(
@@ -2254,7 +2254,7 @@ module Aws::ComprehendMedical
 
     alias ManifestFilePath = String
 
-    alias MaxResultsInteger = Int32
+    alias MaxResultsInteger = UInt16
 
     alias ModelVersion = String
 

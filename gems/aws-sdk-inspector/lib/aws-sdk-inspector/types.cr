@@ -3358,7 +3358,7 @@ module Aws::Inspector
       "name" : String,
       "assessmentTemplateArn" : String,
       "state" : String,
-      "durationInSeconds" : Int32,
+      "durationInSeconds" : UInt32,
       "rulesPackageArns" : Array(String),
       "userAttributesForFindings" : Array(Attribute),
       "createdAt" : String | UInt64 | Time,
@@ -3383,7 +3383,7 @@ module Aws::Inspector
 
     alias AssessmentRunAgentList = Array(AssessmentRunAgent)
 
-    alias AssessmentRunDuration = Int32
+    alias AssessmentRunDuration = UInt32
 
     alias AssessmentRunFilter = NamedTuple(
       "namePattern" : String,
@@ -3454,7 +3454,7 @@ module Aws::Inspector
       "arn" : String,
       "name" : String,
       "assessmentTargetArn" : String,
-      "durationInSeconds" : Int32,
+      "durationInSeconds" : UInt32,
       "rulesPackageArns" : Array(String),
       "userAttributesForFindings" : Array(Attribute),
       "lastAssessmentRunArn" : String,
@@ -3475,7 +3475,7 @@ module Aws::Inspector
     alias AssessmentTemplateRulesPackageArnList = Array(String)
 
     alias AssetAttributes = NamedTuple(
-      "schemaVersion" : Int32,
+      "schemaVersion" : UInt32,
       "agentId" : String,
       "autoScalingGroup" : String,
       "amiId" : String,
@@ -3520,7 +3520,7 @@ module Aws::Inspector
     alias CreateAssessmentTemplateRequest = NamedTuple(
       "assessmentTargetArn" : String,
       "assessmentTemplateName" : String,
-      "durationInSeconds" : Int32,
+      "durationInSeconds" : UInt32,
       "rulesPackageArns" : Array(String),
       "userAttributesForFindings" : Array(Attribute)
     )
@@ -3630,8 +3630,8 @@ module Aws::Inspector
     )
 
     alias DurationRange = NamedTuple(
-      "minSeconds" : Int32,
-      "maxSeconds" : Int32
+      "minSeconds" : UInt32,
+      "maxSeconds" : UInt32
     )
 
     alias ErrorMessage = String
@@ -3677,7 +3677,7 @@ module Aws::Inspector
 
     alias Finding = NamedTuple(
       "arn" : String,
-      "schemaVersion" : Int32,
+      "schemaVersion" : UInt32,
       "service" : String,
       "serviceAttributes" : InspectorServiceAttributes,
       "assetType" : String,
@@ -3688,7 +3688,7 @@ module Aws::Inspector
       "recommendation" : String,
       "severity" : String,
       "numericSeverity" : Float64,
-      "confidence" : Int32,
+      "confidence" : UInt8,
       "indicatorOfCompromise" : Bool,
       "attributes" : Array(Attribute),
       "userAttributes" : Array(Attribute),
@@ -3751,7 +3751,7 @@ module Aws::Inspector
     alias InspectorEvent = String
 
     alias InspectorServiceAttributes = NamedTuple(
-      "schemaVersion" : Int32,
+      "schemaVersion" : UInt32,
       "assessmentRunArn" : String,
       "rulesPackageArn" : String
     )
@@ -3777,7 +3777,7 @@ module Aws::Inspector
       "canRetry" : Bool
     )
 
-    alias IocConfidence = Int32
+    alias IocConfidence = UInt8
 
     alias Ipv4Address = String
 
@@ -3937,7 +3937,7 @@ module Aws::Inspector
 
     alias NumericSeverity = Float64
 
-    alias NumericVersion = Int32
+    alias NumericVersion = UInt32
 
     alias OperatingSystem = String
 

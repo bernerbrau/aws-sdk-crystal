@@ -5672,15 +5672,15 @@ module Aws::Firehose
 
     alias AWSKMSKeyARN = String
 
-    alias BlockSizeBytes = Int32
+    alias BlockSizeBytes = UInt32
 
     alias BooleanObject = Bool
 
     alias BucketARN = String
 
     alias BufferingHints = NamedTuple(
-      "SizeInMBs" : Int32,
-      "IntervalInSeconds" : Int32
+      "SizeInMBs" : UInt8,
+      "IntervalInSeconds" : UInt16
     )
 
     alias CloudWatchLoggingOptions = NamedTuple(
@@ -5796,11 +5796,11 @@ module Aws::Firehose
 
     alias DescribeDeliveryStreamInput = NamedTuple(
       "DeliveryStreamName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "ExclusiveStartDestinationId" : String
     )
 
-    alias DescribeDeliveryStreamInputLimit = Int32
+    alias DescribeDeliveryStreamInputLimit = UInt16
 
     alias DescribeDeliveryStreamOutput = NamedTuple(
       "DeliveryStreamDescription" : DeliveryStreamDescription
@@ -5826,13 +5826,13 @@ module Aws::Firehose
     alias DestinationId = String
 
     alias ElasticsearchBufferingHints = NamedTuple(
-      "IntervalInSeconds" : Int32,
-      "SizeInMBs" : Int32
+      "IntervalInSeconds" : UInt16,
+      "SizeInMBs" : UInt8
     )
 
-    alias ElasticsearchBufferingIntervalInSeconds = Int32
+    alias ElasticsearchBufferingIntervalInSeconds = UInt16
 
-    alias ElasticsearchBufferingSizeInMBs = Int32
+    alias ElasticsearchBufferingSizeInMBs = UInt8
 
     alias ElasticsearchClusterEndpoint = String
 
@@ -5888,10 +5888,10 @@ module Aws::Firehose
 
     alias ElasticsearchIndexRotationPeriod = String
 
-    alias ElasticsearchRetryDurationInSeconds = Int32
+    alias ElasticsearchRetryDurationInSeconds = UInt16
 
     alias ElasticsearchRetryOptions = NamedTuple(
-      "DurationInSeconds" : Int32
+      "DurationInSeconds" : UInt16
     )
 
     alias ElasticsearchS3BackupMode = String
@@ -5959,7 +5959,7 @@ module Aws::Firehose
       "Details" : String
     )
 
-    alias HECAcknowledgmentTimeoutInSeconds = Int32
+    alias HECAcknowledgmentTimeoutInSeconds = UInt16
 
     alias HECEndpoint = String
 
@@ -5978,13 +5978,13 @@ module Aws::Firehose
     alias HttpEndpointAttributeValue = String
 
     alias HttpEndpointBufferingHints = NamedTuple(
-      "SizeInMBs" : Int32,
-      "IntervalInSeconds" : Int32
+      "SizeInMBs" : UInt8,
+      "IntervalInSeconds" : UInt16
     )
 
-    alias HttpEndpointBufferingIntervalInSeconds = Int32
+    alias HttpEndpointBufferingIntervalInSeconds = UInt16
 
-    alias HttpEndpointBufferingSizeInMBs = Int32
+    alias HttpEndpointBufferingSizeInMBs = UInt8
 
     alias HttpEndpointCommonAttribute = NamedTuple(
       "AttributeName" : String,
@@ -6047,10 +6047,10 @@ module Aws::Firehose
       "CommonAttributes" : Array(HttpEndpointCommonAttribute)
     )
 
-    alias HttpEndpointRetryDurationInSeconds = Int32
+    alias HttpEndpointRetryDurationInSeconds = UInt16
 
     alias HttpEndpointRetryOptions = NamedTuple(
-      "DurationInSeconds" : Int32
+      "DurationInSeconds" : UInt16
     )
 
     alias HttpEndpointS3BackupMode = String
@@ -6061,7 +6061,7 @@ module Aws::Firehose
       "Deserializer" : Deserializer
     )
 
-    alias IntervalInSeconds = Int32
+    alias IntervalInSeconds = UInt16
 
     alias InvalidArgumentException = NamedTuple(
       "message" : String
@@ -6096,12 +6096,12 @@ module Aws::Firehose
     )
 
     alias ListDeliveryStreamsInput = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "DeliveryStreamType" : String,
       "ExclusiveStartDeliveryStreamName" : String
     )
 
-    alias ListDeliveryStreamsInputLimit = Int32
+    alias ListDeliveryStreamsInputLimit = UInt16
 
     alias ListDeliveryStreamsOutput = NamedTuple(
       "DeliveryStreamNames" : Array(String),
@@ -6115,10 +6115,10 @@ module Aws::Firehose
     alias ListTagsForDeliveryStreamInput = NamedTuple(
       "DeliveryStreamName" : String,
       "ExclusiveStartTagKey" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
-    alias ListTagsForDeliveryStreamInputLimit = Int32
+    alias ListTagsForDeliveryStreamInputLimit = UInt8
 
     alias ListTagsForDeliveryStreamOutput = NamedTuple(
       "Tags" : Array(Tag),
@@ -6137,7 +6137,7 @@ module Aws::Firehose
 
     alias NonEmptyStringWithoutWhitespace = String
 
-    alias NonNegativeIntegerObject = Int32
+    alias NonNegativeIntegerObject = UInt32
 
     alias OpenXJsonSerDe = NamedTuple(
       "ConvertDotsInJsonKeysToUnderscores" : Bool,
@@ -6149,12 +6149,12 @@ module Aws::Firehose
 
     alias OrcFormatVersion = String
 
-    alias OrcRowIndexStride = Int32
+    alias OrcRowIndexStride = UInt32
 
     alias OrcSerDe = NamedTuple(
-      "StripeSizeBytes" : Int32,
-      "BlockSizeBytes" : Int32,
-      "RowIndexStride" : Int32,
+      "StripeSizeBytes" : UInt32,
+      "BlockSizeBytes" : UInt32,
+      "RowIndexStride" : UInt32,
       "EnablePadding" : Bool,
       "PaddingTolerance" : Float64,
       "Compression" : String,
@@ -6164,7 +6164,7 @@ module Aws::Firehose
       "FormatVersion" : String
     )
 
-    alias OrcStripeSizeBytes = Int32
+    alias OrcStripeSizeBytes = UInt32
 
     alias OutputFormatConfiguration = NamedTuple(
       "Serializer" : Serializer
@@ -6172,14 +6172,14 @@ module Aws::Firehose
 
     alias ParquetCompression = String
 
-    alias ParquetPageSizeBytes = Int32
+    alias ParquetPageSizeBytes = UInt32
 
     alias ParquetSerDe = NamedTuple(
-      "BlockSizeBytes" : Int32,
-      "PageSizeBytes" : Int32,
+      "BlockSizeBytes" : UInt32,
+      "PageSizeBytes" : UInt32,
       "Compression" : String,
       "EnableDictionaryCompression" : Bool,
-      "MaxPaddingBytes" : Int32,
+      "MaxPaddingBytes" : UInt32,
       "WriterVersion" : String
     )
 
@@ -6222,7 +6222,7 @@ module Aws::Firehose
     )
 
     alias PutRecordBatchOutput = NamedTuple(
-      "FailedPutCount" : Int32,
+      "FailedPutCount" : UInt32,
       "Encrypted" : Bool,
       "RequestResponses" : Array(PutRecordBatchResponseEntry)
     )
@@ -6294,10 +6294,10 @@ module Aws::Firehose
       "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
-    alias RedshiftRetryDurationInSeconds = Int32
+    alias RedshiftRetryDurationInSeconds = UInt16
 
     alias RedshiftRetryOptions = NamedTuple(
-      "DurationInSeconds" : Int32
+      "DurationInSeconds" : UInt16
     )
 
     alias RedshiftS3BackupMode = String
@@ -6367,7 +6367,7 @@ module Aws::Firehose
       "message" : String
     )
 
-    alias SizeInMBs = Int32
+    alias SizeInMBs = UInt8
 
     alias SourceDescription = NamedTuple(
       "KinesisStreamSourceDescription" : KinesisStreamSourceDescription
@@ -6377,7 +6377,7 @@ module Aws::Firehose
       "HECEndpoint" : String,
       "HECEndpointType" : String,
       "HECToken" : String,
-      "HECAcknowledgmentTimeoutInSeconds" : Int32,
+      "HECAcknowledgmentTimeoutInSeconds" : UInt16,
       "RetryOptions" : SplunkRetryOptions,
       "S3BackupMode" : String,
       "S3Configuration" : S3DestinationConfiguration,
@@ -6389,7 +6389,7 @@ module Aws::Firehose
       "HECEndpoint" : String,
       "HECEndpointType" : String,
       "HECToken" : String,
-      "HECAcknowledgmentTimeoutInSeconds" : Int32,
+      "HECAcknowledgmentTimeoutInSeconds" : UInt16,
       "RetryOptions" : SplunkRetryOptions,
       "S3BackupMode" : String,
       "S3DestinationDescription" : S3DestinationDescription,
@@ -6401,7 +6401,7 @@ module Aws::Firehose
       "HECEndpoint" : String,
       "HECEndpointType" : String,
       "HECToken" : String,
-      "HECAcknowledgmentTimeoutInSeconds" : Int32,
+      "HECAcknowledgmentTimeoutInSeconds" : UInt16,
       "RetryOptions" : SplunkRetryOptions,
       "S3BackupMode" : String,
       "S3Update" : S3DestinationUpdate,
@@ -6409,10 +6409,10 @@ module Aws::Firehose
       "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
-    alias SplunkRetryDurationInSeconds = Int32
+    alias SplunkRetryDurationInSeconds = UInt16
 
     alias SplunkRetryOptions = NamedTuple(
-      "DurationInSeconds" : Int32
+      "DurationInSeconds" : UInt16
     )
 
     alias SplunkS3BackupMode = String

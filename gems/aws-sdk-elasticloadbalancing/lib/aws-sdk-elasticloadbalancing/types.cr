@@ -2475,7 +2475,7 @@ module Aws::ElasticLoadBalancing
     alias AvailabilityZones = Array(String)
 
     alias BackendServerDescription = NamedTuple(
-      "InstancePort" : Int32,
+      "InstancePort" : UInt16,
       "PolicyNames" : Array(String)
     )
 
@@ -2506,7 +2506,7 @@ module Aws::ElasticLoadBalancing
     alias ConnectionDrainingTimeout = Int32
 
     alias ConnectionSettings = NamedTuple(
-      "IdleTimeout" : Int32
+      "IdleTimeout" : UInt16
     )
 
     alias CookieExpirationPeriod = Int64
@@ -2621,7 +2621,7 @@ module Aws::ElasticLoadBalancing
     alias DescribeAccessPointsInput = NamedTuple(
       "LoadBalancerNames" : Array(String),
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeAccessPointsOutput = NamedTuple(
@@ -2631,7 +2631,7 @@ module Aws::ElasticLoadBalancing
 
     alias DescribeAccountLimitsInput = NamedTuple(
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeAccountLimitsOutput = NamedTuple(
@@ -2712,21 +2712,21 @@ module Aws::ElasticLoadBalancing
 
     alias HealthCheck = NamedTuple(
       "Target" : String,
-      "Interval" : Int32,
-      "Timeout" : Int32,
-      "UnhealthyThreshold" : Int32,
-      "HealthyThreshold" : Int32
+      "Interval" : UInt16,
+      "Timeout" : UInt8,
+      "UnhealthyThreshold" : UInt8,
+      "HealthyThreshold" : UInt8
     )
 
-    alias HealthCheckInterval = Int32
+    alias HealthCheckInterval = UInt16
 
     alias HealthCheckTarget = String
 
-    alias HealthCheckTimeout = Int32
+    alias HealthCheckTimeout = UInt8
 
-    alias HealthyThreshold = Int32
+    alias HealthyThreshold = UInt8
 
-    alias IdleTimeout = Int32
+    alias IdleTimeout = UInt16
 
     alias Instance = NamedTuple(
       "InstanceId" : String
@@ -2734,7 +2734,7 @@ module Aws::ElasticLoadBalancing
 
     alias InstanceId = String
 
-    alias InstancePort = Int32
+    alias InstancePort = UInt16
 
     alias InstanceState = NamedTuple(
       "InstanceId" : String,
@@ -2785,7 +2785,7 @@ module Aws::ElasticLoadBalancing
       "Protocol" : String,
       "LoadBalancerPort" : Int32,
       "InstanceProtocol" : String,
-      "InstancePort" : Int32,
+      "InstancePort" : UInt16,
       "SSLCertificateId" : String
     )
 
@@ -2861,7 +2861,7 @@ module Aws::ElasticLoadBalancing
       
     )
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias Policies = NamedTuple(
       "AppCookieStickinessPolicies" : Array(AppCookieStickinessPolicy),
@@ -3051,7 +3051,7 @@ module Aws::ElasticLoadBalancing
       
     )
 
-    alias UnhealthyThreshold = Int32
+    alias UnhealthyThreshold = UInt8
 
     alias UnsupportedProtocolException = NamedTuple(
       

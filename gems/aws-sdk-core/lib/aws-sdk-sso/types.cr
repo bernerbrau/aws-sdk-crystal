@@ -386,7 +386,7 @@ module Aws::SSO
 
     alias ListAccountRolesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "accessToken" : String,
       "accountId" : String
     )
@@ -398,7 +398,7 @@ module Aws::SSO
 
     alias ListAccountsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "accessToken" : String
     )
 
@@ -411,7 +411,7 @@ module Aws::SSO
       "accessToken" : String
     )
 
-    alias MaxResultType = Int32
+    alias MaxResultType = UInt8
 
     alias NextTokenType = String
 

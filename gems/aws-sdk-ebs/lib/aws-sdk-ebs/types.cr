@@ -814,13 +814,13 @@ module Aws::EBS
     alias AccessDeniedExceptionReason = String
 
     alias Block = NamedTuple(
-      "BlockIndex" : Int32,
+      "BlockIndex" : UInt32,
       "BlockToken" : String
     )
 
     alias BlockData = String | Array(UInt8) | IO
 
-    alias BlockIndex = Int32
+    alias BlockIndex = UInt32
 
     alias BlockSize = Int32
 
@@ -831,14 +831,14 @@ module Aws::EBS
     alias Boolean = Bool
 
     alias ChangedBlock = NamedTuple(
-      "BlockIndex" : Int32,
+      "BlockIndex" : UInt32,
       "FirstBlockToken" : String,
       "SecondBlockToken" : String
     )
 
     alias ChangedBlocks = Array(ChangedBlock)
 
-    alias ChangedBlocksCount = Int32
+    alias ChangedBlocksCount = UInt32
 
     alias Checksum = String
 
@@ -848,7 +848,7 @@ module Aws::EBS
 
     alias CompleteSnapshotRequest = NamedTuple(
       "SnapshotId" : String,
-      "ChangedBlocksCount" : Int32,
+      "ChangedBlocksCount" : UInt32,
       "Checksum" : String,
       "ChecksumAlgorithm" : String,
       "ChecksumAggregationMethod" : String
@@ -874,7 +874,7 @@ module Aws::EBS
 
     alias GetSnapshotBlockRequest = NamedTuple(
       "SnapshotId" : String,
-      "BlockIndex" : Int32,
+      "BlockIndex" : UInt32,
       "BlockToken" : String
     )
 
@@ -897,14 +897,14 @@ module Aws::EBS
       "FirstSnapshotId" : String,
       "SecondSnapshotId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
-      "StartingBlockIndex" : Int32
+      "MaxResults" : UInt16,
+      "StartingBlockIndex" : UInt32
     )
 
     alias ListChangedBlocksResponse = NamedTuple(
       "ChangedBlocks" : Array(ChangedBlock),
       "ExpiryTime" : (String | UInt64 | Time)?,
-      "VolumeSize" : Int64,
+      "VolumeSize" : UInt64,
       "BlockSize" : Int32,
       "NextToken" : String
     )
@@ -912,32 +912,32 @@ module Aws::EBS
     alias ListSnapshotBlocksRequest = NamedTuple(
       "SnapshotId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
-      "StartingBlockIndex" : Int32
+      "MaxResults" : UInt16,
+      "StartingBlockIndex" : UInt32
     )
 
     alias ListSnapshotBlocksResponse = NamedTuple(
       "Blocks" : Array(Block),
       "ExpiryTime" : (String | UInt64 | Time)?,
-      "VolumeSize" : Int64,
+      "VolumeSize" : UInt64,
       "BlockSize" : Int32,
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias OwnerId = String
 
     alias PageToken = String
 
-    alias Progress = Int32
+    alias Progress = UInt8
 
     alias PutSnapshotBlockRequest = NamedTuple(
       "SnapshotId" : String,
-      "BlockIndex" : Int32,
+      "BlockIndex" : UInt32,
       "BlockData" : String | Array(UInt8) | IO,
       "DataLength" : Int32,
-      "Progress" : Int32,
+      "Progress" : UInt8,
       "Checksum" : String,
       "ChecksumAlgorithm" : String
     )
@@ -971,14 +971,14 @@ module Aws::EBS
     alias SnapshotId = String
 
     alias StartSnapshotRequest = NamedTuple(
-      "VolumeSize" : Int64,
+      "VolumeSize" : UInt64,
       "ParentSnapshotId" : String,
       "Tags" : Array(Tag),
       "Description" : String,
       "ClientToken" : String,
       "Encrypted" : Bool,
       "KmsKeyArn" : String,
-      "Timeout" : Int32
+      "Timeout" : UInt8
     )
 
     alias StartSnapshotResponse = NamedTuple(
@@ -987,7 +987,7 @@ module Aws::EBS
       "OwnerId" : String,
       "Status" : String,
       "StartTime" : (String | UInt64 | Time)?,
-      "VolumeSize" : Int64,
+      "VolumeSize" : UInt64,
       "BlockSize" : Int32,
       "Tags" : Array(Tag),
       "ParentSnapshotId" : String,
@@ -1009,7 +1009,7 @@ module Aws::EBS
 
     alias TimeStamp = String | UInt64 | Time
 
-    alias Timeout = Int32
+    alias Timeout = UInt8
 
     alias ValidationException = NamedTuple(
       "Message" : String,
@@ -1018,6 +1018,6 @@ module Aws::EBS
 
     alias ValidationExceptionReason = String
 
-    alias VolumeSize = Int64
+    alias VolumeSize = UInt64
   end
 end

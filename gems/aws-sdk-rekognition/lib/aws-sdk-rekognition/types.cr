@@ -5782,8 +5782,8 @@ module Aws::Rekognition
     )
 
     alias AgeRange = NamedTuple(
-      "Low" : Int32,
-      "High" : Int32
+      "Low" : UInt32,
+      "High" : UInt32
     )
 
     alias Asset = NamedTuple(
@@ -5798,9 +5798,9 @@ module Aws::Rekognition
 
     alias AudioMetadata = NamedTuple(
       "Codec" : String,
-      "DurationMillis" : Int64,
-      "SampleRate" : Int64,
-      "NumberOfChannels" : Int64
+      "DurationMillis" : UInt64,
+      "SampleRate" : UInt64,
+      "NumberOfChannels" : UInt64
     )
 
     alias AudioMetadataList = Array(AudioMetadata)
@@ -5923,7 +5923,7 @@ module Aws::Rekognition
     )
 
     alias CreateCollectionResponse = NamedTuple(
-      "StatusCode" : Int32,
+      "StatusCode" : UInt32,
       "CollectionArn" : String,
       "FaceModelVersion" : String
     )
@@ -5977,7 +5977,7 @@ module Aws::Rekognition
     )
 
     alias DeleteCollectionResponse = NamedTuple(
-      "StatusCode" : Int32
+      "StatusCode" : UInt32
     )
 
     alias DeleteFacesRequest = NamedTuple(
@@ -6018,7 +6018,7 @@ module Aws::Rekognition
     )
 
     alias DescribeCollectionResponse = NamedTuple(
-      "FaceCount" : Int64,
+      "FaceCount" : UInt64,
       "FaceModelVersion" : String,
       "CollectionARN" : String,
       "CreationTimestamp" : (String | UInt64 | Time)?
@@ -6028,7 +6028,7 @@ module Aws::Rekognition
       "ProjectArn" : String,
       "VersionNames" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeProjectVersionsResponse = NamedTuple(
@@ -6038,7 +6038,7 @@ module Aws::Rekognition
 
     alias DescribeProjectsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeProjectsResponse = NamedTuple(
@@ -6066,7 +6066,7 @@ module Aws::Rekognition
     alias DetectCustomLabelsRequest = NamedTuple(
       "ProjectVersionArn" : String,
       "Image" : Image,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "MinConfidence" : Float32
     )
 
@@ -6086,7 +6086,7 @@ module Aws::Rekognition
 
     alias DetectLabelsRequest = NamedTuple(
       "Image" : Image,
-      "MaxLabels" : Int32,
+      "MaxLabels" : UInt32,
       "MinConfidence" : Float32
     )
 
@@ -6270,7 +6270,7 @@ module Aws::Rekognition
 
     alias GetCelebrityRecognitionRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "SortBy" : String
     )
@@ -6285,7 +6285,7 @@ module Aws::Rekognition
 
     alias GetContentModerationRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "SortBy" : String
     )
@@ -6301,7 +6301,7 @@ module Aws::Rekognition
 
     alias GetFaceDetectionRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -6315,7 +6315,7 @@ module Aws::Rekognition
 
     alias GetFaceSearchRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "SortBy" : String
     )
@@ -6330,7 +6330,7 @@ module Aws::Rekognition
 
     alias GetLabelDetectionRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "SortBy" : String
     )
@@ -6346,7 +6346,7 @@ module Aws::Rekognition
 
     alias GetPersonTrackingRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "SortBy" : String
     )
@@ -6361,7 +6361,7 @@ module Aws::Rekognition
 
     alias GetSegmentDetectionRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -6377,7 +6377,7 @@ module Aws::Rekognition
 
     alias GetTextDetectionRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -6453,7 +6453,7 @@ module Aws::Rekognition
       "Image" : Image,
       "ExternalImageId" : String,
       "DetectionAttributes" : Array(String),
-      "MaxFaces" : Int32,
+      "MaxFaces" : UInt32,
       "QualityFilter" : String
     )
 
@@ -6464,7 +6464,7 @@ module Aws::Rekognition
       "UnindexedFaces" : Array(UnindexedFace)
     )
 
-    alias InferenceUnits = Int32
+    alias InferenceUnits = UInt32
 
     alias Instance = NamedTuple(
       "BoundingBox" : BoundingBox,
@@ -6543,7 +6543,7 @@ module Aws::Rekognition
 
     alias ListCollectionsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListCollectionsResponse = NamedTuple(
@@ -6555,7 +6555,7 @@ module Aws::Rekognition
     alias ListFacesRequest = NamedTuple(
       "CollectionId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListFacesResponse = NamedTuple(
@@ -6566,7 +6566,7 @@ module Aws::Rekognition
 
     alias ListStreamProcessorsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListStreamProcessorsResponse = NamedTuple(
@@ -6574,11 +6574,11 @@ module Aws::Rekognition
       "StreamProcessors" : Array(StreamProcessor)
     )
 
-    alias MaxFaces = Int32
+    alias MaxFaces = UInt16
 
-    alias MaxFacesToIndex = Int32
+    alias MaxFacesToIndex = UInt32
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
     alias ModerationLabel = NamedTuple(
       "Confidence" : Float32,
@@ -6610,7 +6610,7 @@ module Aws::Rekognition
       "S3KeyPrefix" : String
     )
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias PaginationToken = String
 
@@ -6679,10 +6679,10 @@ module Aws::Rekognition
     alias ProjectVersionDescription = NamedTuple(
       "ProjectVersionArn" : String,
       "CreationTimestamp" : (String | UInt64 | Time)?,
-      "MinInferenceUnits" : Int32,
+      "MinInferenceUnits" : UInt32,
       "Status" : String,
       "StatusMessage" : String,
-      "BillableTrainingTimeInSeconds" : Int64,
+      "BillableTrainingTimeInSeconds" : UInt64,
       "TrainingEndTimestamp" : (String | UInt64 | Time)?,
       "OutputConfig" : OutputConfig,
       "TrainingDataResult" : TrainingDataResult,
@@ -6695,9 +6695,9 @@ module Aws::Rekognition
 
     alias ProjectVersionStatus = String
 
-    alias ProjectVersionsPageSize = Int32
+    alias ProjectVersionsPageSize = UInt8
 
-    alias ProjectsPageSize = Int32
+    alias ProjectsPageSize = UInt8
 
     alias ProtectiveEquipmentBodyPart = NamedTuple(
       "Name" : String,
@@ -6709,10 +6709,10 @@ module Aws::Rekognition
       "BodyParts" : Array(ProtectiveEquipmentBodyPart),
       "BoundingBox" : BoundingBox,
       "Confidence" : Float32,
-      "Id" : Int32
+      "Id" : UInt32
     )
 
-    alias ProtectiveEquipmentPersonIds = Array(Int32)
+    alias ProtectiveEquipmentPersonIds = Array(UInt32)
 
     alias ProtectiveEquipmentPersons = Array(ProtectiveEquipmentPerson)
 
@@ -6722,9 +6722,9 @@ module Aws::Rekognition
     )
 
     alias ProtectiveEquipmentSummary = NamedTuple(
-      "PersonsWithRequiredEquipment" : Array(Int32),
-      "PersonsWithoutRequiredEquipment" : Array(Int32),
-      "PersonsIndeterminate" : Array(Int32)
+      "PersonsWithRequiredEquipment" : Array(UInt32),
+      "PersonsWithoutRequiredEquipment" : Array(UInt32),
+      "PersonsIndeterminate" : Array(UInt32)
     )
 
     alias ProtectiveEquipmentType = String
@@ -6796,7 +6796,7 @@ module Aws::Rekognition
     alias SearchFacesByImageRequest = NamedTuple(
       "CollectionId" : String,
       "Image" : Image,
-      "MaxFaces" : Int32,
+      "MaxFaces" : UInt16,
       "FaceMatchThreshold" : Float32,
       "QualityFilter" : String
     )
@@ -6811,7 +6811,7 @@ module Aws::Rekognition
     alias SearchFacesRequest = NamedTuple(
       "CollectionId" : String,
       "FaceId" : String,
-      "MaxFaces" : Int32,
+      "MaxFaces" : UInt16,
       "FaceMatchThreshold" : Float32
     )
 
@@ -6827,7 +6827,7 @@ module Aws::Rekognition
       "Type" : String,
       "StartTimestampMillis" : Int64,
       "EndTimestampMillis" : Int64,
-      "DurationMillis" : Int64,
+      "DurationMillis" : UInt64,
       "StartTimecodeSMPTE" : String,
       "EndTimecodeSMPTE" : String,
       "DurationSMPTE" : String,
@@ -6853,7 +6853,7 @@ module Aws::Rekognition
     )
 
     alias ShotSegment = NamedTuple(
-      "Index" : Int64,
+      "Index" : UInt64,
       "Confidence" : Float32
     )
 
@@ -6935,7 +6935,7 @@ module Aws::Rekognition
 
     alias StartProjectVersionRequest = NamedTuple(
       "ProjectVersionArn" : String,
-      "MinInferenceUnits" : Int32
+      "MinInferenceUnits" : UInt32
     )
 
     alias StartProjectVersionResponse = NamedTuple(
@@ -7068,8 +7068,8 @@ module Aws::Rekognition
     alias TextDetection = NamedTuple(
       "DetectedText" : String,
       "Type" : String,
-      "Id" : Int32,
-      "ParentId" : Int32,
+      "Id" : UInt32,
+      "ParentId" : UInt32,
       "Confidence" : Float32,
       "Geometry" : Geometry
     )
@@ -7103,9 +7103,9 @@ module Aws::Rekognition
       "Validation" : ValidationData
     )
 
-    alias UInteger = Int32
+    alias UInteger = UInt32
 
-    alias ULong = Int64
+    alias ULong = UInt64
 
     alias UnindexedFace = NamedTuple(
       "Reasons" : Array(String),
@@ -7134,11 +7134,11 @@ module Aws::Rekognition
 
     alias VideoMetadata = NamedTuple(
       "Codec" : String,
-      "DurationMillis" : Int64,
+      "DurationMillis" : UInt64,
       "Format" : String,
       "FrameRate" : Float32,
-      "FrameHeight" : Int64,
-      "FrameWidth" : Int64
+      "FrameHeight" : UInt64,
+      "FrameWidth" : UInt64
     )
 
     alias VideoMetadataList = Array(VideoMetadata)

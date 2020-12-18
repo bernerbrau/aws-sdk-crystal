@@ -6859,8 +6859,8 @@ module Aws::Kendra
     alias Boolean = Bool
 
     alias CapacityUnitsConfiguration = NamedTuple(
-      "StorageCapacityUnits" : Int32,
-      "QueryCapacityUnits" : Int32
+      "StorageCapacityUnits" : UInt32,
+      "QueryCapacityUnits" : UInt32
     )
 
     alias ChangeDetectingColumns = Array(String)
@@ -6972,7 +6972,7 @@ module Aws::Kendra
 
     alias ConnectionConfiguration = NamedTuple(
       "DatabaseHost" : String,
-      "DatabasePort" : Int32,
+      "DatabasePort" : UInt16,
       "DatabaseName" : String,
       "TableName" : String,
       "SecretArn" : String
@@ -7137,7 +7137,7 @@ module Aws::Kendra
 
     alias DatabaseName = String
 
-    alias DatabasePort = Int32
+    alias DatabasePort = UInt16
 
     alias DeleteDataSourceRequest = NamedTuple(
       "Id" : String,
@@ -7339,7 +7339,7 @@ module Aws::Kendra
     alias FaqName = String
 
     alias FaqStatistics = NamedTuple(
-      "IndexedQuestionAnswersCount" : Int32
+      "IndexedQuestionAnswersCount" : UInt32
     )
 
     alias FaqStatus = String
@@ -7380,7 +7380,7 @@ module Aws::Kendra
 
     alias HighlightType = String
 
-    alias Importance = Int32
+    alias Importance = UInt8
 
     alias IndexConfigurationSummary = NamedTuple(
       "Name" : String,
@@ -7408,11 +7408,11 @@ module Aws::Kendra
 
     alias IndexStatus = String
 
-    alias IndexedQuestionAnswersCount = Int32
+    alias IndexedQuestionAnswersCount = UInt32
 
-    alias IndexedTextBytes = Int64
+    alias IndexedTextBytes = UInt64
 
-    alias IndexedTextDocumentsCount = Int32
+    alias IndexedTextDocumentsCount = UInt32
 
     alias Integer = Int32
 
@@ -7445,7 +7445,7 @@ module Aws::Kendra
       "Id" : String,
       "IndexId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "StartTimeFilter" : TimeRange,
       "StatusFilter" : String
     )
@@ -7458,7 +7458,7 @@ module Aws::Kendra
     alias ListDataSourcesRequest = NamedTuple(
       "IndexId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDataSourcesResponse = NamedTuple(
@@ -7469,7 +7469,7 @@ module Aws::Kendra
     alias ListFaqsRequest = NamedTuple(
       "IndexId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListFaqsResponse = NamedTuple(
@@ -7479,7 +7479,7 @@ module Aws::Kendra
 
     alias ListIndicesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListIndicesResponse = NamedTuple(
@@ -7498,7 +7498,7 @@ module Aws::Kendra
     alias ListThesauriRequest = NamedTuple(
       "IndexId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListThesauriResponse = NamedTuple(
@@ -7508,15 +7508,15 @@ module Aws::Kendra
 
     alias Long = Int64
 
-    alias MaxResultsIntegerForListDataSourceSyncJobsRequest = Int32
+    alias MaxResultsIntegerForListDataSourceSyncJobsRequest = UInt8
 
-    alias MaxResultsIntegerForListDataSourcesRequest = Int32
+    alias MaxResultsIntegerForListDataSourcesRequest = UInt8
 
-    alias MaxResultsIntegerForListFaqsRequest = Int32
+    alias MaxResultsIntegerForListFaqsRequest = UInt8
 
-    alias MaxResultsIntegerForListIndicesRequest = Int32
+    alias MaxResultsIntegerForListIndicesRequest = UInt8
 
-    alias MaxResultsIntegerForListThesauriRequest = Int32
+    alias MaxResultsIntegerForListThesauriRequest = UInt8
 
     alias MetricValue = String
 
@@ -7557,7 +7557,7 @@ module Aws::Kendra
 
     alias PrincipalType = String
 
-    alias QueryCapacityUnit = Int32
+    alias QueryCapacityUnit = UInt32
 
     alias QueryId = String
 
@@ -7607,10 +7607,10 @@ module Aws::Kendra
 
     alias Relevance = NamedTuple(
       "Freshness" : Bool,
-      "Importance" : Int32,
+      "Importance" : UInt8,
       "Duration" : String,
       "RankOrder" : String,
-      "ValueImportanceMap" : Hash(String,Int32)
+      "ValueImportanceMap" : Hash(String,UInt8)
     )
 
     alias RelevanceFeedback = NamedTuple(
@@ -7828,7 +7828,7 @@ module Aws::Kendra
       "IndexId" : String
     )
 
-    alias StorageCapacityUnit = Int32
+    alias StorageCapacityUnit = UInt32
 
     alias String = String
 
@@ -7870,8 +7870,8 @@ module Aws::Kendra
     alias TenantDomain = String
 
     alias TextDocumentStatistics = NamedTuple(
-      "IndexedTextDocumentsCount" : Int32,
-      "IndexedTextBytes" : Int64
+      "IndexedTextDocumentsCount" : UInt32,
+      "IndexedTextBytes" : UInt64
     )
 
     alias TextWithHighlights = NamedTuple(
@@ -7972,7 +7972,7 @@ module Aws::Kendra
       "Message" : String
     )
 
-    alias ValueImportanceMap = Hash(String,Int32)
+    alias ValueImportanceMap = Hash(String,UInt8)
 
     alias ValueImportanceMapKey = String
 

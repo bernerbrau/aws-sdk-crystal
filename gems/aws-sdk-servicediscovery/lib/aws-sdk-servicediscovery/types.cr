@@ -3420,7 +3420,7 @@ module Aws::ServiceDiscovery
     alias DiscoverInstancesRequest = NamedTuple(
       "NamespaceName" : String,
       "ServiceName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "QueryParameters" : Hash(String,String),
       "OptionalParameters" : Hash(String,String),
       "HealthStatus" : String
@@ -3430,7 +3430,7 @@ module Aws::ServiceDiscovery
       "Instances" : Array(HttpInstanceSummary)
     )
 
-    alias DiscoverMaxResults = Int32
+    alias DiscoverMaxResults = UInt16
 
     alias DnsConfig = NamedTuple(
       "NamespaceId" : String,
@@ -3448,7 +3448,7 @@ module Aws::ServiceDiscovery
 
     alias DnsRecord = NamedTuple(
       "Type" : String,
-      "TTL" : Int64
+      "TTL" : UInt32
     )
 
     alias DnsRecordList = Array(DnsRecord)
@@ -3460,7 +3460,7 @@ module Aws::ServiceDiscovery
 
     alias ErrorMessage = String
 
-    alias FailureThreshold = Int32
+    alias FailureThreshold = UInt8
 
     alias FilterCondition = String
 
@@ -3480,7 +3480,7 @@ module Aws::ServiceDiscovery
     alias GetInstancesHealthStatusRequest = NamedTuple(
       "ServiceId" : String,
       "Instances" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3516,11 +3516,11 @@ module Aws::ServiceDiscovery
     alias HealthCheckConfig = NamedTuple(
       "Type" : String,
       "ResourcePath" : String,
-      "FailureThreshold" : Int32
+      "FailureThreshold" : UInt8
     )
 
     alias HealthCheckCustomConfig = NamedTuple(
-      "FailureThreshold" : Int32
+      "FailureThreshold" : UInt8
     )
 
     alias HealthCheckType = String
@@ -3571,7 +3571,7 @@ module Aws::ServiceDiscovery
     alias ListInstancesRequest = NamedTuple(
       "ServiceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListInstancesResponse = NamedTuple(
@@ -3581,7 +3581,7 @@ module Aws::ServiceDiscovery
 
     alias ListNamespacesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(NamespaceFilter)
     )
 
@@ -3592,7 +3592,7 @@ module Aws::ServiceDiscovery
 
     alias ListOperationsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(OperationFilter)
     )
 
@@ -3603,7 +3603,7 @@ module Aws::ServiceDiscovery
 
     alias ListServicesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(ServiceFilter)
     )
 
@@ -3620,7 +3620,7 @@ module Aws::ServiceDiscovery
       "Tags" : Array(Tag)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 
@@ -3722,7 +3722,7 @@ module Aws::ServiceDiscovery
 
     alias OperationType = String
 
-    alias RecordTTL = Int64
+    alias RecordTTL = UInt32
 
     alias RecordType = String
 

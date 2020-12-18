@@ -2182,8 +2182,8 @@ module Aws::EFS
     )
 
     alias CreationInfo = NamedTuple(
-      "OwnerUid" : Int64,
-      "OwnerGid" : Int64,
+      "OwnerUid" : UInt32,
+      "OwnerGid" : UInt32,
       "Permissions" : String
     )
 
@@ -2216,7 +2216,7 @@ module Aws::EFS
     )
 
     alias DescribeAccessPointsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "AccessPointId" : String,
       "FileSystemId" : String
@@ -2236,7 +2236,7 @@ module Aws::EFS
     )
 
     alias DescribeFileSystemsRequest = NamedTuple(
-      "MaxItems" : Int32,
+      "MaxItems" : UInt32,
       "Marker" : String,
       "CreationToken" : String,
       "FileSystemId" : String
@@ -2261,7 +2261,7 @@ module Aws::EFS
     )
 
     alias DescribeMountTargetsRequest = NamedTuple(
-      "MaxItems" : Int32,
+      "MaxItems" : UInt32,
       "Marker" : String,
       "FileSystemId" : String,
       "MountTargetId" : String,
@@ -2275,7 +2275,7 @@ module Aws::EFS
     )
 
     alias DescribeTagsRequest = NamedTuple(
-      "MaxItems" : Int32,
+      "MaxItems" : UInt32,
       "Marker" : String,
       "FileSystemId" : String
     )
@@ -2308,7 +2308,7 @@ module Aws::EFS
       "CreationTime" : String | UInt64 | Time,
       "LifeCycleState" : String,
       "Name" : String,
-      "NumberOfMountTargets" : Int32,
+      "NumberOfMountTargets" : UInt32,
       "SizeInBytes" : FileSystemSize,
       "PerformanceMode" : String,
       "Encrypted" : Bool,
@@ -2337,7 +2337,7 @@ module Aws::EFS
       "Message" : String
     )
 
-    alias FileSystemNullableSizeValue = Int64
+    alias FileSystemNullableSizeValue = UInt64
 
     alias FileSystemPolicyDescription = NamedTuple(
       "FileSystemId" : String,
@@ -2345,15 +2345,15 @@ module Aws::EFS
     )
 
     alias FileSystemSize = NamedTuple(
-      "Value" : Int64,
+      "Value" : UInt64,
       "Timestamp" : (String | UInt64 | Time)?,
-      "ValueInIA" : Int64,
-      "ValueInStandard" : Int64
+      "ValueInIA" : UInt64,
+      "ValueInStandard" : UInt64
     )
 
-    alias FileSystemSizeValue = Int64
+    alias FileSystemSizeValue = UInt64
 
-    alias Gid = Int64
+    alias Gid = UInt32
 
     alias IncorrectFileSystemLifeCycleState = NamedTuple(
       "ErrorCode" : String,
@@ -2403,7 +2403,7 @@ module Aws::EFS
 
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -2414,9 +2414,9 @@ module Aws::EFS
 
     alias Marker = String
 
-    alias MaxItems = Int32
+    alias MaxItems = UInt32
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
     alias ModifyMountTargetSecurityGroupsRequest = NamedTuple(
       "MountTargetId" : String,
@@ -2428,7 +2428,7 @@ module Aws::EFS
       "Message" : String
     )
 
-    alias MountTargetCount = Int32
+    alias MountTargetCount = UInt32
 
     alias MountTargetDescription = NamedTuple(
       "OwnerId" : String,
@@ -2466,9 +2466,9 @@ module Aws::EFS
       "Message" : String
     )
 
-    alias OwnerGid = Int64
+    alias OwnerGid = UInt32
 
-    alias OwnerUid = Int64
+    alias OwnerUid = UInt32
 
     alias Path = String
 
@@ -2484,9 +2484,9 @@ module Aws::EFS
     )
 
     alias PosixUser = NamedTuple(
-      "Uid" : Int64,
-      "Gid" : Int64,
-      "SecondaryGids" : Array(Int64)
+      "Uid" : UInt32,
+      "Gid" : UInt32,
+      "SecondaryGids" : Array(UInt32)
     )
 
     alias ProvisionedThroughputInMibps = Float64
@@ -2514,7 +2514,7 @@ module Aws::EFS
       "CreationInfo" : CreationInfo
     )
 
-    alias SecondaryGids = Array(Int64)
+    alias SecondaryGids = Array(UInt32)
 
     alias SecurityGroup = String
 
@@ -2575,7 +2575,7 @@ module Aws::EFS
 
     alias TransitionToIARules = String
 
-    alias Uid = Int64
+    alias Uid = UInt32
 
     alias UnsupportedAvailabilityZone = NamedTuple(
       "ErrorCode" : String,

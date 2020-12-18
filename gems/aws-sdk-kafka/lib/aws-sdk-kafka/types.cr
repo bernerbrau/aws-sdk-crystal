@@ -3081,7 +3081,7 @@ module Aws::Kafka
       "EnhancedMonitoring" : String,
       "KafkaVersion" : String,
       "LoggingInfo" : LoggingInfo,
-      "NumberOfBrokerNodes" : Int32,
+      "NumberOfBrokerNodes" : UInt8,
       "OpenMonitoring" : OpenMonitoringInfo,
       "Tags" : Hash(String,String)
     )
@@ -3180,7 +3180,7 @@ module Aws::Kafka
     )
 
     alias EBSStorageInfo = NamedTuple(
-      "VolumeSize" : Int32
+      "VolumeSize" : UInt16
     )
 
     alias EncryptionAtRest = NamedTuple(
@@ -3251,7 +3251,7 @@ module Aws::Kafka
 
     alias ListClusterOperationsRequest = NamedTuple(
       "ClusterArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3262,7 +3262,7 @@ module Aws::Kafka
 
     alias ListClustersRequest = NamedTuple(
       "ClusterNameFilter" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3273,7 +3273,7 @@ module Aws::Kafka
 
     alias ListConfigurationRevisionsRequest = NamedTuple(
       "Arn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3283,7 +3283,7 @@ module Aws::Kafka
     )
 
     alias ListConfigurationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3293,7 +3293,7 @@ module Aws::Kafka
     )
 
     alias ListKafkaVersionsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3304,7 +3304,7 @@ module Aws::Kafka
 
     alias ListNodesRequest = NamedTuple(
       "ClusterArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3315,7 +3315,7 @@ module Aws::Kafka
 
     alias ListScramSecretsRequest = NamedTuple(
       "ClusterArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3332,7 +3332,7 @@ module Aws::Kafka
       "Tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias LoggingInfo = NamedTuple(
       "BrokerLogs" : BrokerLogs
@@ -3419,7 +3419,7 @@ module Aws::Kafka
     alias UpdateBrokerCountRequest = NamedTuple(
       "ClusterArn" : String,
       "CurrentVersion" : String,
-      "TargetNumberOfBrokerNodes" : Int32
+      "TargetNumberOfBrokerNodes" : UInt8
     )
 
     alias UpdateBrokerCountResponse = NamedTuple(
@@ -3551,9 +3551,9 @@ module Aws::Kafka
 
     alias __integer = Int32
 
-    alias __integerMin1Max15 = Int32
+    alias __integerMin1Max15 = UInt8
 
-    alias __integerMin1Max16384 = Int32
+    alias __integerMin1Max16384 = UInt16
 
     alias __listOfBrokerEBSVolumeInfo = Array(BrokerEBSVolumeInfo)
 

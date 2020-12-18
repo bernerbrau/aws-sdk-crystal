@@ -6246,9 +6246,9 @@ module Aws::AutoScaling
 
     alias BlockDeviceEbsEncrypted = Bool
 
-    alias BlockDeviceEbsIops = Int32
+    alias BlockDeviceEbsIops = UInt16
 
-    alias BlockDeviceEbsVolumeSize = Int32
+    alias BlockDeviceEbsVolumeSize = UInt16
 
     alias BlockDeviceEbsVolumeType = String
 
@@ -6535,10 +6535,10 @@ module Aws::AutoScaling
 
     alias Ebs = NamedTuple(
       "SnapshotId" : String,
-      "VolumeSize" : Int32,
+      "VolumeSize" : UInt16,
       "VolumeType" : String,
       "DeleteOnTermination" : Bool,
-      "Iops" : Int32,
+      "Iops" : UInt16,
       "Encrypted" : Bool
     )
 
@@ -6627,13 +6627,13 @@ module Aws::AutoScaling
 
     alias InstanceMetadataEndpointState = String
 
-    alias InstanceMetadataHttpPutResponseHopLimit = Int32
+    alias InstanceMetadataHttpPutResponseHopLimit = UInt8
 
     alias InstanceMetadataHttpTokensState = String
 
     alias InstanceMetadataOptions = NamedTuple(
       "HttpTokens" : String,
-      "HttpPutResponseHopLimit" : Int32,
+      "HttpPutResponseHopLimit" : UInt8,
       "HttpEndpoint" : String
     )
 
@@ -6650,8 +6650,8 @@ module Aws::AutoScaling
       "StatusReason" : String,
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
-      "PercentageComplete" : Int32,
-      "InstancesToUpdate" : Int32
+      "PercentageComplete" : UInt8,
+      "InstancesToUpdate" : UInt32
     )
 
     alias InstanceRefreshIds = Array(String)
@@ -6675,9 +6675,9 @@ module Aws::AutoScaling
       "SpotMaxPrice" : String
     )
 
-    alias InstancesToUpdate = Int32
+    alias InstancesToUpdate = UInt32
 
-    alias IntPercent = Int32
+    alias IntPercent = UInt8
 
     alias InvalidNextToken = NamedTuple(
       "message" : String
@@ -6979,11 +6979,11 @@ module Aws::AutoScaling
       "InstanceId" : String
     )
 
-    alias RefreshInstanceWarmup = Int32
+    alias RefreshInstanceWarmup = UInt32
 
     alias RefreshPreferences = NamedTuple(
-      "MinHealthyPercentage" : Int32,
-      "InstanceWarmup" : Int32
+      "MinHealthyPercentage" : UInt8,
+      "InstanceWarmup" : UInt32
     )
 
     alias RefreshStrategy = String

@@ -681,7 +681,7 @@ module Aws::MarketplaceMetering
       include Aws::Structure
     end
 
-    alias AllocatedUsageQuantity = Int32
+    alias AllocatedUsageQuantity = UInt32
 
     alias BatchMeterUsageRequest = NamedTuple(
       "UsageRecords" : Array(UsageRecord),
@@ -757,7 +757,7 @@ module Aws::MarketplaceMetering
       "ProductCode" : String,
       "Timestamp" : String | UInt64 | Time,
       "UsageDimension" : String,
-      "UsageQuantity" : Int32,
+      "UsageQuantity" : UInt32,
       "DryRun" : Bool,
       "UsageAllocations" : Array(UsageAllocation)
     )
@@ -778,7 +778,7 @@ module Aws::MarketplaceMetering
 
     alias RegisterUsageRequest = NamedTuple(
       "ProductCode" : String,
-      "PublicKeyVersion" : Int32,
+      "PublicKeyVersion" : UInt32,
       "Nonce" : String
     )
 
@@ -820,7 +820,7 @@ module Aws::MarketplaceMetering
     )
 
     alias UsageAllocation = NamedTuple(
-      "AllocatedUsageQuantity" : Int32,
+      "AllocatedUsageQuantity" : UInt32,
       "Tags" : Array(Tag)
     )
 
@@ -828,13 +828,13 @@ module Aws::MarketplaceMetering
 
     alias UsageDimension = String
 
-    alias UsageQuantity = Int32
+    alias UsageQuantity = UInt32
 
     alias UsageRecord = NamedTuple(
       "Timestamp" : String | UInt64 | Time,
       "CustomerIdentifier" : String,
       "Dimension" : String,
-      "Quantity" : Int32,
+      "Quantity" : UInt32,
       "UsageAllocations" : Array(UsageAllocation)
     )
 
@@ -850,7 +850,7 @@ module Aws::MarketplaceMetering
 
     alias UsageRecordResultStatus = String
 
-    alias VersionInteger = Int32
+    alias VersionInteger = UInt32
 
     alias errorMessage = String
   end

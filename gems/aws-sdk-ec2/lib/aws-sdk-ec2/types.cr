@@ -55543,15 +55543,15 @@ module Aws::EC2
     alias AnalysisComponentList = Array(AnalysisComponent)
 
     alias AnalysisLoadBalancerListener = NamedTuple(
-      "LoadBalancerPort" : Int32,
-      "InstancePort" : Int32
+      "LoadBalancerPort" : UInt16,
+      "InstancePort" : UInt16
     )
 
     alias AnalysisLoadBalancerTarget = NamedTuple(
       "Address" : String,
       "AvailabilityZone" : String,
       "Instance" : AnalysisComponent,
-      "Port" : Int32
+      "Port" : UInt16
     )
 
     alias AnalysisPacketHeader = NamedTuple(
@@ -56185,7 +56185,7 @@ module Aws::EC2
 
     alias CarrierGatewayIdSet = Array(String)
 
-    alias CarrierGatewayMaxResults = Int32
+    alias CarrierGatewayMaxResults = UInt16
 
     alias CarrierGatewaySet = Array(CarrierGateway)
 
@@ -56400,7 +56400,7 @@ module Aws::EC2
 
     alias CoipPoolIdSet = Array(String)
 
-    alias CoipPoolMaxResults = Int32
+    alias CoipPoolMaxResults = UInt16
 
     alias CoipPoolSet = Array(CoipPool)
 
@@ -56874,7 +56874,7 @@ module Aws::EC2
       "Source" : String,
       "Destination" : String,
       "Protocol" : String,
-      "DestinationPort" : Int32,
+      "DestinationPort" : UInt16,
       "TagSpecifications" : Array(TagSpecification),
       "DryRun" : Bool,
       "ClientToken" : String
@@ -57382,9 +57382,9 @@ module Aws::EC2
 
     alias CustomerGatewayList = Array(CustomerGateway)
 
-    alias DITMaxResults = Int32
+    alias DITMaxResults = UInt8
 
-    alias DITOMaxResults = Int32
+    alias DITOMaxResults = UInt16
 
     alias DatafeedSubscriptionState = String
 
@@ -57979,11 +57979,11 @@ module Aws::EC2
       "BundleTasks" : Array(BundleTask)
     )
 
-    alias DescribeByoipCidrsMaxResults = Int32
+    alias DescribeByoipCidrsMaxResults = UInt8
 
     alias DescribeByoipCidrsRequest = NamedTuple(
       "DryRun" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -57992,12 +57992,12 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeCapacityReservationsMaxResults = Int32
+    alias DescribeCapacityReservationsMaxResults = UInt16
 
     alias DescribeCapacityReservationsRequest = NamedTuple(
       "CapacityReservationIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "Filters" : Array(Filter),
       "DryRun" : Bool
     )
@@ -58010,7 +58010,7 @@ module Aws::EC2
     alias DescribeCarrierGatewaysRequest = NamedTuple(
       "CarrierGatewayIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58020,13 +58020,13 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeClassicLinkInstancesMaxResults = Int32
+    alias DescribeClassicLinkInstancesMaxResults = UInt16
 
     alias DescribeClassicLinkInstancesRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "InstanceIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58035,14 +58035,14 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeClientVpnAuthorizationRulesMaxResults = Int32
+    alias DescribeClientVpnAuthorizationRulesMaxResults = UInt16
 
     alias DescribeClientVpnAuthorizationRulesRequest = NamedTuple(
       "ClientVpnEndpointId" : String,
       "DryRun" : Bool,
       "NextToken" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeClientVpnAuthorizationRulesResult = NamedTuple(
@@ -58050,13 +58050,13 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeClientVpnConnectionsMaxResults = Int32
+    alias DescribeClientVpnConnectionsMaxResults = UInt16
 
     alias DescribeClientVpnConnectionsRequest = NamedTuple(
       "ClientVpnEndpointId" : String,
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "DryRun" : Bool
     )
 
@@ -58065,11 +58065,11 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeClientVpnEndpointMaxResults = Int32
+    alias DescribeClientVpnEndpointMaxResults = UInt16
 
     alias DescribeClientVpnEndpointsRequest = NamedTuple(
       "ClientVpnEndpointIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "Filters" : Array(Filter),
       "DryRun" : Bool
@@ -58080,12 +58080,12 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeClientVpnRoutesMaxResults = Int32
+    alias DescribeClientVpnRoutesMaxResults = UInt16
 
     alias DescribeClientVpnRoutesRequest = NamedTuple(
       "ClientVpnEndpointId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58095,12 +58095,12 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeClientVpnTargetNetworksMaxResults = Int32
+    alias DescribeClientVpnTargetNetworksMaxResults = UInt16
 
     alias DescribeClientVpnTargetNetworksRequest = NamedTuple(
       "ClientVpnEndpointId" : String,
       "AssociationIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "Filters" : Array(Filter),
       "DryRun" : Bool
@@ -58114,7 +58114,7 @@ module Aws::EC2
     alias DescribeCoipPoolsRequest = NamedTuple(
       "PoolIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58145,14 +58145,14 @@ module Aws::EC2
       "CustomerGateways" : Array(CustomerGateway)
     )
 
-    alias DescribeDhcpOptionsMaxResults = Int32
+    alias DescribeDhcpOptionsMaxResults = UInt16
 
     alias DescribeDhcpOptionsRequest = NamedTuple(
       "DhcpOptionsIds" : Array(String),
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeDhcpOptionsResult = NamedTuple(
@@ -58160,12 +58160,12 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeEgressOnlyInternetGatewaysMaxResults = Int32
+    alias DescribeEgressOnlyInternetGatewaysMaxResults = UInt8
 
     alias DescribeEgressOnlyInternetGatewaysRequest = NamedTuple(
       "DryRun" : Bool,
       "EgressOnlyInternetGatewayIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter)
     )
@@ -58175,13 +58175,13 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeElasticGpusMaxResults = Int32
+    alias DescribeElasticGpusMaxResults = UInt16
 
     alias DescribeElasticGpusRequest = NamedTuple(
       "ElasticGpuIds" : Array(String),
       "DryRun" : Bool,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58191,13 +58191,13 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeExportImageTasksMaxResults = Int32
+    alias DescribeExportImageTasksMaxResults = UInt16
 
     alias DescribeExportImageTasksRequest = NamedTuple(
       "DryRun" : Bool,
       "Filters" : Array(Filter),
       "ExportImageTaskIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58231,11 +58231,11 @@ module Aws::EC2
 
     alias DescribeFastSnapshotRestoreSuccessSet = Array(DescribeFastSnapshotRestoreSuccessItem)
 
-    alias DescribeFastSnapshotRestoresMaxResults = Int32
+    alias DescribeFastSnapshotRestoresMaxResults = UInt8
 
     alias DescribeFastSnapshotRestoresRequest = NamedTuple(
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58331,7 +58331,7 @@ module Aws::EC2
       "FpgaImageAttribute" : FpgaImageAttribute
     )
 
-    alias DescribeFpgaImagesMaxResults = Int32
+    alias DescribeFpgaImagesMaxResults = UInt16
 
     alias DescribeFpgaImagesRequest = NamedTuple(
       "DryRun" : Bool,
@@ -58339,7 +58339,7 @@ module Aws::EC2
       "Owners" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeFpgaImagesResult = NamedTuple(
@@ -58350,7 +58350,7 @@ module Aws::EC2
     alias DescribeHostReservationOfferingsRequest = NamedTuple(
       "Filter" : Array(Filter),
       "MaxDuration" : Int32,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "MinDuration" : Int32,
       "NextToken" : String,
       "OfferingId" : String
@@ -58361,7 +58361,7 @@ module Aws::EC2
       "OfferingSet" : Array(HostOffering)
     )
 
-    alias DescribeHostReservationsMaxResults = Int32
+    alias DescribeHostReservationsMaxResults = UInt16
 
     alias DescribeHostReservationsRequest = NamedTuple(
       "Filter" : Array(Filter),
@@ -58387,12 +58387,12 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeIamInstanceProfileAssociationsMaxResults = Int32
+    alias DescribeIamInstanceProfileAssociationsMaxResults = UInt16
 
     alias DescribeIamInstanceProfileAssociationsRequest = NamedTuple(
       "AssociationIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58468,13 +58468,13 @@ module Aws::EC2
       "InstanceId" : String
     )
 
-    alias DescribeInstanceCreditSpecificationsMaxResults = Int32
+    alias DescribeInstanceCreditSpecificationsMaxResults = UInt16
 
     alias DescribeInstanceCreditSpecificationsRequest = NamedTuple(
       "DryRun" : Bool,
       "Filters" : Array(Filter),
       "InstanceIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58509,7 +58509,7 @@ module Aws::EC2
       "DryRun" : Bool,
       "LocationType" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58522,7 +58522,7 @@ module Aws::EC2
       "DryRun" : Bool,
       "InstanceTypes" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -58544,14 +58544,14 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeInternetGatewaysMaxResults = Int32
+    alias DescribeInternetGatewaysMaxResults = UInt16
 
     alias DescribeInternetGatewaysRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "InternetGatewayIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeInternetGatewaysResult = NamedTuple(
@@ -58562,7 +58562,7 @@ module Aws::EC2
     alias DescribeIpv6PoolsRequest = NamedTuple(
       "PoolIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "DryRun" : Bool,
       "Filters" : Array(Filter)
     )
@@ -58600,7 +58600,7 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeLaunchTemplatesMaxResults = Int32
+    alias DescribeLaunchTemplatesMaxResults = UInt8
 
     alias DescribeLaunchTemplatesRequest = NamedTuple(
       "DryRun" : Bool,
@@ -58608,7 +58608,7 @@ module Aws::EC2
       "LaunchTemplateNames" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeLaunchTemplatesResult = NamedTuple(
@@ -58619,7 +58619,7 @@ module Aws::EC2
     alias DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest = NamedTuple(
       "LocalGatewayRouteTableVirtualInterfaceGroupAssociationIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58632,7 +58632,7 @@ module Aws::EC2
     alias DescribeLocalGatewayRouteTableVpcAssociationsRequest = NamedTuple(
       "LocalGatewayRouteTableVpcAssociationIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58645,7 +58645,7 @@ module Aws::EC2
     alias DescribeLocalGatewayRouteTablesRequest = NamedTuple(
       "LocalGatewayRouteTableIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58658,7 +58658,7 @@ module Aws::EC2
     alias DescribeLocalGatewayVirtualInterfaceGroupsRequest = NamedTuple(
       "LocalGatewayVirtualInterfaceGroupIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58671,7 +58671,7 @@ module Aws::EC2
     alias DescribeLocalGatewayVirtualInterfacesRequest = NamedTuple(
       "LocalGatewayVirtualInterfaceIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58684,7 +58684,7 @@ module Aws::EC2
     alias DescribeLocalGatewaysRequest = NamedTuple(
       "LocalGatewayIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -58697,7 +58697,7 @@ module Aws::EC2
     alias DescribeManagedPrefixListsRequest = NamedTuple(
       "DryRun" : Bool,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "PrefixListIds" : Array(String)
     )
@@ -58707,12 +58707,12 @@ module Aws::EC2
       "PrefixLists" : Array(ManagedPrefixList)
     )
 
-    alias DescribeMovingAddressesMaxResults = Int32
+    alias DescribeMovingAddressesMaxResults = UInt16
 
     alias DescribeMovingAddressesRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "PublicIps" : Array(String)
     )
@@ -58722,12 +58722,12 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeNatGatewaysMaxResults = Int32
+    alias DescribeNatGatewaysMaxResults = UInt16
 
     alias DescribeNatGatewaysRequest = NamedTuple(
       "DryRun" : Bool,
       "Filter" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NatGatewayIds" : Array(String),
       "NextToken" : String
     )
@@ -58737,14 +58737,14 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeNetworkAclsMaxResults = Int32
+    alias DescribeNetworkAclsMaxResults = UInt16
 
     alias DescribeNetworkAclsRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "NetworkAclIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeNetworkAclsResult = NamedTuple(
@@ -58758,7 +58758,7 @@ module Aws::EC2
       "AnalysisStartTime" : (String | UInt64 | Time)?,
       "AnalysisEndTime" : (String | UInt64 | Time)?,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "DryRun" : Bool,
       "NextToken" : String
     )
@@ -58771,7 +58771,7 @@ module Aws::EC2
     alias DescribeNetworkInsightsPathsRequest = NamedTuple(
       "NetworkInsightsPathIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "DryRun" : Bool,
       "NextToken" : String
     )
@@ -58795,13 +58795,13 @@ module Aws::EC2
       "SourceDestCheck" : AttributeBooleanValue
     )
 
-    alias DescribeNetworkInterfacePermissionsMaxResults = Int32
+    alias DescribeNetworkInterfacePermissionsMaxResults = UInt8
 
     alias DescribeNetworkInterfacePermissionsRequest = NamedTuple(
       "NetworkInterfacePermissionIds" : Array(String),
       "Filters" : Array(Filter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeNetworkInterfacePermissionsResult = NamedTuple(
@@ -58809,14 +58809,14 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeNetworkInterfacesMaxResults = Int32
+    alias DescribeNetworkInterfacesMaxResults = UInt16
 
     alias DescribeNetworkInterfacesRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "NetworkInterfaceIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeNetworkInterfacesResult = NamedTuple(
@@ -58848,12 +58848,12 @@ module Aws::EC2
       "PrefixLists" : Array(PrefixList)
     )
 
-    alias DescribePrincipalIdFormatMaxResults = Int32
+    alias DescribePrincipalIdFormatMaxResults = UInt16
 
     alias DescribePrincipalIdFormatRequest = NamedTuple(
       "DryRun" : Bool,
       "Resources" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -58865,7 +58865,7 @@ module Aws::EC2
     alias DescribePublicIpv4PoolsRequest = NamedTuple(
       "PoolIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter)
     )
 
@@ -58941,14 +58941,14 @@ module Aws::EC2
       "ReservedInstances" : Array(ReservedInstances)
     )
 
-    alias DescribeRouteTablesMaxResults = Int32
+    alias DescribeRouteTablesMaxResults = UInt8
 
     alias DescribeRouteTablesRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "RouteTableIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeRouteTablesResult = NamedTuple(
@@ -58956,13 +58956,13 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeScheduledInstanceAvailabilityMaxResults = Int32
+    alias DescribeScheduledInstanceAvailabilityMaxResults = UInt16
 
     alias DescribeScheduledInstanceAvailabilityRequest = NamedTuple(
       "DryRun" : Bool,
       "Filters" : Array(Filter),
       "FirstSlotStartTimeRange" : SlotDateTimeRangeRequest,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "MaxSlotDurationInHours" : Int32,
       "MinSlotDurationInHours" : Int32,
       "NextToken" : String,
@@ -58997,7 +58997,7 @@ module Aws::EC2
       "SecurityGroupReferenceSet" : Array(SecurityGroupReference)
     )
 
-    alias DescribeSecurityGroupsMaxResults = Int32
+    alias DescribeSecurityGroupsMaxResults = UInt16
 
     alias DescribeSecurityGroupsRequest = NamedTuple(
       "Filters" : Array(Filter),
@@ -59005,7 +59005,7 @@ module Aws::EC2
       "GroupNames" : Array(String),
       "DryRun" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeSecurityGroupsResult = NamedTuple(
@@ -59048,11 +59048,11 @@ module Aws::EC2
       "SpotDatafeedSubscription" : SpotDatafeedSubscription
     )
 
-    alias DescribeSpotFleetInstancesMaxResults = Int32
+    alias DescribeSpotFleetInstancesMaxResults = UInt16
 
     alias DescribeSpotFleetInstancesRequest = NamedTuple(
       "DryRun" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "SpotFleetRequestId" : String
     )
@@ -59063,12 +59063,12 @@ module Aws::EC2
       "SpotFleetRequestId" : String
     )
 
-    alias DescribeSpotFleetRequestHistoryMaxResults = Int32
+    alias DescribeSpotFleetRequestHistoryMaxResults = UInt16
 
     alias DescribeSpotFleetRequestHistoryRequest = NamedTuple(
       "DryRun" : Bool,
       "EventType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "SpotFleetRequestId" : String,
       "StartTime" : String | UInt64 | Time
@@ -59124,13 +59124,13 @@ module Aws::EC2
       "SpotPriceHistory" : Array(SpotPrice)
     )
 
-    alias DescribeStaleSecurityGroupsMaxResults = Int32
+    alias DescribeStaleSecurityGroupsMaxResults = UInt8
 
     alias DescribeStaleSecurityGroupsNextToken = String
 
     alias DescribeStaleSecurityGroupsRequest = NamedTuple(
       "DryRun" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "VpcId" : String
     )
@@ -59140,14 +59140,14 @@ module Aws::EC2
       "StaleSecurityGroupSet" : Array(StaleSecurityGroup)
     )
 
-    alias DescribeSubnetsMaxResults = Int32
+    alias DescribeSubnetsMaxResults = UInt16
 
     alias DescribeSubnetsRequest = NamedTuple(
       "Filters" : Array(Filter),
       "SubnetIds" : Array(String),
       "DryRun" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeSubnetsResult = NamedTuple(
@@ -59171,7 +59171,7 @@ module Aws::EC2
       "TrafficMirrorFilterIds" : Array(String),
       "DryRun" : Bool,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -59184,7 +59184,7 @@ module Aws::EC2
       "TrafficMirrorSessionIds" : Array(String),
       "DryRun" : Bool,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -59197,7 +59197,7 @@ module Aws::EC2
       "TrafficMirrorTargetIds" : Array(String),
       "DryRun" : Bool,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -59209,7 +59209,7 @@ module Aws::EC2
     alias DescribeTransitGatewayAttachmentsRequest = NamedTuple(
       "TransitGatewayAttachmentIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59222,7 +59222,7 @@ module Aws::EC2
     alias DescribeTransitGatewayConnectPeersRequest = NamedTuple(
       "TransitGatewayConnectPeerIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59235,7 +59235,7 @@ module Aws::EC2
     alias DescribeTransitGatewayConnectsRequest = NamedTuple(
       "TransitGatewayAttachmentIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59248,7 +59248,7 @@ module Aws::EC2
     alias DescribeTransitGatewayMulticastDomainsRequest = NamedTuple(
       "TransitGatewayMulticastDomainIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59261,7 +59261,7 @@ module Aws::EC2
     alias DescribeTransitGatewayPeeringAttachmentsRequest = NamedTuple(
       "TransitGatewayAttachmentIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59274,7 +59274,7 @@ module Aws::EC2
     alias DescribeTransitGatewayRouteTablesRequest = NamedTuple(
       "TransitGatewayRouteTableIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59287,7 +59287,7 @@ module Aws::EC2
     alias DescribeTransitGatewayVpcAttachmentsRequest = NamedTuple(
       "TransitGatewayAttachmentIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59300,7 +59300,7 @@ module Aws::EC2
     alias DescribeTransitGatewaysRequest = NamedTuple(
       "TransitGatewayIds" : Array(String),
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -59373,12 +59373,12 @@ module Aws::EC2
       "EnableDnsSupport" : AttributeBooleanValue
     )
 
-    alias DescribeVpcClassicLinkDnsSupportMaxResults = Int32
+    alias DescribeVpcClassicLinkDnsSupportMaxResults = UInt8
 
     alias DescribeVpcClassicLinkDnsSupportNextToken = String
 
     alias DescribeVpcClassicLinkDnsSupportRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "VpcIds" : Array(String)
     )
@@ -59476,14 +59476,14 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeVpcPeeringConnectionsMaxResults = Int32
+    alias DescribeVpcPeeringConnectionsMaxResults = UInt16
 
     alias DescribeVpcPeeringConnectionsRequest = NamedTuple(
       "Filters" : Array(Filter),
       "DryRun" : Bool,
       "VpcPeeringConnectionIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeVpcPeeringConnectionsResult = NamedTuple(
@@ -59491,14 +59491,14 @@ module Aws::EC2
       "NextToken" : String
     )
 
-    alias DescribeVpcsMaxResults = Int32
+    alias DescribeVpcsMaxResults = UInt16
 
     alias DescribeVpcsRequest = NamedTuple(
       "Filters" : Array(Filter),
       "VpcIds" : Array(String),
       "DryRun" : Bool,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeVpcsResult = NamedTuple(
@@ -59931,7 +59931,7 @@ module Aws::EC2
 
     alias ElasticInferenceAccelerator = NamedTuple(
       "Type" : String,
-      "Count" : Int32
+      "Count" : UInt32
     )
 
     alias ElasticInferenceAcceleratorAssociation = NamedTuple(
@@ -59943,7 +59943,7 @@ module Aws::EC2
 
     alias ElasticInferenceAcceleratorAssociationList = Array(ElasticInferenceAcceleratorAssociation)
 
-    alias ElasticInferenceAcceleratorCount = Int32
+    alias ElasticInferenceAcceleratorCount = UInt32
 
     alias ElasticInferenceAccelerators = Array(ElasticInferenceAccelerator)
 
@@ -60091,18 +60091,18 @@ module Aws::EC2
       "InternetGateway" : AnalysisComponent,
       "LoadBalancerArn" : String,
       "ClassicLoadBalancerListener" : AnalysisLoadBalancerListener,
-      "LoadBalancerListenerPort" : Int32,
+      "LoadBalancerListenerPort" : UInt16,
       "LoadBalancerTarget" : AnalysisLoadBalancerTarget,
       "LoadBalancerTargetGroup" : AnalysisComponent,
       "LoadBalancerTargetGroups" : Array(AnalysisComponent),
-      "LoadBalancerTargetPort" : Int32,
+      "LoadBalancerTargetPort" : UInt16,
       "ElasticLoadBalancerListener" : AnalysisComponent,
       "MissingComponent" : String,
       "NatGateway" : AnalysisComponent,
       "NetworkInterface" : AnalysisComponent,
       "PacketField" : String,
       "VpcPeeringConnection" : AnalysisComponent,
-      "Port" : Int32,
+      "Port" : UInt16,
       "PortRanges" : Array(PortRange),
       "PrefixList" : AnalysisComponent,
       "Protocols" : Array(String),
@@ -60489,7 +60489,7 @@ module Aws::EC2
     alias GetAssociatedIpv6PoolCidrsRequest = NamedTuple(
       "PoolId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "DryRun" : Bool
     )
 
@@ -60501,11 +60501,11 @@ module Aws::EC2
     alias GetCapacityReservationUsageRequest = NamedTuple(
       "CapacityReservationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "DryRun" : Bool
     )
 
-    alias GetCapacityReservationUsageRequestMaxResults = Int32
+    alias GetCapacityReservationUsageRequestMaxResults = UInt16
 
     alias GetCapacityReservationUsageResult = NamedTuple(
       "NextToken" : String,
@@ -60520,7 +60520,7 @@ module Aws::EC2
     alias GetCoipPoolUsageRequest = NamedTuple(
       "PoolId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -60582,11 +60582,11 @@ module Aws::EC2
     alias GetGroupsForCapacityReservationRequest = NamedTuple(
       "CapacityReservationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "DryRun" : Bool
     )
 
-    alias GetGroupsForCapacityReservationRequestMaxResults = Int32
+    alias GetGroupsForCapacityReservationRequestMaxResults = UInt16
 
     alias GetGroupsForCapacityReservationResult = NamedTuple(
       "NextToken" : String,
@@ -60614,12 +60614,12 @@ module Aws::EC2
       "LaunchTemplateData" : ResponseLaunchTemplateData
     )
 
-    alias GetManagedPrefixListAssociationsMaxResults = Int32
+    alias GetManagedPrefixListAssociationsMaxResults = UInt8
 
     alias GetManagedPrefixListAssociationsRequest = NamedTuple(
       "DryRun" : Bool,
       "PrefixListId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -60632,7 +60632,7 @@ module Aws::EC2
       "DryRun" : Bool,
       "PrefixListId" : String,
       "TargetVersion" : Int64,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -60673,7 +60673,7 @@ module Aws::EC2
     alias GetTransitGatewayAttachmentPropagationsRequest = NamedTuple(
       "TransitGatewayAttachmentId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -60686,7 +60686,7 @@ module Aws::EC2
     alias GetTransitGatewayMulticastDomainAssociationsRequest = NamedTuple(
       "TransitGatewayMulticastDomainId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -60699,7 +60699,7 @@ module Aws::EC2
     alias GetTransitGatewayPrefixListReferencesRequest = NamedTuple(
       "TransitGatewayRouteTableId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -60712,7 +60712,7 @@ module Aws::EC2
     alias GetTransitGatewayRouteTableAssociationsRequest = NamedTuple(
       "TransitGatewayRouteTableId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -60725,7 +60725,7 @@ module Aws::EC2
     alias GetTransitGatewayRouteTablePropagationsRequest = NamedTuple(
       "TransitGatewayRouteTableId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -61666,7 +61666,7 @@ module Aws::EC2
 
     alias Ipv6PoolIdList = Array(String)
 
-    alias Ipv6PoolMaxResults = Int32
+    alias Ipv6PoolMaxResults = UInt16
 
     alias Ipv6PoolSet = Array(Ipv6Pool)
 
@@ -61829,10 +61829,10 @@ module Aws::EC2
 
     alias LaunchTemplateElasticInferenceAccelerator = NamedTuple(
       "Type" : String,
-      "Count" : Int32
+      "Count" : UInt32
     )
 
-    alias LaunchTemplateElasticInferenceAcceleratorCount = Int32
+    alias LaunchTemplateElasticInferenceAcceleratorCount = UInt32
 
     alias LaunchTemplateElasticInferenceAcceleratorList = Array(LaunchTemplateElasticInferenceAccelerator)
 
@@ -62104,7 +62104,7 @@ module Aws::EC2
 
     alias LocalGatewayIdSet = Array(String)
 
-    alias LocalGatewayMaxResults = Int32
+    alias LocalGatewayMaxResults = UInt16
 
     alias LocalGatewayRoute = NamedTuple(
       "DestinationCidrBlock" : String,
@@ -62957,7 +62957,7 @@ module Aws::EC2
 
     alias NetworkInsightsAnalysisList = Array(NetworkInsightsAnalysis)
 
-    alias NetworkInsightsMaxResults = Int32
+    alias NetworkInsightsMaxResults = UInt8
 
     alias NetworkInsightsPath = NamedTuple(
       "NetworkInsightsPathId" : String,
@@ -63302,9 +63302,9 @@ module Aws::EC2
 
     alias PoolCidrBlocksSet = Array(PoolCidrBlock)
 
-    alias PoolMaxResults = Int32
+    alias PoolMaxResults = UInt8
 
-    alias Port = Int32
+    alias Port = UInt16
 
     alias PortRange = NamedTuple(
       "From" : Int32,
@@ -63342,7 +63342,7 @@ module Aws::EC2
 
     alias PrefixListIdSet = Array(String)
 
-    alias PrefixListMaxResults = Int32
+    alias PrefixListMaxResults = UInt16
 
     alias PrefixListResourceId = String
 
@@ -64473,7 +64473,7 @@ module Aws::EC2
     alias SearchTransitGatewayMulticastGroupsRequest = NamedTuple(
       "TransitGatewayMulticastDomainId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "DryRun" : Bool
     )
@@ -64486,7 +64486,7 @@ module Aws::EC2
     alias SearchTransitGatewayRoutesRequest = NamedTuple(
       "TransitGatewayRouteTableId" : String,
       "Filters" : Array(Filter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "DryRun" : Bool
     )
 
@@ -65228,7 +65228,7 @@ module Aws::EC2
 
     alias TrafficMirrorTargetType = String
 
-    alias TrafficMirroringMaxResults = Int32
+    alias TrafficMirroringMaxResults = UInt16
 
     alias TrafficType = String
 
@@ -65353,7 +65353,7 @@ module Aws::EC2
 
     alias TransitGatewayList = Array(TransitGateway)
 
-    alias TransitGatewayMaxResults = Int32
+    alias TransitGatewayMaxResults = UInt16
 
     alias TransitGatewayMulitcastDomainAssociationState = String
 

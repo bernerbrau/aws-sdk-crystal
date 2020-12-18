@@ -6029,7 +6029,7 @@ module Aws::Connect
 
     alias ARN = String
 
-    alias AfterContactWorkTimeLimit = Int32
+    alias AfterContactWorkTimeLimit = UInt32
 
     alias AgentFirstName = String
 
@@ -6115,7 +6115,7 @@ module Aws::Connect
 
     alias Comparison = String
 
-    alias Concurrency = Int32
+    alias Concurrency = UInt8
 
     alias ContactFlow = NamedTuple(
       "Arn" : String,
@@ -6287,7 +6287,7 @@ module Aws::Connect
 
     alias CurrentMetrics = Array(CurrentMetric)
 
-    alias Delay = Int32
+    alias Delay = UInt16
 
     alias DeleteInstanceRequest = NamedTuple(
       "InstanceId" : String
@@ -6476,7 +6476,7 @@ module Aws::Connect
       "Groupings" : Array(String),
       "CurrentMetrics" : Array(CurrentMetric),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetCurrentMetricDataResponse = NamedTuple(
@@ -6501,7 +6501,7 @@ module Aws::Connect
       "Groupings" : Array(String),
       "HistoricalMetrics" : Array(HistoricalMetric),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetMetricDataResponse = NamedTuple(
@@ -6596,7 +6596,7 @@ module Aws::Connect
 
     alias HistoricalMetrics = Array(HistoricalMetric)
 
-    alias Hours = Int32
+    alias Hours = UInt32
 
     alias HoursOfOperationId = String
 
@@ -6709,7 +6709,7 @@ module Aws::Connect
 
     alias KinesisVideoStreamConfig = NamedTuple(
       "Prefix" : String,
-      "RetentionPeriodHours" : Int32,
+      "RetentionPeriodHours" : UInt32,
       "EncryptionConfig" : EncryptionConfig
     )
 
@@ -6729,7 +6729,7 @@ module Aws::Connect
     alias ListApprovedOriginsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListApprovedOriginsResponse = NamedTuple(
@@ -6741,7 +6741,7 @@ module Aws::Connect
       "InstanceId" : String,
       "ContactFlowTypes" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListContactFlowsResponse = NamedTuple(
@@ -6752,7 +6752,7 @@ module Aws::Connect
     alias ListHoursOfOperationsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListHoursOfOperationsResponse = NamedTuple(
@@ -6763,7 +6763,7 @@ module Aws::Connect
     alias ListInstanceAttributesRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListInstanceAttributesResponse = NamedTuple(
@@ -6775,7 +6775,7 @@ module Aws::Connect
       "InstanceId" : String,
       "ResourceType" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListInstanceStorageConfigsResponse = NamedTuple(
@@ -6785,7 +6785,7 @@ module Aws::Connect
 
     alias ListInstancesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListInstancesResponse = NamedTuple(
@@ -6796,7 +6796,7 @@ module Aws::Connect
     alias ListIntegrationAssociationsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListIntegrationAssociationsResponse = NamedTuple(
@@ -6807,7 +6807,7 @@ module Aws::Connect
     alias ListLambdaFunctionsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLambdaFunctionsResponse = NamedTuple(
@@ -6818,7 +6818,7 @@ module Aws::Connect
     alias ListLexBotsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLexBotsResponse = NamedTuple(
@@ -6831,7 +6831,7 @@ module Aws::Connect
       "PhoneNumberTypes" : Array(String),
       "PhoneNumberCountryCodes" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListPhoneNumbersResponse = NamedTuple(
@@ -6842,7 +6842,7 @@ module Aws::Connect
     alias ListPromptsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListPromptsResponse = NamedTuple(
@@ -6854,7 +6854,7 @@ module Aws::Connect
       "InstanceId" : String,
       "QueueTypes" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListQueuesResponse = NamedTuple(
@@ -6866,7 +6866,7 @@ module Aws::Connect
       "InstanceId" : String,
       "RoutingProfileId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListRoutingProfileQueuesResponse = NamedTuple(
@@ -6877,7 +6877,7 @@ module Aws::Connect
     alias ListRoutingProfilesRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListRoutingProfilesResponse = NamedTuple(
@@ -6888,7 +6888,7 @@ module Aws::Connect
     alias ListSecurityKeysRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListSecurityKeysResponse = NamedTuple(
@@ -6899,7 +6899,7 @@ module Aws::Connect
     alias ListSecurityProfilesRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListSecurityProfilesResponse = NamedTuple(
@@ -6919,7 +6919,7 @@ module Aws::Connect
       "InstanceId" : String,
       "IntegrationAssociationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListUseCasesResponse = NamedTuple(
@@ -6930,7 +6930,7 @@ module Aws::Connect
     alias ListUserHierarchyGroupsRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListUserHierarchyGroupsResponse = NamedTuple(
@@ -6941,7 +6941,7 @@ module Aws::Connect
     alias ListUsersRequest = NamedTuple(
       "InstanceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListUsersResponse = NamedTuple(
@@ -6949,23 +6949,23 @@ module Aws::Connect
       "NextToken" : String
     )
 
-    alias MaxResult10 = Int32
+    alias MaxResult10 = UInt8
 
-    alias MaxResult100 = Int32
+    alias MaxResult100 = UInt8
 
-    alias MaxResult1000 = Int32
+    alias MaxResult1000 = UInt16
 
-    alias MaxResult2 = Int32
+    alias MaxResult2 = UInt8
 
-    alias MaxResult25 = Int32
+    alias MaxResult25 = UInt8
 
-    alias MaxResult7 = Int32
+    alias MaxResult7 = UInt8
 
     alias MediaConcurrencies = Array(MediaConcurrency)
 
     alias MediaConcurrency = NamedTuple(
       "Channel" : String,
-      "Concurrency" : Int32
+      "Concurrency" : UInt8
     )
 
     alias Message = String
@@ -7022,7 +7022,7 @@ module Aws::Connect
 
     alias Prefix = String
 
-    alias Priority = Int32
+    alias Priority = UInt8
 
     alias ProblemDetail = NamedTuple(
       "message" : String
@@ -7124,8 +7124,8 @@ module Aws::Connect
 
     alias RoutingProfileQueueConfig = NamedTuple(
       "QueueReference" : RoutingProfileQueueReference,
-      "Priority" : Int32,
-      "Delay" : Int32
+      "Priority" : UInt8,
+      "Delay" : UInt16
     )
 
     alias RoutingProfileQueueConfigList = Array(RoutingProfileQueueConfig)
@@ -7134,8 +7134,8 @@ module Aws::Connect
       "QueueId" : String,
       "QueueArn" : String,
       "QueueName" : String,
-      "Priority" : Int32,
-      "Delay" : Int32,
+      "Priority" : UInt8,
+      "Delay" : UInt16,
       "Channel" : String
     )
 
@@ -7461,7 +7461,7 @@ module Aws::Connect
     alias UserPhoneConfig = NamedTuple(
       "PhoneType" : String,
       "AutoAccept" : Bool,
-      "AfterContactWorkTimeLimit" : Int32,
+      "AfterContactWorkTimeLimit" : UInt32,
       "DeskPhoneNumber" : String
     )
 

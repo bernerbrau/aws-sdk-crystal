@@ -537,7 +537,7 @@ module Aws::IoTSecureTunneling
 
     alias ListTunnelsRequest = NamedTuple(
       "thingName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -546,7 +546,7 @@ module Aws::IoTSecureTunneling
       "nextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 
@@ -597,10 +597,10 @@ module Aws::IoTSecureTunneling
     alias ThingName = String
 
     alias TimeoutConfig = NamedTuple(
-      "maxLifetimeTimeoutMinutes" : Int32
+      "maxLifetimeTimeoutMinutes" : UInt16
     )
 
-    alias TimeoutInMin = Int32
+    alias TimeoutInMin = UInt16
 
     alias Tunnel = NamedTuple(
       "tunnelId" : String,

@@ -1330,7 +1330,7 @@ module Aws::MWAA
       "ExecutionRoleArn" : String,
       "KmsKey" : String,
       "LoggingConfiguration" : LoggingConfigurationInput,
-      "MaxWorkers" : Int32,
+      "MaxWorkers" : UInt32,
       "Name" : String,
       "NetworkConfiguration" : NetworkConfiguration,
       "PluginsS3ObjectVersion" : String,
@@ -1386,7 +1386,7 @@ module Aws::MWAA
       "KmsKey" : String,
       "LastUpdate" : LastUpdate,
       "LoggingConfiguration" : LoggingConfiguration,
-      "MaxWorkers" : Int32,
+      "MaxWorkers" : UInt32,
       "Name" : String,
       "NetworkConfiguration" : NetworkConfiguration,
       "PluginsS3ObjectVersion" : String,
@@ -1443,11 +1443,11 @@ module Aws::MWAA
     )
 
     alias ListEnvironmentsInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias ListEnvironmentsInputMaxResultsInteger = Int32
+    alias ListEnvironmentsInputMaxResultsInteger = UInt8
 
     alias ListEnvironmentsOutput = NamedTuple(
       "Environments" : Array(String),
@@ -1482,7 +1482,7 @@ module Aws::MWAA
 
     alias LoggingLevel = String
 
-    alias MaxWorkers = Int32
+    alias MaxWorkers = UInt32
 
     alias MetricData = Array(MetricDatum)
 
@@ -1596,7 +1596,7 @@ module Aws::MWAA
       "EnvironmentClass" : String,
       "ExecutionRoleArn" : String,
       "LoggingConfiguration" : LoggingConfigurationInput,
-      "MaxWorkers" : Int32,
+      "MaxWorkers" : UInt32,
       "Name" : String,
       "NetworkConfiguration" : UpdateNetworkConfigurationInput,
       "PluginsS3ObjectVersion" : String,

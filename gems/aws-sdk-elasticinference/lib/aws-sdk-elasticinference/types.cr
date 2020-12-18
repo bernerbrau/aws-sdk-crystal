@@ -493,7 +493,7 @@ module Aws::ElasticInference
     alias DescribeAcceleratorsRequest = NamedTuple(
       "acceleratorIds" : Array(String),
       "filters" : Array(Filter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -550,7 +550,7 @@ module Aws::ElasticInference
 
     alias LocationType = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MemoryInfo = NamedTuple(
       "sizeInMiB" : Int32

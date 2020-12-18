@@ -3084,7 +3084,7 @@ module Aws::MQ
 
     alias BrokerEngineTypeOutput = NamedTuple(
       "BrokerEngineTypes" : Array(BrokerEngineType),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3105,7 +3105,7 @@ module Aws::MQ
 
     alias BrokerInstanceOptionsOutput = NamedTuple(
       "BrokerInstanceOptions" : Array(BrokerInstanceOption),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3304,27 +3304,27 @@ module Aws::MQ
 
     alias DescribeBrokerEngineTypesRequest = NamedTuple(
       "EngineType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias DescribeBrokerEngineTypesResponse = NamedTuple(
       "BrokerEngineTypes" : Array(BrokerEngineType),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias DescribeBrokerInstanceOptionsRequest = NamedTuple(
       "EngineType" : String,
       "HostInstanceType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "StorageType" : String
     )
 
     alias DescribeBrokerInstanceOptionsResponse = NamedTuple(
       "BrokerInstanceOptions" : Array(BrokerInstanceOption),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3510,7 +3510,7 @@ module Aws::MQ
     )
 
     alias ListBrokersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3528,7 +3528,7 @@ module Aws::MQ
 
     alias ListConfigurationRevisionsRequest = NamedTuple(
       "ConfigurationId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3546,7 +3546,7 @@ module Aws::MQ
     )
 
     alias ListConfigurationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3566,20 +3566,20 @@ module Aws::MQ
 
     alias ListUsersOutput = NamedTuple(
       "BrokerId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Users" : Array(UserSummary)
     )
 
     alias ListUsersRequest = NamedTuple(
       "BrokerId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListUsersResponse = NamedTuple(
       "BrokerId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Users" : Array(UserSummary)
     )
@@ -3597,7 +3597,7 @@ module Aws::MQ
       "Pending" : PendingLogs
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NotFoundException = NamedTuple(
       "ErrorAttribute" : String,
@@ -3758,7 +3758,7 @@ module Aws::MQ
 
     alias __integer = Int32
 
-    alias __integerMin5Max100 = Int32
+    alias __integerMin5Max100 = UInt8
 
     alias __listOfAvailabilityZone = Array(AvailabilityZone)
 

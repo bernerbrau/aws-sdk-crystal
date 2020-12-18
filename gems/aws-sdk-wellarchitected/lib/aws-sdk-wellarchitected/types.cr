@@ -3100,7 +3100,7 @@ module Aws::WellArchitected
       "ResourceType" : String
     )
 
-    alias Count = Int32
+    alias Count = UInt32
 
     alias CreateMilestoneInput = NamedTuple(
       "WorkloadId" : String,
@@ -3110,7 +3110,7 @@ module Aws::WellArchitected
 
     alias CreateMilestoneOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32
+      "MilestoneNumber" : UInt8
     )
 
     alias CreateWorkloadInput = NamedTuple(
@@ -3175,12 +3175,12 @@ module Aws::WellArchitected
       "WorkloadId" : String,
       "LensAlias" : String,
       "QuestionId" : String,
-      "MilestoneNumber" : Int32
+      "MilestoneNumber" : UInt8
     )
 
     alias GetAnswerOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "LensAlias" : String,
       "Answer" : Answer
     )
@@ -3188,24 +3188,24 @@ module Aws::WellArchitected
     alias GetLensReviewInput = NamedTuple(
       "WorkloadId" : String,
       "LensAlias" : String,
-      "MilestoneNumber" : Int32
+      "MilestoneNumber" : UInt8
     )
 
     alias GetLensReviewOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "LensReview" : LensReview
     )
 
     alias GetLensReviewReportInput = NamedTuple(
       "WorkloadId" : String,
       "LensAlias" : String,
-      "MilestoneNumber" : Int32
+      "MilestoneNumber" : UInt8
     )
 
     alias GetLensReviewReportOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "LensReviewReport" : LensReviewReport
     )
 
@@ -3223,7 +3223,7 @@ module Aws::WellArchitected
 
     alias GetMilestoneInput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32
+      "MilestoneNumber" : UInt8
     )
 
     alias GetMilestoneOutput = NamedTuple(
@@ -3277,7 +3277,7 @@ module Aws::WellArchitected
       "PillarReviewSummaries" : Array(PillarReviewSummary),
       "UpdatedAt" : (String | UInt64 | Time)?,
       "Notes" : String,
-      "RiskCounts" : Hash(String,Int32),
+      "RiskCounts" : Hash(String,UInt32),
       "NextToken" : String
     )
 
@@ -3294,7 +3294,7 @@ module Aws::WellArchitected
       "LensName" : String,
       "LensStatus" : String,
       "UpdatedAt" : (String | UInt64 | Time)?,
-      "RiskCounts" : Hash(String,Int32)
+      "RiskCounts" : Hash(String,UInt32)
     )
 
     alias LensStatus = String
@@ -3322,16 +3322,16 @@ module Aws::WellArchitected
       "WorkloadId" : String,
       "LensAlias" : String,
       "PillarId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
-    alias ListAnswersMaxResults = Int32
+    alias ListAnswersMaxResults = UInt8
 
     alias ListAnswersOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "LensAlias" : String,
       "AnswerSummaries" : Array(AnswerSummary),
       "NextToken" : String
@@ -3341,16 +3341,16 @@ module Aws::WellArchitected
       "WorkloadId" : String,
       "LensAlias" : String,
       "PillarId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
-    alias ListLensReviewImprovementsMaxResults = Int32
+    alias ListLensReviewImprovementsMaxResults = UInt8
 
     alias ListLensReviewImprovementsOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "LensAlias" : String,
       "ImprovementSummaries" : Array(ImprovementSummary),
       "NextToken" : String
@@ -3358,21 +3358,21 @@ module Aws::WellArchitected
 
     alias ListLensReviewsInput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLensReviewsOutput = NamedTuple(
       "WorkloadId" : String,
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "LensReviewSummaries" : Array(LensReviewSummary),
       "NextToken" : String
     )
 
     alias ListLensesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLensesOutput = NamedTuple(
@@ -3383,7 +3383,7 @@ module Aws::WellArchitected
     alias ListMilestonesInput = NamedTuple(
       "WorkloadId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMilestonesOutput = NamedTuple(
@@ -3395,10 +3395,10 @@ module Aws::WellArchitected
     alias ListNotificationsInput = NamedTuple(
       "WorkloadId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
-    alias ListNotificationsMaxResults = Int32
+    alias ListNotificationsMaxResults = UInt8
 
     alias ListNotificationsOutput = NamedTuple(
       "NotificationSummaries" : Array(NotificationSummary),
@@ -3408,10 +3408,10 @@ module Aws::WellArchitected
     alias ListShareInvitationsInput = NamedTuple(
       "WorkloadNamePrefix" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
-    alias ListShareInvitationsMaxResults = Int32
+    alias ListShareInvitationsMaxResults = UInt8
 
     alias ListShareInvitationsOutput = NamedTuple(
       "ShareInvitationSummaries" : Array(ShareInvitationSummary),
@@ -3422,10 +3422,10 @@ module Aws::WellArchitected
       "WorkloadId" : String,
       "SharedWithPrefix" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
-    alias ListWorkloadSharesMaxResults = Int32
+    alias ListWorkloadSharesMaxResults = UInt8
 
     alias ListWorkloadSharesOutput = NamedTuple(
       "WorkloadId" : String,
@@ -3436,20 +3436,20 @@ module Aws::WellArchitected
     alias ListWorkloadsInput = NamedTuple(
       "WorkloadNamePrefix" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
-    alias ListWorkloadsMaxResults = Int32
+    alias ListWorkloadsMaxResults = UInt8
 
     alias ListWorkloadsOutput = NamedTuple(
       "WorkloadSummaries" : Array(WorkloadSummary),
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Milestone = NamedTuple(
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "MilestoneName" : String,
       "RecordedAt" : (String | UInt64 | Time)?,
       "Workload" : Workload
@@ -3457,12 +3457,12 @@ module Aws::WellArchitected
 
     alias MilestoneName = String
 
-    alias MilestoneNumber = Int32
+    alias MilestoneNumber = UInt8
 
     alias MilestoneSummaries = Array(MilestoneSummary)
 
     alias MilestoneSummary = NamedTuple(
-      "MilestoneNumber" : Int32,
+      "MilestoneNumber" : UInt8,
       "MilestoneName" : String,
       "RecordedAt" : (String | UInt64 | Time)?,
       "WorkloadSummary" : WorkloadSummary
@@ -3503,7 +3503,7 @@ module Aws::WellArchitected
       "PillarId" : String,
       "PillarName" : String,
       "Notes" : String,
-      "RiskCounts" : Hash(String,Int32)
+      "RiskCounts" : Hash(String,UInt32)
     )
 
     alias QuestionDescription = String
@@ -3530,7 +3530,7 @@ module Aws::WellArchitected
 
     alias Risk = String
 
-    alias RiskCounts = Hash(String,Int32)
+    alias RiskCounts = Hash(String,UInt32)
 
     alias SelectedChoices = Array(String)
 
@@ -3695,7 +3695,7 @@ module Aws::WellArchitected
       "Industry" : String,
       "Notes" : String,
       "ImprovementStatus" : String,
-      "RiskCounts" : Hash(String,Int32),
+      "RiskCounts" : Hash(String,UInt32),
       "PillarPriorities" : Array(String),
       "Lenses" : Array(String),
       "Owner" : String,
@@ -3764,7 +3764,7 @@ module Aws::WellArchitected
       "Owner" : String,
       "UpdatedAt" : (String | UInt64 | Time)?,
       "Lenses" : Array(String),
-      "RiskCounts" : Hash(String,Int32),
+      "RiskCounts" : Hash(String,UInt32),
       "ImprovementStatus" : String
     )
   end

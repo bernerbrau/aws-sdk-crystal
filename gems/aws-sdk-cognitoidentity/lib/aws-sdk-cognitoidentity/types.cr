@@ -1663,7 +1663,7 @@ module Aws::CognitoIdentity
       "IdentityPoolId" : String,
       "IdentityId" : String,
       "Logins" : Hash(String,String),
-      "TokenDuration" : Int64
+      "TokenDuration" : UInt32
     )
 
     alias GetOpenIdTokenForDeveloperIdentityResponse = NamedTuple(
@@ -1752,7 +1752,7 @@ module Aws::CognitoIdentity
 
     alias ListIdentitiesInput = NamedTuple(
       "IdentityPoolId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "HideDisabled" : Bool
     )
@@ -1764,7 +1764,7 @@ module Aws::CognitoIdentity
     )
 
     alias ListIdentityPoolsInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1789,7 +1789,7 @@ module Aws::CognitoIdentity
       "IdentityPoolId" : String,
       "IdentityId" : String,
       "DeveloperUserIdentifier" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1831,7 +1831,7 @@ module Aws::CognitoIdentity
 
     alias PaginationKey = String
 
-    alias QueryLimit = Int32
+    alias QueryLimit = UInt8
 
     alias ResourceConflictException = NamedTuple(
       "message" : String
@@ -1886,7 +1886,7 @@ module Aws::CognitoIdentity
 
     alias TagValueType = String
 
-    alias TokenDuration = Int64
+    alias TokenDuration = UInt32
 
     alias TooManyRequestsException = NamedTuple(
       "message" : String

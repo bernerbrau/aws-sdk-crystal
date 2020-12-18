@@ -3169,7 +3169,7 @@ module Aws::GreengrassV2
       "iotJobArn" : String
     )
 
-    alias DefaultMaxResults = Int32
+    alias DefaultMaxResults = UInt8
 
     alias DeleteComponentRequest = NamedTuple(
       "arn" : String
@@ -3350,7 +3350,7 @@ module Aws::GreengrassV2
       "failureType" : String,
       "action" : String,
       "thresholdPercentage" : Float64,
-      "minNumberOfExecutedThings" : Int32
+      "minNumberOfExecutedThings" : UInt32
     )
 
     alias IoTJobAbortCriteriaList = Array(IoTJobAbortCriteria)
@@ -3361,11 +3361,11 @@ module Aws::GreengrassV2
 
     alias IoTJobExecutionsRolloutConfig = NamedTuple(
       "exponentialRate" : IoTJobExponentialRolloutRate,
-      "maximumPerMinute" : Int32
+      "maximumPerMinute" : UInt16
     )
 
     alias IoTJobExponentialRolloutRate = NamedTuple(
-      "baseRatePerMinute" : Int32,
+      "baseRatePerMinute" : UInt16,
       "incrementFactor" : Float64,
       "rateIncreaseCriteria" : IoTJobRateIncreaseCriteria
     )
@@ -3374,18 +3374,18 @@ module Aws::GreengrassV2
 
     alias IoTJobInProgressTimeoutInMinutes = Int64
 
-    alias IoTJobMaxExecutionsPerMin = Int32
+    alias IoTJobMaxExecutionsPerMin = UInt16
 
-    alias IoTJobMinimumNumberOfExecutedThings = Int32
+    alias IoTJobMinimumNumberOfExecutedThings = UInt32
 
-    alias IoTJobNumberOfThings = Int32
+    alias IoTJobNumberOfThings = UInt32
 
     alias IoTJobRateIncreaseCriteria = NamedTuple(
-      "numberOfNotifiedThings" : Int32,
-      "numberOfSucceededThings" : Int32
+      "numberOfNotifiedThings" : UInt32,
+      "numberOfSucceededThings" : UInt32
     )
 
-    alias IoTJobRolloutBaseRatePerMinute = Int32
+    alias IoTJobRolloutBaseRatePerMinute = UInt16
 
     alias IoTJobRolloutIncrementFactor = Float64
 
@@ -3476,7 +3476,7 @@ module Aws::GreengrassV2
 
     alias ListComponentVersionsRequest = NamedTuple(
       "arn" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -3487,7 +3487,7 @@ module Aws::GreengrassV2
 
     alias ListComponentsRequest = NamedTuple(
       "scope" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -3499,7 +3499,7 @@ module Aws::GreengrassV2
     alias ListCoreDevicesRequest = NamedTuple(
       "thingGroupArn" : String,
       "status" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -3511,7 +3511,7 @@ module Aws::GreengrassV2
     alias ListDeploymentsRequest = NamedTuple(
       "targetArn" : String,
       "historyFilter" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -3522,7 +3522,7 @@ module Aws::GreengrassV2
 
     alias ListEffectiveDeploymentsRequest = NamedTuple(
       "coreDeviceThingName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -3533,7 +3533,7 @@ module Aws::GreengrassV2
 
     alias ListInstalledComponentsRequest = NamedTuple(
       "coreDeviceThingName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 

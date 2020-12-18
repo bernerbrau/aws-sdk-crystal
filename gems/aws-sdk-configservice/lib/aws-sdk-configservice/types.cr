@@ -7966,9 +7966,9 @@ module Aws::ConfigService
 
     alias Annotation = String
 
-    alias AutoRemediationAttemptSeconds = Int64
+    alias AutoRemediationAttemptSeconds = UInt32
 
-    alias AutoRemediationAttempts = Int32
+    alias AutoRemediationAttempts = UInt8
 
     alias AvailabilityZone = String
 
@@ -8303,7 +8303,7 @@ module Aws::ConfigService
       
     )
 
-    alias CosmosPageLimit = Int32
+    alias CosmosPageLimit = UInt8
 
     alias Date = String | UInt64 | Time
 
@@ -8418,7 +8418,7 @@ module Aws::ConfigService
     alias DescribeAggregateComplianceByConfigRulesRequest = NamedTuple(
       "ConfigurationAggregatorName" : String,
       "Filters" : ConfigRuleComplianceFilters,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "NextToken" : String
     )
 
@@ -8428,7 +8428,7 @@ module Aws::ConfigService
     )
 
     alias DescribeAggregationAuthorizationsRequest = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8452,7 +8452,7 @@ module Aws::ConfigService
       "ResourceType" : String,
       "ResourceId" : String,
       "ComplianceTypes" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8464,7 +8464,7 @@ module Aws::ConfigService
     alias DescribeConfigRuleEvaluationStatusRequest = NamedTuple(
       "ConfigRuleNames" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeConfigRuleEvaluationStatusResponse = NamedTuple(
@@ -8486,7 +8486,7 @@ module Aws::ConfigService
       "ConfigurationAggregatorName" : String,
       "UpdateStatus" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeConfigurationAggregatorSourcesStatusResponse = NamedTuple(
@@ -8497,7 +8497,7 @@ module Aws::ConfigService
     alias DescribeConfigurationAggregatorsRequest = NamedTuple(
       "ConfigurationAggregatorNames" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeConfigurationAggregatorsResponse = NamedTuple(
@@ -8521,12 +8521,12 @@ module Aws::ConfigService
       "ConfigurationRecorders" : Array(ConfigurationRecorder)
     )
 
-    alias DescribeConformancePackComplianceLimit = Int32
+    alias DescribeConformancePackComplianceLimit = UInt16
 
     alias DescribeConformancePackComplianceRequest = NamedTuple(
       "ConformancePackName" : String,
       "Filters" : ConformancePackComplianceFilters,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "NextToken" : String
     )
 
@@ -8538,7 +8538,7 @@ module Aws::ConfigService
 
     alias DescribeConformancePackStatusRequest = NamedTuple(
       "ConformancePackNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8549,7 +8549,7 @@ module Aws::ConfigService
 
     alias DescribeConformancePacksRequest = NamedTuple(
       "ConformancePackNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8576,7 +8576,7 @@ module Aws::ConfigService
 
     alias DescribeOrganizationConfigRuleStatusesRequest = NamedTuple(
       "OrganizationConfigRuleNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8587,7 +8587,7 @@ module Aws::ConfigService
 
     alias DescribeOrganizationConfigRulesRequest = NamedTuple(
       "OrganizationConfigRuleNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8598,7 +8598,7 @@ module Aws::ConfigService
 
     alias DescribeOrganizationConformancePackStatusesRequest = NamedTuple(
       "OrganizationConformancePackNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8609,7 +8609,7 @@ module Aws::ConfigService
 
     alias DescribeOrganizationConformancePacksRequest = NamedTuple(
       "OrganizationConformancePackNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8618,10 +8618,10 @@ module Aws::ConfigService
       "NextToken" : String
     )
 
-    alias DescribePendingAggregationRequestsLimit = Int32
+    alias DescribePendingAggregationRequestsLimit = UInt8
 
     alias DescribePendingAggregationRequestsRequest = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8641,7 +8641,7 @@ module Aws::ConfigService
     alias DescribeRemediationExceptionsRequest = NamedTuple(
       "ConfigRuleName" : String,
       "ResourceKeys" : Array(RemediationExceptionResourceKey),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8653,7 +8653,7 @@ module Aws::ConfigService
     alias DescribeRemediationExecutionStatusRequest = NamedTuple(
       "ConfigRuleName" : String,
       "ResourceKeys" : Array(ResourceKey),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8755,7 +8755,7 @@ module Aws::ConfigService
       "AccountId" : String,
       "AwsRegion" : String,
       "ComplianceType" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8768,7 +8768,7 @@ module Aws::ConfigService
       "ConfigurationAggregatorName" : String,
       "Filters" : ConfigRuleComplianceSummaryFilters,
       "GroupByKey" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "NextToken" : String
     )
 
@@ -8782,7 +8782,7 @@ module Aws::ConfigService
       "ConfigurationAggregatorName" : String,
       "Filters" : ResourceCountFilters,
       "GroupByKey" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "NextToken" : String
     )
 
@@ -8805,7 +8805,7 @@ module Aws::ConfigService
     alias GetComplianceDetailsByConfigRuleRequest = NamedTuple(
       "ConfigRuleName" : String,
       "ComplianceTypes" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8838,12 +8838,12 @@ module Aws::ConfigService
       "ComplianceSummariesByResourceType" : Array(ComplianceSummaryByResourceType)
     )
 
-    alias GetConformancePackComplianceDetailsLimit = Int32
+    alias GetConformancePackComplianceDetailsLimit = UInt8
 
     alias GetConformancePackComplianceDetailsRequest = NamedTuple(
       "ConformancePackName" : String,
       "Filters" : ConformancePackEvaluationFilters,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8855,7 +8855,7 @@ module Aws::ConfigService
 
     alias GetConformancePackComplianceSummaryRequest = NamedTuple(
       "ConformancePackNames" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8866,7 +8866,7 @@ module Aws::ConfigService
 
     alias GetDiscoveredResourceCountsRequest = NamedTuple(
       "resourceTypes" : Array(String),
-      "limit" : Int32,
+      "limit" : UInt8,
       "nextToken" : String
     )
 
@@ -8879,7 +8879,7 @@ module Aws::ConfigService
     alias GetOrganizationConfigRuleDetailedStatusRequest = NamedTuple(
       "OrganizationConfigRuleName" : String,
       "Filters" : StatusDetailFilters,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8891,7 +8891,7 @@ module Aws::ConfigService
     alias GetOrganizationConformancePackDetailedStatusRequest = NamedTuple(
       "OrganizationConformancePackName" : String,
       "Filters" : OrganizationResourceDetailedStatusFilters,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -8906,7 +8906,7 @@ module Aws::ConfigService
       "laterTime" : (String | UInt64 | Time)?,
       "earlierTime" : (String | UInt64 | Time)?,
       "chronologicalOrder" : String,
-      "limit" : Int32,
+      "limit" : UInt8,
       "nextToken" : String
     )
 
@@ -8915,7 +8915,7 @@ module Aws::ConfigService
       "nextToken" : String
     )
 
-    alias GroupByAPILimit = Int32
+    alias GroupByAPILimit = UInt16
 
     alias GroupedResourceCount = NamedTuple(
       "GroupName" : String,
@@ -8990,7 +8990,7 @@ module Aws::ConfigService
 
     alias LaterTime = String | UInt64 | Time
 
-    alias Limit = Int32
+    alias Limit = UInt8
 
     alias LimitExceededException = NamedTuple(
       
@@ -9000,7 +9000,7 @@ module Aws::ConfigService
       "ConfigurationAggregatorName" : String,
       "ResourceType" : String,
       "Filters" : ResourceFilters,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -9013,7 +9013,7 @@ module Aws::ConfigService
       "resourceType" : String,
       "resourceIds" : Array(String),
       "resourceName" : String,
-      "limit" : Int32,
+      "limit" : UInt8,
       "includeDeletedResources" : Bool,
       "nextToken" : String
     )
@@ -9025,7 +9025,7 @@ module Aws::ConfigService
 
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceArn" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -9279,7 +9279,7 @@ module Aws::ConfigService
 
     alias Owner = String
 
-    alias PageSizeLimit = Int32
+    alias PageSizeLimit = UInt8
 
     alias ParameterName = String
 
@@ -9292,7 +9292,7 @@ module Aws::ConfigService
 
     alias PendingAggregationRequestList = Array(PendingAggregationRequest)
 
-    alias Percentage = Int32
+    alias Percentage = UInt8
 
     alias PutAggregationAuthorizationRequest = NamedTuple(
       "AuthorizedAccountId" : String,
@@ -9405,7 +9405,7 @@ module Aws::ConfigService
     )
 
     alias PutRetentionConfigurationRequest = NamedTuple(
-      "RetentionPeriodInDays" : Int32
+      "RetentionPeriodInDays" : UInt16
     )
 
     alias PutRetentionConfigurationResponse = NamedTuple(
@@ -9452,8 +9452,8 @@ module Aws::ConfigService
       "ResourceType" : String,
       "Automatic" : Bool,
       "ExecutionControls" : ExecutionControls,
-      "MaximumAutomaticAttempts" : Int32,
-      "RetryAttemptSeconds" : Int64,
+      "MaximumAutomaticAttempts" : UInt8,
+      "RetryAttemptSeconds" : UInt32,
       "Arn" : String,
       "CreatedByService" : String
     )
@@ -9596,7 +9596,7 @@ module Aws::ConfigService
 
     alias RetentionConfiguration = NamedTuple(
       "Name" : String,
-      "RetentionPeriodInDays" : Int32
+      "RetentionPeriodInDays" : UInt16
     )
 
     alias RetentionConfigurationList = Array(RetentionConfiguration)
@@ -9605,9 +9605,9 @@ module Aws::ConfigService
 
     alias RetentionConfigurationNameList = Array(String)
 
-    alias RetentionPeriodInDays = Int32
+    alias RetentionPeriodInDays = UInt16
 
-    alias RuleLimit = Int32
+    alias RuleLimit = UInt8
 
     alias SchemaVersionId = String
 
@@ -9621,8 +9621,8 @@ module Aws::ConfigService
     alias SelectAggregateResourceConfigRequest = NamedTuple(
       "Expression" : String,
       "ConfigurationAggregatorName" : String,
-      "Limit" : Int32,
-      "MaxResults" : Int32,
+      "Limit" : UInt8,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -9634,7 +9634,7 @@ module Aws::ConfigService
 
     alias SelectResourceConfigRequest = NamedTuple(
       "Expression" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -9659,8 +9659,8 @@ module Aws::ConfigService
     alias SourceDetails = Array(SourceDetail)
 
     alias SsmControls = NamedTuple(
-      "ConcurrentExecutionRatePercentage" : Int32,
-      "ErrorPercentage" : Int32
+      "ConcurrentExecutionRatePercentage" : UInt8,
+      "ErrorPercentage" : UInt8
     )
 
     alias StackArn = String

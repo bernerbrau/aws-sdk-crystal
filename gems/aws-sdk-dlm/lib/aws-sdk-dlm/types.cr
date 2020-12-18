@@ -1138,7 +1138,7 @@ module Aws::DLM
 
     alias CopyTagsNullable = Bool
 
-    alias Count = Int32
+    alias Count = UInt16
 
     alias CreateLifecyclePolicyRequest = NamedTuple(
       "ExecutionRoleArn" : String,
@@ -1153,7 +1153,7 @@ module Aws::DLM
     )
 
     alias CreateRule = NamedTuple(
-      "Interval" : Int32,
+      "Interval" : UInt32,
       "IntervalUnit" : String,
       "Times" : Array(String),
       "CronExpression" : String
@@ -1162,7 +1162,7 @@ module Aws::DLM
     alias CronExpression = String
 
     alias CrossRegionCopyRetainRule = NamedTuple(
-      "Interval" : Int32,
+      "Interval" : UInt32,
       "IntervalUnit" : String
     )
 
@@ -1195,8 +1195,8 @@ module Aws::DLM
     alias ExecutionRoleArn = String
 
     alias FastRestoreRule = NamedTuple(
-      "Count" : Int32,
-      "Interval" : Int32,
+      "Count" : UInt16,
+      "Interval" : UInt32,
       "IntervalUnit" : String,
       "AvailabilityZones" : Array(String)
     )
@@ -1228,7 +1228,7 @@ module Aws::DLM
       "Code" : String
     )
 
-    alias Interval = Int32
+    alias Interval = UInt32
 
     alias IntervalUnitValues = String
 
@@ -1317,8 +1317,8 @@ module Aws::DLM
     alias ResourceTypeValuesList = Array(String)
 
     alias RetainRule = NamedTuple(
-      "Count" : Int32,
-      "Interval" : Int32,
+      "Count" : UInt16,
+      "Interval" : UInt32,
       "IntervalUnit" : String
     )
 

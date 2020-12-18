@@ -1236,7 +1236,7 @@ module Aws::AppRegistry
       "resourceArn" : String
     )
 
-    alias AssociationCount = Int32
+    alias AssociationCount = UInt32
 
     alias AttributeGroup = NamedTuple(
       "id" : String,
@@ -1348,7 +1348,7 @@ module Aws::AppRegistry
       "description" : String,
       "creationTime" : (String | UInt64 | Time)?,
       "lastUpdateTime" : (String | UInt64 | Time)?,
-      "associatedResourceCount" : Int32,
+      "associatedResourceCount" : UInt32,
       "tags" : Hash(String,String)
     )
 
@@ -1373,7 +1373,7 @@ module Aws::AppRegistry
 
     alias ListApplicationsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListApplicationsResponse = NamedTuple(
@@ -1384,7 +1384,7 @@ module Aws::AppRegistry
     alias ListAssociatedAttributeGroupsRequest = NamedTuple(
       "application" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAssociatedAttributeGroupsResponse = NamedTuple(
@@ -1395,7 +1395,7 @@ module Aws::AppRegistry
     alias ListAssociatedResourcesRequest = NamedTuple(
       "application" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAssociatedResourcesResponse = NamedTuple(
@@ -1405,7 +1405,7 @@ module Aws::AppRegistry
 
     alias ListAttributeGroupsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAttributeGroupsResponse = NamedTuple(
@@ -1421,7 +1421,7 @@ module Aws::AppRegistry
       "tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Name = String
 

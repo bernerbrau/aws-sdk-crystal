@@ -724,7 +724,7 @@ module Aws::IoTEventsData
       "detectorModelName" : String,
       "stateName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDetectorsResponse = NamedTuple(
@@ -732,7 +732,7 @@ module Aws::IoTEventsData
       "nextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = NamedTuple(
       "messageId" : String,

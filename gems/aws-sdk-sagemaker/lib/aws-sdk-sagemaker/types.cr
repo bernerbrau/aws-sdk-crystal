@@ -35136,9 +35136,9 @@ module Aws::SageMaker
     )
 
     alias AutoMLJobCompletionCriteria = NamedTuple(
-      "MaxCandidates" : Int32,
-      "MaxRuntimePerTrainingJobInSeconds" : Int32,
-      "MaxAutoMLJobRuntimeInSeconds" : Int32
+      "MaxCandidates" : UInt32,
+      "MaxRuntimePerTrainingJobInSeconds" : UInt32,
+      "MaxAutoMLJobRuntimeInSeconds" : UInt32
     )
 
     alias AutoMLJobConfig = NamedTuple(
@@ -35171,7 +35171,7 @@ module Aws::SageMaker
       "FailureReason" : String
     )
 
-    alias AutoMLMaxResults = Int32
+    alias AutoMLMaxResults = UInt8
 
     alias AutoMLMetricEnum = String
 
@@ -35211,14 +35211,14 @@ module Aws::SageMaker
       "Report" : MetricsSource
     )
 
-    alias BillableTimeInSeconds = Int32
+    alias BillableTimeInSeconds = UInt32
 
     alias BlockedReason = String
 
     alias BlueGreenUpdatePolicy = NamedTuple(
       "TrafficRoutingConfiguration" : TrafficRoutingConfig,
-      "TerminationWaitInSeconds" : Int32,
-      "MaximumExecutionTimeoutInSeconds" : Int32
+      "TerminationWaitInSeconds" : UInt16,
+      "MaximumExecutionTimeoutInSeconds" : UInt16
     )
 
     alias Boolean = Bool
@@ -35249,12 +35249,12 @@ module Aws::SageMaker
 
     alias CapacitySize = NamedTuple(
       "Type" : String,
-      "Value" : Int32
+      "Value" : UInt32
     )
 
     alias CapacitySizeType = String
 
-    alias CapacitySizeValue = Int32
+    alias CapacitySizeValue = UInt32
 
     alias CaptureContentTypeHeader = NamedTuple(
       "CsvContentTypes" : Array(String),
@@ -35284,7 +35284,7 @@ module Aws::SageMaker
 
     alias CategoricalParameterRanges = Array(CategoricalParameterRange)
 
-    alias Cents = Int32
+    alias Cents = UInt8
 
     alias CertifyForMarketplace = Bool
 
@@ -35892,7 +35892,7 @@ module Aws::SageMaker
       "Tags" : Array(Tag),
       "LifecycleConfigName" : String,
       "DirectInternetAccess" : String,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt16,
       "AcceleratorTypes" : Array(String),
       "DefaultCodeRepository" : String,
       "AdditionalCodeRepositories" : Array(String),
@@ -35930,7 +35930,7 @@ module Aws::SageMaker
     alias CreatePresignedDomainUrlRequest = NamedTuple(
       "DomainId" : String,
       "UserProfileName" : String,
-      "SessionExpirationDurationInSeconds" : Int32
+      "SessionExpirationDurationInSeconds" : UInt16
     )
 
     alias CreatePresignedDomainUrlResponse = NamedTuple(
@@ -35939,7 +35939,7 @@ module Aws::SageMaker
 
     alias CreatePresignedNotebookInstanceUrlInput = NamedTuple(
       "NotebookInstanceName" : String,
-      "SessionExpirationDurationInSeconds" : Int32
+      "SessionExpirationDurationInSeconds" : UInt16
     )
 
     alias CreatePresignedNotebookInstanceUrlOutput = NamedTuple(
@@ -36006,9 +36006,9 @@ module Aws::SageMaker
     alias CreateTransformJobRequest = NamedTuple(
       "TransformJobName" : String,
       "ModelName" : String,
-      "MaxConcurrentTransforms" : Int32,
+      "MaxConcurrentTransforms" : UInt32,
       "ModelClientConfig" : ModelClientConfig,
-      "MaxPayloadInMB" : Int32,
+      "MaxPayloadInMB" : UInt32,
       "BatchStrategy" : String,
       "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
@@ -36098,7 +36098,7 @@ module Aws::SageMaker
 
     alias CustomImage = NamedTuple(
       "ImageName" : String,
-      "ImageVersionNumber" : Int32,
+      "ImageVersionNumber" : UInt32,
       "AppImageConfigName" : String
     )
 
@@ -36106,7 +36106,7 @@ module Aws::SageMaker
 
     alias DataCaptureConfig = NamedTuple(
       "EnableCapture" : Bool,
-      "InitialSamplingPercentage" : Int32,
+      "InitialSamplingPercentage" : UInt8,
       "DestinationS3Uri" : String,
       "KmsKeyId" : String,
       "CaptureOptions" : Array(CaptureOption),
@@ -36116,7 +36116,7 @@ module Aws::SageMaker
     alias DataCaptureConfigSummary = NamedTuple(
       "EnableCapture" : Bool,
       "CaptureStatus" : String,
-      "CurrentSamplingPercentage" : Int32,
+      "CurrentSamplingPercentage" : UInt8,
       "DestinationS3Uri" : String,
       "KmsKeyId" : String
     )
@@ -36186,7 +36186,7 @@ module Aws::SageMaker
       "S3OutputPath" : String,
       "RuleEvaluatorImage" : String,
       "InstanceType" : String,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt32,
       "RuleParameters" : Hash(String,String)
     )
 
@@ -36202,9 +36202,9 @@ module Aws::SageMaker
 
     alias DebugRuleEvaluationStatuses = Array(DebugRuleEvaluationStatus)
 
-    alias DefaultGid = Int32
+    alias DefaultGid = UInt16
 
-    alias DefaultUid = Int32
+    alias DefaultUid = UInt16
 
     alias DeleteActionRequest = NamedTuple(
       "ActionName" : String
@@ -36319,7 +36319,7 @@ module Aws::SageMaker
 
     alias DeleteImageVersionRequest = NamedTuple(
       "ImageName" : String,
-      "Version" : Int32
+      "Version" : UInt32
     )
 
     alias DeleteImageVersionResponse = NamedTuple(
@@ -36839,7 +36839,7 @@ module Aws::SageMaker
 
     alias DescribeImageVersionRequest = NamedTuple(
       "ImageName" : String,
-      "Version" : Int32
+      "Version" : UInt32
     )
 
     alias DescribeImageVersionResponse = NamedTuple(
@@ -36851,7 +36851,7 @@ module Aws::SageMaker
       "ImageVersionArn" : String,
       "ImageVersionStatus" : String,
       "LastModifiedTime" : (String | UInt64 | Time)?,
-      "Version" : Int32
+      "Version" : UInt32
     )
 
     alias DescribeLabelingJobRequest = NamedTuple(
@@ -36950,7 +36950,7 @@ module Aws::SageMaker
     alias DescribeModelPackageOutput = NamedTuple(
       "ModelPackageName" : String,
       "ModelPackageGroupName" : String,
-      "ModelPackageVersion" : Int32,
+      "ModelPackageVersion" : UInt32,
       "ModelPackageArn" : String,
       "ModelPackageDescription" : String,
       "CreationTime" : String | UInt64 | Time,
@@ -37037,7 +37037,7 @@ module Aws::SageMaker
       "CreationTime" : (String | UInt64 | Time)?,
       "NotebookInstanceLifecycleConfigName" : String,
       "DirectInternetAccess" : String,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt16,
       "AcceleratorTypes" : Array(String),
       "DefaultCodeRepository" : String,
       "AdditionalCodeRepositories" : Array(String),
@@ -37172,8 +37172,8 @@ module Aws::SageMaker
       "EnableInterContainerTrafficEncryption" : Bool,
       "EnableManagedSpotTraining" : Bool,
       "CheckpointConfig" : CheckpointConfig,
-      "TrainingTimeInSeconds" : Int32,
-      "BillableTimeInSeconds" : Int32,
+      "TrainingTimeInSeconds" : UInt32,
+      "BillableTimeInSeconds" : UInt32,
       "DebugHookConfig" : DebugHookConfig,
       "ExperimentConfig" : ExperimentConfig,
       "DebugRuleConfigurations" : Array(DebugRuleConfiguration),
@@ -37195,9 +37195,9 @@ module Aws::SageMaker
       "TransformJobStatus" : String,
       "FailureReason" : String,
       "ModelName" : String,
-      "MaxConcurrentTransforms" : Int32,
+      "MaxConcurrentTransforms" : UInt32,
       "ModelClientConfig" : ModelClientConfig,
-      "MaxPayloadInMB" : Int32,
+      "MaxPayloadInMB" : UInt32,
       "BatchStrategy" : String,
       "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
@@ -37292,7 +37292,7 @@ module Aws::SageMaker
     alias DesiredWeightAndCapacity = NamedTuple(
       "VariantName" : String,
       "DesiredWeight" : Float32,
-      "DesiredInstanceCount" : Int32
+      "DesiredInstanceCount" : UInt32
     )
 
     alias DesiredWeightAndCapacityList = Array(DesiredWeightAndCapacity)
@@ -37382,7 +37382,7 @@ module Aws::SageMaker
       "TrialArn" : String
     )
 
-    alias Dollars = Int32
+    alias Dollars = UInt8
 
     alias DomainArn = String
 
@@ -37621,7 +37621,7 @@ module Aws::SageMaker
 
     alias FeatureGroupArn = String
 
-    alias FeatureGroupMaxResults = Int32
+    alias FeatureGroupMaxResults = UInt8
 
     alias FeatureGroupName = String
 
@@ -37651,8 +37651,8 @@ module Aws::SageMaker
 
     alias FileSystemConfig = NamedTuple(
       "MountPath" : String,
-      "DefaultUid" : Int32,
-      "DefaultGid" : Int32
+      "DefaultUid" : UInt16,
+      "DefaultGid" : UInt16
     )
 
     alias FileSystemDataSource = NamedTuple(
@@ -37713,9 +37713,9 @@ module Aws::SageMaker
       "FailureReason" : String
     )
 
-    alias FlowDefinitionTaskAvailabilityLifetimeInSeconds = Int32
+    alias FlowDefinitionTaskAvailabilityLifetimeInSeconds = UInt32
 
-    alias FlowDefinitionTaskCount = Int32
+    alias FlowDefinitionTaskCount = UInt8
 
     alias FlowDefinitionTaskDescription = String
 
@@ -37723,7 +37723,7 @@ module Aws::SageMaker
 
     alias FlowDefinitionTaskKeywords = Array(String)
 
-    alias FlowDefinitionTaskTimeLimitInSeconds = Int32
+    alias FlowDefinitionTaskTimeLimitInSeconds = UInt16
 
     alias FlowDefinitionTaskTitle = String
 
@@ -37804,9 +37804,9 @@ module Aws::SageMaker
       "HumanTaskUiArn" : String,
       "TaskTitle" : String,
       "TaskDescription" : String,
-      "TaskCount" : Int32,
-      "TaskAvailabilityLifetimeInSeconds" : Int32,
-      "TaskTimeLimitInSeconds" : Int32,
+      "TaskCount" : UInt8,
+      "TaskAvailabilityLifetimeInSeconds" : UInt32,
+      "TaskTimeLimitInSeconds" : UInt16,
       "TaskKeywords" : Array(String),
       "PublicWorkforceTaskPrice" : PublicWorkforceTaskPrice
     )
@@ -37822,10 +37822,10 @@ module Aws::SageMaker
       "TaskKeywords" : Array(String),
       "TaskTitle" : String,
       "TaskDescription" : String,
-      "NumberOfHumanWorkersPerDataObject" : Int32,
-      "TaskTimeLimitInSeconds" : Int32,
-      "TaskAvailabilityLifetimeInSeconds" : Int32,
-      "MaxConcurrentTaskCount" : Int32,
+      "NumberOfHumanWorkersPerDataObject" : UInt8,
+      "TaskTimeLimitInSeconds" : UInt32,
+      "TaskAvailabilityLifetimeInSeconds" : UInt32,
+      "MaxConcurrentTaskCount" : UInt16,
       "AnnotationConsolidationConfig" : AnnotationConsolidationConfig,
       "PublicWorkforceTaskPrice" : PublicWorkforceTaskPrice
     )
@@ -38012,12 +38012,12 @@ module Aws::SageMaker
       "ImageVersionArn" : String,
       "ImageVersionStatus" : String,
       "LastModifiedTime" : String | UInt64 | Time,
-      "Version" : Int32
+      "Version" : UInt32
     )
 
     alias ImageVersionArn = String
 
-    alias ImageVersionNumber = Int32
+    alias ImageVersionNumber = UInt32
 
     alias ImageVersionSortBy = String
 
@@ -38067,9 +38067,9 @@ module Aws::SageMaker
 
     alias IntegerParameterRanges = Array(IntegerParameterRange)
 
-    alias InvocationsMaxRetries = Int32
+    alias InvocationsMaxRetries = UInt8
 
-    alias InvocationsTimeoutInSeconds = Int32
+    alias InvocationsTimeoutInSeconds = UInt16
 
     alias IotRoleAlias = String
 
@@ -38114,20 +38114,20 @@ module Aws::SageMaker
 
     alias LabelAttributeName = String
 
-    alias LabelCounter = Int32
+    alias LabelCounter = UInt32
 
     alias LabelCounters = NamedTuple(
-      "TotalLabeled" : Int32,
-      "HumanLabeled" : Int32,
-      "MachineLabeled" : Int32,
-      "FailedNonRetryableError" : Int32,
-      "Unlabeled" : Int32
+      "TotalLabeled" : UInt32,
+      "HumanLabeled" : UInt32,
+      "MachineLabeled" : UInt32,
+      "FailedNonRetryableError" : UInt32,
+      "Unlabeled" : UInt32
     )
 
     alias LabelCountersForWorkteam = NamedTuple(
-      "HumanLabeled" : Int32,
-      "PendingHuman" : Int32,
-      "Total" : Int32
+      "HumanLabeled" : UInt32,
+      "PendingHuman" : UInt32,
+      "Total" : UInt32
     )
 
     alias LabelingJobAlgorithmSpecificationArn = String
@@ -38155,7 +38155,7 @@ module Aws::SageMaker
       "WorkRequesterAccountId" : String,
       "CreationTime" : String | UInt64 | Time,
       "LabelCounters" : LabelCountersForWorkteam,
-      "NumberOfHumanWorkersPerDataObject" : Int32
+      "NumberOfHumanWorkersPerDataObject" : UInt8
     )
 
     alias LabelingJobForWorkteamSummaryList = Array(LabelingJobForWorkteamSummary)
@@ -38193,8 +38193,8 @@ module Aws::SageMaker
     alias LabelingJobStatus = String
 
     alias LabelingJobStoppingConditions = NamedTuple(
-      "MaxHumanLabeledObjectCount" : Int32,
-      "MaxPercentageOfInputDatasetLabeled" : Int32
+      "MaxHumanLabeledObjectCount" : UInt32,
+      "MaxPercentageOfInputDatasetLabeled" : UInt8
     )
 
     alias LabelingJobSummary = NamedTuple(
@@ -38228,7 +38228,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListActionsResponse = NamedTuple(
@@ -38239,7 +38239,7 @@ module Aws::SageMaker
     alias ListAlgorithmsInput = NamedTuple(
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "NextToken" : String,
       "SortBy" : String,
@@ -38252,7 +38252,7 @@ module Aws::SageMaker
     )
 
     alias ListAppImageConfigsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
@@ -38270,7 +38270,7 @@ module Aws::SageMaker
 
     alias ListAppsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SortOrder" : String,
       "SortBy" : String,
       "DomainIdEquals" : String,
@@ -38290,7 +38290,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListArtifactsResponse = NamedTuple(
@@ -38309,7 +38309,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAssociationsResponse = NamedTuple(
@@ -38326,7 +38326,7 @@ module Aws::SageMaker
       "StatusEquals" : String,
       "SortOrder" : String,
       "SortBy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -38341,7 +38341,7 @@ module Aws::SageMaker
       "CandidateNameEquals" : String,
       "SortOrder" : String,
       "SortBy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -38355,7 +38355,7 @@ module Aws::SageMaker
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
       "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "NextToken" : String,
       "SortBy" : String,
@@ -38369,7 +38369,7 @@ module Aws::SageMaker
 
     alias ListCompilationJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
@@ -38395,7 +38395,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListContextsResponse = NamedTuple(
@@ -38408,7 +38408,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?
@@ -38421,7 +38421,7 @@ module Aws::SageMaker
 
     alias ListDeviceFleetsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
@@ -38440,7 +38440,7 @@ module Aws::SageMaker
 
     alias ListDevicesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "LatestHeartbeatAfter" : (String | UInt64 | Time)?,
       "ModelName" : String,
       "DeviceFleetName" : String
@@ -38453,7 +38453,7 @@ module Aws::SageMaker
 
     alias ListDomainsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDomainsResponse = NamedTuple(
@@ -38463,7 +38463,7 @@ module Aws::SageMaker
 
     alias ListEdgePackagingJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : Int8,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
@@ -38486,7 +38486,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?
@@ -38501,7 +38501,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
@@ -38521,7 +38521,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListExperimentsResponse = NamedTuple(
@@ -38537,7 +38537,7 @@ module Aws::SageMaker
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "SortOrder" : String,
       "SortBy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -38551,7 +38551,7 @@ module Aws::SageMaker
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListFlowDefinitionsResponse = NamedTuple(
@@ -38564,7 +38564,7 @@ module Aws::SageMaker
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListHumanTaskUisResponse = NamedTuple(
@@ -38574,7 +38574,7 @@ module Aws::SageMaker
 
     alias ListHyperParameterTuningJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SortBy" : String,
       "SortOrder" : String,
       "NameContains" : String,
@@ -38596,7 +38596,7 @@ module Aws::SageMaker
       "ImageName" : String,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
       "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "SortBy" : String,
       "SortOrder" : String
@@ -38612,7 +38612,7 @@ module Aws::SageMaker
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
       "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "NextToken" : String,
       "SortBy" : String,
@@ -38626,7 +38626,7 @@ module Aws::SageMaker
 
     alias ListLabelingJobsForWorkteamRequest = NamedTuple(
       "WorkteamArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
@@ -38647,7 +38647,7 @@ module Aws::SageMaker
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
       "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "NameContains" : String,
       "SortBy" : String,
@@ -38662,14 +38662,14 @@ module Aws::SageMaker
 
     alias ListLineageEntityParameterKey = Array(String)
 
-    alias ListMaxResults = Int32
+    alias ListMaxResults = Int8
 
     alias ListModelBiasJobDefinitionsRequest = NamedTuple(
       "EndpointName" : String,
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?
@@ -38685,7 +38685,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?
@@ -38699,7 +38699,7 @@ module Aws::SageMaker
     alias ListModelPackageGroupsInput = NamedTuple(
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "NextToken" : String,
       "SortBy" : String,
@@ -38714,7 +38714,7 @@ module Aws::SageMaker
     alias ListModelPackagesInput = NamedTuple(
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "ModelApprovalStatus" : String,
       "ModelPackageGroupName" : String,
@@ -38734,7 +38734,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?
@@ -38749,7 +38749,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?
@@ -38766,7 +38766,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ScheduledTimeBefore" : (String | UInt64 | Time)?,
       "ScheduledTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
@@ -38788,7 +38788,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
@@ -38806,7 +38806,7 @@ module Aws::SageMaker
 
     alias ListNotebookInstanceLifecycleConfigsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SortBy" : String,
       "SortOrder" : String,
       "NameContains" : String,
@@ -38823,7 +38823,7 @@ module Aws::SageMaker
 
     alias ListNotebookInstancesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SortBy" : String,
       "SortOrder" : String,
       "NameContains" : String,
@@ -38845,7 +38845,7 @@ module Aws::SageMaker
     alias ListPipelineExecutionStepsRequest = NamedTuple(
       "PipelineExecutionArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SortOrder" : String
     )
 
@@ -38861,7 +38861,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPipelineExecutionsResponse = NamedTuple(
@@ -38872,7 +38872,7 @@ module Aws::SageMaker
     alias ListPipelineParametersForExecutionRequest = NamedTuple(
       "PipelineExecutionArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPipelineParametersForExecutionResponse = NamedTuple(
@@ -38887,7 +38887,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPipelinesResponse = NamedTuple(
@@ -38905,7 +38905,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProcessingJobsResponse = NamedTuple(
@@ -38916,7 +38916,7 @@ module Aws::SageMaker
     alias ListProjectsInput = NamedTuple(
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String,
       "NextToken" : String,
       "SortBy" : String,
@@ -38931,7 +38931,7 @@ module Aws::SageMaker
     alias ListSubscribedWorkteamsRequest = NamedTuple(
       "NameContains" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListSubscribedWorkteamsResponse = NamedTuple(
@@ -38942,10 +38942,10 @@ module Aws::SageMaker
     alias ListTagsInput = NamedTuple(
       "ResourceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
-    alias ListTagsMaxResults = Int32
+    alias ListTagsMaxResults = UInt32
 
     alias ListTagsOutput = NamedTuple(
       "Tags" : Array(Tag),
@@ -38955,7 +38955,7 @@ module Aws::SageMaker
     alias ListTrainingJobsForHyperParameterTuningJobRequest = NamedTuple(
       "HyperParameterTuningJobName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "StatusEquals" : String,
       "SortBy" : String,
       "SortOrder" : String
@@ -38968,7 +38968,7 @@ module Aws::SageMaker
 
     alias ListTrainingJobsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "CreationTimeAfter" : (String | UInt64 | Time)?,
       "CreationTimeBefore" : (String | UInt64 | Time)?,
       "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
@@ -38994,7 +38994,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTransformJobsResponse = NamedTuple(
@@ -39012,7 +39012,7 @@ module Aws::SageMaker
       "CreatedBefore" : (String | UInt64 | Time)?,
       "SortBy" : String,
       "SortOrder" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -39028,7 +39028,7 @@ module Aws::SageMaker
       "CreatedBefore" : (String | UInt64 | Time)?,
       "SortBy" : String,
       "SortOrder" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -39039,7 +39039,7 @@ module Aws::SageMaker
 
     alias ListUserProfilesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SortOrder" : String,
       "SortBy" : String,
       "DomainIdEquals" : String,
@@ -39056,7 +39056,7 @@ module Aws::SageMaker
       "SortOrder" : String,
       "NameContains" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWorkforcesResponse = NamedTuple(
@@ -39071,7 +39071,7 @@ module Aws::SageMaker
       "SortOrder" : String,
       "NameContains" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWorkteamsResponse = NamedTuple(
@@ -39083,33 +39083,33 @@ module Aws::SageMaker
 
     alias Long = Int64
 
-    alias MaxAutoMLJobRuntimeInSeconds = Int32
+    alias MaxAutoMLJobRuntimeInSeconds = UInt32
 
-    alias MaxCandidates = Int32
+    alias MaxCandidates = UInt32
 
-    alias MaxConcurrentTaskCount = Int32
+    alias MaxConcurrentTaskCount = UInt16
 
-    alias MaxConcurrentTransforms = Int32
+    alias MaxConcurrentTransforms = UInt32
 
-    alias MaxHumanLabeledObjectCount = Int32
+    alias MaxHumanLabeledObjectCount = UInt32
 
-    alias MaxNumberOfTrainingJobs = Int32
+    alias MaxNumberOfTrainingJobs = UInt32
 
-    alias MaxParallelTrainingJobs = Int32
+    alias MaxParallelTrainingJobs = UInt32
 
-    alias MaxPayloadInMB = Int32
+    alias MaxPayloadInMB = UInt32
 
-    alias MaxPercentageOfInputDatasetLabeled = Int32
+    alias MaxPercentageOfInputDatasetLabeled = UInt8
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MaxRuntimeInSeconds = Int32
+    alias MaxRuntimeInSeconds = UInt32
 
-    alias MaxRuntimePerTrainingJobInSeconds = Int32
+    alias MaxRuntimePerTrainingJobInSeconds = UInt32
 
-    alias MaxWaitTimeInSeconds = Int32
+    alias MaxWaitTimeInSeconds = UInt32
 
-    alias MaximumExecutionTimeoutInSeconds = Int32
+    alias MaximumExecutionTimeoutInSeconds = UInt16
 
     alias MediaType = String
 
@@ -39179,8 +39179,8 @@ module Aws::SageMaker
     )
 
     alias ModelClientConfig = NamedTuple(
-      "InvocationsTimeoutInSeconds" : Int32,
-      "InvocationsMaxRetries" : Int32
+      "InvocationsTimeoutInSeconds" : UInt16,
+      "InvocationsMaxRetries" : UInt8
     )
 
     alias ModelDataQuality = NamedTuple(
@@ -39221,7 +39221,7 @@ module Aws::SageMaker
     alias ModelPackage = NamedTuple(
       "ModelPackageName" : String,
       "ModelPackageGroupName" : String,
-      "ModelPackageVersion" : Int32,
+      "ModelPackageVersion" : UInt32,
       "ModelPackageArn" : String,
       "ModelPackageDescription" : String,
       "CreationTime" : (String | UInt64 | Time)?,
@@ -39299,7 +39299,7 @@ module Aws::SageMaker
     alias ModelPackageSummary = NamedTuple(
       "ModelPackageName" : String,
       "ModelPackageGroupName" : String,
-      "ModelPackageVersion" : Int32,
+      "ModelPackageVersion" : UInt32,
       "ModelPackageArn" : String,
       "ModelPackageDescription" : String,
       "CreationTime" : String | UInt64 | Time,
@@ -39323,7 +39323,7 @@ module Aws::SageMaker
       "ValidationProfiles" : Array(ModelPackageValidationProfile)
     )
 
-    alias ModelPackageVersion = Int32
+    alias ModelPackageVersion = UInt32
 
     alias ModelQuality = NamedTuple(
       "Statistics" : MetricsSource,
@@ -39379,9 +39379,9 @@ module Aws::SageMaker
     )
 
     alias MonitoringClusterConfig = NamedTuple(
-      "InstanceCount" : Int32,
+      "InstanceCount" : UInt8,
       "InstanceType" : String,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt16,
       "VolumeKmsKeyId" : String
     )
 
@@ -39447,7 +39447,7 @@ module Aws::SageMaker
 
     alias MonitoringJobDefinitionSummaryList = Array(MonitoringJobDefinitionSummary)
 
-    alias MonitoringMaxRuntimeInSeconds = Int32
+    alias MonitoringMaxRuntimeInSeconds = UInt32
 
     alias MonitoringNetworkConfig = NamedTuple(
       "EnableInterContainerTrafficEncryption" : Bool,
@@ -39527,7 +39527,7 @@ module Aws::SageMaker
     )
 
     alias MonitoringStoppingCondition = NamedTuple(
-      "MaxRuntimeInSeconds" : Int32
+      "MaxRuntimeInSeconds" : UInt32
     )
 
     alias MonitoringTimeOffsetString = String
@@ -39615,7 +39615,7 @@ module Aws::SageMaker
 
     alias NotebookInstanceUrl = String
 
-    alias NotebookInstanceVolumeSizeInGB = Int32
+    alias NotebookInstanceVolumeSizeInGB = UInt16
 
     alias NotebookOutputOption = String
 
@@ -39625,16 +39625,16 @@ module Aws::SageMaker
 
     alias NotificationTopicArn = String
 
-    alias NumberOfHumanWorkersPerDataObject = Int32
+    alias NumberOfHumanWorkersPerDataObject = UInt8
 
     alias ObjectiveStatus = String
 
-    alias ObjectiveStatusCounter = Int32
+    alias ObjectiveStatusCounter = UInt32
 
     alias ObjectiveStatusCounters = NamedTuple(
-      "Succeeded" : Int32,
-      "Pending" : Int32,
-      "Failed" : Int32
+      "Succeeded" : UInt32,
+      "Pending" : UInt32,
+      "Failed" : UInt32
     )
 
     alias OfflineStoreConfig = NamedTuple(
@@ -39692,7 +39692,7 @@ module Aws::SageMaker
 
     alias OptionalInteger = Int32
 
-    alias OptionalVolumeSizeInGB = Int32
+    alias OptionalVolumeSizeInGB = UInt32
 
     alias OrderKey = String
 
@@ -39854,9 +39854,9 @@ module Aws::SageMaker
     alias ProblemType = String
 
     alias ProcessingClusterConfig = NamedTuple(
-      "InstanceCount" : Int32,
+      "InstanceCount" : UInt8,
       "InstanceType" : String,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt16,
       "VolumeKmsKeyId" : String
     )
 
@@ -39879,7 +39879,7 @@ module Aws::SageMaker
 
     alias ProcessingInputs = Array(ProcessingInput)
 
-    alias ProcessingInstanceCount = Int32
+    alias ProcessingInstanceCount = UInt8
 
     alias ProcessingInstanceType = String
 
@@ -39933,7 +39933,7 @@ module Aws::SageMaker
 
     alias ProcessingLocalPath = String
 
-    alias ProcessingMaxRuntimeInSeconds = Int32
+    alias ProcessingMaxRuntimeInSeconds = UInt32
 
     alias ProcessingOutput = NamedTuple(
       "OutputName" : String,
@@ -39979,10 +39979,10 @@ module Aws::SageMaker
     alias ProcessingS3UploadMode = String
 
     alias ProcessingStoppingCondition = NamedTuple(
-      "MaxRuntimeInSeconds" : Int32
+      "MaxRuntimeInSeconds" : UInt32
     )
 
-    alias ProcessingVolumeSizeInGB = Int32
+    alias ProcessingVolumeSizeInGB = UInt16
 
     alias ProductId = String
 
@@ -39991,7 +39991,7 @@ module Aws::SageMaker
     alias ProductionVariant = NamedTuple(
       "VariantName" : String,
       "ModelName" : String,
-      "InitialInstanceCount" : Int32,
+      "InitialInstanceCount" : UInt32,
       "InstanceType" : String,
       "InitialVariantWeight" : Float32,
       "AcceleratorType" : String
@@ -40008,8 +40008,8 @@ module Aws::SageMaker
       "DeployedImages" : Array(DeployedImage),
       "CurrentWeight" : Float32,
       "DesiredWeight" : Float32,
-      "CurrentInstanceCount" : Int32,
-      "DesiredInstanceCount" : Int32
+      "CurrentInstanceCount" : UInt32,
+      "DesiredInstanceCount" : UInt32
     )
 
     alias ProductionVariantSummaryList = Array(ProductionVariantSummary)
@@ -40033,7 +40033,7 @@ module Aws::SageMaker
       "S3OutputPath" : String,
       "RuleEvaluatorImage" : String,
       "InstanceType" : String,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt32,
       "RuleParameters" : Hash(String,String)
     )
 
@@ -40189,8 +40189,8 @@ module Aws::SageMaker
 
     alias ResourceConfig = NamedTuple(
       "InstanceType" : String,
-      "InstanceCount" : Int32,
-      "VolumeSizeInGB" : Int32,
+      "InstanceCount" : UInt32,
+      "VolumeSizeInGB" : UInt32,
       "VolumeKmsKeyId" : String
     )
 
@@ -40205,8 +40205,8 @@ module Aws::SageMaker
     )
 
     alias ResourceLimits = NamedTuple(
-      "MaxNumberOfTrainingJobs" : Int32,
-      "MaxParallelTrainingJobs" : Int32
+      "MaxNumberOfTrainingJobs" : UInt32,
+      "MaxParallelTrainingJobs" : UInt32
     )
 
     alias ResourceNotFound = NamedTuple(
@@ -40263,7 +40263,7 @@ module Aws::SageMaker
 
     alias SagemakerServicecatalogStatus = String
 
-    alias SamplingPercentage = Int32
+    alias SamplingPercentage = UInt8
 
     alias ScheduleConfig = NamedTuple(
       "ScheduleExpression" : String
@@ -40301,7 +40301,7 @@ module Aws::SageMaker
       "SortBy" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias SearchResponse = NamedTuple(
@@ -40346,7 +40346,7 @@ module Aws::SageMaker
       "ProvisioningParameters" : Array(ProvisioningParameter)
     )
 
-    alias SessionExpirationDurationInSeconds = Int32
+    alias SessionExpirationDurationInSeconds = UInt16
 
     alias SharingSettings = NamedTuple(
       "NotebookOutputOption" : String,
@@ -40483,8 +40483,8 @@ module Aws::SageMaker
     )
 
     alias StoppingCondition = NamedTuple(
-      "MaxRuntimeInSeconds" : Int32,
-      "MaxWaitTimeInSeconds" : Int32
+      "MaxRuntimeInSeconds" : UInt32,
+      "MaxWaitTimeInSeconds" : UInt32
     )
 
     alias String = String
@@ -40554,9 +40554,9 @@ module Aws::SageMaker
 
     alias TargetPlatformOs = String
 
-    alias TaskAvailabilityLifetimeInSeconds = Int32
+    alias TaskAvailabilityLifetimeInSeconds = UInt32
 
-    alias TaskCount = Int32
+    alias TaskCount = UInt32
 
     alias TaskDescription = String
 
@@ -40566,7 +40566,7 @@ module Aws::SageMaker
 
     alias TaskKeywords = Array(String)
 
-    alias TaskTimeLimitInSeconds = Int32
+    alias TaskTimeLimitInSeconds = UInt32
 
     alias TaskTitle = String
 
@@ -40585,9 +40585,9 @@ module Aws::SageMaker
       "S3OutputPath" : String
     )
 
-    alias TenthFractionsOfACent = Int32
+    alias TenthFractionsOfACent = UInt8
 
-    alias TerminationWaitInSeconds = Int32
+    alias TerminationWaitInSeconds = UInt16
 
     alias ThingName = String
 
@@ -40595,7 +40595,7 @@ module Aws::SageMaker
 
     alias TrafficRoutingConfig = NamedTuple(
       "Type" : String,
-      "WaitIntervalInSeconds" : Int32,
+      "WaitIntervalInSeconds" : UInt16,
       "CanarySize" : CapacitySize
     )
 
@@ -40603,7 +40603,7 @@ module Aws::SageMaker
 
     alias TrainingInputMode = String
 
-    alias TrainingInstanceCount = Int32
+    alias TrainingInstanceCount = UInt32
 
     alias TrainingInstanceType = String
 
@@ -40637,8 +40637,8 @@ module Aws::SageMaker
       "EnableInterContainerTrafficEncryption" : Bool,
       "EnableManagedSpotTraining" : Bool,
       "CheckpointConfig" : CheckpointConfig,
-      "TrainingTimeInSeconds" : Int32,
-      "BillableTimeInSeconds" : Int32,
+      "TrainingTimeInSeconds" : UInt32,
+      "BillableTimeInSeconds" : UInt32,
       "DebugHookConfig" : DebugHookConfig,
       "ExperimentConfig" : ExperimentConfig,
       "DebugRuleConfigurations" : Array(DebugRuleConfiguration),
@@ -40666,14 +40666,14 @@ module Aws::SageMaker
 
     alias TrainingJobStatus = String
 
-    alias TrainingJobStatusCounter = Int32
+    alias TrainingJobStatusCounter = UInt32
 
     alias TrainingJobStatusCounters = NamedTuple(
-      "Completed" : Int32,
-      "InProgress" : Int32,
-      "RetryableError" : Int32,
-      "NonRetryableError" : Int32,
-      "Stopped" : Int32
+      "Completed" : UInt32,
+      "InProgress" : UInt32,
+      "RetryableError" : UInt32,
+      "NonRetryableError" : UInt32,
+      "Stopped" : UInt32
     )
 
     alias TrainingJobStepMetadata = NamedTuple(
@@ -40702,7 +40702,7 @@ module Aws::SageMaker
       "SupportedTuningJobObjectiveMetrics" : Array(HyperParameterTuningJobObjective)
     )
 
-    alias TrainingTimeInSeconds = Int32
+    alias TrainingTimeInSeconds = UInt32
 
     alias TransformDataSource = NamedTuple(
       "S3DataSource" : TransformS3DataSource
@@ -40721,7 +40721,7 @@ module Aws::SageMaker
       "SplitType" : String
     )
 
-    alias TransformInstanceCount = Int32
+    alias TransformInstanceCount = UInt32
 
     alias TransformInstanceType = String
 
@@ -40733,9 +40733,9 @@ module Aws::SageMaker
       "TransformJobStatus" : String,
       "FailureReason" : String,
       "ModelName" : String,
-      "MaxConcurrentTransforms" : Int32,
+      "MaxConcurrentTransforms" : UInt32,
       "ModelClientConfig" : ModelClientConfig,
-      "MaxPayloadInMB" : Int32,
+      "MaxPayloadInMB" : UInt32,
       "BatchStrategy" : String,
       "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
@@ -40754,8 +40754,8 @@ module Aws::SageMaker
     alias TransformJobArn = String
 
     alias TransformJobDefinition = NamedTuple(
-      "MaxConcurrentTransforms" : Int32,
-      "MaxPayloadInMB" : Int32,
+      "MaxConcurrentTransforms" : UInt32,
+      "MaxPayloadInMB" : UInt32,
       "BatchStrategy" : String,
       "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
@@ -40792,7 +40792,7 @@ module Aws::SageMaker
 
     alias TransformResources = NamedTuple(
       "InstanceType" : String,
-      "InstanceCount" : Int32,
+      "InstanceCount" : UInt32,
       "VolumeKmsKeyId" : String
     )
 
@@ -40948,9 +40948,9 @@ module Aws::SageMaker
     )
 
     alias USD = NamedTuple(
-      "Dollars" : Int32,
-      "Cents" : Int32,
-      "TenthFractionsOfACent" : Int32
+      "Dollars" : UInt8,
+      "Cents" : UInt8,
+      "TenthFractionsOfACent" : UInt8
     )
 
     alias UiConfig = NamedTuple(
@@ -41108,7 +41108,7 @@ module Aws::SageMaker
       "RoleArn" : String,
       "LifecycleConfigName" : String,
       "DisassociateLifecycleConfig" : Bool,
-      "VolumeSizeInGB" : Int32,
+      "VolumeSizeInGB" : UInt16,
       "DefaultCodeRepository" : String,
       "AdditionalCodeRepositories" : Array(String),
       "AcceleratorTypes" : Array(String),
@@ -41271,7 +41271,7 @@ module Aws::SageMaker
 
     alias VersionedArnOrName = String
 
-    alias VolumeSizeInGB = Int32
+    alias VolumeSizeInGB = UInt32
 
     alias VpcConfig = NamedTuple(
       "SecurityGroupIds" : Array(String),
@@ -41282,7 +41282,7 @@ module Aws::SageMaker
 
     alias VpcSecurityGroupIds = Array(String)
 
-    alias WaitIntervalInSeconds = Int32
+    alias WaitIntervalInSeconds = UInt16
 
     alias Workforce = NamedTuple(
       "WorkforceName" : String,

@@ -5714,7 +5714,7 @@ module Aws::ElasticBeanstalk
     alias DescribeApplicationVersionsMessage = NamedTuple(
       "ApplicationName" : String,
       "VersionLabels" : Array(String),
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt16,
       "NextToken" : String
     )
 
@@ -5758,7 +5758,7 @@ module Aws::ElasticBeanstalk
       "EnvironmentId" : String,
       "EnvironmentName" : String,
       "NextToken" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt8
     )
 
     alias DescribeEnvironmentManagedActionHistoryResult = NamedTuple(
@@ -5788,7 +5788,7 @@ module Aws::ElasticBeanstalk
       "EnvironmentNames" : Array(String),
       "IncludeDeleted" : Bool,
       "IncludedDeletedBackTo" : (String | UInt64 | Time)?,
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt16,
       "NextToken" : String
     )
 
@@ -5803,7 +5803,7 @@ module Aws::ElasticBeanstalk
       "Severity" : String,
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt16,
       "NextToken" : String
     )
 
@@ -6044,7 +6044,7 @@ module Aws::ElasticBeanstalk
 
     alias ListPlatformBranchesRequest = NamedTuple(
       "Filters" : Array(SearchFilter),
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt32,
       "NextToken" : String
     )
 
@@ -6055,7 +6055,7 @@ module Aws::ElasticBeanstalk
 
     alias ListPlatformVersionsRequest = NamedTuple(
       "Filters" : Array(PlatformFilter),
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt32,
       "NextToken" : String
     )
 
@@ -6114,7 +6114,7 @@ module Aws::ElasticBeanstalk
 
     alias ManagedActionHistoryItems = Array(ManagedActionHistoryItem)
 
-    alias ManagedActionHistoryMaxItems = Int32
+    alias ManagedActionHistoryMaxItems = UInt8
 
     alias ManagedActionInvalidStateException = NamedTuple(
       
@@ -6134,7 +6134,7 @@ module Aws::ElasticBeanstalk
       "DeleteSourceFromS3" : Bool
     )
 
-    alias MaxRecords = Int32
+    alias MaxRecords = UInt16
 
     alias Message = String
 
@@ -6183,7 +6183,7 @@ module Aws::ElasticBeanstalk
 
     alias PlatformBranchLifecycleState = String
 
-    alias PlatformBranchMaxRecords = Int32
+    alias PlatformBranchMaxRecords = UInt32
 
     alias PlatformBranchSummary = NamedTuple(
       "PlatformName" : String,
@@ -6246,7 +6246,7 @@ module Aws::ElasticBeanstalk
 
     alias PlatformLifecycleState = String
 
-    alias PlatformMaxRecords = Int32
+    alias PlatformMaxRecords = UInt32
 
     alias PlatformName = String
 

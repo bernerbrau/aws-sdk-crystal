@@ -3569,7 +3569,7 @@ module Aws::XRay
 
     alias Boolean = Bool
 
-    alias BorrowCount = Int32
+    alias BorrowCount = UInt32
 
     alias ClientID = String
 
@@ -3752,11 +3752,11 @@ module Aws::XRay
       "NextToken" : String
     )
 
-    alias GetInsightEventsMaxResults = Int32
+    alias GetInsightEventsMaxResults = UInt8
 
     alias GetInsightEventsRequest = NamedTuple(
       "InsightId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3790,7 +3790,7 @@ module Aws::XRay
       "Insight" : Insight
     )
 
-    alias GetInsightSummariesMaxResults = Int32
+    alias GetInsightSummariesMaxResults = UInt8
 
     alias GetInsightSummariesRequest = NamedTuple(
       "States" : Array(String),
@@ -3798,7 +3798,7 @@ module Aws::XRay
       "GroupName" : String,
       "StartTime" : String | UInt64 | Time,
       "EndTime" : String | UInt64 | Time,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4041,7 +4041,7 @@ module Aws::XRay
 
     alias NullableLong = Int64
 
-    alias Priority = Int32
+    alias Priority = UInt16
 
     alias PutEncryptionConfigRequest = NamedTuple(
       "KeyId" : String,
@@ -4071,7 +4071,7 @@ module Aws::XRay
       "UnprocessedTraceSegments" : Array(UnprocessedTraceSegment)
     )
 
-    alias RequestCount = Int32
+    alias RequestCount = UInt32
 
     alias RequestImpactStatistics = NamedTuple(
       "FaultCount" : Int64,
@@ -4079,7 +4079,7 @@ module Aws::XRay
       "TotalCount" : Int64
     )
 
-    alias ReservoirSize = Int32
+    alias ReservoirSize = UInt32
 
     alias ResourceARN = String
 
@@ -4131,21 +4131,21 @@ module Aws::XRay
 
     alias RuleName = String
 
-    alias SampledCount = Int32
+    alias SampledCount = UInt32
 
     alias SamplingRule = NamedTuple(
       "RuleName" : String,
       "RuleARN" : String,
       "ResourceARN" : String,
-      "Priority" : Int32,
+      "Priority" : UInt16,
       "FixedRate" : Float64,
-      "ReservoirSize" : Int32,
+      "ReservoirSize" : UInt32,
       "ServiceName" : String,
       "ServiceType" : String,
       "Host" : String,
       "HTTPMethod" : String,
       "URLPath" : String,
-      "Version" : Int32,
+      "Version" : UInt32,
       "Attributes" : Hash(String,String)
     )
 
@@ -4186,9 +4186,9 @@ module Aws::XRay
       "RuleName" : String,
       "ClientID" : String,
       "Timestamp" : String | UInt64 | Time,
-      "RequestCount" : Int32,
-      "SampledCount" : Int32,
-      "BorrowCount" : Int32
+      "RequestCount" : UInt32,
+      "SampledCount" : UInt32,
+      "BorrowCount" : UInt32
     )
 
     alias SamplingStatisticsDocumentList = Array(SamplingStatisticsDocument)
@@ -4432,6 +4432,6 @@ module Aws::XRay
 
     alias ValuesWithServiceIds = Array(ValueWithServiceIds)
 
-    alias Version = Int32
+    alias Version = UInt32
   end
 end

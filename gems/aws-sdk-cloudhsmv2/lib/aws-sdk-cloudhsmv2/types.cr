@@ -1201,7 +1201,7 @@ module Aws::CloudHSMV2
 
     alias Backups = Array(Backup)
 
-    alias BackupsMaxSize = Int32
+    alias BackupsMaxSize = UInt8
 
     alias Boolean = Bool
 
@@ -1263,7 +1263,7 @@ module Aws::CloudHSMV2
 
     alias Clusters = Array(Cluster)
 
-    alias ClustersMaxSize = Int32
+    alias ClustersMaxSize = UInt8
 
     alias CopyBackupToRegionRequest = NamedTuple(
       "DestinationRegion" : String,
@@ -1326,7 +1326,7 @@ module Aws::CloudHSMV2
 
     alias DescribeBackupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Hash(String,Array(String)),
       "SortAscending" : Bool
     )
@@ -1339,7 +1339,7 @@ module Aws::CloudHSMV2
     alias DescribeClustersRequest = NamedTuple(
       "Filters" : Hash(String,Array(String)),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeClustersResponse = NamedTuple(
@@ -1399,7 +1399,7 @@ module Aws::CloudHSMV2
     alias ListTagsRequest = NamedTuple(
       "ResourceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTagsResponse = NamedTuple(
@@ -1407,7 +1407,7 @@ module Aws::CloudHSMV2
       "NextToken" : String
     )
 
-    alias MaxSize = Int32
+    alias MaxSize = UInt8
 
     alias ModifyBackupAttributesRequest = NamedTuple(
       "BackupId" : String,

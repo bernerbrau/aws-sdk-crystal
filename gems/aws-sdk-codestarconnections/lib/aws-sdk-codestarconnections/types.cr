@@ -892,7 +892,7 @@ module Aws::CodeStarconnections
     alias ListConnectionsInput = NamedTuple(
       "ProviderTypeFilter" : String,
       "HostArnFilter" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -902,7 +902,7 @@ module Aws::CodeStarconnections
     )
 
     alias ListHostsInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -919,7 +919,7 @@ module Aws::CodeStarconnections
       "Tags" : Array(Tag)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 

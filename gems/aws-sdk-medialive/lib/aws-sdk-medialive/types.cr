@@ -18869,7 +18869,7 @@ module Aws::MediaLive
       "Bitrate" : Float64,
       "BitstreamMode" : String,
       "CodingMode" : String,
-      "Dialnorm" : Int32,
+      "Dialnorm" : UInt8,
       "DrcProfile" : String,
       "LfeFilter" : String,
       "MetadataControl" : String
@@ -18890,7 +18890,7 @@ module Aws::MediaLive
     alias AfdSignaling = String
 
     alias AncillarySourceSettings = NamedTuple(
-      "SourceAncillaryChannelNumber" : Int32
+      "SourceAncillaryChannelNumber" : UInt8
     )
 
     alias ArchiveContainerSettings = NamedTuple(
@@ -18900,7 +18900,7 @@ module Aws::MediaLive
 
     alias ArchiveGroupSettings = NamedTuple(
       "Destination" : OutputLocationRef,
-      "RolloverInterval" : Int32
+      "RolloverInterval" : UInt32
     )
 
     alias ArchiveOutputSettings = NamedTuple(
@@ -18919,7 +18919,7 @@ module Aws::MediaLive
 
     alias AudioChannelMapping = NamedTuple(
       "InputChannelLevels" : Array(InputChannelLevel),
-      "OutputChannel" : Int32
+      "OutputChannel" : UInt8
     )
 
     alias AudioCodecSettings = NamedTuple(
@@ -18977,7 +18977,7 @@ module Aws::MediaLive
     alias AudioOnlyHlsTrackType = String
 
     alias AudioPidSelection = NamedTuple(
-      "Pid" : Int32
+      "Pid" : UInt16
     )
 
     alias AudioSelector = NamedTuple(
@@ -18993,11 +18993,11 @@ module Aws::MediaLive
 
     alias AudioSilenceFailoverSettings = NamedTuple(
       "AudioSelectorName" : String,
-      "AudioSilenceThresholdMsec" : Int32
+      "AudioSilenceThresholdMsec" : UInt32
     )
 
     alias AudioTrack = NamedTuple(
-      "Track" : Int32
+      "Track" : UInt32
     )
 
     alias AudioTrackSelection = NamedTuple(
@@ -19009,7 +19009,7 @@ module Aws::MediaLive
     alias AuthenticationScheme = String
 
     alias AutomaticInputFailoverSettings = NamedTuple(
-      "ErrorClearTimeMsec" : Int32,
+      "ErrorClearTimeMsec" : UInt32,
       "FailoverConditions" : Array(FailoverCondition),
       "InputPreference" : String,
       "SecondaryInputId" : String
@@ -19167,21 +19167,21 @@ module Aws::MediaLive
     alias BurnInDestinationSettings = NamedTuple(
       "Alignment" : String,
       "BackgroundColor" : String,
-      "BackgroundOpacity" : Int32,
+      "BackgroundOpacity" : UInt8,
       "Font" : InputLocation,
       "FontColor" : String,
-      "FontOpacity" : Int32,
-      "FontResolution" : Int32,
+      "FontOpacity" : UInt8,
+      "FontResolution" : UInt16,
       "FontSize" : String,
       "OutlineColor" : String,
-      "OutlineSize" : Int32,
+      "OutlineSize" : UInt8,
       "ShadowColor" : String,
-      "ShadowOpacity" : Int32,
+      "ShadowOpacity" : UInt8,
       "ShadowXOffset" : Int32,
       "ShadowYOffset" : Int32,
       "TeletextGridControl" : String,
-      "XPosition" : Int32,
-      "YPosition" : Int32
+      "XPosition" : UInt32,
+      "YPosition" : UInt32
     )
 
     alias BurnInFontColor = String
@@ -19225,7 +19225,7 @@ module Aws::MediaLive
     )
 
     alias CaptionLanguageMapping = NamedTuple(
-      "CaptionChannel" : Int32,
+      "CaptionChannel" : UInt8,
       "LanguageCode" : String,
       "LanguageDescription" : String
     )
@@ -19718,7 +19718,7 @@ module Aws::MediaLive
 
     alias DescribeScheduleRequest = NamedTuple(
       "ChannelId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -19732,16 +19732,16 @@ module Aws::MediaLive
     alias DeviceUpdateStatus = String
 
     alias DvbNitSettings = NamedTuple(
-      "NetworkId" : Int32,
+      "NetworkId" : UInt32,
       "NetworkName" : String,
-      "RepInterval" : Int32
+      "RepInterval" : UInt16
     )
 
     alias DvbSdtOutputSdt = String
 
     alias DvbSdtSettings = NamedTuple(
       "OutputSdt" : String,
-      "RepInterval" : Int32,
+      "RepInterval" : UInt16,
       "ServiceName" : String,
       "ServiceProviderName" : String
     )
@@ -19757,21 +19757,21 @@ module Aws::MediaLive
     alias DvbSubDestinationSettings = NamedTuple(
       "Alignment" : String,
       "BackgroundColor" : String,
-      "BackgroundOpacity" : Int32,
+      "BackgroundOpacity" : UInt8,
       "Font" : InputLocation,
       "FontColor" : String,
-      "FontOpacity" : Int32,
-      "FontResolution" : Int32,
+      "FontOpacity" : UInt8,
+      "FontResolution" : UInt16,
       "FontSize" : String,
       "OutlineColor" : String,
-      "OutlineSize" : Int32,
+      "OutlineSize" : UInt8,
       "ShadowColor" : String,
-      "ShadowOpacity" : Int32,
+      "ShadowOpacity" : UInt8,
       "ShadowXOffset" : Int32,
       "ShadowYOffset" : Int32,
       "TeletextGridControl" : String,
-      "XPosition" : Int32,
-      "YPosition" : Int32
+      "XPosition" : UInt32,
+      "YPosition" : UInt32
     )
 
     alias DvbSubDestinationShadowColor = String
@@ -19779,11 +19779,11 @@ module Aws::MediaLive
     alias DvbSubDestinationTeletextGridControl = String
 
     alias DvbSubSourceSettings = NamedTuple(
-      "Pid" : Int32
+      "Pid" : UInt32
     )
 
     alias DvbTdtSettings = NamedTuple(
-      "RepInterval" : Int32
+      "RepInterval" : UInt16
     )
 
     alias Eac3AttenuationControl = String
@@ -19814,7 +19814,7 @@ module Aws::MediaLive
       "BitstreamMode" : String,
       "CodingMode" : String,
       "DcFilter" : String,
-      "Dialnorm" : Int32,
+      "Dialnorm" : UInt8,
       "DrcLine" : String,
       "DrcRf" : String,
       "LfeControl" : String,
@@ -19862,8 +19862,8 @@ module Aws::MediaLive
     alias EmbeddedSourceSettings = NamedTuple(
       "Convert608To708" : String,
       "Scte20Detection" : String,
-      "Source608ChannelNumber" : Int32,
-      "Source608TrackNumber" : Int32
+      "Source608ChannelNumber" : UInt8,
+      "Source608TrackNumber" : UInt8
     )
 
     alias Empty = NamedTuple(
@@ -19903,9 +19903,9 @@ module Aws::MediaLive
     alias FecOutputIncludeFec = String
 
     alias FecOutputSettings = NamedTuple(
-      "ColumnDepth" : Int32,
+      "ColumnDepth" : UInt8,
       "IncludeFec" : String,
-      "RowLength" : Int32
+      "RowLength" : UInt8
     )
 
     alias FixedAfd = String
@@ -19946,7 +19946,7 @@ module Aws::MediaLive
     )
 
     alias FrameCaptureSettings = NamedTuple(
-      "CaptureInterval" : Int32,
+      "CaptureInterval" : UInt32,
       "CaptureIntervalUnits" : String
     )
 
@@ -19955,7 +19955,7 @@ module Aws::MediaLive
     )
 
     alias GlobalConfiguration = NamedTuple(
-      "InitialAudioGain" : Int32,
+      "InitialAudioGain" : Int8,
       "InputEndAction" : String,
       "InputLossBehavior" : InputLossBehavior,
       "OutputLockingMode" : String,
@@ -20016,9 +20016,9 @@ module Aws::MediaLive
     alias H264Settings = NamedTuple(
       "AdaptiveQuantization" : String,
       "AfdSignaling" : String,
-      "Bitrate" : Int32,
-      "BufFillPct" : Int32,
-      "BufSize" : Int32,
+      "Bitrate" : UInt32,
+      "BufFillPct" : UInt8,
+      "BufSize" : UInt32,
       "ColorMetadata" : String,
       "ColorSpaceSettings" : H264ColorSpaceSettings,
       "EntropyEncoding" : String,
@@ -20027,29 +20027,29 @@ module Aws::MediaLive
       "FlickerAq" : String,
       "ForceFieldPictures" : String,
       "FramerateControl" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
       "GopBReference" : String,
-      "GopClosedCadence" : Int32,
-      "GopNumBFrames" : Int32,
+      "GopClosedCadence" : UInt32,
+      "GopNumBFrames" : UInt8,
       "GopSize" : Float64,
       "GopSizeUnits" : String,
       "Level" : String,
       "LookAheadRateControl" : String,
-      "MaxBitrate" : Int32,
-      "MinIInterval" : Int32,
-      "NumRefFrames" : Int32,
+      "MaxBitrate" : UInt32,
+      "MinIInterval" : UInt8,
+      "NumRefFrames" : UInt8,
       "ParControl" : String,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "Profile" : String,
       "QualityLevel" : String,
-      "QvbrQualityLevel" : Int32,
+      "QvbrQualityLevel" : UInt8,
       "RateControlMode" : String,
       "ScanType" : String,
       "SceneChangeDetect" : String,
-      "Slices" : Int32,
-      "Softness" : Int32,
+      "Slices" : UInt8,
+      "Softness" : UInt8,
       "SpatialAq" : String,
       "SubgopLength" : String,
       "Syntax" : String,
@@ -20104,30 +20104,30 @@ module Aws::MediaLive
       "AdaptiveQuantization" : String,
       "AfdSignaling" : String,
       "AlternativeTransferFunction" : String,
-      "Bitrate" : Int32,
-      "BufSize" : Int32,
+      "Bitrate" : UInt32,
+      "BufSize" : UInt32,
       "ColorMetadata" : String,
       "ColorSpaceSettings" : H265ColorSpaceSettings,
       "FilterSettings" : H265FilterSettings,
       "FixedAfd" : String,
       "FlickerAq" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
-      "GopClosedCadence" : Int32,
+      "FramerateDenominator" : UInt16,
+      "FramerateNumerator" : UInt32,
+      "GopClosedCadence" : UInt32,
       "GopSize" : Float64,
       "GopSizeUnits" : String,
       "Level" : String,
       "LookAheadRateControl" : String,
-      "MaxBitrate" : Int32,
-      "MinIInterval" : Int32,
-      "ParDenominator" : Int32,
-      "ParNumerator" : Int32,
+      "MaxBitrate" : UInt32,
+      "MinIInterval" : UInt8,
+      "ParDenominator" : UInt32,
+      "ParNumerator" : UInt32,
       "Profile" : String,
-      "QvbrQualityLevel" : Int32,
+      "QvbrQualityLevel" : UInt8,
       "RateControlMode" : String,
       "ScanType" : String,
       "SceneChangeDetect" : String,
-      "Slices" : Int32,
+      "Slices" : UInt8,
       "Tier" : String,
       "TimecodeInsertion" : String
     )
@@ -20137,8 +20137,8 @@ module Aws::MediaLive
     alias H265TimecodeInsertionBehavior = String
 
     alias Hdr10Settings = NamedTuple(
-      "MaxCll" : Int32,
-      "MaxFall" : Int32
+      "MaxCll" : UInt16,
+      "MaxFall" : UInt16
     )
 
     alias HlsAdMarkers = String
@@ -20146,20 +20146,20 @@ module Aws::MediaLive
     alias HlsAkamaiHttpTransferMode = String
 
     alias HlsAkamaiSettings = NamedTuple(
-      "ConnectionRetryInterval" : Int32,
-      "FilecacheDuration" : Int32,
+      "ConnectionRetryInterval" : UInt32,
+      "FilecacheDuration" : UInt16,
       "HttpTransferMode" : String,
-      "NumRetries" : Int32,
-      "RestartDelay" : Int32,
+      "NumRetries" : UInt32,
+      "RestartDelay" : UInt8,
       "Salt" : String,
       "Token" : String
     )
 
     alias HlsBasicPutSettings = NamedTuple(
-      "ConnectionRetryInterval" : Int32,
-      "FilecacheDuration" : Int32,
-      "NumRetries" : Int32,
-      "RestartDelay" : Int32
+      "ConnectionRetryInterval" : UInt32,
+      "FilecacheDuration" : UInt16,
+      "NumRetries" : UInt32,
+      "RestartDelay" : UInt8
     )
 
     alias HlsCaptionLanguageSetting = String
@@ -20200,29 +20200,29 @@ module Aws::MediaLive
       "HlsId3SegmentTagging" : String,
       "IFrameOnlyPlaylists" : String,
       "IncompleteSegmentBehavior" : String,
-      "IndexNSegments" : Int32,
+      "IndexNSegments" : UInt32,
       "InputLossAction" : String,
       "IvInManifest" : String,
       "IvSource" : String,
-      "KeepSegments" : Int32,
+      "KeepSegments" : UInt32,
       "KeyFormat" : String,
       "KeyFormatVersions" : String,
       "KeyProviderSettings" : KeyProviderSettings,
       "ManifestCompression" : String,
       "ManifestDurationFormat" : String,
-      "MinSegmentLength" : Int32,
+      "MinSegmentLength" : UInt32,
       "Mode" : String,
       "OutputSelection" : String,
       "ProgramDateTime" : String,
-      "ProgramDateTimePeriod" : Int32,
+      "ProgramDateTimePeriod" : UInt16,
       "RedundantManifest" : String,
-      "SegmentLength" : Int32,
+      "SegmentLength" : UInt32,
       "SegmentationMode" : String,
-      "SegmentsPerSubdirectory" : Int32,
+      "SegmentsPerSubdirectory" : UInt32,
       "StreamInfResolution" : String,
       "TimedMetadataId3Frame" : String,
-      "TimedMetadataId3Period" : Int32,
-      "TimestampDeltaMilliseconds" : Int32,
+      "TimedMetadataId3Period" : UInt32,
+      "TimestampDeltaMilliseconds" : UInt32,
       "TsFileMode" : String
     )
 
@@ -20237,10 +20237,10 @@ module Aws::MediaLive
     alias HlsIncompleteSegmentBehavior = String
 
     alias HlsInputSettings = NamedTuple(
-      "Bandwidth" : Int32,
-      "BufferSegments" : Int32,
-      "Retries" : Int32,
-      "RetryInterval" : Int32
+      "Bandwidth" : UInt32,
+      "BufferSegments" : UInt32,
+      "Retries" : UInt32,
+      "RetryInterval" : UInt32
     )
 
     alias HlsIvInManifest = String
@@ -20252,11 +20252,11 @@ module Aws::MediaLive
     alias HlsManifestDurationFormat = String
 
     alias HlsMediaStoreSettings = NamedTuple(
-      "ConnectionRetryInterval" : Int32,
-      "FilecacheDuration" : Int32,
+      "ConnectionRetryInterval" : UInt32,
+      "FilecacheDuration" : UInt16,
       "MediaStoreStorageClass" : String,
-      "NumRetries" : Int32,
-      "RestartDelay" : Int32
+      "NumRetries" : UInt32,
+      "RestartDelay" : UInt8
     )
 
     alias HlsMediaStoreStorageClass = String
@@ -20297,11 +20297,11 @@ module Aws::MediaLive
     alias HlsWebdavHttpTransferMode = String
 
     alias HlsWebdavSettings = NamedTuple(
-      "ConnectionRetryInterval" : Int32,
-      "FilecacheDuration" : Int32,
+      "ConnectionRetryInterval" : UInt32,
+      "FilecacheDuration" : UInt16,
       "HttpTransferMode" : String,
-      "NumRetries" : Int32,
-      "RestartDelay" : Int32
+      "NumRetries" : UInt32,
+      "RestartDelay" : UInt8
     )
 
     alias IFrameOnlyPlaylistType = String
@@ -20336,8 +20336,8 @@ module Aws::MediaLive
     )
 
     alias InputChannelLevel = NamedTuple(
-      "Gain" : Int32,
-      "InputChannel" : Int32
+      "Gain" : Int8,
+      "InputChannel" : UInt8
     )
 
     alias InputClass = String
@@ -20481,15 +20481,15 @@ module Aws::MediaLive
     alias InputLossActionForUdpOut = String
 
     alias InputLossBehavior = NamedTuple(
-      "BlackFrameMsec" : Int32,
+      "BlackFrameMsec" : UInt32,
       "InputLossImageColor" : String,
       "InputLossImageSlate" : InputLocation,
       "InputLossImageType" : String,
-      "RepeatFrameMsec" : Int32
+      "RepeatFrameMsec" : UInt32
     )
 
     alias InputLossFailoverSettings = NamedTuple(
-      "InputLossThresholdMsec" : Int32
+      "InputLossThresholdMsec" : UInt32
     )
 
     alias InputLossImageType = String
@@ -20527,7 +20527,7 @@ module Aws::MediaLive
       "CaptionSelectors" : Array(CaptionSelector),
       "DeblockFilter" : String,
       "DenoiseFilter" : String,
-      "FilterStrength" : Int32,
+      "FilterStrength" : UInt8,
       "InputFilter" : String,
       "NetworkInputSettings" : NetworkInputSettings,
       "Smpte2038DataPreference" : String,
@@ -20605,7 +20605,7 @@ module Aws::MediaLive
     )
 
     alias ListChannelsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -20620,7 +20620,7 @@ module Aws::MediaLive
     )
 
     alias ListInputDeviceTransfersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "TransferType" : String
     )
@@ -20636,7 +20636,7 @@ module Aws::MediaLive
     )
 
     alias ListInputDevicesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -20651,7 +20651,7 @@ module Aws::MediaLive
     )
 
     alias ListInputSecurityGroupsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -20666,7 +20666,7 @@ module Aws::MediaLive
     )
 
     alias ListInputsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -20681,7 +20681,7 @@ module Aws::MediaLive
     )
 
     alias ListMultiplexProgramsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "MultiplexId" : String,
       "NextToken" : String
     )
@@ -20697,7 +20697,7 @@ module Aws::MediaLive
     )
 
     alias ListMultiplexesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -20716,7 +20716,7 @@ module Aws::MediaLive
       "ChannelConfiguration" : String,
       "Codec" : String,
       "Duration" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "MaximumBitrate" : String,
       "MaximumFramerate" : String,
       "NextToken" : String,
@@ -20739,7 +20739,7 @@ module Aws::MediaLive
     alias ListReservationsRequest = NamedTuple(
       "ChannelClass" : String,
       "Codec" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "MaximumBitrate" : String,
       "MaximumFramerate" : String,
       "NextToken" : String,
@@ -20811,10 +20811,10 @@ module Aws::MediaLive
       "AribCaptionsPid" : String,
       "AribCaptionsPidControl" : String,
       "AudioBufferModel" : String,
-      "AudioFramesPerPes" : Int32,
+      "AudioFramesPerPes" : UInt32,
       "AudioPids" : String,
       "AudioStreamType" : String,
-      "Bitrate" : Int32,
+      "Bitrate" : UInt32,
       "BufferModel" : String,
       "CcDescriptor" : String,
       "DvbNitSettings" : DvbNitSettings,
@@ -20824,7 +20824,7 @@ module Aws::MediaLive
       "DvbTeletextPid" : String,
       "Ebif" : String,
       "EbpAudioInterval" : String,
-      "EbpLookaheadMs" : Int32,
+      "EbpLookaheadMs" : UInt16,
       "EbpPlacement" : String,
       "EcmPid" : String,
       "EsRateInPes" : String,
@@ -20835,13 +20835,13 @@ module Aws::MediaLive
       "KlvDataPids" : String,
       "NielsenId3Behavior" : String,
       "NullPacketBitrate" : Float64,
-      "PatInterval" : Int32,
+      "PatInterval" : UInt16,
       "PcrControl" : String,
-      "PcrPeriod" : Int32,
+      "PcrPeriod" : UInt16,
       "PcrPid" : String,
-      "PmtInterval" : Int32,
+      "PmtInterval" : UInt16,
       "PmtPid" : String,
-      "ProgramNum" : Int32,
+      "ProgramNum" : UInt16,
       "RateMode" : String,
       "Scte27Pids" : String,
       "Scte35Control" : String,
@@ -20851,7 +20851,7 @@ module Aws::MediaLive
       "SegmentationTime" : Float64,
       "TimedMetadataBehavior" : String,
       "TimedMetadataPid" : String,
-      "TransportStreamId" : Int32,
+      "TransportStreamId" : UInt16,
       "VideoPid" : String
     )
 
@@ -20864,28 +20864,28 @@ module Aws::MediaLive
     alias M3u8Scte35Behavior = String
 
     alias M3u8Settings = NamedTuple(
-      "AudioFramesPerPes" : Int32,
+      "AudioFramesPerPes" : UInt32,
       "AudioPids" : String,
       "EcmPid" : String,
       "NielsenId3Behavior" : String,
-      "PatInterval" : Int32,
+      "PatInterval" : UInt16,
       "PcrControl" : String,
-      "PcrPeriod" : Int32,
+      "PcrPeriod" : UInt16,
       "PcrPid" : String,
-      "PmtInterval" : Int32,
+      "PmtInterval" : UInt16,
       "PmtPid" : String,
-      "ProgramNum" : Int32,
+      "ProgramNum" : UInt16,
       "Scte35Behavior" : String,
       "Scte35Pid" : String,
       "TimedMetadataBehavior" : String,
       "TimedMetadataPid" : String,
-      "TransportStreamId" : Int32,
+      "TransportStreamId" : UInt16,
       "VideoPid" : String
     )
 
     alias M3u8TimedMetadataBehavior = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MediaConnectFlow = NamedTuple(
       "FlowArn" : String
@@ -20939,10 +20939,10 @@ module Aws::MediaLive
       "DisplayAspectRatio" : String,
       "FilterSettings" : Mpeg2FilterSettings,
       "FixedAfd" : String,
-      "FramerateDenominator" : Int32,
-      "FramerateNumerator" : Int32,
-      "GopClosedCadence" : Int32,
-      "GopNumBFrames" : Int32,
+      "FramerateDenominator" : UInt32,
+      "FramerateNumerator" : UInt32,
+      "GopClosedCadence" : UInt32,
+      "GopNumBFrames" : UInt8,
       "GopSize" : Float64,
       "GopSizeUnits" : String,
       "ScanType" : String,
@@ -20958,18 +20958,18 @@ module Aws::MediaLive
       "AcquisitionPointId" : String,
       "AudioOnlyTimecodeControl" : String,
       "CertificateMode" : String,
-      "ConnectionRetryInterval" : Int32,
+      "ConnectionRetryInterval" : UInt32,
       "Destination" : OutputLocationRef,
       "EventId" : String,
       "EventIdMode" : String,
       "EventStopBehavior" : String,
-      "FilecacheDuration" : Int32,
-      "FragmentLength" : Int32,
+      "FilecacheDuration" : UInt32,
+      "FragmentLength" : UInt32,
       "InputLossAction" : String,
-      "NumRetries" : Int32,
-      "RestartDelay" : Int32,
+      "NumRetries" : UInt32,
+      "RestartDelay" : UInt32,
       "SegmentationMode" : String,
-      "SendDelayMs" : Int32,
+      "SendDelayMs" : UInt16,
       "SparseTrackType" : String,
       "StreamManifestBehavior" : String,
       "TimestampOffset" : String,
@@ -21058,7 +21058,7 @@ module Aws::MediaLive
 
     alias MultiplexProgramSettings = NamedTuple(
       "PreferredChannelPipeline" : String,
-      "ProgramNumber" : Int32,
+      "ProgramNumber" : UInt16,
       "ServiceDescriptor" : MultiplexProgramServiceDescriptor,
       "VideoSettings" : MultiplexVideoSettings
     )
@@ -21069,22 +21069,22 @@ module Aws::MediaLive
     )
 
     alias MultiplexSettings = NamedTuple(
-      "MaximumVideoBufferDelayMilliseconds" : Int32,
-      "TransportStreamBitrate" : Int32,
-      "TransportStreamId" : Int32,
-      "TransportStreamReservedBitrate" : Int32
+      "MaximumVideoBufferDelayMilliseconds" : UInt16,
+      "TransportStreamBitrate" : UInt32,
+      "TransportStreamId" : UInt16,
+      "TransportStreamReservedBitrate" : UInt32
     )
 
     alias MultiplexSettingsSummary = NamedTuple(
-      "TransportStreamBitrate" : Int32
+      "TransportStreamBitrate" : UInt32
     )
 
     alias MultiplexState = String
 
     alias MultiplexStatmuxVideoSettings = NamedTuple(
-      "MaximumBitrate" : Int32,
-      "MinimumBitrate" : Int32,
-      "Priority" : Int32
+      "MaximumBitrate" : UInt32,
+      "MinimumBitrate" : UInt32,
+      "Priority" : Int8
     )
 
     alias MultiplexSummary = NamedTuple(
@@ -21100,7 +21100,7 @@ module Aws::MediaLive
     )
 
     alias MultiplexVideoSettings = NamedTuple(
-      "ConstantBitrate" : Int32,
+      "ConstantBitrate" : UInt32,
       "StatmuxSettings" : MultiplexStatmuxVideoSettings
     )
 
@@ -21217,7 +21217,7 @@ module Aws::MediaLive
     alias PreferredChannelPipeline = String
 
     alias PurchaseOffering = NamedTuple(
-      "Count" : Int32,
+      "Count" : UInt32,
       "Name" : String,
       "RequestId" : String,
       "Start" : String,
@@ -21225,7 +21225,7 @@ module Aws::MediaLive
     )
 
     alias PurchaseOfferingRequest = NamedTuple(
-      "Count" : Int32,
+      "Count" : UInt32,
       "Name" : String,
       "OfferingId" : String,
       "RequestId" : String,
@@ -21263,8 +21263,8 @@ module Aws::MediaLive
 
     alias RemixSettings = NamedTuple(
       "ChannelMappings" : Array(AudioChannelMapping),
-      "ChannelsIn" : Int32,
-      "ChannelsOut" : Int32
+      "ChannelsIn" : UInt8,
+      "ChannelsOut" : UInt8
     )
 
     alias Reservation = NamedTuple(
@@ -21337,19 +21337,19 @@ module Aws::MediaLive
       "AdMarkers" : Array(String),
       "AuthenticationScheme" : String,
       "CacheFullBehavior" : String,
-      "CacheLength" : Int32,
+      "CacheLength" : UInt32,
       "CaptionData" : String,
       "InputLossAction" : String,
-      "RestartDelay" : Int32
+      "RestartDelay" : UInt32
     )
 
     alias RtmpOutputCertificateMode = String
 
     alias RtmpOutputSettings = NamedTuple(
       "CertificateMode" : String,
-      "ConnectionRetryInterval" : Int32,
+      "ConnectionRetryInterval" : UInt32,
       "Destination" : OutputLocationRef,
-      "NumRetries" : Int32
+      "NumRetries" : UInt32
     )
 
     alias ScheduleAction = NamedTuple(
@@ -21394,7 +21394,7 @@ module Aws::MediaLive
 
     alias Scte20SourceSettings = NamedTuple(
       "Convert608To708" : String,
-      "Source608ChannelNumber" : Int32
+      "Source608ChannelNumber" : UInt8
     )
 
     alias Scte27DestinationSettings = NamedTuple(
@@ -21402,7 +21402,7 @@ module Aws::MediaLive
     )
 
     alias Scte27SourceSettings = NamedTuple(
-      "Pid" : Int32
+      "Pid" : UInt32
     )
 
     alias Scte35AposNoRegionalBlackoutBehavior = String
@@ -21431,27 +21431,27 @@ module Aws::MediaLive
     alias Scte35NoRegionalBlackoutFlag = String
 
     alias Scte35ReturnToNetworkScheduleActionSettings = NamedTuple(
-      "SpliceEventId" : Int64
+      "SpliceEventId" : UInt32
     )
 
     alias Scte35SegmentationCancelIndicator = String
 
     alias Scte35SegmentationDescriptor = NamedTuple(
       "DeliveryRestrictions" : Scte35DeliveryRestrictions,
-      "SegmentNum" : Int32,
+      "SegmentNum" : UInt8,
       "SegmentationCancelIndicator" : String,
-      "SegmentationDuration" : Int64,
-      "SegmentationEventId" : Int64,
-      "SegmentationTypeId" : Int32,
+      "SegmentationDuration" : UInt64,
+      "SegmentationEventId" : UInt32,
+      "SegmentationTypeId" : UInt8,
       "SegmentationUpid" : String,
-      "SegmentationUpidType" : Int32,
-      "SegmentsExpected" : Int32,
-      "SubSegmentNum" : Int32,
-      "SubSegmentsExpected" : Int32
+      "SegmentationUpidType" : UInt8,
+      "SegmentsExpected" : UInt8,
+      "SubSegmentNum" : UInt8,
+      "SubSegmentsExpected" : UInt8
     )
 
     alias Scte35SpliceInsert = NamedTuple(
-      "AdAvailOffset" : Int32,
+      "AdAvailOffset" : Int16,
       "NoRegionalBlackoutFlag" : String,
       "WebDeliveryAllowedFlag" : String
     )
@@ -21459,14 +21459,14 @@ module Aws::MediaLive
     alias Scte35SpliceInsertNoRegionalBlackoutBehavior = String
 
     alias Scte35SpliceInsertScheduleActionSettings = NamedTuple(
-      "Duration" : Int64,
-      "SpliceEventId" : Int64
+      "Duration" : UInt64,
+      "SpliceEventId" : UInt32
     )
 
     alias Scte35SpliceInsertWebDeliveryAllowedBehavior = String
 
     alias Scte35TimeSignalApos = NamedTuple(
-      "AdAvailOffset" : Int32,
+      "AdAvailOffset" : Int16,
       "NoRegionalBlackoutFlag" : String,
       "WebDeliveryAllowedFlag" : String
     )
@@ -21549,21 +21549,21 @@ module Aws::MediaLive
     )
 
     alias StaticImageActivateScheduleActionSettings = NamedTuple(
-      "Duration" : Int32,
-      "FadeIn" : Int32,
-      "FadeOut" : Int32,
-      "Height" : Int32,
+      "Duration" : UInt32,
+      "FadeIn" : UInt32,
+      "FadeOut" : UInt32,
+      "Height" : UInt32,
       "Image" : InputLocation,
-      "ImageX" : Int32,
-      "ImageY" : Int32,
-      "Layer" : Int32,
-      "Opacity" : Int32,
-      "Width" : Int32
+      "ImageX" : UInt32,
+      "ImageY" : UInt32,
+      "Layer" : UInt8,
+      "Opacity" : UInt8,
+      "Width" : UInt32
     )
 
     alias StaticImageDeactivateScheduleActionSettings = NamedTuple(
-      "FadeOut" : Int32,
-      "Layer" : Int32
+      "FadeOut" : UInt32,
+      "Layer" : UInt8
     )
 
     alias StaticKeySettings = NamedTuple(
@@ -21645,7 +21645,7 @@ module Aws::MediaLive
 
     alias TimecodeConfig = NamedTuple(
       "Source" : String,
-      "SyncThreshold" : Int32
+      "SyncThreshold" : UInt32
     )
 
     alias TimecodeConfigSource = String
@@ -21689,11 +21689,11 @@ module Aws::MediaLive
     alias UdpGroupSettings = NamedTuple(
       "InputLossAction" : String,
       "TimedMetadataId3Frame" : String,
-      "TimedMetadataId3Period" : Int32
+      "TimedMetadataId3Period" : UInt32
     )
 
     alias UdpOutputSettings = NamedTuple(
-      "BufferMsec" : Int32,
+      "BufferMsec" : UInt16,
       "ContainerSettings" : UdpContainerSettings,
       "Destination" : OutputLocationRef,
       "FecOutputSettings" : FecOutputSettings
@@ -21884,7 +21884,7 @@ module Aws::MediaLive
 
     alias VideoBlackFailoverSettings = NamedTuple(
       "BlackDetectThreshold" : Float64,
-      "VideoBlackThresholdMsec" : Int32
+      "VideoBlackThresholdMsec" : UInt32
     )
 
     alias VideoCodecSettings = NamedTuple(
@@ -21900,7 +21900,7 @@ module Aws::MediaLive
       "Name" : String,
       "RespondToAfd" : String,
       "ScalingBehavior" : String,
-      "Sharpness" : Int32,
+      "Sharpness" : UInt8,
       "Width" : Int32
     )
 
@@ -21919,11 +21919,11 @@ module Aws::MediaLive
     alias VideoSelectorColorSpaceUsage = String
 
     alias VideoSelectorPid = NamedTuple(
-      "Pid" : Int32
+      "Pid" : UInt16
     )
 
     alias VideoSelectorProgramId = NamedTuple(
-      "ProgramId" : Int32
+      "ProgramId" : UInt32
     )
 
     alias VideoSelectorSettings = NamedTuple(
@@ -21957,105 +21957,105 @@ module Aws::MediaLive
 
     alias __integer = Int32
 
-    alias __integerMin0 = Int32
+    alias __integerMin0 = UInt32
 
-    alias __integerMin0Max10 = Int32
+    alias __integerMin0Max10 = UInt8
 
-    alias __integerMin0Max100 = Int32
+    alias __integerMin0Max100 = UInt8
 
-    alias __integerMin0Max1000 = Int32
+    alias __integerMin0Max1000 = UInt16
 
-    alias __integerMin0Max10000 = Int32
+    alias __integerMin0Max10000 = UInt16
 
-    alias __integerMin0Max1000000 = Int32
+    alias __integerMin0Max1000000 = UInt32
 
-    alias __integerMin0Max100000000 = Int32
+    alias __integerMin0Max100000000 = UInt32
 
-    alias __integerMin0Max128 = Int32
+    alias __integerMin0Max128 = UInt8
 
-    alias __integerMin0Max15 = Int32
+    alias __integerMin0Max15 = UInt8
 
-    alias __integerMin0Max255 = Int32
+    alias __integerMin0Max255 = UInt8
 
-    alias __integerMin0Max30 = Int32
+    alias __integerMin0Max30 = UInt8
 
-    alias __integerMin0Max32768 = Int32
+    alias __integerMin0Max32768 = UInt16
 
-    alias __integerMin0Max3600 = Int32
+    alias __integerMin0Max3600 = UInt16
 
-    alias __integerMin0Max500 = Int32
+    alias __integerMin0Max500 = UInt16
 
-    alias __integerMin0Max600 = Int32
+    alias __integerMin0Max600 = UInt16
 
-    alias __integerMin0Max65535 = Int32
+    alias __integerMin0Max65535 = UInt16
 
-    alias __integerMin0Max65536 = Int32
+    alias __integerMin0Max65536 = UInt32
 
-    alias __integerMin0Max7 = Int32
+    alias __integerMin0Max7 = UInt8
 
-    alias __integerMin0Max8191 = Int32
+    alias __integerMin0Max8191 = UInt16
 
-    alias __integerMin1 = Int32
+    alias __integerMin1 = UInt32
 
-    alias __integerMin100 = Int32
+    alias __integerMin100 = UInt32
 
-    alias __integerMin1000 = Int32
+    alias __integerMin1000 = UInt32
 
-    alias __integerMin1000000Max100000000 = Int32
+    alias __integerMin1000000Max100000000 = UInt32
 
-    alias __integerMin100000Max100000000 = Int32
+    alias __integerMin100000Max100000000 = UInt32
 
-    alias __integerMin100000Max40000000 = Int32
+    alias __integerMin100000Max40000000 = UInt32
 
-    alias __integerMin100000Max80000000 = Int32
+    alias __integerMin100000Max80000000 = UInt32
 
-    alias __integerMin1000Max30000 = Int32
+    alias __integerMin1000Max30000 = UInt16
 
-    alias __integerMin1Max10 = Int32
+    alias __integerMin1Max10 = UInt8
 
-    alias __integerMin1Max1000000 = Int32
+    alias __integerMin1Max1000000 = UInt32
 
-    alias __integerMin1Max16 = Int32
+    alias __integerMin1Max16 = UInt8
 
-    alias __integerMin1Max20 = Int32
+    alias __integerMin1Max20 = UInt8
 
-    alias __integerMin1Max3003 = Int32
+    alias __integerMin1Max3003 = UInt16
 
-    alias __integerMin1Max31 = Int32
+    alias __integerMin1Max31 = UInt8
 
-    alias __integerMin1Max32 = Int32
+    alias __integerMin1Max32 = UInt8
 
-    alias __integerMin1Max3600000 = Int32
+    alias __integerMin1Max3600000 = UInt32
 
-    alias __integerMin1Max4 = Int32
+    alias __integerMin1Max4 = UInt8
 
-    alias __integerMin1Max5 = Int32
+    alias __integerMin1Max5 = UInt8
 
-    alias __integerMin1Max6 = Int32
+    alias __integerMin1Max6 = UInt8
 
-    alias __integerMin1Max8 = Int32
+    alias __integerMin1Max8 = UInt8
 
-    alias __integerMin25Max10000 = Int32
+    alias __integerMin25Max10000 = UInt16
 
-    alias __integerMin25Max2000 = Int32
+    alias __integerMin25Max2000 = UInt16
 
-    alias __integerMin3 = Int32
+    alias __integerMin3 = UInt32
 
-    alias __integerMin30 = Int32
+    alias __integerMin30 = UInt32
 
-    alias __integerMin4Max20 = Int32
+    alias __integerMin4Max20 = UInt8
 
-    alias __integerMin800Max3000 = Int32
+    alias __integerMin800Max3000 = UInt16
 
-    alias __integerMin96Max600 = Int32
+    alias __integerMin96Max600 = UInt16
 
-    alias __integerMinNegative1000Max1000 = Int32
+    alias __integerMinNegative1000Max1000 = Int16
 
-    alias __integerMinNegative5Max5 = Int32
+    alias __integerMinNegative5Max5 = Int8
 
-    alias __integerMinNegative60Max6 = Int32
+    alias __integerMinNegative60Max6 = Int8
 
-    alias __integerMinNegative60Max60 = Int32
+    alias __integerMinNegative60Max60 = Int8
 
     alias __listOfAudioChannelMapping = Array(AudioChannelMapping)
 
@@ -22157,11 +22157,11 @@ module Aws::MediaLive
 
     alias __long = Int64
 
-    alias __longMin0Max1099511627775 = Int64
+    alias __longMin0Max1099511627775 = UInt64
 
-    alias __longMin0Max4294967295 = Int64
+    alias __longMin0Max4294967295 = UInt32
 
-    alias __longMin0Max8589934591 = Int64
+    alias __longMin0Max8589934591 = UInt64
 
     alias __string = String
 

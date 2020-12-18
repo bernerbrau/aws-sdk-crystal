@@ -548,11 +548,11 @@ module Aws::PrometheusService
 
     alias ListWorkspacesRequest = NamedTuple(
       "alias" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
-    alias ListWorkspacesRequestMaxResultsInteger = Int32
+    alias ListWorkspacesRequestMaxResultsInteger = UInt16
 
     alias ListWorkspacesResponse = NamedTuple(
       "nextToken" : String,

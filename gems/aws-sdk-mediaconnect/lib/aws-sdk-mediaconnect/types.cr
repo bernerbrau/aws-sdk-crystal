@@ -3108,7 +3108,7 @@ module Aws::MediaConnect
     alias KeyType = String
 
     alias ListEntitlementsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3118,7 +3118,7 @@ module Aws::MediaConnect
     )
 
     alias ListFlowsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3128,7 +3128,7 @@ module Aws::MediaConnect
     )
 
     alias ListOfferingsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3138,7 +3138,7 @@ module Aws::MediaConnect
     )
 
     alias ListReservationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3170,7 +3170,7 @@ module Aws::MediaConnect
       "Status" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias Messages = NamedTuple(
       "Errors" : Array(String)

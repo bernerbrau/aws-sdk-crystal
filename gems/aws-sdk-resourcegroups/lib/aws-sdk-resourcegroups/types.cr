@@ -1614,7 +1614,7 @@ module Aws::ResourceGroups
       "GroupName" : String,
       "Group" : String,
       "Filters" : Array(ResourceFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1626,7 +1626,7 @@ module Aws::ResourceGroups
 
     alias ListGroupsInput = NamedTuple(
       "Filters" : Array(GroupFilter),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1636,7 +1636,7 @@ module Aws::ResourceGroups
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MethodNotAllowedException = NamedTuple(
       "Message" : String
@@ -1696,7 +1696,7 @@ module Aws::ResourceGroups
 
     alias SearchResourcesInput = NamedTuple(
       "ResourceQuery" : ResourceQuery,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 

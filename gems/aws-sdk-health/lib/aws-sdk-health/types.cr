@@ -1828,7 +1828,7 @@ module Aws::Health
     alias DescribeAffectedAccountsForOrganizationRequest = NamedTuple(
       "eventArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeAffectedAccountsForOrganizationResponse = NamedTuple(
@@ -1843,7 +1843,7 @@ module Aws::Health
       "organizationEntityFilters" : Array(EventAccountFilter),
       "locale" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeAffectedEntitiesForOrganizationResponse = NamedTuple(
@@ -1856,7 +1856,7 @@ module Aws::Health
       "filter" : EntityFilter,
       "locale" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeAffectedEntitiesResponse = NamedTuple(
@@ -1875,7 +1875,7 @@ module Aws::Health
     alias DescribeEventAggregatesRequest = NamedTuple(
       "filter" : EventFilter,
       "aggregateField" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -1916,7 +1916,7 @@ module Aws::Health
       "filter" : EventTypeFilter,
       "locale" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeEventTypesResponse = NamedTuple(
@@ -1927,7 +1927,7 @@ module Aws::Health
     alias DescribeEventsForOrganizationRequest = NamedTuple(
       "filter" : OrganizationEventFilter,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "locale" : String
     )
 
@@ -1939,7 +1939,7 @@ module Aws::Health
     alias DescribeEventsRequest = NamedTuple(
       "filter" : EventFilter,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "locale" : String
     )
 
@@ -2172,7 +2172,7 @@ module Aws::Health
 
     alias locale = String
 
-    alias maxResults = Int32
+    alias maxResults = UInt8
 
     alias metadataKey = String
 

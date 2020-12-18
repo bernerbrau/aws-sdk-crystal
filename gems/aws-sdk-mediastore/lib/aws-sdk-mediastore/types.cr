@@ -1074,7 +1074,7 @@ module Aws::MediaStore
 
     alias ContainerList = Array(Container)
 
-    alias ContainerListLimit = Int32
+    alias ContainerListLimit = UInt8
 
     alias ContainerName = String
 
@@ -1096,7 +1096,7 @@ module Aws::MediaStore
       "AllowedOrigins" : Array(String),
       "AllowedMethods" : Array(String),
       "AllowedHeaders" : Array(String),
-      "MaxAgeSeconds" : Int32,
+      "MaxAgeSeconds" : UInt32,
       "ExposeHeaders" : Array(String)
     )
 
@@ -1209,7 +1209,7 @@ module Aws::MediaStore
 
     alias ListContainersInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListContainersOutput = NamedTuple(
@@ -1225,7 +1225,7 @@ module Aws::MediaStore
       "Tags" : Array(Tag)
     )
 
-    alias MaxAgeSeconds = Int32
+    alias MaxAgeSeconds = UInt32
 
     alias MethodName = String
 

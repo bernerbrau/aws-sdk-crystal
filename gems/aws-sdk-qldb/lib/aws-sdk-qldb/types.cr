@@ -1716,7 +1716,7 @@ module Aws::QLDB
 
     alias ListJournalKinesisStreamsForLedgerRequest = NamedTuple(
       "LedgerName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1727,7 +1727,7 @@ module Aws::QLDB
 
     alias ListJournalS3ExportsForLedgerRequest = NamedTuple(
       "Name" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1737,7 +1737,7 @@ module Aws::QLDB
     )
 
     alias ListJournalS3ExportsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1747,7 +1747,7 @@ module Aws::QLDB
     )
 
     alias ListLedgersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -1764,7 +1764,7 @@ module Aws::QLDB
       "Tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 

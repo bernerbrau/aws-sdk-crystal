@@ -19026,7 +19026,7 @@ module Aws::IoT
       "failureType" : String,
       "action" : String,
       "thresholdPercentage" : Float64,
-      "minNumberOfExecutedThings" : Int32
+      "minNumberOfExecutedThings" : UInt32
     )
 
     alias AbortCriteriaList = Array(AbortCriteria)
@@ -19429,7 +19429,7 @@ module Aws::IoT
       "failureType" : String,
       "action" : String,
       "thresholdPercentage" : Float64,
-      "minNumberOfExecutedThings" : Int32
+      "minNumberOfExecutedThings" : UInt32
     )
 
     alias AwsJobAbortCriteriaAbortAction = String
@@ -19440,15 +19440,15 @@ module Aws::IoT
 
     alias AwsJobAbortCriteriaList = Array(AwsJobAbortCriteria)
 
-    alias AwsJobAbortCriteriaMinimumNumberOfExecutedThings = Int32
+    alias AwsJobAbortCriteriaMinimumNumberOfExecutedThings = UInt32
 
     alias AwsJobExecutionsRolloutConfig = NamedTuple(
-      "maximumPerMinute" : Int32,
+      "maximumPerMinute" : UInt16,
       "exponentialRate" : AwsJobExponentialRolloutRate
     )
 
     alias AwsJobExponentialRolloutRate = NamedTuple(
-      "baseRatePerMinute" : Int32,
+      "baseRatePerMinute" : UInt16,
       "incrementFactor" : Float64,
       "rateIncreaseCriteria" : AwsJobRateIncreaseCriteria
     )
@@ -19458,15 +19458,15 @@ module Aws::IoT
     )
 
     alias AwsJobRateIncreaseCriteria = NamedTuple(
-      "numberOfNotifiedThings" : Int32,
-      "numberOfSucceededThings" : Int32
+      "numberOfNotifiedThings" : UInt32,
+      "numberOfSucceededThings" : UInt32
     )
 
-    alias AwsJobRateIncreaseCriteriaNumberOfThings = Int32
+    alias AwsJobRateIncreaseCriteriaNumberOfThings = UInt32
 
     alias AwsJobRolloutIncrementFactor = Float64
 
-    alias AwsJobRolloutRatePerMinute = Int32
+    alias AwsJobRolloutRatePerMinute = UInt16
 
     alias AwsJobTimeoutConfig = NamedTuple(
       "inProgressTimeoutInMinutes" : Int64
@@ -19488,8 +19488,8 @@ module Aws::IoT
       "comparisonOperator" : String,
       "value" : MetricValue,
       "durationSeconds" : Int32,
-      "consecutiveDatapointsToAlarm" : Int32,
-      "consecutiveDatapointsToClear" : Int32,
+      "consecutiveDatapointsToAlarm" : UInt8,
+      "consecutiveDatapointsToClear" : UInt8,
       "statisticalThreshold" : StatisticalThreshold,
       "mlDetectionConfig" : MachineLearningDetectionConfig
     )
@@ -19553,7 +19553,7 @@ module Aws::IoT
       "creationDate" : (String | UInt64 | Time)?,
       "autoRegistrationStatus" : String,
       "lastModifiedDate" : (String | UInt64 | Time)?,
-      "customerVersion" : Int32,
+      "customerVersion" : UInt32,
       "generationId" : String,
       "validity" : CertificateValidity
     )
@@ -19645,7 +19645,7 @@ module Aws::IoT
       "previousOwnedBy" : String,
       "creationDate" : (String | UInt64 | Time)?,
       "lastModifiedDate" : (String | UInt64 | Time)?,
-      "customerVersion" : Int32,
+      "customerVersion" : UInt32,
       "transferData" : TransferData,
       "generationId" : String,
       "validity" : CertificateValidity,
@@ -19771,9 +19771,9 @@ module Aws::IoT
 
     alias ConnectivityTimestamp = Int64
 
-    alias ConsecutiveDatapointsToAlarm = Int32
+    alias ConsecutiveDatapointsToAlarm = UInt8
 
-    alias ConsecutiveDatapointsToClear = Int32
+    alias ConsecutiveDatapointsToClear = UInt8
 
     alias Count = Int32
 
@@ -20024,7 +20024,7 @@ module Aws::IoT
     alias CreateRoleAliasRequest = NamedTuple(
       "roleAlias" : String,
       "roleArn" : String,
-      "credentialDurationSeconds" : Int32,
+      "credentialDurationSeconds" : UInt16,
       "tags" : Array(Tag)
     )
 
@@ -20073,7 +20073,7 @@ module Aws::IoT
       "streamId" : String,
       "streamArn" : String,
       "description" : String,
-      "streamVersion" : Int32
+      "streamVersion" : UInt16
     )
 
     alias CreateThingGroupRequest = NamedTuple(
@@ -20132,7 +20132,7 @@ module Aws::IoT
 
     alias CreationDate = String | UInt64 | Time
 
-    alias CredentialDurationSeconds = Int32
+    alias CredentialDurationSeconds = UInt16
 
     alias CustomCodeSigning = NamedTuple(
       "signature" : CodeSigningSignature,
@@ -20147,7 +20147,7 @@ module Aws::IoT
 
     alias CustomMetricType = String
 
-    alias CustomerVersion = Int32
+    alias CustomerVersion = UInt32
 
     alias DataCollectionPercentage = Float64
 
@@ -20735,7 +20735,7 @@ module Aws::IoT
       "message" : String,
       "successCount" : Int32,
       "failureCount" : Int32,
-      "percentageProgress" : Int32
+      "percentageProgress" : UInt8
     )
 
     alias DescribeThingRequest = NamedTuple(
@@ -20982,7 +20982,7 @@ module Aws::IoT
 
     alias ExpectedVersion = Int64
 
-    alias ExpiresInSec = Int64
+    alias ExpiresInSec = UInt16
 
     alias ExpiresInSeconds = Int64
 
@@ -20991,7 +20991,7 @@ module Aws::IoT
     )
 
     alias ExponentialRolloutRate = NamedTuple(
-      "baseRatePerMinute" : Int32,
+      "baseRatePerMinute" : UInt16,
       "incrementFactor" : Float64,
       "rateIncreaseCriteria" : RateIncreaseCriteria
     )
@@ -21013,7 +21013,7 @@ module Aws::IoT
 
     alias Fields = Array(Field)
 
-    alias FileId = Int32
+    alias FileId = UInt8
 
     alias FileLocation = NamedTuple(
       "stream" : Stream,
@@ -21022,7 +21022,7 @@ module Aws::IoT
 
     alias FileName = String
 
-    alias FileType = Int32
+    alias FileType = UInt8
 
     alias FindingId = String
 
@@ -21055,7 +21055,7 @@ module Aws::IoT
 
     alias GetBehaviorModelTrainingSummariesRequest = NamedTuple(
       "securityProfileName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21422,7 +21422,7 @@ module Aws::IoT
     alias JobExecutionSummaryForThingList = Array(JobExecutionSummaryForThing)
 
     alias JobExecutionsRolloutConfig = NamedTuple(
-      "maximumPerMinute" : Int32,
+      "maximumPerMinute" : UInt16,
       "exponentialRate" : ExponentialRolloutRate
     )
 
@@ -21488,7 +21488,7 @@ module Aws::IoT
       "functionArn" : String
     )
 
-    alias LaserMaxResults = Int32
+    alias LaserMaxResults = UInt8
 
     alias LastModifiedDate = String | UInt64 | Time
 
@@ -21504,7 +21504,7 @@ module Aws::IoT
       "behaviorCriteriaType" : String,
       "listSuppressedAlerts" : Bool,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListActiveViolationsResponse = NamedTuple(
@@ -21516,7 +21516,7 @@ module Aws::IoT
       "target" : String,
       "recursive" : Bool,
       "marker" : String,
-      "pageSize" : Int32
+      "pageSize" : UInt8
     )
 
     alias ListAttachedPoliciesResponse = NamedTuple(
@@ -21528,7 +21528,7 @@ module Aws::IoT
       "taskId" : String,
       "checkName" : String,
       "resourceIdentifier" : ResourceIdentifier,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "startTime" : (String | UInt64 | Time)?,
       "endTime" : (String | UInt64 | Time)?,
@@ -21544,7 +21544,7 @@ module Aws::IoT
       "taskId" : String,
       "actionStatus" : String,
       "findingId" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21557,7 +21557,7 @@ module Aws::IoT
       "auditTaskId" : String,
       "findingId" : String,
       "taskStatus" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time
@@ -21573,7 +21573,7 @@ module Aws::IoT
       "resourceIdentifier" : ResourceIdentifier,
       "ascendingOrder" : Bool,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAuditSuppressionsResponse = NamedTuple(
@@ -21587,7 +21587,7 @@ module Aws::IoT
       "taskType" : String,
       "taskStatus" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAuditTasksResponse = NamedTuple(
@@ -21596,7 +21596,7 @@ module Aws::IoT
     )
 
     alias ListAuthorizersRequest = NamedTuple(
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "marker" : String,
       "ascendingOrder" : Bool,
       "status" : String
@@ -21609,7 +21609,7 @@ module Aws::IoT
 
     alias ListBillingGroupsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "namePrefixFilter" : String
     )
 
@@ -21619,7 +21619,7 @@ module Aws::IoT
     )
 
     alias ListCACertificatesRequest = NamedTuple(
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "marker" : String,
       "ascendingOrder" : Bool
     )
@@ -21631,7 +21631,7 @@ module Aws::IoT
 
     alias ListCertificatesByCARequest = NamedTuple(
       "caCertificateId" : String,
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "marker" : String,
       "ascendingOrder" : Bool
     )
@@ -21642,7 +21642,7 @@ module Aws::IoT
     )
 
     alias ListCertificatesRequest = NamedTuple(
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "marker" : String,
       "ascendingOrder" : Bool
     )
@@ -21654,7 +21654,7 @@ module Aws::IoT
 
     alias ListCustomMetricsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListCustomMetricsResponse = NamedTuple(
@@ -21668,7 +21668,7 @@ module Aws::IoT
       "thingName" : String,
       "startTime" : (String | UInt64 | Time)?,
       "endTime" : (String | UInt64 | Time)?,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21678,7 +21678,7 @@ module Aws::IoT
     )
 
     alias ListDetectMitigationActionsTasksRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "startTime" : String | UInt64 | Time,
       "endTime" : String | UInt64 | Time
@@ -21691,7 +21691,7 @@ module Aws::IoT
 
     alias ListDimensionsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDimensionsResponse = NamedTuple(
@@ -21701,7 +21701,7 @@ module Aws::IoT
 
     alias ListDomainConfigurationsRequest = NamedTuple(
       "marker" : String,
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "serviceType" : String
     )
 
@@ -21712,7 +21712,7 @@ module Aws::IoT
 
     alias ListIndicesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListIndicesResponse = NamedTuple(
@@ -21723,7 +21723,7 @@ module Aws::IoT
     alias ListJobExecutionsForJobRequest = NamedTuple(
       "jobId" : String,
       "status" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21736,7 +21736,7 @@ module Aws::IoT
       "thingName" : String,
       "status" : String,
       "namespaceId" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21748,7 +21748,7 @@ module Aws::IoT
     alias ListJobsRequest = NamedTuple(
       "status" : String,
       "targetSelection" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "thingGroupName" : String,
       "thingGroupId" : String,
@@ -21762,7 +21762,7 @@ module Aws::IoT
 
     alias ListMitigationActionsRequest = NamedTuple(
       "actionType" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21772,7 +21772,7 @@ module Aws::IoT
     )
 
     alias ListOTAUpdatesRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "otaUpdateStatus" : String
     )
@@ -21783,7 +21783,7 @@ module Aws::IoT
     )
 
     alias ListOutgoingCertificatesRequest = NamedTuple(
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "marker" : String,
       "ascendingOrder" : Bool
     )
@@ -21795,7 +21795,7 @@ module Aws::IoT
 
     alias ListPoliciesRequest = NamedTuple(
       "marker" : String,
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "ascendingOrder" : Bool
     )
 
@@ -21807,7 +21807,7 @@ module Aws::IoT
     alias ListPolicyPrincipalsRequest = NamedTuple(
       "policyName" : String,
       "marker" : String,
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "ascendingOrder" : Bool
     )
 
@@ -21827,7 +21827,7 @@ module Aws::IoT
     alias ListPrincipalPoliciesRequest = NamedTuple(
       "principal" : String,
       "marker" : String,
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "ascendingOrder" : Bool
     )
 
@@ -21838,7 +21838,7 @@ module Aws::IoT
 
     alias ListPrincipalThingsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "principal" : String
     )
 
@@ -21849,7 +21849,7 @@ module Aws::IoT
 
     alias ListProvisioningTemplateVersionsRequest = NamedTuple(
       "templateName" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21859,7 +21859,7 @@ module Aws::IoT
     )
 
     alias ListProvisioningTemplatesRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -21869,7 +21869,7 @@ module Aws::IoT
     )
 
     alias ListRoleAliasesRequest = NamedTuple(
-      "pageSize" : Int32,
+      "pageSize" : UInt8,
       "marker" : String,
       "ascendingOrder" : Bool
     )
@@ -21881,7 +21881,7 @@ module Aws::IoT
 
     alias ListScheduledAuditsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListScheduledAuditsResponse = NamedTuple(
@@ -21891,7 +21891,7 @@ module Aws::IoT
 
     alias ListSecurityProfilesForTargetRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "recursive" : Bool,
       "securityProfileTargetArn" : String
     )
@@ -21903,7 +21903,7 @@ module Aws::IoT
 
     alias ListSecurityProfilesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "dimensionName" : String,
       "metricName" : String
     )
@@ -21914,7 +21914,7 @@ module Aws::IoT
     )
 
     alias ListStreamsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "ascendingOrder" : Bool
     )
@@ -21941,7 +21941,7 @@ module Aws::IoT
     alias ListTargetsForPolicyRequest = NamedTuple(
       "policyName" : String,
       "marker" : String,
-      "pageSize" : Int32
+      "pageSize" : UInt8
     )
 
     alias ListTargetsForPolicyResponse = NamedTuple(
@@ -21952,7 +21952,7 @@ module Aws::IoT
     alias ListTargetsForSecurityProfileRequest = NamedTuple(
       "securityProfileName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTargetsForSecurityProfileResponse = NamedTuple(
@@ -21963,7 +21963,7 @@ module Aws::IoT
     alias ListThingGroupsForThingRequest = NamedTuple(
       "thingName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListThingGroupsForThingResponse = NamedTuple(
@@ -21973,7 +21973,7 @@ module Aws::IoT
 
     alias ListThingGroupsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "parentGroup" : String,
       "namePrefixFilter" : String,
       "recursive" : Bool
@@ -21986,7 +21986,7 @@ module Aws::IoT
 
     alias ListThingPrincipalsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "thingName" : String
     )
 
@@ -21999,7 +21999,7 @@ module Aws::IoT
       "taskId" : String,
       "reportType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListThingRegistrationTaskReportsResponse = NamedTuple(
@@ -22010,7 +22010,7 @@ module Aws::IoT
 
     alias ListThingRegistrationTasksRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "status" : String
     )
 
@@ -22021,7 +22021,7 @@ module Aws::IoT
 
     alias ListThingTypesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "thingTypeName" : String
     )
 
@@ -22033,7 +22033,7 @@ module Aws::IoT
     alias ListThingsInBillingGroupRequest = NamedTuple(
       "billingGroupName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListThingsInBillingGroupResponse = NamedTuple(
@@ -22045,7 +22045,7 @@ module Aws::IoT
       "thingGroupName" : String,
       "recursive" : Bool,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListThingsInThingGroupResponse = NamedTuple(
@@ -22055,7 +22055,7 @@ module Aws::IoT
 
     alias ListThingsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "attributeName" : String,
       "attributeValue" : String,
       "thingTypeName" : String
@@ -22067,7 +22067,7 @@ module Aws::IoT
     )
 
     alias ListTopicRuleDestinationsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -22078,7 +22078,7 @@ module Aws::IoT
 
     alias ListTopicRulesRequest = NamedTuple(
       "topic" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String,
       "ruleDisabled" : Bool
     )
@@ -22091,7 +22091,7 @@ module Aws::IoT
     alias ListV2LoggingLevelsRequest = NamedTuple(
       "targetType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListV2LoggingLevelsResponse = NamedTuple(
@@ -22107,7 +22107,7 @@ module Aws::IoT
       "behaviorCriteriaType" : String,
       "listSuppressedAlerts" : Bool,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListViolationEventsResponse = NamedTuple(
@@ -22150,13 +22150,13 @@ module Aws::IoT
 
     alias Marker = String
 
-    alias MaxJobExecutionsPerMin = Int32
+    alias MaxJobExecutionsPerMin = UInt16
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Maximum = Float64
 
-    alias MaximumPerMinute = Int32
+    alias MaximumPerMinute = UInt16
 
     alias Message = String
 
@@ -22179,9 +22179,9 @@ module Aws::IoT
     )
 
     alias MetricValue = NamedTuple(
-      "count" : Int64,
+      "count" : UInt64,
       "cidrs" : Array(String),
-      "ports" : Array(Int32),
+      "ports" : Array(UInt16),
       "number" : Float64,
       "numbers" : Array(Float64),
       "strings" : Array(String)
@@ -22189,7 +22189,7 @@ module Aws::IoT
 
     alias Minimum = Float64
 
-    alias MinimumNumberOfExecutedThings = Int32
+    alias MinimumNumberOfExecutedThings = UInt32
 
     alias MissingContextValue = String
 
@@ -22271,7 +22271,7 @@ module Aws::IoT
 
     alias NumberList = Array(Float64)
 
-    alias NumberOfThings = Int32
+    alias NumberOfThings = UInt32
 
     alias OTAUpdateArn = String
 
@@ -22281,7 +22281,7 @@ module Aws::IoT
 
     alias OTAUpdateFile = NamedTuple(
       "fileName" : String,
-      "fileType" : Int32,
+      "fileType" : UInt8,
       "fileVersion" : String,
       "fileLocation" : FileLocation,
       "codeSigning" : CodeSigning,
@@ -22338,7 +22338,7 @@ module Aws::IoT
 
     alias OverrideDynamicGroups = Bool
 
-    alias PageSize = Int32
+    alias PageSize = UInt8
 
     alias Parameter = String
 
@@ -22361,7 +22361,7 @@ module Aws::IoT
 
     alias PercentValue = Float64
 
-    alias Percentage = Int32
+    alias Percentage = UInt8
 
     alias Percentiles = Array(PercentPair)
 
@@ -22405,15 +22405,15 @@ module Aws::IoT
 
     alias PolicyVersions = Array(PolicyVersion)
 
-    alias Port = Int32
+    alias Port = UInt16
 
-    alias Ports = Array(Int32)
+    alias Ports = Array(UInt16)
 
     alias Prefix = String
 
     alias PresignedUrlConfig = NamedTuple(
       "roleArn" : String,
-      "expiresInSec" : Int64
+      "expiresInSec" : UInt16
     )
 
     alias PrimitiveBoolean = Bool
@@ -22482,9 +22482,9 @@ module Aws::IoT
       "tableName" : String
     )
 
-    alias Qos = Int32
+    alias Qos = UInt8
 
-    alias QueryMaxResults = Int32
+    alias QueryMaxResults = UInt16
 
     alias QueryString = String
 
@@ -22499,8 +22499,8 @@ module Aws::IoT
     alias RangeKeyValue = String
 
     alias RateIncreaseCriteria = NamedTuple(
-      "numberOfNotifiedThings" : Int32,
-      "numberOfSucceededThings" : Int32
+      "numberOfNotifiedThings" : UInt32,
+      "numberOfSucceededThings" : UInt32
     )
 
     alias ReasonCode = String
@@ -22572,7 +22572,7 @@ module Aws::IoT
       "roleArn" : String
     )
 
-    alias RegistryMaxResults = Int32
+    alias RegistryMaxResults = UInt8
 
     alias RegistryS3BucketName = String
 
@@ -22639,7 +22639,7 @@ module Aws::IoT
     alias RepublishAction = NamedTuple(
       "roleArn" : String,
       "topic" : String,
-      "qos" : Int32
+      "qos" : UInt8
     )
 
     alias ReservedDomainConfigurationName = String
@@ -22690,7 +22690,7 @@ module Aws::IoT
       "roleAliasArn" : String,
       "roleArn" : String,
       "owner" : String,
-      "credentialDurationSeconds" : Int32,
+      "credentialDurationSeconds" : UInt16,
       "creationDate" : (String | UInt64 | Time)?,
       "lastModifiedDate" : (String | UInt64 | Time)?
     )
@@ -22699,7 +22699,7 @@ module Aws::IoT
 
     alias RoleArn = String
 
-    alias RolloutRatePerMinute = Int32
+    alias RolloutRatePerMinute = UInt16
 
     alias RuleArn = String
 
@@ -22762,7 +22762,7 @@ module Aws::IoT
       "indexName" : String,
       "queryString" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "queryVersion" : String
     )
 
@@ -22891,7 +22891,7 @@ module Aws::IoT
 
     alias SkippedFindingsCount = Int64
 
-    alias SkyfallMaxResults = Int32
+    alias SkyfallMaxResults = UInt8
 
     alias SnsAction = NamedTuple(
       "targetArn" : String,
@@ -23002,7 +23002,7 @@ module Aws::IoT
 
     alias Stream = NamedTuple(
       "streamId" : String,
-      "fileId" : Int32
+      "fileId" : UInt8
     )
 
     alias StreamArn = String
@@ -23010,7 +23010,7 @@ module Aws::IoT
     alias StreamDescription = String
 
     alias StreamFile = NamedTuple(
-      "fileId" : Int32,
+      "fileId" : UInt8,
       "s3Location" : S3Location
     )
 
@@ -23021,7 +23021,7 @@ module Aws::IoT
     alias StreamInfo = NamedTuple(
       "streamId" : String,
       "streamArn" : String,
-      "streamVersion" : Int32,
+      "streamVersion" : UInt16,
       "description" : String,
       "files" : Array(StreamFile),
       "createdAt" : (String | UInt64 | Time)?,
@@ -23034,11 +23034,11 @@ module Aws::IoT
     alias StreamSummary = NamedTuple(
       "streamId" : String,
       "streamArn" : String,
-      "streamVersion" : Int32,
+      "streamVersion" : UInt16,
       "description" : String
     )
 
-    alias StreamVersion = Int32
+    alias StreamVersion = UInt16
 
     alias StreamsSummary = Array(StreamSummary)
 
@@ -23331,7 +23331,7 @@ module Aws::IoT
 
     alias TimestreamTimestampValue = String
 
-    alias TinyMaxResults = Int32
+    alias TinyMaxResults = UInt8
 
     alias TlsContext = NamedTuple(
       "serverName" : String
@@ -23373,7 +23373,7 @@ module Aws::IoT
       "vpcConfiguration" : VpcDestinationConfiguration
     )
 
-    alias TopicRuleDestinationMaxResults = Int32
+    alias TopicRuleDestinationMaxResults = UInt16
 
     alias TopicRuleDestinationStatus = String
 
@@ -23399,7 +23399,7 @@ module Aws::IoT
       "ruleDisabled" : Bool
     )
 
-    alias TopicRuleMaxResults = Int32
+    alias TopicRuleMaxResults = UInt16
 
     alias TopicRulePayload = NamedTuple(
       "sql" : String,
@@ -23448,7 +23448,7 @@ module Aws::IoT
 
     alias UndoDeprecate = Bool
 
-    alias UnsignedLong = Int64
+    alias UnsignedLong = UInt64
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
@@ -23633,7 +23633,7 @@ module Aws::IoT
     alias UpdateRoleAliasRequest = NamedTuple(
       "roleAlias" : String,
       "roleArn" : String,
-      "credentialDurationSeconds" : Int32
+      "credentialDurationSeconds" : UInt16
     )
 
     alias UpdateRoleAliasResponse = NamedTuple(
@@ -23690,7 +23690,7 @@ module Aws::IoT
       "streamId" : String,
       "streamArn" : String,
       "description" : String,
-      "streamVersion" : Int32
+      "streamVersion" : UInt16
     )
 
     alias UpdateThingGroupRequest = NamedTuple(

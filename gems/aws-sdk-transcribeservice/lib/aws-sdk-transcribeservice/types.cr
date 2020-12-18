@@ -3055,7 +3055,7 @@ module Aws::TranscribeService
       "StatusEquals" : String,
       "NameContains" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListLanguageModelsResponse = NamedTuple(
@@ -3067,7 +3067,7 @@ module Aws::TranscribeService
       "Status" : String,
       "JobNameContains" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMedicalTranscriptionJobsResponse = NamedTuple(
@@ -3078,7 +3078,7 @@ module Aws::TranscribeService
 
     alias ListMedicalVocabulariesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "StateEquals" : String,
       "NameContains" : String
     )
@@ -3093,7 +3093,7 @@ module Aws::TranscribeService
       "Status" : String,
       "JobNameContains" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTranscriptionJobsResponse = NamedTuple(
@@ -3104,7 +3104,7 @@ module Aws::TranscribeService
 
     alias ListVocabulariesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "StateEquals" : String,
       "NameContains" : String
     )
@@ -3117,7 +3117,7 @@ module Aws::TranscribeService
 
     alias ListVocabularyFiltersRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NameContains" : String
     )
 
@@ -3126,11 +3126,11 @@ module Aws::TranscribeService
       "VocabularyFilters" : Array(VocabularyFilterInfo)
     )
 
-    alias MaxAlternatives = Int32
+    alias MaxAlternatives = UInt8
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MaxSpeakers = Int32
+    alias MaxSpeakers = UInt8
 
     alias Media = NamedTuple(
       "MediaFileUri" : String
@@ -3138,7 +3138,7 @@ module Aws::TranscribeService
 
     alias MediaFormat = String
 
-    alias MediaSampleRateHertz = Int32
+    alias MediaSampleRateHertz = UInt16
 
     alias MedicalTranscript = NamedTuple(
       "TranscriptFileUri" : String
@@ -3148,7 +3148,7 @@ module Aws::TranscribeService
       "MedicalTranscriptionJobName" : String,
       "TranscriptionJobStatus" : String,
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaFormat" : String,
       "Media" : Media,
       "Transcript" : MedicalTranscript,
@@ -3178,10 +3178,10 @@ module Aws::TranscribeService
 
     alias MedicalTranscriptionSetting = NamedTuple(
       "ShowSpeakerLabels" : Bool,
-      "MaxSpeakerLabels" : Int32,
+      "MaxSpeakerLabels" : UInt8,
       "ChannelIdentification" : Bool,
       "ShowAlternatives" : Bool,
-      "MaxAlternatives" : Int32,
+      "MaxAlternatives" : UInt8,
       "VocabularyName" : String
     )
 
@@ -3218,10 +3218,10 @@ module Aws::TranscribeService
     alias Settings = NamedTuple(
       "VocabularyName" : String,
       "ShowSpeakerLabels" : Bool,
-      "MaxSpeakerLabels" : Int32,
+      "MaxSpeakerLabels" : UInt8,
       "ChannelIdentification" : Bool,
       "ShowAlternatives" : Bool,
-      "MaxAlternatives" : Int32,
+      "MaxAlternatives" : UInt8,
       "VocabularyFilterName" : String,
       "VocabularyFilterMethod" : String
     )
@@ -3231,7 +3231,7 @@ module Aws::TranscribeService
     alias StartMedicalTranscriptionJobRequest = NamedTuple(
       "MedicalTranscriptionJobName" : String,
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaFormat" : String,
       "Media" : Media,
       "OutputBucketName" : String,
@@ -3249,7 +3249,7 @@ module Aws::TranscribeService
     alias StartTranscriptionJobRequest = NamedTuple(
       "TranscriptionJobName" : String,
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaFormat" : String,
       "Media" : Media,
       "OutputBucketName" : String,
@@ -3278,7 +3278,7 @@ module Aws::TranscribeService
       "TranscriptionJobName" : String,
       "TranscriptionJobStatus" : String,
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaFormat" : String,
       "Media" : Media,
       "Transcript" : Transcript,

@@ -732,7 +732,7 @@ module Aws::PI
       "GroupBy" : DimensionGroup,
       "PartitionBy" : DimensionGroup,
       "Filter" : Hash(String,String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -747,7 +747,7 @@ module Aws::PI
     alias DimensionGroup = NamedTuple(
       "Group" : String,
       "Dimensions" : Array(String),
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DimensionKeyDescription = NamedTuple(
@@ -769,7 +769,7 @@ module Aws::PI
       "StartTime" : String | UInt64 | Time,
       "EndTime" : String | UInt64 | Time,
       "PeriodInSeconds" : Int32,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -793,9 +793,9 @@ module Aws::PI
       "Message" : String
     )
 
-    alias Limit = Int32
+    alias Limit = UInt8
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MetricKeyDataPoints = NamedTuple(
       "Key" : ResponseResourceMetricKey,

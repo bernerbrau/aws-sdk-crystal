@@ -3350,7 +3350,7 @@ module Aws::SMS
 
     alias ErrorMessage = String
 
-    alias ExecutionTimeoutSeconds = Int32
+    alias ExecutionTimeoutSeconds = UInt16
 
     alias ForceStopAppReplication = Bool
 
@@ -3700,7 +3700,7 @@ module Aws::SMS
       "instanceId" : String,
       "scriptType" : String,
       "command" : String,
-      "executionTimeoutSeconds" : Int32,
+      "executionTimeoutSeconds" : UInt16,
       "outputS3BucketName" : String
     )
 

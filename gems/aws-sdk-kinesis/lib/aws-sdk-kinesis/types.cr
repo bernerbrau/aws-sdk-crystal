@@ -2487,7 +2487,7 @@ module Aws::Kinesis
 
     alias ConsumerARN = String
 
-    alias ConsumerCountObject = Int32
+    alias ConsumerCountObject = UInt32
 
     alias ConsumerDescription = NamedTuple(
       "ConsumerName" : String,
@@ -2505,7 +2505,7 @@ module Aws::Kinesis
 
     alias CreateStreamInput = NamedTuple(
       "StreamName" : String,
-      "ShardCount" : Int32
+      "ShardCount" : UInt32
     )
 
     alias Data = String | Array(UInt8) | IO
@@ -2531,8 +2531,8 @@ module Aws::Kinesis
     )
 
     alias DescribeLimitsOutput = NamedTuple(
-      "ShardLimit" : Int32,
-      "OpenShardCount" : Int32
+      "ShardLimit" : UInt32,
+      "OpenShardCount" : UInt32
     )
 
     alias DescribeStreamConsumerInput = NamedTuple(
@@ -2547,11 +2547,11 @@ module Aws::Kinesis
 
     alias DescribeStreamInput = NamedTuple(
       "StreamName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "ExclusiveStartShardId" : String
     )
 
-    alias DescribeStreamInputLimit = Int32
+    alias DescribeStreamInputLimit = UInt16
 
     alias DescribeStreamOutput = NamedTuple(
       "StreamDescription" : StreamDescription
@@ -2603,15 +2603,15 @@ module Aws::Kinesis
 
     alias GetRecordsInput = NamedTuple(
       "ShardIterator" : String,
-      "Limit" : Int32
+      "Limit" : UInt16
     )
 
-    alias GetRecordsInputLimit = Int32
+    alias GetRecordsInputLimit = UInt16
 
     alias GetRecordsOutput = NamedTuple(
       "Records" : Array(Record),
       "NextShardIterator" : String,
-      "MillisBehindLatest" : Int64,
+      "MillisBehindLatest" : UInt64,
       "ChildShards" : Array(ChildShard)
     )
 
@@ -2681,12 +2681,12 @@ module Aws::Kinesis
       "StreamName" : String,
       "NextToken" : String,
       "ExclusiveStartShardId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "StreamCreationTimestamp" : (String | UInt64 | Time)?,
       "ShardFilter" : ShardFilter
     )
 
-    alias ListShardsInputLimit = Int32
+    alias ListShardsInputLimit = UInt16
 
     alias ListShardsOutput = NamedTuple(
       "Shards" : Array(Shard),
@@ -2696,11 +2696,11 @@ module Aws::Kinesis
     alias ListStreamConsumersInput = NamedTuple(
       "StreamARN" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "StreamCreationTimestamp" : (String | UInt64 | Time)?
     )
 
-    alias ListStreamConsumersInputLimit = Int32
+    alias ListStreamConsumersInputLimit = UInt16
 
     alias ListStreamConsumersOutput = NamedTuple(
       "Consumers" : Array(Consumer),
@@ -2708,11 +2708,11 @@ module Aws::Kinesis
     )
 
     alias ListStreamsInput = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "ExclusiveStartStreamName" : String
     )
 
-    alias ListStreamsInputLimit = Int32
+    alias ListStreamsInputLimit = UInt16
 
     alias ListStreamsOutput = NamedTuple(
       "StreamNames" : Array(String),
@@ -2722,10 +2722,10 @@ module Aws::Kinesis
     alias ListTagsForStreamInput = NamedTuple(
       "StreamName" : String,
       "ExclusiveStartTagKey" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
-    alias ListTagsForStreamInputLimit = Int32
+    alias ListTagsForStreamInputLimit = UInt8
 
     alias ListTagsForStreamOutput = NamedTuple(
       "Tags" : Array(Tag),
@@ -2742,13 +2742,13 @@ module Aws::Kinesis
 
     alias MetricsNameList = Array(String)
 
-    alias MillisBehindLatest = Int64
+    alias MillisBehindLatest = UInt64
 
     alias NextToken = String
 
     alias PartitionKey = String
 
-    alias PositiveIntegerObject = Int32
+    alias PositiveIntegerObject = UInt32
 
     alias ProvisionedThroughputExceededException = NamedTuple(
       "message" : String
@@ -2774,7 +2774,7 @@ module Aws::Kinesis
     )
 
     alias PutRecordsOutput = NamedTuple(
-      "FailedRecordCount" : Int32,
+      "FailedRecordCount" : UInt32,
       "Records" : Array(PutRecordsResultEntry),
       "EncryptionType" : String
     )
@@ -2847,7 +2847,7 @@ module Aws::Kinesis
       "SequenceNumberRange" : SequenceNumberRange
     )
 
-    alias ShardCountObject = Int32
+    alias ShardCountObject = UInt32
 
     alias ShardFilter = NamedTuple(
       "Type" : String,
@@ -2915,8 +2915,8 @@ module Aws::Kinesis
       "EnhancedMonitoring" : Array(EnhancedMetrics),
       "EncryptionType" : String,
       "KeyId" : String,
-      "OpenShardCount" : Int32,
-      "ConsumerCount" : Int32
+      "OpenShardCount" : UInt32,
+      "ConsumerCount" : UInt32
     )
 
     alias StreamName = String
@@ -2928,7 +2928,7 @@ module Aws::Kinesis
     alias SubscribeToShardEvent = NamedTuple(
       "Records" : Array(Record),
       "ContinuationSequenceNumber" : String,
-      "MillisBehindLatest" : Int64,
+      "MillisBehindLatest" : UInt64,
       "ChildShards" : Array(ChildShard)
     )
 
@@ -2974,14 +2974,14 @@ module Aws::Kinesis
 
     alias UpdateShardCountInput = NamedTuple(
       "StreamName" : String,
-      "TargetShardCount" : Int32,
+      "TargetShardCount" : UInt32,
       "ScalingType" : String
     )
 
     alias UpdateShardCountOutput = NamedTuple(
       "StreamName" : String,
-      "CurrentShardCount" : Int32,
-      "TargetShardCount" : Int32
+      "CurrentShardCount" : UInt32,
+      "TargetShardCount" : UInt32
     )
   end
 end

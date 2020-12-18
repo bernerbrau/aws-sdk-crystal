@@ -7168,7 +7168,7 @@ module Aws::SES
 
     alias ListCustomVerificationEmailTemplatesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListCustomVerificationEmailTemplatesResponse = NamedTuple(
@@ -7238,7 +7238,7 @@ module Aws::SES
 
     alias MaxItems = Int32
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MaxSendRate = Float64
 

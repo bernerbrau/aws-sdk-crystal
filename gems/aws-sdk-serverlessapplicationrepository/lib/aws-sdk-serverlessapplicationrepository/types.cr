@@ -2511,7 +2511,7 @@ module Aws::ServerlessApplicationRepository
 
     alias ListApplicationDependenciesRequest = NamedTuple(
       "ApplicationId" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt8,
       "NextToken" : String,
       "SemanticVersion" : String
     )
@@ -2523,7 +2523,7 @@ module Aws::ServerlessApplicationRepository
 
     alias ListApplicationVersionsRequest = NamedTuple(
       "ApplicationId" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt8,
       "NextToken" : String
     )
 
@@ -2533,7 +2533,7 @@ module Aws::ServerlessApplicationRepository
     )
 
     alias ListApplicationsRequest = NamedTuple(
-      "MaxItems" : Int32,
+      "MaxItems" : UInt8,
       "NextToken" : String
     )
 
@@ -2542,7 +2542,7 @@ module Aws::ServerlessApplicationRepository
       "NextToken" : String
     )
 
-    alias MaxItems = Int32
+    alias MaxItems = UInt8
 
     alias NotFoundException = NamedTuple(
       "ErrorCode" : String,

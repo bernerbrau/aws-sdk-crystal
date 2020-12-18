@@ -5032,7 +5032,7 @@ module Aws::GuardDuty
       "Name" : String,
       "Description" : String,
       "Action" : String,
-      "Rank" : Int32,
+      "Rank" : UInt8,
       "FindingCriteria" : FindingCriteria,
       "ClientToken" : String,
       "Tags" : Hash(String,String)
@@ -5303,7 +5303,7 @@ module Aws::GuardDuty
 
     alias FilterNames = Array(String)
 
-    alias FilterRank = Int32
+    alias FilterRank = UInt8
 
     alias Finding = NamedTuple(
       "AccountId" : String,
@@ -5379,7 +5379,7 @@ module Aws::GuardDuty
       "Name" : String,
       "Description" : String,
       "Action" : String,
-      "Rank" : Int32,
+      "Rank" : UInt8,
       "FindingCriteria" : FindingCriteria,
       "Tags" : Hash(String,String)
     )
@@ -5471,7 +5471,7 @@ module Aws::GuardDuty
       "UsageStatisticType" : String,
       "UsageCriteria" : UsageCriteria,
       "Unit" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5539,7 +5539,7 @@ module Aws::GuardDuty
     alias Ipv6Addresses = Array(String)
 
     alias ListDetectorsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5550,7 +5550,7 @@ module Aws::GuardDuty
 
     alias ListFiltersRequest = NamedTuple(
       "DetectorId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5563,7 +5563,7 @@ module Aws::GuardDuty
       "DetectorId" : String,
       "FindingCriteria" : FindingCriteria,
       "SortCriteria" : SortCriteria,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5574,7 +5574,7 @@ module Aws::GuardDuty
 
     alias ListIPSetsRequest = NamedTuple(
       "DetectorId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5584,7 +5584,7 @@ module Aws::GuardDuty
     )
 
     alias ListInvitationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5595,7 +5595,7 @@ module Aws::GuardDuty
 
     alias ListMembersRequest = NamedTuple(
       "DetectorId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "OnlyAssociated" : String
     )
@@ -5606,7 +5606,7 @@ module Aws::GuardDuty
     )
 
     alias ListOrganizationAdminAccountsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5617,7 +5617,7 @@ module Aws::GuardDuty
 
     alias ListPublishingDestinationsRequest = NamedTuple(
       "DetectorId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5636,7 +5636,7 @@ module Aws::GuardDuty
 
     alias ListThreatIntelSetsRequest = NamedTuple(
       "DetectorId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -5665,7 +5665,7 @@ module Aws::GuardDuty
       "InvitedAt" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Member = NamedTuple(
       "AccountId" : String,
@@ -5960,7 +5960,7 @@ module Aws::GuardDuty
       "FilterName" : String,
       "Description" : String,
       "Action" : String,
-      "Rank" : Int32,
+      "Rank" : UInt8,
       "FindingCriteria" : FindingCriteria
     )
 

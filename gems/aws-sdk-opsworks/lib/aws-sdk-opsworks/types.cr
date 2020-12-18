@@ -7575,8 +7575,8 @@ module Aws::OpsWorks
 
     alias AutoScalingThresholds = NamedTuple(
       "InstanceCount" : Int32,
-      "ThresholdsWaitTime" : Int32,
-      "IgnoreMetricsTime" : Int32,
+      "ThresholdsWaitTime" : UInt8,
+      "IgnoreMetricsTime" : UInt8,
       "CpuThreshold" : Float64,
       "MemoryThreshold" : Float64,
       "LoadThreshold" : Float64,
@@ -8137,7 +8137,7 @@ module Aws::OpsWorks
 
     alias GrantAccessRequest = NamedTuple(
       "InstanceId" : String,
-      "ValidForInMinutes" : Int32
+      "ValidForInMinutes" : UInt16
     )
 
     alias GrantAccessResult = NamedTuple(
@@ -8282,7 +8282,7 @@ module Aws::OpsWorks
 
     alias MaxResults = Int32
 
-    alias Minute = Int32
+    alias Minute = UInt8
 
     alias NextToken = String
 
@@ -8699,7 +8699,7 @@ module Aws::OpsWorks
 
     alias UserProfiles = Array(UserProfile)
 
-    alias ValidForInMinutes = Int32
+    alias ValidForInMinutes = UInt16
 
     alias ValidationException = NamedTuple(
       "message" : String

@@ -3090,13 +3090,13 @@ module Aws::States
 
     alias Arn = String
 
-    alias BilledDuration = Int64
+    alias BilledDuration = UInt64
 
-    alias BilledMemoryUsed = Int64
+    alias BilledMemoryUsed = UInt64
 
     alias BillingDetails = NamedTuple(
-      "billedMemoryUsedInMB" : Int64,
-      "billedDurationInMilliseconds" : Int64
+      "billedMemoryUsedInMB" : UInt64,
+      "billedDurationInMilliseconds" : UInt64
     )
 
     alias CloudWatchEventsExecutionDataDetails = NamedTuple(
@@ -3279,7 +3279,7 @@ module Aws::States
 
     alias GetExecutionHistoryInput = NamedTuple(
       "executionArn" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "reverseOrder" : Bool,
       "nextToken" : String,
       "includeExecutionData" : Bool
@@ -3408,7 +3408,7 @@ module Aws::States
     )
 
     alias ListActivitiesInput = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3420,7 +3420,7 @@ module Aws::States
     alias ListExecutionsInput = NamedTuple(
       "stateMachineArn" : String,
       "statusFilter" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3432,7 +3432,7 @@ module Aws::States
     alias ListExecutionsPageToken = String
 
     alias ListStateMachinesInput = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3465,11 +3465,11 @@ module Aws::States
 
     alias MapIterationEventDetails = NamedTuple(
       "name" : String,
-      "index" : Int32
+      "index" : UInt32
     )
 
     alias MapStateStartedEventDetails = NamedTuple(
-      "length" : Int32
+      "length" : UInt32
     )
 
     alias MissingRequiredParameter = NamedTuple(
@@ -3478,7 +3478,7 @@ module Aws::States
 
     alias Name = String
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias PageToken = String
 
@@ -3720,7 +3720,7 @@ module Aws::States
       "enabled" : Bool
     )
 
-    alias UnsignedInteger = Int32
+    alias UnsignedInteger = UInt32
 
     alias UntagResourceInput = NamedTuple(
       "resourceArn" : String,

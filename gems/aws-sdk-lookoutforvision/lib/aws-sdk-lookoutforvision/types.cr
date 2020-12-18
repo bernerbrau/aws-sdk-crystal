@@ -1836,7 +1836,7 @@ module Aws::LookoutforVision
 
     alias ImageSourceType = String
 
-    alias InferenceUnits = Int32
+    alias InferenceUnits = UInt32
 
     alias InputS3Object = NamedTuple(
       "Bucket" : String,
@@ -1863,7 +1863,7 @@ module Aws::LookoutforVision
       "BeforeCreationDate" : (String | UInt64 | Time)?,
       "AfterCreationDate" : (String | UInt64 | Time)?,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "SourceRefContains" : String
     )
 
@@ -1875,7 +1875,7 @@ module Aws::LookoutforVision
     alias ListModelsRequest = NamedTuple(
       "ProjectName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListModelsResponse = NamedTuple(
@@ -1885,7 +1885,7 @@ module Aws::LookoutforVision
 
     alias ListProjectsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProjectsResponse = NamedTuple(
@@ -1947,7 +1947,7 @@ module Aws::LookoutforVision
       "Key" : String
     )
 
-    alias PageSize = Int32
+    alias PageSize = UInt8
 
     alias PaginationToken = String
 
@@ -2006,7 +2006,7 @@ module Aws::LookoutforVision
     alias StartModelRequest = NamedTuple(
       "ProjectName" : String,
       "ModelVersion" : String,
-      "MinInferenceUnits" : Int32,
+      "MinInferenceUnits" : UInt32,
       "ClientToken" : String
     )
 

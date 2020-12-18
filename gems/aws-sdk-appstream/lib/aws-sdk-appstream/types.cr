@@ -4641,7 +4641,7 @@ module Aws::AppStream
 
     alias DescribeImagePermissionsRequest = NamedTuple(
       "Name" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "SharedAwsAccountIds" : Array(String),
       "NextToken" : String
     )
@@ -4652,14 +4652,14 @@ module Aws::AppStream
       "NextToken" : String
     )
 
-    alias DescribeImagesMaxResults = Int32
+    alias DescribeImagesMaxResults = UInt8
 
     alias DescribeImagesRequest = NamedTuple(
       "Names" : Array(String),
       "Arns" : Array(String),
       "Type" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeImagesResult = NamedTuple(
@@ -4705,7 +4705,7 @@ module Aws::AppStream
       "StackName" : String,
       "UserName" : String,
       "AuthenticationType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -4962,7 +4962,7 @@ module Aws::AppStream
 
     alias Long = Int64
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MessageAction = String
 

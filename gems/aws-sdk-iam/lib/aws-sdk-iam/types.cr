@@ -12071,7 +12071,7 @@ module Aws::IAM
       "RoleName" : String,
       "AssumeRolePolicyDocument" : String,
       "Description" : String,
-      "MaxSessionDuration" : Int32,
+      "MaxSessionDuration" : UInt16,
       "PermissionsBoundary" : String,
       "Tags" : Array(Tag)
     )
@@ -12368,7 +12368,7 @@ module Aws::IAM
 
     alias GetAccountAuthorizationDetailsRequest = NamedTuple(
       "Filter" : Array(String),
-      "MaxItems" : Int32,
+      "MaxItems" : UInt16,
       "Marker" : String
     )
 
@@ -12422,7 +12422,7 @@ module Aws::IAM
     alias GetGroupRequest = NamedTuple(
       "GroupName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias GetGroupResponse = NamedTuple(
@@ -12461,7 +12461,7 @@ module Aws::IAM
 
     alias GetOrganizationsAccessReportRequest = NamedTuple(
       "JobId" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt16,
       "Marker" : String,
       "SortKey" : String
     )
@@ -12544,7 +12544,7 @@ module Aws::IAM
 
     alias GetServiceLastAccessedDetailsRequest = NamedTuple(
       "JobId" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt16,
       "Marker" : String
     )
 
@@ -12562,7 +12562,7 @@ module Aws::IAM
     alias GetServiceLastAccessedDetailsWithEntitiesRequest = NamedTuple(
       "JobId" : String,
       "ServiceNamespace" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt16,
       "Marker" : String
     )
 
@@ -12664,7 +12664,7 @@ module Aws::IAM
     alias ListAccessKeysRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListAccessKeysResponse = NamedTuple(
@@ -12675,7 +12675,7 @@ module Aws::IAM
 
     alias ListAccountAliasesRequest = NamedTuple(
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListAccountAliasesResponse = NamedTuple(
@@ -12688,7 +12688,7 @@ module Aws::IAM
       "GroupName" : String,
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListAttachedGroupPoliciesResponse = NamedTuple(
@@ -12701,7 +12701,7 @@ module Aws::IAM
       "RoleName" : String,
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListAttachedRolePoliciesResponse = NamedTuple(
@@ -12714,7 +12714,7 @@ module Aws::IAM
       "UserName" : String,
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListAttachedUserPoliciesResponse = NamedTuple(
@@ -12729,7 +12729,7 @@ module Aws::IAM
       "PathPrefix" : String,
       "PolicyUsageFilter" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListEntitiesForPolicyResponse = NamedTuple(
@@ -12743,7 +12743,7 @@ module Aws::IAM
     alias ListGroupPoliciesRequest = NamedTuple(
       "GroupName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListGroupPoliciesResponse = NamedTuple(
@@ -12755,7 +12755,7 @@ module Aws::IAM
     alias ListGroupsForUserRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListGroupsForUserResponse = NamedTuple(
@@ -12767,7 +12767,7 @@ module Aws::IAM
     alias ListGroupsRequest = NamedTuple(
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListGroupsResponse = NamedTuple(
@@ -12779,7 +12779,7 @@ module Aws::IAM
     alias ListInstanceProfilesForRoleRequest = NamedTuple(
       "RoleName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListInstanceProfilesForRoleResponse = NamedTuple(
@@ -12791,7 +12791,7 @@ module Aws::IAM
     alias ListInstanceProfilesRequest = NamedTuple(
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListInstanceProfilesResponse = NamedTuple(
@@ -12803,7 +12803,7 @@ module Aws::IAM
     alias ListMFADevicesRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListMFADevicesResponse = NamedTuple(
@@ -12843,7 +12843,7 @@ module Aws::IAM
       "PathPrefix" : String,
       "PolicyUsageFilter" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListPoliciesResponse = NamedTuple(
@@ -12855,7 +12855,7 @@ module Aws::IAM
     alias ListPolicyVersionsRequest = NamedTuple(
       "PolicyArn" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListPolicyVersionsResponse = NamedTuple(
@@ -12867,7 +12867,7 @@ module Aws::IAM
     alias ListRolePoliciesRequest = NamedTuple(
       "RoleName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListRolePoliciesResponse = NamedTuple(
@@ -12879,7 +12879,7 @@ module Aws::IAM
     alias ListRoleTagsRequest = NamedTuple(
       "RoleName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListRoleTagsResponse = NamedTuple(
@@ -12891,7 +12891,7 @@ module Aws::IAM
     alias ListRolesRequest = NamedTuple(
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListRolesResponse = NamedTuple(
@@ -12911,7 +12911,7 @@ module Aws::IAM
     alias ListSSHPublicKeysRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListSSHPublicKeysResponse = NamedTuple(
@@ -12923,7 +12923,7 @@ module Aws::IAM
     alias ListServerCertificatesRequest = NamedTuple(
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListServerCertificatesResponse = NamedTuple(
@@ -12944,7 +12944,7 @@ module Aws::IAM
     alias ListSigningCertificatesRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListSigningCertificatesResponse = NamedTuple(
@@ -12956,7 +12956,7 @@ module Aws::IAM
     alias ListUserPoliciesRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListUserPoliciesResponse = NamedTuple(
@@ -12968,7 +12968,7 @@ module Aws::IAM
     alias ListUserTagsRequest = NamedTuple(
       "UserName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListUserTagsResponse = NamedTuple(
@@ -12980,7 +12980,7 @@ module Aws::IAM
     alias ListUsersRequest = NamedTuple(
       "PathPrefix" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListUsersResponse = NamedTuple(
@@ -12992,7 +12992,7 @@ module Aws::IAM
     alias ListVirtualMFADevicesRequest = NamedTuple(
       "AssignmentStatus" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListVirtualMFADevicesResponse = NamedTuple(
@@ -13055,15 +13055,15 @@ module Aws::IAM
     )
 
     alias PasswordPolicy = NamedTuple(
-      "MinimumPasswordLength" : Int32,
+      "MinimumPasswordLength" : UInt8,
       "RequireSymbols" : Bool,
       "RequireNumbers" : Bool,
       "RequireUppercaseCharacters" : Bool,
       "RequireLowercaseCharacters" : Bool,
       "AllowUsersToChangePassword" : Bool,
       "ExpirePasswords" : Bool,
-      "MaxPasswordAge" : Int32,
-      "PasswordReusePrevention" : Int32,
+      "MaxPasswordAge" : UInt16,
+      "PasswordReusePrevention" : UInt8,
       "HardExpiry" : Bool
     )
 
@@ -13253,7 +13253,7 @@ module Aws::IAM
       "CreateDate" : String | UInt64 | Time,
       "AssumeRolePolicyDocument" : String,
       "Description" : String,
-      "MaxSessionDuration" : Int32,
+      "MaxSessionDuration" : UInt16,
       "PermissionsBoundary" : AttachedPermissionsBoundary,
       "Tags" : Array(Tag),
       "RoleLastUsed" : RoleLastUsed
@@ -13399,7 +13399,7 @@ module Aws::IAM
       "CallerArn" : String,
       "ContextEntries" : Array(ContextEntry),
       "ResourceHandlingOption" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt16,
       "Marker" : String
     )
 
@@ -13420,7 +13420,7 @@ module Aws::IAM
       "CallerArn" : String,
       "ContextEntries" : Array(ContextEntry),
       "ResourceHandlingOption" : String,
-      "MaxItems" : Int32,
+      "MaxItems" : UInt16,
       "Marker" : String
     )
 
@@ -13484,14 +13484,14 @@ module Aws::IAM
     )
 
     alias UpdateAccountPasswordPolicyRequest = NamedTuple(
-      "MinimumPasswordLength" : Int32,
+      "MinimumPasswordLength" : UInt8,
       "RequireSymbols" : Bool,
       "RequireNumbers" : Bool,
       "RequireUppercaseCharacters" : Bool,
       "RequireLowercaseCharacters" : Bool,
       "AllowUsersToChangePassword" : Bool,
-      "MaxPasswordAge" : Int32,
-      "PasswordReusePrevention" : Int32,
+      "MaxPasswordAge" : UInt16,
+      "PasswordReusePrevention" : UInt8,
       "HardExpiry" : Bool
     )
 
@@ -13529,7 +13529,7 @@ module Aws::IAM
     alias UpdateRoleRequest = NamedTuple(
       "RoleName" : String,
       "Description" : String,
-      "MaxSessionDuration" : Int32
+      "MaxSessionDuration" : UInt16
     )
 
     alias UpdateRoleResponse = NamedTuple(
@@ -13747,13 +13747,13 @@ module Aws::IAM
 
     alias markerType = String
 
-    alias maxItemsType = Int32
+    alias maxItemsType = UInt16
 
-    alias maxPasswordAgeType = Int32
+    alias maxPasswordAgeType = UInt16
 
     alias mfaDeviceListType = Array(MFADevice)
 
-    alias minimumPasswordLengthType = Int32
+    alias minimumPasswordLengthType = UInt8
 
     alias noSuchEntityMessage = String
 
@@ -13763,7 +13763,7 @@ module Aws::IAM
 
     alias passwordPolicyViolationMessage = String
 
-    alias passwordReusePreventionType = Int32
+    alias passwordReusePreventionType = UInt8
 
     alias passwordType = String
 
@@ -13819,7 +13819,7 @@ module Aws::IAM
 
     alias roleListType = Array(Role)
 
-    alias roleMaxSessionDurationType = Int32
+    alias roleMaxSessionDurationType = UInt16
 
     alias roleNameType = String
 

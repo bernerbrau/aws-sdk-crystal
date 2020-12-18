@@ -510,7 +510,7 @@ module Aws::AugmentedAIRuntime
       "FlowDefinitionArn" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListHumanLoopsResponse = NamedTuple(
@@ -518,7 +518,7 @@ module Aws::AugmentedAIRuntime
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NextToken = String
 

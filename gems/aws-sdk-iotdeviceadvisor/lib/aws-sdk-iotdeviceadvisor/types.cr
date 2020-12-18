@@ -1143,7 +1143,7 @@ module Aws::IoTDeviceAdvisor
     )
 
     alias ListSuiteDefinitionsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -1155,7 +1155,7 @@ module Aws::IoTDeviceAdvisor
     alias ListSuiteRunsRequest = NamedTuple(
       "suiteDefinitionId" : String,
       "suiteDefinitionVersion" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -1174,7 +1174,7 @@ module Aws::IoTDeviceAdvisor
 
     alias ListTestCasesRequest = NamedTuple(
       "intendedForQualification" : Bool,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -1187,7 +1187,7 @@ module Aws::IoTDeviceAdvisor
 
     alias LogUrl = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 
@@ -1257,11 +1257,11 @@ module Aws::IoTDeviceAdvisor
       "startedAt" : (String | UInt64 | Time)?,
       "endAt" : (String | UInt64 | Time)?,
       "status" : String,
-      "passed" : Int32,
-      "failed" : Int32
+      "passed" : UInt16,
+      "failed" : UInt16
     )
 
-    alias SuiteRunResultCount = Int32
+    alias SuiteRunResultCount = UInt16
 
     alias SuiteRunStatus = String
 

@@ -3349,7 +3349,7 @@ module Aws::ECR
       "repositoryName" : String,
       "imageId" : ImageIdentifier,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeImageScanFindingsResponse = NamedTuple(
@@ -3370,7 +3370,7 @@ module Aws::ECR
       "repositoryName" : String,
       "imageIds" : Array(ImageIdentifier),
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "filter" : DescribeImagesFilter
     )
 
@@ -3392,7 +3392,7 @@ module Aws::ECR
       "registryId" : String,
       "repositoryNames" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeRepositoriesResponse = NamedTuple(
@@ -3423,7 +3423,7 @@ module Aws::ECR
 
     alias FindingSeverity = String
 
-    alias FindingSeverityCounts = Hash(String,Int32)
+    alias FindingSeverityCounts = Hash(String,UInt32)
 
     alias ForceFlag = Bool
 
@@ -3453,7 +3453,7 @@ module Aws::ECR
       "repositoryName" : String,
       "imageIds" : Array(ImageIdentifier),
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "filter" : LifecyclePolicyPreviewFilter
     )
 
@@ -3513,7 +3513,7 @@ module Aws::ECR
       "message" : String
     )
 
-    alias ImageCount = Int32
+    alias ImageCount = UInt32
 
     alias ImageDetail = NamedTuple(
       "registryId" : String,
@@ -3577,13 +3577,13 @@ module Aws::ECR
       "imageScanCompletedAt" : (String | UInt64 | Time)?,
       "vulnerabilitySourceUpdatedAt" : (String | UInt64 | Time)?,
       "findings" : Array(ImageScanFinding),
-      "findingSeverityCounts" : Hash(String,Int32)
+      "findingSeverityCounts" : Hash(String,UInt32)
     )
 
     alias ImageScanFindingsSummary = NamedTuple(
       "imageScanCompletedAt" : (String | UInt64 | Time)?,
       "vulnerabilitySourceUpdatedAt" : (String | UInt64 | Time)?,
-      "findingSeverityCounts" : Hash(String,Int32)
+      "findingSeverityCounts" : Hash(String,UInt32)
     )
 
     alias ImageScanStatus = NamedTuple(
@@ -3614,7 +3614,7 @@ module Aws::ECR
 
     alias InitiateLayerUploadResponse = NamedTuple(
       "uploadId" : String,
-      "partSize" : Int64
+      "partSize" : UInt64
     )
 
     alias InvalidLayerException = NamedTuple(
@@ -3625,7 +3625,7 @@ module Aws::ECR
       "registryId" : String,
       "repositoryName" : String,
       "uploadId" : String,
-      "lastValidByteReceived" : Int64,
+      "lastValidByteReceived" : UInt64,
       "message" : String
     )
 
@@ -3714,7 +3714,7 @@ module Aws::ECR
       "imageDigest" : String,
       "imagePushedAt" : (String | UInt64 | Time)?,
       "action" : LifecyclePolicyRuleAction,
-      "appliedRulePriority" : Int32
+      "appliedRulePriority" : UInt32
     )
 
     alias LifecyclePolicyPreviewResultList = Array(LifecyclePolicyPreviewResult)
@@ -3722,18 +3722,18 @@ module Aws::ECR
     alias LifecyclePolicyPreviewStatus = String
 
     alias LifecyclePolicyPreviewSummary = NamedTuple(
-      "expiringImageTotalCount" : Int32
+      "expiringImageTotalCount" : UInt32
     )
 
     alias LifecyclePolicyRuleAction = NamedTuple(
       "type" : String
     )
 
-    alias LifecyclePolicyRulePriority = Int32
+    alias LifecyclePolicyRulePriority = UInt32
 
     alias LifecyclePolicyText = String
 
-    alias LifecyclePreviewMaxResults = Int32
+    alias LifecyclePreviewMaxResults = UInt8
 
     alias LimitExceededException = NamedTuple(
       "message" : String
@@ -3747,7 +3747,7 @@ module Aws::ECR
       "registryId" : String,
       "repositoryName" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "filter" : ListImagesFilter
     )
 
@@ -3764,7 +3764,7 @@ module Aws::ECR
       "tags" : Array(Tag)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MediaType = String
 
@@ -3772,7 +3772,7 @@ module Aws::ECR
 
     alias NextToken = String
 
-    alias PartSize = Int64
+    alias PartSize = UInt64
 
     alias ProxyEndpoint = String
 
@@ -3939,7 +3939,7 @@ module Aws::ECR
       "policyText" : String
     )
 
-    alias SeverityCount = Int32
+    alias SeverityCount = UInt32
 
     alias StartImageScanRequest = NamedTuple(
       "registryId" : String,
@@ -4014,8 +4014,8 @@ module Aws::ECR
       "registryId" : String,
       "repositoryName" : String,
       "uploadId" : String,
-      "partFirstByte" : Int64,
-      "partLastByte" : Int64,
+      "partFirstByte" : UInt64,
+      "partLastByte" : UInt64,
       "layerPartBlob" : String | Array(UInt8) | IO
     )
 
@@ -4023,7 +4023,7 @@ module Aws::ECR
       "registryId" : String,
       "repositoryName" : String,
       "uploadId" : String,
-      "lastByteReceived" : Int64
+      "lastByteReceived" : UInt64
     )
 
     alias UploadNotFoundException = NamedTuple(

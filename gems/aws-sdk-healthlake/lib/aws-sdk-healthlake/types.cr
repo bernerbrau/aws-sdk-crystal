@@ -730,7 +730,7 @@ module Aws::HealthLake
     alias ListFHIRDatastoresRequest = NamedTuple(
       "Filter" : DatastoreFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListFHIRDatastoresResponse = NamedTuple(
@@ -738,7 +738,7 @@ module Aws::HealthLake
       "NextToken" : String
     )
 
-    alias MaxResultsInteger = Int32
+    alias MaxResultsInteger = UInt16
 
     alias Message = String
 

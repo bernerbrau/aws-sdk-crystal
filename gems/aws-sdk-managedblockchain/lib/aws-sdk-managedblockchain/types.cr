@@ -2440,8 +2440,8 @@ module Aws::ManagedBlockchain
     )
 
     alias ApprovalThresholdPolicy = NamedTuple(
-      "ThresholdPercentage" : Int32,
-      "ProposalDurationInHours" : Int32,
+      "ThresholdPercentage" : UInt8,
+      "ProposalDurationInHours" : UInt8,
       "ThresholdComparator" : String
     )
 
@@ -2599,7 +2599,7 @@ module Aws::ManagedBlockchain
     alias IsOwned = Bool
 
     alias ListInvitationsInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2613,7 +2613,7 @@ module Aws::ManagedBlockchain
       "Name" : String,
       "Status" : String,
       "IsOwned" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2626,7 +2626,7 @@ module Aws::ManagedBlockchain
       "Name" : String,
       "Framework" : String,
       "Status" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2639,7 +2639,7 @@ module Aws::ManagedBlockchain
       "NetworkId" : String,
       "MemberId" : String,
       "Status" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2651,7 +2651,7 @@ module Aws::ManagedBlockchain
     alias ListProposalVotesInput = NamedTuple(
       "NetworkId" : String,
       "ProposalId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2662,7 +2662,7 @@ module Aws::ManagedBlockchain
 
     alias ListProposalsInput = NamedTuple(
       "NetworkId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2719,7 +2719,7 @@ module Aws::ManagedBlockchain
       "Fabric" : MemberFabricConfiguration
     )
 
-    alias MemberListMaxResults = Int32
+    alias MemberListMaxResults = UInt8
 
     alias MemberLogPublishingConfiguration = NamedTuple(
       "Fabric" : MemberFabricLogPublishingConfiguration
@@ -2770,7 +2770,7 @@ module Aws::ManagedBlockchain
       "Fabric" : NetworkFabricConfiguration
     )
 
-    alias NetworkListMaxResults = Int32
+    alias NetworkListMaxResults = UInt8
 
     alias NetworkMemberNameString = String
 
@@ -2822,7 +2822,7 @@ module Aws::ManagedBlockchain
       "Fabric" : NodeFabricAttributes
     )
 
-    alias NodeListMaxResults = Int32
+    alias NodeListMaxResults = UInt8
 
     alias NodeLogPublishingConfiguration = NamedTuple(
       "Fabric" : NodeFabricLogPublishingConfiguration
@@ -2866,9 +2866,9 @@ module Aws::ManagedBlockchain
       "Removals" : Array(RemoveAction)
     )
 
-    alias ProposalDurationInt = Int32
+    alias ProposalDurationInt = UInt8
 
-    alias ProposalListMaxResults = Int32
+    alias ProposalListMaxResults = UInt8
 
     alias ProposalStatus = String
 
@@ -2924,7 +2924,7 @@ module Aws::ManagedBlockchain
 
     alias ThresholdComparator = String
 
-    alias ThresholdPercentageInt = Int32
+    alias ThresholdPercentageInt = UInt8
 
     alias ThrottlingException = NamedTuple(
       

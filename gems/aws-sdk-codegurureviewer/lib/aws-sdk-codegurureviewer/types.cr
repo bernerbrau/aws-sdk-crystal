@@ -2019,14 +2019,14 @@ module Aws::CodeGuruReviewer
 
     alias LineNumber = Int32
 
-    alias ListCodeReviewsMaxResults = Int32
+    alias ListCodeReviewsMaxResults = UInt8
 
     alias ListCodeReviewsRequest = NamedTuple(
       "ProviderTypes" : Array(String),
       "States" : Array(String),
       "RepositoryNames" : Array(String),
       "Type" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2037,7 +2037,7 @@ module Aws::CodeGuruReviewer
 
     alias ListRecommendationFeedbackRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "CodeReviewArn" : String,
       "UserIds" : Array(String),
       "RecommendationIds" : Array(String)
@@ -2050,7 +2050,7 @@ module Aws::CodeGuruReviewer
 
     alias ListRecommendationsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "CodeReviewArn" : String
     )
 
@@ -2064,7 +2064,7 @@ module Aws::CodeGuruReviewer
       "States" : Array(String),
       "Names" : Array(String),
       "Owners" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2081,7 +2081,7 @@ module Aws::CodeGuruReviewer
       "Tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MeteredLinesOfCodeCount = Int64
 

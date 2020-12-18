@@ -1283,7 +1283,7 @@ module Aws::KinesisVideoArchivedMedia
 
     alias ErrorMessage = String
 
-    alias Expires = Int32
+    alias Expires = UInt16
 
     alias Fragment = NamedTuple(
       "FragmentNumber" : String,
@@ -1324,8 +1324,8 @@ module Aws::KinesisVideoArchivedMedia
       "DisplayFragmentTimestamp" : String,
       "DisplayFragmentNumber" : String,
       "DASHFragmentSelector" : DASHFragmentSelector,
-      "Expires" : Int32,
-      "MaxManifestFragmentResults" : Int64
+      "Expires" : UInt16,
+      "MaxManifestFragmentResults" : UInt16
     )
 
     alias GetDASHStreamingSessionURLOutput = NamedTuple(
@@ -1340,8 +1340,8 @@ module Aws::KinesisVideoArchivedMedia
       "ContainerFormat" : String,
       "DiscontinuityMode" : String,
       "DisplayFragmentTimestamp" : String,
-      "Expires" : Int32,
-      "MaxMediaPlaylistFragmentResults" : Int64
+      "Expires" : UInt16,
+      "MaxMediaPlaylistFragmentResults" : UInt16
     )
 
     alias GetHLSStreamingSessionURLOutput = NamedTuple(
@@ -1392,7 +1392,7 @@ module Aws::KinesisVideoArchivedMedia
 
     alias ListFragmentsInput = NamedTuple(
       "StreamName" : String,
-      "MaxResults" : Int64,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "FragmentSelector" : FragmentSelector
     )
@@ -1418,7 +1418,7 @@ module Aws::KinesisVideoArchivedMedia
       "Message" : String
     )
 
-    alias PageLimit = Int64
+    alias PageLimit = UInt16
 
     alias Payload = String | Array(UInt8) | IO
 

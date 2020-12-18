@@ -1762,7 +1762,7 @@ module Aws::Translate
 
     alias ListParallelDataRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListParallelDataResponse = NamedTuple(
@@ -1772,7 +1772,7 @@ module Aws::Translate
 
     alias ListTerminologiesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListTerminologiesResponse = NamedTuple(
@@ -1783,7 +1783,7 @@ module Aws::Translate
     alias ListTextTranslationJobsRequest = NamedTuple(
       "Filter" : TextTranslationJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListTextTranslationJobsResponse = NamedTuple(
@@ -1793,7 +1793,7 @@ module Aws::Translate
 
     alias Long = Int64
 
-    alias MaxResultsInteger = Int32
+    alias MaxResultsInteger = UInt16
 
     alias MergeStrategy = String
 

@@ -2586,7 +2586,7 @@ module Aws::CustomerProfiles
 
     alias CreateDomainRequest = NamedTuple(
       "DomainName" : String,
-      "DefaultExpirationDays" : Int32,
+      "DefaultExpirationDays" : UInt16,
       "DefaultEncryptionKey" : String,
       "DeadLetterQueueUrl" : String,
       "Tags" : Hash(String,String)
@@ -2594,7 +2594,7 @@ module Aws::CustomerProfiles
 
     alias CreateDomainResponse = NamedTuple(
       "DomainName" : String,
-      "DefaultExpirationDays" : Int32,
+      "DefaultExpirationDays" : UInt16,
       "DefaultEncryptionKey" : String,
       "DeadLetterQueueUrl" : String,
       "CreatedAt" : String | UInt64 | Time,
@@ -2711,7 +2711,7 @@ module Aws::CustomerProfiles
 
     alias GetDomainResponse = NamedTuple(
       "DomainName" : String,
-      "DefaultExpirationDays" : Int32,
+      "DefaultExpirationDays" : UInt16,
       "DefaultEncryptionKey" : String,
       "DeadLetterQueueUrl" : String,
       "Stats" : DomainStats,
@@ -2743,7 +2743,7 @@ module Aws::CustomerProfiles
       "ObjectTypeName" : String,
       "Description" : String,
       "TemplateId" : String,
-      "ExpirationDays" : Int32,
+      "ExpirationDays" : UInt16,
       "EncryptionKey" : String,
       "AllowProfileCreation" : Bool,
       "Fields" : Hash(String,ObjectTypeField),
@@ -2777,7 +2777,7 @@ module Aws::CustomerProfiles
     alias ListAccountIntegrationsRequest = NamedTuple(
       "Uri" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAccountIntegrationsResponse = NamedTuple(
@@ -2794,7 +2794,7 @@ module Aws::CustomerProfiles
 
     alias ListDomainsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDomainsResponse = NamedTuple(
@@ -2814,7 +2814,7 @@ module Aws::CustomerProfiles
     alias ListIntegrationsRequest = NamedTuple(
       "DomainName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListIntegrationsResponse = NamedTuple(
@@ -2838,7 +2838,7 @@ module Aws::CustomerProfiles
 
     alias ListProfileObjectTypeTemplatesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProfileObjectTypeTemplatesResponse = NamedTuple(
@@ -2849,7 +2849,7 @@ module Aws::CustomerProfiles
     alias ListProfileObjectTypesRequest = NamedTuple(
       "DomainName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProfileObjectTypesResponse = NamedTuple(
@@ -2865,7 +2865,7 @@ module Aws::CustomerProfiles
 
     alias ListProfileObjectsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "DomainName" : String,
       "ObjectTypeName" : String,
       "ProfileId" : String
@@ -2963,7 +2963,7 @@ module Aws::CustomerProfiles
       "ObjectTypeName" : String,
       "Description" : String,
       "TemplateId" : String,
-      "ExpirationDays" : Int32,
+      "ExpirationDays" : UInt16,
       "EncryptionKey" : String,
       "AllowProfileCreation" : Bool,
       "Fields" : Hash(String,ObjectTypeField),
@@ -2975,7 +2975,7 @@ module Aws::CustomerProfiles
       "ObjectTypeName" : String,
       "Description" : String,
       "TemplateId" : String,
-      "ExpirationDays" : Int32,
+      "ExpirationDays" : UInt16,
       "EncryptionKey" : String,
       "AllowProfileCreation" : Bool,
       "Fields" : Hash(String,ObjectTypeField),
@@ -2991,7 +2991,7 @@ module Aws::CustomerProfiles
 
     alias SearchProfilesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "DomainName" : String,
       "KeyName" : String,
       "Values" : Array(String)
@@ -3055,7 +3055,7 @@ module Aws::CustomerProfiles
 
     alias UpdateDomainRequest = NamedTuple(
       "DomainName" : String,
-      "DefaultExpirationDays" : Int32,
+      "DefaultExpirationDays" : UInt16,
       "DefaultEncryptionKey" : String,
       "DeadLetterQueueUrl" : String,
       "Tags" : Hash(String,String)
@@ -3063,7 +3063,7 @@ module Aws::CustomerProfiles
 
     alias UpdateDomainResponse = NamedTuple(
       "DomainName" : String,
-      "DefaultExpirationDays" : Int32,
+      "DefaultExpirationDays" : UInt16,
       "DefaultEncryptionKey" : String,
       "DeadLetterQueueUrl" : String,
       "CreatedAt" : String | UInt64 | Time,
@@ -3105,11 +3105,11 @@ module Aws::CustomerProfiles
 
     alias encryptionKey = String
 
-    alias expirationDaysInteger = Int32
+    alias expirationDaysInteger = UInt16
 
     alias long = Int64
 
-    alias maxSize100 = Int32
+    alias maxSize100 = UInt8
 
     alias message = String
 

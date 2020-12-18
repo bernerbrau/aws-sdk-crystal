@@ -23552,7 +23552,7 @@ module Aws::SecurityHub
 
     alias AdminStatus = String
 
-    alias AdminsMaxResults = Int32
+    alias AdminsMaxResults = UInt8
 
     alias ArnList = Array(String)
 
@@ -25165,8 +25165,8 @@ module Aws::SecurityHub
       "Note" : NoteUpdate,
       "Severity" : SeverityUpdate,
       "VerificationState" : String,
-      "Confidence" : Int32,
-      "Criticality" : Int32,
+      "Confidence" : UInt8,
+      "Criticality" : UInt8,
       "Types" : Array(String),
       "UserDefinedFields" : Hash(String,String),
       "Workflow" : WorkflowUpdate,
@@ -25243,7 +25243,7 @@ module Aws::SecurityHub
       "UnprocessedAccounts" : Array(Result)
     )
 
-    alias CrossAccountMaxResults = Int32
+    alias CrossAccountMaxResults = UInt8
 
     alias Cvss = NamedTuple(
       "Version" : String,
@@ -25311,7 +25311,7 @@ module Aws::SecurityHub
     alias DescribeActionTargetsRequest = NamedTuple(
       "ActionTargetArns" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeActionTargetsResponse = NamedTuple(
@@ -25340,7 +25340,7 @@ module Aws::SecurityHub
 
     alias DescribeProductsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeProductsResponse = NamedTuple(
@@ -25351,7 +25351,7 @@ module Aws::SecurityHub
     alias DescribeStandardsControlsRequest = NamedTuple(
       "StandardsSubscriptionArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeStandardsControlsResponse = NamedTuple(
@@ -25361,7 +25361,7 @@ module Aws::SecurityHub
 
     alias DescribeStandardsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeStandardsResponse = NamedTuple(
@@ -25441,7 +25441,7 @@ module Aws::SecurityHub
     alias GetEnabledStandardsRequest = NamedTuple(
       "StandardsSubscriptionArns" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetEnabledStandardsResponse = NamedTuple(
@@ -25453,7 +25453,7 @@ module Aws::SecurityHub
       "Filters" : AwsSecurityFindingFilters,
       "SortCriteria" : Array(SortCriterion),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetFindingsResponse = NamedTuple(
@@ -25472,7 +25472,7 @@ module Aws::SecurityHub
     alias GetInsightsRequest = NamedTuple(
       "InsightArns" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetInsightsResponse = NamedTuple(
@@ -25600,7 +25600,7 @@ module Aws::SecurityHub
 
     alias ListEnabledProductsForImportRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListEnabledProductsForImportResponse = NamedTuple(
@@ -25609,7 +25609,7 @@ module Aws::SecurityHub
     )
 
     alias ListInvitationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -25620,7 +25620,7 @@ module Aws::SecurityHub
 
     alias ListMembersRequest = NamedTuple(
       "OnlyAssociated" : Bool,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -25630,7 +25630,7 @@ module Aws::SecurityHub
     )
 
     alias ListOrganizationAdminAccountsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -25677,7 +25677,7 @@ module Aws::SecurityHub
 
     alias MapFilterList = Array(MapFilter)
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Member = NamedTuple(
       "AccountId" : String,
@@ -25800,7 +25800,7 @@ module Aws::SecurityHub
 
     alias ProductsList = Array(Product)
 
-    alias RatioScale = Int32
+    alias RatioScale = UInt8
 
     alias Recommendation = NamedTuple(
       "Text" : String,
@@ -25910,7 +25910,7 @@ module Aws::SecurityHub
     alias SeverityRating = String
 
     alias SeverityUpdate = NamedTuple(
-      "Normalized" : Int32,
+      "Normalized" : UInt8,
       "Product" : Float64,
       "Label" : String
     )

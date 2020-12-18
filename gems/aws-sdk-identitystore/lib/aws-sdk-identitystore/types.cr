@@ -520,7 +520,7 @@ module Aws::IdentityStore
 
     alias ListGroupsRequest = NamedTuple(
       "IdentityStoreId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter)
     )
@@ -532,7 +532,7 @@ module Aws::IdentityStore
 
     alias ListUsersRequest = NamedTuple(
       "IdentityStoreId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Filters" : Array(Filter)
     )
@@ -542,7 +542,7 @@ module Aws::IdentityStore
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 

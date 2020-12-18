@@ -969,7 +969,7 @@ module Aws::MarketplaceCatalog
       "Catalog" : String,
       "FilterList" : Array(Filter),
       "Sort" : Sort,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -984,7 +984,7 @@ module Aws::MarketplaceCatalog
       "FilterList" : Array(Filter),
       "Sort" : Sort,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListEntitiesResponse = NamedTuple(
@@ -992,7 +992,7 @@ module Aws::MarketplaceCatalog
       "NextToken" : String
     )
 
-    alias MaxResultInteger = Int32
+    alias MaxResultInteger = UInt8
 
     alias NextToken = String
 

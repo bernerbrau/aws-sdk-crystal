@@ -10409,7 +10409,7 @@ module Aws::Chime
     alias ChannelPrivacy = String
 
     alias ChannelRetentionSettings = NamedTuple(
-      "RetentionDays" : Int32
+      "RetentionDays" : UInt16
     )
 
     alias ChannelSummary = NamedTuple(
@@ -10435,14 +10435,14 @@ module Aws::Chime
     alias Content = String
 
     alias ConversationRetentionSettings = NamedTuple(
-      "RetentionDays" : Int32
+      "RetentionDays" : UInt16
     )
 
     alias Country = String
 
     alias CountryList = Array(String)
 
-    alias CpsLimit = Int32
+    alias CpsLimit = UInt32
 
     alias CreateAccountRequest = NamedTuple(
       "Name" : String
@@ -10617,7 +10617,7 @@ module Aws::Chime
       "VoiceConnectorId" : String,
       "ParticipantPhoneNumbers" : Array(String),
       "Name" : String,
-      "ExpiryMinutes" : Int32,
+      "ExpiryMinutes" : UInt32,
       "Capabilities" : Array(String),
       "NumberSelectionBehavior" : String,
       "GeoMatchLevel" : String,
@@ -10726,7 +10726,7 @@ module Aws::Chime
 
     alias DNISEmergencyCallingConfigurationList = Array(DNISEmergencyCallingConfiguration)
 
-    alias DataRetentionInHours = Int32
+    alias DataRetentionInHours = UInt32
 
     alias DeleteAccountRequest = NamedTuple(
       "AccountId" : String
@@ -11298,7 +11298,7 @@ module Aws::Chime
       "Name" : String,
       "UserEmail" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAccountsResponse = NamedTuple(
@@ -11308,7 +11308,7 @@ module Aws::Chime
 
     alias ListAppInstanceAdminsRequest = NamedTuple(
       "AppInstanceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11320,7 +11320,7 @@ module Aws::Chime
 
     alias ListAppInstanceUsersRequest = NamedTuple(
       "AppInstanceArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11331,7 +11331,7 @@ module Aws::Chime
     )
 
     alias ListAppInstancesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11352,7 +11352,7 @@ module Aws::Chime
     alias ListAttendeesRequest = NamedTuple(
       "MeetingId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAttendeesResponse = NamedTuple(
@@ -11362,7 +11362,7 @@ module Aws::Chime
 
     alias ListBotsRequest = NamedTuple(
       "AccountId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11373,7 +11373,7 @@ module Aws::Chime
 
     alias ListChannelBansRequest = NamedTuple(
       "ChannelArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11385,7 +11385,7 @@ module Aws::Chime
 
     alias ListChannelMembershipsForAppInstanceUserRequest = NamedTuple(
       "AppInstanceUserArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11397,7 +11397,7 @@ module Aws::Chime
     alias ListChannelMembershipsRequest = NamedTuple(
       "ChannelArn" : String,
       "Type" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11412,7 +11412,7 @@ module Aws::Chime
       "SortOrder" : String,
       "NotBefore" : (String | UInt64 | Time)?,
       "NotAfter" : (String | UInt64 | Time)?,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11424,7 +11424,7 @@ module Aws::Chime
 
     alias ListChannelModeratorsRequest = NamedTuple(
       "ChannelArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11436,7 +11436,7 @@ module Aws::Chime
 
     alias ListChannelsModeratedByAppInstanceUserRequest = NamedTuple(
       "AppInstanceUserArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11448,7 +11448,7 @@ module Aws::Chime
     alias ListChannelsRequest = NamedTuple(
       "AppInstanceArn" : String,
       "Privacy" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11467,7 +11467,7 @@ module Aws::Chime
 
     alias ListMeetingsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMeetingsResponse = NamedTuple(
@@ -11477,7 +11477,7 @@ module Aws::Chime
 
     alias ListPhoneNumberOrdersRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListPhoneNumberOrdersResponse = NamedTuple(
@@ -11490,7 +11490,7 @@ module Aws::Chime
       "ProductType" : String,
       "FilterName" : String,
       "FilterValue" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11503,7 +11503,7 @@ module Aws::Chime
       "VoiceConnectorId" : String,
       "Status" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProxySessionsResponse = NamedTuple(
@@ -11514,7 +11514,7 @@ module Aws::Chime
     alias ListRoomMembershipsRequest = NamedTuple(
       "AccountId" : String,
       "RoomId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11526,7 +11526,7 @@ module Aws::Chime
     alias ListRoomsRequest = NamedTuple(
       "AccountId" : String,
       "MemberId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11536,7 +11536,7 @@ module Aws::Chime
     )
 
     alias ListSipMediaApplicationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11547,7 +11547,7 @@ module Aws::Chime
 
     alias ListSipRulesRequest = NamedTuple(
       "SipMediaApplicationId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11568,7 +11568,7 @@ module Aws::Chime
       "AccountId" : String,
       "UserEmail" : String,
       "UserType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -11579,7 +11579,7 @@ module Aws::Chime
 
     alias ListVoiceConnectorGroupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListVoiceConnectorGroupsResponse = NamedTuple(
@@ -11597,7 +11597,7 @@ module Aws::Chime
 
     alias ListVoiceConnectorsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListVoiceConnectorsResponse = NamedTuple(
@@ -11618,7 +11618,7 @@ module Aws::Chime
       
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MediaPlacement = NamedTuple(
       "AudioHostUrl" : String,
@@ -11724,19 +11724,19 @@ module Aws::Chime
 
     alias OriginationRoute = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Protocol" : String,
-      "Priority" : Int32,
-      "Weight" : Int32
+      "Priority" : UInt8,
+      "Weight" : UInt8
     )
 
     alias OriginationRouteList = Array(OriginationRoute)
 
-    alias OriginationRoutePriority = Int32
+    alias OriginationRoutePriority = UInt8
 
     alias OriginationRouteProtocol = String
 
-    alias OriginationRouteWeight = Int32
+    alias OriginationRouteWeight = UInt8
 
     alias Participant = NamedTuple(
       "PhoneNumber" : String,
@@ -11791,7 +11791,7 @@ module Aws::Chime
 
     alias PhoneNumberList = Array(PhoneNumber)
 
-    alias PhoneNumberMaxResults = Int32
+    alias PhoneNumberMaxResults = UInt16
 
     alias PhoneNumberOrder = NamedTuple(
       "PhoneNumberOrderId" : String,
@@ -11812,11 +11812,11 @@ module Aws::Chime
 
     alias PhoneNumberType = String
 
-    alias Port = Int32
+    alias Port = UInt16
 
-    alias PositiveInteger = Int32
+    alias PositiveInteger = UInt32
 
-    alias ProfileServiceMaxResults = Int32
+    alias ProfileServiceMaxResults = UInt8
 
     alias Proxy = NamedTuple(
       "DefaultSessionExpiryMinutes" : Int32,
@@ -11830,7 +11830,7 @@ module Aws::Chime
       "ProxySessionId" : String,
       "Name" : String,
       "Status" : String,
-      "ExpiryMinutes" : Int32,
+      "ExpiryMinutes" : UInt32,
       "Capabilities" : Array(String),
       "CreatedTimestamp" : (String | UInt64 | Time)?,
       "UpdatedTimestamp" : (String | UInt64 | Time)?,
@@ -12023,9 +12023,9 @@ module Aws::Chime
       "PhoneNumber" : PhoneNumber
     )
 
-    alias ResultMax = Int32
+    alias ResultMax = UInt8
 
-    alias RetentionDays = Int32
+    alias RetentionDays = UInt16
 
     alias RetentionSettings = NamedTuple(
       "RoomRetentionSettings" : RoomRetentionSettings,
@@ -12056,7 +12056,7 @@ module Aws::Chime
     alias RoomMembershipRole = String
 
     alias RoomRetentionSettings = NamedTuple(
-      "RetentionDays" : Int32
+      "RetentionDays" : UInt16
     )
 
     alias SearchAvailablePhoneNumbersRequest = NamedTuple(
@@ -12065,7 +12065,7 @@ module Aws::Chime
       "Country" : String,
       "State" : String,
       "TollFreePrefix" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -12107,7 +12107,7 @@ module Aws::Chime
 
     alias SigninDelegateGroupList = Array(SigninDelegateGroup)
 
-    alias SipApplicationPriority = Int32
+    alias SipApplicationPriority = UInt32
 
     alias SipMediaApplication = NamedTuple(
       "SipMediaApplicationId" : String,
@@ -12153,7 +12153,7 @@ module Aws::Chime
 
     alias SipRuleTargetApplication = NamedTuple(
       "SipMediaApplicationId" : String,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "AwsRegion" : String
     )
 
@@ -12164,7 +12164,7 @@ module Aws::Chime
     alias SortOrder = String
 
     alias StreamingConfiguration = NamedTuple(
-      "DataRetentionInHours" : Int32,
+      "DataRetentionInHours" : UInt32,
       "Disabled" : Bool,
       "StreamingNotificationTargets" : Array(StreamingNotificationTarget)
     )
@@ -12217,7 +12217,7 @@ module Aws::Chime
     )
 
     alias Termination = NamedTuple(
-      "CpsLimit" : Int32,
+      "CpsLimit" : UInt32,
       "DefaultPhoneNumber" : String,
       "CallingRegions" : Array(String),
       "CidrAllowedList" : Array(String),
@@ -12374,7 +12374,7 @@ module Aws::Chime
       "VoiceConnectorId" : String,
       "ProxySessionId" : String,
       "Capabilities" : Array(String),
-      "ExpiryMinutes" : Int32
+      "ExpiryMinutes" : UInt32
     )
 
     alias UpdateProxySessionResponse = NamedTuple(
@@ -12540,12 +12540,12 @@ module Aws::Chime
 
     alias VoiceConnectorItem = NamedTuple(
       "VoiceConnectorId" : String,
-      "Priority" : Int32
+      "Priority" : UInt8
     )
 
     alias VoiceConnectorItemList = Array(VoiceConnectorItem)
 
-    alias VoiceConnectorItemPriority = Int32
+    alias VoiceConnectorItemPriority = UInt8
 
     alias VoiceConnectorList = Array(VoiceConnector)
 

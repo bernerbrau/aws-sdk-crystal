@@ -3083,7 +3083,7 @@ module Aws::Route53Domains
       "message" : String
     )
 
-    alias DurationInYears = Int32
+    alias DurationInYears = UInt8
 
     alias Email = String
 
@@ -3196,7 +3196,7 @@ module Aws::Route53Domains
 
     alias ListDomainsRequest = NamedTuple(
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : Int8
     )
 
     alias ListDomainsResponse = NamedTuple(
@@ -3207,7 +3207,7 @@ module Aws::Route53Domains
     alias ListOperationsRequest = NamedTuple(
       "SubmittedSince" : (String | UInt64 | Time)?,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : Int8
     )
 
     alias ListOperationsResponse = NamedTuple(
@@ -3251,7 +3251,7 @@ module Aws::Route53Domains
 
     alias PageMarker = String
 
-    alias PageMaxItems = Int32
+    alias PageMaxItems = Int8
 
     alias Price = Float64
 
@@ -3260,7 +3260,7 @@ module Aws::Route53Domains
     alias RegisterDomainRequest = NamedTuple(
       "DomainName" : String,
       "IdnLangCode" : String,
-      "DurationInYears" : Int32,
+      "DurationInYears" : UInt8,
       "AutoRenew" : Bool,
       "AdminContact" : ContactDetail,
       "RegistrantContact" : ContactDetail,
@@ -3292,7 +3292,7 @@ module Aws::Route53Domains
 
     alias RenewDomainRequest = NamedTuple(
       "DomainName" : String,
-      "DurationInYears" : Int32,
+      "DurationInYears" : UInt8,
       "CurrentExpiryYear" : Int32
     )
 
@@ -3346,7 +3346,7 @@ module Aws::Route53Domains
     alias TransferDomainRequest = NamedTuple(
       "DomainName" : String,
       "IdnLangCode" : String,
-      "DurationInYears" : Int32,
+      "DurationInYears" : UInt8,
       "Nameservers" : Array(Nameserver),
       "AuthCode" : String,
       "AutoRenew" : Bool,
@@ -3423,7 +3423,7 @@ module Aws::Route53Domains
       "Start" : (String | UInt64 | Time)?,
       "End" : (String | UInt64 | Time)?,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : Int8
     )
 
     alias ViewBillingResponse = NamedTuple(

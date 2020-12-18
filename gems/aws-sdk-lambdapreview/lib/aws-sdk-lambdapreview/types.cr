@@ -764,8 +764,8 @@ module Aws::LambdaPreview
       "Mode" : String,
       "CodeSize" : Int64,
       "Description" : String,
-      "Timeout" : Int32,
-      "MemorySize" : Int32,
+      "Timeout" : UInt8,
+      "MemorySize" : UInt16,
       "LastModified" : (String | UInt64 | Time)?
     )
 
@@ -819,7 +819,7 @@ module Aws::LambdaPreview
       "EventSourceArn" : String,
       "FunctionName" : String,
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListEventSourcesResponse = NamedTuple(
@@ -829,7 +829,7 @@ module Aws::LambdaPreview
 
     alias ListFunctionsRequest = NamedTuple(
       "Marker" : String,
-      "MaxItems" : Int32
+      "MaxItems" : UInt16
     )
 
     alias ListFunctionsResponse = NamedTuple(
@@ -841,9 +841,9 @@ module Aws::LambdaPreview
 
     alias Map = Hash(String,String)
 
-    alias MaxListItems = Int32
+    alias MaxListItems = UInt16
 
-    alias MemorySize = Int32
+    alias MemorySize = UInt16
 
     alias Mode = String
 
@@ -867,7 +867,7 @@ module Aws::LambdaPreview
 
     alias String = String
 
-    alias Timeout = Int32
+    alias Timeout = UInt8
 
     alias Timestamp = String | UInt64 | Time
 
@@ -876,8 +876,8 @@ module Aws::LambdaPreview
       "Role" : String,
       "Handler" : String,
       "Description" : String,
-      "Timeout" : Int32,
-      "MemorySize" : Int32
+      "Timeout" : UInt8,
+      "MemorySize" : UInt16
     )
 
     alias UploadFunctionRequest = NamedTuple(
@@ -888,8 +888,8 @@ module Aws::LambdaPreview
       "Handler" : String,
       "Mode" : String,
       "Description" : String,
-      "Timeout" : Int32,
-      "MemorySize" : Int32
+      "Timeout" : UInt8,
+      "MemorySize" : UInt16
     )
 
     alias Boolean = Bool

@@ -3944,7 +3944,7 @@ module Aws::WorkSpaces
     alias DescribeConnectionAliasPermissionsRequest = NamedTuple(
       "AliasId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeConnectionAliasPermissionsResult = NamedTuple(
@@ -3956,7 +3956,7 @@ module Aws::WorkSpaces
     alias DescribeConnectionAliasesRequest = NamedTuple(
       "AliasIds" : Array(String),
       "ResourceId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -3968,7 +3968,7 @@ module Aws::WorkSpaces
     alias DescribeIpGroupsRequest = NamedTuple(
       "GroupIds" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeIpGroupsResult = NamedTuple(
@@ -3997,7 +3997,7 @@ module Aws::WorkSpaces
 
     alias DescribeWorkspaceDirectoriesRequest = NamedTuple(
       "DirectoryIds" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -4009,7 +4009,7 @@ module Aws::WorkSpaces
     alias DescribeWorkspaceImagePermissionsRequest = NamedTuple(
       "ImageId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeWorkspaceImagePermissionsResult = NamedTuple(
@@ -4022,7 +4022,7 @@ module Aws::WorkSpaces
       "ImageIds" : Array(String),
       "ImageType" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeWorkspaceImagesResult = NamedTuple(
@@ -4054,7 +4054,7 @@ module Aws::WorkSpaces
       "DirectoryId" : String,
       "UserName" : String,
       "BundleId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "NextToken" : String
     )
 
@@ -4174,11 +4174,11 @@ module Aws::WorkSpaces
 
     alias IpRuleList = Array(IpRuleItem)
 
-    alias Limit = Int32
+    alias Limit = UInt8
 
     alias ListAvailableManagementCidrRangesRequest = NamedTuple(
       "ManagementCidrRangeConstraint" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -4189,7 +4189,7 @@ module Aws::WorkSpaces
 
     alias ManagementCidrRangeConstraint = String
 
-    alias ManagementCidrRangeMaxResults = Int32
+    alias ManagementCidrRangeMaxResults = UInt8
 
     alias MigrateWorkspaceRequest = NamedTuple(
       "SourceWorkspaceId" : String,

@@ -8747,7 +8747,7 @@ module Aws::CloudDirectory
     alias BatchListAttachedIndices = NamedTuple(
       "TargetReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListAttachedIndicesResponse = NamedTuple(
@@ -8760,7 +8760,7 @@ module Aws::CloudDirectory
       "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
       "FilterTypedLink" : TypedLinkSchemaAndFacetName,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListIncomingTypedLinksResponse = NamedTuple(
@@ -8771,7 +8771,7 @@ module Aws::CloudDirectory
     alias BatchListIndex = NamedTuple(
       "RangesOnIndexedValues" : Array(ObjectAttributeRange),
       "IndexReference" : ObjectReference,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -8783,7 +8783,7 @@ module Aws::CloudDirectory
     alias BatchListObjectAttributes = NamedTuple(
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "FacetFilter" : SchemaFacet
     )
 
@@ -8795,7 +8795,7 @@ module Aws::CloudDirectory
     alias BatchListObjectChildren = NamedTuple(
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListObjectChildrenResponse = NamedTuple(
@@ -8806,7 +8806,7 @@ module Aws::CloudDirectory
     alias BatchListObjectParentPaths = NamedTuple(
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListObjectParentPathsResponse = NamedTuple(
@@ -8817,7 +8817,7 @@ module Aws::CloudDirectory
     alias BatchListObjectParents = NamedTuple(
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListObjectParentsResponse = NamedTuple(
@@ -8828,7 +8828,7 @@ module Aws::CloudDirectory
     alias BatchListObjectPolicies = NamedTuple(
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListObjectPoliciesResponse = NamedTuple(
@@ -8841,7 +8841,7 @@ module Aws::CloudDirectory
       "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
       "FilterTypedLink" : TypedLinkSchemaAndFacetName,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListOutgoingTypedLinksResponse = NamedTuple(
@@ -8852,7 +8852,7 @@ module Aws::CloudDirectory
     alias BatchListPolicyAttachments = NamedTuple(
       "PolicyReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchListPolicyAttachmentsResponse = NamedTuple(
@@ -8863,7 +8863,7 @@ module Aws::CloudDirectory
     alias BatchLookupPolicy = NamedTuple(
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias BatchLookupPolicyResponse = NamedTuple(
@@ -9437,7 +9437,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "SchemaArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListAppliedSchemaArnsResponse = NamedTuple(
@@ -9449,7 +9449,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "TargetReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String
     )
 
@@ -9460,7 +9460,7 @@ module Aws::CloudDirectory
 
     alias ListDevelopmentSchemaArnsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListDevelopmentSchemaArnsResponse = NamedTuple(
@@ -9470,7 +9470,7 @@ module Aws::CloudDirectory
 
     alias ListDirectoriesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "state" : String
     )
 
@@ -9483,7 +9483,7 @@ module Aws::CloudDirectory
       "SchemaArn" : String,
       "Name" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListFacetAttributesResponse = NamedTuple(
@@ -9494,7 +9494,7 @@ module Aws::CloudDirectory
     alias ListFacetNamesRequest = NamedTuple(
       "SchemaArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListFacetNamesResponse = NamedTuple(
@@ -9508,7 +9508,7 @@ module Aws::CloudDirectory
       "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
       "FilterTypedLink" : TypedLinkSchemaAndFacetName,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String
     )
 
@@ -9521,7 +9521,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "RangesOnIndexedValues" : Array(ObjectAttributeRange),
       "IndexReference" : ObjectReference,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String,
       "ConsistencyLevel" : String
     )
@@ -9534,7 +9534,7 @@ module Aws::CloudDirectory
     alias ListManagedSchemaArnsRequest = NamedTuple(
       "SchemaArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListManagedSchemaArnsResponse = NamedTuple(
@@ -9546,7 +9546,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String,
       "FacetFilter" : SchemaFacet
     )
@@ -9560,7 +9560,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String
     )
 
@@ -9573,7 +9573,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListObjectParentPathsResponse = NamedTuple(
@@ -9585,7 +9585,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String,
       "IncludeAllLinksToEachParent" : Bool
     )
@@ -9600,7 +9600,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String
     )
 
@@ -9615,7 +9615,7 @@ module Aws::CloudDirectory
       "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
       "FilterTypedLink" : TypedLinkSchemaAndFacetName,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String
     )
 
@@ -9628,7 +9628,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "PolicyReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "ConsistencyLevel" : String
     )
 
@@ -9640,7 +9640,7 @@ module Aws::CloudDirectory
     alias ListPublishedSchemaArnsRequest = NamedTuple(
       "SchemaArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListPublishedSchemaArnsResponse = NamedTuple(
@@ -9651,7 +9651,7 @@ module Aws::CloudDirectory
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
@@ -9663,7 +9663,7 @@ module Aws::CloudDirectory
       "SchemaArn" : String,
       "Name" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListTypedLinkFacetAttributesResponse = NamedTuple(
@@ -9674,7 +9674,7 @@ module Aws::CloudDirectory
     alias ListTypedLinkFacetNamesRequest = NamedTuple(
       "SchemaArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListTypedLinkFacetNamesResponse = NamedTuple(
@@ -9686,7 +9686,7 @@ module Aws::CloudDirectory
       "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias LookupPolicyResponse = NamedTuple(
@@ -9710,7 +9710,7 @@ module Aws::CloudDirectory
 
     alias NumberAttributeValue = String
 
-    alias NumberResults = Int32
+    alias NumberResults = UInt32
 
     alias ObjectAlreadyDetachedException = NamedTuple(
       "Message" : String
@@ -9892,7 +9892,7 @@ module Aws::CloudDirectory
 
     alias TagValue = String
 
-    alias TagsNumberResults = Int32
+    alias TagsNumberResults = UInt32
 
     alias TypedAttributeValue = NamedTuple(
       "StringValue" : String,

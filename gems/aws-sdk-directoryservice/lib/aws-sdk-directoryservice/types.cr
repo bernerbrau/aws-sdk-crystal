@@ -5241,7 +5241,7 @@ module Aws::DirectoryService
     alias DescribeDirectoriesRequest = NamedTuple(
       "DirectoryIds" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeDirectoriesResult = NamedTuple(
@@ -5253,7 +5253,7 @@ module Aws::DirectoryService
       "DirectoryId" : String,
       "DomainControllerIds" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeDomainControllersResult = NamedTuple(
@@ -5274,7 +5274,7 @@ module Aws::DirectoryService
       "DirectoryId" : String,
       "Type" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeLDAPSSettingsResult = NamedTuple(
@@ -5297,7 +5297,7 @@ module Aws::DirectoryService
       "OwnerDirectoryId" : String,
       "SharedDirectoryIds" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeSharedDirectoriesResult = NamedTuple(
@@ -5309,7 +5309,7 @@ module Aws::DirectoryService
       "DirectoryId" : String,
       "SnapshotIds" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeSnapshotsResult = NamedTuple(
@@ -5321,7 +5321,7 @@ module Aws::DirectoryService
       "DirectoryId" : String,
       "TrustIds" : Array(String),
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeTrustsResult = NamedTuple(
@@ -5331,7 +5331,7 @@ module Aws::DirectoryService
 
     alias Description = String
 
-    alias DesiredNumberOfDomainControllers = Int32
+    alias DesiredNumberOfDomainControllers = UInt32
 
     alias DirectoryAlreadyInRegionException = NamedTuple(
       "Message" : String,
@@ -5382,7 +5382,7 @@ module Aws::DirectoryService
       "RadiusStatus" : String,
       "StageReason" : String,
       "SsoEnabled" : Bool,
-      "DesiredNumberOfDomainControllers" : Int32,
+      "DesiredNumberOfDomainControllers" : UInt32,
       "OwnerDirectoryDescription" : OwnerDirectoryDescription,
       "RegionsInfo" : RegionsInfo
     )
@@ -5406,14 +5406,14 @@ module Aws::DirectoryService
     )
 
     alias DirectoryLimits = NamedTuple(
-      "CloudOnlyDirectoriesLimit" : Int32,
-      "CloudOnlyDirectoriesCurrentCount" : Int32,
+      "CloudOnlyDirectoriesLimit" : UInt32,
+      "CloudOnlyDirectoriesCurrentCount" : UInt32,
       "CloudOnlyDirectoriesLimitReached" : Bool,
-      "CloudOnlyMicrosoftADLimit" : Int32,
-      "CloudOnlyMicrosoftADCurrentCount" : Int32,
+      "CloudOnlyMicrosoftADLimit" : UInt32,
+      "CloudOnlyMicrosoftADCurrentCount" : UInt32,
       "CloudOnlyMicrosoftADLimitReached" : Bool,
-      "ConnectedDirectoriesLimit" : Int32,
-      "ConnectedDirectoriesCurrentCount" : Int32,
+      "ConnectedDirectoriesLimit" : UInt32,
+      "ConnectedDirectoriesCurrentCount" : UInt32,
       "ConnectedDirectoriesLimitReached" : Bool
     )
 
@@ -5683,12 +5683,12 @@ module Aws::DirectoryService
 
     alias LdifContent = String
 
-    alias Limit = Int32
+    alias Limit = UInt32
 
     alias ListCertificatesRequest = NamedTuple(
       "DirectoryId" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListCertificatesResult = NamedTuple(
@@ -5699,7 +5699,7 @@ module Aws::DirectoryService
     alias ListIpRoutesRequest = NamedTuple(
       "DirectoryId" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListIpRoutesResult = NamedTuple(
@@ -5710,7 +5710,7 @@ module Aws::DirectoryService
     alias ListLogSubscriptionsRequest = NamedTuple(
       "DirectoryId" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListLogSubscriptionsResult = NamedTuple(
@@ -5721,7 +5721,7 @@ module Aws::DirectoryService
     alias ListSchemaExtensionsRequest = NamedTuple(
       "DirectoryId" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListSchemaExtensionsResult = NamedTuple(
@@ -5732,7 +5732,7 @@ module Aws::DirectoryService
     alias ListTagsForResourceRequest = NamedTuple(
       "ResourceId" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListTagsForResourceResult = NamedTuple(
@@ -5779,23 +5779,23 @@ module Aws::DirectoryService
       "RadiusStatus" : String
     )
 
-    alias PageLimit = Int32
+    alias PageLimit = UInt8
 
     alias Password = String
 
-    alias PortNumber = Int32
+    alias PortNumber = UInt16
 
     alias RadiusAuthenticationProtocol = String
 
     alias RadiusDisplayLabel = String
 
-    alias RadiusRetries = Int32
+    alias RadiusRetries = UInt8
 
     alias RadiusSettings = NamedTuple(
       "RadiusServers" : Array(String),
-      "RadiusPort" : Int32,
-      "RadiusTimeout" : Int32,
-      "RadiusRetries" : Int32,
+      "RadiusPort" : UInt16,
+      "RadiusTimeout" : UInt8,
+      "RadiusRetries" : UInt8,
       "SharedSecret" : String,
       "AuthenticationProtocol" : String,
       "DisplayLabel" : String,
@@ -5806,7 +5806,7 @@ module Aws::DirectoryService
 
     alias RadiusStatus = String
 
-    alias RadiusTimeout = Int32
+    alias RadiusTimeout = UInt8
 
     alias RegionDescription = NamedTuple(
       "DirectoryId" : String,
@@ -5814,7 +5814,7 @@ module Aws::DirectoryService
       "RegionType" : String,
       "Status" : String,
       "VpcSettings" : DirectoryVpcSettings,
-      "DesiredNumberOfDomainControllers" : Int32,
+      "DesiredNumberOfDomainControllers" : UInt32,
       "LaunchTime" : (String | UInt64 | Time)?,
       "StatusLastUpdatedDateTime" : (String | UInt64 | Time)?,
       "LastUpdatedDateTime" : (String | UInt64 | Time)?
@@ -6009,8 +6009,8 @@ module Aws::DirectoryService
     )
 
     alias SnapshotLimits = NamedTuple(
-      "ManualSnapshotsLimit" : Int32,
-      "ManualSnapshotsCurrentCount" : Int32,
+      "ManualSnapshotsLimit" : UInt32,
+      "ManualSnapshotsCurrentCount" : UInt32,
       "ManualSnapshotsLimitReached" : Bool
     )
 
@@ -6140,7 +6140,7 @@ module Aws::DirectoryService
 
     alias UpdateNumberOfDomainControllersRequest = NamedTuple(
       "DirectoryId" : String,
-      "DesiredNumber" : Int32
+      "DesiredNumber" : UInt32
     )
 
     alias UpdateNumberOfDomainControllersResult = NamedTuple(

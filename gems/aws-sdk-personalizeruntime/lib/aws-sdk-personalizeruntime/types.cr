@@ -304,7 +304,7 @@ module Aws::PersonalizeRuntime
       "campaignArn" : String,
       "itemId" : String,
       "userId" : String,
-      "numResults" : Int32,
+      "numResults" : UInt32,
       "context" : Hash(String,String),
       "filterArn" : String,
       "filterValues" : Hash(String,String)
@@ -325,7 +325,7 @@ module Aws::PersonalizeRuntime
 
     alias ItemList = Array(PredictedItem)
 
-    alias NumResults = Int32
+    alias NumResults = UInt32
 
     alias PredictedItem = NamedTuple(
       "itemId" : String,

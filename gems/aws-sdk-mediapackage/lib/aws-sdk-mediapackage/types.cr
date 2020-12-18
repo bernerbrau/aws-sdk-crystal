@@ -3379,7 +3379,7 @@ module Aws::MediaPackage
     )
 
     alias ListChannelsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3391,7 +3391,7 @@ module Aws::MediaPackage
     alias ListHarvestJobsRequest = NamedTuple(
       "IncludeChannelId" : String,
       "IncludeStatus" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3402,7 +3402,7 @@ module Aws::MediaPackage
 
     alias ListOriginEndpointsRequest = NamedTuple(
       "ChannelId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3421,7 +3421,7 @@ module Aws::MediaPackage
 
     alias ManifestLayout = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MssEncryption = NamedTuple(
       "SpekeKeyProvider" : SpekeKeyProvider

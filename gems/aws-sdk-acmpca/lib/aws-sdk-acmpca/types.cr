@@ -2242,7 +2242,7 @@ module Aws::ACMPCA
 
     alias CrlConfiguration = NamedTuple(
       "Enabled" : Bool,
-      "ExpirationInDays" : Int32,
+      "ExpirationInDays" : UInt16,
       "CustomCname" : String,
       "S3BucketName" : String
     )
@@ -2253,7 +2253,7 @@ module Aws::ACMPCA
 
     alias DeleteCertificateAuthorityRequest = NamedTuple(
       "CertificateAuthorityArn" : String,
-      "PermanentDeletionTimeInDays" : Int32
+      "PermanentDeletionTimeInDays" : UInt8
     )
 
     alias DeletePermissionRequest = NamedTuple(
@@ -2331,7 +2331,7 @@ module Aws::ACMPCA
       "CertificateChain" : (String | Array(UInt8) | IO)?
     )
 
-    alias Integer1To5000 = Int32
+    alias Integer1To5000 = UInt16
 
     alias InvalidArgsException = NamedTuple(
       "message" : String
@@ -2382,7 +2382,7 @@ module Aws::ACMPCA
 
     alias ListCertificateAuthoritiesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ResourceOwner" : String
     )
 
@@ -2394,7 +2394,7 @@ module Aws::ACMPCA
     alias ListPermissionsRequest = NamedTuple(
       "CertificateAuthorityArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListPermissionsResponse = NamedTuple(
@@ -2405,7 +2405,7 @@ module Aws::ACMPCA
     alias ListTagsRequest = NamedTuple(
       "CertificateAuthorityArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListTagsResponse = NamedTuple(
@@ -2425,11 +2425,11 @@ module Aws::ACMPCA
       "message" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias NextToken = String
 
-    alias PermanentDeletionTimeInDays = Int32
+    alias PermanentDeletionTimeInDays = UInt8
 
     alias Permission = NamedTuple(
       "CertificateAuthorityArn" : String,
@@ -2446,7 +2446,7 @@ module Aws::ACMPCA
 
     alias PermissionList = Array(Permission)
 
-    alias PositiveLong = Int64
+    alias PositiveLong = UInt64
 
     alias Principal = String
 
@@ -2547,7 +2547,7 @@ module Aws::ACMPCA
     )
 
     alias Validity = NamedTuple(
-      "Value" : Int64,
+      "Value" : UInt64,
       "Type" : String
     )
 

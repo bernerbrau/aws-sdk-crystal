@@ -2641,7 +2641,7 @@ module Aws::Schemas
       "Message" : String
     )
 
-    alias Limit = Int32
+    alias Limit = UInt8
 
     alias ListDiscoverersOutput = NamedTuple(
       "Discoverers" : Array(DiscovererSummary),
@@ -2725,7 +2725,7 @@ module Aws::Schemas
 
     alias LockServiceLinkedRoleInput = NamedTuple(
       "RoleArn" : String,
-      "Timeout" : Int32
+      "Timeout" : UInt16
     )
 
     alias LockServiceLinkedRoleOutput = NamedTuple(
@@ -2736,7 +2736,7 @@ module Aws::Schemas
 
     alias LockServiceLinkedRoleRequest = NamedTuple(
       "RoleArn" : String,
-      "Timeout" : Int32
+      "Timeout" : UInt16
     )
 
     alias LockServiceLinkedRoleResponse = NamedTuple(
@@ -3012,7 +3012,7 @@ module Aws::Schemas
 
     alias __integer = Int32
 
-    alias __integerMin1Max29000 = Int32
+    alias __integerMin1Max29000 = UInt16
 
     alias __listOfDiscovererSummary = Array(DiscovererSummary)
 

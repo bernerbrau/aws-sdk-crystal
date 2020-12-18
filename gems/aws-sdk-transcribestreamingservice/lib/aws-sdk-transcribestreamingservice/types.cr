@@ -891,7 +891,7 @@ module Aws::TranscribeStreamingService
 
     alias MediaEncoding = String
 
-    alias MediaSampleRateHertz = Int32
+    alias MediaSampleRateHertz = UInt16
 
     alias MedicalAlternative = NamedTuple(
       "Transcript" : String,
@@ -939,7 +939,7 @@ module Aws::TranscribeStreamingService
       "ServiceUnavailableException" : ServiceUnavailableException
     )
 
-    alias NumberOfChannels = Int32
+    alias NumberOfChannels = UInt32
 
     alias RequestId = String
 
@@ -964,7 +964,7 @@ module Aws::TranscribeStreamingService
 
     alias StartMedicalStreamTranscriptionRequest = NamedTuple(
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaEncoding" : String,
       "VocabularyName" : String,
       "Specialty" : String,
@@ -973,13 +973,13 @@ module Aws::TranscribeStreamingService
       "SessionId" : String,
       "AudioStream" : AudioStream,
       "EnableChannelIdentification" : Bool,
-      "NumberOfChannels" : Int32
+      "NumberOfChannels" : UInt32
     )
 
     alias StartMedicalStreamTranscriptionResponse = NamedTuple(
       "RequestId" : String,
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaEncoding" : String,
       "VocabularyName" : String,
       "Specialty" : String,
@@ -988,12 +988,12 @@ module Aws::TranscribeStreamingService
       "SessionId" : String,
       "TranscriptResultStream" : MedicalTranscriptResultStream,
       "EnableChannelIdentification" : Bool,
-      "NumberOfChannels" : Int32
+      "NumberOfChannels" : UInt32
     )
 
     alias StartStreamTranscriptionRequest = NamedTuple(
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaEncoding" : String,
       "VocabularyName" : String,
       "SessionId" : String,
@@ -1002,13 +1002,13 @@ module Aws::TranscribeStreamingService
       "VocabularyFilterMethod" : String,
       "ShowSpeakerLabel" : Bool,
       "EnableChannelIdentification" : Bool,
-      "NumberOfChannels" : Int32
+      "NumberOfChannels" : UInt32
     )
 
     alias StartStreamTranscriptionResponse = NamedTuple(
       "RequestId" : String,
       "LanguageCode" : String,
-      "MediaSampleRateHertz" : Int32,
+      "MediaSampleRateHertz" : UInt16,
       "MediaEncoding" : String,
       "VocabularyName" : String,
       "SessionId" : String,
@@ -1017,7 +1017,7 @@ module Aws::TranscribeStreamingService
       "VocabularyFilterMethod" : String,
       "ShowSpeakerLabel" : Bool,
       "EnableChannelIdentification" : Bool,
-      "NumberOfChannels" : Int32
+      "NumberOfChannels" : UInt32
     )
 
     alias String = String

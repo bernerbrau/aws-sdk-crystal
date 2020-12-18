@@ -4958,7 +4958,7 @@ module Aws::NetworkFirewall
 
     alias ListFirewallPoliciesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListFirewallPoliciesResponse = NamedTuple(
@@ -4969,7 +4969,7 @@ module Aws::NetworkFirewall
     alias ListFirewallsRequest = NamedTuple(
       "NextToken" : String,
       "VpcIds" : Array(String),
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListFirewallsResponse = NamedTuple(
@@ -4979,7 +4979,7 @@ module Aws::NetworkFirewall
 
     alias ListRuleGroupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListRuleGroupsResponse = NamedTuple(
@@ -4989,7 +4989,7 @@ module Aws::NetworkFirewall
 
     alias ListTagsForResourceRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ResourceArn" : String
     )
 
@@ -5025,11 +5025,11 @@ module Aws::NetworkFirewall
       "Destinations" : Array(Address),
       "SourcePorts" : Array(PortRange),
       "DestinationPorts" : Array(PortRange),
-      "Protocols" : Array(Int32),
+      "Protocols" : Array(UInt8),
       "TCPFlags" : Array(TCPFlagField)
     )
 
-    alias PaginationMaxResults = Int32
+    alias PaginationMaxResults = UInt8
 
     alias PaginationToken = String
 
@@ -5044,11 +5044,11 @@ module Aws::NetworkFirewall
     alias Port = String
 
     alias PortRange = NamedTuple(
-      "FromPort" : Int32,
-      "ToPort" : Int32
+      "FromPort" : UInt16,
+      "ToPort" : UInt16
     )
 
-    alias PortRangeBound = Int32
+    alias PortRangeBound = UInt16
 
     alias PortRanges = Array(PortRange)
 
@@ -5058,11 +5058,11 @@ module Aws::NetworkFirewall
 
     alias PortSets = Hash(String,PortSet)
 
-    alias Priority = Int32
+    alias Priority = UInt16
 
-    alias ProtocolNumber = Int32
+    alias ProtocolNumber = UInt8
 
-    alias ProtocolNumbers = Array(Int32)
+    alias ProtocolNumbers = Array(UInt8)
 
     alias PublishMetricAction = NamedTuple(
       "Dimensions" : Array(Dimension)
@@ -5186,12 +5186,12 @@ module Aws::NetworkFirewall
 
     alias StatelessRule = NamedTuple(
       "RuleDefinition" : RuleDefinition,
-      "Priority" : Int32
+      "Priority" : UInt16
     )
 
     alias StatelessRuleGroupReference = NamedTuple(
       "ResourceArn" : String,
-      "Priority" : Int32
+      "Priority" : UInt16
     )
 
     alias StatelessRuleGroupReferences = Array(StatelessRuleGroupReference)
@@ -5249,7 +5249,7 @@ module Aws::NetworkFirewall
 
     alias TagValue = String
 
-    alias TagsPaginationMaxResults = Int32
+    alias TagsPaginationMaxResults = UInt8
 
     alias TargetType = String
 

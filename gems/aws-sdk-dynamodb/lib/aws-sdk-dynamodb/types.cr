@@ -11054,16 +11054,16 @@ module Aws::DynamoDB
     alias AutoScalingRoleArn = String
 
     alias AutoScalingSettingsDescription = NamedTuple(
-      "MinimumUnits" : Int64,
-      "MaximumUnits" : Int64,
+      "MinimumUnits" : UInt64,
+      "MaximumUnits" : UInt64,
       "AutoScalingDisabled" : Bool,
       "AutoScalingRoleArn" : String,
       "ScalingPolicies" : Array(AutoScalingPolicyDescription)
     )
 
     alias AutoScalingSettingsUpdate = NamedTuple(
-      "MinimumUnits" : Int64,
-      "MaximumUnits" : Int64,
+      "MinimumUnits" : UInt64,
+      "MaximumUnits" : UInt64,
       "AutoScalingDisabled" : Bool,
       "AutoScalingRoleArn" : String,
       "ScalingPolicyUpdate" : AutoScalingPolicyUpdate
@@ -11098,7 +11098,7 @@ module Aws::DynamoDB
     alias BackupDetails = NamedTuple(
       "BackupArn" : String,
       "BackupName" : String,
-      "BackupSizeBytes" : Int64,
+      "BackupSizeBytes" : UInt64,
       "BackupStatus" : String,
       "BackupType" : String,
       "BackupCreationDateTime" : String | UInt64 | Time,
@@ -11115,7 +11115,7 @@ module Aws::DynamoDB
       "message" : String
     )
 
-    alias BackupSizeBytes = Int64
+    alias BackupSizeBytes = UInt64
 
     alias BackupStatus = String
 
@@ -11131,14 +11131,14 @@ module Aws::DynamoDB
       "BackupExpiryDateTime" : (String | UInt64 | Time)?,
       "BackupStatus" : String,
       "BackupType" : String,
-      "BackupSizeBytes" : Int64
+      "BackupSizeBytes" : UInt64
     )
 
     alias BackupType = String
 
     alias BackupTypeFilter = String
 
-    alias BackupsInputLimit = Int32
+    alias BackupsInputLimit = UInt8
 
     alias BatchExecuteStatementInput = NamedTuple(
       "Statements" : Array(BatchStatementRequest)
@@ -11196,7 +11196,7 @@ module Aws::DynamoDB
 
     alias BatchWriteItemRequestMap = Hash(String,Array(WriteRequest))
 
-    alias BilledSizeBytes = Int64
+    alias BilledSizeBytes = UInt64
 
     alias BillingMode = String
 
@@ -11492,10 +11492,10 @@ module Aws::DynamoDB
     )
 
     alias DescribeLimitsOutput = NamedTuple(
-      "AccountMaxReadCapacityUnits" : Int64,
-      "AccountMaxWriteCapacityUnits" : Int64,
-      "TableMaxReadCapacityUnits" : Int64,
-      "TableMaxWriteCapacityUnits" : Int64
+      "AccountMaxReadCapacityUnits" : UInt64,
+      "AccountMaxWriteCapacityUnits" : UInt64,
+      "TableMaxReadCapacityUnits" : UInt64,
+      "TableMaxWriteCapacityUnits" : UInt64
     )
 
     alias DescribeTableInput = NamedTuple(
@@ -11597,8 +11597,8 @@ module Aws::DynamoDB
       "FailureCode" : String,
       "FailureMessage" : String,
       "ExportFormat" : String,
-      "BilledSizeBytes" : Int64,
-      "ItemCount" : Int64
+      "BilledSizeBytes" : UInt64,
+      "ItemCount" : UInt64
     )
 
     alias ExportEndTime = String | UInt64 | Time
@@ -11751,7 +11751,7 @@ module Aws::DynamoDB
 
     alias GlobalTableGlobalSecondaryIndexSettingsUpdate = NamedTuple(
       "IndexName" : String,
-      "ProvisionedWriteCapacityUnits" : Int64,
+      "ProvisionedWriteCapacityUnits" : UInt64,
       "ProvisionedWriteCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate
     )
 
@@ -11812,7 +11812,7 @@ module Aws::DynamoDB
       "message" : String
     )
 
-    alias ItemCount = Int64
+    alias ItemCount = UInt64
 
     alias ItemList = Array(Hash(String,AttributeValue))
 
@@ -11882,7 +11882,7 @@ module Aws::DynamoDB
 
     alias ListBackupsInput = NamedTuple(
       "TableName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "TimeRangeLowerBound" : (String | UInt64 | Time)?,
       "TimeRangeUpperBound" : (String | UInt64 | Time)?,
       "ExclusiveStartBackupArn" : String,
@@ -11897,10 +11897,10 @@ module Aws::DynamoDB
     alias ListContributorInsightsInput = NamedTuple(
       "TableName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : Int8
     )
 
-    alias ListContributorInsightsLimit = Int32
+    alias ListContributorInsightsLimit = Int8
 
     alias ListContributorInsightsOutput = NamedTuple(
       "ContributorInsightsSummaries" : Array(ContributorInsightsSummary),
@@ -11909,11 +11909,11 @@ module Aws::DynamoDB
 
     alias ListExportsInput = NamedTuple(
       "TableArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias ListExportsMaxLimit = Int32
+    alias ListExportsMaxLimit = UInt8
 
     alias ListExportsOutput = NamedTuple(
       "ExportSummaries" : Array(ExportSummary),
@@ -11922,7 +11922,7 @@ module Aws::DynamoDB
 
     alias ListGlobalTablesInput = NamedTuple(
       "ExclusiveStartGlobalTableName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "RegionName" : String
     )
 
@@ -11933,10 +11933,10 @@ module Aws::DynamoDB
 
     alias ListTablesInput = NamedTuple(
       "ExclusiveStartTableName" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
-    alias ListTablesInputLimit = Int32
+    alias ListTablesInputLimit = UInt8
 
     alias ListTablesOutput = NamedTuple(
       "TableNames" : Array(String),
@@ -11990,7 +11990,7 @@ module Aws::DynamoDB
 
     alias NonKeyAttributeNameList = Array(String)
 
-    alias NonNegativeLongObject = Int64
+    alias NonNegativeLongObject = UInt64
 
     alias NullAttributeValue = Bool
 
@@ -12029,9 +12029,9 @@ module Aws::DynamoDB
       "message" : String
     )
 
-    alias PositiveIntegerObject = Int32
+    alias PositiveIntegerObject = UInt32
 
-    alias PositiveLongObject = Int64
+    alias PositiveLongObject = UInt64
 
     alias PreparedStatementParameters = Array(AttributeValue)
 
@@ -12045,16 +12045,16 @@ module Aws::DynamoDB
     alias ProjectionType = String
 
     alias ProvisionedThroughput = NamedTuple(
-      "ReadCapacityUnits" : Int64,
-      "WriteCapacityUnits" : Int64
+      "ReadCapacityUnits" : UInt64,
+      "WriteCapacityUnits" : UInt64
     )
 
     alias ProvisionedThroughputDescription = NamedTuple(
       "LastIncreaseDateTime" : (String | UInt64 | Time)?,
       "LastDecreaseDateTime" : (String | UInt64 | Time)?,
-      "NumberOfDecreasesToday" : Int64,
-      "ReadCapacityUnits" : Int64,
-      "WriteCapacityUnits" : Int64
+      "NumberOfDecreasesToday" : UInt64,
+      "ReadCapacityUnits" : UInt64,
+      "WriteCapacityUnits" : UInt64
     )
 
     alias ProvisionedThroughputExceededException = NamedTuple(
@@ -12062,7 +12062,7 @@ module Aws::DynamoDB
     )
 
     alias ProvisionedThroughputOverride = NamedTuple(
-      "ReadCapacityUnits" : Int64
+      "ReadCapacityUnits" : UInt64
     )
 
     alias Put = NamedTuple(
@@ -12104,7 +12104,7 @@ module Aws::DynamoDB
       "IndexName" : String,
       "Select" : String,
       "AttributesToGet" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "ConsistentRead" : Bool,
       "KeyConditions" : Hash(String,Condition),
       "QueryFilter" : Hash(String,Condition),
@@ -12201,9 +12201,9 @@ module Aws::DynamoDB
     alias ReplicaGlobalSecondaryIndexSettingsDescription = NamedTuple(
       "IndexName" : String,
       "IndexStatus" : String,
-      "ProvisionedReadCapacityUnits" : Int64,
+      "ProvisionedReadCapacityUnits" : UInt64,
       "ProvisionedReadCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
-      "ProvisionedWriteCapacityUnits" : Int64,
+      "ProvisionedWriteCapacityUnits" : UInt64,
       "ProvisionedWriteCapacityAutoScalingSettings" : AutoScalingSettingsDescription
     )
 
@@ -12211,7 +12211,7 @@ module Aws::DynamoDB
 
     alias ReplicaGlobalSecondaryIndexSettingsUpdate = NamedTuple(
       "IndexName" : String,
-      "ProvisionedReadCapacityUnits" : Int64,
+      "ProvisionedReadCapacityUnits" : UInt64,
       "ProvisionedReadCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate
     )
 
@@ -12227,9 +12227,9 @@ module Aws::DynamoDB
       "RegionName" : String,
       "ReplicaStatus" : String,
       "ReplicaBillingModeSummary" : BillingModeSummary,
-      "ReplicaProvisionedReadCapacityUnits" : Int64,
+      "ReplicaProvisionedReadCapacityUnits" : UInt64,
       "ReplicaProvisionedReadCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
-      "ReplicaProvisionedWriteCapacityUnits" : Int64,
+      "ReplicaProvisionedWriteCapacityUnits" : UInt64,
       "ReplicaProvisionedWriteCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
       "ReplicaGlobalSecondaryIndexSettings" : Array(ReplicaGlobalSecondaryIndexSettingsDescription)
     )
@@ -12238,7 +12238,7 @@ module Aws::DynamoDB
 
     alias ReplicaSettingsUpdate = NamedTuple(
       "RegionName" : String,
-      "ReplicaProvisionedReadCapacityUnits" : Int64,
+      "ReplicaProvisionedReadCapacityUnits" : UInt64,
       "ReplicaProvisionedReadCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate,
       "ReplicaGlobalSecondaryIndexSettingsUpdate" : Array(ReplicaGlobalSecondaryIndexSettingsUpdate)
     )
@@ -12363,14 +12363,14 @@ module Aws::DynamoDB
       "TableName" : String,
       "IndexName" : String,
       "AttributesToGet" : Array(String),
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "Select" : String,
       "ScanFilter" : Hash(String,Condition),
       "ConditionalOperator" : String,
       "ExclusiveStartKey" : Hash(String,AttributeValue),
       "ReturnConsumedCapacity" : String,
-      "TotalSegments" : Int32,
-      "Segment" : Int32,
+      "TotalSegments" : UInt32,
+      "Segment" : UInt32,
       "ProjectionExpression" : String,
       "FilterExpression" : String,
       "ExpressionAttributeNames" : Hash(String,String),
@@ -12386,9 +12386,9 @@ module Aws::DynamoDB
       "ConsumedCapacity" : ConsumedCapacity
     )
 
-    alias ScanSegment = Int32
+    alias ScanSegment = UInt32
 
-    alias ScanTotalSegments = Int32
+    alias ScanTotalSegments = UInt32
 
     alias SecondaryIndexesCapacityMap = Hash(String,Capacity)
 
@@ -12402,7 +12402,7 @@ module Aws::DynamoDB
       "KeySchema" : Array(KeySchemaElement),
       "TableCreationDateTime" : String | UInt64 | Time,
       "ProvisionedThroughput" : ProvisionedThroughput,
-      "ItemCount" : Int64,
+      "ItemCount" : UInt64,
       "BillingMode" : String
     )
 
@@ -12628,7 +12628,7 @@ module Aws::DynamoDB
     alias UpdateGlobalTableSettingsInput = NamedTuple(
       "GlobalTableName" : String,
       "GlobalTableBillingMode" : String,
-      "GlobalTableProvisionedWriteCapacityUnits" : Int64,
+      "GlobalTableProvisionedWriteCapacityUnits" : UInt64,
       "GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate,
       "GlobalTableGlobalSecondaryIndexSettingsUpdate" : Array(GlobalTableGlobalSecondaryIndexSettingsUpdate),
       "ReplicaSettingsUpdate" : Array(ReplicaSettingsUpdate)

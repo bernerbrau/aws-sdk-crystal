@@ -3953,7 +3953,7 @@ module Aws::CloudWatch
 
     alias Datapoints = Array(Datapoint)
 
-    alias DatapointsToAlarm = Int32
+    alias DatapointsToAlarm = UInt32
 
     alias DeleteAlarmsInput = NamedTuple(
       "AlarmNames" : Array(String)
@@ -3992,7 +3992,7 @@ module Aws::CloudWatch
       "HistoryItemType" : String,
       "StartDate" : (String | UInt64 | Time)?,
       "EndDate" : (String | UInt64 | Time)?,
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt8,
       "NextToken" : String,
       "ScanBy" : String
     )
@@ -4008,7 +4008,7 @@ module Aws::CloudWatch
       "Statistic" : String,
       "ExtendedStatistic" : String,
       "Dimensions" : Array(Dimension),
-      "Period" : Int32,
+      "Period" : UInt32,
       "Unit" : String
     )
 
@@ -4024,7 +4024,7 @@ module Aws::CloudWatch
       "ParentsOfAlarmName" : String,
       "StateValue" : String,
       "ActionPrefix" : String,
-      "MaxRecords" : Int32,
+      "MaxRecords" : UInt8,
       "NextToken" : String
     )
 
@@ -4036,7 +4036,7 @@ module Aws::CloudWatch
 
     alias DescribeAnomalyDetectorsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "Namespace" : String,
       "MetricName" : String,
       "Dimensions" : Array(Dimension)
@@ -4049,7 +4049,7 @@ module Aws::CloudWatch
 
     alias DescribeInsightRulesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias DescribeInsightRulesOutput = NamedTuple(
@@ -4103,7 +4103,7 @@ module Aws::CloudWatch
 
     alias EvaluateLowSampleCountPercentile = String
 
-    alias EvaluationPeriods = Int32
+    alias EvaluationPeriods = UInt32
 
     alias ExceptionType = String
 
@@ -4133,7 +4133,7 @@ module Aws::CloudWatch
       "RuleName" : String,
       "StartTime" : String | UInt64 | Time,
       "EndTime" : String | UInt64 | Time,
-      "Period" : Int32,
+      "Period" : UInt32,
       "MaxContributorCount" : Int32,
       "Metrics" : Array(String),
       "OrderBy" : String
@@ -4171,7 +4171,7 @@ module Aws::CloudWatch
       "Dimensions" : Array(Dimension),
       "StartTime" : String | UInt64 | Time,
       "EndTime" : String | UInt64 | Time,
-      "Period" : Int32,
+      "Period" : UInt32,
       "Statistics" : Array(String),
       "ExtendedStatistics" : Array(String),
       "Unit" : String
@@ -4231,7 +4231,7 @@ module Aws::CloudWatch
 
     alias InsightRuleDefinition = String
 
-    alias InsightRuleMaxResults = Int32
+    alias InsightRuleMaxResults = UInt16
 
     alias InsightRuleMetricDatapoint = NamedTuple(
       "Timestamp" : String | UInt64 | Time,
@@ -4329,9 +4329,9 @@ module Aws::CloudWatch
       "Tags" : Array(Tag)
     )
 
-    alias MaxRecords = Int32
+    alias MaxRecords = UInt8
 
-    alias MaxReturnedResultsCount = Int32
+    alias MaxReturnedResultsCount = UInt32
 
     alias Message = String
 
@@ -4368,10 +4368,10 @@ module Aws::CloudWatch
       "Statistic" : String,
       "ExtendedStatistic" : String,
       "Dimensions" : Array(Dimension),
-      "Period" : Int32,
+      "Period" : UInt32,
       "Unit" : String,
-      "EvaluationPeriods" : Int32,
-      "DatapointsToAlarm" : Int32,
+      "EvaluationPeriods" : UInt32,
+      "DatapointsToAlarm" : UInt32,
       "Threshold" : Float64,
       "ComparisonOperator" : String,
       "TreatMissingData" : String,
@@ -4392,7 +4392,7 @@ module Aws::CloudWatch
       "Expression" : String,
       "Label" : String,
       "ReturnData" : Bool,
-      "Period" : Int32
+      "Period" : UInt32
     )
 
     alias MetricDataResult = NamedTuple(
@@ -4417,7 +4417,7 @@ module Aws::CloudWatch
       "Values" : Array(Float64),
       "Counts" : Array(Float64),
       "Unit" : String,
-      "StorageResolution" : Int32
+      "StorageResolution" : UInt32
     )
 
     alias MetricExpression = String
@@ -4430,7 +4430,7 @@ module Aws::CloudWatch
 
     alias MetricStat = NamedTuple(
       "Metric" : Metric,
-      "Period" : Int32,
+      "Period" : UInt32,
       "Stat" : String,
       "Unit" : String
     )
@@ -4458,7 +4458,7 @@ module Aws::CloudWatch
       "FailureDescription" : String
     )
 
-    alias Period = Int32
+    alias Period = UInt32
 
     alias PutAnomalyDetectorInput = NamedTuple(
       "Namespace" : String,
@@ -4515,10 +4515,10 @@ module Aws::CloudWatch
       "Statistic" : String,
       "ExtendedStatistic" : String,
       "Dimensions" : Array(Dimension),
-      "Period" : Int32,
+      "Period" : UInt32,
       "Unit" : String,
-      "EvaluationPeriods" : Int32,
-      "DatapointsToAlarm" : Int32,
+      "EvaluationPeriods" : UInt32,
+      "DatapointsToAlarm" : UInt32,
       "Threshold" : Float64,
       "ComparisonOperator" : String,
       "TreatMissingData" : String,
@@ -4593,7 +4593,7 @@ module Aws::CloudWatch
 
     alias StatusCode = String
 
-    alias StorageResolution = Int32
+    alias StorageResolution = UInt32
 
     alias Tag = NamedTuple(
       "Key" : String,

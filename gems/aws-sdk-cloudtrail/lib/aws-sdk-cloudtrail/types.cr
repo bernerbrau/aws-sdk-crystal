@@ -2957,7 +2957,7 @@ module Aws::CloudTrail
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
       "EventCategory" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2966,7 +2966,7 @@ module Aws::CloudTrail
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MaximumNumberOfTrailsExceededException = NamedTuple(
       

@@ -2175,11 +2175,11 @@ module Aws::ApplicationDiscoveryService
       "configurations" : Array(Hash(String,String))
     )
 
-    alias DescribeContinuousExportsMaxResults = Int32
+    alias DescribeContinuousExportsMaxResults = UInt8
 
     alias DescribeContinuousExportsRequest = NamedTuple(
       "exportIds" : Array(String),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -2213,11 +2213,11 @@ module Aws::ApplicationDiscoveryService
 
     alias DescribeImportTasksFilterList = Array(ImportTaskFilter)
 
-    alias DescribeImportTasksMaxResults = Int32
+    alias DescribeImportTasksMaxResults = UInt8
 
     alias DescribeImportTasksRequest = NamedTuple(
       "filters" : Array(ImportTaskFilter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 

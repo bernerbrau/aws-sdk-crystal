@@ -2639,7 +2639,7 @@ module Aws::Snowball
     )
 
     alias DescribeAddressesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2833,7 +2833,7 @@ module Aws::Snowball
 
     alias ListClusterJobsRequest = NamedTuple(
       "ClusterId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2843,7 +2843,7 @@ module Aws::Snowball
     )
 
     alias ListClustersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2853,7 +2853,7 @@ module Aws::Snowball
     )
 
     alias ListCompatibleImagesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2863,7 +2863,7 @@ module Aws::Snowball
     )
 
     alias ListJobsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2872,7 +2872,7 @@ module Aws::Snowball
       "NextToken" : String
     )
 
-    alias ListLimit = Int32
+    alias ListLimit = UInt8
 
     alias Long = Int64
 

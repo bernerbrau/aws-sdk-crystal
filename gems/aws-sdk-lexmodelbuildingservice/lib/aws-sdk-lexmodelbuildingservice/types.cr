@@ -5039,9 +5039,9 @@ module Aws::LexModelBuildingService
 
     alias ContentType = String
 
-    alias ContextTimeToLiveInSeconds = Int32
+    alias ContextTimeToLiveInSeconds = UInt32
 
-    alias ContextTurnsToLive = Int32
+    alias ContextTurnsToLive = UInt8
 
     alias ConversationLogsRequest = NamedTuple(
       "logSettings" : Array(LogSettingsRequest),
@@ -5070,7 +5070,7 @@ module Aws::LexModelBuildingService
       "failureReason" : String,
       "lastUpdatedDate" : (String | UInt64 | Time)?,
       "createdDate" : (String | UInt64 | Time)?,
-      "idleSessionTTLInSeconds" : Int32,
+      "idleSessionTTLInSeconds" : UInt32,
       "voiceId" : String,
       "checksum" : String,
       "version" : String,
@@ -5215,7 +5215,7 @@ module Aws::LexModelBuildingService
     alias GetBotAliasesRequest = NamedTuple(
       "botName" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nameContains" : String
     )
 
@@ -5246,7 +5246,7 @@ module Aws::LexModelBuildingService
       "botName" : String,
       "botAlias" : String,
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nameContains" : String
     )
 
@@ -5272,7 +5272,7 @@ module Aws::LexModelBuildingService
       "failureReason" : String,
       "lastUpdatedDate" : (String | UInt64 | Time)?,
       "createdDate" : (String | UInt64 | Time)?,
-      "idleSessionTTLInSeconds" : Int32,
+      "idleSessionTTLInSeconds" : UInt32,
       "voiceId" : String,
       "checksum" : String,
       "version" : String,
@@ -5284,7 +5284,7 @@ module Aws::LexModelBuildingService
     alias GetBotVersionsRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetBotVersionsResponse = NamedTuple(
@@ -5294,7 +5294,7 @@ module Aws::LexModelBuildingService
 
     alias GetBotsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nameContains" : String
     )
 
@@ -5317,7 +5317,7 @@ module Aws::LexModelBuildingService
       "locale" : String,
       "signatureContains" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetBuiltinIntentsResponse = NamedTuple(
@@ -5329,7 +5329,7 @@ module Aws::LexModelBuildingService
       "locale" : String,
       "signatureContains" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetBuiltinSlotTypesResponse = NamedTuple(
@@ -5397,7 +5397,7 @@ module Aws::LexModelBuildingService
     alias GetIntentVersionsRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetIntentVersionsResponse = NamedTuple(
@@ -5407,7 +5407,7 @@ module Aws::LexModelBuildingService
 
     alias GetIntentsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nameContains" : String
     )
 
@@ -5437,7 +5437,7 @@ module Aws::LexModelBuildingService
     alias GetSlotTypeVersionsRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetSlotTypeVersionsResponse = NamedTuple(
@@ -5447,7 +5447,7 @@ module Aws::LexModelBuildingService
 
     alias GetSlotTypesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nameContains" : String
     )
 
@@ -5467,7 +5467,7 @@ module Aws::LexModelBuildingService
       "utterances" : Array(UtteranceList)
     )
 
-    alias GroupNumber = Int32
+    alias GroupNumber = UInt8
 
     alias IamRoleArn = String
 
@@ -5560,14 +5560,14 @@ module Aws::LexModelBuildingService
 
     alias LogType = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MergeStrategy = String
 
     alias Message = NamedTuple(
       "contentType" : String,
       "content" : String,
-      "groupNumber" : Int32
+      "groupNumber" : UInt8
     )
 
     alias MessageList = Array(Message)
@@ -5588,8 +5588,8 @@ module Aws::LexModelBuildingService
 
     alias OutputContext = NamedTuple(
       "name" : String,
-      "timeToLiveInSeconds" : Int32,
-      "turnsToLive" : Int32
+      "timeToLiveInSeconds" : UInt32,
+      "turnsToLive" : UInt8
     )
 
     alias OutputContextList = Array(OutputContext)
@@ -5600,17 +5600,17 @@ module Aws::LexModelBuildingService
       "message" : String
     )
 
-    alias Priority = Int32
+    alias Priority = UInt8
 
     alias ProcessBehavior = String
 
     alias Prompt = NamedTuple(
       "messages" : Array(Message),
-      "maxAttempts" : Int32,
+      "maxAttempts" : UInt8,
       "responseCard" : String
     )
 
-    alias PromptMaxAttempts = Int32
+    alias PromptMaxAttempts = UInt8
 
     alias PutBotAliasRequest = NamedTuple(
       "name" : String,
@@ -5642,7 +5642,7 @@ module Aws::LexModelBuildingService
       "nluIntentConfidenceThreshold" : Float64,
       "clarificationPrompt" : Prompt,
       "abortStatement" : Statement,
-      "idleSessionTTLInSeconds" : Int32,
+      "idleSessionTTLInSeconds" : UInt32,
       "voiceId" : String,
       "checksum" : String,
       "processBehavior" : String,
@@ -5665,7 +5665,7 @@ module Aws::LexModelBuildingService
       "failureReason" : String,
       "lastUpdatedDate" : (String | UInt64 | Time)?,
       "createdDate" : (String | UInt64 | Time)?,
-      "idleSessionTTLInSeconds" : Int32,
+      "idleSessionTTLInSeconds" : UInt32,
       "voiceId" : String,
       "checksum" : String,
       "version" : String,
@@ -5766,7 +5766,7 @@ module Aws::LexModelBuildingService
 
     alias ResponseCard = String
 
-    alias SessionTTL = Int32
+    alias SessionTTL = UInt32
 
     alias Slot = NamedTuple(
       "name" : String,
@@ -5775,7 +5775,7 @@ module Aws::LexModelBuildingService
       "slotType" : String,
       "slotTypeVersion" : String,
       "valueElicitationPrompt" : Prompt,
-      "priority" : Int32,
+      "priority" : UInt8,
       "sampleUtterances" : Array(String),
       "responseCard" : String,
       "obfuscationSetting" : String,

@@ -2983,8 +2983,8 @@ module Aws::CloudSearch
       "RequiresIndexDocuments" : Bool,
       "Processing" : Bool,
       "SearchInstanceType" : String,
-      "SearchPartitionCount" : Int32,
-      "SearchInstanceCount" : Int32,
+      "SearchPartitionCount" : UInt32,
+      "SearchInstanceCount" : UInt32,
       "Limits" : Limits
     )
 
@@ -3072,7 +3072,7 @@ module Aws::CloudSearch
 
     alias IndexFieldType = String
 
-    alias InstanceCount = Int32
+    alias InstanceCount = UInt32
 
     alias IntArrayOptions = NamedTuple(
       "DefaultValue" : Int64,
@@ -3113,8 +3113,8 @@ module Aws::CloudSearch
     )
 
     alias Limits = NamedTuple(
-      "MaximumReplicationCount" : Int32,
-      "MaximumPartitionCount" : Int32
+      "MaximumReplicationCount" : UInt32,
+      "MaximumPartitionCount" : UInt32
     )
 
     alias ListDomainNamesResponse = NamedTuple(
@@ -3140,9 +3140,9 @@ module Aws::CloudSearch
 
     alias Long = Int64
 
-    alias MaximumPartitionCount = Int32
+    alias MaximumPartitionCount = UInt32
 
-    alias MaximumReplicationCount = Int32
+    alias MaximumReplicationCount = UInt32
 
     alias MultiAZ = Bool
 
@@ -3151,12 +3151,12 @@ module Aws::CloudSearch
     alias OptionStatus = NamedTuple(
       "CreationDate" : String | UInt64 | Time,
       "UpdateDate" : String | UInt64 | Time,
-      "UpdateVersion" : Int32,
+      "UpdateVersion" : UInt32,
       "State" : String,
       "PendingDeletion" : Bool
     )
 
-    alias PartitionCount = Int32
+    alias PartitionCount = UInt32
 
     alias PartitionInstanceType = String
 
@@ -3168,8 +3168,8 @@ module Aws::CloudSearch
 
     alias ScalingParameters = NamedTuple(
       "DesiredInstanceType" : String,
-      "DesiredReplicationCount" : Int32,
-      "DesiredPartitionCount" : Int32
+      "DesiredReplicationCount" : UInt32,
+      "DesiredPartitionCount" : UInt32
     )
 
     alias ScalingParametersStatus = NamedTuple(
@@ -3224,7 +3224,7 @@ module Aws::CloudSearch
       "AnalysisScheme" : String
     )
 
-    alias UIntValue = Int32
+    alias UIntValue = UInt32
 
     alias UpdateAvailabilityOptionsRequest = NamedTuple(
       "DomainName" : String,

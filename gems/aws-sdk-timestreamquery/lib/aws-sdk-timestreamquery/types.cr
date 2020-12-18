@@ -491,7 +491,7 @@ module Aws::TimestreamQuery
 
     alias Long = Int64
 
-    alias MaxQueryResults = Int32
+    alias MaxQueryResults = UInt16
 
     alias NullableBoolean = Bool
 
@@ -505,7 +505,7 @@ module Aws::TimestreamQuery
       "QueryString" : String,
       "ClientToken" : String,
       "NextToken" : String,
-      "MaxRows" : Int32
+      "MaxRows" : UInt16
     )
 
     alias QueryResponse = NamedTuple(

@@ -7869,7 +7869,7 @@ module Aws::WAF
       "Name" : String,
       "MetricName" : String,
       "RateKey" : String,
-      "RateLimit" : Int64,
+      "RateLimit" : UInt32,
       "ChangeToken" : String,
       "Tags" : Array(Tag)
     )
@@ -8250,13 +8250,13 @@ module Aws::WAF
       "Rule" : Rule
     )
 
-    alias GetSampledRequestsMaxItems = Int64
+    alias GetSampledRequestsMaxItems = UInt16
 
     alias GetSampledRequestsRequest = NamedTuple(
       "WebAclId" : String,
       "RuleId" : String,
       "TimeWindow" : TimeWindow,
-      "MaxItems" : Int64
+      "MaxItems" : UInt16
     )
 
     alias GetSampledRequestsResponse = NamedTuple(
@@ -8359,7 +8359,7 @@ module Aws::WAF
     alias ListActivatedRulesInRuleGroupRequest = NamedTuple(
       "RuleGroupId" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListActivatedRulesInRuleGroupResponse = NamedTuple(
@@ -8369,7 +8369,7 @@ module Aws::WAF
 
     alias ListByteMatchSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListByteMatchSetsResponse = NamedTuple(
@@ -8379,7 +8379,7 @@ module Aws::WAF
 
     alias ListGeoMatchSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListGeoMatchSetsResponse = NamedTuple(
@@ -8389,7 +8389,7 @@ module Aws::WAF
 
     alias ListIPSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListIPSetsResponse = NamedTuple(
@@ -8399,7 +8399,7 @@ module Aws::WAF
 
     alias ListLoggingConfigurationsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListLoggingConfigurationsResponse = NamedTuple(
@@ -8409,7 +8409,7 @@ module Aws::WAF
 
     alias ListRateBasedRulesRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRateBasedRulesResponse = NamedTuple(
@@ -8419,7 +8419,7 @@ module Aws::WAF
 
     alias ListRegexMatchSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRegexMatchSetsResponse = NamedTuple(
@@ -8429,7 +8429,7 @@ module Aws::WAF
 
     alias ListRegexPatternSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRegexPatternSetsResponse = NamedTuple(
@@ -8439,7 +8439,7 @@ module Aws::WAF
 
     alias ListRuleGroupsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRuleGroupsResponse = NamedTuple(
@@ -8449,7 +8449,7 @@ module Aws::WAF
 
     alias ListRulesRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRulesResponse = NamedTuple(
@@ -8459,7 +8459,7 @@ module Aws::WAF
 
     alias ListSizeConstraintSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListSizeConstraintSetsResponse = NamedTuple(
@@ -8469,7 +8469,7 @@ module Aws::WAF
 
     alias ListSqlInjectionMatchSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListSqlInjectionMatchSetsResponse = NamedTuple(
@@ -8479,7 +8479,7 @@ module Aws::WAF
 
     alias ListSubscribedRuleGroupsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListSubscribedRuleGroupsResponse = NamedTuple(
@@ -8489,7 +8489,7 @@ module Aws::WAF
 
     alias ListTagsForResourceRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "ResourceARN" : String
     )
 
@@ -8500,7 +8500,7 @@ module Aws::WAF
 
     alias ListWebACLsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListWebACLsResponse = NamedTuple(
@@ -8510,7 +8510,7 @@ module Aws::WAF
 
     alias ListXssMatchSetsRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListXssMatchSetsResponse = NamedTuple(
@@ -8544,7 +8544,7 @@ module Aws::WAF
 
     alias NextMarker = String
 
-    alias PaginationLimit = Int32
+    alias PaginationLimit = UInt8
 
     alias ParameterExceptionField = String
 
@@ -8591,12 +8591,12 @@ module Aws::WAF
       "MetricName" : String,
       "MatchPredicates" : Array(Predicate),
       "RateKey" : String,
-      "RateLimit" : Int64
+      "RateLimit" : UInt32
     )
 
     alias RateKey = String
 
-    alias RateLimit = Int64
+    alias RateLimit = UInt32
 
     alias RedactedFields = Array(FieldToMatch)
 
@@ -8705,11 +8705,11 @@ module Aws::WAF
 
     alias S3ObjectUrl = String
 
-    alias SampleWeight = Int64
+    alias SampleWeight = UInt64
 
     alias SampledHTTPRequest = NamedTuple(
       "Request" : HTTPRequest,
-      "Weight" : Int64,
+      "Weight" : UInt64,
       "Timestamp" : (String | UInt64 | Time)?,
       "Action" : String,
       "RuleWithinRuleGroup" : String
@@ -8717,13 +8717,13 @@ module Aws::WAF
 
     alias SampledHTTPRequests = Array(SampledHTTPRequest)
 
-    alias Size = Int64
+    alias Size = UInt64
 
     alias SizeConstraint = NamedTuple(
       "FieldToMatch" : FieldToMatch,
       "TextTransformation" : String,
       "ComparisonOperator" : String,
-      "Size" : Int64
+      "Size" : UInt64
     )
 
     alias SizeConstraintSet = NamedTuple(
@@ -8864,7 +8864,7 @@ module Aws::WAF
       "RuleId" : String,
       "ChangeToken" : String,
       "Updates" : Array(RuleUpdate),
-      "RateLimit" : Int64
+      "RateLimit" : UInt32
     )
 
     alias UpdateRateBasedRuleResponse = NamedTuple(

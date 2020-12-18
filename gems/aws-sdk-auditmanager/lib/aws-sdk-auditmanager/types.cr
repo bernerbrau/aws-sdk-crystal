@@ -4861,7 +4861,7 @@ module Aws::AuditManager
       "controlSetId" : String,
       "controlId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetChangeLogsResponse = NamedTuple(
@@ -4879,7 +4879,7 @@ module Aws::AuditManager
 
     alias GetDelegationsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetDelegationsResponse = NamedTuple(
@@ -4892,7 +4892,7 @@ module Aws::AuditManager
       "controlSetId" : String,
       "evidenceFolderId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetEvidenceByEvidenceFolderResponse = NamedTuple(
@@ -4915,7 +4915,7 @@ module Aws::AuditManager
       "controlSetId" : String,
       "controlId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetEvidenceFoldersByAssessmentControlResponse = NamedTuple(
@@ -4926,7 +4926,7 @@ module Aws::AuditManager
     alias GetEvidenceFoldersByAssessmentRequest = NamedTuple(
       "assessmentId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias GetEvidenceFoldersByAssessmentResponse = NamedTuple(
@@ -4993,7 +4993,7 @@ module Aws::AuditManager
     alias ListAssessmentFrameworksRequest = NamedTuple(
       "frameworkType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListAssessmentFrameworksResponse = NamedTuple(
@@ -5005,7 +5005,7 @@ module Aws::AuditManager
 
     alias ListAssessmentReportsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListAssessmentReportsResponse = NamedTuple(
@@ -5015,7 +5015,7 @@ module Aws::AuditManager
 
     alias ListAssessmentsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListAssessmentsResponse = NamedTuple(
@@ -5026,7 +5026,7 @@ module Aws::AuditManager
     alias ListControlsRequest = NamedTuple(
       "controlType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListControlsResponse = NamedTuple(
@@ -5037,7 +5037,7 @@ module Aws::AuditManager
     alias ListKeywordsForDataSourceRequest = NamedTuple(
       "source" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListKeywordsForDataSourceResponse = NamedTuple(
@@ -5047,7 +5047,7 @@ module Aws::AuditManager
 
     alias ListNotificationsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias ListNotificationsResponse = NamedTuple(
@@ -5069,7 +5069,7 @@ module Aws::AuditManager
 
     alias ManualEvidenceList = Array(ManualEvidence)
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias NonEmptyString = String
 

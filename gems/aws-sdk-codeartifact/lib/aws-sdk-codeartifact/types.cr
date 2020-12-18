@@ -3557,7 +3557,7 @@ module Aws::CodeArtifact
       "repository" : RepositoryDescription
     )
 
-    alias AuthorizationTokenDurationSeconds = Int64
+    alias AuthorizationTokenDurationSeconds = UInt16
 
     alias BooleanOptional = Bool
 
@@ -3764,7 +3764,7 @@ module Aws::CodeArtifact
     alias GetAuthorizationTokenRequest = NamedTuple(
       "domain" : String,
       "domainOwner" : String,
-      "durationSeconds" : Int64
+      "durationSeconds" : UInt16
     )
 
     alias GetAuthorizationTokenResult = NamedTuple(
@@ -3857,10 +3857,10 @@ module Aws::CodeArtifact
 
     alias LicenseInfoList = Array(LicenseInfo)
 
-    alias ListDomainsMaxResults = Int32
+    alias ListDomainsMaxResults = UInt16
 
     alias ListDomainsRequest = NamedTuple(
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3869,7 +3869,7 @@ module Aws::CodeArtifact
       "nextToken" : String
     )
 
-    alias ListPackageVersionAssetsMaxResults = Int32
+    alias ListPackageVersionAssetsMaxResults = UInt16
 
     alias ListPackageVersionAssetsRequest = NamedTuple(
       "domain" : String,
@@ -3879,7 +3879,7 @@ module Aws::CodeArtifact
       "namespace" : String,
       "package" : String,
       "packageVersion" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3914,7 +3914,7 @@ module Aws::CodeArtifact
       "dependencies" : Array(PackageDependency)
     )
 
-    alias ListPackageVersionsMaxResults = Int32
+    alias ListPackageVersionsMaxResults = UInt16
 
     alias ListPackageVersionsRequest = NamedTuple(
       "domain" : String,
@@ -3925,7 +3925,7 @@ module Aws::CodeArtifact
       "package" : String,
       "status" : String,
       "sortBy" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3938,7 +3938,7 @@ module Aws::CodeArtifact
       "nextToken" : String
     )
 
-    alias ListPackagesMaxResults = Int32
+    alias ListPackagesMaxResults = UInt16
 
     alias ListPackagesRequest = NamedTuple(
       "domain" : String,
@@ -3947,7 +3947,7 @@ module Aws::CodeArtifact
       "format" : String,
       "namespace" : String,
       "packagePrefix" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3956,14 +3956,14 @@ module Aws::CodeArtifact
       "nextToken" : String
     )
 
-    alias ListRepositoriesInDomainMaxResults = Int32
+    alias ListRepositoriesInDomainMaxResults = UInt16
 
     alias ListRepositoriesInDomainRequest = NamedTuple(
       "domain" : String,
       "domainOwner" : String,
       "administratorAccount" : String,
       "repositoryPrefix" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -3972,11 +3972,11 @@ module Aws::CodeArtifact
       "nextToken" : String
     )
 
-    alias ListRepositoriesMaxResults = Int32
+    alias ListRepositoriesMaxResults = UInt16
 
     alias ListRepositoriesRequest = NamedTuple(
       "repositoryPrefix" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 

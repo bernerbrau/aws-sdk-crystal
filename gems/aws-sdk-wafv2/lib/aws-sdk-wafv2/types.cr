@@ -9327,7 +9327,7 @@ module Aws::WAFV2
       "PositionalConstraint" : String
     )
 
-    alias CapacityUnit = Int64
+    alias CapacityUnit = UInt64
 
     alias CheckCapacityRequest = NamedTuple(
       "Scope" : String,
@@ -9335,12 +9335,12 @@ module Aws::WAFV2
     )
 
     alias CheckCapacityResponse = NamedTuple(
-      "Capacity" : Int64
+      "Capacity" : UInt64
     )
 
     alias ComparisonOperator = String
 
-    alias ConsumedCapacity = Int64
+    alias ConsumedCapacity = UInt64
 
     alias CountAction = NamedTuple(
       
@@ -9380,7 +9380,7 @@ module Aws::WAFV2
     alias CreateRuleGroupRequest = NamedTuple(
       "Name" : String,
       "Scope" : String,
-      "Capacity" : Int64,
+      "Capacity" : UInt64,
       "Description" : String,
       "Rules" : Array(Rule),
       "VisibilityConfig" : VisibilityConfig,
@@ -9486,7 +9486,7 @@ module Aws::WAFV2
     )
 
     alias DescribeManagedRuleGroupResponse = NamedTuple(
-      "Capacity" : Int64,
+      "Capacity" : UInt64,
       "Rules" : Array(RuleSummary)
     )
 
@@ -9530,7 +9530,7 @@ module Aws::WAFV2
 
     alias FirewallManagerRuleGroup = NamedTuple(
       "Name" : String,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "FirewallManagerStatement" : FirewallManagerStatement,
       "OverrideAction" : OverrideAction,
       "VisibilityConfig" : VisibilityConfig
@@ -9623,7 +9623,7 @@ module Aws::WAFV2
       "RuleMetricName" : String,
       "Scope" : String,
       "TimeWindow" : TimeWindow,
-      "MaxItems" : Int64
+      "MaxItems" : UInt16
     )
 
     alias GetSampledRequestsResponse = NamedTuple(
@@ -9716,7 +9716,7 @@ module Aws::WAFV2
     alias ListAvailableManagedRuleGroupsRequest = NamedTuple(
       "Scope" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListAvailableManagedRuleGroupsResponse = NamedTuple(
@@ -9727,7 +9727,7 @@ module Aws::WAFV2
     alias ListIPSetsRequest = NamedTuple(
       "Scope" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListIPSetsResponse = NamedTuple(
@@ -9738,7 +9738,7 @@ module Aws::WAFV2
     alias ListLoggingConfigurationsRequest = NamedTuple(
       "Scope" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListLoggingConfigurationsResponse = NamedTuple(
@@ -9746,12 +9746,12 @@ module Aws::WAFV2
       "NextMarker" : String
     )
 
-    alias ListMaxItems = Int64
+    alias ListMaxItems = UInt16
 
     alias ListRegexPatternSetsRequest = NamedTuple(
       "Scope" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRegexPatternSetsResponse = NamedTuple(
@@ -9771,7 +9771,7 @@ module Aws::WAFV2
     alias ListRuleGroupsRequest = NamedTuple(
       "Scope" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListRuleGroupsResponse = NamedTuple(
@@ -9781,7 +9781,7 @@ module Aws::WAFV2
 
     alias ListTagsForResourceRequest = NamedTuple(
       "NextMarker" : String,
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "ResourceARN" : String
     )
 
@@ -9793,7 +9793,7 @@ module Aws::WAFV2
     alias ListWebACLsRequest = NamedTuple(
       "Scope" : String,
       "NextMarker" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias ListWebACLsResponse = NamedTuple(
@@ -9853,7 +9853,7 @@ module Aws::WAFV2
       "None" : NoneAction
     )
 
-    alias PaginationLimit = Int32
+    alias PaginationLimit = UInt8
 
     alias ParameterExceptionField = String
 
@@ -9887,7 +9887,7 @@ module Aws::WAFV2
     )
 
     alias RateBasedStatement = NamedTuple(
-      "Limit" : Int64,
+      "Limit" : UInt32,
       "AggregateKeyType" : String,
       "ScopeDownStatement" : Statement,
       "ForwardedIPConfig" : ForwardedIPConfig
@@ -9900,7 +9900,7 @@ module Aws::WAFV2
       "Addresses" : Array(String)
     )
 
-    alias RateLimit = Int64
+    alias RateLimit = UInt32
 
     alias RedactedFields = Array(FieldToMatch)
 
@@ -9944,7 +9944,7 @@ module Aws::WAFV2
 
     alias Rule = NamedTuple(
       "Name" : String,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "Statement" : Statement,
       "Action" : RuleAction,
       "OverrideAction" : OverrideAction,
@@ -9960,7 +9960,7 @@ module Aws::WAFV2
     alias RuleGroup = NamedTuple(
       "Name" : String,
       "Id" : String,
-      "Capacity" : Int64,
+      "Capacity" : UInt64,
       "ARN" : String,
       "Description" : String,
       "Rules" : Array(Rule),
@@ -9982,7 +9982,7 @@ module Aws::WAFV2
       "ARN" : String
     )
 
-    alias RulePriority = Int32
+    alias RulePriority = UInt32
 
     alias RuleSummaries = Array(RuleSummary)
 
@@ -9993,11 +9993,11 @@ module Aws::WAFV2
 
     alias Rules = Array(Rule)
 
-    alias SampleWeight = Int64
+    alias SampleWeight = UInt64
 
     alias SampledHTTPRequest = NamedTuple(
       "Request" : HTTPRequest,
-      "Weight" : Int64,
+      "Weight" : UInt64,
       "Timestamp" : (String | UInt64 | Time)?,
       "Action" : String,
       "RuleNameWithinRuleGroup" : String
@@ -10017,12 +10017,12 @@ module Aws::WAFV2
       "Name" : String
     )
 
-    alias Size = Int64
+    alias Size = UInt64
 
     alias SizeConstraintStatement = NamedTuple(
       "FieldToMatch" : FieldToMatch,
       "ComparisonOperator" : String,
-      "Size" : Int64,
+      "Size" : UInt64,
       "TextTransformations" : Array(TextTransformation)
     )
 
@@ -10077,11 +10077,11 @@ module Aws::WAFV2
     alias TagValue = String
 
     alias TextTransformation = NamedTuple(
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "Type" : String
     )
 
-    alias TextTransformationPriority = Int32
+    alias TextTransformationPriority = UInt32
 
     alias TextTransformationType = String
 
@@ -10243,7 +10243,7 @@ module Aws::WAFV2
       "Description" : String,
       "Rules" : Array(Rule),
       "VisibilityConfig" : VisibilityConfig,
-      "Capacity" : Int64,
+      "Capacity" : UInt64,
       "PreProcessFirewallManagerRuleGroups" : Array(FirewallManagerRuleGroup),
       "PostProcessFirewallManagerRuleGroups" : Array(FirewallManagerRuleGroup),
       "ManagedByFirewallManager" : Bool

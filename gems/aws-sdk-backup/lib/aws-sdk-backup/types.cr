@@ -5083,7 +5083,7 @@ module Aws::Backup
 
     alias ListBackupJobsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ByResourceArn" : String,
       "ByState" : String,
       "ByBackupVaultName" : String,
@@ -5100,7 +5100,7 @@ module Aws::Backup
 
     alias ListBackupPlanTemplatesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListBackupPlanTemplatesOutput = NamedTuple(
@@ -5111,7 +5111,7 @@ module Aws::Backup
     alias ListBackupPlanVersionsInput = NamedTuple(
       "BackupPlanId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListBackupPlanVersionsOutput = NamedTuple(
@@ -5121,7 +5121,7 @@ module Aws::Backup
 
     alias ListBackupPlansInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "IncludeDeleted" : Bool
     )
 
@@ -5133,7 +5133,7 @@ module Aws::Backup
     alias ListBackupSelectionsInput = NamedTuple(
       "BackupPlanId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListBackupSelectionsOutput = NamedTuple(
@@ -5143,7 +5143,7 @@ module Aws::Backup
 
     alias ListBackupVaultsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListBackupVaultsOutput = NamedTuple(
@@ -5153,7 +5153,7 @@ module Aws::Backup
 
     alias ListCopyJobsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ByResourceArn" : String,
       "ByState" : String,
       "ByCreatedBefore" : (String | UInt64 | Time)?,
@@ -5172,7 +5172,7 @@ module Aws::Backup
 
     alias ListProtectedResourcesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListProtectedResourcesOutput = NamedTuple(
@@ -5183,7 +5183,7 @@ module Aws::Backup
     alias ListRecoveryPointsByBackupVaultInput = NamedTuple(
       "BackupVaultName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ByResourceArn" : String,
       "ByResourceType" : String,
       "ByBackupPlanId" : String,
@@ -5199,7 +5199,7 @@ module Aws::Backup
     alias ListRecoveryPointsByResourceInput = NamedTuple(
       "ResourceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListRecoveryPointsByResourceOutput = NamedTuple(
@@ -5209,7 +5209,7 @@ module Aws::Backup
 
     alias ListRestoreJobsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "ByAccountId" : String,
       "ByCreatedBefore" : (String | UInt64 | Time)?,
       "ByCreatedAfter" : (String | UInt64 | Time)?,
@@ -5224,7 +5224,7 @@ module Aws::Backup
     alias ListTagsInput = NamedTuple(
       "ResourceArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListTagsOutput = NamedTuple(
@@ -5234,7 +5234,7 @@ module Aws::Backup
 
     alias Long = Int64
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias Metadata = Hash(String,String)
 

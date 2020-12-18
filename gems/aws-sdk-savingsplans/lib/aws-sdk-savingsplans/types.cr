@@ -1104,7 +1104,7 @@ module Aws::SavingsPlans
       "savingsPlanId" : String,
       "filters" : Array(SavingsPlanRateFilter),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeSavingsPlanRatesResponse = NamedTuple(
@@ -1123,7 +1123,7 @@ module Aws::SavingsPlans
       "operations" : Array(String),
       "filters" : Array(SavingsPlanOfferingRateFilterElement),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeSavingsPlansOfferingRatesResponse = NamedTuple(
@@ -1136,7 +1136,7 @@ module Aws::SavingsPlans
       "paymentOptions" : Array(String),
       "productType" : String,
       "planTypes" : Array(String),
-      "durations" : Array(Int64),
+      "durations" : Array(UInt64),
       "currencies" : Array(String),
       "descriptions" : Array(String),
       "serviceCodes" : Array(String),
@@ -1144,7 +1144,7 @@ module Aws::SavingsPlans
       "operations" : Array(String),
       "filters" : Array(SavingsPlanOfferingFilterElement),
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeSavingsPlansOfferingsResponse = NamedTuple(
@@ -1156,7 +1156,7 @@ module Aws::SavingsPlans
       "savingsPlanArns" : Array(String),
       "savingsPlanIds" : Array(String),
       "nextToken" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "states" : Array(String),
       "filters" : Array(SavingsPlanFilter)
     )
@@ -1166,7 +1166,7 @@ module Aws::SavingsPlans
       "nextToken" : String
     )
 
-    alias DurationsList = Array(Int64)
+    alias DurationsList = Array(UInt64)
 
     alias EC2InstanceFamily = String
 
@@ -1188,9 +1188,9 @@ module Aws::SavingsPlans
       "tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias PaginationToken = String
 
@@ -1198,7 +1198,7 @@ module Aws::SavingsPlans
       "offeringId" : String,
       "paymentOption" : String,
       "planType" : String,
-      "durationSeconds" : Int64,
+      "durationSeconds" : UInt64,
       "currency" : String,
       "planDescription" : String
     )
@@ -1257,7 +1257,7 @@ module Aws::SavingsPlans
       "planType" : String,
       "description" : String,
       "paymentOption" : String,
-      "durationSeconds" : Int64,
+      "durationSeconds" : UInt64,
       "currency" : String,
       "serviceCode" : String,
       "usageType" : String,
@@ -1391,7 +1391,7 @@ module Aws::SavingsPlans
 
     alias SavingsPlanUsageTypeList = Array(String)
 
-    alias SavingsPlansDuration = Int64
+    alias SavingsPlansDuration = UInt64
 
     alias SavingsPlansFilterName = String
 

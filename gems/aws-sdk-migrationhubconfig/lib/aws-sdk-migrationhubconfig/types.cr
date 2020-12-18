@@ -318,13 +318,13 @@ module Aws::MigrationHubConfig
       "HomeRegionControl" : HomeRegionControl
     )
 
-    alias DescribeHomeRegionControlsMaxResults = Int32
+    alias DescribeHomeRegionControlsMaxResults = UInt8
 
     alias DescribeHomeRegionControlsRequest = NamedTuple(
       "ControlId" : String,
       "HomeRegion" : String,
       "Target" : Target,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 

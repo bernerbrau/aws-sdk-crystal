@@ -2507,7 +2507,7 @@ module Aws::Athena
 
     alias BoxedBoolean = Bool
 
-    alias BytesScannedCutoffValue = Int64
+    alias BytesScannedCutoffValue = UInt64
 
     alias CatalogNameString = String
 
@@ -2682,7 +2682,7 @@ module Aws::Athena
     alias GetQueryResultsInput = NamedTuple(
       "QueryExecutionId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias GetQueryResultsOutput = NamedTuple(
@@ -2726,7 +2726,7 @@ module Aws::Athena
 
     alias ListDataCatalogsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDataCatalogsOutput = NamedTuple(
@@ -2737,7 +2737,7 @@ module Aws::Athena
     alias ListDatabasesInput = NamedTuple(
       "CatalogName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDatabasesOutput = NamedTuple(
@@ -2747,7 +2747,7 @@ module Aws::Athena
 
     alias ListNamedQueriesInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "WorkGroup" : String
     )
 
@@ -2758,7 +2758,7 @@ module Aws::Athena
 
     alias ListQueryExecutionsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "WorkGroup" : String
     )
 
@@ -2772,7 +2772,7 @@ module Aws::Athena
       "DatabaseName" : String,
       "Expression" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTableMetadataOutput = NamedTuple(
@@ -2783,7 +2783,7 @@ module Aws::Athena
     alias ListTagsForResourceInput = NamedTuple(
       "ResourceARN" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
@@ -2793,7 +2793,7 @@ module Aws::Athena
 
     alias ListWorkGroupsInput = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListWorkGroupsOutput = NamedTuple(
@@ -2803,21 +2803,21 @@ module Aws::Athena
 
     alias Long = Int64
 
-    alias MaxDataCatalogsCount = Int32
+    alias MaxDataCatalogsCount = UInt8
 
-    alias MaxDatabasesCount = Int32
+    alias MaxDatabasesCount = UInt8
 
-    alias MaxNamedQueriesCount = Int32
+    alias MaxNamedQueriesCount = UInt8
 
-    alias MaxQueryExecutionsCount = Int32
+    alias MaxQueryExecutionsCount = UInt8
 
-    alias MaxQueryResults = Int32
+    alias MaxQueryResults = UInt16
 
-    alias MaxTableMetadataCount = Int32
+    alias MaxTableMetadataCount = UInt8
 
-    alias MaxTagsCount = Int32
+    alias MaxTagsCount = UInt32
 
-    alias MaxWorkGroupsCount = Int32
+    alias MaxWorkGroupsCount = UInt8
 
     alias MetadataException = NamedTuple(
       "Message" : String
@@ -3051,7 +3051,7 @@ module Aws::Athena
       "ResultConfiguration" : ResultConfiguration,
       "EnforceWorkGroupConfiguration" : Bool,
       "PublishCloudWatchMetricsEnabled" : Bool,
-      "BytesScannedCutoffPerQuery" : Int64,
+      "BytesScannedCutoffPerQuery" : UInt64,
       "RequesterPaysEnabled" : Bool
     )
 
@@ -3059,7 +3059,7 @@ module Aws::Athena
       "EnforceWorkGroupConfiguration" : Bool,
       "ResultConfigurationUpdates" : ResultConfigurationUpdates,
       "PublishCloudWatchMetricsEnabled" : Bool,
-      "BytesScannedCutoffPerQuery" : Int64,
+      "BytesScannedCutoffPerQuery" : UInt64,
       "RemoveBytesScannedCutoffPerQuery" : Bool,
       "RequesterPaysEnabled" : Bool
     )

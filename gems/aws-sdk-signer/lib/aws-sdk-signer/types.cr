@@ -2036,7 +2036,7 @@ module Aws::Signer
       "status" : String,
       "platformId" : String,
       "requestedBy" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "isRevoked" : Bool,
       "signatureExpiresBefore" : (String | UInt64 | Time)?,
@@ -2053,7 +2053,7 @@ module Aws::Signer
       "category" : String,
       "partner" : String,
       "target" : String,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
@@ -2064,7 +2064,7 @@ module Aws::Signer
 
     alias ListSigningProfilesRequest = NamedTuple(
       "includeCanceled" : Bool,
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String,
       "platformId" : String,
       "statuses" : Array(String)
@@ -2083,7 +2083,7 @@ module Aws::Signer
       "tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MaxSizeInMB = Int32
 

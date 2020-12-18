@@ -13267,13 +13267,13 @@ module Aws::QuickSight
 
     alias AuroraParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
     alias AuroraPostgreSqlParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
@@ -13580,7 +13580,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "TemplateId" : String,
       "AliasName" : String,
-      "TemplateVersionNumber" : Int64
+      "TemplateVersionNumber" : UInt64
     )
 
     alias CreateTemplateAliasResponse = NamedTuple(
@@ -13612,7 +13612,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "ThemeId" : String,
       "AliasName" : String,
-      "ThemeVersionNumber" : Int64
+      "ThemeVersionNumber" : UInt64
     )
 
     alias CreateThemeAliasResponse = NamedTuple(
@@ -13710,7 +13710,7 @@ module Aws::QuickSight
       "Name" : String,
       "CreatedTime" : (String | UInt64 | Time)?,
       "LastUpdatedTime" : (String | UInt64 | Time)?,
-      "PublishedVersionNumber" : Int64,
+      "PublishedVersionNumber" : UInt64,
       "LastPublishedTime" : (String | UInt64 | Time)?
     )
 
@@ -13721,7 +13721,7 @@ module Aws::QuickSight
     alias DashboardVersion = NamedTuple(
       "CreatedTime" : (String | UInt64 | Time)?,
       "Errors" : Array(DashboardError),
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "Status" : String,
       "Arn" : String,
       "SourceEntityArn" : String,
@@ -13734,7 +13734,7 @@ module Aws::QuickSight
     alias DashboardVersionSummary = NamedTuple(
       "Arn" : String,
       "CreatedTime" : (String | UInt64 | Time)?,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "Status" : String,
       "SourceEntityArn" : String,
       "Description" : String
@@ -13887,7 +13887,7 @@ module Aws::QuickSight
     alias DeleteAnalysisRequest = NamedTuple(
       "AwsAccountId" : String,
       "AnalysisId" : String,
-      "RecoveryWindowInDays" : Int64,
+      "RecoveryWindowInDays" : UInt8,
       "ForceDeleteWithoutRecovery" : Bool
     )
 
@@ -13902,7 +13902,7 @@ module Aws::QuickSight
     alias DeleteDashboardRequest = NamedTuple(
       "AwsAccountId" : String,
       "DashboardId" : String,
-      "VersionNumber" : Int64
+      "VersionNumber" : UInt64
     )
 
     alias DeleteDashboardResponse = NamedTuple(
@@ -13998,7 +13998,7 @@ module Aws::QuickSight
     alias DeleteTemplateRequest = NamedTuple(
       "AwsAccountId" : String,
       "TemplateId" : String,
-      "VersionNumber" : Int64
+      "VersionNumber" : UInt64
     )
 
     alias DeleteTemplateResponse = NamedTuple(
@@ -14025,7 +14025,7 @@ module Aws::QuickSight
     alias DeleteThemeRequest = NamedTuple(
       "AwsAccountId" : String,
       "ThemeId" : String,
-      "VersionNumber" : Int64
+      "VersionNumber" : UInt64
     )
 
     alias DeleteThemeResponse = NamedTuple(
@@ -14124,7 +14124,7 @@ module Aws::QuickSight
     alias DescribeDashboardRequest = NamedTuple(
       "AwsAccountId" : String,
       "DashboardId" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "AliasName" : String
     )
 
@@ -14257,7 +14257,7 @@ module Aws::QuickSight
     alias DescribeTemplateRequest = NamedTuple(
       "AwsAccountId" : String,
       "TemplateId" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "AliasName" : String
     )
 
@@ -14295,7 +14295,7 @@ module Aws::QuickSight
     alias DescribeThemeRequest = NamedTuple(
       "AwsAccountId" : String,
       "ThemeId" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "AliasName" : String
     )
 
@@ -14371,7 +14371,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "DashboardId" : String,
       "IdentityType" : String,
-      "SessionLifetimeInMinutes" : Int64,
+      "SessionLifetimeInMinutes" : UInt16,
       "UndoRedoDisabled" : Bool,
       "ResetDisabled" : Bool,
       "StatePersistenceEnabled" : Bool,
@@ -14389,7 +14389,7 @@ module Aws::QuickSight
     alias GetSessionEmbedUrlRequest = NamedTuple(
       "AwsAccountId" : String,
       "EntryPoint" : String,
-      "SessionLifetimeInMinutes" : Int64,
+      "SessionLifetimeInMinutes" : UInt16,
       "UserArn" : String
     )
 
@@ -14480,7 +14480,7 @@ module Aws::QuickSight
 
     alias IngestionId = String
 
-    alias IngestionMaxResults = Int32
+    alias IngestionMaxResults = UInt8
 
     alias IngestionRequestSource = String
 
@@ -14551,7 +14551,7 @@ module Aws::QuickSight
     alias ListAnalysesRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAnalysesResponse = NamedTuple(
@@ -14565,7 +14565,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "DashboardId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDashboardVersionsResponse = NamedTuple(
@@ -14578,7 +14578,7 @@ module Aws::QuickSight
     alias ListDashboardsRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDashboardsResponse = NamedTuple(
@@ -14591,7 +14591,7 @@ module Aws::QuickSight
     alias ListDataSetsRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDataSetsResponse = NamedTuple(
@@ -14604,7 +14604,7 @@ module Aws::QuickSight
     alias ListDataSourcesRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDataSourcesResponse = NamedTuple(
@@ -14617,7 +14617,7 @@ module Aws::QuickSight
     alias ListGroupMembershipsRequest = NamedTuple(
       "GroupName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "AwsAccountId" : String,
       "Namespace" : String
     )
@@ -14632,7 +14632,7 @@ module Aws::QuickSight
     alias ListGroupsRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Namespace" : String
     )
 
@@ -14647,7 +14647,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "UserName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Namespace" : String
     )
 
@@ -14663,7 +14663,7 @@ module Aws::QuickSight
       "AssignmentStatus" : String,
       "Namespace" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListIAMPolicyAssignmentsResponse = NamedTuple(
@@ -14677,7 +14677,7 @@ module Aws::QuickSight
       "DataSetId" : String,
       "NextToken" : String,
       "AwsAccountId" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListIngestionsResponse = NamedTuple(
@@ -14690,7 +14690,7 @@ module Aws::QuickSight
     alias ListNamespacesRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListNamespacesResponse = NamedTuple(
@@ -14714,7 +14714,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "TemplateId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTemplateAliasesResponse = NamedTuple(
@@ -14728,7 +14728,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "TemplateId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTemplateVersionsResponse = NamedTuple(
@@ -14741,7 +14741,7 @@ module Aws::QuickSight
     alias ListTemplatesRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTemplatesResponse = NamedTuple(
@@ -14755,7 +14755,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "ThemeId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListThemeAliasesResponse = NamedTuple(
@@ -14769,7 +14769,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "ThemeId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListThemeVersionsResponse = NamedTuple(
@@ -14782,7 +14782,7 @@ module Aws::QuickSight
     alias ListThemesRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Type" : String
     )
 
@@ -14798,7 +14798,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "Namespace" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListUserGroupsResponse = NamedTuple(
@@ -14811,7 +14811,7 @@ module Aws::QuickSight
     alias ListUsersRequest = NamedTuple(
       "AwsAccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Namespace" : String
     )
 
@@ -14854,15 +14854,15 @@ module Aws::QuickSight
 
     alias MariaDbParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MySqlParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
@@ -14892,11 +14892,11 @@ module Aws::QuickSight
 
     alias OnClause = String
 
-    alias OptionalPort = Int32
+    alias OptionalPort = UInt16
 
     alias OracleParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
@@ -14927,13 +14927,13 @@ module Aws::QuickSight
 
     alias PhysicalTableMap = Hash(String,PhysicalTable)
 
-    alias Port = Int32
+    alias Port = UInt16
 
-    alias PositiveInteger = Int32
+    alias PositiveInteger = UInt32
 
     alias PostgreSqlParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
@@ -14944,7 +14944,7 @@ module Aws::QuickSight
 
     alias PrestoParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Catalog" : String
     )
 
@@ -14975,11 +14975,11 @@ module Aws::QuickSight
       "Database" : String
     )
 
-    alias RecoveryWindowInDays = Int64
+    alias RecoveryWindowInDays = UInt8
 
     alias RedshiftParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String,
       "ClusterId" : String
     )
@@ -15102,7 +15102,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "Filters" : Array(AnalysisSearchFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias SearchAnalysesResponse = NamedTuple(
@@ -15116,7 +15116,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "Filters" : Array(DashboardSearchFilter),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias SearchDashboardsResponse = NamedTuple(
@@ -15130,7 +15130,7 @@ module Aws::QuickSight
       "SiteBaseUrl" : String
     )
 
-    alias SessionLifetimeInMinutes = Int64
+    alias SessionLifetimeInMinutes = UInt16
 
     alias SessionLifetimeInMinutesInvalidException = NamedTuple(
       "Message" : String,
@@ -15163,14 +15163,14 @@ module Aws::QuickSight
 
     alias SparkParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32
+      "Port" : UInt16
     )
 
     alias SqlQuery = String
 
     alias SqlServerParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
@@ -15231,7 +15231,7 @@ module Aws::QuickSight
     alias TemplateAlias = NamedTuple(
       "AliasName" : String,
       "Arn" : String,
-      "TemplateVersionNumber" : Int64
+      "TemplateVersionNumber" : UInt64
     )
 
     alias TemplateAliasList = Array(TemplateAlias)
@@ -15265,7 +15265,7 @@ module Aws::QuickSight
       "Arn" : String,
       "TemplateId" : String,
       "Name" : String,
-      "LatestVersionNumber" : Int64,
+      "LatestVersionNumber" : UInt64,
       "CreatedTime" : (String | UInt64 | Time)?,
       "LastUpdatedTime" : (String | UInt64 | Time)?
     )
@@ -15275,7 +15275,7 @@ module Aws::QuickSight
     alias TemplateVersion = NamedTuple(
       "CreatedTime" : (String | UInt64 | Time)?,
       "Errors" : Array(TemplateError),
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "Status" : String,
       "DataSetConfigurations" : Array(DataSetConfiguration),
       "Description" : String,
@@ -15286,7 +15286,7 @@ module Aws::QuickSight
 
     alias TemplateVersionSummary = NamedTuple(
       "Arn" : String,
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "CreatedTime" : (String | UInt64 | Time)?,
       "Status" : String,
       "Description" : String
@@ -15296,7 +15296,7 @@ module Aws::QuickSight
 
     alias TeradataParameters = NamedTuple(
       "Host" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Database" : String
     )
 
@@ -15315,7 +15315,7 @@ module Aws::QuickSight
     alias ThemeAlias = NamedTuple(
       "Arn" : String,
       "AliasName" : String,
-      "ThemeVersionNumber" : Int64
+      "ThemeVersionNumber" : UInt64
     )
 
     alias ThemeAliasList = Array(ThemeAlias)
@@ -15341,7 +15341,7 @@ module Aws::QuickSight
       "Arn" : String,
       "Name" : String,
       "ThemeId" : String,
-      "LatestVersionNumber" : Int64,
+      "LatestVersionNumber" : UInt64,
       "CreatedTime" : (String | UInt64 | Time)?,
       "LastUpdatedTime" : (String | UInt64 | Time)?
     )
@@ -15351,7 +15351,7 @@ module Aws::QuickSight
     alias ThemeType = String
 
     alias ThemeVersion = NamedTuple(
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "Arn" : String,
       "Description" : String,
       "BaseThemeId" : String,
@@ -15362,7 +15362,7 @@ module Aws::QuickSight
     )
 
     alias ThemeVersionSummary = NamedTuple(
-      "VersionNumber" : Int64,
+      "VersionNumber" : UInt64,
       "Arn" : String,
       "Description" : String,
       "CreatedTime" : (String | UInt64 | Time)?,
@@ -15402,7 +15402,7 @@ module Aws::QuickSight
 
     alias TwitterParameters = NamedTuple(
       "Query" : String,
-      "MaxRows" : Int32
+      "MaxRows" : UInt32
     )
 
     alias TypeCastFormat = String
@@ -15522,7 +15522,7 @@ module Aws::QuickSight
     alias UpdateDashboardPublishedVersionRequest = NamedTuple(
       "AwsAccountId" : String,
       "DashboardId" : String,
-      "VersionNumber" : Int64
+      "VersionNumber" : UInt64
     )
 
     alias UpdateDashboardPublishedVersionResponse = NamedTuple(
@@ -15657,7 +15657,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "TemplateId" : String,
       "AliasName" : String,
-      "TemplateVersionNumber" : Int64
+      "TemplateVersionNumber" : UInt64
     )
 
     alias UpdateTemplateAliasResponse = NamedTuple(
@@ -15702,7 +15702,7 @@ module Aws::QuickSight
       "AwsAccountId" : String,
       "ThemeId" : String,
       "AliasName" : String,
-      "ThemeVersionNumber" : Int64
+      "ThemeVersionNumber" : UInt64
     )
 
     alias UpdateThemeAliasResponse = NamedTuple(
@@ -15762,7 +15762,7 @@ module Aws::QuickSight
 
     alias UploadSettings = NamedTuple(
       "Format" : String,
-      "StartFromRow" : Int32,
+      "StartFromRow" : UInt32,
       "ContainsHeader" : Bool,
       "TextQualifier" : String,
       "Delimiter" : String
@@ -15789,7 +15789,7 @@ module Aws::QuickSight
 
     alias VersionDescription = String
 
-    alias VersionNumber = Int64
+    alias VersionNumber = UInt64
 
     alias VpcConnectionProperties = NamedTuple(
       "VpcConnectionArn" : String

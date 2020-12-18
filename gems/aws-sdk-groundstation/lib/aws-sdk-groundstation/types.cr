@@ -2533,10 +2533,10 @@ module Aws::GroundStation
     )
 
     alias CreateMissionProfileRequest = NamedTuple(
-      "contactPostPassDurationSeconds" : Int32,
-      "contactPrePassDurationSeconds" : Int32,
+      "contactPostPassDurationSeconds" : UInt16,
+      "contactPrePassDurationSeconds" : UInt16,
       "dataflowEdges" : Array(Array(String)),
-      "minimumViableContactDurationSeconds" : Int32,
+      "minimumViableContactDurationSeconds" : UInt16,
       "name" : String,
       "tags" : Hash(String,String),
       "trackingConfigArn" : String
@@ -2556,7 +2556,7 @@ module Aws::GroundStation
 
     alias DataflowEndpoint = NamedTuple(
       "address" : SocketAddress,
-      "mtu" : Int32,
+      "mtu" : UInt16,
       "name" : String,
       "status" : String
     )
@@ -2579,7 +2579,7 @@ module Aws::GroundStation
       "dataflowEndpointGroupId" : String
     )
 
-    alias DataflowEndpointmtuInteger = Int32
+    alias DataflowEndpointmtuInteger = UInt16
 
     alias DataflowList = Array(DataflowDetail)
 
@@ -2639,7 +2639,7 @@ module Aws::GroundStation
 
     alias Double = Float64
 
-    alias DurationInSeconds = Int32
+    alias DurationInSeconds = UInt16
 
     alias Eirp = NamedTuple(
       "units" : String,
@@ -2717,10 +2717,10 @@ module Aws::GroundStation
     )
 
     alias GetMissionProfileResponse = NamedTuple(
-      "contactPostPassDurationSeconds" : Int32,
-      "contactPrePassDurationSeconds" : Int32,
+      "contactPostPassDurationSeconds" : UInt16,
+      "contactPrePassDurationSeconds" : UInt16,
       "dataflowEdges" : Array(Array(String)),
-      "minimumViableContactDurationSeconds" : Int32,
+      "minimumViableContactDurationSeconds" : UInt16,
       "missionProfileArn" : String,
       "missionProfileId" : String,
       "name" : String,
@@ -2735,7 +2735,7 @@ module Aws::GroundStation
 
     alias GetSatelliteResponse = NamedTuple(
       "groundStations" : Array(String),
-      "noradSatelliteID" : Int32,
+      "noradSatelliteID" : UInt32,
       "satelliteArn" : String,
       "satelliteId" : String
     )
@@ -2877,7 +2877,7 @@ module Aws::GroundStation
 
     alias SatelliteListItem = NamedTuple(
       "groundStations" : Array(String),
-      "noradSatelliteID" : Int32,
+      "noradSatelliteID" : UInt32,
       "satelliteArn" : String,
       "satelliteId" : String
     )
@@ -2950,10 +2950,10 @@ module Aws::GroundStation
     )
 
     alias UpdateMissionProfileRequest = NamedTuple(
-      "contactPostPassDurationSeconds" : Int32,
-      "contactPrePassDurationSeconds" : Int32,
+      "contactPostPassDurationSeconds" : UInt16,
+      "contactPrePassDurationSeconds" : UInt16,
       "dataflowEdges" : Array(Array(String)),
-      "minimumViableContactDurationSeconds" : Int32,
+      "minimumViableContactDurationSeconds" : UInt16,
       "missionProfileId" : String,
       "name" : String,
       "trackingConfigArn" : String
@@ -2971,7 +2971,7 @@ module Aws::GroundStation
 
     alias Uuid = String
 
-    alias noradSatelliteID = Int32
+    alias noradSatelliteID = UInt32
 
     alias satelliteArn = String
   end

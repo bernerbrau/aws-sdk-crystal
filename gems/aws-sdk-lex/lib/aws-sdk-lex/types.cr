@@ -1725,13 +1725,13 @@ module Aws::Lex
     alias ActiveContextParametersMap = Hash(String,String)
 
     alias ActiveContextTimeToLive = NamedTuple(
-      "timeToLiveInSeconds" : Int32,
-      "turnsToLive" : Int32
+      "timeToLiveInSeconds" : UInt32,
+      "turnsToLive" : UInt8
     )
 
-    alias ActiveContextTimeToLiveInSeconds = Int32
+    alias ActiveContextTimeToLiveInSeconds = UInt32
 
-    alias ActiveContextTurnsToLive = Int32
+    alias ActiveContextTurnsToLive = UInt8
 
     alias ActiveContextsList = Array(ActiveContext)
 

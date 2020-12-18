@@ -8750,7 +8750,7 @@ module Aws::ApiGatewayV2
     alias Authorizer = NamedTuple(
       "AuthorizerCredentialsArn" : String,
       "AuthorizerId" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -8868,7 +8868,7 @@ module Aws::ApiGatewayV2
 
     alias CreateAuthorizerInput = NamedTuple(
       "AuthorizerCredentialsArn" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -8882,7 +8882,7 @@ module Aws::ApiGatewayV2
     alias CreateAuthorizerRequest = NamedTuple(
       "ApiId" : String,
       "AuthorizerCredentialsArn" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -8896,7 +8896,7 @@ module Aws::ApiGatewayV2
     alias CreateAuthorizerResponse = NamedTuple(
       "AuthorizerCredentialsArn" : String,
       "AuthorizerId" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -8964,7 +8964,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfigInput
     )
 
@@ -8984,7 +8984,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfigInput
     )
 
@@ -9006,7 +9006,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfig
     )
 
@@ -9414,7 +9414,7 @@ module Aws::ApiGatewayV2
     alias GetAuthorizerResponse = NamedTuple(
       "AuthorizerCredentialsArn" : String,
       "AuthorizerId" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -9506,7 +9506,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfig
     )
 
@@ -9739,9 +9739,9 @@ module Aws::ApiGatewayV2
       "Warnings" : Array(String)
     )
 
-    alias IntegerWithLengthBetween0And3600 = Int32
+    alias IntegerWithLengthBetween0And3600 = UInt16
 
-    alias IntegerWithLengthBetween50And30000 = Int32
+    alias IntegerWithLengthBetween50And30000 = UInt16
 
     alias IntegerWithLengthBetweenMinus1And86400 = Int32
 
@@ -9763,7 +9763,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfig
     )
 
@@ -10081,7 +10081,7 @@ module Aws::ApiGatewayV2
 
     alias UpdateAuthorizerInput = NamedTuple(
       "AuthorizerCredentialsArn" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -10096,7 +10096,7 @@ module Aws::ApiGatewayV2
       "ApiId" : String,
       "AuthorizerCredentialsArn" : String,
       "AuthorizerId" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -10110,7 +10110,7 @@ module Aws::ApiGatewayV2
     alias UpdateAuthorizerResponse = NamedTuple(
       "AuthorizerCredentialsArn" : String,
       "AuthorizerId" : String,
-      "AuthorizerResultTtlInSeconds" : Int32,
+      "AuthorizerResultTtlInSeconds" : UInt16,
       "AuthorizerType" : String,
       "AuthorizerUri" : String,
       "IdentitySource" : Array(String),
@@ -10174,7 +10174,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfigInput
     )
 
@@ -10195,7 +10195,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfigInput
     )
 
@@ -10217,7 +10217,7 @@ module Aws::ApiGatewayV2
       "RequestParameters" : Hash(String,String),
       "RequestTemplates" : Hash(String,String),
       "TemplateSelectionExpression" : String,
-      "TimeoutInMillis" : Int32,
+      "TimeoutInMillis" : UInt16,
       "TlsConfig" : TlsConfig
     )
 

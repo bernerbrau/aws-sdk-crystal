@@ -1733,7 +1733,7 @@ module Aws::CodeStar
 
     alias ListProjectsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListProjectsResult = NamedTuple(
@@ -1744,7 +1744,7 @@ module Aws::CodeStar
     alias ListResourcesRequest = NamedTuple(
       "projectId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListResourcesResult = NamedTuple(
@@ -1755,7 +1755,7 @@ module Aws::CodeStar
     alias ListTagsForProjectRequest = NamedTuple(
       "id" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTagsForProjectResult = NamedTuple(
@@ -1766,7 +1766,7 @@ module Aws::CodeStar
     alias ListTeamMembersRequest = NamedTuple(
       "projectId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTeamMembersResult = NamedTuple(
@@ -1776,7 +1776,7 @@ module Aws::CodeStar
 
     alias ListUserProfilesRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListUserProfilesResult = NamedTuple(
@@ -1784,7 +1784,7 @@ module Aws::CodeStar
       "nextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias PaginationToken = String
 

@@ -1300,16 +1300,16 @@ module Aws::Textract
       "Confidence" : Float32,
       "Text" : String,
       "TextType" : String,
-      "RowIndex" : Int32,
-      "ColumnIndex" : Int32,
-      "RowSpan" : Int32,
-      "ColumnSpan" : Int32,
+      "RowIndex" : UInt32,
+      "ColumnIndex" : UInt32,
+      "RowSpan" : UInt32,
+      "ColumnSpan" : UInt32,
       "Geometry" : Geometry,
       "Id" : String,
       "Relationships" : Array(Relationship),
       "EntityTypes" : Array(String),
       "SelectionStatus" : String,
-      "Page" : Int32
+      "Page" : UInt32
     )
 
     alias BlockList = Array(Block)
@@ -1349,7 +1349,7 @@ module Aws::Textract
     )
 
     alias DocumentMetadata = NamedTuple(
-      "Pages" : Int32
+      "Pages" : UInt32
     )
 
     alias DocumentTooLargeException = NamedTuple(
@@ -1377,7 +1377,7 @@ module Aws::Textract
 
     alias GetDocumentAnalysisRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -1393,7 +1393,7 @@ module Aws::Textract
 
     alias GetDocumentTextDetectionRequest = NamedTuple(
       "JobId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -1479,7 +1479,7 @@ module Aws::Textract
       
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
     alias NonEmptyString = String
 
@@ -1493,7 +1493,7 @@ module Aws::Textract
       "S3Prefix" : String
     )
 
-    alias Pages = Array(Int32)
+    alias Pages = Array(UInt32)
 
     alias PaginationToken = String
 
@@ -1574,7 +1574,7 @@ module Aws::Textract
       
     )
 
-    alias UInteger = Int32
+    alias UInteger = UInt32
 
     alias UnsupportedDocumentException = NamedTuple(
       
@@ -1582,7 +1582,7 @@ module Aws::Textract
 
     alias Warning = NamedTuple(
       "ErrorCode" : String,
-      "Pages" : Array(Int32)
+      "Pages" : Array(UInt32)
     )
 
     alias Warnings = Array(Warning)

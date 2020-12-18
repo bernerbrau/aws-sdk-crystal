@@ -763,7 +763,7 @@ module Aws::Braket
       "deviceParameters" : String,
       "outputS3Bucket" : String,
       "outputS3KeyPrefix" : String,
-      "shots" : Int64,
+      "shots" : UInt64,
       "tags" : Hash(String,String)
     )
 
@@ -773,7 +773,7 @@ module Aws::Braket
 
     alias CreateQuantumTaskRequestOutputS3KeyPrefixString = String
 
-    alias CreateQuantumTaskRequestShotsLong = Int64
+    alias CreateQuantumTaskRequestShotsLong = UInt64
 
     alias CreateQuantumTaskResponse = NamedTuple(
       "quantumTaskArn" : String
@@ -879,13 +879,13 @@ module Aws::Braket
 
     alias SearchDevicesRequest = NamedTuple(
       "filters" : Array(SearchDevicesFilter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
     alias SearchDevicesRequestFiltersList = Array(SearchDevicesFilter)
 
-    alias SearchDevicesRequestMaxResultsInteger = Int32
+    alias SearchDevicesRequestMaxResultsInteger = UInt8
 
     alias SearchDevicesResponse = NamedTuple(
       "devices" : Array(DeviceSummary),
@@ -904,13 +904,13 @@ module Aws::Braket
 
     alias SearchQuantumTasksRequest = NamedTuple(
       "filters" : Array(SearchQuantumTasksFilter),
-      "maxResults" : Int32,
+      "maxResults" : UInt8,
       "nextToken" : String
     )
 
     alias SearchQuantumTasksRequestFiltersList = Array(SearchQuantumTasksFilter)
 
-    alias SearchQuantumTasksRequestMaxResultsInteger = Int32
+    alias SearchQuantumTasksRequestMaxResultsInteger = UInt8
 
     alias SearchQuantumTasksResponse = NamedTuple(
       "nextToken" : String,

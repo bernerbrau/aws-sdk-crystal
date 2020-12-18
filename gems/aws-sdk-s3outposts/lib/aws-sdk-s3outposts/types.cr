@@ -293,7 +293,7 @@ module Aws::S3Outposts
 
     alias ListEndpointsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListEndpointsResult = NamedTuple(
@@ -301,7 +301,7 @@ module Aws::S3Outposts
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NetworkInterface = NamedTuple(
       "NetworkInterfaceId" : String

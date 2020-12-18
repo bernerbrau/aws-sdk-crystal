@@ -1228,7 +1228,7 @@ module Aws::TimestreamWrite
 
     alias ListDatabasesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDatabasesResponse = NamedTuple(
@@ -1239,7 +1239,7 @@ module Aws::TimestreamWrite
     alias ListTablesRequest = NamedTuple(
       "DatabaseName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTablesResponse = NamedTuple(
@@ -1257,13 +1257,13 @@ module Aws::TimestreamWrite
 
     alias Long = Int64
 
-    alias MagneticStoreRetentionPeriodInDays = Int64
+    alias MagneticStoreRetentionPeriodInDays = UInt32
 
     alias MeasureValueType = String
 
-    alias MemoryStoreRetentionPeriodInHours = Int64
+    alias MemoryStoreRetentionPeriodInHours = UInt16
 
-    alias PaginationLimit = Int32
+    alias PaginationLimit = UInt8
 
     alias Record = NamedTuple(
       "Dimensions" : Array(Dimension),
@@ -1301,8 +1301,8 @@ module Aws::TimestreamWrite
     )
 
     alias RetentionProperties = NamedTuple(
-      "MemoryStoreRetentionPeriodInHours" : Int64,
-      "MagneticStoreRetentionPeriodInDays" : Int64
+      "MemoryStoreRetentionPeriodInHours" : UInt16,
+      "MagneticStoreRetentionPeriodInDays" : UInt32
     )
 
     alias ServiceQuotaExceededException = NamedTuple(

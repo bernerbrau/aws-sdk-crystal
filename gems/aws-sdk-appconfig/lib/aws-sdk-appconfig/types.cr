@@ -2134,8 +2134,8 @@ module Aws::AppConfig
     alias CreateDeploymentStrategyRequest = NamedTuple(
       "Name" : String,
       "Description" : String,
-      "DeploymentDurationInMinutes" : Int32,
-      "FinalBakeTimeInMinutes" : Int32,
+      "DeploymentDurationInMinutes" : UInt16,
+      "FinalBakeTimeInMinutes" : UInt16,
       "GrowthFactor" : Float32,
       "GrowthType" : String,
       "ReplicateTo" : String,
@@ -2193,10 +2193,10 @@ module Aws::AppConfig
       "ConfigurationLocationUri" : String,
       "ConfigurationVersion" : String,
       "Description" : String,
-      "DeploymentDurationInMinutes" : Int32,
+      "DeploymentDurationInMinutes" : UInt16,
       "GrowthType" : String,
       "GrowthFactor" : Float32,
-      "FinalBakeTimeInMinutes" : Int32,
+      "FinalBakeTimeInMinutes" : UInt16,
       "State" : String,
       "EventLog" : Array(DeploymentEvent),
       "PercentageComplete" : Float32,
@@ -2228,10 +2228,10 @@ module Aws::AppConfig
       "Id" : String,
       "Name" : String,
       "Description" : String,
-      "DeploymentDurationInMinutes" : Int32,
+      "DeploymentDurationInMinutes" : UInt16,
       "GrowthType" : String,
       "GrowthFactor" : Float32,
-      "FinalBakeTimeInMinutes" : Int32,
+      "FinalBakeTimeInMinutes" : UInt16,
       "ReplicateTo" : String
     )
 
@@ -2243,10 +2243,10 @@ module Aws::AppConfig
       "DeploymentNumber" : Int32,
       "ConfigurationName" : String,
       "ConfigurationVersion" : String,
-      "DeploymentDurationInMinutes" : Int32,
+      "DeploymentDurationInMinutes" : UInt16,
       "GrowthType" : String,
       "GrowthFactor" : Float32,
-      "FinalBakeTimeInMinutes" : Int32,
+      "FinalBakeTimeInMinutes" : UInt16,
       "State" : String,
       "PercentageComplete" : Float32,
       "StartedAt" : (String | UInt64 | Time)?,
@@ -2357,38 +2357,38 @@ module Aws::AppConfig
     alias Iso8601DateTime = String | UInt64 | Time
 
     alias ListApplicationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListConfigurationProfilesRequest = NamedTuple(
       "ApplicationId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListDeploymentStrategiesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListDeploymentsRequest = NamedTuple(
       "ApplicationId" : String,
       "EnvironmentId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListEnvironmentsRequest = NamedTuple(
       "ApplicationId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
     alias ListHostedConfigurationVersionsRequest = NamedTuple(
       "ApplicationId" : String,
       "ConfigurationProfileId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -2396,9 +2396,9 @@ module Aws::AppConfig
       "ResourceArn" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
-    alias MinutesBetween0And24Hours = Int32
+    alias MinutesBetween0And24Hours = UInt16
 
     alias Monitor = NamedTuple(
       "AlarmArn" : String,
@@ -2499,8 +2499,8 @@ module Aws::AppConfig
     alias UpdateDeploymentStrategyRequest = NamedTuple(
       "DeploymentStrategyId" : String,
       "Description" : String,
-      "DeploymentDurationInMinutes" : Int32,
-      "FinalBakeTimeInMinutes" : Int32,
+      "DeploymentDurationInMinutes" : UInt16,
+      "FinalBakeTimeInMinutes" : UInt16,
       "GrowthFactor" : Float32,
       "GrowthType" : String
     )

@@ -4900,7 +4900,7 @@ module Aws::S3Control
       "ClientRequestToken" : String,
       "Manifest" : JobManifest,
       "Description" : String,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "RoleArn" : String,
       "Tags" : Array(S3Tag)
     )
@@ -5154,7 +5154,7 @@ module Aws::S3Control
       "Status" : String,
       "Manifest" : JobManifest,
       "Operation" : JobOperation,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "ProgressSummary" : JobProgressSummary,
       "StatusUpdateReason" : String,
       "FailureReasons" : Array(JobFailure),
@@ -5183,7 +5183,7 @@ module Aws::S3Control
       "JobId" : String,
       "Description" : String,
       "Operation" : String,
-      "Priority" : Int32,
+      "Priority" : UInt32,
       "Status" : String,
       "CreationTime" : (String | UInt64 | Time)?,
       "TerminationDate" : (String | UInt64 | Time)?,
@@ -5214,9 +5214,9 @@ module Aws::S3Control
       "Fields" : Array(String)
     )
 
-    alias JobNumberOfTasksFailed = Int64
+    alias JobNumberOfTasksFailed = UInt64
 
-    alias JobNumberOfTasksSucceeded = Int64
+    alias JobNumberOfTasksSucceeded = UInt64
 
     alias JobOperation = NamedTuple(
       "LambdaInvoke" : LambdaInvokeOperation,
@@ -5228,12 +5228,12 @@ module Aws::S3Control
       "S3PutObjectRetention" : S3SetObjectRetentionOperation
     )
 
-    alias JobPriority = Int32
+    alias JobPriority = UInt32
 
     alias JobProgressSummary = NamedTuple(
-      "TotalNumberOfTasks" : Int64,
-      "NumberOfTasksSucceeded" : Int64,
-      "NumberOfTasksFailed" : Int64
+      "TotalNumberOfTasks" : UInt64,
+      "NumberOfTasksSucceeded" : UInt64,
+      "NumberOfTasksFailed" : UInt64
     )
 
     alias JobReport = NamedTuple(
@@ -5260,7 +5260,7 @@ module Aws::S3Control
 
     alias JobTerminationDate = String | UInt64 | Time
 
-    alias JobTotalNumberOfTasks = Int64
+    alias JobTotalNumberOfTasks = UInt64
 
     alias KmsKeyArnString = String
 
@@ -5306,7 +5306,7 @@ module Aws::S3Control
       "AccountId" : String,
       "Bucket" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListAccessPointsResult = NamedTuple(
@@ -5318,7 +5318,7 @@ module Aws::S3Control
       "AccountId" : String,
       "JobStatuses" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListJobsResult = NamedTuple(
@@ -5329,7 +5329,7 @@ module Aws::S3Control
     alias ListRegionalBucketsRequest = NamedTuple(
       "AccountId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "OutpostId" : String
     )
 
@@ -5359,7 +5359,7 @@ module Aws::S3Control
 
     alias MaxLength1024String = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias MinStorageBytesPercentage = Float64
 
@@ -5526,7 +5526,7 @@ module Aws::S3Control
 
     alias S3CannedAccessControlList = String
 
-    alias S3ContentLength = Int64
+    alias S3ContentLength = UInt64
 
     alias S3CopyObjectOperation = NamedTuple(
       "TargetResource" : String,
@@ -5547,7 +5547,7 @@ module Aws::S3Control
       "ObjectLockRetainUntilDate" : (String | UInt64 | Time)?
     )
 
-    alias S3ExpirationInDays = Int32
+    alias S3ExpirationInDays = UInt32
 
     alias S3GlacierJobTier = String
 
@@ -5567,7 +5567,7 @@ module Aws::S3Control
     alias S3GranteeTypeIdentifier = String
 
     alias S3InitiateRestoreObjectOperation = NamedTuple(
-      "ExpirationInDays" : Int32,
+      "ExpirationInDays" : UInt32,
       "GlacierJobTier" : String
     )
 
@@ -5591,7 +5591,7 @@ module Aws::S3Control
       "ContentEncoding" : String,
       "ContentLanguage" : String,
       "UserMetadata" : Hash(String,String),
-      "ContentLength" : Int64,
+      "ContentLength" : UInt64,
       "ContentMD5" : String,
       "ContentType" : String,
       "HttpExpiresDate" : (String | UInt64 | Time)?,
@@ -5657,7 +5657,7 @@ module Aws::S3Control
 
     alias SelectionCriteria = NamedTuple(
       "Delimiter" : String,
-      "MaxDepth" : Int32,
+      "MaxDepth" : UInt8,
       "MinStorageBytesPercentage" : Float64
     )
 
@@ -5693,7 +5693,7 @@ module Aws::S3Control
 
     alias StorageLensPrefixLevelDelimiter = String
 
-    alias StorageLensPrefixLevelMaxDepth = Int32
+    alias StorageLensPrefixLevelMaxDepth = UInt8
 
     alias StorageLensTag = NamedTuple(
       "Key" : String,
@@ -5739,12 +5739,12 @@ module Aws::S3Control
     alias UpdateJobPriorityRequest = NamedTuple(
       "AccountId" : String,
       "JobId" : String,
-      "Priority" : Int32
+      "Priority" : UInt32
     )
 
     alias UpdateJobPriorityResult = NamedTuple(
       "JobId" : String,
-      "Priority" : Int32
+      "Priority" : UInt32
     )
 
     alias UpdateJobStatusRequest = NamedTuple(

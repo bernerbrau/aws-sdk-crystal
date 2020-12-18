@@ -864,7 +864,7 @@ module Aws::DynamoDBStreams
 
     alias DescribeStreamInput = NamedTuple(
       "StreamArn" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "ExclusiveStartShardId" : String
     )
 
@@ -880,7 +880,7 @@ module Aws::DynamoDBStreams
 
     alias GetRecordsInput = NamedTuple(
       "ShardIterator" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias GetRecordsOutput = NamedTuple(
@@ -927,7 +927,7 @@ module Aws::DynamoDBStreams
 
     alias ListStreamsInput = NamedTuple(
       "TableName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "ExclusiveStartStreamArn" : String
     )
 
@@ -946,9 +946,9 @@ module Aws::DynamoDBStreams
 
     alias OperationType = String
 
-    alias PositiveIntegerObject = Int32
+    alias PositiveIntegerObject = UInt32
 
-    alias PositiveLongObject = Int64
+    alias PositiveLongObject = UInt64
 
     alias Record = NamedTuple(
       "eventID" : String,
@@ -1015,7 +1015,7 @@ module Aws::DynamoDBStreams
       "NewImage" : Hash(String,AttributeValue),
       "OldImage" : Hash(String,AttributeValue),
       "SequenceNumber" : String,
-      "SizeBytes" : Int64,
+      "SizeBytes" : UInt64,
       "StreamViewType" : String
     )
 

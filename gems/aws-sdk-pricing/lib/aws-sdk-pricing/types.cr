@@ -373,13 +373,13 @@ module Aws::Pricing
 
     alias AttributeValueList = Array(AttributeValue)
 
-    alias BoxedInteger = Int32
+    alias BoxedInteger = UInt8
 
     alias DescribeServicesRequest = NamedTuple(
       "ServiceCode" : String,
       "FormatVersion" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias DescribeServicesResponse = NamedTuple(
@@ -406,7 +406,7 @@ module Aws::Pricing
       "ServiceCode" : String,
       "AttributeName" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetAttributeValuesResponse = NamedTuple(
@@ -419,7 +419,7 @@ module Aws::Pricing
       "Filters" : Array(Filter),
       "FormatVersion" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias GetProductsResponse = NamedTuple(

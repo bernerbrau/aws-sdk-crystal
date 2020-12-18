@@ -350,7 +350,7 @@ module Aws::CostandUsageReportService
     alias DeleteResponseMessage = String
 
     alias DescribeReportDefinitionsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -371,7 +371,7 @@ module Aws::CostandUsageReportService
       "Message" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias ModifyReportDefinitionRequest = NamedTuple(
       "ReportName" : String,

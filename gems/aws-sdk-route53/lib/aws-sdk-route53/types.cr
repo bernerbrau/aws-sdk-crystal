@@ -7553,7 +7553,7 @@ module Aws::Route53
 
     alias AccountLimit = NamedTuple(
       "Type" : String,
-      "Value" : Int64
+      "Value" : UInt64
     )
 
     alias AccountLimitType = String
@@ -7633,10 +7633,10 @@ module Aws::Route53
     alias ChildHealthCheckList = Array(String)
 
     alias CloudWatchAlarmConfiguration = NamedTuple(
-      "EvaluationPeriods" : Int32,
+      "EvaluationPeriods" : UInt32,
       "Threshold" : Float64,
       "ComparisonOperator" : String,
-      "Period" : Int32,
+      "Period" : UInt32,
       "MetricName" : String,
       "Namespace" : String,
       "Statistic" : String,
@@ -7710,9 +7710,9 @@ module Aws::Route53
     alias CreateTrafficPolicyInstanceRequest = NamedTuple(
       "HostedZoneId" : String,
       "Name" : String,
-      "TTL" : Int64,
+      "TTL" : UInt32,
       "TrafficPolicyId" : String,
-      "TrafficPolicyVersion" : Int32
+      "TrafficPolicyVersion" : UInt16
     )
 
     alias CreateTrafficPolicyInstanceResponse = NamedTuple(
@@ -7828,7 +7828,7 @@ module Aws::Route53
 
     alias DeleteTrafficPolicyRequest = NamedTuple(
       "Id" : String,
-      "Version" : Int32
+      "Version" : UInt16
     )
 
     alias DeleteTrafficPolicyResponse = NamedTuple(
@@ -7873,9 +7873,9 @@ module Aws::Route53
 
     alias ErrorMessages = Array(String)
 
-    alias EvaluationPeriods = Int32
+    alias EvaluationPeriods = UInt32
 
-    alias FailureThreshold = Int32
+    alias FailureThreshold = UInt8
 
     alias FullyQualifiedDomainName = String
 
@@ -7914,7 +7914,7 @@ module Aws::Route53
 
     alias GetAccountLimitResponse = NamedTuple(
       "Limit" : AccountLimit,
-      "Count" : Int64
+      "Count" : UInt64
     )
 
     alias GetChangeRequest = NamedTuple(
@@ -7990,7 +7990,7 @@ module Aws::Route53
 
     alias GetHostedZoneLimitResponse = NamedTuple(
       "Limit" : HostedZoneLimit,
-      "Count" : Int64
+      "Count" : UInt64
     )
 
     alias GetHostedZoneRequest = NamedTuple(
@@ -8018,7 +8018,7 @@ module Aws::Route53
 
     alias GetReusableDelegationSetLimitResponse = NamedTuple(
       "Limit" : ReusableDelegationSetLimit,
-      "Count" : Int64
+      "Count" : UInt64
     )
 
     alias GetReusableDelegationSetRequest = NamedTuple(
@@ -8047,7 +8047,7 @@ module Aws::Route53
 
     alias GetTrafficPolicyRequest = NamedTuple(
       "Id" : String,
-      "Version" : Int32
+      "Version" : UInt16
     )
 
     alias GetTrafficPolicyResponse = NamedTuple(
@@ -8059,7 +8059,7 @@ module Aws::Route53
       "CallerReference" : String,
       "LinkedService" : LinkedService,
       "HealthCheckConfig" : HealthCheckConfig,
-      "HealthCheckVersion" : Int64,
+      "HealthCheckVersion" : UInt64,
       "CloudWatchAlarmConfiguration" : CloudWatchAlarmConfiguration
     )
 
@@ -8069,17 +8069,17 @@ module Aws::Route53
 
     alias HealthCheckConfig = NamedTuple(
       "IPAddress" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Type" : String,
       "ResourcePath" : String,
       "FullyQualifiedDomainName" : String,
       "SearchString" : String,
-      "RequestInterval" : Int32,
-      "FailureThreshold" : Int32,
+      "RequestInterval" : UInt8,
+      "FailureThreshold" : UInt8,
       "MeasureLatency" : Bool,
       "Inverted" : Bool,
       "Disabled" : Bool,
-      "HealthThreshold" : Int32,
+      "HealthThreshold" : UInt16,
       "ChildHealthChecks" : Array(String),
       "EnableSNI" : Bool,
       "Regions" : Array(String),
@@ -8111,7 +8111,7 @@ module Aws::Route53
 
     alias HealthCheckType = String
 
-    alias HealthCheckVersion = Int64
+    alias HealthCheckVersion = UInt64
 
     alias HealthCheckVersionMismatch = NamedTuple(
       "message" : String
@@ -8119,7 +8119,7 @@ module Aws::Route53
 
     alias HealthChecks = Array(HealthCheck)
 
-    alias HealthThreshold = Int32
+    alias HealthThreshold = UInt16
 
     alias HostedZone = NamedTuple(
       "Id" : String,
@@ -8143,7 +8143,7 @@ module Aws::Route53
 
     alias HostedZoneLimit = NamedTuple(
       "Type" : String,
-      "Value" : Int64
+      "Value" : UInt64
     )
 
     alias HostedZoneLimitType = String
@@ -8230,7 +8230,7 @@ module Aws::Route53
       "message" : String
     )
 
-    alias LimitValue = Int64
+    alias LimitValue = UInt64
 
     alias LimitsExceeded = NamedTuple(
       "message" : String
@@ -8401,7 +8401,7 @@ module Aws::Route53
 
     alias ListTrafficPolicyInstancesByPolicyRequest = NamedTuple(
       "TrafficPolicyId" : String,
-      "TrafficPolicyVersion" : Int32,
+      "TrafficPolicyVersion" : UInt16,
       "HostedZoneIdMarker" : String,
       "TrafficPolicyInstanceNameMarker" : String,
       "TrafficPolicyInstanceTypeMarker" : String,
@@ -8520,9 +8520,9 @@ module Aws::Route53
 
     alias PaginationToken = String
 
-    alias Period = Int32
+    alias Period = UInt32
 
-    alias Port = Int32
+    alias Port = UInt16
 
     alias PriorRequestNotComplete = NamedTuple(
       "message" : String
@@ -8554,7 +8554,7 @@ module Aws::Route53
 
     alias RecordDataEntry = String
 
-    alias RequestInterval = Int32
+    alias RequestInterval = UInt8
 
     alias ResettableElementName = String
 
@@ -8574,12 +8574,12 @@ module Aws::Route53
       "Name" : String,
       "Type" : String,
       "SetIdentifier" : String,
-      "Weight" : Int64,
+      "Weight" : UInt8,
       "Region" : String,
       "GeoLocation" : GeoLocation,
       "Failover" : String,
       "MultiValueAnswer" : Bool,
-      "TTL" : Int64,
+      "TTL" : UInt32,
       "ResourceRecords" : Array(ResourceRecord),
       "AliasTarget" : AliasTarget,
       "HealthCheckId" : String,
@@ -8594,7 +8594,7 @@ module Aws::Route53
 
     alias ResourceRecordSetRegion = String
 
-    alias ResourceRecordSetWeight = Int64
+    alias ResourceRecordSetWeight = UInt8
 
     alias ResourceRecordSets = Array(ResourceRecordSet)
 
@@ -8612,7 +8612,7 @@ module Aws::Route53
 
     alias ReusableDelegationSetLimit = NamedTuple(
       "Type" : String,
-      "Value" : Int64
+      "Value" : UInt64
     )
 
     alias ReusableDelegationSetLimitType = String
@@ -8632,7 +8632,7 @@ module Aws::Route53
 
     alias SubnetMask = String
 
-    alias TTL = Int64
+    alias TTL = UInt32
 
     alias Tag = NamedTuple(
       "Key" : String,
@@ -8707,7 +8707,7 @@ module Aws::Route53
 
     alias TrafficPolicy = NamedTuple(
       "Id" : String,
-      "Version" : Int32,
+      "Version" : UInt16,
       "Name" : String,
       "Type" : String,
       "Document" : String,
@@ -8732,11 +8732,11 @@ module Aws::Route53
       "Id" : String,
       "HostedZoneId" : String,
       "Name" : String,
-      "TTL" : Int64,
+      "TTL" : UInt32,
       "State" : String,
       "Message" : String,
       "TrafficPolicyId" : String,
-      "TrafficPolicyVersion" : Int32,
+      "TrafficPolicyVersion" : UInt16,
       "TrafficPolicyType" : String
     )
 
@@ -8760,11 +8760,11 @@ module Aws::Route53
       "Id" : String,
       "Name" : String,
       "Type" : String,
-      "LatestVersion" : Int32,
-      "TrafficPolicyCount" : Int32
+      "LatestVersion" : UInt16,
+      "TrafficPolicyCount" : UInt16
     )
 
-    alias TrafficPolicyVersion = Int32
+    alias TrafficPolicyVersion = UInt16
 
     alias TrafficPolicyVersionMarker = String
 
@@ -8772,16 +8772,16 @@ module Aws::Route53
 
     alias UpdateHealthCheckRequest = NamedTuple(
       "HealthCheckId" : String,
-      "HealthCheckVersion" : Int64,
+      "HealthCheckVersion" : UInt64,
       "IPAddress" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "ResourcePath" : String,
       "FullyQualifiedDomainName" : String,
       "SearchString" : String,
-      "FailureThreshold" : Int32,
+      "FailureThreshold" : UInt8,
       "Inverted" : Bool,
       "Disabled" : Bool,
-      "HealthThreshold" : Int32,
+      "HealthThreshold" : UInt16,
       "ChildHealthChecks" : Array(String),
       "EnableSNI" : Bool,
       "Regions" : Array(String),
@@ -8805,7 +8805,7 @@ module Aws::Route53
 
     alias UpdateTrafficPolicyCommentRequest = NamedTuple(
       "Id" : String,
-      "Version" : Int32,
+      "Version" : UInt16,
       "Comment" : String
     )
 
@@ -8815,16 +8815,16 @@ module Aws::Route53
 
     alias UpdateTrafficPolicyInstanceRequest = NamedTuple(
       "Id" : String,
-      "TTL" : Int64,
+      "TTL" : UInt32,
       "TrafficPolicyId" : String,
-      "TrafficPolicyVersion" : Int32
+      "TrafficPolicyVersion" : UInt16
     )
 
     alias UpdateTrafficPolicyInstanceResponse = NamedTuple(
       "TrafficPolicyInstance" : TrafficPolicyInstance
     )
 
-    alias UsageCount = Int64
+    alias UsageCount = UInt64
 
     alias VPC = NamedTuple(
       "VPCRegion" : String,

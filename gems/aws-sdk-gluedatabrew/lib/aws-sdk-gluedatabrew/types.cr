@@ -3448,7 +3448,7 @@ module Aws::GlueDataBrew
 
     alias ColumnNameList = Array(String)
 
-    alias ColumnRange = Int32
+    alias ColumnRange = UInt8
 
     alias CompressionFormat = String
 
@@ -3486,11 +3486,11 @@ module Aws::GlueDataBrew
       "Name" : String,
       "LogSubscription" : String,
       "MaxCapacity" : Int32,
-      "MaxRetries" : Int32,
+      "MaxRetries" : UInt32,
       "OutputLocation" : S3Location,
       "RoleArn" : String,
       "Tags" : Hash(String,String),
-      "Timeout" : Int32
+      "Timeout" : UInt32
     )
 
     alias CreateProfileJobResponse = NamedTuple(
@@ -3517,13 +3517,13 @@ module Aws::GlueDataBrew
       "Name" : String,
       "LogSubscription" : String,
       "MaxCapacity" : Int32,
-      "MaxRetries" : Int32,
+      "MaxRetries" : UInt32,
       "Outputs" : Array(Output),
       "ProjectName" : String,
       "RecipeReference" : RecipeReference,
       "RoleArn" : String,
       "Tags" : Hash(String,String),
-      "Timeout" : Int32
+      "Timeout" : UInt32
     )
 
     alias CreateRecipeJobResponse = NamedTuple(
@@ -3660,14 +3660,14 @@ module Aws::GlueDataBrew
       "LastModifiedDate" : (String | UInt64 | Time)?,
       "LogSubscription" : String,
       "MaxCapacity" : Int32,
-      "MaxRetries" : Int32,
+      "MaxRetries" : UInt32,
       "Outputs" : Array(Output),
       "ProjectName" : String,
       "RecipeReference" : RecipeReference,
       "ResourceArn" : String,
       "RoleArn" : String,
       "Tags" : Hash(String,String),
-      "Timeout" : Int32
+      "Timeout" : UInt32
     )
 
     alias DescribeProjectRequest = NamedTuple(
@@ -3736,7 +3736,7 @@ module Aws::GlueDataBrew
 
     alias ExcelOptions = NamedTuple(
       "SheetNames" : Array(String),
-      "SheetIndexes" : Array(Int32)
+      "SheetIndexes" : Array(UInt8)
     )
 
     alias ExecutionTime = Int32
@@ -3770,13 +3770,13 @@ module Aws::GlueDataBrew
       "LastModifiedDate" : (String | UInt64 | Time)?,
       "LogSubscription" : String,
       "MaxCapacity" : Int32,
-      "MaxRetries" : Int32,
+      "MaxRetries" : UInt32,
       "Outputs" : Array(Output),
       "ProjectName" : String,
       "RecipeReference" : RecipeReference,
       "ResourceArn" : String,
       "RoleArn" : String,
-      "Timeout" : Int32,
+      "Timeout" : UInt32,
       "Tags" : Hash(String,String)
     )
 
@@ -3822,7 +3822,7 @@ module Aws::GlueDataBrew
     alias LastModifiedBy = String
 
     alias ListDatasetsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3833,7 +3833,7 @@ module Aws::GlueDataBrew
 
     alias ListJobRunsRequest = NamedTuple(
       "Name" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3844,7 +3844,7 @@ module Aws::GlueDataBrew
 
     alias ListJobsRequest = NamedTuple(
       "DatasetName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "ProjectName" : String
     )
@@ -3856,7 +3856,7 @@ module Aws::GlueDataBrew
 
     alias ListProjectsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListProjectsResponse = NamedTuple(
@@ -3865,7 +3865,7 @@ module Aws::GlueDataBrew
     )
 
     alias ListRecipeVersionsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "Name" : String
     )
@@ -3876,7 +3876,7 @@ module Aws::GlueDataBrew
     )
 
     alias ListRecipesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "RecipeVersion" : String
     )
@@ -3888,7 +3888,7 @@ module Aws::GlueDataBrew
 
     alias ListSchedulesRequest = NamedTuple(
       "JobName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -3911,9 +3911,9 @@ module Aws::GlueDataBrew
 
     alias MaxCapacity = Int32
 
-    alias MaxResults100 = Int32
+    alias MaxResults100 = UInt8
 
-    alias MaxRetries = Int32
+    alias MaxRetries = UInt32
 
     alias Message = String
 
@@ -4044,11 +4044,11 @@ module Aws::GlueDataBrew
     )
 
     alias Sample = NamedTuple(
-      "Size" : Int32,
+      "Size" : UInt16,
       "Type" : String
     )
 
-    alias SampleSize = Int32
+    alias SampleSize = UInt16
 
     alias SampleType = String
 
@@ -4073,7 +4073,7 @@ module Aws::GlueDataBrew
       "Preview" : Bool,
       "Name" : String,
       "RecipeStep" : RecipeStep,
-      "StepIndex" : Int32,
+      "StepIndex" : UInt32,
       "ClientSessionId" : String,
       "ViewFrame" : ViewFrame
     )
@@ -4090,9 +4090,9 @@ module Aws::GlueDataBrew
 
     alias SessionStatus = String
 
-    alias SheetIndex = Int32
+    alias SheetIndex = UInt8
 
-    alias SheetIndexList = Array(Int32)
+    alias SheetIndexList = Array(UInt8)
 
     alias SheetName = String
 
@@ -4100,7 +4100,7 @@ module Aws::GlueDataBrew
 
     alias Source = String
 
-    alias StartColumnIndex = Int32
+    alias StartColumnIndex = UInt32
 
     alias StartJobRunRequest = NamedTuple(
       "Name" : String
@@ -4122,7 +4122,7 @@ module Aws::GlueDataBrew
 
     alias StartedBy = String
 
-    alias StepIndex = Int32
+    alias StepIndex = UInt32
 
     alias StopJobRunRequest = NamedTuple(
       "Name" : String,
@@ -4154,7 +4154,7 @@ module Aws::GlueDataBrew
 
     alias TargetColumn = String
 
-    alias Timeout = Int32
+    alias Timeout = UInt32
 
     alias UntagResourceRequest = NamedTuple(
       "ResourceArn" : String,
@@ -4181,10 +4181,10 @@ module Aws::GlueDataBrew
       "Name" : String,
       "LogSubscription" : String,
       "MaxCapacity" : Int32,
-      "MaxRetries" : Int32,
+      "MaxRetries" : UInt32,
       "OutputLocation" : S3Location,
       "RoleArn" : String,
-      "Timeout" : Int32
+      "Timeout" : UInt32
     )
 
     alias UpdateProfileJobResponse = NamedTuple(
@@ -4208,10 +4208,10 @@ module Aws::GlueDataBrew
       "Name" : String,
       "LogSubscription" : String,
       "MaxCapacity" : Int32,
-      "MaxRetries" : Int32,
+      "MaxRetries" : UInt32,
       "Outputs" : Array(Output),
       "RoleArn" : String,
-      "Timeout" : Int32
+      "Timeout" : UInt32
     )
 
     alias UpdateRecipeJobResponse = NamedTuple(
@@ -4243,8 +4243,8 @@ module Aws::GlueDataBrew
     )
 
     alias ViewFrame = NamedTuple(
-      "StartColumnIndex" : Int32,
-      "ColumnRange" : Int32,
+      "StartColumnIndex" : UInt32,
+      "ColumnRange" : UInt8,
       "HiddenColumns" : Array(String)
     )
   end

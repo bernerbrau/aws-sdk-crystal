@@ -2443,7 +2443,7 @@ module Aws::CodeGuruProfiler
 
     alias GetFindingsReportAccountSummaryRequest = NamedTuple(
       "dailyReportsOnly" : Bool,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -2472,7 +2472,7 @@ module Aws::CodeGuruProfiler
     alias GetProfileRequest = NamedTuple(
       "accept" : String,
       "endTime" : (String | UInt64 | Time)?,
-      "maxDepth" : Int32,
+      "maxDepth" : UInt16,
       "period" : String,
       "profilingGroupName" : String,
       "startTime" : (String | UInt64 | Time)?
@@ -2508,7 +2508,7 @@ module Aws::CodeGuruProfiler
     alias ListFindingsReportsRequest = NamedTuple(
       "dailyReportsOnly" : Bool,
       "endTime" : String | UInt64 | Time,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String,
       "profilingGroupName" : String,
       "startTime" : String | UInt64 | Time
@@ -2523,7 +2523,7 @@ module Aws::CodeGuruProfiler
 
     alias ListProfileTimesRequest = NamedTuple(
       "endTime" : String | UInt64 | Time,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String,
       "orderBy" : String,
       "period" : String,
@@ -2538,7 +2538,7 @@ module Aws::CodeGuruProfiler
 
     alias ListProfilingGroupsRequest = NamedTuple(
       "includeDescription" : Bool,
-      "maxResults" : Int32,
+      "maxResults" : UInt16,
       "nextToken" : String
     )
 
@@ -2566,9 +2566,9 @@ module Aws::CodeGuruProfiler
 
     alias Matches = Array(Match)
 
-    alias MaxDepth = Int32
+    alias MaxDepth = UInt16
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias Metadata = Hash(String,String)
 

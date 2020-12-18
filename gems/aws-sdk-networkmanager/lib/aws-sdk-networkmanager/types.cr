@@ -2789,7 +2789,7 @@ module Aws::NetworkManager
 
     alias DescribeGlobalNetworksRequest = NamedTuple(
       "GlobalNetworkIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2851,7 +2851,7 @@ module Aws::NetworkManager
       "GlobalNetworkId" : String,
       "ConnectionIds" : Array(String),
       "DeviceId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2863,7 +2863,7 @@ module Aws::NetworkManager
     alias GetCustomerGatewayAssociationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "CustomerGatewayArns" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2876,7 +2876,7 @@ module Aws::NetworkManager
       "GlobalNetworkId" : String,
       "DeviceIds" : Array(String),
       "SiteId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2889,7 +2889,7 @@ module Aws::NetworkManager
       "GlobalNetworkId" : String,
       "DeviceId" : String,
       "LinkId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2904,7 +2904,7 @@ module Aws::NetworkManager
       "SiteId" : String,
       "Type" : String,
       "Provider" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2916,7 +2916,7 @@ module Aws::NetworkManager
     alias GetSitesRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "SiteIds" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2928,7 +2928,7 @@ module Aws::NetworkManager
     alias GetTransitGatewayConnectPeerAssociationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "TransitGatewayConnectPeerArns" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -2940,7 +2940,7 @@ module Aws::NetworkManager
     alias GetTransitGatewayRegistrationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "TransitGatewayArns" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String
     )
 
@@ -3012,7 +3012,7 @@ module Aws::NetworkManager
       "Longitude" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias RegisterTransitGatewayRequest = NamedTuple(
       "GlobalNetworkId" : String,

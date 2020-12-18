@@ -3388,11 +3388,11 @@ module Aws::LocationService
     alias LinearRings = Array(Array(Array(Float64)))
 
     alias ListGeofenceCollectionsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias ListGeofenceCollectionsRequestMaxResultsInteger = Int32
+    alias ListGeofenceCollectionsRequestMaxResultsInteger = UInt8
 
     alias ListGeofenceCollectionsResponse = NamedTuple(
       "Entries" : Array(ListGeofenceCollectionsResponseEntry),
@@ -3429,11 +3429,11 @@ module Aws::LocationService
     )
 
     alias ListMapsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias ListMapsRequestMaxResultsInteger = Int32
+    alias ListMapsRequestMaxResultsInteger = UInt8
 
     alias ListMapsResponse = NamedTuple(
       "Entries" : Array(ListMapsResponseEntry),
@@ -3451,11 +3451,11 @@ module Aws::LocationService
     alias ListMapsResponseEntryList = Array(ListMapsResponseEntry)
 
     alias ListPlaceIndexesRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias ListPlaceIndexesRequestMaxResultsInteger = Int32
+    alias ListPlaceIndexesRequestMaxResultsInteger = UInt8
 
     alias ListPlaceIndexesResponse = NamedTuple(
       "Entries" : Array(ListPlaceIndexesResponseEntry),
@@ -3473,12 +3473,12 @@ module Aws::LocationService
     alias ListPlaceIndexesResponseEntryList = Array(ListPlaceIndexesResponseEntry)
 
     alias ListTrackerConsumersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "TrackerName" : String
     )
 
-    alias ListTrackerConsumersRequestMaxResultsInteger = Int32
+    alias ListTrackerConsumersRequestMaxResultsInteger = UInt8
 
     alias ListTrackerConsumersResponse = NamedTuple(
       "ConsumerArns" : Array(String),
@@ -3486,11 +3486,11 @@ module Aws::LocationService
     )
 
     alias ListTrackersRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
-    alias ListTrackersRequestMaxResultsInteger = Int32
+    alias ListTrackersRequestMaxResultsInteger = UInt8
 
     alias ListTrackersResponse = NamedTuple(
       "Entries" : Array(ListTrackersResponseEntry),
@@ -3529,7 +3529,7 @@ module Aws::LocationService
       "Point" : Array(Float64)
     )
 
-    alias PlaceIndexSearchResultLimit = Int32
+    alias PlaceIndexSearchResultLimit = UInt8
 
     alias Position = Array(Float64)
 
@@ -3569,7 +3569,7 @@ module Aws::LocationService
 
     alias SearchPlaceIndexForPositionRequest = NamedTuple(
       "IndexName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Position" : Array(Float64)
     )
 
@@ -3580,7 +3580,7 @@ module Aws::LocationService
 
     alias SearchPlaceIndexForPositionSummary = NamedTuple(
       "DataSource" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Position" : Array(Float64)
     )
 
@@ -3589,7 +3589,7 @@ module Aws::LocationService
       "FilterBBox" : Array(Float64),
       "FilterCountries" : Array(String),
       "IndexName" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Text" : String
     )
 
@@ -3603,7 +3603,7 @@ module Aws::LocationService
       "DataSource" : String,
       "FilterBBox" : Array(Float64),
       "FilterCountries" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "ResultBBox" : Array(Float64),
       "Text" : String
     )

@@ -943,7 +943,7 @@ module Aws::ResourceGroupsTaggingAPI
       "ResourceTypeFilters" : Array(String),
       "TagKeyFilters" : Array(String),
       "GroupBy" : Array(String),
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "PaginationToken" : String
     )
 
@@ -1002,7 +1002,7 @@ module Aws::ResourceGroupsTaggingAPI
 
     alias LastUpdated = String
 
-    alias MaxResultsGetComplianceSummary = Int32
+    alias MaxResultsGetComplianceSummary = UInt16
 
     alias NonCompliantResources = Int64
 

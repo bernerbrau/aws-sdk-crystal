@@ -4069,7 +4069,7 @@ module Aws::FraudDetector
     alias DescribeDetectorRequest = NamedTuple(
       "detectorId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt16
     )
 
     alias DescribeDetectorResult = NamedTuple(
@@ -4084,7 +4084,7 @@ module Aws::FraudDetector
       "modelVersionNumber" : String,
       "modelType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias DescribeModelVersionsResult = NamedTuple(
@@ -4103,7 +4103,7 @@ module Aws::FraudDetector
 
     alias DetectorList = Array(Detector)
 
-    alias DetectorVersionMaxResults = Int32
+    alias DetectorVersionMaxResults = UInt16
 
     alias DetectorVersionStatus = String
 
@@ -4116,7 +4116,7 @@ module Aws::FraudDetector
 
     alias DetectorVersionSummaryList = Array(DetectorVersionSummary)
 
-    alias DetectorsMaxResults = Int32
+    alias DetectorsMaxResults = UInt8
 
     alias Entity = NamedTuple(
       "entityType" : String,
@@ -4165,7 +4165,7 @@ module Aws::FraudDetector
 
     alias ExternalModelList = Array(ExternalModel)
 
-    alias ExternalModelsMaxResults = Int32
+    alias ExternalModelsMaxResults = UInt8
 
     alias FieldValidationMessage = NamedTuple(
       "fieldName" : String,
@@ -4203,7 +4203,7 @@ module Aws::FraudDetector
     alias GetDetectorsRequest = NamedTuple(
       "detectorId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetDetectorsResult = NamedTuple(
@@ -4214,7 +4214,7 @@ module Aws::FraudDetector
     alias GetEntityTypesRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetEntityTypesResult = NamedTuple(
@@ -4241,7 +4241,7 @@ module Aws::FraudDetector
     alias GetEventTypesRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetEventTypesResult = NamedTuple(
@@ -4252,7 +4252,7 @@ module Aws::FraudDetector
     alias GetExternalModelsRequest = NamedTuple(
       "modelEndpoint" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetExternalModelsResult = NamedTuple(
@@ -4267,7 +4267,7 @@ module Aws::FraudDetector
     alias GetLabelsRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetLabelsResult = NamedTuple(
@@ -4296,7 +4296,7 @@ module Aws::FraudDetector
       "modelId" : String,
       "modelType" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetModelsResult = NamedTuple(
@@ -4307,7 +4307,7 @@ module Aws::FraudDetector
     alias GetOutcomesRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetOutcomesResult = NamedTuple(
@@ -4320,7 +4320,7 @@ module Aws::FraudDetector
       "detectorId" : String,
       "ruleVersion" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetRulesResult = NamedTuple(
@@ -4331,7 +4331,7 @@ module Aws::FraudDetector
     alias GetVariablesRequest = NamedTuple(
       "name" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias GetVariablesResult = NamedTuple(
@@ -4376,7 +4376,7 @@ module Aws::FraudDetector
     alias ListTagsForResourceRequest = NamedTuple(
       "resourceARN" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTagsForResourceResult = NamedTuple(
@@ -4474,7 +4474,7 @@ module Aws::FraudDetector
 
     alias OutcomeList = Array(Outcome)
 
-    alias OutcomesMaxResults = Int32
+    alias OutcomesMaxResults = UInt8
 
     alias PutDetectorRequest = NamedTuple(
       "detectorId" : String,
@@ -4586,7 +4586,7 @@ module Aws::FraudDetector
       "outcomes" : Array(String)
     )
 
-    alias RulesMaxResults = Int32
+    alias RulesMaxResults = UInt8
 
     alias Tag = NamedTuple(
       "key" : String,
@@ -4602,7 +4602,7 @@ module Aws::FraudDetector
       
     )
 
-    alias TagsMaxResults = Int32
+    alias TagsMaxResults = UInt8
 
     alias ThrottlingException = NamedTuple(
       "message" : String
@@ -4768,7 +4768,7 @@ module Aws::FraudDetector
 
     alias VariableList = Array(Variable)
 
-    alias VariablesMaxResults = Int32
+    alias VariablesMaxResults = UInt8
 
     alias blob = String | Array(UInt8) | IO
 
@@ -4778,11 +4778,11 @@ module Aws::FraudDetector
 
     alias entityTypeList = Array(EntityType)
 
-    alias entityTypesMaxResults = Int32
+    alias entityTypesMaxResults = UInt8
 
     alias eventTypeList = Array(EventType)
 
-    alias eventTypesMaxResults = Int32
+    alias eventTypesMaxResults = UInt8
 
     alias fieldValidationMessageList = Array(FieldValidationMessage)
 
@@ -4804,7 +4804,7 @@ module Aws::FraudDetector
 
     alias labelMapper = Hash(String,Array(String))
 
-    alias labelsMaxResults = Int32
+    alias labelsMaxResults = UInt8
 
     alias listOfEntities = Array(Entity)
 
@@ -4816,7 +4816,7 @@ module Aws::FraudDetector
 
     alias modelVersionDetailList = Array(ModelVersionDetail)
 
-    alias modelsMaxPageSize = Int32
+    alias modelsMaxPageSize = UInt8
 
     alias nonEmptyString = String
 

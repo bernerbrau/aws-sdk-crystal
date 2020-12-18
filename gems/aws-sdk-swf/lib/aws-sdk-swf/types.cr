@@ -7657,7 +7657,7 @@ module Aws::SWF
       "decisionTaskCompletedEventId" : Int64
     )
 
-    alias Count = Int32
+    alias Count = UInt32
 
     alias CountClosedWorkflowExecutionsInput = NamedTuple(
       "domain" : String,
@@ -7870,7 +7870,7 @@ module Aws::SWF
       "domain" : String,
       "execution" : WorkflowExecution,
       "nextPageToken" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool
     )
 
@@ -7988,7 +7988,7 @@ module Aws::SWF
       "name" : String,
       "registrationStatus" : String,
       "nextPageToken" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool
     )
 
@@ -8001,14 +8001,14 @@ module Aws::SWF
       "typeFilter" : WorkflowTypeFilter,
       "tagFilter" : TagFilter,
       "nextPageToken" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool
     )
 
     alias ListDomainsInput = NamedTuple(
       "nextPageToken" : String,
       "registrationStatus" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool
     )
 
@@ -8018,7 +8018,7 @@ module Aws::SWF
       "typeFilter" : WorkflowTypeFilter,
       "tagFilter" : TagFilter,
       "nextPageToken" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool,
       "executionFilter" : WorkflowExecutionFilter
     )
@@ -8036,7 +8036,7 @@ module Aws::SWF
       "name" : String,
       "registrationStatus" : String,
       "nextPageToken" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool
     )
 
@@ -8050,18 +8050,18 @@ module Aws::SWF
 
     alias Name = String
 
-    alias OpenDecisionTasksCount = Int32
+    alias OpenDecisionTasksCount = UInt8
 
     alias OperationNotPermittedFault = NamedTuple(
       "message" : String
     )
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias PageToken = String
 
     alias PendingTaskCount = NamedTuple(
-      "count" : Int32,
+      "count" : UInt32,
       "truncated" : Bool
     )
 
@@ -8076,7 +8076,7 @@ module Aws::SWF
       "taskList" : TaskList,
       "identity" : String,
       "nextPageToken" : String,
-      "maximumPageSize" : Int32,
+      "maximumPageSize" : UInt16,
       "reverseOrder" : Bool
     )
 
@@ -8515,7 +8515,7 @@ module Aws::SWF
     )
 
     alias WorkflowExecutionCount = NamedTuple(
-      "count" : Int32,
+      "count" : UInt32,
       "truncated" : Bool
     )
 
@@ -8557,11 +8557,11 @@ module Aws::SWF
     )
 
     alias WorkflowExecutionOpenCounts = NamedTuple(
-      "openActivityTasks" : Int32,
-      "openDecisionTasks" : Int32,
-      "openTimers" : Int32,
-      "openChildWorkflowExecutions" : Int32,
-      "openLambdaFunctions" : Int32
+      "openActivityTasks" : UInt32,
+      "openDecisionTasks" : UInt8,
+      "openTimers" : UInt32,
+      "openChildWorkflowExecutions" : UInt32,
+      "openLambdaFunctions" : UInt32
     )
 
     alias WorkflowExecutionSignaledEventAttributes = NamedTuple(

@@ -6463,7 +6463,7 @@ module Aws::Comprehend
     alias CreateEndpointRequest = NamedTuple(
       "EndpointName" : String,
       "ModelArn" : String,
-      "DesiredInferenceUnits" : Int32,
+      "DesiredInferenceUnits" : UInt32,
       "ClientRequestToken" : String,
       "Tags" : Array(Tag)
     )
@@ -6782,8 +6782,8 @@ module Aws::Comprehend
       "Status" : String,
       "Message" : String,
       "ModelArn" : String,
-      "DesiredInferenceUnits" : Int32,
-      "CurrentInferenceUnits" : Int32,
+      "DesiredInferenceUnits" : UInt32,
+      "CurrentInferenceUnits" : UInt32,
       "CreationTime" : (String | UInt64 | Time)?,
       "LastModifiedTime" : (String | UInt64 | Time)?
     )
@@ -6944,7 +6944,7 @@ module Aws::Comprehend
 
     alias IamRoleArn = String
 
-    alias InferenceUnitsInteger = Int32
+    alias InferenceUnitsInteger = UInt32
 
     alias InputDataConfig = NamedTuple(
       "S3Uri" : String,
@@ -7021,7 +7021,7 @@ module Aws::Comprehend
     alias ListDocumentClassificationJobsRequest = NamedTuple(
       "Filter" : DocumentClassificationJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListDocumentClassificationJobsResponse = NamedTuple(
@@ -7032,7 +7032,7 @@ module Aws::Comprehend
     alias ListDocumentClassifiersRequest = NamedTuple(
       "Filter" : DocumentClassifierFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListDocumentClassifiersResponse = NamedTuple(
@@ -7043,7 +7043,7 @@ module Aws::Comprehend
     alias ListDominantLanguageDetectionJobsRequest = NamedTuple(
       "Filter" : DominantLanguageDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListDominantLanguageDetectionJobsResponse = NamedTuple(
@@ -7054,7 +7054,7 @@ module Aws::Comprehend
     alias ListEndpointsRequest = NamedTuple(
       "Filter" : EndpointFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListEndpointsResponse = NamedTuple(
@@ -7065,7 +7065,7 @@ module Aws::Comprehend
     alias ListEntitiesDetectionJobsRequest = NamedTuple(
       "Filter" : EntitiesDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListEntitiesDetectionJobsResponse = NamedTuple(
@@ -7076,7 +7076,7 @@ module Aws::Comprehend
     alias ListEntityRecognizersRequest = NamedTuple(
       "Filter" : EntityRecognizerFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListEntityRecognizersResponse = NamedTuple(
@@ -7087,7 +7087,7 @@ module Aws::Comprehend
     alias ListEventsDetectionJobsRequest = NamedTuple(
       "Filter" : EventsDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListEventsDetectionJobsResponse = NamedTuple(
@@ -7098,7 +7098,7 @@ module Aws::Comprehend
     alias ListKeyPhrasesDetectionJobsRequest = NamedTuple(
       "Filter" : KeyPhrasesDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListKeyPhrasesDetectionJobsResponse = NamedTuple(
@@ -7135,7 +7135,7 @@ module Aws::Comprehend
     alias ListPiiEntitiesDetectionJobsRequest = NamedTuple(
       "Filter" : PiiEntitiesDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListPiiEntitiesDetectionJobsResponse = NamedTuple(
@@ -7146,7 +7146,7 @@ module Aws::Comprehend
     alias ListSentimentDetectionJobsRequest = NamedTuple(
       "Filter" : SentimentDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListSentimentDetectionJobsResponse = NamedTuple(
@@ -7166,7 +7166,7 @@ module Aws::Comprehend
     alias ListTopicsDetectionJobsRequest = NamedTuple(
       "Filter" : TopicsDetectionJobFilter,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListTopicsDetectionJobsResponse = NamedTuple(
@@ -7176,11 +7176,11 @@ module Aws::Comprehend
 
     alias MaskCharacter = String
 
-    alias MaxResultsInteger = Int32
+    alias MaxResultsInteger = UInt16
 
     alias ModelStatus = String
 
-    alias NumberOfTopicsInteger = Int32
+    alias NumberOfTopicsInteger = UInt8
 
     alias OutputDataConfig = NamedTuple(
       "S3Uri" : String,
@@ -7413,7 +7413,7 @@ module Aws::Comprehend
       "OutputDataConfig" : OutputDataConfig,
       "DataAccessRoleArn" : String,
       "JobName" : String,
-      "NumberOfTopics" : Int32,
+      "NumberOfTopics" : UInt8,
       "ClientRequestToken" : String,
       "VolumeKmsKeyId" : String,
       "VpcConfig" : VpcConfig
@@ -7591,7 +7591,7 @@ module Aws::Comprehend
 
     alias UpdateEndpointRequest = NamedTuple(
       "EndpointArn" : String,
-      "DesiredInferenceUnits" : Int32
+      "DesiredInferenceUnits" : UInt32
     )
 
     alias UpdateEndpointResponse = NamedTuple(

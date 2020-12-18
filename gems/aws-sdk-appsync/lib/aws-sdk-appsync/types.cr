@@ -3999,7 +3999,7 @@ module Aws::AppSync
     alias ListApiKeysRequest = NamedTuple(
       "apiId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListApiKeysResponse = NamedTuple(
@@ -4010,7 +4010,7 @@ module Aws::AppSync
     alias ListDataSourcesRequest = NamedTuple(
       "apiId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDataSourcesResponse = NamedTuple(
@@ -4021,7 +4021,7 @@ module Aws::AppSync
     alias ListFunctionsRequest = NamedTuple(
       "apiId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListFunctionsResponse = NamedTuple(
@@ -4031,7 +4031,7 @@ module Aws::AppSync
 
     alias ListGraphqlApisRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListGraphqlApisResponse = NamedTuple(
@@ -4043,7 +4043,7 @@ module Aws::AppSync
       "apiId" : String,
       "functionId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListResolversByFunctionResponse = NamedTuple(
@@ -4055,7 +4055,7 @@ module Aws::AppSync
       "apiId" : String,
       "typeName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListResolversResponse = NamedTuple(
@@ -4075,7 +4075,7 @@ module Aws::AppSync
       "apiId" : String,
       "format" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTypesResponse = NamedTuple(
@@ -4095,7 +4095,7 @@ module Aws::AppSync
 
     alias MappingTemplate = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias NotFoundException = NamedTuple(
       "message" : String

@@ -1430,7 +1430,7 @@ module Aws::IVS
     alias ListChannelsRequest = NamedTuple(
       "filterByName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListChannelsResponse = NamedTuple(
@@ -1440,7 +1440,7 @@ module Aws::IVS
 
     alias ListPlaybackKeyPairsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListPlaybackKeyPairsResponse = NamedTuple(
@@ -1451,7 +1451,7 @@ module Aws::IVS
     alias ListStreamKeysRequest = NamedTuple(
       "channelArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListStreamKeysResponse = NamedTuple(
@@ -1461,7 +1461,7 @@ module Aws::IVS
 
     alias ListStreamsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListStreamsResponse = NamedTuple(
@@ -1472,7 +1472,7 @@ module Aws::IVS
     alias ListTagsForResourceRequest = NamedTuple(
       "resourceArn" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
@@ -1480,15 +1480,15 @@ module Aws::IVS
       "nextToken" : String
     )
 
-    alias MaxChannelResults = Int32
+    alias MaxChannelResults = UInt8
 
-    alias MaxPlaybackKeyPairResults = Int32
+    alias MaxPlaybackKeyPairResults = UInt8
 
-    alias MaxStreamKeyResults = Int32
+    alias MaxStreamKeyResults = UInt8
 
-    alias MaxStreamResults = Int32
+    alias MaxStreamResults = UInt8
 
-    alias MaxTagResults = Int32
+    alias MaxTagResults = UInt8
 
     alias PaginationToken = String
 

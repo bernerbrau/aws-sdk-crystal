@@ -7903,10 +7903,10 @@ module Aws::EMR
       "Name" : String,
       "Status" : InstanceFleetStatus,
       "InstanceFleetType" : String,
-      "TargetOnDemandCapacity" : Int32,
-      "TargetSpotCapacity" : Int32,
-      "ProvisionedOnDemandCapacity" : Int32,
-      "ProvisionedSpotCapacity" : Int32,
+      "TargetOnDemandCapacity" : UInt32,
+      "TargetSpotCapacity" : UInt32,
+      "ProvisionedOnDemandCapacity" : UInt32,
+      "ProvisionedSpotCapacity" : UInt32,
       "InstanceTypeSpecifications" : Array(InstanceTypeSpecification),
       "LaunchSpecifications" : InstanceFleetProvisioningSpecifications
     )
@@ -7914,8 +7914,8 @@ module Aws::EMR
     alias InstanceFleetConfig = NamedTuple(
       "Name" : String,
       "InstanceFleetType" : String,
-      "TargetOnDemandCapacity" : Int32,
-      "TargetSpotCapacity" : Int32,
+      "TargetOnDemandCapacity" : UInt32,
+      "TargetSpotCapacity" : UInt32,
       "InstanceTypeConfigs" : Array(InstanceTypeConfig),
       "LaunchSpecifications" : InstanceFleetProvisioningSpecifications
     )
@@ -7928,8 +7928,8 @@ module Aws::EMR
 
     alias InstanceFleetModifyConfig = NamedTuple(
       "InstanceFleetId" : String,
-      "TargetOnDemandCapacity" : Int32,
-      "TargetSpotCapacity" : Int32
+      "TargetOnDemandCapacity" : UInt32,
+      "TargetSpotCapacity" : UInt32
     )
 
     alias InstanceFleetProvisioningSpecifications = NamedTuple(
@@ -8093,7 +8093,7 @@ module Aws::EMR
 
     alias InstanceTypeConfig = NamedTuple(
       "InstanceType" : String,
-      "WeightedCapacity" : Int32,
+      "WeightedCapacity" : UInt32,
       "BidPrice" : String,
       "BidPriceAsPercentageOfOnDemandPrice" : Float64,
       "EbsConfiguration" : EbsConfiguration,
@@ -8104,7 +8104,7 @@ module Aws::EMR
 
     alias InstanceTypeSpecification = NamedTuple(
       "InstanceType" : String,
-      "WeightedCapacity" : Int32,
+      "WeightedCapacity" : UInt32,
       "BidPrice" : String,
       "BidPriceAsPercentageOfOnDemandPrice" : Float64,
       "Configurations" : Array(Configuration),
@@ -8603,9 +8603,9 @@ module Aws::EMR
     alias SpotProvisioningAllocationStrategy = String
 
     alias SpotProvisioningSpecification = NamedTuple(
-      "TimeoutDurationMinutes" : Int32,
+      "TimeoutDurationMinutes" : UInt32,
       "TimeoutAction" : String,
-      "BlockDurationMinutes" : Int32,
+      "BlockDurationMinutes" : UInt32,
       "AllocationStrategy" : String
     )
 
@@ -8776,7 +8776,7 @@ module Aws::EMR
       "SizeInGB" : Int32
     )
 
-    alias WholeNumber = Int32
+    alias WholeNumber = UInt32
 
     alias XmlString = String
 

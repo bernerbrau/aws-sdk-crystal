@@ -5909,7 +5909,7 @@ module Aws::CostExplorer
       "MonitorType" : String,
       "MonitorDimension" : String,
       "MonitorSpecification" : Expression,
-      "DimensionalValueCount" : Int32
+      "DimensionalValueCount" : UInt32
     )
 
     alias AnomalyMonitors = Array(AnomalyMonitor)
@@ -5957,7 +5957,7 @@ module Aws::CostExplorer
       "ProcessingStatus" : Array(CostCategoryProcessingStatus)
     )
 
-    alias CostCategoryMaxResults = Int32
+    alias CostCategoryMaxResults = UInt8
 
     alias CostCategoryName = String
 
@@ -5973,7 +5973,7 @@ module Aws::CostExplorer
       "Name" : String,
       "EffectiveStart" : String,
       "EffectiveEnd" : String,
-      "NumberOfRules" : Int32,
+      "NumberOfRules" : UInt32,
       "ProcessingStatus" : Array(CostCategoryProcessingStatus),
       "Values" : Array(String)
     )
@@ -6300,7 +6300,7 @@ module Aws::CostExplorer
       "Metric" : String,
       "Granularity" : String,
       "Filter" : Expression,
-      "PredictionIntervalLevel" : Int32
+      "PredictionIntervalLevel" : UInt8
     )
 
     alias GetCostForecastResponse = NamedTuple(
@@ -6346,7 +6346,7 @@ module Aws::CostExplorer
       "TermInYears" : String,
       "PaymentOption" : String,
       "ServiceSpecification" : ServiceSpecification,
-      "PageSize" : Int32,
+      "PageSize" : UInt32,
       "NextPageToken" : String
     )
 
@@ -6374,7 +6374,7 @@ module Aws::CostExplorer
       "Filter" : Expression,
       "Configuration" : RightsizingRecommendationConfiguration,
       "Service" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt32,
       "NextPageToken" : String
     )
 
@@ -6393,7 +6393,7 @@ module Aws::CostExplorer
       "Filter" : Expression,
       "Metrics" : Array(String),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias GetSavingsPlansCoverageResponse = NamedTuple(
@@ -6407,7 +6407,7 @@ module Aws::CostExplorer
       "PaymentOption" : String,
       "AccountScope" : String,
       "NextPageToken" : String,
-      "PageSize" : Int32,
+      "PageSize" : UInt32,
       "LookbackPeriodInDays" : String,
       "Filter" : Expression
     )
@@ -6422,7 +6422,7 @@ module Aws::CostExplorer
       "TimePeriod" : DateInterval,
       "Filter" : Expression,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias GetSavingsPlansUtilizationDetailsResponse = NamedTuple(
@@ -6462,7 +6462,7 @@ module Aws::CostExplorer
       "Metric" : String,
       "Granularity" : String,
       "Filter" : Expression,
-      "PredictionIntervalLevel" : Int32
+      "PredictionIntervalLevel" : UInt8
     )
 
     alias GetUsageForecastResponse = NamedTuple(
@@ -6518,7 +6518,7 @@ module Aws::CostExplorer
     alias ListCostCategoryDefinitionsRequest = NamedTuple(
       "EffectiveOn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListCostCategoryDefinitionsResponse = NamedTuple(
@@ -6532,7 +6532,7 @@ module Aws::CostExplorer
 
     alias MatchOptions = Array(String)
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
     alias Metric = String
 
@@ -6565,7 +6565,7 @@ module Aws::CostExplorer
 
     alias NextPageToken = String
 
-    alias NonNegativeInteger = Int32
+    alias NonNegativeInteger = UInt32
 
     alias NullableNonNegativeDouble = Float64
 
@@ -6585,7 +6585,7 @@ module Aws::CostExplorer
 
     alias PaymentOption = String
 
-    alias PredictionIntervalLevel = Int32
+    alias PredictionIntervalLevel = UInt8
 
     alias ProvideAnomalyFeedbackRequest = NamedTuple(
       "AnomalyId" : String,

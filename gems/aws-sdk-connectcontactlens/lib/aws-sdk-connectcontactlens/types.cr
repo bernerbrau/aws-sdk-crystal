@@ -318,11 +318,11 @@ module Aws::ConnectContactLens
 
     alias CategoryName = String
 
-    alias CharacterOffset = Int32
+    alias CharacterOffset = UInt32
 
     alias CharacterOffsets = NamedTuple(
-      "BeginOffsetChar" : Int32,
-      "EndOffsetChar" : Int32
+      "BeginOffsetChar" : UInt32,
+      "EndOffsetChar" : UInt32
     )
 
     alias ContactId = String
@@ -346,7 +346,7 @@ module Aws::ConnectContactLens
     alias ListRealtimeContactAnalysisSegmentsRequest = NamedTuple(
       "InstanceId" : String,
       "ContactId" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -359,21 +359,21 @@ module Aws::ConnectContactLens
 
     alias MatchedDetails = Hash(String,CategoryDetails)
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Message = String
 
     alias NextToken = String
 
-    alias OffsetMillis = Int32
+    alias OffsetMillis = UInt32
 
     alias ParticipantId = String
 
     alias ParticipantRole = String
 
     alias PointOfInterest = NamedTuple(
-      "BeginOffsetMillis" : Int32,
-      "EndOffsetMillis" : Int32
+      "BeginOffsetMillis" : UInt32,
+      "EndOffsetMillis" : UInt32
     )
 
     alias PointsOfInterest = Array(PointOfInterest)
@@ -400,8 +400,8 @@ module Aws::ConnectContactLens
       "ParticipantId" : String,
       "ParticipantRole" : String,
       "Content" : String,
-      "BeginOffsetMillis" : Int32,
-      "EndOffsetMillis" : Int32,
+      "BeginOffsetMillis" : UInt32,
+      "EndOffsetMillis" : UInt32,
       "Sentiment" : String,
       "IssuesDetected" : Array(IssueDetected)
     )

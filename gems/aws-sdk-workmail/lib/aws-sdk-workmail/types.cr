@@ -3369,7 +3369,7 @@ module Aws::WorkMail
       "S3BucketName" : String,
       "S3Prefix" : String,
       "S3Path" : String,
-      "EstimatedProgress" : Int32,
+      "EstimatedProgress" : UInt8,
       "State" : String,
       "ErrorInfo" : String,
       "StartTime" : (String | UInt64 | Time)?,
@@ -3492,7 +3492,7 @@ module Aws::WorkMail
     alias FolderConfiguration = NamedTuple(
       "Name" : String,
       "Action" : String,
-      "Period" : Int32
+      "Period" : UInt16
     )
 
     alias FolderConfigurations = Array(FolderConfiguration)
@@ -3528,7 +3528,7 @@ module Aws::WorkMail
     )
 
     alias GetMailboxDetailsResponse = NamedTuple(
-      "MailboxQuota" : Int32,
+      "MailboxQuota" : UInt32,
       "MailboxSize" : Float64
     )
 
@@ -3587,7 +3587,7 @@ module Aws::WorkMail
       "OrganizationId" : String,
       "EntityId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListAliasesResponse = NamedTuple(
@@ -3599,7 +3599,7 @@ module Aws::WorkMail
       "OrganizationId" : String,
       "GroupId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListGroupMembersResponse = NamedTuple(
@@ -3610,7 +3610,7 @@ module Aws::WorkMail
     alias ListGroupsRequest = NamedTuple(
       "OrganizationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListGroupsResponse = NamedTuple(
@@ -3621,7 +3621,7 @@ module Aws::WorkMail
     alias ListMailboxExportJobsRequest = NamedTuple(
       "OrganizationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMailboxExportJobsResponse = NamedTuple(
@@ -3633,7 +3633,7 @@ module Aws::WorkMail
       "OrganizationId" : String,
       "EntityId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListMailboxPermissionsResponse = NamedTuple(
@@ -3643,7 +3643,7 @@ module Aws::WorkMail
 
     alias ListOrganizationsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListOrganizationsResponse = NamedTuple(
@@ -3655,7 +3655,7 @@ module Aws::WorkMail
       "OrganizationId" : String,
       "ResourceId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListResourceDelegatesResponse = NamedTuple(
@@ -3666,7 +3666,7 @@ module Aws::WorkMail
     alias ListResourcesRequest = NamedTuple(
       "OrganizationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListResourcesResponse = NamedTuple(
@@ -3685,7 +3685,7 @@ module Aws::WorkMail
     alias ListUsersRequest = NamedTuple(
       "OrganizationId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListUsersResponse = NamedTuple(
@@ -3709,7 +3709,7 @@ module Aws::WorkMail
       "Description" : String,
       "S3BucketName" : String,
       "S3Path" : String,
-      "EstimatedProgress" : Int32,
+      "EstimatedProgress" : UInt8,
       "State" : String,
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?
@@ -3719,11 +3719,11 @@ module Aws::WorkMail
 
     alias MailboxExportJobState = String
 
-    alias MailboxQuota = Int32
+    alias MailboxQuota = UInt32
 
     alias MailboxSize = Float64
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Member = NamedTuple(
       "Id" : String,
@@ -3768,7 +3768,7 @@ module Aws::WorkMail
 
     alias Password = String
 
-    alias Percentage = Int32
+    alias Percentage = UInt8
 
     alias Permission = NamedTuple(
       "GranteeId" : String,
@@ -3874,7 +3874,7 @@ module Aws::WorkMail
 
     alias RetentionAction = String
 
-    alias RetentionPeriod = Int32
+    alias RetentionPeriod = UInt16
 
     alias RoleArn = String
 
@@ -3945,7 +3945,7 @@ module Aws::WorkMail
     alias UpdateMailboxQuotaRequest = NamedTuple(
       "OrganizationId" : String,
       "UserId" : String,
-      "MailboxQuota" : Int32
+      "MailboxQuota" : UInt32
     )
 
     alias UpdateMailboxQuotaResponse = NamedTuple(

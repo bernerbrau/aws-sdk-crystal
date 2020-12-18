@@ -2278,7 +2278,7 @@ module Aws::Shield
 
     alias Double = Float64
 
-    alias DurationInSeconds = Int64
+    alias DurationInSeconds = UInt64
 
     alias EmailAddress = String
 
@@ -2358,7 +2358,7 @@ module Aws::Shield
       "StartTime" : TimeRange,
       "EndTime" : TimeRange,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListAttacksResponse = NamedTuple(
@@ -2368,7 +2368,7 @@ module Aws::Shield
 
     alias ListProtectionGroupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListProtectionGroupsResponse = NamedTuple(
@@ -2378,7 +2378,7 @@ module Aws::Shield
 
     alias ListProtectionsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListProtectionsResponse = NamedTuple(
@@ -2389,7 +2389,7 @@ module Aws::Shield
     alias ListResourcesInProtectionGroupRequest = NamedTuple(
       "ProtectionGroupId" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt16
     )
 
     alias ListResourcesInProtectionGroupResponse = NamedTuple(
@@ -2407,7 +2407,7 @@ module Aws::Shield
 
     alias Long = Int64
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt16
 
     alias Mitigation = NamedTuple(
       "MitigationName" : String
@@ -2511,7 +2511,7 @@ module Aws::Shield
     alias Subscription = NamedTuple(
       "StartTime" : (String | UInt64 | Time)?,
       "EndTime" : (String | UInt64 | Time)?,
-      "TimeCommitmentInSeconds" : Int64,
+      "TimeCommitmentInSeconds" : UInt64,
       "AutoRenew" : String,
       "Limits" : Array(Limit),
       "ProactiveEngagementStatus" : String,

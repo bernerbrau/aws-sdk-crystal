@@ -1450,7 +1450,7 @@ module Aws::KinesisVideo
       "StreamName" : String,
       "MediaType" : String,
       "KmsKeyId" : String,
-      "DataRetentionInHours" : Int32,
+      "DataRetentionInHours" : UInt32,
       "Tags" : Hash(String,String)
     )
 
@@ -1460,9 +1460,9 @@ module Aws::KinesisVideo
 
     alias DataEndpoint = String
 
-    alias DataRetentionChangeInHours = Int32
+    alias DataRetentionChangeInHours = UInt32
 
-    alias DataRetentionInHours = Int32
+    alias DataRetentionInHours = UInt32
 
     alias DeleteSignalingChannelInput = NamedTuple(
       "ChannelARN" : String,
@@ -1544,7 +1544,7 @@ module Aws::KinesisVideo
     alias ListOfProtocols = Array(String)
 
     alias ListSignalingChannelsInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "ChannelNameCondition" : ChannelNameCondition
     )
@@ -1555,12 +1555,12 @@ module Aws::KinesisVideo
     )
 
     alias ListStreamsInput = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt16,
       "NextToken" : String,
       "StreamNameCondition" : StreamNameCondition
     )
 
-    alias ListStreamsInputLimit = Int32
+    alias ListStreamsInputLimit = UInt16
 
     alias ListStreamsOutput = NamedTuple(
       "StreamInfoList" : Array(StreamInfo),
@@ -1590,7 +1590,7 @@ module Aws::KinesisVideo
 
     alias MediaType = String
 
-    alias MessageTtlSeconds = Int32
+    alias MessageTtlSeconds = UInt8
 
     alias NextToken = String
 
@@ -1625,7 +1625,7 @@ module Aws::KinesisVideo
     )
 
     alias SingleMasterConfiguration = NamedTuple(
-      "MessageTtlSeconds" : Int32
+      "MessageTtlSeconds" : UInt8
     )
 
     alias Status = String
@@ -1639,7 +1639,7 @@ module Aws::KinesisVideo
       "Version" : String,
       "Status" : String,
       "CreationTime" : (String | UInt64 | Time)?,
-      "DataRetentionInHours" : Int32
+      "DataRetentionInHours" : UInt32
     )
 
     alias StreamInfoList = Array(StreamInfo)
@@ -1715,7 +1715,7 @@ module Aws::KinesisVideo
       "StreamARN" : String,
       "CurrentVersion" : String,
       "Operation" : String,
-      "DataRetentionChangeInHours" : Int32
+      "DataRetentionChangeInHours" : UInt32
     )
 
     alias UpdateDataRetentionOperation = String

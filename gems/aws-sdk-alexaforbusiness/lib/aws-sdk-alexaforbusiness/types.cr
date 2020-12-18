@@ -6689,11 +6689,11 @@ module Aws::AlexaForBusiness
     alias BusinessReportStatus = String
 
     alias Category = NamedTuple(
-      "CategoryId" : Int64,
+      "CategoryId" : UInt64,
       "CategoryName" : String
     )
 
-    alias CategoryId = Int64
+    alias CategoryId = UInt64
 
     alias CategoryList = Array(Category)
 
@@ -7437,7 +7437,7 @@ module Aws::AlexaForBusiness
 
     alias ListBusinessReportSchedulesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListBusinessReportSchedulesResponse = NamedTuple(
@@ -7447,7 +7447,7 @@ module Aws::AlexaForBusiness
 
     alias ListConferenceProvidersRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListConferenceProvidersResponse = NamedTuple(
@@ -7459,7 +7459,7 @@ module Aws::AlexaForBusiness
       "DeviceArn" : String,
       "EventType" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListDeviceEventsResponse = NamedTuple(
@@ -7469,7 +7469,7 @@ module Aws::AlexaForBusiness
 
     alias ListGatewayGroupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListGatewayGroupsResponse = NamedTuple(
@@ -7480,7 +7480,7 @@ module Aws::AlexaForBusiness
     alias ListGatewaysRequest = NamedTuple(
       "GatewayGroupArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListGatewaysResponse = NamedTuple(
@@ -7493,7 +7493,7 @@ module Aws::AlexaForBusiness
       "EnablementType" : String,
       "SkillType" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListSkillsResponse = NamedTuple(
@@ -7503,7 +7503,7 @@ module Aws::AlexaForBusiness
 
     alias ListSkillsStoreCategoriesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListSkillsStoreCategoriesResponse = NamedTuple(
@@ -7512,9 +7512,9 @@ module Aws::AlexaForBusiness
     )
 
     alias ListSkillsStoreSkillsByCategoryRequest = NamedTuple(
-      "CategoryId" : Int64,
+      "CategoryId" : UInt64,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListSkillsStoreSkillsByCategoryResponse = NamedTuple(
@@ -7524,7 +7524,7 @@ module Aws::AlexaForBusiness
 
     alias ListSmartHomeAppliancesRequest = NamedTuple(
       "RoomArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -7536,7 +7536,7 @@ module Aws::AlexaForBusiness
     alias ListTagsRequest = NamedTuple(
       "Arn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias ListTagsResponse = NamedTuple(
@@ -7548,7 +7548,7 @@ module Aws::AlexaForBusiness
 
     alias MacAddress = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias MaxVolumeLimit = Int32
 
@@ -7826,7 +7826,7 @@ module Aws::AlexaForBusiness
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias SearchAddressBooksResponse = NamedTuple(
@@ -7839,7 +7839,7 @@ module Aws::AlexaForBusiness
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort),
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt8
     )
 
     alias SearchContactsResponse = NamedTuple(
@@ -7850,7 +7850,7 @@ module Aws::AlexaForBusiness
 
     alias SearchDevicesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort)
     )
@@ -7863,7 +7863,7 @@ module Aws::AlexaForBusiness
 
     alias SearchNetworkProfilesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort)
     )
@@ -7876,7 +7876,7 @@ module Aws::AlexaForBusiness
 
     alias SearchProfilesRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort)
     )
@@ -7889,7 +7889,7 @@ module Aws::AlexaForBusiness
 
     alias SearchRoomsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort)
     )
@@ -7902,7 +7902,7 @@ module Aws::AlexaForBusiness
 
     alias SearchSkillGroupsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort)
     )
@@ -7915,7 +7915,7 @@ module Aws::AlexaForBusiness
 
     alias SearchUsersRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "Filters" : Array(Filter),
       "SortCriteria" : Array(Sort)
     )
@@ -7929,7 +7929,7 @@ module Aws::AlexaForBusiness
     alias SendAnnouncementRequest = NamedTuple(
       "RoomFilters" : Array(Filter),
       "Content" : Content,
-      "TimeToLiveInSeconds" : Int32,
+      "TimeToLiveInSeconds" : UInt16,
       "ClientRequestToken" : String
     )
 
@@ -7993,7 +7993,7 @@ module Aws::AlexaForBusiness
 
     alias SkillId = String
 
-    alias SkillListMaxResults = Int32
+    alias SkillListMaxResults = UInt8
 
     alias SkillName = String
 
@@ -8112,7 +8112,7 @@ module Aws::AlexaForBusiness
 
     alias TextValue = String
 
-    alias TimeToLiveInSeconds = Int32
+    alias TimeToLiveInSeconds = UInt16
 
     alias Timezone = String
 

@@ -3692,7 +3692,7 @@ module Aws::Amplify
 
     alias ListAppsRequest = NamedTuple(
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListAppsResult = NamedTuple(
@@ -3705,7 +3705,7 @@ module Aws::Amplify
       "branchName" : String,
       "jobId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListArtifactsResult = NamedTuple(
@@ -3717,7 +3717,7 @@ module Aws::Amplify
       "appId" : String,
       "environmentName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListBackendEnvironmentsResult = NamedTuple(
@@ -3728,7 +3728,7 @@ module Aws::Amplify
     alias ListBranchesRequest = NamedTuple(
       "appId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListBranchesResult = NamedTuple(
@@ -3739,7 +3739,7 @@ module Aws::Amplify
     alias ListDomainAssociationsRequest = NamedTuple(
       "appId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListDomainAssociationsResult = NamedTuple(
@@ -3751,7 +3751,7 @@ module Aws::Amplify
       "appId" : String,
       "branchName" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListJobsResult = NamedTuple(
@@ -3770,7 +3770,7 @@ module Aws::Amplify
     alias ListWebhooksRequest = NamedTuple(
       "appId" : String,
       "nextToken" : String,
-      "maxResults" : Int32
+      "maxResults" : UInt8
     )
 
     alias ListWebhooksResult = NamedTuple(
@@ -3782,7 +3782,7 @@ module Aws::Amplify
 
     alias MD5Hash = String
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias Name = String
 

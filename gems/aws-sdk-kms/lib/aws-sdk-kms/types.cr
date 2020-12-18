@@ -4841,7 +4841,7 @@ module Aws::KMS
     alias DescribeCustomKeyStoresRequest = NamedTuple(
       "CustomKeyStoreId" : String,
       "CustomKeyStoreName" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -4954,7 +4954,7 @@ module Aws::KMS
     alias GenerateDataKeyRequest = NamedTuple(
       "KeyId" : String,
       "EncryptionContext" : Hash(String,String),
-      "NumberOfBytes" : Int32,
+      "NumberOfBytes" : UInt16,
       "KeySpec" : String,
       "GrantTokens" : Array(String)
     )
@@ -4969,7 +4969,7 @@ module Aws::KMS
       "KeyId" : String,
       "EncryptionContext" : Hash(String,String),
       "KeySpec" : String,
-      "NumberOfBytes" : Int32,
+      "NumberOfBytes" : UInt16,
       "GrantTokens" : Array(String)
     )
 
@@ -4979,7 +4979,7 @@ module Aws::KMS
     )
 
     alias GenerateRandomRequest = NamedTuple(
-      "NumberOfBytes" : Int32,
+      "NumberOfBytes" : UInt16,
       "CustomKeyStoreId" : String
     )
 
@@ -5176,11 +5176,11 @@ module Aws::KMS
       "message" : String
     )
 
-    alias LimitType = Int32
+    alias LimitType = UInt16
 
     alias ListAliasesRequest = NamedTuple(
       "KeyId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -5191,7 +5191,7 @@ module Aws::KMS
     )
 
     alias ListGrantsRequest = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String,
       "KeyId" : String
     )
@@ -5204,7 +5204,7 @@ module Aws::KMS
 
     alias ListKeyPoliciesRequest = NamedTuple(
       "KeyId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -5215,7 +5215,7 @@ module Aws::KMS
     )
 
     alias ListKeysRequest = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -5227,7 +5227,7 @@ module Aws::KMS
 
     alias ListResourceTagsRequest = NamedTuple(
       "KeyId" : String,
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String
     )
 
@@ -5238,7 +5238,7 @@ module Aws::KMS
     )
 
     alias ListRetirableGrantsRequest = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt16,
       "Marker" : String,
       "RetiringPrincipal" : String
     )
@@ -5255,11 +5255,11 @@ module Aws::KMS
       "message" : String
     )
 
-    alias NumberOfBytesType = Int32
+    alias NumberOfBytesType = UInt16
 
     alias OriginType = String
 
-    alias PendingWindowInDaysType = Int32
+    alias PendingWindowInDaysType = UInt16
 
     alias PlaintextType = String | Array(UInt8) | IO
 
@@ -5312,7 +5312,7 @@ module Aws::KMS
 
     alias ScheduleKeyDeletionRequest = NamedTuple(
       "KeyId" : String,
-      "PendingWindowInDays" : Int32
+      "PendingWindowInDays" : UInt16
     )
 
     alias ScheduleKeyDeletionResponse = NamedTuple(

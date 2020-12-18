@@ -4257,7 +4257,7 @@ module Aws::MachineLearning
       "Prefix" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeBatchPredictionsOutput = NamedTuple(
@@ -4276,7 +4276,7 @@ module Aws::MachineLearning
       "Prefix" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeDataSourcesOutput = NamedTuple(
@@ -4295,7 +4295,7 @@ module Aws::MachineLearning
       "Prefix" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeEvaluationsOutput = NamedTuple(
@@ -4314,7 +4314,7 @@ module Aws::MachineLearning
       "Prefix" : String,
       "SortOrder" : String,
       "NextToken" : String,
-      "Limit" : Int32
+      "Limit" : UInt8
     )
 
     alias DescribeMLModelsOutput = NamedTuple(
@@ -4549,7 +4549,7 @@ module Aws::MachineLearning
 
     alias Message = String
 
-    alias PageLimit = Int32
+    alias PageLimit = UInt8
 
     alias PerformanceMetrics = NamedTuple(
       "Properties" : Hash(String,String)

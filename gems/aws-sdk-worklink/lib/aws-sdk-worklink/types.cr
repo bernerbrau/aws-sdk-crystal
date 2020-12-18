@@ -1819,7 +1819,7 @@ module Aws::WorkLink
     alias ListDevicesRequest = NamedTuple(
       "FleetArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListDevicesResponse = NamedTuple(
@@ -1830,7 +1830,7 @@ module Aws::WorkLink
     alias ListDomainsRequest = NamedTuple(
       "FleetArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListDomainsResponse = NamedTuple(
@@ -1840,7 +1840,7 @@ module Aws::WorkLink
 
     alias ListFleetsRequest = NamedTuple(
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListFleetsResponse = NamedTuple(
@@ -1859,7 +1859,7 @@ module Aws::WorkLink
     alias ListWebsiteAuthorizationProvidersRequest = NamedTuple(
       "FleetArn" : String,
       "NextToken" : String,
-      "MaxResults" : Int32
+      "MaxResults" : UInt32
     )
 
     alias ListWebsiteAuthorizationProvidersResponse = NamedTuple(
@@ -1869,7 +1869,7 @@ module Aws::WorkLink
 
     alias ListWebsiteCertificateAuthoritiesRequest = NamedTuple(
       "FleetArn" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt32,
       "NextToken" : String
     )
 
@@ -1878,7 +1878,7 @@ module Aws::WorkLink
       "NextToken" : String
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt32
 
     alias NextToken = String
 

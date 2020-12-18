@@ -3780,7 +3780,7 @@ module Aws::KinesisAnalytics
 
     alias AddApplicationCloudWatchLoggingOptionRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "CloudWatchLoggingOption" : CloudWatchLoggingOption
     )
 
@@ -3790,7 +3790,7 @@ module Aws::KinesisAnalytics
 
     alias AddApplicationInputProcessingConfigurationRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "InputId" : String,
       "InputProcessingConfiguration" : InputProcessingConfiguration
     )
@@ -3801,7 +3801,7 @@ module Aws::KinesisAnalytics
 
     alias AddApplicationInputRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "Input" : Input
     )
 
@@ -3811,7 +3811,7 @@ module Aws::KinesisAnalytics
 
     alias AddApplicationOutputRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "Output" : Output
     )
 
@@ -3821,7 +3821,7 @@ module Aws::KinesisAnalytics
 
     alias AddApplicationReferenceDataSourceRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "ReferenceDataSource" : ReferenceDataSource
     )
 
@@ -3845,7 +3845,7 @@ module Aws::KinesisAnalytics
       "ReferenceDataSourceDescriptions" : Array(ReferenceDataSourceDescription),
       "CloudWatchLoggingOptionDescriptions" : Array(CloudWatchLoggingOptionDescription),
       "ApplicationCode" : String,
-      "ApplicationVersionId" : Int64
+      "ApplicationVersionId" : UInt32
     )
 
     alias ApplicationName = String
@@ -3868,7 +3868,7 @@ module Aws::KinesisAnalytics
       "CloudWatchLoggingOptionUpdates" : Array(CloudWatchLoggingOptionUpdate)
     )
 
-    alias ApplicationVersionId = Int64
+    alias ApplicationVersionId = UInt32
 
     alias BooleanObject = Bool
 
@@ -3926,7 +3926,7 @@ module Aws::KinesisAnalytics
 
     alias DeleteApplicationCloudWatchLoggingOptionRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "CloudWatchLoggingOptionId" : String
     )
 
@@ -3936,7 +3936,7 @@ module Aws::KinesisAnalytics
 
     alias DeleteApplicationInputProcessingConfigurationRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "InputId" : String
     )
 
@@ -3946,7 +3946,7 @@ module Aws::KinesisAnalytics
 
     alias DeleteApplicationOutputRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "OutputId" : String
     )
 
@@ -3956,7 +3956,7 @@ module Aws::KinesisAnalytics
 
     alias DeleteApplicationReferenceDataSourceRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "ReferenceId" : String
     )
 
@@ -4058,13 +4058,13 @@ module Aws::KinesisAnalytics
     )
 
     alias InputParallelism = NamedTuple(
-      "Count" : Int32
+      "Count" : UInt8
     )
 
-    alias InputParallelismCount = Int32
+    alias InputParallelismCount = UInt8
 
     alias InputParallelismUpdate = NamedTuple(
-      "CountUpdate" : Int32
+      "CountUpdate" : UInt8
     )
 
     alias InputProcessingConfiguration = NamedTuple(
@@ -4198,10 +4198,10 @@ module Aws::KinesisAnalytics
       "message" : String
     )
 
-    alias ListApplicationsInputLimit = Int32
+    alias ListApplicationsInputLimit = UInt8
 
     alias ListApplicationsRequest = NamedTuple(
-      "Limit" : Int32,
+      "Limit" : UInt8,
       "ExclusiveStartApplicationName" : String
     )
 
@@ -4440,7 +4440,7 @@ module Aws::KinesisAnalytics
 
     alias UpdateApplicationRequest = NamedTuple(
       "ApplicationName" : String,
-      "CurrentApplicationVersionId" : Int64,
+      "CurrentApplicationVersionId" : UInt32,
       "ApplicationUpdate" : ApplicationUpdate
     )
 

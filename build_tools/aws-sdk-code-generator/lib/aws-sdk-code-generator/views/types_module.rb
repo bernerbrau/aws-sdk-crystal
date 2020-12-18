@@ -37,9 +37,49 @@ module AwsSdkCodeGenerator
         when "blob"
           "String | Array(UInt8) | IO"
         when "integer"
-          "Int32"
+          begin
+            if shape.fetch("min",-1) >= 0
+              if shape.fetch("max",256) <= 255
+                "UInt8"
+              elsif shape.fetch("max",65536) <= 65535
+                "UInt16"
+              else
+                "UInt32"
+              end
+            else
+              if shape.fetch("max",128) <= 127
+                "Int8"
+              elsif shape.fetch("max",32768) <= 32767
+                "Int16"
+              else
+                "Int32"
+              end
+            end
+          end
         when "long"
-          "Int64"
+          begin
+            if shape.fetch("min",-1) >= 0
+              if shape.fetch("max",256) <= 255
+                "UInt8"
+              elsif shape.fetch("max",65536) <= 65535
+                "UInt16"
+              elsif shape.fetch("max",4294967296) <= 4294967295
+                "UInt32"
+              else
+                "UInt64"
+              end
+            else
+              if shape.fetch("min",-129) >= -128 && shape.fetch("max",128) <= 127
+                "Int8"
+              elsif shape.fetch("min",-32769) >= -32768 && shape.fetch("max",32768) <= 32767
+                "Int16"
+              elsif shape.fetch("min",-2147483649) >= -2147483648 && shape.fetch("max",2147483648) <= 2147483647
+                "Int32"
+              else
+                "Int64"
+              end
+            end
+          end
         when "boolean"
           "Bool"
         when "float"
@@ -80,28 +120,8 @@ module AwsSdkCodeGenerator
               }
               "NamedTuple(\n      " + type.join(",\n      ") + "\n    )"
             end
-          when "list"
-            "Array(#{describe_shape_simple(shapes,shape.fetch("member").fetch("shape"))})"
-          when "string"
-            "String"
-          when "blob"
-            "String | Array(UInt8) | IO"
-          when "integer"
-            "Int32"
-          when "long"
-            "Int64"
-          when "boolean"
-            "Bool"
-          when "float"
-            "Float32"
-          when "double"
-            "Float64"
-          when "timestamp"
-            "String | UInt64 | Time"
-          when "map"
-            "Hash(#{describe_shape_simple(shapes,shape.fetch("key").fetch("shape"))},#{describe_shape_simple(shapes,shape.fetch("value").fetch("shape"))})"
           else
-            raise "Unknown shape type #{shape.fetch("type")}"
+            describe_shape_simple(shapes, name)
           end
         ensure
           @shape_stack.pop

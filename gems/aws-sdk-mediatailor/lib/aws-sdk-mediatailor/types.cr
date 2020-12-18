@@ -911,7 +911,7 @@ module Aws::MediaTailor
       "AvailSuppression" : AvailSuppression,
       "Bumper" : Bumper,
       "CdnConfiguration" : CdnConfiguration,
-      "PersonalizationThresholdSeconds" : Int32,
+      "PersonalizationThresholdSeconds" : UInt32,
       "DashConfiguration" : DashConfiguration,
       "HlsConfiguration" : HlsConfiguration,
       "LivePreRollConfiguration" : LivePreRollConfiguration,
@@ -931,7 +931,7 @@ module Aws::MediaTailor
     )
 
     alias ListPlaybackConfigurationsRequest = NamedTuple(
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -959,7 +959,7 @@ module Aws::MediaTailor
     alias PlaybackConfiguration = NamedTuple(
       "AdDecisionServerUrl" : String,
       "CdnConfiguration" : CdnConfiguration,
-      "PersonalizationThresholdSeconds" : Int32,
+      "PersonalizationThresholdSeconds" : UInt32,
       "DashConfiguration" : DashConfiguration,
       "HlsConfiguration" : HlsConfiguration,
       "Name" : String,
@@ -982,7 +982,7 @@ module Aws::MediaTailor
       "AvailSuppression" : AvailSuppression,
       "Bumper" : Bumper,
       "CdnConfiguration" : CdnConfiguration,
-      "PersonalizationThresholdSeconds" : Int32,
+      "PersonalizationThresholdSeconds" : UInt32,
       "DashConfiguration" : DashConfigurationForPut,
       "LivePreRollConfiguration" : LivePreRollConfiguration,
       "ManifestProcessingRules" : ManifestProcessingRules,
@@ -1032,9 +1032,9 @@ module Aws::MediaTailor
 
     alias __integer = Int32
 
-    alias __integerMin1 = Int32
+    alias __integerMin1 = UInt32
 
-    alias __integerMin1Max100 = Int32
+    alias __integerMin1Max100 = UInt8
 
     alias __listOfPlaybackConfigurations = Array(PlaybackConfiguration)
 

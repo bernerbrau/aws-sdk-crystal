@@ -7615,7 +7615,7 @@ module Aws::StorageGateway
       "TapeBarcodePrefix" : String,
       "PoolId" : String,
       "TapeSizeInBytes" : Int64,
-      "MinimumNumTapes" : Int32,
+      "MinimumNumTapes" : UInt8,
       "Worm" : Bool
     )
 
@@ -7623,23 +7623,23 @@ module Aws::StorageGateway
 
     alias AvailabilityMonitorTestStatus = String
 
-    alias BandwidthDownloadRateLimit = Int64
+    alias BandwidthDownloadRateLimit = UInt64
 
     alias BandwidthRateLimitInterval = NamedTuple(
-      "StartHourOfDay" : Int32,
-      "StartMinuteOfHour" : Int32,
-      "EndHourOfDay" : Int32,
-      "EndMinuteOfHour" : Int32,
-      "DaysOfWeek" : Array(Int32),
-      "AverageUploadRateLimitInBitsPerSec" : Int64,
-      "AverageDownloadRateLimitInBitsPerSec" : Int64
+      "StartHourOfDay" : UInt8,
+      "StartMinuteOfHour" : UInt8,
+      "EndHourOfDay" : UInt8,
+      "EndMinuteOfHour" : UInt8,
+      "DaysOfWeek" : Array(UInt8),
+      "AverageUploadRateLimitInBitsPerSec" : UInt64,
+      "AverageDownloadRateLimitInBitsPerSec" : UInt64
     )
 
     alias BandwidthRateLimitIntervals = Array(BandwidthRateLimitInterval)
 
     alias BandwidthType = String
 
-    alias BandwidthUploadRateLimit = Int64
+    alias BandwidthUploadRateLimit = UInt64
 
     alias Boolean = Bool
 
@@ -7820,7 +7820,7 @@ module Aws::StorageGateway
       "PoolName" : String,
       "StorageClass" : String,
       "RetentionLockType" : String,
-      "RetentionLockTimeInDays" : Int32,
+      "RetentionLockTimeInDays" : UInt16,
       "Tags" : Array(Tag)
     )
 
@@ -7847,7 +7847,7 @@ module Aws::StorageGateway
       "GatewayARN" : String,
       "TapeSizeInBytes" : Int64,
       "ClientToken" : String,
-      "NumTapesToCreate" : Int32,
+      "NumTapesToCreate" : UInt8,
       "TapeBarcodePrefix" : String,
       "KMSEncrypted" : Bool,
       "KMSKey" : String,
@@ -7862,11 +7862,11 @@ module Aws::StorageGateway
 
     alias CreatedDate = String | UInt64 | Time
 
-    alias DayOfMonth = Int32
+    alias DayOfMonth = UInt8
 
-    alias DayOfWeek = Int32
+    alias DayOfWeek = UInt8
 
-    alias DaysOfWeek = Array(Int32)
+    alias DaysOfWeek = Array(UInt8)
 
     alias DeleteAutomaticTapeCreationPolicyInput = NamedTuple(
       "GatewayARN" : String
@@ -7973,8 +7973,8 @@ module Aws::StorageGateway
 
     alias DescribeBandwidthRateLimitOutput = NamedTuple(
       "GatewayARN" : String,
-      "AverageUploadRateLimitInBitsPerSec" : Int64,
-      "AverageDownloadRateLimitInBitsPerSec" : Int64
+      "AverageUploadRateLimitInBitsPerSec" : UInt64,
+      "AverageDownloadRateLimitInBitsPerSec" : UInt64
     )
 
     alias DescribeBandwidthRateLimitScheduleInput = NamedTuple(
@@ -8047,10 +8047,10 @@ module Aws::StorageGateway
 
     alias DescribeMaintenanceStartTimeOutput = NamedTuple(
       "GatewayARN" : String,
-      "HourOfDay" : Int32,
-      "MinuteOfHour" : Int32,
-      "DayOfWeek" : Int32,
-      "DayOfMonth" : Int32,
+      "HourOfDay" : UInt8,
+      "MinuteOfHour" : UInt8,
+      "DayOfWeek" : UInt8,
+      "DayOfMonth" : UInt8,
       "Timezone" : String
     )
 
@@ -8089,8 +8089,8 @@ module Aws::StorageGateway
 
     alias DescribeSnapshotScheduleOutput = NamedTuple(
       "VolumeARN" : String,
-      "StartAt" : Int32,
-      "RecurrenceInHours" : Int32,
+      "StartAt" : UInt8,
+      "RecurrenceInHours" : UInt8,
       "Description" : String,
       "Timezone" : String,
       "Tags" : Array(Tag)
@@ -8107,7 +8107,7 @@ module Aws::StorageGateway
     alias DescribeTapeArchivesInput = NamedTuple(
       "TapeARNs" : Array(String),
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeTapeArchivesOutput = NamedTuple(
@@ -8118,7 +8118,7 @@ module Aws::StorageGateway
     alias DescribeTapeRecoveryPointsInput = NamedTuple(
       "GatewayARN" : String,
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeTapeRecoveryPointsOutput = NamedTuple(
@@ -8131,7 +8131,7 @@ module Aws::StorageGateway
       "GatewayARN" : String,
       "TapeARNs" : Array(String),
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeTapesOutput = NamedTuple(
@@ -8154,7 +8154,7 @@ module Aws::StorageGateway
       "GatewayARN" : String,
       "VTLDeviceARNs" : Array(String),
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias DescribeVTLDevicesOutput = NamedTuple(
@@ -8307,7 +8307,7 @@ module Aws::StorageGateway
 
     alias Hosts = Array(String)
 
-    alias HourOfDay = Int32
+    alias HourOfDay = UInt8
 
     alias IPV4AddressCIDR = String
 
@@ -8332,7 +8332,7 @@ module Aws::StorageGateway
       "DomainName" : String,
       "OrganizationalUnit" : String,
       "DomainControllers" : Array(String),
-      "TimeoutInSeconds" : Int32,
+      "TimeoutInSeconds" : UInt16,
       "UserName" : String,
       "Password" : String
     )
@@ -8356,7 +8356,7 @@ module Aws::StorageGateway
 
     alias ListFileSharesInput = NamedTuple(
       "GatewayARN" : String,
-      "Limit" : Int32,
+      "Limit" : UInt32,
       "Marker" : String
     )
 
@@ -8368,7 +8368,7 @@ module Aws::StorageGateway
 
     alias ListGatewaysInput = NamedTuple(
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListGatewaysOutput = NamedTuple(
@@ -8388,7 +8388,7 @@ module Aws::StorageGateway
     alias ListTagsForResourceInput = NamedTuple(
       "ResourceARN" : String,
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
@@ -8400,7 +8400,7 @@ module Aws::StorageGateway
     alias ListTapePoolsInput = NamedTuple(
       "PoolARNs" : Array(String),
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListTapePoolsOutput = NamedTuple(
@@ -8411,7 +8411,7 @@ module Aws::StorageGateway
     alias ListTapesInput = NamedTuple(
       "TapeARNs" : Array(String),
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListTapesOutput = NamedTuple(
@@ -8439,7 +8439,7 @@ module Aws::StorageGateway
     alias ListVolumesInput = NamedTuple(
       "GatewayARN" : String,
       "Marker" : String,
-      "Limit" : Int32
+      "Limit" : UInt32
     )
 
     alias ListVolumesOutput = NamedTuple(
@@ -8456,15 +8456,15 @@ module Aws::StorageGateway
 
     alias MediumChangerType = String
 
-    alias MinimumNumTapes = Int32
+    alias MinimumNumTapes = UInt8
 
-    alias MinuteOfHour = Int32
+    alias MinuteOfHour = UInt8
 
     alias NFSFileShareDefaults = NamedTuple(
       "FileMode" : String,
       "DirectoryMode" : String,
-      "GroupId" : Int64,
-      "OwnerId" : Int64
+      "GroupId" : UInt32,
+      "OwnerId" : UInt32
     )
 
     alias NFSFileShareInfo = NamedTuple(
@@ -8516,7 +8516,7 @@ module Aws::StorageGateway
       "NotificationId" : String
     )
 
-    alias NumTapesToCreate = Int32
+    alias NumTapesToCreate = UInt8
 
     alias ObjectACL = String
 
@@ -8524,7 +8524,7 @@ module Aws::StorageGateway
 
     alias Path = String
 
-    alias PermissionId = Int64
+    alias PermissionId = UInt32
 
     alias PermissionMode = String
 
@@ -8539,7 +8539,7 @@ module Aws::StorageGateway
       "PoolName" : String,
       "StorageClass" : String,
       "RetentionLockType" : String,
-      "RetentionLockTimeInDays" : Int32,
+      "RetentionLockTimeInDays" : UInt16,
       "PoolStatus" : String
     )
 
@@ -8549,9 +8549,9 @@ module Aws::StorageGateway
 
     alias PoolStatus = String
 
-    alias PositiveIntObject = Int32
+    alias PositiveIntObject = UInt32
 
-    alias RecurrenceInHours = Int32
+    alias RecurrenceInHours = UInt8
 
     alias RefreshCacheInput = NamedTuple(
       "FileShareARN" : String,
@@ -8585,7 +8585,7 @@ module Aws::StorageGateway
 
     alias ResourceARN = String
 
-    alias RetentionLockTimeInDays = Int32
+    alias RetentionLockTimeInDays = UInt16
 
     alias RetentionLockType = String
 
@@ -8825,7 +8825,7 @@ module Aws::StorageGateway
 
     alias Time = String | UInt64 | Time
 
-    alias TimeoutInSeconds = Int32
+    alias TimeoutInSeconds = UInt16
 
     alias UpdateAutomaticTapeCreationPolicyInput = NamedTuple(
       "AutomaticTapeCreationRules" : Array(AutomaticTapeCreationRule),
@@ -8838,8 +8838,8 @@ module Aws::StorageGateway
 
     alias UpdateBandwidthRateLimitInput = NamedTuple(
       "GatewayARN" : String,
-      "AverageUploadRateLimitInBitsPerSec" : Int64,
-      "AverageDownloadRateLimitInBitsPerSec" : Int64
+      "AverageUploadRateLimitInBitsPerSec" : UInt64,
+      "AverageDownloadRateLimitInBitsPerSec" : UInt64
     )
 
     alias UpdateBandwidthRateLimitOutput = NamedTuple(
@@ -8889,10 +8889,10 @@ module Aws::StorageGateway
 
     alias UpdateMaintenanceStartTimeInput = NamedTuple(
       "GatewayARN" : String,
-      "HourOfDay" : Int32,
-      "MinuteOfHour" : Int32,
-      "DayOfWeek" : Int32,
-      "DayOfMonth" : Int32
+      "HourOfDay" : UInt8,
+      "MinuteOfHour" : UInt8,
+      "DayOfWeek" : UInt8,
+      "DayOfMonth" : UInt8
     )
 
     alias UpdateMaintenanceStartTimeOutput = NamedTuple(
@@ -8965,8 +8965,8 @@ module Aws::StorageGateway
 
     alias UpdateSnapshotScheduleInput = NamedTuple(
       "VolumeARN" : String,
-      "StartAt" : Int32,
-      "RecurrenceInHours" : Int32,
+      "StartAt" : UInt8,
+      "RecurrenceInHours" : UInt8,
       "Description" : String,
       "Tags" : Array(Tag)
     )
@@ -9043,7 +9043,7 @@ module Aws::StorageGateway
       "TargetARN" : String,
       "NetworkInterfaceId" : String,
       "NetworkInterfacePort" : Int32,
-      "LunNumber" : Int32,
+      "LunNumber" : UInt32,
       "ChapEnabled" : Bool
     )
 

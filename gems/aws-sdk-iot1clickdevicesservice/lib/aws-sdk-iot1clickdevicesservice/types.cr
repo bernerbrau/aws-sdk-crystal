@@ -833,7 +833,7 @@ module Aws::IoT1ClickDevicesService
     alias ListDeviceEventsRequest = NamedTuple(
       "DeviceId" : String,
       "FromTimeStamp" : String | UInt64 | Time,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String,
       "ToTimeStamp" : String | UInt64 | Time
     )
@@ -845,7 +845,7 @@ module Aws::IoT1ClickDevicesService
 
     alias ListDevicesRequest = NamedTuple(
       "DeviceType" : String,
-      "MaxResults" : Int32,
+      "MaxResults" : UInt8,
       "NextToken" : String
     )
 
@@ -862,7 +862,7 @@ module Aws::IoT1ClickDevicesService
       "Tags" : Hash(String,String)
     )
 
-    alias MaxResults = Int32
+    alias MaxResults = UInt8
 
     alias PreconditionFailedException = NamedTuple(
       "Code" : String,

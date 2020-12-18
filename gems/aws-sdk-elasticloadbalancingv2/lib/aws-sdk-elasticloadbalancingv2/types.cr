@@ -4379,13 +4379,13 @@ module Aws::ElasticLoadBalancingV2
       "TargetGroupArn" : String,
       "AuthenticateOidcConfig" : AuthenticateOidcActionConfig,
       "AuthenticateCognitoConfig" : AuthenticateCognitoActionConfig,
-      "Order" : Int32,
+      "Order" : UInt16,
       "RedirectConfig" : RedirectActionConfig,
       "FixedResponseConfig" : FixedResponseActionConfig,
       "ForwardConfig" : ForwardActionConfig
     )
 
-    alias ActionOrder = Int32
+    alias ActionOrder = UInt16
 
     alias ActionTypeEnum = String
 
@@ -4537,7 +4537,7 @@ module Aws::ElasticLoadBalancingV2
     alias CreateListenerInput = NamedTuple(
       "LoadBalancerArn" : String,
       "Protocol" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "SslPolicy" : String,
       "Certificates" : Array(Certificate),
       "DefaultActions" : Array(Action),
@@ -4568,7 +4568,7 @@ module Aws::ElasticLoadBalancingV2
     alias CreateRuleInput = NamedTuple(
       "ListenerArn" : String,
       "Conditions" : Array(RuleCondition),
-      "Priority" : Int32,
+      "Priority" : UInt16,
       "Actions" : Array(Action),
       "Tags" : Array(Tag)
     )
@@ -4581,16 +4581,16 @@ module Aws::ElasticLoadBalancingV2
       "Name" : String,
       "Protocol" : String,
       "ProtocolVersion" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "VpcId" : String,
       "HealthCheckProtocol" : String,
       "HealthCheckPort" : String,
       "HealthCheckEnabled" : Bool,
       "HealthCheckPath" : String,
-      "HealthCheckIntervalSeconds" : Int32,
-      "HealthCheckTimeoutSeconds" : Int32,
-      "HealthyThresholdCount" : Int32,
-      "UnhealthyThresholdCount" : Int32,
+      "HealthCheckIntervalSeconds" : UInt16,
+      "HealthCheckTimeoutSeconds" : UInt8,
+      "HealthyThresholdCount" : UInt8,
+      "UnhealthyThresholdCount" : UInt8,
       "Matcher" : Matcher,
       "TargetType" : String,
       "Tags" : Array(Tag)
@@ -4651,7 +4651,7 @@ module Aws::ElasticLoadBalancingV2
 
     alias DescribeAccountLimitsInput = NamedTuple(
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeAccountLimitsOutput = NamedTuple(
@@ -4662,7 +4662,7 @@ module Aws::ElasticLoadBalancingV2
     alias DescribeListenerCertificatesInput = NamedTuple(
       "ListenerArn" : String,
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeListenerCertificatesOutput = NamedTuple(
@@ -4674,7 +4674,7 @@ module Aws::ElasticLoadBalancingV2
       "LoadBalancerArn" : String,
       "ListenerArns" : Array(String),
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeListenersOutput = NamedTuple(
@@ -4694,7 +4694,7 @@ module Aws::ElasticLoadBalancingV2
       "LoadBalancerArns" : Array(String),
       "Names" : Array(String),
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeLoadBalancersOutput = NamedTuple(
@@ -4706,7 +4706,7 @@ module Aws::ElasticLoadBalancingV2
       "ListenerArn" : String,
       "RuleArns" : Array(String),
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeRulesOutput = NamedTuple(
@@ -4717,7 +4717,7 @@ module Aws::ElasticLoadBalancingV2
     alias DescribeSSLPoliciesInput = NamedTuple(
       "Names" : Array(String),
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeSSLPoliciesOutput = NamedTuple(
@@ -4746,7 +4746,7 @@ module Aws::ElasticLoadBalancingV2
       "TargetGroupArns" : Array(String),
       "Names" : Array(String),
       "Marker" : String,
-      "PageSize" : Int32
+      "PageSize" : UInt16
     )
 
     alias DescribeTargetGroupsOutput = NamedTuple(
@@ -4802,13 +4802,13 @@ module Aws::ElasticLoadBalancingV2
 
     alias HealthCheckEnabled = Bool
 
-    alias HealthCheckIntervalSeconds = Int32
+    alias HealthCheckIntervalSeconds = UInt16
 
     alias HealthCheckPort = String
 
-    alias HealthCheckThresholdCount = Int32
+    alias HealthCheckThresholdCount = UInt8
 
-    alias HealthCheckTimeoutSeconds = Int32
+    alias HealthCheckTimeoutSeconds = UInt8
 
     alias HealthUnavailableException = NamedTuple(
       
@@ -4879,7 +4879,7 @@ module Aws::ElasticLoadBalancingV2
     alias Listener = NamedTuple(
       "ListenerArn" : String,
       "LoadBalancerArn" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Protocol" : String,
       "Certificates" : Array(Certificate),
       "SslPolicy" : String,
@@ -4969,7 +4969,7 @@ module Aws::ElasticLoadBalancingV2
 
     alias ModifyListenerInput = NamedTuple(
       "ListenerArn" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "Protocol" : String,
       "SslPolicy" : String,
       "Certificates" : Array(Certificate),
@@ -5015,10 +5015,10 @@ module Aws::ElasticLoadBalancingV2
       "HealthCheckPort" : String,
       "HealthCheckPath" : String,
       "HealthCheckEnabled" : Bool,
-      "HealthCheckIntervalSeconds" : Int32,
-      "HealthCheckTimeoutSeconds" : Int32,
-      "HealthyThresholdCount" : Int32,
-      "UnhealthyThresholdCount" : Int32,
+      "HealthCheckIntervalSeconds" : UInt16,
+      "HealthCheckTimeoutSeconds" : UInt8,
+      "HealthyThresholdCount" : UInt8,
+      "UnhealthyThresholdCount" : UInt8,
       "Matcher" : Matcher
     )
 
@@ -5034,7 +5034,7 @@ module Aws::ElasticLoadBalancingV2
 
     alias OutpostId = String
 
-    alias PageSize = Int32
+    alias PageSize = UInt16
 
     alias Path = String
 
@@ -5042,7 +5042,7 @@ module Aws::ElasticLoadBalancingV2
       "Values" : Array(String)
     )
 
-    alias Port = Int32
+    alias Port = UInt16
 
     alias PriorityInUseException = NamedTuple(
       
@@ -5150,13 +5150,13 @@ module Aws::ElasticLoadBalancingV2
       
     )
 
-    alias RulePriority = Int32
+    alias RulePriority = UInt16
 
     alias RulePriorityList = Array(RulePriorityPair)
 
     alias RulePriorityPair = NamedTuple(
       "RuleArn" : String,
-      "Priority" : Int32
+      "Priority" : UInt16
     )
 
     alias Rules = Array(Rule)
@@ -5272,7 +5272,7 @@ module Aws::ElasticLoadBalancingV2
 
     alias TargetDescription = NamedTuple(
       "Id" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "AvailabilityZone" : String
     )
 
@@ -5282,15 +5282,15 @@ module Aws::ElasticLoadBalancingV2
       "TargetGroupArn" : String,
       "TargetGroupName" : String,
       "Protocol" : String,
-      "Port" : Int32,
+      "Port" : UInt16,
       "VpcId" : String,
       "HealthCheckProtocol" : String,
       "HealthCheckPort" : String,
       "HealthCheckEnabled" : Bool,
-      "HealthCheckIntervalSeconds" : Int32,
-      "HealthCheckTimeoutSeconds" : Int32,
-      "HealthyThresholdCount" : Int32,
-      "UnhealthyThresholdCount" : Int32,
+      "HealthCheckIntervalSeconds" : UInt16,
+      "HealthCheckTimeoutSeconds" : UInt8,
+      "HealthyThresholdCount" : UInt8,
+      "UnhealthyThresholdCount" : UInt8,
       "HealthCheckPath" : String,
       "Matcher" : Matcher,
       "LoadBalancerArns" : Array(String),
